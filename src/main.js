@@ -23,10 +23,6 @@ function renderShell() {
         <a class="icon-link roars-link" href="https://roars.dev" target="_blank" rel="noopener noreferrer" aria-label="ROARS Lab" title="ROARS Lab"></a>
         <a class="icon-link" href="https://github.com/dynaroars/vietprofs/blob/main/FAQ.md" target="_blank" rel="noopener noreferrer" aria-label="Frequently asked questions" title="Frequently asked questions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.2 9.3a2.9 2.9 0 0 1 5.6 1c0 2-2.8 2.4-2.8 4.2"/><circle cx="12" cy="17.6" r="1.1" fill="currentColor" stroke="none"/></svg></a>
       </div>
-      <p class="criteria">
-        <span class="term" tabindex="0" data-tooltip="On the tenure track or already tenured — not a term, teaching-only, or research-track position.">Tenure-line</span>
-        faculty at U.S. universities.
-      </p>
     </header>
     <div class="controls">
       <input id="search" class="search-input" type="search" list="search-suggestions" placeholder="Search name, university, department, location, or area…" aria-label="Search" />
@@ -46,7 +42,7 @@ function renderRoster(roster) {
   const countEl = document.getElementById('result-count');
   const universities = new Set(roster.map((p) => p.university)).size;
   const states = new Set(roster.map((p) => p.state)).size;
-  countEl.textContent = `${roster.length} professor${roster.length === 1 ? '' : 's'} across ${universities} universit${universities === 1 ? 'y' : 'ies'} in ${states} state${states === 1 ? '' : 's'}.`;
+  countEl.innerHTML = `${roster.length} <span class="term" tabindex="0" data-tooltip="On the tenure track or already tenured — not adjunct, visiting, teaching-only, research-track, or emeritus.">tenure-line</span> professor${roster.length === 1 ? '' : 's'} across ${universities} universit${universities === 1 ? 'y' : 'ies'} in ${states} state${states === 1 ? '' : 's'}.`;
 
   if (roster.length === 0) {
     rosterEl.innerHTML = '<p class="empty-state">No matches. Try a different search or filter.</p>';

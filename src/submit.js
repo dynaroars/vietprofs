@@ -24,8 +24,8 @@ function renderShell() {
       <p class="criteria">
         Only <span class="term" tabindex="0" data-tooltip="On the tenure track or already tenured — not a term, teaching-only, visiting, research-track, or emeritus position.">tenure-line</span>
         faculty (tenure-track or tenured) qualify — no adjunct, visiting, teaching-only, or
-        research-track positions. Please have a .edu faculty page and a Google Scholar profile
-        link ready; both are required below.
+        research-track positions. Please have an official faculty page or scholarly profile link
+        ready.
       </p>
     </header>
 
@@ -53,8 +53,8 @@ function renderShell() {
       </div>
 
       <div class="form-section">
-        <label for="profileUrl">Google Scholar profile URL *</label>
-        <input id="profileUrl" name="profileUrl" type="url" required placeholder="https://scholar.google.com/citations?user=…" />
+        <label for="profileUrl">Faculty or scholarly profile URL *</label>
+        <input id="profileUrl" name="profileUrl" type="url" required placeholder="https://…" />
       </div>
 
       <div class="form-section">
@@ -100,7 +100,7 @@ function renderShell() {
           <input id="attest" name="attest" type="checkbox" required />
           I confirm this person is tenure-line (tenure-track or tenured) at this university —
           not adjunct, teaching-only, visiting, research-track, or emeritus — and that I've
-          verified this via their .edu faculty page and Google Scholar profile.
+          verified this via an official faculty page or scholarly profile.
         </label>
       </div>
 

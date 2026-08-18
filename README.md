@@ -35,8 +35,8 @@ The canonical field list is:
 
 All ten received an initial pass on 2026-08-18. Subsequent work should be a targeted re-audit or
 expansion of **one** of these fields at a time: review existing entries first, verify current
-tenure-line status and PhD-advising eligibility from official sources, then make only
-well-supported corrections, removals, or additions. Run `npm test`, `npm run build`, and
+tenure-line status from official sources, then make only well-supported corrections, removals, or
+additions. A relevant PhD program is not required. Run `npm test`, `npm run build`, and
 `git diff --check` before committing.
 
 ## Commands
@@ -74,8 +74,8 @@ correct an entry. Each entry:
 [`submit.html`](./submit.html) lets anyone propose a new entry or a correction without touching
 git directly — similar to [csrankings.org/submit](https://csrankings.org/submit).
 It only accepts **tenure-line** faculty (tenure-track or tenured — not adjunct, visiting,
-teaching-only, research-track, or emeritus) and requires a Google Scholar profile link before it
-will submit. On submit, it opens GitHub's "create new file" page, pre-filled with a JSON
+teaching-only, research-track, or emeritus) and requires a faculty or scholarly profile link
+before it will submit. On submit, it opens GitHub's "create new file" page, pre-filled with a JSON
 submission file under `submissions/`, targeting `dynaroars/vietprofs`; the contributor reviews it
 on GitHub and opens the pull request themselves (auto-forking if they lack push access). No
 backend, no credentials handled by this site. Maintainers fold accepted `submissions/*.json` files

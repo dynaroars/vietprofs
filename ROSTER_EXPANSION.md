@@ -6,7 +6,7 @@ across **all STEM fields** at U.S. universities, added one field at a time. This
 the handoff point for whichever agent or session picks up the next field — read it before adding
 entries so the bar stays consistent across fields.
 
-## Verification bar (authoritative user instruction, 2026-08-18)
+## Verification bar (authoritative user instruction, updated 2026-08-18)
 
 Include a person only when all of the following are supported by reliable evidence, preferably
 official university pages:
@@ -17,13 +17,14 @@ official university pages:
 2. They are currently employed by a U.S. university in a tenure-track or tenured academic role
    (typically Assistant Professor, Associate Professor, or Professor).
 3. Their primary appointment belongs in the broad field under review.
-4. They can serve as a primary advisor or dissertation chair for PhD students in a relevant
-   doctoral program. Direct dissertation/advising evidence is best; graduate-faculty and program
-   evidence may support a current tenure-line appointment.
 
 Exclude adjunct, visiting, teaching-only, research-track/research-professor, professor-of-practice,
 emeritus/retired, courtesy-only, and non-university appointments. A Google Scholar URL is useful
 but is not itself an inclusion criterion; prefer an official profile URL when available.
+
+**Policy update:** A relevant PhD program and PhD-advising eligibility are no longer inclusion
+requirements. Tenure-line STEM faculty at universities without doctoral programs are eligible.
+Future field re-audits should reconsider candidates previously excluded only for that reason.
 
 Do not guess or fabricate URLs, universities, research areas, ranks, or identity evidence. This is
 a public-facing directory, so every addition must be independently checkable by a reader.
@@ -57,12 +58,12 @@ See `README.md` for the field list. Notes specific to filling it in:
 2. Web search broadly for candidates (common Vietnamese surnames + department + "professor",
    university-by-university, etc), not just the first obvious names.
 3. Audit every existing entry in that field before adding candidates: current university, rank,
-   tenure-line status, department, profile URL, doctoral-advising eligibility, broad-field fit, and
-   identity support. Correct stale data; remove only entries clearly shown to be ineligible.
+   tenure-line status, department, profile URL, broad-field fit, and identity support. Correct stale
+   data; remove only entries clearly shown to be ineligible.
    Computer & Information Sciences is high confidence: do not delete a CS entry on weak or missing
    evidence; retain and flag ambiguity instead.
-4. Verify each candidate individually using official pages, including identity and PhD-advising
-   evidence. Check name variants and institutions to prevent duplicates.
+4. Verify each candidate individually using official pages, including identity and current
+   tenure-line evidence. Check name variants and institutions to prevent duplicates.
 5. Append verified entries to `public/data.json`, run `npm test`, confirm it passes. Do this
    incrementally (every few verified candidates), not only at the very end — a long research pass
    can get cut off by a session/usage limit mid-run, and unsaved findings are lost (this has
@@ -79,9 +80,9 @@ See `README.md` for the field list. Notes specific to filling it in:
 | Field | Status | Notes |
 |---|---|---|
 | Computer Science | Audited (2026-08-18) | Reviewed all 49 existing Computer & Information Sciences entries. No removals: each has current faculty evidence or, where the primary unit is a combined EECS department, a current tenure-line appointment with CS graduate-advising evidence. Reclassified Khoa Luu (Arkansas) to Electrical Engineering and Computer Science and Truong Nghiem (UCF) to Electrical and Computer Engineering; updated Nghiem and Thinh Nguyen (Oregon State) to official faculty profiles, and reclassified Thinh to Electrical Engineering and Computer Science. Broad searches did not surface an additional candidate meeting every inclusion criterion. Not added: Minh Hoai Nguyen (Stony Brook) is currently listed by the CS department as research associate professor/on leave, which is not a verified tenure-line appointment. |
-| Mathematics | Audited (2026-08-18) | Reviewed all 19 existing entries and retained each: current official departmental pages support their appointments, and graduate-course, dissertation, or doctoral-advising records support eligibility to advise relevant PhD students. Added Trieu Le (University of Toledo), Dinh-Liem Nguyen (Kansas State), Huy Tai Ha (Tulane), and Ngo Bao Chau (University of Chicago). Excluded Thai Nhan (Menlo College): it has no relevant doctoral mathematics program; Van Vu is now at the University of Hong Kong; Minh Hoai Nguyen (Stony Brook) is research-track/on leave rather than verified tenure-line. |
+| Mathematics | Audited (2026-08-18) | Reviewed all 19 existing entries and retained each: current official departmental pages support their appointments, and graduate-course, dissertation, or doctoral-advising records support eligibility to advise relevant PhD students. Added Trieu Le (University of Toledo), Dinh-Liem Nguyen (Kansas State), Huy Tai Ha (Tulane), and Ngo Bao Chau (University of Chicago). Thai Nhan (Menlo College) was not added in the prior pass solely because it has no relevant doctoral mathematics program; revisit under the current policy. Van Vu is now at the University of Hong Kong; Minh Hoai Nguyen (Stony Brook) is research-track/on leave rather than verified tenure-line. |
 | Electrical and Computer Engineering | Audited (2026-08-18) | Reviewed all 10 ECE/EECS entries in the roster as part of the Engineering pass; retained them after current official-faculty and doctoral-program/advising checks. Replaced Minh N. Do's UIUC and Mai Vu's Tufts Google Scholar links with official faculty profiles. |
-| Physics | Audited (2026-08-18) | Reviewed the 5 scaffold entries and retained all five. Dien Nguyen's outdated `instructional-faculty` URL category was checked against her current page: she is an Assistant Professor at UT Knoxville and actively recruits PhD students. Added Kayla Nguyen (University of Oregon, Physics). Rejected/left out: Phat Vu (Soka University) has no doctoral program; Lan Quynh Nguyen (Notre Dame) is adjunct; Nguyen Trong Hien is a NASA/JPL researcher, not university faculty; Pham Quang Hung (UVA) could not be confirmed in the current official faculty directory. |
+| Physics | Audited (2026-08-18) | Reviewed the 5 scaffold entries and retained all five. Dien Nguyen's outdated `instructional-faculty` URL category was checked against her current page: she is an Assistant Professor at UT Knoxville and actively recruits PhD students. Added Kayla Nguyen (University of Oregon, Physics). Phat Vu (Soka University) was not added in the prior pass solely because it has no doctoral program; revisit under the current policy. Lan Quynh Nguyen (Notre Dame) is adjunct; Nguyen Trong Hien is a NASA/JPL researcher, not university faculty; Pham Quang Hung (UVA) could not be confirmed in the current official faculty directory. |
 | Statistics / Biostatistics / Operations Research | Audited (2026-08-18) | Reviewed the 3 scaffold entries. Corrected Long Nguyen and Quoc Tran-Dinh to use official faculty pages and marked their Statistics/STOR appointments as primary rather than secondary. Added Nhat Ho (UT Austin, Statistics and Data Sciences). Kept Kim-Anh Do (MD Anderson, Biostatistics). Added previously held candidates Tru Cao (UTHealth Houston Biostatistics and Data Science) and Phong Nguyen (UVA School of Data Science) after user-confirmed manual review. Nhu Nguyen (URI) remains excluded because his primary appointment is Mathematics. |
 | Chemistry | Audited (2026-08-18) | Re-audited all 7 existing entries and retained each. Current official faculty evidence confirms the listed Chemistry appointments for Dong (UCI), Thuc-Quyen Nguyen (UCSB), SonBinh Nguyen (Northwestern), Hien Nguyen (Wayne State), Hung Nguyen (Buffalo), and Tuan Trinh (Utah State); Vo-Dinh remains correctly marked secondary because his primary Duke appointment is Biomedical Engineering. No data corrections or additional defensible Chemistry entries in this pass. Earlier exclusions retained: Thanh N. Truong (emeritus); Hoang (Long) Nguyen and Diep Ca (no verified Scholar profiles); Danith Ly (Cambodian-American); Ka Un Lao (Macau heritage); Nga Lee "Sally" Ng (Hong Kong heritage and Chemical/Biomolecular Engineering); Tran Nguyen (UC Davis Environmental Toxicology, defer to Earth/Environmental); Hung Phan (visiting); Hung V. Pham (adjunct/instructor); Khanh Ha (graduate student); My Hang V. Huynh (Los Alamos, not university faculty). |
 | Biology / Life Sciences | Audited (2026-08-18) | Reviewed the 6 scaffold entries. Corrected Tuan Minh Tran from Kansas State Plant Pathology to his current tenure-track Assistant Professor position in Biology at the University of South Alabama. Removed Trang Thi Huyen Nguyen: the cited scholar identity's public research affiliations are South Korea/Oregon State, not Arkansas State, and no current Arkansas State faculty appointment could be found. Retained Lena H. Nguyen (UT Dallas, explicitly tenure-track and mentoring Neuroscience PhD students), Tracy S. Tran (Rutgers–Newark Biology graduate faculty and dissertation advisor), Thuy Ngo (OHSU Molecular and Medical Genetics primary faculty), and Huy Q. Dinh (UW–Madison Oncology Assistant Professor). No new entries added. Earlier exclusions retained: Vu Q. Nguyen, Ally/Alexandra Nguyen, and An Phu Tran Nguyen (no verified Scholar profile); Trang Nguyen (visiting); Louis T. Dang (clinical); John T. Ngo (primary BME); Trung V. Phan (Physics); Nicole Vo (acting/non-TT); Tuan M. Tran (clinical Medicine); Khanh-Van Ho (research-track); Xuong Nguyen-Huu (emeritus/deceased); Tran Dang Khanh (visiting scientist). |
@@ -90,7 +91,7 @@ See `README.md` for the field list. Notes specific to filling it in:
 | Civil Engineering | Audited (2026-08-18) | Added Khiem T. Tran (University of Florida) and Thang N. Dao (University of Alabama). Both have official civil-engineering faculty appointments, documented Vietnam-based undergraduate education, and direct evidence of doctoral student supervision or doctoral dissertation participation. |
 | Materials Science / Engineering | Not started | |
 | Bioengineering / Biomedical Engineering | Not started | Candidates already surfaced during other passes: Tuan Vo-Dinh (Duke, secondary appt, already in roster under Chemistry), John T. Ngo (Boston University). |
-| Earth / Environmental Science | Audited (2026-08-18) | No pre-existing entries. Added Tran B. Nguyen (UC Davis Environmental Toxicology) after user-confirmed manual review; official faculty and graduate-program sources support the appointment and primary PhD advising. Thi Hong Diep Dao (UCCS Geography/GIScience) remains excluded because UCCS does not offer a relevant doctoral program. |
+| Earth / Environmental Science | Audited (2026-08-18) | No pre-existing entries. Added Tran B. Nguyen (UC Davis Environmental Toxicology) after user-confirmed manual review; official faculty and graduate-program sources support the appointment and primary PhD advising. Thi Hong Diep Dao (UCCS Geography/GIScience) was not added in the prior pass solely because UCCS does not offer a relevant doctoral program; revisit under the current policy. |
 | Astronomy / Astrophysics | Not started | |
 | Aerospace Engineering | Not started | |
 | Industrial / Systems Engineering | Not started | |

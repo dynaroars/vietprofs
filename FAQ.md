@@ -11,12 +11,10 @@ An entry is included when reliable evidence supports all of the following:
 
 - Vietnamese or Vietnamese-American identity;
 - current tenure-track or tenured employment at a U.S. university;
-- a primary academic appointment in a listed STEM field; and
-- eligibility to serve as a primary PhD advisor or dissertation chair in a relevant doctoral
-  program.
+- a primary academic appointment in a listed STEM field.
 
 Assistant, Associate, and full Professors generally qualify when the other requirements are met.
-New Assistant Professors do not need to have already graduated a PhD student.
+The university does not need to offer a PhD program.
 
 ## Who is excluded?
 
@@ -42,8 +40,8 @@ primary tenure home is in another department.
 
 ## How can I submit a correction or missing professor?
 
-Use the site’s **Submit an entry** page. Please include an official university profile and, when
-possible, evidence of doctoral-advising eligibility and Vietnamese identity.
+Use the site’s **Submit an entry** page. Please include an official university profile and evidence
+of Vietnamese identity when available.
 
 ## What are the broad STEM fields?
 
