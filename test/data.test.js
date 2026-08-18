@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
+import { STEM_FIELDS } from '../src/data.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const roster = JSON.parse(readFileSync(join(__dirname, '../public/data.json'), 'utf8'));
@@ -30,4 +31,8 @@ test('every entry has the required fields', () => {
 test('no duplicate names', () => {
   const names = roster.map((p) => p.name);
   assert.equal(new Set(names).size, names.length);
+});
+
+test('the field filter offers all ten broad STEM fields', () => {
+  assert.equal(STEM_FIELDS.length, 10);
 });

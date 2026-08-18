@@ -1,5 +1,5 @@
 import './style.css';
-import { loadRoster, uniqueStates, uniqueDepartments, uniqueFields, filterRoster, sortRoster } from './data.js';
+import { loadRoster, uniqueStates, uniqueDepartments, STEM_FIELDS, filterRoster, sortRoster } from './data.js';
 import { escapeHtml } from './utils.js';
 
 const app = document.getElementById('app');
@@ -77,7 +77,7 @@ async function init() {
 
   const searchInput = document.getElementById('search');
   const fieldSelect = document.getElementById('field-filter');
-  for (const field of uniqueFields(roster)) {
+  for (const field of STEM_FIELDS) {
     fieldSelect.insertAdjacentHTML('beforeend', `<option value="${escapeHtml(field)}">${escapeHtml(field)}</option>`);
   }
 

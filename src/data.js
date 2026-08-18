@@ -16,20 +16,36 @@ export function uniqueDepartments(roster) {
   return [...new Set(roster.map((p) => p.department))].sort();
 }
 
-// Buckets the granular `department` values into the broader STEM fields tracked in
-// ROSTER_EXPANSION.md. Add a rule here whenever a new field's departments land in the roster,
-// or its entries will fall through to their raw department name instead of the field bucket.
+// The ten broad fields used by the roster, shown even before each field has entries.
+export const STEM_FIELDS = [
+  'Computer & Information Sciences',
+  'Engineering',
+  'Mathematics',
+  'Statistics & Data Science',
+  'Physics & Astronomy',
+  'Chemistry',
+  'Biological & Biomedical Sciences',
+  'Earth & Environmental Sciences',
+  'Agricultural & Natural Resource Sciences',
+  'Health Sciences',
+];
+
+// Buckets granular `department` values into the broad fields above. Keep the
+// engineering rule ahead of chemistry so Chemical Engineering is not misclassified.
 const FIELD_RULES = [
-  { field: 'Computer Science', match: /computer science/i },
+  { field: 'Computer & Information Sciences', match: /computer science|informatics|information science/i },
   { field: 'Mathematics', match: /mathematics/i },
-  { field: 'Electrical and Computer Engineering', match: /electrical.*computer engineering/i },
-  { field: 'Physics', match: /^physics$/i },
+  { field: 'Statistics & Data Science', match: /statistics|biostatistics|operations research|data science/i },
+  { field: 'Engineering', match: /engineering/i },
+  { field: 'Physics & Astronomy', match: /physics|astronomy/i },
   { field: 'Chemistry', match: /chemistry/i },
-  { field: 'Statistics', match: /statistics|biostatistics|operations research/i },
   {
-    field: 'Biology / Life Sciences',
-    match: /biological sciences|neuroscience|plant pathology|genetics|oncology|microbiology|immunology|molecular|cell biology|ecology|entomology/i,
+    field: 'Biological & Biomedical Sciences',
+    match: /biology|biological sciences|neuroscience|plant pathology|genetics|oncology|microbiology|immunology|molecular|cell biology|ecology|entomology/i,
   },
+  { field: 'Earth & Environmental Sciences', match: /environmental|earth|geology|oceanography|atmospheric/i },
+  { field: 'Agricultural & Natural Resource Sciences', match: /agriculture|agronomy|food science|natural resources/i },
+  { field: 'Health Sciences', match: /health|medicine|nursing|public health|epidemiology/i },
 ];
 
 export function fieldOf(department) {
@@ -37,7 +53,7 @@ export function fieldOf(department) {
 }
 
 export function uniqueFields(roster) {
-  return [...new Set(roster.map((p) => fieldOf(p.department)))].sort();
+  return STEM_FIELDS.filter((field) => roster.some((p) => fieldOf(p.department) === field));
 }
 
 export function filterRoster(roster, { query, field }) {
