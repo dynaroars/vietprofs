@@ -462,6 +462,12 @@ h1 {
   cursor: pointer;
 }
 
+.submit-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
 .submit-btn:hover {
   opacity: 0.9;
 }
@@ -469,6 +475,12 @@ h1 {
 .submit-btn:focus-visible {
   outline: 2px solid var(--focus-ring);
   outline-offset: 2px;
+}
+
+.submit-btn-secondary {
+  border: 1px solid var(--border-color);
+  background: transparent;
+  color: var(--text-primary);
 }
 
 .submit-hint {

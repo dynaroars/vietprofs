@@ -75,8 +75,7 @@ correct an entry. Each entry:
 git directly — similar to [csrankings.org/submit](https://csrankings.org/submit).
 It only accepts **tenure-line** faculty (tenure-track or tenured — not adjunct, visiting,
 teaching-only, research-track, or emeritus) and requires a faculty or scholarly profile link
-before it will submit. On submit, it opens GitHub's "create new file" page, pre-filled with a JSON
-submission file under `submissions/`, targeting `dynaroars/vietprofs`; the contributor reviews it
-on GitHub and opens the pull request themselves (auto-forking if they lack push access). No
-backend, no credentials handled by this site. Maintainers fold accepted `submissions/*.json` files
-into `public/data.json` and delete them.
+before it will submit. The default path opens a pre-filled email to `root@roars.dev`; contributors
+who prefer GitHub can instead open a pre-filled submission file under `submissions/`, targeting
+`dynaroars/vietprofs`. No backend or credentials are handled by the site. Maintainers review email
+and GitHub submissions before folding accepted entries into `public/data.json`.
