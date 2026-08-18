@@ -361,6 +361,42 @@ h1 {
   font-size: var(--text-xs);
 }
 
+.correction-suggestions {
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--card-bg);
+}
+
+.correction-suggestion {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 0.1rem;
+  padding: 0.55rem 0.75rem;
+  border: 0;
+  border-bottom: 1px solid var(--border-color);
+  background: transparent;
+  color: var(--text-primary);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.correction-suggestion:last-child {
+  border-bottom: 0;
+}
+
+.correction-suggestion span {
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+}
+
+.correction-suggestion:hover,
+.correction-suggestion:focus-visible {
+  background: var(--hover-bg);
+}
+
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;

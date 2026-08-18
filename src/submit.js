@@ -45,9 +45,9 @@ function renderShell() {
       </fieldset>
 
       <div class="form-section" id="correction-target-row" hidden>
-        <label for="target">Name of the existing entry, exactly as shown on the site *</label>
-        <input id="target" name="target" type="text" list="correction-targets" autocomplete="off" aria-describedby="correction-target-hint" />
-        <datalist id="correction-targets"></datalist>
+        <label for="target">Name of the existing entry *</label>
+        <input id="target" name="target" type="text" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="correction-suggestions" aria-describedby="correction-target-hint" />
+        <div id="correction-suggestions" class="correction-suggestions" role="listbox" hidden></div>
         <p class="form-help" id="correction-target-hint">Start typing to select an existing professor. Their current details will populate the form for editing.</p>
       </div>
 
@@ -184,17 +184,58 @@ async function init() {
   });
 
   const targetInput = form.target;
-  const targetList = document.getElementById('correction-targets');
+  const suggestions = document.getElementById('correction-suggestions');
   try {
     const roster = await loadRoster();
     const entriesByName = new Map(roster.map((entry) => [entry.name.toLocaleLowerCase(), entry]));
-    targetList.innerHTML = roster
-      .map((entry) => `<option value="${escapeHtml(entry.name)}">${escapeHtml(entry.university)} · ${escapeHtml(entry.department)}</option>`)
-      .join('');
+    let matchingEntries = [];
+
+    function hideSuggestions() {
+      suggestions.hidden = true;
+      targetInput.setAttribute('aria-expanded', 'false');
+    }
+
+    function showSuggestions(query) {
+      matchingEntries = roster
+        .filter((entry) => entry.name.toLocaleLowerCase().includes(query))
+        .slice(0, 8);
+      if (!query || matchingEntries.length === 0) {
+        hideSuggestions();
+        return;
+      }
+      suggestions.innerHTML = matchingEntries
+        .map(
+          (entry, index) =>
+            `<button class="correction-suggestion" type="button" role="option" data-index="${index}"><strong>${escapeHtml(entry.name)}</strong><span>${escapeHtml(entry.university)} · ${escapeHtml(entry.department)}</span></button>`,
+        )
+        .join('');
+      suggestions.hidden = false;
+      targetInput.setAttribute('aria-expanded', 'true');
+    }
 
     targetInput.addEventListener('input', () => {
-      const entry = entriesByName.get(targetInput.value.trim().toLocaleLowerCase());
-      if (entry) populateEntry(form, entry);
+      const query = targetInput.value.trim().toLocaleLowerCase();
+      const entry = entriesByName.get(query);
+      if (entry) {
+        populateEntry(form, entry);
+        hideSuggestions();
+        return;
+      }
+      showSuggestions(query);
+    });
+
+    suggestions.addEventListener('click', (event) => {
+      const button = event.target.closest('.correction-suggestion');
+      if (!button) return;
+      const entry = matchingEntries[Number(button.dataset.index)];
+      if (!entry) return;
+      targetInput.value = entry.name;
+      populateEntry(form, entry);
+      hideSuggestions();
+    });
+
+    targetInput.addEventListener('blur', () => {
+      window.setTimeout(hideSuggestions, 150);
     });
   } catch {
     document.getElementById('correction-target-hint').textContent =
