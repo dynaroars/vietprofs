@@ -19,7 +19,7 @@ function slugify(name) {
 function renderShell() {
   app.innerHTML = `
     <header>
-      <h1><a class="home-link" href="/">VietAcademia</a></h1>
+      <h1><a class="home-link" href="${import.meta.env.BASE_URL}">VietAcademia</a></h1>
       <p class="tagline">Submit a new entry, or correct an existing one</p>
       <p class="criteria">
         Only <span class="term" tabindex="0" data-tooltip="On the tenure track or already tenured — not a term, teaching-only, visiting, research-track, or emeritus position.">tenure-line</span>

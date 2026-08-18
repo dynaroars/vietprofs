@@ -5,7 +5,9 @@ import { fileURLToPath } from 'node:url'
 const root = fileURLToPath(new URL('.', import.meta.url))
 
 export default defineConfig({
-  base: '/',
+  // Relative base so the build works under a GitHub Pages project path
+  // (https://dynaroars.github.io/vietprofs/) as well as at a root domain.
+  base: './',
   build: {
     rollupOptions: {
       input: {

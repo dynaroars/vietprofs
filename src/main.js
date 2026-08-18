@@ -107,7 +107,7 @@ async function init() {
   const states = new Set(roster.map((p) => p.state)).size;
   document.getElementById('footer').innerHTML =
     `${roster.length} professors across ${universities} universities in ${states} states/territories. ` +
-    `<a class="footer-link" href="/submit.html">Know someone missing, or spot an error? Submit an entry.</a>`;
+    `<a class="footer-link" href="${import.meta.env.BASE_URL}submit.html">Know someone missing, or spot an error? Submit an entry.</a>`;
 
   update();
 }
