@@ -1,4 +1,4 @@
-# VietAcademia
+# Vietnamese Professors at U.S. Universities
 
 A searchable directory of Vietnamese professors across STEM fields at U.S. universities —
 tenure-line faculty (tenure-track or tenured; not adjunct, teaching-only, or research-track).

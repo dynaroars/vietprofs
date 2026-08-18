@@ -180,6 +180,23 @@ h1 {
   outline-offset: 1px;
 }
 
+.field-select {
+  flex: 0 1 auto;
+  padding: 0.6rem 0.9rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  cursor: pointer;
+}
+
+.field-select:focus {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 1px;
+}
+
 .result-count {
   color: var(--text-muted);
   font-size: var(--text-sm);

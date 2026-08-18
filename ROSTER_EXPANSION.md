@@ -1,6 +1,6 @@
 # Roster expansion: all STEM fields
 
-VietAcademia started as a Computer Science-only list, then picked up some Math/Physics/ECE/Stats
+This site started as a Computer Science-only list, then picked up some Math/Physics/ECE/Stats
 entries during the initial scaffold. The goal now is to cover Vietnamese, tenure-line faculty
 across **all STEM fields** at U.S. universities, added one field at a time. This doc is
 the handoff point for whichever agent or session picks up the next field — read it before adding
@@ -51,9 +51,16 @@ See `README.md` for the field list. Notes specific to filling it in:
 2. Web search broadly for candidates (common Vietnamese surnames + department + "professor",
    university-by-university, etc), not just the first obvious names.
 3. Verify each candidate individually: fetch their faculty page and their Google Scholar page.
-4. Append verified entries to `public/data.json`, run `npm test`, confirm it passes.
+4. Append verified entries to `public/data.json`, run `npm test`, confirm it passes. Do this
+   incrementally (every few verified candidates), not only at the very end — a long research pass
+   can get cut off by a session/usage limit mid-run, and unsaved findings are lost (this has
+   already happened twice).
 5. Update the progress table below with what was added and what was checked-and-rejected (briefly
    — e.g. "adjunct", "no Scholar profile found", "already in roster under Math").
+6. If the new field's departments don't already match one of the `FIELD_RULES` patterns in
+   `src/data.js` (used to bucket entries for the site's field-filter dropdown), add a rule there —
+   otherwise those entries fall through to their raw `department` string instead of a shared field
+   bucket, and won't group with the rest of the field in the dropdown.
 
 ## Progress by field
 

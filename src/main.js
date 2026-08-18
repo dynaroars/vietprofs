@@ -1,5 +1,5 @@
 import './style.css';
-import { loadRoster, uniqueStates, uniqueDepartments, filterRoster, sortRoster } from './data.js';
+import { loadRoster, uniqueStates, uniqueDepartments, uniqueFields, filterRoster, sortRoster } from './data.js';
 import { escapeHtml } from './utils.js';
 
 const app = document.getElementById('app');
@@ -17,8 +17,7 @@ function pickRandomUnique(values, count) {
 function renderShell() {
   app.innerHTML = `
     <header>
-      <h1>VietAcademia</h1>
-      <p class="tagline">Vietnamese professors at U.S. universities</p>
+      <h1>Vietnamese Professors at U.S. Universities</h1>
       <p class="criteria">
         <span class="term" tabindex="0" data-tooltip="On the tenure track or already tenured — not a term, teaching-only, or research-track position.">Tenure-line</span>
         faculty at U.S. universities.
@@ -27,6 +26,9 @@ function renderShell() {
     <div class="controls">
       <input id="search" class="search-input" type="search" list="search-suggestions" placeholder="Search name, university, department, location, or area…" aria-label="Search" />
       <datalist id="search-suggestions"></datalist>
+      <select id="field-filter" class="field-select" aria-label="Filter by STEM field">
+        <option value="all">All fields</option>
+      </select>
     </div>
     <div class="examples" id="examples"></div>
     <p class="result-count" id="result-count"></p>
@@ -74,15 +76,21 @@ async function init() {
   }
 
   const searchInput = document.getElementById('search');
+  const fieldSelect = document.getElementById('field-filter');
+  for (const field of uniqueFields(roster)) {
+    fieldSelect.insertAdjacentHTML('beforeend', `<option value="${escapeHtml(field)}">${escapeHtml(field)}</option>`);
+  }
 
   function update() {
     const filtered = filterRoster(roster, {
       query: searchInput.value,
+      field: fieldSelect.value,
     });
     renderRoster(sortRoster(filtered));
   }
 
   searchInput.addEventListener('input', update);
+  fieldSelect.addEventListener('change', update);
 
   const examples = [
     ...pickRandomUnique(roster.map((p) => p.name), 2),
