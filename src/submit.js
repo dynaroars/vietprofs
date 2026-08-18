@@ -42,7 +42,8 @@ function renderShell() {
 
       <div class="form-section">
         <label for="name">Full name *</label>
-        <input id="name" name="name" type="text" required />
+        <input id="name" name="name" type="text" required aria-describedby="name-duplicate-warning" />
+        <p class="form-help warning" id="name-duplicate-warning" hidden></p>
       </div>
 
       <div class="form-section">
@@ -143,7 +144,22 @@ function populateEntry(form, entry) {
   form.secondaryAppointment.checked = entry.secondaryAppointment;
 }
 
-function onSubmit(e) {
+function findDuplicate(entriesByName, name) {
+  return entriesByName?.get(name.toLocaleLowerCase());
+}
+
+function renderDuplicateWarning(entry) {
+  const warning = document.getElementById('name-duplicate-warning');
+  if (!entry) {
+    warning.hidden = true;
+    warning.innerHTML = '';
+    return;
+  }
+  warning.innerHTML = `${escapeHtml(entry.name)} is already listed at ${escapeHtml(entry.university)}. If this is the same person, <button type="button" class="link-btn" id="switch-to-correction">switch to a correction</button> instead.`;
+  warning.hidden = false;
+}
+
+function onSubmit(e, entriesByName) {
   e.preventDefault();
   const form = e.target;
 
@@ -151,6 +167,15 @@ function onSubmit(e) {
 
   const kind = form.kind.value;
   const name = form.name.value.trim();
+
+  if (kind === 'new') {
+    const duplicate = findDuplicate(entriesByName, name);
+    if (duplicate) {
+      renderDuplicateWarning(duplicate);
+      form.name.focus();
+      return;
+    }
+  }
   const researchAreas = form.researchAreas.value
     .split(',')
     .map((s) => s.trim())
@@ -183,16 +208,37 @@ function onSubmit(e) {
 async function init() {
   renderShell();
   const form = document.getElementById('submit-form');
-  form.addEventListener('submit', onSubmit);
+  let entriesByName = null;
+  form.addEventListener('submit', (e) => onSubmit(e, entriesByName));
   form.querySelectorAll('input[name="kind"]').forEach((radio) => {
-    radio.addEventListener('change', () => onKindChange(form));
+    radio.addEventListener('change', () => {
+      onKindChange(form);
+      renderDuplicateWarning(null);
+    });
+  });
+
+  const nameWarning = document.getElementById('name-duplicate-warning');
+  form.name.addEventListener('input', () => {
+    if (form.kind.value !== 'new') return;
+    const name = form.name.value.trim();
+    renderDuplicateWarning(name ? findDuplicate(entriesByName, name) : null);
+  });
+  nameWarning.addEventListener('click', (event) => {
+    if (!event.target.closest('#switch-to-correction')) return;
+    const duplicate = findDuplicate(entriesByName, form.name.value.trim());
+    if (!duplicate) return;
+    form.kind.value = 'correction';
+    onKindChange(form);
+    form.target.value = duplicate.name;
+    populateEntry(form, duplicate);
+    renderDuplicateWarning(null);
   });
 
   const targetInput = form.target;
   const suggestions = document.getElementById('correction-suggestions');
   try {
     const roster = await loadRoster();
-    const entriesByName = new Map(roster.map((entry) => [entry.name.toLocaleLowerCase(), entry]));
+    entriesByName = new Map(roster.map((entry) => [entry.name.toLocaleLowerCase(), entry]));
     let matchingEntries = [];
 
     function hideSuggestions() {

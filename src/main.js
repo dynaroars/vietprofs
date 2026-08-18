@@ -14,6 +14,14 @@ function pickRandomUnique(values, count) {
   return result;
 }
 
+function debounce(fn, delayMs) {
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn(...args), delayMs);
+  };
+}
+
 function renderShell() {
   app.innerHTML = `
     <header>
@@ -32,7 +40,7 @@ function renderShell() {
       </select>
     </div>
     <div class="examples" id="examples"></div>
-    <p class="result-count" id="result-count"></p>
+    <p class="result-count" id="result-count" aria-live="polite"></p>
     <div class="roster" id="roster"></div>
   `;
 }
@@ -42,7 +50,7 @@ function renderRoster(roster) {
   const countEl = document.getElementById('result-count');
   const universities = new Set(roster.map((p) => p.university)).size;
   const states = new Set(roster.map((p) => p.state)).size;
-  countEl.innerHTML = `${roster.length} <span class="term" tabindex="0" data-tooltip="On the tenure track or already tenured — not adjunct, visiting, teaching-only, research-track, or emeritus.">tenure-line</span> professor${roster.length === 1 ? '' : 's'} across ${universities} universit${universities === 1 ? 'y' : 'ies'} in ${states} state${states === 1 ? '' : 's'}. <a class="submission-link" href="${import.meta.env.BASE_URL}submit.html">Know someone missing or spot an error? Submit an entry.</a>`;
+  countEl.innerHTML = `${roster.length} <span class="term" tabindex="0" data-tooltip="On the tenure track or already tenured — not adjunct, visiting, teaching-only, research-track, or emeritus.">tenure-line</span> professor${roster.length === 1 ? '' : 's'} across ${universities} universit${universities === 1 ? 'y' : 'ies'} in ${states} state${states === 1 ? '' : 's'}. <a class="submission-link" href="${import.meta.env.BASE_URL}submit.html">Add or update info.</a>`;
 
   if (roster.length === 0) {
     rosterEl.innerHTML = '<p class="empty-state">No matches. Try a different search or filter.</p>';
@@ -69,7 +77,15 @@ function renderRoster(roster) {
 
 async function init() {
   renderShell();
-  const roster = await loadRoster();
+
+  let roster;
+  try {
+    roster = await loadRoster();
+  } catch {
+    document.getElementById('roster').innerHTML =
+      '<p class="empty-state">Could not load the roster. Please refresh the page or try again later.</p>';
+    return;
+  }
 
   const suggestions = document.getElementById('search-suggestions');
   const suggestionValues = [...uniqueDepartments(roster), ...uniqueStates(roster)].sort();
@@ -83,15 +99,31 @@ async function init() {
     fieldSelect.insertAdjacentHTML('beforeend', `<option value="${escapeHtml(field)}">${escapeHtml(field)}</option>`);
   }
 
+  const params = new URLSearchParams(window.location.search);
+  if (params.has('q')) searchInput.value = params.get('q');
+  if (params.has('field') && STEM_FIELDS.includes(params.get('field'))) {
+    fieldSelect.value = params.get('field');
+  }
+
+  function syncUrl() {
+    const next = new URLSearchParams();
+    if (searchInput.value.trim()) next.set('q', searchInput.value.trim());
+    if (fieldSelect.value !== 'all') next.set('field', fieldSelect.value);
+    const query = next.toString();
+    const url = `${window.location.pathname}${query ? `?${query}` : ''}`;
+    window.history.replaceState(null, '', url);
+  }
+
   function update() {
     const filtered = filterRoster(roster, {
       query: searchInput.value,
       field: fieldSelect.value,
     });
     renderRoster(sortRoster(filtered));
+    syncUrl();
   }
 
-  searchInput.addEventListener('input', update);
+  searchInput.addEventListener('input', debounce(update, 150));
   fieldSelect.addEventListener('change', update);
 
   const examples = [
