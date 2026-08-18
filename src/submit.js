@@ -1,4 +1,6 @@
 import './style.css';
+import { loadRoster } from './data.js';
+import { escapeHtml } from './utils.js';
 
 const GITHUB_REPO = 'dynaroars/vietprofs';
 const GITHUB_BRANCH = 'main';
@@ -44,7 +46,9 @@ function renderShell() {
 
       <div class="form-section" id="correction-target-row" hidden>
         <label for="target">Name of the existing entry, exactly as shown on the site *</label>
-        <input id="target" name="target" type="text" />
+        <input id="target" name="target" type="text" list="correction-targets" autocomplete="off" aria-describedby="correction-target-hint" />
+        <datalist id="correction-targets"></datalist>
+        <p class="form-help" id="correction-target-hint">Start typing to select an existing professor. Their current details will populate the form for editing.</p>
       </div>
 
       <div class="form-section">
@@ -126,6 +130,17 @@ function onKindChange(form) {
   form.target.required = isCorrection;
 }
 
+function populateEntry(form, entry) {
+  form.name.value = entry.name;
+  form.profileUrl.value = entry.profileUrl;
+  form.university.value = entry.university;
+  form.city.value = entry.city;
+  form.state.value = entry.state;
+  form.department.value = entry.department;
+  form.researchAreas.value = entry.researchAreas.join(', ');
+  form.secondaryAppointment.checked = entry.secondaryAppointment;
+}
+
 function onSubmit(e) {
   e.preventDefault();
   const form = e.target;
@@ -160,13 +175,31 @@ function onSubmit(e) {
   window.open(buildGithubUrl(filename, content), '_blank', 'noopener,noreferrer');
 }
 
-function init() {
+async function init() {
   renderShell();
   const form = document.getElementById('submit-form');
   form.addEventListener('submit', onSubmit);
   form.querySelectorAll('input[name="kind"]').forEach((radio) => {
     radio.addEventListener('change', () => onKindChange(form));
   });
+
+  const targetInput = form.target;
+  const targetList = document.getElementById('correction-targets');
+  try {
+    const roster = await loadRoster();
+    const entriesByName = new Map(roster.map((entry) => [entry.name.toLocaleLowerCase(), entry]));
+    targetList.innerHTML = roster
+      .map((entry) => `<option value="${escapeHtml(entry.name)}">${escapeHtml(entry.university)} · ${escapeHtml(entry.department)}</option>`)
+      .join('');
+
+    targetInput.addEventListener('input', () => {
+      const entry = entriesByName.get(targetInput.value.trim().toLocaleLowerCase());
+      if (entry) populateEntry(form, entry);
+    });
+  } catch {
+    document.getElementById('correction-target-hint').textContent =
+      'Existing entries could not be loaded. Enter the current details manually.';
+  }
 }
 
 init();

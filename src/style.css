@@ -356,6 +356,11 @@ h1 {
   color: var(--text-secondary);
 }
 
+.form-help {
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+}
+
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
