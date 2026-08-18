@@ -6,25 +6,31 @@ across **all STEM fields** at U.S. universities, added one field at a time. This
 the handoff point for whichever agent or session picks up the next field — read it before adding
 entries so the bar stays consistent across fields.
 
-## Verification bar (confirmed with the user, 2026-08-18; full-time requirement dropped 2026-08-18)
+## Verification bar (authoritative user instruction, 2026-08-18)
 
-Include a person only if all three hold:
+Include a person only when all of the following are supported by reliable evidence, preferably
+official university pages:
 
-1. Clearly Vietnamese name.
-2. A working **.edu faculty/department profile page** confirming they are tenure-line
-   (tenure-track or tenured — not adjunct, teaching-only, visiting, research-track/
-   research-professor, or emeritus/retired) at a U.S. university. Full-time status is not a
-   separate requirement — tenure-line is sufficient.
-3. A working **Google Scholar profile URL**
-   (`https://scholar.google.com/citations?user=...`).
+1. They are Vietnamese or Vietnamese-American. Do **not** infer identity solely from a
+   Vietnamese-looking name; seek an official biography, education in Vietnam, self-identification,
+   Vietnamese community/professional affiliation, or comparably reliable evidence.
+2. They are currently employed by a U.S. university in a tenure-track or tenured academic role
+   (typically Assistant Professor, Associate Professor, or Professor).
+3. Their primary appointment belongs in the broad field under review.
+4. They can serve as a primary advisor or dissertation chair for PhD students in a relevant
+   doctoral program. Direct dissertation/advising evidence is best; graduate-faculty and program
+   evidence may support a current tenure-line appointment.
 
-Do not guess or fabricate URLs, universities, or research areas. If any of the three can't be
-confirmed, leave the person out rather than including a best-guess entry. This is a real,
-public-facing directory — every entry must be independently checkable by a reader.
+Exclude adjunct, visiting, teaching-only, research-track/research-professor, professor-of-practice,
+emeritus/retired, courtesy-only, and non-university appointments. A Google Scholar URL is useful
+but is not itself an inclusion criterion; prefer an official profile URL when available.
+
+Do not guess or fabricate URLs, universities, research areas, ranks, or identity evidence. This is
+a public-facing directory, so every addition must be independently checkable by a reader.
 
 Quantity target per field: as exhaustive a web-search pass as reasonably achievable, not just the
 first handful found. The CS list (~49 entries) is the rough depth benchmark, though smaller fields
-will naturally have fewer.
+will naturally have fewer. Work on exactly one broad field per run, then report changes and stop.
 
 ## Schema
 
@@ -50,14 +56,20 @@ See `README.md` for the field list. Notes specific to filling it in:
    `https://`, etc).
 2. Web search broadly for candidates (common Vietnamese surnames + department + "professor",
    university-by-university, etc), not just the first obvious names.
-3. Verify each candidate individually: fetch their faculty page and their Google Scholar page.
-4. Append verified entries to `public/data.json`, run `npm test`, confirm it passes. Do this
+3. Audit every existing entry in that field before adding candidates: current university, rank,
+   tenure-line status, department, profile URL, doctoral-advising eligibility, broad-field fit, and
+   identity support. Correct stale data; remove only entries clearly shown to be ineligible.
+   Computer & Information Sciences is high confidence: do not delete a CS entry on weak or missing
+   evidence; retain and flag ambiguity instead.
+4. Verify each candidate individually using official pages, including identity and PhD-advising
+   evidence. Check name variants and institutions to prevent duplicates.
+5. Append verified entries to `public/data.json`, run `npm test`, confirm it passes. Do this
    incrementally (every few verified candidates), not only at the very end — a long research pass
    can get cut off by a session/usage limit mid-run, and unsaved findings are lost (this has
    already happened twice).
-5. Update the progress table below with what was added and what was checked-and-rejected (briefly
+6. Update the progress table below with what was added and what was checked-and-rejected (briefly
    — e.g. "adjunct", "no Scholar profile found", "already in roster under Math").
-6. If the new field's departments don't already match one of the `FIELD_RULES` patterns in
+7. If the new field's departments don't already match one of the `FIELD_RULES` patterns in
    `src/data.js` (used to bucket entries for the site's field-filter dropdown), add a rule there —
    otherwise those entries fall through to their raw `department` string instead of a shared field
    bucket, and won't group with the rest of the field in the dropdown.

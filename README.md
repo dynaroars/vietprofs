@@ -1,5 +1,7 @@
 # Vietnamese Professors at U.S. Universities
 
+> Find Vietnamese and Vietnamese-American tenure-line STEM professors at U.S. universities.
+
 A searchable directory of Vietnamese professors across STEM fields at U.S. universities —
 tenure-line faculty (tenure-track or tenured; not adjunct, teaching-only, or research-track).
 Faculty whose tenure home is in one department with a
@@ -8,9 +10,34 @@ secondary/joint appointment elsewhere are marked with `†` and carry `secondary
 Static site, no backend: the roster lives in `public/data.json` and is loaded, searched, filtered,
 and sorted client-side.
 
-Started as a Computer Science-only list; now being expanded field by field to cover all STEM
-disciplines. See [`ROSTER_EXPANSION.md`](./ROSTER_EXPANSION.md) for the verification bar, schema,
-and per-field progress — read it before adding entries for a new field.
+Started as a Computer Science-only list and has now completed an initial audit of the ten
+canonical STEM fields. See [`ROSTER_EXPANSION.md`](./ROSTER_EXPANSION.md) for the detailed audit
+handoff.
+
+## Roster maintenance handoff
+
+Before editing the roster, read [`ROSTER_EXPANSION.md`](./ROSTER_EXPANSION.md). It is the
+authoritative continuation guide: inclusion criteria, evidence standard, JSON conventions,
+completed-field log, and validation steps.
+
+The canonical field list is:
+
+1. Computer & Information Sciences
+2. Engineering
+3. Mathematics
+4. Statistics & Data Science
+5. Physics & Astronomy
+6. Chemistry
+7. Biological & Biomedical Sciences
+8. Earth & Environmental Sciences
+9. Agricultural & Natural Resource Sciences
+10. Health Sciences
+
+All ten received an initial pass on 2026-08-18. Subsequent work should be a targeted re-audit or
+expansion of **one** of these fields at a time: review existing entries first, verify current
+tenure-line status and PhD-advising eligibility from official sources, then make only
+well-supported corrections, removals, or additions. Run `npm test`, `npm run build`, and
+`git diff --check` before committing.
 
 ## Commands
 
@@ -44,8 +71,8 @@ correct an entry. Each entry:
 
 ## Public submissions
 
-`submit.html` (linked from the site footer) lets anyone propose a new entry or a correction
-without touching git directly — similar to [csrankings.org/submit](https://csrankings.org/submit).
+[`submit.html`](./submit.html) lets anyone propose a new entry or a correction without touching
+git directly — similar to [csrankings.org/submit](https://csrankings.org/submit).
 It only accepts **tenure-line** faculty (tenure-track or tenured — not adjunct, visiting,
 teaching-only, research-track, or emeritus) and requires a Google Scholar profile link before it
 will submit. On submit, it opens GitHub's "create new file" page, pre-filled with a JSON

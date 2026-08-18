@@ -17,7 +17,12 @@ function pickRandomUnique(values, count) {
 function renderShell() {
   app.innerHTML = `
     <header>
-      <h1>Vietnamese Professors at U.S. Universities</h1>
+      <div class="title-row">
+        <h1>Vietnamese Profs. in the US</h1>
+        <a class="github-link" href="https://github.com/dynaroars/vietprofs" target="_blank" rel="noopener noreferrer" aria-label="View VietProfs on GitHub" title="View source on GitHub"></a>
+        <a class="icon-link roars-link" href="https://roars.dev" target="_blank" rel="noopener noreferrer" aria-label="ROARS Lab" title="ROARS Lab"></a>
+        <a class="icon-link" href="https://github.com/dynaroars/vietprofs/blob/main/FAQ.md" target="_blank" rel="noopener noreferrer" aria-label="Frequently asked questions" title="Frequently asked questions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.2 9.3a2.9 2.9 0 0 1 5.6 1c0 2-2.8 2.4-2.8 4.2"/><circle cx="12" cy="17.6" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+      </div>
       <p class="criteria">
         <span class="term" tabindex="0" data-tooltip="On the tenure track or already tenured — not a term, teaching-only, or research-track position.">Tenure-line</span>
         faculty at U.S. universities.
@@ -33,14 +38,15 @@ function renderShell() {
     <div class="examples" id="examples"></div>
     <p class="result-count" id="result-count"></p>
     <div class="roster" id="roster"></div>
-    <footer id="footer"></footer>
   `;
 }
 
 function renderRoster(roster) {
   const rosterEl = document.getElementById('roster');
   const countEl = document.getElementById('result-count');
-  countEl.textContent = `${roster.length} professor${roster.length === 1 ? '' : 's'}`;
+  const universities = new Set(roster.map((p) => p.university)).size;
+  const states = new Set(roster.map((p) => p.state)).size;
+  countEl.textContent = `${roster.length} professor${roster.length === 1 ? '' : 's'} across ${universities} universit${universities === 1 ? 'y' : 'ies'} in ${states} state${states === 1 ? '' : 's'}.`;
 
   if (roster.length === 0) {
     rosterEl.innerHTML = '<p class="empty-state">No matches. Try a different search or filter.</p>';
@@ -110,12 +116,6 @@ async function init() {
     searchInput.value = btn.textContent;
     update();
   });
-
-  const universities = new Set(roster.map((p) => p.university)).size;
-  const states = new Set(roster.map((p) => p.state)).size;
-  document.getElementById('footer').innerHTML =
-    `${roster.length} professors across ${universities} universities in ${states} states/territories. ` +
-    `<a class="footer-link" href="${import.meta.env.BASE_URL}submit.html">Know someone missing, or spot an error? Submit an entry.</a>`;
 
   update();
 }
