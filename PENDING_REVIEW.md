@@ -35,10 +35,6 @@ finding below rests on web-search result snippets, not a directly-verified offic
   Biomedical Sciences. Identity strong (pharmacy degree, Hanoi University of Pharmacy; PhD
   Mercer). Same CNSU tenure-track question as above; also holds an external industry role that
   raises a full-time question. `https://pharmacy.cnsu.edu/directory/bios/hiep-nguyen.php`
-- **Juliane Nguyen** — UNC Chapel Hill, Professor & Vice Chair, Pharmacoengineering and Molecular
-  Pharmaceutics. Tenure-line status is clear (full Professor, R1). **Vietnamese identity is not
-  established** — bio describes education entirely in Germany with no stated Vietnamese heritage.
-  `https://pharmacy.unc.edu/directory/julianen/`
 
 ## Geology / Oceanography / Atmospheric Science
 
@@ -74,66 +70,39 @@ finding below rests on web-search result snippets, not a directly-verified offic
 
 ## Mechanical Engineering / Materials Science
 
-- **Thanh Duc Nguyen** — University of Connecticut, Associate Professor, joint Mechanical/
-  Biomedical Engineering (postdoc under Robert Langer at MIT). **Flagging explicitly: two
-  independent research passes gave conflicting confidence for the same person** — one found no
-  identity evidence beyond the name, the other found strong identity evidence (born Da Nang;
-  Le Quy Don High School for the Gifted; Hanoi University of Science and Technology; named one of
-  "Vietnam's 10 Outstanding Young Faces" 2018) but flagged that his primary tenure home (ME vs.
-  BME) is unclear. Worth resolving directly — this one is probably real.
-  `https://www.bme.uconn.edu/faculty-staff/core-faculty/nguyen-thanh-duc/`
-- **Vinh Nguyen** — Michigan Technological University, Assistant Professor, Mechanical/Aerospace
-  Engineering. No identity evidence beyond the name.
-- **The Nguyen** — CSU Fresno, Associate Professor & Department Chair, Mechanical Engineering. No
-  identity evidence beyond the (unusual, Vietnamese-suggestive) first name.
-- **Jacqueline Huynh** — UC Irvine, Assistant Professor, Mechanical and Aerospace Engineering
-  (PhD MIT). No identity evidence found. (Surfaced independently by two research passes.)
-- **Trinh Pham** — Cal State LA, Professor, Mechanical Engineering, also holds substantial DEI/
-  associate-dean administrative titles. No identity evidence found; unclear if ME remains her
-  primary tenure home given the admin titles.
 - **Hai T. Tran** — Point Park University, Assistant Professor, Mechanical Engineering. Identity
   well-supported (BS Hanoi University of Science and Technology; prior senior lecturer at
   University of Transport and Communications, Hanoi) but tenure-track status at this small,
   teaching-focused university unconfirmed.
+  
 - **Thang B. Hoang** — University of Memphis, Department of Physics and Materials Science. No
   identity evidence; rank/tenure-track unconfirmed; unclear if Physics or Materials Science is
   primary.
+  
 - **David Pham** — University of Arizona, Materials Science and Engineering. URL pattern
   (`/staff/`) suggests a staff, not faculty, appointment.
+  
 - **Hai Tran** — Embry-Riddle Aeronautical University. Bare faculty-directory link only; nothing
   else confirmed.
 
 ## Bioengineering / Biomedical Engineering, Aerospace, Nuclear
 
-- **Tran N. H. Nguyen** — UT Southwestern Medical Center, Assistant Professor, Biomedical
-  Engineering (PhD Purdue; postdoc UW). Bio explicitly states she is "originally from Vietnam" —
-  identity is solid. The one open question is whether UTSW's BME assistant-professor rank is
-  formally tenure-track at this medical-school department; worth a two-minute check.
-  `https://profiles.utsouthwestern.edu/profile/243422/tran-n-h-nguyen.html`
-- **Hung V.-T. Nguyen** — Dartmouth (Thayer School), Assistant Professor of Engineering, drug
-  delivery/nanomedicine research. No Vietnam-specific identity evidence (entirely US-educated);
-  Thayer has no discrete departments, so "Bioengineering" would be an inferred label.
-- **Huy T. Tran** — UIUC, Assistant Professor, Aerospace Engineering. No identity evidence;
-  one source still lists him as "Research Assistant Professor," conflicting with his official
-  directory listing as "Assistant Professor" — worth confirming current rank.
-- **Kim-Lien Nguyen** — UCLA, Associate Professor-in-Residence, Medicine/Radiology/Bioengineering.
-  Likely an MD/cardiologist whose primary home is Medicine, not Bioengineering; UC's
-  "in-residence" series is a separate ladder from standard tenure-track. No identity evidence.
-- **Thao (Vicky) D. Nguyen** — Johns Hopkins, Professor, Mechanical Engineering (secondary in
-  Materials Science/Ophthalmology). Primary department is Mechanical Engineering, not
-  Bioengineering — better suited to a Mechanical Engineering pass. No identity evidence beyond name.
-- **Tue Nguyen** — 1988 press coverage describes him as a Vietnamese refugee who earned "7 degrees
+- **Tue Nguyen** — 1988 press coverage describes him as a Vietnamese refugee who earned "7 degrees 
   from MIT" including a nuclear engineering doctorate — strong identity evidence for that era, but
   current status is unclear (later material suggests an industry/IP career, not a university
   faculty post). Needs a check for any *current* university appointment before considering.
+  
 - **Khanh D. Pham** — University of New Mexico ECE, "Research Professor," primary employer is Air
   Force Research Laboratory (government lab). Likely excluded as research-track/non-university-
   primary, but Wikipedia describes him as Vietnamese-born and an AIAA/IEEE Fellow.
+  
+  
+  
 - **Hoang Nguyen** — Washburn University. Low-confidence lead; department, rank, and identity all
-  unconfirmed before the research pass ran out of search budget.
-- **Domagoj Bui** — University of Cincinnati. Likely a false positive — "Domagoj" is a Croatian
-  given name, not Vietnamese; listed only so it's explicitly ruled out rather than silently
-  dropped.
+  unconfirmed before the research pass ran out of search budget.  TVN: search again/dig deeper
+  
+  
+
 
 ## Public Health / Epidemiology
 
@@ -145,8 +114,7 @@ finding below rests on web-search result snippets, not a directly-verified offic
   Associate Professor, University of Washington. Fred Hutch is an independent nonprofit research
   center, not itself a degree-granting university; her UW title is explicitly "Affiliate." Surname
   may be a married/combined name — Vietnamese identity not independently confirmed.
-- **Trang Pham** — Harvard Medical School, postdoctoral fellow (Global Primary Health Care).
-  Almost certainly not tenure-line (postdoc); listed rather than silently dropped.
+
 - **Tùng Phạm** — Harvard T.H. Chan School of Public Health, Epidemiology, per a LinkedIn listing
   only. Level (student/staff/postdoc/faculty) unconfirmed.
 
@@ -158,28 +126,23 @@ gets its own `STEM_FIELDS` bucket at all. Candidates found either way:
 - **Christopher Nguyen** — Ohio State, Clinical Associate Professor (joint w/ Psychiatry).
   "Clinical" is typically a non-tenure-line title at OSU; subfield is clinical neuropsychology,
   not cognitive/quantitative — likely fails both status and field-fit.
+  
 - **Tin Nguyen** — University of Nebraska Omaha, Assistant Professor, Industrial-Organizational
   Psychology. *(Note: different person from the "Tin Nguyen" already in the CS roster or the
   Wayne State correction above — same common name, three different people.)* I/O psychology isn't
   the cognitive/quantitative subfield specified; identity unconfirmed.
+  
 - **Vy Nguyen** — Augusta University, teaches Research/Quantitative Methods. Department, rank, and
   tenure-track status all unconfirmed.
 
-## Economics (quantitative/econometrics) — field-inclusion itself is disputed
+## Economics (quantitative/econometrics)
 
-Same disputed-classification caveat as Psychology above.
+**Resolved 2026-08-18:** narrow-scoped and added as a `Misc` field (see `ROSTER_EXPANSION.md`) —
+broad Economics is a social science, not STEM, but "Econometrics and Quantitative Economics" is on
+the DHS STEM-Designated Degree Program list. Quang Vuong (NYU, creator of the "Vuong test") was
+added on that basis after user-confirmed Vietnamese identity.
 
-- **Quang Vuong** — Professor of Economics, NYU; creator of the "Vuong test," a foundational
-  econometric model-selection method (PhD Northwestern, 1982). **Strongest lead in this entire
-  list on field-fit and seniority** — he essentially *is* econometrics, and "Professor of
-  Economics, NYU" is corroborated across many independent sources. The only gap: Vietnamese
-  identity wasn't traced to a citable primary source (one aggregated snippet called him "a
-  Vietnamese person with French citizenship," unverified). Worth five minutes on
-  `https://as.nyu.edu/faculty/quang-vuong0.html` or a direct bio search.
 - **Thuy Lan Nguyen** — Associate Professor of Economics, Santa Clara University; also Senior
   Economist, Federal Reserve Bank of San Francisco. Current SCU status/rank unclear (may have
   shifted primarily to the Fed role); subfield is international macro, not squarely econometrics;
   identity unconfirmed.
-- **Hau Nguyen** — Emory, "Associate Teaching Professor" of Economics — a teaching-track title,
-  likely a clean exclude, and subfield (labor/health economics) doesn't fit the
-  quantitative/econometrics scope either. Listed rather than silently dropped.

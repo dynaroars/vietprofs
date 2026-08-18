@@ -28,14 +28,18 @@ export const STEM_FIELDS = [
   'Earth & Environmental Sciences',
   'Agricultural & Natural Resource Sciences',
   'Health Sciences',
+  'Misc',
 ];
 
-// Buckets granular `department` values into the broad fields above. Keep the
-// engineering rule ahead of chemistry so Chemical Engineering is not misclassified.
+// Buckets granular `department` values into the broad fields above. Order matters:
+// Health Sciences (incl. pharmacy) is checked ahead of Engineering so departments like
+// "Pharmacoengineering ..." aren't misclassified just because they contain "engineering";
+// Engineering itself is still ahead of Chemistry so Chemical Engineering is not misclassified.
 const FIELD_RULES = [
   { field: 'Computer & Information Sciences', match: /computer science|informatics|information science/i },
   { field: 'Mathematics', match: /mathematics/i },
   { field: 'Statistics & Data Science', match: /statistics|biostatistics|operations research|data science/i },
+  { field: 'Health Sciences', match: /health|medicine|nursing|public health|epidemiology|pharma/i },
   { field: 'Engineering', match: /engineering/i },
   { field: 'Physics & Astronomy', match: /physics|astronomy/i },
   { field: 'Chemistry', match: /chemistry/i },
@@ -45,7 +49,9 @@ const FIELD_RULES = [
   },
   { field: 'Earth & Environmental Sciences', match: /environmental|earth|geology|oceanography|atmospheric/i },
   { field: 'Agricultural & Natural Resource Sciences', match: /agriculture|agronomy|food science|natural resources/i },
-  { field: 'Health Sciences', match: /health|medicine|nursing|public health|epidemiology/i },
+  // DHS STEM-Designated Degree Program list includes Econometrics and Quantitative Economics
+  // (CIP 45.0603) even though Economics broadly is a social science, not STEM.
+  { field: 'Misc', match: /economics/i },
 ];
 
 export function fieldOf(department) {

@@ -32,9 +32,12 @@ The canonical field list is:
 8. Earth & Environmental Sciences
 9. Agricultural & Natural Resource Sciences
 10. Health Sciences
+11. Misc — narrow, DHS STEM-Designated-Degree-Program fields that don't fit the ten canonical
+    buckets above; currently just Economics (quantitative/econometrics — CIP 45.0603), not
+    Economics broadly (which NSF classifies as a social science).
 
-All ten received an initial pass on 2026-08-18. Subsequent work should be a targeted re-audit or
-expansion of **one** of these fields at a time: review existing entries first, verify current
+All ten canonical fields received an initial pass on 2026-08-18. Subsequent work should be a
+targeted re-audit or expansion of **one** of these fields at a time: review existing entries first, verify current
 tenure-line status from official sources, then make only well-supported corrections, removals, or
 additions. A relevant PhD program is not required. Run `npm test`, `npm run build`, and
 `git diff --check` before committing.

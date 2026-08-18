@@ -38,11 +38,11 @@ test('no duplicate profile URLs', () => {
   assert.equal(new Set(urls).size, urls.length);
 });
 
-test('the field filter offers all ten broad STEM fields', () => {
-  assert.equal(STEM_FIELDS.length, 10);
+test('the field filter offers all eleven broad fields', () => {
+  assert.equal(STEM_FIELDS.length, 11);
 });
 
-test('every entry maps to one of the ten broad STEM fields', () => {
+test('every entry maps to one of the eleven broad fields', () => {
   for (const p of roster) {
     assert.ok(
       STEM_FIELDS.includes(fieldOf(p.department)),
