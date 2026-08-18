@@ -76,6 +76,6 @@ git directly — similar to [csrankings.org/submit](https://csrankings.org/submi
 It only accepts **tenure-line** faculty (tenure-track or tenured — not adjunct, visiting,
 teaching-only, research-track, or emeritus) and requires a faculty or scholarly profile link
 before it will submit. The default path opens a pre-filled email to `root@roars.dev`; contributors
-who prefer GitHub can instead open a pre-filled submission file under `submissions/`, targeting
-`dynaroars/vietprofs`. No backend or credentials are handled by the site. Maintainers review email
-and GitHub submissions before folding accepted entries into `public/data.json`.
+who prefer GitHub can instead open a pre-filled issue in `dynaroars/vietprofs`. No backend or
+credentials are handled by the site. Maintainers review email and GitHub submissions before
+folding accepted entries into `public/data.json`.

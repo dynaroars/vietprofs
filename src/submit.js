@@ -3,21 +3,9 @@ import { loadRoster } from './data.js';
 import { escapeHtml } from './utils.js';
 
 const GITHUB_REPO = 'dynaroars/vietprofs';
-const GITHUB_BRANCH = 'main';
 const SUBMISSION_EMAIL = 'root@roars.dev';
 
 const app = document.getElementById('app');
-
-function slugify(name) {
-  return (
-    name
-      .toLowerCase()
-      .normalize('NFD')
-      .replace(/[̀-ͯ]/g, '')
-      .replace(/[^a-z0-9]+/g, '-')
-      .replace(/^-+|-+$/g, '') || 'entry'
-  );
-}
 
 function renderShell() {
   app.innerHTML = `
@@ -111,20 +99,23 @@ function renderShell() {
 
       <div class="submit-actions">
         <button type="submit" class="submit-btn" name="delivery" value="email">Send by email</button>
-        <button type="submit" class="submit-btn submit-btn-secondary" name="delivery" value="github">Submit with GitHub</button>
+        <button type="submit" class="submit-btn submit-btn-secondary" name="delivery" value="github">Submit as a GitHub issue</button>
       </div>
       <p class="submit-hint" id="submit-hint">
         Email is the easiest option and does not require a GitHub account. It opens a pre-filled
-        message to the maintainers. GitHub is optional and opens a pre-filled submission file for
-        anyone who prefers to propose the change there.
+        message to the maintainers. GitHub is optional and opens a pre-filled issue for anyone who
+        prefers to submit there.
       </p>
     </form>
   `;
 }
 
-function buildGithubUrl(filename, content) {
-  const params = new URLSearchParams({ filename, value: content });
-  return `https://github.com/${GITHUB_REPO}/new/${GITHUB_BRANCH}?${params.toString()}`;
+function buildGithubIssueUrl(name, content) {
+  const params = new URLSearchParams({
+    title: `VietProfs submission: ${name}`,
+    body: `## Proposed roster submission\n\n\`\`\`json\n${content}\n\`\`\``,
+  });
+  return `https://github.com/${GITHUB_REPO}/issues/new?${params.toString()}`;
 }
 
 function buildEmailUrl(name, content) {
@@ -181,10 +172,9 @@ function onSubmit(e) {
     },
   };
 
-  const filename = `submissions/${slugify(name)}-${Date.now()}.json`;
   const content = JSON.stringify(submission, null, 2);
   if (e.submitter?.value === 'github') {
-    window.open(buildGithubUrl(filename, content), '_blank', 'noopener,noreferrer');
+    window.open(buildGithubIssueUrl(name, content), '_blank', 'noopener,noreferrer');
   } else {
     window.location.href = buildEmailUrl(name, content);
   }
