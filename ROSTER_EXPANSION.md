@@ -77,10 +77,34 @@ See `README.md` for the field list. Notes specific to filling it in:
 | Mechanical Engineering | Not started | |
 | Civil Engineering | Not started | |
 | Materials Science / Engineering | Not started | |
-| Bioengineering / Biomedical Engineering | Not started | |
-| Earth / Environmental Science | Not started | |
+| Bioengineering / Biomedical Engineering | Not started | Candidates already surfaced during other passes: Tuan Vo-Dinh (Duke, secondary appt, already in roster under Chemistry), John T. Ngo (Boston University). |
+| Earth / Environmental Science | Not started | Candidate already surfaced: Tran Nguyen (UC Davis, Environmental Toxicology). |
 | Astronomy / Astrophysics | Not started | |
-| Other STEM fields not yet enumerated | Not started | Revisit this list as fields get covered — it's a starting set, not exhaustive. |
+| Aerospace Engineering | Not started | |
+| Industrial / Systems Engineering | Not started | |
+| Environmental Engineering | Not started | |
+| Nuclear Engineering | Not started | |
+| Agricultural & Food Science | Not started | |
+| Geology / Oceanography / Atmospheric Science | Not started | |
+| Data Science / Information Science | Not started | Overlaps heavily with CS — check for duplicates against the existing CS list before adding. |
+| Pharmaceutical Sciences | Not started | |
+| Public Health / Epidemiology | Not started | STEM-adjacent by most classifications (e.g. NSF); include if a clean pass turns up candidates. |
+| Medicine (MD/PhD research faculty) | Not started | Distinct from Biology — several MD/PhD candidates were rejected from the Biology pass for having primarily clinical rather than confirmed tenure-line research appointments (see Biology row). Needs its own verification approach given how clinical vs. tenure-line status is documented differently at med schools. |
+| Psychology (cognitive/quantitative) | Not started, disputed | Included in some STEM classifications (e.g. NSF), excluded from others. Flagging rather than deciding unilaterally — ask before starting this one. |
+| Economics (quantitative/econometrics) | Not started, disputed | Same caveat as Psychology above. |
+
+This list is still not exhaustive — there is no single canonical definition of "all STEM fields";
+different classifications (NSF, the DHS STEM-Designated Degree Program list, individual
+universities' own department structures) draw the boundary differently, especially for
+math-heavy social sciences. Treat this table as a living checklist, not a finished taxonomy: add a
+row whenever a plausible field is identified, rather than assuming coverage is complete once every
+current row is "Done".
+
+**Coverage caveat, even for "Done" fields**: every pass so far is a best-effort web search
+(surname patterns + faculty-directory scans), not an authoritative census. It will systematically
+miss people with a thin web presence, at smaller/non-R1 schools, or whose name doesn't read as
+obviously Vietnamese. A field marked "Done" means one solid search pass was completed, not that
+the roster is exhaustive for that field.
 
 ## Known issue: background research agent can silently no-op
 
