@@ -257,6 +257,17 @@ h1 {
   margin-bottom: 1rem;
 }
 
+.submission-link {
+  color: inherit;
+  text-decoration: underline dotted;
+  text-underline-offset: 2px;
+}
+
+.submission-link:hover,
+.submission-link:focus-visible {
+  color: var(--text-primary);
+}
+
 .roster {
   display: flex;
   flex-direction: column;
