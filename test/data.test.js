@@ -21,6 +21,8 @@ test('every entry has the required fields', () => {
     assert.equal(typeof p.state, 'string');
     assert.ok(Array.isArray(p.researchAreas) && p.researchAreas.length > 0);
     assert.equal(typeof p.secondaryAppointment, 'boolean');
+    assert.equal(typeof p.department, 'string');
+    assert.ok(p.department.length > 0);
     assert.match(p.profileUrl, /^https:\/\//);
   }
 });

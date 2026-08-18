@@ -1,44 +1,34 @@
 import './style.css';
-import { loadRoster, uniqueStates, uniqueAreas, filterRoster, sortRoster } from './data.js';
+import { loadRoster, uniqueStates, uniqueDepartments, filterRoster, sortRoster } from './data.js';
+import { escapeHtml } from './utils.js';
 
 const app = document.getElementById('app');
 
-function escapeHtml(str) {
-  return str.replace(/[&<>"']/g, (c) => ({
-    '&': '&amp;',
-    '<': '&lt;',
-    '>': '&gt;',
-    '"': '&quot;',
-    "'": '&#39;',
-  }[c]));
+function pickRandomUnique(values, count) {
+  const pool = [...new Set(values)];
+  const result = [];
+  while (result.length < count && pool.length) {
+    const index = Math.floor(Math.random() * pool.length);
+    result.push(pool.splice(index, 1)[0]);
+  }
+  return result;
 }
 
 function renderShell() {
   app.innerHTML = `
     <header>
       <h1>VietAcademia</h1>
-      <p class="tagline">Vietnamese professors in Computer Science at U.S. universities</p>
+      <p class="tagline">Vietnamese professors at U.S. universities</p>
       <p class="criteria">
-        Full-time, tenure-line faculty at a U.S. university with a CS PhD program, able to
-        solely advise CS PhD students. <span class="dagger">†</span> marks faculty whose
-        tenure home is in another department (e.g. ECE, Statistics) with a secondary or joint
-        appointment in CS.
+        <span class="term" tabindex="0" data-tooltip="On the tenure track or already tenured — not a term, teaching-only, or research-track position.">Tenure-line</span>
+        faculty at U.S. universities.
       </p>
     </header>
     <div class="controls">
-      <input id="search" class="search-input" type="search" placeholder="Search name, university, location, or area…" aria-label="Search" />
-      <select id="state-filter" aria-label="Filter by state">
-        <option value="">All states</option>
-      </select>
-      <select id="area-filter" aria-label="Filter by research area">
-        <option value="">All research areas</option>
-      </select>
-      <select id="sort-by" aria-label="Sort by">
-        <option value="name">Sort: Name</option>
-        <option value="university">Sort: University</option>
-        <option value="state">Sort: State</option>
-      </select>
+      <input id="search" class="search-input" type="search" list="search-suggestions" placeholder="Search name, university, department, location, or area…" aria-label="Search" />
+      <datalist id="search-suggestions"></datalist>
     </div>
+    <div class="examples" id="examples"></div>
     <p class="result-count" id="result-count"></p>
     <div class="roster" id="roster"></div>
     <footer id="footer"></footer>
@@ -62,11 +52,10 @@ function renderRoster(roster) {
         .join('');
       return `
         <div class="entry">
-          <div class="entry-name">
-            <a href="${escapeHtml(p.profileUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(p.name)}</a>${p.secondaryAppointment ? ' <span class="dagger">†</span>' : ''}
+          <div class="entry-line">
+            <a class="entry-name" href="${escapeHtml(p.profileUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(p.name)}</a>${p.secondaryAppointment ? ' <span class="dagger">†</span>' : ''}
+            <span class="entry-meta">${escapeHtml(p.university)} · ${escapeHtml(p.department)} · ${escapeHtml(p.city)}, ${escapeHtml(p.state)}</span>
           </div>
-          <div class="entry-university">${escapeHtml(p.university)}</div>
-          <div class="entry-location">${escapeHtml(p.city)}, ${escapeHtml(p.state)}</div>
           <div class="tags">${tags}</div>
         </div>
       `;
@@ -78,37 +67,47 @@ async function init() {
   renderShell();
   const roster = await loadRoster();
 
-  const stateFilter = document.getElementById('state-filter');
-  for (const state of uniqueStates(roster)) {
-    stateFilter.insertAdjacentHTML('beforeend', `<option value="${escapeHtml(state)}">${escapeHtml(state)}</option>`);
-  }
-
-  const areaFilter = document.getElementById('area-filter');
-  for (const area of uniqueAreas(roster)) {
-    areaFilter.insertAdjacentHTML('beforeend', `<option value="${escapeHtml(area)}">${escapeHtml(area)}</option>`);
+  const suggestions = document.getElementById('search-suggestions');
+  const suggestionValues = [...uniqueDepartments(roster), ...uniqueStates(roster)].sort();
+  for (const value of suggestionValues) {
+    suggestions.insertAdjacentHTML('beforeend', `<option value="${escapeHtml(value)}"></option>`);
   }
 
   const searchInput = document.getElementById('search');
-  const sortSelect = document.getElementById('sort-by');
 
   function update() {
     const filtered = filterRoster(roster, {
       query: searchInput.value,
-      state: stateFilter.value,
-      area: areaFilter.value,
     });
-    renderRoster(sortRoster(filtered, sortSelect.value));
+    renderRoster(sortRoster(filtered));
   }
 
   searchInput.addEventListener('input', update);
-  stateFilter.addEventListener('change', update);
-  areaFilter.addEventListener('change', update);
-  sortSelect.addEventListener('change', update);
+
+  const examples = [
+    ...pickRandomUnique(roster.map((p) => p.name), 2),
+    ...pickRandomUnique(uniqueDepartments(roster), 1),
+    ...pickRandomUnique(uniqueStates(roster), 1),
+    ...pickRandomUnique(roster.flatMap((p) => p.researchAreas), 1),
+  ].sort(() => Math.random() - 0.5);
+  const examplesEl = document.getElementById('examples');
+  examplesEl.innerHTML =
+    '<span class="examples-label">Try:</span>' +
+    examples
+      .map((value) => `<button type="button" class="example-chip">${escapeHtml(value)}</button>`)
+      .join('');
+  examplesEl.addEventListener('click', (e) => {
+    const btn = e.target.closest('.example-chip');
+    if (!btn) return;
+    searchInput.value = btn.textContent;
+    update();
+  });
 
   const universities = new Set(roster.map((p) => p.university)).size;
   const states = new Set(roster.map((p) => p.state)).size;
-  document.getElementById('footer').textContent =
-    `${roster.length} professors across ${universities} universities in ${states} states/territories.`;
+  document.getElementById('footer').innerHTML =
+    `${roster.length} professors across ${universities} universities in ${states} states/territories. ` +
+    `<a class="footer-link" href="/submit.html">Know someone missing, or spot an error? Submit an entry.</a>`;
 
   update();
 }

@@ -12,31 +12,21 @@ export function uniqueStates(roster) {
   return [...new Set(roster.map((p) => p.state))].sort();
 }
 
-export function uniqueAreas(roster) {
-  return [...new Set(roster.flatMap((p) => p.researchAreas))].sort((a, b) =>
-    a.localeCompare(b)
-  );
+export function uniqueDepartments(roster) {
+  return [...new Set(roster.map((p) => p.department))].sort();
 }
 
-export function filterRoster(roster, { query, state, area }) {
+export function filterRoster(roster, { query }) {
   const q = query.trim().toLowerCase();
+  if (!q) return roster;
   return roster.filter((p) => {
-    if (state && p.state !== state) return false;
-    if (area && !p.researchAreas.includes(area)) return false;
-    if (!q) return true;
-    const haystack = [p.name, p.university, p.city, p.state, ...p.researchAreas]
+    const haystack = [p.name, p.university, p.city, p.state, p.department, ...p.researchAreas]
       .join(' ')
       .toLowerCase();
     return haystack.includes(q);
   });
 }
 
-export function sortRoster(roster, sortBy) {
-  const sorted = [...roster];
-  sorted.sort((a, b) => {
-    if (sortBy === 'university') return a.university.localeCompare(b.university);
-    if (sortBy === 'state') return a.state.localeCompare(b.state);
-    return a.name.localeCompare(b.name);
-  });
-  return sorted;
+export function sortRoster(roster) {
+  return [...roster].sort((a, b) => a.name.localeCompare(b.name));
 }
