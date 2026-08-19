@@ -300,33 +300,6 @@ h1 {
   text-underline-offset: 2px;
 }
 
-.export-row {
-  display: flex;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
-}
-
-.export-btn {
-  background: none;
-  border: 1px solid var(--border-color);
-  color: var(--text-muted);
-  padding: 0.25rem 0.7rem;
-  border-radius: 6px;
-  font-family: var(--font-body);
-  font-size: var(--text-xs);
-  cursor: pointer;
-}
-
-.export-btn:hover {
-  color: var(--text-primary);
-  border-color: var(--text-muted);
-}
-
-.export-btn:focus-visible {
-  outline: 2px solid var(--focus-ring);
-  outline-offset: 1px;
-}
-
 .submission-link:hover,
 .submission-link:focus-visible {
   color: var(--text-primary);

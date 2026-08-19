@@ -1,5 +1,5 @@
 import './style.css';
-import { loadRoster, uniqueStates, uniqueDepartments, FIELDS, fieldOf, filterRoster, sortRoster, buildFunFacts, toCsv } from './data.js';
+import { loadRoster, uniqueStates, uniqueDepartments, FIELDS, fieldOf, filterRoster, sortRoster, buildFunFacts } from './data.js';
 import { escapeHtml } from './utils.js';
 
 // Sentinel field-select value for the "show me something interesting" view. Distinct from any
@@ -164,10 +164,6 @@ function renderShell() {
     </div>
     <div class="examples" id="examples"></div>
     <p class="result-count" id="result-count" aria-live="polite"></p>
-    <div class="export-row">
-      <button type="button" class="export-btn" id="export-json">Export JSON</button>
-      <button type="button" class="export-btn" id="export-csv">Export CSV</button>
-    </div>
     <div class="roster" id="roster"></div>
   `;
 }
@@ -343,30 +339,6 @@ async function init() {
       fieldSelect.value = 'all'; // leaving the facts view to show the filtered results
       update();
     }
-  });
-
-  function currentFilteredRoster() {
-    const field = fieldSelect.value === INTERESTING ? 'all' : fieldSelect.value;
-    return sortRoster(filterRoster(roster, { query: searchInput.value, field }));
-  }
-
-  function downloadBlob(filename, content, mime) {
-    const blob = new Blob([content], { type: mime });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = filename;
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
-    URL.revokeObjectURL(url);
-  }
-
-  document.getElementById('export-json').addEventListener('click', () => {
-    downloadBlob('vietprofs.json', JSON.stringify(currentFilteredRoster(), null, 2), 'application/json');
-  });
-  document.getElementById('export-csv').addEventListener('click', () => {
-    downloadBlob('vietprofs.csv', toCsv(currentFilteredRoster()), 'text/csv');
   });
 
   const holiday = nearestVietnameseHoliday(new Date());

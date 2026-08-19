@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
-import { FIELDS, fieldOf, buildFunFacts, filterRoster, toCsv } from '../src/data.js';
+import { FIELDS, fieldOf, buildFunFacts, filterRoster } from '../src/data.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const roster = JSON.parse(readFileSync(join(__dirname, '../public/data.json'), 'utf8'));
@@ -161,14 +161,4 @@ test('search is diacritic-insensitive in both directions', () => {
   const accented = filterRoster(roster, { query: 'Nguyễn', field: 'all' });
   assert.equal(plain.length, accented.length);
   assert.ok(plain.length > 0);
-});
-
-test('toCsv produces a header row plus one row per entry, with fields quoted when needed', () => {
-  const csv = toCsv(roster.slice(0, 3));
-  const lines = csv.split('\n');
-  assert.equal(lines.length, 4); // header + 3 entries
-  assert.match(lines[0], /^name,university,city,state,department,rank,phdYear,phdInstitution,researchAreas,secondaryAppointment,profileUrl,scholarUrl$/);
-  // A department or name containing a comma should come back quoted, not split into extra columns.
-  const commaCsv = toCsv([{ ...roster[0], department: 'A, B' }]);
-  assert.match(commaCsv.split('\n')[1], /"A, B"/);
 });

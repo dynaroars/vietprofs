@@ -159,26 +159,6 @@ export function sortRoster(roster) {
   return [...roster].sort((a, b) => a.name.localeCompare(b.name));
 }
 
-function csvField(value) {
-  const s = value === undefined || value === null ? '' : String(value);
-  return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
-}
-
-const CSV_COLUMNS = [
-  'name', 'university', 'city', 'state', 'department', 'rank', 'phdYear', 'phdInstitution',
-  'researchAreas', 'secondaryAppointment', 'profileUrl', 'scholarUrl',
-];
-
-// A plain-text export of whatever subset the caller passes in (the UI passes the currently
-// filtered/searched roster, not necessarily the whole thing).
-export function toCsv(roster) {
-  const header = CSV_COLUMNS.join(',');
-  const rows = roster.map((p) =>
-    CSV_COLUMNS.map((col) => csvField(col === 'researchAreas' ? p.researchAreas.join('; ') : p[col])).join(','),
-  );
-  return [header, ...rows].join('\n');
-}
-
 // The 50 states plus DC (DC isn't a state, hence "places" rather than "states" in the fact text
 // below), spelled to match this roster's `state` values (which use "DC", not "District of
 // Columbia") so a plain Set lookup works without normalizing anything.
