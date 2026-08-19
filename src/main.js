@@ -1,5 +1,5 @@
 import './style.css';
-import { loadRoster, uniqueStates, uniqueDepartments, FIELDS, TRACKS, fieldOf, filterRoster, sortRoster, buildFunFacts } from './data.js';
+import { loadRoster, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, FIELDS, TRACKS, fieldOf, filterRoster, sortRoster, buildFunFacts } from './data.js';
 import { escapeHtml } from './utils.js';
 
 // Sentinel field-select value for the "show me something interesting" view. Distinct from any
@@ -156,7 +156,7 @@ function renderShell() {
     </header>
     <div class="holiday-banner" id="holiday-banner" hidden></div>
     <div class="controls">
-      <input id="search" class="search-input" type="search" list="search-suggestions" placeholder="Search name, university, department, location, or area…" aria-label="Search" />
+      <input id="search" class="search-input" type="search" list="search-suggestions" placeholder="Search name, university, department, rank, location, or research area…" aria-label="Search" />
       <datalist id="search-suggestions"></datalist>
       <select id="field-filter" class="field-select" aria-label="Filter by field">
         <option value="all">All fields</option>
@@ -284,7 +284,19 @@ async function init() {
   }
 
   const suggestions = document.getElementById('search-suggestions');
-  const suggestionValues = [...uniqueDepartments(roster), ...uniqueStates(roster)].sort();
+  // Matches everything filterRoster actually searches over (name, university, city, state,
+  // department, rank, research areas) so a suggestion always yields at least one result.
+  const suggestionValues = [
+    ...new Set([
+      ...roster.map((p) => p.name),
+      ...roster.map((p) => p.university),
+      ...uniqueDepartments(roster),
+      ...uniqueRanks(roster),
+      ...uniqueCities(roster),
+      ...uniqueStates(roster),
+      ...uniqueResearchAreas(roster),
+    ]),
+  ].sort();
   for (const value of suggestionValues) {
     suggestions.insertAdjacentHTML('beforeend', `<option value="${escapeHtml(value)}"></option>`);
   }

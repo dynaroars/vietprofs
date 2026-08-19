@@ -16,6 +16,18 @@ export function uniqueDepartments(roster) {
   return [...new Set(roster.map((p) => p.department))].sort();
 }
 
+export function uniqueCities(roster) {
+  return [...new Set(roster.map((p) => p.city))].sort();
+}
+
+export function uniqueRanks(roster) {
+  return [...new Set(roster.map((p) => p.rank).filter(Boolean))].sort();
+}
+
+export function uniqueResearchAreas(roster) {
+  return [...new Set(roster.flatMap((p) => p.researchAreas))].sort();
+}
+
 // The two employment tracks a roster entry can carry. Tenure-line means tenure-track or already
 // tenured. Teaching means a full-time, continuing/permanent non-tenure-track teaching appointment
 // (e.g. Teaching Professor, Senior/Principal/Distinguished Lecturer) — never adjunct, visiting,
@@ -172,7 +184,8 @@ export function filterRoster(roster, { query, field, track }) {
   if (!q) return result;
   return result.filter((p) => {
     const haystack = stripDiacritics(
-      [p.name, p.university, p.city, p.state, p.department, ...p.researchAreas]
+      [p.name, p.university, p.city, p.state, p.department, p.rank, ...p.researchAreas]
+        .filter(Boolean)
         .join(' ')
         .toLowerCase(),
     );

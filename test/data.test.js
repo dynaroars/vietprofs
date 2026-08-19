@@ -164,6 +164,12 @@ test('search is diacritic-insensitive in both directions', () => {
   assert.ok(plain.length > 0);
 });
 
+test('search matches on rank/title, not just name/university/location/area', () => {
+  const result = filterRoster(roster, { query: 'Lecturer', field: 'all' });
+  assert.ok(result.length > 0);
+  assert.ok(result.every((p) => /lecturer/i.test(p.rank ?? '')));
+});
+
 test('filterRoster narrows by track and "all" leaves it unfiltered', () => {
   const tenureLine = filterRoster(roster, { query: '', field: 'all', track: 'Tenure-line' });
   assert.ok(tenureLine.length > 0);
