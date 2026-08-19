@@ -15,8 +15,8 @@ Started as a Computer Science-only list and completed an initial audit of the te
 fields on 2026-08-18. Six non-STEM fields (Business & Economics through Arts & Design below) were
 added to the taxonomy on 2026-08-19 and have all since received an initial pass: Business &
 Economics first, then Social & Behavioral Sciences, Education, Humanities, Law & Public Affairs,
-and Arts & Design. Agricultural & Natural Resource Sciences is the only canonical field still
-empty.
+and Arts & Design. Agricultural & Natural Resource Sciences received its first entries on
+2026-08-19; it and every other field remain open to further research passes.
 
 ## Roster maintenance handoff
 

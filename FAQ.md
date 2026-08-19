@@ -52,7 +52,7 @@ Behavioral Sciences; Education; Humanities; Law & Public Affairs; and Arts & Des
 
 The ten STEM fields were rostered first; the other six were added to the field filter on
 2026-08-19 and have since all received an initial pass. Agricultural & Natural Resource Sciences
-(one of the original ten STEM fields) is the only canonical field still empty.
+(one of the original ten STEM fields) received its first entries on 2026-08-19.
 
 The directory's categories are an editorial grouping, informed by the National Science Foundation's
 National Center for Science and Engineering Statistics (NCSES) [science and engineering field
