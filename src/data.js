@@ -52,6 +52,10 @@ const FIELD_OVERRIDES = new Map([
   // Contains "History", which would otherwise be caught by the Humanities rule below before ever
   // reaching Arts & Design's own keywords.
   ['History of Art and Visual Culture|California College of the Arts', 'Arts & Design'],
+  // Combined department, but her own title ("Assistant Professor of Statistics") and research
+  // (optimization, statistical learning) are statistics, not mathematics — the generic
+  // Mathematics rule would otherwise win since it's checked first.
+  ['Mathematics and Statistics|South Dakota State University', 'Statistics & Data Science'],
 ]);
 
 // Buckets granular `department` values into the broad fields above. Order matters, and is not
