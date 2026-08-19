@@ -106,7 +106,7 @@ const FIELD_RULES = [
   // lands with agriculture rather than being caught by the bare "environmental" keyword below.
   {
     field: 'Agricultural & Natural Resource Sciences',
-    match: /agriculture|agronomy|food science|natural resources|plant science|horticulture|animal science|soil science|forestry|wildlife|fisheries/i,
+    match: /agricultur|agronomy|food science|natural resources|plant science|horticulture|animal science|soil science|forestry|wildlife|fisheries/i,
   },
   { field: 'Earth & Environmental Sciences', match: /environmental|earth|geology|oceanography|atmospheric/i },
   // Non-business/non-science fields are matched after the rules above, so departments that read
