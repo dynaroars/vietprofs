@@ -22,9 +22,10 @@ to further research passes — none of this is exhaustive, especially in the sma
 ## Roster maintenance handoff
 
 Include a person only when reliable evidence, preferably an official university page, supports
-all of the following: Vietnamese or Vietnamese-American identity (never infer it from a name
-alone), a current U.S.-university tenure-track or tenured appointment, and a primary appointment
-that fits the field being reviewed. Exclude adjunct, visiting, teaching-only, research-track,
+all of the following: Vietnamese or Vietnamese-American identity (a Vietnamese-sounding name is
+sufficient on its own — the maintainer reviews each addition and will catch false positives), a
+current U.S.-university tenure-track or tenured appointment, and a primary appointment that fits
+the field being reviewed. Exclude adjunct, visiting, teaching-only, research-track,
 professor-of-practice, emeritus/retired, courtesy-only, and non-university appointments. A
 relevant PhD program or PhD-advising eligibility is not required.
 

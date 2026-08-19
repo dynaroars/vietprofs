@@ -56,6 +56,11 @@ const FIELD_OVERRIDES = new Map([
   // (optimization, statistical learning) are statistics, not mathematics — the generic
   // Mathematics rule would otherwise win since it's checked first.
   ['Mathematics and Statistics|South Dakota State University', 'Statistics & Data Science'],
+  // "Great Texts Program" is Baylor Honors College's great-books curriculum — the department
+  // string alone gives no field signal, but Jonathan Tran's own title ("Associate Professor of
+  // Theology in the Great Texts Program") and George W. Baines Chair of Religion put him
+  // squarely in Humanities.
+  ['Great Texts Program|Baylor University', 'Humanities'],
 ]);
 
 // Buckets granular `department` values into the broad fields above. Order matters, and is not
@@ -91,7 +96,7 @@ const FIELD_RULES = [
   // caught by that instead.
   {
     field: 'Health Sciences',
-    match: /health|medicine|nursing|public health|epidemiology|pharma|kinesiology|exercise science|sport science|veterinary|nutrition|dietetics|audiology|speech-language pathology|communication sciences and disorders/i,
+    match: /health|medicine|nursing|public health|epidemiology|pharma|kinesiology|exercise science|sport science|veterinary|nutrition|dietetics|audiology|speech-language pathology|communication sciences and disorders|anatom|toxicology/i,
   },
   // Business terms are specific enough (accounting, marketing, entrepreneurship, ...) that
   // false-positive risk is low; "management" is the one generic-sounding term here, which is
@@ -109,7 +114,7 @@ const FIELD_RULES = [
   { field: 'Chemistry', match: /chemistry/i },
   {
     field: 'Biological & Biomedical Sciences',
-    match: /biology|biological sciences|neuroscience|plant pathology|genetics|oncology|microbiology|immunology|molecular|cell biology|ecology|entomology/i,
+    match: /biology|biological sciences|neuroscience|plant pathology|genetics|genomic|oncology|microbiology|immunology|molecular|cell biology|ecology|entomology/i,
   },
   // Agricultural & Natural Resource Sciences precedes Earth & Environmental Sciences so a combined
   // department name like "Agricultural and Environmental Sciences" (Doc Lap Tran, Tennessee State)
@@ -118,7 +123,7 @@ const FIELD_RULES = [
     field: 'Agricultural & Natural Resource Sciences',
     match: /agricultur|agronomy|food science|natural resources|plant science|horticulture|animal science|soil science|forestry|wildlife|fisheries/i,
   },
-  { field: 'Earth & Environmental Sciences', match: /environmental|earth|geology|oceanography|atmospheric/i },
+  { field: 'Earth & Environmental Sciences', match: /environmental|earth|geology|geography|oceanography|atmospheric/i },
   // Non-business/non-science fields are matched after the rules above, so departments that read
   // as both (e.g. "Geography and Environmental Studies") keep the science bucket they already
   // had. Education precedes Social & Behavioral Sciences so "Educational Psychology" lands in
@@ -129,7 +134,7 @@ const FIELD_RULES = [
     field: 'Social & Behavioral Sciences',
     match: /sociology|psychology|anthropology|political science|social work|communication|international relations|ethnic studies|asian american studies|asian-pacific studies|asian pacific studies|global and international studies|global studies|international studies|gender,? and sexuality studies|women's,? gender|women's studies|social and cultural analysis|journalism|human development|family studies|gerontology/i,
   },
-  { field: 'Humanities', match: /history|philosophy|english|literature|linguistics|languages|classics|religio/i },
+  { field: 'Humanities', match: /history|philosophy|english|literature|linguistics|languages|classics|religio|theolog|divinity/i },
   { field: 'Arts & Design', match: /\barts?\b|design|music|theat|dance|film|cinema|photograph|architecture/i },
   // A department that matches nothing here falls through to its own raw name, which the data
   // test reports so a maintainer can add an explicit rule (or FIELD_OVERRIDES entry) for it.
