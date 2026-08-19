@@ -260,8 +260,8 @@ export function buildFunFacts(roster) {
   const missingPlaces = US_PLACES.filter((s) => !represented.has(s));
   facts.push(
     missingPlaces.length
-      ? `States (and DC) with no one on the roster yet: ${missingPlaces.join(', ')}.`
-      : 'Every U.S. state and DC has at least one person on the roster.',
+      ? `Locations with no one on the roster yet: ${missingPlaces.join(', ')}.`
+      : 'Every U.S. location has at least one person on the roster.',
   );
 
   const hubOverlap = VIETNAMESE_POPULATION_HUB_STATES.filter((s) => represented.has(s));

@@ -190,6 +190,13 @@ h1 {
   font-size: var(--text-sm);
 }
 
+/* `display: flex` above otherwise beats the UA stylesheet's `[hidden] { display: none }`, since
+   author CSS always wins over UA CSS regardless of selector specificity — leaving an empty bar
+   visible even while the `hidden` attribute is set and no holiday is active. */
+.holiday-banner[hidden] {
+  display: none;
+}
+
 .banner-close {
   background: none;
   border: none;
