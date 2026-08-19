@@ -47,8 +47,13 @@ function renderShell() {
       </div>
 
       <div class="form-section">
-        <label for="profileUrl">Faculty or scholarly profile URL *</label>
+        <label for="profileUrl">Official faculty website *</label>
         <input id="profileUrl" name="profileUrl" type="url" required placeholder="https://…" />
+      </div>
+
+      <div class="form-section">
+        <label for="scholarUrl">Google Scholar profile URL (optional)</label>
+        <input id="scholarUrl" name="scholarUrl" type="url" placeholder="https://scholar.google.com/…" />
       </div>
 
       <div class="form-section">
@@ -70,6 +75,22 @@ function renderShell() {
       <div class="form-section">
         <label for="department">Department *</label>
         <input id="department" name="department" type="text" required placeholder="e.g. Chemistry" />
+      </div>
+
+      <div class="form-section">
+        <label for="rank">Current academic rank (optional)</label>
+        <input id="rank" name="rank" type="text" placeholder="e.g. Associate Professor" />
+      </div>
+
+      <div class="form-section form-row">
+        <div>
+          <label for="phdYear">PhD year (optional)</label>
+          <input id="phdYear" name="phdYear" type="number" min="1900" max="${new Date().getFullYear()}" placeholder="e.g. 2018" />
+        </div>
+        <div>
+          <label for="phdInstitution">PhD institution (optional)</label>
+          <input id="phdInstitution" name="phdInstitution" type="text" placeholder="e.g. MIT" />
+        </div>
       </div>
 
       <div class="form-section">
@@ -136,10 +157,14 @@ function onKindChange(form) {
 function populateEntry(form, entry) {
   form.name.value = entry.name;
   form.profileUrl.value = entry.profileUrl;
+  form.scholarUrl.value = entry.scholarUrl ?? '';
   form.university.value = entry.university;
   form.city.value = entry.city;
   form.state.value = entry.state;
   form.department.value = entry.department;
+  form.rank.value = entry.rank ?? '';
+  form.phdYear.value = entry.phdYear ?? '';
+  form.phdInstitution.value = entry.phdInstitution ?? '';
   form.researchAreas.value = entry.researchAreas.join(', ');
   form.secondaryAppointment.checked = entry.secondaryAppointment;
 }
@@ -188,12 +213,16 @@ function onSubmit(e, entriesByName) {
     entry: {
       name,
       profileUrl: form.profileUrl.value.trim(),
+      scholarUrl: form.scholarUrl.value.trim() || undefined,
       university: form.university.value.trim(),
       city: form.city.value.trim(),
       state: form.state.value.trim(),
       researchAreas,
       secondaryAppointment: form.secondaryAppointment.checked,
       department: form.department.value.trim(),
+      rank: form.rank.value.trim() || undefined,
+      phdYear: form.phdYear.value ? Number(form.phdYear.value) : undefined,
+      phdInstitution: form.phdInstitution.value.trim() || undefined,
     },
   };
 

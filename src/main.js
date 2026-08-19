@@ -1,5 +1,5 @@
 import './style.css';
-import { loadRoster, uniqueStates, uniqueDepartments, STEM_FIELDS, filterRoster, sortRoster } from './data.js';
+import { loadRoster, uniqueStates, uniqueDepartments, STEM_FIELDS, fieldOf, filterRoster, sortRoster } from './data.js';
 import { escapeHtml } from './utils.js';
 
 const app = document.getElementById('app');
@@ -50,7 +50,7 @@ function renderRoster(roster) {
   const countEl = document.getElementById('result-count');
   const universities = new Set(roster.map((p) => p.university)).size;
   const states = new Set(roster.map((p) => p.state)).size;
-  countEl.innerHTML = `${roster.length} <span class="term" tabindex="0" data-tooltip="On the tenure track or already tenured — not adjunct, visiting, teaching-only, research-track, or emeritus.">tenure-line</span> professor${roster.length === 1 ? '' : 's'} across ${universities} universit${universities === 1 ? 'y' : 'ies'} in ${states} state${states === 1 ? '' : 's'}. <a class="submission-link" href="${import.meta.env.BASE_URL}submit.html">Add or update info.</a>`;
+  countEl.innerHTML = `${roster.length} <span class="term" tabindex="0" data-tooltip="On the tenure track or already tenured — not adjunct, visiting, teaching-only, research-track, or emeritus.">tenure-line</span> professor${roster.length === 1 ? '' : 's'} across ${universities} universit${universities === 1 ? 'y' : 'ies'} in ${states} state${states === 1 ? '' : 's'}. <a class="submission-link" href="https://vietprofs.roars.dev/submit.html">Add or update info.</a>`;
 
   if (roster.length === 0) {
     rosterEl.innerHTML = '<p class="empty-state">No matches. Try a different search or filter.</p>';
@@ -65,9 +65,14 @@ function renderRoster(roster) {
       return `
         <div class="entry">
           <div class="entry-line">
-            <a class="entry-name" href="${escapeHtml(p.profileUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(p.name)}</a>${p.secondaryAppointment ? ' <span class="dagger">†</span>' : ''}
+            <a class="entry-name" href="${escapeHtml(p.websiteUrl ?? p.profileUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(p.name)}</a>${p.scholarUrl ? ` <a class="scholar-link" href="${escapeHtml(p.scholarUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(p.name)} on Google Scholar" title="Google Scholar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3Z"/><path d="M5 12.18V16c0 1.66 3.13 3 7 3s7-1.34 7-3v-3.82l-7 3.82-7-3.82Z"/></svg></a>` : ''}${p.secondaryAppointment ? ' <span class="dagger">†</span>' : ''}
             <span class="entry-meta">${escapeHtml(p.university)} · ${escapeHtml(p.department)} · ${escapeHtml(p.city)}, ${escapeHtml(p.state)}</span>
           </div>
+          ${p.rank || p.phdYear || p.phdInstitution ? `<div class="entry-details">${[
+            p.rank && escapeHtml(p.rank),
+            p.phdYear && `PhD ${escapeHtml(String(p.phdYear))}${p.phdInstitution ? `, ${escapeHtml(p.phdInstitution)}` : ''}`,
+            !p.phdYear && p.phdInstitution && `PhD, ${escapeHtml(p.phdInstitution)}`,
+          ].filter(Boolean).join(' · ')}</div>` : ''}
           <div class="tags">${tags}</div>
         </div>
       `;
@@ -95,8 +100,18 @@ async function init() {
 
   const searchInput = document.getElementById('search');
   const fieldSelect = document.getElementById('field-filter');
+  const fieldCounts = new Map(
+    STEM_FIELDS.map((field) => [
+      field,
+      roster.filter((person) => fieldOf(person.department) === field).length,
+    ]),
+  );
+  fieldSelect.options[0].textContent = `All fields (${roster.length})`;
   for (const field of STEM_FIELDS) {
-    fieldSelect.insertAdjacentHTML('beforeend', `<option value="${escapeHtml(field)}">${escapeHtml(field)}</option>`);
+    fieldSelect.insertAdjacentHTML(
+      'beforeend',
+      `<option value="${escapeHtml(field)}">${escapeHtml(field)} (${fieldCounts.get(field)})</option>`,
+    );
   }
 
   const params = new URLSearchParams(window.location.search);
@@ -142,6 +157,7 @@ async function init() {
     const btn = e.target.closest('.example-chip');
     if (!btn) return;
     searchInput.value = btn.textContent;
+    fieldSelect.value = 'all';
     update();
   });
 

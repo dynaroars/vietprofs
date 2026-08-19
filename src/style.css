@@ -235,7 +235,7 @@ h1 {
 }
 
 .field-select {
-  /* Keep the control stable as selections vary; sized for the longest STEM field. */
+  /* Keep the control stable as selections vary; sized for the longest field label and count. */
   flex: 0 0 22rem;
   max-width: 100%;
   padding: 0.6rem 0.9rem;
@@ -299,6 +299,23 @@ h1 {
   text-decoration: underline;
 }
 
+.scholar-link {
+  color: var(--text-muted);
+  display: inline-flex;
+  vertical-align: text-bottom;
+}
+
+.scholar-link:hover,
+.scholar-link:focus-visible {
+  color: var(--text-primary);
+}
+
+.scholar-link svg {
+  height: 1rem;
+  width: 1rem;
+  fill: currentColor;
+}
+
 .dagger {
   color: var(--text-muted);
   font-weight: 400;
@@ -307,6 +324,12 @@ h1 {
 .entry-meta {
   color: var(--text-muted);
   font-size: var(--text-sm);
+}
+
+.entry-details {
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+  margin-top: 0.2rem;
 }
 
 .tags {

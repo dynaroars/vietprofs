@@ -1,7 +1,7 @@
 # Pending review: candidates found but not added
 
 Generated 2026-08-18 during a broad multi-field research pass. These names were surfaced by
-web search but did **not** clear the roster's verification bar (see `ROSTER_EXPANSION.md`)
+web search but did **not** clear the roster's verification bar (see `README.md`)
 with enough confidence for automatic inclusion — usually because at least one of (a) Vietnamese/
 Vietnamese-American identity, (b) tenure-track/tenured status, or (c) correct field/primary
 appointment could not be confirmed from available sources. They are **not rejected** — they're
@@ -120,7 +120,7 @@ finding below rests on web-search result snippets, not a directly-verified offic
 
 ## Psychology (cognitive/quantitative) — field-inclusion itself is disputed
 
-`ROSTER_EXPANSION.md` flags Psychology as "Not started, disputed" — ask before deciding whether it
+`README.md` flags Psychology as "Not started, disputed" — ask before deciding whether it
 gets its own `STEM_FIELDS` bucket at all. Candidates found either way:
 
 - **Christopher Nguyen** — Ohio State, Clinical Associate Professor (joint w/ Psychiatry).
@@ -137,7 +137,7 @@ gets its own `STEM_FIELDS` bucket at all. Candidates found either way:
 
 ## Economics (quantitative/econometrics)
 
-**Resolved 2026-08-18:** narrow-scoped and added as a `Misc` field (see `ROSTER_EXPANSION.md`) —
+**Resolved 2026-08-18:** narrow-scoped and added as a `Misc` field (see `README.md`) —
 broad Economics is a social science, not STEM, but "Econometrics and Quantitative Economics" is on
 the DHS STEM-Designated Degree Program list. Quang Vuong (NYU, creator of the "Vuong test") was
 added on that basis after user-confirmed Vietnamese identity.

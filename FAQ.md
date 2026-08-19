@@ -40,11 +40,23 @@ primary tenure home is in another department.
 
 ## How can I submit a correction or missing professor?
 
-Use the site’s **Submit an entry** page. Please include an official university profile and evidence
-of Vietnamese identity when available.
+Use the [Submit an entry page](https://vietprofs.roars.dev/submit.html). Please include an
+official university profile and evidence of Vietnamese identity when available.
 
 ## What are the broad STEM fields?
 
 Computer & Information Sciences; Engineering; Mathematics; Statistics & Data Science; Physics &
 Astronomy; Chemistry; Biological & Biomedical Sciences; Earth & Environmental Sciences;
-Agricultural & Natural Resource Sciences; and Health Sciences.
+Agricultural & Natural Resource Sciences; Health Sciences; and a narrow Miscellaneous category.
+
+The directory's categories are an editorial grouping, informed by the National Science Foundation's
+National Center for Science and Engineering Statistics (NCSES) [science and engineering field
+taxonomy](https://ncses.nsf.gov/pubs/nsb202332/introduction) and its more detailed [doctoral
+field taxonomy](https://ncses.nsf.gov/pubs/ncses23200/table/4). They are not presented as an
+official NSF classification.
+
+Economics is normally a social science in the NCSES taxonomy. The Miscellaneous category includes
+only Econometrics and Quantitative Economics, because it is specifically listed as CIP 45.0603 in
+the U.S. Department of Homeland Security's [STEM Designated Degree Program
+List](https://www.ice.gov/sites/default/files/documents/stem-list.pdf). Broad Economics is not
+included.

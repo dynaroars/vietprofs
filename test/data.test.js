@@ -17,6 +17,10 @@ test('every entry has the required fields', () => {
   for (const p of roster) {
     assert.equal(typeof p.name, 'string');
     assert.equal(typeof p.profileUrl, 'string');
+    if (p.scholarUrl !== undefined) {
+      assert.equal(typeof p.scholarUrl, 'string');
+      assert.match(p.scholarUrl, /^https:\/\//);
+    }
     assert.equal(typeof p.university, 'string');
     assert.equal(typeof p.city, 'string');
     assert.equal(typeof p.state, 'string');
@@ -24,6 +28,9 @@ test('every entry has the required fields', () => {
     assert.equal(typeof p.secondaryAppointment, 'boolean');
     assert.equal(typeof p.department, 'string');
     assert.ok(p.department.length > 0);
+    if (p.rank !== undefined) assert.equal(typeof p.rank, 'string');
+    if (p.phdYear !== undefined) assert.ok(Number.isInteger(p.phdYear));
+    if (p.phdInstitution !== undefined) assert.equal(typeof p.phdInstitution, 'string');
     assert.match(p.profileUrl, /^https:\/\//);
   }
 });
