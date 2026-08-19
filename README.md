@@ -13,10 +13,11 @@ and sorted client-side.
 
 Started as a Computer Science-only list and completed an initial audit of the ten canonical STEM
 fields on 2026-08-18. Six non-STEM fields (Business & Economics through Arts & Design below) were
-added to the taxonomy on 2026-08-19 and have all since received an initial pass: Business &
-Economics first, then Social & Behavioral Sciences, Education, Humanities, Law & Public Affairs,
-and Arts & Design. Agricultural & Natural Resource Sciences received its first entries on
-2026-08-19; it and every other field remain open to further research passes.
+added to the taxonomy on 2026-08-19. All sixteen fields, including Agricultural & Natural Resource
+Sciences (the last to receive its first entries), completed a second full audit-and-search pass on
+2026-08-19: every existing entry was checked against a current source, several stale entries were
+corrected or removed, and new candidates were searched for field by field. Every field remains open
+to further research passes — none of this is exhaustive, especially in the smaller-count fields.
 
 ## Roster maintenance handoff
 

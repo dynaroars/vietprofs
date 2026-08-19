@@ -51,8 +51,8 @@ Agricultural & Natural Resource Sciences; Health Sciences; Business & Economics;
 Behavioral Sciences; Education; Humanities; Law & Public Affairs; and Arts & Design.
 
 The ten STEM fields were rostered first; the other six were added to the field filter on
-2026-08-19 and have since all received an initial pass. Agricultural & Natural Resource Sciences
-(one of the original ten STEM fields) received its first entries on 2026-08-19.
+2026-08-19. All sixteen fields completed a full audit-and-search pass on 2026-08-19, including
+Agricultural & Natural Resource Sciences, which received its first entries during that pass.
 
 The directory's categories are an editorial grouping, informed by the National Science Foundation's
 National Center for Science and Engineering Statistics (NCSES) [science and engineering field
