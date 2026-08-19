@@ -177,6 +177,34 @@ h1 {
   transform: translateY(0);
 }
 
+.holiday-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
+  background: var(--tag-bg);
+  color: var(--text-primary);
+  font-size: var(--text-sm);
+}
+
+.banner-close {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: var(--text-lg);
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 0.2rem;
+}
+
+.banner-close:hover,
+.banner-close:focus-visible {
+  color: var(--text-primary);
+}
+
 .controls {
   display: flex;
   flex-wrap: wrap;
@@ -263,6 +291,33 @@ h1 {
   color: inherit;
   text-decoration: underline dotted;
   text-underline-offset: 2px;
+}
+
+.export-row {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.export-btn {
+  background: none;
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  padding: 0.25rem 0.7rem;
+  border-radius: 6px;
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  cursor: pointer;
+}
+
+.export-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--text-muted);
+}
+
+.export-btn:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 1px;
 }
 
 .submission-link:hover,
@@ -365,6 +420,70 @@ h1 {
   padding: 3rem 0;
   text-align: center;
   color: var(--text-muted);
+}
+
+.state-grid-caption {
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+  margin-bottom: 0.5rem;
+}
+
+.state-grid-wrap {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+.state-grid {
+  display: grid;
+  grid-template-columns: repeat(13, 1.9rem);
+  grid-auto-rows: 1.9rem;
+  gap: 0.2rem;
+  width: max-content;
+}
+
+.state-tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  padding: 0;
+  cursor: pointer;
+}
+
+.state-tile:hover {
+  border-color: var(--focus-ring);
+}
+
+.state-tile:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 1px;
+}
+
+.state-tile.heat-0 {
+  color: var(--text-muted);
+}
+
+.state-tile.heat-1 {
+  background: color-mix(in srgb, var(--focus-ring) 15%, var(--card-bg));
+}
+
+.state-tile.heat-2 {
+  background: color-mix(in srgb, var(--focus-ring) 35%, var(--card-bg));
+}
+
+.state-tile.heat-3 {
+  background: color-mix(in srgb, var(--focus-ring) 60%, var(--card-bg));
+  color: #fff;
+}
+
+.state-tile.heat-4 {
+  background: var(--focus-ring);
+  color: #fff;
 }
 
 .fun-facts {

@@ -1,5 +1,5 @@
 import './style.css';
-import { loadRoster, uniqueStates, uniqueDepartments, FIELDS, fieldOf, filterRoster, sortRoster, buildFunFacts } from './data.js';
+import { loadRoster, uniqueStates, uniqueDepartments, FIELDS, fieldOf, filterRoster, sortRoster, buildFunFacts, toCsv } from './data.js';
 import { escapeHtml } from './utils.js';
 
 // Sentinel field-select value for the "show me something interesting" view. Distinct from any
@@ -12,6 +12,116 @@ const INTERESTING = 'interesting';
 // (used for filtering/URLs/classification) is never altered — only what's displayed is shortened.
 function fieldDropdownLabel(field) {
   return field.replace(/\bSciences\b/g, '').replace(/\s+/g, ' ').trim();
+}
+
+// Gregorian dates for Tết Nguyên Đán (Lunar New Year), sourced from published Vietnamese-calendar
+// converters. Extend this table as years pass; if the current year (or its neighbors) is missing,
+// the holiday banner simply doesn't show one for it.
+const TET_DATES = {
+  2024: '2024-02-10', 2025: '2025-01-29', 2026: '2026-02-17', 2027: '2027-02-06',
+  2028: '2028-01-26', 2029: '2029-02-13', 2030: '2030-02-03', 2031: '2031-01-23',
+  2032: '2032-02-11', 2033: '2033-01-31', 2034: '2034-02-19', 2035: '2035-02-08',
+  2036: '2036-01-28',
+};
+
+// Gregorian dates for Tết Trung Thu (Mid-Autumn / Moon Festival).
+const TRUNG_THU_DATES = {
+  2024: '2024-09-17', 2025: '2025-10-06', 2026: '2026-09-25', 2027: '2027-09-15',
+  2028: '2028-10-03', 2029: '2029-09-22',
+};
+
+function dateForYear(table, year) {
+  const s = table[year];
+  return s ? new Date(`${s}T00:00:00`) : null;
+}
+
+// Deliberately limited to non-political, widely-shared cultural/community observances — no
+// government-designated national holidays. Returns the single nearest one that `today` falls
+// within the display window of, or null if none currently apply.
+function nearestVietnameseHoliday(today) {
+  const occurrences = [];
+  for (const year of [today.getFullYear() - 1, today.getFullYear(), today.getFullYear() + 1]) {
+    const tet = dateForYear(TET_DATES, year);
+    if (tet) {
+      occurrences.push({
+        date: tet,
+        emoji: '🧧',
+        before: 10,
+        after: 15,
+        greeting: 'Chúc Mừng Năm Mới — happy Tết (Lunar New Year) from VietProfs!',
+      });
+    }
+    const trungThu = dateForYear(TRUNG_THU_DATES, year);
+    if (trungThu) {
+      occurrences.push({
+        date: trungThu,
+        emoji: '🥮',
+        before: 7,
+        after: 7,
+        greeting: 'Chúc mừng Trung Thu — happy Mid-Autumn Festival!',
+      });
+    }
+    // Ngày Nhà giáo Việt Nam (Vietnamese Teachers' Day) is a fixed date, not lunar.
+    occurrences.push({
+      date: new Date(`${year}-11-20T00:00:00`),
+      emoji: '🍎',
+      before: 3,
+      after: 3,
+      greeting: "Chúc mừng Ngày Nhà giáo Việt Nam — happy Vietnamese Teachers' Day, and thank you "
+        + 'to every professor on this list.',
+    });
+  }
+
+  let best = null;
+  for (const occ of occurrences) {
+    const diffDays = Math.round((today - occ.date) / 86400000);
+    if (diffDays >= -occ.before && diffDays <= occ.after) {
+      const distance = Math.abs(diffDays);
+      if (!best || distance < best.distance) best = { ...occ, distance };
+    }
+  }
+  return best;
+}
+
+// A schematic (not geographically precise) grid layout of the 50 states + DC, used only for the
+// "show me something interesting" view's at-a-glance state map. Every state gets an equally
+// visible, clickable tile — unlike a real map, where small states are hard to see or click.
+const STATE_ABBR = {
+  Alabama: 'AL', Alaska: 'AK', Arizona: 'AZ', Arkansas: 'AR', California: 'CA', Colorado: 'CO',
+  Connecticut: 'CT', DC: 'DC', Delaware: 'DE', Florida: 'FL', Georgia: 'GA', Hawaii: 'HI',
+  Idaho: 'ID', Illinois: 'IL', Indiana: 'IN', Iowa: 'IA', Kansas: 'KS', Kentucky: 'KY',
+  Louisiana: 'LA', Maine: 'ME', Maryland: 'MD', Massachusetts: 'MA', Michigan: 'MI',
+  Minnesota: 'MN', Mississippi: 'MS', Missouri: 'MO', Montana: 'MT', Nebraska: 'NE',
+  Nevada: 'NV', 'New Hampshire': 'NH', 'New Jersey': 'NJ', 'New Mexico': 'NM', 'New York': 'NY',
+  'North Carolina': 'NC', 'North Dakota': 'ND', Ohio: 'OH', Oklahoma: 'OK', Oregon: 'OR',
+  Pennsylvania: 'PA', 'Rhode Island': 'RI', 'South Carolina': 'SC', 'South Dakota': 'SD',
+  Tennessee: 'TN', Texas: 'TX', Utah: 'UT', Vermont: 'VT', Virginia: 'VA', Washington: 'WA',
+  'West Virginia': 'WV', Wisconsin: 'WI', Wyoming: 'WY',
+};
+
+// [row, column] on a 13-column grid. Not real geography — just a reasonable schematic
+// approximation (AK/HI inset in their traditional corners) so every state is equally sized and
+// clickable.
+const STATE_GRID = {
+  AK: [0, 0], ME: [0, 11],
+  VT: [1, 10], NH: [1, 11],
+  WA: [2, 1], MT: [2, 2], ND: [2, 3], MN: [2, 4], WI: [2, 6], MI: [2, 7], NY: [2, 9], MA: [2, 11],
+  OR: [3, 1], ID: [3, 2], WY: [3, 3], SD: [3, 4], IA: [3, 5], IL: [3, 6], IN: [3, 7], OH: [3, 8],
+  PA: [3, 9], NJ: [3, 10], CT: [3, 11], RI: [3, 12],
+  CA: [4, 1], NV: [4, 2], UT: [4, 3], CO: [4, 4], NE: [4, 5], KS: [4, 6], MO: [4, 7], KY: [4, 8],
+  WV: [4, 9], VA: [4, 10], MD: [4, 11], DE: [4, 12],
+  AZ: [5, 2], NM: [5, 3], OK: [5, 5], AR: [5, 6], TN: [5, 7], NC: [5, 8], SC: [5, 9], DC: [5, 10],
+  HI: [6, 0], TX: [6, 5], LA: [6, 6], MS: [6, 7], AL: [6, 8], GA: [6, 9],
+  FL: [7, 9],
+};
+
+function heatTier(count, max) {
+  if (count === 0 || max === 0) return 0;
+  const ratio = count / max;
+  if (ratio > 0.66) return 4;
+  if (ratio > 0.33) return 3;
+  if (ratio > 0.1) return 2;
+  return 1;
 }
 
 const app = document.getElementById('app');
@@ -44,6 +154,7 @@ function renderShell() {
         <a class="icon-link" href="https://github.com/dynaroars/vietprofs/blob/main/FAQ.md" target="_blank" rel="noopener noreferrer" aria-label="Frequently asked questions" title="Frequently asked questions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.2 9.3a2.9 2.9 0 0 1 5.6 1c0 2-2.8 2.4-2.8 4.2"/><circle cx="12" cy="17.6" r="1.1" fill="currentColor" stroke="none"/></svg></a>
       </div>
     </header>
+    <div class="holiday-banner" id="holiday-banner" hidden></div>
     <div class="controls">
       <input id="search" class="search-input" type="search" list="search-suggestions" placeholder="Search name, university, department, location, or area…" aria-label="Search" />
       <datalist id="search-suggestions"></datalist>
@@ -53,6 +164,10 @@ function renderShell() {
     </div>
     <div class="examples" id="examples"></div>
     <p class="result-count" id="result-count" aria-live="polite"></p>
+    <div class="export-row">
+      <button type="button" class="export-btn" id="export-json">Export JSON</button>
+      <button type="button" class="export-btn" id="export-csv">Export CSV</button>
+    </div>
     <div class="roster" id="roster"></div>
   `;
 }
@@ -92,12 +207,48 @@ function renderRoster(roster) {
     .join('');
 }
 
+const NGUYEN_TOOLTIP = 'Nguyễn was Vietnam’s last ruling dynasty (1802–1945); many people adopted '
+  + 'or were assigned the name under it, which is why it’s estimated to be shared by nearly 40% '
+  + 'of Vietnamese people today.';
+
+function renderStateGrid(roster) {
+  const counts = new Map();
+  for (const p of roster) counts.set(p.state, (counts.get(p.state) ?? 0) + 1);
+  const max = Math.max(0, ...counts.values());
+  const tiles = Object.entries(STATE_GRID)
+    .map(([abbr, [row, col]]) => {
+      const fullName = Object.keys(STATE_ABBR).find((name) => STATE_ABBR[name] === abbr);
+      const count = counts.get(fullName) ?? 0;
+      const tier = heatTier(count, max);
+      const label = `${fullName}: ${count} ${count === 1 ? 'person' : 'people'}`;
+      return `<button type="button" class="state-tile heat-${tier}" style="grid-row:${row + 1};grid-column:${col + 1}" data-state="${escapeHtml(fullName)}" title="${escapeHtml(label)}" aria-label="${escapeHtml(label)}">${abbr}</button>`;
+    })
+    .join('');
+  return `
+    <p class="state-grid-caption">By state — darker means more people; click one to search it.</p>
+    <div class="state-grid-wrap"><div class="state-grid">${tiles}</div></div>
+  `;
+}
+
 function renderFunFacts(roster) {
   const rosterEl = document.getElementById('roster');
   const countEl = document.getElementById('result-count');
   countEl.textContent = 'A few interesting patterns in the roster:';
   const facts = buildFunFacts(roster);
-  rosterEl.innerHTML = `<ul class="fun-facts">${facts.map((f) => `<li>${escapeHtml(f)}</li>`).join('')}</ul>`;
+  const items = facts
+    .map((f) => {
+      const escaped = escapeHtml(f);
+      if (f.startsWith('Most common surnames')) {
+        // Wrap just the first "Nguyen" occurrence with the existing .term tooltip mechanic.
+        return `<li>${escaped.replace(
+          'Nguyen (',
+          `<span class="term" tabindex="0" data-tooltip="${escapeHtml(NGUYEN_TOOLTIP)}">Nguyen</span> (`,
+        )}</li>`;
+      }
+      return `<li>${escaped}</li>`;
+    })
+    .join('');
+  rosterEl.innerHTML = `${renderStateGrid(roster)}<ul class="fun-facts">${items}</ul>`;
 }
 
 async function init() {
@@ -177,14 +328,56 @@ async function init() {
     update();
   });
 
-  // Delegated on the roster container itself (attached once) rather than per-entry, since
-  // renderRoster() replaces its innerHTML wholesale on every update().
+  // Delegated on the roster container itself (attached once) rather than per-entry/per-tile,
+  // since renderRoster()/renderFunFacts() both replace its innerHTML wholesale on every update().
   document.getElementById('roster').addEventListener('click', (e) => {
     const tag = e.target.closest('.tag');
-    if (!tag) return;
-    searchInput.value = tag.textContent;
-    update();
+    if (tag) {
+      searchInput.value = tag.textContent;
+      update();
+      return;
+    }
+    const tile = e.target.closest('.state-tile');
+    if (tile) {
+      searchInput.value = tile.dataset.state;
+      fieldSelect.value = 'all'; // leaving the facts view to show the filtered results
+      update();
+    }
   });
+
+  function currentFilteredRoster() {
+    const field = fieldSelect.value === INTERESTING ? 'all' : fieldSelect.value;
+    return sortRoster(filterRoster(roster, { query: searchInput.value, field }));
+  }
+
+  function downloadBlob(filename, content, mime) {
+    const blob = new Blob([content], { type: mime });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(url);
+  }
+
+  document.getElementById('export-json').addEventListener('click', () => {
+    downloadBlob('vietprofs.json', JSON.stringify(currentFilteredRoster(), null, 2), 'application/json');
+  });
+  document.getElementById('export-csv').addEventListener('click', () => {
+    downloadBlob('vietprofs.csv', toCsv(currentFilteredRoster()), 'text/csv');
+  });
+
+  const holiday = nearestVietnameseHoliday(new Date());
+  if (holiday) {
+    const bannerEl = document.getElementById('holiday-banner');
+    bannerEl.hidden = false;
+    bannerEl.innerHTML = `<span>${holiday.emoji} ${escapeHtml(holiday.greeting)}</span><button type="button" class="banner-close" aria-label="Dismiss">×</button>`;
+    bannerEl.querySelector('.banner-close').addEventListener('click', () => {
+      bannerEl.hidden = true;
+    });
+  }
 
   const facts = buildFunFacts(roster);
   const randomFact = facts[Math.floor(Math.random() * facts.length)];

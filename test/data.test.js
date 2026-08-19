@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
-import { FIELDS, fieldOf, buildFunFacts } from '../src/data.js';
+import { FIELDS, fieldOf, buildFunFacts, filterRoster, toCsv } from '../src/data.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const roster = JSON.parse(readFileSync(join(__dirname, '../public/data.json'), 'utf8'));
@@ -31,6 +31,7 @@ test('every entry has the required fields', () => {
     if (p.rank !== undefined) assert.equal(typeof p.rank, 'string');
     if (p.phdYear !== undefined) assert.ok(Number.isInteger(p.phdYear));
     if (p.phdInstitution !== undefined) assert.equal(typeof p.phdInstitution, 'string');
+    if (p.undergradInstitution !== undefined) assert.equal(typeof p.undergradInstitution, 'string');
     assert.match(p.profileUrl, /^https:\/\//);
   }
 });
@@ -145,4 +146,29 @@ test('buildFunFacts surname counts include common Vietnamese surnames and stay i
   // Every surname count should be no larger than how many people actually have that token in
   // their name, and no smaller than 1.
   assert.ok(nguyenCount > 0 && nguyenCount <= roster.length);
+});
+
+test('buildFunFacts includes a Vietnamese-American population-hub comparison and a refugee/diaspora research count', () => {
+  const facts = buildFunFacts(roster);
+  assert.ok(facts.some((f) => /Vietnamese-American communities/.test(f)));
+  // The refugee/diaspora fact only appears when at least one person's research areas match; this
+  // roster has known Critical Refugee Studies entries, so it should be present.
+  assert.ok(facts.some((f) => /refugee, immigration, or diaspora topics/.test(f)));
+});
+
+test('search is diacritic-insensitive in both directions', () => {
+  const plain = filterRoster(roster, { query: 'Nguyen', field: 'all' });
+  const accented = filterRoster(roster, { query: 'Nguyễn', field: 'all' });
+  assert.equal(plain.length, accented.length);
+  assert.ok(plain.length > 0);
+});
+
+test('toCsv produces a header row plus one row per entry, with fields quoted when needed', () => {
+  const csv = toCsv(roster.slice(0, 3));
+  const lines = csv.split('\n');
+  assert.equal(lines.length, 4); // header + 3 entries
+  assert.match(lines[0], /^name,university,city,state,department,rank,phdYear,phdInstitution,researchAreas,secondaryAppointment,profileUrl,scholarUrl$/);
+  // A department or name containing a comma should come back quoted, not split into extra columns.
+  const commaCsv = toCsv([{ ...roster[0], department: 'A, B' }]);
+  assert.match(commaCsv.split('\n')[1], /"A, B"/);
 });

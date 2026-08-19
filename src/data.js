@@ -130,18 +130,43 @@ export function filterRoster(roster, { query, field }) {
   if (field && field !== 'all') {
     result = result.filter((p) => fieldOf(p.department, p.university) === field);
   }
-  const q = query.trim().toLowerCase();
+  // Diacritic-insensitive: many entries use Vietnamese diacritics (e.g. "Nguyễn") while others
+  // spell the same name plainly ("Nguyen"). Stripping combining marks from both sides means
+  // typing either form finds both, rather than only ever matching the exact spelling on record.
+  const q = stripDiacritics(query.trim().toLowerCase());
   if (!q) return result;
   return result.filter((p) => {
-    const haystack = [p.name, p.university, p.city, p.state, p.department, ...p.researchAreas]
-      .join(' ')
-      .toLowerCase();
+    const haystack = stripDiacritics(
+      [p.name, p.university, p.city, p.state, p.department, ...p.researchAreas]
+        .join(' ')
+        .toLowerCase(),
+    );
     return haystack.includes(q);
   });
 }
 
 export function sortRoster(roster) {
   return [...roster].sort((a, b) => a.name.localeCompare(b.name));
+}
+
+function csvField(value) {
+  const s = value === undefined || value === null ? '' : String(value);
+  return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
+}
+
+const CSV_COLUMNS = [
+  'name', 'university', 'city', 'state', 'department', 'rank', 'phdYear', 'phdInstitution',
+  'researchAreas', 'secondaryAppointment', 'profileUrl', 'scholarUrl',
+];
+
+// A plain-text export of whatever subset the caller passes in (the UI passes the currently
+// filtered/searched roster, not necessarily the whole thing).
+export function toCsv(roster) {
+  const header = CSV_COLUMNS.join(',');
+  const rows = roster.map((p) =>
+    CSV_COLUMNS.map((col) => csvField(col === 'researchAreas' ? p.researchAreas.join('; ') : p[col])).join(','),
+  );
+  return [header, ...rows].join('\n');
 }
 
 // The 50 states plus DC (DC isn't a state, hence "places" rather than "states" in the fact text
@@ -155,6 +180,17 @@ const US_PLACES = [
   'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon',
   'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah',
   'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming',
+];
+
+// States commonly cited (Census/ACS Asian-American-subgroup data, and general reporting on
+// Vietnamese-American communities) as home to the largest Vietnamese-American populations —
+// California and Texas by a wide margin, then Washington, Virginia (Eden Center/Northern
+// Virginia), Georgia, Florida, Massachusetts, Pennsylvania, Louisiana (post-1975 Gulf Coast
+// resettlement), and Oklahoma. Used only for a rough overlap check against where this roster's
+// people are, not as a precise ranked source.
+const VIETNAMESE_POPULATION_HUB_STATES = [
+  'California', 'Texas', 'Washington', 'Virginia', 'Georgia', 'Florida', 'Massachusetts',
+  'Pennsylvania', 'Louisiana', 'Oklahoma',
 ];
 
 // A curated list of common Vietnamese surnames, matched as whole name-tokens (not substrings) so
@@ -228,6 +264,13 @@ export function buildFunFacts(roster) {
       : 'Every U.S. state and DC has at least one person on the roster.',
   );
 
+  const hubOverlap = VIETNAMESE_POPULATION_HUB_STATES.filter((s) => represented.has(s));
+  facts.push(
+    `${hubOverlap.length} of the ${VIETNAMESE_POPULATION_HUB_STATES.length} states commonly `
+      + `cited as home to the largest Vietnamese-American communities (${VIETNAMESE_POPULATION_HUB_STATES.join(', ')}) `
+      + 'already have someone on the roster — the academic map broadly tracks the diaspora map.',
+  );
+
   const uniEntries = countBy(roster, (p) => p.university);
   const topUnis = uniEntries.slice(0, 5);
   facts.push(
@@ -267,6 +310,31 @@ export function buildFunFacts(roster) {
   if (raEntries.length) {
     const [topArea, topAreaCount] = raEntries[0];
     facts.push(`Most common listed research area: "${topArea}" (${topAreaCount} people).`);
+  }
+
+  const refugeeResearchers = roster.filter((p) =>
+    p.researchAreas.some((a) => /refugee|diaspora|immigra/i.test(a)),
+  ).length;
+  if (refugeeResearchers) {
+    facts.push(
+      `${refugeeResearchers} ${refugeeResearchers === 1 ? 'person studies' : 'people study'} `
+        + 'refugee, immigration, or diaspora topics — research that traces directly back to the '
+        + "community's own postwar history.",
+    );
+  }
+
+  // Dormant until an `undergradInstitution` field exists on entries (not collected yet — many
+  // bios mention a Vietnamese undergrad alma mater, but this hasn't had a dedicated research
+  // pass). Once populated, this lights up on its own with no further code changes needed.
+  const undergradEntries = countBy(
+    roster.filter((p) => p.undergradInstitution).map((p) => ({ i: p.undergradInstitution })),
+    (x) => x.i,
+  );
+  if (undergradEntries.length) {
+    const [topSchool, topSchoolCount] = undergradEntries[0];
+    facts.push(
+      `Most common undergraduate alma mater on record: ${topSchool} (${topSchoolCount} people).`,
+    );
   }
 
   return facts;
