@@ -15,8 +15,8 @@ Started as a Computer Science-only list and completed an initial audit of the te
 fields on 2026-08-18. Six non-STEM fields (Business & Economics through Arts & Design below) were
 added to the taxonomy on 2026-08-19 and have all since received an initial pass: Business &
 Economics first, then Social & Behavioral Sciences, Education, Humanities, Law & Public Affairs,
-and Arts & Design. Agricultural & Natural Resource Sciences and Misc are the only canonical fields
-still empty.
+and Arts & Design. Agricultural & Natural Resource Sciences is the only canonical field still
+empty.
 
 ## Roster maintenance handoff
 
@@ -64,9 +64,10 @@ The canonical field list is:
 14. Humanities
 15. Law & Public Affairs
 16. Arts & Design
-17. Misc — narrow fields that don't fit any bucket above. It has no matching rule of its own: a
-    department matching nothing falls through to its own name, which `npm test` reports so a
-    maintainer can add an explicit rule in `src/data.js`.
+
+A department that fits none of these falls through to its own raw name rather than a bucket,
+which `npm test` reports so a maintainer can add an explicit rule (or a `FIELD_OVERRIDES` entry)
+in `src/data.js`.
 
 The ten STEM fields received an initial pass on 2026-08-18. Subsequent work should be a
 targeted re-audit or expansion of **one** of these fields at a time: review existing entries first, verify current

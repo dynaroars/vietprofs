@@ -34,7 +34,6 @@ export const FIELDS = [
   'Humanities',
   'Law & Public Affairs',
   'Arts & Design',
-  'Misc',
 ];
 
 // Some department names are structurally ambiguous — the string alone doesn't say which broad
@@ -69,8 +68,8 @@ const FIELD_OVERRIDES = new Map([
 //   generic term with no business qualifier (plain "Information Systems", "Data Science",
 //   "Quantitative Methods") deliberately has no rule of its own here: which broad field it
 //   belongs to depends on which school/college houses it, not the string alone, so it falls
-//   through to Misc for a human to classify from the person's actual appointment rather than
-//   guessed from a keyword (or gets an explicit FIELD_OVERRIDES entry above).
+//   through unclassified for a human to resolve from the person's actual appointment rather
+//   than guessed from a keyword (or gets an explicit FIELD_OVERRIDES entry above).
 // - Engineering is still ahead of Chemistry so Chemical Engineering is not misclassified.
 // - Social & Behavioral Sciences precedes Humanities so area/ethnic/gender-studies departments
 //   (Ethnic Studies, Asian American Studies, American Ethnic Studies, Asian-Pacific Studies,
@@ -112,8 +111,8 @@ const FIELD_RULES = [
   },
   { field: 'Humanities', match: /history|philosophy|english|literature|linguistics|languages|classics|religio/i },
   { field: 'Arts & Design', match: /\barts?\b|design|music|theat|dance|film|cinema|photograph|architecture/i },
-  // 'Misc' has no rule: a department that matches nothing falls through to its own name, which
-  // the data test reports so a maintainer can add an explicit rule here.
+  // A department that matches nothing here falls through to its own raw name, which the data
+  // test reports so a maintainer can add an explicit rule (or FIELD_OVERRIDES entry) for it.
 ];
 
 export function fieldOf(department, university) {

@@ -45,8 +45,8 @@ test('no duplicate profile URLs', () => {
   assert.equal(new Set(urls).size, urls.length);
 });
 
-test('the field filter offers all seventeen broad fields', () => {
-  assert.equal(FIELDS.length, 17);
+test('the field filter offers all sixteen broad fields', () => {
+  assert.equal(FIELDS.length, 16);
 });
 
 test('every entry maps to one of the broad fields', () => {
@@ -58,7 +58,7 @@ test('every entry maps to one of the broad fields', () => {
   }
 });
 
-test('Economics departments classify as Business & Economics, not Misc', () => {
+test('Economics departments classify as Business & Economics', () => {
   assert.equal(fieldOf('Economics'), 'Business & Economics');
   assert.equal(fieldOf('Economics, Finance and Insurance'), 'Business & Economics');
 });

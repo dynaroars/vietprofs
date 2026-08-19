@@ -48,13 +48,11 @@ official university profile and evidence of Vietnamese identity when available.
 Computer & Information Sciences; Engineering; Mathematics; Statistics & Data Science; Physics &
 Astronomy; Chemistry; Biological & Biomedical Sciences; Earth & Environmental Sciences;
 Agricultural & Natural Resource Sciences; Health Sciences; Business & Economics; Social &
-Behavioral Sciences; Education; Humanities; Law & Public Affairs; Arts & Design; and a narrow
-Miscellaneous category.
+Behavioral Sciences; Education; Humanities; Law & Public Affairs; and Arts & Design.
 
 The ten STEM fields were rostered first; the other six were added to the field filter on
 2026-08-19 and have since all received an initial pass. Agricultural & Natural Resource Sciences
-(one of the original ten STEM fields) and the Miscellaneous category are the only canonical
-fields still empty.
+(one of the original ten STEM fields) is the only canonical field still empty.
 
 The directory's categories are an editorial grouping, informed by the National Science Foundation's
 National Center for Science and Engineering Statistics (NCSES) [science and engineering field
@@ -62,5 +60,4 @@ taxonomy](https://ncses.nsf.gov/pubs/nsb202332/introduction) and its more detail
 field taxonomy](https://ncses.nsf.gov/pubs/ncses23200/table/4). They are not presented as an
 official NSF classification.
 
-Economics departments are listed under Business & Economics. The Miscellaneous category is
-reserved for narrow fields that fit none of the sixteen buckets above.
+Economics departments are listed under Business & Economics.
