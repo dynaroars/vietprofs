@@ -101,11 +101,14 @@ const FIELD_RULES = [
     field: 'Biological & Biomedical Sciences',
     match: /biology|biological sciences|neuroscience|plant pathology|genetics|oncology|microbiology|immunology|molecular|cell biology|ecology|entomology/i,
   },
-  { field: 'Earth & Environmental Sciences', match: /environmental|earth|geology|oceanography|atmospheric/i },
+  // Agricultural & Natural Resource Sciences precedes Earth & Environmental Sciences so a combined
+  // department name like "Agricultural and Environmental Sciences" (Doc Lap Tran, Tennessee State)
+  // lands with agriculture rather than being caught by the bare "environmental" keyword below.
   {
     field: 'Agricultural & Natural Resource Sciences',
     match: /agriculture|agronomy|food science|natural resources|plant science|horticulture|animal science|soil science|forestry|wildlife|fisheries/i,
   },
+  { field: 'Earth & Environmental Sciences', match: /environmental|earth|geology|oceanography|atmospheric/i },
   // Non-business/non-science fields are matched after the rules above, so departments that read
   // as both (e.g. "Geography and Environmental Studies") keep the science bucket they already
   // had. Education precedes Social & Behavioral Sciences so "Educational Psychology" lands in
