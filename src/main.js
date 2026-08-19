@@ -1,5 +1,5 @@
 import './style.css';
-import { loadRoster, uniqueStates, uniqueDepartments, FIELDS, fieldOf, filterRoster, sortRoster, buildFunFacts } from './data.js';
+import { loadRoster, uniqueStates, uniqueDepartments, FIELDS, TRACKS, fieldOf, filterRoster, sortRoster, buildFunFacts } from './data.js';
 import { escapeHtml } from './utils.js';
 
 // Sentinel field-select value for the "show me something interesting" view. Distinct from any
@@ -161,6 +161,9 @@ function renderShell() {
       <select id="field-filter" class="field-select" aria-label="Filter by field">
         <option value="all">All fields</option>
       </select>
+      <select id="track-filter" class="field-select track-select" aria-label="Filter by track">
+        <option value="all">All tracks</option>
+      </select>
     </div>
     <div class="examples" id="examples"></div>
     <p class="result-count" id="result-count" aria-live="polite"></p>
@@ -168,12 +171,33 @@ function renderShell() {
   `;
 }
 
+// Tooltip copy shown on the track qualifier word in the result count — only rendered when every
+// entry currently displayed shares one track; a mixed set (the "all tracks" default) drops the
+// qualifier entirely rather than mislabeling a mixed roster as one or the other.
+const TRACK_INFO = {
+  'Tenure-line': {
+    label: 'tenure-line',
+    tooltip: 'On the tenure track or already tenured — not adjunct, visiting, teaching-only, research-track, or emeritus.',
+  },
+  Teaching: {
+    label: 'teaching-track',
+    tooltip: 'A full-time, continuing/permanent non-tenure-track teaching appointment — not adjunct, visiting, postdoctoral, or affiliate.',
+  },
+};
+
+function trackQualifier(roster) {
+  const tracks = new Set(roster.map((p) => p.track));
+  if (tracks.size !== 1) return '';
+  const info = TRACK_INFO[[...tracks][0]];
+  return info ? ` <span class="term" tabindex="0" data-tooltip="${escapeHtml(info.tooltip)}">${info.label}</span>` : '';
+}
+
 function renderRoster(roster) {
   const rosterEl = document.getElementById('roster');
   const countEl = document.getElementById('result-count');
   const universities = new Set(roster.map((p) => p.university)).size;
   const states = new Set(roster.map((p) => p.state)).size;
-  countEl.innerHTML = `${roster.length} <span class="term" tabindex="0" data-tooltip="On the tenure track or already tenured — not adjunct, visiting, teaching-only, research-track, or emeritus.">tenure-line</span> professor${roster.length === 1 ? '' : 's'} across ${universities} universit${universities === 1 ? 'y' : 'ies'} in ${states} state${states === 1 ? '' : 's'}. <a class="submission-link" href="https://vietprofs.roars.dev/submit.html">Add or update info.</a>`;
+  countEl.innerHTML = `${roster.length}${trackQualifier(roster)} professor${roster.length === 1 ? '' : 's'} across ${universities} universit${universities === 1 ? 'y' : 'ies'} in ${states} state${states === 1 ? '' : 's'}. <a class="submission-link" href="https://vietprofs.roars.dev/submit.html">Add or update info.</a>`;
 
   if (roster.length === 0) {
     rosterEl.innerHTML = '<p class="empty-state">No matches. Try a different search or filter.</p>';
@@ -285,16 +309,32 @@ async function init() {
     `<option value="${INTERESTING}">✨ Show me something interesting</option>`,
   );
 
+  const trackSelect = document.getElementById('track-filter');
+  const trackCounts = new Map(
+    TRACKS.map((track) => [track, roster.filter((person) => person.track === track).length]),
+  );
+  trackSelect.options[0].textContent = `All tracks (${roster.length})`;
+  for (const track of TRACKS) {
+    trackSelect.insertAdjacentHTML(
+      'beforeend',
+      `<option value="${escapeHtml(track)}">${escapeHtml(track)} (${trackCounts.get(track)})</option>`,
+    );
+  }
+
   const params = new URLSearchParams(window.location.search);
   if (params.has('q')) searchInput.value = params.get('q');
   if (params.has('field') && (FIELDS.includes(params.get('field')) || params.get('field') === INTERESTING)) {
     fieldSelect.value = params.get('field');
+  }
+  if (params.has('track') && TRACKS.includes(params.get('track'))) {
+    trackSelect.value = params.get('track');
   }
 
   function syncUrl() {
     const next = new URLSearchParams();
     if (searchInput.value.trim()) next.set('q', searchInput.value.trim());
     if (fieldSelect.value !== 'all') next.set('field', fieldSelect.value);
+    if (trackSelect.value !== 'all') next.set('track', trackSelect.value);
     const query = next.toString();
     const url = `${window.location.pathname}${query ? `?${query}` : ''}`;
     window.history.replaceState(null, '', url);
@@ -309,6 +349,7 @@ async function init() {
     const filtered = filterRoster(roster, {
       query: searchInput.value,
       field: fieldSelect.value,
+      track: trackSelect.value,
     });
     renderRoster(sortRoster(filtered));
     syncUrl();
@@ -316,11 +357,13 @@ async function init() {
 
   searchInput.addEventListener('input', debounce(update, 150));
   fieldSelect.addEventListener('change', update);
+  trackSelect.addEventListener('change', update);
 
   document.getElementById('home-link').addEventListener('click', (e) => {
     e.preventDefault(); // already on this page — reset in place instead of reloading
     searchInput.value = '';
     fieldSelect.value = 'all';
+    trackSelect.value = 'all';
     update();
   });
 
@@ -337,6 +380,7 @@ async function init() {
     if (tile) {
       searchInput.value = tile.dataset.state;
       fieldSelect.value = 'all'; // leaving the facts view to show the filtered results
+      trackSelect.value = 'all';
       update();
     }
   });
@@ -376,11 +420,13 @@ async function init() {
     if (btn.dataset.fun) {
       searchInput.value = '';
       fieldSelect.value = INTERESTING;
+      trackSelect.value = 'all';
       update();
       return;
     }
     searchInput.value = btn.textContent;
     fieldSelect.value = 'all';
+    trackSelect.value = 'all';
     update();
   });
 

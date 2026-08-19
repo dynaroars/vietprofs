@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
-import { FIELDS, fieldOf, buildFunFacts, filterRoster } from '../src/data.js';
+import { FIELDS, TRACKS, fieldOf, buildFunFacts, filterRoster } from '../src/data.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const roster = JSON.parse(readFileSync(join(__dirname, '../public/data.json'), 'utf8'));
@@ -26,6 +26,7 @@ test('every entry has the required fields', () => {
     assert.equal(typeof p.state, 'string');
     assert.ok(Array.isArray(p.researchAreas) && p.researchAreas.length > 0);
     assert.equal(typeof p.secondaryAppointment, 'boolean');
+    assert.ok(TRACKS.includes(p.track), `"${p.track}" (for ${p.name}) is not one of TRACKS`);
     assert.equal(typeof p.department, 'string');
     assert.ok(p.department.length > 0);
     if (p.rank !== undefined) assert.equal(typeof p.rank, 'string');
@@ -161,4 +162,16 @@ test('search is diacritic-insensitive in both directions', () => {
   const accented = filterRoster(roster, { query: 'Nguyễn', field: 'all' });
   assert.equal(plain.length, accented.length);
   assert.ok(plain.length > 0);
+});
+
+test('filterRoster narrows by track and "all" leaves it unfiltered', () => {
+  const tenureLine = filterRoster(roster, { query: '', field: 'all', track: 'Tenure-line' });
+  assert.ok(tenureLine.length > 0);
+  assert.ok(tenureLine.every((p) => p.track === 'Tenure-line'));
+
+  const all = filterRoster(roster, { query: '', field: 'all', track: 'all' });
+  assert.equal(all.length, roster.length);
+
+  const omitted = filterRoster(roster, { query: '', field: 'all' });
+  assert.equal(omitted.length, roster.length);
 });

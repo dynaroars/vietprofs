@@ -1,12 +1,15 @@
 # Vietnamese Professors at U.S. Universities
 
-> Find Vietnamese and Vietnamese-American tenure-line professors across fields at U.S.
-> universities.
+> Find Vietnamese and Vietnamese-American professors across fields at U.S. universities.
 
-A searchable directory of Vietnamese professors across fields at U.S. universities —
-tenure-line faculty (tenure-track or tenured; not adjunct, teaching-only, or research-track).
-Faculty whose tenure home is in one department with a
-secondary/joint appointment elsewhere are marked with `†` and carry `secondaryAppointment: true`.
+A searchable directory of Vietnamese professors across fields at U.S. universities, covering two
+employment tracks — **Tenure-line** (tenure-track or tenured) and **Teaching** (full-time,
+continuing/permanent non-tenure-track teaching faculty) — selectable from a track dropdown
+alongside the field filter. Neither track includes adjunct, visiting, postdoctoral,
+affiliate/courtesy, research-track, emeritus/retired, or any other term-limited or part-time
+appointment; see "Roster maintenance handoff" below for the exact bar each track has to clear.
+Faculty whose tenure/teaching home is in one department with a secondary/joint appointment
+elsewhere are marked with `†` and carry `secondaryAppointment: true`.
 
 Static site, no backend: the roster lives in `public/data.json` and is loaded, searched, filtered,
 and sorted client-side.
@@ -24,13 +27,27 @@ to further research passes — none of this is exhaustive, especially in the sma
 Include a person only when reliable evidence, preferably an official university page, supports
 all of the following: Vietnamese or Vietnamese-American identity (a Vietnamese-sounding name is
 sufficient on its own — the maintainer reviews each addition and will catch false positives), a
-current U.S.-university tenure-track or tenured appointment, and a primary appointment that fits
-the field being reviewed. Exclude adjunct, visiting, teaching-only, research-track,
-professor-of-practice, emeritus/retired, courtesy-only, and non-university appointments. A
-relevant PhD program or PhD-advising eligibility is not required.
+current U.S.-university appointment that clears the bar for one of the two tracks below, and a
+primary appointment that fits the field being reviewed. A relevant PhD program or PhD-advising
+eligibility is not required.
+
+Every entry carries a `track` field, one of the two values in `TRACKS` (`src/data.js`):
+
+- **`"Tenure-line"`** — tenure-track or already tenured.
+- **`"Teaching"`** — a full-time, continuing/permanent non-tenure-track teaching appointment:
+  titles like Teaching Professor, Senior/Principal/Distinguished Lecturer, or "Professor of
+  Practice" *only* when the university's own page describes it as their permanent teaching-ladder
+  rank, not a placeholder for a one-off practitioner hire. Confirm permanence from the source's own
+  language ("full-time," "continuing appointment," "non-tenure-track faculty," a named promotion
+  ladder) — never from the title alone, since the same title means career security at one school
+  and a one-year visiting gig at another.
+
+Regardless of track, exclude adjunct, visiting, postdoctoral, affiliate/courtesy, research-track,
+emeritus/retired, graduate teaching assistants, plain "Instructor" (almost always term-limited —
+verify case by case rather than including on the title alone), and non-university appointments.
 
 Work on one broad field at a time. Audit its existing entries before adding candidates; verify
-identity, current tenure-line status, primary department, rank, and profile URL individually;
+identity, current track status, primary department, rank, and profile URL individually;
 cross-check the full roster for duplicate people and joint appointments; and update the field
 rules in `src/data.js` if a new department type needs a shared filter bucket. When a department
 name is structurally ambiguous — the string alone doesn't say which field it belongs to, only
@@ -73,7 +90,7 @@ in `src/data.js`.
 
 The ten STEM fields received an initial pass on 2026-08-18. Subsequent work should be a
 targeted re-audit or expansion of **one** of these fields at a time: review existing entries first, verify current
-tenure-line status from official sources, then make only well-supported corrections, removals, or
+track status from official sources, then make only well-supported corrections, removals, or
 additions. A relevant PhD program is not required. Run `npm test`, `npm run build`, and
 `git diff --check` before committing.
 
@@ -102,6 +119,7 @@ correct an entry. Each entry:
   "state": "…",
   "researchAreas": ["Area 1", "Area 2"],
   "secondaryAppointment": false,
+  "track": "Tenure-line",
   "department": "…",
   "rank": "Associate Professor",
   "phdYear": 2018,
@@ -110,7 +128,9 @@ correct an entry. Each entry:
 }
 ```
 
-`scholarUrl`, `rank`, `phdYear`, `phdInstitution`, and `undergradInstitution` are optional. Keep
+`track` is required and must be one of `TRACKS` in `src/data.js` (`"Tenure-line"` or
+`"Teaching"`) — see "Roster maintenance handoff" above for what each one requires. `scholarUrl`,
+`rank`, `phdYear`, `phdInstitution`, and `undergradInstitution` are optional. Keep
 each object on one line. `undergradInstitution` isn't populated on any entry yet — several bios
 mention a Vietnamese undergraduate alma mater, and `buildFunFacts()` in `src/data.js` already
 computes a "most common undergraduate alma mater" fact from it, but filling it in is a dedicated
@@ -144,9 +164,11 @@ box still matches either spelling — see `stripDiacritics` in `src/data.js`.
 
 [`submit.html`](./submit.html) lets anyone propose a new entry or a correction without touching
 git directly.
-It only accepts **tenure-line** faculty (tenure-track or tenured — not adjunct, visiting,
-teaching-only, research-track, or emeritus) and requires a faculty or scholarly profile link
-before it will submit. The default path opens a pre-filled email to `root@roars.dev`; contributors
+It accepts faculty on either track — **Tenure-line** (tenure-track or tenured) or **Teaching**
+(full-time, continuing/permanent non-tenure-track teaching faculty) — but not adjunct, visiting,
+postdoctoral, affiliate/courtesy, research-track, or emeritus appointments on either track, and
+requires a faculty or scholarly profile link before it will submit. The default path opens a
+pre-filled email to `root@roars.dev`; contributors
 who prefer GitHub can instead open a pre-filled issue in `dynaroars/vietprofs`. No backend or
 credentials are handled by the site. Maintainers review email and GitHub submissions before
 folding accepted entries into `public/data.json`.

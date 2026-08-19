@@ -16,6 +16,13 @@ export function uniqueDepartments(roster) {
   return [...new Set(roster.map((p) => p.department))].sort();
 }
 
+// The two employment tracks a roster entry can carry. Tenure-line means tenure-track or already
+// tenured. Teaching means a full-time, continuing/permanent non-tenure-track teaching appointment
+// (e.g. Teaching Professor, Senior/Principal/Distinguished Lecturer) — never adjunct, visiting,
+// postdoctoral, affiliate, or any other term-limited or part-time position; those stay excluded
+// from the roster entirely regardless of track. See README.md's "Roster maintenance handoff".
+export const TRACKS = ['Tenure-line', 'Teaching'];
+
 // The broad fields used by the roster, shown even before each field has entries.
 export const FIELDS = [
   'Computer & Information Sciences',
@@ -150,10 +157,13 @@ export function uniqueFields(roster) {
   return FIELDS.filter((field) => roster.some((p) => fieldOf(p.department, p.university) === field));
 }
 
-export function filterRoster(roster, { query, field }) {
+export function filterRoster(roster, { query, field, track }) {
   let result = roster;
   if (field && field !== 'all') {
     result = result.filter((p) => fieldOf(p.department, p.university) === field);
+  }
+  if (track && track !== 'all') {
+    result = result.filter((p) => p.track === track);
   }
   // Diacritic-insensitive: every name on the roster is stored without Vietnamese diacritics
   // (e.g. "Nguyen", not "Nguyễn") for display consistency, but a visitor may well type the

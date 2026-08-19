@@ -1,5 +1,5 @@
 import './style.css';
-import { loadRoster } from './data.js';
+import { loadRoster, TRACKS } from './data.js';
 import { escapeHtml } from './utils.js';
 
 const GITHUB_REPO = 'dynaroars/vietprofs';
@@ -13,10 +13,13 @@ function renderShell() {
       <h1><a class="home-link" href="${import.meta.env.BASE_URL}">Vietnamese Professors at U.S. Universities</a></h1>
       <p class="tagline">Submit a new entry, or correct an existing one</p>
       <p class="criteria">
-        Only <span class="term" tabindex="0" data-tooltip="On the tenure track or already tenured — not a term, teaching-only, visiting, research-track, or emeritus position.">tenure-line</span>
-        faculty (tenure-track or tenured) qualify — no adjunct, visiting, teaching-only, or
-        research-track positions. Please have an official faculty page or scholarly profile link
-        ready.
+        Faculty on either the
+        <span class="term" tabindex="0" data-tooltip="On the tenure track or already tenured.">Tenure-line</span>
+        or
+        <span class="term" tabindex="0" data-tooltip="A full-time, continuing/permanent non-tenure-track teaching appointment — e.g. Teaching Professor or Senior Lecturer. The university's own page must describe it as full-time and continuing, not just carry a teaching-sounding title.">Teaching</span>
+        track qualify — but never adjunct, visiting, postdoctoral, affiliate/courtesy, research-track,
+        or emeritus positions on either track. Please have an official faculty page or scholarly
+        profile link ready.
       </p>
     </header>
 
@@ -31,6 +34,17 @@ function renderShell() {
           <input type="radio" name="kind" value="correction" />
           Correct an existing entry
         </label>
+      </fieldset>
+
+      <fieldset class="form-section">
+        <legend>Employment track *</legend>
+        ${TRACKS.map(
+          (track, index) => `
+        <label class="radio-row">
+          <input type="radio" name="track" value="${escapeHtml(track)}" ${index === 0 ? 'checked' : ''} required />
+          ${escapeHtml(track)}
+        </label>`,
+        ).join('')}
       </fieldset>
 
       <div class="form-section" id="correction-target-row" hidden>
@@ -107,15 +121,16 @@ function renderShell() {
 
       <div class="form-section">
         <label for="notes">Notes for the maintainer (optional)</label>
-        <textarea id="notes" name="notes" rows="3" placeholder="Anything that helps verify this — e.g. what's wrong with the existing entry, or where you confirmed tenure-line status."></textarea>
+        <textarea id="notes" name="notes" rows="3" placeholder="Anything that helps verify this — e.g. what's wrong with the existing entry, or where you confirmed their track status."></textarea>
       </div>
 
       <div class="form-section attestation">
         <label class="checkbox-row">
           <input id="attest" name="attest" type="checkbox" required />
-          I confirm this person is tenure-line (tenure-track or tenured) at this university —
-          not adjunct, teaching-only, visiting, research-track, or emeritus — and that I've
-          verified this via an official faculty page or scholarly profile.
+          I confirm this person holds the selected track's appointment at this university — not
+          adjunct, visiting, postdoctoral, affiliate/courtesy, research-track, or emeritus on
+          either track — and that I've verified this via an official faculty page or scholarly
+          profile.
         </label>
       </div>
 
@@ -167,6 +182,7 @@ function populateEntry(form, entry) {
   form.phdInstitution.value = entry.phdInstitution ?? '';
   form.researchAreas.value = entry.researchAreas.join(', ');
   form.secondaryAppointment.checked = entry.secondaryAppointment;
+  if (entry.track) form.track.value = entry.track;
 }
 
 function findDuplicate(entriesByName, name) {
@@ -219,6 +235,7 @@ function onSubmit(e, entriesByName) {
       state: form.state.value.trim(),
       researchAreas,
       secondaryAppointment: form.secondaryAppointment.checked,
+      track: form.track.value,
       department: form.department.value.trim(),
       rank: form.rank.value.trim() || undefined,
       phdYear: form.phdYear.value ? Number(form.phdYear.value) : undefined,

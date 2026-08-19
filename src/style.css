@@ -288,6 +288,12 @@ h1 {
   outline-offset: 1px;
 }
 
+.track-select {
+  /* Narrower than .field-select — "Teaching (##)" is a much shorter label than the longest
+     field name, so the shared 22rem basis would just waste space here. */
+  flex: 0 0 12rem;
+}
+
 .result-count {
   color: var(--text-muted);
   font-size: var(--text-sm);

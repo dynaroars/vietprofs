@@ -3,30 +3,41 @@
 ## What is VietProfs?
 
 VietProfs is a searchable, community-maintained directory of Vietnamese and Vietnamese-American
-tenure-line professors across fields at U.S. universities.
+professors across fields at U.S. universities, on either of two employment tracks: Tenure-line
+or Teaching.
 
 ## Who is included?
 
 An entry is included when reliable evidence supports all of the following:
 
 - Vietnamese or Vietnamese-American identity;
-- current tenure-track or tenured employment at a U.S. university;
+- current employment at a U.S. university on one of the two tracks below;
 - a primary academic appointment in a listed field.
 
-Assistant, Associate, and full Professors generally qualify when the other requirements are met.
 The university does not need to offer a PhD program.
+
+**Tenure-line** — tenure-track or tenured. Assistant, Associate, and full Professors generally
+qualify when the other requirements are met.
+
+**Teaching** — a full-time, continuing/permanent non-tenure-track teaching appointment (Teaching
+Professor, Senior/Principal/Distinguished Lecturer, or a "Professor of Practice" title only when
+the university's own page describes it as a permanent teaching-ladder rank). This track requires
+the source to say the position is full-time and continuing/permanent, not just carry a
+teaching-sounding title.
 
 ## Who is excluded?
 
-The directory excludes adjunct, visiting, teaching-only, research-track, professor-of-practice,
-emeritus/retired, courtesy-only, and non-university appointments. Clinical faculty are not included
-solely because they hold an academic title.
+Regardless of track, the directory excludes adjunct, visiting, postdoctoral, affiliate/courtesy,
+research-track, emeritus/retired, graduate teaching assistants, plain "Instructor" (verified
+case by case, since it's almost always term-limited), and non-university appointments. Clinical
+faculty are not included solely because they hold an academic title.
 
 ## How is identity determined?
 
-Vietnamese-looking names alone are not sufficient. We seek supporting evidence such as an official
-biography, education history in Vietnam, self-identification, Vietnamese professional or community
-affiliation, or another reliable biographical source.
+A Vietnamese-sounding name is sufficient on its own to include someone; the maintainer reviews
+each addition and corrects any false positive. Supporting evidence — an official biography,
+education history in Vietnam, self-identification, Vietnamese professional or community
+affiliation — is welcome but not required.
 
 ## How current is the data?
 
