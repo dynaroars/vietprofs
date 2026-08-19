@@ -140,9 +140,9 @@ export function filterRoster(roster, { query, field }) {
   if (field && field !== 'all') {
     result = result.filter((p) => fieldOf(p.department, p.university) === field);
   }
-  // Diacritic-insensitive: many entries use Vietnamese diacritics (e.g. "Nguyễn") while others
-  // spell the same name plainly ("Nguyen"). Stripping combining marks from both sides means
-  // typing either form finds both, rather than only ever matching the exact spelling on record.
+  // Diacritic-insensitive: every name on the roster is stored without Vietnamese diacritics
+  // (e.g. "Nguyen", not "Nguyễn") for display consistency, but a visitor may well type the
+  // accented form. Stripping combining marks from both sides means either spelling finds a match.
   const q = stripDiacritics(query.trim().toLowerCase());
   if (!q) return result;
   return result.filter((p) => {

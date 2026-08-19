@@ -130,6 +130,12 @@ Use the person's full published academic name when an official profile or mainta
 homepage explicitly supplies it. Expand a middle initial only with such evidence; never infer or
 guess a middle name from initials, publication metadata, or name patterns.
 
+For display consistency, every `name` is stored without Vietnamese diacritics (`Nguyen`, not
+`Nguyễn`) and in First (Middle) Last order, even when a person's own site or publications use
+Vietnamese surname-first order (e.g. Rutgers' Pham Huu Tiep is stored as `Tiep Huu Pham`). This is
+a roster-display normalization, not a claim about how the person publishes elsewhere. The search
+box still matches either spelling — see `stripDiacritics` in `src/data.js`.
+
 `npm test` checks that every entry has the required fields and that names are unique.
 
 
