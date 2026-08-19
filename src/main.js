@@ -1,6 +1,18 @@
 import './style.css';
-import { loadRoster, uniqueStates, uniqueDepartments, FIELDS, fieldOf, filterRoster, sortRoster } from './data.js';
+import { loadRoster, uniqueStates, uniqueDepartments, FIELDS, fieldOf, filterRoster, sortRoster, buildFunFacts } from './data.js';
 import { escapeHtml } from './utils.js';
+
+// Sentinel field-select value for the "show me something interesting" view. Distinct from any
+// real FIELDS entry (all of which are "Word & Word"-style names) and from 'all'.
+const INTERESTING = 'interesting';
+
+// The dropdown drops the generic trailing "Sciences" from labels ("Health Sciences" -> "Health")
+// to keep the list scannable; "Data Science" is an official field name in its own right and is
+// deliberately untouched since \bSciences\b only matches the plural. The underlying FIELDS value
+// (used for filtering/URLs/classification) is never altered — only what's displayed is shortened.
+function fieldDropdownLabel(field) {
+  return field.replace(/\bSciences\b/g, '').replace(/\s+/g, ' ').trim();
+}
 
 const app = document.getElementById('app');
 
@@ -60,7 +72,7 @@ function renderRoster(roster) {
   rosterEl.innerHTML = roster
     .map((p) => {
       const tags = p.researchAreas
-        .map((a) => `<span class="tag">${escapeHtml(a)}</span>`)
+        .map((a) => `<button type="button" class="tag">${escapeHtml(a)}</button>`)
         .join('');
       return `
         <div class="entry">
@@ -78,6 +90,14 @@ function renderRoster(roster) {
       `;
     })
     .join('');
+}
+
+function renderFunFacts(roster) {
+  const rosterEl = document.getElementById('roster');
+  const countEl = document.getElementById('result-count');
+  countEl.textContent = 'A few interesting patterns in the roster:';
+  const facts = buildFunFacts(roster);
+  rosterEl.innerHTML = `<ul class="fun-facts">${facts.map((f) => `<li>${escapeHtml(f)}</li>`).join('')}</ul>`;
 }
 
 async function init() {
@@ -110,13 +130,17 @@ async function init() {
   for (const field of FIELDS) {
     fieldSelect.insertAdjacentHTML(
       'beforeend',
-      `<option value="${escapeHtml(field)}">${escapeHtml(field)} (${fieldCounts.get(field)})</option>`,
+      `<option value="${escapeHtml(field)}">${escapeHtml(fieldDropdownLabel(field))} (${fieldCounts.get(field)})</option>`,
     );
   }
+  fieldSelect.insertAdjacentHTML(
+    'beforeend',
+    `<option value="${INTERESTING}">✨ Show me something interesting</option>`,
+  );
 
   const params = new URLSearchParams(window.location.search);
   if (params.has('q')) searchInput.value = params.get('q');
-  if (params.has('field') && FIELDS.includes(params.get('field'))) {
+  if (params.has('field') && (FIELDS.includes(params.get('field')) || params.get('field') === INTERESTING)) {
     fieldSelect.value = params.get('field');
   }
 
@@ -130,6 +154,11 @@ async function init() {
   }
 
   function update() {
+    if (fieldSelect.value === INTERESTING) {
+      renderFunFacts(roster);
+      syncUrl();
+      return;
+    }
     const filtered = filterRoster(roster, {
       query: searchInput.value,
       field: fieldSelect.value,
@@ -141,21 +170,43 @@ async function init() {
   searchInput.addEventListener('input', debounce(update, 150));
   fieldSelect.addEventListener('change', update);
 
+  // Delegated on the roster container itself (attached once) rather than per-entry, since
+  // renderRoster() replaces its innerHTML wholesale on every update().
+  document.getElementById('roster').addEventListener('click', (e) => {
+    const tag = e.target.closest('.tag');
+    if (!tag) return;
+    searchInput.value = tag.textContent;
+    update();
+  });
+
+  const facts = buildFunFacts(roster);
+  const randomFact = facts[Math.floor(Math.random() * facts.length)];
   const examples = [
-    ...pickRandomUnique(roster.map((p) => p.name), 2),
-    ...pickRandomUnique(uniqueDepartments(roster), 1),
-    ...pickRandomUnique(uniqueStates(roster), 1),
-    ...pickRandomUnique(roster.flatMap((p) => p.researchAreas), 1),
+    ...pickRandomUnique(roster.map((p) => p.name), 2).map((value) => ({ type: 'search', value })),
+    ...pickRandomUnique(uniqueDepartments(roster), 1).map((value) => ({ type: 'search', value })),
+    ...pickRandomUnique(uniqueStates(roster), 1).map((value) => ({ type: 'search', value })),
+    ...pickRandomUnique(roster.flatMap((p) => p.researchAreas), 1).map((value) => ({ type: 'search', value })),
+    { type: 'fact', value: randomFact },
   ].sort(() => Math.random() - 0.5);
   const examplesEl = document.getElementById('examples');
   examplesEl.innerHTML =
     '<span class="examples-label">Try:</span>' +
     examples
-      .map((value) => `<button type="button" class="example-chip">${escapeHtml(value)}</button>`)
+      .map((ex) =>
+        ex.type === 'fact'
+          ? `<button type="button" class="example-chip fun-chip" data-fun="1">✨ ${escapeHtml(ex.value)}</button>`
+          : `<button type="button" class="example-chip">${escapeHtml(ex.value)}</button>`,
+      )
       .join('');
   examplesEl.addEventListener('click', (e) => {
     const btn = e.target.closest('.example-chip');
     if (!btn) return;
+    if (btn.dataset.fun) {
+      searchInput.value = '';
+      fieldSelect.value = INTERESTING;
+      update();
+      return;
+    }
     searchInput.value = btn.textContent;
     fieldSelect.value = 'all';
     update();

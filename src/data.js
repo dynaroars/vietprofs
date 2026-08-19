@@ -143,3 +143,131 @@ export function filterRoster(roster, { query, field }) {
 export function sortRoster(roster) {
   return [...roster].sort((a, b) => a.name.localeCompare(b.name));
 }
+
+// The 50 states plus DC (DC isn't a state, hence "places" rather than "states" in the fact text
+// below), spelled to match this roster's `state` values (which use "DC", not "District of
+// Columbia") so a plain Set lookup works without normalizing anything.
+const US_PLACES = [
+  'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'DC',
+  'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas',
+  'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota',
+  'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey',
+  'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon',
+  'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah',
+  'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming',
+];
+
+// A curated list of common Vietnamese surnames, matched as whole name-tokens (not substrings) so
+// e.g. "Hoang" doesn't get credited to "Ho". Counts are for fun, not genealogy — a name is
+// counted at most once per surname even if a token repeats.
+const COMMON_SURNAMES = [
+  'Nguyen', 'Tran', 'Le', 'Pham', 'Hoang', 'Huynh', 'Phan', 'Vu', 'Vo', 'Dang', 'Bui', 'Do', 'Ho',
+  'Ngo', 'Duong', 'Ly', 'Cao', 'Doan', 'Trinh', 'Dinh', 'Ta', 'Lam', 'Luu', 'Ton', 'Ha',
+];
+
+function stripDiacritics(s) {
+  return s.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
+function surnameCounts(roster) {
+  const counts = new Map();
+  for (const p of roster) {
+    const namePart = p.name.split(' - ')[0]; // drop a " - University" duplicate-name suffix, if any
+    const tokens = stripDiacritics(namePart)
+      .replace(/[()]/g, ' ')
+      .split(/[\s-]+/)
+      .map((t) => t.replace(/[^A-Za-z]/g, '').toLowerCase())
+      .filter(Boolean);
+    const matched = new Set(
+      COMMON_SURNAMES.filter((surname) => tokens.includes(surname.toLowerCase())),
+    );
+    for (const surname of matched) counts.set(surname, (counts.get(surname) ?? 0) + 1);
+  }
+  return [...counts.entries()].sort((a, b) => b[1] - a[1]);
+}
+
+function countBy(roster, getKey) {
+  const counts = new Map();
+  for (const p of roster) {
+    const key = getKey(p);
+    counts.set(key, (counts.get(key) ?? 0) + 1);
+  }
+  return [...counts.entries()].sort((a, b) => b[1] - a[1]);
+}
+
+// Computed fresh from the live roster every time (not a snapshot), so these stay accurate as the
+// roster grows. Returned as plain fact strings — the "show me something interesting" view just
+// renders them as a list.
+export function buildFunFacts(roster) {
+  const facts = [];
+  const total = roster.length;
+  const universities = new Set(roster.map((p) => p.university));
+
+  facts.push(`${total} professors listed across ${universities.size} universities.`);
+
+  const surnames = surnameCounts(roster).slice(0, 6);
+  facts.push(
+    `Most common surnames in the roster: ${surnames.map(([s, c]) => `${s} (${c})`).join(', ')}.`,
+  );
+
+  const placeEntries = countBy(roster, (p) => p.state);
+  const topPlaces = placeEntries.slice(0, 3);
+  facts.push(
+    `Most-represented places: ${topPlaces.map(([s, c]) => `${s} (${c})`).join(', ')}.`,
+  );
+  const minCount = Math.min(...placeEntries.map(([, c]) => c));
+  const leastPlaces = placeEntries.filter(([, c]) => c === minCount).map(([s]) => s);
+  facts.push(
+    `Places with the fewest — just ${minCount} each: ${leastPlaces.join(', ')}.`,
+  );
+  const represented = new Set(placeEntries.map(([s]) => s));
+  const missingPlaces = US_PLACES.filter((s) => !represented.has(s));
+  facts.push(
+    missingPlaces.length
+      ? `States (and DC) with no one on the roster yet: ${missingPlaces.join(', ')}.`
+      : 'Every U.S. state and DC has at least one person on the roster.',
+  );
+
+  const uniEntries = countBy(roster, (p) => p.university);
+  const topUnis = uniEntries.slice(0, 5);
+  facts.push(
+    `Universities with the most people on the roster: ${topUnis.map(([u, c]) => `${u} (${c})`).join(', ')}.`,
+  );
+  const soloUnis = uniEntries.filter(([, c]) => c === 1).length;
+  facts.push(`${soloUnis} of the ${universities.size} universities have exactly one person listed.`);
+
+  const rankEntries = countBy(roster, (p) => p.rank || 'rank not listed');
+  facts.push(
+    `Rank breakdown: ${rankEntries.map(([r, c]) => `${c} ${r}${c === 1 ? '' : 's'}`).join(', ')}.`,
+  );
+
+  const withScholar = roster.filter((p) => p.scholarUrl).length;
+  facts.push(
+    `${withScholar} of ${total} entries (${Math.round((withScholar / total) * 100)}%) link out `
+      + 'to a Google Scholar profile.',
+  );
+
+  const years = roster.filter((p) => p.phdYear).map((p) => p.phdYear);
+  if (years.length) {
+    facts.push(`PhD years on record span ${Math.min(...years)} to ${Math.max(...years)}.`);
+  }
+
+  const secondary = roster.filter((p) => p.secondaryAppointment).length;
+  if (secondary) {
+    facts.push(
+      `${secondary} ${secondary === 1 ? 'person holds' : 'people hold'} a marked secondary/joint `
+        + 'appointment (†).',
+    );
+  }
+
+  const raEntries = countBy(
+    roster.flatMap((p) => p.researchAreas.map((a) => ({ a }))),
+    (x) => x.a,
+  );
+  if (raEntries.length) {
+    const [topArea, topAreaCount] = raEntries[0];
+    facts.push(`Most common listed research area: "${topArea}" (${topAreaCount} people).`);
+  }
+
+  return facts;
+}

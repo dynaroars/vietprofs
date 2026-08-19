@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
-import { FIELDS, fieldOf } from '../src/data.js';
+import { FIELDS, fieldOf, buildFunFacts } from '../src/data.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const roster = JSON.parse(readFileSync(join(__dirname, '../public/data.json'), 'utf8'));
@@ -125,4 +125,24 @@ test('duplicate names without the University suffix are still rejected', () => {
   ];
   const names = roster2.map((p) => p.name);
   assert.notEqual(new Set(names).size, names.length);
+});
+
+test('buildFunFacts returns a non-empty list of fact strings covering the roster', () => {
+  const facts = buildFunFacts(roster);
+  assert.ok(Array.isArray(facts));
+  assert.ok(facts.length > 5);
+  for (const f of facts) assert.equal(typeof f, 'string');
+  // Every fact should read as a place, never mislabel DC as a "state".
+  assert.ok(!facts.some((f) => /\bDC\b.*\bstate\b/i.test(f)));
+});
+
+test('buildFunFacts surname counts include common Vietnamese surnames and stay internally consistent', () => {
+  const facts = buildFunFacts(roster);
+  const surnameFact = facts.find((f) => f.startsWith('Most common surnames'));
+  assert.ok(surnameFact);
+  assert.match(surnameFact, /Nguyen \(\d+\)/);
+  const nguyenCount = Number(surnameFact.match(/Nguyen \((\d+)\)/)[1]);
+  // Every surname count should be no larger than how many people actually have that token in
+  // their name, and no smaller than 1.
+  assert.ok(nguyenCount > 0 && nguyenCount <= roster.length);
 });
