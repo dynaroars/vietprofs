@@ -82,9 +82,17 @@ const FIELD_OVERRIDES = new Map([
 //   humanistic — this taxonomy classifies by disciplinary home, not by method. Only "History"
 //   itself (bare, or "History of ...") is reserved for Humanities.
 const FIELD_RULES = [
-  { field: 'Computer & Information Sciences', match: /computer science|informatics|information science/i },
+  { field: 'Computer & Information Sciences', match: /computer science|informatics|information science|library/i },
   { field: 'Mathematics', match: /mathematics/i },
-  { field: 'Health Sciences', match: /health|medicine|nursing|public health|epidemiology|pharma/i },
+  // Kinesiology/exercise-and-sport-science, veterinary, nutrition, and audiology/speech-language
+  // programs are typically housed in health-sciences colleges, so they're bucketed here rather
+  // than getting their own field. "Communication sciences and disorders" is checked here — ahead
+  // of Social & Behavioral Sciences' bare "communication" keyword below — so it doesn't get
+  // caught by that instead.
+  {
+    field: 'Health Sciences',
+    match: /health|medicine|nursing|public health|epidemiology|pharma|kinesiology|exercise science|sport science|veterinary|nutrition|dietetics|audiology|speech-language pathology|communication sciences and disorders/i,
+  },
   // Business terms are specific enough (accounting, marketing, entrepreneurship, ...) that
   // false-positive risk is low; "management" is the one generic-sounding term here, which is
   // why Health Sciences above and Agricultural & Natural Resource Sciences' "natural resources"
@@ -94,7 +102,9 @@ const FIELD_RULES = [
     match: /business|economics|\bfinance\b|accounting|marketing|management|entrepreneurship|\binsurance\b|real estate|human resource|industrial relations|organizational behavior|supply chain|\blogistics\b/i,
   },
   { field: 'Statistics & Data Science', match: /statistics|biostatistics|operations research|data science/i },
-  { field: 'Engineering', match: /engineering/i },
+  // "materials science" alone (no "engineering" in the name) still lands here — combined
+  // "Materials Science and Engineering" departments already match the bare "engineering" term.
+  { field: 'Engineering', match: /engineering|materials science/i },
   { field: 'Physics & Astronomy', match: /physics|astronomy/i },
   { field: 'Chemistry', match: /chemistry/i },
   {
@@ -114,10 +124,10 @@ const FIELD_RULES = [
   // had. Education precedes Social & Behavioral Sciences so "Educational Psychology" lands in
   // Education.
   { field: 'Education', match: /education|curriculum and instruction|teaching and learning/i },
-  { field: 'Law & Public Affairs', match: /\blaw\b|legal studies|public policy|public affairs|public administration|criminal justice|criminology/i },
+  { field: 'Law & Public Affairs', match: /\blaw\b|legal studies|public policy|public affairs|public administration|criminal justice|criminology|urban planning|regional planning|city planning/i },
   {
     field: 'Social & Behavioral Sciences',
-    match: /sociology|psychology|anthropology|political science|social work|communication|international relations|ethnic studies|asian american studies|asian-pacific studies|asian pacific studies|global and international studies|global studies|international studies|gender,? and sexuality studies|women's,? gender|women's studies|social and cultural analysis/i,
+    match: /sociology|psychology|anthropology|political science|social work|communication|international relations|ethnic studies|asian american studies|asian-pacific studies|asian pacific studies|global and international studies|global studies|international studies|gender,? and sexuality studies|women's,? gender|women's studies|social and cultural analysis|journalism|human development|family studies|gerontology/i,
   },
   { field: 'Humanities', match: /history|philosophy|english|literature|linguistics|languages|classics|religio/i },
   { field: 'Arts & Design', match: /\barts?\b|design|music|theat|dance|film|cinema|photograph|architecture/i },
