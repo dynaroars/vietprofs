@@ -3,7 +3,7 @@
 ## What is VietProfs?
 
 VietProfs is a searchable, community-maintained directory of Vietnamese and Vietnamese-American
-tenure-line professors at U.S. universities in STEM fields.
+tenure-line professors across fields at U.S. universities.
 
 ## Who is included?
 
@@ -11,7 +11,7 @@ An entry is included when reliable evidence supports all of the following:
 
 - Vietnamese or Vietnamese-American identity;
 - current tenure-track or tenured employment at a U.S. university;
-- a primary academic appointment in a listed STEM field.
+- a primary academic appointment in a listed field.
 
 Assistant, Associate, and full Professors generally qualify when the other requirements are met.
 The university does not need to offer a PhD program.
@@ -43,11 +43,18 @@ primary tenure home is in another department.
 Use the [Submit an entry page](https://vietprofs.roars.dev/submit.html). Please include an
 official university profile and evidence of Vietnamese identity when available.
 
-## What are the broad STEM fields?
+## What are the broad fields?
 
 Computer & Information Sciences; Engineering; Mathematics; Statistics & Data Science; Physics &
 Astronomy; Chemistry; Biological & Biomedical Sciences; Earth & Environmental Sciences;
-Agricultural & Natural Resource Sciences; Health Sciences; and a narrow Miscellaneous category.
+Agricultural & Natural Resource Sciences; Health Sciences; Business & Economics; Social &
+Behavioral Sciences; Education; Humanities; Law & Public Affairs; Arts & Design; and a narrow
+Miscellaneous category.
+
+The ten STEM fields were rostered first; the other six were added to the field filter on
+2026-08-19 and have since all received an initial pass. Agricultural & Natural Resource Sciences
+(one of the original ten STEM fields) and the Miscellaneous category are the only canonical
+fields still empty.
 
 The directory's categories are an editorial grouping, informed by the National Science Foundation's
 National Center for Science and Engineering Statistics (NCSES) [science and engineering field
@@ -55,8 +62,5 @@ taxonomy](https://ncses.nsf.gov/pubs/nsb202332/introduction) and its more detail
 field taxonomy](https://ncses.nsf.gov/pubs/ncses23200/table/4). They are not presented as an
 official NSF classification.
 
-Economics is normally a social science in the NCSES taxonomy. The Miscellaneous category includes
-only Econometrics and Quantitative Economics, because it is specifically listed as CIP 45.0603 in
-the U.S. Department of Homeland Security's [STEM Designated Degree Program
-List](https://www.ice.gov/sites/default/files/documents/stem-list.pdf). Broad Economics is not
-included.
+Economics departments are listed under Business & Economics. The Miscellaneous category is
+reserved for narrow fields that fit none of the sixteen buckets above.

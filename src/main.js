@@ -1,5 +1,5 @@
 import './style.css';
-import { loadRoster, uniqueStates, uniqueDepartments, STEM_FIELDS, fieldOf, filterRoster, sortRoster } from './data.js';
+import { loadRoster, uniqueStates, uniqueDepartments, FIELDS, fieldOf, filterRoster, sortRoster } from './data.js';
 import { escapeHtml } from './utils.js';
 
 const app = document.getElementById('app');
@@ -35,7 +35,7 @@ function renderShell() {
     <div class="controls">
       <input id="search" class="search-input" type="search" list="search-suggestions" placeholder="Search name, university, department, location, or area…" aria-label="Search" />
       <datalist id="search-suggestions"></datalist>
-      <select id="field-filter" class="field-select" aria-label="Filter by STEM field">
+      <select id="field-filter" class="field-select" aria-label="Filter by field">
         <option value="all">All fields</option>
       </select>
     </div>
@@ -101,13 +101,13 @@ async function init() {
   const searchInput = document.getElementById('search');
   const fieldSelect = document.getElementById('field-filter');
   const fieldCounts = new Map(
-    STEM_FIELDS.map((field) => [
+    FIELDS.map((field) => [
       field,
-      roster.filter((person) => fieldOf(person.department) === field).length,
+      roster.filter((person) => fieldOf(person.department, person.university) === field).length,
     ]),
   );
   fieldSelect.options[0].textContent = `All fields (${roster.length})`;
-  for (const field of STEM_FIELDS) {
+  for (const field of FIELDS) {
     fieldSelect.insertAdjacentHTML(
       'beforeend',
       `<option value="${escapeHtml(field)}">${escapeHtml(field)} (${fieldCounts.get(field)})</option>`,
@@ -116,7 +116,7 @@ async function init() {
 
   const params = new URLSearchParams(window.location.search);
   if (params.has('q')) searchInput.value = params.get('q');
-  if (params.has('field') && STEM_FIELDS.includes(params.get('field'))) {
+  if (params.has('field') && FIELDS.includes(params.get('field'))) {
     fieldSelect.value = params.get('field');
   }
 

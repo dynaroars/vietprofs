@@ -1,8 +1,9 @@
 # Vietnamese Professors at U.S. Universities
 
-> Find Vietnamese and Vietnamese-American tenure-line STEM professors at U.S. universities.
+> Find Vietnamese and Vietnamese-American tenure-line professors across fields at U.S.
+> universities.
 
-A searchable directory of Vietnamese professors across STEM fields at U.S. universities —
+A searchable directory of Vietnamese professors across fields at U.S. universities —
 tenure-line faculty (tenure-track or tenured; not adjunct, teaching-only, or research-track).
 Faculty whose tenure home is in one department with a
 secondary/joint appointment elsewhere are marked with `†` and carry `secondaryAppointment: true`.
@@ -10,8 +11,12 @@ secondary/joint appointment elsewhere are marked with `†` and carry `secondary
 Static site, no backend: the roster lives in `public/data.json` and is loaded, searched, filtered,
 and sorted client-side.
 
-Started as a Computer Science-only list and has now completed an initial audit of the ten
-canonical STEM fields.
+Started as a Computer Science-only list and completed an initial audit of the ten canonical STEM
+fields on 2026-08-18. Six non-STEM fields (Business & Economics through Arts & Design below) were
+added to the taxonomy on 2026-08-19 and have all since received an initial pass: Business &
+Economics first, then Social & Behavioral Sciences, Education, Humanities, Law & Public Affairs,
+and Arts & Design. Agricultural & Natural Resource Sciences and Misc are the only canonical fields
+still empty.
 
 ## Roster maintenance handoff
 
@@ -25,8 +30,20 @@ relevant PhD program or PhD-advising eligibility is not required.
 Work on one broad field at a time. Audit its existing entries before adding candidates; verify
 identity, current tenure-line status, primary department, rank, and profile URL individually;
 cross-check the full roster for duplicate people and joint appointments; and update the field
-rules in `src/data.js` if a new department type needs a shared filter bucket. Search broadly
+rules in `src/data.js` if a new department type needs a shared filter bucket. When a department
+name is structurally ambiguous — the string alone doesn't say which field it belongs to, only
+the school/unit that actually houses the position does (e.g. "Information Studies" is Computer &
+Information Sciences at an iSchool but Education at UCLA's School of Education & Information
+Studies) — add an exact `department|university` entry to `FIELD_OVERRIDES` in `src/data.js`
+instead of stretching a regex to guess. Search broadly
 rather than stopping after the first few candidates, make incremental validated edits, and run
+
+Two different people can share the same name (`npm test` enforces unique `name` values). When
+that happens, first check whether each person's own official profile publishes a fuller form of
+their name (a middle name, initial, or nickname) — if so, use that; it's usually enough to make
+the two entries distinct without any further change (e.g. "Thanh Nguyen" vs. "Thanh (Hans)
+Nguyen"). Only when the names are genuinely identical with no such distinction available, fall
+back to appending the university: `"Full Name - University"` for each person sharing the name.
 `npm test`, `npm run build`, and `git diff --check` before committing.
 
 The canonical field list is:
@@ -41,11 +58,17 @@ The canonical field list is:
 8. Earth & Environmental Sciences
 9. Agricultural & Natural Resource Sciences
 10. Health Sciences
-11. Misc — narrow, DHS STEM-Designated-Degree-Program fields that don't fit the ten canonical
-    buckets above; currently just Economics (quantitative/econometrics — CIP 45.0603), not
-    Economics broadly (which NSF classifies as a social science).
+11. Business & Economics
+12. Social & Behavioral Sciences
+13. Education
+14. Humanities
+15. Law & Public Affairs
+16. Arts & Design
+17. Misc — narrow fields that don't fit any bucket above. It has no matching rule of its own: a
+    department matching nothing falls through to its own name, which `npm test` reports so a
+    maintainer can add an explicit rule in `src/data.js`.
 
-All ten canonical fields received an initial pass on 2026-08-18. Subsequent work should be a
+The ten STEM fields received an initial pass on 2026-08-18. Subsequent work should be a
 targeted re-audit or expansion of **one** of these fields at a time: review existing entries first, verify current
 tenure-line status from official sources, then make only well-supported corrections, removals, or
 additions. A relevant PhD program is not required. Run `npm test`, `npm run build`, and
