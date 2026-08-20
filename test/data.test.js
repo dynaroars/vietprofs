@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
-import { FIELDS, TRACKS, canonicalRank, fieldOf, buildFunFacts, filterRoster } from '../src/data.js';
+import { FIELDS, TRACKS, canonicalRank, displayName, fieldOf, buildFunFacts, filterRoster } from '../src/data.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const roster = JSON.parse(readFileSync(join(__dirname, '../public/data.json'), 'utf8'));
@@ -194,4 +194,20 @@ test('filterRoster narrows by track and "all" leaves it unfiltered', () => {
 
   const omitted = filterRoster(roster, { query: '', field: 'all' });
   assert.equal(omitted.length, roster.length);
+});
+
+test('duplicate-name university suffixes are hidden from display', () => {
+  assert.equal(displayName('Chi Nguyen - University of Arizona'), 'Chi Nguyen');
+  assert.equal(displayName('Chi L. Nguyen'), 'Chi L. Nguyen');
+});
+
+test('university suffixes are reserved for otherwise identical names', () => {
+  const visibleCounts = new Map();
+  for (const person of roster) {
+    const visible = displayName(person.name);
+    visibleCounts.set(visible, (visibleCounts.get(visible) ?? 0) + 1);
+  }
+  for (const person of roster.filter((entry) => entry.name.includes(' - '))) {
+    assert.ok(visibleCounts.get(displayName(person.name)) > 1, person.name);
+  }
 });

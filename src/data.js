@@ -228,6 +228,12 @@ export function sortRoster(roster) {
   return [...roster].sort((a, b) => a.name.localeCompare(b.name));
 }
 
+// Duplicate roster keys may carry a " - University" suffix so the JSON name remains unique.
+// That suffix is an internal disambiguator only; the public UI always shows the person's name.
+export function displayName(name) {
+  return name.split(' - ')[0];
+}
+
 // The 50 states plus DC (DC isn't a state, hence "places" rather than "states" in the fact text
 // below), spelled to match this roster's `state` values (which use "DC", not "District of
 // Columbia") so a plain Set lookup works without normalizing anything.
@@ -267,7 +273,7 @@ function stripDiacritics(s) {
 function surnameCounts(roster) {
   const counts = new Map();
   for (const p of roster) {
-    const namePart = p.name.split(' - ')[0]; // drop a " - University" duplicate-name suffix, if any
+    const namePart = displayName(p.name);
     const tokens = stripDiacritics(namePart)
       .replace(/[()]/g, ' ')
       .split(/[\s-]+/)

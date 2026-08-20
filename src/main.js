@@ -1,5 +1,5 @@
 import './style.css';
-import { loadRoster, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, FIELDS, TRACKS, canonicalRank, fieldOf, filterRoster, sortRoster, buildFunFacts } from './data.js';
+import { loadRoster, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, FIELDS, TRACKS, canonicalRank, displayName, fieldOf, filterRoster, sortRoster, buildFunFacts } from './data.js';
 import { escapeHtml } from './utils.js';
 
 // Sentinel field-select value for the "show me something interesting" view. Distinct from any
@@ -211,6 +211,7 @@ function renderRoster(roster, { field, track, query } = {}) {
 
   rosterEl.innerHTML = roster
     .map((p) => {
+      const visibleName = displayName(p.name);
       const personField = fieldOf(p.department, p.university);
       const trackSelected = track === p.track;
       const fieldSelected = field === personField;
@@ -226,7 +227,7 @@ function renderRoster(roster, { field, track, query } = {}) {
       return `
         <div class="entry">
           <div class="entry-line">
-            <a class="entry-name" href="${escapeHtml(p.websiteUrl ?? p.profileUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(p.name)}</a>${p.scholarUrl ? ` <a class="scholar-link" href="${escapeHtml(p.scholarUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(p.name)} on Google Scholar" title="Google Scholar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3Z"/><path d="M5 12.18V16c0 1.66 3.13 3 7 3s7-1.34 7-3v-3.82l-7 3.82-7-3.82Z"/></svg></a>` : ''}${p.secondaryAppointment ? ' <span class="dagger">†</span>' : ''}
+            <a class="entry-name" href="${escapeHtml(p.websiteUrl ?? p.profileUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(visibleName)}</a>${p.scholarUrl ? ` <a class="scholar-link" href="${escapeHtml(p.scholarUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(visibleName)} on Google Scholar" title="Google Scholar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3Z"/><path d="M5 12.18V16c0 1.66 3.13 3 7 3s7-1.34 7-3v-3.82l-7 3.82-7-3.82Z"/></svg></a>` : ''}${p.secondaryAppointment ? ' <span class="dagger">†</span>' : ''}
             <span class="entry-meta">${escapeHtml(p.university)} · ${escapeHtml(p.department)} · ${escapeHtml(p.city)}, ${escapeHtml(p.state)}</span>
           </div>
           ${p.rank || p.phdYear || p.phdInstitution ? `<div class="entry-details">${[
@@ -302,7 +303,7 @@ async function init() {
   // department, rank, research areas) so a suggestion always yields at least one result.
   const suggestionValues = [
     ...new Set([
-      ...roster.map((p) => p.name),
+      ...roster.map((p) => displayName(p.name)),
       ...roster.map((p) => p.university),
       ...uniqueDepartments(roster),
       ...uniqueRanks(roster),
@@ -450,7 +451,7 @@ async function init() {
   const facts = buildFunFacts(roster);
   const randomFact = facts[Math.floor(Math.random() * facts.length)];
   const examples = [
-    ...pickRandomUnique(roster.map((p) => p.name), 2).map((value) => ({ type: 'search', value })),
+    ...pickRandomUnique(roster.map((p) => displayName(p.name)), 2).map((value) => ({ type: 'search', value })),
     ...pickRandomUnique(uniqueDepartments(roster), 1).map((value) => ({ type: 'search', value })),
     ...pickRandomUnique(uniqueStates(roster), 1).map((value) => ({ type: 'search', value })),
     ...pickRandomUnique(roster.flatMap((p) => p.researchAreas), 1).map((value) => ({ type: 'search', value })),
