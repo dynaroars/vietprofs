@@ -25,11 +25,15 @@ the university's own page describes it as a permanent teaching-ladder rank). Thi
 the source to say the position is full-time and continuing/permanent, not just carry a
 teaching-sounding title.
 
-**Emeritus** — a formally conferred "Professor Emeritus"/"Emerita" title following a tenure-line
+**Emeritus** — a formally conferred emeritus title following a tenure-line
 career, shown on the university's own emeritus faculty listing, a conferral announcement, or the
 person's own page. Plain retirement or "former faculty" phrasing without the specific conferred
 title doesn't qualify, and an in-memoriam/deceased-faculty-only listing isn't enough either — the
 university has to still carry them as living, current emeritus faculty.
+
+Displayed ranks are deliberately simple: Assistant Professor, Associate Professor, or Professor
+for Tenure-line faculty; Teaching for the continuing teaching track; and Emeritus for the emeritus
+track. Named chairs and institution-specific title variants remain on each linked university page.
 
 ## Who is excluded?
 

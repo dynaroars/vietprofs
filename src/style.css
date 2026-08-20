@@ -423,6 +423,13 @@ h1 {
   color: var(--accent);
 }
 
+.tag-selected,
+.tag-selected:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+
 .empty-state {
   padding: 3rem 0;
   text-align: center;

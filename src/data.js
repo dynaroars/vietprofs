@@ -21,7 +21,18 @@ export function uniqueCities(roster) {
 }
 
 export function uniqueRanks(roster) {
-  return [...new Set(roster.map((p) => p.rank).filter(Boolean))].sort();
+  return [...new Set(roster.map(canonicalRank).filter(Boolean))].sort();
+}
+
+// Keep the public rank vocabulary intentionally small. Institution-specific honorifics and
+// appointment wording belong on the linked profile; the directory only needs the career stage.
+export function canonicalRank(person) {
+  if (person.track === 'Emeritus') return 'Emeritus';
+  if (person.track === 'Teaching') return 'Teaching';
+  if (person.track !== 'Tenure-line') return person.rank;
+  if (/assistant/i.test(person.rank ?? '')) return 'Assistant Professor';
+  if (/associate/i.test(person.rank ?? '')) return 'Associate Professor';
+  return 'Professor';
 }
 
 export function uniqueResearchAreas(roster) {
@@ -31,7 +42,7 @@ export function uniqueResearchAreas(roster) {
 // The three employment tracks a roster entry can carry. Tenure-line means tenure-track or already
 // tenured. Teaching means a full-time, continuing/permanent non-tenure-track teaching appointment
 // (e.g. Teaching Professor, Senior/Principal/Distinguished Lecturer). Emeritus means a formally
-// conferred "Professor Emeritus"/"Emerita" title after a tenure-line career — plain retirement
+// conferred emeritus title after a tenure-line career — plain retirement
 // without the conferred title doesn't qualify. None of the three ever includes adjunct, visiting,
 // postdoctoral, affiliate, or any other term-limited or part-time position; those stay excluded
 // from the roster entirely regardless of track. See README.md's "Roster maintenance handoff".
@@ -60,9 +71,9 @@ export const FIELDS = [
 
 // Some department names are structurally ambiguous — the string alone doesn't say which broad
 // field they belong to, only the school/unit that actually houses the position does (e.g. a
-// department called "Information Studies" is Computer & Information Sciences at an iSchool but
-// Education at UCLA, whose "Information Studies" faculty sit in the School of Education &
-// Information Studies). Rather than stretch a regex to guess, these are keyed exactly by
+// department called "Information Studies" is normally Computer & Information Sciences but
+// Education at UCLA, whose faculty sit in the School of Education & Information Studies).
+// Rather than stretch a regex to guess that exception, it is keyed exactly by
 // `department|university` and checked before any regex rule. Add a new row here — instead of a
 // generic keyword to FIELD_RULES below — whenever a department's correct field depends on which
 // institution it's at, not just the department string.
@@ -123,7 +134,7 @@ const FIELD_OVERRIDES = new Map([
 //   humanistic — this taxonomy classifies by disciplinary home, not by method. Only "History"
 //   itself (bare, or "History of ...") is reserved for Humanities.
 const FIELD_RULES = [
-  { field: 'Computer & Information Sciences', match: /computer science|informatics|information science|library/i },
+  { field: 'Computer & Information Sciences', match: /computer science|informatics|information science|information studies|\bIST\b|library/i },
   // Stem match (not just "mathematics") so "Mathematical Sciences" — UT Dallas's actual
   // department name — lands here too, without fabricating a different department string.
   { field: 'Mathematics', match: /mathematic/i },
@@ -204,7 +215,7 @@ export function filterRoster(roster, { query, field, track }) {
   if (!q) return result;
   return result.filter((p) => {
     const haystack = stripDiacritics(
-      [p.name, p.university, p.city, p.state, p.department, p.rank, ...p.researchAreas]
+      [p.name, p.university, p.city, p.state, p.department, canonicalRank(p), ...p.researchAreas]
         .filter(Boolean)
         .join(' ')
         .toLowerCase(),
@@ -327,7 +338,7 @@ export function buildFunFacts(roster) {
   const soloUnis = uniEntries.filter(([, c]) => c === 1).length;
   facts.push(`${soloUnis} of the ${universities.size} universities have exactly one person listed.`);
 
-  const rankEntries = countBy(roster, (p) => p.rank || 'rank not listed');
+  const rankEntries = countBy(roster, (p) => canonicalRank(p) || 'rank not listed');
   facts.push(
     `Rank breakdown: ${rankEntries.map(([r, c]) => `${c} ${r}${c === 1 ? '' : 's'}`).join(', ')}.`,
   );

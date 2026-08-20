@@ -45,7 +45,7 @@ Every entry carries a `track` field, one of the three values in `TRACKS` (`src/d
   language ("full-time," "continuing appointment," "non-tenure-track faculty," a named promotion
   ladder) — never from the title alone, since the same title means career security at one school
   and a one-year visiting gig at another.
-- **`"Emeritus"`** — a formally conferred "Professor Emeritus"/"Emerita" title following a
+- **`"Emeritus"`** — a formally conferred emeritus title following a
   tenure-line career, evidenced by the university's own emeritus faculty listing, a news item about
   the conferral, or the person's own page using the title. Plain retirement, resignation, or "former
   faculty" phrasing without the specific conferred title does not qualify — the university has to
@@ -58,7 +58,7 @@ graduate teaching assistants, plain "Instructor" (almost always term-limited —
 rather than including on the title alone), and non-university appointments.
 
 Work on one university or broad field at a time. Audit its existing entries before adding candidates; verify
-identity, current track status, primary department, rank, and profile URL individually;
+identity, current track status, primary department, simplified rank, and profile URL individually;
 cross-check the full roster for duplicate people and joint appointments; and update the field
 rules in `src/data.js` if a new department type needs a shared filter bucket. When a department
 name is structurally ambiguous — the string alone doesn't say which field it belongs to, only
@@ -142,7 +142,10 @@ correct an entry. Each entry:
 
 `track` is required and must be one of `TRACKS` in `src/data.js` (`"Tenure-line"`, `"Teaching"`, or
 `"Emeritus"`) — see "Roster maintenance handoff" above for what each one requires. `scholarUrl`,
-`rank`, `phdYear`, `phdInstitution`, and `undergradInstitution` are optional. Keep
+`rank`, `phdYear`, `phdInstitution`, and `undergradInstitution` are optional. Rank uses only
+`"Assistant Professor"`, `"Associate Professor"`, or `"Professor"` for Tenure-line entries,
+`"Teaching"` for Teaching entries, and `"Emeritus"` for Emeritus entries; named chairs and
+institution-specific title wording remain available on the linked profile. Keep
 each object on one line. `undergradInstitution` isn't populated on any entry yet — several bios
 mention a Vietnamese undergraduate alma mater, and `buildFunFacts()` in `src/data.js` already
 computes a "most common undergraduate alma mater" fact from it, but filling it in is a dedicated
@@ -152,10 +155,8 @@ maintained academic homepage when available, then use an official university fac
 fallback. Store Google Scholar separately in `scholarUrl`; never use it as `profileUrl`.
 
 For roster audits, preserve an existing Google Scholar URL by moving it to `scholarUrl` before
-replacing `profileUrl`. Verify replacement URLs follow redirects and do not return 404. Add rank
-only when a current academic homepage or official university page explicitly supports it. If a
-current personal academic homepage gives a higher rank than a university directory, retain the
-higher title (directories can lag promotions). Add `phdYear` and `phdInstitution` only when a
+replacing `profileUrl`. Verify replacement URLs follow redirects and do not return 404. Map the
+source's title to the simplified rank vocabulary above. Add `phdYear` and `phdInstitution` only when a
 source explicitly states them; do not infer either from dates, CV chronology, or other context.
 Do not alter unrelated roster fields during these audits.
 

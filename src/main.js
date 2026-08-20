@@ -1,5 +1,5 @@
 import './style.css';
-import { loadRoster, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, FIELDS, TRACKS, fieldOf, filterRoster, sortRoster, buildFunFacts } from './data.js';
+import { loadRoster, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, FIELDS, TRACKS, canonicalRank, fieldOf, filterRoster, sortRoster, buildFunFacts } from './data.js';
 import { escapeHtml } from './utils.js';
 
 // Sentinel field-select value for the "show me something interesting" view. Distinct from any
@@ -185,7 +185,7 @@ const TRACK_INFO = {
   },
   Emeritus: {
     label: 'emeritus',
-    tooltip: 'A formally conferred Professor Emeritus/Emerita title after a tenure-line career — not just retirement without the conferred title.',
+    tooltip: 'A formally conferred emeritus title after a tenure-line career — not just retirement without the conferred title.',
   },
 };
 
@@ -196,7 +196,7 @@ function trackQualifier(roster) {
   return info ? ` <span class="term" tabindex="0" data-tooltip="${escapeHtml(info.tooltip)}">${info.label}</span>` : '';
 }
 
-function renderRoster(roster, { field } = {}) {
+function renderRoster(roster, { field, track, query } = {}) {
   const rosterEl = document.getElementById('roster');
   const countEl = document.getElementById('result-count');
   const universities = new Set(roster.map((p) => p.university)).size;
@@ -212,10 +212,15 @@ function renderRoster(roster, { field } = {}) {
   rosterEl.innerHTML = roster
     .map((p) => {
       const personField = fieldOf(p.department, p.university);
-      const trackTag = `<button type="button" class="tag tag-track" data-track="${escapeHtml(p.track)}">${escapeHtml(p.track)}</button>`;
-      const fieldTag = `<button type="button" class="tag tag-field" data-field="${escapeHtml(personField)}">${escapeHtml(fieldDropdownLabel(personField))}</button>`;
+      const trackSelected = track === p.track;
+      const fieldSelected = field === personField;
+      const trackTag = `<button type="button" class="tag tag-track${trackSelected ? ' tag-selected' : ''}" data-track="${escapeHtml(p.track)}" aria-pressed="${trackSelected}">${escapeHtml(p.track)}</button>`;
+      const fieldTag = `<button type="button" class="tag tag-field${fieldSelected ? ' tag-selected' : ''}" data-field="${escapeHtml(personField)}" aria-pressed="${fieldSelected}">${escapeHtml(fieldDropdownLabel(personField))}</button>`;
       const topicTags = p.researchAreas
-        .map((a) => `<button type="button" class="tag tag-topic">${escapeHtml(a)}</button>`)
+        .map((a) => {
+          const selected = query?.trim().toLowerCase() === a.toLowerCase();
+          return `<button type="button" class="tag tag-topic${selected ? ' tag-selected' : ''}" aria-pressed="${selected}">${escapeHtml(a)}</button>`;
+        })
         .join('');
       const tags = fieldTag + trackTag + topicTags;
       return `
@@ -225,7 +230,7 @@ function renderRoster(roster, { field } = {}) {
             <span class="entry-meta">${escapeHtml(p.university)} · ${escapeHtml(p.department)} · ${escapeHtml(p.city)}, ${escapeHtml(p.state)}</span>
           </div>
           ${p.rank || p.phdYear || p.phdInstitution ? `<div class="entry-details">${[
-            p.rank && escapeHtml(p.rank),
+            canonicalRank(p) && escapeHtml(canonicalRank(p)),
             p.phdYear && `PhD ${escapeHtml(String(p.phdYear))}${p.phdInstitution ? `, ${escapeHtml(p.phdInstitution)}` : ''}`,
             !p.phdYear && p.phdInstitution && `PhD, ${escapeHtml(p.phdInstitution)}`,
           ].filter(Boolean).join(' · ')}</div>` : ''}
@@ -380,7 +385,11 @@ async function init() {
       field: fieldSelect.value,
       track: trackSelect.value,
     });
-    renderRoster(sortRoster(filtered), { field: fieldSelect.value });
+    renderRoster(sortRoster(filtered), {
+      field: fieldSelect.value,
+      track: trackSelect.value,
+      query: searchInput.value,
+    });
     syncUrl();
   }
 
@@ -401,19 +410,21 @@ async function init() {
   document.getElementById('roster').addEventListener('click', (e) => {
     const trackTag = e.target.closest('.tag-track');
     if (trackTag) {
-      trackSelect.value = trackTag.dataset.track;
+      trackSelect.value = trackSelect.value === trackTag.dataset.track ? 'all' : trackTag.dataset.track;
       update();
       return;
     }
     const fieldTag = e.target.closest('.tag-field');
     if (fieldTag) {
-      fieldSelect.value = fieldTag.dataset.field;
+      fieldSelect.value = fieldSelect.value === fieldTag.dataset.field ? 'all' : fieldTag.dataset.field;
       update();
       return;
     }
     const topicTag = e.target.closest('.tag-topic');
     if (topicTag) {
-      searchInput.value = topicTag.textContent;
+      searchInput.value = searchInput.value.trim().toLowerCase() === topicTag.textContent.trim().toLowerCase()
+        ? ''
+        : topicTag.textContent.trim();
       update();
       return;
     }

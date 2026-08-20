@@ -17,7 +17,7 @@ function renderShell() {
         <span class="term" tabindex="0" data-tooltip="On the tenure track or already tenured.">Tenure-line</span>,
         <span class="term" tabindex="0" data-tooltip="A full-time, continuing/permanent non-tenure-track teaching appointment — e.g. Teaching Professor or Senior Lecturer. The university's own page must describe it as full-time and continuing, not just carry a teaching-sounding title.">Teaching</span>,
         or
-        <span class="term" tabindex="0" data-tooltip="A formally conferred Professor Emeritus/Emerita title after a tenure-line career, shown on the university's own emeritus listing or a conferral announcement — plain retirement without the conferred title doesn't qualify.">Emeritus</span>
+        <span class="term" tabindex="0" data-tooltip="A formally conferred emeritus title after a tenure-line career, shown on the university's own emeritus listing or a conferral announcement — plain retirement without the conferred title doesn't qualify.">Emeritus</span>
         track qualify — but never adjunct, visiting, postdoctoral, affiliate/courtesy, or
         research-track positions on any track. Please have an official faculty page or scholarly
         profile link ready.
@@ -93,8 +93,8 @@ function renderShell() {
       </div>
 
       <div class="form-section">
-        <label for="rank">Current academic rank (optional)</label>
-        <input id="rank" name="rank" type="text" placeholder="e.g. Associate Professor" />
+        <label for="rank">Simplified academic rank (optional)</label>
+        <input id="rank" name="rank" type="text" placeholder="Assistant Professor, Associate Professor, Professor, Teaching, or Emeritus" />
       </div>
 
       <div class="form-section form-row">

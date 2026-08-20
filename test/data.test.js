@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
-import { FIELDS, TRACKS, fieldOf, buildFunFacts, filterRoster } from '../src/data.js';
+import { FIELDS, TRACKS, canonicalRank, fieldOf, buildFunFacts, filterRoster } from '../src/data.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const roster = JSON.parse(readFileSync(join(__dirname, '../public/data.json'), 'utf8'));
@@ -77,11 +77,21 @@ test('Health Sciences still outranks Business & Economics for health-policy depa
   assert.equal(fieldOf('Health Management and Policy'), 'Health Sciences');
 });
 
-test('Information Studies maps to Education only when its tenure home is UCLA GSEIS', () => {
+test('Information Studies defaults to computing but UCLA GSEIS stays Education', () => {
   assert.equal(fieldOf('Information Studies', 'University of California, Los Angeles'), 'Education');
   // Same bare department string elsewhere is genuinely ambiguous without knowing the school, so
   // it falls into the catch-all rather than being guessed.
-  assert.equal(fieldOf('Information Studies'), 'Others');
+  assert.equal(fieldOf('Information Studies'), 'Computer & Information Sciences');
+  assert.equal(fieldOf('Information Science and Technology'), 'Computer & Information Sciences');
+  assert.equal(fieldOf('IST'), 'Computer & Information Sciences');
+});
+
+test('rank labels use the simplified public vocabulary', () => {
+  assert.equal(canonicalRank({ track: 'Tenure-line', rank: 'Distinguished Professor' }), 'Professor');
+  assert.equal(canonicalRank({ track: 'Tenure-line', rank: 'Associate Professor of Finance' }), 'Associate Professor');
+  assert.equal(canonicalRank({ track: 'Tenure-line', rank: 'Assistant Professor of Practice' }), 'Assistant Professor');
+  assert.equal(canonicalRank({ track: 'Teaching', rank: 'Senior Lecturer II' }), 'Teaching');
+  assert.equal(canonicalRank({ track: 'Emeritus', rank: 'Professor Emerita' }), 'Emeritus');
 });
 
 test('unmatched departments map to Others', () => {
@@ -168,10 +178,10 @@ test('search is diacritic-insensitive in both directions', () => {
   assert.ok(plain.length > 0);
 });
 
-test('search matches on rank/title, not just name/university/location/area', () => {
-  const result = filterRoster(roster, { query: 'Lecturer', field: 'all' });
+test('search matches on simplified rank, not just name/university/location/area', () => {
+  const result = filterRoster(roster, { query: 'Teaching', field: 'all' });
   assert.ok(result.length > 0);
-  assert.ok(result.every((p) => /lecturer/i.test(p.rank ?? '')));
+  assert.ok(result.some((p) => canonicalRank(p) === 'Teaching'));
 });
 
 test('filterRoster narrows by track and "all" leaves it unfiltered', () => {
