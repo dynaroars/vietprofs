@@ -47,8 +47,8 @@ test('no duplicate profile URLs', () => {
   assert.equal(new Set(urls).size, urls.length);
 });
 
-test('the field filter offers all sixteen broad fields', () => {
-  assert.equal(FIELDS.length, 16);
+test('the field filter offers all seventeen broad fields', () => {
+  assert.equal(FIELDS.length, 17);
 });
 
 test('every entry maps to one of the broad fields', () => {
@@ -80,8 +80,12 @@ test('Health Sciences still outranks Business & Economics for health-policy depa
 test('Information Studies maps to Education only when its tenure home is UCLA GSEIS', () => {
   assert.equal(fieldOf('Information Studies', 'University of California, Los Angeles'), 'Education');
   // Same bare department string elsewhere is genuinely ambiguous without knowing the school, so
-  // it deliberately falls through rather than being guessed.
-  assert.equal(fieldOf('Information Studies'), 'Information Studies');
+  // it falls into the catch-all rather than being guessed.
+  assert.equal(fieldOf('Information Studies'), 'Others');
+});
+
+test('unmatched departments map to Others', () => {
+  assert.equal(fieldOf('Military Science'), 'Others');
 });
 
 test('History maps to Humanities', () => {

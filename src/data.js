@@ -55,6 +55,7 @@ export const FIELDS = [
   'Humanities',
   'Law & Public Affairs',
   'Arts & Design',
+  'Others',
 ];
 
 // Some department names are structurally ambiguous — the string alone doesn't say which broad
@@ -175,14 +176,13 @@ const FIELD_RULES = [
   },
   { field: 'Humanities', match: /history|philosophy|english|literature|linguistics|languages|classics|great books|religio|theolog|divinity/i },
   { field: 'Arts & Design', match: /\barts?\b|design|music|theat|dance|film|cinema|photograph|architecture/i },
-  // A department that matches nothing here falls through to its own raw name, which the data
-  // test reports so a maintainer can add an explicit rule (or FIELD_OVERRIDES entry) for it.
+  // A department that matches none of the established broad disciplines is grouped under Others.
 ];
 
 export function fieldOf(department, university) {
   const override = university && FIELD_OVERRIDES.get(`${department}|${university}`);
   if (override) return override;
-  return FIELD_RULES.find((rule) => rule.match.test(department))?.field ?? department;
+  return FIELD_RULES.find((rule) => rule.match.test(department))?.field ?? 'Others';
 }
 
 export function uniqueFields(roster) {

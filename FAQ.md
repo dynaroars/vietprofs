@@ -12,7 +12,7 @@ An entry is included when reliable evidence supports all of the following:
 
 - Vietnamese or Vietnamese-American identity;
 - a U.S.-university appointment on one of the three tracks below (current, except for Emeritus);
-- a primary academic appointment in a listed field.
+- a primary academic appointment in any field.
 
 The university does not need to offer a PhD program.
 
@@ -66,7 +66,10 @@ official university profile and evidence of Vietnamese identity when available.
 Computer & Information Sciences; Engineering; Mathematics; Statistics & Data Science; Physics &
 Astronomy; Chemistry; Biological & Biomedical Sciences; Earth & Environmental Sciences;
 Agricultural & Natural Resource Sciences; Health Sciences; Business & Economics; Social &
-Behavioral Sciences; Education; Humanities; Law & Public Affairs; and Arts & Design.
+Behavioral Sciences; Education; Humanities; Law & Public Affairs; Arts & Design; and Others.
+
+`Others` includes qualifying faculty whose primary departments do not fit one of the sixteen named
+disciplinary categories. The taxonomy never limits who is eligible for the directory.
 
 The ten STEM fields were rostered first; the other six were added to the field filter on
 2026-08-19. All sixteen fields completed a full audit-and-search pass on 2026-08-19, including

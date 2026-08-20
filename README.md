@@ -23,6 +23,8 @@ Sciences (the last to receive its first entries), completed a second full audit-
 2026-08-19: every existing entry was checked against a current source, several stale entries were
 corrected or removed, and new candidates were searched for field by field. Every field remains open
 to further research passes — none of this is exhaustive, especially in the smaller-count fields.
+The `Others` category was added on 2026-08-20 so qualifying faculty in departments outside those
+sixteen disciplines are included rather than omitted.
 
 ## Roster maintenance handoff
 
@@ -30,8 +32,8 @@ Include a person only when reliable evidence, preferably an official university 
 all of the following: Vietnamese or Vietnamese-American identity (a Vietnamese-sounding name is
 sufficient on its own — the maintainer reviews each addition and will catch false positives), a
 U.S.-university appointment (current, except for Emeritus — see below) that clears the bar for one
-of the three tracks below, and a primary appointment that fits the field being reviewed. A relevant
-PhD program or PhD-advising eligibility is not required.
+of the three tracks below, and a primary academic appointment in any department. A relevant PhD
+program or PhD-advising eligibility is not required.
 
 Every entry carries a `track` field, one of the three values in `TRACKS` (`src/data.js`):
 
@@ -55,7 +57,7 @@ Regardless of track, exclude adjunct, visiting, postdoctoral, affiliate/courtesy
 graduate teaching assistants, plain "Instructor" (almost always term-limited — verify case by case
 rather than including on the title alone), and non-university appointments.
 
-Work on one broad field at a time. Audit its existing entries before adding candidates; verify
+Work on one university or broad field at a time. Audit its existing entries before adding candidates; verify
 identity, current track status, primary department, rank, and profile URL individually;
 cross-check the full roster for duplicate people and joint appointments; and update the field
 rules in `src/data.js` if a new department type needs a shared filter bucket. When a department
@@ -92,10 +94,11 @@ The canonical field list is:
 14. Humanities
 15. Law & Public Affairs
 16. Arts & Design
+17. Others
 
-A department that fits none of these falls through to its own raw name rather than a bucket,
-which `npm test` reports so a maintainer can add an explicit rule (or a `FIELD_OVERRIDES` entry)
-in `src/data.js`.
+A department that fits none of the sixteen named disciplinary buckets maps to `Others`. Use that
+catch-all for valid appointments outside the taxonomy; do not exclude the person merely because
+their department lacks an existing field rule.
 
 The ten STEM fields received an initial pass on 2026-08-18. Subsequent work should be a
 targeted re-audit or expansion of **one** of these fields at a time: review existing entries first, verify current
