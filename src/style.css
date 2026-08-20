@@ -254,9 +254,9 @@ h1 {
 }
 
 .search-input {
-  /* Grows fastest of the three controls, so the room freed up by the now content-sized selects
-     (below) goes to the search box rather than sitting unused. */
-  flex: 3 1 220px;
+  /* Always fills the row on its own — flex-basis 100% forces the field/track selects onto their
+     own row below it, rather than competing with them for horizontal space. */
+  flex: 1 1 100%;
   padding: 0.6rem 0.9rem;
   border: 1px solid var(--border-color);
   border-radius: 8px;
@@ -405,6 +405,22 @@ h1 {
 .tag:focus-visible {
   outline: 2px solid var(--focus-ring);
   outline-offset: 1px;
+}
+
+/* Track/field tags set a dropdown filter on click (rather than a free-text search like the
+   research-area tags), so they're outlined instead of filled to read as filter controls. */
+.tag-track,
+.tag-field {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  font-weight: 600;
+}
+
+.tag-track:hover,
+.tag-field:hover {
+  background: transparent;
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 .empty-state {

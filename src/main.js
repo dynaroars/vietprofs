@@ -192,12 +192,13 @@ function trackQualifier(roster) {
   return info ? ` <span class="term" tabindex="0" data-tooltip="${escapeHtml(info.tooltip)}">${info.label}</span>` : '';
 }
 
-function renderRoster(roster) {
+function renderRoster(roster, { field } = {}) {
   const rosterEl = document.getElementById('roster');
   const countEl = document.getElementById('result-count');
   const universities = new Set(roster.map((p) => p.university)).size;
   const states = new Set(roster.map((p) => p.state)).size;
-  countEl.innerHTML = `${roster.length}${trackQualifier(roster)} professor${roster.length === 1 ? '' : 's'} across ${universities} universit${universities === 1 ? 'y' : 'ies'} in ${states} state${states === 1 ? '' : 's'}. <a class="submission-link" href="https://vietprofs.roars.dev/submit.html">Add or update info.</a>`;
+  const fieldPhrase = field && field !== 'all' ? ` in ${escapeHtml(field)}` : '';
+  countEl.innerHTML = `${roster.length}${trackQualifier(roster)} professor${roster.length === 1 ? '' : 's'}${fieldPhrase} across ${universities} universit${universities === 1 ? 'y' : 'ies'} in ${states} state${states === 1 ? '' : 's'}. <a class="submission-link" href="https://vietprofs.roars.dev/submit.html">Add or update info.</a>`;
 
   if (roster.length === 0) {
     rosterEl.innerHTML = '<p class="empty-state">No matches. Try a different search or filter.</p>';
@@ -206,9 +207,13 @@ function renderRoster(roster) {
 
   rosterEl.innerHTML = roster
     .map((p) => {
-      const tags = p.researchAreas
-        .map((a) => `<button type="button" class="tag">${escapeHtml(a)}</button>`)
+      const personField = fieldOf(p.department, p.university);
+      const trackTag = `<button type="button" class="tag tag-track" data-track="${escapeHtml(p.track)}">${escapeHtml(p.track)}</button>`;
+      const fieldTag = `<button type="button" class="tag tag-field" data-field="${escapeHtml(personField)}">${escapeHtml(fieldDropdownLabel(personField))}</button>`;
+      const topicTags = p.researchAreas
+        .map((a) => `<button type="button" class="tag tag-topic">${escapeHtml(a)}</button>`)
         .join('');
+      const tags = fieldTag + trackTag + topicTags;
       return `
         <div class="entry">
           <div class="entry-line">
@@ -303,18 +308,8 @@ async function init() {
 
   const searchInput = document.getElementById('search');
   const fieldSelect = document.getElementById('field-filter');
-  const fieldCounts = new Map(
-    FIELDS.map((field) => [
-      field,
-      roster.filter((person) => fieldOf(person.department, person.university) === field).length,
-    ]),
-  );
-  fieldSelect.options[0].textContent = `All fields (${roster.length})`;
   for (const field of FIELDS) {
-    fieldSelect.insertAdjacentHTML(
-      'beforeend',
-      `<option value="${escapeHtml(field)}">${escapeHtml(fieldDropdownLabel(field))} (${fieldCounts.get(field)})</option>`,
-    );
+    fieldSelect.insertAdjacentHTML('beforeend', `<option value="${escapeHtml(field)}"></option>`);
   }
   fieldSelect.insertAdjacentHTML(
     'beforeend',
@@ -322,15 +317,32 @@ async function init() {
   );
 
   const trackSelect = document.getElementById('track-filter');
-  const trackCounts = new Map(
-    TRACKS.map((track) => [track, roster.filter((person) => person.track === track).length]),
-  );
-  trackSelect.options[0].textContent = `All tracks (${roster.length})`;
   for (const track of TRACKS) {
-    trackSelect.insertAdjacentHTML(
-      'beforeend',
-      `<option value="${escapeHtml(track)}">${escapeHtml(track)} (${trackCounts.get(track)})</option>`,
-    );
+    trackSelect.insertAdjacentHTML('beforeend', `<option value="${escapeHtml(track)}"></option>`);
+  }
+
+  // Each dropdown's option counts reflect the OTHER dropdown's current selection, so picking
+  // "Teaching" narrows every number shown in the field list (and vice versa) — kept in sync by
+  // calling this at the top of update(), which already runs on every relevant state change.
+  function syncDropdownCounts() {
+    const fieldBase = trackSelect.value !== 'all' ? roster.filter((p) => p.track === trackSelect.value) : roster;
+    fieldSelect.options[0].textContent = `All fields (${fieldBase.length})`;
+    for (const option of fieldSelect.options) {
+      if (!FIELDS.includes(option.value)) continue;
+      const count = fieldBase.filter((p) => fieldOf(p.department, p.university) === option.value).length;
+      option.textContent = `${fieldDropdownLabel(option.value)} (${count})`;
+    }
+
+    const fieldActive = fieldSelect.value !== 'all' && fieldSelect.value !== INTERESTING;
+    const trackBase = fieldActive
+      ? roster.filter((p) => fieldOf(p.department, p.university) === fieldSelect.value)
+      : roster;
+    trackSelect.options[0].textContent = `All tracks (${trackBase.length})`;
+    for (const option of trackSelect.options) {
+      if (!TRACKS.includes(option.value)) continue;
+      const count = trackBase.filter((p) => p.track === option.value).length;
+      option.textContent = `${option.value} (${count})`;
+    }
   }
 
   const params = new URLSearchParams(window.location.search);
@@ -353,6 +365,7 @@ async function init() {
   }
 
   function update() {
+    syncDropdownCounts();
     if (fieldSelect.value === INTERESTING) {
       renderFunFacts(roster);
       syncUrl();
@@ -363,7 +376,7 @@ async function init() {
       field: fieldSelect.value,
       track: trackSelect.value,
     });
-    renderRoster(sortRoster(filtered));
+    renderRoster(sortRoster(filtered), { field: fieldSelect.value });
     syncUrl();
   }
 
@@ -382,9 +395,21 @@ async function init() {
   // Delegated on the roster container itself (attached once) rather than per-entry/per-tile,
   // since renderRoster()/renderFunFacts() both replace its innerHTML wholesale on every update().
   document.getElementById('roster').addEventListener('click', (e) => {
-    const tag = e.target.closest('.tag');
-    if (tag) {
-      searchInput.value = tag.textContent;
+    const trackTag = e.target.closest('.tag-track');
+    if (trackTag) {
+      trackSelect.value = trackTag.dataset.track;
+      update();
+      return;
+    }
+    const fieldTag = e.target.closest('.tag-field');
+    if (fieldTag) {
+      fieldSelect.value = fieldTag.dataset.field;
+      update();
+      return;
+    }
+    const topicTag = e.target.closest('.tag-topic');
+    if (topicTag) {
+      searchInput.value = topicTag.textContent;
       update();
       return;
     }
