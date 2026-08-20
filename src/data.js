@@ -168,7 +168,7 @@ const FIELD_RULES = [
   // "curriculum (and|&) instruction" so a department that spells it with an ampersand (Texas
   // Tech's "Curriculum & Instruction") matches too, not just the spelled-out "and" form.
   { field: 'Education', match: /education|curriculum (and|&) instruction|teaching and learning/i },
-  { field: 'Law & Public Affairs', match: /\blaw\b|legal studies|public policy|public affairs|public administration|criminal justice|criminology|urban planning|regional planning|city planning/i },
+  { field: 'Law & Public Affairs', match: /\blaw\b|legal studies|public policy|public affairs|public administration|criminal justice|criminology|urban (studies and )?planning|regional planning|city planning/i },
   {
     field: 'Social & Behavioral Sciences',
     match: /sociology|psychology|anthropology|political science|social work|communication|international relations|ethnic studies|asian american studies|asian-pacific studies|asian pacific studies|global and international studies|global studies|international studies|gender,? and sexuality studies|women's,? gender|women's studies|social and cultural analysis|journalism|human development|family studies|gerontology/i,
