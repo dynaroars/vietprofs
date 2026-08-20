@@ -133,7 +133,7 @@ const FIELD_RULES = [
   // keyword below — so it doesn't get caught by that instead.
   {
     field: 'Health Sciences',
-    match: /health|medicine|nursing|public health|epidemiology|pharma|kinesiology|exercise science|sport science|veterinary|nutrition|dietetics|audiology|speech-language pathology|communication sciences and disorders|anatom|toxicology|dent|orthodont/i,
+    match: /health|medicine|surgery|nursing|public health|epidemiology|pharma|kinesiology|exercise science|sport science|veterinary|nutrition|dietetics|audiology|speech-language pathology|communication sciences and disorders|anatom|toxicology|dent|orthodont/i,
   },
   // Business terms are specific enough (accounting, marketing, entrepreneurship, ...) that
   // false-positive risk is low; "management" is the one generic-sounding term here, which is
