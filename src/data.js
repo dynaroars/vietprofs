@@ -80,6 +80,10 @@ const FIELD_OVERRIDES = new Map([
   // Theology in the Great Texts Program") and George W. Baines Chair of Religion put him
   // squarely in Humanities.
   ['Great Texts Program|Baylor University', 'Humanities'],
+  // Contains "linguistics", which the Humanities rule below would otherwise catch — but this
+  // program trains language teachers inside Teachers College, a graduate school of education,
+  // not an arts-and-sciences linguistics department. School/unit context wins over the string.
+  ['Applied Linguistics and TESOL|Columbia University', 'Education'],
 ]);
 
 // Buckets granular `department` values into the broad fields above. Order matters, and is not
@@ -149,7 +153,9 @@ const FIELD_RULES = [
   // as both (e.g. "Geography and Environmental Studies") keep the science bucket they already
   // had. Education precedes Social & Behavioral Sciences so "Educational Psychology" lands in
   // Education.
-  { field: 'Education', match: /education|curriculum and instruction|teaching and learning/i },
+  // "curriculum (and|&) instruction" so a department that spells it with an ampersand (Texas
+  // Tech's "Curriculum & Instruction") matches too, not just the spelled-out "and" form.
+  { field: 'Education', match: /education|curriculum (and|&) instruction|teaching and learning/i },
   { field: 'Law & Public Affairs', match: /\blaw\b|legal studies|public policy|public affairs|public administration|criminal justice|criminology|urban planning|regional planning|city planning/i },
   {
     field: 'Social & Behavioral Sciences',
