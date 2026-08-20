@@ -133,7 +133,7 @@ const FIELD_RULES = [
   // keyword below — so it doesn't get caught by that instead.
   {
     field: 'Health Sciences',
-    match: /health|medicine|surgery|nursing|public health|epidemiology|pharma|kinesiology|exercise science|sport science|veterinary|nutrition|dietetics|audiology|speech-language pathology|communication sciences and disorders|anatom|toxicology|dent|orthodont/i,
+    match: /health|medicine|surgery|nursing|public health|epidemiology|pharma|psychiatry|biomedical sciences|kinesiology|exercise science|sport science|veterinary|nutrition|dietetics|audiology|speech-language pathology|communication sciences and disorders|anatom|toxicology|dent|orthodont/i,
   },
   // Business terms are specific enough (accounting, marketing, entrepreneurship, ...) that
   // false-positive risk is low; "management" is the one generic-sounding term here, which is
@@ -160,7 +160,7 @@ const FIELD_RULES = [
     field: 'Agricultural & Natural Resource Sciences',
     match: /agricultur|agronomy|food science|natural resources|plant science|horticulture|animal science|soil science|forestry|wildlife|fisheries/i,
   },
-  { field: 'Earth & Environmental Sciences', match: /environmental|earth|geology|geography|oceanography|atmospheric/i },
+  { field: 'Earth & Environmental Sciences', match: /environmental|earth|geology|geoscience|geography|oceanography|atmospheric/i },
   // Non-business/non-science fields are matched after the rules above, so departments that read
   // as both (e.g. "Geography and Environmental Studies") keep the science bucket they already
   // had. Education precedes Social & Behavioral Sciences so "Educational Psychology" lands in
@@ -171,7 +171,7 @@ const FIELD_RULES = [
   { field: 'Law & Public Affairs', match: /\blaw\b|legal studies|public policy|public affairs|public administration|criminal justice|criminology|urban (studies and )?planning|regional planning|city planning/i },
   {
     field: 'Social & Behavioral Sciences',
-    match: /sociology|psychology|anthropology|political science|social work|communication|international relations|ethnic studies|asian american studies|asian-pacific studies|asian pacific studies|global and international studies|global studies|international studies|gender,? and sexuality studies|women's,? gender|women's studies|social and cultural analysis|journalism|human development|family studies|gerontology/i,
+    match: /sociology|psychology|anthropology|political science|\bpolitics\b|social work|communication|international relations|ethnic studies|american studies|ethnicity,? race|asian american studies|asian-pacific studies|asian pacific studies|global and international studies|global studies|international studies|gender,? and sexuality studies|women's,? gender|women's studies|social and cultural analysis|journalism|human development|family studies|gerontology/i,
   },
   { field: 'Humanities', match: /history|philosophy|english|literature|linguistics|languages|classics|religio|theolog|divinity/i },
   { field: 'Arts & Design', match: /\barts?\b|design|music|theat|dance|film|cinema|photograph|architecture/i },
