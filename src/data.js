@@ -84,6 +84,16 @@ const FIELD_OVERRIDES = new Map([
   // program trains language teachers inside Teachers College, a graduate school of education,
   // not an arts-and-sciences linguistics department. School/unit context wins over the string.
   ['Applied Linguistics and TESOL|Columbia University', 'Education'],
+  // Cornell's own description leads with "the home for instruction in the languages, literatures,
+  // religions, cultures, and intellectual histories of Asian societies" — humanities-flavored
+  // language/literature instruction, even though the department also has social-science range.
+  // Doesn't match any FIELD_RULES keyword on its own ("Asian Studies" isn't "languages" or
+  // "literature" verbatim), so needs an explicit override rather than a stretched regex.
+  ['Asian Studies|Cornell University', 'Humanities'],
+  // Yale's Vietnamese-language lector position is administratively housed in this area-studies
+  // council (Vietnamese has no dedicated department at Yale), but the role itself is language and
+  // literature instruction — Humanities by function, not by the council's own name.
+  ['Council on Southeast Asia Studies|Yale University', 'Humanities'],
 ]);
 
 // Buckets granular `department` values into the broad fields above. Order matters, and is not
