@@ -110,14 +110,14 @@ const FIELD_RULES = [
   // Stem match (not just "mathematics") so "Mathematical Sciences" — UT Dallas's actual
   // department name — lands here too, without fabricating a different department string.
   { field: 'Mathematics', match: /mathematic/i },
-  // Kinesiology/exercise-and-sport-science, veterinary, nutrition, and audiology/speech-language
-  // programs are typically housed in health-sciences colleges, so they're bucketed here rather
-  // than getting their own field. "Communication sciences and disorders" is checked here — ahead
-  // of Social & Behavioral Sciences' bare "communication" keyword below — so it doesn't get
-  // caught by that instead.
+  // Kinesiology/exercise-and-sport-science, veterinary, nutrition, dentistry, and
+  // audiology/speech-language programs are typically housed in health-sciences colleges, so
+  // they're bucketed here rather than getting their own field. "Communication sciences and
+  // disorders" is checked here — ahead of Social & Behavioral Sciences' bare "communication"
+  // keyword below — so it doesn't get caught by that instead.
   {
     field: 'Health Sciences',
-    match: /health|medicine|nursing|public health|epidemiology|pharma|kinesiology|exercise science|sport science|veterinary|nutrition|dietetics|audiology|speech-language pathology|communication sciences and disorders|anatom|toxicology/i,
+    match: /health|medicine|nursing|public health|epidemiology|pharma|kinesiology|exercise science|sport science|veterinary|nutrition|dietetics|audiology|speech-language pathology|communication sciences and disorders|anatom|toxicology|dent|orthodont/i,
   },
   // Business terms are specific enough (accounting, marketing, entrepreneurship, ...) that
   // false-positive risk is low; "management" is the one generic-sounding term here, which is
