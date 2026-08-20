@@ -133,7 +133,7 @@ const FIELD_RULES = [
   // keyword below — so it doesn't get caught by that instead.
   {
     field: 'Health Sciences',
-    match: /health|medicine|surgery|nursing|public health|epidemiology|pharma|psychiatry|biomedical sciences|kinesiology|exercise science|sport science|veterinary|nutrition|dietetics|audiology|speech-language pathology|communication sciences and disorders|anatom|toxicology|dent|orthodont/i,
+    match: /health|medicine|surgery|nursing|public health|epidemiology|pharma|psychiatry|pathology|dermatology|biomedical sciences|kinesiology|exercise science|sport science|veterinary|nutrition|dietetics|audiology|speech-language pathology|communication sciences and disorders|anatom|toxicology|dent|orthodont/i,
   },
   // Business terms are specific enough (accounting, marketing, entrepreneurship, ...) that
   // false-positive risk is low; "management" is the one generic-sounding term here, which is
@@ -146,7 +146,7 @@ const FIELD_RULES = [
   { field: 'Statistics & Data Science', match: /statistics|biostatistics|operations research|data science/i },
   // "materials science" alone (no "engineering" in the name) still lands here — combined
   // "Materials Science and Engineering" departments already match the bare "engineering" term.
-  { field: 'Engineering', match: /engineering|materials science/i },
+  { field: 'Engineering', match: /engineering|materials science|aviation science/i },
   { field: 'Physics & Astronomy', match: /physics|astronomy/i },
   { field: 'Chemistry', match: /chemistry/i },
   {
@@ -171,9 +171,9 @@ const FIELD_RULES = [
   { field: 'Law & Public Affairs', match: /\blaw\b|legal studies|public policy|public affairs|public administration|criminal justice|criminology|urban (studies and )?planning|regional planning|city planning/i },
   {
     field: 'Social & Behavioral Sciences',
-    match: /sociology|psychology|anthropology|political science|\bpolitics\b|social work|communication|international relations|ethnic studies|american studies|ethnicity,? race|asian american studies|asian-pacific studies|asian pacific studies|global and international studies|global studies|international studies|gender,? and sexuality studies|women's,? gender|women's studies|social and cultural analysis|journalism|human development|family studies|gerontology/i,
+    match: /sociology|psycholog(?:y|ical)|anthropology|political science|\bpolitics\b|social work|communication|international relations|ethnic studies|american studies|ethnicity,? race|asian studies|asian american studies|asian-pacific studies|asian pacific studies|global and international studies|global studies|international studies|gender,? and sexuality studies|women's,? gender|women's studies|social and cultural analysis|journalism|human development|family studies|gerontology/i,
   },
-  { field: 'Humanities', match: /history|philosophy|english|literature|linguistics|languages|classics|religio|theolog|divinity/i },
+  { field: 'Humanities', match: /history|philosophy|english|literature|linguistics|languages|classics|great books|religio|theolog|divinity/i },
   { field: 'Arts & Design', match: /\barts?\b|design|music|theat|dance|film|cinema|photograph|architecture/i },
   // A department that matches nothing here falls through to its own raw name, which the data
   // test reports so a maintainer can add an explicit rule (or FIELD_OVERRIDES entry) for it.
