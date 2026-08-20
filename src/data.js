@@ -107,7 +107,9 @@ const FIELD_OVERRIDES = new Map([
 //   itself (bare, or "History of ...") is reserved for Humanities.
 const FIELD_RULES = [
   { field: 'Computer & Information Sciences', match: /computer science|informatics|information science|library/i },
-  { field: 'Mathematics', match: /mathematics/i },
+  // Stem match (not just "mathematics") so "Mathematical Sciences" — UT Dallas's actual
+  // department name — lands here too, without fabricating a different department string.
+  { field: 'Mathematics', match: /mathematic/i },
   // Kinesiology/exercise-and-sport-science, veterinary, nutrition, and audiology/speech-language
   // programs are typically housed in health-sciences colleges, so they're bucketed here rather
   // than getting their own field. "Communication sciences and disorders" is checked here — ahead
