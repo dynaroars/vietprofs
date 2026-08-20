@@ -13,12 +13,13 @@ function renderShell() {
       <h1><a class="home-link" href="${import.meta.env.BASE_URL}">Vietnamese Professors at U.S. Universities</a></h1>
       <p class="tagline">Submit a new entry, or correct an existing one</p>
       <p class="criteria">
-        Faculty on either the
-        <span class="term" tabindex="0" data-tooltip="On the tenure track or already tenured.">Tenure-line</span>
+        Faculty on the
+        <span class="term" tabindex="0" data-tooltip="On the tenure track or already tenured.">Tenure-line</span>,
+        <span class="term" tabindex="0" data-tooltip="A full-time, continuing/permanent non-tenure-track teaching appointment — e.g. Teaching Professor or Senior Lecturer. The university's own page must describe it as full-time and continuing, not just carry a teaching-sounding title.">Teaching</span>,
         or
-        <span class="term" tabindex="0" data-tooltip="A full-time, continuing/permanent non-tenure-track teaching appointment — e.g. Teaching Professor or Senior Lecturer. The university's own page must describe it as full-time and continuing, not just carry a teaching-sounding title.">Teaching</span>
-        track qualify — but never adjunct, visiting, postdoctoral, affiliate/courtesy, research-track,
-        or emeritus positions on either track. Please have an official faculty page or scholarly
+        <span class="term" tabindex="0" data-tooltip="A formally conferred Professor Emeritus/Emerita title after a tenure-line career, shown on the university's own emeritus listing or a conferral announcement — plain retirement without the conferred title doesn't qualify.">Emeritus</span>
+        track qualify — but never adjunct, visiting, postdoctoral, affiliate/courtesy, or
+        research-track positions on any track. Please have an official faculty page or scholarly
         profile link ready.
       </p>
     </header>
@@ -128,9 +129,9 @@ function renderShell() {
         <label class="checkbox-row">
           <input id="attest" name="attest" type="checkbox" required />
           I confirm this person holds the selected track's appointment at this university — not
-          adjunct, visiting, postdoctoral, affiliate/courtesy, research-track, or emeritus on
-          either track — and that I've verified this via an official faculty page or scholarly
-          profile.
+          adjunct, visiting, postdoctoral, affiliate/courtesy, or research-track, and if Emeritus,
+          that the title was formally conferred rather than just retirement — and that I've
+          verified this via an official faculty page or scholarly profile.
         </label>
       </div>
 

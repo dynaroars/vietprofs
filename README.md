@@ -2,14 +2,16 @@
 
 > Find Vietnamese and Vietnamese-American professors across fields at U.S. universities.
 
-A searchable directory of Vietnamese professors across fields at U.S. universities, covering two
-employment tracks — **Tenure-line** (tenure-track or tenured) and **Teaching** (full-time,
-continuing/permanent non-tenure-track teaching faculty) — selectable from a track dropdown
-alongside the field filter. Neither track includes adjunct, visiting, postdoctoral,
-affiliate/courtesy, research-track, emeritus/retired, or any other term-limited or part-time
-appointment; see "Roster maintenance handoff" below for the exact bar each track has to clear.
-Faculty whose tenure/teaching home is in one department with a secondary/joint appointment
-elsewhere are marked with `†` and carry `secondaryAppointment: true`.
+A searchable directory of Vietnamese professors across fields at U.S. universities, covering three
+employment tracks — **Tenure-line** (tenure-track or tenured), **Teaching** (full-time,
+continuing/permanent non-tenure-track teaching faculty), and **Emeritus** (formally conferred
+emeritus/emerita status after a tenure-line career) — selectable from a track dropdown alongside
+the field filter. No track includes adjunct, visiting, postdoctoral, affiliate/courtesy,
+research-track, or any other term-limited or part-time appointment, and plain retirement without a
+conferred emeritus title doesn't qualify for the Emeritus track either; see "Roster maintenance
+handoff" below for the exact bar each track has to clear. Faculty whose tenure/teaching home is in
+one department with a secondary/joint appointment elsewhere are marked with `†` and carry
+`secondaryAppointment: true`.
 
 Static site, no backend: the roster lives in `public/data.json` and is loaded, searched, filtered,
 and sorted client-side.
@@ -27,11 +29,11 @@ to further research passes — none of this is exhaustive, especially in the sma
 Include a person only when reliable evidence, preferably an official university page, supports
 all of the following: Vietnamese or Vietnamese-American identity (a Vietnamese-sounding name is
 sufficient on its own — the maintainer reviews each addition and will catch false positives), a
-current U.S.-university appointment that clears the bar for one of the two tracks below, and a
-primary appointment that fits the field being reviewed. A relevant PhD program or PhD-advising
-eligibility is not required.
+U.S.-university appointment (current, except for Emeritus — see below) that clears the bar for one
+of the three tracks below, and a primary appointment that fits the field being reviewed. A relevant
+PhD program or PhD-advising eligibility is not required.
 
-Every entry carries a `track` field, one of the two values in `TRACKS` (`src/data.js`):
+Every entry carries a `track` field, one of the three values in `TRACKS` (`src/data.js`):
 
 - **`"Tenure-line"`** — tenure-track or already tenured.
 - **`"Teaching"`** — a full-time, continuing/permanent non-tenure-track teaching appointment:
@@ -41,10 +43,17 @@ Every entry carries a `track` field, one of the two values in `TRACKS` (`src/dat
   language ("full-time," "continuing appointment," "non-tenure-track faculty," a named promotion
   ladder) — never from the title alone, since the same title means career security at one school
   and a one-year visiting gig at another.
+- **`"Emeritus"`** — a formally conferred "Professor Emeritus"/"Emerita" title following a
+  tenure-line career, evidenced by the university's own emeritus faculty listing, a news item about
+  the conferral, or the person's own page using the title. Plain retirement, resignation, or "former
+  faculty" phrasing without the specific conferred title does not qualify — the university has to
+  have granted the honorific, not just stopped employing them. Prefer a source that still lists them
+  as living/current emeritus faculty; skip anyone whose only listing is an in-memoriam/deceased-
+  faculty page rather than an active emeritus roster.
 
 Regardless of track, exclude adjunct, visiting, postdoctoral, affiliate/courtesy, research-track,
-emeritus/retired, graduate teaching assistants, plain "Instructor" (almost always term-limited —
-verify case by case rather than including on the title alone), and non-university appointments.
+graduate teaching assistants, plain "Instructor" (almost always term-limited — verify case by case
+rather than including on the title alone), and non-university appointments.
 
 Work on one broad field at a time. Audit its existing entries before adding candidates; verify
 identity, current track status, primary department, rank, and profile URL individually;
@@ -128,8 +137,8 @@ correct an entry. Each entry:
 }
 ```
 
-`track` is required and must be one of `TRACKS` in `src/data.js` (`"Tenure-line"` or
-`"Teaching"`) — see "Roster maintenance handoff" above for what each one requires. `scholarUrl`,
+`track` is required and must be one of `TRACKS` in `src/data.js` (`"Tenure-line"`, `"Teaching"`, or
+`"Emeritus"`) — see "Roster maintenance handoff" above for what each one requires. `scholarUrl`,
 `rank`, `phdYear`, `phdInstitution`, and `undergradInstitution` are optional. Keep
 each object on one line. `undergradInstitution` isn't populated on any entry yet — several bios
 mention a Vietnamese undergraduate alma mater, and `buildFunFacts()` in `src/data.js` already
@@ -164,10 +173,11 @@ box still matches either spelling — see `stripDiacritics` in `src/data.js`.
 
 [`submit.html`](./submit.html) lets anyone propose a new entry or a correction without touching
 git directly.
-It accepts faculty on either track — **Tenure-line** (tenure-track or tenured) or **Teaching**
-(full-time, continuing/permanent non-tenure-track teaching faculty) — but not adjunct, visiting,
-postdoctoral, affiliate/courtesy, research-track, or emeritus appointments on either track, and
-requires a faculty or scholarly profile link before it will submit. The default path opens a
+It accepts faculty on any of the three tracks — **Tenure-line** (tenure-track or tenured),
+**Teaching** (full-time, continuing/permanent non-tenure-track teaching faculty), or **Emeritus**
+(formally conferred emeritus/emerita status) — but not adjunct, visiting, postdoctoral,
+affiliate/courtesy, research-track appointments, or plain retirement without a conferred emeritus
+title, and requires a faculty or scholarly profile link before it will submit. The default path opens a
 pre-filled email to `root@roars.dev`; contributors
 who prefer GitHub can instead open a pre-filled issue in `dynaroars/vietprofs`. No backend or
 credentials are handled by the site. Maintainers review email and GitHub submissions before

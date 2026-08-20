@@ -3,15 +3,15 @@
 ## What is VietProfs?
 
 VietProfs is a searchable, community-maintained directory of Vietnamese and Vietnamese-American
-professors across fields at U.S. universities, on either of two employment tracks: Tenure-line
-or Teaching.
+professors across fields at U.S. universities, on one of three employment tracks: Tenure-line,
+Teaching, or Emeritus.
 
 ## Who is included?
 
 An entry is included when reliable evidence supports all of the following:
 
 - Vietnamese or Vietnamese-American identity;
-- current employment at a U.S. university on one of the two tracks below;
+- a U.S.-university appointment on one of the three tracks below (current, except for Emeritus);
 - a primary academic appointment in a listed field.
 
 The university does not need to offer a PhD program.
@@ -25,12 +25,19 @@ the university's own page describes it as a permanent teaching-ladder rank). Thi
 the source to say the position is full-time and continuing/permanent, not just carry a
 teaching-sounding title.
 
+**Emeritus** — a formally conferred "Professor Emeritus"/"Emerita" title following a tenure-line
+career, shown on the university's own emeritus faculty listing, a conferral announcement, or the
+person's own page. Plain retirement or "former faculty" phrasing without the specific conferred
+title doesn't qualify, and an in-memoriam/deceased-faculty-only listing isn't enough either — the
+university has to still carry them as living, current emeritus faculty.
+
 ## Who is excluded?
 
 Regardless of track, the directory excludes adjunct, visiting, postdoctoral, affiliate/courtesy,
-research-track, emeritus/retired, graduate teaching assistants, plain "Instructor" (verified
-case by case, since it's almost always term-limited), and non-university appointments. Clinical
-faculty are not included solely because they hold an academic title.
+research-track, graduate teaching assistants, plain "Instructor" (verified case by case, since
+it's almost always term-limited), and non-university appointments. Clinical faculty are not
+included solely because they hold an academic title, and retirement alone doesn't qualify someone
+for the Emeritus track without a conferred emeritus title (see above).
 
 ## How is identity determined?
 

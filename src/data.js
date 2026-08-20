@@ -28,12 +28,14 @@ export function uniqueResearchAreas(roster) {
   return [...new Set(roster.flatMap((p) => p.researchAreas))].sort();
 }
 
-// The two employment tracks a roster entry can carry. Tenure-line means tenure-track or already
+// The three employment tracks a roster entry can carry. Tenure-line means tenure-track or already
 // tenured. Teaching means a full-time, continuing/permanent non-tenure-track teaching appointment
-// (e.g. Teaching Professor, Senior/Principal/Distinguished Lecturer) — never adjunct, visiting,
+// (e.g. Teaching Professor, Senior/Principal/Distinguished Lecturer). Emeritus means a formally
+// conferred "Professor Emeritus"/"Emerita" title after a tenure-line career — plain retirement
+// without the conferred title doesn't qualify. None of the three ever includes adjunct, visiting,
 // postdoctoral, affiliate, or any other term-limited or part-time position; those stay excluded
 // from the roster entirely regardless of track. See README.md's "Roster maintenance handoff".
-export const TRACKS = ['Tenure-line', 'Teaching'];
+export const TRACKS = ['Tenure-line', 'Teaching', 'Emeritus'];
 
 // The broad fields used by the roster, shown even before each field has entries.
 export const FIELDS = [

@@ -183,6 +183,10 @@ const TRACK_INFO = {
     label: 'teaching-track',
     tooltip: 'A full-time, continuing/permanent non-tenure-track teaching appointment — not adjunct, visiting, postdoctoral, or affiliate.',
   },
+  Emeritus: {
+    label: 'emeritus',
+    tooltip: 'A formally conferred Professor Emeritus/Emerita title after a tenure-line career — not just retirement without the conferred title.',
+  },
 };
 
 function trackQualifier(roster) {
