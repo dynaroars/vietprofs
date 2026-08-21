@@ -161,8 +161,8 @@ function renderShell() {
       <select id="field-filter" class="field-select" aria-label="Filter by field">
         <option value="all">All fields</option>
       </select>
-      <select id="track-filter" class="field-select track-select" aria-label="Filter by track">
-        <option value="all">All tracks</option>
+      <select id="track-filter" class="field-select track-select" aria-label="Filter by faculty type">
+        <option value="all">All faculty types</option>
       </select>
     </div>
     <div class="examples" id="examples"></div>
@@ -196,7 +196,7 @@ function trackQualifier(roster) {
   return info ? ` <span class="term" tabindex="0" data-tooltip="${escapeHtml(info.tooltip)}">${info.label}</span>` : '';
 }
 
-function renderRoster(roster, { field, track, query } = {}) {
+function renderRoster(roster, { field } = {}) {
   const rosterEl = document.getElementById('roster');
   const countEl = document.getElementById('result-count');
   const universities = new Set(roster.map((p) => p.university)).size;
@@ -213,15 +213,10 @@ function renderRoster(roster, { field, track, query } = {}) {
     .map((p) => {
       const visibleName = displayName(p.name);
       const personField = fieldOf(p.department, p.university);
-      const trackSelected = track === p.track;
-      const fieldSelected = field === personField;
-      const trackTag = `<button type="button" class="tag tag-track${trackSelected ? ' tag-selected' : ''}" data-track="${escapeHtml(p.track)}" aria-pressed="${trackSelected}">${escapeHtml(p.track)}</button>`;
-      const fieldTag = `<button type="button" class="tag tag-field${fieldSelected ? ' tag-selected' : ''}" data-field="${escapeHtml(personField)}" aria-pressed="${fieldSelected}">${escapeHtml(fieldDropdownLabel(personField))}</button>`;
+      const fieldTag = `<span class="tag tag-field">${escapeHtml(fieldDropdownLabel(personField))}</span>`;
+      const trackTag = `<span class="tag tag-track">${escapeHtml(p.track)}</span>`;
       const topicTags = p.researchAreas
-        .map((a) => {
-          const selected = query?.trim().toLowerCase() === a.toLowerCase();
-          return `<button type="button" class="tag tag-topic${selected ? ' tag-selected' : ''}" aria-pressed="${selected}">${escapeHtml(a)}</button>`;
-        })
+        .map((a) => `<span class="tag tag-topic">${escapeHtml(a)}</span>`)
         .join('');
       const tags = fieldTag + trackTag + topicTags;
       return `
@@ -347,7 +342,7 @@ async function init() {
     const trackBase = fieldActive
       ? roster.filter((p) => fieldOf(p.department, p.university) === fieldSelect.value)
       : roster;
-    trackSelect.options[0].textContent = `All tracks (${trackBase.length})`;
+    trackSelect.options[0].textContent = `All faculty types (${trackBase.length})`;
     for (const option of trackSelect.options) {
       if (!TRACKS.includes(option.value)) continue;
       const count = trackBase.filter((p) => p.track === option.value).length;
@@ -388,8 +383,6 @@ async function init() {
     });
     renderRoster(sortRoster(filtered), {
       field: fieldSelect.value,
-      track: trackSelect.value,
-      query: searchInput.value,
     });
     syncUrl();
   }
@@ -409,26 +402,6 @@ async function init() {
   // Delegated on the roster container itself (attached once) rather than per-entry/per-tile,
   // since renderRoster()/renderFunFacts() both replace its innerHTML wholesale on every update().
   document.getElementById('roster').addEventListener('click', (e) => {
-    const trackTag = e.target.closest('.tag-track');
-    if (trackTag) {
-      trackSelect.value = trackSelect.value === trackTag.dataset.track ? 'all' : trackTag.dataset.track;
-      update();
-      return;
-    }
-    const fieldTag = e.target.closest('.tag-field');
-    if (fieldTag) {
-      fieldSelect.value = fieldSelect.value === fieldTag.dataset.field ? 'all' : fieldTag.dataset.field;
-      update();
-      return;
-    }
-    const topicTag = e.target.closest('.tag-topic');
-    if (topicTag) {
-      searchInput.value = searchInput.value.trim().toLowerCase() === topicTag.textContent.trim().toLowerCase()
-        ? ''
-        : topicTag.textContent.trim();
-      update();
-      return;
-    }
     const tile = e.target.closest('.state-tile');
     if (tile) {
       searchInput.value = tile.dataset.state;
@@ -455,17 +428,26 @@ async function init() {
     ...pickRandomUnique(uniqueDepartments(roster), 1).map((value) => ({ type: 'search', value })),
     ...pickRandomUnique(uniqueStates(roster), 1).map((value) => ({ type: 'search', value })),
     ...pickRandomUnique(roster.flatMap((p) => p.researchAreas), 1).map((value) => ({ type: 'search', value })),
+    ...pickRandomUnique(FIELDS, 2).map((field) => ({ type: 'field', value: field, label: fieldDropdownLabel(field) })),
+    ...pickRandomUnique(TRACKS, 1).map((track) => ({ type: 'track', value: track })),
     { type: 'fact', value: randomFact },
   ].sort(() => Math.random() - 0.5);
   const examplesEl = document.getElementById('examples');
   examplesEl.innerHTML =
     '<span class="examples-label">Try:</span>' +
     examples
-      .map((ex) =>
-        ex.type === 'fact'
-          ? `<button type="button" class="example-chip fun-chip" data-fun="1">✨ ${escapeHtml(ex.value)}</button>`
-          : `<button type="button" class="example-chip">${escapeHtml(ex.value)}</button>`,
-      )
+      .map((ex) => {
+        if (ex.type === 'fact') {
+          return `<button type="button" class="example-chip fun-chip" data-fun="1">✨ ${escapeHtml(ex.value)}</button>`;
+        }
+        if (ex.type === 'field') {
+          return `<button type="button" class="example-chip" data-field="${escapeHtml(ex.value)}">${escapeHtml(ex.label ?? ex.value)}</button>`;
+        }
+        if (ex.type === 'track') {
+          return `<button type="button" class="example-chip" data-track="${escapeHtml(ex.value)}">${escapeHtml(ex.value)}</button>`;
+        }
+        return `<button type="button" class="example-chip">${escapeHtml(ex.value)}</button>`;
+      })
       .join('');
   examplesEl.addEventListener('click', (e) => {
     const btn = e.target.closest('.example-chip');
@@ -474,6 +456,20 @@ async function init() {
       searchInput.value = '';
       fieldSelect.value = INTERESTING;
       trackSelect.value = 'all';
+      update();
+      return;
+    }
+    if (btn.dataset.field) {
+      searchInput.value = '';
+      fieldSelect.value = btn.dataset.field;
+      trackSelect.value = 'all';
+      update();
+      return;
+    }
+    if (btn.dataset.track) {
+      searchInput.value = '';
+      fieldSelect.value = 'all';
+      trackSelect.value = btn.dataset.track;
       update();
       return;
     }

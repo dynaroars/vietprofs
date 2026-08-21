@@ -386,48 +386,22 @@ h1 {
 }
 
 .tag {
+  display: inline-block;
   background: var(--tag-bg);
   color: var(--tag-text);
   font-size: var(--text-xs);
   padding: 0.15rem 0.55rem;
   border-radius: 999px;
   white-space: nowrap;
-  border: none;
+  border: 1px solid transparent;
   font-family: var(--font-body);
-  cursor: pointer;
 }
 
-.tag:hover {
-  background: var(--hover-bg);
-  color: var(--text-primary);
-}
-
-.tag:focus-visible {
-  outline: 2px solid var(--focus-ring);
-  outline-offset: 1px;
-}
-
-/* Track/field tags set a dropdown filter on click (rather than a free-text search like the
-   research-area tags), so they're outlined instead of filled to read as filter controls. */
 .tag-track,
 .tag-field {
   background: transparent;
-  border: 1px solid var(--border-color);
+  border-color: var(--border-color);
   font-weight: 600;
-}
-
-.tag-track:hover,
-.tag-field:hover {
-  background: transparent;
-  border-color: var(--accent);
-  color: var(--accent);
-}
-
-.tag-selected,
-.tag-selected:hover {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: white;
 }
 
 .empty-state {
