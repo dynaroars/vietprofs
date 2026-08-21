@@ -1,5 +1,5 @@
 import './style.css';
-import { loadRoster, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, FIELDS, TRACKS, canonicalRank, displayName, fieldOf, filterRoster, sortRoster, buildFunFacts } from './data.js';
+import { loadRoster, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, FIELDS, TRACKS, canonicalRank, displayName, fieldOf, filterRoster, sortRoster, buildFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities } from './data.js';
 import { escapeHtml } from './utils.js';
 
 // Sentinel field-select value for the "show me something interesting" view. Distinct from any
@@ -168,6 +168,11 @@ function renderShell() {
     <div class="examples" id="examples"></div>
     <p class="result-count" id="result-count" aria-live="polite"></p>
     <div class="roster" id="roster"></div>
+    <button type="button" id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top" hidden>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M18 15l-6-6-6 6"/>
+      </svg>
+    </button>
   `;
 }
 
@@ -202,7 +207,7 @@ function renderRoster(roster, { field } = {}) {
   const universities = new Set(roster.map((p) => p.university)).size;
   const states = new Set(roster.map((p) => p.state)).size;
   const fieldPhrase = field && field !== 'all' ? ` in ${escapeHtml(field)}` : '';
-  countEl.innerHTML = `${roster.length}${trackQualifier(roster)} professor${roster.length === 1 ? '' : 's'}${fieldPhrase} across ${universities} universit${universities === 1 ? 'y' : 'ies'} in ${states} state${states === 1 ? '' : 's'}. <a class="submission-link" href="https://vietprofs.roars.dev/submit.html">Add or update info.</a>`;
+  countEl.innerHTML = `${roster.length}${trackQualifier(roster)} professor${roster.length === 1 ? '' : 's'}${fieldPhrase} across ${universities} universit${universities === 1 ? 'y' : 'ies'} in ${states} state${states === 1 ? '' : 's'}. <a class="submission-link" href="submit.html">Add or update info.</a>`;
 
   if (roster.length === 0) {
     rosterEl.innerHTML = '<p class="empty-state">No matches. Try a different search or filter.</p>';
@@ -255,15 +260,99 @@ function renderStateGrid(roster) {
     })
     .join('');
   return `
-    <p class="state-grid-caption">By state — darker means more people; click one to search it.</p>
-    <div class="state-grid-wrap"><div class="state-grid">${tiles}</div></div>
+    <div class="insights-section">
+      <h3 class="insights-heading">Geographic Distribution</h3>
+      <p class="insights-caption">50 states + DC — darker means more people; click a tile to filter by state.</p>
+      <div class="state-grid-wrap"><div class="state-grid">${tiles}</div></div>
+    </div>
+  `;
+}
+
+function renderDecadesChart(roster) {
+  const decadeCounts = buildDecadeCounts(roster);
+  const total = roster.filter((p) => p.phdYear).length;
+  if (!decadeCounts.length) return '';
+  const max = Math.max(...decadeCounts.map(([, c]) => c));
+  const rows = decadeCounts
+    .map(([decade, count]) => {
+      const pct = Math.round((count / max) * 100);
+      const share = Math.round((count / total) * 100);
+      return `
+        <div class="chart-row">
+          <span class="chart-label">${escapeHtml(decade)}</span>
+          <div class="chart-track">
+            <div class="chart-bar" style="width: ${pct}%;"></div>
+          </div>
+          <span class="chart-value">${count} <span class="chart-share">(${share}%)</span></span>
+        </div>
+      `;
+    })
+    .join('');
+  return `
+    <div class="insights-section">
+      <h3 class="insights-heading">PhD Graduation Cohorts</h3>
+      <p class="insights-caption">Distribution by decade of PhD completion (${total} faculty on record).</p>
+      <div class="chart-container">${rows}</div>
+    </div>
+  `;
+}
+
+function renderLeaderboards(roster) {
+  const topUnis = buildTopUniversities(roster, 8);
+  const topPhd = buildTopPhdInstitutions(roster, 8);
+  const maxUni = topUnis[0] ? topUnis[0][1] : 1;
+  const maxPhd = topPhd[0] ? topPhd[0][1] : 1;
+
+  const uniRows = topUnis
+    .map(([uni, count], idx) => {
+      const pct = Math.round((count / maxUni) * 100);
+      return `
+        <button type="button" class="ranked-item" data-search="${escapeHtml(uni)}" title="Filter by ${escapeHtml(uni)}">
+          <div class="ranked-header">
+            <span class="ranked-name"><span class="ranked-num">${idx + 1}.</span> ${escapeHtml(uni)}</span>
+            <span class="ranked-count">${count}</span>
+          </div>
+          <div class="ranked-track"><div class="ranked-bar" style="width: ${pct}%;"></div></div>
+        </button>
+      `;
+    })
+    .join('');
+
+  const phdRows = topPhd
+    .map(([inst, count], idx) => {
+      const pct = Math.round((count / maxPhd) * 100);
+      return `
+        <button type="button" class="ranked-item" data-search="${escapeHtml(inst)}" title="Search faculty from ${escapeHtml(inst)}">
+          <div class="ranked-header">
+            <span class="ranked-name"><span class="ranked-num">${idx + 1}.</span> ${escapeHtml(inst)}</span>
+            <span class="ranked-count">${count}</span>
+          </div>
+          <div class="ranked-track"><div class="ranked-bar" style="width: ${pct}%;"></div></div>
+        </button>
+      `;
+    })
+    .join('');
+
+  return `
+    <div class="insights-grid">
+      <div class="insights-card">
+        <h3 class="insights-heading">Top Faculty Hubs</h3>
+        <p class="insights-caption">Universities with the most Vietnamese faculty; click to search.</p>
+        <div class="ranked-list">${uniRows}</div>
+      </div>
+      <div class="insights-card">
+        <h3 class="insights-heading">Top PhD Alma Maters</h3>
+        <p class="insights-caption">Doctoral institutions that trained the most faculty; click to search.</p>
+        <div class="ranked-list">${phdRows}</div>
+      </div>
+    </div>
   `;
 }
 
 function renderFunFacts(roster) {
   const rosterEl = document.getElementById('roster');
   const countEl = document.getElementById('result-count');
-  countEl.textContent = 'A few interesting patterns in the roster:';
+  countEl.textContent = 'Insights and patterns across the directory:';
   const facts = buildFunFacts(roster);
   const items = facts
     .map((f) => {
@@ -278,7 +367,17 @@ function renderFunFacts(roster) {
       return `<li>${escaped}</li>`;
     })
     .join('');
-  rosterEl.innerHTML = `${renderStateGrid(roster)}<ul class="fun-facts">${items}</ul>`;
+  rosterEl.innerHTML = `
+    <div class="insights-dashboard">
+      ${renderStateGrid(roster)}
+      ${renderDecadesChart(roster)}
+      ${renderLeaderboards(roster)}
+      <div class="insights-section">
+        <h3 class="insights-heading">Community Insights & Highlights</h3>
+        <ul class="fun-facts">${items}</ul>
+      </div>
+    </div>
+  `;
 }
 
 async function init() {
@@ -295,7 +394,7 @@ async function init() {
 
   const suggestions = document.getElementById('search-suggestions');
   // Matches everything filterRoster actually searches over (name, university, city, state,
-  // department, rank, research areas) so a suggestion always yields at least one result.
+  // department, rank, research areas, PhD institution) so a suggestion always yields at least one result.
   const suggestionValues = [
     ...new Set([
       ...roster.map((p) => displayName(p.name)),
@@ -305,6 +404,7 @@ async function init() {
       ...uniqueCities(roster),
       ...uniqueStates(roster),
       ...uniqueResearchAreas(roster),
+      ...uniquePhdInstitutions(roster),
     ]),
   ].sort();
   for (const value of suggestionValues) {
@@ -408,7 +508,27 @@ async function init() {
       fieldSelect.value = 'all'; // leaving the facts view to show the filtered results
       trackSelect.value = 'all';
       update();
+      return;
     }
+    const rankedItem = e.target.closest('.ranked-item');
+    if (rankedItem && rankedItem.dataset.search) {
+      searchInput.value = rankedItem.dataset.search;
+      fieldSelect.value = 'all';
+      trackSelect.value = 'all';
+      update();
+    }
+  });
+
+  const backToTopBtn = document.getElementById('back-to-top');
+  window.addEventListener(
+    'scroll',
+    () => {
+      backToTopBtn.hidden = window.scrollY <= 300;
+    },
+    { passive: true },
+  );
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
   const holiday = nearestVietnameseHoliday(new Date());

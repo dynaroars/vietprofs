@@ -62,7 +62,7 @@ primary tenure home is in another department.
 
 ## How can I submit a correction or missing professor?
 
-Use the [Submit an entry page](https://vietprofs.roars.dev/submit.html). Please include an
+Use the [Submit an entry page](./submit.html). Please include an
 official university profile and evidence of Vietnamese identity when available.
 
 ## What are the broad fields?

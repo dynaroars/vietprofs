@@ -11,86 +11,62 @@ function renderShell() {
   app.innerHTML = `
     <header>
       <h1><a class="home-link" href="${import.meta.env.BASE_URL}">Vietnamese Professors at U.S. Universities</a></h1>
-      <p class="tagline">Submit a new entry, or correct an existing one</p>
+      <p class="tagline">Submit a new professor or suggest an update</p>
       <p class="criteria">
-        Faculty on the
-        <span class="term" tabindex="0" data-tooltip="On the tenure track or already tenured.">Tenure-line</span>,
-        <span class="term" tabindex="0" data-tooltip="A full-time, continuing/permanent non-tenure-track teaching appointment — e.g. Teaching Professor or Senior Lecturer. The university's own page must describe it as full-time and continuing, not just carry a teaching-sounding title.">Teaching</span>,
-        or
-        <span class="term" tabindex="0" data-tooltip="A formally conferred emeritus title after a tenure-line career, shown on the university's own emeritus listing or a conferral announcement — plain retirement without the conferred title doesn't qualify.">Emeritus</span>
-        track qualify — but never adjunct, visiting, postdoctoral, affiliate/courtesy, or
-        research-track positions on any track. Please have an official faculty page or scholarly
-        profile link ready.
+        To submit or update a professor, simply enter their <strong>full name</strong> and <strong>one or more evidence links</strong> (official faculty profile, personal homepage, lab website, Google Scholar, etc.). All other fields are optional — maintainers will review the links to verify and complete details.
       </p>
     </header>
 
     <form id="submit-form" class="submit-form" novalidate>
-      <fieldset class="form-section">
-        <legend>What kind of submission is this?</legend>
-        <label class="radio-row">
-          <input type="radio" name="kind" value="new" checked />
-          Add a new professor
-        </label>
-        <label class="radio-row">
-          <input type="radio" name="kind" value="correction" />
-          Correct an existing entry
-        </label>
-      </fieldset>
-
-      <fieldset class="form-section">
-        <legend>Employment track *</legend>
-        ${TRACKS.map(
-          (track, index) => `
-        <label class="radio-row">
-          <input type="radio" name="track" value="${escapeHtml(track)}" ${index === 0 ? 'checked' : ''} required />
-          ${escapeHtml(track)}
-        </label>`,
-        ).join('')}
-      </fieldset>
-
-      <div class="form-section" id="correction-target-row" hidden>
-        <label for="target">Name of the existing entry *</label>
-        <input id="target" name="target" type="text" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="correction-suggestions" aria-describedby="correction-target-hint" />
-        <div id="correction-suggestions" class="correction-suggestions" role="listbox" hidden></div>
-        <p class="form-help" id="correction-target-hint">Start typing to select an existing professor. Their current details will populate the form for editing.</p>
-      </div>
-
       <div class="form-section">
         <label for="name">Full name *</label>
-        <input id="name" name="name" type="text" required aria-describedby="name-duplicate-warning" />
-        <p class="form-help warning" id="name-duplicate-warning" hidden></p>
+        <input id="name" name="name" type="text" required placeholder="e.g. Anh Nguyen" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="name-suggestions" aria-describedby="name-hint" />
+        <div id="name-suggestions" class="correction-suggestions" role="listbox" hidden></div>
+        <p class="form-help" id="name-hint">If this professor is already listed, typing their name will suggest them and pre-fill their details for editing.</p>
+        <p class="form-help notice" id="name-match-notice" hidden></p>
       </div>
 
       <div class="form-section">
-        <label for="profileUrl">Official faculty website *</label>
-        <input id="profileUrl" name="profileUrl" type="url" required placeholder="https://…" />
+        <label for="profileUrl">Faculty website or evidence link(s) *</label>
+        <textarea id="profileUrl" name="profileUrl" rows="2" required placeholder="https://… (enter one or multiple URLs: university profile, academic homepage, lab site, Google Scholar, etc.)"></textarea>
+        <p class="form-help">Enter at least one working profile or scholarly link. Additional links can be separated by spaces or newlines.</p>
       </div>
 
       <div class="form-section">
-        <label for="scholarUrl">Google Scholar profile URL (optional)</label>
-        <input id="scholarUrl" name="scholarUrl" type="url" placeholder="https://scholar.google.com/…" />
+        <label for="university">University (optional)</label>
+        <input id="university" name="university" type="text" placeholder="e.g. University of Washington" />
       </div>
 
       <div class="form-section">
-        <label for="university">University *</label>
-        <input id="university" name="university" type="text" required />
+        <label for="department">Department (optional)</label>
+        <input id="department" name="department" type="text" placeholder="e.g. Computer Science" />
       </div>
 
       <div class="form-section form-row">
         <div>
-          <label for="city">City *</label>
-          <input id="city" name="city" type="text" required />
+          <label for="city">City (optional)</label>
+          <input id="city" name="city" type="text" placeholder="e.g. Seattle" />
         </div>
         <div>
-          <label for="state">State *</label>
-          <input id="state" name="state" type="text" required placeholder="e.g. Virginia" />
+          <label for="state">State (optional)</label>
+          <input id="state" name="state" type="text" placeholder="e.g. Washington" />
         </div>
       </div>
 
-      <div class="form-section">
-        <label for="department">Department *</label>
-        <input id="department" name="department" type="text" required placeholder="e.g. Chemistry" />
-      </div>
+      <fieldset class="form-section">
+        <legend>Employment track (optional)</legend>
+        <label class="radio-row">
+          <input type="radio" name="track" value="" checked />
+          Unspecified / Maintainer will check
+        </label>
+        ${TRACKS.map(
+          (track) => `
+        <label class="radio-row">
+          <input type="radio" name="track" value="${escapeHtml(track)}" />
+          ${escapeHtml(track)}
+        </label>`,
+        ).join('')}
+      </fieldset>
 
       <div class="form-section">
         <label for="rank">Simplified academic rank (optional)</label>
@@ -109,30 +85,20 @@ function renderShell() {
       </div>
 
       <div class="form-section">
-        <label for="researchAreas">Research areas * (comma-separated)</label>
-        <input id="researchAreas" name="researchAreas" type="text" required placeholder="e.g. Organic Chemistry, Catalysis" />
+        <label for="researchAreas">Research areas (optional, comma-separated)</label>
+        <input id="researchAreas" name="researchAreas" type="text" placeholder="e.g. Machine Learning, Robotics" />
       </div>
 
       <div class="form-section">
         <label class="checkbox-row">
           <input id="secondaryAppointment" name="secondaryAppointment" type="checkbox" />
-          This is a secondary/joint appointment (their tenure home is a different department)
+          This is a secondary/joint appointment (tenure home is in a different department)
         </label>
       </div>
 
       <div class="form-section">
         <label for="notes">Notes for the maintainer (optional)</label>
-        <textarea id="notes" name="notes" rows="3" placeholder="Anything that helps verify this — e.g. what's wrong with the existing entry, or where you confirmed their track status."></textarea>
-      </div>
-
-      <div class="form-section attestation">
-        <label class="checkbox-row">
-          <input id="attest" name="attest" type="checkbox" required />
-          I confirm this person holds the selected track's appointment at this university — not
-          adjunct, visiting, postdoctoral, affiliate/courtesy, or research-track, and if Emeritus,
-          that the title was formally conferred rather than just retirement — and that I've
-          verified this via an official faculty page or scholarly profile.
-        </label>
+        <textarea id="notes" name="notes" rows="2" placeholder="Anything else that helps verify this (e.g. recent move, joint appointment note, etc.)"></textarea>
       </div>
 
       <div class="submit-actions">
@@ -148,57 +114,43 @@ function renderShell() {
   `;
 }
 
-function buildGithubIssueUrl(name, content) {
+function buildGithubIssueUrl(title, content) {
   const params = new URLSearchParams({
-    title: `VietProfs submission: ${name}`,
+    title,
     body: `## Proposed roster submission\n\n\`\`\`json\n${content}\n\`\`\``,
   });
   return `https://github.com/${GITHUB_REPO}/issues/new?${params.toString()}`;
 }
 
-function buildEmailUrl(name, content) {
+function buildEmailUrl(title, content) {
   const params = new URLSearchParams({
-    subject: `VietProfs submission: ${name}`,
+    subject: title,
     body: `Hello VietProfs maintainers,\n\nHere is my proposed roster submission:\n\n${content}\n`,
   });
   return `mailto:${SUBMISSION_EMAIL}?${params.toString()}`;
 }
 
-function onKindChange(form) {
-  const isCorrection = form.kind.value === 'correction';
-  document.getElementById('correction-target-row').hidden = !isCorrection;
-  form.target.required = isCorrection;
-}
-
 function populateEntry(form, entry) {
   form.name.value = entry.name;
-  form.profileUrl.value = entry.profileUrl;
-  form.scholarUrl.value = entry.scholarUrl ?? '';
-  form.university.value = entry.university;
-  form.city.value = entry.city;
-  form.state.value = entry.state;
-  form.department.value = entry.department;
+  const links = [entry.profileUrl, entry.scholarUrl].filter(Boolean);
+  form.profileUrl.value = links.join('\n');
+  form.university.value = entry.university ?? '';
+  form.city.value = entry.city ?? '';
+  form.state.value = entry.state ?? '';
+  form.department.value = entry.department ?? '';
   form.rank.value = entry.rank ?? '';
   form.phdYear.value = entry.phdYear ?? '';
   form.phdInstitution.value = entry.phdInstitution ?? '';
-  form.researchAreas.value = entry.researchAreas.join(', ');
-  form.secondaryAppointment.checked = entry.secondaryAppointment;
-  if (entry.track) form.track.value = entry.track;
+  form.researchAreas.value = entry.researchAreas ? entry.researchAreas.join(', ') : '';
+  form.secondaryAppointment.checked = entry.secondaryAppointment ?? false;
+  if (entry.track) {
+    const radio = form.querySelector(`input[name="track"][value="${entry.track}"]`);
+    if (radio) radio.checked = true;
+  }
 }
 
 function findDuplicate(entriesByName, name) {
-  return entriesByName?.get(name.toLocaleLowerCase());
-}
-
-function renderDuplicateWarning(entry) {
-  const warning = document.getElementById('name-duplicate-warning');
-  if (!entry) {
-    warning.hidden = true;
-    warning.innerHTML = '';
-    return;
-  }
-  warning.innerHTML = `${escapeHtml(entry.name)} is already listed at ${escapeHtml(entry.university)}. If this is the same person, <button type="button" class="link-btn" id="switch-to-correction">switch to a correction</button> instead.`;
-  warning.hidden = false;
+  return entriesByName?.get(name.toLocaleLowerCase().trim());
 }
 
 function onSubmit(e, entriesByName) {
@@ -207,82 +159,69 @@ function onSubmit(e, entriesByName) {
 
   if (!form.reportValidity()) return;
 
-  const kind = form.kind.value;
   const name = form.name.value.trim();
+  const matchedEntry = findDuplicate(entriesByName, name);
+  const type = matchedEntry ? 'update' : 'new';
+  const target = matchedEntry ? matchedEntry.name : null;
 
-  if (kind === 'new') {
-    const duplicate = findDuplicate(entriesByName, name);
-    if (duplicate) {
-      renderDuplicateWarning(duplicate);
-      form.name.focus();
-      return;
-    }
-  }
-  const researchAreas = form.researchAreas.value
-    .split(',')
+  const links = form.profileUrl.value
+    .split(/[\r\n\s]+/)
     .map((s) => s.trim())
     .filter(Boolean);
 
+  const primaryProfileUrl = links[0] || '';
+  const scholarUrl = links.find((l) => l.includes('scholar.google')) || undefined;
+
+  const researchAreas = form.researchAreas.value
+    ? form.researchAreas.value
+        .split(',')
+        .map((s) => s.trim())
+        .filter(Boolean)
+    : [];
+
   const submission = {
-    type: kind,
-    target: kind === 'correction' ? form.target.value.trim() : null,
-    notes: form.notes.value.trim(),
+    type,
+    target,
+    name,
+    evidenceUrls: links,
     entry: {
       name,
-      profileUrl: form.profileUrl.value.trim(),
-      scholarUrl: form.scholarUrl.value.trim() || undefined,
-      university: form.university.value.trim(),
-      city: form.city.value.trim(),
-      state: form.state.value.trim(),
-      researchAreas,
-      secondaryAppointment: form.secondaryAppointment.checked,
-      track: form.track.value,
-      department: form.department.value.trim(),
+      profileUrl: primaryProfileUrl,
+      scholarUrl,
+      university: form.university.value.trim() || undefined,
+      city: form.city.value.trim() || undefined,
+      state: form.state.value.trim() || undefined,
+      department: form.department.value.trim() || undefined,
+      track: form.track.value || undefined,
       rank: form.rank.value.trim() || undefined,
+      researchAreas: researchAreas.length ? researchAreas : undefined,
       phdYear: form.phdYear.value ? Number(form.phdYear.value) : undefined,
       phdInstitution: form.phdInstitution.value.trim() || undefined,
+      secondaryAppointment: form.secondaryAppointment.checked || undefined,
     },
+    notes: form.notes.value.trim() || undefined,
   };
 
   const content = JSON.stringify(submission, null, 2);
+  const title = matchedEntry ? `VietProfs update: ${name}` : `VietProfs submission: ${name}`;
+
   if (e.submitter?.value === 'github') {
-    window.open(buildGithubIssueUrl(name, content), '_blank', 'noopener,noreferrer');
+    window.open(buildGithubIssueUrl(title, content), '_blank', 'noopener,noreferrer');
   } else {
-    window.location.href = buildEmailUrl(name, content);
+    window.location.href = buildEmailUrl(title, content);
   }
 }
 
 async function init() {
   renderShell();
   const form = document.getElementById('submit-form');
+  const nameInput = document.getElementById('name');
+  const suggestions = document.getElementById('name-suggestions');
+  const matchNotice = document.getElementById('name-match-notice');
   let entriesByName = null;
+
   form.addEventListener('submit', (e) => onSubmit(e, entriesByName));
-  form.querySelectorAll('input[name="kind"]').forEach((radio) => {
-    radio.addEventListener('change', () => {
-      onKindChange(form);
-      renderDuplicateWarning(null);
-    });
-  });
 
-  const nameWarning = document.getElementById('name-duplicate-warning');
-  form.name.addEventListener('input', () => {
-    if (form.kind.value !== 'new') return;
-    const name = form.name.value.trim();
-    renderDuplicateWarning(name ? findDuplicate(entriesByName, name) : null);
-  });
-  nameWarning.addEventListener('click', (event) => {
-    if (!event.target.closest('#switch-to-correction')) return;
-    const duplicate = findDuplicate(entriesByName, form.name.value.trim());
-    if (!duplicate) return;
-    form.kind.value = 'correction';
-    onKindChange(form);
-    form.target.value = duplicate.name;
-    populateEntry(form, duplicate);
-    renderDuplicateWarning(null);
-  });
-
-  const targetInput = form.target;
-  const suggestions = document.getElementById('correction-suggestions');
   try {
     const roster = await loadRoster();
     entriesByName = new Map(roster.map((entry) => [entry.name.toLocaleLowerCase(), entry]));
@@ -290,14 +229,28 @@ async function init() {
 
     function hideSuggestions() {
       suggestions.hidden = true;
-      targetInput.setAttribute('aria-expanded', 'false');
+      nameInput.setAttribute('aria-expanded', 'false');
+    }
+
+    function checkMatch(name) {
+      const entry = entriesByName.get(name.toLocaleLowerCase().trim());
+      if (entry) {
+        matchNotice.innerHTML = `Found on roster at <strong>${escapeHtml(entry.university)}</strong> · ${escapeHtml(entry.department)}. Details pre-filled for editing.`;
+        matchNotice.hidden = false;
+      } else {
+        matchNotice.hidden = true;
+      }
     }
 
     function showSuggestions(query) {
+      if (!query) {
+        hideSuggestions();
+        return;
+      }
       matchingEntries = roster
         .filter((entry) => entry.name.toLocaleLowerCase().includes(query))
         .slice(0, 8);
-      if (!query || matchingEntries.length === 0) {
+      if (matchingEntries.length === 0) {
         hideSuggestions();
         return;
       }
@@ -308,17 +261,19 @@ async function init() {
         )
         .join('');
       suggestions.hidden = false;
-      targetInput.setAttribute('aria-expanded', 'true');
+      nameInput.setAttribute('aria-expanded', 'true');
     }
 
-    targetInput.addEventListener('input', () => {
-      const query = targetInput.value.trim().toLocaleLowerCase();
+    nameInput.addEventListener('input', () => {
+      const query = nameInput.value.trim().toLocaleLowerCase();
       const entry = entriesByName.get(query);
       if (entry) {
         populateEntry(form, entry);
+        checkMatch(query);
         hideSuggestions();
         return;
       }
+      checkMatch(query);
       showSuggestions(query);
     });
 
@@ -327,17 +282,17 @@ async function init() {
       if (!button) return;
       const entry = matchingEntries[Number(button.dataset.index)];
       if (!entry) return;
-      targetInput.value = entry.name;
+      nameInput.value = entry.name;
       populateEntry(form, entry);
+      checkMatch(entry.name);
       hideSuggestions();
     });
 
-    targetInput.addEventListener('blur', () => {
+    nameInput.addEventListener('blur', () => {
       window.setTimeout(hideSuggestions, 150);
     });
   } catch {
-    document.getElementById('correction-target-hint').textContent =
-      'Existing entries could not be loaded. Enter the current details manually.';
+    // If roster fails to load, form still works normally without auto-complete
   }
 }
 

@@ -200,6 +200,37 @@ export function uniqueFields(roster) {
   return FIELDS.filter((field) => roster.some((p) => fieldOf(p.department, p.university) === field));
 }
 
+export function uniquePhdInstitutions(roster) {
+  return [...new Set(roster.map((p) => p.phdInstitution).filter(Boolean))].sort();
+}
+
+export function buildDecadeCounts(roster) {
+  const counts = new Map();
+  for (const p of roster) {
+    if (!p.phdYear) continue;
+    const decade = Math.floor(p.phdYear / 10) * 10;
+    counts.set(`${decade}s`, (counts.get(`${decade}s`) ?? 0) + 1);
+  }
+  return [...counts.entries()].sort((a, b) => parseInt(a[0], 10) - parseInt(b[0], 10));
+}
+
+export function buildTopPhdInstitutions(roster, limit = 8) {
+  const counts = new Map();
+  for (const p of roster) {
+    if (!p.phdInstitution) continue;
+    counts.set(p.phdInstitution, (counts.get(p.phdInstitution) ?? 0) + 1);
+  }
+  return [...counts.entries()].sort((a, b) => b[1] - a[1]).slice(0, limit);
+}
+
+export function buildTopUniversities(roster, limit = 8) {
+  const counts = new Map();
+  for (const p of roster) {
+    counts.set(p.university, (counts.get(p.university) ?? 0) + 1);
+  }
+  return [...counts.entries()].sort((a, b) => b[1] - a[1]).slice(0, limit);
+}
+
 export function filterRoster(roster, { query, field, track }) {
   let result = roster;
   if (field && field !== 'all') {
@@ -215,7 +246,17 @@ export function filterRoster(roster, { query, field, track }) {
   if (!q) return result;
   return result.filter((p) => {
     const haystack = stripDiacritics(
-      [p.name, p.university, p.city, p.state, p.department, canonicalRank(p), ...p.researchAreas]
+      [
+        p.name,
+        p.university,
+        p.city,
+        p.state,
+        p.department,
+        canonicalRank(p),
+        p.phdInstitution,
+        p.phdYear && String(p.phdYear),
+        ...p.researchAreas,
+      ]
         .filter(Boolean)
         .join(' ')
         .toLowerCase(),
