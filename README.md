@@ -82,10 +82,26 @@ Included honors generally fall into these categories:
   Fields Medal, Nobel Prize, Gödel Prize, Knuth Prize, ACM Prize in Computing, and comparable
   international research awards.
 - **Major research-impact awards**: official 10-year, test-of-time, most-influential-paper,
-  or most-impactful-paper awards from major ACM, IEEE, or equivalent disciplinary venues. These
-  are included only when the award is a retrospective field-recognition distinction—not an
-  ordinary Best Paper, Distinguished Paper, or honorable-mention award. For example, ACM
-  SIGSOFT/IEEE TCSE ICSE Most Influential Paper and ACM SIGEVO Impact Award qualify.
+  or most-impactful-paper awards from major ACM, IEEE, or equivalent disciplinary venues. Examples
+  include ACM SIGCOMM, SIGMOD, SIGKDD, SIGACT/STOC, SIGSOFT/ICSE, SIGSAC/CCS, SIGOPS, SIGPLAN,
+  SIGMOBILE, SenSys, MobiSys, CHI, UIST, IMC, and SIGEVO awards, as well as IEEE INFOCOM,
+  ICDE, VIS/VAST, and comparable flagship-venue awards; VLDB 10-Year Best Paper Awards are also
+  eligible. These are included only when the award is a retrospective field-recognition
+  distinction—not an ordinary Best Paper, Distinguished Paper, or honorable-mention award. For
+  example, ACM SIGSOFT/IEEE TCSE ICSE Most Influential Paper and ACM SIGEVO Impact Award qualify.
+- **Major technical achievement awards**: internationally recognized individual awards from major
+  scholarly societies, such as the ACM Software System Award, Paris Kanellakis Theory and Practice
+  Award, SIGPLAN Programming Languages Achievement Award, SIGOPS Mark Weiser Award, SIGMOD
+  Systems Award, SIGCOMM Networking Systems Award, SIGSAC Outstanding Innovation Award, IEEE
+  Computer Society W. Wallace McDowell Award, Charles Babbage Award, Edward J. McCluskey Technical
+  Achievement Award, Harry H. Goode Memorial Award, Harlan D. Mills Award, ACM/IEEE Eckert-Mauchly
+  Award, Seymour Cray Computer Engineering Award, and comparable major mathematics or engineering
+  society prizes. These must represent broad technical or research achievement, not service,
+  teaching, or a routine conference distinction.
+- **Major society early-career honors**: unusually selective field-wide recognitions such as the
+  ACM Grace Murray Hopper Award, ACM SIGCOMM Rising Star Award, ACM SIGSOFT Early Career Research
+  Award, and comparable society-level awards. These qualify because they recognize exceptional
+  research contributions across a field, rather than a single paper or a local university award.
 - **Distinguished professorships**: exceptionally prestigious university-wide professorships or
   endowed chairs, such as University Professor, Institute Professor, Regents Professor, or a
   comparable distinguished university appointment. Ordinary named faculty positions do not
