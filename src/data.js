@@ -252,9 +252,9 @@ const FIELD_RULES = [
   // rule are checked first for the science-flavored "X Management" department names that exist.
   {
     field: 'Business & Economics',
-    match: /business|economics|\bfinance\b|accounting|marketing|management|entrepreneurship|\binsurance\b|real estate|human resource|industrial relations|organizational behavior|supply chain|\blogistics\b/i,
+    match: /business|economic|\bfinance\b|accounting|marketing|management|entrepreneurship|\binsurance\b|real estate|human resource|industrial relations|organizational behavior|supply chain|\blogistics\b/i,
   },
-  { field: 'Computer & Information Sciences', match: /computer science|computing|informatics|information science|information studies|information systems|\bIST\b|\bCIS\b|library/i },
+  { field: 'Computer & Information Sciences', match: /computer science|computing|informatics|information science|information studies|information systems|information technology|\bIST\b|\bCIS\b|library/i },
   // Stem match (not just "mathematics") so "Mathematical Sciences" — UT Dallas's actual
   // department name — lands here too, without fabricating a different department string.
   { field: 'Mathematics', match: /mathematic/i },
@@ -404,7 +404,13 @@ export function filterRoster(roster, { query = '', location, field, track, unive
     const norm = stripDiacritics(country.trim().toLowerCase());
     result = result.filter((p) => {
       const c = stripDiacritics((p.country || 'United States').toLowerCase());
-      return c === norm || c.includes(norm) || (norm === 'us' && (c === 'united states' || c === 'usa'));
+      if (norm === 'us' || norm === 'usa') {
+        return c === 'united states' || c === 'us' || c === 'usa';
+      }
+      if (norm.length <= 3) {
+        return c === norm;
+      }
+      return c === norm || c.includes(norm);
     });
   }
   if (university) {
@@ -444,7 +450,13 @@ export function filterRoster(roster, { query = '', location, field, track, unive
   if (parsed.type === 'country') {
     return result.filter((p) => {
       const c = stripDiacritics((p.country || 'United States').toLowerCase());
-      return c === target || c.includes(target) || (target === 'us' && (c === 'united states' || c === 'usa'));
+      if (target === 'us' || target === 'usa') {
+        return c === 'united states' || c === 'us' || c === 'usa';
+      }
+      if (target.length <= 3) {
+        return c === target;
+      }
+      return c === target || c.includes(target);
     });
   }
   if (parsed.type === 'location') {

@@ -310,11 +310,18 @@ test('country: and continent: prefix queries filter roster accurately', () => {
   const actualSG = roster.filter((p) => p.country === 'Singapore');
   assert.equal(sgQuery.length, actualSG.length);
 
+  const auQuery = filterRoster(roster, { query: 'country:Australia' });
+  const actualAU = roster.filter((p) => p.country === 'Australia');
+  assert.equal(auQuery.length, actualAU.length);
+
   const filterLocUS = filterRoster(roster, { location: 'US' });
   assert.equal(filterLocUS.length, actualUS.length);
 
   const filterLocAsia = filterRoster(roster, { location: 'Asia' });
   assert.equal(filterLocAsia.length, actualSG.length);
+
+  const filterLocAustralasia = filterRoster(roster, { location: 'Australasia' });
+  assert.equal(filterLocAustralasia.length, actualAU.length);
 
   const filterLocWorld = filterRoster(roster, { location: 'World' });
   assert.equal(filterLocWorld.length, roster.length);
