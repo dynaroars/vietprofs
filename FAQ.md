@@ -2,16 +2,16 @@
 
 ## What is VietProfs?
 
-VietProfs is a searchable, community-maintained directory of Vietnamese and Vietnamese-American
-professors across fields at U.S. universities, on one of three employment tracks: Tenure-line,
+VietProfs is a searchable, community-maintained directory of Vietnamese and Vietnamese diaspora
+professors across fields at universities worldwide, on one of three employment tracks: Tenure-line,
 Teaching, or Emeritus.
 
 ## Who is included?
 
 An entry is included when reliable evidence supports all of the following:
 
-- Vietnamese or Vietnamese-American identity;
-- a U.S.-university appointment on one of the three tracks below (current, except for Emeritus);
+- Vietnamese or Vietnamese diaspora identity;
+- a university appointment on one of the three tracks below (current, except for Emeritus) at an accredited higher education institution worldwide (focused on the global diaspora outside domestic Vietnam);
 - a primary academic appointment in any field.
 
 The university does not need to offer a PhD program.

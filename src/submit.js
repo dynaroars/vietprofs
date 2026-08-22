@@ -10,7 +10,7 @@ const app = document.getElementById('app');
 function renderShell() {
   app.innerHTML = `
     <header>
-      <h1><a class="home-link" href="${import.meta.env.BASE_URL}">Vietnamese Professors at U.S. Universities</a></h1>
+      <h1><a class="home-link" href="${import.meta.env.BASE_URL}">Vietnamese Professors</a></h1>
       <p class="tagline">Submit a new professor or suggest an update</p>
       <p class="criteria">
         To submit or update a professor, simply enter their <strong>full name</strong> and <strong>one or more evidence links</strong> (official faculty profile, personal homepage, lab website, Google Scholar, etc.). All other fields are optional — maintainers will review the links to verify and complete details.
@@ -34,7 +34,7 @@ function renderShell() {
 
       <div class="form-section">
         <label for="university">University (optional)</label>
-        <input id="university" name="university" type="text" placeholder="e.g. University of Washington" />
+        <input id="university" name="university" type="text" placeholder="e.g. University of Washington, NUS, Monash University, etc." />
       </div>
 
       <div class="form-section">
@@ -45,12 +45,17 @@ function renderShell() {
       <div class="form-section form-row">
         <div>
           <label for="city">City (optional)</label>
-          <input id="city" name="city" type="text" placeholder="e.g. Seattle" />
+          <input id="city" name="city" type="text" placeholder="e.g. Seattle, Singapore, Paris" />
         </div>
         <div>
-          <label for="state">State (optional)</label>
-          <input id="state" name="state" type="text" placeholder="e.g. Washington" />
+          <label for="state">State / Province (optional)</label>
+          <input id="state" name="state" type="text" placeholder="e.g. Washington, Ontario, NSW" />
         </div>
+      </div>
+
+      <div class="form-section">
+        <label for="country">Country (optional)</label>
+        <input id="country" name="country" type="text" placeholder="e.g. United States, Singapore, Australia, France, Canada" />
       </div>
 
       <fieldset class="form-section">
@@ -125,7 +130,7 @@ function buildGithubIssueUrl(title, content) {
 function buildEmailUrl(title, content) {
   const params = new URLSearchParams({
     subject: title,
-    body: `Hello VietProfs maintainers,\n\nHere is my proposed roster submission:\n\n${content}\n`,
+    body: `Proposed roster submission:\n\n${content}\n`,
   });
   return `mailto:${SUBMISSION_EMAIL}?${params.toString()}`;
 }
@@ -137,6 +142,7 @@ function populateEntry(form, entry) {
   form.university.value = entry.university ?? '';
   form.city.value = entry.city ?? '';
   form.state.value = entry.state ?? '';
+  form.country.value = entry.country ?? '';
   form.department.value = entry.department ?? '';
   form.rank.value = entry.rank ?? '';
   form.phdYear.value = entry.phdYear ?? '';
@@ -191,6 +197,7 @@ function onSubmit(e, entriesByName) {
       university: form.university.value.trim() || undefined,
       city: form.city.value.trim() || undefined,
       state: form.state.value.trim() || undefined,
+      country: form.country.value.trim() || undefined,
       department: form.department.value.trim() || undefined,
       track: form.track.value || undefined,
       rank: form.rank.value.trim() || undefined,

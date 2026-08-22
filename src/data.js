@@ -48,6 +48,109 @@ export function uniqueResearchAreas(roster) {
 // from the roster entirely regardless of track. See README.md's "Roster maintenance handoff".
 export const TRACKS = ['Tenure-line', 'Teaching', 'Emeritus'];
 
+// Geographic locations and continents available in the location dropdown.
+export const LOCATIONS = [
+  'US',
+  'North America',
+  'South America',
+  'Africa',
+  'Asia',
+  'Australasia',
+  'Europe',
+  'World',
+];
+
+export const COUNTRY_TO_CONTINENT = {
+  // North America
+  'United States': 'North America',
+  'US': 'North America',
+  'USA': 'North America',
+  'Canada': 'North America',
+  'Mexico': 'North America',
+
+  // South America
+  'Brazil': 'South America',
+  'Argentina': 'South America',
+  'Chile': 'South America',
+  'Colombia': 'South America',
+  'Peru': 'South America',
+
+  // Europe
+  'United Kingdom': 'Europe',
+  'UK': 'Europe',
+  'Great Britain': 'Europe',
+  'France': 'Europe',
+  'Germany': 'Europe',
+  'Switzerland': 'Europe',
+  'Netherlands': 'Europe',
+  'Belgium': 'Europe',
+  'Sweden': 'Europe',
+  'Norway': 'Europe',
+  'Denmark': 'Europe',
+  'Finland': 'Europe',
+  'Italy': 'Europe',
+  'Spain': 'Europe',
+  'Austria': 'Europe',
+  'Ireland': 'Europe',
+  'Poland': 'Europe',
+  'Czech Republic': 'Europe',
+  'Portugal': 'Europe',
+  'Greece': 'Europe',
+  'Hungary': 'Europe',
+  'Estonia': 'Europe',
+  'Luxembourg': 'Europe',
+  'Iceland': 'Europe',
+
+  // Asia
+  'Singapore': 'Asia',
+  'Hong Kong': 'Asia',
+  'Japan': 'Asia',
+  'South Korea': 'Asia',
+  'Korea': 'Asia',
+  'Taiwan': 'Asia',
+  'China': 'Asia',
+  'India': 'Asia',
+  'Israel': 'Asia',
+  'Saudi Arabia': 'Asia',
+  'United Arab Emirates': 'Asia',
+  'UAE': 'Asia',
+  'Qatar': 'Asia',
+  'Thailand': 'Asia',
+  'Malaysia': 'Asia',
+  'Philippines': 'Asia',
+  'Indonesia': 'Asia',
+
+  // Australasia
+  'Australia': 'Australasia',
+  'New Zealand': 'Australasia',
+
+  // Africa
+  'South Africa': 'Africa',
+  'Egypt': 'Africa',
+  'Nigeria': 'Africa',
+  'Kenya': 'Africa',
+  'Morocco': 'Africa',
+};
+
+export function continentOf(country) {
+  if (!country) return 'North America';
+  return COUNTRY_TO_CONTINENT[country] || 'Other';
+}
+
+export function locationMatches(person, location) {
+  if (!location || location === 'World' || location === 'all') return true;
+  const country = person.country || 'United States';
+  if (location === 'US') {
+    return country === 'United States' || country === 'US' || country === 'USA';
+  }
+  const cont = continentOf(country);
+  return cont.toLowerCase() === location.toLowerCase();
+}
+
+export function uniqueCountries(roster) {
+  return [...new Set(roster.map((p) => p.country || 'United States'))].sort();
+}
+
 // The broad fields used by the roster, shown even before each field has entries.
 export const FIELDS = [
   'Computer & Information Sciences',
@@ -252,7 +355,7 @@ export function parseSearchQuery(query) {
   if (!query) return { type: 'all', text: '' };
   const trimmed = query.trim();
   const prefixMatch = trimmed.match(
-    /^(univ(?:ersity)?|school|phd(?:institution)?|alma|state|dept|department|name):\s*(?:"([^"]*)"|'([^']*)'|(.+))$/i,
+    /^(univ(?:ersity)?|school|phd(?:institution)?|alma|state|country|nation|continent|loc(?:ation)?|city|dept|department|name):\s*(?:"([^"]*)"|'([^']*)'|(.+))$/i,
   );
   if (!prefixMatch) {
     return { type: 'text', text: trimmed };
@@ -268,6 +371,15 @@ export function parseSearchQuery(query) {
   if (prefix === 'state') {
     return { type: 'state', text: value };
   }
+  if (['country', 'nation'].includes(prefix)) {
+    return { type: 'country', text: value };
+  }
+  if (['continent', 'loc', 'location'].includes(prefix)) {
+    return { type: 'location', text: value };
+  }
+  if (prefix === 'city') {
+    return { type: 'city', text: value };
+  }
   if (['dept', 'department'].includes(prefix)) {
     return { type: 'department', text: value };
   }
@@ -277,13 +389,23 @@ export function parseSearchQuery(query) {
   return { type: 'text', text: trimmed };
 }
 
-export function filterRoster(roster, { query = '', field, track, university, phdInstitution, state } = {}) {
+export function filterRoster(roster, { query = '', location, field, track, university, phdInstitution, state, country } = {}) {
   let result = roster;
+  if (location && location !== 'World' && location !== 'all') {
+    result = result.filter((p) => locationMatches(p, location));
+  }
   if (field && field !== 'all') {
     result = result.filter((p) => fieldOf(p.department, p.university) === field);
   }
   if (track && track !== 'all') {
     result = result.filter((p) => p.track === track);
+  }
+  if (country) {
+    const norm = stripDiacritics(country.trim().toLowerCase());
+    result = result.filter((p) => {
+      const c = stripDiacritics((p.country || 'United States').toLowerCase());
+      return c === norm || c.includes(norm) || (norm === 'us' && (c === 'united states' || c === 'usa'));
+    });
   }
   if (university) {
     const norm = stripDiacritics(university.trim().toLowerCase());
@@ -296,6 +418,7 @@ export function filterRoster(roster, { query = '', field, track, university, phd
   if (state) {
     const norm = stripDiacritics(state.trim().toLowerCase());
     result = result.filter((p) => {
+      if (!p.state) return false;
       const s = stripDiacritics(p.state.toLowerCase());
       return s === norm || s.includes(norm) || (STATE_ABBR[p.state] && STATE_ABBR[p.state].toLowerCase() === norm);
     });
@@ -313,9 +436,22 @@ export function filterRoster(roster, { query = '', field, track, university, phd
   }
   if (parsed.type === 'state') {
     return result.filter((p) => {
+      if (!p.state) return false;
       const s = stripDiacritics(p.state.toLowerCase());
       return s === target || s.includes(target) || (STATE_ABBR[p.state] && STATE_ABBR[p.state].toLowerCase() === target);
     });
+  }
+  if (parsed.type === 'country') {
+    return result.filter((p) => {
+      const c = stripDiacritics((p.country || 'United States').toLowerCase());
+      return c === target || c.includes(target) || (target === 'us' && (c === 'united states' || c === 'usa'));
+    });
+  }
+  if (parsed.type === 'location') {
+    return result.filter((p) => locationMatches(p, parsed.text));
+  }
+  if (parsed.type === 'city') {
+    return result.filter((p) => p.city && stripDiacritics(p.city.toLowerCase()).includes(target));
   }
   if (parsed.type === 'department') {
     return result.filter((p) => p.department && stripDiacritics(p.department.toLowerCase()).includes(target));
@@ -334,6 +470,7 @@ export function filterRoster(roster, { query = '', field, track, university, phd
         p.university,
         p.city,
         p.state,
+        p.country || 'United States',
         p.department,
         canonicalRank(p),
         p.phdInstitution,

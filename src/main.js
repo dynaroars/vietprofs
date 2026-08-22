@@ -1,5 +1,5 @@
 import './style.css';
-import { loadRoster, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, FIELDS, TRACKS, canonicalRank, displayName, fieldOf, filterRoster, sortRoster, buildFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, STATE_ABBR } from './data.js';
+import { loadRoster, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, canonicalRank, displayName, fieldOf, locationMatches, filterRoster, sortRoster, buildFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, STATE_ABBR } from './data.js';
 import { escapeHtml } from './utils.js';
 
 // Sentinel field-select value for the "show me something interesting" view. Distinct from any
@@ -132,7 +132,7 @@ function renderShell() {
   app.innerHTML = `
     <header>
       <div class="title-row">
-        <h1><a class="home-link" href="${import.meta.env.BASE_URL}" id="home-link">Vietnamese Profs. in the US</a></h1>
+        <h1><a class="home-link" href="${import.meta.env.BASE_URL}" id="home-link">Vietnamese Professors</a></h1>
         <a class="github-link" href="https://github.com/dynaroars/vietprofs" target="_blank" rel="noopener noreferrer" aria-label="View VietProfs on GitHub" title="View source on GitHub"></a>
         <a class="icon-link roars-link" href="https://roars.dev" target="_blank" rel="noopener noreferrer" aria-label="ROARS Lab" title="ROARS Lab"></a>
         <a class="icon-link" href="https://github.com/dynaroars/vietprofs/blob/main/FAQ.md" target="_blank" rel="noopener noreferrer" aria-label="Frequently asked questions" title="Frequently asked questions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.2 9.3a2.9 2.9 0 0 1 5.6 1c0 2-2.8 2.4-2.8 4.2"/><circle cx="12" cy="17.6" r="1.1" fill="currentColor" stroke="none"/></svg></a>
@@ -142,6 +142,8 @@ function renderShell() {
     <div class="controls">
       <input id="search" class="search-input" type="search" list="search-suggestions" placeholder="Search name, university, department, rank, location, or research area…" aria-label="Search" />
       <datalist id="search-suggestions"></datalist>
+      <select id="location-filter" class="field-select location-select" aria-label="Filter by location">
+      </select>
       <select id="field-filter" class="field-select" aria-label="Filter by field">
         <option value="all">All fields</option>
       </select>
@@ -185,13 +187,31 @@ function trackQualifier(roster) {
   return info ? ` <span class="term" tabindex="0" data-tooltip="${escapeHtml(info.tooltip)}">${info.label}</span>` : '';
 }
 
-function renderRoster(roster, { field } = {}) {
+function formatLocation(p) {
+  const parts = [];
+  if (p.city) parts.push(p.city);
+  if (p.state) parts.push(p.state);
+  if (p.country && p.country !== 'United States' && p.country !== 'US' && p.country !== 'USA') {
+    parts.push(p.country);
+  }
+  return parts.join(', ');
+}
+
+function renderRoster(roster, { field, location } = {}) {
   const rosterEl = document.getElementById('roster');
   const countEl = document.getElementById('result-count');
   const universities = new Set(roster.map((p) => p.university)).size;
-  const states = new Set(roster.map((p) => p.state)).size;
+  const states = new Set(roster.map((p) => p.state).filter(Boolean)).size;
+  const countries = new Set(roster.map((p) => p.country || 'United States')).size;
   const fieldPhrase = field && field !== 'all' ? ` in ${escapeHtml(field)}` : '';
-  countEl.innerHTML = `${roster.length}${trackQualifier(roster)} professor${roster.length === 1 ? '' : 's'}${fieldPhrase} across ${universities} universit${universities === 1 ? 'y' : 'ies'} in ${states} state${states === 1 ? '' : 's'}. <a class="submission-link" href="submit.html">Add or update info.</a>`;
+
+  let locPhrase = '';
+  if (countries <= 1 && (location === 'US' || roster.every((p) => (p.country || 'United States') === 'United States'))) {
+    locPhrase = ` in ${states} state${states === 1 ? '' : 's'}`;
+  } else {
+    locPhrase = ` in ${countries} countr${countries === 1 ? 'y' : 'ies'}`;
+  }
+  countEl.innerHTML = `${roster.length}${trackQualifier(roster)} professor${roster.length === 1 ? '' : 's'}${fieldPhrase} across ${universities} universit${universities === 1 ? 'y' : 'ies'}${locPhrase}. <a class="submission-link" href="submit.html">Add or update info.</a>`;
 
   if (roster.length === 0) {
     rosterEl.innerHTML = '<p class="empty-state">No matches. Try a different search or filter.</p>';
@@ -212,7 +232,7 @@ function renderRoster(roster, { field } = {}) {
         <div class="entry">
           <div class="entry-line">
             <a class="entry-name" href="${escapeHtml(p.websiteUrl ?? p.profileUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(visibleName)}</a>${p.scholarUrl ? ` <a class="scholar-link" href="${escapeHtml(p.scholarUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(visibleName)} on Google Scholar" title="Google Scholar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3Z"/><path d="M5 12.18V16c0 1.66 3.13 3 7 3s7-1.34 7-3v-3.82l-7 3.82-7-3.82Z"/></svg></a>` : ''}${p.secondaryAppointment ? ' <span class="dagger">†</span>' : ''}
-            <span class="entry-meta">${escapeHtml(p.university)} · ${escapeHtml(p.department)} · ${escapeHtml(p.city)}, ${escapeHtml(p.state)}</span>
+            <span class="entry-meta">${escapeHtml(p.university)} · ${escapeHtml(p.department)} · ${escapeHtml(formatLocation(p))}</span>
           </div>
           ${p.rank || p.phdYear || p.phdInstitution ? `<div class="entry-details">${[
             canonicalRank(p) && escapeHtml(canonicalRank(p)),
@@ -377,7 +397,7 @@ async function init() {
   }
 
   const suggestions = document.getElementById('search-suggestions');
-  // Matches everything filterRoster actually searches over (name, university, city, state,
+  // Matches everything filterRoster actually searches over (name, university, city, state, country,
   // department, rank, research areas, PhD institution) so a suggestion always yields at least one result.
   const suggestionValues = [
     ...new Set([
@@ -387,6 +407,7 @@ async function init() {
       ...uniqueRanks(roster),
       ...uniqueCities(roster),
       ...uniqueStates(roster),
+      ...uniqueCountries(roster),
       ...uniqueResearchAreas(roster),
       ...uniquePhdInstitutions(roster),
     ]),
@@ -396,6 +417,12 @@ async function init() {
   }
 
   const searchInput = document.getElementById('search');
+  const locationSelect = document.getElementById('location-filter');
+  for (const loc of LOCATIONS) {
+    locationSelect.insertAdjacentHTML('beforeend', `<option value="${escapeHtml(loc)}">${escapeHtml(loc)}</option>`);
+  }
+  locationSelect.value = 'US';
+
   const fieldSelect = document.getElementById('field-filter');
   for (const field of FIELDS) {
     fieldSelect.insertAdjacentHTML('beforeend', `<option value="${escapeHtml(field)}"></option>`);
@@ -410,11 +437,32 @@ async function init() {
     trackSelect.insertAdjacentHTML('beforeend', `<option value="${escapeHtml(track)}"></option>`);
   }
 
-  // Each dropdown's option counts reflect the OTHER dropdown's current selection, so picking
-  // "Teaching" narrows every number shown in the field list (and vice versa) — kept in sync by
+  // Each dropdown's option counts reflect the OTHER dropdowns' current selection, so picking
+  // a location, field, or track narrows every number shown across the other dropdowns — kept in sync by
   // calling this at the top of update(), which already runs on every relevant state change.
   function syncDropdownCounts() {
-    const fieldBase = trackSelect.value !== 'all' ? roster.filter((p) => p.track === trackSelect.value) : roster;
+    const locVal = locationSelect.value;
+    const fieldVal = fieldSelect.value;
+    const trackVal = trackSelect.value;
+
+    // Location dropdown counts (filtered by active field & track)
+    let locBase = roster;
+    if (fieldVal !== 'all' && fieldVal !== INTERESTING) {
+      locBase = locBase.filter((p) => fieldOf(p.department, p.university) === fieldVal);
+    }
+    if (trackVal !== 'all') {
+      locBase = locBase.filter((p) => p.track === trackVal);
+    }
+    for (const option of locationSelect.options) {
+      const count = locBase.filter((p) => locationMatches(p, option.value)).length;
+      option.textContent = `${option.value} (${count})`;
+    }
+
+    // Field dropdown counts (filtered by active location & track)
+    let fieldBase = roster.filter((p) => locationMatches(p, locVal));
+    if (trackVal !== 'all') {
+      fieldBase = fieldBase.filter((p) => p.track === trackVal);
+    }
     fieldSelect.options[0].textContent = `All fields (${fieldBase.length})`;
     for (const option of fieldSelect.options) {
       if (!FIELDS.includes(option.value)) continue;
@@ -422,10 +470,11 @@ async function init() {
       option.textContent = `${fieldDropdownLabel(option.value)} (${count})`;
     }
 
-    const fieldActive = fieldSelect.value !== 'all' && fieldSelect.value !== INTERESTING;
-    const trackBase = fieldActive
-      ? roster.filter((p) => fieldOf(p.department, p.university) === fieldSelect.value)
-      : roster;
+    // Track dropdown counts (filtered by active location & field)
+    let trackBase = roster.filter((p) => locationMatches(p, locVal));
+    if (fieldVal !== 'all' && fieldVal !== INTERESTING) {
+      trackBase = trackBase.filter((p) => fieldOf(p.department, p.university) === fieldVal);
+    }
     trackSelect.options[0].textContent = `All faculty types (${trackBase.length})`;
     for (const option of trackSelect.options) {
       if (!TRACKS.includes(option.value)) continue;
@@ -436,6 +485,11 @@ async function init() {
 
   const params = new URLSearchParams(window.location.search);
   if (params.has('q')) searchInput.value = params.get('q');
+  if (params.has('loc') && LOCATIONS.includes(params.get('loc'))) {
+    locationSelect.value = params.get('loc');
+  } else if (params.has('location') && LOCATIONS.includes(params.get('location'))) {
+    locationSelect.value = params.get('location');
+  }
   if (params.has('field') && (FIELDS.includes(params.get('field')) || params.get('field') === INTERESTING)) {
     fieldSelect.value = params.get('field');
   }
@@ -446,6 +500,7 @@ async function init() {
   function syncUrl() {
     const next = new URLSearchParams();
     if (searchInput.value.trim()) next.set('q', searchInput.value.trim());
+    if (locationSelect.value !== 'US') next.set('loc', locationSelect.value);
     if (fieldSelect.value !== 'all') next.set('field', fieldSelect.value);
     if (trackSelect.value !== 'all') next.set('track', trackSelect.value);
     const query = next.toString();
@@ -455,29 +510,34 @@ async function init() {
 
   function update() {
     syncDropdownCounts();
+    const locRoster = roster.filter((p) => locationMatches(p, locationSelect.value));
     if (fieldSelect.value === INTERESTING) {
-      renderFunFacts(roster);
+      renderFunFacts(locRoster);
       syncUrl();
       return;
     }
     const filtered = filterRoster(roster, {
       query: searchInput.value,
+      location: locationSelect.value,
       field: fieldSelect.value,
       track: trackSelect.value,
     });
     renderRoster(sortRoster(filtered), {
       field: fieldSelect.value,
+      location: locationSelect.value,
     });
     syncUrl();
   }
 
   searchInput.addEventListener('input', debounce(update, 150));
+  locationSelect.addEventListener('change', update);
   fieldSelect.addEventListener('change', update);
   trackSelect.addEventListener('change', update);
 
   document.getElementById('home-link').addEventListener('click', (e) => {
     e.preventDefault(); // already on this page — reset in place instead of reloading
     searchInput.value = '';
+    locationSelect.value = 'US';
     fieldSelect.value = 'all';
     trackSelect.value = 'all';
     update();
@@ -489,6 +549,7 @@ async function init() {
     const tile = e.target.closest('.state-tile');
     if (tile) {
       searchInput.value = tile.dataset.state;
+      locationSelect.value = 'US';
       fieldSelect.value = 'all'; // leaving the facts view to show the filtered results
       trackSelect.value = 'all';
       update();
@@ -534,6 +595,7 @@ async function init() {
     ...pickRandomUnique(roster.flatMap((p) => p.researchAreas), 1).map((value) => ({ type: 'search', value })),
     ...pickRandomUnique(FIELDS, 2).map((field) => ({ type: 'field', value: field, label: fieldDropdownLabel(field) })),
     ...pickRandomUnique(TRACKS, 1).map((track) => ({ type: 'track', value: track })),
+    ...pickRandomUnique(LOCATIONS.filter((l) => l !== 'US'), 1).map((loc) => ({ type: 'loc', value: loc })),
     { type: 'fact', value: randomFact },
   ].sort(() => Math.random() - 0.5);
   const examplesEl = document.getElementById('examples');
@@ -549,6 +611,9 @@ async function init() {
         }
         if (ex.type === 'track') {
           return `<button type="button" class="example-chip" data-track="${escapeHtml(ex.value)}">${escapeHtml(ex.value)}</button>`;
+        }
+        if (ex.type === 'loc') {
+          return `<button type="button" class="example-chip" data-loc="${escapeHtml(ex.value)}">${escapeHtml(ex.value)}</button>`;
         }
         return `<button type="button" class="example-chip">${escapeHtml(ex.value)}</button>`;
       })
@@ -574,6 +639,14 @@ async function init() {
       searchInput.value = '';
       fieldSelect.value = 'all';
       trackSelect.value = btn.dataset.track;
+      update();
+      return;
+    }
+    if (btn.dataset.loc) {
+      searchInput.value = '';
+      locationSelect.value = btn.dataset.loc;
+      fieldSelect.value = 'all';
+      trackSelect.value = 'all';
       update();
       return;
     }

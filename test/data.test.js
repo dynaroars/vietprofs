@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
-import { FIELDS, TRACKS, canonicalRank, displayName, fieldOf, buildFunFacts, filterRoster, buildTopUniversities, buildTopPhdInstitutions } from '../src/data.js';
+import { FIELDS, TRACKS, LOCATIONS, canonicalRank, displayName, fieldOf, continentOf, locationMatches, buildFunFacts, filterRoster, buildTopUniversities, buildTopPhdInstitutions } from '../src/data.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const roster = JSON.parse(readFileSync(join(__dirname, '../public/data.json'), 'utf8'));
@@ -23,7 +23,8 @@ test('every entry has the required fields', () => {
     }
     assert.equal(typeof p.university, 'string');
     assert.equal(typeof p.city, 'string');
-    assert.equal(typeof p.state, 'string');
+    if (p.state !== undefined) assert.equal(typeof p.state, 'string');
+    if (p.country !== undefined) assert.equal(typeof p.country, 'string');
     assert.ok(Array.isArray(p.researchAreas) && p.researchAreas.length > 0);
     assert.equal(typeof p.secondaryAppointment, 'boolean');
     assert.ok(TRACKS.includes(p.track), `"${p.track}" (for ${p.name}) is not one of TRACKS`);
@@ -255,4 +256,58 @@ test('filterRoster prefix queries handle quotes, aliases, and extra whitespace',
   assert.equal(q1.length, 8);
   assert.equal(q2.length, 8);
   assert.equal(q3.length, 8);
+});
+
+test('LOCATIONS includes US, continents, and World', () => {
+  assert.deepEqual(LOCATIONS, [
+    'US',
+    'North America',
+    'South America',
+    'Africa',
+    'Asia',
+    'Australasia',
+    'Europe',
+    'World',
+  ]);
+});
+
+test('continentOf maps international countries correctly', () => {
+  assert.equal(continentOf('United States'), 'North America');
+  assert.equal(continentOf('Canada'), 'North America');
+  assert.equal(continentOf('France'), 'Europe');
+  assert.equal(continentOf('United Kingdom'), 'Europe');
+  assert.equal(continentOf('Singapore'), 'Asia');
+  assert.equal(continentOf('Japan'), 'Asia');
+  assert.equal(continentOf('Australia'), 'Australasia');
+  assert.equal(continentOf('New Zealand'), 'Australasia');
+});
+
+test('locationMatches filters by US, continent, and World', () => {
+  const sampleUS = { name: 'Test US', country: 'United States' };
+  const sampleCA = { name: 'Test CA', country: 'Canada' };
+  const sampleFR = { name: 'Test FR', country: 'France' };
+  const sampleSG = { name: 'Test SG', country: 'Singapore' };
+  const sampleAU = { name: 'Test AU', country: 'Australia' };
+
+  assert.ok(locationMatches(sampleUS, 'US'));
+  assert.ok(!locationMatches(sampleCA, 'US'));
+  assert.ok(locationMatches(sampleUS, 'North America'));
+  assert.ok(locationMatches(sampleCA, 'North America'));
+  assert.ok(locationMatches(sampleFR, 'Europe'));
+  assert.ok(!locationMatches(sampleFR, 'Asia'));
+  assert.ok(locationMatches(sampleSG, 'Asia'));
+  assert.ok(locationMatches(sampleAU, 'Australasia'));
+  assert.ok(locationMatches(sampleUS, 'World'));
+  assert.ok(locationMatches(sampleFR, 'World'));
+});
+
+test('country: and continent: prefix queries filter roster accurately', () => {
+  const usQuery = filterRoster(roster, { query: 'country:US' });
+  assert.equal(usQuery.length, roster.length);
+
+  const naQuery = filterRoster(roster, { query: 'continent:"North America"' });
+  assert.equal(naQuery.length, roster.length);
+
+  const filterLocUS = filterRoster(roster, { location: 'US' });
+  assert.equal(filterLocUS.length, roster.length);
 });

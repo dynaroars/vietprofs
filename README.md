@@ -1,12 +1,12 @@
-# Vietnamese Professors at U.S. Universities
+# Vietnamese Professors Worldwide
 
-> Find Vietnamese and Vietnamese-American professors across fields at U.S. universities.
+> Find Vietnamese and Vietnamese diaspora professors across fields at universities worldwide.
 
-A searchable directory of Vietnamese professors across fields at U.S. universities, covering three
+A searchable directory of Vietnamese professors across fields worldwide, covering three
 employment tracks — **Tenure-line** (tenure-track or tenured), **Teaching** (full-time,
 continuing/permanent non-tenure-track teaching faculty), and **Emeritus** (formally conferred
 emeritus/emerita status after a tenure-line career) — selectable from a track dropdown alongside
-the field filter. No track includes adjunct, visiting, postdoctoral, affiliate/courtesy,
+the location and field filters. No track includes adjunct, visiting, postdoctoral, affiliate/courtesy,
 research-track, or any other term-limited or part-time appointment, and plain retirement without a
 conferred emeritus title doesn't qualify for the Emeritus track either; see "Roster maintenance
 handoff" below for the exact bar each track has to clear. Faculty whose tenure/teaching home is in
@@ -24,36 +24,40 @@ Sciences (the last to receive its first entries), completed a second full audit-
 corrected or removed, and new candidates were searched for field by field. Every field remains open
 to further research passes — none of this is exhaustive, especially in the smaller-count fields.
 The `Others` category was added on 2026-08-20 so qualifying faculty in departments outside those
-sixteen disciplines are included rather than omitted.
+sixteen disciplines are included rather than omitted. Global location support across North America,
+Europe, Asia, Australasia, South America, and Africa was introduced with a dedicated location selector.
 
 ## Using the website & search features
 
 The directory offers instant client-side filtering, free-text search, and structured query operators:
 
 ### Basic & diacritic-insensitive search
-The main search bar matches across professor names, current universities, departments, ranks, cities, states, research areas, and PhD institutions. Search is fully diacritic-insensitive in both directions: typing `Nguyen` or `Nguyễn`, `Vu` or `Vũ`, and `Do` or `Đỗ` will find all matching profiles.
+The main search bar matches across professor names, current universities, departments, ranks, cities, states, countries, research areas, and PhD institutions. Search is fully diacritic-insensitive in both directions: typing `Nguyen` or `Nguyễn`, `Vu` or `Vũ`, and `Do` or `Đỗ` will find all matching profiles.
 
 ### Structured query prefixes
 To narrow search results to specific fields and avoid ambiguous matches, you can use structured prefix filters in the search box:
 
 | Prefix | Description | Examples |
 |---|---|---|
-| `univ:` / `university:` / `school:` | Matches only faculty currently appointed at that university (excludes alumni who graduated from there but teach elsewhere). | `univ:Texas Tech`, `univ:"University of Washington"` |
+| `univ:` / `university:` / `school:` | Matches only faculty currently appointed at that university (excludes alumni who graduated from there but teach elsewhere). | `univ:Texas Tech`, `univ:"University of Washington"`, `univ:NUS` |
 | `phd:` / `phdinstitution:` / `alma:` | Matches only faculty who earned their doctorate at that institution. | `phd:Stanford`, `phd:"University of California, Berkeley"` |
+| `country:` / `nation:` | Matches professors located in that country. | `country:US`, `country:France`, `country:Singapore`, `country:Australia` |
+| `continent:` / `location:` / `loc:` | Matches professors in that continent/region (`US`, `North America`, `Europe`, `Asia`, `Australasia`, `South America`, `Africa`, `World`). | `continent:Europe`, `continent:Asia`, `loc:"North America"` |
 | `state:` | Matches professors located in that state (supports full state name or two-letter postal abbreviation). | `state:California`, `state:TX`, `state:WA` |
+| `city:` | Matches professors located in that city. | `city:Seattle`, `city:Singapore`, `city:Paris` |
 | `dept:` / `department:` | Matches primary department names. | `dept:Computer Science`, `dept:Economics` |
 | `name:` | Matches the professor's displayed name. | `name:"Thanh Nguyen"` |
 
 *Note: Multi-word values can be written directly (e.g. `univ:Texas Tech University`) or enclosed in quotes (e.g. `univ:"Texas Tech University"`).*
 
 ### Filters & insights dashboard
-- **Field & Track Dropdowns**: Filter concurrently across 17 broad academic disciplines and 3 appointment tracks (**Tenure-line**, **Teaching**, **Emeritus**).
+- **Location, Field & Track Dropdowns**: Filter concurrently across geographic locations (**US** [default], **North America**, **South America**, **Africa**, **Asia**, **Australasia**, **Europe**, **World**), 17 broad academic disciplines, and 3 appointment tracks (**Tenure-line**, **Teaching**, **Emeritus**).
 - **✨ Show me something interesting**: Select this option in the field dropdown to open the interactive insights dashboard:
   - **Geographic Distribution**: 50 states + DC schematic heat map. Clicking any state tile automatically filters the roster by `state:<State>`.
   - **Top Faculty Hubs**: Universities employing the most Vietnamese faculty. Clicking a hub filters by `univ:<University>`.
   - **Top PhD Alma Maters**: Doctoral institutions that trained the most faculty. Clicking an institution filters by `phd:<Institution>`.
   - **PhD Graduation Cohorts & Highlights**: Decadal graduation timeline and community statistics calculated live from the live roster.
-- **Sharable URLs**: All active searches and filters sync automatically with URL parameters (`?q=...`, `?field=...`, `?track=...`) so any filtered view can be shared or bookmarked directly.
+- **Sharable URLs**: All active searches and filters sync automatically with URL parameters (`?q=...`, `?loc=...`, `?field=...`, `?track=...`) so any filtered view can be shared or bookmarked directly.
 
 ## Roster maintenance handoff
 

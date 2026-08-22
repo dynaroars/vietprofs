@@ -294,9 +294,10 @@ h1 {
   outline-offset: 1px;
 }
 
-.track-select {
-  /* "Teaching (##)" is shorter than most field labels, so a smaller minimum is enough here. */
-  min-width: 7rem;
+.track-select,
+.location-select {
+  /* Short option labels, so a smaller minimum is enough here. */
+  min-width: 6.5rem;
 }
 
 .result-count {
