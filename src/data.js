@@ -48,7 +48,8 @@ export function uniqueResearchAreas(roster) {
 // from the roster entirely regardless of track. See README.md's "Roster maintenance handoff".
 export const TRACKS = ['Tenure-line', 'Teaching', 'Emeritus'];
 
-// Geographic locations and continents available in the location dropdown.
+// Continent/region values supported by structured location queries and the second
+// ("by continent") section of the visible location dropdown.
 export const LOCATIONS = [
   'US',
   'North America',
@@ -209,9 +210,13 @@ export function continentOf(country) {
 export function locationMatches(person, location) {
   if (!location || location === 'World' || location === 'all') return true;
   const country = person.country || 'United States';
-  if (location === 'US') {
+  if (location.toLowerCase() === 'us' || location.toLowerCase() === 'united states' || location.toLowerCase() === 'usa') {
     return country === 'United States' || country === 'US' || country === 'USA';
   }
+  // Country names are also valid location values for the country-based dropdown. Keep
+  // this check before the continent fallback so a country is never treated as an unknown
+  // continent and filtered to zero results.
+  if (country.toLowerCase() === location.toLowerCase()) return true;
   const cont = continentOf(country);
   return cont.toLowerCase() === location.toLowerCase();
 }

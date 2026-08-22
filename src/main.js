@@ -451,10 +451,28 @@ async function init() {
 
   const searchInput = document.getElementById('search');
   const locationSelect = document.getElementById('location-filter');
-  for (const loc of LOCATIONS) {
-    const label = LOCATION_LABELS[loc] || loc;
-    locationSelect.insertAdjacentHTML('beforeend', `<option value="${escapeHtml(loc)}">${escapeHtml(label)}</option>`);
-  }
+  // Mirror CSRankings' two location sections: countries/regions represented in the
+  // roster first, followed by the broader continent choices. US remains the default.
+  const countryLocations = uniqueCountries(roster);
+  const countryOptions = [
+    'US',
+    ...countryLocations.filter((country) => !['United States', 'US', 'USA'].includes(country)),
+  ];
+  const countryCounts = new Map(
+    countryOptions.map((country) => [country, roster.filter((person) => locationMatches(person, country)).length]),
+  );
+  countryOptions.sort((a, b) => countryCounts.get(b) - countryCounts.get(a) || a.localeCompare(b));
+  const continentOptions = LOCATIONS.filter((loc) => loc !== 'US');
+  const locationOptions = [...countryOptions, ...continentOptions];
+  const locationLabel = (loc) => LOCATION_LABELS[loc] || `${countryFlag(loc)} ${loc}`;
+  const renderLocationOption = (loc) => {
+    return `<option value="${escapeHtml(loc)}">${escapeHtml(locationLabel(loc))}</option>`;
+  };
+  locationSelect.insertAdjacentHTML(
+    'beforeend',
+    `<optgroup label="By country/region">${countryOptions.map(renderLocationOption).join('')}</optgroup>` +
+    `<optgroup label="By continent">${continentOptions.map(renderLocationOption).join('')}</optgroup>`,
+  );
   locationSelect.value = 'US';
 
   const fieldSelect = document.getElementById('field-filter');
@@ -489,8 +507,7 @@ async function init() {
     }
     for (const option of locationSelect.options) {
       const count = locBase.filter((p) => locationMatches(p, option.value)).length;
-      const label = LOCATION_LABELS[option.value] || option.value;
-      option.textContent = `${label} (${count})`;
+      option.textContent = `${locationLabel(option.value)} (${count})`;
     }
 
     // Field dropdown counts (filtered by active location & track)
@@ -569,10 +586,9 @@ async function init() {
   if (params.has('q')) {
     searchInput.value = params.get('q');
   }
-  if (params.has('loc') && LOCATIONS.includes(params.get('loc'))) {
-    locationSelect.value = params.get('loc');
-  } else if (params.has('location') && LOCATIONS.includes(params.get('location'))) {
-    locationSelect.value = params.get('location');
+  const requestedLocation = params.get('loc') ?? params.get('location');
+  if (requestedLocation && (locationOptions.includes(requestedLocation) || LOCATIONS.includes(requestedLocation))) {
+    locationSelect.value = requestedLocation;
   } else if (params.has('q')) {
     autoSelectLocationForQuery();
   }
@@ -687,7 +703,7 @@ async function init() {
     ...pickRandomUnique(roster.flatMap((p) => p.researchAreas), 1).map((value) => ({ type: 'search', value })),
     ...pickRandomUnique(FIELDS, 2).map((field) => ({ type: 'field', value: field, label: fieldDropdownLabel(field) })),
     ...pickRandomUnique(TRACKS, 1).map((track) => ({ type: 'track', value: track })),
-    ...pickRandomUnique(LOCATIONS.filter((l) => l !== 'US'), 1).map((loc) => ({ type: 'loc', value: loc })),
+    ...pickRandomUnique(locationOptions.filter((l) => !['US', 'World'].includes(l)), 1).map((loc) => ({ type: 'loc', value: loc })),
     { type: 'fact', value: randomFact },
   ].sort(() => Math.random() - 0.5);
   const examplesEl = document.getElementById('examples');

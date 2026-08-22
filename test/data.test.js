@@ -301,6 +301,17 @@ test('locationMatches filters by US, continent, and World', () => {
   assert.ok(locationMatches(sampleFR, 'World'));
 });
 
+test('locationMatches filters by an exact country for the country dropdown', () => {
+  const sampleUS = { country: 'United States' };
+  const sampleFR = { country: 'France' };
+  const sampleSG = { country: 'Singapore' };
+
+  assert.ok(locationMatches(sampleFR, 'France'));
+  assert.ok(!locationMatches(sampleSG, 'France'));
+  assert.ok(locationMatches(sampleUS, 'United States'));
+  assert.ok(!locationMatches(sampleFR, 'United States'));
+});
+
 test('country: and continent: prefix queries filter roster accurately', () => {
   const usQuery = filterRoster(roster, { query: 'country:US' });
   const actualUS = roster.filter((p) => (p.country || 'United States') === 'United States');
