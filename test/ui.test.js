@@ -243,3 +243,84 @@ test('countryFlag maps every country in roster to a non-empty flag emoji', () =>
   assert.equal(countryFlag('Unknown Country'), '🌐');
 });
 
+test('static import integrity: all data.js and utils.js symbols used in main.js and submit.js are explicitly imported', () => {
+  const mainCode = readFileSync(join(__dirname, '../src/main.js'), 'utf8');
+  const submitCode = readFileSync(join(__dirname, '../src/submit.js'), 'utf8');
+  const dataCode = readFileSync(join(__dirname, '../src/data.js'), 'utf8');
+  const utilsCode = readFileSync(join(__dirname, '../src/utils.js'), 'utf8');
+
+  const dataExports = [...dataCode.matchAll(/export\s+(?:const|function)\s+([a-zA-Z0-9_]+)/g)].map((m) => m[1]);
+  const utilsExports = [...utilsCode.matchAll(/export\s+(?:const|function)\s+([a-zA-Z0-9_]+)/g)].map((m) => m[1]);
+
+  const checkImports = (code, file, sourceCode, sourceExports, sourceName) => {
+    const importRegex = new RegExp(`import\\s*\\{([^}]+)\\}\\s*from\\s*['\"]\\./${sourceName}['\"]`);
+    const match = code.match(importRegex);
+    const imported = match ? match[1].split(',').map((s) => s.trim()).filter(Boolean) : [];
+    for (const exp of sourceExports) {
+      const isUsed = new RegExp(`\\b${exp}\\b`).test(code);
+      if (isUsed) {
+        assert.ok(
+          imported.includes(exp),
+          `Symbol "${exp}" from ${sourceName}.js is used in ${file} but is NOT imported!`,
+        );
+      }
+    }
+  };
+
+  checkImports(mainCode, 'main.js', dataCode, dataExports, 'data.js');
+  checkImports(mainCode, 'main.js', utilsCode, utilsExports, 'utils.js');
+  checkImports(submitCode, 'submit.js', dataCode, dataExports, 'data.js');
+  checkImports(submitCode, 'submit.js', utilsCode, utilsExports, 'utils.js');
+});
+
+test('search query execution: typing diverse terms across all fields returns valid results without errors', () => {
+  const sampleQueries = [
+    'Nguyen',
+    'Tran',
+    'Le',
+    'Harvard',
+    'Stanford',
+    'Oxford',
+    'Melbourne',
+    'Toronto',
+    'Computer Science',
+    'Economics',
+    'Mathematics',
+    'Biochemistry',
+    'Artificial Intelligence',
+    'Machine Learning',
+    'Robotics',
+    'Cancer',
+    'Professor',
+    'Associate Professor',
+    'Assistant Professor',
+    'Lecturer',
+    'Emeritus',
+    'California',
+    'Texas',
+    'Victoria',
+    'Ontario',
+    'Australia',
+    'Canada',
+    'France',
+    'Germany',
+    'Singapore',
+    'United Kingdom',
+    'univ:Oxford',
+    'phd:MIT',
+    'country:Australia',
+    'loc:Europe',
+  ];
+
+  for (const q of sampleQueries) {
+    const results = filterRoster(roster, { query: q, location: 'World' });
+    assert.ok(Array.isArray(results), `Query "${q}" did not return an array`);
+    assert.ok(results.length > 0, `Expected at least one result for benchmark query "${q}"`);
+    for (const p of results) {
+      assert.ok(p.name, `Result missing name for query "${q}"`);
+      assert.ok(p.university, `Result missing university for query "${q}"`);
+    }
+  }
+});
+
+
