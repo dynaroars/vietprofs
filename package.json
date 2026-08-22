@@ -8,7 +8,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "node --test test/data.test.js"
+    "test": "node --test test/data.test.js test/ui.test.js"
   },
   "devDependencies": {
     "vite": "^7.2.4"
