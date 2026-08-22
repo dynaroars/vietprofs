@@ -253,6 +253,38 @@ Studies) — add an exact `department|university` entry to `FIELD_OVERRIDES` in 
 instead of stretching a regex to guess. Search broadly
 rather than stopping after the first few candidates, make incremental validated edits, and run
 
+### Faculty discovery coverage
+
+The roster is a curated JSON dataset, not a continuously running web crawler. To reduce discovery
+blind spots, every university/field pass should use all of these candidate sources:
+
+- official department, school, college, and university-wide faculty directories;
+- linked person pages, including opaque directory URLs such as `/profile/tn294` or `/profile/phan`;
+- official university news, research-center, lab, and grant pages that identify current faculty;
+- faculty personal homepages, Google Sites, lab pages, and CVs, followed by confirmation of the
+  current university appointment on an official page;
+- search-engine queries combining the institution, department, and name patterns `Nguyen`, `Tran`,
+  `Le`, `Pham`, `Vo`, `Vu`, `Bui`, `Do`, `Phan`, `Lai`, and common Vietnamese given names;
+- former-affiliation and recent-move checks, since a person may retain an old personal homepage or
+  appear in a previous institution's directory after moving.
+
+Directory crawls must not depend on URL shape, visible Vietnamese diacritics, or a faculty page
+being linked from the department homepage. For each candidate, deduplicate by identity rather than
+URL, then verify the current appointment, primary department, rank/track, and university before
+adding the record. A research mention, dissertation supervision link, coauthorship, student page,
+or grant page is a lead—not proof of a current faculty appointment.
+
+The repository includes [`scripts/faculty-discovery-queries.mjs`](./scripts/faculty-discovery-queries.mjs)
+to generate repeatable institution/field query sets for manual or external search tooling:
+
+```bash
+node scripts/faculty-discovery-queries.mjs --university "New Jersey Institute of Technology" --field "Data Science" --domain njit.edu
+```
+
+This produces queries for official directories, opaque profile pages, personal homepages, current
+faculty announcements, and recent moves. It does not automatically add records; every result still
+requires the inclusion and identity checks above.
+
 Two different people can share the same name (`npm test` enforces unique `name` values). When
 that happens, first check whether each person's own official profile publishes a fuller form of
 their name (a middle name, initial, or nickname) — if so, use that; it's usually enough to make
