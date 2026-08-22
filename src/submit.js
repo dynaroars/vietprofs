@@ -261,12 +261,20 @@ async function init() {
         hideSuggestions();
         return;
       }
-      suggestions.innerHTML = matchingEntries
-        .map(
-          (entry, index) =>
-            `<button class="correction-suggestion" type="button" role="option" data-index="${index}"><strong>${escapeHtml(entry.name)}</strong><span>${escapeHtml(entry.university)} · ${escapeHtml(entry.department)}</span></button>`,
-        )
-        .join('');
+      suggestions.replaceChildren();
+      matchingEntries.forEach((entry, index) => {
+        const button = document.createElement('button');
+        button.className = 'correction-suggestion';
+        button.type = 'button';
+        button.role = 'option';
+        button.dataset.index = String(index);
+        const name = document.createElement('strong');
+        name.textContent = entry.name;
+        const details = document.createElement('span');
+        details.textContent = `${entry.university} · ${entry.department}`;
+        button.append(name, details);
+        suggestions.append(button);
+      });
       suggestions.hidden = false;
       nameInput.setAttribute('aria-expanded', 'true');
     }

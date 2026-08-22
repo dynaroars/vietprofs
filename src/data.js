@@ -1,5 +1,43 @@
 let cached = null;
 
+const searchIndexCache = new WeakMap();
+
+function searchableFields(person) {
+  return [
+    displayName(person.name),
+    person.university,
+    person.city,
+    person.state,
+    person.country,
+    person.department,
+    person.rank,
+    canonicalRank(person),
+    person.phdInstitution,
+    ...(person.researchAreas ?? []),
+  ];
+}
+
+function normalizeSearchText(value) {
+  return stripDiacritics(String(value).toLowerCase());
+}
+
+export function buildSearchIndex(roster) {
+  if (!Array.isArray(roster)) return roster;
+  const cachedIndex = searchIndexCache.get(roster);
+  if (cachedIndex) return cachedIndex;
+  const index = {
+    roster,
+    textByPerson: new WeakMap(
+      roster.map((person) => [
+        person,
+        searchableFields(person).filter(Boolean).map(normalizeSearchText),
+      ]),
+    ),
+  };
+  searchIndexCache.set(roster, index);
+  return index;
+}
+
 export async function loadRoster() {
   if (cached) return cached;
   const res = await fetch(`${import.meta.env.BASE_URL}data.json`);
@@ -464,7 +502,8 @@ export function parseSearchQuery(query) {
 }
 
 export function filterRoster(roster, { query = '', location, field, track, university, phdInstitution, state, country } = {}) {
-  let result = roster;
+  const index = Array.isArray(roster) ? buildSearchIndex(roster) : roster;
+  let result = index.roster;
   const parsed = parseSearchQuery(query);
   const hasExplicitLocationQuery = ['country', 'location'].includes(parsed.type);
 
@@ -550,22 +589,7 @@ export function filterRoster(roster, { query = '', location, field, track, unive
 
   // Full-text search across all fields (name, university, city, state, country, department, rank, areas, phd)
   return result.filter((p) => {
-    const haystacks = [
-      displayName(p.name),
-      p.university,
-      p.city,
-      p.state,
-      p.country,
-      p.department,
-      p.rank,
-      canonicalRank(p),
-      p.phdInstitution,
-      ...(p.researchAreas ?? []),
-    ]
-      .filter(Boolean)
-      .map((s) => stripDiacritics(String(s).toLowerCase()));
-
-    return haystacks.some((h) => h.includes(target));
+    return index.textByPerson.get(p).some((h) => h.includes(target));
   });
 }
 

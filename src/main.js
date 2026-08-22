@@ -1,6 +1,8 @@
 import './style.css';
-import { loadRoster, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, LOCATION_LABELS, COUNTRY_FLAGS, countryFlag, canonicalRank, displayName, fieldOf, locationMatches, filterRoster, sortRoster, buildFunFacts, buildUsFunFacts, buildGlobalFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, STATE_ABBR, parseSearchQuery } from './data.js';
+import { loadRoster, buildSearchIndex, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, LOCATION_LABELS, countryFlag, canonicalRank, displayName, fieldOf, locationMatches, filterRoster, sortRoster, buildFunFacts, buildUsFunFacts, buildGlobalFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, STATE_ABBR, parseSearchQuery } from './data.js';
 import { escapeHtml } from './utils.js';
+import { nearestVietnameseHoliday } from './holidays.js';
+import { STATE_GRID } from './state-grid.js';
 
 // Sentinel field-select value for the "show me something interesting" view. Distinct from any
 // real FIELDS entry (all of which are "Word & Word"-style names) and from 'all'.
@@ -14,90 +16,6 @@ function fieldDropdownLabel(field) {
   return field.replace(/\bSciences\b/g, '').replace(/\s+/g, ' ').trim();
 }
 
-// Gregorian dates for Tết Nguyên Đán (Lunar New Year), sourced from published Vietnamese-calendar
-// converters. Extend this table as years pass; if the current year (or its neighbors) is missing,
-// the holiday banner simply doesn't show one for it.
-const TET_DATES = {
-  2024: '2024-02-10', 2025: '2025-01-29', 2026: '2026-02-17', 2027: '2027-02-06',
-  2028: '2028-01-26', 2029: '2029-02-13', 2030: '2030-02-03', 2031: '2031-01-23',
-  2032: '2032-02-11', 2033: '2033-01-31', 2034: '2034-02-19', 2035: '2035-02-08',
-  2036: '2036-01-28',
-};
-
-// Gregorian dates for Tết Trung Thu (Mid-Autumn / Moon Festival).
-const TRUNG_THU_DATES = {
-  2024: '2024-09-17', 2025: '2025-10-06', 2026: '2026-09-25', 2027: '2027-09-15',
-  2028: '2028-10-03', 2029: '2029-09-22',
-};
-
-function dateForYear(table, year) {
-  const s = table[year];
-  return s ? new Date(`${s}T00:00:00`) : null;
-}
-
-// Deliberately limited to non-political, widely-shared cultural/community observances — no
-// government-designated national holidays. Returns the single nearest one that `today` falls
-// within the display window of, or null if none currently apply.
-function nearestVietnameseHoliday(today) {
-  const occurrences = [];
-  for (const year of [today.getFullYear() - 1, today.getFullYear(), today.getFullYear() + 1]) {
-    const tet = dateForYear(TET_DATES, year);
-    if (tet) {
-      occurrences.push({
-        date: tet,
-        emoji: '🧧',
-        before: 10,
-        after: 15,
-        greeting: 'Chúc Mừng Năm Mới — happy Tết (Lunar New Year) from VietProfs!',
-      });
-    }
-    const trungThu = dateForYear(TRUNG_THU_DATES, year);
-    if (trungThu) {
-      occurrences.push({
-        date: trungThu,
-        emoji: '🥮',
-        before: 7,
-        after: 7,
-        greeting: 'Chúc mừng Trung Thu — happy Mid-Autumn Festival!',
-      });
-    }
-    // Ngày Nhà giáo Việt Nam (Vietnamese Teachers' Day) is a fixed date, not lunar.
-    occurrences.push({
-      date: new Date(`${year}-11-20T00:00:00`),
-      emoji: '🍎',
-      before: 3,
-      after: 3,
-      greeting: "Chúc mừng Ngày Nhà giáo Việt Nam — happy Vietnamese Teachers' Day, and thank you "
-        + 'to every professor on this list.',
-    });
-  }
-
-  let best = null;
-  for (const occ of occurrences) {
-    const diffDays = Math.round((today - occ.date) / 86400000);
-    if (diffDays >= -occ.before && diffDays <= occ.after) {
-      const distance = Math.abs(diffDays);
-      if (!best || distance < best.distance) best = { ...occ, distance };
-    }
-  }
-  return best;
-}
-
-// [row, column] on a 13-column grid. Not real geography — just a reasonable schematic
-// approximation (AK/HI inset in their traditional corners) so every state is equally sized and
-// clickable.
-const STATE_GRID = {
-  AK: [0, 0], ME: [0, 11],
-  VT: [1, 10], NH: [1, 11],
-  WA: [2, 1], MT: [2, 2], ND: [2, 3], MN: [2, 4], WI: [2, 6], MI: [2, 7], NY: [2, 9], MA: [2, 11],
-  OR: [3, 1], ID: [3, 2], WY: [3, 3], SD: [3, 4], IA: [3, 5], IL: [3, 6], IN: [3, 7], OH: [3, 8],
-  PA: [3, 9], NJ: [3, 10], CT: [3, 11], RI: [3, 12],
-  CA: [4, 1], NV: [4, 2], UT: [4, 3], CO: [4, 4], NE: [4, 5], KS: [4, 6], MO: [4, 7], KY: [4, 8],
-  WV: [4, 9], VA: [4, 10], MD: [4, 11], DE: [4, 12],
-  AZ: [5, 2], NM: [5, 3], OK: [5, 5], AR: [5, 6], TN: [5, 7], NC: [5, 8], SC: [5, 9], DC: [5, 10],
-  HI: [6, 0], TX: [6, 5], LA: [6, 6], MS: [6, 7], AL: [6, 8], GA: [6, 9],
-  FL: [7, 9],
-};
 
 function heatTier(count, max) {
   if (count === 0 || max === 0) return 0;
@@ -428,6 +346,7 @@ async function init() {
       '<p class="empty-state">Could not load the roster. Please refresh the page or try again later.</p>';
     return;
   }
+  const searchIndex = buildSearchIndex(roster);
 
   const suggestions = document.getElementById('search-suggestions');
   // Matches everything filterRoster actually searches over (name, university, city, state, country,
@@ -562,7 +481,7 @@ async function init() {
       return;
     }
 
-    const matchesInCurrent = filterRoster(roster, {
+    const matchesInCurrent = filterRoster(searchIndex, {
       query: q,
       location: locationSelect.value,
       field: fieldSelect.value,
@@ -570,7 +489,7 @@ async function init() {
     }).length;
 
     if (matchesInCurrent === 0) {
-      const matchesGlobally = filterRoster(roster, {
+      const matchesGlobally = filterRoster(searchIndex, {
         query: q,
         location: 'World',
         field: fieldSelect.value,
@@ -624,7 +543,7 @@ async function init() {
       syncUrl();
       return;
     }
-    const filtered = filterRoster(roster, {
+    const filtered = filterRoster(searchIndex, {
       query: searchInput.value,
       location: locationSelect.value,
       field: fieldSelect.value,
@@ -707,25 +626,22 @@ async function init() {
     { type: 'fact', value: randomFact },
   ].sort(() => Math.random() - 0.5);
   const examplesEl = document.getElementById('examples');
-  examplesEl.innerHTML =
-    '<span class="examples-label">Try:</span>' +
-    examples
-      .map((ex) => {
-        if (ex.type === 'fact') {
-          return `<button type="button" class="example-chip fun-chip" data-fun="1">✨ ${escapeHtml(ex.value)}</button>`;
-        }
-        if (ex.type === 'field') {
-          return `<button type="button" class="example-chip" data-field="${escapeHtml(ex.value)}">${escapeHtml(ex.label ?? ex.value)}</button>`;
-        }
-        if (ex.type === 'track') {
-          return `<button type="button" class="example-chip" data-track="${escapeHtml(ex.value)}">${escapeHtml(ex.value)}</button>`;
-        }
-        if (ex.type === 'loc') {
-          return `<button type="button" class="example-chip" data-loc="${escapeHtml(ex.value)}">${escapeHtml(ex.value)}</button>`;
-        }
-        return `<button type="button" class="example-chip">${escapeHtml(ex.value)}</button>`;
-      })
-      .join('');
+  examplesEl.replaceChildren();
+  const label = document.createElement('span');
+  label.className = 'examples-label';
+  label.textContent = 'Try:';
+  examplesEl.append(label);
+  for (const ex of examples) {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = `example-chip${ex.type === 'fact' ? ' fun-chip' : ''}`;
+    button.textContent = `${ex.type === 'fact' ? '✨ ' : ''}${ex.label ?? ex.value}`;
+    if (ex.type === 'fact') button.dataset.fun = '1';
+    if (ex.type === 'field') button.dataset.field = ex.value;
+    if (ex.type === 'track') button.dataset.track = ex.value;
+    if (ex.type === 'loc') button.dataset.loc = ex.value;
+    examplesEl.append(button);
+  }
   examplesEl.addEventListener('click', (e) => {
     const btn = e.target.closest('.example-chip');
     if (!btn) return;

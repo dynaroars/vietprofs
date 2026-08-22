@@ -61,6 +61,75 @@ To target a specific field (such as current appointment vs. PhD alma mater vs. c
   - **Top PhD Alma Maters**: Doctoral institutions that trained the most faculty. Clicking an institution filters by `phd:<Institution>`.
   - **PhD Graduation Cohorts & Highlights**: Decadal graduation timeline and community statistics calculated live from the live roster.
 - **Sharable URLs**: All active searches and filters sync automatically with URL parameters (`?q=...`, `?loc=...`, `?field=...`, `?track=...`) so any filtered view can be shared or bookmarked directly.
+## FAQ
+
+### What is VietProfs?
+
+VietProfs is a searchable, community-maintained directory of Vietnamese and Vietnamese diaspora
+professors across fields at universities worldwide, on one of three employment tracks: Tenure-line,
+Teaching, or Emeritus.
+
+### Who is included?
+
+An entry is included when reliable evidence supports all of the following:
+
+- Vietnamese or Vietnamese diaspora identity;
+- a university appointment on one of the three tracks below (current, except for Emeritus) at an accredited higher education institution worldwide, focused on the global diaspora outside domestic Vietnam;
+- a primary academic appointment in any field.
+
+The university does not need to offer a PhD program.
+
+**Tenure-line** — tenure-track or tenured. Assistant, Associate, and full Professors generally qualify when the other requirements are met.
+
+**Teaching** — a full-time, continuing/permanent non-tenure-track teaching appointment (Teaching Professor, Senior/Principal/Distinguished Lecturer, or a "Professor of Practice" title only when the university's own page describes it as a permanent teaching-ladder rank). This track requires the source to say the position is full-time and continuing/permanent, not just carry a teaching-sounding title.
+
+**Emeritus** — a formally conferred emeritus title following a tenure-line career, shown on the university's own emeritus faculty listing, a conferral announcement, or the person's own page. Plain retirement or "former faculty" phrasing without the specific conferred title doesn't qualify, and an in-memoriam/deceased-faculty-only listing isn't enough either — the university has to still carry them as living, current emeritus faculty.
+
+Displayed ranks are deliberately simple: Assistant Professor, Associate Professor, or Professor for Tenure-line faculty; Teaching for the continuing teaching track; and Emeritus for the emeritus track. Named chairs and institution-specific title variants remain on each linked university page.
+
+### Who is excluded?
+
+Regardless of track, the directory excludes adjunct, visiting, postdoctoral, affiliate/courtesy, research-track, graduate teaching assistants, plain "Instructor" (verified case by case, since it's almost always term-limited), and non-university appointments. Clinical faculty are not included solely because they hold an academic title, and retirement alone doesn't qualify someone for the Emeritus track without a conferred emeritus title.
+
+### How is identity determined?
+
+A Vietnamese-sounding name is sufficient on its own to include someone; the maintainer reviews each addition and corrects any false positive. Supporting evidence — an official biography, education history in Vietnam, self-identification, Vietnamese professional or community affiliation — is welcome but not required.
+
+### How current is the data?
+
+The roster is audited field by field using official university sources where possible. Academic appointments change, so entries can become outdated. The project welcomes corrections.
+
+### Why is an entry marked with a dagger (†)?
+
+A dagger means the person has a secondary or joint appointment in the listed field while their primary tenure home is in another department.
+
+### Why does a search for a university or city/country return professors teaching elsewhere?
+
+The default search box is a comprehensive **full-text search** that indexes all profile fields, including a professor's **doctoral (PhD) alma mater**. For example, typing "Hong Kong" matches faculty currently teaching at HKU/CUHK as well as professors who completed their doctorate in Hong Kong, such as Prof. Ngoc Son Bui at the University of Oxford, who earned his PhD at the University of Hong Kong.
+
+To restrict your search to a specific attribute, use structured prefixes:
+
+- **country:** "Hong Kong" — matches only professors currently appointed in Hong Kong.
+- **univ:** "University of Hong Kong" — matches only professors currently teaching at HKU.
+- **phd:** "University of Hong Kong" — matches only professors who graduated from HKU.
+- **loc:** Asia (or the location dropdown) — filters for all faculty in Asia.
+
+### How can I submit a correction or missing professor?
+
+Use the [Submit an entry page](./submit.html). Please include an official university profile and evidence of Vietnamese identity when available.
+
+### What are the broad fields?
+
+Computer & Information Sciences; Engineering; Mathematics; Statistics & Data Science; Physics & Astronomy; Chemistry; Biological & Biomedical Sciences; Earth & Environmental Sciences; Agricultural & Natural Resource Sciences; Health Sciences; Business & Economics; Social & Behavioral Sciences; Education; Humanities; Law & Public Affairs; Arts & Design; and Others.
+
+Others includes qualifying faculty whose primary departments do not fit one of the sixteen named disciplinary categories. The taxonomy never limits who is eligible for the directory.
+
+The ten STEM fields were rostered first; the other six were added to the field filter on 2026-08-19. All sixteen fields completed a full audit-and-search pass on 2026-08-19, including Agricultural & Natural Resource Sciences, which received its first entries during that pass.
+
+The directory's categories are an editorial grouping, informed by the National Science Foundation's National Center for Science and Engineering Statistics (NCSES) [science and engineering field taxonomy](https://ncses.nsf.gov/pubs/nsb202332/introduction) and its more detailed [doctoral field taxonomy](https://ncses.nsf.gov/pubs/ncses23200/table/4). They are not presented as an official NSF classification.
+
+Economics departments are listed under Business & Economics.
+
 
 ## Roster maintenance handoff
 

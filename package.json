@@ -8,9 +8,12 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "node --test test/data.test.js test/ui.test.js"
+    "validate-data": "node scripts/validate-data.js",
+    "test": "npm run validate-data && node --test test/data.test.js test/ui.test.js",
+    "test:e2e": "node --test test/browser-smoke.test.js"
   },
   "devDependencies": {
+    "playwright": "^1.62.1",
     "vite": "^7.2.4"
   }
 }
