@@ -230,6 +230,7 @@ correct an entry. Each entry:
 {
   "name": "Full Name",
   "profileUrl": "https://…",
+  "websiteUrl": "https://…",
   "scholarUrl": "https://scholar.google.com/…",
   "university": "…",
   "city": "…",
@@ -255,9 +256,11 @@ each object on one line. `undergradInstitution` isn't populated on any entry yet
 mention a Vietnamese undergraduate alma mater, and `buildFunFacts()` in `src/data.js` already
 computes a "most common undergraduate alma mater" fact from it, but filling it in is a dedicated
 research pass that hasn't happened; the fact simply doesn't appear until it does. `profileUrl`
-should be a current, working academic profile: prefer the professor's own
-maintained academic homepage when available, then use an official university faculty page as a
-fallback. Store Google Scholar separately in `scholarUrl`; never use it as `profileUrl`.
+should be a current, working academic profile or official university faculty page. When a
+maintained personal academic homepage or lab homepage is available, store it separately in
+`websiteUrl`; the UI uses it as the primary name link and keeps `profileUrl` as the official
+identity/appointment evidence. Store Google Scholar separately in `scholarUrl`; never use it as
+`profileUrl`.
 
 For roster audits, preserve an existing Google Scholar URL by moving it to `scholarUrl` before
 replacing `profileUrl`. Verify replacement URLs follow redirects and do not return 404. Map the

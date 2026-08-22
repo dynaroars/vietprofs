@@ -57,7 +57,7 @@ function renderShell() {
     </header>
     <div class="holiday-banner" id="holiday-banner" hidden></div>
     <div class="controls">
-      <input id="search" class="search-input" type="search" list="search-suggestions" placeholder="Search name, university, department, rank, location, or research area…" aria-label="Search" />
+      <input id="search" class="search-input" type="search" list="search-suggestions" placeholder="Search name, university, department, rank, honors, or research area…" aria-label="Search" />
       <datalist id="search-suggestions"></datalist>
       <select id="location-filter" class="field-select location-select" aria-label="Filter by location">
       </select>
@@ -145,6 +145,9 @@ function renderRoster(roster, { field, location } = {}) {
         .map((a) => `<span class="tag tag-topic">${escapeHtml(a)}</span>`)
         .join('');
       const tags = fieldTag + trackTag + topicTags;
+      const honors = (p.honors ?? [])
+        .map((honor) => `<a class="honor-link" href="${escapeHtml(honor.source)}" target="_blank" rel="noopener noreferrer">${escapeHtml(honor.name)}${honor.year ? ` (${escapeHtml(String(honor.year))})` : ''}</a>`)
+        .join(' · ');
       return `
         <div class="entry">
           <div class="entry-line">
@@ -156,6 +159,7 @@ function renderRoster(roster, { field, location } = {}) {
             p.phdYear && `PhD ${escapeHtml(String(p.phdYear))}${p.phdInstitution ? `, ${escapeHtml(p.phdInstitution)}` : ''}`,
             !p.phdYear && p.phdInstitution && `PhD, ${escapeHtml(p.phdInstitution)}`,
           ].filter(Boolean).join(' · ')}</div>` : ''}
+          ${honors ? `<div class="entry-honors"><span class="honors-label">Honors:</span> ${honors}</div>` : ''}
           <div class="tags">${tags}</div>
         </div>
       `;
@@ -349,9 +353,11 @@ async function init() {
 
   const suggestions = document.getElementById('search-suggestions');
   // Matches everything filterRoster actually searches over (name, university, city, state, country,
-  // department, rank, research areas, PhD institution) so a suggestion always yields at least one result.
+  // department, rank, research areas, PhD institution, and honors) so a suggestion always yields at least one result.
   const suggestionValues = [
     ...new Set([
+      'honors',
+      'awards',
       ...roster.map((p) => displayName(p.name)),
       ...roster.map((p) => p.university),
       ...uniqueDepartments(roster),
@@ -458,7 +464,7 @@ async function init() {
     if (!q) return;
 
     const parsed = parseSearchQuery(q);
-    if (['country', 'location'].includes(parsed.type)) {
+    if (['country', 'location', 'honors'].includes(parsed.type)) {
       locationSelect.value = 'World';
       return;
     }

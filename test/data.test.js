@@ -185,6 +185,25 @@ test('search matches on simplified rank, not just name/university/location/area'
   assert.ok(result.some((p) => canonicalRank(p) === 'Teaching'));
 });
 
+test('searching an honor name lists professors who hold that honor', () => {
+  const career = filterRoster(roster, { query: 'NSF CAREER', field: 'all' });
+  assert.ok(career.length > 0);
+  assert.ok(career.every((p) => p.honors?.some((honor) => honor.name === 'NSF CAREER Award')));
+
+  const fellow = filterRoster(roster, { query: 'IEEE Fellow', field: 'all' });
+  assert.ok(fellow.length > 0);
+  assert.ok(fellow.every((p) => p.honors?.some((honor) => honor.name === 'IEEE Fellow')));
+});
+
+test('honors and awards keywords list every professor with at least one honor', () => {
+  const expected = roster.filter((p) => Array.isArray(p.honors) && p.honors.length > 0);
+  for (const query of ['honors', 'awards']) {
+    const results = filterRoster(roster, { query, field: 'all', location: 'World', track: 'all' });
+    assert.equal(results.length, expected.length, `Unexpected result count for ${query}`);
+    assert.deepEqual(results, expected, `Unexpected result set for ${query}`);
+  }
+});
+
 test('filterRoster narrows by track and "all" leaves it unfiltered', () => {
   const tenureLine = filterRoster(roster, { query: '', field: 'all', track: 'Tenure-line' });
   assert.ok(tenureLine.length > 0);

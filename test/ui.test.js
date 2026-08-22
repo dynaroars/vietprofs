@@ -58,6 +58,17 @@ test('all countries in roster map to recognized continents', () => {
   }
 });
 
+test('honors have escaped names and source links available to the roster renderer', () => {
+  const honored = roster.find((person) => person.honors?.length);
+  assert.ok(honored, 'fixture roster should contain an honored professor');
+  for (const honor of honored.honors) {
+    const html = `<a class="honor-link" href="${escapeHtml(honor.source)}">${escapeHtml(honor.name)}</a>`;
+    assert.match(html, /class="honor-link"/);
+    assert.match(html, new RegExp(escapeHtml(honor.name)));
+    assert.match(html, new RegExp(escapeHtml(honor.source)));
+  }
+});
+
 test('formatLocation never produces undefined, null, consecutive commas, or duplicate city/country', () => {
   for (const p of roster) {
     const loc = formatLocation(p);
@@ -111,6 +122,8 @@ test('buildFunFacts produces valid strings across every continent and empty rost
 test('suggestionValues array contains no undefined/null and all elements safely escape', () => {
   const suggestionValues = [
     ...new Set([
+      'honors',
+      'awards',
       ...roster.map((p) => displayName(p.name)).filter(Boolean),
       ...roster.map((p) => p.university).filter(Boolean),
       ...uniqueDepartments(roster),
@@ -322,5 +335,3 @@ test('search query execution: typing diverse terms across all fields returns val
     }
   }
 });
-
-

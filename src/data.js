@@ -14,6 +14,7 @@ function searchableFields(person) {
     canonicalRank(person),
     person.phdInstitution,
     ...(person.researchAreas ?? []),
+    ...(person.honors ?? []).flatMap((honor) => [honor.name, honor.organization]),
   ];
 }
 
@@ -466,6 +467,9 @@ export const STATE_ABBR = {
 export function parseSearchQuery(query) {
   if (!query) return { type: 'all', text: '' };
   const trimmed = query.trim();
+  if (/^(honors|awards)$/i.test(trimmed)) {
+    return { type: 'honors', text: '' };
+  }
   const prefixMatch = trimmed.match(
     /^(univ(?:ersity)?|school|phd(?:institution)?|alma|state|country|nation|continent|loc(?:ation)?|city|dept|department|name):\s*(?:"([^"]*)"|'([^']*)'|(.+))$/i,
   );
@@ -546,6 +550,10 @@ export function filterRoster(roster, { query = '', location, field, track, unive
     });
   }
 
+  if (parsed.type === 'honors') {
+    return result.filter((p) => Array.isArray(p.honors) && p.honors.length > 0);
+  }
+
   if (!parsed.text) return result;
 
   const target = stripDiacritics(parsed.text.toLowerCase());
@@ -587,7 +595,7 @@ export function filterRoster(roster, { query = '', location, field, track, unive
     return result.filter((p) => stripDiacritics(displayName(p.name).toLowerCase()).includes(target));
   }
 
-  // Full-text search across all fields (name, university, city, state, country, department, rank, areas, phd)
+  // Full-text search across all fields, including award names and organizations.
   return result.filter((p) => {
     return index.textByPerson.get(p).some((h) => h.includes(target));
   });

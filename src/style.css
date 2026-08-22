@@ -395,6 +395,25 @@ h1 {
   margin-top: 0.2rem;
 }
 
+.entry-honors {
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+  line-height: 1.45;
+  margin-top: 0.25rem;
+}
+
+.honors-label {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.honor-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, currentColor 45%, transparent);
+  text-underline-offset: 0.15em;
+}
+
 .tags {
   display: flex;
   flex-wrap: wrap;
