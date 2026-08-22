@@ -61,6 +61,50 @@ To target a specific field (such as current appointment vs. PhD alma mater vs. c
   - **Top PhD Alma Maters**: Doctoral institutions that trained the most faculty. Clicking an institution filters by `phd:<Institution>`.
   - **PhD Graduation Cohorts & Highlights**: Decadal graduation timeline and community statistics calculated live from the live roster.
 - **Sharable URLs**: All active searches and filters sync automatically with URL parameters (`?q=...`, `?loc=...`, `?field=...`, `?track=...`) so any filtered view can be shared or bookmarked directly.
+
+## Awards and honors
+
+The optional `honors` field in each professor record is intentionally conservative. It is
+reserved for major, selective, and internationally or nationally recognized academic honors
+that help distinguish a professor's research standing. The goal is precision rather than a
+complete CV transcription.
+
+Included honors generally fall into these categories:
+
+- **Academy memberships**: selective membership in organizations such as the National Academies,
+  the American Academy of Arts and Sciences, the Royal Society, Academia Europaea, or TWAS.
+- **Major professional fellowships**: Fellow designations from highly recognized societies such
+  as ACM, IEEE, AAAI, APS, SIAM, INFORMS, ASA, ASME, ASCE, AIMBE, or Optica.
+- **Major early-career awards**: NSF CAREER, PECASE, Sloan Research Fellowship, Packard,
+  ONR/ARO/AFOSR Young Investigator awards, DARPA Young Faculty Award, DOE Early Career Award,
+  NIH Director's awards, and comparable national programs.
+- **Field-wide or international awards**: major discipline-wide prizes such as the Turing Award,
+  Fields Medal, Nobel Prize, Gödel Prize, Knuth Prize, ACM Prize in Computing, and comparable
+  international research awards.
+- **Major research-impact awards**: official 10-year, test-of-time, most-influential-paper,
+  or most-impactful-paper awards from major ACM, IEEE, or equivalent disciplinary venues. These
+  are included only when the award is a retrospective field-recognition distinction—not an
+  ordinary Best Paper, Distinguished Paper, or honorable-mention award. For example, ACM
+  SIGSOFT/IEEE TCSE ICSE Most Influential Paper and ACM SIGEVO Impact Award qualify.
+- **Distinguished professorships**: exceptionally prestigious university-wide professorships or
+  endowed chairs, such as University Professor, Institute Professor, Regents Professor, or a
+  comparable distinguished university appointment. Ordinary named faculty positions do not
+  automatically qualify.
+
+Routine grants and recognition are excluded, including NSF CRII and ordinary research grants,
+best-paper and distinguished-paper awards, teaching or service awards, department-level awards,
+travel awards, student scholarships, ordinary society membership, IEEE/ACM Senior Member status,
+editorial positions, committee service, keynote invitations, citation metrics, and highly cited
+researcher lists. A qualifying honor must be verified for the correct person and must carry its
+own source URL; official awarding-body pages are preferred, followed by official university
+announcements, faculty pages, and the professor's CV or academic website.
+
+Honors use normalized names and categories (`academy`, `fellow`, `career_award`, `major_award`,
+or `distinguished_professorship`) and record the official year when it can be verified; otherwise
+the year is `null`. Honor names and organizations are indexed by the search box, so searches for
+an award such as `IEEE Fellow`, `NSF CAREER Award`, or `honors`/`awards` return the relevant
+professors.
+
 ## FAQ
 
 ### What is VietProfs?
