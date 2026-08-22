@@ -313,7 +313,7 @@ const FIELD_RULES = [
   // keyword below — so it doesn't get caught by that instead.
   {
     field: 'Health Sciences',
-    match: /health|medicine|surgery|nursing|public health|epidemiology|pharma|psychiatry|pathology|dermatology|biomedical sciences|kinesiology|exercise science|sport science|veterinary|nutrition|dietetics|audiology|speech-language pathology|communication sciences and disorders|anatom|toxicology|dentistry|dental|orthodont|dentisterie|radiology|radiolog/i,
+    match: /health|medicine|surgery|nursing|public health|epidemiology|pharma|psychiatry|pathology|dermatology|biomedical sciences|kinesiology|exercise science|sport science|veterinary|nutrition|dietetics|audiology|speech-language pathology|communication sciences and disorders|anatom|toxicology|dentistry|dental|orthodont|dentisterie|radiology|radiolog|optometry|vision science/i,
   },
   // Business terms are specific enough (accounting, marketing, entrepreneurship, ...) that
   // false-positive risk is low; "management" is the one generic-sounding term here, which is
@@ -321,7 +321,7 @@ const FIELD_RULES = [
   // rule are checked first for the science-flavored "X Management" department names that exist.
   {
     field: 'Business & Economics',
-    match: /business|economic|\bfinanc(?:e|ial|es)\b|accounting|marketing|management|entrepreneurship|\binsurance\b|real estate|human resource|industrial relations|organizational behavior|supply chain|\blogistics\b/i,
+    match: /business|economic|\bfinanc(?:e|ial|es)\b|accounting|marketing|management|entrepreneurship|\binsurance\b|real estate|human resource|industrial relations|organi[zs]ational|work and organi[zs]ation|supply chain|\blogistics\b/i,
   },
   { field: 'Computer & Information Sciences', match: /computer science|computing|informati(?:cs?|que)|information science|information studies|information systems|information technology|\bIST\b|\bCIS\b|library|machine learning|artificial intelligence|natural language processing|multimedia/i },
   // Stem match (not just "mathematics") so "Mathematical Sciences" — UT Dallas's actual
