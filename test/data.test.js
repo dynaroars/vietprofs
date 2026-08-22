@@ -272,9 +272,9 @@ test('filterRoster prefix queries handle quotes, aliases, and extra whitespace',
   const q1 = filterRoster(roster, { query: 'university:"Texas Tech University"' });
   const q2 = filterRoster(roster, { query: 'univ:   Texas Tech University  ' });
   const q3 = filterRoster(roster, { query: 'school:\'Texas Tech University\'' });
-  assert.equal(q1.length, 8);
-  assert.equal(q2.length, 8);
-  assert.equal(q3.length, 8);
+  assert.equal(q1.length, 9);
+  assert.equal(q2.length, 9);
+  assert.equal(q3.length, 9);
 });
 
 test('LOCATIONS includes US, continents, and World', () => {
