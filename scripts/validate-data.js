@@ -39,8 +39,9 @@ for (const [index, person] of roster.entries()) {
         fail(`${honorLabel} has invalid year`);
       }
       if (!/^https:\/\//.test(honor.source)) fail(`${honorLabel} source must use HTTPS`);
-      if (honorNames.has(honor.name)) fail(`${honorLabel} duplicates an honor for ${person.name}`);
-      honorNames.add(honor.name);
+      const honorKey = `${honor.name}|${honor.year ?? 'unknown'}|${honor.organization}`;
+      if (honorNames.has(honorKey)) fail(`${honorLabel} duplicates an honor for ${person.name}`);
+      honorNames.add(honorKey);
     }
   }
   if (!allowedTracks.has(person.track)) fail(`${label} has unsupported track ${person.track}`);
