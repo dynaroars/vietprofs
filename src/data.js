@@ -266,7 +266,7 @@ const FIELD_RULES = [
   { field: 'Chemistry', match: /chemistry/i },
   {
     field: 'Biological & Biomedical Sciences',
-    match: /biology|biological sciences|neuroscience|plant pathology|genetics|genomic|oncology|microbiology|immunology|molecular|cell biology|ecology|entomology/i,
+    match: /biology|biological sciences|neuroscience|plant pathology|genetics|genomic|oncology|microbiology|immunology|molecular|cell biology|ecology|entomology|physiolog/i,
   },
   // Agricultural & Natural Resource Sciences precedes Earth & Environmental Sciences so a combined
   // department name like "Agricultural and Environmental Sciences" (Doc Lap Tran, Tennessee State)

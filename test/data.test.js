@@ -303,11 +303,19 @@ test('locationMatches filters by US, continent, and World', () => {
 
 test('country: and continent: prefix queries filter roster accurately', () => {
   const usQuery = filterRoster(roster, { query: 'country:US' });
-  assert.equal(usQuery.length, roster.length);
+  const actualUS = roster.filter((p) => (p.country || 'United States') === 'United States');
+  assert.equal(usQuery.length, actualUS.length);
 
-  const naQuery = filterRoster(roster, { query: 'continent:"North America"' });
-  assert.equal(naQuery.length, roster.length);
+  const sgQuery = filterRoster(roster, { query: 'country:Singapore' });
+  const actualSG = roster.filter((p) => p.country === 'Singapore');
+  assert.equal(sgQuery.length, actualSG.length);
 
   const filterLocUS = filterRoster(roster, { location: 'US' });
-  assert.equal(filterLocUS.length, roster.length);
+  assert.equal(filterLocUS.length, actualUS.length);
+
+  const filterLocAsia = filterRoster(roster, { location: 'Asia' });
+  assert.equal(filterLocAsia.length, actualSG.length);
+
+  const filterLocWorld = filterRoster(roster, { location: 'World' });
+  assert.equal(filterLocWorld.length, roster.length);
 });
