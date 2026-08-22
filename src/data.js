@@ -254,10 +254,10 @@ const FIELD_RULES = [
     field: 'Business & Economics',
     match: /business|economic|\bfinance\b|accounting|marketing|management|entrepreneurship|\binsurance\b|real estate|human resource|industrial relations|organizational behavior|supply chain|\blogistics\b/i,
   },
-  { field: 'Computer & Information Sciences', match: /computer science|computing|informatics|information science|information studies|information systems|information technology|\bIST\b|\bCIS\b|library/i },
+  { field: 'Computer & Information Sciences', match: /computer science|computing|informati(?:cs?|que)|information science|information studies|information systems|information technology|\bIST\b|\bCIS\b|library/i },
   // Stem match (not just "mathematics") so "Mathematical Sciences" — UT Dallas's actual
   // department name — lands here too, without fabricating a different department string.
-  { field: 'Mathematics', match: /mathematic/i },
+  { field: 'Mathematics', match: /mathematic|mathématiq/i },
   { field: 'Statistics & Data Science', match: /statistics|biostatistics|operations research|data science/i },
   // "materials science" alone (no "engineering" in the name) still lands here — combined
   // "Materials Science and Engineering" departments already match the bare "engineering" term.

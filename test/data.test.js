@@ -322,6 +322,10 @@ test('country: and continent: prefix queries filter roster accurately', () => {
   const actualUK = roster.filter((p) => p.country === 'United Kingdom');
   assert.equal(ukQuery.length, actualUK.length);
 
+  const frQuery = filterRoster(roster, { query: 'country:France' });
+  const actualFR = roster.filter((p) => p.country === 'France');
+  assert.equal(frQuery.length, actualFR.length);
+
   const filterLocUS = filterRoster(roster, { location: 'US' });
   assert.equal(filterLocUS.length, actualUS.length);
 
@@ -335,7 +339,7 @@ test('country: and continent: prefix queries filter roster accurately', () => {
   assert.equal(filterLocAustralasia.length, actualAU.length);
 
   const filterLocEurope = filterRoster(roster, { location: 'Europe' });
-  assert.equal(filterLocEurope.length, actualUK.length);
+  assert.equal(filterLocEurope.length, actualUK.length + actualFR.length);
 
   const filterLocWorld = filterRoster(roster, { location: 'World' });
   assert.equal(filterLocWorld.length, roster.length);
