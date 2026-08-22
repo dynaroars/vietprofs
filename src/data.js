@@ -231,7 +231,53 @@ export function buildTopUniversities(roster, limit = 8) {
   return [...counts.entries()].sort((a, b) => b[1] - a[1]).slice(0, limit);
 }
 
-export function filterRoster(roster, { query, field, track }) {
+export function stripDiacritics(s) {
+  return s.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
+export const STATE_ABBR = {
+  Alabama: 'AL', Alaska: 'AK', Arizona: 'AZ', Arkansas: 'AR', California: 'CA', Colorado: 'CO',
+  Connecticut: 'CT', DC: 'DC', Delaware: 'DE', Florida: 'FL', Georgia: 'GA', Hawaii: 'HI',
+  Idaho: 'ID', Illinois: 'IL', Indiana: 'IN', Iowa: 'IA', Kansas: 'KS', Kentucky: 'KY',
+  Louisiana: 'LA', Maine: 'ME', Maryland: 'MD', Massachusetts: 'MA', Michigan: 'MI',
+  Minnesota: 'MN', Mississippi: 'MS', Missouri: 'MO', Montana: 'MT', Nebraska: 'NE',
+  Nevada: 'NV', 'New Hampshire': 'NH', 'New Jersey': 'NJ', 'New Mexico': 'NM', 'New York': 'NY',
+  'North Carolina': 'NC', 'North Dakota': 'ND', Ohio: 'OH', Oklahoma: 'OK', Oregon: 'OR',
+  Pennsylvania: 'PA', 'Rhode Island': 'RI', 'South Carolina': 'SC', 'South Dakota': 'SD',
+  Tennessee: 'TN', Texas: 'TX', Utah: 'UT', Vermont: 'VT', Virginia: 'VA', Washington: 'WA',
+  'West Virginia': 'WV', Wisconsin: 'WI', Wyoming: 'WY',
+};
+
+export function parseSearchQuery(query) {
+  if (!query) return { type: 'all', text: '' };
+  const trimmed = query.trim();
+  const prefixMatch = trimmed.match(
+    /^(univ(?:ersity)?|school|phd(?:institution)?|alma|state|dept|department|name):\s*(?:"([^"]*)"|'([^']*)'|(.+))$/i,
+  );
+  if (!prefixMatch) {
+    return { type: 'text', text: trimmed };
+  }
+  const prefix = prefixMatch[1].toLowerCase();
+  const value = (prefixMatch[2] ?? prefixMatch[3] ?? prefixMatch[4] ?? '').trim();
+  if (['univ', 'university', 'school'].includes(prefix)) {
+    return { type: 'university', text: value };
+  }
+  if (['phd', 'phdinstitution', 'alma'].includes(prefix)) {
+    return { type: 'phdInstitution', text: value };
+  }
+  if (prefix === 'state') {
+    return { type: 'state', text: value };
+  }
+  if (['dept', 'department'].includes(prefix)) {
+    return { type: 'department', text: value };
+  }
+  if (prefix === 'name') {
+    return { type: 'name', text: value };
+  }
+  return { type: 'text', text: trimmed };
+}
+
+export function filterRoster(roster, { query = '', field, track, university, phdInstitution, state } = {}) {
   let result = roster;
   if (field && field !== 'all') {
     result = result.filter((p) => fieldOf(p.department, p.university) === field);
@@ -239,11 +285,48 @@ export function filterRoster(roster, { query, field, track }) {
   if (track && track !== 'all') {
     result = result.filter((p) => p.track === track);
   }
-  // Diacritic-insensitive: every name on the roster is stored without Vietnamese diacritics
-  // (e.g. "Nguyen", not "Nguyễn") for display consistency, but a visitor may well type the
-  // accented form. Stripping combining marks from both sides means either spelling finds a match.
-  const q = stripDiacritics(query.trim().toLowerCase());
-  if (!q) return result;
+  if (university) {
+    const norm = stripDiacritics(university.trim().toLowerCase());
+    result = result.filter((p) => p.university && stripDiacritics(p.university.toLowerCase()).includes(norm));
+  }
+  if (phdInstitution) {
+    const norm = stripDiacritics(phdInstitution.trim().toLowerCase());
+    result = result.filter((p) => p.phdInstitution && stripDiacritics(p.phdInstitution.toLowerCase()).includes(norm));
+  }
+  if (state) {
+    const norm = stripDiacritics(state.trim().toLowerCase());
+    result = result.filter((p) => {
+      const s = stripDiacritics(p.state.toLowerCase());
+      return s === norm || s.includes(norm) || (STATE_ABBR[p.state] && STATE_ABBR[p.state].toLowerCase() === norm);
+    });
+  }
+
+  const parsed = parseSearchQuery(query);
+  if (!parsed.text) return result;
+
+  const target = stripDiacritics(parsed.text.toLowerCase());
+  if (parsed.type === 'university') {
+    return result.filter((p) => p.university && stripDiacritics(p.university.toLowerCase()).includes(target));
+  }
+  if (parsed.type === 'phdInstitution') {
+    return result.filter((p) => p.phdInstitution && stripDiacritics(p.phdInstitution.toLowerCase()).includes(target));
+  }
+  if (parsed.type === 'state') {
+    return result.filter((p) => {
+      const s = stripDiacritics(p.state.toLowerCase());
+      return s === target || s.includes(target) || (STATE_ABBR[p.state] && STATE_ABBR[p.state].toLowerCase() === target);
+    });
+  }
+  if (parsed.type === 'department') {
+    return result.filter((p) => p.department && stripDiacritics(p.department.toLowerCase()).includes(target));
+  }
+  if (parsed.type === 'name') {
+    return result.filter((p) => {
+      const n = stripDiacritics(displayName(p.name).toLowerCase());
+      return n.includes(target);
+    });
+  }
+
   return result.filter((p) => {
     const haystack = stripDiacritics(
       [
@@ -261,7 +344,7 @@ export function filterRoster(roster, { query, field, track }) {
         .join(' ')
         .toLowerCase(),
     );
-    return haystack.includes(q);
+    return haystack.includes(target);
   });
 }
 
@@ -306,10 +389,6 @@ const COMMON_SURNAMES = [
   'Nguyen', 'Tran', 'Le', 'Pham', 'Hoang', 'Huynh', 'Phan', 'Vu', 'Vo', 'Dang', 'Bui', 'Do', 'Ho',
   'Ngo', 'Duong', 'Ly', 'Cao', 'Doan', 'Trinh', 'Dinh', 'Ta', 'Lam', 'Luu', 'Ton', 'Ha',
 ];
-
-function stripDiacritics(s) {
-  return s.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-}
 
 function surnameCounts(roster) {
   const counts = new Map();

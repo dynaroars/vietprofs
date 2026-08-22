@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
-import { FIELDS, TRACKS, canonicalRank, displayName, fieldOf, buildFunFacts, filterRoster } from '../src/data.js';
+import { FIELDS, TRACKS, canonicalRank, displayName, fieldOf, buildFunFacts, filterRoster, buildTopUniversities, buildTopPhdInstitutions } from '../src/data.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const roster = JSON.parse(readFileSync(join(__dirname, '../public/data.json'), 'utf8'));
@@ -210,4 +210,49 @@ test('university suffixes are reserved for otherwise identical names', () => {
   for (const person of roster.filter((entry) => entry.name.includes(' - '))) {
     assert.ok(visibleCounts.get(displayName(person.name)) > 1, person.name);
   }
+});
+
+test('univ: prefix only includes faculty at that university and excludes PhD graduates at other universities', () => {
+  const topUnis = buildTopUniversities(roster, 8);
+  for (const [uni, count] of topUnis) {
+    const results = filterRoster(roster, { query: `univ:${uni}`, field: 'all', track: 'all' });
+    assert.equal(results.length, count, `univ:${uni} should return exactly ${count} faculty`);
+    assert.ok(
+      results.every((p) => p.university.toLowerCase().includes(uni.toLowerCase())),
+      `All returned faculty should have university matching "${uni}"`,
+    );
+  }
+});
+
+test('phd: prefix only includes faculty whose PhD alma mater matches', () => {
+  const topPhds = buildTopPhdInstitutions(roster, 8);
+  for (const [inst, count] of topPhds) {
+    const results = filterRoster(roster, { query: `phd:${inst}`, field: 'all', track: 'all' });
+    assert.equal(results.length, count, `phd:${inst} should return exactly ${count} faculty`);
+    assert.ok(
+      results.every((p) => p.phdInstitution && p.phdInstitution.toLowerCase().includes(inst.toLowerCase())),
+      `All returned faculty should have phdInstitution matching "${inst}"`,
+    );
+  }
+});
+
+test('state: prefix only includes faculty in that state', () => {
+  const caResults = filterRoster(roster, { query: 'state:California', field: 'all', track: 'all' });
+  const actualCa = roster.filter((p) => p.state === 'California');
+  assert.equal(caResults.length, actualCa.length);
+  assert.ok(caResults.every((p) => p.state === 'California'));
+
+  const txResults = filterRoster(roster, { query: 'state:TX', field: 'all', track: 'all' });
+  const actualTx = roster.filter((p) => p.state === 'Texas');
+  assert.equal(txResults.length, actualTx.length);
+  assert.ok(txResults.every((p) => p.state === 'Texas'));
+});
+
+test('filterRoster prefix queries handle quotes, aliases, and extra whitespace', () => {
+  const q1 = filterRoster(roster, { query: 'university:"Texas Tech University"' });
+  const q2 = filterRoster(roster, { query: 'univ:   Texas Tech University  ' });
+  const q3 = filterRoster(roster, { query: 'school:\'Texas Tech University\'' });
+  assert.equal(q1.length, 8);
+  assert.equal(q2.length, 8);
+  assert.equal(q3.length, 8);
 });

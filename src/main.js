@@ -1,5 +1,5 @@
 import './style.css';
-import { loadRoster, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, FIELDS, TRACKS, canonicalRank, displayName, fieldOf, filterRoster, sortRoster, buildFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities } from './data.js';
+import { loadRoster, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, FIELDS, TRACKS, canonicalRank, displayName, fieldOf, filterRoster, sortRoster, buildFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, STATE_ABBR } from './data.js';
 import { escapeHtml } from './utils.js';
 
 // Sentinel field-select value for the "show me something interesting" view. Distinct from any
@@ -82,22 +82,6 @@ function nearestVietnameseHoliday(today) {
   }
   return best;
 }
-
-// A schematic (not geographically precise) grid layout of the 50 states + DC, used only for the
-// "show me something interesting" view's at-a-glance state map. Every state gets an equally
-// visible, clickable tile — unlike a real map, where small states are hard to see or click.
-const STATE_ABBR = {
-  Alabama: 'AL', Alaska: 'AK', Arizona: 'AZ', Arkansas: 'AR', California: 'CA', Colorado: 'CO',
-  Connecticut: 'CT', DC: 'DC', Delaware: 'DE', Florida: 'FL', Georgia: 'GA', Hawaii: 'HI',
-  Idaho: 'ID', Illinois: 'IL', Indiana: 'IN', Iowa: 'IA', Kansas: 'KS', Kentucky: 'KY',
-  Louisiana: 'LA', Maine: 'ME', Maryland: 'MD', Massachusetts: 'MA', Michigan: 'MI',
-  Minnesota: 'MN', Mississippi: 'MS', Missouri: 'MO', Montana: 'MT', Nebraska: 'NE',
-  Nevada: 'NV', 'New Hampshire': 'NH', 'New Jersey': 'NJ', 'New Mexico': 'NM', 'New York': 'NY',
-  'North Carolina': 'NC', 'North Dakota': 'ND', Ohio: 'OH', Oklahoma: 'OK', Oregon: 'OR',
-  Pennsylvania: 'PA', 'Rhode Island': 'RI', 'South Carolina': 'SC', 'South Dakota': 'SD',
-  Tennessee: 'TN', Texas: 'TX', Utah: 'UT', Vermont: 'VT', Virginia: 'VA', Washington: 'WA',
-  'West Virginia': 'WV', Wisconsin: 'WI', Wyoming: 'WY',
-};
 
 // [row, column] on a 13-column grid. Not real geography — just a reasonable schematic
 // approximation (AK/HI inset in their traditional corners) so every state is equally sized and
@@ -256,7 +240,7 @@ function renderStateGrid(roster) {
       const count = counts.get(fullName) ?? 0;
       const tier = heatTier(count, max);
       const label = `${fullName}: ${count} ${count === 1 ? 'person' : 'people'}`;
-      return `<button type="button" class="state-tile heat-${tier}" style="grid-row:${row + 1};grid-column:${col + 1}" data-state="${escapeHtml(fullName)}" title="${escapeHtml(label)}" aria-label="${escapeHtml(label)}">${abbr}</button>`;
+      return `<button type="button" class="state-tile heat-${tier}" style="grid-row:${row + 1};grid-column:${col + 1}" data-state="state:${escapeHtml(fullName)}" title="${escapeHtml(label)}" aria-label="${escapeHtml(label)}">${abbr}</button>`;
     })
     .join('');
   return `
@@ -307,7 +291,7 @@ function renderLeaderboards(roster) {
     .map(([uni, count], idx) => {
       const pct = Math.round((count / maxUni) * 100);
       return `
-        <button type="button" class="ranked-item" data-search="${escapeHtml(uni)}" title="Filter by ${escapeHtml(uni)}">
+        <button type="button" class="ranked-item" data-search="univ:${escapeHtml(uni)}" title="Filter by ${escapeHtml(uni)}">
           <div class="ranked-header">
             <span class="ranked-name"><span class="ranked-num">${idx + 1}.</span> ${escapeHtml(uni)}</span>
             <span class="ranked-count">${count}</span>
@@ -322,7 +306,7 @@ function renderLeaderboards(roster) {
     .map(([inst, count], idx) => {
       const pct = Math.round((count / maxPhd) * 100);
       return `
-        <button type="button" class="ranked-item" data-search="${escapeHtml(inst)}" title="Search faculty from ${escapeHtml(inst)}">
+        <button type="button" class="ranked-item" data-search="phd:${escapeHtml(inst)}" title="Search faculty from ${escapeHtml(inst)}">
           <div class="ranked-header">
             <span class="ranked-name"><span class="ranked-num">${idx + 1}.</span> ${escapeHtml(inst)}</span>
             <span class="ranked-count">${count}</span>
