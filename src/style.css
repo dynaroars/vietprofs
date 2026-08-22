@@ -294,10 +294,12 @@ h1 {
   outline-offset: 1px;
 }
 
-.track-select,
+.track-select {
+  min-width: 7.5rem;
+}
+
 .location-select {
-  /* Short option labels, so a smaller minimum is enough here. */
-  min-width: 6.5rem;
+  min-width: 8.5rem;
 }
 
 .result-count {

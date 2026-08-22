@@ -391,7 +391,10 @@ export function parseSearchQuery(query) {
 
 export function filterRoster(roster, { query = '', location, field, track, university, phdInstitution, state, country } = {}) {
   let result = roster;
-  if (location && location !== 'World' && location !== 'all') {
+  const parsed = parseSearchQuery(query);
+  const hasExplicitLocationQuery = ['country', 'location'].includes(parsed.type);
+
+  if (location && location !== 'World' && location !== 'all' && !hasExplicitLocationQuery) {
     result = result.filter((p) => locationMatches(p, location));
   }
   if (field && field !== 'all') {
@@ -430,7 +433,6 @@ export function filterRoster(roster, { query = '', location, field, track, unive
     });
   }
 
-  const parsed = parseSearchQuery(query);
   if (!parsed.text) return result;
 
   const target = stripDiacritics(parsed.text.toLowerCase());
@@ -469,31 +471,27 @@ export function filterRoster(roster, { query = '', location, field, track, unive
     return result.filter((p) => p.department && stripDiacritics(p.department.toLowerCase()).includes(target));
   }
   if (parsed.type === 'name') {
-    return result.filter((p) => {
-      const n = stripDiacritics(displayName(p.name).toLowerCase());
-      return n.includes(target);
-    });
+    return result.filter((p) => stripDiacritics(displayName(p.name).toLowerCase()).includes(target));
   }
 
+  // Full-text search across all fields (name, university, city, state, country, department, rank, areas, phd)
   return result.filter((p) => {
-    const haystack = stripDiacritics(
-      [
-        p.name,
-        p.university,
-        p.city,
-        p.state,
-        p.country || 'United States',
-        p.department,
-        canonicalRank(p),
-        p.phdInstitution,
-        p.phdYear && String(p.phdYear),
-        ...p.researchAreas,
-      ]
-        .filter(Boolean)
-        .join(' ')
-        .toLowerCase(),
-    );
-    return haystack.includes(target);
+    const haystacks = [
+      displayName(p.name),
+      p.university,
+      p.city,
+      p.state,
+      p.country,
+      p.department,
+      p.rank,
+      canonicalRank(p),
+      p.phdInstitution,
+      ...(p.researchAreas ?? []),
+    ]
+      .filter(Boolean)
+      .map((s) => stripDiacritics(String(s).toLowerCase()));
+
+    return haystacks.some((h) => h.includes(target));
   });
 }
 
@@ -535,8 +533,8 @@ const VIETNAMESE_POPULATION_HUB_STATES = [
 // e.g. "Hoang" doesn't get credited to "Ho". Counts are for fun, not genealogy — a name is
 // counted at most once per surname even if a token repeats.
 const COMMON_SURNAMES = [
-  'Nguyen', 'Tran', 'Le', 'Pham', 'Hoang', 'Huynh', 'Phan', 'Vu', 'Vo', 'Dang', 'Bui', 'Do', 'Ho',
-  'Ngo', 'Duong', 'Ly', 'Cao', 'Doan', 'Trinh', 'Dinh', 'Ta', 'Lam', 'Luu', 'Ton', 'Ha',
+  'Nguyen', 'Tran', 'Le', 'Pham', 'Hoang', 'Huynh', 'Phan', 'Vu', 'Vo', 'Dang',
+  'Bui', 'Do', 'Ho', 'Ngo', 'Duong', 'Dinh', 'Ly', 'Luong', 'Mai', 'Dao', 'Trinh', 'Ta',
 ];
 
 function surnameCounts(roster) {
@@ -560,6 +558,7 @@ function countBy(roster, getKey) {
   const counts = new Map();
   for (const p of roster) {
     const key = getKey(p);
+    if (!key) continue;
     counts.set(key, (counts.get(key) ?? 0) + 1);
   }
   return [...counts.entries()].sort((a, b) => b[1] - a[1]);
@@ -569,54 +568,77 @@ function countBy(roster, getKey) {
 // roster grows. Returned as plain fact strings — the "show me something interesting" view just
 // renders them as a list.
 export function buildFunFacts(roster) {
+  if (!roster || roster.length === 0) {
+    return ['No faculty currently listed for this location or filter selection.'];
+  }
   const facts = [];
   const total = roster.length;
   const universities = new Set(roster.map((p) => p.university));
 
-  facts.push(`${total} professors listed across ${universities.size} universities.`);
+  facts.push(`${total} professor${total === 1 ? '' : 's'} listed across ${universities.size} universit${universities.size === 1 ? 'y' : 'ies'}.`);
 
   const surnames = surnameCounts(roster).slice(0, 6);
-  facts.push(
-    `Most common surnames in the roster: ${surnames.map(([s, c]) => `${s} (${c})`).join(', ')}.`,
-  );
+  if (surnames.length) {
+    facts.push(
+      `Most common surnames in the roster: ${surnames.map(([s, c]) => `${s} (${c})`).join(', ')}.`,
+    );
+  }
+
+  const countriesWithPeople = countBy(roster, (p) => p.country || 'United States');
+  if (countriesWithPeople.length > 1) {
+    const topCountries = countriesWithPeople.slice(0, 5);
+    facts.push(
+      `Top countries/regions represented: ${topCountries.map(([c, count]) => `${c} (${count})`).join(', ')}.`,
+    );
+  }
 
   const placeEntries = countBy(roster, (p) => p.state);
-  const topPlaces = placeEntries.slice(0, 3);
-  facts.push(
-    `Most-represented places: ${topPlaces.map(([s, c]) => `${s} (${c})`).join(', ')}.`,
-  );
-  const minCount = Math.min(...placeEntries.map(([, c]) => c));
-  const leastPlaces = placeEntries.filter(([, c]) => c === minCount).map(([s]) => s);
-  facts.push(
-    `Places with the fewest — just ${minCount} each: ${leastPlaces.join(', ')}.`,
-  );
-  const represented = new Set(placeEntries.map(([s]) => s));
-  const missingPlaces = US_PLACES.filter((s) => !represented.has(s));
-  facts.push(
-    missingPlaces.length
-      ? `Locations with no one on the roster yet: ${missingPlaces.join(', ')}.`
-      : 'Every U.S. location has at least one person on the roster.',
-  );
+  if (placeEntries.length > 0) {
+    const topPlaces = placeEntries.slice(0, 3);
+    facts.push(
+      `Most-represented places: ${topPlaces.map(([s, c]) => `${s} (${c})`).join(', ')}.`,
+    );
+    const minCount = Math.min(...placeEntries.map(([, c]) => c));
+    const leastPlaces = placeEntries.filter(([, c]) => c === minCount).map(([s]) => s);
+    if (leastPlaces.length && leastPlaces.length <= 15) {
+      facts.push(
+        `Places with the fewest — just ${minCount} each: ${leastPlaces.join(', ')}.`,
+      );
+    }
+    const represented = new Set(placeEntries.map(([s]) => s));
+    const missingPlaces = US_PLACES.filter((s) => !represented.has(s));
+    facts.push(
+      missingPlaces.length
+        ? `Locations with no one on the roster yet: ${missingPlaces.join(', ')}.`
+        : 'Every U.S. location has at least one person on the roster.',
+    );
 
-  const hubOverlap = VIETNAMESE_POPULATION_HUB_STATES.filter((s) => represented.has(s));
-  facts.push(
-    `${hubOverlap.length} of the ${VIETNAMESE_POPULATION_HUB_STATES.length} states commonly `
-      + `cited as home to the largest Vietnamese-American communities (${VIETNAMESE_POPULATION_HUB_STATES.join(', ')}) `
-      + 'already have someone on the roster — the academic map broadly tracks the diaspora map.',
-  );
+    const hubOverlap = VIETNAMESE_POPULATION_HUB_STATES.filter((s) => represented.has(s));
+    facts.push(
+      `${hubOverlap.length} of the ${VIETNAMESE_POPULATION_HUB_STATES.length} states commonly `
+        + `cited as home to the largest Vietnamese-American communities (${VIETNAMESE_POPULATION_HUB_STATES.join(', ')}) `
+        + 'already have someone on the roster — the academic map broadly tracks the diaspora map.',
+    );
+  }
 
   const uniEntries = countBy(roster, (p) => p.university);
   const topUnis = uniEntries.slice(0, 5);
-  facts.push(
-    `Universities with the most people on the roster: ${topUnis.map(([u, c]) => `${u} (${c})`).join(', ')}.`,
-  );
+  if (topUnis.length) {
+    facts.push(
+      `Universities with the most people on the roster: ${topUnis.map(([u, c]) => `${u} (${c})`).join(', ')}.`,
+    );
+  }
   const soloUnis = uniEntries.filter(([, c]) => c === 1).length;
-  facts.push(`${soloUnis} of the ${universities.size} universities have exactly one person listed.`);
+  if (universities.size > 1) {
+    facts.push(`${soloUnis} of the ${universities.size} universities have exactly one person listed.`);
+  }
 
   const rankEntries = countBy(roster, (p) => canonicalRank(p) || 'rank not listed');
-  facts.push(
-    `Rank breakdown: ${rankEntries.map(([r, c]) => `${c} ${r}${c === 1 ? '' : 's'}`).join(', ')}.`,
-  );
+  if (rankEntries.length) {
+    facts.push(
+      `Rank breakdown: ${rankEntries.map(([r, c]) => `${c} ${r === 'Emeritus' || r === 'Teaching' ? r : r + (c === 1 ? '' : 's')}`).join(', ')}.`,
+    );
+  }
 
   const withScholar = roster.filter((p) => p.scholarUrl).length;
   facts.push(
@@ -654,20 +676,6 @@ export function buildFunFacts(roster) {
       `${refugeeResearchers} ${refugeeResearchers === 1 ? 'person studies' : 'people study'} `
         + 'refugee, immigration, or diaspora topics — research that traces directly back to the '
         + "community's own postwar history.",
-    );
-  }
-
-  // Dormant until an `undergradInstitution` field exists on entries (not collected yet — many
-  // bios mention a Vietnamese undergrad alma mater, but this hasn't had a dedicated research
-  // pass). Once populated, this lights up on its own with no further code changes needed.
-  const undergradEntries = countBy(
-    roster.filter((p) => p.undergradInstitution).map((p) => ({ i: p.undergradInstitution })),
-    (x) => x.i,
-  );
-  if (undergradEntries.length) {
-    const [topSchool, topSchoolCount] = undergradEntries[0];
-    facts.push(
-      `Most common undergraduate alma mater on record: ${topSchool} (${topSchoolCount} people).`,
     );
   }
 

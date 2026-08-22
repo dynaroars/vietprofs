@@ -190,8 +190,8 @@ function trackQualifier(roster) {
 function formatLocation(p) {
   const parts = [];
   if (p.city) parts.push(p.city);
-  if (p.state) parts.push(p.state);
-  if (p.country && p.country !== 'United States' && p.country !== 'US' && p.country !== 'USA') {
+  if (p.state && p.state !== p.city) parts.push(p.state);
+  if (p.country && p.country !== 'United States' && p.country !== 'US' && p.country !== 'USA' && p.country !== p.city) {
     parts.push(p.country);
   }
   return parts.join(', ');
@@ -371,9 +371,11 @@ function renderFunFacts(roster) {
       return `<li>${escaped}</li>`;
     })
     .join('');
+  const hasUSStates = roster.some((p) => p.state && STATE_ABBR[p.state]);
+
   rosterEl.innerHTML = `
     <div class="insights-dashboard">
-      ${renderStateGrid(roster)}
+      ${hasUSStates ? renderStateGrid(roster) : ''}
       ${renderDecadesChart(roster)}
       ${renderLeaderboards(roster)}
       <div class="insights-section">
@@ -651,6 +653,13 @@ async function init() {
       return;
     }
     searchInput.value = btn.textContent;
+    // If the selected search term is not found within the current location filter, widen to 'World'
+    const matchesCurrent = roster.some(
+      (p) => locationMatches(p, locationSelect.value) && filterRoster([p], { query: btn.textContent }).length > 0,
+    );
+    if (!matchesCurrent) {
+      locationSelect.value = 'World';
+    }
     fieldSelect.value = 'all';
     trackSelect.value = 'all';
     update();
