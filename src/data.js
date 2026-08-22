@@ -254,19 +254,19 @@ const FIELD_RULES = [
     field: 'Business & Economics',
     match: /business|economic|\bfinanc(?:e|ial|es)\b|accounting|marketing|management|entrepreneurship|\binsurance\b|real estate|human resource|industrial relations|organizational behavior|supply chain|\blogistics\b/i,
   },
-  { field: 'Computer & Information Sciences', match: /computer science|computing|informati(?:cs?|que)|information science|information studies|information systems|information technology|\bIST\b|\bCIS\b|library|machine learning|artificial intelligence|natural language processing/i },
+  { field: 'Computer & Information Sciences', match: /computer science|computing|informati(?:cs?|que)|information science|information studies|information systems|information technology|\bIST\b|\bCIS\b|library|machine learning|artificial intelligence|natural language processing|multimedia/i },
   // Stem match (not just "mathematics") so "Mathematical Sciences" — UT Dallas's actual
   // department name — lands here too, without fabricating a different department string.
-  { field: 'Mathematics', match: /mathematic|mathématiq/i },
+  { field: 'Mathematics', match: /mathematic|mathématiq|géométrie/i },
   { field: 'Statistics & Data Science', match: /statistics|biostatistics|operations research|data science/i },
   // "materials science" alone (no "engineering" in the name) still lands here — combined
   // "Materials Science and Engineering" departments already match the bare "engineering" term.
-  { field: 'Engineering', match: /engineering|materials(?: science)?|aviation science|aeronautic|astronautic|aerospace|electrical communication/i },
+  { field: 'Engineering', match: /engineering|materials(?: science)?|aviation science|aeronautic|astronautic|aerospace|electrical communication|nanotechnology|nanotechnologie/i },
   { field: 'Physics & Astronomy', match: /physics|astronomy/i },
-  { field: 'Chemistry', match: /chemistry/i },
+  { field: 'Chemistry', match: /chemistry|chimie/i },
   {
     field: 'Biological & Biomedical Sciences',
-    match: /biology|biological sciences|neuroscience|plant pathology|genetics|genomic|oncology|microbiology|immunology|molecular|cell biology|ecology|entomology|physiolog/i,
+    match: /biology|biologie|biological sciences|neuroscience|plant pathology|genetics|genomic|oncology|microbiology|immunology|molecular|cell biology|ecology|entomology|physiolog/i,
   },
   // Agricultural & Natural Resource Sciences precedes Earth & Environmental Sciences so a combined
   // department name like "Agricultural and Environmental Sciences" (Doc Lap Tran, Tennessee State)
@@ -286,7 +286,7 @@ const FIELD_RULES = [
   { field: 'Law & Public Affairs', match: /\blaw\b|legal studies|public policy|public affairs|public administration|criminal justice|criminology|urban (studies and )?planning|regional planning|city planning/i },
   {
     field: 'Social & Behavioral Sciences',
-    match: /sociology|psycholog(?:y|ical)|anthropology|political science|\bpolitics\b|social work|communication|international relations|ethnic studies|american studies|ethnicity,? race|asian studies|asian american studies|asian-pacific studies|asian pacific studies|global and international studies|global studies|international studies|gender,? and sexuality studies|women's,? gender|women's studies|social and cultural analysis|journalism|human development|family studies|gerontology/i,
+    match: /sociology|psycholog(?:y|ical)|anthropology|political science|\bpolitics\b|social work|communication|international relations|ethnic studies|american studies|ethnicity,? race|asian studies|asian american studies|asian-pacific studies|asian pacific studies|global and international studies|global studies|international studies|gender,? and sexuality studies|women's,? gender|women's studies|social and cultural analysis|journalism|human development|family studies|gerontology|media and culture|media and communication|southeast asia/i,
   },
   { field: 'Humanities', match: /history|philosophy|english|literature|linguistics|languages|classics|great books|religio|theolog|divinity/i },
   { field: 'Arts & Design', match: /\barts?\b|design|music|theat|dance|film|cinema|photograph|architecture/i },
