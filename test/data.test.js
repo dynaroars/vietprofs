@@ -344,8 +344,13 @@ test('country: and continent: prefix queries filter roster accurately', () => {
   const actualHK = roster.filter((p) => p.country === 'Hong Kong');
   assert.equal(hkQuery.length, actualHK.length);
 
+  const actualAustralasia = roster.filter((p) => continentOf(p.country) === 'Australasia');
   const filterLocAustralasia = filterRoster(roster, { location: 'Australasia' });
-  assert.equal(filterLocAustralasia.length, actualAU.length);
+  assert.equal(filterLocAustralasia.length, actualAustralasia.length);
+
+  const nzQuery = filterRoster(roster, { query: 'country:"New Zealand"' });
+  const actualNZ = roster.filter((p) => p.country === 'New Zealand');
+  assert.equal(nzQuery.length, actualNZ.length);
 
   const actualEurope = roster.filter((p) => continentOf(p.country) === 'Europe');
   const filterLocEurope = filterRoster(roster, { location: 'Europe' });
