@@ -261,7 +261,7 @@ const FIELD_RULES = [
   { field: 'Statistics & Data Science', match: /statistics|biostatistics|operations research|data science/i },
   // "materials science" alone (no "engineering" in the name) still lands here — combined
   // "Materials Science and Engineering" departments already match the bare "engineering" term.
-  { field: 'Engineering', match: /engineering|materials science|aviation science/i },
+  { field: 'Engineering', match: /engineering|materials science|aviation science|aeronautic|astronautic|aerospace/i },
   { field: 'Physics & Astronomy', match: /physics|astronomy/i },
   { field: 'Chemistry', match: /chemistry/i },
   {
