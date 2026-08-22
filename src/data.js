@@ -132,6 +132,75 @@ export const COUNTRY_TO_CONTINENT = {
   'Morocco': 'Africa',
 };
 
+export const COUNTRY_FLAGS = {
+  'United States': '🇺🇸',
+  'US': '🇺🇸',
+  'USA': '🇺🇸',
+  'Canada': '🇨🇦',
+  'United Kingdom': '🇬🇧',
+  'UK': '🇬🇧',
+  'Australia': '🇦🇺',
+  'France': '🇫🇷',
+  'Germany': '🇩🇪',
+  'Netherlands': '🇳🇱',
+  'Switzerland': '🇨🇭',
+  'Sweden': '🇸🇪',
+  'Norway': '🇳🇴',
+  'Belgium': '🇧🇪',
+  'Poland': '🇵🇱',
+  'Ireland': '🇮🇪',
+  'Singapore': '🇸🇬',
+  'Japan': '🇯🇵',
+  'Hong Kong': '🇭🇰',
+  'New Zealand': '🇳🇿',
+  'South Korea': '🇰🇷',
+  'Korea': '🇰🇷',
+  'Taiwan': '🇹🇼',
+  'China': '🇨🇳',
+  'Denmark': '🇩🇰',
+  'Finland': '🇫🇮',
+  'Austria': '🇦🇹',
+  'Italy': '🇮🇹',
+  'Spain': '🇪🇸',
+  'Portugal': '🇵🇹',
+  'Israel': '🇮🇱',
+  'Saudi Arabia': '🇸🇦',
+  'United Arab Emirates': '🇦🇪',
+  'UAE': '🇦🇪',
+  'Qatar': '🇶🇦',
+  'India': '🇮🇳',
+  'Thailand': '🇹🇭',
+  'Malaysia': '🇲🇾',
+  'Philippines': '🇵🇭',
+  'Indonesia': '🇮🇩',
+  'South Africa': '🇿🇦',
+  'Egypt': '🇪🇬',
+  'Nigeria': '🇳🇬',
+  'Kenya': '🇰🇪',
+  'Morocco': '🇲🇦',
+  'Brazil': '🇧🇷',
+  'Mexico': '🇲🇽',
+  'Argentina': '🇦🇷',
+  'Chile': '🇨🇱',
+  'Colombia': '🇨🇴',
+};
+
+export function countryFlag(country) {
+  if (!country) return '🇺🇸';
+  return COUNTRY_FLAGS[country] || '🌐';
+}
+
+export const LOCATION_LABELS = {
+  'US': '🇺🇸 United States',
+  'North America': '🌎 North America',
+  'South America': '🌎 South America',
+  'Europe': '🌍 Europe',
+  'Australasia': '🌏 Australasia',
+  'Asia': '🌏 Asia',
+  'Africa': '🌍 Africa',
+  'World': '🌐 World',
+};
+
 export function continentOf(country) {
   if (!country) return 'North America';
   return COUNTRY_TO_CONTINENT[country] || 'Other';

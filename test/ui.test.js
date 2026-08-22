@@ -8,6 +8,8 @@ import {
   TRACKS,
   LOCATIONS,
   COUNTRY_TO_CONTINENT,
+  COUNTRY_FLAGS,
+  countryFlag,
   canonicalRank,
   displayName,
   fieldOf,
@@ -221,5 +223,23 @@ test('auto-select location logic widens to World when searching for internationa
   assert.equal(simulateLocationAutoSelect('US', 'Xuan-Bach Le'), 'World');
   assert.equal(simulateLocationAutoSelect('US', 'Cambridge'), 'US'); // Harvard/MIT in Cambridge, MA matches US!
   assert.equal(simulateLocationAutoSelect('US', 'univ:"University of Cambridge"'), 'World');
+});
+
+test('countryFlag maps every country in roster to a non-empty flag emoji', () => {
+  const countries = uniqueCountries(roster);
+  assert.ok(countries.length > 5);
+  for (const c of countries) {
+    const flag = countryFlag(c);
+    assert.equal(typeof flag, 'string');
+    assert.ok(flag.length > 0);
+    assert.notEqual(flag, 'undefined');
+    assert.notEqual(flag, 'null');
+    assert.notEqual(flag, 'NaN');
+    assert.notEqual(flag, '🌐', `Missing specific country flag for country "${c}"`);
+  }
+  assert.equal(countryFlag(null), '🇺🇸');
+  assert.equal(countryFlag(undefined), '🇺🇸');
+  assert.equal(countryFlag(''), '🇺🇸');
+  assert.equal(countryFlag('Unknown Country'), '🌐');
 });
 

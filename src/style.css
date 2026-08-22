@@ -375,6 +375,20 @@ h1 {
   font-size: var(--text-sm);
 }
 
+.country-flag {
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Android Emoji", sans-serif;
+  display: inline-block;
+  vertical-align: -0.05em;
+  font-size: 1.05em;
+  line-height: 1;
+}
+
+.loc-badge {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.2rem;
+}
+
 .entry-details {
   color: var(--text-muted);
   font-size: var(--text-sm);

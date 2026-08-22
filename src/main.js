@@ -1,5 +1,5 @@
 import './style.css';
-import { loadRoster, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, canonicalRank, displayName, fieldOf, locationMatches, filterRoster, sortRoster, buildFunFacts, buildUsFunFacts, buildGlobalFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, STATE_ABBR } from './data.js';
+import { loadRoster, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, LOCATION_LABELS, COUNTRY_FLAGS, countryFlag, canonicalRank, displayName, fieldOf, locationMatches, filterRoster, sortRoster, buildFunFacts, buildUsFunFacts, buildGlobalFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, STATE_ABBR } from './data.js';
 import { escapeHtml } from './utils.js';
 
 // Sentinel field-select value for the "show me something interesting" view. Distinct from any
@@ -232,7 +232,7 @@ function renderRoster(roster, { field, location } = {}) {
         <div class="entry">
           <div class="entry-line">
             <a class="entry-name" href="${escapeHtml(p.websiteUrl ?? p.profileUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(visibleName)}</a>${p.scholarUrl ? ` <a class="scholar-link" href="${escapeHtml(p.scholarUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(visibleName)} on Google Scholar" title="Google Scholar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3Z"/><path d="M5 12.18V16c0 1.66 3.13 3 7 3s7-1.34 7-3v-3.82l-7 3.82-7-3.82Z"/></svg></a>` : ''}${p.secondaryAppointment ? ' <span class="dagger">†</span>' : ''}
-            <span class="entry-meta">${escapeHtml(p.university)} · ${escapeHtml(p.department)} · ${escapeHtml(formatLocation(p))}</span>
+            <span class="entry-meta">${escapeHtml(p.university)} · ${escapeHtml(p.department)} · <span class="loc-badge" title="${escapeHtml(p.country || 'United States')}"><span class="country-flag" aria-hidden="true">${countryFlag(p.country)}</span> ${escapeHtml(formatLocation(p))}</span></span>
           </div>
           ${p.rank || p.phdYear || p.phdInstitution ? `<div class="entry-details">${[
             canonicalRank(p) && escapeHtml(canonicalRank(p)),
@@ -452,7 +452,8 @@ async function init() {
   const searchInput = document.getElementById('search');
   const locationSelect = document.getElementById('location-filter');
   for (const loc of LOCATIONS) {
-    locationSelect.insertAdjacentHTML('beforeend', `<option value="${escapeHtml(loc)}">${escapeHtml(loc)}</option>`);
+    const label = LOCATION_LABELS[loc] || loc;
+    locationSelect.insertAdjacentHTML('beforeend', `<option value="${escapeHtml(loc)}">${escapeHtml(label)}</option>`);
   }
   locationSelect.value = 'US';
 
@@ -488,7 +489,8 @@ async function init() {
     }
     for (const option of locationSelect.options) {
       const count = locBase.filter((p) => locationMatches(p, option.value)).length;
-      option.textContent = `${option.value} (${count})`;
+      const label = LOCATION_LABELS[option.value] || option.value;
+      option.textContent = `${label} (${count})`;
     }
 
     // Field dropdown counts (filtered by active location & track)
