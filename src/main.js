@@ -485,12 +485,63 @@ async function init() {
     }
   }
 
+  function autoSelectLocationForQuery() {
+    const q = searchInput.value.trim();
+    if (!q) return;
+
+    const parsed = parseSearchQuery(q);
+    if (['country', 'location'].includes(parsed.type)) {
+      locationSelect.value = 'World';
+      return;
+    }
+
+    const countryNames = uniqueCountries(roster);
+    const isCountryQuery = countryNames.some((c) =>
+      c.toLowerCase() === q.toLowerCase() ||
+      (q.toLowerCase() === 'uk' && c === 'United Kingdom') ||
+      (q.toLowerCase() === 'usa' && c === 'United States')
+    );
+    if (isCountryQuery) {
+      locationSelect.value = 'World';
+      return;
+    }
+
+    const continentNames = ['asia', 'europe', 'australasia', 'north america', 'south america', 'africa', 'world'];
+    if (continentNames.includes(q.toLowerCase())) {
+      locationSelect.value = 'World';
+      return;
+    }
+
+    const matchesInCurrent = filterRoster(roster, {
+      query: q,
+      location: locationSelect.value,
+      field: fieldSelect.value,
+      track: trackSelect.value,
+    }).length;
+
+    if (matchesInCurrent === 0) {
+      const matchesGlobally = filterRoster(roster, {
+        query: q,
+        location: 'World',
+        field: fieldSelect.value,
+        track: trackSelect.value,
+      }).length;
+      if (matchesGlobally > 0) {
+        locationSelect.value = 'World';
+      }
+    }
+  }
+
   const params = new URLSearchParams(window.location.search);
-  if (params.has('q')) searchInput.value = params.get('q');
+  if (params.has('q')) {
+    searchInput.value = params.get('q');
+  }
   if (params.has('loc') && LOCATIONS.includes(params.get('loc'))) {
     locationSelect.value = params.get('loc');
   } else if (params.has('location') && LOCATIONS.includes(params.get('location'))) {
     locationSelect.value = params.get('location');
+  } else if (params.has('q')) {
+    autoSelectLocationForQuery();
   }
   if (params.has('field') && (FIELDS.includes(params.get('field')) || params.get('field') === INTERESTING)) {
     fieldSelect.value = params.get('field');
@@ -510,7 +561,10 @@ async function init() {
     window.history.replaceState(null, '', url);
   }
 
-  function update() {
+  function update({ fromSearch = false } = {}) {
+    if (fromSearch) {
+      autoSelectLocationForQuery();
+    }
     syncDropdownCounts();
     const locRoster = roster.filter((p) => locationMatches(p, locationSelect.value));
     if (fieldSelect.value === INTERESTING) {
@@ -531,10 +585,10 @@ async function init() {
     syncUrl();
   }
 
-  searchInput.addEventListener('input', debounce(update, 150));
-  locationSelect.addEventListener('change', update);
-  fieldSelect.addEventListener('change', update);
-  trackSelect.addEventListener('change', update);
+  searchInput.addEventListener('input', debounce(() => update({ fromSearch: true }), 150));
+  locationSelect.addEventListener('change', () => update({ fromSearch: false }));
+  fieldSelect.addEventListener('change', () => update({ fromSearch: false }));
+  trackSelect.addEventListener('change', () => update({ fromSearch: false }));
 
   document.getElementById('home-link').addEventListener('click', (e) => {
     e.preventDefault(); // already on this page — reset in place instead of reloading
@@ -562,7 +616,7 @@ async function init() {
       searchInput.value = rankedItem.dataset.search;
       fieldSelect.value = 'all';
       trackSelect.value = 'all';
-      update();
+      update({ fromSearch: true });
     }
   });
 

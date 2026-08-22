@@ -169,3 +169,45 @@ test('full HTML roster rendering produces clean HTML with no undefined/null/NaN 
     }
   }
 });
+
+test('auto-select location logic widens to World when searching for international countries or faculty', async () => {
+  const { parseSearchQuery } = await import('../src/data.js');
+
+  function simulateLocationAutoSelect(initialLoc, query) {
+    let loc = initialLoc;
+    const q = query.trim();
+    if (!q) return loc;
+
+    const parsed = parseSearchQuery(q);
+    if (['country', 'location'].includes(parsed.type)) {
+      return 'World';
+    }
+
+    const countryNames = uniqueCountries(roster);
+    const isCountryQuery = countryNames.some((c) =>
+      c.toLowerCase() === q.toLowerCase() ||
+      (q.toLowerCase() === 'uk' && c === 'United Kingdom') ||
+      (q.toLowerCase() === 'usa' && c === 'United States')
+    );
+    if (isCountryQuery) return 'World';
+
+    const continentNames = ['asia', 'europe', 'australasia', 'north america', 'south america', 'africa', 'world'];
+    if (continentNames.includes(q.toLowerCase())) return 'World';
+
+    const inCurrent = filterRoster(roster, { query: q, location: loc }).length;
+    if (inCurrent === 0) {
+      const inWorld = filterRoster(roster, { query: q, location: 'World' }).length;
+      if (inWorld > 0) return 'World';
+    }
+    return loc;
+  }
+
+  assert.equal(simulateLocationAutoSelect('US', 'France'), 'World');
+  assert.equal(simulateLocationAutoSelect('US', 'country:Australia'), 'World');
+  assert.equal(simulateLocationAutoSelect('US', 'Japan'), 'World');
+  assert.equal(simulateLocationAutoSelect('US', 'University of Melbourne'), 'World');
+  assert.equal(simulateLocationAutoSelect('US', 'Xuan-Bach Le'), 'World');
+  assert.equal(simulateLocationAutoSelect('US', 'Cambridge'), 'US'); // Harvard/MIT in Cambridge, MA matches US!
+  assert.equal(simulateLocationAutoSelect('US', 'univ:"University of Cambridge"'), 'World');
+});
+
