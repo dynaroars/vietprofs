@@ -32,23 +32,26 @@ Europe, Asia, Australasia, South America, and Africa was introduced with a dedic
 The directory offers instant client-side filtering, free-text search, and structured query operators:
 
 ### Basic & diacritic-insensitive search
-The main search bar matches across professor names, current universities, departments, ranks, cities, states, countries, research areas, and PhD institutions. Search is fully diacritic-insensitive in both directions: typing `Nguyen` or `Nguyễn`, `Vu` or `Vũ`, and `Do` or `Đỗ` will find all matching profiles.
+The main search bar matches across professor names, current universities, departments, ranks, cities, states, countries, research areas, and **doctoral (PhD) institutions**. Search is fully diacritic-insensitive in both directions: typing `Nguyen` or `Nguyễn`, `Vu` or `Vũ`, and `Do` or `Đỗ` will find all matching profiles.
+
+> **Why does searching for a place or school return faculty located elsewhere?**
+> Free-text search matches across **all profile metadata**, including a professor's **PhD Alma Mater**. For instance, searching `Hong Kong` will return faculty currently appointed in Hong Kong (*e.g., at HKU or CUHK*) **as well as** professors who completed their doctorate in Hong Kong (*e.g., Prof. Ngoc Son Bui at Oxford, who earned his PhD at the University of Hong Kong*).
 
 ### Structured query prefixes
-To narrow search results to specific fields and avoid ambiguous matches, you can use structured prefix filters in the search box:
+To target a specific field (such as current appointment vs. PhD alma mater vs. country) and avoid broader full-text matches, use structured prefix filters in the search box:
 
 | Prefix | Description | Examples |
 |---|---|---|
-| `univ:` / `university:` / `school:` | Matches only faculty currently appointed at that university (excludes alumni who graduated from there but teach elsewhere). | `univ:Texas Tech`, `univ:"University of Washington"`, `univ:NUS` |
-| `phd:` / `phdinstitution:` / `alma:` | Matches only faculty who earned their doctorate at that institution. | `phd:Stanford`, `phd:"University of California, Berkeley"` |
-| `country:` / `nation:` | Matches professors located in that country. | `country:US`, `country:France`, `country:Singapore`, `country:Australia` |
+| `univ:` / `university:` / `school:` | Matches only faculty currently appointed at that university (excludes alumni who graduated from there but teach elsewhere). | `univ:Oxford`, `univ:"University of Hong Kong"`, `univ:NUS` |
+| `phd:` / `phdinstitution:` / `alma:` | Matches only faculty who earned their doctorate at that institution. | `phd:Stanford`, `phd:"University of Hong Kong"`, `phd:MIT` |
+| `country:` / `nation:` | Matches professors currently located in that country. | `country:"Hong Kong"`, `country:France`, `country:Singapore`, `country:Australia` |
 | `continent:` / `location:` / `loc:` | Matches professors in that continent/region (`US`, `North America`, `Europe`, `Asia`, `Australasia`, `South America`, `Africa`, `World`). | `continent:Europe`, `continent:Asia`, `loc:"North America"` |
-| `state:` | Matches professors located in that state (supports full state name or two-letter postal abbreviation). | `state:California`, `state:TX`, `state:WA` |
-| `city:` | Matches professors located in that city. | `city:Seattle`, `city:Singapore`, `city:Paris` |
-| `dept:` / `department:` | Matches primary department names. | `dept:Computer Science`, `dept:Economics` |
-| `name:` | Matches the professor's displayed name. | `name:"Thanh Nguyen"` |
+| `state:` | Matches professors located in that state or province (supports full name or two-letter postal code). | `state:California`, `state:TX`, `state:Ontario`, `state:Victoria` |
+| `city:` | Matches professors located in that city. | `city:Seattle`, `city:Singapore`, `city:Paris`, `city:Melbourne` |
+| `dept:` / `department:` | Matches primary department names. | `dept:Computer Science`, `dept:Economics`, `dept:Law` |
+| `name:` | Matches the professor's displayed name. | `name:"Thanh Nguyen"`, `name:"Ngoc Son Bui"` |
 
-*Note: Multi-word values can be written directly (e.g. `univ:Texas Tech University`) or enclosed in quotes (e.g. `univ:"Texas Tech University"`).*
+*Note: Multi-word values can be written directly (e.g. `univ:University of Hong Kong`) or enclosed in quotes (e.g. `univ:"University of Hong Kong"`).*
 
 ### Filters & insights dashboard
 - **Location, Field & Track Dropdowns**: Filter concurrently across geographic locations (**US** [default], **North America**, **South America**, **Africa**, **Asia**, **Australasia**, **Europe**, **World**), 17 broad academic disciplines, and 3 appointment tracks (**Tenure-line**, **Teaching**, **Emeritus**).

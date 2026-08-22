@@ -60,6 +60,18 @@ appointments change, so entries can become outdated. The project welcomes correc
 A dagger means the person has a secondary or joint appointment in the listed field while their
 primary tenure home is in another department.
 
+## Why does a search for a university or city/country (like "Hong Kong" or "MIT") return professors teaching elsewhere?
+
+The default search box is a comprehensive **full-text search** that indexes all profile fields — including a professor's **doctoral (PhD) alma mater**. 
+
+For example, typing `Hong Kong` matches faculty currently teaching at HKU/CUHK as well as professors who completed their doctorate in Hong Kong (such as *Prof. Ngoc Son Bui* at the University of Oxford, who earned his PhD at the University of Hong Kong).
+
+If you want to restrict your search to a specific attribute, use structured prefixes in the search bar:
+- `country:"Hong Kong"` — matches only professors currently appointed in Hong Kong.
+- `univ:"University of Hong Kong"` — matches only professors currently teaching at HKU.
+- `phd:"University of Hong Kong"` — matches only professors who graduated from HKU.
+- `loc:Asia` (or the location dropdown) — filters for all faculty in Asia.
+
 ## How can I submit a correction or missing professor?
 
 Use the [Submit an entry page](./submit.html). Please include an
