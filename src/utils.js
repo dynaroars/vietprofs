@@ -1,5 +1,6 @@
 export function escapeHtml(str) {
-  return str.replace(/[&<>"']/g, (c) => ({
+  if (str == null) return '';
+  return String(str).replace(/[&<>"']/g, (c) => ({
     '&': '&amp;',
     '<': '&lt;',
     '>': '&gt;',

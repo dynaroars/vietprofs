@@ -358,3 +358,30 @@ test('country: and continent: prefix queries filter roster accurately', () => {
   const filterLocWorld = filterRoster(roster, { location: 'World' });
   assert.equal(filterLocWorld.length, roster.length);
 });
+
+test('unique helpers never contain undefined or null values', async () => {
+  const { uniqueStates, uniqueCities, uniqueDepartments, uniqueCountries, uniqueResearchAreas, uniquePhdInstitutions, uniqueRanks } = await import('../src/data.js');
+  const states = uniqueStates(roster);
+  const cities = uniqueCities(roster);
+  const depts = uniqueDepartments(roster);
+  const countries = uniqueCountries(roster);
+  const areas = uniqueResearchAreas(roster);
+  const phds = uniquePhdInstitutions(roster);
+  const ranks = uniqueRanks(roster);
+
+  assert.ok(!states.includes(undefined) && !states.includes(null));
+  assert.ok(!cities.includes(undefined) && !cities.includes(null));
+  assert.ok(!depts.includes(undefined) && !depts.includes(null));
+  assert.ok(!countries.includes(undefined) && !countries.includes(null));
+  assert.ok(!areas.includes(undefined) && !areas.includes(null));
+  assert.ok(!phds.includes(undefined) && !phds.includes(null));
+  assert.ok(!ranks.includes(undefined) && !ranks.includes(null));
+});
+
+test('escapeHtml safely handles undefined, null, and special characters', async () => {
+  const { escapeHtml } = await import('../src/utils.js');
+  assert.equal(escapeHtml(undefined), '');
+  assert.equal(escapeHtml(null), '');
+  assert.equal(escapeHtml(''), '');
+  assert.equal(escapeHtml('Hello & <World> "quotes"'), 'Hello &amp; &lt;World&gt; &quot;quotes&quot;');
+});

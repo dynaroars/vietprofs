@@ -9,15 +9,15 @@ export async function loadRoster() {
 }
 
 export function uniqueStates(roster) {
-  return [...new Set(roster.map((p) => p.state))].sort();
+  return [...new Set(roster.map((p) => p.state).filter(Boolean))].sort();
 }
 
 export function uniqueDepartments(roster) {
-  return [...new Set(roster.map((p) => p.department))].sort();
+  return [...new Set(roster.map((p) => p.department).filter(Boolean))].sort();
 }
 
 export function uniqueCities(roster) {
-  return [...new Set(roster.map((p) => p.city))].sort();
+  return [...new Set(roster.map((p) => p.city).filter(Boolean))].sort();
 }
 
 export function uniqueRanks(roster) {
@@ -36,7 +36,7 @@ export function canonicalRank(person) {
 }
 
 export function uniqueResearchAreas(roster) {
-  return [...new Set(roster.flatMap((p) => p.researchAreas))].sort();
+  return [...new Set(roster.flatMap((p) => p.researchAreas).filter(Boolean))].sort();
 }
 
 // The three employment tracks a roster entry can carry. Tenure-line means tenure-track or already
