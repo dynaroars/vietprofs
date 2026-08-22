@@ -564,40 +564,33 @@ function countBy(roster, getKey) {
   return [...counts.entries()].sort((a, b) => b[1] - a[1]);
 }
 
-// Computed fresh from the live roster every time (not a snapshot), so these stay accurate as the
-// roster grows. Returned as plain fact strings — the "show me something interesting" view just
-// renders them as a list.
-export function buildFunFacts(roster) {
-  if (!roster || roster.length === 0) {
-    return ['No faculty currently listed for this location or filter selection.'];
+export function buildUsFunFacts(roster) {
+  const usRoster = (roster || []).filter((p) => (p.country || 'United States') === 'United States');
+  if (usRoster.length === 0) {
+    return ['No United States faculty currently listed under the active filter selection.'];
   }
   const facts = [];
-  const total = roster.length;
-  const universities = new Set(roster.map((p) => p.university));
+  const total = usRoster.length;
+  const universities = new Set(usRoster.map((p) => p.university));
 
-  facts.push(`${total} professor${total === 1 ? '' : 's'} listed across ${universities.size} universit${universities.size === 1 ? 'y' : 'ies'}.`);
+  facts.push(
+    `${total} professor${total === 1 ? '' : 's'} across ${universities.size} U.S. universit${universities.size === 1 ? 'y' : 'ies'}.`,
+  );
 
-  const surnames = surnameCounts(roster).slice(0, 6);
+  const surnames = surnameCounts(usRoster).slice(0, 6);
   if (surnames.length) {
     facts.push(
-      `Most common surnames in the roster: ${surnames.map(([s, c]) => `${s} (${c})`).join(', ')}.`,
+      `Most common surnames in the U.S. roster: ${surnames.map(([s, c]) => `${s} (${c})`).join(', ')}.`,
     );
   }
 
-  const countriesWithPeople = countBy(roster, (p) => p.country || 'United States');
-  if (countriesWithPeople.length > 1) {
-    const topCountries = countriesWithPeople.slice(0, 5);
-    facts.push(
-      `Top countries/regions represented: ${topCountries.map(([c, count]) => `${c} (${count})`).join(', ')}.`,
-    );
-  }
-
-  const placeEntries = countBy(roster, (p) => p.state);
+  const placeEntries = countBy(usRoster, (p) => p.state);
   if (placeEntries.length > 0) {
-    const topPlaces = placeEntries.slice(0, 3);
+    const topPlaces = placeEntries.slice(0, 4);
     facts.push(
-      `Most-represented places: ${topPlaces.map(([s, c]) => `${s} (${c})`).join(', ')}.`,
+      `Most-represented U.S. states: ${topPlaces.map(([s, c]) => `${s} (${c})`).join(', ')}.`,
     );
+
     const minCount = Math.min(...placeEntries.map(([, c]) => c));
     const leastPlaces = placeEntries.filter(([, c]) => c === minCount).map(([s]) => s);
     if (leastPlaces.length && leastPlaces.length <= 15) {
@@ -605,6 +598,7 @@ export function buildFunFacts(roster) {
         `Places with the fewest — just ${minCount} each: ${leastPlaces.join(', ')}.`,
       );
     }
+
     const represented = new Set(placeEntries.map(([s]) => s));
     const missingPlaces = US_PLACES.filter((s) => !represented.has(s));
     facts.push(
@@ -621,63 +615,96 @@ export function buildFunFacts(roster) {
     );
   }
 
-  const uniEntries = countBy(roster, (p) => p.university);
+  const uniEntries = countBy(usRoster, (p) => p.university);
   const topUnis = uniEntries.slice(0, 5);
   if (topUnis.length) {
     facts.push(
-      `Universities with the most people on the roster: ${topUnis.map(([u, c]) => `${u} (${c})`).join(', ')}.`,
+      `Top U.S. faculty institutions: ${topUnis.map(([u, c]) => `${u} (${c})`).join(', ')}.`,
     );
   }
-  const soloUnis = uniEntries.filter(([, c]) => c === 1).length;
-  if (universities.size > 1) {
-    facts.push(`${soloUnis} of the ${universities.size} universities have exactly one person listed.`);
-  }
 
-  const rankEntries = countBy(roster, (p) => canonicalRank(p) || 'rank not listed');
+  const rankEntries = countBy(usRoster, (p) => canonicalRank(p) || 'rank not listed');
   if (rankEntries.length) {
     facts.push(
-      `Rank breakdown: ${rankEntries.map(([r, c]) => `${c} ${r === 'Emeritus' || r === 'Teaching' ? r : r + (c === 1 ? '' : 's')}`).join(', ')}.`,
+      `U.S. rank breakdown: ${rankEntries.map(([r, c]) => `${c} ${r === 'Emeritus' || r === 'Teaching' ? r : r + (c === 1 ? '' : 's')}`).join(', ')}.`,
     );
   }
 
-  const withScholar = roster.filter((p) => p.scholarUrl).length;
-  facts.push(
-    `${withScholar} of ${total} entries (${Math.round((withScholar / total) * 100)}%) link out `
-      + 'to a Google Scholar profile.',
-  );
-
-  const years = roster.filter((p) => p.phdYear).map((p) => p.phdYear);
+  const years = usRoster.filter((p) => p.phdYear).map((p) => p.phdYear);
   if (years.length) {
-    facts.push(`PhD years on record span ${Math.min(...years)} to ${Math.max(...years)}.`);
-  }
-
-  const secondary = roster.filter((p) => p.secondaryAppointment).length;
-  if (secondary) {
-    facts.push(
-      `${secondary} ${secondary === 1 ? 'person holds' : 'people hold'} a marked secondary/joint `
-        + 'appointment (†).',
-    );
-  }
-
-  const raEntries = countBy(
-    roster.flatMap((p) => p.researchAreas.map((a) => ({ a }))),
-    (x) => x.a,
-  );
-  if (raEntries.length) {
-    const [topArea, topAreaCount] = raEntries[0];
-    facts.push(`Most common listed research area: "${topArea}" (${topAreaCount} people).`);
-  }
-
-  const refugeeResearchers = roster.filter((p) =>
-    p.researchAreas.some((a) => /refugee|diaspora|immigra/i.test(a)),
-  ).length;
-  if (refugeeResearchers) {
-    facts.push(
-      `${refugeeResearchers} ${refugeeResearchers === 1 ? 'person studies' : 'people study'} `
-        + 'refugee, immigration, or diaspora topics — research that traces directly back to the '
-        + "community's own postwar history.",
-    );
+    facts.push(`PhD graduation years on record span from ${Math.min(...years)} to ${Math.max(...years)}.`);
   }
 
   return facts;
+}
+
+export function buildGlobalFunFacts(roster) {
+  const globalRoster = (roster || []).filter((p) => (p.country || 'United States') !== 'United States');
+  if (globalRoster.length === 0) {
+    return ['No international diaspora faculty currently listed under the active filter selection.'];
+  }
+  const facts = [];
+  const total = globalRoster.length;
+  const universities = new Set(globalRoster.map((p) => p.university));
+  const countries = countBy(globalRoster, (p) => p.country);
+  const continents = countBy(globalRoster, (p) => continentOf(p.country));
+
+  facts.push(
+    `${total} international professor${total === 1 ? '' : 's'} across ${universities.size} universities in ${countries.length} countries outside the U.S.`,
+  );
+
+  if (continents.length) {
+    facts.push(
+      `Continental distribution: ${continents.map(([cont, c]) => `${cont} (${c})`).join(', ')}.`,
+    );
+  }
+
+  if (countries.length) {
+    facts.push(
+      `Top international diaspora hubs: ${countries.slice(0, 6).map(([c, count]) => `${c} (${count})`).join(', ')}.`,
+    );
+  }
+
+  const uniEntries = countBy(globalRoster, (p) => p.university);
+  const topUnis = uniEntries.slice(0, 5);
+  if (topUnis.length) {
+    facts.push(
+      `Top international universities by Vietnamese faculty: ${topUnis.map(([u, c]) => `${u} (${c})`).join(', ')}.`,
+    );
+  }
+
+  const refugeeResearchers = (roster || []).filter((p) =>
+    p.researchAreas && p.researchAreas.some((a) => /refugee|diaspora|immigra/i.test(a)),
+  ).length;
+  if (refugeeResearchers) {
+    facts.push(
+      `${refugeeResearchers} ${refugeeResearchers === 1 ? 'scholar studies' : 'scholars study'} `
+        + 'refugee, immigration, or diaspora topics — research that traces directly back to the '
+        + "global Vietnamese community's postwar history.",
+    );
+  }
+
+  const withScholar = globalRoster.filter((p) => p.scholarUrl).length;
+  facts.push(
+    `${withScholar} of ${total} international entries (${Math.round((withScholar / total) * 100)}%) link out to Google Scholar.`,
+  );
+
+  const years = globalRoster.filter((p) => p.phdYear).map((p) => p.phdYear);
+  if (years.length) {
+    facts.push(`Worldwide PhD graduation years span from ${Math.min(...years)} to ${Math.max(...years)}.`);
+  }
+
+  return facts;
+}
+
+// Computed fresh from the live roster every time (not a snapshot), so these stay accurate as the
+// roster grows. Returned as plain fact strings — the "show me something interesting" view just
+// renders them as a list.
+export function buildFunFacts(roster) {
+  if (!roster || roster.length === 0) {
+    return ['No faculty currently listed for this location or filter selection.'];
+  }
+  const usFacts = buildUsFunFacts(roster);
+  const globalFacts = buildGlobalFunFacts(roster);
+  return [...usFacts, ...globalFacts];
 }

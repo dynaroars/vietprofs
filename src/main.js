@@ -1,5 +1,5 @@
 import './style.css';
-import { loadRoster, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, canonicalRank, displayName, fieldOf, locationMatches, filterRoster, sortRoster, buildFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, STATE_ABBR } from './data.js';
+import { loadRoster, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, canonicalRank, displayName, fieldOf, locationMatches, filterRoster, sortRoster, buildFunFacts, buildUsFunFacts, buildGlobalFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, STATE_ABBR } from './data.js';
 import { escapeHtml } from './utils.js';
 
 // Sentinel field-select value for the "show me something interesting" view. Distinct from any
@@ -301,9 +301,10 @@ function renderDecadesChart(roster) {
   `;
 }
 
-function renderLeaderboards(roster) {
-  const topUnis = buildTopUniversities(roster, 8);
-  const topPhd = buildTopPhdInstitutions(roster, 8);
+function renderLeaderboards(subRoster, { titleUni = 'Top Faculty Hubs', descUni = 'Universities with the most Vietnamese faculty; click to search.', titlePhd = 'Top PhD Alma Maters', descPhd = 'Doctoral institutions that trained the most faculty; click to search.' } = {}) {
+  const topUnis = buildTopUniversities(subRoster, 6);
+  const topPhd = buildTopPhdInstitutions(subRoster, 6);
+  if (topUnis.length === 0 && topPhd.length === 0) return '';
   const maxUni = topUnis[0] ? topUnis[0][1] : 1;
   const maxPhd = topPhd[0] ? topPhd[0][1] : 1;
 
@@ -340,13 +341,13 @@ function renderLeaderboards(roster) {
   return `
     <div class="insights-grid">
       <div class="insights-card">
-        <h3 class="insights-heading">Top Faculty Hubs</h3>
-        <p class="insights-caption">Universities with the most Vietnamese faculty; click to search.</p>
+        <h3 class="insights-heading">${escapeHtml(titleUni)}</h3>
+        <p class="insights-caption">${escapeHtml(descUni)}</p>
         <div class="ranked-list">${uniRows}</div>
       </div>
       <div class="insights-card">
-        <h3 class="insights-heading">Top PhD Alma Maters</h3>
-        <p class="insights-caption">Doctoral institutions that trained the most faculty; click to search.</p>
+        <h3 class="insights-heading">${escapeHtml(titlePhd)}</h3>
+        <p class="insights-caption">${escapeHtml(descPhd)}</p>
         <div class="ranked-list">${phdRows}</div>
       </div>
     </div>
@@ -356,32 +357,62 @@ function renderLeaderboards(roster) {
 function renderFunFacts(roster) {
   const rosterEl = document.getElementById('roster');
   const countEl = document.getElementById('result-count');
-  countEl.textContent = 'Insights and patterns across the directory:';
-  const facts = buildFunFacts(roster);
-  const items = facts
-    .map((f) => {
-      const escaped = escapeHtml(f);
-      if (f.startsWith('Most common surnames')) {
-        // Wrap just the first "Nguyen" occurrence with the existing .term tooltip mechanic.
-        return `<li>${escaped.replace(
-          'Nguyen (',
-          `<span class="term" tabindex="0" data-tooltip="${escapeHtml(NGUYEN_TOOLTIP)}">Nguyen</span> (`,
-        )}</li>`;
-      }
-      return `<li>${escaped}</li>`;
-    })
-    .join('');
-  const hasUSStates = roster.some((p) => p.state && STATE_ABBR[p.state]);
+  countEl.textContent = 'Insights and patterns across the United States and the worldwide diaspora:';
+
+  const usRoster = roster.filter((p) => (p.country || 'United States') === 'United States');
+  const globalRoster = roster.filter((p) => (p.country || 'United States') !== 'United States');
+
+  const usFacts = buildUsFunFacts(roster);
+  const globalFacts = buildGlobalFunFacts(roster);
+
+  const formatList = (facts) =>
+    facts
+      .map((f) => {
+        const escaped = escapeHtml(f);
+        if (f.startsWith('Most common surnames')) {
+          // Wrap just the first "Nguyen" occurrence with the existing .term tooltip mechanic.
+          return `<li>${escaped.replace(
+            'Nguyen (',
+            `<span class="term" tabindex="0" data-tooltip="${escapeHtml(NGUYEN_TOOLTIP)}">Nguyen</span> (`,
+          )}</li>`;
+        }
+        return `<li>${escaped}</li>`;
+      })
+      .join('');
+
+  const countriesCount = new Set(globalRoster.map((p) => p.country)).size;
 
   rosterEl.innerHTML = `
     <div class="insights-dashboard">
-      ${hasUSStates ? renderStateGrid(roster) : ''}
-      ${renderDecadesChart(roster)}
-      ${renderLeaderboards(roster)}
-      <div class="insights-section">
-        <h3 class="insights-heading">Community Insights & Highlights</h3>
-        <ul class="fun-facts">${items}</ul>
-      </div>
+      <!-- SECTION 1: UNITED STATES -->
+      <section class="insights-section-block">
+        <div class="insights-section-header">
+          <span class="insights-badge">🇺🇸 United States</span>
+          <h2 class="insights-main-heading">United States Academic Landscape</h2>
+          <p class="insights-main-desc">${usRoster.length} professors across 200+ universities in all 50 states and territories.</p>
+        </div>
+        ${usRoster.length ? renderStateGrid(usRoster) : ''}
+        ${usRoster.length ? renderLeaderboards(usRoster, { titleUni: 'Top U.S. Faculty Hubs', descUni: 'U.S. universities with the most Vietnamese faculty; click to search.', titlePhd: 'Top U.S. PhD Alma Maters', descPhd: 'U.S. doctoral institutions that trained the most faculty; click to search.' }) : ''}
+        <div class="insights-section">
+          <h3 class="insights-heading">U.S. Community Highlights</h3>
+          <ul class="fun-facts">${formatList(usFacts)}</ul>
+        </div>
+      </section>
+
+      <!-- SECTION 2: ENTIRE WORLD & GLOBAL DIASPORA -->
+      <section class="insights-section-block">
+        <div class="insights-section-header">
+          <span class="insights-badge">🌐 Worldwide Diaspora</span>
+          <h2 class="insights-main-heading">Global & Worldwide Diaspora Landscape</h2>
+          <p class="insights-main-desc">${globalRoster.length} international professors across ${countriesCount} countries on 5 continents outside the U.S.</p>
+        </div>
+        ${renderDecadesChart(roster)}
+        ${globalRoster.length ? renderLeaderboards(globalRoster, { titleUni: 'Top International Faculty Hubs', descUni: 'Global universities outside the U.S. with the most Vietnamese faculty; click to search.', titlePhd: 'Top International PhD Alma Maters', descPhd: 'Doctoral institutions that trained global faculty; click to search.' }) : ''}
+        <div class="insights-section">
+          <h3 class="insights-heading">Global Diaspora Highlights</h3>
+          <ul class="fun-facts">${formatList(globalFacts)}</ul>
+        </div>
+      </section>
     </div>
   `;
 }

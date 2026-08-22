@@ -14,6 +14,8 @@ import {
   continentOf,
   locationMatches,
   buildFunFacts,
+  buildUsFunFacts,
+  buildGlobalFunFacts,
   filterRoster,
   sortRoster,
   buildTopUniversities,
@@ -92,6 +94,16 @@ test('buildFunFacts produces valid strings across every continent and empty rost
   const emptyFacts = buildFunFacts([]);
   assert.ok(Array.isArray(emptyFacts) && emptyFacts.length > 0);
   assert.ok(!emptyFacts[0].includes('NaN'));
+
+  const usFacts = buildUsFunFacts(roster);
+  assert.ok(Array.isArray(usFacts) && usFacts.length > 3);
+  assert.ok(usFacts.some((f) => f.includes('U.S. universit')));
+  assert.ok(usFacts.some((f) => f.includes('Vietnamese-American communities')));
+
+  const globalFacts = buildGlobalFunFacts(roster);
+  assert.ok(Array.isArray(globalFacts) && globalFacts.length > 3);
+  assert.ok(globalFacts.some((f) => f.includes('international professor')));
+  assert.ok(globalFacts.some((f) => f.includes('Continental distribution')));
 });
 
 test('suggestionValues array contains no undefined/null and all elements safely escape', () => {
