@@ -107,6 +107,26 @@ Included honors generally fall into these categories:
   comparable distinguished university appointment. Ordinary named faculty positions do not
   automatically qualify.
 
+The cross-field award families considered in the audit include:
+
+- **Computing and engineering**: ACM, IEEE, AAAI, SIAM, and equivalent society Fellow elections;
+  NSF CAREER, PECASE, Sloan, Packard, ONR/ARO/AFOSR, DARPA, DOE, and comparable investigator
+  programs; major ACM/IEEE technical achievement prizes; and retrospective Test-of-Time,
+  Most-Influential-Paper, or Impact awards from major ACM, IEEE, or equivalent flagship venues.
+- **Mathematics, statistics, and economics**: academy memberships; AMS, ASA, IMS, SIAM,
+  Econometric Society, and comparable Fellow distinctions; major national early-career awards;
+  and field-wide prizes such as Fields-, Abel-, Wolf-, COPSS-, and Frisch-level honors when the
+  recipient and award are directly verified.
+- **Natural, biomedical, and public-health sciences**: National Academy elections; major society
+  Fellow designations; NIH, NSF, Sloan, PECASE, and comparable national investigator awards; and
+  internationally recognized discipline-wide prizes.
+- **Social sciences, humanities, and the arts**: major academy or society Fellow elections;
+  discipline-wide honors from organizations such as APSA, ASA, AEA, AHA, MLA, and equivalent
+  international bodies; major national book or research prizes; and exceptional distinctions
+  such as the Pulitzer Prize, MacArthur Fellowship, Guggenheim Fellowship, or a comparable
+  internationally recognized honor. Ordinary book, article, dissertation, teaching, service,
+  and campus awards remain excluded even when they are competitive within a subfield.
+
 Routine grants and recognition are excluded, including NSF CRII and ordinary research grants,
 best-paper and distinguished-paper awards, teaching or service awards, department-level awards,
 travel awards, student scholarships, ordinary society membership, IEEE/ACM Senior Member status,
