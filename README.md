@@ -32,8 +32,8 @@ Europe, Asia, Australasia, South America, and Africa was introduced with a dedic
 The current field-by-field re-audit began on 2026-08-22. Completed fields are removed from this
 list only after current faculty sources and major-honor sources have been checked:
 
-- Completed: Physics & Astronomy
-- Remaining: Computer & Information Sciences; Engineering; Mathematics; Statistics & Data Science;
+- Completed: Physics & Astronomy; Statistics & Data Science
+- Remaining: Computer & Information Sciences; Engineering; Mathematics;
   Chemistry; Biological & Biomedical Sciences; Earth & Environmental Sciences; Agricultural & Natural
   Resource Sciences; Health Sciences; Business & Economics; Social & Behavioral Sciences; Education;
   Humanities; Law & Public Affairs; Arts & Design; Others
