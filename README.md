@@ -57,7 +57,7 @@ after current-faculty and major-honor sources have been checked:
 - [x] ~~Computer & Information Sciences~~
 - [x] ~~Business & Economics~~
 - [x] ~~Education~~
-- [ ] Humanities
+- [x] ~~Humanities~~
 - [ ] Agricultural & Natural Resource Sciences
 - [ ] Social & Behavioral Sciences
 - [ ] Others
