@@ -51,7 +51,7 @@ after current-faculty and major-honor sources have been checked:
 - [x] ~~Engineering~~
 - [x] ~~Chemistry~~
 - [x] ~~Health Sciences~~
-- [ ] Biological & Biomedical Sciences
+- [x] ~~Biological & Biomedical Sciences~~
 - [ ] Law & Public Affairs
 - [ ] Physics & Astronomy
 - [ ] Computer & Information Sciences
