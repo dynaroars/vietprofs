@@ -40,6 +40,31 @@ list only after current faculty sources and major-honor sources have been checke
 - Remaining: none — all listed fields have been audited.
   Humanities; Law & Public Affairs; Arts & Design; Others
 
+### Non-U.S. field-by-field audit TODO
+
+This separate pass covers faculty currently based outside the United States. It searches for
+major internationally recognized honors and selective national equivalents of U.S. programs
+such as NSF CAREER, PECASE, Sloan, ONR YIP, and DARPA YFA. Completed fields are crossed out
+after current-faculty and major-honor sources have been checked:
+
+- [ ] Mathematics
+- [ ] Engineering
+- [ ] Chemistry
+- [ ] Health Sciences
+- [ ] Biological & Biomedical Sciences
+- [ ] Law & Public Affairs
+- [ ] Physics & Astronomy
+- [ ] Computer & Information Sciences
+- [ ] Business & Economics
+- [ ] Education
+- [ ] Humanities
+- [ ] Agricultural & Natural Resource Sciences
+- [ ] Social & Behavioral Sciences
+- [ ] Others
+- [ ] Statistics & Data Science
+- [ ] Arts & Design
+- [ ] Earth & Environmental Sciences
+
 ## Using the website & search features
 
 The directory offers instant client-side filtering, free-text search, and structured query operators:
