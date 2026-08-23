@@ -130,7 +130,7 @@ test('filter counts stay visible, zero-count choices are omitted, and stale filt
   await page.locator('#track-filter').selectOption('Emeritus');
   assert.equal(await page.locator('#location-filter option[value="US"]').count(), 0);
   await page.locator('#home-link').click();
-  assert.equal(await page.locator('#location-filter').inputValue(), 'US');
+  assert.equal(await page.locator('#location-filter').inputValue(), 'World');
   assert.equal(await page.locator('#field-filter').inputValue(), 'all');
   assert.equal(await page.locator('#track-filter').inputValue(), 'all');
   assert.ok((await page.locator('.entry').count()) > 0);
@@ -139,7 +139,7 @@ test('filter counts stay visible, zero-count choices are omitted, and stale filt
     assert.ok((await page.locator('.entry').count()) > 0, `${selector} should always produce roster results`);
   }
   await page.goto(`${baseUrl}/?loc=Africa`, { waitUntil: 'networkidle' });
-  assert.equal(await page.locator('#location-filter').inputValue(), 'US');
+  assert.equal(await page.locator('#location-filter').inputValue(), 'World');
   assert.ok((await page.locator('.entry').count()) > 0);
   await page.goto(`${baseUrl}/?loc=France&field=Law%20%26%20Public%20Affairs&track=Teaching`, { waitUntil: 'networkidle' });
   assert.equal(await page.locator('#location-filter').inputValue(), 'France');
@@ -147,5 +147,19 @@ test('filter counts stay visible, zero-count choices are omitted, and stale filt
   assert.equal(await page.locator('#track-filter').inputValue(), 'all');
   assert.ok((await page.locator('.entry').count()) > 0);
   assert.deepEqual(runtimeErrors, []);
+  await page.close();
+});
+
+test('interesting view shows World alone, or the selected region plus World', async (t) => {
+  if (unavailable || !browser) return t.skip(`Browser smoke tests unavailable: ${unavailable ?? 'no browser'}`);
+  const page = await browser.newPage();
+  await page.goto(`${baseUrl}/?loc=World`, { waitUntil: 'networkidle' });
+  await page.locator('#field-filter').selectOption('interesting');
+  assert.equal(await page.locator('.insights-section-block').count(), 1);
+  await page.locator('#location-filter').selectOption('France');
+  await page.locator('#field-filter').selectOption('interesting');
+  assert.equal(await page.locator('.insights-section-block').count(), 2);
+  assert.equal(await page.locator('.insights-badge').filter({ hasText: 'France' }).count(), 1);
+  assert.equal(await page.locator('.insights-badge').filter({ hasText: 'World' }).count(), 1);
   await page.close();
 });

@@ -1,5 +1,5 @@
 import './style.css';
-import { loadRoster, buildSearchIndex, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, LOCATION_LABELS, countryFlag, canonicalRank, displayName, vietnameseName, fieldOf, healthSubfieldOf, locationMatches, filterRoster, sortRoster, buildFunFacts, buildUsFunFacts, buildGlobalFunFacts, buildAwardsFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, STATE_ABBR, parseSearchQuery } from './data.js';
+import { loadRoster, buildSearchIndex, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, LOCATION_LABELS, countryFlag, canonicalRank, displayName, vietnameseName, fieldOf, healthSubfieldOf, locationMatches, filterRoster, sortRoster, buildFunFacts, buildUsFunFacts, buildGlobalFunFacts, buildAwardsFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, STATE_ABBR, parseSearchQuery, continentOf } from './data.js';
 import { escapeHtml } from './utils.js';
 import { nearestVietnameseHoliday } from './holidays.js';
 import { STATE_GRID } from './state-grid.js';
@@ -293,9 +293,9 @@ function renderFunFacts(visibleRoster, selectedLocationLabel, selectedLocation, 
   const worldUsRoster = fullRoster.filter((p) => (p.country || 'United States') === 'United States');
   const worldInternationalRoster = fullRoster.filter((p) => (p.country || 'United States') !== 'United States');
   const selectedIsWorld = selectedLocation === 'World';
-  const selectedRoster = selectedIsWorld ? worldUsRoster : visibleRoster;
-  const selectedLabel = selectedIsWorld ? '🇺🇸 United States' : selectedLocationLabel;
-  const selectedIsUs = selectedIsWorld || selectedLocation === 'US';
+  const selectedRoster = selectedIsWorld ? fullRoster : visibleRoster;
+  const selectedLabel = selectedLocationLabel;
+  const selectedIsUs = selectedLocation === 'US';
   const selectedFacts = selectedIsUs ? buildUsFunFacts(selectedRoster) : buildGlobalFunFacts(selectedRoster);
   const selectedAwardsFacts = buildAwardsFunFacts(selectedRoster);
   const worldFacts = [...buildUsFunFacts(worldUsRoster), ...buildGlobalFunFacts(fullRoster)];
@@ -319,8 +319,7 @@ function renderFunFacts(visibleRoster, selectedLocationLabel, selectedLocation, 
   const selectedUniversities = new Set(selectedRoster.map((p) => p.university)).size;
   const worldCountriesCount = new Set(fullRoster.map((p) => p.country || 'United States')).size;
 
-  rosterEl.innerHTML = `
-    <div class="insights-dashboard">
+  const selectedSection = selectedIsWorld ? '' : `
       <!-- SECTION 1: SELECTED LOCATION -->
       <section class="insights-section-block">
         <div class="insights-section-header">
@@ -336,8 +335,13 @@ function renderFunFacts(visibleRoster, selectedLocationLabel, selectedLocation, 
           <ul class="fun-facts">${formatList([...selectedFacts, ...selectedAwardsFacts])}</ul>
         </div>
       </section>
+  `;
 
-      <!-- SECTION 2: WORLD -->
+  rosterEl.innerHTML = `
+    <div class="insights-dashboard">
+      ${selectedSection}
+
+      <!-- WORLD -->
       <section class="insights-section-block">
         <div class="insights-section-header">
           <span class="insights-badge">🌐 World</span>
@@ -432,7 +436,7 @@ async function init() {
   }
 
   // Mirror CSRankings' two location sections: countries/regions represented in the
-  // roster first, followed by the broader continent choices. US remains the default.
+  // roster first, followed by the broader continent choices. World is the default.
   const countryLocations = uniqueCountries(roster);
   const countryOptions = [
     'US',
@@ -465,7 +469,7 @@ async function init() {
   }
 
   function syncDropdownCounts({
-    location = locationSelect.value || 'US',
+    location = locationSelect.value || 'World',
     field = fieldSelect.value || 'all',
     track = trackSelect.value || 'all',
   } = {}) {
@@ -534,14 +538,14 @@ async function init() {
   function setFilterValues({ location, field = 'all', track = 'all' }) {
     const safeLocation = locationOptions.includes(location) && roster.some((person) => locationMatches(person, location))
       ? location
-      : 'US';
+      : 'World';
     const safeFilters = filtersHaveResults(safeLocation, field, track)
       ? { location: safeLocation, field, track }
       : { location: safeLocation, field: 'all', track: 'all' };
     syncDropdownCounts(safeFilters);
   }
 
-  setFilterValues({ location: 'US' });
+  setFilterValues({ location: 'World' });
 
   function autoSelectLocationForQuery() {
     const q = searchInput.value.trim();
@@ -609,7 +613,7 @@ async function init() {
   const requestedLocation = params.get('loc') ?? params.get('location');
   const requestedField = params.get('field');
   const requestedTrack = params.get('track');
-  let initialLocation = 'US';
+  let initialLocation = 'World';
   if (requestedLocation && locationOptions.includes(requestedLocation) && roster.some((p) => locationMatches(p, requestedLocation))) {
     initialLocation = requestedLocation;
   } else if (params.has('q')) {
@@ -626,10 +630,33 @@ async function init() {
   }
   setFilterValues({ location: initialLocation, field: initialField, track: initialTrack });
 
+  // IP-based country detection is silent (unlike navigator.geolocation, it does not trigger
+  // a browser permission prompt). It is only a convenience for a genuinely defaulted page:
+  // explicit URL filters and searches always take precedence, and World remains the fallback.
+  async function autoSelectRegionFromIp() {
+    if (requestedLocation || params.has('q') || locationSelect.value !== 'World') return;
+    try {
+      const response = await fetch('https://ipwho.is/', { signal: AbortSignal.timeout(2500) });
+      if (!response.ok) return;
+      const location = await response.json();
+      const country = String(location.country || '').trim();
+      const normalizedCountry = country.toLocaleLowerCase();
+      const rosterCountry = uniqueCountries(roster).find((value) => value.toLocaleLowerCase() === normalizedCountry);
+      const detectedLocation = location.country_code?.toUpperCase() === 'US'
+        ? 'US'
+        : rosterCountry || (country ? continentOf(country) : 'World');
+      if (!locationOptions.includes(detectedLocation) || locationSelect.value !== 'World') return;
+      setFilterValues({ location: detectedLocation, field: fieldSelect.value, track: trackSelect.value });
+      update();
+    } catch {
+      // Network failures, blocked requests, and privacy tools simply leave World selected.
+    }
+  }
+
   function syncUrl() {
     const next = new URLSearchParams();
     if (searchInput.value.trim()) next.set('q', searchInput.value.trim());
-    if (locationSelect.value !== 'US') next.set('loc', locationSelect.value);
+    if (locationSelect.value !== 'World') next.set('loc', locationSelect.value);
     if (fieldSelect.value !== 'all') next.set('field', fieldSelect.value);
     if (trackSelect.value !== 'all') next.set('track', trackSelect.value);
     const query = next.toString();
@@ -737,7 +764,7 @@ async function init() {
   document.getElementById('home-link').addEventListener('click', (e) => {
     e.preventDefault(); // already on this page — reset in place instead of reloading
     searchInput.value = '';
-    setFilterValues({ location: 'US' });
+    setFilterValues({ location: 'World' });
     update();
   });
 
@@ -856,6 +883,7 @@ async function init() {
   });
 
   update();
+  autoSelectRegionFromIp();
 }
 
 init();

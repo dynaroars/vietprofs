@@ -44,7 +44,7 @@ To target a specific field (such as current appointment vs. PhD alma mater vs. c
 *Note: Multi-word values can be written directly (e.g. `univ:University of Hong Kong`) or enclosed in quotes (e.g. `univ:"University of Hong Kong"`).*
 
 ### Filters & insights dashboard
-- **Location, Field & Track Dropdowns**: Filter concurrently across countries represented by at least one professor (**United States** [default], followed by the other countries in the roster, with flags), or by continent (**North America**, **South America**, **Africa**, **Asia**, **Australasia**, **Europe**, **World**), 17 broad academic disciplines, and 3 appointment tracks (**Tenure-line**, **Teaching**, **Emeritus**). The search syntax also supports these continent/region filters directly, such as `loc:Europe`.
+- **Location, Field & Track Dropdowns**: Filter concurrently across countries represented by at least one professor (**World** [default], followed by the other countries in the roster, with flags), or by continent (**North America**, **South America**, **Africa**, **Asia**, **Australasia**, **Europe**, **World**), 17 broad academic disciplines, and 3 appointment tracks (**Tenure-line**, **Teaching**, **Emeritus**). The search syntax also supports these continent/region filters directly, such as `loc:Europe`.
 - **✨ Show me something interesting**: Select this option in the field dropdown to open the interactive insights dashboard:
   - **Geographic Distribution**: 50 states + DC schematic heat map. Clicking any state tile automatically filters the roster by `state:<State>`.
   - **Top Faculty Hubs**: Universities employing the most Vietnamese faculty. Clicking a hub filters by `univ:<University>`.
