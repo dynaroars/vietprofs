@@ -146,7 +146,7 @@ Updated 2026-08-23. The roster currently has **52 entries without a portrait**. 
 - 140. Benjamin Nguyen — University of Texas Southwestern Medical Center ([profile](https://profiles.utsouthwestern.edu/profile/96328/benjamin-nguyen.html))
 - ~~141. C. Thi Nguyen — University of Utah~~ ([profile](https://philosophy.utah.edu/directory/faculty.php))
 - ~~142. Patricia Nguyen — University of Virginia~~ ([profile](https://americanstudies.as.virginia.edu/office-hours))
-- ~~143. Bich Minh Nguyen — University of Wisconsin-Madison~~ ([profile](https://guide.wisc.edu/faculty/))
+- ~~143. Bich Minh Nguyen — University of Wisconsin-Madison~~ ([profile](https://guide.wisc.edu/faculty/)) — bogus duplicate (fabricated department/degree data) of "Beth Nguyen"/#70, same person under her author byline "Beth (Bich Minh) Nguyen"; record removed
 - ~~144. Anh T. Bui — Virginia Commonwealth University~~ ([profile](https://ssor.vcu.edu/directory/bui.html))
 - ~~145. Kimberly Kay Hoang — University of Chicago~~ ([profile](https://sociology.uchicago.edu/directory/kimberly-kay-hoang))
 - 146. Nhan Phan-Thien — National University of Singapore ([profile](https://cde.nus.edu.sg/me/staff/phan-thien-nhan/))

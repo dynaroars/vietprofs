@@ -15,6 +15,7 @@ function searchableFields(person) {
     canonicalRank(person),
     healthSubfieldOf(person),
     person.phdInstitution,
+    person.mdInstitution,
     ...(person.researchAreas ?? []),
     ...(person.honors ?? []).flatMap((honor) => [honor.name, honor.organization]),
   ];

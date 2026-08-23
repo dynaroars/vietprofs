@@ -167,6 +167,7 @@ function renderRoster(roster, { field, location } = {}) {
               </div>
               <div class="entry-meta">${escapeHtml(entryMeta)} <span class="loc-badge" title="${escapeHtml(p.country || 'United States')}"><span class="country-flag" aria-hidden="true">${countryFlag(p.country)}</span></span></div>
               ${p.phdYear || p.phdInstitution ? `<div class="entry-details">PhD (${[p.phdInstitution, p.phdYear].filter(Boolean).map((value) => escapeHtml(String(value))).join(', ')})</div>` : ''}
+              ${p.mdYear || p.mdInstitution ? `<div class="entry-details">MD (${[p.mdInstitution, p.mdYear].filter(Boolean).map((value) => escapeHtml(String(value))).join(', ')})</div>` : ''}
             ${honors ? `<div class="entry-honors"><span class="honors-label">Honors:</span> ${honors}</div>` : ''}
             <div class="tags">${tags}</div>
           </div>
