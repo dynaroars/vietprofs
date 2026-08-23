@@ -83,7 +83,7 @@ test('stale zero-result field URLs fall back to the roster', async (t) => {
   await page.close();
 });
 
-test('zero-count filter options are hidden and stale locations recover', async (t) => {
+test('filter counts stay visible, zero-count choices are omitted, and stale filters recover', async (t) => {
   if (unavailable || !browser) return t.skip(`Browser smoke tests unavailable: ${unavailable ?? 'no browser'}`);
   const page = await browser.newPage();
   const runtimeErrors = [];
@@ -94,20 +94,46 @@ test('zero-count filter options are hidden and stale locations recover', async (
   await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
   const fieldOptions = page.locator('#field-filter option');
   const trackOptions = page.locator('#track-filter option');
-  assert.ok((await fieldOptions.allTextContents()).every((text) => text.trim()));
-  assert.ok((await trackOptions.allTextContents()).every((text) => text.trim()));
+  const countedFieldLabels = await fieldOptions.evaluateAll((options) =>
+    options.filter((option) => option.value !== 'interesting').map((option) => option.textContent),
+  );
+  const countedTrackLabels = await trackOptions.allTextContents();
+  assert.ok(countedFieldLabels.every((text) => /\(\d+\)$/.test(text.trim())));
+  assert.ok(countedTrackLabels.every((text) => /\(\d+\)$/.test(text.trim())));
+  assert.ok(countedFieldLabels.every((text) => !text.endsWith('(0)')));
+  assert.ok(countedTrackLabels.every((text) => !text.endsWith('(0)')));
   assert.match(await fieldOptions.filter({ hasText: 'Health' }).first().textContent(), /Health.*\(\d+\)/);
   assert.match(await fieldOptions.filter({ hasText: 'Law' }).first().textContent(), /Law.*\(\d+\)/);
   assert.match(await trackOptions.filter({ hasText: 'Tenure-line' }).first().textContent(), /Tenure-line \(\d+\)/);
-  assert.equal(await page.locator('#field-filter option[value="Others"]').getAttribute('data-zero-count'), 'true');
+  assert.equal(await page.locator('#field-filter option[value="Others"]').count(), 0);
   await page.locator('#field-filter').selectOption('Biological & Biomedical Sciences');
-  assert.equal(await page.locator('#track-filter option[value="Teaching"]').getAttribute('data-zero-count'), 'true');
-  assert.equal(await page.locator('#track-filter option[value="Emeritus"]').getAttribute('data-zero-count'), 'true');
-  assert.equal(await page.locator('#field-filter option[value="Others"]').getAttribute('data-zero-count'), 'true');
-  const visibleCountryLabels = await page.locator('#location-filter option:not([data-zero-count="true"])').allTextContents();
-  assert.ok(visibleCountryLabels.every((label) => !label.endsWith('(0)')));
+  assert.ok((await page.locator('.entry').count()) > 0);
+  assert.equal(await page.locator('#track-filter option[value="Teaching"]').count(), 0);
+  assert.equal(await page.locator('#track-filter option[value="Emeritus"]').count(), 0);
+  assert.equal(await page.locator('#field-filter option[value="Others"]').count(), 0);
+  const locationLabels = await page.locator('#location-filter option').allTextContents();
+  assert.ok(locationLabels.every((label) => /\(\d+\)$/.test(label.trim())));
+  assert.ok(locationLabels.every((label) => !label.endsWith('(0)')));
+  await page.locator('#location-filter').selectOption('World');
+  await page.locator('#field-filter').selectOption('Physics & Astronomy');
+  await page.locator('#track-filter').selectOption('Emeritus');
+  assert.equal(await page.locator('#location-filter option[value="US"]').count(), 0);
+  await page.locator('#home-link').click();
+  assert.equal(await page.locator('#location-filter').inputValue(), 'US');
+  assert.equal(await page.locator('#field-filter').inputValue(), 'all');
+  assert.equal(await page.locator('#track-filter').inputValue(), 'all');
+  assert.ok((await page.locator('.entry').count()) > 0);
+  for (const selector of ['.example-chip[data-field]', '.example-chip[data-track]', '.example-chip[data-loc]']) {
+    await page.locator(selector).first().click();
+    assert.ok((await page.locator('.entry').count()) > 0, `${selector} should always produce roster results`);
+  }
   await page.goto(`${baseUrl}/?loc=Africa`, { waitUntil: 'networkidle' });
   assert.equal(await page.locator('#location-filter').inputValue(), 'US');
+  assert.ok((await page.locator('.entry').count()) > 0);
+  await page.goto(`${baseUrl}/?loc=France&field=Law%20%26%20Public%20Affairs&track=Teaching`, { waitUntil: 'networkidle' });
+  assert.equal(await page.locator('#location-filter').inputValue(), 'France');
+  assert.equal(await page.locator('#field-filter').inputValue(), 'all');
+  assert.equal(await page.locator('#track-filter').inputValue(), 'all');
   assert.ok((await page.locator('.entry').count()) > 0);
   assert.deepEqual(runtimeErrors, []);
   await page.close();

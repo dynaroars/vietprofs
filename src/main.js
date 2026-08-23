@@ -395,6 +395,40 @@ async function init() {
 
   const searchInput = document.getElementById('search');
   const locationSelect = document.getElementById('location-filter');
+  const fieldSelect = document.getElementById('field-filter');
+  const trackSelect = document.getElementById('track-filter');
+
+  function optionElement(value, label) {
+    const option = document.createElement('option');
+    option.value = value;
+    option.textContent = label;
+    return option;
+  }
+
+  function setOptions(select, entries, selectedValue) {
+    select.replaceChildren(...entries.map(({ value, label }) => optionElement(value, label)));
+    select.value = selectedValue;
+    if (select.selectedIndex < 0) select.selectedIndex = 0;
+  }
+
+  function setLocationOptions(countryEntries, continentEntries, selectedValue) {
+    const groups = [
+      ['By country/region', countryEntries],
+      ['By continent', continentEntries],
+    ];
+    const groupElements = groups
+      .filter(([, entries]) => entries.length > 0)
+      .map(([label, entries]) => {
+        const group = document.createElement('optgroup');
+        group.label = label;
+        group.append(...entries.map(({ value, label: optionLabel }) => optionElement(value, optionLabel)));
+        return group;
+      });
+    locationSelect.replaceChildren(...groupElements);
+    locationSelect.value = selectedValue;
+    if (locationSelect.selectedIndex < 0) locationSelect.selectedIndex = 0;
+  }
+
   // Mirror CSRankings' two location sections: countries/regions represented in the
   // roster first, followed by the broader continent choices. US remains the default.
   const countryLocations = uniqueCountries(roster);
@@ -409,49 +443,33 @@ async function init() {
   const continentOptions = LOCATIONS.filter((loc) => loc !== 'US');
   const locationOptions = [...countryOptions, ...continentOptions];
   const locationLabel = (loc) => LOCATION_LABELS[loc] || `${countryFlag(loc)} ${loc}`;
-  const renderLocationOption = (loc) => {
-    return `<option value="${escapeHtml(loc)}">${escapeHtml(locationLabel(loc))}</option>`;
-  };
-  locationSelect.insertAdjacentHTML(
-    'beforeend',
-    `<optgroup label="By country/region">${countryOptions.map(renderLocationOption).join('')}</optgroup>` +
-    `<optgroup label="By continent">${continentOptions.map(renderLocationOption).join('')}</optgroup>`,
-  );
-  locationSelect.value = 'US';
-
-  const fieldSelect = document.getElementById('field-filter');
-  for (const field of FIELDS) {
-    fieldSelect.insertAdjacentHTML('beforeend', `<option value="${escapeHtml(field)}">${escapeHtml(fieldDropdownLabel(field))}</option>`);
-  }
-  fieldSelect.insertAdjacentHTML(
-    'beforeend',
-    `<option value="${INTERESTING}">✨ Show me something interesting</option>`,
-  );
-
-  const trackSelect = document.getElementById('track-filter');
-  for (const track of TRACKS) {
-    trackSelect.insertAdjacentHTML('beforeend', `<option value="${escapeHtml(track)}">${escapeHtml(track)}</option>`);
-  }
 
   // Each dropdown's option counts reflect the OTHER dropdowns' current selection, so picking
-  // a location, field, or track narrows every number shown across the other dropdowns — kept in sync by
-  // calling this at the top of update(), which already runs on every relevant state change.
-  function syncDropdownCounts() {
-    const updateOption = (option, label, count, select) => {
-      const zeroCount = count === 0 && option.value !== select.value;
-      option.dataset.zeroCount = zeroCount ? 'true' : 'false';
-      option.style.display = zeroCount ? 'none' : '';
-      option.textContent = `${label} (${count})`;
-    };
-    const hideEmptyGroups = (select) => {
-      for (const group of Array.from(select.querySelectorAll('optgroup'))) {
-        const options = Array.from(group.querySelectorAll('option'));
-        group.style.display = options.every((option) => option.dataset.zeroCount === 'true') ? 'none' : '';
-      }
-    };
-    const locVal = locationSelect.value;
-    const fieldVal = fieldSelect.value;
-    const trackVal = trackSelect.value;
+  // a location, field, or track narrows the options shown in the other dropdowns. Rebuilding
+  // options omits zero-count choices without relying on non-portable CSS for native controls.
+  function filtersHaveResults(location, field, track) {
+    return roster.some((person) =>
+      locationMatches(person, location) &&
+      (field === 'all' || field === INTERESTING || fieldOf(person.department, person.university) === field) &&
+      (track === 'all' || person.track === track)
+    );
+  }
+
+  function countedOptions(values, subset, matches, labelFor) {
+    return values.flatMap((value) => {
+      const count = subset.filter((person) => matches(person, value)).length;
+      return count > 0 ? [{ value, label: `${labelFor(value)} (${count})` }] : [];
+    });
+  }
+
+  function syncDropdownCounts({
+    location = locationSelect.value || 'US',
+    field = fieldSelect.value || 'all',
+    track = trackSelect.value || 'all',
+  } = {}) {
+    const locVal = location;
+    const fieldVal = field;
+    const trackVal = track;
 
     // Location dropdown counts (filtered by active field & track)
     let locBase = roster;
@@ -461,36 +479,67 @@ async function init() {
     if (trackVal !== 'all') {
       locBase = locBase.filter((p) => p.track === trackVal);
     }
-    for (const option of Array.from(locationSelect.options)) {
-      const count = locBase.filter((p) => locationMatches(p, option.value)).length;
-      updateOption(option, locationLabel(option.value), count, locationSelect);
-    }
-    hideEmptyGroups(locationSelect);
+    const locationEntries = (values) => countedOptions(
+      values,
+      locBase,
+      locationMatches,
+      locationLabel,
+    );
+    setLocationOptions(locationEntries(countryOptions), locationEntries(continentOptions), locVal);
 
     // Field dropdown counts (filtered by active location & track)
     let fieldBase = roster.filter((p) => locationMatches(p, locVal));
     if (trackVal !== 'all') {
       fieldBase = fieldBase.filter((p) => p.track === trackVal);
     }
-    fieldSelect.options[0].textContent = `All fields (${fieldBase.length})`;
-    for (const option of Array.from(fieldSelect.options)) {
-      if (!FIELDS.includes(option.value)) continue;
-      const count = fieldBase.filter((p) => fieldOf(p.department, p.university) === option.value).length;
-      updateOption(option, fieldDropdownLabel(option.value), count, fieldSelect);
-    }
+    const fieldEntries = countedOptions(
+      FIELDS,
+      fieldBase,
+      (person, value) => fieldOf(person.department, person.university) === value,
+      fieldDropdownLabel,
+    );
+    setOptions(
+      fieldSelect,
+      [
+        { value: 'all', label: `All fields (${fieldBase.length})` },
+        ...fieldEntries,
+        { value: INTERESTING, label: '✨ Show me something interesting' },
+      ],
+      fieldVal,
+    );
 
     // Track dropdown counts (filtered by active location & field)
     let trackBase = roster.filter((p) => locationMatches(p, locVal));
     if (fieldVal !== 'all' && fieldVal !== INTERESTING) {
       trackBase = trackBase.filter((p) => fieldOf(p.department, p.university) === fieldVal);
     }
-    trackSelect.options[0].textContent = `All faculty types (${trackBase.length})`;
-    for (const option of Array.from(trackSelect.options)) {
-      if (!TRACKS.includes(option.value)) continue;
-      const count = trackBase.filter((p) => p.track === option.value).length;
-      updateOption(option, option.value, count, trackSelect);
-    }
+    const trackEntries = countedOptions(
+      TRACKS,
+      trackBase,
+      (person, value) => person.track === value,
+      (value) => value,
+    );
+    setOptions(
+      trackSelect,
+      [
+        { value: 'all', label: `All faculty types (${trackBase.length})` },
+        ...trackEntries,
+      ],
+      trackVal,
+    );
   }
+
+  function setFilterValues({ location, field = 'all', track = 'all' }) {
+    const safeLocation = locationOptions.includes(location) && roster.some((person) => locationMatches(person, location))
+      ? location
+      : 'US';
+    const safeFilters = filtersHaveResults(safeLocation, field, track)
+      ? { location: safeLocation, field, track }
+      : { location: safeLocation, field: 'all', track: 'all' };
+    syncDropdownCounts(safeFilters);
+  }
+
+  setFilterValues({ location: 'US' });
 
   function autoSelectLocationForQuery() {
     const q = searchInput.value.trim();
@@ -556,17 +605,24 @@ async function init() {
     searchInput.value = params.get('q');
   }
   const requestedLocation = params.get('loc') ?? params.get('location');
-  if (requestedLocation && (locationOptions.includes(requestedLocation) || LOCATIONS.includes(requestedLocation)) && roster.some((p) => locationMatches(p, requestedLocation))) {
-    locationSelect.value = requestedLocation;
+  const requestedField = params.get('field');
+  const requestedTrack = params.get('track');
+  let initialLocation = 'US';
+  if (requestedLocation && locationOptions.includes(requestedLocation) && roster.some((p) => locationMatches(p, requestedLocation))) {
+    initialLocation = requestedLocation;
   } else if (params.has('q')) {
     autoSelectLocationForQuery();
+    initialLocation = locationSelect.value;
   }
-  if (params.has('field') && (FIELDS.includes(params.get('field')) || params.get('field') === INTERESTING) && (params.get('field') === INTERESTING || roster.some((p) => fieldOf(p.department, p.university) === params.get('field')))) {
-    fieldSelect.value = params.get('field');
+  let initialField = 'all';
+  if (requestedField === INTERESTING || (FIELDS.includes(requestedField) && roster.some((p) => fieldOf(p.department, p.university) === requestedField))) {
+    initialField = requestedField;
   }
-  if (params.has('track') && TRACKS.includes(params.get('track')) && roster.some((p) => p.track === params.get('track'))) {
-    trackSelect.value = params.get('track');
+  let initialTrack = 'all';
+  if (TRACKS.includes(requestedTrack) && roster.some((p) => p.track === requestedTrack)) {
+    initialTrack = requestedTrack;
   }
+  setFilterValues({ location: initialLocation, field: initialField, track: initialTrack });
 
   function syncUrl() {
     const next = new URLSearchParams();
@@ -586,17 +642,11 @@ async function init() {
       }
       autoSelectLocationForQuery();
     }
-    // Count labels are auxiliary UI. A browser-specific select/optgroup quirk must never
-    // prevent the primary roster from rendering.
-    try {
-      syncDropdownCounts();
-    } catch (error) {
-      console.error('Unable to synchronize filter counts', error);
-    }
     const locRoster = roster.filter((p) => locationMatches(p, locationSelect.value));
     if (fieldSelect.value === INTERESTING) {
       renderFunFacts(locRoster);
       syncUrl();
+      syncDropdownCounts();
       return;
     }
     const filtered = filterRoster(searchIndex, {
@@ -610,6 +660,8 @@ async function init() {
       location: locationSelect.value,
     });
     syncUrl();
+    // Refresh auxiliary count labels only after the primary roster and URL are complete.
+    syncDropdownCounts();
   }
 
   searchInput.addEventListener('input', debounce(() => update({ fromSearch: true }), 150));
@@ -620,9 +672,7 @@ async function init() {
   document.getElementById('home-link').addEventListener('click', (e) => {
     e.preventDefault(); // already on this page — reset in place instead of reloading
     searchInput.value = '';
-    locationSelect.value = 'US';
-    fieldSelect.value = 'all';
-    trackSelect.value = 'all';
+    setFilterValues({ location: 'US' });
     update();
   });
 
@@ -632,9 +682,7 @@ async function init() {
     const tile = e.target.closest('.state-tile');
     if (tile) {
       searchInput.value = tile.dataset.state;
-      locationSelect.value = 'US';
-      fieldSelect.value = 'all'; // leaving the facts view to show the filtered results
-      trackSelect.value = 'all';
+      setFilterValues({ location: 'US' }); // leaving the facts view to show filtered U.S. results
       update();
       return;
     }
@@ -671,14 +719,18 @@ async function init() {
 
   const facts = buildFunFacts(roster);
   const randomFact = facts[Math.floor(Math.random() * facts.length)];
+  const populatedFields = FIELDS.filter((field) => filtersHaveResults('World', field, 'all'));
+  const populatedLocations = locationOptions.filter((location) =>
+    !['US', 'World'].includes(location) && filtersHaveResults(location, 'all', 'all')
+  );
   const examples = [
     ...pickRandomUnique(roster.map((p) => displayName(p.name)), 2).map((value) => ({ type: 'search', value })),
     ...pickRandomUnique(uniqueDepartments(roster), 1).map((value) => ({ type: 'search', value })),
     ...pickRandomUnique(uniqueStates(roster), 1).map((value) => ({ type: 'search', value })),
     ...pickRandomUnique(roster.flatMap((p) => p.researchAreas), 1).map((value) => ({ type: 'search', value })),
-    ...pickRandomUnique(FIELDS, 2).map((field) => ({ type: 'field', value: field, label: fieldDropdownLabel(field) })),
+    ...pickRandomUnique(populatedFields, 2).map((field) => ({ type: 'field', value: field, label: fieldDropdownLabel(field) })),
     ...pickRandomUnique(TRACKS, 1).map((track) => ({ type: 'track', value: track })),
-    ...pickRandomUnique(locationOptions.filter((l) => !['US', 'World'].includes(l)), 1).map((loc) => ({ type: 'loc', value: loc })),
+    ...pickRandomUnique(populatedLocations, 1).map((loc) => ({ type: 'loc', value: loc })),
     { type: 'fact', value: randomFact },
   ].sort(() => Math.random() - 0.5);
   const examplesEl = document.getElementById('examples');
@@ -703,30 +755,25 @@ async function init() {
     if (!btn) return;
     if (btn.dataset.fun) {
       searchInput.value = '';
-      fieldSelect.value = INTERESTING;
-      trackSelect.value = 'all';
+      setFilterValues({ location: locationSelect.value, field: INTERESTING });
       update();
       return;
     }
     if (btn.dataset.field) {
       searchInput.value = '';
-      fieldSelect.value = btn.dataset.field;
-      trackSelect.value = 'all';
+      setFilterValues({ location: 'World', field: btn.dataset.field });
       update();
       return;
     }
     if (btn.dataset.track) {
       searchInput.value = '';
-      fieldSelect.value = 'all';
-      trackSelect.value = btn.dataset.track;
+      setFilterValues({ location: 'World', track: btn.dataset.track });
       update();
       return;
     }
     if (btn.dataset.loc) {
       searchInput.value = '';
-      locationSelect.value = btn.dataset.loc;
-      fieldSelect.value = 'all';
-      trackSelect.value = 'all';
+      setFilterValues({ location: btn.dataset.loc });
       update();
       return;
     }
