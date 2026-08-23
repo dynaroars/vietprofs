@@ -62,7 +62,7 @@ after current-faculty and major-honor sources have been checked:
 - [x] ~~Social & Behavioral Sciences~~
 - [x] ~~Others~~
 - [x] ~~Statistics & Data Science~~
-- [ ] Arts & Design
+- [x] ~~Arts & Design~~
 - [ ] Earth & Environmental Sciences
 
 ## Using the website & search features
