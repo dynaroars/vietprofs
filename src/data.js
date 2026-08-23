@@ -370,7 +370,7 @@ const FIELD_RULES = [
   // keyword below — so it doesn't get caught by that instead.
   {
     field: 'Health Sciences',
-    match: /health|medicine|surgery|nursing|public health|epidemiology|pharma|psychiatry|pathology|dermatology|biomedical sciences|kinesiology|exercise science|sport science|veterinary|nutrition|dietetics|audiology|speech-language pathology|communication sciences and disorders|anatom|toxicology|dentistry|dental|orthodont|dentisterie|radiology|radiolog|optometry|vision science/i,
+    match: /health|medicine|surgery|nursing|public health|epidemiology|pharma|psychiatry|pathology|dermatology|biomedical sciences|cardiovascular|pediatric|neurology|ophthalmology|family practice|physician assistant|kinesiology|exercise science|sport science|veterinary|nutrition|dietetics|audiology|speech-language pathology|communication sciences and disorders|anatom|toxicology|dentistry|dental|orthodont|dentisterie|radiology|radiolog|optometry|vision science/i,
   },
   // Business terms are specific enough (accounting, marketing, entrepreneurship, ...) that
   // false-positive risk is low; "management" is the one generic-sounding term here, which is
@@ -378,16 +378,16 @@ const FIELD_RULES = [
   // rule are checked first for the science-flavored "X Management" department names that exist.
   {
     field: 'Business & Economics',
-    match: /business|economic|\bfinanc(?:e|ial|es)\b|accounting|marketing|management|entrepreneurship|\binsurance\b|real estate|human resource|industrial relations|organi[zs]ational|work and organi[zs]ation|supply chain|\blogistics\b/i,
+    match: /business|economic|\bfinanc(?:e|ial|es)\b|accounting|marketing|management|entrepreneurship|\binsurance\b|real estate|human resource|industrial relations|organi[zs]ation|work and organi[zs]ation|supply chain|\blogistics\b/i,
   },
-  { field: 'Computer & Information Sciences', match: /computer science|computing|informati(?:cs?|que)|information science|information studies|information systems|information technology|\bIST\b|\bCIS\b|library|machine learning|artificial intelligence|natural language processing|multimedia/i },
+  { field: 'Computer & Information Sciences', match: /computer science|computing|informati(?:cs?|que)|information science|information studies|information systems|information technology|cybersecurity|\bIST\b|\bCIS\b|library|machine learning|artificial intelligence|natural language processing|multimedia/i },
   // Stem match (not just "mathematics") so "Mathematical Sciences" — UT Dallas's actual
   // department name — lands here too, without fabricating a different department string.
   { field: 'Mathematics', match: /mathematic|mathématiq|géométrie/i },
-  { field: 'Statistics & Data Science', match: /statistics|biostatistics|operations research|data science/i },
+  { field: 'Statistics & Data Science', match: /statistics|biostatistics|operations research|decision sciences|data science/i },
   // "materials science" alone (no "engineering" in the name) still lands here — combined
   // "Materials Science and Engineering" departments already match the bare "engineering" term.
-  { field: 'Engineering', match: /engineering|materials(?: science)?|aviation science|aeronautic|astronautic|aerospace|electrical communication|nanotechnology|nanotechnologie/i },
+  { field: 'Engineering', match: /engineering|materials(?: science)?|aviation science|aeronautic|astronautic|aerospace|electrical communication|mechatronic|nanotechnology|nanotechnologie/i },
   { field: 'Physics & Astronomy', match: /physics|astronomy/i },
   { field: 'Chemistry', match: /chemistry|chimie/i },
   {
@@ -412,9 +412,9 @@ const FIELD_RULES = [
   { field: 'Law & Public Affairs', match: /\blaw\b|legal studies|public policy|public affairs|public administration|criminal justice|criminology|urban (studies and )?planning|regional planning|city planning/i },
   {
     field: 'Social & Behavioral Sciences',
-    match: /sociology|psycholog(?:y|ical)|anthropology|political science|\bpolitics\b|social work|communication|international relations|ethnic studies|american studies|ethnicity,? race|asian studies|asian american studies|asian-pacific studies|asian pacific studies|global and international studies|global studies|international studies|gender,? and sexuality studies|women's,? gender|women's studies|social and cultural analysis|journalism|human development|family studies|gerontology|media and culture|media and communication|southeast asia/i,
+    match: /sociology|psycholog(?:y|ical)|anthropology|political science|\bpolitics\b|social work|human services|child and adolescent development|communication|international relations|ethnic studies|american studies|ethnicity,? race|asian studies|asian american studies|asian-pacific studies|asian pacific studies|global and international studies|global studies|international studies|gender,? and sexuality studies|women's,? gender|women's studies|social and cultural analysis|journalism|human development|family studies|gerontology|media and culture|media and communication|southeast asia/i,
   },
-  { field: 'Humanities', match: /history|philosophy|english|literature|linguistics|languages|classics|great books|religio|theolog|divinity/i },
+  { field: 'Humanities', match: /history|philosophy|english|literature|linguistics|languages|letters and cultures|classics|great books|religio|theolog|divinity/i },
   { field: 'Arts & Design', match: /\barts?\b|design|music|theat|dance|film|cinema|photograph|architecture/i },
   // A department that matches none of the established broad disciplines is grouped under Others.
 ];
