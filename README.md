@@ -165,6 +165,39 @@ The cross-field award families considered in the audit include:
   internationally recognized honor. Ordinary book, article, dissertation, teaching, service,
   and campus awards remain excluded even when they are competitive within a subfield.
 
+### Non-U.S. equivalents
+
+The non-U.S. audit applies the same prestige and selectivity threshold rather than treating U.S.
+awards as the only valid standard. We look for the closest nationally or internationally
+recognized equivalent in the country where the professor is based, and record it only when the
+award or election is explicitly attributed to that person. Examples of eligible equivalents
+include:
+
+- **Australia and New Zealand**: Australian Research Council Future Fellowships, DECRA and
+  Laureate Fellowships; NHMRC Leadership Fellowships; Australian Academy of Science, Australian
+  Academy of Health and Medical Sciences, and other equivalent academy elections; Endeavour
+  Fellowships; Engineers Australia medals; and major national or field-wide prizes.
+- **Canada**: Canada Research Chair-level distinctions; CIHR and comparable national investigator
+  awards; Royal Society of Canada Fellow or College of New Scholars elections; Canadian Academy
+  of Engineering Fellow; Engineering Institute of Canada Fellow; and major national prizes.
+- **United Kingdom and Europe**: Royal Society or Royal Academy of Engineering elections and
+  fellowships; Newton Prizes; British Academy or equivalent academy elections; ERC Starting,
+  Consolidator, or Advanced Grants when they are clearly awarded to the listed professor; NWO
+  Veni/Vidi/Vici and comparable national investigator programs; and Wallenberg Academy
+  Fellowships or equivalent selective European career programs.
+- **International professional societies**: selective Fellow elections from organizations such as
+  IET, EIC, CAE, Royal Society of Chemistry, Royal Statistical Society, Econometric Society, and
+  other internationally recognized disciplinary bodies. Ordinary membership, senior membership,
+  editorial roles, and committee service do not qualify.
+
+These examples are illustrative, not an automatic inclusion list. A grant is included only when
+the program itself is a selective investigator award or fellowship comparable to NSF CAREER,
+PECASE, Sloan, or a national academy-level distinction. Ordinary project funding, internal
+university awards, student scholarships, travel grants, best-paper awards, dissertation awards,
+and routine teaching or supervision awards remain excluded. For non-U.S. faculty, the audit also
+checks current affiliation and identity carefully because shared Vietnamese names and changing
+international appointments create a high risk of false attribution.
+
 Routine grants and recognition are excluded, including NSF CRII and ordinary research grants,
 best-paper and distinguished-paper awards, teaching or service awards, department-level awards,
 travel awards, student scholarships, ordinary society membership, IEEE/ACM Senior Member status,
