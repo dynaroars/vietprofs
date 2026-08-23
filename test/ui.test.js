@@ -221,6 +221,12 @@ test('auto-select location logic widens to World when searching for internationa
     const continentNames = ['asia', 'europe', 'australasia', 'north america', 'south america', 'africa', 'world'];
     if (continentNames.includes(q.toLowerCase())) return 'World';
 
+    const exactUniversityMatch = roster.some((p) =>
+      p.university?.toLowerCase() === q.toLowerCase() &&
+      (p.country || 'United States') !== 'United States'
+    );
+    if (exactUniversityMatch) return 'World';
+
     const inCurrent = filterRoster(roster, { query: q, location: loc }).length;
     if (inCurrent === 0) {
       const inWorld = filterRoster(roster, { query: q, location: 'World' }).length;

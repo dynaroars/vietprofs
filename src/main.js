@@ -504,6 +504,18 @@ async function init() {
       return;
     }
 
+    // A university-name query can also match a same-named city in the current country
+    // (for example, University of Melbourne and Melbourne, Florida). Prefer the explicit
+    // current-university match when deciding whether to widen the location.
+    const exactUniversityMatch = roster.some((p) =>
+      p.university?.toLowerCase() === q.toLowerCase() &&
+      (p.country || 'United States') !== 'United States'
+    );
+    if (exactUniversityMatch) {
+      locationSelect.value = 'World';
+      return;
+    }
+
     const matchesInCurrent = filterRoster(searchIndex, {
       query: q,
       location: locationSelect.value,
