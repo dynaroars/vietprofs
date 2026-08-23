@@ -84,6 +84,12 @@ h1 {
   gap: 0.5rem;
 }
 
+.site-subtitle {
+  margin: 0.35rem 0 0;
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+}
+
 .github-link,
 .icon-link {
   display: inline-flex;

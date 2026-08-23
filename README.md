@@ -1,6 +1,6 @@
-# Vietnamese Professors Outside Vietnam
+# Vietnamese Academic Diaspora
 
-> Find Vietnamese and Vietnamese diaspora professors across fields at universities worldwide.
+> A directory of Vietnamese professors worldwide.
 
 A searchable directory of Vietnamese professors at universities outside Vietnam, covering three
 employment tracks — **Tenure-line** (tenure-track or tenured), **Teaching** (full-time,
