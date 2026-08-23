@@ -132,7 +132,7 @@ Updated 2026-08-23. The roster currently has **52 entries without a portrait**. 
 - ~~126. An H. Do — University of California, Irvine~~ ([profile](https://catalogue.uci.edu/faculty/))
 - ~~127. Linda Trinh Vo — University of California, Irvine~~ ([profile](https://catalogue.uci.edu/schoolofhumanities/departmentofasianamericanstudies/))
 - 128. Van T. Nguyen — University of Dayton ([profile](https://catalog.udayton.edu/graduate/generalinformation/directories/textfaculty/textfaculty.pdf))
-- ~~129. Phuong Huynh — University of Florida~~ ([profile](https://biomed.med.ufl.edu/faculty/faculty-database-2/?pagenum=6))
+- 129. Phuong Huynh — University of Florida — REMOVED 2026-08-23: source page (`biomed.med.ufl.edu/faculty/faculty-database-2/?pagenum=6`) is now dead (301s to a generic app shell), and the portrait/portraitSource on file (`scholars.ufl.edu/phuong.huynh`) turned out to belong to a different Phuong Huynh (Asst Dean & Sr Lecturer, MD-COM Dean's Office — education/curriculum focus, not Pathology/Immunology/medical entomology). No live UF page could be found corroborating a Pathology-track Phuong Huynh; entry and portrait file removed pending a verified source.
 - ~~130. Ngoc Bui - University of La Verne — University of La Verne~~ ([profile](https://researchworks.laverne.edu/esploro/profile/ngoc_bui))
 - ~~131. Thu Thi Xuan Nguyen — University of Maryland, College Park~~ ([profile](https://sph.umd.edu/research-impact/laboratories-projects-and-programs/big-data-health-equity-bd4he))
 - ~~132. Quynh Camthi Nguyen — University of Maryland, College Park~~ ([profile](https://sph.umd.edu/sites/default/files/cvs/Quynh%20Nguyen_CV-11-10-2020%20-%20Quynh%20Camthi%20Nguyen.pdf))
