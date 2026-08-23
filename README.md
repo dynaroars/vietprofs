@@ -59,7 +59,7 @@ after current-faculty and major-honor sources have been checked:
 - [x] ~~Education~~
 - [x] ~~Humanities~~
 - [x] ~~Agricultural & Natural Resource Sciences~~
-- [ ] Social & Behavioral Sciences
+- [x] ~~Social & Behavioral Sciences~~
 - [ ] Others
 - [ ] Statistics & Data Science
 - [ ] Arts & Design
