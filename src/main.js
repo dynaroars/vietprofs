@@ -283,17 +283,21 @@ function renderLeaderboards(subRoster, { titleUni = 'Top Faculty Hubs', descUni 
   `;
 }
 
-function renderFunFacts(visibleRoster) {
+function renderFunFacts(visibleRoster, selectedLocationLabel, selectedLocation, fullRoster) {
   const rosterEl = document.getElementById('roster');
   const countEl = document.getElementById('result-count');
-  countEl.textContent = 'Insights and patterns across the United States and the worldwide diaspora:';
+  countEl.textContent = 'Insights and patterns for the selected location and the worldwide diaspora:';
 
-  const usRoster = visibleRoster.filter((p) => (p.country || 'United States') === 'United States');
-  const globalRoster = visibleRoster.filter((p) => (p.country || 'United States') !== 'United States');
-
-  const usFacts = buildUsFunFacts(visibleRoster);
-  const globalFacts = buildGlobalFunFacts(visibleRoster);
-  const awardsFacts = buildAwardsFunFacts(visibleRoster);
+  const worldUsRoster = fullRoster.filter((p) => (p.country || 'United States') === 'United States');
+  const worldInternationalRoster = fullRoster.filter((p) => (p.country || 'United States') !== 'United States');
+  const selectedIsWorld = selectedLocation === 'World';
+  const selectedRoster = selectedIsWorld ? worldUsRoster : visibleRoster;
+  const selectedLabel = selectedIsWorld ? '🇺🇸 United States' : selectedLocationLabel;
+  const selectedIsUs = selectedIsWorld || selectedLocation === 'US';
+  const selectedFacts = selectedIsUs ? buildUsFunFacts(selectedRoster) : buildGlobalFunFacts(selectedRoster);
+  const selectedAwardsFacts = buildAwardsFunFacts(selectedRoster);
+  const worldFacts = [...buildUsFunFacts(worldUsRoster), ...buildGlobalFunFacts(fullRoster)];
+  const worldAwardsFacts = buildAwardsFunFacts(fullRoster);
 
   const formatList = (facts) =>
     facts
@@ -310,50 +314,39 @@ function renderFunFacts(visibleRoster) {
       })
       .join('');
 
-  const countriesCount = new Set(globalRoster.map((p) => p.country)).size;
+  const selectedUniversities = new Set(selectedRoster.map((p) => p.university)).size;
+  const worldCountriesCount = new Set(fullRoster.map((p) => p.country || 'United States')).size;
 
   rosterEl.innerHTML = `
     <div class="insights-dashboard">
-      <!-- SECTION 1: UNITED STATES -->
+      <!-- SECTION 1: SELECTED LOCATION -->
       <section class="insights-section-block">
         <div class="insights-section-header">
-          <span class="insights-badge">🇺🇸 United States</span>
-          <h2 class="insights-main-heading">United States Academic Landscape</h2>
-          <p class="insights-main-desc">${usRoster.length} professors across 200+ universities in all 50 states and territories.</p>
+          <span class="insights-badge">${escapeHtml(selectedLabel)}</span>
+          <h2 class="insights-main-heading">${escapeHtml(selectedIsUs ? 'United States Academic Landscape' : `${selectedLocationLabel} Academic Landscape`)}</h2>
+          <p class="insights-main-desc">${selectedRoster.length} professor${selectedRoster.length === 1 ? '' : 's'} across ${selectedUniversities} universit${selectedUniversities === 1 ? 'y' : 'ies'} in the selected location.</p>
         </div>
-        ${usRoster.length ? renderStateGrid(usRoster) : ''}
-        ${usRoster.length ? renderLeaderboards(usRoster, { titleUni: 'Top U.S. Faculty Hubs', descUni: 'U.S. universities with the most Vietnamese faculty; click to search.', titlePhd: 'Top U.S. PhD Alma Maters', descPhd: 'U.S. doctoral institutions that trained the most faculty; click to search.' }) : ''}
+        ${selectedIsUs && selectedRoster.length ? renderStateGrid(selectedRoster) : ''}
+        ${selectedRoster.length ? renderDecadesChart(selectedRoster) : ''}
+        ${selectedRoster.length ? renderLeaderboards(selectedRoster, { titleUni: selectedIsUs ? 'Top U.S. Faculty Hubs' : 'Top Faculty Hubs', descUni: 'Universities with the most Vietnamese faculty in the selected location; click to search.', titlePhd: selectedIsUs ? 'Top U.S. PhD Alma Maters' : 'Top PhD Alma Maters', descPhd: 'Doctoral institutions that trained faculty in the selected location; click to search.' }) : ''}
         <div class="insights-section">
-          <h3 class="insights-heading">U.S. Community Highlights</h3>
-          <ul class="fun-facts">${formatList(usFacts)}</ul>
+          <h3 class="insights-heading">${escapeHtml(selectedLabel)} Highlights</h3>
+          <ul class="fun-facts">${formatList([...selectedFacts, ...selectedAwardsFacts])}</ul>
         </div>
       </section>
 
-      <!-- SECTION 2: ENTIRE WORLD & GLOBAL DIASPORA -->
+      <!-- SECTION 2: WORLD -->
       <section class="insights-section-block">
         <div class="insights-section-header">
-          <span class="insights-badge">🌐 Worldwide Diaspora</span>
-          <h2 class="insights-main-heading">Global & Worldwide Diaspora Landscape</h2>
-          <p class="insights-main-desc">${globalRoster.length} international professors across ${countriesCount} countries on 5 continents outside the U.S.</p>
+          <span class="insights-badge">🌐 World</span>
+          <h2 class="insights-main-heading">Global &amp; Worldwide Diaspora Landscape</h2>
+          <p class="insights-main-desc">${fullRoster.length} professors across ${worldCountriesCount} countries and regions worldwide.</p>
         </div>
-        ${renderDecadesChart(visibleRoster)}
-        ${globalRoster.length ? renderLeaderboards(globalRoster, { titleUni: 'Top International Faculty Hubs', descUni: 'Global universities outside the U.S. with the most Vietnamese faculty; click to search.', titlePhd: 'Top International PhD Alma Maters', descPhd: 'Doctoral institutions that trained global faculty; click to search.' }) : ''}
+        ${renderDecadesChart(fullRoster)}
+        ${worldInternationalRoster.length ? renderLeaderboards(worldInternationalRoster, { titleUni: 'Top International Faculty Hubs', descUni: 'Global universities outside the U.S. with the most Vietnamese faculty; click to search.', titlePhd: 'Top International PhD Alma Maters', descPhd: 'Doctoral institutions that trained global faculty; click to search.' }) : ''}
         <div class="insights-section">
-          <h3 class="insights-heading">Global Diaspora Highlights</h3>
-          <ul class="fun-facts">${formatList(globalFacts)}</ul>
-        </div>
-      </section>
-
-      <!-- SECTION 3: MAJOR AWARDS & HONORS -->
-      <section class="insights-section-block">
-        <div class="insights-section-header">
-          <span class="insights-badge">🏅 Major honors</span>
-          <h2 class="insights-main-heading">Awards &amp; Honors</h2>
-          <p class="insights-main-desc">Selective, internationally recognized distinctions recorded in the faculty database.</p>
-        </div>
-        <div class="insights-section">
-          <h3 class="insights-heading">Awards &amp; Honors Highlights</h3>
-          <ul class="fun-facts">${formatList(awardsFacts)}</ul>
+          <h3 class="insights-heading">World Highlights</h3>
+          <ul class="fun-facts">${formatList([...worldFacts, ...worldAwardsFacts])}</ul>
         </div>
       </section>
     </div>
@@ -650,7 +643,7 @@ async function init() {
     }
     const locRoster = roster.filter((p) => locationMatches(p, locationSelect.value));
     if (fieldSelect.value === INTERESTING) {
-      renderFunFacts(locRoster);
+      renderFunFacts(locRoster, locationLabel(locationSelect.value), locationSelect.value, roster);
       syncUrl();
       syncDropdownCounts();
       return;
