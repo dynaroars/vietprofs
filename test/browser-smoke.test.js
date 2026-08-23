@@ -92,6 +92,8 @@ test('zero-count filter options are hidden and stale locations recover', async (
     if (message.type() === 'error') runtimeErrors.push(message.text());
   });
   await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
+  assert.ok((await page.locator('#field-filter option').allTextContents()).every((text) => text.trim()));
+  assert.ok((await page.locator('#track-filter option').allTextContents()).every((text) => text.trim()));
   await page.locator('#field-filter').selectOption('Biological & Biomedical Sciences');
   assert.equal(await page.locator('#track-filter option[value="Teaching"]').getAttribute('data-zero-count'), 'true');
   assert.equal(await page.locator('#track-filter option[value="Emeritus"]').getAttribute('data-zero-count'), 'true');

@@ -421,7 +421,7 @@ async function init() {
 
   const fieldSelect = document.getElementById('field-filter');
   for (const field of FIELDS) {
-    fieldSelect.insertAdjacentHTML('beforeend', `<option value="${escapeHtml(field)}"></option>`);
+    fieldSelect.insertAdjacentHTML('beforeend', `<option value="${escapeHtml(field)}">${escapeHtml(fieldDropdownLabel(field))}</option>`);
   }
   fieldSelect.insertAdjacentHTML(
     'beforeend',
@@ -430,7 +430,7 @@ async function init() {
 
   const trackSelect = document.getElementById('track-filter');
   for (const track of TRACKS) {
-    trackSelect.insertAdjacentHTML('beforeend', `<option value="${escapeHtml(track)}"></option>`);
+    trackSelect.insertAdjacentHTML('beforeend', `<option value="${escapeHtml(track)}">${escapeHtml(track)}</option>`);
   }
 
   // Each dropdown's option counts reflect the OTHER dropdowns' current selection, so picking
