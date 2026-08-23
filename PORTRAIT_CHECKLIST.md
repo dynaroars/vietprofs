@@ -1,6 +1,6 @@
 # Portrait checklist
 
-Updated 2026-08-23. The roster currently has **239 entries without a portrait**. Items crossed out have a verified portrait wired into `public/data.json` (or, where still noted "image candidate", a candidate URL found but not yet verified); generic social-preview/default images are intentionally not marked complete.
+Updated 2026-08-23. The roster currently has **53 entries without a portrait**. Items crossed out have a verified portrait wired into `public/data.json` (or, where still noted "image candidate", a candidate URL found but not yet verified); generic social-preview/default images are intentionally not marked complete.
 
 ## Missing portraits
 
@@ -274,17 +274,21 @@ Updated 2026-08-23. The roster currently has **239 entries without a portrait**.
 - 268. Cung Nguyen — University of Salford ([profile](https://www.salford.ac.uk/our-staff/cung-nguyen))
 - ~~269. Emma Nguyen — Newcastle University~~ ([profile](https://www.ncl.ac.uk/elll/people/profile/emmanguyen.html))
 - ~~270. Andy Tran — The University of Sydney~~ ([profile](https://profiles.sydney.edu.au/andy.t))
-- 271. Phung Lai — University at Albany ([profile](https://sites.google.com/view/iphunglai/home))
-- 272. Caroline Cao — Wright State University ([profile](https://engineering-computer-science.wright.edu/lab/ergonomics-in-remote-environments-laboratory/profile/dr-caroline-cao))
-- 273. Jane X. Luu — Tufts University ([profile](https://as.tufts.edu/faculty-research/faculty-news/faculty-news-2022-2023))
-- 274. Trung Le - North Dakota State University — North Dakota State University ([profile](https://www.ndsu.edu/ccee/faculty_and_staff/faculty/le/))
-- 275. Hai T. Tran — Point Park University ([profile](https://www.pointpark.edu/academics/schools/schoolofartsandsciences/departments/naturalsciencesandengineeringtechnology/faculty/hai-tran))
-- 276. Vy Nguyen — Augusta University ([profile](https://web1.augusta.edu/faculty/directory/view.php?id=TUONGUYEN))
+- ~~271. Phung Lai — University at Albany~~ ([profile](https://sites.google.com/view/iphunglai/home))
+- ~~272. Caroline Cao — Wright State University~~ ([profile](https://engineering-computer-science.wright.edu/lab/ergonomics-in-remote-environments-laboratory/profile/dr-caroline-cao))
+- ~~273. Jane X. Luu — Tufts University~~ ([profile](https://as.tufts.edu/faculty-research/faculty-news/faculty-news-2022-2023))
+- ~~274. Trung Le - North Dakota State University — North Dakota State University~~ ([profile](https://www.ndsu.edu/ccee/faculty_and_staff/faculty/le/))
+- ~~275. Hai T. Tran — Point Park University~~ ([profile](https://www.pointpark.edu/academics/schools/schoolofartsandsciences/departments/naturalsciencesandengineeringtechnology/faculty/hai-tran))
+- ~~276. Vy Nguyen — Augusta University~~ ([profile](https://web1.augusta.edu/faculty/directory/view.php?id=TUONGUYEN))
 - 277. Thao L. Nguyen — UTHealth Houston ([profile](https://www.uth.edu/people/profile?id=7e555467-3c42-4cfc-af51-e7b0db1f91f8))
-- 278. Hung Luu — University of Texas Southwestern Medical Center ([profile](https://profiles.utsouthwestern.edu/profile/117881/hung-luu.html))
-- 279. Tuong Vi Ho — Texas Woman's University ([profile](https://twu.edu/center-for-global-nursing/faculty-members/ho/))
-- 280. Hien Nguyen — University of Wisconsin-Whitewater ([profile](https://web-ns-vip.uww.edu/graduate-studies/grad-directory))
+- ~~278. Hung Luu — University of Texas Southwestern Medical Center~~ ([profile](https://profiles.utsouthwestern.edu/profile/117881/hung-luu.html))
+- ~~279. Tuong Vi Ho — Texas Woman's University~~ ([profile](https://twu.edu/center-for-global-nursing/faculty-members/ho/))
+- ~~280. Hien Nguyen — University of Wisconsin-Whitewater~~ ([profile](https://web-ns-vip.uww.edu/graduate-studies/grad-directory))
 
 ## Next pass
 
-Download and visually verify the crossed-out candidates, then add the approved local WebP and `portraitSource` to `public/data.json`. Continue searching the remaining entries in batches.
+This was the final batch (items 1–280). All items are now either struck through with a verified portrait wired into `public/data.json`, or left as a residual below for manual follow-up.
+
+### Residual items needing manual follow-up
+
+- 277. Thao L. Nguyen — UTHealth Houston ([profile](https://www.uth.edu/people/profile?id=7e555467-3c42-4cfc-af51-e7b0db1f91f8)). Her official headshot exists at `https://www.uth.edu/stroke-institute/assets/img/profile-photos/thao nguyen, do, faap.jpg` (confirmed via an archived copy of her UTHealth profile page), but UTHealth Houston's WAF blocks all automated fetches of the asset itself (403, including via third-party proxy) and no Wayback Machine snapshot of that specific image file exists. A manual download (e.g. via a real browser session) is needed to complete this entry.
