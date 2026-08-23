@@ -597,7 +597,12 @@ export function filterRoster(roster, { query = '', location, field, track, unive
 
   // Full-text search across all fields, including award names and organizations.
   return result.filter((p) => {
-    return index.textByPerson.get(p).some((h) => h.includes(target));
+    const searchableText = index.textByPerson.get(p).join(' ');
+    if (searchableText.includes(target)) return true;
+    // Also accept multi-word searches whose terms are separated by initials or
+    // punctuation, e.g. "van vu" should match the name "Van H. Vu".
+    const terms = target.split(/\s+/).filter(Boolean);
+    return terms.length > 1 && terms.every((term) => searchableText.includes(term));
   });
 }
 

@@ -358,7 +358,11 @@ async function init() {
     ...new Set([
       'honors',
       'awards',
-      ...roster.map((p) => displayName(p.name)),
+      ...roster.flatMap((p) => {
+        const name = displayName(p.name);
+        const withoutInitials = name.replace(/\b[A-Z]\.\s*/g, '').replace(/\s+/g, ' ').trim();
+        return [name, withoutInitials];
+      }),
       ...roster.map((p) => p.university),
       ...uniqueDepartments(roster),
       ...uniqueRanks(roster),

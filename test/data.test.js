@@ -195,6 +195,11 @@ test('searching an honor name lists professors who hold that honor', () => {
   assert.ok(fellow.every((p) => p.honors?.some((honor) => honor.name === 'IEEE Fellow')));
 });
 
+test('searching a name without middle initials still finds the professor', () => {
+  const result = filterRoster(roster, { query: 'van vu', field: 'all', location: 'World' });
+  assert.ok(result.some((person) => person.name === 'Van H. Vu'));
+});
+
 test('honors and awards keywords list every professor with at least one honor', () => {
   const expected = roster.filter((p) => Array.isArray(p.honors) && p.honors.length > 0);
   for (const query of ['honors', 'awards']) {
