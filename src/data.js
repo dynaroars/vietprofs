@@ -601,7 +601,8 @@ export function filterRoster(roster, { query = '', location, field, track, unive
   // Gordon Bell source merely because that source mentions IEEE).
   const honorMatches = result.filter((p) => (p.honors || []).some((honor) => {
     const honorName = stripDiacritics((honor.name || '').toLowerCase());
-    return honorName.includes(target);
+    const awardQuery = /award|fellow|prize|grant|medal|academy|fellowship|career|professorship|honor|honour/.test(target);
+    return honorName === target || (awardQuery && honorName.includes(target));
   }));
   if (honorMatches.length > 0) return honorMatches;
 
