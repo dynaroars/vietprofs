@@ -283,17 +283,19 @@ function renderLeaderboards(subRoster, { titleUni = 'Top Faculty Hubs', descUni 
   `;
 }
 
-function renderFunFacts(roster) {
+function renderFunFacts(visibleRoster) {
   const rosterEl = document.getElementById('roster');
   const countEl = document.getElementById('result-count');
   countEl.textContent = 'Insights and patterns across the United States and the worldwide diaspora:';
 
-  const usRoster = roster.filter((p) => (p.country || 'United States') === 'United States');
-  const globalRoster = roster.filter((p) => (p.country || 'United States') !== 'United States');
+  const usRoster = visibleRoster.filter((p) => (p.country || 'United States') === 'United States');
+  const globalRoster = visibleRoster.filter((p) => (p.country || 'United States') !== 'United States');
 
-  const usFacts = buildUsFunFacts(roster);
-  const globalFacts = buildGlobalFunFacts(roster);
-  const awardsFacts = buildAwardsFunFacts(roster);
+  const usFacts = buildUsFunFacts(visibleRoster);
+  const globalFacts = buildGlobalFunFacts(visibleRoster);
+  // Awards and honors are directory-wide distinctions, so keep them worldwide even when the
+  // insights view is opened with the default U.S. location filter.
+  const awardsFacts = buildAwardsFunFacts(fullRoster);
 
   const formatList = (facts) =>
     facts
