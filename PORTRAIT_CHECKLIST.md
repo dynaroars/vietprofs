@@ -1,6 +1,6 @@
 # Portrait checklist
 
-Updated 2026-08-23. The roster currently has **53 entries without a portrait**. Items crossed out have a verified portrait wired into `public/data.json` (or, where still noted "image candidate", a candidate URL found but not yet verified); generic social-preview/default images are intentionally not marked complete.
+Updated 2026-08-23. The roster currently has **52 entries without a portrait**. Items crossed out have a verified portrait wired into `public/data.json` (or, where still noted "image candidate", a candidate URL found but not yet verified); generic social-preview/default images are intentionally not marked complete.
 
 ## Missing portraits
 
@@ -153,12 +153,12 @@ Updated 2026-08-23. The roster currently has **53 entries without a portrait**. 
 - 147. Hai Minh Duong — National University of Singapore ([profile](https://cde.nus.edu.sg/me/staff/duong-hai-minh/))
 - ~~148. Tan Nguyen — National University of Singapore~~ ([profile](https://www.math.nus.edu.sg/people/tan-nguyen/))
 - ~~149. Han Vinh Huynh — National University of Singapore~~ ([profile](https://chemistry.nus.edu.sg/people/huynh-han-vinh/))
-- 150. Nam Long Nguyen - National University of Singapore — National University of Singapore ([profile](https://medicine.nus.edu.sg/bch/faculty/nam-long-nguyen/))
+- ~~150. Nam Long Nguyen - National University of Singapore — National University of Singapore~~ ([profile](https://medicine.nus.edu.sg/bch/faculty/nam-long-nguyen/)) — duplicate of #252, merged into that record and removed
 - 151. Minh N. Le — National University of Singapore ([profile](https://medicine.nus.edu.sg/prv/faculty/minh-le/))
 - ~~152. Thai Tran — National University of Singapore~~ ([profile](https://medicine.nus.edu.sg/phys/faculty/thai-tran/))
 - ~~153. Toan Thang Phan — National University of Singapore~~ ([profile](https://medicine.nus.edu.sg/sur/faculty/toan-thang-phan/))
 - ~~154. Minh Khuong Vu — National University of Singapore~~ ([profile](https://lkyspp.nus.edu.sg/our-people/faculty/vu-minh-khuong))
-- 155. Anh Tuan Phan - Nanyang Technological University — Nanyang Technological University ([profile](https://personal.ntu.edu.sg/phantuan/))
+- ~~155. Anh Tuan Phan - Nanyang Technological University — Nanyang Technological University~~ ([profile](https://personal.ntu.edu.sg/phantuan/)) — duplicate of #255, merged into that record and removed
 - ~~156. Quang-Cuong Pham — Nanyang Technological University~~ ([profile](https://www.ieee-ras.org/ras_member/quang-cuong-pham/))
 - 157. Vu N. Duong — Nanyang Technological University ([profile](https://www.ntu.edu.sg/mae/about-us/faculty-directory/detail/duong-van-ngoc))
 - ~~158. Tuan Tran - Nanyang Technological University — Nanyang Technological University~~ ([profile](https://www.ntu.edu.sg/sc3dp/about-us/our-people/faculty-directory))
@@ -279,7 +279,7 @@ Updated 2026-08-23. The roster currently has **53 entries without a portrait**. 
 - ~~273. Jane X. Luu — Tufts University~~ ([profile](https://as.tufts.edu/faculty-research/faculty-news/faculty-news-2022-2023))
 - ~~274. Trung Le - North Dakota State University — North Dakota State University~~ ([profile](https://www.ndsu.edu/ccee/faculty_and_staff/faculty/le/))
 - ~~275. Hai T. Tran — Point Park University~~ ([profile](https://www.pointpark.edu/academics/schools/schoolofartsandsciences/departments/naturalsciencesandengineeringtechnology/faculty/hai-tran))
-- ~~276. Vy Nguyen — Augusta University~~ ([profile](https://web1.augusta.edu/faculty/directory/view.php?id=TUONGUYEN))
+- ~~276. Vy Nguyen — Augusta University~~ ([profile](https://web1.augusta.edu/faculty/directory/view.php?id=TUONGUYEN)) — duplicate of #88, merged into that record and removed
 - 277. Thao L. Nguyen — UTHealth Houston ([profile](https://www.uth.edu/people/profile?id=7e555467-3c42-4cfc-af51-e7b0db1f91f8))
 - ~~278. Hung Luu — University of Texas Southwestern Medical Center~~ ([profile](https://profiles.utsouthwestern.edu/profile/117881/hung-luu.html))
 - ~~279. Tuong Vi Ho — Texas Woman's University~~ ([profile](https://twu.edu/center-for-global-nursing/faculty-members/ho/))
