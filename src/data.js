@@ -930,6 +930,18 @@ function honorHolderCount(roster, honorName) {
     .map((p) => p.name)).size;
 }
 
+const MARQUEE_HONORS = [
+  'Nobel Prize',
+  'Fields Medal',
+  'MacArthur Fellow',
+  'Kavli Prize in Astrophysics',
+  'Shaw Prize in Astronomy',
+  'Pulitzer Prize for Fiction',
+  'Gordon Bell Prize',
+  'ICTP Dirac Medal',
+  'Clay Research Award',
+];
+
 export function buildAwardsFunFacts(roster) {
   const allRoster = roster || [];
   if (allRoster.length === 0) {
@@ -947,11 +959,17 @@ export function buildAwardsFunFacts(roster) {
 
   const honorCounts = countBy(allRoster.flatMap((p) => (p.honors || []).map((honor) => honor.name)), (name) => name);
   const commonHonors = honorCounts.slice(0, 5);
+  const marqueeHonors = MARQUEE_HONORS
+    .map((name) => [name, honorHolderCount(allRoster, name)])
+    .filter(([, count]) => count > 0);
 
   return [
     `${honored} of ${allRoster.length} professors have at least one recorded major honor or award.`,
     `NSF CAREER Award holders: ${honorHolderCount(allRoster, 'NSF CAREER Award')} across the database (${honorHolderCount(usRoster, 'NSF CAREER Award')} currently in the U.S. roster).`,
     `MacArthur Fellows: ${honorHolderCount(allRoster, 'MacArthur Fellow')}; Fields Medalists: ${honorHolderCount(allRoster, 'Fields Medal')}; Nobel Prize winners: ${honorHolderCount(allRoster, 'Nobel Prize')}.`,
+    marqueeHonors.length
+      ? `Marquee honors represented: ${marqueeHonors.map(([name, count]) => `${name} (${count})`).join(', ')}.`
+      : 'No marquee honors are currently recorded for this roster.',
     `${academyHolders} professors hold a recorded national-academy or equivalent academy distinction, and ${fellowHolders} hold a recorded major-society fellowship.`,
     commonHonors.length
       ? `Most frequently recorded honors: ${commonHonors.map(([name, count]) => `${name} (${count})`).join(', ')}.`
