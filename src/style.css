@@ -330,6 +330,24 @@ h1 {
   border-bottom: 1px solid var(--border-color);
 }
 
+.entry-with-portrait {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr);
+  gap: 0.75rem;
+}
+
+.entry-portrait {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.entry-content {
+  min-width: 0;
+}
+
 .entry-line {
   display: flex;
   flex-wrap: wrap;

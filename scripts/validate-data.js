@@ -1,4 +1,4 @@
-import { readFile } from 'node:fs/promises';
+import { access, readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 
 const file = resolve('public/data.json');
@@ -15,6 +15,7 @@ if (!Array.isArray(roster) || roster.length === 0) fail('must contain a non-empt
 
 const names = new Set();
 const profileUrls = new Set();
+const portraits = new Set();
 for (const [index, person] of roster.entries()) {
   const label = `entry ${index + 1}`;
   if (!person || typeof person !== 'object') fail(`${label} must be an object`);
@@ -25,6 +26,20 @@ for (const [index, person] of roster.entries()) {
   if (person.websiteUrl !== undefined && !/^https:\/\//.test(person.websiteUrl)) fail(`${label} websiteUrl must use HTTPS`);
   if (person.websiteUrl !== undefined && person.websiteUrl === person.profileUrl) fail(`${label} websiteUrl must differ from profileUrl`);
   if (person.scholarUrl !== undefined && !/^https:\/\//.test(person.scholarUrl)) fail(`${label} scholarUrl must use HTTPS`);
+  if ((person.portrait === undefined) !== (person.portraitSource === undefined)) {
+    fail(`${label} portrait and portraitSource must be provided together`);
+  }
+  if (person.portrait !== undefined) {
+    if (!/^portraits\/[a-z0-9][a-z0-9.-]*\.webp$/.test(person.portrait)) fail(`${label} has invalid portrait path`);
+    if (!/^https?:\/\//.test(person.portraitSource)) fail(`${label} portraitSource must be an HTTP(S) URL`);
+    if (portraits.has(person.portrait)) fail(`${label} duplicates portrait ${person.portrait}`);
+    try {
+      await access(resolve('public', person.portrait));
+    } catch {
+      fail(`${label} portrait file does not exist: ${person.portrait}`);
+    }
+    portraits.add(person.portrait);
+  }
   if (person.honors !== undefined) {
     if (!Array.isArray(person.honors)) fail(`${label} honors must be an array`);
     const honorNames = new Set();

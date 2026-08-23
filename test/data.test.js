@@ -8,6 +8,16 @@ import { FIELDS, TRACKS, LOCATIONS, canonicalRank, displayName, fieldOf, contine
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const roster = JSON.parse(readFileSync(join(__dirname, '../public/data.json'), 'utf8'));
 
+test('reviewed portraits use local WebP files with source provenance', () => {
+  const portraits = roster.filter((person) => person.portrait);
+  assert.ok(portraits.length > 400, 'expected broad portrait coverage across the roster');
+  for (const person of portraits) {
+    assert.match(person.portrait, /^portraits\/[a-z0-9][a-z0-9.-]*\.webp$/);
+    assert.match(person.portraitSource, /^https?:\/\//);
+    assert.ok(readFileSync(join(__dirname, '../public', person.portrait)).length > 0);
+  }
+});
+
 test('roster is a non-empty array', () => {
   assert.ok(Array.isArray(roster));
   assert.ok(roster.length > 0);

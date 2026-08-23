@@ -14,7 +14,8 @@ one department with a secondary/joint appointment elsewhere are marked with `†
 `secondaryAppointment: true`.
 
 Static site, no backend: the roster lives in `public/data.json` and is loaded, searched, filtered,
-and sorted client-side.
+and sorted client-side. Reviewed faculty portraits are stored as optimized local WebP files; records
+with a portrait keep the original public image URL in `portraitSource` for provenance.
 
 Started as a Computer Science-only list and completed an initial audit of the ten canonical STEM
 fields on 2026-08-18. Six non-STEM fields (Business & Economics through Arts & Design below) were

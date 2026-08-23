@@ -150,19 +150,25 @@ function renderRoster(roster, { field, location } = {}) {
       const honors = (p.honors ?? [])
         .map((honor) => `<a class="honor-link" href="${escapeHtml(honor.source)}" target="_blank" rel="noopener noreferrer">${escapeHtml(honor.name)}${honor.year ? ` (${escapeHtml(String(honor.year))})` : ''}</a>`)
         .join(' · ');
+      const portrait = p.portrait
+        ? `<img class="entry-portrait" src="${escapeHtml(`${import.meta.env.BASE_URL}${p.portrait}`)}" alt="" width="64" height="64" loading="lazy" decoding="async">`
+        : '';
       return `
-        <div class="entry">
-          <div class="entry-line">
-            <a class="entry-name" href="${escapeHtml(p.websiteUrl ?? p.profileUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(visibleName)}</a>${p.scholarUrl ? ` <a class="scholar-link" href="${escapeHtml(p.scholarUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(visibleName)} on Google Scholar" title="Google Scholar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3Z"/><path d="M5 12.18V16c0 1.66 3.13 3 7 3s7-1.34 7-3v-3.82l-7 3.82-7-3.82Z"/></svg></a>` : ''}${p.secondaryAppointment ? ' <span class="dagger">†</span>' : ''}
-            <span class="entry-meta">${escapeHtml(p.university)} · ${escapeHtml(p.department)} · <span class="loc-badge" title="${escapeHtml(p.country || 'United States')}"><span class="country-flag" aria-hidden="true">${countryFlag(p.country)}</span> ${escapeHtml(formatLocation(p))}</span></span>
+        <div class="entry${portrait ? ' entry-with-portrait' : ''}">
+          ${portrait}
+          <div class="entry-content">
+            <div class="entry-line">
+              <a class="entry-name" href="${escapeHtml(p.websiteUrl ?? p.profileUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(visibleName)}</a>${p.scholarUrl ? ` <a class="scholar-link" href="${escapeHtml(p.scholarUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(visibleName)} on Google Scholar" title="Google Scholar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3Z"/><path d="M5 12.18V16c0 1.66 3.13 3 7 3s7-1.34 7-3v-3.82l-7 3.82-7-3.82Z"/></svg></a>` : ''}${p.secondaryAppointment ? ' <span class="dagger">†</span>' : ''}
+              <span class="entry-meta">${escapeHtml(p.university)} · ${escapeHtml(p.department)} · <span class="loc-badge" title="${escapeHtml(p.country || 'United States')}"><span class="country-flag" aria-hidden="true">${countryFlag(p.country)}</span> ${escapeHtml(formatLocation(p))}</span></span>
+            </div>
+            ${p.rank || p.phdYear || p.phdInstitution ? `<div class="entry-details">${[
+              canonicalRank(p) && escapeHtml(canonicalRank(p)),
+              p.phdYear && `PhD ${escapeHtml(String(p.phdYear))}${p.phdInstitution ? `, ${escapeHtml(p.phdInstitution)}` : ''}`,
+              !p.phdYear && p.phdInstitution && `PhD, ${escapeHtml(p.phdInstitution)}`,
+            ].filter(Boolean).join(' · ')}</div>` : ''}
+            ${honors ? `<div class="entry-honors"><span class="honors-label">Honors:</span> ${honors}</div>` : ''}
+            <div class="tags">${tags}</div>
           </div>
-          ${p.rank || p.phdYear || p.phdInstitution ? `<div class="entry-details">${[
-            canonicalRank(p) && escapeHtml(canonicalRank(p)),
-            p.phdYear && `PhD ${escapeHtml(String(p.phdYear))}${p.phdInstitution ? `, ${escapeHtml(p.phdInstitution)}` : ''}`,
-            !p.phdYear && p.phdInstitution && `PhD, ${escapeHtml(p.phdInstitution)}`,
-          ].filter(Boolean).join(' · ')}</div>` : ''}
-          ${honors ? `<div class="entry-honors"><span class="honors-label">Honors:</span> ${honors}</div>` : ''}
-          <div class="tags">${tags}</div>
         </div>
       `;
     })

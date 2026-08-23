@@ -61,6 +61,17 @@ test('directory loads and searching changes the roster', async (t) => {
   await page.close();
 });
 
+test('local faculty portraits render and load', async (t) => {
+  if (unavailable || !browser) return t.skip(`Browser smoke tests unavailable: ${unavailable ?? 'no browser'}`);
+  const page = await browser.newPage();
+  await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
+  const portrait = page.locator('.entry-portrait').first();
+  await portrait.waitFor();
+  assert.match(await portrait.getAttribute('src'), /\/portraits\/.*\.webp$/);
+  assert.ok(await portrait.evaluate((image) => image.complete && image.naturalWidth > 0));
+  await page.close();
+});
+
 test('filters and submit-form suggestions work', async (t) => {
   if (unavailable || !browser) return t.skip(`Browser smoke tests unavailable: ${unavailable ?? 'no browser'}`);
   const page = await browser.newPage();
