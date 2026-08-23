@@ -88,6 +88,8 @@ const VIETNAMESE_SURNAMES = new Map([
 ]);
 
 const VIETNAMESE_NAME_OVERRIDES = new Map([
+  ['Bao Chau Ngo', 'Ngô Bảo Châu'],
+  ['Nghiem V. Nguyen', 'Nguyễn V. Nghiêm'],
   // The CV expands the middle initial as Huy; the display order follows Vietnamese naming.
   ['ThanhVu H. Nguyen', 'Nguyễn Huy ThanhVu'],
 ]);
@@ -108,7 +110,7 @@ export function vietnameseName(person) {
     return `${VIETNAMESE_SURNAMES.get(firstKey)} ${tokens.slice(1).join(' ')}`;
   }
   if (VIETNAMESE_SURNAMES.has(lastKey)) {
-    return `${VIETNAMESE_SURNAMES.get(lastKey)} ${tokens.slice(0, -1).join(' ')}`;
+    return `${VIETNAMESE_SURNAMES.get(lastKey)} ${tokens.slice(0, -1).reverse().join(' ')}`;
   }
   return current;
 }

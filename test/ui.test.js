@@ -220,6 +220,8 @@ test('every roster entry has a safe Vietnamese display-name variant and the requ
 test('authoritative full Vietnamese name overrides preserve accent marks and Vietnamese order', () => {
   const thanhVu = roster.find((p) => p.name === 'ThanhVu H. Nguyen');
   assert.equal(vietnameseName(thanhVu), 'Nguyễn Huy ThanhVu');
+  assert.equal(vietnameseName(roster.find((p) => p.name === 'Nghiem V. Nguyen')), 'Nguyễn V. Nghiêm');
+  assert.equal(vietnameseName(roster.find((p) => p.name === 'Bao Chau Ngo')), 'Ngô Bảo Châu');
 });
 
 test('auto-select location logic widens to World when searching for international countries or faculty', async () => {
