@@ -50,7 +50,7 @@ function renderShell() {
   app.innerHTML = `
     <header>
       <div class="title-row">
-        <h1><a class="home-link" href="${import.meta.env.BASE_URL}" id="home-link">Vietnamese Professors Worldwide</a></h1>
+        <h1><a class="home-link" href="${import.meta.env.BASE_URL}" id="home-link">Vietnamese &amp; Diaspora Professors Worldwide</a></h1>
         <a class="github-link" href="https://github.com/dynaroars/vietprofs" target="_blank" rel="noopener noreferrer" aria-label="View VietProfs on GitHub" title="View source on GitHub"></a>
         <a class="icon-link roars-link" href="https://roars.dev" target="_blank" rel="noopener noreferrer" aria-label="ROARS Lab" title="ROARS Lab"></a>
       </div>

@@ -1,8 +1,8 @@
-# Vietnamese Professors Worldwide
+# Vietnamese & Diaspora Professors Worldwide
 
 > Find Vietnamese and Vietnamese diaspora professors across fields at universities worldwide.
 
-A searchable directory of Vietnamese professors across fields worldwide, covering three
+A searchable directory of Vietnamese professors and professors from the Vietnamese diaspora across fields worldwide, covering three
 employment tracks — **Tenure-line** (tenure-track or tenured), **Teaching** (full-time,
 continuing/permanent non-tenure-track teaching faculty), and **Emeritus** (formally conferred
 emeritus/emerita status after a tenure-line career) — selectable from a track dropdown alongside
