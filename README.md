@@ -63,7 +63,7 @@ after current-faculty and major-honor sources have been checked:
 - [x] ~~Others~~
 - [x] ~~Statistics & Data Science~~
 - [x] ~~Arts & Design~~
-- [ ] Earth & Environmental Sciences
+- [x] ~~Earth & Environmental Sciences~~
 
 ## Using the website & search features
 
