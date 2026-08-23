@@ -437,6 +437,15 @@ async function init() {
   // a location, field, or track narrows every number shown across the other dropdowns — kept in sync by
   // calling this at the top of update(), which already runs on every relevant state change.
   function syncDropdownCounts() {
+    const updateOption = (option, label, count, select) => {
+      option.hidden = count === 0 && option.value !== select.value;
+      option.textContent = `${label} (${count})`;
+    };
+    const hideEmptyGroups = (select) => {
+      for (const group of select.querySelectorAll('optgroup')) {
+        group.hidden = [...group.options].every((option) => option.hidden);
+      }
+    };
     const locVal = locationSelect.value;
     const fieldVal = fieldSelect.value;
     const trackVal = trackSelect.value;
@@ -451,8 +460,9 @@ async function init() {
     }
     for (const option of locationSelect.options) {
       const count = locBase.filter((p) => locationMatches(p, option.value)).length;
-      option.textContent = `${locationLabel(option.value)} (${count})`;
+      updateOption(option, locationLabel(option.value), count, locationSelect);
     }
+    hideEmptyGroups(locationSelect);
 
     // Field dropdown counts (filtered by active location & track)
     let fieldBase = roster.filter((p) => locationMatches(p, locVal));
@@ -463,7 +473,7 @@ async function init() {
     for (const option of fieldSelect.options) {
       if (!FIELDS.includes(option.value)) continue;
       const count = fieldBase.filter((p) => fieldOf(p.department, p.university) === option.value).length;
-      option.textContent = `${fieldDropdownLabel(option.value)} (${count})`;
+      updateOption(option, fieldDropdownLabel(option.value), count, fieldSelect);
     }
 
     // Track dropdown counts (filtered by active location & field)
@@ -475,7 +485,7 @@ async function init() {
     for (const option of trackSelect.options) {
       if (!TRACKS.includes(option.value)) continue;
       const count = trackBase.filter((p) => p.track === option.value).length;
-      option.textContent = `${option.value} (${count})`;
+      updateOption(option, option.value, count, trackSelect);
     }
   }
 
