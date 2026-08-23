@@ -141,14 +141,14 @@ function renderRoster(roster, { field, location } = {}) {
       const nativeName = vietnameseName(p);
       const entryMeta = [canonicalRank(p), p.department, p.university, formatLocation(p)].filter(Boolean).join(' · ');
       const personField = fieldOf(p.department, p.university);
-      const fieldTag = `<span class="tag tag-field">${escapeHtml(fieldDropdownLabel(personField))}</span>`;
       const healthSubfield = healthSubfieldOf(p);
-      const healthSubfieldTag = healthSubfield ? `<span class="tag tag-topic">${escapeHtml(healthSubfield)}</span>` : '';
+      const fieldLabel = `${fieldDropdownLabel(personField)}${healthSubfield ? ` (${healthSubfield})` : ''}`;
+      const fieldTag = `<span class="tag tag-field">${escapeHtml(fieldLabel)}</span>`;
       const trackTag = `<span class="tag tag-track">${escapeHtml(p.track)}</span>`;
       const topicTags = p.researchAreas
         .map((a) => `<span class="tag tag-topic">${escapeHtml(a)}</span>`)
         .join('');
-      const tags = fieldTag + healthSubfieldTag + trackTag + topicTags;
+      const tags = fieldTag + trackTag + topicTags;
       const honors = (p.honors ?? [])
         .map((honor) => `<a class="honor-link" href="${escapeHtml(honor.source)}" target="_blank" rel="noopener noreferrer">${escapeHtml(honor.name)}${honor.year ? ` (${escapeHtml(String(honor.year))})` : ''}</a>`)
         .join(' · ');

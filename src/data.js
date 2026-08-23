@@ -81,43 +81,77 @@ export function canonicalRank(person) {
 // surname diacritics. A record may provide `vietnameseName` when an authoritative source gives
 // the person's complete Vietnamese name; otherwise initials are deliberately preserved.
 const VIETNAMESE_SURNAMES = new Map([
-  ['Bui', 'Bùi'], ['Dang', 'Đặng'], ['Dao', 'Đào'], ['Do', 'Đỗ'], ['Duong', 'Dương'],
+  ['Bui', 'Bùi'], ['Cao', 'Cao'], ['Chau', 'Châu'], ['Dang', 'Đặng'], ['Dao', 'Đào'],
+  ['Dinh', 'Đinh'], ['Do', 'Đỗ'], ['Doan', 'Đoàn'], ['Duong', 'Dương'], ['Ha', 'Hà'],
   ['Ho', 'Hồ'], ['Hoang', 'Hoàng'], ['Huynh', 'Huỳnh'], ['Lam', 'Lâm'], ['Le', 'Lê'],
-  ['Ngo', 'Ngô'], ['Nguyen', 'Nguyễn'], ['Pham', 'Phạm'], ['Phan', 'Phan'], ['Tran', 'Trần'],
-  ['Trinh', 'Trịnh'], ['Vo', 'Võ'], ['Vu', 'Vũ'], ['Vuong', 'Vương'],
+  ['Ly', 'Lý'], ['Mai', 'Mai'], ['Ngo', 'Ngô'], ['Nguyen', 'Nguyễn'], ['Pham', 'Phạm'],
+  ['Phan', 'Phan'], ['Ta', 'Tạ'], ['To', 'Tô'], ['Tran', 'Trần'], ['Trinh', 'Trịnh'], ['Truong', 'Trương'],
+  ['Vo', 'Võ'], ['Vu', 'Vũ'], ['Vuong', 'Vương'],
 ]);
 
 const VIETNAMESE_NAME_OVERRIDES = new Map([
   ['Bao Chau Ngo', 'Ngô Bảo Châu'],
+  ['Cac Nguyen', 'Nguyễn Cac'],
+  ['Hai-Dang Nguyen', 'Nguyễn Hải-Đăng'],
   ['Nghiem V. Nguyen', 'Nguyễn V. Nghiêm'],
+  ['Son Thanh Dam', 'Đàm Thanh Sơn'],
+  ['Thai Luan Vu', 'Vũ Thái Luân'],
+  ['Tien Zung Nguyen', 'Nguyễn Tiến Zung'],
   // The CV expands the middle initial as Huy; the display order follows Vietnamese naming.
-  ['ThanhVu H. Nguyen', 'Nguyễn Huy ThanhVu'],
+  ['ThanhVu H. Nguyen', 'Nguyễn Huy Thanh Vũ'],
 ]);
+
+function vietnameseGivenNames(value) {
+  const marks = new Map([
+    ['Anh', 'Anh'], ['Bach', 'Bạch'], ['Bao', 'Bảo'], ['Bich', 'Bích'], ['Binh', 'Bình'],
+    ['Chinh', 'Chính'], ['Chung', 'Chung'], ['Cuong', 'Cường'], ['Dat', 'Đạt'], ['Danh', 'Danh'],
+    ['Dam', 'Đàm'], ['Dau', 'Đậu'], ['Diep', 'Diệp'], ['Diem', 'Diễm'], ['Dien', 'Điền'],
+    ['Dinh', 'Đình'], ['Doan', 'Đoàn'], ['Duc', 'Đức'], ['Duy', 'Duy'], ['Giao', 'Giao'],
+    ['Giang', 'Giang'], ['Hai', 'Hải'], ['Han', 'Hân'], ['Hanh', 'Hạnh'], ['Hang', 'Hằng'], ['Hau', 'Hậu'], ['Ha', 'Hà'],
+    ['Hieu', 'Hiếu'], ['Hiep', 'Hiệp'], ['Hien', 'Hiền'], ['Hoai', 'Hoài'], ['Hoa', 'Hoa'],
+    ['Hong', 'Hồng'], ['Hoang', 'Hoàng'], ['Hop', 'Hợp'], ['Huong', 'Hương'], ['Huyen', 'Huyền'], ['Huu', 'Hữu'],
+    ['Khai', 'Khải'], ['Khanh', 'Khánh'], ['Khang', 'Khang'], ['Khiem', 'Khiêm'], ['Khoa', 'Khoa'],
+    ['Khuong', 'Khương'], ['Kieu', 'Kiều'], ['Lan', 'Lan'], ['Lap', 'Lập'], ['Lien', 'Liên'],
+    ['Liem', 'Liêm'], ['Linh', 'Linh'], ['Loan', 'Loan'], ['Loi', 'Lợi'], ['Long', 'Long'],
+    ['Luan', 'Luân'], ['Mai', 'Mai'], ['Manh', 'Mạnh'], ['Minh', 'Minh'], ['Ngan', 'Ngân'],
+    ['Nghia', 'Nghĩa'], ['Nghiem', 'Nghiêm'], ['Ngoc', 'Ngọc'], ['Nhung', 'Nhung'], ['Nhu', 'Như'],
+    ['Nhat', 'Nhật'], ['Nghia', 'Nghĩa'], ['Phat', 'Phát'], ['Phu', 'Phú'], ['Phuc', 'Phúc'],
+    ['Phuong', 'Phương'], ['Phuoc', 'Phước'], ['Phong', 'Phong'], ['Quang', 'Quang'], ['Quan', 'Quân'],
+    ['Quoc', 'Quốc'], ['Quyen', 'Quyền'], ['Quynh', 'Quỳnh'], ['Sang', 'Sáng'], ['Son', 'Sơn'],
+    ['Tai', 'Tài'], ['Tam', 'Tâm'], ['Tan', 'Tân'], ['Thang', 'Thắng'], ['Thao', 'Thảo'],
+    ['Thien', 'Thiện'], ['Thinh', 'Thịnh'], ['Tho', 'Thọ'], ['Thai', 'Thái'], ['Thuan', 'Thuận'], ['Thuc', 'Thức'],
+    ['Tien', 'Tiến'], ['Toan', 'Toàn'], ['Tram', 'Trâm'], ['Trieu', 'Triều'], ['Trong', 'Trọng'],
+    ['Trung', 'Trung'], ['Truong', 'Trường'], ['Tuan', 'Tuấn'], ['Tung', 'Tùng'], ['Tuyen', 'Tuyền'],
+    ['Uyen', 'Uyên'], ['Vi', 'Vi'], ['Viet', 'Việt'], ['Vinh', 'Vinh'], ['Vu', 'Vũ'],
+    ['Xuan', 'Xuân'], ['Yen', 'Yến'],
+  ]);
+  return value.replace(/\b[A-Za-z]+\b/g, (token) => marks.get(token) ?? token);
+}
 
 function surnameKey(token) {
   return stripDiacritics(token.replace(/[.,]/g, ''));
 }
 
 export function vietnameseName(person) {
-  if (person.vietnameseName?.trim()) return person.vietnameseName.trim();
+  if (person.vietnameseName?.trim()) return vietnameseGivenNames(person.vietnameseName.trim());
   const current = displayName(person.name).trim();
-  if (VIETNAMESE_NAME_OVERRIDES.has(current)) return VIETNAMESE_NAME_OVERRIDES.get(current);
+  if (VIETNAMESE_NAME_OVERRIDES.has(current)) return vietnameseGivenNames(VIETNAMESE_NAME_OVERRIDES.get(current));
   const tokens = current.split(/\s+/).filter(Boolean);
-  if (tokens.length < 2) return current;
+  if (tokens.length < 2) return vietnameseGivenNames(current);
   const firstKey = surnameKey(tokens[0]);
   const lastKey = surnameKey(tokens.at(-1));
   // Some Vietnamese sources publish family name first. For the roster's readable
   // parenthetical form, move an initial Nguyễn to the final family-name position.
   if (firstKey === 'Nguyen' && lastKey !== 'Nguyen') {
-    return `${tokens.slice(1).join(' ')} ${VIETNAMESE_SURNAMES.get('Nguyen')}`;
+    return vietnameseGivenNames(`${tokens.slice(1).join(' ')} ${VIETNAMESE_SURNAMES.get('Nguyen')}`);
   }
   if (VIETNAMESE_SURNAMES.has(firstKey) && !VIETNAMESE_SURNAMES.has(lastKey)) {
-    return `${VIETNAMESE_SURNAMES.get(firstKey)} ${tokens.slice(1).join(' ')}`;
+    return vietnameseGivenNames(`${VIETNAMESE_SURNAMES.get(firstKey)} ${tokens.slice(1).join(' ')}`);
   }
   if (VIETNAMESE_SURNAMES.has(lastKey)) {
-    return `${VIETNAMESE_SURNAMES.get(lastKey)} ${tokens.slice(0, -1).reverse().join(' ')}`;
+    return vietnameseGivenNames(`${VIETNAMESE_SURNAMES.get(lastKey)} ${tokens.slice(0, -1).reverse().join(' ')}`);
   }
-  return current;
+  return vietnameseGivenNames(current);
 }
 
 export function uniqueResearchAreas(roster) {

@@ -219,12 +219,19 @@ test('every roster entry has a safe Vietnamese display-name variant and the requ
 
 test('authoritative full Vietnamese name overrides preserve accent marks and Vietnamese order', () => {
   const thanhVu = roster.find((p) => p.name === 'ThanhVu H. Nguyen');
-  assert.equal(vietnameseName(thanhVu), 'Nguyễn Huy ThanhVu');
+  assert.equal(vietnameseName(thanhVu), 'Nguyễn Huy Thanh Vũ');
   assert.equal(vietnameseName(roster.find((p) => p.name === 'Nghiem V. Nguyen')), 'Nguyễn V. Nghiêm');
   assert.equal(vietnameseName(roster.find((p) => p.name === 'Bao Chau Ngo')), 'Ngô Bảo Châu');
-  assert.equal(vietnameseName(roster.find((p) => p.name === 'Nguyen Cac')), 'Cac Nguyễn');
-  assert.equal(vietnameseName(roster.find((p) => p.name === 'Nguyen Tien Zung')), 'Tien Zung Nguyễn');
-  assert.equal(vietnameseName(roster.find((p) => p.name === 'Nguyen Hung Minh Tan')), 'Hung Minh Tan Nguyễn');
+  assert.equal(vietnameseName(roster.find((p) => p.name === 'Cac Nguyen')), 'Nguyễn Cac');
+  assert.equal(vietnameseName(roster.find((p) => p.name === 'Tien Zung Nguyen')), 'Nguyễn Tiến Zung');
+  assert.equal(vietnameseName(roster.find((p) => p.name === 'Hung Minh Tan Nguyen')), 'Nguyễn Tân Minh Hung');
+  assert.equal(vietnameseName(roster.find((p) => p.name === 'Ha Ta')), 'Tạ Hà');
+  assert.equal(vietnameseName(roster.find((p) => p.name === 'Hai-Dang Nguyen')), 'Nguyễn Hải-Đăng');
+  assert.equal(vietnameseName(roster.find((p) => p.name === 'Lien-Hang T. Nguyen')), 'Nguyễn T. Liên-Hằng');
+  assert.equal(vietnameseName(roster.find((p) => p.name === 'Thanh Thai Nguyen')), 'Nguyễn Thái Thanh');
+  assert.equal(vietnameseName(roster.find((p) => p.name === 'Son Thanh Dam')), 'Đàm Thanh Sơn');
+  assert.equal(vietnameseName(roster.find((p) => p.name === 'Thai Luan Vu')), 'Vũ Thái Luân');
+  assert.equal(vietnameseName(roster.find((p) => p.name === 'Hoang Long Nguyen')), 'Nguyễn Long Hoàng');
   const daoNguyen = roster.find((p) => p.name === 'Nguyen-Truc-Dao Nguyen');
   assert.equal(vietnameseName(daoNguyen), 'Nguyễn Nguyễn Trúc Đào');
   assert.equal(daoNguyen.university, 'San Diego State University');

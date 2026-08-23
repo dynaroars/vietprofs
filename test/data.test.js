@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
-import { FIELDS, TRACKS, LOCATIONS, canonicalRank, displayName, fieldOf, continentOf, locationMatches, buildFunFacts, buildAwardsFunFacts, filterRoster, buildTopUniversities, buildTopPhdInstitutions } from '../src/data.js';
+import { FIELDS, TRACKS, LOCATIONS, HEALTH_SUBFIELDS, canonicalRank, displayName, fieldOf, healthSubfieldOf, continentOf, locationMatches, buildFunFacts, buildAwardsFunFacts, filterRoster, buildTopUniversities, buildTopPhdInstitutions } from '../src/data.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const roster = JSON.parse(readFileSync(join(__dirname, '../public/data.json'), 'utf8'));
@@ -21,6 +21,14 @@ test('reviewed portraits use local WebP files with source provenance', () => {
 test('roster is a non-empty array', () => {
   assert.ok(Array.isArray(roster));
   assert.ok(roster.length > 0);
+});
+
+test('health subfields are the only derived field subdivisions', () => {
+  for (const person of roster) {
+    const subfield = healthSubfieldOf(person);
+    if (subfield !== null) assert.ok(HEALTH_SUBFIELDS.includes(subfield));
+  }
+  assert.ok(roster.some((person) => healthSubfieldOf(person) === 'Clinical Medicine'));
 });
 
 test('every entry has the required fields', () => {
