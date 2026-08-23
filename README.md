@@ -2,7 +2,7 @@
 
 > A directory of Vietnamese professors worldwide.
 
-A searchable directory of Vietnamese professors at universities outside Vietnam, covering three
+https://vietprofs.roars.dev is a searchable directory of Vietnamese professors at universities outside Vietnam, covering three
 employment tracks — **Tenure-line** (tenure-track or tenured), **Teaching** (full-time,
 continuing/permanent non-tenure-track teaching faculty), and **Emeritus** (formally conferred
 emeritus/emerita status after a tenure-line career) — selectable from a track dropdown alongside
