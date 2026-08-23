@@ -35,8 +35,8 @@ list only after current faculty sources and major-honor sources have been checke
 - Completed: Physics & Astronomy; Statistics & Data Science; Chemistry;
   Biological & Biomedical Sciences; Earth & Environmental Sciences;
   Agricultural & Natural Resource Sciences; Health Sciences; Business & Economics;
-  Social & Behavioral Sciences; Education; Computer & Information Sciences
-- Remaining: Engineering; Mathematics;
+  Social & Behavioral Sciences; Education; Computer & Information Sciences; Engineering
+- Remaining: Mathematics;
   Humanities; Law & Public Affairs; Arts & Design; Others
 
 ## Using the website & search features
