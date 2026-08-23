@@ -293,9 +293,7 @@ function renderFunFacts(visibleRoster) {
 
   const usFacts = buildUsFunFacts(visibleRoster);
   const globalFacts = buildGlobalFunFacts(visibleRoster);
-  // Awards and honors are directory-wide distinctions, so keep them worldwide even when the
-  // insights view is opened with the default U.S. location filter.
-  const awardsFacts = buildAwardsFunFacts(fullRoster);
+  const awardsFacts = buildAwardsFunFacts(visibleRoster);
 
   const formatList = (facts) =>
     facts
