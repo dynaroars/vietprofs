@@ -50,7 +50,7 @@ after current-faculty and major-honor sources have been checked:
 - [x] ~~Mathematics~~
 - [x] ~~Engineering~~
 - [x] ~~Chemistry~~
-- [ ] Health Sciences
+- [x] ~~Health Sciences~~
 - [ ] Biological & Biomedical Sciences
 - [ ] Law & Public Affairs
 - [ ] Physics & Astronomy
