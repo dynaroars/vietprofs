@@ -225,6 +225,10 @@ test('authoritative full Vietnamese name overrides preserve accent marks and Vie
   assert.equal(vietnameseName(roster.find((p) => p.name === 'Nguyen Cac')), 'Cac Nguyễn');
   assert.equal(vietnameseName(roster.find((p) => p.name === 'Nguyen Tien Zung')), 'Tien Zung Nguyễn');
   assert.equal(vietnameseName(roster.find((p) => p.name === 'Nguyen Hung Minh Tan')), 'Hung Minh Tan Nguyễn');
+  const daoNguyen = roster.find((p) => p.name === 'Nguyen-Truc-Dao Nguyen');
+  assert.equal(vietnameseName(daoNguyen), 'Nguyễn Nguyễn Trúc Đào');
+  assert.equal(daoNguyen.university, 'San Diego State University');
+  assert.equal(daoNguyen.state, 'California');
 });
 
 test('auto-select location logic widens to World when searching for international countries or faculty', async () => {
