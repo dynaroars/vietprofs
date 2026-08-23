@@ -336,7 +336,7 @@ function renderFunFacts(visibleRoster) {
           <h2 class="insights-main-heading">Global & Worldwide Diaspora Landscape</h2>
           <p class="insights-main-desc">${globalRoster.length} international professors across ${countriesCount} countries on 5 continents outside the U.S.</p>
         </div>
-        ${renderDecadesChart(roster)}
+        ${renderDecadesChart(visibleRoster)}
         ${globalRoster.length ? renderLeaderboards(globalRoster, { titleUni: 'Top International Faculty Hubs', descUni: 'Global universities outside the U.S. with the most Vietnamese faculty; click to search.', titlePhd: 'Top International PhD Alma Maters', descPhd: 'Doctoral institutions that trained global faculty; click to search.' }) : ''}
         <div class="insights-section">
           <h3 class="insights-heading">Global Diaspora Highlights</h3>
