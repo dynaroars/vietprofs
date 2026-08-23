@@ -273,6 +273,8 @@ Use the [Submit an entry page](./submit.html). Please include an official univer
 
 Computer & Information Sciences; Engineering; Mathematics; Statistics & Data Science; Physics & Astronomy; Chemistry; Biological & Biomedical Sciences; Earth & Environmental Sciences; Agricultural & Natural Resource Sciences; Health Sciences; Business & Economics; Social & Behavioral Sciences; Education; Humanities; Law & Public Affairs; Arts & Design; and Others.
 
+Health Sciences remains one broad field, with derived display subfields for Clinical Medicine, Public Health, Nursing, Pharmacy, Dentistry, Biomedical Research, and Medical Education. Law & Public Affairs also remains one broad field: its department and research-area metadata provide better detail than splitting law, public policy, public administration, and related interdisciplinary appointments into separate top-level categories.
+
 Others includes qualifying faculty whose primary departments do not fit one of the sixteen named disciplinary categories. The taxonomy never limits who is eligible for the directory.
 
 The ten STEM fields were rostered first; the other six were added to the field filter on 2026-08-19. All sixteen fields completed a full audit-and-search pass on 2026-08-19, including Agricultural & Natural Resource Sciences, which received its first entries during that pass.

@@ -1,5 +1,5 @@
 import './style.css';
-import { loadRoster, buildSearchIndex, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, LOCATION_LABELS, countryFlag, canonicalRank, displayName, fieldOf, locationMatches, filterRoster, sortRoster, buildFunFacts, buildUsFunFacts, buildGlobalFunFacts, buildAwardsFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, STATE_ABBR, parseSearchQuery } from './data.js';
+import { loadRoster, buildSearchIndex, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, LOCATION_LABELS, countryFlag, canonicalRank, displayName, fieldOf, healthSubfieldOf, locationMatches, filterRoster, sortRoster, buildFunFacts, buildUsFunFacts, buildGlobalFunFacts, buildAwardsFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, STATE_ABBR, parseSearchQuery } from './data.js';
 import { escapeHtml } from './utils.js';
 import { nearestVietnameseHoliday } from './holidays.js';
 import { STATE_GRID } from './state-grid.js';
@@ -140,11 +140,13 @@ function renderRoster(roster, { field, location } = {}) {
       const visibleName = displayName(p.name);
       const personField = fieldOf(p.department, p.university);
       const fieldTag = `<span class="tag tag-field">${escapeHtml(fieldDropdownLabel(personField))}</span>`;
+      const healthSubfield = healthSubfieldOf(p);
+      const healthSubfieldTag = healthSubfield ? `<span class="tag tag-topic">${escapeHtml(healthSubfield)}</span>` : '';
       const trackTag = `<span class="tag tag-track">${escapeHtml(p.track)}</span>`;
       const topicTags = p.researchAreas
         .map((a) => `<span class="tag tag-topic">${escapeHtml(a)}</span>`)
         .join('');
-      const tags = fieldTag + trackTag + topicTags;
+      const tags = fieldTag + healthSubfieldTag + trackTag + topicTags;
       const honors = (p.honors ?? [])
         .map((honor) => `<a class="honor-link" href="${escapeHtml(honor.source)}" target="_blank" rel="noopener noreferrer">${escapeHtml(honor.name)}${honor.year ? ` (${escapeHtml(String(honor.year))})` : ''}</a>`)
         .join(' · ');

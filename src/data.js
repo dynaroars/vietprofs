@@ -12,6 +12,7 @@ function searchableFields(person) {
     person.department,
     person.rank,
     canonicalRank(person),
+    healthSubfieldOf(person),
     person.phdInstitution,
     ...(person.researchAreas ?? []),
     ...(person.honors ?? []).flatMap((honor) => [honor.name, honor.organization]),
@@ -285,6 +286,18 @@ export const FIELDS = [
   'Others',
 ];
 
+// Health Sciences remains one broad filter, with these derived subfields available for
+// identifying medical specialties without fragmenting the main taxonomy.
+export const HEALTH_SUBFIELDS = [
+  'Clinical Medicine',
+  'Public Health',
+  'Nursing',
+  'Pharmacy',
+  'Dentistry',
+  'Biomedical Research',
+  'Medical Education',
+];
+
 // Some department names are structurally ambiguous — the string alone doesn't say which broad
 // field they belong to, only the school/unit that actually houses the position does (e.g. a
 // department called "Information Studies" is normally Computer & Information Sciences but
@@ -410,6 +423,18 @@ export function fieldOf(department, university) {
   const override = university && FIELD_OVERRIDES.get(`${department}|${university}`);
   if (override) return override;
   return FIELD_RULES.find((rule) => rule.match.test(department))?.field ?? 'Others';
+}
+
+export function healthSubfieldOf(person) {
+  if (fieldOf(person.department, person.university) !== 'Health Sciences') return null;
+  const text = `${person.department} ${(person.researchAreas ?? []).join(' ')}`;
+  if (/nursing/i.test(text)) return 'Nursing';
+  if (/pharma|pharmac/i.test(text)) return 'Pharmacy';
+  if (/dentist|dental|orthodont|oral health/i.test(text)) return 'Dentistry';
+  if (/public health|epidemiolog|health management|health policy/i.test(text)) return 'Public Health';
+  if (/medical education|nursing education|teaching medicine/i.test(text)) return 'Medical Education';
+  if (/biomedical|pathology|immunology|molecular|genomic|oncology|cell biology/i.test(text)) return 'Biomedical Research';
+  return 'Clinical Medicine';
 }
 
 export function uniqueFields(roster) {
