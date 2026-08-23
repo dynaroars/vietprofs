@@ -61,7 +61,7 @@ after current-faculty and major-honor sources have been checked:
 - [x] ~~Agricultural & Natural Resource Sciences~~
 - [x] ~~Social & Behavioral Sciences~~
 - [x] ~~Others~~
-- [ ] Statistics & Data Science
+- [x] ~~Statistics & Data Science~~
 - [ ] Arts & Design
 - [ ] Earth & Environmental Sciences
 
