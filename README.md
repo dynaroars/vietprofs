@@ -48,7 +48,7 @@ such as NSF CAREER, PECASE, Sloan, ONR YIP, and DARPA YFA. Completed fields are 
 after current-faculty and major-honor sources have been checked:
 
 - [x] ~~Mathematics~~
-- [ ] Engineering
+- [x] ~~Engineering~~
 - [ ] Chemistry
 - [ ] Health Sciences
 - [ ] Biological & Biomedical Sciences

@@ -596,6 +596,15 @@ export function filterRoster(roster, { query = '', location, field, track, unive
   }
 
   // Full-text search across all fields, including award names and organizations.
+  // When a query matches one or more honor names, prefer those exact honor matches over
+  // incidental words in source URLs or biographies (e.g. "IEEE Fellow" should not match a
+  // Gordon Bell source merely because that source mentions IEEE).
+  const honorMatches = result.filter((p) => (p.honors || []).some((honor) => {
+    const honorName = stripDiacritics((honor.name || '').toLowerCase());
+    return honorName.includes(target);
+  }));
+  if (honorMatches.length > 0) return honorMatches;
+
   return result.filter((p) => {
     const searchableText = index.textByPerson.get(p).join(' ');
     if (searchableText.includes(target)) return true;
