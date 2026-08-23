@@ -445,7 +445,8 @@ async function init() {
     };
     const hideEmptyGroups = (select) => {
       for (const group of Array.from(select.querySelectorAll('optgroup'))) {
-        group.style.display = Array.from(group.options).every((option) => option.dataset.zeroCount === 'true') ? 'none' : '';
+        const options = Array.from(group.querySelectorAll('option'));
+        group.style.display = options.every((option) => option.dataset.zeroCount === 'true') ? 'none' : '';
       }
     };
     const locVal = locationSelect.value;
