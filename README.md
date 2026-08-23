@@ -55,7 +55,7 @@ after current-faculty and major-honor sources have been checked:
 - [x] ~~Law & Public Affairs~~
 - [x] ~~Physics & Astronomy~~
 - [x] ~~Computer & Information Sciences~~
-- [ ] Business & Economics
+- [x] ~~Business & Economics~~
 - [ ] Education
 - [ ] Humanities
 - [ ] Agricultural & Natural Resource Sciences
