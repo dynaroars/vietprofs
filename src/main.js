@@ -1,5 +1,5 @@
 import './style.css';
-import { loadRoster, buildSearchIndex, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, LOCATION_LABELS, countryFlag, canonicalRank, displayName, fieldOf, locationMatches, filterRoster, sortRoster, buildFunFacts, buildUsFunFacts, buildGlobalFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, STATE_ABBR, parseSearchQuery } from './data.js';
+import { loadRoster, buildSearchIndex, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, LOCATION_LABELS, countryFlag, canonicalRank, displayName, fieldOf, locationMatches, filterRoster, sortRoster, buildFunFacts, buildUsFunFacts, buildGlobalFunFacts, buildAwardsFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, STATE_ABBR, parseSearchQuery } from './data.js';
 import { escapeHtml } from './utils.js';
 import { nearestVietnameseHoliday } from './holidays.js';
 import { STATE_GRID } from './state-grid.js';
@@ -285,6 +285,7 @@ function renderFunFacts(roster) {
 
   const usFacts = buildUsFunFacts(roster);
   const globalFacts = buildGlobalFunFacts(roster);
+  const awardsFacts = buildAwardsFunFacts(roster);
 
   const formatList = (facts) =>
     facts
@@ -332,6 +333,19 @@ function renderFunFacts(roster) {
         <div class="insights-section">
           <h3 class="insights-heading">Global Diaspora Highlights</h3>
           <ul class="fun-facts">${formatList(globalFacts)}</ul>
+        </div>
+      </section>
+
+      <!-- SECTION 3: MAJOR AWARDS & HONORS -->
+      <section class="insights-section-block">
+        <div class="insights-section-header">
+          <span class="insights-badge">🏅 Major honors</span>
+          <h2 class="insights-main-heading">Awards &amp; Honors</h2>
+          <p class="insights-main-desc">Selective, internationally recognized distinctions recorded in the faculty database.</p>
+        </div>
+        <div class="insights-section">
+          <h3 class="insights-heading">Awards &amp; Honors Highlights</h3>
+          <ul class="fun-facts">${formatList(awardsFacts)}</ul>
         </div>
       </section>
     </div>

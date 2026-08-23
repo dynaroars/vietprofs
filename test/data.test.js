@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
-import { FIELDS, TRACKS, LOCATIONS, canonicalRank, displayName, fieldOf, continentOf, locationMatches, buildFunFacts, filterRoster, buildTopUniversities, buildTopPhdInstitutions } from '../src/data.js';
+import { FIELDS, TRACKS, LOCATIONS, canonicalRank, displayName, fieldOf, continentOf, locationMatches, buildFunFacts, buildAwardsFunFacts, filterRoster, buildTopUniversities, buildTopPhdInstitutions } from '../src/data.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const roster = JSON.parse(readFileSync(join(__dirname, '../public/data.json'), 'utf8'));
@@ -170,6 +170,13 @@ test('buildFunFacts includes a Vietnamese-American population-hub comparison and
   // The refugee/diaspora fact only appears when at least one person's research areas match; this
   // roster has known Critical Refugee Studies entries, so it should be present.
   assert.ok(facts.some((f) => /refugee, immigration, or diaspora topics/.test(f)));
+});
+
+test('buildAwardsFunFacts reports major award categories and NSF CAREER holders', () => {
+  const facts = buildAwardsFunFacts(roster);
+  assert.ok(facts.some((f) => /NSF CAREER Award holders: \d+ across the database/.test(f)));
+  assert.ok(facts.some((f) => /MacArthur Fellows: \d+; Fields Medalists: \d+/.test(f)));
+  assert.ok(facts.some((f) => /national-academy/.test(f)));
 });
 
 test('search is diacritic-insensitive in both directions', () => {

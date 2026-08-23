@@ -818,6 +818,41 @@ export function buildGlobalFunFacts(roster) {
   return facts;
 }
 
+function honorHolderCount(roster, honorName) {
+  return new Set((roster || [])
+    .filter((p) => (p.honors || []).some((honor) => honor.name === honorName))
+    .map((p) => p.name)).size;
+}
+
+export function buildAwardsFunFacts(roster) {
+  const allRoster = roster || [];
+  if (allRoster.length === 0) {
+    return ['No faculty currently listed, so no awards or honors can be counted.'];
+  }
+
+  const honored = allRoster.filter((p) => (p.honors || []).length > 0).length;
+  const usRoster = allRoster.filter((p) => (p.country || 'United States') === 'United States');
+  const academyHolders = new Set(allRoster
+    .filter((p) => (p.honors || []).some((honor) => honor.category === 'academy'))
+    .map((p) => p.name)).size;
+  const fellowHolders = new Set(allRoster
+    .filter((p) => (p.honors || []).some((honor) => honor.category === 'fellow'))
+    .map((p) => p.name)).size;
+
+  const honorCounts = countBy(allRoster.flatMap((p) => (p.honors || []).map((honor) => honor.name)), (name) => name);
+  const commonHonors = honorCounts.slice(0, 5);
+
+  return [
+    `${honored} of ${allRoster.length} professors have at least one recorded major honor or award.`,
+    `NSF CAREER Award holders: ${honorHolderCount(allRoster, 'NSF CAREER Award')} across the database (${honorHolderCount(usRoster, 'NSF CAREER Award')} currently in the U.S. roster).`,
+    `MacArthur Fellows: ${honorHolderCount(allRoster, 'MacArthur Fellow')}; Fields Medalists: ${honorHolderCount(allRoster, 'Fields Medal')}; Nobel Prize winners: ${honorHolderCount(allRoster, 'Nobel Prize')}.`,
+    `${academyHolders} professors hold a recorded national-academy or equivalent academy distinction, and ${fellowHolders} hold a recorded major-society fellowship.`,
+    commonHonors.length
+      ? `Most frequently recorded honors: ${commonHonors.map(([name, count]) => `${name} (${count})`).join(', ')}.`
+      : 'No honors are currently recorded for this roster.',
+  ];
+}
+
 // Computed fresh from the live roster every time (not a snapshot), so these stay accurate as the
 // roster grows. Returned as plain fact strings — the "show me something interesting" view just
 // renders them as a list.
