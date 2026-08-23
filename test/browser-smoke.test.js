@@ -92,8 +92,14 @@ test('zero-count filter options are hidden and stale locations recover', async (
     if (message.type() === 'error') runtimeErrors.push(message.text());
   });
   await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
-  assert.ok((await page.locator('#field-filter option').allTextContents()).every((text) => text.trim()));
-  assert.ok((await page.locator('#track-filter option').allTextContents()).every((text) => text.trim()));
+  const fieldOptions = page.locator('#field-filter option');
+  const trackOptions = page.locator('#track-filter option');
+  assert.ok((await fieldOptions.allTextContents()).every((text) => text.trim()));
+  assert.ok((await trackOptions.allTextContents()).every((text) => text.trim()));
+  assert.match(await fieldOptions.filter({ hasText: 'Health' }).first().textContent(), /Health.*\(\d+\)/);
+  assert.match(await fieldOptions.filter({ hasText: 'Law' }).first().textContent(), /Law.*\(\d+\)/);
+  assert.match(await trackOptions.filter({ hasText: 'Tenure-line' }).first().textContent(), /Tenure-line \(\d+\)/);
+  assert.equal(await page.locator('#field-filter option[value="Others"]').getAttribute('data-zero-count'), 'true');
   await page.locator('#field-filter').selectOption('Biological & Biomedical Sciences');
   assert.equal(await page.locator('#track-filter option[value="Teaching"]').getAttribute('data-zero-count'), 'true');
   assert.equal(await page.locator('#track-filter option[value="Emeritus"]').getAttribute('data-zero-count'), 'true');
