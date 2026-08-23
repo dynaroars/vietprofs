@@ -12,6 +12,7 @@ import {
   countryFlag,
   canonicalRank,
   displayName,
+  vietnameseName,
   fieldOf,
   continentOf,
   locationMatches,
@@ -150,6 +151,7 @@ test('suggestionValues array contains no undefined/null and all elements safely 
 test('full HTML roster rendering produces clean HTML with no undefined/null/NaN for every filter combination', () => {
   function renderEntry(p) {
     const visibleName = displayName(p.name);
+    const nativeName = vietnameseName(p);
     const personField = fieldOf(p.department, p.university);
     const fieldTag = `<span class="tag tag-field">${escapeHtml(personField)}</span>`;
     const trackTag = `<span class="tag tag-track">${escapeHtml(p.track)}</span>`;
@@ -165,9 +167,12 @@ test('full HTML roster rendering produces clean HTML with no undefined/null/NaN 
 
     return `
       <div class="entry">
-        <a class="entry-name" href="${escapeHtml(p.websiteUrl ?? p.profileUrl)}">${escapeHtml(visibleName)}</a>
-        <span class="entry-meta">${escapeHtml(p.university)} · ${escapeHtml(p.department)} · ${escapeHtml(formatLocation(p))}</span>
-        ${rankInfo ? `<div class="entry-details">${rankInfo}</div>` : ''}
+        <div class="entry-name-row">
+          <a class="entry-name" href="${escapeHtml(p.websiteUrl ?? p.profileUrl)}">${escapeHtml(visibleName)}</a>
+          <span class="entry-vietnamese-name">(${escapeHtml(nativeName)})</span>
+        </div>
+        <div class="entry-meta">${escapeHtml(canonicalRank(p) || '')} · ${escapeHtml(p.department)} · ${escapeHtml(p.university)} · ${escapeHtml(formatLocation(p))}</div>
+        ${p.phdYear || p.phdInstitution ? `<div class="entry-details">PhD (${[p.phdInstitution, p.phdYear].filter(Boolean).map((value) => escapeHtml(String(value))).join(', ')})</div>` : ''}
         <div class="tags">${tags}</div>
       </div>
     `;
@@ -195,6 +200,26 @@ test('full HTML roster rendering produces clean HTML with no undefined/null/NaN 
       }
     }
   }
+});
+
+test('every roster entry has a safe Vietnamese display-name variant and the requested card rows', () => {
+  for (const p of roster) {
+    const nativeName = vietnameseName(p);
+    assert.ok(nativeName.trim(), `Missing Vietnamese display name for ${p.name}`);
+    assert.match(nativeName, /^[^<>]+$/);
+    assert.notEqual(nativeName, 'undefined');
+    assert.notEqual(nativeName, 'null');
+  }
+  const sample = roster.find((p) => p.name === 'ThanhVu H. Nguyen') ?? roster[0];
+  const html = `<div class="entry-name-row"><a class="entry-name">${escapeHtml(displayName(sample.name))}</a><span class="entry-vietnamese-name">(${escapeHtml(vietnameseName(sample))})</span></div><div class="entry-meta">${escapeHtml(canonicalRank(sample) || '')} · ${escapeHtml(sample.department)} · ${escapeHtml(sample.university)} · ${escapeHtml(formatLocation(sample))}</div>`;
+  assert.match(html, /entry-name-row/);
+  assert.match(html, /entry-meta/);
+  assert.match(html, /entry-vietnamese-name/);
+});
+
+test('authoritative full Vietnamese name overrides preserve accent marks and Vietnamese order', () => {
+  const thanhVu = roster.find((p) => p.name === 'ThanhVu H. Nguyen');
+  assert.equal(vietnameseName(thanhVu), 'Nguyễn Huy ThanhVu');
 });
 
 test('auto-select location logic widens to World when searching for international countries or faculty', async () => {

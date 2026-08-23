@@ -348,7 +348,7 @@ h1 {
   min-width: 0;
 }
 
-.entry-line {
+.entry-name-row {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
@@ -359,6 +359,11 @@ h1 {
   color: var(--text-primary);
   font-weight: 600;
   text-decoration: none;
+}
+
+.entry-vietnamese-name {
+  color: var(--text-muted);
+  font-size: var(--text-sm);
 }
 
 .entry-name:hover,

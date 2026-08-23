@@ -5,6 +5,7 @@ const searchIndexCache = new WeakMap();
 function searchableFields(person) {
   return [
     displayName(person.name),
+    vietnameseName(person),
     person.university,
     person.city,
     person.state,
@@ -73,6 +74,43 @@ export function canonicalRank(person) {
   if (/assistant/i.test(person.rank ?? '')) return 'Assistant Professor';
   if (/associate/i.test(person.rank ?? '')) return 'Associate Professor';
   return 'Professor';
+}
+
+// The roster's canonical `name` stays in the form used by the institution. This companion
+// display form puts a recognizable Vietnamese family name first and adds only high-confidence
+// surname diacritics. A record may provide `vietnameseName` when an authoritative source gives
+// the person's complete Vietnamese name; otherwise initials are deliberately preserved.
+const VIETNAMESE_SURNAMES = new Map([
+  ['Bui', 'Bùi'], ['Dang', 'Đặng'], ['Dao', 'Đào'], ['Do', 'Đỗ'], ['Duong', 'Dương'],
+  ['Ho', 'Hồ'], ['Hoang', 'Hoàng'], ['Huynh', 'Huỳnh'], ['Lam', 'Lâm'], ['Le', 'Lê'],
+  ['Ngo', 'Ngô'], ['Nguyen', 'Nguyễn'], ['Pham', 'Phạm'], ['Phan', 'Phan'], ['Tran', 'Trần'],
+  ['Trinh', 'Trịnh'], ['Vo', 'Võ'], ['Vu', 'Vũ'], ['Vuong', 'Vương'],
+]);
+
+const VIETNAMESE_NAME_OVERRIDES = new Map([
+  // The CV expands the middle initial as Huy; the display order follows Vietnamese naming.
+  ['ThanhVu H. Nguyen', 'Nguyễn Huy ThanhVu'],
+]);
+
+function surnameKey(token) {
+  return stripDiacritics(token.replace(/[.,]/g, ''));
+}
+
+export function vietnameseName(person) {
+  if (person.vietnameseName?.trim()) return person.vietnameseName.trim();
+  const current = displayName(person.name).trim();
+  if (VIETNAMESE_NAME_OVERRIDES.has(current)) return VIETNAMESE_NAME_OVERRIDES.get(current);
+  const tokens = current.split(/\s+/).filter(Boolean);
+  if (tokens.length < 2) return current;
+  const firstKey = surnameKey(tokens[0]);
+  const lastKey = surnameKey(tokens.at(-1));
+  if (VIETNAMESE_SURNAMES.has(firstKey) && !VIETNAMESE_SURNAMES.has(lastKey)) {
+    return `${VIETNAMESE_SURNAMES.get(firstKey)} ${tokens.slice(1).join(' ')}`;
+  }
+  if (VIETNAMESE_SURNAMES.has(lastKey)) {
+    return `${VIETNAMESE_SURNAMES.get(lastKey)} ${tokens.slice(0, -1).join(' ')}`;
+  }
+  return current;
 }
 
 export function uniqueResearchAreas(roster) {

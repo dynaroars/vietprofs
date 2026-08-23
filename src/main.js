@@ -1,5 +1,5 @@
 import './style.css';
-import { loadRoster, buildSearchIndex, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, LOCATION_LABELS, countryFlag, canonicalRank, displayName, fieldOf, healthSubfieldOf, locationMatches, filterRoster, sortRoster, buildFunFacts, buildUsFunFacts, buildGlobalFunFacts, buildAwardsFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, STATE_ABBR, parseSearchQuery } from './data.js';
+import { loadRoster, buildSearchIndex, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, LOCATION_LABELS, countryFlag, canonicalRank, displayName, vietnameseName, fieldOf, healthSubfieldOf, locationMatches, filterRoster, sortRoster, buildFunFacts, buildUsFunFacts, buildGlobalFunFacts, buildAwardsFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, STATE_ABBR, parseSearchQuery } from './data.js';
 import { escapeHtml } from './utils.js';
 import { nearestVietnameseHoliday } from './holidays.js';
 import { STATE_GRID } from './state-grid.js';
@@ -138,6 +138,8 @@ function renderRoster(roster, { field, location } = {}) {
   rosterEl.innerHTML = roster
     .map((p) => {
       const visibleName = displayName(p.name);
+      const nativeName = vietnameseName(p);
+      const entryMeta = [canonicalRank(p), p.department, p.university, formatLocation(p)].filter(Boolean).join(' · ');
       const personField = fieldOf(p.department, p.university);
       const fieldTag = `<span class="tag tag-field">${escapeHtml(fieldDropdownLabel(personField))}</span>`;
       const healthSubfield = healthSubfieldOf(p);
@@ -157,15 +159,12 @@ function renderRoster(roster, { field, location } = {}) {
         <div class="entry${portrait ? ' entry-with-portrait' : ''}">
           ${portrait}
           <div class="entry-content">
-            <div class="entry-line">
-              <a class="entry-name" href="${escapeHtml(p.websiteUrl ?? p.profileUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(visibleName)}</a>${p.scholarUrl ? ` <a class="scholar-link" href="${escapeHtml(p.scholarUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(visibleName)} on Google Scholar" title="Google Scholar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3Z"/><path d="M5 12.18V16c0 1.66 3.13 3 7 3s7-1.34 7-3v-3.82l-7 3.82-7-3.82Z"/></svg></a>` : ''}${p.secondaryAppointment ? ' <span class="dagger">†</span>' : ''}
-              <span class="entry-meta">${escapeHtml(p.university)} · ${escapeHtml(p.department)} · <span class="loc-badge" title="${escapeHtml(p.country || 'United States')}"><span class="country-flag" aria-hidden="true">${countryFlag(p.country)}</span> ${escapeHtml(formatLocation(p))}</span></span>
-            </div>
-            ${p.rank || p.phdYear || p.phdInstitution ? `<div class="entry-details">${[
-              canonicalRank(p) && escapeHtml(canonicalRank(p)),
-              p.phdYear && `PhD ${escapeHtml(String(p.phdYear))}${p.phdInstitution ? `, ${escapeHtml(p.phdInstitution)}` : ''}`,
-              !p.phdYear && p.phdInstitution && `PhD, ${escapeHtml(p.phdInstitution)}`,
-            ].filter(Boolean).join(' · ')}</div>` : ''}
+              <div class="entry-name-row">
+                <a class="entry-name" href="${escapeHtml(p.websiteUrl ?? p.profileUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(visibleName)}</a>
+                <span class="entry-vietnamese-name">(${escapeHtml(nativeName)})</span>${p.scholarUrl ? ` <a class="scholar-link" href="${escapeHtml(p.scholarUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(visibleName)} on Google Scholar" title="Google Scholar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3Z"/><path d="M5 12.18V16c0 1.66 3.13 3 7 3s7-1.34 7-3v-3.82l-7 3.82-7-3.82Z"/></svg></a>` : ''}${p.secondaryAppointment ? ' <span class="dagger">†</span>' : ''}
+              </div>
+              <div class="entry-meta">${escapeHtml(entryMeta)} <span class="loc-badge" title="${escapeHtml(p.country || 'United States')}"><span class="country-flag" aria-hidden="true">${countryFlag(p.country)}</span></span></div>
+              ${p.phdYear || p.phdInstitution ? `<div class="entry-details">PhD (${[p.phdInstitution, p.phdYear].filter(Boolean).map((value) => escapeHtml(String(value))).join(', ')})</div>` : ''}
             ${honors ? `<div class="entry-honors"><span class="honors-label">Honors:</span> ${honors}</div>` : ''}
             <div class="tags">${tags}</div>
           </div>
