@@ -1,4 +1,4 @@
-# Vietnamese & Diaspora Professors Worldwide
+# Vietnamese and Vietnamese Diaspora Professors Worldwide
 
 > Find Vietnamese and Vietnamese diaspora professors across fields at universities worldwide.
 

@@ -10,7 +10,7 @@ const app = document.getElementById('app');
 function renderShell() {
   app.innerHTML = `
     <header>
-      <h1><a class="home-link" href="${import.meta.env.BASE_URL}">Vietnamese &amp; Diaspora Professors Worldwide</a></h1>
+      <h1><a class="home-link" href="${import.meta.env.BASE_URL}">Vietnamese and Vietnamese Diaspora Professors Worldwide</a></h1>
       <p class="tagline">Submit a new professor or suggest an update</p>
       <p class="criteria">
         To submit or update a professor, simply enter their <strong>full name</strong> and <strong>one or more evidence links</strong> (official faculty profile, personal homepage, lab website, Google Scholar, etc.). All other fields are optional — maintainers will review the links to verify and complete details.
