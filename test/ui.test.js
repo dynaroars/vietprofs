@@ -222,6 +222,9 @@ test('authoritative full Vietnamese name overrides preserve accent marks and Vie
   assert.equal(vietnameseName(thanhVu), 'Nguyễn Huy ThanhVu');
   assert.equal(vietnameseName(roster.find((p) => p.name === 'Nghiem V. Nguyen')), 'Nguyễn V. Nghiêm');
   assert.equal(vietnameseName(roster.find((p) => p.name === 'Bao Chau Ngo')), 'Ngô Bảo Châu');
+  assert.equal(vietnameseName(roster.find((p) => p.name === 'Nguyen Cac')), 'Cac Nguyễn');
+  assert.equal(vietnameseName(roster.find((p) => p.name === 'Nguyen Tien Zung')), 'Tien Zung Nguyễn');
+  assert.equal(vietnameseName(roster.find((p) => p.name === 'Nguyen Hung Minh Tan')), 'Hung Minh Tan Nguyễn');
 });
 
 test('auto-select location logic widens to World when searching for international countries or faculty', async () => {

@@ -106,6 +106,11 @@ export function vietnameseName(person) {
   if (tokens.length < 2) return current;
   const firstKey = surnameKey(tokens[0]);
   const lastKey = surnameKey(tokens.at(-1));
+  // Some Vietnamese sources publish family name first. For the roster's readable
+  // parenthetical form, move an initial Nguyễn to the final family-name position.
+  if (firstKey === 'Nguyen' && lastKey !== 'Nguyen') {
+    return `${tokens.slice(1).join(' ')} ${VIETNAMESE_SURNAMES.get('Nguyen')}`;
+  }
   if (VIETNAMESE_SURNAMES.has(firstKey) && !VIETNAMESE_SURNAMES.has(lastKey)) {
     return `${VIETNAMESE_SURNAMES.get(firstKey)} ${tokens.slice(1).join(' ')}`;
   }
