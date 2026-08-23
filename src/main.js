@@ -438,12 +438,15 @@ async function init() {
   // calling this at the top of update(), which already runs on every relevant state change.
   function syncDropdownCounts() {
     const updateOption = (option, label, count, select) => {
-      option.hidden = count === 0 && option.value !== select.value;
+      const zeroCount = count === 0 && option.value !== select.value;
+      option.hidden = false;
+      option.dataset.zeroCount = zeroCount ? 'true' : 'false';
+      option.style.display = zeroCount ? 'none' : '';
       option.textContent = `${label} (${count})`;
     };
     const hideEmptyGroups = (select) => {
       for (const group of Array.from(select.querySelectorAll('optgroup'))) {
-        group.hidden = Array.from(group.options).every((option) => option.hidden);
+        group.style.display = Array.from(group.options).every((option) => option.dataset.zeroCount === 'true') ? 'none' : '';
       }
     };
     const locVal = locationSelect.value;

@@ -93,10 +93,10 @@ test('zero-count filter options are hidden and stale locations recover', async (
   });
   await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
   await page.locator('#field-filter').selectOption('Biological & Biomedical Sciences');
-  assert.equal(await page.locator('#track-filter option[value="Teaching"]').getAttribute('hidden'), '');
-  assert.equal(await page.locator('#track-filter option[value="Emeritus"]').getAttribute('hidden'), '');
-  assert.equal(await page.locator('#field-filter option[value="Others"]').getAttribute('hidden'), '');
-  const visibleCountryLabels = await page.locator('#location-filter option:not([hidden])').allTextContents();
+  assert.equal(await page.locator('#track-filter option[value="Teaching"]').getAttribute('data-zero-count'), 'true');
+  assert.equal(await page.locator('#track-filter option[value="Emeritus"]').getAttribute('data-zero-count'), 'true');
+  assert.equal(await page.locator('#field-filter option[value="Others"]').getAttribute('data-zero-count'), 'true');
+  const visibleCountryLabels = await page.locator('#location-filter option:not([data-zero-count="true"])').allTextContents();
   assert.ok(visibleCountryLabels.every((label) => !label.endsWith('(0)')));
   await page.goto(`${baseUrl}/?loc=Africa`, { waitUntil: 'networkidle' });
   assert.equal(await page.locator('#location-filter').inputValue(), 'US');
