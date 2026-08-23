@@ -1,6 +1,6 @@
 # Portrait checklist
 
-Updated 2026-08-23. The roster currently has **250 entries without a portrait**. Items crossed out have a verified portrait wired into `public/data.json` (or, where still noted "image candidate", a candidate URL found but not yet verified); generic social-preview/default images are intentionally not marked complete.
+Updated 2026-08-23. The roster currently has **239 entries without a portrait**. Items crossed out have a verified portrait wired into `public/data.json` (or, where still noted "image candidate", a candidate URL found but not yet verified); generic social-preview/default images are intentionally not marked complete.
 
 ## Missing portraits
 
@@ -34,21 +34,21 @@ Updated 2026-08-23. The roster currently has **250 entries without a portrait**.
 - ~~28. Vicky Doan-Nguyen — Ohio State University~~ ([profile](https://u.osu.edu/doan-nguyen.1/))
 - ~~29. Juliane Nguyen — University of North Carolina at Chapel Hill~~ ([profile](https://nguyenlab.web.unc.edu/))
 - ~~30. Jacqueline Huynh — University of California, Irvine~~ ([profile](https://faculty.sites.uci.edu/aircraftsyslab/))
-- 31. Tran N. H. Nguyen — University of Texas Southwestern Medical Center ([profile](https://www.trannguyenlab.com/))
-- 32. Hung V.-T. Nguyen — Dartmouth College ([profile](https://sites.dartmouth.edu/nguyen-group/))
-- 33. Huy T. Tran — University of Illinois Urbana-Champaign ([profile](https://tran.aerospace.illinois.edu/))
+- ~~31. Tran N. H. Nguyen — University of Texas Southwestern Medical Center~~ ([profile](https://www.trannguyenlab.com/))
+- ~~32. Hung V.-T. Nguyen — Dartmouth College~~ ([profile](https://sites.dartmouth.edu/nguyen-group/))
+- ~~33. Huy T. Tran — University of Illinois Urbana-Champaign~~ ([profile](https://tran.aerospace.illinois.edu/))
 - 34. Thao (Vicky) Nguyen — Johns Hopkins University ([profile](https://pages.jh.edu/tnguy108/))
 - 35. Vinh Nguyen - Michigan Technological University — Michigan Technological University ([profile](https://sites.google.com/mtu.edu/vinh-nguyen))
 - 36. Nguyen Nguyen — Minnesota State University, Mankato ([profile](https://cob.mnsu.edu/about/faculty-and-staff/accounting-and-finance-staff/nguyen-nguyen/))
 - 37. Julie Ngo — Loyola Marymount University ([profile](https://scholars.lmu.edu/en/persons/julie-ngo/))
 - 38. Diep Nguyen — Seattle Pacific University ([profile](https://spu.edu/academics/college-business-technology/faculty-staff/nguyen-diep))
-- 39. Liem Nguyen - Westfield State University — Westfield State University ([profile](https://www.westfield.ma.edu/people/liem-nguyen))
-- 40. Thanh Nguyen - Purdue University — Purdue University ([profile](https://web.ics.purdue.edu/~nguye161/))
-- 41. Dan Hieu Vo — Florida Gulf Coast University ([profile](https://www.fgcu.edu/school-of-entrepreneurship/about/dksoe-directory))
+- ~~39. Liem Nguyen - Westfield State University — Westfield State University~~ ([profile](https://www.westfield.ma.edu/people/liem-nguyen))
+- ~~40. Thanh Nguyen - Purdue University — Purdue University~~ ([profile](https://web.ics.purdue.edu/~nguye161/))
+- ~~41. Dan Hieu Vo — Florida Gulf Coast University~~ ([profile](https://www.fgcu.edu/school-of-entrepreneurship/about/dksoe-directory))
 - 42. Viet Tuan Pham — Susquehanna University ([profile](https://www.susqu.edu/_ingredients/templates/details/profiles.php?id=3271))
-- 43. Tuong Vu — University of Oregon ([profile](https://cas.uoregon.edu/directory/political-science/all/thvu))
-- 44. Phi H. Su — Williams College ([profile](https://www.williams.edu/asian-american-studies/profile/phs2/))
-- 45. Khanh Le — Queens College, City University of New York ([profile](https://www.qc.cuny.edu/academics/lcd/faculty/))
+- ~~43. Tuong Vu — University of Oregon~~ ([profile](https://cas.uoregon.edu/directory/political-science/all/thvu))
+- ~~44. Phi H. Su — Williams College~~ ([profile](https://www.williams.edu/asian-american-studies/profile/phs2/))
+- ~~45. Khanh Le — Queens College, City University of New York~~ ([profile](https://www.qc.cuny.edu/academics/lcd/faculty/))
 - 46. Ocean Vuong — New York University ([profile](https://as.nyu.edu/content/nyu-as/as/faculty/ocean-vuong.html))
 - 47. Viet Le — California College of the Arts ([profile](https://vietle.net/))
 - 48. Chi Van Dang — Johns Hopkins University ([profile](https://bdp.jhu.edu/bd-professors/chi-van-dang/))
@@ -56,9 +56,9 @@ Updated 2026-08-23. The roster currently has **250 entries without a portrait**.
 - 50. Victoria Tran — Reed College ([profile](https://www.reed.edu/sociology/faculty/))
 - 51. Mariam B. Lam — University of California, Riverside ([profile](https://profiles.ucr.edu/mariam.lam))
 - 52. Michael Dao — San Jose State University ([profile](https://www.sjsu.edu/kinesiology/about-us/faculty-and-staff.php))
-- 53. Tomas Vu-Daniel — Columbia University ([profile](https://arts.columbia.edu/profiles/tomas-vu-daniel))
+- ~~53. Tomas Vu-Daniel — Columbia University~~ ([profile](https://arts.columbia.edu/profiles/tomas-vu-daniel))
 - 54. Mylinh Nguyen — University of Texas at Dallas ([profile](https://profiles.utdallas.edu/mylinh.nguyen))
-- 55. Thuan L. Nguyen — University of North Texas ([profile](https://facultyinfo.unt.edu/faculty-profile?profile=tln0076))
+- ~~55. Thuan L. Nguyen — University of North Texas~~ ([profile](https://facultyinfo.unt.edu/faculty-profile?profile=tln0076))
 - 56. Lesa Tran Lu — Rice University ([profile](https://profiles.rice.edu/faculty/lesa-tran-lu))
 - 57. Thu Nguyen — University of Michigan ([profile](https://lsa.umich.edu/chem/people/faculty/nthu.html))
 - 58. Christopher Paul Nguyen — University of New Mexico ([profile](https://business.unm.edu/faculty-research/faculty-profile.html?username=cnguyen))
