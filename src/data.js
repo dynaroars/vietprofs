@@ -962,19 +962,33 @@ export function buildAwardsFunFacts(roster) {
   const marqueeHonors = MARQUEE_HONORS
     .map((name) => [name, honorHolderCount(allRoster, name)])
     .filter(([, count]) => count > 0);
+  const facts = [];
+  const nsfHolders = honorHolderCount(allRoster, 'NSF CAREER Award');
+  const usNsfHolders = honorHolderCount(usRoster, 'NSF CAREER Award');
+  const signatureHonors = [
+    ['MacArthur Fellows', honorHolderCount(allRoster, 'MacArthur Fellow')],
+    ['Fields Medalists', honorHolderCount(allRoster, 'Fields Medal')],
+    ['Nobel Prize winners', honorHolderCount(allRoster, 'Nobel Prize')],
+  ].filter(([, count]) => count > 0);
 
-  return [
-    `${honored} of ${allRoster.length} professors have at least one recorded major honor or award.`,
-    `NSF CAREER Award holders: ${honorHolderCount(allRoster, 'NSF CAREER Award')} across the database (${honorHolderCount(usRoster, 'NSF CAREER Award')} currently in the U.S. roster).`,
-    `MacArthur Fellows: ${honorHolderCount(allRoster, 'MacArthur Fellow')}; Fields Medalists: ${honorHolderCount(allRoster, 'Fields Medal')}; Nobel Prize winners: ${honorHolderCount(allRoster, 'Nobel Prize')}.`,
-    marqueeHonors.length
-      ? `Marquee honors represented: ${marqueeHonors.map(([name, count]) => `${name} (${count})`).join(', ')}.`
-      : 'No marquee honors are currently recorded for this roster.',
-    `${academyHolders} professors hold a recorded national-academy or equivalent academy distinction, and ${fellowHolders} hold a recorded major-society fellowship.`,
-    commonHonors.length
-      ? `Most frequently recorded honors: ${commonHonors.map(([name, count]) => `${name} (${count})`).join(', ')}.`
-      : 'No honors are currently recorded for this roster.',
-  ];
+  if (honored > 0) facts.push(`${honored} of ${allRoster.length} professors have at least one recorded major honor or award.`);
+  if (nsfHolders > 0) {
+    facts.push(`NSF CAREER Award holders: ${nsfHolders} across the database (${usNsfHolders} currently in the U.S. roster).`);
+  }
+  if (signatureHonors.length) {
+    facts.push(`${signatureHonors.map(([name, count]) => `${name}: ${count}`).join('; ')}.`);
+  }
+  if (marqueeHonors.length) {
+    facts.push(`Marquee honors represented: ${marqueeHonors.map(([name, count]) => `${name} (${count})`).join(', ')}.`);
+  }
+
+  const academyFacts = [];
+  if (academyHolders > 0) academyFacts.push(`${academyHolders} national-academy or equivalent academy distinction${academyHolders === 1 ? '' : 's'}`);
+  if (fellowHolders > 0) academyFacts.push(`${fellowHolders} major-society fellowship${fellowHolders === 1 ? '' : 's'}`);
+  if (academyFacts.length) facts.push(`${academyFacts.join(' and ')} recorded in the roster.`);
+  if (commonHonors.length) facts.push(`Most frequently recorded honors: ${commonHonors.map(([name, count]) => `${name} (${count})`).join(', ')}.`);
+
+  return facts;
 }
 
 // Computed fresh from the live roster every time (not a snapshot), so these stay accurate as the
