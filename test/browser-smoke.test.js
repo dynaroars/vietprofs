@@ -74,3 +74,11 @@ test('filters and submit-form suggestions work', async (t) => {
   assert.notEqual(await page.locator('#profileUrl').inputValue(), '');
   await page.close();
 });
+
+test('stale zero-result field URLs fall back to the roster', async (t) => {
+  if (unavailable || !browser) return t.skip(`Browser smoke tests unavailable: ${unavailable ?? 'no browser'}`);
+  const page = await browser.newPage();
+  await page.goto(`${baseUrl}/?field=Others`, { waitUntil: 'networkidle' });
+  assert.ok((await page.locator('.entry').count()) > 0);
+  await page.close();
+});

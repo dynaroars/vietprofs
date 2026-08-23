@@ -553,15 +553,15 @@ async function init() {
     searchInput.value = params.get('q');
   }
   const requestedLocation = params.get('loc') ?? params.get('location');
-  if (requestedLocation && (locationOptions.includes(requestedLocation) || LOCATIONS.includes(requestedLocation))) {
+  if (requestedLocation && (locationOptions.includes(requestedLocation) || LOCATIONS.includes(requestedLocation)) && roster.some((p) => locationMatches(p, requestedLocation))) {
     locationSelect.value = requestedLocation;
   } else if (params.has('q')) {
     autoSelectLocationForQuery();
   }
-  if (params.has('field') && (FIELDS.includes(params.get('field')) || params.get('field') === INTERESTING)) {
+  if (params.has('field') && (FIELDS.includes(params.get('field')) || params.get('field') === INTERESTING) && (params.get('field') === INTERESTING || roster.some((p) => fieldOf(p.department, p.university) === params.get('field')))) {
     fieldSelect.value = params.get('field');
   }
-  if (params.has('track') && TRACKS.includes(params.get('track'))) {
+  if (params.has('track') && TRACKS.includes(params.get('track')) && roster.some((p) => p.track === params.get('track'))) {
     trackSelect.value = params.get('track');
   }
 
