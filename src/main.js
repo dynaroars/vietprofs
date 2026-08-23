@@ -470,7 +470,7 @@ async function init() {
       fieldBase = fieldBase.filter((p) => p.track === trackVal);
     }
     fieldSelect.options[0].textContent = `All fields (${fieldBase.length})`;
-    for (const option of fieldSelect.options) {
+    for (const option of Array.from(fieldSelect.options)) {
       if (!FIELDS.includes(option.value)) continue;
       const count = fieldBase.filter((p) => fieldOf(p.department, p.university) === option.value).length;
       updateOption(option, fieldDropdownLabel(option.value), count, fieldSelect);
@@ -482,7 +482,7 @@ async function init() {
       trackBase = trackBase.filter((p) => fieldOf(p.department, p.university) === fieldVal);
     }
     trackSelect.options[0].textContent = `All faculty types (${trackBase.length})`;
-    for (const option of trackSelect.options) {
+    for (const option of Array.from(trackSelect.options)) {
       if (!TRACKS.includes(option.value)) continue;
       const count = trackBase.filter((p) => p.track === option.value).length;
       updateOption(option, option.value, count, trackSelect);

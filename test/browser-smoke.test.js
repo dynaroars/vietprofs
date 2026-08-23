@@ -86,6 +86,11 @@ test('stale zero-result field URLs fall back to the roster', async (t) => {
 test('zero-count filter options are hidden and stale locations recover', async (t) => {
   if (unavailable || !browser) return t.skip(`Browser smoke tests unavailable: ${unavailable ?? 'no browser'}`);
   const page = await browser.newPage();
+  const runtimeErrors = [];
+  page.on('pageerror', (error) => runtimeErrors.push(error.message));
+  page.on('console', (message) => {
+    if (message.type() === 'error') runtimeErrors.push(message.text());
+  });
   await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
   await page.locator('#field-filter').selectOption('Biological & Biomedical Sciences');
   assert.equal(await page.locator('#track-filter option[value="Teaching"]').getAttribute('hidden'), '');
@@ -96,5 +101,6 @@ test('zero-count filter options are hidden and stale locations recover', async (
   await page.goto(`${baseUrl}/?loc=Africa`, { waitUntil: 'networkidle' });
   assert.equal(await page.locator('#location-filter').inputValue(), 'US');
   assert.ok((await page.locator('.entry').count()) > 0);
+  assert.deepEqual(runtimeErrors, []);
   await page.close();
 });
