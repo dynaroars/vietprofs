@@ -439,7 +439,6 @@ async function init() {
   function syncDropdownCounts() {
     const updateOption = (option, label, count, select) => {
       const zeroCount = count === 0 && option.value !== select.value;
-      option.hidden = false;
       option.dataset.zeroCount = zeroCount ? 'true' : 'false';
       option.style.display = zeroCount ? 'none' : '';
       option.textContent = `${label} (${count})`;
