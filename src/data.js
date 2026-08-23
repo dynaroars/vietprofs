@@ -223,6 +223,7 @@ export const COUNTRY_TO_CONTINENT = {
 
   // Asia
   'Singapore': 'Asia',
+  'Vietnam': 'Asia',
   'Hong Kong': 'Asia',
   'Japan': 'Asia',
   'South Korea': 'Asia',
@@ -270,6 +271,7 @@ export const COUNTRY_FLAGS = {
   'Poland': '🇵🇱',
   'Ireland': '🇮🇪',
   'Singapore': '🇸🇬',
+  'Vietnam': '🇻🇳',
   'Japan': '🇯🇵',
   'Hong Kong': '🇭🇰',
   'New Zealand': '🇳🇿',

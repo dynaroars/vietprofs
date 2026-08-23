@@ -17,55 +17,6 @@ Static site, no backend: the roster lives in `public/data.json` and is loaded, s
 and sorted client-side. Reviewed faculty portraits are stored as optimized local WebP files; records
 with a portrait keep the original public image URL in `portraitSource` for provenance.
 
-Started as a Computer Science-only list and completed an initial audit of the ten canonical STEM
-fields on 2026-08-18. Six non-STEM fields (Business & Economics through Arts & Design below) were
-added to the taxonomy on 2026-08-19. All sixteen fields, including Agricultural & Natural Resource
-Sciences (the last to receive its first entries), completed a second full audit-and-search pass on
-2026-08-19: every existing entry was checked against a current source, several stale entries were
-corrected or removed, and new candidates were searched for field by field. Every field remains open
-to further research passes — none of this is exhaustive, especially in the smaller-count fields.
-The `Others` category was added on 2026-08-20 so qualifying faculty in departments outside those
-sixteen disciplines are included rather than omitted. Global location support across North America,
-Europe, Asia, Australasia, South America, and Africa was introduced with a dedicated location selector.
-
-### Deep re-audit tracker
-
-The current field-by-field re-audit began on 2026-08-22. Completed fields are removed from this
-list only after current faculty sources and major-honor sources have been checked:
-
-- Completed: Physics & Astronomy; Statistics & Data Science; Chemistry;
-  Biological & Biomedical Sciences; Earth & Environmental Sciences;
-  Agricultural & Natural Resource Sciences; Health Sciences; Business & Economics;
-  Social & Behavioral Sciences; Education; Computer & Information Sciences; Engineering;
-  Mathematics
-- Remaining: none — all listed fields have been audited.
-  Humanities; Law & Public Affairs; Arts & Design; Others
-
-### Non-U.S. field-by-field audit TODO
-
-This separate pass covers faculty currently based outside the United States. It searches for
-major internationally recognized honors and selective national equivalents of U.S. programs
-such as NSF CAREER, PECASE, Sloan, ONR YIP, and DARPA YFA. Completed fields are crossed out
-after current-faculty and major-honor sources have been checked:
-
-- [x] ~~Mathematics~~
-- [x] ~~Engineering~~
-- [x] ~~Chemistry~~
-- [x] ~~Health Sciences~~
-- [x] ~~Biological & Biomedical Sciences~~
-- [x] ~~Law & Public Affairs~~
-- [x] ~~Physics & Astronomy~~
-- [x] ~~Computer & Information Sciences~~
-- [x] ~~Business & Economics~~
-- [x] ~~Education~~
-- [x] ~~Humanities~~
-- [x] ~~Agricultural & Natural Resource Sciences~~
-- [x] ~~Social & Behavioral Sciences~~
-- [x] ~~Others~~
-- [x] ~~Statistics & Data Science~~
-- [x] ~~Arts & Design~~
-- [x] ~~Earth & Environmental Sciences~~
-
 ## Using the website & search features
 
 The directory offers instant client-side filtering, free-text search, and structured query operators:
@@ -146,67 +97,6 @@ Included honors generally fall into these categories:
   comparable distinguished university appointment. Ordinary named faculty positions do not
   automatically qualify.
 
-The cross-field award families considered in the audit include:
-
-- **Computing and engineering**: ACM, IEEE, AAAI, SIAM, and equivalent society Fellow elections;
-  NSF CAREER, PECASE, Sloan, Packard, ONR/ARO/AFOSR, DARPA, DOE, and comparable investigator
-  programs; major ACM/IEEE technical achievement prizes; and retrospective Test-of-Time,
-  Most-Influential-Paper, or Impact awards from major ACM, IEEE, or equivalent flagship venues.
-- **Mathematics, statistics, and economics**: academy memberships; AMS, ASA, IMS, SIAM,
-  Econometric Society, and comparable Fellow distinctions; major national early-career awards;
-  and field-wide prizes such as Fields-, Abel-, Wolf-, COPSS-, and Frisch-level honors when the
-  recipient and award are directly verified.
-- **Natural, biomedical, and public-health sciences**: National Academy elections; major society
-  Fellow designations; NIH, NSF, Sloan, PECASE, and comparable national investigator awards; and
-  internationally recognized discipline-wide prizes.
-- **Social sciences, humanities, and the arts**: major academy or society Fellow elections;
-  discipline-wide honors from organizations such as APSA, ASA, AEA, AHA, MLA, and equivalent
-  international bodies; major national book or research prizes; and exceptional distinctions
-  such as the Pulitzer Prize, MacArthur Fellowship, Guggenheim Fellowship, or a comparable
-  internationally recognized honor. Ordinary book, article, dissertation, teaching, service,
-  and campus awards remain excluded even when they are competitive within a subfield.
-
-### Non-U.S. equivalents
-
-The non-U.S. audit applies the same prestige and selectivity threshold rather than treating U.S.
-awards as the only valid standard. We look for the closest nationally or internationally
-recognized equivalent in the country where the professor is based, and record it only when the
-award or election is explicitly attributed to that person. Examples of eligible equivalents
-include:
-
-- **Australia and New Zealand**: Australian Research Council Future Fellowships, DECRA and
-  Laureate Fellowships; NHMRC Leadership Fellowships; Australian Academy of Science, Australian
-  Academy of Health and Medical Sciences, and other equivalent academy elections; Endeavour
-  Fellowships; Engineers Australia medals; and major national or field-wide prizes.
-- **Canada**: Canada Research Chair-level distinctions; CIHR and comparable national investigator
-  awards; Royal Society of Canada Fellow or College of New Scholars elections; Canadian Academy
-  of Engineering Fellow; Engineering Institute of Canada Fellow; and major national prizes.
-- **United Kingdom and Europe**: Royal Society or Royal Academy of Engineering elections and
-  fellowships; Newton Prizes; British Academy or equivalent academy elections; ERC Starting,
-  Consolidator, or Advanced Grants when they are clearly awarded to the listed professor; NWO
-  Veni/Vidi/Vici and comparable national investigator programs; and Wallenberg Academy
-  Fellowships or equivalent selective European career programs.
-- **International professional societies**: selective Fellow elections from organizations such as
-  IET, EIC, CAE, Royal Society of Chemistry, Royal Statistical Society, Econometric Society, and
-  other internationally recognized disciplinary bodies. Ordinary membership, senior membership,
-  editorial roles, and committee service do not qualify.
-
-These examples are illustrative, not an automatic inclusion list. A grant is included only when
-the program itself is a selective investigator award or fellowship comparable to NSF CAREER,
-PECASE, Sloan, or a national academy-level distinction. Ordinary project funding, internal
-university awards, student scholarships, travel grants, best-paper awards, dissertation awards,
-and routine teaching or supervision awards remain excluded. For non-U.S. faculty, the audit also
-checks current affiliation and identity carefully because shared Vietnamese names and changing
-international appointments create a high risk of false attribution.
-
-Routine grants and recognition are excluded, including NSF CRII and ordinary research grants,
-best-paper and distinguished-paper awards, teaching or service awards, department-level awards,
-travel awards, student scholarships, ordinary society membership, IEEE/ACM Senior Member status,
-editorial positions, committee service, keynote invitations, citation metrics, and highly cited
-researcher lists. A qualifying honor must be verified for the correct person and must carry its
-own source URL; official awarding-body pages are preferred, followed by official university
-announcements, faculty pages, and the professor's CV or academic website.
-
 Honors use normalized names and categories (`academy`, `fellow`, `career_award`, `major_award`,
 or `distinguished_professorship`) and record the official year when it can be verified; otherwise
 the year is `null`. Honor names and organizations are indexed by the search box, so searches for
@@ -220,36 +110,6 @@ professors.
 VietProfs is a searchable, community-maintained directory of Vietnamese and Vietnamese diaspora
 professors across fields at universities worldwide, on one of three employment tracks: Tenure-line,
 Teaching, or Emeritus.
-
-### Who is included?
-
-An entry is included when reliable evidence supports all of the following:
-
-- Vietnamese or Vietnamese diaspora identity;
-- a university appointment on one of the three tracks below (current, except for Emeritus) at an accredited higher education institution worldwide, focused on the global diaspora outside domestic Vietnam;
-- a primary academic appointment in any field.
-
-The university does not need to offer a PhD program.
-
-**Tenure-line** — tenure-track or tenured. Assistant, Associate, and full Professors generally qualify when the other requirements are met.
-
-**Teaching** — a full-time, continuing/permanent non-tenure-track teaching appointment (Teaching Professor, Senior/Principal/Distinguished Lecturer, or a "Professor of Practice" title only when the university's own page describes it as a permanent teaching-ladder rank). This track requires the source to say the position is full-time and continuing/permanent, not just carry a teaching-sounding title.
-
-**Emeritus** — a formally conferred emeritus title following a tenure-line career, shown on the university's own emeritus faculty listing, a conferral announcement, or the person's own page. Plain retirement or "former faculty" phrasing without the specific conferred title doesn't qualify, and an in-memoriam/deceased-faculty-only listing isn't enough either — the university has to still carry them as living, current emeritus faculty.
-
-Displayed ranks are deliberately simple: Assistant Professor, Associate Professor, or Professor for Tenure-line faculty; Teaching for the continuing teaching track; and Emeritus for the emeritus track. Named chairs and institution-specific title variants remain on each linked university page.
-
-### Who is excluded?
-
-Regardless of track, the directory excludes adjunct, visiting, postdoctoral, affiliate/courtesy, research-track, graduate teaching assistants, plain "Instructor" (verified case by case, since it's almost always term-limited), and non-university appointments. Clinical faculty are not included solely because they hold an academic title, and retirement alone doesn't qualify someone for the Emeritus track without a conferred emeritus title.
-
-### How is identity determined?
-
-A Vietnamese-sounding name is sufficient on its own to include someone; the maintainer reviews each addition and corrects any false positive. Supporting evidence — an official biography, education history in Vietnam, self-identification, Vietnamese professional or community affiliation — is welcome but not required.
-
-### How current is the data?
-
-The roster is audited field by field using official university sources where possible. Academic appointments change, so entries can become outdated. The project welcomes corrections.
 
 ### Why is an entry marked with a dagger (†)?
 
@@ -265,25 +125,6 @@ To restrict your search to a specific attribute, use structured prefixes:
 - **univ:** "University of Hong Kong" — matches only professors currently teaching at HKU.
 - **phd:** "University of Hong Kong" — matches only professors who graduated from HKU.
 - **loc:** Asia (or the location dropdown) — filters for all faculty in Asia.
-
-### How can I submit a correction or missing professor?
-
-Use the [Submit an entry page](./submit.html). Please include an official university profile and evidence of Vietnamese identity when available.
-
-### What are the broad fields?
-
-Computer & Information Sciences; Engineering; Mathematics; Statistics & Data Science; Physics & Astronomy; Chemistry; Biological & Biomedical Sciences; Earth & Environmental Sciences; Agricultural & Natural Resource Sciences; Health Sciences; Business & Economics; Social & Behavioral Sciences; Education; Humanities; Law & Public Affairs; Arts & Design; and Others.
-
-Health Sciences remains one broad field, with derived display subfields for Clinical Medicine, Public Health, Nursing, Pharmacy, Dentistry, Biomedical Research, and Medical Education. Law & Public Affairs also remains one broad field: its department and research-area metadata provide better detail than splitting law, public policy, public administration, and related interdisciplinary appointments into separate top-level categories.
-
-Others includes qualifying faculty whose primary departments do not fit one of the sixteen named disciplinary categories. The taxonomy never limits who is eligible for the directory.
-
-The ten STEM fields were rostered first; the other six were added to the field filter on 2026-08-19. All sixteen fields completed a full audit-and-search pass on 2026-08-19, including Agricultural & Natural Resource Sciences, which received its first entries during that pass.
-
-The directory's categories are an editorial grouping, informed by the National Science Foundation's National Center for Science and Engineering Statistics (NCSES) [science and engineering field taxonomy](https://ncses.nsf.gov/pubs/nsb202332/introduction) and its more detailed [doctoral field taxonomy](https://ncses.nsf.gov/pubs/ncses23200/table/4). They are not presented as an official NSF classification.
-
-Economics departments are listed under Business & Economics.
-
 
 ## Roster maintenance handoff
 
@@ -391,12 +232,6 @@ A department that fits none of the sixteen named disciplinary buckets maps to `O
 catch-all for valid appointments outside the taxonomy; do not exclude the person merely because
 their department lacks an existing field rule.
 
-The ten STEM fields received an initial pass on 2026-08-18. Subsequent work should be a
-targeted re-audit or expansion of **one** of these fields at a time: review existing entries first, verify current
-track status from official sources, then make only well-supported corrections, removals, or
-additions. A relevant PhD program is not required. Run `npm test`, `npm run build`, and
-`git diff --check` before committing.
-
 ## Commands
 
 ```bash
@@ -437,11 +272,7 @@ correct an entry. Each entry:
 `rank`, `phdYear`, `phdInstitution`, and `undergradInstitution` are optional. Rank uses only
 `"Assistant Professor"`, `"Associate Professor"`, or `"Professor"` for Tenure-line entries,
 `"Teaching"` for Teaching entries, and `"Emeritus"` for Emeritus entries; named chairs and
-institution-specific title wording remain available on the linked profile. Keep
-each object on one line. `undergradInstitution` isn't populated on any entry yet — several bios
-mention a Vietnamese undergraduate alma mater, and `buildFunFacts()` in `src/data.js` already
-computes a "most common undergraduate alma mater" fact from it, but filling it in is a dedicated
-research pass that hasn't happened; the fact simply doesn't appear until it does. `profileUrl`
+institution-specific title wording remain available on the linked profile. `profileUrl`
 should be a current, working academic profile or official university faculty page. When a
 maintained personal academic homepage or lab homepage is available, store it separately in
 `websiteUrl`; the UI uses it as the primary name link and keeps `profileUrl` as the official

@@ -708,6 +708,7 @@
   },
   {
     "name": "Luan V. Nguyen",
+    "vietnameseName": "Nguyễn Viết Luân",
     "profileUrl": "https://udayton.edu/directory/engineering/computerscience/nguyen-luan.php",
     "scholarUrl": "https://scholar.google.com/citations?user=8gSnyGAAAAAJ",
     "university": "University of Dayton",
@@ -1460,6 +1461,7 @@
   },
   {
     "name": "Tiep Huu Pham",
+    "vietnameseName": "Phạm Hữu Tiệp",
     "profileUrl": "https://sites.math.rutgers.edu/~tiep/",
     "scholarUrl": "https://scholar.google.com/citations?user=35RkcIYAAAAJ",
     "university": "Rutgers University",
@@ -1476,6 +1478,15 @@
     "phdYear": 1988,
     "phdInstitution": "Lomonosov Moscow State University",
     "country": "United States",
+    "honors": [
+      {
+        "name": "American Mathematical Society Fellow",
+        "year": null,
+        "category": "fellow",
+        "organization": "American Mathematical Society",
+        "source": "https://sites.math.rutgers.edu/~pht19/"
+      }
+    ],
     "portrait": "portraits/055-tiep-huu-pham-rutgers-university.webp",
     "portraitSource": "https://math.rutgers.edu/images/people/profileimg/989_59c135eea2562.jpg"
   },
@@ -1512,6 +1523,7 @@
   },
   {
     "name": "Phong H. Duong",
+    "vietnameseName": "Dương Hồng Phong",
     "profileUrl": "https://www.math.columbia.edu/~phong/",
     "scholarUrl": "https://scholar.google.com/citations?user=0qH_YvoAAAAJ",
     "university": "Columbia University",
@@ -1529,6 +1541,36 @@
     "phdYear": 1977,
     "phdInstitution": "Princeton University",
     "country": "United States",
+    "honors": [
+      {
+        "name": "Bergman Prize",
+        "year": 2009,
+        "category": "major_award",
+        "organization": "American Mathematical Society",
+        "source": "https://www.math.columbia.edu/2025/09/29/professor-duong-phong-appointed-the-davies-chair-of-mathematics/"
+      },
+      {
+        "name": "American Academy of Arts and Sciences Member",
+        "year": 2013,
+        "category": "academy",
+        "organization": "American Academy of Arts and Sciences",
+        "source": "https://www.math.columbia.edu/2025/09/29/professor-duong-phong-appointed-the-davies-chair-of-mathematics/"
+      },
+      {
+        "name": "National Academy of Sciences Member",
+        "year": 2024,
+        "category": "academy",
+        "organization": "National Academy of Sciences",
+        "source": "https://www.math.columbia.edu/2025/09/29/professor-duong-phong-appointed-the-davies-chair-of-mathematics/"
+      },
+      {
+        "name": "American Mathematical Society Fellow",
+        "year": 1977,
+        "category": "fellow",
+        "organization": "American Mathematical Society",
+        "source": "https://www.ias.edu/scholars/duong-hong-phong"
+      }
+    ],
     "portrait": "portraits/057-phong-h-duong-columbia-university.webp",
     "portraitSource": "https://www.math.columbia.edu/~phong/phong.jpg"
   },
@@ -1554,6 +1596,7 @@
   },
   {
     "name": "Toan T. Nguyen",
+    "vietnameseName": "Nguyễn Trọng Toán",
     "profileUrl": "https://sites.psu.edu/nguyen/homepage/",
     "scholarUrl": "https://scholar.google.com/citations?user=JGUD8O0AAAAJ",
     "university": "Pennsylvania State University",
@@ -1577,6 +1620,20 @@
         "category": "major_award",
         "organization": "Society for Industrial and Applied Mathematics",
         "source": "https://www.siam.org/media/malkcylw/2023-nwcs-charter-renewal.pdf"
+      },
+      {
+        "name": "AMS Centennial Fellowship",
+        "year": 2018,
+        "category": "career_award",
+        "organization": "American Mathematical Society",
+        "source": "https://viasm.edu.vn/en/hdkh/MIBG2022?userkey=lecturers"
+      },
+      {
+        "name": "Simons Fellowship in Mathematics",
+        "year": 2019,
+        "category": "fellow",
+        "organization": "Simons Foundation",
+        "source": "https://viasm.edu.vn/en/hdkh/MIBG2022?userkey=lecturers"
       }
     ],
     "country": "United States",
@@ -1884,6 +1941,7 @@
   },
   {
     "name": "Huy Tuan Pham",
+    "vietnameseName": "Phạm Tuấn Huy",
     "profileUrl": "https://huytuanpham.github.io/",
     "scholarUrl": "https://scholar.google.com/citations?user=MavyE28AAAAJ",
     "university": "California Institute of Technology",
@@ -1908,6 +1966,13 @@
         "category": "career_award",
         "organization": "Alfred P. Sloan Foundation",
         "source": "https://www.caltech.edu/about/news/three-professors-named-2026-sloan-fellows"
+      },
+      {
+        "name": "Clay Research Fellowship",
+        "year": 2023,
+        "category": "fellow",
+        "organization": "Clay Mathematics Institute",
+        "source": "https://stanfordsciencefellows.stanford.edu/people/huy-tuan-pham"
       }
     ],
     "portrait": "portraits/072-huy-tuan-pham-california-institute-of-technology.webp",
@@ -5999,13 +6064,6 @@
         "category": "major_award",
         "organization": "John Simon Guggenheim Memorial Foundation",
         "source": "https://www.college.columbia.edu/cct_archive/jul02/jul02_quads6.html"
-      },
-      {
-        "name": "Joan Mitchell Foundation Painters & Sculptors Grant",
-        "year": 2001,
-        "category": "major_award",
-        "organization": "Joan Mitchell Foundation",
-        "source": "https://www.joanmitchellfoundation.org/tomas-vu"
       }
     ],
     "portrait": "portraits/236-tomas-vu-daniel-columbia-university.webp",
@@ -11961,15 +12019,6 @@
     "rank": "Associate Professor",
     "phdYear": 2017,
     "phdInstitution": "Massachusetts Institute of Technology",
-    "honors": [
-      {
-        "name": "Siebel Scholar",
-        "year": 2017,
-        "category": "career_award",
-        "organization": "Siebel Scholars Foundation",
-        "source": "https://www.ntu.edu.sg/erian/about-us/our-people/cluster-directors/hung-dinh-nguyen"
-      }
-    ],
     "portrait": "portraits/511-hung-dinh-nguyen-nanyang-technological-university.webp",
     "portraitSource": "https://www.ntu.edu.sg/media/images/librariesprovider60/erian-images---web/about-us/cluster-directors/hung-dinh-nguyen-01cb9ea50b-edbc-4265-b070-43e651c7473a.jpg?sfvrsn=c8250765_3"
   },
@@ -12711,13 +12760,6 @@
         "category": "career_award",
         "organization": "British Council",
         "source": "https://www.teachingenglish.org.uk/publications/elt-research-awards/eltra-winners/eltra-2019-winners"
-      },
-      {
-        "name": "Language Learning Early Career Research Grant",
-        "year": 2019,
-        "category": "career_award",
-        "organization": "Language Learning",
-        "source": "https://faculty.educ.cam.ac.uk/people/staff/dao"
       }
     ]
   },
@@ -14010,6 +14052,7 @@
   },
   {
     "name": "Nathalie Nguyen",
+    "vietnameseName": "Nathalie Huỳnh Châu Nguyễn",
     "profileUrl": "https://research.monash.edu/en/persons/nathalie-nguyen",
     "scholarUrl": "https://scholar.google.com/citations?user=7xU4K78AAAAJ",
     "university": "Monash University",
@@ -15258,6 +15301,7 @@
   },
   {
     "name": "Thành Nam Phan",
+    "vietnameseName": "Phan Thành Nam",
     "university": "Ludwig Maximilian University of Munich",
     "city": "Munich",
     "country": "Germany",
@@ -15284,11 +15328,11 @@
         "source": "https://ems.press/content/serial-issue-files/23937"
       },
       {
-        "name": "ERC Consolidator Grant",
-        "year": 2022,
-        "category": "career_award",
-        "organization": "European Research Council",
-        "source": "https://www.mathematik.uni-muenchen.de/aktuelles/news/erc_phan/index.html"
+        "name": "Young Scientist Prize in Mathematical Physics",
+        "year": 2018,
+        "category": "major_award",
+        "organization": "International Union of Pure and Applied Physics",
+        "source": "https://www.math.lmu.de/~nam/CV.pdf"
       }
     ],
     "portrait": "portraits/653-phan-thanh-nam-ludwig-maximilian-university-of-munich.webp",
@@ -15354,15 +15398,6 @@
     "phdYear": 2018,
     "phdInstitution": "University of Cambridge",
     "undergradInstitution": "University of Cambridge",
-    "honors": [
-      {
-        "name": "NWO Veni Talent Grant",
-        "year": 2025,
-        "category": "career_award",
-        "organization": "Dutch Research Council",
-        "source": "https://www.uu.nl/staff/LNNguyen"
-      }
-    ],
     "portrait": "portraits/656-lan-nguyen-utrecht-university.webp",
     "portraitSource": "https://www.uu.nl/medewerkers/RestApi/Public/GetImage?Employee=34339&t="
   },
@@ -16903,58 +16938,6 @@
     "portraitSource": "https://nguyen.sdsu.edu/Duy-pic.jpg"
   },
   {
-    "name": "Theodore Kim",
-    "university": "Yale University",
-    "city": "New Haven",
-    "state": "Connecticut",
-    "country": "United States",
-    "department": "Computer Science",
-    "rank": "Professor",
-    "track": "Tenure-line",
-    "profileUrl": "https://www.tkim.graphics/",
-    "researchAreas": [
-      "Computer Graphics",
-      "Computer Animation",
-      "Physics-Based Simulation",
-      "Computational Fluid Dynamics"
-    ],
-    "secondaryAppointment": false,
-    "phdYear": 2006,
-    "phdInstitution": "University of North Carolina at Chapel Hill",
-    "honors": [
-      {
-        "name": "Academy Award for Scientific and Technical Achievement",
-        "year": 2012,
-        "category": "major_award",
-        "organization": "Academy of Motion Picture Arts and Sciences",
-        "source": "https://engineering.yale.edu/research-and-faculty/faculty-directory/theodore-kim"
-      },
-      {
-        "name": "Academy Award for Scientific and Technical Achievement",
-        "year": 2022,
-        "category": "major_award",
-        "organization": "Academy of Motion Picture Arts and Sciences",
-        "source": "https://engineering.yale.edu/research-and-faculty/faculty-directory/theodore-kim"
-      },
-      {
-        "name": "NSF CAREER Award",
-        "year": 2013,
-        "category": "career_award",
-        "organization": "National Science Foundation",
-        "source": "https://engineering.yale.edu/research-and-faculty/faculty-directory/theodore-kim"
-      },
-      {
-        "name": "Connecticut Academy of Science and Engineering Member",
-        "year": null,
-        "category": "academy",
-        "organization": "Connecticut Academy of Science and Engineering",
-        "source": "https://americanstudies.yale.edu/people/theodore-kim"
-      }
-    ],
-    "portrait": "portraits/730-theodore-kim-yale-university.webp",
-    "portraitSource": "https://www.tkim.graphics/images/me_thumbnail.png"
-  },
-  {
     "name": "Quynh-Thu Le",
     "university": "Stanford University",
     "city": "Stanford",
@@ -17077,6 +17060,7 @@
   },
   {
     "name": "Van H. Vu",
+    "vietnameseName": "Vũ Hà Văn",
     "university": "The University of Hong Kong",
     "city": "Hong Kong",
     "country": "Hong Kong",
@@ -17840,5 +17824,139 @@
     "phdInstitution": "University of Texas at Arlington",
     "portrait": "portraits/765-loan-bui-university-of-dayton.webp",
     "portraitSource": "https://udayton.edu/directory/artssciences/biology/images/bui-loan-2020.jpg"
+  },
+  {
+    "name": "Catherine H. Nguyen",
+    "university": "Emerson College",
+    "city": "Boston",
+    "state": "Massachusetts",
+    "country": "United States",
+    "department": "Writing, Literature and Publishing",
+    "rank": "Assistant Professor",
+    "track": "Tenure-line",
+    "profileUrl": "https://emerson.edu/faculty/catherine-nguyen/",
+    "researchAreas": [
+      "Vietnamese Diasporic Literature",
+      "Asian American Studies",
+      "Critical Refugee Studies",
+      "Critical Adoption Studies",
+      "Global Asias"
+    ],
+    "secondaryAppointment": false,
+    "phdInstitution": "University of California, Los Angeles",
+    "honors": [
+      {
+        "name": "American Council of Learned Societies Fellowship",
+        "year": null,
+        "category": "fellow",
+        "organization": "American Council of Learned Societies",
+        "source": "https://emerson.edu/faculty/catherine-nguyen/"
+      }
+    ],
+    "portrait": "portraits/catherine-h-nguyen-emerson-college.webp",
+    "portraitSource": "https://emerson.edu/wp-content/uploads/2026/08/Nguyen_Catherine-768x960.jpg"
+  },
+  {
+    "name": "Jean Tran Thanh Van",
+    "vietnameseName": "Trần Thanh Vân",
+    "university": "California Institute of Technology",
+    "city": "Pasadena",
+    "state": "California",
+    "country": "United States",
+    "department": "Physics",
+    "rank": "Linde Professor Emeritus",
+    "track": "Emeritus",
+    "profileUrl": "https://newsline.linearcollider.org/2012/05/17/jean-tran-thanh-van-receives-tate-medal/",
+    "researchAreas": [
+      "Particle Physics",
+      "Astrophysics",
+      "Nuclear Physics",
+      "Interdisciplinary Science Education"
+    ],
+    "secondaryAppointment": false,
+    "honors": [
+      {
+        "name": "Officer of the French Legion of Honour",
+        "year": 2025,
+        "category": "major_award",
+        "organization": "Government of France",
+        "source": "https://en.nhandan.vn/professors-tran-thanh-van-and-le-kim-ngoc-pride-for-the-vietnamese-diaspora-post150649.html"
+      },
+      {
+        "name": "Knight of the French Legion of Honour",
+        "year": 2000,
+        "category": "major_award",
+        "organization": "Government of France",
+        "source": "https://en.nhandan.vn/professors-tran-thanh-van-and-le-kim-ngoc-pride-for-the-vietnamese-diaspora-post150649.html"
+      },
+      {
+        "name": "Tate Medal",
+        "year": 2011,
+        "category": "major_award",
+        "organization": "American Institute of Physics",
+        "source": "https://newsline.linearcollider.org/2012/05/17/jean-tran-thanh-van-receives-tate-medal/"
+      },
+      {
+        "name": "Friendship Order of Vietnam",
+        "year": 2015,
+        "category": "major_award",
+        "organization": "Government of Vietnam",
+        "source": "https://en.vietnamplus.vn/vietnamese-french-professor-spouses-awarded-friendship-orders-post77106.vnp"
+      }
+    ],
+    "portrait": "portraits/jean-tran-thanh-van-caltech.webp",
+    "portraitSource": "https://en.nhandan.vn/professors-tran-thanh-van-and-le-kim-ngoc-pride-for-the-vietnamese-diaspora-post150649.html"
+  },
+  {
+    "name": "Dinh Tien-Cuong",
+    "vietnameseName": "Đinh Tiến Cường",
+    "university": "National University of Singapore",
+    "city": "Singapore",
+    "country": "Singapore",
+    "department": "Department of Mathematics",
+    "rank": "Provost’s Chair Professor",
+    "track": "Tenure-line",
+    "profileUrl": "https://blog.nus.edu.sg/dinh/",
+    "researchAreas": [
+      "Complex Dynamics",
+      "Complex Analysis",
+      "Algebraic Geometry",
+      "Mathematical Physics"
+    ],
+    "secondaryAppointment": false,
+    "phdYear": 1997,
+    "phdInstitution": "Pierre and Marie Curie University",
+    "honors": [
+      {
+        "name": "Humboldt Research Award",
+        "year": 2018,
+        "category": "major_award",
+        "organization": "Alexander von Humboldt Foundation",
+        "source": "https://www.science.nus.edu.sg/blog/2020/05/dinh-tien-cuong/"
+      }
+    ]
+  },
+  {
+    "name": "Tri Lai",
+    "vietnameseName": "Lai Trí",
+    "university": "University of Nebraska–Lincoln",
+    "city": "Lincoln",
+    "state": "Nebraska",
+    "country": "United States",
+    "department": "Mathematics",
+    "rank": "Associate Professor",
+    "track": "Tenure-line",
+    "profileUrl": "https://math.unl.edu/person/tri-lai/",
+    "researchAreas": [
+      "Enumerative Combinatorics",
+      "Algebraic Combinatorics",
+      "Partition Theory",
+      "Cluster Algebras"
+    ],
+    "secondaryAppointment": false,
+    "phdYear": 2014,
+    "phdInstitution": "Indiana University",
+    "portrait": "portraits/tri-lai-university-of-nebraska-lincoln.webp",
+    "portraitSource": "https://math.unl.edu/sites/unl.edu.cas.math/files/styles/1_1_720x720/public/node/person/photo/2024-09/tmlai.jpg?itok=YU6FNpGn"
   }
 ]
