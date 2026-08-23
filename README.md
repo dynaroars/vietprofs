@@ -27,6 +27,17 @@ The `Others` category was added on 2026-08-20 so qualifying faculty in departmen
 sixteen disciplines are included rather than omitted. Global location support across North America,
 Europe, Asia, Australasia, South America, and Africa was introduced with a dedicated location selector.
 
+### Deep re-audit tracker
+
+The current field-by-field re-audit began on 2026-08-22. Completed fields are removed from this
+list only after current faculty sources and major-honor sources have been checked:
+
+- Completed: Physics & Astronomy
+- Remaining: Computer & Information Sciences; Engineering; Mathematics; Statistics & Data Science;
+  Chemistry; Biological & Biomedical Sciences; Earth & Environmental Sciences; Agricultural & Natural
+  Resource Sciences; Health Sciences; Business & Economics; Social & Behavioral Sciences; Education;
+  Humanities; Law & Public Affairs; Arts & Design; Others
+
 ## Using the website & search features
 
 The directory offers instant client-side filtering, free-text search, and structured query operators:
