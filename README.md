@@ -60,7 +60,7 @@ after current-faculty and major-honor sources have been checked:
 - [x] ~~Humanities~~
 - [x] ~~Agricultural & Natural Resource Sciences~~
 - [x] ~~Social & Behavioral Sciences~~
-- [ ] Others
+- [x] ~~Others~~
 - [ ] Statistics & Data Science
 - [ ] Arts & Design
 - [ ] Earth & Environmental Sciences
