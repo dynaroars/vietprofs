@@ -47,7 +47,7 @@ major internationally recognized honors and selective national equivalents of U.
 such as NSF CAREER, PECASE, Sloan, ONR YIP, and DARPA YFA. Completed fields are crossed out
 after current-faculty and major-honor sources have been checked:
 
-- [ ] Mathematics
+- [x] ~~Mathematics~~
 - [ ] Engineering
 - [ ] Chemistry
 - [ ] Health Sciences
