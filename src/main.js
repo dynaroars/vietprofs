@@ -58,8 +58,9 @@ function renderShell() {
     </header>
     <div class="holiday-banner" id="holiday-banner" hidden></div>
     <div class="controls">
-      <input id="search" class="search-input" type="search" list="search-suggestions" placeholder="Search name, university, department, rank, honors, or research area…" aria-label="Search" />
+      <input id="search" class="search-input" type="search" list="search-suggestions" placeholder="Search name, university, department, rank, honors, or research area…" aria-label="Search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-suggestion-panel" />
       <datalist id="search-suggestions"></datalist>
+      <div id="search-suggestion-panel" class="search-suggestion-panel" role="listbox" hidden></div>
       <select id="location-filter" class="field-select location-select" aria-label="Filter by location">
       </select>
       <select id="field-filter" class="field-select" aria-label="Filter by field">
@@ -393,6 +394,7 @@ async function init() {
   }
 
   const searchInput = document.getElementById('search');
+  const suggestionPanel = document.getElementById('search-suggestion-panel');
   const locationSelect = document.getElementById('location-filter');
   const fieldSelect = document.getElementById('field-filter');
   const trackSelect = document.getElementById('track-filter');
@@ -661,6 +663,69 @@ async function init() {
     syncUrl();
     // Refresh auxiliary count labels only after the primary roster and URL are complete.
     syncDropdownCounts();
+  }
+
+  // Mobile browsers have inconsistent support for large native <datalist>s. Keep the
+  // native control for desktop, but provide a small keyboard-accessible listbox on
+  // coarse-pointer devices so suggestions remain usable on phones and tablets.
+  const mobileSuggestions = window.matchMedia('(pointer: coarse)').matches;
+  let activeSuggestion = -1;
+  function hideSuggestions() {
+    activeSuggestion = -1;
+    suggestionPanel.hidden = true;
+    suggestionPanel.replaceChildren();
+    searchInput.setAttribute('aria-expanded', 'false');
+  }
+  function showSuggestions() {
+    if (!mobileSuggestions) return;
+    const query = searchInput.value.trim().toLocaleLowerCase();
+    if (!query) {
+      hideSuggestions();
+      return;
+    }
+    const matches = suggestionValues
+      .filter((value) => value.toLocaleLowerCase().includes(query))
+      .slice(0, 8);
+    suggestionPanel.replaceChildren(...matches.map((value, index) => {
+      const option = document.createElement('button');
+      option.type = 'button';
+      option.className = 'search-suggestion';
+      option.role = 'option';
+      option.textContent = value;
+      option.dataset.index = String(index);
+      option.addEventListener('click', () => {
+        searchInput.value = value;
+        hideSuggestions();
+        update({ fromSearch: true });
+      });
+      return option;
+    }));
+    activeSuggestion = -1;
+    suggestionPanel.hidden = matches.length === 0;
+    searchInput.setAttribute('aria-expanded', String(matches.length > 0));
+  }
+  if (mobileSuggestions) {
+    searchInput.removeAttribute('list');
+    searchInput.addEventListener('focus', showSuggestions);
+    searchInput.addEventListener('input', showSuggestions);
+    searchInput.addEventListener('keydown', (event) => {
+      const options = [...suggestionPanel.querySelectorAll('.search-suggestion')];
+      if (event.key === 'Escape') {
+        hideSuggestions();
+        return;
+      }
+      if (!options.length || !['ArrowDown', 'ArrowUp', 'Enter'].includes(event.key)) return;
+      if (event.key === 'Enter' && activeSuggestion >= 0) {
+        event.preventDefault();
+        options[activeSuggestion].click();
+        return;
+      }
+      if (event.key === 'ArrowDown') activeSuggestion = (activeSuggestion + 1) % options.length;
+      if (event.key === 'ArrowUp') activeSuggestion = (activeSuggestion - 1 + options.length) % options.length;
+      options.forEach((option, index) => option.setAttribute('aria-selected', String(index === activeSuggestion)));
+      event.preventDefault();
+    });
+    searchInput.addEventListener('blur', () => setTimeout(hideSuggestions, 150));
   }
 
   searchInput.addEventListener('input', debounce(() => update({ fromSearch: true }), 150));

@@ -219,10 +219,51 @@ h1 {
 }
 
 .controls {
-  display: flex;
-  flex-wrap: wrap;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.75rem;
   margin: 2rem 0 0.75rem;
+}
+
+.search-suggestion-panel {
+  position: absolute;
+  z-index: 10;
+  top: 3.25rem;
+  right: auto;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--card-bg);
+  box-shadow: 0 6px 18px rgb(0 0 0 / 12%);
+}
+
+.search-suggestion-panel[hidden] {
+  display: none;
+}
+
+.search-suggestion {
+  display: block;
+  width: 100%;
+  padding: 0.65rem 0.9rem;
+  border: 0;
+  border-bottom: 1px solid var(--border-color);
+  background: transparent;
+  color: var(--text-primary);
+  font: inherit;
+  text-align: left;
+}
+
+.search-suggestion:last-child {
+  border-bottom: 0;
+}
+
+.search-suggestion:hover,
+.search-suggestion:focus-visible,
+.search-suggestion[aria-selected='true'] {
+  background: var(--hover-bg);
 }
 
 .examples {
@@ -260,9 +301,9 @@ h1 {
 }
 
 .search-input {
-  /* Always fills the row on its own — flex-basis 100% forces the field/track selects onto their
-     own row below it, rather than competing with them for horizontal space. */
-  flex: 1 1 100%;
+  grid-column: 1 / -1;
+  width: 100%;
+  min-width: 0;
   padding: 0.6rem 0.9rem;
   border: 1px solid var(--border-color);
   border-radius: 8px;
@@ -278,13 +319,8 @@ h1 {
 }
 
 .field-select {
-  /* Sized to its own selected option rather than a fixed basis — a <select> naturally hugs its
-     current text, so a short label ("All fields") no longer leaves dead space in an oversized
-     box. min-width keeps it a comfortable click target when a short option is showing. */
-  flex: 0 1 auto;
-  width: auto;
-  min-width: 9rem;
-  max-width: 100%;
+  width: 100%;
+  min-width: 0;
   padding: 0.6rem 0.9rem;
   border: 1px solid var(--border-color);
   border-radius: 8px;
@@ -306,6 +342,26 @@ h1 {
 
 .location-select {
   min-width: 8.5rem;
+}
+
+@media (max-width: 900px) {
+  .controls {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .controls {
+    grid-template-columns: 1fr;
+  }
+
+  .search-input {
+    grid-column: auto;
+  }
+
+  .search-suggestion-panel {
+    width: 100%;
+  }
 }
 
 .result-count {
