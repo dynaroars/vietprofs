@@ -52,7 +52,7 @@ after current-faculty and major-honor sources have been checked:
 - [x] ~~Chemistry~~
 - [x] ~~Health Sciences~~
 - [x] ~~Biological & Biomedical Sciences~~
-- [ ] Law & Public Affairs
+- [x] ~~Law & Public Affairs~~
 - [ ] Physics & Astronomy
 - [ ] Computer & Information Sciences
 - [ ] Business & Economics
