@@ -159,6 +159,7 @@ export const COUNTRY_TO_CONTINENT = {
   'Malaysia': 'Asia',
   'Philippines': 'Asia',
   'Indonesia': 'Asia',
+  'Vietnam': 'Asia',
 
   // Australasia
   'Australia': 'Australasia',
@@ -188,6 +189,7 @@ export const COUNTRY_FLAGS = {
   'Norway': '🇳🇴',
   'Belgium': '🇧🇪',
   'Poland': '🇵🇱',
+  'Vietnam': '🇻🇳',
   'Ireland': '🇮🇪',
   'Singapore': '🇸🇬',
   'Japan': '🇯🇵',
