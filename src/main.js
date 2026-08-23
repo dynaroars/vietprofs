@@ -442,8 +442,8 @@ async function init() {
       option.textContent = `${label} (${count})`;
     };
     const hideEmptyGroups = (select) => {
-      for (const group of select.querySelectorAll('optgroup')) {
-        group.hidden = [...group.options].every((option) => option.hidden);
+      for (const group of Array.from(select.querySelectorAll('optgroup'))) {
+        group.hidden = Array.from(group.options).every((option) => option.hidden);
       }
     };
     const locVal = locationSelect.value;
@@ -458,7 +458,7 @@ async function init() {
     if (trackVal !== 'all') {
       locBase = locBase.filter((p) => p.track === trackVal);
     }
-    for (const option of locationSelect.options) {
+    for (const option of Array.from(locationSelect.options)) {
       const count = locBase.filter((p) => locationMatches(p, option.value)).length;
       updateOption(option, locationLabel(option.value), count, locationSelect);
     }
@@ -583,7 +583,13 @@ async function init() {
       }
       autoSelectLocationForQuery();
     }
-    syncDropdownCounts();
+    // Count labels are auxiliary UI. A browser-specific select/optgroup quirk must never
+    // prevent the primary roster from rendering.
+    try {
+      syncDropdownCounts();
+    } catch (error) {
+      console.error('Unable to synchronize filter counts', error);
+    }
     const locRoster = roster.filter((p) => locationMatches(p, locationSelect.value));
     if (fieldSelect.value === INTERESTING) {
       renderFunFacts(locRoster);
