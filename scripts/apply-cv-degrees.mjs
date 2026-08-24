@@ -7,6 +7,7 @@ const args = process.argv.slice(2);
 const get = (flag) => { const i = args.indexOf(flag); return i < 0 ? null : args[i + 1]; };
 const dry = args.includes('--dry-run');
 const resetOther = args.includes('--reset-other-degrees');
+const cleanInvalid = args.includes('--clean-invalid');
 const namesFile = get('--names-file');
 const dataFile = resolve(ROOT, 'public/data.json');
 const results = JSON.parse(readFileSync(resolve(ROOT, 'scripts/cv-degree-results.json'), 'utf8'));
@@ -14,14 +15,23 @@ const roster = JSON.parse(readFileSync(dataFile, 'utf8'));
 const names = namesFile ? new Set(JSON.parse(readFileSync(resolve(ROOT, namesFile), 'utf8')).map(x => typeof x === 'string' ? x : x.name)) : null;
 const YEAR_MIN = 1950; const YEAR_MAX = new Date().getFullYear();
 const STANDARD = { phd: ['phdInstitution', 'phdYear'], ms: ['msInstitution', 'msYear'], undergrad: ['undergradInstitution', 'undergradYear'], md: ['mdInstitution', 'mdYear'] };
-const BAD = /award|honor|dissertation|thesis|publication|advisor|student|postdoc|fellowship|department of|phone|email|university press|journal|review|magazine|transfer|\b(?:ph\.?d|m\.?s|b\.?s|b\.?a)\.?\b|\bdegree\b|\bin\b/i;
+const BAD = /award|honor|dissertation|thesis|publication|advisor|student|postdoc|fellowship|department of|phone|email|university press|journal|review|magazine|transfer|professor|emerita|emeritus|distinguished|\b(?:ph\.?d|m\.?s|b\.?s|b\.?a)\.?\b|\bdegree\b|\bin\b/i;
 const validInst = (x) => typeof x === 'string' && x.length >= 6 && x.length <= 100 && !BAD.test(x) && !/^(?:University|University of California|College|Institute)$/i.test(x) && /\b(University|Institute|College|School|Polytechnic|Academy|MIT|Caltech|Stanford|Harvard|Yale|Princeton|Columbia|Cornell|Duke|Rice|NUS|VNU|KAIST|HUST)\b/i.test(x);
 const validYear = (x) => Number.isInteger(x) && x >= YEAR_MIN && x <= YEAR_MAX;
 let count = 0;
-if (resetOther) {
+if (resetOther || cleanInvalid) {
   for (const person of roster) {
     if (names && !names.has(person.name)) continue;
-    if (person.otherDegrees) { delete person.otherDegrees; count++; }
+    if (resetOther && person.otherDegrees) { delete person.otherDegrees; count++; }
+    if (cleanInvalid) {
+      for (const [field, value] of [['phdInstitution', person.phdInstitution], ['msInstitution', person.msInstitution], ['undergradInstitution', person.undergradInstitution], ['mdInstitution', person.mdInstitution]]) {
+        if (value && !validInst(value)) { delete person[field]; const year = field.replace('Institution', 'Year'); delete person[year]; count++; }
+      }
+      if (Array.isArray(person.otherDegrees)) {
+        const kept = person.otherDegrees.filter(x => validInst(x.institution));
+        if (kept.length !== person.otherDegrees.length) { person.otherDegrees = kept; if (!kept.length) delete person.otherDegrees; count++; }
+      }
+    }
   }
   if (!dry && count) writeFileSync(dataFile, JSON.stringify(roster, null, 2) + '\n');
   console.log(`${dry ? '[DRY RUN] Would reset' : 'Reset'} otherDegrees for ${count} entries.`);
