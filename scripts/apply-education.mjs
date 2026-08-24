@@ -12,7 +12,7 @@
  *   - NEVER overwrites existing data (only fills gaps), unless --force is used
  *
  * Usage:
- *   node scripts/apply-education.mjs [--dry-run] [--force] [--names-file FILE]
+ *   node scripts/apply-education.mjs [--dry-run] [--force] [--names-file FILE] [--homepage-results-file FILE]
  */
 
 import { readFileSync, writeFileSync } from 'node:fs';
@@ -29,6 +29,7 @@ const getArg = (flag) => { const i = args.indexOf(flag); return i === -1 ? null 
 const DRY_RUN = args.includes('--dry-run');
 const FORCE   = args.includes('--force');
 const NAMES_FILE = getArg('--names-file');
+const HOMEPAGE_RESULTS_FILE = getArg('--homepage-results-file');
 
 const YEAR_MIN = 1950;
 const YEAR_MAX = new Date().getFullYear();
@@ -116,7 +117,7 @@ const MAJOR_FROM_FIX = {
   'Computer Science at University of Illinois at Chicago': 'Computer Science',
 };
 
-const JUNK_RE = /YouTube|Facebook|Twitter|Instagram|LinkedIn|Subscribe|Cookie|Privacy|Copyright|©|\bFollow\b|\bContact Us\b|\bCampus Map\b|\bJobs @|\bTechAlert\b|\bsitemap\b|404|login|sign in|\bClose\b|\bMenu\b|\bSearch\b|\bSkip to\b|Accessibility|College of Arts & Sciences|College of Nursing|College of Arts and Sciences|Association of College|Advanced Computing|Faculty Profile|Public Health:|instructor of|public health:|Colleges and Schools|Hudson River Valley|Queens College Librar|committee\b|review committee|level review|Connie Nguyen|upstate New York|College in upstate|Dymally Institute|University Centers|Institute\b$|Robert Brown|Pre-university studies|Stanford Advisees|Certifications|Degree Programme|not accepting patients|Responsibilities within|Royal College of Physicians|mHealth Training Institute|Princeton Engineers|\bPrior to\b|Combinatorics Seminar|Cullen College|Paying for College|University Bookstore|University Curriculum|College Resources|and Schools School|\bFiona Brown\b|Community-University Empowerment|Youth and Pre-College|Principal Leadership Institute|University Press|Yale Gamelan|\bCollege Now\b|University Studies|EALAC|University Diplomas|University Professor|Pre-College Programs|Air University Associate|New Research Presented|Honors College|\bUniversity in$|\bUniversity \(USA\)\b|Statistics PhD program|\bfrom$|\b(University|Institute)\)$|Technology\)$|\bUniversity System$|\bUniversity of Illinois System$|\bSchool Online Application|\bUniversity of George Mason\b|\bUniversity of Melbourne in$|\bUniversity of Illinois in$|\bUniversity of California$|\bThe College$|^College\b|^Institute for the Connected$|^Institute of AI and Sustainability$|^Institute of Health Policy$|^Health Care Management,|^Yale Graduate School of Arts and Sciences|^\s*of Science\b|^May \d{4}\b|^PhD -|^University of Mississippi Medical Center Pediatric|^workshop for|^Wilkinson College|^College Home|^Connect with the College|^American University of Armenia has new president|^University in Melbourne|^Van Lang University \(HCM City$|^Convergent Science Institute|^The Ohio Summer Undergraduate|^Institute of Technology$|^Honours College$|^University \(USA\)$|^The University of Melbourne \(Australian University\)/i;
+const JUNK_RE = /YouTube|Facebook|Twitter|Instagram|LinkedIn|Subscribe|Cookie|Privacy|Copyright|©|\bFollow\b|\bContact Us\b|\bCampus Map\b|\bJobs @|\bTechAlert\b|\bsitemap\b|404|login|sign in|\bClose\b|\bMenu\b|\bSearch\b|\bSkip to\b|Accessibility|College of Arts & Sciences|College of Nursing|College of Arts and Sciences|Association of College|Advanced Computing|Faculty Profile|Public Health:|instructor of|public health:|Colleges and Schools|Hudson River Valley|Queens College Librar|committee\b|review committee|level review|Connie Nguyen|upstate New York|College in upstate|Dymally Institute|University Centers|Institute\b$|Robert Brown|Pre-university studies|Stanford Advisees|Certifications|Degree Programme|not accepting patients|Responsibilities within|Royal College of Physicians|mHealth Training Institute|Princeton Engineers|\bPrior to\b|Combinatorics Seminar|Cullen College|Paying for College|University Bookstore|University Curriculum|College Resources|and Schools School|\bFiona Brown\b|Community-University Empowerment|Youth and Pre-College|Principal Leadership Institute|University Press|Yale Gamelan|\bCollege Now\b|University Studies|EALAC|University Diplomas|University Professor|Pre-College Programs|Air University Associate|New Research Presented|Honors College|\bUniversity in$|\bUniversity \(USA\)\b|Statistics PhD program|\bfrom$|\b(University|Institute)\)$|Technology\)$|\bUniversity System$|\bUniversity of Illinois System$|\bSchool Online Application|\bUniversity of George Mason\b|\bUniversity of Melbourne in$|\bUniversity of Illinois in$|\bUniversity of California$|\bThe College$|^College\b|^Institute for the Connected$|^Institute of AI and Sustainability$|^Institute of Health Policy$|^Health Care Management,|^Yale Graduate School of Arts and Sciences|^\s*of Science\b|^May \d{4}\b|^PhD -|^University of Mississippi Medical Center Pediatric|^workshop for|^Wilkinson College|^College Home|^Connect with the College|^American University of Armenia has new president|^University in Melbourne|^Van Lang University \(HCM City$|^Convergent Science Institute|^The Ohio Summer Undergraduate|^Institute of Technology$|^Honours College$|^University \(USA\)$|^The University of Melbourne \(Australian University\)|^University,|Postdoc|Outstanding Undergraduate Researcher Award/i;
 
 function cleanInst(raw) {
   if (!raw) return null;
@@ -219,8 +220,11 @@ function isValidMajor(s) {
 // ─── Main ─────────────────────────────────────────────────────────────────────
 const roster  = JSON.parse(readFileSync(DATA_FILE, 'utf8'));
 const results = JSON.parse(readFileSync(RESULTS_FILE, 'utf8'));
+const homepageResults = HOMEPAGE_RESULTS_FILE
+  ? JSON.parse(readFileSync(resolve(ROOT, HOMEPAGE_RESULTS_FILE), 'utf8'))
+  : {};
 const selectedNames = NAMES_FILE
-  ? new Set(JSON.parse(readFileSync(resolve(ROOT, NAMES_FILE), 'utf8')))
+  ? new Set(JSON.parse(readFileSync(resolve(ROOT, NAMES_FILE), 'utf8')).map((entry) => typeof entry === 'string' ? entry : entry.name))
   : null;
 
 let updated = 0;
@@ -234,8 +238,10 @@ for (const prof of roster) {
     delete prof.msInstitution;
     delete prof.msYear;
   }
-  const result = results[prof.name];
-  if (!result?._processed) continue;
+  const result = HOMEPAGE_RESULTS_FILE
+    ? (homepageResults[prof.name] ?? {})
+    : (results[prof.name] ?? {});
+  if (!result?._processed && !result?._homepageSource) continue;
 
   const edits = removedMsNoise ? ['removed invalid msInstitution/msYear'] : [];
   const rawPhd = result.phdInstitution;
