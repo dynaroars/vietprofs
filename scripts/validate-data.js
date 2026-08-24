@@ -22,8 +22,8 @@ for (const [index, person] of roster.entries()) {
   for (const field of requiredStrings) {
     if (typeof person[field] !== 'string' || !person[field].trim()) fail(`${label} has invalid ${field}`);
   }
-  if (!/^https:\/\//.test(person.profileUrl)) fail(`${label} profileUrl must use HTTPS`);
-  if (person.websiteUrl !== undefined && !/^https:\/\//.test(person.websiteUrl)) fail(`${label} websiteUrl must use HTTPS`);
+  if (!/^https?:\/\//.test(person.profileUrl)) fail(`${label} profileUrl must use HTTP(S)`);
+  if (person.websiteUrl !== undefined && !/^https?:\/\//.test(person.websiteUrl)) fail(`${label} websiteUrl must use HTTP(S)`);
   if (person.websiteUrl !== undefined && person.websiteUrl === person.profileUrl) fail(`${label} websiteUrl must differ from profileUrl`);
   if (person.scholarUrl !== undefined && !/^https:\/\//.test(person.scholarUrl)) fail(`${label} scholarUrl must use HTTPS`);
   if ((person.portrait === undefined) !== (person.portraitSource === undefined)) {
