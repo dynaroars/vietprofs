@@ -35,7 +35,7 @@ const DEGREE = [
   ['undergrad', /(?:B\.?S\.?|B\.?Sc\.?|B\.?A\.?|B\.?Eng\.?|B\.?B\.?A\.?|Bachelor of)\b/i],
 ];
 const INST = /\b(?:University|Institute|College|Polytechnic|Academy|MIT|Caltech|Stanford|Harvard|Yale|Princeton|Columbia|Cornell|Duke|Rice|NUS|VNU|KAIST|HUST|State University)\b/i;
-const BAD = /award|honor|dissertation|thesis|publication|advisor|student|postdoc|fellowship|department of|phone|email|curriculum vitae|university press|engineers?\b|program|research center/i;
+const BAD = /award|honor|dissertation|thesis|publication|advisor|student|postdoc|fellowship|department of|phone|email|curriculum vitae|university press|engineers?\b|program|research center|journal|review|magazine|transfer/i;
 
 async function fetchResource(url) {
   const ctrl = new AbortController(); const timer = setTimeout(() => ctrl.abort(), 2500);
@@ -68,7 +68,7 @@ function institution(line) {
   if (!INST.test(s) || BAD.test(s) || s.length < 6 || s.length > 120) return null;
   // Keep a clean institution prefix and discard dates/locations after it where possible.
   const match = s.match(/((?:The\s+)?(?:[A-Z][\w&.'-]*\s+){0,8}(?:University|Institute|College|School|Polytechnic|Academy|MIT|Caltech|Stanford|Harvard|Yale|Princeton|Columbia|Cornell|Duke|Rice|NUS|VNU|KAIST|HUST)(?:\s+[A-Z][\w&.'-]*){0,5})/i);
-  const value = (match?.[1] || s).replace(/[,:;|.)]+$/, '').trim();
+  const value = (match?.[1] || s).replace(/^(?:B\.[AS]\.?|Bachelor(?: of [A-Za-z]+)?)\s+/i, '').replace(/[,:;|.)]+$/, '').trim();
   return value.length >= 6 && value.length <= 100 && !BAD.test(value) ? value : null;
 }
 
