@@ -14,7 +14,7 @@ const roster = JSON.parse(readFileSync(dataFile, 'utf8'));
 const names = namesFile ? new Set(JSON.parse(readFileSync(resolve(ROOT, namesFile), 'utf8')).map(x => typeof x === 'string' ? x : x.name)) : null;
 const YEAR_MIN = 1950; const YEAR_MAX = new Date().getFullYear();
 const STANDARD = { phd: ['phdInstitution', 'phdYear'], ms: ['msInstitution', 'msYear'], undergrad: ['undergradInstitution', 'undergradYear'], md: ['mdInstitution', 'mdYear'] };
-const BAD = /award|honor|dissertation|thesis|publication|advisor|student|postdoc|fellowship|department of|phone|email|university press/i;
+const BAD = /award|honor|dissertation|thesis|publication|advisor|student|postdoc|fellowship|department of|phone|email|university press|journal|review|magazine|transfer|\b(?:ph\.?d|m\.?s|b\.?s|b\.?a)\.?\b|\bdegree\b|\bin\b/i;
 const validInst = (x) => typeof x === 'string' && x.length >= 6 && x.length <= 100 && !BAD.test(x) && !/^(?:University|University of California|College|Institute)$/i.test(x) && /\b(University|Institute|College|School|Polytechnic|Academy|MIT|Caltech|Stanford|Harvard|Yale|Princeton|Columbia|Cornell|Duke|Rice|NUS|VNU|KAIST|HUST)\b/i.test(x);
 const validYear = (x) => Number.isInteger(x) && x >= YEAR_MIN && x <= YEAR_MAX;
 let count = 0;
