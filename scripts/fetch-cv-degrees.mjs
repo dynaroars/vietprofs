@@ -27,18 +27,18 @@ const DEGREE = [
   ['jd', /(?:J\.?D\.?|Juris Doctor|LL\.?B\.?)\b/i],
   ['mba', /(?:M\.?B\.?A\.?|Master of Business Administration)\b/i],
   ['edd', /(?:Ed\.?D\.?|Doctor of Education)\b/i],
-  ['do', /(?:D\.?O\.?|Doctor of Osteopathic Medicine)\b/i],
+  ['do', /(?:D\.\s*O\.|Doctor of Osteopathic Medicine)\b/i],
   ['dds', /(?:D\.?D\.?S\.?|Doctor of Dental Surgery)\b/i],
   ['pharmd', /(?:Pharm\.?D\.?|Doctor of Pharmacy)\b/i],
   ['phd', /(?:Ph\.?D\.?|D\.?Phil\.?|Doctor of Philosophy)\b/i],
   ['ms', /(?:M\.?S\.?|M\.?Sc\.?|M\.?Eng\.?|Master of Science|Master of Engineering)\b/i],
   ['undergrad', /(?:B\.?S\.?|B\.?Sc\.?|B\.?A\.?|B\.?Eng\.?|B\.?B\.?A\.?|Bachelor of)\b/i],
 ];
-const INST = /\b(?:University|Institute|College|School|Polytechnic|Academy|MIT|Caltech|Stanford|Harvard|Yale|Princeton|Columbia|Cornell|Duke|Rice|NUS|VNU|KAIST|HUST|State University)\b/i;
+const INST = /\b(?:University|Institute|College|Polytechnic|Academy|MIT|Caltech|Stanford|Harvard|Yale|Princeton|Columbia|Cornell|Duke|Rice|NUS|VNU|KAIST|HUST|State University)\b/i;
 const BAD = /award|honor|dissertation|thesis|publication|advisor|student|postdoc|fellowship|department of|phone|email|curriculum vitae|university press|engineers?\b|program|research center/i;
 
 async function fetchResource(url) {
-  const ctrl = new AbortController(); const timer = setTimeout(() => ctrl.abort(), 15000);
+  const ctrl = new AbortController(); const timer = setTimeout(() => ctrl.abort(), 2500);
   try {
     const r = await fetch(url, { signal: ctrl.signal, redirect: 'follow', headers: { 'User-Agent': 'Mozilla/5.0 (compatible; research-bot/1.0)', Accept: '*/*' } });
     if (!r.ok) return null;
@@ -75,7 +75,7 @@ function institution(line) {
 function extract(text) {
   const lines = text.split('\n').map(x => x.replace(/\s+/g, ' ').trim()).filter(Boolean);
   let active = false; const found = [];
-  const stop = /^(?:experience|employment|appointments|positions|publications|awards|honors|service|teaching|research interests|skills|references|work experience)\b/i;
+  const stop = /\b(?:experience|employment|appointments|positions|publications|awards|honors|service|teaching|research interests|skills|references|work experience|presentations|selected works)\b/i;
   for (let i = 0; i < lines.length; i++) {
     if (/^(?:education|academic background|degrees|qualifications|academic credentials)\b/i.test(lines[i])) { active = true; continue; }
     if (active && stop.test(lines[i])) { active = false; continue; }
@@ -100,7 +100,7 @@ function sourcesFor(name) {
   const candidates = (homepage[name]?.candidates || []).filter(x => /(cv|curriculum|vitae|resume|homepage|personal|website|bio)/i.test(`${x.label} ${x.url}`)).map(x => x.url);
   if (person?.profileUrl) candidates.push(person.profileUrl);
   if (person?.websiteUrl) candidates.push(person.websiteUrl);
-  return [...new Set(candidates)].slice(0, 6);
+  return [...new Set(candidates)].slice(0, 3);
 }
 
 try {
