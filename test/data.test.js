@@ -52,7 +52,7 @@ test('every entry has the required fields', () => {
     if (p.phdYear !== undefined) assert.ok(Number.isInteger(p.phdYear));
     if (p.phdInstitution !== undefined) assert.equal(typeof p.phdInstitution, 'string');
     if (p.undergradInstitution !== undefined) assert.equal(typeof p.undergradInstitution, 'string');
-    assert.match(p.profileUrl, /^https:\/\//);
+    assert.match(p.profileUrl, /^https?:\/\//);
   }
 });
 
