@@ -59,6 +59,17 @@ for (const [index, person] of roster.entries()) {
       honorNames.add(honorKey);
     }
   }
+  if (person.otherDegrees !== undefined) {
+    if (!Array.isArray(person.otherDegrees)) fail(`${label} otherDegrees must be an array`);
+    for (const [degreeIndex, degree] of person.otherDegrees.entries()) {
+      const degreeLabel = `${label} degree ${degreeIndex + 1}`;
+      if (!degree || typeof degree !== 'object') fail(`${degreeLabel} must be an object`);
+      if (typeof degree.degree !== 'string' || !degree.degree.trim()) fail(`${degreeLabel} has invalid degree`);
+      if (typeof degree.institution !== 'string' || !degree.institution.trim()) fail(`${degreeLabel} has invalid institution`);
+      if (degree.year !== undefined && (!Number.isInteger(degree.year) || degree.year < 1900 || degree.year > new Date().getFullYear())) fail(`${degreeLabel} has invalid year`);
+      if (degree.source !== undefined && !/^https?:\/\//.test(degree.source)) fail(`${degreeLabel} source must use HTTP(S)`);
+    }
+  }
   if (!allowedTracks.has(person.track)) fail(`${label} has unsupported track ${person.track}`);
   if (!Array.isArray(person.researchAreas) || person.researchAreas.length === 0) fail(`${label} needs researchAreas`);
   if (typeof person.secondaryAppointment !== 'boolean') fail(`${label} secondaryAppointment must be boolean`);

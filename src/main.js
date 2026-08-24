@@ -169,6 +169,7 @@ function renderRoster(roster, { field, location } = {}) {
       const phdDetails = [p.phdInstitution, p.phdYear].filter(Boolean);
       const msDetails = [p.msInstitution, p.msYear].filter(Boolean);
       const undergradDetails = [p.undergradInstitution, p.undergradYear].filter(Boolean);
+      const otherDegreeDetails = (p.otherDegrees ?? []).map((degree) => `${degree.degree}: ${[degree.institution, degree.year].filter(Boolean).join(', ')}`);
       return `
         <div class="entry${portrait ? ' entry-with-portrait' : ''}">
           ${portrait}
@@ -182,6 +183,7 @@ function renderRoster(roster, { field, location } = {}) {
               ${msDetails.length ? `<div class="entry-details">MS: ${msDetails.map((value) => escapeHtml(String(value))).join(', ')}</div>` : ''}
               ${undergradDetails.length ? `<div class="entry-details">Undergrad: ${undergradDetails.map((value) => escapeHtml(String(value))).join(', ')}</div>` : ''}
               ${p.mdYear || p.mdInstitution ? `<div class="entry-details">MD (${[p.mdInstitution, p.mdYear].filter(Boolean).map((value) => escapeHtml(String(value))).join(', ')})</div>` : ''}
+              ${otherDegreeDetails.length ? `<div class="entry-details">Other degrees: ${otherDegreeDetails.map((value) => escapeHtml(value)).join('; ')}</div>` : ''}
             ${honors ? `<div class="entry-honors"><span class="honors-label">Honors:</span> ${honors}</div>` : ''}
             <div class="tags">${tags}</div>
           </div>
