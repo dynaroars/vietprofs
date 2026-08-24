@@ -59,6 +59,29 @@ Every result still requires the inclusion and identity checks above.
 - Keep `secondaryAppointment: true` when the listed field is secondary or joint and the primary tenure home is elsewhere.
 - Preserve source URLs for profiles, honors, name evidence, and portraits. These URLs establish provenance, not redistribution rights.
 
+### Honors and awards eligibility
+
+The `honors` field is curated for substantial distinctions, not every item listed on a CV or
+personal homepage. An honor should normally fit one of these patterns:
+
+- election to a recognized national academy or equivalent learned academy (`academy`);
+- election to Fellow or honorary-member status by a major disciplinary society (`fellow`);
+- a nationally or internationally competitive career, early-career, or research fellowship or
+  award, such as NSF CAREER, Sloan Research Fellowship, Simons Investigator, PECASE, or a
+  comparable national-agency or foundation program (`career_award`);
+- a major field-wide medal, prize, book award, lifetime/impact or test-of-time award, or another
+  distinction with clear disciplinary standing (`major_award`); or
+- a named endowed chair, distinguished professorship, university professorship, or comparable
+  research chair that represents a significant appointment distinction (`distinguished_professorship`).
+
+Do not add routine conference best-paper awards, paper awards with only runner-up or candidate
+status, ordinary departmental or university service/teaching awards, generic grants, invited
+talks, or ambiguous honors whose standing cannot be established. A conference recognition may be
+included only when it is clearly a durable, field-level distinction—for example, a most
+influential-paper, impact, highest-impact, or test-of-time award already represented in the
+roster. The award source must identify the recipient, the distinction, and preferably the year;
+do not infer prestige from the title alone.
+
 When two people share a name, use a fuller official form if available (for example, a middle name, initial, or nickname). Only if their names are genuinely identical should the university be appended: `Full Name - University`.
 
 ## Fields
