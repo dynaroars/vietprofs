@@ -1,5 +1,5 @@
 import './style.css';
-import { loadRoster, buildSearchIndex, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, LOCATION_LABELS, countryFlag, canonicalRank, displayName, vietnameseName, fieldOf, healthSubfieldOf, locationMatches, filterRoster, sortRoster, buildFunFacts, buildUsFunFacts, buildGlobalFunFacts, buildAwardsFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, STATE_ABBR, parseSearchQuery, continentOf } from './data.js';
+import { loadRoster, buildSearchIndex, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, LOCATION_LABELS, countryFlag, canonicalRank, displayName, vietnameseName, fieldOf, healthSubfieldOf, locationMatches, filterRoster, buildFunFacts, buildUsFunFacts, buildGlobalFunFacts, buildAwardsFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, STATE_ABBR, parseSearchQuery, continentOf } from './data.js';
 import { escapeHtml } from './utils.js';
 import { nearestVietnameseHoliday } from './holidays.js';
 import { STATE_GRID } from './state-grid.js';
@@ -166,6 +166,9 @@ function renderRoster(roster, { field, location } = {}) {
       const portrait = p.portrait
         ? `<img class="entry-portrait" src="${escapeHtml(`${import.meta.env.BASE_URL}${p.portrait}`)}" alt="" width="64" height="64" loading="lazy" decoding="async">`
         : '';
+      const phdDetails = [p.phdInstitution, p.phdYear].filter(Boolean);
+      const msDetails = [p.msInstitution, p.msYear].filter(Boolean);
+      const undergradDetails = [p.undergradInstitution, p.undergradYear].filter(Boolean);
       return `
         <div class="entry${portrait ? ' entry-with-portrait' : ''}">
           ${portrait}
@@ -175,7 +178,9 @@ function renderRoster(roster, { field, location } = {}) {
                 <span class="entry-vietnamese-name">(${escapeHtml(nativeName)})</span>${p.scholarUrl ? ` <a class="scholar-link" href="${escapeHtml(p.scholarUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(visibleName)} on Google Scholar" title="Google Scholar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3Z"/><path d="M5 12.18V16c0 1.66 3.13 3 7 3s7-1.34 7-3v-3.82l-7 3.82-7-3.82Z"/></svg></a>` : ''}
               </div>
               <div class="entry-meta">${escapeHtml(entryMeta)} <span class="loc-badge" title="${escapeHtml(p.country || 'United States')}"><span class="country-flag" aria-hidden="true">${countryFlag(p.country)}</span></span></div>
-              ${p.phdYear || p.phdInstitution ? `<div class="entry-details">PhD (${[p.phdInstitution, p.phdYear].filter(Boolean).map((value) => escapeHtml(String(value))).join(', ')})</div>` : ''}
+              ${phdDetails.length ? `<div class="entry-details">PhD: ${phdDetails.map((value) => escapeHtml(String(value))).join(', ')}</div>` : ''}
+              ${msDetails.length ? `<div class="entry-details">MS: ${msDetails.map((value) => escapeHtml(String(value))).join(', ')}</div>` : ''}
+              ${undergradDetails.length ? `<div class="entry-details">Undergrad: ${undergradDetails.map((value) => escapeHtml(String(value))).join(', ')}</div>` : ''}
               ${p.mdYear || p.mdInstitution ? `<div class="entry-details">MD (${[p.mdInstitution, p.mdYear].filter(Boolean).map((value) => escapeHtml(String(value))).join(', ')})</div>` : ''}
             ${honors ? `<div class="entry-honors"><span class="honors-label">Honors:</span> ${honors}</div>` : ''}
             <div class="tags">${tags}</div>
@@ -695,11 +700,7 @@ async function init() {
       field: fieldSelect.value,
       track: trackSelect.value,
     });
-    const isDefaultView = !searchInput.value.trim() &&
-      locationSelect.value === 'World' &&
-      fieldSelect.value === 'all' &&
-      trackSelect.value === 'all';
-    renderRoster(isDefaultView ? filtered : sortRoster(filtered), {
+    renderRoster(filtered, {
       field: fieldSelect.value,
       location: locationSelect.value,
     });

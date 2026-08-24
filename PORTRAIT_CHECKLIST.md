@@ -1,6 +1,6 @@
 # Portrait checklist
 
-Updated 2026-08-23. The roster currently has **51 entries without a portrait**. Items crossed out have a verified portrait wired into `public/data.json` (or, where still noted "image candidate", a candidate URL found but not yet verified); generic social-preview/default images are intentionally not marked complete.
+Updated 2026-08-23. The roster currently has **45 entries without a portrait**. Items crossed out have a verified portrait wired into `public/data.json` (or, where still noted "image candidate", a candidate URL found but not yet verified); generic social-preview/default images are intentionally not marked complete.
 
 ## Missing portraits
 
@@ -39,7 +39,7 @@ Updated 2026-08-23. The roster currently has **51 entries without a portrait**. 
 - ~~33. Huy T. Tran — University of Illinois Urbana-Champaign~~ ([profile](https://tran.aerospace.illinois.edu/))
 - 34. Thao (Vicky) Nguyen — Johns Hopkins University ([profile](https://pages.jh.edu/tnguy108/))
 - 35. Vinh Nguyen - Michigan Technological University — Michigan Technological University ([profile](https://sites.google.com/mtu.edu/vinh-nguyen))
-- 36. Nguyen Nguyen — Minnesota State University, Mankato ([profile](https://cob.mnsu.edu/about/faculty-and-staff/accounting-and-finance-staff/nguyen-nguyen/))
+- ~~36. Nguyen Nguyen — Minnesota State University, Mankato~~ ([profile](https://cob.mnsu.edu/about/faculty-and-staff/accounting-and-finance-staff/nguyen-nguyen/)) ([portrait source](https://cob.mnsu.edu/globalassets/college-of-business/faculty--staff-photos/nguyen-nguyen.jpg))
 - 37. Julie Ngo — Loyola Marymount University ([profile](https://scholars.lmu.edu/en/persons/julie-ngo/))
 - 38. Diep Nguyen — Seattle Pacific University ([profile](https://spu.edu/academics/college-business-technology/faculty-staff/nguyen-diep))
 - ~~39. Liem Nguyen - Westfield State University — Westfield State University~~ ([profile](https://www.westfield.ma.edu/people/liem-nguyen))
@@ -54,14 +54,14 @@ Updated 2026-08-23. The roster currently has **51 entries without a portrait**. 
 - ~~48. Chi Van Dang — Johns Hopkins University~~ ([profile](https://bdp.jhu.edu/bd-professors/chi-van-dang/)) ([portrait source](https://commons.wikimedia.org/wiki/Special:FilePath/Chi_Van_Dang.jpg))
 - 49. Trang T.H. Nguyen — Arkansas State University ([profile](https://www.astate.edu/college/sciences-and-mathematics/departments/biology/faculty-staff/))
 - 50. Victoria Tran — Reed College ([profile](https://www.reed.edu/sociology/faculty/))
-- 51. Mariam B. Lam — University of California, Riverside ([profile](https://profiles.ucr.edu/mariam.lam))
+- ~~51. Mariam B. Lam — University of California, Riverside~~ ([profile](https://profiles.ucr.edu/mariam.lam)) ([portrait source](https://profiles.ucr.edu/api/profilePicture/17096))
 - 52. Michael Dao — San Jose State University ([profile](https://www.sjsu.edu/kinesiology/about-us/faculty-and-staff.php))
 - ~~53. Tomas Vu-Daniel — Columbia University~~ ([profile](https://arts.columbia.edu/profiles/tomas-vu-daniel))
 - 54. Mylinh Nguyen — University of Texas at Dallas ([profile](https://profiles.utdallas.edu/mylinh.nguyen))
 - ~~55. Thuan L. Nguyen — University of North Texas~~ ([profile](https://facultyinfo.unt.edu/faculty-profile?profile=tln0076))
 - 56. Lesa Tran Lu — Rice University ([profile](https://profiles.rice.edu/faculty/lesa-tran-lu))
-- 57. Thu Nguyen — University of Michigan ([profile](https://lsa.umich.edu/chem/people/faculty/nthu.html))
-- 58. Christopher Paul Nguyen — University of New Mexico ([profile](https://business.unm.edu/faculty-research/faculty-profile.html?username=cnguyen))
+- ~~57. Thu Nguyen — University of Michigan~~ ([profile](https://lsa.umich.edu/chem/people/faculty/nthu.html)) ([portrait source](https://lsa.umich.edu/content/michigan-lsa/chem/en/people/faculty/nthu/jcr%3Acontent/profileImage.transform/profile_portrait/image.jpg))
+- ~~58. Christopher Paul Nguyen — University of New Mexico~~ ([profile](https://business.unm.edu/faculty-research/faculty-profile.html?username=cnguyen)) ([portrait source](https://www.digitalmeasures.com/services/self-service-reporting/profiles/clients/9fe7e8bd-a145-51ff-b206-7ed9eacadf92/users/2333759/instruments/2620/images?fieldId=2367787))
 - 59. Cuong Nguyen Le — University of Massachusetts Amherst ([profile](https://people.umass.edu/cnle/))
 - 60. Huyen Nguyen - Kansas State University — Kansas State University ([profile](https://www.k-state.edu/media-communication/about/faculty/huyen-nguyen.html))
 - ~~61. Hoa T.H. Nguyen — Columbia University~~ ([profile](https://www.tc.columbia.edu/faculty/htn2113/))
@@ -113,7 +113,7 @@ Updated 2026-08-23. The roster currently has **51 entries without a portrait**. 
 - 107. Uy Nguyen — California State University, Los Angeles ([profile](https://www.calstatela.edu/nss/math/retired-and-emeriti-faculty))
 - ~~108. Virginia Huynh — California State University, Northridge~~ ([profile](https://www.csun.edu/csun-experts-directory/experts-directory-l-m/experts-directory-minorities-general))
 - ~~109. Viet-Huong Nguyen — Chapman University~~ ([profile](https://www.chapman.edu/our-faculty/index.aspx))
-- ~~110. Truong-Thao Nguyen — City College of New York (CUNY)~~ — [image candidate](https://www.ccny.cuny.edu/sites/default/files/2022-04/truong-thao_nguyen.jpg)
+- ~~110. Truong-Thao Nguyen — City College of New York (CUNY)~~ ([profile](https://www.ccny.cuny.edu/profiles/truong-thao-nguyen)) ([portrait source](https://www.ccny.cuny.edu/sites/default/files/styles/600px_wide/public/2022-04/truong-thao_nguyen.jpg?itok=hg-67Udm))
 - ~~111. Long Duy Nguyen — Florida Gulf Coast University~~ ([profile](https://scholarscommons.fgcu.edu/esploro/profile/long_nguyen))
 - ~~112. Truong Duong — Iowa State University~~ ([profile](https://catalog.iastate.edu/faculty/))
 - 113. Minh Vo — Metropolitan State University ([profile](https://www.metrostate.edu/about/directory/minh-vo))
@@ -143,7 +143,7 @@ Updated 2026-08-23. The roster currently has **51 entries without a portrait**. 
 - ~~137. Nam D. Tran — University of South Florida~~ ([profile](https://health.usf.edu/medicine/neurology/faculty#nam-tran))
 - ~~138. Liem Thanh Tran — University of Tennessee, Knoxville~~ ([profile](https://geography.utk.edu/wp-content/uploads/2023/10/Tran_CV_April2023.pdf))
 - 139. Bau P. Tran — University of Texas Southwestern Medical Center ([profile](https://shp.utsouthwestern.edu/programs/physician-assistant-studies/faculty.html))
-- 140. Benjamin Nguyen — University of Texas Southwestern Medical Center ([profile](https://profiles.utsouthwestern.edu/profile/96328/benjamin-nguyen.html))
+- ~~140. Benjamin Nguyen — University of Texas Southwestern Medical Center~~ ([profile](https://profiles.utsouthwestern.edu/profile/96328/benjamin-nguyen.html)) ([portrait source](https://profileplus.swmed.edu/facultydata/96328/images/nguyen-benjamin-fis.jpg))
 - ~~141. C. Thi Nguyen — University of Utah~~ ([profile](https://philosophy.utah.edu/directory/faculty.php))
 - ~~142. Patricia Nguyen — University of Virginia~~ ([profile](https://americanstudies.as.virginia.edu/office-hours))
 - ~~143. Bich Minh Nguyen — University of Wisconsin-Madison~~ ([profile](https://guide.wisc.edu/faculty/)) — bogus duplicate (fabricated department/degree data) of "Beth Nguyen"/#70, same person under her author byline "Beth (Bich Minh) Nguyen"; record removed

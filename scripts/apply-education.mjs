@@ -7,6 +7,7 @@
  *   - If a new phdInstitution was found and the existing one is missing → add it
  *   - If a new phdYear was found and existing is missing → add it
  *   - If a new phdMajor was found → add phdMajor field
+ *   - Same for MS institution/year fields
  *   - Same for undergrad fields
  *   - NEVER overwrites existing data (only fills gaps), unless --force is used
  *
@@ -90,6 +91,7 @@ const INST_FIXES = {
   'University of Science': null, // ambiguous — "University of Science" without country context
   'Trinh Pham undergradInstitution': null, // never matches, placeholder
   'Huy Q. Dinh undergradInstitution': null, // placeholder
+  'degree in Mechanical Engineering from National University of Singapore in': 'National University of Singapore',
 };
 
 const MAJOR_FIXES = {
@@ -112,7 +114,7 @@ const MAJOR_FROM_FIX = {
   'Computer Science at University of Illinois at Chicago': 'Computer Science',
 };
 
-const JUNK_RE = /YouTube|Facebook|Twitter|Instagram|LinkedIn|Subscribe|Cookie|Privacy|Copyright|©|\bFollow\b|\bContact Us\b|\bCampus Map\b|\bJobs @|\bTechAlert\b|\bsitemap\b|404|login|sign in|\bClose\b|\bMenu\b|\bSearch\b|\bSkip to\b|Accessibility|College of Arts & Sciences|College of Nursing|College of Arts and Sciences|Association of College|Advanced Computing|Faculty Profile|Public Health:|instructor of|public health:|Colleges and Schools|Hudson River Valley|Queens College Librar|committee\b|review committee|level review|Connie Nguyen|upstate New York|College in upstate|Dymally Institute|University Centers|Institute\b$/i;
+const JUNK_RE = /YouTube|Facebook|Twitter|Instagram|LinkedIn|Subscribe|Cookie|Privacy|Copyright|©|\bFollow\b|\bContact Us\b|\bCampus Map\b|\bJobs @|\bTechAlert\b|\bsitemap\b|404|login|sign in|\bClose\b|\bMenu\b|\bSearch\b|\bSkip to\b|Accessibility|College of Arts & Sciences|College of Nursing|College of Arts and Sciences|Association of College|Advanced Computing|Faculty Profile|Public Health:|instructor of|public health:|Colleges and Schools|Hudson River Valley|Queens College Librar|committee\b|review committee|level review|Connie Nguyen|upstate New York|College in upstate|Dymally Institute|University Centers|Institute\b$|Robert Brown|Pre-university studies|Stanford Advisees|Certifications|Degree Programme|not accepting patients|Responsibilities within|Royal College of Physicians|mHealth Training Institute|Princeton Engineers|\bPrior to\b|Combinatorics Seminar|Cullen College|Paying for College|University Bookstore|University Curriculum|College Resources|and Schools School|\bFiona Brown\b|Community-University Empowerment|Youth and Pre-College|Principal Leadership Institute|University Press|Yale Gamelan|\bCollege Now\b|University Studies|EALAC|University Diplomas|University Professor|Pre-College Programs|Air University Associate|New Research Presented|Honors College|\bUniversity in$|\bUniversity \(USA\)\b|Statistics PhD program|\bfrom$|\b(University|Institute)\)$|Technology\)$|\bUniversity System$|\bUniversity of Illinois System$|\bSchool Online Application|\bUniversity of George Mason\b|\bUniversity of Melbourne in$|\bUniversity of Illinois in$|\bUniversity of California$|\bThe College$|^College\b|^Institute for the Connected$|^Institute of AI and Sustainability$|^Institute of Health Policy$|^Health Care Management,|^Yale Graduate School of Arts and Sciences|^\s*of Science\b|^May \d{4}\b|^PhD -|^University of Mississippi Medical Center Pediatric|^workshop for|^Wilkinson College|^College Home|^Connect with the College|^American University of Armenia has new president|^University in Melbourne|^Van Lang University \(HCM City$|^Convergent Science Institute|^The Ohio Summer Undergraduate|^Institute of Technology$|^Honours College$|^University \(USA\)$|^The University of Melbourne \(Australian University\)/i;
 
 function cleanInst(raw) {
   if (!raw) return null;
@@ -130,6 +132,8 @@ function cleanInst(raw) {
     .replace(/,?\s*Lecturer\s+of\s+.*$/, '')  // trailing job title
     .replace(/,?\s*Professor\s+of\s+.*$/, '') // trailing job title
     .replace(/,?\s*Department\s+of\s+.*$/, '') // trailing dept
+    .replace(/\s+in\s*$/, '')
+    .replace(/\s*\(USA\)\s+in\s*$/, '')
     .trim();
 
   // If it looks like "MAJOR, INSTITUTION" – drop the major part
@@ -201,6 +205,7 @@ function isValidMajor(s) {
   if (JUNK_RE.test(t)) return false;
   // Reject years-as-major, sentence fragments, names-as-major
   if (/^\d{4}/.test(t)) return false;
+  if (/^\(?\s*(?:Iowa State|Tsinghua|National)\b/i.test(t)) return false;
   if (/\b(at the|from|in the|and the|with the|is an|has been|since\s+\d|Texas A&M|Sed within|Rutgers|California$)\b/i.test(t)) return false;
   // Single-word geographic names as major (e.g. "California", "Swiss Federal") are suspicious
   if (words.length === 1 && /^[A-Z]/.test(t) && !/^(Chemistry|Biology|Physics|Mathematics|Engineering|Economics|History|Psychology|Sociology|Statistics|Philosophy|Law|Medicine|Finance|Accounting|Marketing|Management|Computing|Linguistics|Music|Art)$/i.test(t)) return false;
@@ -217,16 +222,25 @@ let updated = 0;
 let changes = [];
 
 for (const prof of roster) {
+  // Remove only values that the same quality filter identifies as page noise.
+  const removedMsNoise = prof.msInstitution && JUNK_RE.test(prof.msInstitution);
+  if (removedMsNoise) {
+    delete prof.msInstitution;
+    delete prof.msYear;
+  }
   const result = results[prof.name];
   if (!result?._processed) continue;
 
-  const edits = [];
+  const edits = removedMsNoise ? ['removed invalid msInstitution/msYear'] : [];
   const rawPhd = result.phdInstitution;
+  const rawMs  = result.msInstitution;
   const rawUg  = result.undergradInstitution;
 
   // ── PhD Institution ──────────────────────────────────────────────────────
-  const phdInst = cleanInst(rawPhd);
-  if (phdInst && isValidInstitution(phdInst)) {
+  const rejectPhdData = prof.name === 'Benjamin Nguyen';
+  const phdInst = rejectPhdData ? null : cleanInst(rawPhd);
+  const validPhdInst = phdInst && isValidInstitution(phdInst);
+  if (validPhdInst) {
     if (!prof.phdInstitution || FORCE) {
       edits.push(`phdInstitution: "${phdInst}"`);
       if (!DRY_RUN) prof.phdInstitution = phdInst;
@@ -234,7 +248,7 @@ for (const prof of roster) {
   }
 
   // ── PhD Year ─────────────────────────────────────────────────────────────
-  if (result.phdYear && isValidYear(result.phdYear)) {
+  if (!rejectPhdData && result.phdYear && isValidYear(result.phdYear) && (prof.phdInstitution || phdInst)) {
     if (!prof.phdYear || FORCE) {
       edits.push(`phdYear: ${result.phdYear}`);
       if (!DRY_RUN) prof.phdYear = result.phdYear;
@@ -250,9 +264,28 @@ for (const prof of roster) {
     }
   }
 
+  // ── MS Institution ──────────────────────────────────────────────────────
+  const msInst = cleanInst(rawMs);
+  const validMsInst = msInst && isValidInstitution(msInst);
+  if (validMsInst) {
+    if (!prof.msInstitution || FORCE) {
+      edits.push(`msInstitution: "${msInst}"`);
+      if (!DRY_RUN) prof.msInstitution = msInst;
+    }
+  }
+
+  // ── MS Year ──────────────────────────────────────────────────────────────
+  if (result.msYear && isValidYear(result.msYear) && (prof.msInstitution || validMsInst)) {
+    if (!prof.msYear || FORCE) {
+      edits.push(`msYear: ${result.msYear}`);
+      if (!DRY_RUN) prof.msYear = result.msYear;
+    }
+  }
+
   // ── Undergrad Institution ────────────────────────────────────────────────
   const ugInst = cleanInst(rawUg);
-  if (ugInst && isValidInstitution(ugInst)) {
+  const validUgInst = ugInst && isValidInstitution(ugInst);
+  if (validUgInst) {
     if (!prof.undergradInstitution || FORCE) {
       edits.push(`undergradInstitution: "${ugInst}"`);
       if (!DRY_RUN) prof.undergradInstitution = ugInst;
@@ -260,7 +293,7 @@ for (const prof of roster) {
   }
 
   // ── Undergrad Year ───────────────────────────────────────────────────────
-  if (result.undergradYear && isValidYear(result.undergradYear)) {
+  if (result.undergradYear && isValidYear(result.undergradYear) && (prof.undergradInstitution || validUgInst)) {
     if (!prof.undergradYear || FORCE) {
       edits.push(`undergradYear: ${result.undergradYear}`);
       if (!DRY_RUN) prof.undergradYear = result.undergradYear;

@@ -3,6 +3,7 @@
  *
  * Fetches each professor's profile page and tries to extract:
  *   - phdInstitution, phdYear, phdMajor
+ *   - msInstitution, msYear, msMajor
  *   - undergradInstitution, undergradYear, undergradMajor
  *
  * Usage:
@@ -123,12 +124,13 @@ const YEAR_RE = /\b(19[5-9]\d|20[0-2]\d)\b/;
  *   Undergraduate: Vietnam National University
  */
 function parseLine(line, degreeType) {
-  // degreeType: 'phd' | 'ug'
+  // degreeType: 'phd' | 'ms' | 'ug'
 
   const PHD_SIGNAL = /Ph\.?D\.?|Doctor(?:al|ate)?(?:\s+of\s+Philosophy)?|D\.?Phil\.?/i;
+  const MS_SIGNAL  = /M\.?S\.?|M\.?Sc\.?|Master(?:'s)?(?:\s+of\s+\w+)?/i;
   const UG_SIGNAL  = /\bB\.?[SA]c?\.?\b|\bBachelor|undergraduate\b/i;
 
-  const signal = degreeType === 'phd' ? PHD_SIGNAL : UG_SIGNAL;
+  const signal = degreeType === 'phd' ? PHD_SIGNAL : degreeType === 'ms' ? MS_SIGNAL : UG_SIGNAL;
   if (!signal.test(line)) return null;
   if (!INST_ANCHOR.test(line)) {
     // Maybe institution is on a separate nearby line — caller will handle that
@@ -144,7 +146,7 @@ function parseLine(line, degreeType) {
   // Try various structural patterns ─────────────────────────────────────────
 
   // Pattern 1: "Ph.D. in MAJOR, INSTITUTION, YEAR" or "B.S. in MAJOR, INSTITUTION, YEAR"
-  let m = line.match(/(?:Ph\.?D\.?|B\.?[SA]c?\.?|Bachelor(?:'s)?(?:\s+of\s+\w+)?)\s+in\s+([\w\s\/&()-]{2,40}?)\s*,\s*([\w\s,'-]{4,80}?)\s*(?:,\s*(?:19|20)\d\d)?$/i);
+  let m = line.match(/(?:Ph\.?D\.?|M\.?S\.?|M\.?Sc\.?|B\.?[SA]c?\.?|Bachelor(?:'s)?(?:\s+of\s+\w+)?|Master(?:'s)?(?:\s+of\s+\w+)?)\s+in\s+([\w\s\/&()-]{2,40}?)\s*,\s*([\w\s,'-]{4,80}?)\s*(?:,\s*(?:19|20)\d\d)?$/i);
   if (m && INST_ANCHOR.test(m[2])) {
     major = clean(m[1]);
     inst  = stripLeadingJunk(clean(m[2]));
@@ -152,7 +154,7 @@ function parseLine(line, degreeType) {
   }
 
   // Pattern 2: "Ph.D./B.S., INSTITUTION, YEAR" (no major)
-  m = line.match(/(?:Ph\.?D\.?|D\.?Phil\.?|B\.?[SA]c?\.?|Bachelor)\s*[,. ]+\s*([\w\s,'-]{4,80}?)\s*(?:[,. ]+(?:19|20)\d\d|$)/i);
+  m = line.match(/(?:Ph\.?D\.?|D\.?Phil\.?|M\.?S\.?|M\.?Sc\.?|Master|B\.?[SA]c?\.?|Bachelor)\s*[,. ]+\s*([\w\s,'-]{4,80}?)\s*(?:[,. ]+(?:19|20)\d\d|$)/i);
   if (m && INST_ANCHOR.test(m[1])) {
     inst = stripLeadingJunk(clean(m[1]));
     if (okInst(inst)) return { inst, year, major: null };
@@ -160,7 +162,7 @@ function parseLine(line, degreeType) {
 
   // Pattern 3: "Ph.D., INSTITUTION, MAJOR" (institution before major)
   // e.g. "Ph.D., University of Chicago, Computer Science"
-  m = line.match(/(?:Ph\.?D\.?|D\.?Phil\.?)\s*[,. ]+\s*([\w\s,'-]{4,80}?)\s*[,. ]+\s*([\w\s\/&()-]{2,40}?)\s*$/i);
+  m = line.match(/(?:Ph\.?D\.?|D\.?Phil\.?|M\.?S\.?|M\.?Sc\.?|Master)\s*[,. ]+\s*([\w\s,'-]{4,80}?)\s*[,. ]+\s*([\w\s\/&()-]{2,40}?)\s*$/i);
   if (m && INST_ANCHOR.test(m[1])) {
     inst  = stripLeadingJunk(clean(m[1]));
     major = clean(m[2]);
@@ -169,7 +171,7 @@ function parseLine(line, degreeType) {
 
   // Pattern 4: "Ph.D. in MAJOR (YEAR) ... INSTITUTION"
   // e.g. "Ph.D. in Mathematics (2000) - Advisor: A.V. Geramita Queen's University , Canada"
-  m = line.match(/(?:Ph\.?D\.?|B\.?[SA]c?\.?|Bachelor)\s+in\s+([\w\s\/&()-]{2,40}?)\s*\((\d{4})\).*?((?:University|College|Institute|Polytechnic|MIT|Caltech|Stanford|Harvard|Yale|Princeton|Columbia|Cornell|Duke|Rice)[^,\n]{0,60})/i);
+  m = line.match(/(?:Ph\.?D\.?|M\.?S\.?|M\.?Sc\.?|Master|B\.?[SA]c?\.?|Bachelor)\s+in\s+([\w\s\/&()-]{2,40}?)\s*\((\d{4})\).*?((?:University|College|Institute|Polytechnic|MIT|Caltech|Stanford|Harvard|Yale|Princeton|Columbia|Cornell|Duke|Rice)[^,\n]{0,60})/i);
   if (m) {
     major = clean(m[1]);
     year  = okYear(parseInt(m[2])) ? parseInt(m[2]) : year;
@@ -179,7 +181,7 @@ function parseLine(line, degreeType) {
 
   // Pattern 5: Reversed — INSTITUTION, Ph.D. YEAR
   // e.g. "Stanford University, Ph.D. 2020"
-  m = line.match(/([\w\s,'-]{4,80}?)\s*,\s*(?:Ph\.?D\.?|B\.?[SA]c?\.?)\s*,?\s*(\d{4})?/i);
+  m = line.match(/([\w\s,'-]{4,80}?)\s*,\s*(?:Ph\.?D\.?|M\.?S\.?|M\.?Sc\.?|Master|B\.?[SA]c?\.?)\s*,?\s*(\d{4})?/i);
   if (m && INST_ANCHOR.test(m[1])) {
     inst = stripLeadingJunk(clean(m[1]));
     if (m[2] && okYear(parseInt(m[2]))) year = parseInt(m[2]);
@@ -188,7 +190,7 @@ function parseLine(line, degreeType) {
 
   // Pattern 6: MAJOR INSTITUTION YEAR (no comma between major and institution)
   // e.g. "Ph.D, Computer Engineering University of Florida, USA 2008 - 2013"
-  m = line.match(/(?:Ph\.?D\.?|B\.?[SA]c?\.?)\s*[,.]?\s*([\w\s\/&()-]{2,30}?)\s+((?:University|Institute|College|School|MIT|Caltech|Stanford|Harvard|Yale|Princeton|Columbia|Cornell|Duke|Rice|Hanoi|Vietnam|Ho Chi Minh)[^,\n]{0,60}?)(?:[,. ]+(?:19|20)\d\d|$)/i);
+  m = line.match(/(?:Ph\.?D\.?|M\.?S\.?|M\.?Sc\.?|Master|B\.?[SA]c?\.?)\s*[,.]?\s*([\w\s\/&()-]{2,30}?)\s+((?:University|Institute|College|School|MIT|Caltech|Stanford|Harvard|Yale|Princeton|Columbia|Cornell|Duke|Rice|Hanoi|Vietnam|Ho Chi Minh)[^,\n]{0,60}?)(?:[,. ]+(?:19|20)\d\d|$)/i);
   if (m) {
     const candMajor = clean(m[1]);
     const candInst  = stripLeadingJunk(clean(m[2]));
@@ -204,7 +206,7 @@ function parseLine(line, degreeType) {
 
 /**
  * Find education section, then parse line-by-line.
- * Returns { phd: {inst,year,major}|null, ug: {inst,year,major}|null }
+ * Returns { phd, ms, ug }, where each value is {inst,year,major}|null.
  */
 function extractEducation(lines) {
   // Find education section boundary
@@ -227,7 +229,7 @@ function extractEducation(lines) {
     ? [[sectionStart, sectionEnd], [0, lines.length]]
     : [[0, lines.length]];
 
-  let phd = null, ug = null;
+  let phd = null, ms = null, ug = null;
 
   for (const [lo, hi] of searchRanges) {
     const slice = lines.slice(lo, hi);
@@ -278,12 +280,33 @@ function extractEducation(lines) {
         }
       }
 
-      if (phd && ug) break;
+      // Try master's degree on this line
+      if (!ms) {
+        const r = parseLine(line, 'ms');
+        if (r && !r.partial) {
+          ms = r;
+        } else if (r?.partial) {
+          for (let j = i + 1; j <= Math.min(i + 3, slice.length - 1); j++) {
+            const next = slice[j];
+            if (INST_ANCHOR.test(next) && next.length < 150) {
+              const instMatch = next.match(/^((?:[\w'-]+\s*){0,4}(?:University|Institute|College|Polytechnic|MIT|Caltech|Stanford|Harvard|Yale|Princeton|Columbia|Cornell|Duke|Rice|Northwestern|Dartmouth|Brown|Vanderbilt|Hanoi|Vietnam)[^,\n]{0,60})/i);
+              if (instMatch) {
+                const inst = stripLeadingJunk(clean(instMatch[1]));
+                const yearM = [...next.matchAll(/\b(19[5-9]\d|20[0-2]\d)\b/g)].map(m => parseInt(m[1]));
+                const year = yearM.find(okYear) ?? null;
+                if (okInst(inst)) { ms = { inst, year, major: null }; break; }
+              }
+            }
+          }
+        }
+      }
+
+      if (phd && ms && ug) break;
     }
-    if (phd && ug) break;
+    if (phd && ms && ug) break;
   }
 
-  return { phd, ug };
+  return { phd, ms, ug };
 }
 
 // ─── Main ─────────────────────────────────────────────────────────────────────
@@ -295,7 +318,7 @@ if (existsSync(RESULTS_FILE)) {
 }
 
 let entries = roster;
-if (MISSING_ONLY) entries = roster.filter(p => !p.phdInstitution || !p.undergradInstitution);
+if (MISSING_ONLY) entries = roster.filter(p => !p.phdInstitution || !p.msInstitution || !p.undergradInstitution);
 entries = entries.slice(OFFSET, OFFSET + LIMIT);
 
 console.log(`Processing ${entries.length} entries  (offset=${OFFSET} limit=${LIMIT} missing-only=${MISSING_ONLY})`);
@@ -315,25 +338,27 @@ for (let i = 0; i < entries.length; i++) {
   process.stdout.write(`[${String(i+1).padStart(4)}/${entries.length}] ${key} ... `);
 
   const html  = await fetchPage(prof.profileUrl);
-  let phd = null, ug = null;
+  let phd = null, ms = null, ug = null;
 
   if (html) {
     const lines = toLines(html);
-    ({ phd, ug } = extractEducation(lines));
+    ({ phd, ms, ug } = extractEducation(lines));
   } else {
     errors++;
     process.stdout.write('FETCH ERROR\n');
     results[key] = { _processed: true, _profileFetched: false,
       phdInstitution: null, phdYear: null, phdMajor: null,
+      msInstitution: null, msYear: null, msMajor: null,
       undergradInstitution: null, undergradYear: null, undergradMajor: null };
     continue;
   }
 
-  if (phd || ug) {
+  if (phd || ms || ug) {
     found++;
     const pStr = phd ? `phd=${phd.inst}(${phd.year ?? '?'})${phd.major ? ' ['+phd.major+']' : ''}` : '';
+    const mStr = ms  ? ` ms=${ms.inst}(${ms.year ?? '?'})${ms.major ? ' ['+ms.major+']' : ''}` : '';
     const uStr = ug  ? ` ug=${ug.inst}(${ug.year ?? '?'})${ug.major  ? ' ['+ug.major +']' : ''}` : '';
-    process.stdout.write(`✓ ${pStr}${uStr}\n`);
+    process.stdout.write(`✓ ${pStr}${mStr}${uStr}\n`);
   } else {
     process.stdout.write('—\n');
   }
@@ -344,6 +369,9 @@ for (let i = 0; i < entries.length; i++) {
     phdInstitution:      phd?.inst  ?? null,
     phdYear:             phd?.year  ?? null,
     phdMajor:            phd?.major ?? null,
+    msInstitution:       ms?.inst   ?? null,
+    msYear:              ms?.year   ?? null,
+    msMajor:             ms?.major  ?? null,
     undergradInstitution: ug?.inst  ?? null,
     undergradYear:        ug?.year  ?? null,
     undergradMajor:       ug?.major ?? null,
