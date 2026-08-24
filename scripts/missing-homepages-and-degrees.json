@@ -4,7 +4,7 @@
     "missingHomepage": "websiteUrl is absent; profileUrl is retained separately and is not counted as a distinct homepage",
     "missingEducation": "phd, ms, or undergraduate institution/year is incomplete; equivalent degrees are listed in knownOtherDegrees when already recorded"
   },
-  "count": 733,
+  "count": 729,
   "entries": [
     {
       "name": "Tommy Dang",
@@ -53,23 +53,6 @@
       ],
       "knownOtherDegrees": [],
       "homepageCandidates": [],
-      "cvCandidates": []
-    },
-    {
-      "name": "AnHai Doan",
-      "profileUrl": "https://pages.cs.wisc.edu/~anhai/",
-      "university": "University of Wisconsin-Madison",
-      "missingEducation": [
-        "ms",
-        "undergrad"
-      ],
-      "knownOtherDegrees": [],
-      "homepageCandidates": [
-        {
-          "label": "Bio/Personal",
-          "url": "https://pages.cs.wisc.edu/~anhai/bio/"
-        }
-      ],
       "cvCandidates": []
     },
     {
@@ -319,23 +302,6 @@
       "cvCandidates": []
     },
     {
-      "name": "Anh Totti Nguyen",
-      "profileUrl": "https://anhnguyen.me/",
-      "university": "Auburn University",
-      "missingEducation": [
-        "ms",
-        "undergrad"
-      ],
-      "knownOtherDegrees": [],
-      "homepageCandidates": [
-        {
-          "label": "Website",
-          "url": "http://anhnguyen.me/"
-        }
-      ],
-      "cvCandidates": []
-    },
-    {
       "name": "Clark T.-C. Nguyen",
       "profileUrl": "https://people.eecs.berkeley.edu/~ctnguyen/",
       "university": "University of California, Berkeley",
@@ -466,52 +432,6 @@
         {
           "label": "project page",
           "url": "https://web.engr.oregonstate.edu/~thinhq/research/WIFOwebsite/WiFoIndex.html"
-        }
-      ],
-      "cvCandidates": []
-    },
-    {
-      "name": "Tien Nguyen",
-      "profileUrl": "https://personal.utdallas.edu/~tien.n.nguyen/",
-      "university": "University of Texas at Dallas",
-      "missingEducation": [
-        "phd",
-        "ms",
-        "undergrad"
-      ],
-      "knownOtherDegrees": [],
-      "homepageCandidates": [
-        {
-          "label": "Home",
-          "url": "https://personal.utdallas.edu/%7Etien.n.nguyen/"
-        },
-        {
-          "label": "Awards",
-          "url": "https://personal.utdallas.edu/~tien.n.nguyen/awards.html"
-        },
-        {
-          "label": "Funding",
-          "url": "https://personal.utdallas.edu/~tien.n.nguyen/funding.html"
-        },
-        {
-          "label": "Publications",
-          "url": "https://personal.utdallas.edu/~tien.n.nguyen/publications.html"
-        },
-        {
-          "label": "Research",
-          "url": "https://personal.utdallas.edu/~tien.n.nguyen/research.html"
-        },
-        {
-          "label": "Services",
-          "url": "https://personal.utdallas.edu/~tien.n.nguyen/service.html"
-        },
-        {
-          "label": "Students",
-          "url": "https://personal.utdallas.edu/~tien.n.nguyen/students.html"
-        },
-        {
-          "label": "Teaching",
-          "url": "https://personal.utdallas.edu/~tien.n.nguyen/teaching.html"
         }
       ],
       "cvCandidates": []
@@ -2704,9 +2624,7 @@
       "profileUrl": "https://seis.ucla.edu/faculty/cindy-nguyen/",
       "university": "University of California, Los Angeles",
       "missingEducation": [
-        "phd",
-        "ms",
-        "undergrad"
+        "ms"
       ],
       "knownOtherDegrees": [],
       "homepageCandidates": [],
@@ -5822,9 +5740,7 @@
       "profileUrl": "https://case.fiu.edu/about/directory/profiles/pham-andy.html",
       "university": "Florida International University",
       "missingEducation": [
-        "phd",
-        "ms",
-        "undergrad"
+        "ms"
       ],
       "knownOtherDegrees": [],
       "homepageCandidates": [
@@ -5989,9 +5905,7 @@
       "profileUrl": "https://www.fsb.miamioh.edu/fsb/directory/vita/vunt.pdf",
       "university": "Miami University",
       "missingEducation": [
-        "phd",
-        "ms",
-        "undergrad"
+        "ms"
       ],
       "knownOtherDegrees": [],
       "homepageCandidates": [],
@@ -6034,8 +5948,7 @@
       "profileUrl": "https://ced.ncsu.edu/people/lpham4/",
       "university": "North Carolina State University",
       "missingEducation": [
-        "ms",
-        "undergrad"
+        "ms"
       ],
       "knownOtherDegrees": [],
       "homepageCandidates": [],
@@ -7674,8 +7587,7 @@
       "profileUrl": "https://faculty.smu.edu.sg/profile/don-ta-326",
       "university": "Singapore Management University",
       "missingEducation": [
-        "ms",
-        "undergrad"
+        "ms"
       ],
       "knownOtherDegrees": [],
       "homepageCandidates": [
@@ -9524,7 +9436,6 @@
       "profileUrl": "https://luuquangtrung.github.io/cv/",
       "university": "CentraleSupélec",
       "missingEducation": [
-        "ms",
         "undergrad"
       ],
       "knownOtherDegrees": [],
@@ -9707,20 +9618,6 @@
       "cvCandidates": []
     },
     {
-      "name": "Giang Nghiem",
-      "profileUrl": "https://www.gif.uni-hannover.de/fileadmin/gif/CVs/CV_Giang_Nghiem_Feb2025.pdf",
-      "university": "Leibniz University Hannover",
-      "missingEducation": [
-        "ms",
-        "undergrad"
-      ],
-      "knownOtherDegrees": [],
-      "homepageCandidates": [],
-      "cvCandidates": [
-        "https://www.gif.uni-hannover.de/fileadmin/gif/CVs/CV_Giang_Nghiem_Feb2025.pdf"
-      ]
-    },
-    {
       "name": "Lan Nguyen",
       "profileUrl": "https://www.uu.nl/staff/LNNguyen",
       "university": "Utrecht University",
@@ -9792,8 +9689,7 @@
       "profileUrl": "https://www2.philosophy.su.se/nguyen/CV.pdf",
       "university": "Stockholm University",
       "missingEducation": [
-        "ms",
-        "undergrad"
+        "ms"
       ],
       "knownOtherDegrees": [],
       "homepageCandidates": [],
