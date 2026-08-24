@@ -1,6 +1,6 @@
 # Portrait checklist
 
-Updated 2026-08-23. The roster currently has **52 entries without a portrait**. Items crossed out have a verified portrait wired into `public/data.json` (or, where still noted "image candidate", a candidate URL found but not yet verified); generic social-preview/default images are intentionally not marked complete.
+Updated 2026-08-23. The roster currently has **51 entries without a portrait**. Items crossed out have a verified portrait wired into `public/data.json` (or, where still noted "image candidate", a candidate URL found but not yet verified); generic social-preview/default images are intentionally not marked complete.
 
 ## Missing portraits
 
@@ -51,7 +51,7 @@ Updated 2026-08-23. The roster currently has **52 entries without a portrait**. 
 - ~~45. Khanh Le — Queens College, City University of New York~~ ([profile](https://www.qc.cuny.edu/academics/lcd/faculty/))
 - 46. Ocean Vuong — New York University ([profile](https://as.nyu.edu/content/nyu-as/as/faculty/ocean-vuong.html))
 - 47. Viet Le — California College of the Arts ([profile](https://vietle.net/))
-- 48. Chi Van Dang — Johns Hopkins University ([profile](https://bdp.jhu.edu/bd-professors/chi-van-dang/))
+- ~~48. Chi Van Dang — Johns Hopkins University~~ ([profile](https://bdp.jhu.edu/bd-professors/chi-van-dang/)) ([portrait source](https://commons.wikimedia.org/wiki/Special:FilePath/Chi_Van_Dang.jpg))
 - 49. Trang T.H. Nguyen — Arkansas State University ([profile](https://www.astate.edu/college/sciences-and-mathematics/departments/biology/faculty-staff/))
 - 50. Victoria Tran — Reed College ([profile](https://www.reed.edu/sociology/faculty/))
 - 51. Mariam B. Lam — University of California, Riverside ([profile](https://profiles.ucr.edu/mariam.lam))
