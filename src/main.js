@@ -38,6 +38,15 @@ function pickRandomUnique(values, count) {
   return result;
 }
 
+function shuffle(values) {
+  const result = [...values];
+  for (let index = result.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(Math.random() * (index + 1));
+    [result[index], result[swapIndex]] = [result[swapIndex], result[index]];
+  }
+  return result;
+}
+
 function debounce(fn, delayMs) {
   let timer;
   return (...args) => {
@@ -364,7 +373,9 @@ async function init() {
 
   let roster;
   try {
-    roster = await loadRoster();
+    // Keep one randomized order for the session so the default directory view is less
+    // predictable, without reshuffling every time a filter or search is changed.
+    roster = shuffle(await loadRoster());
   } catch {
     document.getElementById('roster').innerHTML =
       '<p class="empty-state">Could not load the roster. Please refresh the page or try again later.</p>';
@@ -684,7 +695,11 @@ async function init() {
       field: fieldSelect.value,
       track: trackSelect.value,
     });
-    renderRoster(sortRoster(filtered), {
+    const isDefaultView = !searchInput.value.trim() &&
+      locationSelect.value === 'World' &&
+      fieldSelect.value === 'all' &&
+      trackSelect.value === 'all';
+    renderRoster(isDefaultView ? filtered : sortRoster(filtered), {
       field: fieldSelect.value,
       location: locationSelect.value,
     });
