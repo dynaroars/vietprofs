@@ -12,7 +12,7 @@
  *   - NEVER overwrites existing data (only fills gaps), unless --force is used
  *
  * Usage:
- *   node scripts/apply-education.mjs [--dry-run] [--force]
+ *   node scripts/apply-education.mjs [--dry-run] [--force] [--names-file FILE]
  */
 
 import { readFileSync, writeFileSync } from 'node:fs';
@@ -25,8 +25,10 @@ const DATA_FILE    = resolve(ROOT, 'public/data.json');
 const RESULTS_FILE = resolve(ROOT, 'scripts/education-results.json');
 
 const args    = process.argv.slice(2);
+const getArg = (flag) => { const i = args.indexOf(flag); return i === -1 ? null : args[i + 1]; };
 const DRY_RUN = args.includes('--dry-run');
 const FORCE   = args.includes('--force');
+const NAMES_FILE = getArg('--names-file');
 
 const YEAR_MIN = 1950;
 const YEAR_MAX = new Date().getFullYear();
@@ -217,11 +219,15 @@ function isValidMajor(s) {
 // ─── Main ─────────────────────────────────────────────────────────────────────
 const roster  = JSON.parse(readFileSync(DATA_FILE, 'utf8'));
 const results = JSON.parse(readFileSync(RESULTS_FILE, 'utf8'));
+const selectedNames = NAMES_FILE
+  ? new Set(JSON.parse(readFileSync(resolve(ROOT, NAMES_FILE), 'utf8')))
+  : null;
 
 let updated = 0;
 let changes = [];
 
 for (const prof of roster) {
+  if (selectedNames && !selectedNames.has(prof.name)) continue;
   // Remove only values that the same quality filter identifies as page noise.
   const removedMsNoise = prof.msInstitution && JUNK_RE.test(prof.msInstitution);
   if (removedMsNoise) {

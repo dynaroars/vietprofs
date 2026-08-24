@@ -193,6 +193,7 @@ test('buildFunFacts includes a Vietnamese-American population-hub comparison and
 test('buildAwardsFunFacts reports major award categories and NSF CAREER holders', () => {
   const facts = buildAwardsFunFacts(roster);
   assert.ok(facts.some((f) => /NSF CAREER Award holders: \d+ across the database/.test(f)));
+  assert.ok(facts.some((f) => /PECASE recipients: \d+ across the database/.test(f)));
   assert.ok(facts.some((f) => /MacArthur Fellows: \d+; Fields Medalists: \d+/.test(f)));
   assert.ok(facts.some((f) => /Marquee honors represented: .*Fields Medal \(\d+\).*MacArthur Fellow \(\d+\)/.test(f)));
   assert.ok(facts.some((f) => /national-academy/.test(f)));

@@ -7,7 +7,7 @@
  *   - undergradInstitution, undergradYear, undergradMajor
  *
  * Usage:
- *   node scripts/fetch-education.mjs [--offset N] [--limit N] [--missing-only] [--force-refetch]
+ *   node scripts/fetch-education.mjs [--offset N] [--limit N] [--missing-only] [--names-file FILE] [--force-refetch]
  *
  * Results are saved incrementally to scripts/education-results.json.
  * Run apply-education.mjs afterwards to merge into data.json.
@@ -29,6 +29,7 @@ const OFFSET    = parseInt(getArg('--offset') ?? '0',     10);
 const LIMIT     = parseInt(getArg('--limit')  ?? '99999', 10);
 const MISSING_ONLY   = args.includes('--missing-only');
 const FORCE_REFETCH  = args.includes('--force-refetch');
+const NAMES_FILE     = getArg('--names-file');
 
 // ─── Fetch ────────────────────────────────────────────────────────────────────
 async function fetchPage(url) {
@@ -318,10 +319,14 @@ if (existsSync(RESULTS_FILE)) {
 }
 
 let entries = roster;
-if (MISSING_ONLY) entries = roster.filter(p => !p.phdInstitution || !p.msInstitution || !p.undergradInstitution);
+if (MISSING_ONLY) entries = roster.filter(p => !(p.phdInstitution || p.mdInstitution) || !p.msInstitution || !p.undergradInstitution);
+if (NAMES_FILE) {
+  const selectedNames = new Set(JSON.parse(readFileSync(resolve(ROOT, NAMES_FILE), 'utf8')));
+  entries = roster.filter(p => selectedNames.has(p.name));
+}
 entries = entries.slice(OFFSET, OFFSET + LIMIT);
 
-console.log(`Processing ${entries.length} entries  (offset=${OFFSET} limit=${LIMIT} missing-only=${MISSING_ONLY})`);
+console.log(`Processing ${entries.length} entries  (offset=${OFFSET} limit=${LIMIT} missing-only=${MISSING_ONLY} names-file=${NAMES_FILE ?? 'none'})`);
 
 const results = { ...existing };
 let found = 0, errors = 0;

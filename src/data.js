@@ -98,6 +98,8 @@ const VIETNAMESE_NAME_OVERRIDES = new Map([
   ['Son Thanh Dam', 'Đàm Thanh Sơn'],
   ['Thai Luan Vu', 'Vũ Thái Luân'],
   ['Tien Zung Nguyen', 'Nguyễn Tiến Zung'],
+  ['Thuan Nguyen', 'Nguyễn Thuần'],
+  ['XuanLong Nguyen', 'Nguyễn Xuân Long'],
   // The CV expands the middle initial as Huy; the display order follows Vietnamese naming.
   ['ThanhVu H. Nguyen', 'Nguyễn Huy Thanh Vũ'],
 ]);
@@ -966,6 +968,8 @@ export function buildAwardsFunFacts(roster) {
   const facts = [];
   const nsfHolders = honorHolderCount(allRoster, 'NSF CAREER Award');
   const usNsfHolders = honorHolderCount(usRoster, 'NSF CAREER Award');
+  const pecaseHolders = honorHolderCount(allRoster, 'PECASE');
+  const usPecaseHolders = honorHolderCount(usRoster, 'PECASE');
   const signatureHonors = [
     ['MacArthur Fellows', honorHolderCount(allRoster, 'MacArthur Fellow')],
     ['Fields Medalists', honorHolderCount(allRoster, 'Fields Medal')],
@@ -975,6 +979,9 @@ export function buildAwardsFunFacts(roster) {
   if (honored > 0) facts.push(`${honored} of ${allRoster.length} professors have at least one recorded major honor or award.`);
   if (nsfHolders > 0) {
     facts.push(`NSF CAREER Award holders: ${nsfHolders} across the database (${usNsfHolders} currently in the U.S. roster).`);
+  }
+  if (pecaseHolders > 0) {
+    facts.push(`PECASE recipients: ${pecaseHolders} across the database (${usPecaseHolders} currently in the U.S. roster).`);
   }
   if (signatureHonors.length) {
     facts.push(`${signatureHonors.map(([name, count]) => `${name}: ${count}`).join('; ')}.`);
