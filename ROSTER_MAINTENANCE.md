@@ -43,6 +43,35 @@ node scripts/faculty-discovery-queries.mjs \
 
 Every result still requires the inclusion and identity checks above.
 
+### Reviewing user-supplied links
+
+When a user supplies a URL or link, inspect the linked content for roster-relevant information,
+which may include a person's name, current appointment, portrait, education, graduation details,
+or honors and awards. Treat the link as a source or lead, not as automatic authorization to add
+the information.
+
+First, search the canonical roster for the person. If they already have an entry, compare the
+linked information with the entry and update only information that is current, sufficiently
+supported, and permitted by the applicable data-entry, honors, and portrait rules. If they do not
+have an entry, verify their identity and eligibility against the inclusion standard before adding
+them. Do not add a person, portrait, degree, graduation detail, award, or other field merely
+because it appears at the supplied URL; each addition must independently satisfy the relevant
+requirements in this guide.
+
+### Reviewing user-supplied names
+
+When a user supplies a person's name without a link, search the web and relevant official
+university sources for that person and for roster-relevant details. Use the research workflow
+above to resolve identity and locate evidence; do not treat a name, including a Vietnamese-
+sounding name, as sufficient proof of identity or eligibility.
+
+Search the canonical roster for the person before making a change. For an existing entry, use
+reliable sources to identify eligible corrections or additions, such as a current appointment,
+profile URL, education, honors, or a permissible portrait. For a person not already in the
+roster, independently verify every part of the inclusion standard before adding them. Apply the
+same data-entry, honors, portrait, and field-mapping rules as when reviewing a user-supplied
+link.
+
 ## Data-entry rules
 
 `public/data.json` is the canonical roster. Each entry should use the following conventions:
@@ -106,7 +135,11 @@ The canonical field list is:
 16. Arts & Design
 17. Others
 
-Map a department that fits none of the named buckets to `Others`. If a department name is structurally ambiguous, use an exact `department|university` entry in `FIELD_OVERRIDES` in `src/data.js` rather than broadening a regex.
+If a person's department or academic field does not fit any named bucket, do not automatically
+map it to `Others`: ask the user whether to add a new field or place it in `Others`. The existing
+field list may not be exhaustive. If a department name is structurally ambiguous, use an exact
+`department|university` entry in `FIELD_OVERRIDES` in `src/data.js` rather than broadening a
+regex.
 
 ## Portraits and third-party content
 
