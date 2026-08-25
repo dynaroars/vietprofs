@@ -4397,14 +4397,15 @@
   },
   {
     "name": "Minh Nguyen - Florida Atlantic University",
-    "profileUrl": "https://sites.google.com/view/minhn/",
+    "profileUrl": "https://business.fau.edu/faculty-research/faculty-profiles/profile/minhnguyen.php",
+    "websiteUrl": "https://sites.google.com/view/minhn/",
+    "scholarUrl": "https://scholar.google.com/citations?hl=en&user=m2cHp8AAAAAJ",
     "university": "Florida Atlantic University",
     "city": "Boca Raton",
     "state": "Florida",
     "researchAreas": [
-      "Causal Machine Learning",
-      "Artificial Intelligence",
-      "Business Analytics",
+      "Causal AI/ML",
+      "AI in Business",
       "Science of Science"
     ],
     "secondaryAppointment": false,
@@ -4413,9 +4414,29 @@
     "rank": "Assistant Professor",
     "phdYear": 2023,
     "phdInstitution": "University of Hawaiʻi at Mānoa",
+    "phdMajor": "Economics",
     "country": "United States",
     "portrait": "portraits/164-minh-nguyen-florida-atlantic-university-florida-atlantic-university.webp",
-    "portraitSource": "https://business.fau.edu/images/faculty-profiles/Nguyen.Minh.jpg"
+    "portraitSource": "https://business.fau.edu/images/faculty-profiles/Nguyen.Minh.jpg",
+    "msInstitution": "University of Hawaiʻi at Mānoa",
+    "msYear": 2023,
+    "undergradInstitution": "Vietnam National University, Ho Chi Minh City",
+    "undergradMajor": "Mathematics",
+    "undergradYear": 2017,
+    "otherDegrees": [
+      {
+        "degree": "MA in Business Economics",
+        "institution": "University of Toulouse 1 Capitole",
+        "year": 2014,
+        "source": "https://business.fau.edu/faculty-research/faculty-profiles/profile/minhnguyen.php"
+      },
+      {
+        "degree": "BA in Economics",
+        "institution": "Vietnam National University, Ho Chi Minh City",
+        "year": 2011,
+        "source": "https://business.fau.edu/faculty-research/faculty-profiles/profile/minhnguyen.php"
+      }
+    ]
   },
   {
     "name": "Thi Tran",
@@ -18389,5 +18410,100 @@
     "portraitSource": "https://thanhlc.net/images/profile.webp",
     "msInstitution": "University of Melbourne",
     "msYear": 2026
+  },
+  {
+    "name": "Trang Bui",
+    "profileUrl": "https://grad.usask.ca/programs/statistics.php",
+    "websiteUrl": "https://tqtbui.github.io/",
+    "university": "University of Saskatchewan",
+    "city": "Saskatoon",
+    "state": "Saskatchewan",
+    "country": "Canada",
+    "department": "Department of Mathematics and Statistics",
+    "rank": "Assistant Professor",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Trustworthy AI",
+      "Statistical Geometry",
+      "Experimental Design",
+      "Causal Inference",
+      "Social Networks"
+    ],
+    "secondaryAppointment": false,
+    "phdYear": 2024,
+    "phdInstitution": "University of Waterloo",
+    "phdMajor": "Statistics",
+    "msInstitution": "University of Waterloo",
+    "msYear": 2018,
+    "undergradInstitution": "Korea Advanced Institute of Science and Technology",
+    "undergradMajor": "Mathematics and Business",
+    "undergradYear": 2017,
+    "portrait": "portraits/trang-bui-university-of-saskatchewan.webp",
+    "portraitSource": "https://tqtbui.github.io/author/tqtbui/avatar_hu89b7106660c987da498132efa2bd6fc5_2910932_250x250_fill_q90_lanczos_center.jpg"
+  },
+  {
+    "name": "Tho Pham",
+    "profileUrl": "https://www.york.ac.uk/economics/people/tho-pham/",
+    "websiteUrl": "https://www.thopham.com/",
+    "university": "University of York",
+    "city": "York",
+    "country": "United Kingdom",
+    "department": "Department of Economics and Related Studies",
+    "rank": "Senior Lecturer",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Applied Economics",
+      "Data Science",
+      "Financial Economics",
+      "Gender Economics"
+    ],
+    "secondaryAppointment": false,
+    "phdYear": 2018,
+    "phdInstitution": "Swansea University",
+    "phdMajor": "Finance",
+    "msInstitution": "Coventry University",
+    "msYear": 2014,
+    "undergradInstitution": "Diplomatic Academy of Vietnam",
+    "undergradMajor": "International Economics",
+    "undergradYear": 2013,
+    "portrait": "portraits/tho-pham-university-of-york.webp",
+    "portraitSource": "https://static.wixstatic.com/media/0b6727_3b2c7845655b48fb87eb85f5a86f5407~mv2.jpg/v1/fill/w_460,h_449,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/18-03-05-12-18-29-417_deco_edited.jpg"
+  },
+  {
+    "name": "Long Tran-Thanh",
+    "profileUrl": "https://warwick.ac.uk/fac/sci/dcs/people/long_tran-thanh/",
+    "websiteUrl": "https://human-agentlearning.github.io/",
+    "scholarUrl": "https://scholar.google.co.uk/citations?hl=en&user=YBQai3gAAAAJ",
+    "university": "University of Warwick",
+    "city": "Coventry",
+    "country": "United Kingdom",
+    "department": "Department of Computer Science",
+    "rank": "Professor",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Artificial Intelligence",
+      "Online Learning",
+      "Multi-Agent Systems",
+      "Game Theory",
+      "Human-Agent AI"
+    ],
+    "secondaryAppointment": false,
+    "phdYear": 2011,
+    "phdInstitution": "University of Southampton",
+    "phdMajor": "Artificial Intelligence",
+    "undergradInstitution": "Budapest University of Technology and Economics",
+    "undergradMajor": "Computer Engineering",
+    "undergradYear": 2007,
+    "honors": [
+      {
+        "name": "Kan Tong Po Visiting Fellowship",
+        "year": 2017,
+        "category": "career_award",
+        "organization": "Royal Society",
+        "source": "https://warwick.ac.uk/fac/sci/dcs/people/long_tran-thanh/"
+      }
+    ],
+    "portrait": "portraits/long-tran-thanh-university-of-warwick.webp",
+    "portraitSource": "https://human-agentlearning.github.io/img/profile_2.jpg"
   }
 ]
