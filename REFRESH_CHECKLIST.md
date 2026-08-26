@@ -28,12 +28,82 @@ ROSTER_MAINTENANCE.md §"Periodic full-roster refresh", committed, and pushed.
       Japan, Hong Kong, Australia, NZ, Ireland, Netherlands, Canada, France, Norway, UK, Germany).
       1 removal (Quan Nguyen, UQ — see notes). Array order otherwise unchanged; next batch
       continues right after "Ngoc Thang Vu".
-- [ ] Batch 16: continue in `public/data.json` file order starting right after "Ngoc Thang Vu"
-      (University of Stuttgart)
-- [ ] Batch 17
+- [x] Batch 16: verified "Van Bang Le" through "An Nguyen" (39 people, mostly UK + Canada
+      + a few Australia/Poland/Germany/Singapore) in the original file order for this batch.
+      2 removals (Quynh Pham, An Nguyen — see notes; "An Nguyen" no longer exists in the array,
+      so it can't be used as the next-batch anchor). Also did a systemic pass normalizing
+      rank-vocabulary violations (UK titles like "Senior Lecturer in Finance", "Professor of X",
+      "Reader" etc. mapped to the accepted Assistant/Associate/Professor/Teaching/Emeritus
+      vocabulary — this pattern is widespread across the whole roster, not just this batch; a
+      dedicated normalization pass across all ~766 entries would be worth doing separately from
+      the per-batch refresh). Array order otherwise unchanged; next batch continues right after
+      "Mai Nguyen - Manchester Metropolitan University" (the last remaining person from this
+      batch, in file order).
+- [ ] Batch 17: continue in `public/data.json` file order starting right after
+      "Mai Nguyen - Manchester Metropolitan University" (next person: Chi Hieu Le, University
+      of Greenwich)
 - [ ] Batch 18
 - [ ] Batch 19
 - [ ] Batch 20
+
+## Batch 16 notes / leads
+
+- Quynh Pham (was University of Toronto, IHPME) — REMOVED. Her own IHPME profile states her
+  title as "Assistant Professor (Status-Only)" — UofT's status-only appointments are unpaid,
+  cross-appointment titles for people whose primary paid employer is elsewhere (here, University
+  Health Network, where she's Director/PI of the Centre for Digital Therapeutics). This is
+  functionally a courtesy/affiliate appointment, excluded per the inclusion standard, not a real
+  primary tenure-line position at the university.
+- An Nguyen (was Bournemouth University) — REMOVED. His own staff page states he was full-time
+  Professor of Journalism & Public Communication only "up until August 2025," and has since
+  transitioned to "Visiting Professor" while running his own consultancy (Media Scholarship and
+  Solutions for Development). Visiting appointments are explicitly excluded per the inclusion
+  standard.
+- Van Bang Le (University of Rostock, recorded as track: Emeritus / rank: Professor) — his own
+  personal page shows zero indication of emeritus/retired status (no "em." honorific, no
+  retirement language) and presents him as a fully active professor; couldn't reach an
+  authoritative Rostock CS-institute staff directory to resolve this either way. Left entirely
+  unchanged (track, rank, and profileUrl) pending a clearer source — this may need reclassifying
+  to Tenure-line rather than Emeritus, or may simply be a stale personal page.
+- Nga Pham (Monash Centre for Financial Studies) — her own Monash profile states her title as
+  "Associate Professor (Research)." Monash does have a distinct "Research" academic career
+  stream (continuing, but non-teaching) alongside the standard Teaching & Research stream; unlike
+  the batch-15 UQ "Senior Research Fellow" removal, this is a named Associate Professor-level
+  continuing appointment, not a junior/fixed-term research fellowship, so it's genuinely
+  ambiguous whether it should count as "research-track" under the inclusion standard. Left
+  unchanged pending a clearer read on Monash's academic-stream policy.
+- Cuc Nguyen (University of Melbourne) — findanexpert.unimelb.edu.au bot-blocks all fetch
+  attempts (Akamai "Pardon our interruption"), same pattern as batch 15's Tuan Ngo/Xuan-Bach Le.
+  Left unchanged; rank/appointment not independently re-confirmed this pass.
+- Tien D. Bui (Concordia) and Tien Tuan Anh Dinh (SUTD) — both profileUrls now 404
+  (Concordia's faculty-members.html page was restructured; SUTD's istd.sutd.edu.sg subdomain no
+  longer resolves in DNS at all, and www.sutd.edu.sg/istd/people/faculty/ doesn't list him among
+  the visible entries). No working replacement URL found this pass. Left unchanged.
+- Nhung Tran (University of Toronto, History) — the department page is behind a Cloudflare
+  challenge that returns no usable content via WebFetch or curl-with-UA. Left unchanged.
+- Minh-Hiên Lê, Christine Tran, Jennifer Nguyen (all University of Toronto / UBC Teaching-track)
+  — all three had dead profileUrls (404 or DNS failure); no working replacements found this pass.
+  Left unchanged aside from the rank-vocabulary normalization to "Teaching".
+- Hung Nguyen (UTS, Emeritus) — profiles.uts.edu.au is a JS SPA that returns no server-rendered
+  content (same pattern as several UTS entries in batch 15); left profileUrl unchanged, emeritus
+  status not independently re-confirmed this pass (rank vocabulary normalized to "Emeritus" on
+  the strength of the pre-existing "Emeritus Professor" label, not new evidence).
+- Dong Nguyen (Durham) and Hoa Do (Leicester) — both pages return 403 to WebFetch specifically
+  but 200 to curl-with-UA; treated as live and kept, but content wasn't actually readable either
+  way, so rank/title weren't independently re-confirmed this pass beyond the vocabulary
+  normalization.
+- Mai Nguyen (Manchester Metropolitan University) — profileUrl was already just the university's
+  generic homepage (https://www.mmu.ac.uk/), not a person-specific page; a guessed replacement
+  URL 404'd and no working one was found this pass. Left unchanged aside from rank normalization.
+- Anh Nguyen (University of Liverpool) — promoted from "Senior Lecturer in Artificial
+  Intelligence" to "Reader in Artificial Intelligence and Robotics" per his own official page.
+  Mapped to rank "Associate Professor" (no "Reader" tier exists in the accepted vocabulary;
+  Associate Professor is the working convention this refresh has used for UK Reader/Senior
+  Lecturer titles — see batch 14's Xuan-Vinh Doan note for the earlier version of this same
+  open question, which still doesn't have a settled resolution).
+- Minh-Son Pham (Imperial College London) — promoted from Senior Lecturer-equivalent to
+  Associate Professor ("Reader level" per his own bio); profileUrl updated to the new
+  profiles.imperial.ac.uk redirect target.
 
 ## Notes / leads found while working (not yet added)
 
