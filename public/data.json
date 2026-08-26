@@ -12822,7 +12822,7 @@
   },
   {
     "name": "Viet Ha Hoang",
-    "profileUrl": "https://francoisgaybalmaz.github.io/",
+    "profileUrl": "https://dr.ntu.edu.sg/entities/person/Viet-Ha-Hoang",
     "scholarUrl": "https://scholar.google.com/citations?user=Jc8m3S0AAAAJ",
     "university": "Nanyang Technological University",
     "city": "Singapore",
@@ -12840,7 +12840,10 @@
     "phdYear": 2000,
     "phdInstitution": "University of Cambridge",
     "portrait": "portraits/512-viet-ha-hoang-nanyang-technological-university.webp",
-    "portraitSource": "https://www.ntu.edu.sg/spms/about-us/mathematics/people/faculty"
+    "portraitSource": "https://www.ntu.edu.sg/spms/about-us/mathematics/people/faculty",
+    "undergradInstitution": "University of Wollongong",
+    "undergradYear": 1996,
+    "undergradMajor": "Mathematics"
   },
   {
     "name": "Tien Mai",
@@ -12898,7 +12901,7 @@
   },
   {
     "name": "San H. Thang",
-    "profileUrl": "https://research.monash.edu/en/persons/san-thang",
+    "profileUrl": "https://research.monash.edu/en/persons/san-hoa-thang",
     "scholarUrl": "https://scholar.google.com/citations?user=f1zI6aUAAAAJ",
     "university": "Monash University",
     "city": "Melbourne",
@@ -12917,7 +12920,16 @@
     "phdYear": 1987,
     "phdInstitution": "Griffith University",
     "portrait": "portraits/515-san-h-thang-monash-university.webp",
-    "portraitSource": "https://lens.monash.edu/professor-san-thang-from-boat-to-raft/"
+    "portraitSource": "https://lens.monash.edu/professor-san-thang-from-boat-to-raft/",
+    "honors": [
+      {
+        "name": "Fellow, Australian Academy of Science",
+        "year": null,
+        "category": "academy",
+        "organization": "Australian Academy of Science",
+        "source": "https://www.science.org.au/profile/san-thang"
+      }
+    ]
   },
   {
     "name": "Dinh Phung",
@@ -12944,7 +12956,7 @@
   },
   {
     "name": "Nam-Trung Nguyen",
-    "profileUrl": "https://experts.griffith.edu.au/7187-namtrung-nguyen",
+    "profileUrl": "https://experts.griffith.edu.au/18898-namtrung-nguyen",
     "scholarUrl": "https://scholar.google.com/citations?user=q0Z0Yg4AAAAJ",
     "university": "Griffith University",
     "city": "Brisbane",
@@ -13000,10 +13012,17 @@
     "secondaryAppointment": false,
     "track": "Tenure-line",
     "department": "School of Electrical, Mechanical and Biomedical Engineering",
-    "rank": "Distinguished Professor",
+    "rank": "Professor",
     "phdYear": 1997,
     "phdInstitution": "University of New South Wales",
     "honors": [
+      {
+        "name": "Distinguished Professor",
+        "year": null,
+        "category": "distinguished_professorship",
+        "organization": "University of Technology Sydney",
+        "source": "https://profiles.uts.edu.au/TuanVan.Nguyen"
+      },
       {
         "name": "NHMRC Leadership Fellow",
         "year": null,
@@ -13038,7 +13057,7 @@
   },
   {
     "name": "Nguyen Tran",
-    "profileUrl": "https://www.sydney.edu.au/engineering/about/our-people/academic-staff/nguyen-tran.html",
+    "profileUrl": "https://profiles.sydney.edu.au/nguyen.tran",
     "scholarUrl": "https://scholar.google.com/citations?user=M_t2W0wAAAAJ",
     "university": "The University of Sydney",
     "city": "Sydney",
@@ -13079,11 +13098,20 @@
     "phdYear": 2016,
     "phdInstitution": "Griffith University",
     "portrait": "portraits/520-hoang-phuong-phan-university-of-new-south-wales.webp",
-    "portraitSource": "https://api.research.unsw.edu.au/sites/default/files/images/profile/HP%20Phan_GCISymp.jpg"
+    "portraitSource": "https://api.research.unsw.edu.au/sites/default/files/images/profile/HP%20Phan_GCISymp.jpg",
+    "honors": [
+      {
+        "name": "ARC Future Fellow",
+        "year": 2024,
+        "category": "career_award",
+        "organization": "Australian Research Council",
+        "source": "https://www.unsw.edu.au/staff/hoang-phuong-phan"
+      }
+    ]
   },
   {
     "name": "Viet Nguyen",
-    "profileUrl": "https://pursuit.unimelb.edu.au/individuals/viet-nguyen",
+    "profileUrl": "https://findanexpert.unimelb.edu.au/profile/361260-viet-nguyen",
     "scholarUrl": "https://scholar.google.com/citations?user=u7c_6Y8AAAAJ",
     "university": "University of Melbourne",
     "city": "Melbourne",
@@ -13123,7 +13151,6 @@
     "rank": "Associate Professor",
     "phdYear": 2013,
     "phdInstitution": "University of Queensland",
-    "phdMajor": "Sed staffing system for NSW",
     "honors": [
       {
         "name": "Endeavour Fellowship",
@@ -13285,16 +13312,16 @@
   },
   {
     "name": "Duong Bui",
-    "profileUrl": "https://uwaterloo.ca/chemistry/our-people/professors/duong-bui",
+    "profileUrl": "https://uwaterloo.ca/chemistry/profile/d6bui",
     "university": "University of Waterloo",
     "city": "Waterloo",
     "state": "Ontario",
     "country": "Canada",
     "researchAreas": [
-      "Biochemistry",
-      "Structural Biology",
-      "Membrane Proteins",
-      "Cryo-EM"
+      "Glycobiology",
+      "Bioanalytical Chemistry",
+      "Native Mass Spectrometry",
+      "Structural Biology"
     ],
     "secondaryAppointment": false,
     "track": "Tenure-line",
@@ -13307,7 +13334,7 @@
   },
   {
     "name": "Chinh T. Hoang",
-    "profileUrl": "https://www.wlu.ca/",
+    "profileUrl": "https://www.wlu.ca/academics/faculties/faculty-of-science/faculty-profiles/chinh-t-hoang/index.html",
     "scholarUrl": "https://scholar.google.com/citations?user=W4vG070AAAAJ",
     "university": "Wilfrid Laurier University",
     "city": "Waterloo",
@@ -13468,6 +13495,13 @@
     "phdInstitution": "Blekinge Institute of Technology",
     "honors": [
       {
+        "name": "Canada Excellence Research Chair in Next Generation Communications Technologies",
+        "year": null,
+        "category": "distinguished_professorship",
+        "organization": "Memorial University of Newfoundland",
+        "source": "https://www.mun.ca/engineering/about/our-people/trung-q-duong/"
+      },
+      {
         "name": "Royal Academy of Engineering Research Fellowship",
         "year": 2015,
         "category": "career_award",
@@ -13522,7 +13556,7 @@
   },
   {
     "name": "Xuan-Vinh Doan",
-    "profileUrl": "https://www.wbs.ac.uk/about/person/xuan-vinh-doan/",
+    "profileUrl": "https://www.wbs.ac.uk/about/person/xuan-doan",
     "scholarUrl": "https://scholar.google.com/citations?user=6UvK118AAAAJ",
     "university": "University of Warwick",
     "city": "Coventry",
@@ -13544,7 +13578,7 @@
   },
   {
     "name": "Phung Dao",
-    "profileUrl": "https://www.educ.cam.ac.uk/people/staff/dao/",
+    "profileUrl": "https://faculty.educ.cam.ac.uk/people/staff/dao/",
     "scholarUrl": "https://scholar.google.com/citations?user=E6M_u4UAAAAJ",
     "university": "University of Cambridge",
     "city": "Cambridge",
@@ -13561,7 +13595,6 @@
     "rank": "Associate Professor",
     "phdYear": 2017,
     "phdInstitution": "Concordia University",
-    "phdMajor": "Canada (2017)",
     "honors": [
       {
         "name": "British Council English Language Teaching Research Award (ELTRA)",
@@ -13574,7 +13607,7 @@
   },
   {
     "name": "Van Tan Le",
-    "profileUrl": "https://www.medsci.ox.ac.uk/team/tan-le-van",
+    "profileUrl": "https://www.tropicalmedicine.ox.ac.uk/team/le-van-tan",
     "scholarUrl": "https://scholar.google.com/citations?user=E6dK0yUAAAAJ",
     "university": "University of Oxford",
     "city": "Oxford",
@@ -13596,19 +13629,19 @@
   },
   {
     "name": "Vuong Phan",
-    "profileUrl": "https://www.southampton.ac.uk/people/5x8h4f/associate-professor-vuong-phan",
+    "profileUrl": "https://www.southampton.ac.uk/people/5y2ds9/doctor-vuong-phan",
     "university": "University of Southampton",
     "city": "Southampton",
     "country": "United Kingdom",
     "researchAreas": [
-      "Computational Aerodynamics",
-      "Aeroacoustics",
-      "Turbulence Modeling",
-      "Aeronautical Engineering"
+      "Operational Research",
+      "Continuous Optimization",
+      "Dynamical Systems",
+      "Optimal Control"
     ],
     "secondaryAppointment": false,
     "track": "Tenure-line",
-    "department": "Department of Aeronautics and Astronautics",
+    "department": "School of Mathematical Sciences",
     "rank": "Associate Professor",
     "phdYear": 2013,
     "phdInstitution": "University of Southampton",
@@ -13681,7 +13714,7 @@
   },
   {
     "name": "Viet Hung Nguyen",
-    "profileUrl": "https://pages.lip6.fr/Viet-Hung.Nguyen/",
+    "profileUrl": "https://www.lip6.fr/actualite/personnes-fiche.php?ident=D1785",
     "university": "Sorbonne Université",
     "city": "Paris",
     "country": "France",
@@ -13700,7 +13733,7 @@
   },
   {
     "name": "Kim Nguyen",
-    "profileUrl": "https://www.lmf.cnrs.fr/Members/knguyen/",
+    "profileUrl": "https://usr.lmf.cnrs.fr/~kn/index_en.html",
     "university": "Université Paris-Saclay",
     "city": "Orsay",
     "country": "France",
@@ -13857,7 +13890,7 @@
   },
   {
     "name": "Le Minh Nguyen",
-    "profileUrl": "https://www.jaist.ac.jp/english/laboratory/leminh.html",
+    "profileUrl": "https://www.jaist.ac.jp/is/labs/nguyen-lab/home/",
     "scholarUrl": "https://scholar.google.com/citations?user=nJ_L72cAAAAJ",
     "university": "Japan Advanced Institute of Science and Technology",
     "city": "Nomi",
@@ -13875,7 +13908,11 @@
     "phdYear": 2004,
     "phdInstitution": "Japan Advanced Institute of Science and Technology",
     "portrait": "portraits/182-le-minh-nguyen-japan-advanced-institute-of-science-and-technology.webp",
-    "portraitSource": "https://scholar.googleusercontent.com/citations?view_op=view_photo&user=vM9772wAAAAJ&citpid=2"
+    "portraitSource": "https://scholar.googleusercontent.com/citations?view_op=view_photo&user=vM9772wAAAAJ&citpid=2",
+    "undergradInstitution": "Hanoi University of Science",
+    "undergradYear": 1998,
+    "msInstitution": "Vietnam National University, Hanoi",
+    "msYear": 2001
   },
   {
     "name": "Tu Bao Ho",

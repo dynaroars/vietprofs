@@ -21,9 +21,12 @@ ROSTER_MAINTENANCE.md §"Periodic full-roster refresh", committed, and pushed.
       this batch (Quynh Camthi Nguyen, Vu N. Duong — see notes), so raw index numbers no longer
       line up with earlier batches. From here on, track progress by **last verified person's
       name** instead of index, and pick the next ~39 people in file order after that name.
-- [ ] Batch 14: continue in `public/data.json` file order starting right after "Hung Dinh Nguyen"
-      (Nanyang Technological University)
-- [ ] Batch 15
+- [x] Batch 14: verified "Viet Ha Hoang" through "Le Minh Nguyen" (38 people, file order right
+      after "Hung Dinh Nguyen"). No removals; array order unchanged. See notes for a misidentified
+      department (Vuong Phan) and other fixes.
+- [ ] Batch 15: continue in `public/data.json` file order starting right after "Le Minh Nguyen"
+      (Japan Advanced Institute of Science and Technology)
+- [ ] Batch 16
 - [ ] Batch 16
 - [ ] Batch 17
 - [ ] Batch 18
@@ -32,6 +35,44 @@ ROSTER_MAINTENANCE.md §"Periodic full-roster refresh", committed, and pushed.
 
 ## Notes / leads found while working (not yet added)
 
+- Batch 14: Phu Nguyen-Van (recorded as "Professor", Université Paris Nanterre / EconomiX) — his
+  own EconomiX profile page states his title as "Directeur de Recherche" (Research Director) at
+  CNRS, not a university professorship. CNRS research-director is a research-track position
+  (excluded per the inclusion standard) even though he's affiliated with a university lab; France's
+  CNRS/university joint-appointment system makes this genuinely ambiguous rather than a clear-cut
+  case. Left unchanged (existing entry) pending a source that clarifies whether he also holds a
+  university teaching-and-research professorship, or whether this entry should be reclassified or
+  removed.
+- Batch 14: Tien Zung Nguyen (Université Toulouse III, Institut de Mathématiques de Toulouse) —
+  no working profileUrl found. His old personal-site domain (zetamu.com) has expired and is now a
+  domain-reseller parking page; the Institut de Mathématiques de Toulouse's own site returned
+  404/403 for every path tried. Search independently confirms he's still a full Professor there
+  (ResearchGate, mathnet.ru, a validated univ-toulouse.fr email). profileUrl left as the old (now
+  404) `~nzung/` page rather than guess at a replacement — needs a direct visit to
+  math.univ-toulouse.fr's current staff directory to find his real page.
+- Batch 14: Xuan-Vinh Doan (University of Warwick) — his current official title per Warwick's own
+  site and Warwick Business School is "Reader," not "Associate Professor" (he moved from
+  Associate Professor to Reader in 2021). Kept the roster's rank at "Associate Professor" since
+  "Reader" isn't in the accepted rank vocabulary and no clear "Reader → which of our 3 ranks"
+  mapping exists elsewhere in the roster; worth deciding a standard UK-title mapping convention.
+- Batch 14: Vuong Phan (University of Southampton) — the pre-existing entry had him in the
+  "Department of Aeronautics and Astronautics" doing aerodynamics/aeroacoustics research; the
+  live page and multiple independent sources (ResearchGate, LinkedIn, module listings) show he's
+  actually in the School of Mathematical Sciences doing Operational Research/optimization — a
+  different field entirely, and the old profileUrl slug (5x8h4f) also didn't match the live one
+  (5y2ds9). Corrected department, researchAreas, and profileUrl this batch; this looks like a
+  clear pre-existing data error (likely a scraper mismatch) rather than a career change.
+- Batch 14: Duong Bui (University of Waterloo, joint Chemistry/Biology) — old profileUrl was
+  dead and old researchAreas ("Membrane Proteins," "Cryo-EM") don't match his live bio (glycan
+  biology, native mass spectrometry); fixed both. He appears to have joined March 2026 per
+  search results, so this may originally have been added from an announcement rather than a live
+  profile.
+- Batch 14: Nguyen Tran / Nguyen H. Tran (University of Sydney), Thi Kim Thanh Nguyen (UCL), Nam-
+  Trung Nguyen (Griffith), Tuan Van Nguyen (UTS), Helen Tran (U Toronto), Vinh Nguyen (Waterloo),
+  and Viet Nguyen (Melbourne) all sit behind bot-blocking (Cloudflare/WAF captcha or JS-only SPA
+  shells) that neither WebFetch nor curl-with-UA could get past; existing/updated profileUrls were
+  kept on the strength of independent WebSearch corroboration rather than a direct fetch. Worth a
+  from-a-different-network re-check on a future pass.
 - Batch 13: Minh Khuong Vu (National University of Singapore, Lee Kuan Yew School of Public
   Policy) — currently recorded as `track: Teaching`. Search results are mixed: some (older) hits
   call him a full-time "Practice Professor" at the main school; one shows him listed under the
