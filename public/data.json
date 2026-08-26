@@ -4394,7 +4394,7 @@
   },
   {
     "name": "Lan Anh N. Ton",
-    "profileUrl": "https://www.neeley.tcu.edu/Ton-Lan-Anh",
+    "profileUrl": "https://neeley.tcu.edu/view/ton-lan-anh",
     "university": "Texas Christian University",
     "city": "Fort Worth",
     "state": "Texas",
@@ -4413,7 +4413,12 @@
     "phdInstitution": "University of Georgia",
     "country": "United States",
     "portrait": "portraits/157-lan-anh-n-ton-texas-christian-university.webp",
-    "portraitSource": "https://www.tcu.edu/directory/images/Ton-Lan-Anh.jpg"
+    "portraitSource": "https://www.tcu.edu/directory/images/Ton-Lan-Anh.jpg",
+    "websiteUrl": "https://www.lananhnton.com/",
+    "msInstitution": "University of Southern California",
+    "msYear": 2018,
+    "undergradInstitution": "Woosong University",
+    "undergradYear": 2016
   },
   {
     "name": "Uyen Tran",
@@ -4440,7 +4445,7 @@
   },
   {
     "name": "Peter Nguyen",
-    "profileUrl": "http://www.fsb.miamioh.edu/--website--",
+    "profileUrl": "https://www.fsb.miamioh.edu/directory/nguyen49",
     "university": "Miami University",
     "city": "Oxford",
     "state": "Ohio",
@@ -4458,7 +4463,10 @@
     "portrait": "portraits/159-peter-nguyen-miami-university.webp",
     "portraitSource": "http://www.fsb.miamioh.edu/fsb/directory/pic/nguyen49.jpg",
     "msInstitution": "Western University",
-    "msYear": 2013
+    "msYear": 2013,
+    "undergradInstitution": "Western University",
+    "undergradYear": 2011,
+    "undergradMajor": "Psychology and Medical Sciences"
   },
   {
     "name": "An Tran",
@@ -4473,10 +4481,12 @@
     "secondaryAppointment": false,
     "track": "Tenure-line",
     "department": "Marketing",
-    "rank": "Professor",
+    "rank": "Associate Professor",
     "country": "United States",
     "portrait": "portraits/160-an-tran-university-of-la-verne.webp",
-    "portraitSource": "https://www.laverne.edu/directory/wp-content/uploads/sites/3/2018/04/An-Tran.jpg"
+    "portraitSource": "https://www.laverne.edu/directory/wp-content/uploads/sites/3/2018/04/An-Tran.jpg",
+    "phdInstitution": "University of Colorado Boulder",
+    "undergradInstitution": "Singapore Management University"
   },
   {
     "name": "Ha Ta",
@@ -4517,7 +4527,7 @@
     "secondaryAppointment": false,
     "track": "Tenure-line",
     "department": "Management and Marketing",
-    "rank": "Professor",
+    "rank": "Associate Professor",
     "phdYear": 2011,
     "phdInstitution": "New Mexico State University",
     "country": "United States",
@@ -4641,13 +4651,22 @@
     "phdYear": 2011,
     "phdInstitution": "University of Massachusetts Amherst",
     "country": "United States",
-    "undergradInstitution": "California State University, East Bay",
+    "undergradInstitution": "University of California, Berkeley",
     "portrait": "portraits/166-phuong-anh-nguyen-saint-mary-s-college-of-california.webp",
-    "portraitSource": "https://scholars.stmarys-ca.edu/files-asset/40349080/anh-nguyen-saint-marys-college.jpg/"
+    "portraitSource": "https://scholars.stmarys-ca.edu/files-asset/40349080/anh-nguyen-saint-marys-college.jpg/",
+    "undergradYear": 1998,
+    "otherDegrees": [
+      {
+        "degree": "MBA",
+        "institution": "California State University, East Bay",
+        "year": 2004,
+        "source": "https://scholars.stmarys-ca.edu/en/persons/phuong-anh-nguyen/"
+      }
+    ]
   },
   {
     "name": "Thanh Nguyen - Purdue University",
-    "profileUrl": "https://web.ics.purdue.edu/~nguye161/",
+    "profileUrl": "https://business.purdue.edu/faculty/home.php?username=nguye161",
     "university": "Purdue University",
     "city": "West Lafayette",
     "state": "Indiana",
@@ -4666,11 +4685,22 @@
     "phdInstitution": "Cornell University",
     "country": "United States",
     "portrait": "portraits/167-thanh-nguyen-purdue-university.webp",
-    "portraitSource": "https://lh3.googleusercontent.com/sitesv/AG8ngQWnUNbCW05w2o4StNvb9kFuAjZ0i4KqtjV6hNT0RrHAyBjSTwP4-1ELC9gF0BE_MhO2dJNTKVF3pkygm3HPXxiTvCxRh2NnxsLNWHI8ykNvf9wiJGuA5hKXJNYDtwa7LHpua5wlK3m3F9RorwWwzXqhpG_58411N9JLTkatUBUa9NgZ6vm4ZXg0fI1dYYNGoCX_FzBZltyg1dSVuhkk30Ci8P6kqK9UFAW28ue9Fwg"
+    "portraitSource": "https://lh3.googleusercontent.com/sitesv/AG8ngQWnUNbCW05w2o4StNvb9kFuAjZ0i4KqtjV6hNT0RrHAyBjSTwP4-1ELC9gF0BE_MhO2dJNTKVF3pkygm3HPXxiTvCxRh2NnxsLNWHI8ykNvf9wiJGuA5hKXJNYDtwa7LHpua5wlK3m3F9RorwWwzXqhpG_58411N9JLTkatUBUa9NgZ6vm4ZXg0fI1dYYNGoCX_FzBZltyg1dSVuhkk30Ci8P6kqK9UFAW28ue9Fwg",
+    "undergradInstitution": "Eötvös Loránd University",
+    "msInstitution": "Cornell University",
+    "honors": [
+      {
+        "name": "Lewis B. Cullman Rising Star Professor",
+        "year": 2025,
+        "category": "distinguished_professorship",
+        "organization": "Purdue University, Mitch Daniels School of Business",
+        "source": "https://business.purdue.edu/faculty/home.php?username=nguye161"
+      }
+    ]
   },
   {
     "name": "Dat-Dao Nguyen",
-    "profileUrl": "https://www.csun.edu/~dn58412/",
+    "profileUrl": "https://catalog.csun.edu/academics/acct/faculty/nguyen-dat-dao/",
     "scholarUrl": "https://scholar.google.com/citations?user=RPwkCNkAAAAJ",
     "university": "California State University, Northridge",
     "city": "Northridge",
@@ -4688,7 +4718,19 @@
     "phdInstitution": "Concordia University",
     "country": "United States",
     "portrait": "portraits/168-dat-dao-nguyen-california-state-university-northridge.webp",
-    "portraitSource": "https://www.csun.edu/~dn58412/DrN.jpg"
+    "portraitSource": "https://www.csun.edu/~dn58412/DrN.jpg",
+    "undergradInstitution": "University of Saigon",
+    "undergradYear": 1973,
+    "msInstitution": "Concordia University",
+    "msYear": 1995,
+    "otherDegrees": [
+      {
+        "degree": "B.Comm.",
+        "institution": "Concordia University",
+        "year": 1992,
+        "source": "https://catalog.csun.edu/academics/acct/faculty/nguyen-dat-dao/"
+      }
+    ]
   },
   {
     "name": "Thien Dong",
@@ -4806,7 +4848,16 @@
     "undergradInstitution": "California State University, Long Beach",
     "undergradYear": 2000,
     "portrait": "portraits/173-hannah-hanh-d-nguyen-university-of-hawai-i-at-manoa.webp",
-    "portraitSource": "https://shidler.hawaii.edu/sites/shidler.hawaii.edu/files/styles/small_480/public/2022/03/5d4_8511-min.jpg?itok=8iMLQ_QF"
+    "portraitSource": "https://shidler.hawaii.edu/sites/shidler.hawaii.edu/files/styles/small_480/public/2022/03/5d4_8511-min.jpg?itok=8iMLQ_QF",
+    "honors": [
+      {
+        "name": "Shidler Visionary Distinguished Professorship #1B",
+        "year": 2023,
+        "category": "distinguished_professorship",
+        "organization": "University of Hawaiʻi at Mānoa, Shidler College of Business",
+        "source": "https://shidler.hawaii.edu/mir/directory/hannah-hanh-d-nguyen"
+      }
+    ]
   },
   {
     "name": "Dan Hieu Vo",
@@ -4962,11 +5013,7 @@
     "country": "United States",
     "portrait": "portraits/180-long-t-bui-university-of-california-irvine.webp",
     "portraitSource": "https://faculty.sites.uci.edu/longbui/files/2021/07/IMG_5840-768x628.jpg",
-    "phdYear": 2008,
-    "undergradInstitution": "Ethnic Studies University of California",
-    "undergradYear": 2004,
-    "msInstitution": "curricula without risking damage to university norms or business-as-",
-    "msYear": 2022
+    "phdYear": 2008
   },
   {
     "name": "Hien Duc Do",
@@ -5060,11 +5107,27 @@
     "undergradInstitution": "University of California, San Diego",
     "undergradYear": 1985,
     "portrait": "portraits/184-yen-le-espiritu-university-of-california-san-diego.webp",
-    "portraitSource": "https://ethnicstudies.ucsd.edu/_images/faculty/headshots/Yen-Espiritu_2025-headshot.jpg"
+    "portraitSource": "https://ethnicstudies.ucsd.edu/_images/faculty/headshots/Yen-Espiritu_2025-headshot.jpg",
+    "honors": [
+      {
+        "name": "Distinguished Professor of Ethnic Studies",
+        "year": null,
+        "category": "distinguished_professorship",
+        "organization": "University of California, San Diego",
+        "source": "https://ethnicstudies.ucsd.edu/people/espiritu.html"
+      },
+      {
+        "name": "Association for Asian American Studies Book Award (for Asian American Panethnicity: Bridging Institutions and Identities)",
+        "year": 1994,
+        "category": "major_award",
+        "organization": "Association for Asian American Studies",
+        "source": "https://ethnicstudies.ucsd.edu/people/espiritu.html"
+      }
+    ]
   },
   {
     "name": "Linh Thuy Nguyen",
-    "profileUrl": "http://www.linhthuynguyen.com/",
+    "profileUrl": "https://aes.washington.edu/people/linh-thuy-nguyen",
     "university": "University of Washington",
     "city": "Seattle",
     "state": "Washington",
@@ -5084,7 +5147,8 @@
     "country": "United States",
     "undergradInstitution": "University of California, Santa Barbara",
     "portrait": "portraits/185-linh-thuy-nguyen-university-of-washington.webp",
-    "portraitSource": "https://aes.washington.edu/sites/aes/files/styles/portrait/public/profile-images/Linh_BW-1-of-2-2.png?h=e976bb19&itok=hQ145eYn"
+    "portraitSource": "https://aes.washington.edu/sites/aes/files/styles/portrait/public/profile-images/Linh_BW-1-of-2-2.png?h=e976bb19&itok=hQ145eYn",
+    "websiteUrl": "http://www.linhthuynguyen.com/"
   },
   {
     "name": "Son Ca Lam",
@@ -5107,7 +5171,16 @@
     "phdInstitution": "Clark University",
     "country": "United States",
     "portrait": "portraits/186-son-ca-lam-university-of-massachusetts-boston.webp",
-    "portraitSource": "https://www.umb.edu/media/umassboston/content-assets/profiles/son-ca-lam-min.jpg"
+    "portraitSource": "https://www.umb.edu/media/umassboston/content-assets/profiles/son-ca-lam-min.jpg",
+    "honors": [
+      {
+        "name": "American Council of Learned Societies (ACLS) Fellowship",
+        "year": null,
+        "category": "career_award",
+        "organization": "American Council of Learned Societies",
+        "source": "https://www.umb.edu/directory/soncalam/"
+      }
+    ]
   },
   {
     "name": "Thuy Linh Nguyen Tu",
@@ -5129,7 +5202,16 @@
     "rank": "Professor",
     "country": "United States",
     "portrait": "portraits/187-thuy-linh-nguyen-tu-new-york-university.webp",
-    "portraitSource": "https://nyuhumanities.org/new/wp-content/uploads/2021/11/IMG_9745.jpeg"
+    "portraitSource": "https://nyuhumanities.org/new/wp-content/uploads/2021/11/IMG_9745.jpeg",
+    "honors": [
+      {
+        "name": "Cultural Studies Book Prize, for The Beautiful Generation: Asian Americans and the Cultural Economy of Fashion",
+        "year": null,
+        "category": "major_award",
+        "organization": "Association for Asian American Studies",
+        "source": "https://nyuhumanities.org/faculty-profile-thuy-linh-nguyen-tu/"
+      }
+    ]
   },
   {
     "name": "Mimi Thi Nguyen",
@@ -5225,11 +5307,20 @@
     "country": "United States",
     "undergradInstitution": "University of California-Los Angeles",
     "portrait": "portraits/190-kevin-lam-drake-university.webp",
-    "portraitSource": "https://www.drake.edu/directory/headshots/kevin-lam.jpg"
+    "portraitSource": "https://www.drake.edu/directory/headshots/kevin-lam.jpg",
+    "honors": [
+      {
+        "name": "Critics' Choice Book Award, for Youth Gangs, Racism, and Schooling: Vietnamese American Youth in a Postcolonial Context",
+        "year": 2016,
+        "category": "major_award",
+        "organization": "American Educational Studies Association",
+        "source": "https://www.drake.edu/soe/faculty/profile/kevin-lam"
+      }
+    ]
   },
   {
     "name": "Natalie A. Tran",
-    "profileUrl": "https://news.fullerton.edu/2026/04/natalie-tran-appointed-interim-dean-for-college-of-education/",
+    "profileUrl": "https://experts.fullerton.edu/expert?SubjectID=64&ExpertID=732",
     "university": "California State University, Fullerton",
     "city": "Fullerton",
     "state": "California",
@@ -5301,7 +5392,16 @@
     "portrait": "portraits/193-cindy-anh-nguyen-university-of-california-los-angeles.webp",
     "portraitSource": "https://seis.ucla.edu/wp-content/uploads/2024/03/Cindy-Nguyen-scaled.webp",
     "phdYear": 2019,
-    "undergradYear": 2010
+    "undergradYear": 2010,
+    "honors": [
+      {
+        "name": "Council of American Overseas Research Centers (CAORC)–National Endowment for the Humanities Research Fellowship",
+        "year": 2025,
+        "category": "career_award",
+        "organization": "Council of American Overseas Research Centers / National Endowment for the Humanities",
+        "source": "https://seis.ucla.edu/faculty/cindy-nguyen/"
+      }
+    ]
   },
   {
     "name": "Thuy Vo Dang",
@@ -5324,7 +5424,16 @@
     "country": "United States",
     "undergradInstitution": "Scripps College",
     "portrait": "portraits/194-thuy-vo-dang-university-of-california-los-angeles.webp",
-    "portraitSource": "https://seis.ucla.edu/wp-content/uploads/2024/01/Headshot_ThuyVoDang-1500px.webp"
+    "portraitSource": "https://seis.ucla.edu/wp-content/uploads/2024/01/Headshot_ThuyVoDang-1500px.webp",
+    "honors": [
+      {
+        "name": "Hellman Fellowship",
+        "year": 2024,
+        "category": "career_award",
+        "organization": "The Hellman Fellows Fund",
+        "source": "https://seis.ucla.edu/faculty/thuy-vo-dang/"
+      }
+    ]
   },
   {
     "name": "Nu-Anh Tran",

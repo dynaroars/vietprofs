@@ -8,7 +8,7 @@ ROSTER_MAINTENANCE.md §"Periodic full-roster refresh", committed, and pushed.
 - [x] Batch 02: indices 39-77
 - [x] Batch 03: indices 78-116
 - [x] Batch 04: indices 117-155
-- [ ] Batch 05: indices 156-194
+- [x] Batch 05: indices 156-194
 - [ ] Batch 06: indices 195-233
 - [ ] Batch 07: indices 234-272
 - [ ] Batch 08: indices 273-311
@@ -27,4 +27,18 @@ ROSTER_MAINTENANCE.md §"Periodic full-roster refresh", committed, and pushed.
 
 ## Notes / leads found while working (not yet added)
 
-(none yet)
+- Batch 05: index 176 (Viet Tuan Pham, Susquehanna) — current profileUrl uses an old CMS
+  URL pattern; couldn't confirm liveness directly (403/no-fetch). Possible live alternates seen
+  in search: https://www.susqu.edu/live/profiles/3271-viet-tuan-pham or
+  https://www.susqu.edu/profiles/phamv/ — verify and swap in on a future pass.
+- Batch 05: index 191 (Khanh Le, Queens College CUNY) — profileUrl is still his personal site
+  (mykle85.com); official department profile confirmed live at
+  https://www.qc.cuny.edu/academics/lcd/faculty/ but that's a list page, not a person-specific
+  URL — find the exact profile URL and switch profileUrl to the official page, moving the
+  personal site to websiteUrl.
+- Batch 05: index 161 (Long Pham, TAMU-Corpus Christi) — rank corrected Professor→Associate
+  Professor based on strong multi-source search corroboration (tamucc.edu directory content
+  itself could not be fetched directly after repeated timeouts). Worth a direct-fetch
+  re-confirmation later. Search also surfaced possible additional degrees (MS Accountancy 2023,
+  MBA 2024) that were NOT added — too speculative from an aggregated search summary without
+  primary-source confirmation.
