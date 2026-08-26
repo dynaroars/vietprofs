@@ -24,16 +24,63 @@ ROSTER_MAINTENANCE.md §"Periodic full-roster refresh", committed, and pushed.
 - [x] Batch 14: verified "Viet Ha Hoang" through "Le Minh Nguyen" (38 people, file order right
       after "Hung Dinh Nguyen"). No removals; array order unchanged. See notes for a misidentified
       department (Vuong Phan) and other fixes.
-- [ ] Batch 15: continue in `public/data.json` file order starting right after "Le Minh Nguyen"
-      (Japan Advanced Institute of Science and Technology)
-- [ ] Batch 16
-- [ ] Batch 16
+- [x] Batch 15: verified "Tu Bao Ho" through "Ngoc Thang Vu" (39 people, international spread:
+      Japan, Hong Kong, Australia, NZ, Ireland, Netherlands, Canada, France, Norway, UK, Germany).
+      1 removal (Quan Nguyen, UQ — see notes). Array order otherwise unchanged; next batch
+      continues right after "Ngoc Thang Vu".
+- [ ] Batch 16: continue in `public/data.json` file order starting right after "Ngoc Thang Vu"
+      (University of Stuttgart)
 - [ ] Batch 17
 - [ ] Batch 18
 - [ ] Batch 19
 - [ ] Batch 20
 
 ## Notes / leads found while working (not yet added)
+
+- Batch 15: Quan Nguyen (was "Quan Nguyen - The University of Queensland") — REMOVED. His own
+  IMB profile (https://imb.uq.edu.au/profile/1672/quan-nguyen) states his title is "Senior
+  Research Fellow & Group Leader", and his School of Biomedical Sciences page lists him as
+  "Affiliate Senior Research Fellow" — a research-track primary appointment plus an
+  affiliate/honorary secondary one, neither of which meets the inclusion standard's Tenure-line
+  requirement. The old "Associate Professor" rank in the roster no longer matches any current UQ
+  title for him. Renamed the remaining "Quan Nguyen - University of Southern California" entry to
+  plain "Quan Nguyen" since the disambiguating duplicate is gone.
+- Batch 15: Xuan-Bach Le (University of Melbourne) — rank corrected "Senior Lecturer" ->
+  "Associate Professor" per his own site, which explicitly states "Senior Lecturer (equivalent to
+  US Associate Professor)" — a rank-vocabulary fix, not a promotion. His official
+  findanexpert.unimelb.edu.au profile (id 912173) now 404s and no working replacement was found
+  (Melbourne's findanexpert also bot-blocks direct fetch/curl attempts for at least one other
+  person this batch); profileUrl left unchanged/dead pending a working replacement — worth a
+  fresh search on a future pass.
+- Batch 15: Ngoc Khanh Nguyen (King's College London) — rank corrected "Senior Lecturer" ->
+  "Assistant Professor". His official KCL page states his title is "Lecturer (Assistant
+  Professor) in Cryptography", i.e. UK Lecturer, not Senior Lecturer — a vocabulary/rank error in
+  the prior data, not a demotion.
+- Batch 15: Duong Tuan Hoang (UTS) — phdInstitution/phdYear corrected from "Tokyo Institute of
+  Technology"/1993 to "Odessa State University" (Ukraine)/1991, matching his own official UTS bio
+  text (diploma and PhD both in applied mathematics from Odessa State University, 1987/1991); the
+  old data appears to have been simply wrong.
+- Batch 15: Minh Hoai Nguyen (University of Adelaide, AIML) and Duc-Tien Dang-Nguyen (University
+  of Bergen) — both promoted Associate Professor -> Professor per their own current official/
+  personal pages.
+- Batch 15: Duc Truong Pham (University of Birmingham) — added "Chance Professor of Engineering"
+  as a distinguished_professorship honor (named chair, sourced from his own staff profile); rank
+  stays "Professor" per the accepted vocabulary.
+- Batch 15: Tuan Ngo (University of Melbourne) and Sonny Pham (Curtin), Minh Nguyen (AUT), Kenneth
+  Tran (Auckland) — official profile pages could not be directly fetched (Akamai bot-block or JS
+  SPA shells that return no server-rendered content), but current rank/appointment was
+  corroborated via independent search results (university news pages, ATSE fellow listing,
+  ResearchGate, LinkedIn) and left unchanged. Worth direct re-fetches on a future pass, ideally
+  from a different network/UA.
+- Batch 15: Minh-Ngoc Tran (University of Sydney Business School) — profiles.sydney.edu.au is a
+  client-side-rendered SPA that returns no usable server content via WebFetch or curl; left
+  unchanged (pre-existing entry, no evidence of change) pending a JS-capable fetch method.
+- Batch 15: Dinh-Tuan Pham (Emeritus, Université Grenoble Alpes / Laboratoire Jean Kuntzmann) —
+  profileUrl is still just the lab's generic homepage; no working person-specific page or fresh
+  emeritus-status confirmation found this pass. Left unchanged (pre-existing, not newly added).
+- Batch 15: Quang Minh Bui (ANU) — ANU has migrated from researchers.anu.edu.au to
+  researchportalplus.anu.edu.au and the old profile URL now 404s; couldn't find/confirm the new
+  slug within this session's search budget. Left unchanged pending a fresh lookup.
 
 - Batch 14: Phu Nguyen-Van (recorded as "Professor", Université Paris Nanterre / EconomiX) — his
   own EconomiX profile page states his title as "Directeur de Recherche" (Research Director) at
