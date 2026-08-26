@@ -9,7 +9,7 @@ ROSTER_MAINTENANCE.md §"Periodic full-roster refresh", committed, and pushed.
 - [x] Batch 03: indices 78-116
 - [x] Batch 04: indices 117-155
 - [x] Batch 05: indices 156-194
-- [ ] Batch 06: indices 195-233
+- [x] Batch 06: indices 195-233
 - [ ] Batch 07: indices 234-272
 - [ ] Batch 08: indices 273-311
 - [ ] Batch 09: indices 312-350
@@ -42,3 +42,13 @@ ROSTER_MAINTENANCE.md §"Periodic full-roster refresh", committed, and pushed.
   re-confirmation later. Search also surfaced possible additional degrees (MS Accountancy 2023,
   MBA 2024) that were NOT added — too speculative from an aggregated search summary without
   primary-source confirmation.
+- Batch 06: index 217 (Trang T.H. Nguyen, Arkansas State) — profileUrl (department
+  faculty-staff listing page) now 404s, and Arkansas State appears to have restructured its
+  Beck College of Sciences and Mathematics site; the new consolidated faculty-and-staff page
+  (https://www.astate.edu/colleges/beck-college-of-sciences-and-mathematics/faculty-and-staff.html)
+  does NOT list her either. Her personal site (https://sites.google.com/view/trang-t-h-nguyen/)
+  still states she's Assistant Professor of Microbiology at Arkansas State, and also mentions a
+  possibly-concurrent "Assistant Professor, Integrated Sciences, Fulbright University Vietnam"
+  role. Left profileUrl and entry unchanged pending a clearer official source — needs a direct
+  check (e.g. an Arkansas State directory search or department contact page) to confirm she's
+  still on faculty there before either fixing the URL or removing the entry.
