@@ -3475,7 +3475,7 @@
   },
   {
     "name": "Vicky Doan-Nguyen",
-    "profileUrl": "https://u.osu.edu/doan-nguyen.1/",
+    "profileUrl": "https://steamfactory.osu.edu/people/doan-nguyen.1",
     "university": "Ohio State University",
     "city": "Columbus",
     "state": "Ohio",
@@ -3500,7 +3500,8 @@
       }
     ],
     "portrait": "portraits/118-vicky-doan-nguyen-ohio-state-university.webp",
-    "portraitSource": "https://mse.osu.edu/sites/default/files/2020-09/Doan-Nguyen_OVSHINSKY_2019-web.jpg"
+    "portraitSource": "https://mse.osu.edu/sites/default/files/2020-09/Doan-Nguyen_OVSHINSKY_2019-web.jpg",
+    "phdYear": 2015
   },
   {
     "name": "Thang Pham",
@@ -3668,7 +3669,16 @@
     "rank": "Professor",
     "country": "United States",
     "portrait": "portraits/125-nam-t-dinh-north-carolina-state-university.webp",
-    "portraitSource": "https://ne.ncsu.edu/wp-content/uploads/2025/10/Nam-Dinh-150x150.jpg"
+    "portraitSource": "https://ne.ncsu.edu/wp-content/uploads/2025/10/Nam-Dinh-150x150.jpg",
+    "honors": [
+      {
+        "name": "Distinguished Professor of Nuclear Engineering",
+        "year": null,
+        "category": "distinguished_professorship",
+        "organization": "North Carolina State University",
+        "source": "https://ne.ncsu.edu/directory/ntdinh/"
+      }
+    ]
   },
   {
     "name": "Juliane Nguyen",
@@ -3893,7 +3903,7 @@
     "secondaryAppointment": false,
     "track": "Tenure-line",
     "department": "Mechanical and Aerospace Engineering",
-    "rank": "Assistant Professor",
+    "rank": "Associate Professor",
     "phdInstitution": "Georgia Institute of Technology",
     "country": "United States"
   },
@@ -4157,7 +4167,7 @@
     "secondaryAppointment": false,
     "track": "Tenure-line",
     "department": "Finance",
-    "rank": "Professor",
+    "rank": "Associate Professor",
     "phdInstitution": "University of Rhode Island",
     "country": "United States",
     "undergradInstitution": "International University of Japan",
@@ -4317,6 +4327,13 @@
         "year": null,
         "category": "fellow",
         "organization": "Society for Consumer Psychology",
+        "source": "https://business.columbia.edu/faculty/people/michel-tuan-pham"
+      },
+      {
+        "name": "Kravis Professor of Business",
+        "year": null,
+        "category": "distinguished_professorship",
+        "organization": "Columbia University",
         "source": "https://business.columbia.edu/faculty/people/michel-tuan-pham"
       }
     ],
