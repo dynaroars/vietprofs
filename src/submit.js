@@ -2,7 +2,6 @@ import './style.css';
 import { loadRoster, TRACKS } from './data.js';
 import { escapeHtml } from './utils.js';
 
-const GITHUB_REPO = 'dynaroars/vietprofs';
 const SUBMISSION_EMAIL = 'root@roars.dev';
 
 const app = document.getElementById('app');
@@ -108,23 +107,12 @@ function renderShell() {
 
       <div class="submit-actions">
         <button type="submit" class="submit-btn" name="delivery" value="email">Send by email</button>
-        <button type="submit" class="submit-btn submit-btn-secondary" name="delivery" value="github">Submit as a GitHub issue</button>
       </div>
       <p class="submit-hint" id="submit-hint">
-        Email is the easiest option and does not require a GitHub account. It opens a pre-filled
-        message to the maintainers. GitHub is optional and opens a pre-filled issue for anyone who
-        prefers to submit there.
+        This opens a pre-filled email message to the maintainers.
       </p>
     </form>
   `;
-}
-
-function buildGithubIssueUrl(title, content) {
-  const params = new URLSearchParams({
-    title,
-    body: `## Proposed roster submission\n\n\`\`\`json\n${content}\n\`\`\``,
-  });
-  return `https://github.com/${GITHUB_REPO}/issues/new?${params.toString()}`;
 }
 
 function buildEmailUrl(title, content) {
@@ -212,11 +200,7 @@ function onSubmit(e, entriesByName) {
   const content = JSON.stringify(submission, null, 2);
   const title = matchedEntry ? `VietProfs update: ${name}` : `VietProfs submission: ${name}`;
 
-  if (e.submitter?.value === 'github') {
-    window.open(buildGithubIssueUrl(title, content), '_blank', 'noopener,noreferrer');
-  } else {
-    window.location.href = buildEmailUrl(title, content);
-  }
+  window.location.href = buildEmailUrl(title, content);
 }
 
 async function init() {

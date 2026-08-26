@@ -61,7 +61,6 @@ function renderShell() {
       <div class="title-row">
         <h1><a class="home-link" href="${import.meta.env.BASE_URL}" id="home-link">Vietnamese Academic Diaspora</a></h1>
         <p class="site-subtitle">A directory of Vietnamese professors worldwide</p>
-        <a class="github-link" href="https://github.com/dynaroars/vietprofs" target="_blank" rel="noopener noreferrer" aria-label="View VietProfs on GitHub" title="View source on GitHub"></a>
         <a class="icon-link roars-link" href="https://roars.dev" target="_blank" rel="noopener noreferrer" aria-label="ROARS Lab" title="ROARS Lab"></a>
       </div>
     </header>

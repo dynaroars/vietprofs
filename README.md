@@ -43,9 +43,3 @@ Edit [`public/data.json`](./public/data.json) to add, remove, or correct roster 
 Use [`submit.html`](./submit.html) to propose an entry or correction without editing the repository directly. Maintainers review submissions before adding them to the roster.
 
 Detailed inclusion, verification, discovery, field-mapping, and data-format guidance is in [`ROSTER_MAINTENANCE.md`](./ROSTER_MAINTENANCE.md).
-
-## Licensing
-
-The source code is licensed under the [MIT License](./LICENSE). Original roster curation and documentation are licensed under [CC BY 4.0](./DATA-LICENSE.md).
-
-Portraits, linked pages, university names, trademarks, and other third-party content are not covered by these project licenses and remain subject to their respective rights. See [`DATA-LICENSE.md`](./DATA-LICENSE.md).
