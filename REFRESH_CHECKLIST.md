@@ -39,12 +39,64 @@ ROSTER_MAINTENANCE.md §"Periodic full-roster refresh", committed, and pushed.
       the per-batch refresh). Array order otherwise unchanged; next batch continues right after
       "Mai Nguyen - Manchester Metropolitan University" (the last remaining person from this
       batch, in file order).
-- [ ] Batch 17: continue in `public/data.json` file order starting right after
-      "Mai Nguyen - Manchester Metropolitan University" (next person: Chi Hieu Le, University
-      of Greenwich)
-- [ ] Batch 18
+- [x] Batch 17: verified "Chi Hieu Le" (University of Greenwich) through "Martino Tran"
+      (University of British Columbia) — 39 people, mostly UK + France + a few
+      Netherlands/Germany/Switzerland/Sweden/Canada. No removals; array order unchanged. Next
+      batch continues right after "Martino Tran" (next person: Kim Chi Nguyen, University of
+      British Columbia).
+
+      Established a new convention worth applying consistently: France's "Maître de conférences"
+      (MCF) maps to "Associate Professor" and "Professeur des universités"/"Professeur" maps to
+      "Professor" — confirmed directly from an official French university page (u-paris.fr LCAO)
+      that itself glosses "[ MCF: Associate Professor, PU: Professor ]" in English. Applied this
+      to fix 7 rank-vocabulary violations in this batch. Also fixed the recurring UK
+      Senior-Lecturer/titled-rank pattern from batches 15-16 (7 more instances), one German
+      "Junior Professor" → "Assistant Professor" (confirmed via the department's own page, which
+      labels the position "Assistant Professor" in English), and normalized 2 Teaching-track
+      entries with raw descriptive titles ("Professor of Management Practice", "Assistant
+      Professor, Teaching Stream") down to plain "Teaching" per the majority (57/69) existing
+      convention for that track.
+
+      Added one honor: Nguyen Viet Dang (Sorbonne Université, index ~626) was confirmed via an
+      official Sorbonne news article to have been named to the Institut Universitaire de France
+      (IUF) in 2022 — a competitive national distinction — recorded as a `career_award`.
+
+      Swapped Nguyen Bac Dang's (Paris-Saclay) profileUrl from a generic "new faculty members
+      introduce themselves" listing page to his own live personal page, which also independently
+      confirmed his rank.
+
+      This session's WebSearch budget was exhausted partway through this batch; several UK/French
+      pages that block direct fetches (403/Cloudflare) were instead verified via recent Wayback
+      Machine snapshots (Jan/Jul 2026) rather than live search corroboration — noted per-person
+      below where relevant.
+- [ ] Batch 18: continue right after "Martino Tran" (next person: Kim Chi Nguyen, University of
+      British Columbia)
 - [ ] Batch 19
 - [ ] Batch 20
+
+## Batch 17 notes / leads
+
+- Kim Phuc Tran (was recorded at University of Lille, ENSAIT/GEMTEX) — profileUrl points to a
+  Dong A University (Vietnam) advisory-board page, not an official University of Lille/ENSAIT
+  page. Could not find a working ENSAIT or GEMTEX staff page for him (gemtex.ensait.fr doesn't
+  resolve; ensait.fr staff-directory paths 404). Left profileUrl unchanged pending a better
+  source — needs a direct search for his official Lille-affiliated page.
+- Jason Nguyen (University of Toronto, Daniels Faculty of Architecture) — profileUrl remains the
+  department's general "People" listing page (confirmed it has no server-rendered content
+  mentioning him; likely a JS-rendered directory). No working person-specific URL found in a few
+  guessed patterns. Left unchanged pending the real slug.
+- Nguyen Viet Dang (Sorbonne Université, IMJ-PRG) — profileUrl remains a 2022 news article
+  (better than nothing: it does independently confirm his current title and department). A
+  cleaner official IMJ-PRG personal/annuaire page likely exists but wasn't found within this
+  batch's budget (webusers.imj-prg.fr blocks bots with no Wayback snapshot available;
+  imj-prg.fr's annuaire slug guesses 404'd).
+- Giang T. Nguyen (TU Dresden) — page is Cloudflare-challenge-blocked to direct fetch; verified
+  via a May 2026 Wayback snapshot instead, which itself shows the department listing his role in
+  English as "Assistant Professor" (German "Juniorprofessur" title, addressed as "Prof. Dr.-Ing."
+  per German convention but not a tenured full professorship) — rank corrected accordingly.
+- Chau Duong (UEL), Tam Nguyen / Thao Ngoc Nguyen / Hai Dang Nguyen (all NTU) — all four pages
+  block direct fetch (Akamai/Cloudflare); verified via Jan/Jul 2026 Wayback snapshots instead,
+  all showing current live titles matching what's now recorded.
 
 ## Batch 16 notes / leads
 
