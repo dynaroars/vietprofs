@@ -10,7 +10,7 @@ ROSTER_MAINTENANCE.md §"Periodic full-roster refresh", committed, and pushed.
 - [x] Batch 04: indices 117-155
 - [x] Batch 05: indices 156-194
 - [x] Batch 06: indices 195-233
-- [ ] Batch 07: indices 234-272
+- [x] Batch 07: indices 234-272
 - [ ] Batch 08: indices 273-311
 - [ ] Batch 09: indices 312-350
 - [ ] Batch 10: indices 351-389
@@ -52,3 +52,11 @@ ROSTER_MAINTENANCE.md §"Periodic full-roster refresh", committed, and pushed.
   role. Left profileUrl and entry unchanged pending a clearer official source — needs a direct
   check (e.g. an Arkansas State directory search or department contact page) to confirm she's
   still on faculty there before either fixing the URL or removing the entry.
+- Batch 07: index 262 (Yen Kim Nguyen, University of Washington) — profileUrl was a 2022 news
+  article, not a directory page. The current UW Asian Languages & Literature faculty listing
+  (https://asian.washington.edu/people/faculty) no longer shows her; the department's Vietnamese
+  instructor slot now appears to be held by a different person (Ha Nguyen,
+  https://asian.washington.edu/people/ha-nguyen). No evidence found of her moving elsewhere.
+  Left entry and profileUrl unchanged rather than guess she's departed — needs a direct check
+  (e.g. UW directory search, or contacting the department) to confirm whether she's still on
+  faculty before removing her or updating the URL.

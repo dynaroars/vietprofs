@@ -6551,7 +6551,7 @@
     "secondaryAppointment": false,
     "track": "Tenure-line",
     "department": "Nursing",
-    "rank": "Assistant Professor",
+    "rank": "Associate Professor",
     "phdInstitution": "University of Arizona",
     "country": "United States",
     "portrait": "portraits/235-angelina-nguyen-baylor-university.webp",
@@ -6580,6 +6580,13 @@
         "category": "major_award",
         "organization": "John Simon Guggenheim Memorial Foundation",
         "source": "https://www.college.columbia.edu/cct_archive/jul02/jul02_quads6.html"
+      },
+      {
+        "name": "LeRoy Neiman Professor of Visual Arts",
+        "year": 2000,
+        "category": "distinguished_professorship",
+        "organization": "Columbia University School of the Arts",
+        "source": "https://arts.columbia.edu/profiles/tomas-vu-daniel"
       }
     ],
     "portrait": "portraits/236-tomas-vu-daniel-columbia-university.webp",
@@ -6611,9 +6618,7 @@
       }
     ],
     "portrait": "portraits/237-h-lan-thao-lam-the-new-school.webp",
-    "portraitSource": "https://vcard.newschool.edu/?c=513819",
-    "phdMajor": "Complete and submit the New",
-    "undergradMajor": "Complete and submit the New"
+    "portraitSource": "https://vcard.newschool.edu/?c=513819"
   },
   {
     "name": "Anh Q. Tran",
@@ -7003,7 +7008,15 @@
     "rank": "Teaching",
     "country": "United States",
     "portrait": "portraits/256-khoa-nguyen-university-of-florida.webp",
-    "portraitSource": "https://directory.ufhealth.org/nguyen-khoa-3/files/profile-photo"
+    "portraitSource": "https://directory.ufhealth.org/nguyen-khoa-3/files/profile-photo",
+    "otherDegrees": [
+      {
+        "degree": "PharmD",
+        "institution": "University of Michigan",
+        "year": 2015,
+        "source": "https://pharmacy.ufl.edu/profile/nguyen-khoa-3/"
+      }
+    ]
   },
   {
     "name": "Khiem Pham-Nguyen",
@@ -7021,11 +7034,31 @@
     "rank": "Teaching",
     "country": "United States",
     "portrait": "portraits/257-khiem-pham-nguyen-boston-university.webp",
-    "portraitSource": "https://www.bu.edu/dental/files/2011/12/11-4369-KhiemBPhamNguyen-197.jpg"
+    "portraitSource": "https://www.bu.edu/dental/files/2011/12/11-4369-KhiemBPhamNguyen-197.jpg",
+    "otherDegrees": [
+      {
+        "degree": "DMD",
+        "institution": "Boston University",
+        "year": 2003,
+        "source": "https://www.bu.edu/dental/profile/khiem-pham-nguyen/"
+      },
+      {
+        "degree": "CAGS in Advanced Education for General Dentistry",
+        "institution": "Boston University",
+        "year": 2004,
+        "source": "https://www.bu.edu/dental/profile/khiem-pham-nguyen/"
+      },
+      {
+        "degree": "CAGS/MSD in Orthodontics",
+        "institution": "Boston University",
+        "year": 2008,
+        "source": "https://www.bu.edu/dental/profile/khiem-pham-nguyen/"
+      }
+    ]
   },
   {
     "name": "Christopher Paul Nguyen",
-    "profileUrl": "https://business.unm.edu/faculty-research/faculty-profile.html?username=cnguyen",
+    "profileUrl": "https://business.unm.edu/faculty-research/index.html?id=10629",
     "university": "University of New Mexico",
     "city": "Albuquerque",
     "state": "New Mexico",
@@ -7165,7 +7198,7 @@
   },
   {
     "name": "Quang Phu Van",
-    "profileUrl": "http://www.yale.edu/seas/QuangVan.htm",
+    "profileUrl": "https://macmillan.yale.edu/southeast-asia/person/quang-phu-van",
     "university": "Yale University",
     "city": "New Haven",
     "state": "Connecticut",
@@ -7201,7 +7234,7 @@
     "country": "United States",
     "portrait": "portraits/266-thinh-nguyen-university-of-florida-university-of-florida.webp",
     "portraitSource": "https://law.ufl.edu/wp-content/uploads/2025/08/thinh-nguyen-1024x1024.jpg",
-    "undergradInstitution": "Harvard Journal of Law",
+    "undergradInstitution": "Harvard University",
     "undergradYear": 1996,
     "otherDegrees": [
       {
@@ -7210,7 +7243,8 @@
         "year": 1999,
         "source": "https://law.ufl.edu/wp-content/uploads/2025/08/Nguyen_CV-2024.pdf"
       }
-    ]
+    ],
+    "undergradMajor": "Chemistry"
   },
   {
     "name": "Tim Nguyen",
@@ -7341,11 +7375,20 @@
     "msInstitution": "Rensselaer Polytechnic Institute",
     "msYear": 1980,
     "undergradInstitution": "Rensselaer Polytechnic Institute",
-    "undergradYear": 1980
+    "undergradYear": 1980,
+    "honors": [
+      {
+        "name": "Alumni Association Distinguished Graduate Professor",
+        "year": 2015,
+        "category": "distinguished_professorship",
+        "organization": "NC State University Alumni Association",
+        "source": "https://math.sciences.ncsu.edu/people/tran/"
+      }
+    ]
   },
   {
     "name": "Thi Mai Anh Nguyen",
-    "profileUrl": "https://www.anhnguyentm.com/",
+    "profileUrl": "https://as.nyu.edu/faculty/thi-mai-anh-nguyen.html",
     "scholarUrl": "https://scholar.google.com/citations?user=zmUwBYsAAAAJ",
     "university": "New York University",
     "city": "New York",
@@ -7362,7 +7405,8 @@
     "phdInstitution": "Massachusetts Institute of Technology",
     "country": "United States",
     "portrait": "portraits/274-thi-mai-anh-nguyen-new-york-university.webp",
-    "portraitSource": "https://lh3.googleusercontent.com/sitesv/AG8ngQWCnJRaJViUP4oqTCte9ErHZYk81F__elSWzB5Qpod60xU8gC0r3SSJS2iLnZi8qtpVRckr20-oFgjBdOYSfNYZXCjz9w8_kR6VXPfpEDNvYISqwntpPJNGlHnDpEe8B3dtW5dQGOFThbvCqQNi-MdYu9rTc4aoGqI5wS1kU24yI6mpdUvnGO3oSFfQXUSG-EorQzeZth5q2Tc9cs2VvdYmQLo9mOutLur3f3LGRJk=w1280"
+    "portraitSource": "https://lh3.googleusercontent.com/sitesv/AG8ngQWCnJRaJViUP4oqTCte9ErHZYk81F__elSWzB5Qpod60xU8gC0r3SSJS2iLnZi8qtpVRckr20-oFgjBdOYSfNYZXCjz9w8_kR6VXPfpEDNvYISqwntpPJNGlHnDpEe8B3dtW5dQGOFThbvCqQNi-MdYu9rTc4aoGqI5wS1kU24yI6mpdUvnGO3oSFfQXUSG-EorQzeZth5q2Tc9cs2VvdYmQLo9mOutLur3f3LGRJk=w1280",
+    "websiteUrl": "https://www.anhnguyentm.com/"
   },
   {
     "name": "Lan Nguyen Chaplin",
