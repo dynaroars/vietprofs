@@ -11,7 +11,7 @@ ROSTER_MAINTENANCE.md §"Periodic full-roster refresh", committed, and pushed.
 - [x] Batch 05: indices 156-194
 - [x] Batch 06: indices 195-233
 - [x] Batch 07: indices 234-272
-- [ ] Batch 08: indices 273-311
+- [x] Batch 08: indices 273-311
 - [ ] Batch 09: indices 312-350
 - [ ] Batch 10: indices 351-389
 - [ ] Batch 11: indices 390-428
@@ -60,3 +60,29 @@ ROSTER_MAINTENANCE.md §"Periodic full-roster refresh", committed, and pushed.
   Left entry and profileUrl unchanged rather than guess she's departed — needs a direct check
   (e.g. UW directory search, or contacting the department) to confirm whether she's still on
   faculty before removing her or updating the URL.
+- Batch 08: index 279 (Tan Van Nguyen) and index 280 (Christopher Pham), both San Jose State EE
+  — both confirmed live as "Lecturer Emeritus" on the department's emeriti page. The Emeritus
+  track requires "a formally conferred emeritus/emerita title following a tenure-line career";
+  "Lecturer" is usually non-tenure-track. Left both entries unchanged (pre-existing, not newly
+  added) since it's unclear whether SJSU EE's historical "Lecturer" title was actually
+  tenure-line for these two — needs someone to check SJSU's title history/policy before deciding
+  whether to keep, retitle, or remove.
+- Batch 08: index 292 (Hau Pham, Boston University, Surgery, Emeritus/MD) — original profileUrl
+  was a dead PDF that never mentioned him. Search turned up what looks like two different "Hau
+  Pham"s at BU: a DPM podiatric surgeon (bumc.bu.edu/camed/profile/hau-pham/, titled "Emeritus
+  Assistant Professor") and the MD general surgeon the existing record's `mdInstitution: Boston
+  University` implies. Couldn't confirm whether these are the same person, and the DPM/podiatry
+  degree doesn't match an MD. Left the record unchanged pending a source that clearly
+  distinguishes (or merges) these two identities.
+- Batch 08: index 278 (Long Thai Bui / David Bui, Saint Mary's College of California) — rank
+  corrected from "Professor" to "Assistant Professor". No page explicitly states his rank; the
+  correction is inferred from his PhD completion date and hire date both being 2024 (full
+  Professor in year one is not realistic), and from "Professor" likely being scraped from a
+  generic "About Professor {Name}" boilerplate string used by the Pure/Elsevier profile system
+  at scholars.stmarys-ca.edu. Worth re-confirming directly once his rank is explicitly stated
+  somewhere.
+- Batch 08: index 306 (Hieu Tran, UMass Boston) and index 307 (Matthew Bui, University of
+  Michigan) — official-looking profile pages exist and were corroborated via search, but both
+  blocked direct WebFetch/curl (403) throughout this batch; details entered were sourced from
+  search-result summaries of their own CVs/bios rather than a direct primary-source fetch. Worth
+  a direct re-fetch later to fully confirm.

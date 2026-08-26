@@ -7449,8 +7449,9 @@
     "country": "United States",
     "portrait": "portraits/276-bach-mai-dolly-nguyen-oregon-state-university.webp",
     "portraitSource": "https://education.oregonstate.edu/sites/education.oregonstate.edu/files/styles/profile_image/public/headshot_2018.jpg?itok=Yh9q-hZ6",
-    "undergradInstitution": "B.A. University of Washington",
-    "undergradYear": 2005
+    "undergradInstitution": "University of Washington",
+    "undergradYear": 2005,
+    "undergradMajor": "English and Communication"
   },
   {
     "name": "Hoang Pham - Oregon State University",
@@ -7477,7 +7478,7 @@
   {
     "name": "Thang N. Bui",
     "vietnameseName": "Bùi Nguyên Thắng",
-    "profileUrl": "https://harrisburg.psu.edu/directory/directory/school-science-engineering-and-technology",
+    "profileUrl": "https://harrisburg.psu.edu/faculty-and-staff/thang-bui-phd",
     "university": "Penn State Harrisburg",
     "city": "Middletown",
     "state": "Pennsylvania",
@@ -7492,7 +7493,13 @@
     "rank": "Emeritus",
     "country": "United States",
     "portrait": "portraits/278-thang-n-bui-penn-state-harrisburg.webp",
-    "portraitSource": "https://harrisburg.psu.edu/sites/harrisburg/files/styles/photo_gallery_large/public/drthangbui.jpg"
+    "portraitSource": "https://harrisburg.psu.edu/sites/harrisburg/files/styles/photo_gallery_large/public/drthangbui.jpg",
+    "phdInstitution": "Massachusetts Institute of Technology",
+    "phdYear": 1985,
+    "msInstitution": "Massachusetts Institute of Technology",
+    "msYear": 1983,
+    "undergradInstitution": "Carnegie Mellon University",
+    "undergradMajor": "Mathematics and Electrical Engineering"
   },
   {
     "name": "Triet Pham",
@@ -7528,13 +7535,16 @@
     "secondaryAppointment": false,
     "track": "Tenure-line",
     "department": "Accounting",
-    "rank": "Professor",
+    "rank": "Assistant Professor",
     "phdYear": 2024,
     "phdInstitution": "University of Texas at Arlington",
     "country": "United States",
     "portrait": "portraits/280-long-thai-bui-saint-marys-college-of-california.webp",
     "portraitSource": "https://www.stmarys-ca.edu/sites/default/files/styles/max_650x650/public/2024-08/1516818973078.jpg",
-    "msInstitution": "University of Texas at Arlington"
+    "msInstitution": "University of Texas at Arlington",
+    "undergradInstitution": "James Madison University",
+    "undergradYear": 2014,
+    "undergradMajor": "Finance"
   },
   {
     "name": "Tan Van Nguyen",
@@ -7591,11 +7601,14 @@
     "phdInstitution": "University of Notre Dame",
     "country": "United States",
     "portrait": "portraits/283-hau-nguyen-seattle-pacific-university.webp",
-    "portraitSource": "https://spu.edu/-/media/academics/college-of-arts-sciences/languages-cultures-linguistics/fac-staff/nguyen-hau-2018.ashx"
+    "portraitSource": "https://spu.edu/-/media/academics/college-of-arts-sciences/languages-cultures-linguistics/fac-staff/nguyen-hau-2018.ashx",
+    "undergradInstitution": "St. Lawrence University",
+    "undergradYear": 2011,
+    "undergradMajor": "Economics and Mathematics"
   },
   {
     "name": "Dung Trung Nguyen",
-    "profileUrl": "https://spu.edu/-/media/academics/college-of-arts-sciences/engineering-comp-sci/cvs/cv-dung-nguyen.ashx",
+    "profileUrl": "https://spu.edu/academics/college-of-arts-sciences/engineering-and-computer-science/faculty-and-staff/dung-nguyen",
     "university": "Seattle Pacific University",
     "city": "Seattle",
     "state": "Washington",
@@ -7634,11 +7647,16 @@
     "undergradInstitution": "Vietnam National University, Ho Chi Minh City University of Technology",
     "country": "United States",
     "portrait": "portraits/285-phuong-nguyen-south-dakota-state-university.webp",
-    "portraitSource": "https://www.sdstate.edu/sites/default/files/styles/medium/public/2023-09/Phuong.jpg?itok=2XU77S7p"
+    "portraitSource": "https://www.sdstate.edu/sites/default/files/styles/medium/public/2023-09/Phuong.jpg?itok=2XU77S7p",
+    "msInstitution": "California State University, East Bay",
+    "msYear": 2016,
+    "msMajor": "Construction Management",
+    "undergradYear": 2014,
+    "undergradMajor": "Civil Engineering"
   },
   {
     "name": "Son Phan Lam Tran",
-    "profileUrl": "https://www.depts.ttu.edu/IGCAST/Staff/SonTran.php",
+    "profileUrl": "https://www.depts.ttu.edu/pss/people/faculty/tran-son/tran-son.php",
     "university": "Texas Tech University",
     "city": "Lubbock",
     "state": "Texas",
@@ -7653,11 +7671,16 @@
     "rank": "Professor",
     "country": "United States",
     "portrait": "portraits/286-son-phan-lam-tran-texas-tech-university.webp",
-    "portraitSource": "https://www.depts.ttu.edu/igcast/Staff/Bio_Photos/trancropped.jpg"
+    "portraitSource": "https://www.depts.ttu.edu/igcast/Staff/Bio_Photos/trancropped.jpg",
+    "phdYear": 1997,
+    "phdInstitution": "Szent Istvan University, Hungary",
+    "msInstitution": "Szent Istvan University, Hungary",
+    "msYear": 1994,
+    "msMajor": "Biotechnology"
   },
   {
     "name": "Xuong Nguyen-Huu",
-    "profileUrl": "https://chemistry.ucsd.edu/faculty/profiles/nguyen-huu_xuong.html",
+    "profileUrl": "https://profiles.ucsd.edu/xuong.nguyen-huu",
     "university": "University of California, San Diego",
     "city": "La Jolla",
     "state": "California",
@@ -7698,7 +7721,7 @@
   },
   {
     "name": "Ruby Nguyen",
-    "profileUrl": "https://www.sph.umn.edu/news/the-university-of-minnesota-honors-ruby-nguyen/",
+    "profileUrl": "https://directory.sph.umn.edu/bio/sph-a-z/ruby-nguyen",
     "university": "University of Minnesota",
     "city": "Minneapolis",
     "state": "Minnesota",
@@ -7715,7 +7738,15 @@
     "undergradYear": 2010,
     "portrait": "portraits/289-ruby-nguyen-university-of-minnesota.webp",
     "portraitSource": "https://www.sph.umn.edu/sph/wp-content/uploads/2022/04/Screen-Shot-2022-04-14-at-3.11.31-PM.png",
-    "undergradMajor": "Based within"
+    "honors": [
+      {
+        "name": "Morse-Alumni Distinguished University Teaching Professor",
+        "year": 2022,
+        "category": "distinguished_professorship",
+        "organization": "University of Minnesota",
+        "source": "https://directory.sph.umn.edu/bio/sph-a-z/ruby-nguyen"
+      }
+    ]
   },
   {
     "name": "Mai Ngo",
@@ -7737,7 +7768,16 @@
     "phdInstitution": "University of Illinois at Urbana-Champaign",
     "country": "United States",
     "portrait": "portraits/290-mai-ngo-university-of-wisconsin-madison.webp",
-    "portraitSource": "https://engineering.wisc.edu/wp-content/uploads/2024/09/ngo_mai-mtngo2-1x1-transparent-1024x1024.avif"
+    "portraitSource": "https://engineering.wisc.edu/wp-content/uploads/2024/09/ngo_mai-mtngo2-1x1-transparent-1024x1024.avif",
+    "honors": [
+      {
+        "name": "Richard H. Soit Assistant Professor",
+        "category": "distinguished_professorship",
+        "organization": "University of Wisconsin-Madison",
+        "source": "https://engineering.wisc.edu/directory/profile/mai-ngo/",
+        "year": null
+      }
+    ]
   },
   {
     "name": "Beth Nguyen",
@@ -7916,14 +7956,15 @@
     "phdYear": 2005,
     "phdInstitution": "Texas A&M University",
     "country": "United States",
-    "undergradInstitution": "University in",
+    "undergradInstitution": "National University, Ho Chi Minh City, Vietnam",
     "undergradYear": 1997,
     "portrait": "portraits/298-luan-hoang-texas-tech-university.webp",
-    "portraitSource": "https://www.depts.ttu.edu/math/images/Faculty_Photos/Hoang_Luan.jpg"
+    "portraitSource": "https://www.depts.ttu.edu/math/images/Faculty_Photos/Hoang_Luan.jpg",
+    "undergradMajor": "Mathematics and Information Technology"
   },
   {
     "name": "Thai Luan Vu",
-    "profileUrl": "https://www.math.ttu.edu/~vluan",
+    "profileUrl": "https://www.depts.ttu.edu/math/facultystaff/bio.php?id=1803",
     "university": "Texas Tech University",
     "city": "Lubbock",
     "state": "Texas",
@@ -7941,7 +7982,6 @@
     "phdYear": 2014,
     "phdInstitution": "University of Innsbruck",
     "country": "United States",
-    "undergradYear": 2024,
     "portrait": "portraits/299-vu-thai-luan-texas-tech-university.webp",
     "portraitSource": "https://www.depts.ttu.edu/math/images/Faculty_Photos/Luan_Vu_Thai.jpg"
   },
@@ -7964,14 +8004,15 @@
     "phdYear": 2014,
     "phdInstitution": "Cornell University",
     "country": "United States",
-    "undergradYear": 2014,
+    "undergradYear": 2009,
     "portrait": "portraits/300-hung-tran-texas-tech-university-texas-tech-university.webp",
     "portraitSource": "https://www.depts.ttu.edu/math/images/Faculty_Photos/Tran_Hung.jpg",
-    "undergradInstitution": "Berea College"
+    "undergradInstitution": "Berea College",
+    "undergradMajor": "Mathematics and Economics"
   },
   {
     "name": "Hanh-Phuc Le",
-    "profileUrl": "http://ipower3es.ucsd.edu/",
+    "profileUrl": "https://ipower3es.eng.ucsd.edu/",
     "university": "University of California, San Diego",
     "city": "La Jolla",
     "state": "California",
@@ -8066,7 +8107,8 @@
     "phdInstitution": "University of California, Irvine",
     "country": "United States",
     "portrait": "portraits/304-thu-huong-nguyen-vo-university-of-california-los-angeles.webp",
-    "portraitSource": "https://alc.ucla.edu/wp-content/uploads/2015/02/FACULTY-NGUYENVO.jpg"
+    "portraitSource": "https://alc.ucla.edu/wp-content/uploads/2015/02/FACULTY-NGUYENVO.jpg",
+    "msInstitution": "California State University, Long Beach"
   },
   {
     "name": "Thuy-Ngoc Nguyen",
@@ -8088,7 +8130,8 @@
     "phdInstitution": "Free University of Bozen-Bolzano",
     "country": "United States",
     "portrait": "portraits/305-thuy-ngoc-nguyen-university-of-dayton.webp",
-    "portraitSource": "https://udayton.edu/directory/engineering/computerscience/images/nguyen-ngoc-2025.jpg"
+    "portraitSource": "https://udayton.edu/directory/engineering/computerscience/images/nguyen-ngoc-2025.jpg",
+    "websiteUrl": "https://ngocntkt.github.io/"
   },
   {
     "name": "Thanh Thai Nguyen",
@@ -8132,7 +8175,24 @@
     "country": "United States",
     "portrait": "portraits/307-tung-x-bui-university-of-hawai-i-at-manoa.webp",
     "portraitSource": "https://shidler.hawaii.edu/sites/shidler.hawaii.edu/files/styles/small_480/public/2026/08/txbui-ecis2026_0.jpeg?itok=t_0ie3Gv",
-    "msInstitution": "Stern, New York University"
+    "msInstitution": "University of Fribourg, Switzerland",
+    "msMajor": "Economics and Social Sciences",
+    "honors": [
+      {
+        "name": "Matson Navigation Company Chair of Global Business",
+        "category": "distinguished_professorship",
+        "organization": "University of Hawai'i at Manoa",
+        "source": "https://shidler.hawaii.edu/itm/directory/tung-x-bui",
+        "year": null
+      },
+      {
+        "name": "INFORMS College of Group Decision and Negotiation Lifetime Research Achievement Award",
+        "year": 2019,
+        "category": "major_award",
+        "organization": "INFORMS",
+        "source": "https://connect.informs.org/group-decision-and-negotiation/awards/gdn-award-recipients"
+      }
+    ]
   },
   {
     "name": "Hieu Tran",
@@ -8174,7 +8234,11 @@
     "phdInstitution": "University of Southern California",
     "country": "United States",
     "portrait": "portraits/309-matthew-bui-university-of-michigan.webp",
-    "portraitSource": "https://images.squarespace-cdn.com/content/v1/541b28ace4b0504622449b83/603ed1a9-b3e8-4a77-92c3-9950050ffc9a/UMSI_MatthewBui_03102023_07.jpg"
+    "portraitSource": "https://images.squarespace-cdn.com/content/v1/541b28ace4b0504622449b83/603ed1a9-b3e8-4a77-92c3-9950050ffc9a/UMSI_MatthewBui_03102023_07.jpg",
+    "msInstitution": "London School of Economics and Political Science",
+    "msMajor": "Media and Communication (Research)",
+    "undergradInstitution": "University of California, Los Angeles",
+    "undergradMajor": "Communication"
   },
   {
     "name": "Trân Huỳnh",
@@ -8198,7 +8262,11 @@
     "undergradInstitution": "University of Minnesota",
     "undergradYear": 2006,
     "portrait": "portraits/310-tran-huynh-university-of-minnesota.webp",
-    "portraitSource": "https://directory.sph.umn.edu/sites/directory.sph.umn.edu/files/2023-08/huynh-tran.jpg"
+    "portraitSource": "https://directory.sph.umn.edu/sites/directory.sph.umn.edu/files/2023-08/huynh-tran.jpg",
+    "msInstitution": "University of Minnesota",
+    "msYear": 2009,
+    "msMajor": "Environmental Health Sciences (MPH)",
+    "undergradMajor": "Microbiology"
   },
   {
     "name": "Hai Dang Nguyen - University of Minnesota",
@@ -8225,15 +8293,23 @@
         "category": "career_award",
         "organization": "American Association for Cancer Research",
         "source": "https://www.aacr.org/about-the-aacr/newsroom/news-releases/american-association-for-cancer-research-recognizes-2022-2023-research-grantees/"
+      },
+      {
+        "name": "EvansMDS Young Investigator Award",
+        "year": 2023,
+        "category": "career_award",
+        "organization": "Edward P. Evans Foundation (EvansMDS)",
+        "source": "https://evansmds.org/nguyen-hai-dang-ph-d-2023/"
       }
     ],
     "country": "United States",
     "portrait": "portraits/311-hai-dang-nguyen-university-of-minnesota-university-of-minnesota.webp",
-    "portraitSource": "https://med.umn.edu/sites/med.umn.edu/files/styles/bio_photo/public/web_profiles/2023-02/HaiDang%20Nguyen_Standard%20web.jpg?itok=YDm8Wi--"
+    "portraitSource": "https://med.umn.edu/sites/med.umn.edu/files/styles/bio_photo/public/web_profiles/2023-02/HaiDang%20Nguyen_Standard%20web.jpg?itok=YDm8Wi--",
+    "undergradInstitution": "The College of Wooster"
   },
   {
     "name": "Tuan D. Nguyen",
-    "profileUrl": "https://tuan-d-nguyen.github.io/home",
+    "profileUrl": "https://cehd.missouri.edu/person/tuan-nguyen/",
     "university": "University of Missouri",
     "city": "Columbia",
     "state": "Missouri",
@@ -8254,13 +8330,24 @@
         "category": "career_award",
         "organization": "National Science Foundation",
         "source": "https://ecrhub.org/ecr-projects?id=2237035"
+      },
+      {
+        "name": "Mizzou Forward Associate Professor",
+        "category": "distinguished_professorship",
+        "organization": "University of Missouri",
+        "source": "https://cehd.missouri.edu/person/tuan-nguyen/",
+        "year": null
       }
     ],
     "country": "United States",
     "portrait": "portraits/312-tuan-d-nguyen-university-of-missouri.webp",
     "portraitSource": "https://cehd.missouri.edu/wp-content/uploads/2024/07/Tuan-Nguyen-2024-web.jpg",
-    "undergradInstitution": "Washington University in St. Louis",
-    "undergradYear": 2006
+    "undergradInstitution": "University of Oklahoma",
+    "websiteUrl": "https://tuan-d-nguyen.github.io/home",
+    "undergradMajor": "Mathematics and Physics",
+    "msInstitution": "Washington University in St. Louis",
+    "msMajor": "Master of Arts in Teaching",
+    "phdInstitution": "Vanderbilt University"
   },
   {
     "name": "Nghiem Q. Huynh",
