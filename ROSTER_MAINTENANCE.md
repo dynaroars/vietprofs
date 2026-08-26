@@ -52,7 +52,7 @@ the information.
 
 First, search the canonical roster for the person. If they already have an entry, compare the
 linked information with the entry and update only information that is current, sufficiently
-supported, and permitted by the applicable data-entry, honors, and portrait rules. If they do not
+supported, and permitted by the applicable data-entry and honors rules. If they do not
 have an entry, verify their identity and eligibility against the inclusion standard before adding
 them. Do not add a person, portrait, degree, graduation detail, award, or other field merely
 because it appears at the supplied URL; each addition must independently satisfy the relevant
@@ -67,9 +67,9 @@ sounding name, as sufficient proof of identity or eligibility.
 
 Search the canonical roster for the person before making a change. For an existing entry, use
 reliable sources to identify eligible corrections or additions, such as a current appointment,
-profile URL, education, honors, or a permissible portrait. For a person not already in the
+profile URL, education, honors, or a portrait. For a person not already in the
 roster, independently verify every part of the inclusion standard before adding them. Apply the
-same data-entry, honors, portrait, and field-mapping rules as when reviewing a user-supplied
+same data-entry, honors, and field-mapping rules as when reviewing a user-supplied
 link.
 
 ## Data-entry rules
@@ -86,7 +86,7 @@ link.
 - Use the person's full published academic name only when an official profile or maintained academic homepage supplies it. Expand initials only with direct evidence.
 - Store `name` without Vietnamese diacritics and in First (Middle) Last order. This is a display normalization, not a claim about publishing name order.
 - Keep `secondaryAppointment: true` when the listed field is secondary or joint and the primary tenure home is elsewhere.
-- Preserve source URLs for profiles, honors, name evidence, and portraits. These URLs establish provenance, not redistribution rights.
+- Preserve source URLs for profiles, honors, name evidence, and portraits.
 
 ### Honors and awards eligibility
 
@@ -141,9 +141,53 @@ field list may not be exhaustive. If a department name is structurally ambiguous
 `department|university` entry in `FIELD_OVERRIDES` in `src/data.js` rather than broadening a
 regex.
 
-## Portraits and third-party content
 
-Public availability does not establish permission to redistribute an image. Do not assume that a university or personal-site portrait can be copied into the repository. Prefer images with clear permission or an applicable open license, retain provenance in `portraitSource`, and remove or replace assets when rights are unclear or a rights holder objects. See [`DATA-LICENSE.md`](./DATA-LICENSE.md).
+## Periodic full-roster refresh
+
+This is a separate, recurring task from the "Research workflow" above. That section covers
+finding and vetting *new* candidates. This section covers re-verifying *every existing* entry in
+`public/data.json`, since profiles go dead, people move institutions, ranks change, and new
+honors accrue over time. Run this when the user asks for a periodic roster refresh.
+
+Because it touches the whole roster, split the work into roughly 20 batches (about 35-40 people
+each, consecutive order is fine) and work one batch at a time. Track which batches are done (a
+scratch checklist file is fine) so the refresh can be resumed across sessions without re-doing
+work. Commit after each batch (or another reviewably small chunk) rather than as one giant diff,
+and run the validation checklist before each commit. Push each commit immediately after making
+it, then continue straight on to the next batch without stopping for confirmation in between —
+treat commit-and-push-per-batch as pre-authorized for this recurring task. Only pause if you hit
+a genuine blocker (for example, a validation failure you can't resolve, or a push that's
+rejected).
+
+Do this very thoroughly for each person and expect it to take a long time. Do not skip someone
+because their existing entry looks fine at a glance — confirm it live. For every person, in
+order:
+
+1. **Check for a dead `profileUrl`.** Fetch it and confirm it isn't a 404, a generic "not found"
+   page, a parked/default page, or a page that no longer identifies that specific person (site
+   redesigns and department reorganizations silently orphan old URLs). If it's dead or clearly
+   stale, search for the person's current official profile, at the same institution or a new one.
+   If they moved, update `university`, `field`, `rank`, and `track` to match; if they no longer
+   meet the inclusion standard (retired without emeritus status, left academia, moved to an
+   ineligible track, etc.), remove them and note why in the commit message.
+2. **Check for a real personal or lab website.** Independent of the university directory profile,
+   look for a currently maintained personal homepage or lab site. If one exists and `websiteUrl`
+   is missing or points somewhere stale, add or update it. `profileUrl` must remain the official
+   university/department page per the data-entry rules above — do not replace it with a personal
+   site unless the university profile no longer exists at all.
+3. **Visit the site(s) and update information thoroughly.** Read the official profile and any
+   personal/lab site fully, not just the first field that looks off. Update whatever has changed
+   since last verified: rank/track, `phdInstitution`/`phdYear` (only when explicitly stated, never
+   inferred), other documented degrees, `secondaryAppointment`, and honors/awards. Apply the same
+   Honors and awards eligibility rules as elsewhere — do not import a full CV award list, only
+   distinctions that meet the documented bar.
+4. **Watch for new candidates while you're there.** Coauthors, lab members who became faculty, or
+   other Vietnamese-diaspora names surfaced incidentally during this research are leads, not
+   confirmed additions. If you find a plausibly eligible new person, verify them independently
+   against the full inclusion standard and, if they qualify, add them with as much sourced detail
+   as you can gather (rank, track, degrees, honors, portrait) using the same
+   data-entry rules as any other addition. Don't let a promising lead stall progress on the
+   current batch — note it and come back if needed.
 
 ## Validation checklist
 
