@@ -10140,7 +10140,7 @@
   },
   {
     "name": "John Phan",
-    "profileUrl": "https://columbia.academia.edu/JohnPhan",
+    "profileUrl": "https://ealac.columbia.edu/content/john-phan",
     "university": "Columbia University",
     "city": "New York",
     "state": "New York",
@@ -10178,7 +10178,11 @@
     "rank": "Teaching",
     "country": "United States",
     "portrait": "portraits/395-phuong-chung-nguyen-columbia-university.webp",
-    "portraitSource": "https://ealac.columbia.edu/wp-content/uploads/2016/02/Chung-Nguyen-2026.png"
+    "portraitSource": "https://ealac.columbia.edu/wp-content/uploads/2016/02/Chung-Nguyen-2026.png",
+    "msInstitution": "Vietnam National University",
+    "msMajor": "Linguistics and Applied Linguistics",
+    "undergradInstitution": "Hanoi University",
+    "undergradMajor": "English Language and Culture"
   },
   {
     "name": "Quynh A. Truong",
@@ -10265,7 +10269,18 @@
     "phdInstitution": "University of California, Berkeley",
     "country": "United States",
     "portrait": "portraits/399-long-duy-nguyen-florida-gulf-coast-university.webp",
-    "portraitSource": "https://fgcucdn.fgcu.edu/directory/_images/lnguyen.jpg"
+    "portraitSource": "https://fgcucdn.fgcu.edu/directory/_images/lnguyen.jpg",
+    "undergradInstitution": "Ho Chi Minh City University of Technology",
+    "undergradMajor": "Civil Engineering",
+    "msInstitution": "University of California, Berkeley",
+    "msMajor": "Civil Engineering",
+    "otherDegrees": [
+      {
+        "degree": "Master's in Construction Engineering and Management",
+        "institution": "Asian Institute of Technology",
+        "source": "https://scholarscommons.fgcu.edu/esploro/profile/long_nguyen"
+      }
+    ]
   },
   {
     "name": "Andy V. Pham",
@@ -10310,7 +10325,24 @@
     "rank": "Professor",
     "country": "United States",
     "portrait": "portraits/401-tuyen-tom-nguyen-florida-international-university.webp",
-    "portraitSource": "https://medicine.fiu.edu/_assets/images/headshots/tom-nguyen-500.jpg"
+    "portraitSource": "https://medicine.fiu.edu/_assets/images/headshots/tom-nguyen-500.jpg",
+    "otherDegrees": [
+      {
+        "degree": "M.D.",
+        "institution": "Johns Hopkins University School of Medicine",
+        "year": 2002,
+        "source": "https://medicine.fiu.edu/about/faculty-and-staff/profiles/tom-nguyen-m.d.html"
+      }
+    ],
+    "honors": [
+      {
+        "name": "Barry T. Katzen Endowed Chair",
+        "category": "distinguished_professorship",
+        "organization": "Florida International University",
+        "source": "https://medicine.fiu.edu/about/faculty-and-staff/profiles/tom-nguyen-m.d.html",
+        "year": null
+      }
+    ]
   },
   {
     "name": "Anh Pham",
@@ -10423,9 +10455,10 @@
     "phdYear": 2008,
     "phdInstitution": "University of Minnesota",
     "country": "United States",
-    "undergradInstitution": "Institute of Technology",
+    "undergradInstitution": "University of Arizona",
     "portrait": "portraits/406-truong-duong-iowa-state-university.webp",
-    "portraitSource": "https://www.ivybusiness.iastate.edu/files/directory/tduong.jpg"
+    "portraitSource": "https://www.ivybusiness.iastate.edu/files/directory/tduong.jpg",
+    "undergradYear": 2002
   },
   {
     "name": "Lan Ngo",
@@ -10440,12 +10473,14 @@
       "Asian American Studies"
     ],
     "secondaryAppointment": false,
-    "track": "Tenure-line",
+    "track": "Teaching",
     "department": "Asian and Asian American Studies",
-    "rank": "Professor",
+    "rank": "Teaching",
     "country": "United States",
     "portrait": "portraits/407-lan-ngo-loyola-marymount-university.webp",
-    "portraitSource": "https://scholars.lmu.edu/files-asset/41798372/img_4967.jpg/"
+    "portraitSource": "https://scholars.lmu.edu/files-asset/41798372/img_4967.jpg/",
+    "phdInstitution": "Georgetown University",
+    "msInstitution": "University of California, Berkeley"
   },
   {
     "name": "John Bui",
@@ -10504,13 +10539,17 @@
     "portrait": "portraits/410-nam-t-vu-miami-university.webp",
     "portraitSource": "https://web.archive.org/web/20230922073225im_/https://www.namtvu.com/uploads/2/4/4/8/24481604/2416950.jpg",
     "phdInstitution": "Vanderbilt University",
-    "phdYear": 2012,
-    "undergradInstitution": "Vanderbilt University",
-    "undergradYear": 2010
+    "phdYear": 2015,
+    "undergradInstitution": "Wittenberg University",
+    "undergradYear": 2010,
+    "undergradMajor": "Mathematics and Economics",
+    "msInstitution": "Vanderbilt University",
+    "msYear": 2012,
+    "msMajor": "Economics"
   },
   {
     "name": "Quang Ngoc Vinh Tran",
-    "profileUrl": "https://www.mtu.edu/marc/people/members/",
+    "profileUrl": "https://www.mtu.edu/cege/people/faculty-staff/faculty/tran/",
     "university": "Michigan Technological University",
     "city": "Houghton",
     "state": "Michigan",
@@ -10576,7 +10615,7 @@
   },
   {
     "name": "Mai Van Tran",
-    "profileUrl": "https://www.vanmaitran.com/",
+    "profileUrl": "https://www.niu.edu/clas/polisci/about/faculty-staff/tran.shtml",
     "university": "Northern Illinois University",
     "city": "DeKalb",
     "state": "Illinois",
@@ -10594,7 +10633,8 @@
     "phdInstitution": "Cornell University",
     "country": "United States",
     "portrait": "portraits/414-mai-van-tran-northern-illinois-university.webp",
-    "portraitSource": "https://www.niu.edu/clas/polisci/_images/faculty-staff/van-tran.jpg"
+    "portraitSource": "https://www.niu.edu/clas/polisci/_images/faculty-staff/van-tran.jpg",
+    "websiteUrl": "https://www.vanmaitran.com/"
   },
   {
     "name": "Keva X. Bui",
@@ -10781,7 +10821,8 @@
     "phdInstitution": "Louisiana State University",
     "country": "United States",
     "portrait": "portraits/423-thao-bui-queens-college-city-university-of-new-york.webp",
-    "portraitSource": "https://www.qc.cuny.edu/academics/economics/wp-content/uploads/sites/252/2023/11/Bui_s-150x150.jpg"
+    "portraitSource": "https://www.qc.cuny.edu/academics/economics/wp-content/uploads/sites/252/2023/11/Bui_s-150x150.jpg",
+    "websiteUrl": "https://sites.google.com/view/thaobui/home"
   },
   {
     "name": "Thanh Tran",
@@ -10914,7 +10955,7 @@
     "rank": "Professor",
     "phdInstitution": "University of California, Santa Barbara",
     "country": "United States",
-    "undergradInstitution": "University of California, Santa Barbara",
+    "undergradInstitution": "University of Minnesota",
     "portrait": "portraits/429-nicholas-q-tran-santa-clara-university.webp",
     "portraitSource": "https://www.scu.edu/media/college-of-arts-and-sciences/math-and-cs/faculty-amp-staff/Tran2022.JPG"
   },
@@ -10938,7 +10979,15 @@
     "phdInstitution": "Portland State University",
     "country": "United States",
     "portrait": "portraits/430-dat-tran-s-j-santa-clara-university.webp",
-    "portraitSource": "https://www.scu.edu/media/school-of-engineering/photos/faculty-staff/AH405474.jpg"
+    "portraitSource": "https://www.scu.edu/media/school-of-engineering/photos/faculty-staff/AH405474.jpg",
+    "otherDegrees": [
+      {
+        "degree": "M.Div.",
+        "institution": "Jesuit School of Theology at Santa Clara",
+        "year": 2009,
+        "source": "https://www.scu.edu/engineering/faculty/fr-dat-tran-s-j/"
+      }
+    ]
   },
   {
     "name": "Teri Hong-Phuc Nguyen",

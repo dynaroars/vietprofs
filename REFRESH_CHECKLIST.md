@@ -14,7 +14,7 @@ ROSTER_MAINTENANCE.md §"Periodic full-roster refresh", committed, and pushed.
 - [x] Batch 08: indices 273-311
 - [x] Batch 09: indices 312-350
 - [x] Batch 10: indices 351-389
-- [ ] Batch 11: indices 390-428
+- [x] Batch 11: indices 390-428
 - [ ] Batch 12: indices 429-467
 - [ ] Batch 13: indices 468-506
 - [ ] Batch 14: indices 507-545
@@ -26,6 +26,18 @@ ROSTER_MAINTENANCE.md §"Periodic full-roster refresh", committed, and pushed.
 - [ ] Batch 20: indices 741-771
 
 ## Notes / leads found while working (not yet added)
+
+- Batch 11: index 405 (Lan Ngo, LMU) — track corrected Tenure-line→Teaching, rank
+  Professor→Teaching. Official scholars.lmu.edu profile states "Clinical Assistant Professor"
+  (since 2018), not "Professor"; LMU's Faculty Handbook confirms Clinical Faculty is
+  non-tenure-track full-time. This was a significant pre-existing data error, not a rank change
+  over time.
+- Batch 11: index 421 (Thao Bui, Queens College CUNY) — profileUrl remains the department's
+  faculty-staff list page; no individual profile page exists for her there. Added her personal
+  site (sites.google.com/view/thaobui/home) as websiteUrl instead.
+- Batch 11: index 292/306/307-style blocked-fetch pattern recurred for Kim-Phuong Le (Rutgers,
+  SSL cert error on chem.rutgers.edu) — resolved this time via curl -k rather than left as an
+  open lead.
 
 - Batch 10: Tin Nguyen (originally listed "Tin Nguyen - Auburn University", index ~363) —
   removed as a duplicate. He moved Auburn -> Wayne State University and was promoted to
