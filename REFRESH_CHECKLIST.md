@@ -12,7 +12,7 @@ ROSTER_MAINTENANCE.md §"Periodic full-roster refresh", committed, and pushed.
 - [x] Batch 06: indices 195-233
 - [x] Batch 07: indices 234-272
 - [x] Batch 08: indices 273-311
-- [ ] Batch 09: indices 312-350
+- [x] Batch 09: indices 312-350
 - [ ] Batch 10: indices 351-389
 - [ ] Batch 11: indices 390-428
 - [ ] Batch 12: indices 429-467
@@ -26,6 +26,15 @@ ROSTER_MAINTENANCE.md §"Periodic full-roster refresh", committed, and pushed.
 - [ ] Batch 20: indices 741-771
 
 ## Notes / leads found while working (not yet added)
+
+- Batch 09: index 336 (Hung M. Nguyen, George Mason) — profileUrl remains a PDF
+  (faculty-emeriti.pdf) since no cleaner official GMU Schar School page was found; search
+  corroborates Professor Emeritus of Government and International Relations. Worth swapping to
+  a proper page if one turns up later.
+- Batch 09: index 346 (Tina I. Bui-Bullock, UAB Pathology) — profileUrl swapped from a news
+  article to the official pathology faculty list page (https://www.uab.edu/medicine/pathology/faculty),
+  which does list her but has no clickable per-person link; there may not be an individual
+  profile page for her yet since she just joined.
 
 - Batch 05: index 176 (Viet Tuan Pham, Susquehanna) — current profileUrl uses an old CMS
   URL pattern; couldn't confirm liveness directly (403/no-fetch). Possible live alternates seen
