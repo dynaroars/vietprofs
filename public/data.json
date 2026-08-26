@@ -1,7 +1,7 @@
 [
   {
     "name": "Hieu Bui",
-    "profileUrl": "https://engineering.catholic.edu/research-and-faculty/faculty-profiles/computer-science/hieu-bui/buiresearch/index.html",
+    "profileUrl": "https://engineering.catholic.edu/research-and-faculty/faculty-profiles/computer-science/hieu-bui/index.html",
     "scholarUrl": "https://scholar.google.com/citations?user=WnLT-rcAAAAJ",
     "university": "Catholic University of America",
     "city": "Washington",
@@ -45,7 +45,8 @@
     "portrait": "portraits/002-tommy-dang-texas-tech-university.webp",
     "portraitSource": "https://www.depts.ttu.edu/cs/faculty/tommy_dang/Tommy_Dang-600x-cropped.jpg",
     "msInstitution": "University of Illinois at Chicago",
-    "msYear": 2009
+    "msYear": 2009,
+    "websiteUrl": "https://www.myweb.ttu.edu/tnhondan/"
   },
   {
     "name": "Tri Dao",
@@ -133,6 +134,13 @@
         "category": "career_award",
         "organization": "National Science Foundation",
         "source": "https://experts.illinois.edu/en/persons/minh-n-do/"
+      },
+      {
+        "name": "Thomas and Margaret Huang Endowed Professor",
+        "year": null,
+        "category": "distinguished_professorship",
+        "organization": "University of Illinois Urbana-Champaign",
+        "source": "https://minhdo.ece.illinois.edu/"
       }
     ],
     "portrait": "portraits/005-minh-n-do-university-of-illinois-at-urbana-champaign.webp",
@@ -193,6 +201,20 @@
         "year": 2004,
         "category": "career_award",
         "organization": "National Science Foundation",
+        "source": "https://pages.cs.wisc.edu/~anhai/"
+      },
+      {
+        "name": "Gurindar S. Sohi Professor",
+        "year": 2020,
+        "category": "distinguished_professorship",
+        "organization": "University of Wisconsin-Madison",
+        "source": "https://pages.cs.wisc.edu/~anhai/"
+      },
+      {
+        "name": "Vilas Distinguished Achievement Professor",
+        "year": 2018,
+        "category": "distinguished_professorship",
+        "organization": "University of Wisconsin-Madison",
         "source": "https://pages.cs.wisc.edu/~anhai/"
       }
     ],
@@ -400,7 +422,7 @@
   },
   {
     "name": "Ngan Hoang Le",
-    "profileUrl": "https://news.uark.edu/articles/77380",
+    "profileUrl": "https://engineering.uark.edu/electrical-engineering-computer-science/electrical-engineering-faculty/uid/thile/name/Thi+Hoang+Ngan+Le/",
     "scholarUrl": "https://scholar.google.com/citations?user=8ck0k_UAAAAJ",
     "university": "University of Arkansas",
     "city": "Fayetteville",
@@ -595,7 +617,7 @@
     ],
     "secondaryAppointment": false,
     "track": "Tenure-line",
-    "department": "Computer Science",
+    "department": "Electrical Engineering and Computer Sciences",
     "rank": "Professor",
     "phdYear": 1994,
     "phdInstitution": "University of California, Berkeley",
@@ -607,6 +629,20 @@
         "category": "fellow",
         "organization": "IEEE",
         "source": "https://ieee-uffc.org/node/1137"
+      },
+      {
+        "name": "Conexant Distinguished Professor",
+        "year": null,
+        "category": "distinguished_professorship",
+        "organization": "University of California, Berkeley",
+        "source": "https://bsac.berkeley.edu/people/clark-t-c-nguyen"
+      },
+      {
+        "name": "IEEE Robert Bosch Micro and Nano Electro Mechanical Systems Award",
+        "year": 2017,
+        "category": "major_award",
+        "organization": "IEEE",
+        "source": "https://bsac.berkeley.edu/people/clark-t-c-nguyen"
       }
     ],
     "portrait": "portraits/022-clark-t-c-nguyen-university-of-california-berkeley.webp",
@@ -896,7 +932,6 @@
     "phdYear": 2018,
     "phdInstitution": "New York University",
     "country": "United States",
-    "phdMajor": "Student at Illinois",
     "honors": [
       {
         "name": "NSF CAREER Award",
@@ -936,7 +971,8 @@
       }
     ],
     "portrait": "portraits/034-thinh-nguyen-oregon-state-university-oregon-state-university.webp",
-    "portraitSource": "https://web.engr.oregonstate.edu/~thinhq/nguyen.jpg"
+    "portraitSource": "https://web.engr.oregonstate.edu/~thinhq/nguyen.jpg",
+    "undergradInstitution": "University of Washington"
   },
   {
     "name": "Thu Duc Nguyen",
