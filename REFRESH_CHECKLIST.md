@@ -98,9 +98,70 @@ ROSTER_MAINTENANCE.md §"Periodic full-roster refresh", committed, and pushed.
 
       Several other generic-list-page profileUrls in this batch could not be independently
       upgraded without a working search engine — left unchanged and logged below.
-- [ ] Batch 19: continue right after "Hoa Nguyen - Australian National University" (Australian
-      National University)
-- [ ] Batch 20
+- [x] Batch 19: verified "Anh Nguyen - The University of Queensland" through "Duy Duong-Tran"
+      (United States Naval Academy) — 39 people, mostly Australia/UK plus a run of US entries.
+      No removals; array order unchanged. Next batch continues right after "Duy Duong-Tran".
+
+      This session's WebSearch budget was fully exhausted (0 available all batch); verification
+      relied on direct curl fetches (real desktop user agent), a legacy-TLS-renegotiation
+      workaround (`OPENSSL_CONF` enabling `UnsafeLegacyRenegotiation`) for one Adelaide page that
+      otherwise failed the TLS handshake, Wayback Machine snapshots for two persistently
+      bot-blocked/dead pages, and WebFetch as a fallback for JS-rendered/blocked pages.
+
+      Continued the Australian/UK rank-vocabulary normalization from batches 15-18: "Senior
+      Lecturer" → Associate Professor (Ngoc Nguyen/UQ, Thao Nguyen/Adelaide); UK "Lecturer in X"
+      → Assistant Professor (Cung Nguyen/Salford, Emma Nguyen/Newcastle, Kim Nguyen &
+      Thach Nguyen/Sheffield, Duy Tan Nguyen/Greenwich, Maya Nguyen/SOAS); raw Teaching-track
+      titles → plain "Teaching" (Natalie (Nhung) Le/Melbourne, Quinn Nguyen/Flinders, Andy
+      Tran/Sydney, Linh Tran/Monash, Ruby-Ngoc Nhu Nguyen/Sydney).
+
+      New case: Quyen Nguyen (Brunel University London) — track corrected Tenure-line→Teaching,
+      rank corrected "Lecturer (Education)"→"Teaching". Brunel's "(Education)" suffix denotes the
+      teaching-focused promotion pathway (parallel to the research-focused "Lecturer" track), not
+      a research-track tenure-line role — same category-error pattern as batch 11's Lan Ngo (LMU)
+      finding, just a UK-specific label this time.
+
+      New case: Van H. Vu (University of Hong Kong) — rank corrected "Chair Professor"→
+      "Professor". His HKU page reads "Professor, Chair of Mathematics" — he holds the
+      *administrative* department chair, not the *honorific* "Chair Professor" title; the old
+      data had conflated the two. No honor added since department headship isn't a distinguished
+      professorship.
+
+      Fixed 1 dead profileUrl: Caroline Cao (Wright State) — old lab-page URL 404s; confirmed
+      still on faculty via the university's live people-directory page
+      (people.wright.edu/caroline.cao), swapped in as the new profileUrl.
+
+      3 open leads logged below rather than guessed at: Hai T. Tran (Point Park) has a dead
+      profileUrl with no live or archived replacement found; Trung Le (NDSU) profileUrl 403s live
+      but was confirmed correct via a May 2025 Wayback snapshot and his working lab site; Jane X.
+      Luu (Tufts) and Xuan Thuan Trinh (UVA) both still resolve to stale news-article URLs rather
+      than proper directory profiles, with no replacement found this pass.
+- [ ] Batch 20: continue in `public/data.json` file order starting right after "Duy Duong-Tran"
+      (United States Naval Academy) — this should be the final batch, reaching the end of the file.
+
+## Batch 19 notes / leads
+
+- Hai T. Tran (Point Park University, Natural Sciences and Engineering Technology) —
+  `profileUrl` now 404s. No Wayback Machine snapshot exists for that exact URL (checked via the
+  CDX API), and a Point Park site-search fetch for his name returned nothing. Left the entry
+  unchanged (not removed — a dead link alone doesn't establish he's left) pending either a
+  working search engine or a direct department-page crawl to find a live replacement URL, or
+  confirmation he's departed.
+- Trung Le (North Dakota State University, Civil, Construction and Environmental Engineering) —
+  `profileUrl` returns 403 on every fetch attempt (both plain curl and WebFetch), consistent with
+  bot-blocking rather than a dead page. Confirmed via a Wayback Machine snapshot from 2025-05-14
+  that the page was live then and matches the current data exactly (Associate Professor, same
+  PhD/MS/BS institutions, same personal lab site). Left `profileUrl` unchanged; worth a direct
+  re-check once the block clears.
+- Jane X. Luu (Tufts University, Physics and Astronomy) — `profileUrl` is a 2022-2023
+  faculty-news archive page, not a directory profile page; confirmed live and still identifies
+  her as "Lecturer in Physics and Astronomy" as of a March 2023 article. Couldn't find a proper
+  Tufts physics-department profile URL this pass (department people page returned no result via
+  direct fetch). Left unchanged; worth finding the actual directory page later.
+- Xuan Thuan Trinh (University of Virginia, Astronomy) — `profileUrl` is a 2022 UVA news
+  article, not a directory page; confirmed live and still identifies him as "Professor Trinh
+  Xuan Thuan." The UVA astronomy faculty listing page 404'd when checked directly. Left
+  unchanged; worth finding the actual directory page later.
 
 ## Batch 18 notes / leads
 
