@@ -13,7 +13,7 @@ ROSTER_MAINTENANCE.md §"Periodic full-roster refresh", committed, and pushed.
 - [x] Batch 07: indices 234-272
 - [x] Batch 08: indices 273-311
 - [x] Batch 09: indices 312-350
-- [ ] Batch 10: indices 351-389
+- [x] Batch 10: indices 351-389
 - [ ] Batch 11: indices 390-428
 - [ ] Batch 12: indices 429-467
 - [ ] Batch 13: indices 468-506
@@ -26,6 +26,33 @@ ROSTER_MAINTENANCE.md §"Periodic full-roster refresh", committed, and pushed.
 - [ ] Batch 20: indices 741-771
 
 ## Notes / leads found while working (not yet added)
+
+- Batch 10: Tin Nguyen (originally listed "Tin Nguyen - Auburn University", index ~363) —
+  removed as a duplicate. He moved Auburn -> Wayne State University and was promoted to
+  Professor; a correct, up-to-date "Tin Nguyen - Wayne State University" entry already existed
+  earlier in the roster (added in a prior batch as an incidental new-candidate lead without the
+  old Auburn entry being cleaned up). Confirm no other similar stale-duplicate pairs exist from
+  earlier batches' incidental additions.
+- Batch 10: Trent Nguyen (CSUF Human Services) — could not find him on the department's
+  current full-time or part-time faculty listings; only source is an old (~2004) Daily Titan
+  article describing him as a new assistant professor. Left unchanged (existing entry, not
+  newly added) pending a clearer current source — needs direct confirmation he's still on
+  faculty, and if so, at what rank.
+- Batch 10: Truyen D. Nguyen (CSUF Human Services) — profileUrl swapped to
+  itwebstg.fullerton.edu/husr/faculty/TruyenNguyen.php (a staging-looking but live URL; no
+  cleaner production URL found). Note the old portraitSource file was literally named
+  "TrentNguyen.jpg" even though this is a different, distinct person from Trent Nguyen per two
+  separate search-corroborated bios (different PhD focus/backstory) — likely just a scraper
+  filename mixup, not a duplicate identity, but worth a second look.
+- Batch 10: Nga Nguyen (CSUF Anthropology, primatologist) — anthro.fullerton.edu and
+  hss.fullerton.edu both returned HTTP 500 site-wide during this pass (not specific to her
+  page); left profileUrl unchanged since her appointment is well-corroborated via search
+  (Fulbright Scholar, ResearchGate, etc.) and the outage looks transient. Re-check the URL
+  resolves on a future pass.
+- Batch 10: Boone Nguyen (CSULA, Lecturer/Teaching) — pre-existing entry; "Lecturer" title
+  alone doesn't confirm the full-time/continuing permanence the Teaching track requires, and no
+  source found explicitly stating full-time/continuing status. Left unchanged (not newly
+  added) but worth verifying his appointment type directly on a future pass.
 
 - Batch 09: index 336 (Hung M. Nguyen, George Mason) — profileUrl remains a PDF
   (faculty-emeriti.pdf) since no cleaner official GMU Schar School page was found; search

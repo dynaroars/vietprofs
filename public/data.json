@@ -9374,12 +9374,21 @@
     "country": "United States",
     "undergradYear": 1991,
     "undergradInstitution": "Saint Mary's University of Minnesota",
+    "honors": [
+      {
+        "name": "Blanche E. Seaver Professor of Humanities and Teacher Education",
+        "year": 2022,
+        "category": "distinguished_professorship",
+        "organization": "Pepperdine University, Seaver College",
+        "source": "https://seaver.pepperdine.edu/academics/faculty/tuan-hoang/"
+      }
+    ],
     "portrait": "portraits/358-tuan-hoang-pepperdine-university.webp",
     "portraitSource": "https://seaver.pepperdine.edu/academics/faculty/images/tuan-hoang.jpg"
   },
   {
     "name": "Paul Anh Tran-Hoang",
-    "profileUrl": "https://www.haverford.edu/college-communications/news/haverford-college-welcomes-six-new-faculty-members-1",
+    "profileUrl": "https://www.haverford.edu/users/ptranhoang",
     "university": "Haverford College",
     "city": "Haverford",
     "state": "Pennsylvania",
@@ -9393,14 +9402,16 @@
     "track": "Tenure-line",
     "department": "Philosophy",
     "rank": "Assistant Professor",
+    "phdYear": 2020,
     "phdInstitution": "University of Notre Dame",
     "country": "United States",
+    "websiteUrl": "https://paultranhoang.github.io/",
     "portrait": "portraits/359-paul-anh-tran-hoang-haverford-college.webp",
     "portraitSource": "https://www.haverford.edu/sites/default/files/styles/profile_thumbnail/public/Department/Philosophy/philosophy_paul_tran-hoang.jpg"
   },
   {
     "name": "Cao Le",
-    "profileUrl": "https://content.sitemasonry.gmu.edu/profiles/le-cao",
+    "profileUrl": "https://business.gmu.edu/profiles/le-cao",
     "university": "George Mason University",
     "city": "Fairfax",
     "state": "Virginia",
@@ -9508,38 +9519,6 @@
     "portraitSource": "https://webapp4.asu.edu/photo-ws/directory_photo/linhvu?size=medium&break=1787459071&blankImage2=1"
   },
   {
-    "name": "Tin Nguyen - Auburn University",
-    "profileUrl": "https://tinnguyen-lab.com//home/",
-    "university": "Auburn University",
-    "city": "Auburn",
-    "state": "Alabama",
-    "researchAreas": [
-      "Data Science",
-      "Machine Learning",
-      "Disease Subtyping",
-      "Single-Cell Analysis"
-    ],
-    "secondaryAppointment": false,
-    "track": "Tenure-line",
-    "department": "Computer Science and Software Engineering",
-    "rank": "Associate Professor",
-    "phdInstitution": "Wayne State University",
-    "country": "United States",
-    "undergradInstitution": "Eotvos Lorand University",
-    "honors": [
-      {
-        "name": "NSF CAREER Award",
-        "year": 2022,
-        "category": "career_award",
-        "organization": "National Science Foundation",
-        "source": "https://tinnguyen-lab.com/home/news/nsf_career/"
-      }
-    ],
-    "portrait": "portraits/365-tin-nguyen-auburn-university-auburn-university.webp",
-    "portraitSource": "https://eng.auburn.edu/images/programs/csse/headshots/nguyen-tin.jpg",
-    "msInstitution": "Eotvos Lorand University"
-  },
-  {
     "name": "Hoang Van Pham",
     "profileUrl": "https://hankamer.baylor.edu/person/van-h-pham",
     "university": "Baylor University",
@@ -9558,6 +9537,10 @@
     "phdYear": 1998,
     "phdInstitution": "Cornell University",
     "country": "United States",
+    "msInstitution": "Massachusetts Institute of Technology",
+    "msYear": 1992,
+    "undergradInstitution": "Massachusetts Institute of Technology",
+    "undergradYear": 1989,
     "portrait": "portraits/366-pham-hoang-van-baylor-university.webp",
     "portraitSource": "https://hankamer.baylor.edu/sites/g/files/ecbvkj336/files/styles/xl/public/2025-09/Van%20Pham.jpg?itok=dqm8tmpD"
   },
@@ -9580,6 +9563,8 @@
     "rank": "Assistant Professor",
     "phdInstitution": "University of California, Los Angeles",
     "country": "United States",
+    "msInstitution": "Columbia University",
+    "undergradInstitution": "University of California, Los Angeles",
     "portrait": "portraits/367-phuongthao-dinh-le-boston-university.webp",
     "portraitSource": "https://profiles.bu.edu/profile/Modules/CustomViewPersonGeneralInfo/PhotoHandler.ashx?NodeID=23174294&cachekey=9fc8a6b8-1240-4723-b8e7-72750ddcb2b8"
   },
@@ -9642,7 +9627,7 @@
   },
   {
     "name": "Tuan Tran - California Northstate University",
-    "profileUrl": "https://www.cnsu.edu/directory/",
+    "profileUrl": "https://pharmacy.cnsu.edu/directory/bios/tuan-tran.php",
     "university": "California Northstate University",
     "city": "Elk Grove",
     "state": "California",
@@ -9653,7 +9638,9 @@
     "secondaryAppointment": false,
     "track": "Tenure-line",
     "department": "Clinical and Administrative Sciences, College of Pharmacy",
-    "rank": "Associate Professor",
+    "rank": "Assistant Professor",
+    "phdYear": 2010,
+    "phdInstitution": "Oregon State University",
     "country": "United States",
     "portrait": "portraits/370-tuan-tran-california-northstate-university.webp",
     "portraitSource": "https://pharmacy.cnsu.edu/images/headshots/Tuan-Tran.jpg"
@@ -9681,7 +9668,7 @@
   },
   {
     "name": "Hannah Nguyen",
-    "profileUrl": "https://catalog.csudh.edu/general-information/faculty/faculty.pdf",
+    "profileUrl": "https://www.csudh.edu/human-services/faculty-staff/",
     "university": "California State University, Dominguez Hills",
     "city": "Carson",
     "state": "California",
@@ -9701,7 +9688,7 @@
   },
   {
     "name": "Paul Duong Tran",
-    "profileUrl": "https://www.csudh.edu/academic-affairs/provost/budget-policies/budget-council/",
+    "profileUrl": "https://www.csudh.edu/social-work/facultystaff/paul-duongtran",
     "university": "California State University, Dominguez Hills",
     "city": "Carson",
     "state": "California",
@@ -9713,6 +9700,7 @@
     "track": "Tenure-line",
     "department": "Social Work",
     "rank": "Professor",
+    "phdInstitution": "University of Washington",
     "country": "United States"
   },
   {
@@ -9775,6 +9763,8 @@
     "rank": "Professor",
     "phdInstitution": "University of California, Riverside",
     "country": "United States",
+    "undergradInstitution": "University of San Diego",
+    "msInstitution": "California State University, Long Beach",
     "portrait": "portraits/376-angela-minhtu-d-nguyen-california-state-university-fullerton.webp",
     "portraitSource": "https://psychology.fullerton.edu/_resources/images/faculty/AMNguyen.JPG"
   },
@@ -9837,7 +9827,7 @@
   },
   {
     "name": "Truyen D. Nguyen",
-    "profileUrl": "https://hhd.fullerton.edu/husr/_resources/pdfs/degree/25-26%20HIGHLIGHTS%20OF%20HUMAN%20SERVICES.pdf",
+    "profileUrl": "https://itwebstg.fullerton.edu/husr/faculty/TruyenNguyen.php",
     "university": "California State University, Fullerton",
     "city": "Fullerton",
     "state": "California",
@@ -9849,7 +9839,8 @@
     "track": "Tenure-line",
     "department": "Human Services",
     "rank": "Professor",
-    "phdInstitution": "University of Texas",
+    "phdInstitution": "University of Texas at Arlington",
+    "undergradInstitution": "University of Texas at Arlington",
     "country": "United States",
     "portrait": "portraits/380-truyen-d-nguyen-california-state-university-fullerton.webp",
     "portraitSource": "http://hhd.fullerton.edu/husr/_images/faculty/TrentNguyen.jpg"
@@ -9906,6 +9897,7 @@
     "rank": "Professor",
     "phdInstitution": "University of California, Los Angeles",
     "country": "United States",
+    "undergradInstitution": "Pomona College",
     "portrait": "portraits/383-lisa-tran-california-state-university-fullerton.webp",
     "portraitSource": "https://hist.fullerton.edu/faculty_staff/faculty_staff_images/Tran_Directory.jpeg"
   },
@@ -9966,6 +9958,8 @@
     "department": "Asian and Asian American Studies",
     "rank": "Lecturer",
     "country": "United States",
+    "undergradInstitution": "Yale University",
+    "msInstitution": "University of California, San Diego",
     "portrait": "portraits/766-boone-nguyen-california-state-university-los-angeles.webp",
     "portraitSource": "https://www.calstatela.edu/sites/default/files/styles/cards__329x231_/public/Boone-7.png?itok=omSQ91KE"
   },
@@ -9990,7 +9984,7 @@
   },
   {
     "name": "Phung Huynh",
-    "profileUrl": "https://experts.calstatela.edu/expertise/social-justice-and-art/",
+    "profileUrl": "https://experts.calstatela.edu/expert/phung-huynh/",
     "university": "California State University, Los Angeles",
     "city": "Los Angeles",
     "state": "California",
@@ -10023,7 +10017,6 @@
     "rank": "Emeritus",
     "phdInstitution": "University of California, Los Angeles",
     "country": "United States",
-    "phdYear": 1950,
     "msInstitution": "University of Illinois",
     "msYear": 1957,
     "undergradInstitution": "University of Illinois",
@@ -10031,7 +10024,7 @@
   },
   {
     "name": "Que-Lam Huynh",
-    "profileUrl": "https://www.csun.edu/social-behavioral-sciences/psychology/faculty-staff/full-time-faculty",
+    "profileUrl": "https://academics.csun.edu/faculty/quelam.huynh",
     "university": "California State University, Northridge",
     "city": "Northridge",
     "state": "California",
@@ -10048,12 +10041,17 @@
     "phdYear": 2009,
     "phdInstitution": "University of California, Riverside",
     "country": "United States",
+    "undergradInstitution": "University of San Diego",
+    "undergradYear": 2002,
+    "msInstitution": "California State University, Long Beach",
+    "msYear": 2004,
+    "websiteUrl": "http://www.csun.edu/~qhuynh",
     "portrait": "portraits/389-que-lam-huynh-california-state-university-northridge.webp",
     "portraitSource": "https://live-csu-northridge.pantheonsite.io/sites/default/files/2024-08/PSY-que-lam-huynh-300x300-IXLA.jpg"
   },
   {
     "name": "Virginia Huynh",
-    "profileUrl": "https://www.csun.edu/csun-experts-directory/experts-directory-l-m/experts-directory-minorities-general",
+    "profileUrl": "https://academics.csun.edu/faculty/virginia.huynh",
     "university": "California State University, Northridge",
     "city": "Northridge",
     "state": "California",
@@ -10067,7 +10065,10 @@
     "track": "Tenure-line",
     "department": "Child and Adolescent Development",
     "rank": "Professor",
+    "phdYear": 2011,
     "phdInstitution": "University of California, Los Angeles",
+    "undergradInstitution": "Loyola Marymount University",
+    "undergradYear": 2005,
     "country": "United States",
     "portrait": "portraits/390-virginia-huynh-california-state-university-northridge.webp",
     "portraitSource": "https://csun-metalab-clouddrive.s3-us-west-2.amazonaws.com/media/faculty/virginia.huynh/avatar.jpg"
