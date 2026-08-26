@@ -185,13 +185,11 @@ periodic refresh is run, start a fresh batch plan from index 0 rather than resum
 
 ## Batch 20 notes / leads
 
-- Nhung Nguyen (University of California, San Francisco, Medicine) — official UCSF profile
-  states "Assistant Adjunct Professor." This is a real, continuing UC faculty series (not a
-  part-time/term appointment in the colloquial sense), but ROSTER_MAINTENANCE.md's inclusion
-  standard literally excludes "adjunct" titles, and "Adjunct" doesn't map cleanly to any of
-  Tenure-line/Teaching/Emeritus. Left unchanged rather than removed — this needs either a
-  ROSTER_MAINTENANCE.md clarification on how to treat the UC Adjunct/In-Residence series
-  specifically, or a deliberate human call, not a unilateral removal during a routine refresh.
+- RESOLVED (post-refresh): Nhung Nguyen (University of California, San Francisco, Medicine) —
+  official UCSF profile states "Assistant Adjunct Professor." Referred to the user as a
+  policy question (a real, continuing UC faculty series, but the inclusion standard literally
+  excludes "adjunct" titles and this doesn't map to Tenure-line/Teaching/Emeritus). User decided
+  to keep excluding by the word "adjunct" per the existing standard — entry removed.
 - Jean Tran Thanh Van (Caltech, Emeritus) — no live Caltech directory page could be found
   (pma.caltech.edu and directory.caltech.edu both 404 for his name); the only profileUrl on file
   is a 2012 newsline.linearcollider.org article. He's extremely notable and clearly still active
