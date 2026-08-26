@@ -69,10 +69,71 @@ ROSTER_MAINTENANCE.md §"Periodic full-roster refresh", committed, and pushed.
       pages that block direct fetches (403/Cloudflare) were instead verified via recent Wayback
       Machine snapshots (Jan/Jul 2026) rather than live search corroboration — noted per-person
       below where relevant.
-- [ ] Batch 18: continue right after "Martino Tran" (next person: Kim Chi Nguyen, University of
-      British Columbia)
-- [ ] Batch 19
+- [x] Batch 18: verified "Kim Chi Nguyen" (UBC) through "Hoa Nguyen - Australian National
+      University" (39 people, Canada + Singapore + Australia). No removals; array order
+      unchanged.
+
+      This session's WebSearch budget was fully exhausted for this batch (200/200), and
+      DuckDuckGo/Bing HTML scraping via curl returned no usable organic results (bot-blocked), so
+      verification relied entirely on direct curl fetches (real desktop user agent) plus
+      cross-checking each entry's own `portraitSource` field, which in several cases already
+      pointed at the correct person-specific URL that `profileUrl` was missing.
+
+      Fixed 3 profileUrls that were generic list/directory pages, not person-specific: Kim Chi
+      Nguyen (UBC) → medicaloncology.med.ubc.ca/kim-nguyen-chi/ (from portraitSource); Tuan Trang
+      (Calgary) → profiles.ucalgary.ca/tuan-trang (from portraitSource); Cuong Dang (NTU) →
+      personal.ntu.edu.sg/hcdang/ (found via a site link crawl from his lab page).
+
+      Fixed 2 rank-vocabulary violations, mapping to the accepted vocabulary and preserving the
+      named title as a distinguished_professorship honor where warranted: Anh Tuan Phan — "Lee
+      Soo Ying Professor in Biological Physics" → rank "Professor" + honor; Vinh Q. Nguyen (HKU)
+      — "Assistant Professor of Finance" → "Assistant Professor".
+
+      Normalized 4 Australian "Lecturer"/"Senior Lecturer" ranks to the accepted vocabulary,
+      consistent with the UK/French/German mapping conventions established in batches 15-17
+      (Australian academic titles follow the same UK-derived ladder): Van Nguyen (Monash) and Bao
+      Nguyen (Melbourne) — Lecturer → Assistant Professor; Kieu-Trang Nguyen (Melbourne) — Senior
+      Lecturer → Associate Professor; Linh Nguyen (Melbourne, Teaching track) — Lecturer →
+      Teaching.
+
+      Several other generic-list-page profileUrls in this batch could not be independently
+      upgraded without a working search engine — left unchanged and logged below.
+- [ ] Batch 19: continue right after "Hoa Nguyen - Australian National University" (Australian
+      National University)
 - [ ] Batch 20
+
+## Batch 18 notes / leads
+
+- Kim Chi Nguyen (UBC) — profileUrl fixed to the person-specific page (see above); the page
+  confirms "Professor" rank in its text but a direct name+title co-occurrence wasn't isolated by
+  a simple grep. Worth a quick human skim to double check "Professor" is still accurate.
+- Thanh Binh Nguyen (University of Ottawa) — profileUrl remains a generic radiologists list page
+  (0 name hits on fetch); the department may render the specific bio via JS. Not upgraded.
+- Bich Ngoc Nguyen (Université de Montréal, pathologie) — profileUrl is a generic
+  laboratoires-de-recherche list page; her name does appear once in the raw HTML, suggesting she
+  is listed there, but not confirmed as a person-specific page. Not upgraded.
+- Caroline Nguyen Ngoc (Université de Montréal, dentisterie) — profileUrl is a generic
+  corps-professoral list page (0 name hits on fetch, page may be JS-rendered). Not upgraded.
+- Hung Minh Tan Nguyen (NUS Mathematics) — profileUrl is a very short (953-byte) academic-faculty
+  listing page, almost certainly JS-rendered client-side; 0 name hits. His personal site
+  (tanmnguyen89.github.io, already in portraitSource) may be a better candidate for websiteUrl or
+  even profileUrl if no NUS person-specific page can be found — not changed this pass.
+- Li Nguyen (NTU, Linguistics) — profileUrl is a program-faculty listing page but did return 4
+  name hits, so it's plausibly still accurate/live; not swapped since no cleaner
+  person-specific URL was found.
+- Helena Nguyen (University of Sydney Business School) — profileUrl is an "academics" listing
+  page with 4 name hits; plausibly fine, not swapped since no cleaner URL was found.
+- Peter V. Nguyen (University of Alberta, Physiology) — profileUrl now returns HTTP 410 Gone.
+  Tried several guessed replacement URL patterns (ualberta.ca faculty pages, directory search)
+  without success; the department's people-listing page also didn't surface his name on a raw
+  fetch (may be JS-rendered). Left unchanged pending a proper search-engine lookup or direct site
+  navigation once WebSearch is available again — this is the one entry in this batch where the
+  existing profileUrl is confirmed dead with no replacement found.
+- Three Melbourne Institute/FBE pages (Viet Hoang Nguyen, Kieu-Trang Nguyen, Linh Nguyen) 403'd on
+  every direct fetch attempt (Cloudflare-style bot blocking); entries were left as recorded except
+  for the rank-vocabulary fixes above, which were sourced from other prior-existing evidence
+  (Kieu-Trang Nguyen's own Google Sites page, linked as portraitSource) rather than a fresh fetch
+  of the blocked university page. Worth a direct re-check when unblocked.
 
 ## Batch 17 notes / leads
 
