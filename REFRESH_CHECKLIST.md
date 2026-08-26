@@ -16,17 +16,31 @@ ROSTER_MAINTENANCE.md §"Periodic full-roster refresh", committed, and pushed.
 - [x] Batch 10: indices 351-389
 - [x] Batch 11: indices 390-428
 - [x] Batch 12: indices 429-467
-- [ ] Batch 13: indices 468-506
-- [ ] Batch 14: indices 507-545
-- [ ] Batch 15: indices 546-584
-- [ ] Batch 16: indices 585-623
-- [ ] Batch 17: indices 624-662
-- [ ] Batch 18: indices 663-701
-- [ ] Batch 19: indices 702-740
-- [ ] Batch 20: indices 741-771
+- [x] Batch 13: verified through "Hung Dinh Nguyen" (Nanyang Technological University) — the person
+      immediately following "Vu N. Duong" in the original ordering. 2 people were removed during
+      this batch (Quynh Camthi Nguyen, Vu N. Duong — see notes), so raw index numbers no longer
+      line up with earlier batches. From here on, track progress by **last verified person's
+      name** instead of index, and pick the next ~39 people in file order after that name.
+- [ ] Batch 14: continue in `public/data.json` file order starting right after "Hung Dinh Nguyen"
+      (Nanyang Technological University)
+- [ ] Batch 15
+- [ ] Batch 16
+- [ ] Batch 17
+- [ ] Batch 18
+- [ ] Batch 19
+- [ ] Batch 20
 
 ## Notes / leads found while working (not yet added)
 
+- Batch 13: Minh Khuong Vu (National University of Singapore, Lee Kuan Yew School of Public
+  Policy) — currently recorded as `track: Teaching`. Search results are mixed: some (older) hits
+  call him a full-time "Practice Professor" at the main school; one shows him listed under the
+  Institute of Water Policy's "affiliate and adjunct faculty" page path, and he also has an active
+  faculty role at Fulbright University Vietnam. Couldn't confirm current full-time/continuing
+  status at NUS directly — both his main LKYSPP profile page and the affiliate-listing page are
+  JS-rendered SPAs that returned no server-side content, and the Fulbright page 403'd. Left
+  unchanged; worth a direct check (e.g. via a JS-capable fetch, or emailing/checking a syllabus)
+  of whether his primary appointment is still NUS or has shifted to Fulbright/Vietnam.
 - Batch 12: index 442 (Khanh-Hoa Tran-Ba, Towson) — his official page lists "Seventeenth Jess &
   Mildred Fisher Endowed Chair in the Biological and Physical Sciences (2022-2025)"; Towson's
   chair program rotates on 3-year terms, so this may already have lapsed by 2026. Not added as a
