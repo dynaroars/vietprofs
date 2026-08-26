@@ -1,8 +1,11 @@
 # Periodic full-roster refresh — progress checklist
 
-Total entries in `public/data.json`: 772. Batches are consecutive index ranges (0-based),
-~38-39 people each. Check off a batch only after it has been verified per
-ROSTER_MAINTENANCE.md §"Periodic full-roster refresh", committed, and pushed.
+**STATUS: COMPLETE.** All 20 batches done as of Batch 20 (committed and pushed). Started at 772
+entries; ended at 766 after removing people who no longer meet the inclusion standard (see
+per-batch notes below for each removal's justification). Batches are consecutive index ranges
+(0-based) at the time each batch started, ~38-39 people each; from Batch 13 onward, tracking
+switched to "last verified person's name" since removals shift array positions. When the next
+periodic refresh is run, start a fresh batch plan from index 0 rather than resuming this one.
 
 - [x] Batch 01: indices 0-38
 - [x] Batch 02: indices 39-77
@@ -136,8 +139,74 @@ ROSTER_MAINTENANCE.md §"Periodic full-roster refresh", committed, and pushed.
       but was confirmed correct via a May 2025 Wayback snapshot and his working lab site; Jane X.
       Luu (Tufts) and Xuan Thuan Trinh (UVA) both still resolve to stale news-article URLs rather
       than proper directory profiles, with no replacement found this pass.
-- [ ] Batch 20: continue in `public/data.json` file order starting right after "Duy Duong-Tran"
-      (United States Naval Academy) — this should be the final batch, reaching the end of the file.
+- [x] Batch 20: verified "Thuy Dao" (IPAG Business School) through "Tam Le" (Institute of
+      Statistical Mathematics) — the final 31 entries in `public/data.json`, reaching the literal
+      end of the file. No removals.
+
+      **The full periodic roster refresh is now complete: all 766 entries verified across 20
+      batches.**
+
+      Continued rank-vocabulary normalization: French "Senior lecturer with HDR" (Minh Cuong Ha,
+      ENS Paris-Saclay — his own page's English gloss) → Associate Professor, consistent with the
+      MCF convention from batch 17; UK "Senior Lecturer" (Tho Pham, York) → Associate Professor;
+      Australian "Lecturer" (Trang Vu, Monash, Tenure-line) → Assistant Professor; raw
+      Teaching-track titles → plain "Teaching" (Hanh Huynh/UBC "Associate Professor of
+      Teaching", Tuong Vi Ho/TWU "Associate Clinical Professor"); verbose-but-plain-rank titles
+      trimmed to the vocabulary word (Thi Viet Ha Nguyen/IPAG "Associate Professor of Law" →
+      Associate Professor; Trai Le/Notre Dame "Professor Emerita of Law" → Emeritus).
+
+      2 new distinguished_professorship honors added by splitting a named-chair title out of the
+      rank field, same pattern as batches 13-14/18-19: Jean Tran Thanh Van (Caltech, Emeritus) —
+      "Linde Professor Emeritus" → rank "Emeritus" + "Linde Professor" honor; Dinh Tien-Cuong
+      (NUS Mathematics) — "Provost's Chair Professor" → rank "Professor" + "Provost's Chair
+      Professor" honor. Both honors sourced from the same URLs already on file for these two
+      people (a 2012 newsline article and a 2020 NUS Science blog post, respectively) — I could
+      not independently re-fetch either source this pass (Caltech's people-search returned 404s
+      for him; NUS domains returned bot-blocked 212-byte stub responses), so these are
+      normalizations of already-sourced data rather than newly verified facts.
+
+      Fixed 1 dead profileUrl: Thi-Mai-Trang Nguyen (Université Sorbonne Paris Nord) — the old
+      `www-phare.lip6.fr/~trnguyen` personal page no longer resolves at all; swapped in her
+      current, live personal homepage (`www-l2ti.univ-paris13.fr/~thimaitrang.nguyen/`, matching
+      her existing `portraitSource` domain), which independently confirms "Professeur des
+      universités" / "Full Professor" — matches the existing rank.
+
+      This session's WebSearch budget remained fully exhausted (as in batches 17-19);
+      verification relied on curl (real desktop user agent), Wayback Machine snapshots (Thao L.
+      Nguyen/UTHealth — confirmed alive via an October 2025 snapshot after live fetches 403'd),
+      and WebFetch as a fallback for JS-heavy/blocked pages (Dinh Tien-Cuong's own blog).
+
+      1 open lead logged below rather than acted on: Nhung Nguyen (UCSF) holds the title
+      "Assistant Adjunct Professor," which is UC's real, continuing (not part-time) faculty
+      series but literally contains the word "adjunct" that ROSTER_MAINTENANCE.md's inclusion
+      standard excludes — left the entry unchanged pending a human judgment call on how the UC
+      Adjunct/In-Residence series should be treated, rather than unilaterally removing someone
+      who may well be legitimately eligible.
+
+## Batch 20 notes / leads
+
+- Nhung Nguyen (University of California, San Francisco, Medicine) — official UCSF profile
+  states "Assistant Adjunct Professor." This is a real, continuing UC faculty series (not a
+  part-time/term appointment in the colloquial sense), but ROSTER_MAINTENANCE.md's inclusion
+  standard literally excludes "adjunct" titles, and "Adjunct" doesn't map cleanly to any of
+  Tenure-line/Teaching/Emeritus. Left unchanged rather than removed — this needs either a
+  ROSTER_MAINTENANCE.md clarification on how to treat the UC Adjunct/In-Residence series
+  specifically, or a deliberate human call, not a unilateral removal during a routine refresh.
+- Jean Tran Thanh Van (Caltech, Emeritus) — no live Caltech directory page could be found
+  (pma.caltech.edu and directory.caltech.edu both 404 for his name); the only profileUrl on file
+  is a 2012 newsline.linearcollider.org article. He's extremely notable and clearly still active
+  (a 2025 French Legion of Honour promotion is already recorded), so left unchanged rather than
+  questioned, but a proper Caltech or IJCLab/CNRS profile URL would be worth finding.
+- Dinh Tien-Cuong (NUS Mathematics) — his own blog (blog.nus.edu.sg/dinh) confirmed alive and
+  "Prof. DINH Tien-Cuong," but both math.nus.edu.sg and science.nus.edu.sg returned tiny
+  (212-byte) stub responses on every fetch attempt this pass, so the "Provost's Chair Professor"
+  honor (see above) rests on the same source used originally rather than a fresh re-fetch. Worth
+  re-confirming once those domains stop bot-blocking.
+- Hien Nguyen (University of Wisconsin-Whitewater, Computer Science) — confirmed alive and
+  "Professor, Computer Science" via a university-wide staff directory page, but `profileUrl`
+  (web-ns-vip.uww.edu/graduate-studies/grad-directory) is a generic directory search tool, not a
+  person-specific page. A `websiteUrl` (blogs.uww.edu/nguyenh/) already covers her personal
+  site; a proper CS-department profile URL would still be an improvement if one exists.
 
 ## Batch 19 notes / leads
 
