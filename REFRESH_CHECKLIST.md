@@ -6,7 +6,7 @@ ROSTER_MAINTENANCE.md §"Periodic full-roster refresh", committed, and pushed.
 
 - [x] Batch 01: indices 0-38
 - [x] Batch 02: indices 39-77
-- [ ] Batch 03: indices 78-116
+- [x] Batch 03: indices 78-116
 - [ ] Batch 04: indices 117-155
 - [ ] Batch 05: indices 156-194
 - [ ] Batch 06: indices 195-233

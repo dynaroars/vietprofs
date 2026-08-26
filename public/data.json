@@ -2392,7 +2392,7 @@
   },
   {
     "name": "Khai D. T. Ngo",
-    "profileUrl": "http://www.cpes.vt.edu/public/aboutus/bios/bio_ngo.php",
+    "profileUrl": "https://ece.vt.edu/people/profile/ngo.html",
     "scholarUrl": "https://scholar.google.com/citations?user=C0lsfwUAAAAJ",
     "university": "Virginia Tech",
     "city": "Blacksburg",
@@ -2408,7 +2408,16 @@
     "phdInstitution": "California Institute of Technology",
     "country": "United States",
     "portrait": "portraits/082-khai-d-t-ngo-virginia-tech.webp",
-    "portraitSource": "https://ece.vt.edu/content/dam/ece_vt_edu/people/portraits/Khai-ngo.jpg.transform/l-medium/image.jpg"
+    "portraitSource": "https://ece.vt.edu/content/dam/ece_vt_edu/people/portraits/Khai-ngo.jpg.transform/l-medium/image.jpg",
+    "honors": [
+      {
+        "name": "IEEE Fellow",
+        "year": 2015,
+        "category": "fellow",
+        "organization": "IEEE",
+        "source": "https://ece.vt.edu/people/profile/ngo.html"
+      }
+    ]
   },
   {
     "name": "Trac D. Tran",
@@ -2482,6 +2491,27 @@
         "category": "major_award",
         "organization": "American Chemical Society",
         "source": "https://www.acs.org/funding/awards/national/recipients/2019-recipients.html"
+      },
+      {
+        "name": "Chancellor's Professor",
+        "year": null,
+        "category": "distinguished_professorship",
+        "organization": "University of California, Irvine",
+        "source": "https://www.chem.uci.edu/people/vy-m-dong"
+      },
+      {
+        "name": "Arthur C. Cope Scholar Award",
+        "year": 2011,
+        "category": "major_award",
+        "organization": "American Chemical Society",
+        "source": "https://cen.acs.org/articles/89/i9/Arthur-C-Cope-Scholar-Awards2.html"
+      },
+      {
+        "name": "Sloan Research Fellowship",
+        "year": null,
+        "category": "career_award",
+        "organization": "Alfred P. Sloan Foundation",
+        "source": "https://sites.google.com/uci.edu/vydonggroup"
       }
     ],
     "portrait": "portraits/084-vy-m-dong-university-of-california-irvine.webp",
@@ -2515,7 +2545,7 @@
       },
       {
         "name": "National Academy of Engineering Member",
-        "year": null,
+        "year": 2023,
         "category": "academy",
         "organization": "National Academy of Engineering",
         "source": "https://enfl.aps.anl.gov/Awards/1/03-2025/thuc-quyen-nguyen"
@@ -2582,6 +2612,13 @@
         "category": "major_award",
         "organization": "Royal Society of Chemistry",
         "source": "https://www.chem.ucsb.edu/people/thuc-quyen-nguyen"
+      },
+      {
+        "name": "European Academy of Sciences Fellow",
+        "year": 2024,
+        "category": "academy",
+        "organization": "European Academy of Sciences",
+        "source": "https://www.chem.ucsb.edu/people/thuc-quyen-nguyen"
       }
     ],
     "portrait": "portraits/085-thuc-quyen-nguyen-university-of-california-santa-barbara.webp",
@@ -2589,7 +2626,7 @@
   },
   {
     "name": "SonBinh T. Nguyen",
-    "profileUrl": "http://sites.northwestern.edu/nguyengroup/",
+    "profileUrl": "https://www.nguyengroup.northwestern.edu/",
     "scholarUrl": "https://scholar.google.com/citations?user=0MWnxp4AAAAJ",
     "university": "Northwestern University",
     "city": "Evanston",
@@ -2631,7 +2668,16 @@
     "undergradInstitution": "Tufts University",
     "undergradYear": 1996,
     "portrait": "portraits/087-hien-m-nguyen-wayne-state-university.webp",
-    "portraitSource": "https://people.wayne.edu/profile/gl9580/1578/hien_nguyen-1_800x1126.jpg"
+    "portraitSource": "https://people.wayne.edu/profile/gl9580/1578/hien_nguyen-1_800x1126.jpg",
+    "honors": [
+      {
+        "name": "Carl Johnson/Pfizer Professor of Organic Chemistry",
+        "year": null,
+        "category": "distinguished_professorship",
+        "organization": "Wayne State University",
+        "source": "https://clasprofiles.wayne.edu/profile/gl9580"
+      }
+    ]
   },
   {
     "name": "Hung T. Nguyen",
@@ -2656,7 +2702,7 @@
   },
   {
     "name": "M. Tuan Trinh",
-    "profileUrl": "https://www.usu.edu/directory/?person=trinh.tuan",
+    "profileUrl": "https://artsci.usu.edu/chem-biochem/directory/faculty/trinh-tuan",
     "scholarUrl": "https://scholar.google.com/citations?user=G7gLHXIAAAAJ",
     "university": "Utah State University",
     "city": "Logan",
@@ -2719,6 +2765,27 @@
         "category": "academy",
         "organization": "National Academy of Inventors",
         "source": "https://scholars.duke.edu/award/198"
+      },
+      {
+        "name": "R. Eugene and Susie E. Goodson Distinguished Professor of Biomedical Engineering",
+        "year": null,
+        "category": "distinguished_professorship",
+        "organization": "Duke University",
+        "source": "https://pratt.duke.edu/people/tuan-vo-dinh/"
+      },
+      {
+        "name": "SPIE President's Award",
+        "year": 2022,
+        "category": "major_award",
+        "organization": "SPIE",
+        "source": "https://pratt.duke.edu/people/tuan-vo-dinh/"
+      },
+      {
+        "name": "Sir George Stokes Award",
+        "year": 2019,
+        "category": "major_award",
+        "organization": "Royal Society of Chemistry",
+        "source": "https://pratt.duke.edu/people/tuan-vo-dinh/"
       }
     ],
     "portrait": "portraits/090-tuan-vo-dinh-duke-university.webp",
@@ -2948,7 +3015,7 @@
     "secondaryAppointment": false,
     "track": "Tenure-line",
     "department": "Statistics and Data Sciences",
-    "rank": "Assistant Professor",
+    "rank": "Associate Professor",
     "phdYear": 2017,
     "phdInstitution": "University of Michigan",
     "country": "United States",
@@ -3299,10 +3366,10 @@
     ],
     "portrait": "portraits/114-chanh-kieu-indiana-university-bloomington.webp",
     "portraitSource": "https://ckieu.pages.iu.edu/images/tc.png",
-    "mdInstitution": "University of Maryland",
-    "mdYear": 2014,
-    "msInstitution": "assimilation and application in Earth and atmospheric science. Institute of Geophysics",
-    "msYear": 2018
+    "msInstitution": "University of Maryland",
+    "msYear": 2005,
+    "undergradInstitution": "Vietnam National University",
+    "undergradYear": 2003
   },
   {
     "name": "Hoang Pham - Rutgers University",
@@ -3326,17 +3393,24 @@
     "honors": [
       {
         "name": "IEEE Fellow",
-        "year": null,
+        "year": 2005,
         "category": "fellow",
         "organization": "IEEE",
         "source": "https://ise.rutgers.edu/sites/default/files/2023-12/ISE%20Year%20End%20Report%202022-23_12-15-23_v5_0.pdf"
       },
       {
         "name": "IISE Fellow",
-        "year": null,
+        "year": 2011,
         "category": "fellow",
         "organization": "Institute of Industrial and Systems Engineers",
         "source": "https://www.iise.org/Print/?Site=Main&id=25848"
+      },
+      {
+        "name": "Distinguished Professor",
+        "year": null,
+        "category": "distinguished_professorship",
+        "organization": "Rutgers University",
+        "source": "https://ise.rutgers.edu/hoang-pham"
       }
     ],
     "portrait": "portraits/115-hoang-pham-rutgers-university-rutgers-university.webp",
@@ -3388,7 +3462,16 @@
     "portrait": "portraits/117-helen-nguyen-university-of-illinois-urbana-champaign.webp",
     "portraitSource": "https://ws.engr.illinois.edu/directory/viewphoto/thn/1200",
     "msInstitution": "Johns Hopkins University",
-    "msYear": 2004
+    "msYear": 2004,
+    "honors": [
+      {
+        "name": "Ivan Racheff Professor of Environmental Engineering",
+        "year": 2020,
+        "category": "distinguished_professorship",
+        "organization": "University of Illinois Urbana-Champaign",
+        "source": "https://cee.illinois.edu/directory/profile/thn"
+      }
+    ]
   },
   {
     "name": "Vicky Doan-Nguyen",
