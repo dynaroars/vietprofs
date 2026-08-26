@@ -15,7 +15,7 @@ ROSTER_MAINTENANCE.md §"Periodic full-roster refresh", committed, and pushed.
 - [x] Batch 09: indices 312-350
 - [x] Batch 10: indices 351-389
 - [x] Batch 11: indices 390-428
-- [ ] Batch 12: indices 429-467
+- [x] Batch 12: indices 429-467
 - [ ] Batch 13: indices 468-506
 - [ ] Batch 14: indices 507-545
 - [ ] Batch 15: indices 546-584
@@ -27,6 +27,21 @@ ROSTER_MAINTENANCE.md §"Periodic full-roster refresh", committed, and pushed.
 
 ## Notes / leads found while working (not yet added)
 
+- Batch 12: index 442 (Khanh-Hoa Tran-Ba, Towson) — his official page lists "Seventeenth Jess &
+  Mildred Fisher Endowed Chair in the Biological and Physical Sciences (2022-2025)"; Towson's
+  chair program rotates on 3-year terms, so this may already have lapsed by 2026. Not added as a
+  distinguished_professorship honor pending confirmation he's still the current holder.
+- Batch 12: index 447 (Long D. Tran, UTHealth Houston Dentistry) — official page lists "PharmD,
+  DDS" credentials but names no institution or year for either; not enough to add a sourced
+  otherDegrees entry per the no-inference rule. Worth a follow-up search for his CV.
+- Batch 12: index 467 (Lan Chi Nguyen, U Houston Optometry) — search snippets (not a page I could
+  directly fetch; aaopt.org returned 403) suggest an EdD (2022) and FAAO (Fellow, American
+  Academy of Optometry) status. Neither added without a primary source — worth a direct fetch of
+  her CV or the AAO diplomate page from a different network/UA.
+- Batch 12: index 462 (was "Van T. Nguyen", University of Dayton) — corrected name to "Tam V.
+  Nguyen" per his official UD directory page and personal site (vantam.github.io); the old name
+  had first/middle-initial order reversed relative to how he actually publishes. No duplicate
+  entry existed under "Tam" so this was a safe in-place rename, not a merge.
 - Batch 11: index 405 (Lan Ngo, LMU) — track corrected Tenure-line→Teaching, rank
   Professor→Teaching. Official scholars.lmu.edu profile states "Clinical Assistant Professor"
   (since 2018), not "Professor"; LMU's Faculty Handbook confirms Clinical Faculty is
