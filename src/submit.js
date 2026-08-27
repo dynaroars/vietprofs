@@ -151,8 +151,7 @@ function renderShell() {
 }
 
 function buildEmailUrl(title, body) {
-  const params = new URLSearchParams({ subject: title, body });
-  return `mailto:${SUBMISSION_EMAIL}?${params.toString()}`;
+  return `mailto:${SUBMISSION_EMAIL}?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
 }
 
 const FIELD_LABELS = {
