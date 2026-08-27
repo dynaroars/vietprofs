@@ -194,6 +194,13 @@ finding and vetting *new* candidates. This section covers re-verifying *every ex
 `public/data.json`, since profiles go dead, people move institutions, ranks change, and new
 honors accrue over time. Run this when the user asks for a periodic roster refresh.
 
+For unattended local maintenance, use `./scripts/maintain-roster.mjs run`. The controller applies
+the workflow below one person at a time, requires an independent Codex approval of Claude's
+research before applying it, keeps resumable state outside the repository, and commits and pushes
+each approved entry. `./scripts/maintain-roster.mjs stop` safely pauses it; running `run` again
+resumes the saved person and stage. Incomplete or disputed entries must remain unverified so a
+later run retries them.
+
 Because it touches the whole roster, split the work into roughly 20 batches (about 35-40 people
 each) and work one batch at a time. For recurring automated maintenance, select entries missing
 from `maintenance/verification.json` first and then those with the oldest ledger timestamps; for

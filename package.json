@@ -9,7 +9,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "validate-data": "node scripts/validate-data.js",
-    "test": "npm run validate-data && node --test test/data.test.js test/ui.test.js",
+    "test": "npm run validate-data && node --test test/data.test.js test/maintenance-controller.test.js test/ui.test.js",
     "test:e2e": "node --test test/browser-smoke.test.js"
   },
   "devDependencies": {
