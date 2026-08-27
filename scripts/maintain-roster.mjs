@@ -589,6 +589,7 @@ or canonical field, or be an empty string for unresolved. Return only the struct
 
 async function resolveTargetWithAgent(query, roster, schema) {
   const timeout = Number(process.env.VIETPROFS_AGENT_TIMEOUT_MINUTES || DEFAULT_AGENT_TIMEOUT_MINUTES);
+  await mkdir(join(STATE_DIR, 'logs'), { recursive: true });
   const target = await runAgentWithRetries('Claude target matching', async () => {
     const result = await runProcess('claude', [
       '-p',
