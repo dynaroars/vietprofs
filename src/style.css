@@ -488,6 +488,19 @@ h1 {
   margin-top: 0.4rem;
 }
 
+.entry-updated {
+  display: inline-flex;
+  gap: 0.25em;
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+  line-height: 1.35;
+  white-space: nowrap;
+}
+
+.entry-name-row .entry-updated {
+  margin-left: auto;
+}
+
 .tag {
   display: inline-block;
   background: var(--tag-bg);

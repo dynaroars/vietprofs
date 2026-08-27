@@ -3,10 +3,12 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
-import { FIELDS, TRACKS, LOCATIONS, HEALTH_SUBFIELDS, canonicalRank, displayName, fieldOf, healthSubfieldOf, continentOf, locationMatches, buildFunFacts, buildAwardsFunFacts, filterRoster, buildTopUniversities, buildTopPhdInstitutions } from '../src/data.js';
+import { FIELDS, TRACKS, LOCATIONS, HEALTH_SUBFIELDS, canonicalRank, displayName, displayUniversity, fieldOf, healthSubfieldOf, continentOf, locationMatches, buildFunFacts, buildAwardsFunFacts, filterRoster, buildTopUniversities, buildTopPhdInstitutions } from '../src/data.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const roster = JSON.parse(readFileSync(join(__dirname, '../public/data.json'), 'utf8'));
+const verification = JSON.parse(readFileSync(join(__dirname, '../maintenance/verification.json'), 'utf8'));
+const utcTimestampPattern = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/;
 
 test('reviewed portraits use local WebP files with source provenance', () => {
   const portraits = roster.filter((person) => person.portrait);
@@ -35,6 +37,11 @@ test('every entry has the required fields', () => {
   for (const p of roster) {
     assert.equal(typeof p.name, 'string');
     assert.equal(typeof p.profileUrl, 'string');
+    assert.equal(p.lastVerifiedAt, undefined);
+    assert.equal(typeof p.lastUpdatedAt, 'string');
+    assert.match(p.lastUpdatedAt, utcTimestampPattern);
+    assert.equal(new Date(p.lastUpdatedAt).toISOString(), p.lastUpdatedAt);
+    assert.ok(new Date(p.lastUpdatedAt).valueOf() <= Date.now());
     if (p.scholarUrl !== undefined) {
       assert.equal(typeof p.scholarUrl, 'string');
       assert.match(p.scholarUrl, /^https:\/\//);
@@ -53,6 +60,17 @@ test('every entry has the required fields', () => {
     if (p.phdInstitution !== undefined) assert.equal(typeof p.phdInstitution, 'string');
     if (p.undergradInstitution !== undefined) assert.equal(typeof p.undergradInstitution, 'string');
     assert.match(p.profileUrl, /^https?:\/\//);
+  }
+});
+
+test('maintenance verification ledger exactly covers the roster', () => {
+  assert.deepEqual(Object.keys(verification).sort(), roster.map((person) => person.name).sort());
+  for (const person of roster) {
+    const timestamp = verification[person.name];
+    assert.equal(typeof timestamp, 'string');
+    assert.match(timestamp, utcTimestampPattern);
+    assert.equal(new Date(timestamp).toISOString(), timestamp);
+    assert.ok(new Date(timestamp).valueOf() <= Date.now());
   }
 });
 
@@ -251,6 +269,15 @@ test('filterRoster narrows by track and "all" leaves it unfiltered', () => {
 test('duplicate-name university suffixes are hidden from display', () => {
   assert.equal(displayName('Chi Nguyen - University of Arizona'), 'Chi Nguyen');
   assert.equal(displayName('Chi L. Nguyen'), 'Chi L. Nguyen');
+});
+
+test('university display names use aliases and abbreviate a terminal University', () => {
+  assert.equal(displayUniversity('Pennsylvania State University'), 'Penn State');
+  assert.equal(displayUniversity('Penn State University'), 'Penn State');
+  assert.equal(displayUniversity('Penn State Harrisburg'), 'Penn State Harrisburg');
+  assert.equal(displayUniversity('George Mason University'), 'George Mason Univ.');
+  assert.equal(displayUniversity('Boston University'), 'Boston Univ.');
+  assert.equal(displayUniversity('University of New Mexico'), 'University of New Mexico');
 });
 
 test('university suffixes are reserved for otherwise identical names', () => {

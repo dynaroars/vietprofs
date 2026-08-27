@@ -78,6 +78,11 @@ link.
 
 - `track` must be `Tenure-line`, `Teaching`, or `Emeritus`.
 - `profileUrl` must be a current, working academic or official university profile and must not be a Google Scholar URL. Store Scholar separately in `scholarUrl`; store a maintained personal or lab homepage in `websiteUrl`.
+- `lastUpdatedAt` is required and must be a canonical UTC ISO timestamp in
+  `YYYY-MM-DDTHH:mm:ss.sssZ` form. It records when roster content for
+  the person last materially changed, whether by adding the person or changing a profile,
+  appointment, degree, honor, portrait, source, or another stored fact. A verification that finds
+  no data change must not advance it.
 - Preserve an existing Scholar URL by moving it to `scholarUrl` before replacing `profileUrl`. Verify replacement URLs follow redirects and do not return 404.
 - Use only `Assistant Professor`, `Associate Professor`, or `Professor` as the rank vocabulary for Tenure-line entries; use `Teaching` and `Emeritus` for the corresponding tracks.
 - Add `phdYear` and `phdInstitution` only when a source explicitly states them. Never infer them from dates, CV chronology, or context.
@@ -87,6 +92,46 @@ link.
 - Store `name` without Vietnamese diacritics and in First (Middle) Last order. This is a display normalization, not a claim about publishing name order.
 - Keep `secondaryAppointment: true` when the listed field is secondary or joint and the primary tenure home is elsewhere.
 - Preserve source URLs for profiles, honors, name evidence, and portraits.
+- Store the university's full canonical name in `public/data.json`; shortening is display-only.
+  Card displays abbreviate a terminal ` University` (`George Mason University` →
+  `George Mason Univ.`) but preserve leading forms such as `University of New Mexico`.
+  Established names needing a more specific form belong in the exact
+  `UNIVERSITY_DISPLAY_NAMES` aliases in `src/data.js` (`Pennsylvania State University` →
+  `Penn State`). Apply the same display rule to education institutions. Never shorten the
+  canonical roster value or generically remove `College`, `Institute`, or other name components.
+
+### Verification ledger and update timestamps
+
+`lastVerifiedAt` is maintenance state, not public roster content. Store it in the tracked
+`maintenance/verification.json` ledger, keyed by the exact canonical `name` in
+`public/data.json`; do not add it to a public roster entry. Tracking the ledger in Git lets weekly
+automation resume on another machine or fresh clone, while keeping it out of the site build.
+The validator requires exactly one ledger entry for every roster name and rejects stale entries.
+When adding, renaming, or removing a person, update the public roster and ledger together.
+
+Set a ledger timestamp for a new entry only after independently verifying every part of the
+inclusion standard and all required roster fields. For an existing entry, advance it only after a
+complete live review covers the person's identity, current and primary university appointment,
+department, rank/track, profile URL, and the other information described in the periodic-refresh
+workflow. A complete review may advance the timestamp even when no roster facts changed. Ledger
+values must use canonical UTC ISO `YYYY-MM-DDTHH:mm:ss.sssZ` form.
+
+Do not advance the ledger timestamp for a link-health check, a partial correction, a single
+supplied source, a failed or blocked fetch, or a review that leaves a material eligibility or
+appointment question unresolved. Automated maintenance should record those attempts in its
+resumable working state and retry them later without changing the durable ledger. The maintenance
+controller, not a research model, should generate the timestamp only after all required
+verification and validation gates pass. Never backdate a new review, infer a timestamp from page
+metadata, or set a future value.
+
+Set `lastUpdatedAt` when adding a new entry and whenever at least one substantive field in an
+existing entry changes. For a new entry, `lastUpdatedAt` and the ledger timestamp will normally be
+the same. During a refresh that changes facts, set both to the successful review time; during a
+complete refresh that confirms the existing facts without changing them, advance only the ledger
+timestamp. Do not treat timestamp-only edits, key reordering, formatting, generated-file
+changes, or maintenance-state changes as roster updates. The maintenance controller should
+compare substantive fields and generate `lastUpdatedAt` after an approved patch rather than
+allowing a research model to choose it.
 
 ### Honors and awards eligibility
 
@@ -150,14 +195,15 @@ finding and vetting *new* candidates. This section covers re-verifying *every ex
 honors accrue over time. Run this when the user asks for a periodic roster refresh.
 
 Because it touches the whole roster, split the work into roughly 20 batches (about 35-40 people
-each, consecutive order is fine) and work one batch at a time. Track which batches are done (a
-scratch checklist file is fine) so the refresh can be resumed across sessions without re-doing
+each) and work one batch at a time. For recurring automated maintenance, select entries missing
+from `maintenance/verification.json` first and then those with the oldest ledger timestamps; for
+a manually initiated full pass, consecutive file order is also acceptable. Track which entries
+and stages are done in durable working state so a refresh can resume without redoing successful
 work. Commit after each batch (or another reviewably small chunk) rather than as one giant diff,
 and run the validation checklist before each commit. Push each commit immediately after making
-it, then continue straight on to the next batch without stopping for confirmation in between —
-treat commit-and-push-per-batch as pre-authorized for this recurring task. Only pause if you hit
-a genuine blocker (for example, a validation failure you can't resolve, or a push that's
-rejected).
+it, then continue straight on to the next batch without stopping for confirmation in between — treat
+commit-and-push-per-batch as pre-authorized for this recurring task. Only pause if you hit a
+genuine blocker (for example, a validation failure you can't resolve, or a push that's rejected).
 
 Do this very thoroughly for each person and expect it to take a long time. Do not skip someone
 because their existing entry looks fine at a glance — confirm it live. For every person, in
@@ -188,6 +234,13 @@ order:
    as you can gather (rank, track, degrees, honors, portrait) using the same
    data-entry rules as any other addition. Don't let a promising lead stall progress on the
    current batch — note it and come back if needed.
+5. **Record successful verification.** After all applicable checks above are complete and no
+   material question remains unresolved, set the person's timestamp in
+   `maintenance/verification.json` to the current UTC time. Do this even if the review found no
+   other change, so future refreshes can reliably choose the oldest entries. If the review changed
+   any substantive roster data, set `lastUpdatedAt` to the same time; otherwise preserve the
+   existing `lastUpdatedAt`. If the review is incomplete, preserve the old timestamps and retry
+   later.
 
 ## Validation checklist
 

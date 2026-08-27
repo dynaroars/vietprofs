@@ -66,6 +66,17 @@ export function uniqueRanks(roster) {
   return [...new Set(roster.map(canonicalRank).filter(Boolean))].sort();
 }
 
+// Keep official university names in the roster and search index. Established aliases take
+// precedence; otherwise a terminal " University" is abbreviated in the compact card display.
+export const UNIVERSITY_DISPLAY_NAMES = new Map([
+  ['Pennsylvania State University', 'Penn State'],
+  ['Penn State University', 'Penn State'],
+]);
+
+export function displayUniversity(university) {
+  return UNIVERSITY_DISPLAY_NAMES.get(university) ?? university?.replace(/ University$/, ' Univ.');
+}
+
 // Keep the public rank vocabulary intentionally small. Institution-specific honorifics and
 // appointment wording belong on the linked profile; the directory only needs the career stage.
 export function canonicalRank(person) {

@@ -12,6 +12,7 @@ import {
   countryFlag,
   canonicalRank,
   displayName,
+  displayUniversity,
   vietnameseName,
   fieldOf,
   continentOf,
@@ -33,7 +34,7 @@ import {
   uniqueRanks,
   STATE_ABBR,
 } from '../src/data.js';
-import { escapeHtml } from '../src/utils.js';
+import { escapeHtml, formatRosterDate, formatRosterShortDate } from '../src/utils.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const roster = JSON.parse(readFileSync(join(__dirname, '../public/data.json'), 'utf8'));
@@ -68,6 +69,13 @@ test('honors have escaped names and source links available to the roster rendere
     assert.match(html, new RegExp(escapeHtml(honor.name)));
     assert.match(html, new RegExp(escapeHtml(honor.source)));
   }
+});
+
+test('roster update timestamps have compact, stable display dates', () => {
+  assert.equal(formatRosterDate('2026-08-26T23:30:00.000Z'), 'Aug 26, 2026');
+  assert.equal(formatRosterShortDate('2026-08-26T23:30:00.000Z'), '8/26/26');
+  assert.equal(formatRosterDate('not-a-date'), '');
+  assert.equal(formatRosterShortDate('not-a-date'), '');
 });
 
 test('formatLocation never produces undefined, null, consecutive commas, or duplicate city/country', () => {
@@ -159,6 +167,14 @@ test('full HTML roster rendering produces clean HTML with no undefined/null/NaN 
       .map((a) => `<span class="tag tag-topic">${escapeHtml(a)}</span>`)
       .join('');
     const tags = fieldTag + trackTag + topicTags;
+    const updatedDate = formatRosterShortDate(p.lastUpdatedAt);
+    const educationDetails = [
+      (p.phdYear || p.phdInstitution) && `PhD: ${[displayUniversity(p.phdInstitution), p.phdYear].filter(Boolean).join(', ')}`,
+      (p.msYear || p.msInstitution) && `MS: ${[displayUniversity(p.msInstitution), p.msYear].filter(Boolean).join(', ')}`,
+      (p.undergradYear || p.undergradInstitution) && `Undergrad: ${[displayUniversity(p.undergradInstitution), p.undergradYear].filter(Boolean).join(', ')}`,
+      (p.mdYear || p.mdInstitution) && `MD: ${[displayUniversity(p.mdInstitution), p.mdYear].filter(Boolean).join(', ')}`,
+      ...(p.otherDegrees ?? []).map((degree) => `${degree.degree}: ${[displayUniversity(degree.institution), degree.year].filter(Boolean).join(', ')}`),
+    ].filter(Boolean);
     const rankInfo = [
       canonicalRank(p) && escapeHtml(canonicalRank(p)),
       p.phdYear && `PhD ${escapeHtml(String(p.phdYear))}${p.phdInstitution ? `, ${escapeHtml(p.phdInstitution)}` : ''}`,
@@ -171,8 +187,9 @@ test('full HTML roster rendering produces clean HTML with no undefined/null/NaN 
           <a class="entry-name" href="${escapeHtml(p.websiteUrl ?? p.profileUrl)}">${escapeHtml(visibleName)}</a>
           <span class="entry-vietnamese-name">(${escapeHtml(nativeName)})</span>
         </div>
-        <div class="entry-meta">${escapeHtml(canonicalRank(p) || '')} · ${escapeHtml(p.department)} · ${escapeHtml(p.university)} · ${escapeHtml(formatLocation(p))}</div>
-        ${p.phdYear || p.phdInstitution ? `<div class="entry-details">PhD (${[p.phdInstitution, p.phdYear].filter(Boolean).map((value) => escapeHtml(String(value))).join(', ')})</div>` : ''}
+        <div class="entry-meta">${escapeHtml(canonicalRank(p) || '')} · ${escapeHtml(p.department)} · ${escapeHtml(displayUniversity(p.university))} · ${escapeHtml(formatLocation(p))}</div>
+        ${educationDetails.length ? `<div class="entry-details">${educationDetails.map((value) => escapeHtml(value)).join('; ')}</div>` : ''}
+        <time class="entry-updated" datetime="${escapeHtml(p.lastUpdatedAt)}">Updated ${escapeHtml(updatedDate)}</time>
         <div class="tags">${tags}</div>
       </div>
     `;
@@ -202,6 +219,27 @@ test('full HTML roster rendering produces clean HTML with no undefined/null/NaN 
   }
 });
 
+test('multiple education credentials share one semicolon-separated row', () => {
+  const person = roster.find((entry) => [
+    entry.phdInstitution || entry.phdYear,
+    entry.msInstitution || entry.msYear,
+    entry.undergradInstitution || entry.undergradYear,
+    entry.mdInstitution || entry.mdYear,
+    entry.otherDegrees?.length,
+  ].filter(Boolean).length > 1);
+  assert.ok(person, 'expected a roster entry with multiple education credentials');
+  const credentials = [
+    (person.phdInstitution || person.phdYear) && 'PhD',
+    (person.msInstitution || person.msYear) && 'MS',
+    (person.undergradInstitution || person.undergradYear) && 'Undergrad',
+    (person.mdInstitution || person.mdYear) && 'MD',
+    ...(person.otherDegrees ?? []).map((degree) => degree.degree),
+  ].filter(Boolean);
+  const html = `<div class="entry-details">${credentials.map((credential) => escapeHtml(credential)).join('; ')}</div>`;
+  assert.equal((html.match(/class="entry-details"/g) ?? []).length, 1);
+  assert.equal((html.match(/; /g) ?? []).length, credentials.length - 1);
+});
+
 test('every roster entry has a safe Vietnamese display-name variant and the requested card rows', () => {
   for (const p of roster) {
     const nativeName = vietnameseName(p);
@@ -211,7 +249,7 @@ test('every roster entry has a safe Vietnamese display-name variant and the requ
     assert.notEqual(nativeName, 'null');
   }
   const sample = roster.find((p) => p.name === 'ThanhVu H. Nguyen') ?? roster[0];
-  const html = `<div class="entry-name-row"><a class="entry-name">${escapeHtml(displayName(sample.name))}</a><span class="entry-vietnamese-name">(${escapeHtml(vietnameseName(sample))})</span></div><div class="entry-meta">${escapeHtml(canonicalRank(sample) || '')} · ${escapeHtml(sample.department)} · ${escapeHtml(sample.university)} · ${escapeHtml(formatLocation(sample))}</div>`;
+  const html = `<div class="entry-name-row"><a class="entry-name">${escapeHtml(displayName(sample.name))}</a><span class="entry-vietnamese-name">(${escapeHtml(vietnameseName(sample))})</span></div><div class="entry-meta">${escapeHtml(canonicalRank(sample) || '')} · ${escapeHtml(sample.department)} · ${escapeHtml(displayUniversity(sample.university))} · ${escapeHtml(formatLocation(sample))}</div>`;
   assert.match(html, /entry-name-row/);
   assert.match(html, /entry-meta/);
   assert.match(html, /entry-vietnamese-name/);

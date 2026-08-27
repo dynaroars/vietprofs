@@ -1,6 +1,6 @@
 import './style.css';
-import { loadRoster, buildSearchIndex, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, LOCATION_LABELS, countryFlag, canonicalRank, displayName, vietnameseName, fieldOf, healthSubfieldOf, locationMatches, filterRoster, buildFunFacts, buildUsFunFacts, buildGlobalFunFacts, buildAwardsFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, STATE_ABBR, parseSearchQuery, continentOf } from './data.js';
-import { escapeHtml } from './utils.js';
+import { loadRoster, buildSearchIndex, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, LOCATION_LABELS, countryFlag, canonicalRank, displayName, displayUniversity, vietnameseName, fieldOf, healthSubfieldOf, locationMatches, filterRoster, buildFunFacts, buildUsFunFacts, buildGlobalFunFacts, buildAwardsFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, STATE_ABBR, parseSearchQuery, continentOf } from './data.js';
+import { escapeHtml, formatRosterDate, formatRosterShortDate } from './utils.js';
 import { nearestVietnameseHoliday } from './holidays.js';
 import { STATE_GRID } from './state-grid.js';
 
@@ -149,7 +149,7 @@ function renderRoster(roster, { field, location } = {}) {
     .map((p) => {
       const visibleName = displayName(p.name);
       const nativeName = vietnameseName(p);
-      const entryMeta = [canonicalRank(p), p.department, p.university, formatLocation(p)].filter(Boolean).join(' · ');
+      const entryMeta = [canonicalRank(p), p.department, displayUniversity(p.university), formatLocation(p)].filter(Boolean).join(' · ');
       const personField = fieldOf(p.department, p.university);
       const healthSubfield = healthSubfieldOf(p);
       const fieldLabel = `${fieldDropdownLabel(personField)}${healthSubfield ? ` (${healthSubfield})` : ''}`;
@@ -162,27 +162,32 @@ function renderRoster(roster, { field, location } = {}) {
       const honors = (p.honors ?? [])
         .map((honor) => `<a class="honor-link" href="${escapeHtml(honor.source)}" target="_blank" rel="noopener noreferrer">${escapeHtml(honor.name)}${honor.year ? ` (${escapeHtml(String(honor.year))})` : ''}</a>`)
         .join(' · ');
+      const updatedDate = formatRosterDate(p.lastUpdatedAt);
+      const updatedShortDate = formatRosterShortDate(p.lastUpdatedAt);
+      const updatedTime = `<time class="entry-updated" datetime="${escapeHtml(p.lastUpdatedAt)}" title="Roster information last updated ${escapeHtml(updatedDate)}"><span>Updated</span> <span>${escapeHtml(updatedShortDate)}</span></time>`;
       const portrait = p.portrait
         ? `<img class="entry-portrait" src="${escapeHtml(`${import.meta.env.BASE_URL}${p.portrait}`)}" alt="" width="64" height="64" loading="lazy" decoding="async">`
         : '';
-      const phdDetails = [p.phdInstitution, p.phdYear].filter(Boolean);
-      const msDetails = [p.msInstitution, p.msYear].filter(Boolean);
-      const undergradDetails = [p.undergradInstitution, p.undergradYear].filter(Boolean);
-      const otherDegreeDetails = (p.otherDegrees ?? []).map((degree) => `${degree.degree}: ${[degree.institution, degree.year].filter(Boolean).join(', ')}`);
+      const phdDetails = [displayUniversity(p.phdInstitution), p.phdYear].filter(Boolean);
+      const msDetails = [displayUniversity(p.msInstitution), p.msYear].filter(Boolean);
+      const undergradDetails = [displayUniversity(p.undergradInstitution), p.undergradYear].filter(Boolean);
+      const educationDetails = [
+        phdDetails.length && `PhD: ${phdDetails.join(', ')}`,
+        msDetails.length && `MS: ${msDetails.join(', ')}`,
+        undergradDetails.length && `Undergrad: ${undergradDetails.join(', ')}`,
+        (p.mdYear || p.mdInstitution) && `MD: ${[displayUniversity(p.mdInstitution), p.mdYear].filter(Boolean).join(', ')}`,
+        ...(p.otherDegrees ?? []).map((degree) => `${degree.degree}: ${[displayUniversity(degree.institution), degree.year].filter(Boolean).join(', ')}`),
+      ].filter(Boolean);
       return `
         <div class="entry${portrait ? ' entry-with-portrait' : ''}">
           ${portrait}
           <div class="entry-content">
               <div class="entry-name-row">
                 <a class="entry-name" href="${escapeHtml(p.websiteUrl ?? p.profileUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(visibleName)}</a>
-                <span class="entry-vietnamese-name">(${escapeHtml(nativeName)})</span>${p.scholarUrl ? ` <a class="scholar-link" href="${escapeHtml(p.scholarUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(visibleName)} on Google Scholar" title="Google Scholar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3Z"/><path d="M5 12.18V16c0 1.66 3.13 3 7 3s7-1.34 7-3v-3.82l-7 3.82-7-3.82Z"/></svg></a>` : ''}
+                <span class="entry-vietnamese-name">(${escapeHtml(nativeName)})</span>${p.scholarUrl ? ` <a class="scholar-link" href="${escapeHtml(p.scholarUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(visibleName)} on Google Scholar" title="Google Scholar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3Z"/><path d="M5 12.18V16c0 1.66 3.13 3 7 3s7-1.34 7-3v-3.82l-7 3.82-7-3.82Z"/></svg></a>` : ''}${updatedTime}
               </div>
               <div class="entry-meta">${escapeHtml(entryMeta)} <span class="loc-badge" title="${escapeHtml(p.country || 'United States')}"><span class="country-flag" aria-hidden="true">${countryFlag(p.country)}</span></span></div>
-              ${phdDetails.length ? `<div class="entry-details">PhD: ${phdDetails.map((value) => escapeHtml(String(value))).join(', ')}</div>` : ''}
-              ${msDetails.length ? `<div class="entry-details">MS: ${msDetails.map((value) => escapeHtml(String(value))).join(', ')}</div>` : ''}
-              ${undergradDetails.length ? `<div class="entry-details">Undergrad: ${undergradDetails.map((value) => escapeHtml(String(value))).join(', ')}</div>` : ''}
-              ${p.mdYear || p.mdInstitution ? `<div class="entry-details">MD (${[p.mdInstitution, p.mdYear].filter(Boolean).map((value) => escapeHtml(String(value))).join(', ')})</div>` : ''}
-              ${otherDegreeDetails.length ? `<div class="entry-details">Other degrees: ${otherDegreeDetails.map((value) => escapeHtml(value)).join('; ')}</div>` : ''}
+              ${educationDetails.length ? `<div class="entry-details">${educationDetails.map((value) => escapeHtml(value)).join('; ')}</div>` : ''}
             ${honors ? `<div class="entry-honors"><span class="honors-label">Honors:</span> ${honors}</div>` : ''}
             <div class="tags">${tags}</div>
           </div>
