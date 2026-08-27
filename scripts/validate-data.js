@@ -89,7 +89,6 @@ for (const [index, person] of roster.entries()) {
   }
   if (!allowedTracks.has(person.track)) fail(rosterFile, `${label} has unsupported track ${person.track}`);
   if (!Array.isArray(person.researchAreas) || person.researchAreas.length === 0) fail(rosterFile, `${label} needs researchAreas`);
-  if (typeof person.secondaryAppointment !== 'boolean') fail(rosterFile, `${label} secondaryAppointment must be boolean`);
   if (person.state !== undefined && typeof person.state !== 'string') fail(rosterFile, `${label} state must be a string`);
   if (person.country !== undefined && typeof person.country !== 'string') fail(rosterFile, `${label} country must be a string`);
   if (person.postdocInstitution !== undefined && (typeof person.postdocInstitution !== 'string' || !person.postdocInstitution.trim())) {

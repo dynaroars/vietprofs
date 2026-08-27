@@ -60,8 +60,11 @@ function renderShell() {
     <header>
       <div class="title-row">
         <h1><a class="home-link" href="${import.meta.env.BASE_URL}" id="home-link">Vietnamese Academic Diaspora</a></h1>
-        <p class="site-subtitle">A directory of Vietnamese professors worldwide</p>
         <a class="icon-link roars-link" href="https://roars.dev" target="_blank" rel="noopener noreferrer" aria-label="ROARS Lab" title="ROARS Lab"></a>
+      </div>
+      <div class="subtitle-row">
+        <p class="site-subtitle">A directory of Vietnamese professors worldwide</p>
+        <a class="submission-link" href="submit.html">Add or update info</a>
       </div>
     </header>
     <div class="holiday-banner" id="holiday-banner" hidden></div>
@@ -138,7 +141,7 @@ function renderRoster(roster, { field, location } = {}) {
   } else {
     locPhrase = ` in ${countries} countr${countries === 1 ? 'y' : 'ies'}`;
   }
-  countEl.innerHTML = `${roster.length}${trackQualifier(roster)} professor${roster.length === 1 ? '' : 's'}${fieldPhrase} across ${universities} universit${universities === 1 ? 'y' : 'ies'}${locPhrase}. <a class="submission-link" href="submit.html">Add or update info.</a>`;
+  countEl.innerHTML = `${roster.length}${trackQualifier(roster)} professor${roster.length === 1 ? '' : 's'}${fieldPhrase} across ${universities} universit${universities === 1 ? 'y' : 'ies'}${locPhrase}.`;
 
   if (roster.length === 0) {
     rosterEl.innerHTML = '<p class="empty-state">No matches. Try a different search or filter.</p>';

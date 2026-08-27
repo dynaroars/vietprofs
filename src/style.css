@@ -79,13 +79,22 @@ h1 {
 
 .title-row {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
+  justify-content: space-between;
   gap: 0.5rem;
 }
 
+.subtitle-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 0.35rem;
+}
+
 .site-subtitle {
-  margin: 0.35rem 0 0;
+  margin: 0;
   color: var(--text-secondary);
   font-size: 1.05rem;
 }
@@ -94,6 +103,7 @@ h1 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   width: 2rem;
   height: 2rem;
   color: var(--text-secondary);
@@ -358,14 +368,28 @@ h1 {
 }
 
 .submission-link {
-  color: inherit;
-  text-decoration: underline dotted;
-  text-underline-offset: 2px;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--bg-color);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
 }
 
 .submission-link:hover,
 .submission-link:focus-visible {
-  color: var(--text-primary);
+  opacity: 0.85;
+}
+
+.submission-link:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
 }
 
 .roster {
@@ -884,6 +908,86 @@ h1 {
   color: var(--text-secondary);
 }
 
+.form-section.required {
+  padding: 0.9rem 1rem;
+  border: 1.5px solid var(--accent);
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--accent) 7%, var(--card-bg));
+}
+
+.form-section.required > label {
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.required-badge {
+  display: inline-block;
+  padding: 0.1rem 0.55rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--bg-color);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.info-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.05rem;
+  height: 1.05rem;
+  border-radius: 50%;
+  background: var(--tag-bg);
+  color: var(--text-secondary);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  font-style: italic;
+  cursor: help;
+  position: relative;
+  vertical-align: middle;
+}
+
+.info-icon::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 0.5rem);
+  transform: translateX(-50%) translateY(2px);
+  width: max-content;
+  max-width: 240px;
+  background: var(--text-primary);
+  color: var(--bg-color);
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+  padding: 0.5rem 0.65rem;
+  border-radius: 6px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.12s ease, transform 0.12s ease;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.info-icon:hover::after,
+.info-icon:focus-visible::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.info-icon:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
 .form-help {
   color: var(--text-muted);
   font-size: var(--text-xs);
@@ -950,6 +1054,12 @@ h1 {
   gap: 1rem;
 }
 
+.form-row > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
 @media (max-width: 480px) {
   .form-row {
     grid-template-columns: 1fr;
@@ -958,6 +1068,7 @@ h1 {
 
 .form-section input[type='text'],
 .form-section input[type='url'],
+.form-section input[type='number'],
 .form-section textarea {
   padding: 0.6rem 0.9rem;
   border: 1px solid var(--border-color);

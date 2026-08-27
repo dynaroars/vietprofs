@@ -51,7 +51,6 @@ test('every entry has the required fields', () => {
     if (p.state !== undefined) assert.equal(typeof p.state, 'string');
     if (p.country !== undefined) assert.equal(typeof p.country, 'string');
     assert.ok(Array.isArray(p.researchAreas) && p.researchAreas.length > 0);
-    assert.equal(typeof p.secondaryAppointment, 'boolean');
     assert.ok(TRACKS.includes(p.track), `"${p.track}" (for ${p.name}) is not one of TRACKS`);
     assert.equal(typeof p.department, 'string');
     assert.ok(p.department.length > 0);

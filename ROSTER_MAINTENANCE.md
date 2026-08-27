@@ -55,8 +55,7 @@ First, resolve the person's identity and search `public/data.json` for them, inc
 variants, before changing anything. Then review all applicable roster fields rather than stopping
 after the first correction:
 
-- current university, primary department, rank, track, secondary/joint status, and a working
-  official `profileUrl`;
+- current university, primary department, rank, track, and a working official `profileUrl`;
 - a maintained personal or lab `websiteUrl` and Google Scholar `scholarUrl`, keeping each URL in
   its designated field;
 - Vietnamese or Vietnamese-diaspora identity and the evidence needed for eligibility;
@@ -115,7 +114,6 @@ link.
 - For undergraduate education, use the explicitly stated bachelor’s institution and completion year. A professional degree such as a JD is separate from undergraduate education and must not be substituted for it.
 - Use the person's full published academic name only when an official profile or maintained academic homepage supplies it. Expand initials only with direct evidence.
 - Store `name` without Vietnamese diacritics and in First (Middle) Last order. This is a display normalization, not a claim about publishing name order.
-- Keep `secondaryAppointment: true` when the listed field is secondary or joint and the primary tenure home is elsewhere.
 - Preserve source URLs for profiles, honors, name evidence, and portraits.
 - Store the university's full canonical name in `public/data.json`; shortening is display-only.
   Card displays abbreviate a terminal ` University` (`George Mason University` →
@@ -263,7 +261,7 @@ order:
 4. **Visit the site(s) and update information thoroughly.** Read the official profile and any
    personal/lab site fully, not just the first field that looks off. Update whatever has changed
    since last verified: rank/track, `phdInstitution`/`phdYear` (only when explicitly stated, never
-   inferred), other documented degrees, `secondaryAppointment`, and honors/awards. Apply the same
+   inferred), other documented degrees, and honors/awards. Apply the same
    Honors and awards eligibility rules as elsewhere — do not import a full CV award list, only
    distinctions that meet the documented bar.
 5. **Watch for new candidates while you're there.** Coauthors, lab members who became faculty, or

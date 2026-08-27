@@ -652,7 +652,7 @@ ${JSON.stringify(baseline, null, 2)}
 Read AGENTS.md, README.md, and ROSTER_MAINTENANCE.md completely. Use live authoritative sources
 to perform the entire periodic verification: identity and Vietnamese-diaspora eligibility,
 current primary university appointment, department, rank/track, official profile URL,
-personal/lab website, portrait and portrait source, secondary appointment, and continued inclusion
+personal/lab website, portrait and portrait source, and continued inclusion
 eligibility. Search for a Google Scholar profile even if scholarUrl is missing, verify identity
 from affiliation/research/publications rather than name alone, and add or correct scholarUrl when
 supported. Check all explicitly documented education: PhD, master's,
@@ -689,7 +689,7 @@ ${JSON.stringify(current.proposal, null, 2)}
 
 Read ROSTER_MAINTENANCE.md and independently browse live authoritative sources. Distrust the first
 review until you confirm identity, eligibility, current primary appointment, department,
-rank/track, official profile, personal/lab URLs, portrait and source, secondary appointment, every
+rank/track, official profile, personal/lab URLs, portrait and source, every
 documented degree/major/graduation year, completed postdoctoral institution,
 and any explicitly documented end/completion year, honors eligibility, and every proposed change. Approve only when the
 complete verification standard is satisfied and the normalized proposal is correct.
