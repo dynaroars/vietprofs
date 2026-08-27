@@ -14,6 +14,7 @@ function searchableFields(person) {
     person.rank,
     canonicalRank(person),
     healthSubfieldOf(person),
+    person.postdocInstitution,
     person.phdInstitution,
     person.mdInstitution,
     ...(person.researchAreas ?? []),

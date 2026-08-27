@@ -89,6 +89,12 @@ Use `--limit` or `--stale-days` to change the run, or force a small current-data
 ./scripts/maintain-roster.mjs run --all --limit 1
 ```
 
+To run the full workflow for one exact canonical roster name regardless of its verification age:
+
+```bash
+./scripts/maintain-roster.mjs run --name "ThanhVu H. Nguyen"
+```
+
 The process may remain active for hours while an account limit resets. It automatically retries
 rate limits with increasing waits. To stop it safely, press <kbd>Ctrl</kbd>+<kbd>C</kbd>, or run this
 from another terminal:

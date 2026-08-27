@@ -168,10 +168,12 @@ function renderRoster(roster, { field, location } = {}) {
       const portrait = p.portrait
         ? `<img class="entry-portrait" src="${escapeHtml(`${import.meta.env.BASE_URL}${p.portrait}`)}" alt="" width="64" height="64" loading="lazy" decoding="async">`
         : '';
+      const postdocDetails = [displayUniversity(p.postdocInstitution), p.postdocYear].filter(Boolean);
       const phdDetails = [displayUniversity(p.phdInstitution), p.phdYear].filter(Boolean);
       const msDetails = [displayUniversity(p.msInstitution), p.msYear].filter(Boolean);
       const undergradDetails = [displayUniversity(p.undergradInstitution), p.undergradYear].filter(Boolean);
       const educationDetails = [
+        postdocDetails.length && `Postdoc: ${postdocDetails.join(', ')}`,
         phdDetails.length && `PhD: ${phdDetails.join(', ')}`,
         msDetails.length && `MS: ${msDetails.join(', ')}`,
         undergradDetails.length && `Undergrad: ${undergradDetails.join(', ')}`,

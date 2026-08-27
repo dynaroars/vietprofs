@@ -169,6 +169,7 @@ test('full HTML roster rendering produces clean HTML with no undefined/null/NaN 
     const tags = fieldTag + trackTag + topicTags;
     const updatedDate = formatRosterShortDate(p.lastUpdatedAt);
     const educationDetails = [
+      (p.postdocYear || p.postdocInstitution) && `Postdoc: ${[displayUniversity(p.postdocInstitution), p.postdocYear].filter(Boolean).join(', ')}`,
       (p.phdYear || p.phdInstitution) && `PhD: ${[displayUniversity(p.phdInstitution), p.phdYear].filter(Boolean).join(', ')}`,
       (p.msYear || p.msInstitution) && `MS: ${[displayUniversity(p.msInstitution), p.msYear].filter(Boolean).join(', ')}`,
       (p.undergradYear || p.undergradInstitution) && `Undergrad: ${[displayUniversity(p.undergradInstitution), p.undergradYear].filter(Boolean).join(', ')}`,
@@ -221,6 +222,7 @@ test('full HTML roster rendering produces clean HTML with no undefined/null/NaN 
 
 test('multiple education credentials share one semicolon-separated row', () => {
   const person = roster.find((entry) => [
+    entry.postdocInstitution || entry.postdocYear,
     entry.phdInstitution || entry.phdYear,
     entry.msInstitution || entry.msYear,
     entry.undergradInstitution || entry.undergradYear,
@@ -229,6 +231,7 @@ test('multiple education credentials share one semicolon-separated row', () => {
   ].filter(Boolean).length > 1);
   assert.ok(person, 'expected a roster entry with multiple education credentials');
   const credentials = [
+    (person.postdocInstitution || person.postdocYear) && 'Postdoc',
     (person.phdInstitution || person.phdYear) && 'PhD',
     (person.msInstitution || person.msYear) && 'MS',
     (person.undergradInstitution || person.undergradYear) && 'Undergrad',

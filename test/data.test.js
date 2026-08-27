@@ -56,6 +56,8 @@ test('every entry has the required fields', () => {
     assert.equal(typeof p.department, 'string');
     assert.ok(p.department.length > 0);
     if (p.rank !== undefined) assert.equal(typeof p.rank, 'string');
+    if (p.postdocYear !== undefined) assert.ok(Number.isInteger(p.postdocYear));
+    if (p.postdocInstitution !== undefined) assert.equal(typeof p.postdocInstitution, 'string');
     if (p.phdYear !== undefined) assert.ok(Number.isInteger(p.phdYear));
     if (p.phdInstitution !== undefined) assert.equal(typeof p.phdInstitution, 'string');
     if (p.undergradInstitution !== undefined) assert.equal(typeof p.undergradInstitution, 'string');

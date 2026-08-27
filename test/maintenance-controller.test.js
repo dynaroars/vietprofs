@@ -34,6 +34,22 @@ test('maintenance selection can explicitly include recently verified entries', (
   ]);
 });
 
+test('maintenance selection can target one exact roster name regardless of age', () => {
+  const verification = Object.fromEntries(people.map((person) => [
+    person.name,
+    '2026-08-27T00:00:00.000Z',
+  ]));
+  assert.deepEqual(selectDueEntries(people, verification, {
+    name: 'Old Person',
+    limit: 40,
+    staleDays: 365,
+    now: Date.parse('2026-08-27T00:00:00.000Z'),
+  }), ['Old Person']);
+  assert.deepEqual(selectDueEntries(people, verification, {
+    name: 'Missing Person',
+  }), []);
+});
+
 test('maintenance selection temporarily defers unresolved entries', () => {
   assert.deepEqual(selectDueEntries(people, {}, {
     all: true,
@@ -54,6 +70,17 @@ test('proposal analysis accepts one targeted edit and ignores model-chosen times
   assert.equal(result.substantiveChange, true);
   assert.equal(result.proposal.university, 'New University');
   assert.equal(result.proposal.lastUpdatedAt, people[1].lastUpdatedAt);
+});
+
+test('proposal analysis preserves completed postdoctoral training fields', () => {
+  const after = structuredClone(people);
+  after[1].postdocInstitution = 'Carnegie Mellon University';
+  after[1].postdocYear = 2022;
+  const result = analyzeRosterProposal(people, after, 'Old Person');
+  assert.equal(result.ok, true);
+  assert.equal(result.substantiveChange, true);
+  assert.equal(result.proposal.postdocInstitution, 'Carnegie Mellon University');
+  assert.equal(result.proposal.postdocYear, 2022);
 });
 
 test('proposal analysis does not treat object key order as a roster update', () => {

@@ -45,18 +45,38 @@ Every result still requires the inclusion and identity checks above.
 
 ### Reviewing user-supplied links
 
-When a user supplies a URL or link, inspect the linked content for roster-relevant information,
-which may include a person's name, current appointment, portrait, education, graduation details,
-or honors and awards. Treat the link as a source or lead, not as automatic authorization to add
-the information.
+Unless the user gives narrower instructions, treat a supplied personal profile, university
+profile, homepage, lab site, or CV as a request to identify the person, check whether they already
+exist in the canonical roster, and perform a thorough roster-relevant review. Follow useful links
+from the supplied page and find an official university source when needed; the supplied URL is a
+source or lead, not by itself proof of eligibility or every fact it contains.
 
-First, search the canonical roster for the person. If they already have an entry, compare the
-linked information with the entry and update only information that is current, sufficiently
-supported, and permitted by the applicable data-entry and honors rules. If they do not
-have an entry, verify their identity and eligibility against the inclusion standard before adding
-them. Do not add a person, portrait, degree, graduation detail, award, or other field merely
-because it appears at the supplied URL; each addition must independently satisfy the relevant
-requirements in this guide.
+First, resolve the person's identity and search `public/data.json` for them, including name
+variants, before changing anything. Then review all applicable roster fields rather than stopping
+after the first correction:
+
+- current university, primary department, rank, track, secondary/joint status, and a working
+  official `profileUrl`;
+- a maintained personal or lab `websiteUrl` and Google Scholar `scholarUrl`, keeping each URL in
+  its designated field;
+- Vietnamese or Vietnamese-diaspora identity and the evidence needed for eligibility;
+- a suitable current portrait and its source;
+- explicitly documented education, including degree institutions, graduation years, majors,
+  professional degrees, and completed postdoctoral institution and end/completion year; and
+- honors and awards that meet the eligibility standard below, with supporting sources.
+
+If the person already has an entry, compare the collected evidence with every relevant stored
+field and apply all current, sufficiently supported corrections and additions. If the person is
+absent, independently verify the full inclusion standard and add them with all supported roster
+details when eligible. Do not add an ineligible person or unsupported portrait, credential,
+graduation detail, award, or other fact merely because it appears at the supplied URL. If the URL
+is not about a person or the user explicitly requests only a summary or another narrower action,
+follow that context instead.
+
+Update `lastUpdatedAt` whenever this review changes substantive roster data. Advance the
+verification ledger only if the work also completes the full live review required by the
+verification-ledger and periodic-refresh rules; a supplied link or partial correction alone is not
+enough.
 
 ### Reviewing user-supplied names
 
@@ -86,6 +106,7 @@ link.
 - Preserve an existing Scholar URL by moving it to `scholarUrl` before replacing `profileUrl`. Verify replacement URLs follow redirects and do not return 404.
 - Use only `Assistant Professor`, `Associate Professor`, or `Professor` as the rank vocabulary for Tenure-line entries; use `Teaching` and `Emeritus` for the corresponding tracks.
 - Add `phdYear` and `phdInstitution` only when a source explicitly states them. Never infer them from dates, CV chronology, or context.
+- Record completed postdoctoral training in `postdocInstitution` and `postdocYear` only when a source explicitly states the institution and end/completion year. Past postdoctoral training is an education credential; a current postdoctoral appointment remains ineligible for the roster.
 - Education research is not limited to PhD, MS, and undergraduate degrees. Record explicitly documented professional or equivalent degrees such as MD, JD, DDS, PharmD, EdD, DO, and other credentials when the data model has an appropriate field. Do not force an MD/JD or another degree into the PhD/MS/undergraduate fields; if no suitable field exists yet, preserve the source for a later schema update and mention it in the change notes.
 - For undergraduate education, use the explicitly stated bachelor’s institution and completion year. A professional degree such as a JD is separate from undergraduate education and must not be substituted for it.
 - Use the person's full published academic name only when an official profile or maintained academic homepage supplies it. Expand initials only with direct evidence.

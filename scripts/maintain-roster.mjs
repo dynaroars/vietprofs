@@ -5,6 +5,7 @@
  *
  * RUN WEEKLY
  *   ./scripts/maintain-roster.mjs run
+ *   ./scripts/maintain-roster.mjs run --name "ThanhVu H. Nguyen"
  *
  * INITIAL FULL-ROSTER SWEEP
  *   ./scripts/maintain-roster.mjs run --all --limit 1000
@@ -287,6 +288,7 @@ function parseOptions(argv) {
     staleDays: DEFAULT_STALE_DAYS,
     all: false,
     dryRun: false,
+    name: null,
   };
   const values = [...argv];
   if (values[0] && !values[0].startsWith('-')) options.command = values.shift();
@@ -294,6 +296,7 @@ function parseOptions(argv) {
     const value = values.shift();
     if (value === '--all') options.all = true;
     else if (value === '--dry-run') options.dryRun = true;
+    else if (value === '--name') options.name = values.shift();
     else if (value === '--limit') options.limit = Number(values.shift());
     else if (value === '--stale-days') options.staleDays = Number(values.shift());
     else if (value === '--help' || value === '-h') options.command = 'help';
@@ -301,6 +304,7 @@ function parseOptions(argv) {
   }
   if (!Number.isInteger(options.limit) || options.limit < 1) throw new Error('--limit must be a positive integer');
   if (!Number.isFinite(options.staleDays) || options.staleDays < 0) throw new Error('--stale-days must be zero or greater');
+  if (options.name !== null && (typeof options.name !== 'string' || !options.name.trim())) throw new Error('--name requires an exact roster name');
   return options;
 }
 
@@ -308,7 +312,7 @@ function helpText() {
   return `VietProfs unattended roster maintenance
 
 Usage:
-  ./scripts/maintain-roster.mjs run [--limit N] [--stale-days N] [--all] [--dry-run]
+  ./scripts/maintain-roster.mjs run [--limit N] [--stale-days N] [--all] [--name NAME] [--dry-run]
   ./scripts/maintain-roster.mjs stop
   ./scripts/maintain-roster.mjs status
 
@@ -319,6 +323,7 @@ Usage:
   --limit N       Entries in a new run (default: ${DEFAULT_LIMIT}).
   --stale-days N  Minimum age of last full verification (default: ${DEFAULT_STALE_DAYS}).
   --all           Ignore age and select the oldest entries.
+  --name NAME     Verify only the exact canonical roster name, regardless of age.
   --dry-run       Show the selection without agents, Git writes, commits, or pushes.
 
 State: ${STATE_DIR}
@@ -331,7 +336,9 @@ export function selectDueEntries(roster, verification, {
   all = false,
   now = Date.now(),
   deferredUntil = {},
+  name = null,
 } = {}) {
+  if (name !== null) return roster.some((person) => person.name === name) ? [name] : [];
   const cutoff = now - staleDays * 86_400_000;
   return roster
     .map((person, index) => {
@@ -522,8 +529,11 @@ ${JSON.stringify(baseline, null, 2)}
 Read AGENTS.md, README.md, and ROSTER_MAINTENANCE.md completely. Use live authoritative sources
 to perform the entire periodic verification: identity and Vietnamese-diaspora eligibility,
 current primary university appointment, department, rank/track, official profile URL,
-personal/lab website, explicitly documented education, eligible honors, secondary appointment,
-and continued inclusion eligibility. Do not treat a reachable URL as a complete review.
+personal/lab website, Google Scholar URL, portrait and portrait source, secondary appointment,
+and continued inclusion eligibility. Check all explicitly documented education: PhD, master's,
+undergraduate, professional or equivalent degrees, majors and graduation years, plus completed
+postdoctoral institution and end/completion year. Check every honor under the documented honors
+eligibility rules. Do not treat a reachable URL as a complete review.
 
 You cannot edit files. Return structured output. Use action "keep" if no roster fact should change,
 "update" for a corrected full entry (also use it for a canonical-name correction), or "remove" if
@@ -548,8 +558,10 @@ ${JSON.stringify(current.proposal, null, 2)}
 
 Read ROSTER_MAINTENANCE.md and independently browse live authoritative sources. Distrust the first
 review until you confirm identity, eligibility, current primary appointment, department,
-rank/track, profile URL, education, honors eligibility, and every proposed change. Approve only
-when the complete verification standard is satisfied and the normalized proposal is correct.
+rank/track, official profile, personal/lab and Google Scholar URLs, portrait and source, secondary
+appointment, every documented degree/major/graduation year, completed postdoctoral institution
+and end/completion year, honors eligibility, and every proposed change. Approve only when the
+complete verification standard is satisfied and the normalized proposal is correct.
 Return uncertain for incomplete/inaccessible evidence and reject demonstrably incorrect work.
 Do not edit files. Return only the required structured verdict.`;
 }
@@ -796,7 +808,7 @@ async function createRun(options) {
     runId: randomUUID(),
     status: 'running',
     startedAt: nowIso(),
-    options: { limit: options.limit, staleDays: options.staleDays, all: options.all },
+    options: { limit: options.limit, staleDays: options.staleDays, all: options.all, name: options.name },
     queue: selectDueEntries(roster, verification, { ...options, deferredUntil }),
     index: 0,
     current: null,

@@ -92,6 +92,12 @@ for (const [index, person] of roster.entries()) {
   if (typeof person.secondaryAppointment !== 'boolean') fail(rosterFile, `${label} secondaryAppointment must be boolean`);
   if (person.state !== undefined && typeof person.state !== 'string') fail(rosterFile, `${label} state must be a string`);
   if (person.country !== undefined && typeof person.country !== 'string') fail(rosterFile, `${label} country must be a string`);
+  if (person.postdocInstitution !== undefined && (typeof person.postdocInstitution !== 'string' || !person.postdocInstitution.trim())) {
+    fail(rosterFile, `${label} has invalid postdocInstitution`);
+  }
+  if (person.postdocYear !== undefined && (!Number.isInteger(person.postdocYear) || person.postdocYear < 1900 || person.postdocYear > new Date().getFullYear())) {
+    fail(rosterFile, `${label} has invalid postdocYear`);
+  }
   if (person.phdYear !== undefined && (!Number.isInteger(person.phdYear) || person.phdYear < 1900 || person.phdYear > new Date().getFullYear())) {
     fail(rosterFile, `${label} has invalid phdYear`);
   }

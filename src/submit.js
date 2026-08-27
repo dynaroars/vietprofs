@@ -79,6 +79,17 @@ function renderShell() {
 
       <div class="form-section form-row">
         <div>
+          <label for="postdocYear">Postdoc completion year (optional)</label>
+          <input id="postdocYear" name="postdocYear" type="number" min="1900" max="${new Date().getFullYear()}" placeholder="e.g. 2022" />
+        </div>
+        <div>
+          <label for="postdocInstitution">Postdoc institution (optional)</label>
+          <input id="postdocInstitution" name="postdocInstitution" type="text" placeholder="e.g. Carnegie Mellon University" />
+        </div>
+      </div>
+
+      <div class="form-section form-row">
+        <div>
           <label for="phdYear">PhD year (optional)</label>
           <input id="phdYear" name="phdYear" type="number" min="1900" max="${new Date().getFullYear()}" placeholder="e.g. 2018" />
         </div>
@@ -133,6 +144,8 @@ function populateEntry(form, entry) {
   form.country.value = entry.country ?? '';
   form.department.value = entry.department ?? '';
   form.rank.value = entry.rank ?? '';
+  form.postdocYear.value = entry.postdocYear ?? '';
+  form.postdocInstitution.value = entry.postdocInstitution ?? '';
   form.phdYear.value = entry.phdYear ?? '';
   form.phdInstitution.value = entry.phdInstitution ?? '';
   form.researchAreas.value = entry.researchAreas ? entry.researchAreas.join(', ') : '';
@@ -190,6 +203,8 @@ function onSubmit(e, entriesByName) {
       track: form.track.value || undefined,
       rank: form.rank.value.trim() || undefined,
       researchAreas: researchAreas.length ? researchAreas : undefined,
+      postdocYear: form.postdocYear.value ? Number(form.postdocYear.value) : undefined,
+      postdocInstitution: form.postdocInstitution.value.trim() || undefined,
       phdYear: form.phdYear.value ? Number(form.phdYear.value) : undefined,
       phdInstitution: form.phdInstitution.value.trim() || undefined,
       secondaryAppointment: form.secondaryAppointment.checked || undefined,
