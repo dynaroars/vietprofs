@@ -36,6 +36,18 @@ npm test          # validate data and run unit/UI tests
 npm run test:e2e  # run browser smoke tests
 ```
 
+By default `npm run dev` only listens on `localhost`. To make the dev server reachable from other
+machines on your network over HTTPS:
+
+```bash
+npm run dev -- --host
+```
+
+This binds to all network interfaces and serves a self-signed certificate via
+`@vitejs/plugin-basic-ssl` (already configured in `vite.config.js`). Other machines on the network
+can then browse to `https://<this-machine's-hostname-or-IP>:5173`, accepting the self-signed
+certificate warning on first visit.
+
 ## Data and contributions
 
 Edit [`public/data.json`](./public/data.json) to add, remove, or correct roster entries. Each entry needs a current academic profile URL, university, department, rank/track, country, and canonical UTC `lastUpdatedAt` timestamp. The accepted tracks are `Tenure-line`, `Teaching`, and `Emeritus`. Maintainers track full-review times separately in [`maintenance/verification.json`](./maintenance/verification.json), which is not part of the public site data.

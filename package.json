@@ -13,6 +13,7 @@
     "test:e2e": "node --test test/browser-smoke.test.js"
   },
   "devDependencies": {
+    "@vitejs/plugin-basic-ssl": "^2.3.0",
     "playwright": "^1.62.1",
     "vite": "^7.2.4"
   }
