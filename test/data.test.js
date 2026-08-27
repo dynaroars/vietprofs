@@ -276,6 +276,10 @@ test('duplicate-name university suffixes are hidden from display', () => {
 test('university display names use aliases and abbreviate a terminal University', () => {
   assert.equal(displayUniversity('Pennsylvania State University'), 'Penn State');
   assert.equal(displayUniversity('Penn State University'), 'Penn State');
+  assert.equal(displayUniversity('Stanford University'), 'Stanford');
+  assert.equal(displayUniversity('Princeton University'), 'Princeton');
+  assert.equal(displayUniversity('Harvard University'), 'Harvard');
+  assert.equal(displayUniversity('Massachusetts Institute of Technology'), 'MIT');
   assert.equal(displayUniversity('Penn State Harrisburg'), 'Penn State Harrisburg');
   assert.equal(displayUniversity('George Mason University'), 'George Mason Univ.');
   assert.equal(displayUniversity('Boston University'), 'Boston Univ.');

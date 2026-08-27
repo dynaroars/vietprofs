@@ -72,6 +72,20 @@ export function uniqueRanks(roster) {
 export const UNIVERSITY_DISPLAY_NAMES = new Map([
   ['Pennsylvania State University', 'Penn State'],
   ['Penn State University', 'Penn State'],
+  ['Brown University', 'Brown'],
+  ['Carnegie Mellon University', 'Carnegie Mellon'],
+  ['Columbia University', 'Columbia'],
+  ['Cornell University', 'Cornell'],
+  ['Duke University', 'Duke'],
+  ['Harvard University', 'Harvard'],
+  ['Johns Hopkins University', 'Johns Hopkins'],
+  ['Massachusetts Institute of Technology', 'MIT'],
+  ['New York University', 'NYU'],
+  ['Northwestern University', 'Northwestern'],
+  ['Princeton University', 'Princeton'],
+  ['Rice University', 'Rice'],
+  ['Stanford University', 'Stanford'],
+  ['Yale University', 'Yale'],
 ]);
 
 export function displayUniversity(university) {
