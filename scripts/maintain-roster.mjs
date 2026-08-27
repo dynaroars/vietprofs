@@ -550,11 +550,15 @@ async function assertPreflight() {
   if (await gitText(['branch', '--show-current']) !== 'main') throw new BlockedError('maintenance must run on the main branch');
 }
 
-async function changedPaths() {
-  return (await gitText(['status', '--porcelain'])).split('\n').filter(Boolean).map((line) => {
+export function parseChangedPaths(output) {
+  return String(output).split('\n').filter(Boolean).map((line) => {
     const path = line.slice(3).trim();
     return path.includes(' -> ') ? path.split(' -> ').at(-1) : path;
   });
+}
+
+async function changedPaths() {
+  return parseChangedPaths((await git(['status', '--porcelain'])).stdout);
 }
 
 async function requireCleanCheckout() {

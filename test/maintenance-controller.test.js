@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {
   analyzeRosterProposal,
   canReviseProposal,
+  parseChangedPaths,
   resolveTargetLocally,
   selectDueEntries,
   selectTargetEntries,
@@ -94,6 +95,19 @@ test('rejected proposals receive bounded revision attempts', () => {
   assert.equal(canReviseProposal({ verdict: 'reject' }, 2), false);
   assert.equal(canReviseProposal({ verdict: 'uncertain' }, 0), false);
   assert.equal(canReviseProposal({ verdict: 'approve' }, 0), false);
+});
+
+test('changed-path parsing preserves the first porcelain path and handles renames', () => {
+  assert.deepEqual(parseChangedPaths([
+    ' M maintenance/verification.json',
+    'M  public/data.json',
+    'R  old-name.txt -> new-name.txt',
+    '',
+  ].join('\n')), [
+    'maintenance/verification.json',
+    'public/data.json',
+    'new-name.txt',
+  ]);
 });
 
 test('proposal analysis does not treat object key order as a roster update', () => {
