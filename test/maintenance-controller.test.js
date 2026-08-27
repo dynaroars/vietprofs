@@ -2,7 +2,10 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
   analyzeRosterProposal,
+  canReviseProposal,
+  resolveTargetLocally,
   selectDueEntries,
+  selectTargetEntries,
 } from '../scripts/maintain-roster.mjs';
 
 const people = [
@@ -34,20 +37,22 @@ test('maintenance selection can explicitly include recently verified entries', (
   ]);
 });
 
-test('maintenance selection can target one exact roster name regardless of age', () => {
-  const verification = Object.fromEntries(people.map((person) => [
-    person.name,
-    '2026-08-27T00:00:00.000Z',
-  ]));
-  assert.deepEqual(selectDueEntries(people, verification, {
-    name: 'Old Person',
-    limit: 40,
-    staleDays: 365,
-    now: Date.parse('2026-08-27T00:00:00.000Z'),
-  }), ['Old Person']);
-  assert.deepEqual(selectDueEntries(people, verification, {
-    name: 'Missing Person',
-  }), []);
+test('maintenance target matching handles an omitted middle initial and a field alias', () => {
+  const roster = [
+    { name: 'ThanhVu H. Nguyen', department: 'Computer Science', university: 'George Mason University' },
+    { name: 'Another Computer Scientist', department: 'Computer Science', university: 'Example University' },
+    { name: 'History Person', department: 'History', university: 'Example University' },
+  ];
+  const personTarget = resolveTargetLocally('Thanhvu Nguyen', roster);
+  assert.deepEqual(personTarget, { kind: 'person', canonicalValue: 'ThanhVu H. Nguyen' });
+  assert.deepEqual(selectTargetEntries(roster, personTarget), ['ThanhVu H. Nguyen']);
+
+  const fieldTarget = resolveTargetLocally('Computer Science', roster);
+  assert.deepEqual(fieldTarget, { kind: 'field', canonicalValue: 'Computer & Information Sciences' });
+  assert.deepEqual(selectTargetEntries(roster, fieldTarget), [
+    'ThanhVu H. Nguyen',
+    'Another Computer Scientist',
+  ]);
 });
 
 test('maintenance selection temporarily defers unresolved entries', () => {
@@ -81,6 +86,14 @@ test('proposal analysis preserves completed postdoctoral training fields', () =>
   assert.equal(result.substantiveChange, true);
   assert.equal(result.proposal.postdocInstitution, 'Carnegie Mellon University');
   assert.equal(result.proposal.postdocYear, 2022);
+});
+
+test('rejected proposals receive bounded revision attempts', () => {
+  assert.equal(canReviseProposal({ verdict: 'reject' }, 0), true);
+  assert.equal(canReviseProposal({ verdict: 'reject' }, 1), true);
+  assert.equal(canReviseProposal({ verdict: 'reject' }, 2), false);
+  assert.equal(canReviseProposal({ verdict: 'uncertain' }, 0), false);
+  assert.equal(canReviseProposal({ verdict: 'approve' }, 0), false);
 });
 
 test('proposal analysis does not treat object key order as a roster update', () => {

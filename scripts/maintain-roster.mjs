@@ -5,7 +5,8 @@
  *
  * RUN WEEKLY
  *   ./scripts/maintain-roster.mjs run
- *   ./scripts/maintain-roster.mjs run --name "ThanhVu H. Nguyen"
+ *   ./scripts/maintain-roster.mjs run --name "Thanhvu Nguyen"
+ *   ./scripts/maintain-roster.mjs run --name "Computer Science"
  *
  * INITIAL FULL-ROSTER SWEEP
  *   ./scripts/maintain-roster.mjs run --all --limit 1000
@@ -44,6 +45,7 @@ import { dirname, join, resolve } from 'node:path';
 import process from 'node:process';
 import { fileURLToPath } from 'node:url';
 import { isDeepStrictEqual } from 'node:util';
+import { FIELDS, fieldOf } from '../src/data.js';
 
 const SCRIPT_PATH = fileURLToPath(import.meta.url);
 const REPO_ROOT = resolve(dirname(SCRIPT_PATH), '..');
@@ -58,6 +60,7 @@ const REVIEW_SCHEMA_FILE = join(STATE_DIR, 'review-schema.json');
 const DEFAULT_LIMIT = 40;
 const DEFAULT_STALE_DAYS = 365;
 const DEFAULT_DEFER_DAYS = 30;
+const MAX_PROPOSAL_REVISIONS = 2;
 const DEFAULT_AGENT_TIMEOUT_MINUTES = 90;
 const DEFAULT_RATE_LIMIT_WAIT_MINUTES = 30;
 const MAX_CAPTURE_CHARS = 2_000_000;
@@ -304,7 +307,7 @@ function parseOptions(argv) {
   }
   if (!Number.isInteger(options.limit) || options.limit < 1) throw new Error('--limit must be a positive integer');
   if (!Number.isFinite(options.staleDays) || options.staleDays < 0) throw new Error('--stale-days must be zero or greater');
-  if (options.name !== null && (typeof options.name !== 'string' || !options.name.trim())) throw new Error('--name requires an exact roster name');
+  if (options.name !== null && (typeof options.name !== 'string' || !options.name.trim())) throw new Error('--name requires a person or field query');
   return options;
 }
 
@@ -323,7 +326,7 @@ Usage:
   --limit N       Entries in a new run (default: ${DEFAULT_LIMIT}).
   --stale-days N  Minimum age of last full verification (default: ${DEFAULT_STALE_DAYS}).
   --all           Ignore age and select the oldest entries.
-  --name NAME     Verify only the exact canonical roster name, regardless of age.
+  --name QUERY    Ask Claude to match one roster person or field; a field queues every member.
   --dry-run       Show the selection without agents, Git writes, commits, or pushes.
 
 State: ${STATE_DIR}
@@ -336,9 +339,7 @@ export function selectDueEntries(roster, verification, {
   all = false,
   now = Date.now(),
   deferredUntil = {},
-  name = null,
 } = {}) {
-  if (name !== null) return roster.some((person) => person.name === name) ? [name] : [];
   const cutoff = now - staleDays * 86_400_000;
   return roster
     .map((person, index) => {
@@ -350,6 +351,43 @@ export function selectDueEntries(roster, verification, {
     .sort((left, right) => left.timestamp - right.timestamp || left.index - right.index)
     .slice(0, limit)
     .map((entry) => entry.name);
+}
+
+function targetTokens(value) {
+  return String(value)
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .match(/[a-z0-9]+/g)
+    ?.map((token) => (token.length > 3 ? token.replace(/s$/, '') : token)) ?? [];
+}
+
+function tokensMatch(query, candidate) {
+  const queryTokens = targetTokens(query);
+  const candidateTokens = new Set(targetTokens(candidate));
+  return queryTokens.length > 0 && queryTokens.every((token) => candidateTokens.has(token));
+}
+
+export function resolveTargetLocally(query, roster) {
+  const exactPeople = roster.filter((person) => targetTokens(person.name).join(' ') === targetTokens(query).join(' '));
+  if (exactPeople.length === 1) return { kind: 'person', canonicalValue: exactPeople[0].name };
+  const people = roster.filter((person) => tokensMatch(query, person.name));
+  if (people.length === 1) return { kind: 'person', canonicalValue: people[0].name };
+  const fields = FIELDS.filter((field) => tokensMatch(query, field));
+  if (fields.length === 1) return { kind: 'field', canonicalValue: fields[0] };
+  return { kind: 'unresolved', canonicalValue: '' };
+}
+
+export function selectTargetEntries(roster, target) {
+  if (target?.kind === 'person') {
+    return roster.some((person) => person.name === target.canonicalValue) ? [target.canonicalValue] : [];
+  }
+  if (target?.kind === 'field') {
+    return roster
+      .filter((person) => fieldOf(person.department, person.university) === target.canonicalValue)
+      .map((person) => person.name);
+  }
+  return [];
 }
 
 function withoutUpdateTimestamp(person) {
@@ -459,6 +497,16 @@ async function runAgentWithRetries(label, invoke) {
 }
 
 async function ensureSchemas() {
+  const targetSchema = {
+    type: 'object',
+    properties: {
+      kind: { type: 'string', enum: ['person', 'field', 'unresolved'] },
+      canonicalValue: { type: 'string' },
+      reason: { type: 'string' },
+    },
+    required: ['kind', 'canonicalValue', 'reason'],
+    additionalProperties: false,
+  };
   const researchSchema = {
     type: 'object',
     properties: {
@@ -484,7 +532,7 @@ async function ensureSchemas() {
   };
   await writeAtomic(RESEARCH_SCHEMA_FILE, researchSchema);
   await writeAtomic(REVIEW_SCHEMA_FILE, reviewSchema);
-  return { researchSchema, reviewSchema };
+  return { targetSchema, researchSchema, reviewSchema };
 }
 
 async function assertPreflight() {
@@ -519,7 +567,76 @@ async function requireOnlyMaintainedChanges() {
   if (unexpected.length) throw new BlockedError(`unexpected changes while maintenance is active: ${unexpected.join(', ')}`);
 }
 
-function researchPrompt(name, baseline) {
+function targetPrompt(query, roster) {
+  return `Resolve a user-supplied VietProfs maintenance target.
+
+Query: ${JSON.stringify(query)}
+
+Canonical roster names:
+${JSON.stringify(roster.map((person) => person.name))}
+
+Canonical fields:
+${JSON.stringify(FIELDS)}
+
+Classify the query as one person, one field, or unresolved. Match person names despite harmless
+capitalization, punctuation, spacing, or omitted middle initials when the intended person is
+unambiguous. Match discipline wording to the closest canonical field; for example, "Computer
+Science" means "Computer & Information Sciences". A field target means every roster member whose
+mapped canonical field equals that value. Never invent a person or field and return unresolved
+when multiple choices remain plausible. canonicalValue must exactly equal one listed roster name
+or canonical field, or be an empty string for unresolved. Return only the structured result.`;
+}
+
+async function resolveTargetWithAgent(query, roster, schema) {
+  const timeout = Number(process.env.VIETPROFS_AGENT_TIMEOUT_MINUTES || DEFAULT_AGENT_TIMEOUT_MINUTES);
+  const target = await runAgentWithRetries('Claude target matching', async () => {
+    const result = await runProcess('claude', [
+      '-p',
+      '--output-format', 'json',
+      '--permission-mode', 'dontAsk',
+      '--allowedTools', 'Read,Glob,Grep',
+      '--json-schema', JSON.stringify(schema),
+      '--session-id', randomUUID(),
+      targetPrompt(query, roster),
+    ], {
+      label: `Claude target matching for ${query}`,
+      logFile: join(STATE_DIR, 'logs', `target-${Date.now()}.log`),
+      timeoutMinutes: timeout,
+      allowFailure: true,
+    });
+    const outer = parseJsonOutput(result.stdout);
+    const structured = outer?.structured_output
+      || (typeof outer?.result === 'string' ? parseJsonOutput(outer.result) : outer?.result);
+    return { ok: result.code === 0 && structured, value: structured, process: result };
+  });
+  const validPerson = target.kind === 'person' && roster.some((person) => person.name === target.canonicalValue);
+  const validField = target.kind === 'field' && FIELDS.includes(target.canonicalValue);
+  if (!validPerson && !validField) {
+    throw new BlockedError(`Claude could not resolve --name ${JSON.stringify(query)}: ${target.reason || 'unresolved target'}`);
+  }
+  return target;
+}
+
+function researchPrompt(name, baseline, revision = null) {
+  const revisionInstructions = revision ? `
+
+Your previous complete-entry proposal was independently rejected.
+
+Previous research result:
+${JSON.stringify(revision.research, null, 2)}
+
+Previous normalized proposal:
+${JSON.stringify(revision.proposal, null, 2)}
+
+Independent review:
+${JSON.stringify(revision.review, null, 2)}
+
+Revise the complete entry using live sources and correct every issue identified by the reviewer.
+Preserve supported additions from the previous proposal, including postdoctoral training, while
+fixing omissions or normalization errors. Do not merely explain the corrections: return them in
+the complete proposedEntryJson object. If a reviewer request is unsupported or cannot be resolved,
+set status incomplete and explain why.
+` : '';
   return `You are the primary researcher for one VietProfs roster entry.
 
 Target: ${name}
@@ -529,11 +646,19 @@ ${JSON.stringify(baseline, null, 2)}
 Read AGENTS.md, README.md, and ROSTER_MAINTENANCE.md completely. Use live authoritative sources
 to perform the entire periodic verification: identity and Vietnamese-diaspora eligibility,
 current primary university appointment, department, rank/track, official profile URL,
-personal/lab website, Google Scholar URL, portrait and portrait source, secondary appointment,
-and continued inclusion eligibility. Check all explicitly documented education: PhD, master's,
+personal/lab website, portrait and portrait source, secondary appointment, and continued inclusion
+eligibility. Search for a Google Scholar profile even if scholarUrl is missing, verify identity
+from affiliation/research/publications rather than name alone, and add or correct scholarUrl when
+supported. Check all explicitly documented education: PhD, master's,
 undergraduate, professional or equivalent degrees, majors and graduation years, plus completed
 postdoctoral institution and end/completion year. Check every honor under the documented honors
 eligibility rules. Do not treat a reachable URL as a complete review.
+
+Before returning an update, compare every supported baseline and discovered field against the
+complete proposed object. Do not omit documented majors, graduation years, postdoctoral training,
+links, portraits, or eligible honors. Use canonical full institution names from the roster guide;
+display aliases such as "Penn State" or "Penn State University" must not replace
+"Pennsylvania State University" in stored data.${revisionInstructions}
 
 You cannot edit files. Return structured output. Use action "keep" if no roster fact should change,
 "update" for a corrected full entry (also use it for a canonical-name correction), or "remove" if
@@ -558,10 +683,12 @@ ${JSON.stringify(current.proposal, null, 2)}
 
 Read ROSTER_MAINTENANCE.md and independently browse live authoritative sources. Distrust the first
 review until you confirm identity, eligibility, current primary appointment, department,
-rank/track, official profile, personal/lab and Google Scholar URLs, portrait and source, secondary
-appointment, every documented degree/major/graduation year, completed postdoctoral institution
+rank/track, official profile, personal/lab URLs, portrait and source, secondary appointment, every
+documented degree/major/graduation year, completed postdoctoral institution
 and end/completion year, honors eligibility, and every proposed change. Approve only when the
 complete verification standard is satisfied and the normalized proposal is correct.
+Independently search for and identity-check Google Scholar when missing or changed; confirm that a
+verified Scholar URL is stored only in scholarUrl.
 Return uncertain for incomplete/inaccessible evidence and reject demonstrably incorrect work.
 Do not edit files. Return only the required structured verdict.`;
 }
@@ -569,7 +696,9 @@ Do not edit files. Return only the required structured verdict.`;
 async function runResearch(current, schemas) {
   const timeout = Number(process.env.VIETPROFS_AGENT_TIMEOUT_MINUTES || DEFAULT_AGENT_TIMEOUT_MINUTES);
   return runAgentWithRetries('Claude', async () => {
-    const output = join(STATE_DIR, `research-${current.jobId}.json`);
+    const revision = current.revisionHistory?.at(-1) ?? null;
+    const suffix = current.revisionCount ? `-revision-${current.revisionCount}` : '';
+    const output = join(STATE_DIR, `research-${current.jobId}${suffix}.json`);
     await unlink(output).catch(() => {});
     const result = await runProcess('claude', [
       '-p',
@@ -578,10 +707,10 @@ async function runResearch(current, schemas) {
       '--allowedTools', 'Read,Glob,Grep,WebSearch,WebFetch',
       '--json-schema', JSON.stringify(schemas.researchSchema),
       '--session-id', randomUUID(),
-      researchPrompt(current.name, current.baseline),
+      researchPrompt(current.name, current.baseline, revision),
     ], {
       label: `Claude research for ${current.name}`,
-      logFile: join(STATE_DIR, 'logs', `${current.jobId}-claude.log`),
+      logFile: join(STATE_DIR, 'logs', `${current.jobId}-claude${suffix}.log`),
       timeoutMinutes: timeout,
       allowFailure: true,
     });
@@ -595,7 +724,8 @@ async function runResearch(current, schemas) {
 async function runReview(current) {
   const timeout = Number(process.env.VIETPROFS_AGENT_TIMEOUT_MINUTES || DEFAULT_AGENT_TIMEOUT_MINUTES);
   return runAgentWithRetries('Codex', async () => {
-    const output = join(STATE_DIR, `review-${current.jobId}.json`);
+    const suffix = current.revisionCount ? `-revision-${current.revisionCount}` : '';
+    const output = join(STATE_DIR, `review-${current.jobId}${suffix}.json`);
     await unlink(output).catch(() => {});
     const result = await runProcess('codex', [
       '--search',
@@ -608,7 +738,7 @@ async function runReview(current) {
       reviewPrompt(current),
     ], {
       label: `Codex review for ${current.name}`,
-      logFile: join(STATE_DIR, 'logs', `${current.jobId}-codex.log`),
+      logFile: join(STATE_DIR, 'logs', `${current.jobId}-codex${suffix}.log`),
       timeoutMinutes: timeout,
       allowFailure: true,
     });
@@ -653,6 +783,8 @@ async function startPerson(name) {
     proposal: null,
     research: null,
     review: null,
+    revisionCount: 0,
+    revisionHistory: [],
     substantiveChange: false,
   };
   await saveState();
@@ -725,6 +857,12 @@ async function pushPerson(current) {
   await git(['push', 'origin', 'main'], { label: `push ${current.name}` });
 }
 
+export function canReviseProposal(review, revisionCount, maxRevisions = MAX_PROPOSAL_REVISIONS) {
+  return review?.verdict === 'reject'
+    && Number.isInteger(revisionCount)
+    && revisionCount < maxRevisions;
+}
+
 async function processCurrent(schemas) {
   const current = state.current;
   if (current.stage === 'researching' || current.stage === 'reviewing') {
@@ -753,6 +891,23 @@ async function processCurrent(schemas) {
     try {
       current.review = await runReview(current);
       if (current.review.verdict !== 'approve') {
+        if (canReviseProposal(current.review, current.revisionCount ?? 0)) {
+          current.revisionHistory ??= [];
+          current.revisionHistory.push({
+            research: current.research,
+            proposal: current.proposal,
+            review: current.review,
+          });
+          current.revisionCount = (current.revisionCount ?? 0) + 1;
+          current.research = null;
+          current.proposal = null;
+          current.review = null;
+          current.substantiveChange = false;
+          current.stage = 'researching';
+          await saveState();
+          await log(`Revising ${current.name} after rejected proposal (${current.revisionCount}/${MAX_PROPOSAL_REVISIONS}).`);
+          return;
+        }
         return skipPerson(`Codex verdict: ${current.review.verdict}`, current.review);
       }
       current.approvedAt = nowIso();
@@ -797,19 +952,23 @@ async function processCurrent(schemas) {
   }
 }
 
-async function createRun(options) {
+async function createRun(options, schemas) {
   await requireCleanCheckout();
   await git(['pull', '--ff-only', 'origin', 'main'], { label: 'update origin/main' });
   const roster = await readJson(join(REPO_ROOT, 'public/data.json'));
   const verification = await readJson(join(REPO_ROOT, 'maintenance/verification.json'));
   const deferredUntil = state?.deferredUntil || {};
+  const target = options.name ? await resolveTargetWithAgent(options.name, roster, schemas.targetSchema) : null;
+  const queue = target
+    ? selectTargetEntries(roster, target)
+    : selectDueEntries(roster, verification, { ...options, deferredUntil });
   state = {
     version: 1,
     runId: randomUUID(),
     status: 'running',
     startedAt: nowIso(),
-    options: { limit: options.limit, staleDays: options.staleDays, all: options.all, name: options.name },
-    queue: selectDueEntries(roster, verification, { ...options, deferredUntil }),
+    options: { limit: options.limit, staleDays: options.staleDays, all: options.all, name: options.name, target },
+    queue,
     index: 0,
     current: null,
     completed: [],
@@ -826,10 +985,17 @@ async function dryRun(options) {
   const roster = await readJson(join(REPO_ROOT, 'public/data.json'));
   const verification = await readJson(join(REPO_ROOT, 'maintenance/verification.json'));
   const previous = await readJson(STATE_FILE, null);
-  const queue = selectDueEntries(roster, verification, {
-    ...options,
-    deferredUntil: previous?.deferredUntil || {},
-  });
+  const target = options.name ? resolveTargetLocally(options.name, roster) : null;
+  if (target?.kind === 'unresolved') {
+    throw new BlockedError(`agent-free dry run could not unambiguously resolve --name ${JSON.stringify(options.name)}`);
+  }
+  const queue = target
+    ? selectTargetEntries(roster, target)
+    : selectDueEntries(roster, verification, {
+      ...options,
+      deferredUntil: previous?.deferredUntil || {},
+    });
+  if (target) console.log(`Resolved target locally for agent-free dry run: ${target.kind} ${target.canonicalValue}`);
   console.log(`Would select ${queue.length} roster entr${queue.length === 1 ? 'y' : 'ies'}:`);
   for (const name of queue) console.log(`- ${name} (${verification[name] || 'never verified'})`);
 }
@@ -849,7 +1015,7 @@ async function runController(options) {
 
   await assertPreflight();
   const schemas = await ensureSchemas();
-  if (!resumable) await createRun(options);
+  if (!resumable) await createRun(options, schemas);
   if (state.queue.length === 0) {
     state.status = 'complete';
     state.completedAt = nowIso();

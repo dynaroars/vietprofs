@@ -220,7 +220,9 @@ the workflow below one person at a time, requires an independent Codex approval 
 research before applying it, keeps resumable state outside the repository, and commits and pushes
 each approved entry. `./scripts/maintain-roster.mjs stop` safely pauses it; running `run` again
 resumes the saved person and stage. Incomplete or disputed entries must remain unverified so a
-later run retries them.
+later run retries them. When Codex rejects a correctable proposal, the controller gives Claude up
+to two revisions containing the proposal and the reviewer's exact reasons, and independently
+reviews each revision. It never applies only the convenient subset of a rejected proposal.
 
 Because it touches the whole roster, split the work into roughly 20 batches (about 35-40 people
 each) and work one batch at a time. For recurring automated maintenance, select entries missing
@@ -249,20 +251,25 @@ order:
    is missing or points somewhere stale, add or update it. `profileUrl` must remain the official
    university/department page per the data-entry rules above — do not replace it with a personal
    site unless the university profile no longer exists at all.
-3. **Visit the site(s) and update information thoroughly.** Read the official profile and any
+3. **Find and verify Google Scholar.** Search for the person's Google Scholar profile even when
+   `scholarUrl` is currently missing. Confirm it belongs to the same person using affiliation,
+   research area, publications, linked homepage, or other corroborating details; do not select a
+   profile from the name alone. Add or update a verified profile in `scholarUrl`, never in
+   `profileUrl`. Preserve the existing value if no better verified Scholar profile is found.
+4. **Visit the site(s) and update information thoroughly.** Read the official profile and any
    personal/lab site fully, not just the first field that looks off. Update whatever has changed
    since last verified: rank/track, `phdInstitution`/`phdYear` (only when explicitly stated, never
    inferred), other documented degrees, `secondaryAppointment`, and honors/awards. Apply the same
    Honors and awards eligibility rules as elsewhere — do not import a full CV award list, only
    distinctions that meet the documented bar.
-4. **Watch for new candidates while you're there.** Coauthors, lab members who became faculty, or
+5. **Watch for new candidates while you're there.** Coauthors, lab members who became faculty, or
    other Vietnamese-diaspora names surfaced incidentally during this research are leads, not
    confirmed additions. If you find a plausibly eligible new person, verify them independently
    against the full inclusion standard and, if they qualify, add them with as much sourced detail
    as you can gather (rank, track, degrees, honors, portrait) using the same
    data-entry rules as any other addition. Don't let a promising lead stall progress on the
    current batch — note it and come back if needed.
-5. **Record successful verification.** After all applicable checks above are complete and no
+6. **Record successful verification.** After all applicable checks above are complete and no
    material question remains unresolved, set the person's timestamp in
    `maintenance/verification.json` to the current UTC time. Do this even if the review found no
    other change, so future refreshes can reliably choose the oldest entries. If the review changed

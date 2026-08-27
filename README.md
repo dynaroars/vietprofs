@@ -89,10 +89,19 @@ Use `--limit` or `--stale-days` to change the run, or force a small current-data
 ./scripts/maintain-roster.mjs run --all --limit 1
 ```
 
-To run the full workflow for one exact canonical roster name regardless of its verification age:
+Use `--name` with a person-like query to have Claude match it to one canonical roster member and
+run the full workflow regardless of verification age. Capitalization and omitted middle initials
+may be resolved when the match is unambiguous:
 
 ```bash
-./scripts/maintain-roster.mjs run --name "ThanhVu H. Nguyen"
+./scripts/maintain-roster.mjs run --name "Thanhvu Nguyen"
+```
+
+The same option accepts a field-like query. Claude maps it to a canonical field and the controller
+queues every roster member in that field, ignoring the normal age and entry-limit selection:
+
+```bash
+./scripts/maintain-roster.mjs run --name "Computer Science"
 ```
 
 The process may remain active for hours while an account limit resets. It automatically retries
@@ -119,5 +128,7 @@ nohup ./scripts/maintain-roster.mjs run >/tmp/vietprofs-maintenance.log 2>&1 &
 Controller state and per-agent logs live under `~/.local/state/vietprofs-maintenance/` by default.
 Set `VIETPROFS_MAINTENANCE_STATE_DIR=/another/path` to override that location. Start a new run from
 a clean `main` checkout, and do not edit that checkout while the controller is active or paused.
-Incomplete, rejected, or uncertain reviews are logged, keep their old verification timestamp, and
-are deferred for 30 days so they do not prevent the rest of the roster from being processed.
+Rejected proposals receive up to two Claude revisions using Codex's concrete feedback, with a new
+independent review after each revision. Proposals still rejected after those attempts, and
+incomplete or uncertain reviews, are logged, keep their old verification timestamp, and are
+deferred for 30 days so they do not prevent the rest of the roster from being processed.
