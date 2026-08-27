@@ -317,6 +317,24 @@ test('phd: prefix only includes faculty whose PhD alma mater matches', () => {
   }
 });
 
+test('credential queries filter people with documented PhD, postdoc, MS, or undergraduate education', () => {
+  const fields = {
+    phd: ['phdInstitution', 'phdYear'],
+    postdoc: ['postdocInstitution', 'postdocYear'],
+    ms: ['msInstitution', 'msYear'],
+    undergrad: ['undergradInstitution', 'undergradYear'],
+  };
+  for (const [query, [institution, year]] of Object.entries(fields)) {
+    const results = filterRoster(roster, { query });
+    const expected = roster.filter((person) => person[institution] || person[year]);
+    assert.deepEqual(results, expected, `${query} should return every person with that credential`);
+  }
+
+  const results = filterRoster(roster, { query: 'postdoc:Carnegie Mellon' });
+  assert.ok(results.length > 0);
+  assert.ok(results.every((person) => person.postdocInstitution?.includes('Carnegie Mellon')));
+});
+
 test('state: prefix only includes faculty in that state', () => {
   const caResults = filterRoster(roster, { query: 'state:California', field: 'all', track: 'all' });
   const actualCa = roster.filter((p) => p.state === 'California');

@@ -15,7 +15,7 @@ Use prefixes when you want to search one attribute:
 | Prefix | Searches | Example |
 | --- | --- | --- |
 | `univ:`, `university:`, `school:` | Current university | `univ:Oxford` |
-| `phd:`, `phdinstitution:`, `alma:` | Doctoral institution | `phd:Stanford` |
+| `phd`, `postdoc`, `ms`, `undergrad` | People with that recorded credential; add `:Institution` to narrow it | `postdoc:Carnegie Mellon` |
 | `country:`, `nation:` | Current country | `country:France` |
 | `continent:`, `location:`, `loc:` | Continent or region | `loc:Europe` |
 | `state:` | State or province | `state:California` |

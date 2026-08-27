@@ -591,8 +591,12 @@ export function parseSearchQuery(query) {
   if (/^(honors|awards)$/i.test(trimmed)) {
     return { type: 'honors', text: '' };
   }
+  const credential = trimmed.toLowerCase();
+  if (['phd', 'postdoc', 'ms', 'undergrad'].includes(credential)) {
+    return { type: 'credential', credential, text: '' };
+  }
   const prefixMatch = trimmed.match(
-    /^(univ(?:ersity)?|school|phd(?:institution)?|alma|state|country|nation|continent|loc(?:ation)?|city|dept|department|name):\s*(?:"([^"]*)"|'([^']*)'|(.+))$/i,
+    /^(univ(?:ersity)?|school|phd(?:institution)?|alma|postdoc|postdoctoral|ms|undergrad(?:uate)?|state|country|nation|continent|loc(?:ation)?|city|dept|department|name):\s*(?:"([^"]*)"|'([^']*)'|(.*))$/i,
   );
   if (!prefixMatch) {
     return { type: 'text', text: trimmed };
@@ -603,7 +607,16 @@ export function parseSearchQuery(query) {
     return { type: 'university', text: value };
   }
   if (['phd', 'phdinstitution', 'alma'].includes(prefix)) {
-    return { type: 'phdInstitution', text: value };
+    return { type: 'credential', credential: 'phd', text: value };
+  }
+  if (['postdoc', 'postdoctoral'].includes(prefix)) {
+    return { type: 'credential', credential: 'postdoc', text: value };
+  }
+  if (prefix === 'ms') {
+    return { type: 'credential', credential: 'ms', text: value };
+  }
+  if (['undergrad', 'undergraduate'].includes(prefix)) {
+    return { type: 'credential', credential: 'undergrad', text: value };
   }
   if (prefix === 'state') {
     return { type: 'state', text: value };
@@ -675,14 +688,26 @@ export function filterRoster(roster, { query = '', location, field, track, unive
     return result.filter((p) => Array.isArray(p.honors) && p.honors.length > 0);
   }
 
+  if (parsed.type === 'credential') {
+    const fields = {
+      phd: ['phdInstitution', 'phdYear'],
+      postdoc: ['postdocInstitution', 'postdocYear'],
+      ms: ['msInstitution', 'msYear'],
+      undergrad: ['undergradInstitution', 'undergradYear'],
+    }[parsed.credential];
+    const target = stripDiacritics(parsed.text.toLowerCase());
+    return result.filter((p) => {
+      const [institutionField, yearField] = fields;
+      if (!p[institutionField] && !p[yearField]) return false;
+      return !target || (p[institutionField] && stripDiacritics(p[institutionField].toLowerCase()).includes(target));
+    });
+  }
+
   if (!parsed.text) return result;
 
   const target = stripDiacritics(parsed.text.toLowerCase());
   if (parsed.type === 'university') {
     return result.filter((p) => p.university && stripDiacritics(p.university.toLowerCase()).includes(target));
-  }
-  if (parsed.type === 'phdInstitution') {
-    return result.filter((p) => p.phdInstitution && stripDiacritics(p.phdInstitution.toLowerCase()).includes(target));
   }
   if (parsed.type === 'state') {
     return result.filter((p) => {
