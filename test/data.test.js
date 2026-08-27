@@ -46,6 +46,11 @@ test('every entry has the required fields', () => {
       assert.equal(typeof p.scholarUrl, 'string');
       assert.match(p.scholarUrl, /^https:\/\//);
     }
+    if (p.websiteUrl !== undefined) {
+      assert.equal(typeof p.websiteUrl, 'string');
+      assert.match(p.websiteUrl, /^https?:\/\//);
+      assert.notEqual(p.websiteUrl, p.profileUrl);
+    }
     assert.equal(typeof p.university, 'string');
     assert.equal(typeof p.city, 'string');
     if (p.state !== undefined) assert.equal(typeof p.state, 'string');
@@ -57,9 +62,15 @@ test('every entry has the required fields', () => {
     if (p.rank !== undefined) assert.equal(typeof p.rank, 'string');
     if (p.postdocYear !== undefined) assert.ok(Number.isInteger(p.postdocYear));
     if (p.postdocInstitution !== undefined) assert.equal(typeof p.postdocInstitution, 'string');
-    if (p.phdYear !== undefined) assert.ok(Number.isInteger(p.phdYear));
-    if (p.phdInstitution !== undefined) assert.equal(typeof p.phdInstitution, 'string');
-    if (p.undergradInstitution !== undefined) assert.equal(typeof p.undergradInstitution, 'string');
+    for (const field of ['phdYear', 'undergradYear', 'msYear', 'mdYear']) {
+      if (p[field] !== undefined) assert.ok(Number.isInteger(p[field]), `${p.name} ${field} must be an integer`);
+    }
+    for (const field of ['phdInstitution', 'undergradInstitution', 'msInstitution', 'mdInstitution']) {
+      if (p[field] !== undefined) assert.equal(typeof p[field], 'string', `${p.name} ${field} must be a string`);
+    }
+    for (const field of ['phdMajor', 'undergradMajor', 'msMajor']) {
+      if (p[field] !== undefined) assert.equal(typeof p[field], 'string', `${p.name} ${field} must be a string`);
+    }
     assert.match(p.profileUrl, /^https?:\/\//);
   }
 });

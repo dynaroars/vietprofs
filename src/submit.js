@@ -150,12 +150,67 @@ function renderShell() {
   `;
 }
 
-function buildEmailUrl(title, content) {
-  const params = new URLSearchParams({
-    subject: title,
-    body: `Proposed roster submission:\n\n${content}\n`,
-  });
+function buildEmailUrl(title, body) {
+  const params = new URLSearchParams({ subject: title, body });
   return `mailto:${SUBMISSION_EMAIL}?${params.toString()}`;
+}
+
+const FIELD_LABELS = {
+  profileUrl: 'Official university profile',
+  websiteUrl: 'Personal/lab website',
+  scholarUrl: 'Google Scholar',
+  university: 'University',
+  department: 'Department',
+  city: 'City',
+  state: 'State/Province',
+  country: 'Country',
+  track: 'Employment track',
+  rank: 'Rank',
+  undergradInstitution: 'Undergraduate institution',
+  undergradYear: 'Undergraduate year',
+  msInstitution: "Master's institution",
+  msYear: "Master's year",
+  phdInstitution: 'PhD institution',
+  phdYear: 'PhD year',
+  postdocInstitution: 'Postdoc institution',
+  postdocYear: 'Postdoc year',
+  researchAreas: 'Research areas',
+};
+
+const FIELD_ORDER = Object.keys(FIELD_LABELS);
+
+function formatValue(value) {
+  if (value === undefined || value === null) return '';
+  if (Array.isArray(value)) return value.join(', ');
+  return String(value);
+}
+
+function buildNewEntryBody(entry, notes) {
+  const lines = ['New professor submission', '', `Name: ${entry.name}`];
+  for (const key of FIELD_ORDER) {
+    const value = formatValue(entry[key]);
+    if (value) lines.push(`${FIELD_LABELS[key]}: ${value}`);
+  }
+  if (notes) lines.push('', `Notes: ${notes}`);
+  return lines.join('\n');
+}
+
+function buildUpdateBody(matchedEntry, entry, notes) {
+  const lines = [`Update for existing entry: ${matchedEntry.name}`, ''];
+  const changes = [];
+  if (entry.name && entry.name !== matchedEntry.name) {
+    changes.push(`Name: ${matchedEntry.name} → ${entry.name}`);
+  }
+  for (const key of FIELD_ORDER) {
+    const oldValue = formatValue(matchedEntry[key]);
+    const newValue = formatValue(entry[key]);
+    if (oldValue !== newValue) {
+      changes.push(`${FIELD_LABELS[key]}: ${oldValue || '(none)'} → ${newValue || '(removed)'}`);
+    }
+  }
+  lines.push(...(changes.length ? changes : ['No field changes submitted.']));
+  if (notes) lines.push('', `Notes: ${notes}`);
+  return lines.join('\n');
 }
 
 function populateEntry(form, entry) {
@@ -196,13 +251,6 @@ function onSubmit(e, entriesByName) {
 
   const name = form.name.value.trim();
   const matchedEntry = findDuplicate(entriesByName, name);
-  const type = matchedEntry ? 'update' : 'new';
-  const target = matchedEntry ? matchedEntry.name : null;
-
-  const profileUrl = form.profileUrl.value.trim();
-  const websiteUrl = form.websiteUrl.value.trim() || undefined;
-  const scholarUrl = form.scholarUrl.value.trim() || undefined;
-  const evidenceUrls = [profileUrl, websiteUrl, scholarUrl].filter(Boolean);
 
   const researchAreas = form.researchAreas.value
     ? form.researchAreas.value
@@ -211,40 +259,34 @@ function onSubmit(e, entriesByName) {
         .filter(Boolean)
     : [];
 
-  const submission = {
-    type,
-    target,
+  const entry = {
     name,
-    evidenceUrls,
-    entry: {
-      name,
-      profileUrl,
-      websiteUrl,
-      scholarUrl,
-      university: form.university.value.trim() || undefined,
-      city: form.city.value.trim() || undefined,
-      state: form.state.value.trim() || undefined,
-      country: form.country.value.trim() || undefined,
-      department: form.department.value.trim() || undefined,
-      track: form.track.value || undefined,
-      rank: form.rank.value.trim() || undefined,
-      researchAreas: researchAreas.length ? researchAreas : undefined,
-      undergradYear: form.undergradYear.value ? Number(form.undergradYear.value) : undefined,
-      undergradInstitution: form.undergradInstitution.value.trim() || undefined,
-      msYear: form.msYear.value ? Number(form.msYear.value) : undefined,
-      msInstitution: form.msInstitution.value.trim() || undefined,
-      phdYear: form.phdYear.value ? Number(form.phdYear.value) : undefined,
-      phdInstitution: form.phdInstitution.value.trim() || undefined,
-      postdocYear: form.postdocYear.value ? Number(form.postdocYear.value) : undefined,
-      postdocInstitution: form.postdocInstitution.value.trim() || undefined,
-    },
-    notes: form.notes.value.trim() || undefined,
+    profileUrl: form.profileUrl.value.trim(),
+    websiteUrl: form.websiteUrl.value.trim() || undefined,
+    scholarUrl: form.scholarUrl.value.trim() || undefined,
+    university: form.university.value.trim() || undefined,
+    city: form.city.value.trim() || undefined,
+    state: form.state.value.trim() || undefined,
+    country: form.country.value.trim() || undefined,
+    department: form.department.value.trim() || undefined,
+    track: form.track.value || undefined,
+    rank: form.rank.value.trim() || undefined,
+    researchAreas: researchAreas.length ? researchAreas : undefined,
+    undergradYear: form.undergradYear.value ? Number(form.undergradYear.value) : undefined,
+    undergradInstitution: form.undergradInstitution.value.trim() || undefined,
+    msYear: form.msYear.value ? Number(form.msYear.value) : undefined,
+    msInstitution: form.msInstitution.value.trim() || undefined,
+    phdYear: form.phdYear.value ? Number(form.phdYear.value) : undefined,
+    phdInstitution: form.phdInstitution.value.trim() || undefined,
+    postdocYear: form.postdocYear.value ? Number(form.postdocYear.value) : undefined,
+    postdocInstitution: form.postdocInstitution.value.trim() || undefined,
   };
 
-  const content = JSON.stringify(submission, null, 2);
+  const notes = form.notes.value.trim();
+  const body = matchedEntry ? buildUpdateBody(matchedEntry, entry, notes) : buildNewEntryBody(entry, notes);
   const title = matchedEntry ? `VietProfs update: ${name}` : `VietProfs submission: ${name}`;
 
-  window.location.href = buildEmailUrl(title, content);
+  window.location.href = buildEmailUrl(title, body);
 }
 
 async function init() {

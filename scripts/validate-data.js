@@ -97,8 +97,23 @@ for (const [index, person] of roster.entries()) {
   if (person.postdocYear !== undefined && (!Number.isInteger(person.postdocYear) || person.postdocYear < 1900 || person.postdocYear > new Date().getFullYear())) {
     fail(rosterFile, `${label} has invalid postdocYear`);
   }
-  if (person.phdYear !== undefined && (!Number.isInteger(person.phdYear) || person.phdYear < 1900 || person.phdYear > new Date().getFullYear())) {
-    fail(rosterFile, `${label} has invalid phdYear`);
+  const institutionFields = ['phdInstitution', 'undergradInstitution', 'msInstitution', 'mdInstitution'];
+  for (const field of institutionFields) {
+    if (person[field] !== undefined && (typeof person[field] !== 'string' || !person[field].trim())) {
+      fail(rosterFile, `${label} has invalid ${field}`);
+    }
+  }
+  const yearFields = ['phdYear', 'undergradYear', 'msYear', 'mdYear'];
+  for (const field of yearFields) {
+    if (person[field] !== undefined && (!Number.isInteger(person[field]) || person[field] < 1900 || person[field] > new Date().getFullYear())) {
+      fail(rosterFile, `${label} has invalid ${field}`);
+    }
+  }
+  const majorFields = ['phdMajor', 'undergradMajor', 'msMajor'];
+  for (const field of majorFields) {
+    if (person[field] !== undefined && (typeof person[field] !== 'string' || !person[field].trim())) {
+      fail(rosterFile, `${label} has invalid ${field}`);
+    }
   }
   if (names.has(person.name)) fail(rosterFile, `duplicate name: ${person.name}`);
   if (profileUrls.has(person.profileUrl)) fail(rosterFile, `duplicate profileUrl: ${person.profileUrl}`);
