@@ -62,7 +62,8 @@ after the first correction:
 - Vietnamese or Vietnamese-diaspora identity and the evidence needed for eligibility;
 - a suitable current portrait and its source;
 - explicitly documented education, including degree institutions, graduation years, majors,
-  professional degrees, and completed postdoctoral institution and end/completion year; and
+  professional degrees, and completed postdoctoral institution (plus end/completion year when
+  explicitly documented); and
 - honors and awards that meet the eligibility standard below, with supporting sources.
 
 If the person already has an entry, compare the collected evidence with every relevant stored
@@ -106,7 +107,10 @@ link.
 - Preserve an existing Scholar URL by moving it to `scholarUrl` before replacing `profileUrl`. Verify replacement URLs follow redirects and do not return 404.
 - Use only `Assistant Professor`, `Associate Professor`, or `Professor` as the rank vocabulary for Tenure-line entries; use `Teaching` and `Emeritus` for the corresponding tracks.
 - Add `phdYear` and `phdInstitution` only when a source explicitly states them. Never infer them from dates, CV chronology, or context.
-- Record completed postdoctoral training in `postdocInstitution` and `postdocYear` only when a source explicitly states the institution and end/completion year. Past postdoctoral training is an education credential; a current postdoctoral appointment remains ineligible for the roster.
+- Record completed postdoctoral training when a source explicitly identifies the institution. Add
+  `postdocYear` only when the source also explicitly states an end or completion year; never infer
+  it from CV chronology or context. Past postdoctoral training is an education credential; a
+  current postdoctoral appointment remains ineligible for the roster.
 - Education research is not limited to PhD, MS, and undergraduate degrees. Record explicitly documented professional or equivalent degrees such as MD, JD, DDS, PharmD, EdD, DO, and other credentials when the data model has an appropriate field. Do not force an MD/JD or another degree into the PhD/MS/undergraduate fields; if no suitable field exists yet, preserve the source for a later schema update and mention it in the change notes.
 - For undergraduate education, use the explicitly stated bachelor’s institution and completion year. A professional degree such as a JD is separate from undergraduate education and must not be substituted for it.
 - Use the person's full published academic name only when an official profile or maintained academic homepage supplies it. Expand initials only with direct evidence.
@@ -218,7 +222,7 @@ honors accrue over time. Run this when the user asks for a periodic roster refre
 For unattended local maintenance, use `./scripts/maintain-roster.mjs run`. The controller applies
 the workflow below one person at a time, requires an independent Codex approval of Claude's
 research before applying it, keeps resumable state outside the repository, and commits and pushes
-each approved entry. `./scripts/maintain-roster.mjs stop` safely pauses it; running `run` again
+after the entire selected batch. `./scripts/maintain-roster.mjs stop` safely pauses it; running `run` again
 resumes the saved person and stage. Incomplete or disputed entries must remain unverified so a
 later run retries them. When Codex rejects a correctable proposal, the controller gives Claude up
 to two revisions containing the proposal and the reviewer's exact reasons, and independently

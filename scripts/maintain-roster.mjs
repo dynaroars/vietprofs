@@ -24,7 +24,8 @@
  * CLIs. The checkout must be clean when a new run starts and should not be edited while the
  * controller is active. Neither agent receives file-editing tools: Claude returns a structured
  * proposal, Codex independently returns a structured verdict, and this controller alone applies
- * approved JSON. State and logs live in ~/.local/state/vietprofs-maintenance by default.
+ * approved JSON. A run is one batch: it commits and pushes once after every approved entry in the
+ * batch has completed. State and logs live in ~/.local/state/vietprofs-maintenance by default.
  */
 
 import { createWriteStream } from 'node:fs';
@@ -656,7 +657,7 @@ eligibility. Search for a Google Scholar profile even if scholarUrl is missing, 
 from affiliation/research/publications rather than name alone, and add or correct scholarUrl when
 supported. Check all explicitly documented education: PhD, master's,
 undergraduate, professional or equivalent degrees, majors and graduation years, plus completed
-postdoctoral institution and end/completion year. Check every honor under the documented honors
+postdoctoral institution and, when explicitly documented, its end/completion year. Check every honor under the documented honors
 eligibility rules. Do not treat a reachable URL as a complete review.
 
 Before returning an update, compare every supported baseline and discovered field against the
@@ -689,8 +690,8 @@ ${JSON.stringify(current.proposal, null, 2)}
 Read ROSTER_MAINTENANCE.md and independently browse live authoritative sources. Distrust the first
 review until you confirm identity, eligibility, current primary appointment, department,
 rank/track, official profile, personal/lab URLs, portrait and source, secondary appointment, every
-documented degree/major/graduation year, completed postdoctoral institution
-and end/completion year, honors eligibility, and every proposed change. Approve only when the
+documented degree/major/graduation year, completed postdoctoral institution,
+and any explicitly documented end/completion year, honors eligibility, and every proposed change. Approve only when the
 complete verification standard is satisfied and the normalized proposal is correct.
 Independently search for and identity-check Google Scholar when missing or changed; confirm that a
 verified Scholar URL is stored only in scholarUrl.
@@ -774,8 +775,8 @@ function normalizeResearchProposal(roster, current, research) {
 }
 
 async function startPerson(name) {
-  await requireCleanCheckout();
-  await git(['pull', '--ff-only', 'origin', 'main'], { label: 'update main before next person' });
+  // Earlier approved people in the same batch intentionally leave only these two files dirty.
+  await requireOnlyMaintainedChanges();
   const roster = await readJson(join(REPO_ROOT, 'public/data.json'));
   const baseline = roster.find((person) => person.name === name);
   if (!baseline) throw new Error(`queued entry no longer exists: ${name}`);
@@ -796,7 +797,7 @@ async function startPerson(name) {
 }
 
 async function skipPerson(reason, details = null) {
-  await requireCleanCheckout();
+  await requireOnlyMaintainedChanges();
   state.skipped.push({ name: state.current.name, reason, details: compact(JSON.stringify(details), 5_000), at: nowIso() });
   state.deferredUntil[state.current.name] = new Date(Date.now() + DEFAULT_DEFER_DAYS * 86_400_000).toISOString();
   state.index += 1;
@@ -836,20 +837,22 @@ async function runFullChecks() {
   await git(['diff', '--cached', '--check'], { label: 'git diff --cached --check' });
 }
 
-async function commitPerson(current) {
+async function commitBatch() {
   const lastMessage = await gitText(['log', '-1', '--format=%B']);
-  if (lastMessage.includes(`Maintenance-Job: ${current.jobId}`)) return;
+  if (lastMessage.includes(`Maintenance-Batch: ${state.runId}`)) return false;
   await requireOnlyMaintainedChanges();
-  if ((await changedPaths()).length === 0) throw new Error('approved verification produced no ledger or roster change');
+  if ((await changedPaths()).length === 0) return false;
   await git(['add', 'public/data.json', 'maintenance/verification.json']);
   await git([
     'commit',
-    '-m', `Automated roster maintenance: verify ${current.name}`,
-    '-m', `Maintenance-Job: ${current.jobId}`,
-  ], { label: `commit ${current.name}` });
+    '-m', `Automated roster maintenance: batch ${state.runId}`,
+    '-m', `Maintenance-Batch: ${state.runId}`,
+    '-m', `Approved: ${state.completed.map((entry) => entry.name).join(', ')}`,
+  ], { label: `commit maintenance batch ${state.runId}` });
+  return true;
 }
 
-async function pushPerson(current) {
+async function pushBatch() {
   const pull = await git(['pull', '--rebase', 'origin', 'main'], {
     label: 'rebase before push',
     allowFailure: true,
@@ -859,7 +862,7 @@ async function pushPerson(current) {
     throw new BlockedError(`could not rebase ${current.name} onto origin/main`);
   }
   await runFullChecks();
-  await git(['push', 'origin', 'main'], { label: `push ${current.name}` });
+  await git(['push', 'origin', 'main'], { label: `push maintenance batch ${state.runId}` });
 }
 
 export function canReviseProposal(review, revisionCount, maxRevisions = MAX_PROPOSAL_REVISIONS) {
@@ -871,7 +874,7 @@ export function canReviseProposal(review, revisionCount, maxRevisions = MAX_PROP
 async function processCurrent(schemas) {
   const current = state.current;
   if (current.stage === 'researching' || current.stage === 'reviewing') {
-    await requireCleanCheckout();
+    await requireOnlyMaintainedChanges();
     if (await gitText(['rev-parse', 'HEAD']) !== current.baseCommit) {
       throw new BlockedError(`main changed locally while ${current.name} was being reviewed`);
     }
@@ -930,25 +933,12 @@ async function processCurrent(schemas) {
     }
     await requireOnlyMaintainedChanges();
     await applyProposal(current);
-    current.stage = 'committing';
-    await saveState();
-  }
-
-  if (current.stage === 'committing') {
-    await runFullChecks();
-    await commitPerson(current);
-    current.stage = 'pushing';
-    await saveState();
-  }
-
-  if (current.stage === 'pushing') {
-    await pushPerson(current);
     state.completed.push({
       name: current.name,
       finalName: current.proposal?.name ?? null,
       changed: current.substantiveChange,
       verifiedAt: current.approvedAt,
-      commit: await gitText(['rev-parse', 'HEAD']),
+      commit: null,
     });
     delete state.deferredUntil[current.name];
     state.index += 1;
@@ -1035,6 +1025,8 @@ async function runController(options) {
     await log(`Processing ${state.current.name} (${state.index + 1}/${state.queue.length}), stage ${state.current.stage}.`);
     await processCurrent(schemas);
   }
+  await runFullChecks();
+  if (await commitBatch()) await pushBatch();
   state.status = 'complete';
   state.completedAt = nowIso();
   await saveState();

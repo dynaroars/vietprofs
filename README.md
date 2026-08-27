@@ -40,6 +40,8 @@ npm run test:e2e  # run browser smoke tests
 
 Edit [`public/data.json`](./public/data.json) to add, remove, or correct roster entries. Each entry needs a current academic profile URL, university, department, rank/track, country, and canonical UTC `lastUpdatedAt` timestamp. The accepted tracks are `Tenure-line`, `Teaching`, and `Emeritus`. Maintainers track full-review times separately in [`maintenance/verification.json`](./maintenance/verification.json), which is not part of the public site data.
 
+Completed postdoctoral training may be recorded with `postdocInstitution` when a source explicitly identifies the institution. Add `postdocYear` only when that source explicitly gives the end or completion year.
+
 Use [`submit.html`](./submit.html) to propose an entry or correction without editing the repository directly. Maintainers review submissions before adding them to the roster.
 
 Detailed inclusion, verification, discovery, field-mapping, and data-format guidance is in [`ROSTER_MAINTENANCE.md`](./ROSTER_MAINTENANCE.md).

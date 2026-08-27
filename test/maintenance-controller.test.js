@@ -89,6 +89,16 @@ test('proposal analysis preserves completed postdoctoral training fields', () =>
   assert.equal(result.proposal.postdocYear, 2022);
 });
 
+test('proposal analysis allows a completed postdoc institution without a completion year', () => {
+  const after = structuredClone(people);
+  after[1].postdocInstitution = 'Carnegie Mellon University';
+  const result = analyzeRosterProposal(people, after, 'Old Person');
+  assert.equal(result.ok, true);
+  assert.equal(result.substantiveChange, true);
+  assert.equal(result.proposal.postdocInstitution, 'Carnegie Mellon University');
+  assert.equal(result.proposal.postdocYear, undefined);
+});
+
 test('rejected proposals receive bounded revision attempts', () => {
   assert.equal(canReviseProposal({ verdict: 'reject' }, 0), true);
   assert.equal(canReviseProposal({ verdict: 'reject' }, 1), true);
