@@ -905,6 +905,8 @@ async function applyProposal(current) {
   const roster = await readJson(rosterPath);
   const verification = await readJson(verificationPath);
   const finalName = current.proposal?.name ?? null;
+  const approvalTime = current.approvedAt || nowIso();
+  current.approvedAt = approvalTime;
   let index = roster.findIndex((person) => person.name === current.name);
   if (index < 0 && finalName) index = roster.findIndex((person) => person.name === finalName);
 
@@ -914,10 +916,10 @@ async function applyProposal(current) {
   } else {
     if (index < 0) throw new Error(`cannot apply proposal because ${current.name} is missing`);
     const next = { ...current.proposal };
-    next.lastUpdatedAt = current.substantiveChange ? current.approvedAt : current.baseline.lastUpdatedAt;
+    next.lastUpdatedAt = current.substantiveChange ? approvalTime : current.baseline.lastUpdatedAt;
     roster[index] = next;
     if (finalName !== current.name) delete verification[current.name];
-    verification[finalName] = current.approvedAt;
+    verification[finalName] = approvalTime;
   }
   await writeAtomic(rosterPath, roster);
   await writeAtomic(verificationPath, verification);
@@ -981,6 +983,7 @@ async function processCurrent(schemas) {
       if (!analysis.ok) return skipPerson('unsafe research proposal', analysis.reason);
       current.proposal = analysis.proposal;
       current.substantiveChange = analysis.substantiveChange;
+      if (!state.options?.codexReview) current.approvedAt = nowIso();
       current.stage = state.options?.codexReview ? 'reviewing' : 'applying';
       await saveState();
     } catch (error) {
