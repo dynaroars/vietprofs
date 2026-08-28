@@ -428,6 +428,27 @@ batch-sequenced extension-track work above, since this sweep classifies into any
   Tran's PhD-student list, which is leads not confirmed faculty) — general search surfaced mostly
   student/postdoc mentions or nothing usable; needs direct directory browsing.
 
+### France
+
+- Disambiguated an exact-name collision: the roster already had "Huyen Pham" (Texas A&M Law,
+  Professor) — renamed to "Huyen Pham - Texas A&M University". Added the second, genuinely
+  identically-named person as "Huyen Pham - École Polytechnique" — `Tenure-line`, Professor,
+  Centre de Mathématiques Appliquées (CMAP); official personal site, stochastic control /
+  mathematical finance.
+- Added: Quy Nguyen Huy — INSEAD — `Tenure-line`, Professor of Strategy, Solvay Chaired Professor
+  of Technological Innovation (logged as a `distinguished_professorship` honor); official INSEAD
+  faculty profile confirms he is based at INSEAD's Asia (Singapore) campus, not Fontainebleau, so
+  this entry is filed under Singapore (`country: Singapore`) despite being found via a France
+  search — undergrad McGill 1978, at INSEAD since 1998. His many Academy of Management "best
+  paper" awards were reviewed and correctly excluded (routine conference awards, not the roster's
+  honors bar).
+- Added: Huyen C. Nguyen — Université Paris-Saclay, LISN/CNRS — `Tenure-line`, "Maître de
+  Conférences" mapped to Assistant Professor; official personal site, PhD INSA de Rennes 2014,
+  virtual/augmented reality and HCI research.
+- Not yet swept: remaining Paris institutions (Sorbonne proper, most of Paris-Saclay's many
+  component schools), Lyon, Toulouse, Grenoble, Strasbourg, Bordeaux, Lille, Marseille, and
+  business schools (HEC, ESSEC, ESCP) beyond the one INSEAD hit above.
+
 ## Safe resume procedure
 
 1. Read this runbook and the two authoritative repository guides named above.
