@@ -511,6 +511,45 @@ batch-sequenced extension-track work above, since this sweep classifies into any
   round; not conclusive (general search yields little for German university directories), just
   not yet found. Needs institution-by-institution follow-up.
 
+### Switzerland
+
+- Confirmed already covered (no action): Suong Nguyen (EPFL Chemistry), Minh Quang Tran (EPFL
+  Swiss Plasma Center) — both already present.
+
+### New Zealand
+
+- Added: Thi Thuy Minh Nguyen — University of Otago, English and Linguistics — `Tenure-line`,
+  Associate Professor; official Otago staff page (confirmed via search after a 403 direct fetch),
+  prior appointments at NIE/NTU Singapore and Vietnam National University, Hanoi.
+- Deferred: Le Nguyen — University of Auckland — profile page did not render usable content (JS
+  app); retry with a different source.
+
+### Ireland
+
+- Added: Viet Quoc Pham — Trinity College Dublin, School of Computer Science and Statistics —
+  `Tenure-line`, Assistant Professor; official TCD profile, PhD Inje University (Korea) 2017,
+  federated learning/edge AI/6G research. Third Ireland entry in the roster.
+
+### Poland
+
+- Confirmed already covered (no action): Ngoc Thanh Nguyen (Wrocław University of Science and
+  Technology) — already present.
+- Deferred/excluded: Nguyen Truong Co (Institute of Fundamental Technological Research, PAS) —
+  recent affiliation history unclear (prior University of Gdańsk assistant-professor role listed
+  as ended Dec 2024); current stability not confirmed. Huy Dinh Quoc Pham (Institute of Physics,
+  PAS) — explicitly a postdoctoral researcher, excluded. Ha Thi Thu Nguyen (Kraków) — a PhD
+  student, not faculty. Hanh Thi Van Tran (SGH Warsaw) — no official profile found.
+
+### Negative sweeps (no matches or nothing confirmed this round)
+
+Sweden (Stockholm/KTH/Lund/Uppsala), South Korea (Seoul/KAIST/Yonsei), Malaysia, Finland
+(Helsinki/Aalto — only students/postdocs found), Austria (Vienna/TU Wien), Italy, Spain, Germany
+(prior round). These are genuinely under-searched rather than confirmed empty — general web search
+has low recall for faculty directories in these countries; a future session should try
+institution-specific directory browsing or country-specific Vietnamese-diaspora academic network
+pages (as the AVSE Global and Taiwan aggregator lists proved effective) rather than repeating the
+same broad query pattern.
+
 ## Safe resume procedure
 
 1. Read this runbook and the two authoritative repository guides named above.
