@@ -274,6 +274,10 @@ gate above. Include URLs for identity, appointment, and stability evidence in th
   cannot verify stable appointment from this source alone.
 - Deferred/excluded: Trang Pham — Loyola University New Orleans College of Law — directory profile
   returned HTTP 403 and no other official source with her exact title was found in this pass.
+- Corrected an existing entry: Khiem Pham-Nguyen (Boston University Dental School) was previously
+  stored as `track: Teaching` with a placeholder `rank: "Teaching"`. Official BU profile confirms
+  his title is "Clinical Assistant Professor of Orthodontics & Dentofacial Orthopedics" — moved to
+  `track: Clinical` with the correct rank. `lastUpdatedAt` advanced.
 - Added: Billie Nguyen — University of Florida College of Pharmacy (Jacksonville) — `Clinical`;
   official faculty listing confirms "Clinical Assistant Professor and Manager, Ambulatory Care",
   https://ufhealthjax.org/pharmacy-residency/faculty, 2026-08-28.
