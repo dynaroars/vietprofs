@@ -550,6 +550,17 @@ institution-specific directory browsing or country-specific Vietnamese-diaspora 
 pages (as the AVSE Global and Taiwan aggregator lists proved effective) rather than repeating the
 same broad query pattern.
 
+### Denmark
+
+- Added: Tran Nguyen Le — Technical University of Denmark (DTU), Department of Engineering
+  Technology and Didactics — `Tenure-line`, Assistant Professor; official DTU Orbit research
+  profile, PhD Aalto University (Finland) 2024, robot learning/manipulation research.
+- Added: Ninh Dang Pham — University of Southern Denmark, Mathematics and Computer Science —
+  `Tenure-line`, Associate Professor; official SDU research-portal profile, PhD IT University of
+  Copenhagen 2014, prior Lecturer/Senior Lecturer at University of Auckland (2019-2025).
+- Belgium and further Germany/Korea/Malaysia/Finland/Austria/Italy/Spain sweeps this round again
+  surfaced only students, postdocs, or industry contacts — no additions.
+
 ## Safe resume procedure
 
 1. Read this runbook and the two authoritative repository guides named above.
