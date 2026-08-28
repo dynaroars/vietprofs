@@ -482,6 +482,35 @@ batch-sequenced extension-track work above, since this sweep classifies into any
     thoroughly covered by prior sessions, and this aggregator list is a good source to re-check
     periodically for newly added names rather than to re-search from scratch.
 
+### Hong Kong
+
+- Added: Tuan Anh Nguyen — Hong Kong University of Science and Technology, Division of Life
+  Science — `Tenure-line`, Associate Professor; official HKUST profile, PhD KAIST, RNA
+  biology/microRNA biogenesis research.
+
+### Netherlands
+
+- Confirmed already covered (no action): Phuong H. Nguyen (TU Eindhoven, Electrical Engineering —
+  already present).
+- Not yet swept beyond TU Delft/Wageningen/Amsterdam/Eindhoven general search, which surfaced
+  mostly non-matching or already-covered names.
+
+### Japan
+
+- Added: Nguyen Thanh Phuc — Kyoto University, Graduate School of Engineering, Department of
+  Molecular Engineering — `Tenure-line`, "Lecturer" (講師) mapped to Assistant Professor per roster
+  convention; official researchmap.jp profile, PhD University of Tokyo 2014, quantum
+  transport/molecular polariton research.
+- Deferred: Yen Khang Nguyen Tran (Shimane University) — LinkedIn profile returned an HTTP error;
+  retry with a different source.
+- Not yet swept: most of Tokyo, Osaka, and other Japanese institutions beyond this search round.
+
+### Germany
+
+- Swept Munich/Berlin/Heidelberg/RWTH Aachen with no Vietnamese-surname faculty matches in this
+  round; not conclusive (general search yields little for German university directories), just
+  not yet found. Needs institution-by-institution follow-up.
+
 ## Safe resume procedure
 
 1. Read this runbook and the two authoritative repository guides named above.
