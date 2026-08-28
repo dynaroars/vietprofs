@@ -465,6 +465,23 @@ batch-sequenced extension-track work above, since this sweep classifies into any
 - Not yet swept: SMU, SUTD, SIT beyond the one blocked lead above; most of NUS/NTU outside
   Mathematics/MAE/SCCEB.
 
+### Taiwan
+
+- Found a curated third-party list of 28 Vietnamese professors in Taiwan
+  (trithuctretw.com/en/giao-su-nguoi-viet-tai-dai-loan/) and cross-checked every name against the
+  roster: 24 of 28 were already present. Verified the 4 unmatched leads individually against
+  official sources rather than trusting the aggregator:
+  - Minh-Quang Tran (NTUST, Industry 4.0 Implementation Center) and Le Thi Cuc (NKUST, Marine
+    Environmental Engineering) both hold "Project Assistant Professor" (專案助理教授) — Taiwan's
+    fixed-term/grant-funded title, not a stable tenure-track appointment; excluded as term-limited.
+  - Huy Nam Chu — no official current academic-appointment source found (only an industry/MediaTek
+    connection); deferred.
+  - Thi-Yen Do (Nanhua University) — only the same third-party aggregator lists her; no official
+    university source found; deferred.
+  - No additions this pass. This is a useful negative result: Taiwan appears to already be
+    thoroughly covered by prior sessions, and this aggregator list is a good source to re-check
+    periodically for newly added names rather than to re-search from scratch.
+
 ## Safe resume procedure
 
 1. Read this runbook and the two authoritative repository guides named above.
