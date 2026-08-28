@@ -685,6 +685,31 @@ No other issues found; all other repeated first-two-word name groups already fol
 bare-name-stays-first, later-duplicates-get-suffixed pattern correctly. Recommend running this
 kind of base-name grouping check periodically, especially after a large batch of additions.
 
+### U.S. medical-school sweep, continued (2026-08-28, user-directed emphasis on long-term-only)
+
+User re-emphasized: only add long-term faculty/research-scientist positions, never adjunct,
+postdoc, or other temporary titles, and specifically flagged the "Principal Scientist"/"Principal
+Research Scientist" pattern (permanent non-postdoc research staff at a university, e.g. the
+earlier MIT and UVA finds) as a category worth actively looking for, not just Clinical Professor
+titles.
+
+- Added: Anh Nguyen-Tuong — University of Virginia, Computer Science, Security Dependability Group
+  — `Research`, "Principal Scientist"; publication record spans 1993-2021+, indicating a long-term
+  stable position, not a postdoc. (Found via a direct link the user supplied.)
+- Added: Dzung L. Pham — Uniformed Services University of the Health Sciences, Radiology and
+  Bioengineering — `Tenure-line`, Professor and Vice Chair for Research; also holds an adjunct
+  appointment at Johns Hopkins ECE (that adjunct affiliation itself was not used as the basis for
+  inclusion — his primary, non-adjunct USUHS professorship was).
+- Added: Phu Tran — University of Minnesota Medical School, Pediatrics/Neonatology —
+  `Tenure-line`, Associate Professor; PhD University of Iowa, epigenetics of early-life adversity.
+- Added: Tuan M. Nguyen — Northwestern Feinberg School of Medicine, Obstetrics and Gynecology —
+  `Clinical`, Clinical Assistant Professor; official Feinberg faculty-profile page.
+- Deferred/excluded (explicitly temporary or ambiguous, per the long-term-only emphasis): Thao
+  Pham (Northwestern, "Research Assistant Professor" — the "Research Assistant Professor" rank
+  needs stronger stability evidence than title alone, per ROSTER_MAINTENANCE, and none was found
+  this pass); Thai Tran Nguyen and other "Clinical Associate"-titled Johns Hopkins profiles (a
+  sub-faculty rank, already excluded in an earlier pass).
+
 ## Safe resume procedure
 
 1. Read this runbook and the two authoritative repository guides named above.
