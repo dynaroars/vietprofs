@@ -215,11 +215,11 @@ async function runProcess(command, args, {
     stdio: ['ignore', 'pipe', 'pipe'],
   });
   activeChild = { pid: child.pid, label };
-  if (state) {
-    state.activeChild = activeChild;
-    await saveState();
-  }
 
+  // Attach all listeners synchronously, before any `await`: a fast command
+  // (e.g. `git --version`) can spawn and close before an awaited saveState()
+  // resolves, and a 'close' fired with no listener yet attached is lost
+  // forever, leaving the process hung with nothing left to keep it alive.
   const outputStream = logFile ? createWriteStream(logFile, { flags: 'a' }) : null;
   let stdout = '';
   let stderr = '';
@@ -241,6 +241,21 @@ async function runProcess(command, args, {
     stderr = capture(stderr, text);
     outputStream?.write(text);
   });
+  const closed = new Promise((resolveResult, rejectResult) => {
+    child.once('error', rejectResult);
+    child.once('close', (code, signal) => resolveResult({
+      code: code ?? 1,
+      signal,
+      stdout,
+      stderr,
+      timedOut,
+    }));
+  });
+
+  if (state) {
+    state.activeChild = activeChild;
+    await saveState();
+  }
 
   let timeout;
   if (timeoutMinutes > 0) {
@@ -252,16 +267,7 @@ async function runProcess(command, args, {
     timeout.unref();
   }
 
-  const result = await new Promise((resolveResult, rejectResult) => {
-    child.once('error', rejectResult);
-    child.once('close', (code, signal) => resolveResult({
-      code: code ?? 1,
-      signal,
-      stdout,
-      stderr,
-      timedOut,
-    }));
-  });
+  const result = await closed;
   if (timeout) clearTimeout(timeout);
   if (lineBuffer && onStdoutLine) onStdoutLine(lineBuffer);
   outputStream?.end();
