@@ -72,18 +72,24 @@ Detailed inclusion, verification, discovery, field-mapping, and data-format guid
 
 [`scripts/maintain-roster.mjs`](./scripts/maintain-roster.mjs) is the unattended weekly
 maintenance controller. It selects missing or oldest entries from
-[`maintenance/verification.json`](./maintenance/verification.json), asks Claude Code to perform
-the full live research pass, and asks Codex to verify the proposal independently. Neither agent can
-edit repository files. The controller applies structured data only when Codex agrees, runs the
+[`maintenance/verification.json`](./maintenance/verification.json), asks the selected agent to
+perform the full live research pass. Claude is the default agent. An independent Codex verification pass is optional and can be enabled
+with `--codex-review`. The agent can be changed from Claude (the default) to Codex with
+`--agent codex`. Neither agent can edit repository files. The controller applies structured data
+after the agent's work, or after the independent Codex review when that
+flag is enabled, and runs the
 project checks, commits that person, and pushes directly to `origin/main`. No pull request or
 manual review is required.
 
 Prerequisites:
 
 - Linux with Node.js, npm, and Git;
-- the `claude` and `codex` CLIs installed and available on `PATH`;
-- authenticated sessions (`claude auth status` and `codex login status` must succeed); and
 - a configured Git author identity and push access to `origin/main`.
+
+The default Claude agent requires the `claude` CLI and a successful `claude auth status`.
+
+The optional `--codex-review` pass also requires the `codex` CLI and a successful
+`codex login status`.
 
 Run it from the repository root:
 
@@ -111,6 +117,18 @@ Use `--limit` or `--stale-days` to change the run, or force a small current-data
 
 ```bash
 ./scripts/maintain-roster.mjs run --all --limit 1
+```
+
+Enable independent Codex verification for a run with:
+
+```bash
+./scripts/maintain-roster.mjs run --all --limit 1 --codex-review
+```
+
+Use Codex as the agent when Claude is unavailable or rate-limited:
+
+```bash
+./scripts/maintain-roster.mjs --all --limit 1 --agent codex
 ```
 
 Use `--name` with a person-like query to have Claude match it to one canonical roster member and
@@ -152,7 +170,7 @@ nohup ./scripts/maintain-roster.mjs run >/tmp/vietprofs-maintenance.log 2>&1 &
 Controller state and per-agent logs live under `~/.local/state/vietprofs-maintenance/` by default.
 Set `VIETPROFS_MAINTENANCE_STATE_DIR=/another/path` to override that location. Start a new run from
 a clean `main` checkout, and do not edit that checkout while the controller is active or paused.
-Rejected proposals receive up to two Claude revisions using Codex's concrete feedback, with a new
-independent review after each revision. Proposals still rejected after those attempts, and
-incomplete or uncertain reviews, are logged, keep their old verification timestamp, and are
-deferred for 30 days so they do not prevent the rest of the roster from being processed.
+When enabled, rejected proposals receive up to two Claude revisions using Codex's concrete
+feedback, with a new independent review after each revision. Proposals still rejected after those
+attempts, and incomplete or uncertain reviews, are logged, keep their old verification timestamp,
+and are deferred for 30 days so they do not prevent the rest of the roster from being processed.

@@ -229,8 +229,10 @@ finding and vetting *new* candidates. This section covers re-verifying *every ex
 honors accrue over time. Run this when the user asks for a periodic roster refresh.
 
 For unattended local maintenance, use `./scripts/maintain-roster.mjs run`. The controller applies
-the workflow below one person at a time, requires an independent Codex approval of Claude's
-research before applying it, keeps resumable state outside the repository, and commits and pushes
+the workflow below one person at a time. An independent Codex approval of the research can be
+enabled with `--codex-review`; when enabled, it is required before applying the researcher's
+proposal. The research agent defaults to Claude and can be changed to Codex with
+`--agent codex`. The controller keeps resumable state outside the repository, and commits and pushes
 after the entire selected batch. `./scripts/maintain-roster.mjs stop` safely pauses it; running `run` again
 resumes the saved person and stage. Incomplete or disputed entries must remain unverified so a
 later run retries them. When Codex rejects a correctable proposal, the controller gives Claude up

@@ -20,10 +20,11 @@
  *   ./scripts/maintain-roster.mjs run --dry-run
  *   ./scripts/maintain-roster.mjs run --all --limit 1 --dry-run
  *
- * Requirements: Linux, Node.js, npm, Git push access, and authenticated `claude` and `codex`
- * CLIs. The checkout must be clean when a new run starts and should not be edited while the
- * controller is active. Neither agent receives file-editing tools: Claude returns a structured
- * proposal, Codex independently returns a structured verdict, and this controller alone applies
+ * Requirements: Linux, Node.js, npm, Git push access, and an authenticated `claude` CLI. The
+ * optional independent Codex pass additionally requires an authenticated `codex` CLI. The
+ * checkout must be clean when a new run starts and should not be edited while the controller is
+ * active. Neither agent receives file-editing tools: Claude returns a structured proposal, Codex
+ * independently returns a structured verdict when enabled, and this controller alone applies
  * approved JSON. A run is one batch: it commits and pushes once after every approved entry in the
  * batch has completed. State and logs live in ~/.local/state/vietprofs-maintenance by default.
  */
@@ -56,6 +57,7 @@ const STATE_DIR = process.env.VIETPROFS_MAINTENANCE_STATE_DIR
 const STATE_FILE = join(STATE_DIR, 'state.json');
 const LOCK_FILE = join(STATE_DIR, 'controller.json');
 const STOP_FILE = join(STATE_DIR, 'stop-requested');
+const TARGET_SCHEMA_FILE = join(STATE_DIR, 'target-schema.json');
 const RESEARCH_SCHEMA_FILE = join(STATE_DIR, 'research-schema.json');
 const REVIEW_SCHEMA_FILE = join(STATE_DIR, 'review-schema.json');
 const DEFAULT_LIMIT = 40;
@@ -313,7 +315,7 @@ async function gitText(args, options = {}) {
   return (await git(args, options)).stdout.trim();
 }
 
-function parseOptions(argv) {
+export function parseOptions(argv) {
   const options = {
     command: 'run',
     limit: DEFAULT_LIMIT,
@@ -321,6 +323,8 @@ function parseOptions(argv) {
     all: false,
     dryRun: false,
     name: null,
+    codexReview: false,
+    agent: null,
   };
   const values = [...argv];
   if (values[0] && !values[0].startsWith('-')) options.command = values.shift();
@@ -328,6 +332,8 @@ function parseOptions(argv) {
     const value = values.shift();
     if (value === '--all') options.all = true;
     else if (value === '--dry-run') options.dryRun = true;
+    else if (value === '--codex-review') options.codexReview = true;
+    else if (value === '--agent') options.agent = values.shift();
     else if (value === '--name') options.name = values.shift();
     else if (value === '--limit') options.limit = Number(values.shift());
     else if (value === '--stale-days') options.staleDays = Number(values.shift());
@@ -336,6 +342,7 @@ function parseOptions(argv) {
   }
   if (!Number.isInteger(options.limit) || options.limit < 1) throw new Error('--limit must be a positive integer');
   if (!Number.isFinite(options.staleDays) || options.staleDays < 0) throw new Error('--stale-days must be zero or greater');
+  if (options.agent !== null && !['claude', 'codex'].includes(options.agent)) throw new Error('--agent must be claude or codex');
   if (options.name !== null && (typeof options.name !== 'string' || !options.name.trim())) throw new Error('--name requires a person or field query');
   return options;
 }
@@ -344,7 +351,7 @@ function helpText() {
   return `VietProfs unattended roster maintenance
 
 Usage:
-  ./scripts/maintain-roster.mjs run [--limit N] [--stale-days N] [--all] [--name NAME] [--dry-run]
+  ./scripts/maintain-roster.mjs [run] [--limit N] [--stale-days N] [--all] [--name NAME] [--dry-run] [--codex-review] [--agent claude|codex]
   ./scripts/maintain-roster.mjs stop
   ./scripts/maintain-roster.mjs status
 
@@ -355,8 +362,10 @@ Usage:
   --limit N       Entries in a new run (default: ${DEFAULT_LIMIT}).
   --stale-days N  Minimum age of last full verification (default: ${DEFAULT_STALE_DAYS}).
   --all           Ignore age and select the oldest entries.
-  --name QUERY    Ask Claude to match one roster person or field; a field queues every member.
+  --name QUERY    Ask the selected agent to match one roster person or field; a field queues every member.
   --dry-run       Show the selection without agents, Git writes, commits, or pushes.
+  --codex-review  Run the independent Codex review before applying the agent's proposal (opt-in).
+  --agent A       Research/propose with A (default: claude; choices: claude, codex).
 
 State: ${STATE_DIR}
 `;
@@ -491,12 +500,56 @@ function parseJsonOutput(text) {
   }
 }
 
-function failureKind(result) {
-  const text = `${result.stderr}\n${result.stdout}`.toLowerCase();
+function processText(result) {
+  return `${result.stderr}\n${result.stdout}`.toLowerCase();
+}
+
+export function failureKind(result) {
+  const text = processText(result);
   if (/not logged in|authentication|unauthorized|credential|login required|sign in/.test(text)) return 'auth';
-  if (/rate.?limit|usage limit|too many requests|overloaded|capacity|resets? at|hit your limit/.test(text)) return 'rate';
+  // Providers use different wording for exhausted account capacity. Prefer the status code
+  // when available, but also recognize limit/quota/capacity messages without depending on one
+  // vendor's exact sentence.
+  if (result.apiErrorStatus === 429 || /\b429\b|too many requests|overloaded|(?:rate|usage|session|weekly|daily|monthly|account|request|token|message|spend)\s+(?:limit|cap)|(?:limit|quota|capacity)\s+(?:reached|exceeded|hit|exhausted|reset|resets|available)|(?:hit|reached|exceeded|exhausted|ran out of)\s+(?:your\s+)?(?:limit|quota|capacity)|\bquota\b/.test(text)) return 'rate';
   if (result.timedOut) return 'timeout';
   return 'other';
+}
+
+function localDateParts(timestamp, timeZone) {
+  return Object.fromEntries(new Intl.DateTimeFormat('en-US', {
+    timeZone,
+    year: 'numeric', month: '2-digit', day: '2-digit',
+  }).formatToParts(timestamp).filter(({ type }) => type !== 'literal').map(({ type, value }) => [type, Number(value)]));
+}
+
+function resetTimeInZone(year, month, day, hour, minute, timeZone) {
+  const localAsUtc = Date.UTC(year, month - 1, day, hour, minute);
+  const offsetParts = Object.fromEntries(new Intl.DateTimeFormat('en-US', {
+    timeZone,
+    hour12: false,
+    year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit',
+  }).formatToParts(localAsUtc).filter(({ type }) => type !== 'literal').map(({ type, value }) => [type, Number(value)]));
+  const offset = Date.UTC(offsetParts.year, offsetParts.month - 1, offsetParts.day, offsetParts.hour, offsetParts.minute, offsetParts.second) - localAsUtc;
+  return localAsUtc - offset;
+}
+
+export function parseRateLimitReset(text, now = Date.now()) {
+  const match = String(text).match(/reset(?:s|ting)?\s+(?:at\s+)?(?:(today|tomorrow)\s+)?(\d{1,2}):(\d{2})\s*(am|pm)(?:\s*\(([^)]+)\))?/i);
+  if (!match) return null;
+  const [, relative, hourText, minuteText, meridiem, zone = 'UTC'] = match;
+  const timeZone = (() => { try { new Intl.DateTimeFormat('en-US', { timeZone: zone }).format(); return zone; } catch { return 'UTC'; } })();
+  const today = localDateParts(now, timeZone);
+  let day = today.day;
+  let month = today.month;
+  let year = today.year;
+  if (relative === 'tomorrow') day += 1;
+  const hour12 = Number(hourText) % 12;
+  const hour = hour12 + (meridiem.toLowerCase() === 'pm' ? 12 : 0);
+  let resetAt = resetTimeInZone(year, month, day, hour, Number(minuteText), timeZone);
+  if (!relative && resetAt <= now) {
+    resetAt = resetTimeInZone(year, month, day + 1, hour, Number(minuteText), timeZone);
+  }
+  return resetAt > now ? resetAt : null;
 }
 
 async function waitMinutes(minutes, reason) {
@@ -517,7 +570,13 @@ async function runAgentWithRetries(label, invoke) {
     const kind = failureKind(result.process);
     if (kind === 'auth') throw new BlockedError(`${label} authentication failed; sign in and rerun the controller`);
     if (kind === 'rate') {
-      await waitMinutes(rateWait, `${label} rate/usage limit reached`);
+      const resetAt = parseRateLimitReset(processText(result.process));
+      if (resetAt) {
+        const minutes = Math.max(1, Math.ceil((resetAt - Date.now()) / 60_000));
+        await waitMinutes(minutes, `${label} rate/usage limit reached; retrying at ${new Date(resetAt).toISOString()}`);
+      } else {
+        await waitMinutes(rateWait, `${label} rate/usage limit reached`);
+      }
       rateWait = Math.min(rateWait * 2, 240);
       continue;
     }
@@ -565,19 +624,20 @@ async function ensureSchemas() {
     required: ['verdict', 'summary', 'reasons', 'verifiedSources'],
     additionalProperties: false,
   };
+  await writeAtomic(TARGET_SCHEMA_FILE, targetSchema);
   await writeAtomic(RESEARCH_SCHEMA_FILE, researchSchema);
   await writeAtomic(REVIEW_SCHEMA_FILE, reviewSchema);
   return { targetSchema, researchSchema, reviewSchema };
 }
 
-async function assertPreflight() {
+async function assertPreflight({ codexReview = false, agent = 'claude' } = {}) {
   const checks = [
     ['git', ['--version'], 'Git'],
     ['node', ['--version'], 'Node.js'],
     ['npm', ['--version'], 'npm'],
-    ['claude', ['auth', 'status'], 'Claude'],
-    ['codex', ['login', 'status'], 'Codex'],
   ];
+  if (agent === 'claude') checks.push(['claude', ['auth', 'status'], 'Claude']);
+  if (codexReview || agent === 'codex') checks.push(['codex', ['login', 'status'], 'Codex']);
   for (const [command, args, label] of checks) {
     const result = await runProcess(command, args, { label: `${label} preflight`, allowFailure: true });
     if (result.code !== 0) throw new BlockedError(`${label} preflight failed: ${compact(result.stderr || result.stdout, 2_000)}`);
@@ -626,34 +686,33 @@ when multiple choices remain plausible. canonicalValue must exactly equal one li
 or canonical field, or be an empty string for unresolved. Return only the structured result.`;
 }
 
-async function resolveTargetWithAgent(query, roster, schema) {
+async function resolveTargetWithAgent(query, roster, schema, agent = 'claude') {
   const timeout = Number(process.env.VIETPROFS_AGENT_TIMEOUT_MINUTES || DEFAULT_AGENT_TIMEOUT_MINUTES);
   await mkdir(join(STATE_DIR, 'logs'), { recursive: true });
-  const target = await runAgentWithRetries('Claude target matching', async () => {
-    const result = await runProcess('claude', [
-      '-p',
-      '--output-format', 'json',
-      '--permission-mode', 'dontAsk',
-      '--allowedTools', 'Read,Glob,Grep',
-      ...claudeModelArgs(),
-      '--json-schema', JSON.stringify(schema),
-      '--session-id', randomUUID(),
-      targetPrompt(query, roster),
-    ], {
-      label: `Claude target matching for ${query}`,
+  const target = await runAgentWithRetries(`${agent} target matching`, async () => {
+    const output = join(STATE_DIR, `target-${Date.now()}.json`);
+    await unlink(output).catch(() => {});
+    const args = agent === 'codex'
+      ? ['--search', '--sandbox', 'read-only', '--ask-for-approval', 'never', ...codexModelArgs(), 'exec', '--json', '--output-schema', TARGET_SCHEMA_FILE, '--output-last-message', output, targetPrompt(query, roster)]
+      : ['-p', '--output-format', 'json', '--permission-mode', 'dontAsk', '--allowedTools', 'Read,Glob,Grep', ...claudeModelArgs(), '--json-schema', JSON.stringify(schema), '--session-id', randomUUID(), targetPrompt(query, roster)];
+    const result = await runProcess(agent, args, {
+      label: `${agent} target matching for ${query}`,
       logFile: join(STATE_DIR, 'logs', `target-${Date.now()}.log`),
       timeoutMinutes: timeout,
       allowFailure: true,
     });
-    const outer = parseJsonOutput(result.stdout);
-    const structured = outer?.structured_output
-      || (typeof outer?.result === 'string' ? parseJsonOutput(outer.result) : outer?.result);
+    const outer = agent === 'codex'
+      ? await readJson(output, null)
+      : parseJsonOutput(result.stdout);
+    const structured = agent === 'codex'
+      ? outer
+      : outer?.structured_output || (typeof outer?.result === 'string' ? parseJsonOutput(outer.result) : outer?.result);
     return { ok: result.code === 0 && structured, value: structured, process: result };
   });
   const validPerson = target.kind === 'person' && roster.some((person) => person.name === target.canonicalValue);
   const validField = target.kind === 'field' && FIELDS.includes(target.canonicalValue);
   if (!validPerson && !validField) {
-    throw new BlockedError(`Claude could not resolve --name ${JSON.stringify(query)}: ${target.reason || 'unresolved target'}`);
+    throw new BlockedError(`${agent} could not resolve --name ${JSON.stringify(query)}: ${target.reason || 'unresolved target'}`);
   }
   return target;
 }
@@ -736,29 +795,27 @@ Do not edit files. Return only the required structured verdict.`;
 
 async function runResearch(current, schemas) {
   const timeout = Number(process.env.VIETPROFS_AGENT_TIMEOUT_MINUTES || DEFAULT_AGENT_TIMEOUT_MINUTES);
-  return runAgentWithRetries('Claude', async () => {
+  const agent = current.agent || state.options?.agent || 'claude';
+  return runAgentWithRetries(agent, async () => {
     const revision = current.revisionHistory?.at(-1) ?? null;
     const suffix = current.revisionCount ? `-revision-${current.revisionCount}` : '';
     const output = join(STATE_DIR, `research-${current.jobId}${suffix}.json`);
     await unlink(output).catch(() => {});
-    const result = await runProcess('claude', [
-      '-p',
-      '--output-format', 'json',
-      '--permission-mode', 'dontAsk',
-      '--allowedTools', 'Read,Glob,Grep,WebSearch,WebFetch',
-      ...claudeModelArgs(),
-      '--json-schema', JSON.stringify(schemas.researchSchema),
-      '--session-id', randomUUID(),
-      researchPrompt(current.name, current.baseline, revision),
-    ], {
-      label: `Claude research for ${current.name}`,
-      logFile: join(STATE_DIR, 'logs', `${current.jobId}-claude${suffix}.log`),
+    const args = agent === 'codex'
+      ? ['--search', '--sandbox', 'read-only', '--ask-for-approval', 'never', ...codexModelArgs(), 'exec', '--json', '--output-schema', RESEARCH_SCHEMA_FILE, '--output-last-message', output, researchPrompt(current.name, current.baseline, revision)]
+      : ['-p', '--output-format', 'json', '--permission-mode', 'dontAsk', '--allowedTools', 'Read,Glob,Grep,WebSearch,WebFetch', ...claudeModelArgs(), '--json-schema', JSON.stringify(schemas.researchSchema), '--session-id', randomUUID(), researchPrompt(current.name, current.baseline, revision)];
+    const result = await runProcess(agent, args, {
+      label: `${agent} research for ${current.name}`,
+      logFile: join(STATE_DIR, 'logs', `${current.jobId}-${agent}${suffix}.log`),
       timeoutMinutes: timeout,
       allowFailure: true,
     });
-    const outer = parseJsonOutput(result.stdout);
-    const structured = outer?.structured_output
-      || (typeof outer?.result === 'string' ? parseJsonOutput(outer.result) : outer?.result);
+    const outer = agent === 'codex'
+      ? await readJson(output, null)
+      : parseJsonOutput(result.stdout);
+    const structured = agent === 'codex'
+      ? outer
+      : outer?.structured_output || (typeof outer?.result === 'string' ? parseJsonOutput(outer.result) : outer?.result);
     return { ok: result.code === 0 && structured, value: structured, process: result };
   });
 }
@@ -924,7 +981,7 @@ async function processCurrent(schemas) {
       if (!analysis.ok) return skipPerson('unsafe research proposal', analysis.reason);
       current.proposal = analysis.proposal;
       current.substantiveChange = analysis.substantiveChange;
-      current.stage = 'reviewing';
+      current.stage = state.options?.codexReview ? 'reviewing' : 'applying';
       await saveState();
     } catch (error) {
       if (error instanceof StopRequestedError || error instanceof BlockedError) throw error;
@@ -990,7 +1047,8 @@ async function createRun(options, schemas) {
   const roster = await readJson(join(REPO_ROOT, 'public/data.json'));
   const verification = await readJson(join(REPO_ROOT, 'maintenance/verification.json'));
   const deferredUntil = state?.deferredUntil || {};
-  const target = options.name ? await resolveTargetWithAgent(options.name, roster, schemas.targetSchema) : null;
+  const agent = options.agent || 'claude';
+  const target = options.name ? await resolveTargetWithAgent(options.name, roster, schemas.targetSchema, agent) : null;
   const queue = target
     ? selectTargetEntries(roster, target)
     : selectDueEntries(roster, verification, { ...options, deferredUntil });
@@ -999,7 +1057,15 @@ async function createRun(options, schemas) {
     runId: randomUUID(),
     status: 'running',
     startedAt: nowIso(),
-    options: { limit: options.limit, staleDays: options.staleDays, all: options.all, name: options.name, target },
+    options: {
+      limit: options.limit,
+      staleDays: options.staleDays,
+      all: options.all,
+      name: options.name,
+      codexReview: options.codexReview,
+      agent,
+      target,
+    },
     queue,
     index: 0,
     current: null,
@@ -1039,13 +1105,15 @@ async function runController(options) {
   state = await readJson(STATE_FILE, null);
   const resumable = state && state.status !== 'complete' && Array.isArray(state.queue);
   if (resumable) {
+    if (options.agent) state.options.agent = options.agent;
+    if (options.codexReview) state.options.codexReview = true;
     runLogFile = join(STATE_DIR, 'logs', `${state.runId}-controller.log`);
     state.status = 'running';
     await saveState();
     await log(`Resuming ${state.runId} at ${state.index + 1}/${state.queue.length}.`);
   }
 
-  await assertPreflight();
+  await assertPreflight(resumable ? state.options : { ...options, agent: options.agent || 'claude' });
   const schemas = await ensureSchemas();
   if (!resumable) await createRun(options, schemas);
   if (state.queue.length === 0) {

@@ -3,6 +3,9 @@ import assert from 'node:assert/strict';
 import {
   analyzeRosterProposal,
   canReviseProposal,
+  failureKind,
+  parseOptions,
+  parseRateLimitReset,
   parseChangedPaths,
   resolveTargetLocally,
   selectDueEntries,
@@ -25,6 +28,11 @@ test('maintenance selection prioritizes missing and oldest verification timestam
     staleDays: 365,
     now: Date.parse('2026-08-27T00:00:00.000Z'),
   }), ['Never Person', 'Old Person']);
+});
+
+test('maintenance defaults to Claude and supports Codex as agent', () => {
+  assert.equal(parseOptions(['run']).agent, null);
+  assert.equal(parseOptions(['--agent', 'codex']).agent, 'codex');
 });
 
 test('maintenance selection can explicitly include recently verified entries', () => {
@@ -105,6 +113,24 @@ test('rejected proposals receive bounded revision attempts', () => {
   assert.equal(canReviseProposal({ verdict: 'reject' }, 2), false);
   assert.equal(canReviseProposal({ verdict: 'uncertain' }, 0), false);
   assert.equal(canReviseProposal({ verdict: 'approve' }, 0), false);
+});
+
+test('maintenance classifies Claude session-limit responses as rate limits', () => {
+  assert.equal(failureKind({
+    stderr: '',
+    stdout: `{"api_error_status":429,"result":"You've hit your session limit · resets 6:10pm"}`,
+  }), 'rate');
+});
+
+test('maintenance recognizes broad quota-limit wording', () => {
+  assert.equal(failureKind({ stderr: 'Account capacity exhausted', stdout: '' }), 'rate');
+  assert.equal(failureKind({ stderr: 'HTTP 429', stdout: '' }), 'rate');
+});
+
+test('maintenance parses a future provider reset time', () => {
+  const now = Date.parse('2026-08-28T20:00:00.000Z');
+  const reset = parseRateLimitReset("You've hit your session limit · resets 6:10pm (America/New_York)", now);
+  assert.equal(new Date(reset).toISOString(), '2026-08-28T22:10:00.000Z');
 });
 
 test('changed-path parsing preserves the first porcelain path and handles renames', () => {
