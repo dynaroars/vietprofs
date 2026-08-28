@@ -377,6 +377,33 @@ batch-sequenced extension-track work above, since this sweep classifies into any
   browsing rather than open search, similar to the earlier finding for Canada/Australia business
   schools.
 
+### Canada
+
+- Added: Vinh Nguyen — University of Waterloo, English Language and Literature — `Tenure-line`,
+  Associate Professor; official profile, PhD/MA McMaster, BA Calgary, 2017 John C. Polanyi Prize
+  in Literature (not logged as a roster `honors` entry — literary prize, not one of the documented
+  honors categories).
+- Added: Tri Nguyen-Quang — Dalhousie University, Engineering (Faculty of Agriculture, Truro
+  campus) — `Tenure-line`, Associate Professor; official Faculty of Agriculture profile page. Note:
+  a separate, older Dalhousie Industrial Engineering cross-listing page for the same person says
+  "Professor Emeritus" — likely stale; the Faculty of Agriculture page (his active home unit, with
+  a currently active lab/grants/recent publications) was treated as authoritative. Re-verify on a
+  future pass if possible.
+- Added: Phuong-Anh Nguyen — York University, School of Administrative Studies — `Tenure-line`,
+  Associate Professor of Finance; official profile, PhD Virginia Tech.
+- Confirmed already covered (no action): Thomas Nguyen (McGill Dentistry), Helen Tran (Toronto
+  Chemistry), Vivian Nguyen (Carleton Biology).
+- Deferred/excluded: The Hung Nguyen — École Polytechnique de Montréal, Mechanical Engineering —
+  only third-party sources (RateMyProfessors, LinkedIn) found; the department's own personnel page
+  did not render usable content in this pass. Retry with a direct fetch of a live official page.
+- Deferred/excluded: a "Thi-Phuong Nguyen" / "Phuong-Tram Nguyen" lead at Carleton's Azrieli School
+  of Architecture — name and title could not be confirmed from an official source in this pass
+  (course-aggregator and Academia.edu mentions only); an existing unrelated roster member also
+  named "Thi-Phuong Nguyen" is at a different university (Taiwan) and is not this person.
+- Not yet swept: Ottawa, Concordia, Western, Queen's, Guelph, Victoria, Laval, Montreal, Calgary,
+  Alberta, McMaster, Simon Fraser — general search surfaced mostly directory landing pages or
+  nothing; needs direct directory browsing.
+
 ## Safe resume procedure
 
 1. Read this runbook and the two authoritative repository guides named above.
