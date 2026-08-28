@@ -439,23 +439,27 @@ h1 {
   font-size: var(--text-sm);
 }
 
-.entry-name:hover,
-.entry-name:focus-visible {
+a.entry-name:hover,
+a.entry-name:focus-visible {
   text-decoration: underline;
 }
 
-.scholar-link {
+.scholar-link,
+.profile-link {
   color: var(--text-muted);
   display: inline-flex;
   vertical-align: text-bottom;
 }
 
 .scholar-link:hover,
-.scholar-link:focus-visible {
+.scholar-link:focus-visible,
+.profile-link:hover,
+.profile-link:focus-visible {
   color: var(--text-primary);
 }
 
-.scholar-link svg {
+.scholar-link svg,
+.profile-link svg {
   height: 1rem;
   width: 1rem;
   fill: currentColor;

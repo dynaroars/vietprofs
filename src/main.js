@@ -135,6 +135,13 @@ function formatLocation(p) {
   return parts.join(', ');
 }
 
+const SCHOLAR_ICON = '<path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3Z"/><path d="M5 12.18V16c0 1.66 3.13 3 7 3s7-1.34 7-3v-3.82l-7 3.82-7-3.82Z"/>';
+const PROFILE_ICON = '<path d="M12 3 3 9v2h18V9L12 3Zm-7 10v6h2v-6H5Zm6 0v6h2v-6h-2Zm6 0v6h2v-6h-2ZM3 21h18v-2H3v2Z"/>';
+
+function entryIconLink({ className, href, label, title, icon }) {
+  return ` <a class="${className}" href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(label)}" title="${escapeHtml(title)}"><svg viewBox="0 0 24 24" aria-hidden="true">${icon}</svg></a>`;
+}
+
 function renderRoster(roster, { field, location } = {}) {
   const rosterEl = document.getElementById('roster');
   const countEl = document.getElementById('result-count');
@@ -191,13 +198,20 @@ function renderRoster(roster, { field, location } = {}) {
         (p.mdYear || p.mdInstitution) && `MD: ${[displayUniversity(p.mdInstitution), p.mdYear].filter(Boolean).join(', ')}`,
         ...(p.otherDegrees ?? []).map((degree) => `${degree.degree}: ${[displayUniversity(degree.institution), degree.year].filter(Boolean).join(', ')}`),
       ].filter(Boolean);
+      const nameMarkup = p.websiteUrl
+        ? `<a class="entry-name" href="${escapeHtml(p.websiteUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(visibleName)}</a>`
+        : `<span class="entry-name">${escapeHtml(visibleName)}</span>`;
+      const profileIcon = entryIconLink({ className: 'profile-link', href: p.profileUrl, label: `${visibleName} official university profile`, title: 'Official university profile', icon: PROFILE_ICON });
+      const scholarIcon = p.scholarUrl
+        ? entryIconLink({ className: 'scholar-link', href: p.scholarUrl, label: `${visibleName} on Google Scholar`, title: 'Google Scholar', icon: SCHOLAR_ICON })
+        : '';
       return `
         <div class="entry${portrait ? ' entry-with-portrait' : ''}">
           ${portrait}
           <div class="entry-content">
               <div class="entry-name-row">
-                <a class="entry-name" href="${escapeHtml(p.websiteUrl ?? p.profileUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(visibleName)}</a>
-                <span class="entry-vietnamese-name">(${escapeHtml(nativeName)})</span>${p.scholarUrl ? ` <a class="scholar-link" href="${escapeHtml(p.scholarUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(visibleName)} on Google Scholar" title="Google Scholar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3Z"/><path d="M5 12.18V16c0 1.66 3.13 3 7 3s7-1.34 7-3v-3.82l-7 3.82-7-3.82Z"/></svg></a>` : ''}${updatedTime}
+                ${nameMarkup}
+                <span class="entry-vietnamese-name">(${escapeHtml(nativeName)})</span>${profileIcon}${scholarIcon}${updatedTime}
               </div>
               <div class="entry-meta">${escapeHtml(entryMeta)} <span class="loc-badge" title="${escapeHtml(p.country || 'United States')}"><span class="country-flag" aria-hidden="true">${countryFlag(p.country)}</span></span></div>
               ${educationDetails.length ? `<div class="entry-details">${educationDetails.map((value) => escapeHtml(value)).join('; ')}</div>` : ''}
