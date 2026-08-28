@@ -194,6 +194,19 @@ gate above. Include URLs for identity, appointment, and stability evidence in th
   Gynecology (Gynecologic Oncology) — `Clinical`; official Keck faculty-search profile confirms
   "Assistant Professor of Clinical Obstetrics & Gynecology" (USC's clinical-track title format),
   https://keck.usc.edu/faculty-search/huyen-q-pham/.
+- Added: Vu Dang La — University of Pennsylvania, School of Dental Medicine, Periodontics —
+  `Clinical`; official Penn Dental faculty profile confirms "Clinical Assistant Professor of
+  Periodontics", https://www.dental.upenn.edu/faculty/vu-dang-la/.
+- Added: Thao T. Dang — Indiana University School of Medicine, Medical & Molecular Genetics —
+  `Clinical`; official IU School of Medicine profile confirms "Assistant Professor of Clinical
+  Medical & Molecular Genetics", https://medicine.iu.edu/faculty/63488/dang-thao.
+- Deferred/excluded: Duc T. Pham — Northwestern Feinberg, Cardiac Surgery — official profile lists
+  plain "Professor" (tenure-line), not a Clinical-track title; out of this batch's scope (a
+  possible lead for the general tenure-line roster, not logged there in this pass).
+- Deferred/excluded: Trang K. Nguyen — Washington University in St. Louis, Surgery — public sources
+  give plain "Associate Professor of Surgery" without a Clinical qualifier; insufficient evidence
+  to classify as Clinical vs. tenure-line from available sources (official profile page returned
+  HTTP 403).
 
 ### Batch 2 — International Research
 
