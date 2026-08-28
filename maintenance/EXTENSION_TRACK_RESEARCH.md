@@ -218,6 +218,33 @@ gate above. Include URLs for identity, appointment, and stability evidence in th
 - Deferred/excluded: Quyen Nguyen — University of Pittsburgh, Pulmonary/Allergy/Critical Care —
   official profile lists plain "Assistant Professor of Medicine" without a Clinical qualifier.
 
+**Data-quality audit, 2026-08-28:** searched the roster for existing entries stuck with the
+generic `rank: "Teaching"` placeholder (a sign the actual published title was never captured) in
+medicine/dental/pharmacy/nursing-adjacent departments — 64 entries carry that placeholder
+roster-wide; spot-checked those in health-related departments. Found and fixed three genuine
+Clinical-track misclassifications, corrected one dead profile URL, and confirmed several
+false-positive leads (Instructional Assistant Professor and Teaching-Stream/Professor-of-Teaching
+titles are correctly `Teaching`, not `Clinical`, even though "clinical" appears in the department
+name or research area):
+- Corrected: Khoa Nguyen — University of Florida College of Pharmacy, Pharmacotherapy and
+  Translational Research — official profile confirms "Clinical Associate Professor"; moved from
+  `Teaching`/"Teaching" to `Clinical`/"Clinical Associate Professor".
+- Corrected: Tuong Vi Ho — Texas Woman's University, Nursing (Houston Center) — official profile
+  confirms "Associate Clinical Professor"; moved from `Teaching`/"Teaching" to `Clinical`/
+  "Associate Clinical Professor".
+- Fixed dead link: Minh-Hiên Lê — University of Toronto, Leslie Dan Faculty of Pharmacy — stored
+  `profileUrl` 404'd; replaced with the live profile URL and preserved her actual title,
+  "Assistant Professor, Teaching Stream" (confirmed still correctly `Teaching`).
+- Confirmed correct as-is (no change): Lan Chi Nguyen (University of Houston College of
+  Optometry, "Instructional Assistant Professor" — department is literally named "Clinical
+  Sciences" but her rank is a teaching title); Hanh Huynh (UBC Pathology and Laboratory Medicine,
+  "Associate Professor of Teaching"); Vuvi H. Nguyen and Leanna Rubio (UTHealth Houston School of
+  Dentistry, plain "Associate/Assistant Professor" with no Clinical qualifier found).
+- The remaining ~59 `rank: "Teaching"` placeholder entries outside health-adjacent departments were
+  not individually re-verified in this pass; a future session should continue this audit across
+  the rest of the roster, since it is a higher-yield way to find misclassified entries than fresh
+  candidate search.
+
 ### Batch 2 — International Research
 
 - Attempted 2026-08-28: broad searches across UK, Germany, Netherlands, Australia (UNSW/Sydney/
