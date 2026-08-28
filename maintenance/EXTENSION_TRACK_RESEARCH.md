@@ -404,6 +404,30 @@ batch-sequenced extension-track work above, since this sweep classifies into any
   Alberta, McMaster, Simon Fraser — general search surfaced mostly directory landing pages or
   nothing; needs direct directory browsing.
 
+### Australia
+
+- Added: My Nguyen — RMIT University, Economics, Finance and Marketing — `Tenure-line`, Associate
+  Professor of Finance; official RMIT profile, PhD Monash University 2015.
+- Added: Truyen Tran — Deakin University, Applied Artificial Intelligence Institute —
+  `Tenure-line`, Professor; official profile/CV site, PhD Curtin University 2008, promoted through
+  Assistant (2014)/Associate (2017)/Full Professor (2024).
+- Added: Hoa Van Nguyen — Curtin University, School of Electrical Engineering, Computing and
+  Mathematical Sciences — `Tenure-line`, Lecturer (mapped to Assistant Professor); official
+  personal/university profile, PhD University of Adelaide 2020.
+- Confirmed already covered (no action): Professor Vinh Nguyen (UNSW Chemistry — exact-name
+  collision with the newly added University of Waterloo `Vinh Nguyen`, already disambiguated in
+  the roster as "Vinh Nguyen - UNSW Sydney"), Associate Professor Hoa Nguyen (UNSW Education,
+  already "Hoa Nguyen - University of New South Wales"), Emeritus Professor Binh Tran-Nam (UNSW
+  Law, already present).
+- Deferred/excluded: Thong Pham — Curtin University — staff-portal profile page did not render
+  usable content (JS-only template) in this pass; retry with a different fetch approach.
+- Note: several "Nguyen"/"Tran"/"Pham" results at RMIT were actually **RMIT Vietnam** staff
+  (rmit.edu.vn) — excluded, since the roster requires a current appointment outside Vietnam.
+- Not yet swept: Melbourne, Sydney, Monash (beyond the two already-covered names above),
+  Queensland, Western Australia, Adelaide, Macquarie, UTS, Wollongong, La Trobe (beyond Truyen
+  Tran's PhD-student list, which is leads not confirmed faculty) — general search surfaced mostly
+  student/postdoc mentions or nothing usable; needs direct directory browsing.
+
 ## Safe resume procedure
 
 1. Read this runbook and the two authoritative repository guides named above.
