@@ -602,6 +602,42 @@ Yale) with Vietnamese surnames, no track pre-filter.
   flagged non-clinical-track "Assistant Professor" designation; Anh N. Tran and Minh Tu Dang Tran
   (Duke) — plain Associate/Assistant Professor with no Clinical qualifier found.
 
+### Wikipedia diaspora-scientist categories (lead source, 2026-08-28)
+
+User suggested finding a worldwide directory of Vietnamese professors/researchers. No single
+comprehensive directory exists, but Wikipedia's Category:Vietnamese academics, Category:Academics
+of Vietnamese descent, Category:Vietnamese scientists (and 21st-century/physicists/mathematicians
+subcategories), and the VEF/VEFFA alumni networks are useful lead sources — small (dozens, not
+hundreds) but high-precision since most entries are individually notable enough to have a
+Wikipedia page. Cross-checking these against the roster found:
+
+- Added: Dam Thanh Son (Đàm Thanh Sơn) — University of Chicago, Physics — `Tenure-line`,
+  Professor; NAS member (2014), AAAS member (2014), 2018 ICTP Dirac Medal.
+- Added: Duong Hong Phong — Columbia University, Mathematics — `Tenure-line`, Professor, Davies
+  Chair of Mathematics; NAS member, AAAS Fellow, 2009 Bergman Prize.
+- Confirmed already covered, with an actual move discovered: Van H. Vu was already in the roster,
+  correctly updated to his current position — Professor and Chair of Mathematics, University of
+  Hong Kong (moved from Yale; multiple Yale pages found via search are stale/outdated). No
+  duplicate added.
+- Also already covered (no action): Xuong Nguyen-Huu (UCSD, Emeritus), Jane X. Luu (Tufts,
+  Kavli/Shaw Prize winner), Ngoc Thanh Nguyen (Wrocław), Minh Quang Tran (EPFL), Thuc-Quyen Nguyen,
+  Trinh T. Minh-ha (as "T. Minh-ha Trinh").
+- Not yet checked from this lead list: Nam Le, Jane Luu (done), Jacqueline Nguyen (federal judge,
+  not academic — out of scope), Nguyễn Tiến Hưng, My-Van Tran, Tran Van Tho, Nguyen TK Thanh
+  (UCL nanoscience — worth checking next), Dinh Tien-Cuong (NUS), Pipo Nguyen-duy.
+
+### U.S. medical-school specialty sweep, continued
+
+- Added: Mylinh T. Nguyen — UC San Diego, Pediatrics (Rady Children's) — `Clinical`, Associate
+  Clinical Professor; official UCSD Profiles page. Disambiguated from an unrelated existing
+  "Mylinh Nguyen" (UT Dallas, Teaching) via her fuller published name.
+- Added: Margaret Nguyen — UC San Diego, Pediatrics (Rady Children's) — `Clinical`, Associate
+  Clinical Professor; health services research / injury prevention.
+- Added: Minh-Ha Tran — UC Irvine, Pathology and Laboratory Medicine — `Clinical`, Clinical
+  Professor; official UCI faculty profile, DO Western University of Health Sciences.
+- Deferred: Bao-Ngoc Nguyen (GW, Vascular Surgery) — plain "Associate Professor," no Clinical
+  qualifier found.
+
 ## Safe resume procedure
 
 1. Read this runbook and the two authoritative repository guides named above.
