@@ -226,6 +226,14 @@ gate above. Include URLs for identity, appointment, and stability evidence in th
   School — `Clinical`; official Monash research-profile page confirms "Clinical Professor" title,
   clinical/research haematology role at Alfred Health, https://research.monash.edu/en/persons/huyen-tran/,
   2026-08-28.
+- Added: Hien Thi Thu Nguyen — Aalborg University (Denmark), Department of Molecular Diagnostics /
+  Department of Clinical Medicine — `Clinical`; official Aalborg University research-portal
+  profile confirms "Associate Professor, Clinical Academic" at Aalborg University Hospital,
+  https://vbn.aau.dk/en/persons/httn/, 2026-08-28. First Denmark entry in the roster.
+- Deferred/excluded: Quynh Pham — University of Toronto, IHPME — official profile explicitly
+  labels the appointment "Assistant Professor (Status-Only)," a University of Toronto affiliate/
+  courtesy title without primary paid faculty status; excluded per the affiliate/courtesy
+  exclusion.
 
 ## Safe resume procedure
 
