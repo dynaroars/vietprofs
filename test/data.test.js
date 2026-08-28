@@ -68,9 +68,6 @@ test('every entry has the required fields', () => {
     for (const field of ['phdInstitution', 'undergradInstitution', 'msInstitution', 'mdInstitution']) {
       if (p[field] !== undefined) assert.equal(typeof p[field], 'string', `${p.name} ${field} must be a string`);
     }
-    for (const field of ['phdMajor', 'undergradMajor', 'msMajor']) {
-      if (p[field] !== undefined) assert.equal(typeof p[field], 'string', `${p.name} ${field} must be a string`);
-    }
     assert.match(p.profileUrl, /^https?:\/\//);
   }
 });

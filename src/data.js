@@ -17,6 +17,8 @@ function searchableFields(person) {
     person.postdocInstitution,
     person.phdInstitution,
     person.mdInstitution,
+    person.undergradInstitution,
+    person.msInstitution,
     ...(person.researchAreas ?? []),
     ...(person.honors ?? []).flatMap((honor) => [honor.name, honor.organization]),
   ];
@@ -69,7 +71,7 @@ export function uniqueRanks(roster) {
 
 // Keep official university names in the roster and search index. Established aliases take
 // precedence; otherwise a terminal " University" is abbreviated in the compact card display.
-export const UNIVERSITY_DISPLAY_NAMES = new Map([
+const UNIVERSITY_DISPLAY_NAMES = new Map([
   ['Pennsylvania State University', 'Penn State'],
   ['Penn State University', 'Penn State'],
   ['Brown University', 'Brown'],
@@ -547,10 +549,6 @@ export function healthSubfieldOf(person) {
   return 'Clinical Medicine';
 }
 
-export function uniqueFields(roster) {
-  return FIELDS.filter((field) => roster.some((p) => fieldOf(p.department, p.university) === field));
-}
-
 export function uniquePhdInstitutions(roster) {
   return [...new Set(roster.map((p) => p.phdInstitution).filter(Boolean))].sort();
 }
@@ -582,7 +580,7 @@ export function buildTopUniversities(roster, limit = 8) {
   return [...counts.entries()].sort((a, b) => b[1] - a[1]).slice(0, limit);
 }
 
-export function stripDiacritics(s) {
+function stripDiacritics(s) {
   return s.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 }
 
@@ -606,11 +604,11 @@ export function parseSearchQuery(query) {
     return { type: 'honors', text: '' };
   }
   const credential = trimmed.toLowerCase();
-  if (['phd', 'postdoc', 'ms', 'undergrad'].includes(credential)) {
+  if (['phd', 'postdoc', 'ms', 'undergrad', 'md'].includes(credential)) {
     return { type: 'credential', credential, text: '' };
   }
   const prefixMatch = trimmed.match(
-    /^(univ(?:ersity)?|school|phd(?:institution)?|alma|postdoc|postdoctoral|ms|undergrad(?:uate)?|state|country|nation|continent|loc(?:ation)?|city|dept|department|name):\s*(?:"([^"]*)"|'([^']*)'|(.*))$/i,
+    /^(univ(?:ersity)?|school|phd(?:institution)?|alma|postdoc|postdoctoral|ms|md|undergrad(?:uate)?|state|country|nation|continent|loc(?:ation)?|city|dept|department|name):\s*(?:"([^"]*)"|'([^']*)'|(.*))$/i,
   );
   if (!prefixMatch) {
     return { type: 'text', text: trimmed };
@@ -628,6 +626,9 @@ export function parseSearchQuery(query) {
   }
   if (prefix === 'ms') {
     return { type: 'credential', credential: 'ms', text: value };
+  }
+  if (prefix === 'md') {
+    return { type: 'credential', credential: 'md', text: value };
   }
   if (['undergrad', 'undergraduate'].includes(prefix)) {
     return { type: 'credential', credential: 'undergrad', text: value };
@@ -707,6 +708,7 @@ export function filterRoster(roster, { query = '', location, field, track, unive
       phd: ['phdInstitution', 'phdYear'],
       postdoc: ['postdocInstitution', 'postdocYear'],
       ms: ['msInstitution', 'msYear'],
+      md: ['mdInstitution', 'mdYear'],
       undergrad: ['undergradInstitution', 'undergradYear'],
     }[parsed.credential];
     const target = stripDiacritics(parsed.text.toLowerCase());

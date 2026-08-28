@@ -121,6 +121,17 @@ function renderShell() {
 
       <div class="form-section form-row">
         <div>
+          <label for="mdYear">MD completion year</label>
+          <input id="mdYear" name="mdYear" type="number" min="1900" max="${new Date().getFullYear()}" placeholder="e.g. 2016" />
+        </div>
+        <div>
+          <label for="mdInstitution">MD institution</label>
+          <input id="mdInstitution" name="mdInstitution" type="text" placeholder="e.g. Johns Hopkins University" />
+        </div>
+      </div>
+
+      <div class="form-section form-row">
+        <div>
           <label for="postdocYear">Postdoc completion year</label>
           <input id="postdocYear" name="postdocYear" type="number" min="1900" max="${new Date().getFullYear()}" placeholder="e.g. 2022" />
         </div>
@@ -141,7 +152,7 @@ function renderShell() {
       </div>
 
       <div class="submit-actions">
-        <button type="submit" class="submit-btn" name="delivery" value="email">Send by email</button>
+        <button type="submit" class="submit-btn">Send by email</button>
       </div>
       <p class="submit-hint" id="submit-hint">
         This opens a pre-filled email message to the maintainers.
@@ -171,6 +182,8 @@ const FIELD_LABELS = {
   msYear: "Master's year",
   phdInstitution: 'PhD institution',
   phdYear: 'PhD year',
+  mdInstitution: 'MD institution',
+  mdYear: 'MD year',
   postdocInstitution: 'Postdoc institution',
   postdocYear: 'Postdoc year',
   researchAreas: 'Research areas',
@@ -231,6 +244,8 @@ function populateEntry(form, entry) {
   form.postdocInstitution.value = entry.postdocInstitution ?? '';
   form.phdYear.value = entry.phdYear ?? '';
   form.phdInstitution.value = entry.phdInstitution ?? '';
+  form.mdYear.value = entry.mdYear ?? '';
+  form.mdInstitution.value = entry.mdInstitution ?? '';
   form.researchAreas.value = entry.researchAreas ? entry.researchAreas.join(', ') : '';
   if (entry.track) {
     const radio = form.querySelector(`input[name="track"][value="${entry.track}"]`);
@@ -277,6 +292,8 @@ function onSubmit(e, entriesByName) {
     msInstitution: form.msInstitution.value.trim() || undefined,
     phdYear: form.phdYear.value ? Number(form.phdYear.value) : undefined,
     phdInstitution: form.phdInstitution.value.trim() || undefined,
+    mdYear: form.mdYear.value ? Number(form.mdYear.value) : undefined,
+    mdInstitution: form.mdInstitution.value.trim() || undefined,
     postdocYear: form.postdocYear.value ? Number(form.postdocYear.value) : undefined,
     postdocInstitution: form.postdocInstitution.value.trim() || undefined,
   };

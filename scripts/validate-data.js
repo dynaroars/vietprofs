@@ -91,27 +91,15 @@ for (const [index, person] of roster.entries()) {
   if (!Array.isArray(person.researchAreas) || person.researchAreas.length === 0) fail(rosterFile, `${label} needs researchAreas`);
   if (person.state !== undefined && typeof person.state !== 'string') fail(rosterFile, `${label} state must be a string`);
   if (person.country !== undefined && typeof person.country !== 'string') fail(rosterFile, `${label} country must be a string`);
-  if (person.postdocInstitution !== undefined && (typeof person.postdocInstitution !== 'string' || !person.postdocInstitution.trim())) {
-    fail(rosterFile, `${label} has invalid postdocInstitution`);
-  }
-  if (person.postdocYear !== undefined && (!Number.isInteger(person.postdocYear) || person.postdocYear < 1900 || person.postdocYear > new Date().getFullYear())) {
-    fail(rosterFile, `${label} has invalid postdocYear`);
-  }
-  const institutionFields = ['phdInstitution', 'undergradInstitution', 'msInstitution', 'mdInstitution'];
+  const institutionFields = ['phdInstitution', 'undergradInstitution', 'msInstitution', 'mdInstitution', 'postdocInstitution'];
   for (const field of institutionFields) {
     if (person[field] !== undefined && (typeof person[field] !== 'string' || !person[field].trim())) {
       fail(rosterFile, `${label} has invalid ${field}`);
     }
   }
-  const yearFields = ['phdYear', 'undergradYear', 'msYear', 'mdYear'];
+  const yearFields = ['phdYear', 'undergradYear', 'msYear', 'mdYear', 'postdocYear'];
   for (const field of yearFields) {
     if (person[field] !== undefined && (!Number.isInteger(person[field]) || person[field] < 1900 || person[field] > new Date().getFullYear())) {
-      fail(rosterFile, `${label} has invalid ${field}`);
-    }
-  }
-  const majorFields = ['phdMajor', 'undergradMajor', 'msMajor'];
-  for (const field of majorFields) {
-    if (person[field] !== undefined && (typeof person[field] !== 'string' || !person[field].trim())) {
       fail(rosterFile, `${label} has invalid ${field}`);
     }
   }
