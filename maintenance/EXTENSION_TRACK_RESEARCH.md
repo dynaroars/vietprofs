@@ -622,9 +622,21 @@ Wikipedia page. Cross-checking these against the roster found:
 - Also already covered (no action): Xuong Nguyen-Huu (UCSD, Emeritus), Jane X. Luu (Tufts,
   Kavli/Shaw Prize winner), Ngoc Thanh Nguyen (Wrocław), Minh Quang Tran (EPFL), Thuc-Quyen Nguyen,
   Trinh T. Minh-ha (as "T. Minh-ha Trinh").
-- Not yet checked from this lead list: Nam Le, Jane Luu (done), Jacqueline Nguyen (federal judge,
-  not academic — out of scope), Nguyễn Tiến Hưng, My-Van Tran, Tran Van Tho, Nguyen TK Thanh
-  (UCL nanoscience — worth checking next), Dinh Tien-Cuong (NUS), Pipo Nguyen-duy.
+- Added: Nguyen T. K. Thanh — University College London, Physics and Astronomy — `Tenure-line`,
+  Professor of Nanomaterials; Academia Europaea Fellow (2024), Royal Society Rosalind Franklin
+  Award (2019).
+- Added: Nguyen Tien Hung (Nguyễn Tiến Hưng) — Howard University, Economics — `Emeritus`; sourced
+  from Wikipedia only (no direct Howard University page found confirming current status) — flagged
+  for re-verification against an official source in a future pass.
+- Added: My-Van Tran — University of South Australia, International and Asian Studies —
+  `Tenure-line`, Associate Professor; Member of the Order of Australia (AM).
+- Added: Pipo Nguyen-duy — Oberlin College, Art (Photography) — `Tenure-line`, Professor; 2011
+  Guggenheim Fellowship.
+- Confirmed already covered (no action): Dinh Tien-Cuong (NUS Mathematics, already present with
+  full honors detail).
+- Excluded: Nam Le — acclaimed Vietnamese-Australian writer, but no current primary academic
+  appointment found (teaches/lectures occasionally, not a faculty position); does not meet the
+  inclusion standard. Jacqueline Nguyen — federal judge, not an academic.
 
 ### U.S. medical-school specialty sweep, continued
 
