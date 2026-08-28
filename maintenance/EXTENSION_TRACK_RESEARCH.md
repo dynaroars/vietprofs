@@ -184,6 +184,16 @@ gate above. Include URLs for identity, appointment, and stability evidence in th
 - Deferred/excluded: Thai Tran Nguyen — Johns Hopkins Anesthesiology — official faculty listing
   gives the title "Clinical Associate," a sub-faculty rank at Hopkins, not Assistant/Associate/full
   Clinical Professor.
+- Deferred/excluded: Nicole Y. Nguyen — UCSF pharmacy — third-party sources describe her as
+  "Associate Clinical Professor," but she does not appear on UCSF's own Department of Clinical
+  Pharmacy faculty listing; no official source confirms the title.
+- Added: Tran Nguyen — Ohio State University, Internal Medicine (Dublin, OH) — `Clinical`;
+  official Wexner Medical Center profile confirms "Assistant Clinical Professor of Internal
+  Medicine", https://wexnermedical.osu.edu/find-a-doctor/tran-nguyen-100001229.
+- Added: Huyen Q. Pham — University of Southern California, Keck School of Medicine, Obstetrics &
+  Gynecology (Gynecologic Oncology) — `Clinical`; official Keck faculty-search profile confirms
+  "Assistant Professor of Clinical Obstetrics & Gynecology" (USC's clinical-track title format),
+  https://keck.usc.edu/faculty-search/huyen-q-pham/.
 
 ### Batch 2 — International Research
 
