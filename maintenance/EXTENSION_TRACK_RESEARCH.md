@@ -561,6 +561,31 @@ same broad query pattern.
 - Belgium and further Germany/Korea/Malaysia/Finland/Austria/Italy/Spain sweeps this round again
   surfaced only students, postdocs, or industry contacts — no additions.
 
+### U.S. medical-school specialty sweep (Batch 1/5, option chosen 2026-08-28)
+
+Per user direction, switched to sweeping specific medical schools' clinical departments (Baylor
+College of Medicine, Cedars-Sinai, University of Chicago Pritzker, Emory, University of Michigan,
+Yale) with Vietnamese surnames, no track pre-filter.
+
+- Added: Andrew Nguyen — University of Michigan Medical School, Neurosurgery and Neurology —
+  `Clinical`; official department page + multiple corroborating official/near-official sources
+  confirm "Clinical Assistant Professor", MD Indiana University.
+- Added: Ngoc Nguyen - Yale University (disambiguated; an existing roster member, "Ngoc Nguyen -
+  The University of Queensland", already used the plain name for a different, unrelated
+  chemical-engineering academic — renamed that entry for the collision) — Therapeutic Radiology —
+  `Clinical`, "Assistant Clinical Professor"; official Yale School of Medicine profile, PhD nuclear
+  physics Michigan State 2013, BS Vietnam National University 2006.
+- Deferred/excluded: Trung C. Nguyen (Baylor Pediatrics-Critical Care) and Minh Ly T. Nguyen
+  (Emory, Infectious Diseases) — both hold plain "Associate Professor" with no Clinical qualifier
+  found; ambiguous track, not added.
+- Deferred/excluded: Anthony Nguyen (Cedars-Sinai Cancer Institute, Radiation Oncology) — holds
+  "Assistant Professor" at Cedars-Sinai Health Sciences University (now its own accredited
+  degree-granting institution as of 2023, not solely a UCLA-affiliated clinical appointment); track
+  (Clinical vs. Tenure-line) could not be confirmed from available sources.
+- Cedars-Sinai and University of Chicago Pritzker faculty-profile pages are largely JS-rendered and
+  did not return usable content via direct fetch in this pass (Camtu/Cam Tu Nguyen, Nguyen Minh Le
+  leads unresolved); needs retry with a different fetch approach or direct browsing.
+
 ## Safe resume procedure
 
 1. Read this runbook and the two authoritative repository guides named above.
