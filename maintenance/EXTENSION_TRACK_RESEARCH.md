@@ -207,6 +207,16 @@ gate above. Include URLs for identity, appointment, and stability evidence in th
   give plain "Associate Professor of Surgery" without a Clinical qualifier; insufficient evidence
   to classify as Clinical vs. tenure-line from available sources (official profile page returned
   HTTP 403).
+- Corrected an existing entry: Thanh Tran (Rice University, ECE) already carried `track: Teaching`
+  but `rank: "Teaching"` (a placeholder, not the institution's actual title). Official Rice profile
+  gives his title as "Professor in the Practice, Electrical and Computer Engineering" — updated
+  `rank` to preserve it, per the rule to keep an institution's actual Professor-of-Practice-
+  equivalent title. `lastUpdatedAt` advanced.
+- Added: Uyen L. Tran — Vanderbilt University, Ophthalmology & Visual Sciences — `Clinical`;
+  official Vanderbilt faculty-directory profile confirms "Professor of Clinical Ophthalmology &
+  Visual Sciences", https://wag.app.vanderbilt.edu/PublicPage/Faculty/Details/27306.
+- Deferred/excluded: Quyen Nguyen — University of Pittsburgh, Pulmonary/Allergy/Critical Care —
+  official profile lists plain "Assistant Professor of Medicine" without a Clinical qualifier.
 
 ### Batch 2 — International Research
 
