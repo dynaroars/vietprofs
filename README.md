@@ -50,7 +50,17 @@ certificate warning on first visit.
 
 ## Data and contributions
 
-Edit [`public/data.json`](./public/data.json) to add, remove, or correct roster entries. Each entry needs a current academic profile URL, university, department, rank/track, country, and canonical UTC `lastUpdatedAt` timestamp. The accepted tracks are `Tenure-line`, `Teaching`, and `Emeritus`. Maintainers track full-review times separately in [`maintenance/verification.json`](./maintenance/verification.json), which is not part of the public site data.
+Edit [`public/data.json`](./public/data.json) to add, remove, or correct roster entries. Each entry needs a current academic profile URL, university, department, rank/track, country, and canonical UTC `lastUpdatedAt` timestamp. Maintainers track full-review times separately in [`maintenance/verification.json`](./maintenance/verification.json), which is not part of the public site data.
+
+The accepted tracks are:
+
+- `Tenure-line` — tenure-track or tenured faculty.
+- `Teaching` — stable, full-time non-tenure-track teaching faculty; this includes Professor of Practice and equivalent appointments.
+- `Research` — stable faculty-level research appointments, not postdoctoral or temporary research roles.
+- `Clinical` — stable clinical-faculty appointments, not adjunct or temporary clinical teaching.
+- `Emeritus` — formally conferred emeritus/emerita appointments following a tenure-line career.
+
+The stored `rank` preserves an institution’s actual title when it clarifies a non-tenure track, such as `Clinical Professor`, `Assistant Research Professor`, or `Professor of Practice`.
 
 Completed postdoctoral training may be recorded with `postdocInstitution` when a source explicitly identifies the institution. Add `postdocYear` only when that source explicitly gives the end or completion year.
 

@@ -137,6 +137,9 @@ test('rank labels use the simplified public vocabulary', () => {
   assert.equal(canonicalRank({ track: 'Tenure-line', rank: 'Associate Professor of Finance' }), 'Associate Professor');
   assert.equal(canonicalRank({ track: 'Tenure-line', rank: 'Assistant Professor of Practice' }), 'Assistant Professor');
   assert.equal(canonicalRank({ track: 'Teaching', rank: 'Senior Lecturer II' }), 'Teaching');
+  assert.equal(canonicalRank({ track: 'Research', rank: 'Assistant Research Professor' }), 'Research');
+  assert.equal(canonicalRank({ track: 'Clinical', rank: 'Clinical Professor' }), 'Clinical');
+  assert.equal(canonicalRank({ track: 'Teaching', rank: 'Professor of Practice' }), 'Teaching');
   assert.equal(canonicalRank({ track: 'Emeritus', rank: 'Professor Emerita' }), 'Emeritus');
 });
 
@@ -362,9 +365,10 @@ test('filterRoster prefix queries handle quotes, aliases, and extra whitespace',
   const q1 = filterRoster(roster, { query: 'university:"Texas Tech University"' });
   const q2 = filterRoster(roster, { query: 'univ:   Texas Tech University  ' });
   const q3 = filterRoster(roster, { query: 'school:\'Texas Tech University\'' });
-  assert.equal(q1.length, 9);
-  assert.equal(q2.length, 9);
-  assert.equal(q3.length, 9);
+  const expectedCount = roster.filter((person) => person.university === 'Texas Tech University').length;
+  assert.equal(q1.length, expectedCount);
+  assert.equal(q2.length, expectedCount);
+  assert.equal(q3.length, expectedCount);
 });
 
 test('LOCATIONS includes US, continents, and World', () => {

@@ -99,6 +99,8 @@ export function displayUniversity(university) {
 export function canonicalRank(person) {
   if (person.track === 'Emeritus') return 'Emeritus';
   if (person.track === 'Teaching') return 'Teaching';
+  if (person.track === 'Research') return 'Research';
+  if (person.track === 'Clinical') return 'Clinical';
   if (person.track !== 'Tenure-line') return person.rank;
   if (/assistant/i.test(person.rank ?? '')) return 'Assistant Professor';
   if (/associate/i.test(person.rank ?? '')) return 'Associate Professor';
@@ -189,14 +191,15 @@ export function uniqueResearchAreas(roster) {
   return [...new Set(roster.flatMap((p) => p.researchAreas).filter(Boolean))].sort();
 }
 
-// The three employment tracks a roster entry can carry. Tenure-line means tenure-track or already
-// tenured. Teaching means a full-time, continuing/permanent non-tenure-track teaching appointment
-// (e.g. Teaching Professor, Senior/Principal/Distinguished Lecturer). Emeritus means a formally
-// conferred emeritus title after a tenure-line career — plain retirement
-// without the conferred title doesn't qualify. None of the three ever includes adjunct, visiting,
-// postdoctoral, affiliate, or any other term-limited or part-time position; those stay excluded
-// from the roster entirely regardless of track. See README.md's "Roster maintenance handoff".
-export const TRACKS = ['Tenure-line', 'Teaching', 'Emeritus'];
+// Employment tracks a roster entry can carry. Tenure-line means tenure-track or already tenured.
+// Teaching means a full-time, continuing/permanent non-tenure-track teaching appointment, including
+// stable Professor of Practice and equivalent appointments. Research and Clinical are stable faculty
+// or faculty-equivalent appointments in their respective institutional tracks; their exact title
+// remains in `rank`. Emeritus means a formally conferred
+// emeritus title after a tenure-line career — plain retirement without the conferred title doesn't
+// qualify. None includes adjunct, visiting, postdoctoral, affiliate, or other term-limited or
+// part-time positions; those stay excluded from the roster. See ROSTER_MAINTENANCE.md.
+export const TRACKS = ['Tenure-line', 'Teaching', 'Research', 'Clinical', 'Emeritus'];
 
 // Continent/region values supported by structured location queries and the second
 // ("by continent") section of the visible location dropdown.
@@ -449,6 +452,9 @@ const FIELD_OVERRIDES = new Map([
   // council (Vietnamese has no dedicated department at Yale), but the role itself is language and
   // literature instruction — Humanities by function, not by the council's own name.
   ['Council on Southeast Asia Studies|Yale University', 'Humanities'],
+  // The Vietnam Center and Sam Johnson Vietnam Archive is an interdisciplinary research center;
+  // this historian's appointment and research focus belong with the Humanities bucket.
+  ['Vietnam Center and Sam Johnson Vietnam Archive|Texas Tech University', 'Humanities'],
 ]);
 
 // Buckets granular `department` values into the broad fields above. Order matters, and is not
@@ -909,7 +915,7 @@ export function buildUsFunFacts(roster) {
   const rankEntries = countBy(usRoster, (p) => canonicalRank(p) || 'rank not listed');
   if (rankEntries.length) {
     facts.push(
-      `U.S. rank breakdown: ${rankEntries.map(([r, c]) => `${c} ${r === 'Emeritus' || r === 'Teaching' ? r : r + (c === 1 ? '' : 's')}`).join(', ')}.`,
+      `U.S. rank breakdown: ${rankEntries.map(([r, c]) => `${c} ${['Emeritus', 'Teaching', 'Research', 'Clinical'].includes(r) ? r : r + (c === 1 ? '' : 's')}`).join(', ')}.`,
     );
   }
 

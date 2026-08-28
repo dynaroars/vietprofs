@@ -104,6 +104,14 @@ const TRACK_INFO = {
     label: 'teaching-track',
     tooltip: 'A full-time, continuing/permanent non-tenure-track teaching appointment — not adjunct, visiting, postdoctoral, or affiliate.',
   },
+  Research: {
+    label: 'research-track',
+    tooltip: 'A stable faculty or faculty-equivalent research appointment — not a postdoctoral, visiting, or other temporary research role.',
+  },
+  Clinical: {
+    label: 'clinical-track',
+    tooltip: 'A stable clinical faculty appointment — not adjunct, visiting, or other temporary clinical work.',
+  },
   Emeritus: {
     label: 'emeritus',
     tooltip: 'A formally conferred emeritus title after a tenure-line career — not just retirement without the conferred title.',

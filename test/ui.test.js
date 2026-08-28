@@ -208,7 +208,7 @@ test('full HTML roster rendering produces clean HTML with no undefined/null/NaN 
   // Test across every combination of location, field, and track
   for (const loc of ['US', 'World', 'Asia', 'Europe']) {
     for (const field of ['all', 'Computer & Information Sciences', 'Engineering', 'Mathematics']) {
-      for (const track of ['all', 'Tenure-line', 'Teaching', 'Emeritus']) {
+      for (const track of ['all', 'Tenure-line', 'Teaching', 'Research', 'Clinical', 'Emeritus']) {
         const filtered = filterRoster(roster, { location: loc, field, track });
         const sorted = sortRoster(filtered);
         const fullHtml = sorted.map(renderEntry).join('');

@@ -6,17 +6,30 @@ This document is for maintainers and automated agents. It contains the detailed 
 
 Include a person only when reliable evidence, preferably an official university page, supports all of the following:
 
-- Vietnamese or Vietnamese-diaspora identity. A Vietnamese-sounding name is a lead, not conclusive evidence; review each addition for false positives.
 - A current university appointment anywhere outside Vietnam, except for Emeritus entries.
 - A primary academic appointment and one of the accepted tracks below.
+
+Use Vietnamese names and other relevant discovery signals to find roster candidates. Do not require
+separate documentary evidence of Vietnamese or Vietnamese-diaspora identity once the candidate is
+otherwise eligible.
 
 Accepted tracks:
 
 - `Tenure-line`: tenure-track or tenured.
-- `Teaching`: full-time, continuing/permanent non-tenure-track teaching faculty. Confirm permanence from the university's language, such as “full-time,” “continuing appointment,” “non-tenure-track faculty,” or a named teaching promotion ladder. Do not infer it from the title alone.
+- `Teaching`: full-time, continuing/permanent non-tenure-track teaching faculty, including stable Professor of Practice and equivalent appointments. Confirm permanence from the university's language, such as “full-time,” “continuing appointment,” “non-tenure-track faculty,” or a named teaching promotion ladder. Do not infer it from the title alone.
+- `Research`: a stable, faculty-level research appointment, such as Research Professor or a research-faculty promotion ladder. Do not include postdoctoral, visiting, grant-limited, or otherwise temporary research roles.
+- `Clinical`: a stable clinical-faculty appointment, such as Clinical Professor or a documented clinical-faculty ladder. Do not include adjunct or temporary clinical teaching.
 - `Emeritus`: a formally conferred emeritus/emerita title following a tenure-line career. Prefer an active emeritus listing or a source documenting the conferral. Plain retirement, resignation, former-faculty status, and in-memoriam listings do not qualify.
 
-Exclude adjunct, visiting, postdoctoral, affiliate/courtesy, research-track, graduate teaching-assistant, non-university, and other term-limited or part-time appointments. Plain `Instructor` requires case-by-case verification and should not be included from the title alone.
+Exclude adjunct, visiting, postdoctoral, affiliate/courtesy, graduate teaching-assistant, non-university, industry-only, and other term-limited or part-time appointments. Plain `Instructor` requires case-by-case verification and should not be included from the title alone.
+
+### Evaluating Research, Clinical, and Practice titles
+
+Titles alone do not establish eligibility. For a proposed `Research` or `Clinical` entry, find an official university source that identifies the person and their current appointment, then establish that the role is faculty-level and stable through one or more of the following: a departmental faculty directory, an institutional faculty profile, an established promotion ladder, explicit continuing/permanent/full-time language, or an enduring university appointment page.
+
+`Research Assistant Professor` needs particular care. Include it only when the institution treats it as a genuine research-faculty rank or there is comparably strong evidence of a career-type appointment; do not treat a senior postdoctoral role as faculty merely because it uses that title. Similarly, only include a Senior or Principal Research Scientist when the official evidence establishes a faculty-equivalent or long-term university academic appointment.
+
+Professor of Practice, Associate Professor of Practice, Assistant Professor of Practice, and equivalent institution-specific practice titles belong in `Teaching`, not a separate track. They still require evidence that the appointment is stable and substantive; exclude visiting and adjunct practice roles. Keep the published practice title in `rank`.
 
 ## Research workflow
 
@@ -41,7 +54,7 @@ node scripts/faculty-discovery-queries.mjs \
   --domain njit.edu
 ```
 
-Every result still requires the inclusion and identity checks above.
+Every result still requires the appointment, track, and source-quality checks above.
 
 ### Reviewing user-supplied links
 
@@ -58,7 +71,6 @@ after the first correction:
 - current university, primary department, rank, track, and a working official `profileUrl`;
 - a maintained personal or lab `websiteUrl` and Google Scholar `scholarUrl`, keeping each URL in
   its designated field;
-- Vietnamese or Vietnamese-diaspora identity and the evidence needed for eligibility;
 - a suitable current portrait and its source;
 - explicitly documented education, including degree institutions, graduation years, majors,
   professional degrees, and completed postdoctoral institution (plus end/completion year when
@@ -82,8 +94,7 @@ enough.
 
 When a user supplies a person's name without a link, search the web and relevant official
 university sources for that person and for roster-relevant details. Use the research workflow
-above to resolve identity and locate evidence; do not treat a name, including a Vietnamese-
-sounding name, as sufficient proof of identity or eligibility.
+above to resolve the person and locate current appointment evidence.
 
 Search the canonical roster for the person before making a change. For an existing entry, use
 reliable sources to identify eligible corrections or additions, such as a current appointment,
@@ -96,7 +107,7 @@ link.
 
 `public/data.json` is the canonical roster. Each entry should use the following conventions:
 
-- `track` must be `Tenure-line`, `Teaching`, or `Emeritus`.
+- `track` must be `Tenure-line`, `Teaching`, `Research`, `Clinical`, or `Emeritus`.
 - `profileUrl` must be a current, working academic or official university profile and must not be a Google Scholar URL. Store Scholar separately in `scholarUrl`; store a maintained personal or lab homepage in `websiteUrl`.
 - `lastUpdatedAt` is required and must be a canonical UTC ISO timestamp in
   `YYYY-MM-DDTHH:mm:ss.sssZ` form. It records when roster content for
@@ -104,7 +115,7 @@ link.
   appointment, degree, honor, portrait, source, or another stored fact. A verification that finds
   no data change must not advance it.
 - Preserve an existing Scholar URL by moving it to `scholarUrl` before replacing `profileUrl`. Verify replacement URLs follow redirects and do not return 404.
-- Use only `Assistant Professor`, `Associate Professor`, or `Professor` as the rank vocabulary for Tenure-line entries; use `Teaching` and `Emeritus` for the corresponding tracks.
+- Use only `Assistant Professor`, `Associate Professor`, or `Professor` as the rank vocabulary for Tenure-line entries; use `Teaching` and `Emeritus` for those corresponding tracks. For Research and Clinical entries, preserve the institution's published appointment title in `rank`. Preserve a Professor of Practice title in `rank` for Teaching entries when that is the institution's published title.
 - Add `phdYear` and `phdInstitution` only when a source explicitly states them. Never infer them from dates, CV chronology, or context.
 - Record completed postdoctoral training when a source explicitly identifies the institution. Add
   `postdocYear` only when the source also explicitly states an end or completion year; never infer

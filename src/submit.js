@@ -83,7 +83,7 @@ function renderShell() {
 
       <div class="form-section">
         <label for="rank">Simplified academic rank</label>
-        <input id="rank" name="rank" type="text" placeholder="Assistant Professor, Associate Professor, Professor, Teaching, or Emeritus" />
+        <input id="rank" name="rank" type="text" placeholder="Assistant Professor, Clinical Professor, Professor of Practice, or other official title" />
       </div>
 
       <div class="form-section form-row">

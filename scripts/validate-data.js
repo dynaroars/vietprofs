@@ -3,7 +3,7 @@ import { resolve } from 'node:path';
 
 const rosterFile = resolve('public/data.json');
 const verificationFile = resolve('maintenance/verification.json');
-const allowedTracks = new Set(['Tenure-line', 'Teaching', 'Emeritus']);
+const allowedTracks = new Set(['Tenure-line', 'Teaching', 'Research', 'Clinical', 'Emeritus']);
 const allowedHonorCategories = new Set(['academy', 'fellow', 'career_award', 'major_award', 'distinguished_professorship']);
 const requiredStrings = ['name', 'profileUrl', 'lastUpdatedAt', 'university', 'city', 'department'];
 const utcTimestampPattern = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/;
