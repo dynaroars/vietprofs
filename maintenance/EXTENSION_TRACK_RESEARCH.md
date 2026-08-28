@@ -171,6 +171,9 @@ gate above. Include URLs for identity, appointment, and stability evidence in th
   Practice, 2026-08-28.
 - Deferred/excluded: Lien Nguyen — Merrimack College’s current directory lists an adjunct role;
   do not add as a practice appointment.
+- Added: Quoc-Viet Dang — University of California, Irvine, EECS — `Teaching`; official profile
+  confirms "Associate Professor of Teaching" on UC's named continuing Teaching Professor ladder,
+  https://engineering.uci.edu/users/quoc-viet-dang, 2026-08-28.
 
 ### Batch 4 — International Practice → Teaching
 
@@ -201,6 +204,11 @@ gate above. Include URLs for identity, appointment, and stability evidence in th
 - Added: Billie Nguyen — University of Florida College of Pharmacy (Jacksonville) — `Clinical`;
   official faculty listing confirms "Clinical Assistant Professor and Manager, Ambulatory Care",
   https://ufhealthjax.org/pharmacy-residency/faculty, 2026-08-28.
+- Added: Thuan Nguyen (disambiguated as "Thuan Nguyen - University of North Texas"; a roster
+  namesake already exists at Oregon Health & Science University) — UNT College of Information,
+  Data Analytics & Statistics — `Clinical`; UNT policy documents a formal, named non-tenure
+  Clinical Faculty promotion ladder (Assistant/Associate/full Clinical Professor),
+  https://dataanalytics.unt.edu/people/thuan-nguyen.html, 2026-08-28.
 
 ### Batch 6 — International Clinical
 
