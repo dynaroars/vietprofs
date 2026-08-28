@@ -585,6 +585,22 @@ Yale) with Vietnamese surnames, no track pre-filter.
 - Cedars-Sinai and University of Chicago Pritzker faculty-profile pages are largely JS-rendered and
   did not return usable content via direct fetch in this pass (Camtu/Cam Tu Nguyen, Nguyen Minh Le
   leads unresolved); needs retry with a different fetch approach or direct browsing.
+- Added: Phuong D. Nguyen — University of Colorado School of Medicine, Surgery/Plastic Surgery —
+  `Clinical`, "Clinical Professor"; official CU Anschutz profile plus corroborating institutional
+  news page, MD University of Minnesota, Chair of Pediatric Plastic Surgery at Children's Hospital
+  Colorado. (Distinguished from an unrelated, already-present "Phuong Nguyen" — South Dakota State,
+  construction management — via the fuller published name "Phuong D. Nguyen" rather than a
+  university-suffix, since a fuller name was available.)
+- Added: Dao M. Nguyen — University of Miami Miller School of Medicine, Surgery/Cardiothoracic
+  Surgery — `Tenure-line`, Professor, B. and Donald Carlin Endowed Chair for Thoracic Surgical
+  Oncology (logged as `distinguished_professorship`); official Miller School profile, MD McGill
+  University 1986. Distinct from an unrelated existing "Dao Nguyen" (McGill University, Canada).
+- Added: Liem Nguyen — Case Western Reserve University School of Medicine, Molecular Biology and
+  Microbiology — `Tenure-line`, Associate Professor; official department profile,
+  Mycobacterium tuberculosis / antibiotic resistance research.
+- Deferred/excluded: Hai Nguyen-Tran (Colorado, Pediatrics-Infectious Diseases) — profile explicitly
+  flagged non-clinical-track "Assistant Professor" designation; Anh N. Tran and Minh Tu Dang Tran
+  (Duke) — plain Associate/Assistant Professor with no Clinical qualifier found.
 
 ## Safe resume procedure
 
