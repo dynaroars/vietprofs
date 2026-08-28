@@ -72,7 +72,7 @@ const COMPLETENESS_FIELDS = ['portrait', 'scholarUrl', 'websiteUrl'];
 // Each missing completeness field pulls an entry this many days closer to the front of the queue,
 // so incomplete profiles get fixed sooner even if they were verified relatively recently.
 const COMPLETENESS_BOOST_DAYS = 180;
-const DEFAULT_CLAUDE_MODEL = 'haiku';
+const DEFAULT_CLAUDE_MODEL = 'sonnet';
 const DEFAULT_CODEX_REASONING_EFFORT = 'low';
 
 let state = null;
