@@ -51,10 +51,10 @@ rules, use the existing `Tenure-line` or `Teaching` track. Do not invent another
 | --- | --- | --- | --- |
 | 1 | `in_progress` | United States | Research |
 | 2 | `pending` | Outside the United States and Vietnam | Research |
-| 3 | `pending` | United States | Professor of Practice / equivalent → Teaching |
+| 3 | `in_progress` | United States | Professor of Practice / equivalent → Teaching |
 | 4 | `pending` | Outside the United States and Vietnam | Professor of Practice / equivalent → Teaching |
-| 5 | `pending` | United States | Clinical |
-| 6 | `pending` | Outside the United States and Vietnam | Clinical |
+| 5 | `in_progress` | United States | Clinical |
+| 6 | `in_progress` | Outside the United States and Vietnam | Clinical |
 
 Before changing a batch to `complete`, finish its candidate queue, record excluded/borderline
 people below, and run the validation checklist. Immediately advance the next batch from `pending`
@@ -62,6 +62,16 @@ to `in_progress` and continue its research without waiting for confirmation. Kee
 batch as a reviewable unit if a commit is later requested.
 If a candidate cannot be resolved, record it as deferred with the missing proof; do not block the
 rest of the batch indefinitely.
+
+Note (2026-08-28 session): broad, general-purpose web search on Vietnamese surnames yields very
+low net-new candidates because most tenure-line matches are already in the 786+-entry roster, so
+this session worked several batches (1, 3, 5, 6) opportunistically as promising leads surfaced
+rather than strictly finishing one before starting the next. None of 1/3/5/6 is close to a
+genuine, exhaustive sweep of its search area — treat their `in_progress` status as "started, real
+additions logged, far from complete," not as near-complete. A later session or the unattended
+`maintain-roster.mjs`-style controller should continue each with narrower, institution- and
+discipline-specific searches (medical-school clinical-faculty directories, named non-tenure
+promotion ladders, research institutes) rather than repeating broad surname sweeps.
 
 ### Batch 1 — U.S. Research
 
@@ -212,7 +222,10 @@ gate above. Include URLs for identity, appointment, and stability evidence in th
 
 ### Batch 6 — International Clinical
 
-- Not started.
+- Added: Huyen Tran — Monash University, Australian Centre for Blood Diseases, Central Clinical
+  School — `Clinical`; official Monash research-profile page confirms "Clinical Professor" title,
+  clinical/research haematology role at Alfred Health, https://research.monash.edu/en/persons/huyen-tran/,
+  2026-08-28.
 
 ## Safe resume procedure
 
