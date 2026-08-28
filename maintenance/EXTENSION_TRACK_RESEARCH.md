@@ -637,6 +637,25 @@ Wikipedia page. Cross-checking these against the roster found:
 - Excluded: Nam Le — acclaimed Vietnamese-Australian writer, but no current primary academic
   appointment found (teaches/lectures occasionally, not a faculty position); does not meet the
   inclusion standard. Jacqueline Nguyen — federal judge, not an academic.
+- Checked Category:20th-century Vietnamese mathematicians, Category:Vietnamese biologists,
+  Category:Vietnamese biochemists, Category:Vietnamese social scientists, and
+  Category:Vietnamese economists:
+  - Added: Pham Huu Tiep — Rutgers University, Mathematics — `Tenure-line`, Professor (Joshua
+    Barlaz Distinguished Professor); group theory/representation theory, solved Brauer's Height
+    Zero Conjecture.
+  - Added: Tran Van Tho — Waseda University, Social Sciences — `Emeritus`; official Waseda
+    Researchers Database confirms "Professor Emeritus" (profile last updated July 2026).
+  - Deferred/excluded: Van Sang Nguyen (biologist) — appears based in Vietnam (Institute of
+    Ecology/Vietnam National University), not confirmed to hold a qualifying appointment outside
+    Vietnam.
+  - Deferred/excluded: Tran Thanh Van (physicist, Rencontres du Vietnam founder) — long CNRS
+    Research Director career in France, but CNRS is a national research body, not itself a
+    university, and no specific current qualifying university appointment outside Vietnam was
+    confirmed (his current visible role, ICISE, is based in Vietnam). Needs deeper research on any
+    formal French university/CNRS-lab affiliation before a decision.
+  - Remaining names in these categories (Đặng Phong, Đào Nguyên Cát, Nguyễn Thị Hồng, Nguyễn Thiện
+    Nhân, Nguyễn Xuân Oánh, Phạm Chi Lan, and the biochemists/archaeologists) appear to be
+    Vietnam-based public figures rather than overseas academics; not individually re-checked.
 
 ### U.S. medical-school specialty sweep, continued
 
