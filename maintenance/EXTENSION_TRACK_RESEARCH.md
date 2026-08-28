@@ -449,6 +449,22 @@ batch-sequenced extension-track work above, since this sweep classifies into any
   component schools), Lyon, Toulouse, Grenoble, Strasbourg, Bordeaux, Lille, Marseille, and
   business schools (HEC, ESSEC, ESCP) beyond the one INSEAD hit above.
 
+### Singapore
+
+- Added: Tan Minh Nguyen — National University of Singapore, Mathematics — `Tenure-line`,
+  Assistant Professor (NUS Presidential Young Professor 2024-2027); official NUS Mathematics
+  faculty listing, PhD Rice University 2020, postdoc UCLA.
+- Added: Tran Anh Tuan — Nanyang Technological University, School of Mechanical and Aerospace
+  Engineering — `Tenure-line`, Associate Professor; official NTU MAE faculty profile, BSc Hanoi
+  University of Science 2004, joined NTU 2013 as Nanyang Assistant Professor.
+- Added: Dang Thuy Tram — Nanyang Technological University, School of Chemistry, Chemical
+  Engineering and Biotechnology — `Tenure-line`, Associate Professor; official NTU research
+  faculty-directory profile, PhD MIT, postdoc Brigham and Women's Hospital/Harvard Medical School.
+- Deferred/excluded: Nguyen Tran Bao Phuong — NUS Lee Kuan Yew School of Public Policy — profile
+  page returned no usable content in this pass.
+- Not yet swept: SMU, SUTD, SIT beyond the one blocked lead above; most of NUS/NTU outside
+  Mathematics/MAE/SCCEB.
+
 ## Safe resume procedure
 
 1. Read this runbook and the two authoritative repository guides named above.
