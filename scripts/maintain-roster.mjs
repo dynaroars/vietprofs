@@ -66,6 +66,14 @@ const DEFAULT_AGENT_TIMEOUT_MINUTES = 90;
 const DEFAULT_RATE_LIMIT_WAIT_MINUTES = 30;
 const MAX_CAPTURE_CHARS = 2_000_000;
 const MAINTAINED_PATHS = new Set(['public/data.json', 'maintenance/verification.json']);
+// Fields whose absence marks an entry as an enrichment gap (missing portrait, Scholar link, or
+// personal/lab site) rather than just plain staleness.
+const COMPLETENESS_FIELDS = ['portrait', 'scholarUrl', 'websiteUrl'];
+// Each missing completeness field pulls an entry this many days closer to the front of the queue,
+// so incomplete profiles get fixed sooner even if they were verified relatively recently.
+const COMPLETENESS_BOOST_DAYS = 180;
+const DEFAULT_CLAUDE_MODEL = 'haiku';
+const DEFAULT_CODEX_REASONING_EFFORT = 'low';
 
 let state = null;
 let activeChild = null;
@@ -78,6 +86,20 @@ class BlockedError extends Error {}
 
 function nowIso() {
   return new Date().toISOString();
+}
+
+// Cheaper/faster defaults for the two agent CLIs; override per-run with
+// VIETPROFS_CLAUDE_MODEL (a `claude --model` alias) or VIETPROFS_CODEX_REASONING_EFFORT
+// (a `model_reasoning_effort` value) if quality needs outweigh cost/speed.
+function claudeModelArgs() {
+  return ['--model', process.env.VIETPROFS_CLAUDE_MODEL || DEFAULT_CLAUDE_MODEL];
+}
+
+function codexModelArgs() {
+  const effort = process.env.VIETPROFS_CODEX_REASONING_EFFORT || DEFAULT_CODEX_REASONING_EFFORT;
+  const args = ['-c', `model_reasoning_effort="${effort}"`];
+  if (process.env.VIETPROFS_CODEX_MODEL) args.push('--model', process.env.VIETPROFS_CODEX_MODEL);
+  return args;
 }
 
 function compact(value, limit = 30_000) {
@@ -351,11 +373,17 @@ export function selectDueEntries(roster, verification, {
   return roster
     .map((person, index) => {
       const timestamp = Date.parse(verification[person.name]);
-      return { name: person.name, index, timestamp: Number.isNaN(timestamp) ? -Infinity : timestamp };
+      const missingCount = COMPLETENESS_FIELDS.filter((field) => !person[field]).length;
+      const priority = Number.isNaN(timestamp)
+        ? -Infinity
+        : timestamp - missingCount * COMPLETENESS_BOOST_DAYS * 86_400_000;
+      return {
+        name: person.name, index, timestamp: Number.isNaN(timestamp) ? -Infinity : timestamp, priority,
+      };
     })
     .filter((entry) => (all || entry.timestamp <= cutoff)
       && !(Date.parse(deferredUntil[entry.name]) > now))
-    .sort((left, right) => left.timestamp - right.timestamp || left.index - right.index)
+    .sort((left, right) => left.priority - right.priority || left.index - right.index)
     .slice(0, limit)
     .map((entry) => entry.name);
 }
@@ -607,6 +635,7 @@ async function resolveTargetWithAgent(query, roster, schema) {
       '--output-format', 'json',
       '--permission-mode', 'dontAsk',
       '--allowedTools', 'Read,Glob,Grep',
+      ...claudeModelArgs(),
       '--json-schema', JSON.stringify(schema),
       '--session-id', randomUUID(),
       targetPrompt(query, roster),
@@ -717,6 +746,7 @@ async function runResearch(current, schemas) {
       '--output-format', 'json',
       '--permission-mode', 'dontAsk',
       '--allowedTools', 'Read,Glob,Grep,WebSearch,WebFetch',
+      ...claudeModelArgs(),
       '--json-schema', JSON.stringify(schemas.researchSchema),
       '--session-id', randomUUID(),
       researchPrompt(current.name, current.baseline, revision),
@@ -743,6 +773,7 @@ async function runReview(current) {
       '--search',
       '--sandbox', 'read-only',
       '--ask-for-approval', 'never',
+      ...codexModelArgs(),
       'exec',
       '--json',
       '--output-schema', REVIEW_SCHEMA_FILE,
