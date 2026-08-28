@@ -144,6 +144,20 @@ gate above. Include URLs for identity, appointment, and stability evidence in th
 - Deferred/excluded: Tyler Nguyen — Indiana University — current official profile confirms a
   Research Assistant Professor appointment after a postdoctoral fellowship, but this pass did not
   establish career-type stability beyond the title.
+- Deferred/excluded: Truc (Tru V.) Tran — Weill Cornell Medicine — VIVO research-profile page
+  confirms "Associate Professor of Pharmacology Research in Medicine" (a Research-track title at
+  this institution), but no official source documents her research areas, so the roster's required
+  `researchAreas` field cannot be populated without inference; retry with deeper search.
+- Deferred/excluded: An Vo — Feinstein Institutes for Medical Research / Zucker School of Medicine
+  at Hofstra — listed as plain "Assistant Professor"; no source found designating this a Research-
+  track (vs. ordinary tenure-line) appointment.
+- Deferred/excluded: Khanh Pham — University of New Mexico ECE — official profile states "Adjunct
+  Research Professor"; adjunct appointments are excluded regardless of the Research qualifier.
+- Note: broad Vietnamese-surname + "Research Professor"/"Research Associate Professor" web
+  searches are producing very low net-new yield because most matching tenure-line faculty are
+  already in the 786-entry roster; subsequent sessions should prioritize discipline- or
+  institution-specific sweeps (national labs, research institutes, medical school research-faculty
+  directories) over broad surname search.
 
 ### Batch 2 — International Research
 
@@ -167,9 +181,23 @@ gate above. Include URLs for identity, appointment, and stability evidence in th
 - Reclassified: Huong Nguyen — University of Minnesota — `Clinical`; exact rank retained as
   Clinical Associate Professor, 2026-08-28.
 - Added: Van Hellerslia — Temple University — `Clinical`, 2026-08-28.
+- Added: Patrick Nguyen — UT Health San Antonio, Department of Surgery — `Clinical`; official
+  directory profile confirms "Associate Professor/Clinical" since 2009,
+  https://directory.uthscsa.edu/academics/profile/nguyenp1, 2026-08-28.
+- Added: Elizabeth Nguyen — Texas A&M University College of Medicine, Pediatrics — `Clinical`;
+  official faculty listing confirms "Clinical Assistant Professor",
+  https://medicine.tamu.edu/faculty-listings/nguyen-e.html, 2026-08-28.
 - Deferred/excluded: Phuong T. Vo — University of Washington’s official current appointment is
   Assistant Professor, not an explicitly clinical-faculty title; do not use `Clinical` without
   stronger track evidence.
+- Deferred/excluded: David Pham — UT Southwestern, Pulmonary and Critical Care Medicine — official
+  profile (https://profiles.utsouthwestern.edu/profile/181740/) lists plain "Assistant Professor"
+  without a Clinical qualifier; insufficient evidence of Clinical track from title alone.
+- Deferred/excluded: Ngoc Lien Minh Nguyen — School of Medicine Greenville — directory profile page
+  returned no title/appointment detail (https://www.lancaster.sc.edu/study/colleges_schools/medicine_greenville/about/faculty/facultydir/pf2081fe0467b5e9717884a845c788c198);
+  cannot verify stable appointment from this source alone.
+- Deferred/excluded: Trang Pham — Loyola University New Orleans College of Law — directory profile
+  returned HTTP 403 and no other official source with her exact title was found in this pass.
 
 ### Batch 6 — International Clinical
 
