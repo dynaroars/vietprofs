@@ -168,6 +168,22 @@ gate above. Include URLs for identity, appointment, and stability evidence in th
   already in the 786-entry roster; subsequent sessions should prioritize discipline- or
   institution-specific sweeps (national labs, research institutes, medical school research-faculty
   directories) over broad surname search.
+- Added (2026-08-28, big-university pass): Cuong Nguyen (disambiguated as "Cuong Nguyen -
+  Massachusetts Institute of Technology"; roster namesake at University of Florida) — MIT,
+  Aeronautics and Astronautics — `Research`; official CSE profile confirms "Principal Research
+  Scientist" (MIT's senior research-track rank), PhD 2005 National University of Singapore,
+  https://cse.mit.edu/people/n-cuong-nguyen/.
+- Added: Minhtri Khac Nguyen — UCLA, Medicine/Nephrology — `Clinical`; official UCLA profile
+  confirms "HS Clinical Professor" (UC's Health Sciences Clinical Professor ladder),
+  https://profiles.ucla.edu/minhtri.nguyen.
+- Added: Teresa Phuongtram Nguyen — Stanford University, Anesthesiology, Perioperative and Pain
+  Medicine — `Clinical`; official Stanford Profiles page confirms "Clinical Assistant Professor",
+  https://profiles.stanford.edu/138089.
+- Deferred/excluded: Thanh Phuong Pham Nguyen — UPenn Perelman, Biostatistics/Epidemiology —
+  official profile lists "Research Associate," not a stable faculty rank.
+- Deferred/excluded: Thai Tran Nguyen — Johns Hopkins Anesthesiology — official faculty listing
+  gives the title "Clinical Associate," a sub-faculty rank at Hopkins, not Assistant/Associate/full
+  Clinical Professor.
 
 ### Batch 2 — International Research
 
