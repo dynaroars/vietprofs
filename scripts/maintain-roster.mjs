@@ -1039,7 +1039,16 @@ async function stopController() {
   const lock = await readJson(LOCK_FILE, null);
   const saved = await readJson(STATE_FILE, null);
   if (!lock || lock.host !== hostname() || !processIsAlive(lock.pid)) {
-    console.log('No running controller was found. The stop request is recorded.');
+    if (lock) await unlink(LOCK_FILE).catch(() => {});
+    if (saved && (saved.status === 'running' || saved.status === 'pausing')) {
+      saved.status = 'paused';
+      state = saved;
+      await saveState();
+      state = null;
+      console.log('No running controller was found; a prior run appears to have been interrupted. Marked as paused — the next run resumes automatically.');
+    } else {
+      console.log('No running controller was found. The stop request is recorded.');
+    }
     return;
   }
   if (saved?.activeChild?.pid) terminateGroup(saved.activeChild.pid);
@@ -1066,7 +1075,9 @@ async function showStatus() {
     return;
   }
   const running = lock?.host === hostname() && processIsAlive(lock.pid);
-  console.log(`Status: ${saved.status}${running ? ` (PID ${lock.pid})` : ''}`);
+  const stale = !running && (saved.status === 'running' || saved.status === 'pausing');
+  const label = stale ? `${saved.status} — interrupted, no live process found` : saved.status;
+  console.log(`Status: ${label}${running ? ` (PID ${lock.pid})` : ''}`);
   console.log(`Progress: ${saved.index}/${saved.queue?.length ?? 0}`);
   if (saved.current) console.log(`Current: ${saved.current.name} — ${saved.current.stage}`);
   console.log(`Approved: ${saved.completed?.length ?? 0}; skipped: ${saved.skipped?.length ?? 0}`);
