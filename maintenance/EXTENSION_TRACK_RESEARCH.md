@@ -669,6 +669,22 @@ Wikipedia page. Cross-checking these against the roster found:
 - Deferred: Bao-Ngoc Nguyen (GW, Vascular Surgery) — plain "Associate Professor," no Clinical
   qualifier found.
 
+### Data-integrity self-check, 2026-08-28
+
+Ran a script grouping all roster names by their pre-" - "-suffix base to catch accidental
+duplicates or inconsistent disambiguation from this session's additions. Found and fixed two:
+- **True duplicate removed:** "Vinh Nguyen" (added earlier this session, University of Waterloo,
+  PhD McMaster 2014) was the same person as the already-present "Vinh Nguyen - University of
+  Waterloo" (same PhD/year/university/field, with fuller honors). Deleted the newer, less-complete
+  duplicate entry and its verification-ledger row.
+- **Inconsistent suffix fixed:** a new "Liem Nguyen" (Case Western) was added as a bare name while
+  two unrelated "Liem Nguyen - X" entries already existed elsewhere in the roster; renamed to
+  "Liem Nguyen - Case Western Reserve University" for consistency with the disambiguation
+  convention.
+No other issues found; all other repeated first-two-word name groups already follow the
+bare-name-stays-first, later-duplicates-get-suffixed pattern correctly. Recommend running this
+kind of base-name grouping check periodically, especially after a large batch of additions.
+
 ## Safe resume procedure
 
 1. Read this runbook and the two authoritative repository guides named above.
