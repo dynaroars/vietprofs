@@ -10,6 +10,24 @@ Read this file, [`ROSTER_MAINTENANCE.md`](../ROSTER_MAINTENANCE.md), and
 [`README.md`](../README.md) before resuming. `ROSTER_MAINTENANCE.md` is authoritative if this
 runbook conflicts with it.
 
+## Search methodology (updated 2026-08-28)
+
+Searching by track keyword first (e.g. `"Research Professor" "Nguyen" site:.edu`) turned out to
+have very low yield: it mostly re-surfaces tenure-line faculty already in the roster, and misses
+people whose actual title doesn't happen to contain the searched keyword. The better-yielding
+approach, used from this point on: for each **country already represented in the roster**, search
+big/well-known universities in that country combined with Vietnamese surnames with **no track
+keyword**, identify who comes up, then classify each person into whichever track actually fits
+(Tenure-line, Research, Clinical, Teaching, or Emeritus) from their official profile — not just the
+extension tracks. This also surfaces plain Tenure-line additions and existing-entry corrections
+(dead links, wrong track, unpreserved titles) alongside extension-track candidates, and dedupes
+against the existing roster by name/university before adding anything. Countries already in the
+roster (person counts as of 2026-08-28): United States (546), Australia (56), Canada (44), United
+Kingdom (44), France (31), Singapore (22), Taiwan (21), Netherlands (8), Hong Kong (5), Japan (5),
+Germany (5), Switzerland (3), Poland (3), New Zealand (2), Norway (2), Belgium (1), Ireland (1→2),
+Sweden (1), Denmark (0→1). Work through these from largest to smallest, then consider countries not
+yet represented at all if a strong candidate surfaces.
+
 ## Scope and non-negotiable gates
 
 The roster covers Vietnamese and Vietnamese-diaspora academics at universities **outside
@@ -328,6 +346,36 @@ name or research area):
   labels the appointment "Assistant Professor (Status-Only)," a University of Toronto affiliate/
   courtesy title without primary paid faculty status; excluded per the affiliate/courtesy
   exclusion.
+
+## Country-sweep checkpoint log
+
+Log of the country-by-country, no-track-keyword search described above (separate from the
+batch-sequenced extension-track work above, since this sweep classifies into any track).
+
+### United Kingdom
+
+- Added: An Nguyen — King's College London, King's Business School (HRM & Employment Relations)
+  — `Tenure-line`, "Assistant Professor" (UK "Lecturer" mapped per roster convention); official
+  KCL profile, PhD Education Policy, The Open University.
+- Added: Hoang D. Nguyen ("Harry Nguyen") — University College Cork, School of Computer Science
+  and Information Technology — `Tenure-line`, "Associate Professor" (UK "Senior Lecturer" mapped
+  per roster convention); official UCC research-profile page. First new addition placing a second
+  person in Ireland.
+- Confirmed already covered (no action): Ngoc Khanh Nguyen (King's College London, Informatics —
+  already `Tenure-line`/Assistant Professor), Mai Nguyen (Manchester Metropolitan University —
+  already present), Tuan T. Nguyen (University of Greenwich — already present), Long Tran-Thanh
+  (University of Warwick — already present, correctly updated from a prior Southampton
+  affiliation).
+- Deferred/excluded: Professor An Nguyen — Bournemouth University, Media School — official profile
+  currently lists "Visiting Professor" (a former full-time Professor of Journalism role that has
+  since become visiting/affiliate status); visiting appointments are excluded regardless of past
+  seniority. Note: if this person is later confirmed to hold a different current primary
+  appointment elsewhere, re-evaluate there instead.
+- Not yet swept: Oxford, Cambridge, Imperial, Bristol, Birmingham, Glasgow (beyond the one
+  affiliate lead above), Queen Mary, Sheffield — general web search surfaced mostly staff-directory
+  landing pages rather than individual profiles; needs institution-by-institution directory
+  browsing rather than open search, similar to the earlier finding for Canada/Australia business
+  schools.
 
 ## Safe resume procedure
 
