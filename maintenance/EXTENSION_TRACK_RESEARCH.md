@@ -171,7 +171,16 @@ gate above. Include URLs for identity, appointment, and stability evidence in th
 
 ### Batch 2 — International Research
 
-- Not started.
+- Attempted 2026-08-28: broad searches across UK, Germany, Netherlands, Australia (UNSW/Sydney/
+  Melbourne/Monash), Singapore/Hong Kong, and Scandinavia turned up tenure-line/associate-professor
+  matches (out of this batch's scope) or no matches; no eligible Research-track addition found yet.
+- Deferred/excluded: Thuy (Amanda) Tran — Karolinska Institutet, Department of Oncology-Pathology —
+  official KI profile lists "Principal Researcher" (employed since 2024) and Group Leader/Head of
+  the Theranostics Trial Center at Karolinska University Hospital, with a Docent (Lund, 2016)
+  qualification — a plausible Research-track match, but no source found explicitly documents
+  permanent/career-track status for the Principal Researcher title itself; retry with deeper
+  search into KI's research-appointment policy before adding.
+  https://ki.se/en/people/thuy-tran
 
 ### Batch 3 — U.S. Practice → Teaching
 
@@ -187,7 +196,12 @@ gate above. Include URLs for identity, appointment, and stability evidence in th
 
 ### Batch 4 — International Practice → Teaching
 
-- Not started.
+- Attempted 2026-08-28: searched UK (Imperial/LSE/LBS/Oxford/Cambridge), Canada (UBC/Toronto/
+  McGill/Rotman/Sauder/Ivey), and Australia for "Professor of Practice"/"Professor of Teaching"/
+  "Teaching Stream" faculty with Vietnamese surnames; found only tenure-line/associate-professor
+  matches (out of scope) or profiles too thin to confirm a stable, named non-tenure teaching
+  ladder. No eligible addition found yet — needs institution-by-institution directory browsing
+  rather than open web search, since these titles are not indexing well.
 
 ### Batch 5 — U.S. Clinical
 
