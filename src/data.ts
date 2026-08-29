@@ -46,18 +46,6 @@ export interface RosterEntry {
 
 export type Roster = RosterEntry[];
 
-type CredentialField = 'phdInstitution' | 'phdYear' | 'postdocInstitution' | 'postdocYear'
-  | 'msInstitution' | 'msYear' | 'mdInstitution' | 'mdYear'
-  | 'undergradInstitution' | 'undergradYear';
-
-const CREDENTIAL_FIELDS: Record<string, [CredentialField, CredentialField]> = {
-  phd: ['phdInstitution', 'phdYear'],
-  postdoc: ['postdocInstitution', 'postdocYear'],
-  ms: ['msInstitution', 'msYear'],
-  md: ['mdInstitution', 'mdYear'],
-  undergrad: ['undergradInstitution', 'undergradYear'],
-};
-
 let cached: Roster | null = null;
 
 const searchIndexCache = new WeakMap();
@@ -663,81 +651,6 @@ export const STATE_ABBR = {
   'West Virginia': 'WV', Wisconsin: 'WI', Wyoming: 'WY',
 };
 
-export interface ParsedSearchQuery {
-  type: string;
-  text: string;
-  credential?: string;
-}
-
-export function parseSearchQuery(query: string): ParsedSearchQuery {
-  if (!query) return { type: 'all', text: '' };
-  const trimmed = query.trim();
-  if (/^(honors|awards)$/i.test(trimmed)) {
-    return { type: 'honors', text: '' };
-  }
-  const credential = trimmed.toLowerCase();
-  if (['phd', 'postdoc', 'ms', 'undergrad', 'md'].includes(credential)) {
-    return { type: 'credential', credential, text: '' };
-  }
-  const prefixMatch = trimmed.match(
-    /^(univ(?:ersity)?|school|phd(?:institution)?|alma|postdoc|postdoctoral|ms|md|undergrad(?:uate)?|state|country|nation|continent|loc(?:ation)?|city|dept|department|name|rank|title|field|track|type|research|area|areas):\s*(?:"([^"]*)"|'([^']*)'|(.*))$/i,
-  );
-  if (!prefixMatch) {
-    return { type: 'text', text: trimmed };
-  }
-  const prefix = prefixMatch[1].toLowerCase();
-  const value = (prefixMatch[2] ?? prefixMatch[3] ?? prefixMatch[4] ?? '').trim();
-  if (['univ', 'university', 'school'].includes(prefix)) {
-    return { type: 'university', text: value };
-  }
-  if (['phd', 'phdinstitution', 'alma'].includes(prefix)) {
-    return { type: 'credential', credential: 'phd', text: value };
-  }
-  if (['postdoc', 'postdoctoral'].includes(prefix)) {
-    return { type: 'credential', credential: 'postdoc', text: value };
-  }
-  if (prefix === 'ms') {
-    return { type: 'credential', credential: 'ms', text: value };
-  }
-  if (prefix === 'md') {
-    return { type: 'credential', credential: 'md', text: value };
-  }
-  if (['undergrad', 'undergraduate'].includes(prefix)) {
-    return { type: 'credential', credential: 'undergrad', text: value };
-  }
-  if (prefix === 'state') {
-    return { type: 'state', text: value };
-  }
-  if (['country', 'nation'].includes(prefix)) {
-    return { type: 'country', text: value };
-  }
-  if (['continent', 'loc', 'location'].includes(prefix)) {
-    return { type: 'location', text: value };
-  }
-  if (prefix === 'city') {
-    return { type: 'city', text: value };
-  }
-  if (['dept', 'department'].includes(prefix)) {
-    return { type: 'department', text: value };
-  }
-  if (prefix === 'name') {
-    return { type: 'name', text: value };
-  }
-  if (['rank', 'title'].includes(prefix)) {
-    return { type: 'rank', text: value };
-  }
-  if (prefix === 'field') {
-    return { type: 'field', text: value };
-  }
-  if (['track', 'type'].includes(prefix)) {
-    return { type: 'track', text: value };
-  }
-  if (['research', 'area', 'areas'].includes(prefix)) {
-    return { type: 'research', text: value };
-  }
-  return { type: 'text', text: trimmed };
-}
-
 interface FilterOptions {
   query?: string;
   location?: string;
@@ -747,15 +660,30 @@ interface FilterOptions {
   phdInstitution?: string;
   state?: string;
   country?: string;
+  searchScope?: string;
 }
 
-export function filterRoster(roster: Roster | ReturnType<typeof buildSearchIndex>, { query = '', location, field, track, university, phdInstitution, state, country }: FilterOptions = {}) {
+function matchesSearchScope(person, scope, target) {
+  const values = {
+    name: [displayName(person.name)],
+    university: [person.university],
+    department: [person.department],
+    field: [fieldOf(person.department, person.university)],
+    track: [person.track],
+    rank: [person.rank, canonicalRank(person)],
+    research: person.researchAreas,
+    honors: (person.honors || []).flatMap((honor) => [honor.name, honor.organization]),
+    phd: [person.phdInstitution],
+    country: [person.country],
+  }[scope];
+  return (values || []).filter(Boolean).some((value) => stripDiacritics(value.toLowerCase()).includes(target));
+}
+
+export function filterRoster(roster: Roster | ReturnType<typeof buildSearchIndex>, { query = '', location, field, track, university, phdInstitution, state, country, searchScope = 'all' }: FilterOptions = {}) {
   const index = Array.isArray(roster) ? buildSearchIndex(roster) : roster;
   let result = index.roster;
-  const parsed = parseSearchQuery(query);
-  const hasExplicitLocationQuery = ['country', 'location'].includes(parsed.type);
 
-  if (location && location !== 'World' && location !== 'all' && !hasExplicitLocationQuery) {
+  if (location && location !== 'World' && location !== 'all') {
     result = result.filter((p) => locationMatches(p, location));
   }
   if (field && field !== 'all') {
@@ -794,75 +722,14 @@ export function filterRoster(roster: Roster | ReturnType<typeof buildSearchIndex
     });
   }
 
-  if (parsed.type === 'honors') {
-    return result.filter((p) => Array.isArray(p.honors) && p.honors.length > 0);
+  if (searchScope !== 'all') {
+    if (!query.trim()) return searchScope === 'honors' ? result.filter((p) => p.honors?.length) : result;
+    const target = stripDiacritics(query.trim().toLowerCase());
+    return result.filter((person) => matchesSearchScope(person, searchScope, target));
   }
+  if (!query.trim()) return result;
 
-  if (parsed.type === 'credential') {
-    const fields = CREDENTIAL_FIELDS[parsed.credential || ''];
-    if (!fields) return [];
-    const target = stripDiacritics(parsed.text.toLowerCase());
-    return result.filter((p) => {
-      const [institutionField, yearField] = fields;
-      const institution = p[institutionField];
-      const year = p[yearField];
-      if (!institution && !year) return false;
-      return !target || (typeof institution === 'string' && stripDiacritics(institution.toLowerCase()).includes(target));
-    });
-  }
-
-  if (!parsed.text) return result;
-
-  const target = stripDiacritics(parsed.text.toLowerCase());
-  if (parsed.type === 'university') {
-    return result.filter((p) => p.university && stripDiacritics(p.university.toLowerCase()).includes(target));
-  }
-  if (parsed.type === 'state') {
-    return result.filter((p) => {
-      if (!p.state) return false;
-      const s = stripDiacritics(p.state.toLowerCase());
-      return s === target || s.includes(target) || (STATE_ABBR[p.state] && STATE_ABBR[p.state].toLowerCase() === target);
-    });
-  }
-  if (parsed.type === 'country') {
-    return result.filter((p) => {
-      const c = stripDiacritics((p.country || 'United States').toLowerCase());
-      if (target === 'us' || target === 'usa') {
-        return c === 'united states' || c === 'us' || c === 'usa';
-      }
-      if (target.length <= 3) {
-        return c === target;
-      }
-      return c === target || c.includes(target);
-    });
-  }
-  if (parsed.type === 'location') {
-    return result.filter((p) => locationMatches(p, parsed.text));
-  }
-  if (parsed.type === 'city') {
-    return result.filter((p) => p.city && stripDiacritics(p.city.toLowerCase()).includes(target));
-  }
-  if (parsed.type === 'department') {
-    return result.filter((p) => p.department && stripDiacritics(p.department.toLowerCase()).includes(target));
-  }
-  if (parsed.type === 'name') {
-    return result.filter((p) => stripDiacritics(displayName(p.name).toLowerCase()).includes(target));
-  }
-  if (parsed.type === 'field') {
-    return result.filter((p) => stripDiacritics(fieldOf(p.department, p.university).toLowerCase()).includes(target));
-  }
-  if (parsed.type === 'track') {
-    return result.filter((p) => stripDiacritics((p.track || '').toLowerCase()).includes(target));
-  }
-  if (parsed.type === 'rank') {
-    return result.filter((p) => [p.rank, canonicalRank(p)]
-      .filter(Boolean)
-      .some((rank) => stripDiacritics(rank.toLowerCase()).includes(target)));
-  }
-  if (parsed.type === 'research') {
-    return result.filter((p) => (p.researchAreas || [])
-      .some((area) => stripDiacritics(area.toLowerCase()).includes(target)));
-  }
+  const target = stripDiacritics(query.trim().toLowerCase());
 
   // Full-text search across all fields, including award names and organizations.
   // When a query matches one or more honor names, prefer those exact honor matches over

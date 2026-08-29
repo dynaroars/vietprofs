@@ -8,24 +8,7 @@ Live site: <https://vietprofs.roars.dev>
 
 ## Search and filters
 
-The search box matches names, universities, departments, ranks, locations, research areas, honors, and PhD institutions. Matching is diacritic-insensitive, so `Nguyen` finds `Nguyễn`.
-
-Use prefixes when you want to search one attribute:
-
-| Prefix | Searches | Example |
-| --- | --- | --- |
-| `univ:`, `university:`, `school:` | Current university | `univ:Oxford` |
-| `phd`, `postdoc`, `ms`, `undergrad` | People with that recorded credential; add `:Institution` to narrow it | `postdoc:Carnegie Mellon` |
-| `country:`, `nation:` | Current country | `country:France` |
-| `continent:`, `location:`, `loc:` | Continent or region | `loc:Europe` |
-| `state:` | State or province | `state:California` |
-| `city:` | City | `city:Paris` |
-| `dept:`, `department:` | Primary department | `dept:Economics` |
-| `name:` | Displayed name | `name:"Thanh Nguyen"` |
-| `rank:`, `title:` | Published or simplified rank | `rank:"Assistant Professor"` |
-| `field:` | Broad roster field | `field:Engineering` |
-| `track:`, `type:` | Appointment track | `track:Research` |
-| `research:`, `area:` | Research areas | `research:"Machine Learning"` |
+The search box matches names, universities, departments, ranks, locations, research areas, honors, and PhD institutions. Use the selector at the left of the search box to limit the search to one attribute; it defaults to `Everything`. Matching is diacritic-insensitive, so `Nguyen` finds `Nguyễn`.
 
 The location, field, and track filters can be combined. Shareable URLs preserve the active search and filters. The “Show me something interesting” option provides roster-derived observations about geography, institutions, fields, and appointment tracks. It does not make claims about institutional prestige or Vietnamese population size.
 

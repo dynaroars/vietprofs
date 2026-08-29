@@ -23,8 +23,6 @@ import {
   buildGlobalFunFacts,
   filterRoster,
   sortRoster,
-  buildTopUniversities,
-  buildTopPhdInstitutions,
   buildDecadeCounts,
   uniqueStates,
   uniqueCities,
@@ -281,17 +279,10 @@ test('authoritative full Vietnamese name overrides preserve accent marks and Vie
 });
 
 test('auto-select location logic widens to World when searching for international countries or faculty', async () => {
-  const { parseSearchQuery } = await import('../src/data.ts');
-
   function simulateLocationAutoSelect(initialLoc, query) {
     let loc = initialLoc;
     const q = query.trim();
     if (!q) return loc;
-
-    const parsed = parseSearchQuery(q);
-    if (['country', 'location'].includes(parsed.type)) {
-      return 'World';
-    }
 
     const countryNames = uniqueCountries(roster);
     const isCountryQuery = countryNames.some((c) =>
@@ -319,12 +310,12 @@ test('auto-select location logic widens to World when searching for internationa
   }
 
   assert.equal(simulateLocationAutoSelect('US', 'France'), 'World');
-  assert.equal(simulateLocationAutoSelect('US', 'country:Australia'), 'World');
+  assert.equal(simulateLocationAutoSelect('US', 'Australia'), 'World');
   assert.equal(simulateLocationAutoSelect('US', 'Japan'), 'World');
   assert.equal(simulateLocationAutoSelect('US', 'University of Melbourne'), 'World');
   assert.equal(simulateLocationAutoSelect('US', 'Xuan-Bach Le'), 'World');
   assert.equal(simulateLocationAutoSelect('US', 'Cambridge'), 'US'); // Harvard/MIT in Cambridge, MA matches US!
-  assert.equal(simulateLocationAutoSelect('US', 'univ:"University of Cambridge"'), 'World');
+  assert.equal(simulateLocationAutoSelect('US', 'University of Cambridge'), 'World');
 });
 
 test('countryFlag maps every country in roster to a non-empty flag emoji', () => {
@@ -408,10 +399,10 @@ test('search query execution: typing diverse terms across all fields returns val
     'Germany',
     'Singapore',
     'United Kingdom',
-    'univ:Oxford',
-    'phd:MIT',
-    'country:Australia',
-    'loc:Europe',
+    'Oxford',
+    'MIT',
+    'Australia',
+    'Europe',
   ];
 
   for (const q of sampleQueries) {
