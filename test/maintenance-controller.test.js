@@ -60,6 +60,15 @@ test('maintenance selection can explicitly include recently verified entries', (
   ]);
 });
 
+test('maintenance selection excludes names already processed in an earlier batch', () => {
+  const verification = Object.fromEntries(people.map((person) => [person.name, '2026-08-01T00:00:00.000Z']));
+  assert.deepEqual(selectDueEntries(people, verification, {
+    all: true,
+    limit: 3,
+    excludeNames: ['Recent Person'],
+  }), ['Old Person', 'Never Person']);
+});
+
 test('maintenance target matching handles an omitted middle initial and a field alias', () => {
   const roster = [
     { name: 'ThanhVu H. Nguyen', department: 'Computer Science', university: 'George Mason University' },
