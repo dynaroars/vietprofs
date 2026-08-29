@@ -6,6 +6,7 @@
   "description": "A directory of Vietnamese professors worldwide.",
   "scripts": {
     "dev": "vite",
+    "prebuild": "cp paper.pdf public/paper.pdf",
     "build": "vite build",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
