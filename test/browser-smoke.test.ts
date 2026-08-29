@@ -1,4 +1,5 @@
 import { test, before, after } from 'node:test';
+// Browser tests intentionally exercise the built application through Playwright.
 import assert from 'node:assert/strict';
 import { spawn } from 'node:child_process';
 import { createRequire } from 'node:module';

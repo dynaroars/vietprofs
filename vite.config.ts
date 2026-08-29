@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite'
+// Vite configuration is TypeScript; application migration is tracked by tsconfig.
 import { resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import basicSsl from '@vitejs/plugin-basic-ssl'

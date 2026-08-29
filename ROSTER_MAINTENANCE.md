@@ -48,7 +48,7 @@ Do not depend on URL shape, visible diacritics, or a faculty page being linked f
 Generate repeatable search queries with:
 
 ```bash
-node scripts/faculty-discovery-queries.mjs \
+./scripts/faculty-discovery-queries.ts \
   --university "New Jersey Institute of Technology" \
   --field "Data Science" \
   --domain njit.edu
@@ -130,7 +130,7 @@ link.
   Card displays abbreviate a terminal ` University` (`George Mason University` →
   `George Mason Univ.`) but preserve leading forms such as `University of New Mexico`.
   Established names needing a more specific form belong in the exact
-  `UNIVERSITY_DISPLAY_NAMES` aliases in `src/data.js` (`Pennsylvania State University` →
+  `UNIVERSITY_DISPLAY_NAMES` aliases in `src/data.ts` (`Pennsylvania State University` →
   `Penn State`). Apply the same display rule to education institutions. Never shorten the
   canonical roster value or generically remove `College`, `Institute`, or other name components.
 
@@ -183,8 +183,11 @@ personal homepage. An honor should normally fit one of these patterns:
   research chair that represents a significant appointment distinction (`distinguished_professorship`).
 
 Do not add routine conference best-paper awards, paper awards with only runner-up or candidate
-status, ordinary departmental or university service/teaching awards, generic grants, invited
-talks, or ambiguous honors whose standing cannot be established. A conference recognition may be
+status, institution-local student, departmental, university service/teaching, or community-engagement
+awards, generic grants, invited talks, or ambiguous honors whose standing cannot be established.
+An award created and administered by one university is presumed local and ineligible unless reliable
+evidence shows that it has independent field-wide standing; a large-sounding title or cash prize is
+not enough. A conference recognition may be
 included only when it is clearly a durable, field-level distinction—for example, a most
 influential-paper, impact, highest-impact, or test-of-time award already represented in the
 roster. The award source must identify the recipient, the distinction, and preferably the year;
@@ -217,7 +220,7 @@ The canonical field list is:
 If a person's department or academic field does not fit any named bucket, do not automatically
 map it to `Others`: ask the user whether to add a new field or place it in `Others`. The existing
 field list may not be exhaustive. If a department name is structurally ambiguous, use an exact
-`department|university` entry in `FIELD_OVERRIDES` in `src/data.js` rather than broadening a
+`department|university` entry in `FIELD_OVERRIDES` in `src/data.ts` rather than broadening a
 regex.
 
 
@@ -228,12 +231,12 @@ finding and vetting *new* candidates. This section covers re-verifying *every ex
 `public/data.json`, since profiles go dead, people move institutions, ranks change, and new
 honors accrue over time. Run this when the user asks for a periodic roster refresh.
 
-For unattended local maintenance, use `./scripts/maintain-roster.mjs run`. The controller applies
+For unattended local maintenance, use `./scripts/maintain-roster.ts run`. The controller applies
 the workflow below one person at a time. An independent Codex approval of the research can be
 enabled with `--codex-review`; when enabled, it is required before applying the researcher's
 proposal. The research agent defaults to Claude and can be changed to Codex with
 `--agent codex`. The controller keeps resumable state outside the repository, and commits and pushes
-after the entire selected batch. `./scripts/maintain-roster.mjs stop` safely pauses it; running `run` again
+after the entire selected batch. `./scripts/maintain-roster.ts stop` safely pauses it; running `run` again
 resumes the saved person and stage. Incomplete or disputed entries must remain unverified so a
 later run retries them. When Codex rejects a correctable proposal, the controller gives Claude up
 to two revisions containing the proposal and the reviewer's exact reasons, and independently
@@ -306,4 +309,4 @@ npm run build
 git diff --check
 ```
 
-Keep edits incremental, avoid changing unrelated fields, and update `src/data.js` when a new department type requires a shared filter rule.
+Keep edits incremental, avoid changing unrelated fields, and update `src/data.ts` when a new department type requires a shared filter rule.

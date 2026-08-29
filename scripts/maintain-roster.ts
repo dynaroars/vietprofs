@@ -1,24 +1,24 @@
-#!/usr/bin/env node
+#!/usr/bin/env -S npx --no-install tsx
 
 /**
  * Unattended VietProfs roster maintenance.
  *
  * RUN WEEKLY
- *   ./scripts/maintain-roster.mjs run
- *   ./scripts/maintain-roster.mjs run --name "Thanhvu Nguyen"
- *   ./scripts/maintain-roster.mjs run --name "Computer Science"
+ *   ./scripts/maintain-roster.ts run
+ *   ./scripts/maintain-roster.ts run --name "Thanhvu Nguyen"
+ *   ./scripts/maintain-roster.ts run --name "Computer Science"
  *
  * INITIAL FULL-ROSTER SWEEP
- *   ./scripts/maintain-roster.mjs run --all --limit 1000
+ *   ./scripts/maintain-roster.ts run --all --limit 1000
  *
  * STOP, THEN RESUME LATER
- *   Press Ctrl-C, or run `./scripts/maintain-roster.mjs stop` in another terminal.
- *   Days later, run `./scripts/maintain-roster.mjs run` again. It resumes automatically.
+ *   Press Ctrl-C, or run `./scripts/maintain-roster.ts stop` in another terminal.
+ *   Days later, run `./scripts/maintain-roster.ts run` again. It resumes automatically.
  *
  * INSPECT OR TRY WITHOUT AGENTS
- *   ./scripts/maintain-roster.mjs status
- *   ./scripts/maintain-roster.mjs run --dry-run
- *   ./scripts/maintain-roster.mjs run --all --limit 1 --dry-run
+ *   ./scripts/maintain-roster.ts status
+ *   ./scripts/maintain-roster.ts run --dry-run
+ *   ./scripts/maintain-roster.ts run --all --limit 1 --dry-run
  *
  * Requirements: Linux, Node.js, npm, Git push access, and an authenticated `claude` CLI. The
  * optional independent Codex pass additionally requires an authenticated `codex` CLI. The
@@ -47,7 +47,7 @@ import { dirname, join, resolve } from 'node:path';
 import process from 'node:process';
 import { fileURLToPath } from 'node:url';
 import { isDeepStrictEqual } from 'node:util';
-import { FIELDS, fieldOf } from '../src/data.js';
+import { FIELDS, fieldOf } from '../src/data.ts';
 
 const SCRIPT_PATH = fileURLToPath(import.meta.url);
 const REPO_ROOT = resolve(dirname(SCRIPT_PATH), '..');
@@ -357,9 +357,9 @@ function helpText() {
   return `VietProfs unattended roster maintenance
 
 Usage:
-  ./scripts/maintain-roster.mjs [run] [--limit N] [--total N] [--stale-days N] [--all] [--name NAME] [--dry-run] [--codex-review] [--agent claude|codex]
-  ./scripts/maintain-roster.mjs stop
-  ./scripts/maintain-roster.mjs status
+  ./scripts/maintain-roster.ts [run] [--limit N] [--total N] [--stale-days N] [--all] [--name NAME] [--dry-run] [--codex-review] [--agent claude|codex]
+  ./scripts/maintain-roster.ts stop
+  ./scripts/maintain-roster.ts status
 
   run       Start a new run or resume the saved run automatically.
   stop      Stop the controller and its current Claude/Codex child.

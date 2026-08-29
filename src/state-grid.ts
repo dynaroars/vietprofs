@@ -1,4 +1,5 @@
 // Schematic grid rather than a geographic map; every state remains equally clickable.
+// Coordinates are zero-based column/row positions in the rendered grid.
 export const STATE_GRID = {
   AK: [0, 0], ME: [0, 11], VT: [1, 10], NH: [1, 11],
   WA: [2, 1], MT: [2, 2], ND: [2, 3], MN: [2, 4], WI: [2, 6], MI: [2, 7], NY: [2, 9], MA: [2, 11],

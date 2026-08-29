@@ -1,4 +1,42 @@
-let cached = null;
+export interface Honor {
+  name: string;
+  organization?: string;
+  category?: string;
+  year?: number;
+  source?: string;
+}
+
+export interface RosterEntry {
+  [key: string]: any;
+  name: string;
+  university: string;
+  city?: string;
+  state?: string;
+  country?: string;
+  department?: string;
+  rank?: string;
+  track?: string;
+  vietnameseName?: string;
+  researchAreas?: string[];
+  honors?: Honor[];
+  postdocInstitution?: string;
+  postdocYear?: number;
+  phdInstitution?: string;
+  phdYear?: number;
+  mdInstitution?: string;
+  mdYear?: number;
+  undergradInstitution?: string;
+  undergradYear?: number;
+  msInstitution?: string;
+  msYear?: number;
+  profileUrl?: string;
+  websiteUrl?: string;
+  scholarUrl?: string;
+}
+
+export type Roster = RosterEntry[];
+
+let cached: Roster | null = null;
 
 const searchIndexCache = new WeakMap();
 
@@ -45,7 +83,7 @@ export function buildSearchIndex(roster) {
   return index;
 }
 
-export async function loadRoster() {
+export async function loadRoster(): Promise<Roster> {
   if (cached) return cached;
   const res = await fetch(`${import.meta.env.BASE_URL}data.json`);
   if (!res.ok) throw new Error(`Failed to load data.json: ${res.status}`);
@@ -603,7 +641,7 @@ export const STATE_ABBR = {
   'West Virginia': 'WV', Wisconsin: 'WI', Wyoming: 'WY',
 };
 
-export function parseSearchQuery(query) {
+export function parseSearchQuery(query: string): any {
   if (!query) return { type: 'all', text: '' };
   const trimmed = query.trim();
   if (/^(honors|awards)$/i.test(trimmed)) {
@@ -660,7 +698,18 @@ export function parseSearchQuery(query) {
   return { type: 'text', text: trimmed };
 }
 
-export function filterRoster(roster, { query = '', location, field, track, university, phdInstitution, state, country } = {}) {
+interface FilterOptions {
+  query?: string;
+  location?: string;
+  field?: string;
+  track?: string;
+  university?: string;
+  phdInstitution?: string;
+  state?: string;
+  country?: string;
+}
+
+export function filterRoster(roster: Roster | ReturnType<typeof buildSearchIndex>, { query = '', location, field, track, university, phdInstitution, state, country }: FilterOptions = {}) {
   const index = Array.isArray(roster) ? buildSearchIndex(roster) : roster;
   let result = index.roster;
   const parsed = parseSearchQuery(query);
@@ -1022,17 +1071,17 @@ export function buildAwardsFunFacts(roster) {
   const honorCounts = countBy(allRoster.flatMap((p) => (p.honors || []).map((honor) => honor.name)), (name) => name);
   const commonHonors = honorCounts.slice(0, 5);
   const marqueeHonors = MARQUEE_HONORS
-    .map((name) => [name, honorHolderCount(allRoster, name)])
+    .map((name): [string, number] => [name, honorHolderCount(allRoster, name)])
     .filter(([, count]) => count > 0);
   const facts = [];
   const nsfHolders = honorHolderCount(allRoster, 'NSF CAREER Award');
   const usNsfHolders = honorHolderCount(usRoster, 'NSF CAREER Award');
   const pecaseHolders = honorHolderCount(allRoster, 'PECASE');
   const usPecaseHolders = honorHolderCount(usRoster, 'PECASE');
-  const signatureHonors = [
-    ['MacArthur Fellows', honorHolderCount(allRoster, 'MacArthur Fellow')],
-    ['Fields Medalists', honorHolderCount(allRoster, 'Fields Medal')],
-    ['Nobel Prize winners', honorHolderCount(allRoster, 'Nobel Prize')],
+  const signatureHonors: [string, number][] = [
+    ['MacArthur Fellows', honorHolderCount(allRoster, 'MacArthur Fellow')] as [string, number],
+    ['Fields Medalists', honorHolderCount(allRoster, 'Fields Medal')] as [string, number],
+    ['Nobel Prize winners', honorHolderCount(allRoster, 'Nobel Prize')] as [string, number],
   ].filter(([, count]) => count > 0);
 
   if (honored > 0) facts.push(`${honored} of ${allRoster.length} professors have at least one recorded major honor or award.`);

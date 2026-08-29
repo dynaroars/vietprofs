@@ -1,4 +1,5 @@
 import { test } from 'node:test';
+// Controller tests cover the maintenance workflow without invoking external agents.
 import assert from 'node:assert/strict';
 import {
   analyzeRosterProposal,
@@ -13,7 +14,7 @@ import {
   resolveTargetLocally,
   selectDueEntries,
   selectTargetEntries,
-} from '../scripts/maintain-roster.mjs';
+} from '../scripts/maintain-roster.ts';
 
 const people = [
   { name: 'Recent Person', lastUpdatedAt: '2025-01-01T00:00:00.000Z', university: 'Recent University' },

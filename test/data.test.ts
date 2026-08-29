@@ -1,9 +1,10 @@
 import { test } from 'node:test';
+// Data behavior is tested against the canonical JSON roster.
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
-import { FIELDS, TRACKS, LOCATIONS, HEALTH_SUBFIELDS, canonicalRank, displayName, displayUniversity, fieldOf, healthSubfieldOf, continentOf, locationMatches, buildFunFacts, buildAwardsFunFacts, filterRoster, buildTopUniversities, buildTopPhdInstitutions } from '../src/data.js';
+import { FIELDS, TRACKS, LOCATIONS, HEALTH_SUBFIELDS, canonicalRank, displayName, displayUniversity, fieldOf, healthSubfieldOf, continentOf, locationMatches, buildFunFacts, buildAwardsFunFacts, filterRoster, buildTopUniversities, buildTopPhdInstitutions } from '../src/data.ts';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const roster = JSON.parse(readFileSync(join(__dirname, '../public/data.json'), 'utf8'));
@@ -489,7 +490,7 @@ test('country: and continent: prefix queries filter roster accurately', () => {
 });
 
 test('unique helpers never contain undefined or null values', async () => {
-  const { uniqueStates, uniqueCities, uniqueDepartments, uniqueCountries, uniqueResearchAreas, uniquePhdInstitutions, uniqueRanks } = await import('../src/data.js');
+  const { uniqueStates, uniqueCities, uniqueDepartments, uniqueCountries, uniqueResearchAreas, uniquePhdInstitutions, uniqueRanks } = await import('../src/data.ts');
   const states = uniqueStates(roster);
   const cities = uniqueCities(roster);
   const depts = uniqueDepartments(roster);
@@ -508,7 +509,7 @@ test('unique helpers never contain undefined or null values', async () => {
 });
 
 test('escapeHtml safely handles undefined, null, and special characters', async () => {
-  const { escapeHtml } = await import('../src/utils.js');
+  const { escapeHtml } = await import('../src/utils.ts');
   assert.equal(escapeHtml(undefined), '');
   assert.equal(escapeHtml(null), '');
   assert.equal(escapeHtml(''), '');

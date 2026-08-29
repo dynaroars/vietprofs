@@ -1,7 +1,7 @@
 import './style.css';
-import { loadRoster, buildSearchIndex, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, LOCATION_LABELS, countryFlag, canonicalRank, displayName, displayUniversity, vietnameseName, fieldOf, healthSubfieldOf, locationMatches, filterRoster, buildFunFacts, buildUsFunFacts, buildGlobalFunFacts, buildAwardsFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, STATE_ABBR, parseSearchQuery, continentOf } from './data.js';
-import { escapeHtml, formatRosterDate, formatRosterShortDate } from './utils.js';
-import { STATE_GRID } from './state-grid.js';
+import { loadRoster, buildSearchIndex, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, LOCATION_LABELS, countryFlag, canonicalRank, displayName, displayUniversity, vietnameseName, fieldOf, healthSubfieldOf, locationMatches, filterRoster, buildFunFacts, buildUsFunFacts, buildGlobalFunFacts, buildAwardsFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, STATE_ABBR, parseSearchQuery, continentOf } from './data.ts';
+import { escapeHtml, formatRosterDate, formatRosterShortDate } from './utils.ts';
+import { STATE_GRID } from './state-grid.ts';
 
 // Sentinel field-select value for the "show me something interesting" view. Distinct from any
 // real FIELDS entry (all of which are "Word & Word"-style names) and from 'all'.

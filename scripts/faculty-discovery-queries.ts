@@ -1,8 +1,8 @@
-#!/usr/bin/env node
+#!/usr/bin/env -S npx --no-install tsx
 
-const args = process.argv.slice(2);
+const args: string[] = process.argv.slice(2);
 
-function value(flag) {
+function value(flag: string): string {
   const index = args.indexOf(flag);
   return index === -1 ? '' : (args[index + 1] ?? '').trim();
 }
@@ -12,7 +12,7 @@ const field = value('--field');
 const domain = value('--domain');
 
 if (!university || !field) {
-  console.error('Usage: node scripts/faculty-discovery-queries.mjs --university "..." --field "..." [--domain example.edu]');
+  console.error('Usage: ./scripts/faculty-discovery-queries.ts --university "..." --field "..." [--domain example.edu]');
   process.exit(1);
 }
 
@@ -33,4 +33,3 @@ const queries = [
 
 console.log(`# Faculty discovery queries: ${university} / ${field}`);
 for (const query of queries) console.log(query.replace(/\s+/g, ' ').trim());
-

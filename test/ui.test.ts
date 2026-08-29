@@ -1,4 +1,5 @@
 import { test } from 'node:test';
+// UI rendering tests exercise pure rendering and filter behavior without a browser.
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
@@ -33,8 +34,8 @@ import {
   uniquePhdInstitutions,
   uniqueRanks,
   STATE_ABBR,
-} from '../src/data.js';
-import { escapeHtml, formatRosterDate, formatRosterShortDate } from '../src/utils.js';
+} from '../src/data.ts';
+import { escapeHtml, formatRosterDate, formatRosterShortDate } from '../src/utils.ts';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const roster = JSON.parse(readFileSync(join(__dirname, '../public/data.json'), 'utf8'));
@@ -280,7 +281,7 @@ test('authoritative full Vietnamese name overrides preserve accent marks and Vie
 });
 
 test('auto-select location logic widens to World when searching for international countries or faculty', async () => {
-  const { parseSearchQuery } = await import('../src/data.js');
+  const { parseSearchQuery } = await import('../src/data.ts');
 
   function simulateLocationAutoSelect(initialLoc, query) {
     let loc = initialLoc;
@@ -344,11 +345,11 @@ test('countryFlag maps every country in roster to a non-empty flag emoji', () =>
   assert.equal(countryFlag('Unknown Country'), '🌐');
 });
 
-test('static import integrity: all data.js and utils.js symbols used in main.js and submit.js are explicitly imported', () => {
-  const mainCode = readFileSync(join(__dirname, '../src/main.js'), 'utf8');
-  const submitCode = readFileSync(join(__dirname, '../src/submit.js'), 'utf8');
-  const dataCode = readFileSync(join(__dirname, '../src/data.js'), 'utf8');
-  const utilsCode = readFileSync(join(__dirname, '../src/utils.js'), 'utf8');
+test('static import integrity: all data.ts and utils.ts symbols used in main.ts and submit.ts are explicitly imported', () => {
+  const mainCode = readFileSync(join(__dirname, '../src/main.ts'), 'utf8');
+  const submitCode = readFileSync(join(__dirname, '../src/submit.ts'), 'utf8');
+  const dataCode = readFileSync(join(__dirname, '../src/data.ts'), 'utf8');
+  const utilsCode = readFileSync(join(__dirname, '../src/utils.ts'), 'utf8');
 
   const dataExports = [...dataCode.matchAll(/export\s+(?:const|function)\s+([a-zA-Z0-9_]+)/g)].map((m) => m[1]);
   const utilsExports = [...utilsCode.matchAll(/export\s+(?:const|function)\s+([a-zA-Z0-9_]+)/g)].map((m) => m[1]);
@@ -362,16 +363,16 @@ test('static import integrity: all data.js and utils.js symbols used in main.js 
       if (isUsed) {
         assert.ok(
           imported.includes(exp),
-          `Symbol "${exp}" from ${sourceName}.js is used in ${file} but is NOT imported!`,
+          `Symbol "${exp}" from ${sourceName} is used in ${file} but is NOT imported!`,
         );
       }
     }
   };
 
-  checkImports(mainCode, 'main.js', dataCode, dataExports, 'data.js');
-  checkImports(mainCode, 'main.js', utilsCode, utilsExports, 'utils.js');
-  checkImports(submitCode, 'submit.js', dataCode, dataExports, 'data.js');
-  checkImports(submitCode, 'submit.js', utilsCode, utilsExports, 'utils.js');
+  checkImports(mainCode, 'main.ts', dataCode, dataExports, 'data.ts');
+  checkImports(mainCode, 'main.ts', utilsCode, utilsExports, 'utils.ts');
+  checkImports(submitCode, 'submit.ts', dataCode, dataExports, 'data.ts');
+  checkImports(submitCode, 'submit.ts', utilsCode, utilsExports, 'utils.ts');
 });
 
 test('search query execution: typing diverse terms across all fields returns valid results without errors', () => {

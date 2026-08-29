@@ -32,6 +32,7 @@ npm install
 npm run dev       # start the Vite development server
 npm run build     # build the production site to dist/
 npm run preview   # preview the production build
+npm run typecheck # check TypeScript modules
 npm test          # validate data and run unit/UI tests
 npm run test:e2e  # run browser smoke tests
 ```
@@ -44,7 +45,7 @@ npm run dev -- --host
 ```
 
 This binds to all network interfaces and serves a self-signed certificate via
-`@vitejs/plugin-basic-ssl` (already configured in `vite.config.js`). Other machines on the network
+`@vitejs/plugin-basic-ssl` (already configured in `vite.config.ts`). Other machines on the network
 can then browse to `https://<this-machine's-hostname-or-IP>:5173`, accepting the self-signed
 certificate warning on first visit.
 
@@ -64,13 +65,17 @@ The stored `rank` preserves an institution’s actual title when it clarifies a 
 
 Completed postdoctoral training may be recorded with `postdocInstitution` when a source explicitly identifies the institution. Add `postdocYear` only when that source explicitly gives the end or completion year.
 
+Honors are limited to substantial, field-level distinctions. Local university, departmental, student,
+service, teaching, and community-engagement awards are not included unless their independent
+field-wide standing is clearly documented; an impressive title or cash prize alone is insufficient.
+
 Use [`submit.html`](./submit.html) to propose an entry or correction without editing the repository directly. Maintainers review submissions before adding them to the roster.
 
 Detailed inclusion, verification, discovery, field-mapping, and data-format guidance is in [`ROSTER_MAINTENANCE.md`](./ROSTER_MAINTENANCE.md).
 
 ## Automated roster maintenance
 
-[`scripts/maintain-roster.mjs`](./scripts/maintain-roster.mjs) is the unattended weekly
+[`scripts/maintain-roster.ts`](./scripts/maintain-roster.ts) is the unattended weekly
 maintenance controller. It selects missing or oldest entries from
 [`maintenance/verification.json`](./maintenance/verification.json), asks the selected agent to
 perform the full live research pass. Claude is the default agent. An independent Codex verification pass is optional and can be enabled
@@ -94,20 +99,20 @@ The optional `--codex-review` pass also requires the `codex` CLI and a successfu
 Run it from the repository root:
 
 ```bash
-./scripts/maintain-roster.mjs run
+./scripts/maintain-roster.ts run
 ```
 
 A new run processes at most 40 entries that have not completed a full review in 365 days. Preview
 the selection without invoking either agent or changing Git:
 
 ```bash
-./scripts/maintain-roster.mjs run --dry-run
+./scripts/maintain-roster.ts run --dry-run
 ```
 
 For the first complete sweep of the roster, allow one long run to queue every current entry:
 
 ```bash
-./scripts/maintain-roster.mjs run --all --limit 1000
+./scripts/maintain-roster.ts run --all --limit 1000
 ```
 
 To process the entire roster in smaller commit-and-push batches, use `--all` with the batch size
@@ -115,9 +120,9 @@ specified by `--limit`. To cap the run, use `--total` instead. Both modes priori
 recently verified entries before each batch:
 
 ```bash
-./scripts/maintain-roster.mjs run --all --limit 40
+./scripts/maintain-roster.ts run --all --limit 40
 # or, for up to 1,000 entries:
-./scripts/maintain-roster.mjs run --total 1000 --limit 40
+./scripts/maintain-roster.ts run --total 1000 --limit 40
 ```
 
 The controller commits and pushes after each completed batch and resumes the active batch if it is
@@ -129,19 +134,19 @@ verification is at least one year old.
 Use `--limit` or `--stale-days` to change the run, or force a small current-data pass with:
 
 ```bash
-./scripts/maintain-roster.mjs run --all --limit 1
+./scripts/maintain-roster.ts run --all --limit 1
 ```
 
 Enable independent Codex verification for a run with:
 
 ```bash
-./scripts/maintain-roster.mjs run --all --limit 1 --codex-review
+./scripts/maintain-roster.ts run --all --limit 1 --codex-review
 ```
 
 Use Codex as the agent when Claude is unavailable or rate-limited:
 
 ```bash
-./scripts/maintain-roster.mjs --all --limit 1 --agent codex
+./scripts/maintain-roster.ts --all --limit 1 --agent codex
 ```
 
 Use `--name` with a person-like query to have Claude match it to one canonical roster member and
@@ -149,14 +154,14 @@ run the full workflow regardless of verification age. Capitalization and omitted
 may be resolved when the match is unambiguous:
 
 ```bash
-./scripts/maintain-roster.mjs run --name "Thanhvu Nguyen"
+./scripts/maintain-roster.ts run --name "Thanhvu Nguyen"
 ```
 
 The same option accepts a field-like query. Claude maps it to a canonical field and the controller
 queues every roster member in that field, ignoring the normal age and entry-limit selection:
 
 ```bash
-./scripts/maintain-roster.mjs run --name "Computer Science"
+./scripts/maintain-roster.ts run --name "Computer Science"
 ```
 
 The process may remain active for hours while an account limit resets. It automatically retries
@@ -164,20 +169,20 @@ rate limits with increasing waits. To stop it safely, press <kbd>Ctrl</kbd>+<kbd
 from another terminal:
 
 ```bash
-./scripts/maintain-roster.mjs stop
+./scripts/maintain-roster.ts stop
 ```
 
-Running `./scripts/maintain-roster.mjs run` again—even days later—detects the saved checkpoint and
+Running `./scripts/maintain-roster.ts run` again—even days later—detects the saved checkpoint and
 resumes the interrupted person and stage. Check progress with:
 
 ```bash
-./scripts/maintain-roster.mjs status
+./scripts/maintain-roster.ts status
 ```
 
 For a run that should survive closing the terminal, start it in the background:
 
 ```bash
-nohup ./scripts/maintain-roster.mjs run >/tmp/vietprofs-maintenance.log 2>&1 &
+nohup ./scripts/maintain-roster.ts run >/tmp/vietprofs-maintenance.log 2>&1 &
 ```
 
 Controller state and per-agent logs live under `~/.local/state/vietprofs-maintenance/` by default.

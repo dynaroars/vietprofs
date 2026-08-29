@@ -1,6 +1,8 @@
 import { access, readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 
+type JsonRecord = Record<string, any>;
+
 const rosterFile = resolve('public/data.json');
 const verificationFile = resolve('maintenance/verification.json');
 const allowedTracks = new Set(['Tenure-line', 'Teaching', 'Research', 'Clinical', 'Emeritus']);
@@ -29,7 +31,7 @@ if (!verification || typeof verification !== 'object' || Array.isArray(verificat
   fail(verificationFile, 'must contain an object keyed by canonical roster name');
 }
 
-const names = new Set();
+const names = new Set<string>();
 const profileUrls = new Set();
 const portraits = new Set();
 for (const [index, person] of roster.entries()) {

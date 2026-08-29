@@ -1,8 +1,9 @@
 import './style.css';
-import { loadRoster, TRACKS } from './data.js';
-import { escapeHtml } from './utils.js';
+import { loadRoster, TRACKS } from './data.ts';
+import { escapeHtml } from './utils.ts';
 
 const SUBMISSION_EMAIL = 'root@roars.dev';
+// Form behavior remains browser-native; this module is migrated incrementally.
 
 const app = document.getElementById('app');
 
