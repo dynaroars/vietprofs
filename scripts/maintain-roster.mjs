@@ -384,7 +384,9 @@ export function selectDueEntries(roster, verification, {
   all = false,
   now = Date.now(),
   deferredUntil = {},
+  excludeNames = [],
 } = {}) {
+  const excluded = new Set(excludeNames);
   const cutoff = now - staleDays * 86_400_000;
   return roster
     .map((person, index) => {
@@ -397,7 +399,8 @@ export function selectDueEntries(roster, verification, {
         name: person.name, index, timestamp: Number.isNaN(timestamp) ? -Infinity : timestamp, priority,
       };
     })
-    .filter((entry) => (all || entry.timestamp <= cutoff)
+    .filter((entry) => !excluded.has(entry.name)
+      && (all || entry.timestamp <= cutoff)
       && !(Date.parse(deferredUntil[entry.name]) > now))
     .sort((left, right) => left.priority - right.priority || left.index - right.index)
     .slice(0, limit)
@@ -1183,16 +1186,20 @@ async function createRun(options, schemas, progress = {}) {
   const roster = await readJson(join(REPO_ROOT, 'public/data.json'));
   const verification = await readJson(join(REPO_ROOT, 'maintenance/verification.json'));
   const deferredUntil = state?.deferredUntil || {};
+  const processedNames = new Set(progress.processedNames || state?.options?.processedNames || []);
+  for (const entry of state?.completed || []) processedNames.add(entry.finalName || entry.name);
+  for (const entry of state?.skipped || []) processedNames.add(entry.name);
   const agent = options.agent || 'claude';
   const target = options.name ? await resolveTargetWithAgent(options.name, roster, schemas.targetSchema, agent) : null;
   const remaining = remainingBatchSize(options, progress.processedCount || 0);
   const queue = remaining <= 0 ? [] : target
-    ? selectTargetEntries(roster, target).slice(0, remaining)
+    ? selectTargetEntries(roster, target).filter((name) => !processedNames.has(name)).slice(0, remaining)
     : selectDueEntries(roster, verification, {
       ...options,
       all: options.all || options.total !== null,
       limit: remaining,
       deferredUntil,
+      excludeNames: [...processedNames],
     });
   state = {
     version: 1,
@@ -1209,6 +1216,7 @@ async function createRun(options, schemas, progress = {}) {
       agent,
       target,
       processedCount: progress.processedCount || 0,
+      processedNames: [...processedNames],
       batchNumber: progress.batchNumber || 1,
     },
     queue,
@@ -1248,6 +1256,20 @@ async function runController(options) {
   await acquireLock();
   await unlink(STOP_FILE).catch(() => {});
   state = await readJson(STATE_FILE, null);
+  // Migrate the checkpoint created by the pre-processedNames batching code. Its second batch
+  // could repeat the first batch; the queue itself is the reliable list of names already selected.
+  if (state?.options?.batchNumber > 1
+      && !Array.isArray(state.options.processedNames)
+      && Array.isArray(state.queue)
+      && state.index === 0
+      && state.current) {
+    state.options.processedNames = [...state.queue];
+    state.queue = [];
+    state.index = 0;
+    state.current = null;
+    state.status = 'failed';
+    await saveState();
+  }
   // An exhausted/empty checkpoint cannot resume useful work. Start a fresh selection from the
   // requested CLI options instead; non-empty queues and active in-progress people still resume.
   const resumable = state && state.status !== 'complete' && Array.isArray(state.queue)
@@ -1318,6 +1340,11 @@ async function runController(options) {
       agent: state.options.agent,
     }, schemas, {
       processedCount,
+      processedNames: [
+        ...(state.options.processedNames || []),
+        ...state.completed.map((entry) => entry.finalName || entry.name),
+        ...state.skipped.map((entry) => entry.name),
+      ],
       batchNumber: (state.batchNumber || 1) + 1,
     });
   }
