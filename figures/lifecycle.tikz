@@ -1,0 +1,10 @@
+\begin{tikzpicture}[node distance=8mm and 8mm, every node/.style={font=\small}, box/.style={draw, rounded corners, align=center, minimum height=8mm, text width=25mm}, arr/.style={->, thick}]
+\node[box] (unknown) {Unknown\\external person};
+\node[box, right=of unknown] (candidate) {Candidate\\with leads};
+\node[box, right=of candidate] (verified) {Verified\\record};
+\node[box, right=of verified] (published) {Published\\snapshot};
+\node[box, below=of published] (recheck) {Periodic\\revalidation};
+\node[box, left=of recheck] (changed) {Unchanged,\\updated, or ambiguous};
+\draw[arr] (unknown)--(candidate)--(verified)--(published)--(recheck)--(changed);
+\draw[arr] (changed.north) |- (published.south);
+\end{tikzpicture}

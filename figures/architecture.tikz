@@ -1,0 +1,13 @@
+\begin{tikzpicture}[node distance=7mm and 9mm, every node/.style={font=\small}, box/.style={draw, rounded corners, align=center, minimum height=8mm, text width=25mm}, wide/.style={draw, rounded corners, align=center, minimum height=8mm, text width=33mm}, arr/.style={->, thick}]
+\node[box] (web) {University, personal, and other public web sources};
+\node[box, right=of web] (agent) {Bounded discovery or revalidation\\agent task};
+\node[box, right=of agent] (proposal) {Structured proposal\\and evidence report};
+\node[box, right=of proposal] (gate) {Schema, scope, duplicate,\\and change checks};
+\node[wide, below=of gate] (canonical) {Canonical public/data.json\\plus maintenance/verification.json};
+\node[box, left=of canonical] (human) {Human/independent review\\when enabled or ambiguous};
+\node[box, left=of human] (site) {Static Vite site\\search, filters, observations};
+\draw[arr] (web)--(agent)--(proposal)--(gate)--(canonical);
+\draw[arr] (gate)--(human)--(canonical);
+\draw[arr] (canonical)--(site);
+\draw[arr] (canonical.south) |- ++(0,-8mm) -| (agent.south);
+\end{tikzpicture}
