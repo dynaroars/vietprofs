@@ -8,82 +8,563 @@
 \usepackage{array}
 \usepackage{tikz}
 \usetikzlibrary{positioning,arrows.meta}
-\usepackage{hyperref}
-\usepackage{enumitem}
+\usepackage{graphicx}
 \usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=blue!55!black,
+  breaklinks=true
+}
+\usepackage{enumitem}
 \setlist{nosep,leftmargin=*}
 \setstretch{1.06}
 \emergencystretch=2em
 \newcommand{\code}[1]{\texttt{\small #1}}
-\title{VietProfs: Building a Self-Maintaining Directory of the Vietnamese Academic Diaspora}
-\author{Anonymous authors for review}
+\newcommand{\ghrepo}{https://github.com/dynaroars/vietprofs}
+\newcommand{\codelink}[1]{\href{\ghrepo/blob/main/#1}{\code{#1}}}
+\newcommand{\codelinkd}[2]{\href{\ghrepo/blob/main/#1}{\code{#2}}}
+\newcommand{\commitlink}[1]{\href{\ghrepo/commit/#1}{\code{#1}}}
+\newcommand{\vplink}[2]{\href{https://vietprofs.roars.dev/?q=#1}{#2}}
+\title{VietProfs: A Public Directory of the Vietnamese Academic Diaspora\\[4pt]
+\large Purpose, Eligibility, and Design, with a Technical Report on Keeping It Accurate}
+\author{ThanhVu Nguyen\\George Mason University\\}
 \date{August 2026}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-Public directories of specialized populations are deceptively difficult to keep accurate. The
-records describe people and institutions on the open web, where appointments, titles, affiliations,
-and pages change without a shared update protocol. We present VietProfs, a deployed static web
-directory of Vietnamese and Vietnamese-diaspora faculty at universities outside Vietnam, as an
-experience report on this problem. Its workflow combines bounded search tasks, agent-assisted
-candidate generation and revalidation, structured proposals, deterministic validation, a tracked
-verification ledger, and human or independent review for ambiguous cases. The central design rule
-is operational rather than aspirational: AI proposes; evidence decides. As of 29 August 2026, the
-canonical snapshot contains 831 records at 367 universities in 19 countries, organized into 17
-broad fields and five appointment tracks. Runtime aggregation exposes institutional and disciplinary
-patterns, while Git history records additions, promotions or track corrections, moves, removals, and
-deduplication. We distinguish expansion---finding people not yet represented---from revalidation---
-checking existing claims against the changing web. The system is not a complete census and does not
-provide controlled accuracy or cost estimates. Its contribution is a concrete engineering pattern:
-a public directory is a continuously revalidated collection of claims about an external world, not
-merely a database snapshot.
+The Vietnamese academic diaspora is large and growing, yet no public, searchable record of it
+exists. Individual scholars are discoverable one at a time on their own university pages, but there
+is no shared directory that lets a student, journalist, organizer, or fellow academic find Vietnamese
+and Vietnamese-diaspora faculty across institutions, countries, and fields. 
+We built VietProfs to
+fill this gap: a public directory intended to stay accurate as a living reference rather than a
+one-time listing. Each entry pairs a portrait and Vietnamese-diacritic name with verified appointment,
+education, and honors information, browsable on a dynamic web interface with easy search, filtering, and sorting capabilities. The directory is designed to be a living document that reflects the current state
+of the Vietnamese academic diaspora. 
+
+% Keeping the directory accurate and up to date, however, turned out to require solving a harder and more general engineering problem. Public directories of specialized populations are deceptively difficult
+% to keep accurate, because the records describe people and institutions on the open web, where
+% appointments, titles, affiliations, and pages change without a shared update protocol.
+
+This paper, consisting of two parts, focuses on both the directory itself and the engineering challenges (and solutions) of creating and maintaining the data and the public interface. Part I describes VietProfs itself: its purpose and intended uses, exactly who
+is eligible to appear and why, how its 17 fields of study relate to standard U.S. federal classifications used by the NSF and NIH, what information is shown about each person and the design
+reasoning behind it, and what the current roster reveals. 
+Part II is an experience report on the
+harder problem that keeping the directory accurate exposed, using VietProfs as the deployed instance.
+Its workflow combines bounded search tasks, agent-assisted candidate generation and revalidation,
+structured proposals, deterministic validation, a tracked verification ledger, and human or
+independent review for ambiguous cases. The central design rule is operational rather than
+aspirational: AI proposes; evidence decides. 
+
+
+As of 29 August 2026, the canonical snapshot contains
+831 records at 367 universities in 19 countries, organized into 17 broad fields and five appointment
+tracks, spanning recorded PhD years from 1962 to 2026. Runtime aggregation exposes institutional and
+disciplinary patterns, while Git history records additions, promotions or track corrections, moves,
+removals, and deduplication. The system is not a complete census and does not provide controlled
+accuracy or cost estimates. Its contribution is twofold: a public resource for a community that
+previously had none, and a concrete engineering pattern showing that a public directory is a
+continuously revalidated collection of claims about an external world, not merely a database
+snapshot.
 \end{abstract}
 
 \section{Introduction}
-Structured public datasets become stale for a simple reason: the world they describe changes while
-the dataset waits for an update. A faculty member is promoted, changes universities, becomes
-emeritus, leaves academia, or acquires a new official profile. A URL may disappear during a site
-redesign. A newly eligible person may never appear in the search results that originally seeded a
-directory. Each row is consequently a claim about an external entity, and maintenance is a
-reconciliation problem between those claims and a distributed, changing web.
+Vietnamese and Vietnamese-diaspora faculty are spread across hundreds of universities in dozens of
+countries, but there is no place to find them as a group. A prospective graduate student looking for
+a Vietnamese advisor in their field, a journalist profiling the diaspora, a conference organizer
+building a program committee, or a scholar looking for compatriots at nearby institutions currently
+has no better option than ad hoc web search, one name at a time. Communities of comparable size often
+sustain an informal directory through an alumni association or professional society, echoing a
+broader pattern documented in the scientific-diaspora literature, where expatriate researcher networks
+support mentorship, collaboration, and technology diffusion back toward their country of origin
+\cite{meyer1999scientific,kerr2008ethnic}; no such resource existed for this population outside
+Vietnam. VietProfs was built to be that resource: a public,
+searchable directory of Vietnamese and Vietnamese-diaspora faculty, useful only if it stays current as
+people are promoted, move, or retire.
 
-VietProfs is a public directory of Vietnamese and Vietnamese-diaspora professors at universities
-worldwide. The site is intentionally small in data-engineering terms---a static Vite application
-whose canonical roster is JSON---but the population it represents is open-world, heterogeneous, and
-not available from a single authoritative source. Ordinary search is insufficient because faculty
-pages are inconsistently indexed, academic titles vary by country, and a plausible name or research
-mention is not proof of a current appointment. Manual curation alone is difficult to sustain as the
-directory grows.
+\subsection{What VietProfs Is: Motivation, Goals, and Design}
+\label{sec:intro-what}
+Before this project, a Vietnamese-heritage scholar could be found only one search at a time, on their
+own university's page, with no way to see them alongside their peers. VietProfs closes that gap.
+Concretely, it helps a graduate student find an advisor who shares their background or research
+interest. It lets a faculty member discover Vietnamese-diaspora colleagues at a new institution or
+nearby ones. It gives conference organizers, professional societies, and student or alumni
+associations a way to identify speakers, panelists, and committee members. It gives journalists and
+university or cultural offices a single place to start when documenting the diaspora's reach. And,
+independent of any specific task, it lets the community---and outsiders---see its own scale and range
+across institutions, countries, fields, and generations, from \vplink{Xuong+Nguyen-Huu}{Xuong
+Nguyen-Huu}, who earned a 1962 PhD at UC Berkeley and now holds an appointment at UC San Diego, to the
+newest hires in the current snapshot (Section~\ref{sec:goals}). It is deliberately not a ranking of
+people or institutions. It is not a test of Vietnamese identity. And it is not a census of the full
+population (Section~\ref{sec:limitations}).
 
-This paper uses VietProfs as a case study for a broader question: how can AI-assisted automation
-continuously discover, verify, correct, analyze, and maintain a public directory while retaining
-evidence and human oversight? We make four bounded contributions. First, we document the data model
-and operational architecture of a live directory. Second, we describe a workflow that separates
-candidate discovery from evidence-backed verification. Third, we characterize expansion and
-revalidation using implementation artifacts and public Git history. Fourth, we show how a maintained
-roster supports reproducible descriptive observations while also creating a second maintenance
-problem for derived knowledge.
+Inclusion is governed by a single, name-independent rule: a current academic appointment at a
+university outside Vietnam, in one of five accepted tracks---Tenure-line, Teaching, Research,
+Clinical, or Emeritus. Each track is defined precisely enough that a stable, full-time, faculty-level
+role is included, while a temporary, visiting, postdoctoral, or adjunct one is not
+(Section~\ref{sec:eligibility}). Vietnamese names and surnames are used only to find candidates worth
+checking. No documentary proof of ethnicity is ever required. That is both because it would be
+invasive and because a surname is neither sufficient nor reliable evidence of identity on its own
+\cite{mateos2007name,ambekar2009name}. Every included person is also classified into one of 17 broad
+fields of study. That taxonomy is deliberately built as a coarsened, browsable version of the field
+categories the U.S. National Center for Education Statistics and National Science Foundation already
+use to report on degree programs and doctorates, with health-related subfields further aligned to the
+National Institutes of Health's Institute and Center structure. The goal is for the directory's field
+distribution to read against familiar national categories rather than an invented scheme
+(Section~\ref{sec:fields}).
+
+Each person's card is designed around what a visitor actually needs, not around what happened to be
+easiest to collect. A portrait and the Vietnamese-diacritic form of their name help with recognition.
+Current university, department, rank, and location say where to find them. Education history back
+through their PhD---in the current snapshot as far back as 1962---shows the diaspora's academic
+presence spans generations, not one recent wave. Curated honors are limited to real field-wide
+distinctions such as national-academy election or a major career award, so the list stays meaningful
+rather than exhaustive. Short research-area tags support topic-level search, and a visible
+last-verified date lets a reader judge how current a given fact is (Section~\ref{sec:whatshown}). The
+site itself supports free-text and attribute-prefixed search (e.g., \code{univ:Stanford},
+\code{country:France}), combinable location/field/track filters, shareable filtered URLs, university
+and PhD-institution leaderboards, a state-by-state map of U.S. records, and a public form for anyone
+to submit a new person or a correction without touching the underlying data directly
+(Section~\ref{sec:ui}). As of 29 August 2026, the canonical snapshot holds 831 records at 367
+universities in 19 countries, across all 17 fields and all five tracks (Section~\ref{sec:results}).
+
+\subsection{The Engineering Challenge: Keeping VietProfs Accurate}
+\label{sec:intro-how}
+Building a first version of this directory would not, by itself, have been hard. Keeping it accurate
+is the harder engineering problem, and it is the paper's technical contribution. Structured public
+datasets become stale for a simple reason: the world they describe changes while the dataset waits
+for an update. A faculty member is promoted, changes universities, becomes emeritus, or leaves
+academia. A URL disappears in a site redesign. A newly eligible person never appears in the search
+results that originally seeded the directory. Each row is therefore a claim about an external entity,
+not a fixed fact. Maintenance is a reconciliation problem between those claims and a distributed,
+changing web (Section~\ref{sec:hard}), whose pages are known to disappear or change at a substantial
+rate over just a few years \cite{bar-yossef2004sic}.
+
+VietProfs addresses this with a maintenance system built around one rule: an AI agent proposes
+changes, and a deterministic controller---not the model---decides whether they reach the public
+roster. Two loops run continuously. Expansion searches a bounded university/field/country slice for
+people not yet in the roster. Revalidation periodically re-checks every existing record's profile
+link, appointment, rank, education, and honors against the current web
+(Section~\ref{sec:maintenance}).
+
+An agent's output is never applied directly. It must first pass a validated proposal schema that
+checks required fields, URL roles, accepted tracks, honor categories, and degree years, and that
+refuses any edit touching a person outside its assigned target (Section~\ref{sec:architecture}). An
+optional second, independently invoked agent can review a proposal and force up to two bounded
+revisions before a still-disputed case is deferred rather than guessed at
+(Section~\ref{sec:architecture}). This mirrors a broader principle: a model's role in a
+human-in-the-loop system is to reduce a reviewer's effort, not replace their judgment
+\cite{amershi2014power}. A deterministic test suite---data-validation, unit, and browser-level
+checks---gates every automated push to the live site (Section~\ref{sec:testing}). That gate matters
+because unattended LLM enumeration is otherwise known to omit people and hallucinate affiliations
+\cite{ji2023survey}, with no defensible stopping condition (Section~\ref{sec:whatdoesnotwork}).
+
+The public Git history makes this lifecycle visible. It records batched full-roster refreshes,
+country-by-country expansion sweeps, and concrete corrections: merging duplicate entries for
+\vplink{Tam+V.+Nguyen}{Tam V. Nguyen} at the University of Dayton, reclassifying
+\vplink{Khiem+Pham-Nguyen}{Khiem Pham-Nguyen} from Teaching to Clinical after his Boston University
+dental appointment was found to sit on a stable clinical-faculty ladder, and removing Nhung Nguyen's
+UCSF entry under the inclusion policy (Section~\ref{sec:maintenance}--\ref{sec:results}). None of this
+makes VietProfs a census or a formally verified system. Coverage still depends on search effort and
+discoverability, and the paper is explicit about what remains unmeasured
+(Section~\ref{sec:limitations}, Section~\ref{sec:whatdoesnotwork}).
+
+This paper has two aims, addressed in two parts. Part I is about VietProfs itself: who it is for, who
+is eligible to appear, what fields and kinds of information it covers and why, how it is used, and
+what it currently shows. This is the paper's main subject. It is written for a reader who cares first
+about the directory, and only secondarily about how it is built. Part II turns to engineering. Keeping
+several hundred records accurate against a constantly changing web required a nontrivial AI-assisted
+maintenance system, and we report that system as a bounded technical contribution in its own right: a
+data model and operational architecture (Section~\ref{sec:model} onward); a workflow separating
+candidate discovery from evidence-backed verification
+(Sections~\ref{sec:architecture}--\ref{sec:evidence}); an empirical characterization of expansion and
+revalidation from implementation artifacts and public Git history (Section~\ref{sec:maintenance}); the
+derived-knowledge maintenance problem created by runtime aggregation (Section~\ref{sec:results}); and
+the test suite that lets an unattended controller push directly to production
+(Section~\ref{sec:testing}). But the engineering exists to serve the directory, not the other way
+around. The rest of this paper is ordered accordingly: what VietProfs is, first; how it is kept
+accurate, second, as the technical part of the story.
+
+\begin{center}
+\setlength{\fboxsep}{14pt}
+\setlength{\fboxrule}{0.9pt}
+\fbox{\parbox{0.74\linewidth}{\centering
+\textsc{VietProfs is live and searchable at}\\[6pt]
+{\Large\url{https://vietprofs.roars.dev}}
+}}
+\end{center}
+
+\part{VietProfs: Purpose, People, and Content}
+
+\section{Goals and Intended Uses}
+\label{sec:goals}
+VietProfs exists to answer a concrete, recurring need: given a Vietnamese-heritage scholar somewhere
+in the world, or an interest in the diaspora's presence at a given university or in a given field, is
+there anywhere to look? Before this project, the honest answer was no. The site is designed around a
+small number of intended uses, each already reflected in how the interface is built
+(Section~\ref{sec:ui}).
+
+\begin{itemize}
+\item \textbf{Finding a mentor or advisor.} A prospective graduate student who would like a
+Vietnamese-speaking advisor, or who simply values shared cultural background in a mentoring
+relationship, can search by field and location instead of guessing names from department web pages
+one at a time---a search for engineering, for instance, surfaces \vplink{Nam-Trung+Nguyen}{Nam-Trung
+Nguyen} at Griffith University and \vplink{Tho+Le-Ngoc}{Tho Le-Ngoc} at McGill University alongside
+dozens of others.
+\item \textbf{Building community across institutions.} A professor moving to a new country, or
+simply curious whether there are other Vietnamese-diaspora faculty nearby, can search by university,
+city, state, or country and find colleagues they would otherwise never learn about; a newcomer to the
+National University of Singapore would find \vplink{Nhan+Phan-Thien}{Nhan Phan-Thien},
+\vplink{Hai+Minh+Duong}{Hai Minh Duong}, and \vplink{Han+Vinh+Huynh}{Han Vinh Huynh} already listed
+there, and a newcomer to Paris would find \vplink{Duong+Hieu+Phan}{Duong Hieu Phan} at
+T\'{e}l\'{e}com Paris and \vplink{Phu+Nguyen-Van}{Phu Nguyen-Van} at Universit\'{e} Paris Nanterre.
+\item \textbf{Assembling speakers, panels, and committees.} Conference organizers, professional
+societies, and Vietnamese student and alumni associations can use the field and honors filters to
+identify potential keynote speakers, panelists, or program-committee members with relevant
+expertise---a panel on Vietnam War history could draw on \vplink{Lien-Hang+T.+Nguyen}{Lien-Hang T.
+Nguyen} (Columbia) and \vplink{Nu-Anh+Tran}{Nu-Anh Tran} (University of Connecticut).
+\item \textbf{Documenting representation.} Journalists, university offices, and cultural or
+diplomatic organizations that want to describe the reach of Vietnamese scholarship abroad have, for
+the first time, a single place to start rather than an ad hoc collection of anecdotes---from
+\vplink{Lan+Cao}{Lan Cao}'s
+professorship of law at Chapman University to Nam-Trung Nguyen's Australian Laureate Fellowship at
+Griffith University.
+\item \textbf{A record the community can see itself in.} Independent of any specific task, the
+directory is a form of collective visibility: it lets the diaspora, and outsiders, see the range of
+institutions, countries, fields, and generations---the earliest recorded PhD year in the current
+snapshot, 1962, belongs to Xuong Nguyen-Huu, who now holds an appointment at UC San Diego---that
+Vietnamese-heritage academics have reached.
+\item \textbf{A starting point for description, not a survey instrument.} The aggregated view
+(Section~\ref{sec:results}) lets a visitor ask simple descriptive questions---which fields, which
+countries, which institutions are represented in the maintained roster, such as
+\vplink{univ:Monash}{Monash University}'s 13 faculty or the 60 records currently located in
+Australia---while Section~\ref{sec:limitations}
+explains why that view should not be read as a population survey.
+\end{itemize}
+
+VietProfs is deliberately not several other things it might be mistaken for. It is not a ranking:
+appearing in the directory, and the order records happen to appear in, carries no evaluation of
+merit. It is not a certification of Vietnamese identity: inclusion depends on a current, verifiable
+academic appointment, not on any test of ethnicity or heritage (Section~\ref{sec:eligibility}). And
+it is not a census of the Vietnamese academic diaspora: Section~\ref{sec:limitations} is explicit
+that coverage depends on search effort and discoverability, so the roster documents who has been
+found and verified, not the full population.
+
+\section{Who Is Included: Eligibility}
+\label{sec:eligibility}
+A directory is only as useful as its inclusion rule is clear, and only as trustworthy as that rule is
+applied consistently. This section states, in plain terms, who is meant to appear in VietProfs and
+why; Section~\ref{sec:model} gives the same rule again as it is literally encoded in the data-entry
+and validation logic that enforces it.
+
+\subsection{The core requirement}
+A person is included only if reliable evidence---preferably an official university page---supports
+two things at once: (1) a current academic appointment at a university anywhere outside Vietnam
+(with a narrow exception for Emeritus, discussed below), and (2) that appointment falling into one of
+five accepted tracks, summarized in Table~\ref{tab:tracks}.
+
+\emph{Outside Vietnam} is a scope decision, not a value judgment about scholars based in Vietnam: the
+directory is specifically about the diaspora, a population scattered across hundreds of institutions
+in dozens of countries with no shared index, which is the gap this project set out to fill. A future
+companion project covering universities inside Vietnam would be a different, equally worthwhile
+effort, but is out of scope here.
+
+\begin{table}[t]
+\centering
+\caption{Accepted appointment tracks and their intent (\codelinkd{ROSTER_MAINTENANCE.md}{ROSTER\_MAINTENANCE.md}).}
+\label{tab:tracks}
+\small
+\begin{tabularx}{\linewidth}{@{}lX@{}}
+\toprule
+Track & Who it covers \\
+\midrule
+Tenure-line & Tenure-track or already-tenured faculty (Assistant, Associate, or full Professor). \\
+Teaching & Stable, full-time, continuing non-tenure-track teaching faculty, including Professor of
+Practice and equivalent titles, confirmed by the institution's own language (e.g., ``full-time,''
+``continuing appointment,'' a named promotion ladder) rather than inferred from the title alone. \\
+Research & A stable, faculty-level research appointment such as Research Professor or a documented
+research-faculty promotion ladder---not a postdoctoral, visiting, grant-limited, or otherwise
+temporary research role. \\
+Clinical & A stable clinical-faculty appointment such as Clinical Professor or a documented
+clinical-faculty ladder---not an adjunct or temporary clinical-teaching role. \\
+Emeritus & A formally conferred emeritus/emerita title following a tenure-line career, evidenced by
+an active emeritus listing or a documented conferral---not plain retirement, resignation, or an
+in-memoriam page. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Each track has a real counterpart already in the roster: Nam-Trung Nguyen holds a Tenure-line
+professorship in engineering at Griffith University; \vplink{Thanh+Tran}{Thanh Tran} is a Professor in the Practice of
+electrical and computer engineering at Rice University under the Teaching track; Khiem Pham-Nguyen
+holds a Clinical Assistant Professorship in orthodontics at Boston University; and Xuong Nguyen-Huu,
+whose 1962 PhD from UC Berkeley predates every other recorded degree in the snapshot, holds an
+Emeritus appointment at UC San Diego.
+
+\subsection{Who is not included, and why}
+The tracks deliberately exclude several kinds of appointment that a casual search would otherwise
+surface: adjunct, visiting, postdoctoral, affiliate/courtesy, graduate teaching-assistant,
+non-university, industry-only, and other term-limited or part-time positions. This is not a judgment
+about the people who hold these roles---many are excellent scholars, and several will later hold an
+included appointment---but a decision about what a stable directory entry can promise. A visiting or
+postdoctoral appointment typically lasts one to three years and is, by design, temporary; including
+it would either commit the directory to constant churn or invite stale entries for people who have
+long since moved on. A plain \code{Instructor} title is treated case by case rather than included
+from the title alone, because the same word covers everything from a permanent teaching-track
+position to a single-semester contract depending on the institution.
+
+Two titles deserve special mention because they are easy to misjudge from the outside.
+\code{Research Assistant Professor} is included only when the institution treats it as a genuine
+research-faculty rank, evidenced by, for example, a departmental faculty directory listing or an
+established promotion ladder---not merely because the word ``Professor'' appears in it, since several
+institutions use exactly this title for what is functionally a senior postdoctoral position.
+Professor of Practice and its equivalents (Associate/Assistant Professor of Practice) are included
+under the Teaching track once their stability is confirmed, with the institution's own practice title
+preserved in the record rather than flattened into a generic rank.
+
+\subsection{Identity is not inferred from a name}
+VietProfs uses Vietnamese given names and common surnames---\code{Nguyen}, \code{Tran}, \code{Le},
+\code{Pham}, \code{Vo}, \code{Vu}, \code{Bui}, \code{Do}, \code{Phan}, \code{Lai}, among others---as a
+starting point for finding candidates, the same way a person doing this search by hand would. But a
+name is a lead, never a verdict: once a candidate is otherwise eligible under Table~\ref{tab:tracks},
+no separate documentary proof of Vietnamese ethnicity or national origin is required or requested.
+This is a deliberate choice on both ethical and practical grounds. Ethically, demanding proof of
+heritage from a public figure in order to list them in a public directory would be invasive in ways
+this project has no interest in enforcing. Practically, a surname is neither sufficient evidence of
+identity---plenty of people who share a common Vietnamese surname are not Vietnamese, and some
+Vietnamese-heritage scholars do not have one, for example after a name change through marriage or
+adoption---nor a reliable way to tell two different people apart. The general unreliability of
+inferring ethnicity or origin from a name alone is well documented in the name-based ethnicity
+classification literature, which treats a surname at best as a probabilistic signal requiring
+corroboration, not a determination \cite{mateos2007name,ambekar2009name}; VietProfs's policy of
+treating a name only as a discovery lead is a conservative application of that same caution. This is
+also why the directory
+deduplicates by verified person rather than by name string (Section~\ref{sec:model}). A person who
+does not wish to appear, or who has been mis-identified, can request removal or correction through
+the same public channel used to propose additions (Section~\ref{sec:submit}).
+
+\section{Fields of Study Covered}
+\label{sec:fields}
+To make roughly a thousand records browsable by discipline, every person in VietProfs is classified
+into one of 17 broad fields (Table~\ref{tab:fieldmap}). Rather than inventing an idiosyncratic
+taxonomy, these 17 groups are a coarsened version of field categories already used in U.S. federal
+statistical practice, so that a visitor familiar with how universities or funding agencies group
+disciplines will find the groupings unsurprising, and so that VietProfs's field distribution can be
+discussed in the same vocabulary as national statistics on doctoral education. Two federal
+classification systems anchor this correspondence:
+
+\begin{itemize}
+\item The National Center for Education Statistics' \emph{Classification of Instructional Programs}
+(CIP), the standard scheme U.S. institutions use to report degree programs to the federal government,
+organizes fields into roughly 40 two-digit ``families'' (e.g., \code{11} Computer and Information
+Sciences, \code{14} Engineering, \code{26} Biological and Biomedical Sciences, \code{51} Health
+Professions and Related Clinical Sciences) \cite{nces_cip2020}.
+\item The National Science Foundation's Survey of Earned Doctorates, run by its National Center for
+Science and Engineering Statistics, groups doctorates into a smaller set of broad fields---life
+sciences, physical sciences and earth sciences, mathematics and computer sciences, psychology and
+social sciences, engineering, education, and humanities and arts, among others---for its annual
+reporting on U.S. doctorate recipients \cite{nsf_sed}.
+\end{itemize}
+
+Table~\ref{tab:fieldmap} shows, for each VietProfs field, the nearest corresponding CIP family. The
+mapping is a coarsening for browsability, not a formal crosswalk: several VietProfs fields merge more
+than one CIP family (for example, Humanities merges English/literature, foreign languages and
+linguistics, history, and philosophy), and a few disciplines sit at a boundary the source taxonomies
+themselves treat inconsistently---economics, for instance, is filed under Social Sciences in CIP
+(45.06) even though it is more often taught and hired alongside business, which is why VietProfs
+groups it with Business rather than with Social \& Behavioral Sciences.
+
+\begin{table}[t]
+\centering
+\caption{VietProfs's 17 broad fields and their nearest correspondence in the NCES CIP family
+structure \cite{nces_cip2020}. A VietProfs field may draw on more than one CIP family; the table
+lists the primary one(s).}
+\label{tab:fieldmap}
+\small
+\begin{tabularx}{\linewidth}{@{}p{0.36\linewidth}X@{}}
+\toprule
+VietProfs field & Nearest CIP family/families \\
+\midrule
+Computer \& Information Sciences & 11 Computer and Information Sciences and Support Services \\
+Engineering & 14 Engineering; 15 Engineering Technologies \\
+Mathematics & 27 Mathematics and Statistics (pure/applied mathematics) \\
+Statistics \& Data Science & 27 Mathematics and Statistics (statistics/data science) \\
+Physics \& Astronomy & 40 Physical Sciences \\
+Chemistry & 40 Physical Sciences \\
+Biological \& Biomedical Sciences & 26 Biological and Biomedical Sciences \\
+Earth \& Environmental Sciences & 40 Physical Sciences (earth/atmospheric/ocean sciences); 03
+Natural Resources and Conservation \\
+Agricultural \& Natural Resource Sciences & 01 Agriculture, Agriculture Operations, and Related
+Sciences; 03 Natural Resources and Conservation \\
+Health Sciences & 51 Health Professions and Related Clinical Sciences (see Table~\ref{tab:healthnih}
+for subfields) \\
+Business \& Economics & 52 Business, Management, Marketing; 45.06 Economics \\
+Social \& Behavioral Sciences & 45 Social Sciences; 42 Psychology \\
+Education & 13 Education \\
+Humanities & 23 English Language and Literature; 16 Foreign Languages and Linguistics; 54 History;
+38 Philosophy and Religious Studies \\
+Law \& Public Affairs & 22 Legal Professions and Studies; 44 Public Administration and Social
+Service Professions \\
+Arts \& Design & 50 Visual and Performing Arts; 04 Architecture and Related Services \\
+Others & 30 Multi/Interdisciplinary Studies; institution-specific fields not yet mapped \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Health Sciences is large enough, and clinically prominent enough in the roster specifically---178
+honors-bearing records and several of the roster's most senior appointments are in medicine---that
+VietProfs further splits it into derived subfields (Clinical Medicine, Public Health, Nursing,
+Pharmacy, Dentistry, Biomedical Research, and Medical Education; Section~\ref{sec:model}).
+Table~\ref{tab:healthnih} aligns those clinical subfields with their closest counterpart among the
+National Institutes of Health's 27 Institutes and Centers, each of which funds and organizes research
+around a specific organ system, disease category, or health discipline \cite{nih_ics}. The alignment
+is again illustrative rather than exact: several NIH Institutes (for example, the National Cancer
+Institute or the National Heart, Lung, and Blood Institute) fund research across what VietProfs
+simply calls Clinical Medicine, and population/prevention health in the U.S. is coordinated at least
+as much through the Centers for Disease Control and Prevention as through NIH; the table cites the
+clearest correspondences rather than forcing every subfield onto a single Institute.
+
+\begin{table}[t]
+\centering
+\caption{VietProfs Health Sciences subfields and their closest NIH Institute/Center counterpart, from
+the official list of NIH Institutes, Centers, and Offices \cite{nih_ics}, or the nearest CIP
+subfamily where no single Institute corresponds \cite{nces_cip2020}.}
+\label{tab:healthnih}
+\small
+\begin{tabularx}{\linewidth}{@{}lX@{}}
+\toprule
+VietProfs subfield & Closest federal classification \\
+\midrule
+Nursing & National Institute of Nursing Research (NINR) \\
+Dentistry & National Institute of Dental and Craniofacial Research (NIDCR) \\
+Biomedical Research & National Institute of General Medical Sciences (NIGMS); National Center for
+Advancing Translational Sciences (NCATS) \\
+Clinical Medicine & Collectively, the disease- and organ-focused Institutes (e.g., National Cancer
+Institute; National Heart, Lung, and Blood Institute; National Institute of Diabetes and Digestive
+and Kidney Diseases) \\
+Public Health & National Institute of Environmental Health Sciences (NIEHS) within NIH; population
+and prevention health more broadly is coordinated by the CDC, outside NIH \\
+Pharmacy & No single dedicated NIH Institute; corresponds to CIP 51.20 (Pharmacy, Pharmaceutical
+Sciences, and Administration) \\
+Medical Education & CIP 51.12 (Medicine); not a distinct NIH Institute \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+This classification exercise is a browsing aid, not a scientific claim. VietProfs's own
+field-mapping code (\code{fieldOf}, Section~\ref{sec:model}) works from department names and an
+explicit override table, and a handful of institution-specific department names will always sit
+awkwardly between two standard categories; the maintenance guide's response to that ambiguity is to
+ask rather than guess (Section~\ref{sec:model}).
+
+\section{What Information Is Shown, and Why}
+\label{sec:whatshown}
+Every field stored for a person (Table~\ref{tab:schema}, Section~\ref{sec:model}) earns its place
+because of what it lets a visitor do, not because the underlying research happened to surface it.
+This section explains the reasoning behind the fields a reader will actually see on a card
+(Figure~\ref{fig:home}).
+
+\begin{description}
+\item[Portrait.] A small photo turns a row of text into a person. For a directory whose purpose is
+partly about recognition and connection---a student wondering ``is that the same Professor Nguyen I
+met at a conference?'', a colleague scanning a list of new faculty at a nearby university---a face is
+often the fastest way to confirm identity, especially given how common several Vietnamese surnames
+are. Portraits are stored locally with their source URL recorded (\code{portraitSource}), so
+provenance is preserved even though the image itself is not a link that can go stale.
+\item[Vietnamese-diacritic name.] Many official English-language university pages render a person's
+name without diacritics, or in Western given-name/surname order. VietProfs stores the diacritic form
+(\code{vietnameseName}) alongside the display name specifically so the directory reflects how a
+person's name is actually written in Vietnamese, which is both a form of respect and, practically,
+another way for a Vietnamese-speaking visitor to recognize a name they already know.
+\item[University, department, rank, and location.] This is the directory's most basic utility:
+knowing that someone exists is not the same as knowing where to find them. Location fields also power
+the browsing filters and the state/country leaderboards in Section~\ref{sec:ui}.
+\item[Education (undergraduate, master's, PhD, postdoctoral, and other professional degrees).]
+Recording where and when someone trained does two things. Practically, it helps a student identify a
+potential mentor who trained in a similar path or at a familiar institution. Collectively, it is also
+a quiet piece of evidence against the assumption that Vietnamese-diaspora academic presence is
+recent: the earliest recorded PhD year in the current snapshot is 1962, more than six decades before
+this paper, spanning generations of scholars rather than a single wave.
+\item[Honors.] Recognitions are shown to celebrate documented excellence and to make role models
+visible to students and peers who might not otherwise learn about them---seeing that a member of the
+community was elected to the National Academy of Medicine or won a Sloan Research Fellowship is
+itself meaningful to a community whose achievements are rarely aggregated anywhere. Because a
+personal CV can list dozens of items of wildly different weight, honors are curated rather than
+imported wholesale; Section~\ref{sec:honors} explains exactly what qualifies and what does not.
+\item[Research areas.] Short topic tags let a visitor searching for, say, ``machine translation'' or
+``coral reef ecology'' find the right person even when a department name alone (``Computer Science,''
+``Biology'') would not distinguish them.
+\item[Scholar and personal/lab links.] These give a visitor somewhere to go next---publications, a
+lab website, contact information---once the directory has done its job of helping them find the
+right person.
+\item[\code{lastUpdatedAt}.] Because the people and pages a directory describes keep changing
+(Section~\ref{sec:hard}), every card shows when its content was last confirmed to be current, so a
+visitor can judge how much to trust a given detail rather than assuming a static database is
+automatically up to date.
+\end{description}
+
+Two things are deliberately \emph{not} shown. VietProfs does not display any inferred or asserted
+ethnicity, birthplace, or immigration information beyond what a person's own official professional
+page already states; the directory is about a current academic appointment, not a biography. And it
+does not display any ranking, score, or comparative judgment across people or institutions---the
+leaderboards in Section~\ref{sec:ui} are counts, not rankings of quality.
 
 \section{VietProfs and the Data Model}
 \label{sec:model}
-The public source of truth is \code{public/data.json}; the browser loads it and performs search,
-filtering, sorting, and aggregation. A record contains a name, current profile URL, university,
-city, state or province when applicable, country, department, research areas, rank and appointment
-track, optional education and honors, optional Scholar and personal-site URLs, portrait provenance,
-and \code{lastUpdatedAt}. The separate \code{maintenance/verification.json} ledger records the time
-of a completed full review and is not part of the public site payload.
+The public source of truth is \codelink{public/data.json}; the browser loads it and performs search,
+filtering, sorting, and aggregation. Table~\ref{tab:schema} lists the record schema implemented by
+the \code{RosterEntry} TypeScript interface in \codelink{src/data.ts}. A record contains a name, current
+profile URL, university, city, state or province when applicable, country, department, research
+areas, rank and appointment track, optional education across five credential types (undergraduate,
+master's, PhD, postdoctoral, and professional degrees such as MD), optional honors with source
+citations, optional Scholar and personal-site URLs, portrait provenance, and \code{lastUpdatedAt}.
+The separate \codelink{maintenance/verification.json} ledger records the time of a completed full review,
+keyed by canonical name, and is not part of the public site payload; the split lets the automated
+maintenance state travel with the repository across machines without inflating what a browser
+downloads.
 
-The inclusion rule is a classification policy. A person must have a current primary university
-appointment outside Vietnam, except for qualifying emeritus appointments, and must fit one of five
-tracks: Tenure-line, Teaching, Research, Clinical, or Emeritus. Adjunct, visiting, postdoctoral,
-affiliate/courtesy, temporary, part-time, non-university, and industry-only positions are excluded.
-Teaching includes stable full-time non-tenure-track appointments such as Professor of Practice;
-Research and Clinical require evidence that the appointment is faculty-level and stable; Emeritus
-requires a formally conferred title following a tenure-line career. The published rank is normalized
-for the public vocabulary where appropriate, while institution-specific titles are preserved when
-they clarify a non-tenure appointment. [CODE: \code{ROSTER\_MAINTENANCE.md}; \code{src/data.ts}]
+\begin{table}[t]
+\centering
+\caption{Public roster schema (\code{RosterEntry}, \code{src/data.ts}). Required fields are used by
+every record; optional fields are present when a source explicitly documents them.}
+\label{tab:schema}
+\small
+\begin{tabularx}{\linewidth}{@{}lX@{}}
+\toprule
+Field group & Fields \\
+\midrule
+Required & \code{name}, \code{university}, \code{department}, \code{rank}, \code{track},
+\code{profileUrl}, \code{lastUpdatedAt}, \code{researchAreas[]} \\
+Location & \code{city}, \code{state}, \code{country} \\
+Identity & \code{vietnameseName} (diacritic form) \\
+Education & \code{undergradInstitution}/\code{Year}, \code{msInstitution}/\code{Year},
+\code{phdInstitution}/\code{Year}, \code{postdocInstitution}/\code{Year},
+\code{mdInstitution}/\code{Year}, \code{otherDegrees[]} (\code{degree}, \code{institution},
+\code{year}, \code{source}) \\
+Honors & \code{honors[]}: \code{name}, \code{organization}, \code{category}, \code{year},
+\code{source} \\
+Links & \code{websiteUrl} (personal/lab), \code{scholarUrl} (Google Scholar) \\
+Portrait & \code{portrait} (local \code{.webp} path), \code{portraitSource} (provenance URL) \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The inclusion rule is a classification policy, restated here as it is literally implemented after
+being introduced for a general reader in Section~\ref{sec:eligibility}. A person must have a current
+primary university appointment outside Vietnam, except for qualifying emeritus appointments, and
+must fit one of five tracks: Tenure-line, Teaching, Research, Clinical, or Emeritus. Adjunct,
+visiting, postdoctoral, affiliate/courtesy, temporary, part-time, non-university, and industry-only
+positions are excluded. Teaching includes stable full-time non-tenure-track appointments such as
+Professor of Practice; Research and Clinical require evidence that the appointment is faculty-level
+and stable; Emeritus requires a formally conferred title following a tenure-line career. The
+published rank is normalized for the public vocabulary where appropriate, while institution-specific
+titles are preserved when they clarify a non-tenure appointment. [CODE:
+\codelinkd{ROSTER_MAINTENANCE.md}{ROSTER\_MAINTENANCE.md}; \codelink{src/data.ts}]
 
 Vietnamese identity is not inferred from a surname. Vietnamese names and common surnames are used as
 search signals, but eligibility depends on the appointment and the project's inclusion policy. This
@@ -96,126 +577,150 @@ Health Sciences additionally has derived subfields such as Clinical Medicine, Pu
 Nursing, Pharmacy, Dentistry, and Biomedical Research. The mapper is deliberately explicit because
 strings such as ``Information Studies'' or ``Mathematics and Statistics'' can mean different things
 in different institutional contexts. The tests assert both the taxonomy and representative
-overrides. [CODE: src/data.ts; test/data.test.ts]
+overrides. [CODE: \codelink{src/data.ts}; \codelink{test/data.test.ts}]
 
-\section{Why Maintaining the Directory Is Hard}
-The task has five coupled sources of uncertainty. First, it is open-world: the set of eligible
-people is not enumerated anywhere, so absence from a search result is weak negative evidence.
-Second, official sources are heterogeneous. A department directory, a university news article, a
-CV, a personal homepage, and a conference biography have different roles and freshness. Third,
-academic titles are not globally interchangeable; a research assistant professor can be a career
-research rank at one institution and a temporary postdoctoral-like role at another. Fourth, identity
-resolution is hard when names are common, transliterated, reordered, accented, abbreviated, or
-shared by multiple people. Finally, web pages are mutable: a 404 may indicate a moved page or site
-redesign rather than a departure.
+\subsection{Honors and awards eligibility}
+\label{sec:honors}
+The \code{honors} field is curated for substantial distinctions, not every item listed on a CV or
+personal homepage. Table~\ref{tab:honors} lists the five accepted categories; both the controller's
+proposal validator and \code{scripts/validate-data.ts} enforce that every stored honor declares one
+of them, together with a name, organization, HTTPS source, and---when known---a year between 1900 and
+the current year. An award created and administered by a single university is presumed local and
+ineligible unless independent field-wide standing is documented; a large-sounding title or cash
+prize alone is not evidence of that standing.
 
-These conditions make a row better understood as a claim such as ``person $p$ currently holds
-appointment $a$ at institution $u$, supported by source $s$,'' with a future revalidation obligation.
-The database is a materialized view of claims; the sources and review history are what make the
-view maintainable.
+\begin{table}[t]
+\centering
+\caption{Accepted honor categories (\codelinkd{ROSTER_MAINTENANCE.md}{ROSTER\_MAINTENANCE.md}, enforced by
+\code{proposalValidationError} and \code{validate-data.ts}).}
+\label{tab:honors}
+\small
+\begin{tabularx}{\linewidth}{@{}lX@{}}
+\toprule
+Category & Qualifying pattern \\
+\midrule
+\code{academy} & Election to a recognized national academy or equivalent learned academy. \\
+\code{fellow} & Fellow or honorary-member status conferred by a major disciplinary society. \\
+\code{career\_award} & A nationally/internationally competitive career or early-career award
+(e.g., NSF CAREER, Sloan Research Fellowship, Simons Investigator, PECASE). \\
+\code{major\_award} & A field-wide medal, prize, book award, or lifetime/impact/test-of-time
+distinction. \\
+\code{distinguished\_professorship} & A named endowed chair, distinguished professorship, or
+comparable research chair. \\
+\bottomrule
+\end{tabularx}
+\end{table}
 
-\section{System Architecture}
-Figure~\ref{fig:arch} summarizes the implemented flow. Public web sources feed either bounded
-discovery or a targeted revalidation task. An agent returns a structured proposal and report. The
-controller applies deterministic schema and scope checks before changing the canonical roster. The
-static site is built from the resulting snapshot, while the same snapshot is later selected for
-revalidation using the ledger.
+Concretely, an included honor looks like election to the National Academy of Engineering, National
+Academy of Medicine, or an equivalent learned academy; Fellow status from IEEE, ACM, AAAS, or a
+comparable major disciplinary society; a nationally competitive early-career award such as an NSF
+CAREER award, a Sloan Research Fellowship, a Simons Investigator award, or PECASE; a major field-wide
+prize, medal, or test-of-time award; or a named endowed chair or distinguished professorship. An
+excluded honor looks like a best-paper award from a single workshop, a departmental teaching or
+service award, an ``outstanding reviewer'' certificate, an internal university seed grant, a list of
+invited talks, or a large-sounding institution-run prize whose independent standing outside that one
+university cannot be confirmed. The line is deliberately conservative: a shorter, verifiable list of
+real distinctions is more useful to a reader than a long list padded with routine recognitions that
+are hard to compare across people.
+
+\section{User Interface and Interaction Model}
+\label{sec:ui}
+Because the roster is only useful if the population it describes can actually find themselves and
+each other in it, the client-side search and browsing interface is a first-class part of the system,
+not a thin wrapper over the JSON file. Figure~\ref{fig:home} shows the landing view: a free-text
+search box, three combinable filters (location, field, and faculty track), a row of example queries
+generated from the current roster, a result count, and a card per matching person showing name,
+Vietnamese-diacritic form, current rank/department/university/location, education, honors, research
+tags, and a \code{lastUpdatedAt} badge so a visitor can see how fresh a given record is.
 
 \begin{figure}[t]
 \centering
-\input{figures/architecture.tikz}
-\caption{VietProfs architecture. Solid arrows denote implemented data flow; the lower loop represents periodic revalidation.}
-\label{fig:arch}
+\includegraphics[width=0.92\linewidth]{figures/screenshot-home.png}
+\caption{The VietProfs landing view: search, combinable location/field/track filters, example query
+chips drawn from the live roster, and per-person cards with rank, department, university, location,
+education, honors, and research tags.}
+\label{fig:home}
 \end{figure}
 
-\subsection{Controller and proposal boundary}
-\code{scripts/maintain-roster.ts} is the unattended maintenance controller. It normally selects
-entries missing from the ledger or whose last full review is at least 365 days old, prioritizing
-older and incomplete records, and processes at most 40 per new run. It supports dry runs, full or
-capped sweeps, name/field targeting, resumable checkpoints, safe stop/status, retry handling, and
-Claude as the default research agent. Codex can be selected as the agent or enabled as an
-independent review pass.
+\subsection{Prefix search and diacritic normalization}
+The search box matches names, universities, departments, ranks, locations, research areas, honors,
+and PhD/postdoctoral/other-degree institutions by default, with matching performed on a
+diacritic-stripped, lowercased index (\code{buildSearchIndex}/\code{normalizeSearchText} in
+\code{src/data.ts}) so that typing \code{Nguyen} finds \code{Nguy\~{e}n}. A small parser
+(\code{parseSearchQuery}) recognizes field-scoped prefixes, listed in Table~\ref{tab:prefixes}, so a
+visitor who knows what they are looking for can narrow a query instead of scanning free-text matches;
+unrecognized prefixes fall back to a plain substring search over the full index. Figure~\ref{fig:search}
+shows the result of \code{univ:Stanford}, which narrows 554 U.S. records to the three current
+Stanford entries. The active search text and filter selections are mirrored into the URL query
+string, so a filtered view---for example, all Clinical-track faculty in Health Sciences at a named
+university---is directly shareable as a link rather than requiring the recipient to reproduce the
+same clicks.
 
-Agents cannot edit repository files directly. They return schemas for target matching, research,
-and optional independent review. The controller validates required fields, HTTP(S) roles, accepted
-tracks, research areas, honors and degree shapes, portrait paths, and other invariants. It also
-checks that a proposal changes only the targeted record, does not reorder the roster, and does not
-silently modify unrelated entries. A changed public record receives a new \code{lastUpdatedAt}; a
-complete review that finds no substantive change advances only the ledger timestamp. [CODE:
-scripts/maintain-roster.ts; test/maintenance-controller.test.ts]
-
-The deployment workflow runs tests and a production build on every push to \code{main}, then deploys
-the static artifact to GitHub Pages. The maintenance controller can commit and push after checks.
-This is a strong degree of operational automation, but it is not a formal correctness guarantee and
-does not eliminate human judgment for ambiguous evidence.
-
-\section{Discovery as Partitioned Open-World Search}
-An instruction such as ``find all Vietnamese professors at universities worldwide'' has unbounded
-scope and unmeasurable recall. VietProfs instead generates repeatable queries for a bounded
-university, field, and domain, combining site-restricted searches, department/faculty terms,
-institutional news and research-center queries, and Vietnamese-name signals. The agent is expected
-to audit existing entries, gather evidence per candidate, and treat coauthors, student pages, grants,
-and research mentions as leads rather than proof. [CODE: \code{scripts/faculty-discovery-queries.ts};
-DOC: \code{ROSTER\_MAINTENANCE.md}]
-
-This decomposition is a practical form of bounded open-world search. It improves auditability: a
-research pass can say which university/field/country slice it attempted, what was added, and in
-some cases that no eligible addition was found. It does not solve recall. Search-engine ranking,
-English-language visibility, uneven university websites, and differing effort across slices remain
-sampling mechanisms. The repository history shows a switch to country-by-country searches, batches
-for international universities, and field audits. These are operational strategies, not evidence
-of exhaustive coverage.
-
-\section{Evidence and Verification}
-\label{sec:evidence}
-Discovery is not verification. A candidate enters the workflow because a query or lead suggests a
-person; publication requires evidence that the person is current, at the claimed institution and
-department, in an eligible track, with a working official profile. Official faculty pages are the
-preferred source. Personal pages and CVs can supply details, but the current appointment is still
-confirmed on an official source where possible. Search snippets, conference biographies, and
-coauthorship are leads or corroboration rather than default authority.
-
-The implementation therefore follows the rule ``AI proposes; evidence decides.'' The agent can
-read public pages, compare an old record with current evidence, and produce structured data, but the
-controller does not treat free-form model text as canonical state. The proposal schema requires an
-action, status, report, sources, and proposed JSON; an optional independent Codex review can approve,
-reject, or mark uncertain. Rejected proposals receive bounded revisions in the configured workflow;
-incomplete or uncertain work is deferred rather than marked successfully verified.
-
-The evidence model is practical rather than a formal confidence score. URLs are retained for the
-profile, honors, portrait, and optional personal/Scholar pages, and Git preserves the resulting
-patch. There is no per-field provenance graph or source snapshot store. This is an important
-limitation: a URL is evidence access, not a cryptographic proof that the page had a particular
-content at review time.
-
-\section{Continuous Revalidation and Self-Maintenance}
-\label{sec:maintenance}
-VietProfs separates two loops, shown in Figure~\ref{fig:lifecycle}. Expansion starts from an
-unsearched slice and tries to add a new verified record. Revalidation starts from an existing record
-and checks whether its claim still matches the web. The latter checks profile liveness and role,
-URL-role correctness, Scholar identity, current rank/track, education, honors, and possible moves;
-it also looks for new candidates incidentally. The ledger allows the controller to choose the least
-recently reviewed records rather than repeatedly touching only newly added people.
+\begin{table}[t]
+\centering
+\caption{Recognized search prefixes (\code{parseSearchQuery}, \codelink{src/data.ts}), also documented
+for end users in \codelink{README.md}.}
+\label{tab:prefixes}
+\small
+\begin{tabularx}{\linewidth}{@{}lXl@{}}
+\toprule
+Prefix & Searches & Example \\
+\midrule
+\code{univ:}, \code{university:}, \code{school:} & Current university & \code{univ:Oxford} \\
+\code{phd:}, \code{postdoc:}, \code{ms:}, \code{md:}, \code{undergrad:} & That credential's
+institution; bare form matches anyone with the credential & \code{postdoc:Carnegie Mellon} \\
+\code{country:}, \code{nation:} & Current country & \code{country:France} \\
+\code{continent:}, \code{location:}, \code{loc:} & Continent/region & \code{loc:Europe} \\
+\code{state:} & State or province & \code{state:California} \\
+\code{city:} & City & \code{city:Paris} \\
+\code{dept:}, \code{department:} & Primary department & \code{dept:Economics} \\
+\code{name:} & Displayed name & \code{name:"Thanh Nguyen"} \\
+\code{honors}, \code{awards} & Any honors-bearing record & \code{honors} \\
+\bottomrule
+\end{tabularx}
+\end{table}
 
 \begin{figure}[t]
 \centering
-\input{figures/lifecycle.tikz}
-\caption{Record lifecycle. A published record is not terminal; it returns to the revalidation loop.}
-\label{fig:lifecycle}
+\includegraphics[width=0.92\linewidth]{figures/screenshot-search.png}
+\caption{A prefix-scoped search (\code{univ:Stanford}) narrowing the full roster to the three
+Stanford entries, each with rank, department, location, education, and---for the top result---an
+honors list rendered as sourced links.}
+\label{fig:search}
 \end{figure}
 
-Negative evidence requires caution. A disappeared faculty page can mean redesign, a moved URL,
-temporary failure, a university move, retirement, or departure. The maintenance policy explicitly
-avoids treating \code{404} as automatic deletion and calls for corroboration. Removal is also a
-stronger action than addition because it destroys a public claim and can erase a legitimate person
-from the directory. The system supports removal proposals, but the guide's corroboration rule is an
-operational policy rather than a formally verified deletion protocol.
+\subsection{Leaderboards, geography, and the derived-facts view}
+Below the roster list, the site computes ``Top Faculty Hubs'' and ``Top PhD Alma Maters''
+leaderboards for the currently selected subset, each entry itself a clickable filter
+(\code{data-search="univ:..."}) so browsing and querying are the same action. Selecting a U.S.
+location, or the sentinel ``\emph{Show me something interesting}'' option in the field filter,
+additionally renders a state-by-state choropleth grid (\code{src/state-grid.ts}) where tile shade
+encodes record count and a click filters to that state; Figure~\ref{fig:interesting} shows this view.
+This is discussed further as the site's third function, runtime aggregation, in
+Section~\ref{sec:results}.
 
-The Git history makes this lifecycle visible. A 20-batch full-roster refresh appears on 26 August
-2026. Subsequent history records automated maintenance batches, country sweeps, a Teaching-to-
-Clinical correction, a duplicate merge, a university-name canonicalization, a corrected affiliation,
-and a policy-based removal. These examples show that maintenance is not a periodic cosmetic edit;
-it changes eligibility, identity, affiliation, and derived data assumptions.
+\subsection{Human contribution channel}
+\label{sec:submit}
+Automated maintenance (Section~\ref{sec:architecture}) is the primary way the roster grows, but a
+visitor can also propose a new person or a correction directly, without editing the repository, via
+\href{https://vietprofs.roars.dev/submit.html}{\code{submit.html}} (Figure~\ref{fig:submit}). The form
+requires only a full name and an official university profile URL; typing a name that already resolves
+against the loaded roster (\codelink{src/submit.ts}) surfaces a suggestion and pre-fills the existing
+record so the visitor is editing rather than duplicating. Every other field---personal/lab site,
+Scholar profile, department, location, education, honors---is optional. Submissions are routed to a
+maintainer inbox and reviewed before they can change canonical data; nothing typed into this form
+writes to \codelink{public/data.json} directly. This keeps the boundary from Section~\ref{sec:evidence}
+intact for human-sourced leads as well as agent-sourced ones: a submission is evidence and a lead, not
+an approved change.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.92\linewidth]{figures/screenshot-submit.png}
+\caption{The public submission form (\href{https://vietprofs.roars.dev/submit.html}{\code{submit.html}}). Only a name and an official profile URL
+are required; a name that matches an existing record is offered back to the visitor as a correction
+rather than a duplicate.}
+\label{fig:submit}
+\end{figure}
 
 \section{What the Directory Reveals}
 \label{sec:results}
@@ -225,22 +730,43 @@ institutional concentration, field balance, geography, track distribution, award
 institution patterns.
 
 \subsection{Runtime observations}
-The ``Show me something interesting'' view is computed at runtime from the current JSON snapshot.
-It reports U.S. and international counts, state/country groups, institution groups, same-institution
-same-field clusters, field comparisons, award summaries, PhD cohorts, and leaderboards. It stores no
-hand-written facts. Tests require multi-record, roster-only observations and reject unsupported
-surname, prestige, demographic, causal, or population claims. The result is therefore a descriptive
-view, not an estimate of the entire diaspora. [CODE: src/data.ts; src/main.ts; test/data.test.ts]
+The ``Show me something interesting'' view (Figure~\ref{fig:interesting}) is computed at runtime from
+the current JSON snapshot by \code{buildFunFacts} and a family of \code{build*Observations} functions
+in \code{src/data.ts}, rendered by \code{src/main.ts}. It reports U.S. and international counts,
+state/country/institution groups, same-institution same-field clusters, cross-department breadth per
+institution, field comparisons between the U.S. and international subsets, award summaries, PhD
+cohorts by decade, and the same university/PhD-institution leaderboards described in
+Section~\ref{sec:ui}, here rendered for the full worldwide roster rather than a filtered subset. It
+stores no hand-written facts. Tests require multi-record, roster-only observations and reject
+unsupported surname, prestige, demographic, causal, or population claims; the maintenance guide is
+explicit that a current-roster concentration must not be described as growth, an emerging region, or
+a historical trend without a versioned historical dataset to support it. The result is therefore a
+descriptive view, not an estimate of the entire diaspora. [CODE: \codelink{src/data.ts};
+\codelink{src/main.ts}; \codelink{test/data.test.ts}]
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.92\linewidth]{figures/screenshot-interesting.png}
+\caption{The runtime-computed ``Show me something interesting'' view for the United States subset,
+including the state-level choropleth grid (\code{src/state-grid.ts}); darker tiles indicate more
+records, and clicking a tile filters the roster to that state.}
+\label{fig:interesting}
+\end{figure}
 
 \subsection{Snapshot observations}
-Table~\ref{tab:snapshot} summarizes the current snapshot. Within it, Monash University has 13
-records, UC San Diego 12, and NUS 11. California and Texas contain 169 of 554 U.S. records (31\%).
-The international subset contains 277 records across 18 non-U.S. country values. The four largest
-broad fields in the analysis are Computer and Information Sciences (132), Engineering (124),
-Business and Economics (112), and Health Sciences (99). Nanyang Technological University has six
-engineering records; the University of Minnesota has six health-science records; and the University
-of Technology Sydney has six engineering records. These are useful because they reveal institutional
-and disciplinary structure without claiming prestige, population size, or causation.
+Table~\ref{tab:snapshot} summarizes the current snapshot. Within it, \vplink{univ:Monash}{Monash
+University} has 13 records, UC San Diego 12, and NUS 11; Texas Tech, UC Irvine, the University of
+Melbourne, and the
+University of Toronto each have 10. California and Texas contain 169 of 554 U.S. records (31\%). The
+international subset contains 277 records across 18 non-U.S. country values, led by Australia (60),
+Canada (46), the U.K. (46), France (33), Singapore (26), and Taiwan (21). The four largest broad
+fields in the analysis are Computer and Information Sciences (132), Engineering (124), Business and
+Economics (112), and Health Sciences (99). Nanyang Technological University has six engineering
+records; the University of Minnesota has six health-science records; and the University of Technology
+Sydney has six engineering records. Monash spans 12 distinct stored departments, and UC Irvine and
+Toronto each span 10, showing that some institutional clusters are cross-disciplinary rather than
+concentrated in one department. These are useful because they reveal institutional and disciplinary
+structure without claiming prestige, population size, or causation.
 
 \begin{table}[t]
 \centering
@@ -268,13 +794,323 @@ graph for persisted derived facts because those facts are not persisted. A futur
 notable findings would need dependencies, recomputation, and invalidation policies just as primary
 records do.
 
+\section{Limitations and Ethics}
+\label{sec:limitations}
+VietProfs is not a census. Coverage is affected by search effort, English-language discoverability,
+university web quality, public-profile availability, initial field emphasis, international title
+conventions, and the differing maturity of collection passes. The 554/277 U.S./international split
+must not be interpreted as a population ratio. Nor should current concentrations be interpreted as
+prestige, demographic size, causation, migration history, or research quality.
+
+The directory handles sensitive identity-adjacent information. It should not infer ethnicity or
+national origin from names, and it should publish only public professional information necessary for
+the directory's purpose. Portraits, honors, and education need source and scope rules. Public
+submission and correction mechanisms (Section~\ref{sec:submit}) help people contest errors, but a
+future release should expose clear removal/contact policy, retention expectations, and an audit trail
+for disputed changes.
+
+\part{Building and Maintaining VietProfs: A Technical Report}
+
+Part I described what VietProfs is, who it includes, what it covers, and why. The remainder of this
+paper turns to engineering: how a small team keeps hundreds of records accurate against a constantly
+changing web, using AI-assisted automation, deterministic validation, and human oversight, without
+that automation becoming an unaccountable source of truth in its own right.
+
+\section{Why Maintaining the Directory Is Hard}
+\label{sec:hard}
+The task has five coupled sources of uncertainty. First, it is open-world: the set of eligible
+people is not enumerated anywhere, so absence from a search result is weak negative evidence.
+Second, official sources are heterogeneous. A department directory, a university news article, a
+CV, a personal homepage, and a conference biography have different roles and freshness. Third,
+academic titles are not globally interchangeable; a research assistant professor can be a career
+research rank at one institution and a temporary postdoctoral-like role at another. Fourth, identity
+resolution is hard when names are common, transliterated, reordered, accented, abbreviated, or
+shared by multiple people. Finally, web pages are mutable: measurements of web decay find that a
+substantial fraction of pages disappear or change within a few years \cite{bar-yossef2004sic}, so a
+404 may indicate a moved page or site redesign rather than a departure.
+
+These conditions make a row better understood as a claim such as ``person $p$ currently holds
+appointment $a$ at institution $u$, supported by source $s$,'' with a future revalidation obligation.
+The database is a materialized view of claims; the sources and review history are what make the
+view maintainable.
+
+\section{System Architecture}
+\label{sec:architecture}
+Figure~\ref{fig:arch} summarizes the implemented flow. Public web sources feed either bounded
+discovery or a targeted revalidation task. An agent returns a structured proposal and report. The
+controller applies deterministic schema and scope checks before changing the canonical roster. The
+static site is built from the resulting snapshot, while the same snapshot is later selected for
+revalidation using the ledger. Table~\ref{tab:pipeline} maps this flow onto the concrete files that
+implement each stage.
+
+\begin{figure}[t]
+\centering
+\input{figures/architecture.tikz}
+\caption{VietProfs architecture. Solid arrows denote implemented data flow; the lower loop represents periodic revalidation.}
+\label{fig:arch}
+\end{figure}
+
+\begin{table}[t]
+\centering
+\caption{Pipeline inventory: subsystem, implementation, and its automation boundary.}
+\label{tab:pipeline}
+\small
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.16\linewidth}>{\raggedright\arraybackslash}p{0.28\linewidth}X@{}}
+\toprule
+Subsystem & Files & Automation boundary \\
+\midrule
+Discovery queries & \codelinkd{scripts/faculty-discovery-queries.ts}{scripts/\allowbreak faculty-\allowbreak discovery-\allowbreak queries.ts} & Deterministic helper; research remains agent/human. \\
+Agent maintenance & \codelinkd{scripts/maintain-roster.ts}{scripts/\allowbreak maintain-\allowbreak roster.ts} & Claude by default; Codex selectable, or usable as an independent review pass. \\
+Proposal validation & Same controller; \codelinkd{test/maintenance-controller.test.ts}{test/\allowbreak maintenance-\allowbreak controller.\allowbreak test.ts} & Deterministic schema/scope checks; no agent output is trusted unchecked. \\
+Canonical data & \codelinkd{public/data.json}{public/\allowbreak data.json} & Committed JSON, changed only by an approved patch. \\
+Review ledger & \codelinkd{maintenance/verification.json}{maintenance/\allowbreak verification.json} & Deterministic prioritization of due entries. \\
+Classification/search & \codelinkd{src/data.ts}{src/\allowbreak data.ts}, \codelinkd{src/main.ts}{src/\allowbreak main.ts} & Runtime deterministic logic in the browser. \\
+Derived view & \code{buildFunFacts}, \code{build*Observations} & Deterministic, recomputed, never persisted. \\
+Human submissions & \codelinkd{submit.html}{submit.html}, \codelinkd{src/submit.ts}{src/\allowbreak submit.ts} & Routed to a maintainer; not applied automatically. \\
+Data validation & \codelinkd{scripts/validate-data.ts}{scripts/\allowbreak validate-\allowbreak data.ts} & Deterministic; run in \code{npm test} and CI. \\
+Deployment & \codelinkd{.github/workflows/deploy.yml}{.github/\allowbreak workflows/\allowbreak deploy.yml} & GitHub Actions: test, build, deploy on push to \code{main}. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Controller and proposal boundary}
+\codelink{scripts/maintain-roster.ts} (1{,}464 lines) is the unattended maintenance controller. It
+normally selects entries missing from the ledger or whose last full review is at least 365 days old
+(\code{--stale-days}, default 365), prioritizing older and incomplete records, and processes at most
+40 per new run (\code{--limit}, default 40). Table~\ref{tab:cli} lists its command-line surface. It
+supports dry runs, full or capped sweeps (\code{--all}, \code{--total}), name- or field-targeting
+(\code{--name}, which the agent itself resolves to a canonical roster member or, for a field-like
+query, to every member of that field), resumable checkpoints, safe stop/status, automatic retry with
+increasing waits on rate limits, and a choice of research agent (\code{--agent}), with Claude as the
+default and Codex selectable when Claude is unavailable or rate-limited.
+
+\begin{table}[t]
+\centering
+\caption{Controller CLI flags (\code{scripts/maintain-roster.ts}).}
+\label{tab:cli}
+\small
+\begin{tabularx}{\linewidth}{@{}lX@{}}
+\toprule
+Flag & Effect \\
+\midrule
+\code{--limit N} & Entries processed in one new run (default 40). \\
+\code{--total N} & Process up to $N$ entries across repeated \code{--limit} batches, committing and
+pushing after each. \\
+\code{--all} & Process the entire roster in repeated batches, oldest ledger entries first. \\
+\code{--stale-days N} & Minimum age, in days, of the last full verification to be selected (default
+365). \\
+\code{--name QUERY} & Ask the agent to resolve a person or field query and queue exactly that target,
+ignoring normal age/limit selection. \\
+\code{--dry-run} & Show the selection with no agent call, Git write, commit, or push. \\
+\code{--codex-review} & Require an independent Codex verdict (approve/reject/uncertain) before
+applying a proposal. \\
+\code{--agent A} & Research/propose with \code{claude} (default) or \code{codex}. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Agents cannot edit repository files directly; they can only read, search, and fetch (their tool
+access is restricted to \code{Read}, \code{Glob}, \code{Grep}, and, for the research stage,
+\code{WebSearch}/\code{WebFetch}), and they return JSON conforming to controller-generated schemas
+for target matching, research, and optional independent review. The research schema requires
+\code{status} (\code{complete}/\code{incomplete}), \code{action} (\code{keep}/\code{update}/
+\code{remove}), a \code{proposedEntryJson} string, a free-text \code{report}, and an array of
+\code{sources}; the optional review schema requires a \code{verdict}
+(\code{approve}/\code{reject}/\code{uncertain}), a \code{summary}, \code{reasons}, and
+\code{verifiedSources}. The controller, not the model, is the only component permitted to touch
+\code{public/data.json}, and it does so only after \code{proposalValidationError} returns no error.
+That function---mirrored in \code{scripts/validate-data.ts} so the same invariants hold whether data
+changed through the controller or by hand---rejects a proposal that is missing a required string
+field; whose \code{profileUrl} is not HTTP(S); whose \code{websiteUrl} equals \code{profileUrl} or is
+not HTTP(S); whose \code{scholarUrl} is not HTTPS; whose \code{track} is outside the five accepted
+values; whose portrait path does not match \verb|^portraits/[a-z0-9][a-z0-9.-]*\.webp$| or whose
+\code{portrait}/\code{portraitSource} are not both present or both absent; whose honors are missing a
+name/organization/HTTPS source, use an unsupported category (Table~\ref{tab:honors}), have an
+out-of-range year, or duplicate an existing honor by name/year/organization; or whose degree years
+fall outside 1900--present. \code{analyzeRosterProposal} separately diffs the before/after roster and
+refuses a proposal that reorders the file, inserts an unrelated record, or silently edits a person
+other than the one under review---an agent that ``fixes'' something outside its assigned target is
+treated the same as a malformed proposal. A changed public record receives a new
+\code{lastUpdatedAt}; a complete review that finds no substantive change advances only the ledger
+timestamp, which is how the controller distinguishes ``reviewed and unchanged'' from ``never
+reviewed'' when selecting the next batch. [CODE: \codelink{scripts/maintain-roster.ts};
+\codelink{test/maintenance-controller.test.ts}]
+
+\subsection{Resumable state and unattended operation}
+The controller keeps its working state---which person and stage are in progress, per-agent logs, and
+retry counters---outside the repository, by default under
+\code{\textasciitilde/.local/state/vietprofs-maintenance/} and overridable with
+\code{VIETPROFS\_MAINTENANCE\_STATE\_DIR}. Running \code{./scripts/maintain-roster.ts run} again,
+even after the process was killed or the terminal closed, detects the saved checkpoint and resumes
+the interrupted person and stage rather than restarting the batch; \code{status} reports progress and
+\code{stop} pauses safely. A background invocation
+(\code{nohup ./scripts/maintain-roster.ts run \& }) can therefore run for the hours a full sweep of
+the roster takes, including waiting out account rate limits, without an attended terminal. The
+controller commits and pushes once per completed batch, not once per person, so a batch is the unit
+of both reviewability and atomicity in the Git history; the first full sweep of a roster this size was
+split into roughly 20 batches of 35--40 people to keep individual commits reviewable.
+
+\subsection{Independent review and bounded revision}
+When \code{--codex-review} is enabled, a second, independently-invoked agent receives the same
+evidence and the first agent's proposal and returns a verdict rather than a rewrite; the controller
+applies the proposal only on \code{approve}. On \code{reject}, the controller gives the original
+research agent up to two revision attempts (\code{MAX\_PROPOSAL\_REVISIONS = 2}), each carrying the
+reviewer's concrete reasons, followed by a fresh independent review of the revision; it never applies
+only the convenient subset of a rejected proposal. A proposal still rejected after its revisions, or
+a review that returns \code{uncertain}, is logged, keeps its old verification timestamp, and is
+deferred for 30 days so a single hard case does not block the rest of a batch. This is the concrete
+mechanism behind the paper's operational slogan: even with two independent models in the loop, the
+controller's deterministic checks and the revision/defer policy---not either model's confidence---
+decide what reaches the public roster.
+
+\subsection{Deployment}
+The deployment workflow (\codelink{.github/workflows/deploy.yml}) runs \code{npm test} and a production
+build on every push to \code{main}, then deploys the static artifact to GitHub Pages. The maintenance
+controller can commit and push directly after its own checks pass, so a substantive change reaches
+the live site without a pull request or manual approval step. This is a strong degree of operational
+automation, but it is not a formal correctness guarantee and does not eliminate human judgment for
+ambiguous evidence; Section~\ref{sec:testing} describes what the test suite actually checks before
+that push is allowed to happen.
+
+\section{Discovery as Partitioned Open-World Search}
+An instruction such as ``find all Vietnamese professors at universities worldwide'' has unbounded
+scope and unmeasurable recall. VietProfs instead generates repeatable queries for a bounded
+university, field, and domain. \code{scripts/faculty-discovery-queries.ts} takes
+\code{--university}, \code{--field}, and an optional \code{--domain} and expands them into a fixed
+template: site-restricted faculty/professor/directory/news/research-center searches, the same
+queries repeated for each of ten common Vietnamese surnames (\code{Nguyen}, \code{Tran}, \code{Le},
+\code{Pham}, \code{Vo}, \code{Vu}, \code{Bui}, \code{Do}, \code{Phan}, \code{Lai}) both site-restricted
+and open, a Google Sites-restricted query for personal/lab pages, and a query aimed at people who
+``moved from'' the institution, to catch departures as well as arrivals. For example,
+\code{--university "New Jersey Institute of Technology" --field "Data Science" --domain njit.edu}
+expands to more than 25 concrete queries such as \code{site:njit.edu "New Jersey Institute of
+Technology" "Data Science" faculty} and \code{site:njit.edu "New Jersey Institute of Technology"
+"Nguyen" "Data Science"}. The agent is expected to audit existing entries for that slice first, gather
+evidence per candidate, and treat coauthors, student pages, grants, and research mentions as leads
+rather than proof. [CODE: \codelink{scripts/faculty-discovery-queries.ts}; DOC:
+\codelinkd{ROSTER_MAINTENANCE.md}{ROSTER\_MAINTENANCE.md}]
+
+This decomposition is a practical form of bounded open-world search. It improves auditability: a
+research pass can say which university/field/country slice it attempted, what was added, and in
+some cases that no eligible addition was found---for example, one country-sweep commit for Taiwan
+records a thorough negative check with no additions, an auditable non-result rather than silence.
+It does not solve recall. Search-engine ranking, English-language visibility, uneven university
+websites, and differing effort across slices remain sampling mechanisms. The repository history shows
+a switch to country-by-country searches, batches for international universities, and field audits.
+These are operational strategies, not evidence of exhaustive coverage.
+
+\section{Evidence and Verification}
+\label{sec:evidence}
+Discovery is not verification. A candidate enters the workflow because a query or lead suggests a
+person; publication requires evidence that the person is current, at the claimed institution and
+department, in an eligible track, with a working official profile. Official faculty pages are the
+preferred source. Personal pages and CVs can supply details, but the current appointment is still
+confirmed on an official source where possible. Search snippets, conference biographies, and
+coauthorship are leads or corroboration rather than default authority.
+
+The implementation therefore follows the rule ``AI proposes; evidence decides,'' a specific instance
+of the broader interactive-machine-learning principle that a model's role is to generate candidates
+and reduce a human reviewer's effort, not to make the final call unsupervised
+\cite{amershi2014power}. The agent can
+read public pages, compare an old record with current evidence, and produce structured data, but the
+controller does not treat free-form model text as canonical state (Section~\ref{sec:architecture}
+describes the exact schema and validation gates this passes through). Rejected proposals receive
+bounded revisions in the configured workflow; incomplete or uncertain work is deferred rather than
+marked successfully verified. A person's original submission through the public form
+(Section~\ref{sec:submit}) enters this same pipeline as a lead rather than being written directly,
+so a visitor-supplied link or name is treated with the same research-workflow rigor as an
+agent-discovered candidate: the maintenance guide directs a reviewer to resolve identity, search the
+canonical roster for the person first, and independently verify the full inclusion standard before
+adding or correcting anything, rather than trusting facts merely because they appear at a
+supplied URL.
+
+The evidence model is practical rather than a formal confidence score. URLs are retained for the
+profile, honors, portrait, and optional personal/Scholar pages, and Git preserves the resulting
+patch. There is no per-field provenance graph or source snapshot store. This is an important
+limitation: a URL is evidence access, not a cryptographic proof that the page had a particular
+content at review time.
+
+\section{Continuous Revalidation and Self-Maintenance}
+\label{sec:maintenance}
+VietProfs separates two loops, shown in Figure~\ref{fig:lifecycle}. Expansion starts from an
+unsearched slice and tries to add a new verified record. Revalidation starts from an existing record
+and checks whether its claim still matches the web. The latter checks profile liveness and role,
+URL-role correctness, Scholar identity, current rank/track, education, honors, and possible moves;
+it also looks for new candidates incidentally. The ledger allows the controller to choose the least
+recently reviewed records rather than repeatedly touching only newly added people.
+
+\begin{figure}[t]
+\centering
+\input{figures/lifecycle.tikz}
+\caption{Record lifecycle. A published record is not terminal; it returns to the revalidation loop.}
+\label{fig:lifecycle}
+\end{figure}
+
+The periodic full-roster refresh workflow specifies six ordered checks per person: (1) confirm
+\code{profileUrl} is not dead, a generic not-found page, or a page that no longer identifies that
+specific person, and if it is, search for a current official profile and either update the record's
+university/field/rank/track or remove the person with a commit-message reason if they no longer
+qualify; (2) independently determine which of the stored \code{profileUrl} and \code{websiteUrl} is
+actually the official university page and which is the personal/lab page, and correct the two even
+when both currently resolve; (3) find and verify a Google Scholar profile using affiliation, research
+area, and publication corroboration rather than name matching alone; (4) read the official and
+personal/lab pages fully and update rank/track, education, and honors under the eligibility rules of
+Section~\ref{sec:honors}; (5) treat any Vietnamese-diaspora name surfaced incidentally---a coauthor, a
+former lab member who became faculty---as a lead for later, not a reason to stall the current batch;
+and (6) record a successful verification in the ledger only once every applicable check above is
+complete, even when nothing else changed, so that future batches can reliably select the oldest
+entries.
+
+Negative evidence requires caution. A disappeared faculty page can mean redesign, a moved URL,
+temporary failure, a university move, retirement, or departure. The maintenance policy explicitly
+avoids treating \code{404} as automatic deletion and calls for corroboration. Removal is also a
+stronger action than addition because it destroys a public claim and can erase a legitimate person
+from the directory. The system supports removal proposals, but the guide's corroboration rule is an
+operational policy rather than a formally verified deletion protocol.
+
+The Git history makes this lifecycle visible. A 20-batch full-roster refresh appears on 26 August
+2026. Subsequent history records automated maintenance batches, country sweeps for Australia, Canada,
+France, Singapore, Taiwan, Japan, Germany, and Hong Kong among others, a Teaching-to-Clinical
+correction, a duplicate merge, a university-name canonicalization, a corrected affiliation, and a
+policy-based removal. These examples show that maintenance is not a periodic cosmetic edit; it
+changes eligibility, identity, affiliation, and derived data assumptions.
+
+\section{Testing and Validation}
+\label{sec:testing}
+Because the controller is authorized to push directly to the branch that GitHub Actions deploys, the
+test suite that gates it is load-bearing rather than advisory. \code{npm test} runs
+\code{scripts/validate-data.ts} followed by three Node test files. \code{validate-data.ts}
+independently re-implements the roster invariants also enforced at proposal time---required-field
+presence, canonical UTC \code{lastUpdatedAt}/\code{lastVerifiedAt} timestamps that are not in the
+future, HTTP(S)/HTTPS URL roles, portrait path shape and on-disk existence, honor category and
+duplicate checks, degree-year ranges, accepted tracks, non-empty \code{researchAreas}---and, in
+addition, cross-checks \code{public/data.json} against \code{maintenance/verification.json}: every
+canonical name must have exactly one ledger entry, and the ledger must not contain a stale entry for
+a name no longer on the roster. \code{test/data.test.ts} covers the field-mapping taxonomy and its
+overrides, the diacritic-insensitive search index, and the derived-facts builders in
+Section~\ref{sec:results}, including their behavior on small or empty filtered rosters.
+\code{test/maintenance-controller.test.ts} exercises \code{proposalValidationError} and
+\code{analyzeRosterProposal} directly against constructed before/after rosters, including the
+scope-violation cases (reordering, inserting an unrelated person, editing outside the target) that
+Section~\ref{sec:architecture} describes. \code{test/ui.test.ts} checks rendering logic such as card
+content and leaderboard construction. A separate \code{npm run test:e2e} runs
+\code{test/browser-smoke.test.ts} with Playwright against a built site, loading the real
+\code{index.html} and \code{submit.html} in a headless browser to catch integration failures---a
+broken search box, a filter that does not update the URL, a submission form that cannot find an
+existing record---that unit tests over the data layer cannot see. \code{npm run typecheck} runs the
+TypeScript compiler with no emit as a fourth, independent check. The maintenance guide additionally
+requires \code{npm test}, \code{npm run build}, and \code{git diff --check} before any roster commit,
+whether made by a human or the controller.
+
 \section{Operational Experience and Evaluation}
 This work is an operational characterization, not a controlled experiment. The repository provides
 strong evidence about implementation and history but not precision, recall, cost, or detection
 latency. The current snapshot has 701 Tenure-line, 68 Teaching, 37 Emeritus, 21 Clinical, and 4
 Research records. It contains 103 personal/lab URLs, 325 Scholar URLs, and 178 records with at least
-one honor. These figures describe fields present in the snapshot, not their correctness or
-completeness.
+one honor. Of the 656 records with an explicit PhD institution, PhD years span 1962--2026 across 488
+records with an explicit year, a wide enough range that any framing of the roster as capturing only
+recent arrivals in the diaspora would be unsupported. These figures describe fields present in the
+snapshot, not their correctness or completeness.
 
 \begin{table}[t]
 \centering
@@ -285,11 +1121,12 @@ completeness.
 \toprule
 Case & Repository evidence & Result\\
 \midrule
-Duplicate & \code{2aa15c0}; University of Dayton & Duplicate entries for Tam V. Nguyen merged.\\
-Policy removal & \code{9a4a171}; inclusion-standard decision & Nhung Nguyen (UCSF) removed.\\
-Track correction & \code{ba71beb}; BU Dental & Teaching changed to Clinical.\\
-Affiliation correction & \code{c1f4380} & Nguyen-Truc-Dao Nguyen affiliation corrected.\\
-Name/identity cleanup & \code{c0c0603}, \code{4212955} & True duplicate, suffix, and university-name canonicalization fixed.\\
+Duplicate & \commitlink{2aa15c0}; University of Dayton & Duplicate entries for Tam V. Nguyen merged.\\
+Policy removal & \commitlink{9a4a171}; inclusion-standard decision & Nhung Nguyen (UCSF) removed.\\
+Track correction & \commitlink{ba71beb}; BU Dental & Teaching changed to Clinical.\\
+Affiliation correction & \commitlink{c1f4380} & Nguyen-Truc-Dao Nguyen affiliation corrected.\\
+Name/identity cleanup & \commitlink{c0c0603}, \commitlink{4212955} & True duplicate, suffix, and university-name canonicalization fixed.\\
+Negative discovery & \commitlink{9b31b95}; Taiwan country sweep & Thorough search, no eligible addition found.\\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -299,35 +1136,29 @@ large work reviewable; checkpoints make long agent sessions resumable; tests enc
 as unique names, unique profiles, valid tracks, and targeted proposal scope; and the ledger separates
 ``reviewed'' from ``changed.'' The absence of candidate-level telemetry is equally important. There
 is currently no denominator for candidates considered, no rejection taxonomy, no measured human
-review rate, and no time-to-detection metric.
+review rate, and no time-to-detection metric; Section~\ref{sec:whatdoesnotwork} and the metrics notes
+in the repository (\code{METRICS.md}) enumerate what a controlled evaluation would need to add:
+per-run candidate outcomes, rejection reasons, elapsed time and token/API cost per person, and a
+measured interval between an external page changing and the directory detecting it.
 
 \section{What Does Not Work}
+\label{sec:whatdoesnotwork}
 Unbounded LLM enumeration is a poor source of a canonical roster. It omits people, hallucinates
-affiliations, and cannot provide a defensible stopping condition. Surname inference is unsafe and
-ethically inadequate. Search snippets are stale and incomplete. Direct model writes would make it
+affiliations---a documented failure mode of language-model generation in general, not one specific
+to this task \cite{ji2023survey}---and cannot provide a defensible stopping condition. Surname
+inference is unsafe and ethically inadequate \cite{mateos2007name,ambekar2009name}. Search snippets are stale and incomplete. Direct model writes would make it
 difficult to constrain scope, distinguish a proposed change from an approved one, or recover from a
 mistaken bulk edit. VietProfs instead requires structured proposals and targeted changes.
 
 Other failures are subtler. A broad title such as ``Research Assistant Professor'' cannot establish
 eligibility by itself. A page disappearance is not a departure. A personal homepage is not the same
-source role as an official university profile. Department keywords misclassify ambiguous institutional
-contexts unless overrides are maintained. Finally, a current count cannot be described as growth or
-a migration path without versioned historical data and an explicit comparison. These lessons are
-implemented in policy, tests, and recent corrective commits, but they remain areas for ongoing
-measurement.
-
-\section{Limitations and Ethics}
-VietProfs is not a census. Coverage is affected by search effort, English-language discoverability,
-university web quality, public-profile availability, initial field emphasis, international title
-conventions, and the differing maturity of collection passes. The 554/277 U.S./international split
-must not be interpreted as a population ratio. Nor should current concentrations be interpreted as
-prestige, demographic size, causation, migration history, or research quality.
-
-The directory handles sensitive identity-adjacent information. It should not infer ethnicity or
-national origin from names, and it should publish only public professional information necessary for
-the directory's purpose. Portraits, honors, and education need source and scope rules. Public
-submission and correction mechanisms help people contest errors, but a future release should expose
-clear removal/contact policy, retention expectations, and an audit trail for disputed changes.
+source role as an official university profile, and the two are easy for either a human or a model to
+swap even when both currently resolve, which is why the periodic-refresh workflow checks both roles
+independently rather than trusting whichever URL happens to already be stored in each field.
+Department keywords misclassify ambiguous institutional contexts unless overrides are maintained.
+Finally, a current count cannot be described as growth or a migration path without versioned
+historical data and an explicit comparison. These lessons are implemented in policy, tests, and
+recent corrective commits, but they remain areas for ongoing measurement.
 
 \section{General Lessons}
 The case study suggests the following design principles for agent-maintained public datasets:
@@ -343,6 +1174,8 @@ The case study suggests the following design principles for agent-maintained pub
 \item Reserve human attention for ambiguity, identity resolution, policy exceptions, and disputes.
 \item Design telemetry before deployment: outcomes, reasons, cost, latency, and reviewer actions.
 \item Recompute or invalidate derived knowledge when primary claims change.
+\item Route human-submitted leads through the same evidence pipeline as agent-discovered ones, rather
+  than trusting a visitor-supplied fact merely because a person asked for it.
 \end{enumerate}
 Together these principles implement the operational slogan ``AI proposes; evidence decides'' without
 pretending that the web or the model is fully reliable.
@@ -367,24 +1200,49 @@ OpenAlex provides a useful contrast as a large, open scholarly knowledge graph o
 venues, institutions, and concepts \cite{priem2022openalex}. VietProfs has a narrower population,
 more detailed appointment eligibility, and a public-directory interaction model. DBLP and ORCID are
 also important reference ecosystems for scholarly identity, but VietProfs's engineering problem is
-the current faculty appointment and its evidence, not publication identity alone. The contribution
-here is therefore an experience report about a specialized, continuously revalidated directory and
-the operational boundary between agent assistance and canonical data.
+the current faculty appointment and its evidence, not publication identity alone. The classification
+literature underlying Section~\ref{sec:fields}---the NCES Classification of Instructional Programs
+and the NSF Survey of Earned Doctorates taxonomy \cite{nces_cip2020,nsf_sed}, and the NIH's
+Institute/Center structure \cite{nih_ics}---is federal statistical and administrative infrastructure
+rather than research literature, but it is what lets VietProfs's field taxonomy be read against
+national context instead of standing alone. The contribution here is therefore twofold: a public,
+purpose-built directory for a specific and previously unserved community, and an experience report
+about the operational boundary between agent assistance and canonical data in a specialized,
+continuously revalidated directory.
 
 \section{Conclusion}
-Small specialized public datasets used to be expensive to maintain because every correction required
-continuous human labor against a changing web. VietProfs shows how that labor can be reduced with
-bounded agent tasks, structured proposals, deterministic invariants, provenance links, resumable
-revalidation, and human oversight. It also shows why automation is not the same as autonomy: the
-directory remains incomplete, sources conflict, titles are ambiguous, and derived knowledge can
-become stale.
+A directory like VietProfs is not a database to be finished; it is a relationship to be kept. The
+contribution of this paper is not that we solved data-quality engineering in general. It is that a
+small, name-independent inclusion rule, paired with an evidence-gated agent pipeline, let a resource
+this community never had exist and stay trustworthy, without demanding a permanent human maintenance
+staff. That is worth having on its own terms. A graduate student can now find an advisor who shares
+her background in one search instead of dozens. A professor moving countries can see who is already
+there. A community that spans continents and six decades---from \vplink{Xuong+Nguyen-Huu}{Xuong
+Nguyen-Huu}'s 1962 PhD to next year's newest hire---can, for the first time, see itself in one place.
 
-The broader view is that a public directory is a continuously revalidated collection of claims about
-a changing external world. The useful system boundary is therefore not ``LLM writes JSON,'' but
-``agents propose evidence-backed changes to a constrained claim store, which is periodically
-reconciled with its sources.'' As the cost of this reconciliation falls, more specialized public
-knowledge resources may become practical to sustain---provided their authors measure coverage,
-retain provenance, support correction, and state clearly what the data does and does not establish.
+We do not think this is the end state, and a few directions we are actively considering would turn
+VietProfs from a static listing into something closer to a living network. One is opt-in academic
+genealogy: letting advisors and their students link their entries, so a visitor could trace not just
+who is where but who trained whom, the way scholars already trace mathematical and scientific
+lineages, revealing multi-generation chains of Vietnamese-diaspora mentorship that no single record
+shows on its own. Another is proximity and mentorship matching: surfacing ``N Vietnamese-diaspora
+faculty within 50 miles of you,'' or letting a prospective student opt in to informal mentorship with
+a faculty member outside their own institution, turning a search result into an introduction. A
+third, closer to the scientific-diaspora literature that motivated this project
+(Section~\ref{sec:intro-what}), is a deliberate bridge back to Vietnam: letting universities and
+researchers inside the country discover and reach out to diaspora faculty for guest lectures, joint
+appointments, and collaboration, so the directory serves circulation between two academic communities
+rather than only enumeration of one. A fourth is self-verification: letting the people listed claim,
+correct, and extend their own entries directly, turning today's one-directional maintenance pipeline
+into a two-way one where the subjects of the directory become its co-maintainers.
+
+None of this requires abandoning the boundary this paper argues for. A model can propose a genealogy
+edge, a mentorship match, or a self-submitted correction, but a deterministic gate---and, where
+needed, a human---should still decide what becomes a public claim. What changes is the ambition. The
+engineering pattern here, agents propose and evidence decides while a small team keeps a few hundred
+records honest against a changing web, is only useful in service of a larger one: giving a diaspora
+that never had a single place to find itself the beginning of one, and leaving room for that place to
+grow into something people actually use to find each other, not merely to be found.
 
 \bibliographystyle{plain}
 \bibliography{references}
