@@ -1008,7 +1008,18 @@ async function commitBatch() {
     '-m', `Maintenance-Batch: ${state.runId}`,
     '-m', `Approved: ${state.completed.map((entry) => entry.name).join(', ')}`,
   ], { label: `commit maintenance batch ${state.runId}` });
+  const commit = await gitText(['rev-parse', 'HEAD']);
+  for (const entry of state.completed) entry.commit = commit;
   return true;
+}
+
+async function logBatchSummary(commitCreated) {
+  const changed = state.completed.filter((entry) => entry.changed);
+  const unchanged = state.completed.filter((entry) => !entry.changed);
+  await log(`Batch summary: ${state.completed.length} approved (${changed.length} changed, ${unchanged.length} unchanged); ${state.skipped.length} skipped; commit ${commitCreated ? state.completed[0]?.commit || 'created' : 'none'}.`);
+  if (changed.length) await log(`Changed: ${changed.map((entry) => entry.name).join(', ')}.`);
+  if (unchanged.length) await log(`Unchanged: ${unchanged.map((entry) => entry.name).join(', ')}.`);
+  for (const entry of state.skipped) await log(`Skipped: ${entry.name} — ${entry.reason}.`);
 }
 
 async function pushBatch() {
@@ -1202,10 +1213,12 @@ async function runController(options) {
     await processCurrent(schemas);
   }
   await runFullChecks();
-  if (await commitBatch()) await pushBatch();
+  const commitCreated = await commitBatch();
+  if (commitCreated) await pushBatch();
   state.status = 'complete';
   state.completedAt = nowIso();
   await saveState();
+  await logBatchSummary(commitCreated);
   await log(`Run complete: ${state.completed.length} approved, ${state.skipped.length} skipped.`);
 }
 
