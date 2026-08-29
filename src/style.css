@@ -180,41 +180,6 @@ h1 {
   transform: translateY(0);
 }
 
-.holiday-banner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-  margin-top: 1rem;
-  padding: 0.6rem 0.9rem;
-  border-radius: 8px;
-  background: var(--tag-bg);
-  color: var(--text-primary);
-  font-size: var(--text-sm);
-}
-
-/* `display: flex` above otherwise beats the UA stylesheet's `[hidden] { display: none }`, since
-   author CSS always wins over UA CSS regardless of selector specificity — leaving an empty bar
-   visible even while the `hidden` attribute is set and no holiday is active. */
-.holiday-banner[hidden] {
-  display: none;
-}
-
-.banner-close {
-  background: none;
-  border: none;
-  color: var(--text-muted);
-  font-size: var(--text-lg);
-  line-height: 1;
-  cursor: pointer;
-  padding: 0 0.2rem;
-}
-
-.banner-close:hover,
-.banner-close:focus-visible {
-  color: var(--text-primary);
-}
-
 .controls {
   position: relative;
   display: grid;
@@ -444,6 +409,7 @@ a.entry-name:focus-visible {
   text-decoration: underline;
 }
 
+.personal-site-link,
 .scholar-link,
 .profile-link {
   color: var(--text-muted);
@@ -451,6 +417,8 @@ a.entry-name:focus-visible {
   vertical-align: text-bottom;
 }
 
+.personal-site-link:hover,
+.personal-site-link:focus-visible,
 .scholar-link:hover,
 .scholar-link:focus-visible,
 .profile-link:hover,
@@ -458,10 +426,14 @@ a.entry-name:focus-visible {
   color: var(--text-primary);
 }
 
+.personal-site-link svg,
 .scholar-link svg,
 .profile-link svg {
   height: 1rem;
   width: 1rem;
+}
+
+.scholar-link svg {
   fill: currentColor;
 }
 

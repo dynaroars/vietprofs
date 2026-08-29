@@ -56,6 +56,10 @@ test('directory loads and searching changes the roster', async (t) => {
   assert.ok(initial > 0);
   assert.equal(await page.locator('.entry-updated').count(), initial);
   assert.equal(await page.locator('.entry-name-row > .entry-updated').count(), initial);
+  const personalSiteLinks = page.locator('.personal-site-link');
+  assert.ok(await personalSiteLinks.count() > 0);
+  assert.match(await personalSiteLinks.first().getAttribute('href'), /^https?:\/\//);
+  assert.equal(await personalSiteLinks.first().getAttribute('title'), 'Personal or lab website');
   const updated = page.locator('.entry-updated').first();
   assert.match(await updated.textContent(), /^Updated \d{1,2}\/\d{1,2}\/\d{2}$/);
   assert.match(await updated.getAttribute('datetime'), /^\d{4}-\d{2}-\d{2}T.*Z$/);

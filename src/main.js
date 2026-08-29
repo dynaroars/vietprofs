@@ -1,7 +1,6 @@
 import './style.css';
 import { loadRoster, buildSearchIndex, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, LOCATION_LABELS, countryFlag, canonicalRank, displayName, displayUniversity, vietnameseName, fieldOf, healthSubfieldOf, locationMatches, filterRoster, buildFunFacts, buildUsFunFacts, buildGlobalFunFacts, buildAwardsFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, STATE_ABBR, parseSearchQuery, continentOf } from './data.js';
 import { escapeHtml, formatRosterDate, formatRosterShortDate } from './utils.js';
-import { nearestVietnameseHoliday } from './holidays.js';
 import { STATE_GRID } from './state-grid.js';
 
 // Sentinel field-select value for the "show me something interesting" view. Distinct from any
@@ -67,7 +66,6 @@ function renderShell() {
         <a class="submission-link" href="submit.html">Add or update info</a>
       </div>
     </header>
-    <div class="holiday-banner" id="holiday-banner" hidden></div>
     <div class="controls">
       <input id="search" class="search-input" type="search" list="search-suggestions" placeholder="Search name, university, department, rank, honors, or research area…" aria-label="Search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-suggestion-panel" />
       <datalist id="search-suggestions"></datalist>
@@ -137,6 +135,7 @@ function formatLocation(p) {
 
 const SCHOLAR_ICON = '<path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3Z"/><path d="M5 12.18V16c0 1.66 3.13 3 7 3s7-1.34 7-3v-3.82l-7 3.82-7-3.82Z"/>';
 const PROFILE_ICON = '<path d="M12 3 3 9v2h18V9L12 3Zm-7 10v6h2v-6H5Zm6 0v6h2v-6h-2Zm6 0v6h2v-6h-2ZM3 21h18v-2H3v2Z"/>';
+const PERSONAL_SITE_ICON = '<path d="m12 3-9 8h3v10h5v-6h2v6h5V11h3l-9-8Z"/>';
 
 function entryIconLink({ className, href, label, title, icon }) {
   return ` <a class="${className}" href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(label)}" title="${escapeHtml(title)}"><svg viewBox="0 0 24 24" aria-hidden="true">${icon}</svg></a>`;
@@ -202,6 +201,9 @@ function renderRoster(roster, { field, location } = {}) {
         ? `<a class="entry-name" href="${escapeHtml(p.websiteUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(visibleName)}</a>`
         : `<span class="entry-name">${escapeHtml(visibleName)}</span>`;
       const profileIcon = entryIconLink({ className: 'profile-link', href: p.profileUrl, label: `${visibleName} official university profile`, title: 'Official university profile', icon: PROFILE_ICON });
+      const personalSiteIcon = p.websiteUrl
+        ? entryIconLink({ className: 'personal-site-link', href: p.websiteUrl, label: `${visibleName} personal or lab website`, title: 'Personal or lab website', icon: PERSONAL_SITE_ICON })
+        : '';
       const scholarIcon = p.scholarUrl
         ? entryIconLink({ className: 'scholar-link', href: p.scholarUrl, label: `${visibleName} on Google Scholar`, title: 'Google Scholar', icon: SCHOLAR_ICON })
         : '';
@@ -211,7 +213,7 @@ function renderRoster(roster, { field, location } = {}) {
           <div class="entry-content">
               <div class="entry-name-row">
                 ${nameMarkup}
-                <span class="entry-vietnamese-name">(${escapeHtml(nativeName)})</span>${profileIcon}${scholarIcon}${updatedTime}
+                <span class="entry-vietnamese-name">(${escapeHtml(nativeName)})</span>${profileIcon}${personalSiteIcon}${scholarIcon}${updatedTime}
               </div>
               <div class="entry-meta">${escapeHtml(entryMeta)} <span class="loc-badge" title="${escapeHtml(p.country || 'United States')}"><span class="country-flag" aria-hidden="true">${countryFlag(p.country)}</span></span></div>
               ${educationDetails.length ? `<div class="entry-details">${educationDetails.map((value) => escapeHtml(value)).join('; ')}</div>` : ''}
@@ -847,16 +849,6 @@ async function init() {
   backToTopBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
-
-  const holiday = nearestVietnameseHoliday(new Date());
-  if (holiday) {
-    const bannerEl = document.getElementById('holiday-banner');
-    bannerEl.hidden = false;
-    bannerEl.innerHTML = `<span>${holiday.emoji} ${escapeHtml(holiday.greeting)}</span><button type="button" class="banner-close" aria-label="Dismiss">×</button>`;
-    bannerEl.querySelector('.banner-close').addEventListener('click', () => {
-      bannerEl.hidden = true;
-    });
-  }
 
   const facts = buildFunFacts(roster);
   const randomFact = facts[Math.floor(Math.random() * facts.length)];
