@@ -6,8 +6,14 @@ export interface Honor {
   source?: string;
 }
 
+export interface OtherDegree {
+  degree: string;
+  institution: string;
+  year?: number;
+  source?: string;
+}
+
 export interface RosterEntry {
-  [key: string]: any;
   name: string;
   university: string;
   city?: string;
@@ -32,9 +38,25 @@ export interface RosterEntry {
   profileUrl?: string;
   websiteUrl?: string;
   scholarUrl?: string;
+  lastUpdatedAt?: string;
+  portrait?: string;
+  portraitSource?: string;
+  otherDegrees?: OtherDegree[];
 }
 
 export type Roster = RosterEntry[];
+
+type CredentialField = 'phdInstitution' | 'phdYear' | 'postdocInstitution' | 'postdocYear'
+  | 'msInstitution' | 'msYear' | 'mdInstitution' | 'mdYear'
+  | 'undergradInstitution' | 'undergradYear';
+
+const CREDENTIAL_FIELDS: Record<string, [CredentialField, CredentialField]> = {
+  phd: ['phdInstitution', 'phdYear'],
+  postdoc: ['postdocInstitution', 'postdocYear'],
+  ms: ['msInstitution', 'msYear'],
+  md: ['mdInstitution', 'mdYear'],
+  undergrad: ['undergradInstitution', 'undergradYear'],
+};
 
 let cached: Roster | null = null;
 
@@ -91,19 +113,19 @@ export async function loadRoster(): Promise<Roster> {
   return cached;
 }
 
-export function uniqueStates(roster) {
+export function uniqueStates(roster: Roster): string[] {
   return [...new Set(roster.map((p) => p.state).filter(Boolean))].sort();
 }
 
-export function uniqueDepartments(roster) {
+export function uniqueDepartments(roster: Roster): string[] {
   return [...new Set(roster.map((p) => p.department).filter(Boolean))].sort();
 }
 
-export function uniqueCities(roster) {
+export function uniqueCities(roster: Roster): string[] {
   return [...new Set(roster.map((p) => p.city).filter(Boolean))].sort();
 }
 
-export function uniqueRanks(roster) {
+export function uniqueRanks(roster: Roster): string[] {
   return [...new Set(roster.map(canonicalRank).filter(Boolean))].sort();
 }
 
@@ -225,7 +247,7 @@ export function vietnameseName(person) {
   return vietnameseGivenNames(current);
 }
 
-export function uniqueResearchAreas(roster) {
+export function uniqueResearchAreas(roster: Roster): string[] {
   return [...new Set(roster.flatMap((p) => p.researchAreas).filter(Boolean))].sort();
 }
 
@@ -237,11 +259,11 @@ export function uniqueResearchAreas(roster) {
 // emeritus title after a tenure-line career — plain retirement without the conferred title doesn't
 // qualify. None includes adjunct, visiting, postdoctoral, affiliate, or other term-limited or
 // part-time positions; those stay excluded from the roster. See ROSTER_MAINTENANCE.md.
-export const TRACKS = ['Tenure-line', 'Teaching', 'Research', 'Clinical', 'Emeritus'];
+export const TRACKS: string[] = ['Tenure-line', 'Teaching', 'Research', 'Clinical', 'Emeritus'];
 
 // Continent/region values supported by structured location queries and the second
 // ("by continent") section of the visible location dropdown.
-export const LOCATIONS = [
+export const LOCATIONS: string[] = [
   'US',
   'North America',
   'South America',
@@ -252,7 +274,7 @@ export const LOCATIONS = [
   'World',
 ];
 
-export const COUNTRY_TO_CONTINENT = {
+export const COUNTRY_TO_CONTINENT: Record<string, string> = {
   // North America
   'United States': 'North America',
   'US': 'North America',
@@ -325,7 +347,7 @@ export const COUNTRY_TO_CONTINENT = {
   'Morocco': 'Africa',
 };
 
-export const COUNTRY_FLAGS = {
+export const COUNTRY_FLAGS: Record<string, string> = {
   'United States': '🇺🇸',
   'US': '🇺🇸',
   'USA': '🇺🇸',
@@ -384,7 +406,7 @@ export function countryFlag(country) {
   return COUNTRY_FLAGS[country] || '🌐';
 }
 
-export const LOCATION_LABELS = {
+export const LOCATION_LABELS: Record<string, string> = {
   'US': '🇺🇸 United States',
   'North America': '🌎 North America',
   'South America': '🌎 South America',
@@ -414,7 +436,7 @@ export function locationMatches(person, location) {
   return cont.toLowerCase() === location.toLowerCase();
 }
 
-export function uniqueCountries(roster) {
+export function uniqueCountries(roster: Roster): string[] {
   return [...new Set(roster.map((p) => p.country || 'United States'))].sort();
 }
 
@@ -575,7 +597,7 @@ const FIELD_RULES = [
   // A department that matches none of the established broad disciplines is grouped under Others.
 ];
 
-export function fieldOf(department, university) {
+export function fieldOf(department: string, university?: string): string {
   const override = university && FIELD_OVERRIDES.get(`${department}|${university}`);
   if (override) return override;
   return FIELD_RULES.find((rule) => rule.match.test(department))?.field ?? 'Others';
@@ -641,7 +663,13 @@ export const STATE_ABBR = {
   'West Virginia': 'WV', Wisconsin: 'WI', Wyoming: 'WY',
 };
 
-export function parseSearchQuery(query: string): any {
+export interface ParsedSearchQuery {
+  type: string;
+  text: string;
+  credential?: string;
+}
+
+export function parseSearchQuery(query: string): ParsedSearchQuery {
   if (!query) return { type: 'all', text: '' };
   const trimmed = query.trim();
   if (/^(honors|awards)$/i.test(trimmed)) {
@@ -759,18 +787,15 @@ export function filterRoster(roster: Roster | ReturnType<typeof buildSearchIndex
   }
 
   if (parsed.type === 'credential') {
-    const fields = {
-      phd: ['phdInstitution', 'phdYear'],
-      postdoc: ['postdocInstitution', 'postdocYear'],
-      ms: ['msInstitution', 'msYear'],
-      md: ['mdInstitution', 'mdYear'],
-      undergrad: ['undergradInstitution', 'undergradYear'],
-    }[parsed.credential];
+    const fields = CREDENTIAL_FIELDS[parsed.credential || ''];
+    if (!fields) return [];
     const target = stripDiacritics(parsed.text.toLowerCase());
     return result.filter((p) => {
       const [institutionField, yearField] = fields;
-      if (!p[institutionField] && !p[yearField]) return false;
-      return !target || (p[institutionField] && stripDiacritics(p[institutionField].toLowerCase()).includes(target));
+      const institution = p[institutionField];
+      const year = p[yearField];
+      if (!institution && !year) return false;
+      return !target || (typeof institution === 'string' && stripDiacritics(institution.toLowerCase()).includes(target));
     });
   }
 

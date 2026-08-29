@@ -1,5 +1,5 @@
 import './style.css';
-import { loadRoster, buildSearchIndex, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, LOCATION_LABELS, countryFlag, canonicalRank, displayName, displayUniversity, vietnameseName, fieldOf, healthSubfieldOf, locationMatches, filterRoster, buildFunFacts, buildUsFunFacts, buildGlobalFunFacts, buildAwardsFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, STATE_ABBR, parseSearchQuery, continentOf } from './data.ts';
+import { loadRoster, buildSearchIndex, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, LOCATION_LABELS, countryFlag, canonicalRank, displayName, displayUniversity, vietnameseName, fieldOf, healthSubfieldOf, locationMatches, filterRoster, buildFunFacts, buildUsFunFacts, buildGlobalFunFacts, buildAwardsFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, STATE_ABBR, parseSearchQuery, continentOf, type Roster } from './data.ts';
 import { escapeHtml, formatRosterDate, formatRosterShortDate } from './utils.ts';
 import { STATE_GRID } from './state-grid.ts';
 
@@ -92,7 +92,7 @@ function renderShell() {
 // Tooltip copy shown on the track qualifier word in the result count — only rendered when every
 // entry currently displayed shares one track; a mixed set (the "all tracks" default) drops the
 // qualifier entirely rather than mislabeling a mixed roster as one or the other.
-const TRACK_INFO = {
+const TRACK_INFO: Record<string, { label: string; tooltip: string }> = {
   'Tenure-line': {
     label: 'tenure-line',
     tooltip: 'On the tenure track or already tenured — not adjunct, visiting, teaching-only, research-track, or emeritus.',
@@ -116,7 +116,7 @@ const TRACK_INFO = {
 };
 
 function trackQualifier(roster) {
-  const tracks = new Set(roster.map((p) => p.track));
+  const tracks = new Set<string>(roster.map((p) => p.track).filter(Boolean));
   if (tracks.size !== 1) return '';
   const info = TRACK_INFO[[...tracks][0]];
   return info ? ` <span class="term" tabindex="0" data-tooltip="${escapeHtml(info.tooltip)}">${info.label}</span>` : '';
@@ -140,7 +140,12 @@ function entryIconLink({ className, href, label, title, icon }) {
   return ` <a class="${className}" href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(label)}" title="${escapeHtml(title)}"><svg viewBox="0 0 24 24" aria-hidden="true">${icon}</svg></a>`;
 }
 
-function renderRoster(roster, { field, location } = {}) {
+interface RenderOptions {
+  field?: string;
+  location?: string;
+}
+
+function renderRoster(roster: Roster, { field, location }: RenderOptions = {}) {
   const rosterEl = document.getElementById('roster');
   const countEl = document.getElementById('result-count');
   const universities = new Set(roster.map((p) => p.university)).size;
@@ -517,7 +522,7 @@ async function init() {
     location = locationSelect.value || 'World',
     field = fieldSelect.value || 'all',
     track = trackSelect.value || 'all',
-  } = {}) {
+  }: RenderOptions & { track?: string } = {}) {
     const locVal = location;
     const fieldVal = field;
     const trackVal = track;
@@ -683,7 +688,7 @@ async function init() {
     try {
       const response = await fetch('https://ipwho.is/', { signal: AbortSignal.timeout(2500) });
       if (!response.ok) return;
-      const location = await response.json();
+      const location = await response.json() as { country?: string; country_code?: string };
       const country = String(location.country || '').trim();
       const normalizedCountry = country.toLocaleLowerCase();
       const rosterCountry = uniqueCountries(roster).find((value) => value.toLocaleLowerCase() === normalizedCountry);
@@ -777,7 +782,7 @@ async function init() {
   searchInput.addEventListener('focus', showSuggestions);
   searchInput.addEventListener('input', showSuggestions);
   searchInput.addEventListener('keydown', (event) => {
-    const options = [...suggestionPanel.querySelectorAll('.search-suggestion')];
+      const options = [...suggestionPanel.querySelectorAll<HTMLButtonElement>('.search-suggestion')];
     if (event.key === 'Escape') {
       hideSuggestions();
       return;
@@ -810,14 +815,15 @@ async function init() {
   // Delegated on the roster container itself (attached once) rather than per-entry/per-tile,
   // since renderRoster()/renderFunFacts() both replace its innerHTML wholesale on every update().
   document.getElementById('roster').addEventListener('click', (e) => {
-    const tile = e.target.closest('.state-tile');
+    const target = e.target as HTMLElement;
+    const tile = target.closest<HTMLButtonElement>('.state-tile');
     if (tile) {
       searchInput.value = tile.dataset.state;
       setFilterValues({ location: 'US' }); // leaving the facts view to show filtered U.S. results
       update();
       return;
     }
-    const rankedItem = e.target.closest('.ranked-item');
+    const rankedItem = target.closest<HTMLButtonElement>('.ranked-item');
     if (rankedItem && rankedItem.dataset.search) {
       searchInput.value = rankedItem.dataset.search;
       fieldSelect.value = 'all';
@@ -844,7 +850,8 @@ async function init() {
   const populatedLocations = locationOptions.filter((location) =>
     !['US', 'World'].includes(location) && filtersHaveResults(location, 'all', 'all')
   );
-  const examples = [
+  type Example = { type: 'search' | 'field' | 'track' | 'loc' | 'fact'; value: string; label?: string };
+  const examples: Example[] = [
     ...pickRandomUnique(roster.map((p) => displayName(p.name)), 2).map((value) => ({ type: 'search', value })),
     ...pickRandomUnique(uniqueDepartments(roster), 1).map((value) => ({ type: 'search', value })),
     ...pickRandomUnique(uniqueStates(roster), 1).map((value) => ({ type: 'search', value })),
@@ -853,7 +860,7 @@ async function init() {
     ...pickRandomUnique(TRACKS, 1).map((track) => ({ type: 'track', value: track })),
     ...pickRandomUnique(populatedLocations, 1).map((loc) => ({ type: 'loc', value: loc })),
     { type: 'fact', value: randomFact },
-  ].sort(() => Math.random() - 0.5);
+  ].sort(() => Math.random() - 0.5) as Example[];
   const examplesEl = document.getElementById('examples');
   examplesEl.replaceChildren();
   const label = document.createElement('span');
@@ -872,7 +879,7 @@ async function init() {
     examplesEl.append(button);
   }
   examplesEl.addEventListener('click', (e) => {
-    const btn = e.target.closest('.example-chip');
+    const btn = (e.target as HTMLElement).closest<HTMLButtonElement>('.example-chip');
     if (!btn) return;
     if (btn.dataset.fun) {
       searchInput.value = '';

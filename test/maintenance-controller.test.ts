@@ -16,7 +16,7 @@ import {
   selectTargetEntries,
 } from '../scripts/maintain-roster.ts';
 
-const people = [
+const people: Array<Record<string, any>> = [
   { name: 'Recent Person', lastUpdatedAt: '2025-01-01T00:00:00.000Z', university: 'Recent University' },
   { name: 'Old Person', lastUpdatedAt: '2024-01-01T00:00:00.000Z', university: 'Old University' },
   { name: 'Never Person', lastUpdatedAt: '2023-01-01T00:00:00.000Z', university: 'Never University' },

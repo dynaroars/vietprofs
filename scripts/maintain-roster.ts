@@ -119,7 +119,7 @@ async function exists(path) {
   }
 }
 
-async function readJson(path, fallback = null) {
+async function readJson<T = any>(path: string, fallback: T | null = null): Promise<T | null> {
   try {
     return JSON.parse(await readFile(path, 'utf8'));
   } catch (error) {
@@ -224,13 +224,29 @@ function capture(previous, chunk) {
   return next.length <= MAX_CAPTURE_CHARS ? next : next.slice(-MAX_CAPTURE_CHARS);
 }
 
-async function runProcess(command, args, {
+interface ProcessResult {
+  code: number;
+  signal: NodeJS.Signals | null;
+  stdout: string;
+  stderr: string;
+  timedOut: boolean;
+}
+
+interface ProcessOptions {
+  label?: string;
+  logFile?: string | null;
+  timeoutMinutes?: number;
+  allowFailure?: boolean;
+  onStdoutLine?: ((line: string) => void) | null;
+}
+
+async function runProcess(command: string, args: string[], {
   label = command,
   logFile = null,
   timeoutMinutes = 0,
   allowFailure = false,
   onStdoutLine = null,
-} = {}) {
+}: ProcessOptions = {}): Promise<ProcessResult> {
   if (stopRequested) throw new StopRequestedError('stop requested');
   await log(`Starting ${label}.`);
   const child = spawn(command, args, {
@@ -266,7 +282,7 @@ async function runProcess(command, args, {
     stderr = capture(stderr, text);
     outputStream?.write(text);
   });
-  const closed = new Promise((resolveResult, rejectResult) => {
+  const closed = new Promise<ProcessResult>((resolveResult, rejectResult) => {
     child.once('error', rejectResult);
     child.once('close', (code, signal) => resolveResult({
       code: code ?? 1,
@@ -308,11 +324,11 @@ async function runProcess(command, args, {
   return result;
 }
 
-async function git(args, options = {}) {
+async function git(args: string[], options: ProcessOptions = {}): Promise<ProcessResult> {
   return runProcess('git', args, { ...options, label: options.label || `git ${args[0]}` });
 }
 
-async function gitText(args, options = {}) {
+async function gitText(args: string[], options: ProcessOptions = {}): Promise<string> {
   return (await git(args, options)).stdout.trim();
 }
 
@@ -712,7 +728,7 @@ async function ensureSchemas() {
 }
 
 async function assertPreflight({ codexReview = false, agent = 'claude' } = {}) {
-  const checks = [
+  const checks: [string, string[], string][] = [
     ['git', ['--version'], 'Git'],
     ['node', ['--version'], 'Node.js'],
     ['npm', ['--version'], 'npm'],
@@ -1180,7 +1196,13 @@ async function processCurrent(schemas) {
   }
 }
 
-async function createRun(options, schemas, progress = {}) {
+interface BatchProgress {
+  processedNames?: string[];
+  processedCount?: number;
+  batchNumber?: number;
+}
+
+async function createRun(options, schemas, progress: BatchProgress = {}) {
   await requireCleanCheckout();
   await git(['pull', '--ff-only', 'origin', 'main'], { label: 'update origin/main' });
   const roster = await readJson(join(REPO_ROOT, 'public/data.json'));

@@ -9,11 +9,5 @@
     "noEmit": true,
     "skipLibCheck": true
   },
-  "include": [
-    "src/data.ts",
-    "src/utils.ts",
-    "src/state-grid.ts",
-    "scripts/validate-data.ts",
-    "src/vite-env.d.ts"
-  ]
+  "include": ["src/**/*.ts", "scripts/**/*.ts", "test/**/*.ts", "vite.config.ts"]
 }

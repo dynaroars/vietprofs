@@ -380,7 +380,7 @@ async function init() {
     });
 
     suggestions.addEventListener('click', (event) => {
-      const button = event.target.closest('.correction-suggestion');
+      const button = (event.target as HTMLElement | null)?.closest<HTMLButtonElement>('.correction-suggestion');
       if (!button) return;
       const entry = matchingEntries[Number(button.dataset.index)];
       if (!entry) return;
