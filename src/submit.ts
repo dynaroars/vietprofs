@@ -1,5 +1,5 @@
 import './style.css';
-import { loadRoster, TRACKS } from './data.ts';
+import { FIELDS, fieldOf, loadRoster, TRACKS } from './data.ts';
 import { escapeHtml } from './utils.ts';
 
 const SUBMISSION_EMAIL = 'root@roars.dev';
@@ -31,6 +31,10 @@ function renderShell() {
         <input id="profileUrl" name="profileUrl" type="url" required placeholder="https://… (department or faculty directory page)" />
       </div>
 
+      <div class="optional-fields-intro" role="note">
+        <strong>Everything below is optional.</strong> Share any details you have; maintainers will verify and complete the record.
+      </div>
+
       <div class="form-section">
         <label for="websiteUrl">Personal or lab website</label>
         <input id="websiteUrl" name="websiteUrl" type="url" placeholder="https:// (personal homepage or lab site)" />
@@ -49,6 +53,14 @@ function renderShell() {
       <div class="form-section">
         <label for="department">Department</label>
         <input id="department" name="department" type="text" placeholder="e.g. Computer Science" />
+      </div>
+
+      <div class="form-section">
+        <label for="field">Broad field</label>
+        <select id="field" name="field">
+          <option value="">Unspecified / Maintainer will check</option>
+          ${FIELDS.map((field) => `<option value="${escapeHtml(field)}">${escapeHtml(field)}</option>`).join('')}
+        </select>
       </div>
 
       <div class="form-section form-row">
@@ -172,6 +184,7 @@ const FIELD_LABELS = {
   scholarUrl: 'Google Scholar',
   university: 'University',
   department: 'Department',
+  field: 'Broad field',
   city: 'City',
   state: 'State/Province',
   country: 'Country',
@@ -215,7 +228,9 @@ function buildUpdateBody(matchedEntry, entry, notes) {
     changes.push(`Name: ${matchedEntry.name} → ${entry.name}`);
   }
   for (const key of FIELD_ORDER) {
-    const oldValue = formatValue(matchedEntry[key]);
+    const oldValue = key === 'field'
+      ? fieldOf(matchedEntry.department, matchedEntry.university)
+      : formatValue(matchedEntry[key]);
     const newValue = formatValue(entry[key]);
     if (oldValue !== newValue) {
       changes.push(`${FIELD_LABELS[key]}: ${oldValue || '(none)'} → ${newValue || '(removed)'}`);
@@ -236,6 +251,7 @@ function populateEntry(form, entry) {
   form.state.value = entry.state ?? '';
   form.country.value = entry.country ?? '';
   form.department.value = entry.department ?? '';
+  form.field.value = fieldOf(entry.department, entry.university);
   form.rank.value = entry.rank ?? '';
   form.undergradYear.value = entry.undergradYear ?? '';
   form.undergradInstitution.value = entry.undergradInstitution ?? '';
@@ -284,6 +300,7 @@ function onSubmit(e, entriesByName) {
     state: form.state.value.trim() || undefined,
     country: form.country.value.trim() || undefined,
     department: form.department.value.trim() || undefined,
+    field: form.field.value || undefined,
     track: form.track.value || undefined,
     rank: form.rank.value.trim() || undefined,
     researchAreas: researchAreas.length ? researchAreas : undefined,
