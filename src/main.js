@@ -67,8 +67,7 @@ function renderShell() {
       </div>
     </header>
     <div class="controls">
-      <input id="search" class="search-input" type="search" list="search-suggestions" placeholder="Search name, university, department, rank, honors, or research area…" aria-label="Search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-suggestion-panel" />
-      <datalist id="search-suggestions"></datalist>
+      <input id="search" class="search-input" type="search" placeholder="Search name, university, department, rank, honors, or research area…" aria-label="Search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-suggestion-panel" />
       <div id="search-suggestion-panel" class="search-suggestion-panel" role="listbox" hidden></div>
       <select id="location-filter" class="field-select location-select" aria-label="Filter by location">
       </select>
@@ -423,7 +422,6 @@ async function init() {
   }
   const searchIndex = buildSearchIndex(roster);
 
-  const suggestions = document.getElementById('search-suggestions');
   // Matches everything filterRoster actually searches over (name, university, city, state, country,
   // department, rank, research areas, PhD institution, and honors) so a suggestion always yields at least one result.
   const suggestionValues = [
@@ -445,10 +443,6 @@ async function init() {
       ...uniquePhdInstitutions(roster),
     ]),
   ].sort();
-  for (const value of suggestionValues) {
-    suggestions.insertAdjacentHTML('beforeend', `<option value="${escapeHtml(value)}"></option>`);
-  }
-
   const searchInput = document.getElementById('search');
   const suggestionPanel = document.getElementById('search-suggestion-panel');
   const locationSelect = document.getElementById('location-filter');
@@ -744,10 +738,8 @@ async function init() {
     syncDropdownCounts();
   }
 
-  // Mobile browsers have inconsistent support for large native <datalist>s. Keep the
-  // native control for desktop, but provide a small keyboard-accessible listbox on
-  // coarse-pointer devices so suggestions remain usable on phones and tablets.
-  const mobileSuggestions = window.matchMedia('(pointer: coarse)').matches;
+  // Use an in-page listbox rather than a native <datalist>. Browser-owned datalist popups
+  // can flicker or close while the debounced search results update, especially in Chromium.
   let activeSuggestion = -1;
   function hideSuggestions() {
     activeSuggestion = -1;
@@ -756,7 +748,6 @@ async function init() {
     searchInput.setAttribute('aria-expanded', 'false');
   }
   function showSuggestions() {
-    if (!mobileSuggestions) return;
     const query = searchInput.value.trim().toLocaleLowerCase();
     if (!query) {
       hideSuggestions();
@@ -783,29 +774,26 @@ async function init() {
     suggestionPanel.hidden = matches.length === 0;
     searchInput.setAttribute('aria-expanded', String(matches.length > 0));
   }
-  if (mobileSuggestions) {
-    searchInput.removeAttribute('list');
-    searchInput.addEventListener('focus', showSuggestions);
-    searchInput.addEventListener('input', showSuggestions);
-    searchInput.addEventListener('keydown', (event) => {
-      const options = [...suggestionPanel.querySelectorAll('.search-suggestion')];
-      if (event.key === 'Escape') {
-        hideSuggestions();
-        return;
-      }
-      if (!options.length || !['ArrowDown', 'ArrowUp', 'Enter'].includes(event.key)) return;
-      if (event.key === 'Enter' && activeSuggestion >= 0) {
-        event.preventDefault();
-        options[activeSuggestion].click();
-        return;
-      }
-      if (event.key === 'ArrowDown') activeSuggestion = (activeSuggestion + 1) % options.length;
-      if (event.key === 'ArrowUp') activeSuggestion = (activeSuggestion - 1 + options.length) % options.length;
-      options.forEach((option, index) => option.setAttribute('aria-selected', String(index === activeSuggestion)));
+  searchInput.addEventListener('focus', showSuggestions);
+  searchInput.addEventListener('input', showSuggestions);
+  searchInput.addEventListener('keydown', (event) => {
+    const options = [...suggestionPanel.querySelectorAll('.search-suggestion')];
+    if (event.key === 'Escape') {
+      hideSuggestions();
+      return;
+    }
+    if (!options.length || !['ArrowDown', 'ArrowUp', 'Enter'].includes(event.key)) return;
+    if (event.key === 'Enter' && activeSuggestion >= 0) {
       event.preventDefault();
-    });
-    searchInput.addEventListener('blur', () => setTimeout(hideSuggestions, 150));
-  }
+      options[activeSuggestion].click();
+      return;
+    }
+    if (event.key === 'ArrowDown') activeSuggestion = (activeSuggestion + 1) % options.length;
+    if (event.key === 'ArrowUp') activeSuggestion = (activeSuggestion - 1 + options.length) % options.length;
+    options.forEach((option, index) => option.setAttribute('aria-selected', String(index === activeSuggestion)));
+    event.preventDefault();
+  });
+  searchInput.addEventListener('blur', () => setTimeout(hideSuggestions, 150));
 
   searchInput.addEventListener('input', debounce(() => update({ fromSearch: true }), 150));
   locationSelect.addEventListener('change', () => update({ fromSearch: false }));

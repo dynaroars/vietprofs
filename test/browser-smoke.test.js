@@ -66,6 +66,12 @@ test('directory loads and searching changes the roster', async (t) => {
   const multiCredentialRow = page.locator('.entry-details').filter({ hasText: ';' }).first();
   await multiCredentialRow.waitFor();
   assert.equal(await multiCredentialRow.locator('xpath=..').locator('.entry-details').count(), 1);
+  await page.locator('#search').fill('Thanh');
+  const searchSuggestions = page.locator('#search-suggestion-panel .search-suggestion');
+  await searchSuggestions.first().waitFor();
+  assert.ok(await searchSuggestions.count() > 0);
+  await page.locator('#search').press('Escape');
+  assert.equal(await page.locator('#search-suggestion-panel').isHidden(), true);
   await page.locator('#search').fill('univ:"Pennsylvania State University"');
   await page.waitForTimeout(250);
   assert.ok(await page.locator('.entry').count() > 0);
@@ -82,6 +88,28 @@ test('directory loads and searching changes the roster', async (t) => {
   await page.waitForTimeout(250);
   assert.ok((await page.locator('.entry').count()) > 0);
   assert.match(await page.locator('#result-count').textContent(), /professors?/);
+  await page.close();
+});
+
+test('search suggestions remain visible while results update', async (t) => {
+  if (unavailable || !browser) return t.skip(`Browser smoke tests unavailable: ${unavailable ?? 'no browser'}`);
+  const page = await browser.newPage();
+  await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
+  const search = page.locator('#search');
+  const panel = page.locator('#search-suggestion-panel');
+  const suggestions = panel.locator('.search-suggestion');
+
+  assert.equal(await search.getAttribute('list'), null);
+  await search.fill('Thanh');
+  await suggestions.first().waitFor();
+  assert.equal(await panel.isHidden(), false);
+  assert.equal(await search.getAttribute('aria-expanded'), 'true');
+
+  // The debounced roster update must not close or recreate the suggestion panel.
+  await page.waitForTimeout(300);
+  assert.equal(await panel.isHidden(), false);
+  assert.ok(await suggestions.count() > 0);
+
   await page.close();
 });
 
