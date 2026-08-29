@@ -4331,7 +4331,15 @@
     "undergradYear": 2013,
     "msInstitution": "Illinois State University",
     "msYear": 2018,
-    "lastUpdatedAt": "2026-08-29T03:46:27.209Z"
+    "otherDegrees": [
+      {
+        "degree": "M.S. in Economics",
+        "institution": "Illinois State University",
+        "year": 2017,
+        "source": "https://newsroom.lmu.edu/campusnews/22-new-tenure-line-faculty-join-lmu/"
+      }
+    ],
+    "lastUpdatedAt": "2026-08-29T06:35:19.925Z"
   },
   {
     "name": "Thanh Dat Le",
@@ -20066,7 +20074,7 @@
   {
     "name": "Minhtri Khac Nguyen",
     "profileUrl": "https://profiles.ucla.edu/minhtri.nguyen",
-    "lastUpdatedAt": "2026-08-28T12:21:53.000Z",
+    "lastUpdatedAt": "2026-08-29T05:44:45.683Z",
     "university": "University of California, Los Angeles",
     "city": "Los Angeles",
     "state": "California",
@@ -20080,13 +20088,16 @@
     "department": "Medicine, Nephrology",
     "rank": "HS Clinical Professor",
     "undergradInstitution": "University of California, Irvine",
-    "country": "United States"
+    "country": "United States",
+    "mdInstitution": "University of Rochester School of Medicine and Dentistry",
+    "mdYear": 1988,
+    "postdocInstitution": "Cedars-Sinai Medical Center",
+    "postdocYear": 1996
   },
   {
     "name": "Tran Nguyen",
     "profileUrl": "https://wexnermedical.osu.edu/find-a-doctor/tran-nguyen-100001229",
-    "lastUpdatedAt": "2026-08-28T12:24:25.000Z",
-    "university": "Ohio State University",
+    "university": "The Ohio State University",
     "city": "Dublin",
     "state": "Ohio",
     "researchAreas": [
@@ -20098,12 +20109,12 @@
     "rank": "Assistant Clinical Professor",
     "mdYear": 2018,
     "mdInstitution": "State University of New York at Buffalo",
-    "country": "United States"
+    "country": "United States",
+    "lastUpdatedAt": "2026-08-29T05:45:38.337Z"
   },
   {
     "name": "Huyen Q. Pham",
     "profileUrl": "https://keck.usc.edu/faculty-search/huyen-q-pham/",
-    "lastUpdatedAt": "2026-08-28T12:24:25.000Z",
     "university": "University of Southern California",
     "city": "Los Angeles",
     "state": "California",
@@ -20114,23 +20125,10 @@
     "track": "Clinical",
     "department": "Obstetrics & Gynecology",
     "rank": "Assistant Professor of Clinical Obstetrics & Gynecology",
+    "mdYear": 1995,
     "mdInstitution": "University of California, San Diego",
-    "country": "United States"
-  },
-  {
-    "name": "Vu Dang La",
-    "profileUrl": "https://www.dental.upenn.edu/faculty/vu-dang-la/",
-    "lastUpdatedAt": "2026-08-28T12:26:22.000Z",
-    "university": "University of Pennsylvania",
-    "city": "Philadelphia",
-    "state": "Pennsylvania",
-    "researchAreas": [
-      "Periodontics"
-    ],
-    "track": "Clinical",
-    "department": "Periodontics",
-    "rank": "Clinical Assistant Professor",
-    "country": "United States"
+    "country": "United States",
+    "lastUpdatedAt": "2026-08-29T05:46:28.942Z"
   },
   {
     "name": "Thao T. Dang",
@@ -20156,8 +20154,7 @@
   },
   {
     "name": "Uyen L. Tran",
-    "profileUrl": "https://wag.app.vanderbilt.edu/PublicPage/Faculty/Details/27306",
-    "lastUpdatedAt": "2026-08-28T12:28:02.000Z",
+    "profileUrl": "https://www.vumc.org/ophthalmology/person/uyen-l-tran-md",
     "university": "Vanderbilt University",
     "city": "Nashville",
     "state": "Tennessee",
@@ -20170,7 +20167,8 @@
     "rank": "Professor of Clinical Ophthalmology & Visual Sciences",
     "mdInstitution": "Medical College of Virginia",
     "undergradInstitution": "Catholic University of America",
-    "country": "United States"
+    "country": "United States",
+    "lastUpdatedAt": "2026-08-29T05:49:00.501Z"
   },
   {
     "name": "An Nguyen",
@@ -20230,7 +20228,8 @@
   {
     "name": "Phuong-Anh Nguyen",
     "profileUrl": "https://profiles.laps.yorku.ca/profiles/anhvn/",
-    "lastUpdatedAt": "2026-08-28T12:40:03.000Z",
+    "websiteUrl": "https://sites.google.com/site/backyvn/",
+    "lastUpdatedAt": "2026-08-29T05:53:04.479Z",
     "university": "York University",
     "city": "Toronto",
     "state": "Ontario",
@@ -20241,6 +20240,7 @@
     "department": "School of Administrative Studies",
     "rank": "Associate Professor",
     "phdInstitution": "Virginia Tech",
+    "phdYear": 2015,
     "country": "Canada"
   },
   {
@@ -20264,10 +20264,11 @@
   },
   {
     "name": "Truyen Tran",
-    "profileUrl": "https://truyentran.github.io/",
-    "lastUpdatedAt": "2026-08-28T12:42:45.000Z",
+    "profileUrl": "https://www.deakin.edu.au/about-deakin/people/truyen-tran",
+    "websiteUrl": "https://truyentran.github.io/",
+    "scholarUrl": "https://scholar.google.com/citations?user=zvspVLwAAAAJ",
     "university": "Deakin University",
-    "city": "Burwood",
+    "city": "Geelong",
     "state": "Victoria",
     "researchAreas": [
       "Deep Learning",
@@ -20282,19 +20283,36 @@
     "phdYear": 2008,
     "undergradInstitution": "University of Melbourne",
     "undergradYear": 2001,
-    "country": "Australia"
+    "country": "Australia",
+    "postdocInstitution": "Curtin University",
+    "postdocYear": 2012,
+    "honors": [
+      {
+        "name": "ACM SIGSOFT Distinguished Paper Award",
+        "year": 2015,
+        "category": "major_award",
+        "organization": "ACM SIGSOFT",
+        "source": "https://truyentran.github.io/truyen_fullcv_CS.pdf"
+      }
+    ],
+    "lastUpdatedAt": "2026-08-29T05:55:24.060Z"
   },
   {
     "name": "Hoa Van Nguyen",
-    "profileUrl": "https://hoa-van.nguyen-au.com/",
-    "lastUpdatedAt": "2026-08-28T12:43:06.000Z",
+    "profileUrl": "https://staffportal.curtin.edu.au/staff/profile/view/hoa-nguyen-bba5fa8a/",
+    "websiteUrl": "https://hoa-van.nguyen-au.com/",
+    "scholarUrl": "https://scholar.google.com/citations?user=NhaNaLwAAAAJ",
     "university": "Curtin University",
     "city": "Bentley",
     "state": "Western Australia",
     "researchAreas": [
       "UAV Sensing",
       "Multi-Object Tracking",
-      "Signal Processing"
+      "Signal Processing",
+      "Robotics",
+      "Bayesian Filtering and Estimation",
+      "Multi-Agent Path Planning",
+      "System Identification and Condition Monitoring"
     ],
     "track": "Tenure-line",
     "department": "School of Electrical Engineering, Computing and Mathematical Sciences",
@@ -20303,12 +20321,14 @@
     "phdYear": 2020,
     "undergradInstitution": "Portland State University",
     "undergradYear": 2012,
-    "country": "Australia"
+    "country": "Australia",
+    "lastUpdatedAt": "2026-08-29T05:56:28.609Z"
   },
   {
     "name": "Huyen Pham - École Polytechnique",
-    "profileUrl": "https://sites.google.com/site/phamxuanhuyen/",
-    "lastUpdatedAt": "2026-08-28T12:44:35.000Z",
+    "profileUrl": "https://www.polytechnique.edu/node/147",
+    "lastUpdatedAt": "2026-08-29T05:57:35.559Z",
+    "websiteUrl": "https://sites.google.com/site/phamxuanhuyen/",
     "university": "École Polytechnique",
     "city": "Palaiseau",
     "researchAreas": [
@@ -20320,7 +20340,23 @@
     "track": "Tenure-line",
     "department": "Centre de Mathématiques Appliquées (CMAP)",
     "rank": "Professor",
-    "country": "France"
+    "country": "France",
+    "honors": [
+      {
+        "name": "Member of the Institut Universitaire de France",
+        "year": 2006,
+        "category": "career_award",
+        "organization": "Institut Universitaire de France",
+        "source": "https://www.galaxie.enseignementsup-recherche.gouv.fr/ensup/ListesPostesPublies/FIDIS/0751723R/FOPC_0751723R_4223.pdf"
+      },
+      {
+        "name": "Louis Bachelier Prize",
+        "year": 2007,
+        "category": "major_award",
+        "organization": "London Mathematical Society",
+        "source": "https://www.lms.ac.uk/prizes/louisbachelierprize"
+      }
+    ]
   },
   {
     "name": "Quy Nguyen Huy",
@@ -20351,8 +20387,9 @@
   },
   {
     "name": "Huyen C. Nguyen",
-    "profileUrl": "https://sites.google.com/site/huyenn9uyen",
-    "lastUpdatedAt": "2026-08-28T12:45:33.000Z",
+    "profileUrl": "https://www.lisn.upsaclay.fr/membres/nguyen-huyen/",
+    "lastUpdatedAt": "2026-08-29T05:59:41.534Z",
+    "websiteUrl": "https://sites.google.com/site/huyenn9uyen",
     "university": "Université Paris-Saclay",
     "city": "Orsay",
     "researchAreas": [
@@ -20365,12 +20402,17 @@
     "rank": "Assistant Professor",
     "phdInstitution": "INSA de Rennes",
     "phdYear": 2014,
-    "country": "France"
+    "country": "France",
+    "msInstitution": "Université Paris-Saclay",
+    "msMajor": "Computational Neuroscience and Neuroengineering",
+    "msYear": 2025,
+    "postdocInstitution": "CSIRO; University of New South Wales"
   },
   {
     "name": "Tan Minh Nguyen",
-    "profileUrl": "https://www.math.nus.edu.sg/people/regular-faculty/",
-    "lastUpdatedAt": "2026-08-28T12:46:39.000Z",
+    "profileUrl": "https://ai.nus.edu.sg/member/nguyen-hung-minh-tan/",
+    "websiteUrl": "https://tanmnguyen89.github.io/",
+    "scholarUrl": "https://scholar.google.com/citations?user=OizOh88AAAAJ",
     "university": "National University of Singapore",
     "city": "Singapore",
     "researchAreas": [
@@ -20383,10 +20425,36 @@
     "rank": "Assistant Professor",
     "phdYear": 2020,
     "phdInstitution": "Rice University",
+    "msInstitution": "Rice University",
+    "msYear": 2016,
     "undergradInstitution": "Rice University",
     "undergradYear": 2014,
     "postdocInstitution": "University of California, Los Angeles",
-    "country": "Singapore"
+    "country": "Singapore",
+    "honors": [
+      {
+        "name": "NUS Presidential Young Professorship",
+        "year": 2024,
+        "category": "distinguished_professorship",
+        "organization": "National University of Singapore",
+        "source": "https://tanmnguyen89.github.io/Tan_Nguyen_CV.pdf"
+      },
+      {
+        "name": "Computing Innovation Postdoctoral Fellowship (CIFellows)",
+        "year": 2020,
+        "category": "career_award",
+        "organization": "Computing Research Association",
+        "source": "https://cra.org/cra-wp/cifellows/"
+      },
+      {
+        "name": "National Science Foundation Graduate Research Fellowship",
+        "year": 2016,
+        "category": "career_award",
+        "organization": "National Science Foundation",
+        "source": "https://www.nsfgrfp.org/"
+      }
+    ],
+    "lastUpdatedAt": "2026-08-29T06:00:42.207Z"
   },
   {
     "name": "Tran Anh Tuan",
@@ -20429,7 +20497,7 @@
   {
     "name": "Tuan Anh Nguyen",
     "profileUrl": "https://life-sci.hkust.edu.hk/team/tuan-anh-nguyen/",
-    "lastUpdatedAt": "2026-08-28T12:49:21.000Z",
+    "lastUpdatedAt": "2026-08-29T06:04:07.968Z",
     "university": "Hong Kong University of Science and Technology",
     "city": "Hong Kong",
     "researchAreas": [
@@ -20441,7 +20509,19 @@
     "department": "Division of Life Science",
     "rank": "Associate Professor",
     "phdInstitution": "Korea Advanced Institute of Science and Technology",
-    "country": "Hong Kong"
+    "phdYear": 2012,
+    "postdocInstitution": "Seoul National University",
+    "undergradInstitution": "Hanoi University of Science",
+    "country": "Hong Kong",
+    "honors": [
+      {
+        "name": "Croucher Innovation Award",
+        "organization": "Croucher Foundation",
+        "year": 2018,
+        "category": "career_award",
+        "source": "https://scholars.croucher.org.hk/award_types/cia"
+      }
+    ]
   },
   {
     "name": "Nguyen Thanh Phuc",
@@ -20537,7 +20617,6 @@
   {
     "name": "Dung Tran",
     "profileUrl": "https://federation.edu.au/research/find-an-expert/dung-tran",
-    "lastUpdatedAt": "2026-08-28T15:08:12.000Z",
     "university": "Federation University Australia",
     "city": "Ballarat",
     "state": "Victoria",
@@ -20549,18 +20628,27 @@
     "track": "Tenure-line",
     "department": "Institute of Education, Arts and Community",
     "rank": "Associate Professor",
-    "phdInstitution": "University of Missouri",
+    "phdInstitution": "University of Missouri-Columbia",
     "phdYear": 2013,
     "msInstitution": "Hue University of Education",
     "msYear": 2007,
     "undergradInstitution": "Hue University of Education",
     "undergradYear": 2003,
-    "country": "Australia"
+    "country": "Australia",
+    "honors": [
+      {
+        "name": "Community for Advancing Discovery Research in Education (CADRE) Fellowship Award",
+        "year": 2013,
+        "category": "career_award",
+        "organization": "Community for Advancing Discovery Research in Education",
+        "source": "https://www.federation.edu.au/research/find-an-expert/dung-tran"
+      }
+    ],
+    "lastUpdatedAt": "2026-08-29T06:10:34.505Z"
   },
   {
     "name": "Nghia Tran",
     "profileUrl": "https://rsm.anu.edu.au/people/nghia-tran",
-    "lastUpdatedAt": "2026-08-28T15:08:12.000Z",
     "university": "Australian National University",
     "city": "Canberra",
     "researchAreas": [
@@ -20568,15 +20656,29 @@
       "Work-Integrated Learning",
       "Higher Education"
     ],
-    "track": "Tenure-line",
+    "track": "Teaching",
     "department": "Research School of Management",
-    "rank": "Associate Professor",
-    "country": "Australia"
+    "rank": "Senior Lecturer",
+    "country": "Australia",
+    "phdInstitution": "University of Melbourne",
+    "phdYear": 2016,
+    "undergradInstitution": "Can Tho University",
+    "undergradYear": 2004,
+    "honors": [
+      {
+        "name": "Rising Star – A. Noam Chomsky Global Connection Award",
+        "year": 2021,
+        "category": "career_award",
+        "organization": "Society of Transnational Academic Researchers (STAR) Network",
+        "source": "https://cbe.anu.edu.au/news/2021/success-knows-no-borders"
+      }
+    ],
+    "lastUpdatedAt": "2026-08-29T06:11:49.568Z"
   },
   {
     "name": "Andrew Nguyen",
-    "profileUrl": "https://medicine.umich.edu/dept/neurosurgery/andrew-nguyen-md",
-    "lastUpdatedAt": "2026-08-28T16:49:57.000Z",
+    "profileUrl": "https://medschool.umich.edu/profile/11609/andrew-m-nguyen",
+    "lastUpdatedAt": "2026-08-29T06:12:53.708Z",
     "university": "University of Michigan",
     "city": "Ann Arbor",
     "state": "Michigan",
@@ -20589,6 +20691,12 @@
     "department": "Neurosurgery and Neurology",
     "rank": "Clinical Assistant Professor",
     "mdInstitution": "Indiana University School of Medicine",
+    "mdYear": 2017,
+    "undergradInstitution": "Purdue University",
+    "undergradMajor": "Chemical Engineering",
+    "undergradYear": 2013,
+    "postdocInstitution": "Oregon Health & Science University",
+    "postdocYear": 2023,
     "country": "United States"
   },
   {
@@ -20659,7 +20767,7 @@
   {
     "name": "Liem Nguyen - Case Western Reserve University",
     "profileUrl": "https://case.edu/medicine/microbio/our-people/liem-nguyen",
-    "lastUpdatedAt": "2026-08-28T16:52:29.000Z",
+    "lastUpdatedAt": "2026-08-29T06:18:09.297Z",
     "university": "Case Western Reserve University",
     "city": "Cleveland",
     "state": "Ohio",
@@ -20671,7 +20779,18 @@
     "track": "Tenure-line",
     "department": "Molecular Biology and Microbiology",
     "rank": "Associate Professor",
-    "country": "United States"
+    "country": "United States",
+    "phdInstitution": "Czech Academy of Sciences",
+    "postdocInstitution": "Biozentrum, University of Basel; Department of Microbiology and Immunology, University of British Columbia",
+    "honors": [
+      {
+        "name": "Swiss TB Award",
+        "year": 2005,
+        "category": "major_award",
+        "organization": "Swiss Foundation for Tuberculosis Research",
+        "source": "https://www.swisstb.org/de/news/swisstb-award-2005-drs-liem-nguyen-anne-walburger-giorgio-ferrari-anil-koul-29.html"
+      }
+    ]
   },
   {
     "name": "Dam Thanh Son",
@@ -20768,7 +20887,7 @@
   {
     "name": "Mylinh T. Nguyen",
     "profileUrl": "https://profiles.ucsd.edu/mylinh.nguyen",
-    "lastUpdatedAt": "2026-08-28T16:57:24.000Z",
+    "lastUpdatedAt": "2026-08-29T06:21:57.627Z",
     "university": "University of California, San Diego",
     "city": "San Diego",
     "state": "California",
@@ -20778,31 +20897,37 @@
     ],
     "track": "Clinical",
     "department": "Pediatrics",
-    "rank": "Associate Clinical Professor",
-    "mdInstitution": "Wayne State University",
+    "rank": "Assistant Clinical Professor",
+    "mdInstitution": "Wayne State University School of Medicine",
+    "mdYear": 2011,
     "country": "United States"
   },
   {
     "name": "Margaret Nguyen",
-    "profileUrl": "https://www.rchsd.org/doctors/margaret-nguyen-md/",
-    "lastUpdatedAt": "2026-08-28T16:57:24.000Z",
+    "profileUrl": "https://profiles.ucsd.edu/margaret.nguyen",
     "university": "University of California, San Diego",
     "city": "San Diego",
     "state": "California",
     "researchAreas": [
       "Pediatric Emergency Medicine",
       "Health Services Research",
-      "Injury Prevention"
+      "Injury Prevention",
+      "Health Equity",
+      "Health Services Utilization",
+      "Spatial Analysis/GIS"
     ],
     "track": "Clinical",
     "department": "Pediatrics",
     "rank": "Associate Clinical Professor",
-    "country": "United States"
+    "country": "United States",
+    "mdInstitution": "Ross University School of Medicine",
+    "mdYear": 2005,
+    "postdocInstitution": "Children's Hospital of Pittsburgh",
+    "lastUpdatedAt": "2026-08-29T06:22:49.042Z"
   },
   {
     "name": "Minh-Ha Tran",
     "profileUrl": "https://www.faculty.uci.edu/profile/?facultyId=5807",
-    "lastUpdatedAt": "2026-08-28T16:57:24.000Z",
     "university": "University of California, Irvine",
     "city": "Irvine",
     "state": "California",
@@ -20813,7 +20938,14 @@
     "track": "Clinical",
     "department": "Pathology and Laboratory Medicine",
     "rank": "Clinical Professor",
-    "country": "United States"
+    "country": "United States",
+    "mdInstitution": "Western University of Health Sciences",
+    "mdYear": 2000,
+    "undergradInstitution": "San Diego State University",
+    "undergradYear": 1996,
+    "postdocInstitution": "National Institutes of Health",
+    "postdocYear": 2006,
+    "lastUpdatedAt": "2026-08-29T06:23:56.925Z"
   },
   {
     "name": "Nguyen T. K. Thanh",
@@ -20865,40 +20997,6 @@
     "country": "United States"
   },
   {
-    "name": "My-Van Tran",
-    "profileUrl": "https://en.wikipedia.org/wiki/My-Van_Tran",
-    "lastUpdatedAt": "2026-08-28T16:59:11.000Z",
-    "university": "University of South Australia",
-    "city": "Adelaide",
-    "state": "South Australia",
-    "researchAreas": [
-      "Vietnamese History",
-      "Vietnamese Literature",
-      "Asian Studies"
-    ],
-    "track": "Tenure-line",
-    "department": "International and Asian Studies",
-    "rank": "Associate Professor",
-    "phdInstitution": "Australian National University",
-    "country": "Australia",
-    "honors": [
-      {
-        "name": "Member of the Order of Australia (AM)",
-        "year": null,
-        "category": "major_award",
-        "organization": "Order of Australia",
-        "source": "https://en.wikipedia.org/wiki/My-Van_Tran"
-      }
-    ],
-    "otherDegrees": [
-      {
-        "degree": "MA",
-        "institution": "Duke University",
-        "source": "https://en.wikipedia.org/wiki/My-Van_Tran"
-      }
-    ]
-  },
-  {
     "name": "Pipo Nguyen-duy",
     "profileUrl": "https://www.oberlin.edu/pipo-nguyen-duy",
     "lastUpdatedAt": "2026-08-28T16:59:11.000Z",
@@ -20941,8 +21039,9 @@
   },
   {
     "name": "Pham Huu Tiep",
-    "profileUrl": "https://sites.math.rutgers.edu/~pht19/",
-    "lastUpdatedAt": "2026-08-28T17:01:09.000Z",
+    "profileUrl": "https://math.rutgers.edu/people/department-directory/detail/344-department-directory/1865-tiep-pham-huu",
+    "websiteUrl": "https://sites.math.rutgers.edu/~pht19/",
+    "scholarUrl": "https://scholar.google.com/citations?user=35RkcIYAAAAJ",
     "university": "Rutgers University",
     "city": "Piscataway",
     "state": "New Jersey",
@@ -20953,6 +21052,12 @@
     "track": "Tenure-line",
     "department": "Mathematics",
     "rank": "Professor",
+    "phdInstitution": "Moscow State University",
+    "phdYear": 1989,
+    "mastersInstitution": "Moscow State University",
+    "mastersYear": 1985,
+    "postdocInstitution": "University of Essen",
+    "postdocYear": 1995,
     "country": "United States",
     "honors": [
       {
@@ -20961,13 +21066,42 @@
         "category": "distinguished_professorship",
         "organization": "Rutgers University",
         "source": "https://sites.math.rutgers.edu/~pht19/"
+      },
+      {
+        "name": "Fellow of the American Mathematical Society",
+        "year": 2013,
+        "category": "fellow",
+        "organization": "American Mathematical Society",
+        "source": "https://sites.math.rutgers.edu/~pht19/vitae.pdf"
+      },
+      {
+        "name": "Clay Senior Scholar",
+        "year": 2016,
+        "category": "career_award",
+        "organization": "Clay Mathematics Institute",
+        "source": "https://sites.math.rutgers.edu/~pht19/vitae.pdf"
+      },
+      {
+        "name": "Simons Fellow in Mathematics",
+        "year": 2015,
+        "category": "career_award",
+        "organization": "Simons Foundation",
+        "source": "https://sites.math.rutgers.edu/~pht19/vitae.pdf"
+      },
+      {
+        "name": "Simons Fellow in Mathematics",
+        "year": 2023,
+        "category": "career_award",
+        "organization": "Simons Foundation",
+        "source": "https://sites.math.rutgers.edu/~pht19/vitae.pdf"
       }
-    ]
+    ],
+    "lastUpdatedAt": "2026-08-29T06:29:16.796Z"
   },
   {
     "name": "Tran Van Tho",
     "profileUrl": "https://w-rdb.waseda.jp/html/100002623_en.html",
-    "lastUpdatedAt": "2026-08-28T17:01:09.000Z",
+    "websiteUrl": "http://www.f.waseda.jp/tvttran",
     "university": "Waseda University",
     "city": "Tokyo",
     "researchAreas": [
@@ -20979,12 +21113,32 @@
     "department": "Social Sciences",
     "rank": "Emeritus",
     "phdInstitution": "Hitotsubashi University",
-    "country": "Japan"
+    "country": "Japan",
+    "undergradInstitution": "Hitotsubashi University",
+    "undergradYear": 1973,
+    "honors": [
+      {
+        "name": "Asia-Pacific Prize",
+        "year": 1992,
+        "category": "major_award",
+        "organization": "The Japan Foundation Asia Center",
+        "source": "https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=200901077458281905"
+      },
+      {
+        "name": "The Order of the Sacred Treasure, Gold Rays with Rosette",
+        "year": 2018,
+        "category": "major_award",
+        "organization": "Government of Japan",
+        "source": "https://www.mofa.go.jp/files/000358977.pdf"
+      }
+    ],
+    "lastUpdatedAt": "2026-08-29T06:30:29.347Z"
   },
   {
     "name": "Anh Nguyen-Tuong",
-    "profileUrl": "https://sdg.cs.virginia.edu/author/anh-nguyen-tuong/",
-    "lastUpdatedAt": "2026-08-28T17:06:58.000Z",
+    "profileUrl": "https://engineering.virginia.edu/department/computer-science/people/staff",
+    "websiteUrl": "https://sdg.cs.virginia.edu/",
+    "scholarUrl": "https://scholar.google.com/citations?user=4QDvnc4AAAAJ",
     "university": "University of Virginia",
     "city": "Charlottesville",
     "state": "Virginia",
@@ -20997,12 +21151,13 @@
     "track": "Research",
     "department": "Computer Science",
     "rank": "Principal Scientist",
-    "country": "United States"
+    "country": "United States",
+    "lastUpdatedAt": "2026-08-29T06:31:33.055Z"
   },
   {
     "name": "Dzung L. Pham",
-    "profileUrl": "https://medschool.usuhs.edu/profile/dzung-pham-phd",
-    "lastUpdatedAt": "2026-08-28T17:06:58.000Z",
+    "profileUrl": "https://www.usuhs.edu/profile/dzung-pham-phd",
+    "lastUpdatedAt": "2026-08-29T06:32:29.749Z",
     "university": "Uniformed Services University of the Health Sciences",
     "city": "Bethesda",
     "state": "Maryland",
@@ -21015,7 +21170,15 @@
     "track": "Tenure-line",
     "department": "Radiology and Bioengineering",
     "rank": "Professor",
-    "country": "United States"
+    "country": "United States",
+    "scholarUrl": "https://scholar.google.com/citations?user=gsDBxugAAAAJ",
+    "phdInstitution": "Johns Hopkins University",
+    "phdYear": 1999,
+    "msInstitution": "Johns Hopkins University",
+    "msMajor": "Electrical and Computer Engineering",
+    "undergradInstitution": "George Washington University",
+    "undergradMajor": "Electrical Engineering",
+    "postdocInstitution": "National Institute on Aging"
   },
   {
     "name": "Phu Tran",
@@ -21037,8 +21200,7 @@
   },
   {
     "name": "Tuan M. Nguyen",
-    "profileUrl": "https://www.feinberg.northwestern.edu/faculty-profiles/az/profile.html?xid=46373",
-    "lastUpdatedAt": "2026-08-28T17:07:13.000Z",
+    "profileUrl": "https://www.feinberg.northwestern.edu/sites/obgyn/faculty/profile.html?xid=46373",
     "university": "Northwestern University",
     "city": "Chicago",
     "state": "Illinois",
@@ -21049,6 +21211,7 @@
     "track": "Clinical",
     "department": "Obstetrics and Gynecology",
     "rank": "Clinical Assistant Professor",
-    "country": "United States"
+    "country": "United States",
+    "lastUpdatedAt": "2026-08-29T06:34:17.606Z"
   }
 ]
