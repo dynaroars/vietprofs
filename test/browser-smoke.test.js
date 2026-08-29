@@ -81,6 +81,26 @@ test('directory loads and searching changes the roster', async (t) => {
   await page.close();
 });
 
+test('every roster card exposes its official profile link', async (t) => {
+  if (unavailable || !browser) return t.skip(`Browser smoke tests unavailable: ${unavailable ?? 'no browser'}`);
+  const page = await browser.newPage();
+  await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
+  const entryCount = await page.locator('.entry').count();
+  const profileLinks = page.locator('.profile-link');
+  assert.equal(await profileLinks.count(), entryCount);
+  assert.ok(await profileLinks.evaluateAll((links) => links.every((link) => (
+    link.getAttribute('title') === 'Official university profile'
+      && link.getAttribute('aria-label')?.endsWith(' official university profile')
+      && /^https?:\/\//.test(link.href)
+  ))));
+  const [actualUrls, expectedUrls] = await Promise.all([
+    profileLinks.evaluateAll((links) => links.map((link) => link.href).sort()),
+    page.evaluate(async () => (await (await fetch('/data.json')).json()).map((person) => person.profileUrl).sort()),
+  ]);
+  assert.deepEqual(actualUrls, expectedUrls);
+  await page.close();
+});
+
 test('local faculty portraits render and load', async (t) => {
   if (unavailable || !browser) return t.skip(`Browser smoke tests unavailable: ${unavailable ?? 'no browser'}`);
   const page = await browser.newPage();
