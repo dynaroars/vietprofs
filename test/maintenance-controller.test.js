@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {
   analyzeRosterProposal,
   canReviseProposal,
+  describeRosterChanges,
   failureKind,
   parseOptions,
   parseRateLimitReset,
@@ -34,6 +35,11 @@ test('maintenance selection prioritizes missing and oldest verification timestam
 test('maintenance defaults to Claude and supports Codex as agent', () => {
   assert.equal(parseOptions(['run']).agent, null);
   assert.equal(parseOptions(['--agent', 'codex']).agent, 'codex');
+  assert.equal(parseOptions(['run', '--total', '1000', '--limit', '40']).total, 1000);
+  assert.throws(
+    () => parseOptions(['run', '--all', '--total', '1000']),
+    /cannot be used together/,
+  );
 });
 
 test('maintenance selection can explicitly include recently verified entries', () => {
@@ -203,4 +209,23 @@ test('proposal analysis rejects edits to another roster entry', () => {
   const result = analyzeRosterProposal(people, after, 'Old Person');
   assert.equal(result.ok, false);
   assert.match(result.reason, /outside Old Person/);
+});
+
+test('roster change descriptions list modified fields and ignore update timestamps', () => {
+  const before = {
+    name: 'Old Person',
+    university: 'Old University',
+    researchAreas: ['History'],
+    lastUpdatedAt: '2024-01-01T00:00:00.000Z',
+  };
+  const after = {
+    name: 'Old Person',
+    university: 'New University',
+    researchAreas: ['History', 'Archives'],
+    lastUpdatedAt: '2026-08-29T00:00:00.000Z',
+  };
+  assert.deepEqual(describeRosterChanges(before, after), [
+    'researchAreas: ["History"] -> ["History","Archives"]',
+    'university: "Old University" -> "New University"',
+  ]);
 });

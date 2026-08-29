@@ -110,6 +110,19 @@ For the first complete sweep of the roster, allow one long run to queue every cu
 ./scripts/maintain-roster.mjs run --all --limit 1000
 ```
 
+To process the entire roster in smaller commit-and-push batches, use `--all` with the batch size
+specified by `--limit`. To cap the run, use `--total` instead. Both modes prioritize the least
+recently verified entries before each batch:
+
+```bash
+./scripts/maintain-roster.mjs run --all --limit 40
+# or, for up to 1,000 entries:
+./scripts/maintain-roster.mjs run --total 1000 --limit 40
+```
+
+The controller commits and pushes after each completed batch and resumes the active batch if it is
+interrupted.
+
 After that sweep completes, the normal weekly command selects only entries whose successful full
 verification is at least one year old.
 

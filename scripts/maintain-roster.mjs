@@ -320,6 +320,7 @@ export function parseOptions(argv) {
   const options = {
     command: 'run',
     limit: DEFAULT_LIMIT,
+    total: null,
     staleDays: DEFAULT_STALE_DAYS,
     all: false,
     dryRun: false,
@@ -337,11 +338,14 @@ export function parseOptions(argv) {
     else if (value === '--agent') options.agent = values.shift();
     else if (value === '--name') options.name = values.shift();
     else if (value === '--limit') options.limit = Number(values.shift());
+    else if (value === '--total') options.total = Number(values.shift());
     else if (value === '--stale-days') options.staleDays = Number(values.shift());
     else if (value === '--help' || value === '-h') options.command = 'help';
     else throw new Error(`unknown option: ${value}`);
   }
   if (!Number.isInteger(options.limit) || options.limit < 1) throw new Error('--limit must be a positive integer');
+  if (options.total !== null && (!Number.isInteger(options.total) || options.total < 1)) throw new Error('--total must be a positive integer');
+  if (options.all && options.total !== null) throw new Error('--all and --total cannot be used together; use --all for the full roster or --total N for a capped run');
   if (!Number.isFinite(options.staleDays) || options.staleDays < 0) throw new Error('--stale-days must be zero or greater');
   if (options.agent !== null && !['claude', 'codex'].includes(options.agent)) throw new Error('--agent must be claude or codex');
   if (options.name !== null && (typeof options.name !== 'string' || !options.name.trim())) throw new Error('--name requires a person or field query');
@@ -352,7 +356,7 @@ function helpText() {
   return `VietProfs unattended roster maintenance
 
 Usage:
-  ./scripts/maintain-roster.mjs [run] [--limit N] [--stale-days N] [--all] [--name NAME] [--dry-run] [--codex-review] [--agent claude|codex]
+  ./scripts/maintain-roster.mjs [run] [--limit N] [--total N] [--stale-days N] [--all] [--name NAME] [--dry-run] [--codex-review] [--agent claude|codex]
   ./scripts/maintain-roster.mjs stop
   ./scripts/maintain-roster.mjs status
 
@@ -361,8 +365,9 @@ Usage:
   status    Show checkpoint progress.
 
   --limit N       Entries in a new run (default: ${DEFAULT_LIMIT}).
+  --total N       Process up to N entries in repeated --limit batches, committing and pushing each batch.
   --stale-days N  Minimum age of last full verification (default: ${DEFAULT_STALE_DAYS}).
-  --all           Ignore age and select the oldest entries.
+  --all           Process the entire roster in repeated --limit batches, oldest entries first.
   --name QUERY    Ask the selected agent to match one roster person or field; a field queues every member.
   --dry-run       Show the selection without agents, Git writes, commits, or pushes.
   --codex-review  Run the independent Codex review before applying the agent's proposal (opt-in).
@@ -443,6 +448,24 @@ function withoutUpdateTimestamp(person) {
 
 function jsonEqual(left, right) {
   return isDeepStrictEqual(left, right);
+}
+
+function formatChangeValue(value) {
+  if (value === undefined) return '[missing]';
+  return JSON.stringify(value);
+}
+
+export function describeRosterChanges(before, after) {
+  if (!before && !after) return [];
+  if (!after) return ['entry removed'];
+  if (!before) return ['entry added'];
+
+  const fields = [...new Set([...Object.keys(before), ...Object.keys(after)])]
+    .filter((field) => field !== 'lastUpdatedAt')
+    .sort();
+  return fields
+    .filter((field) => !jsonEqual(before[field], after[field]))
+    .map((field) => `${field}: ${formatChangeValue(before[field])} -> ${formatChangeValue(after[field])}`);
 }
 
 export function proposalValidationError(proposal) {
@@ -1015,11 +1038,11 @@ async function commitBatch() {
 
 async function logBatchSummary(commitCreated) {
   const changed = state.completed.filter((entry) => entry.changed);
-  const unchanged = state.completed.filter((entry) => !entry.changed);
-  await log(`Batch summary: ${state.completed.length} approved (${changed.length} changed, ${unchanged.length} unchanged); ${state.skipped.length} skipped; commit ${commitCreated ? state.completed[0]?.commit || 'created' : 'none'}.`);
-  if (changed.length) await log(`Changed: ${changed.map((entry) => entry.name).join(', ')}.`);
-  if (unchanged.length) await log(`Unchanged: ${unchanged.map((entry) => entry.name).join(', ')}.`);
-  for (const entry of state.skipped) await log(`Skipped: ${entry.name} — ${entry.reason}.`);
+  await log(`Modified entries: ${changed.length}.`);
+  for (const entry of changed) {
+    const changes = entry.changes?.length ? entry.changes.join('; ') : 'change details unavailable';
+    await log(`- ${entry.name}: ${changes}`);
+  }
 }
 
 async function pushBatch() {
@@ -1113,6 +1136,7 @@ async function processCurrent(schemas) {
       name: current.name,
       finalName: current.proposal?.name ?? null,
       changed: current.substantiveChange,
+      changes: describeRosterChanges(current.baseline, current.proposal),
       verifiedAt: current.approvedAt,
       commit: null,
     });
@@ -1123,7 +1147,7 @@ async function processCurrent(schemas) {
   }
 }
 
-async function createRun(options, schemas) {
+async function createRun(options, schemas, progress = {}) {
   await requireCleanCheckout();
   await git(['pull', '--ff-only', 'origin', 'main'], { label: 'update origin/main' });
   const roster = await readJson(join(REPO_ROOT, 'public/data.json'));
@@ -1131,9 +1155,15 @@ async function createRun(options, schemas) {
   const deferredUntil = state?.deferredUntil || {};
   const agent = options.agent || 'claude';
   const target = options.name ? await resolveTargetWithAgent(options.name, roster, schemas.targetSchema, agent) : null;
-  const queue = target
-    ? selectTargetEntries(roster, target)
-    : selectDueEntries(roster, verification, { ...options, deferredUntil });
+  const remaining = options.total === null ? options.limit : Math.min(options.limit, options.total - (progress.processedCount || 0));
+  const queue = remaining <= 0 ? [] : target
+    ? selectTargetEntries(roster, target).slice(0, remaining)
+    : selectDueEntries(roster, verification, {
+      ...options,
+      all: options.all || options.total !== null,
+      limit: remaining,
+      deferredUntil,
+    });
   state = {
     version: 1,
     runId: randomUUID(),
@@ -1141,12 +1171,15 @@ async function createRun(options, schemas) {
     startedAt: nowIso(),
     options: {
       limit: options.limit,
+      total: options.total,
       staleDays: options.staleDays,
       all: options.all,
       name: options.name,
       codexReview: options.codexReview,
       agent,
       target,
+      processedCount: progress.processedCount || 0,
+      batchNumber: progress.batchNumber || 1,
     },
     queue,
     index: 0,
@@ -1198,28 +1231,46 @@ async function runController(options) {
   await assertPreflight(resumable ? state.options : { ...options, agent: options.agent || 'claude' });
   const schemas = await ensureSchemas();
   if (!resumable) await createRun(options, schemas);
-  if (state.queue.length === 0) {
-    state.status = 'complete';
-    state.completedAt = nowIso();
-    await saveState();
-    await log('No entries are due for verification.');
-    return;
-  }
 
-  while (state.index < state.queue.length) {
-    if (stopRequested || await exists(STOP_FILE)) throw new StopRequestedError('stop requested');
-    if (!state.current) await startPerson(state.queue[state.index]);
-    await log(`Processing ${state.current.name} (${state.index + 1}/${state.queue.length}), stage ${state.current.stage}.`);
-    await processCurrent(schemas);
+  while (true) {
+    if (state.queue.length === 0) {
+      state.status = 'complete';
+      state.completedAt = nowIso();
+      await saveState();
+      await log('No entries are due for verification.');
+      return;
+    }
+
+    while (state.index < state.queue.length) {
+      if (stopRequested || await exists(STOP_FILE)) throw new StopRequestedError('stop requested');
+      if (!state.current) await startPerson(state.queue[state.index]);
+      await log(`Processing ${state.current.name} (${state.index + 1}/${state.queue.length}), stage ${state.current.stage}.`);
+      await processCurrent(schemas);
+    }
+    await runFullChecks();
+    const commitCreated = await commitBatch();
+    if (commitCreated) await pushBatch();
+    await logBatchSummary(commitCreated);
+
+    const processedCount = (state.processedCount || 0) + state.queue.length;
+    const total = state.options.total ?? null;
+    if ((!state.options.all && total === null) || (total !== null && processedCount >= total)) {
+      state.status = 'complete';
+      state.completedAt = nowIso();
+      await saveState();
+      await log(`Run complete: ${processedCount} entries processed.`);
+      return;
+    }
+
+    await log(`Starting batch ${(state.batchNumber || 1) + 1} (up to ${Math.min(state.options.limit, total - processedCount)} entries remaining in this run).`);
+    await createRun({
+      ...state.options,
+      agent: state.options.agent,
+    }, schemas, {
+      processedCount,
+      batchNumber: (state.batchNumber || 1) + 1,
+    });
   }
-  await runFullChecks();
-  const commitCreated = await commitBatch();
-  if (commitCreated) await pushBatch();
-  state.status = 'complete';
-  state.completedAt = nowIso();
-  await saveState();
-  await logBatchSummary(commitCreated);
-  await log(`Run complete: ${state.completed.length} approved, ${state.skipped.length} skipped.`);
 }
 
 async function stopController() {
