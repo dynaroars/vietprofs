@@ -444,6 +444,26 @@ function jsonEqual(left, right) {
   return isDeepStrictEqual(left, right);
 }
 
+export function proposalValidationError(proposal) {
+  if (!proposal || typeof proposal !== 'object' || Array.isArray(proposal)) return 'proposal must be an object';
+  for (const field of ['name', 'profileUrl', 'lastUpdatedAt', 'university', 'city', 'department']) {
+    if (typeof proposal[field] !== 'string' || !proposal[field].trim()) return `proposal has invalid ${field}`;
+  }
+  if (!Array.isArray(proposal.researchAreas) || proposal.researchAreas.length === 0) return 'proposal needs researchAreas';
+  if (proposal.honors !== undefined) {
+    if (!Array.isArray(proposal.honors)) return 'proposal honors must be an array';
+    for (const honor of proposal.honors) {
+      for (const field of ['name', 'organization', 'source']) {
+        if (typeof honor?.[field] !== 'string' || !honor[field].trim()) return `proposal honor has invalid ${field}`;
+      }
+      if (!/^https:\/\//.test(honor.source)) return 'proposal honor source must use HTTPS';
+      if (!['academy', 'fellow', 'career_award', 'major_award', 'distinguished_professorship'].includes(honor.category)) return 'proposal honor has unsupported category';
+      if (honor.year !== null && (!Number.isInteger(honor.year) || honor.year < 1900 || honor.year > new Date().getFullYear())) return 'proposal honor has invalid year';
+    }
+  }
+  return null;
+}
+
 export function analyzeRosterProposal(beforeRoster, afterRoster, targetName) {
   if (!Array.isArray(beforeRoster) || !Array.isArray(afterRoster)) {
     return { ok: false, reason: 'roster must remain a JSON array' };
@@ -905,6 +925,8 @@ async function applyProposal(current) {
   const roster = await readJson(rosterPath);
   const verification = await readJson(verificationPath);
   const finalName = current.proposal?.name ?? null;
+  const validationError = current.proposal && proposalValidationError(current.proposal);
+  if (validationError) throw new Error(`refusing invalid proposal: ${validationError}`);
   const approvalTime = current.approvedAt || nowIso();
   current.approvedAt = approvalTime;
   let index = roster.findIndex((person) => person.name === current.name);

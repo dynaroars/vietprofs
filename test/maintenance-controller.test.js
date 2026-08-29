@@ -6,6 +6,7 @@ import {
   failureKind,
   parseOptions,
   parseRateLimitReset,
+  proposalValidationError,
   parseChangedPaths,
   resolveTargetLocally,
   selectDueEntries,
@@ -84,6 +85,15 @@ test('proposal analysis accepts one targeted edit and ignores model-chosen times
   assert.equal(result.substantiveChange, true);
   assert.equal(result.proposal.university, 'New University');
   assert.equal(result.proposal.lastUpdatedAt, people[1].lastUpdatedAt);
+});
+
+test('proposal validation rejects honors missing required provenance', () => {
+  const error = proposalValidationError({
+    name: 'Old Person', profileUrl: 'https://example.edu/old', lastUpdatedAt: '2026-01-01T00:00:00.000Z',
+    university: 'Old University', city: 'Old City', department: 'History', researchAreas: ['History'],
+    honors: [{ name: 'Incomplete award', year: 2025, category: 'career_award' }],
+  });
+  assert.match(error, /honor has invalid organization/);
 });
 
 test('proposal analysis preserves completed postdoctoral training fields', () => {
