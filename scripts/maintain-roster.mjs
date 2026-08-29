@@ -85,6 +85,7 @@ let runLogFile = null;
 
 class StopRequestedError extends Error {}
 class BlockedError extends Error {}
+class InvalidProposalError extends Error {}
 
 function nowIso() {
   return new Date().toISOString();
@@ -929,7 +930,7 @@ async function applyProposal(current) {
   const verification = await readJson(verificationPath);
   const finalName = current.proposal?.name ?? null;
   const validationError = current.proposal && proposalValidationError(current.proposal);
-  if (validationError) throw new Error(`refusing invalid proposal: ${validationError}`);
+  if (validationError) throw new InvalidProposalError(`refusing invalid proposal: ${validationError}`);
   const approvalTime = current.approvedAt || nowIso();
   current.approvedAt = approvalTime;
   let index = roster.findIndex((person) => person.name === current.name);
@@ -1054,7 +1055,12 @@ async function processCurrent(schemas) {
       throw new BlockedError(`main changed locally while ${current.name} was being reviewed`);
     }
     await requireOnlyMaintainedChanges();
-    await applyProposal(current);
+    try {
+      await applyProposal(current);
+    } catch (error) {
+      if (error instanceof InvalidProposalError) return skipPerson('invalid proposal', error.message);
+      throw error;
+    }
     state.completed.push({
       name: current.name,
       finalName: current.proposal?.name ?? null,
