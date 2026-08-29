@@ -1231,7 +1231,10 @@ async function runController(options) {
   await acquireLock();
   await unlink(STOP_FILE).catch(() => {});
   state = await readJson(STATE_FILE, null);
-  const resumable = state && state.status !== 'complete' && Array.isArray(state.queue);
+  // An exhausted/empty checkpoint cannot resume useful work. Start a fresh selection from the
+  // requested CLI options instead; non-empty queues and active in-progress people still resume.
+  const resumable = state && state.status !== 'complete' && Array.isArray(state.queue)
+    && (state.queue.length > 0 || state.current);
   if (resumable) {
     // Normalize checkpoints written by older controller versions. In particular, an omitted
     // `total` means an uncapped run; it must not become undefined and produce NaN below.
