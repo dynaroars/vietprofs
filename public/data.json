@@ -88,14 +88,16 @@
   },
   {
     "name": "Thang N. Dinh",
-    "profileUrl": "https://thang-dinh.github.io/",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "profileUrl": "https://egr.vcu.edu/directory/thang.dinh/",
+    "websiteUrl": "https://thang-dinh.github.io/",
+    "lastUpdatedAt": "2026-08-28T18:53:31.184Z",
     "scholarUrl": "https://scholar.google.com/citations?user=M5W9tuUAAAAJ",
     "university": "Virginia Commonwealth University",
     "city": "Richmond",
     "state": "Virginia",
     "researchAreas": [
-      "Data Mining",
+      "Quantum Computing",
+      "Graph Machine Learning",
       "Security"
     ],
     "track": "Tenure-line",
@@ -103,6 +105,8 @@
     "rank": "Associate Professor",
     "phdYear": 2013,
     "phdInstitution": "University of Florida",
+    "undergradInstitution": "Vietnam National University, Hanoi",
+    "undergradYear": 2007,
     "country": "United States",
     "portrait": "portraits/004-thang-n-dinh-virginia-commonwealth-university.webp",
     "portraitSource": "https://thang-dinh.github.io/img/thang.png"
@@ -155,8 +159,8 @@
   {
     "name": "Tiffany D. Do",
     "vietnameseName": "Đỗ Diễm",
-    "profileUrl": "https://zyrcant.github.io/",
-    "lastUpdatedAt": "2026-08-24T03:03:40.000Z",
+    "profileUrl": "https://drexel.edu/cci/about/directory/D/Do-Tiffany-D/",
+    "websiteUrl": "https://zyrcant.github.io/",
     "scholarUrl": "https://scholar.google.com/citations?user=91XQQMkAAAAJ",
     "university": "Drexel University",
     "city": "Philadelphia",
@@ -172,14 +176,17 @@
     "phdInstitution": "University of Central Florida",
     "country": "United States",
     "undergradInstitution": "University of Texas at Dallas",
+    "undergradYear": 2018,
     "portrait": "portraits/006-tiffany-d-do-drexel-university.webp",
     "portraitSource": "https://zyrcant.github.io/authors/admin/avatar_hufb6bb054339788fce68249343291e86e_366264_270x270_fill_q75_lanczos_center.jpg",
-    "msInstitution": "University of Texas at Dallas"
+    "msInstitution": "University of Texas at Dallas",
+    "msYear": 2019,
+    "lastUpdatedAt": "2026-08-28T19:03:20.824Z"
   },
   {
     "name": "AnHai Doan",
     "profileUrl": "https://pages.cs.wisc.edu/~anhai/",
-    "lastUpdatedAt": "2026-08-26T05:03:08.000Z",
+    "lastUpdatedAt": "2026-08-28T19:05:20.409Z",
     "scholarUrl": "https://scholar.google.com/citations?user=Qa_TAw4AAAAJ",
     "university": "University of Wisconsin-Madison",
     "city": "Madison",
@@ -188,10 +195,14 @@
       "Data Management"
     ],
     "track": "Tenure-line",
-    "department": "Computer Science",
+    "department": "Computer Sciences",
     "rank": "Professor",
     "phdYear": 2002,
     "phdInstitution": "University of Washington",
+    "msInstitution": "University of Wisconsin-Milwaukee",
+    "msYear": 1996,
+    "undergradInstitution": "Kossuth Lajos University",
+    "undergradYear": 1993,
     "country": "United States",
     "honors": [
       {
@@ -207,6 +218,13 @@
         "category": "career_award",
         "organization": "National Science Foundation",
         "source": "https://pages.cs.wisc.edu/~anhai/"
+      },
+      {
+        "name": "ACM Doctoral Dissertation Award",
+        "year": 2003,
+        "category": "major_award",
+        "organization": "Association for Computing Machinery",
+        "source": "https://pages.cs.wisc.edu/~anhai/bio/"
       },
       {
         "name": "Gurindar S. Sohi Professor",
@@ -229,9 +247,9 @@
   },
   {
     "name": "Nghia Hoang",
-    "profileUrl": "https://htnghia87.github.io/",
-    "lastUpdatedAt": "2026-08-27T14:01:26.000Z",
-    "scholarUrl": "https://scholar.google.com.sg/citations?user=E-kZZeQAAAAJ&hl=en",
+    "profileUrl": "https://school.eecs.wsu.edu/directory/wsu-profile/trongnghia.hoang/",
+    "websiteUrl": "https://htnghia87.github.io/",
+    "scholarUrl": "https://scholar.google.com/citations?user=E-kZZeQAAAAJ&hl=en",
     "university": "Washington State University",
     "city": "Pullman",
     "state": "Washington",
@@ -239,7 +257,7 @@
       "AI"
     ],
     "track": "Tenure-line",
-    "department": "Computer Science",
+    "department": "School of Electrical Engineering and Computer Science",
     "rank": "Assistant Professor",
     "phdYear": 2015,
     "phdInstitution": "National University of Singapore",
@@ -258,12 +276,14 @@
       }
     ],
     "portrait": "portraits/008-nghia-hoang-washington-state-university.webp",
-    "portraitSource": "https://s3.wp.wsu.edu/uploads/sites/908/2022/05/Nghia-square.png"
+    "portraitSource": "https://s3.wp.wsu.edu/uploads/sites/908/2022/05/Nghia-square.png",
+    "lastUpdatedAt": "2026-08-28T19:09:17.413Z"
   },
   {
     "name": "Thang Hoang",
-    "profileUrl": "https://thanghoang.github.io/",
-    "lastUpdatedAt": "2026-08-27T14:01:26.000Z",
+    "profileUrl": "https://website.cs.vt.edu/people/faculty/thang-hoang.html",
+    "lastUpdatedAt": "2026-08-28T19:11:41.628Z",
+    "websiteUrl": "https://thanghoang.github.io/",
     "scholarUrl": "https://scholar.google.com/citations?user=VCjqqogAAAAJ",
     "university": "Virginia Tech",
     "city": "Blacksburg",
@@ -282,7 +302,9 @@
     "portrait": "portraits/009-thang-hoang-virginia-tech.webp",
     "portraitSource": "https://website.cs.vt.edu/content/website_cs_vt_edu/en/people/faculty/thang-hoang/jcr:content/bio-image.transform/s-medium/image.jpg",
     "msInstitution": "Chonnam National University, South Korea",
-    "msYear": 2014
+    "msYear": 2014,
+    "undergradInstitution": "University of Science, Vietnam National University Ho Chi Minh City",
+    "undergradYear": 2010
   },
   {
     "name": "Viet Tung Hoang",
@@ -434,9 +456,10 @@
   },
   {
     "name": "Ngan Hoang Le",
-    "profileUrl": "https://engineering.uark.edu/electrical-engineering-computer-science/electrical-engineering-faculty/uid/thile/name/Thi+Hoang+Ngan+Le/",
-    "lastUpdatedAt": "2026-08-26T05:03:08.000Z",
+    "profileUrl": "https://engineering.uark.edu/directory/profile/uid/thile/name/Ngan+Le/",
+    "lastUpdatedAt": "2026-08-28T23:35:27.715Z",
     "scholarUrl": "https://scholar.google.com/citations?user=8ck0k_UAAAAJ",
+    "websiteUrl": "https://uark-aicv.github.io/",
     "university": "University of Arkansas",
     "city": "Fayetteville",
     "state": "Arkansas",
@@ -444,10 +467,16 @@
       "Computer Vision"
     ],
     "track": "Tenure-line",
-    "department": "Computer Science",
+    "department": "Electrical Engineering and Computer Science",
     "rank": "Associate Professor",
     "phdYear": 2018,
     "phdInstitution": "Carnegie Mellon University",
+    "postdocInstitution": "Carnegie Mellon University",
+    "postdocYear": 2019,
+    "msInstitution": "Carnegie Mellon University",
+    "msYear": 2015,
+    "undergradInstitution": "University of Science, Vietnam National University Ho Chi Minh City",
+    "undergradYear": 2005,
     "country": "United States",
     "honors": [
       {
@@ -455,7 +484,7 @@
         "year": 2025,
         "category": "career_award",
         "organization": "National Science Foundation",
-        "source": "https://arkansasengineer.uark.edu/2026/01/14/three-engineering-faculty-win-prestigious-nsf-career-awards/"
+        "source": "https://news.uark.edu/articles/79972/ngan-le-receives-prestigious-nsf-career-award-for-ai-research"
       }
     ],
     "portrait": "portraits/015-ngan-hoang-le-university-of-arkansas.webp",
@@ -463,14 +492,16 @@
   },
   {
     "name": "Thai Le",
-    "profileUrl": "https://lethaiq.github.io/",
-    "lastUpdatedAt": "2026-08-27T15:22:52.557Z",
+    "profileUrl": "https://luddy.iu.edu/people/le-thai.html",
     "scholarUrl": "https://scholar.google.com/citations?user=Fd8K7kAAAAAJ",
+    "websiteUrl": "https://lethaiq.github.io/tql3/",
     "university": "Indiana University Bloomington",
     "city": "Bloomington",
     "state": "Indiana",
     "researchAreas": [
-      "ML"
+      "ML",
+      "NLP",
+      "Security & Privacy"
     ],
     "track": "Tenure-line",
     "department": "Computer Science",
@@ -478,20 +509,33 @@
     "phdYear": 2022,
     "phdInstitution": "Pennsylvania State University",
     "country": "United States",
+    "honors": [
+      {
+        "name": "DAAD AInet Fellowship",
+        "year": null,
+        "category": "career_award",
+        "organization": "DAAD",
+        "source": "https://www.daad.de/en/the-daad/postdocnet/fellows/fellows/"
+      }
+    ],
     "portrait": "portraits/016-thai-le-indiana-university-bloomington.webp",
-    "portraitSource": "https://luddy.iu.edu/images/people/tle.jpg"
+    "portraitSource": "https://luddy.iu.edu/images/people/tle.jpg",
+    "lastUpdatedAt": "2026-08-28T23:36:36.969Z"
   },
   {
     "name": "Tuan Le",
     "profileUrl": "https://computerscience.nmsu.edu/facultydirectory/individual-bio-pages/tuan-le.html",
-    "lastUpdatedAt": "2026-08-27T14:29:00.000Z",
     "scholarUrl": "https://scholar.google.com/citations?user=dkt80HIAAAAJ",
+    "websiteUrl": "https://sites.google.com/site/vmtuanle/",
     "university": "New Mexico State University",
     "city": "Las Cruces",
     "state": "New Mexico",
     "researchAreas": [
       "Data Mining",
-      "Mobile"
+      "Machine Learning",
+      "Text Mining",
+      "Visualization",
+      "Graph Mining"
     ],
     "track": "Tenure-line",
     "department": "Computer Science",
@@ -502,12 +546,14 @@
     "country": "United States",
     "portrait": "portraits/017-tuan-le-new-mexico-state-university.webp",
     "portraitSource": "https://computerscience.nmsu.edu/facultydirectory/_images/photo_tuanle-250x250.jpg",
-    "msInstitution": "New Mexico State University"
+    "undergradInstitution": "Ho Chi Minh City University of Technology",
+    "msInstitution": "Ho Chi Minh City University of Technology",
+    "lastUpdatedAt": "2026-08-28T23:37:39.161Z"
   },
   {
     "name": "Khoa Luu",
-    "profileUrl": "https://engineering.uark.edu/directory/profile/uid/khoaluu/name/Khoa+Luu/",
-    "lastUpdatedAt": "2026-08-27T08:30:41.000Z",
+    "profileUrl": "https://engineering.uark.edu/electrical-engineering-computer-science/faculty/uid/khoaluu/name/Khoa%2BLuu/",
+    "lastUpdatedAt": "2026-08-28T23:39:02.213Z",
     "scholarUrl": "https://scholar.google.com/citations?user=JPAl8-gAAAAJ",
     "websiteUrl": "https://uark-cviu.github.io/",
     "university": "University of Arkansas",
@@ -522,6 +568,10 @@
     "department": "Electrical Engineering and Computer Science",
     "rank": "Associate Professor",
     "phdInstitution": "Concordia University",
+    "msInstitution": "Concordia University",
+    "undergradInstitution": "University of Science, Vietnam National University Ho Chi Minh City",
+    "undergradYear": 2005,
+    "postdocInstitution": "Carnegie Mellon University",
     "country": "United States",
     "honors": [
       {
@@ -538,8 +588,8 @@
   {
     "name": "Truong Nghiem",
     "profileUrl": "https://www.cecs.ucf.edu/faculty/truong-nghiem/",
-    "lastUpdatedAt": "2026-08-24T03:03:40.000Z",
     "scholarUrl": "https://scholar.google.com/citations?user=ELMp9FMAAAAJ",
+    "websiteUrl": "https://nxtlab.org/",
     "university": "University of Central Florida",
     "city": "Orlando",
     "state": "Florida",
@@ -551,6 +601,7 @@
     "rank": "Associate Professor",
     "phdYear": 2012,
     "phdInstitution": "University of Pennsylvania",
+    "postdocInstitution": "École Polytechnique Fédérale de Lausanne (EPFL) and University of Pennsylvania",
     "country": "United States",
     "honors": [
       {
@@ -559,18 +610,26 @@
         "category": "career_award",
         "organization": "National Science Foundation",
         "source": "https://www.cecs.ucf.edu/faculty/truong-nghiem/"
+      },
+      {
+        "name": "NSF Engineering Research Initiation Award",
+        "year": 2022,
+        "category": "career_award",
+        "organization": "National Science Foundation",
+        "source": "https://www.cecs.ucf.edu/faculty/truong-nghiem/"
       }
     ],
     "portrait": "portraits/019-truong-nghiem-university-of-central-florida.webp",
     "portraitSource": "https://www.cecs.ucf.edu/web/wp-content/uploads/2024/08/Truong-Ngheim-cropped-1x1_8.jpg",
-    "msInstitution": "University of Pennsylvania"
+    "msInstitution": "University of Pennsylvania",
+    "lastUpdatedAt": "2026-08-28T23:39:56.765Z"
   },
   {
     "name": "Truong X. Tran",
-    "profileUrl": "https://sites.psu.edu/truongtran/",
-    "lastUpdatedAt": "2026-08-24T03:59:31.000Z",
+    "profileUrl": "https://harrisburg.psu.edu/faculty-and-staff/truong-tran-phd",
     "scholarUrl": "https://scholar.google.com/citations?user=MgvKCyQAAAAJ",
-    "university": "Penn State Harrisburg",
+    "websiteUrl": "https://sites.psu.edu/truongtran/",
+    "university": "Pennsylvania State University",
     "city": "Middletown",
     "state": "Pennsylvania",
     "researchAreas": [
@@ -582,14 +641,18 @@
     "department": "Computer Science",
     "rank": "Assistant Professor",
     "phdInstitution": "University of Alabama in Huntsville",
+    "msInstitution": "Arkansas State University",
+    "msYear": 2012,
+    "undergradInstitution": "Hanoi University of Science and Technology",
+    "undergradYear": 2010,
     "country": "United States",
     "portrait": "portraits/020-truong-x-tran-penn-state-harrisburg.webp",
-    "portraitSource": "https://harrisburg.psu.edu/sites/harrisburg/files/styles/person_headshot/public/tran-truong5.jpg?itok=tK1-mNYu"
+    "portraitSource": "https://harrisburg.psu.edu/sites/harrisburg/files/styles/person_headshot/public/tran-truong5.jpg?itok=tK1-mNYu",
+    "lastUpdatedAt": "2026-08-28T23:41:02.395Z"
   },
   {
     "name": "Anh Totti Nguyen",
-    "profileUrl": "https://anhnguyen.me/",
-    "lastUpdatedAt": "2026-08-24T12:31:35.000Z",
+    "profileUrl": "https://eng.auburn.edu/directory/azn0044",
     "scholarUrl": "https://scholar.google.com/citations?user=EQw8d9AAAAAJ",
     "university": "Auburn University",
     "city": "Auburn",
@@ -616,12 +679,14 @@
     "portrait": "portraits/021-anh-totti-nguyen-auburn-university.webp",
     "portraitSource": "https://eng.auburn.edu/images/programs/csse/headshots/nguyen-ahn.jpg",
     "msInstitution": "University of Wyoming",
-    "websiteUrl": "http://anhnguyen.me/"
+    "websiteUrl": "https://anhnguyen.me/",
+    "lastUpdatedAt": "2026-08-28T23:41:53.786Z"
   },
   {
     "name": "Clark T.-C. Nguyen",
-    "profileUrl": "https://people.eecs.berkeley.edu/~ctnguyen/",
-    "lastUpdatedAt": "2026-08-26T05:03:08.000Z",
+    "profileUrl": "https://www2.eecs.berkeley.edu/Faculty/Homepages/ctnguyen.html",
+    "lastUpdatedAt": "2026-08-28T23:42:51.305Z",
+    "websiteUrl": "https://people.eecs.berkeley.edu/~ctnguyen/",
     "university": "University of California, Berkeley",
     "city": "Berkeley",
     "state": "California",
@@ -633,6 +698,10 @@
     "rank": "Professor",
     "phdYear": 1994,
     "phdInstitution": "University of California, Berkeley",
+    "msYear": 1991,
+    "msInstitution": "University of California, Berkeley",
+    "undergradYear": 1989,
+    "undergradInstitution": "University of California, Berkeley",
     "country": "United States",
     "honors": [
       {
@@ -650,6 +719,13 @@
         "source": "https://bsac.berkeley.edu/people/clark-t-c-nguyen"
       },
       {
+        "name": "IEEE Walter G. Cady Award",
+        "year": 2006,
+        "category": "major_award",
+        "organization": "IEEE",
+        "source": "https://ieee-uffc.org/node/1137"
+      },
+      {
         "name": "IEEE Robert Bosch Micro and Nano Electro Mechanical Systems Award",
         "year": 2017,
         "category": "major_award",
@@ -662,9 +738,9 @@
   },
   {
     "name": "Duong Nguyen - University of Wyoming",
-    "profileUrl": "https://duongnn.github.io/",
-    "lastUpdatedAt": "2026-08-27T14:29:00.000Z",
+    "profileUrl": "https://www.uwyo.edu/eecs/faculty-staff/faculty/duong-nguyen/index.html",
     "scholarUrl": "https://scholar.google.com/citations?user=WJMRKcwAAAAJ",
+    "websiteUrl": "https://duongnn.github.io/",
     "university": "University of Wyoming",
     "city": "Laramie",
     "state": "Wyoming",
@@ -672,19 +748,27 @@
       "Systems"
     ],
     "track": "Tenure-line",
-    "department": "Computer Science",
+    "department": "Electrical Engineering and Computer Science",
     "rank": "Assistant Professor",
     "phdInstitution": "Michigan State University",
+    "phdYear": 2021,
+    "msInstitution": "Purdue University",
+    "msYear": 2012,
+    "undergradInstitution": "Hanoi University of Science and Technology",
+    "undergradYear": 2006,
     "postdocInstitution": "Georgetown University",
+    "postdocYear": 2022,
     "country": "United States",
     "portrait": "portraits/023-duong-nguyen-university-of-wyoming-university-of-wyoming.webp",
-    "portraitSource": "https://duongnn.github.io/images/profile22-crop.jpg"
+    "portraitSource": "https://www.uwyo.edu/eecs/faculty-staff/faculty/duong-nguyen/duong-directory.jpg",
+    "lastUpdatedAt": "2026-08-28T23:43:58.953Z"
   },
   {
     "name": "Huy Le Nguyen",
     "profileUrl": "https://www.khoury.northeastern.edu/people/huy-le-nguyen/",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "lastUpdatedAt": "2026-08-28T23:45:05.162Z",
     "scholarUrl": "https://scholar.google.com/citations?user=MDCu0WEAAAAJ",
+    "websiteUrl": "https://www.ccs.neu.edu/home/hlnguyen/",
     "university": "Northeastern University",
     "city": "Boston",
     "state": "Massachusetts",
@@ -708,21 +792,26 @@
       }
     ],
     "portrait": "portraits/024-huy-le-nguyen-northeastern-university.webp",
-    "portraitSource": "https://s44427.pcdn.co/wp-content/uploads/2016/08/Nguyen_Huy-Le_linderpix-53847-1200x800-1.jpg"
+    "portraitSource": "https://s44427.pcdn.co/wp-content/uploads/2016/08/Nguyen_Huy-Le_linderpix-53847-1200x800-1.jpg",
+    "msInstitution": "Massachusetts Institute of Technology"
   },
   {
     "name": "Khanh Nguyen",
-    "profileUrl": "https://khanhtn.engr.tamu.edu/",
-    "lastUpdatedAt": "2026-08-24T04:30:32.000Z",
+    "profileUrl": "https://engineering.tamu.edu/cse/profiles/Nguyen-Khanh.html",
+    "lastUpdatedAt": "2026-08-28T23:46:00.894Z",
     "scholarUrl": "https://scholar.google.com/citations?user=b5fHpFQAAAAJ",
+    "websiteUrl": "https://khanhtn.engr.tamu.edu/",
     "university": "Texas A&M University",
     "city": "College Station",
     "state": "Texas",
     "researchAreas": [
-      "Systems"
+      "Programming languages",
+      "Compiler & runtime support",
+      "Memory management",
+      "Big data systems"
     ],
     "track": "Tenure-line",
-    "department": "Computer Science",
+    "department": "Computer Science & Engineering",
     "rank": "Assistant Professor",
     "phdYear": 2019,
     "phdInstitution": "University of California, Los Angeles",
@@ -737,8 +826,9 @@
   {
     "name": "Anh Nguyen - University of Montana",
     "profileUrl": "https://umimpact.umt.edu/en/persons/anh-nguyen/",
-    "lastUpdatedAt": "2026-08-24T03:03:40.000Z",
+    "lastUpdatedAt": "2026-08-29T00:28:18.845Z",
     "scholarUrl": "https://scholar.google.com/citations?user=RpnrDmYAAAAJ",
+    "websiteUrl": "https://mcyphi.org/anhnguyen/",
     "university": "University of Montana",
     "city": "Missoula",
     "state": "Montana",
@@ -754,21 +844,25 @@
     "phdYear": 2022,
     "phdInstitution": "University of Colorado Boulder",
     "country": "United States",
-    "undergradInstitution": "University of Science",
+    "undergradInstitution": "University of Science, Vietnam National University Ho Chi Minh City",
+    "undergradYear": 2009,
     "portrait": "portraits/026-anh-nguyen-university-of-montana-university-of-montana.webp",
     "portraitSource": "https://umimpact.umt.edu/files-asset/36656872/Nguyen_Anh.jpg/",
-    "msInstitution": "Chonnam National University"
+    "msInstitution": "Chonnam National University",
+    "msYear": 2012
   },
   {
     "name": "Hoang Long Nguyen",
-    "profileUrl": "https://litpuvn.github.io/",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "profileUrl": "https://engineering.louisville.edu/faculty/hoang-long-nguyen/",
     "scholarUrl": "https://scholar.google.com/citations?user=H_BL5agAAAAJ",
+    "websiteUrl": "https://litpuvn.github.io/",
     "university": "University of Louisville",
     "city": "Louisville",
     "state": "Kentucky",
     "researchAreas": [
-      "Data Mining"
+      "Data Mining",
+      "Machine Learning",
+      "Artificial Intelligence"
     ],
     "track": "Tenure-line",
     "department": "Computer Science and Engineering",
@@ -776,14 +870,18 @@
     "phdInstitution": "Texas Tech University",
     "country": "United States",
     "portrait": "portraits/027-hoang-long-nguyen-university-of-louisville.webp",
-    "portraitSource": "https://litpuvn.github.io/images/logo.jpg"
+    "portraitSource": "https://litpuvn.github.io/images/logo.jpg",
+    "msInstitution": "Politecnico di Milano",
+    "undergradInstitution": "President University",
+    "lastUpdatedAt": "2026-08-29T00:29:26.277Z"
   },
   {
     "name": "Luan V. Nguyen",
     "vietnameseName": "Nguyễn Viết Luân",
-    "profileUrl": "https://luanvietnguyen.github.io/",
-    "lastUpdatedAt": "2026-08-27T14:01:26.000Z",
+    "profileUrl": "https://udayton.edu/directory/engineering/computerscience/nguyen-luan.php",
+    "lastUpdatedAt": "2026-08-29T00:30:23.960Z",
     "scholarUrl": "https://scholar.google.com/citations?user=8gSnyGAAAAAJ",
+    "websiteUrl": "https://luanvietnguyen.github.io/",
     "university": "University of Dayton",
     "city": "Dayton",
     "state": "Ohio",
@@ -793,12 +891,14 @@
     ],
     "track": "Tenure-line",
     "department": "Computer Science",
-    "rank": "Assistant Professor",
+    "rank": "Associate Professor",
     "phdYear": 2018,
-    "phdInstitution": "University of Texas at Arlington",
+    "phdInstitution": "The University of Texas at Arlington",
     "postdocInstitution": "University of Notre Dame",
     "postdocYear": 2020,
     "country": "United States",
+    "undergradInstitution": "The Catholic University of America",
+    "undergradYear": 2012,
     "portrait": "portraits/028-luan-v-nguyen-university-of-dayton.webp",
     "portraitSource": "https://udayton.edu/directory/engineering/computerscience/images/nguyen-luan-2020.jpg",
     "msInstitution": "The Catholic University of America",
@@ -807,22 +907,36 @@
   {
     "name": "Nam Nguyen",
     "profileUrl": "https://www.towson.edu/fcsm/departments/computerinfosci/facultystaff/nnguyen.html",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "lastUpdatedAt": "2026-08-29T00:31:23.099Z",
     "scholarUrl": "https://scholar.google.com/citations?user=aJcBWkgAAAAJ",
     "university": "Towson University",
     "city": "Towson",
     "state": "Maryland",
     "researchAreas": [
-      "Data Mining",
-      "Security"
+      "Complex Network Analysis",
+      "Mobile Computing",
+      "Social Data Analysis and Data Mining",
+      "Cyber Security"
     ],
     "track": "Tenure-line",
-    "department": "Computer Science",
+    "department": "Computer and Information Sciences",
     "rank": "Professor",
     "phdYear": 2013,
     "phdInstitution": "University of Florida",
+    "msInstitution": "Ohio University",
+    "msYear": 2009,
+    "undergradInstitution": "Vietnam National University Ho Chi Minh City",
+    "undergradYear": 2007,
     "country": "United States",
-    "undergradYear": 2009,
+    "honors": [
+      {
+        "name": "Jess and Mildred Fisher Endowed Professor of Computer Science",
+        "year": 2016,
+        "category": "distinguished_professorship",
+        "organization": "Towson University",
+        "source": "https://tigerweb.towson.edu/npnguyen/Databases/myCV.pdf"
+      }
+    ],
     "portrait": "portraits/029-nam-nguyen-towson-university.webp",
     "portraitSource": "https://www.towson.edu/images/headshots/nguyen-nam.jpg"
   },
@@ -858,9 +972,10 @@
   },
   {
     "name": "Thanh Hong Nguyen",
-    "profileUrl": "https://ix.cs.uoregon.edu/~thanhhng/",
-    "lastUpdatedAt": "2026-08-27T14:01:26.000Z",
+    "profileUrl": "https://cas.uoregon.edu/directory/computer-science/all/tnguye11",
+    "lastUpdatedAt": "2026-08-29T00:32:29.348Z",
     "scholarUrl": "https://scholar.google.com/citations?user=6fpZnQIAAAAJ",
+    "websiteUrl": "https://ix.cs.uoregon.edu/~thanhhng/",
     "university": "University of Oregon",
     "city": "Eugene",
     "state": "Oregon",
@@ -875,9 +990,19 @@
     "postdocInstitution": "University of Michigan",
     "postdocYear": 2018,
     "country": "United States",
+    "undergradInstitution": "Hanoi University of Science and Technology",
+    "undergradYear": 2010,
+    "honors": [
+      {
+        "name": "Deployed Application Award",
+        "year": 2016,
+        "category": "major_award",
+        "organization": "Association for the Advancement of Artificial Intelligence",
+        "source": "https://aaai.org/wp-content/uploads/2023/04/aaai16program.pdf"
+      }
+    ],
     "portrait": "portraits/031-thanh-hong-nguyen-university-of-oregon.webp",
-    "portraitSource": "https://ix.cs.uoregon.edu/~thanhhng/img/ThanhNguyen.jpg",
-    "msInstitution": "Singapore Management University"
+    "portraitSource": "https://ix.cs.uoregon.edu/~thanhhng/img/ThanhNguyen.jpg"
   },
   {
     "name": "ThanhVu H. Nguyen",
@@ -947,9 +1072,9 @@
   },
   {
     "name": "Thien Huu Nguyen",
-    "profileUrl": "https://ix.cs.uoregon.edu/~thien/",
-    "lastUpdatedAt": "2026-08-27T14:29:00.000Z",
+    "profileUrl": "https://cas.uoregon.edu/directory/computer-science/all/thienn",
     "scholarUrl": "https://scholar.google.com/citations?user=Da2FhegAAAAJ",
+    "websiteUrl": "https://ix.cs.uoregon.edu/~thien/",
     "university": "University of Oregon",
     "city": "Eugene",
     "state": "Oregon",
@@ -962,6 +1087,10 @@
     "rank": "Associate Professor",
     "phdYear": 2018,
     "phdInstitution": "New York University",
+    "msYear": 2014,
+    "msInstitution": "New York University",
+    "undergradYear": 2011,
+    "undergradInstitution": "Hanoi University of Science and Technology",
     "postdocInstitution": "University of Montreal",
     "country": "United States",
     "honors": [
@@ -974,13 +1103,15 @@
       }
     ],
     "portrait": "portraits/033-thien-huu-nguyen-university-of-oregon.webp",
-    "portraitSource": "https://ix.cs.uoregon.edu/~thien/assets/thien-img/thien.png"
+    "portraitSource": "https://ix.cs.uoregon.edu/~thien/assets/thien-img/thien.png",
+    "lastUpdatedAt": "2026-08-29T00:33:36.308Z"
   },
   {
     "name": "Thinh Nguyen - Oregon State University",
-    "profileUrl": "https://web.engr.oregonstate.edu/~thinhq/",
-    "lastUpdatedAt": "2026-08-26T05:03:08.000Z",
+    "profileUrl": "https://engineering.oregonstate.edu/about/people/thinh-nguyen",
+    "lastUpdatedAt": "2026-08-29T00:34:41.511Z",
     "scholarUrl": "https://scholar.google.com/citations?user=9flSED8AAAAJ",
+    "websiteUrl": "https://web.engr.oregonstate.edu/~thinhq/",
     "university": "Oregon State University",
     "city": "Corvallis",
     "state": "Oregon",
@@ -999,23 +1130,37 @@
         "year": 2009,
         "category": "career_award",
         "organization": "National Science Foundation",
-        "source": "https://engineering.oregonstate.edu/people/thinh-nguyen"
+        "source": "https://engineering.oregonstate.edu/about/people/thinh-nguyen"
+      },
+      {
+        "name": "IEEE Jack Neubauer Memorial Award",
+        "year": 2012,
+        "category": "major_award",
+        "organization": "IEEE Vehicular Technology Society",
+        "source": "https://vtsociety.org/paper-award/ieee-jack-neubauer-memorial-award"
       }
     ],
     "portrait": "portraits/034-thinh-nguyen-oregon-state-university-oregon-state-university.webp",
     "portraitSource": "https://web.engr.oregonstate.edu/~thinhq/nguyen.jpg",
-    "undergradInstitution": "University of Washington"
+    "undergradInstitution": "University of Washington",
+    "undergradYear": 1995,
+    "msInstitution": "University of California, Berkeley",
+    "msYear": 2000
   },
   {
     "name": "Thu Duc Nguyen",
-    "profileUrl": "https://thu-d-nguyen.cs.rutgers.edu/",
-    "lastUpdatedAt": "2026-08-24T04:30:32.000Z",
+    "profileUrl": "https://www.cs.rutgers.edu/people/professors/details/thu-nguyen",
     "scholarUrl": "https://scholar.google.com/citations?user=sm9xJEkAAAAJ",
+    "websiteUrl": "https://thu-d-nguyen.cs.rutgers.edu/",
     "university": "Rutgers University",
     "city": "New Brunswick",
     "state": "New Jersey",
     "researchAreas": [
-      "Computer Architecture"
+      "Computer Architecture",
+      "Computer Systems",
+      "Operating Systems",
+      "Distributed Systems",
+      "Sustainable Computing"
     ],
     "track": "Tenure-line",
     "department": "Computer Science",
@@ -1037,12 +1182,12 @@
       }
     ],
     "portrait": "portraits/035-thu-duc-nguyen-rutgers-university.webp",
-    "portraitSource": "https://thu-d-nguyen.cs.rutgers.edu/wp-content/uploads/sites/30/2019/12/Nguyen-2019.jpg"
+    "portraitSource": "https://www.cs.rutgers.edu/images/people/id20_thu-nguyen_032041.jpg",
+    "lastUpdatedAt": "2026-08-29T00:35:36.015Z"
   },
   {
     "name": "Tien Nguyen",
-    "profileUrl": "https://personal.utdallas.edu/~tien.n.nguyen/",
-    "lastUpdatedAt": "2026-08-24T12:31:35.000Z",
+    "profileUrl": "https://profiles.utdallas.edu/tien.n.nguyen",
     "scholarUrl": "https://scholar.google.com/citations?user=l4QhOVoAAAAJ",
     "university": "University of Texas at Dallas",
     "city": "Dallas",
@@ -1053,7 +1198,10 @@
     "track": "Tenure-line",
     "department": "Computer Science",
     "rank": "Professor",
+    "phdYear": 2005,
     "phdInstitution": "University of Wisconsin-Milwaukee",
+    "undergradInstitution": "Ho Chi Minh City University of Technology",
+    "undergradYear": 1995,
     "country": "United States",
     "honors": [
       {
@@ -1061,28 +1209,29 @@
         "year": 2026,
         "category": "fellow",
         "organization": "IEEE Computer Society",
-        "source": "https://cs.utdallas.edu/category/professor/"
+        "source": "https://cs.utdallas.edu/about/news/?id=2701&query-2-page=1"
       }
     ],
     "portrait": "portraits/036-tien-nguyen-university-of-texas-at-dallas.webp",
     "portraitSource": "https://personal.utdallas.edu/~tien.n.nguyen/images/tn-new.JPG",
-    "websiteUrl": "https://personal.utdallas.edu/%7Etien.n.nguyen/"
+    "websiteUrl": "https://personal.utdallas.edu/~tien.n.nguyen/",
+    "lastUpdatedAt": "2026-08-29T00:36:46.256Z"
   },
   {
-    "name": "Tin Nguyen - Wayne State University",
-    "profileUrl": "https://tinnguyen-lab.com/home/",
-    "lastUpdatedAt": "2026-08-24T03:59:31.000Z",
+    "name": "Tin Nguyen - Auburn University",
+    "profileUrl": "https://eng.auburn.edu/directory/tcn0015",
     "scholarUrl": "https://scholar.google.com/citations?user=aUjOGMEAAAAJ",
-    "university": "Wayne State University",
-    "city": "Detroit",
-    "state": "Michigan",
+    "websiteUrl": "https://tinnguyen-lab.com/home/",
+    "university": "Auburn University",
+    "city": "Auburn",
+    "state": "Alabama",
     "researchAreas": [
       "Bioinformatics",
       "Multi-omics Data Integration"
     ],
     "track": "Tenure-line",
-    "department": "Industrial and Systems Engineering",
-    "rank": "Professor",
+    "department": "Computer Science and Software Engineering",
+    "rank": "Associate Professor",
     "phdYear": 2017,
     "phdInstitution": "Wayne State University",
     "country": "United States",
@@ -1097,13 +1246,14 @@
       }
     ],
     "portrait": "portraits/037-tin-nguyen-wayne-state-university-wayne-state-university.webp",
-    "portraitSource": "https://people.wayne.edu/profile/ex6091/2155/nguyen-tin-headshot.jpg",
-    "msInstitution": "Eotvos Lorand University"
+    "portraitSource": "https://eng.auburn.edu/images/programs/csse/headshots/nguyen-tin.jpg",
+    "msInstitution": "Eotvos Lorand University",
+    "lastUpdatedAt": "2026-08-29T00:37:35.080Z"
   },
   {
     "name": "Tu Nguyen - Kennesaw State University",
     "profileUrl": "https://ksuweb.kennesaw.edu/~tnguy360/",
-    "lastUpdatedAt": "2026-08-27T14:01:26.000Z",
+    "lastUpdatedAt": "2026-08-29T00:38:45.007Z",
     "scholarUrl": "https://scholar.google.com/citations?user=wZ6mimYAAAAJ",
     "university": "Kennesaw State University",
     "city": "Kennesaw",
@@ -1120,24 +1270,40 @@
     "postdocInstitution": "University of Minnesota",
     "postdocYear": 2019,
     "country": "United States",
+    "honors": [
+      {
+        "name": "NSF CRII Award",
+        "year": 2021,
+        "category": "career_award",
+        "organization": "National Science Foundation",
+        "source": "https://www.kennesaw.edu/news/stories/2021/ksu-computer-science-nsf-grant-cellular-networks.php"
+      }
+    ],
     "portrait": "portraits/038-tu-nguyen-kennesaw-state-university-kennesaw-state-university.webp",
-    "portraitSource": "https://ksuweb.kennesaw.edu/~tnguy360/images/headshot-2021-cop2-reduce.jpg"
+    "portraitSource": "https://campus.kennesaw.edu/colleges-departments/ccse/academics/computer-science/images/cs-dept-faculty-staff/tu-nguyen.jpg"
   },
   {
     "name": "VP (Phuc) Nguyen",
-    "profileUrl": "https://people.cs.umass.edu/~phuc/",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "profileUrl": "https://www.cics.umass.edu/about/directory/vp-nguyen",
+    "lastUpdatedAt": "2026-08-29T03:22:34.368Z",
+    "websiteUrl": "https://wsslab.org/",
     "scholarUrl": "https://scholar.google.com/citations?user=pBf2M3QAAAAJ",
     "university": "University of Massachusetts Amherst",
     "city": "Amherst",
     "state": "Massachusetts",
     "researchAreas": [
-      "Wireless Networks"
+      "Mobile and Sensor Systems",
+      "Networking and Distributed Systems"
     ],
     "track": "Tenure-line",
     "department": "Computer Science",
     "rank": "Assistant Professor",
     "phdInstitution": "University of Colorado Boulder",
+    "phdYear": 2018,
+    "msInstitution": "Sungkyunkwan University",
+    "msYear": 2014,
+    "undergradInstitution": "Vietnam National University",
+    "undergradYear": 2010,
     "country": "United States",
     "honors": [
       {
@@ -1145,7 +1311,7 @@
         "year": 2026,
         "category": "career_award",
         "organization": "National Science Foundation",
-        "source": "https://people.cs.umass.edu/~phuc/"
+        "source": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2541673"
       }
     ],
     "portrait": "portraits/039-vp-phuc-nguyen-university-of-massachusetts-amherst.webp",
@@ -1154,7 +1320,7 @@
   {
     "name": "XuanLong Nguyen",
     "profileUrl": "https://dept.stat.lsa.umich.edu/~xuanlong/",
-    "lastUpdatedAt": "2026-08-27T14:29:00.000Z",
+    "lastUpdatedAt": "2026-08-29T03:23:51.041Z",
     "scholarUrl": "https://scholar.google.com/citations?user=Az7XqxQAAAAJ",
     "university": "University of Michigan",
     "city": "Ann Arbor",
@@ -1170,6 +1336,12 @@
     "phdInstitution": "University of California, Berkeley",
     "postdocInstitution": "Statistical and Applied Mathematical Sciences Institute",
     "country": "United States",
+    "undergradInstitution": "Pohang University of Science and Technology",
+    "undergradYear": 1999,
+    "msInstitution": "Arizona State University",
+    "msYear": 2001,
+    "maInstitution": "University of California, Berkeley",
+    "maYear": 2007,
     "honors": [
       {
         "name": "NSF CAREER Award",
@@ -1184,6 +1356,48 @@
         "category": "fellow",
         "organization": "Institute of Mathematical Statistics",
         "source": "https://imstat.org/2021/04/22/ims-names-2021-fellows/"
+      },
+      {
+        "name": "American Statistical Association Fellow",
+        "year": 2023,
+        "category": "fellow",
+        "organization": "American Statistical Association",
+        "source": "https://www.amstat.org/docs/default-source/amstat-documents/pdfs/fellows/Fellows2023.pdf?v=1.0"
+      },
+      {
+        "name": "International Society for Bayesian Analysis Fellow",
+        "year": 2015,
+        "category": "fellow",
+        "organization": "International Society for Bayesian Analysis",
+        "source": "https://bayesian.org/nominees/?civiwp=CiviCRM&crmPID=1&crmSID=1_d&force=1&gid=29&q=civicrm%2Fprofile"
+      },
+      {
+        "name": "Leon O. Chua Award",
+        "year": 2007,
+        "category": "major_award",
+        "organization": "University of California, Berkeley",
+        "source": "https://www2.eecs.berkeley.edu/Students/Awards/3/"
+      },
+      {
+        "name": "IEEE Signal Processing Society Young Author Best Paper Award",
+        "year": 2007,
+        "category": "major_award",
+        "organization": "IEEE Signal Processing Society",
+        "source": "https://www.cs.umb.edu/~duc/research/papers/bookchapter_localization_tran.pdf"
+      },
+      {
+        "name": "ICML Best Paper Award",
+        "year": 2004,
+        "category": "major_award",
+        "organization": "International Conference on Machine Learning",
+        "source": "https://viasm.edu.vn/en/hdkh/machine-learning-day"
+      },
+      {
+        "name": "ICML Best Paper Award",
+        "year": 2014,
+        "category": "major_award",
+        "organization": "International Conference on Machine Learning",
+        "source": "https://viasm.edu.vn/en/hdkh/machine-learning-day"
       }
     ],
     "portrait": "portraits/040-xuanlong-nguyen-university-of-michigan.webp",
@@ -1221,21 +1435,37 @@
   {
     "name": "Vinhthuy Phan",
     "profileUrl": "https://classic.memphis.edu/cs/people/faculty_pages/vinhthuy-phan.php",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "lastUpdatedAt": "2026-08-29T03:40:48.635Z",
     "scholarUrl": "https://scholar.google.com/citations?user=ZeYNKGcAAAAJ",
+    "websiteUrl": "https://vtphan.github.io/",
     "university": "University of Memphis",
     "city": "Memphis",
     "state": "Tennessee",
     "researchAreas": [
       "Bioinformatics",
-      "CS Education"
+      "CS Education",
+      "Data Science",
+      "Generative AI"
     ],
     "track": "Tenure-line",
     "department": "Computer Science",
     "rank": "Associate Professor",
     "phdYear": 2003,
     "phdInstitution": "Stony Brook University",
+    "msYear": 2001,
+    "msInstitution": "Stony Brook University",
+    "undergradYear": 1998,
+    "undergradInstitution": "Brandeis University",
     "country": "United States",
+    "honors": [
+      {
+        "name": "Pat Burlison Professorship",
+        "year": 2018,
+        "category": "distinguished_professorship",
+        "organization": "University of Memphis College of Arts and Sciences",
+        "source": "https://classic.memphis.edu/cs/news_and_events/news/2018_cas_awards.php"
+      }
+    ],
     "portrait": "portraits/042-vinhthuy-phan-university-of-memphis.webp",
     "portraitSource": "https://www.memphis.edu/cs/images/people/vphan-big.jpg"
   },
