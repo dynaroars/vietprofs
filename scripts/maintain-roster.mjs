@@ -450,12 +450,18 @@ export function proposalValidationError(proposal) {
   for (const field of ['name', 'profileUrl', 'lastUpdatedAt', 'university', 'city', 'department']) {
     if (typeof proposal[field] !== 'string' || !proposal[field].trim()) return `proposal has invalid ${field}`;
   }
-  if (!Array.isArray(proposal.researchAreas) || proposal.researchAreas.length === 0) return 'proposal needs researchAreas';
+  if (!/^https?:\/\//.test(proposal.profileUrl)) return 'proposal profileUrl must use HTTP(S)';
+  if (!Array.isArray(proposal.researchAreas) || proposal.researchAreas.length === 0 || proposal.researchAreas.some((area) => typeof area !== 'string' || !area.trim())) return 'proposal needs valid researchAreas';
+  if (!['Tenure-line', 'Teaching', 'Research', 'Clinical', 'Emeritus'].includes(proposal.track)) return 'proposal has unsupported track';
   if (proposal.websiteUrl !== undefined && proposal.websiteUrl === proposal.profileUrl) return 'proposal websiteUrl must differ from profileUrl';
   if (proposal.websiteUrl !== undefined && !/^https?:\/\//.test(proposal.websiteUrl)) return 'proposal websiteUrl must use HTTP(S)';
   if (proposal.scholarUrl !== undefined && !/^https:\/\//.test(proposal.scholarUrl)) return 'proposal scholarUrl must use HTTPS';
+  if ((proposal.portrait === undefined) !== (proposal.portraitSource === undefined)) return 'proposal portrait and portraitSource must be provided together';
+  if (proposal.portrait !== undefined && !/^portraits\/[a-z0-9][a-z0-9.-]*\.webp$/.test(proposal.portrait)) return 'proposal has invalid portrait path';
+  if (proposal.portraitSource !== undefined && !/^https?:\/\//.test(proposal.portraitSource)) return 'proposal portraitSource must use HTTP(S)';
   if (proposal.honors !== undefined) {
     if (!Array.isArray(proposal.honors)) return 'proposal honors must be an array';
+    const honorKeys = new Set();
     for (const honor of proposal.honors) {
       for (const field of ['name', 'organization', 'source']) {
         if (typeof honor?.[field] !== 'string' || !honor[field].trim()) return `proposal honor has invalid ${field}`;
@@ -463,8 +469,27 @@ export function proposalValidationError(proposal) {
       if (!/^https:\/\//.test(honor.source)) return 'proposal honor source must use HTTPS';
       if (!['academy', 'fellow', 'career_award', 'major_award', 'distinguished_professorship'].includes(honor.category)) return 'proposal honor has unsupported category';
       if (honor.year !== null && (!Number.isInteger(honor.year) || honor.year < 1900 || honor.year > new Date().getFullYear())) return 'proposal honor has invalid year';
+      const honorKey = `${honor.name}|${honor.year ?? 'unknown'}|${honor.organization}`;
+      if (honorKeys.has(honorKey)) return 'proposal contains duplicate honors';
+      honorKeys.add(honorKey);
     }
   }
+  if (proposal.otherDegrees !== undefined) {
+    if (!Array.isArray(proposal.otherDegrees)) return 'proposal otherDegrees must be an array';
+    for (const degree of proposal.otherDegrees) {
+      if (!degree || typeof degree.degree !== 'string' || !degree.degree.trim() || typeof degree.institution !== 'string' || !degree.institution.trim()) return 'proposal has invalid other degree';
+      if (degree.year !== undefined && (!Number.isInteger(degree.year) || degree.year < 1900 || degree.year > new Date().getFullYear())) return 'proposal has invalid other degree year';
+      if (degree.source !== undefined && !/^https?:\/\//.test(degree.source)) return 'proposal other degree source must use HTTP(S)';
+    }
+  }
+  for (const field of ['phdInstitution', 'undergradInstitution', 'msInstitution', 'mdInstitution', 'postdocInstitution']) {
+    if (proposal[field] !== undefined && (typeof proposal[field] !== 'string' || !proposal[field].trim())) return `proposal has invalid ${field}`;
+  }
+  for (const field of ['phdYear', 'undergradYear', 'msYear', 'mdYear', 'postdocYear']) {
+    if (proposal[field] !== undefined && (!Number.isInteger(proposal[field]) || proposal[field] < 1900 || proposal[field] > new Date().getFullYear())) return `proposal has invalid ${field}`;
+  }
+  if (proposal.state !== undefined && typeof proposal.state !== 'string') return 'proposal state must be a string';
+  if (proposal.country !== undefined && typeof proposal.country !== 'string') return 'proposal country must be a string';
   return null;
 }
 
@@ -931,6 +956,18 @@ async function applyProposal(current) {
   const finalName = current.proposal?.name ?? null;
   const validationError = current.proposal && proposalValidationError(current.proposal);
   if (validationError) throw new InvalidProposalError(`refusing invalid proposal: ${validationError}`);
+  if (current.proposal?.portrait && !(await exists(join(REPO_ROOT, 'public', current.proposal.portrait)))) {
+    throw new InvalidProposalError(`refusing invalid proposal: portrait file does not exist: ${current.proposal.portrait}`);
+  }
+  if (current.proposal) {
+    const otherEntries = roster.filter((person) => person.name !== current.name);
+    if (otherEntries.some((person) => person.profileUrl === current.proposal.profileUrl)) {
+      throw new InvalidProposalError('refusing invalid proposal: duplicate profileUrl');
+    }
+    if (current.proposal.portrait && otherEntries.some((person) => person.portrait === current.proposal.portrait)) {
+      throw new InvalidProposalError('refusing invalid proposal: duplicate portrait');
+    }
+  }
   const approvalTime = current.approvedAt || nowIso();
   current.approvedAt = approvalTime;
   let index = roster.findIndex((person) => person.name === current.name);

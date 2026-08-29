@@ -90,7 +90,7 @@ test('proposal analysis accepts one targeted edit and ignores model-chosen times
 test('proposal validation rejects honors missing required provenance', () => {
   const error = proposalValidationError({
     name: 'Old Person', profileUrl: 'https://example.edu/old', lastUpdatedAt: '2026-01-01T00:00:00.000Z',
-    university: 'Old University', city: 'Old City', department: 'History', researchAreas: ['History'],
+    university: 'Old University', city: 'Old City', department: 'History', track: 'Tenure-line', researchAreas: ['History'],
     honors: [{ name: 'Incomplete award', year: 2025, category: 'career_award' }],
   });
   assert.match(error, /honor has invalid organization/);
@@ -99,10 +99,21 @@ test('proposal validation rejects honors missing required provenance', () => {
 test('proposal validation rejects a website duplicated from the profile', () => {
   const error = proposalValidationError({
     name: 'Old Person', profileUrl: 'https://example.edu/old', lastUpdatedAt: '2026-01-01T00:00:00.000Z',
-    university: 'Old University', city: 'Old City', department: 'History', researchAreas: ['History'],
+    university: 'Old University', city: 'Old City', department: 'History', track: 'Tenure-line', researchAreas: ['History'],
     websiteUrl: 'https://example.edu/old',
   });
   assert.match(error, /websiteUrl must differ/);
+});
+
+test('proposal validation rejects unsupported tracks and malformed research areas', () => {
+  const proposal = {
+    name: 'Old Person', profileUrl: 'https://example.edu/old', lastUpdatedAt: '2026-01-01T00:00:00.000Z',
+    university: 'Old University', city: 'Old City', department: 'History', track: 'Visiting', researchAreas: ['History'],
+  };
+  assert.match(proposalValidationError(proposal), /unsupported track/);
+  proposal.track = 'Tenure-line';
+  proposal.researchAreas = [''];
+  assert.match(proposalValidationError(proposal), /valid researchAreas/);
 });
 
 test('proposal analysis preserves completed postdoctoral training fields', () => {
