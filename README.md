@@ -23,7 +23,7 @@ Use prefixes when you want to search one attribute:
 | `dept:`, `department:` | Primary department | `dept:Economics` |
 | `name:` | Displayed name | `name:"Thanh Nguyen"` |
 
-The location, field, and track filters can be combined. Shareable URLs preserve the active search and filters. The “Show me something interesting” option provides geographic, university, PhD, and graduation-cohort insights.
+The location, field, and track filters can be combined. Shareable URLs preserve the active search and filters. The “Show me something interesting” option provides roster-derived observations about geography, institutions, fields, and appointment tracks. It does not make claims about institutional prestige or Vietnamese population size.
 
 ## Commands
 
@@ -72,6 +72,18 @@ field-wide standing is clearly documented; an impressive title or cash prize alo
 Use [`submit.html`](./submit.html) to propose an entry or correction without editing the repository directly. Maintainers review submissions before adding them to the roster.
 
 Detailed inclusion, verification, discovery, field-mapping, and data-format guidance is in [`ROSTER_MAINTENANCE.md`](./ROSTER_MAINTENANCE.md).
+
+### Interesting-facts guidelines
+
+The interesting-facts view is computed from the current [`public/data.json`](./public/data.json), not from hand-written anecdotes. Observations should:
+
+- be reproducible from stored roster fields such as university, city, state, country, department, field, rank, and track;
+- describe multiple records and use explicit counts or percentages where useful;
+- apply conservative minimum sample sizes and omit weak patterns from small filtered subsets;
+- be phrased as observations about this roster, not as estimates of the entire Vietnamese academic diaspora; qualified signals may use language such as “suggests” or “is consistent with” when the data supports a pattern but cannot establish a broader conclusion; and
+- remain valid when the roster changes, because the values are calculated at runtime.
+
+Do not turn a suggestive pattern into a definitive claim. In particular, do not infer prestige, selectivity, research quality, population size, ethnicity, migration history, or causal explanations from a university, city, country, field, surname, or award name. Do not present current-roster concentrations as growth, migration paths, or emerging regions unless historical data explicitly supports the claim. External rankings and population statistics are out of scope for this view unless they are separately sourced and intentionally documented.
 
 ## Automated roster maintenance
 

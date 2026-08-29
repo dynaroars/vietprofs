@@ -202,23 +202,19 @@ test('buildFunFacts returns a non-empty list of fact strings covering the roster
   assert.ok(!facts.some((f) => /\bDC\b.*\bstate\b/i.test(f)));
 });
 
-test('buildFunFacts surname counts include common Vietnamese surnames and stay internally consistent', () => {
+test('buildFunFacts reports structural roster observations rather than name-based trivia', () => {
   const facts = buildFunFacts(roster);
-  const surnameFact = facts.find((f) => f.startsWith('Most common surnames'));
-  assert.ok(surnameFact);
-  assert.match(surnameFact, /Nguyen \(\d+\)/);
-  const nguyenCount = Number(surnameFact.match(/Nguyen \((\d+)\)/)[1]);
-  // Every surname count should be no larger than how many people actually have that token in
-  // their name, and no smaller than 1.
-  assert.ok(nguyenCount > 0 && nguyenCount <= roster.length);
+  assert.ok(facts.some((f) => /distinct departments/.test(f)));
+  assert.ok(facts.some((f) => /same-institution, same-field cluster/.test(f)));
+  assert.ok(facts.some((f) => /closely represented internationally/.test(f)));
 });
 
-test('buildFunFacts includes a Vietnamese-American population-hub comparison and a refugee/diaspora research count', () => {
+test('buildFunFacts includes only observations computed from roster fields', () => {
   const facts = buildFunFacts(roster);
-  assert.ok(facts.some((f) => /Vietnamese-American communities/.test(f)));
-  // The refugee/diaspora fact only appears when at least one person's research areas match; this
-  // roster has known Critical Refugee Studies entries, so it should be present.
-  assert.ok(facts.some((f) => /refugee, immigration, or diaspora topics/.test(f)));
+  assert.ok(facts.some((f) => /California and Texas together contain/.test(f)));
+  assert.ok(facts.some((f) => /international city clusters/.test(f)));
+  assert.ok(facts.some((f) => /roster suggests a different .* balance/.test(f)));
+  assert.ok(!facts.some((f) => /Vietnamese-American communities|Census|population hubs/.test(f)));
 });
 
 test('buildAwardsFunFacts reports major award categories and NSF CAREER holders', () => {

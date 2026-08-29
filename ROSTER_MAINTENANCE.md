@@ -195,6 +195,42 @@ do not infer prestige from the title alone.
 
 When two people share a name, use a fuller official form if available (for example, a middle name, initial, or nickname). Only if their names are genuinely identical should the university be appended: `Full Name - University`.
 
+## Interesting-facts guidelines
+
+The “Show me something interesting” view presents observations calculated at runtime from the
+canonical `public/data.json`. It is a descriptive view of the maintained roster, not a survey or
+estimate of all Vietnamese and Vietnamese-diaspora faculty.
+
+Use an observation only when it is:
+
+- directly reproducible from stored fields, such as university, city, state, country, department,
+  canonical field, rank, or track;
+- supported by multiple records and stated with exact counts or percentages when that makes the
+  pattern easier to check;
+- sufficiently large to survive ordinary roster changes; small filtered groups should omit
+  comparative observations rather than manufacture a pattern; and
+- relevant to understanding the roster’s academic or geographic distribution.
+
+Good examples include a concentration at one institution, a multi-department institutional
+cluster, a same-institution same-field cluster, a city or country grouping, broad-field balance,
+or a documented difference in track distribution between two adequately sized groups. A pattern
+that is interesting but not conclusive may be included as a qualified signal using language such
+as “the current roster suggests” or “is consistent with”; retain the counts and comparison that
+make the signal checkable.
+
+Do not present a qualified signal as proof, and do not infer institutional prestige, selectivity,
+research quality, population size, ethnicity, causal explanations, migration paths, or career
+history from a university, location, field, surname, rank, or award name. Current-roster counts
+must not be described as growth, an emerging region, or a historical trend unless a versioned
+historical dataset or Git-history analysis explicitly supports that claim. External rankings and
+demographic statistics are not inputs to the runtime facts view. If an observation depends on
+external evidence, document and source it separately instead of presenting it as a
+canonical-roster fact.
+
+When changing the observation logic, add tests for the underlying calculation and for empty or
+small filtered rosters. Run `npm test`, `npm run build`, and `git diff --check` before submitting
+the change.
+
 ## Fields
 
 The canonical field list is:

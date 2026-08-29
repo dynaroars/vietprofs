@@ -120,13 +120,13 @@ test('buildFunFacts produces valid strings across every continent and empty rost
 
   const usFacts = buildUsFunFacts(roster);
   assert.ok(Array.isArray(usFacts) && usFacts.length > 3);
-  assert.ok(usFacts.some((f) => f.includes('U.S. universit')));
-  assert.ok(usFacts.some((f) => f.includes('Vietnamese-American communities')));
+  assert.ok(usFacts.some((f) => f.includes('U.S. entries across')));
+  assert.ok(usFacts.some((f) => f.includes('distinct departments')));
 
   const globalFacts = buildGlobalFunFacts(roster);
   assert.ok(Array.isArray(globalFacts) && globalFacts.length > 3);
-  assert.ok(globalFacts.some((f) => f.includes('international professor')));
-  assert.ok(globalFacts.some((f) => f.includes('Continental distribution')));
+  assert.ok(globalFacts.some((f) => f.includes('international entries')));
+  assert.ok(globalFacts.some((f) => f.includes('international city clusters')));
 });
 
 test('suggestionValues array contains no undefined/null and all elements safely escape', () => {
