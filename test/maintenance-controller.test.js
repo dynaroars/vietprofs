@@ -9,6 +9,7 @@ import {
   parseRateLimitReset,
   proposalValidationError,
   parseChangedPaths,
+  remainingBatchSize,
   resolveTargetLocally,
   selectDueEntries,
   selectTargetEntries,
@@ -40,6 +41,12 @@ test('maintenance defaults to Claude and supports Codex as agent', () => {
     () => parseOptions(['run', '--all', '--total', '1000']),
     /cannot be used together/,
   );
+});
+
+test('older checkpoints with no total continue using the batch limit', () => {
+  assert.equal(remainingBatchSize({ limit: 50 }, 40), 50);
+  assert.equal(remainingBatchSize({ limit: 40, total: null }, 40), 40);
+  assert.equal(remainingBatchSize({ limit: 40, total: 100 }, 40), 40);
 });
 
 test('maintenance selection can explicitly include recently verified entries', () => {

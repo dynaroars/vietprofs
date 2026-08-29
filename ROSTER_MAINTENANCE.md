@@ -261,11 +261,15 @@ order:
    If they moved, update `university`, `field`, `rank`, and `track` to match; if they no longer
    meet the inclusion standard (retired without emeritus status, left academia, moved to an
    ineligible track, etc.), remove them and note why in the commit message.
-2. **Check for a real personal or lab website.** Independent of the university directory profile,
-   look for a currently maintained personal homepage or lab site. If one exists and `websiteUrl`
-   is missing or points somewhere stale, add or update it. `profileUrl` must remain the official
-   university/department page per the data-entry rules above — do not replace it with a personal
-   site unless the university profile no longer exists at all.
+2. **Check both URL roles independently.** For every person, compare the stored `profileUrl` and
+   `websiteUrl` against the live pages and determine which page is the official university/
+   department profile and which is the maintained personal or lab homepage. Correct swapped values
+   even when both URLs work. A university directory, faculty bio, department profile, or official
+   institutional person page belongs in `profileUrl`; a personal domain, Google Site, lab page, or
+   maintained academic homepage belongs in `websiteUrl`. If only one usable page exists, put it in
+   the appropriate field and leave the other field absent. Never retain a personal page in
+   `profileUrl` merely because it is the only currently stored URL, and never put a university
+   directory page in `websiteUrl`.
 3. **Find and verify Google Scholar.** Search for the person's Google Scholar profile even when
    `scholarUrl` is currently missing. Confirm it belongs to the same person using affiliation,
    research area, publications, linked homepage, or other corroborating details; do not select a

@@ -327,19 +327,20 @@ export function parseOptions(argv) {
     name: null,
     codexReview: false,
     agent: null,
+    provided: new Set(),
   };
   const values = [...argv];
   if (values[0] && !values[0].startsWith('-')) options.command = values.shift();
   while (values.length) {
     const value = values.shift();
-    if (value === '--all') options.all = true;
-    else if (value === '--dry-run') options.dryRun = true;
-    else if (value === '--codex-review') options.codexReview = true;
-    else if (value === '--agent') options.agent = values.shift();
-    else if (value === '--name') options.name = values.shift();
-    else if (value === '--limit') options.limit = Number(values.shift());
-    else if (value === '--total') options.total = Number(values.shift());
-    else if (value === '--stale-days') options.staleDays = Number(values.shift());
+    if (value === '--all') { options.all = true; options.provided.add('all'); }
+    else if (value === '--dry-run') { options.dryRun = true; options.provided.add('dryRun'); }
+    else if (value === '--codex-review') { options.codexReview = true; options.provided.add('codexReview'); }
+    else if (value === '--agent') { options.agent = values.shift(); options.provided.add('agent'); }
+    else if (value === '--name') { options.name = values.shift(); options.provided.add('name'); }
+    else if (value === '--limit') { options.limit = Number(values.shift()); options.provided.add('limit'); }
+    else if (value === '--total') { options.total = Number(values.shift()); options.provided.add('total'); }
+    else if (value === '--stale-days') { options.staleDays = Number(values.shift()); options.provided.add('staleDays'); }
     else if (value === '--help' || value === '-h') options.command = 'help';
     else throw new Error(`unknown option: ${value}`);
   }
@@ -410,6 +411,11 @@ function targetTokens(value) {
     .toLowerCase()
     .match(/[a-z0-9]+/g)
     ?.map((token) => (token.length > 3 ? token.replace(/s$/, '') : token)) ?? [];
+}
+
+export function remainingBatchSize(options, processedCount = 0) {
+  const total = options.total ?? null;
+  return total === null ? options.limit : Math.min(options.limit, total - processedCount);
 }
 
 function tokensMatch(query, candidate) {
@@ -819,7 +825,11 @@ Read AGENTS.md, README.md, and ROSTER_MAINTENANCE.md completely. Use live author
 to perform the entire periodic verification: identity and Vietnamese-diaspora eligibility,
 current primary university appointment, department, rank/track, official profile URL,
 personal/lab website, portrait and portrait source, and continued inclusion
-eligibility. Search for a Google Scholar profile even if scholarUrl is missing, verify identity
+eligibility. Audit both stored URL fields independently: fetch profileUrl and websiteUrl when
+present, identify which live page is the official university/department profile and which is the
+maintained personal or lab homepage, and correct swapped values. If only one usable page exists,
+place it in the appropriate field and omit the other. A reachable URL is not enough; verify its
+role and that it identifies this person. Search for a Google Scholar profile even if scholarUrl is missing, verify identity
 from affiliation/research/publications rather than name alone, and add or correct scholarUrl when
 supported. Check all explicitly documented education: PhD, master's,
 undergraduate, professional or equivalent degrees, majors and graduation years, plus completed
@@ -859,6 +869,9 @@ rank/track, official profile, personal/lab URLs, portrait and source, every
 documented degree/major/graduation year, completed postdoctoral institution,
 and any explicitly documented end/completion year, honors eligibility, and every proposed change. Approve only when the
 complete verification standard is satisfied and the normalized proposal is correct.
+Pay special attention to URL-role errors: independently verify that profileUrl is the official
+university/department profile and websiteUrl, when present, is a maintained personal or lab site;
+if only one exists, ensure it is stored in the correct field rather than copying it into both.
 Independently search for and identity-check Google Scholar when missing or changed; confirm that a
 verified Scholar URL is stored only in scholarUrl.
 Return uncertain for incomplete/inaccessible evidence and reject demonstrably incorrect work.
@@ -1052,7 +1065,7 @@ async function pushBatch() {
   });
   if (pull.code !== 0) {
     await git(['rebase', '--abort'], { allowFailure: true });
-    throw new BlockedError(`could not rebase ${current.name} onto origin/main`);
+    throw new BlockedError('could not rebase maintenance batch onto origin/main');
   }
   await runFullChecks();
   await git(['push', 'origin', 'main'], { label: `push maintenance batch ${state.runId}` });
@@ -1155,7 +1168,7 @@ async function createRun(options, schemas, progress = {}) {
   const deferredUntil = state?.deferredUntil || {};
   const agent = options.agent || 'claude';
   const target = options.name ? await resolveTargetWithAgent(options.name, roster, schemas.targetSchema, agent) : null;
-  const remaining = options.total === null ? options.limit : Math.min(options.limit, options.total - (progress.processedCount || 0));
+  const remaining = remainingBatchSize(options, progress.processedCount || 0);
   const queue = remaining <= 0 ? [] : target
     ? selectTargetEntries(roster, target).slice(0, remaining)
     : selectDueEntries(roster, verification, {
@@ -1220,8 +1233,22 @@ async function runController(options) {
   state = await readJson(STATE_FILE, null);
   const resumable = state && state.status !== 'complete' && Array.isArray(state.queue);
   if (resumable) {
+    // Normalize checkpoints written by older controller versions. In particular, an omitted
+    // `total` means an uncapped run; it must not become undefined and produce NaN below.
+    state.options = {
+      ...state.options,
+      total: state.options.total ?? null,
+      limit: state.options.limit ?? DEFAULT_LIMIT,
+      staleDays: state.options.staleDays ?? DEFAULT_STALE_DAYS,
+      all: state.options.all ?? false,
+      name: state.options.name ?? null,
+      codexReview: state.options.codexReview ?? false,
+      agent: state.options.agent ?? 'claude',
+    };
+    for (const field of ['limit', 'total', 'staleDays', 'all', 'name', 'codexReview']) {
+      if (options.provided?.has(field)) state.options[field] = options[field];
+    }
     if (options.agent) state.options.agent = options.agent;
-    if (options.codexReview) state.options.codexReview = true;
     runLogFile = join(STATE_DIR, 'logs', `${state.runId}-controller.log`);
     state.status = 'running';
     await saveState();
@@ -1262,7 +1289,10 @@ async function runController(options) {
       return;
     }
 
-    await log(`Starting batch ${(state.batchNumber || 1) + 1} (up to ${Math.min(state.options.limit, total - processedCount)} entries remaining in this run).`);
+    const nextBatchSize = total === null
+      ? state.options.limit
+      : Math.min(state.options.limit, total - processedCount);
+    await log(`Starting batch ${(state.batchNumber || 1) + 1} (up to ${nextBatchSize} entries remaining in this run).`);
     await createRun({
       ...state.options,
       agent: state.options.agent,
