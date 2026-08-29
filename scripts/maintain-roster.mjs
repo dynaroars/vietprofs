@@ -1020,6 +1020,23 @@ async function applyProposal(current) {
     if (finalName !== current.name) delete verification[current.name];
     verification[finalName] = approvalTime;
   }
+  // A reviewed removal can leave a formerly necessary " - University" disambiguator orphaned.
+  // Normalize those deterministic display-only suffixes before validation/commit so a batch does
+  // not fail its final test gate or leave the next run stuck on the same stale checkpoint.
+  const nameCounts = new Map();
+  for (const person of roster) {
+    const baseName = person.name.split(' - ')[0];
+    nameCounts.set(baseName, (nameCounts.get(baseName) || 0) + 1);
+  }
+  for (const person of roster) {
+    if (!person.name.includes(' - ')) continue;
+    const baseName = person.name.split(' - ')[0];
+    if (nameCounts.get(baseName) !== 1) continue;
+    const oldName = person.name;
+    person.name = baseName;
+    verification[baseName] = verification[oldName];
+    delete verification[oldName];
+  }
   await writeAtomic(rosterPath, roster);
   await writeAtomic(verificationPath, verification);
   await runProcess('npm', ['run', 'validate-data'], { label: `validate ${current.name}` });

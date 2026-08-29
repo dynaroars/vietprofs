@@ -3765,21 +3765,28 @@
   },
   {
     "name": "Christine Nguyen - Northern Illinois University",
-    "profileUrl": "https://www.niu.edu/cnguyen/",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "profileUrl": "https://www.niu.edu/cnguyen/index.shtml",
+    "lastUpdatedAt": "2026-08-29T07:46:55.118Z",
     "university": "Northern Illinois University",
     "city": "DeKalb",
     "state": "Illinois",
     "researchAreas": [
       "Optimization",
       "Supply Chain Management",
-      "Data Analytics"
+      "Data Analytics",
+      "Transportation",
+      "Simulation",
+      "Scheduling"
     ],
     "track": "Tenure-line",
     "department": "Industrial and Systems Engineering",
     "rank": "Associate Professor",
     "phdYear": 2014,
     "phdInstitution": "University of Southern California",
+    "undergradInstitution": "Northwestern University",
+    "undergradYear": 2009,
+    "msInstitution": "University of Southern California",
+    "msYear": 2011,
     "country": "United States",
     "portrait": "portraits/116-christine-nguyen-northern-illinois-university-northern-illinois-university.webp",
     "portraitSource": "https://www.niu.edu/cnguyen/_images/nguyen-christine.jpg"
@@ -3818,36 +3825,6 @@
         "source": "https://cee.illinois.edu/directory/profile/thn"
       }
     ]
-  },
-  {
-    "name": "Vicky Doan-Nguyen",
-    "profileUrl": "https://steamfactory.osu.edu/people/doan-nguyen.1",
-    "lastUpdatedAt": "2026-08-27T15:22:52.557Z",
-    "university": "The Ohio State University",
-    "city": "Columbus",
-    "state": "Ohio",
-    "researchAreas": [
-      "Nanomaterials",
-      "Ceramic Composites",
-      "Materials for Aerospace"
-    ],
-    "track": "Tenure-line",
-    "department": "Materials Science and Engineering",
-    "rank": "Assistant Professor",
-    "phdInstitution": "University of Pennsylvania",
-    "country": "United States",
-    "honors": [
-      {
-        "name": "AFOSR Young Investigator Program Award",
-        "year": 2022,
-        "category": "career_award",
-        "organization": "Air Force Office of Scientific Research",
-        "source": "https://mse.osu.edu/news/2022/01/doan-nguyen-earns-prestigious-afosr-young-investigator-award"
-      }
-    ],
-    "portrait": "portraits/118-vicky-doan-nguyen-ohio-state-university.webp",
-    "portraitSource": "https://mse.osu.edu/sites/default/files/2020-09/Doan-Nguyen_OVSHINSKY_2019-web.jpg",
-    "phdYear": 2015
   },
   {
     "name": "Thang Pham",
@@ -3921,7 +3898,7 @@
   {
     "name": "Anh-Vu Phan",
     "profileUrl": "https://www.southalabama.edu/colleges/engineering/me/phan.html",
-    "lastUpdatedAt": "2026-08-24T03:03:40.000Z",
+    "lastUpdatedAt": "2026-08-29T07:49:45.337Z",
     "university": "University of South Alabama",
     "city": "Mobile",
     "state": "Alabama",
@@ -3933,17 +3910,33 @@
     "track": "Tenure-line",
     "department": "Mechanical, Aerospace, and Biomedical Engineering",
     "rank": "Professor",
-    "phdInstitution": "Ecole Polytechnique de Montreal",
+    "phdYear": 1997,
+    "phdInstitution": "Ecole Polytechnique, University of Montreal",
+    "postdocInstitution": "Oak Ridge National Laboratory; Ecole Polytechnique, University of Montreal",
+    "postdocYear": 2002,
     "country": "United States",
     "undergradInstitution": "Ho Chi Minh City University of Technology",
+    "undergradYear": 1982,
+    "undergradMajor": "Mechanical Engineering",
     "portrait": "portraits/122-anh-vu-phan-university-of-south-alabama.webp",
     "portraitSource": "https://www.southalabama.edu/colleges/engineering/me/images/avphan.jpg",
-    "msInstitution": "Grenoble Institute of Technology"
+    "msInstitution": "Grenoble Institute of Technology",
+    "msYear": 1993,
+    "msMajor": "Solid Mechanics",
+    "honors": [
+      {
+        "name": "Ralph E. Powe Junior Faculty Enhancement Award",
+        "year": 2004,
+        "category": "career_award",
+        "organization": "Oak Ridge Associated Universities",
+        "source": "https://www.southalabama.edu/colleges/engineering/me/resources/phan-cv-25.pdf"
+      }
+    ]
   },
   {
     "name": "Nhut Tan Ho",
-    "profileUrl": "https://academics.csun.edu/faculty/nhut.ho",
-    "lastUpdatedAt": "2026-08-24T03:03:40.000Z",
+    "profileUrl": "https://catalog.csun.edu/academics/me/faculty/ho-nhut-t/",
+    "websiteUrl": "https://arcs.center/nhuttho/",
     "university": "California State University, Northridge",
     "city": "Northridge",
     "state": "California",
@@ -3963,7 +3956,24 @@
     "portrait": "portraits/123-nhut-tan-ho-california-state-university-northridge.webp",
     "portraitSource": "https://csun-metalab-clouddrive.s3-us-west-2.amazonaws.com/media/faculty/nhut.ho/avatar.jpg?202621244",
     "msInstitution": "Massachusetts Institute of Technology",
-    "msYear": 1998
+    "msYear": 1998,
+    "honors": [
+      {
+        "name": "Robert J. Collier Trophy",
+        "year": 2018,
+        "category": "major_award",
+        "organization": "National Aeronautic Association",
+        "source": "https://arcs.center/nhuttho/"
+      },
+      {
+        "name": "NASA Summer Faculty Research Opportunity Faculty Fellow",
+        "year": 2005,
+        "category": "career_award",
+        "organization": "National Aeronautics and Space Administration",
+        "source": "https://www.csun.edu/engineering-computer-science/news-2005"
+      }
+    ],
+    "lastUpdatedAt": "2026-08-29T07:50:55.870Z"
   },
   {
     "name": "Kytai Nguyen",
@@ -4028,8 +4038,9 @@
   },
   {
     "name": "Juliane Nguyen",
-    "profileUrl": "https://nguyenlab.web.unc.edu/",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "profileUrl": "https://pharmacy.unc.edu/directory/julianen/",
+    "websiteUrl": "https://nguyenlab.web.unc.edu/",
+    "lastUpdatedAt": "2026-08-29T07:52:06.071Z",
     "university": "University of North Carolina at Chapel Hill",
     "city": "Chapel Hill",
     "state": "North Carolina",
@@ -4045,12 +4056,63 @@
     "phdInstitution": "Philipps-University of Marburg",
     "country": "United States",
     "portrait": "portraits/126-juliane-nguyen-university-of-north-carolina-at-chapel-hill.webp",
-    "portraitSource": "https://pharmacy.unc.edu/wp-content/uploads/sites/1424/2025/06/nguyen_juliane-3-4.jpg"
+    "portraitSource": "https://pharmacy.unc.edu/wp-content/uploads/sites/1424/2025/06/nguyen_juliane-3-4.jpg",
+    "otherDegrees": [
+      {
+        "degree": "PharmD",
+        "institution": "Philipps-University of Marburg",
+        "source": "https://www.aiche.org/community/bio/juliane-nguyen"
+      }
+    ],
+    "postdocInstitution": "University of California, San Francisco",
+    "honors": [
+      {
+        "name": "Fellow of the Controlled Release Society",
+        "year": 2023,
+        "category": "fellow",
+        "organization": "Controlled Release Society",
+        "source": "https://unclineberger.org/directory/juliane-nguyen/"
+      },
+      {
+        "name": "Fellow of the American Institute for Medical and Biological Engineering",
+        "year": 2024,
+        "category": "fellow",
+        "organization": "American Institute for Medical and Biological Engineering",
+        "source": "https://www.controlledreleasesociety.org/sites/default/files/docs/2026/Election%20Materials/Short%20Bio_Juliane%20Nguyen_Feb%2022%202026.pdf"
+      },
+      {
+        "name": "Fellow of the American Association of Pharmaceutical Scientists",
+        "year": 2024,
+        "category": "fellow",
+        "organization": "American Association of Pharmaceutical Scientists",
+        "source": "https://www.controlledreleasesociety.org/sites/default/files/docs/2026/Election%20Materials/Short%20Bio_Juliane%20Nguyen_Feb%2022%202026.pdf"
+      },
+      {
+        "name": "NSF CAREER Award",
+        "year": 2018,
+        "category": "career_award",
+        "organization": "National Science Foundation",
+        "source": "https://unclineberger.org/directory/juliane-nguyen/"
+      },
+      {
+        "name": "AAPS Emerging Leader Award",
+        "year": 2019,
+        "category": "career_award",
+        "organization": "American Association of Pharmaceutical Scientists",
+        "source": "https://unclineberger.org/directory/juliane-nguyen/"
+      },
+      {
+        "name": "Young Innovator in Cellular and Molecular Bioengineering",
+        "year": 2019,
+        "category": "career_award",
+        "organization": "Biomedical Engineering Society",
+        "source": "https://unclineberger.org/directory/juliane-nguyen/"
+      }
+    ]
   },
   {
     "name": "The Nguyen",
     "profileUrl": "https://engineering.fresnostate.edu/about/directory/mechanical/nguyen-the.html",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
     "university": "California State University, Fresno",
     "city": "Fresno",
     "state": "California",
@@ -4064,14 +4126,19 @@
     "rank": "Associate Professor",
     "phdYear": 2009,
     "phdInstitution": "University of Toledo",
+    "msInstitution": "University of Toledo",
+    "msYear": 2006,
+    "undergradInstitution": "University of Oklahoma",
+    "undergradYear": 2004,
     "country": "United States",
     "portrait": "portraits/127-the-nguyen-california-state-university-fresno.webp",
-    "portraitSource": "https://engineering.fresnostate.edu/images/1-new-website-images/faculty/the-leo-nguyen.jpg"
+    "portraitSource": "https://engineering.fresnostate.edu/images/1-new-website-images/faculty/the-leo-nguyen.jpg",
+    "lastUpdatedAt": "2026-08-29T07:53:07.847Z"
   },
   {
     "name": "Jacqueline Huynh",
-    "profileUrl": "https://faculty.sites.uci.edu/aircraftsyslab/",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "profileUrl": "https://engineering.uci.edu/users/jacqueline-huynh",
+    "lastUpdatedAt": "2026-08-29T07:54:08.464Z",
     "university": "University of California, Irvine",
     "city": "Irvine",
     "state": "California",
@@ -4085,6 +4152,11 @@
     "rank": "Assistant Professor",
     "phdYear": 2020,
     "phdInstitution": "Massachusetts Institute of Technology",
+    "msYear": 2017,
+    "msInstitution": "Massachusetts Institute of Technology",
+    "undergradYear": 2014,
+    "undergradInstitution": "University of California, Irvine",
+    "websiteUrl": "https://faculty.sites.uci.edu/aircraftsyslab/",
     "country": "United States",
     "portrait": "portraits/128-jacqueline-huynh-university-of-california-irvine.webp",
     "portraitSource": "https://faculty.uci.edu/get_image?facultyId=7044"
@@ -4092,7 +4164,6 @@
   {
     "name": "Trinh Pham",
     "profileUrl": "https://www.calstatela.edu/faculty/trinh-pham",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
     "university": "California State University, Los Angeles",
     "city": "Los Angeles",
     "state": "California",
@@ -4106,15 +4177,22 @@
     "rank": "Professor",
     "phdYear": 2006,
     "phdInstitution": "University of California, Irvine",
+    "phdMajor": "Mechanical and Aerospace Engineering",
+    "msYear": 2003,
+    "msInstitution": "University of California, Irvine",
+    "msMajor": "Mechanical and Aerospace Engineering",
+    "undergradYear": 2001,
+    "undergradInstitution": "University of California, Irvine",
+    "undergradMajor": "Mechanical and Aerospace Engineering",
     "country": "United States",
-    "undergradInstitution": "University of California",
     "portrait": "portraits/129-trinh-pham-california-state-university-los-angeles.webp",
-    "portraitSource": "https://www.calstatela.edu/sites/default/files/styles/profile_photo/public/pham_trinh_2_4.jpg?itok=z2kyXnMR"
+    "portraitSource": "https://www.calstatela.edu/sites/default/files/styles/profile_photo/public/pham_trinh_2_4.jpg?itok=z2kyXnMR",
+    "lastUpdatedAt": "2026-08-29T07:55:04.745Z"
   },
   {
     "name": "Tran N. H. Nguyen",
-    "profileUrl": "https://www.trannguyenlab.com/",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "profileUrl": "https://profiles.utsouthwestern.edu/profile/243422/tran-n-h-nguyen.html",
+    "websiteUrl": "https://www.trannguyenlab.com/",
     "university": "University of Texas Southwestern Medical Center",
     "city": "Dallas",
     "state": "Texas",
@@ -4128,9 +4206,31 @@
     "rank": "Assistant Professor",
     "phdYear": 2020,
     "phdInstitution": "Purdue University",
+    "undergradYear": 2013,
+    "undergradInstitution": "University of California, Berkeley",
+    "undergradMajor": "Chemical Biology",
+    "postdocInstitution": "University of Washington",
+    "postdocYear": 2025,
     "country": "United States",
+    "honors": [
+      {
+        "name": "The Rising Stars in Engineering in Health",
+        "year": 2024,
+        "category": "career_award",
+        "organization": "Boston University College of Engineering",
+        "source": "https://www.bu.edu/eng/academics/departments-and-divisions/biomedical-engineering/department-resources/rising-stars-2024-winners3/"
+      },
+      {
+        "name": "Interdisciplinary Postdoctoral Fellowship in Cancer Research",
+        "year": 2023,
+        "category": "career_award",
+        "organization": "University of Washington and Fred Hutch Cancer Center",
+        "source": "https://profiles.utsouthwestern.edu/profile/243422/tran-n-h-nguyen.html"
+      }
+    ],
     "portrait": "portraits/130-tran-n-h-nguyen-university-of-texas-southwestern-medical-center.webp",
-    "portraitSource": "https://static.wixstatic.com/media/8f07f7_ff63441182f248b1a95c0512ccb46ab8~mv2.jpg"
+    "portraitSource": "https://profileplus.swmed.edu/facultydata/243422/images/Resize.jpg",
+    "lastUpdatedAt": "2026-08-29T07:56:14.363Z"
   },
   {
     "name": "Hung V.-T. Nguyen",
@@ -4156,8 +4256,10 @@
   },
   {
     "name": "Huy T. Tran",
-    "profileUrl": "https://tran.aerospace.illinois.edu/",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "profileUrl": "https://aerospace.illinois.edu/directory/profile/huytran1",
+    "lastUpdatedAt": "2026-08-29T07:57:08.183Z",
+    "websiteUrl": "https://huytrtran.github.io/",
+    "scholarUrl": "https://scholar.google.com/citations?hl=en&user=TgaPukcAAAAJ",
     "university": "University of Illinois Urbana-Champaign",
     "city": "Urbana",
     "state": "Illinois",
@@ -4172,6 +4274,15 @@
     "phdYear": 2015,
     "phdInstitution": "Georgia Institute of Technology",
     "country": "United States",
+    "undergradInstitution": "North Carolina State University",
+    "undergradYear": 2008,
+    "undergradMajor": "Mechanical Engineering",
+    "mastersInstitution": "University of Wisconsin-Madison",
+    "mastersYear": 2010,
+    "mastersMajor": "Mechanical Engineering",
+    "secondMastersInstitution": "Georgia Institute of Technology",
+    "secondMastersYear": 2014,
+    "secondMastersMajor": "Aerospace Engineering",
     "portrait": "portraits/132-huy-t-tran-university-of-illinois-urbana-champaign.webp",
     "portraitSource": "https://ws.engr.illinois.edu/directory/viewphoto.aspx?photo=10945&s=300"
   },
@@ -4206,8 +4317,7 @@
   },
   {
     "name": "Quang Vuong",
-    "profileUrl": "https://sites.google.com/view/qvuong/home",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "profileUrl": "https://wp.nyu.edu/crate/research-staff/",
     "university": "New York University",
     "city": "New York",
     "state": "New York",
@@ -4221,18 +4331,48 @@
     "rank": "Professor",
     "phdYear": 1982,
     "phdInstitution": "Northwestern University",
+    "msInstitution": "Northwestern University",
+    "msYear": 1980,
+    "msMajor": "Statistics",
+    "undergradInstitution": "École des Mines de Paris",
+    "undergradYear": 1976,
+    "undergradMajor": "Engineering (Ingénieur)",
     "country": "United States",
+    "websiteUrl": "https://sites.google.com/view/qvuong/home",
+    "scholarUrl": "https://scholar.google.com/citations?user=Jp-0jdwAAAAJ",
     "honors": [
       {
         "name": "Econometric Society Fellow",
-        "year": null,
+        "year": 1997,
         "category": "fellow",
         "organization": "Econometric Society",
-        "source": "https://sites.google.com/view/qvuong/home"
+        "source": "https://www.econometricsociety.org/images/users/581/originals/Curriculum-Vitae.pdf"
+      },
+      {
+        "name": "Journal of Econometrics Fellow",
+        "year": 2005,
+        "category": "fellow",
+        "organization": "Journal of Econometrics",
+        "source": "https://www.econometricsociety.org/images/users/581/originals/Curriculum-Vitae.pdf"
+      },
+      {
+        "name": "International Association for Applied Econometrics Fellow",
+        "year": 2020,
+        "category": "fellow",
+        "organization": "International Association for Applied Econometrics",
+        "source": "https://www.econometricsociety.org/images/users/581/originals/Curriculum-Vitae.pdf"
+      },
+      {
+        "name": "Arnold Zellner Award",
+        "year": 2003,
+        "category": "major_award",
+        "organization": "Journal of Econometrics",
+        "source": "https://www.econometricsociety.org/images/users/581/originals/Curriculum-Vitae.pdf"
       }
     ],
     "portrait": "portraits/134-quang-vuong-new-york-university.webp",
-    "portraitSource": "https://lh3.googleusercontent.com/sitesv/AG8ngQUDnXn7umXMq-27vO_tfx7bi1SoM1AKAK99eDCOuR3avOTCIuah8gfHSeUPQFxG3FBDoPhhZG0GRk_0rLb6BBz-DnMMv-g-cMdhTIlTV3PiyBYOyoEJTXiDTagKuPMZb3YrjfPGcACIdJTGIoqiIl28y-U0MNNXTuzWEYRYsyWlKgBkwdvk5yTVsRGud66jSHQtnOkarV7EnJdl=w1280"
+    "portraitSource": "https://lh3.googleusercontent.com/sitesv/AG8ngQUDnXn7umXMq-27vO_tfx7bi1SoM1AKAK99eDCOuR3avOTCIuah8gfHSeUPQFxG3FBDoPhhZG0GRk_0rLb6BBz-DnMMv-g-cMdhTIlTV3PiyBYOyoEJTXiDTagKuPMZb3YrjfPGcACIdJTGIoqiIl28y-U0MNNXTuzWEYRYsyWlKgBkwdvk5yTVsRGud66jSHQtnOkarV7EnJdl=w1280",
+    "lastUpdatedAt": "2026-08-29T07:59:11.740Z"
   },
   {
     "name": "Vinh Nguyen - Michigan Technological University",
@@ -4257,31 +4397,53 @@
   },
   {
     "name": "Hieu Phan",
-    "profileUrl": "http://sites.google.com/site/hieuphanfinance/research",
-    "lastUpdatedAt": "2026-08-24T04:18:46.000Z",
+    "profileUrl": "https://www.uml.edu/msb/faculty/phan-hieu.aspx",
+    "websiteUrl": "https://sites.google.com/site/hieuphanfinance/",
     "university": "University of Massachusetts Lowell",
     "city": "Lowell",
     "state": "Massachusetts",
     "researchAreas": [
       "Corporate Finance",
-      "Corporate Governance",
       "Executive Compensation",
+      "Corporate Governance",
       "Investments",
+      "Capital Structure",
+      "Corporate Social Responsibility",
       "Mergers and Acquisitions",
-      "Financial Risk"
+      "Financial Risk Management",
+      "Climate Change",
+      "Pension",
+      "Earnings Management"
     ],
     "track": "Tenure-line",
     "department": "Finance",
     "rank": "Professor",
+    "phdYear": 2012,
     "phdInstitution": "University of Connecticut",
+    "msInstitution": "University of Connecticut",
+    "msYear": 2006,
+    "undergradInstitution": "National Economic University",
+    "undergradYear": 1996,
+    "undergradMajor": "Banking and Finance",
     "country": "United States",
+    "honors": [
+      {
+        "name": "Lifetime Contribution Award",
+        "year": 2018,
+        "category": "major_award",
+        "organization": "Vietnam Finance Association International",
+        "source": "https://www.uml.edu/msb/faculty/phan-hieu.aspx"
+      }
+    ],
     "portrait": "portraits/136-hieu-phan-university-of-massachusetts-lowell.webp",
-    "portraitSource": "https://www.uml.edu/images/phan-hieu-800_tcm18-344486.jpg?w=x"
+    "portraitSource": "https://www.uml.edu/Images/Phan-Hieu-800_tcm18-344486.jpg",
+    "lastUpdatedAt": "2026-08-29T08:00:14.797Z"
   },
   {
     "name": "Du Nguyen",
     "profileUrl": "https://www.bgsu.edu/business/departments-and-programs/accounting-and-management-information-systems/faculty-staff/du-nguyen--ph-d-",
-    "lastUpdatedAt": "2026-08-24T03:03:40.000Z",
+    "websiteUrl": "https://du-dnguyen.github.io/",
+    "lastUpdatedAt": "2026-08-29T08:00:59.589Z",
     "university": "Bowling Green State University",
     "city": "Bowling Green",
     "state": "Ohio",
@@ -4308,7 +4470,7 @@
   {
     "name": "Nga Q. Nguyen",
     "profileUrl": "https://cob.unt.edu/people/nga-nguyen.html",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "lastUpdatedAt": "2026-08-29T08:01:56.548Z",
     "university": "University of North Texas",
     "city": "Denton",
     "state": "Texas",
@@ -4322,33 +4484,43 @@
     "phdInstitution": "Texas Tech University",
     "country": "United States",
     "portrait": "portraits/138-nga-q-nguyen-university-of-north-texas.webp",
-    "portraitSource": "https://cob.unt.edu/_files/people/nga-nguyen.jpg"
+    "portraitSource": "https://cob.unt.edu/_files/people/nga-nguyen.jpg",
+    "msInstitution": "Cleveland State University",
+    "msYear": 2007,
+    "undergradInstitution": "Hanoi Academy of Finance",
+    "undergradYear": 2004
   },
   {
     "name": "Nguyen Nguyen",
     "profileUrl": "https://cob.mnsu.edu/about/faculty-and-staff/accounting-and-finance-staff/nguyen-nguyen/",
-    "lastUpdatedAt": "2026-08-24T03:03:40.000Z",
     "university": "Minnesota State University, Mankato",
     "city": "Mankato",
     "state": "Minnesota",
     "researchAreas": [
-      "Finance",
-      "Investments",
+      "Banking",
+      "Banking Regulation",
+      "Financial Inclusion",
       "Corporate Finance"
     ],
     "track": "Tenure-line",
     "department": "Finance",
     "rank": "Assistant Professor",
     "phdInstitution": "Auburn University",
+    "phdYear": 2021,
+    "msInstitution": "Monash University",
+    "msMajor": "Banking and Finance",
+    "msYear": 2010,
+    "undergradInstitution": "National Economics University",
+    "undergradMajor": "Accounting",
+    "undergradYear": 2004,
     "country": "United States",
-    "undergradInstitution": "Minnesota State University",
     "portrait": "portraits/36-nguyen-nguyen-minnesota-state-university-mankato.webp",
-    "portraitSource": "https://cob.mnsu.edu/globalassets/college-of-business/faculty--staff-photos/nguyen-nguyen.jpg"
+    "portraitSource": "https://cob.mnsu.edu/globalassets/college-of-business/faculty--staff-photos/nguyen-nguyen.jpg",
+    "lastUpdatedAt": "2026-08-29T08:02:55.611Z"
   },
   {
     "name": "Hoang Nguyen - University of Baltimore",
     "profileUrl": "https://www.ubalt.edu/directory/profile/hnguyen",
-    "lastUpdatedAt": "2026-08-24T03:03:40.000Z",
     "university": "University of Baltimore",
     "city": "Baltimore",
     "state": "Maryland",
@@ -4368,7 +4540,17 @@
     "undergradInstitution": "National Economics University of Vietnam",
     "portrait": "portraits/140-hoang-nguyen-university-of-baltimore-university-of-baltimore.webp",
     "portraitSource": "https://www.ubalt.edu/directory/dm/img/hnguyen.jpg",
-    "msInstitution": "University of Baltimore"
+    "msInstitution": "University of Baltimore",
+    "honors": [
+      {
+        "name": "John P. & Margaret Thompson Professorship",
+        "year": 2026,
+        "category": "distinguished_professorship",
+        "organization": "University of Baltimore Merrick School of Business",
+        "source": "https://www.ubalt.edu/about/newsroom/business-today-faculty-professorships-announced.cfm"
+      }
+    ],
+    "lastUpdatedAt": "2026-08-29T08:03:47.071Z"
   },
   {
     "name": "Julie Ngo",
@@ -4407,7 +4589,6 @@
   {
     "name": "Thanh Dat Le",
     "profileUrl": "https://www.unco.edu/employee-directory/thanh-dat-le/",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
     "university": "University of Northern Colorado",
     "city": "Greeley",
     "state": "Colorado",
@@ -4418,15 +4599,20 @@
     "track": "Tenure-line",
     "department": "Finance",
     "rank": "Assistant Professor",
+    "phdYear": 2023,
     "phdInstitution": "Auburn University",
     "country": "United States",
+    "undergradInstitution": "University of Economics and Finance, Vietnam",
+    "msInstitution": "EDHEC Business School",
     "portrait": "portraits/142-thanh-dat-le-university-of-northern-colorado.webp",
-    "portraitSource": "https://www.unco.edu/app/uploads/2025/10/headshot_DatLe-scaled.jpg"
+    "portraitSource": "https://www.unco.edu/app/uploads/2025/10/headshot_DatLe-scaled.jpg",
+    "lastUpdatedAt": "2026-08-29T08:04:43.045Z"
   },
   {
     "name": "Hai Tran - Loyola Marymount University",
     "profileUrl": "https://scholars.lmu.edu/en/persons/hai-tran/",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "websiteUrl": "https://www.haitranv.com/",
+    "scholarUrl": "https://scholar.google.com/citations?hl=en&user=MDs9rwMAAAAJ",
     "university": "Loyola Marymount University",
     "city": "Los Angeles",
     "state": "California",
@@ -4439,9 +4625,16 @@
     "department": "Finance",
     "rank": "Associate Professor",
     "phdInstitution": "University of Oregon",
+    "phdYear": 2015,
+    "msInstitution": "Washington State University",
+    "msYear": 2010,
+    "undergraduateInstitution": "Washington State University",
+    "undergraduateYear": 2006,
+    "undergraduateMajor": "Business Administration; Finance and Accounting major, Professional Writing minor",
     "country": "United States",
     "portrait": "portraits/143-hai-tran-loyola-marymount-university-loyola-marymount-university.webp",
-    "portraitSource": "https://scholars.lmu.edu/files-asset/40811386/5a6588a652bb57535908fed326b52dba1444259351_l.jpg/"
+    "portraitSource": "https://scholars.lmu.edu/files-asset/40811386/5a6588a652bb57535908fed326b52dba1444259351_l.jpg/",
+    "lastUpdatedAt": "2026-08-29T08:05:45.486Z"
   },
   {
     "name": "Giang Nguyen",
@@ -4492,8 +4685,7 @@
   },
   {
     "name": "Diep Nguyen",
-    "profileUrl": "https://spu.edu/academics/college-business-technology/faculty-staff/nguyen-diep",
-    "lastUpdatedAt": "2026-08-27T14:47:04.000Z",
+    "profileUrl": "https://spu.edu/academics/school-business-and-economics/faculty-staff-directory/nguyen-diep",
     "university": "Seattle Pacific University",
     "city": "Seattle",
     "state": "Washington",
@@ -4514,34 +4706,42 @@
     "msInstitution": "Clark University",
     "msYear": 2011,
     "portrait": "portraits/146-diep-nguyen-seattle-pacific-university.webp",
-    "portraitSource": "https://spu.edu/-/media/academics/college-business-technology/cbt-images/diep-nguyen-300x400-006.ashx"
+    "portraitSource": "https://spu.edu/-/media/academics/college-business-technology/cbt-images/diep-nguyen-300x400-006.ashx",
+    "lastUpdatedAt": "2026-08-29T08:07:48.040Z"
   },
   {
     "name": "Liem Nguyen - Westfield State University",
     "profileUrl": "https://www.westfield.ma.edu/people/liem-nguyen",
-    "lastUpdatedAt": "2026-08-26T05:19:43.000Z",
+    "lastUpdatedAt": "2026-08-29T08:08:45.891Z",
     "university": "Westfield State University",
     "city": "Westfield",
     "state": "Massachusetts",
     "researchAreas": [
       "Corporate Finance",
       "Investments",
-      "Corporate Disclosure",
-      "Corporate Governance"
+      "Corporate Voluntary Disclosures",
+      "Analysts' Behavior",
+      "Corporate Governance",
+      "Stock Repurchase",
+      "Debt Violations"
     ],
     "track": "Tenure-line",
-    "department": "Finance",
-    "rank": "Associate Professor",
+    "department": "Accounting and Finance",
+    "rank": "Professor",
+    "phdYear": 2012,
     "phdInstitution": "University of Rhode Island",
     "country": "United States",
     "undergradInstitution": "International University of Japan",
     "portrait": "portraits/147-liem-nguyen-westfield-state-university.webp",
-    "portraitSource": "https://www.westfield.ma.edu/sites/default/files/styles/mobile_square/public/2024-08/Liem%20Nguyen_Department%20Chair.jpg"
+    "portraitSource": "https://www.westfield.ma.edu/sites/default/files/styles/mobile_square/public/2024-08/Liem%20Nguyen_Department%20Chair.jpg",
+    "msInstitution": "International University of Japan",
+    "msYear": 2006
   },
   {
     "name": "Anh Le",
-    "profileUrl": "https://sites.google.com/site/anhlefinance/",
-    "lastUpdatedAt": "2026-08-24T04:02:50.000Z",
+    "profileUrl": "https://directory.smeal.psu.edu/aul26",
+    "websiteUrl": "https://sites.google.com/site/anhlefinance/",
+    "lastUpdatedAt": "2026-08-29T08:09:45.644Z",
     "university": "Pennsylvania State University",
     "city": "University Park",
     "state": "Pennsylvania",
@@ -4555,15 +4755,23 @@
     "phdYear": 2008,
     "phdInstitution": "New York University",
     "country": "United States",
-    "undergradInstitution": "Accounting and Finance, Monash University",
+    "undergradInstitution": "Monash University",
     "undergradYear": 2000,
+    "otherDegrees": [
+      {
+        "degree": "Bachelor of Commerce (Honors), Finance",
+        "institution": "The University of Queensland",
+        "year": 2001,
+        "source": "https://directory.smeal.psu.edu/aul26"
+      }
+    ],
     "portrait": "portraits/148-anh-le-pennsylvania-state-university.webp",
     "portraitSource": "https://media.smeal.psu.edu/content_php/directory/photos/aul26-web.jpg"
   },
   {
     "name": "Arthur Tran",
     "profileUrl": "https://www.se.edu/business/directory/tran-arthur/",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "lastUpdatedAt": "2026-08-29T08:10:41.618Z",
     "university": "Southeastern Oklahoma State University",
     "city": "Durant",
     "state": "Oklahoma",
@@ -4579,7 +4787,8 @@
     "country": "United States",
     "undergradInstitution": "University of Central Missouri",
     "portrait": "portraits/149-arthur-tran-southeastern-oklahoma-state-university.webp",
-    "portraitSource": "https://www.se.edu/business/wp-content/uploads/sites/5/fly-images/634/Arthur-Tran-180x270-ct.jpg"
+    "portraitSource": "https://www.se.edu/business/wp-content/uploads/sites/5/fly-images/634/Arthur-Tran-180x270-ct.jpg",
+    "msInstitution": "University of Central Missouri"
   },
   {
     "name": "Trang P. Tran",
@@ -10171,7 +10380,7 @@
   {
     "name": "Justin Tran",
     "profileUrl": "https://news.fullerton.edu/spotlight/cal-state-fullerton-announces-61-faculty-tenure-and-promotions/",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "lastUpdatedAt": "2026-08-29T07:25:04.206Z",
     "university": "California State University, Fullerton",
     "city": "Fullerton",
     "state": "California",
@@ -10185,7 +10394,11 @@
     "rank": "Associate Professor",
     "phdYear": 2018,
     "phdInstitution": "Stanford University",
-    "country": "United States"
+    "country": "United States",
+    "msInstitution": "University of California, San Diego",
+    "msYear": 2015,
+    "undergradInstitution": "University of California, Los Angeles",
+    "undergradYear": 2013
   },
   {
     "name": "Lisa Tran",
@@ -17712,7 +17925,7 @@
     "portraitSource": "https://about.uq.edu.au/sites/default/files/profiles/2495.jpeg"
   },
   {
-    "name": "Ngoc Nguyen - The University of Queensland",
+    "name": "Ngoc Nguyen",
     "university": "The University of Queensland",
     "city": "Brisbane",
     "state": "Queensland",
@@ -17816,10 +18029,11 @@
       "Wind Engineering",
       "Structural Dynamics",
       "Infrastructure Resilience",
-      "Typhoon Wind Modelling"
+      "Typhoon Wind Modelling",
+      "Climate Change"
     ],
     "phdInstitution": "University of Genoa",
-    "lastUpdatedAt": "2026-08-29T04:07:50.750Z"
+    "lastUpdatedAt": "2026-08-29T07:30:47.678Z"
   },
   {
     "name": "Emma Nguyen",
@@ -19738,8 +19952,10 @@
     "city": "Taichung",
     "researchAreas": [
       "Network Reliability",
-      "Stochastic Network Performance",
-      "Applied Probability Models"
+      "Stochastic Networks",
+      "Multi-State Networks",
+      "Air Transportation Networks",
+      "Applied Probabilistic Models"
     ],
     "track": "Tenure-line",
     "department": "Industrial Engineering and Management",
@@ -19751,7 +19967,7 @@
     "undergradInstitution": "National Economics University",
     "undergradYear": 2011,
     "country": "Taiwan",
-    "lastUpdatedAt": "2026-08-29T06:50:27.217Z"
+    "lastUpdatedAt": "2026-08-29T07:33:31.341Z"
   },
   {
     "name": "Thu Dung Doan",
@@ -20095,10 +20311,14 @@
     "rank": "Associate Professor, Clinical Academic",
     "phdYear": 2012,
     "phdInstitution": "Aalborg University",
-    "undergradInstitution": "Vietnam National University",
+    "phdMajor": "Environmental Biotechnology",
+    "msInstitution": "Myongji University",
+    "msMajor": "Environmental Engineering and Biotechnology",
+    "undergradInstitution": "Vietnam National University, Hanoi",
     "undergradYear": 2002,
+    "undergradMajor": "Genetics",
     "country": "Denmark",
-    "lastUpdatedAt": "2026-08-29T06:54:26.908Z"
+    "lastUpdatedAt": "2026-08-29T07:36:26.690Z"
   },
   {
     "name": "Cuong Nguyen - Massachusetts Institute of Technology",
@@ -20234,7 +20454,7 @@
     ],
     "track": "Clinical",
     "department": "Ophthalmology and Visual Sciences",
-    "rank": "Professor of Ophthalmology",
+    "rank": "Professor of Clinical Ophthalmology & Visual Sciences",
     "mdInstitution": "Medical College of Virginia",
     "mdYear": 1997,
     "undergradInstitution": "The Catholic University of America",
@@ -20242,7 +20462,16 @@
     "postdocInstitution": "Vanderbilt University",
     "postdocYear": 2002,
     "country": "United States",
-    "lastUpdatedAt": "2026-08-29T06:58:17.505Z"
+    "honors": [
+      {
+        "name": "Trainee Investigator Award",
+        "organization": "American Federation for Clinical Research",
+        "year": null,
+        "category": "career_award",
+        "source": "https://www.vumc.org/ophthalmology/person/uyen-l-tran-md"
+      }
+    ],
+    "lastUpdatedAt": "2026-08-29T07:39:59.384Z"
   },
   {
     "name": "An Nguyen",
@@ -20698,7 +20927,7 @@
   },
   {
     "name": "Dung Tran",
-    "profileUrl": "https://federation.edu.au/research/find-an-expert/dung-tran",
+    "profileUrl": "https://www.federation.edu.au/research/find-an-expert/Dung-Tran",
     "university": "Federation University Australia",
     "city": "Ballarat",
     "state": "Victoria",
@@ -20723,10 +20952,10 @@
         "year": 2013,
         "category": "career_award",
         "organization": "Community for Advancing Discovery Research in Education",
-        "source": "https://www.federation.edu.au/research/find-an-expert/dung-tran"
+        "source": "https://www.federation.edu.au/research/find-an-expert/Dung-Tran"
       }
     ],
-    "lastUpdatedAt": "2026-08-29T06:10:34.505Z"
+    "lastUpdatedAt": "2026-08-29T07:41:18.572Z"
   },
   {
     "name": "Nghia Tran",
@@ -20782,26 +21011,6 @@
     "undergradYear": 2013,
     "postdocInstitution": "Oregon Health & Science University",
     "postdocYear": 2023,
-    "country": "United States"
-  },
-  {
-    "name": "Ngoc Nguyen - Yale University",
-    "profileUrl": "https://medicine.yale.edu/profile/ngoc-nguyen/",
-    "lastUpdatedAt": "2026-08-28T16:49:57.000Z",
-    "university": "Yale University",
-    "city": "New Haven",
-    "state": "Connecticut",
-    "researchAreas": [
-      "Therapeutic Radiology",
-      "Medical Physics"
-    ],
-    "track": "Clinical",
-    "department": "Therapeutic Radiology",
-    "rank": "Assistant Clinical Professor",
-    "phdInstitution": "Michigan State University",
-    "phdYear": 2013,
-    "undergradInstitution": "Vietnam National University",
-    "undergradYear": 2006,
     "country": "United States"
   },
   {
@@ -21297,6 +21506,8 @@
     "department": "Obstetrics and Gynecology",
     "rank": "Clinical Assistant Professor",
     "country": "United States",
-    "lastUpdatedAt": "2026-08-29T06:34:17.606Z"
+    "mdInstitution": "Chicago Medical School at Rosalind Franklin University of Medicine and Science",
+    "mdYear": 1983,
+    "lastUpdatedAt": "2026-08-29T07:46:00.295Z"
   }
 ]
