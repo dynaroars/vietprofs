@@ -450,6 +450,9 @@ export function proposalValidationError(proposal) {
     if (typeof proposal[field] !== 'string' || !proposal[field].trim()) return `proposal has invalid ${field}`;
   }
   if (!Array.isArray(proposal.researchAreas) || proposal.researchAreas.length === 0) return 'proposal needs researchAreas';
+  if (proposal.websiteUrl !== undefined && proposal.websiteUrl === proposal.profileUrl) return 'proposal websiteUrl must differ from profileUrl';
+  if (proposal.websiteUrl !== undefined && !/^https?:\/\//.test(proposal.websiteUrl)) return 'proposal websiteUrl must use HTTP(S)';
+  if (proposal.scholarUrl !== undefined && !/^https:\/\//.test(proposal.scholarUrl)) return 'proposal scholarUrl must use HTTPS';
   if (proposal.honors !== undefined) {
     if (!Array.isArray(proposal.honors)) return 'proposal honors must be an array';
     for (const honor of proposal.honors) {

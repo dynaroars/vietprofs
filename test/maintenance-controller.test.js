@@ -96,6 +96,15 @@ test('proposal validation rejects honors missing required provenance', () => {
   assert.match(error, /honor has invalid organization/);
 });
 
+test('proposal validation rejects a website duplicated from the profile', () => {
+  const error = proposalValidationError({
+    name: 'Old Person', profileUrl: 'https://example.edu/old', lastUpdatedAt: '2026-01-01T00:00:00.000Z',
+    university: 'Old University', city: 'Old City', department: 'History', researchAreas: ['History'],
+    websiteUrl: 'https://example.edu/old',
+  });
+  assert.match(error, /websiteUrl must differ/);
+});
+
 test('proposal analysis preserves completed postdoctoral training fields', () => {
   const after = structuredClone(people);
   after[1].postdocInstitution = 'Carnegie Mellon University';
