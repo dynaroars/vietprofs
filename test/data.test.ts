@@ -239,6 +239,24 @@ test('search matches on simplified rank, not just name/university/location/area'
   assert.ok(result.some((p) => canonicalRank(p) === 'Teaching'));
 });
 
+test('keyword search restricts results to the requested roster attribute', () => {
+  const tai = filterRoster(roster, { query: 'name:"Tai Tan Mai"', location: 'World' });
+  assert.equal(tai.length, 1);
+  assert.equal(tai[0].name, 'Tai Tan Mai');
+
+  const professors = filterRoster(roster, { query: 'rank:Professor', location: 'World' });
+  assert.ok(professors.length > 0);
+  assert.ok(professors.every((person) => /professor/i.test(person.rank || '') || /professor/i.test(canonicalRank(person))));
+
+  const engineering = filterRoster(roster, { query: 'field:Engineering', location: 'World' });
+  assert.ok(engineering.length > 0);
+  assert.ok(engineering.every((person) => fieldOf(person.department, person.university) === 'Engineering'));
+
+  const research = filterRoster(roster, { query: 'research:"Machine Learning"', location: 'World' });
+  assert.ok(research.length > 0);
+  assert.ok(research.every((person) => person.researchAreas?.some((area) => /machine learning/i.test(area))));
+});
+
 test('searching an honor name lists professors who hold that honor', () => {
   const career = filterRoster(roster, { query: 'NSF CAREER', field: 'all' });
   assert.ok(career.length > 0);

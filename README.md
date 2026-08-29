@@ -22,6 +22,10 @@ Use prefixes when you want to search one attribute:
 | `city:` | City | `city:Paris` |
 | `dept:`, `department:` | Primary department | `dept:Economics` |
 | `name:` | Displayed name | `name:"Thanh Nguyen"` |
+| `rank:`, `title:` | Published or simplified rank | `rank:"Assistant Professor"` |
+| `field:` | Broad roster field | `field:Engineering` |
+| `track:`, `type:` | Appointment track | `track:Research` |
+| `research:`, `area:` | Research areas | `research:"Machine Learning"` |
 
 The location, field, and track filters can be combined. Shareable URLs preserve the active search and filters. The “Show me something interesting” option provides roster-derived observations about geography, institutions, fields, and appointment tracks. It does not make claims about institutional prestige or Vietnamese population size.
 

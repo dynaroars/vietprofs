@@ -70,7 +70,7 @@ function renderShell() {
       </div>
     </header>
     <div class="controls">
-      <input id="search" class="search-input" type="search" placeholder="Search name, university, department, rank, honors, or research area…" aria-label="Search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-suggestion-panel" />
+      <input id="search" class="search-input" type="search" placeholder="Search name, university, department, rank, honors, or research area… (try name:Tai or rank:Professor)" aria-label="Search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-suggestion-panel" />
       <div id="search-suggestion-panel" class="search-suggestion-panel" role="listbox" hidden></div>
       <select id="location-filter" class="field-select location-select" aria-label="Filter by location">
       </select>
@@ -451,6 +451,32 @@ async function init() {
       ...uniquePhdInstitutions(roster),
     ]),
   ].sort();
+  const nameSuggestionValues = [...new Set(roster.flatMap((p) => {
+    const name = displayName(p.name);
+    const withoutInitials = name.replace(/\b[A-Z]\.\s*/g, '').replace(/\s+/g, ' ').trim();
+    return [name, withoutInitials];
+  }))].sort();
+  const keywordSuggestionSources = new Map([
+    ['name', nameSuggestionValues],
+    ['rank', [...new Set([...uniqueRanks(roster), ...roster.map((p) => canonicalRank(p))])].sort()],
+    ['title', [...new Set([...uniqueRanks(roster), ...roster.map((p) => canonicalRank(p))])].sort()],
+    ['field', FIELDS],
+    ['track', TRACKS],
+    ['type', TRACKS],
+    ['research', uniqueResearchAreas(roster)],
+    ['area', uniqueResearchAreas(roster)],
+    ['areas', uniqueResearchAreas(roster)],
+    ['univ', roster.map((p) => p.university).filter(Boolean).filter((v, i, a) => a.indexOf(v) === i).sort()],
+    ['university', roster.map((p) => p.university).filter(Boolean).filter((v, i, a) => a.indexOf(v) === i).sort()],
+    ['school', roster.map((p) => p.university).filter(Boolean).filter((v, i, a) => a.indexOf(v) === i).sort()],
+    ['dept', uniqueDepartments(roster)],
+    ['department', uniqueDepartments(roster)],
+    ['city', uniqueCities(roster)],
+    ['state', uniqueStates(roster)],
+    ['country', uniqueCountries(roster)],
+    ['nation', uniqueCountries(roster)],
+    ['phd', uniquePhdInstitutions(roster)],
+  ]);
   const searchInput = document.getElementById('search');
   const suggestionPanel = document.getElementById('search-suggestion-panel');
   const locationSelect = document.getElementById('location-filter');
@@ -756,23 +782,36 @@ async function init() {
     searchInput.setAttribute('aria-expanded', 'false');
   }
   function showSuggestions() {
-    const query = searchInput.value.trim().toLocaleLowerCase();
+    const rawQuery = searchInput.value.trim();
+    const query = rawQuery.toLocaleLowerCase();
     if (!query) {
       hideSuggestions();
       return;
     }
-    const matches = suggestionValues
-      .filter((value) => value.toLocaleLowerCase().includes(query))
+    const keywordMatch = rawQuery.match(/^([a-z]+):\s*(.*)$/i);
+    const keyword = keywordMatch?.[1].toLocaleLowerCase();
+    const keywordValues = keyword ? keywordSuggestionSources.get(keyword) : undefined;
+    const keywordText = keywordMatch?.[2].trim().replace(/^("|')|("|')$/g, '') ?? '';
+    const normalized = (value) => value.toLocaleLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    const source = keywordValues ?? suggestionValues;
+    const sourceQuery = keywordValues ? normalized(keywordText) : normalized(query);
+    const matches = source
+      .filter((value) => normalized(value).includes(sourceQuery))
+      .sort((a, b) => {
+        const aStarts = normalized(a).startsWith(sourceQuery);
+        const bStarts = normalized(b).startsWith(sourceQuery);
+        return Number(bStarts) - Number(aStarts) || a.localeCompare(b);
+      })
       .slice(0, 8);
     suggestionPanel.replaceChildren(...matches.map((value, index) => {
       const option = document.createElement('button');
       option.type = 'button';
       option.className = 'search-suggestion';
       option.role = 'option';
-      option.textContent = value;
+      option.textContent = keywordValues ? `${keyword}: ${value}` : value;
       option.dataset.index = String(index);
       option.addEventListener('click', () => {
-        searchInput.value = value;
+        searchInput.value = keywordValues ? `${keyword}:${value}` : value;
         hideSuggestions();
         update({ fromSearch: true });
       });

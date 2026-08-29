@@ -680,7 +680,7 @@ export function parseSearchQuery(query: string): ParsedSearchQuery {
     return { type: 'credential', credential, text: '' };
   }
   const prefixMatch = trimmed.match(
-    /^(univ(?:ersity)?|school|phd(?:institution)?|alma|postdoc|postdoctoral|ms|md|undergrad(?:uate)?|state|country|nation|continent|loc(?:ation)?|city|dept|department|name):\s*(?:"([^"]*)"|'([^']*)'|(.*))$/i,
+    /^(univ(?:ersity)?|school|phd(?:institution)?|alma|postdoc|postdoctoral|ms|md|undergrad(?:uate)?|state|country|nation|continent|loc(?:ation)?|city|dept|department|name|rank|title|field|track|type|research|area|areas):\s*(?:"([^"]*)"|'([^']*)'|(.*))$/i,
   );
   if (!prefixMatch) {
     return { type: 'text', text: trimmed };
@@ -722,6 +722,18 @@ export function parseSearchQuery(query: string): ParsedSearchQuery {
   }
   if (prefix === 'name') {
     return { type: 'name', text: value };
+  }
+  if (['rank', 'title'].includes(prefix)) {
+    return { type: 'rank', text: value };
+  }
+  if (prefix === 'field') {
+    return { type: 'field', text: value };
+  }
+  if (['track', 'type'].includes(prefix)) {
+    return { type: 'track', text: value };
+  }
+  if (['research', 'area', 'areas'].includes(prefix)) {
+    return { type: 'research', text: value };
   }
   return { type: 'text', text: trimmed };
 }
@@ -835,6 +847,21 @@ export function filterRoster(roster: Roster | ReturnType<typeof buildSearchIndex
   }
   if (parsed.type === 'name') {
     return result.filter((p) => stripDiacritics(displayName(p.name).toLowerCase()).includes(target));
+  }
+  if (parsed.type === 'field') {
+    return result.filter((p) => stripDiacritics(fieldOf(p.department, p.university).toLowerCase()).includes(target));
+  }
+  if (parsed.type === 'track') {
+    return result.filter((p) => stripDiacritics((p.track || '').toLowerCase()).includes(target));
+  }
+  if (parsed.type === 'rank') {
+    return result.filter((p) => [p.rank, canonicalRank(p)]
+      .filter(Boolean)
+      .some((rank) => stripDiacritics(rank.toLowerCase()).includes(target)));
+  }
+  if (parsed.type === 'research') {
+    return result.filter((p) => (p.researchAreas || [])
+      .some((area) => stripDiacritics(area.toLowerCase()).includes(target)));
   }
 
   // Full-text search across all fields, including award names and organizations.
