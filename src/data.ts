@@ -525,6 +525,9 @@ const FIELD_OVERRIDES = new Map([
   // The Vietnam Center and Sam Johnson Vietnam Archive is an interdisciplinary research center;
   // this historian's appointment and research focus belong with the Humanities bucket.
   ['Vietnam Center and Sam Johnson Vietnam Archive|Texas Tech University', 'Humanities'],
+  // "Mathematical" would otherwise win the Mathematics rule before Engineering, but this
+  // appointment sits in Shizuoka's Faculty of Engineering (communications / systems).
+  ['Department of Mathematical and Systems Engineering|Shizuoka University', 'Engineering'],
 ]);
 
 // Buckets granular `department` values into the broad fields above. Order matters, and is not

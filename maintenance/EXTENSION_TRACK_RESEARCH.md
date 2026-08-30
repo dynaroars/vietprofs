@@ -501,8 +501,23 @@ batch-sequenced extension-track work above, since this sweep classifies into any
   Molecular Engineering — `Tenure-line`, "Lecturer" (講師) mapped to Assistant Professor per roster
   convention; official researchmap.jp profile, PhD University of Tokyo 2014, quantum
   transport/molecular polariton research.
+- Added (2026-08-30 Aizu/seed pass): Anh T. Pham, Truong Cong Thang, Khanh N. Dang, and
+  Hoang D. Le — The University of Aizu, Department of Computer Science and Engineering —
+  `Tenure-line` (Senior Associate Professor mapped to Associate Professor); Kien Nguyen —
+  Chiba University, Graduate School of Informatics — `Tenure-line` Associate Professor;
+  Thanh V. Pham — Shizuoka University, Department of Mathematical and Systems Engineering —
+  `Tenure-line` Associate Professor; Phan Xuan Tan — Shibaura Institute of Technology,
+  College of Engineering, Innovative Global Program — `Tenure-line` Associate Professor.
 - Deferred: Yen Khang Nguyen Tran (Shimane University) — LinkedIn profile returned an HTTP error;
   retry with a different source.
+- Excluded from Anh T. Pham co-author snowball: Phuc V. Trinh — University of Tokyo Institute
+  of Industrial Science, Project Research Associate / specially appointed assistant professor
+  (特任); Vuong V. Mai — now Assistant Professor at University of Bradford, not Japan;
+  Chuyen T. Nguyen — Associate Professor at Hanoi University of Science and Technology;
+  Ngoc T. Dang — Vietnam-based. Gia Khanh Tran (Tokyo Tech) already on the roster.
+- Later Japan leads, not verified this pass: Ta Viet Ton (Kyushu University Associate
+  Professor); Linh Thi Hoai Nguyen (Kyushu WPI Assistant Professor, stability not checked);
+  Nguyen Quoc Hung (Aoyama Gakuin, unconfirmed).
 - Not yet swept: most of Tokyo, Osaka, and other Japanese institutions beyond this search round.
 
 ### Germany

@@ -68,6 +68,14 @@ test('Health Sciences still outranks Business & Economics for health-policy depa
   assert.equal(fieldOf('Health Management and Policy'), 'Health Sciences');
 });
 
+test('Shizuoka Mathematical and Systems Engineering maps to Engineering', () => {
+  assert.equal(
+    fieldOf('Department of Mathematical and Systems Engineering', 'Shizuoka University'),
+    'Engineering',
+  );
+  assert.equal(fieldOf('Department of Mathematical and Systems Engineering'), 'Mathematics');
+});
+
 test('Information Studies defaults to computing but UCLA GSEIS stays Education', () => {
   assert.equal(fieldOf('Information Studies', 'University of California, Los Angeles'), 'Education');
   // Same bare department string elsewhere is genuinely ambiguous without knowing the school, so
