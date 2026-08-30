@@ -52,6 +52,16 @@ function renderShell() {
       </div>
 
       <div class="form-section">
+        <label for="portraitSource">Profile picture URL <span class="optional-label">(optional)</span></label>
+        <div id="portrait-preview" class="portrait-preview" hidden>
+          <img id="portrait-preview-image" src="" alt="Existing profile picture" width="96" height="96" />
+          <span>Existing picture</span>
+        </div>
+        <input id="portraitSource" name="portraitSource" type="url" placeholder="https://… (official university or personal profile image)" />
+        <p class="form-help">You may provide a direct image URL. Maintainers will review it and create the roster portrait.</p>
+      </div>
+
+      <div class="form-section">
         <label for="university">University</label>
         <input id="university" name="university" type="text" placeholder="e.g. University of Washington, NUS, Monash University, etc." />
       </div>
@@ -189,6 +199,7 @@ const FIELD_LABELS = {
   profileUrl: 'Official university profile',
   websiteUrl: 'Personal/lab website',
   scholarUrl: 'Google Scholar',
+  portraitSource: 'Profile picture URL',
   university: 'University',
   department: 'Department',
   field: 'Broad field',
@@ -265,6 +276,8 @@ function populateEntry(form, entry) {
   form.profileUrl.value = entry.profileUrl ?? '';
   form.websiteUrl.value = entry.websiteUrl ?? '';
   form.scholarUrl.value = entry.scholarUrl ?? '';
+  form.portraitSource.value = entry.portraitSource ?? '';
+  updatePortraitPreview(form, entry);
   form.university.value = entry.university ?? '';
   form.city.value = entry.city ?? '';
   form.state.value = entry.state ?? '';
@@ -289,6 +302,19 @@ function populateEntry(form, entry) {
   }
 }
 
+function updatePortraitPreview(form, entry) {
+  const preview = form.querySelector('#portrait-preview') as HTMLDivElement | null;
+  const image = form.querySelector('#portrait-preview-image') as HTMLImageElement | null;
+  if (!preview || !image) return;
+  if (entry?.portrait) {
+    image.src = `${import.meta.env.BASE_URL}${entry.portrait}`;
+    preview.hidden = false;
+  } else {
+    image.removeAttribute('src');
+    preview.hidden = true;
+  }
+}
+
 function findMatchedEntry(form, entriesById, entriesByName, name) {
   return entriesById?.get(form.dataset.editingId) ?? entriesByName?.get(name.toLocaleLowerCase().trim());
 }
@@ -297,6 +323,7 @@ function clearAutoPopulatedEntry(form) {
   const name = form.name.value;
   form.reset();
   form.name.value = name;
+  updatePortraitPreview(form, null);
   const optionalDetails = form.querySelector('.optional-group') as HTMLDetailsElement | null;
   if (optionalDetails) optionalDetails.open = false;
 }
@@ -322,6 +349,7 @@ function onSubmit(e, entriesById, entriesByName) {
     profileUrl: form.profileUrl.value.trim(),
     websiteUrl: form.websiteUrl.value.trim() || undefined,
     scholarUrl: form.scholarUrl.value.trim() || undefined,
+    portraitSource: form.portraitSource.value.trim() || undefined,
     university: form.university.value.trim() || undefined,
     city: form.city.value.trim() || undefined,
     state: form.state.value.trim() || undefined,
