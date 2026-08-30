@@ -113,6 +113,32 @@ test('search suggestions remain visible while results update', async () => {
   await page.close();
 });
 
+test('undergraduate institution scope filters the roster and persists in the URL', async () => {
+  const page = await context.newPage();
+  await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
+  const scope = page.locator('#search-scope');
+  const search = page.locator('#search');
+
+  await scope.selectOption('undergrad');
+  assert.equal(await scope.locator('option:checked').textContent(), 'Ugrad Inst.');
+  await search.fill('Boise State University');
+  await page.waitForFunction(() => new URL(window.location.href).searchParams.get('scope') === 'undergrad');
+
+  const expectedCount = await page.evaluate(async () => (
+    await (await fetch('/data.json')).json()
+  ).filter((person) => person.undergradInstitution?.includes('Boise State University')).length);
+  assert.ok(expectedCount > 0);
+  await page.waitForFunction((count) => document.querySelectorAll('.entry').length === count, expectedCount);
+  assert.equal(await page.locator('.entry').count(), expectedCount);
+  assert.ok((await page.locator('.entry-details').allTextContents()).every((text) => text.includes('Undergrad: Boise State')));
+
+  await page.reload({ waitUntil: 'networkidle' });
+  assert.equal(await scope.inputValue(), 'undergrad');
+  assert.equal(await search.inputValue(), 'Boise State University');
+  assert.equal(await page.locator('.entry').count(), expectedCount);
+  await page.close();
+});
+
 test('every roster card exposes its official profile link', async () => {
   const page = await context.newPage();
   await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });

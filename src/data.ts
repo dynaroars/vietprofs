@@ -643,6 +643,10 @@ export function uniquePhdInstitutions(roster) {
   return [...new Set(roster.map((p) => p.phdInstitution).filter(Boolean))].sort();
 }
 
+export function uniqueUndergradInstitutions(roster) {
+  return [...new Set(roster.map((p) => p.undergradInstitution).filter(Boolean))].sort();
+}
+
 export function buildDecadeCounts(roster) {
   const counts = new Map();
   for (const p of roster) {
@@ -710,6 +714,7 @@ function matchesSearchScope(person, scope, target) {
     research: person.researchAreas,
     honors: (person.honors || []).flatMap((honor) => [honor.name, honor.organization]),
     phd: [person.phdInstitution],
+    undergrad: [person.undergradInstitution],
     country: [person.country],
   }[scope];
   return (values || []).filter(Boolean).some((value) => stripDiacritics(value.toLowerCase()).includes(target));

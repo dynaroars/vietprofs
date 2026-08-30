@@ -1,5 +1,5 @@
 import './style.css';
-import { loadRoster, buildSearchIndex, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, LOCATION_LABELS, countryFlag, canonicalRank, displayName, fieldOf, locationMatches, filterRoster, buildUsObservations, buildInternationalObservations, buildLocationObservations, buildQualifiedObservations, buildAwardsFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, STATE_ABBR, type Roster } from './data.ts';
+import { loadRoster, buildSearchIndex, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueUndergradInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, LOCATION_LABELS, countryFlag, canonicalRank, displayName, fieldOf, locationMatches, filterRoster, buildUsObservations, buildInternationalObservations, buildLocationObservations, buildQualifiedObservations, buildAwardsFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, STATE_ABBR, type Roster } from './data.ts';
 import { escapeHtml } from './utils.ts';
 import { STATE_GRID } from './state-grid.ts';
 import { fieldDropdownLabel, renderRosterEntry } from './render.ts';
@@ -59,6 +59,7 @@ function renderShell() {
           <option value="research">Research area</option>
           <option value="honors">Honors</option>
           <option value="phd">PhD institution</option>
+          <option value="undergrad">Ugrad Inst.</option>
         </select>
         <input id="search" class="search-input" type="search" placeholder="Search the roster…" aria-label="Search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-suggestion-panel" />
         <div id="search-suggestion-panel" class="search-suggestion-panel" role="listbox" hidden></div>
@@ -345,7 +346,7 @@ async function init() {
   const searchIndex = buildSearchIndex(roster);
 
   // Matches everything filterRoster actually searches over (name, university, city, state, country,
-  // department, rank, research areas, PhD institution, and honors) so a suggestion always yields at least one result.
+  // department, rank, research areas, degree institutions, and honors) so a suggestion always yields at least one result.
   const suggestionValues = [
     ...new Set([
       'honors',
@@ -363,6 +364,7 @@ async function init() {
       ...uniqueCountries(roster),
       ...uniqueResearchAreas(roster),
       ...uniquePhdInstitutions(roster),
+      ...uniqueUndergradInstitutions(roster),
     ]),
   ].sort();
   const nameSuggestionValues = [...new Set(roster.flatMap((p) => {
@@ -380,6 +382,7 @@ async function init() {
     ['university', [...new Set(roster.map((p) => p.university))].sort()],
     ['department', uniqueDepartments(roster)],
     ['phd', uniquePhdInstitutions(roster)],
+    ['undergrad', uniqueUndergradInstitutions(roster)],
   ]);
   const searchInput = document.getElementById('search');
   const searchScopeSelect = document.getElementById('search-scope');

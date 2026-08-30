@@ -22,6 +22,7 @@ import {
   uniqueCountries,
   uniqueResearchAreas,
   uniquePhdInstitutions,
+  uniqueUndergradInstitutions,
   uniqueRanks,
 } from '../src/data.ts';
 import { escapeHtml, formatRosterDate, formatRosterShortDate } from '../src/utils.ts';
@@ -124,6 +125,7 @@ test('suggestionValues array contains no undefined/null and all elements safely 
       ...uniqueCountries(roster),
       ...uniqueResearchAreas(roster),
       ...uniquePhdInstitutions(roster),
+      ...uniqueUndergradInstitutions(roster),
     ]),
   ].sort();
 
