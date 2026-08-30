@@ -95,18 +95,37 @@ record instead of becoming a duplicate) but not a new addition. `Liem` is delibe
 generator's default list: it is also a common Chinese-Indonesian surname, and the one hit it returned
 in an unrestricted search was a plausible-looking but non-Vietnamese name.
 
-The third session tested `Quynh` unrestricted against fields that had already had several rounds of
-surname search (Agricultural Sciences, Law, Chemistry) and had gone stale — every surname hit in those
-fields was by then already in the roster. A single `Quynh` query found three new, independently
-verified people in one pass (an international-studies professor, a pharmacology professor, and a UK
-marketing lecturer), a far higher hit rate than any surname query had produced in those same fields
-that session. `Quynh` is now in the generator's default given-name list. The same session's `Thang`
-query (combined with `Quynh` in one search) surfaced no isolable new lead of its own, and a repeat of
-`Liem` unrestricted again found nothing — both consistent with prior results, so neither is added.
-Overall the given-name mode's yield still varies a lot by token — `Quynh` and the first session's three
-unnamed tokens were strong, `Quan`/`Toan`/`Hieu`/`Chinh`/`Thang`/`Liem` were not — so treat a specific
-untested token's yield as unproven until it has found a genuinely new person, not just a
-not-yet-fully-documented one.
+The third session tested `Quynh` (combined with `Thang` in one query) unrestricted, aimed at fields
+that had already had several rounds of surname search and gone stale (Agricultural Sciences, Law,
+Chemistry) — every surname hit in those specific fields was by then already in the roster. The query
+found three new, independently verified people in one pass, but not in the targeted fields: an
+international-studies professor, a pharmacology professor, and a UK marketing lecturer — a reminder
+that a broad given-name query returns whatever it returns regardless of the field terms in the query,
+so its yield should be credited to the token, not to the field it was aimed at. `Quynh` is now in the
+generator's default given-name list on the strength of that hit rate. `Thang` surfaced no isolable new
+lead of its own that session, and a repeat of `Liem` unrestricted again found nothing — both consistent
+with prior results, so neither is added.
+
+A fourth session then targeted `Quynh`, `Thanh`, `Minh`, `Hoang`, `Anh`, `Van`, `Tuan`, `Hung`, `Nam`,
+`Long`, `Kim`, `Thai`, `Hai`, `Dinh`, and `Viet` specifically at Earth & Environmental Sciences and
+Agricultural & Natural Resource Sciences — the two smallest fields in the roster and, per the third
+session's lesson, fields a given-name query had not actually been tried against yet. This produced no
+new candidates across a dozen-plus queries and several direct faculty-directory fetches at large
+programs (Cornell CALS, Michigan State CANR, Oregon State climate science, Scripps Oceanography). This
+does not mean the technique failed generally — the third session's hits landed in Social & Behavioral
+Sciences, Health Sciences, and Business, not in these two fields — but it is a genuine null result
+specifically for Earth & Environmental Sciences and Agricultural & Natural Resource Sciences, worth
+recording so a future session does not re-run the same unproductive queries. Those two fields may
+simply have fewer Vietnamese-diaspora faculty in the US, or need a different discovery channel
+(professional-society membership directories, conference programs) rather than more general web
+search.
+
+Overall the given-name mode's yield varies a lot by token *and* by which field it happens to land in
+— `Quynh` and the first session's three unnamed tokens were strong (in fields other than the ones they
+were aimed at), `Quan`/`Toan`/`Hieu`/`Chinh`/`Thang`/`Liem` were not, and no token tested so far has
+found anything in Earth & Environmental Sciences or Agricultural & Natural Resource Sciences — so
+treat a specific untested token's yield, and a specific field's yield, as unproven until they have
+found a genuinely new person, not just a not-yet-fully-documented one.
 
 Every result still requires the appointment, track, and source-quality checks above.
 
