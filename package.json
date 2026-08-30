@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "type": "module",
   "description": "A directory of Vietnamese professors worldwide.",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "predev": "npm run assign-profile-ids && tsx scripts/generate-profile-pages.ts --dev",
