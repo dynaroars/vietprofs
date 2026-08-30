@@ -493,6 +493,11 @@ export const HEALTH_SUBFIELDS = [
 // institution it's at, not just the department string.
 const FIELD_OVERRIDES = new Map([
   ['Information Studies|University of California, Los Angeles', 'Education'],
+  // These new research appointments have department or center names whose disciplinary home
+  // is clearer from their official university context than from the generic words alone.
+  ['Anesthesia|Indiana University School of Medicine', 'Health Sciences'],
+  ['Biostatistics and Health Data Science|Indiana University School of Medicine', 'Statistics & Data Science'],
+  ['National Center for Asphalt Technology|Auburn University', 'Engineering'],
   // Generic Speech-Language-Hearing-style department name, but this specific appointment's
   // primary focus (per its own official listing) is multilingual/English education.
   ['Linguistics and Communication Disorders|Queens College, City University of New York', 'Education'],
