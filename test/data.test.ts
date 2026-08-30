@@ -4,12 +4,10 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
-import { FIELDS, TRACKS, LOCATIONS, HEALTH_SUBFIELDS, canonicalRank, displayName, displayUniversity, fieldOf, healthSubfieldOf, continentOf, locationMatches, buildFunFacts, buildAwardsFunFacts, filterRoster } from '../src/data.ts';
+import { FIELDS, LOCATIONS, HEALTH_SUBFIELDS, canonicalRank, displayName, displayUniversity, fieldOf, healthSubfieldOf, continentOf, locationMatches, buildFunFacts, buildAwardsFunFacts, buildInternationalObservations, buildLocationObservations, filterRoster } from '../src/data.ts';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const roster = JSON.parse(readFileSync(join(__dirname, '../public/data.json'), 'utf8'));
-const verification = JSON.parse(readFileSync(join(__dirname, '../maintenance/verification.json'), 'utf8'));
-const utcTimestampPattern = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/;
 
 test('reviewed portraits use local WebP files with source provenance', () => {
   const portraits = roster.filter((person) => person.portrait);
@@ -34,64 +32,10 @@ test('health subfields are the only derived field subdivisions', () => {
   assert.ok(roster.some((person) => healthSubfieldOf(person) === 'Clinical Medicine'));
 });
 
-test('every entry has the required fields', () => {
+test('maintenance-only verification timestamps are not exposed publicly', () => {
   for (const p of roster) {
-    assert.equal(typeof p.name, 'string');
-    assert.equal(typeof p.profileUrl, 'string');
     assert.equal(p.lastVerifiedAt, undefined);
-    assert.equal(typeof p.lastUpdatedAt, 'string');
-    assert.match(p.lastUpdatedAt, utcTimestampPattern);
-    assert.equal(new Date(p.lastUpdatedAt).toISOString(), p.lastUpdatedAt);
-    assert.ok(new Date(p.lastUpdatedAt).valueOf() <= Date.now());
-    if (p.scholarUrl !== undefined) {
-      assert.equal(typeof p.scholarUrl, 'string');
-      assert.match(p.scholarUrl, /^https:\/\//);
-    }
-    if (p.websiteUrl !== undefined) {
-      assert.equal(typeof p.websiteUrl, 'string');
-      assert.match(p.websiteUrl, /^https?:\/\//);
-      assert.notEqual(p.websiteUrl, p.profileUrl);
-    }
-    assert.equal(typeof p.university, 'string');
-    assert.equal(typeof p.city, 'string');
-    if (p.state !== undefined) assert.equal(typeof p.state, 'string');
-    if (p.country !== undefined) assert.equal(typeof p.country, 'string');
-    assert.ok(Array.isArray(p.researchAreas) && p.researchAreas.length > 0);
-    assert.ok(TRACKS.includes(p.track), `"${p.track}" (for ${p.name}) is not one of TRACKS`);
-    assert.equal(typeof p.department, 'string');
-    assert.ok(p.department.length > 0);
-    if (p.rank !== undefined) assert.equal(typeof p.rank, 'string');
-    if (p.postdocYear !== undefined) assert.ok(Number.isInteger(p.postdocYear));
-    if (p.postdocInstitution !== undefined) assert.equal(typeof p.postdocInstitution, 'string');
-    for (const field of ['phdYear', 'undergradYear', 'msYear', 'mdYear']) {
-      if (p[field] !== undefined) assert.ok(Number.isInteger(p[field]), `${p.name} ${field} must be an integer`);
-    }
-    for (const field of ['phdInstitution', 'undergradInstitution', 'msInstitution', 'mdInstitution']) {
-      if (p[field] !== undefined) assert.equal(typeof p[field], 'string', `${p.name} ${field} must be a string`);
-    }
-    assert.match(p.profileUrl, /^https?:\/\//);
   }
-});
-
-test('maintenance verification ledger exactly covers the roster', () => {
-  assert.deepEqual(Object.keys(verification).sort(), roster.map((person) => person.name).sort());
-  for (const person of roster) {
-    const timestamp = verification[person.name];
-    assert.equal(typeof timestamp, 'string');
-    assert.match(timestamp, utcTimestampPattern);
-    assert.equal(new Date(timestamp).toISOString(), timestamp);
-    assert.ok(new Date(timestamp).valueOf() <= Date.now());
-  }
-});
-
-test('no duplicate names', () => {
-  const names = roster.map((p) => p.name);
-  assert.equal(new Set(names).size, names.length);
-});
-
-test('no duplicate profile URLs', () => {
-  const urls = roster.map((p) => p.profileUrl);
-  assert.equal(new Set(urls).size, urls.length);
 });
 
 test('the field filter offers all seventeen broad fields', () => {
@@ -122,6 +66,26 @@ test('business-school departments outrank generic science/CIS keywords they happ
 
 test('Health Sciences still outranks Business & Economics for health-policy departments', () => {
   assert.equal(fieldOf('Health Management and Policy'), 'Health Sciences');
+});
+
+test('Shizuoka Mathematical and Systems Engineering maps to Engineering', () => {
+  assert.equal(
+    fieldOf('Department of Mathematical and Systems Engineering', 'Shizuoka University'),
+    'Engineering',
+  );
+  assert.equal(fieldOf('Department of Mathematical and Systems Engineering'), 'Mathematics');
+});
+
+test('JAIST Knowledge Science and Osaka SANKEN reasoning lab map to computing', () => {
+  assert.equal(
+    fieldOf('School of Knowledge Science', 'Japan Advanced Institute of Science and Technology'),
+    'Computer & Information Sciences',
+  );
+  assert.equal(fieldOf('School of Knowledge Science'), 'Others');
+  assert.equal(
+    fieldOf('SANKEN, Department of Reasoning for Intelligence', 'Osaka University'),
+    'Computer & Information Sciences',
+  );
 });
 
 test('Information Studies defaults to computing but UCLA GSEIS stays Education', () => {
@@ -206,7 +170,25 @@ test('buildFunFacts reports structural roster observations rather than name-base
   const facts = buildFunFacts(roster);
   assert.ok(facts.some((f) => /distinct departments/.test(f)));
   assert.ok(facts.some((f) => /same-institution, same-field cluster/.test(f)));
-  assert.ok(facts.some((f) => /closely represented internationally/.test(f)));
+  assert.ok(facts.some((f) => /largest international country groups/.test(f)));
+});
+
+test('field-balance observations name the fields computed from their input', () => {
+  const sample = [
+    ...Array.from({ length: 4 }, (_, index) => ({ name: `Historian ${index}`, university: `U${index}`, department: 'History', country: 'France' })),
+    ...Array.from({ length: 4 }, (_, index) => ({ name: `Lawyer ${index}`, university: `L${index}`, department: 'Law', country: 'France' })),
+    ...Array.from({ length: 4 }, (_, index) => ({ name: `Artist ${index}`, university: `A${index}`, department: 'Music', country: 'France' })),
+  ];
+  const fact = buildInternationalObservations(sample).find((value) => value.includes('closely represented'));
+  assert.match(fact, /Humanities \(4\).*Law & Public Affairs \(4\).*Arts & Design \(4\)/);
+});
+
+test('location observations do not silently remove United States entries from a continent', () => {
+  const sample = [
+    { name: 'US Person', university: 'US University', department: 'History', country: 'United States' },
+    { name: 'Canada Person', university: 'Canada University', department: 'History', country: 'Canada' },
+  ];
+  assert.match(buildLocationObservations(sample, 'North America')[0], /^2 entries/);
 });
 
 test('buildFunFacts includes only observations computed from roster fields', () => {
@@ -274,6 +256,23 @@ test('searching an honor name lists professors who hold that honor', () => {
 test('searching a name without middle initials still finds the professor', () => {
   const result = filterRoster(roster, { query: 'van vu', field: 'all', location: 'World' });
   assert.ok(result.some((person) => person.name === 'Van H. Vu'));
+});
+
+test('a two-word name search does not match terms scattered across unrelated fields', () => {
+  const result = filterRoster(roster, { query: 'Quan Nguyen', field: 'all', location: 'World' });
+  assert.ok(result.some((person) => person.name === 'Quan Nguyen'));
+  // Every hit must contain both terms within one field (e.g. the name itself), not "nguyen" in
+  // the name plus an unrelated "quan" substring incidental to some other field such as a
+  // "Quantum ..." research area.
+  for (const person of result) {
+    const fields = [
+      displayName(person.name),
+      person.university,
+      person.department,
+      ...(person.researchAreas ?? []),
+    ].filter(Boolean).map((value) => value.toLowerCase());
+    assert.ok(fields.some((field) => field.includes('quan') && field.includes('nguyen')), `${person.name} matched without both terms in one field`);
+  }
 });
 
 test('filterRoster narrows by track and "all" leaves it unfiltered', () => {

@@ -20,7 +20,10 @@ function nextId() {
 const updated = roster.map((person) => person.id ? person : { id: nextId(), ...person });
 const added = updated.filter((person, index) => !roster[index].id).length;
 if (!apply) {
-  console.log(`${added} roster entries need profile IDs. Re-run with --apply to assign them.`);
+  if (added > 0) {
+    throw new Error(`${added} roster entries need profile IDs. Run npm run assign-profile-ids -- --apply, then commit the assigned IDs.`);
+  }
+  console.log('All roster entries have immutable profile IDs.');
 } else {
   await writeFile(rosterFile, `${JSON.stringify(updated, null, 2)}\n`);
   console.log(`Assigned immutable profile IDs to ${added} roster entries.`);

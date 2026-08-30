@@ -3,20 +3,27 @@ import { test, before, after } from 'node:test';
 import assert from 'node:assert/strict';
 import { spawn } from 'node:child_process';
 import { createRequire } from 'node:module';
+import { get } from 'node:https';
 
 const require = createRequire(import.meta.url);
-const { firefox } = require('playwright');
+const { chromium } = require('playwright');
 const port = 4179;
 let server;
 let browser;
+let context;
 let baseUrl;
-let unavailable;
 
 async function waitForServer(url) {
   for (let attempt = 0; attempt < 40; attempt += 1) {
     try {
-      const response = await fetch(url);
-      if (response.ok) return;
+      const status = await new Promise<number>((resolve, reject) => {
+        const request = get(url, { rejectUnauthorized: false }, (response) => {
+          response.resume();
+          resolve(response.statusCode ?? 0);
+        });
+        request.once('error', reject);
+      });
+      if (status >= 200 && status < 500) return;
     } catch {
       // Vite is still starting.
     }
@@ -26,32 +33,23 @@ async function waitForServer(url) {
 }
 
 before(async () => {
-  server = spawn('npm', ['run', 'dev', '--', '--host', '127.0.0.1', '--port', String(port)], {
+  server = spawn('npm', ['run', 'preview', '--', '--host', '127.0.0.1', '--port', String(port)], {
     stdio: 'ignore',
   });
-  baseUrl = `http://127.0.0.1:${port}`;
-  try {
-    await waitForServer(`${baseUrl}/`);
-  } catch (error) {
-    unavailable = error.message;
-    return;
-  }
-  const executablePath = process.env.BROWSER_PATH || '/usr/bin/firefox';
-  try {
-    browser = await firefox.launch({ headless: true, executablePath });
-  } catch (error) {
-    unavailable = error.message.split('\n')[0];
-  }
+  baseUrl = `https://127.0.0.1:${port}`;
+  await waitForServer(`${baseUrl}/`);
+  browser = await chromium.launch({ headless: true });
+  context = await browser.newContext({ ignoreHTTPSErrors: true });
 });
 
 after(async () => {
+  await context?.close();
   await browser?.close();
   server?.kill();
 });
 
-test('directory loads and searching changes the roster', async (t) => {
-  if (unavailable || !browser) return t.skip(`Browser smoke tests unavailable: ${unavailable ?? 'no browser'}`);
-  const page = await browser.newPage();
+test('directory loads and searching changes the roster', async () => {
+  const page = await context.newPage();
   await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
   const initial = await page.locator('.entry').count();
   assert.ok(initial > 0);
@@ -94,9 +92,8 @@ test('directory loads and searching changes the roster', async (t) => {
   await page.close();
 });
 
-test('search suggestions remain visible while results update', async (t) => {
-  if (unavailable || !browser) return t.skip(`Browser smoke tests unavailable: ${unavailable ?? 'no browser'}`);
-  const page = await browser.newPage();
+test('search suggestions remain visible while results update', async () => {
+  const page = await context.newPage();
   await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
   const search = page.locator('#search');
   const panel = page.locator('#search-suggestion-panel');
@@ -116,9 +113,8 @@ test('search suggestions remain visible while results update', async (t) => {
   await page.close();
 });
 
-test('every roster card exposes its official profile link', async (t) => {
-  if (unavailable || !browser) return t.skip(`Browser smoke tests unavailable: ${unavailable ?? 'no browser'}`);
-  const page = await browser.newPage();
+test('every roster card exposes its official profile link', async () => {
+  const page = await context.newPage();
   await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
   const entryCount = await page.locator('.entry').count();
   const profileLinks = page.locator('.profile-link');
@@ -130,15 +126,14 @@ test('every roster card exposes its official profile link', async (t) => {
   ))));
   const [actualUrls, expectedUrls] = await Promise.all([
     profileLinks.evaluateAll((links) => links.map((link) => link.href).sort()),
-    page.evaluate(async () => (await (await fetch('/data.json')).json()).map((person) => person.profileUrl).sort()),
+    page.evaluate(async () => (await (await fetch('/data.json')).json()).map((person) => new URL(person.profileUrl).href).sort()),
   ]);
   assert.deepEqual(actualUrls, expectedUrls);
   await page.close();
 });
 
-test('local faculty portraits render and load', async (t) => {
-  if (unavailable || !browser) return t.skip(`Browser smoke tests unavailable: ${unavailable ?? 'no browser'}`);
-  const page = await browser.newPage();
+test('local faculty portraits render and load', async () => {
+  const page = await context.newPage();
   await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
   const portrait = page.locator('.entry-portrait').first();
   await portrait.waitFor();
@@ -147,9 +142,8 @@ test('local faculty portraits render and load', async (t) => {
   await page.close();
 });
 
-test('filters and submit-form suggestions work', async (t) => {
-  if (unavailable || !browser) return t.skip(`Browser smoke tests unavailable: ${unavailable ?? 'no browser'}`);
-  const page = await browser.newPage();
+test('filters and submit-form suggestions work', async () => {
+  const page = await context.newPage();
   await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
   await page.locator('#location-filter').selectOption('World');
   assert.ok((await page.locator('.entry').count()) > 0);
@@ -165,21 +159,28 @@ test('filters and submit-form suggestions work', async (t) => {
   assert.equal(await page.locator('#university').inputValue(), 'National University of Singapore');
   assert.equal(await page.locator('#submit-form').getAttribute('data-editing-id'), tan.id);
   assert.match(await page.locator('#name-match-notice').textContent(), new RegExp(`Editing existing entry\\s+${tan.id}`));
-  assert.equal(await page.locator('#name-match-notice a').getAttribute('href'), `/people/${tan.id}.html`);
+  assert.equal(await page.locator('#name-match-notice a').getAttribute('href'), `./people/${tan.id}.html`);
+  await page.locator('#name').fill('Corrected Tan Minh Nguyen');
+  assert.equal(await page.locator('#submit-form').getAttribute('data-editing-id'), tan.id);
+  await page.goto(`${baseUrl}/submit.html`, { waitUntil: 'networkidle' });
+  await page.locator('#name').fill('Tan Minh Nguyen');
+  assert.equal(await page.locator('#submit-form').getAttribute('data-editing-id'), tan.id);
+  await page.locator('#name').fill('Brand New Person');
+  assert.equal(await page.locator('#submit-form').getAttribute('data-editing-id'), null);
+  assert.equal(await page.locator('#profileUrl').inputValue(), '');
+  assert.equal(await page.locator('#name-match-notice').isHidden(), true);
   await page.close();
 });
 
-test('stale zero-result field URLs fall back to the roster', async (t) => {
-  if (unavailable || !browser) return t.skip(`Browser smoke tests unavailable: ${unavailable ?? 'no browser'}`);
-  const page = await browser.newPage();
+test('stale zero-result field URLs fall back to the roster', async () => {
+  const page = await context.newPage();
   await page.goto(`${baseUrl}/?field=Others`, { waitUntil: 'networkidle' });
   assert.ok((await page.locator('.entry').count()) > 0);
   await page.close();
 });
 
-test('filter counts stay visible, zero-count choices are omitted, and stale filters recover', async (t) => {
-  if (unavailable || !browser) return t.skip(`Browser smoke tests unavailable: ${unavailable ?? 'no browser'}`);
-  const page = await browser.newPage();
+test('filter choices stay stable and stale filters recover', async () => {
+  const page = await context.newPage();
   const runtimeErrors = [];
   page.on('pageerror', (error) => runtimeErrors.push(error.message));
   page.on('console', (message) => {
@@ -199,25 +200,32 @@ test('filter counts stay visible, zero-count choices are omitted, and stale filt
   assert.match(await fieldOptions.filter({ hasText: 'Health' }).first().textContent(), /Health.*\(\d+\)/);
   assert.match(await fieldOptions.filter({ hasText: 'Law' }).first().textContent(), /Law.*\(\d+\)/);
   assert.match(await trackOptions.filter({ hasText: 'Tenure-line' }).first().textContent(), /Tenure-line \(\d+\)/);
-  assert.equal(await page.locator('#field-filter option[value="Others"]').count(), 0);
+  assert.equal(await page.locator('#field-filter option[value="Others"]').count(), 1);
   await page.locator('#field-filter').selectOption('Biological & Biomedical Sciences');
   assert.ok((await page.locator('.entry').count()) > 0);
-  assert.equal(await page.locator('#track-filter option[value="Teaching"]').count(), 0);
-  assert.equal(await page.locator('#track-filter option[value="Emeritus"]').count(), 0);
-  assert.equal(await page.locator('#field-filter option[value="Others"]').count(), 0);
+  assert.equal(await page.locator('#track-filter option[value="Teaching"]').count(), 1);
+  assert.equal(await page.locator('#track-filter option[value="Emeritus"]').count(), 1);
+  assert.equal(await page.locator('#field-filter option[value="Others"]').count(), 1);
   const locationLabels = await page.locator('#location-filter option').allTextContents();
   assert.ok(locationLabels.every((label) => /\(\d+\)$/.test(label.trim())));
   assert.ok(locationLabels.every((label) => !label.endsWith('(0)')));
   await page.locator('#location-filter').selectOption('World');
   await page.locator('#field-filter').selectOption('Physics & Astronomy');
   await page.locator('#track-filter').selectOption('Emeritus');
-  assert.equal(await page.locator('#location-filter option[value="US"]').count(), 0);
+  assert.equal(await page.locator('#location-filter option[value="US"]').count(), 1);
   await page.locator('#home-link').click();
   assert.equal(await page.locator('#location-filter').inputValue(), 'World');
   assert.equal(await page.locator('#field-filter').inputValue(), 'all');
   assert.equal(await page.locator('#track-filter').inputValue(), 'all');
   assert.ok((await page.locator('.entry').count()) > 0);
-  for (const selector of ['.example-chip[data-field]', '.example-chip[data-track]', '.example-chip[data-loc]']) {
+  await page.goto(`${baseUrl}/?state=Vermont&loc=US`, { waitUntil: 'networkidle' });
+  assert.match(page.url(), /state=Vermont/);
+  await page.locator('#home-link').click();
+  assert.doesNotMatch(page.url(), /state=/);
+  await page.goto(`${baseUrl}/?state=Vermont&loc=US`, { waitUntil: 'networkidle' });
+  await page.locator('#location-filter').selectOption('Europe');
+  assert.doesNotMatch(page.url(), /state=/);
+  for (const selector of ['.example-chip[data-field]', '.example-chip[data-loc]']) {
     await page.locator(selector).first().click();
     assert.ok((await page.locator('.entry').count()) > 0, `${selector} should always produce roster results`);
   }
@@ -233,16 +241,26 @@ test('filter counts stay visible, zero-count choices are omitted, and stale filt
   await page.close();
 });
 
-test('interesting view shows World alone, or the selected region plus World', async (t) => {
-  if (unavailable || !browser) return t.skip(`Browser smoke tests unavailable: ${unavailable ?? 'no browser'}`);
-  const page = await browser.newPage();
+test('interesting view shows World alone, or the selected region plus World', async () => {
+  const page = await context.newPage();
   await page.goto(`${baseUrl}/?loc=World`, { waitUntil: 'networkidle' });
-  await page.locator('#field-filter').selectOption('interesting');
+  await page.locator('.example-chip[data-insights]').click();
   assert.equal(await page.locator('.insights-section-block').count(), 1);
   await page.locator('#location-filter').selectOption('France');
-  await page.locator('#field-filter').selectOption('interesting');
   assert.equal(await page.locator('.insights-section-block').count(), 2);
   assert.equal(await page.locator('.insights-badge').filter({ hasText: 'France' }).count(), 1);
   assert.equal(await page.locator('.insights-badge').filter({ hasText: 'World' }).count(), 1);
+  await page.close();
+});
+
+test('profile pages honor dark mode through the shared stylesheet', async () => {
+  const page = await context.newPage();
+  await page.emulateMedia({ colorScheme: 'dark' });
+  await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
+  const id = await page.evaluate(async () => (await (await fetch('/data.json')).json())[0].id);
+  await page.goto(`${baseUrl}/people/${id}.html`, { waitUntil: 'networkidle' });
+  assert.equal(await page.locator('link[href="../profile.css"]').count(), 1);
+  assert.equal(await page.evaluate(() => getComputedStyle(document.documentElement).colorScheme), 'light dark');
+  assert.equal(await page.evaluate(() => getComputedStyle(document.body).backgroundColor), 'rgb(21, 24, 28)');
   await page.close();
 });

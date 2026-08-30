@@ -91,6 +91,8 @@ function profilePage(person: RosterEntry) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="${escapeHtml(description)}">
   <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#15181c" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="${canonicalUrl}">
   <meta property="og:type" content="profile">
   <meta property="og:site_name" content="VietProfs">
@@ -99,16 +101,7 @@ function profilePage(person: RosterEntry) {
   <meta property="og:url" content="${canonicalUrl}">
   <title>${escapeHtml(title)}</title>
   <script type="application/ld+json">${jsonLd}</script>
-  <style>
-    :root { color: #14221d; background: #f8faf8; font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
-    body { margin: 0; line-height: 1.55; } main, header { max-width: 760px; margin: auto; padding: 1.5rem; }
-    header { padding-top: 2.5rem; } a { color: #075b43; } .eyebrow { font-weight: 700; text-decoration: none; }
-    .identity { display: flex; gap: 1.5rem; align-items: flex-start; margin: 1.5rem 0; }.portrait { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; }
-    h1 { margin: 0; line-height: 1.12; } h2 { margin-top: 2rem; font-size: 1.15rem; } .native, .meta, .updated { color: #52605a; }
-    .tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 1rem; }.tag { background: #e5f2ed; border-radius: 999px; padding: .2rem .6rem; font-size: .9rem; }
-    .links { display: flex; flex-wrap: wrap; gap: .75rem; margin: 1.5rem 0; }.links a { border: 1px solid #8eb6a7; border-radius: .35rem; padding: .45rem .7rem; text-decoration: none; }
-    footer { border-top: 1px solid #d9e2dd; color: #52605a; font-size: .9rem; margin-top: 2.5rem; padding: 1.5rem 0; } @media (max-width: 520px) { .identity { display: block; }.portrait { margin-bottom: 1rem; } }
-  </style>
+  <link rel="stylesheet" href="../profile.css">
 </head>
 <body>
   <header><a class="eyebrow" href="../">VietProfs</a></header>
@@ -142,11 +135,14 @@ function redirectPage(redirect: ProfileRedirect) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#15181c" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="${targetUrl}">
+  <link rel="stylesheet" href="../profile.css">
   ${refresh}
   <title>${title}</title>
 </head>
-<body><main><h1>${title}</h1><p>${message}</p>${action}</main></body>
+<body><header><a class="eyebrow" href="../">VietProfs</a></header><main><h1>${title}</h1><p>${message}</p>${action}</main></body>
 </html>`;
 }
 

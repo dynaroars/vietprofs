@@ -37,8 +37,8 @@ function renderShell() {
 
       </section>
 
-      <section class="form-group optional-group" aria-labelledby="optional-heading">
-        <h2 id="optional-heading">Optional</h2>
+      <details class="form-group optional-group">
+        <summary id="optional-heading">Optional details</summary>
         <p class="form-group-description">Share any details you have; maintainers will verify and complete the record.</p>
 
       <div class="form-section">
@@ -49,6 +49,16 @@ function renderShell() {
       <div class="form-section">
         <label for="scholarUrl">Google Scholar profile</label>
         <input id="scholarUrl" name="scholarUrl" type="url" placeholder="https://scholar.google.com/…" />
+      </div>
+
+      <div class="form-section">
+        <label for="portraitSource">Profile picture URL <span class="optional-label">(optional)</span></label>
+        <div id="portrait-preview" class="portrait-preview" hidden>
+          <img id="portrait-preview-image" src="" alt="Existing profile picture" width="96" height="96" />
+          <span>Existing picture</span>
+        </div>
+        <input id="portraitSource" name="portraitSource" type="url" placeholder="https://… (official university or personal profile image)" />
+        <p class="form-help">You may provide a direct image URL. Maintainers will review it and create the roster portrait.</p>
       </div>
 
       <div class="form-section">
@@ -169,7 +179,7 @@ function renderShell() {
         <label for="notes">Notes for the maintainer</label>
         <textarea id="notes" name="notes" rows="2" placeholder="Anything else that helps verify this (e.g. recent move, other evidence links, etc.)"></textarea>
       </div>
-      </section>
+      </details>
 
       <div class="submit-actions">
         <button type="submit" class="submit-btn">Send by email</button>
@@ -189,6 +199,7 @@ const FIELD_LABELS = {
   profileUrl: 'Official university profile',
   websiteUrl: 'Personal/lab website',
   scholarUrl: 'Google Scholar',
+  portraitSource: 'Profile picture URL',
   university: 'University',
   department: 'Department',
   field: 'Broad field',
@@ -259,10 +270,14 @@ function buildUpdateBody(matchedEntry, entry, notes) {
 
 function populateEntry(form, entry) {
   form.dataset.editingId = entry.id;
+  const optionalDetails = form.querySelector('.optional-group') as HTMLDetailsElement | null;
+  if (optionalDetails) optionalDetails.open = true;
   form.name.value = entry.name;
   form.profileUrl.value = entry.profileUrl ?? '';
   form.websiteUrl.value = entry.websiteUrl ?? '';
   form.scholarUrl.value = entry.scholarUrl ?? '';
+  form.portraitSource.value = entry.portraitSource ?? '';
+  updatePortraitPreview(form, entry);
   form.university.value = entry.university ?? '';
   form.city.value = entry.city ?? '';
   form.state.value = entry.state ?? '';
@@ -287,8 +302,30 @@ function populateEntry(form, entry) {
   }
 }
 
+function updatePortraitPreview(form, entry) {
+  const preview = form.querySelector('#portrait-preview') as HTMLDivElement | null;
+  const image = form.querySelector('#portrait-preview-image') as HTMLImageElement | null;
+  if (!preview || !image) return;
+  if (entry?.portrait) {
+    image.src = `${import.meta.env.BASE_URL}${entry.portrait}`;
+    preview.hidden = false;
+  } else {
+    image.removeAttribute('src');
+    preview.hidden = true;
+  }
+}
+
 function findMatchedEntry(form, entriesById, entriesByName, name) {
   return entriesById?.get(form.dataset.editingId) ?? entriesByName?.get(name.toLocaleLowerCase().trim());
+}
+
+function clearAutoPopulatedEntry(form) {
+  const name = form.name.value;
+  form.reset();
+  form.name.value = name;
+  updatePortraitPreview(form, null);
+  const optionalDetails = form.querySelector('.optional-group') as HTMLDetailsElement | null;
+  if (optionalDetails) optionalDetails.open = false;
 }
 
 function onSubmit(e, entriesById, entriesByName) {
@@ -312,6 +349,7 @@ function onSubmit(e, entriesById, entriesByName) {
     profileUrl: form.profileUrl.value.trim(),
     websiteUrl: form.websiteUrl.value.trim() || undefined,
     scholarUrl: form.scholarUrl.value.trim() || undefined,
+    portraitSource: form.portraitSource.value.trim() || undefined,
     university: form.university.value.trim() || undefined,
     city: form.city.value.trim() || undefined,
     state: form.state.value.trim() || undefined,
@@ -375,6 +413,7 @@ async function init() {
 
     const requestedEdit = new URLSearchParams(window.location.search).get('edit');
     const entryToEdit = requestedEdit && (entriesById.get(requestedEdit) ?? entriesByName.get(requestedEdit.toLocaleLowerCase().trim()));
+    const lockedEditId = entryToEdit ? entryToEdit.id : '';
     if (entryToEdit) {
       populateEntry(form, entryToEdit);
       checkMatch(entryToEdit.name);
@@ -412,6 +451,11 @@ async function init() {
 
     nameInput.addEventListener('input', () => {
       const query = nameInput.value.trim().toLocaleLowerCase();
+      const boundEntry = entriesById.get(form.dataset.editingId);
+      if (boundEntry && form.dataset.editingId !== lockedEditId && boundEntry.name.toLocaleLowerCase() !== query) {
+        clearAutoPopulatedEntry(form);
+        delete form.dataset.editingId;
+      }
       const entry = entriesByName.get(query);
       if (entry) {
         populateEntry(form, entry);

@@ -3972,14 +3972,15 @@
     "id": "vp-0119",
     "name": "Quan Nguyen",
     "profileUrl": "https://viterbi.usc.edu/directory/faculty/Nguyen/Quan",
-    "lastUpdatedAt": "2026-08-26T18:19:34.000Z",
+    "lastUpdatedAt": "2026-08-30T05:30:30.296Z",
     "university": "University of Southern California",
     "city": "Los Angeles",
     "state": "California",
     "researchAreas": [
       "Legged Robotics",
       "Nonlinear Control",
-      "Trajectory Optimization"
+      "Trajectory Optimization",
+      "Robust and Adaptive Control"
     ],
     "track": "Tenure-line",
     "department": "Aerospace and Mechanical Engineering",
@@ -3990,7 +3991,18 @@
     "portrait": "portraits/120-quan-nguyen-university-of-southern-california-university-of-southern-california.webp",
     "portraitSource": "https://viterbi.usc.edu/directory/images/a354c60f58d34ebd3cf100ef6399d2dd.jpg",
     "undergradInstitution": "Hanoi University of Science and Technology Hanoi",
-    "undergradYear": 2012
+    "undergradYear": 2012,
+    "scholarUrl": "https://scholar.google.com/citations?user=s5_69i0AAAAJ&hl=en",
+    "postdocInstitution": "Massachusetts Institute of Technology",
+    "honors": [
+      {
+        "name": "Charles Lee Powell Foundation Faculty Research Award",
+        "year": 2020,
+        "category": "career_award",
+        "organization": "Charles Lee Powell Foundation",
+        "source": "https://www.dynamicwalking2021.org/dr-quan-nguyen"
+      }
+    ]
   },
   {
     "id": "vp-0120",
@@ -4180,7 +4192,7 @@
     "id": "vp-0124",
     "name": "Nam T. Dinh",
     "profileUrl": "https://ne.ncsu.edu/directory/ntdinh/",
-    "lastUpdatedAt": "2026-08-26T05:19:43.000Z",
+    "lastUpdatedAt": "2026-08-30T05:06:15.410Z",
     "scholarUrl": "https://scholar.google.com/citations?user=k66mpoIAAAAJ",
     "university": "North Carolina State University",
     "city": "Raleigh",
@@ -4203,6 +4215,16 @@
         "category": "distinguished_professorship",
         "organization": "North Carolina State University",
         "source": "https://ne.ncsu.edu/directory/ntdinh/"
+      }
+    ],
+    "undergradInstitution": "Moscow Power Engineering Institute",
+    "msInstitution": "Moscow Power Engineering Institute",
+    "phdInstitution": "Moscow Power Engineering Institute",
+    "otherDegrees": [
+      {
+        "degree": "DSc",
+        "institution": "Moscow Power Engineering Institute",
+        "source": "https://www.lastenergy.com/titansofnuclear/experts/namdinh"
       }
     ]
   },
@@ -4465,9 +4487,9 @@
   },
   {
     "id": "vp-0132",
-    "name": "Thao (Vicky) Nguyen",
-    "profileUrl": "https://pages.jh.edu/tnguy108/",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "name": "Thao D. (Vicky) Nguyen",
+    "profileUrl": "https://me.jhu.edu/faculty/thao-vicky-nguyen/",
+    "lastUpdatedAt": "2026-08-30T14:05:30.000Z",
     "scholarUrl": "https://scholar.google.com/citations?user=Cw2MyA4AAAAJ",
     "university": "Johns Hopkins University",
     "city": "Baltimore",
@@ -4489,9 +4511,56 @@
         "year": 2008,
         "category": "career_award",
         "organization": "Office of the President of the United States",
-        "source": "https://me.jhu.edu/news/thao-vicky-nguyen-is-awarded-the-2015-thomas-j-r-hughes-young-investigator-award/"
+        "source": "https://nguyenlab.wse.jhu.edu/people/thao-d-vicky-nguyen/"
+      },
+      {
+        "name": "NSF CAREER Award",
+        "year": 2013,
+        "category": "career_award",
+        "organization": "National Science Foundation",
+        "source": "https://nguyenlab.wse.jhu.edu/people/thao-d-vicky-nguyen/"
+      },
+      {
+        "name": "ASME Fellow",
+        "year": 2022,
+        "category": "fellow",
+        "organization": "American Society of Mechanical Engineers",
+        "source": "https://nguyenlab.wse.jhu.edu/people/thao-d-vicky-nguyen/"
+      },
+      {
+        "name": "AIMBE Fellow",
+        "year": 2023,
+        "category": "fellow",
+        "organization": "American Institute for Medical and Biological Engineering",
+        "source": "https://nguyenlab.wse.jhu.edu/people/thao-d-vicky-nguyen/"
+      },
+      {
+        "name": "Van C. Mow Medal",
+        "year": 2024,
+        "category": "major_award",
+        "organization": "American Society of Mechanical Engineers",
+        "source": "https://nguyenlab.wse.jhu.edu/people/thao-d-vicky-nguyen/"
+      },
+      {
+        "name": "Materials Division Centennial Mid-Career Medal",
+        "year": 2025,
+        "category": "major_award",
+        "organization": "American Society of Mechanical Engineers",
+        "source": "https://nguyenlab.wse.jhu.edu/people/thao-d-vicky-nguyen/"
+      },
+      {
+        "name": "James R. Rice Medal",
+        "year": 2025,
+        "category": "major_award",
+        "organization": "Society of Engineering Science",
+        "source": "https://nguyenlab.wse.jhu.edu/people/thao-d-vicky-nguyen/"
       }
-    ]
+    ],
+    "msInstitution": "Stanford University",
+    "msYear": 2000,
+    "undergradInstitution": "Massachusetts Institute of Technology",
+    "undergradYear": 1998,
+    "websiteUrl": "https://nguyenlab.wse.jhu.edu/people/thao-d-vicky-nguyen/"
   },
   {
     "id": "vp-0133",
@@ -6508,7 +6577,7 @@
     "id": "vp-0198",
     "name": "Ocean Vuong",
     "profileUrl": "https://as.nyu.edu/content/nyu-as/as/faculty/ocean-vuong.html",
-    "lastUpdatedAt": "2026-08-26T12:37:42.000Z",
+    "lastUpdatedAt": "2026-08-30T05:06:15.410Z",
     "university": "New York University",
     "city": "New York",
     "state": "New York",
@@ -6530,6 +6599,14 @@
         "category": "major_award",
         "organization": "John D. and Catherine T. MacArthur Foundation",
         "source": "https://www.macfound.org/fellows/class-of-2019/ocean-vuong"
+      }
+    ],
+    "undergradInstitution": "Brooklyn College",
+    "otherDegrees": [
+      {
+        "degree": "MFA",
+        "institution": "New York University",
+        "source": "https://as.nyu.edu/content/nyu-as/as/faculty/ocean-vuong.html"
       }
     ]
   },
@@ -6860,27 +6937,61 @@
     "msInstitution": "Pennsylvania State University"
   },
   {
-    "id": "vp-0206",
     "name": "Doc Lap Tran",
     "vietnameseName": "Trần Độc Lập",
     "profileUrl": "https://www.tnstate.edu/agriculture/resumes/doc_lap_tran.aspx",
-    "lastUpdatedAt": "2026-08-23T18:32:33.000Z",
     "university": "Tennessee State University",
     "city": "Nashville",
     "state": "Tennessee",
     "researchAreas": [
       "Agricultural Economics",
+      "Consumer Economics",
       "Food Safety",
+      "Value Chains in Agriculture",
       "Water Resource Management"
     ],
     "track": "Tenure-line",
-    "department": "Agricultural and Environmental Sciences",
+    "department": "Agribusiness and Education",
     "rank": "Assistant Professor",
     "phdYear": 2012,
     "phdInstitution": "University of Western Australia",
+    "phdMajor": "Agricultural Economics",
+    "msInstitution": "Nong Lam University - Ho Chi Minh City",
+    "msYear": 2003,
+    "msMajor": "Agricultural Economics",
+    "undergradInstitution": "Nong Lam University - Ho Chi Minh City",
+    "undergradYear": 1998,
+    "undergradMajor": "Agricultural Economics",
+    "postdocInstitution": "University of California, Berkeley",
+    "postdocYear": 2015,
     "country": "United States",
+    "honors": [
+      {
+        "name": "Fulbright Fellowship",
+        "year": 2015,
+        "category": "career_award",
+        "organization": "U.S. Government",
+        "source": "https://www.tnstate.edu/agriculture/resumes/doc_lap_tran.aspx"
+      },
+      {
+        "name": "Endeavour Research Fellowship",
+        "year": 2014,
+        "category": "career_award",
+        "organization": "Australian Government",
+        "source": "https://www.tnstate.edu/agriculture/resumes/doc_lap_tran.aspx"
+      },
+      {
+        "name": "John Allwright Fellowship",
+        "year": 2007,
+        "category": "career_award",
+        "organization": "Australian Centre for International Agricultural Research",
+        "source": "https://www.tnstate.edu/agriculture/resumes/doc_lap_tran.aspx"
+      }
+    ],
     "portrait": "portraits/208-doc-lap-tran-tennessee-state-university.webp",
-    "portraitSource": "https://www.tnstate.edu/agriculture/resumes/images/Tran.jpg"
+    "portraitSource": "https://www.tnstate.edu/agriculture/resumes/images/Tran.jpg",
+    "id": "vp-0206",
+    "lastUpdatedAt": "2026-08-30T04:20:54.667Z"
   },
   {
     "id": "vp-0207",
@@ -6955,7 +7066,7 @@
     "id": "vp-0210",
     "name": "Tuan Pham",
     "profileUrl": "https://about.byuh.edu/directory/tuan-pham",
-    "lastUpdatedAt": "2026-08-24T03:03:40.000Z",
+    "lastUpdatedAt": "2026-08-30T04:59:20.365Z",
     "university": "Brigham Young University-Hawaii",
     "city": "Laie",
     "state": "Hawaii",
@@ -6974,7 +7085,8 @@
     "portrait": "portraits/212-tuan-pham-brigham-young-university-hawaii.webp",
     "portraitSource": "https://brightspotcdn.byu.edu/dims4/default/28fecd6/2147483647/strip/true/crop/3598x3598+0+130/resize/200x200!/quality/90/?url=https%3A%2F%2Fbrigham-young-brightspot-us-east-2.s3.us-east-2.amazonaws.com%2F69%2Fe9%2F5055ba5b4e86be270a85f072ec4d%2Ftuan-pham.JPG",
     "msInstitution": "University of Orleans",
-    "msYear": 2012
+    "msYear": 2012,
+    "undergradInstitution": "University of Science, Vietnam National University Ho Chi Minh City"
   },
   {
     "id": "vp-0211",
@@ -7424,7 +7536,7 @@
     "id": "vp-0229",
     "name": "Huyen Pham - Texas A&M University",
     "profileUrl": "https://www.law.tamu.edu/faculty/faculty-profiles/huyen-pham.html",
-    "lastUpdatedAt": "2026-08-28T12:44:35.000Z",
+    "lastUpdatedAt": "2026-08-30T05:06:15.410Z",
     "scholarUrl": "https://scholar.google.com/citations?user=dWplnewAAAAJ",
     "university": "Texas A&M University",
     "city": "Fort Worth",
@@ -7454,13 +7566,22 @@
       }
     ],
     "portrait": "portraits/231-huyen-pham-texas-a-m-university.webp",
-    "portraitSource": "https://www.law.tamu.edu/_assets/images/_profile-images/huyen-pham.jpg"
+    "portraitSource": "https://www.law.tamu.edu/_assets/images/_profile-images/huyen-pham.jpg",
+    "undergradInstitution": "Harvard University",
+    "otherDegrees": [
+      {
+        "degree": "JD",
+        "institution": "Harvard Law School",
+        "year": 1996,
+        "source": "https://www.law.tamu.edu/faculty/faculty-profiles/huyen-pham.html"
+      }
+    ]
   },
   {
     "id": "vp-0230",
     "name": "T. Kim-Trang Tran",
     "profileUrl": "https://www.scrippscollege.edu/offices/profile/kim-trang-tran",
-    "lastUpdatedAt": "2026-08-26T12:37:42.000Z",
+    "lastUpdatedAt": "2026-08-30T05:05:25.086Z",
     "university": "Scripps College",
     "city": "Claremont",
     "state": "California",
@@ -7480,6 +7601,14 @@
         "year": null,
         "category": "distinguished_professorship",
         "organization": "Scripps College",
+        "source": "https://www.scrippscollege.edu/offices/profile/kim-trang-tran"
+      }
+    ],
+    "undergradInstitution": "University of Iowa",
+    "otherDegrees": [
+      {
+        "degree": "MFA",
+        "institution": "California Institute of the Arts",
         "source": "https://www.scrippscollege.edu/offices/profile/kim-trang-tran"
       }
     ]
@@ -7600,7 +7729,7 @@
     "id": "vp-0235",
     "name": "H. Lan Thao Lam",
     "profileUrl": "https://www.newschool.edu/parsons/faculty/h-lan-thao-lam/",
-    "lastUpdatedAt": "2026-08-26T12:44:36.000Z",
+    "lastUpdatedAt": "2026-08-30T05:05:25.086Z",
     "university": "The New School",
     "city": "New York",
     "state": "New York",
@@ -7623,7 +7752,14 @@
       }
     ],
     "portrait": "portraits/237-h-lan-thao-lam-the-new-school.webp",
-    "portraitSource": "https://vcard.newschool.edu/?c=513819"
+    "portraitSource": "https://vcard.newschool.edu/?c=513819",
+    "otherDegrees": [
+      {
+        "degree": "MFA",
+        "institution": "California Institute of the Arts",
+        "source": "https://www.newschool.edu/parsons/faculty/h-lan-thao-lam/"
+      }
+    ]
   },
   {
     "id": "vp-0236",
@@ -8376,7 +8512,7 @@
     "id": "vp-0269",
     "name": "Thu-Ba Nguyen Hoai",
     "profileUrl": "https://www.alc.ucla.edu/person/thu-ba-nguyen-hoai/",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "lastUpdatedAt": "2026-08-30T05:03:08.997Z",
     "university": "University of California, Los Angeles",
     "city": "Los Angeles",
     "state": "California",
@@ -8393,7 +8529,8 @@
     "phdYear": 2006,
     "undergradYear": 2006,
     "portrait": "portraits/271-thu-ba-nguyen-hoai-university-of-california-los-angeles.webp",
-    "portraitSource": "https://alc.ucla.edu/wp-content/uploads/2015/02/image1-e1424710262363-300x300.jpg"
+    "portraitSource": "https://alc.ucla.edu/wp-content/uploads/2015/02/image1-e1424710262363-300x300.jpg",
+    "msInstitution": "Vietnam National University, Ho Chi Minh City"
   },
   {
     "id": "vp-0270",
@@ -8774,9 +8911,9 @@
   },
   {
     "id": "vp-0286",
-    "name": "Ruby Nguyen",
+    "name": "Ruby H.N. Nguyen",
     "profileUrl": "https://directory.sph.umn.edu/bio/sph-a-z/ruby-nguyen",
-    "lastUpdatedAt": "2026-08-26T12:56:59.000Z",
+    "lastUpdatedAt": "2026-08-30T04:59:44.597Z",
     "university": "University of Minnesota",
     "city": "Minneapolis",
     "state": "Minnesota",
@@ -8800,7 +8937,10 @@
         "organization": "University of Minnesota",
         "source": "https://directory.sph.umn.edu/bio/sph-a-z/ruby-nguyen"
       }
-    ]
+    ],
+    "undergradInstitution": "University of Minnesota",
+    "msInstitution": "Johns Hopkins University",
+    "phdInstitution": "Johns Hopkins University"
   },
   {
     "id": "vp-0287",
@@ -9636,7 +9776,7 @@
     "id": "vp-0319",
     "name": "An Dinh",
     "profileUrl": "https://www.utoledo.edu/hhs/facultystaff/an-dinh.html",
-    "lastUpdatedAt": "2026-08-26T13:03:40.000Z",
+    "lastUpdatedAt": "2026-08-30T05:07:07.245Z",
     "university": "University of Toledo",
     "city": "Toledo",
     "state": "Ohio",
@@ -9650,7 +9790,10 @@
     "rank": "Associate Professor",
     "country": "United States",
     "portrait": "portraits/323-an-dinh-university-of-toledo.webp",
-    "portraitSource": "https://www.utoledo.edu/hhs/facultystaff/images/an-dinh-10082025-0151.jpg"
+    "portraitSource": "https://www.utoledo.edu/hhs/facultystaff/images/an-dinh-10082025-0151.jpg",
+    "undergradInstitution": "Calvin College",
+    "msInstitution": "Calvin College",
+    "phdInstitution": "Ohio University"
   },
   {
     "id": "vp-0320",
@@ -9700,7 +9843,7 @@
     "id": "vp-0322",
     "name": "Ha Nguyen - University of Washington",
     "profileUrl": "https://asian.washington.edu/people/ha-nguyen",
-    "lastUpdatedAt": "2026-08-26T13:03:40.000Z",
+    "lastUpdatedAt": "2026-08-30T05:07:07.245Z",
     "university": "University of Washington",
     "city": "Seattle",
     "state": "Washington",
@@ -9715,7 +9858,10 @@
     "rank": "Teaching",
     "country": "United States",
     "portrait": "portraits/326-ha-nguyen-university-of-washington.webp",
-    "portraitSource": "https://asian.washington.edu/sites/asian/files/profile-images/IMG_2097.jpeg"
+    "portraitSource": "https://asian.washington.edu/sites/asian/files/profile-images/IMG_2097.jpeg",
+    "undergradInstitution": "Hanoi National University of Education",
+    "msInstitution": "Vietnam National University",
+    "phdInstitution": "University of Hawaiʻi at Mānoa"
   },
   {
     "id": "vp-0323",
@@ -10071,7 +10217,7 @@
     "id": "vp-0338",
     "name": "Nhu Nguyen - University of Rhode Island",
     "profileUrl": "https://www.math.uri.edu/meet/nhu-nguyen/",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "lastUpdatedAt": "2026-08-30T04:59:20.365Z",
     "university": "University of Rhode Island",
     "city": "Kingston",
     "state": "Rhode Island",
@@ -10089,7 +10235,10 @@
     "country": "United States",
     "undergradYear": 2015,
     "portrait": "portraits/342-nhu-nguyen-university-of-rhode-island-university-of-rhode-island.webp",
-    "portraitSource": "https://web.uri.edu/mathematics/wp-content/uploads/sites/2301/N_Nguyen-e1784141973229.jpg"
+    "portraitSource": "https://web.uri.edu/mathematics/wp-content/uploads/sites/2301/N_Nguyen-e1784141973229.jpg",
+    "undergradInstitution": "Vietnam University of Science",
+    "msInstitution": "Wayne State University",
+    "msYear": 2020
   },
   {
     "id": "vp-0339",
@@ -10266,7 +10415,7 @@
     "id": "vp-0346",
     "name": "Victoria Huynh",
     "profileUrl": "https://www.uab.edu/medicine/surgery/breast-endocrine/faculty/huynh-victoria-m-d",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "lastUpdatedAt": "2026-08-30T05:07:07.245Z",
     "university": "University of Alabama at Birmingham",
     "city": "Birmingham",
     "state": "Alabama",
@@ -10281,7 +10430,8 @@
     "rank": "Assistant Professor",
     "country": "United States",
     "portrait": "portraits/350-victoria-huynh-university-of-alabama-at-birmingham.webp",
-    "portraitSource": "https://www.uab.edu/medicine/surgery/images/faculty/huynh_300x300_new.png"
+    "portraitSource": "https://www.uab.edu/medicine/surgery/images/faculty/huynh_300x300_new.png",
+    "mdInstitution": "Texas A&M Health Science Center College of Medicine"
   },
   {
     "id": "vp-0347",
@@ -11067,7 +11217,7 @@
     "id": "vp-0380",
     "name": "Phung Huynh",
     "profileUrl": "https://experts.calstatela.edu/expert/phung-huynh/",
-    "lastUpdatedAt": "2026-08-26T13:16:29.000Z",
+    "lastUpdatedAt": "2026-08-30T05:07:07.245Z",
     "university": "California State University, Los Angeles",
     "city": "Los Angeles",
     "state": "California",
@@ -11081,7 +11231,14 @@
     "rank": "Assistant Professor",
     "country": "United States",
     "portrait": "portraits/387-phung-huynh-california-state-university-los-angeles.webp",
-    "portraitSource": "https://experts.calstatela.edu/wp-content/uploads/2023/09/cal-state-la-phung-huynh.jpg"
+    "portraitSource": "https://experts.calstatela.edu/wp-content/uploads/2023/09/cal-state-la-phung-huynh.jpg",
+    "otherDegrees": [
+      {
+        "degree": "MFA",
+        "institution": "New York University",
+        "source": "https://experts.calstatela.edu/expert/phung-huynh/"
+      }
+    ]
   },
   {
     "id": "vp-0381",
@@ -11488,7 +11645,7 @@
     "id": "vp-0397",
     "name": "Anh Ngoc Tran",
     "profileUrl": "https://spea.indiana.edu/faculty-research/directory/profiles/faculty/full-time/tran-anh.html",
-    "lastUpdatedAt": "2026-08-24T03:03:40.000Z",
+    "lastUpdatedAt": "2026-08-30T03:00:12.000Z",
     "university": "Indiana University Bloomington",
     "city": "Bloomington",
     "state": "Indiana",
@@ -11506,7 +11663,7 @@
     "phdInstitution": "Harvard University",
     "country": "United States",
     "portrait": "portraits/404-anh-ngoc-tran-indiana-university-bloomington.webp",
-    "portraitSource": "https://spea.indiana.edu/images/faculty-research/faculty/tran_anh.jpg",
+    "portraitSource": "https://idsspea.indiana.edu/images/faculty-research/faculty/print-quality/tran_anh.jpg",
     "msInstitution": "University of New South Wales",
     "msYear": 1999
   },
@@ -11650,7 +11807,7 @@
     "name": "Quang Ngoc Vinh Tran",
     "profileUrl": "https://www.mtu.edu/cege/people/faculty-staff/faculty/tran/",
     "websiteUrl": "https://sites.google.com/view/trans-mtu-lab/home",
-    "lastUpdatedAt": "2026-08-30T02:54:24.063Z",
+    "lastUpdatedAt": "2026-08-30T05:07:07.245Z",
     "university": "Michigan Technological University",
     "city": "Houghton",
     "state": "Michigan",
@@ -11666,7 +11823,10 @@
     "rank": "Assistant Professor",
     "country": "United States",
     "portrait": "portraits/411-quang-ngoc-vinh-tran-michigan-technological-university.webp",
-    "portraitSource": "https://www.mtu.edu/cege/people/faculty-staff/faculty/tran/images/quang-tran-personnel340.jpg"
+    "portraitSource": "https://www.mtu.edu/cege/people/faculty-staff/faculty/tran/images/quang-tran-personnel340.jpg",
+    "phdInstitution": "University of Illinois at Urbana-Champaign",
+    "msInstitution": "California State University, Fullerton",
+    "undergradInstitution": "Ho Chi Minh City University of Technology, Vietnam National University"
   },
   {
     "id": "vp-0405",
@@ -11789,7 +11949,7 @@
     "id": "vp-0410",
     "name": "Trang Huynh",
     "profileUrl": "https://www.ohsu.edu/people/trang-huynh-md",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "lastUpdatedAt": "2026-08-30T05:07:54.399Z",
     "university": "Oregon Health & Science University",
     "city": "Portland",
     "state": "Oregon",
@@ -11804,7 +11964,9 @@
     "rank": "Associate Professor",
     "country": "United States",
     "portrait": "portraits/417-trang-huynh-oregon-health-science-university.webp",
-    "portraitSource": "https://www.ohsu.edu/sites/default/files/profile_photos/55C268D4B8904A878348FB3D3CC1B5D8.jpg"
+    "portraitSource": "https://www.ohsu.edu/sites/default/files/profile_photos/55C268D4B8904A878348FB3D3CC1B5D8.jpg",
+    "mdInstitution": "State University of New York Upstate Medical University",
+    "mdYear": 2002
   },
   {
     "id": "vp-0411",
@@ -11833,7 +11995,7 @@
     "id": "vp-0412",
     "name": "Khoa A. Nguyen",
     "profileUrl": "https://www.ohsu.edu/people/khoa-a-nguyen-md",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "lastUpdatedAt": "2026-08-30T05:07:54.399Z",
     "university": "Oregon Health & Science University",
     "city": "Portland",
     "state": "Oregon",
@@ -11848,13 +12010,17 @@
     "rank": "Assistant Professor",
     "country": "United States",
     "portrait": "portraits/419-khoa-a-nguyen-oregon-health-science-university.webp",
-    "portraitSource": "https://www.ohsu.edu/sites/default/files/profile-photos/Nguyen_%20Khoa_24%20%28Professional%20Headshot%29.jpg"
+    "portraitSource": "https://www.ohsu.edu/sites/default/files/profile-photos/Nguyen_%20Khoa_24%20%28Professional%20Headshot%29.jpg",
+    "mdInstitution": "Virginia Commonwealth University",
+    "mdYear": 2016,
+    "undergradInstitution": "University of Michigan",
+    "undergradYear": 2010
   },
   {
     "id": "vp-0413",
     "name": "Angela-Tu Nguyen",
     "profileUrl": "https://www.ohsu.edu/people/angela-tu-nguyen-md",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "lastUpdatedAt": "2026-08-30T05:07:54.399Z",
     "university": "Oregon Health & Science University",
     "city": "Portland",
     "state": "Oregon",
@@ -11868,7 +12034,9 @@
     "rank": "Assistant Professor",
     "country": "United States",
     "portrait": "portraits/420-angela-tu-nguyen-oregon-health-science-university.webp",
-    "portraitSource": "https://www.ohsu.edu/sites/default/files/profile_photos/93B66312FEEA4D1DE5AD4D3CF48121D8.jpg"
+    "portraitSource": "https://www.ohsu.edu/sites/default/files/profile_photos/93B66312FEEA4D1DE5AD4D3CF48121D8.jpg",
+    "mdInstitution": "Virginia Commonwealth University",
+    "mdYear": 2013
   },
   {
     "id": "vp-0414",
@@ -12173,7 +12341,7 @@
     "id": "vp-0427",
     "name": "Minhhuyen T. Nguyen",
     "profileUrl": "https://www.foxchase.org/minhhuyen-nguyen",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "lastUpdatedAt": "2026-08-30T05:07:54.399Z",
     "university": "Temple University",
     "city": "Philadelphia",
     "state": "Pennsylvania",
@@ -12188,7 +12356,9 @@
     "rank": "Professor",
     "country": "United States",
     "portrait": "portraits/435-minhhuyen-t-nguyen-temple-university.webp",
-    "portraitSource": "https://www.foxchase.org/sites/default/files/photo/MinhuyenNguyen640x860Revised.jpg"
+    "portraitSource": "https://www.foxchase.org/sites/default/files/photo/MinhuyenNguyen640x860Revised.jpg",
+    "mdInstitution": "Harvard Medical School",
+    "mdYear": 1987
   },
   {
     "id": "vp-0428",
@@ -12241,7 +12411,7 @@
     "id": "vp-0430",
     "name": "Hop S. Tran Cao",
     "profileUrl": "https://faculty.mdanderson.org/profiles/hop_trancao.html",
-    "lastUpdatedAt": "2026-08-26T13:29:57.000Z",
+    "lastUpdatedAt": "2026-08-30T05:07:54.399Z",
     "university": "The University of Texas MD Anderson Cancer Center",
     "city": "Houston",
     "state": "Texas",
@@ -12256,13 +12426,15 @@
     "rank": "Associate Professor",
     "country": "United States",
     "portrait": "portraits/438-hop-s-tran-cao-the-university-of-texas-md-anderson-cancer-center.webp",
-    "portraitSource": "https://faculty.mdanderson.org/content/dam/mdanderson/images/fis/hop_trancao.jpg"
+    "portraitSource": "https://faculty.mdanderson.org/content/dam/mdanderson/images/fis/hop_trancao.jpg",
+    "mdInstitution": "University of California, San Diego",
+    "mdYear": 2005
   },
   {
     "id": "vp-0431",
     "name": "Quynh-Nhu Nguyen",
     "profileUrl": "https://faculty.mdanderson.org/profiles/quynh_nguyen.html",
-    "lastUpdatedAt": "2026-08-26T13:29:57.000Z",
+    "lastUpdatedAt": "2026-08-30T05:07:54.399Z",
     "university": "The University of Texas MD Anderson Cancer Center",
     "city": "Houston",
     "state": "Texas",
@@ -12286,13 +12458,15 @@
         "organization": "American Society for Radiation Oncology",
         "source": "https://faculty.mdanderson.org/profiles/quynh_nguyen.html"
       }
-    ]
+    ],
+    "mdInstitution": "The George Washington University",
+    "mdYear": 2001
   },
   {
     "id": "vp-0432",
     "name": "Christopher Nguyen",
     "profileUrl": "https://faculty.mdanderson.org/profiles/christopher_nguyen.html",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "lastUpdatedAt": "2026-08-30T05:07:54.399Z",
     "university": "The University of Texas MD Anderson Cancer Center",
     "city": "Houston",
     "state": "Texas",
@@ -12307,13 +12481,15 @@
     "rank": "Assistant Professor",
     "country": "United States",
     "portrait": "portraits/440-christopher-nguyen-the-university-of-texas-md-anderson-cancer-center.webp",
-    "portraitSource": "https://faculty.mdanderson.org/content/dam/mdanderson/images/fis/christopher_nguyen.jpg"
+    "portraitSource": "https://faculty.mdanderson.org/content/dam/mdanderson/images/fis/christopher_nguyen.jpg",
+    "mdInstitution": "McGill University",
+    "mdYear": 2016
   },
   {
     "id": "vp-0433",
     "name": "Sydney Pham",
     "profileUrl": "https://faculty.mdanderson.org/profiles/sydney_pham.html",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "lastUpdatedAt": "2026-08-30T05:07:54.399Z",
     "university": "The University of Texas MD Anderson Cancer Center",
     "city": "Houston",
     "state": "Texas",
@@ -12328,13 +12504,15 @@
     "rank": "Assistant Professor",
     "country": "United States",
     "portrait": "portraits/441-sydney-pham-the-university-of-texas-md-anderson-cancer-center.webp",
-    "portraitSource": "https://faculty.mdanderson.org/content/dam/mdanderson/images/fis/sydney_pham.jpg"
+    "portraitSource": "https://faculty.mdanderson.org/content/dam/mdanderson/images/fis/sydney_pham.jpg",
+    "mdInstitution": "The University of Texas Medical Branch",
+    "mdYear": 2016
   },
   {
     "id": "vp-0434",
     "name": "An Ngo-Huang",
     "profileUrl": "https://faculty.mdanderson.org/profiles/an_ngo.html",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "lastUpdatedAt": "2026-08-30T05:07:54.399Z",
     "university": "The University of Texas MD Anderson Cancer Center",
     "city": "Houston",
     "state": "Texas",
@@ -12349,7 +12527,15 @@
     "rank": "Associate Professor",
     "country": "United States",
     "portrait": "portraits/442-an-ngo-huang-the-university-of-texas-md-anderson-cancer-center.webp",
-    "portraitSource": "https://faculty.mdanderson.org/content/dam/mdanderson/images/fis/an_ngo.jpg"
+    "portraitSource": "https://faculty.mdanderson.org/content/dam/mdanderson/images/fis/an_ngo.jpg",
+    "otherDegrees": [
+      {
+        "degree": "DO",
+        "institution": "Western University of Health Sciences",
+        "year": 2008,
+        "source": "https://faculty.mdanderson.org/profiles/an_ngo.html"
+      }
+    ]
   },
   {
     "id": "vp-0435",
@@ -12444,7 +12630,7 @@
     "id": "vp-0439",
     "name": "Jeremy Binh Nguyen",
     "profileUrl": "https://medicine.tulane.edu/departments/radiology-debakey/faculty/jeremy-binh-nguyen-md-facr",
-    "lastUpdatedAt": "2026-08-26T13:29:57.000Z",
+    "lastUpdatedAt": "2026-08-30T05:09:14.615Z",
     "university": "Tulane University",
     "city": "New Orleans",
     "state": "Louisiana",
@@ -12468,7 +12654,9 @@
         "source": "https://medicine.tulane.edu/departments/radiology-debakey/faculty/jeremy-binh-nguyen-md-facr",
         "year": null
       }
-    ]
+    ],
+    "mdInstitution": "The University of Texas Health Science Center at San Antonio",
+    "mdYear": 1999
   },
   {
     "id": "vp-0440",
@@ -12557,7 +12745,7 @@
     "id": "vp-0444",
     "name": "Vu Q. Nguyen - University of Alabama at Birmingham",
     "profileUrl": "https://www.dpo.uab.edu/medicine/physicalmedicine/faculty/nguyen-vu-q-m-d-mba",
-    "lastUpdatedAt": "2026-08-26T13:29:57.000Z",
+    "lastUpdatedAt": "2026-08-30T05:09:14.615Z",
     "university": "University of Alabama at Birmingham",
     "city": "Birmingham",
     "state": "Alabama",
@@ -12581,13 +12769,24 @@
         "organization": "University of Alabama at Birmingham",
         "source": "https://www.dpo.uab.edu/medicine/physicalmedicine/faculty/nguyen-vu-q-m-d-mba"
       }
+    ],
+    "mdInstitution": "Michigan State University College of Human Medicine",
+    "mdYear": 1993,
+    "undergradInstitution": "Drake University",
+    "otherDegrees": [
+      {
+        "degree": "MBA",
+        "institution": "East Carolina University",
+        "year": 2013,
+        "source": "https://www.dpo.uab.edu/medicine/physicalmedicine/faculty/nguyen-vu-q-m-d-mba"
+      }
     ]
   },
   {
     "id": "vp-0445",
     "name": "Brittany Huynh",
     "profileUrl": "https://www.uab.edu/medicine/peds/faculty/brittany-huynh-m-d",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "lastUpdatedAt": "2026-08-30T05:09:14.615Z",
     "university": "University of Alabama at Birmingham",
     "city": "Birmingham",
     "state": "Alabama",
@@ -12602,7 +12801,8 @@
     "rank": "Assistant Professor",
     "country": "United States",
     "portrait": "portraits/453-brittany-huynh-university-of-alabama-at-birmingham.webp",
-    "portraitSource": "https://www.uab.edu/medicine/peds/images/Faculty_Headshots/Rheum/Huynh%20BrittanySQUARE400.jpg"
+    "portraitSource": "https://www.uab.edu/medicine/peds/images/Faculty_Headshots/Rheum/Huynh%20BrittanySQUARE400.jpg",
+    "mdInstitution": "Indiana University School of Medicine"
   },
   {
     "id": "vp-0446",
@@ -12829,7 +13029,7 @@
     "id": "vp-0455",
     "name": "Alexandra Nguyen",
     "profileUrl": "https://www.colorado.edu/music/alexandra-nguyen",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "lastUpdatedAt": "2026-08-30T05:09:14.615Z",
     "university": "University of Colorado Boulder",
     "city": "Boulder",
     "state": "Colorado",
@@ -12844,7 +13044,8 @@
     "rank": "Professor",
     "country": "United States",
     "portrait": "portraits/463-alexandra-nguyen-university-of-colorado-boulder.webp",
-    "portraitSource": "https://www.colorado.edu/music/sites/default/files/people/nguyen3.jpg"
+    "portraitSource": "https://www.colorado.edu/music/sites/default/files/people/nguyen3.jpg",
+    "undergradInstitution": "McGill University"
   },
   {
     "id": "vp-0456",
@@ -12978,7 +13179,7 @@
     "id": "vp-0461",
     "name": "Ngoc Bui - University of La Verne",
     "profileUrl": "https://researchworks.laverne.edu/esploro/profile/ngoc_bui",
-    "lastUpdatedAt": "2026-08-23T15:03:52.000Z",
+    "lastUpdatedAt": "2026-08-30T05:09:14.615Z",
     "university": "University of La Verne",
     "city": "La Verne",
     "state": "California",
@@ -12993,7 +13194,10 @@
     "rank": "Professor",
     "country": "United States",
     "portrait": "portraits/471-ngoc-bui-university-of-la-verne.webp",
-    "portraitSource": "http://web.archive.org/web/20260308045008/https://laverne.edu/directory/person/ngoc-t-bui/"
+    "portraitSource": "http://web.archive.org/web/20260308045008/https://laverne.edu/directory/person/ngoc-t-bui/",
+    "undergradInstitution": "California State Polytechnic University, Pomona",
+    "msInstitution": "University of Nebraska-Lincoln",
+    "phdInstitution": "University of Nebraska-Lincoln"
   },
   {
     "id": "vp-0462",
@@ -13079,7 +13283,7 @@
     "id": "vp-0465",
     "name": "Lahn Nguyen",
     "profileUrl": "https://med.umn.edu/bio/lahn-nguyen",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "lastUpdatedAt": "2026-08-30T05:09:14.615Z",
     "university": "University of Minnesota",
     "city": "Minneapolis",
     "state": "Minnesota",
@@ -13094,13 +13298,21 @@
     "rank": "Assistant Professor",
     "country": "United States",
     "portrait": "portraits/476-lahn-nguyen-university-of-minnesota.webp",
-    "portraitSource": "https://med.umn.edu/sites/med.umn.edu/files/styles/bio_photo/public/web_profiles/2023-02/Lahn%20Nguyen.jpg?itok=h64s1UeP"
+    "portraitSource": "https://med.umn.edu/sites/med.umn.edu/files/styles/bio_photo/public/web_profiles/2023-02/Lahn%20Nguyen.jpg?itok=h64s1UeP",
+    "undergradInstitution": "Drake University",
+    "otherDegrees": [
+      {
+        "degree": "DO",
+        "institution": "Des Moines University College of Medicine",
+        "source": "https://med.umn.edu/bio/lahn-nguyen"
+      }
+    ]
   },
   {
     "id": "vp-0466",
     "name": "Mai Nguyen - University of Minnesota",
     "profileUrl": "https://med.umn.edu/bio/mai-nguyen",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "lastUpdatedAt": "2026-08-30T05:09:14.615Z",
     "university": "University of Minnesota",
     "city": "Minneapolis",
     "state": "Minnesota",
@@ -13115,7 +13327,8 @@
     "rank": "Associate Professor",
     "country": "United States",
     "portrait": "portraits/477-mai-nguyen-university-of-minnesota-university-of-minnesota.webp",
-    "portraitSource": "https://med.umn.edu/sites/med.umn.edu/files/styles/bio_photo/public/images/mai_nguyen_website_2024.png?itok=RElUPxkp"
+    "portraitSource": "https://med.umn.edu/sites/med.umn.edu/files/styles/bio_photo/public/images/mai_nguyen_website_2024.png?itok=RElUPxkp",
+    "mdInstitution": "Vanderbilt University School of Medicine"
   },
   {
     "id": "vp-0467",
@@ -13235,7 +13448,7 @@
     "id": "vp-0472",
     "name": "Tuan Vu",
     "profileUrl": "https://health.usf.edu/medicine/neurology/faculty/tvu6",
-    "lastUpdatedAt": "2026-08-23T20:45:30.000Z",
+    "lastUpdatedAt": "2026-08-30T05:09:14.615Z",
     "university": "University of South Florida",
     "city": "Tampa",
     "state": "Florida",
@@ -13250,7 +13463,9 @@
     "rank": "Professor",
     "country": "United States",
     "portrait": "portraits/tuan-vu-university-of-south-florida.webp",
-    "portraitSource": "https://cloud.usf.edu/FacultyDirectory/api/get/profile/tvu6/photo/profile"
+    "portraitSource": "https://cloud.usf.edu/FacultyDirectory/api/get/profile/tvu6/photo/profile",
+    "mdInstitution": "Pennsylvania State University",
+    "mdYear": 1989
   },
   {
     "id": "vp-0473",
@@ -13693,7 +13908,7 @@
     "id": "vp-0486",
     "name": "Bich-Ngoc Turner",
     "profileUrl": "https://asian.washington.edu/people/bich-ngoc-turner",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "lastUpdatedAt": "2026-08-30T05:30:30.296Z",
     "university": "University of Washington",
     "city": "Seattle",
     "state": "Washington",
@@ -13711,7 +13926,8 @@
     "country": "United States",
     "undergradInstitution": "Hanoi University",
     "portrait": "portraits/497-bich-ngoc-turner-university-of-washington.webp",
-    "portraitSource": "https://asian.washington.edu/sites/asian/files/styles/portrait/public/photos/screen_shot_2019-02-26_at_5.28.57_pm.png?h=e0b7679d&itok=DBwHuIfV"
+    "portraitSource": "https://asian.washington.edu/sites/asian/files/styles/portrait/public/photos/screen_shot_2019-02-26_at_5.28.57_pm.png?h=e0b7679d&itok=DBwHuIfV",
+    "msInstitution": "University of Hawaiʻi at Mānoa"
   },
   {
     "id": "vp-0487",
@@ -14470,7 +14686,7 @@
     "id": "vp-0512",
     "name": "Chinh T. Hoang",
     "profileUrl": "https://www.wlu.ca/academics/faculties/faculty-of-science/faculty-profiles/chinh-t-hoang/index.html",
-    "lastUpdatedAt": "2026-08-26T18:09:12.000Z",
+    "lastUpdatedAt": "2026-08-30T14:05:30.000Z",
     "scholarUrl": "https://scholar.google.com/citations?user=W4vG070AAAAJ",
     "university": "Wilfrid Laurier University",
     "city": "Waterloo",
@@ -14486,7 +14702,9 @@
     "department": "Department of Physics and Computer Science",
     "rank": "Professor",
     "phdYear": 1985,
-    "phdInstitution": "McGill University"
+    "phdInstitution": "McGill University",
+    "msInstitution": "McGill University",
+    "undergradInstitution": "McGill University"
   },
   {
     "id": "vp-0513",
@@ -14720,7 +14938,7 @@
     "id": "vp-0518",
     "name": "Phung Dao",
     "profileUrl": "https://faculty.educ.cam.ac.uk/people/staff/dao/",
-    "lastUpdatedAt": "2026-08-26T18:09:12.000Z",
+    "lastUpdatedAt": "2026-08-30T14:05:30.000Z",
     "scholarUrl": "https://scholar.google.com/citations?user=E6M_u4UAAAAJ",
     "university": "University of Cambridge",
     "city": "Cambridge",
@@ -14744,7 +14962,11 @@
         "organization": "British Council",
         "source": "https://www.teachingenglish.org.uk/publications/elt-research-awards/eltra-winners/eltra-2019-winners"
       }
-    ]
+    ],
+    "msInstitution": "University of Queensland",
+    "msYear": 2012,
+    "undergradInstitution": "An Giang University",
+    "undergradYear": 2007
   },
   {
     "id": "vp-0519",
@@ -15052,8 +15274,8 @@
     "id": "vp-0532",
     "name": "Le Minh Nguyen",
     "profileUrl": "https://www.jaist.ac.jp/is/labs/nguyen-lab/home/",
-    "lastUpdatedAt": "2026-08-26T18:09:12.000Z",
-    "scholarUrl": "https://scholar.google.com/citations?user=nJ_L72cAAAAJ",
+    "lastUpdatedAt": "2026-08-30T12:36:00.000Z",
+    "scholarUrl": "https://scholar.google.com/citations?user=vM9772wAAAAJ",
     "university": "Japan Advanced Institute of Science and Technology",
     "city": "Nomi",
     "country": "Japan",
@@ -16707,7 +16929,7 @@
     "rank": "Associate Professor",
     "track": "Tenure-line",
     "profileUrl": "https://www.ncl.ac.uk/business/people/profile/vutrinh.html",
-    "lastUpdatedAt": "2026-08-26T18:26:29.000Z",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
     "scholarUrl": "https://scholar.google.com/citations?user=yT6H1d4AAAAJ",
     "researchAreas": [
       "Corporate Governance",
@@ -16716,7 +16938,9 @@
       "Corporate Finance"
     ],
     "phdYear": 2019,
-    "phdInstitution": "Newcastle University"
+    "phdInstitution": "Newcastle University",
+    "portrait": "portraits/0599-vu-trinh-newcastle-university.webp",
+    "portraitSource": "https://includes.ncl.ac.uk/cmswebservices/myimpact/2020ws/picture/picture.php?wk=nubs&pk=vu.trinh"
   },
   {
     "id": "vp-0600",
@@ -16812,7 +17036,7 @@
     "rank": "Associate Professor",
     "track": "Tenure-line",
     "profileUrl": "https://www.henley.ac.uk/people/dr-quyen-nguyen",
-    "lastUpdatedAt": "2026-08-26T18:26:29.000Z",
+    "lastUpdatedAt": "2026-08-30T05:10:05.580Z",
     "scholarUrl": "https://scholar.google.com/citations?user=T8x8w3cAAAAJ",
     "researchAreas": [
       "International Business",
@@ -16821,7 +17045,9 @@
       "International Financial Management"
     ],
     "portrait": "portraits/623-quyen-nguyen-university-of-reading.webp",
-    "portraitSource": "https://henley.imgix.net/v3/peopleImages/Quyen-Nguyen-75e5pfimu.jpg?auto=compress%2Cformat&fit=max&fm=jpg&q=80&ratio=178%2F178&w=640"
+    "portraitSource": "https://henley.imgix.net/v3/peopleImages/Quyen-Nguyen-75e5pfimu.jpg?auto=compress%2Cformat&fit=max&fm=jpg&q=80&ratio=178%2F178&w=640",
+    "phdInstitution": "University of Reading",
+    "phdYear": 2012
   },
   {
     "id": "vp-0604",
@@ -17011,7 +17237,7 @@
     "rank": "Associate Professor",
     "track": "Tenure-line",
     "profileUrl": "https://www.ntu.ac.uk/staff-profiles/business/thao-ngoc-nguyen",
-    "lastUpdatedAt": "2026-08-26T18:38:23.000Z",
+    "lastUpdatedAt": "2026-08-30T04:59:20.365Z",
     "scholarUrl": "https://scholar.google.com/citations?user=b4E8H3QAAAAJ",
     "researchAreas": [
       "Corporate Finance",
@@ -17021,7 +17247,8 @@
     ],
     "phdYear": 2012,
     "portrait": "portraits/231-thao-ngoc-nguyen-nottingham-trent-university.webp",
-    "portraitSource": "https://www.ntu.ac.uk/media/images/staff-profiles/nbs/Thao_Nguyen.jpg"
+    "portraitSource": "https://www.ntu.ac.uk/media/images/staff-profiles/nbs/Thao_Nguyen.jpg",
+    "phdInstitution": "London Metropolitan University"
   },
   {
     "id": "vp-0613",
@@ -17151,14 +17378,16 @@
     "rank": "Associate Professor",
     "track": "Tenure-line",
     "profileUrl": "https://www.icmmo.universite-paris-saclay.fr/annuaire/quoc-nghi-pham/",
-    "lastUpdatedAt": "2026-08-26T18:38:23.000Z",
+    "lastUpdatedAt": "2026-08-30T05:10:05.580Z",
     "scholarUrl": "https://scholar.google.com/citations?user=T8x8w3cAAAAJ",
     "researchAreas": [
       "Materials Chemistry",
       "Solid-State Chemistry",
       "Electrochemistry",
       "Functional Materials"
-    ]
+    ],
+    "phdInstitution": "Université du Maine",
+    "phdYear": 2006
   },
   {
     "id": "vp-0619",
@@ -17944,7 +18173,7 @@
     "rank": "Associate Professor",
     "track": "Tenure-line",
     "profileUrl": "https://www.mcgill.ca/dentistry/thomas-t-nguyen",
-    "lastUpdatedAt": "2026-08-24T03:03:40.000Z",
+    "lastUpdatedAt": "2026-08-30T05:03:08.997Z",
     "researchAreas": [
       "Periodontology",
       "Implant Dentistry",
@@ -17954,7 +18183,19 @@
     "undergradYear": 2001,
     "portrait": "portraits/672-thomas-t-nguyen-mcgill-university.webp",
     "portraitSource": "https://www.mcgill.ca/dentistry/files/dentistry/styles/medium_focal__220_x_220_/public/thomas_nguyen_pp_0.jpg?itok=BibZCTR4",
-    "msInstitution": "McGill University"
+    "msInstitution": "McGill University",
+    "otherDegrees": [
+      {
+        "degree": "DMD",
+        "institution": "Université de Montréal",
+        "source": "https://www.mcgill.ca/dentistry/thomas-t-nguyen"
+      },
+      {
+        "degree": "MBA",
+        "institution": "McGill-HEC Montreal",
+        "source": "https://www.mcgill.ca/dentistry/thomas-t-nguyen"
+      }
+    ]
   },
   {
     "id": "vp-0652",
@@ -18227,7 +18468,7 @@
     "rank": "Associate Professor",
     "track": "Tenure-line",
     "profileUrl": "https://umanitoba.ca/medicine/faculty-staff/chau-pham",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "lastUpdatedAt": "2026-08-30T05:11:01.379Z",
     "researchAreas": [
       "Emergency Medicine",
       "Point-of-Care Ultrasound",
@@ -18235,7 +18476,19 @@
       "Gender Equity in Medicine"
     ],
     "portrait": "portraits/685-chau-pham-university-of-manitoba.webp",
-    "portraitSource": "https://umanitoba.ca/medicine/sites/medicine/files/styles/3x2_900w/public/2021-12/chau-pham.jpg?itok=YiFWnnVz"
+    "portraitSource": "https://umanitoba.ca/medicine/sites/medicine/files/styles/3x2_900w/public/2021-12/chau-pham.jpg?itok=YiFWnnVz",
+    "undergradInstitution": "University of Manitoba",
+    "undergradYear": 2000,
+    "mdInstitution": "University of Manitoba",
+    "mdYear": 2005,
+    "otherDegrees": [
+      {
+        "degree": "MBA",
+        "institution": "University of Manitoba",
+        "year": 2013,
+        "source": "https://umanitoba.ca/medicine/faculty-staff/chau-pham"
+      }
+    ]
   },
   {
     "id": "vp-0665",
@@ -19066,7 +19319,7 @@
     "rank": "Teaching",
     "track": "Teaching",
     "profileUrl": "https://research.monash.edu/en/persons/linh-tran/",
-    "lastUpdatedAt": "2026-08-26T18:54:55.000Z",
+    "lastUpdatedAt": "2026-08-30T05:11:01.379Z",
     "researchAreas": [
       "TESOL",
       "Teacher Education",
@@ -19074,7 +19327,11 @@
       "Multilingual Education"
     ],
     "portrait": "portraits/722-linh-tran-monash-university.webp",
-    "portraitSource": "https://research.monash.edu/files-asset/671537801/TDK.Linh.jpg/"
+    "portraitSource": "https://research.monash.edu/files-asset/671537801/TDK.Linh.jpg/",
+    "phdInstitution": "Monash University",
+    "phdYear": 2017,
+    "msInstitution": "Ho Chi Minh City University of Social Sciences and Humanities",
+    "msYear": 2005
   },
   {
     "id": "vp-0701",
@@ -19130,7 +19387,7 @@
     "rank": "Assistant Professor",
     "track": "Tenure-line",
     "profileUrl": "https://people.njit.edu/profile/tn294",
-    "lastUpdatedAt": "2026-08-29T23:51:47.000Z",
+    "lastUpdatedAt": "2026-08-30T05:11:01.379Z",
     "researchAreas": [
       "Educational Data Mining",
       "Health Informatics",
@@ -19139,7 +19396,12 @@
       "Reinforcement Learning"
     ],
     "portrait": "portraits/725-thanh-nguyen-thanh-nguyen-tang-new-jersey-institute-of-technology.webp",
-    "portraitSource": "https://uws.njit.edu/ldapimage.php?format=full&uid=tn294"
+    "portraitSource": "https://uws.njit.edu/ldapimage.php?format=full&uid=tn294",
+    "phdInstitution": "Deakin University",
+    "phdYear": 2022,
+    "msInstitution": "Ulsan National Institute of Science and Technology",
+    "msYear": 2018,
+    "undergradInstitution": "Danang University of Science and Technology"
   },
   {
     "id": "vp-0704",
@@ -19251,7 +19513,7 @@
     "rank": "Professor",
     "track": "Tenure-line",
     "profileUrl": "https://profiles.stanford.edu/quynh-thu-le",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "lastUpdatedAt": "2026-08-30T05:12:03.557Z",
     "researchAreas": [
       "Radiation Oncology",
       "Head and Neck Cancer",
@@ -19296,7 +19558,9 @@
       }
     ],
     "portrait": "portraits/731-quynh-thu-le-stanford-university.webp",
-    "portraitSource": "https://profiles.stanford.edu/proxy/api/cap/profiles/4003/resources/profilephoto/350x350.1660152205241.jpg"
+    "portraitSource": "https://profiles.stanford.edu/proxy/api/cap/profiles/4003/resources/profilephoto/350x350.1660152205241.jpg",
+    "mdInstitution": "University of California, San Francisco",
+    "mdYear": 1993
   },
   {
     "id": "vp-0709",
@@ -19816,7 +20080,7 @@
     "rank": "Professor",
     "track": "Tenure-line",
     "profileUrl": "https://med.stanford.edu/profiles/QUAN%20DONG%20NGUYEN",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "lastUpdatedAt": "2026-08-30T05:12:03.557Z",
     "researchAreas": [
       "Ophthalmology",
       "Retina",
@@ -19824,7 +20088,13 @@
       "Clinical Trials"
     ],
     "portrait": "portraits/750-quan-dong-nguyen-stanford-university.webp",
-    "portraitSource": "https://med.stanford.edu/services/api/cap/profiles/photocache.159426.jpg"
+    "portraitSource": "https://med.stanford.edu/services/api/cap/profiles/photocache.159426.jpg",
+    "mdInstitution": "University of Pennsylvania School of Medicine",
+    "mdYear": 1993,
+    "msInstitution": "Yale University",
+    "msYear": 1989,
+    "undergradInstitution": "Yale University",
+    "undergradYear": 1989
   },
   {
     "id": "vp-0727",
@@ -19856,7 +20126,7 @@
     "rank": "Professor",
     "track": "Tenure-line",
     "profileUrl": "https://profiles.utsouthwestern.edu/profile/117881/hung-luu.html",
-    "lastUpdatedAt": "2026-08-23T20:13:29.000Z",
+    "lastUpdatedAt": "2026-08-30T05:12:03.557Z",
     "researchAreas": [
       "Clinical Pathology",
       "Hematopathology",
@@ -19864,7 +20134,9 @@
       "Hematologic Cancers"
     ],
     "portrait": "portraits/751-hung-luu-university-of-texas-southwestern-medical-center.webp",
-    "portraitSource": "https://profileplus.swmed.edu/facultydata/117881/images/luu-hung-fis.jpg"
+    "portraitSource": "https://profileplus.swmed.edu/facultydata/117881/images/luu-hung-fis.jpg",
+    "mdInstitution": "Oregon Health & Science University",
+    "mdYear": 2004
   },
   {
     "id": "vp-0729",
@@ -19902,7 +20174,7 @@
     "rank": "Associate Professor",
     "track": "Tenure-line",
     "profileUrl": "https://www.pba.edu/directory/lan-bui/",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "lastUpdatedAt": "2026-08-30T05:12:03.557Z",
     "researchAreas": [
       "Pharmacy Practice",
       "Critical Care Pharmacy",
@@ -19910,7 +20182,15 @@
       "Public Health"
     ],
     "portrait": "portraits/755-lan-bui-palm-beach-atlantic-university.webp",
-    "portraitSource": "https://www.pba.edu/wp-content/uploads/2026/05/Lan-Bui-900x900-1.jpg"
+    "portraitSource": "https://www.pba.edu/wp-content/uploads/2026/05/Lan-Bui-900x900-1.jpg",
+    "msInstitution": "Texas A&M University",
+    "otherDegrees": [
+      {
+        "degree": "PharmD",
+        "institution": "Texas Southern University",
+        "source": "https://www.pba.edu/directory/lan-bui/"
+      }
+    ]
   },
   {
     "id": "vp-0731",
@@ -19923,7 +20203,7 @@
     "rank": "Assistant Professor",
     "track": "Tenure-line",
     "profileUrl": "https://ccie.ucf.edu/person/giang-vu/",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "lastUpdatedAt": "2026-08-30T05:12:37.193Z",
     "researchAreas": [
       "Dental Public Health",
       "Health Informatics",
@@ -19931,7 +20211,17 @@
       "Health Data Science"
     ],
     "portrait": "portraits/756-giang-vu-university-of-central-florida.webp",
-    "portraitSource": "https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2026/07/hs-GVu.webp"
+    "portraitSource": "https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2026/07/hs-GVu.webp",
+    "phdInstitution": "University of Louisville",
+    "phdYear": 2020,
+    "msInstitution": "University of Rochester",
+    "otherDegrees": [
+      {
+        "degree": "DDS",
+        "institution": "Can Tho University of Medicine and Pharmacy",
+        "source": "https://ccie.ucf.edu/person/giang-vu/"
+      }
+    ]
   },
   {
     "id": "vp-0732",
@@ -20439,7 +20729,7 @@
     "id": "vp-0750",
     "name": "Nguyen Khoi Nguyen",
     "profileUrl": "https://www.loyola.edu/academics/visual-performing-arts/about/faculty-staff/nguyen-nguyen.html",
-    "lastUpdatedAt": "2026-08-27T14:58:14.000Z",
+    "lastUpdatedAt": "2026-08-30T05:12:03.557Z",
     "university": "Loyola University Maryland",
     "city": "Baltimore",
     "state": "MD",
@@ -20454,7 +20744,20 @@
       "Graphics"
     ],
     "portrait": "portraits/762-nguyen-khoi-nguyen-loyola-university-maryland.webp",
-    "portraitSource": "https://www.loyola.edu/_media/academics/visual-performing-arts/images/faculty-staff/nguyen3.jpg"
+    "portraitSource": "https://www.loyola.edu/_media/academics/visual-performing-arts/images/faculty-staff/nguyen3.jpg",
+    "undergradInstitution": "Bard College",
+    "otherDegrees": [
+      {
+        "degree": "MFA",
+        "institution": "Towson University",
+        "source": "https://www.loyola.edu/academics/visual-performing-arts/about/faculty-staff/nguyen-nguyen.html"
+      },
+      {
+        "degree": "MM",
+        "institution": "University of Maryland",
+        "source": "https://www.loyola.edu/academics/visual-performing-arts/about/faculty-staff/nguyen-nguyen.html"
+      }
+    ]
   },
   {
     "id": "vp-0751",
@@ -20737,7 +21040,7 @@
     "name": "Thi-Nham Le",
     "vietnameseName": "Lê Thị Nhâm",
     "profileUrl": "https://sealc.nccu.edu.tw/PageStaffing/Detail?fid=10230&id=3064",
-    "lastUpdatedAt": "2026-08-27T02:33:05.000Z",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
     "scholarUrl": "https://scholar.google.com/citations?hl=en&user=injuFtQAAAAJ",
     "university": "National Chengchi University",
     "city": "Taipei",
@@ -20750,14 +21053,16 @@
     "department": "Southeast Asian Languages and Cultures",
     "rank": "Associate Professor",
     "phdInstitution": "National Kaohsiung University of Applied Sciences",
-    "country": "Taiwan"
+    "country": "Taiwan",
+    "portrait": "portraits/0762-thi-nham-le-national-chengchi-university.webp",
+    "portraitSource": "https://sealc.nccu.edu.tw/upload/50/staffing/3064/41775.jpg"
   },
   {
     "id": "vp-0763",
     "name": "Van-Linh Nguyen",
     "vietnameseName": "Nguyễn Văn Linh",
     "profileUrl": "https://cs.ccu.edu.tw/p/404-1094-7009.php?Lang=en",
-    "lastUpdatedAt": "2026-08-27T02:33:05.000Z",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
     "websiteUrl": "https://sites.google.com/view/nvlinh",
     "scholarUrl": "https://scholar.google.com/citations?hl=en&user=M7iGWiEAAAAJ",
     "university": "National Chung Cheng University",
@@ -20773,7 +21078,9 @@
     "rank": "Assistant Professor",
     "phdYear": 2019,
     "phdInstitution": "National Chung Cheng University",
-    "country": "Taiwan"
+    "country": "Taiwan",
+    "portrait": "portraits/0763-van-linh-nguyen-national-chung-cheng-university.webp",
+    "portraitSource": "https://cs.ccu.edu.tw/var/file/94/1094/img/400/373529512.jpg"
   },
   {
     "id": "vp-0764",
@@ -20864,7 +21171,9 @@
         "source": "https://infonews.nycu.edu.tw/index.php?SuperType=2&SuperTypeNo=2&action=detail&id=20200700271&topflag=1&type=%EF%BF%BD%C7%B3N"
       }
     ],
-    "lastUpdatedAt": "2026-08-29T04:14:03.069Z"
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "portrait": "portraits/0767-hai-dung-do-ming-chi-university-of-technology.webp",
+    "portraitSource": "https://imba.mcut.edu.tw/var/file/35/1035/pictures/353/m/mcen700x700_large11883_900022625803.jpg"
   },
   {
     "id": "vp-0768",
@@ -21003,7 +21312,7 @@
     "name": "Yen Do",
     "vietnameseName": "Đỗ Thị Yến",
     "profileUrl": "https://ib3.nhu.edu.tw/Web/UserDetail?id=102639&unitid=3911&n=%E5%B0%88%E4%BB%BB%E6%95%99%E5%B8%AB",
-    "lastUpdatedAt": "2026-08-27T02:33:05.000Z",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
     "scholarUrl": "https://scholar.google.com/citations?hl=en&user=BuRxSIUAAAAJ",
     "university": "Nanhua University",
     "city": "Chiayi",
@@ -21016,7 +21325,9 @@
     "track": "Tenure-line",
     "department": "International Business",
     "rank": "Assistant Professor",
-    "country": "Taiwan"
+    "country": "Taiwan",
+    "portrait": "portraits/0774-yen-do-nanhua-university.webp",
+    "portraitSource": "https://std.nhu.edu.tw/UploadFiles/2023/c45a29f5-04c3-4fe2-b179-2e6ab740e47c.JPG"
   },
   {
     "id": "vp-0775",
@@ -21096,13 +21407,15 @@
         "institution": "Philadelphia College of Pharmacy"
       }
     ],
-    "lastUpdatedAt": "2026-08-29T04:18:22.190Z"
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "portrait": "portraits/0777-van-hellerslia-temple-university.webp",
+    "portraitSource": "https://pharmacy.temple.edu/sites/pharmacy/files/styles/tu_image_style_thumbnail/public/temple/profiles/Hellerslia.jpg?h=e04ec49e&itok=h1LiVH-v"
   },
   {
     "id": "vp-0778",
     "name": "Daniella Zalcman",
     "profileUrl": "https://liberalarts.tulane.edu/communication/people/daniella-zalcman",
-    "lastUpdatedAt": "2026-08-28T06:37:21.000Z",
+    "lastUpdatedAt": "2026-08-30T14:05:30.000Z",
     "websiteUrl": "https://www.dan.iella.net/",
     "university": "Tulane University",
     "city": "New Orleans",
@@ -21115,7 +21428,9 @@
     "track": "Teaching",
     "department": "Communication",
     "rank": "Professor of Practice",
-    "country": "United States"
+    "country": "United States",
+    "portrait": "portraits/0778-daniella-zalcman-tulane-university.webp",
+    "portraitSource": "https://liberalarts.tulane.edu/sites/default/files/styles/portrait_mid/public/Daniella-Zalcman.jpg.webp?itok=BRlB7dlq"
   },
   {
     "id": "vp-0779",
@@ -21159,7 +21474,7 @@
     "id": "vp-0780",
     "name": "Patrick Nguyen",
     "profileUrl": "https://directory.uthscsa.edu/academics/profile/nguyenp1",
-    "lastUpdatedAt": "2026-08-28T07:01:32.000Z",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
     "university": "University of Texas Health Science Center at San Antonio",
     "city": "San Antonio",
     "state": "Texas",
@@ -21175,13 +21490,15 @@
     "mdInstitution": "University of Texas Health Science Center at San Antonio",
     "undergradInstitution": "University of Texas at Austin",
     "undergradYear": 2000,
-    "country": "United States"
+    "country": "United States",
+    "portrait": "portraits/0780-patrick-nguyen-university-of-texas-health-science-center-at-san-antonio.webp",
+    "portraitSource": "https://directory.uthscsa.edu/sites/directory/files/2026-03/Patrick%20Nguyen-1%20%281%29.jpg"
   },
   {
     "id": "vp-0781",
     "name": "Elizabeth Nguyen",
     "profileUrl": "https://medicine.tamu.edu/faculty-listings/nguyen-e.html",
-    "lastUpdatedAt": "2026-08-28T07:01:32.000Z",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
     "university": "Texas A&M University",
     "city": "Bryan",
     "state": "Texas",
@@ -21196,13 +21513,15 @@
     "mdInstitution": "Texas A&M University Naresh K. Vashisht College of Medicine",
     "undergradInstitution": "University of Notre Dame",
     "undergradYear": 2013,
-    "country": "United States"
+    "country": "United States",
+    "portrait": "portraits/0781-elizabeth-nguyen-texas-a-m-university.webp",
+    "portraitSource": "https://medicine.tamu.edu/_bios/fmr/images/Nguyen,-Elizabeth-Photo.jpg"
   },
   {
     "id": "vp-0782",
     "name": "Quoc-Viet Dang",
     "profileUrl": "https://engineering.uci.edu/users/quoc-viet-dang",
-    "lastUpdatedAt": "2026-08-28T07:07:09.000Z",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
     "university": "University of California, Irvine",
     "city": "Irvine",
     "state": "California",
@@ -21214,7 +21533,9 @@
     "track": "Teaching",
     "department": "Electrical Engineering and Computer Science",
     "rank": "Associate Professor of Teaching",
-    "country": "United States"
+    "country": "United States",
+    "portrait": "portraits/0782-quoc-viet-dang-university-of-california-irvine.webp",
+    "portraitSource": "https://engineering.uci.edu/files/styles/scale_and_crop_192x192/public/quoc-viet-dang.png?itok=TLA9C5O4"
   },
   {
     "id": "vp-0783",
@@ -21252,7 +21573,9 @@
         "source": "https://s3.amazonaws.com/mirror.facultyinfo.unt.edu/tln0076%2Fpci%2Fcurriculum_vitae_ThuanLNguyen-16.pdf"
       }
     ],
-    "lastUpdatedAt": "2026-08-29T06:53:33.048Z"
+    "lastUpdatedAt": "2026-08-30T13:58:40.000Z",
+    "portrait": "portraits/0783-thuan-nguyen-university-of-north-texas.webp",
+    "portraitSource": "https://dataanalytics.unt.edu/images/default/files/thuannguyen_may2022_500x500.png"
   },
   {
     "id": "vp-0784",
@@ -21285,7 +21608,7 @@
     "id": "vp-0785",
     "name": "Cuong Nguyen - Massachusetts Institute of Technology",
     "profileUrl": "https://cse.mit.edu/people/n-cuong-nguyen/",
-    "lastUpdatedAt": "2026-08-28T12:21:02.000Z",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
     "university": "Massachusetts Institute of Technology",
     "city": "Cambridge",
     "state": "Massachusetts",
@@ -21300,13 +21623,15 @@
     "rank": "Principal Research Scientist",
     "phdYear": 2005,
     "phdInstitution": "National University of Singapore",
-    "country": "United States"
+    "country": "United States",
+    "portrait": "portraits/0785-cuong-nguyen-massachusetts-institute-of-technology.webp",
+    "portraitSource": "https://cse.mit.edu/app/uploads/2025/09/hD1yjkhoZPrpTTD4-aspect-ratio-4-3.jpeg"
   },
   {
     "id": "vp-0786",
     "name": "Teresa Phuongtram Nguyen",
     "profileUrl": "https://profiles.stanford.edu/138089",
-    "lastUpdatedAt": "2026-08-28T12:21:02.000Z",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
     "university": "Stanford University",
     "city": "Stanford",
     "state": "California",
@@ -21322,7 +21647,9 @@
     "mdInstitution": "Stanford University School of Medicine",
     "undergradInstitution": "Stanford University",
     "undergradYear": 2014,
-    "country": "United States"
+    "country": "United States",
+    "portrait": "portraits/0786-teresa-phuongtram-nguyen-stanford-university.webp",
+    "portraitSource": "https://profiles.stanford.edu/proxy/api/cap/profiles/138089/resources/profilephoto/350x350.1746472304080.jpg"
   },
   {
     "id": "vp-0787",
@@ -21390,7 +21717,7 @@
     "id": "vp-0790",
     "name": "Thao T. Dang",
     "profileUrl": "https://medicine.iu.edu/faculty/63488/dang-thao",
-    "lastUpdatedAt": "2026-08-28T12:26:22.000Z",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
     "university": "Indiana University",
     "city": "Indianapolis",
     "state": "Indiana",
@@ -21407,7 +21734,9 @@
     "msInstitution": "University of Ulsan",
     "undergradInstitution": "Hanoi National University of Education",
     "undergradYear": 2014,
-    "country": "United States"
+    "country": "United States",
+    "portrait": "portraits/0790-thao-t-dang-indiana-university.webp",
+    "portraitSource": "https://mc-34647c8d-0ad3-4e6c-832a-7092-cdn.azureedge.net/-/media/project/facultyprofileimages/2023/07/25/20/30/63488-thao-dang.webp?rev=d912b843123a4217b2480e2223d05f07"
   },
   {
     "id": "vp-0791",
@@ -21445,7 +21774,7 @@
     "id": "vp-0792",
     "name": "An Nguyen",
     "profileUrl": "https://www.kcl.ac.uk/people/an-nguyen",
-    "lastUpdatedAt": "2026-08-28T12:34:47.000Z",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
     "university": "King's College London",
     "city": "London",
     "researchAreas": [
@@ -21457,13 +21786,15 @@
     "department": "King's Business School",
     "rank": "Assistant Professor",
     "phdInstitution": "The Open University",
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "portrait": "portraits/0792-an-nguyen-king-s-college-london.webp",
+    "portraitSource": "https://www.kcl.ac.uk/newimages/person-profile/2022a/an-nguyen.xf9a9ba9b.jpg?w=922&h=1381&crop=540,540,209,201"
   },
   {
     "id": "vp-0793",
     "name": "Hoang D. Nguyen",
     "profileUrl": "https://research.ucc.ie/en/persons/hoang-d-nguyen/",
-    "lastUpdatedAt": "2026-08-28T12:36:43.000Z",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
     "university": "University College Cork",
     "city": "Cork",
     "researchAreas": [
@@ -21475,13 +21806,15 @@
     "track": "Tenure-line",
     "department": "School of Computer Science and Information Technology",
     "rank": "Associate Professor",
-    "country": "Ireland"
+    "country": "Ireland",
+    "portrait": "portraits/0793-hoang-d-nguyen-university-college-cork.webp",
+    "portraitSource": "https://research.ucc.ie/files-asset/46000789/HN_315x315.png/"
   },
   {
     "id": "vp-0794",
     "name": "Tri Nguyen-Quang",
     "profileUrl": "https://www.dal.ca/faculty/agriculture/faculty/eng/tri-nguyen-quang.html",
-    "lastUpdatedAt": "2026-08-28T12:39:11.000Z",
+    "lastUpdatedAt": "2026-08-30T14:05:30.000Z",
     "university": "Dalhousie University",
     "city": "Truro",
     "state": "Nova Scotia",
@@ -21497,14 +21830,16 @@
     "phdInstitution": "École Polytechnique de Montréal",
     "msInstitution": "Institut National Polytechnique de Grenoble",
     "undergradInstitution": "Institut National Polytechnique de Grenoble",
-    "country": "Canada"
+    "country": "Canada",
+    "portrait": "portraits/0794-tri-nguyen-quang-dalhousie-university.webp",
+    "portraitSource": "https://cdn.dal.ca/faculty/agriculture/faculty/eng/tri-nguyen-quang/_jcr_content/contentPar/profile/bgBanner.adaptive.214.high.jpg/1525969425221.jpg"
   },
   {
     "id": "vp-0795",
     "name": "Phuong-Anh Nguyen",
     "profileUrl": "https://profiles.laps.yorku.ca/profiles/anhvn/",
     "websiteUrl": "https://sites.google.com/site/backyvn/",
-    "lastUpdatedAt": "2026-08-29T05:53:04.479Z",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
     "university": "York University",
     "city": "Toronto",
     "state": "Ontario",
@@ -21516,13 +21851,15 @@
     "rank": "Associate Professor",
     "phdInstitution": "Virginia Tech",
     "phdYear": 2015,
-    "country": "Canada"
+    "country": "Canada",
+    "portrait": "portraits/0795-phuong-anh-nguyen-york-university.webp",
+    "portraitSource": "https://profiles.laps.yorku.ca/files/WP_000337-wpcf_110x113.jpg?x92579"
   },
   {
     "id": "vp-0796",
     "name": "My Nguyen",
     "profileUrl": "https://www.rmit.edu.au/profiles/n/my-nguyen",
-    "lastUpdatedAt": "2026-08-28T12:42:01.000Z",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
     "university": "RMIT University",
     "city": "Melbourne",
     "state": "Victoria",
@@ -21536,7 +21873,9 @@
     "rank": "Associate Professor",
     "phdInstitution": "Monash University",
     "phdYear": 2015,
-    "country": "Australia"
+    "country": "Australia",
+    "portrait": "portraits/0796-my-nguyen-rmit-university.webp",
+    "portraitSource": "https://www.rmit.edu.au/assets/au/en/profile-images/n/my-nguyen.jpeg"
   },
   {
     "id": "vp-0797",
@@ -21669,7 +22008,7 @@
     "id": "vp-0801",
     "name": "Huyen C. Nguyen",
     "profileUrl": "https://www.lisn.upsaclay.fr/membres/nguyen-huyen/",
-    "lastUpdatedAt": "2026-08-29T05:59:41.534Z",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
     "websiteUrl": "https://sites.google.com/site/huyenn9uyen",
     "university": "Université Paris-Saclay",
     "city": "Orsay",
@@ -21687,7 +22026,9 @@
     "msInstitution": "Université Paris-Saclay",
     "msMajor": "Computational Neuroscience and Neuroengineering",
     "msYear": 2025,
-    "postdocInstitution": "CSIRO; University of New South Wales"
+    "postdocInstitution": "CSIRO; University of New South Wales",
+    "portrait": "portraits/0801-huyen-c-nguyen-universite-paris-saclay.webp",
+    "portraitSource": "https://www.lisn.upsaclay.fr/app/uploads/2022/10/Nguyen_Huyen-20220530-1411.jpg"
   },
   {
     "id": "vp-0802",
@@ -21816,13 +22157,15 @@
         "source": "https://researchportal.hkust.edu.hk/en/prizes/sinovac-fellow/"
       }
     ],
-    "lastUpdatedAt": "2026-08-29T07:01:36.383Z"
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "portrait": "portraits/0805-tuan-anh-nguyen-hong-kong-university-of-science-and-technology.webp",
+    "portraitSource": "https://life-sci.hkust.edu.hk/wp-content/uploads/2017/04/nguyen-e1508471666425.jpg"
   },
   {
     "id": "vp-0806",
     "name": "Nguyen Thanh Phuc",
     "profileUrl": "https://researchmap.jp/thanh_phuc?lang=en",
-    "lastUpdatedAt": "2026-08-28T12:50:18.000Z",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
     "university": "Kyoto University",
     "city": "Kyoto",
     "researchAreas": [
@@ -21836,7 +22179,9 @@
     "rank": "Assistant Professor",
     "phdInstitution": "The University of Tokyo",
     "phdYear": 2014,
-    "country": "Japan"
+    "country": "Japan",
+    "portrait": "portraits/0806-nguyen-thanh-phuc-kyoto-university.webp",
+    "portraitSource": "https://researchmap.jp/thanh_phuc/avatar.jpg"
   },
   {
     "id": "vp-0807",
@@ -21860,7 +22205,7 @@
     "id": "vp-0808",
     "name": "Viet Quoc Pham",
     "profileUrl": "https://www.tcd.ie/scss/people/academic-staff/phamq/",
-    "lastUpdatedAt": "2026-08-28T14:27:51.000Z",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
     "university": "Trinity College Dublin",
     "city": "Dublin",
     "researchAreas": [
@@ -21874,13 +22219,15 @@
     "rank": "Assistant Professor",
     "phdInstitution": "Inje University",
     "phdYear": 2017,
-    "country": "Ireland"
+    "country": "Ireland",
+    "portrait": "portraits/0808-viet-quoc-pham-trinity-college-dublin.webp",
+    "portraitSource": "https://pxl-tcdie.terminalfour.net/fit-in/320x320/filters:no_upscale()/filters:format(webp)/filters:quality(100)/prod01/channel_3/media/tcd/scss/headshots/Viet-Pham-BW-1.jpg"
   },
   {
     "id": "vp-0809",
     "name": "Tran Nguyen Le",
     "profileUrl": "https://orbit.dtu.dk/en/persons/tran-nguyen-le/",
-    "lastUpdatedAt": "2026-08-28T14:29:23.000Z",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
     "university": "Technical University of Denmark",
     "city": "Kongens Lyngby",
     "researchAreas": [
@@ -21893,13 +22240,15 @@
     "rank": "Assistant Professor",
     "phdInstitution": "Aalto University",
     "phdYear": 2024,
-    "country": "Denmark"
+    "country": "Denmark",
+    "portrait": "portraits/0809-tran-nguyen-le-technical-university-of-denmark.webp",
+    "portraitSource": "https://orbit.dtu.dk/files-asset/409012913/220320_892f916c.jpg/"
   },
   {
     "id": "vp-0810",
     "name": "Ninh Dang Pham",
     "profileUrl": "https://portal.findresearcher.sdu.dk/en/persons/ninh-dang-pham/",
-    "lastUpdatedAt": "2026-08-28T14:29:23.000Z",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
     "university": "University of Southern Denmark",
     "city": "Odense",
     "researchAreas": [
@@ -21912,7 +22261,9 @@
     "rank": "Associate Professor",
     "phdInstitution": "IT University of Copenhagen",
     "phdYear": 2014,
-    "country": "Denmark"
+    "country": "Denmark",
+    "portrait": "portraits/0810-ninh-dang-pham-university-of-southern-denmark.webp",
+    "portraitSource": "https://portal.findresearcher.sdu.dk/files-asset/309365411/Ninh-reduced.jpg/"
   },
   {
     "id": "vp-0811",
@@ -21978,7 +22329,9 @@
         "source": "https://cbe.anu.edu.au/news/2021/success-knows-no-borders"
       }
     ],
-    "lastUpdatedAt": "2026-08-29T07:03:49.580Z"
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "portrait": "portraits/0812-nghia-tran-australian-national-university.webp",
+    "portraitSource": "https://rsm.anu.edu.au/files/styles/circular/public/2026-08/Nghia%20Tran.jpg.png?itok=vs0zUUPu"
   },
   {
     "id": "vp-0813",
@@ -22028,7 +22381,7 @@
     "id": "vp-0815",
     "name": "Dao M. Nguyen",
     "profileUrl": "https://med.miami.edu/faculty/dao-m-nguyen-md",
-    "lastUpdatedAt": "2026-08-28T16:52:05.000Z",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
     "university": "University of Miami",
     "city": "Miami",
     "state": "Florida",
@@ -22050,13 +22403,15 @@
         "organization": "University of Miami",
         "source": "https://med.miami.edu/faculty/dao-m-nguyen-md"
       }
-    ]
+    ],
+    "portrait": "portraits/0815-dao-m-nguyen-university-of-miami.webp",
+    "portraitSource": "https://med.miami.edu/-/media/millerschool/faculty/surgery/cardiothoracic/50044224-dao-nguyen.ashx?h=550&iar=0&w=440&rev=7ce83ba2879e4301b659efea9ddab188&hash=5207E666DECB4D4A4730D31872451970"
   },
   {
     "id": "vp-0816",
     "name": "Liem Nguyen - Case Western Reserve University",
     "profileUrl": "https://case.edu/medicine/microbio/our-people/liem-nguyen",
-    "lastUpdatedAt": "2026-08-29T06:18:09.297Z",
+    "lastUpdatedAt": "2026-08-30T13:58:40.000Z",
     "university": "Case Western Reserve University",
     "city": "Cleveland",
     "state": "Ohio",
@@ -22079,7 +22434,9 @@
         "organization": "Swiss Foundation for Tuberculosis Research",
         "source": "https://www.swisstb.org/de/news/swisstb-award-2005-drs-liem-nguyen-anne-walburger-giorgio-ferrari-anil-koul-29.html"
       }
-    ]
+    ],
+    "portrait": "portraits/0816-liem-nguyen-case-western-reserve-university.webp",
+    "portraitSource": "https://case.edu/medicine/microbio/sites/default/files/styles/bio_listing/public/2018-12/nguyenl.jpg?h=4499dbd3&itok=15pcC2ix"
   },
   {
     "id": "vp-0817",
@@ -22216,7 +22573,9 @@
     "mdInstitution": "Ross University School of Medicine",
     "mdYear": 2005,
     "postdocInstitution": "Children's Hospital of Pittsburgh",
-    "lastUpdatedAt": "2026-08-29T06:22:49.042Z"
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "portrait": "portraits/0820-margaret-nguyen-university-of-california-san-diego.webp",
+    "portraitSource": "https://researcherprofiles.org/profile/Modules/CustomViewPersonGeneralInfo/PhotoHandler.ashx?NodeID=194544"
   },
   {
     "id": "vp-0821",
@@ -22239,7 +22598,9 @@
     "undergradYear": 1996,
     "postdocInstitution": "National Institutes of Health",
     "postdocYear": 2006,
-    "lastUpdatedAt": "2026-08-29T06:23:56.925Z"
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "portrait": "portraits/0821-minh-ha-tran-university-of-california-irvine.webp",
+    "portraitSource": "https://faculty.uci.edu/get_image?facultyId=5807"
   },
   {
     "id": "vp-0822",
@@ -22279,7 +22640,7 @@
     "name": "Nguyen Tien Hung",
     "vietnameseName": "Nguyễn Tiến Hưng",
     "profileUrl": "https://en.wikipedia.org/wiki/Nguy%E1%BB%85n_Ti%E1%BA%BFn_H%C6%B0ng",
-    "lastUpdatedAt": "2026-08-28T16:59:11.000Z",
+    "lastUpdatedAt": "2026-08-30T05:12:37.193Z",
     "university": "Howard University",
     "city": "Washington",
     "state": "District of Columbia",
@@ -22290,13 +22651,18 @@
     "track": "Emeritus",
     "department": "Economics",
     "rank": "Emeritus",
-    "country": "United States"
+    "country": "United States",
+    "undergradInstitution": "University of Saigon",
+    "msInstitution": "University of Virginia",
+    "msYear": 1960,
+    "phdInstitution": "University of Virginia",
+    "phdYear": 1965
   },
   {
     "id": "vp-0824",
     "name": "Pipo Nguyen-duy",
     "profileUrl": "https://www.oberlin.edu/pipo-nguyen-duy",
-    "lastUpdatedAt": "2026-08-28T16:59:11.000Z",
+    "lastUpdatedAt": "2026-08-30T13:58:40.000Z",
     "university": "Oberlin College",
     "city": "Oberlin",
     "state": "Ohio",
@@ -22332,7 +22698,9 @@
         "year": 1995,
         "source": "https://www.oberlin.edu/pipo-nguyen-duy"
       }
-    ]
+    ],
+    "portrait": "portraits/0824-pipo-nguyen-duy-oberlin-college.webp",
+    "portraitSource": "https://www.oberlin.edu/sites/default/files/styles/width_260/public/content/biography/image/pipo_nguyen_duy-trjones.jpg?itok=_jdRD5cG"
   },
   {
     "id": "vp-0825",
@@ -22394,7 +22762,9 @@
         "source": "https://sites.math.rutgers.edu/~pht19/vitae.pdf"
       }
     ],
-    "lastUpdatedAt": "2026-08-29T06:29:16.796Z"
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "portrait": "portraits/0825-pham-huu-tiep-rutgers-university.webp",
+    "portraitSource": "https://math.rutgers.edu/images/people/profileimg/989_59c135eea2562.jpg"
   },
   {
     "id": "vp-0826",
@@ -22485,7 +22855,7 @@
     "id": "vp-0829",
     "name": "Phu Tran",
     "profileUrl": "https://med.umn.edu/bio/phu-tran",
-    "lastUpdatedAt": "2026-08-28T17:06:58.000Z",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
     "university": "University of Minnesota",
     "city": "Minneapolis",
     "state": "Minnesota",
@@ -22498,7 +22868,9 @@
     "department": "Pediatrics, Neonatology",
     "rank": "Associate Professor",
     "phdInstitution": "University of Iowa",
-    "country": "United States"
+    "country": "United States",
+    "portrait": "portraits/0829-phu-tran-university-of-minnesota.webp",
+    "portraitSource": "https://med.umn.edu/sites/med.umn.edu/files/styles/bio_photo/public/images/tran_phu.jpg?itok=3trWw3v2"
   },
   {
     "id": "vp-0830",
@@ -22545,5 +22917,2620 @@
     "portraitSource": "https://dcu.ie/sites/default/files/faculty_eng_computing_access/2023-10/Tai_Tan_Mai.jpeg",
     "msInstitution": "University College Cork",
     "msYear": 2016
+  },
+  {
+    "id": "vp-0832",
+    "name": "Thi Ha Nguyen",
+    "profileUrl": "https://www.eversource.uconn.edu/faculty-and-staff/nguyen-ha-thi/",
+    "scholarUrl": "https://scholar.google.com/citations?user=p_d7FrAAAAAJ&hl=en",
+    "lastUpdatedAt": "2026-08-30T04:09:33.716Z",
+    "university": "University of Connecticut",
+    "city": "Storrs",
+    "state": "Connecticut",
+    "country": "United States",
+    "researchAreas": [
+      "Power System Stability and Control",
+      "Renewable Energy Integration",
+      "Real-Time Digital Simulation",
+      "Power Grid Resilience"
+    ],
+    "track": "Research",
+    "department": "Electrical and Computer Engineering",
+    "rank": "Assistant Research Professor",
+    "phdYear": 2018,
+    "phdInstitution": "Technical University of Denmark",
+    "postdocInstitution": "Technical University of Denmark",
+    "postdocYear": 2021,
+    "msInstitution": "National Cheng Kung University",
+    "msYear": 2014,
+    "undergradInstitution": "University of Science and Technology, The University of Danang",
+    "undergradYear": 2010
+  },
+  {
+    "id": "vp-0833",
+    "name": "Duc Tung Nguyen",
+    "profileUrl": "https://www.hsu-hh.de/massivb/en/team/",
+    "lastUpdatedAt": "2026-08-30T04:40:45.694Z",
+    "university": "Helmut Schmidt University",
+    "city": "Hamburg",
+    "country": "Germany",
+    "researchAreas": [
+      "Reinforced Concrete Structures",
+      "Structural Concrete",
+      "Shear Behavior of Concrete Beams",
+      "Innovative Construction Materials"
+    ],
+    "track": "Tenure-line",
+    "department": "Civil Engineering",
+    "rank": "Professor"
+  },
+  {
+    "id": "vp-0834",
+    "name": "Trung Thanh Nguyen",
+    "profileUrl": "https://www.iuw.uni-hannover.de/de/ttnguyen",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "Leibniz University Hannover",
+    "city": "Hannover",
+    "country": "Germany",
+    "researchAreas": [
+      "Land Use Change and Rural Restructuring",
+      "Sustainable Natural Resource Management",
+      "Agricultural and Environmental Policy",
+      "Environmental Economics"
+    ],
+    "track": "Research",
+    "department": "Institute of Environmental Economics and World Trade",
+    "rank": "apl. Professor",
+    "phdYear": 2008,
+    "phdInstitution": "University of Giessen",
+    "honors": [
+      {
+        "name": "Außerplanmäßiger Professor (apl. Professor) Title",
+        "year": 2024,
+        "category": "distinguished_professorship",
+        "organization": "Leibniz University Hannover",
+        "source": "https://www.iuw.uni-hannover.de/de/news/news-durchsuchen/aktuelles-detailansicht/news/pd-dr-trung-thanh-nguyen-wurde-mit-dem-titel-apl-professor-ausgezeichnet"
+      }
+    ],
+    "portrait": "portraits/0834-trung-thanh-nguyen-leibniz-university-hannover.webp",
+    "portraitSource": "https://www.iuw.uni-hannover.de/typo3temp/lf_vhs_direct/fpdirect_4b6dd60b684d78fc4d810fa306d9841cb6848539.webp"
+  },
+  {
+    "id": "vp-0835",
+    "name": "Hieu T. Nguyen",
+    "profileUrl": "https://www.usn.no/english/about/contact-us/employees/hieu-nguyen",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "University of South-Eastern Norway",
+    "city": "Kongsberg",
+    "country": "Norway",
+    "researchAreas": [
+      "IoT Communications",
+      "Wireless Communications",
+      "Massive MIMO Systems",
+      "LDPC Codes"
+    ],
+    "track": "Tenure-line",
+    "department": "Department of Science and Industry Systems",
+    "rank": "Associate Professor",
+    "phdInstitution": "Norwegian University of Science and Technology",
+    "msInstitution": "University of Saskatchewan",
+    "undergradInstitution": "Hanoi University of Science and Technology",
+    "portrait": "portraits/0835-hieu-t-nguyen-university-of-south-eastern-norway.webp",
+    "portraitSource": "https://www.usn.no/getfile.php/13709392-1652340603/usn.no/ansatte%20%28opplastet%29/hn.jpg%20%28article_small%29.webp"
+  },
+  {
+    "id": "vp-0836",
+    "name": "Hoang Vu Nguyen",
+    "profileUrl": "https://www.usn.no/english/about/contact-us/employees/hoang-vu-nguyen",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "University of South-Eastern Norway",
+    "city": "Kongsberg",
+    "country": "Norway",
+    "researchAreas": [
+      "Microsystems Packaging",
+      "Intermetallic Bonding",
+      "High-Temperature Microelectronics",
+      "Anisotropic Conductive Adhesives"
+    ],
+    "track": "Tenure-line",
+    "department": "Department of Microsystems",
+    "rank": "Associate Professor",
+    "portrait": "portraits/0836-hoang-vu-nguyen-university-of-south-eastern-norway.webp",
+    "portraitSource": "https://www.usn.no/getfile.php/13604619-1579871942/usn.no/ansatte%20%28opplastet%29/vhn.JPG%20%28article_small%29.webp"
+  },
+  {
+    "id": "vp-0837",
+    "name": "Minh Hao Nguyen",
+    "profileUrl": "https://www.uva.nl/en/profile/n/g/m.h.nguyen/m.h.nguyen.html",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "University of Amsterdam",
+    "city": "Amsterdam",
+    "country": "Netherlands",
+    "researchAreas": [
+      "Persuasive Communication",
+      "Digital Inequality",
+      "Media Use and Well-being"
+    ],
+    "track": "Tenure-line",
+    "department": "Amsterdam School of Communication Research (ASCoR)",
+    "rank": "Assistant Professor",
+    "phdYear": 2019,
+    "phdInstitution": "University of Amsterdam",
+    "honors": [
+      {
+        "name": "NWO Veni Grant",
+        "year": 2025,
+        "category": "career_award",
+        "organization": "Dutch Research Council (NWO)",
+        "source": "https://ascor.uva.nl/content/news/2025/07/minh-hao-nguyen-awarded-nwo-veni-grant.html"
+      }
+    ],
+    "portrait": "portraits/0837-minh-hao-nguyen-university-of-amsterdam.webp",
+    "portraitSource": "https://www.uva.nl/binaries/_ht_1673530767634/content/documents/personalpages/n/g/m.h.nguyen/m.h.nguyen"
+  },
+  {
+    "id": "vp-0838",
+    "name": "Tran Dang Xuan",
+    "profileUrl": "https://home.hiroshima-u.ac.jp/~tdxuan/professors/",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "Hiroshima University",
+    "city": "Higashi-Hiroshima",
+    "country": "Japan",
+    "researchAreas": [
+      "Plant Breeding and Genomics",
+      "Weed Science",
+      "Sustainable Agricultural Production",
+      "Biomass Energy"
+    ],
+    "track": "Tenure-line",
+    "department": "Center for Planetary Health and Innovation Science (PHIS), IDEC Institute",
+    "rank": "Professor",
+    "phdYear": 2004,
+    "phdInstitution": "Kagoshima University",
+    "msYear": 2001,
+    "msInstitution": "Miyazaki University",
+    "scholarUrl": "https://scholar.google.com/citations?user=UookFIUAAAAJ&hl=en",
+    "portrait": "portraits/0838-tran-dang-xuan-hiroshima-university.webp",
+    "portraitSource": "https://home.hiroshima-u.ac.jp/~tdxuan/wp-content/uploads/2016/10/cropped-photo-Xuan-for-webite-270x270.jpg"
+  },
+  {
+    "id": "vp-0839",
+    "name": "Binh-Son Hua",
+    "profileUrl": "https://www.tcd.ie/scss/people/academic-staff/huab/",
+    "scholarUrl": "https://scholar.google.com/citations?hl=en&user=sV_VjsAAAAAJ",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "Trinity College Dublin",
+    "city": "Dublin",
+    "country": "Ireland",
+    "researchAreas": [
+      "Generative 3D AI",
+      "3D Deep Learning",
+      "Computer Vision",
+      "Computer Graphics"
+    ],
+    "track": "Tenure-line",
+    "department": "School of Computer Science and Statistics",
+    "rank": "Assistant Professor",
+    "phdInstitution": "National University of Singapore",
+    "postdocInstitution": "University of Tokyo",
+    "postdocYear": 2020,
+    "portrait": "portraits/0839-binh-son-hua-trinity-college-dublin.webp",
+    "portraitSource": "https://pxl-tcdie.terminalfour.net/fit-in/320x320/filters:no_upscale()/filters:format(webp)/filters:quality(100)/prod01/channel_3/media/tcd/scss/headshots/5091-169-BW.jpg"
+  },
+  {
+    "id": "vp-0840",
+    "name": "Van-Dinh Nguyen",
+    "profileUrl": "https://www.tcd.ie/scss/people/academic-staff/nguyenva/",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "Trinity College Dublin",
+    "city": "Dublin",
+    "country": "Ireland",
+    "researchAreas": [
+      "Applied AI/ML for IoT and 5G/6G",
+      "Task-Oriented Communication",
+      "Open Radio Access Networks",
+      "Wireless Sensing and Imaging"
+    ],
+    "track": "Tenure-line",
+    "department": "School of Computer Science and Statistics",
+    "rank": "Assistant Professor",
+    "postdocInstitution": "Soongsil University",
+    "postdocYear": 2019,
+    "portrait": "portraits/0840-van-dinh-nguyen-trinity-college-dublin.webp",
+    "portraitSource": "https://pxl-tcdie.terminalfour.net/fit-in/320x320/filters:no_upscale()/filters:format(webp)/filters:quality(100)/prod01/channel_3/media/tcd/scss/headshots/van---Edited.png"
+  },
+  {
+    "id": "vp-0841",
+    "name": "Dinh Thai Hoang",
+    "profileUrl": "https://profiles.uts.edu.au/Hoang.Dinh",
+    "scholarUrl": "https://scholar.google.com/citations?user=-esKZ8YAAAAJ&hl=en",
+    "lastUpdatedAt": "2026-08-30T05:20:37.011Z",
+    "university": "University of Technology Sydney",
+    "city": "Sydney",
+    "state": "New South Wales",
+    "country": "Australia",
+    "researchAreas": [
+      "Wireless Communications and Networking",
+      "Machine Learning for Networking",
+      "Cybersecurity"
+    ],
+    "track": "Tenure-line",
+    "department": "School of Electrical and Data Engineering",
+    "rank": "Associate Professor",
+    "phdInstitution": "Nanyang Technological University",
+    "phdYear": 2016
+  },
+  {
+    "id": "vp-0842",
+    "name": "Nhu Truong",
+    "profileUrl": "https://alc.wisc.edu/staff/truong-nhu/",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "University of Wisconsin-Madison",
+    "city": "Madison",
+    "state": "Wisconsin",
+    "country": "United States",
+    "researchAreas": [
+      "Authoritarian Politics",
+      "Social Resistance",
+      "Southeast Asian Studies",
+      "Comparative Politics"
+    ],
+    "track": "Tenure-line",
+    "department": "Asian Languages and Cultures",
+    "rank": "Assistant Professor",
+    "phdInstitution": "McGill University",
+    "portrait": "portraits/0842-nhu-truong-university-of-wisconsin-madison.webp",
+    "portraitSource": "https://alc.wisc.edu/wp-content/uploads/sites/1034/2024/08/Nhu-Truong_Headshot-Copy-225x300.jpg"
+  },
+  {
+    "id": "vp-0843",
+    "name": "Van-Nam Huynh",
+    "profileUrl": "http://www.jaist.ac.jp/~huynh/dokuwiki/doku.php?id=user%3Anamhuynh%3Astart",
+    "lastUpdatedAt": "2026-08-30T05:24:40.634Z",
+    "university": "Japan Advanced Institute of Science and Technology",
+    "city": "Nomi",
+    "country": "Japan",
+    "researchAreas": [
+      "Data Mining and Machine Learning",
+      "Uncertainty Reasoning",
+      "Argumentation",
+      "Multi-Agent Systems"
+    ],
+    "track": "Tenure-line",
+    "department": "School of Knowledge Science",
+    "rank": "Professor",
+    "phdInstitution": "Vietnam Academy of Science and Technology",
+    "phdYear": 1999,
+    "undergradInstitution": "University of Quy Nhon",
+    "undergradYear": 1990
+  },
+  {
+    "id": "vp-0844",
+    "name": "Thanh H. Nguyen",
+    "profileUrl": "https://ix.cs.uoregon.edu/~thanhhng/",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "University of Oregon",
+    "city": "Eugene",
+    "state": "Oregon",
+    "country": "United States",
+    "researchAreas": [
+      "Multi-Agent Systems",
+      "Reinforcement Learning",
+      "Generative AI",
+      "Optimization"
+    ],
+    "track": "Tenure-line",
+    "department": "Department of Computer Science",
+    "rank": "Associate Professor",
+    "phdInstitution": "University of Southern California",
+    "phdYear": 2016,
+    "portrait": "portraits/0844-thanh-h-nguyen-university-of-oregon.webp",
+    "portraitSource": "https://ix.cs.uoregon.edu/~thanhhng/img/ThanhNguyen.jpg"
+  },
+  {
+    "id": "vp-0845",
+    "name": "Thanh Thi Nguyen",
+    "profileUrl": "https://www.unisc.edu.au/staff/associate-professor-thanh-thi-nguyen",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "University of the Sunshine Coast",
+    "city": "Sunshine Coast",
+    "state": "Queensland",
+    "country": "Australia",
+    "researchAreas": [
+      "Artificial Intelligence",
+      "Machine Learning",
+      "Computer Vision",
+      "Cybersecurity"
+    ],
+    "track": "Tenure-line",
+    "department": "School of Science, Technology and Engineering",
+    "rank": "Associate Professor",
+    "phdInstitution": "Monash University",
+    "portrait": "portraits/0845-thanh-thi-nguyen-university-of-the-sunshine-coast.webp",
+    "portraitSource": "https://www.unisc.edu.au/media/yrdggw0k/thanh-thi-nguyen.png?rxy=0.5059552019525835,0.307629864160213&width=150&height=200&v=1dcde297d19a3d0"
+  },
+  {
+    "id": "vp-0846",
+    "name": "Minh Quang Ta",
+    "profileUrl": "https://uwf.edu/hmcse/departments/electrical-and-computer-engineering/faculty/dr-minh-quang-ta.html",
+    "scholarUrl": "https://scholar.google.com/citations?user=CiHiUwMAAAAJ&hl=en",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "University of West Florida",
+    "city": "Pensacola",
+    "state": "Florida",
+    "country": "United States",
+    "researchAreas": [
+      "Robotics",
+      "Control Theory",
+      "Wireless Sensor Networks",
+      "Rehabilitation Robotics"
+    ],
+    "track": "Tenure-line",
+    "department": "Department of Electrical and Computer Engineering",
+    "rank": "Assistant Professor",
+    "phdInstitution": "Nanyang Technological University",
+    "phdYear": 2018,
+    "postdocInstitution": "University of Illinois at Urbana-Champaign",
+    "postdocYear": 2024,
+    "portrait": "portraits/0846-minh-quang-ta-university-of-west-florida.webp",
+    "portraitSource": "https://uwf.edu/media/university-of-west-florida/colleges/cse/images/faculty/Ta_Minh_211.png"
+  },
+  {
+    "id": "vp-0847",
+    "name": "Hue Duong",
+    "profileUrl": "https://communication.gsu.edu/profile/hue-duong/",
+    "scholarUrl": "https://scholar.google.com/citations?user=Aqo9xSwAAAAJ",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "Georgia State University",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "country": "United States",
+    "researchAreas": [
+      "Health Communication",
+      "Social Influence",
+      "Message Effects",
+      "Social Marketing"
+    ],
+    "track": "Tenure-line",
+    "department": "Department of Communication",
+    "rank": "Associate Professor",
+    "phdInstitution": "University of Georgia",
+    "phdYear": 2020,
+    "portrait": "portraits/0847-hue-duong-georgia-state-university.webp",
+    "portraitSource": "https://cas.gsu.edu/files/2026/07/1.GSU_webphoto_2026-small_size_1.jpg"
+  },
+  {
+    "id": "vp-0848",
+    "name": "An Nguyen - City of Hope",
+    "profileUrl": "https://www.cityofhope.org/patients/find-a-doctor/an-nguyen",
+    "lastUpdatedAt": "2026-08-30T05:39:06.732Z",
+    "university": "City of Hope",
+    "city": "Duarte",
+    "state": "California",
+    "country": "United States",
+    "researchAreas": [
+      "Diabetes",
+      "Endocrinology",
+      "Metabolism"
+    ],
+    "track": "Clinical",
+    "department": "Diabetes, Endocrinology and Metabolism",
+    "rank": "Assistant Clinical Professor",
+    "mdInstitution": "Renaissance School of Medicine at Stony Brook University"
+  },
+  {
+    "id": "vp-0849",
+    "name": "Andrew H. Nguyen",
+    "profileUrl": "https://www.cityofhope.org/patients/find-a-doctor/andrew-nguyen",
+    "lastUpdatedAt": "2026-08-30T05:39:06.733Z",
+    "university": "City of Hope",
+    "city": "Duarte",
+    "state": "California",
+    "country": "United States",
+    "researchAreas": [
+      "Surgical Oncology",
+      "Tumor Microenvironment",
+      "Pancreatic Cancer"
+    ],
+    "track": "Clinical",
+    "department": "Division of Surgical Oncology",
+    "rank": "Assistant Clinical Professor",
+    "mdInstitution": "New York University School of Medicine",
+    "undergradInstitution": "University of California, San Diego"
+  },
+  {
+    "id": "vp-0850",
+    "name": "Alexander H. Nguyen",
+    "profileUrl": "https://www.uclahealth.org/departments/medicine/gastro/research/labs-and-groups/nguyen-laboratory",
+    "lastUpdatedAt": "2026-08-30T13:58:40.000Z",
+    "university": "University of California, Los Angeles",
+    "city": "Los Angeles",
+    "state": "California",
+    "country": "United States",
+    "researchAreas": [
+      "Digestive Diseases",
+      "Gastroenterology"
+    ],
+    "track": "Clinical",
+    "department": "Division of Digestive Diseases",
+    "rank": "Assistant Clinical Professor",
+    "honors": [
+      {
+        "name": "K08 Clinical Investigator Award",
+        "category": "career_award",
+        "organization": "National Institutes of Health",
+        "source": "https://www.uclahealth.org/departments/medicine/gastro/research/labs-and-groups/nguyen-laboratory",
+        "year": null
+      }
+    ],
+    "portrait": "portraits/0850-alexander-h-nguyen-university-of-california-los-angeles.webp",
+    "portraitSource": "https://www.uclahealth.org/sites/default/files/styles/portrait_3x4_008000_240x320/public/images/dc/nguyen-alexander-suit-01r5x7.jpg?f=c4d77d8d&itok=-T3qHp3m"
+  },
+  {
+    "id": "vp-0851",
+    "name": "Anh-Thuy Nguyen",
+    "profileUrl": "https://faculty.mdanderson.org/profiles/anh-thuy_nguyen.html",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "The University of Texas MD Anderson Cancer Center",
+    "city": "Houston",
+    "state": "Texas",
+    "country": "United States",
+    "researchAreas": [
+      "Anesthesiology",
+      "Critical Care Medicine",
+      "Transplant Anesthesia"
+    ],
+    "track": "Clinical",
+    "department": "Anesthesiology and Perioperative Medicine",
+    "rank": "Clinical Professor",
+    "mdInstitution": "University of Texas Southwestern Medical Center",
+    "mdYear": 1991,
+    "undergradInstitution": "Rice University",
+    "undergradYear": 1987,
+    "portrait": "portraits/0851-anh-thuy-nguyen-the-university-of-texas-md-anderson-cancer-center.webp",
+    "portraitSource": "https://faculty.mdanderson.org/content/dam/mdanderson/images/fis/anh-thuy_nguyen.jpg"
+  },
+  {
+    "id": "vp-0852",
+    "name": "Tung Nguyen - University of California, San Francisco",
+    "profileUrl": "https://medicine.ucsf.edu/people/tung-nguyen",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "University of California, San Francisco",
+    "city": "San Francisco",
+    "state": "California",
+    "country": "United States",
+    "researchAreas": [
+      "Health Equity",
+      "Community-Based Participatory Research",
+      "Cancer Control"
+    ],
+    "track": "Clinical",
+    "department": "Medicine",
+    "rank": "Professor of Clinical Medicine",
+    "mdInstitution": "Stanford University School of Medicine",
+    "mdYear": 1991,
+    "undergradInstitution": "Harvard College",
+    "undergradYear": 1986,
+    "portrait": "portraits/0852-tung-nguyen-university-of-california-san-francisco.webp",
+    "portraitSource": "https://medicine.ucsf.edu/sites/medicine.ucsf.edu/files/styles/profile_image_150x150/public/Tung.Nguyen.jpeg?itok=U6oaBhPP"
+  },
+  {
+    "id": "vp-0853",
+    "name": "Sen Nguyen",
+    "profileUrl": "https://fcm.ucsf.edu/people/sen-nguyen-md",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "University of California, San Francisco",
+    "city": "San Francisco",
+    "state": "California",
+    "country": "United States",
+    "researchAreas": [
+      "Family Medicine",
+      "Gender-Affirming Care",
+      "Primary Care"
+    ],
+    "track": "Clinical",
+    "department": "Family and Community Medicine",
+    "rank": "Assistant Clinical Professor",
+    "portrait": "portraits/0853-sen-nguyen-university-of-california-san-francisco.webp",
+    "portraitSource": "https://fcm.ucsf.edu/sites/g/files/tkssra17611/files/styles/180x180/public/Nguyen-Steven-4599%20cropped.jpg?h=d24c0dc2&itok=BrQeO5v3"
+  },
+  {
+    "id": "vp-0854",
+    "name": "Thuong Hien Vu Tran",
+    "profileUrl": "https://www.med.upenn.edu/apps/faculty/index.php/g275/p8330528",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "University of Pennsylvania",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "country": "United States",
+    "researchAreas": [
+      "Pulmonary Medicine",
+      "Allergy and Immunology",
+      "Critical Care Medicine"
+    ],
+    "track": "Clinical",
+    "department": "Medicine",
+    "rank": "Assistant Professor of Clinical Medicine",
+    "undergradInstitution": "Drexel University",
+    "undergradYear": 2012,
+    "otherDegrees": [
+      {
+        "degree": "DO",
+        "institution": "Philadelphia College of Osteopathic Medicine",
+        "year": 2016,
+        "source": "https://www.med.upenn.edu/apps/faculty/index.php/g275/p8330528"
+      }
+    ],
+    "portrait": "portraits/0854-thuong-hien-vu-tran-university-of-pennsylvania.webp",
+    "portraitSource": "https://www.med.upenn.edu/apps/my/images/faculty_pics/tran5110.jpg"
+  },
+  {
+    "id": "vp-0855",
+    "name": "Nam Duy Nguyen",
+    "profileUrl": "https://www.med.upenn.edu/apps/faculty/index.php/g275/p9769423",
+    "lastUpdatedAt": "2026-08-30T05:47:05.913Z",
+    "university": "University of Pennsylvania",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "country": "United States",
+    "researchAreas": [
+      "Rheumatology"
+    ],
+    "track": "Clinical",
+    "department": "Medicine",
+    "rank": "Assistant Professor of Clinical Medicine",
+    "undergradInstitution": "Drexel University",
+    "undergradYear": 2007,
+    "otherDegrees": [
+      {
+        "degree": "DO",
+        "institution": "Philadelphia College of Osteopathic Medicine",
+        "year": 2014,
+        "source": "https://www.med.upenn.edu/apps/faculty/index.php/g275/p9769423"
+      }
+    ]
+  },
+  {
+    "id": "vp-0856",
+    "name": "Pearl Nguyen",
+    "profileUrl": "https://www.peds.uw.edu/directory/pearl_nguyen/2823",
+    "lastUpdatedAt": "2026-08-30T14:05:30.000Z",
+    "university": "University of Washington",
+    "city": "Seattle",
+    "state": "Washington",
+    "country": "United States",
+    "researchAreas": [
+      "General Pediatrics",
+      "Health Equity",
+      "Sickle Cell Disease"
+    ],
+    "track": "Clinical",
+    "department": "Pediatrics",
+    "rank": "Clinical Assistant Professor",
+    "portrait": "portraits/0856-pearl-nguyen-university-of-washington.webp",
+    "portraitSource": "https://www.peds.uw.edu/sites/default/files/styles/large_profile_image/public/images/directory/PearlNguyen_Photo.jpeg?h=2c352d20&itok=7YSfdFPT"
+  },
+  {
+    "id": "vp-0857",
+    "name": "George Nguyen",
+    "profileUrl": "https://phoenixmed.arizona.edu/directory/nguyen-george",
+    "lastUpdatedAt": "2026-08-30T05:51:38.224Z",
+    "university": "University of Arizona",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "country": "United States",
+    "researchAreas": [
+      "Internal Medicine",
+      "Primary Care"
+    ],
+    "track": "Clinical",
+    "department": "Internal Medicine, College of Medicine – Phoenix",
+    "rank": "Assistant Clinical Professor",
+    "mdInstitution": "University of Arizona College of Medicine – Phoenix",
+    "mdYear": 2020
+  },
+  {
+    "id": "vp-0858",
+    "name": "Lan Nguyen - University of Illinois Urbana-Champaign",
+    "profileUrl": "https://medicine.illinois.edu/about/directory/faculty/profile/ltnguyen",
+    "lastUpdatedAt": "2026-08-30T05:51:38.224Z",
+    "university": "University of Illinois Urbana-Champaign",
+    "city": "Urbana",
+    "state": "Illinois",
+    "country": "United States",
+    "researchAreas": [
+      "Internal Medicine"
+    ],
+    "track": "Clinical",
+    "department": "Clinical Sciences, Carle Illinois College of Medicine",
+    "rank": "Clinical Assistant Professor"
+  },
+  {
+    "id": "vp-0859",
+    "name": "Kim-Phung Thi Nguyen",
+    "profileUrl": "https://medicine.illinois.edu/about/directory/faculty/profile/knguyen1",
+    "lastUpdatedAt": "2026-08-30T05:51:38.224Z",
+    "university": "University of Illinois Urbana-Champaign",
+    "city": "Urbana",
+    "state": "Illinois",
+    "country": "United States",
+    "researchAreas": [
+      "Clinical Medicine"
+    ],
+    "track": "Clinical",
+    "department": "Clinical Sciences, Carle Illinois College of Medicine",
+    "rank": "Clinical Assistant Professor"
+  },
+  {
+    "id": "vp-0860",
+    "name": "Anh C. Tran",
+    "profileUrl": "https://llu.edu/academics/faculty/tran-anh",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "Loma Linda University",
+    "city": "Loma Linda",
+    "state": "California",
+    "country": "United States",
+    "researchAreas": [
+      "Psychiatry"
+    ],
+    "track": "Clinical",
+    "department": "Psychiatry",
+    "rank": "Assistant Clinical Professor",
+    "portrait": "portraits/0860-anh-c-tran-loma-linda-university.webp",
+    "portraitSource": "https://llu.edu/sites/llu.edu/files/styles/focal_point_portrait_300x400/public/faculty/X3DhNNIiazgv8E8Xnov_7O9-VwGYtvnjGkLxF9jBbug.JPEG?itok=CEpOjz5i"
+  },
+  {
+    "id": "vp-0861",
+    "name": "Thuy-Huynh Nguyen",
+    "profileUrl": "https://llu.edu/academics/faculty/nguyen-thuy-huynh",
+    "lastUpdatedAt": "2026-08-30T05:53:15.752Z",
+    "university": "Loma Linda University",
+    "city": "Loma Linda",
+    "state": "California",
+    "country": "United States",
+    "researchAreas": [
+      "Psychiatry"
+    ],
+    "track": "Clinical",
+    "department": "Psychiatry",
+    "rank": "Assistant Clinical Professor",
+    "mdInstitution": "American University of the Caribbean",
+    "mdYear": 1991
+  },
+  {
+    "id": "vp-0862",
+    "name": "Caroline T. Nguyen",
+    "profileUrl": "https://keck.usc.edu/faculty-search/caroline-t-nguyen/",
+    "lastUpdatedAt": "2026-08-30T05:53:15.752Z",
+    "university": "University of Southern California",
+    "city": "Los Angeles",
+    "state": "California",
+    "country": "United States",
+    "researchAreas": [
+      "Endocrinology, Diabetes and Metabolism",
+      "Thyroid Disease in Pregnancy"
+    ],
+    "track": "Clinical",
+    "department": "Medicine, Division of Endocrinology, Diabetes, and Metabolism",
+    "rank": "Assistant Professor of Clinical Medicine"
+  },
+  {
+    "id": "vp-0863",
+    "name": "The Anh Han",
+    "profileUrl": "https://research.tees.ac.uk/en/persons/the-anh-han/",
+    "lastUpdatedAt": "2026-08-30T05:55:52.363Z",
+    "university": "Teesside University",
+    "city": "Middlesbrough",
+    "country": "United Kingdom",
+    "researchAreas": [
+      "Artificial Intelligence Safety",
+      "Evolutionary Game Theory",
+      "Multi-Agent Systems"
+    ],
+    "track": "Tenure-line",
+    "department": "Computing, Engineering and Digital Technologies",
+    "rank": "Professor",
+    "phdInstitution": "Universidade Nova de Lisboa",
+    "phdYear": 2012,
+    "scholarUrl": "https://scholar.google.com/citations?user=R6zfbxgAAAAJ&hl=en",
+    "portrait": "portraits/863-the-anh-han-teesside-university.webp",
+    "portraitSource": "https://research.tees.ac.uk/files-asset/4129186/DisplayPhoto.jpg"
+  },
+  {
+    "id": "vp-0864",
+    "name": "Duy Pham",
+    "profileUrl": "https://healthcare.utah.edu/find-a-doctor/duy-pham",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "University of Utah",
+    "city": "Salt Lake City",
+    "state": "Utah",
+    "country": "United States",
+    "researchAreas": [
+      "Addiction Psychiatry",
+      "Psychiatry"
+    ],
+    "track": "Clinical",
+    "department": "Psychiatry",
+    "rank": "Assistant Professor (Clinical)",
+    "mdInstitution": "University of Utah School of Medicine",
+    "mdYear": 2003,
+    "portrait": "portraits/0864-duy-pham-university-of-utah.webp",
+    "portraitSource": "https://healthcare.utah.edu/sites/g/files/zrelqx136/files/media/images/person/import/FM00017042.jpg"
+  },
+  {
+    "id": "vp-0865",
+    "name": "Van T. Pham",
+    "profileUrl": "https://med.uc.edu/landing-pages/profile/index/pubs/phamvn",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "University of Cincinnati",
+    "city": "Cincinnati",
+    "state": "Ohio",
+    "country": "United States",
+    "researchAreas": [
+      "Clinical Psychology",
+      "Behavioral Disorders"
+    ],
+    "track": "Clinical",
+    "department": "Psychiatry and Behavioral Neuroscience",
+    "rank": "Assistant Professor of Clinical",
+    "phdInstitution": "The Catholic University of America",
+    "msInstitution": "Vanderbilt University",
+    "otherDegrees": [
+      {
+        "degree": "PsyD",
+        "institution": "Xavier University",
+        "source": "https://med.uc.edu/landing-pages/profile/index/pubs/phamvn"
+      }
+    ],
+    "portrait": "portraits/0865-van-t-pham-university-of-cincinnati.webp",
+    "portraitSource": "https://webcentral.uc.edu/eprof/media/repository/0435PhamVan9934.jpeg"
+  },
+  {
+    "id": "vp-0866",
+    "name": "Minh Thu T. Nguyen",
+    "profileUrl": "https://med.nyu.edu/faculty/minh-thu-t-nguyen",
+    "lastUpdatedAt": "2026-08-30T05:57:51.431Z",
+    "university": "New York University",
+    "city": "New York",
+    "state": "New York",
+    "country": "United States",
+    "researchAreas": [
+      "Internal Medicine"
+    ],
+    "track": "Clinical",
+    "department": "Medicine",
+    "rank": "Clinical Assistant Professor",
+    "mdInstitution": "University of California, Los Angeles"
+  },
+  {
+    "id": "vp-0867",
+    "name": "Tuan Nguyen",
+    "profileUrl": "https://nyulangone.org/doctors/1902267925/tuan-nguyen",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "New York University",
+    "city": "Mineola",
+    "state": "New York",
+    "country": "United States",
+    "researchAreas": [
+      "Pediatrics",
+      "Pediatric Hospital Medicine"
+    ],
+    "track": "Clinical",
+    "department": "Pediatrics, NYU Grossman Long Island School of Medicine",
+    "rank": "Clinical Assistant Professor",
+    "otherDegrees": [
+      {
+        "degree": "DO",
+        "institution": "Oklahoma State University",
+        "year": 2016,
+        "source": "https://nyulangone.org/doctors/1902267925/tuan-nguyen"
+      }
+    ],
+    "portrait": "portraits/0867-tuan-nguyen-new-york-university.webp",
+    "portraitSource": "https://nyulangone.org/images/doctors/n/nguyen/1902267925/tuan-nguyen-square.jpg"
+  },
+  {
+    "id": "vp-0868",
+    "name": "Vanessa Pham",
+    "profileUrl": "https://www.medicine.wisc.edu/directory/pham_vanessa",
+    "lastUpdatedAt": "2026-08-30T14:05:30.000Z",
+    "university": "University of Wisconsin-Madison",
+    "city": "Madison",
+    "state": "Wisconsin",
+    "country": "United States",
+    "researchAreas": [
+      "Internal Medicine",
+      "Endocrinology, Diabetes and Metabolism"
+    ],
+    "track": "Clinical",
+    "department": "Medicine",
+    "rank": "Clinical Assistant Professor",
+    "portrait": "portraits/0868-vanessa-pham-university-of-wisconsin-madison.webp",
+    "portraitSource": "https://www.medicine.wisc.edu/sites/default/files/styles/medium/public/2023-12/rct05144_2019_06_25_med-480.jpg?itok=jmMMSHIy"
+  },
+  {
+    "id": "vp-0869",
+    "name": "Trang T. Ho",
+    "profileUrl": "https://www.kumc.edu/tho.html",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "University of Kansas",
+    "city": "Kansas City",
+    "state": "Kansas",
+    "country": "United States",
+    "researchAreas": [
+      "Hospital Medicine",
+      "Internal Medicine"
+    ],
+    "track": "Clinical",
+    "department": "Internal Medicine, Hospital Medicine",
+    "rank": "Clinical Assistant Professor",
+    "mdInstitution": "University of Kansas Medical Center",
+    "mdYear": 2007,
+    "undergradInstitution": "Creighton University",
+    "portrait": "portraits/0869-trang-t-ho-university-of-kansas.webp",
+    "portraitSource": "https://www.kumc.edu/images/_faculty/ho-trang.jpg"
+  },
+  {
+    "id": "vp-0870",
+    "name": "Phuong H. Nguyen - University of Kansas",
+    "profileUrl": "https://www.kumc.edu/pnguyen.html",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "University of Kansas",
+    "city": "Wichita",
+    "state": "Kansas",
+    "country": "United States",
+    "researchAreas": [
+      "Anesthesiology"
+    ],
+    "track": "Clinical",
+    "department": "Anesthesiology",
+    "rank": "Clinical Assistant Professor",
+    "mdInstitution": "University of Kansas School of Medicine",
+    "portrait": "portraits/0870-phuong-h-nguyen-university-of-kansas.webp",
+    "portraitSource": "https://www.kumc.edu/images/_faculty/_wichita/nguyen-phuong.jpg"
+  },
+  {
+    "id": "vp-0871",
+    "name": "Than Pham",
+    "profileUrl": "https://orthopedics.medicine.uiowa.edu/profile/than-pham",
+    "lastUpdatedAt": "2026-08-30T06:01:46.901Z",
+    "university": "University of Iowa",
+    "city": "Iowa City",
+    "state": "Iowa",
+    "country": "United States",
+    "researchAreas": [
+      "Physical Medicine and Rehabilitation",
+      "Interventional Spine Care"
+    ],
+    "track": "Clinical",
+    "department": "Orthopedics and Rehabilitation",
+    "rank": "Clinical Assistant Professor",
+    "otherDegrees": [
+      {
+        "degree": "DO",
+        "institution": "Des Moines University",
+        "source": "https://orthopedics.medicine.uiowa.edu/profile/than-pham"
+      },
+      {
+        "degree": "PharmD",
+        "institution": "Drake University",
+        "source": "https://orthopedics.medicine.uiowa.edu/profile/than-pham"
+      }
+    ]
+  },
+  {
+    "id": "vp-0872",
+    "name": "Huy Nguyen - Brown University",
+    "profileUrl": "https://orthopaedics.med.brown.edu/people/huy-nguyen-md",
+    "lastUpdatedAt": "2026-08-30T14:05:30.000Z",
+    "university": "Brown University",
+    "city": "Providence",
+    "state": "Rhode Island",
+    "country": "United States",
+    "researchAreas": [
+      "Orthopaedics",
+      "Physical Medicine and Rehabilitation"
+    ],
+    "track": "Clinical",
+    "department": "Orthopaedics",
+    "rank": "Clinical Assistant Professor",
+    "portrait": "portraits/0872-huy-nguyen-brown-university.webp",
+    "portraitSource": "https://orthopaedics.med.brown.edu/sites/default/files/styles/square_med/public/2022-08/nguyen.jpg?h=1c7ebd88&itok=0SBUsCe4"
+  },
+  {
+    "id": "vp-0873",
+    "name": "Anh Phuong Nguyen",
+    "profileUrl": "https://health.ucdavis.edu/pediatrics/team/42636/anh-nguyen",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "University of California, Davis",
+    "city": "Sacramento",
+    "state": "California",
+    "country": "United States",
+    "researchAreas": [
+      "Pediatric Allergy and Immunology",
+      "Rheumatology"
+    ],
+    "track": "Clinical",
+    "department": "Pediatrics, Division of Pediatric Allergy, Immunology and Rheumatology",
+    "rank": "Health Sciences Assistant Clinical Professor",
+    "mdInstitution": "University of Texas Medical School at San Antonio",
+    "mdYear": 2015,
+    "undergradInstitution": "University of California, Los Angeles",
+    "undergradYear": 2009,
+    "portrait": "portraits/0873-anh-phuong-nguyen-university-of-california-davis.webp",
+    "portraitSource": "https://physicians.ucdavis.edu/Custom/Photos/42636.jpg"
+  },
+  {
+    "id": "vp-0874",
+    "name": "Kimloan Nguyen",
+    "profileUrl": "https://profiles.utsouthwestern.edu/profile/95985/kimloan-nguyen.html",
+    "lastUpdatedAt": "2026-08-30T06:03:35.773Z",
+    "university": "University of Texas Southwestern Medical Center",
+    "city": "Dallas",
+    "state": "Texas",
+    "country": "United States",
+    "researchAreas": [
+      "Family Medicine"
+    ],
+    "track": "Clinical",
+    "department": "Family and Community Medicine",
+    "rank": "Clinical Assistant Professor",
+    "mdInstitution": "Ross University School of Medicine",
+    "mdYear": 2007
+  },
+  {
+    "id": "vp-0875",
+    "name": "Cam-Tu Nguyen",
+    "profileUrl": "https://ufhealthjax.org/pharmacy-residency/faculty",
+    "lastUpdatedAt": "2026-08-30T06:06:31.723Z",
+    "university": "University of Florida",
+    "city": "Jacksonville",
+    "state": "Florida",
+    "country": "United States",
+    "researchAreas": [
+      "Internal Medicine",
+      "Pharmacy Practice"
+    ],
+    "track": "Clinical",
+    "department": "College of Pharmacy",
+    "rank": "Clinical Assistant Professor",
+    "otherDegrees": [
+      {
+        "degree": "PharmD",
+        "institution": "University of Florida",
+        "source": "https://ufhealthjax.org/pharmacy-residency/faculty"
+      }
+    ]
+  },
+  {
+    "id": "vp-0876",
+    "name": "Kimberly A. Nguyen",
+    "profileUrl": "https://www.uh.edu/pharmacy/about-us/directory-home/pptr-faculty/kimberly-nguyen/",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "University of Houston",
+    "city": "Houston",
+    "state": "Texas",
+    "country": "United States",
+    "researchAreas": [
+      "Infectious Diseases",
+      "Pharmacy Practice"
+    ],
+    "track": "Clinical",
+    "department": "Pharmacy Practice and Translational Research",
+    "rank": "Clinical Associate Professor",
+    "otherDegrees": [
+      {
+        "degree": "PharmD",
+        "institution": "University of Houston",
+        "source": "https://www.uh.edu/pharmacy/about-us/directory-home/pptr-faculty/kimberly-nguyen/"
+      }
+    ],
+    "portrait": "portraits/0876-kimberly-a-nguyen-university-of-houston.webp",
+    "portraitSource": "https://www.uh.edu/pharmacy/_images/directory-faculty/nguyen-kimberly-22.jpg"
+  },
+  {
+    "id": "vp-0877",
+    "name": "Michael O. Nguyen",
+    "profileUrl": "https://www.uclahealth.org/providers/michael-nguyen",
+    "lastUpdatedAt": "2026-08-30T13:58:40.000Z",
+    "university": "University of California, Los Angeles",
+    "city": "Los Angeles",
+    "state": "California",
+    "country": "United States",
+    "researchAreas": [
+      "Dermatology",
+      "Medical Education"
+    ],
+    "track": "Clinical",
+    "department": "Dermatology",
+    "rank": "Assistant Clinical Professor",
+    "mdInstitution": "Harvard Medical School",
+    "mdYear": 2018,
+    "phdInstitution": "University of Oxford",
+    "phdYear": 2014,
+    "undergradInstitution": "Stanford University",
+    "portrait": "portraits/0877-michael-o-nguyen-university-of-california-los-angeles.webp",
+    "portraitSource": "https://www.uclahealth.org/sites/default/files/styles/portrait_3x4_010000_300x400/public/images/nguyen-michael-1174028138.jpg?h=97c85414&f=ca93365d&itok=KI866TOu"
+  },
+  {
+    "id": "vp-0878",
+    "name": "Vinh Nguyen - University of Pittsburgh",
+    "profileUrl": "https://www.anesthesiology.pitt.edu/people/vinh-nguyen-md",
+    "lastUpdatedAt": "2026-08-30T13:58:40.000Z",
+    "university": "University of Pittsburgh",
+    "city": "Pittsburgh",
+    "state": "Pennsylvania",
+    "country": "United States",
+    "researchAreas": [
+      "Anesthesiology",
+      "Transplant Anesthesia",
+      "Resuscitation"
+    ],
+    "track": "Clinical",
+    "department": "Anesthesiology and Perioperative Medicine",
+    "rank": "Clinical Assistant Professor",
+    "mdInstitution": "University of Pittsburgh School of Medicine",
+    "undergradInstitution": "Cornell University",
+    "portrait": "portraits/0878-vinh-nguyen-university-of-pittsburgh.webp",
+    "portraitSource": "https://www.anesthesiology.pitt.edu/sites/default/files/styles/person_image/public/person-img/person_faculty/Nguyen_Vin_SW.jpg?h=23b4db7b&itok=xS_AYqUO"
+  },
+  {
+    "id": "vp-0879",
+    "name": "Van-Hong Nguyen",
+    "profileUrl": "https://profiles.icahn.mssm.edu/van-hong-nguyen",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "Icahn School of Medicine at Mount Sinai",
+    "city": "New York",
+    "state": "New York",
+    "country": "United States",
+    "researchAreas": [
+      "Cardiology",
+      "Nuclear Cardiology",
+      "Transplant Cardiology"
+    ],
+    "track": "Clinical",
+    "department": "Cardiovascular Institute",
+    "rank": "Assistant Clinical Professor",
+    "mdInstitution": "Georgetown University",
+    "portrait": "portraits/0879-van-hong-nguyen-icahn-school-of-medicine-at-mount-sinai.webp",
+    "portraitSource": "https://www.mountsinai.org/files/images/fad-images/0000076810116942945461.jpg"
+  },
+  {
+    "id": "vp-0880",
+    "name": "Matthew Thai-Khang Nguyen",
+    "profileUrl": "https://vivo.weill.cornell.edu/display/cwid-mtn9004",
+    "lastUpdatedAt": "2026-08-30T06:12:20.702Z",
+    "university": "Weill Cornell Medicine",
+    "city": "New York",
+    "state": "New York",
+    "country": "United States",
+    "researchAreas": [
+      "Emergency Medicine"
+    ],
+    "track": "Clinical",
+    "department": "Emergency Medicine",
+    "rank": "Assistant Professor of Clinical Emergency Medicine",
+    "mdInstitution": "Baylor College of Medicine"
+  },
+  {
+    "id": "vp-0881",
+    "name": "De Tran",
+    "profileUrl": "https://med.stanford.edu/profiles/de-tran",
+    "lastUpdatedAt": "2026-08-30T06:12:20.702Z",
+    "university": "Stanford University",
+    "city": "Stanford",
+    "state": "California",
+    "country": "United States",
+    "researchAreas": [
+      "Primary Care",
+      "Population Health"
+    ],
+    "track": "Clinical",
+    "department": "Medicine, Primary Care and Population Health",
+    "rank": "Clinical Assistant Professor",
+    "mdInstitution": "University of California, Davis",
+    "mdYear": 1991
+  },
+  {
+    "id": "vp-0882",
+    "name": "Tridu Huynh",
+    "profileUrl": "https://medicine.stanford.edu/profiles/tridu-huynh",
+    "lastUpdatedAt": "2026-08-30T06:14:10.955Z",
+    "university": "Stanford University",
+    "city": "Stanford",
+    "state": "California",
+    "country": "United States",
+    "researchAreas": [
+      "Hospital Medicine",
+      "Translational Immunology",
+      "Gastrointestinal Cancer Detection"
+    ],
+    "track": "Clinical",
+    "department": "Medicine, Division of Hospital Medicine",
+    "rank": "Clinical Assistant Professor",
+    "mdInstitution": "University of Vermont College of Medicine",
+    "mdYear": 2018,
+    "undergradInstitution": "University of California, Los Angeles"
+  },
+  {
+    "id": "vp-0883",
+    "name": "Lisa Huynh",
+    "profileUrl": "https://profiles.stanford.edu/lisa-huynh",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "Stanford University",
+    "city": "Stanford",
+    "state": "California",
+    "country": "United States",
+    "researchAreas": [
+      "Physical Medicine and Rehabilitation",
+      "Interventional Spine Care"
+    ],
+    "track": "Clinical",
+    "department": "Orthopaedic Surgery, PM&R Division",
+    "rank": "Clinical Associate Professor",
+    "mdInstitution": "Albert Einstein College of Medicine",
+    "portrait": "portraits/0883-lisa-huynh-stanford-university.webp",
+    "portraitSource": "https://profiles.stanford.edu/proxy/api/cap/profiles/60973/resources/profilephoto/350x350.1509506072859.jpg"
+  },
+  {
+    "id": "vp-0884",
+    "name": "Mai Thy Truong",
+    "profileUrl": "https://profiles.stanford.edu/mai-truong",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "Stanford University",
+    "city": "Stanford",
+    "state": "California",
+    "country": "United States",
+    "researchAreas": [
+      "Pediatric Otolaryngology",
+      "Auricular Reconstruction"
+    ],
+    "track": "Clinical",
+    "department": "Otolaryngology - Head and Neck Surgery, Division of Pediatric Otolaryngology",
+    "rank": "Clinical Professor",
+    "mdInstitution": "University of California, Irvine",
+    "mdYear": 2003,
+    "portrait": "portraits/0884-mai-thy-truong-stanford-university.webp",
+    "portraitSource": "https://profiles.stanford.edu/proxy/api/cap/profiles/8563/resources/profilephoto/350x350.1509520917900.jpg"
+  },
+  {
+    "id": "vp-0885",
+    "name": "Nam Quoc Bui",
+    "profileUrl": "https://profiles.stanford.edu/nam-bui",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "Stanford University",
+    "city": "Stanford",
+    "state": "California",
+    "country": "United States",
+    "researchAreas": [
+      "Sarcoma",
+      "Medical Oncology",
+      "Gastrointestinal Stromal Tumors"
+    ],
+    "track": "Clinical",
+    "department": "Medicine, Oncology (Stanford Cancer Institute)",
+    "rank": "Clinical Associate Professor",
+    "mdInstitution": "University of Texas Southwestern Medical Center",
+    "mdYear": 2011,
+    "undergradInstitution": "Stanford University",
+    "undergradYear": 2007,
+    "portrait": "portraits/0885-nam-quoc-bui-stanford-university.webp",
+    "portraitSource": "https://profiles.stanford.edu/proxy/api/cap/profiles/170268/resources/profilephoto/350x350.1509531326696.jpg"
+  },
+  {
+    "id": "vp-0886",
+    "name": "Hanh Nguyen",
+    "profileUrl": "https://somnews.ucr.edu/articles/2024/09/05/nguyen-named-associate-dean-career-advising",
+    "lastUpdatedAt": "2026-08-30T14:05:30.000Z",
+    "university": "University of California, Riverside",
+    "city": "Riverside",
+    "state": "California",
+    "country": "United States",
+    "researchAreas": [
+      "Family Medicine",
+      "Medical Education"
+    ],
+    "track": "Clinical",
+    "department": "Family Medicine",
+    "rank": "Clinical Professor",
+    "mdInstitution": "Virginia Commonwealth University School of Medicine",
+    "undergradInstitution": "Creighton University",
+    "portrait": "portraits/0886-hanh-nguyen-university-of-california-riverside.webp",
+    "portraitSource": "https://somnews.ucr.edu/sites/default/files/2024-09/nguyen_banner.png"
+  },
+  {
+    "id": "vp-0887",
+    "name": "Thien H. Nguyen",
+    "profileUrl": "https://medschool.kp.org/faculty/members/thien-h-nguyen",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "Kaiser Permanente Bernard J. Tyson School of Medicine",
+    "city": "Pasadena",
+    "state": "California",
+    "country": "United States",
+    "researchAreas": [
+      "Emergency Medicine"
+    ],
+    "track": "Clinical",
+    "department": "Clinical Science",
+    "rank": "Clinical Assistant Professor",
+    "portrait": "portraits/0887-thien-h-nguyen-kaiser-permanente-bernard-j-tyson-school-of-medicine.webp",
+    "portraitSource": "https://medschool.kp.org/content/dam/kp/som/homepage/faculty/members/Nguyen_Thien%20H-960x960.jpg"
+  },
+  {
+    "id": "vp-0888",
+    "name": "Monika Dao Nguyen",
+    "profileUrl": "https://medschool.kp.org/faculty/members/monika-dao-nguyen",
+    "lastUpdatedAt": "2026-08-30T06:18:26.947Z",
+    "university": "Kaiser Permanente Bernard J. Tyson School of Medicine",
+    "city": "Pasadena",
+    "state": "California",
+    "country": "United States",
+    "researchAreas": [
+      "Family Medicine"
+    ],
+    "track": "Clinical",
+    "department": "Clinical Science",
+    "rank": "Clinical Assistant Professor",
+    "mdInstitution": "Virginia Commonwealth University School of Medicine",
+    "mdYear": 2012
+  },
+  {
+    "id": "vp-0889",
+    "name": "Nathan K. Nguyen",
+    "profileUrl": "https://medschool.kp.org/faculty/members/nathan-k-nguyen",
+    "lastUpdatedAt": "2026-08-30T06:18:26.947Z",
+    "university": "Kaiser Permanente Bernard J. Tyson School of Medicine",
+    "city": "Pasadena",
+    "state": "California",
+    "country": "United States",
+    "researchAreas": [
+      "Critical Care Medicine",
+      "Internal Medicine"
+    ],
+    "track": "Clinical",
+    "department": "Clinical Science",
+    "rank": "Clinical Assistant Professor",
+    "mdInstitution": "SUNY Upstate Medical University",
+    "mdYear": 2007
+  },
+  {
+    "id": "vp-0890",
+    "name": "Tina A. Nguyen",
+    "profileUrl": "https://medschool.kp.org/faculty/members/tina-a-nguyen",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "Kaiser Permanente Bernard J. Tyson School of Medicine",
+    "city": "Pasadena",
+    "state": "California",
+    "country": "United States",
+    "researchAreas": [
+      "Emergency Medicine"
+    ],
+    "track": "Clinical",
+    "department": "Clinical Science",
+    "rank": "Clinical Assistant Professor",
+    "portrait": "portraits/0890-tina-a-nguyen-kaiser-permanente-bernard-j-tyson-school-of-medicine.webp",
+    "portraitSource": "https://medschool.kp.org/content/dam/kp/som/homepage/faculty/members/nguyen_tina-960x960.jpg"
+  },
+  {
+    "id": "vp-0891",
+    "name": "Carolyn V. Nguyen",
+    "profileUrl": "https://medschool.kp.org/faculty/members/carolyn-v-nguyen",
+    "lastUpdatedAt": "2026-08-30T06:18:26.947Z",
+    "university": "Kaiser Permanente Bernard J. Tyson School of Medicine",
+    "city": "Pasadena",
+    "state": "California",
+    "country": "United States",
+    "researchAreas": [
+      "Otolaryngology-Head and Neck Surgery"
+    ],
+    "track": "Clinical",
+    "department": "Clinical Science",
+    "rank": "Clinical Assistant Professor",
+    "mdInstitution": "Vanderbilt University School of Medicine",
+    "mdYear": 2005
+  },
+  {
+    "id": "vp-0892",
+    "name": "Andrew C. Nguyen",
+    "profileUrl": "https://medschool.kp.org/faculty/members/andrew-c-nguyen",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "Kaiser Permanente Bernard J. Tyson School of Medicine",
+    "city": "Pasadena",
+    "state": "California",
+    "country": "United States",
+    "researchAreas": [
+      "Emergency Medicine"
+    ],
+    "track": "Clinical",
+    "department": "Clinical Science",
+    "rank": "Clinical Assistant Professor",
+    "otherDegrees": [
+      {
+        "degree": "DO",
+        "institution": "Des Moines University College of Osteopathic Medicine",
+        "source": "https://medschool.kp.org/faculty/members/andrew-c-nguyen"
+      }
+    ],
+    "portrait": "portraits/0892-andrew-c-nguyen-kaiser-permanente-bernard-j-tyson-school-of-medicine.webp",
+    "portraitSource": "https://medschool.kp.org/content/dam/kp/som/homepage/faculty/members/nguyen_andrew-960x960.jpg"
+  },
+  {
+    "id": "vp-0893",
+    "name": "Harrison B. Nguyen",
+    "profileUrl": "https://medschool.kp.org/faculty/members/harrison-b-nguyen",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "Kaiser Permanente Bernard J. Tyson School of Medicine",
+    "city": "Pasadena",
+    "state": "California",
+    "country": "United States",
+    "researchAreas": [
+      "Psychiatry"
+    ],
+    "track": "Clinical",
+    "department": "Clinical Science",
+    "rank": "Clinical Assistant Professor",
+    "mdInstitution": "Texas A&M University Health Science Center College of Medicine",
+    "mdYear": 2006,
+    "portrait": "portraits/0893-harrison-b-nguyen-kaiser-permanente-bernard-j-tyson-school-of-medicine.webp",
+    "portraitSource": "https://medschool.kp.org/content/dam/kp/som/homepage/faculty/members/nguyen_harrison-960x960.jpg"
+  },
+  {
+    "id": "vp-0894",
+    "name": "Von Ta Nguyen",
+    "profileUrl": "https://medschool.kp.org/faculty/members/von-ta-nguyen",
+    "lastUpdatedAt": "2026-08-30T06:18:26.947Z",
+    "university": "Kaiser Permanente Bernard J. Tyson School of Medicine",
+    "city": "Pasadena",
+    "state": "California",
+    "country": "United States",
+    "researchAreas": [
+      "Allergy, Asthma and Immunology"
+    ],
+    "track": "Clinical",
+    "department": "Clinical Science",
+    "rank": "Clinical Assistant Professor",
+    "mdInstitution": "Virginia Commonwealth University School of Medicine",
+    "mdYear": 2003
+  },
+  {
+    "id": "vp-0895",
+    "name": "Bich-May Nguyen",
+    "profileUrl": "https://uh.edu/medicine/about/faculty/bich-may-nguyen/index.php",
+    "lastUpdatedAt": "2026-08-30T06:19:45.776Z",
+    "university": "University of Houston",
+    "city": "Houston",
+    "state": "Texas",
+    "country": "United States",
+    "researchAreas": [
+      "Family Medicine",
+      "Women's Health",
+      "Health Policy"
+    ],
+    "track": "Clinical",
+    "department": "Health Systems and Population Health Sciences",
+    "rank": "Clinical Associate Professor",
+    "mdInstitution": "Baylor College of Medicine",
+    "undergradInstitution": "University of Houston"
+  },
+  {
+    "id": "vp-0896",
+    "name": "Thanh Tran - University of South Carolina",
+    "profileUrl": "https://sc.edu/study/colleges_schools/medicine_greenville/about/faculty/",
+    "lastUpdatedAt": "2026-08-30T06:21:58.014Z",
+    "university": "University of South Carolina School of Medicine Greenville",
+    "city": "Greenville",
+    "state": "South Carolina",
+    "country": "United States",
+    "researchAreas": [
+      "Internal Medicine"
+    ],
+    "track": "Clinical",
+    "department": "Medicine",
+    "rank": "Clinical Assistant Professor",
+    "mdInstitution": "Medical University of South Carolina"
+  },
+  {
+    "id": "vp-0897",
+    "name": "Ngoc Lien Minh Nguyen",
+    "profileUrl": "https://sc.edu/study/colleges_schools/medicine_greenville/about/faculty/facultydir/pf2081fe0467b5e9717884a845c788c198",
+    "lastUpdatedAt": "2026-08-30T06:21:58.014Z",
+    "university": "University of South Carolina School of Medicine Greenville",
+    "city": "Greenville",
+    "state": "South Carolina",
+    "country": "United States",
+    "researchAreas": [
+      "Family Medicine"
+    ],
+    "track": "Clinical",
+    "department": "Family Medicine",
+    "rank": "Clinical Assistant Professor",
+    "mdInstitution": "University of South Carolina School of Medicine",
+    "mdYear": 2013
+  },
+  {
+    "id": "vp-0898",
+    "name": "Minh Vu",
+    "profileUrl": "https://med.stanford.edu/ctsurgery/about-the-department/news/2025/department-welcomes-dr-minh-vu-as-clinical-assistant-professor.html",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "Stanford University",
+    "city": "Stanford",
+    "state": "California",
+    "country": "United States",
+    "researchAreas": [
+      "Cardiothoracic Surgery",
+      "Robotic and Minimally Invasive Cardiac Surgery"
+    ],
+    "track": "Clinical",
+    "department": "Cardiothoracic Surgery",
+    "rank": "Clinical Assistant Professor",
+    "mdInstitution": "Université de Montréal",
+    "portrait": "portraits/0898-minh-vu-stanford-university.webp",
+    "portraitSource": "https://med.stanford.edu/ctsurgery/about-the-department/news/2025/department-welcomes-dr-minh-vu-as-clinical-assistant-professor/_jcr_content/main/panel_builder_232712014/panel_1/image_605453478.img.620.high.jpg/minh-vu.jpg"
+  },
+  {
+    "id": "vp-0899",
+    "name": "Hai Hiep Hoang",
+    "profileUrl": "https://weillcornell.org/hai-hiep-hoang-md",
+    "lastUpdatedAt": "2026-08-30T13:58:40.000Z",
+    "university": "Weill Cornell Medicine",
+    "city": "New York",
+    "state": "New York",
+    "country": "United States",
+    "researchAreas": [
+      "Neurology",
+      "Neuroinfectious Disease",
+      "Neuroimmunology"
+    ],
+    "track": "Clinical",
+    "department": "Neurology",
+    "rank": "Assistant Professor of Clinical Neurology",
+    "mdInstitution": "Texas A&M University Medical School",
+    "mdYear": 2015,
+    "undergradInstitution": "University of Texas at Austin",
+    "undergradYear": 2010,
+    "portrait": "portraits/0899-hai-hiep-hoang-weill-cornell-medicine.webp",
+    "portraitSource": "https://images.med.cornell.edu/headshots/hhh9006.jpg?880a7e532d"
+  },
+  {
+    "id": "vp-0900",
+    "name": "Kim Hoang",
+    "profileUrl": "https://med.stanford.edu/profiles/178804",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "Stanford University",
+    "city": "Stanford",
+    "state": "California",
+    "country": "United States",
+    "researchAreas": [
+      "Pediatric Hospital Medicine",
+      "Medical Education"
+    ],
+    "track": "Clinical",
+    "department": "Pediatrics, Hospital Medicine",
+    "rank": "Clinical Associate Professor",
+    "mdInstitution": "University of Texas Southwestern Medical School",
+    "portrait": "portraits/0900-kim-hoang-stanford-university.webp",
+    "portraitSource": "https://med.stanford.edu/services/api/cap/profiles/photocache.178804.jpg"
+  },
+  {
+    "id": "vp-0901",
+    "name": "Tuan Mai",
+    "profileUrl": "https://keck.usc.edu/faculty-search/tuan-mai/",
+    "lastUpdatedAt": "2026-08-30T06:23:15.936Z",
+    "university": "University of Southern California",
+    "city": "Los Angeles",
+    "state": "California",
+    "country": "United States",
+    "researchAreas": [
+      "Anesthesiology",
+      "Critical Care Medicine"
+    ],
+    "track": "Clinical",
+    "department": "Anesthesiology",
+    "rank": "Clinical Assistant Professor",
+    "mdInstitution": "Tufts University School of Medicine"
+  },
+  {
+    "id": "vp-0902",
+    "name": "Phuong Khuu",
+    "profileUrl": "https://profiles.stanford.edu/phuong-khuu",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "Stanford University",
+    "city": "Stanford",
+    "state": "California",
+    "country": "United States",
+    "researchAreas": [
+      "Dermatology",
+      "Pediatric Dermatology"
+    ],
+    "track": "Clinical",
+    "department": "Dermatology",
+    "rank": "Clinical Assistant Professor",
+    "mdInstitution": "University of California, San Francisco",
+    "mdYear": 2002,
+    "portrait": "portraits/0902-phuong-khuu-stanford-university.webp",
+    "portraitSource": "https://profiles.stanford.edu/proxy/api/cap/profiles/20991/resources/profilephoto/350x350.1509513276271.jpg"
+  },
+  {
+    "id": "vp-0903",
+    "name": "Phuong Le",
+    "profileUrl": "https://profiles.stanford.edu/350256",
+    "lastUpdatedAt": "2026-08-30T06:23:15.936Z",
+    "university": "Stanford University",
+    "city": "Stanford",
+    "state": "California",
+    "country": "United States",
+    "researchAreas": [
+      "Internal Medicine"
+    ],
+    "track": "Clinical",
+    "department": "Medicine",
+    "rank": "Clinical Assistant Professor",
+    "mdInstitution": "Washington University School of Medicine",
+    "mdYear": 2018
+  },
+  {
+    "id": "vp-0904",
+    "name": "Phuong-Chi Pham",
+    "profileUrl": "https://uclaoliveview.org/nephrology/our-team/faculty/phuong-chi-pham/",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "University of California, Los Angeles",
+    "city": "Los Angeles",
+    "state": "California",
+    "country": "United States",
+    "researchAreas": [
+      "Nephrology",
+      "Kidney Transplantation",
+      "Sodium Disorders"
+    ],
+    "track": "Clinical",
+    "department": "Medicine, Nephrology",
+    "rank": "Clinical Professor",
+    "mdInstitution": "University of California, Davis",
+    "undergradInstitution": "Stanford University",
+    "portrait": "portraits/0904-phuong-chi-pham-university-of-california-los-angeles.webp",
+    "portraitSource": "https://uclaoliveview.org/nephrology/wp-content/uploads/2026/06/Chi-Pham-copy-236x300.jpeg"
+  },
+  {
+    "id": "vp-0905",
+    "name": "Tony Tuan H. Nguyen",
+    "profileUrl": "https://medschool.kp.org/faculty/members/tony-tuan-h-nguyen",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "Kaiser Permanente Bernard J. Tyson School of Medicine",
+    "city": "Pasadena",
+    "state": "California",
+    "country": "United States",
+    "researchAreas": [
+      "Anesthesiology"
+    ],
+    "track": "Clinical",
+    "department": "Clinical Science",
+    "rank": "Clinical Assistant Professor",
+    "portrait": "portraits/0905-tony-tuan-h-nguyen-kaiser-permanente-bernard-j-tyson-school-of-medicine.webp",
+    "portraitSource": "https://medschool.kp.org/content/dam/kp/som/homepage/faculty/members/nguyen_tonytuan-960x960.jpg"
+  },
+  {
+    "id": "vp-0906",
+    "name": "Ngoc M. Nguyen-Famulare",
+    "profileUrl": "https://nyulangone.org/doctors/1578523965/ngoc-m-nguyen-famulare",
+    "lastUpdatedAt": "2026-08-30T06:25:12.056Z",
+    "university": "New York University",
+    "city": "Mineola",
+    "state": "New York",
+    "country": "United States",
+    "researchAreas": [
+      "Anesthesiology",
+      "Pediatric Anesthesiology"
+    ],
+    "track": "Clinical",
+    "department": "Anesthesiology, Perioperative Care, and Pain Medicine, NYU Grossman Long Island School of Medicine",
+    "rank": "Clinical Assistant Professor"
+  },
+  {
+    "id": "vp-0907",
+    "name": "Ngoc Nguyen - Yale University",
+    "profileUrl": "https://medicine.yale.edu/profile/ngoc-nguyen/",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "Yale University",
+    "city": "New Haven",
+    "state": "Connecticut",
+    "country": "United States",
+    "researchAreas": [
+      "Therapeutic Radiology",
+      "Medical Physics"
+    ],
+    "track": "Clinical",
+    "department": "Therapeutic Radiology",
+    "rank": "Assistant Clinical Professor",
+    "phdInstitution": "Michigan State University",
+    "phdYear": 2013,
+    "undergradInstitution": "Vietnam National University",
+    "undergradYear": 2006,
+    "portrait": "portraits/0907-ngoc-nguyen-yale-university.webp",
+    "portraitSource": "https://ysm-res.cloudinary.com/image/upload/c_limit,f_jpg,h_630,q_auto,w_1200/v1/yms/prod/9f0e64ec-9a6e-4c48-b6ab-a32a4e458d99"
+  },
+  {
+    "id": "vp-0908",
+    "name": "Eddie Quan",
+    "profileUrl": "https://www.pediatrics.uci.edu/faculty-general-pediatrics.asp",
+    "lastUpdatedAt": "2026-08-30T06:25:12.056Z",
+    "university": "University of California, Irvine",
+    "city": "Irvine",
+    "state": "California",
+    "country": "United States",
+    "researchAreas": [
+      "Pediatrics"
+    ],
+    "track": "Clinical",
+    "department": "Pediatrics",
+    "rank": "Assistant Clinical Professor",
+    "mdInstitution": "University of California, San Diego",
+    "undergradInstitution": "University of California, Los Angeles"
+  },
+  {
+    "id": "vp-0909",
+    "name": "Thanh T. Van",
+    "profileUrl": "https://directory.uthscsa.edu/academics/profile/VanT",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "University of Texas Health Science Center at San Antonio",
+    "city": "San Antonio",
+    "state": "Texas",
+    "country": "United States",
+    "researchAreas": [
+      "Breast Radiology",
+      "Oncologic Imaging"
+    ],
+    "track": "Clinical",
+    "department": "Radiology",
+    "rank": "Assistant Professor/Clinical",
+    "mdInstitution": "Baylor College of Medicine",
+    "undergradInstitution": "Southwestern University",
+    "portrait": "portraits/0909-thanh-t-van-university-of-texas-health-science-center-at-san-antonio.webp",
+    "portraitSource": "https://directory.uthscsa.edu/sites/directory/files/van_2.jpg"
+  },
+  {
+    "id": "vp-0910",
+    "name": "Nam X. Nguyen",
+    "profileUrl": "https://keck.usc.edu/faculty-search/nam-x-nguyen/",
+    "lastUpdatedAt": "2026-08-30T06:26:56.928Z",
+    "university": "University of Southern California",
+    "city": "Los Angeles",
+    "state": "California",
+    "country": "United States",
+    "researchAreas": [
+      "Pediatric Surgery",
+      "General Surgery",
+      "Minimally Invasive Surgery"
+    ],
+    "track": "Clinical",
+    "department": "Surgery",
+    "rank": "Clinical Professor of Surgery",
+    "mdInstitution": "Creighton University School of Medicine"
+  },
+  {
+    "id": "vp-0911",
+    "name": "Andrew Dinh",
+    "profileUrl": "https://profiles.stanford.edu/andrew-dinh",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "Stanford University",
+    "city": "Stanford",
+    "state": "California",
+    "country": "United States",
+    "researchAreas": [
+      "Anesthesiology",
+      "Pediatric Anesthesia",
+      "Pediatric Pain Medicine"
+    ],
+    "track": "Clinical",
+    "department": "Anesthesiology, Perioperative and Pain Medicine",
+    "rank": "Clinical Assistant Professor",
+    "mdInstitution": "Texas Tech University Health Sciences Center School of Medicine",
+    "mdYear": 2015,
+    "portrait": "portraits/0911-andrew-dinh-stanford-university.webp",
+    "portraitSource": "https://profiles.stanford.edu/proxy/api/cap/profiles/219152/resources/profilephoto/350x350.1709324292653.jpg"
+  },
+  {
+    "id": "vp-0912",
+    "name": "Linh T. Dinh",
+    "profileUrl": "https://nyulangone.org/doctors/1225043029/linh-t-dinh",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "New York University",
+    "city": "New York",
+    "state": "New York",
+    "country": "United States",
+    "researchAreas": [
+      "Internal Medicine",
+      "Lifestyle Medicine"
+    ],
+    "track": "Clinical",
+    "department": "Medicine",
+    "rank": "Clinical Assistant Professor",
+    "mdInstitution": "Albert Einstein College of Medicine",
+    "mdYear": 2000,
+    "portrait": "portraits/0912-linh-t-dinh-new-york-university.webp",
+    "portraitSource": "https://nyulangone.org/images/doctors/d/dinh/1225043029/linh-t-dinh-square.jpg"
+  },
+  {
+    "id": "vp-0913",
+    "name": "Julie Ngoc Thai",
+    "profileUrl": "https://med.stanford.edu/profiles/303474",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "Stanford University",
+    "city": "Stanford",
+    "state": "California",
+    "country": "United States",
+    "researchAreas": [
+      "Geriatric Medicine",
+      "Family Medicine",
+      "Population Health"
+    ],
+    "track": "Clinical",
+    "department": "Medicine, Primary Care and Population Health",
+    "rank": "Clinical Assistant Professor",
+    "mdInstitution": "Michigan State University College of Human Medicine",
+    "portrait": "portraits/0913-julie-ngoc-thai-stanford-university.webp",
+    "portraitSource": "https://med.stanford.edu/services/api/cap/profiles/photocache.303474.jpg"
+  },
+  {
+    "id": "vp-0914",
+    "name": "Quoc-Anh Thai",
+    "profileUrl": "https://scholars.houstonmethodist.org/en/persons/quoc-anh-thai/",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "Weill Cornell Medicine",
+    "city": "Houston",
+    "state": "Texas",
+    "country": "United States",
+    "researchAreas": [
+      "Neurological Surgery"
+    ],
+    "track": "Clinical",
+    "department": "Neurosurgery",
+    "rank": "Assistant Professor of Clinical Neurosurgery",
+    "mdInstitution": "Johns Hopkins University School of Medicine",
+    "portrait": "portraits/0914-quoc-anh-thai-weill-cornell-medicine.webp",
+    "portraitSource": "https://scholars.houstonmethodist.org/files-asset/82523239/thai_quocanh.jpg/"
+  },
+  {
+    "id": "vp-0915",
+    "name": "Hieu M. Doan",
+    "profileUrl": "https://www.kumc.edu/hdoan.html",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "University of Kansas",
+    "city": "Kansas City",
+    "state": "Kansas",
+    "country": "United States",
+    "researchAreas": [
+      "Hospital Medicine",
+      "Geriatric Medicine"
+    ],
+    "track": "Clinical",
+    "department": "Internal Medicine, Hospital Medicine",
+    "rank": "Clinical Assistant Professor",
+    "mdInstitution": "University of Kansas School of Medicine",
+    "undergradInstitution": "Kansas State University",
+    "portrait": "portraits/0915-hieu-m-doan-university-of-kansas.webp",
+    "portraitSource": "https://www.kumc.edu/images/_faculty/doan-hieu.jpg"
+  },
+  {
+    "id": "vp-0916",
+    "name": "Truc-Anh Nguyen",
+    "profileUrl": "https://medicine.arizona.edu/person/truc-anh-nguyen-md",
+    "lastUpdatedAt": "2026-08-30T13:58:40.000Z",
+    "university": "University of Arizona",
+    "city": "Tucson",
+    "state": "Arizona",
+    "country": "United States",
+    "researchAreas": [
+      "Anesthesiology",
+      "Obstetric Anesthesia"
+    ],
+    "track": "Clinical",
+    "department": "Anesthesiology",
+    "rank": "Associate Clinical Professor",
+    "portrait": "portraits/0916-truc-anh-nguyen-university-of-arizona.webp",
+    "portraitSource": "https://medicine.arizona.edu/sites/default/files/2023-10/201906675-nguyen-truc-anh-17_0.jpg"
+  },
+  {
+    "id": "vp-0917",
+    "name": "Anh T. Pham",
+    "profileUrl": "https://u-aizu.ac.jp/research/faculty/detail?cd=90042&lng=en",
+    "websiteUrl": "https://www.u-aizu.ac.jp/labs/ce-cc/",
+    "scholarUrl": "https://scholar.google.com/citations?user=u_36lx4AAAAJ",
+    "lastUpdatedAt": "2026-08-30T12:22:47.991Z",
+    "university": "The University of Aizu",
+    "city": "Aizuwakamatsu",
+    "country": "Japan",
+    "researchAreas": [
+      "Communication Networks",
+      "Free-Space Optics",
+      "Visible Light Communications",
+      "Quantum Key Distribution"
+    ],
+    "track": "Tenure-line",
+    "department": "Department of Computer Science and Engineering",
+    "rank": "Professor",
+    "phdYear": 2005,
+    "phdInstitution": "Saitama University",
+    "msInstitution": "Hanoi University of Science and Technology",
+    "msYear": 2000,
+    "undergradInstitution": "Hanoi University of Science and Technology",
+    "undergradYear": 1997,
+    "portrait": "portraits/864-anh-t-pham-the-university-of-aizu.webp",
+    "portraitSource": "https://u-aizu.ac.jp/upload/user/90042.jpg"
+  },
+  {
+    "id": "vp-0918",
+    "name": "Kien Nguyen",
+    "profileUrl": "https://www.cn.chiba-u.jp/en/researcher/nguyen_kien/",
+    "websiteUrl": "https://www.s-lab.nd.chiba-u.jp/english/",
+    "scholarUrl": "https://scholar.google.com/citations?user=RsfiHOEAAAAJ",
+    "lastUpdatedAt": "2026-08-30T12:22:47.991Z",
+    "university": "Chiba University",
+    "city": "Chiba",
+    "country": "Japan",
+    "researchAreas": [
+      "Internet of Things",
+      "Blockchain",
+      "Software-Defined Networking",
+      "Wireless Communications"
+    ],
+    "track": "Tenure-line",
+    "department": "Graduate School of Informatics",
+    "rank": "Associate Professor",
+    "phdYear": 2012,
+    "phdInstitution": "The Graduate University for Advanced Studies",
+    "undergradInstitution": "Hanoi University of Science and Technology",
+    "undergradYear": 2004,
+    "portrait": "portraits/865-kien-nguyen-chiba-university.webp",
+    "portraitSource": "https://www.cn.chiba-u.jp/wp-content/uploads/2026/01/kien_nguyen320.jpg"
+  },
+  {
+    "id": "vp-0919",
+    "name": "Thanh V. Pham",
+    "profileUrl": "https://tdb.shizuoka.ac.jp/rdb/public/Default2.aspx?id=11326&l=0",
+    "websiteUrl": "https://lete143.wixsite.com/home",
+    "scholarUrl": "https://scholar.google.com/citations?user=c1BIypkAAAAJ",
+    "lastUpdatedAt": "2026-08-30T12:22:47.991Z",
+    "university": "Shizuoka University",
+    "city": "Hamamatsu",
+    "country": "Japan",
+    "researchAreas": [
+      "Optical Wireless Communications",
+      "Visible Light Communications",
+      "Physical Layer Security",
+      "Communication Theory"
+    ],
+    "track": "Tenure-line",
+    "department": "Department of Mathematical and Systems Engineering",
+    "rank": "Associate Professor",
+    "phdYear": 2019,
+    "phdInstitution": "The University of Aizu",
+    "postdocInstitution": "McMaster University",
+    "postdocYear": 2022
+  },
+  {
+    "id": "vp-0920",
+    "name": "Phan Xuan Tan",
+    "profileUrl": "https://www.shibaura-it.ac.jp/en/research/laboratory/00005.html",
+    "websiteUrl": "https://sites.google.com/view/phanxuantan",
+    "scholarUrl": "https://scholar.google.com/citations?user=p0maui4AAAAJ",
+    "lastUpdatedAt": "2026-08-30T12:22:47.991Z",
+    "university": "Shibaura Institute of Technology",
+    "city": "Tokyo",
+    "country": "Japan",
+    "researchAreas": [
+      "Computer Vision",
+      "Machine Learning",
+      "AI Safety",
+      "Visual SLAM"
+    ],
+    "track": "Tenure-line",
+    "department": "College of Engineering, Innovative Global Program",
+    "rank": "Associate Professor",
+    "phdYear": 2018,
+    "phdInstitution": "Shibaura Institute of Technology",
+    "msInstitution": "Hanoi University of Science and Technology",
+    "undergradInstitution": "Le Quy Don Technical University"
+  },
+  {
+    "id": "vp-0921",
+    "name": "Truong Cong Thang",
+    "profileUrl": "https://u-aizu.ac.jp/research/faculty/detail?cd=90043&lng=en",
+    "websiteUrl": "http://www.u-aizu.ac.jp/~thang/",
+    "scholarUrl": "https://scholar.google.com/citations?user=dZEBbx8AAAAJ",
+    "lastUpdatedAt": "2026-08-30T12:22:47.991Z",
+    "university": "The University of Aizu",
+    "city": "Aizuwakamatsu",
+    "country": "Japan",
+    "researchAreas": [
+      "Multimedia Networking",
+      "Adaptive Streaming",
+      "Computer Vision",
+      "Image Processing"
+    ],
+    "track": "Tenure-line",
+    "department": "Department of Computer Science and Engineering",
+    "rank": "Associate Professor",
+    "phdYear": 2006,
+    "phdInstitution": "Korea Advanced Institute of Science and Technology",
+    "undergradInstitution": "Hanoi University of Science and Technology",
+    "undergradYear": 1997,
+    "portrait": "portraits/866-truong-cong-thang-the-university-of-aizu.webp",
+    "portraitSource": "https://u-aizu.ac.jp/upload/user/90043.jpg"
+  },
+  {
+    "id": "vp-0922",
+    "name": "Khanh N. Dang",
+    "profileUrl": "https://u-aizu.ac.jp/research/faculty/detail?cd=90142&lng=en",
+    "websiteUrl": "https://u-aizu.ac.jp/~khanh/",
+    "scholarUrl": "https://scholar.google.com/citations?user=mQbqkUMAAAAJ",
+    "lastUpdatedAt": "2026-08-30T12:22:47.991Z",
+    "university": "The University of Aizu",
+    "city": "Aizuwakamatsu",
+    "country": "Japan",
+    "researchAreas": [
+      "Neuromorphic Computing",
+      "VLSI",
+      "3D Integrated Circuits",
+      "Fault-Tolerant Architectures"
+    ],
+    "track": "Tenure-line",
+    "department": "Department of Computer Science and Engineering",
+    "rank": "Associate Professor",
+    "phdYear": 2017,
+    "phdInstitution": "The University of Aizu",
+    "msInstitution": "University of Paris-XI",
+    "msYear": 2014,
+    "undergradInstitution": "Vietnam National University",
+    "undergradYear": 2011,
+    "portrait": "portraits/867-khanh-n-dang-the-university-of-aizu.webp",
+    "portraitSource": "https://u-aizu.ac.jp/upload/user/90142.jpg"
+  },
+  {
+    "id": "vp-0923",
+    "name": "Hoang D. Le",
+    "profileUrl": "https://u-aizu.ac.jp/research/faculty/detail?cd=90154&lng=en",
+    "websiteUrl": "https://u-aizu.ac.jp/~hoangle/",
+    "scholarUrl": "https://scholar.google.com/citations?user=3_oH7I4AAAAJ",
+    "lastUpdatedAt": "2026-08-30T12:22:47.991Z",
+    "university": "The University of Aizu",
+    "city": "Aizuwakamatsu",
+    "country": "Japan",
+    "researchAreas": [
+      "Optical Wireless Communications",
+      "Satellite and UAV Networks",
+      "Quantum Key Distribution",
+      "Applied Machine Learning"
+    ],
+    "track": "Tenure-line",
+    "department": "Department of Computer Science and Engineering",
+    "rank": "Associate Professor",
+    "phdYear": 2021,
+    "phdInstitution": "The University of Aizu",
+    "msInstitution": "The University of Aizu",
+    "msYear": 2018,
+    "undergradInstitution": "Hanoi University of Science and Technology",
+    "undergradYear": 2016,
+    "postdocInstitution": "The University of Aizu",
+    "postdocYear": 2023,
+    "portrait": "portraits/868-hoang-d-le-the-university-of-aizu.webp",
+    "portraitSource": "https://u-aizu.ac.jp/upload/user/90154.jpg"
+  },
+  {
+    "id": "vp-0924",
+    "name": "Dai Hai Nguyen",
+    "profileUrl": "https://www.csit.ist.hokudai.ac.jp/en/news/new-faculty-associate-professor-dr-nguyen-dai-hai.html",
+    "websiteUrl": "https://sites.google.com/view/daihnguyen0909/",
+    "lastUpdatedAt": "2026-08-30T12:45:00.000Z",
+    "university": "Hokkaido University",
+    "city": "Sapporo",
+    "country": "Japan",
+    "researchAreas": [
+      "Machine Learning",
+      "Optimal Transport",
+      "Graph Structured Data",
+      "Bioinformatics"
+    ],
+    "track": "Tenure-line",
+    "department": "Graduate School of Information Science and Technology",
+    "rank": "Associate Professor",
+    "phdYear": 2020,
+    "phdInstitution": "Kyoto University",
+    "undergradInstitution": "Hanoi University of Science and Technology",
+    "undergradYear": 2013,
+    "postdocInstitution": "The University of Tokyo",
+    "postdocYear": 2022
+  },
+  {
+    "id": "vp-0925",
+    "name": "Thong Pham",
+    "profileUrl": "https://www.sanken.osaka-u.ac.jp/en/organization/fir/fir05.html",
+    "websiteUrl": "https://thongpham.net/",
+    "lastUpdatedAt": "2026-08-30T12:45:00.000Z",
+    "university": "Osaka University",
+    "city": "Ibaraki",
+    "country": "Japan",
+    "researchAreas": [
+      "Causal Discovery",
+      "Statistical Machine Learning",
+      "Complex Networks"
+    ],
+    "track": "Tenure-line",
+    "department": "SANKEN, Department of Reasoning for Intelligence",
+    "rank": "Associate Professor",
+    "phdYear": 2017,
+    "phdInstitution": "Osaka University",
+    "msInstitution": "Tokyo Institute of Technology",
+    "msYear": 2014,
+    "undergradInstitution": "Ritsumeikan University",
+    "undergradYear": 2012
+  },
+  {
+    "id": "vp-0926",
+    "name": "Tran Thi Hong",
+    "profileUrl": "https://kyoiku-kenkyudb.omu.ac.jp/html/100001108_en.html",
+    "lastUpdatedAt": "2026-08-30T12:45:00.000Z",
+    "university": "Osaka Metropolitan University",
+    "city": "Osaka",
+    "country": "Japan",
+    "researchAreas": [
+      "Digital Hardware Design",
+      "Cryptography",
+      "Blockchain",
+      "Information Security"
+    ],
+    "track": "Tenure-line",
+    "department": "Graduate School of Informatics",
+    "rank": "Associate Professor",
+    "phdYear": 2014,
+    "phdInstitution": "Kyushu Institute of Technology",
+    "msInstitution": "Vietnam National University Ho Chi Minh City, University of Science",
+    "msYear": 2012,
+    "undergradInstitution": "Vietnam National University Ho Chi Minh City, University of Science",
+    "undergradYear": 2008
+  },
+  {
+    "id": "vp-0927",
+    "name": "Van Anh Ho",
+    "profileUrl": "https://fp.jaist.ac.jp/public/Default2.aspx?id=669&l=1",
+    "lastUpdatedAt": "2026-08-30T12:45:00.000Z",
+    "university": "Japan Advanced Institute of Science and Technology",
+    "city": "Nomi",
+    "country": "Japan",
+    "researchAreas": [
+      "Soft Robotics",
+      "Tactile Sensing",
+      "Embodied Intelligence"
+    ],
+    "track": "Tenure-line",
+    "department": "School of Information Science",
+    "rank": "Professor",
+    "phdYear": 2012,
+    "phdInstitution": "Ritsumeikan University",
+    "msInstitution": "Ritsumeikan University",
+    "msYear": 2009
+  },
+  {
+    "id": "vp-0928",
+    "name": "Hieu Chi Dam",
+    "profileUrl": "https://www.jaist.ac.jp/profiles/info_e.php?profile_id=417",
+    "lastUpdatedAt": "2026-08-30T12:45:00.000Z",
+    "university": "Japan Advanced Institute of Science and Technology",
+    "city": "Nomi",
+    "country": "Japan",
+    "researchAreas": [
+      "Materials Informatics",
+      "Data Mining",
+      "Data-Driven AI"
+    ],
+    "track": "Tenure-line",
+    "department": "School of Knowledge Science",
+    "rank": "Professor",
+    "phdYear": 2003,
+    "phdInstitution": "Japan Advanced Institute of Science and Technology",
+    "msInstitution": "Japan Advanced Institute of Science and Technology",
+    "msYear": 2000,
+    "undergradInstitution": "The University of Tokyo",
+    "undergradYear": 1998
+  },
+  {
+    "id": "vp-0929",
+    "name": "Nhan Huu Nguyen",
+    "profileUrl": "https://fp.jaist.ac.jp/public/Default2.aspx?id=766&l=1",
+    "websiteUrl": "https://www.jaist.ac.jp/english/laboratory/aiw/nhnhan.html",
+    "lastUpdatedAt": "2026-08-30T12:45:00.000Z",
+    "university": "Japan Advanced Institute of Science and Technology",
+    "city": "Nomi",
+    "country": "Japan",
+    "researchAreas": [
+      "Soft Robotics",
+      "Tactile Sensing",
+      "Embodied Intelligence"
+    ],
+    "track": "Tenure-line",
+    "department": "School of Information Science",
+    "rank": "Assistant Professor",
+    "phdInstitution": "Japan Advanced Institute of Science and Technology"
+  },
+  {
+    "id": "vp-0930",
+    "name": "Canh Minh Do",
+    "profileUrl": "https://fp.jaist.ac.jp/public/Default2.aspx?id=764&l=1",
+    "websiteUrl": "https://www.jaist.ac.jp/english/laboratory/cs/canhdo.html",
+    "lastUpdatedAt": "2026-08-30T12:45:00.000Z",
+    "university": "Japan Advanced Institute of Science and Technology",
+    "city": "Nomi",
+    "country": "Japan",
+    "researchAreas": [
+      "Formal Methods",
+      "Model Checking",
+      "Quantum Computing",
+      "Software Verification"
+    ],
+    "track": "Tenure-line",
+    "department": "School of Information Science",
+    "rank": "Assistant Professor",
+    "phdInstitution": "Japan Advanced Institute of Science and Technology",
+    "msInstitution": "Japan Advanced Institute of Science and Technology"
+  },
+  {
+    "id": "vp-0931",
+    "name": "Vu Duc Tran",
+    "profileUrl": "https://fp.jaist.ac.jp/public/Default2.aspx?id=787&l=1",
+    "websiteUrl": "https://www.jaist.ac.jp/english/laboratory/cs/vu-tran.html",
+    "lastUpdatedAt": "2026-08-30T12:45:00.000Z",
+    "university": "Japan Advanced Institute of Science and Technology",
+    "city": "Nomi",
+    "country": "Japan",
+    "researchAreas": [
+      "Natural Language Processing",
+      "Generative AI",
+      "Legal Engineering",
+      "Machine Learning"
+    ],
+    "track": "Tenure-line",
+    "department": "School of Information Science",
+    "rank": "Assistant Professor",
+    "phdInstitution": "Japan Advanced Institute of Science and Technology"
+  },
+  {
+    "id": "vp-0932",
+    "name": "Hoai Luan Pham",
+    "profileUrl": "https://naistpedia.naist.jp/researchers/detail/347",
+    "websiteUrl": "https://isw3.naist.jp/Research/cs-arch-en.html",
+    "lastUpdatedAt": "2026-08-30T12:45:00.000Z",
+    "university": "Nara Institute of Science and Technology",
+    "city": "Ikoma",
+    "country": "Japan",
+    "researchAreas": [
+      "Computer Architecture",
+      "Cryptographic Hardware",
+      "Blockchain Accelerators",
+      "FPGA"
+    ],
+    "track": "Tenure-line",
+    "department": "Division of Information Science",
+    "rank": "Assistant Professor",
+    "phdInstitution": "Nara Institute of Science and Technology",
+    "msInstitution": "Nara Institute of Science and Technology",
+    "undergradInstitution": "Vietnam National University Ho Chi Minh City, University of Information Technology"
+  },
+  {
+    "id": "vp-0933",
+    "name": "Vu Trung Duong Le",
+    "profileUrl": "https://naistpedia.naist.jp/researchers/detail/410",
+    "websiteUrl": "https://isw3.naist.jp/Research/cs-arch-en.html",
+    "lastUpdatedAt": "2026-08-30T12:45:00.000Z",
+    "university": "Nara Institute of Science and Technology",
+    "city": "Ikoma",
+    "country": "Japan",
+    "researchAreas": [
+      "Computer Architecture",
+      "Cryptographic Accelerators",
+      "Reconfigurable Computing"
+    ],
+    "track": "Tenure-line",
+    "department": "Division of Information Science",
+    "rank": "Assistant Professor"
+  },
+  {
+    "id": "vp-0934",
+    "portrait": "portraits/0934-tyler-nguyen-indiana-university-school-of-medicine.webp",
+    "portraitSource": "https://mc-34647c8d-0ad3-4e6c-832a-7092-cdn.azureedge.net/-/media/project/facultyprofileimages/2023/06/23/09/19/18189-tyler-nguyen.webp?rev=86ad7667e7a74d628af273c61eeb7ef6",
+    "name": "Tyler Nguyen",
+    "profileUrl": "https://medicine.iu.edu/faculty/18189/nguyen-tyler",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "Indiana University School of Medicine",
+    "city": "Indianapolis",
+    "state": "Indiana",
+    "country": "United States",
+    "researchAreas": [
+      "Translational Pain Research",
+      "Neuroinflammation",
+      "Chronic Pain",
+      "Traumatic Brain Injury"
+    ],
+    "track": "Research",
+    "department": "Anesthesia",
+    "rank": "Assistant Research Professor of Anesthesia",
+    "phdInstitution": "Indiana University",
+    "phdYear": 2020,
+    "msInstitution": "Indiana University",
+    "msYear": 2017,
+    "undergradInstitution": "Purdue University",
+    "undergradYear": 2012,
+    "postdocInstitution": "Indiana University School of Medicine"
+  },
+  {
+    "id": "vp-0935",
+    "portrait": "portraits/0935-chi-mai-nguyen-indiana-university-school-of-medicine.webp",
+    "portraitSource": "https://mc-34647c8d-0ad3-4e6c-832a-7092-cdn.azureedge.net/-/media/project/facultyprofileimages/2022/11/07/06/22/61254-chi-nguyen.webp?rev=e2d7c237681c47308bdbd999b87fd2ed",
+    "name": "Chi Mai Nguyen",
+    "profileUrl": "https://medicine.iu.edu/faculty/61254/nguyen-chi",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "Indiana University School of Medicine",
+    "city": "Indianapolis",
+    "state": "Indiana",
+    "country": "United States",
+    "researchAreas": [
+      "Biostatistics",
+      "Real-World Evidence",
+      "Health Services Research",
+      "Health Disparities"
+    ],
+    "track": "Research",
+    "department": "Biostatistics and Health Data Science",
+    "rank": "Assistant Research Professor of Biostatistics & Health Data Science",
+    "phdInstitution": "Indiana University",
+    "phdYear": 2010,
+    "msInstitution": "Central Michigan University",
+    "msYear": 2004,
+    "undergradInstitution": "Foreign Trade University",
+    "undergradYear": 2001
+  },
+  {
+    "id": "vp-0936",
+    "name": "Paul C. Dinh",
+    "profileUrl": "https://medicine.iu.edu/faculty/27262/dinh-paul",
+    "lastUpdatedAt": "2026-08-30T13:42:57.000Z",
+    "university": "Indiana University School of Medicine",
+    "city": "Indianapolis",
+    "state": "Indiana",
+    "country": "United States",
+    "researchAreas": [
+      "Cancer Survivorship",
+      "Treatment-Related Ototoxicity",
+      "Pharmacogenomics"
+    ],
+    "track": "Research",
+    "department": "Medicine",
+    "rank": "Assistant Research Professor of Medicine",
+    "phdInstitution": "Indiana University",
+    "phdYear": 2020,
+    "msInstitution": "University of Michigan",
+    "msYear": 2011,
+    "undergradInstitution": "University of Michigan",
+    "undergradYear": 2009,
+    "otherDegrees": [
+      {
+        "degree": "MPH",
+        "institution": "University of Michigan",
+        "year": 2013,
+        "source": "https://medicine.iu.edu/faculty/27262/dinh-paul"
+      }
+    ]
+  },
+  {
+    "id": "vp-0937",
+    "portrait": "portraits/0937-annalee-nguyen-the-university-of-texas-at-austin.webp",
+    "portraitSource": "https://che.utexas.edu/wp-content/uploads/faculty/2023_ANNIE%20NGUYEN_3.jpg",
+    "name": "Annalee Nguyen",
+    "profileUrl": "https://che.utexas.edu/person/annalee-nguyen/",
+    "scholarUrl": "https://scholar.google.com/citations?hl=en&oi=ao&user=LAqJ5LMAAAAJ",
+    "lastUpdatedAt": "2026-08-30T13:58:40.000Z",
+    "university": "The University of Texas at Austin",
+    "city": "Austin",
+    "state": "Texas",
+    "country": "United States",
+    "researchAreas": [
+      "Bioengineering",
+      "Protein Therapeutics",
+      "Antibody Engineering"
+    ],
+    "track": "Research",
+    "department": "Chemical Engineering",
+    "rank": "Research Assistant Professor",
+    "phdInstitution": "University of California, Santa Barbara",
+    "phdYear": 2006,
+    "undergradInstitution": "The University of Texas at Austin",
+    "undergradYear": 2000
+  },
+  {
+    "id": "vp-0938",
+    "portrait": "portraits/0938-van-vo-university-of-nevada-las-vegas.webp",
+    "portraitSource": "https://www.unlv.edu/sites/default/files/media/image/2022-08/Van%20Vo%20headshot.jpg",
+    "name": "Van Vo",
+    "profileUrl": "https://www.unlv.edu/people/van-vo-phd",
+    "lastUpdatedAt": "2026-08-30T13:58:40.000Z",
+    "university": "University of Nevada, Las Vegas",
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "country": "United States",
+    "researchAreas": [
+      "Gene Mutations and Development",
+      "Induced Pluripotent Stem Cells",
+      "Cancer Drug Development",
+      "Wastewater Surveillance"
+    ],
+    "track": "Research",
+    "department": "Nevada Institute of Personalized Medicine",
+    "rank": "Assistant Research Professor"
+  },
+  {
+    "id": "vp-0939",
+    "portrait": "portraits/0939-thanh-lam-nguyen-university-of-florida.webp",
+    "portraitSource": "https://chem.ufl.edu/wp-content/uploads/sites/273/Lam-new-resized.jpg",
+    "name": "Thanh Lam Nguyen",
+    "profileUrl": "https://chem.ufl.edu/people-2/scientists/nguyen-bio/",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "University of Florida",
+    "city": "Gainesville",
+    "state": "Florida",
+    "country": "United States",
+    "researchAreas": [
+      "Chemical Kinetics",
+      "Reaction Dynamics",
+      "Thermochemistry",
+      "Computational Chemistry"
+    ],
+    "track": "Research",
+    "department": "Chemistry",
+    "rank": "Associate Scientist",
+    "phdInstitution": "KU Leuven",
+    "phdYear": 2006
+  },
+  {
+    "id": "vp-0940",
+    "name": "Van Tuan Dinh",
+    "profileUrl": "https://www.hajim.rochester.edu/ece/people/faculty/dinh_van_tuan/index.html",
+    "lastUpdatedAt": "2026-08-30T13:42:57.000Z",
+    "university": "University of Rochester",
+    "city": "Rochester",
+    "state": "New York",
+    "country": "United States",
+    "researchAreas": [
+      "Optical Properties of Two-Dimensional Materials",
+      "Many-Body Effects",
+      "Electron-Phonon Interactions",
+      "Charge and Spin Transport"
+    ],
+    "track": "Research",
+    "department": "Electrical and Computer Engineering",
+    "rank": "Assistant Research Professor, Electrical & Computer Engineering",
+    "phdInstitution": "Autonomous University of Barcelona",
+    "phdYear": 2014
+  },
+  {
+    "id": "vp-0941",
+    "portrait": "portraits/0941-nam-tran-auburn-university.webp",
+    "portraitSource": "https://eng.auburn.edu/research/centers/ncat/images/headshots/tran-nam.jpg",
+    "name": "Nam Tran",
+    "profileUrl": "https://www.eng.auburn.edu/directory/nht0002.html",
+    "lastUpdatedAt": "2026-08-30T14:05:30.000Z",
+    "university": "Auburn University",
+    "city": "Auburn",
+    "state": "Alabama",
+    "country": "United States",
+    "researchAreas": [
+      "Asphalt Materials",
+      "Pavement Design",
+      "Pavement Sustainability",
+      "Pavement Economics"
+    ],
+    "track": "Research",
+    "department": "National Center for Asphalt Technology",
+    "rank": "Research Professor",
+    "phdInstitution": "University of Arkansas",
+    "msInstitution": "University of Arkansas",
+    "undergradInstitution": "National University of Civil Engineering"
+  },
+  {
+    "id": "vp-0942",
+    "portrait": "portraits/0942-huy-q-ta-university-of-virginia.webp",
+    "portraitSource": "https://med.virginia.edu/surgery/wp-content/uploads/sites/459/2024/02/beller-headshot-web-e1726774851794-150x150.jpg",
+    "name": "Huy Q. Ta",
+    "profileUrl": "https://med.virginia.edu/surgery/faculty-listing/",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "University of Virginia",
+    "city": "Charlottesville",
+    "state": "Virginia",
+    "country": "United States",
+    "researchAreas": [
+      "Lung Ischemia-Reperfusion Injury",
+      "Lung Transplantation",
+      "Pulmonary Endothelial Biology"
+    ],
+    "track": "Research",
+    "department": "Surgery",
+    "rank": "Research Assistant Professor of Surgery"
+  },
+  {
+    "id": "vp-0943",
+    "portrait": "portraits/0943-luu-duc-toan-huynh-queen-mary-university-of-london.webp",
+    "portraitSource": "https://www.qmul.ac.uk/sbm/media/sbm/staff/Toan-Luu-Duc-Huynh-300x300.jpg",
+    "name": "Luu Duc Toan Huynh",
+    "profileUrl": "https://www.qmul.ac.uk/sbm/staff/academic/profiles/huynht.html",
+    "websiteUrl": "https://sites.google.com/view/toanluu",
+    "lastUpdatedAt": "2026-08-30T14:19:23.000Z",
+    "scholarUrl": "https://scholar.google.com/citations?user=uH40rLIAAAAJ&hl=en&oi=ao",
+    "university": "Queen Mary University of London",
+    "city": "London",
+    "country": "United Kingdom",
+    "researchAreas": [
+      "Applied Economics",
+      "Behavioral and Experimental Economics",
+      "Financial Economics",
+      "Political Economy"
+    ],
+    "track": "Tenure-line",
+    "department": "Business Analytics and Applied Economics",
+    "rank": "Associate Professor",
+    "phdInstitution": "WHU – Otto Beisheim School of Management",
+    "phdYear": 2022,
+    "msInstitution": "Toulouse School of Economics",
+    "msYear": 2016,
+    "undergradInstitution": "Foreign Trade University",
+    "undergradYear": 2012
+  },
+  {
+    "id": "vp-0944",
+    "portrait": "portraits/0944-kiet-duong-university-of-york.webp",
+    "portraitSource": "https://www.york.ac.uk/media/business-society/people/Kiet%20Duong%20New%20Profile.png",
+    "name": "Kiet Duong",
+    "profileUrl": "https://www.york.ac.uk/business-society/people/kiet-duong/",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "University of York",
+    "city": "York",
+    "country": "United Kingdom",
+    "researchAreas": [
+      "Corporate Finance",
+      "Corporate Governance",
+      "Empirical Finance",
+      "Climate Finance"
+    ],
+    "track": "Tenure-line",
+    "department": "School for Business and Society",
+    "rank": "Assistant Professor",
+    "phdInstitution": "University of Essex",
+    "phdYear": 2021,
+    "msInstitution": "University of Essex",
+    "msYear": 2016,
+    "undergradInstitution": "University of Economics Ho Chi Minh City",
+    "undergradYear": 2009
+  },
+  {
+    "id": "vp-0945",
+    "name": "Daniel Dao",
+    "profileUrl": "https://www.regents.ac.uk/about/our-people/dr-daniel-dao",
+    "lastUpdatedAt": "2026-08-30T13:42:57.000Z",
+    "university": "Regent's University London",
+    "city": "London",
+    "country": "United Kingdom",
+    "researchAreas": [
+      "Fintech",
+      "Sustainable Finance",
+      "Entrepreneurial Finance",
+      "Financial Economics"
+    ],
+    "track": "Tenure-line",
+    "department": "Business, Finance and Entrepreneurship",
+    "rank": "Assistant Professor"
+  },
+  {
+    "id": "vp-0946",
+    "portrait": "portraits/0946-thuy-hang-do-university-of-southampton.webp",
+    "portraitSource": "https://www.southampton.ac.uk/sites/default/files/styles/max_1300x1300/public/staff/hd1d19-69927.jpg.webp?h=04d92ac6&itok=6x1pqhjM",
+    "name": "Thuy Hang Do",
+    "profileUrl": "https://www.southampton.ac.uk/people/5y5kzk/doctor-thuy-hang-do",
+    "lastUpdatedAt": "2026-08-30T13:58:40.000Z",
+    "university": "University of Southampton",
+    "city": "Southampton",
+    "country": "United Kingdom",
+    "researchAreas": [
+      "SME Internationalisation",
+      "Innovation Management",
+      "Entrepreneurial Orientation",
+      "Global Value Chains"
+    ],
+    "track": "Teaching",
+    "department": "Strategy, Innovation and Entrepreneurship",
+    "rank": "Teaching",
+    "phdInstitution": "University of St. Gallen"
+  },
+  {
+    "id": "vp-0947",
+    "portrait": "portraits/0947-quoc-tuan-ho-university-of-bristol.webp",
+    "portraitSource": "https://research-information.bris.ac.uk/ws/files/289340366/Hinhnew.jpg",
+    "name": "Quoc Tuan Ho",
+    "profileUrl": "https://www.bristol.ac.uk/person/Quoc%20Tuan-Ho-908ea753-f956-4425-a775-c436f41007d8/",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "University of Bristol",
+    "city": "Bristol",
+    "country": "United Kingdom",
+    "researchAreas": [
+      "Financial Analysis",
+      "Firm Valuation",
+      "Stock Market Anomalies",
+      "Financial Technology",
+      "Machine Learning in Accounting and Finance"
+    ],
+    "track": "Tenure-line",
+    "department": "University of Bristol Business School",
+    "rank": "Associate Professor",
+    "phdInstitution": "University of Manchester",
+    "msInstitution": "University of Melbourne"
+  },
+  {
+    "id": "vp-0948",
+    "name": "Linh H. Nguyen",
+    "profileUrl": "https://www.nottingham.ac.uk/business/people/lizln1.phtml",
+    "lastUpdatedAt": "2026-08-30T13:42:57.000Z",
+    "university": "University of Nottingham",
+    "city": "Nottingham",
+    "country": "United Kingdom",
+    "researchAreas": [
+      "Asset Pricing",
+      "Risk Modelling",
+      "Portfolio Optimisation",
+      "Cryptocurrency",
+      "Machine Learning in Finance"
+    ],
+    "track": "Tenure-line",
+    "department": "Finance, Accounting and Banking",
+    "rank": "Assistant Professor",
+    "phdInstitution": "University of Exeter"
+  },
+  {
+    "id": "vp-0949",
+    "portrait": "portraits/0949-linh-pham-lake-forest-college.webp",
+    "portraitSource": "https://www.lakeforest.edu/Public/OCM/300x300_Faculty/linh_pham.jpg",
+    "name": "Linh Pham",
+    "profileUrl": "https://www.lakeforest.edu/academics/faculty/lpham",
+    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
+    "university": "Lake Forest College",
+    "city": "Lake Forest",
+    "state": "Illinois",
+    "country": "United States",
+    "researchAreas": [
+      "Energy and Climate Finance",
+      "Sustainable Finance",
+      "Corporate Finance",
+      "Environmental Economics",
+      "Empirical Methods"
+    ],
+    "track": "Tenure-line",
+    "department": "Economics, Business and Finance",
+    "rank": "Associate Professor",
+    "phdInstitution": "University of Wisconsin–Milwaukee",
+    "undergradInstitution": "University of Wisconsin–La Crosse"
+  },
+  {
+    "id": "vp-0950",
+    "name": "Cuong Nguyen - Lincoln University",
+    "profileUrl": "https://researchers.lincoln.ac.nz/cuong.nguyen",
+    "lastUpdatedAt": "2026-08-30T13:42:57.000Z",
+    "university": "Lincoln University",
+    "city": "Lincoln",
+    "country": "New Zealand",
+    "researchAreas": [
+      "Financial Econometrics",
+      "Financial Markets",
+      "Financial Technology",
+      "International Finance"
+    ],
+    "track": "Tenure-line",
+    "department": "Department of Financial and Business Systems",
+    "rank": "Associate Professor",
+    "phdInstitution": "La Trobe University",
+    "msInstitution": "Ritsumeikan University"
   }
 ]

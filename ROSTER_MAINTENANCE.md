@@ -41,7 +41,7 @@ Use all relevant candidate sources:
 - linked person pages, including opaque directory URLs such as `/profile/tn294`;
 - official university news, research-center, lab, grant, and award pages;
 - personal academic homepages, Google Sites, lab pages, and CVs, followed by confirmation of the current appointment on an official page; and
-- broad search-engine queries using the institution, field, Vietnamese surnames (`Nguyen`, `Tran`, `Le`, `Pham`, `Vo`, `Vu`, `Bui`, `Do`, `Phan`, `Lai`), and common Vietnamese given names.
+- broad search-engine queries using the institution, field, Vietnamese surnames (`Nguyen`, `Tran`, `Le`, `Pham`, `Vo`, `Vu`, `Bui`, `Do`, `Phan`, `Lai`, `Huynh`, `Duong`, `Truong`, `Dang`, `Ngo`, `Mai`, `Dao`), and common Vietnamese given names.
 
 Do not depend on URL shape, visible diacritics, or a faculty page being linked from a department homepage. A research mention, dissertation-supervision link, coauthorship, student page, or grant page is a lead—not proof of a current faculty appointment.
 
@@ -53,6 +53,42 @@ Generate repeatable search queries with:
   --field "Data Science" \
   --domain njit.edu
 ```
+
+The surname list above was extended (from an original ten) after a plain token-frequency scan of
+`public/data.json` itself surfaced `Huynh`, `Duong`, `Truong`, `Dang`, `Ngo`, `Mai`, and `Dao` as
+common Vietnamese surnames the original list happened to miss — worth checking periodically as the
+roster grows, since a name common enough to be worth adding will show up as a frequent token in the
+existing data before anyone thinks to add it by hand.
+
+Pass `--given-names` to also generate queries for common given/middle-name tokens (`Thanh`, `Quang`,
+`Minh`, `Hoang`, `Anh`, `Tuan`, `Van`, `Hung`, `Quan`, `Quoc`, `Ngoc`, `Viet`, `Phuong`, `Huy`, `Kim`,
+`Nam`, `Long`, `Linh`, `Toan`, `Hieu`, `Chinh`, `Thai`, `Hai`, `Dinh`), each with `-Vietnam -student
+-postdoctoral` appended. A given-name token matches far more broadly than a surname — it hits anyone
+with that token anywhere in their name, not just as a family name — so it needs both the institution
+restriction the generator already applies and those extra exclusions to stay usable; without them, an
+unrestricted given-name search returns mostly noise (Vietnam-based faculty out of scope, students, and
+postdocs). It also needs a first pass against `public/data.json` before adding any candidate: a
+given-name token search is far more likely than a surname search to resurface someone already in the
+roster under a different profile page or research summary, since the token alone does very little to
+narrow down which person it is.
+
+Results across two informal sessions have been mixed enough to report honestly rather than round up.
+The first session, tried against a handful of otherwise-unremarkable US, Japanese, and Australian
+universities, found six new verified faculty from a small number of queries — three from a surname
+missing from the original list, three from a given-name token — a comparable hit rate to the standard
+per-surname queries. A control run against a country slice already thoroughly searched this way found
+nothing new, which helps rule out those six hits being a fluke of an unsearched region rather than
+evidence the technique itself works. The second session, testing `Quan`, `Quoc`, `Ngoc`, `Toan`,
+`Hieu`, `Chinh`, and `Liem` unrestricted (no institution filter), found zero new people: `Toan`,
+`Hieu`, and `Chinh` returned only generic academic-rank definition pages with no usable lead, and the
+`Quan` and `Ngoc` hits that did surface were both already in the roster under a different profile
+URL — a good outcome for data quality (each contributed a previously-missing fact to its existing
+record instead of becoming a duplicate) but not a new addition. `Liem` is deliberately left out of the
+generator's default list: it is also a common Chinese-Indonesian surname, and the one hit it returned
+in an unrestricted search was a plausible-looking but non-Vietnamese name. Overall the given-name mode
+still seems worth having — particularly for its second-order benefit of surfacing missing facts on
+existing records — but treat a specific given-name token's yield as unproven until it has found a
+genuinely new person, not just a not-yet-fully-documented one.
 
 Every result still requires the appointment, track, and source-quality checks above.
 
@@ -108,8 +144,9 @@ link.
 `public/data.json` is the canonical roster. Each entry should use the following conventions:
 
 - `id` is a required immutable profile identifier in `vp-####` form. Contributors must not choose
-  or edit it manually: `npm test`, `npm run dev`, and `npm run build` assign IDs to new entries
-  automatically while reserving retired ones. Preserve the generated ID when correcting a name,
+  or edit it manually: after adding an entry, run `npm run assign-profile-ids -- --apply` to assign
+  IDs while reserving retired ones. Tests, development, and builds only verify IDs and do not edit
+  the roster. Preserve the generated ID when correcting a name,
   appointment, or other facts; never reuse a removed ID.
 - `track` must be `Tenure-line`, `Teaching`, `Research`, `Clinical`, or `Emeritus`.
 - `profileUrl` must be a current, working academic or official university profile and must not be a Google Scholar URL. Store Scholar separately in `scholarUrl`; store a maintained personal or lab homepage in `websiteUrl`.
@@ -343,6 +380,39 @@ order:
    any substantive roster data, set `lastUpdatedAt` to the same time; otherwise preserve the
    existing `lastUpdatedAt`. If the review is incomplete, preserve the old timestamps and retry
    later.
+
+## Education-field consistency sweep
+
+This is a separate, cheaper technique from the periodic full-roster refresh above. It targets
+records already in `public/data.json` whose education fields are structurally incomplete, using
+each person's already-stored `profileUrl` instead of a new discovery search. Because the source is
+already known and was already accepted once, this sweep does not redo the liveness, URL-role, or
+Scholar-identity checks from the periodic refresh; it only asks whether the previously reviewed
+page in fact states the missing fact.
+
+Two gap patterns are easy to find with a plain scan of the roster file, with very different yield:
+
+- **A degree year without its paired institution** (`phdYear` present but `phdInstitution` absent,
+  and likewise for `msYear`/`msInstitution` and `undergradYear`/`undergradInstitution`). This is
+  close to always resolvable: whatever page supplied the year almost always names the institution
+  next to it, so the original entry was very likely an incomplete transcription rather than a gap
+  in the source.
+- **A record with no education field populated at all.** This resolves at a much lower rate.
+  Directory-style listings for adjunct, lecturer, and teaching-track staff frequently omit degree
+  history entirely — refetching the same terse page a second time will not produce new information.
+  Structured CV-style pages at academic medical centers (MD Anderson, OHSU, and similar) are
+  disproportionately productive by contrast, since they routinely publish a dedicated education
+  section with medical school, residency, and fellowship institutions and years.
+
+Apply the same data-entry rules as any other correction: add only what the page explicitly states,
+never infer a year from chronology, and route a professional degree without a dedicated field (JD,
+DMD, DO, PharmD, MFA, MBA, etc.) through `otherDegrees` rather than forcing it into `phdInstitution`
+or `msInstitution`. Update `lastUpdatedAt` for any record that gains a fact. Do not advance
+`lastVerifiedAt` in the ledger for this sweep alone — it does not perform the full live review the
+periodic refresh requires, so advancing the ledger would let that record skip a real refresh later.
+When a scan turns up no education fields and the primary source states none, leave the record
+unresolved and say so explicitly (which people, and why) rather than silently treating an empty
+page as proof no degree exists.
 
 ## Validation checklist
 

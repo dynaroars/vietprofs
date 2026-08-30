@@ -47,6 +47,8 @@ export interface RosterEntry {
 
 export type Roster = RosterEntry[];
 
+export { TRACKS } from './roster-constants.ts';
+
 let cached: Roster | null = null;
 
 const searchIndexCache = new WeakMap();
@@ -269,8 +271,6 @@ export function uniqueResearchAreas(roster: Roster): string[] {
 // emeritus title after a tenure-line career — plain retirement without the conferred title doesn't
 // qualify. None includes adjunct, visiting, postdoctoral, affiliate, or other term-limited or
 // part-time positions; those stay excluded from the roster. See ROSTER_MAINTENANCE.md.
-export const TRACKS: string[] = ['Tenure-line', 'Teaching', 'Research', 'Clinical', 'Emeritus'];
-
 // Continent/region values supported by structured location queries and the second
 // ("by continent") section of the visible location dropdown.
 export const LOCATIONS: string[] = [
@@ -493,6 +493,11 @@ export const HEALTH_SUBFIELDS = [
 // institution it's at, not just the department string.
 const FIELD_OVERRIDES = new Map([
   ['Information Studies|University of California, Los Angeles', 'Education'],
+  // These new research appointments have department or center names whose disciplinary home
+  // is clearer from their official university context than from the generic words alone.
+  ['Anesthesia|Indiana University School of Medicine', 'Health Sciences'],
+  ['Biostatistics and Health Data Science|Indiana University School of Medicine', 'Statistics & Data Science'],
+  ['National Center for Asphalt Technology|Auburn University', 'Engineering'],
   // Generic Speech-Language-Hearing-style department name, but this specific appointment's
   // primary focus (per its own official listing) is multilingual/English education.
   ['Linguistics and Communication Disorders|Queens College, City University of New York', 'Education'],
@@ -525,6 +530,15 @@ const FIELD_OVERRIDES = new Map([
   // The Vietnam Center and Sam Johnson Vietnam Archive is an interdisciplinary research center;
   // this historian's appointment and research focus belong with the Humanities bucket.
   ['Vietnam Center and Sam Johnson Vietnam Archive|Texas Tech University', 'Humanities'],
+  // "Mathematical" would otherwise win the Mathematics rule before Engineering, but this
+  // appointment sits in Shizuoka's Faculty of Engineering (communications / systems).
+  ['Department of Mathematical and Systems Engineering|Shizuoka University', 'Engineering'],
+  // JAIST Knowledge Science houses this materials-informatics / data-driven-AI appointment;
+  // the school name itself has no computing keyword.
+  ['School of Knowledge Science|Japan Advanced Institute of Science and Technology', 'Computer & Information Sciences'],
+  // Osaka SANKEN lab is statistical causal inference / ML; the institute name would otherwise
+  // fall through as Others.
+  ['SANKEN, Department of Reasoning for Intelligence|Osaka University', 'Computer & Information Sciences'],
 ]);
 
 // Buckets granular `department` values into the broad fields above. Order matters, and is not
@@ -765,17 +779,17 @@ export function filterRoster(roster: Roster | ReturnType<typeof buildSearchIndex
   if (honorMatches.length > 0) return honorMatches;
 
   return result.filter((p) => {
-    const searchableText = index.textByPerson.get(p).join(' ');
-    if (searchableText.includes(target)) return true;
-    // Also accept multi-word searches whose terms are separated by initials or
-    // punctuation, e.g. "van vu" should match the name "Van H. Vu".
+    const fieldTexts = index.textByPerson.get(p);
+    if (fieldTexts.join(' ').includes(target)) return true;
+    // Also accept multi-word searches whose terms are separated by initials or punctuation,
+    // e.g. "van vu" should match the name "Van H. Vu". Require every term to appear within the
+    // *same* field rather than anywhere across the person's combined text: matching term-by-term
+    // across different fields let an unrelated pair of substrings each satisfy one term (e.g. a
+    // "Nguyen" name plus an unrelated "Quantum ..." research area both contain "quan", so a
+    // cross-field check wrongly matched the query "quan nguyen" for that person).
     const terms = target.split(/\s+/).filter(Boolean);
-    return terms.length > 1 && terms.every((term) => searchableText.includes(term));
+    return terms.length > 1 && fieldTexts.some((fieldText) => terms.every((term) => fieldText.includes(term)));
   });
-}
-
-export function sortRoster(roster) {
-  return [...roster].sort((a, b) => a.name.localeCompare(b.name));
 }
 
 // Duplicate roster keys may carry a " - University" suffix so the JSON name remains unique.
@@ -953,15 +967,26 @@ export function buildInternationalObservations(roster) {
   if (cities.length >= 2 && cities[0][1] >= 5) facts.push(`The largest international city clusters are ${cities.slice(0, 3).map(([city, count]) => `${city} (${count})`).join(', ')}.`);
   const fields = observationFields(international);
   if (fields.length >= 3 && fields[0][1] - fields[2][1] <= Math.max(3, Math.round(international.length * 0.04))) {
-    facts.push(`Engineering, business, and computing are closely represented internationally: ${fields.slice(0, 3).map(([field, count]) => `${field} (${count})`).join(', ')}.`);
+    facts.push(`The three largest broad fields are closely represented internationally: ${fields.slice(0, 3).map(([field, count]) => `${field} (${count})`).join(', ')}.`);
   }
   addRosterObservations(facts, international, 'international');
   return facts;
 }
 
-// Backwards-compatible names for callers that still use the original fact API.
-export const buildUsFunFacts = buildUsObservations;
-export const buildGlobalFunFacts = buildInternationalObservations;
+export function buildLocationObservations(roster, label = 'selected') {
+  const selected = roster || [];
+  if (selected.length === 0) return ['No faculty currently listed under the active location selection.'];
+  const countries = new Set(selected.map((person) => person.country || 'United States')).size;
+  const facts = [
+    `${selected.length} entries across ${new Set(selected.map((person) => person.university)).size} universities in ${countries} countr${countries === 1 ? 'y' : 'ies'}.`,
+  ];
+  const fields = observationFields(selected);
+  if (fields.length >= 3 && fields[0][1] - fields[2][1] <= Math.max(3, Math.round(selected.length * 0.04))) {
+    facts.push(`The three largest broad fields are closely represented: ${fields.slice(0, 3).map(([field, count]) => `${field} (${count})`).join(', ')}.`);
+  }
+  addRosterObservations(facts, selected, label);
+  return facts;
+}
 
 export function buildQualifiedObservations(roster) {
   const allRoster = roster || [];
