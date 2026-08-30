@@ -718,11 +718,11 @@ async function ensureSchemas() {
       status: { type: 'string', enum: ['complete', 'incomplete'] },
       action: { type: 'string', enum: ['keep', 'update', 'remove'] },
       proposedEntryJson: { type: 'string' },
-      redirectToId: { type: 'string' },
+      redirectToId: { type: ['string', 'null'] },
       report: { type: 'string' },
       sources: { type: 'array', items: { type: 'string' } },
     },
-    required: ['status', 'action', 'proposedEntryJson', 'report', 'sources'],
+    required: ['status', 'action', 'proposedEntryJson', 'redirectToId', 'report', 'sources'],
     additionalProperties: false,
   };
   const reviewSchema = {
@@ -881,7 +881,7 @@ You cannot edit files. Return structured output. Use action "keep" if no roster 
 the person is no longer eligible. For update, proposedEntryJson must be the complete JSON object;
 for keep/remove, use an empty string. Never choose lastUpdatedAt or id—the controller owns them.
 When removing a duplicate merged into another active roster entry, set redirectToId to that
-entry's immutable vp-#### ID; otherwise omit redirectToId and the old profile becomes retired.
+entry's immutable vp-#### ID; otherwise set redirectToId to null and the old profile becomes retired.
 Set status incomplete whenever material evidence is blocked, conflicting, or unresolved. Include
 every source URL and explain every checked field and proposed change.`;
 }
