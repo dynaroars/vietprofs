@@ -60,41 +60,38 @@ Its contribution is twofold: a public resource for a community that previously h
 \end{abstract}
 
 \section{Introduction}
-Vietnamese and Vietnamese-diaspora faculty are spread across hundreds of universities in dozens of countries, but there is no website or database about them.
-A prospective graduate student looking for a Vietnamese advisor in their field, a journalist profiling the diaspora, a conference organizer building a program committee, or a scholar looking for compatriots at nearby institutions currently has no better option than ad hoc web search, one name at a time.
-Communities of comparable size often sustain an informal directory through an alumni association or professional society, echoing a broader pattern documented in the scientific-diaspora literature, where expatriate researcher networks support mentorship, collaboration, and technology diffusion back toward their country of origin \cite{meyer1999scientific,kerr2008ethnic}; no such resource existed for this population outside Vietnam.
-VietProfs was built to be that resource: a public, searchable directory of Vietnamese and Vietnamese-diaspora faculty, useful only if it stays current as people are promoted, move, or retire.
+Vietnamese-diaspora---people who are either Vietnamese or have Vietnamese heritage---faculty are spread across hundreds of universities in dozens of countries outside Vietnam. Despite the growth of this population, there is no public, searchable record of it.
+A prospective graduate student looking for a Vietnamese advisor in their field, a journalist profiling the diaspora, or a scholar looking for compatriots at nearby institutions currently has no better option than ad hoc Google search, one name at a time.
+Communities of comparable size often sustain an informal directory through an alumni association or professional society, where expatriate researcher networks support mentorship, collaboration, and technology diffusion back toward their country of origin \cite{meyer1999scientific,kerr2008ethnic}.
+
+\textbf{VietProfs} was built to be that resource: a public, searchable directory of Vietnamese and Vietnamese-diaspora faculty, useful only if it stays current as people are promoted, move, or retire. Bby leveraging AI LLM agents to find and propose updates, and verify them against the public web, the system maintains itself with minimal human intervention and therefore reduces the risk of being out of date, neglected or abandoned.
 
 \subsection{What VietProfs Is: Motivation, Goals, and Design}
 \label{sec:intro-what}
 Before this project, a Vietnamese-heritage scholar could be found only one search at a time, on their own university's page, with no way to see them alongside their peers.
-VietProfs closes that gap.
-Concretely, it helps a graduate student find an advisor who shares their background or research interest.
+VietProfs closes that gap and helps connect people across institutions and disciplines.
+For example, it can help a graduate student find an advisor who shares their background or research interest.
 It lets a faculty member discover Vietnamese-diaspora colleagues at a new institution or nearby ones.
 It gives conference organizers, professional societies, and student or alumni associations a way to identify speakers, panelists, and committee members.
 It gives journalists and university or cultural offices a single place to start when documenting the diaspora's reach.
 And, independent of any specific task, it lets the community---and outsiders---see its own scale and range across institutions, countries, fields, and generations, from \vplink{Xuong+Nguyen-Huu}{Xuong Nguyen-Huu}, who earned a 1962 PhD at UC Berkeley and now holds an appointment at UC San Diego, to the newest hires in the current snapshot (Section~\ref{sec:goals}).
-It is deliberately not a ranking of people or institutions.
-It is not a test of Vietnamese identity.
-And it is not a census of the full population (Section~\ref{sec:limitations}).
+% It is deliberately not a ranking of people or institutions.
+% It is not a test of Vietnamese identity.
+% And it is not a census of the full population (Section~\ref{sec:limitations}).
 
 Inclusion is governed by a single, name-independent rule: a current academic appointment at a university outside Vietnam, in one of five accepted tracks---Tenure-line, Teaching, Research, Clinical, or Emeritus.
 Each track is defined precisely enough that a stable, full-time, faculty-level role is included, while a temporary, visiting, postdoctoral, or adjunct one is not (Section~\ref{sec:eligibility}).
-Vietnamese names and surnames are used only to find candidates worth checking.
-No documentary proof of ethnicity is ever required.
-That is both because it would be invasive and because a surname is neither sufficient nor reliable evidence of identity on its own \cite{mateos2007name,ambekar2009name}.
-Every included person is also classified into one of 17 broad fields of study.
-That taxonomy is deliberately built as a coarsened, browsable version of the field categories the U.S. National Center for Education Statistics and National Science Foundation already use to report on degree programs and doctorates, with health-related subfields further aligned to the National Institutes of Health's Institute and Center structure.
-The goal is for the directory's field distribution to read against familiar national categories rather than an invented scheme (Section~\ref{sec:fields}).
+% Vietnamese names and surnames are used only to find candidates worth checking.
+% No documentary proof of ethnicity is ever required.
+% That is both because it would be invasive and because a surname is neither sufficient nor reliable evidence of identity on its own \cite{mateos2007name,ambekar2009name}.
+Every included person is also classified into one of 17 broad fields of study,  broadly classified by the U.S. National Center for Education Statistics, National Science Foundation and National Institutes of Health. % already use to report on degree programs and doctorates, with health-related subfields further aligned to the National Institutes of Health's Institute and Center structure.
+The goal is for the directory's field distribution to read against familiar national categories (e.g., Computing, Mathematics, Health, Social and Behavioral Sciences) rather than an invented scheme (Section~\ref{sec:fields}).
 
-Each person's card is designed around what a visitor actually needs, not around what happened to be easiest to collect.
-A portrait and the Vietnamese-diacritic form of their name help with recognition.
-Current university, department, rank, and location say where to find them.
-Education history back through their PhD---in the current snapshot as far back as 1962---shows the diaspora's academic presence spans generations, not one recent wave.
-Curated honors are limited to real field-wide distinctions such as national-academy election or a major career award, so the list stays meaningful rather than exhaustive.
-Short research-area tags support topic-level search, and a visible last-verified date lets a reader judge how current a given fact is (Section~\ref{sec:whatshown}).
-The site itself supports free-text and attribute-prefixed search (e.g., \code{univ:Stanford}, \code{country:France}), combinable location/field/track filters, shareable filtered URLs, university and PhD-institution leaderboards, a state-by-state map of U.S. records, and a public form for anyone to submit a new person or a correction without touching the underlying data directly (Section~\ref{sec:ui}).
 As of 29 August 2026, the canonical snapshot holds 831 records at 367 universities in 19 countries, across all 17 fields and all five tracks (Section~\ref{sec:results}).
+Each person's displaying card is designed around what a visitor actually needs, such as a portrait, Vietnamese-diacritic name, current university, department, rank, and location, education history, curated honors, and short research-area tags.
+Curated honors are limited to real field-wide distinctions such as national-academy election or a major career award.
+Short research-area tags support topic-level search, and a visible last-verified date lets a reader judge how current a given fact is (Section~\ref{sec:whatshown}).
+The site itself supports free-text and attribute-prefixed search (e.g., \code{univ:Stanford}, \code{country:France}), combinable location/field/track filters, shareable filtered URLs, university and PhD-institution leaderboards, a state-by-state map of U.S. records, and a \href{https://vietprofs.roars.dev/submit.html}{public form} for anyone to submit a new person or a correction (Section~\ref{sec:ui}).
 
 \subsection{The Engineering Challenge: Keeping VietProfs Accurate}
 \label{sec:intro-how}
