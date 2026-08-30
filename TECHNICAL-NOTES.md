@@ -9,9 +9,9 @@ record stores an immutable `vp-####` ID, display name, current profile URL, univ
 department, research areas, track/rank, optional education, honors, portrait provenance, and
 `lastUpdatedAt`. `scripts/assign-profile-ids.ts` fills missing IDs automatically, while
 `scripts/generate-profile-pages.ts` derives an ID-addressed static profile page, legacy name-path
-redirects, retirement/merge responses, and profile sitemap entries. The current snapshot has 831
-records, 367 universities, 19 countries, and 17 broad application fields (analysis generated
-2026-08-29).
+redirects, retirement/merge responses, and profile sitemap entries. The current snapshot has 950
+records, 399 universities, 19 countries, and 17 broad application fields (analysis generated
+2026-08-30).
 
 Eligibility is policy-driven, not surname-driven: current primary university appointment outside
 Vietnam plus one of Tenure-line, Teaching, Research, Clinical, or Emeritus. Adjunct, visiting,
@@ -32,6 +32,8 @@ the research process uses names as discovery signals but requires appointment ev
 | Static profiles | `scripts/generate-profile-pages.ts`, `maintenance/profile-redirects.json` | roster + retired IDs -> profile pages, redirects, sitemap entries | deterministic build output |
 | Classification/search | `src/data.ts`, `src/main.ts` | records -> broad fields, index, filters | runtime deterministic logic |
 | Derived view | `buildFunFacts`, `build*Observations`, `buildAwardsFunFacts` | current roster -> runtime observations | deterministic, not stored |
+| Snapshot report | `analysis/analyze-roster.ts` | roster -> counts for `METRICS.md`/paper | deterministic; reuses the site's `fieldOf` |
+| Paper figures | `scripts/capture-figures.ts` | built site -> `figures/screenshot-*.png` | deterministic Playwright capture of fixed page states |
 | Deployment | `.github/workflows/deploy.yml` | push to `main` -> test/build/GitHub Pages | GitHub Actions |
 | Submission | `submit.html`, `src/submit.ts` | user proposal -> maintainer email/form payload | human review before canonical inclusion |
 
@@ -62,9 +64,10 @@ new candidates. A disappeared page is treated as a research problem, not automat
 
 ## Important implementation examples
 
-The repository history contains a 20-batch full-roster refresh on 2026-08-26, country sweeps for
-Australia, Canada, France, Singapore, Taiwan, Japan, Germany, Hong Kong, and others on 2026-08-28,
-and automated maintenance batches on 2026-08-28/29. Concrete correction commits include:
+The repository history (597 commits over 2026-08-15--2026-08-30) contains a 20-batch full-roster
+refresh on 2026-08-26, country sweeps for Australia, Canada, France, Singapore, Taiwan, Japan,
+Germany, Hong Kong, and others on 2026-08-28, automated maintenance batches on 2026-08-28/29, and a
+clinical-track expansion sweep on 2026-08-30. Concrete correction commits include:
 
 * `2aa15c0` merged duplicate University of Dayton entries for Tam V. Nguyen;
 * `9a4a171` removed Nhung Nguyen (UCSF) under the inclusion policy;

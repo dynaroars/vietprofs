@@ -63,6 +63,31 @@ body {
   }
 }
 
+/* One focus ring for the whole site. Controls that sit inside a bordered surface (inputs,
+   selects, tiles, list rows) hug it at 1px; free-standing pills and buttons stand off at 2px. */
+.example-chip:focus-visible,
+.search-scope:focus,
+.search-input:focus,
+.field-select:focus,
+.state-tile:focus-visible,
+.ranked-item:focus-visible,
+.form-section input:focus,
+.form-section select:focus,
+.form-section textarea:focus {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 1px;
+}
+
+.icon-link:focus-visible,
+.submission-link:focus-visible,
+.paper-link:focus-visible,
+.back-to-top:focus-visible,
+.info-icon:focus-visible,
+.submit-btn:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
 header {
   margin-bottom: 2rem;
 }
@@ -128,11 +153,6 @@ h1 {
 .icon-link:focus-visible {
   color: var(--text-primary);
   background: var(--hover-bg);
-}
-
-.icon-link:focus-visible {
-  outline: 2px solid var(--focus-ring);
-  outline-offset: 2px;
 }
 
 .criteria {
@@ -254,11 +274,6 @@ h1 {
   color: var(--text-primary);
 }
 
-.example-chip:focus-visible {
-  outline: 2px solid var(--focus-ring);
-  outline-offset: 1px;
-}
-
 .search-input {
   flex: 1;
   width: 100%;
@@ -292,18 +307,11 @@ h1 {
 }
 
 .search-scope:focus {
-  outline: 2px solid var(--focus-ring);
-  outline-offset: 1px;
   z-index: 1;
 }
 
 .search-box .search-input {
   border-radius: 0 8px 8px 0;
-}
-
-.search-input:focus {
-  outline: 2px solid var(--focus-ring);
-  outline-offset: 1px;
 }
 
 .field-select {
@@ -317,11 +325,6 @@ h1 {
   font-family: var(--font-body);
   font-size: var(--text-base);
   cursor: pointer;
-}
-
-.field-select:focus {
-  outline: 2px solid var(--focus-ring);
-  outline-offset: 1px;
 }
 
 .track-select {
@@ -371,18 +374,23 @@ h1 {
   gap: 0.5rem;
 }
 
-.submission-link {
+/* Header action pills: one shape, two treatments (filled call-to-action, outlined secondary). */
+.submission-link,
+.paper-link {
   flex-shrink: 0;
   display: inline-flex;
   align-items: center;
   padding: 0.4rem 0.9rem;
   border-radius: 999px;
-  background: var(--accent);
-  color: var(--bg-color);
   font-size: var(--text-sm);
   font-weight: 600;
   text-decoration: none;
   white-space: nowrap;
+}
+
+.submission-link {
+  background: var(--accent);
+  color: var(--bg-color);
   transition: opacity 0.2s ease;
 }
 
@@ -391,24 +399,10 @@ h1 {
   opacity: 0.85;
 }
 
-.submission-link:focus-visible {
-  outline: 2px solid var(--focus-ring);
-  outline-offset: 2px;
-}
-
 .paper-link {
-  flex-shrink: 0;
-  display: inline-flex;
-  align-items: center;
-  padding: 0.4rem 0.9rem;
-  border-radius: 999px;
   border: 1px solid var(--border-color);
   background: transparent;
   color: var(--text-secondary);
-  font-size: var(--text-sm);
-  font-weight: 600;
-  text-decoration: none;
-  white-space: nowrap;
   transition: background 0.2s ease, color 0.2s ease;
 }
 
@@ -416,11 +410,6 @@ h1 {
 .paper-link:focus-visible {
   background: var(--hover-bg);
   color: var(--text-primary);
-}
-
-.paper-link:focus-visible {
-  outline: 2px solid var(--focus-ring);
-  outline-offset: 2px;
 }
 
 @media (max-width: 560px) {
@@ -705,11 +694,6 @@ a.entry-name:focus-visible {
   border-color: var(--focus-ring);
 }
 
-.state-tile:focus-visible {
-  outline: 2px solid var(--focus-ring);
-  outline-offset: 1px;
-}
-
 .state-tile.heat-0 {
   color: var(--text-muted);
 }
@@ -829,11 +813,6 @@ a.entry-name:focus-visible {
   border-color: var(--border-color);
 }
 
-.ranked-item:focus-visible {
-  outline: 2px solid var(--focus-ring);
-  outline-offset: 1px;
-}
-
 .ranked-header {
   display: flex;
   justify-content: space-between;
@@ -920,11 +899,6 @@ a.entry-name:focus-visible {
   border-color: var(--focus-ring);
   color: var(--focus-ring);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-}
-
-.back-to-top:focus-visible {
-  outline: 2px solid var(--focus-ring);
-  outline-offset: 2px;
 }
 
 .back-to-top svg {
@@ -1051,11 +1025,6 @@ a.entry-name:focus-visible {
   transform: translateX(-50%) translateY(0);
 }
 
-.info-icon:focus-visible {
-  outline: 2px solid var(--focus-ring);
-  outline-offset: 2px;
-}
-
 .form-help {
   color: var(--text-muted);
   font-size: var(--text-xs);
@@ -1161,13 +1130,6 @@ a.entry-name:focus-visible {
   resize: vertical;
 }
 
-.form-section input:focus,
-.form-section select:focus,
-.form-section textarea:focus {
-  outline: 2px solid var(--focus-ring);
-  outline-offset: 1px;
-}
-
 .radio-row {
   display: flex;
   align-items: baseline;
@@ -1199,11 +1161,6 @@ a.entry-name:focus-visible {
 
 .submit-btn:hover {
   opacity: 0.9;
-}
-
-.submit-btn:focus-visible {
-  outline: 2px solid var(--focus-ring);
-  outline-offset: 2px;
 }
 
 .submit-hint {

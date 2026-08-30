@@ -10,7 +10,9 @@
 | Proposal edits are constrained to one target and validated structurally | `analyzeRosterProposal`, `proposalValidationError`, tests | High | No |
 | Full review advances ledger even without public data change | `ROSTER_MAINTENANCE.md`, controller workflow | High | No |
 | Runtime observations are recomputed from current roster | `src/data.ts`, `src/main.ts`, tests | High | No |
-| Snapshot has 831 records, 367 universities, 19 countries | `public/data.json`, `analysis/analyze-roster.mjs` | High | No |
+| Search narrows by a scope selector, not attribute prefixes (`univ:`) | `src/main.ts` scope select; `matchesSearchScope` in `src/data.ts` | High | No |
+| Paper figures are regenerated from the built site | `scripts/capture-figures.ts` | High | No |
+| Snapshot has 950 records, 399 universities, 19 countries | `public/data.json`, `analysis/analyze-roster.ts` | High | No |
 | Git history includes full refresh, country sweeps, dedupe, track corrections | Git commits listed in `TECHNICAL-NOTES.md` | High | No |
 | The system is completely autonomous | No supporting evidence; contradicted by review/uncertainty paths | Do not claim | Yes |
 | Recall, precision, cost, and freshness are measured | No telemetry or controlled evaluation found | Low/unsupported | Yes |

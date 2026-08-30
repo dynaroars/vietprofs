@@ -798,14 +798,16 @@ export function displayName(name) {
   return name.split(' - ')[0];
 }
 
-function countBy(roster, getKey) {
+// Ties break alphabetically so leaderboards and the offline analysis report stay stable
+// across roster edits that only change record order.
+export function countBy(roster, getKey) {
   const counts = new Map();
   for (const p of roster) {
     const key = getKey(p);
     if (!key) continue;
     counts.set(key, (counts.get(key) ?? 0) + 1);
   }
-  return [...counts.entries()].sort((a, b) => b[1] - a[1]);
+  return [...counts.entries()].sort((a, b) => b[1] - a[1] || String(a[0]).localeCompare(String(b[0])));
 }
 
 function honorHolderCount(roster, honorName) {

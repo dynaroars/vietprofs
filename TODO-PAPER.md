@@ -1,9 +1,10 @@
 # TODO before publication
 
+(Done: `analysis/analyze-roster.ts` now imports the canonical `fieldOf`, so published field counts
+match the site. Regenerate with `npm run analyze` whenever the roster changes.)
+
 * Record authors, affiliations, snapshot date, license/publication status, and whether the
   maintenance branch can be cited publicly.
-* Replace the approximate standalone JavaScript field matcher with a TypeScript analysis command
-  importing the canonical `fieldOf` implementation; regenerate all field counts and figures.
 * Add per-run telemetry: candidate outcomes, review outcomes, costs, latency, and change types.
 * Build a labeled evaluation set for inclusion, exclusion, identity resolution, and changed-page
   detection; report precision/recall and reviewer agreement.

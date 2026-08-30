@@ -22,7 +22,12 @@ npm run preview   # preview the production build
 npm run typecheck # check TypeScript modules
 npm test          # validate data and run unit/UI tests
 npm run test:e2e  # run browser smoke tests
+npm run analyze   # print snapshot counts for METRICS.md and the paper
+npm run figures   # rebuild and recapture the paper's screenshot figures
 ```
+
+`npm run analyze` and `npm run figures` regenerate everything the manuscript reports about the
+current snapshot; run both after a roster change that the paper cites.
 
 By default `npm run dev` only listens on `localhost`. To make the dev server reachable from other
 machines on your network over HTTPS:

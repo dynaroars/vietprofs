@@ -179,8 +179,9 @@ test('field-balance observations name the fields computed from their input', () 
     ...Array.from({ length: 4 }, (_, index) => ({ name: `Lawyer ${index}`, university: `L${index}`, department: 'Law', country: 'France' })),
     ...Array.from({ length: 4 }, (_, index) => ({ name: `Artist ${index}`, university: `A${index}`, department: 'Music', country: 'France' })),
   ];
+  // Equal counts are ordered alphabetically so the wording is stable across roster edits.
   const fact = buildInternationalObservations(sample).find((value) => value.includes('closely represented'));
-  assert.match(fact, /Humanities \(4\).*Law & Public Affairs \(4\).*Arts & Design \(4\)/);
+  assert.match(fact, /Arts & Design \(4\).*Humanities \(4\).*Law & Public Affairs \(4\)/);
 });
 
 test('location observations do not silently remove United States entries from a continent', () => {
