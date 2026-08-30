@@ -10,14 +10,24 @@ function value(flag: string): string {
 const university = value('--university');
 const field = value('--field');
 const domain = value('--domain');
+const includeGivenNames = args.includes('--given-names');
 
 if (!university || !field) {
-  console.error('Usage: ./scripts/faculty-discovery-queries.ts --university "..." --field "..." [--domain example.edu]');
+  console.error('Usage: ./scripts/faculty-discovery-queries.ts --university "..." --field "..." [--domain example.edu] [--given-names]');
   process.exit(1);
 }
 
 const site = domain ? `site:${domain}` : '';
-const names = ['Nguyen', 'Tran', 'Le', 'Pham', 'Vo', 'Vu', 'Bui', 'Do', 'Phan', 'Lai'];
+// Surnames only by default. Huynh, Duong, Truong, Dang, Ngo, Mai, and Dao were added after a
+// roster token-frequency scan showed they are common Vietnamese surnames missing from the
+// original ten-name list, not just given-name components.
+const surnames = ['Nguyen', 'Tran', 'Le', 'Pham', 'Vo', 'Vu', 'Bui', 'Do', 'Phan', 'Lai', 'Huynh', 'Duong', 'Truong', 'Dang', 'Ngo', 'Mai', 'Dao'];
+// Common Vietnamese given/middle-name tokens. These produce more false positives than a surname
+// search (they match any person with that token anywhere in their name, not just as a family
+// name), so they are opt-in via --given-names and always carry the exclusion terms below.
+const givenNames = ['Thanh', 'Quang', 'Minh', 'Hoang', 'Anh', 'Tuan', 'Van', 'Hung'];
+const names = includeGivenNames ? [...surnames, ...givenNames] : surnames;
+const givenNameExclusions = includeGivenNames ? ' -Vietnam -student -postdoctoral' : '';
 const queries = [
   `${site} "${university}" "${field}" faculty`,
   `${site} "${university}" "${field}" professor`,
@@ -25,8 +35,8 @@ const queries = [
   `${site} "${university}" directory "${field}"`,
   `${site} "${university}" news "${field}" professor`,
   `${site} "${university}" research center "${field}" faculty`,
-  ...names.map((name) => `${site} "${university}" "${name}" "${field}"`),
-  ...names.map((name) => `"${university}" "${name}" "${field}" professor`),
+  ...names.map((name) => `${site} "${university}" "${name}" "${field}"${givenNameExclusions}`),
+  ...names.map((name) => `"${university}" "${name}" "${field}" professor${givenNameExclusions}`),
   `site:sites.google.com "${field}" "${university}" professor`,
   `"${university}" professor moved from`,
 ];

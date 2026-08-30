@@ -41,7 +41,7 @@ Use all relevant candidate sources:
 - linked person pages, including opaque directory URLs such as `/profile/tn294`;
 - official university news, research-center, lab, grant, and award pages;
 - personal academic homepages, Google Sites, lab pages, and CVs, followed by confirmation of the current appointment on an official page; and
-- broad search-engine queries using the institution, field, Vietnamese surnames (`Nguyen`, `Tran`, `Le`, `Pham`, `Vo`, `Vu`, `Bui`, `Do`, `Phan`, `Lai`), and common Vietnamese given names.
+- broad search-engine queries using the institution, field, Vietnamese surnames (`Nguyen`, `Tran`, `Le`, `Pham`, `Vo`, `Vu`, `Bui`, `Do`, `Phan`, `Lai`, `Huynh`, `Duong`, `Truong`, `Dang`, `Ngo`, `Mai`, `Dao`), and common Vietnamese given names.
 
 Do not depend on URL shape, visible diacritics, or a faculty page being linked from a department homepage. A research mention, dissertation-supervision link, coauthorship, student page, or grant page is a lead—not proof of a current faculty appointment.
 
@@ -53,6 +53,25 @@ Generate repeatable search queries with:
   --field "Data Science" \
   --domain njit.edu
 ```
+
+The surname list above was extended (from an original ten) after a plain token-frequency scan of
+`public/data.json` itself surfaced `Huynh`, `Duong`, `Truong`, `Dang`, `Ngo`, `Mai`, and `Dao` as
+common Vietnamese surnames the original list happened to miss — worth checking periodically as the
+roster grows, since a name common enough to be worth adding will show up as a frequent token in the
+existing data before anyone thinks to add it by hand.
+
+Pass `--given-names` to also generate queries for common given/middle-name tokens (`Thanh`, `Quang`,
+`Minh`, `Hoang`, `Anh`, `Tuan`, `Van`, `Hung`), each with `-Vietnam -student -postdoctoral` appended.
+A given-name token matches far more broadly than a surname — it hits anyone with that token anywhere
+in their name, not just as a family name — so it needs both the institution restriction the generator
+already applies and those extra exclusions to stay usable; without them, an unrestricted given-name
+search returns mostly noise (Vietnam-based faculty out of scope, students, and postdocs). Tried
+against a handful of otherwise-unremarkable US, Japanese, and Australian universities, the two
+techniques found six new verified faculty from a small number of queries — three from a surname
+missing from the original list, three from a given-name token — a comparable hit rate to the standard
+per-surname queries. A control run against a country slice already thoroughly searched this way
+found nothing new, which helps rule out the six hits being a fluke of an unsearched region rather
+than evidence the technique itself works.
 
 Every result still requires the appointment, track, and source-quality checks above.
 
