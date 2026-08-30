@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
-import { FIELDS, TRACKS, LOCATIONS, HEALTH_SUBFIELDS, canonicalRank, displayName, displayUniversity, fieldOf, healthSubfieldOf, continentOf, locationMatches, buildFunFacts, buildAwardsFunFacts, filterRoster, buildTopUniversities, buildTopPhdInstitutions } from '../src/data.ts';
+import { FIELDS, TRACKS, LOCATIONS, HEALTH_SUBFIELDS, canonicalRank, displayName, displayUniversity, fieldOf, healthSubfieldOf, continentOf, locationMatches, buildFunFacts, buildAwardsFunFacts, filterRoster } from '../src/data.ts';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const roster = JSON.parse(readFileSync(join(__dirname, '../public/data.json'), 'utf8'));
@@ -239,6 +239,28 @@ test('search matches on simplified rank, not just name/university/location/area'
   assert.ok(result.some((p) => canonicalRank(p) === 'Teaching'));
 });
 
+test('scoped search restricts results to the requested roster attribute', () => {
+  const tai = filterRoster(roster, { query: 'Tai Tan Mai', searchScope: 'name', location: 'World' });
+  assert.equal(tai.length, 1);
+  assert.equal(tai[0].name, 'Tai Tan Mai');
+
+  const professors = filterRoster(roster, { query: 'Professor', searchScope: 'rank', location: 'World' });
+  assert.ok(professors.length > 0);
+  assert.ok(professors.every((person) => /professor/i.test(person.rank || '') || /professor/i.test(canonicalRank(person))));
+
+  const engineering = filterRoster(roster, { query: 'Engineering', searchScope: 'field', location: 'World' });
+  assert.ok(engineering.length > 0);
+  assert.ok(engineering.every((person) => fieldOf(person.department, person.university) === 'Engineering'));
+
+  const research = filterRoster(roster, { query: 'Machine Learning', searchScope: 'research', location: 'World' });
+  assert.ok(research.length > 0);
+  assert.ok(research.every((person) => person.researchAreas?.some((area) => /machine learning/i.test(area))));
+
+  const honors = filterRoster(roster, { query: 'NSF CAREER', searchScope: 'honors', location: 'World' });
+  assert.ok(honors.length > 0);
+  assert.ok(honors.every((person) => person.honors?.some((honor) => /NSF CAREER/i.test(honor.name))));
+});
+
 test('searching an honor name lists professors who hold that honor', () => {
   const career = filterRoster(roster, { query: 'NSF CAREER', field: 'all' });
   assert.ok(career.length > 0);
@@ -252,15 +274,6 @@ test('searching an honor name lists professors who hold that honor', () => {
 test('searching a name without middle initials still finds the professor', () => {
   const result = filterRoster(roster, { query: 'van vu', field: 'all', location: 'World' });
   assert.ok(result.some((person) => person.name === 'Van H. Vu'));
-});
-
-test('honors and awards keywords list every professor with at least one honor', () => {
-  const expected = roster.filter((p) => Array.isArray(p.honors) && p.honors.length > 0);
-  for (const query of ['honors', 'awards']) {
-    const results = filterRoster(roster, { query, field: 'all', location: 'World', track: 'all' });
-    assert.equal(results.length, expected.length, `Unexpected result count for ${query}`);
-    assert.deepEqual(results, expected, `Unexpected result set for ${query}`);
-  }
 });
 
 test('filterRoster narrows by track and "all" leaves it unfiltered', () => {
@@ -302,70 +315,6 @@ test('university suffixes are reserved for otherwise identical names', () => {
   for (const person of roster.filter((entry) => entry.name.includes(' - '))) {
     assert.ok(visibleCounts.get(displayName(person.name)) > 1, person.name);
   }
-});
-
-test('univ: prefix only includes faculty at that university and excludes PhD graduates at other universities', () => {
-  const topUnis = buildTopUniversities(roster, 8);
-  for (const [uni, count] of topUnis) {
-    const results = filterRoster(roster, { query: `univ:${uni}`, field: 'all', track: 'all' });
-    assert.equal(results.length, count, `univ:${uni} should return exactly ${count} faculty`);
-    assert.ok(
-      results.every((p) => p.university.toLowerCase().includes(uni.toLowerCase())),
-      `All returned faculty should have university matching "${uni}"`,
-    );
-  }
-});
-
-test('phd: prefix only includes faculty whose PhD alma mater matches', () => {
-  const topPhds = buildTopPhdInstitutions(roster, 8);
-  for (const [inst, count] of topPhds) {
-    const results = filterRoster(roster, { query: `phd:${inst}`, field: 'all', track: 'all' });
-    assert.equal(results.length, count, `phd:${inst} should return exactly ${count} faculty`);
-    assert.ok(
-      results.every((p) => p.phdInstitution && p.phdInstitution.toLowerCase().includes(inst.toLowerCase())),
-      `All returned faculty should have phdInstitution matching "${inst}"`,
-    );
-  }
-});
-
-test('credential queries filter people with documented PhD, postdoc, MS, or undergraduate education', () => {
-  const fields = {
-    phd: ['phdInstitution', 'phdYear'],
-    postdoc: ['postdocInstitution', 'postdocYear'],
-    ms: ['msInstitution', 'msYear'],
-    undergrad: ['undergradInstitution', 'undergradYear'],
-  };
-  for (const [query, [institution, year]] of Object.entries(fields)) {
-    const results = filterRoster(roster, { query });
-    const expected = roster.filter((person) => person[institution] || person[year]);
-    assert.deepEqual(results, expected, `${query} should return every person with that credential`);
-  }
-
-  const results = filterRoster(roster, { query: 'postdoc:Carnegie Mellon' });
-  assert.ok(results.length > 0);
-  assert.ok(results.every((person) => person.postdocInstitution?.includes('Carnegie Mellon')));
-});
-
-test('state: prefix only includes faculty in that state', () => {
-  const caResults = filterRoster(roster, { query: 'state:California', field: 'all', track: 'all' });
-  const actualCa = roster.filter((p) => p.state === 'California');
-  assert.equal(caResults.length, actualCa.length);
-  assert.ok(caResults.every((p) => p.state === 'California'));
-
-  const txResults = filterRoster(roster, { query: 'state:TX', field: 'all', track: 'all' });
-  const actualTx = roster.filter((p) => p.state === 'Texas');
-  assert.equal(txResults.length, actualTx.length);
-  assert.ok(txResults.every((p) => p.state === 'Texas'));
-});
-
-test('filterRoster prefix queries handle quotes, aliases, and extra whitespace', () => {
-  const q1 = filterRoster(roster, { query: 'university:"Texas Tech University"' });
-  const q2 = filterRoster(roster, { query: 'univ:   Texas Tech University  ' });
-  const q3 = filterRoster(roster, { query: 'school:\'Texas Tech University\'' });
-  const expectedCount = roster.filter((person) => person.university === 'Texas Tech University').length;
-  assert.equal(q1.length, expectedCount);
-  assert.equal(q2.length, expectedCount);
-  assert.equal(q3.length, expectedCount);
 });
 
 test('LOCATIONS includes US, continents, and World', () => {
@@ -420,69 +369,6 @@ test('locationMatches filters by an exact country for the country dropdown', () 
   assert.ok(!locationMatches(sampleSG, 'France'));
   assert.ok(locationMatches(sampleUS, 'United States'));
   assert.ok(!locationMatches(sampleFR, 'United States'));
-});
-
-test('country: and continent: prefix queries filter roster accurately', () => {
-  const usQuery = filterRoster(roster, { query: 'country:US' });
-  const actualUS = roster.filter((p) => (p.country || 'United States') === 'United States');
-  assert.equal(usQuery.length, actualUS.length);
-
-  const sgQuery = filterRoster(roster, { query: 'country:Singapore' });
-  const actualSG = roster.filter((p) => p.country === 'Singapore');
-  assert.equal(sgQuery.length, actualSG.length);
-
-  const auQuery = filterRoster(roster, { query: 'country:Australia' });
-  const actualAU = roster.filter((p) => p.country === 'Australia');
-  assert.equal(auQuery.length, actualAU.length);
-
-  const caQuery = filterRoster(roster, { query: 'country:Canada' });
-  const actualCA = roster.filter((p) => p.country === 'Canada');
-  assert.equal(caQuery.length, actualCA.length);
-
-  const ukQuery = filterRoster(roster, { query: 'country:"United Kingdom"' });
-  const actualUK = roster.filter((p) => p.country === 'United Kingdom');
-  assert.equal(ukQuery.length, actualUK.length);
-
-  const frQuery = filterRoster(roster, { query: 'country:France' });
-  const actualFR = roster.filter((p) => p.country === 'France');
-  assert.equal(frQuery.length, actualFR.length);
-
-  const filterLocUS = filterRoster(roster, { location: 'US' });
-  assert.equal(filterLocUS.length, actualUS.length);
-
-  const filterLocNA = filterRoster(roster, { location: 'North America' });
-  assert.equal(filterLocNA.length, actualUS.length + actualCA.length);
-
-  const actualAsia = roster.filter((p) => continentOf(p.country) === 'Asia');
-  const filterLocAsia = filterRoster(roster, { location: 'Asia' });
-  assert.equal(filterLocAsia.length, actualAsia.length);
-
-  const jpQuery = filterRoster(roster, { query: 'country:Japan' });
-  const actualJP = roster.filter((p) => p.country === 'Japan');
-  assert.equal(jpQuery.length, actualJP.length);
-
-  const hkQuery = filterRoster(roster, { query: 'country:"Hong Kong"' });
-  const actualHK = roster.filter((p) => p.country === 'Hong Kong');
-  assert.equal(hkQuery.length, actualHK.length);
-
-  const actualAustralasia = roster.filter((p) => continentOf(p.country) === 'Australasia');
-  const filterLocAustralasia = filterRoster(roster, { location: 'Australasia' });
-  assert.equal(filterLocAustralasia.length, actualAustralasia.length);
-
-  const nzQuery = filterRoster(roster, { query: 'country:"New Zealand"' });
-  const actualNZ = roster.filter((p) => p.country === 'New Zealand');
-  assert.equal(nzQuery.length, actualNZ.length);
-
-  const actualEurope = roster.filter((p) => continentOf(p.country) === 'Europe');
-  const filterLocEurope = filterRoster(roster, { location: 'Europe' });
-  assert.equal(filterLocEurope.length, actualEurope.length);
-
-  const chQuery = filterRoster(roster, { query: 'country:Switzerland' });
-  const actualCH = roster.filter((p) => p.country === 'Switzerland');
-  assert.equal(chQuery.length, actualCH.length);
-
-  const filterLocWorld = filterRoster(roster, { location: 'World' });
-  assert.equal(filterLocWorld.length, roster.length);
 });
 
 test('unique helpers never contain undefined or null values', async () => {

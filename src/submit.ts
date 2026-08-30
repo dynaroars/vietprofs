@@ -18,7 +18,11 @@ function renderShell() {
     </header>
 
     <form id="submit-form" class="submit-form" novalidate>
-      <div class="form-section required">
+      <section class="form-group required-group" aria-labelledby="required-heading">
+        <h2 id="required-heading">Required</h2>
+        <p class="form-group-description">These two fields are needed to verify the submission.</p>
+
+      <div class="form-section">
         <label for="name">Full name <span class="required-badge">Required</span></label>
         <input id="name" name="name" type="text" required placeholder="e.g. Anh Nguyen" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="name-suggestions" aria-describedby="name-hint" />
         <div id="name-suggestions" class="correction-suggestions" role="listbox" hidden></div>
@@ -26,14 +30,16 @@ function renderShell() {
         <p class="form-help notice" id="name-match-notice" hidden></p>
       </div>
 
-      <div class="form-section required">
+      <div class="form-section">
         <label for="profileUrl">Official university profile <span class="required-badge">Required</span> <span class="info-icon" tabindex="0" role="img" aria-label="Why this is required" data-tooltip="We need at least the official university profile link to verify and add this entry.">i</span></label>
         <input id="profileUrl" name="profileUrl" type="url" required placeholder="https://… (department or faculty directory page)" />
       </div>
 
-      <div class="optional-fields-intro" role="note">
-        <strong>Everything below is optional.</strong> Share any details you have; maintainers will verify and complete the record.
-      </div>
+      </section>
+
+      <section class="form-group optional-group" aria-labelledby="optional-heading">
+        <h2 id="optional-heading">Optional</h2>
+        <p class="form-group-description">Share any details you have; maintainers will verify and complete the record.</p>
 
       <div class="form-section">
         <label for="websiteUrl">Personal or lab website</label>
@@ -163,6 +169,7 @@ function renderShell() {
         <label for="notes">Notes for the maintainer</label>
         <textarea id="notes" name="notes" rows="2" placeholder="Anything else that helps verify this (e.g. recent move, other evidence links, etc.)"></textarea>
       </div>
+      </section>
 
       <div class="submit-actions">
         <button type="submit" class="submit-btn">Send by email</button>

@@ -1,5 +1,5 @@
 import './style.css';
-import { loadRoster, buildSearchIndex, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, LOCATION_LABELS, countryFlag, canonicalRank, displayName, displayUniversity, vietnameseName, fieldOf, healthSubfieldOf, locationMatches, filterRoster, buildFunFacts, buildUsObservations, buildInternationalObservations, buildQualifiedObservations, buildAwardsFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, STATE_ABBR, parseSearchQuery, continentOf, type Roster } from './data.ts';
+import { loadRoster, buildSearchIndex, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, LOCATION_LABELS, countryFlag, canonicalRank, displayName, displayUniversity, vietnameseName, fieldOf, healthSubfieldOf, locationMatches, filterRoster, buildFunFacts, buildUsObservations, buildInternationalObservations, buildQualifiedObservations, buildAwardsFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, STATE_ABBR, continentOf, type Roster } from './data.ts';
 import { escapeHtml, formatRosterDate, formatRosterShortDate } from './utils.ts';
 import { STATE_GRID } from './state-grid.ts';
 
@@ -70,8 +70,23 @@ function renderShell() {
       </div>
     </header>
     <div class="controls">
-      <input id="search" class="search-input" type="search" placeholder="Search name, university, department, rank, honors, or research area…" aria-label="Search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-suggestion-panel" />
-      <div id="search-suggestion-panel" class="search-suggestion-panel" role="listbox" hidden></div>
+      <div class="search-box">
+        <select id="search-scope" class="search-scope" aria-label="Search in">
+          <option value="all">Everything</option>
+          <option value="name">Name</option>
+          <option value="university">University</option>
+          <option value="department">Department</option>
+          <option value="rank">Rank</option>
+          <option value="field">Field</option>
+          <option value="track">Track</option>
+          <option value="research">Research area</option>
+          <option value="honors">Honors</option>
+          <option value="phd">PhD institution</option>
+          <option value="country">Country</option>
+        </select>
+        <input id="search" class="search-input" type="search" placeholder="Search the roster…" aria-label="Search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-suggestion-panel" />
+        <div id="search-suggestion-panel" class="search-suggestion-panel" role="listbox" hidden></div>
+      </div>
       <select id="location-filter" class="field-select location-select" aria-label="Filter by location">
       </select>
       <select id="field-filter" class="field-select" aria-label="Filter by field">
@@ -247,7 +262,7 @@ function renderStateGrid(roster) {
       const count = counts.get(fullName) ?? 0;
       const tier = heatTier(count, max);
       const label = `${fullName}: ${count} ${count === 1 ? 'person' : 'people'}`;
-      return `<button type="button" class="state-tile heat-${tier}" style="grid-row:${row + 1};grid-column:${col + 1}" data-state="state:${escapeHtml(fullName)}" title="${escapeHtml(label)}" aria-label="${escapeHtml(label)}">${abbr}</button>`;
+      return `<button type="button" class="state-tile heat-${tier}" style="grid-row:${row + 1};grid-column:${col + 1}" data-state="${escapeHtml(fullName)}" title="${escapeHtml(label)}" aria-label="${escapeHtml(label)}">${abbr}</button>`;
     })
     .join('');
   return `
@@ -299,7 +314,7 @@ function renderLeaderboards(subRoster, { titleUni = 'Top Faculty Hubs', descUni 
     .map(([uni, count], idx) => {
       const pct = Math.round((count / maxUni) * 100);
       return `
-        <button type="button" class="ranked-item" data-search="univ:${escapeHtml(uni)}" title="Filter by ${escapeHtml(uni)}">
+        <button type="button" class="ranked-item" data-search="${escapeHtml(uni)}" data-scope="university" title="Filter by ${escapeHtml(uni)}">
           <div class="ranked-header">
             <span class="ranked-name"><span class="ranked-num">${idx + 1}.</span> ${escapeHtml(uni)}</span>
             <span class="ranked-count">${count}</span>
@@ -314,7 +329,7 @@ function renderLeaderboards(subRoster, { titleUni = 'Top Faculty Hubs', descUni 
     .map(([inst, count], idx) => {
       const pct = Math.round((count / maxPhd) * 100);
       return `
-        <button type="button" class="ranked-item" data-search="phd:${escapeHtml(inst)}" title="Search faculty from ${escapeHtml(inst)}">
+        <button type="button" class="ranked-item" data-search="${escapeHtml(inst)}" data-scope="phd" title="Search faculty from ${escapeHtml(inst)}">
           <div class="ranked-header">
             <span class="ranked-name"><span class="ranked-num">${idx + 1}.</span> ${escapeHtml(inst)}</span>
             <span class="ranked-count">${count}</span>
@@ -451,11 +466,29 @@ async function init() {
       ...uniquePhdInstitutions(roster),
     ]),
   ].sort();
+  const nameSuggestionValues = [...new Set(roster.flatMap((p) => {
+    const name = displayName(p.name);
+    const withoutInitials = name.replace(/\b[A-Z]\.\s*/g, '').replace(/\s+/g, ' ').trim();
+    return [name, withoutInitials];
+  }))].sort();
+  const suggestionSources = new Map([
+    ['name', nameSuggestionValues],
+    ['rank', [...new Set([...uniqueRanks(roster), ...roster.map((p) => canonicalRank(p))])].sort()],
+    ['field', FIELDS],
+    ['track', TRACKS],
+    ['research', uniqueResearchAreas(roster)],
+    ['honors', [...new Set(roster.flatMap((p) => (p.honors || []).flatMap((honor) => [honor.name, honor.organization]).filter(Boolean)))].sort()],
+    ['university', [...new Set(roster.map((p) => p.university))].sort()],
+    ['department', uniqueDepartments(roster)],
+    ['phd', uniquePhdInstitutions(roster)],
+  ]);
   const searchInput = document.getElementById('search');
+  const searchScopeSelect = document.getElementById('search-scope');
   const suggestionPanel = document.getElementById('search-suggestion-panel');
   const locationSelect = document.getElementById('location-filter');
   const fieldSelect = document.getElementById('field-filter');
   const trackSelect = document.getElementById('track-filter');
+  let selectedState = '';
 
   function optionElement(value, label) {
     const option = document.createElement('option');
@@ -604,12 +637,6 @@ async function init() {
     const q = searchInput.value.trim();
     if (!q) return;
 
-    const parsed = parseSearchQuery(q);
-    if (['country', 'location', 'honors'].includes(parsed.type)) {
-      locationSelect.value = 'World';
-      return;
-    }
-
     const countryNames = uniqueCountries(roster);
     const isCountryQuery = countryNames.some((c) =>
       c.toLowerCase() === q.toLowerCase() ||
@@ -641,6 +668,8 @@ async function init() {
 
     const matchesInCurrent = filterRoster(searchIndex, {
       query: q,
+      searchScope: searchScopeSelect.value,
+      state: selectedState,
       location: locationSelect.value,
       field: fieldSelect.value,
       track: trackSelect.value,
@@ -649,6 +678,8 @@ async function init() {
     if (matchesInCurrent === 0) {
       const matchesGlobally = filterRoster(searchIndex, {
         query: q,
+        searchScope: searchScopeSelect.value,
+        state: selectedState,
         location: 'World',
         field: fieldSelect.value,
         track: trackSelect.value,
@@ -660,10 +691,15 @@ async function init() {
   }
 
   const params = new URLSearchParams(window.location.search);
+  const requestedScope = params.get('scope');
+  if (requestedScope && [...searchScopeSelect.options].some((option) => option.value === requestedScope)) {
+    searchScopeSelect.value = requestedScope;
+  }
   if (params.has('q')) {
     searchInput.value = params.get('q');
   }
   const requestedLocation = params.get('loc') ?? params.get('location');
+  selectedState = params.get('state') ?? '';
   const requestedField = params.get('field');
   const requestedTrack = params.get('track');
   let initialLocation = 'World';
@@ -709,6 +745,8 @@ async function init() {
   function syncUrl() {
     const next = new URLSearchParams();
     if (searchInput.value.trim()) next.set('q', searchInput.value.trim());
+    if (selectedState) next.set('state', selectedState);
+    if (searchScopeSelect.value !== 'all') next.set('scope', searchScopeSelect.value);
     if (locationSelect.value !== 'World') next.set('loc', locationSelect.value);
     if (fieldSelect.value !== 'all') next.set('field', fieldSelect.value);
     if (trackSelect.value !== 'all') next.set('track', trackSelect.value);
@@ -719,6 +757,7 @@ async function init() {
 
   function update({ fromSearch = false } = {}) {
     if (fromSearch) {
+      selectedState = '';
       if (searchInput.value.trim() && fieldSelect.value === INTERESTING) {
         fieldSelect.value = 'all';
       }
@@ -733,6 +772,8 @@ async function init() {
     }
     const filtered = filterRoster(searchIndex, {
       query: searchInput.value,
+      searchScope: searchScopeSelect.value,
+      state: selectedState,
       location: locationSelect.value,
       field: fieldSelect.value,
       track: trackSelect.value,
@@ -756,13 +797,24 @@ async function init() {
     searchInput.setAttribute('aria-expanded', 'false');
   }
   function showSuggestions() {
-    const query = searchInput.value.trim().toLocaleLowerCase();
-    if (!query) {
+    const rawQuery = searchInput.value.trim();
+    const query = rawQuery.toLocaleLowerCase();
+    const selectedScope = searchScopeSelect.value !== 'all' ? searchScopeSelect.value : undefined;
+    const keywordValues = selectedScope ? suggestionSources.get(selectedScope) : undefined;
+    if (!query && !(keywordValues && keywordValues.length <= 20)) {
       hideSuggestions();
       return;
     }
-    const matches = suggestionValues
-      .filter((value) => value.toLocaleLowerCase().includes(query))
+    const normalized = (value) => value.toLocaleLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    const source = keywordValues ?? suggestionValues;
+    const sourceQuery = keywordValues ? normalized(rawQuery) : normalized(query);
+    const matches = source
+      .filter((value) => normalized(value).includes(sourceQuery))
+      .sort((a, b) => {
+        const aStarts = normalized(a).startsWith(sourceQuery);
+        const bStarts = normalized(b).startsWith(sourceQuery);
+        return Number(bStarts) - Number(aStarts) || a.localeCompare(b);
+      })
       .slice(0, 8);
     suggestionPanel.replaceChildren(...matches.map((value, index) => {
       const option = document.createElement('button');
@@ -784,6 +836,10 @@ async function init() {
   }
   searchInput.addEventListener('focus', showSuggestions);
   searchInput.addEventListener('input', showSuggestions);
+  searchScopeSelect.addEventListener('change', () => {
+    showSuggestions();
+    update({ fromSearch: true });
+  });
   searchInput.addEventListener('keydown', (event) => {
       const options = [...suggestionPanel.querySelectorAll<HTMLButtonElement>('.search-suggestion')];
     if (event.key === 'Escape') {
@@ -821,7 +877,8 @@ async function init() {
     const target = e.target as HTMLElement;
     const tile = target.closest<HTMLButtonElement>('.state-tile');
     if (tile) {
-      searchInput.value = tile.dataset.state;
+      searchInput.value = '';
+      selectedState = tile.dataset.state || '';
       setFilterValues({ location: 'US' }); // leaving the facts view to show filtered U.S. results
       update();
       return;
@@ -829,6 +886,7 @@ async function init() {
     const rankedItem = target.closest<HTMLButtonElement>('.ranked-item');
     if (rankedItem && rankedItem.dataset.search) {
       searchInput.value = rankedItem.dataset.search;
+      searchScopeSelect.value = rankedItem.dataset.scope || 'all';
       fieldSelect.value = 'all';
       trackSelect.value = 'all';
       update({ fromSearch: true });

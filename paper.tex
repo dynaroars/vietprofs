@@ -87,6 +87,16 @@ Each track is defined precisely enough that a stable, full-time, faculty-level r
 Every included person is also classified into one of 17 broad fields of study,  broadly classified by the U.S. National Center for Education Statistics, National Science Foundation and National Institutes of Health. % already use to report on degree programs and doctorates, with health-related subfields further aligned to the National Institutes of Health's Institute and Center structure.
 The goal is for the directory's field distribution to read against familiar national categories (e.g., Computing, Mathematics, Health, Social and Behavioral Sciences) rather than an invented scheme (Section~\ref{sec:fields}).
 
+<<<<<<< HEAD
+=======
+Each person's card is designed around what a visitor actually needs, not around what happened to be easiest to collect.
+A portrait and the Vietnamese-diacritic form of their name help with recognition.
+Current university, department, rank, and location say where to find them.
+Education history back through their PhD---in the current snapshot as far back as 1962---shows the diaspora's academic presence spans generations, not one recent wave.
+Curated honors are limited to real field-wide distinctions such as national-academy election or a major career award, so the list stays meaningful rather than exhaustive.
+Short research-area tags support topic-level search, and a visible last-verified date lets a reader judge how current a given fact is (Section~\ref{sec:whatshown}).
+The site itself supports free-text search with a selectable search scope, combinable location/field/track filters, shareable filtered URLs, university and PhD-institution leaderboards, a state-by-state map of U.S. records, and a public form for anyone to submit a new person or a correction without touching the underlying data directly (Section~\ref{sec:ui}).
+>>>>>>> 9bb6ed9c88a892819e3514a948ab78bb35486416
 As of 29 August 2026, the canonical snapshot holds 831 records at 367 universities in 19 countries, across all 17 fields and all five tracks (Section~\ref{sec:results}).
 Each person's displaying card is designed around what a visitor actually needs, such as a portrait, Vietnamese-diacritic name, current university, department, rank, and location, education history, curated honors, and short research-area tags.
 Curated honors are limited to real field-wide distinctions such as national-academy election or a major career award.
@@ -153,7 +163,7 @@ The site is designed around a small number of intended uses, each already reflec
 \item \textbf{Assembling speakers, panels, and committees.} Conference organizers, professional societies, and Vietnamese student and alumni associations can use the field and honors filters to identify potential keynote speakers, panelists, or program-committee members with relevant expertise---a panel on Vietnam War history could draw on \vplink{Lien-Hang+T.+Nguyen}{Lien-Hang T. Nguyen} (Columbia) and \vplink{Nu-Anh+Tran}{Nu-Anh Tran} (University of Connecticut).
 \item \textbf{Documenting representation.} Journalists, university offices, and cultural or diplomatic organizations that want to describe the reach of Vietnamese scholarship abroad have, for the first time, a single place to start rather than an ad hoc collection of anecdotes---from \vplink{Lan+Cao}{Lan Cao}'s professorship of law at Chapman University to Nam-Trung Nguyen's Australian Laureate Fellowship at Griffith University.
 \item \textbf{A record the community can see itself in.} Independent of any specific task, the directory is a form of collective visibility: it lets the diaspora, and outsiders, see the range of institutions, countries, fields, and generations---the earliest recorded PhD year in the current snapshot, 1962, belongs to Xuong Nguyen-Huu, who now holds an appointment at UC San Diego---that Vietnamese-heritage academics have reached.
-\item \textbf{A starting point for description, not a survey instrument.} The aggregated view (Section~\ref{sec:results}) lets a visitor ask simple descriptive questions---which fields, which countries, which institutions are represented in the maintained roster, such as \vplink{univ:Monash}{Monash University}'s 13 faculty or the 60 records currently located in Australia---while Section~\ref{sec:limitations} explains why that view should not be read as a population survey.
+\item \textbf{A starting point for description, not a survey instrument.} The aggregated view (Section~\ref{sec:results}) lets a visitor ask simple descriptive questions---which fields, which countries, which institutions are represented in the maintained roster, such as \vplink{Monash}{Monash University}'s 13 faculty or the 60 records currently located in Australia---while Section~\ref{sec:limitations} explains why that view should not be read as a population survey.
 \end{itemize}
 
 VietProfs is deliberately not several other things it might be mistaken for.
@@ -425,7 +435,7 @@ The line is deliberately conservative: a shorter, verifiable list of real distin
 \section{User Interface and Interaction Model}
 \label{sec:ui}
 Because the roster is only useful if the population it describes can actually find themselves and each other in it, the client-side search and browsing interface is a first-class part of the system, not a thin wrapper over the JSON file.
-Figure~\ref{fig:home} shows the landing view: a free-text search box, three combinable filters (location, field, and faculty track), a row of example queries generated from the current roster, a result count, and a card per matching person showing name, Vietnamese-diacritic form, current rank/department/university/location, education, honors, research tags, and a \code{lastUpdatedAt} badge so a visitor can see how fresh a given record is.
+Figure~\ref{fig:home} shows the landing view: a free-text search box with a selectable scope, three combinable filters (location, field, and faculty track), a row of example queries generated from the current roster, a result count, and a card per matching person showing name, Vietnamese-diacritic form, current rank/department/university/location, education, honors, research tags, and a \code{lastUpdatedAt} badge so a visitor can see how fresh a given record is.
 
 \begin{figure}[t]
 \centering
@@ -436,47 +446,21 @@ education, honors, and research tags.}
 \label{fig:home}
 \end{figure}
 
-\subsection{Prefix search and diacritic normalization}
-The search box matches names, universities, departments, ranks, locations, research areas, honors, and PhD/postdoctoral/other-degree institutions by default, with matching performed on a diacritic-stripped, lowercased index (\code{buildSearchIndex}/\code{normalizeSearchText} in \code{src/data.ts}) so that typing \code{Nguyen} finds \code{Nguy\~{e}n}.
-A small parser (\code{parseSearchQuery}) recognizes field-scoped prefixes, listed in Table~\ref{tab:prefixes}, so a visitor who knows what they are looking for can narrow a query instead of scanning free-text matches; unrecognized prefixes fall back to a plain substring search over the full index.
-Figure~\ref{fig:search} shows the result of \code{univ:Stanford}, which narrows 554 U.S. records to the three current Stanford entries.
-The active search text and filter selections are mirrored into the URL query string, so a filtered view---for example, all Clinical-track faculty in Health Sciences at a named university---is directly shareable as a link rather than requiring the recipient to reproduce the same clicks.
-
-\begin{table}[t]
-\centering
-\caption{Recognized search prefixes (\code{parseSearchQuery}, \codelink{src/data.ts}), also documented
-for end users in \codelink{README.md}.}
-\label{tab:prefixes}
-\small
-\begin{tabularx}{\linewidth}{@{}lXl@{}}
-\toprule
-Prefix & Searches & Example \\
-\midrule
-\code{univ:}, \code{university:}, \code{school:} & Current university & \code{univ:Oxford} \\
-\code{phd:}, \code{postdoc:}, \code{ms:}, \code{md:}, \code{undergrad:} & That credential's
-institution; bare form matches anyone with the credential & \code{postdoc:Carnegie Mellon} \\
-\code{country:}, \code{nation:} & Current country & \code{country:France} \\
-\code{continent:}, \code{location:}, \code{loc:} & Continent/region & \code{loc:Europe} \\
-\code{state:} & State or province & \code{state:California} \\
-\code{city:} & City & \code{city:Paris} \\
-\code{dept:}, \code{department:} & Primary department & \code{dept:Economics} \\
-\code{name:} & Displayed name & \code{name:"Thanh Nguyen"} \\
-\code{honors}, \code{awards} & Any honors-bearing record & \code{honors} \\
-\bottomrule
-\end{tabularx}
-\end{table}
+\subsection{Scoped search and diacritic normalization}
+The search box matches names, universities, departments, ranks, research areas, honors, and PhD institutions by default, with matching performed on a diacritic-stripped, lowercased index (\code{buildSearchIndex}/\code{normalizeSearchText} in \code{src/data.ts}) so that typing \code{Nguyen} finds \code{Nguy\~{e}n}. A selector at the left of the search box can narrow the same text to one roster attribute, such as Name, Rank, Field, Track, Research area, Honors, University, Department, or PhD institution. Small finite scopes expose their available values immediately as suggestions.
+The active search text, selected scope, and filters are mirrored into the URL query string, so a filtered view---for example, all Clinical-track faculty in Health Sciences at a named university---is directly shareable as a link rather than requiring the recipient to reproduce the same clicks.
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.92\linewidth]{figures/screenshot-search.png}
-\caption{A prefix-scoped search (\code{univ:Stanford}) narrowing the full roster to the three
+\caption{A university-scoped search narrowing the full roster to the three
 Stanford entries, each with rank, department, location, education, and---for the top result---an
 honors list rendered as sourced links.}
 \label{fig:search}
 \end{figure}
 
 \subsection{Leaderboards, geography, and the derived-facts view}
-Below the roster list, the site computes ``Top Faculty Hubs'' and ``Top PhD Alma Maters'' leaderboards for the currently selected subset, each entry itself a clickable filter (\code{data-search="univ:..."}) so browsing and querying are the same action.
+Below the roster list, the site computes ``Top Faculty Hubs'' and ``Top PhD Alma Maters'' leaderboards for the currently selected subset, each entry itself a clickable scoped filter (the search text and scope are carried separately) so browsing and querying are the same action.
 Selecting a U.S. location, or the sentinel ``\emph{Show me something interesting}'' option in the field filter, additionally renders a state-by-state choropleth grid (\code{src/state-grid.ts}) where tile shade encodes record count and a click filters to that state; Figure~\ref{fig:interesting} shows this view.
 This is discussed further as the site's third function, runtime aggregation, in Section~\ref{sec:results}.
 
@@ -522,7 +506,7 @@ records, and clicking a tile filters the roster to that state.}
 
 \subsection{Snapshot observations}
 Table~\ref{tab:snapshot} summarizes the current snapshot.
-Within it, \vplink{univ:Monash}{Monash University} has 13 records, UC San Diego 12, and NUS 11; Texas Tech, UC Irvine, the University of Melbourne, and the University of Toronto each have 10.
+Within it, \vplink{Monash}{Monash University} has 13 records, UC San Diego 12, and NUS 11; Texas Tech, UC Irvine, the University of Melbourne, and the University of Toronto each have 10.
 California and Texas contain 169 of 554 U.S. records (31\%).
 The international subset contains 277 records across 18 non-U.S. country values, led by Australia (60), Canada (46), the U.K. (46), France (33), Singapore (26), and Taiwan (21).
 The four largest broad fields in the analysis are Computer and Information Sciences (132), Engineering (124), Business and Economics (112), and Health Sciences (99).

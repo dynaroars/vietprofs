@@ -9,6 +9,7 @@ declare module '*.css';
 interface Document {
   getElementById(elementId: 'app'): HTMLElement;
   getElementById(elementId: 'search'): HTMLInputElement;
+  getElementById(elementId: 'search-scope'): HTMLSelectElement;
   getElementById(elementId: 'search-suggestion-panel'): HTMLDivElement;
   getElementById(elementId: 'location-filter' | 'field-filter' | 'track-filter'): HTMLSelectElement;
   getElementById(elementId: 'home-link'): HTMLAnchorElement;

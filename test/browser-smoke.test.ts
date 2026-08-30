@@ -73,12 +73,14 @@ test('directory loads and searching changes the roster', async (t) => {
   assert.ok(await searchSuggestions.count() > 0);
   await page.locator('#search').press('Escape');
   assert.equal(await page.locator('#search-suggestion-panel').isHidden(), true);
-  await page.locator('#search').fill('univ:"Pennsylvania State University"');
+  await page.locator('#search-scope').selectOption('university');
+  await page.locator('#search').fill('Pennsylvania State University');
   await page.waitForTimeout(250);
   assert.ok(await page.locator('.entry').count() > 0);
   const pennStateMeta = await page.locator('.entry-meta').allTextContents();
   assert.ok(pennStateMeta.every((text) => text.includes('Penn State')));
   assert.ok(pennStateMeta.every((text) => !text.includes('Pennsylvania State University')));
+  await page.locator('#search-scope').selectOption('all');
   await page.locator('#search').fill('ThanhVu');
   await page.waitForTimeout(250);
   assert.equal(await page.locator('.entry').count(), 1);
