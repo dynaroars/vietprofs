@@ -345,6 +345,39 @@ order:
    existing `lastUpdatedAt`. If the review is incomplete, preserve the old timestamps and retry
    later.
 
+## Education-field consistency sweep
+
+This is a separate, cheaper technique from the periodic full-roster refresh above. It targets
+records already in `public/data.json` whose education fields are structurally incomplete, using
+each person's already-stored `profileUrl` instead of a new discovery search. Because the source is
+already known and was already accepted once, this sweep does not redo the liveness, URL-role, or
+Scholar-identity checks from the periodic refresh; it only asks whether the previously reviewed
+page in fact states the missing fact.
+
+Two gap patterns are easy to find with a plain scan of the roster file, with very different yield:
+
+- **A degree year without its paired institution** (`phdYear` present but `phdInstitution` absent,
+  and likewise for `msYear`/`msInstitution` and `undergradYear`/`undergradInstitution`). This is
+  close to always resolvable: whatever page supplied the year almost always names the institution
+  next to it, so the original entry was very likely an incomplete transcription rather than a gap
+  in the source.
+- **A record with no education field populated at all.** This resolves at a much lower rate.
+  Directory-style listings for adjunct, lecturer, and teaching-track staff frequently omit degree
+  history entirely — refetching the same terse page a second time will not produce new information.
+  Structured CV-style pages at academic medical centers (MD Anderson, OHSU, and similar) are
+  disproportionately productive by contrast, since they routinely publish a dedicated education
+  section with medical school, residency, and fellowship institutions and years.
+
+Apply the same data-entry rules as any other correction: add only what the page explicitly states,
+never infer a year from chronology, and route a professional degree without a dedicated field (JD,
+DMD, DO, PharmD, MFA, MBA, etc.) through `otherDegrees` rather than forcing it into `phdInstitution`
+or `msInstitution`. Update `lastUpdatedAt` for any record that gains a fact. Do not advance
+`lastVerifiedAt` in the ledger for this sweep alone — it does not perform the full live review the
+periodic refresh requires, so advancing the ledger would let that record skip a real refresh later.
+When a scan turns up no education fields and the primary source states none, leave the record
+unresolved and say so explicitly (which people, and why) rather than silently treating an empty
+page as proof no degree exists.
+
 ## Validation checklist
 
 Before committing a roster change, run:
