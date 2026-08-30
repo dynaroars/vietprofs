@@ -25,7 +25,10 @@ const surnames = ['Nguyen', 'Tran', 'Le', 'Pham', 'Vo', 'Vu', 'Bui', 'Do', 'Phan
 // Common Vietnamese given/middle-name tokens. These produce more false positives than a surname
 // search (they match any person with that token anywhere in their name, not just as a family
 // name), so they are opt-in via --given-names and always carry the exclusion terms below.
-const givenNames = ['Thanh', 'Quang', 'Minh', 'Hoang', 'Anh', 'Tuan', 'Van', 'Hung'];
+// "Liem" is intentionally excluded: it is also a common Chinese-Indonesian surname (e.g. Liem
+// Sioe Liong), and an unrestricted search for it returned a plausible-looking but non-Vietnamese
+// false positive before this list was even institution-restricted.
+const givenNames = ['Thanh', 'Quang', 'Minh', 'Hoang', 'Anh', 'Tuan', 'Van', 'Hung', 'Quan', 'Quoc', 'Ngoc', 'Viet', 'Phuong', 'Huy', 'Kim', 'Nam', 'Long', 'Linh', 'Toan', 'Hieu', 'Chinh', 'Thai', 'Hai', 'Dinh'];
 const names = includeGivenNames ? [...surnames, ...givenNames] : surnames;
 const givenNameExclusions = includeGivenNames ? ' -Vietnam -student -postdoctoral' : '';
 const queries = [

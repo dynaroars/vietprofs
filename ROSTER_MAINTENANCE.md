@@ -61,17 +61,34 @@ roster grows, since a name common enough to be worth adding will show up as a fr
 existing data before anyone thinks to add it by hand.
 
 Pass `--given-names` to also generate queries for common given/middle-name tokens (`Thanh`, `Quang`,
-`Minh`, `Hoang`, `Anh`, `Tuan`, `Van`, `Hung`), each with `-Vietnam -student -postdoctoral` appended.
-A given-name token matches far more broadly than a surname — it hits anyone with that token anywhere
-in their name, not just as a family name — so it needs both the institution restriction the generator
-already applies and those extra exclusions to stay usable; without them, an unrestricted given-name
-search returns mostly noise (Vietnam-based faculty out of scope, students, and postdocs). Tried
-against a handful of otherwise-unremarkable US, Japanese, and Australian universities, the two
-techniques found six new verified faculty from a small number of queries — three from a surname
+`Minh`, `Hoang`, `Anh`, `Tuan`, `Van`, `Hung`, `Quan`, `Quoc`, `Ngoc`, `Viet`, `Phuong`, `Huy`, `Kim`,
+`Nam`, `Long`, `Linh`, `Toan`, `Hieu`, `Chinh`, `Thai`, `Hai`, `Dinh`), each with `-Vietnam -student
+-postdoctoral` appended. A given-name token matches far more broadly than a surname — it hits anyone
+with that token anywhere in their name, not just as a family name — so it needs both the institution
+restriction the generator already applies and those extra exclusions to stay usable; without them, an
+unrestricted given-name search returns mostly noise (Vietnam-based faculty out of scope, students, and
+postdocs). It also needs a first pass against `public/data.json` before adding any candidate: a
+given-name token search is far more likely than a surname search to resurface someone already in the
+roster under a different profile page or research summary, since the token alone does very little to
+narrow down which person it is.
+
+Results across two informal sessions have been mixed enough to report honestly rather than round up.
+The first session, tried against a handful of otherwise-unremarkable US, Japanese, and Australian
+universities, found six new verified faculty from a small number of queries — three from a surname
 missing from the original list, three from a given-name token — a comparable hit rate to the standard
-per-surname queries. A control run against a country slice already thoroughly searched this way
-found nothing new, which helps rule out the six hits being a fluke of an unsearched region rather
-than evidence the technique itself works.
+per-surname queries. A control run against a country slice already thoroughly searched this way found
+nothing new, which helps rule out those six hits being a fluke of an unsearched region rather than
+evidence the technique itself works. The second session, testing `Quan`, `Quoc`, `Ngoc`, `Toan`,
+`Hieu`, `Chinh`, and `Liem` unrestricted (no institution filter), found zero new people: `Toan`,
+`Hieu`, and `Chinh` returned only generic academic-rank definition pages with no usable lead, and the
+`Quan` and `Ngoc` hits that did surface were both already in the roster under a different profile
+URL — a good outcome for data quality (each contributed a previously-missing fact to its existing
+record instead of becoming a duplicate) but not a new addition. `Liem` is deliberately left out of the
+generator's default list: it is also a common Chinese-Indonesian surname, and the one hit it returned
+in an unrestricted search was a plausible-looking but non-Vietnamese name. Overall the given-name mode
+still seems worth having — particularly for its second-order benefit of surfacing missing facts on
+existing records — but treat a specific given-name token's yield as unproven until it has found a
+genuinely new person, not just a not-yet-fully-documented one.
 
 Every result still requires the appointment, track, and source-quality checks above.
 
