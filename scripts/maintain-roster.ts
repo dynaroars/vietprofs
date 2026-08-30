@@ -48,6 +48,7 @@ import process from 'node:process';
 import { fileURLToPath } from 'node:url';
 import { isDeepStrictEqual } from 'node:util';
 import { FIELDS, fieldOf } from '../src/data.ts';
+import { HONOR_CATEGORIES, TRACKS } from '../src/roster-constants.ts';
 
 const SCRIPT_PATH = fileURLToPath(import.meta.url);
 const REPO_ROOT = resolve(dirname(SCRIPT_PATH), '..');
@@ -437,6 +438,19 @@ export function remainingBatchSize(options, processedCount = 0) {
   return total === null ? options.limit : Math.min(options.limit, total - processedCount);
 }
 
+export function researchIsComplete(research) {
+  return research?.status === 'complete';
+}
+
+export function needsAnotherBatch(options) {
+  return Boolean(options.all || (options.total ?? null) !== null || options.target?.kind === 'field');
+}
+
+export function batchCommitStatus(lastMessage, runId, hasChanges) {
+  if (lastMessage.includes(`Maintenance-Batch: ${runId}`)) return 'existing';
+  return hasChanges ? 'created' : 'none';
+}
+
 function tokensMatch(query, candidate) {
   const queryTokens = targetTokens(query);
   const candidateTokens = new Set(targetTokens(candidate));
@@ -500,7 +514,7 @@ export function proposalValidationError(proposal) {
   }
   if (!/^https?:\/\//.test(proposal.profileUrl)) return 'proposal profileUrl must use HTTP(S)';
   if (!Array.isArray(proposal.researchAreas) || proposal.researchAreas.length === 0 || proposal.researchAreas.some((area) => typeof area !== 'string' || !area.trim())) return 'proposal needs valid researchAreas';
-  if (!['Tenure-line', 'Teaching', 'Research', 'Clinical', 'Emeritus'].includes(proposal.track)) return 'proposal has unsupported track';
+  if (!TRACKS.includes(proposal.track)) return 'proposal has unsupported track';
   if (proposal.websiteUrl !== undefined && proposal.websiteUrl === proposal.profileUrl) return 'proposal websiteUrl must differ from profileUrl';
   if (proposal.websiteUrl !== undefined && !/^https?:\/\//.test(proposal.websiteUrl)) return 'proposal websiteUrl must use HTTP(S)';
   if (proposal.scholarUrl !== undefined && !/^https:\/\//.test(proposal.scholarUrl)) return 'proposal scholarUrl must use HTTPS';
@@ -515,7 +529,7 @@ export function proposalValidationError(proposal) {
         if (typeof honor?.[field] !== 'string' || !honor[field].trim()) return `proposal honor has invalid ${field}`;
       }
       if (!/^https:\/\//.test(honor.source)) return 'proposal honor source must use HTTPS';
-      if (!['academy', 'fellow', 'career_award', 'major_award', 'distinguished_professorship'].includes(honor.category)) return 'proposal honor has unsupported category';
+      if (!HONOR_CATEGORIES.includes(honor.category)) return 'proposal honor has unsupported category';
       if (honor.year !== null && (!Number.isInteger(honor.year) || honor.year < 1900 || honor.year > new Date().getFullYear())) return 'proposal honor has invalid year';
       const honorKey = `${honor.name}|${honor.year ?? 'unknown'}|${honor.organization}`;
       if (honorKeys.has(honorKey)) return 'proposal contains duplicate honors';
@@ -1085,9 +1099,15 @@ async function runFullChecks() {
 
 async function commitBatch() {
   const lastMessage = await gitText(['log', '-1', '--format=%B']);
-  if (lastMessage.includes(`Maintenance-Batch: ${state.runId}`)) return false;
   await requireOnlyMaintainedChanges();
-  if ((await changedPaths()).length === 0) return false;
+  const hasChanges = (await changedPaths()).length > 0;
+  const status = batchCommitStatus(lastMessage, state.runId, hasChanges);
+  if (status === 'existing') {
+    const commit = await gitText(['rev-parse', 'HEAD']);
+    for (const entry of state.completed) entry.commit = commit;
+    return 'existing';
+  }
+  if (status === 'none') return 'none';
   await git(['add', 'public/data.json', 'maintenance/verification.json', 'maintenance/profile-redirects.json']);
   await git([
     'commit',
@@ -1097,10 +1117,10 @@ async function commitBatch() {
   ], { label: `commit maintenance batch ${state.runId}` });
   const commit = await gitText(['rev-parse', 'HEAD']);
   for (const entry of state.completed) entry.commit = commit;
-  return true;
+  return 'created';
 }
 
-async function logBatchSummary(commitCreated) {
+async function logBatchSummary() {
   const changed = state.completed.filter((entry) => entry.changed);
   await log(`Modified entries: ${changed.length}.`);
   for (const entry of changed) {
@@ -1139,6 +1159,9 @@ async function processCurrent(schemas) {
   if (current.stage === 'researching') {
     try {
       current.research = await runResearch(current, schemas);
+      if (!researchIsComplete(current.research)) {
+        return skipPerson('incomplete research', current.research);
+      }
       const roster = await readJson(join(REPO_ROOT, 'public/data.json'));
       const analysis = normalizeResearchProposal(roster, current, current.research);
       if (!analysis.ok) return skipPerson('unsafe research proposal', analysis.reason);
@@ -1223,9 +1246,19 @@ async function createRun(options, schemas, progress: BatchProgress = {}) {
   const roster = await readJson(join(REPO_ROOT, 'public/data.json'));
   const verification = await readJson(join(REPO_ROOT, 'maintenance/verification.json'));
   const deferredUntil = state?.deferredUntil || {};
-  const processedNames = new Set(progress.processedNames || state?.options?.processedNames || []);
-  for (const entry of state?.completed || []) processedNames.add(entry.finalName || entry.name);
-  for (const entry of state?.skipped || []) processedNames.add(entry.name);
+  const continuingRun = Object.keys(progress).length > 0;
+  const previousProgress = continuingRun
+    ? state?.progress || {
+      processedNames: state?.options?.processedNames || [],
+      processedCount: state?.options?.processedCount || 0,
+      batchNumber: state?.options?.batchNumber || 1,
+    }
+    : { processedNames: [], processedCount: 0, batchNumber: 1 };
+  const processedNames = new Set(progress.processedNames || previousProgress.processedNames || []);
+  if (continuingRun) {
+    for (const entry of state?.completed || []) processedNames.add(entry.finalName || entry.name);
+    for (const entry of state?.skipped || []) processedNames.add(entry.name);
+  }
   const agent = options.agent || 'claude';
   const target = options.name ? await resolveTargetWithAgent(options.name, roster, schemas.targetSchema, agent) : null;
   const remaining = remainingBatchSize(options, progress.processedCount || 0);
@@ -1252,9 +1285,11 @@ async function createRun(options, schemas, progress: BatchProgress = {}) {
       codexReview: options.codexReview,
       agent,
       target,
-      processedCount: progress.processedCount || 0,
+    },
+    progress: {
+      processedCount: progress.processedCount ?? previousProgress.processedCount ?? 0,
       processedNames: [...processedNames],
-      batchNumber: progress.batchNumber || 1,
+      batchNumber: progress.batchNumber ?? previousProgress.batchNumber ?? 1,
     },
     queue,
     index: 0,
@@ -1293,18 +1328,32 @@ async function runController(options) {
   await acquireLock();
   await unlink(STOP_FILE).catch(() => {});
   state = await readJson(STATE_FILE, null);
-  // Migrate the checkpoint created by the pre-processedNames batching code. Its second batch
-  // could repeat the first batch; the queue itself is the reliable list of names already selected.
-  if (state?.options?.batchNumber > 1
-      && !Array.isArray(state.options.processedNames)
-      && Array.isArray(state.queue)
-      && state.index === 0
-      && state.current) {
-    state.options.processedNames = [...state.queue];
-    state.queue = [];
-    state.index = 0;
-    state.current = null;
-    state.status = 'failed';
+  if (state && !state.progress) {
+    const legacyBatchNumber = state.options?.batchNumber || 1;
+    const legacyProcessedNames = state.options?.processedNames;
+    state.progress = {
+      processedCount: state.options?.processedCount || 0,
+      processedNames: legacyProcessedNames || [],
+      batchNumber: legacyBatchNumber,
+    };
+    // A legacy second-batch checkpoint without processed names could repeat its first batch.
+    // Invalidate only that unsafe checkpoint; all other legacy state migrates in place.
+    if (legacyBatchNumber > 1
+        && !Array.isArray(legacyProcessedNames)
+        && Array.isArray(state.queue)
+        && state.index === 0
+        && state.current) {
+      state.progress.processedNames = [...state.queue];
+      state.queue = [];
+      state.index = 0;
+      state.current = null;
+      state.status = 'failed';
+    }
+    if (state.options) {
+      delete state.options.processedCount;
+      delete state.options.processedNames;
+      delete state.options.batchNumber;
+    }
     await saveState();
   }
   // An exhausted/empty checkpoint cannot resume useful work. Start a fresh selection from the
@@ -1354,13 +1403,15 @@ async function runController(options) {
       await processCurrent(schemas);
     }
     await runFullChecks();
-    const commitCreated = await commitBatch();
-    if (commitCreated) await pushBatch();
-    await logBatchSummary(commitCreated);
+    const commitStatus = await commitBatch();
+    // A checkpoint can be interrupted after commit but before push. Re-running push for the
+    // existing batch commit is safe and ensures the durable remote catches up before continuing.
+    if (commitStatus !== 'none') await pushBatch();
+    await logBatchSummary();
 
-    const processedCount = (state.processedCount || 0) + state.queue.length;
+    const processedCount = (state.progress?.processedCount || 0) + state.queue.length;
     const total = state.options.total ?? null;
-    if ((!state.options.all && total === null) || (total !== null && processedCount >= total)) {
+    if (!needsAnotherBatch(state.options) || (total !== null && processedCount >= total)) {
       state.status = 'complete';
       state.completedAt = nowIso();
       await saveState();
@@ -1371,18 +1422,18 @@ async function runController(options) {
     const nextBatchSize = total === null
       ? state.options.limit
       : Math.min(state.options.limit, total - processedCount);
-    await log(`Starting batch ${(state.batchNumber || 1) + 1} (up to ${nextBatchSize} entries remaining in this run).`);
+    await log(`Starting batch ${(state.progress?.batchNumber || 1) + 1} (up to ${nextBatchSize} entries remaining in this run).`);
     await createRun({
       ...state.options,
       agent: state.options.agent,
     }, schemas, {
       processedCount,
       processedNames: [
-        ...(state.options.processedNames || []),
+        ...(state.progress?.processedNames || []),
         ...state.completed.map((entry) => entry.finalName || entry.name),
         ...state.skipped.map((entry) => entry.name),
       ],
-      batchNumber: (state.batchNumber || 1) + 1,
+      batchNumber: (state.progress?.batchNumber || 1) + 1,
     });
   }
 }

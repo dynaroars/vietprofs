@@ -13,3 +13,11 @@ test('every roster entry has a unique, immutable static profile path', () => {
     assert.equal(personPath(person.id), `people/${person.id}.html`);
   }
 });
+
+test('generated profile pages use one shared dark-mode stylesheet', async () => {
+  const generator = await readFile(new URL('../scripts/generate-profile-pages.ts', import.meta.url), 'utf8');
+  const stylesheet = await readFile(new URL('../public/profile.css', import.meta.url), 'utf8');
+  assert.match(generator, /<link rel="stylesheet" href="\.\.\/profile\.css">/);
+  assert.doesNotMatch(generator, /<style>/);
+  assert.match(stylesheet, /prefers-color-scheme: dark/);
+});

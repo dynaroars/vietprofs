@@ -3,6 +3,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
   analyzeRosterProposal,
+  batchCommitStatus,
   canReviseProposal,
   describeRosterChanges,
   failureKind,
@@ -10,7 +11,9 @@ import {
   parseRateLimitReset,
   proposalValidationError,
   parseChangedPaths,
+  needsAnotherBatch,
   remainingBatchSize,
+  researchIsComplete,
   resolveTargetLocally,
   selectDueEntries,
   selectTargetEntries,
@@ -48,6 +51,25 @@ test('older checkpoints with no total continue using the batch limit', () => {
   assert.equal(remainingBatchSize({ limit: 50 }, 40), 50);
   assert.equal(remainingBatchSize({ limit: 40, total: null }, 40), 40);
   assert.equal(remainingBatchSize({ limit: 40, total: 100 }, 40), 40);
+});
+
+test('only complete research can advance to review or application', () => {
+  assert.equal(researchIsComplete({ status: 'complete', action: 'keep' }), true);
+  assert.equal(researchIsComplete({ status: 'incomplete', action: 'keep' }), false);
+  assert.equal(researchIsComplete(null), false);
+});
+
+test('field, all, and capped runs continue across batches', () => {
+  assert.equal(needsAnotherBatch({ all: false, total: null, target: { kind: 'person' } }), false);
+  assert.equal(needsAnotherBatch({ all: false, total: null, target: { kind: 'field' } }), true);
+  assert.equal(needsAnotherBatch({ all: true, total: null, target: null }), true);
+  assert.equal(needsAnotherBatch({ all: false, total: 100, target: null }), true);
+});
+
+test('an interrupted batch commit is recognized and remains pushable', () => {
+  assert.equal(batchCommitStatus('Maintenance-Batch: run-123', 'run-123', false), 'existing');
+  assert.equal(batchCommitStatus('another commit', 'run-123', true), 'created');
+  assert.equal(batchCommitStatus('another commit', 'run-123', false), 'none');
 });
 
 test('maintenance selection can explicitly include recently verified entries', () => {

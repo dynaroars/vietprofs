@@ -6,16 +6,16 @@
   "description": "A directory of Vietnamese professors worldwide.",
   "scripts": {
     "dev": "vite",
-    "predev": "npm run assign-profile-ids -- --apply && tsx scripts/generate-profile-pages.ts --dev",
-    "prebuild": "npm run assign-profile-ids -- --apply && cp paper.pdf public/paper.pdf",
+    "predev": "npm run assign-profile-ids && tsx scripts/generate-profile-pages.ts --dev",
+    "prebuild": "npm run assign-profile-ids && cp paper.pdf public/paper.pdf",
     "build": "vite build && tsx scripts/generate-profile-pages.ts",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
     "validate-data": "tsx scripts/validate-data.ts",
-    "prevalidate-data": "npm run assign-profile-ids -- --apply",
+    "prevalidate-data": "npm run assign-profile-ids",
     "assign-profile-ids": "tsx scripts/assign-profile-ids.ts",
     "test": "npm run validate-data && tsx --test test/data.test.ts test/maintenance-controller.test.ts test/profile-pages.test.ts test/ui.test.ts",
-    "test:e2e": "tsx --test test/browser-smoke.test.ts"
+    "test:e2e": "npm run build && tsx --test test/browser-smoke.test.ts"
   },
   "devDependencies": {
     "@types/node": "^26.4.0",

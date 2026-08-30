@@ -5,25 +5,17 @@ import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import {
-  FIELDS,
-  TRACKS,
   LOCATIONS,
-  COUNTRY_TO_CONTINENT,
-  COUNTRY_FLAGS,
   countryFlag,
-  canonicalRank,
   displayName,
-  displayUniversity,
   vietnameseName,
-  fieldOf,
   continentOf,
   locationMatches,
   buildFunFacts,
-  buildUsFunFacts,
-  buildGlobalFunFacts,
+  buildUsObservations,
+  buildInternationalObservations,
   filterRoster,
-  sortRoster,
-  buildDecadeCounts,
+  buildSearchIndex,
   uniqueStates,
   uniqueCities,
   uniqueDepartments,
@@ -31,22 +23,13 @@ import {
   uniqueResearchAreas,
   uniquePhdInstitutions,
   uniqueRanks,
-  STATE_ABBR,
 } from '../src/data.ts';
 import { escapeHtml, formatRosterDate, formatRosterShortDate } from '../src/utils.ts';
+import { formatLocation, renderRosterEntry } from '../src/render.ts';
+import { locationForQuery } from '../src/filter-state.ts';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const roster = JSON.parse(readFileSync(join(__dirname, '../public/data.json'), 'utf8'));
-
-function formatLocation(p) {
-  const parts = [];
-  if (p.city) parts.push(p.city);
-  if (p.state && p.state !== p.city) parts.push(p.state);
-  if (p.country && p.country !== 'United States' && p.country !== 'US' && p.country !== 'USA' && p.country !== p.city) {
-    parts.push(p.country);
-  }
-  return parts.join(', ');
-}
 
 test('all countries in roster map to recognized continents', () => {
   for (const p of roster) {
@@ -116,12 +99,12 @@ test('buildFunFacts produces valid strings across every continent and empty rost
   assert.ok(Array.isArray(emptyFacts) && emptyFacts.length > 0);
   assert.ok(!emptyFacts[0].includes('NaN'));
 
-  const usFacts = buildUsFunFacts(roster);
+  const usFacts = buildUsObservations(roster);
   assert.ok(Array.isArray(usFacts) && usFacts.length > 3);
   assert.ok(usFacts.some((f) => f.includes('U.S. entries across')));
   assert.ok(usFacts.some((f) => f.includes('distinct departments')));
 
-  const globalFacts = buildGlobalFunFacts(roster);
+  const globalFacts = buildInternationalObservations(roster);
   assert.ok(Array.isArray(globalFacts) && globalFacts.length > 3);
   assert.ok(globalFacts.some((f) => f.includes('international entries')));
   assert.ok(globalFacts.some((f) => f.includes('international city clusters')));
@@ -156,61 +139,19 @@ test('suggestionValues array contains no undefined/null and all elements safely 
 });
 
 test('full HTML roster rendering produces clean HTML with no undefined/null/NaN for every filter combination', () => {
-  function renderEntry(p) {
-    const visibleName = displayName(p.name);
-    const nativeName = vietnameseName(p);
-    const personField = fieldOf(p.department, p.university);
-    const fieldTag = `<span class="tag tag-field">${escapeHtml(personField)}</span>`;
-    const trackTag = `<span class="tag tag-track">${escapeHtml(p.track)}</span>`;
-    const topicTags = p.researchAreas
-      .map((a) => `<span class="tag tag-topic">${escapeHtml(a)}</span>`)
-      .join('');
-    const tags = fieldTag + trackTag + topicTags;
-    const updatedDate = formatRosterShortDate(p.lastUpdatedAt);
-    const educationDetails = [
-      (p.postdocYear || p.postdocInstitution) && `Postdoc: ${[displayUniversity(p.postdocInstitution), p.postdocYear].filter(Boolean).join(', ')}`,
-      (p.phdYear || p.phdInstitution) && `PhD: ${[displayUniversity(p.phdInstitution), p.phdYear].filter(Boolean).join(', ')}`,
-      (p.msYear || p.msInstitution) && `MS: ${[displayUniversity(p.msInstitution), p.msYear].filter(Boolean).join(', ')}`,
-      (p.undergradYear || p.undergradInstitution) && `Undergrad: ${[displayUniversity(p.undergradInstitution), p.undergradYear].filter(Boolean).join(', ')}`,
-      (p.mdYear || p.mdInstitution) && `MD: ${[displayUniversity(p.mdInstitution), p.mdYear].filter(Boolean).join(', ')}`,
-      ...(p.otherDegrees ?? []).map((degree) => `${degree.degree}: ${[displayUniversity(degree.institution), degree.year].filter(Boolean).join(', ')}`),
-    ].filter(Boolean);
-    const rankInfo = [
-      canonicalRank(p) && escapeHtml(canonicalRank(p)),
-      p.phdYear && `PhD ${escapeHtml(String(p.phdYear))}${p.phdInstitution ? `, ${escapeHtml(p.phdInstitution)}` : ''}`,
-      !p.phdYear && p.phdInstitution && `PhD, ${escapeHtml(p.phdInstitution)}`,
-    ].filter(Boolean).join(' · ');
-
-    return `
-      <div class="entry">
-        <div class="entry-name-row">
-          <a class="entry-name" href="${escapeHtml(p.websiteUrl ?? p.profileUrl)}">${escapeHtml(visibleName)}</a>
-          <span class="entry-vietnamese-name">(${escapeHtml(nativeName)})</span>
-        </div>
-        <div class="entry-meta">${escapeHtml(canonicalRank(p) || '')} · ${escapeHtml(p.department)} · ${escapeHtml(displayUniversity(p.university))} · ${escapeHtml(formatLocation(p))}</div>
-        ${educationDetails.length ? `<div class="entry-details">${educationDetails.map((value) => escapeHtml(value)).join('; ')}</div>` : ''}
-        <time class="entry-updated" datetime="${escapeHtml(p.lastUpdatedAt)}">Updated ${escapeHtml(updatedDate)}</time>
-        <div class="tags">${tags}</div>
-      </div>
-    `;
-  }
-
-  // Render every person individually
   for (const p of roster) {
-    const html = renderEntry(p);
+    const html = renderRosterEntry(p, '/');
     assert.ok(!html.includes('undefined'), `Rendered HTML contains undefined for ${p.name}`);
     assert.ok(!html.includes('null'), `Rendered HTML contains null for ${p.name}`);
     assert.ok(!html.includes('NaN'), `Rendered HTML contains NaN for ${p.name}`);
     assert.ok(!html.includes('[object Object]'), `Rendered HTML contains [object Object] for ${p.name}`);
   }
 
-  // Test across every combination of location, field, and track
   for (const loc of ['US', 'World', 'Asia', 'Europe']) {
     for (const field of ['all', 'Computer & Information Sciences', 'Engineering', 'Mathematics']) {
       for (const track of ['all', 'Tenure-line', 'Teaching', 'Research', 'Clinical', 'Emeritus']) {
         const filtered = filterRoster(roster, { location: loc, field, track });
-        const sorted = sortRoster(filtered);
-        const fullHtml = sorted.map(renderEntry).join('');
+        const fullHtml = filtered.map((person) => renderRosterEntry(person, '/')).join('');
         assert.ok(!fullHtml.includes('undefined'));
         assert.ok(!fullHtml.includes('null'));
         assert.ok(!fullHtml.includes('NaN'));
@@ -251,7 +192,7 @@ test('every roster entry has a safe Vietnamese display-name variant and the requ
     assert.notEqual(nativeName, 'null');
   }
   const sample = roster.find((p) => p.name === 'ThanhVu H. Nguyen') ?? roster[0];
-  const html = `<div class="entry-name-row"><a class="entry-name">${escapeHtml(displayName(sample.name))}</a><span class="entry-vietnamese-name">(${escapeHtml(vietnameseName(sample))})</span></div><div class="entry-meta">${escapeHtml(canonicalRank(sample) || '')} · ${escapeHtml(sample.department)} · ${escapeHtml(displayUniversity(sample.university))} · ${escapeHtml(formatLocation(sample))}</div>`;
+  const html = renderRosterEntry(sample, '/');
   assert.match(html, /entry-name-row/);
   assert.match(html, /entry-meta/);
   assert.match(html, /entry-vietnamese-name/);
@@ -278,44 +219,16 @@ test('authoritative full Vietnamese name overrides preserve accent marks and Vie
   assert.equal(daoNguyen.state, 'California');
 });
 
-test('auto-select location logic widens to World when searching for international countries or faculty', async () => {
-  function simulateLocationAutoSelect(initialLoc, query) {
-    let loc = initialLoc;
-    const q = query.trim();
-    if (!q) return loc;
-
-    const countryNames = uniqueCountries(roster);
-    const isCountryQuery = countryNames.some((c) =>
-      c.toLowerCase() === q.toLowerCase() ||
-      (q.toLowerCase() === 'uk' && c === 'United Kingdom') ||
-      (q.toLowerCase() === 'usa' && c === 'United States')
-    );
-    if (isCountryQuery) return 'World';
-
-    const continentNames = ['asia', 'europe', 'australasia', 'north america', 'south america', 'africa', 'world'];
-    if (continentNames.includes(q.toLowerCase())) return 'World';
-
-    const exactUniversityMatch = roster.some((p) =>
-      p.university?.toLowerCase() === q.toLowerCase() &&
-      (p.country || 'United States') !== 'United States'
-    );
-    if (exactUniversityMatch) return 'World';
-
-    const inCurrent = filterRoster(roster, { query: q, location: loc }).length;
-    if (inCurrent === 0) {
-      const inWorld = filterRoster(roster, { query: q, location: 'World' }).length;
-      if (inWorld > 0) return 'World';
-    }
-    return loc;
-  }
-
-  assert.equal(simulateLocationAutoSelect('US', 'France'), 'World');
-  assert.equal(simulateLocationAutoSelect('US', 'Australia'), 'World');
-  assert.equal(simulateLocationAutoSelect('US', 'Japan'), 'World');
-  assert.equal(simulateLocationAutoSelect('US', 'University of Melbourne'), 'World');
-  assert.equal(simulateLocationAutoSelect('US', 'Xuan-Bach Le'), 'World');
-  assert.equal(simulateLocationAutoSelect('US', 'Cambridge'), 'US'); // Harvard/MIT in Cambridge, MA matches US!
-  assert.equal(simulateLocationAutoSelect('US', 'University of Cambridge'), 'World');
+test('auto-select location logic widens to World when searching for international countries or faculty', () => {
+  const index = buildSearchIndex(roster);
+  const select = (query) => locationForQuery(roster, index, { query, currentLocation: 'US' });
+  assert.equal(select('France'), 'World');
+  assert.equal(select('Australia'), 'World');
+  assert.equal(select('Japan'), 'World');
+  assert.equal(select('University of Melbourne'), 'World');
+  assert.equal(select('Xuan-Bach Le'), 'World');
+  assert.equal(select('Cambridge'), 'US');
+  assert.equal(select('University of Cambridge'), 'World');
 });
 
 test('countryFlag maps every country in roster to a non-empty flag emoji', () => {
@@ -334,36 +247,6 @@ test('countryFlag maps every country in roster to a non-empty flag emoji', () =>
   assert.equal(countryFlag(undefined), '🇺🇸');
   assert.equal(countryFlag(''), '🇺🇸');
   assert.equal(countryFlag('Unknown Country'), '🌐');
-});
-
-test('static import integrity: all data.ts and utils.ts symbols used in main.ts and submit.ts are explicitly imported', () => {
-  const mainCode = readFileSync(join(__dirname, '../src/main.ts'), 'utf8');
-  const submitCode = readFileSync(join(__dirname, '../src/submit.ts'), 'utf8');
-  const dataCode = readFileSync(join(__dirname, '../src/data.ts'), 'utf8');
-  const utilsCode = readFileSync(join(__dirname, '../src/utils.ts'), 'utf8');
-
-  const dataExports = [...dataCode.matchAll(/export\s+(?:const|function)\s+([a-zA-Z0-9_]+)/g)].map((m) => m[1]);
-  const utilsExports = [...utilsCode.matchAll(/export\s+(?:const|function)\s+([a-zA-Z0-9_]+)/g)].map((m) => m[1]);
-
-  const checkImports = (code, file, sourceCode, sourceExports, sourceName) => {
-    const importRegex = new RegExp(`import\\s*\\{([^}]+)\\}\\s*from\\s*['\"]\\./${sourceName}['\"]`);
-    const match = code.match(importRegex);
-    const imported = match ? match[1].split(',').map((s) => s.trim()).filter(Boolean) : [];
-    for (const exp of sourceExports) {
-      const isUsed = new RegExp(`\\b${exp}\\b`).test(code);
-      if (isUsed) {
-        assert.ok(
-          imported.includes(exp),
-          `Symbol "${exp}" from ${sourceName} is used in ${file} but is NOT imported!`,
-        );
-      }
-    }
-  };
-
-  checkImports(mainCode, 'main.ts', dataCode, dataExports, 'data.ts');
-  checkImports(mainCode, 'main.ts', utilsCode, utilsExports, 'utils.ts');
-  checkImports(submitCode, 'submit.ts', dataCode, dataExports, 'data.ts');
-  checkImports(submitCode, 'submit.ts', utilsCode, utilsExports, 'utils.ts');
 });
 
 test('search query execution: typing diverse terms across all fields returns valid results without errors', () => {

@@ -47,6 +47,8 @@ export interface RosterEntry {
 
 export type Roster = RosterEntry[];
 
+export { TRACKS } from './roster-constants.ts';
+
 let cached: Roster | null = null;
 
 const searchIndexCache = new WeakMap();
@@ -269,8 +271,6 @@ export function uniqueResearchAreas(roster: Roster): string[] {
 // emeritus title after a tenure-line career — plain retirement without the conferred title doesn't
 // qualify. None includes adjunct, visiting, postdoctoral, affiliate, or other term-limited or
 // part-time positions; those stay excluded from the roster. See ROSTER_MAINTENANCE.md.
-export const TRACKS: string[] = ['Tenure-line', 'Teaching', 'Research', 'Clinical', 'Emeritus'];
-
 // Continent/region values supported by structured location queries and the second
 // ("by continent") section of the visible location dropdown.
 export const LOCATIONS: string[] = [
@@ -774,10 +774,6 @@ export function filterRoster(roster: Roster | ReturnType<typeof buildSearchIndex
   });
 }
 
-export function sortRoster(roster) {
-  return [...roster].sort((a, b) => a.name.localeCompare(b.name));
-}
-
 // Duplicate roster keys may carry a " - University" suffix so the JSON name remains unique.
 // That suffix is an internal disambiguator only; the public UI always shows the person's name.
 export function displayName(name) {
@@ -953,15 +949,26 @@ export function buildInternationalObservations(roster) {
   if (cities.length >= 2 && cities[0][1] >= 5) facts.push(`The largest international city clusters are ${cities.slice(0, 3).map(([city, count]) => `${city} (${count})`).join(', ')}.`);
   const fields = observationFields(international);
   if (fields.length >= 3 && fields[0][1] - fields[2][1] <= Math.max(3, Math.round(international.length * 0.04))) {
-    facts.push(`Engineering, business, and computing are closely represented internationally: ${fields.slice(0, 3).map(([field, count]) => `${field} (${count})`).join(', ')}.`);
+    facts.push(`The three largest broad fields are closely represented internationally: ${fields.slice(0, 3).map(([field, count]) => `${field} (${count})`).join(', ')}.`);
   }
   addRosterObservations(facts, international, 'international');
   return facts;
 }
 
-// Backwards-compatible names for callers that still use the original fact API.
-export const buildUsFunFacts = buildUsObservations;
-export const buildGlobalFunFacts = buildInternationalObservations;
+export function buildLocationObservations(roster, label = 'selected') {
+  const selected = roster || [];
+  if (selected.length === 0) return ['No faculty currently listed under the active location selection.'];
+  const countries = new Set(selected.map((person) => person.country || 'United States')).size;
+  const facts = [
+    `${selected.length} entries across ${new Set(selected.map((person) => person.university)).size} universities in ${countries} countr${countries === 1 ? 'y' : 'ies'}.`,
+  ];
+  const fields = observationFields(selected);
+  if (fields.length >= 3 && fields[0][1] - fields[2][1] <= Math.max(3, Math.round(selected.length * 0.04))) {
+    facts.push(`The three largest broad fields are closely represented: ${fields.slice(0, 3).map(([field, count]) => `${field} (${count})`).join(', ')}.`);
+  }
+  addRosterObservations(facts, selected, label);
+  return facts;
+}
 
 export function buildQualifiedObservations(roster) {
   const allRoster = roster || [];

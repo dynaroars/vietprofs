@@ -37,8 +37,8 @@ function renderShell() {
 
       </section>
 
-      <section class="form-group optional-group" aria-labelledby="optional-heading">
-        <h2 id="optional-heading">Optional</h2>
+      <details class="form-group optional-group">
+        <summary id="optional-heading">Optional details</summary>
         <p class="form-group-description">Share any details you have; maintainers will verify and complete the record.</p>
 
       <div class="form-section">
@@ -169,7 +169,7 @@ function renderShell() {
         <label for="notes">Notes for the maintainer</label>
         <textarea id="notes" name="notes" rows="2" placeholder="Anything else that helps verify this (e.g. recent move, other evidence links, etc.)"></textarea>
       </div>
-      </section>
+      </details>
 
       <div class="submit-actions">
         <button type="submit" class="submit-btn">Send by email</button>
@@ -259,6 +259,8 @@ function buildUpdateBody(matchedEntry, entry, notes) {
 
 function populateEntry(form, entry) {
   form.dataset.editingId = entry.id;
+  const optionalDetails = form.querySelector('.optional-group') as HTMLDetailsElement | null;
+  if (optionalDetails) optionalDetails.open = true;
   form.name.value = entry.name;
   form.profileUrl.value = entry.profileUrl ?? '';
   form.websiteUrl.value = entry.websiteUrl ?? '';
@@ -289,6 +291,14 @@ function populateEntry(form, entry) {
 
 function findMatchedEntry(form, entriesById, entriesByName, name) {
   return entriesById?.get(form.dataset.editingId) ?? entriesByName?.get(name.toLocaleLowerCase().trim());
+}
+
+function clearAutoPopulatedEntry(form) {
+  const name = form.name.value;
+  form.reset();
+  form.name.value = name;
+  const optionalDetails = form.querySelector('.optional-group') as HTMLDetailsElement | null;
+  if (optionalDetails) optionalDetails.open = false;
 }
 
 function onSubmit(e, entriesById, entriesByName) {
@@ -375,6 +385,7 @@ async function init() {
 
     const requestedEdit = new URLSearchParams(window.location.search).get('edit');
     const entryToEdit = requestedEdit && (entriesById.get(requestedEdit) ?? entriesByName.get(requestedEdit.toLocaleLowerCase().trim()));
+    const lockedEditId = entryToEdit ? entryToEdit.id : '';
     if (entryToEdit) {
       populateEntry(form, entryToEdit);
       checkMatch(entryToEdit.name);
@@ -412,6 +423,11 @@ async function init() {
 
     nameInput.addEventListener('input', () => {
       const query = nameInput.value.trim().toLocaleLowerCase();
+      const boundEntry = entriesById.get(form.dataset.editingId);
+      if (boundEntry && form.dataset.editingId !== lockedEditId && boundEntry.name.toLocaleLowerCase() !== query) {
+        clearAutoPopulatedEntry(form);
+        delete form.dataset.editingId;
+      }
       const entry = entriesByName.get(query);
       if (entry) {
         populateEntry(form, entry);

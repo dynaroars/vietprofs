@@ -1,15 +1,14 @@
 import { access, readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
+import { HONOR_CATEGORIES, REQUIRED_ROSTER_STRINGS, TRACKS, UTC_TIMESTAMP_PATTERN } from '../src/roster-constants.ts';
 
 type JsonRecord = Record<string, any>;
 
 const rosterFile = resolve('public/data.json');
 const verificationFile = resolve('maintenance/verification.json');
 const redirectsFile = resolve('maintenance/profile-redirects.json');
-const allowedTracks = new Set(['Tenure-line', 'Teaching', 'Research', 'Clinical', 'Emeritus']);
-const allowedHonorCategories = new Set(['academy', 'fellow', 'career_award', 'major_award', 'distinguished_professorship']);
-const requiredStrings = ['id', 'name', 'profileUrl', 'lastUpdatedAt', 'university', 'city', 'department'];
-const utcTimestampPattern = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/;
+const allowedTracks = new Set<string>(TRACKS);
+const allowedHonorCategories = new Set<string>(HONOR_CATEGORIES);
 
 function fail(file, message) {
   throw new Error(`${file}: ${message}`);
@@ -17,7 +16,7 @@ function fail(file, message) {
 
 function validateTimestamp(file, value, label, field) {
   const timestamp = new Date(value);
-  if (!utcTimestampPattern.test(value) || Number.isNaN(timestamp.valueOf()) || timestamp.toISOString() !== value) {
+  if (!UTC_TIMESTAMP_PATTERN.test(value) || Number.isNaN(timestamp.valueOf()) || timestamp.toISOString() !== value) {
     fail(file, `${label} ${field} must be a canonical UTC ISO timestamp`);
   }
   if (timestamp.valueOf() > Date.now()) fail(file, `${label} ${field} must not be in the future`);
@@ -43,7 +42,7 @@ const portraits = new Set();
 for (const [index, person] of roster.entries()) {
   const label = `entry ${index + 1}`;
   if (!person || typeof person !== 'object') fail(rosterFile, `${label} must be an object`);
-  for (const field of requiredStrings) {
+  for (const field of REQUIRED_ROSTER_STRINGS) {
     if (typeof person[field] !== 'string' || !person[field].trim()) fail(rosterFile, `${label} has invalid ${field}`);
   }
   if (!/^vp-\d{4,}$/.test(person.id)) fail(rosterFile, `${label} has invalid id ${person.id}`);

@@ -108,8 +108,9 @@ link.
 `public/data.json` is the canonical roster. Each entry should use the following conventions:
 
 - `id` is a required immutable profile identifier in `vp-####` form. Contributors must not choose
-  or edit it manually: `npm test`, `npm run dev`, and `npm run build` assign IDs to new entries
-  automatically while reserving retired ones. Preserve the generated ID when correcting a name,
+  or edit it manually: after adding an entry, run `npm run assign-profile-ids -- --apply` to assign
+  IDs while reserving retired ones. Tests, development, and builds only verify IDs and do not edit
+  the roster. Preserve the generated ID when correcting a name,
   appointment, or other facts; never reuse a removed ID.
 - `track` must be `Tenure-line`, `Teaching`, `Research`, `Clinical`, or `Emeritus`.
 - `profileUrl` must be a current, working academic or official university profile and must not be a Google Scholar URL. Store Scholar separately in `scholarUrl`; store a maintained personal or lab homepage in `websiteUrl`.
