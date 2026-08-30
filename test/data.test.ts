@@ -238,6 +238,23 @@ test('searching a name without middle initials still finds the professor', () =>
   assert.ok(result.some((person) => person.name === 'Van H. Vu'));
 });
 
+test('a two-word name search does not match terms scattered across unrelated fields', () => {
+  const result = filterRoster(roster, { query: 'Quan Nguyen', field: 'all', location: 'World' });
+  assert.ok(result.some((person) => person.name === 'Quan Nguyen'));
+  // Every hit must contain both terms within one field (e.g. the name itself), not "nguyen" in
+  // the name plus an unrelated "quan" substring incidental to some other field such as a
+  // "Quantum ..." research area.
+  for (const person of result) {
+    const fields = [
+      displayName(person.name),
+      person.university,
+      person.department,
+      ...(person.researchAreas ?? []),
+    ].filter(Boolean).map((value) => value.toLowerCase());
+    assert.ok(fields.some((field) => field.includes('quan') && field.includes('nguyen')), `${person.name} matched without both terms in one field`);
+  }
+});
+
 test('filterRoster narrows by track and "all" leaves it unfiltered', () => {
   const tenureLine = filterRoster(roster, { query: '', field: 'all', track: 'Tenure-line' });
   assert.ok(tenureLine.length > 0);

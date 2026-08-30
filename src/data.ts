@@ -765,12 +765,16 @@ export function filterRoster(roster: Roster | ReturnType<typeof buildSearchIndex
   if (honorMatches.length > 0) return honorMatches;
 
   return result.filter((p) => {
-    const searchableText = index.textByPerson.get(p).join(' ');
-    if (searchableText.includes(target)) return true;
-    // Also accept multi-word searches whose terms are separated by initials or
-    // punctuation, e.g. "van vu" should match the name "Van H. Vu".
+    const fieldTexts = index.textByPerson.get(p);
+    if (fieldTexts.join(' ').includes(target)) return true;
+    // Also accept multi-word searches whose terms are separated by initials or punctuation,
+    // e.g. "van vu" should match the name "Van H. Vu". Require every term to appear within the
+    // *same* field rather than anywhere across the person's combined text: matching term-by-term
+    // across different fields let an unrelated pair of substrings each satisfy one term (e.g. a
+    // "Nguyen" name plus an unrelated "Quantum ..." research area both contain "quan", so a
+    // cross-field check wrongly matched the query "quan nguyen" for that person).
     const terms = target.split(/\s+/).filter(Boolean);
-    return terms.length > 1 && terms.every((term) => searchableText.includes(term));
+    return terms.length > 1 && fieldTexts.some((fieldText) => terms.every((term) => fieldText.includes(term)));
   });
 }
 
