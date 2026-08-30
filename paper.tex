@@ -105,7 +105,7 @@ Maintenance is a reconciliation problem between those claims and a distributed, 
 Manual human maintenance would be very difficult and do not scale, because it would require a human to check hundreds of records against the web and even try to do things beyond the capability of Google search, such as finding a newly eligible person who has not yet been indexed or surfaced by any search engine.
 
 
-VietProfs addresses this with an automatic maintenance system that employs continuous loops of expansion and validation---\emph{all using AI agents}.
+VietProfs (\url{https://vietprofs.roars.dev}) addresses this with an automatic maintenance system that employs continuous loops of expansion and validation---\emph{all using AI agents}.
 Expansion searches a bounded university/field/country slice for people not yet in the roster.
 Revalidation periodically re-checks every existing record's profile link, appointment, rank, education, and honors against the current web (Section~\ref{sec:maintenance}).
 The system's loops run continuously, almost every day, to keep the roster current.
@@ -131,11 +131,9 @@ For example, given the relatively complete roster of faculty already in VietProf
 This paper has two aims, addressed in two parts.
 Part I is about VietProfs itself: who it is for, who is eligible to appear, what fields and kinds of information it covers and why, how it is used, and what it currently shows.
 This is the paper's main subject.
-It is written for a reader who cares first about the directory, and only secondarily about how it is built.
+It is written for a reader who cares first about the directory, and only secondarily about how it is built or maintained.
 Part II turns to engineering.
 Keeping several hundred records accurate against a constantly changing web required a nontrivial AI-assisted maintenance system, and we report that system as a bounded technical contribution in its own right: a data model and operational architecture (Section~\ref{sec:model} onward); a workflow separating candidate discovery from evidence-backed verification (Sections~\ref{sec:architecture}--\ref{sec:evidence}); an empirical characterization of expansion and revalidation from implementation artifacts and public Git history (Section~\ref{sec:maintenance}); the derived-knowledge maintenance problem created by runtime aggregation (Section~\ref{sec:results}); and the test suite that lets an unattended controller push directly to production (Section~\ref{sec:testing}).
-But the engineering exists to serve the directory, not the other way around.
-The rest of this paper is ordered accordingly: what VietProfs is, first; how it is kept accurate, second, as the technical part of the story.
 
 \begin{center}
 \setlength{\fboxsep}{8pt}
