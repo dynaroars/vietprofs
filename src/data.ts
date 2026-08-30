@@ -14,6 +14,7 @@ export interface OtherDegree {
 }
 
 export interface RosterEntry {
+  id: string;
   name: string;
   university: string;
   city?: string;
@@ -140,6 +141,27 @@ const UNIVERSITY_DISPLAY_NAMES = new Map([
 
 export function displayUniversity(university) {
   return UNIVERSITY_DISPLAY_NAMES.get(university) ?? university?.replace(/ University$/, ' Univ.');
+}
+
+// Profile routes are derived from the canonical roster name. Names are unique roster keys, and
+// the build checks that their resulting slugs stay unique before publishing any pages.
+export function personSlug(name: string): string {
+  return stripDiacritics(name)
+    .toLowerCase()
+    .replace(/[’']/g, '')
+    // A doubled separator preserves an intentional hyphen in a published name, avoiding a
+    // collision with the otherwise equivalent space-separated form.
+    .replace(/-/g, '--')
+    .replace(/[^a-z0-9-]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+export function personPath(id: string): string {
+  return `people/${id}.html`;
+}
+
+export function legacyPersonPath(name: string): string {
+  return `people/${personSlug(name)}.html`;
 }
 
 // Keep the public rank vocabulary intentionally small. Institution-specific honorifics and

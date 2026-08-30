@@ -67,7 +67,7 @@ const MAX_PROPOSAL_REVISIONS = 2;
 const DEFAULT_AGENT_TIMEOUT_MINUTES = 90;
 const DEFAULT_RATE_LIMIT_WAIT_MINUTES = 30;
 const MAX_CAPTURE_CHARS = 2_000_000;
-const MAINTAINED_PATHS = new Set(['public/data.json', 'maintenance/verification.json']);
+const MAINTAINED_PATHS = new Set(['public/data.json', 'maintenance/verification.json', 'maintenance/profile-redirects.json']);
 // Fields whose absence marks an entry as an enrichment gap (missing portrait, Scholar link, or
 // personal/lab site) rather than just plain staleness.
 const COMPLETENESS_FIELDS = ['portrait', 'scholarUrl', 'websiteUrl'];
@@ -704,6 +704,7 @@ async function ensureSchemas() {
       status: { type: 'string', enum: ['complete', 'incomplete'] },
       action: { type: 'string', enum: ['keep', 'update', 'remove'] },
       proposedEntryJson: { type: 'string' },
+      redirectToId: { type: 'string' },
       report: { type: 'string' },
       sources: { type: 'array', items: { type: 'string' } },
     },
@@ -864,7 +865,9 @@ display aliases such as "Penn State" or "Penn State University" must not replace
 You cannot edit files. Return structured output. Use action "keep" if no roster fact should change,
 "update" for a corrected full entry (also use it for a canonical-name correction), or "remove" if
 the person is no longer eligible. For update, proposedEntryJson must be the complete JSON object;
-for keep/remove, use an empty string. Never choose lastUpdatedAt—the controller owns timestamps.
+for keep/remove, use an empty string. Never choose lastUpdatedAt or id—the controller owns them.
+When removing a duplicate merged into another active roster entry, set redirectToId to that
+entry's immutable vp-#### ID; otherwise omit redirectToId and the old profile becomes retired.
 Set status incomplete whenever material evidence is blocked, conflicting, or unresolved. Include
 every source URL and explain every checked field and proposed change.`;
 }
@@ -964,6 +967,10 @@ function normalizeResearchProposal(roster, current, research) {
     if (!proposed || typeof proposed !== 'object' || Array.isArray(proposed)) {
       throw new Error('Claude update did not contain a valid complete entry JSON object');
     }
+    if (proposed.id !== undefined && proposed.id !== current.baseline.id) {
+      throw new Error('Claude update attempted to change the immutable profile ID');
+    }
+    proposed.id = current.baseline.id;
   }
   const after = structuredClone(roster);
   const index = after.findIndex((person) => person.name === current.name);
@@ -1006,8 +1013,10 @@ async function skipPerson(reason, details = null) {
 async function applyProposal(current) {
   const rosterPath = join(REPO_ROOT, 'public/data.json');
   const verificationPath = join(REPO_ROOT, 'maintenance/verification.json');
+  const redirectsPath = join(REPO_ROOT, 'maintenance/profile-redirects.json');
   const roster = await readJson(rosterPath);
   const verification = await readJson(verificationPath);
+  const redirects = await readJson(redirectsPath);
   const finalName = current.proposal?.name ?? null;
   const validationError = current.proposal && proposalValidationError(current.proposal);
   if (validationError) throw new InvalidProposalError(`refusing invalid proposal: ${validationError}`);
@@ -1029,8 +1038,13 @@ async function applyProposal(current) {
   if (index < 0 && finalName) index = roster.findIndex((person) => person.name === finalName);
 
   if (current.proposal === null) {
+    const redirectTo = current.research?.redirectToId || null;
+    if (redirectTo && !roster.some((person) => person.id === redirectTo && person.name !== current.name)) {
+      throw new InvalidProposalError(`refusing invalid merge redirect target: ${redirectTo}`);
+    }
     if (index >= 0) roster.splice(index, 1);
     delete verification[current.name];
+    redirects[current.baseline.id] = { redirectTo, reason: redirectTo ? 'merged' : 'removed' };
   } else {
     if (index < 0) throw new Error(`cannot apply proposal because ${current.name} is missing`);
     const next = { ...current.proposal };
@@ -1058,6 +1072,7 @@ async function applyProposal(current) {
   }
   await writeAtomic(rosterPath, roster);
   await writeAtomic(verificationPath, verification);
+  await writeAtomic(redirectsPath, redirects);
   await runProcess('npm', ['run', 'validate-data'], { label: `validate ${current.name}` });
 }
 
@@ -1073,7 +1088,7 @@ async function commitBatch() {
   if (lastMessage.includes(`Maintenance-Batch: ${state.runId}`)) return false;
   await requireOnlyMaintainedChanges();
   if ((await changedPaths()).length === 0) return false;
-  await git(['add', 'public/data.json', 'maintenance/verification.json']);
+  await git(['add', 'public/data.json', 'maintenance/verification.json', 'maintenance/profile-redirects.json']);
   await git([
     'commit',
     '-m', `Automated roster maintenance: batch ${state.runId}`,

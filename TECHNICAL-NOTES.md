@@ -4,10 +4,14 @@
 
 The application is a static Vite/TypeScript site. `public/data.json` is the public canonical
 roster; `maintenance/verification.json` is a tracked but non-public-site ledger of full-review
-timestamps. Each public record stores a display name, current profile URL, university, location,
+timestamps; and `maintenance/profile-redirects.json` reserves retired profile IDs. Each public
+record stores an immutable `vp-####` ID, display name, current profile URL, university, location,
 department, research areas, track/rank, optional education, honors, portrait provenance, and
-`lastUpdatedAt`. The current snapshot has 831 records, 367 universities, 19 countries, and 17
-broad application fields (analysis generated 2026-08-29).
+`lastUpdatedAt`. `scripts/assign-profile-ids.ts` fills missing IDs automatically, while
+`scripts/generate-profile-pages.ts` derives an ID-addressed static profile page, legacy name-path
+redirects, retirement/merge responses, and profile sitemap entries. The current snapshot has 831
+records, 367 universities, 19 countries, and 17 broad application fields (analysis generated
+2026-08-29).
 
 Eligibility is policy-driven, not surname-driven: current primary university appointment outside
 Vietnam plus one of Tenure-line, Teaching, Research, Clinical, or Emeritus. Adjunct, visiting,
@@ -24,6 +28,8 @@ the research process uses names as discovery signals but requires appointment ev
 | Proposal validation | same controller; tests in `test/maintenance-controller.test.ts` | JSON proposal -> accepted/rejected targeted change | deterministic schema/scope checks |
 | Canonical data | `public/data.json` | approved records -> site | committed JSON |
 | Review ledger | `maintenance/verification.json` | full-review completion -> due-entry selection | deterministic prioritization |
+| Profile identity | `scripts/assign-profile-ids.ts` | missing record IDs -> immutable `vp-####` IDs | deterministic; contributors omit IDs for new entries |
+| Static profiles | `scripts/generate-profile-pages.ts`, `maintenance/profile-redirects.json` | roster + retired IDs -> profile pages, redirects, sitemap entries | deterministic build output |
 | Classification/search | `src/data.ts`, `src/main.ts` | records -> broad fields, index, filters | runtime deterministic logic |
 | Derived view | `buildFunFacts`, `build*Observations`, `buildAwardsFunFacts` | current roster -> runtime observations | deterministic, not stored |
 | Deployment | `.github/workflows/deploy.yml` | push to `main` -> test/build/GitHub Pages | GitHub Actions |
@@ -39,6 +45,15 @@ baseline timestamp while comparing content, and sets `lastUpdatedAt` only for su
 The ledger timestamp advances after a complete review even when the public record is unchanged.
 The deployed default can commit and push directly after checks; this is unattended operation with
 deterministic gates, not a formal correctness guarantee.
+
+Profile identity is deliberately independent of the mutable display name. New records are entered
+without an ID, and the pre-development, validation, and build hooks assign the next unused ID in
+`public/data.json`; the resulting generated edit is committed. Active IDs generate
+`people/vp-####.html`, with a canonical link, structured data, and an edit-to-submission link.
+Changing a name keeps that URL stable and produces a redirect for the previous name-based URL.
+Removed IDs remain reserved in the redirect registry: a duplicate merge points the retired page at
+the surviving profile, while a confirmed removal produces a noindex retirement response instead of
+silently reusing the address.
 
 The process has two distinct loops. Expansion searches a bounded university/field/country space
 for people absent from the roster. Revalidation starts from an existing record and checks the

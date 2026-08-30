@@ -264,7 +264,7 @@ test('authoritative full Vietnamese name overrides preserve accent marks and Vie
   assert.equal(vietnameseName(roster.find((p) => p.name === 'Bao Chau Ngo')), 'Ngô Bảo Châu');
   assert.equal(vietnameseName(roster.find((p) => p.name === 'Cac Nguyen')), 'Nguyễn Cac');
   assert.equal(vietnameseName(roster.find((p) => p.name === 'Tien Zung Nguyen')), 'Nguyễn Tiến Zung');
-  assert.equal(vietnameseName(roster.find((p) => p.name === 'Hung Minh Tan Nguyen')), 'Nguyễn Tân Minh Hung');
+  assert.equal(vietnameseName(roster.find((p) => p.name === 'Tan Minh Nguyen')), 'Nguyễn Minh Tân');
   assert.equal(vietnameseName(roster.find((p) => p.name === 'Ha Ta')), 'Tạ Hà');
   assert.equal(vietnameseName(roster.find((p) => p.name === 'Hai-Dang Nguyen')), 'Nguyễn Hải-Đăng');
   assert.equal(vietnameseName(roster.find((p) => p.name === 'Lien-Hang T. Nguyen')), 'Nguyễn T. Liên-Hằng');

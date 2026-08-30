@@ -8,7 +8,7 @@ Live site: <https://vietprofs.roars.dev>
 
 ## Search and filters
 
-The search box matches names, universities, departments, ranks, locations, research areas, honors, and PhD institutions. Use the selector at the left of the search box to limit the search to one attribute; it defaults to `Everything`. Matching is diacritic-insensitive, so `Nguyen` finds `Nguyễn`.
+The search box matches names, universities, departments, ranks, locations, research areas, honors, and PhD institutions. Use the selector at the left of the search box to limit the search to name, university, department, rank, research area, honors, or PhD institution; it defaults to `Everything`. Location, field, and appointment track remain dedicated filters. Matching is diacritic-insensitive, so `Nguyen` finds `Nguyễn`.
 
 The location, field, and track filters can be combined. Shareable URLs preserve the active search and filters. The “Show me something interesting” option provides roster-derived observations about geography, institutions, fields, and appointment tracks. It does not make claims about institutional prestige or Vietnamese population size.
 
@@ -38,7 +38,9 @@ certificate warning on first visit.
 
 ## Data and contributions
 
-Edit [`public/data.json`](./public/data.json) to add, remove, or correct roster entries. Each entry needs a current academic profile URL, university, department, rank/track, country, and canonical UTC `lastUpdatedAt` timestamp. Maintainers track full-review times separately in [`maintenance/verification.json`](./maintenance/verification.json), which is not part of the public site data.
+Edit [`public/data.json`](./public/data.json) to add, remove, or correct roster entries. When adding a person, omit `id`: normal development, validation, and build commands assign the next immutable `vp-####` ID and write it into the file; commit that generated ID with the entry. Current academic profile URL, university, department, rank/track, country, and canonical UTC `lastUpdatedAt` timestamp remain required. Maintainers track full-review times separately in [`maintenance/verification.json`](./maintenance/verification.json), which is not part of the public site data.
+
+Each active record generates a static public profile at `people/vp-####.html` during development and production builds. Names on roster cards link to that profile, and its edit link opens the submission form with the record pre-filled. A name correction therefore preserves the profile URL. The generator also produces redirects for former name-based profile URLs. For a deletion or duplicate merge, retire the old ID in [`maintenance/profile-redirects.json`](./maintenance/profile-redirects.json): a merge redirects to the surviving ID, while a removal retains a noindex retirement page.
 
 The accepted tracks are:
 
@@ -56,7 +58,7 @@ Honors are limited to substantial, field-level distinctions. Local university, d
 service, teaching, and community-engagement awards are not included unless their independent
 field-wide standing is clearly documented; an impressive title or cash prize alone is insufficient.
 
-Use [`submit.html`](./submit.html) to propose an entry or correction without editing the repository directly. Maintainers review submissions before adding them to the roster.
+Use [`submit.html`](./submit.html) to propose an entry or correction without editing the repository directly. Correction emails include the existing record's immutable ID, permanent VietProfs profile URL, current and proposed names, and a field-by-field change list; new-entry emails include the submitted facts and evidence notes. Maintainers review submissions before adding them to the roster.
 
 Detailed inclusion, verification, discovery, field-mapping, and data-format guidance is in [`ROSTER_MAINTENANCE.md`](./ROSTER_MAINTENANCE.md).
 

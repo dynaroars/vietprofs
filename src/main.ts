@@ -1,5 +1,5 @@
 import './style.css';
-import { loadRoster, buildSearchIndex, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, LOCATION_LABELS, countryFlag, canonicalRank, displayName, displayUniversity, vietnameseName, fieldOf, healthSubfieldOf, locationMatches, filterRoster, buildFunFacts, buildUsObservations, buildInternationalObservations, buildQualifiedObservations, buildAwardsFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, STATE_ABBR, continentOf, type Roster } from './data.ts';
+import { loadRoster, buildSearchIndex, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, LOCATION_LABELS, countryFlag, canonicalRank, displayName, displayUniversity, vietnameseName, personPath, fieldOf, healthSubfieldOf, locationMatches, filterRoster, buildFunFacts, buildUsObservations, buildInternationalObservations, buildQualifiedObservations, buildAwardsFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, STATE_ABBR, continentOf, type Roster } from './data.ts';
 import { escapeHtml, formatRosterDate, formatRosterShortDate } from './utils.ts';
 import { STATE_GRID } from './state-grid.ts';
 
@@ -77,12 +77,9 @@ function renderShell() {
           <option value="university">University</option>
           <option value="department">Department</option>
           <option value="rank">Rank</option>
-          <option value="field">Field</option>
-          <option value="track">Track</option>
           <option value="research">Research area</option>
           <option value="honors">Honors</option>
           <option value="phd">PhD institution</option>
-          <option value="country">Country</option>
         </select>
         <input id="search" class="search-input" type="search" placeholder="Search the roster…" aria-label="Search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-suggestion-panel" />
         <div id="search-suggestion-panel" class="search-suggestion-panel" role="listbox" hidden></div>
@@ -219,9 +216,7 @@ function renderRoster(roster: Roster, { field, location }: RenderOptions = {}) {
         (p.mdYear || p.mdInstitution) && `MD: ${[displayUniversity(p.mdInstitution), p.mdYear].filter(Boolean).join(', ')}`,
         ...(p.otherDegrees ?? []).map((degree) => `${degree.degree}: ${[displayUniversity(degree.institution), degree.year].filter(Boolean).join(', ')}`),
       ].filter(Boolean);
-      const nameMarkup = p.websiteUrl
-        ? `<a class="entry-name" href="${escapeHtml(p.websiteUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(visibleName)}</a>`
-        : `<span class="entry-name">${escapeHtml(visibleName)}</span>`;
+      const nameMarkup = `<a class="entry-name" href="${escapeHtml(`${import.meta.env.BASE_URL}${personPath(p.id)}`)}">${escapeHtml(visibleName)}</a>`;
       const profileIcon = entryIconLink({ className: 'profile-link', href: p.profileUrl, label: `${visibleName} official university profile`, title: 'Official university profile', icon: PROFILE_ICON });
       const personalSiteIcon = p.websiteUrl
         ? entryIconLink({ className: 'personal-site-link', href: p.websiteUrl, label: `${visibleName} personal or lab website`, title: 'Personal or lab website', icon: PERSONAL_SITE_ICON })

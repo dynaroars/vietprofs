@@ -11,8 +11,8 @@
 \node[box, right=of task] (proposal) {Structured proposal\\+ evidence report};
 
 \node[box, below=of proposal] (gate) {Schema, scope,\\duplicate \& change checks};
-\node[box, left=of gate] (canonical) {Canonical data\\(\texttt{\footnotesize data.json} + ledger)};
-\node[box, left=of canonical] (site) {Static site\\search, filters, observations};
+\node[box, left=of gate] (canonical) {Canonical data\\(\texttt{\footnotesize data.json} + ledgers)};
+\node[box, left=of canonical] (site) {Static site\\profiles, search, filters, observations};
 
 \node[opt, below=of gate] (human) {Human / independent\\review (optional)};
 

@@ -1,5 +1,5 @@
 import './style.css';
-import { FIELDS, fieldOf, loadRoster, TRACKS } from './data.ts';
+import { FIELDS, fieldOf, loadRoster, personPath, TRACKS } from './data.ts';
 import { escapeHtml } from './utils.ts';
 
 const SUBMISSION_EMAIL = 'root@roars.dev';
@@ -23,15 +23,15 @@ function renderShell() {
         <p class="form-group-description">These two fields are needed to verify the submission.</p>
 
       <div class="form-section">
-        <label for="name">Full name <span class="required-badge">Required</span></label>
-        <input id="name" name="name" type="text" required placeholder="e.g. Anh Nguyen" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="name-suggestions" aria-describedby="name-hint" />
+        <label for="name">Full name</label>
+        <input id="name" name="name" type="text" required placeholder="e.g. ThanhVu H. Nguyen" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="name-suggestions" aria-describedby="name-hint" />
         <div id="name-suggestions" class="correction-suggestions" role="listbox" hidden></div>
         <p class="form-help" id="name-hint">If this professor is already listed, typing their name will suggest them and pre-fill their details for editing.</p>
         <p class="form-help notice" id="name-match-notice" hidden></p>
       </div>
 
       <div class="form-section">
-        <label for="profileUrl">Official university profile <span class="required-badge">Required</span> <span class="info-icon" tabindex="0" role="img" aria-label="Why this is required" data-tooltip="We need at least the official university profile link to verify and add this entry.">i</span></label>
+        <label for="profileUrl">Official university profile <span class="info-icon" tabindex="0" role="img" aria-label="Why this is required" data-tooltip="We need at least the official university profile link to verify and add this entry.">i</span></label>
         <input id="profileUrl" name="profileUrl" type="url" required placeholder="https://… (department or faculty directory page)" />
       </div>
 
@@ -219,20 +219,29 @@ function formatValue(value) {
 }
 
 function buildNewEntryBody(entry, notes) {
-  const lines = ['New professor submission', '', `Name: ${entry.name}`];
+  const lines = ['Request: New entry', '', `Name: ${entry.name}`];
   for (const key of FIELD_ORDER) {
     const value = formatValue(entry[key]);
     if (value) lines.push(`${FIELD_LABELS[key]}: ${value}`);
   }
-  if (notes) lines.push('', `Notes: ${notes}`);
+  if (notes) lines.push('', `Notes / evidence links: ${notes}`);
   return lines.join('\n');
 }
 
 function buildUpdateBody(matchedEntry, entry, notes) {
-  const lines = [`Update for existing entry: ${matchedEntry.name}`, ''];
+  const lines = [
+    'Request: Update existing entry',
+    '',
+    `VietProfs ID: ${matchedEntry.id}`,
+    `VietProfs profile: https://vietprofs.roars.dev/${personPath(matchedEntry.id)}`,
+    `Current name: ${matchedEntry.name}`,
+    `Proposed name: ${entry.name}`,
+    '',
+    'Changes:',
+  ];
   const changes = [];
   if (entry.name && entry.name !== matchedEntry.name) {
-    changes.push(`Name: ${matchedEntry.name} → ${entry.name}`);
+    changes.push(`- Name: ${matchedEntry.name} → ${entry.name}`);
   }
   for (const key of FIELD_ORDER) {
     const oldValue = key === 'field'
@@ -240,15 +249,16 @@ function buildUpdateBody(matchedEntry, entry, notes) {
       : formatValue(matchedEntry[key]);
     const newValue = formatValue(entry[key]);
     if (oldValue !== newValue) {
-      changes.push(`${FIELD_LABELS[key]}: ${oldValue || '(none)'} → ${newValue || '(removed)'}`);
+      changes.push(`- ${FIELD_LABELS[key]}: ${oldValue || '(none)'} → ${newValue || '(removed)'}`);
     }
   }
-  lines.push(...(changes.length ? changes : ['No field changes submitted.']));
-  if (notes) lines.push('', `Notes: ${notes}`);
+  lines.push(...(changes.length ? changes : ['- No field changes submitted.']));
+  if (notes) lines.push('', `Notes / evidence links: ${notes}`);
   return lines.join('\n');
 }
 
 function populateEntry(form, entry) {
+  form.dataset.editingId = entry.id;
   form.name.value = entry.name;
   form.profileUrl.value = entry.profileUrl ?? '';
   form.websiteUrl.value = entry.websiteUrl ?? '';
@@ -277,18 +287,18 @@ function populateEntry(form, entry) {
   }
 }
 
-function findDuplicate(entriesByName, name) {
-  return entriesByName?.get(name.toLocaleLowerCase().trim());
+function findMatchedEntry(form, entriesById, entriesByName, name) {
+  return entriesById?.get(form.dataset.editingId) ?? entriesByName?.get(name.toLocaleLowerCase().trim());
 }
 
-function onSubmit(e, entriesByName) {
+function onSubmit(e, entriesById, entriesByName) {
   e.preventDefault();
   const form = e.target;
 
   if (!form.reportValidity()) return;
 
   const name = form.name.value.trim();
-  const matchedEntry = findDuplicate(entriesByName, name);
+  const matchedEntry = findMatchedEntry(form, entriesById, entriesByName, name);
 
   const researchAreas = form.researchAreas.value
     ? form.researchAreas.value
@@ -337,12 +347,14 @@ async function init() {
   const suggestions = document.getElementById('name-suggestions');
   const matchNotice = document.getElementById('name-match-notice');
   let entriesByName = null;
+  let entriesById = null;
 
-  form.addEventListener('submit', (e) => onSubmit(e, entriesByName));
+  form.addEventListener('submit', (e) => onSubmit(e, entriesById, entriesByName));
 
   try {
     const roster = await loadRoster();
     entriesByName = new Map(roster.map((entry) => [entry.name.toLocaleLowerCase(), entry]));
+    entriesById = new Map(roster.map((entry) => [entry.id, entry]));
     let matchingEntries = [];
 
     function hideSuggestions() {
@@ -351,13 +363,21 @@ async function init() {
     }
 
     function checkMatch(name) {
-      const entry = entriesByName.get(name.toLocaleLowerCase().trim());
+      const entry = entriesById.get(form.dataset.editingId) ?? entriesByName.get(name.toLocaleLowerCase().trim());
       if (entry) {
-        matchNotice.innerHTML = `Found on roster at <strong>${escapeHtml(entry.university)}</strong> · ${escapeHtml(entry.department)}. Details pre-filled for editing.`;
+        const profileUrl = `${import.meta.env.BASE_URL}${personPath(entry.id)}`;
+        matchNotice.innerHTML = `Editing existing entry <strong>${escapeHtml(entry.id)}</strong> · <a href="${escapeHtml(profileUrl)}">View permanent profile</a><br><strong>${escapeHtml(entry.name)}</strong> · ${escapeHtml(entry.university)} · ${escapeHtml(entry.department)}. Details pre-filled for editing.`;
         matchNotice.hidden = false;
       } else {
         matchNotice.hidden = true;
       }
+    }
+
+    const requestedEdit = new URLSearchParams(window.location.search).get('edit');
+    const entryToEdit = requestedEdit && (entriesById.get(requestedEdit) ?? entriesByName.get(requestedEdit.toLocaleLowerCase().trim()));
+    if (entryToEdit) {
+      populateEntry(form, entryToEdit);
+      checkMatch(entryToEdit.name);
     }
 
     function showSuggestions(query) {

@@ -343,8 +343,8 @@ And it does not display any ranking, score, or comparative judgment across peopl
 \label{sec:model}
 The public source of truth is \codelink{public/data.json}; the browser loads it and performs search, filtering, sorting, and aggregation.
 Table~\ref{tab:schema} lists the record schema implemented by the \code{RosterEntry} TypeScript interface in \codelink{src/data.ts}.
-A record contains a name, current profile URL, university, city, state or province when applicable, country, department, research areas, rank and appointment track, optional education across five credential types (undergraduate, master's, PhD, postdoctoral, and professional degrees such as MD), optional honors with source citations, optional Scholar and personal-site URLs, portrait provenance, and \code{lastUpdatedAt}.
-The separate \codelink{maintenance/verification.json} ledger records the time of a completed full review, keyed by canonical name, and is not part of the public site payload; the split lets the automated maintenance state travel with the repository across machines without inflating what a browser downloads.
+A record contains an immutable \code{vp-} identifier followed by digits, a name, current profile URL, university, city, state or province when applicable, country, department, research areas, rank and appointment track, optional education across five credential types (undergraduate, master's, PhD, postdoctoral, and professional degrees such as MD), optional honors with source citations, optional Scholar and personal-site URLs, portrait provenance, and \code{lastUpdatedAt}.
+The separate \codelink{maintenance/verification.json} ledger records the time of a completed full review, keyed by canonical name, and \codelinkd{maintenance/profile-redirects.json}{maintenance/\allowbreak profile-\allowbreak redirects.\allowbreak json} reserves retired identifiers for merge redirects or removal responses. Neither is part of the public JSON payload; the split lets maintenance state travel with the repository across machines without inflating what a browser downloads.
 
 \begin{table}[t]
 \centering
@@ -356,7 +356,7 @@ every record; optional fields are present when a source explicitly documents the
 \toprule
 Field group & Fields \\
 \midrule
-Required & \code{name}, \code{university}, \code{department}, \code{rank}, \code{track},
+Required & \code{id}, \code{name}, \code{university}, \code{department}, \code{rank}, \code{track},
 \code{profileUrl}, \code{lastUpdatedAt}, \code{researchAreas[]} \\
 Location & \code{city}, \code{state}, \code{country} \\
 Identity & \code{vietnameseName} (diacritic form) \\
@@ -437,7 +437,7 @@ education, honors, and research tags.}
 \end{figure}
 
 \subsection{Scoped search and diacritic normalization}
-The search box matches names, universities, departments, ranks, research areas, honors, and PhD institutions by default, with matching performed on a diacritic-stripped, lowercased index (\code{buildSearchIndex}/\code{normalizeSearchText} in \code{src/data.ts}) so that typing \code{Nguyen} finds \code{Nguy\~{e}n}. A selector at the left of the search box can narrow the same text to one roster attribute, such as Name, Rank, Field, Track, Research area, Honors, University, Department, or PhD institution. Small finite scopes expose their available values immediately as suggestions.
+The search box matches names, universities, departments, ranks, research areas, honors, and PhD institutions by default, with matching performed on a diacritic-stripped, lowercased index (\code{buildSearchIndex}/\code{normalizeSearchText} in \code{src/data.ts}) so that typing \code{Nguyen} finds \code{Nguy\~{e}n}. A selector at the left of the search box can narrow the same text to Name, Rank, Research area, Honors, University, Department, or PhD institution. Location, field, and track are intentionally exposed as dedicated combinable filters rather than search scopes. Small finite scopes expose their available values immediately as suggestions.
 The active search text, selected scope, and filters are mirrored into the URL query string, so a filtered view---for example, all Clinical-track faculty in Health Sciences at a named university---is directly shareable as a link rather than requiring the recipient to reproduce the same clicks.
 
 \begin{figure}[t]
@@ -457,7 +457,7 @@ This is discussed further as the site's third function, runtime aggregation, in 
 \subsection{Human contribution channel}
 \label{sec:submit}
 Automated maintenance (Section~\ref{sec:architecture}) is the primary way the roster grows, but a visitor can also propose a new person or a correction directly, without editing the repository, via \href{https://vietprofs.roars.dev/submit.html}{\code{submit.html}} (Figure~\ref{fig:submit}).
-The form requires only a full name and an official university profile URL; typing a name that already resolves against the loaded roster (\codelink{src/submit.ts}) surfaces a suggestion and pre-fills the existing record so the visitor is editing rather than duplicating.
+The form requires only a full name and an official university profile URL; typing a name that already resolves against the loaded roster (\codelink{src/submit.ts}) surfaces a suggestion and pre-fills the existing record so the visitor is editing rather than duplicating. Each generated profile page also links directly to this pre-filled correction form using the immutable ID. A correction email carries that ID, the permanent profile URL, current and proposed names, and a field-by-field delta, so a name correction remains unambiguous for a maintainer.
 Every other field---personal/lab site, Scholar profile, department, location, education, honors---is optional.
 Submissions are routed to a maintainer inbox and reviewed before they can change canonical data; nothing typed into this form writes to \codelink{public/data.json} directly.
 This keeps the boundary from Section~\ref{sec:evidence} intact for human-sourced leads as well as agent-sourced ones: a submission is evidence and a lead, not an approved change.
@@ -565,7 +565,7 @@ Figure~\ref{fig:arch} summarizes the implemented flow.
 Public web sources feed either bounded discovery or a targeted revalidation task.
 An agent returns a structured proposal and report.
 The controller applies deterministic schema and scope checks before changing the canonical roster.
-The static site is built from the resulting snapshot, while the same snapshot is later selected for revalidation using the ledger.
+The static site is built from the resulting snapshot, including one ID-addressed profile page per active record; the same snapshot is later selected for revalidation using the ledger.
 Table~\ref{tab:pipeline} maps this flow onto the concrete files that implement each stage.
 
 \begin{figure}[t]
@@ -589,6 +589,7 @@ Agent maintenance & \codelinkd{scripts/maintain-roster.ts}{scripts/\allowbreak m
 Proposal validation & Same controller; \codelinkd{test/maintenance-controller.test.ts}{test/\allowbreak maintenance-\allowbreak controller.\allowbreak test.ts} & Deterministic schema/scope checks; no agent output is trusted unchecked. \\
 Canonical data & \codelinkd{public/data.json}{public/\allowbreak data.json} & Committed JSON, changed only by an approved patch. \\
 Review ledger & \codelinkd{maintenance/verification.json}{maintenance/\allowbreak verification.json} & Deterministic prioritization of due entries. \\
+Profile identity/pages & \codelinkd{scripts/assign-profile-ids.ts}{scripts/\allowbreak assign-\allowbreak profile-\allowbreak ids.ts}; \codelinkd{scripts/generate-profile-pages.ts}{scripts/\allowbreak generate-\allowbreak profile-\allowbreak pages.ts} & Deterministic IDs, static profiles, legacy redirects, and sitemap entries. \\
 Classification/search & \codelinkd{src/data.ts}{src/\allowbreak data.ts}, \codelinkd{src/main.ts}{src/\allowbreak main.ts} & Runtime deterministic logic in the browser. \\
 Derived view & \code{buildFunFacts}, \code{build*Observations} & Deterministic, recomputed, never persisted. \\
 Human submissions & \codelinkd{submit.html}{submit.html}, \codelinkd{src/submit.ts}{src/\allowbreak submit.ts} & Routed to a maintainer; not applied automatically. \\
@@ -599,7 +600,7 @@ Deployment & \codelinkd{.github/workflows/deploy.yml}{.github/\allowbreak workfl
 \end{table}
 
 \subsection{Controller and proposal boundary}
-\codelink{scripts/maintain-roster.ts} (1{,}464 lines) is the unattended maintenance controller.
+\codelink{scripts/maintain-roster.ts} is the unattended maintenance controller.
 It normally selects entries missing from the ledger or whose last full review is at least 365 days old (\code{--stale-days}, default 365), prioritizing older and incomplete records, and processes at most 40 per new run (\code{--limit}, default 40).
 Table~\ref{tab:cli} lists its command-line surface.
 It supports dry runs, full or capped sweeps (\code{--all}, \code{--total}), name- or field-targeting (\code{--name}, which the agent itself resolves to a canonical roster member or, for a field-like query, to every member of that field), resumable checkpoints, safe stop/status, automatic retry with increasing waits on rate limits, and a choice of research agent (\code{--agent}), with Claude as the default and Codex selectable when Claude is unavailable or rate-limited.
@@ -631,7 +632,7 @@ applying a proposal. \\
 
 Agents cannot edit repository files directly; they can only read, search, and fetch (their tool access is restricted to \code{Read}, \code{Glob}, \code{Grep}, and, for the research stage, \code{WebSearch}/\code{WebFetch}), and they return JSON conforming to controller-generated schemas for target matching, research, and optional independent review.
 The research schema requires \code{status} (\code{complete}/\code{incomplete}), \code{action} (\code{keep}/\code{update}/\code{remove}), a \code{proposedEntryJson} string, a free-text \code{report}, and an array of \code{sources}; the optional review schema requires a \code{verdict} (\code{approve}/\code{reject}/\code{uncertain}), a \code{summary}, \code{reasons}, and \code{verifiedSources}.
-The controller, not the model, is the only component permitted to touch \code{public/data.json}, and it does so only after \code{proposalValidationError} returns no error.
+The controller, not the model, is the only component permitted to touch \code{public/data.json}, and it does so only after \code{proposalValidationError} returns no error. It preserves a target's immutable ID during an update; when an approved removal represents a duplicate merge, it records a redirect from the retired ID to the surviving ID rather than allowing that address to be reused.
 That function---mirrored in \code{scripts/validate-data.ts} so the same invariants hold whether data changed through the controller or by hand---rejects a proposal that is missing a required string field; whose \code{profileUrl} is not HTTP(S); whose \code{websiteUrl} equals \code{profileUrl} or is not HTTP(S); whose \code{scholarUrl} is not HTTPS; whose \code{track} is outside the five accepted values; whose portrait path does not match \verb|^portraits/[a-z0-9][a-z0-9.-]*\.webp$| or whose \code{portrait}/\code{portraitSource} are not both present or both absent; whose honors are missing a name/organization/HTTPS source, use an unsupported category (Table~\ref{tab:honors}), have an out-of-range year, or duplicate an existing honor by name/year/organization; or whose degree years fall outside 1900--present.
 \code{analyzeRosterProposal} separately diffs the before/after roster and refuses a proposal that reorders the file, inserts an unrelated record, or silently edits a person other than the one under review---an agent that ``fixes'' something outside its assigned target is treated the same as a malformed proposal.
 A changed public record receives a new \code{lastUpdatedAt}; a complete review that finds no substantive change advances only the ledger timestamp, which is how the controller distinguishes ``reviewed and unchanged'' from ``never reviewed'' when selecting the next batch.
@@ -650,7 +651,7 @@ A proposal still rejected after its revisions, or a review that returns \code{un
 This is the concrete mechanism behind the paper's operational slogan: even with two independent models in the loop, the controller's deterministic checks and the revision/defer policy---not either model's confidence---decide what reaches the public roster.
 
 \subsection{Deployment}
-The deployment workflow (\codelink{.github/workflows/deploy.yml}) runs \code{npm test} and a production build on every push to \code{main}, then deploys the static artifact to GitHub Pages.
+The deployment workflow (\codelink{.github/workflows/deploy.yml}) runs \code{npm test} and a production build on every push to \code{main}, then deploys the static artifact to GitHub Pages. The build assigns missing IDs, generates the ID-addressed profile pages, writes redirects for legacy name paths and retired IDs, and extends the sitemap with active profile URLs.
 The maintenance controller can commit and push directly after its own checks pass, so a substantive change reaches the live site without a pull request or manual approval step.
 This is a strong degree of operational automation, but it is not a formal correctness guarantee and does not eliminate human judgment for ambiguous evidence; Section~\ref{sec:testing} describes what the test suite actually checks before that push is allowed to happen.
 
@@ -709,7 +710,7 @@ Negative evidence requires caution.
 A disappeared faculty page can mean redesign, a moved URL, temporary failure, a university move, retirement, or departure.
 The maintenance policy explicitly avoids treating \code{404} as automatic deletion and calls for corroboration.
 Removal is also a stronger action than addition because it destroys a public claim and can erase a legitimate person from the directory.
-The system supports removal proposals, but the guide's corroboration rule is an operational policy rather than a formally verified deletion protocol.
+The system supports removal proposals, but the guide's corroboration rule is an operational policy rather than a formally verified deletion protocol. A confirmed removal retains its immutable public address as a noindex retirement page; a confirmed duplicate merge redirects the retired address to the surviving profile, so neither outcome permits ID reuse.
 
 The Git history makes this lifecycle visible.
 A 20-batch full-roster refresh appears on 26 August 2026.
@@ -719,10 +720,11 @@ These examples show that maintenance is not a periodic cosmetic edit; it changes
 \section{Testing and Validation}
 \label{sec:testing}
 Because the controller is authorized to push directly to the branch that GitHub Actions deploys, the test suite that gates it is load-bearing rather than advisory.
-\code{npm test} runs \code{scripts/validate-data.ts} followed by three Node test files.
-\code{validate-data.ts} independently re-implements the roster invariants also enforced at proposal time---required-field presence, canonical UTC \code{lastUpdatedAt}/\code{lastVerifiedAt} timestamps that are not in the future, HTTP(S)/HTTPS URL roles, portrait path shape and on-disk existence, honor category and duplicate checks, degree-year ranges, accepted tracks, non-empty \code{researchAreas}---and, in addition, cross-checks \code{public/data.json} against \code{maintenance/verification.json}: every canonical name must have exactly one ledger entry, and the ledger must not contain a stale entry for a name no longer on the roster.
+\code{npm test} runs \code{scripts/validate-data.ts} followed by four Node test files.
+\code{validate-data.ts} independently re-implements the roster invariants also enforced at proposal time---required-field presence, unique immutable IDs, canonical UTC \code{lastUpdatedAt}/\code{lastVerifiedAt} timestamps that are not in the future, HTTP(S)/HTTPS URL roles, portrait path shape and on-disk existence, honor category and duplicate checks, degree-year ranges, accepted tracks, non-empty \code{researchAreas}---and, in addition, cross-checks \code{public/data.json} against \code{maintenance/verification.json} and the retired-ID registry: every canonical name must have exactly one ledger entry, the ledger must not contain a stale entry for a name no longer on the roster, and a retired ID cannot also be active or target an invalid merge.
 \code{test/data.test.ts} covers the field-mapping taxonomy and its overrides, the diacritic-insensitive search index, and the derived-facts builders in Section~\ref{sec:results}, including their behavior on small or empty filtered rosters.
 \code{test/maintenance-controller.test.ts} exercises \code{proposalValidationError} and \code{analyzeRosterProposal} directly against constructed before/after rosters, including the scope-violation cases (reordering, inserting an unrelated person, editing outside the target) that Section~\ref{sec:architecture} describes.
+\code{test/profile-pages.test.ts} verifies unique IDs and the generated profile route contract, including a name correction preserving its ID-addressed URL.
 \code{test/ui.test.ts} checks rendering logic such as card content and leaderboard construction.
 A separate \code{npm run test:e2e} runs \code{test/browser-smoke.test.ts} with Playwright against a built site, loading the real \code{index.html} and \code{submit.html} in a headless browser to catch integration failures---a broken search box, a filter that does not update the URL, a submission form that cannot find an existing record---that unit tests over the data layer cannot see.
 \code{npm run typecheck} runs the TypeScript compiler with no emit as a fourth, independent check.

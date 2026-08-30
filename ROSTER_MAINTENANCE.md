@@ -107,6 +107,10 @@ link.
 
 `public/data.json` is the canonical roster. Each entry should use the following conventions:
 
+- `id` is a required immutable profile identifier in `vp-####` form. Contributors must not choose
+  or edit it manually: `npm test`, `npm run dev`, and `npm run build` assign IDs to new entries
+  automatically while reserving retired ones. Preserve the generated ID when correcting a name,
+  appointment, or other facts; never reuse a removed ID.
 - `track` must be `Tenure-line`, `Teaching`, `Research`, `Clinical`, or `Emeritus`.
 - `profileUrl` must be a current, working academic or official university profile and must not be a Google Scholar URL. Store Scholar separately in `scholarUrl`; store a maintained personal or lab homepage in `websiteUrl`.
 - `lastUpdatedAt` is required and must be a canonical UTC ISO timestamp in
@@ -126,6 +130,11 @@ link.
 - Use the person's full published academic name only when an official profile or maintained academic homepage supplies it. Expand initials only with direct evidence.
 - Store `name` without Vietnamese diacritics and in First (Middle) Last order. This is a display normalization, not a claim about publishing name order.
 - Preserve source URLs for profiles, honors, name evidence, and portraits.
+- Profile URLs are generated from `id`, so a canonical-name correction does not change the public
+  profile URL. For a removal, add the retired ID to `maintenance/profile-redirects.json` with
+  `reason: "removed"` and `redirectTo: null`. For a merge, remove the duplicate and record its
+  retired ID with `reason: "merged"` and the surviving entry's ID as `redirectTo`. The build
+  emits a noindex retirement page or a redirect page, respectively.
 - Store the university's full canonical name in `public/data.json`; shortening is display-only.
   Card displays abbreviate a terminal ` University` (`George Mason University` →
   `George Mason Univ.`) but preserve leading forms such as `University of New Mexico`.

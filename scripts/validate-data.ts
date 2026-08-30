@@ -5,9 +5,10 @@ type JsonRecord = Record<string, any>;
 
 const rosterFile = resolve('public/data.json');
 const verificationFile = resolve('maintenance/verification.json');
+const redirectsFile = resolve('maintenance/profile-redirects.json');
 const allowedTracks = new Set(['Tenure-line', 'Teaching', 'Research', 'Clinical', 'Emeritus']);
 const allowedHonorCategories = new Set(['academy', 'fellow', 'career_award', 'major_award', 'distinguished_professorship']);
-const requiredStrings = ['name', 'profileUrl', 'lastUpdatedAt', 'university', 'city', 'department'];
+const requiredStrings = ['id', 'name', 'profileUrl', 'lastUpdatedAt', 'university', 'city', 'department'];
 const utcTimestampPattern = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/;
 
 function fail(file, message) {
@@ -22,16 +23,21 @@ function validateTimestamp(file, value, label, field) {
   if (timestamp.valueOf() > Date.now()) fail(file, `${label} ${field} must not be in the future`);
 }
 
-const [roster, verification] = await Promise.all([
+const [roster, verification, redirects] = await Promise.all([
   readFile(rosterFile, 'utf8').then(JSON.parse),
   readFile(verificationFile, 'utf8').then(JSON.parse),
+  readFile(redirectsFile, 'utf8').then(JSON.parse),
 ]);
 if (!Array.isArray(roster) || roster.length === 0) fail(rosterFile, 'must contain a non-empty array');
 if (!verification || typeof verification !== 'object' || Array.isArray(verification)) {
   fail(verificationFile, 'must contain an object keyed by canonical roster name');
 }
+if (!redirects || typeof redirects !== 'object' || Array.isArray(redirects)) {
+  fail(redirectsFile, 'must contain an object keyed by retired profile ID');
+}
 
 const names = new Set<string>();
+const ids = new Set<string>();
 const profileUrls = new Set();
 const portraits = new Set();
 for (const [index, person] of roster.entries()) {
@@ -40,6 +46,7 @@ for (const [index, person] of roster.entries()) {
   for (const field of requiredStrings) {
     if (typeof person[field] !== 'string' || !person[field].trim()) fail(rosterFile, `${label} has invalid ${field}`);
   }
+  if (!/^vp-\d{4,}$/.test(person.id)) fail(rosterFile, `${label} has invalid id ${person.id}`);
   validateTimestamp(rosterFile, person.lastUpdatedAt, label, 'lastUpdatedAt');
   if (!/^https?:\/\//.test(person.profileUrl)) fail(rosterFile, `${label} profileUrl must use HTTP(S)`);
   if (person.websiteUrl !== undefined && !/^https?:\/\//.test(person.websiteUrl)) fail(rosterFile, `${label} websiteUrl must use HTTP(S)`);
@@ -106,8 +113,10 @@ for (const [index, person] of roster.entries()) {
     }
   }
   if (names.has(person.name)) fail(rosterFile, `duplicate name: ${person.name}`);
+  if (ids.has(person.id)) fail(rosterFile, `duplicate id: ${person.id}`);
   if (profileUrls.has(person.profileUrl)) fail(rosterFile, `duplicate profileUrl: ${person.profileUrl}`);
   names.add(person.name);
+  ids.add(person.id);
   profileUrls.add(person.profileUrl);
 }
 
@@ -117,6 +126,18 @@ for (const name of names) {
 }
 for (const name of Object.keys(verification)) {
   if (!names.has(name)) fail(verificationFile, `contains stale entry for ${name}`);
+}
+for (const [id, rawRedirect] of Object.entries(redirects)) {
+  const redirect = rawRedirect as JsonRecord;
+  if (!/^vp-\d{4,}$/.test(id)) fail(redirectsFile, `has invalid retired ID ${id}`);
+  if (ids.has(id)) fail(redirectsFile, `redirect ID is still active: ${id}`);
+  if (!redirect || typeof redirect !== 'object' || Array.isArray(redirect)) fail(redirectsFile, `redirect ${id} must be an object`);
+  if (!['merged', 'removed'].includes(redirect.reason)) fail(redirectsFile, `redirect ${id} has invalid reason`);
+  if (redirect.reason === 'merged') {
+    if (typeof redirect.redirectTo !== 'string' || !ids.has(redirect.redirectTo)) fail(redirectsFile, `merged redirect ${id} must target an active profile ID`);
+  } else if (redirect.redirectTo !== null) {
+    fail(redirectsFile, `removed redirect ${id} must use a null target`);
+  }
 }
 
 console.log(`Validated ${roster.length} roster entries.`);

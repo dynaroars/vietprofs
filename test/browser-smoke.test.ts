@@ -158,6 +158,14 @@ test('filters and submit-form suggestions work', async (t) => {
   assert.ok((await page.locator('.correction-suggestion').count()) > 0);
   await page.locator('.correction-suggestion').first().click();
   assert.notEqual(await page.locator('#profileUrl').inputValue(), '');
+  const tan = await page.evaluate(async () => (await (await fetch('/data.json')).json()).find((person) => person.name === 'Tan Minh Nguyen'));
+  assert.match(tan.id, /^vp-\d+$/);
+  await page.goto(`${baseUrl}/submit.html?edit=${encodeURIComponent(tan.id)}`, { waitUntil: 'networkidle' });
+  assert.equal(await page.locator('#name').inputValue(), 'Tan Minh Nguyen');
+  assert.equal(await page.locator('#university').inputValue(), 'National University of Singapore');
+  assert.equal(await page.locator('#submit-form').getAttribute('data-editing-id'), tan.id);
+  assert.match(await page.locator('#name-match-notice').textContent(), new RegExp(`Editing existing entry\\s+${tan.id}`));
+  assert.equal(await page.locator('#name-match-notice a').getAttribute('href'), `/people/${tan.id}.html`);
   await page.close();
 });
 
