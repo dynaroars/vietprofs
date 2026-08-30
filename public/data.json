@@ -12571,7 +12571,7 @@
     "id": "vp-0439",
     "name": "Jeremy Binh Nguyen",
     "profileUrl": "https://medicine.tulane.edu/departments/radiology-debakey/faculty/jeremy-binh-nguyen-md-facr",
-    "lastUpdatedAt": "2026-08-26T13:29:57.000Z",
+    "lastUpdatedAt": "2026-08-30T05:09:14.615Z",
     "university": "Tulane University",
     "city": "New Orleans",
     "state": "Louisiana",
@@ -12595,7 +12595,9 @@
         "source": "https://medicine.tulane.edu/departments/radiology-debakey/faculty/jeremy-binh-nguyen-md-facr",
         "year": null
       }
-    ]
+    ],
+    "mdInstitution": "The University of Texas Health Science Center at San Antonio",
+    "mdYear": 1999
   },
   {
     "id": "vp-0440",
@@ -12684,7 +12686,7 @@
     "id": "vp-0444",
     "name": "Vu Q. Nguyen - University of Alabama at Birmingham",
     "profileUrl": "https://www.dpo.uab.edu/medicine/physicalmedicine/faculty/nguyen-vu-q-m-d-mba",
-    "lastUpdatedAt": "2026-08-26T13:29:57.000Z",
+    "lastUpdatedAt": "2026-08-30T05:09:14.615Z",
     "university": "University of Alabama at Birmingham",
     "city": "Birmingham",
     "state": "Alabama",
@@ -12708,13 +12710,24 @@
         "organization": "University of Alabama at Birmingham",
         "source": "https://www.dpo.uab.edu/medicine/physicalmedicine/faculty/nguyen-vu-q-m-d-mba"
       }
+    ],
+    "mdInstitution": "Michigan State University College of Human Medicine",
+    "mdYear": 1993,
+    "undergradInstitution": "Drake University",
+    "otherDegrees": [
+      {
+        "degree": "MBA",
+        "institution": "East Carolina University",
+        "year": 2013,
+        "source": "https://www.dpo.uab.edu/medicine/physicalmedicine/faculty/nguyen-vu-q-m-d-mba"
+      }
     ]
   },
   {
     "id": "vp-0445",
     "name": "Brittany Huynh",
     "profileUrl": "https://www.uab.edu/medicine/peds/faculty/brittany-huynh-m-d",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "lastUpdatedAt": "2026-08-30T05:09:14.615Z",
     "university": "University of Alabama at Birmingham",
     "city": "Birmingham",
     "state": "Alabama",
@@ -12729,7 +12742,8 @@
     "rank": "Assistant Professor",
     "country": "United States",
     "portrait": "portraits/453-brittany-huynh-university-of-alabama-at-birmingham.webp",
-    "portraitSource": "https://www.uab.edu/medicine/peds/images/Faculty_Headshots/Rheum/Huynh%20BrittanySQUARE400.jpg"
+    "portraitSource": "https://www.uab.edu/medicine/peds/images/Faculty_Headshots/Rheum/Huynh%20BrittanySQUARE400.jpg",
+    "mdInstitution": "Indiana University School of Medicine"
   },
   {
     "id": "vp-0446",
@@ -12956,7 +12970,7 @@
     "id": "vp-0455",
     "name": "Alexandra Nguyen",
     "profileUrl": "https://www.colorado.edu/music/alexandra-nguyen",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "lastUpdatedAt": "2026-08-30T05:09:14.615Z",
     "university": "University of Colorado Boulder",
     "city": "Boulder",
     "state": "Colorado",
@@ -12971,7 +12985,8 @@
     "rank": "Professor",
     "country": "United States",
     "portrait": "portraits/463-alexandra-nguyen-university-of-colorado-boulder.webp",
-    "portraitSource": "https://www.colorado.edu/music/sites/default/files/people/nguyen3.jpg"
+    "portraitSource": "https://www.colorado.edu/music/sites/default/files/people/nguyen3.jpg",
+    "undergradInstitution": "McGill University"
   },
   {
     "id": "vp-0456",
@@ -13105,7 +13120,7 @@
     "id": "vp-0461",
     "name": "Ngoc Bui - University of La Verne",
     "profileUrl": "https://researchworks.laverne.edu/esploro/profile/ngoc_bui",
-    "lastUpdatedAt": "2026-08-23T15:03:52.000Z",
+    "lastUpdatedAt": "2026-08-30T05:09:14.615Z",
     "university": "University of La Verne",
     "city": "La Verne",
     "state": "California",
@@ -13120,7 +13135,10 @@
     "rank": "Professor",
     "country": "United States",
     "portrait": "portraits/471-ngoc-bui-university-of-la-verne.webp",
-    "portraitSource": "http://web.archive.org/web/20260308045008/https://laverne.edu/directory/person/ngoc-t-bui/"
+    "portraitSource": "http://web.archive.org/web/20260308045008/https://laverne.edu/directory/person/ngoc-t-bui/",
+    "undergradInstitution": "California State Polytechnic University, Pomona",
+    "msInstitution": "University of Nebraska-Lincoln",
+    "phdInstitution": "University of Nebraska-Lincoln"
   },
   {
     "id": "vp-0462",
@@ -13206,7 +13224,7 @@
     "id": "vp-0465",
     "name": "Lahn Nguyen",
     "profileUrl": "https://med.umn.edu/bio/lahn-nguyen",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "lastUpdatedAt": "2026-08-30T05:09:14.615Z",
     "university": "University of Minnesota",
     "city": "Minneapolis",
     "state": "Minnesota",
@@ -13221,13 +13239,21 @@
     "rank": "Assistant Professor",
     "country": "United States",
     "portrait": "portraits/476-lahn-nguyen-university-of-minnesota.webp",
-    "portraitSource": "https://med.umn.edu/sites/med.umn.edu/files/styles/bio_photo/public/web_profiles/2023-02/Lahn%20Nguyen.jpg?itok=h64s1UeP"
+    "portraitSource": "https://med.umn.edu/sites/med.umn.edu/files/styles/bio_photo/public/web_profiles/2023-02/Lahn%20Nguyen.jpg?itok=h64s1UeP",
+    "undergradInstitution": "Drake University",
+    "otherDegrees": [
+      {
+        "degree": "DO",
+        "institution": "Des Moines University College of Medicine",
+        "source": "https://med.umn.edu/bio/lahn-nguyen"
+      }
+    ]
   },
   {
     "id": "vp-0466",
     "name": "Mai Nguyen - University of Minnesota",
     "profileUrl": "https://med.umn.edu/bio/mai-nguyen",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "lastUpdatedAt": "2026-08-30T05:09:14.615Z",
     "university": "University of Minnesota",
     "city": "Minneapolis",
     "state": "Minnesota",
@@ -13242,7 +13268,8 @@
     "rank": "Associate Professor",
     "country": "United States",
     "portrait": "portraits/477-mai-nguyen-university-of-minnesota-university-of-minnesota.webp",
-    "portraitSource": "https://med.umn.edu/sites/med.umn.edu/files/styles/bio_photo/public/images/mai_nguyen_website_2024.png?itok=RElUPxkp"
+    "portraitSource": "https://med.umn.edu/sites/med.umn.edu/files/styles/bio_photo/public/images/mai_nguyen_website_2024.png?itok=RElUPxkp",
+    "mdInstitution": "Vanderbilt University School of Medicine"
   },
   {
     "id": "vp-0467",
@@ -13362,7 +13389,7 @@
     "id": "vp-0472",
     "name": "Tuan Vu",
     "profileUrl": "https://health.usf.edu/medicine/neurology/faculty/tvu6",
-    "lastUpdatedAt": "2026-08-23T20:45:30.000Z",
+    "lastUpdatedAt": "2026-08-30T05:09:14.615Z",
     "university": "University of South Florida",
     "city": "Tampa",
     "state": "Florida",
@@ -13377,7 +13404,9 @@
     "rank": "Professor",
     "country": "United States",
     "portrait": "portraits/tuan-vu-university-of-south-florida.webp",
-    "portraitSource": "https://cloud.usf.edu/FacultyDirectory/api/get/profile/tvu6/photo/profile"
+    "portraitSource": "https://cloud.usf.edu/FacultyDirectory/api/get/profile/tvu6/photo/profile",
+    "mdInstitution": "Pennsylvania State University",
+    "mdYear": 1989
   },
   {
     "id": "vp-0473",
@@ -16939,7 +16968,7 @@
     "rank": "Associate Professor",
     "track": "Tenure-line",
     "profileUrl": "https://www.henley.ac.uk/people/dr-quyen-nguyen",
-    "lastUpdatedAt": "2026-08-26T18:26:29.000Z",
+    "lastUpdatedAt": "2026-08-30T05:10:05.580Z",
     "scholarUrl": "https://scholar.google.com/citations?user=T8x8w3cAAAAJ",
     "researchAreas": [
       "International Business",
@@ -16948,7 +16977,9 @@
       "International Financial Management"
     ],
     "portrait": "portraits/623-quyen-nguyen-university-of-reading.webp",
-    "portraitSource": "https://henley.imgix.net/v3/peopleImages/Quyen-Nguyen-75e5pfimu.jpg?auto=compress%2Cformat&fit=max&fm=jpg&q=80&ratio=178%2F178&w=640"
+    "portraitSource": "https://henley.imgix.net/v3/peopleImages/Quyen-Nguyen-75e5pfimu.jpg?auto=compress%2Cformat&fit=max&fm=jpg&q=80&ratio=178%2F178&w=640",
+    "phdInstitution": "University of Reading",
+    "phdYear": 2012
   },
   {
     "id": "vp-0604",
@@ -17279,14 +17310,16 @@
     "rank": "Associate Professor",
     "track": "Tenure-line",
     "profileUrl": "https://www.icmmo.universite-paris-saclay.fr/annuaire/quoc-nghi-pham/",
-    "lastUpdatedAt": "2026-08-26T18:38:23.000Z",
+    "lastUpdatedAt": "2026-08-30T05:10:05.580Z",
     "scholarUrl": "https://scholar.google.com/citations?user=T8x8w3cAAAAJ",
     "researchAreas": [
       "Materials Chemistry",
       "Solid-State Chemistry",
       "Electrochemistry",
       "Functional Materials"
-    ]
+    ],
+    "phdInstitution": "Université du Maine",
+    "phdYear": 2006
   },
   {
     "id": "vp-0619",
@@ -18367,7 +18400,7 @@
     "rank": "Associate Professor",
     "track": "Tenure-line",
     "profileUrl": "https://umanitoba.ca/medicine/faculty-staff/chau-pham",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "lastUpdatedAt": "2026-08-30T05:11:01.379Z",
     "researchAreas": [
       "Emergency Medicine",
       "Point-of-Care Ultrasound",
@@ -18375,7 +18408,19 @@
       "Gender Equity in Medicine"
     ],
     "portrait": "portraits/685-chau-pham-university-of-manitoba.webp",
-    "portraitSource": "https://umanitoba.ca/medicine/sites/medicine/files/styles/3x2_900w/public/2021-12/chau-pham.jpg?itok=YiFWnnVz"
+    "portraitSource": "https://umanitoba.ca/medicine/sites/medicine/files/styles/3x2_900w/public/2021-12/chau-pham.jpg?itok=YiFWnnVz",
+    "undergradInstitution": "University of Manitoba",
+    "undergradYear": 2000,
+    "mdInstitution": "University of Manitoba",
+    "mdYear": 2005,
+    "otherDegrees": [
+      {
+        "degree": "MBA",
+        "institution": "University of Manitoba",
+        "year": 2013,
+        "source": "https://umanitoba.ca/medicine/faculty-staff/chau-pham"
+      }
+    ]
   },
   {
     "id": "vp-0665",
@@ -19206,7 +19251,7 @@
     "rank": "Teaching",
     "track": "Teaching",
     "profileUrl": "https://research.monash.edu/en/persons/linh-tran/",
-    "lastUpdatedAt": "2026-08-26T18:54:55.000Z",
+    "lastUpdatedAt": "2026-08-30T05:11:01.379Z",
     "researchAreas": [
       "TESOL",
       "Teacher Education",
@@ -19214,7 +19259,11 @@
       "Multilingual Education"
     ],
     "portrait": "portraits/722-linh-tran-monash-university.webp",
-    "portraitSource": "https://research.monash.edu/files-asset/671537801/TDK.Linh.jpg/"
+    "portraitSource": "https://research.monash.edu/files-asset/671537801/TDK.Linh.jpg/",
+    "phdInstitution": "Monash University",
+    "phdYear": 2017,
+    "msInstitution": "Ho Chi Minh City University of Social Sciences and Humanities",
+    "msYear": 2005
   },
   {
     "id": "vp-0701",
@@ -19270,7 +19319,7 @@
     "rank": "Assistant Professor",
     "track": "Tenure-line",
     "profileUrl": "https://people.njit.edu/profile/tn294",
-    "lastUpdatedAt": "2026-08-29T23:51:47.000Z",
+    "lastUpdatedAt": "2026-08-30T05:11:01.379Z",
     "researchAreas": [
       "Educational Data Mining",
       "Health Informatics",
@@ -19279,7 +19328,12 @@
       "Reinforcement Learning"
     ],
     "portrait": "portraits/725-thanh-nguyen-thanh-nguyen-tang-new-jersey-institute-of-technology.webp",
-    "portraitSource": "https://uws.njit.edu/ldapimage.php?format=full&uid=tn294"
+    "portraitSource": "https://uws.njit.edu/ldapimage.php?format=full&uid=tn294",
+    "phdInstitution": "Deakin University",
+    "phdYear": 2022,
+    "msInstitution": "Ulsan National Institute of Science and Technology",
+    "msYear": 2018,
+    "undergradInstitution": "Danang University of Science and Technology"
   },
   {
     "id": "vp-0704",
