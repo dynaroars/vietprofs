@@ -96,30 +96,37 @@ The site itself supports free-text and attribute-prefixed search (e.g., \code{un
 \subsection{The Engineering Challenge: Keeping VietProfs Accurate}
 \label{sec:intro-how}
 Building a first version of this directory would not, by itself, have been hard.
-Keeping it accurate is the harder engineering problem, and it is the paper's technical contribution.
+Keeping it comprehensive and accurate is a much harder engineering problem, and it is the technical contribution of this paper.
 Structured public datasets become stale for a simple reason: the world they describe changes while the dataset waits for an update.
-A faculty member is promoted, changes universities, becomes emeritus, or leaves academia.
-A URL disappears in a site redesign.
+A person becomes a new faculty, an existing faculty member gets promoted, changes universities, becomes emeritus, or leaves academia.
+A URL or image disappears in a site redesign.
 A newly eligible person never appears in the search results that originally seeded the directory.
-Each row is therefore a claim about an external entity, not a fixed fact.
 Maintenance is a reconciliation problem between those claims and a distributed, changing web (Section~\ref{sec:hard}), whose pages are known to disappear or change at a substantial rate over just a few years \cite{bar-yossef2004sic}.
+Manual human maintenance would be very difficult and do not scale, because it would require a human to check hundreds of records against the web and even try to do things beyond the capability of Google search, such as finding a newly eligible person who has not yet been indexed or surfaced by any search engine.
 
-VietProfs addresses this with a maintenance system built around one rule: an AI agent proposes changes, and a deterministic controller---not the model---decides whether they reach the public roster.
-Two loops run continuously.
+
+VietProfs addresses this with an automatic maintenance system that employs continuous loops of expansion and validation---\emph{all using AI agents}.
 Expansion searches a bounded university/field/country slice for people not yet in the roster.
 Revalidation periodically re-checks every existing record's profile link, appointment, rank, education, and honors against the current web (Section~\ref{sec:maintenance}).
+The system's loops run continuously, almost every day, to keep the roster current.
+VietProfs is an AI sytem itself, and it would not exist without the LLMs that power it.
 
-An agent's output is never applied directly.
-It must first pass a validated proposal schema that checks required fields, URL roles, accepted tracks, honor categories, and degree years, and that refuses any edit touching a person outside its assigned target (Section~\ref{sec:architecture}).
-An optional second, independently invoked agent can review a proposal and force up to two bounded revisions before a still-disputed case is deferred rather than guessed at (Section~\ref{sec:architecture}).
-This mirrors a broader principle: a model's role in a human-in-the-loop system is to reduce a reviewer's effort, not replace their judgment \cite{amershi2014power}.
-A deterministic test suite---data-validation, unit, and browser-level checks---gates every automated push to the live site (Section~\ref{sec:testing}).
-That gate matters because unattended LLM enumeration is otherwise known to omit people and hallucinate affiliations \cite{ji2023survey}, with no defensible stopping condition (Section~\ref{sec:whatdoesnotwork}).
 
-The public Git history makes this lifecycle visible.
-It records batched full-roster refreshes, country-by-country expansion sweeps, and concrete corrections: merging duplicate entries for \vplink{Tam+V.+Nguyen}{Tam V. Nguyen} at the University of Dayton, reclassifying \vplink{Khiem+Pham-Nguyen}{Khiem Pham-Nguyen} from Teaching to Clinical after his Boston University dental appointment was found to sit on a stable clinical-faculty ladder, and removing Nhung Nguyen's UCSF entry under the inclusion policy (Section~\ref{sec:maintenance}--\ref{sec:results}).
-None of this makes VietProfs a census or a formally verified system.
-Coverage still depends on search effort and discoverability, and the paper is explicit about what remains unmeasured (Section~\ref{sec:limitations}, Section~\ref{sec:whatdoesnotwork}).
+That said, LLMs are not a magic wand, and human contribution is still essential. One of the surprising lessons of this project is that finding \emph{new} information is very difficult and time-consuming, even for state-of-the-art LLMs, but checking a claim against the web is much easier.
+For example, given the relatively complete roster of faculty already in VietProfs, it is difficulty for LLMs to scout the web for new, previously unlisted people (and in fact, the agents often complained that scouting is a wasteful task with little yields after spending hours of researching and only to find candidates who already exists in the database). Thus, VietProfs also gets frequent contributions from human users who submit new people or corrections through the public form (Section~\ref{sec:submit}), and the LLMs simply need to check the submitted information against the web and verify it, which is much easier and more reliable. In addition, LLMs experience hallucination, e.g., putting pictures of the wrong person happens quite often, so human spot-checking is still needed (Section~\ref{sec:architecture}).
+
+
+% An agent's output is never applied directly.
+% It must first pass a validated proposal schema that checks required fields, URL roles, accepted tracks, honor categories, and degree years, and that refuses any edit touching a person outside its assigned target (Section~\ref{sec:architecture}).
+% An optional second, independently invoked agent can review a proposal and force up to two bounded revisions before a still-disputed case is deferred rather than guessed at (Section~\ref{sec:architecture}).
+% This mirrors a broader principle: a model's role in a human-in-the-loop system is to reduce a reviewer's effort, not replace their judgment \cite{amershi2014power}.
+% A deterministic test suite---data-validation, unit, and browser-level checks---gates every automated push to the live site (Section~\ref{sec:testing}).
+% That gate matters because unattended LLM enumeration is otherwise known to omit people and hallucinate affiliations \cite{ji2023survey}, with no defensible stopping condition (Section~\ref{sec:whatdoesnotwork}).
+
+% The public Git history makes this lifecycle visible.
+% It records batched full-roster refreshes, country-by-country expansion sweeps, and concrete corrections: merging duplicate entries for \vplink{Tam+V.+Nguyen}{Tam V. Nguyen} at the University of Dayton, reclassifying \vplink{Khiem+Pham-Nguyen}{Khiem Pham-Nguyen} from Teaching to Clinical after his Boston University dental appointment was found to sit on a stable clinical-faculty ladder, and removing Nhung Nguyen's UCSF entry under the inclusion policy (Section~\ref{sec:maintenance}--\ref{sec:results}).
+% None of this makes VietProfs a census or a formally verified system.
+% Coverage still depends on search effort and discoverability, and the paper is explicit about what remains unmeasured (Section~\ref{sec:limitations}, Section~\ref{sec:whatdoesnotwork}).
 
 This paper has two aims, addressed in two parts.
 Part I is about VietProfs itself: who it is for, who is eligible to appear, what fields and kinds of information it covers and why, how it is used, and what it currently shows.
