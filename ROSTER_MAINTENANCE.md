@@ -228,16 +228,19 @@ personal homepage. An honor should normally fit one of these patterns:
 - a named endowed chair, distinguished professorship, university professorship, or comparable
   research chair that represents a significant appointment distinction (`distinguished_professorship`).
 
-Do not add routine conference best-paper awards, paper awards with only runner-up or candidate
-status, institution-local student, departmental, university service/teaching, or community-engagement
-awards, generic grants, invited talks, or ambiguous honors whose standing cannot be established.
-An award created and administered by one university is presumed local and ineligible unless reliable
-evidence shows that it has independent field-wide standing; a large-sounding title or cash prize is
-not enough. A conference recognition may be
-included only when it is clearly a durable, field-level distinction—for example, a most
-influential-paper, impact, highest-impact, or test-of-time award already represented in the
-roster. The award source must identify the recipient, the distinction, and preferably the year;
-do not infer prestige from the title alone.
+Do not add routine conference best-paper or distinguished-paper awards, paper awards with only
+runner-up or candidate status, institution-local student, departmental, university
+service/teaching, or community-engagement awards, generic grants, invited talks, or ambiguous
+honors whose standing cannot be established. "Distinguished Paper Award," "Best Paper Award," and
+similarly named per-year paper-selection recognitions are routine even at a top-tier venue and do
+not qualify on their own, regardless of a comparable award already present in the roster; do not
+treat an existing roster entry as precedent for adding another one. A conference paper recognition
+may be included only when the source explicitly frames it as a durable, retrospective distinction
+made well after publication—a most-influential-paper, impact, highest-impact, or test-of-time
+award. An award created and administered by one university is presumed local and ineligible unless
+reliable evidence shows that it has independent field-wide standing; a large-sounding title or cash
+prize is not enough. The award source must identify the recipient, the distinction, and preferably
+the year; do not infer prestige from the title alone.
 
 When two people share a name, use a fuller official form if available (for example, a middle name, initial, or nickname). Only if their names are genuinely identical should the university be appended: `Full Name - University`.
 
