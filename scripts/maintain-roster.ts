@@ -617,11 +617,15 @@ function processText(result) {
 
 export function failureKind(result) {
   const text = processText(result);
-  if (/not logged in|authentication|unauthorized|credential|login required|sign in/.test(text)) return 'auth';
+  // Check rate/quota signals before the auth keywords below: a research agent's transcript can
+  // include dumped file or web content (this repo's own docs mention "credential", for example),
+  // so a bare auth keyword match anywhere in the full text is unreliable. A rate/usage-limit
+  // phrase is a much more specific, high-confidence signal and should win when both are present.
   // Providers use different wording for exhausted account capacity. Prefer the status code
   // when available, but also recognize limit/quota/capacity messages without depending on one
   // vendor's exact sentence.
   if (result.apiErrorStatus === 429 || /\b429\b|too many requests|overloaded|(?:rate|usage|session|weekly|daily|monthly|account|request|token|message|spend)\s+(?:limit|cap)|(?:limit|quota|capacity)\s+(?:reached|exceeded|hit|exhausted|reset|resets|available)|(?:hit|reached|exceeded|exhausted|ran out of)\s+(?:your\s+)?(?:limit|quota|capacity)|\bquota\b/.test(text)) return 'rate';
+  if (/not logged in|authentication|unauthorized|credential|login required|sign in/.test(text)) return 'auth';
   if (result.timedOut) return 'timeout';
   return 'other';
 }

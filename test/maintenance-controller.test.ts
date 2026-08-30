@@ -202,6 +202,14 @@ test('maintenance recognizes broad quota-limit wording', () => {
   assert.equal(failureKind({ stderr: 'HTTP 429', stdout: '' }), 'rate');
 });
 
+test('a rate-limit message wins over an incidental auth keyword elsewhere in the transcript', () => {
+  assert.equal(failureKind({
+    stderr: '',
+    stdout: 'dumped file content mentions a professional credential in passing. '
+      + "You've hit your usage limit. Upgrade to Pro or try again at 3:51 AM.",
+  }), 'rate');
+});
+
 test('maintenance parses a future provider reset time', () => {
   const now = Date.parse('2026-08-28T20:00:00.000Z');
   const reset = parseRateLimitReset("You've hit your session limit · resets 6:10pm (America/New_York)", now);
