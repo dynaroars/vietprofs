@@ -96,7 +96,7 @@ The site itself supports free-text and attribute-prefixed search (e.g., \code{un
 \subsection{The Engineering Challenge: Keeping VietProfs Accurate}
 \label{sec:intro-how}
 Building a first version of this directory would not, by itself, have been hard.
-Keeping it comprehensive and accurate is a much harder engineering problem, and it is the technical contribution of this paper.
+Keeping it accurate is a much harder engineering problem, and it is the technical contribution of this paper.
 Structured public datasets become stale for a simple reason: the world they describe changes while the dataset waits for an update.
 A person becomes a new faculty, an existing faculty member gets promoted, changes universities, becomes emeritus, or leaves academia.
 A URL or image disappears in a site redesign.
@@ -112,7 +112,7 @@ The system's loops run continuously, almost every day, to keep the roster curren
 VietProfs is an AI sytem itself, and it would not exist without the LLMs that power it.
 
 
-That said, LLMs are not a magic wand, and human contribution is still essential. One of the surprising lessons of this project is that finding \emph{new} information is very difficult and time-consuming, even for state-of-the-art LLMs, but checking a claim against the web is much easier.
+That said, AI are not a magic wand, and human contribution is still essential. One of the surprising lessons of this project is that finding \emph{new} information is very difficult and time-consuming, even for state-of-the-art LLMs, but checking a claim against the web is much easier.
 For example, given the relatively complete roster of faculty already in VietProfs, it is difficulty for LLMs to scout the web for new, previously unlisted people (and in fact, the agents often complained that scouting is a wasteful task with little yields after spending hours of researching and only to find candidates who already exists in the database). Thus, VietProfs also gets frequent contributions from human users who submit new people or corrections through the public form (Section~\ref{sec:submit}), and the LLMs simply need to check the submitted information against the web and verify it, which is much easier and more reliable. In addition, LLMs experience hallucination, e.g., putting pictures of the wrong person happens quite often, so human spot-checking is still needed (Section~\ref{sec:architecture}).
 
 
