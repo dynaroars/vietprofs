@@ -148,6 +148,7 @@ test('filters and submit-form suggestions work', async () => {
   await page.locator('#location-filter').selectOption('World');
   assert.ok((await page.locator('.entry').count()) > 0);
   await page.goto(`${baseUrl}/submit.html`, { waitUntil: 'networkidle' });
+  await page.locator('input[name="purpose"][value="update"]').check();
   await page.locator('#name').fill('Nguyen');
   assert.ok((await page.locator('.correction-suggestion').count()) > 0);
   await page.locator('.correction-suggestion').first().click();
@@ -163,12 +164,29 @@ test('filters and submit-form suggestions work', async () => {
   await page.locator('#name').fill('Corrected Tan Minh Nguyen');
   assert.equal(await page.locator('#submit-form').getAttribute('data-editing-id'), tan.id);
   await page.goto(`${baseUrl}/submit.html`, { waitUntil: 'networkidle' });
+  await page.locator('input[name="purpose"][value="update"]').check();
   await page.locator('#name').fill('Tan Minh Nguyen');
   assert.equal(await page.locator('#submit-form').getAttribute('data-editing-id'), tan.id);
   await page.locator('#name').fill('Brand New Person');
   assert.equal(await page.locator('#submit-form').getAttribute('data-editing-id'), null);
   assert.equal(await page.locator('#profileUrl').inputValue(), '');
   assert.equal(await page.locator('#name-match-notice').isHidden(), true);
+  await page.close();
+});
+
+test('submit form defaults to bulk add mode and toggles to single-entry details', async () => {
+  const page = await context.newPage();
+  await page.goto(`${baseUrl}/submit.html`, { waitUntil: 'networkidle' });
+  assert.equal(await page.locator('input[name="purpose"][value="add"]').isChecked(), true);
+  assert.equal(await page.locator('#add-mode-section').isVisible(), true);
+  assert.equal(await page.locator('#required-section').isVisible(), false);
+  await page.locator('#bulkInput').fill('Jane T. Nguyen — https://cs.example.edu/~jnguyen');
+  await page.locator('#add-mode-details-toggle').click();
+  assert.equal(await page.locator('#required-section').isVisible(), true);
+  assert.equal(await page.locator('#name').inputValue(), '');
+  await page.locator('input[name="purpose"][value="update"]').check();
+  assert.equal(await page.locator('#add-mode-section').isVisible(), false);
+  assert.equal(await page.locator('#required-section').isVisible(), true);
   await page.close();
 });
 

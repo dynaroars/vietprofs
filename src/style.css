@@ -943,6 +943,10 @@ a.entry-name:focus-visible {
   background: var(--card-bg);
 }
 
+.form-group[hidden] {
+  display: none;
+}
+
 .required-group {
   border-color: var(--accent);
   background: color-mix(in srgb, var(--accent) 7%, var(--card-bg));
@@ -1138,6 +1142,33 @@ a.entry-name:focus-visible {
   font-weight: 400;
   color: var(--text-primary);
   cursor: pointer;
+}
+
+.purpose-toggle {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.purpose-toggle .radio-row {
+  font-size: var(--text-base);
+  font-weight: 500;
+}
+
+.link-button {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--accent);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.link-button:hover {
+  opacity: 0.85;
 }
 
 .submit-btn {
