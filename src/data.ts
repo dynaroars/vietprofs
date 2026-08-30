@@ -528,6 +528,12 @@ const FIELD_OVERRIDES = new Map([
   // "Mathematical" would otherwise win the Mathematics rule before Engineering, but this
   // appointment sits in Shizuoka's Faculty of Engineering (communications / systems).
   ['Department of Mathematical and Systems Engineering|Shizuoka University', 'Engineering'],
+  // JAIST Knowledge Science houses this materials-informatics / data-driven-AI appointment;
+  // the school name itself has no computing keyword.
+  ['School of Knowledge Science|Japan Advanced Institute of Science and Technology', 'Computer & Information Sciences'],
+  // Osaka SANKEN lab is statistical causal inference / ML; the institute name would otherwise
+  // fall through as Others.
+  ['SANKEN, Department of Reasoning for Intelligence|Osaka University', 'Computer & Information Sciences'],
 ]);
 
 // Buckets granular `department` values into the broad fields above. Order matters, and is not

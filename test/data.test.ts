@@ -76,6 +76,18 @@ test('Shizuoka Mathematical and Systems Engineering maps to Engineering', () => 
   assert.equal(fieldOf('Department of Mathematical and Systems Engineering'), 'Mathematics');
 });
 
+test('JAIST Knowledge Science and Osaka SANKEN reasoning lab map to computing', () => {
+  assert.equal(
+    fieldOf('School of Knowledge Science', 'Japan Advanced Institute of Science and Technology'),
+    'Computer & Information Sciences',
+  );
+  assert.equal(fieldOf('School of Knowledge Science'), 'Others');
+  assert.equal(
+    fieldOf('SANKEN, Department of Reasoning for Intelligence', 'Osaka University'),
+    'Computer & Information Sciences',
+  );
+});
+
 test('Information Studies defaults to computing but UCLA GSEIS stays Education', () => {
   assert.equal(fieldOf('Information Studies', 'University of California, Los Angeles'), 'Education');
   // Same bare department string elsewhere is genuinely ambiguous without knowing the school, so
@@ -158,7 +170,7 @@ test('buildFunFacts reports structural roster observations rather than name-base
   const facts = buildFunFacts(roster);
   assert.ok(facts.some((f) => /distinct departments/.test(f)));
   assert.ok(facts.some((f) => /same-institution, same-field cluster/.test(f)));
-  assert.ok(facts.some((f) => /largest broad fields are closely represented internationally/.test(f)));
+  assert.ok(facts.some((f) => /largest international country groups/.test(f)));
 });
 
 test('field-balance observations name the fields computed from their input', () => {

@@ -508,17 +508,52 @@ batch-sequenced extension-track work above, since this sweep classifies into any
   Thanh V. Pham — Shizuoka University, Department of Mathematical and Systems Engineering —
   `Tenure-line` Associate Professor; Phan Xuan Tan — Shibaura Institute of Technology,
   College of Engineering, Innovative Global Program — `Tenure-line` Associate Professor.
-- Deferred: Yen Khang Nguyen Tran (Shimane University) — LinkedIn profile returned an HTTP error;
-  retry with a different source.
-- Excluded from Anh T. Pham co-author snowball: Phuc V. Trinh — University of Tokyo Institute
-  of Industrial Science, Project Research Associate / specially appointed assistant professor
-  (特任); Vuong V. Mai — now Assistant Professor at University of Bradford, not Japan;
-  Chuyen T. Nguyen — Associate Professor at Hanoi University of Science and Technology;
-  Ngoc T. Dang — Vietnam-based. Gia Khanh Tran (Tokyo Tech) already on the roster.
-- Later Japan leads, not verified this pass: Ta Viet Ton (Kyushu University Associate
-  Professor); Linh Thi Hoai Nguyen (Kyushu WPI Assistant Professor, stability not checked);
-  Nguyen Quoc Hung (Aoyama Gakuin, unconfirmed).
-- Not yet swept: most of Tokyo, Osaka, and other Japanese institutions beyond this search round.
+- Added (2026-08-30 CS/informatics/CE pass): Dai Hai Nguyen — Hokkaido University IST,
+  Associate Professor (official CSIT staff/news listing); Thong Pham (Pham The Thong) —
+  Osaka University SANKEN, tenured Associate Professor (official SANKEN and EEI faculty
+  lists); Tran Thi Hong — Osaka Metropolitan University, Graduate School of Informatics,
+  Associate Professor (official OMU researcher profile); Van Anh Ho — JAIST Information
+  Science, Professor; Hieu Chi Dam — JAIST Knowledge Science / Information Science,
+  Professor (materials informatics / data-driven AI); Nhan Huu Nguyen, Canh Minh Do, and
+  Vu Duc Tran — JAIST Information Science, 講師 mapped to Assistant Professor; Hoai Luan
+  Pham and Vu Trung Duong Le — NAIST Division of Information Science, 助教 listed as
+  Assistant Professor without 特任 on the official Computing Architecture faculty page.
+- Deferred (CS pass): Canh Hao Nguyen — Kyoto ICR Bioinformatics Center homepage still
+  says Senior Lecturer, but the lab current-members page lists him only under Alumni
+  (Senior Lecturer: 2019-26) with no successor appointment found; do not add until a
+  current official directory listing is confirmed. Triet Nguyen-Van — University of
+  Tsukuba tenured 助教 in Intelligent and Mechanical Interaction Systems (control /
+  mechatronics, outside this CS-only pass). Tran Duong Dinh — JAIST 助教 on the
+  Information Science faculty list; official person page not yet confirmed.
+- Out of CS/informatics/CE scope this pass (eligible in a general Japan sweep, not added
+  here): Ta Viet Ton (Kyushu Agriculture); Yen Khang Nguyen Tran (Shimane Architecture);
+  Nguyen Quoc Hung (Aoyama Gakuin Economics); Quan Manh Phung (Nagoya Chemistry);
+  Le Duc Anh (UTokyo EEIS spintronics); Pham Nam Hai (Science Tokyo EE spintronics);
+  Nguyen Thi Van Anh (Tohoku CSIS spintronics); Gia Minh Thao Nguyen (Shimane MEEE
+  motors/energy); Nguyen Duy Hien (Kyushu IMI computational statistics / mathematics);
+  Kien Le Pham (UEC semiconductors/optical physics).
+- Excluded: Phuc V. Trinh — UTokyo IIS Project Research Associate / 特任; Vuong V. Mai —
+  University of Bradford, not Japan; Chuyen T. Nguyen / Ngoc T. Dang — Vietnam-based;
+  Linh Thi Hoai Nguyen — Kyushu I²CNER WPI term-limited 助教; Tran Ba Hung — Tohoku
+  AIMR 特任助教; Nguyen Le Hoang — Kyoto Program-Specific Researcher; David N. Nguyen —
+  Tohoku 特任准教授; Phuong Minh Nguyen — JAIST 特任助教; Nguyen Phuong Minh (グエン
+  フォン グミン) — JAIST 特任助教; Duong Quang Thang — NAIST Affiliate Associate
+  Professor.
+- Already on the roster (confirmed, not re-added): Le Minh Nguyen, Tu Bao Ho, Van-Nam
+  Huynh (JAIST); Le Bin Ho (Tohoku); Gia Khanh Tran (Tokyo Tech / KAKEN now lists
+  Institute of Science Tokyo 工学院 准教授 — university-name update deferred until a
+  working Science Tokyo profile URL replaces the titech page); Tam Le (ISM); Nguyen
+  Thanh Phuc (Kyoto Molecular Engineering, not CS); Tran Van Tho (Waseda Emeritus,
+  economics); Tran Dang Xuan (Hiroshima).
+- CS/informatics directories checked this pass with no additional verified tenure-line
+  matches: University of Tokyo IST/CS (only 特任/project leads); Kyoto Informatics
+  (Canh Hao unresolved); Tohoku / Nagoya / Kyushu / Science Tokyo CS faculty lists
+  beyond people already listed; UEC CS (Cong-Kha Pham is a different, non-Vietnamese
+  faculty name collision); Keio / Waseda CS surname queries this round returned no new
+  official faculty pages. Ritsumeikan / Doshisha / Sophia / Meiji CS faculty lists
+  browsed via search this round with no Vietnamese-surname tenure-line matches.
+  Remaining nationals and other private CS departments still need directory-level
+  follow-up.
 
 ### Germany
 
