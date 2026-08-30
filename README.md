@@ -201,17 +201,16 @@ and are deferred for 30 days so they do not prevent the rest of the roster from 
 
 ## License
 
-This project's **source code** — everything under `src/`, `scripts/`, `test/`, `analysis/`,
-configuration files, and the static HTML shell — is MIT licensed. See [`LICENSE`](./LICENSE).
-
-The **roster dataset** (`public/data.json`, `maintenance/verification.json`, and any extraction or
-republication of the records they contain) is separately licensed under
-[CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/): noncommercial sharing of the
-complete, unmodified dataset with attribution is permitted; commercial use and derivative/modified
-datasets are not, without a separate written license. See [`LICENSE-DATA`](./LICENSE-DATA) for the
-full terms.
+Following the same approach as [CSRankings](https://csrankings.org), this project is entirely
+transparent: all code and data are publicly available in this repository under a [Creative Commons
+Attribution-NonCommercial-NoDerivatives 4.0 International
+License](https://creativecommons.org/licenses/by-nc-nd/4.0/) — note: this means you may not
+distribute anything built from VietProfs' code or data (a modified version of the code, or a
+derivative or filtered compilation of the roster) without a separate written license, and you may
+not use either for a commercial purpose. Noncommercial sharing of a complete, unmodified copy of
+the code or the dataset, with attribution, is permitted. Citing individual facts (a person's name,
+university, and department) is not restricted. See [`LICENSE`](./LICENSE) for the full terms.
 
 **Portraits** (`public/portraits/`) are sourced from official university pages and personal/lab
 sites, used here for identification purposes; they remain the property of their original sources
-and are not covered by either license above. The manuscript (`paper.tex`/`paper.pdf`) is also not
-covered by either license.
+and are not covered by this license. The manuscript (`paper.tex`/`paper.pdf`) is also not covered.

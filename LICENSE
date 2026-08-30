@@ -1,30 +1,65 @@
-MIT License
+VietProfs License
 
-Copyright (c) 2026 ThanhVu Nguyen
+Copyright (c) 2026 ThanhVu Nguyen. All rights reserved except as expressly
+granted below.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Following the precedent set by CSRankings (https://csrankings.org), this
+entire project — source code, build tooling, and the compiled roster dataset
+in `public/data.json` and `maintenance/verification.json` — is licensed
+under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0
+International License (CC BY-NC-ND 4.0).
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+To view the full legal text of this license, visit
+<https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode>, or send a
+letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA. A
+human-readable summary follows; the full legal text at the link above
+governs in case of any conflict.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+## Summary
 
----
+Subject to the full legal terms at the link above, you may:
 
-This license covers the source code of this project (everything under `src/`,
-`scripts/`, `test/`, `analysis/`, configuration files, and the static HTML
-shell) but not its data. See `LICENSE-DATA` for the terms covering
-`public/data.json` and `maintenance/verification.json`, and the "License"
-section of `README.md` for the status of portraits and the manuscript
-(`paper.tex`/`paper.pdf`).
+- **Share** — copy and redistribute this project, or any substantial part of
+  it (code, data, or both), in any medium or format, for any noncommercial
+  purpose,
+
+provided that you:
+
+- give **appropriate credit** to ThanhVu Nguyen and VietProfs
+  (<https://vietprofs.roars.dev>), link to this license, and indicate if
+  changes were made;
+
+and provided that you do **not**:
+
+- use this project, or anything built from it, for **commercial purposes**
+  (including but not limited to: paid products or services,
+  advertising-supported platforms, lead generation, or resale) or in any
+  AI/ML training corpus offered commercially, without a separate written
+  license from the copyright holder;
+- distribute a **modified version** of the code or a **derivative
+  compilation** of the data (a filtered, re-sorted, merged, or otherwise
+  changed version); a straight, complete, unmodified copy with attribution
+  is permitted, a derivative is not — in other words (and as CSRankings puts
+  it about its own, identically licensed, project): **you may not
+  distribute anything built from VietProfs' code or data**;
+- apply any additional legal or technological restriction that prevents
+  others from doing anything this license permits.
+
+Nothing in this license restricts uses that copyright law recognizes as
+already free regardless of license terms — for example, citing a handful of
+individual facts (a person's name, university, and department) in an
+article, a personal reference, or an academic citation is not "distributing"
+this project and does not require permission under this license. This
+license governs reuse of the code or the compiled dataset (or a substantial
+part of either), not incidental use of individual facts.
+
+**Portraits** (`public/portraits/`) are sourced from official university
+pages and personal/lab sites, used here for identification purposes; they
+remain the property of their original sources and are not covered by this
+license. The manuscript (`paper.tex`/`paper.pdf`) is also not covered by
+this license.
+
+For permission beyond this license's scope (commercial use, a derivative
+version of the code or data, bulk redistribution as part of another
+product), contact the maintainers via the process described in
+`README.md`.
