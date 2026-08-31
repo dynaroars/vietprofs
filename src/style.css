@@ -70,7 +70,6 @@ body {
 /* One focus ring for the whole site. Controls that sit inside a bordered surface (inputs,
    selects, tiles, list rows) hug it at 1px; free-standing pills and buttons stand off at 2px. */
 .example-chip:focus-visible,
-.search-input:focus,
 .field-select:focus,
 .state-tile:focus-visible,
 .ranked-item:focus-visible,
@@ -297,12 +296,66 @@ h1 {
   width: 100%;
   min-width: 0;
   padding: 0.6rem 0.9rem;
-  border: 1px solid var(--border-color);
+  border: 0;
   border-radius: 8px;
-  background: var(--card-bg);
+  background: transparent;
   color: var(--text-primary);
   font-family: var(--font-body);
   font-size: var(--text-base);
+  outline: 0;
+}
+
+.search-input-shell {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--card-bg);
+}
+
+.search-input-shell:focus-within {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 1px;
+}
+
+.search-scope-chip {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-left: 0.45rem;
+  padding: 0.28rem 0.55rem;
+  border: 0;
+  border-radius: 999px;
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.search-scope-chip:hover,
+.search-scope-chip:focus-visible {
+  background: var(--hover-bg);
+  color: var(--text-primary);
+}
+
+.search-scope-chip:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 1px;
+}
+
+.search-scope-chip[hidden] {
+  display: none;
+}
+
+.search-scope-chip-remove {
+  font-size: 1rem;
+  line-height: 1;
 }
 
 .search-box {
