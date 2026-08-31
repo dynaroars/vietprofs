@@ -26,6 +26,10 @@ function shuffle(values) {
   return result;
 }
 
+function pickRandomUnique<T>(values: T[], count: number): T[] {
+  return shuffle([...new Set(values)]).slice(0, count);
+}
+
 function debounce(fn, delayMs) {
   let timer;
   return (...args) => {
@@ -762,12 +766,16 @@ async function init() {
   const populatedLocations = locationOptions.filter((location) =>
     !['US', 'World'].includes(location) && filtersHaveResults(location, 'all', 'all')
   );
-  type Example = { type: 'search' | 'field' | 'loc' | 'insights'; value: string; label?: string };
+  type Example = { type: 'search' | 'field' | 'track' | 'loc' | 'insights'; value: string; label?: string };
   const examples: Example[] = [
-    { type: 'search', value: buildTopUniversities(roster, 1)[0]?.[0] || displayName(roster[0].name) },
-    { type: 'field', value: populatedFields[0], label: fieldDropdownLabel(populatedFields[0]) },
-    { type: 'loc', value: populatedLocations[0] },
-    { type: 'insights', value: 'Insights' },
+    ...pickRandomUnique(roster.map((person) => displayName(person.name)), 2).map((value) => ({ type: 'search' as const, value })),
+    ...pickRandomUnique(uniqueDepartments(roster), 1).map((value) => ({ type: 'search' as const, value })),
+    ...pickRandomUnique(uniqueStates(roster), 1).map((value) => ({ type: 'search' as const, value })),
+    ...pickRandomUnique(roster.flatMap((person) => person.researchAreas), 1).map((value) => ({ type: 'search' as const, value })),
+    ...pickRandomUnique(populatedFields, 2).map((value) => ({ type: 'field' as const, value, label: fieldDropdownLabel(value) })),
+    ...pickRandomUnique(TRACKS, 1).map((value) => ({ type: 'track' as const, value })),
+    ...pickRandomUnique(populatedLocations, 1).map((value) => ({ type: 'loc' as const, value })),
+    { type: 'insights', value: 'Interesting facts' },
   ];
   const examplesEl = document.getElementById('examples');
   examplesEl.replaceChildren();
@@ -782,6 +790,7 @@ async function init() {
     button.textContent = `${ex.type === 'insights' ? '✨ ' : ''}${ex.label ?? ex.value}`;
     if (ex.type === 'insights') button.dataset.insights = '1';
     if (ex.type === 'field') button.dataset.field = ex.value;
+    if (ex.type === 'track') button.dataset.track = ex.value;
     if (ex.type === 'loc') button.dataset.loc = ex.value;
     examplesEl.append(button);
   }
@@ -800,6 +809,13 @@ async function init() {
       searchInput.value = '';
       filterState.insights = false;
       setFilterValues({ location: 'World', field: btn.dataset.field });
+      update();
+      return;
+    }
+    if (btn.dataset.track) {
+      searchInput.value = '';
+      filterState.insights = false;
+      setFilterValues({ location: 'World', track: btn.dataset.track });
       update();
       return;
     }
