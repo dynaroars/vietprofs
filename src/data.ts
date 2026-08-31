@@ -511,6 +511,9 @@ const FIELD_OVERRIDES = new Map([
   ['Anesthesia|Indiana University School of Medicine', 'Health Sciences'],
   ['Biostatistics and Health Data Science|Indiana University School of Medicine', 'Statistics & Data Science'],
   ['National Center for Asphalt Technology|Auburn University', 'Engineering'],
+  // Photonics/microtechnology research department; neither "microtechnology" nor "nanoscience"
+  // matches the Engineering regex's "nanotechnology" keyword.
+  ['Department of Microtechnology and Nanoscience (MC2)|Chalmers University of Technology', 'Engineering'],
   // Generic Speech-Language-Hearing-style department name, but this specific appointment's
   // primary focus (per its own official listing) is multilingual/English education.
   ['Linguistics and Communication Disorders|Queens College, City University of New York', 'Education'],
