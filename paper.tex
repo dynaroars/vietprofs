@@ -28,7 +28,8 @@
 \newcommand{\codelinkd}[2]{\href{\ghrepo/blob/main/#1}{\code{#2}}}
 \newcommand{\commitlink}[1]{\href{\ghrepo/commit/#1}{\code{#1}}}
 \newcommand{\vplink}[2]{\href{https://vietprofs.roars.dev/?q=#1}{#2}}
-\title{VietProfs: A Public Directory of the Vietnamese Academic Diaspora\\[4pt]
+\title{\includegraphics[width=0.14\textwidth]{vietprofs-bamboo-v-2048.png}\\[-2pt]
+VietProfs: A Public Directory of the Vietnamese Academic Diaspora\\[4pt]
 \large Purpose, Eligibility, and Design, with a Technical Report on Keeping It Accurate}
 \author{ThanhVu Nguyen\\George Mason University\\}
 \date{August 2026}
@@ -778,7 +779,7 @@ Negative discovery & \commitlink{9b31b95}; Taiwan country sweep & Thorough searc
 The event history nevertheless supports meaningful engineering observations.
 Batch commits make large work reviewable; checkpoints make long agent sessions resumable; tests encode invariants such as unique names, unique profiles, valid tracks, and targeted proposal scope; and the ledger separates ``reviewed'' from ``changed.''
 The absence of candidate-level telemetry is equally important.
-There is currently no denominator for candidates considered, no rejection taxonomy, no measured human review rate, and no time-to-detection metric; Section~\ref{sec:whatdoesnotwork} and the metrics notes in the repository (\code{METRICS.md}) enumerate what a controlled evaluation would need to add: per-run candidate outcomes, rejection reasons, elapsed time and token/API cost per person, and a measured interval between an external page changing and the directory detecting it.
+There is currently no denominator for candidates considered, no rejection taxonomy, no measured human review rate, and no time-to-detection metric; Section~\ref{sec:whatdoesnotwork} and the manuscript notes in the repository (\code{PAPER\_NOTES.md}) enumerate what a controlled evaluation would need to add: per-run candidate outcomes, rejection reasons, elapsed time and token/API cost per person, and a measured interval between an external page changing and the directory detecting it.
 
 \section{What Does Not Work}
 \label{sec:whatdoesnotwork}

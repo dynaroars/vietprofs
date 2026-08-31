@@ -91,6 +91,10 @@ function profilePage(person: RosterEntry) {
   <meta property="og:title" content="${escapeHtml(title)}">
   <meta property="og:description" content="${escapeHtml(description)}">
   <meta property="og:url" content="${canonicalUrl}">
+  <meta property="og:image" content="${absoluteUrl('vietprofs-bamboo-v-512.png')}">
+  <meta property="og:image:alt" content="VietProfs bamboo V logo">
+  <link rel="icon" type="image/svg+xml" href="../vietprofs-bamboo-v.svg">
+  <link rel="apple-touch-icon" href="../vietprofs-bamboo-v-512.png">
   <title>${escapeHtml(title)}</title>
   <script type="application/ld+json">${jsonLd}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -99,7 +103,7 @@ function profilePage(person: RosterEntry) {
   <link rel="stylesheet" href="../profile.css">
 </head>
 <body class="profile-page">
-  <header><a class="eyebrow" href="../">VietProfs</a></header>
+  <header><a class="eyebrow" href="../"><img class="brand-logo" src="../vietprofs-bamboo-v.svg" alt="" width="32" height="32">VietProfs</a></header>
   <main>
     <article>
       <div class="identity">${portrait}<div><h1>${escapeHtml(name)}</h1><p class="native">${escapeHtml(nativeName)}</p><p class="meta">${escapeHtml(role)}${locationOf(person) ? ` · ${escapeHtml(locationOf(person))}` : ''}</p><div class="tags"><span class="tag">${escapeHtml(fieldOf(person.department, person.university))}</span><span class="tag">${escapeHtml(person.track || '')}</span></div></div></div>

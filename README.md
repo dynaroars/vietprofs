@@ -6,6 +6,13 @@ The site is a static Vite application. The roster is stored in [`public/data.jso
 
 Live site: <https://vietprofs.roars.dev>
 
+Repository documentation is intentionally limited to four files:
+
+- [`README.md`](./README.md): project overview, commands, and operating instructions.
+- [`ROSTER_MAINTENANCE.md`](./ROSTER_MAINTENANCE.md): authoritative eligibility, evidence, and roster-editing policy.
+- [`PAPER_NOTES.md`](./PAPER_NOTES.md): reproducible manuscript metrics, claim audit, and publication checklist.
+- [`AGENTS.md`](./AGENTS.md): concise instructions for automated contributors.
+
 ## Search and filters
 
 The search box matches names, universities, departments, ranks, locations, research areas, honors, and degree institutions. Use the selector at the left of the search box to limit the search to name, university, department, rank, research area, honors, PhD institution, or undergraduate institution; it defaults to `Everything`. Location, field, and appointment track remain dedicated filters. Matching is diacritic-insensitive, so `Nguyen` finds `Nguyễn`.
@@ -22,12 +29,13 @@ npm run preview   # preview the production build
 npm run typecheck # check TypeScript modules
 npm test          # validate data and run unit/UI tests
 npm run test:e2e  # run browser smoke tests
-npm run analyze   # print snapshot counts for METRICS.md and the paper
+npm run analyze   # print snapshot counts for PAPER_NOTES.md and the paper
 npm run figures   # rebuild and recapture the paper's screenshot figures
 ```
 
-`npm run analyze` and `npm run figures` regenerate everything the manuscript reports about the
-current snapshot; run both after a roster change that the paper cites.
+`npm run analyze` produces the snapshot values used by the manuscript, and `npm run figures`
+rebuilds its screenshots. Run both after a roster change that the paper cites, then update
+`PAPER_NOTES.md` and `paper.tex` from those outputs.
 
 By default `npm run dev` serves the site at `http://localhost:5173`. To make the dev server
 reachable from other machines on your network:
@@ -67,15 +75,10 @@ Detailed inclusion, verification, discovery, field-mapping, and data-format guid
 
 ### Interesting-facts guidelines
 
-The interesting-facts view is computed from the current [`public/data.json`](./public/data.json), not from hand-written anecdotes. Observations should:
-
-- be reproducible from stored roster fields such as university, city, state, country, department, field, rank, and track;
-- describe multiple records and use explicit counts or percentages where useful;
-- apply conservative minimum sample sizes and omit weak patterns from small filtered subsets;
-- be phrased as observations about this roster, not as estimates of the entire Vietnamese academic diaspora; qualified signals may use language such as “suggests” or “is consistent with” when the data supports a pattern but cannot establish a broader conclusion; and
-- remain valid when the roster changes, because the values are calculated at runtime.
-
-Do not turn a suggestive pattern into a definitive claim. In particular, do not infer prestige, selectivity, research quality, population size, ethnicity, migration history, or causal explanations from a university, city, country, field, surname, or award name. Do not present current-roster concentrations as growth, migration paths, or emerging regions unless historical data explicitly supports the claim. External rankings and population statistics are out of scope for this view unless they are separately sourced and intentionally documented.
+The interesting-facts view is computed from the current [`public/data.json`](./public/data.json),
+not from hand-written anecdotes. The reproducibility, sample-size, wording, and prohibited-inference
+rules are maintained in the authoritative [interesting-facts section of
+`ROSTER_MAINTENANCE.md`](./ROSTER_MAINTENANCE.md#interesting-facts-guidelines).
 
 ## Automated roster maintenance
 

@@ -1,4 +1,5 @@
 :root {
+  color-scheme: light dark;
   --bg-color: #ffffff;
   --text-primary: #0f172a;
   --text-secondary: #334155;
@@ -12,6 +13,8 @@
   --focus-ring: #2563eb;
   --favorite-color: #b45309;
   --favorite-hover: #92400e;
+  --bamboo-green: #315c45;
+  --bamboo-green-hover: #244838;
 
   --font-heading: 'Outfit', sans-serif;
   --font-body: 'Inter', sans-serif;
@@ -518,14 +521,14 @@ h1 {
 }
 
 .submission-link {
-  background: #7dd3fc;
-  color: #15181c;
-  transition: opacity 0.2s ease;
+  background: var(--bamboo-green);
+  color: #ffffff;
+  transition: background-color 0.2s ease;
 }
 
 .submission-link:hover,
 .submission-link:focus-visible {
-  opacity: 0.85;
+  background: var(--bamboo-green-hover);
 }
 
 .paper-link {
@@ -780,9 +783,17 @@ a.entry-name:focus-visible {
 }
 
 .profile-page .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   color: var(--text-primary);
   font-weight: 700;
   text-decoration: none;
+}
+
+.profile-page .eyebrow .brand-logo {
+  width: 2rem;
+  height: 2rem;
 }
 
 .profile-page .identity {
@@ -1166,6 +1177,19 @@ a.entry-name:focus-visible {
   text-decoration: none;
 }
 
+.brand-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.brand-logo {
+  display: block;
+  width: 1.45em;
+  height: 1.45em;
+  flex: 0 0 auto;
+}
+
 .submit-form {
   display: flex;
   flex-direction: column;
@@ -1431,12 +1455,13 @@ a.entry-name:focus-visible {
   padding: 0.7rem 1.4rem;
   border: none;
   border-radius: 8px;
-  background: var(--accent);
-  color: var(--bg-color);
+  background: var(--bamboo-green);
+  color: #ffffff;
   font-family: var(--font-body);
   font-weight: 600;
   font-size: var(--text-base);
   cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
 .submit-actions {
@@ -1446,7 +1471,7 @@ a.entry-name:focus-visible {
 }
 
 .submit-btn:hover {
-  opacity: 0.9;
+  background: var(--bamboo-green-hover);
 }
 
 .submit-hint {

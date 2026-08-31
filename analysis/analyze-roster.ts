@@ -1,4 +1,4 @@
-// Roster snapshot statistics for METRICS.md, INTERESTING-FACTS.md, and paper.tex.
+// Roster snapshot statistics for PAPER_NOTES.md and paper.tex.
 // Field counts come from the canonical `fieldOf` in src/data.ts, so this report and the
 // live site always agree on the broad-field taxonomy.
 import fs from 'node:fs';
