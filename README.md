@@ -199,8 +199,8 @@ and are deferred for 30 days so they do not prevent the rest of the roster from 
 
 ## License
 
-Following the same approach as [CSRankings](https://csrankings.org), this project is entirely
-transparent: all code and data are publicly available in this repository under a [Creative Commons
+This project is entirely transparent: all code and data are publicly available in this repository
+under a [Creative Commons
 Attribution-NonCommercial-NoDerivatives 4.0 International
 License](https://creativecommons.org/licenses/by-nc-nd/4.0/) — note: this means you may not
 distribute anything built from VietProfs' code or data (a modified version of the code, or a
