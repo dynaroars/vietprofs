@@ -9,7 +9,7 @@ record stores an immutable `vp-####` ID, display name, current profile URL, univ
 department, research areas, track/rank, optional education, honors, portrait provenance, and
 `lastUpdatedAt`. `scripts/assign-profile-ids.ts` fills missing IDs automatically, while
 `scripts/generate-profile-pages.ts` derives an ID-addressed static profile page and profile sitemap
-entries. The current snapshot has 991
+entries. The current snapshot has 993
 records, 423 universities, 20 countries, and 17 broad application fields (analysis generated
 2026-08-31).
 
@@ -62,7 +62,7 @@ new candidates. A disappeared page is treated as a research problem, not automat
 
 ## Important implementation examples
 
-The repository history (652 commits over 2026-08-15--2026-08-31) contains a 20-batch full-roster
+The repository history (more than 650 commits over 2026-08-15--2026-08-31) contains a 20-batch full-roster
 refresh on 2026-08-26, country sweeps for Australia, Canada, France, Singapore, Taiwan, Japan,
 Germany, Hong Kong, and others on 2026-08-28, automated maintenance batches on 2026-08-28/29, and a
 clinical-track expansion sweep on 2026-08-30. Concrete correction commits include:

@@ -23,4 +23,5 @@ test('generated profile pages use the same stylesheet source as the directory', 
   assert.equal(stylesheet, sourceStylesheet);
   assert.match(generator, /class="submission-link"/);
   assert.match(generator, />Add or update info</);
+  assert.match(sourceStylesheet, /\.submission-link\s*{[^}]*background: #7dd3fc;[^}]*color: #15181c;/s);
 });

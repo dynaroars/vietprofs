@@ -53,7 +53,7 @@ Part II is an experience report on the harder problem that keeping the directory
 Its workflow combines bounded search tasks, agent-assisted candidate generation and revalidation, structured proposals, deterministic validation, a tracked verification ledger, and human or independent review for ambiguous cases.
 The central design rule is operational rather than aspirational: AI proposes; evidence decides.
 
-As of 31 August 2026, the canonical snapshot contains 991 records at 423 universities in 20 countries, organized into 17 broad fields and five appointment tracks, spanning recorded PhD years from 1962 to 2026.
+As of 31 August 2026, the canonical snapshot contains 993 records at 423 universities in 20 countries, organized into 17 broad fields and five appointment tracks, spanning recorded PhD years from 1962 to 2026.
 Runtime aggregation exposes institutional and disciplinary patterns, while Git history records additions, promotions or track corrections, moves, removals, and deduplication.
 The system is not a complete census and does not provide controlled accuracy or cost estimates.
 Its contribution is twofold: a public resource for a community that previously had none, and a concrete engineering pattern showing that a public directory is a continuously revalidated collection of claims about an external world, not merely a database snapshot.
@@ -87,7 +87,7 @@ Each track is defined precisely enough that a stable, full-time, faculty-level r
 Every included person is also classified into one of 17 broad fields of study,  broadly classified by the U.S. National Center for Education Statistics, National Science Foundation, and National Institutes of Health. % already use to report on degree programs and doctorates, with health-related subfields further aligned to the National Institutes of Health's Institute and Center structure.
 The goal is for the directory's field distribution to read against familiar national categories (e.g., Computing, Mathematics, Health, Social and Behavioral Sciences) rather than an invented scheme (Section~\ref{sec:fields}).
 
-As of 31 August 2026, the canonical snapshot holds 991 records at 423 universities in 20 countries, across all 17 fields and all five tracks (Section~\ref{sec:results}).
+As of 31 August 2026, the canonical snapshot holds 993 records at 423 universities in 20 countries, across all 17 fields and all five tracks (Section~\ref{sec:results}).
 Each person's displaying card is designed around what a visitor actually needs, such as a portrait, Vietnamese-diacritic name, current university, department, rank, and location, education history, curated honors, and short research-area tags.
 Curated honors are limited to real field-wide distinctions such as national-academy election or a major career award.
 Short research-area tags support topic-level search, and a visible last-verified date lets a reader judge how current a given fact is (Section~\ref{sec:whatshown}).
@@ -507,8 +507,8 @@ Within it, \vplink{Stanford}{Stanford University} and UC San Diego each have 14 
 11, while NUS, Texas Tech, the University of Melbourne, the University of Toronto, and the
 University of Wisconsin--Madison each have 10.
 California and Texas contain 218 of 659 U.S. records (33\%).
-The international subset contains 332 records across 19 non-U.S. country values, led by Australia (64), the U.K. (54), Canada (47), France (36), Japan (33), Singapore (25), and Taiwan (21).
-The four largest broad fields are Health Sciences (184), Computer and Information Sciences (146), Business and Economics (139), and Engineering (136); the U.S. and international subsets differ sharply in their leading field, at 24\% Health Sciences and 22\% Computer and Information Sciences respectively.
+The international subset contains 334 records across 19 non-U.S. country values, led by Australia (64), the U.K. (54), Canada (47), France (36), Japan (33), Singapore (25), and Taiwan (21).
+The four largest broad fields are Health Sciences (184), Computer and Information Sciences (147), Business and Economics (139), and Engineering (137); the U.S. and international subsets differ sharply in their leading field, at 24\% Health Sciences and 22\% Computer and Information Sciences respectively.
 Stanford has 13 health-science records; the Japan Advanced Institute of Science and Technology has eight computing records; and the University of Minnesota and the University of Technology Sydney have seven each, in health sciences and engineering respectively.
 Monash and Stanford each span 12 distinct stored departments, and UC Irvine spans 11, showing that some institutional clusters are cross-disciplinary rather than concentrated in one department.
 These are useful because they reveal institutional and disciplinary structure without claiming prestige, population size, or causation.
@@ -520,11 +520,11 @@ These are useful because they reveal institutional and disciplinary structure wi
 \small
 \begin{tabular}{lr@{\qquad}lr}
 \toprule
-Records & 991 & Universities & 423\\
-Countries & 20 & U.S./international & 659/332\\
+Records & 993 & Universities & 423\\
+Countries & 20 & U.S./international & 659/334\\
 Broad fields & 17 & Accepted tracks & 5\\
-Profile URLs & 991 & Scholar URLs & 218\\
-PhD institutions & 749 & PhD years & 547\\
+Profile URLs & 993 & Scholar URLs & 219\\
+PhD institutions & 751 & PhD years & 549\\
 Honors-bearing records & 182 & PhD-year range & 1962--2026\\
 \bottomrule
 \end{tabular}
@@ -542,7 +542,7 @@ A future system that stores notable findings would need dependencies, recomputat
 \label{sec:limitations}
 VietProfs is not a census.
 Coverage is affected by search effort, English-language discoverability, university web quality, public-profile availability, initial field emphasis, international title conventions, and the differing maturity of collection passes.
-The 659/332 U.S./international split must not be interpreted as a population ratio.
+The 659/334 U.S./international split must not be interpreted as a population ratio.
 Nor should current concentrations be interpreted as prestige, demographic size, causation, migration history, or research quality.
 
 The directory handles sensitive identity-adjacent information.
@@ -748,9 +748,9 @@ The maintenance guide additionally requires \code{npm test}, \code{npm run build
 \section{Operational Experience and Evaluation}
 This work is an operational characterization, not a controlled experiment.
 The repository provides strong evidence about implementation and history but not precision, recall, cost, or detection latency.
-The current snapshot has 772 Tenure-line, 96 Clinical, 68 Teaching, 37 Emeritus, and 18 Research records.
-It contains 126 personal/lab URLs, 218 Scholar URLs, and 182 records with at least one honor.
-Of the 749 records with an explicit PhD institution, PhD years span 1962--2026 across 547 records with an explicit year, a wide enough range that any framing of the roster as capturing only recent arrivals in the diaspora would be unsupported.
+The current snapshot has 774 Tenure-line, 96 Clinical, 68 Teaching, 37 Emeritus, and 18 Research records.
+It contains 127 personal/lab URLs, 219 Scholar URLs, and 182 records with at least one honor.
+Of the 751 records with an explicit PhD institution, PhD years span 1962--2026 across 549 records with an explicit year, a wide enough range that any framing of the roster as capturing only recent arrivals in the diaspora would be unsupported.
 These figures describe fields present in the snapshot, not their correctness or completeness.
 
 \begin{table}[t]
