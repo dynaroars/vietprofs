@@ -697,7 +697,9 @@ a.entry-name:focus-visible {
 
 .profile-page h2 {
   margin-top: 2rem;
-  font-size: var(--text-lg);
+  font-family: var(--font-heading);
+  font-size: var(--text-base);
+  font-weight: 600;
 }
 
 .profile-page .native,
