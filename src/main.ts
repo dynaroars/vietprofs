@@ -38,36 +38,91 @@ function debounce(fn, delayMs) {
   };
 }
 
+// Keyword prefixes let the single search box target one field directly (e.g. "Name: Nguyen"),
+// without needing the scope dropdown. Aliases map several spellings to the same scope value the
+// dropdown already uses, so both paths produce identical results.
+const KEYWORD_LABELS: Record<string, string> = {
+  name: 'Name',
+  university: 'University',
+  department: 'Department',
+  rank: 'Rank',
+  research: 'Research',
+  honors: 'Honors',
+  phd: 'PhD',
+  undergrad: 'Ugrad',
+};
+
+const KEYWORD_EXAMPLES: Record<string, string> = {
+  name: 'ThanhVu Nguyen',
+  university: 'George Mason University',
+  department: 'Computer Science',
+  rank: 'Associate Professor',
+  research: 'Software Engineering',
+  honors: 'NSF CAREER Award',
+  phd: 'University of New Mexico',
+  undergrad: 'Pennsylvania State University',
+};
+
+const KEYWORD_ALIASES: Record<string, string> = {
+  name: 'name',
+  university: 'university',
+  uni: 'university',
+  department: 'department',
+  dept: 'department',
+  rank: 'rank',
+  research: 'research',
+  researcharea: 'research',
+  honors: 'honors',
+  honor: 'honors',
+  phd: 'phd',
+  phdinstitution: 'phd',
+  undergrad: 'undergrad',
+  ugrad: 'undergrad',
+  ugradinst: 'undergrad',
+};
+
+function parseKeywordQuery(raw: string): { scope: string; query: string } | null {
+  const match = raw.match(/^\s*([^:]{1,24}?)\s*:\s*(.*)$/s);
+  if (!match) return null;
+  const key = match[1].toLowerCase().replace(/[^a-z0-9]/g, '');
+  const scope = KEYWORD_ALIASES[key];
+  if (!scope) return null;
+  return { scope, query: match[2] };
+}
+
 function renderShell() {
   app.innerHTML = `
     <header>
       <div class="title-row">
         <h1><a class="home-link" href="${import.meta.env.BASE_URL}" id="home-link">Vietnamese Academic Diaspora</a></h1>
-        <a class="icon-link roars-link" href="https://roars.dev" target="_blank" rel="noopener noreferrer" aria-label="ROARS Lab" title="ROARS Lab"></a>
+        <div class="header-icons">
+          <a class="icon-link roars-link" href="https://roars.dev" target="_blank" rel="noopener noreferrer" aria-label="ROARS Lab" title="ROARS Lab"></a>
+          <a class="icon-link github-link" href="https://github.com/dynaroars/vietprofs" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository" title="GitHub repository">
+            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+          </a>
+        </div>
       </div>
       <div class="subtitle-row">
-        <p class="site-subtitle">A directory of Vietnamese professors worldwide</p>
+        <p class="site-subtitle">An open-source directory of Vietnamese professors worldwide</p>
         <div class="header-actions">
-          <a class="paper-link" href="${import.meta.env.BASE_URL}paper.pdf" target="_blank" rel="noopener noreferrer">Read the paper (PDF)</a>
+          <a class="paper-link" href="${import.meta.env.BASE_URL}paper.pdf" target="_blank" rel="noopener noreferrer">Read the paper</a>
           <a class="submission-link" href="submit.html">Add or update info</a>
         </div>
       </div>
     </header>
     <div class="controls">
       <div class="search-box">
-        <select id="search-scope" class="search-scope" aria-label="Search in">
-          <option value="all">Everything</option>
-          <option value="name">Name</option>
-          <option value="university">University</option>
-          <option value="department">Department</option>
-          <option value="rank">Rank</option>
-          <option value="research">Research area</option>
-          <option value="honors">Honors</option>
-          <option value="phd">PhD institution</option>
-          <option value="undergrad">Ugrad Inst.</option>
-        </select>
-        <input id="search" class="search-input" type="search" placeholder="Search the roster…" aria-label="Search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-suggestion-panel" />
-        <div id="search-suggestion-panel" class="search-suggestion-panel" role="listbox" hidden></div>
+        <div class="search-fields">
+          <input id="search" class="search-input" type="search" placeholder="Search the roster…" aria-label="Search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-suggestion-panel" />
+          <div id="search-suggestion-panel" class="search-suggestion-panel" role="listbox" hidden></div>
+        </div>
+        <button type="button" id="search-help-btn" class="search-help-btn" aria-haspopup="dialog" aria-expanded="false" aria-controls="search-help-panel" aria-label="Search syntax help" title="Search syntax help">i</button>
+        <div id="search-help-panel" class="search-help-panel" role="dialog" aria-label="Search syntax help" hidden>
+          <p>Type a keyword prefix to search one field directly:</p>
+          <ul>
+            ${Object.entries(KEYWORD_LABELS).map(([scope, label]) => `<li><code>${escapeHtml(label)}:</code> ${escapeHtml(KEYWORD_EXAMPLES[scope] ?? '')}</li>`).join('')}
+          </ul>
+        </div>
       </div>
       <select id="location-filter" class="field-select location-select" aria-label="Filter by location">
       </select>
@@ -417,7 +472,6 @@ async function init() {
     ['undergrad', uniqueUndergradInstitutions(roster)],
   ]);
   const searchInput = document.getElementById('search') as HTMLInputElement;
-  const searchScopeSelect = document.getElementById('search-scope') as HTMLSelectElement;
   const suggestionPanel = document.getElementById('search-suggestion-panel') as HTMLElement;
   const locationSelect = document.getElementById('location-filter') as HTMLSelectElement;
   const fieldSelect = document.getElementById('field-filter') as HTMLSelectElement;
@@ -482,7 +536,7 @@ async function init() {
   function countedOptions(values, subset, matches, labelFor) {
     return values.flatMap((value) => {
       const count = subset.filter((person) => matches(person, value)).length;
-      return count > 0 ? [{ value, label: `${labelFor(value)} (${count})` }] : [];
+      return count > 0 ? [{ value, label: labelFor(value) }] : [];
     });
   }
 
@@ -503,7 +557,7 @@ async function init() {
     setOptions(
       fieldSelect,
       [
-        { value: 'all', label: `All fields (${roster.length})` },
+        { value: 'all', label: 'All fields' },
         ...fieldEntries,
       ],
       'all',
@@ -517,7 +571,7 @@ async function init() {
     setOptions(
       trackSelect,
       [
-        { value: 'all', label: `All faculty types (${roster.length})` },
+        { value: 'all', label: 'All faculty types' },
         ...trackEntries,
       ],
       'all',
@@ -539,10 +593,20 @@ async function init() {
   initializeDropdowns();
   setFilterValues({ location: 'World' });
 
+  // A "Keyword: value" prefix in the free-text box (e.g. "Name: Nguyen") scopes that search to
+  // one field; otherwise it's a full-text search across everything.
+  function effectiveSearch() {
+    const parsed = parseKeywordQuery(searchInput.value);
+    return parsed
+      ? { scope: parsed.scope, query: parsed.query, isKeyword: true }
+      : { scope: 'all', query: searchInput.value, isKeyword: false };
+  }
+
   function autoSelectLocationForQuery() {
+    const { scope, query } = effectiveSearch();
     locationSelect.value = locationForQuery(roster, searchIndex, {
-      query: searchInput.value,
-      searchScope: searchScopeSelect.value,
+      query,
+      searchScope: scope,
       state: filterState.state,
       currentLocation: locationSelect.value,
       field: fieldSelect.value,
@@ -551,10 +615,6 @@ async function init() {
   }
 
   const params = new URLSearchParams(window.location.search);
-  const requestedScope = params.get('scope');
-  if (requestedScope && [...searchScopeSelect.options].some((option) => option.value === requestedScope)) {
-    searchScopeSelect.value = requestedScope;
-  }
   if (params.has('q')) {
     searchInput.value = params.get('q');
   }
@@ -588,7 +648,6 @@ async function init() {
     const next = new URLSearchParams();
     if (searchInput.value.trim()) next.set('q', searchInput.value.trim());
     if (filterState.state) next.set('state', filterState.state);
-    if (searchScopeSelect.value !== 'all') next.set('scope', searchScopeSelect.value);
     if (locationSelect.value !== 'World') next.set('loc', locationSelect.value);
     if (fieldSelect.value !== 'all') next.set('field', fieldSelect.value);
     if (trackSelect.value !== 'all') next.set('track', trackSelect.value);
@@ -611,9 +670,10 @@ async function init() {
       syncUrl();
       return;
     }
+    const { scope, query } = effectiveSearch();
     const filtered = filterRoster(searchIndex, {
-      query: searchInput.value,
-      searchScope: searchScopeSelect.value,
+      query,
+      searchScope: scope,
       state: filterState.state,
       location: locationSelect.value,
       field: fieldSelect.value,
@@ -636,9 +696,10 @@ async function init() {
     searchInput.setAttribute('aria-expanded', 'false');
   }
   function showSuggestions() {
-    const rawQuery = searchInput.value.trim();
+    const { scope, query: scopedQuery, isKeyword } = effectiveSearch();
+    const rawQuery = scopedQuery.trim();
     const query = rawQuery.toLocaleLowerCase();
-    const selectedScope = searchScopeSelect.value !== 'all' ? searchScopeSelect.value : undefined;
+    const selectedScope = scope !== 'all' ? scope : undefined;
     const keywordValues = selectedScope ? suggestionSources.get(selectedScope) : undefined;
     if (!query && !(keywordValues && keywordValues.length <= 20)) {
       hideSuggestions();
@@ -663,7 +724,7 @@ async function init() {
       option.textContent = value;
       option.dataset.index = String(index);
       option.addEventListener('click', () => {
-        searchInput.value = value;
+        searchInput.value = isKeyword ? `${KEYWORD_LABELS[scope]}: ${value}` : value;
         hideSuggestions();
         update({ fromSearch: true });
       });
@@ -675,10 +736,6 @@ async function init() {
   }
   searchInput.addEventListener('focus', showSuggestions);
   searchInput.addEventListener('input', showSuggestions);
-  searchScopeSelect.addEventListener('change', () => {
-    showSuggestions();
-    update({ fromSearch: true });
-  });
   searchInput.addEventListener('keydown', (event) => {
       const options = [...suggestionPanel.querySelectorAll<HTMLButtonElement>('.search-suggestion')];
     if (event.key === 'Escape') {
@@ -699,6 +756,29 @@ async function init() {
   searchInput.addEventListener('blur', () => setTimeout(hideSuggestions, 150));
 
   searchInput.addEventListener('input', debounce(() => update({ fromSearch: true }), 150));
+
+  const searchHelpBtn = document.getElementById('search-help-btn') as HTMLButtonElement;
+  const searchHelpPanel = document.getElementById('search-help-panel') as HTMLElement;
+  function hideSearchHelp() {
+    searchHelpPanel.hidden = true;
+    searchHelpBtn.setAttribute('aria-expanded', 'false');
+  }
+  searchHelpBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const willShow = searchHelpPanel.hidden;
+    hideSuggestions();
+    searchHelpPanel.hidden = !willShow;
+    searchHelpBtn.setAttribute('aria-expanded', String(willShow));
+  });
+  document.addEventListener('click', (e) => {
+    if (!searchHelpPanel.hidden && !searchHelpPanel.contains(e.target as Node) && e.target !== searchHelpBtn) {
+      hideSearchHelp();
+    }
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !searchHelpPanel.hidden) hideSearchHelp();
+  });
+
   locationSelect.addEventListener('change', () => {
     filterState.state = '';
     update();
@@ -713,7 +793,6 @@ async function init() {
   document.getElementById('home-link').addEventListener('click', (e) => {
     e.preventDefault(); // already on this page — reset in place instead of reloading
     searchInput.value = '';
-    searchScopeSelect.value = 'all';
     filterState.state = '';
     filterState.insights = false;
     setFilterValues({ location: 'World' });
@@ -740,8 +819,10 @@ async function init() {
     }
     const rankedItem = target.closest<HTMLButtonElement>('.ranked-item');
     if (rankedItem && rankedItem.dataset.search) {
-      searchInput.value = rankedItem.dataset.search;
-      searchScopeSelect.value = rankedItem.dataset.scope || 'all';
+      const rankedScope = rankedItem.dataset.scope;
+      searchInput.value = rankedScope && KEYWORD_LABELS[rankedScope]
+        ? `${KEYWORD_LABELS[rankedScope]}: ${rankedItem.dataset.search}`
+        : rankedItem.dataset.search;
       filterState.insights = false;
       fieldSelect.value = 'all';
       trackSelect.value = 'all';

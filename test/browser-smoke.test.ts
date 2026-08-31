@@ -71,14 +71,12 @@ test('directory loads and searching changes the roster', async () => {
   assert.ok(await searchSuggestions.count() > 0);
   await page.locator('#search').press('Escape');
   assert.equal(await page.locator('#search-suggestion-panel').isHidden(), true);
-  await page.locator('#search-scope').selectOption('university');
-  await page.locator('#search').fill('Pennsylvania State University');
+  await page.locator('#search').fill('University: Pennsylvania State University');
   await page.waitForTimeout(250);
   assert.ok(await page.locator('.entry').count() > 0);
   const pennStateMeta = await page.locator('.entry-meta').allTextContents();
   assert.ok(pennStateMeta.every((text) => text.includes('Penn State')));
   assert.ok(pennStateMeta.every((text) => !text.includes('Pennsylvania State University')));
-  await page.locator('#search-scope').selectOption('all');
   await page.locator('#search').fill('ThanhVu');
   await page.waitForTimeout(250);
   assert.equal(await page.locator('.entry').count(), 1);
@@ -113,16 +111,13 @@ test('search suggestions remain visible while results update', async () => {
   await page.close();
 });
 
-test('undergraduate institution scope filters the roster and persists in the URL', async () => {
+test('undergraduate institution keyword prefix filters the roster and persists in the URL', async () => {
   const page = await context.newPage();
   await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
-  const scope = page.locator('#search-scope');
   const search = page.locator('#search');
 
-  await scope.selectOption('undergrad');
-  assert.equal(await scope.locator('option:checked').textContent(), 'Ugrad Inst.');
-  await search.fill('Boise State University');
-  await page.waitForFunction(() => new URL(window.location.href).searchParams.get('scope') === 'undergrad');
+  await search.fill('Ugrad: Boise State University');
+  await page.waitForFunction(() => new URL(window.location.href).searchParams.get('q') === 'Ugrad: Boise State University');
 
   const expectedCount = await page.evaluate(async () => (
     await (await fetch('/data.json')).json()
@@ -133,8 +128,7 @@ test('undergraduate institution scope filters the roster and persists in the URL
   assert.ok((await page.locator('.entry-details').allTextContents()).every((text) => text.includes('Undergrad: Boise State')));
 
   await page.reload({ waitUntil: 'networkidle' });
-  assert.equal(await scope.inputValue(), 'undergrad');
-  assert.equal(await search.inputValue(), 'Boise State University');
+  assert.equal(await search.inputValue(), 'Ugrad: Boise State University');
   assert.equal(await page.locator('.entry').count(), expectedCount);
   await page.close();
 });
@@ -145,12 +139,11 @@ test('mobile search input uses the full control width', async () => {
   await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
 
   const searchBox = await page.locator('.search-box').boundingBox();
-  const scope = await page.locator('#search-scope').boundingBox();
   const search = await page.locator('#search').boundingBox();
-  assert.ok(searchBox && scope && search);
+  const helpBtn = await page.locator('#search-help-btn').boundingBox();
+  assert.ok(searchBox && search && helpBtn);
   assert.ok(search.width >= searchBox.width * 0.98);
-  assert.ok(scope.width >= searchBox.width * 0.98);
-  assert.ok(search.y >= scope.y + scope.height);
+  assert.ok(helpBtn.y >= search.y + search.height);
 
   await page.locator('#search').fill('Thanh');
   const suggestions = page.locator('#search-suggestion-panel');
@@ -185,7 +178,7 @@ test('mobile pages avoid horizontal overflow and provide usable tap targets', as
     await page.setViewportSize({ width, height: 812 });
     await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
     await assertNoOverflow();
-  await assertTapTargets('.paper-link, .submission-link, .example-chip, .entry-name, .personal-site-link, .scholar-link, .profile-link, .favorite-toggle, .search-scope, .search-input, .field-select');
+  await assertTapTargets('.paper-link, .submission-link, .example-chip, .entry-name, .personal-site-link, .scholar-link, .profile-link, .favorite-toggle, .search-input, .search-help-btn, .field-select');
   }
 
   await page.setViewportSize({ width: 320, height: 812 });
@@ -324,17 +317,15 @@ test('filter choices stay stable and stale filters recover', async () => {
   await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
   const fieldOptions = page.locator('#field-filter option');
   const trackOptions = page.locator('#track-filter option');
-  const countedFieldLabels = await fieldOptions.evaluateAll((options) =>
+  const fieldLabels = await fieldOptions.evaluateAll((options) =>
     options.filter((option) => option.value !== 'interesting').map((option) => option.textContent),
   );
-  const countedTrackLabels = await trackOptions.allTextContents();
-  assert.ok(countedFieldLabels.every((text) => /\(\d+\)$/.test(text.trim())));
-  assert.ok(countedTrackLabels.every((text) => /\(\d+\)$/.test(text.trim())));
-  assert.ok(countedFieldLabels.every((text) => !text.endsWith('(0)')));
-  assert.ok(countedTrackLabels.every((text) => !text.endsWith('(0)')));
-  assert.match(await fieldOptions.filter({ hasText: 'Health' }).first().textContent(), /Health.*\(\d+\)/);
-  assert.match(await fieldOptions.filter({ hasText: 'Law' }).first().textContent(), /Law.*\(\d+\)/);
-  assert.match(await trackOptions.filter({ hasText: 'Tenure-line' }).first().textContent(), /Tenure-line \(\d+\)/);
+  const trackLabels = await trackOptions.allTextContents();
+  assert.ok(fieldLabels.every((text) => text.trim().length > 0));
+  assert.ok(trackLabels.every((text) => text.trim().length > 0));
+  assert.equal(await fieldOptions.filter({ hasText: 'Health' }).count(), 1);
+  assert.equal(await fieldOptions.filter({ hasText: 'Law' }).count(), 1);
+  assert.equal(await trackOptions.filter({ hasText: 'Tenure-line' }).count(), 1);
   assert.equal(await page.locator('#field-filter option[value="Others"]').count(), 1);
   await page.locator('#field-filter').selectOption('Biological & Biomedical Sciences');
   assert.ok((await page.locator('.entry').count()) > 0);
@@ -342,8 +333,7 @@ test('filter choices stay stable and stale filters recover', async () => {
   assert.equal(await page.locator('#track-filter option[value="Emeritus"]').count(), 1);
   assert.equal(await page.locator('#field-filter option[value="Others"]').count(), 1);
   const locationLabels = await page.locator('#location-filter option').allTextContents();
-  assert.ok(locationLabels.every((label) => /\(\d+\)$/.test(label.trim())));
-  assert.ok(locationLabels.every((label) => !label.endsWith('(0)')));
+  assert.ok(locationLabels.every((label) => label.trim().length > 0));
   await page.locator('#location-filter').selectOption('World');
   await page.locator('#field-filter').selectOption('Physics & Astronomy');
   await page.locator('#track-filter').selectOption('Emeritus');
