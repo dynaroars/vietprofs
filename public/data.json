@@ -525,15 +525,6 @@
     "phdYear": 2022,
     "phdInstitution": "Pennsylvania State University",
     "country": "United States",
-    "honors": [
-      {
-        "name": "DAAD AInet Fellowship",
-        "year": null,
-        "category": "career_award",
-        "organization": "DAAD",
-        "source": "https://www.daad.de/en/the-daad/postdocnet/fellows/fellows/"
-      }
-    ],
     "portrait": "portraits/016-thai-le-indiana-university-bloomington.webp",
     "portraitSource": "https://luddy.iu.edu/images/people/tle.jpg",
     "lastUpdatedAt": "2026-08-28T23:36:36.969Z"
@@ -1004,14 +995,17 @@
     "id": "vp-0031",
     "name": "Thanh Hong Nguyen",
     "profileUrl": "https://cas.uoregon.edu/directory/computer-science/all/tnguye11",
-    "lastUpdatedAt": "2026-08-29T00:32:29.348Z",
+    "lastUpdatedAt": "2026-08-31T04:47:30.350Z",
     "scholarUrl": "https://scholar.google.com/citations?user=6fpZnQIAAAAJ",
     "websiteUrl": "https://ix.cs.uoregon.edu/~thanhhng/",
     "university": "University of Oregon",
     "city": "Eugene",
     "state": "Oregon",
     "researchAreas": [
-      "AI"
+      "Multi-Agent Systems",
+      "Reinforcement Learning",
+      "Generative AI",
+      "Optimization"
     ],
     "track": "Tenure-line",
     "department": "Computer Science",
@@ -1853,7 +1847,7 @@
     "name": "Tiep Huu Pham",
     "vietnameseName": "Phạm Hữu Tiệp",
     "profileUrl": "https://sites.math.rutgers.edu/~tiep/",
-    "lastUpdatedAt": "2026-08-26T05:10:19.000Z",
+    "lastUpdatedAt": "2026-08-31T04:47:30.350Z",
     "scholarUrl": "https://scholar.google.com/citations?user=35RkcIYAAAAJ",
     "university": "Rutgers University",
     "city": "Piscataway",
@@ -1870,13 +1864,6 @@
     "country": "United States",
     "honors": [
       {
-        "name": "American Mathematical Society Fellow",
-        "year": null,
-        "category": "fellow",
-        "organization": "American Mathematical Society",
-        "source": "https://sites.math.rutgers.edu/~pht19/"
-      },
-      {
         "name": "Joshua Barlaz Distinguished Professor of Mathematics",
         "year": null,
         "category": "distinguished_professorship",
@@ -1889,10 +1876,42 @@
         "category": "major_award",
         "organization": "International Mathematical Union",
         "source": "https://en.wikipedia.org/wiki/Pham_Huu_Tiep"
+      },
+      {
+        "name": "Fellow of the American Mathematical Society",
+        "year": 2013,
+        "category": "fellow",
+        "organization": "American Mathematical Society",
+        "source": "https://sites.math.rutgers.edu/~pht19/vitae.pdf"
+      },
+      {
+        "name": "Clay Senior Scholar",
+        "year": 2016,
+        "category": "career_award",
+        "organization": "Clay Mathematics Institute",
+        "source": "https://sites.math.rutgers.edu/~pht19/vitae.pdf"
+      },
+      {
+        "name": "Simons Fellow in Mathematics",
+        "year": 2015,
+        "category": "career_award",
+        "organization": "Simons Foundation",
+        "source": "https://sites.math.rutgers.edu/~pht19/vitae.pdf"
+      },
+      {
+        "name": "Simons Fellow in Mathematics",
+        "year": 2023,
+        "category": "career_award",
+        "organization": "Simons Foundation",
+        "source": "https://sites.math.rutgers.edu/~pht19/vitae.pdf"
       }
     ],
     "portrait": "portraits/055-tiep-huu-pham-rutgers-university.webp",
-    "portraitSource": "https://math.rutgers.edu/images/people/profileimg/989_59c135eea2562.jpg"
+    "portraitSource": "https://math.rutgers.edu/images/people/profileimg/989_59c135eea2562.jpg",
+    "msInstitution": "Moscow State University",
+    "msYear": 1985,
+    "postdocInstitution": "University of Essen",
+    "postdocYear": 1995
   },
   {
     "id": "vp-0056",
@@ -1931,7 +1950,7 @@
     "name": "Phong H. Duong",
     "vietnameseName": "Dương Hồng Phong",
     "profileUrl": "https://www.math.columbia.edu/~phong/",
-    "lastUpdatedAt": "2026-08-23T17:37:51.000Z",
+    "lastUpdatedAt": "2026-08-31T04:47:30.350Z",
     "scholarUrl": "https://scholar.google.com/citations?user=0qH_YvoAAAAJ",
     "university": "Columbia University",
     "city": "New York",
@@ -1975,6 +1994,13 @@
         "category": "fellow",
         "organization": "American Mathematical Society",
         "source": "https://www.ias.edu/scholars/duong-hong-phong"
+      },
+      {
+        "name": "Davies Chair of Mathematics",
+        "year": 2025,
+        "category": "distinguished_professorship",
+        "organization": "Columbia University",
+        "source": "https://www.math.columbia.edu/2025/09/29/professor-duong-phong-appointed-the-davies-chair-of-mathematics"
       }
     ],
     "portrait": "portraits/057-phong-h-duong-columbia-university.webp",
@@ -2520,7 +2546,8 @@
     "portrait": "portraits/073-son-thanh-dam-university-of-chicago.webp",
     "portraitSource": "https://d3qi0qp55mx5f5.cloudfront.net/physics/i/people/Son600.png",
     "websiteUrl": "https://home.uchicago.edu/dtson/",
-    "lastUpdatedAt": "2026-08-29T07:13:45.454Z"
+    "lastUpdatedAt": "2026-08-31T04:47:30.350Z",
+    "vietnameseName": "Đàm Thanh Sơn"
   },
   {
     "id": "vp-0074",
@@ -6080,13 +6107,6 @@
         "category": "major_award",
         "organization": "Association of Asian American Studies",
         "source": "https://faculty-directory.dartmouth.edu/mimi-thi-nguyen"
-      },
-      {
-        "name": "Association for Asian American Studies Excellence in Mentorship Award",
-        "year": 2026,
-        "category": "major_award",
-        "organization": "Association for Asian American Studies",
-        "source": "https://aaastudies.org/announcements/2026-aaas-award-winners/"
       }
     ],
     "portrait": "portraits/188-mimi-thi-nguyen-dartmouth-college.webp",
@@ -22396,100 +22416,6 @@
     "portraitSource": "https://case.edu/medicine/microbio/sites/default/files/styles/bio_listing/public/2018-12/nguyenl.jpg?h=4499dbd3&itok=15pcC2ix"
   },
   {
-    "id": "vp-0817",
-    "name": "Dam Thanh Son",
-    "vietnameseName": "Đàm Thanh Sơn",
-    "profileUrl": "https://physics.uchicago.edu/people/profile/dam-t.-son/",
-    "lastUpdatedAt": "2026-08-28T16:56:26.000Z",
-    "university": "University of Chicago",
-    "city": "Chicago",
-    "state": "Illinois",
-    "researchAreas": [
-      "Theoretical Physics",
-      "Quantum Chromodynamics",
-      "String Theory",
-      "Condensed Matter Physics"
-    ],
-    "track": "Tenure-line",
-    "department": "Physics",
-    "rank": "Professor",
-    "country": "United States",
-    "honors": [
-      {
-        "name": "Member, National Academy of Sciences",
-        "year": 2014,
-        "category": "academy",
-        "organization": "National Academy of Sciences",
-        "source": "https://www.nasonline.org/directory-entry/dam-thanh-son-5b2fbj/"
-      },
-      {
-        "name": "Member, American Academy of Arts and Sciences",
-        "year": 2014,
-        "category": "academy",
-        "organization": "American Academy of Arts and Sciences",
-        "source": "https://www.amacad.org/person/dam-thanh-son"
-      },
-      {
-        "name": "Dirac Medal",
-        "year": 2018,
-        "category": "major_award",
-        "organization": "ICTP",
-        "source": "https://news.uchicago.edu/story/uchicago-physicist-earns-dirac-medal-pioneering-research"
-      }
-    ]
-  },
-  {
-    "id": "vp-0818",
-    "name": "Duong Hong Phong",
-    "profileUrl": "https://www.math.columbia.edu/people/faculty-by-rank/name/duong-phong/",
-    "lastUpdatedAt": "2026-08-28T16:56:26.000Z",
-    "university": "Columbia University",
-    "city": "New York",
-    "state": "New York",
-    "researchAreas": [
-      "Complex Analysis",
-      "Partial Differential Equations",
-      "String Theory",
-      "Complex Geometry"
-    ],
-    "track": "Tenure-line",
-    "department": "Mathematics",
-    "rank": "Professor",
-    "phdYear": 1977,
-    "phdInstitution": "Princeton University",
-    "country": "United States",
-    "honors": [
-      {
-        "name": "Member, National Academy of Sciences",
-        "year": null,
-        "category": "academy",
-        "organization": "National Academy of Sciences",
-        "source": "https://www.nasonline.org/directory-entry/duong-h-phong-pxvutv/"
-      },
-      {
-        "name": "Fellow, American Academy of Arts and Sciences",
-        "year": null,
-        "category": "academy",
-        "organization": "American Academy of Arts and Sciences",
-        "source": "https://www.amacad.org/person/duong-h-phong"
-      },
-      {
-        "name": "Bergman Prize",
-        "year": 2009,
-        "category": "major_award",
-        "organization": "American Mathematical Society",
-        "source": "https://en.wikipedia.org/wiki/Duong_Hong_Phong"
-      },
-      {
-        "name": "Davies Chair of Mathematics",
-        "year": 2025,
-        "category": "distinguished_professorship",
-        "organization": "Columbia University",
-        "source": "https://www.math.columbia.edu/2025/09/29/professor-duong-phong-appointed-the-davies-chair-of-mathematics"
-      }
-    ]
-  },
-  {
     "id": "vp-0819",
     "name": "Mylinh T. Nguyen",
     "profileUrl": "https://profiles.ucsd.edu/mylinh.nguyen",
@@ -22658,70 +22584,6 @@
     ],
     "portrait": "portraits/0824-pipo-nguyen-duy-oberlin-college.webp",
     "portraitSource": "https://www.oberlin.edu/sites/default/files/styles/width_260/public/content/biography/image/pipo_nguyen_duy-trjones.jpg?itok=_jdRD5cG"
-  },
-  {
-    "id": "vp-0825",
-    "name": "Pham Huu Tiep",
-    "profileUrl": "https://math.rutgers.edu/people/department-directory/detail/344-department-directory/1865-tiep-pham-huu",
-    "websiteUrl": "https://sites.math.rutgers.edu/~pht19/",
-    "scholarUrl": "https://scholar.google.com/citations?user=35RkcIYAAAAJ",
-    "university": "Rutgers University",
-    "city": "Piscataway",
-    "state": "New Jersey",
-    "researchAreas": [
-      "Group Theory",
-      "Representation Theory"
-    ],
-    "track": "Tenure-line",
-    "department": "Mathematics",
-    "rank": "Professor",
-    "phdInstitution": "Moscow State University",
-    "phdYear": 1989,
-    "mastersInstitution": "Moscow State University",
-    "mastersYear": 1985,
-    "postdocInstitution": "University of Essen",
-    "postdocYear": 1995,
-    "country": "United States",
-    "honors": [
-      {
-        "name": "Joshua Barlaz Distinguished Professor",
-        "year": null,
-        "category": "distinguished_professorship",
-        "organization": "Rutgers University",
-        "source": "https://sites.math.rutgers.edu/~pht19/"
-      },
-      {
-        "name": "Fellow of the American Mathematical Society",
-        "year": 2013,
-        "category": "fellow",
-        "organization": "American Mathematical Society",
-        "source": "https://sites.math.rutgers.edu/~pht19/vitae.pdf"
-      },
-      {
-        "name": "Clay Senior Scholar",
-        "year": 2016,
-        "category": "career_award",
-        "organization": "Clay Mathematics Institute",
-        "source": "https://sites.math.rutgers.edu/~pht19/vitae.pdf"
-      },
-      {
-        "name": "Simons Fellow in Mathematics",
-        "year": 2015,
-        "category": "career_award",
-        "organization": "Simons Foundation",
-        "source": "https://sites.math.rutgers.edu/~pht19/vitae.pdf"
-      },
-      {
-        "name": "Simons Fellow in Mathematics",
-        "year": 2023,
-        "category": "career_award",
-        "organization": "Simons Foundation",
-        "source": "https://sites.math.rutgers.edu/~pht19/vitae.pdf"
-      }
-    ],
-    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
-    "portrait": "portraits/0825-pham-huu-tiep-rutgers-university.webp",
-    "portraitSource": "https://math.rutgers.edu/images/people/profileimg/989_59c135eea2562.jpg"
   },
   {
     "id": "vp-0826",
@@ -23161,29 +23023,6 @@
     "phdYear": 1999,
     "undergradInstitution": "University of Quy Nhon",
     "undergradYear": 1990
-  },
-  {
-    "id": "vp-0844",
-    "name": "Thanh H. Nguyen",
-    "profileUrl": "https://ix.cs.uoregon.edu/~thanhhng/",
-    "lastUpdatedAt": "2026-08-30T13:55:10.000Z",
-    "university": "University of Oregon",
-    "city": "Eugene",
-    "state": "Oregon",
-    "country": "United States",
-    "researchAreas": [
-      "Multi-Agent Systems",
-      "Reinforcement Learning",
-      "Generative AI",
-      "Optimization"
-    ],
-    "track": "Tenure-line",
-    "department": "Department of Computer Science",
-    "rank": "Associate Professor",
-    "phdInstitution": "University of Southern California",
-    "phdYear": 2016,
-    "portrait": "portraits/0844-thanh-h-nguyen-university-of-oregon.webp",
-    "portraitSource": "https://ix.cs.uoregon.edu/~thanhhng/img/ThanhNguyen.jpg"
   },
   {
     "id": "vp-0845",
