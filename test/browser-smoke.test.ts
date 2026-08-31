@@ -86,7 +86,10 @@ test('directory loads and searching changes the roster', async () => {
   await page.locator('#search').fill('Nguyen');
   await page.waitForTimeout(250);
   assert.ok((await page.locator('.entry').count()) > 0);
-  assert.match(await page.locator('#result-count').textContent(), /professors?/);
+  const resultCount = await page.locator('#result-count').textContent();
+  assert.match(resultCount, /people/);
+  assert.match(resultCount, /in the World\.$/);
+  assert.doesNotMatch(resultCount, /countr(?:y|ies)/);
   await page.close();
 });
 

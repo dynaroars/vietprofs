@@ -213,17 +213,10 @@ function renderRoster(roster: Roster, { field, location }: RenderOptions = {}) {
   const rosterEl = document.getElementById('roster');
   const countEl = document.getElementById('result-count');
   const universities = new Set(roster.map((p) => p.university)).size;
-  const states = new Set(roster.map((p) => p.state).filter(Boolean)).size;
-  const countries = new Set(roster.map((p) => p.country || 'United States')).size;
   const fieldPhrase = field && field !== 'all' ? ` in ${escapeHtml(field)}` : '';
-
-  let locPhrase = '';
-  if (countries <= 1 && (location === 'US' || roster.every((p) => (p.country || 'United States') === 'United States'))) {
-    locPhrase = ` in ${states} state${states === 1 ? '' : 's'}`;
-  } else {
-    locPhrase = ` in ${countries} countr${countries === 1 ? 'y' : 'ies'}`;
-  }
-  countEl.innerHTML = `${roster.length}${trackQualifier(roster)} professor${roster.length === 1 ? '' : 's'}${fieldPhrase} across ${universities} universit${universities === 1 ? 'y' : 'ies'}${locPhrase}.`;
+  const locationName = location === 'US' ? 'the United States' : location === 'World' || !location ? 'the World' : location;
+  const peopleLabel = roster.length === 1 ? 'person' : 'people';
+  countEl.innerHTML = `${roster.length}${trackQualifier(roster)} ${peopleLabel}${fieldPhrase} across ${universities} universit${universities === 1 ? 'y' : 'ies'} in ${escapeHtml(locationName)}.`;
 
   if (roster.length === 0) {
     rosterEl.innerHTML = '<p class="empty-state">No matches. Try a different search or filter.</p>';
@@ -375,7 +368,7 @@ function renderFunFacts(visibleRoster, selectedLocationLabel, selectedLocation, 
       .join('');
 
   const selectedUniversities = new Set(selectedRoster.map((p) => p.university)).size;
-  const worldCountriesCount = new Set(fullRoster.map((p) => p.country || 'United States')).size;
+  const worldUniversities = new Set(fullRoster.map((p) => p.university)).size;
 
   const selectedSection = selectedIsWorld ? '' : `
       <!-- SECTION 1: SELECTED LOCATION -->
@@ -383,7 +376,7 @@ function renderFunFacts(visibleRoster, selectedLocationLabel, selectedLocation, 
         <div class="insights-section-header">
           <span class="insights-badge">${escapeHtml(selectedLabel)}</span>
           <h2 class="insights-main-heading">${escapeHtml(selectedIsUs ? 'United States Academic Landscape' : `${selectedLocationLabel} Academic Landscape`)}</h2>
-          <p class="insights-main-desc">${selectedRoster.length} professor${selectedRoster.length === 1 ? '' : 's'} across ${selectedUniversities} universit${selectedUniversities === 1 ? 'y' : 'ies'} in the selected location.</p>
+          <p class="insights-main-desc">${selectedRoster.length} ${selectedRoster.length === 1 ? 'person' : 'people'} across ${selectedUniversities} universit${selectedUniversities === 1 ? 'y' : 'ies'} in ${escapeHtml(selectedIsUs ? 'the United States' : selectedLocationLabel.replace(/^\S+\s+/, ''))}.</p>
         </div>
         ${selectedIsUs && selectedRoster.length ? renderStateGrid(selectedRoster) : ''}
         ${selectedRoster.length ? renderDecadesChart(selectedRoster) : ''}
@@ -404,7 +397,7 @@ function renderFunFacts(visibleRoster, selectedLocationLabel, selectedLocation, 
         <div class="insights-section-header">
           <span class="insights-badge">🌐 World</span>
           <h2 class="insights-main-heading">Global &amp; Worldwide Diaspora Landscape</h2>
-          <p class="insights-main-desc">${fullRoster.length} professors across ${worldCountriesCount} countries and regions worldwide.</p>
+          <p class="insights-main-desc">${fullRoster.length} people across ${worldUniversities} universities in the World.</p>
         </div>
         ${renderDecadesChart(fullRoster)}
         ${worldInternationalRoster.length ? renderLeaderboards(worldInternationalRoster, { titleUni: 'Top International Faculty Hubs', descUni: 'Global universities outside the U.S. with the most Vietnamese faculty; click to search.', titlePhd: 'Top International PhD Alma Maters', descPhd: 'Doctoral institutions that trained global faculty; click to search.' }) : ''}
