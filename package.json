@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "type": "module",
   "description": "A directory of Vietnamese professors worldwide.",
+  "license": "CC-BY-NC-ND-4.0",
   "scripts": {
     "dev": "vite",
     "predev": "npm run assign-profile-ids && tsx scripts/generate-profile-pages.ts --dev",
@@ -11,10 +12,12 @@
     "build": "vite build && tsx scripts/generate-profile-pages.ts",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
+    "analyze": "tsx analysis/analyze-roster.ts",
+    "figures": "npm run build && tsx scripts/capture-figures.ts",
     "validate-data": "tsx scripts/validate-data.ts",
     "prevalidate-data": "npm run assign-profile-ids",
     "assign-profile-ids": "tsx scripts/assign-profile-ids.ts",
-    "test": "npm run validate-data && tsx --test test/data.test.ts test/maintenance-controller.test.ts test/profile-pages.test.ts test/ui.test.ts",
+    "test": "npm run validate-data && tsx --test test/data.test.ts test/maintenance-controller.test.ts test/profile-pages.test.ts test/ui.test.ts test/favorites.test.ts",
     "test:e2e": "npm run build && tsx --test test/browser-smoke.test.ts"
   },
   "devDependencies": {

@@ -179,8 +179,9 @@ test('field-balance observations name the fields computed from their input', () 
     ...Array.from({ length: 4 }, (_, index) => ({ name: `Lawyer ${index}`, university: `L${index}`, department: 'Law', country: 'France' })),
     ...Array.from({ length: 4 }, (_, index) => ({ name: `Artist ${index}`, university: `A${index}`, department: 'Music', country: 'France' })),
   ];
+  // Equal counts are ordered alphabetically so the wording is stable across roster edits.
   const fact = buildInternationalObservations(sample).find((value) => value.includes('closely represented'));
-  assert.match(fact, /Humanities \(4\).*Law & Public Affairs \(4\).*Arts & Design \(4\)/);
+  assert.match(fact, /Arts & Design \(4\).*Humanities \(4\).*Law & Public Affairs \(4\)/);
 });
 
 test('location observations do not silently remove United States entries from a continent', () => {
@@ -241,6 +242,10 @@ test('scoped search restricts results to the requested roster attribute', () => 
   const honors = filterRoster(roster, { query: 'NSF CAREER', searchScope: 'honors', location: 'World' });
   assert.ok(honors.length > 0);
   assert.ok(honors.every((person) => person.honors?.some((honor) => /NSF CAREER/i.test(honor.name))));
+
+  const undergrads = filterRoster(roster, { query: 'Boise State University', searchScope: 'undergrad', location: 'World' });
+  assert.ok(undergrads.length > 0);
+  assert.ok(undergrads.every((person) => /Boise State University/i.test(person.undergradInstitution)));
 });
 
 test('searching an honor name lists professors who hold that honor', () => {
@@ -371,13 +376,14 @@ test('locationMatches filters by an exact country for the country dropdown', () 
 });
 
 test('unique helpers never contain undefined or null values', async () => {
-  const { uniqueStates, uniqueCities, uniqueDepartments, uniqueCountries, uniqueResearchAreas, uniquePhdInstitutions, uniqueRanks } = await import('../src/data.ts');
+  const { uniqueStates, uniqueCities, uniqueDepartments, uniqueCountries, uniqueResearchAreas, uniquePhdInstitutions, uniqueUndergradInstitutions, uniqueRanks } = await import('../src/data.ts');
   const states = uniqueStates(roster);
   const cities = uniqueCities(roster);
   const depts = uniqueDepartments(roster);
   const countries = uniqueCountries(roster);
   const areas = uniqueResearchAreas(roster);
   const phds = uniquePhdInstitutions(roster);
+  const undergrads = uniqueUndergradInstitutions(roster);
   const ranks = uniqueRanks(roster);
 
   assert.ok(!states.includes(undefined) && !states.includes(null));
@@ -386,6 +392,7 @@ test('unique helpers never contain undefined or null values', async () => {
   assert.ok(!countries.includes(undefined) && !countries.includes(null));
   assert.ok(!areas.includes(undefined) && !areas.includes(null));
   assert.ok(!phds.includes(undefined) && !phds.includes(null));
+  assert.ok(!undergrads.includes(undefined) && !undergrads.includes(null));
   assert.ok(!ranks.includes(undefined) && !ranks.includes(null));
 });
 

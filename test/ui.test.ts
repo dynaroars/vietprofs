@@ -22,6 +22,7 @@ import {
   uniqueCountries,
   uniqueResearchAreas,
   uniquePhdInstitutions,
+  uniqueUndergradInstitutions,
   uniqueRanks,
 } from '../src/data.ts';
 import { escapeHtml, formatRosterDate, formatRosterShortDate } from '../src/utils.ts';
@@ -124,6 +125,7 @@ test('suggestionValues array contains no undefined/null and all elements safely 
       ...uniqueCountries(roster),
       ...uniqueResearchAreas(roster),
       ...uniquePhdInstitutions(roster),
+      ...uniqueUndergradInstitutions(roster),
     ]),
   ].sort();
 
@@ -192,10 +194,18 @@ test('every roster entry has a safe Vietnamese display-name variant and the requ
     assert.notEqual(nativeName, 'null');
   }
   const sample = roster.find((p) => p.name === 'ThanhVu H. Nguyen') ?? roster[0];
+  try {
+    localStorage.removeItem('vietprofs:favorites');
+  } catch {
+    // Node has no storage unless another test installed one.
+  }
   const html = renderRosterEntry(sample, '/');
   assert.match(html, /entry-name-row/);
   assert.match(html, /entry-meta/);
   assert.match(html, /entry-vietnamese-name/);
+  assert.match(html, /class="favorite-toggle"/);
+  assert.match(html, new RegExp(`data-id="${sample.id}"`));
+  assert.match(html, /Add to favorites|Remove from favorites/);
 });
 
 test('authoritative full Vietnamese name overrides preserve accent marks and Vietnamese order', () => {

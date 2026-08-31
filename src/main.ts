@@ -1,8 +1,9 @@
 import './style.css';
-import { loadRoster, buildSearchIndex, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, LOCATION_LABELS, countryFlag, canonicalRank, displayName, fieldOf, locationMatches, filterRoster, buildUsObservations, buildInternationalObservations, buildLocationObservations, buildQualifiedObservations, buildAwardsFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, STATE_ABBR, type Roster } from './data.ts';
+import { loadRoster, buildSearchIndex, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueUndergradInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, LOCATION_LABELS, countryFlag, canonicalRank, displayName, fieldOf, locationMatches, filterRoster, buildFunFacts, buildUsObservations, buildInternationalObservations, buildLocationObservations, buildQualifiedObservations, buildAwardsFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, STATE_ABBR, type Roster } from './data.ts';
 import { escapeHtml } from './utils.ts';
 import { STATE_GRID } from './state-grid.ts';
-import { fieldDropdownLabel, renderRosterEntry } from './render.ts';
+import { applyFavoriteToggle, fieldDropdownLabel, renderRosterEntry } from './render.ts';
+import { loadFavorites, toggleFavorite } from './favorites-store.ts';
 import { locationForQuery } from './filter-state.ts';
 
 function heatTier(count, max) {
@@ -23,6 +24,10 @@ function shuffle(values) {
     [result[index], result[swapIndex]] = [result[swapIndex], result[index]];
   }
   return result;
+}
+
+function pickRandomUnique<T>(values: T[], count: number): T[] {
+  return shuffle([...new Set(values)]).slice(0, count);
 }
 
 function debounce(fn, delayMs) {
@@ -59,6 +64,7 @@ function renderShell() {
           <option value="research">Research area</option>
           <option value="honors">Honors</option>
           <option value="phd">PhD institution</option>
+          <option value="undergrad">Ugrad Inst.</option>
         </select>
         <input id="search" class="search-input" type="search" placeholder="Search the roster…" aria-label="Search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-suggestion-panel" />
         <div id="search-suggestion-panel" class="search-suggestion-panel" role="listbox" hidden></div>
@@ -70,6 +76,12 @@ function renderShell() {
       </select>
       <select id="track-filter" class="field-select track-select" aria-label="Filter by faculty type">
         <option value="all">All faculty types</option>
+      </select>
+      <select id="sort-order" class="field-select sort-select" aria-label="Sort professors">
+        <option value="random">Random order</option>
+        <option value="last-name">Last name</option>
+        <option value="first-name">First name</option>
+        <option value="recent">Recently modified</option>
       </select>
     </div>
     <div class="examples" id="examples"></div>
@@ -119,6 +131,27 @@ function trackQualifier(roster) {
 interface RenderOptions {
   field?: string;
   location?: string;
+}
+
+function namePart(person, part: 'first' | 'last') {
+  const words = displayName(person.name).trim().split(/\s+/);
+  return part === 'first' ? words[0] : words.at(-1);
+}
+
+function sortRoster(roster: Roster, order: string): Roster {
+  const favorites = new Set(loadFavorites());
+  const byName = (part: 'first' | 'last') => (a, b) =>
+    namePart(a, part).localeCompare(namePart(b, part), 'en', { sensitivity: 'base' })
+      || displayName(a.name).localeCompare(displayName(b.name), 'en', { sensitivity: 'base' });
+  const bySelectedOrder = order === 'last-name'
+    ? byName('last')
+    : order === 'first-name'
+      ? byName('first')
+      : order === 'recent'
+        ? (a, b) => b.lastUpdatedAt.localeCompare(a.lastUpdatedAt)
+        : () => 0;
+
+  return [...roster].sort((a, b) => Number(favorites.has(b.id)) - Number(favorites.has(a.id)) || bySelectedOrder(a, b));
 }
 
 function renderRoster(roster: Roster, { field, location }: RenderOptions = {}) {
@@ -345,7 +378,7 @@ async function init() {
   const searchIndex = buildSearchIndex(roster);
 
   // Matches everything filterRoster actually searches over (name, university, city, state, country,
-  // department, rank, research areas, PhD institution, and honors) so a suggestion always yields at least one result.
+  // department, rank, research areas, degree institutions, and honors) so a suggestion always yields at least one result.
   const suggestionValues = [
     ...new Set([
       'honors',
@@ -363,6 +396,7 @@ async function init() {
       ...uniqueCountries(roster),
       ...uniqueResearchAreas(roster),
       ...uniquePhdInstitutions(roster),
+      ...uniqueUndergradInstitutions(roster),
     ]),
   ].sort();
   const nameSuggestionValues = [...new Set(roster.flatMap((p) => {
@@ -380,6 +414,7 @@ async function init() {
     ['university', [...new Set(roster.map((p) => p.university))].sort()],
     ['department', uniqueDepartments(roster)],
     ['phd', uniquePhdInstitutions(roster)],
+    ['undergrad', uniqueUndergradInstitutions(roster)],
   ]);
   const searchInput = document.getElementById('search');
   const searchScopeSelect = document.getElementById('search-scope');
@@ -387,6 +422,7 @@ async function init() {
   const locationSelect = document.getElementById('location-filter');
   const fieldSelect = document.getElementById('field-filter');
   const trackSelect = document.getElementById('track-filter');
+  const sortSelect = document.getElementById('sort-order');
   const filterState = { state: '', insights: false };
 
   function optionElement(value, label) {
@@ -526,6 +562,7 @@ async function init() {
   filterState.state = params.get('state') ?? '';
   const requestedField = params.get('field');
   const requestedTrack = params.get('track');
+  const requestedSort = params.get('sort');
   let initialLocation = 'World';
   if (requestedLocation && locationOptions.includes(requestedLocation) && roster.some((p) => locationMatches(p, requestedLocation))) {
     initialLocation = requestedLocation;
@@ -543,6 +580,9 @@ async function init() {
     initialTrack = requestedTrack;
   }
   setFilterValues({ location: initialLocation, field: initialField, track: initialTrack });
+  if (['random', 'last-name', 'first-name', 'recent'].includes(requestedSort)) {
+    sortSelect.value = requestedSort;
+  }
 
   function syncUrl() {
     const next = new URLSearchParams();
@@ -552,6 +592,7 @@ async function init() {
     if (locationSelect.value !== 'World') next.set('loc', locationSelect.value);
     if (fieldSelect.value !== 'all') next.set('field', fieldSelect.value);
     if (trackSelect.value !== 'all') next.set('track', trackSelect.value);
+    if (sortSelect.value !== 'random') next.set('sort', sortSelect.value);
     if (filterState.insights) next.set('view', 'insights');
     const query = next.toString();
     const url = `${window.location.pathname}${query ? `?${query}` : ''}`;
@@ -578,7 +619,7 @@ async function init() {
       field: fieldSelect.value,
       track: trackSelect.value,
     });
-    renderRoster(filtered, {
+    renderRoster(sortRoster(filtered, sortSelect.value), {
       field: fieldSelect.value,
       location: locationSelect.value,
     });
@@ -667,6 +708,7 @@ async function init() {
     update();
   });
   trackSelect.addEventListener('change', () => update({ fromSearch: false }));
+  sortSelect.addEventListener('change', () => update({ fromSearch: false }));
 
   document.getElementById('home-link').addEventListener('click', (e) => {
     e.preventDefault(); // already on this page — reset in place instead of reloading
@@ -682,6 +724,11 @@ async function init() {
   // since renderRoster()/renderFunFacts() both replace its innerHTML wholesale on every update().
   document.getElementById('roster').addEventListener('click', (e) => {
     const target = e.target as HTMLElement;
+    const favorite = target.closest<HTMLButtonElement>('.favorite-toggle');
+    if (favorite?.dataset.id) {
+      applyFavoriteToggle(favorite, toggleFavorite(favorite.dataset.id));
+      return;
+    }
     const tile = target.closest<HTMLButtonElement>('.state-tile');
     if (tile) {
       searchInput.value = '';
@@ -718,13 +765,19 @@ async function init() {
   const populatedLocations = locationOptions.filter((location) =>
     !['US', 'World'].includes(location) && filtersHaveResults(location, 'all', 'all')
   );
-  type Example = { type: 'search' | 'field' | 'loc' | 'insights'; value: string; label?: string };
-  const examples: Example[] = [
-    { type: 'search', value: buildTopUniversities(roster, 1)[0]?.[0] || displayName(roster[0].name) },
-    { type: 'field', value: populatedFields[0], label: fieldDropdownLabel(populatedFields[0]) },
-    { type: 'loc', value: populatedLocations[0] },
-    { type: 'insights', value: 'Insights' },
-  ];
+  const facts = buildFunFacts(roster);
+  const randomFact = facts[Math.floor(Math.random() * facts.length)];
+  type Example = { type: 'search' | 'field' | 'track' | 'loc' | 'fact'; value: string; label?: string };
+  const examples: Example[] = shuffle([
+    ...pickRandomUnique(roster.map((person) => displayName(person.name)), 2).map((value) => ({ type: 'search' as const, value })),
+    ...pickRandomUnique(uniqueDepartments(roster), 1).map((value) => ({ type: 'search' as const, value })),
+    ...pickRandomUnique(uniqueStates(roster), 1).map((value) => ({ type: 'search' as const, value })),
+    ...pickRandomUnique(roster.flatMap((person) => person.researchAreas), 1).map((value) => ({ type: 'search' as const, value })),
+    ...pickRandomUnique(populatedFields, 2).map((value) => ({ type: 'field' as const, value, label: fieldDropdownLabel(value) })),
+    ...pickRandomUnique(TRACKS, 1).map((value) => ({ type: 'track' as const, value })),
+    ...pickRandomUnique(populatedLocations, 1).map((value) => ({ type: 'loc' as const, value })),
+  ] as Example[]);
+  examples.push({ type: 'fact', value: randomFact });
   const examplesEl = document.getElementById('examples');
   examplesEl.replaceChildren();
   const label = document.createElement('span');
@@ -734,10 +787,11 @@ async function init() {
   for (const ex of examples) {
     const button = document.createElement('button');
     button.type = 'button';
-    button.className = 'example-chip';
-    button.textContent = `${ex.type === 'insights' ? '✨ ' : ''}${ex.label ?? ex.value}`;
-    if (ex.type === 'insights') button.dataset.insights = '1';
+    button.className = `example-chip${ex.type === 'fact' ? ' fun-chip' : ''}`;
+    button.textContent = `${ex.type === 'fact' ? '✨ ' : ''}${ex.label ?? ex.value}`;
+    if (ex.type === 'fact') button.dataset.fact = '1';
     if (ex.type === 'field') button.dataset.field = ex.value;
+    if (ex.type === 'track') button.dataset.track = ex.value;
     if (ex.type === 'loc') button.dataset.loc = ex.value;
     examplesEl.append(button);
   }
@@ -745,7 +799,7 @@ async function init() {
     const btn = (e.target as HTMLElement).closest<HTMLButtonElement>('.example-chip');
     if (!btn) return;
     filterState.state = '';
-    if (btn.dataset.insights) {
+    if (btn.dataset.fact) {
       searchInput.value = '';
       filterState.insights = true;
       setFilterValues({ location: locationSelect.value });
@@ -756,6 +810,13 @@ async function init() {
       searchInput.value = '';
       filterState.insights = false;
       setFilterValues({ location: 'World', field: btn.dataset.field });
+      update();
+      return;
+    }
+    if (btn.dataset.track) {
+      searchInput.value = '';
+      filterState.insights = false;
+      setFilterValues({ location: 'World', track: btn.dataset.track });
       update();
       return;
     }

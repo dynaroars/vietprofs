@@ -12,19 +12,44 @@ function renderShell() {
     <header>
       <h1><a class="home-link" href="${import.meta.env.BASE_URL}">Vietnamese Academic Diaspora</a></h1>
       <p class="tagline">Submit a new professor or suggest an update</p>
-      <p class="criteria">
-        Only <strong>full name</strong> and <strong>official university profile</strong> are required. Everything else below is optional — maintainers will review and fill in the rest.
-      </p>
     </header>
 
+    <fieldset class="form-section purpose-toggle" id="purpose-toggle">
+      <legend>What are you doing?</legend>
+      <label class="radio-row">
+        <input type="radio" name="purpose" value="add" checked />
+        Add new people
+      </label>
+      <label class="radio-row">
+        <input type="radio" name="purpose" value="update" />
+        Modify an existing entry
+      </label>
+    </fieldset>
+
     <form id="submit-form" class="submit-form" novalidate>
-      <section class="form-group required-group" aria-labelledby="required-heading">
+      <section class="form-group" id="add-mode-section">
+        <p class="criteria">
+          Paste anything: a name, a link to someone's university profile or homepage, or a link to a
+          page that lists several people (a department directory, a lab site). Plain text is fine —
+          one item per line, or however you have it. We'll research and verify each candidate before
+          adding them.
+        </p>
+        <div class="form-section">
+          <label for="bulkInput">Names and links</label>
+          <textarea id="bulkInput" name="bulkInput" rows="8" placeholder="e.g.&#10;Jane T. Nguyen — https://cs.example.edu/~jnguyen&#10;https://example.edu/faculty-directory&#10;Some Name, Some University"></textarea>
+        </div>
+        <p class="form-help">
+          Have full details for one person instead of a link? <button type="button" class="link-button" id="add-mode-details-toggle">Enter them directly</button>.
+        </p>
+      </section>
+
+      <section class="form-group required-group" aria-labelledby="required-heading" id="required-section">
         <h2 id="required-heading">Required</h2>
-        <p class="form-group-description">These two fields are needed to verify the submission.</p>
+        <p class="form-group-description" id="required-description">These two fields are needed to verify the submission.</p>
 
       <div class="form-section">
         <label for="name">Full name</label>
-        <input id="name" name="name" type="text" required placeholder="e.g. ThanhVu H. Nguyen" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="name-suggestions" aria-describedby="name-hint" />
+        <input id="name" name="name" type="text" placeholder="e.g. ThanhVu H. Nguyen" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="name-suggestions" aria-describedby="name-hint" />
         <div id="name-suggestions" class="correction-suggestions" role="listbox" hidden></div>
         <p class="form-help" id="name-hint">If this professor is already listed, typing their name will suggest them and pre-fill their details for editing.</p>
         <p class="form-help notice" id="name-match-notice" hidden></p>
@@ -32,12 +57,12 @@ function renderShell() {
 
       <div class="form-section">
         <label for="profileUrl">Official university profile <span class="info-icon" tabindex="0" role="img" aria-label="Why this is required" data-tooltip="We need at least the official university profile link to verify and add this entry.">i</span></label>
-        <input id="profileUrl" name="profileUrl" type="url" required placeholder="https://… (department or faculty directory page)" />
+        <input id="profileUrl" name="profileUrl" type="url" placeholder="https://… (department or faculty directory page)" />
       </div>
 
       </section>
 
-      <details class="form-group optional-group">
+      <details class="form-group optional-group" id="optional-details">
         <summary id="optional-heading">Optional details</summary>
         <p class="form-group-description">Share any details you have; maintainers will verify and complete the record.</p>
 
@@ -239,6 +264,22 @@ function buildNewEntryBody(entry, notes) {
   return lines.join('\n');
 }
 
+// The bulk path intentionally does not parse or structure the pasted text: the maintainer's
+// research workflow (see ROSTER_MAINTENANCE.md) treats a supplied name or link as a lead to
+// independently verify, not as pre-validated facts, so passing it through raw is correct.
+function buildBulkSubmissionBody(bulkText, entry, notes) {
+  const lines = ['Request: New entry submission (raw)', '', 'Raw input:', bulkText];
+  const structuredLines = [];
+  if (entry.name) structuredLines.push(`Name: ${entry.name}`);
+  for (const key of FIELD_ORDER) {
+    const value = formatValue(entry[key]);
+    if (value) structuredLines.push(`${FIELD_LABELS[key]}: ${value}`);
+  }
+  if (structuredLines.length) lines.push('', 'Additional structured details for one person:', ...structuredLines);
+  if (notes) lines.push('', `Notes: ${notes}`);
+  return lines.join('\n');
+}
+
 function buildUpdateBody(matchedEntry, entry, notes) {
   const lines = [
     'Request: Update existing entry',
@@ -328,13 +369,25 @@ function clearAutoPopulatedEntry(form) {
   if (optionalDetails) optionalDetails.open = false;
 }
 
+function getPurpose() {
+  return (document.querySelector('input[name="purpose"]:checked') as HTMLInputElement | null)?.value ?? 'add';
+}
+
 function onSubmit(e, entriesById, entriesByName) {
   e.preventDefault();
   const form = e.target;
+  const purpose = getPurpose();
+  const bulkText = form.bulkInput?.value.trim() ?? '';
+  const name = form.name.value.trim();
 
+  if (purpose === 'add' && !bulkText && !name) {
+    form.bulkInput.setCustomValidity('Paste at least a name or link, or enter one person’s details below.');
+    form.bulkInput.reportValidity();
+    return;
+  }
+  form.bulkInput?.setCustomValidity('');
   if (!form.reportValidity()) return;
 
-  const name = form.name.value.trim();
   const matchedEntry = findMatchedEntry(form, entriesById, entriesByName, name);
 
   const researchAreas = form.researchAreas.value
@@ -372,14 +425,63 @@ function onSubmit(e, entriesById, entriesByName) {
   };
 
   const notes = form.notes.value.trim();
-  const body = matchedEntry ? buildUpdateBody(matchedEntry, entry, notes) : buildNewEntryBody(entry, notes);
-  const title = matchedEntry ? `VietProfs update: ${name}` : `VietProfs submission: ${name}`;
+
+  let title;
+  let body;
+  if (purpose === 'add' && bulkText) {
+    title = name ? `VietProfs submission: ${name} + more` : 'VietProfs submission: new candidates';
+    body = buildBulkSubmissionBody(bulkText, entry, notes);
+  } else if (matchedEntry) {
+    title = `VietProfs update: ${name}`;
+    body = buildUpdateBody(matchedEntry, entry, notes);
+  } else {
+    title = `VietProfs submission: ${name}`;
+    body = buildNewEntryBody(entry, notes);
+  }
 
   window.location.href = buildEmailUrl(title, body);
 }
 
+function applyPurpose(purpose) {
+  const addSection = document.getElementById('add-mode-section');
+  const requiredSection = document.getElementById('required-section');
+  const requiredHeading = document.getElementById('required-heading');
+  const requiredDescription = document.getElementById('required-description');
+  const bulkInput = document.getElementById('bulkInput') as HTMLTextAreaElement;
+  const nameInput = document.getElementById('name') as HTMLInputElement;
+  const profileUrlInput = document.getElementById('profileUrl') as HTMLInputElement;
+  const isAdd = purpose === 'add';
+  addSection.hidden = !isAdd;
+  requiredSection.classList.toggle('single-entry-details', isAdd);
+  requiredSection.hidden = isAdd && !requiredSection.classList.contains('expanded');
+  requiredHeading.textContent = isAdd ? 'This person' : 'Required';
+  requiredDescription.textContent = isAdd
+    ? "You've filled in one person's full details directly, instead of pasting text above."
+    : 'These two fields are needed to identify which entry to update.';
+  nameInput.required = !isAdd;
+  profileUrlInput.required = !isAdd;
+  if (!isAdd) bulkInput.value = '';
+}
+
+function initPurposeToggle() {
+  const toggle = document.getElementById('purpose-toggle');
+  const requiredSection = document.getElementById('required-section');
+  const detailsButton = document.getElementById('add-mode-details-toggle');
+  toggle.addEventListener('change', (e) => {
+    const target = e.target as HTMLInputElement;
+    if (target.name === 'purpose') applyPurpose(target.value);
+  });
+  detailsButton.addEventListener('click', () => {
+    requiredSection.classList.add('expanded');
+    requiredSection.hidden = false;
+    (document.getElementById('name') as HTMLInputElement).focus();
+  });
+  applyPurpose(getPurpose());
+}
+
 async function init() {
   renderShell();
+  initPurposeToggle();
   const form = document.getElementById('submit-form');
   const nameInput = document.getElementById('name');
   const suggestions = document.getElementById('name-suggestions');
@@ -415,6 +517,8 @@ async function init() {
     const entryToEdit = requestedEdit && (entriesById.get(requestedEdit) ?? entriesByName.get(requestedEdit.toLocaleLowerCase().trim()));
     const lockedEditId = entryToEdit ? entryToEdit.id : '';
     if (entryToEdit) {
+      (document.querySelector('input[name="purpose"][value="update"]') as HTMLInputElement).checked = true;
+      applyPurpose('update');
       populateEntry(form, entryToEdit);
       checkMatch(entryToEdit.name);
     }

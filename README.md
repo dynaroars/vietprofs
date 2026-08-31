@@ -8,7 +8,7 @@ Live site: <https://vietprofs.roars.dev>
 
 ## Search and filters
 
-The search box matches names, universities, departments, ranks, locations, research areas, honors, and PhD institutions. Use the selector at the left of the search box to limit the search to name, university, department, rank, research area, honors, or PhD institution; it defaults to `Everything`. Location, field, and appointment track remain dedicated filters. Matching is diacritic-insensitive, so `Nguyen` finds `Nguyễn`.
+The search box matches names, universities, departments, ranks, locations, research areas, honors, and degree institutions. Use the selector at the left of the search box to limit the search to name, university, department, rank, research area, honors, PhD institution, or undergraduate institution; it defaults to `Everything`. Location, field, and appointment track remain dedicated filters. Matching is diacritic-insensitive, so `Nguyen` finds `Nguyễn`.
 
 The location, field, and track filters can be combined. Shareable URLs preserve the active search and filters. The “Show me something interesting” option provides roster-derived observations about geography, institutions, fields, and appointment tracks. It does not make claims about institutional prestige or Vietnamese population size.
 
@@ -22,7 +22,12 @@ npm run preview   # preview the production build
 npm run typecheck # check TypeScript modules
 npm test          # validate data and run unit/UI tests
 npm run test:e2e  # run browser smoke tests
+npm run analyze   # print snapshot counts for METRICS.md and the paper
+npm run figures   # rebuild and recapture the paper's screenshot figures
 ```
+
+`npm run analyze` and `npm run figures` regenerate everything the manuscript reports about the
+current snapshot; run both after a roster change that the paper cites.
 
 By default `npm run dev` only listens on `localhost`. To make the dev server reachable from other
 machines on your network over HTTPS:
@@ -58,7 +63,7 @@ Honors are limited to substantial, field-level distinctions. Local university, d
 service, teaching, and community-engagement awards are not included unless their independent
 field-wide standing is clearly documented; an impressive title or cash prize alone is insufficient.
 
-Use [`submit.html`](./submit.html) to propose an entry or correction without editing the repository directly. Correction emails include the existing record's immutable ID, permanent VietProfs profile URL, current and proposed names, and a field-by-field change list; new-entry emails include the submitted facts and evidence notes. Maintainers review submissions before adding them to the roster.
+Use [`submit.html`](./submit.html) to propose an entry or correction without editing the repository directly. To add people, paste raw text — names, a link to someone's profile or homepage, or a link to a directory page listing several people; maintainers independently research and verify each lead rather than trusting the submitted text as fact (see `ROSTER_MAINTENANCE.md`'s "Reviewing user-supplied links/names" workflow). To correct an existing entry, enter their name (autocomplete suggests and pre-fills existing records); the resulting email includes the record's immutable ID, permanent VietProfs profile URL, current and proposed names, and a field-by-field change list. Maintainers review every submission before it reaches the roster.
 
 Detailed inclusion, verification, discovery, field-mapping, and data-format guidance is in [`ROSTER_MAINTENANCE.md`](./ROSTER_MAINTENANCE.md).
 
@@ -193,3 +198,19 @@ When enabled, rejected proposals receive up to two Claude revisions using Codex'
 feedback, with a new independent review after each revision. Proposals still rejected after those
 attempts, and incomplete or uncertain reviews, are logged, keep their old verification timestamp,
 and are deferred for 30 days so they do not prevent the rest of the roster from being processed.
+
+## License
+
+Following the same approach as [CSRankings](https://csrankings.org), this project is entirely
+transparent: all code and data are publicly available in this repository under a [Creative Commons
+Attribution-NonCommercial-NoDerivatives 4.0 International
+License](https://creativecommons.org/licenses/by-nc-nd/4.0/) — note: this means you may not
+distribute anything built from VietProfs' code or data (a modified version of the code, or a
+derivative or filtered compilation of the roster) without a separate written license, and you may
+not use either for a commercial purpose. Noncommercial sharing of a complete, unmodified copy of
+the code or the dataset, with attribution, is permitted. Citing individual facts (a person's name,
+university, and department) is not restricted. See [`LICENSE`](./LICENSE) for the full terms.
+
+**Portraits** (`public/portraits/`) are sourced from official university pages and personal/lab
+sites, used here for identification purposes; they remain the property of their original sources
+and are not covered by this license. The manuscript (`paper.tex`/`paper.pdf`) is also not covered.

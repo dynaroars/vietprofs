@@ -113,6 +113,100 @@ test('search suggestions remain visible while results update', async () => {
   await page.close();
 });
 
+test('undergraduate institution scope filters the roster and persists in the URL', async () => {
+  const page = await context.newPage();
+  await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
+  const scope = page.locator('#search-scope');
+  const search = page.locator('#search');
+
+  await scope.selectOption('undergrad');
+  assert.equal(await scope.locator('option:checked').textContent(), 'Ugrad Inst.');
+  await search.fill('Boise State University');
+  await page.waitForFunction(() => new URL(window.location.href).searchParams.get('scope') === 'undergrad');
+
+  const expectedCount = await page.evaluate(async () => (
+    await (await fetch('/data.json')).json()
+  ).filter((person) => person.undergradInstitution?.includes('Boise State University')).length);
+  assert.ok(expectedCount > 0);
+  await page.waitForFunction((count) => document.querySelectorAll('.entry').length === count, expectedCount);
+  assert.equal(await page.locator('.entry').count(), expectedCount);
+  assert.ok((await page.locator('.entry-details').allTextContents()).every((text) => text.includes('Undergrad: Boise State')));
+
+  await page.reload({ waitUntil: 'networkidle' });
+  assert.equal(await scope.inputValue(), 'undergrad');
+  assert.equal(await search.inputValue(), 'Boise State University');
+  assert.equal(await page.locator('.entry').count(), expectedCount);
+  await page.close();
+});
+
+test('mobile search input uses the full control width', async () => {
+  const page = await context.newPage();
+  await page.setViewportSize({ width: 375, height: 812 });
+  await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
+
+  const searchBox = await page.locator('.search-box').boundingBox();
+  const scope = await page.locator('#search-scope').boundingBox();
+  const search = await page.locator('#search').boundingBox();
+  assert.ok(searchBox && scope && search);
+  assert.ok(search.width >= searchBox.width * 0.98);
+  assert.ok(scope.width >= searchBox.width * 0.98);
+  assert.ok(search.y >= scope.y + scope.height);
+
+  await page.locator('#search').fill('Thanh');
+  const suggestions = page.locator('#search-suggestion-panel');
+  await suggestions.waitFor();
+  const panel = await suggestions.boundingBox();
+  assert.ok(panel);
+  assert.ok(panel.y >= search.y + search.height);
+  await page.close();
+});
+
+test('mobile pages avoid horizontal overflow and provide usable tap targets', async () => {
+  const page = await context.newPage();
+  const assertNoOverflow = async () => {
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), await page.evaluate(() => document.documentElement.clientWidth));
+  };
+  const assertTapTargets = async (selector) => {
+    const undersized = await page.locator(selector).evaluateAll((elements) => elements
+      .filter((element) => {
+        const style = getComputedStyle(element);
+        const rect = element.getBoundingClientRect();
+        return style.display !== 'none' && style.visibility !== 'hidden' && (rect.width < 44 || rect.height < 44);
+      })
+      .map((element) => ({
+        selector: `${element.tagName.toLowerCase()}#${element.id}.${String(element.className).replace(/\s+/g, '.')}`,
+        width: element.getBoundingClientRect().width,
+        height: element.getBoundingClientRect().height,
+      })));
+    assert.deepEqual(undersized, []);
+  };
+
+  for (const width of [320, 375, 430]) {
+    await page.setViewportSize({ width, height: 812 });
+    await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
+    await assertNoOverflow();
+  await assertTapTargets('.paper-link, .submission-link, .example-chip, .entry-name, .personal-site-link, .scholar-link, .profile-link, .favorite-toggle, .search-scope, .search-input, .field-select');
+  }
+
+  await page.setViewportSize({ width: 320, height: 812 });
+  await page.goto(`${baseUrl}/?view=insights`, { waitUntil: 'networkidle' });
+  await assertNoOverflow();
+  await assertTapTargets('.ranked-item');
+
+  await page.goto(`${baseUrl}/submit.html`, { waitUntil: 'networkidle' });
+  await page.locator('#add-mode-details-toggle').click();
+  await assertNoOverflow();
+  await assertTapTargets(".form-section input[type='text'], .form-section input[type='url'], .form-section input[type='number'], .form-section select, .form-section textarea, .radio-row, .link-button, .info-icon");
+  await page.locator('.info-icon').click();
+  assert.equal(await page.locator('.info-icon').evaluate((element) => getComputedStyle(element, '::after').visibility), 'visible');
+  await assertNoOverflow();
+
+  await page.goto(`${baseUrl}/people/vp-0242.html`, { waitUntil: 'networkidle' });
+  await assertNoOverflow();
+  await assertTapTargets('.eyebrow, .edit-link, .links a');
+  await page.close();
+});
+
 test('every roster card exposes its official profile link', async () => {
   const page = await context.newPage();
   await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
@@ -132,6 +226,29 @@ test('every roster card exposes its official profile link', async () => {
   await page.close();
 });
 
+test('favorites stay at the top while the directory can be sorted', async () => {
+  const page = await context.newPage();
+  await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
+  await page.evaluate(() => localStorage.removeItem('vietprofs:favorites'));
+  await page.reload({ waitUntil: 'networkidle' });
+  const first = page.locator('.entry').first();
+  const name = (await first.locator('.entry-name').textContent())?.trim();
+  const star = first.locator('.favorite-toggle');
+  assert.equal(await star.getAttribute('aria-pressed'), 'false');
+  await star.click();
+  assert.equal((await first.locator('.entry-name').textContent())?.trim(), name);
+  assert.equal(await star.getAttribute('aria-pressed'), 'true');
+
+  await page.locator('#sort-order').selectOption('recent');
+  await page.waitForFunction(() => new URL(window.location.href).searchParams.get('sort') === 'recent');
+  assert.equal((await page.locator('.entry-name').first().textContent())?.trim(), name);
+
+  await page.locator('#sort-order').selectOption('last-name');
+  await page.waitForFunction(() => new URL(window.location.href).searchParams.get('sort') === 'last-name');
+  assert.equal((await page.locator('.entry-name').first().textContent())?.trim(), name);
+  await page.close();
+});
+
 test('local faculty portraits render and load', async () => {
   const page = await context.newPage();
   await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
@@ -148,6 +265,7 @@ test('filters and submit-form suggestions work', async () => {
   await page.locator('#location-filter').selectOption('World');
   assert.ok((await page.locator('.entry').count()) > 0);
   await page.goto(`${baseUrl}/submit.html`, { waitUntil: 'networkidle' });
+  await page.locator('input[name="purpose"][value="update"]').check();
   await page.locator('#name').fill('Nguyen');
   assert.ok((await page.locator('.correction-suggestion').count()) > 0);
   await page.locator('.correction-suggestion').first().click();
@@ -163,12 +281,29 @@ test('filters and submit-form suggestions work', async () => {
   await page.locator('#name').fill('Corrected Tan Minh Nguyen');
   assert.equal(await page.locator('#submit-form').getAttribute('data-editing-id'), tan.id);
   await page.goto(`${baseUrl}/submit.html`, { waitUntil: 'networkidle' });
+  await page.locator('input[name="purpose"][value="update"]').check();
   await page.locator('#name').fill('Tan Minh Nguyen');
   assert.equal(await page.locator('#submit-form').getAttribute('data-editing-id'), tan.id);
   await page.locator('#name').fill('Brand New Person');
   assert.equal(await page.locator('#submit-form').getAttribute('data-editing-id'), null);
   assert.equal(await page.locator('#profileUrl').inputValue(), '');
   assert.equal(await page.locator('#name-match-notice').isHidden(), true);
+  await page.close();
+});
+
+test('submit form defaults to bulk add mode and toggles to single-entry details', async () => {
+  const page = await context.newPage();
+  await page.goto(`${baseUrl}/submit.html`, { waitUntil: 'networkidle' });
+  assert.equal(await page.locator('input[name="purpose"][value="add"]').isChecked(), true);
+  assert.equal(await page.locator('#add-mode-section').isVisible(), true);
+  assert.equal(await page.locator('#required-section').isVisible(), false);
+  await page.locator('#bulkInput').fill('Jane T. Nguyen — https://cs.example.edu/~jnguyen');
+  await page.locator('#add-mode-details-toggle').click();
+  assert.equal(await page.locator('#required-section').isVisible(), true);
+  assert.equal(await page.locator('#name').inputValue(), '');
+  await page.locator('input[name="purpose"][value="update"]').check();
+  assert.equal(await page.locator('#add-mode-section').isVisible(), false);
+  assert.equal(await page.locator('#required-section').isVisible(), true);
   await page.close();
 });
 

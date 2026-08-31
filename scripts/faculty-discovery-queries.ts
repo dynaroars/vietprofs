@@ -28,7 +28,7 @@ const surnames = ['Nguyen', 'Tran', 'Le', 'Pham', 'Vo', 'Vu', 'Bui', 'Do', 'Phan
 // "Liem" is intentionally excluded: it is also a common Chinese-Indonesian surname (e.g. Liem
 // Sioe Liong), and an unrestricted search for it returned a plausible-looking but non-Vietnamese
 // false positive before this list was even institution-restricted.
-const givenNames = ['Thanh', 'Quang', 'Minh', 'Hoang', 'Anh', 'Tuan', 'Van', 'Hung', 'Quan', 'Quoc', 'Ngoc', 'Viet', 'Phuong', 'Huy', 'Kim', 'Nam', 'Long', 'Linh', 'Toan', 'Hieu', 'Chinh', 'Thai', 'Hai', 'Dinh'];
+const givenNames = ['Thanh', 'Quang', 'Minh', 'Hoang', 'Anh', 'Tuan', 'Van', 'Hung', 'Quan', 'Quoc', 'Ngoc', 'Viet', 'Phuong', 'Huy', 'Kim', 'Nam', 'Long', 'Linh', 'Toan', 'Hieu', 'Chinh', 'Thai', 'Hai', 'Dinh', 'Quynh'];
 const names = includeGivenNames ? [...surnames, ...givenNames] : surnames;
 const givenNameExclusions = includeGivenNames ? ' -Vietnam -student -postdoctoral' : '';
 const queries = [

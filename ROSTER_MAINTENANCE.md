@@ -62,17 +62,25 @@ existing data before anyone thinks to add it by hand.
 
 Pass `--given-names` to also generate queries for common given/middle-name tokens (`Thanh`, `Quang`,
 `Minh`, `Hoang`, `Anh`, `Tuan`, `Van`, `Hung`, `Quan`, `Quoc`, `Ngoc`, `Viet`, `Phuong`, `Huy`, `Kim`,
-`Nam`, `Long`, `Linh`, `Toan`, `Hieu`, `Chinh`, `Thai`, `Hai`, `Dinh`), each with `-Vietnam -student
--postdoctoral` appended. A given-name token matches far more broadly than a surname — it hits anyone
-with that token anywhere in their name, not just as a family name — so it needs both the institution
-restriction the generator already applies and those extra exclusions to stay usable; without them, an
-unrestricted given-name search returns mostly noise (Vietnam-based faculty out of scope, students, and
-postdocs). It also needs a first pass against `public/data.json` before adding any candidate: a
-given-name token search is far more likely than a surname search to resurface someone already in the
-roster under a different profile page or research summary, since the token alone does very little to
-narrow down which person it is.
+`Nam`, `Long`, `Linh`, `Toan`, `Hieu`, `Chinh`, `Thai`, `Hai`, `Dinh`, `Quynh`), each with `-Vietnam
+-student -postdoctoral` appended. A given-name token matches far more broadly than a surname — it hits
+anyone with that token anywhere in their name, not just as a family name — so it needs both the
+institution restriction the generator already applies and those extra exclusions to stay usable;
+without them, an unrestricted given-name search returns mostly noise (Vietnam-based faculty out of
+scope, students, and postdocs). It also needs a first pass against `public/data.json` before adding
+any candidate: a given-name token search is far more likely than a surname search to resurface someone
+already in the roster under a different profile page or research summary, since the token alone does
+very little to narrow down which person it is.
 
-Results across two informal sessions have been mixed enough to report honestly rather than round up.
+**Try given-name search before, or alongside, surname search once a surname sweep has already run
+against a field or institution.** Once the standard per-surname queries have been run against a field
+a few times, they start mostly re-finding people already in the roster — surname search saturates
+faster than given-name search does, because there are only ~17 surnames but dozens of given-name
+tokens, and a field-wide surname sweep doesn't imply a given-name sweep has happened too. Lead with
+given-name queries on a field that has already had a surname pass and is still small on the current
+snapshot; fall back to surname search for a field that hasn't been swept at all yet.
+
+Results across three informal sessions have been mixed enough to report honestly rather than round up.
 The first session, tried against a handful of otherwise-unremarkable US, Japanese, and Australian
 universities, found six new verified faculty from a small number of queries — three from a surname
 missing from the original list, three from a given-name token — a comparable hit rate to the standard
@@ -85,10 +93,39 @@ evidence the technique itself works. The second session, testing `Quan`, `Quoc`,
 URL — a good outcome for data quality (each contributed a previously-missing fact to its existing
 record instead of becoming a duplicate) but not a new addition. `Liem` is deliberately left out of the
 generator's default list: it is also a common Chinese-Indonesian surname, and the one hit it returned
-in an unrestricted search was a plausible-looking but non-Vietnamese name. Overall the given-name mode
-still seems worth having — particularly for its second-order benefit of surfacing missing facts on
-existing records — but treat a specific given-name token's yield as unproven until it has found a
-genuinely new person, not just a not-yet-fully-documented one.
+in an unrestricted search was a plausible-looking but non-Vietnamese name.
+
+The third session tested `Quynh` (combined with `Thang` in one query) unrestricted, aimed at fields
+that had already had several rounds of surname search and gone stale (Agricultural Sciences, Law,
+Chemistry) — every surname hit in those specific fields was by then already in the roster. The query
+found three new, independently verified people in one pass, but not in the targeted fields: an
+international-studies professor, a pharmacology professor, and a UK marketing lecturer — a reminder
+that a broad given-name query returns whatever it returns regardless of the field terms in the query,
+so its yield should be credited to the token, not to the field it was aimed at. `Quynh` is now in the
+generator's default given-name list on the strength of that hit rate. `Thang` surfaced no isolable new
+lead of its own that session, and a repeat of `Liem` unrestricted again found nothing — both consistent
+with prior results, so neither is added.
+
+A fourth session then targeted `Quynh`, `Thanh`, `Minh`, `Hoang`, `Anh`, `Van`, `Tuan`, `Hung`, `Nam`,
+`Long`, `Kim`, `Thai`, `Hai`, `Dinh`, and `Viet` specifically at Earth & Environmental Sciences and
+Agricultural & Natural Resource Sciences — the two smallest fields in the roster and, per the third
+session's lesson, fields a given-name query had not actually been tried against yet. This produced no
+new candidates across a dozen-plus queries and several direct faculty-directory fetches at large
+programs (Cornell CALS, Michigan State CANR, Oregon State climate science, Scripps Oceanography). This
+does not mean the technique failed generally — the third session's hits landed in Social & Behavioral
+Sciences, Health Sciences, and Business, not in these two fields — but it is a genuine null result
+specifically for Earth & Environmental Sciences and Agricultural & Natural Resource Sciences, worth
+recording so a future session does not re-run the same unproductive queries. Those two fields may
+simply have fewer Vietnamese-diaspora faculty in the US, or need a different discovery channel
+(professional-society membership directories, conference programs) rather than more general web
+search.
+
+Overall the given-name mode's yield varies a lot by token *and* by which field it happens to land in
+— `Quynh` and the first session's three unnamed tokens were strong (in fields other than the ones they
+were aimed at), `Quan`/`Toan`/`Hieu`/`Chinh`/`Thang`/`Liem` were not, and no token tested so far has
+found anything in Earth & Environmental Sciences or Agricultural & Natural Resource Sciences — so
+treat a specific untested token's yield, and a specific field's yield, as unproven until they have
+found a genuinely new person, not just a not-yet-fully-documented one.
 
 Every result still requires the appointment, track, and source-quality checks above.
 
@@ -228,16 +265,19 @@ personal homepage. An honor should normally fit one of these patterns:
 - a named endowed chair, distinguished professorship, university professorship, or comparable
   research chair that represents a significant appointment distinction (`distinguished_professorship`).
 
-Do not add routine conference best-paper awards, paper awards with only runner-up or candidate
-status, institution-local student, departmental, university service/teaching, or community-engagement
-awards, generic grants, invited talks, or ambiguous honors whose standing cannot be established.
-An award created and administered by one university is presumed local and ineligible unless reliable
-evidence shows that it has independent field-wide standing; a large-sounding title or cash prize is
-not enough. A conference recognition may be
-included only when it is clearly a durable, field-level distinction—for example, a most
-influential-paper, impact, highest-impact, or test-of-time award already represented in the
-roster. The award source must identify the recipient, the distinction, and preferably the year;
-do not infer prestige from the title alone.
+Do not add routine conference best-paper or distinguished-paper awards, paper awards with only
+runner-up or candidate status, institution-local student, departmental, university
+service/teaching, or community-engagement awards, generic grants, invited talks, or ambiguous
+honors whose standing cannot be established. "Distinguished Paper Award," "Best Paper Award," and
+similarly named per-year paper-selection recognitions are routine even at a top-tier venue and do
+not qualify on their own, regardless of a comparable award already present in the roster; do not
+treat an existing roster entry as precedent for adding another one. A conference paper recognition
+may be included only when the source explicitly frames it as a durable, retrospective distinction
+made well after publication—a most-influential-paper, impact, highest-impact, or test-of-time
+award. An award created and administered by one university is presumed local and ineligible unless
+reliable evidence shows that it has independent field-wide standing; a large-sounding title or cash
+prize is not enough. The award source must identify the recipient, the distinction, and preferably
+the year; do not infer prestige from the title alone.
 
 When two people share a name, use a fuller official form if available (for example, a middle name, initial, or nickname). Only if their names are genuinely identical should the university be appended: `Full Name - University`.
 

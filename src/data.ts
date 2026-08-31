@@ -643,6 +643,10 @@ export function uniquePhdInstitutions(roster) {
   return [...new Set(roster.map((p) => p.phdInstitution).filter(Boolean))].sort();
 }
 
+export function uniqueUndergradInstitutions(roster) {
+  return [...new Set(roster.map((p) => p.undergradInstitution).filter(Boolean))].sort();
+}
+
 export function buildDecadeCounts(roster) {
   const counts = new Map();
   for (const p of roster) {
@@ -710,6 +714,7 @@ function matchesSearchScope(person, scope, target) {
     research: person.researchAreas,
     honors: (person.honors || []).flatMap((honor) => [honor.name, honor.organization]),
     phd: [person.phdInstitution],
+    undergrad: [person.undergradInstitution],
     country: [person.country],
   }[scope];
   return (values || []).filter(Boolean).some((value) => stripDiacritics(value.toLowerCase()).includes(target));
@@ -798,14 +803,16 @@ export function displayName(name) {
   return name.split(' - ')[0];
 }
 
-function countBy(roster, getKey) {
+// Ties break alphabetically so leaderboards and the offline analysis report stay stable
+// across roster edits that only change record order.
+export function countBy(roster, getKey) {
   const counts = new Map();
   for (const p of roster) {
     const key = getKey(p);
     if (!key) continue;
     counts.set(key, (counts.get(key) ?? 0) + 1);
   }
-  return [...counts.entries()].sort((a, b) => b[1] - a[1]);
+  return [...counts.entries()].sort((a, b) => b[1] - a[1] || String(a[0]).localeCompare(String(b[0])));
 }
 
 function honorHolderCount(roster, honorName) {
