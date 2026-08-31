@@ -1032,6 +1032,7 @@
   {
     "id": "vp-0032",
     "name": "ThanhVu H. Nguyen",
+    "vietnameseName": "Nguyễn Huy Thanh Vũ",
     "profileUrl": "https://www.gmu.edu/profiles/tvn",
     "websiteUrl": "https://tvn.roars.dev/",
     "lastUpdatedAt": "2026-08-31T15:04:06.003Z",
@@ -1353,6 +1354,7 @@
   {
     "id": "vp-0040",
     "name": "XuanLong Nguyen",
+    "vietnameseName": "Nguyễn Xuân Long",
     "profileUrl": "https://dept.stat.lsa.umich.edu/~xuanlong/",
     "lastUpdatedAt": "2026-08-29T03:23:51.041Z",
     "scholarUrl": "https://scholar.google.com/citations?user=Az7XqxQAAAAJ",
@@ -1374,8 +1376,13 @@
     "undergradYear": 1999,
     "msInstitution": "Arizona State University",
     "msYear": 2001,
-    "maInstitution": "University of California, Berkeley",
-    "maYear": 2007,
+    "otherDegrees": [
+      {
+        "degree": "MA",
+        "institution": "University of California, Berkeley",
+        "year": 2007
+      }
+    ],
     "honors": [
       {
         "name": "NSF CAREER Award",
@@ -2278,6 +2285,7 @@
   {
     "id": "vp-0067",
     "name": "Hai-Dang Nguyen",
+    "vietnameseName": "Nguyễn Hải-Đăng",
     "profileUrl": "https://sites.ua.edu/hnguyen/",
     "lastUpdatedAt": "2026-08-24T03:03:40.000Z",
     "scholarUrl": "https://scholar.google.com/citations?user=QhGEzRoAAAAJ",
@@ -2392,6 +2400,7 @@
   {
     "id": "vp-0071",
     "name": "Nghiem V. Nguyen",
+    "vietnameseName": "Nguyễn V. Nghiêm",
     "profileUrl": "https://artsci.usu.edu/math-stats/directory/faculty/nguyen-nghiem",
     "lastUpdatedAt": "2026-08-26T05:10:19.000Z",
     "scholarUrl": "https://scholar.google.com/citations?user=60o-f1QAAAAJ",
@@ -3553,10 +3562,15 @@
     "portrait": "portraits/103-tru-cao-uthealth-houston.webp",
     "portraitSource": "https://web.sph.uth.edu/thumbs/TCao.jpg",
     "phdYear": 1999,
-    "mastersInstitution": "Asian Institute of Technology",
-    "mastersYear": 1995,
     "undergradInstitution": "Ho Chi Minh City University of Technology",
     "undergradYear": 1990,
+    "otherDegrees": [
+      {
+        "degree": "Master's",
+        "institution": "Asian Institute of Technology",
+        "year": 1995
+      }
+    ],
     "postdocInstitution": "University of Bristol and University of California at Berkeley",
     "lastUpdatedAt": "2026-08-29T07:16:33.370Z"
   },
@@ -4479,12 +4493,20 @@
     "undergradInstitution": "North Carolina State University",
     "undergradYear": 2008,
     "undergradMajor": "Mechanical Engineering",
-    "mastersInstitution": "University of Wisconsin-Madison",
-    "mastersYear": 2010,
-    "mastersMajor": "Mechanical Engineering",
-    "secondMastersInstitution": "Georgia Institute of Technology",
-    "secondMastersYear": 2014,
-    "secondMastersMajor": "Aerospace Engineering",
+    "otherDegrees": [
+      {
+        "degree": "Master's",
+        "institution": "University of Wisconsin-Madison",
+        "year": 2010,
+        "major": "Mechanical Engineering"
+      },
+      {
+        "degree": "Master's",
+        "institution": "Georgia Institute of Technology",
+        "year": 2014,
+        "major": "Aerospace Engineering"
+      }
+    ],
     "portrait": "portraits/132-huy-t-tran-university-of-illinois-urbana-champaign.webp",
     "portraitSource": "https://ws.engr.illinois.edu/directory/viewphoto.aspx?photo=10945&s=300"
   },
@@ -4879,9 +4901,9 @@
     "phdYear": 2015,
     "msInstitution": "Washington State University",
     "msYear": 2010,
-    "undergraduateInstitution": "Washington State University",
-    "undergraduateYear": 2006,
-    "undergraduateMajor": "Business Administration; Finance and Accounting major, Professional Writing minor",
+    "undergradInstitution": "Washington State University",
+    "undergradYear": 2006,
+    "undergradMajor": "Business Administration; Finance and Accounting major, Professional Writing minor",
     "country": "United States",
     "portrait": "portraits/143-hai-tran-loyola-marymount-university-loyola-marymount-university.webp",
     "portraitSource": "https://scholars.lmu.edu/files-asset/40811386/5a6588a652bb57535908fed326b52dba1444259351_l.jpg/",
@@ -6098,7 +6120,12 @@
     "country": "United States",
     "phdInstitution": "University of California, Berkeley",
     "undergradInstitution": "University of California, Berkeley",
-    "mastersInstitution": "New York University",
+    "otherDegrees": [
+      {
+        "degree": "Master's",
+        "institution": "New York University"
+      }
+    ],
     "honors": [
       {
         "name": "Association for Asian American Studies Outstanding Book Award in Cultural Studies",
@@ -6540,7 +6567,12 @@
     "undergradInstitution": "University of Colorado, Boulder",
     "portrait": "portraits/199-quynh-nhu-le-university-of-south-florida.webp",
     "portraitSource": "https://www.usf.edu/arts-sciences/departments/english/images/people-faculty/le-quynh.jpg",
-    "maInstitution": "University of California, Santa Barbara",
+    "otherDegrees": [
+      {
+        "degree": "MA",
+        "institution": "University of California, Santa Barbara"
+      }
+    ],
     "honors": [
       {
         "name": "Association for Asian American Studies Humanities and Cultural Studies: Literary Studies Book Award",
@@ -9119,6 +9151,7 @@
   {
     "id": "vp-0295",
     "name": "Thai Luan Vu",
+    "vietnameseName": "Vũ Thái Luân",
     "profileUrl": "https://www.depts.ttu.edu/math/about/directory/bio/index.php?id=1803",
     "lastUpdatedAt": "2026-08-31T15:04:06.003Z",
     "university": "Texas Tech University",
@@ -10019,6 +10052,7 @@
   {
     "id": "vp-0329",
     "name": "Cac Nguyen",
+    "vietnameseName": "Nguyễn Cac",
     "profileUrl": "https://math.uiowa.edu/people/nguyen-cac",
     "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
     "university": "University of Iowa",
@@ -10960,8 +10994,13 @@
     "msInstitution": "Portland State University",
     "msYear": 1989,
     "country": "United States",
-    "mswInstitution": "University of Washington",
-    "mswYear": 1993,
+    "otherDegrees": [
+      {
+        "degree": "MSW",
+        "institution": "University of Washington",
+        "year": 1993
+      }
+    ],
     "lastUpdatedAt": "2026-08-29T06:38:31.949Z"
   },
   {
@@ -11257,8 +11296,13 @@
     "msYear": 1973,
     "undergradInstitution": "University of Saigon",
     "undergradYear": 1968,
-    "maInstitution": "University of California, Los Angeles",
-    "maYear": 1972,
+    "otherDegrees": [
+      {
+        "degree": "MA",
+        "institution": "University of California, Los Angeles",
+        "year": 1972
+      }
+    ],
     "lastUpdatedAt": "2026-08-29T06:41:51.573Z"
   },
   {
@@ -11919,6 +11963,7 @@
   {
     "id": "vp-0409",
     "name": "Thuan Nguyen",
+    "vietnameseName": "Nguyễn Thuần",
     "profileUrl": "https://www.ohsu.edu/people/thuan-nguyen-phd",
     "lastUpdatedAt": "2026-08-24T03:03:40.000Z",
     "university": "Oregon Health & Science University",
@@ -15002,6 +15047,7 @@
   {
     "id": "vp-0521",
     "name": "Tien Zung Nguyen",
+    "vietnameseName": "Nguyễn Tiến Zung",
     "profileUrl": "https://www.math.univ-toulouse.fr/~nzung/",
     "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
     "university": "Université Toulouse III - Paul Sabatier",
@@ -20819,8 +20865,13 @@
     "msInstitution": "National Taiwan University of Science and Technology",
     "msYear": 2014,
     "country": "Taiwan",
-    "ms2Institution": "Ho Chi Minh University of Technology, Vietnam National University",
-    "undergradInstitution": "Ho Chi Minh University of Technology, Vietnam National University"
+    "undergradInstitution": "Ho Chi Minh University of Technology, Vietnam National University",
+    "otherDegrees": [
+      {
+        "degree": "MS",
+        "institution": "Ho Chi Minh University of Technology, Vietnam National University"
+      }
+    ]
   },
   {
     "id": "vp-0757",
@@ -21123,10 +21174,15 @@
     "rank": "Associate Professor",
     "phdInstitution": "National Taiwan University of Science and Technology",
     "phdYear": 2018,
-    "masterInstitution": "Chung Yuan Christian University",
-    "masterYear": 2015,
     "undergradInstitution": "National Economics University",
     "undergradYear": 2011,
+    "otherDegrees": [
+      {
+        "degree": "Master's",
+        "institution": "Chung Yuan Christian University",
+        "year": 2015
+      }
+    ],
     "country": "Taiwan",
     "lastUpdatedAt": "2026-08-29T07:33:31.341Z"
   },

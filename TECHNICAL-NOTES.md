@@ -4,14 +4,14 @@
 
 The application is a static Vite/TypeScript site. `public/data.json` is the public canonical
 roster; `maintenance/verification.json` is a tracked but non-public-site ledger of full-review
-timestamps; and `maintenance/profile-redirects.json` reserves retired profile IDs. Each public
+timestamps. Each public
 record stores an immutable `vp-####` ID, display name, current profile URL, university, location,
 department, research areas, track/rank, optional education, honors, portrait provenance, and
 `lastUpdatedAt`. `scripts/assign-profile-ids.ts` fills missing IDs automatically, while
-`scripts/generate-profile-pages.ts` derives an ID-addressed static profile page, legacy name-path
-redirects, retirement/merge responses, and profile sitemap entries. The current snapshot has 950
-records, 399 universities, 19 countries, and 17 broad application fields (analysis generated
-2026-08-30).
+`scripts/generate-profile-pages.ts` derives an ID-addressed static profile page and profile sitemap
+entries. The current snapshot has 991
+records, 423 universities, 20 countries, and 17 broad application fields (analysis generated
+2026-08-31).
 
 Eligibility is policy-driven, not surname-driven: current primary university appointment outside
 Vietnam plus one of Tenure-line, Teaching, Research, Clinical, or Emeritus. Adjunct, visiting,
@@ -29,7 +29,7 @@ the research process uses names as discovery signals but requires appointment ev
 | Canonical data | `public/data.json` | approved records -> site | committed JSON |
 | Review ledger | `maintenance/verification.json` | full-review completion -> due-entry selection | deterministic prioritization |
 | Profile identity | `scripts/assign-profile-ids.ts` | missing record IDs -> immutable `vp-####` IDs | deterministic; contributors omit IDs for new entries |
-| Static profiles | `scripts/generate-profile-pages.ts`, `maintenance/profile-redirects.json` | roster + retired IDs -> profile pages, redirects, sitemap entries | deterministic build output |
+| Static profiles | `scripts/generate-profile-pages.ts` | roster -> profile pages and sitemap entries | deterministic build output |
 | Classification/search | `src/data.ts`, `src/main.ts` | records -> broad fields, index, filters | runtime deterministic logic |
 | Derived view | `buildFunFacts`, `build*Observations`, `buildAwardsFunFacts` | current roster -> runtime observations | deterministic, not stored |
 | Snapshot report | `analysis/analyze-roster.ts` | roster -> counts for `METRICS.md`/paper | deterministic; reuses the site's `fieldOf` |
@@ -52,10 +52,8 @@ Profile identity is deliberately independent of the mutable display name. New re
 without an ID, and the pre-development, validation, and build hooks assign the next unused ID in
 `public/data.json`; the resulting generated edit is committed. Active IDs generate
 `people/vp-####.html`, with a canonical link, structured data, and an edit-to-submission link.
-Changing a name keeps that URL stable and produces a redirect for the previous name-based URL.
-Removed IDs remain reserved in the redirect registry: a duplicate merge points the retired page at
-the surviving profile, while a confirmed removal produces a noindex retirement response instead of
-silently reusing the address.
+Changing a name keeps that URL stable; no display-name-derived profile file is generated. Removing
+an entry removes its generated page, and new IDs advance above the current maximum.
 
 The process has two distinct loops. Expansion searches a bounded university/field/country space
 for people absent from the roster. Revalidation starts from an existing record and checks the
@@ -64,7 +62,7 @@ new candidates. A disappeared page is treated as a research problem, not automat
 
 ## Important implementation examples
 
-The repository history (597 commits over 2026-08-15--2026-08-30) contains a 20-batch full-roster
+The repository history (652 commits over 2026-08-15--2026-08-31) contains a 20-batch full-roster
 refresh on 2026-08-26, country sweeps for Australia, Canada, France, Singapore, Taiwan, Japan,
 Germany, Hong Kong, and others on 2026-08-28, automated maintenance batches on 2026-08-28/29, and a
 clinical-track expansion sweep on 2026-08-30. Concrete correction commits include:

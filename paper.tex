@@ -53,7 +53,7 @@ Part II is an experience report on the harder problem that keeping the directory
 Its workflow combines bounded search tasks, agent-assisted candidate generation and revalidation, structured proposals, deterministic validation, a tracked verification ledger, and human or independent review for ambiguous cases.
 The central design rule is operational rather than aspirational: AI proposes; evidence decides.
 
-As of 30 August 2026, the canonical snapshot contains 950 records at 399 universities in 19 countries, organized into 17 broad fields and five appointment tracks, spanning recorded PhD years from 1962 to 2026.
+As of 31 August 2026, the canonical snapshot contains 991 records at 423 universities in 20 countries, organized into 17 broad fields and five appointment tracks, spanning recorded PhD years from 1962 to 2026.
 Runtime aggregation exposes institutional and disciplinary patterns, while Git history records additions, promotions or track corrections, moves, removals, and deduplication.
 The system is not a complete census and does not provide controlled accuracy or cost estimates.
 Its contribution is twofold: a public resource for a community that previously had none, and a concrete engineering pattern showing that a public directory is a continuously revalidated collection of claims about an external world, not merely a database snapshot.
@@ -87,7 +87,7 @@ Each track is defined precisely enough that a stable, full-time, faculty-level r
 Every included person is also classified into one of 17 broad fields of study,  broadly classified by the U.S. National Center for Education Statistics, National Science Foundation, and National Institutes of Health. % already use to report on degree programs and doctorates, with health-related subfields further aligned to the National Institutes of Health's Institute and Center structure.
 The goal is for the directory's field distribution to read against familiar national categories (e.g., Computing, Mathematics, Health, Social and Behavioral Sciences) rather than an invented scheme (Section~\ref{sec:fields}).
 
-As of 30 August 2026, the canonical snapshot holds 950 records at 399 universities in 19 countries, across all 17 fields and all five tracks (Section~\ref{sec:results}).
+As of 31 August 2026, the canonical snapshot holds 991 records at 423 universities in 20 countries, across all 17 fields and all five tracks (Section~\ref{sec:results}).
 Each person's displaying card is designed around what a visitor actually needs, such as a portrait, Vietnamese-diacritic name, current university, department, rank, and location, education history, curated honors, and short research-area tags.
 Curated honors are limited to real field-wide distinctions such as national-academy election or a major career award.
 Short research-area tags support topic-level search, and a visible last-verified date lets a reader judge how current a given fact is (Section~\ref{sec:whatshown}).
@@ -283,7 +283,7 @@ Others & 30 Multi/Interdisciplinary Studies; institution-specific fields not yet
 \end{tabularx}
 \end{table}
 
-Health Sciences is large enough, and clinically prominent enough in the roster specifically---183 honors-bearing records, 89 Clinical-track appointments, and several of the roster's most senior appointments are in medicine---that VietProfs further splits it into derived subfields (Clinical Medicine, Public Health, Nursing, Pharmacy, Dentistry, Biomedical Research, and Medical Education; Section~\ref{sec:model}).
+Health Sciences is large enough, and clinically prominent enough in the roster specifically---182 honors-bearing records, 96 Clinical-track appointments, and several of the roster's most senior appointments are in medicine---that VietProfs further splits it into derived subfields (Clinical Medicine, Public Health, Nursing, Pharmacy, Dentistry, Biomedical Research, and Medical Education; Section~\ref{sec:model}).
 Table~\ref{tab:healthnih} aligns those clinical subfields with their closest counterpart among the National Institutes of Health's 27 Institutes and Centers, each of which funds and organizes research around a specific organ system, disease category, or health discipline \cite{nih_ics}.
 The alignment is again illustrative rather than exact: several NIH Institutes (for example, the National Cancer Institute or the National Heart, Lung, and Blood Institute) fund research across what VietProfs simply calls Clinical Medicine, and population/prevention health in the U.S. is coordinated at least as much through the Centers for Disease Control and Prevention as through NIH; the table cites the clearest correspondences rather than forcing every subfield onto a single Institute.
 
@@ -349,7 +349,7 @@ And it does not display any ranking, score, or comparative judgment across peopl
 The public source of truth is \codelink{public/data.json}; the browser loads it and performs search, filtering, sorting, and aggregation.
 Table~\ref{tab:schema} lists the record schema implemented by the \code{RosterEntry} TypeScript interface in \codelink{src/data.ts}.
 A record contains an immutable \code{vp-} identifier followed by digits, a name, current profile URL, university, city, state or province when applicable, country, department, research areas, rank and appointment track, optional education across five credential types (undergraduate, master's, PhD, postdoctoral, and professional degrees such as MD), optional honors with source citations, optional Scholar and personal-site URLs, portrait provenance, and \code{lastUpdatedAt}.
-The separate \codelink{maintenance/verification.json} ledger records the time of a completed full review, keyed by canonical name, and \codelinkd{maintenance/profile-redirects.json}{maintenance/\allowbreak profile-\allowbreak redirects.\allowbreak json} reserves retired identifiers for merge redirects or removal responses. Neither is part of the public JSON payload; the split lets maintenance state travel with the repository across machines without inflating what a browser downloads.
+The separate \codelink{maintenance/verification.json} ledger records the time of a completed full review, keyed by canonical name. It is not part of the public JSON payload, so maintenance state travels with the repository across machines without inflating what a browser downloads.
 
 \begin{table}[t]
 \centering
@@ -365,10 +365,11 @@ Required & \code{id}, \code{name}, \code{university}, \code{department}, \code{r
 \code{profileUrl}, \code{lastUpdatedAt}, \code{researchAreas[]} \\
 Location & \code{city}, \code{state}, \code{country} \\
 Identity & \code{vietnameseName} (diacritic form) \\
-Education & \code{undergradInstitution}/\code{Year}, \code{msInstitution}/\code{Year},
-\code{phdInstitution}/\code{Year}, \code{postdocInstitution}/\code{Year},
+Education & \code{undergradInstitution}/\code{Year}/\code{Major},
+\code{msInstitution}/\code{Year}/\code{Major},
+\code{phdInstitution}/\code{Year}/\code{Major}, \code{postdocInstitution}/\code{Year},
 \code{mdInstitution}/\code{Year}, \code{otherDegrees[]} (\code{degree}, \code{institution},
-\code{year}, \code{source}) \\
+\code{year}, \code{major}, \code{source}) \\
 Honors & \code{honors[]}: \code{name}, \code{organization}, \code{category}, \code{year},
 \code{source} \\
 Links & \code{websiteUrl} (personal/lab), \code{scholarUrl} (Google Scholar) \\
@@ -501,10 +502,13 @@ records, and clicking a tile filters the roster to that state.}
 
 \subsection{Snapshot observations}
 Table~\ref{tab:snapshot} summarizes the current snapshot.
-Within it, \vplink{Stanford}{Stanford University} has 14 records, \vplink{Monash}{Monash University} 13, and UC San Diego 12; UC Irvine, UCLA, the University of Florida, and the University of Wisconsin--Madison each have 11, and NUS, Texas Tech, the University of Melbourne, and the University of Toronto each have 10.
-California and Texas contain 211 of 637 U.S. records (33\%).
-The international subset contains 313 records across 18 non-U.S. country values, led by Australia (62), the U.K. (53), Canada (46), France (33), Japan (26), Singapore (25), and Taiwan (21).
-The four largest broad fields are Health Sciences (171), Computer and Information Sciences (144), Business and Economics (131), and Engineering (129); the U.S. and international subsets differ sharply in their leading field, at 23\% Health Sciences and 23\% Computer and Information Sciences respectively.
+Within it, \vplink{Stanford}{Stanford University} and UC San Diego each have 14 records, followed by
+\vplink{Monash}{Monash University} with 13; UC Irvine, UCLA, and the University of Florida each have
+11, while NUS, Texas Tech, the University of Melbourne, the University of Toronto, and the
+University of Wisconsin--Madison each have 10.
+California and Texas contain 218 of 659 U.S. records (33\%).
+The international subset contains 332 records across 19 non-U.S. country values, led by Australia (64), the U.K. (54), Canada (47), France (36), Japan (33), Singapore (25), and Taiwan (21).
+The four largest broad fields are Health Sciences (184), Computer and Information Sciences (146), Business and Economics (139), and Engineering (136); the U.S. and international subsets differ sharply in their leading field, at 24\% Health Sciences and 22\% Computer and Information Sciences respectively.
 Stanford has 13 health-science records; the Japan Advanced Institute of Science and Technology has eight computing records; and the University of Minnesota and the University of Technology Sydney have seven each, in health sciences and engineering respectively.
 Monash and Stanford each span 12 distinct stored departments, and UC Irvine spans 11, showing that some institutional clusters are cross-disciplinary rather than concentrated in one department.
 These are useful because they reveal institutional and disciplinary structure without claiming prestige, population size, or causation.
@@ -516,12 +520,12 @@ These are useful because they reveal institutional and disciplinary structure wi
 \small
 \begin{tabular}{lr@{\qquad}lr}
 \toprule
-Records & 950 & Universities & 399\\
-Countries & 19 & U.S./international & 637/313\\
+Records & 991 & Universities & 423\\
+Countries & 20 & U.S./international & 659/332\\
 Broad fields & 17 & Accepted tracks & 5\\
-Profile URLs & 950 & Scholar URLs & 342\\
-PhD institutions & 716 & PhD years & 526\\
-Honors-bearing records & 183 & PhD-year range & 1962--2026\\
+Profile URLs & 991 & Scholar URLs & 218\\
+PhD institutions & 749 & PhD years & 547\\
+Honors-bearing records & 182 & PhD-year range & 1962--2026\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -538,7 +542,7 @@ A future system that stores notable findings would need dependencies, recomputat
 \label{sec:limitations}
 VietProfs is not a census.
 Coverage is affected by search effort, English-language discoverability, university web quality, public-profile availability, initial field emphasis, international title conventions, and the differing maturity of collection passes.
-The 637/313 U.S./international split must not be interpreted as a population ratio.
+The 659/332 U.S./international split must not be interpreted as a population ratio.
 Nor should current concentrations be interpreted as prestige, demographic size, causation, migration history, or research quality.
 
 The directory handles sensitive identity-adjacent information.
@@ -594,7 +598,7 @@ Agent maintenance & \codelinkd{scripts/maintain-roster.ts}{scripts/\allowbreak m
 Proposal validation & Same controller; \codelinkd{test/maintenance-controller.test.ts}{test/\allowbreak maintenance-\allowbreak controller.\allowbreak test.ts} & Deterministic schema/scope checks; no agent output is trusted unchecked. \\
 Canonical data & \codelinkd{public/data.json}{public/\allowbreak data.json} & Committed JSON, changed only by an approved patch. \\
 Review ledger & \codelinkd{maintenance/verification.json}{maintenance/\allowbreak verification.json} & Deterministic prioritization of due entries. \\
-Profile identity/pages & \codelinkd{scripts/assign-profile-ids.ts}{scripts/\allowbreak assign-\allowbreak profile-\allowbreak ids.ts}; \codelinkd{scripts/generate-profile-pages.ts}{scripts/\allowbreak generate-\allowbreak profile-\allowbreak pages.ts} & Deterministic IDs, static profiles, legacy redirects, and sitemap entries. \\
+Profile identity/pages & \codelinkd{scripts/assign-profile-ids.ts}{scripts/\allowbreak assign-\allowbreak profile-\allowbreak ids.ts}; \codelinkd{scripts/generate-profile-pages.ts}{scripts/\allowbreak generate-\allowbreak profile-\allowbreak pages.ts} & Deterministic IDs, static profiles, and sitemap entries. \\
 Classification/search & \codelinkd{src/data.ts}{src/\allowbreak data.ts}, \codelinkd{src/main.ts}{src/\allowbreak main.ts} & Runtime deterministic logic in the browser. \\
 Derived view & \code{buildFunFacts}, \code{build*Observations} & Deterministic, recomputed, never persisted. \\
 Human submissions & \codelinkd{submit.html}{submit.html}, \codelinkd{src/submit.ts}{src/\allowbreak submit.ts} & Routed to a maintainer; not applied automatically. \\
@@ -637,7 +641,7 @@ applying a proposal. \\
 
 Agents cannot edit repository files directly; they can only read, search, and fetch (their tool access is restricted to \code{Read}, \code{Glob}, \code{Grep}, and, for the research stage, \code{WebSearch}/\code{WebFetch}), and they return JSON conforming to controller-generated schemas for target matching, research, and optional independent review.
 The research schema requires \code{status} (\code{complete}/\code{incomplete}), \code{action} (\code{keep}/\code{update}/\code{remove}), a \code{proposedEntryJson} string, a free-text \code{report}, and an array of \code{sources}; the optional review schema requires a \code{verdict} (\code{approve}/\code{reject}/\code{uncertain}), a \code{summary}, \code{reasons}, and \code{verifiedSources}.
-The controller, not the model, is the only component permitted to touch \code{public/data.json}, and it does so only after \code{proposalValidationError} returns no error. It preserves a target's immutable ID during an update; when an approved removal represents a duplicate merge, it records a redirect from the retired ID to the surviving ID rather than allowing that address to be reused.
+The controller, not the model, is the only component permitted to touch \code{public/data.json}, and it does so only after \code{proposalValidationError} returns no error. It preserves a target's immutable ID during an update and deletes an approved removal from the roster.
 That function---mirrored in \code{scripts/validate-data.ts} so the same invariants hold whether data changed through the controller or by hand---rejects a proposal that is missing a required string field; whose \code{profileUrl} is not HTTP(S); whose \code{websiteUrl} equals \code{profileUrl} or is not HTTP(S); whose \code{scholarUrl} is not HTTPS; whose \code{track} is outside the five accepted values; whose portrait path does not match \verb|^portraits/[a-z0-9][a-z0-9.-]*\.webp$| or whose \code{portrait}/\code{portraitSource} are not both present or both absent; whose honors are missing a name/organization/HTTPS source, use an unsupported category (Table~\ref{tab:honors}), have an out-of-range year, or duplicate an existing honor by name/year/organization; or whose degree years fall outside 1900--present.
 \code{analyzeRosterProposal} separately diffs the before/after roster and refuses a proposal that reorders the file, inserts an unrelated record, or silently edits a person other than the one under review---an agent that ``fixes'' something outside its assigned target is treated the same as a malformed proposal.
 A changed public record receives a new \code{lastUpdatedAt}; a complete review that finds no substantive change advances only the ledger timestamp, which is how the controller distinguishes ``reviewed and unchanged'' from ``never reviewed'' when selecting the next batch.
@@ -656,7 +660,7 @@ A proposal still rejected after its revisions, or a review that returns \code{un
 This is the concrete mechanism behind the paper's operational slogan: even with two independent models in the loop, the controller's deterministic checks and the revision/defer policy---not either model's confidence---decide what reaches the public roster.
 
 \subsection{Deployment}
-The deployment workflow (\codelink{.github/workflows/deploy.yml}) runs \code{npm test} and a production build on every push to \code{main}, then deploys the static artifact to GitHub Pages. The build assigns missing IDs, generates the ID-addressed profile pages, writes redirects for legacy name paths and retired IDs, and extends the sitemap with active profile URLs.
+The deployment workflow (\codelink{.github/workflows/deploy.yml}) runs \code{npm test} and a production build on every push to \code{main}, then deploys the static artifact to GitHub Pages. The build assigns missing IDs, generates the ID-addressed profile pages, and extends the sitemap with active profile URLs.
 The maintenance controller can commit and push directly after its own checks pass, so a substantive change reaches the live site without a pull request or manual approval step.
 This is a strong degree of operational automation, but it is not a formal correctness guarantee and does not eliminate human judgment for ambiguous evidence; Section~\ref{sec:testing} describes what the test suite actually checks before that push is allowed to happen.
 
@@ -721,7 +725,7 @@ Negative evidence requires caution.
 A disappeared faculty page can mean redesign, a moved URL, temporary failure, a university move, retirement, or departure.
 The maintenance policy explicitly avoids treating \code{404} as automatic deletion and calls for corroboration.
 Removal is also a stronger action than addition because it destroys a public claim and can erase a legitimate person from the directory.
-The system supports removal proposals, but the guide's corroboration rule is an operational policy rather than a formally verified deletion protocol. A confirmed removal retains its immutable public address as a noindex retirement page; a confirmed duplicate merge redirects the retired address to the surviving profile, so neither outcome permits ID reuse.
+The system supports removal proposals, but the guide's corroboration rule is an operational policy rather than a formally verified deletion protocol. A confirmed removal deletes the record and its generated profile page.
 
 The Git history makes this lifecycle visible.
 A 20-batch full-roster refresh appears on 26 August 2026.
@@ -732,7 +736,7 @@ These examples show that maintenance is not a periodic cosmetic edit; it changes
 \label{sec:testing}
 Because the controller is authorized to push directly to the branch that GitHub Actions deploys, the test suite that gates it is load-bearing rather than advisory.
 \code{npm test} runs \code{scripts/validate-data.ts} followed by four Node test files.
-\code{validate-data.ts} independently re-implements the roster invariants also enforced at proposal time---required-field presence, unique immutable IDs, canonical UTC \code{lastUpdatedAt}/\code{lastVerifiedAt} timestamps that are not in the future, HTTP(S)/HTTPS URL roles, portrait path shape and on-disk existence, honor category and duplicate checks, degree-year ranges, accepted tracks, non-empty \code{researchAreas}---and, in addition, cross-checks \code{public/data.json} against \code{maintenance/verification.json} and the retired-ID registry: every canonical name must have exactly one ledger entry, the ledger must not contain a stale entry for a name no longer on the roster, and a retired ID cannot also be active or target an invalid merge.
+\code{validate-data.ts} independently re-implements the roster invariants also enforced at proposal time---required-field presence, unique immutable IDs, canonical UTC \code{lastUpdatedAt}/\code{lastVerifiedAt} timestamps that are not in the future, HTTP(S)/HTTPS URL roles, portrait path shape and on-disk existence, honor category and duplicate checks, degree-year ranges, accepted tracks, non-empty \code{researchAreas}---and cross-checks \code{public/data.json} against \code{maintenance/verification.json}: every canonical name must have exactly one ledger entry, and the ledger must not contain an entry for a name no longer on the roster.
 \code{test/data.test.ts} covers the field-mapping taxonomy and its overrides, the diacritic-insensitive search index, and the derived-facts builders in Section~\ref{sec:results}, including their behavior on small or empty filtered rosters.
 \code{test/maintenance-controller.test.ts} exercises \code{proposalValidationError} and \code{analyzeRosterProposal} directly against constructed before/after rosters, including the scope-violation cases (reordering, inserting an unrelated person, editing outside the target) that Section~\ref{sec:architecture} describes.
 \code{test/profile-pages.test.ts} verifies unique IDs and the generated profile route contract, including a name correction preserving its ID-addressed URL.
@@ -744,9 +748,9 @@ The maintenance guide additionally requires \code{npm test}, \code{npm run build
 \section{Operational Experience and Evaluation}
 This work is an operational characterization, not a controlled experiment.
 The repository provides strong evidence about implementation and history but not precision, recall, cost, or detection latency.
-The current snapshot has 740 Tenure-line, 89 Clinical, 69 Teaching, 37 Emeritus, and 15 Research records.
-It contains 121 personal/lab URLs, 342 Scholar URLs, and 183 records with at least one honor.
-Of the 716 records with an explicit PhD institution, PhD years span 1962--2026 across 526 records with an explicit year, a wide enough range that any framing of the roster as capturing only recent arrivals in the diaspora would be unsupported.
+The current snapshot has 772 Tenure-line, 96 Clinical, 68 Teaching, 37 Emeritus, and 18 Research records.
+It contains 126 personal/lab URLs, 218 Scholar URLs, and 182 records with at least one honor.
+Of the 749 records with an explicit PhD institution, PhD years span 1962--2026 across 547 records with an explicit year, a wide enough range that any framing of the roster as capturing only recent arrivals in the diaspora would be unsupported.
 These figures describe fields present in the snapshot, not their correctness or completeness.
 
 \begin{table}[t]

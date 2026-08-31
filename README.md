@@ -43,7 +43,7 @@ This binds to all network interfaces. Other machines can then browse to
 
 Edit [`public/data.json`](./public/data.json) to add, remove, or correct roster entries. When adding a person, omit `id`, then run `npm run assign-profile-ids -- --apply` once and commit the assigned immutable `vp-####` ID with the entry. Validation, development, and build commands check IDs without modifying the roster. Current academic profile URL, university, department, rank/track, country, and canonical UTC `lastUpdatedAt` timestamp remain required. Maintainers track full-review times separately in [`maintenance/verification.json`](./maintenance/verification.json), which is not part of the public site data.
 
-Each active record generates a static public profile at `people/vp-####.html` during development and production builds. Names on roster cards link to that profile, and its edit link opens the submission form with the record pre-filled. A name correction therefore preserves the profile URL. The generator also produces redirects for former name-based profile URLs. For a deletion or duplicate merge, retire the old ID in [`maintenance/profile-redirects.json`](./maintenance/profile-redirects.json): a merge redirects to the surviving ID, while a removal retains a noindex retirement page.
+Each active record generates a static public profile at `people/vp-####.html` during development and production builds. Names on roster cards link to that profile, and its edit link opens the submission form with the record pre-filled. A name correction therefore preserves the profile URL. Removing a roster entry also removes its generated profile page.
 
 The accepted tracks are:
 

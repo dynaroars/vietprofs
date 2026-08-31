@@ -1,15 +1,23 @@
 import { access, readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
-import { HONOR_CATEGORIES, REQUIRED_ROSTER_STRINGS, TRACKS, UTC_TIMESTAMP_PATTERN } from '../src/roster-constants.ts';
+import {
+  HONOR_CATEGORIES,
+  HONOR_FIELDS,
+  OTHER_DEGREE_FIELDS,
+  REQUIRED_ROSTER_STRINGS,
+  ROSTER_FIELDS,
+  TRACKS,
+  UTC_TIMESTAMP_PATTERN,
+} from '../src/roster-constants.ts';
 import { looksSurnameFirst } from '../src/data.ts';
-
-type JsonRecord = Record<string, any>;
 
 const rosterFile = resolve('public/data.json');
 const verificationFile = resolve('maintenance/verification.json');
-const redirectsFile = resolve('maintenance/profile-redirects.json');
 const allowedTracks = new Set<string>(TRACKS);
 const allowedHonorCategories = new Set<string>(HONOR_CATEGORIES);
+const allowedRosterFields = new Set<string>(ROSTER_FIELDS);
+const allowedHonorFields = new Set<string>(HONOR_FIELDS);
+const allowedOtherDegreeFields = new Set<string>(OTHER_DEGREE_FIELDS);
 
 // looksSurnameFirst() is a heuristic (see its definition), so it's a review flag, not an
 // infallible rule. Names checked here and confirmed already correct (verified against DBLP,
@@ -33,17 +41,13 @@ function validateTimestamp(file, value, label, field) {
   if (timestamp.valueOf() > Date.now()) fail(file, `${label} ${field} must not be in the future`);
 }
 
-const [roster, verification, redirects] = await Promise.all([
+const [roster, verification] = await Promise.all([
   readFile(rosterFile, 'utf8').then(JSON.parse),
   readFile(verificationFile, 'utf8').then(JSON.parse),
-  readFile(redirectsFile, 'utf8').then(JSON.parse),
 ]);
 if (!Array.isArray(roster) || roster.length === 0) fail(rosterFile, 'must contain a non-empty array');
 if (!verification || typeof verification !== 'object' || Array.isArray(verification)) {
   fail(verificationFile, 'must contain an object keyed by canonical roster name');
-}
-if (!redirects || typeof redirects !== 'object' || Array.isArray(redirects)) {
-  fail(redirectsFile, 'must contain an object keyed by retired profile ID');
 }
 
 const names = new Set<string>();
@@ -54,6 +58,9 @@ const portraits = new Set();
 for (const [index, person] of roster.entries()) {
   const label = `entry ${index + 1}`;
   if (!person || typeof person !== 'object') fail(rosterFile, `${label} must be an object`);
+  for (const field of Object.keys(person)) {
+    if (!allowedRosterFields.has(field)) fail(rosterFile, `${label} has unsupported field ${field}`);
+  }
   for (const field of REQUIRED_ROSTER_STRINGS) {
     if (typeof person[field] !== 'string' || !person[field].trim()) fail(rosterFile, `${label} has invalid ${field}`);
   }
@@ -90,6 +97,9 @@ for (const [index, person] of roster.entries()) {
     for (const [honorIndex, honor] of person.honors.entries()) {
       const honorLabel = `${label} honor ${honorIndex + 1}`;
       if (!honor || typeof honor !== 'object') fail(rosterFile, `${honorLabel} must be an object`);
+      for (const field of Object.keys(honor)) {
+        if (!allowedHonorFields.has(field)) fail(rosterFile, `${honorLabel} has unsupported field ${field}`);
+      }
       for (const field of ['name', 'organization', 'source']) {
         if (typeof honor[field] !== 'string' || !honor[field].trim()) fail(rosterFile, `${honorLabel} has invalid ${field}`);
       }
@@ -108,9 +118,13 @@ for (const [index, person] of roster.entries()) {
     for (const [degreeIndex, degree] of person.otherDegrees.entries()) {
       const degreeLabel = `${label} degree ${degreeIndex + 1}`;
       if (!degree || typeof degree !== 'object') fail(rosterFile, `${degreeLabel} must be an object`);
+      for (const field of Object.keys(degree)) {
+        if (!allowedOtherDegreeFields.has(field)) fail(rosterFile, `${degreeLabel} has unsupported field ${field}`);
+      }
       if (typeof degree.degree !== 'string' || !degree.degree.trim()) fail(rosterFile, `${degreeLabel} has invalid degree`);
       if (typeof degree.institution !== 'string' || !degree.institution.trim()) fail(rosterFile, `${degreeLabel} has invalid institution`);
       if (degree.year !== undefined && (!Number.isInteger(degree.year) || degree.year < 1900 || degree.year > new Date().getFullYear())) fail(rosterFile, `${degreeLabel} has invalid year`);
+      if (degree.major !== undefined && (typeof degree.major !== 'string' || !degree.major.trim())) fail(rosterFile, `${degreeLabel} has invalid major`);
       if (degree.source !== undefined && !/^https?:\/\//.test(degree.source)) fail(rosterFile, `${degreeLabel} source must use HTTP(S)`);
     }
   }
@@ -130,6 +144,11 @@ for (const [index, person] of roster.entries()) {
       fail(rosterFile, `${label} has invalid ${field}`);
     }
   }
+  for (const field of ['phdMajor', 'undergradMajor', 'msMajor']) {
+    if (person[field] !== undefined && (typeof person[field] !== 'string' || !person[field].trim())) {
+      fail(rosterFile, `${label} has invalid ${field}`);
+    }
+  }
   if (names.has(person.name)) fail(rosterFile, `duplicate name: ${person.name}`);
   if (ids.has(person.id)) fail(rosterFile, `duplicate id: ${person.id}`);
   if (profileUrls.has(person.profileUrl)) fail(rosterFile, `duplicate profileUrl: ${person.profileUrl}`);
@@ -145,17 +164,4 @@ for (const name of names) {
 for (const name of Object.keys(verification)) {
   if (!names.has(name)) fail(verificationFile, `contains stale entry for ${name}`);
 }
-for (const [id, rawRedirect] of Object.entries(redirects)) {
-  const redirect = rawRedirect as JsonRecord;
-  if (!/^vp-\d{4,}$/.test(id)) fail(redirectsFile, `has invalid retired ID ${id}`);
-  if (ids.has(id)) fail(redirectsFile, `redirect ID is still active: ${id}`);
-  if (!redirect || typeof redirect !== 'object' || Array.isArray(redirect)) fail(redirectsFile, `redirect ${id} must be an object`);
-  if (!['merged', 'removed'].includes(redirect.reason)) fail(redirectsFile, `redirect ${id} has invalid reason`);
-  if (redirect.reason === 'merged') {
-    if (typeof redirect.redirectTo !== 'string' || !ids.has(redirect.redirectTo)) fail(redirectsFile, `merged redirect ${id} must target an active profile ID`);
-  } else if (redirect.redirectTo !== null) {
-    fail(redirectsFile, `removed redirect ${id} must use a null target`);
-  }
-}
-
 console.log(`Validated ${roster.length} roster entries.`);

@@ -5,7 +5,6 @@ import {
   displayName,
   displayUniversity,
   fieldOf,
-  legacyPersonPath,
   personPath,
   type Roster,
   type RosterEntry,
@@ -18,13 +17,6 @@ const root = resolve(import.meta.dirname, '..');
 const development = process.argv.includes('--dev');
 const output = resolve(root, development ? 'public' : 'dist');
 const peopleDir = resolve(output, 'people');
-
-type ProfileRedirect = {
-  redirectTo: string | null;
-  reason: 'legacy' | 'merged' | 'removed';
-};
-
-type ProfileRedirects = Record<string, ProfileRedirect>;
 
 function absoluteUrl(path: string) {
   return `${siteUrl}/${path}`;
@@ -52,11 +44,11 @@ function profilePage(person: RosterEntry) {
     : '';
   const education = [
     person.postdocInstitution && `Postdoctoral training: ${[displayUniversity(person.postdocInstitution), person.postdocYear].filter(Boolean).join(', ')}`,
-    person.phdInstitution && `PhD: ${[displayUniversity(person.phdInstitution), person.phdYear].filter(Boolean).join(', ')}`,
-    person.msInstitution && `MS: ${[displayUniversity(person.msInstitution), person.msYear].filter(Boolean).join(', ')}`,
+    person.phdInstitution && `PhD: ${[displayUniversity(person.phdInstitution), person.phdYear, person.phdMajor].filter(Boolean).join(', ')}`,
+    person.msInstitution && `MS: ${[displayUniversity(person.msInstitution), person.msYear, person.msMajor].filter(Boolean).join(', ')}`,
     person.mdInstitution && `MD: ${[displayUniversity(person.mdInstitution), person.mdYear].filter(Boolean).join(', ')}`,
-    person.undergradInstitution && `Undergraduate: ${[displayUniversity(person.undergradInstitution), person.undergradYear].filter(Boolean).join(', ')}`,
-    ...(person.otherDegrees ?? []).map((degree) => `${degree.degree}: ${[displayUniversity(degree.institution), degree.year].filter(Boolean).join(', ')}`),
+    person.undergradInstitution && `Undergraduate: ${[displayUniversity(person.undergradInstitution), person.undergradYear, person.undergradMajor].filter(Boolean).join(', ')}`,
+    ...(person.otherDegrees ?? []).map((degree) => `${degree.degree}: ${[displayUniversity(degree.institution), degree.year, degree.major].filter(Boolean).join(', ')}`),
   ].filter(Boolean);
   const educationSection = education.length
     ? `<section><h2>Education and training</h2><ul>${education.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul></section>`
@@ -119,39 +111,8 @@ function profilePage(person: RosterEntry) {
 </html>`;
 }
 
-function redirectPage(redirect: ProfileRedirect) {
-  const targetPath = redirect.redirectTo ? personPath(redirect.redirectTo) : '';
-  const targetUrl = targetPath ? absoluteUrl(targetPath) : `${siteUrl}/`;
-  const title = redirect.redirectTo ? 'Profile moved — VietProfs' : 'Profile no longer listed — VietProfs';
-  const message = redirect.reason === 'legacy'
-    ? 'This profile now uses a permanent VietProfs URL.'
-    : redirect.redirectTo
-      ? 'This profile has been consolidated into another VietProfs entry.'
-      : 'This profile is no longer listed in VietProfs.';
-  const action = redirect.redirectTo
-    ? `<p><a href="../${escapeHtml(targetPath)}">Continue to the current profile</a>.</p>`
-    : '<p><a href="../">Return to the VietProfs directory</a>.</p>';
-  const refresh = redirect.redirectTo ? `<meta http-equiv="refresh" content="0; url=../${escapeHtml(targetPath)}">` : '';
-  return `<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex, follow">
-  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#15181c" media="(prefers-color-scheme: dark)">
-  <link rel="canonical" href="${targetUrl}">
-  <link rel="stylesheet" href="../profile.css">
-  ${refresh}
-  <title>${title}</title>
-</head>
-<body class="profile-page"><header><a class="eyebrow" href="../">VietProfs</a></header><main><h1>${title}</h1><p>${message}</p>${action}</main></body>
-</html>`;
-}
-
 async function main() {
   const roster = JSON.parse(await readFile(resolve(root, 'public/data.json'), 'utf8')) as Roster;
-  const redirects = JSON.parse(await readFile(resolve(root, 'maintenance/profile-redirects.json'), 'utf8')) as ProfileRedirects;
   const ids = new Set<string>();
   for (const person of roster) {
     if (!person.id || ids.has(person.id)) throw new Error(`Profile ID is missing or duplicated: ${person.name}`);
@@ -164,17 +125,6 @@ async function main() {
     await mkdir(dirname(outputFile), { recursive: true });
     await writeFile(outputFile, profilePage(person));
   }));
-  await Promise.all(roster.map(async (person) => {
-    const outputFile = resolve(output, legacyPersonPath(person.name));
-    await mkdir(dirname(outputFile), { recursive: true });
-    await writeFile(outputFile, redirectPage({ redirectTo: person.id, reason: 'legacy' }));
-  }));
-  await Promise.all(Object.entries(redirects).map(async ([id, redirect]) => {
-    const outputFile = resolve(output, personPath(id));
-    await mkdir(dirname(outputFile), { recursive: true });
-    await writeFile(outputFile, redirectPage(redirect));
-  }));
-
   if (!development) {
     const sitemapUrls = roster.map((person) => `  <url>\n    <loc>${absoluteUrl(personPath(person.id))}</loc>\n    <lastmod>${person.lastUpdatedAt?.slice(0, 10) || ''}</lastmod>\n  </url>`);
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>${siteUrl}/</loc>\n  </url>\n  <url>\n    <loc>${siteUrl}/submit.html</loc>\n  </url>\n${sitemapUrls.join('\n')}\n</urlset>\n`;

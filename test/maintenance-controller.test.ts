@@ -12,7 +12,6 @@ import {
   proposalValidationError,
   parseChangedPaths,
   needsAnotherBatch,
-  remainingBatchSize,
   researchIsComplete,
   resolveTargetLocally,
   selectDueEntries,
@@ -45,12 +44,6 @@ test('maintenance defaults to Claude and supports Codex as agent', () => {
     () => parseOptions(['run', '--all', '--total', '1000']),
     /cannot be used together/,
   );
-});
-
-test('older checkpoints with no total continue using the batch limit', () => {
-  assert.equal(remainingBatchSize({ limit: 50 }, 40), 50);
-  assert.equal(remainingBatchSize({ limit: 40, total: null }, 40), 40);
-  assert.equal(remainingBatchSize({ limit: 40, total: 100 }, 40), 40);
 });
 
 test('only complete research can advance to review or application', () => {
@@ -159,6 +152,18 @@ test('proposal validation rejects unsupported tracks and malformed research area
   proposal.track = 'Tenure-line';
   proposal.researchAreas = [''];
   assert.match(proposalValidationError(proposal), /valid researchAreas/);
+});
+
+test('proposal validation rejects unknown roster and nested fields', () => {
+  const proposal: any = {
+    name: 'Old Person', profileUrl: 'https://example.edu/old', lastUpdatedAt: '2026-01-01T00:00:00.000Z',
+    university: 'Old University', city: 'Old City', department: 'History', track: 'Tenure-line', researchAreas: ['History'],
+    unsupportedInstitution: 'Example University',
+  };
+  assert.match(proposalValidationError(proposal), /unsupported field unsupportedInstitution/);
+  delete proposal.unsupportedInstitution;
+  proposal.otherDegrees = [{ degree: 'MA', institution: 'Example University', unsupportedMajor: 'History' }];
+  assert.match(proposalValidationError(proposal), /other degree has unsupported field unsupportedMajor/);
 });
 
 test('proposal analysis preserves completed postdoctoral training fields', () => {

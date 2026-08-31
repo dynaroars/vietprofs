@@ -18,4 +18,36 @@ export const REQUIRED_ROSTER_STRINGS = [
   'department',
 ] as const;
 
+export const ROSTER_FIELDS = [
+  ...REQUIRED_ROSTER_STRINGS,
+  'websiteUrl',
+  'scholarUrl',
+  'state',
+  'country',
+  'rank',
+  'track',
+  'vietnameseName',
+  'researchAreas',
+  'honors',
+  'portrait',
+  'portraitSource',
+  'postdocInstitution',
+  'postdocYear',
+  'phdInstitution',
+  'phdYear',
+  'phdMajor',
+  'mdInstitution',
+  'mdYear',
+  'msInstitution',
+  'msYear',
+  'msMajor',
+  'undergradInstitution',
+  'undergradYear',
+  'undergradMajor',
+  'otherDegrees',
+] as const;
+
+export const HONOR_FIELDS = ['name', 'organization', 'category', 'year', 'source'] as const;
+export const OTHER_DEGREE_FIELDS = ['degree', 'institution', 'year', 'major', 'source'] as const;
+
 export const UTC_TIMESTAMP_PATTERN = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/;
