@@ -2,7 +2,7 @@ import './style.css';
 import { loadRoster, buildSearchIndex, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueUndergradInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, LOCATION_LABELS, countryFlag, canonicalRank, displayName, fieldOf, locationMatches, filterRoster, buildUsObservations, buildInternationalObservations, buildLocationObservations, buildQualifiedObservations, buildAwardsFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, STATE_ABBR, type Roster } from './data.ts';
 import { escapeHtml } from './utils.ts';
 import { STATE_GRID } from './state-grid.ts';
-import { fieldDropdownLabel, renderRosterEntry } from './render.ts';
+import { applyFavoriteToggle, fieldDropdownLabel, renderRosterEntry } from './render.ts';
 import { loadFavorites, toggleFavorite } from './favorites-store.ts';
 import { locationForQuery } from './filter-state.ts';
 
@@ -726,8 +726,7 @@ async function init() {
     const target = e.target as HTMLElement;
     const favorite = target.closest<HTMLButtonElement>('.favorite-toggle');
     if (favorite?.dataset.id) {
-      toggleFavorite(favorite.dataset.id);
-      update();
+      applyFavoriteToggle(favorite, toggleFavorite(favorite.dataset.id));
       return;
     }
     const tile = target.closest<HTMLButtonElement>('.state-tile');

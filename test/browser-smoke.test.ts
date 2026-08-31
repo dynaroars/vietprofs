@@ -236,8 +236,8 @@ test('favorites stay at the top while the directory can be sorted', async () => 
   const star = first.locator('.favorite-toggle');
   assert.equal(await star.getAttribute('aria-pressed'), 'false');
   await star.click();
-  assert.equal((await page.locator('.entry-name').first().textContent())?.trim(), name);
-  assert.equal(await page.locator('.entry').first().locator('.favorite-toggle').getAttribute('aria-pressed'), 'true');
+  assert.equal((await first.locator('.entry-name').textContent())?.trim(), name);
+  assert.equal(await star.getAttribute('aria-pressed'), 'true');
 
   await page.locator('#sort-order').selectOption('recent');
   await page.waitForFunction(() => new URL(window.location.href).searchParams.get('sort') === 'recent');

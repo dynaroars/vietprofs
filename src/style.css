@@ -10,6 +10,8 @@
   --tag-bg: #f1f5f9;
   --tag-text: #334155;
   --focus-ring: #2563eb;
+  --favorite-color: #b45309;
+  --favorite-hover: #92400e;
 
   --font-heading: 'Outfit', sans-serif;
   --font-body: 'Inter', sans-serif;
@@ -34,6 +36,8 @@
     --tag-bg: #232a31;
     --tag-text: #cbd5e1;
     --focus-ring: #7dd3fc;
+    --favorite-color: #fbbf24;
+    --favorite-hover: #fcd34d;
   }
 }
 
@@ -608,9 +612,18 @@ a.entry-name:focus-visible {
   fill: currentColor;
 }
 
+.favorite-toggle.is-favorite {
+  color: var(--favorite-color);
+}
+
 .favorite-toggle:hover,
 .favorite-toggle:focus-visible {
   color: var(--text-primary);
+}
+
+.favorite-toggle.is-favorite:hover,
+.favorite-toggle.is-favorite:focus-visible {
+  color: var(--favorite-hover);
 }
 
 .tag {
@@ -1261,6 +1274,7 @@ a.entry-name:focus-visible {
   .example-chip,
   .ranked-item,
   .entry-name,
+  .example-chip,
   .personal-site-link,
   .scholar-link,
   .profile-link,
