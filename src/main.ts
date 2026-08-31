@@ -1,5 +1,5 @@
 import './style.css';
-import { loadRoster, buildSearchIndex, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueUndergradInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, LOCATION_LABELS, countryFlag, canonicalRank, displayName, fieldOf, locationMatches, filterRoster, buildUsObservations, buildInternationalObservations, buildLocationObservations, buildQualifiedObservations, buildAwardsFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, STATE_ABBR, type Roster } from './data.ts';
+import { loadRoster, buildSearchIndex, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueUndergradInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, LOCATION_LABELS, countryFlag, canonicalRank, displayName, fieldOf, locationMatches, filterRoster, buildFunFacts, buildUsObservations, buildInternationalObservations, buildLocationObservations, buildQualifiedObservations, buildAwardsFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, STATE_ABBR, type Roster } from './data.ts';
 import { escapeHtml } from './utils.ts';
 import { STATE_GRID } from './state-grid.ts';
 import { applyFavoriteToggle, fieldDropdownLabel, renderRosterEntry } from './render.ts';
@@ -765,7 +765,9 @@ async function init() {
   const populatedLocations = locationOptions.filter((location) =>
     !['US', 'World'].includes(location) && filtersHaveResults(location, 'all', 'all')
   );
-  type Example = { type: 'search' | 'field' | 'track' | 'loc' | 'insights'; value: string; label?: string };
+  const facts = buildFunFacts(roster);
+  const randomFact = facts[Math.floor(Math.random() * facts.length)];
+  type Example = { type: 'search' | 'field' | 'track' | 'loc' | 'fact'; value: string; label?: string };
   const examples: Example[] = [
     ...pickRandomUnique(roster.map((person) => displayName(person.name)), 2).map((value) => ({ type: 'search' as const, value })),
     ...pickRandomUnique(uniqueDepartments(roster), 1).map((value) => ({ type: 'search' as const, value })),
@@ -774,8 +776,8 @@ async function init() {
     ...pickRandomUnique(populatedFields, 2).map((value) => ({ type: 'field' as const, value, label: fieldDropdownLabel(value) })),
     ...pickRandomUnique(TRACKS, 1).map((value) => ({ type: 'track' as const, value })),
     ...pickRandomUnique(populatedLocations, 1).map((value) => ({ type: 'loc' as const, value })),
-    { type: 'insights', value: 'Interesting facts' },
-  ];
+    { type: 'fact', value: randomFact },
+  ].sort(() => Math.random() - 0.5) as Example[];
   const examplesEl = document.getElementById('examples');
   examplesEl.replaceChildren();
   const label = document.createElement('span');
@@ -785,9 +787,9 @@ async function init() {
   for (const ex of examples) {
     const button = document.createElement('button');
     button.type = 'button';
-    button.className = 'example-chip';
-    button.textContent = `${ex.type === 'insights' ? '✨ ' : ''}${ex.label ?? ex.value}`;
-    if (ex.type === 'insights') button.dataset.insights = '1';
+    button.className = `example-chip${ex.type === 'fact' ? ' fun-chip' : ''}`;
+    button.textContent = `${ex.type === 'fact' ? '✨ ' : ''}${ex.label ?? ex.value}`;
+    if (ex.type === 'fact') button.dataset.fact = '1';
     if (ex.type === 'field') button.dataset.field = ex.value;
     if (ex.type === 'track') button.dataset.track = ex.value;
     if (ex.type === 'loc') button.dataset.loc = ex.value;
@@ -797,7 +799,7 @@ async function init() {
     const btn = (e.target as HTMLElement).closest<HTMLButtonElement>('.example-chip');
     if (!btn) return;
     filterState.state = '';
-    if (btn.dataset.insights) {
+    if (btn.dataset.fact) {
       searchInput.value = '';
       filterState.insights = true;
       setFilterValues({ location: locationSelect.value });
