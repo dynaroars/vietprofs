@@ -2,8 +2,8 @@ import './style.css';
 import { loadRoster, buildSearchIndex, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueUndergradInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, LOCATION_LABELS, countryFlag, canonicalRank, displayName, fieldOf, locationMatches, filterRoster, buildUsObservations, buildInternationalObservations, buildLocationObservations, buildQualifiedObservations, buildAwardsFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, STATE_ABBR, type Roster } from './data.ts';
 import { escapeHtml } from './utils.ts';
 import { STATE_GRID } from './state-grid.ts';
-import { applyFavoriteToggle, fieldDropdownLabel, renderRosterEntry } from './render.ts';
-import { toggleFavorite } from './favorites-store.ts';
+import { fieldDropdownLabel, renderRosterEntry } from './render.ts';
+import { loadFavorites, toggleFavorite } from './favorites-store.ts';
 import { locationForQuery } from './filter-state.ts';
 
 function heatTier(count, max) {
@@ -45,7 +45,6 @@ function renderShell() {
         <p class="site-subtitle">A directory of Vietnamese professors worldwide</p>
         <div class="header-actions">
           <a class="paper-link" href="${import.meta.env.BASE_URL}paper.pdf" target="_blank" rel="noopener noreferrer">Read the paper (PDF)</a>
-          <a class="favorites-link" href="favorites.html">Favorites</a>
           <a class="submission-link" href="submit.html">Add or update info</a>
         </div>
       </div>
@@ -73,6 +72,12 @@ function renderShell() {
       </select>
       <select id="track-filter" class="field-select track-select" aria-label="Filter by faculty type">
         <option value="all">All faculty types</option>
+      </select>
+      <select id="sort-order" class="field-select sort-select" aria-label="Sort professors">
+        <option value="random">Random order</option>
+        <option value="last-name">Last name</option>
+        <option value="first-name">First name</option>
+        <option value="recent">Recently modified</option>
       </select>
     </div>
     <div class="examples" id="examples"></div>
@@ -122,6 +127,27 @@ function trackQualifier(roster) {
 interface RenderOptions {
   field?: string;
   location?: string;
+}
+
+function namePart(person, part: 'first' | 'last') {
+  const words = displayName(person.name).trim().split(/\s+/);
+  return part === 'first' ? words[0] : words.at(-1);
+}
+
+function sortRoster(roster: Roster, order: string): Roster {
+  const favorites = new Set(loadFavorites());
+  const byName = (part: 'first' | 'last') => (a, b) =>
+    namePart(a, part).localeCompare(namePart(b, part), 'en', { sensitivity: 'base' })
+      || displayName(a.name).localeCompare(displayName(b.name), 'en', { sensitivity: 'base' });
+  const bySelectedOrder = order === 'last-name'
+    ? byName('last')
+    : order === 'first-name'
+      ? byName('first')
+      : order === 'recent'
+        ? (a, b) => b.lastUpdatedAt.localeCompare(a.lastUpdatedAt)
+        : () => 0;
+
+  return [...roster].sort((a, b) => Number(favorites.has(b.id)) - Number(favorites.has(a.id)) || bySelectedOrder(a, b));
 }
 
 function renderRoster(roster: Roster, { field, location }: RenderOptions = {}) {
@@ -392,6 +418,7 @@ async function init() {
   const locationSelect = document.getElementById('location-filter');
   const fieldSelect = document.getElementById('field-filter');
   const trackSelect = document.getElementById('track-filter');
+  const sortSelect = document.getElementById('sort-order');
   const filterState = { state: '', insights: false };
 
   function optionElement(value, label) {
@@ -531,6 +558,7 @@ async function init() {
   filterState.state = params.get('state') ?? '';
   const requestedField = params.get('field');
   const requestedTrack = params.get('track');
+  const requestedSort = params.get('sort');
   let initialLocation = 'World';
   if (requestedLocation && locationOptions.includes(requestedLocation) && roster.some((p) => locationMatches(p, requestedLocation))) {
     initialLocation = requestedLocation;
@@ -548,6 +576,9 @@ async function init() {
     initialTrack = requestedTrack;
   }
   setFilterValues({ location: initialLocation, field: initialField, track: initialTrack });
+  if (['random', 'last-name', 'first-name', 'recent'].includes(requestedSort)) {
+    sortSelect.value = requestedSort;
+  }
 
   function syncUrl() {
     const next = new URLSearchParams();
@@ -557,6 +588,7 @@ async function init() {
     if (locationSelect.value !== 'World') next.set('loc', locationSelect.value);
     if (fieldSelect.value !== 'all') next.set('field', fieldSelect.value);
     if (trackSelect.value !== 'all') next.set('track', trackSelect.value);
+    if (sortSelect.value !== 'random') next.set('sort', sortSelect.value);
     if (filterState.insights) next.set('view', 'insights');
     const query = next.toString();
     const url = `${window.location.pathname}${query ? `?${query}` : ''}`;
@@ -583,7 +615,7 @@ async function init() {
       field: fieldSelect.value,
       track: trackSelect.value,
     });
-    renderRoster(filtered, {
+    renderRoster(sortRoster(filtered, sortSelect.value), {
       field: fieldSelect.value,
       location: locationSelect.value,
     });
@@ -672,6 +704,7 @@ async function init() {
     update();
   });
   trackSelect.addEventListener('change', () => update({ fromSearch: false }));
+  sortSelect.addEventListener('change', () => update({ fromSearch: false }));
 
   document.getElementById('home-link').addEventListener('click', (e) => {
     e.preventDefault(); // already on this page — reset in place instead of reloading
@@ -689,7 +722,8 @@ async function init() {
     const target = e.target as HTMLElement;
     const favorite = target.closest<HTMLButtonElement>('.favorite-toggle');
     if (favorite?.dataset.id) {
-      applyFavoriteToggle(favorite, toggleFavorite(favorite.dataset.id));
+      toggleFavorite(favorite.dataset.id);
+      update();
       return;
     }
     const tile = target.closest<HTMLButtonElement>('.state-tile');
