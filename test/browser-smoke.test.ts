@@ -139,6 +139,74 @@ test('undergraduate institution scope filters the roster and persists in the URL
   await page.close();
 });
 
+test('mobile search input uses the full control width', async () => {
+  const page = await context.newPage();
+  await page.setViewportSize({ width: 375, height: 812 });
+  await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
+
+  const searchBox = await page.locator('.search-box').boundingBox();
+  const scope = await page.locator('#search-scope').boundingBox();
+  const search = await page.locator('#search').boundingBox();
+  assert.ok(searchBox && scope && search);
+  assert.ok(search.width >= searchBox.width * 0.98);
+  assert.ok(scope.width >= searchBox.width * 0.98);
+  assert.ok(search.y >= scope.y + scope.height);
+
+  await page.locator('#search').fill('Thanh');
+  const suggestions = page.locator('#search-suggestion-panel');
+  await suggestions.waitFor();
+  const panel = await suggestions.boundingBox();
+  assert.ok(panel);
+  assert.ok(panel.y >= search.y + search.height);
+  await page.close();
+});
+
+test('mobile pages avoid horizontal overflow and provide usable tap targets', async () => {
+  const page = await context.newPage();
+  const assertNoOverflow = async () => {
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), await page.evaluate(() => document.documentElement.clientWidth));
+  };
+  const assertTapTargets = async (selector) => {
+    const undersized = await page.locator(selector).evaluateAll((elements) => elements
+      .filter((element) => {
+        const style = getComputedStyle(element);
+        const rect = element.getBoundingClientRect();
+        return style.display !== 'none' && style.visibility !== 'hidden' && (rect.width < 44 || rect.height < 44);
+      })
+      .map((element) => ({
+        selector: `${element.tagName.toLowerCase()}#${element.id}.${String(element.className).replace(/\s+/g, '.')}`,
+        width: element.getBoundingClientRect().width,
+        height: element.getBoundingClientRect().height,
+      })));
+    assert.deepEqual(undersized, []);
+  };
+
+  for (const width of [320, 375, 430]) {
+    await page.setViewportSize({ width, height: 812 });
+    await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
+    await assertNoOverflow();
+    await assertTapTargets('.paper-link, .submission-link, .example-chip, .entry-name, .personal-site-link, .scholar-link, .profile-link, .search-scope, .search-input, .field-select');
+  }
+
+  await page.setViewportSize({ width: 320, height: 812 });
+  await page.goto(`${baseUrl}/?view=insights`, { waitUntil: 'networkidle' });
+  await assertNoOverflow();
+  await assertTapTargets('.ranked-item');
+
+  await page.goto(`${baseUrl}/submit.html`, { waitUntil: 'networkidle' });
+  await page.locator('#add-mode-details-toggle').click();
+  await assertNoOverflow();
+  await assertTapTargets(".form-section input[type='text'], .form-section input[type='url'], .form-section input[type='number'], .form-section select, .form-section textarea, .radio-row, .link-button, .info-icon");
+  await page.locator('.info-icon').click();
+  assert.equal(await page.locator('.info-icon').evaluate((element) => getComputedStyle(element, '::after').visibility), 'visible');
+  await assertNoOverflow();
+
+  await page.goto(`${baseUrl}/people/vp-0242.html`, { waitUntil: 'networkidle' });
+  await assertNoOverflow();
+  await assertTapTargets('.eyebrow, .edit-link, .links a');
+  await page.close();
+});
+
 test('every roster card exposes its official profile link', async () => {
   const page = await context.newPage();
   await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });

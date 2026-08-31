@@ -119,4 +119,13 @@ footer {
   .portrait {
     margin-bottom: 1rem;
   }
+
+  .eyebrow,
+  .edit-link,
+  .links a {
+    display: inline-flex;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+  }
 }

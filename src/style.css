@@ -208,7 +208,7 @@ h1 {
 .search-suggestion-panel {
   position: absolute;
   z-index: 10;
-  top: 3.25rem;
+  top: calc(100% + 0.25rem);
   right: auto;
   left: 0;
   width: 100%;
@@ -354,6 +354,19 @@ h1 {
 
   .search-box {
     grid-column: auto;
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .search-scope {
+    width: 100%;
+    min-width: 0;
+    border-right: 1px solid var(--border-color);
+    border-radius: 8px;
+  }
+
+  .search-box .search-input {
+    border-radius: 8px;
   }
 
   .search-suggestion-panel {
@@ -414,7 +427,7 @@ h1 {
 
 @media (max-width: 560px) {
   .header-actions {
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     gap: 0.35rem;
   }
 
@@ -1198,4 +1211,106 @@ a.entry-name:focus-visible {
   color: var(--text-muted);
   font-size: var(--text-xs);
   max-width: 62ch;
+}
+
+@media (max-width: 560px) {
+  .tag-topic {
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    line-height: 1.35;
+  }
+
+  .paper-link,
+  .submission-link,
+  .example-chip,
+  .ranked-item,
+  .entry-name,
+  .personal-site-link,
+  .scholar-link,
+  .profile-link,
+  .search-scope,
+  .search-input,
+  .field-select,
+  .form-section input[type='text'],
+  .form-section input[type='url'],
+  .form-section input[type='number'],
+  .form-section select,
+  .form-section textarea,
+  .radio-row,
+  .link-button {
+    min-height: 44px;
+  }
+
+  .entry-name,
+  .personal-site-link,
+  .scholar-link,
+  .profile-link {
+    min-width: 44px;
+  }
+
+  .entry-name,
+  .personal-site-link,
+  .scholar-link,
+  .profile-link,
+  .link-button {
+    align-items: center;
+  }
+
+  .entry-name {
+    display: inline-flex;
+  }
+
+  .personal-site-link,
+  .scholar-link,
+  .profile-link {
+    justify-content: center;
+  }
+
+  .radio-row {
+    align-items: center;
+  }
+
+  .link-button {
+    display: inline-flex;
+  }
+
+  .info-icon {
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+    margin-block: -0.75rem;
+    background: transparent;
+    font-size: 0;
+  }
+
+  .info-icon::before {
+    content: 'i';
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.05rem;
+    height: 1.05rem;
+    border-radius: 50%;
+    background: var(--tag-bg);
+    font-size: 0.7rem;
+  }
+
+  .info-icon::after {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+    width: auto;
+    max-width: none;
+    transform: translateY(2px);
+  }
+
+  .info-icon:hover::after,
+  .info-icon:focus::after,
+  .info-icon:focus-visible::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
 }
