@@ -3,17 +3,17 @@
 // change, then rebuild paper.pdf.
 //
 // The server/browser setup mirrors test/browser-smoke.test.ts: `vite preview` over the built
-// dist/ with a self-signed certificate, driven by headless Chromium.
+// dist/, driven by headless Chromium.
 import { spawn } from 'node:child_process';
 import { createRequire } from 'node:module';
-import { get } from 'node:https';
+import { get } from 'node:http';
 import { fileURLToPath } from 'node:url';
 
 const require = createRequire(import.meta.url);
 const { chromium } = require('playwright');
 
 const port = 4180;
-const baseUrl = `https://127.0.0.1:${port}`;
+const baseUrl = `http://127.0.0.1:${port}`;
 const figuresDir = fileURLToPath(new URL('../figures/', import.meta.url));
 
 // Matches the existing figures: a 1360x900 CSS viewport at 2x, so the PNGs stay 2720x1800.
@@ -24,7 +24,7 @@ async function waitForServer(url: string) {
   for (let attempt = 0; attempt < 100; attempt += 1) {
     try {
       const status = await new Promise<number>((resolve, reject) => {
-        const request = get(url, { rejectUnauthorized: false }, (response) => {
+        const request = get(url, (response) => {
           response.resume();
           resolve(response.statusCode ?? 0);
         });
@@ -48,7 +48,6 @@ try {
   await waitForServer(`${baseUrl}/`);
   browser = await chromium.launch({ headless: true });
   const context = await browser.newContext({
-    ignoreHTTPSErrors: true,
     viewport,
     deviceScaleFactor: 2,
   });

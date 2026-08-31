@@ -3,6 +3,7 @@ import { FIELDS, fieldOf, loadRoster, personPath, TRACKS } from './data.ts';
 import { escapeHtml } from './utils.ts';
 
 const SUBMISSION_EMAIL = 'root@roars.dev';
+const GITHUB_REPO = 'dynaroars/vietprofs';
 // Form behavior remains browser-native; this module is migrated incrementally.
 
 const app = document.getElementById('app');
@@ -207,10 +208,13 @@ function renderShell() {
       </details>
 
       <div class="submit-actions">
-        <button type="submit" class="submit-btn">Send by email</button>
+        <button type="submit" class="submit-btn" name="delivery" value="email">Send by email</button>
+        <button type="submit" class="submit-btn" name="delivery" value="github">Submit as a GitHub issue</button>
       </div>
       <p class="submit-hint" id="submit-hint">
-        This opens a pre-filled email message to the maintainers.
+        Email is the easiest option and does not require a GitHub account. It opens a pre-filled
+        message to the maintainers. GitHub is optional and opens a pre-filled issue for anyone who
+        prefers to submit there.
       </p>
     </form>
   `;
@@ -218,6 +222,11 @@ function renderShell() {
 
 function buildEmailUrl(title, body) {
   return `mailto:${SUBMISSION_EMAIL}?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
+}
+
+function buildGithubIssueUrl(title, body) {
+  const params = new URLSearchParams({ title, body });
+  return `https://github.com/${GITHUB_REPO}/issues/new?${params.toString()}`;
 }
 
 const FIELD_LABELS = {
@@ -439,7 +448,11 @@ function onSubmit(e, entriesById, entriesByName) {
     body = buildNewEntryBody(entry, notes);
   }
 
-  window.location.href = buildEmailUrl(title, body);
+  if (e.submitter?.value === 'github') {
+    window.open(buildGithubIssueUrl(title, body), '_blank', 'noopener,noreferrer');
+  } else {
+    window.location.href = buildEmailUrl(title, body);
+  }
 }
 
 function applyPurpose(purpose) {

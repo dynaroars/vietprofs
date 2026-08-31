@@ -70,7 +70,6 @@ body {
 /* One focus ring for the whole site. Controls that sit inside a bordered surface (inputs,
    selects, tiles, list rows) hug it at 1px; free-standing pills and buttons stand off at 2px. */
 .example-chip:focus-visible,
-.search-scope:focus,
 .search-input:focus,
 .field-select:focus,
 .state-tile:focus-visible,
@@ -109,6 +108,13 @@ h1 {
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  flex-shrink: 0;
 }
 
 .subtitle-row {
@@ -279,6 +285,13 @@ h1 {
   color: var(--text-primary);
 }
 
+.fun-chip {
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  text-align: left;
+}
+
 .search-input {
   flex: 1;
   width: 100%;
@@ -295,28 +308,79 @@ h1 {
 .search-box {
   position: relative;
   display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
   grid-column: 1 / -1;
 }
 
-.search-scope {
-  width: auto;
-  min-width: 8.5rem;
-  padding: 0.6rem 2rem 0.6rem 0.75rem;
+.search-fields {
+  position: relative;
+  display: flex;
+  flex: 1;
+  min-width: 0;
+}
+
+.search-help-btn {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
   border: 1px solid var(--border-color);
-  border-right: 0;
-  border-radius: 8px 0 0 8px;
-  background: var(--tag-bg);
-  color: var(--text-primary);
-  font: inherit;
+  border-radius: 50%;
+  background: var(--card-bg);
+  color: var(--text-secondary);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-style: italic;
   cursor: pointer;
 }
 
-.search-scope:focus {
-  z-index: 1;
+.search-help-btn:hover,
+.search-help-btn[aria-expanded='true'] {
+  color: var(--text-primary);
+  background: var(--hover-bg);
 }
 
-.search-box .search-input {
-  border-radius: 0 8px 8px 0;
+.search-help-panel {
+  position: absolute;
+  z-index: 20;
+  top: calc(100% + 0.4rem);
+  right: 0;
+  width: min(22rem, 90vw);
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--card-bg);
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+  box-shadow: 0 6px 18px rgb(0 0 0 / 12%);
+}
+
+.search-help-panel[hidden] {
+  display: none;
+}
+
+.search-help-panel p {
+  margin: 0 0 0.5rem;
+  color: var(--text-primary);
+}
+
+.search-help-panel ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.3rem;
+}
+
+.search-help-panel code {
+  background: var(--tag-bg);
+  color: var(--text-primary);
+  padding: 0.05rem 0.3rem;
+  border-radius: 4px;
+  font-size: 0.85em;
 }
 
 .field-select {
@@ -349,7 +413,7 @@ h1 {
     font-size: 1.85rem;
   }
 
-  .roars-link {
+  .header-icons {
     display: none;
   }
 
@@ -359,19 +423,13 @@ h1 {
 
   .search-box {
     grid-column: auto;
-    display: grid;
+    flex-direction: column;
+    align-items: stretch;
     gap: 0.5rem;
   }
 
-  .search-scope {
-    width: 100%;
-    min-width: 0;
-    border-right: 1px solid var(--border-color);
-    border-radius: 8px;
-  }
-
-  .search-box .search-input {
-    border-radius: 8px;
+  .search-help-btn {
+    align-self: flex-end;
   }
 
   .search-suggestion-panel {
@@ -649,6 +707,89 @@ a.entry-name:focus-visible {
   padding: 3rem 0;
   text-align: center;
   color: var(--text-muted);
+}
+
+/* Static profile pages receive this same stylesheet through the build sync script. */
+.profile-page header,
+.profile-page main {
+  max-width: 880px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+.profile-page header {
+  margin-bottom: 0;
+  padding-top: 3.5rem;
+}
+
+.profile-page main {
+  padding-bottom: 4rem;
+}
+
+.profile-page .eyebrow {
+  color: var(--text-primary);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.profile-page .identity {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.profile-page .portrait {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-page h2 {
+  margin-top: 2rem;
+  font-family: var(--font-heading);
+  font-size: var(--text-base);
+  font-weight: 600;
+}
+
+.profile-page .native,
+.profile-page .meta,
+.profile-page .updated,
+.profile-page footer {
+  color: var(--text-muted);
+}
+
+.profile-page .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.profile-page .links a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.profile-page .links a:hover,
+.profile-page .links a:focus-visible {
+  background: var(--hover-bg);
+  color: var(--text-primary);
+}
+
+.profile-page footer {
+  margin-top: 2.5rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--border-color);
+  font-size: var(--text-sm);
 }
 
 /* Insights Dashboard & Visualizations */
@@ -1274,12 +1415,10 @@ a.entry-name:focus-visible {
   .example-chip,
   .ranked-item,
   .entry-name,
-  .example-chip,
   .personal-site-link,
   .scholar-link,
   .profile-link,
   .favorite-toggle,
-  .search-scope,
   .search-input,
   .field-select,
   .form-section input[type='text'],
@@ -1311,6 +1450,7 @@ a.entry-name:focus-visible {
 
   .entry-name {
     display: inline-flex;
+    min-height: 45px;
   }
 
   .personal-site-link,
@@ -1365,5 +1505,21 @@ a.entry-name:focus-visible {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+  }
+
+  .profile-page .identity {
+    display: block;
+  }
+
+  .profile-page .portrait {
+    margin-bottom: 1rem;
+  }
+
+  .profile-page .eyebrow,
+  .profile-page .links a {
+    display: inline-flex;
+    align-items: center;
+    min-width: 44px;
+    min-height: 44px;
   }
 }

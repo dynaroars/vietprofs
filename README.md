@@ -29,17 +29,15 @@ npm run figures   # rebuild and recapture the paper's screenshot figures
 `npm run analyze` and `npm run figures` regenerate everything the manuscript reports about the
 current snapshot; run both after a roster change that the paper cites.
 
-By default `npm run dev` only listens on `localhost`. To make the dev server reachable from other
-machines on your network over HTTPS:
+By default `npm run dev` serves the site at `http://localhost:5173`. To make the dev server
+reachable from other machines on your network:
 
 ```bash
 npm run dev -- --host
 ```
 
-This binds to all network interfaces and serves a self-signed certificate via
-`@vitejs/plugin-basic-ssl` (already configured in `vite.config.ts`). Other machines on the network
-can then browse to `https://<this-machine's-hostname-or-IP>:5173`, accepting the self-signed
-certificate warning on first visit.
+This binds to all network interfaces. Other machines can then browse to
+`http://<this-machine's-hostname-or-IP>:5173`.
 
 ## Data and contributions
 
@@ -63,7 +61,7 @@ Honors are limited to substantial, field-level distinctions. Local university, d
 service, teaching, and community-engagement awards are not included unless their independent
 field-wide standing is clearly documented; an impressive title or cash prize alone is insufficient.
 
-Use [`submit.html`](./submit.html) to propose an entry or correction without editing the repository directly. To add people, paste raw text — names, a link to someone's profile or homepage, or a link to a directory page listing several people; maintainers independently research and verify each lead rather than trusting the submitted text as fact (see `ROSTER_MAINTENANCE.md`'s "Reviewing user-supplied links/names" workflow). To correct an existing entry, enter their name (autocomplete suggests and pre-fills existing records); the resulting email includes the record's immutable ID, permanent VietProfs profile URL, current and proposed names, and a field-by-field change list. Maintainers review every submission before it reaches the roster.
+Use [`submit.html`](./submit.html) to propose an entry or correction without editing the repository directly. To add people, paste raw text — names, a link to someone's profile or homepage, or a link to a directory page listing several people; maintainers independently research and verify each lead rather than trusting the submitted text as fact (see `ROSTER_MAINTENANCE.md`'s "Reviewing user-supplied links/names" workflow). To correct an existing entry, enter their name (autocomplete suggests and pre-fills existing records); the resulting submission includes the record's immutable ID, permanent VietProfs profile URL, current and proposed names, and a field-by-field change list. The default path opens a pre-filled email to `root@roars.dev`; contributors who prefer GitHub can instead open a pre-filled issue in `dynaroars/vietprofs`. Maintainers review every submission before it reaches the roster.
 
 Detailed inclusion, verification, discovery, field-mapping, and data-format guidance is in [`ROSTER_MAINTENANCE.md`](./ROSTER_MAINTENANCE.md).
 
@@ -201,8 +199,8 @@ and are deferred for 30 days so they do not prevent the rest of the roster from 
 
 ## License
 
-Following the same approach as [CSRankings](https://csrankings.org), this project is entirely
-transparent: all code and data are publicly available in this repository under a [Creative Commons
+This project is entirely transparent: all code and data are publicly available in this repository
+under a [Creative Commons
 Attribution-NonCommercial-NoDerivatives 4.0 International
 License](https://creativecommons.org/licenses/by-nc-nd/4.0/) — note: this means you may not
 distribute anything built from VietProfs' code or data (a modified version of the code, or a

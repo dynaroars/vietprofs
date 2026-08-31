@@ -454,6 +454,20 @@ When a scan turns up no education fields and the primary source states none, lea
 unresolved and say so explicitly (which people, and why) rather than silently treating an empty
 page as proof no degree exists.
 
+## Periodic link-health sweep
+
+`npm run check-links` fetches every stored URL (profile, website, Scholar, portrait source, and
+honor sources) and reports any that don't resolve. It's network-dependent and slow (2,500+
+requests), so it's not part of `npm test` — run it occasionally, or after a batch import, rather
+than on every change. A shared/invalid Scholar ID copied across a batch of entries is the failure
+mode this caught once already (see git history); `npm test` now blocks a duplicate `scholarUrl`
+across two different people as a permanent regression check, but a URL can still go dead on its own
+later, which only this sweep catches.
+
+When it reports a broken URL, don't just delete the field — visit the person's other stored URLs
+or search for their current page first, since a moved/renamed page is far more common than a
+person's web presence disappearing entirely.
+
 ## Validation checklist
 
 Before committing a roster change, run:

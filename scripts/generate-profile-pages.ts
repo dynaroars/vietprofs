@@ -101,14 +101,17 @@ function profilePage(person: RosterEntry) {
   <meta property="og:url" content="${canonicalUrl}">
   <title>${escapeHtml(title)}</title>
   <script type="application/ld+json">${jsonLd}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../profile.css">
 </head>
-<body>
+<body class="profile-page">
   <header><a class="eyebrow" href="../">VietProfs</a></header>
   <main>
     <article>
       <div class="identity">${portrait}<div><h1>${escapeHtml(name)}</h1><p class="native">${escapeHtml(nativeName)}</p><p class="meta">${escapeHtml(role)}${locationOf(person) ? ` · ${escapeHtml(locationOf(person))}` : ''}</p><div class="tags"><span class="tag">${escapeHtml(fieldOf(person.department, person.university))}</span><span class="tag">${escapeHtml(person.track || '')}</span></div></div></div>
-      ${linkSection}<p><a class="edit-link" href="${escapeHtml(editUrl)}">Edit this entry</a></p>${research}${educationSection}${honors}
+      ${linkSection}<p><a class="submission-link" href="${escapeHtml(editUrl)}">Add or update info</a></p>${research}${educationSection}${honors}
       <footer><p class="updated">Roster information last updated ${escapeHtml(formatRosterDate(person.lastUpdatedAt || ''))}.</p><p>VietProfs is a community-maintained directory. See the linked university and personal sources for the most current details.</p></footer>
     </article>
   </main>
@@ -142,7 +145,7 @@ function redirectPage(redirect: ProfileRedirect) {
   ${refresh}
   <title>${title}</title>
 </head>
-<body><header><a class="eyebrow" href="../">VietProfs</a></header><main><h1>${title}</h1><p>${message}</p>${action}</main></body>
+<body class="profile-page"><header><a class="eyebrow" href="../">VietProfs</a></header><main><h1>${title}</h1><p>${message}</p>${action}</main></body>
 </html>`;
 }
 
