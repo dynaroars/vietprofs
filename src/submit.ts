@@ -4,8 +4,6 @@ import { escapeHtml } from './utils.ts';
 
 const SUBMISSION_EMAIL = 'root@roars.dev';
 const GITHUB_REPO = 'dynaroars/vietprofs';
-// Form behavior remains browser-native; this module is migrated incrementally.
-
 const app = document.getElementById('app');
 
 function renderShell() {

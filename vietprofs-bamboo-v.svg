@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">VietProfs bamboo V logo</title>
+  <desc id="desc">Two stylized bamboo stalks and leaves forming a letter V.</desc>
+
+  <!-- Left bamboo stalk -->
+  <path fill="#315C45" d="M252 158c18-7 40-12 63-14l221 691c5 17-4 34-21 39l-13 4c-17 5-35-5-40-22L240 191c-5-14 0-27 12-33z"/>
+  <!-- Right bamboo stalk -->
+  <path fill="#315C45" d="M772 158c-18-7-40-12-63-14L488 835c-5 17 4 34 21 39l13 4c17 5 35-5 40-22l222-665c5-14 0-27-12-33z"/>
+
+  <!-- Bamboo joints -->
+  <path fill="#244838" d="M304 308l65-20 14 44-65 21zM365 499l65-21 15 46-65 20zM427 692l65-21 14 45-65 21z"/>
+  <path fill="#244838" d="M720 308l-65-20-14 44 65 21zM659 499l-65-21-15 46 65 20zM597 692l-65-21-14 45 65 21z"/>
+
+  <!-- Leaves: simple enough to remain clear at favicon size -->
+  <path fill="#3D7155" d="M316 292C210 246 145 251 104 279c62 68 131 87 218 56-3-16-5-29-6-43z"/>
+  <path fill="#3D7155" d="M708 292c106-46 171-41 212-13-62 68-131 87-218 56 3-16 5-29 6-43z"/>
+  <path fill="#315C45" d="M356 456c-80-7-128 14-151 49 64 38 116 38 170-3-7-17-13-32-19-46z"/>
+  <path fill="#315C45" d="M668 456c80-7 128 14 151 49-64 38-116 38-170-3 7-17 13-32 19-46z"/>
+</svg>

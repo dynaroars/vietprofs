@@ -10,6 +10,7 @@ export interface OtherDegree {
   degree: string;
   institution: string;
   year?: number;
+  major?: string;
   source?: string;
 }
 
@@ -30,12 +31,15 @@ export interface RosterEntry {
   postdocYear?: number;
   phdInstitution?: string;
   phdYear?: number;
+  phdMajor?: string;
   mdInstitution?: string;
   mdYear?: number;
   undergradInstitution?: string;
   undergradYear?: number;
+  undergradMajor?: string;
   msInstitution?: string;
   msYear?: number;
+  msMajor?: string;
   profileUrl?: string;
   websiteUrl?: string;
   scholarUrl?: string;
@@ -67,9 +71,13 @@ function searchableFields(person) {
     healthSubfieldOf(person),
     person.postdocInstitution,
     person.phdInstitution,
+    person.phdMajor,
     person.mdInstitution,
     person.undergradInstitution,
+    person.undergradMajor,
     person.msInstitution,
+    person.msMajor,
+    ...(person.otherDegrees ?? []).flatMap((degree) => [degree.degree, degree.institution, degree.major]),
     ...(person.researchAreas ?? []),
     ...(person.honors ?? []).flatMap((honor) => [honor.name, honor.organization]),
   ];
@@ -145,25 +153,9 @@ export function displayUniversity(university) {
   return UNIVERSITY_DISPLAY_NAMES.get(university) ?? university?.replace(/ University$/, ' Univ.');
 }
 
-// Profile routes are derived from the canonical roster name. Names are unique roster keys, and
-// the build checks that their resulting slugs stay unique before publishing any pages.
-export function personSlug(name: string): string {
-  return stripDiacritics(name)
-    .toLowerCase()
-    .replace(/[’']/g, '')
-    // A doubled separator preserves an intentional hyphen in a published name, avoiding a
-    // collision with the otherwise equivalent space-separated form.
-    .replace(/-/g, '--')
-    .replace(/[^a-z0-9-]+/g, '-')
-    .replace(/^-+|-+$/g, '');
-}
-
+// Profile routes use immutable roster IDs so name corrections do not change public URLs.
 export function personPath(id: string): string {
   return `people/${id}.html`;
-}
-
-export function legacyPersonPath(name: string): string {
-  return `people/${personSlug(name)}.html`;
 }
 
 // Keep the public rank vocabulary intentionally small. Institution-specific honorifics and
@@ -190,20 +182,6 @@ const VIETNAMESE_SURNAMES = new Map([
   ['Ly', 'Lý'], ['Mai', 'Mai'], ['Ngo', 'Ngô'], ['Nguyen', 'Nguyễn'], ['Pham', 'Phạm'],
   ['Phan', 'Phan'], ['Ta', 'Tạ'], ['To', 'Tô'], ['Tran', 'Trần'], ['Trinh', 'Trịnh'], ['Truong', 'Trương'],
   ['Vo', 'Võ'], ['Vu', 'Vũ'], ['Vuong', 'Vương'],
-]);
-
-const VIETNAMESE_NAME_OVERRIDES = new Map([
-  ['Bao Chau Ngo', 'Ngô Bảo Châu'],
-  ['Cac Nguyen', 'Nguyễn Cac'],
-  ['Hai-Dang Nguyen', 'Nguyễn Hải-Đăng'],
-  ['Nghiem V. Nguyen', 'Nguyễn V. Nghiêm'],
-  ['Son Thanh Dam', 'Đàm Thanh Sơn'],
-  ['Thai Luan Vu', 'Vũ Thái Luân'],
-  ['Tien Zung Nguyen', 'Nguyễn Tiến Zung'],
-  ['Thuan Nguyen', 'Nguyễn Thuần'],
-  ['XuanLong Nguyen', 'Nguyễn Xuân Long'],
-  // The CV expands the middle initial as Huy; the display order follows Vietnamese naming.
-  ['ThanhVu H. Nguyen', 'Nguyễn Huy Thanh Vũ'],
 ]);
 
 function vietnameseGivenNames(value) {
@@ -253,7 +231,6 @@ export function looksSurnameFirst(name: string): boolean {
 export function vietnameseName(person) {
   if (person.vietnameseName?.trim()) return vietnameseGivenNames(person.vietnameseName.trim());
   const current = displayName(person.name).trim();
-  if (VIETNAMESE_NAME_OVERRIDES.has(current)) return vietnameseGivenNames(VIETNAMESE_NAME_OVERRIDES.get(current));
   const tokens = current.split(/\s+/).filter(Boolean);
   if (tokens.length < 2) return vietnameseGivenNames(current);
   const firstKey = surnameKey(tokens[0]);

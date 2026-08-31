@@ -64,11 +64,11 @@ export function renderRosterEntry(person: RosterEntry, baseUrl = '/') {
     : '';
   const educationDetails = [
     person.postdocInstitution && `Postdoc: ${[displayUniversity(person.postdocInstitution), person.postdocYear].filter(Boolean).join(', ')}`,
-    person.phdInstitution && `PhD: ${[displayUniversity(person.phdInstitution), person.phdYear].filter(Boolean).join(', ')}`,
-    person.msInstitution && `MS: ${[displayUniversity(person.msInstitution), person.msYear].filter(Boolean).join(', ')}`,
-    person.undergradInstitution && `Undergrad: ${[displayUniversity(person.undergradInstitution), person.undergradYear].filter(Boolean).join(', ')}`,
+    person.phdInstitution && `PhD: ${[displayUniversity(person.phdInstitution), person.phdYear, person.phdMajor].filter(Boolean).join(', ')}`,
+    person.msInstitution && `MS: ${[displayUniversity(person.msInstitution), person.msYear, person.msMajor].filter(Boolean).join(', ')}`,
+    person.undergradInstitution && `Undergrad: ${[displayUniversity(person.undergradInstitution), person.undergradYear, person.undergradMajor].filter(Boolean).join(', ')}`,
     (person.mdYear || person.mdInstitution) && `MD: ${[displayUniversity(person.mdInstitution), person.mdYear].filter(Boolean).join(', ')}`,
-    ...(person.otherDegrees ?? []).map((degree) => `${degree.degree}: ${[displayUniversity(degree.institution), degree.year].filter(Boolean).join(', ')}`),
+    ...(person.otherDegrees ?? []).map((degree) => `${degree.degree}: ${[displayUniversity(degree.institution), degree.year, degree.major].filter(Boolean).join(', ')}`),
   ].filter(Boolean);
   const profileIcon = entryIconLink({ className: 'profile-link', href: person.profileUrl, label: `${visibleName} official university profile`, title: 'Official university profile', icon: PROFILE_ICON });
   const personalSiteIcon = person.websiteUrl

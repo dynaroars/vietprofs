@@ -48,7 +48,7 @@ import process from 'node:process';
 import { fileURLToPath } from 'node:url';
 import { isDeepStrictEqual } from 'node:util';
 import { FIELDS, fieldOf } from '../src/data.ts';
-import { HONOR_CATEGORIES, TRACKS } from '../src/roster-constants.ts';
+import { HONOR_CATEGORIES, HONOR_FIELDS, OTHER_DEGREE_FIELDS, ROSTER_FIELDS, TRACKS } from '../src/roster-constants.ts';
 
 const SCRIPT_PATH = fileURLToPath(import.meta.url);
 const REPO_ROOT = resolve(dirname(SCRIPT_PATH), '..');
@@ -68,7 +68,10 @@ const MAX_PROPOSAL_REVISIONS = 2;
 const DEFAULT_AGENT_TIMEOUT_MINUTES = 90;
 const DEFAULT_RATE_LIMIT_WAIT_MINUTES = 30;
 const MAX_CAPTURE_CHARS = 2_000_000;
-const MAINTAINED_PATHS = new Set(['public/data.json', 'maintenance/verification.json', 'maintenance/profile-redirects.json']);
+const MAINTAINED_PATHS = new Set(['public/data.json', 'maintenance/verification.json']);
+const ALLOWED_ROSTER_FIELDS = new Set<string>(ROSTER_FIELDS);
+const ALLOWED_HONOR_FIELDS = new Set<string>(HONOR_FIELDS);
+const ALLOWED_OTHER_DEGREE_FIELDS = new Set<string>(OTHER_DEGREE_FIELDS);
 // Fields whose absence marks an entry as an enrichment gap (missing portrait, Scholar link, or
 // personal/lab site) rather than just plain staleness.
 const COMPLETENESS_FIELDS = ['portrait', 'scholarUrl', 'websiteUrl'];
@@ -445,8 +448,8 @@ function targetTokens(value) {
     ?.map((token) => (token.length > 3 ? token.replace(/s$/, '') : token)) ?? [];
 }
 
-export function remainingBatchSize(options, processedCount = 0) {
-  const total = options.total ?? null;
+function remainingBatchSize(options, processedCount = 0) {
+  const total = options.total;
   return total === null ? options.limit : Math.min(options.limit, total - processedCount);
 }
 
@@ -455,7 +458,7 @@ export function researchIsComplete(research) {
 }
 
 export function needsAnotherBatch(options) {
-  return Boolean(options.all || (options.total ?? null) !== null || options.target?.kind === 'field');
+  return Boolean(options.all || options.total !== null || options.target?.kind === 'field');
 }
 
 export function batchCommitStatus(lastMessage, runId, hasChanges) {
@@ -521,6 +524,9 @@ export function describeRosterChanges(before, after) {
 
 export function proposalValidationError(proposal) {
   if (!proposal || typeof proposal !== 'object' || Array.isArray(proposal)) return 'proposal must be an object';
+  for (const field of Object.keys(proposal)) {
+    if (!ALLOWED_ROSTER_FIELDS.has(field)) return `proposal has unsupported field ${field}`;
+  }
   for (const field of ['name', 'profileUrl', 'lastUpdatedAt', 'university', 'city', 'department']) {
     if (typeof proposal[field] !== 'string' || !proposal[field].trim()) return `proposal has invalid ${field}`;
   }
@@ -537,6 +543,10 @@ export function proposalValidationError(proposal) {
     if (!Array.isArray(proposal.honors)) return 'proposal honors must be an array';
     const honorKeys = new Set();
     for (const honor of proposal.honors) {
+      if (!honor || typeof honor !== 'object' || Array.isArray(honor)) return 'proposal has invalid honor';
+      for (const field of Object.keys(honor)) {
+        if (!ALLOWED_HONOR_FIELDS.has(field)) return `proposal honor has unsupported field ${field}`;
+      }
       for (const field of ['name', 'organization', 'source']) {
         if (typeof honor?.[field] !== 'string' || !honor[field].trim()) return `proposal honor has invalid ${field}`;
       }
@@ -552,7 +562,11 @@ export function proposalValidationError(proposal) {
     if (!Array.isArray(proposal.otherDegrees)) return 'proposal otherDegrees must be an array';
     for (const degree of proposal.otherDegrees) {
       if (!degree || typeof degree.degree !== 'string' || !degree.degree.trim() || typeof degree.institution !== 'string' || !degree.institution.trim()) return 'proposal has invalid other degree';
+      for (const field of Object.keys(degree)) {
+        if (!ALLOWED_OTHER_DEGREE_FIELDS.has(field)) return `proposal other degree has unsupported field ${field}`;
+      }
       if (degree.year !== undefined && (!Number.isInteger(degree.year) || degree.year < 1900 || degree.year > new Date().getFullYear())) return 'proposal has invalid other degree year';
+      if (degree.major !== undefined && (typeof degree.major !== 'string' || !degree.major.trim())) return 'proposal has invalid other degree major';
       if (degree.source !== undefined && !/^https?:\/\//.test(degree.source)) return 'proposal other degree source must use HTTP(S)';
     }
   }
@@ -561,6 +575,9 @@ export function proposalValidationError(proposal) {
   }
   for (const field of ['phdYear', 'undergradYear', 'msYear', 'mdYear', 'postdocYear']) {
     if (proposal[field] !== undefined && (!Number.isInteger(proposal[field]) || proposal[field] < 1900 || proposal[field] > new Date().getFullYear())) return `proposal has invalid ${field}`;
+  }
+  for (const field of ['phdMajor', 'undergradMajor', 'msMajor']) {
+    if (proposal[field] !== undefined && (typeof proposal[field] !== 'string' || !proposal[field].trim())) return `proposal has invalid ${field}`;
   }
   if (proposal.state !== undefined && typeof proposal.state !== 'string') return 'proposal state must be a string';
   if (proposal.country !== undefined && typeof proposal.country !== 'string') return 'proposal country must be a string';
@@ -734,11 +751,10 @@ async function ensureSchemas() {
       status: { type: 'string', enum: ['complete', 'incomplete'] },
       action: { type: 'string', enum: ['keep', 'update', 'remove'] },
       proposedEntryJson: { type: 'string' },
-      redirectToId: { type: ['string', 'null'] },
       report: { type: 'string' },
       sources: { type: 'array', items: { type: 'string' } },
     },
-    required: ['status', 'action', 'proposedEntryJson', 'redirectToId', 'report', 'sources'],
+    required: ['status', 'action', 'proposedEntryJson', 'report', 'sources'],
     additionalProperties: false,
   };
   const reviewSchema = {
@@ -896,8 +912,6 @@ You cannot edit files. Return structured output. Use action "keep" if no roster 
 "update" for a corrected full entry (also use it for a canonical-name correction), or "remove" if
 the person is no longer eligible. For update, proposedEntryJson must be the complete JSON object;
 for keep/remove, use an empty string. Never choose lastUpdatedAt or id—the controller owns them.
-When removing a duplicate merged into another active roster entry, set redirectToId to that
-entry's immutable vp-#### ID; otherwise set redirectToId to null and the old profile becomes retired.
 Set status incomplete whenever material evidence is blocked, conflicting, or unresolved. Include
 every source URL and explain every checked field and proposed change.`;
 }
@@ -1043,10 +1057,8 @@ async function skipPerson(reason, details = null) {
 async function applyProposal(current) {
   const rosterPath = join(REPO_ROOT, 'public/data.json');
   const verificationPath = join(REPO_ROOT, 'maintenance/verification.json');
-  const redirectsPath = join(REPO_ROOT, 'maintenance/profile-redirects.json');
   const roster = await readJson(rosterPath);
   const verification = await readJson(verificationPath);
-  const redirects = await readJson(redirectsPath);
   const finalName = current.proposal?.name ?? null;
   const validationError = current.proposal && proposalValidationError(current.proposal);
   if (validationError) throw new InvalidProposalError(`refusing invalid proposal: ${validationError}`);
@@ -1068,13 +1080,8 @@ async function applyProposal(current) {
   if (index < 0 && finalName) index = roster.findIndex((person) => person.name === finalName);
 
   if (current.proposal === null) {
-    const redirectTo = current.research?.redirectToId || null;
-    if (redirectTo && !roster.some((person) => person.id === redirectTo && person.name !== current.name)) {
-      throw new InvalidProposalError(`refusing invalid merge redirect target: ${redirectTo}`);
-    }
     if (index >= 0) roster.splice(index, 1);
     delete verification[current.name];
-    redirects[current.baseline.id] = { redirectTo, reason: redirectTo ? 'merged' : 'removed' };
   } else {
     if (index < 0) throw new Error(`cannot apply proposal because ${current.name} is missing`);
     const next = { ...current.proposal };
@@ -1102,7 +1109,6 @@ async function applyProposal(current) {
   }
   await writeAtomic(rosterPath, roster);
   await writeAtomic(verificationPath, verification);
-  await writeAtomic(redirectsPath, redirects);
   await runProcess('npm', ['run', 'validate-data'], { label: `validate ${current.name}` });
 }
 
@@ -1124,7 +1130,7 @@ async function commitBatch() {
     return 'existing';
   }
   if (status === 'none') return 'none';
-  await git(['add', 'public/data.json', 'maintenance/verification.json', 'maintenance/profile-redirects.json']);
+  await git(['add', 'public/data.json', 'maintenance/verification.json']);
   await git([
     'commit',
     '-m', `Automated roster maintenance: batch ${state.runId}`,
@@ -1344,51 +1350,11 @@ async function runController(options) {
   await acquireLock();
   await unlink(STOP_FILE).catch(() => {});
   state = await readJson(STATE_FILE, null);
-  if (state && !state.progress) {
-    const legacyBatchNumber = state.options?.batchNumber || 1;
-    const legacyProcessedNames = state.options?.processedNames;
-    state.progress = {
-      processedCount: state.options?.processedCount || 0,
-      processedNames: legacyProcessedNames || [],
-      batchNumber: legacyBatchNumber,
-    };
-    // A legacy second-batch checkpoint without processed names could repeat its first batch.
-    // Invalidate only that unsafe checkpoint; all other legacy state migrates in place.
-    if (legacyBatchNumber > 1
-        && !Array.isArray(legacyProcessedNames)
-        && Array.isArray(state.queue)
-        && state.index === 0
-        && state.current) {
-      state.progress.processedNames = [...state.queue];
-      state.queue = [];
-      state.index = 0;
-      state.current = null;
-      state.status = 'failed';
-    }
-    if (state.options) {
-      delete state.options.processedCount;
-      delete state.options.processedNames;
-      delete state.options.batchNumber;
-    }
-    await saveState();
-  }
   // An exhausted/empty checkpoint cannot resume useful work. Start a fresh selection from the
   // requested CLI options instead; non-empty queues and active in-progress people still resume.
-  const resumable = state && state.status !== 'complete' && Array.isArray(state.queue)
+  const resumable = state?.progress && state?.options && state.status !== 'complete' && Array.isArray(state.queue)
     && (state.queue.length > 0 || state.current);
   if (resumable) {
-    // Normalize checkpoints written by older controller versions. In particular, an omitted
-    // `total` means an uncapped run; it must not become undefined and produce NaN below.
-    state.options = {
-      ...state.options,
-      total: state.options.total ?? null,
-      limit: state.options.limit ?? DEFAULT_LIMIT,
-      staleDays: state.options.staleDays ?? DEFAULT_STALE_DAYS,
-      all: state.options.all ?? false,
-      name: state.options.name ?? null,
-      codexReview: state.options.codexReview ?? false,
-      agent: state.options.agent ?? 'claude',
-    };
     for (const field of ['limit', 'total', 'staleDays', 'all', 'name', 'codexReview']) {
       if (options.provided?.has(field)) state.options[field] = options[field];
     }

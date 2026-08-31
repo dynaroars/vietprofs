@@ -182,9 +182,9 @@ link.
 
 - `id` is a required immutable profile identifier in `vp-####` form. Contributors must not choose
   or edit it manually: after adding an entry, run `npm run assign-profile-ids -- --apply` to assign
-  IDs while reserving retired ones. Tests, development, and builds only verify IDs and do not edit
-  the roster. Preserve the generated ID when correcting a name,
-  appointment, or other facts; never reuse a removed ID.
+  an ID strictly higher than every ID currently in the roster. Tests, development, and builds only
+  verify IDs and do not edit the roster. Preserve the generated ID when correcting a name,
+  appointment, or other facts.
 - `track` must be `Tenure-line`, `Teaching`, `Research`, `Clinical`, or `Emeritus`.
 - `profileUrl` must be a current, working academic or official university profile and must not be a Google Scholar URL. Store Scholar separately in `scholarUrl`; store a maintained personal or lab homepage in `websiteUrl`.
 - `lastUpdatedAt` is required and must be a canonical UTC ISO timestamp in
@@ -205,10 +205,7 @@ link.
 - Store `name` without Vietnamese diacritics and in First (Middle) Last order. This is a display normalization, not a claim about publishing name order.
 - Preserve source URLs for profiles, honors, name evidence, and portraits.
 - Profile URLs are generated from `id`, so a canonical-name correction does not change the public
-  profile URL. For a removal, add the retired ID to `maintenance/profile-redirects.json` with
-  `reason: "removed"` and `redirectTo: null`. For a merge, remove the duplicate and record its
-  retired ID with `reason: "merged"` and the surviving entry's ID as `redirectTo`. The build
-  emits a noindex retirement page or a redirect page, respectively.
+  profile URL. Removing an entry also removes its generated profile page.
 - Store the university's full canonical name in `public/data.json`; shortening is display-only.
   Card displays abbreviate a terminal ` University` (`George Mason University` →
   `George Mason Univ.`) but preserve leading forms such as `University of New Mexico`.
@@ -447,7 +444,10 @@ Two gap patterns are easy to find with a plain scan of the roster file, with ver
 Apply the same data-entry rules as any other correction: add only what the page explicitly states,
 never infer a year from chronology, and route a professional degree without a dedicated field (JD,
 DMD, DO, PharmD, MFA, MBA, etc.) through `otherDegrees` rather than forcing it into `phdInstitution`
-or `msInstitution`. Update `lastUpdatedAt` for any record that gains a fact. Do not advance
+or `msInstitution`. Store explicitly stated fields of study in `phdMajor`, `msMajor`, or
+`undergradMajor`; for entries in `otherDegrees`, use that object's `major` field. Do not introduce
+alternate degree keys: the data validator rejects fields outside the canonical schema. Update
+`lastUpdatedAt` for any record that gains a fact. Do not advance
 `lastVerifiedAt` in the ledger for this sweep alone — it does not perform the full live review the
 periodic refresh requires, so advancing the ledger would let that record skip a real refresh later.
 When a scan turns up no education fields and the primary source states none, leave the record

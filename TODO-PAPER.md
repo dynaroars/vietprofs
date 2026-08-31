@@ -1,8 +1,5 @@
 # TODO before publication
 
-(Done: `analysis/analyze-roster.ts` now imports the canonical `fieldOf`, so published field counts
-match the site. Regenerate with `npm run analyze` whenever the roster changes.)
-
 * Record authors, affiliations, snapshot date, license/publication status, and whether the
   maintenance branch can be cited publicly.
 * Add per-run telemetry: candidate outcomes, review outcomes, costs, latency, and change types.

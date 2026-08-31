@@ -73,6 +73,7 @@ try {
       path: '/submit.html',
       viewport: submitViewport,
       prepare: async (page) => {
+        await page.getByLabel('Modify an existing entry').check();
         // A partial name (an exact match instead pre-fills the record and hides the list).
         await page.locator('#name').fill('Tri Da');
         await page.locator('.correction-suggestion').first().waitFor();
