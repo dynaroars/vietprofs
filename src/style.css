@@ -279,6 +279,13 @@ h1 {
   color: var(--text-primary);
 }
 
+.fun-chip {
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  text-align: left;
+}
+
 .search-input {
   flex: 1;
   width: 100%;
@@ -649,6 +656,87 @@ a.entry-name:focus-visible {
   padding: 3rem 0;
   text-align: center;
   color: var(--text-muted);
+}
+
+/* Static profile pages receive this same stylesheet through the build sync script. */
+.profile-page header,
+.profile-page main {
+  max-width: 880px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+.profile-page header {
+  margin-bottom: 0;
+  padding-top: 3.5rem;
+}
+
+.profile-page main {
+  padding-bottom: 4rem;
+}
+
+.profile-page .eyebrow {
+  color: var(--text-primary);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.profile-page .identity {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.profile-page .portrait {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-page h2 {
+  margin-top: 2rem;
+  font-size: var(--text-lg);
+}
+
+.profile-page .native,
+.profile-page .meta,
+.profile-page .updated,
+.profile-page footer {
+  color: var(--text-muted);
+}
+
+.profile-page .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.profile-page .links a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.profile-page .links a:hover,
+.profile-page .links a:focus-visible {
+  background: var(--hover-bg);
+  color: var(--text-primary);
+}
+
+.profile-page footer {
+  margin-top: 2.5rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--border-color);
+  font-size: var(--text-sm);
 }
 
 /* Insights Dashboard & Visualizations */
@@ -1274,7 +1362,6 @@ a.entry-name:focus-visible {
   .example-chip,
   .ranked-item,
   .entry-name,
-  .example-chip,
   .personal-site-link,
   .scholar-link,
   .profile-link,
@@ -1311,6 +1398,7 @@ a.entry-name:focus-visible {
 
   .entry-name {
     display: inline-flex;
+    min-height: 45px;
   }
 
   .personal-site-link,
@@ -1365,5 +1453,21 @@ a.entry-name:focus-visible {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+  }
+
+  .profile-page .identity {
+    display: block;
+  }
+
+  .profile-page .portrait {
+    margin-bottom: 1rem;
+  }
+
+  .profile-page .eyebrow,
+  .profile-page .links a {
+    display: inline-flex;
+    align-items: center;
+    min-width: 44px;
+    min-height: 44px;
   }
 }

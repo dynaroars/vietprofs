@@ -379,7 +379,7 @@ test('filter choices stay stable and stale filters recover', async () => {
 test('interesting view shows World alone, or the selected region plus World', async () => {
   const page = await context.newPage();
   await page.goto(`${baseUrl}/?loc=World`, { waitUntil: 'networkidle' });
-  await page.locator('.example-chip[data-insights]').click();
+  await page.locator('.example-chip[data-fact]').click();
   assert.equal(await page.locator('.insights-section-block').count(), 1);
   await page.locator('#location-filter').selectOption('France');
   assert.equal(await page.locator('.insights-section-block').count(), 2);

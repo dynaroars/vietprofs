@@ -7,8 +7,8 @@
   "license": "CC-BY-NC-ND-4.0",
   "scripts": {
     "dev": "vite",
-    "predev": "npm run assign-profile-ids && tsx scripts/generate-profile-pages.ts --dev",
-    "prebuild": "npm run assign-profile-ids && cp paper.pdf public/paper.pdf",
+    "predev": "npm run assign-profile-ids && npm run sync-profile-css && tsx scripts/generate-profile-pages.ts --dev",
+    "prebuild": "npm run assign-profile-ids && npm run sync-profile-css && cp paper.pdf public/paper.pdf",
     "build": "vite build && tsx scripts/generate-profile-pages.ts",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
@@ -17,6 +17,7 @@
     "validate-data": "tsx scripts/validate-data.ts",
     "prevalidate-data": "npm run assign-profile-ids",
     "assign-profile-ids": "tsx scripts/assign-profile-ids.ts",
+    "sync-profile-css": "tsx scripts/sync-profile-css.ts",
     "test": "npm run validate-data && tsx --test test/data.test.ts test/maintenance-controller.test.ts test/profile-pages.test.ts test/ui.test.ts test/favorites.test.ts",
     "test:e2e": "npm run build && tsx --test test/browser-smoke.test.ts"
   },

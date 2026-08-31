@@ -14,10 +14,13 @@ test('every roster entry has a unique, immutable static profile path', () => {
   }
 });
 
-test('generated profile pages use one shared dark-mode stylesheet', async () => {
+test('generated profile pages use the same stylesheet source as the directory', async () => {
   const generator = await readFile(new URL('../scripts/generate-profile-pages.ts', import.meta.url), 'utf8');
   const stylesheet = await readFile(new URL('../public/profile.css', import.meta.url), 'utf8');
+  const sourceStylesheet = await readFile(new URL('../src/style.css', import.meta.url), 'utf8');
   assert.match(generator, /<link rel="stylesheet" href="\.\.\/profile\.css">/);
   assert.doesNotMatch(generator, /<style>/);
-  assert.match(stylesheet, /prefers-color-scheme: dark/);
+  assert.equal(stylesheet, sourceStylesheet);
+  assert.match(generator, /class="submission-link"/);
+  assert.match(generator, />Add or update info</);
 });
