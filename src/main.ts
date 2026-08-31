@@ -2,7 +2,8 @@ import './style.css';
 import { loadRoster, buildSearchIndex, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueUndergradInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, LOCATION_LABELS, countryFlag, canonicalRank, displayName, fieldOf, locationMatches, filterRoster, buildUsObservations, buildInternationalObservations, buildLocationObservations, buildQualifiedObservations, buildAwardsFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, STATE_ABBR, type Roster } from './data.ts';
 import { escapeHtml } from './utils.ts';
 import { STATE_GRID } from './state-grid.ts';
-import { fieldDropdownLabel, renderRosterEntry } from './render.ts';
+import { applyFavoriteToggle, fieldDropdownLabel, renderRosterEntry } from './render.ts';
+import { toggleFavorite } from './favorites-store.ts';
 import { locationForQuery } from './filter-state.ts';
 
 function heatTier(count, max) {
@@ -44,6 +45,7 @@ function renderShell() {
         <p class="site-subtitle">A directory of Vietnamese professors worldwide</p>
         <div class="header-actions">
           <a class="paper-link" href="${import.meta.env.BASE_URL}paper.pdf" target="_blank" rel="noopener noreferrer">Read the paper (PDF)</a>
+          <a class="favorites-link" href="favorites.html">Favorites</a>
           <a class="submission-link" href="submit.html">Add or update info</a>
         </div>
       </div>
@@ -685,6 +687,11 @@ async function init() {
   // since renderRoster()/renderFunFacts() both replace its innerHTML wholesale on every update().
   document.getElementById('roster').addEventListener('click', (e) => {
     const target = e.target as HTMLElement;
+    const favorite = target.closest<HTMLButtonElement>('.favorite-toggle');
+    if (favorite?.dataset.id) {
+      applyFavoriteToggle(favorite, toggleFavorite(favorite.dataset.id));
+      return;
+    }
     const tile = target.closest<HTMLButtonElement>('.state-tile');
     if (tile) {
       searchInput.value = '';

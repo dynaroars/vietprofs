@@ -9,11 +9,13 @@ import {
   type RosterEntry,
   vietnameseName,
 } from './data.ts';
+import { isFavorite } from './favorites-store.ts';
 import { escapeHtml, formatRosterDate, formatRosterShortDate } from './utils.ts';
 
 const SCHOLAR_ICON = '<path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3Z"/><path d="M5 12.18V16c0 1.66 3.13 3 7 3s7-1.34 7-3v-3.82l-7 3.82-7-3.82Z"/>';
 const PROFILE_ICON = '<path d="M12 3 3 9v2h18V9L12 3Zm-7 10v6h2v-6H5Zm6 0v6h2v-6h-2Zm6 0v6h2v-6h-2ZM3 21h18v-2H3v2Z"/>';
 const PERSONAL_SITE_ICON = '<path d="m12 3-9 8h3v10h5v-6h2v6h5V11h3l-9-8Z"/>';
+const STAR_ICON = '<path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>';
 
 export function fieldDropdownLabel(field = '') {
   return field.replace(/\bSciences\b/g, '').replace(/\s+/g, ' ').trim();
@@ -31,6 +33,14 @@ export function formatLocation(person: RosterEntry) {
 
 function entryIconLink({ className, href, label, title, icon }) {
   return ` <a class="${className}" href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(label)}" title="${escapeHtml(title)}"><svg viewBox="0 0 24 24" aria-hidden="true">${icon}</svg></a>`;
+}
+
+export function applyFavoriteToggle(button: HTMLButtonElement, favorited: boolean) {
+  button.classList.toggle('is-favorite', favorited);
+  button.setAttribute('aria-pressed', favorited ? 'true' : 'false');
+  const label = favorited ? 'Remove from favorites' : 'Add to favorites';
+  button.setAttribute('aria-label', label);
+  button.title = label;
 }
 
 export function renderRosterEntry(person: RosterEntry, baseUrl = '/') {
@@ -67,10 +77,14 @@ export function renderRosterEntry(person: RosterEntry, baseUrl = '/') {
   const scholarIcon = person.scholarUrl
     ? entryIconLink({ className: 'scholar-link', href: person.scholarUrl, label: `${visibleName} on Google Scholar`, title: 'Google Scholar', icon: SCHOLAR_ICON })
     : '';
+  const favorited = isFavorite(person.id);
+  const favoriteLabel = favorited ? 'Remove from favorites' : 'Add to favorites';
+  const favoriteToggle = `<button type="button" class="favorite-toggle${favorited ? ' is-favorite' : ''}" data-id="${escapeHtml(person.id)}" aria-pressed="${favorited ? 'true' : 'false'}" aria-label="${favoriteLabel}" title="${favoriteLabel}"><svg viewBox="0 0 24 24" aria-hidden="true">${STAR_ICON}</svg></button>`;
 
   return `
     <div class="entry${portrait ? ' entry-with-portrait' : ''}">
       ${portrait}
+      ${favoriteToggle}
       <div class="entry-content">
         <div class="entry-name-row">
           <a class="entry-name" href="${escapeHtml(`${baseUrl}${personPath(person.id)}`)}">${escapeHtml(visibleName)}</a>

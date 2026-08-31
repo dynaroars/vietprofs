@@ -185,7 +185,7 @@ test('mobile pages avoid horizontal overflow and provide usable tap targets', as
     await page.setViewportSize({ width, height: 812 });
     await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
     await assertNoOverflow();
-    await assertTapTargets('.paper-link, .submission-link, .example-chip, .entry-name, .personal-site-link, .scholar-link, .profile-link, .search-scope, .search-input, .field-select');
+    await assertTapTargets('.paper-link, .favorites-link, .submission-link, .example-chip, .entry-name, .personal-site-link, .scholar-link, .profile-link, .favorite-toggle, .search-scope, .search-input, .field-select');
   }
 
   await page.setViewportSize({ width: 320, height: 812 });
@@ -223,6 +223,32 @@ test('every roster card exposes its official profile link', async () => {
     page.evaluate(async () => (await (await fetch('/data.json')).json()).map((person) => new URL(person.profileUrl).href).sort()),
   ]);
   assert.deepEqual(actualUrls, expectedUrls);
+  await page.close();
+});
+
+test('starring a professor lists them on the favorites page', async () => {
+  const page = await context.newPage();
+  await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
+  await page.evaluate(() => localStorage.removeItem('vietprofs:favorites'));
+  await page.reload({ waitUntil: 'networkidle' });
+  const first = page.locator('.entry').first();
+  const name = (await first.locator('.entry-name').textContent())?.trim();
+  const star = first.locator('.favorite-toggle');
+  assert.equal(await star.getAttribute('aria-pressed'), 'false');
+  await star.click();
+  assert.equal(await star.getAttribute('aria-pressed'), 'true');
+  await page.locator('.favorites-link').click();
+  await page.waitForURL(/favorites\.html/);
+  await page.locator('.entry').first().waitFor();
+  assert.equal(await page.locator('.entry').count(), 1);
+  assert.equal((await page.locator('.entry-name').textContent())?.trim(), name);
+  await page.locator('.favorite-toggle').click();
+  await page.locator('.empty-state').waitFor();
+  assert.equal(await page.locator('.entry').count(), 0);
+  assert.match(await page.locator('.empty-state').textContent(), /Star someone on the directory/);
+  await page.locator('.back-link').click();
+  await page.waitForURL((url) => !url.pathname.endsWith('/favorites.html'));
+  await page.locator('.roster .entry').first().waitFor();
   await page.close();
 });
 
