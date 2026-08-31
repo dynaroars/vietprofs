@@ -77,6 +77,7 @@ test('directory loads and searching changes the roster', async () => {
   const pennStateMeta = await page.locator('.entry-meta').allTextContents();
   assert.ok(pennStateMeta.every((text) => text.includes('Penn State')));
   assert.ok(pennStateMeta.every((text) => !text.includes('Pennsylvania State University')));
+  await page.locator('#search-scope-chip').click();
   await page.locator('#search').fill('ThanhVu');
   await page.waitForTimeout(250);
   assert.equal(await page.locator('.entry').count(), 1);
@@ -86,7 +87,10 @@ test('directory loads and searching changes the roster', async () => {
   await page.locator('#search').fill('Nguyen');
   await page.waitForTimeout(250);
   assert.ok((await page.locator('.entry').count()) > 0);
-  assert.match(await page.locator('#result-count').textContent(), /professors?/);
+  const resultCount = await page.locator('#result-count').textContent();
+  assert.match(resultCount, /people/);
+  assert.match(resultCount, /in the World\.$/);
+  assert.doesNotMatch(resultCount, /countr(?:y|ies)/);
   await page.close();
 });
 
@@ -118,6 +122,8 @@ test('undergraduate institution keyword prefix filters the roster and persists i
 
   await search.fill('Ugrad: Boise State University');
   await page.waitForFunction(() => new URL(window.location.href).searchParams.get('q') === 'Ugrad: Boise State University');
+  assert.match(await page.locator('#search-scope-chip').innerText(), /Ugrad/);
+  assert.equal(await search.inputValue(), 'Boise State University');
 
   const expectedCount = await page.evaluate(async () => (
     await (await fetch('/data.json')).json()
@@ -128,8 +134,28 @@ test('undergraduate institution keyword prefix filters the roster and persists i
   assert.ok((await page.locator('.entry-details').allTextContents()).every((text) => text.includes('Undergrad: Boise State')));
 
   await page.reload({ waitUntil: 'networkidle' });
-  assert.equal(await search.inputValue(), 'Ugrad: Boise State University');
+  assert.match(await page.locator('#search-scope-chip').innerText(), /Ugrad/);
+  assert.equal(await search.inputValue(), 'Boise State University');
   assert.equal(await page.locator('.entry').count(), expectedCount);
+  await page.close();
+});
+
+test('awards keyword becomes a removable Honors search scope chip', async () => {
+  const page = await context.newPage();
+  await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
+  const search = page.locator('#search');
+  const chip = page.locator('#search-scope-chip');
+
+  await search.fill('Awards: NSF CAREER Award');
+  await page.waitForFunction(() => new URL(window.location.href).searchParams.get('q') === 'Honors: NSF CAREER Award');
+  assert.match(await chip.innerText(), /🏅 Honors/);
+  assert.equal(await search.inputValue(), 'NSF CAREER Award');
+  assert.ok(await page.locator('.entry').count() > 0);
+
+  await chip.click();
+  assert.equal(await chip.isHidden(), true);
+  assert.equal(await search.inputValue(), 'NSF CAREER Award');
+  await page.waitForFunction(() => new URL(window.location.href).searchParams.get('q') === 'NSF CAREER Award');
   await page.close();
 });
 

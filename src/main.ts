@@ -52,6 +52,17 @@ const KEYWORD_LABELS: Record<string, string> = {
   undergrad: 'Ugrad',
 };
 
+const KEYWORD_ICONS: Record<string, string> = {
+  name: '👤',
+  university: '🏛️',
+  department: '🏢',
+  rank: '🎓',
+  research: '🔬',
+  honors: '🏅',
+  phd: '🎓',
+  undergrad: '📚',
+};
+
 const KEYWORD_EXAMPLES: Record<string, string> = {
   name: 'ThanhVu Nguyen',
   university: 'George Mason University',
@@ -74,6 +85,8 @@ const KEYWORD_ALIASES: Record<string, string> = {
   researcharea: 'research',
   honors: 'honors',
   honor: 'honors',
+  award: 'honors',
+  awards: 'honors',
   phd: 'phd',
   phdinstitution: 'phd',
   undergrad: 'undergrad',
@@ -113,7 +126,13 @@ function renderShell() {
     <div class="controls">
       <div class="search-box">
         <div class="search-fields">
-          <input id="search" class="search-input" type="search" placeholder="Search the roster…" aria-label="Search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-suggestion-panel" />
+          <div class="search-input-shell">
+            <button id="search-scope-chip" class="search-scope-chip" type="button" aria-label="Remove search scope" hidden>
+              <span id="search-scope-chip-label"></span>
+              <span class="search-scope-chip-remove" aria-hidden="true">×</span>
+            </button>
+            <input id="search" class="search-input" type="search" placeholder="Search the roster…" aria-label="Search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-suggestion-panel" />
+          </div>
           <div id="search-suggestion-panel" class="search-suggestion-panel" role="listbox" hidden></div>
         </div>
         <button type="button" id="search-help-btn" class="search-help-btn" aria-haspopup="dialog" aria-expanded="false" aria-controls="search-help-panel" aria-label="Search syntax help" title="Search syntax help">i</button>
@@ -213,17 +232,10 @@ function renderRoster(roster: Roster, { field, location }: RenderOptions = {}) {
   const rosterEl = document.getElementById('roster');
   const countEl = document.getElementById('result-count');
   const universities = new Set(roster.map((p) => p.university)).size;
-  const states = new Set(roster.map((p) => p.state).filter(Boolean)).size;
-  const countries = new Set(roster.map((p) => p.country || 'United States')).size;
   const fieldPhrase = field && field !== 'all' ? ` in ${escapeHtml(field)}` : '';
-
-  let locPhrase = '';
-  if (countries <= 1 && (location === 'US' || roster.every((p) => (p.country || 'United States') === 'United States'))) {
-    locPhrase = ` in ${states} state${states === 1 ? '' : 's'}`;
-  } else {
-    locPhrase = ` in ${countries} countr${countries === 1 ? 'y' : 'ies'}`;
-  }
-  countEl.innerHTML = `${roster.length}${trackQualifier(roster)} professor${roster.length === 1 ? '' : 's'}${fieldPhrase} across ${universities} universit${universities === 1 ? 'y' : 'ies'}${locPhrase}.`;
+  const locationName = location === 'US' ? 'the United States' : location === 'World' || !location ? 'the World' : location;
+  const peopleLabel = roster.length === 1 ? 'person' : 'people';
+  countEl.innerHTML = `${roster.length}${trackQualifier(roster)} ${peopleLabel}${fieldPhrase} across ${universities} universit${universities === 1 ? 'y' : 'ies'} in ${escapeHtml(locationName)}.`;
 
   if (roster.length === 0) {
     rosterEl.innerHTML = '<p class="empty-state">No matches. Try a different search or filter.</p>';
@@ -375,7 +387,7 @@ function renderFunFacts(visibleRoster, selectedLocationLabel, selectedLocation, 
       .join('');
 
   const selectedUniversities = new Set(selectedRoster.map((p) => p.university)).size;
-  const worldCountriesCount = new Set(fullRoster.map((p) => p.country || 'United States')).size;
+  const worldUniversities = new Set(fullRoster.map((p) => p.university)).size;
 
   const selectedSection = selectedIsWorld ? '' : `
       <!-- SECTION 1: SELECTED LOCATION -->
@@ -383,7 +395,7 @@ function renderFunFacts(visibleRoster, selectedLocationLabel, selectedLocation, 
         <div class="insights-section-header">
           <span class="insights-badge">${escapeHtml(selectedLabel)}</span>
           <h2 class="insights-main-heading">${escapeHtml(selectedIsUs ? 'United States Academic Landscape' : `${selectedLocationLabel} Academic Landscape`)}</h2>
-          <p class="insights-main-desc">${selectedRoster.length} professor${selectedRoster.length === 1 ? '' : 's'} across ${selectedUniversities} universit${selectedUniversities === 1 ? 'y' : 'ies'} in the selected location.</p>
+          <p class="insights-main-desc">${selectedRoster.length} ${selectedRoster.length === 1 ? 'person' : 'people'} across ${selectedUniversities} universit${selectedUniversities === 1 ? 'y' : 'ies'} in ${escapeHtml(selectedIsUs ? 'the United States' : selectedLocationLabel.replace(/^\S+\s+/, ''))}.</p>
         </div>
         ${selectedIsUs && selectedRoster.length ? renderStateGrid(selectedRoster) : ''}
         ${selectedRoster.length ? renderDecadesChart(selectedRoster) : ''}
@@ -404,7 +416,7 @@ function renderFunFacts(visibleRoster, selectedLocationLabel, selectedLocation, 
         <div class="insights-section-header">
           <span class="insights-badge">🌐 World</span>
           <h2 class="insights-main-heading">Global &amp; Worldwide Diaspora Landscape</h2>
-          <p class="insights-main-desc">${fullRoster.length} professors across ${worldCountriesCount} countries and regions worldwide.</p>
+          <p class="insights-main-desc">${fullRoster.length} people across ${worldUniversities} universities in the World.</p>
         </div>
         ${renderDecadesChart(fullRoster)}
         ${worldInternationalRoster.length ? renderLeaderboards(worldInternationalRoster, { titleUni: 'Top International Faculty Hubs', descUni: 'Global universities outside the U.S. with the most Vietnamese faculty; click to search.', titlePhd: 'Top International PhD Alma Maters', descPhd: 'Doctoral institutions that trained global faculty; click to search.' }) : ''}
@@ -436,8 +448,6 @@ async function init() {
   // department, rank, research areas, degree institutions, and honors) so a suggestion always yields at least one result.
   const suggestionValues = [
     ...new Set([
-      'honors',
-      'awards',
       ...roster.flatMap((p) => {
         const name = displayName(p.name);
         const withoutInitials = name.replace(/\b[A-Z]\.\s*/g, '').replace(/\s+/g, ' ').trim();
@@ -472,6 +482,8 @@ async function init() {
     ['undergrad', uniqueUndergradInstitutions(roster)],
   ]);
   const searchInput = document.getElementById('search') as HTMLInputElement;
+  const searchScopeChip = document.getElementById('search-scope-chip') as HTMLButtonElement;
+  const searchScopeChipLabel = document.getElementById('search-scope-chip-label') as HTMLElement;
   const suggestionPanel = document.getElementById('search-suggestion-panel') as HTMLElement;
   const locationSelect = document.getElementById('location-filter') as HTMLSelectElement;
   const fieldSelect = document.getElementById('field-filter') as HTMLSelectElement;
@@ -593,9 +605,43 @@ async function init() {
   initializeDropdowns();
   setFilterValues({ location: 'World' });
 
-  // A "Keyword: value" prefix in the free-text box (e.g. "Name: Nguyen") scopes that search to
-  // one field; otherwise it's a full-text search across everything.
+  let activeSearchScope: string | null = null;
+
+  function renderSearchScopeChip() {
+    searchScopeChip.hidden = !activeSearchScope;
+    if (!activeSearchScope) {
+      searchScopeChipLabel.textContent = '';
+      return;
+    }
+    const label = KEYWORD_LABELS[activeSearchScope];
+    searchScopeChipLabel.textContent = `${KEYWORD_ICONS[activeSearchScope]} ${label}`;
+    searchScopeChip.setAttribute('aria-label', `Remove ${label} search scope`);
+  }
+
+  function setSearchValue(raw: string) {
+    const parsed = parseKeywordQuery(raw);
+    activeSearchScope = parsed?.scope ?? null;
+    searchInput.value = parsed?.query ?? raw;
+    renderSearchScopeChip();
+  }
+
+  function clearSearch() {
+    setSearchValue('');
+  }
+
+  function searchQueryValue() {
+    const query = searchInput.value.trim();
+    return activeSearchScope
+      ? `${KEYWORD_LABELS[activeSearchScope]}:${query ? ` ${query}` : ''}`
+      : query;
+  }
+
+  // A "Keyword: value" prefix typed or pasted into the free-text box becomes a visible scope
+  // chip. The chip remains the source of truth until the user removes it.
   function effectiveSearch() {
+    if (activeSearchScope) {
+      return { scope: activeSearchScope, query: searchInput.value, isKeyword: true };
+    }
     const parsed = parseKeywordQuery(searchInput.value);
     return parsed
       ? { scope: parsed.scope, query: parsed.query, isKeyword: true }
@@ -616,7 +662,7 @@ async function init() {
 
   const params = new URLSearchParams(window.location.search);
   if (params.has('q')) {
-    searchInput.value = params.get('q');
+    setSearchValue(params.get('q') ?? '');
   }
   const requestedLocation = params.get('loc') ?? params.get('location');
   filterState.state = params.get('state') ?? '';
@@ -646,7 +692,8 @@ async function init() {
 
   function syncUrl() {
     const next = new URLSearchParams();
-    if (searchInput.value.trim()) next.set('q', searchInput.value.trim());
+    const searchQuery = searchQueryValue();
+    if (searchQuery) next.set('q', searchQuery);
     if (filterState.state) next.set('state', filterState.state);
     if (locationSelect.value !== 'World') next.set('loc', locationSelect.value);
     if (fieldSelect.value !== 'all') next.set('field', fieldSelect.value);
@@ -724,7 +771,7 @@ async function init() {
       option.textContent = value;
       option.dataset.index = String(index);
       option.addEventListener('click', () => {
-        searchInput.value = isKeyword ? `${KEYWORD_LABELS[scope]}: ${value}` : value;
+        setSearchValue(isKeyword ? `${KEYWORD_LABELS[scope]}: ${value}` : value);
         hideSuggestions();
         update({ fromSearch: true });
       });
@@ -735,7 +782,17 @@ async function init() {
     searchInput.setAttribute('aria-expanded', String(matches.length > 0));
   }
   searchInput.addEventListener('focus', showSuggestions);
-  searchInput.addEventListener('input', showSuggestions);
+  searchInput.addEventListener('input', () => {
+    if (!activeSearchScope) {
+      const parsed = parseKeywordQuery(searchInput.value);
+      if (parsed) {
+        activeSearchScope = parsed.scope;
+        searchInput.value = parsed.query;
+        renderSearchScopeChip();
+      }
+    }
+    showSuggestions();
+  });
   searchInput.addEventListener('keydown', (event) => {
       const options = [...suggestionPanel.querySelectorAll<HTMLButtonElement>('.search-suggestion')];
     if (event.key === 'Escape') {
@@ -756,6 +813,14 @@ async function init() {
   searchInput.addEventListener('blur', () => setTimeout(hideSuggestions, 150));
 
   searchInput.addEventListener('input', debounce(() => update({ fromSearch: true }), 150));
+
+  searchScopeChip.addEventListener('click', () => {
+    activeSearchScope = null;
+    renderSearchScopeChip();
+    hideSuggestions();
+    searchInput.focus();
+    update({ fromSearch: true });
+  });
 
   const searchHelpBtn = document.getElementById('search-help-btn') as HTMLButtonElement;
   const searchHelpPanel = document.getElementById('search-help-panel') as HTMLElement;
@@ -792,7 +857,7 @@ async function init() {
 
   document.getElementById('home-link').addEventListener('click', (e) => {
     e.preventDefault(); // already on this page — reset in place instead of reloading
-    searchInput.value = '';
+    clearSearch();
     filterState.state = '';
     filterState.insights = false;
     setFilterValues({ location: 'World' });
@@ -810,7 +875,7 @@ async function init() {
     }
     const tile = target.closest<HTMLButtonElement>('.state-tile');
     if (tile) {
-      searchInput.value = '';
+      clearSearch();
       filterState.state = tile.dataset.state || '';
       filterState.insights = false;
       setFilterValues({ location: 'US' }); // leaving the facts view to show filtered U.S. results
@@ -820,9 +885,9 @@ async function init() {
     const rankedItem = target.closest<HTMLButtonElement>('.ranked-item');
     if (rankedItem && rankedItem.dataset.search) {
       const rankedScope = rankedItem.dataset.scope;
-      searchInput.value = rankedScope && KEYWORD_LABELS[rankedScope]
+      setSearchValue(rankedScope && KEYWORD_LABELS[rankedScope]
         ? `${KEYWORD_LABELS[rankedScope]}: ${rankedItem.dataset.search}`
-        : rankedItem.dataset.search;
+        : rankedItem.dataset.search);
       filterState.insights = false;
       fieldSelect.value = 'all';
       trackSelect.value = 'all';
@@ -881,34 +946,34 @@ async function init() {
     if (!btn) return;
     filterState.state = '';
     if (btn.dataset.fact) {
-      searchInput.value = '';
+      clearSearch();
       filterState.insights = true;
       setFilterValues({ location: locationSelect.value });
       update();
       return;
     }
     if (btn.dataset.field) {
-      searchInput.value = '';
+      clearSearch();
       filterState.insights = false;
       setFilterValues({ location: 'World', field: btn.dataset.field });
       update();
       return;
     }
     if (btn.dataset.track) {
-      searchInput.value = '';
+      clearSearch();
       filterState.insights = false;
       setFilterValues({ location: 'World', track: btn.dataset.track });
       update();
       return;
     }
     if (btn.dataset.loc) {
-      searchInput.value = '';
+      clearSearch();
       filterState.insights = false;
       setFilterValues({ location: btn.dataset.loc });
       update();
       return;
     }
-    searchInput.value = btn.textContent;
+    setSearchValue(btn.textContent ?? '');
     filterState.insights = false;
     // If the selected search term is not found within the current location filter, widen to 'World'
     const matchesCurrent = roster.some(
