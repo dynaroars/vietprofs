@@ -19,7 +19,6 @@ export default defineConfig({
       input: {
         main: resolve(root, 'index.html'),
         submit: resolve(root, 'submit.html'),
-        favorites: resolve(root, 'favorites.html'),
       },
     },
   },
