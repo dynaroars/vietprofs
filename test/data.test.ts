@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
-import { FIELDS, LOCATIONS, HEALTH_SUBFIELDS, canonicalRank, displayName, displayUniversity, fieldOf, healthSubfieldOf, continentOf, locationMatches, buildFunFacts, buildAwardsFunFacts, buildInternationalObservations, buildLocationObservations, filterRoster } from '../src/data.ts';
+import { FIELDS, LOCATIONS, HEALTH_SUBFIELDS, canonicalRank, displayName, displayUniversity, fieldOf, healthSubfieldOf, continentOf, locationMatches, buildFunFacts, buildAwardsFunFacts, buildInternationalObservations, buildLocationObservations, filterRoster, looksSurnameFirst } from '../src/data.ts';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const roster = JSON.parse(readFileSync(join(__dirname, '../public/data.json'), 'utf8'));
@@ -394,6 +394,22 @@ test('unique helpers never contain undefined or null values', async () => {
   assert.ok(!phds.includes(undefined) && !phds.includes(null));
   assert.ok(!undergrads.includes(undefined) && !undergrads.includes(null));
   assert.ok(!ranks.includes(undefined) && !ranks.includes(null));
+});
+
+test('looksSurnameFirst flags names stored in Vietnamese (surname-first) order', () => {
+  // Bug this guards: several roster entries were once stored as "Tran Van Tho", "Dang Thuy Tram",
+  // etc. instead of the roster's "First (Middle) Last" convention.
+  assert.equal(looksSurnameFirst('Nguyen Van Test'), true);
+  assert.equal(looksSurnameFirst('Tran Thi Hong'), true);
+  assert.equal(looksSurnameFirst('Le Duc Anh'), true);
+  // Already correct: given name first, recognized surname last.
+  assert.equal(looksSurnameFirst('Thi Hong Tran'), false);
+  assert.equal(looksSurnameFirst('ThanhVu H. Nguyen'), false);
+  // A single token, or a name with a "- University" disambiguator, must not false-positive.
+  assert.equal(looksSurnameFirst('Nguyen'), false);
+  assert.equal(looksSurnameFirst('Thuan Nguyen - University of North Texas'), false);
+  // Non-Vietnamese names are never flagged.
+  assert.equal(looksSurnameFirst('John Smith'), false);
 });
 
 test('escapeHtml safely handles undefined, null, and special characters', async () => {

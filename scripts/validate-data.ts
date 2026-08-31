@@ -1,6 +1,7 @@
 import { access, readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { HONOR_CATEGORIES, REQUIRED_ROSTER_STRINGS, TRACKS, UTC_TIMESTAMP_PATTERN } from '../src/roster-constants.ts';
+import { looksSurnameFirst } from '../src/data.ts';
 
 type JsonRecord = Record<string, any>;
 
@@ -9,6 +10,16 @@ const verificationFile = resolve('maintenance/verification.json');
 const redirectsFile = resolve('maintenance/profile-redirects.json');
 const allowedTracks = new Set<string>(TRACKS);
 const allowedHonorCategories = new Set<string>(HONOR_CATEGORIES);
+
+// looksSurnameFirst() is a heuristic (see its definition), so it's a review flag, not an
+// infallible rule. Names checked here and confirmed already correct (verified against DBLP,
+// faculty pages, or an explicit maiden-name pattern) — see the git history for the check —
+// are allowlisted so the test doesn't force a wrong "fix" on them.
+const surnameFirstAllowlist = new Set<string>([
+  'Truong Nghiem', // published as "Truong X. Nghiem" across 83 DBLP entries; Nghiem is his surname
+  'Dinh Phung', // published as "Dinh Q. Phung" / "Dinh Quoc Phung" across 552 DBLP entries; Phung is his surname
+  'Tran Nguyen Templeton', // "Nguyen" is a preserved maiden name, not a misordered surname
+]);
 
 function fail(file, message) {
   throw new Error(`${file}: ${message}`);
@@ -38,6 +49,7 @@ if (!redirects || typeof redirects !== 'object' || Array.isArray(redirects)) {
 const names = new Set<string>();
 const ids = new Set<string>();
 const profileUrls = new Set();
+const scholarUrls = new Set();
 const portraits = new Set();
 for (const [index, person] of roster.entries()) {
   const label = `entry ${index + 1}`;
@@ -51,6 +63,13 @@ for (const [index, person] of roster.entries()) {
   if (person.websiteUrl !== undefined && !/^https?:\/\//.test(person.websiteUrl)) fail(rosterFile, `${label} websiteUrl must use HTTP(S)`);
   if (person.websiteUrl !== undefined && person.websiteUrl === person.profileUrl) fail(rosterFile, `${label} websiteUrl must differ from profileUrl`);
   if (person.scholarUrl !== undefined && !/^https:\/\//.test(person.scholarUrl)) fail(rosterFile, `${label} scholarUrl must use HTTPS`);
+  if (person.scholarUrl !== undefined) {
+    if (scholarUrls.has(person.scholarUrl)) fail(rosterFile, `${label} duplicates scholarUrl ${person.scholarUrl} — a Google Scholar profile belongs to one person; this usually means a placeholder/wrong ID got copied across a batch`);
+    scholarUrls.add(person.scholarUrl);
+  }
+  if (looksSurnameFirst(person.name) && !surnameFirstAllowlist.has(person.name)) {
+    fail(rosterFile, `${label} name "${person.name}" looks stored surname-first (Vietnamese order) instead of "First (Middle) Last" — reorder it, or if the first token is genuinely this person's given name, add it to surnameFirstAllowlist in scripts/validate-data.ts with a note on how you confirmed it`);
+  }
   if ((person.portrait === undefined) !== (person.portraitSource === undefined)) {
     fail(rosterFile, `${label} portrait and portraitSource must be provided together`);
   }

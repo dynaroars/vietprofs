@@ -237,6 +237,19 @@ function surnameKey(token) {
   return stripDiacritics(token.replace(/[.,]/g, ''));
 }
 
+// True when a stored `name` has a recognized Vietnamese surname as its first token and a
+// non-surname last token — a strong signal it was entered surname-first (Vietnamese order)
+// instead of the roster's "First (Middle) Last" convention. Flags for maintainer review, not an
+// infallible test: some people's actual surname just isn't in VIETNAMESE_SURNAMES (e.g. "Nghiem",
+// "Phung"), and some names carry a preserved maiden name rather than a swapped surname.
+export function looksSurnameFirst(name: string): boolean {
+  const tokens = name.split(' - ')[0].split(/\s+/).filter(Boolean);
+  if (tokens.length < 2) return false;
+  const firstKey = surnameKey(tokens[0]);
+  const lastKey = surnameKey(tokens.at(-1));
+  return VIETNAMESE_SURNAMES.has(firstKey) && !VIETNAMESE_SURNAMES.has(lastKey);
+}
+
 export function vietnameseName(person) {
   if (person.vietnameseName?.trim()) return vietnameseGivenNames(person.vietnameseName.trim());
   const current = displayName(person.name).trim();
