@@ -6,6 +6,12 @@
     "allowImportingTsExtensions": true,
     "types": ["node"],
     "strict": false,
+    "useUnknownInCatchVariables": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+    "noImplicitOverride": true,
+    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "skipLibCheck": true
   },

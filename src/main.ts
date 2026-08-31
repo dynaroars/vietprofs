@@ -17,7 +17,7 @@ function heatTier(count, max) {
 
 const app = document.getElementById('app');
 
-function shuffle(values) {
+function shuffle<T>(values: readonly T[]): T[] {
   const result = [...values];
   for (let index = result.length - 1; index > 0; index -= 1) {
     const swapIndex = Math.floor(Math.random() * (index + 1));
@@ -26,7 +26,7 @@ function shuffle(values) {
   return result;
 }
 
-function pickRandomUnique<T>(values: T[], count: number): T[] {
+function pickRandomUnique<T>(values: readonly T[], count: number): T[] {
   return shuffle([...new Set(values)]).slice(0, count);
 }
 
@@ -416,13 +416,13 @@ async function init() {
     ['phd', uniquePhdInstitutions(roster)],
     ['undergrad', uniqueUndergradInstitutions(roster)],
   ]);
-  const searchInput = document.getElementById('search');
-  const searchScopeSelect = document.getElementById('search-scope');
-  const suggestionPanel = document.getElementById('search-suggestion-panel');
-  const locationSelect = document.getElementById('location-filter');
-  const fieldSelect = document.getElementById('field-filter');
-  const trackSelect = document.getElementById('track-filter');
-  const sortSelect = document.getElementById('sort-order');
+  const searchInput = document.getElementById('search') as HTMLInputElement;
+  const searchScopeSelect = document.getElementById('search-scope') as HTMLSelectElement;
+  const suggestionPanel = document.getElementById('search-suggestion-panel') as HTMLElement;
+  const locationSelect = document.getElementById('location-filter') as HTMLSelectElement;
+  const fieldSelect = document.getElementById('field-filter') as HTMLSelectElement;
+  const trackSelect = document.getElementById('track-filter') as HTMLSelectElement;
+  const sortSelect = document.getElementById('sort-order') as HTMLSelectElement;
   const filterState = { state: '', insights: false };
 
   function optionElement(value, label) {

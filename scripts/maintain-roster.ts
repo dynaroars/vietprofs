@@ -111,6 +111,18 @@ function compact(value, limit = 30_000) {
   return text.length <= limit ? text : `${text.slice(0, limit)}\n[truncated]`;
 }
 
+function hasErrorCode(error: unknown, code: string) {
+  return error instanceof Error && 'code' in error && error.code === code;
+}
+
+function errorMessage(error: unknown) {
+  return error instanceof Error ? error.message : String(error);
+}
+
+function errorDetails(error: unknown) {
+  return error instanceof Error ? error.stack || error.message : String(error);
+}
+
 async function exists(path) {
   try {
     await access(path);
@@ -124,7 +136,7 @@ async function readJson<T = any>(path: string, fallback: T | null = null): Promi
   try {
     return JSON.parse(await readFile(path, 'utf8'));
   } catch (error) {
-    if (error.code === 'ENOENT') return fallback;
+    if (hasErrorCode(error, 'ENOENT')) return fallback;
     throw error;
   }
 }
@@ -155,7 +167,7 @@ function processIsAlive(pid) {
     process.kill(pid, 0);
     return true;
   } catch (error) {
-    return error.code === 'EPERM';
+    return hasErrorCode(error, 'EPERM');
   }
 }
 
@@ -1176,7 +1188,7 @@ async function processCurrent(schemas) {
       await saveState();
     } catch (error) {
       if (error instanceof StopRequestedError || error instanceof BlockedError) throw error;
-      return skipPerson('research failed repeatedly', error.message);
+      return skipPerson('research failed repeatedly', errorMessage(error));
     }
   }
 
@@ -1208,7 +1220,7 @@ async function processCurrent(schemas) {
       await saveState();
     } catch (error) {
       if (error instanceof StopRequestedError || error instanceof BlockedError) throw error;
-      return skipPerson('review failed repeatedly', error.message);
+      return skipPerson('review failed repeatedly', errorMessage(error));
     }
   }
 
@@ -1517,7 +1529,7 @@ async function main() {
     }
     if (state) {
       state.status = error instanceof BlockedError ? 'blocked' : 'failed';
-      state.error = compact(error.stack || error.message, 10_000);
+      state.error = compact(errorDetails(error), 10_000);
       await saveState();
     }
     throw error;
@@ -1528,7 +1540,7 @@ async function main() {
 
 if (process.argv[1] && resolve(process.argv[1]) === SCRIPT_PATH) {
   main().catch((error) => {
-    console.error(error.stack || error.message);
+    console.error(errorDetails(error));
     process.exitCode = 1;
   });
 }

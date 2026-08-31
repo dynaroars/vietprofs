@@ -3,7 +3,7 @@ import { test, before, after } from 'node:test';
 import assert from 'node:assert/strict';
 import { spawn } from 'node:child_process';
 import { createRequire } from 'node:module';
-import { get } from 'node:https';
+import { get } from 'node:http';
 
 const require = createRequire(import.meta.url);
 const { chromium } = require('playwright');
@@ -17,7 +17,7 @@ async function waitForServer(url) {
   for (let attempt = 0; attempt < 40; attempt += 1) {
     try {
       const status = await new Promise<number>((resolve, reject) => {
-        const request = get(url, { rejectUnauthorized: false }, (response) => {
+        const request = get(url, (response) => {
           response.resume();
           resolve(response.statusCode ?? 0);
         });
@@ -36,10 +36,10 @@ before(async () => {
   server = spawn('npm', ['run', 'preview', '--', '--host', '127.0.0.1', '--port', String(port)], {
     stdio: 'ignore',
   });
-  baseUrl = `https://127.0.0.1:${port}`;
+  baseUrl = `http://127.0.0.1:${port}`;
   await waitForServer(`${baseUrl}/`);
   browser = await chromium.launch({ headless: true });
-  context = await browser.newContext({ ignoreHTTPSErrors: true });
+  context = await browser.newContext();
 });
 
 after(async () => {

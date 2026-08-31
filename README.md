@@ -29,17 +29,15 @@ npm run figures   # rebuild and recapture the paper's screenshot figures
 `npm run analyze` and `npm run figures` regenerate everything the manuscript reports about the
 current snapshot; run both after a roster change that the paper cites.
 
-By default `npm run dev` only listens on `localhost`. To make the dev server reachable from other
-machines on your network over HTTPS:
+By default `npm run dev` serves the site at `http://localhost:5173`. To make the dev server
+reachable from other machines on your network:
 
 ```bash
 npm run dev -- --host
 ```
 
-This binds to all network interfaces and serves a self-signed certificate via
-`@vitejs/plugin-basic-ssl` (already configured in `vite.config.ts`). Other machines on the network
-can then browse to `https://<this-machine's-hostname-or-IP>:5173`, accepting the self-signed
-certificate warning on first visit.
+This binds to all network interfaces. Other machines can then browse to
+`http://<this-machine's-hostname-or-IP>:5173`.
 
 ## Data and contributions
 
