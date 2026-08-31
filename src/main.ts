@@ -768,7 +768,7 @@ async function init() {
   const facts = buildFunFacts(roster);
   const randomFact = facts[Math.floor(Math.random() * facts.length)];
   type Example = { type: 'search' | 'field' | 'track' | 'loc' | 'fact'; value: string; label?: string };
-  const examples: Example[] = [
+  const examples: Example[] = shuffle([
     ...pickRandomUnique(roster.map((person) => displayName(person.name)), 2).map((value) => ({ type: 'search' as const, value })),
     ...pickRandomUnique(uniqueDepartments(roster), 1).map((value) => ({ type: 'search' as const, value })),
     ...pickRandomUnique(uniqueStates(roster), 1).map((value) => ({ type: 'search' as const, value })),
@@ -776,8 +776,8 @@ async function init() {
     ...pickRandomUnique(populatedFields, 2).map((value) => ({ type: 'field' as const, value, label: fieldDropdownLabel(value) })),
     ...pickRandomUnique(TRACKS, 1).map((value) => ({ type: 'track' as const, value })),
     ...pickRandomUnique(populatedLocations, 1).map((value) => ({ type: 'loc' as const, value })),
-    { type: 'fact', value: randomFact },
-  ].sort(() => Math.random() - 0.5) as Example[];
+  ] as Example[]);
+  examples.push({ type: 'fact', value: randomFact });
   const examplesEl = document.getElementById('examples');
   examplesEl.replaceChildren();
   const label = document.createElement('span');
