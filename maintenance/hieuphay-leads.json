@@ -65,7 +65,9 @@
       "country": "US",
       "npapers": 13,
       "cited": 1580,
-      "status": "pending"
+      "status": "included",
+      "note": "Verified and added to the roster as vp-1012.",
+      "rosterId": "vp-1012"
     },
     {
       "name": "Thanh Huynh",
@@ -111,7 +113,8 @@
       "country": "US",
       "npapers": 73,
       "cited": 1364,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Vladik Kreinovich — Russian/Soviet-American computer scientist, not a Vietnamese name; name-classifier false positive."
     },
     {
       "name": "Vuong Thao Tran",
@@ -127,7 +130,9 @@
       "country": "AU",
       "npapers": 28,
       "cited": 1327,
-      "status": "pending"
+      "status": "included",
+      "note": "Verified and added to the roster as vp-1013.",
+      "rosterId": "vp-1013"
     },
     {
       "name": "Tri Vi Dang",
@@ -165,7 +170,9 @@
       "country": "AU",
       "npapers": 35,
       "cited": 1047,
-      "status": "pending"
+      "status": "included",
+      "note": "Verified and added to the roster as vp-1014.",
+      "rosterId": "vp-1014"
     },
     {
       "name": "Tran Thai Ha Nguyen",
@@ -209,7 +216,8 @@
       "country": "AU",
       "npapers": 7,
       "cited": 943,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Appears to have moved back to Vietnam (University of Economics Ho Chi Minh City affiliation on recent papers); no current University of Sydney faculty page found."
     },
     {
       "name": "Dinh Tran Ngoc Huy",
@@ -234,7 +242,8 @@
       "country": "AU",
       "npapers": 69,
       "cited": 899,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Stale lead: now University Research-Track Professor of Finance at VinUniversity, Hanoi, Vietnam — no longer an outside-Vietnam appointment."
     },
     {
       "name": "Khánh Hoàng",
@@ -242,7 +251,9 @@
       "country": "NZ",
       "npapers": 58,
       "cited": 882,
-      "status": "pending"
+      "status": "included",
+      "note": "Verified and added to the roster as vp-1015.",
+      "rosterId": "vp-1015"
     },
     {
       "name": "Thi Thu Ha Nguyen",
@@ -258,7 +269,9 @@
       "country": "US",
       "npapers": 3,
       "cited": 840,
-      "status": "pending"
+      "status": "included",
+      "note": "Verified and added to the roster as vp-1016 (full name Hoai-Luu Q. Nguyen).",
+      "rosterId": "vp-1016"
     },
     {
       "name": "Duy Nguyen",
@@ -274,7 +287,8 @@
       "country": "NZ",
       "npapers": 32,
       "cited": 831,
-      "status": "pending"
+      "status": "duplicate",
+      "note": "Same person as existing roster entry vp-0955 (Hung Do, Massey University) — the raw lead's name was missing the surname 'Do'. No new entry added; existing vp-0955 record is already complete."
     },
     {
       "name": "Quoc H. Nguyen",
@@ -330,7 +344,8 @@
       "country": "US",
       "npapers": 16,
       "cited": 633,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Hyphenated American surname (Freedman-Doan); no indication of Vietnamese identity beyond the 'Doan' token; name-classifier false positive."
     },
     {
       "name": "Vo Anh",
@@ -354,7 +369,8 @@
       "country": "US",
       "npapers": 3,
       "cited": 550,
-      "status": "pending"
+      "status": "duplicate",
+      "note": "Same person as existing roster entry vp-0133 (Quang Vuong, NYU); USC is a stale affiliation from the 1980s-2000s, not a current or separate appointment. Confirmed distinct from the unrelated 'Quan-Hoang Vuong' (mindsponge methodology, Vietnam-based)."
     },
     {
       "name": "Tuan Anh Nguyen",
@@ -402,7 +418,9 @@
       "country": "US",
       "npapers": 12,
       "cited": 506,
-      "status": "pending"
+      "status": "included",
+      "note": "Verified and added to the roster as vp-1018 (full name Huong Thi Thu Le).",
+      "rosterId": "vp-1018"
     },
     {
       "name": "B Pham",
@@ -426,7 +444,8 @@
       "country": "NP",
       "npapers": 16,
       "cited": 474,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Real person, but actually Associate Professor/Vice President at Vietnam National University of Agriculture, Hanoi — inside Vietnam. The Nepal institution in the raw lead is an OpenAlex misattribution."
     },
     {
       "name": "Tho Pham",
@@ -442,7 +461,8 @@
       "country": "US",
       "npapers": 49,
       "cited": 468,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Long-tenured Associate Professor of Finance at DePaul, but no evidence of a current appointment (bio page from 2013, absent from current faculty list, no student reviews after 2021) — likely retired."
     },
     {
       "name": "Jeremy Nguyen",
@@ -490,7 +510,9 @@
       "country": "AU",
       "npapers": 34,
       "cited": 423,
-      "status": "pending"
+      "status": "included",
+      "note": "Verified and added to the roster as vp-1019.",
+      "rosterId": "vp-1019"
     },
     {
       "name": "Xuan-Binh (Benjamin) Vu",
@@ -506,7 +528,9 @@
       "country": "GB",
       "npapers": 32,
       "cited": 412,
-      "status": "pending"
+      "status": "included",
+      "note": "Verified and added to the roster as vp-1020.",
+      "rosterId": "vp-1020"
     },
     {
       "name": "Ngoc Thang Doan",
@@ -514,7 +538,8 @@
       "country": "KZ",
       "npapers": 46,
       "cited": 412,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Actual affiliation is Banking Academy of Vietnam, Hanoi — inside Vietnam. No connection found to any Kazakhstan institution; the KZ institution in the raw lead is an OpenAlex misattribution."
     },
     {
       "name": "Kim Cuong Ly",
