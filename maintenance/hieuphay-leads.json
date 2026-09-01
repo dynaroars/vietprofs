@@ -2047,7 +2047,8 @@
       "country": "GB",
       "npapers": 3,
       "cited": 89,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Current post is Research Fellow, Queen's Business School, Queen's University Belfast (moved from Greenwich, where he did his PhD) — a term-limited/grant-funded research post, not a stable faculty-level research appointment."
     },
     {
       "name": "Binh Huu",
@@ -2055,7 +2056,9 @@
       "country": "AU",
       "npapers": 8,
       "cited": 88,
-      "status": "pending"
+      "status": "duplicate",
+      "rosterId": "vp-1022",
+      "note": "Matches existing roster entry vp-1022 'Binh Do' (Senior Lecturer, Banking and Finance, Monash University) — 'Huu' is a dropped middle name; the UQ institution string here is stale/coauthor-derived (frequent coauthor Robert Faff was previously at UQ)."
     },
     {
       "name": "Anh Nguyen",
@@ -2071,7 +2074,8 @@
       "country": "US",
       "npapers": 6,
       "cited": 88,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Postdoctoral Research Fellow, HIV Center for Clinical and Behavioral Studies, Columbia — postdoctoral role, not a faculty appointment."
     },
     {
       "name": "Van T. Nguyen",
@@ -2119,7 +2123,8 @@
       "country": "US",
       "npapers": 4,
       "cited": 86,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No current faculty appointment found; current role is Research Associate (staff) at WVU Health Affairs Institute, a policy/evaluation institute, not a faculty-ladder position."
     },
     {
       "name": "Khoa Hoang",
@@ -2127,7 +2132,9 @@
       "country": "AU",
       "npapers": 16,
       "cited": 86,
-      "status": "pending"
+      "status": "included",
+      "note": "Verified as Senior Lecturer in Finance, UQ Business School (Tenure-line). Added to the roster.",
+      "rosterId": "vp-1051"
     },
     {
       "name": "Hien Tran",
@@ -2159,7 +2166,8 @@
       "country": "AU",
       "npapers": 8,
       "cited": 81,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Actually a Lecturer in Marketing and Management at Van Lang University, Ho Chi Minh City, Vietnam; the Griffith connection is only a completed professional-development certificate (AFHEA), not an appointment. Vietnam-based, fails the outside-Vietnam requirement. Confirmed distinct from Paul Quang Duong Tran, Quang Ngoc Vinh Tran, and Minh Quang Tran already in the roster."
     },
     {
       "name": "Ca Nguyen",
@@ -2167,7 +2175,9 @@
       "country": "US",
       "npapers": 9,
       "cited": 81,
-      "status": "pending"
+      "status": "included",
+      "note": "Verified as Teaching Assistant Professor, Department of Finance, Sam M. Walton College of Business, University of Arkansas (Teaching track, per the institution's named non-tenure-track modifier-rank policy). Added to the roster.",
+      "rosterId": "vp-1052"
     },
     {
       "name": "Hieu Tran",
@@ -2232,7 +2242,9 @@
       "country": "CA",
       "npapers": 8,
       "cited": 80,
-      "status": "pending"
+      "status": "duplicate",
+      "rosterId": "vp-1019",
+      "note": "Matches existing roster entry vp-1019 'Duy-Minh Dang' (Senior Lecturer, School of Mathematics and Physics, The University of Queensland) — Waterloo is his completed postdoctoral institution (already recorded there), not a current appointment."
     },
     {
       "name": "Hien Thi Kim Nguyen",
@@ -2256,7 +2268,8 @@
       "country": "AU",
       "npapers": 7,
       "cited": 77,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No current faculty appointment found anywhere; only a 2016 Curtin PhD (Mathematics & Statistics) and 2016-2018 postdoc-era coauthored papers, with no later academic footprint located."
     },
     {
       "name": "Van Hoang Vu",
@@ -2272,7 +2285,9 @@
       "country": "US",
       "npapers": 2,
       "cited": 76,
-      "status": "pending"
+      "status": "included",
+      "note": "Verified as Assistant Professor, The Dartmouth Institute for Health Policy and Clinical Practice, Geisel School of Medicine, Dartmouth College (Tenure-line; joined Fall 2024 per Dartmouth's new-faculty announcement). Added to the roster.",
+      "rosterId": "vp-1053"
     },
     {
       "name": "Chi Truong",
@@ -2280,7 +2295,9 @@
       "country": "AU",
       "npapers": 14,
       "cited": 76,
-      "status": "pending"
+      "status": "included",
+      "note": "Verified as Associate Professor, Department of Actuarial Studies and Business Analytics, Macquarie Business School (Tenure-line). Added to the roster.",
+      "rosterId": "vp-1054"
     },
     {
       "name": "Linh Xuan Diep Nguyen",
@@ -2312,7 +2329,9 @@
       "country": "GB",
       "npapers": 6,
       "cited": 74,
-      "status": "pending"
+      "status": "included",
+      "note": "Verified as Lecturer, Department of Accounting and Finance, Lancaster University Management School (Tenure-line). Confirmed distinct from Quang-Cuong Pham (robotics, NTU Singapore) already in the roster. Added to the roster.",
+      "rosterId": "vp-1055"
     },
     {
       "name": "Ngoc Giang Hoang",
@@ -2320,7 +2339,8 @@
       "country": "NL",
       "npapers": 3,
       "cited": 74,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No current university faculty position found anywhere; last confirmed academic record is a 2010 Swiss Finance Institute PhD-era award and a single 2013 working paper, with no later footprint. Utrecht affiliation in the source dataset could not be corroborated."
     },
     {
       "name": "Larry Pham",
@@ -2328,7 +2348,8 @@
       "country": "US",
       "npapers": 3,
       "cited": 73,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No economist by this name could be located at Portland State or anywhere else after extensive search; likely an author-disambiguation error in the source dataset. The only Portland State 'Larry Pham' found is an unrelated engineering-management master's student."
     },
     {
       "name": "Dzung Bui",
@@ -2336,7 +2357,8 @@
       "country": "DE",
       "npapers": 8,
       "cited": 73,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Current Marburg role's title could not be confirmed as a stable faculty rank (appears to be research staff in Bernd Hayo's macroeconomics group); the only confirmed named appointment is an explicit term-limited Vertretungsprofessur (substitute professorship) at Goethe University Frankfurt, which does not meet the stable-appointment requirement."
     },
     {
       "name": "Oliver T. Nguyen",
