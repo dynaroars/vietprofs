@@ -442,22 +442,22 @@ export function uniqueCountries(roster: Roster): string[] {
 
 // The broad fields used by the roster, shown even before each field has entries.
 export const FIELDS = [
-  'Computer & Information Sciences',
-  'Engineering',
-  'Mathematics',
-  'Statistics & Data Science',
-  'Physics & Astronomy',
-  'Chemistry',
-  'Biological & Biomedical Sciences',
-  'Earth & Environmental Sciences',
   'Agricultural & Natural Resource Sciences',
-  'Health Sciences',
+  'Arts & Design',
+  'Biological & Biomedical Sciences',
   'Business & Economics',
-  'Social & Behavioral Sciences',
+  'Chemistry',
+  'Computer & Information Sciences',
+  'Earth & Environmental Sciences',
   'Education',
+  'Engineering',
+  'Health Sciences',
   'Humanities',
   'Law & Public Affairs',
-  'Arts & Design',
+  'Mathematics',
+  'Physics & Astronomy',
+  'Social & Behavioral Sciences',
+  'Statistics & Data Science',
   'Others',
 ];
 
@@ -532,6 +532,34 @@ const FIELD_OVERRIDES = new Map([
   // Osaka SANKEN lab is statistical causal inference / ML; the institute name would otherwise
   // fall through as Others.
   ['SANKEN, Department of Reasoning for Intelligence|Osaka University', 'Computer & Information Sciences'],
+  // Generic interdisciplinary-institute name gives no field signal, but Le Bin Ho's own research
+  // (quantum information, open quantum systems) is squarely Physics & Astronomy.
+  ['Frontier Research Institute for Interdisciplinary Sciences|Tohoku University', 'Physics & Astronomy'],
+  // Program name reads more clinical than agricultural, but Thu Dung Doan's own research
+  // (livestock vaccine development) is animal science, which already buckets under Agricultural
+  // & Natural Resource Sciences elsewhere in this taxonomy.
+  ['International Degree Program in Animal Vaccine Technology|National Pingtung University of Science and Technology', 'Agricultural & Natural Resource Sciences'],
+  // "Administrative Studies" alone reads as public administration, but Phuong-Anh Nguyen's own
+  // title and research (Finance) put her in York's business school.
+  ['School of Administrative Studies|York University', 'Business & Economics'],
+  // INSEAD is a business school; "Strategy" alone has no business keyword.
+  ['Strategy|INSEAD', 'Business & Economics'],
+  // LISN (Laboratoire Interdisciplinaire des Sciences du Numerique) is Paris-Saclay's digital
+  // sciences lab; the acronym alone has no computing keyword.
+  ['LISN/CNRS|Université Paris-Saclay', 'Computer & Information Sciences'],
+  // Bare "Social Sciences" gives no field signal, but Van Tho Tran's own research (international
+  // and development economics) is Business & Economics.
+  ['Social Sciences|Waseda University', 'Business & Economics'],
+  // Department name gives no field signal, but Hieu T. Nguyen's own research (IoT, wireless
+  // communications, MIMO) is electrical/communications engineering.
+  ['Department of Science and Industry Systems|University of South-Eastern Norway', 'Engineering'],
+  // "Clinical Science" is this medical school's generic department name for all its physician
+  // faculty regardless of specialty; the university name itself (School of Medicine) is the
+  // actual field signal, not the bare department string.
+  ['Clinical Science|Kaiser Permanente Bernard J. Tyson School of Medicine', 'Health Sciences'],
+  // Xavier's College of Pharmacy department; "Clinical and Administrative Sciences" alone has no
+  // pharmacy keyword, but both faculty here are pharmacists by research area.
+  ['Clinical and Administrative Sciences|Xavier University of Louisiana', 'Health Sciences'],
 ]);
 
 // Buckets granular `department` values into the broad fields above. Order matters, and is not
@@ -565,7 +593,7 @@ const FIELD_RULES = [
   // keyword below — so it doesn't get caught by that instead.
   {
     field: 'Health Sciences',
-    match: /health|medicine|surgery|nursing|public health|epidemiology|pharma|psychiatry|pathology|dermatology|biomedical sciences|cardiovascular|pediatric|neurology|ophthalmology|family practice|physician assistant|kinesiology|exercise science|sport science|veterinary|nutrition|dietetics|audiology|speech-language pathology|communication sciences and disorders|anatom|toxicology|dentistry|dental|orthodont|dentisterie|radiology|radiolog|optometry|vision science/i,
+    match: /health|medicine|surgery|nursing|public health|epidemiology|pharma|psychiatry|pathology|dermatology|biomedical sciences|cardiovascular|pediatric|neurology|ophthalmology|family practice|physician assistant|kinesiology|exercise science|sport science|veterinary|nutrition|dietetics|audiology|speech-language pathology|communication sciences and disorders|anatom|toxicology|dentistry|dental|orthodont|dentisterie|radiology|radiolog|optometry|vision science|anesthes|orthop(?:a)?edi|digestive|gastroenterolog|hepatolog|endocrin|diabetes|metabolism/i,
   },
   // Business terms are specific enough (accounting, marketing, entrepreneurship, ...) that
   // false-positive risk is low; "management" is the one generic-sounding term here, which is
@@ -573,7 +601,7 @@ const FIELD_RULES = [
   // rule are checked first for the science-flavored "X Management" department names that exist.
   {
     field: 'Business & Economics',
-    match: /business|economic|\bfinanc(?:e|ial|es)\b|accounting|marketing|management|entrepreneurship|\binsurance\b|real estate|human resource|industrial relations|organi[zs]ation|work and organi[zs]ation|supply chain|\blogistics\b/i,
+    match: /business|economic|\bfinanc(?:e|ial|es)\b|accounting|marketing|management|entrepreneurship|\binsurance\b|real estate|human resource|industrial relations|organi[zs]ation|work and organi[zs]ation|supply chain|\blogistics\b|\bMBA\b/i,
   },
   { field: 'Computer & Information Sciences', match: /computer science|computing|informati(?:cs?|que)|information science|information studies|information systems|information technology|cybersecurity|\bIST\b|\bCIS\b|library|machine learning|artificial intelligence|natural language processing|multimedia/i },
   // Stem match (not just "mathematics") so "Mathematical Sciences" — UT Dallas's actual
@@ -582,12 +610,12 @@ const FIELD_RULES = [
   { field: 'Statistics & Data Science', match: /statistics|biostatistics|operations research|decision sciences|data science/i },
   // "materials science" alone (no "engineering" in the name) still lands here — combined
   // "Materials Science and Engineering" departments already match the bare "engineering" term.
-  { field: 'Engineering', match: /engineering|materials(?: science)?|aviation science|aeronautic|astronautic|aerospace|electrical communication|mechatronic|nanotechnology|nanotechnologie/i },
+  { field: 'Engineering', match: /engineering|materials(?: science)?|aviation science|aeronautic|astronautic|aerospace|electrical communication|mechatronic|nanotechnology|nanotechnologie|microsystem/i },
   { field: 'Physics & Astronomy', match: /physics|astronomy/i },
   { field: 'Chemistry', match: /chemistry|chimie/i },
   {
     field: 'Biological & Biomedical Sciences',
-    match: /biology|biologie|biological sciences|neuroscience|plant pathology|genetics|genomic|oncology|microbiology|immunology|molecular|cell biology|ecology|entomology|physiolog/i,
+    match: /biology|biologie|biological sciences|life science|neuroscience|plant pathology|genetics|genomic|oncology|microbiology|immunology|molecular|cell biology|ecology|entomology|physiolog/i,
   },
   // Agricultural & Natural Resource Sciences precedes Earth & Environmental Sciences so a combined
   // department name like "Agricultural and Environmental Sciences" (Doc Lap Tran, Tennessee State)
@@ -603,7 +631,7 @@ const FIELD_RULES = [
   // Education.
   // "curriculum (and|&) instruction" so a department that spells it with an ampersand (Texas
   // Tech's "Curriculum & Instruction") matches too, not just the spelled-out "and" form.
-  { field: 'Education', match: /education|curriculum (and|&) instruction|teaching and learning/i },
+  { field: 'Education', match: /education|curriculum (and|&) (instruction|teaching)|teaching and learning/i },
   { field: 'Law & Public Affairs', match: /\blaw\b|legal studies|public policy|public affairs|public administration|criminal justice|criminology|urban (studies and )?planning|regional planning|city planning/i },
   {
     field: 'Social & Behavioral Sciences',

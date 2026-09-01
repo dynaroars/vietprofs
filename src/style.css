@@ -1259,6 +1259,12 @@ a.entry-name:focus-visible {
   font-size: var(--text-sm);
 }
 
+/* Inside a <details> the description follows a <summary>, not the tightly-spaced h2 above, so
+   the negative margin used elsewhere would crowd it against the "Optional details" heading. */
+.optional-group > .form-group-description {
+  margin-top: 0.5rem;
+}
+
 .info-icon {
   display: inline-flex;
   align-items: center;
@@ -1331,6 +1337,10 @@ a.entry-name:focus-visible {
   gap: 0.65rem;
   color: var(--text-muted);
   font-size: var(--text-xs);
+}
+
+.portrait-preview[hidden] {
+  display: none;
 }
 
 .portrait-preview img {

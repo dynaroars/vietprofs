@@ -27,17 +27,17 @@ function renderShell() {
 
     <form id="submit-form" class="submit-form" novalidate>
       <section class="form-group" id="add-mode-section">
-        <p class="criteria">
+        <p class="criteria" id="bulk-criteria">
           Paste anything: a name, a link to someone's university profile or homepage, or a link to a
           page that lists several people (a department directory, a lab site). Plain text is fine —
-          one item per line, or however you have it. We'll research and verify each candidate before
-          adding them.
+          one item per line, or however you have it. Feel free to include any other notes or evidence
+          here too — whatever helps us verify and add them.
         </p>
         <div class="form-section">
-          <label for="bulkInput">Names and links</label>
+          <label for="bulkInput" id="bulkInput-label">Names, links, or notes</label>
           <textarea id="bulkInput" name="bulkInput" rows="8" placeholder="e.g.&#10;Jane T. Nguyen — https://cs.example.edu/~jnguyen&#10;https://example.edu/faculty-directory&#10;Some Name, Some University"></textarea>
         </div>
-        <p class="form-help">
+        <p class="form-help" id="add-mode-details-help">
           Have full details for one person instead of a link? <button type="button" class="link-button" id="add-mode-details-toggle">Enter them directly</button>.
         </p>
       </section>
@@ -55,8 +55,8 @@ function renderShell() {
       </div>
 
       <div class="form-section">
-        <label for="profileUrl">Official university profile <span class="info-icon" tabindex="0" role="img" aria-label="Why this is required" data-tooltip="We need at least the official university profile link to verify and add this entry.">i</span></label>
-        <input id="profileUrl" name="profileUrl" type="url" placeholder="https://… (department or faculty directory page)" />
+        <label for="profileUrl">Profile or verification link <span class="info-icon" tabindex="0" role="img" aria-label="Why this is required" data-tooltip="We need at least one link (university profile, personal site, LinkedIn, etc.) to verify and add this entry.">i</span></label>
+        <input id="profileUrl" name="profileUrl" type="url" placeholder="https://… (any link that helps verify this person)" />
       </div>
 
       </section>
@@ -66,8 +66,18 @@ function renderShell() {
         <p class="form-group-description">Share any details you have; maintainers will verify and complete the record.</p>
 
       <div class="form-section">
+        <label for="vietnameseName">Vietnamese name</label>
+        <input id="vietnameseName" name="vietnameseName" type="text" placeholder="e.g. Trần Lê-Nam (type with diacritics, e.g. Họ Tên)" />
+      </div>
+
+      <div class="form-section">
         <label for="websiteUrl">Personal or lab website</label>
         <input id="websiteUrl" name="websiteUrl" type="url" placeholder="https:// (personal homepage or lab site)" />
+      </div>
+
+      <div class="form-section">
+        <label for="universityProfileUrl">University profile website</label>
+        <input id="universityProfileUrl" name="universityProfileUrl" type="url" placeholder="https://… (official university faculty/directory page)" />
       </div>
 
       <div class="form-section">
@@ -76,7 +86,7 @@ function renderShell() {
       </div>
 
       <div class="form-section">
-        <label for="portraitSource">Profile picture URL <span class="optional-label">(optional)</span></label>
+        <label for="portraitSource">Profile picture URL</label>
         <div id="portrait-preview" class="portrait-preview" hidden>
           <img id="portrait-preview-image" src="" alt="Existing profile picture" width="96" height="96" />
           <span>Existing picture</span>
@@ -199,10 +209,6 @@ function renderShell() {
         <input id="researchAreas" name="researchAreas" type="text" placeholder="e.g. Machine Learning, Robotics" />
       </div>
 
-      <div class="form-section">
-        <label for="notes">Notes for the maintainer</label>
-        <textarea id="notes" name="notes" rows="2" placeholder="Anything else that helps verify this (e.g. recent move, other evidence links, etc.)"></textarea>
-      </div>
       </details>
 
       <div class="submit-actions">
@@ -228,8 +234,10 @@ function buildGithubIssueUrl(title, body) {
 }
 
 const FIELD_LABELS = {
-  profileUrl: 'Official university profile',
+  profileUrl: 'Profile or verification link',
+  vietnameseName: 'Vietnamese name',
   websiteUrl: 'Personal/lab website',
+  universityProfileUrl: 'University profile website',
   scholarUrl: 'Google Scholar',
   portraitSource: 'Profile picture URL',
   university: 'University',
@@ -274,7 +282,7 @@ function buildNewEntryBody(entry, notes) {
 // The bulk path intentionally does not parse or structure the pasted text: the maintainer's
 // research workflow (see ROSTER_MAINTENANCE.md) treats a supplied name or link as a lead to
 // independently verify, not as pre-validated facts, so passing it through raw is correct.
-function buildBulkSubmissionBody(bulkText, entry, notes) {
+function buildBulkSubmissionBody(bulkText, entry) {
   const lines = ['Request: New entry submission (raw)', '', 'Raw input:', bulkText];
   const structuredLines = [];
   if (entry.name) structuredLines.push(`Name: ${entry.name}`);
@@ -283,7 +291,6 @@ function buildBulkSubmissionBody(bulkText, entry, notes) {
     if (value) structuredLines.push(`${FIELD_LABELS[key]}: ${value}`);
   }
   if (structuredLines.length) lines.push('', 'Additional structured details for one person:', ...structuredLines);
-  if (notes) lines.push('', `Notes: ${notes}`);
   return lines.join('\n');
 }
 
@@ -322,7 +329,9 @@ function populateEntry(form, entry) {
   if (optionalDetails) optionalDetails.open = true;
   form.name.value = entry.name;
   form.profileUrl.value = entry.profileUrl ?? '';
+  form.vietnameseName.value = entry.vietnameseName ?? '';
   form.websiteUrl.value = entry.websiteUrl ?? '';
+  form.universityProfileUrl.value = entry.universityProfileUrl ?? '';
   form.scholarUrl.value = entry.scholarUrl ?? '';
   form.portraitSource.value = entry.portraitSource ?? '';
   updatePortraitPreview(form, entry);
@@ -407,7 +416,9 @@ function onSubmit(e, entriesById, entriesByName) {
   const entry = {
     name,
     profileUrl: form.profileUrl.value.trim(),
+    vietnameseName: form.vietnameseName.value.trim() || undefined,
     websiteUrl: form.websiteUrl.value.trim() || undefined,
+    universityProfileUrl: form.universityProfileUrl.value.trim() || undefined,
     scholarUrl: form.scholarUrl.value.trim() || undefined,
     portraitSource: form.portraitSource.value.trim() || undefined,
     university: form.university.value.trim() || undefined,
@@ -431,19 +442,17 @@ function onSubmit(e, entriesById, entriesByName) {
     postdocInstitution: form.postdocInstitution.value.trim() || undefined,
   };
 
-  const notes = form.notes.value.trim();
-
   let title;
   let body;
   if (purpose === 'add' && bulkText) {
     title = name ? `VietProfs submission: ${name} + more` : 'VietProfs submission: new candidates';
-    body = buildBulkSubmissionBody(bulkText, entry, notes);
+    body = buildBulkSubmissionBody(bulkText, entry);
   } else if (matchedEntry) {
     title = `VietProfs update: ${name}`;
-    body = buildUpdateBody(matchedEntry, entry, notes);
+    body = buildUpdateBody(matchedEntry, entry, bulkText);
   } else {
     title = `VietProfs submission: ${name}`;
-    body = buildNewEntryBody(entry, notes);
+    body = buildNewEntryBody(entry, bulkText);
   }
 
   if (e.submitter?.value === 'github') {
@@ -454,24 +463,32 @@ function onSubmit(e, entriesById, entriesByName) {
 }
 
 function applyPurpose(purpose) {
-  const addSection = document.getElementById('add-mode-section');
   const requiredSection = document.getElementById('required-section');
   const requiredHeading = document.getElementById('required-heading');
   const requiredDescription = document.getElementById('required-description');
+  const bulkCriteria = document.getElementById('bulk-criteria');
+  const bulkLabel = document.getElementById('bulkInput-label');
   const bulkInput = document.getElementById('bulkInput') as HTMLTextAreaElement;
+  const bulkHelp = document.getElementById('add-mode-details-help');
   const nameInput = document.getElementById('name') as HTMLInputElement;
   const profileUrlInput = document.getElementById('profileUrl') as HTMLInputElement;
   const isAdd = purpose === 'add';
-  addSection.hidden = !isAdd;
   requiredSection.classList.toggle('single-entry-details', isAdd);
   requiredSection.hidden = isAdd && !requiredSection.classList.contains('expanded');
   requiredHeading.textContent = isAdd ? 'This person' : 'Required';
   requiredDescription.textContent = isAdd
     ? "You've filled in one person's full details directly, instead of pasting text above."
     : 'These two fields are needed to identify which entry to update.';
+  bulkHelp.hidden = !isAdd;
+  bulkCriteria.textContent = isAdd
+    ? "Paste anything: a name, a link to someone's university profile or homepage, or a link to a page that lists several people (a department directory, a lab site). Plain text is fine — one item per line, or however you have it. Feel free to include any other notes or evidence here too — whatever helps us verify and add them."
+    : 'Add any notes, corrections, or evidence links that will help us verify this update.';
+  bulkLabel.textContent = isAdd ? 'Names, links, or notes' : 'Notes';
+  bulkInput.placeholder = isAdd
+    ? 'e.g.\nJane T. Nguyen — https://cs.example.edu/~jnguyen\nhttps://example.edu/faculty-directory\nSome Name, Some University'
+    : 'e.g. Moved to a new university, updated title, corrected spelling, etc.';
   nameInput.required = !isAdd;
   profileUrlInput.required = !isAdd;
-  if (!isAdd) bulkInput.value = '';
 }
 
 function initPurposeToggle() {
