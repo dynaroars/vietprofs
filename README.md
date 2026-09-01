@@ -77,6 +77,10 @@ Use [`submit.html`](./submit.html) to propose an entry or correction without edi
 
 Detailed inclusion, verification, discovery, field-mapping, and data-format guidance is in [`ROSTER_MAINTENANCE.md`](./ROSTER_MAINTENANCE.md).
 
+### Acknowledgments
+
+[hieuphay.com](https://hieuphay.com/ban-do-kinh-te-viet-nam/) provided a dataset of Vietnamese-diaspora economists that seeded a batch of roster entries. Many others have contributed suggestions, corrections, and additions over LinkedIn and other channels — thank you all.
+
 ### Interesting-facts guidelines
 
 The interesting-facts view is computed from the current [`public/data.json`](./public/data.json),
