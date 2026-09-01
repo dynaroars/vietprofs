@@ -467,15 +467,15 @@ This is discussed further as the site's third function, runtime aggregation, in 
 \subsection{Human contribution channel}
 \label{sec:submit}
 Automated maintenance (Section~\ref{sec:architecture}) is the primary way the roster grows, but a visitor can also propose a new person or a correction directly, without editing the repository, via \href{https://vietprofs.roars.dev/submit.html}{\code{submit.html}} (Figure~\ref{fig:submit}).
-The form requires only a full name and an official university profile URL; typing a name that already resolves against the loaded roster (\codelink{src/submit.ts}) surfaces a suggestion and pre-fills the existing record so the visitor is editing rather than duplicating. Each generated profile page also links directly to this pre-filled correction form using the immutable ID. A correction email carries that ID, the permanent profile URL, current and proposed names, and a field-by-field delta, so a name correction remains unambiguous for a maintainer.
-Every other field---personal/lab site, Scholar profile, department, location, education, honors---is optional.
+The form requires only a full name and at least one verification link (a university profile, personal site, LinkedIn, or similar---the visitor need not already have the official university page in hand); typing a name that already resolves against the loaded roster (\codelink{src/submit.ts}) surfaces a suggestion and pre-fills the existing record so the visitor is editing rather than duplicating. Each generated profile page also links directly to this pre-filled correction form using the immutable ID. A correction email carries that ID, the permanent profile URL, current and proposed names, and a field-by-field delta, so a name correction remains unambiguous for a maintainer.
+Every other field---Vietnamese name, personal/lab site, official university profile page, Scholar profile, department, location, education, honors---is optional, and a single free-text box doubles as either a bulk paste of names/links for new candidates or freeform notes and evidence for a correction.
 Submissions are routed to a maintainer inbox and reviewed before they can change canonical data; nothing typed into this form writes to \codelink{public/data.json} directly.
 This keeps the boundary from Section~\ref{sec:evidence} intact for human-sourced leads as well as agent-sourced ones: a submission is evidence and a lead, not an approved change.
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.92\linewidth]{figures/screenshot-submit.png}
-\caption{The public submission form (\href{https://vietprofs.roars.dev/submit.html}{\code{submit.html}}). Only a name and an official profile URL
+\caption{The public submission form (\href{https://vietprofs.roars.dev/submit.html}{\code{submit.html}}). Only a name and one verification link
 are required; a name that matches an existing record is offered back to the visitor as a correction
 rather than a duplicate.}
 \label{fig:submit}
@@ -512,7 +512,7 @@ Within it, \vplink{Stanford}{Stanford University} and UC San Diego each have 14 
 University of Wisconsin--Madison each have 10.
 California and Texas contain 218 of 659 U.S. records (33\%).
 The international subset contains 334 records across 19 non-U.S. country values, led by Australia (64), the U.K. (54), Canada (47), France (36), Japan (33), Singapore (25), and Taiwan (21).
-The four largest broad fields are Health Sciences (184), Computer and Information Sciences (147), Business and Economics (139), and Engineering (137); the U.S. and international subsets differ sharply in their leading field, at 24\% Health Sciences and 22\% Computer and Information Sciences respectively.
+The four largest broad fields are Health Sciences (203), Computer and Information Sciences (148), Business and Economics (143), and Engineering (139); the U.S. and international subsets differ sharply in their leading field, at 27\% Health Sciences and 22\% Computer and Information Sciences respectively.
 Stanford has 13 health-science records; the Japan Advanced Institute of Science and Technology has eight computing records; and the University of Minnesota and the University of Technology Sydney have seven each, in health sciences and engineering respectively.
 Monash and Stanford each span 12 distinct stored departments, and UC Irvine spans 11, showing that some institutional clusters are cross-disciplinary rather than concentrated in one department.
 These are useful because they reveal institutional and disciplinary structure without claiming prestige, population size, or causation.

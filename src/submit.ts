@@ -9,7 +9,7 @@ const app = document.getElementById('app');
 function renderShell() {
   app.innerHTML = `
     <header>
-      <h1><a class="home-link brand-link" href="${import.meta.env.BASE_URL}"><img class="brand-logo" src="${import.meta.env.BASE_URL}vietprofs-bamboo-v.svg" alt="" width="56" height="56"><span>Vietnamese Academic Diaspora</span></a></h1>
+      <h1 class="brand-link"><a class="brand-logo-link" href="${import.meta.env.BASE_URL}vietprofs-bamboo-v-2048.png" target="_blank" rel="noopener noreferrer" aria-label="View the full-size VietProfs logo"><img class="brand-logo" src="${import.meta.env.BASE_URL}vietprofs-bamboo-v.svg" alt="" width="56" height="56"></a><a class="home-link" href="${import.meta.env.BASE_URL}"><span>Vietnamese Academic Diaspora</span></a></h1>
       <p class="tagline">Submit a new professor or suggest an update</p>
     </header>
 

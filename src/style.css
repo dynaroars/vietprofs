@@ -13,8 +13,8 @@
   --focus-ring: #2563eb;
   --favorite-color: #b45309;
   --favorite-hover: #92400e;
-  --bamboo-green: #315c45;
-  --bamboo-green-hover: #244838;
+  --bamboo-green: #2e9e64;
+  --bamboo-green-hover: #1d7a4c;
 
   --font-heading: 'Outfit', sans-serif;
   --font-body: 'Inter', sans-serif;
@@ -786,6 +786,9 @@ a.entry-name:focus-visible {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
+}
+
+.profile-page .eyebrow-text {
   color: var(--text-primary);
   font-weight: 700;
   text-decoration: none;
@@ -1181,6 +1184,11 @@ a.entry-name:focus-visible {
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
+}
+
+.brand-logo-link {
+  display: flex;
+  flex: 0 0 auto;
 }
 
 .brand-logo {

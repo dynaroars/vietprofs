@@ -107,7 +107,7 @@ function renderShell() {
   app.innerHTML = `
     <header>
       <div class="title-row">
-        <h1><a class="home-link brand-link" href="${import.meta.env.BASE_URL}" id="home-link"><img class="brand-logo" src="${import.meta.env.BASE_URL}vietprofs-bamboo-v.svg" alt="" width="56" height="56"><span>Vietnamese Academic Diaspora</span></a></h1>
+        <h1 class="brand-link"><a class="brand-logo-link" href="${import.meta.env.BASE_URL}vietprofs-bamboo-v-2048.png" target="_blank" rel="noopener noreferrer" aria-label="View the full-size VietProfs logo"><img class="brand-logo" src="${import.meta.env.BASE_URL}vietprofs-bamboo-v.svg" alt="" width="56" height="56"></a><a class="home-link" href="${import.meta.env.BASE_URL}" id="home-link"><span>Vietnamese Academic Diaspora</span></a></h1>
         <div class="header-icons">
           <a class="icon-link roars-link" href="https://roars.dev" target="_blank" rel="noopener noreferrer" aria-label="ROARS Lab" title="ROARS Lab"></a>
           <a class="icon-link github-link" href="https://github.com/dynaroars/vietprofs" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository" title="GitHub repository">

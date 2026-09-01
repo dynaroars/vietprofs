@@ -44,12 +44,12 @@ U.K. 54, Canada 47, France 36, Japan 33, Singapore 25, and Taiwan 21.
 
 Conservative observations supported by the analysis include:
 
-- The snapshot spans 17 fields; Health Sciences (184), Computer & Information Sciences (147),
-  Business & Economics (139), and Engineering (137) are the four largest.
+- The snapshot spans 17 fields; Health Sciences (203), Computer & Information Sciences (148),
+  Business & Economics (143), and Engineering (139) are the four largest.
 - California and Texas contain 218 of the 659 U.S. records (33%). This is a roster observation,
   not evidence about population size, prestige, causation, or migration.
 - Computing represents 11% of U.S. entries and 22% of international entries; health represents
-  24% and 8%, respectively. Coverage and selection differences prevent population inference.
+  27% and 8%, respectively. Coverage and selection differences prevent population inference.
 - Monash and Stanford each span 12 distinct stored departments; department naming granularity
   affects this comparison.
 - Missingness is measurable: the education and external-link counts above are coverage signals,

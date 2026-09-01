@@ -318,23 +318,26 @@ the change.
 
 The canonical field list is:
 
-1. Computer & Information Sciences
-2. Engineering
-3. Mathematics
-4. Statistics & Data Science
-5. Physics & Astronomy
-6. Chemistry
-7. Biological & Biomedical Sciences
-8. Earth & Environmental Sciences
-9. Agricultural & Natural Resource Sciences
+1. Agricultural & Natural Resource Sciences
+2. Arts & Design
+3. Biological & Biomedical Sciences
+4. Business & Economics
+5. Chemistry
+6. Computer & Information Sciences
+7. Earth & Environmental Sciences
+8. Education
+9. Engineering
 10. Health Sciences
-11. Business & Economics
-12. Social & Behavioral Sciences
-13. Education
-14. Humanities
-15. Law & Public Affairs
-16. Arts & Design
+11. Humanities
+12. Law & Public Affairs
+13. Mathematics
+14. Physics & Astronomy
+15. Social & Behavioral Sciences
+16. Statistics & Data Science
 17. Others
+
+The list is kept alphabetical in `src/data.ts`'s `FIELDS` constant (and everywhere it's
+displayed — main-page filters, the submission form's field dropdown), with `Others` always last.
 
 If a person's department or academic field does not fit any named bucket, do not automatically
 map it to `Others`: ask the user whether to add a new field or place it in `Others`. The existing

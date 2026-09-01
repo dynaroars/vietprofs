@@ -2,6 +2,7 @@ import { mkdir, readFile, rm, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import {
   canonicalRank,
+  countryFlag,
   displayName,
   displayUniversity,
   fieldOf,
@@ -103,10 +104,10 @@ function profilePage(person: RosterEntry) {
   <link rel="stylesheet" href="../profile.css">
 </head>
 <body class="profile-page">
-  <header><a class="eyebrow" href="../"><img class="brand-logo" src="../vietprofs-bamboo-v.svg" alt="" width="32" height="32">VietProfs</a></header>
+  <header><span class="eyebrow"><a class="brand-logo-link" href="../vietprofs-bamboo-v-2048.png" target="_blank" rel="noopener noreferrer" aria-label="View the full-size VietProfs logo"><img class="brand-logo" src="../vietprofs-bamboo-v.svg" alt="" width="32" height="32"></a><a class="eyebrow-text" href="../">VietProfs</a></span></header>
   <main>
     <article>
-      <div class="identity">${portrait}<div><h1>${escapeHtml(name)}</h1><p class="native">${escapeHtml(nativeName)}</p><p class="meta">${escapeHtml(role)}${locationOf(person) ? ` · ${escapeHtml(locationOf(person))}` : ''}</p><div class="tags"><span class="tag">${escapeHtml(fieldOf(person.department, person.university))}</span><span class="tag">${escapeHtml(person.track || '')}</span></div></div></div>
+      <div class="identity">${portrait}<div><h1>${escapeHtml(name)}</h1><p class="native">${escapeHtml(nativeName)}</p><p class="meta">${escapeHtml(role)}${locationOf(person) ? ` · ${escapeHtml(locationOf(person))}` : ''} <span class="loc-badge" title="${escapeHtml(person.country || 'United States')}"><span class="country-flag" aria-hidden="true">${countryFlag(person.country)}</span></span></p><div class="tags"><span class="tag">${escapeHtml(fieldOf(person.department, person.university))}</span><span class="tag">${escapeHtml(person.track || '')}</span></div></div></div>
       ${linkSection}<p><a class="submission-link" href="${escapeHtml(editUrl)}">Add or update info</a></p>${research}${educationSection}${honors}
       <footer><p class="updated">Roster information last updated ${escapeHtml(formatRosterDate(person.lastUpdatedAt || ''))}.</p><p>VietProfs is a community-maintained directory. See the linked university and personal sources for the most current details.</p></footer>
     </article>
