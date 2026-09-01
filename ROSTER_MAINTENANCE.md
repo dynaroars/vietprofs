@@ -522,6 +522,126 @@ order:
    existing `lastUpdatedAt`. If the review is incomplete, preserve the old timestamps and retry
    later.
 
+### Automated maintenance controller usage
+
+[`scripts/maintain-roster.ts`](../scripts/maintain-roster.ts) is the unattended weekly
+maintenance controller. It selects missing or oldest entries from
+`maintenance/verification.json`, asks the selected agent to
+perform the full live research pass. Claude is the default agent. An independent Codex verification pass is optional and can be enabled
+with `--codex-review`. The agent can be changed from Claude (the default) to Codex with
+`--agent codex`. Neither agent can edit repository files. The controller applies structured data
+after the agent's work, or after the independent Codex review when that
+flag is enabled, and runs the
+project checks, commits that person, and pushes directly to `origin/main`. No pull request or
+manual review is required.
+
+Prerequisites:
+
+- Linux with Node.js, npm, and Git;
+- a configured Git author identity and push access to `origin/main`.
+
+The default Claude agent requires the `claude` CLI and a successful `claude auth status`.
+
+The optional `--codex-review` pass also requires the `codex` CLI and a successful
+`codex login status`.
+
+Run it from the repository root:
+
+```bash
+./scripts/maintain-roster.ts run
+```
+
+A new run processes at most 40 entries that have not completed a full review in 365 days. Preview
+the selection without invoking either agent or changing Git:
+
+```bash
+./scripts/maintain-roster.ts run --dry-run
+```
+
+For the first complete sweep of the roster, allow one long run to queue every current entry:
+
+```bash
+./scripts/maintain-roster.ts run --all --limit 1000
+```
+
+To process the entire roster in smaller commit-and-push batches, use `--all` with the batch size
+specified by `--limit`. To cap the run, use `--total` instead. Both modes prioritize the least
+recently verified entries before each batch:
+
+```bash
+./scripts/maintain-roster.ts run --all --limit 40
+# or, for up to 1,000 entries:
+./scripts/maintain-roster.ts run --total 1000 --limit 40
+```
+
+The controller commits and pushes after each completed batch and resumes the active batch if it is
+interrupted.
+
+After that sweep completes, the normal weekly command selects only entries whose successful full
+verification is at least one year old.
+
+Use `--limit` or `--stale-days` to change the run, or force a small current-data pass with:
+
+```bash
+./scripts/maintain-roster.ts run --all --limit 1
+```
+
+Enable independent Codex verification for a run with:
+
+```bash
+./scripts/maintain-roster.ts run --all --limit 1 --codex-review
+```
+
+Use Codex as the agent when Claude is unavailable or rate-limited:
+
+```bash
+./scripts/maintain-roster.ts --all --limit 1 --agent codex
+```
+
+Use `--name` with a person-like query to have Claude match it to one canonical roster member and
+run the full workflow regardless of verification age. Capitalization and omitted middle initials
+may be resolved when the match is unambiguous:
+
+```bash
+./scripts/maintain-roster.ts run --name "Thanhvu Nguyen"
+```
+
+The same option accepts a field-like query. Claude maps it to a canonical field and the controller
+queues every roster member in that field, ignoring the normal age and entry-limit selection:
+
+```bash
+./scripts/maintain-roster.ts run --name "Computer Science"
+```
+
+The process may remain active for hours while an account limit resets. It automatically retries
+rate limits with increasing waits. To stop it safely, press <kbd>Ctrl</kbd>+<kbd>C</kbd>, or run this
+from another terminal:
+
+```bash
+./scripts/maintain-roster.ts stop
+```
+
+Running `./scripts/maintain-roster.ts run` again—even days later—detects the saved checkpoint and
+resumes the interrupted person and stage. Check progress with:
+
+```bash
+./scripts/maintain-roster.ts status
+```
+
+For a run that should survive closing the terminal, start it in the background:
+
+```bash
+nohup ./scripts/maintain-roster.ts run >/tmp/vietprofs-maintenance.log 2>&1 &
+```
+
+Controller state and per-agent logs live under `~/.local/state/vietprofs-maintenance/` by default.
+Set `VIETPROFS_MAINTENANCE_STATE_DIR=/another/path` to override that location. Start a new run from
+a clean `main` checkout, and do not edit that checkout while the controller is active or paused.
+When enabled, rejected proposals receive up to two Claude revisions using Codex's concrete
+feedback, with a new independent review after each revision. Proposals still rejected after those
+attempts, and incomplete or uncertain reviews, are logged, keep their old verification timestamp,
+and are deferred for 30 days so they do not prevent the rest of the roster from being processed.
+
 ## Education-field consistency sweep
 
 This is a separate, cheaper technique from the periodic full-roster refresh above. It targets

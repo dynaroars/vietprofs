@@ -53,173 +53,31 @@ This binds to all network interfaces. Other machines can then browse to
 
 ## Data and contributions
 
-Edit [`public/data.json`](./public/data.json) to add, remove, or correct roster entries. When adding a person, omit `id`, then run `npm run assign-profile-ids -- --apply` once and commit the assigned immutable `vp-####` ID with the entry. Validation, development, and build commands check IDs without modifying the roster. Current academic profile URL, university, department, rank/track, country, and canonical UTC `lastUpdatedAt` timestamp remain required. Maintainers track full-review times separately in [`maintenance/verification.json`](./maintenance/verification.json), which is not part of the public site data.
+The roster lives in [`public/data.json`](./public/data.json). Each active record gets a static
+public profile at `people/vp-####.html`, and its immutable `vp-####` `id` is assigned by `npm run
+assign-profile-ids -- --apply` after an entry is added.
 
-Each active record generates a static public profile at `people/vp-####.html` during development and production builds. Names on roster cards link to that profile, and its edit link opens the submission form with the record pre-filled. A name correction therefore preserves the profile URL. Removing a roster entry also removes its generated profile page.
+To suggest an addition or correction, use [`submit.html`](./submit.html) rather than editing the
+repository directly — paste a name, a profile/homepage link, or a directory page, and it opens a
+pre-filled email or GitHub issue for maintainers to research and verify.
 
-The accepted tracks are:
+Full eligibility, evidence, and data-format rules — accepted appointment tracks, honors criteria,
+degree fields, and more — are documented in
+[`ROSTER_MAINTENANCE.md`](./ROSTER_MAINTENANCE.md). The rules behind the "Show me something
+interesting" view are in its [interesting-facts
+section](./ROSTER_MAINTENANCE.md#interesting-facts-guidelines).
 
-- `Tenure-line` — tenure-track or tenured faculty.
-- `Teaching` — stable, full-time non-tenure-track teaching faculty; this includes Professor of Practice and equivalent appointments.
-- `Research` — stable faculty-level research appointments, not postdoctoral or temporary research roles.
-- `Clinical` — stable clinical-faculty appointments, not adjunct or temporary clinical teaching.
-- `Emeritus` — formally conferred emeritus/emerita appointments following a tenure-line career.
+Thanks to [hieuphay.com](https://hieuphay.com/ban-do-kinh-te-viet-nam/) for a dataset of
+Vietnamese-diaspora economists that seeded a batch of entries, and to the many contributors over
+LinkedIn and other channels who've suggested corrections and additions.
 
-The stored `rank` preserves an institution’s actual title when it clarifies a non-tenure track, such as `Clinical Professor`, `Assistant Research Professor`, or `Professor of Practice`.
-
-Completed postdoctoral training may be recorded with `postdocInstitution` when a source explicitly identifies the institution. Add `postdocYear` only when that source explicitly gives the end or completion year.
-
-Honors are limited to substantial, field-level distinctions. Local university, departmental, student,
-service, teaching, and community-engagement awards are not included unless their independent
-field-wide standing is clearly documented; an impressive title or cash prize alone is insufficient.
-
-Use [`submit.html`](./submit.html) to propose an entry or correction without editing the repository directly. To add people, paste raw text — names, a link to someone's profile or homepage, or a link to a directory page listing several people; maintainers independently research and verify each lead rather than trusting the submitted text as fact (see `ROSTER_MAINTENANCE.md`'s "Reviewing user-supplied links/names" workflow). To correct an existing entry, enter their name (autocomplete suggests and pre-fills existing records); the resulting submission includes the record's immutable ID, permanent VietProfs profile URL, current and proposed names, and a field-by-field change list. The default path opens a pre-filled email to `root@roars.dev`; contributors who prefer GitHub can instead open a pre-filled issue in `dynaroars/vietprofs`. Maintainers review every submission before it reaches the roster.
-
-Detailed inclusion, verification, discovery, field-mapping, and data-format guidance is in [`ROSTER_MAINTENANCE.md`](./ROSTER_MAINTENANCE.md).
-
-### Acknowledgments
-
-[hieuphay.com](https://hieuphay.com/ban-do-kinh-te-viet-nam/) provided a dataset of Vietnamese-diaspora economists that seeded a batch of roster entries. Many others have contributed suggestions, corrections, and additions over LinkedIn and other channels — thank you all.
-
-### Interesting-facts guidelines
-
-The interesting-facts view is computed from the current [`public/data.json`](./public/data.json),
-not from hand-written anecdotes. The reproducibility, sample-size, wording, and prohibited-inference
-rules are maintained in the authoritative [interesting-facts section of
-`ROSTER_MAINTENANCE.md`](./ROSTER_MAINTENANCE.md#interesting-facts-guidelines).
-
-## Automated roster maintenance
-
-[`scripts/maintain-roster.ts`](./scripts/maintain-roster.ts) is the unattended weekly
-maintenance controller. It selects missing or oldest entries from
-[`maintenance/verification.json`](./maintenance/verification.json), asks the selected agent to
-perform the full live research pass. Claude is the default agent. An independent Codex verification pass is optional and can be enabled
-with `--codex-review`. The agent can be changed from Claude (the default) to Codex with
-`--agent codex`. Neither agent can edit repository files. The controller applies structured data
-after the agent's work, or after the independent Codex review when that
-flag is enabled, and runs the
-project checks, commits that person, and pushes directly to `origin/main`. No pull request or
-manual review is required.
-
-Prerequisites:
-
-- Linux with Node.js, npm, and Git;
-- a configured Git author identity and push access to `origin/main`.
-
-The default Claude agent requires the `claude` CLI and a successful `claude auth status`.
-
-The optional `--codex-review` pass also requires the `codex` CLI and a successful
-`codex login status`.
-
-Run it from the repository root:
-
-```bash
-./scripts/maintain-roster.ts run
-```
-
-A new run processes at most 40 entries that have not completed a full review in 365 days. Preview
-the selection without invoking either agent or changing Git:
-
-```bash
-./scripts/maintain-roster.ts run --dry-run
-```
-
-For the first complete sweep of the roster, allow one long run to queue every current entry:
-
-```bash
-./scripts/maintain-roster.ts run --all --limit 1000
-```
-
-To process the entire roster in smaller commit-and-push batches, use `--all` with the batch size
-specified by `--limit`. To cap the run, use `--total` instead. Both modes prioritize the least
-recently verified entries before each batch:
-
-```bash
-./scripts/maintain-roster.ts run --all --limit 40
-# or, for up to 1,000 entries:
-./scripts/maintain-roster.ts run --total 1000 --limit 40
-```
-
-The controller commits and pushes after each completed batch and resumes the active batch if it is
-interrupted.
-
-After that sweep completes, the normal weekly command selects only entries whose successful full
-verification is at least one year old.
-
-Use `--limit` or `--stale-days` to change the run, or force a small current-data pass with:
-
-```bash
-./scripts/maintain-roster.ts run --all --limit 1
-```
-
-Enable independent Codex verification for a run with:
-
-```bash
-./scripts/maintain-roster.ts run --all --limit 1 --codex-review
-```
-
-Use Codex as the agent when Claude is unavailable or rate-limited:
-
-```bash
-./scripts/maintain-roster.ts --all --limit 1 --agent codex
-```
-
-Use `--name` with a person-like query to have Claude match it to one canonical roster member and
-run the full workflow regardless of verification age. Capitalization and omitted middle initials
-may be resolved when the match is unambiguous:
-
-```bash
-./scripts/maintain-roster.ts run --name "Thanhvu Nguyen"
-```
-
-The same option accepts a field-like query. Claude maps it to a canonical field and the controller
-queues every roster member in that field, ignoring the normal age and entry-limit selection:
-
-```bash
-./scripts/maintain-roster.ts run --name "Computer Science"
-```
-
-The process may remain active for hours while an account limit resets. It automatically retries
-rate limits with increasing waits. To stop it safely, press <kbd>Ctrl</kbd>+<kbd>C</kbd>, or run this
-from another terminal:
-
-```bash
-./scripts/maintain-roster.ts stop
-```
-
-Running `./scripts/maintain-roster.ts run` again—even days later—detects the saved checkpoint and
-resumes the interrupted person and stage. Check progress with:
-
-```bash
-./scripts/maintain-roster.ts status
-```
-
-For a run that should survive closing the terminal, start it in the background:
-
-```bash
-nohup ./scripts/maintain-roster.ts run >/tmp/vietprofs-maintenance.log 2>&1 &
-```
-
-Controller state and per-agent logs live under `~/.local/state/vietprofs-maintenance/` by default.
-Set `VIETPROFS_MAINTENANCE_STATE_DIR=/another/path` to override that location. Start a new run from
-a clean `main` checkout, and do not edit that checkout while the controller is active or paused.
-When enabled, rejected proposals receive up to two Claude revisions using Codex's concrete
-feedback, with a new independent review after each revision. Proposals still rejected after those
-attempts, and incomplete or uncertain reviews, are logged, keep their old verification timestamp,
-and are deferred for 30 days so they do not prevent the rest of the roster from being processed.
+An unattended maintenance controller ([`scripts/maintain-roster.ts`](./scripts/maintain-roster.ts))
+periodically re-verifies existing entries and pushes updates directly to `main`; see
+[ROSTER_MAINTENANCE.md](./ROSTER_MAINTENANCE.md#periodic-full-roster-refresh) for how it works and
+how to run it manually.
 
 ## License
 
-This project is entirely transparent: all code and data are publicly available in this repository
-under a [Creative Commons
-Attribution-NonCommercial-NoDerivatives 4.0 International
-License](https://creativecommons.org/licenses/by-nc-nd/4.0/) — note: this means you may not
-distribute anything built from VietProfs' code or data (a modified version of the code, or a
-derivative or filtered compilation of the roster) without a separate written license, and you may
-not use either for a commercial purpose. Noncommercial sharing of a complete, unmodified copy of
-the code or the dataset, with attribution, is permitted. Citing individual facts (a person's name,
-university, and department) is not restricted. See [`LICENSE`](./LICENSE) for the full terms.
-
-**Portraits** (`public/portraits/`) are sourced from official university pages and personal/lab
-sites, used here for identification purposes; they remain the property of their original sources
-and are not covered by this license. The manuscript (`paper/paper.tex`/`vietprofs.pdf`) is also not covered.
+Code and data are licensed under [Creative Commons
+Attribution-NonCommercial-NoDerivatives 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/);
+portraits and the manuscript are not covered. See [`LICENSE`](./LICENSE) for full terms.
