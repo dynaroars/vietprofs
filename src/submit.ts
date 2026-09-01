@@ -1,15 +1,59 @@
 import './style.css';
-import { FIELDS, fieldOf, loadRoster, personPath, TRACKS } from './data.ts';
+import { FIELDS, fieldOf, loadRoster, personPath, TRACKS, type RosterEntry } from './data.ts';
 import { escapeHtml } from './utils.ts';
 
 const SUBMISSION_EMAIL = 'root@roars.dev';
 const GITHUB_REPO = 'dynaroars/vietprofs';
 const app = document.getElementById('app');
 
+// The submit form uses HTMLFormElement's legacy named-item access (`form.profileUrl`) for every
+// field, which the DOM lib types don't model — each name comes from this form's own markup, not
+// a fixed HTML API. This alias documents that the value is genuinely dynamic rather than letting
+// it default to an unannotated (and therefore implicit) any.
+type FormField = HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
+// Omit 'name' because this form has a field named "name" (the person's name) that would
+// otherwise collide with HTMLFormElement's own reserved `name` attribute (the form element's own
+// name) and win out over the index signature below.
+type SubmitForm = Omit<HTMLFormElement, 'name'> & Record<string, FormField | undefined>;
+
+// The draft a visitor builds in the form before it's emailed/filed as an issue. It mirrors
+// RosterEntry's field names where they overlap (see FIELD_LABELS below), but is a maintainer lead
+// rather than a validated roster record: `field` is the broad-field dropdown value rather than a
+// derived fact, `universityProfileUrl` has no equivalent in the canonical schema, and required
+// vs. optional differs from RosterEntry (e.g. `profileUrl` is required here for a new entry).
+interface SubmissionDraft {
+  name: string;
+  profileUrl: string;
+  vietnameseName?: string;
+  websiteUrl?: string;
+  universityProfileUrl?: string;
+  scholarUrl?: string;
+  portraitSource?: string;
+  university?: string;
+  city?: string;
+  state?: string;
+  country?: string;
+  department?: string;
+  field?: string;
+  track?: string;
+  rank?: string;
+  researchAreas?: string[];
+  undergradYear?: number;
+  undergradInstitution?: string;
+  msYear?: number;
+  msInstitution?: string;
+  phdYear?: number;
+  phdInstitution?: string;
+  mdYear?: number;
+  mdInstitution?: string;
+  postdocYear?: number;
+  postdocInstitution?: string;
+}
+
 function renderShell() {
   app.innerHTML = `
     <header>
-      <h1 class="brand-link"><a class="brand-logo-link" href="${import.meta.env.BASE_URL}vietprofs-bamboo-v-2048.png" target="_blank" rel="noopener noreferrer" aria-label="View the full-size VietProfs logo"><img class="brand-logo" src="${import.meta.env.BASE_URL}vietprofs-bamboo-v.svg" alt="" width="56" height="56"></a><a class="home-link" href="${import.meta.env.BASE_URL}"><span>Vietnamese Academic Diaspora</span></a></h1>
+      <h1><a class="home-link brand-link" href="${import.meta.env.BASE_URL}"><img class="brand-logo" src="${import.meta.env.BASE_URL}vietprofs-bamboo-v.svg" alt="" width="56" height="56"><span>Vietnamese Academic Diaspora</span></a></h1>
       <p class="tagline">Submit a new professor or suggest an update</p>
     </header>
 
@@ -224,16 +268,16 @@ function renderShell() {
   `;
 }
 
-function buildEmailUrl(title, body) {
+function buildEmailUrl(title: string, body: string): string {
   return `mailto:${SUBMISSION_EMAIL}?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
 }
 
-function buildGithubIssueUrl(title, body) {
+function buildGithubIssueUrl(title: string, body: string): string {
   const params = new URLSearchParams({ title, body });
   return `https://github.com/${GITHUB_REPO}/issues/new?${params.toString()}`;
 }
 
-const FIELD_LABELS = {
+const FIELD_LABELS: Partial<Record<keyof SubmissionDraft, string>> = {
   profileUrl: 'Profile or verification link',
   vietnameseName: 'Vietnamese name',
   websiteUrl: 'Personal/lab website',
@@ -261,15 +305,15 @@ const FIELD_LABELS = {
   researchAreas: 'Research areas',
 };
 
-const FIELD_ORDER = Object.keys(FIELD_LABELS);
+const FIELD_ORDER = Object.keys(FIELD_LABELS) as (keyof SubmissionDraft)[];
 
-function formatValue(value) {
+function formatValue(value: unknown): string {
   if (value === undefined || value === null) return '';
   if (Array.isArray(value)) return value.join(', ');
   return String(value);
 }
 
-function buildNewEntryBody(entry, notes) {
+function buildNewEntryBody(entry: SubmissionDraft, notes: string): string {
   const lines = ['Request: New entry', '', `Name: ${entry.name}`];
   for (const key of FIELD_ORDER) {
     const value = formatValue(entry[key]);
@@ -282,9 +326,9 @@ function buildNewEntryBody(entry, notes) {
 // The bulk path intentionally does not parse or structure the pasted text: the maintainer's
 // research workflow (see ROSTER_MAINTENANCE.md) treats a supplied name or link as a lead to
 // independently verify, not as pre-validated facts, so passing it through raw is correct.
-function buildBulkSubmissionBody(bulkText, entry) {
+function buildBulkSubmissionBody(bulkText: string, entry: SubmissionDraft): string {
   const lines = ['Request: New entry submission (raw)', '', 'Raw input:', bulkText];
-  const structuredLines = [];
+  const structuredLines: string[] = [];
   if (entry.name) structuredLines.push(`Name: ${entry.name}`);
   for (const key of FIELD_ORDER) {
     const value = formatValue(entry[key]);
@@ -294,7 +338,7 @@ function buildBulkSubmissionBody(bulkText, entry) {
   return lines.join('\n');
 }
 
-function buildUpdateBody(matchedEntry, entry, notes) {
+function buildUpdateBody(matchedEntry: RosterEntry, entry: SubmissionDraft, notes: string): string {
   const lines = [
     'Request: Update existing entry',
     '',
@@ -305,14 +349,18 @@ function buildUpdateBody(matchedEntry, entry, notes) {
     '',
     'Changes:',
   ];
-  const changes = [];
+  const changes: string[] = [];
   if (entry.name && entry.name !== matchedEntry.name) {
     changes.push(`- Name: ${matchedEntry.name} → ${entry.name}`);
   }
+  // matchedEntry (RosterEntry) and entry (SubmissionDraft) are deliberately not the same shape
+  // (e.g. universityProfileUrl has no roster equivalent), so the old-value lookup goes through an
+  // untyped view rather than claiming RosterEntry has every SubmissionDraft key.
+  const matchedRecord = matchedEntry as unknown as Record<string, unknown>;
   for (const key of FIELD_ORDER) {
     const oldValue = key === 'field'
       ? fieldOf(matchedEntry.department, matchedEntry.university)
-      : formatValue(matchedEntry[key]);
+      : formatValue(matchedRecord[key]);
     const newValue = formatValue(entry[key]);
     if (oldValue !== newValue) {
       changes.push(`- ${FIELD_LABELS[key]}: ${oldValue || '(none)'} → ${newValue || '(removed)'}`);
@@ -323,7 +371,7 @@ function buildUpdateBody(matchedEntry, entry, notes) {
   return lines.join('\n');
 }
 
-function populateEntry(form, entry) {
+function populateEntry(form: SubmitForm, entry: RosterEntry): void {
   form.dataset.editingId = entry.id;
   const optionalDetails = form.querySelector('.optional-group') as HTMLDetailsElement | null;
   if (optionalDetails) optionalDetails.open = true;
@@ -331,7 +379,9 @@ function populateEntry(form, entry) {
   form.profileUrl.value = entry.profileUrl ?? '';
   form.vietnameseName.value = entry.vietnameseName ?? '';
   form.websiteUrl.value = entry.websiteUrl ?? '';
-  form.universityProfileUrl.value = entry.universityProfileUrl ?? '';
+  // universityProfileUrl has no canonical roster field (see SubmissionDraft above), so an
+  // existing entry never has anything to pre-fill here.
+  form.universityProfileUrl.value = '';
   form.scholarUrl.value = entry.scholarUrl ?? '';
   form.portraitSource.value = entry.portraitSource ?? '';
   updatePortraitPreview(form, entry);
@@ -342,24 +392,24 @@ function populateEntry(form, entry) {
   form.department.value = entry.department ?? '';
   form.field.value = fieldOf(entry.department, entry.university);
   form.rank.value = entry.rank ?? '';
-  form.undergradYear.value = entry.undergradYear ?? '';
+  form.undergradYear.value = entry.undergradYear ? String(entry.undergradYear) : '';
   form.undergradInstitution.value = entry.undergradInstitution ?? '';
-  form.msYear.value = entry.msYear ?? '';
+  form.msYear.value = entry.msYear ? String(entry.msYear) : '';
   form.msInstitution.value = entry.msInstitution ?? '';
-  form.postdocYear.value = entry.postdocYear ?? '';
+  form.postdocYear.value = entry.postdocYear ? String(entry.postdocYear) : '';
   form.postdocInstitution.value = entry.postdocInstitution ?? '';
-  form.phdYear.value = entry.phdYear ?? '';
+  form.phdYear.value = entry.phdYear ? String(entry.phdYear) : '';
   form.phdInstitution.value = entry.phdInstitution ?? '';
-  form.mdYear.value = entry.mdYear ?? '';
+  form.mdYear.value = entry.mdYear ? String(entry.mdYear) : '';
   form.mdInstitution.value = entry.mdInstitution ?? '';
   form.researchAreas.value = entry.researchAreas ? entry.researchAreas.join(', ') : '';
   if (entry.track) {
-    const radio = form.querySelector(`input[name="track"][value="${entry.track}"]`);
+    const radio = form.querySelector(`input[name="track"][value="${entry.track}"]`) as HTMLInputElement | null;
     if (radio) radio.checked = true;
   }
 }
 
-function updatePortraitPreview(form, entry) {
+function updatePortraitPreview(form: SubmitForm, entry: RosterEntry | null): void {
   const preview = form.querySelector('#portrait-preview') as HTMLDivElement | null;
   const image = form.querySelector('#portrait-preview-image') as HTMLImageElement | null;
   if (!preview || !image) return;
@@ -372,11 +422,16 @@ function updatePortraitPreview(form, entry) {
   }
 }
 
-function findMatchedEntry(form, entriesById, entriesByName, name) {
-  return entriesById?.get(form.dataset.editingId) ?? entriesByName?.get(name.toLocaleLowerCase().trim());
+function findMatchedEntry(
+  form: SubmitForm,
+  entriesById: Map<string, RosterEntry> | null,
+  entriesByName: Map<string, RosterEntry> | null,
+  name: string,
+): RosterEntry | undefined {
+  return entriesById?.get(form.dataset.editingId ?? '') ?? entriesByName?.get(name.toLocaleLowerCase().trim());
 }
 
-function clearAutoPopulatedEntry(form) {
+function clearAutoPopulatedEntry(form: SubmitForm): void {
   const name = form.name.value;
   form.reset();
   form.name.value = name;
@@ -385,13 +440,13 @@ function clearAutoPopulatedEntry(form) {
   if (optionalDetails) optionalDetails.open = false;
 }
 
-function getPurpose() {
+function getPurpose(): string {
   return (document.querySelector('input[name="purpose"]:checked') as HTMLInputElement | null)?.value ?? 'add';
 }
 
-function onSubmit(e, entriesById, entriesByName) {
+function onSubmit(e: SubmitEvent, entriesById: Map<string, RosterEntry> | null, entriesByName: Map<string, RosterEntry> | null): void {
   e.preventDefault();
-  const form = e.target;
+  const form = e.target as unknown as SubmitForm;
   const purpose = getPurpose();
   const bulkText = form.bulkInput?.value.trim() ?? '';
   const name = form.name.value.trim();
@@ -409,11 +464,11 @@ function onSubmit(e, entriesById, entriesByName) {
   const researchAreas = form.researchAreas.value
     ? form.researchAreas.value
         .split(',')
-        .map((s) => s.trim())
+        .map((s: string) => s.trim())
         .filter(Boolean)
     : [];
 
-  const entry = {
+  const entry: SubmissionDraft = {
     name,
     profileUrl: form.profileUrl.value.trim(),
     vietnameseName: form.vietnameseName.value.trim() || undefined,
@@ -455,14 +510,14 @@ function onSubmit(e, entriesById, entriesByName) {
     body = buildNewEntryBody(entry, bulkText);
   }
 
-  if (e.submitter?.value === 'github') {
+  if ((e.submitter as HTMLButtonElement | null)?.value === 'github') {
     window.open(buildGithubIssueUrl(title, body), '_blank', 'noopener,noreferrer');
   } else {
     window.location.href = buildEmailUrl(title, body);
   }
 }
 
-function applyPurpose(purpose) {
+function applyPurpose(purpose: string): void {
   const requiredSection = document.getElementById('required-section');
   const requiredHeading = document.getElementById('required-heading');
   const requiredDescription = document.getElementById('required-description');
@@ -510,28 +565,28 @@ function initPurposeToggle() {
 async function init() {
   renderShell();
   initPurposeToggle();
-  const form = document.getElementById('submit-form');
-  const nameInput = document.getElementById('name');
-  const suggestions = document.getElementById('name-suggestions');
-  const matchNotice = document.getElementById('name-match-notice');
-  let entriesByName = null;
-  let entriesById = null;
+  const form = document.getElementById('submit-form') as SubmitForm;
+  const nameInput = document.getElementById('name') as HTMLInputElement;
+  const suggestions = document.getElementById('name-suggestions') as HTMLElement;
+  const matchNotice = document.getElementById('name-match-notice') as HTMLElement;
+  let entriesByName: Map<string, RosterEntry> | null = null;
+  let entriesById: Map<string, RosterEntry> | null = null;
 
-  form.addEventListener('submit', (e) => onSubmit(e, entriesById, entriesByName));
+  form.addEventListener('submit', (e: SubmitEvent) => onSubmit(e, entriesById, entriesByName));
 
   try {
     const roster = await loadRoster();
     entriesByName = new Map(roster.map((entry) => [entry.name.toLocaleLowerCase(), entry]));
     entriesById = new Map(roster.map((entry) => [entry.id, entry]));
-    let matchingEntries = [];
+    let matchingEntries: RosterEntry[] = [];
 
     function hideSuggestions() {
       suggestions.hidden = true;
       nameInput.setAttribute('aria-expanded', 'false');
     }
 
-    function checkMatch(name) {
-      const entry = entriesById.get(form.dataset.editingId) ?? entriesByName.get(name.toLocaleLowerCase().trim());
+    function checkMatch(name: string) {
+      const entry = entriesById?.get(form.dataset.editingId ?? '') ?? entriesByName?.get(name.toLocaleLowerCase().trim());
       if (entry) {
         const profileUrl = `${import.meta.env.BASE_URL}${personPath(entry.id)}`;
         matchNotice.innerHTML = `Editing existing entry <strong>${escapeHtml(entry.id)}</strong> · <a href="${escapeHtml(profileUrl)}">View permanent profile</a><br><strong>${escapeHtml(entry.name)}</strong> · ${escapeHtml(entry.university)} · ${escapeHtml(entry.department)}. Details pre-filled for editing.`;
@@ -542,7 +597,7 @@ async function init() {
     }
 
     const requestedEdit = new URLSearchParams(window.location.search).get('edit');
-    const entryToEdit = requestedEdit && (entriesById.get(requestedEdit) ?? entriesByName.get(requestedEdit.toLocaleLowerCase().trim()));
+    const entryToEdit = requestedEdit && (entriesById?.get(requestedEdit) ?? entriesByName?.get(requestedEdit.toLocaleLowerCase().trim()));
     const lockedEditId = entryToEdit ? entryToEdit.id : '';
     if (entryToEdit) {
       (document.querySelector('input[name="purpose"][value="update"]') as HTMLInputElement).checked = true;
@@ -551,7 +606,7 @@ async function init() {
       checkMatch(entryToEdit.name);
     }
 
-    function showSuggestions(query) {
+    function showSuggestions(query: string) {
       if (!query) {
         hideSuggestions();
         return;
@@ -583,12 +638,12 @@ async function init() {
 
     nameInput.addEventListener('input', () => {
       const query = nameInput.value.trim().toLocaleLowerCase();
-      const boundEntry = entriesById.get(form.dataset.editingId);
+      const boundEntry = entriesById?.get(form.dataset.editingId ?? '');
       if (boundEntry && form.dataset.editingId !== lockedEditId && boundEntry.name.toLocaleLowerCase() !== query) {
         clearAutoPopulatedEntry(form);
         delete form.dataset.editingId;
       }
-      const entry = entriesByName.get(query);
+      const entry = entriesByName?.get(query);
       if (entry) {
         populateEntry(form, entry);
         checkMatch(query);

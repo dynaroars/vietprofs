@@ -4,10 +4,10 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
-import { FIELDS, LOCATIONS, HEALTH_SUBFIELDS, canonicalRank, displayName, displayUniversity, fieldOf, healthSubfieldOf, continentOf, locationMatches, buildFunFacts, buildAwardsFunFacts, buildInternationalObservations, buildLocationObservations, filterRoster, looksSurnameFirst } from '../src/data.ts';
+import { FIELDS, LOCATIONS, HEALTH_SUBFIELDS, canonicalRank, displayName, displayUniversity, fieldOf, healthSubfieldOf, continentOf, locationMatches, buildFunFacts, buildAwardsFunFacts, buildInternationalObservations, buildLocationObservations, filterRoster, looksSurnameFirst, type Roster } from '../src/data.ts';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const roster = JSON.parse(readFileSync(join(__dirname, '../public/data.json'), 'utf8'));
+const roster: Roster = JSON.parse(readFileSync(join(__dirname, '../public/data.json'), 'utf8'));
 
 test('reviewed portraits use local WebP files with source provenance', () => {
   const portraits = roster.filter((person) => person.portrait);
@@ -33,7 +33,7 @@ test('health subfields are the only derived field subdivisions', () => {
 });
 
 test('maintenance-only verification timestamps are not exposed publicly', () => {
-  for (const p of roster) {
+  for (const p of roster as unknown as Record<string, unknown>[]) {
     assert.equal(p.lastVerifiedAt, undefined);
   }
 });
@@ -95,6 +95,46 @@ test('Information Studies defaults to computing but UCLA GSEIS stays Education',
   assert.equal(fieldOf('Information Studies'), 'Computer & Information Sciences');
   assert.equal(fieldOf('Information Science and Technology'), 'Computer & Information Sciences');
   assert.equal(fieldOf('IST'), 'Computer & Information Sciences');
+});
+
+test('FIELDS is alphabetically ordered with the Others catch-all last', () => {
+  const withoutOthers = FIELDS.slice(0, -1);
+  assert.deepEqual(withoutOthers, [...withoutOthers].sort());
+  assert.equal(FIELDS.at(-1), 'Others');
+});
+
+test('fieldOf tolerates a missing department instead of throwing', () => {
+  assert.equal(fieldOf(undefined, 'Some University'), 'Others');
+  assert.equal(fieldOf(), 'Others');
+});
+
+test('generic clinical-specialty department names classify as Health Sciences', () => {
+  assert.equal(fieldOf('Anesthesiology'), 'Health Sciences');
+  assert.equal(fieldOf('Orthopaedics'), 'Health Sciences');
+  assert.equal(fieldOf('Division of Digestive Diseases'), 'Health Sciences');
+  assert.equal(fieldOf('Gastroenterology and Hepatology'), 'Health Sciences');
+  assert.equal(fieldOf('Diabetes, Endocrinology and Metabolism'), 'Health Sciences');
+});
+
+test('institution-specific overrides resolve department names that carry no field keyword', () => {
+  assert.equal(fieldOf('Strategy', 'INSEAD'), 'Business & Economics');
+  assert.equal(fieldOf('Strategy'), 'Others');
+  assert.equal(
+    fieldOf('Clinical Science', 'Kaiser Permanente Bernard J. Tyson School of Medicine'),
+    'Health Sciences',
+  );
+  assert.equal(
+    fieldOf('Clinical and Administrative Sciences', 'Xavier University of Louisiana'),
+    'Health Sciences',
+  );
+});
+
+test('the roster has no unmapped Others entries in the current snapshot', () => {
+  const unmapped = roster.filter((p) => fieldOf(p.department, p.university) === 'Others');
+  assert.deepEqual(
+    unmapped.map((p) => `${p.name} (${p.department} | ${p.university})`),
+    [],
+  );
 });
 
 test('rank labels use the simplified public vocabulary', () => {
@@ -175,9 +215,9 @@ test('buildFunFacts reports structural roster observations rather than name-base
 
 test('field-balance observations name the fields computed from their input', () => {
   const sample = [
-    ...Array.from({ length: 4 }, (_, index) => ({ name: `Historian ${index}`, university: `U${index}`, department: 'History', country: 'France' })),
-    ...Array.from({ length: 4 }, (_, index) => ({ name: `Lawyer ${index}`, university: `L${index}`, department: 'Law', country: 'France' })),
-    ...Array.from({ length: 4 }, (_, index) => ({ name: `Artist ${index}`, university: `A${index}`, department: 'Music', country: 'France' })),
+    ...Array.from({ length: 4 }, (_, index) => ({ id: `hist-${index}`, name: `Historian ${index}`, university: `U${index}`, department: 'History', country: 'France' })),
+    ...Array.from({ length: 4 }, (_, index) => ({ id: `law-${index}`, name: `Lawyer ${index}`, university: `L${index}`, department: 'Law', country: 'France' })),
+    ...Array.from({ length: 4 }, (_, index) => ({ id: `art-${index}`, name: `Artist ${index}`, university: `A${index}`, department: 'Music', country: 'France' })),
   ];
   // Equal counts are ordered alphabetically so the wording is stable across roster edits.
   const fact = buildInternationalObservations(sample).find((value) => value.includes('closely represented'));
@@ -186,8 +226,8 @@ test('field-balance observations name the fields computed from their input', () 
 
 test('location observations do not silently remove United States entries from a continent', () => {
   const sample = [
-    { name: 'US Person', university: 'US University', department: 'History', country: 'United States' },
-    { name: 'Canada Person', university: 'Canada University', department: 'History', country: 'Canada' },
+    { id: 'us-1', name: 'US Person', university: 'US University', department: 'History', country: 'United States' },
+    { id: 'ca-1', name: 'Canada Person', university: 'Canada University', department: 'History', country: 'Canada' },
   ];
   assert.match(buildLocationObservations(sample, 'North America')[0], /^2 entries/);
 });

@@ -17,11 +17,16 @@ import {
   selectDueEntries,
   selectTargetEntries,
 } from '../scripts/maintain-roster.ts';
+import type { RosterEntry } from '../src/data.ts';
 
-const people: Array<Record<string, any>> = [
-  { name: 'Recent Person', lastUpdatedAt: '2025-01-01T00:00:00.000Z', university: 'Recent University' },
-  { name: 'Old Person', lastUpdatedAt: '2024-01-01T00:00:00.000Z', university: 'Old University' },
-  { name: 'Never Person', lastUpdatedAt: '2023-01-01T00:00:00.000Z', university: 'Never University' },
+function fakeResult(overrides: { stderr?: string; stdout?: string }): { code: number; signal: null; stdout: string; stderr: string; timedOut: boolean } {
+  return { code: 1, signal: null, timedOut: false, stderr: '', stdout: '', ...overrides };
+}
+
+const people: RosterEntry[] = [
+  { id: 'vp-0001', name: 'Recent Person', lastUpdatedAt: '2025-01-01T00:00:00.000Z', university: 'Recent University' },
+  { id: 'vp-0002', name: 'Old Person', lastUpdatedAt: '2024-01-01T00:00:00.000Z', university: 'Old University' },
+  { id: 'vp-0003', name: 'Never Person', lastUpdatedAt: '2023-01-01T00:00:00.000Z', university: 'Never University' },
 ];
 
 test('maintenance selection prioritizes missing and oldest verification timestamps', () => {
@@ -87,9 +92,9 @@ test('maintenance selection excludes names already processed in an earlier batch
 
 test('maintenance target matching handles an omitted middle initial and a field alias', () => {
   const roster = [
-    { name: 'ThanhVu H. Nguyen', department: 'Computer Science', university: 'George Mason University' },
-    { name: 'Another Computer Scientist', department: 'Computer Science', university: 'Example University' },
-    { name: 'History Person', department: 'History', university: 'Example University' },
+    { id: 'vp-0001', name: 'ThanhVu H. Nguyen', department: 'Computer Science', university: 'George Mason University' },
+    { id: 'vp-0002', name: 'Another Computer Scientist', department: 'Computer Science', university: 'Example University' },
+    { id: 'vp-0003', name: 'History Person', department: 'History', university: 'Example University' },
   ];
   const personTarget = resolveTargetLocally('Thanhvu Nguyen', roster);
   assert.deepEqual(personTarget, { kind: 'person', canonicalValue: 'ThanhVu H. Nguyen' });
@@ -196,23 +201,23 @@ test('rejected proposals receive bounded revision attempts', () => {
 });
 
 test('maintenance classifies Claude session-limit responses as rate limits', () => {
-  assert.equal(failureKind({
+  assert.equal(failureKind(fakeResult({
     stderr: '',
     stdout: `{"api_error_status":429,"result":"You've hit your session limit · resets 6:10pm"}`,
-  }), 'rate');
+  })), 'rate');
 });
 
 test('maintenance recognizes broad quota-limit wording', () => {
-  assert.equal(failureKind({ stderr: 'Account capacity exhausted', stdout: '' }), 'rate');
-  assert.equal(failureKind({ stderr: 'HTTP 429', stdout: '' }), 'rate');
+  assert.equal(failureKind(fakeResult({ stderr: 'Account capacity exhausted', stdout: '' })), 'rate');
+  assert.equal(failureKind(fakeResult({ stderr: 'HTTP 429', stdout: '' })), 'rate');
 });
 
 test('a rate-limit message wins over an incidental auth keyword elsewhere in the transcript', () => {
-  assert.equal(failureKind({
+  assert.equal(failureKind(fakeResult({
     stderr: '',
     stdout: 'dumped file content mentions a professional credential in passing. '
       + "You've hit your usage limit. Upgrade to Pro or try again at 3:51 AM.",
-  }), 'rate');
+  })), 'rate');
 });
 
 test('maintenance parses a future provider reset time', () => {
@@ -237,6 +242,7 @@ test('changed-path parsing preserves the first porcelain path and handles rename
 test('proposal analysis does not treat object key order as a roster update', () => {
   const after = structuredClone(people);
   after[1] = {
+    id: after[1].id,
     university: after[1].university,
     lastUpdatedAt: after[1].lastUpdatedAt,
     name: after[1].name,

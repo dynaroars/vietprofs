@@ -24,13 +24,14 @@ import {
   uniquePhdInstitutions,
   uniqueUndergradInstitutions,
   uniqueRanks,
+  type Roster,
 } from '../src/data.ts';
 import { escapeHtml, formatRosterDate, formatRosterShortDate } from '../src/utils.ts';
 import { formatLocation, renderRosterEntry } from '../src/render.ts';
 import { locationForQuery } from '../src/filter-state.ts';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const roster = JSON.parse(readFileSync(join(__dirname, '../public/data.json'), 'utf8'));
+const roster: Roster = JSON.parse(readFileSync(join(__dirname, '../public/data.json'), 'utf8'));
 
 test('all countries in roster map to recognized continents', () => {
   for (const p of roster) {
@@ -231,7 +232,7 @@ test('authoritative full Vietnamese names preserve accent marks and Vietnamese o
 
 test('auto-select location logic widens to World when searching for international countries or faculty', () => {
   const index = buildSearchIndex(roster);
-  const select = (query) => locationForQuery(roster, index, { query, currentLocation: 'US' });
+  const select = (query: string) => locationForQuery(roster, index, { query, currentLocation: 'US' });
   assert.equal(select('France'), 'World');
   assert.equal(select('Australia'), 'World');
   assert.equal(select('Japan'), 'World');

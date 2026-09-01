@@ -13,7 +13,8 @@
     "noImplicitOverride": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "noImplicitAny": true
   },
   "include": ["src/**/*.ts", "scripts/**/*.ts", "test/**/*.ts", "analysis/**/*.ts", "vite.config.ts"]
 }

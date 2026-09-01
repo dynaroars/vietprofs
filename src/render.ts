@@ -31,7 +31,15 @@ export function formatLocation(person: RosterEntry) {
   return parts.join(', ');
 }
 
-function entryIconLink({ className, href, label, title, icon }) {
+interface EntryIconLinkOptions {
+  className: string;
+  href: string;
+  label: string;
+  title: string;
+  icon: string;
+}
+
+function entryIconLink({ className, href, label, title, icon }: EntryIconLinkOptions) {
   return ` <a class="${className}" href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(label)}" title="${escapeHtml(title)}"><svg viewBox="0 0 24 24" aria-hidden="true">${icon}</svg></a>`;
 }
 

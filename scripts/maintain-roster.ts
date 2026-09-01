@@ -47,7 +47,7 @@ import { dirname, join, resolve } from 'node:path';
 import process from 'node:process';
 import { fileURLToPath } from 'node:url';
 import { isDeepStrictEqual } from 'node:util';
-import { FIELDS, fieldOf } from '../src/data.ts';
+import { FIELDS, fieldOf, type Roster, type RosterEntry } from '../src/data.ts';
 import { HONOR_CATEGORIES, HONOR_FIELDS, OTHER_DEGREE_FIELDS, ROSTER_FIELDS, TRACKS } from '../src/roster-constants.ts';
 
 const SCRIPT_PATH = fileURLToPath(import.meta.url);
@@ -81,11 +81,18 @@ const COMPLETENESS_BOOST_DAYS = 180;
 const DEFAULT_CLAUDE_MODEL = 'sonnet';
 const DEFAULT_CODEX_REASONING_EFFORT = 'low';
 
-let state = null;
-let activeChild = null;
+// This controller persists and passes around several loosely-shaped JSON blobs (run state,
+// lock-file contents, agent proposals/verdicts) that have no schema of their own — validation for
+// the one shape that matters (a roster entry proposal) happens explicitly in validateProposal()
+// below rather than through a static type. JsonRecord names that dynamic-JSON-object shape
+// honestly instead of leaving it as an implicit, unannotated any.
+type JsonRecord = Record<string, any>;
+
+let state: JsonRecord | null = null;
+let activeChild: { pid: number | undefined; label: string } | null = null;
 let stopRequested = false;
 let lockOwned = false;
-let runLogFile = null;
+let runLogFile: string | null = null;
 
 class StopRequestedError extends Error {}
 class BlockedError extends Error {}
@@ -109,7 +116,7 @@ function codexModelArgs() {
   return args;
 }
 
-function compact(value, limit = 30_000) {
+function compact(value: unknown, limit = 30_000): string {
   const text = String(value ?? '');
   return text.length <= limit ? text : `${text.slice(0, limit)}\n[truncated]`;
 }
@@ -126,7 +133,7 @@ function errorDetails(error: unknown) {
   return error instanceof Error ? error.stack || error.message : String(error);
 }
 
-async function exists(path) {
+async function exists(path: string): Promise<boolean> {
   try {
     await access(path);
     return true;
@@ -144,7 +151,7 @@ async function readJson<T = any>(path: string, fallback: T | null = null): Promi
   }
 }
 
-async function writeAtomic(path, value) {
+async function writeAtomic(path: string, value: unknown): Promise<void> {
   await mkdir(dirname(path), { recursive: true });
   const temporary = `${path}.${process.pid}.${randomUUID()}.tmp`;
   const body = typeof value === 'string' ? value : `${JSON.stringify(value, null, 2)}\n`;
@@ -152,7 +159,7 @@ async function writeAtomic(path, value) {
   await rename(temporary, path);
 }
 
-async function log(message) {
+async function log(message: string): Promise<void> {
   const line = `[${nowIso()}] ${message}`;
   console.log(line);
   if (runLogFile) await appendFile(runLogFile, `${line}\n`).catch(() => {});
@@ -164,7 +171,7 @@ async function saveState() {
   await writeAtomic(STATE_FILE, state);
 }
 
-function processIsAlive(pid) {
+function processIsAlive(pid: number): boolean {
   if (!Number.isInteger(pid) || pid <= 0) return false;
   try {
     process.kill(pid, 0);
@@ -174,7 +181,7 @@ function processIsAlive(pid) {
   }
 }
 
-async function processIsAgent(pid) {
+async function processIsAgent(pid: number): Promise<boolean> {
   if (process.platform !== 'linux' || !processIsAlive(pid)) return false;
   try {
     const commandLine = (await readFile(`/proc/${pid}/cmdline`, 'utf8')).replaceAll('\0', ' ');
@@ -184,7 +191,7 @@ async function processIsAgent(pid) {
   }
 }
 
-function terminateGroup(pid, signal = 'SIGTERM') {
+function terminateGroup(pid: number, signal: NodeJS.Signals = 'SIGTERM'): void {
   if (!pid) return;
   try {
     process.kill(-pid, signal);
@@ -197,7 +204,7 @@ function terminateGroup(pid, signal = 'SIGTERM') {
   }
 }
 
-function requestStop(signal) {
+function requestStop(signal: NodeJS.Signals): void {
   if (stopRequested) {
     if (activeChild?.pid) terminateGroup(activeChild.pid, 'SIGKILL');
     return;
@@ -235,7 +242,7 @@ async function releaseLock() {
   lockOwned = false;
 }
 
-function capture(previous, chunk) {
+function capture(previous: string, chunk: string): string {
   const next = previous + chunk;
   return next.length <= MAX_CAPTURE_CHARS ? next : next.slice(-MAX_CAPTURE_CHARS);
 }
@@ -246,6 +253,10 @@ interface ProcessResult {
   stdout: string;
   stderr: string;
   timedOut: boolean;
+  // Never actually set by runProcess() below — the `apiErrorStatus === 429` check in
+  // failureKind() is therefore currently dead code, kept optional here rather than removed since
+  // fixing that is a behavior change outside this typing pass.
+  apiErrorStatus?: number;
 }
 
 interface ProcessOptions {
@@ -348,8 +359,21 @@ async function gitText(args: string[], options: ProcessOptions = {}): Promise<st
   return (await git(args, options)).stdout.trim();
 }
 
-export function parseOptions(argv) {
-  const options = {
+interface RunOptions {
+  command: string;
+  limit: number;
+  total: number | null;
+  staleDays: number;
+  all: boolean;
+  dryRun: boolean;
+  name: string | null;
+  codexReview: boolean;
+  agent: string | null;
+  provided: Set<string>;
+}
+
+export function parseOptions(argv: string[]): RunOptions {
+  const options: RunOptions = {
     command: 'run',
     limit: DEFAULT_LIMIT,
     total: null,
@@ -362,7 +386,7 @@ export function parseOptions(argv) {
     provided: new Set(),
   };
   const values = [...argv];
-  if (values[0] && !values[0].startsWith('-')) options.command = values.shift();
+  if (values[0] && !values[0].startsWith('-')) options.command = values.shift() as string;
   while (values.length) {
     const value = values.shift();
     if (value === '--all') { options.all = true; options.provided.add('all'); }
@@ -410,20 +434,29 @@ State: ${STATE_DIR}
 `;
 }
 
-export function selectDueEntries(roster, verification, {
+interface SelectDueEntriesOptions {
+  limit?: number;
+  staleDays?: number;
+  all?: boolean;
+  now?: number;
+  deferredUntil?: Record<string, string>;
+  excludeNames?: string[];
+}
+
+export function selectDueEntries(roster: Roster, verification: Record<string, string>, {
   limit = DEFAULT_LIMIT,
   staleDays = DEFAULT_STALE_DAYS,
   all = false,
   now = Date.now(),
   deferredUntil = {},
   excludeNames = [],
-} = {}) {
+}: SelectDueEntriesOptions = {}): string[] {
   const excluded = new Set(excludeNames);
   const cutoff = now - staleDays * 86_400_000;
   return roster
     .map((person, index) => {
       const timestamp = Date.parse(verification[person.name]);
-      const missingCount = COMPLETENESS_FIELDS.filter((field) => !person[field]).length;
+      const missingCount = COMPLETENESS_FIELDS.filter((field) => !(person as unknown as Record<string, unknown>)[field]).length;
       const priority = Number.isNaN(timestamp)
         ? -Infinity
         : timestamp - missingCount * COMPLETENESS_BOOST_DAYS * 86_400_000;
@@ -439,7 +472,7 @@ export function selectDueEntries(roster, verification, {
     .map((entry) => entry.name);
 }
 
-function targetTokens(value) {
+function targetTokens(value: unknown): string[] {
   return String(value)
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
@@ -448,31 +481,36 @@ function targetTokens(value) {
     ?.map((token) => (token.length > 3 ? token.replace(/s$/, '') : token)) ?? [];
 }
 
-function remainingBatchSize(options, processedCount = 0) {
+function remainingBatchSize(options: RunOptions, processedCount = 0): number {
   const total = options.total;
   return total === null ? options.limit : Math.min(options.limit, total - processedCount);
 }
 
-export function researchIsComplete(research) {
+export function researchIsComplete(research: JsonRecord | null | undefined): boolean {
   return research?.status === 'complete';
 }
 
-export function needsAnotherBatch(options) {
+export function needsAnotherBatch(options: JsonRecord): boolean {
   return Boolean(options.all || options.total !== null || options.target?.kind === 'field');
 }
 
-export function batchCommitStatus(lastMessage, runId, hasChanges) {
+export function batchCommitStatus(lastMessage: string, runId: string, hasChanges: boolean): 'existing' | 'created' | 'none' {
   if (lastMessage.includes(`Maintenance-Batch: ${runId}`)) return 'existing';
   return hasChanges ? 'created' : 'none';
 }
 
-function tokensMatch(query, candidate) {
+function tokensMatch(query: string, candidate: string): boolean {
   const queryTokens = targetTokens(query);
   const candidateTokens = new Set(targetTokens(candidate));
   return queryTokens.length > 0 && queryTokens.every((token) => candidateTokens.has(token));
 }
 
-export function resolveTargetLocally(query, roster) {
+interface ResolvedTarget {
+  kind: 'person' | 'field' | 'unresolved';
+  canonicalValue: string;
+}
+
+export function resolveTargetLocally(query: string, roster: Roster): ResolvedTarget {
   const exactPeople = roster.filter((person) => targetTokens(person.name).join(' ') === targetTokens(query).join(' '));
   if (exactPeople.length === 1) return { kind: 'person', canonicalValue: exactPeople[0].name };
   const people = roster.filter((person) => tokensMatch(query, person.name));
@@ -482,7 +520,7 @@ export function resolveTargetLocally(query, roster) {
   return { kind: 'unresolved', canonicalValue: '' };
 }
 
-export function selectTargetEntries(roster, target) {
+export function selectTargetEntries(roster: Roster, target: ResolvedTarget | null | undefined): string[] {
   if (target?.kind === 'person') {
     return roster.some((person) => person.name === target.canonicalValue) ? [target.canonicalValue] : [];
   }
@@ -494,22 +532,22 @@ export function selectTargetEntries(roster, target) {
   return [];
 }
 
-function withoutUpdateTimestamp(person) {
+function withoutUpdateTimestamp(person: JsonRecord | null | undefined): JsonRecord | null | undefined {
   if (!person) return person;
   const { lastUpdatedAt: _ignored, ...rest } = person;
   return rest;
 }
 
-function jsonEqual(left, right) {
+function jsonEqual(left: unknown, right: unknown): boolean {
   return isDeepStrictEqual(left, right);
 }
 
-function formatChangeValue(value) {
+function formatChangeValue(value: unknown): string {
   if (value === undefined) return '[missing]';
   return JSON.stringify(value);
 }
 
-export function describeRosterChanges(before, after) {
+export function describeRosterChanges(before: JsonRecord | null | undefined, after: JsonRecord | null | undefined): string[] {
   if (!before && !after) return [];
   if (!after) return ['entry removed'];
   if (!before) return ['entry added'];
@@ -522,7 +560,7 @@ export function describeRosterChanges(before, after) {
     .map((field) => `${field}: ${formatChangeValue(before[field])} -> ${formatChangeValue(after[field])}`);
 }
 
-export function proposalValidationError(proposal) {
+export function proposalValidationError(proposal: JsonRecord): string | null {
   if (!proposal || typeof proposal !== 'object' || Array.isArray(proposal)) return 'proposal must be an object';
   for (const field of Object.keys(proposal)) {
     if (!ALLOWED_ROSTER_FIELDS.has(field)) return `proposal has unsupported field ${field}`;
@@ -584,7 +622,7 @@ export function proposalValidationError(proposal) {
   return null;
 }
 
-export function analyzeRosterProposal(beforeRoster, afterRoster, targetName) {
+export function analyzeRosterProposal(beforeRoster: JsonRecord[], afterRoster: JsonRecord[], targetName: string): JsonRecord {
   if (!Array.isArray(beforeRoster) || !Array.isArray(afterRoster)) {
     return { ok: false, reason: 'roster must remain a JSON array' };
   }
@@ -624,7 +662,7 @@ export function analyzeRosterProposal(beforeRoster, afterRoster, targetName) {
   };
 }
 
-function parseJsonOutput(text) {
+function parseJsonOutput(text: unknown): JsonRecord | null {
   const value = String(text ?? '').trim();
   try {
     return JSON.parse(value);
@@ -640,11 +678,11 @@ function parseJsonOutput(text) {
   }
 }
 
-function processText(result) {
+function processText(result: ProcessResult): string {
   return `${result.stderr}\n${result.stdout}`.toLowerCase();
 }
 
-export function failureKind(result) {
+export function failureKind(result: ProcessResult): 'rate' | 'auth' | 'timeout' | 'other' {
   const text = processText(result);
   // Check rate/quota signals before the auth keywords below: a research agent's transcript can
   // include dumped file or web content (this repo's own docs mention "credential", for example),
@@ -659,33 +697,33 @@ export function failureKind(result) {
   return 'other';
 }
 
-function localDateParts(timestamp, timeZone) {
+function localDateParts(timestamp: number, timeZone: string): Record<string, number> {
   return Object.fromEntries(new Intl.DateTimeFormat('en-US', {
     timeZone,
     year: 'numeric', month: '2-digit', day: '2-digit',
   }).formatToParts(timestamp).filter(({ type }) => type !== 'literal').map(({ type, value }) => [type, Number(value)]));
 }
 
-function resetTimeInZone(year, month, day, hour, minute, timeZone) {
+function resetTimeInZone(year: number, month: number, day: number, hour: number, minute: number, timeZone: string): number {
   const localAsUtc = Date.UTC(year, month - 1, day, hour, minute);
   const offsetParts = Object.fromEntries(new Intl.DateTimeFormat('en-US', {
     timeZone,
     hour12: false,
     year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit',
-  }).formatToParts(localAsUtc).filter(({ type }) => type !== 'literal').map(({ type, value }) => [type, Number(value)]));
+  }).formatToParts(localAsUtc).filter(({ type }) => type !== 'literal').map(({ type, value }) => [type, Number(value)])) as Record<string, number>;
   const offset = Date.UTC(offsetParts.year, offsetParts.month - 1, offsetParts.day, offsetParts.hour, offsetParts.minute, offsetParts.second) - localAsUtc;
   return localAsUtc - offset;
 }
 
-export function parseRateLimitReset(text, now = Date.now()) {
+export function parseRateLimitReset(text: unknown, now = Date.now()): number | null {
   const match = String(text).match(/reset(?:s|ting)?\s+(?:at\s+)?(?:(today|tomorrow)\s+)?(\d{1,2}):(\d{2})\s*(am|pm)(?:\s*\(([^)]+)\))?/i);
   if (!match) return null;
   const [, relative, hourText, minuteText, meridiem, zone = 'UTC'] = match;
   const timeZone = (() => { try { new Intl.DateTimeFormat('en-US', { timeZone: zone }).format(); return zone; } catch { return 'UTC'; } })();
   const today = localDateParts(now, timeZone);
   let day = today.day;
-  let month = today.month;
-  let year = today.year;
+  const month = today.month;
+  const year = today.year;
   if (relative === 'tomorrow') day += 1;
   const hour12 = Number(hourText) % 12;
   const hour = hour12 + (meridiem.toLowerCase() === 'pm' ? 12 : 0);
@@ -696,7 +734,7 @@ export function parseRateLimitReset(text, now = Date.now()) {
   return resetAt > now ? resetAt : null;
 }
 
-async function waitMinutes(minutes, reason) {
+async function waitMinutes(minutes: number, reason: string): Promise<void> {
   await log(`${reason}; waiting ${minutes} minute${minutes === 1 ? '' : 's'}.`);
   const end = Date.now() + minutes * 60_000;
   while (Date.now() < end) {
@@ -705,16 +743,26 @@ async function waitMinutes(minutes, reason) {
   }
 }
 
-async function runAgentWithRetries(label, invoke) {
+// Not a discriminated union: with this project's strictNullChecks disabled, `if (result.ok)
+// return ...` does not narrow away the other branch's shape (verified in isolation — that
+// narrowing specifically depends on strictNullChecks), so `process` has to stay optional and be
+// read with the `!` below instead of relying on control-flow narrowing to prove it's present.
+interface AgentAttempt<T> {
+  ok: boolean;
+  value?: T;
+  process?: ProcessResult;
+}
+
+async function runAgentWithRetries<T>(label: string, invoke: () => Promise<AgentAttempt<T>>): Promise<T> {
   let ordinaryFailures = 0;
   let rateWait = Number(process.env.VIETPROFS_RATE_LIMIT_WAIT_MINUTES || DEFAULT_RATE_LIMIT_WAIT_MINUTES);
   while (true) {
     const result = await invoke();
-    if (result.ok) return result.value;
-    const kind = failureKind(result.process);
+    if (result.ok) return result.value as T;
+    const kind = failureKind(result.process!);
     if (kind === 'auth') throw new BlockedError(`${label} authentication failed; sign in and rerun the controller`);
     if (kind === 'rate') {
-      const resetAt = parseRateLimitReset(processText(result.process));
+      const resetAt = parseRateLimitReset(processText(result.process!));
       if (resetAt) {
         const minutes = Math.max(1, Math.ceil((resetAt - Date.now()) / 60_000));
         await waitMinutes(minutes, `${label} rate/usage limit reached; retrying at ${new Date(resetAt).toISOString()}`);
@@ -729,7 +777,7 @@ async function runAgentWithRetries(label, invoke) {
       continue;
     }
     ordinaryFailures += 1;
-    if (ordinaryFailures >= 3) throw new Error(`${label} failed three times: ${compact(result.process.stderr || result.process.stdout, 3_000)}`);
+    if (ordinaryFailures >= 3) throw new Error(`${label} failed three times: ${compact(result.process!.stderr || result.process!.stdout, 3_000)}`);
     await waitMinutes(5, `${label} failed`);
   }
 }
@@ -789,7 +837,7 @@ async function assertPreflight({ codexReview = false, agent = 'claude' } = {}) {
   if (await gitText(['branch', '--show-current']) !== 'main') throw new BlockedError('maintenance must run on the main branch');
 }
 
-export function parseChangedPaths(output) {
+export function parseChangedPaths(output: unknown): (string | undefined)[] {
   return String(output).split('\n').filter(Boolean).map((line) => {
     const path = line.slice(3).trim();
     return path.includes(' -> ') ? path.split(' -> ').at(-1) : path;
@@ -810,7 +858,7 @@ async function requireOnlyMaintainedChanges() {
   if (unexpected.length) throw new BlockedError(`unexpected changes while maintenance is active: ${unexpected.join(', ')}`);
 }
 
-function targetPrompt(query, roster) {
+function targetPrompt(query: string, roster: Roster): string {
   return `Resolve a user-supplied VietProfs maintenance target.
 
 Query: ${JSON.stringify(query)}
@@ -830,7 +878,7 @@ when multiple choices remain plausible. canonicalValue must exactly equal one li
 or canonical field, or be an empty string for unresolved. Return only the structured result.`;
 }
 
-async function resolveTargetWithAgent(query, roster, schema, agent = 'claude') {
+async function resolveTargetWithAgent(query: string, roster: Roster, schema: JsonRecord, agent = 'claude'): Promise<ResolvedTarget & { reason?: string }> {
   const timeout = Number(process.env.VIETPROFS_AGENT_TIMEOUT_MINUTES || DEFAULT_AGENT_TIMEOUT_MINUTES);
   await mkdir(join(STATE_DIR, 'logs'), { recursive: true });
   const target = await runAgentWithRetries(`${agent} target matching`, async () => {
@@ -861,7 +909,7 @@ async function resolveTargetWithAgent(query, roster, schema, agent = 'claude') {
   return target;
 }
 
-function researchPrompt(name, baseline, revision = null) {
+function researchPrompt(name: string, baseline: JsonRecord, revision: JsonRecord | null = null): string {
   const revisionInstructions = revision ? `
 
 Your previous complete-entry proposal was independently rejected.
@@ -916,7 +964,7 @@ Set status incomplete whenever material evidence is blocked, conflicting, or unr
 every source URL and explain every checked field and proposed change.`;
 }
 
-function reviewPrompt(current) {
+function reviewPrompt(current: JsonRecord): string {
   return `You are the independent second reviewer for unattended VietProfs maintenance.
 
 Target: ${current.name}
@@ -944,7 +992,7 @@ Return uncertain for incomplete/inaccessible evidence and reject demonstrably in
 Do not edit files. Return only the required structured verdict.`;
 }
 
-async function runResearch(current, schemas) {
+async function runResearch(current: JsonRecord, schemas: JsonRecord) {
   const timeout = Number(process.env.VIETPROFS_AGENT_TIMEOUT_MINUTES || DEFAULT_AGENT_TIMEOUT_MINUTES);
   const agent = current.agent || state.options?.agent || 'claude';
   return runAgentWithRetries(agent, async () => {
@@ -971,7 +1019,7 @@ async function runResearch(current, schemas) {
   });
 }
 
-async function runReview(current) {
+async function runReview(current: JsonRecord) {
   const timeout = Number(process.env.VIETPROFS_AGENT_TIMEOUT_MINUTES || DEFAULT_AGENT_TIMEOUT_MINUTES);
   return runAgentWithRetries('Codex', async () => {
     const suffix = current.revisionCount ? `-revision-${current.revisionCount}` : '';
@@ -1002,7 +1050,7 @@ async function runReview(current) {
   });
 }
 
-function normalizeResearchProposal(roster, current, research) {
+function normalizeResearchProposal(roster: JsonRecord[], current: JsonRecord, research: JsonRecord) {
   let proposed;
   if (research.action === 'keep') proposed = current.baseline;
   else if (research.action === 'remove') proposed = null;
@@ -1023,10 +1071,10 @@ function normalizeResearchProposal(roster, current, research) {
   return analyzeRosterProposal(roster, after, current.name);
 }
 
-async function startPerson(name) {
+async function startPerson(name: string): Promise<void> {
   // Earlier approved people in the same batch intentionally leave only these two files dirty.
   await requireOnlyMaintainedChanges();
-  const roster = await readJson(join(REPO_ROOT, 'public/data.json'));
+  const roster = await readJson<JsonRecord[]>(join(REPO_ROOT, 'public/data.json'));
   const baseline = roster.find((person) => person.name === name);
   if (!baseline) throw new Error(`queued entry no longer exists: ${name}`);
   state.current = {
@@ -1045,7 +1093,7 @@ async function startPerson(name) {
   await saveState();
 }
 
-async function skipPerson(reason, details = null) {
+async function skipPerson(reason: string, details: unknown = null): Promise<void> {
   await requireOnlyMaintainedChanges();
   state.skipped.push({ name: state.current.name, reason, details: compact(JSON.stringify(details), 5_000), at: nowIso() });
   state.deferredUntil[state.current.name] = new Date(Date.now() + DEFAULT_DEFER_DAYS * 86_400_000).toISOString();
@@ -1054,11 +1102,11 @@ async function skipPerson(reason, details = null) {
   await saveState();
 }
 
-async function applyProposal(current) {
+async function applyProposal(current: JsonRecord): Promise<void> {
   const rosterPath = join(REPO_ROOT, 'public/data.json');
   const verificationPath = join(REPO_ROOT, 'maintenance/verification.json');
-  const roster = await readJson(rosterPath);
-  const verification = await readJson(verificationPath);
+  const roster = await readJson<JsonRecord[]>(rosterPath);
+  const verification = await readJson<JsonRecord>(verificationPath);
   const finalName = current.proposal?.name ?? null;
   const validationError = current.proposal && proposalValidationError(current.proposal);
   if (validationError) throw new InvalidProposalError(`refusing invalid proposal: ${validationError}`);
@@ -1135,15 +1183,15 @@ async function commitBatch() {
     'commit',
     '-m', `Automated roster maintenance: batch ${state.runId}`,
     '-m', `Maintenance-Batch: ${state.runId}`,
-    '-m', `Approved: ${state.completed.map((entry) => entry.name).join(', ')}`,
+    '-m', `Approved: ${state.completed.map((entry: JsonRecord) => entry.name).join(', ')}`,
   ], { label: `commit maintenance batch ${state.runId}` });
   const commit = await gitText(['rev-parse', 'HEAD']);
   for (const entry of state.completed) entry.commit = commit;
   return 'created';
 }
 
-async function logBatchSummary() {
-  const changed = state.completed.filter((entry) => entry.changed);
+async function logBatchSummary(): Promise<void> {
+  const changed = state.completed.filter((entry: JsonRecord) => entry.changed);
   await log(`Modified entries: ${changed.length}.`);
   for (const entry of changed) {
     const changes = entry.changes?.length ? entry.changes.join('; ') : 'change details unavailable';
@@ -1164,13 +1212,13 @@ async function pushBatch() {
   await git(['push', 'origin', 'main'], { label: `push maintenance batch ${state.runId}` });
 }
 
-export function canReviseProposal(review, revisionCount, maxRevisions = MAX_PROPOSAL_REVISIONS) {
+export function canReviseProposal(review: JsonRecord | null | undefined, revisionCount: number, maxRevisions = MAX_PROPOSAL_REVISIONS): boolean {
   return review?.verdict === 'reject'
     && Number.isInteger(revisionCount)
     && revisionCount < maxRevisions;
 }
 
-async function processCurrent(schemas) {
+async function processCurrent(schemas: JsonRecord): Promise<void> {
   const current = state.current;
   if (current.stage === 'researching' || current.stage === 'reviewing') {
     await requireOnlyMaintainedChanges();
@@ -1262,11 +1310,11 @@ interface BatchProgress {
   batchNumber?: number;
 }
 
-async function createRun(options, schemas, progress: BatchProgress = {}) {
+async function createRun(options: RunOptions, schemas: JsonRecord, progress: BatchProgress = {}) {
   await requireCleanCheckout();
   await git(['pull', '--ff-only', 'origin', 'main'], { label: 'update origin/main' });
-  const roster = await readJson(join(REPO_ROOT, 'public/data.json'));
-  const verification = await readJson(join(REPO_ROOT, 'maintenance/verification.json'));
+  const roster = await readJson<Roster>(join(REPO_ROOT, 'public/data.json')) as Roster;
+  const verification = await readJson<Record<string, string>>(join(REPO_ROOT, 'maintenance/verification.json')) as Record<string, string>;
   const deferredUntil = state?.deferredUntil || {};
   const continuingRun = Object.keys(progress).length > 0;
   const previousProgress = continuingRun
@@ -1276,7 +1324,7 @@ async function createRun(options, schemas, progress: BatchProgress = {}) {
       batchNumber: state?.options?.batchNumber || 1,
     }
     : { processedNames: [], processedCount: 0, batchNumber: 1 };
-  const processedNames = new Set(progress.processedNames || previousProgress.processedNames || []);
+  const processedNames = new Set<string>(progress.processedNames || previousProgress.processedNames || []);
   if (continuingRun) {
     for (const entry of state?.completed || []) processedNames.add(entry.finalName || entry.name);
     for (const entry of state?.skipped || []) processedNames.add(entry.name);
@@ -1326,10 +1374,10 @@ async function createRun(options, schemas, progress: BatchProgress = {}) {
   await saveState();
 }
 
-async function dryRun(options) {
-  const roster = await readJson(join(REPO_ROOT, 'public/data.json'));
-  const verification = await readJson(join(REPO_ROOT, 'maintenance/verification.json'));
-  const previous = await readJson(STATE_FILE, null);
+async function dryRun(options: RunOptions): Promise<void> {
+  const roster = await readJson<Roster>(join(REPO_ROOT, 'public/data.json')) as Roster;
+  const verification = await readJson<Record<string, string>>(join(REPO_ROOT, 'maintenance/verification.json')) as Record<string, string>;
+  const previous = await readJson<JsonRecord>(STATE_FILE, null);
   const target = options.name ? resolveTargetLocally(options.name, roster) : null;
   if (target?.kind === 'unresolved') {
     throw new BlockedError(`agent-free dry run could not unambiguously resolve --name ${JSON.stringify(options.name)}`);
@@ -1345,7 +1393,7 @@ async function dryRun(options) {
   for (const name of queue) console.log(`- ${name} (${verification[name] || 'never verified'})`);
 }
 
-async function runController(options) {
+async function runController(options: RunOptions): Promise<void> {
   if (options.dryRun) return dryRun(options);
   await acquireLock();
   await unlink(STOP_FILE).catch(() => {});
@@ -1356,7 +1404,7 @@ async function runController(options) {
     && (state.queue.length > 0 || state.current);
   if (resumable) {
     for (const field of ['limit', 'total', 'staleDays', 'all', 'name', 'codexReview']) {
-      if (options.provided?.has(field)) state.options[field] = options[field];
+      if (options.provided?.has(field)) state.options[field] = (options as unknown as Record<string, unknown>)[field];
     }
     if (options.agent) state.options.agent = options.agent;
     runLogFile = join(STATE_DIR, 'logs', `${state.runId}-controller.log`);
@@ -1412,8 +1460,8 @@ async function runController(options) {
       processedCount,
       processedNames: [
         ...(state.progress?.processedNames || []),
-        ...state.completed.map((entry) => entry.finalName || entry.name),
-        ...state.skipped.map((entry) => entry.name),
+        ...state.completed.map((entry: JsonRecord) => entry.finalName || entry.name),
+        ...state.skipped.map((entry: JsonRecord) => entry.name),
       ],
       batchNumber: (state.progress?.batchNumber || 1) + 1,
     });

@@ -8,6 +8,7 @@ import { spawn } from 'node:child_process';
 import { createRequire } from 'node:module';
 import { get } from 'node:http';
 import { fileURLToPath } from 'node:url';
+import type { Page } from 'playwright';
 
 const require = createRequire(import.meta.url);
 const { chromium } = require('playwright');
@@ -57,7 +58,7 @@ try {
     file: string;
     path: string;
     viewport?: typeof viewport;
-    prepare?: (page) => Promise<void>;
+    prepare?: (page: Page) => Promise<void>;
   }> = [
     { file: 'screenshot-home.png', path: '/' },
     {

@@ -55,9 +55,14 @@ export { TRACKS } from './roster-constants.ts';
 
 let cached: Roster | null = null;
 
-const searchIndexCache = new WeakMap();
+export interface SearchIndex {
+  roster: Roster;
+  textByPerson: WeakMap<RosterEntry, string[]>;
+}
 
-function searchableFields(person) {
+const searchIndexCache = new WeakMap<Roster, SearchIndex>();
+
+function searchableFields(person: RosterEntry) {
   return [
     displayName(person.name),
     vietnameseName(person),
@@ -83,18 +88,17 @@ function searchableFields(person) {
   ];
 }
 
-function normalizeSearchText(value) {
+function normalizeSearchText(value: unknown): string {
   return stripDiacritics(String(value).toLowerCase());
 }
 
-export function buildSearchIndex(roster) {
-  if (!Array.isArray(roster)) return roster;
+export function buildSearchIndex(roster: Roster): SearchIndex {
   const cachedIndex = searchIndexCache.get(roster);
   if (cachedIndex) return cachedIndex;
-  const index = {
+  const index: SearchIndex = {
     roster,
     textByPerson: new WeakMap(
-      roster.map((person) => [
+      roster.map((person): [RosterEntry, string[]] => [
         person,
         searchableFields(person).filter(Boolean).map(normalizeSearchText),
       ]),
@@ -149,7 +153,7 @@ const UNIVERSITY_DISPLAY_NAMES = new Map([
   ['Yale University', 'Yale'],
 ]);
 
-export function displayUniversity(university) {
+export function displayUniversity(university?: string): string | undefined {
   return UNIVERSITY_DISPLAY_NAMES.get(university) ?? university?.replace(/ University$/, ' Univ.');
 }
 
@@ -160,7 +164,7 @@ export function personPath(id: string): string {
 
 // Keep the public rank vocabulary intentionally small. Institution-specific honorifics and
 // appointment wording belong on the linked profile; the directory only needs the career stage.
-export function canonicalRank(person) {
+export function canonicalRank(person: Pick<RosterEntry, 'track' | 'rank'>): string | undefined {
   if (person.track === 'Emeritus') return 'Emeritus';
   if (person.track === 'Teaching') return 'Teaching';
   if (person.track === 'Research') return 'Research';
@@ -184,7 +188,7 @@ const VIETNAMESE_SURNAMES = new Map([
   ['Vo', 'Võ'], ['Vu', 'Vũ'], ['Vuong', 'Vương'],
 ]);
 
-function vietnameseGivenNames(value) {
+function vietnameseGivenNames(value: string): string {
   const marks = new Map([
     ['Anh', 'Anh'], ['Bach', 'Bạch'], ['Bao', 'Bảo'], ['Bich', 'Bích'], ['Binh', 'Bình'],
     ['Chinh', 'Chính'], ['Chung', 'Chung'], ['Cuong', 'Cường'], ['Dat', 'Đạt'], ['Danh', 'Danh'],
@@ -211,7 +215,7 @@ function vietnameseGivenNames(value) {
   return value.replace(/\b[A-Za-z]+\b/g, (token) => marks.get(token) ?? token);
 }
 
-function surnameKey(token) {
+function surnameKey(token: string): string {
   return stripDiacritics(token.replace(/[.,]/g, ''));
 }
 
@@ -228,7 +232,7 @@ export function looksSurnameFirst(name: string): boolean {
   return VIETNAMESE_SURNAMES.has(firstKey) && !VIETNAMESE_SURNAMES.has(lastKey);
 }
 
-export function vietnameseName(person) {
+export function vietnameseName(person: RosterEntry): string {
   if (person.vietnameseName?.trim()) return vietnameseGivenNames(person.vietnameseName.trim());
   const current = displayName(person.name).trim();
   const tokens = current.split(/\s+/).filter(Boolean);
@@ -401,7 +405,7 @@ export const COUNTRY_FLAGS: Record<string, string> = {
   'Colombia': '🇨🇴',
 };
 
-export function countryFlag(country) {
+export function countryFlag(country?: string): string {
   if (!country) return '🇺🇸';
   return COUNTRY_FLAGS[country] || '🌐';
 }
@@ -417,12 +421,12 @@ export const LOCATION_LABELS: Record<string, string> = {
   'World': '🌐 World',
 };
 
-export function continentOf(country) {
+export function continentOf(country?: string): string {
   if (!country) return 'North America';
   return COUNTRY_TO_CONTINENT[country] || 'Other';
 }
 
-export function locationMatches(person, location) {
+export function locationMatches(person: Pick<RosterEntry, 'country'>, location?: string): boolean {
   if (!location || location === 'World' || location === 'all') return true;
   const country = person.country || 'United States';
   if (location.toLowerCase() === 'us' || location.toLowerCase() === 'united states' || location.toLowerCase() === 'usa') {
@@ -642,13 +646,14 @@ const FIELD_RULES = [
   // A department that matches none of the established broad disciplines is grouped under Others.
 ];
 
-export function fieldOf(department: string, university?: string): string {
+export function fieldOf(department?: string, university?: string): string {
   const override = university && FIELD_OVERRIDES.get(`${department}|${university}`);
   if (override) return override;
+  if (!department) return 'Others';
   return FIELD_RULES.find((rule) => rule.match.test(department))?.field ?? 'Others';
 }
 
-export function healthSubfieldOf(person) {
+export function healthSubfieldOf(person: RosterEntry): string | null {
   if (fieldOf(person.department, person.university) !== 'Health Sciences') return null;
   const text = `${person.department} ${(person.researchAreas ?? []).join(' ')}`;
   if (/nursing/i.test(text)) return 'Nursing';
@@ -660,16 +665,16 @@ export function healthSubfieldOf(person) {
   return 'Clinical Medicine';
 }
 
-export function uniquePhdInstitutions(roster) {
+export function uniquePhdInstitutions(roster: Roster): string[] {
   return [...new Set(roster.map((p) => p.phdInstitution).filter(Boolean))].sort();
 }
 
-export function uniqueUndergradInstitutions(roster) {
+export function uniqueUndergradInstitutions(roster: Roster): string[] {
   return [...new Set(roster.map((p) => p.undergradInstitution).filter(Boolean))].sort();
 }
 
-export function buildDecadeCounts(roster) {
-  const counts = new Map();
+export function buildDecadeCounts(roster: Roster): [string, number][] {
+  const counts = new Map<string, number>();
   for (const p of roster) {
     if (!p.phdYear) continue;
     const decade = Math.floor(p.phdYear / 10) * 10;
@@ -678,8 +683,8 @@ export function buildDecadeCounts(roster) {
   return [...counts.entries()].sort((a, b) => parseInt(a[0], 10) - parseInt(b[0], 10));
 }
 
-export function buildTopPhdInstitutions(roster, limit = 8) {
-  const counts = new Map();
+export function buildTopPhdInstitutions(roster: Roster, limit = 8): [string, number][] {
+  const counts = new Map<string, number>();
   for (const p of roster) {
     if (!p.phdInstitution) continue;
     counts.set(p.phdInstitution, (counts.get(p.phdInstitution) ?? 0) + 1);
@@ -687,19 +692,19 @@ export function buildTopPhdInstitutions(roster, limit = 8) {
   return [...counts.entries()].sort((a, b) => b[1] - a[1]).slice(0, limit);
 }
 
-export function buildTopUniversities(roster, limit = 8) {
-  const counts = new Map();
+export function buildTopUniversities(roster: Roster, limit = 8): [string, number][] {
+  const counts = new Map<string, number>();
   for (const p of roster) {
     counts.set(p.university, (counts.get(p.university) ?? 0) + 1);
   }
   return [...counts.entries()].sort((a, b) => b[1] - a[1]).slice(0, limit);
 }
 
-function stripDiacritics(s) {
+function stripDiacritics(s: string): string {
   return s.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 }
 
-export const STATE_ABBR = {
+export const STATE_ABBR: Record<string, string> = {
   Alabama: 'AL', Alaska: 'AK', Arizona: 'AZ', Arkansas: 'AR', California: 'CA', Colorado: 'CO',
   Connecticut: 'CT', DC: 'DC', Delaware: 'DE', Florida: 'FL', Georgia: 'GA', Hawaii: 'HI',
   Idaho: 'ID', Illinois: 'IL', Indiana: 'IN', Iowa: 'IA', Kansas: 'KS', Kentucky: 'KY',
@@ -724,24 +729,25 @@ interface FilterOptions {
   searchScope?: string;
 }
 
-function matchesSearchScope(person, scope, target) {
-  const values = {
+function matchesSearchScope(person: RosterEntry, scope: string, target: string): boolean {
+  const scopedValues: Record<string, (string | undefined)[]> = {
     name: [displayName(person.name)],
     university: [person.university],
     department: [person.department],
     field: [fieldOf(person.department, person.university)],
     track: [person.track],
     rank: [person.rank, canonicalRank(person)],
-    research: person.researchAreas,
+    research: person.researchAreas ?? [],
     honors: (person.honors || []).flatMap((honor) => [honor.name, honor.organization]),
     phd: [person.phdInstitution],
     undergrad: [person.undergradInstitution],
     country: [person.country],
-  }[scope];
+  };
+  const values = scopedValues[scope];
   return (values || []).filter(Boolean).some((value) => stripDiacritics(value.toLowerCase()).includes(target));
 }
 
-export function filterRoster(roster: Roster | ReturnType<typeof buildSearchIndex>, { query = '', location, field, track, university, phdInstitution, state, country, searchScope = 'all' }: FilterOptions = {}) {
+export function filterRoster(roster: Roster | SearchIndex, { query = '', location, field, track, university, phdInstitution, state, country, searchScope = 'all' }: FilterOptions = {}): Roster {
   const index = Array.isArray(roster) ? buildSearchIndex(roster) : roster;
   let result = index.roster;
 
@@ -820,14 +826,15 @@ export function filterRoster(roster: Roster | ReturnType<typeof buildSearchIndex
 
 // Duplicate roster keys may carry a " - University" suffix so the JSON name remains unique.
 // That suffix is an internal disambiguator only; the public UI always shows the person's name.
-export function displayName(name) {
+export function displayName(name: string): string {
   return name.split(' - ')[0];
 }
 
 // Ties break alphabetically so leaderboards and the offline analysis report stay stable
-// across roster edits that only change record order.
-export function countBy(roster, getKey) {
-  const counts = new Map();
+// across roster edits that only change record order. Generic over T so it can tally roster
+// entries by a derived key or tally a flat list (e.g. honor names) equally well.
+export function countBy<T>(roster: readonly T[], getKey: (item: T) => string | undefined): [string, number][] {
+  const counts = new Map<string, number>();
   for (const p of roster) {
     const key = getKey(p);
     if (!key) continue;
@@ -836,7 +843,7 @@ export function countBy(roster, getKey) {
   return [...counts.entries()].sort((a, b) => b[1] - a[1] || String(a[0]).localeCompare(String(b[0])));
 }
 
-function honorHolderCount(roster, honorName) {
+function honorHolderCount(roster: Roster | null | undefined, honorName: string): number {
   return new Set((roster || [])
     .filter((p) => (p.honors || []).some((honor) => honor.name === honorName))
     .map((p) => p.name)).size;
@@ -854,7 +861,7 @@ const MARQUEE_HONORS = [
   'Clay Research Award',
 ];
 
-export function buildAwardsFunFacts(roster) {
+export function buildAwardsFunFacts(roster: Roster | null | undefined): string[] {
   const allRoster = roster || [];
   if (allRoster.length === 0) {
     return ['No faculty currently listed, so no awards or honors can be counted.'];
@@ -874,7 +881,7 @@ export function buildAwardsFunFacts(roster) {
   const marqueeHonors = MARQUEE_HONORS
     .map((name): [string, number] => [name, honorHolderCount(allRoster, name)])
     .filter(([, count]) => count > 0);
-  const facts = [];
+  const facts: string[] = [];
   const nsfHolders = honorHolderCount(allRoster, 'NSF CAREER Award');
   const usNsfHolders = honorHolderCount(usRoster, 'NSF CAREER Award');
   const pecaseHolders = honorHolderCount(allRoster, 'PECASE');
@@ -899,7 +906,7 @@ export function buildAwardsFunFacts(roster) {
     facts.push(`Marquee honors represented: ${marqueeHonors.map(([name, count]) => `${name} (${count})`).join(', ')}.`);
   }
 
-  const academyFacts = [];
+  const academyFacts: string[] = [];
   if (academyHolders > 0) academyFacts.push(`${academyHolders} national-academy or equivalent academy distinction${academyHolders === 1 ? '' : 's'}`);
   if (fellowHolders > 0) academyFacts.push(`${fellowHolders} major-society fellowship${fellowHolders === 1 ? '' : 's'}`);
   if (academyFacts.length) facts.push(`${academyFacts.join(' and ')} recorded in the roster.`);
@@ -911,32 +918,32 @@ export function buildAwardsFunFacts(roster) {
 // These observations are deliberately computed only from fields in the current roster. Small
 // groups are omitted, and no external claims about prestige, population, or career history are
 // inferred from an institution or location name.
-function observationShare(count, total) {
+function observationShare(count: number, total: number): string {
   return `${count} of ${total} (${Math.round((count / total) * 100)}%)`;
 }
 
-function observationUniversities(roster) {
+function observationUniversities(roster: Roster): [string, number][] {
   return countBy(roster, (p) => p.university);
 }
 
-function observationFields(roster) {
+function observationFields(roster: Roster): [string, number][] {
   return countBy(roster, (p) => p.department ? fieldOf(p.department, p.university) : 'Others');
 }
 
-function observationDepartmentSpread(roster) {
-  const groups = new Map();
+function observationDepartmentSpread(roster: Roster): [string, number][] {
+  const groups = new Map<string, Set<string>>();
   for (const person of roster) {
     if (!person.university || !person.department) continue;
     if (!groups.has(person.university)) groups.set(person.university, new Set());
     groups.get(person.university).add(person.department);
   }
   return [...groups.entries()]
-    .map(([university, departments]) => [university, departments.size])
+    .map(([university, departments]): [string, number] => [university, departments.size])
     .sort((a, b) => b[1] - a[1] || String(a[0]).localeCompare(String(b[0])));
 }
 
-function observationSameFieldClusters(roster) {
-  const groups = new Map();
+function observationSameFieldClusters(roster: Roster): [[string, string], number][] {
+  const groups = new Map<string, number>();
   for (const person of roster) {
     if (!person.university || !person.department) continue;
     const field = fieldOf(person.department, person.university);
@@ -944,12 +951,12 @@ function observationSameFieldClusters(roster) {
     groups.set(key, (groups.get(key) ?? 0) + 1);
   }
   return [...groups.entries()]
-    .map(([key, count]) => [key.split('\u0000'), count])
+    .map(([key, count]): [[string, string], number] => [key.split('\u0000') as [string, string], count])
     .filter(([, count]) => count >= 3)
     .sort((a, b) => b[1] - a[1] || String(a[0][0]).localeCompare(String(b[0][0])));
 }
 
-function addRosterObservations(facts, roster, label) {
+function addRosterObservations(facts: string[], roster: Roster, label: string): void {
   if (roster.length < 5) return;
   const universities = observationUniversities(roster);
   const fields = observationFields(roster);
@@ -971,7 +978,7 @@ function addRosterObservations(facts, roster, label) {
   }
 }
 
-export function buildUsObservations(roster) {
+export function buildUsObservations(roster: Roster | null | undefined): string[] {
   const usRoster = (roster || []).filter((p) => (p.country || 'United States') === 'United States');
   if (usRoster.length === 0) return ['No United States faculty currently listed under the active filter selection.'];
   const facts = [`${usRoster.length} U.S. entries across ${new Set(usRoster.map((p) => p.university)).size} universities.`];
@@ -985,7 +992,7 @@ export function buildUsObservations(roster) {
   return facts;
 }
 
-export function buildInternationalObservations(roster) {
+export function buildInternationalObservations(roster: Roster | null | undefined): string[] {
   const international = (roster || []).filter((p) => (p.country || 'United States') !== 'United States');
   if (international.length === 0) return ['No international diaspora faculty currently listed under the active filter selection.'];
   const facts = [`${international.length} international entries across ${new Set(international.map((p) => p.university)).size} universities in ${new Set(international.map((p) => p.country)).size} countries.`];
@@ -1001,7 +1008,7 @@ export function buildInternationalObservations(roster) {
   return facts;
 }
 
-export function buildLocationObservations(roster, label = 'selected') {
+export function buildLocationObservations(roster: Roster | null | undefined, label = 'selected'): string[] {
   const selected = roster || [];
   if (selected.length === 0) return ['No faculty currently listed under the active location selection.'];
   const countries = new Set(selected.map((person) => person.country || 'United States')).size;
@@ -1016,7 +1023,7 @@ export function buildLocationObservations(roster, label = 'selected') {
   return facts;
 }
 
-export function buildQualifiedObservations(roster) {
+export function buildQualifiedObservations(roster: Roster | null | undefined): string[] {
   const allRoster = roster || [];
   const usRoster = allRoster.filter((p) => (p.country || 'United States') === 'United States');
   const international = allRoster.filter((p) => (p.country || 'United States') !== 'United States');
@@ -1046,7 +1053,7 @@ export function buildQualifiedObservations(roster) {
 // Computed fresh from the live roster every time (not a snapshot), so these stay accurate as the
 // roster grows. Returned as plain fact strings — the "show me something interesting" view just
 // renders them as a list.
-export function buildFunFacts(roster) {
+export function buildFunFacts(roster: Roster | null | undefined): string[] {
   if (!roster || roster.length === 0) {
     return ['No faculty currently listed for this location or filter selection.'];
   }

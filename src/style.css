@@ -786,9 +786,6 @@ a.entry-name:focus-visible {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-}
-
-.profile-page .eyebrow-text {
   color: var(--text-primary);
   font-weight: 700;
   text-decoration: none;
@@ -1184,11 +1181,6 @@ a.entry-name:focus-visible {
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
-}
-
-.brand-logo-link {
-  display: flex;
-  flex: 0 0 auto;
 }
 
 .brand-logo {

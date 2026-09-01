@@ -28,4 +28,7 @@ test('generated profile pages use the same stylesheet source as the directory', 
   assert.match(sourceStylesheet, /:root\s*{[^}]*--bamboo-green: #2e9e64;[^}]*--bamboo-green-hover: #1d7a4c;/s);
   assert.match(sourceStylesheet, /\.submission-link\s*{[^}]*background: var\(--bamboo-green\);[^}]*color: #ffffff;/s);
   assert.match(sourceStylesheet, /\.submit-btn\s*{[^}]*background: var\(--bamboo-green\);[^}]*color: #ffffff;/s);
+  assert.match(generator, /countryFlag/);
+  assert.match(generator, /class="loc-badge"/);
+  assert.match(generator, /class="country-flag"/);
 });

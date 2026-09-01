@@ -1,19 +1,21 @@
 import { test, before, after } from 'node:test';
 // Browser tests intentionally exercise the built application through Playwright.
 import assert from 'node:assert/strict';
-import { spawn } from 'node:child_process';
+import { spawn, type ChildProcess } from 'node:child_process';
 import { createRequire } from 'node:module';
 import { get } from 'node:http';
+import type { Browser, BrowserContext } from 'playwright';
+import type { RosterEntry } from '../src/data.ts';
 
 const require = createRequire(import.meta.url);
 const { chromium } = require('playwright');
 const port = 4179;
-let server;
-let browser;
-let context;
-let baseUrl;
+let server: ChildProcess;
+let browser: Browser;
+let context: BrowserContext;
+let baseUrl: string;
 
-async function waitForServer(url) {
+async function waitForServer(url: string) {
   for (let attempt = 0; attempt < 40; attempt += 1) {
     try {
       const status = await new Promise<number>((resolve, reject) => {
@@ -127,7 +129,7 @@ test('undergraduate institution keyword prefix filters the roster and persists i
 
   const expectedCount = await page.evaluate(async () => (
     await (await fetch('/data.json')).json()
-  ).filter((person) => person.undergradInstitution?.includes('Boise State University')).length);
+  ).filter((person: RosterEntry) => person.undergradInstitution?.includes('Boise State University')).length);
   assert.ok(expectedCount > 0);
   await page.waitForFunction((count) => document.querySelectorAll('.entry').length === count, expectedCount);
   assert.equal(await page.locator('.entry').count(), expectedCount);
@@ -185,7 +187,7 @@ test('mobile pages avoid horizontal overflow and provide usable tap targets', as
   const assertNoOverflow = async () => {
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), await page.evaluate(() => document.documentElement.clientWidth));
   };
-  const assertTapTargets = async (selector) => {
+  const assertTapTargets = async (selector: string) => {
     const undersized = await page.locator(selector).evaluateAll((elements) => elements
       .filter((element) => {
         const style = getComputedStyle(element);
@@ -232,14 +234,14 @@ test('every roster card exposes its official profile link', async () => {
   const entryCount = await page.locator('.entry').count();
   const profileLinks = page.locator('.profile-link');
   assert.equal(await profileLinks.count(), entryCount);
-  assert.ok(await profileLinks.evaluateAll((links) => links.every((link) => (
+  assert.ok(await profileLinks.evaluateAll((links: HTMLAnchorElement[]) => links.every((link) => (
     link.getAttribute('title') === 'Official university profile'
       && link.getAttribute('aria-label')?.endsWith(' official university profile')
       && /^https?:\/\//.test(link.href)
   ))));
   const [actualUrls, expectedUrls] = await Promise.all([
-    profileLinks.evaluateAll((links) => links.map((link) => link.href).sort()),
-    page.evaluate(async () => (await (await fetch('/data.json')).json()).map((person) => new URL(person.profileUrl).href).sort()),
+    profileLinks.evaluateAll((links: HTMLAnchorElement[]) => links.map((link) => link.href).sort()),
+    page.evaluate(async () => (await (await fetch('/data.json')).json()).map((person: RosterEntry) => new URL(person.profileUrl).href).sort()),
   ]);
   assert.deepEqual(actualUrls, expectedUrls);
   await page.close();
@@ -274,7 +276,7 @@ test('local faculty portraits render and load', async () => {
   const portrait = page.locator('.entry-portrait').first();
   await portrait.waitFor();
   assert.match(await portrait.getAttribute('src'), /\/portraits\/.*\.webp$/);
-  assert.ok(await portrait.evaluate((image) => image.complete && image.naturalWidth > 0));
+  assert.ok(await portrait.evaluate((image: HTMLImageElement) => image.complete && image.naturalWidth > 0));
   await page.close();
 });
 
@@ -289,7 +291,7 @@ test('filters and submit-form suggestions work', async () => {
   assert.ok((await page.locator('.correction-suggestion').count()) > 0);
   await page.locator('.correction-suggestion').first().click();
   assert.notEqual(await page.locator('#profileUrl').inputValue(), '');
-  const tan = await page.evaluate(async () => (await (await fetch('/data.json')).json()).find((person) => person.name === 'Tan Minh Nguyen'));
+  const tan: RosterEntry = await page.evaluate(async () => (await (await fetch('/data.json')).json()).find((person: RosterEntry) => person.name === 'Tan Minh Nguyen'));
   assert.match(tan.id, /^vp-\d+$/);
   await page.goto(`${baseUrl}/submit.html?edit=${encodeURIComponent(tan.id)}`, { waitUntil: 'networkidle' });
   assert.equal(await page.locator('#name').inputValue(), 'Tan Minh Nguyen');
@@ -321,7 +323,11 @@ test('submit form defaults to bulk add mode and toggles to single-entry details'
   assert.equal(await page.locator('#required-section').isVisible(), true);
   assert.equal(await page.locator('#name').inputValue(), '');
   await page.locator('input[name="purpose"][value="update"]').check();
-  assert.equal(await page.locator('#add-mode-section').isVisible(), false);
+  // The bulk/notes box stays visible for updates too — it doubles as a freeform notes field —
+  // but the "paste a link" help text is add-mode-only.
+  assert.equal(await page.locator('#add-mode-section').isVisible(), true);
+  assert.equal(await page.locator('#bulkInput-label').innerText(), 'Notes');
+  assert.equal(await page.locator('#add-mode-details-help').isVisible(), false);
   assert.equal(await page.locator('#required-section').isVisible(), true);
   await page.close();
 });
@@ -335,7 +341,7 @@ test('stale zero-result field URLs fall back to the roster', async () => {
 
 test('filter choices stay stable and stale filters recover', async () => {
   const page = await context.newPage();
-  const runtimeErrors = [];
+  const runtimeErrors: string[] = [];
   page.on('pageerror', (error) => runtimeErrors.push(error.message));
   page.on('console', (message) => {
     if (message.type() === 'error') runtimeErrors.push(message.text());
@@ -343,7 +349,7 @@ test('filter choices stay stable and stale filters recover', async () => {
   await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
   const fieldOptions = page.locator('#field-filter option');
   const trackOptions = page.locator('#track-filter option');
-  const fieldLabels = await fieldOptions.evaluateAll((options) =>
+  const fieldLabels = await fieldOptions.evaluateAll((options: HTMLOptionElement[]) =>
     options.filter((option) => option.value !== 'interesting').map((option) => option.textContent),
   );
   const trackLabels = await trackOptions.allTextContents();
@@ -352,12 +358,12 @@ test('filter choices stay stable and stale filters recover', async () => {
   assert.equal(await fieldOptions.filter({ hasText: 'Health' }).count(), 1);
   assert.equal(await fieldOptions.filter({ hasText: 'Law' }).count(), 1);
   assert.equal(await trackOptions.filter({ hasText: 'Tenure-line' }).count(), 1);
-  assert.equal(await page.locator('#field-filter option[value="Others"]').count(), 1);
+  assert.equal(await page.locator('#field-filter option[value="Earth & Environmental Sciences"]').count(), 1);
   await page.locator('#field-filter').selectOption('Biological & Biomedical Sciences');
   assert.ok((await page.locator('.entry').count()) > 0);
   assert.equal(await page.locator('#track-filter option[value="Teaching"]').count(), 1);
   assert.equal(await page.locator('#track-filter option[value="Emeritus"]').count(), 1);
-  assert.equal(await page.locator('#field-filter option[value="Others"]').count(), 1);
+  assert.equal(await page.locator('#field-filter option[value="Earth & Environmental Sciences"]').count(), 1);
   const locationLabels = await page.locator('#location-filter option').allTextContents();
   assert.ok(locationLabels.every((label) => label.trim().length > 0));
   await page.locator('#location-filter').selectOption('World');

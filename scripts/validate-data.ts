@@ -29,11 +29,11 @@ const surnameFirstAllowlist = new Set<string>([
   'Tran Nguyen Templeton', // "Nguyen" is a preserved maiden name, not a misordered surname
 ]);
 
-function fail(file, message) {
+function fail(file: string, message: string): never {
   throw new Error(`${file}: ${message}`);
 }
 
-function validateTimestamp(file, value, label, field) {
+function validateTimestamp(file: string, value: string, label: string, field: string): void {
   const timestamp = new Date(value);
   if (!UTC_TIMESTAMP_PATTERN.test(value) || Number.isNaN(timestamp.valueOf()) || timestamp.toISOString() !== value) {
     fail(file, `${label} ${field} must be a canonical UTC ISO timestamp`);

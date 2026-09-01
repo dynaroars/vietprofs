@@ -1,12 +1,12 @@
 import './style.css';
-import { loadRoster, buildSearchIndex, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueUndergradInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, LOCATION_LABELS, countryFlag, canonicalRank, displayName, fieldOf, locationMatches, filterRoster, buildFunFacts, buildUsObservations, buildInternationalObservations, buildLocationObservations, buildQualifiedObservations, buildAwardsFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, STATE_ABBR, type Roster } from './data.ts';
+import { loadRoster, buildSearchIndex, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueUndergradInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, LOCATION_LABELS, countryFlag, canonicalRank, displayName, fieldOf, locationMatches, filterRoster, buildFunFacts, buildUsObservations, buildInternationalObservations, buildLocationObservations, buildQualifiedObservations, buildAwardsFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, STATE_ABBR, type Roster, type RosterEntry, type SearchIndex } from './data.ts';
 import { escapeHtml } from './utils.ts';
 import { STATE_GRID } from './state-grid.ts';
 import { applyFavoriteToggle, fieldDropdownLabel, renderRosterEntry } from './render.ts';
 import { loadFavorites, toggleFavorite } from './favorites-store.ts';
 import { locationForQuery } from './filter-state.ts';
 
-function heatTier(count, max) {
+function heatTier(count: number, max: number): number {
   if (count === 0 || max === 0) return 0;
   const ratio = count / max;
   if (ratio > 0.66) return 4;
@@ -30,9 +30,9 @@ function pickRandomUnique<T>(values: readonly T[], count: number): T[] {
   return shuffle([...new Set(values)]).slice(0, count);
 }
 
-function debounce(fn, delayMs) {
-  let timer;
-  return (...args) => {
+function debounce<Args extends unknown[]>(fn: (...args: Args) => void, delayMs: number): (...args: Args) => void {
+  let timer: ReturnType<typeof setTimeout>;
+  return (...args: Args) => {
     clearTimeout(timer);
     timer = setTimeout(() => fn(...args), delayMs);
   };
@@ -107,7 +107,7 @@ function renderShell() {
   app.innerHTML = `
     <header>
       <div class="title-row">
-        <h1 class="brand-link"><a class="brand-logo-link" href="${import.meta.env.BASE_URL}vietprofs-bamboo-v-2048.png" target="_blank" rel="noopener noreferrer" aria-label="View the full-size VietProfs logo"><img class="brand-logo" src="${import.meta.env.BASE_URL}vietprofs-bamboo-v.svg" alt="" width="56" height="56"></a><a class="home-link" href="${import.meta.env.BASE_URL}" id="home-link"><span>Vietnamese Academic Diaspora</span></a></h1>
+        <h1><a class="home-link brand-link" href="${import.meta.env.BASE_URL}" id="home-link"><img class="brand-logo" src="${import.meta.env.BASE_URL}vietprofs-bamboo-v.svg" alt="" width="56" height="56"><span>Vietnamese Academic Diaspora</span></a></h1>
         <div class="header-icons">
           <a class="icon-link roars-link" href="https://roars.dev" target="_blank" rel="noopener noreferrer" aria-label="ROARS Lab" title="ROARS Lab"></a>
           <a class="icon-link github-link" href="https://github.com/dynaroars/vietprofs" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository" title="GitHub repository">
@@ -116,7 +116,7 @@ function renderShell() {
         </div>
       </div>
       <div class="subtitle-row">
-        <p class="site-subtitle">An open-source directory of Vietnamese professors worldwide</p>
+        <p class="site-subtitle">An open directory of Vietnamese professors worldwide</p>
         <div class="header-actions">
           <a class="paper-link" href="${import.meta.env.BASE_URL}paper.pdf" target="_blank" rel="noopener noreferrer">Read the paper</a>
           <a class="submission-link" href="submit.html">Add or update info</a>
@@ -195,7 +195,7 @@ const TRACK_INFO: Record<string, { label: string; tooltip: string }> = {
   },
 };
 
-function trackQualifier(roster) {
+function trackQualifier(roster: Roster): string {
   const tracks = new Set<string>(roster.map((p) => p.track).filter(Boolean));
   if (tracks.size !== 1) return '';
   const info = TRACK_INFO[[...tracks][0]];
@@ -207,14 +207,19 @@ interface RenderOptions {
   location?: string;
 }
 
-function namePart(person, part: 'first' | 'last') {
+interface OptionEntry {
+  value: string;
+  label: string;
+}
+
+function namePart(person: RosterEntry, part: 'first' | 'last'): string {
   const words = displayName(person.name).trim().split(/\s+/);
-  return part === 'first' ? words[0] : words.at(-1);
+  return (part === 'first' ? words[0] : words.at(-1)) ?? '';
 }
 
 function sortRoster(roster: Roster, order: string): Roster {
   const favorites = new Set(loadFavorites());
-  const byName = (part: 'first' | 'last') => (a, b) =>
+  const byName = (part: 'first' | 'last') => (a: RosterEntry, b: RosterEntry) =>
     namePart(a, part).localeCompare(namePart(b, part), 'en', { sensitivity: 'base' })
       || displayName(a.name).localeCompare(displayName(b.name), 'en', { sensitivity: 'base' });
   const bySelectedOrder = order === 'last-name'
@@ -222,7 +227,7 @@ function sortRoster(roster: Roster, order: string): Roster {
     : order === 'first-name'
       ? byName('first')
       : order === 'recent'
-        ? (a, b) => b.lastUpdatedAt.localeCompare(a.lastUpdatedAt)
+        ? (a: RosterEntry, b: RosterEntry) => (b.lastUpdatedAt ?? '').localeCompare(a.lastUpdatedAt ?? '')
         : () => 0;
 
   return [...roster].sort((a, b) => Number(favorites.has(b.id)) - Number(favorites.has(a.id)) || bySelectedOrder(a, b));
@@ -249,8 +254,8 @@ const NGUYEN_TOOLTIP = 'Nguyễn was Vietnam’s last ruling dynasty (1802–194
   + 'or were assigned the name under it, which is why it’s estimated to be shared by nearly 40% '
   + 'of Vietnamese people today.';
 
-function renderStateGrid(roster) {
-  const counts = new Map();
+function renderStateGrid(roster: Roster): string {
+  const counts = new Map<string | undefined, number>();
   for (const p of roster) counts.set(p.state, (counts.get(p.state) ?? 0) + 1);
   const max = Math.max(0, ...counts.values());
   const tiles = Object.entries(STATE_GRID)
@@ -271,7 +276,7 @@ function renderStateGrid(roster) {
   `;
 }
 
-function renderDecadesChart(roster) {
+function renderDecadesChart(roster: Roster): string {
   const decadeCounts = buildDecadeCounts(roster);
   const total = roster.filter((p) => p.phdYear).length;
   if (!decadeCounts.length) return '';
@@ -300,7 +305,14 @@ function renderDecadesChart(roster) {
   `;
 }
 
-function renderLeaderboards(subRoster, { titleUni = 'Top Faculty Hubs', descUni = 'Universities with the most Vietnamese faculty; click to search.', titlePhd = 'Top PhD Alma Maters', descPhd = 'Doctoral institutions that trained the most faculty; click to search.' } = {}) {
+interface LeaderboardLabels {
+  titleUni?: string;
+  descUni?: string;
+  titlePhd?: string;
+  descPhd?: string;
+}
+
+function renderLeaderboards(subRoster: Roster, { titleUni = 'Top Faculty Hubs', descUni = 'Universities with the most Vietnamese faculty; click to search.', titlePhd = 'Top PhD Alma Maters', descPhd = 'Doctoral institutions that trained the most faculty; click to search.' }: LeaderboardLabels = {}): string {
   const topUnis = buildTopUniversities(subRoster, 6);
   const topPhd = buildTopPhdInstitutions(subRoster, 6);
   if (topUnis.length === 0 && topPhd.length === 0) return '';
@@ -353,7 +365,7 @@ function renderLeaderboards(subRoster, { titleUni = 'Top Faculty Hubs', descUni 
   `;
 }
 
-function renderFunFacts(visibleRoster, selectedLocationLabel, selectedLocation, fullRoster) {
+function renderFunFacts(visibleRoster: Roster, selectedLocationLabel: string, selectedLocation: string, fullRoster: Roster) {
   const rosterEl = document.getElementById('roster');
   const countEl = document.getElementById('result-count');
   countEl.textContent = 'Insights and patterns for the selected location and the worldwide diaspora:';
@@ -371,7 +383,7 @@ function renderFunFacts(visibleRoster, selectedLocationLabel, selectedLocation, 
   const worldFacts = [...buildUsObservations(worldUsRoster), ...buildInternationalObservations(fullRoster), ...buildQualifiedObservations(fullRoster)];
   const worldAwardsFacts = buildAwardsFunFacts(fullRoster);
 
-  const formatList = (facts) =>
+  const formatList = (facts: string[]) =>
     facts
       .map((f) => {
         const escaped = escapeHtml(f);
@@ -432,7 +444,7 @@ function renderFunFacts(visibleRoster, selectedLocationLabel, selectedLocation, 
 async function init() {
   renderShell();
 
-  let roster;
+  let roster: Roster;
   try {
     // Keep one randomized order for the session so the default directory view is less
     // predictable, without reshuffling every time a filter or search is changed.
@@ -491,21 +503,21 @@ async function init() {
   const sortSelect = document.getElementById('sort-order') as HTMLSelectElement;
   const filterState = { state: '', insights: false };
 
-  function optionElement(value, label) {
+  function optionElement(value: string, label: string): HTMLOptionElement {
     const option = document.createElement('option');
     option.value = value;
     option.textContent = label;
     return option;
   }
 
-  function setOptions(select, entries, selectedValue) {
+  function setOptions(select: HTMLSelectElement, entries: OptionEntry[], selectedValue: string): void {
     select.replaceChildren(...entries.map(({ value, label }) => optionElement(value, label)));
     select.value = selectedValue;
     if (select.selectedIndex < 0) select.selectedIndex = 0;
   }
 
-  function setLocationOptions(countryEntries, continentEntries, selectedValue) {
-    const groups = [
+  function setLocationOptions(countryEntries: OptionEntry[], continentEntries: OptionEntry[], selectedValue: string): void {
+    const groups: [string, OptionEntry[]][] = [
       ['By country/region', countryEntries],
       ['By continent', continentEntries],
     ];
@@ -532,12 +544,12 @@ async function init() {
   const countryCounts = new Map(
     countryOptions.map((country) => [country, roster.filter((person) => locationMatches(person, country)).length]),
   );
-  countryOptions.sort((a, b) => countryCounts.get(b) - countryCounts.get(a) || a.localeCompare(b));
+  countryOptions.sort((a, b) => (countryCounts.get(b) ?? 0) - (countryCounts.get(a) ?? 0) || a.localeCompare(b));
   const continentOptions = LOCATIONS.filter((loc) => loc !== 'US');
   const locationOptions = [...countryOptions, ...continentOptions];
-  const locationLabel = (loc) => LOCATION_LABELS[loc] || `${countryFlag(loc)} ${loc}`;
+  const locationLabel = (loc: string): string => LOCATION_LABELS[loc] || `${countryFlag(loc)} ${loc}`;
 
-  function filtersHaveResults(location, field, track) {
+  function filtersHaveResults(location: string, field: string, track: string): boolean {
     return roster.some((person) =>
       locationMatches(person, location) &&
       (field === 'all' || fieldOf(person.department, person.university) === field) &&
@@ -545,15 +557,15 @@ async function init() {
     );
   }
 
-  function countedOptions(values, subset, matches, labelFor) {
+  function countedOptions<T>(values: readonly T[], subset: Roster, matches: (person: RosterEntry, value: T) => boolean, labelFor: (value: T) => string): OptionEntry[] {
     return values.flatMap((value) => {
       const count = subset.filter((person) => matches(person, value)).length;
-      return count > 0 ? [{ value, label: labelFor(value) }] : [];
+      return count > 0 ? [{ value: String(value), label: labelFor(value) }] : [];
     });
   }
 
   function initializeDropdowns() {
-    const locationEntries = (values) => countedOptions(
+    const locationEntries = (values: string[]) => countedOptions(
       values,
       roster,
       locationMatches,
@@ -590,7 +602,7 @@ async function init() {
     );
   }
 
-  function setFilterValues({ location, field = 'all', track = 'all' }) {
+  function setFilterValues({ location, field = 'all', track = 'all' }: { location: string; field?: string; track?: string }) {
     const safeLocation = locationOptions.includes(location) && roster.some((person) => locationMatches(person, location))
       ? location
       : 'World';
@@ -752,7 +764,7 @@ async function init() {
       hideSuggestions();
       return;
     }
-    const normalized = (value) => value.toLocaleLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    const normalized = (value: string) => value.toLocaleLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
     const source = keywordValues ?? suggestionValues;
     const sourceQuery = keywordValues ? normalized(rawQuery) : normalized(query);
     const matches = source

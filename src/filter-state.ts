@@ -1,4 +1,4 @@
-import { filterRoster, uniqueCountries, type Roster } from './data.ts';
+import { filterRoster, uniqueCountries, type Roster, type SearchIndex } from './data.ts';
 
 const CONTINENT_QUERIES = new Set([
   'africa',
@@ -10,14 +10,23 @@ const CONTINENT_QUERIES = new Set([
   'world',
 ]);
 
-export function locationForQuery(roster: Roster, searchIndex, {
+interface LocationForQueryOptions {
+  query: string;
+  currentLocation: string;
+  searchScope?: string;
+  state?: string;
+  field?: string;
+  track?: string;
+}
+
+export function locationForQuery(roster: Roster, searchIndex: Roster | SearchIndex, {
   query,
   currentLocation,
   searchScope = 'all',
   state = '',
   field = 'all',
   track = 'all',
-}) {
+}: LocationForQueryOptions): string {
   const value = query.trim();
   if (!value) return currentLocation;
   const normalized = value.toLocaleLowerCase();
