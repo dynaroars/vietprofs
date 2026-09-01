@@ -39,7 +39,7 @@ function profilePage(person: RosterEntry) {
   const description = `${name} is listed by VietProfs as ${role}.`;
   const portrait = person.portrait
     ? `<img class="portrait" src="../${escapeHtml(person.portrait)}" alt="Portrait of ${escapeHtml(name)}" width="240" height="240">`
-    : '';
+    : `<img class="portrait portrait-placeholder" src="../default-portrait.svg" alt="No portrait on file yet for ${escapeHtml(name)}" width="240" height="240">`;
   const research = person.researchAreas?.length
     ? `<section><h2>Research areas</h2><ul>${person.researchAreas.map((area) => `<li>${escapeHtml(area)}</li>`).join('')}</ul></section>`
     : '';

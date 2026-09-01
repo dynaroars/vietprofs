@@ -1,6 +1,6 @@
 // Regenerates the paper's screenshot figures from the built site so they cannot drift out of
 // sync with the roster snapshot the manuscript reports. Run `npm run figures` after a roster
-// change, then rebuild paper.pdf.
+// change, then rebuild paper/paper.pdf and re-copy it to vietprofs.pdf.
 //
 // The server/browser setup mirrors test/browser-smoke.test.ts: `vite preview` over the built
 // dist/, driven by headless Chromium.
@@ -15,7 +15,7 @@ const { chromium } = require('playwright');
 
 const port = 4180;
 const baseUrl = `http://127.0.0.1:${port}`;
-const figuresDir = fileURLToPath(new URL('../figures/', import.meta.url));
+const figuresDir = fileURLToPath(new URL('../paper/figures/', import.meta.url));
 
 // Matches the existing figures: a 1360x900 CSS viewport at 2x, so the PNGs stay 2720x1800.
 const viewport = { width: 1360, height: 900 };
@@ -89,7 +89,7 @@ try {
     await figure.prepare?.(page);
     await page.screenshot({ path: `${figuresDir}${figure.file}` });
     await page.close();
-    console.log(`Captured figures/${figure.file}`);
+    console.log(`Captured paper/figures/${figure.file}`);
   }
 
   await context.close();

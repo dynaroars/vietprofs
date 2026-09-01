@@ -69,7 +69,7 @@ export function renderRosterEntry(person: RosterEntry, baseUrl = '/') {
   const updatedTime = `<time class="entry-updated" datetime="${escapeHtml(person.lastUpdatedAt)}" title="Roster information last updated ${escapeHtml(formatRosterDate(person.lastUpdatedAt))}"><span>Updated</span> <span>${escapeHtml(formatRosterShortDate(person.lastUpdatedAt))}</span></time>`;
   const portrait = person.portrait
     ? `<img class="entry-portrait" src="${escapeHtml(`${baseUrl}${person.portrait}`)}" alt="" width="64" height="64" loading="lazy" decoding="async">`
-    : '';
+    : `<img class="entry-portrait entry-portrait-placeholder" src="${escapeHtml(`${baseUrl}default-portrait.svg`)}" alt="" width="64" height="64" loading="lazy" decoding="async">`;
   const educationDetails = [
     person.postdocInstitution && `Postdoc: ${[displayUniversity(person.postdocInstitution), person.postdocYear].filter(Boolean).join(', ')}`,
     person.phdInstitution && `PhD: ${[displayUniversity(person.phdInstitution), person.phdYear, person.phdMajor].filter(Boolean).join(', ')}`,
@@ -90,7 +90,7 @@ export function renderRosterEntry(person: RosterEntry, baseUrl = '/') {
   const favoriteToggle = `<button type="button" class="favorite-toggle${favorited ? ' is-favorite' : ''}" data-id="${escapeHtml(person.id)}" aria-pressed="${favorited ? 'true' : 'false'}" aria-label="${favoriteLabel}" title="${favoriteLabel}"><svg viewBox="0 0 24 24" aria-hidden="true">${STAR_ICON}</svg></button>`;
 
   return `
-    <div class="entry${portrait ? ' entry-with-portrait' : ''}">
+    <div class="entry entry-with-portrait">
       ${portrait}
       ${favoriteToggle}
       <div class="entry-content">

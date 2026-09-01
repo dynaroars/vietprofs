@@ -10,7 +10,7 @@ Repository documentation is intentionally limited to four files:
 
 - [`README.md`](./README.md): project overview, commands, and operating instructions.
 - [`ROSTER_MAINTENANCE.md`](./ROSTER_MAINTENANCE.md): authoritative eligibility, evidence, and roster-editing policy.
-- [`PAPER_NOTES.md`](./PAPER_NOTES.md): reproducible manuscript metrics, claim audit, and publication checklist.
+- [`paper/PAPER_NOTES.md`](./paper/PAPER_NOTES.md): reproducible manuscript metrics, claim audit, and publication checklist.
 - [`AGENTS.md`](./AGENTS.md): concise instructions for automated contributors.
 
 ## Search and filters
@@ -29,13 +29,17 @@ npm run preview   # preview the production build
 npm run typecheck # check TypeScript modules
 npm test          # validate data and run unit/UI tests
 npm run test:e2e  # run browser smoke tests
-npm run analyze   # print snapshot counts for PAPER_NOTES.md and the paper
+npm run analyze   # print snapshot counts for paper/PAPER_NOTES.md and the paper
 npm run figures   # rebuild and recapture the paper's screenshot figures
 ```
 
 `npm run analyze` produces the snapshot values used by the manuscript, and `npm run figures`
 rebuilds its screenshots. Run both after a roster change that the paper cites, then update
-`PAPER_NOTES.md` and `paper.tex` from those outputs.
+`paper/PAPER_NOTES.md` and `paper/paper.tex` from those outputs. The manuscript source lives
+entirely under [`paper/`](./paper/); after editing it, rebuild the PDF locally (e.g. `cd paper &&
+latexmk -pdf paper.tex`) and copy the result to `vietprofs.pdf` at the repo root — the committed
+PDF is not built in CI, so this copy must be committed manually for the site to pick up the
+change.
 
 By default `npm run dev` serves the site at `http://localhost:5173`. To make the dev server
 reachable from other machines on your network:
@@ -214,4 +218,4 @@ university, and department) is not restricted. See [`LICENSE`](./LICENSE) for th
 
 **Portraits** (`public/portraits/`) are sourced from official university pages and personal/lab
 sites, used here for identification purposes; they remain the property of their original sources
-and are not covered by this license. The manuscript (`paper.tex`/`paper.pdf`) is also not covered.
+and are not covered by this license. The manuscript (`paper/paper.tex`/`vietprofs.pdf`) is also not covered.

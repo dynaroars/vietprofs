@@ -273,10 +273,20 @@ test('favorites stay at the top while the directory can be sorted', async () => 
 test('local faculty portraits render and load', async () => {
   const page = await context.newPage();
   await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
-  const portrait = page.locator('.entry-portrait').first();
+  const portrait = page.locator('.entry-portrait:not(.entry-portrait-placeholder)').first();
   await portrait.waitFor();
   assert.match(await portrait.getAttribute('src'), /\/portraits\/.*\.webp$/);
   assert.ok(await portrait.evaluate((image: HTMLImageElement) => image.complete && image.naturalWidth > 0));
+  await page.close();
+});
+
+test('entries without a portrait fall back to the graduation-cap placeholder', async () => {
+  const page = await context.newPage();
+  await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
+  const placeholder = page.locator('.entry-portrait-placeholder').first();
+  await placeholder.waitFor();
+  assert.match(await placeholder.getAttribute('src'), /\/default-portrait\.svg$/);
+  assert.equal(await page.locator('.entry-portrait').count(), await page.locator('.entry').count());
   await page.close();
 });
 

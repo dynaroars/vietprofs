@@ -8,4 +8,5 @@ await Promise.all([
   'vietprofs-bamboo-v.svg',
   'vietprofs-bamboo-v-512.png',
   'vietprofs-bamboo-v-2048.png',
+  'default-portrait.svg',
 ].map((asset) => copyFile(resolve(root, asset), resolve(root, 'public', asset))));

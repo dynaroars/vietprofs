@@ -11,7 +11,7 @@
   "scripts": {
     "dev": "vite",
     "predev": "npm run assign-profile-ids && npm run sync-profile-css && tsx scripts/generate-profile-pages.ts --dev",
-    "prebuild": "npm run assign-profile-ids && npm run sync-profile-css && cp paper.pdf public/paper.pdf",
+    "prebuild": "npm run assign-profile-ids && npm run sync-profile-css && cp vietprofs.pdf public/vietprofs.pdf",
     "build": "vite build && tsx scripts/generate-profile-pages.ts",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
