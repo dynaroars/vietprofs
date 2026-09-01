@@ -72,6 +72,33 @@ any candidate: a given-name token search is far more likely than a surname searc
 already in the roster under a different profile page or research summary, since the token alone does
 very little to narrow down which person it is.
 
+### Using a Vietnamese-name lexicon safely
+
+A combined vocabulary of Vietnamese family-name and given/middle-name tokens is useful for finding
+and prioritizing leads in long faculty directories or author lists. Normalize diacritics and case for
+matching, and allow for both Vietnamese (family-name-first) and Westernized (family-name-last) order.
+Keep the family-name and given/middle-name vocabularies separate so a token's position and its
+combination with other tokens can inform the match instead of treating every vocabulary hit alike.
+
+Some Vietnamese family names are also names or common tokens in other cultures. In particular, do
+not prioritize a surname-only match for ambiguous tokens such as `Le`, `Ho`, `Do`, or `Dang` as a
+likely Vietnamese lead unless the name also contains a recognized Vietnamese given/middle-name token
+or another relevant discovery signal. This is a noise-reduction rule for triage, not a conclusion
+about the person. The examples are not exhaustive: review false positives and add other ambiguous
+tokens as the searches reveal them.
+
+When a name detector or vocabulary is changed, test it against author or faculty-name samples from
+several relevant non-Vietnamese populations, including Chinese, Korean, Indian, Thai, and Japanese
+samples, and manually inspect the matches. Record the sample, method, and results before making a
+quantitative accuracy claim; a small or convenient control set does not establish general accuracy.
+
+Name matching is deliberately high-precision discovery assistance, not an exhaustive classifier.
+It will miss Vietnamese-diaspora people who publish under names without a recognized Vietnamese
+token, as well as unfamiliar, changed, shortened, or initialed names. Continue using the non-name
+sources above, and never exclude an otherwise supported candidate because the lexicon does not match.
+Conversely, a lexicon match is only a lead and does not replace the appointment and source-quality
+checks required for roster inclusion.
+
 **Try given-name search before, or alongside, surname search once a surname sweep has already run
 against a field or institution.** Once the standard per-surname queries have been run against a field
 a few times, they start mostly re-finding people already in the roster — surname search saturates
@@ -175,6 +202,80 @@ profile URL, education, honors, or a portrait. For a person not already in the
 roster, independently verify every part of the inclusion standard before adding them. Apply the
 same data-entry, honors, and field-mapping rules as when reviewing a user-supplied
 link.
+
+### The hieuphay.com economist lead queue
+
+`https://hieuphay.com/ban-do-kinh-te-viet-nam/` ("Bản đồ nghiên cứu kinh tế Việt Nam") is an
+interactive map of ~100,000 economics and social-science papers by Vietnamese-named authors,
+built from OpenAlex. It has no API: the page embeds a gzip+base64 blob directly in a `<script>`
+tag, decompressed client-side into a ~20MB JSON payload and rendered onto a `<canvas>`. That
+payload's `units.researchers.table` already tags each of its ~21,000 researchers with a `loc`
+code (0 = in Vietnam, 1 = diaspora abroad, 2 = foreign/Vietnam-linked, 3 = unknown) and an `econ`
+flag, using a name/location classifier the site's own methodology note says was validated against
+Chinese, Korean, Indian, Thai, and Japanese name samples — the same practice recommended above for
+a Vietnamese-name lexicon. That makes it a large, mostly-free source of `loc==1 & econ==1` leads,
+instead of a manual surname/given-name web-search sweep.
+
+Run `./scripts/extract-hieuphay-leads.ts` to (re-)fetch the page, decode that payload, filter to
+diaspora-abroad economics researchers whose listed institution looks like a university, and
+dedupe against `public/data.json` (by order-independent name-token match, so "Khuong Vu" catches
+an existing "Minh Khuong Vu" and vice versa). It writes/updates `maintenance/hieuphay-leads.json`
+— a flat list of `{ name, inst, country, npapers, cited, status, note, rosterId }` records, sorted
+by citation count as a rough verification priority. Re-running it is safe and idempotent: it
+carries forward the `status`/`note`/`rosterId` of every lead already recorded by name+institution,
+and only ever changes a `pending` lead's status to the heuristic `duplicate` (never overrides a
+human-set `included`/`excluded`/`duplicate`).
+
+**This is a lead queue, not a to-add list.** Every entry needs the same independent verification as
+any other candidate — current university appointment, track, rank, and an official or otherwise
+reliable source — before being added. The first round of 27 leads processed this way (see git
+history around 2026-09-01) turned up, alongside 11 genuine additions: two people already correctly
+in the roster under a different name-token order (a raw lead's "Khuong Vu" was the roster's
+existing "Minh Khuong Vu"); one lead whose "outdated institution" was actually still current and
+correct (do not blindly trust an agent's claim that a person "moved" without checking); and three
+excludable people (a non-academic career move, a primary employer that is not a university, and no
+verifiable faculty appointment at all). Expect a similar mix in every batch — verify, don't assume.
+
+Resuming across sessions (including on a different machine):
+
+1. `git pull`, `npm install`, then optionally `./scripts/extract-hieuphay-leads.ts` to pick up any
+   newer dataset version (harmless if the dataset hasn't changed — it will just report all-zero
+   new leads).
+2. Open `maintenance/hieuphay-leads.json` and take the next batch of `status: "pending"` entries,
+   highest `cited` first (higher-cited researchers are more likely to have an easily verifiable,
+   stable appointment). A batch of 5 candidates per parallel research agent, 3 agents at a time
+   (15 people per round), has worked well: enough to make real progress, small enough that each
+   agent's findings are easy to read and check when it reports back.
+3. For each candidate, verify the full inclusion standard (see "Inclusion standard" above): a
+   current university faculty appointment, in an accepted track, on an official or otherwise
+   reliable source. Watch specifically for: the listed institution being stale (people move); the
+   role being non-academic, visiting, adjunct, or postdoctoral; the same person appearing under
+   multiple leads (split OpenAlex profiles, or a name common enough to collide with an unrelated
+   person); and the person already being in the roster under a name-token order or spelling this
+   queue's dedup missed (search `public/data.json` by surname before adding).
+4. For each resolved candidate, update its `maintenance/hieuphay-leads.json` entry: set `status`
+   to `included` (with `rosterId`), `excluded` (with a one-line `note` explaining why), or
+   `duplicate` (with a `note` pointing at the existing roster entry). Then add every `included`
+   candidate to `public/data.json` and `maintenance/verification.json` following the "Data-entry
+   rules" and inclusion standard exactly as for any other addition.
+5. Run the "Validation checklist" (`npm test`, `npm run build`, `git diff --check`), then commit
+   and push. Commit after every batch (roughly every 10-20 resolved candidates) rather than
+   accumulating one giant diff — this is what makes the queue resumable if a session ends
+   mid-batch: the last pushed commit plus `maintenance/hieuphay-leads.json`'s recorded statuses are
+   the entire state a fresh session needs to continue. Push immediately after each commit.
+6. If you're running low on context or budget mid-session, stop after finishing your current
+   batch's commit — don't leave `public/data.json` and `maintenance/hieuphay-leads.json` out of
+   sync with each other (a `status: included` lead must always have a matching roster entry, and
+   vice versa). A future session resumes at step 1.
+
+The roster-token-subset dedup used both by the extraction script and by manual checks is a coarse
+heuristic: a 2-token overlap (e.g. "Kim-Huong Nguyen" against an unrelated "Kim ... Nguyen"
+already in the roster from a different field entirely) can occasionally mark a genuinely new,
+distinct person as `duplicate` by coincidence. Since `duplicate` leads are kept in the file (never
+deleted), an occasional spot-check of a few `duplicate`-status entries — confirming the name
+really does belong to the existing roster person and not a namesake — is worth doing periodically,
+the same way the Vietnamese-name-lexicon section above recommends testing against non-Vietnamese
+name samples.
 
 ## Data-entry rules
 
