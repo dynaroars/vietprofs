@@ -811,8 +811,8 @@
       "country": "MO",
       "npapers": 4,
       "cited": 269,
-      "status": "pending",
-      "note": "Unresolved: only a 2020 mention as Research Assistant Professor at Centre for Macau Studies found; could not confirm current title/department at Econ dept (page fetch blocked by network egress). Needs re-check with direct page access."
+      "status": "excluded",
+      "note": "No verifiable current stable appointment: only a 2020-era Research Assistant Professor mention at Centre for Macau Studies found, current UM Econ/FBA staff listings show no match, and a ResearchGate page suggests he has since moved to a Nanjing-based institution."
     },
     {
       "name": "Chung Tran",
@@ -933,8 +933,8 @@
       "country": "AU",
       "npapers": 17,
       "cited": 242,
-      "status": "pending",
-      "note": "Likely Dr Thang Nam Do, ANU Crawford School; title \"Fellow\" tied to a named Grand Challenge program that nominally concluded 2023 but still shown as current bio in 2026 — could not confirm whether this is a stable continuing research-faculty rank or a lapsed grant-limited title without direct page access. Needs re-check."
+      "status": "excluded",
+      "note": "Likely Thang Nam Do, ANU Crawford School; every current official source still gives his title as \"Fellow, Zero-Carbon Energy for Asia-Pacific Grand Challenge,\" a program that concluded in 2023 with no successor program-independent faculty title found — an expired grant-limited title, not a stable continuing appointment."
     },
     {
       "name": "Linh Nguyen",
@@ -1020,7 +1020,8 @@
       "country": "TW",
       "npapers": 4,
       "cited": 224,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Identified as Liu, Pang-Tien (劉邦典), a Taiwanese faculty member (PhD Texas A&M) at NTUST Dept. of Business Administration — the lead source reversed/misspelled a Han Chinese surname-first name; no Vietnamese heritage, not a name-order match to any Vietnamese name."
     },
     {
       "name": "Duong Nguyen",
@@ -1052,7 +1053,8 @@
       "country": "US",
       "npapers": 10,
       "cited": 220,
-      "status": "pending"
+      "status": "included",
+      "rosterId": "vp-1036"
     },
     {
       "name": "Binh T. Nguyen",
@@ -1108,7 +1110,8 @@
       "country": "GB",
       "npapers": 11,
       "cited": 201,
-      "status": "pending"
+      "status": "included",
+      "rosterId": "vp-1037"
     },
     {
       "name": "Tran Thu Ngan",
@@ -1116,7 +1119,8 @@
       "country": "GB",
       "npapers": 14,
       "cited": 201,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Dr Ngan Tran is a Wellcome Trust Early Career Fellow (grant 226921/Z/23/Z) at QUB Centre for Public Health — a fixed-term, grant-funded early-career fellowship, not a stable faculty appointment."
     },
     {
       "name": "Yen Nguyen",
@@ -1132,7 +1136,8 @@
       "country": "US",
       "npapers": 9,
       "cited": 197,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Could not confirm identity: the only UT Arlington PhD/Chatham University hire found is \"Hanh Hong Thi Phan\" (different middle name token, \"Hong\" not \"My\"); a \"Phan Thi My Hanh\" match instead appears affiliated with Western Sydney Vietnam. Insufficient confidence these are the same person as the lead."
     },
     {
       "name": "Long Hai Vo",
@@ -1140,7 +1145,8 @@
       "country": "AU",
       "npapers": 35,
       "cited": 197,
-      "status": "pending"
+      "status": "excluded",
+      "note": "UWA Research Fellow role (Business School/PATREC) ended c. 2021; per his own LinkedIn he is now Senior Energy Markets and Economics Modelling Analyst at Synergy (industry, non-academic primary employer)."
     },
     {
       "name": "Philip Hoang",
@@ -1148,7 +1154,8 @@
       "country": "US",
       "npapers": 6,
       "cited": 195,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No verifiable faculty appointment found at Sullivan University despite extensive search of faculty directories and LinkedIn/web."
     },
     {
       "name": "Trần Khánh Toàn",
@@ -1156,7 +1163,8 @@
       "country": "ES",
       "npapers": 8,
       "cited": 189,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No verifiable connection found between any \"Trần Khánh Toàn\"/\"Khanh Toan Tran\" and University of Almería in English, Spanish, or Vietnamese-language searches; likely an inaccurate lead."
     },
     {
       "name": "Tu Nguyen",
@@ -1180,7 +1188,9 @@
       "country": "AU",
       "npapers": 17,
       "cited": 188,
-      "status": "pending"
+      "status": "included",
+      "note": "Distinct person from existing roster entry \"Trang Vu\" (vp-0739, different department/field, confirmed via own Monash profile).",
+      "rosterId": "vp-1038"
     },
     {
       "name": "Thi Huyen Chi Vu",
@@ -1188,7 +1198,8 @@
       "country": "AU",
       "npapers": 4,
       "cited": 187,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No verifiable university faculty appointment found; only a near-empty LinkedIn profile (13 connections) with University of Sydney Business School background and no title/directory listing."
     },
     {
       "name": "Ngoc Thien Anh Pham",
@@ -1204,7 +1215,8 @@
       "country": "US",
       "npapers": 9,
       "cited": 183,
-      "status": "pending"
+      "status": "included",
+      "rosterId": "vp-1039"
     },
     {
       "name": "Thao T.T. Nguyen",
@@ -1220,7 +1232,8 @@
       "country": "US",
       "npapers": 12,
       "cited": 179,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No verifiable Temple University faculty member by this name found across Engineering, CIS, Math, Fox Business, Klein College, or Pharmacy directories/catalogs; likely an inaccurate or unfindable lead."
     },
     {
       "name": "Huong D. Dang",
@@ -1228,7 +1241,8 @@
       "country": "NZ",
       "npapers": 25,
       "cited": 179,
-      "status": "pending"
+      "status": "included",
+      "rosterId": "vp-1040"
     },
     {
       "name": "Thach Ngoc Pham",
