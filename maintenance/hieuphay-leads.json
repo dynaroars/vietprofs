@@ -1572,7 +1572,8 @@
       "country": "JP",
       "npapers": 3,
       "cited": 126,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Current appointment is at Banking Academy of Vietnam, Hanoi (inside Vietnam); no verified Hiroshima University faculty role found."
     },
     {
       "name": "Truong P. Truong",
@@ -1580,7 +1581,8 @@
       "country": "AU",
       "npapers": 10,
       "cited": 124,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Current role at University of Sydney ITLS is Honorary Professor, an unpaid courtesy title, not a qualifying track."
     },
     {
       "name": "Ly Kim Cuong",
@@ -1588,7 +1590,8 @@
       "country": "GB",
       "npapers": 9,
       "cited": 124,
-      "status": "pending"
+      "status": "duplicate",
+      "note": "Same person as existing roster entry vp-1021 Kim Cuong Ly (University of Nottingham, Finance, Risk and Banking) — identical profileUrl and scholarUrl confirm the match; just a different name-token order."
     },
     {
       "name": "Mai Thi Nguyen",
@@ -1636,7 +1639,8 @@
       "country": "CA",
       "npapers": 5,
       "cited": 120,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No person matching this name found at University of Guelph or elsewhere despite thorough search; likely a name-extraction/disambiguation artifact from the source dataset."
     },
     {
       "name": "Anh Dao",
@@ -1644,7 +1648,8 @@
       "country": "AU",
       "npapers": 4,
       "cited": 120,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No current university appointment found; holds a Master's (not PhD) and now works as Senior Pricing Analyst at Resolution Life Australasia, an industry role."
     },
     {
       "name": "Manh Hung",
@@ -1684,7 +1689,8 @@
       "country": "US",
       "npapers": 4,
       "cited": 117,
-      "status": "pending"
+      "status": "excluded",
+      "note": "The verifiable 'Thanh Ha Luu' matching this citation profile is an OB-GYN physician (MD) with a past clinical fellowship at University of Colorado, not an academic economist; no current economics faculty appointment found — likely an OpenAlex author-disambiguation artifact."
     },
     {
       "name": "Viet Nguyen‐Tien",
@@ -1708,7 +1714,9 @@
       "country": "NG",
       "npapers": 8,
       "cited": 115,
-      "status": "pending"
+      "status": "included",
+      "note": "Verified and added to the roster.",
+      "rosterId": "vp-1044"
     },
     {
       "name": "Hoang Nguyen",
@@ -1740,7 +1748,9 @@
       "country": "GB",
       "npapers": 16,
       "cited": 113,
-      "status": "pending"
+      "status": "included",
+      "note": "Verified and added to the roster.",
+      "rosterId": "vp-1045"
     },
     {
       "name": "Ngọc Quang Phạm",
@@ -1748,7 +1758,8 @@
       "country": "NL",
       "npapers": 2,
       "cited": 112,
-      "status": "pending"
+      "status": "excluded",
+      "note": "PhD from Maastricht University/UNU-MERIT (2022); now works in industry at Fujifilm Healthcare Europe, no current university appointment."
     },
     {
       "name": "Thanh‐Tung Nguyen",
@@ -1764,7 +1775,8 @@
       "country": "CA",
       "npapers": 2,
       "cited": 112,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No confirmed faculty title or appointment found at Simon Fraser University or elsewhere; the SFU link traces to coauthorship with SFU's Bohdan Nosyk, not her own affiliation; appears to be a trainee/research-associate-level researcher."
     },
     {
       "name": "Sa A. Bui",
@@ -1772,7 +1784,8 @@
       "country": "US",
       "npapers": 4,
       "cited": 111,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No current university faculty appointment found; last known academic affiliations (University of Houston PhD era, Cornell-linked 2014 paper) are over a decade stale."
     },
     {
       "name": "Thi Anh Nhu Nguyen",
@@ -1788,7 +1801,8 @@
       "country": "CZ",
       "npapers": 4,
       "cited": 110,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Current appointment is Lecturer at Van Lang University, Ho Chi Minh City — inside Vietnam, fails the outside-Vietnam requirement."
     },
     {
       "name": "Lien Vu",
@@ -1796,7 +1810,8 @@
       "country": "US",
       "npapers": 2,
       "cited": 104,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Could not identify this specific person at Temple University or elsewhere despite thorough search; likely a name-extraction artifact."
     },
     {
       "name": "David Duong",
@@ -2172,7 +2187,8 @@
       "country": "US",
       "npapers": 12,
       "cited": 80,
-      "status": "pending"
+      "status": "duplicate",
+      "note": "Same real person as the \"Joseph Vu\" lead at Joseph Ayo Babalola University (that institution string was a data artifact) — both are Joseph D. Vu, Associate Professor of Finance at DePaul University, Chicago, split across two OpenAlex author IDs. Added to the roster once from the other lead entry."
     },
     {
       "name": "Nga Pham",
