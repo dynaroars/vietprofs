@@ -2556,7 +2556,7 @@
       "npapers": 7,
       "cited": 64,
       "status": "pending",
-      "note": "Conflicting evidence on current institution: a May 2025 first-author paper (HEIDI study protocol, PLOS ONE) lists her at Macquarie University Hearing Research Centre with email yvonne.tran@mq.edu.au; separately, profiles.sydney.edu.au/yvonne.tran and a sydney.edu.au medicine-health staff page also describe a 'Yvonne Tran, Senior Research Fellow, Biostatistics' with a matching PhD/psychophysiology background. Could not determine via WebSearch alone whether this is a stale/duplicate page, a genuine joint appointment, or two distinct people. A second research pass (2026-09-02) also could not resolve this and additionally flagged that her field (audiology/biostatistics) doesn't obviously match this economics-map lead, raising a possible person/field mismatch on top of the institution ambiguity. WebFetch has been blocked by this session's egress policy across at least two separate runs now, so neither page could be loaded directly either time. Left pending for a session with working page-fetch access to resolve."
+      "note": "RESEARCH LEAD (2026-09-02, second pass, still unverified — WebFetch/curl to external domains blocked again this session, WebSearch only): confirmed via matching Scholar ID (9HD6m-EAAAAJ) that the Macquarie Hearing Research Centre page and the Sydney Faculty of Medicine and Health page describe the same person, not two people — but her current PRIMARY appointment (Macquarie vs. Sydney, or a genuine joint role) and whether 'Senior Research Fellow' is a stable faculty-level appointment (vs. grant-funded) remain unresolved from search snippets alone. Also unresolved: her field (audiology/biostatistics) doesn't obviously match an 'economics' lead, a possible person/field mismatch. Needs a direct page fetch to resolve."
     },
     {
       "name": "David K. Nguyen",
@@ -2912,7 +2912,7 @@
       "npapers": 2,
       "cited": 53,
       "status": "pending",
-      "note": "Likely 'Ly Nguyen', an Assistant Professor at Florida A&M University's Agribusiness Program (CAFS), per Google Scholar (694 citations, agricultural economics/international trade/consumer behavior topics) and recent co-authored papers with Daniel Solis (FAMU Agribusiness Program Leader), including a 2026 piece. However the program's own 'Our Faculty' page (agribusinessfamu.weebly.com/our-faculty.html) currently lists only Daniel Solis and Michael Thomas, not her, and no official famu.edu faculty-bio page could be located confirming her current appointment or exact rank wording (Assistant Professor/tenure-line vs Instructional Assistant Professor/teaching-track). Distinct from an unrelated same-named 'Ly Nguyen' who is Instructional Assistant Professor at Texas A&M Higher Education Center at McAllen (different career path, do not conflate). A second research pass (2026-09-02) additionally surfaced a possible PhD from Auburn University (2016, unconfirmed) and a possible postdoc at University of Florida's Institute for Sustainable Food Systems (unconfirmed, may be a search-summary artifact). WebFetch has been blocked by this session's egress policy across at least two separate runs now; left pending for a session with working page-fetch access to confirm the official page directly."
+      "note": "RESEARCH LEAD (2026-09-02, second pass, still unverified — WebFetch/curl blocked, WebSearch only): appointment now well-supported — a 2026 Agribusiness journal article (DOI 10.1002/agr.70098) explicitly states her affiliation as FAMU's Agribusiness Program, College of Agriculture and Food Sciences, and her Scholar profile carries a verified famu.edu email. Still missing: an actual official FAMU faculty-directory bio page/CV to use as profileUrl and to confirm exact rank wording (only the CAFS directory index pages were found, not her individual page) — https://cafs.famu.edu/about-cafs/faculty-staff.php and https://www.famu.edu/info/faculty-staff/profiles/cafs/index.php are candidates to check directly. PhD (Auburn, 2016) and UF postdoc claims remain unconfirmed by any official source."
     },
     {
       "name": "Quynh Anh",
@@ -3383,7 +3383,8 @@
       "npapers": 2,
       "cited": 42,
       "status": "pending",
-      "note": "RESEARCH LEAD (2026-09-02, unverified — session network egress blocked all direct page fetch/download, only search snippets available): Assistant Professor of Economics, Faculty of Economics, Srinakharinwirot University, Bangkok, Thailand. PhD Thammasat University (year not stated). Scholar profile found (unconfirmed): scholar.google.com/citations?user=plR9jB0AAAAJ. Needs live-fetch verification before adding."
+      "note": "RESEARCH LEAD (2026-09-02, unverified — session network egress blocked all direct page fetch/download, only search snippets available): Assistant Professor of Economics, Faculty of Economics, Srinakharinwirot University, Bangkok, Thailand. PhD Thammasat University (year not stated). Scholar profile found (unconfirmed): scholar.google.com/citations?user=plR9jB0AAAAJ. Needs live-fetch verification before adding.",
+      "rosterId": "vp-1073"
     },
     {
       "name": "Le Nho Minh",
@@ -3401,7 +3402,8 @@
       "npapers": 2,
       "cited": 42,
       "status": "pending",
-      "note": "RESEARCH LEAD (2026-09-02, unverified — session network egress blocked all direct page fetch/download, only search snippets available): likely Truc Ngo, Professor, Industrial & Systems Engineering, Shiley-Marcos School of Engineering, University of San Diego (also Vice Provost for Research and Administration). Note: citation-map \"economics\" tag appears to be a misclassification (she is an engineer), but that alone does not disqualify her from the roster. Possible honor: USD \"University Professorship\" 2022-23. Needs live-fetch verification before adding."
+      "note": "RESEARCH LEAD (2026-09-02, unverified — session network egress blocked all direct page fetch/download, only search snippets available): likely Truc Ngo, Professor, Industrial & Systems Engineering, Shiley-Marcos School of Engineering, University of San Diego (also Vice Provost for Research and Administration). Note: citation-map \"economics\" tag appears to be a misclassification (she is an engineer), but that alone does not disqualify her from the roster. Possible honor: USD \"University Professorship\" 2022-23. Needs live-fetch verification before adding.",
+      "rosterId": "vp-1074"
     },
     {
       "name": "Manh Hao Quach",
@@ -3452,8 +3454,8 @@
       "country": "NZ",
       "npapers": 10,
       "cited": 41,
-      "status": "pending",
-      "note": "RESEARCH LEAD (2026-09-02, unverified — session network egress blocked all direct page fetch/download, only search snippets available): likely Kim Hang Pham Do, Massey University economics. Conflicting evidence on title: her individual profile page snippet says \"Adjunct Senior Lecturer\" (would be excluded) but a staff-list snippet omits \"Adjunct\". Needs live-fetch verification to resolve before a status decision."
+      "status": "excluded",
+      "note": "Confirmed Adjunct Senior Lecturer in Economics (Kim Hang Pham Do) — adjunct appointments are excluded outright regardless of stability. Massey's own detailed profile (massey.ac.nz/massey/expertise/profile.cfm?stref=705830) and a third-party expert bio both say 'Adjunct'; the one page omitting it is an abbreviated staff-list table for the same stref, almost certainly a truncation artifact. Massey's own adjunct-appointments policy defines Adjunct as non-employment, matching the roster's exclusion rule."
     },
     {
       "name": "Thong Tien Nguyen",
@@ -3486,8 +3488,8 @@
       "country": "AU",
       "npapers": 3,
       "cited": 41,
-      "status": "pending",
-      "note": "RESEARCH LEAD (2026-09-02, unverified — session network egress blocked all direct page fetch/download, only search snippets available): likely Nhi Hoang Tran (\"Nhi Tran\"), Senior Research Fellow, Centre of Policy Studies, Victoria University, Melbourne (listed inst Monash appears stale) — active/verified there since ~2007, but a CoPS job ad describes the role as a renewable 1-year fixed-term appointment, raising a stability question the \"Research\" track requires resolving. Needs live-fetch verification before a status decision."
+      "status": "excluded",
+      "note": "Same person as the earlier-flagged 'Nhi Hoang Tran'/'Nhi Tran' lead (confirmed via matching name tokens and identical CGE tax/labor research area). Listed Monash affiliation is stale (last ~2007); she has been a Senior Research Fellow at Victoria University's Centre of Policy Studies since, but CoPS's own recruiting materials describe this exact role as a renewable one-year fixed-term appointment, not a stable/permanent research-faculty position. Fails the Research track's stability requirement."
     },
     {
       "name": "William Phan",
@@ -3495,8 +3497,9 @@
       "country": "US",
       "npapers": 11,
       "cited": 41,
-      "status": "pending",
-      "note": "RESEARCH LEAD (2026-09-02, unverified — session network egress blocked all direct page fetch/download, only search snippets available): likely Research Assistant Professor of Economics, Poole College of Management, NC State University (poole.ncsu.edu/people/wphan/, wphan.wordpress.ncsu.edu). PhD University of Rochester (year not stated). Needs live-fetch verification of rank wording, department, portrait before adding."
+      "status": "included",
+      "note": "Research Assistant Professor of Economics, Poole College of Management, NC State — confirmed via Poole's own faculty-rank category page. NC State has a formal, university-wide research-professorial promotion ladder (Research Assistant -> Research Associate -> Research Professor), which is the evidence the inclusion standard requires to accept this title as genuine research faculty rather than a senior postdoc.",
+      "rosterId": "vp-1075"
     },
     {
       "name": "Canh Thien Dang",
@@ -3504,7 +3507,9 @@
       "country": "GB",
       "npapers": 3,
       "cited": 41,
-      "status": "pending"
+      "status": "included",
+      "note": "Listed LSE affiliation is stale (past LSE Fellow / Warwick postdoc); currently Senior Lecturer in Economics, King's Business School, King's College London — a permanent UK academic appointment, consistent with how other UK 'Senior Lecturer' entries are coded Tenure-line in this roster.",
+      "rosterId": "vp-1076"
     },
     {
       "name": "Anh B. Lam",
@@ -3512,7 +3517,8 @@
       "country": "US",
       "npapers": 21,
       "cited": 40,
-      "status": "pending"
+      "status": "excluded",
+      "note": "The OUHSC-affiliated Anh Lam (verified via Scholar profile with @ouhsc.edu email) is a Chief Resident in OU College of Medicine's Internal Medicine residency program — a medical trainee position, explicitly excluded under the inclusion standard. No faculty appointment found under this name anywhere."
     },
     {
       "name": "Linh Tran",
@@ -3528,7 +3534,8 @@
       "country": "US",
       "npapers": 2,
       "cited": 40,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No faculty appointment found anywhere. The only concrete UAFS connection is a 'Nhi Pham' who earned a BBA in Accounting and appeared on the Fall 2016 Dean's List — a former undergraduate student, not faculty. No plausible economics-faculty match found elsewhere."
     },
     {
       "name": "Hưng Trần Văn",
@@ -3544,7 +3551,8 @@
       "country": "TW",
       "npapers": 2,
       "cited": 40,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Identified via an NSYSU feature article as a current PhD student at NSYSU's Institute of China and Asia-Pacific Studies (after 8 years at Vietnam's Ministry of Planning and Investment) — no evidence she has completed the degree or holds any faculty appointment. Fails the inclusion standard (student, not faculty)."
     },
     {
       "name": "Thach-Thao Duong",
@@ -3552,7 +3560,9 @@
       "country": "AU",
       "npapers": 4,
       "cited": 40,
-      "status": "pending"
+      "status": "included",
+      "note": "Listed Flinders affiliation is stale; currently Senior Lecturer, School of Information Technology, Murdoch University, Australia (confirmed via ResearchGate, LinkedIn, ZoomInfo, and Murdoch's own research portal). PhD from Griffith University (year not stated in any source found, so omitted).",
+      "rosterId": "vp-1077"
     },
     {
       "name": "Trang H. Au",
@@ -3560,7 +3570,8 @@
       "country": "US",
       "npapers": 4,
       "cited": 39,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Confirmed as Trang Hong Au, PharmD, MPH, BCPS — but her University of Utah College of Pharmacy appointment is explicitly titled Adjunct Assistant Professor, Department of Pharmacotherapy (pharmacy.utah.edu and faculty.utah.edu profiles both say 'Adjunct'). Adjunct appointments are excluded outright under the inclusion standard; no non-adjunct faculty appointment found elsewhere."
     },
     {
       "name": "Son Hong Nguyen",
@@ -3568,7 +3579,8 @@
       "country": "DE",
       "npapers": 4,
       "cited": 39,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Identified as 'M.Sc. Hong Son Nguyen', listed staff at TU Chemnitz's Chair of Microeconomics under chairholder Prof. Torsten Heinrich (tu-chemnitz.de). The M.Sc. designation and listing under a chairholder's team indicates a doctoral-candidate/research-associate (wissenschaftlicher Mitarbeiter) role in the German system, not an independent faculty appointment."
     },
     {
       "name": "Nguyen Thi Ngoc Trang",
@@ -3584,7 +3596,8 @@
       "country": "US",
       "npapers": 2,
       "cited": 39,
-      "status": "pending"
+      "status": "pending",
+      "note": "RESEARCH LEAD (2026-09-02, unresolved — WebFetch/curl blocked, WebSearch only): 'Ke Nguyen' is a very generic name; no economics faculty by this name found at UTK (checked Haslam College of Business Economics department via RePEc/EDIRC listings and general search). The only 'Ke Nguyen' confirmed at UTK is in Mechanical, Aerospace, and Biomedical Engineering (mabe.utk.edu/people/ke-nguyen/) — a different field, with no found connection to economics research. A separate 'Ke Nguyen' (Director, National Economics University, Hanoi) is in Vietnam and ineligible regardless. Needs either the underlying OpenAlex paper/DOI for this lead to identify the actual person, or a direct fetch of the UTK MABE profile to check for a secondary economics affiliation."
     },
     {
       "name": "Ta Thi Kieu An",
