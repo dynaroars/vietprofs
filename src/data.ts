@@ -564,6 +564,10 @@ const FIELD_OVERRIDES = new Map([
   // Xavier's College of Pharmacy department; "Clinical and Administrative Sciences" alone has no
   // pharmacy keyword, but both faculty here are pharmacists by research area.
   ['Clinical and Administrative Sciences|Xavier University of Louisiana', 'Health Sciences'],
+  // Nhung Nghiem's appointment is administratively housed in a genomics department, but her own
+  // title ("Associate Professor of Health Economics") and research (health economics, public
+  // health modelling) are Business & Economics, not biology.
+  ['Department of Genome Sciences, John Curtin School of Medical Research|Australian National University', 'Business & Economics'],
 ]);
 
 // Buckets granular `department` values into the broad fields above. Order matters, and is not

@@ -2556,7 +2556,7 @@
       "npapers": 7,
       "cited": 64,
       "status": "pending",
-      "note": "AMBIGUOUS: possibly moved Macquarie->Univ of Sydney (Senior Research Fellow, Biostatistics) but could be a different person or a non-stable role; WebFetch blocked in this session so page could not be checked directly; left pending for a future run with full page access"
+      "note": "Moved to University of Sydney, Senior Research Fellow (Biostatistics), Sydney School of Public Health; academic-staff listing found but explicit continuing/permanent language not confirmed via WebSearch snippets alone (WebFetch blocked this session) - Research track needs that confirmation before inclusion; left pending for a session with working WebFetch to check https://profiles.sydney.edu.au/yvonne.tran directly"
     },
     {
       "name": "David K. Nguyen",
@@ -2616,7 +2616,8 @@
       "country": "TW",
       "npapers": 5,
       "cited": 63,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Feng Chia adjunct role (2019-2020) ended; now Head of The Business School at British University Vietnam, a Vietnam-based position"
     },
     {
       "name": "Duong Thuy Le",
@@ -2632,7 +2633,9 @@
       "country": "AU",
       "npapers": 9,
       "cited": 63,
-      "status": "pending"
+      "status": "included",
+      "note": "Senior Lecturer, Research School of Finance, Actuarial Studies and Statistics, ANU (Tenure-line)",
+      "rosterId": "vp-1059"
     },
     {
       "name": "Quang Thanh Phung",
@@ -2640,7 +2643,8 @@
       "country": "AT",
       "npapers": 2,
       "cited": 62,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No WU Vienna affiliation found; likely matches Phung Thanh Quang, a Vietnam-based lecturer at National Economics University Hanoi with only temporary/visiting stints abroad"
     },
     {
       "name": "Nguyen Xuan Quyen",
@@ -2656,7 +2660,8 @@
       "country": "AU",
       "npapers": 10,
       "cited": 61,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Research Fellow (Level B), Monash Health Economics Group - early-career/grant-funded research position, no evidence of continuing/permanent faculty-level status"
     },
     {
       "name": "Hien Tran",
@@ -2672,7 +2677,9 @@
       "country": "AU",
       "npapers": 8,
       "cited": 60,
-      "status": "pending"
+      "status": "included",
+      "note": "Professor, Arndt-Corden Department of Economics, Crawford School of Public Policy, ANU (Tenure-line)",
+      "rosterId": "vp-1060"
     },
     {
       "name": "Lynne Nguyen",
@@ -2680,7 +2687,8 @@
       "country": "US",
       "npapers": 4,
       "cited": 59,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Associate Director/Director, Community & Populations Core - administrative/staff research-management role, no faculty rank or track found"
     },
     {
       "name": "Nhung Nghiem",
@@ -2688,7 +2696,9 @@
       "country": "NZ",
       "npapers": 8,
       "cited": 59,
-      "status": "pending"
+      "status": "included",
+      "note": "Associate Professor of Health Economics, Dept of Genome Sciences, John Curtin School of Medical Research, ANU (Tenure-line); University of Otago listing is stale/secondary (now only Honorary Associate Professor there)",
+      "rosterId": "vp-1061"
     },
     {
       "name": "Hoang V. Tran",
@@ -2704,7 +2714,8 @@
       "country": "FI",
       "npapers": 4,
       "cited": 59,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No current faculty title or department page found anywhere; appears to be a research collaborator/alumnus (PhD Åbo Akademi 2014) publishing with an abo.fi-affiliated email rather than current faculty"
     },
     {
       "name": "Peter Luong",
@@ -2712,7 +2723,8 @@
       "country": "US",
       "npapers": 2,
       "cited": 59,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Only matching Peter Luong at SLU is an MD otolaryngology resident - non-faculty, term-limited medical training position; likely a mismatched OpenAlex lead"
     },
     {
       "name": "Thong Dao",
@@ -2720,7 +2732,9 @@
       "country": "GB",
       "npapers": 6,
       "cited": 59,
-      "status": "pending"
+      "status": "included",
+      "note": "Lecturer in Accounting and Finance, Nottingham Business School, Nottingham Trent University (Tenure-line)",
+      "rosterId": "vp-1062"
     },
     {
       "name": "Nguyen Anh Duong",
@@ -2768,7 +2782,8 @@
       "country": "US",
       "npapers": 5,
       "cited": 56,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No economics researcher by this name found connected to NYU; only unrelated namesakes found (NYU Langone physician, athlete, McMaster addiction researcher)"
     },
     {
       "name": "Nhan T. Nguyen",
@@ -2784,7 +2799,8 @@
       "country": "GB",
       "npapers": 3,
       "cited": 55,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No web presence of any kind found under this name or name-order variants at University of South Wales (UK) or elsewhere; unresolvable lead"
     },
     {
       "name": "Ngan Tran",
@@ -2792,7 +2808,8 @@
       "country": "AU",
       "npapers": 2,
       "cited": 55,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No official RMIT faculty profile found; only a ResearchGate record showing MSc-level graduate/research-assistant status, not a current faculty appointment"
     },
     {
       "name": "Jacqueline Tran",
@@ -2800,7 +2817,8 @@
       "country": "AU",
       "npapers": 3,
       "cited": 55,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Current role is Senior Insights Researcher at High Performance Sport New Zealand, a non-university sporting body; her only Deakin role was a 2015-2017 PhD studentship/postdoctoral Research Associate position"
     },
     {
       "name": "Huyen Nguyen",
