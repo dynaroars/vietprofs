@@ -948,7 +948,9 @@ from affiliation/research/publications rather than name alone, and add or correc
 supported. Check all explicitly documented education: PhD, master's,
 undergraduate, professional or equivalent degrees, majors and graduation years, plus completed
 postdoctoral institution and, when explicitly documented, its end/completion year. Check every honor under the documented honors
-eligibility rules. Do not treat a reachable URL as a complete review.
+eligibility rules, including that each is a faculty-level distinction and not a dissertation award,
+dissertation fellowship/grant, or other student/trainee-stage award — remove any stored honor that
+fails the eligibility rules, not just proposed additions. Do not treat a reachable URL as a complete review.
 
 Before returning an update, compare every supported baseline and discovered field against the
 complete proposed object. Do not omit documented majors, graduation years, postdoctoral training,
@@ -981,7 +983,9 @@ Read ROSTER_MAINTENANCE.md and independently browse live authoritative sources. 
 review until you confirm identity, eligibility, current primary appointment, department,
 rank/track, official profile, personal/lab URLs, portrait and source, every
 documented degree/major/graduation year, completed postdoctoral institution,
-and any explicitly documented end/completion year, honors eligibility, and every proposed change. Approve only when the
+and any explicitly documented end/completion year, honors eligibility (including that each stored
+honor is a faculty-level distinction, not a dissertation award/fellowship or other student/trainee
+award), and every proposed change. Approve only when the
 complete verification standard is satisfied and the normalized proposal is correct.
 Pay special attention to URL-role errors: independently verify that profileUrl is the official
 university/department profile and websiteUrl, when present, is a maintained personal or lab site;

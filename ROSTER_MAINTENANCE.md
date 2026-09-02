@@ -369,7 +369,11 @@ service/teaching, or community-engagement awards, generic grants, invited talks,
 honors whose standing cannot be established. This also excludes NSF's seed/exploratory programs for
 researchers without prior NSF funding, such as the CISE Research Initiation Initiative (CRII) award
 or comparable "research initiation" grants — these are not competitive career awards on the level of
-NSF CAREER, PECASE, or a Sloan Research Fellowship and do not qualify on their own. "Distinguished Paper Award," "Best Paper Award," and
+NSF CAREER, PECASE, or a Sloan Research Fellowship and do not qualify on their own. The `honors`
+field is for faculty-level distinctions only: doctoral dissertation awards, dissertation research
+fellowships/grants, and other student- or trainee-stage awards (won while a graduate student or
+postdoc, not as faculty) do not qualify regardless of how competitive or prestigious the program is
+— exclude these even when nationally competitive. "Distinguished Paper Award," "Best Paper Award," and
 similarly named per-year paper-selection recognitions are routine even at a top-tier venue and do
 not qualify on their own, regardless of a comparable award already present in the roster; do not
 treat an existing roster entry as precedent for adding another one. A conference paper recognition
