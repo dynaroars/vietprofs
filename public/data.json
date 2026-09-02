@@ -20217,13 +20217,11 @@
     "track": "Tenure-line",
     "profileUrl": "https://people.njit.edu/profile/tn294",
     "scholarUrl": "https://scholar.google.com/citations?user=UrTlMiwAAAAJ&hl=en",
-    "lastUpdatedAt": "2026-09-02T11:27:42.000Z",
+    "lastUpdatedAt": "2026-09-02T15:13:46.000Z",
     "researchAreas": [
-      "Educational Data Mining",
-      "Health Informatics",
-      "Data Science",
       "Machine Learning",
-      "Reinforcement Learning"
+      "Reinforcement Learning",
+      "Responsible AI"
     ],
     "portrait": "portraits/725-thanh-nguyen-thanh-nguyen-tang-new-jersey-institute-of-technology.webp",
     "portraitSource": "https://uws.njit.edu/ldapimage.php?format=full&uid=tn294",
@@ -20231,7 +20229,8 @@
     "phdYear": 2022,
     "msInstitution": "Ulsan National Institute of Science and Technology",
     "msYear": 2018,
-    "undergradInstitution": "Danang University of Science and Technology"
+    "undergradInstitution": "Danang University of Science and Technology",
+    "websiteUrl": "https://thanhnguyentang.github.io/"
   },
   {
     "id": "vp-0704",
@@ -21520,7 +21519,7 @@
   },
   {
     "id": "vp-0745",
-    "name": "Thanh Cong Le",
+    "name": "Thanh Le-Cong",
     "vietnameseName": "Lê Công Thành",
     "university": "Singapore University of Technology and Design",
     "city": "Singapore",
@@ -21528,8 +21527,8 @@
     "department": "Information Systems Technology and Design",
     "rank": "Assistant Professor",
     "track": "Tenure-line",
-    "profileUrl": "https://thanhlc.net/",
-    "lastUpdatedAt": "2026-08-24T03:03:40.000Z",
+    "profileUrl": "https://www.sutd.edu.sg/profile/thanh-le-cong/",
+    "lastUpdatedAt": "2026-09-02T15:13:46.000Z",
     "researchAreas": [
       "Software Engineering",
       "AI-based Software Engineering",
@@ -21541,8 +21540,10 @@
     "phdInstitution": "University of Melbourne",
     "portrait": "portraits/thanh-le-cong-sutd.webp",
     "portraitSource": "https://thanhlc.net/images/profile.webp",
-    "msInstitution": "University of Melbourne",
-    "msYear": 2026
+    "websiteUrl": "https://thanhlc.net/",
+    "scholarUrl": "https://scholar.google.com/citations?user=iaQgZHYAAAAJ&hl=en",
+    "undergradInstitution": "Hanoi University of Science and Technology",
+    "undergradYear": 2021
   },
   {
     "id": "vp-0746",
@@ -29257,5 +29258,52 @@
     "msYear": 2018,
     "undergradInstitution": "National Economics University",
     "undergradYear": 2016
+  },
+  {
+    "id": "vp-1071",
+    "name": "Long The Nguyen",
+    "profileUrl": "https://business.wsu.edu/directory/long.the.nguyen/",
+    "scholarUrl": "https://scholar.google.com/citations?user=og7FwYsAAAAJ&hl=en",
+    "university": "Washington State University",
+    "city": "Pullman",
+    "state": "Washington",
+    "country": "United States",
+    "department": "Department of Management, Information Systems, and Entrepreneurship",
+    "track": "Tenure-line",
+    "rank": "Assistant Professor",
+    "researchAreas": [
+      "Human-AI Interactions",
+      "Crowdsourcing",
+      "Motivation",
+      "Persuasion"
+    ],
+    "phdYear": 2023,
+    "phdInstitution": "University of Massachusetts Amherst",
+    "lastUpdatedAt": "2026-09-02T15:13:46.000Z"
+  },
+  {
+    "id": "vp-1072",
+    "name": "Duong Anh Lam Tran",
+    "profileUrl": "https://trios.tsukuba.ac.jp/researcher/0000003869",
+    "websiteUrl": "https://sites.google.com/site/anhduongtl/",
+    "university": "University of Tsukuba",
+    "city": "Tsukuba",
+    "state": "Ibaraki",
+    "country": "Japan",
+    "department": "Faculty of Engineering, Information and Systems",
+    "track": "Tenure-line",
+    "rank": "Assistant Professor",
+    "researchAreas": [
+      "International Economics",
+      "Economic Growth",
+      "Income Distribution"
+    ],
+    "undergradInstitution": "Yokohama National University",
+    "undergradYear": 2008,
+    "msInstitution": "Hitotsubashi University",
+    "msYear": 2010,
+    "phdInstitution": "Hitotsubashi University",
+    "phdYear": 2016,
+    "lastUpdatedAt": "2026-09-02T15:13:46.000Z"
   }
 ]
