@@ -510,6 +510,10 @@ const FIELD_OVERRIDES = new Map([
   // (optimization, statistical learning) are statistics, not mathematics — the generic
   // Mathematics rule would otherwise win since it's checked first.
   ['Mathematics and Statistics|South Dakota State University', 'Statistics & Data Science'],
+  // Combined department, but her research areas (Statistical Geometry, Experimental Design,
+  // Causal Inference) are statistics, not mathematics — the generic Mathematics rule would
+  // otherwise win since it's checked first.
+  ['Department of Mathematics and Statistics|University of Saskatchewan', 'Statistics & Data Science'],
   // "Great Texts Program" is Baylor Honors College's great-books curriculum — the department
   // string alone gives no field signal, but Jonathan Tran's own title ("Associate Professor of
   // Theology in the Great Texts Program") and George W. Baines Chair of Religion put him
