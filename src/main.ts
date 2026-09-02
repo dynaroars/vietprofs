@@ -116,7 +116,7 @@ function renderShell() {
         </div>
       </div>
       <div class="subtitle-row">
-        <p class="site-subtitle">An open directory of Vietnamese professors worldwide</p>
+        <p class="site-subtitle">An open directory of Vietnamese academics worldwide</p>
         <div class="header-actions">
           <a class="paper-link" href="${import.meta.env.BASE_URL}vietprofs.pdf" target="_blank" rel="noopener noreferrer">Read the paper</a>
           <a class="submission-link" href="submit.html">Add or update info</a>

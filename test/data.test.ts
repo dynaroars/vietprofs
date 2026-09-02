@@ -142,9 +142,11 @@ test('rank labels use the simplified public vocabulary', () => {
   assert.equal(canonicalRank({ track: 'Tenure-line', rank: 'Associate Professor of Finance' }), 'Associate Professor');
   assert.equal(canonicalRank({ track: 'Tenure-line', rank: 'Assistant Professor of Practice' }), 'Assistant Professor');
   assert.equal(canonicalRank({ track: 'Teaching', rank: 'Senior Lecturer II' }), 'Teaching');
-  assert.equal(canonicalRank({ track: 'Research', rank: 'Assistant Research Professor' }), 'Research');
-  assert.equal(canonicalRank({ track: 'Clinical', rank: 'Clinical Professor' }), 'Clinical');
-  assert.equal(canonicalRank({ track: 'Teaching', rank: 'Professor of Practice' }), 'Teaching');
+  assert.equal(canonicalRank({ track: 'Research', rank: 'Assistant Research Professor' }), 'Research Scientist');
+  assert.equal(canonicalRank({ track: 'Clinical', rank: 'Clinical Professor' }), 'Clinical Professor');
+  assert.equal(canonicalRank({ track: 'Clinical', rank: 'Assistant Clinical Professor' }), 'Assistant Clinical Professor');
+  assert.equal(canonicalRank({ track: 'Teaching', rank: 'Associate Professor of Teaching' }), 'Associate Teaching Professor');
+  assert.equal(canonicalRank({ track: 'Teaching', rank: 'Professor of Practice' }), 'Teaching Professor');
   assert.equal(canonicalRank({ track: 'Emeritus', rank: 'Professor Emerita' }), 'Emeritus');
 });
 

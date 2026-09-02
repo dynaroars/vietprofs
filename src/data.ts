@@ -166,9 +166,14 @@ export function personPath(id: string): string {
 // appointment wording belong on the linked profile; the directory only needs the career stage.
 export function canonicalRank(person: Pick<RosterEntry, 'track' | 'rank'>): string | undefined {
   if (person.track === 'Emeritus') return 'Emeritus';
-  if (person.track === 'Teaching') return 'Teaching';
-  if (person.track === 'Research') return 'Research';
-  if (person.track === 'Clinical') return 'Clinical';
+  if (person.track === 'Research') return 'Research Scientist';
+  if (person.track === 'Teaching' || person.track === 'Clinical') {
+    const label = person.track;
+    if (/assistant/i.test(person.rank ?? '')) return `Assistant ${label} Professor`;
+    if (/associate/i.test(person.rank ?? '')) return `Associate ${label} Professor`;
+    if (/professor/i.test(person.rank ?? '')) return `${label} Professor`;
+    return label;
+  }
   if (person.track !== 'Tenure-line') return person.rank;
   if (/assistant/i.test(person.rank ?? '')) return 'Assistant Professor';
   if (/associate/i.test(person.rank ?? '')) return 'Associate Professor';
