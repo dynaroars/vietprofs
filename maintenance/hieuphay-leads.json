@@ -2556,7 +2556,7 @@
       "npapers": 7,
       "cited": 64,
       "status": "pending",
-      "note": "Moved to University of Sydney, Senior Research Fellow (Biostatistics), Sydney School of Public Health; academic-staff listing found but explicit continuing/permanent language for the Research track still not confirmed - WebFetch was blocked again this session (network egress policy blocks all external domains), same blocker as the prior session; left pending for a session with working WebFetch to check https://profiles.sydney.edu.au/yvonne.tran directly"
+      "note": "Conflicting evidence on current institution: a May 2025 first-author paper (HEIDI study protocol, PLOS ONE) lists her at Macquarie University Hearing Research Centre with email yvonne.tran@mq.edu.au; separately, profiles.sydney.edu.au/yvonne.tran and a sydney.edu.au medicine-health staff page also describe a 'Yvonne Tran, Senior Research Fellow, Biostatistics' with a matching PhD/psychophysiology background. Could not determine via WebSearch alone whether this is a stale/duplicate page, a genuine joint appointment, or two distinct people (a different, apparently unrelated 'Dr Yvonne Tran' at Sydney's Architecture school also surfaces and may be bleeding into search summaries). WebFetch is blocked by this session's egress policy for both profiles.sydney.edu.au and mq.edu.au, so neither page could be loaded directly. Left pending for a session with working page-fetch access to resolve."
     },
     {
       "name": "David K. Nguyen",
@@ -2912,7 +2912,7 @@
       "npapers": 2,
       "cited": 53,
       "status": "pending",
-      "note": "Likely 'Ly Nguyen', reported as Assistant Professor of Agricultural Economics, Agribusiness Program, CAFS, Florida A&M University (per Google Scholar, a 2025 JAAEA paper affiliation, and a 2022 AAEA newsletter note), but no official FAMU directory profileUrl could be reached and the exact rank/track wording (Assistant Professor/Tenure-line vs Instructional Assistant Professor/Teaching) is unconfirmed - WebFetch was blocked this session (network egress policy); left pending for a session with working page-fetch access to confirm the official page directly."
+      "note": "Likely 'Ly Nguyen', an Assistant Professor at Florida A&M University's Agribusiness Program (CAFS), per Google Scholar (694 citations, agricultural economics/international trade/consumer behavior topics) and recent co-authored papers with Daniel Solis (FAMU Agribusiness Program Leader), including a 2026 piece. However the program's own 'Our Faculty' page (agribusinessfamu.weebly.com/our-faculty.html) currently lists only Daniel Solis and Michael Thomas, not her, and no official famu.edu faculty-bio page could be located confirming her current appointment or exact rank wording (Assistant Professor/tenure-line vs Instructional Assistant Professor/teaching-track). Distinct from an unrelated same-named 'Ly Nguyen' who is Instructional Assistant Professor at Texas A&M Higher Education Center at McAllen (different career path, do not conflate). WebFetch blocked this session (network egress policy); left pending for a session with working page-fetch access to confirm the official page directly."
     },
     {
       "name": "Quynh Anh",
@@ -3139,7 +3139,8 @@
       "country": "US",
       "npapers": 3,
       "cited": 47,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Only findable 'Duc Anh Ngo' at/near University of Virginia is research/analytic staff at UVA Student Health (student health-behavior studies), not a faculty appointment; no faculty title or directory listing found."
     },
     {
       "name": "Thu Hang",
@@ -3147,7 +3148,8 @@
       "country": "US",
       "npapers": 3,
       "cited": 46,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Name is too incomplete to identify (likely a truncated Vietnamese given name missing its family name); extensive searching at Boise State (general directory, CS, Education, Biology, Health Sciences) found no matching faculty member."
     },
     {
       "name": "Thanh Nguyen",
@@ -3179,7 +3181,8 @@
       "country": "CA",
       "npapers": 4,
       "cited": 46,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No faculty member named 'Hong Tu' found at the University of Toronto after extensive department-by-department searching (Economics, Rotman, Chemistry, Chem-Eng, Dentistry, Nursing, OISE, Law, Scarborough); only near-matches are unrelated people (a different Economics professor 'Hong Luo'; a non-faculty International Programs staffer 'Tu, Hong'). Possible the lead's name is transliterated differently in the OpenAlex source."
     },
     {
       "name": "Bao Trung Hoang",
@@ -3187,7 +3190,9 @@
       "country": "GB",
       "npapers": 4,
       "cited": 46,
-      "status": "pending"
+      "status": "included",
+      "note": "Same person as roster's 'Trung Bao Hoang' (Western given-name/surname reordering, not a distinct person) — Senior Lecturer in Financial Management (Tenure-line), Department of Accounting & Finance, University of Greenwich.",
+      "rosterId": "vp-1068"
     },
     {
       "name": "Arthur M. Tran",
@@ -3203,7 +3208,8 @@
       "country": "CA",
       "npapers": 8,
       "cited": 46,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Confirmed to be the same person as 'Stephen Pham' (spelling variant), a PhD candidate in Geography, Geomatics and Environment at University of Toronto Mississauga, explicitly listed under the department's Graduate Students category — not a faculty appointment."
     },
     {
       "name": "Minh Phuong Doan",
@@ -3211,7 +3217,8 @@
       "country": "AU",
       "npapers": 10,
       "cited": 46,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No faculty, staff, or student profile matching this name found at Deakin University via its experts directory, general web search, LinkedIn, or Google Scholar; all name matches found are unrelated industry professionals in Vietnam."
     },
     {
       "name": "Anh Ha Le",
@@ -3227,7 +3234,8 @@
       "country": "DE",
       "npapers": 3,
       "cited": 45,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Real researcher (co-authored pharmaceutical-merger and pharma-industry-innovation papers with Philipps-Universitat Marburg's Wirtschaftspolitik group under Prof. Wolfgang Kerber), but does not appear on the group's current team pages and no professorship, senior-lecturer, or other current faculty title could be found for her anywhere (Marburg, DHBW, Fresenius, IU). Evidence is consistent with a past doctoral-researcher/co-author role rather than a current stable faculty appointment."
     },
     {
       "name": "Hai-Anh Dang",
@@ -3235,7 +3243,8 @@
       "country": "US",
       "npapers": 4,
       "cited": 45,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Primary and only confirmed current affiliation is Senior Economist, World Bank (Living Standards Measurement Study, Development Data Group) — a non-university employer. No NYU faculty, visiting-scholar, or adjunct listing found; NYU Economics' own directory does not include him."
     },
     {
       "name": "Chi M. Nguyen",
@@ -3251,7 +3260,8 @@
       "country": "SG",
       "npapers": 2,
       "cited": 44,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No faculty or PhD-student record matching this name found at Singapore Management University (School of Accountancy, Lee Kong Chian School of Business, faculty.smu.edu.sg) despite extensive searching. A possibly-related ResearchGate profile 'Doan Sophie' at Feng Chia University, Taiwan could not be verified as the same person."
     },
     {
       "name": "Minh Thi Hong Dinh",
@@ -3259,7 +3269,9 @@
       "country": "NO",
       "npapers": 10,
       "cited": 44,
-      "status": "pending"
+      "status": "included",
+      "note": "Associate Professor (Forsteamanuensis), Business Administration, University of Inland Norway, Campus Lillehammer. Official profile: https://www.inn.no/english/find-an-employee/minh-dinh.html",
+      "rosterId": "vp-1069"
     },
     {
       "name": "Chau Ngoc Minh Bui",
@@ -3275,7 +3287,8 @@
       "country": "TW",
       "npapers": 4,
       "cited": 44,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Only substantive tie to National Kaohsiung (First) University of Science and Technology is a single 2022 co-authored paper via the IMBA program (a master's-degree program); evidence (student-ID-style co-author emails on related papers) points to a graduate-student/researcher affiliation rather than a faculty post. No faculty title found on NKUST department pages, ResearchGate, or Semantic Scholar. Distinct from an unrelated same-named UC Irvine psychology PhD (2007), now an independent statistical consultant."
     },
     {
       "name": "Anh Vu",
@@ -3291,7 +3304,8 @@
       "country": "HU",
       "npapers": 5,
       "cited": 43,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Is a 4th-year PhD candidate (not faculty) at University of Pecs's Doctoral School of Regional Policy and Economics, whose substantive faculty employment (lecturer, Faculty of Tourism) is at Yersin University in Dalat, Vietnam — fails inclusion standard both as a student at Pecs and as a Vietnam-based appointment. Possible name collision with a more senior, different 'Hoang Thi Phuong Thao' (Associate Professor) at Ho Chi Minh City Open University — neither would qualify regardless since both are Vietnam-based."
     },
     {
       "name": "Tien-Thinh Nguyen",
@@ -3827,7 +3841,9 @@
       "country": "JP",
       "npapers": 2,
       "cited": 35,
-      "status": "pending"
+      "status": "included",
+      "note": "Lecturer in Financial Mathematics (Tenure-line), Department of Mathematics, University of Manchester. Official profile: https://research.manchester.ac.uk/en/persons/huy.chau",
+      "rosterId": "vp-1067"
     },
     {
       "name": "Clarabelle T. Pham",
