@@ -2556,7 +2556,7 @@
       "npapers": 7,
       "cited": 64,
       "status": "pending",
-      "note": "Moved to University of Sydney, Senior Research Fellow (Biostatistics), Sydney School of Public Health; academic-staff listing found but explicit continuing/permanent language not confirmed via WebSearch snippets alone (WebFetch blocked this session) - Research track needs that confirmation before inclusion; left pending for a session with working WebFetch to check https://profiles.sydney.edu.au/yvonne.tran directly"
+      "note": "Moved to University of Sydney, Senior Research Fellow (Biostatistics), Sydney School of Public Health; academic-staff listing found but explicit continuing/permanent language for the Research track still not confirmed - WebFetch was blocked again this session (network egress policy blocks all external domains), same blocker as the prior session; left pending for a session with working WebFetch to check https://profiles.sydney.edu.au/yvonne.tran directly"
     },
     {
       "name": "David K. Nguyen",
@@ -2842,7 +2842,8 @@
       "country": "US",
       "npapers": 8,
       "cited": 55,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Senior Research Programmer at USC Schaeffer Center for Health Policy & Economics — research-staff/programmer role, not a faculty appointment"
     },
     {
       "name": "Quoc Ngu Vu",
@@ -2850,7 +2851,8 @@
       "country": "AU",
       "npapers": 3,
       "cited": 55,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Now a Director in the Australian Government (per LinkedIn); ANU/NATSEM research-fellow role is stale, no current university appointment"
     },
     {
       "name": "Hung Cuong Nguyen",
@@ -2882,7 +2884,8 @@
       "country": "DE",
       "npapers": 8,
       "cited": 53,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Research Fellow attached to Prof. Waelde's chair at Johannes Gutenberg University Mainz (lead's 'University of Applied Sciences Mainz' is wrong institution); no evidence of an independent, stable faculty-level Research-track appointment"
     },
     {
       "name": "Tra Tran",
@@ -2898,7 +2901,9 @@
       "country": "AU",
       "npapers": 8,
       "cited": 53,
-      "status": "pending"
+      "status": "included",
+      "note": "Verified current faculty appointment; added to public/data.json (rosterId to be filled after assign-profile-ids)",
+      "rosterId": "vp-1064"
     },
     {
       "name": "Nguyen Ly",
@@ -2906,7 +2911,8 @@
       "country": "US",
       "npapers": 2,
       "cited": 53,
-      "status": "pending"
+      "status": "pending",
+      "note": "Likely 'Ly Nguyen', reported as Assistant Professor of Agricultural Economics, Agribusiness Program, CAFS, Florida A&M University (per Google Scholar, a 2025 JAAEA paper affiliation, and a 2022 AAEA newsletter note), but no official FAMU directory profileUrl could be reached and the exact rank/track wording (Assistant Professor/Tenure-line vs Instructional Assistant Professor/Teaching) is unconfirmed - WebFetch was blocked this session (network egress policy); left pending for a session with working page-fetch access to confirm the official page directly."
     },
     {
       "name": "Quynh Anh",
@@ -2922,7 +2928,8 @@
       "country": "CZ",
       "npapers": 6,
       "cited": 52,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Economic Analyst at the Czech Ministry of Industry and Trade (government), not a university appointment"
     },
     {
       "name": "Lan Thanh Nguyen",
@@ -2994,7 +3001,9 @@
       "country": "US",
       "npapers": 7,
       "cited": 50,
-      "status": "pending"
+      "status": "included",
+      "note": "Verified current faculty appointment; added to public/data.json (rosterId to be filled after assign-profile-ids)",
+      "rosterId": "vp-1063"
     },
     {
       "name": "Van-Chien Pham",
@@ -3010,7 +3019,8 @@
       "country": "MY",
       "npapers": 7,
       "cited": 50,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Name pattern is Malaysian-Chinese (Cantonese-style romanization), not Vietnamese; classifier mismatch, not verified individually"
     },
     {
       "name": "Van Hien Nguyen",
@@ -3026,7 +3036,8 @@
       "country": "CN",
       "npapers": 8,
       "cited": 50,
-      "status": "pending"
+      "status": "excluded",
+      "note": "PhD student, School of Economics and Management, Wuhan University — not faculty"
     },
     {
       "name": "Ann Nguyen",
@@ -3034,7 +3045,8 @@
       "country": "US",
       "npapers": 8,
       "cited": 50,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No identifiable current university appointment found at Johnson University or elsewhere after extensive search; person could not be verified"
     },
     {
       "name": "Khoa Lê",
@@ -3042,7 +3054,9 @@
       "country": "US",
       "npapers": 2,
       "cited": 49,
-      "status": "pending"
+      "status": "included",
+      "note": "Verified current faculty appointment; added to public/data.json (rosterId to be filled after assign-profile-ids)",
+      "rosterId": "vp-1065"
     },
     {
       "name": "Quang Nguyen",
@@ -3074,7 +3088,8 @@
       "country": "DE",
       "npapers": 2,
       "cited": 48,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No current university faculty appointment found; only listed as a former (alumni) member of Leibniz Universitaet Hannover's IUW institute"
     },
     {
       "name": "Hoang Thuy Nguyen",
@@ -3090,7 +3105,8 @@
       "country": "AU",
       "npapers": 5,
       "cited": 47,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Current faculty appointment is at Fulbright University Vietnam, inside Vietnam - fails the outside-Vietnam requirement (Wollongong was his stale PhD institution)"
     },
     {
       "name": "Thien Kieu Thi Phung",
@@ -3098,7 +3114,8 @@
       "country": "DK",
       "npapers": 2,
       "cited": 47,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Copenhagen dementia-research role was a postdoc; is currently a practicing family physician in Ottawa, ON (CPSO licensed) with no university faculty appointment"
     },
     {
       "name": "Huy N. Chau",
