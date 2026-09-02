@@ -2556,7 +2556,7 @@
       "npapers": 7,
       "cited": 64,
       "status": "pending",
-      "note": "Conflicting evidence on current institution: a May 2025 first-author paper (HEIDI study protocol, PLOS ONE) lists her at Macquarie University Hearing Research Centre with email yvonne.tran@mq.edu.au; separately, profiles.sydney.edu.au/yvonne.tran and a sydney.edu.au medicine-health staff page also describe a 'Yvonne Tran, Senior Research Fellow, Biostatistics' with a matching PhD/psychophysiology background. Could not determine via WebSearch alone whether this is a stale/duplicate page, a genuine joint appointment, or two distinct people (a different, apparently unrelated 'Dr Yvonne Tran' at Sydney's Architecture school also surfaces and may be bleeding into search summaries). WebFetch is blocked by this session's egress policy for both profiles.sydney.edu.au and mq.edu.au, so neither page could be loaded directly. Left pending for a session with working page-fetch access to resolve."
+      "note": "Conflicting evidence on current institution: a May 2025 first-author paper (HEIDI study protocol, PLOS ONE) lists her at Macquarie University Hearing Research Centre with email yvonne.tran@mq.edu.au; separately, profiles.sydney.edu.au/yvonne.tran and a sydney.edu.au medicine-health staff page also describe a 'Yvonne Tran, Senior Research Fellow, Biostatistics' with a matching PhD/psychophysiology background. Could not determine via WebSearch alone whether this is a stale/duplicate page, a genuine joint appointment, or two distinct people. A second research pass (2026-09-02) also could not resolve this and additionally flagged that her field (audiology/biostatistics) doesn't obviously match this economics-map lead, raising a possible person/field mismatch on top of the institution ambiguity. WebFetch has been blocked by this session's egress policy across at least two separate runs now, so neither page could be loaded directly either time. Left pending for a session with working page-fetch access to resolve."
     },
     {
       "name": "David K. Nguyen",
@@ -2912,7 +2912,7 @@
       "npapers": 2,
       "cited": 53,
       "status": "pending",
-      "note": "Likely 'Ly Nguyen', an Assistant Professor at Florida A&M University's Agribusiness Program (CAFS), per Google Scholar (694 citations, agricultural economics/international trade/consumer behavior topics) and recent co-authored papers with Daniel Solis (FAMU Agribusiness Program Leader), including a 2026 piece. However the program's own 'Our Faculty' page (agribusinessfamu.weebly.com/our-faculty.html) currently lists only Daniel Solis and Michael Thomas, not her, and no official famu.edu faculty-bio page could be located confirming her current appointment or exact rank wording (Assistant Professor/tenure-line vs Instructional Assistant Professor/teaching-track). Distinct from an unrelated same-named 'Ly Nguyen' who is Instructional Assistant Professor at Texas A&M Higher Education Center at McAllen (different career path, do not conflate). WebFetch blocked this session (network egress policy); left pending for a session with working page-fetch access to confirm the official page directly."
+      "note": "Likely 'Ly Nguyen', an Assistant Professor at Florida A&M University's Agribusiness Program (CAFS), per Google Scholar (694 citations, agricultural economics/international trade/consumer behavior topics) and recent co-authored papers with Daniel Solis (FAMU Agribusiness Program Leader), including a 2026 piece. However the program's own 'Our Faculty' page (agribusinessfamu.weebly.com/our-faculty.html) currently lists only Daniel Solis and Michael Thomas, not her, and no official famu.edu faculty-bio page could be located confirming her current appointment or exact rank wording (Assistant Professor/tenure-line vs Instructional Assistant Professor/teaching-track). Distinct from an unrelated same-named 'Ly Nguyen' who is Instructional Assistant Professor at Texas A&M Higher Education Center at McAllen (different career path, do not conflate). A second research pass (2026-09-02) additionally surfaced a possible PhD from Auburn University (2016, unconfirmed) and a possible postdoc at University of Florida's Institute for Sustainable Food Systems (unconfirmed, may be a search-summary artifact). WebFetch has been blocked by this session's egress policy across at least two separate runs now; left pending for a session with working page-fetch access to confirm the official page directly."
     },
     {
       "name": "Quynh Anh",
@@ -3123,7 +3123,9 @@
       "country": "GB",
       "npapers": 11,
       "cited": 47,
-      "status": "pending"
+      "status": "duplicate",
+      "note": "Same person as existing roster entry Huy Chau (vp-1067), Lecturer, Dept of Mathematics, University of Manchester — matching PhD (Padova/Paris Diderot 2016) and postdoc (Alfred Renyi Institute) history.",
+      "rosterId": "vp-1067"
     },
     {
       "name": "Nguyễn Thị Thu Huyền",
@@ -3337,7 +3339,8 @@
       "country": "US",
       "npapers": 3,
       "cited": 42,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No verifiable current university faculty appointment found; only lead is an unconfirmed community-college instructor listing (San Jose City College), not a university faculty role."
     },
     {
       "name": "Nguyen Anh Khoa Doan",
@@ -3353,7 +3356,8 @@
       "country": "BE",
       "npapers": 3,
       "cited": 42,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Appears to be Le Long Hau, Associate Professor, School of Economics and Business Administration, Can Tho University — currently in Vietnam, failing the \"outside Vietnam\" requirement. Listed University of Antwerp affiliation is stale (likely PhD-era)."
     },
     {
       "name": "Mary Nguyen",
@@ -3361,7 +3365,8 @@
       "country": "US",
       "npapers": 3,
       "cited": 42,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No verifiable current faculty appointment found under this name at UCSF or elsewhere; name too common to confidently identify a specific matching economist."
     },
     {
       "name": "Anh H. Vo",
@@ -3377,7 +3382,8 @@
       "country": "TH",
       "npapers": 2,
       "cited": 42,
-      "status": "pending"
+      "status": "pending",
+      "note": "RESEARCH LEAD (2026-09-02, unverified — session network egress blocked all direct page fetch/download, only search snippets available): Assistant Professor of Economics, Faculty of Economics, Srinakharinwirot University, Bangkok, Thailand. PhD Thammasat University (year not stated). Scholar profile found (unconfirmed): scholar.google.com/citations?user=plR9jB0AAAAJ. Needs live-fetch verification before adding."
     },
     {
       "name": "Le Nho Minh",
@@ -3385,7 +3391,8 @@
       "country": "CN",
       "npapers": 3,
       "cited": 42,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No matching researcher or faculty page found at the listed institution or elsewhere under this name; likely a name-classifier false positive."
     },
     {
       "name": "Truc T. Ngo",
@@ -3393,7 +3400,8 @@
       "country": "US",
       "npapers": 2,
       "cited": 42,
-      "status": "pending"
+      "status": "pending",
+      "note": "RESEARCH LEAD (2026-09-02, unverified — session network egress blocked all direct page fetch/download, only search snippets available): likely Truc Ngo, Professor, Industrial & Systems Engineering, Shiley-Marcos School of Engineering, University of San Diego (also Vice Provost for Research and Administration). Note: citation-map \"economics\" tag appears to be a misclassification (she is an engineer), but that alone does not disqualify her from the roster. Possible honor: USD \"University Professorship\" 2022-23. Needs live-fetch verification before adding."
     },
     {
       "name": "Manh Hao Quach",
@@ -3401,7 +3409,9 @@
       "country": "GB",
       "npapers": 2,
       "cited": 42,
-      "status": "pending"
+      "status": "duplicate",
+      "note": "Same person, name in different token order — existing roster entry Hao Manh Quach (vp-1045), Professor, Lincoln Business School, University of Lincoln.",
+      "rosterId": "vp-1045"
     },
     {
       "name": "Nguyen Chi Cuong",
@@ -3417,7 +3427,8 @@
       "country": "AU",
       "npapers": 2,
       "cited": 42,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No university faculty directory listing found under this name at ANU or elsewhere; available evidence (ANU-affiliated coauthorship, ResearchGate/social profile) points to PhD-candidate status, not faculty."
     },
     {
       "name": "Thi Bich Ngoc Tran",
@@ -3441,7 +3452,8 @@
       "country": "NZ",
       "npapers": 10,
       "cited": 41,
-      "status": "pending"
+      "status": "pending",
+      "note": "RESEARCH LEAD (2026-09-02, unverified — session network egress blocked all direct page fetch/download, only search snippets available): likely Kim Hang Pham Do, Massey University economics. Conflicting evidence on title: her individual profile page snippet says \"Adjunct Senior Lecturer\" (would be excluded) but a staff-list snippet omits \"Adjunct\". Needs live-fetch verification to resolve before a status decision."
     },
     {
       "name": "Thong Tien Nguyen",
@@ -3465,7 +3477,8 @@
       "country": "NL",
       "npapers": 5,
       "cited": 41,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Confirmed PhD candidate at University of Twente (Health Technology and Services Research), not a faculty appointment."
     },
     {
       "name": "Tran Hoang Nhi",
@@ -3473,7 +3486,8 @@
       "country": "AU",
       "npapers": 3,
       "cited": 41,
-      "status": "pending"
+      "status": "pending",
+      "note": "RESEARCH LEAD (2026-09-02, unverified — session network egress blocked all direct page fetch/download, only search snippets available): likely Nhi Hoang Tran (\"Nhi Tran\"), Senior Research Fellow, Centre of Policy Studies, Victoria University, Melbourne (listed inst Monash appears stale) — active/verified there since ~2007, but a CoPS job ad describes the role as a renewable 1-year fixed-term appointment, raising a stability question the \"Research\" track requires resolving. Needs live-fetch verification before a status decision."
     },
     {
       "name": "William Phan",
@@ -3481,7 +3495,8 @@
       "country": "US",
       "npapers": 11,
       "cited": 41,
-      "status": "pending"
+      "status": "pending",
+      "note": "RESEARCH LEAD (2026-09-02, unverified — session network egress blocked all direct page fetch/download, only search snippets available): likely Research Assistant Professor of Economics, Poole College of Management, NC State University (poole.ncsu.edu/people/wphan/, wphan.wordpress.ncsu.edu). PhD University of Rochester (year not stated). Needs live-fetch verification of rank wording, department, portrait before adding."
     },
     {
       "name": "Canh Thien Dang",
