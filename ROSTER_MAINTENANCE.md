@@ -6,7 +6,11 @@ This document is for maintainers and automated agents. It contains the detailed 
 
 Include a person only when reliable evidence, preferably an official university page, supports all of the following:
 
-- A current university appointment anywhere outside Vietnam, except for Emeritus entries.
+- A current university appointment anywhere outside Vietnam, except for Emeritus entries. An
+  incoming appointment also qualifies — one an official or otherwise reliable source (typically
+  the person's own site, since the hiring institution often has no page live yet) confirms has
+  been offered and accepted, with a start date, even if that date is still in the future — but not
+  a mere on-the-market candidacy, an application, or an interview.
 - A primary academic appointment and one of the accepted tracks below.
 
 Use Vietnamese names and other relevant discovery signals to find roster candidates. Do not require
