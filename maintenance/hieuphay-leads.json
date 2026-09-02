@@ -2556,7 +2556,7 @@
       "npapers": 7,
       "cited": 64,
       "status": "pending",
-      "note": "RESEARCH LEAD (2026-09-02, second pass, still unverified — WebFetch/curl to external domains blocked again this session, WebSearch only): confirmed via matching Scholar ID (9HD6m-EAAAAJ) that the Macquarie Hearing Research Centre page and the Sydney Faculty of Medicine and Health page describe the same person, not two people — but her current PRIMARY appointment (Macquarie vs. Sydney, or a genuine joint role) and whether 'Senior Research Fellow' is a stable faculty-level appointment (vs. grant-funded) remain unresolved from search snippets alone. Also unresolved: her field (audiology/biostatistics) doesn't obviously match an 'economics' lead, a possible person/field mismatch. Needs a direct page fetch to resolve."
+      "note": "RESEARCH LEAD (2026-09-02, third pass, still unverified — WebFetch/curl to external domains blocked again this session, WebSearch only): confirmed via matching Scholar ID (9HD6m-EAAAAJ) that the Macquarie Hearing Research Centre page and the Sydney Faculty of Medicine and Health page describe the same person, not two people — but her current PRIMARY appointment (Macquarie vs. Sydney, or a genuine joint role) and whether 'Senior Research Fellow' is a stable faculty-level appointment (vs. grant-funded) remain unresolved from search snippets alone. Also unresolved: her field (audiology/biostatistics) doesn't obviously match an 'economics' lead, a possible person/field mismatch. Needs a direct page fetch to resolve."
     },
     {
       "name": "David K. Nguyen",
@@ -2912,7 +2912,7 @@
       "npapers": 2,
       "cited": 53,
       "status": "pending",
-      "note": "RESEARCH LEAD (2026-09-02, second pass, still unverified — WebFetch/curl blocked, WebSearch only): appointment now well-supported — a 2026 Agribusiness journal article (DOI 10.1002/agr.70098) explicitly states her affiliation as FAMU's Agribusiness Program, College of Agriculture and Food Sciences, and her Scholar profile carries a verified famu.edu email. Still missing: an actual official FAMU faculty-directory bio page/CV to use as profileUrl and to confirm exact rank wording (only the CAFS directory index pages were found, not her individual page) — https://cafs.famu.edu/about-cafs/faculty-staff.php and https://www.famu.edu/info/faculty-staff/profiles/cafs/index.php are candidates to check directly. PhD (Auburn, 2016) and UF postdoc claims remain unconfirmed by any official source."
+      "note": "RESEARCH LEAD (2026-09-02, third pass, still unverified — WebFetch/curl blocked, WebSearch only): appointment now well-supported — a 2026 Agribusiness journal article (DOI 10.1002/agr.70098) explicitly states her affiliation as FAMU's Agribusiness Program, College of Agriculture and Food Sciences, and her Scholar profile carries a verified famu.edu email. Still missing: an actual official FAMU faculty-directory bio page/CV to use as profileUrl and to confirm exact rank wording (only the CAFS directory index pages were found, not her individual page) — https://cafs.famu.edu/about-cafs/faculty-staff.php and https://www.famu.edu/info/faculty-staff/profiles/cafs/index.php are candidates to check directly. PhD (Auburn, 2016) and UF postdoc claims remain unconfirmed by any official source."
     },
     {
       "name": "Quynh Anh",
@@ -3382,8 +3382,8 @@
       "country": "TH",
       "npapers": 2,
       "cited": 42,
-      "status": "pending",
-      "note": "RESEARCH LEAD (2026-09-02, unverified — session network egress blocked all direct page fetch/download, only search snippets available): Assistant Professor of Economics, Faculty of Economics, Srinakharinwirot University, Bangkok, Thailand. PhD Thammasat University (year not stated). Scholar profile found (unconfirmed): scholar.google.com/citations?user=plR9jB0AAAAJ. Needs live-fetch verification before adding.",
+      "status": "duplicate",
+      "note": "duplicate: already in roster as vp-1073 (added in the prior 2026-09-02 batch).",
       "rosterId": "vp-1073"
     },
     {
@@ -3401,8 +3401,8 @@
       "country": "US",
       "npapers": 2,
       "cited": 42,
-      "status": "pending",
-      "note": "RESEARCH LEAD (2026-09-02, unverified — session network egress blocked all direct page fetch/download, only search snippets available): likely Truc Ngo, Professor, Industrial & Systems Engineering, Shiley-Marcos School of Engineering, University of San Diego (also Vice Provost for Research and Administration). Note: citation-map \"economics\" tag appears to be a misclassification (she is an engineer), but that alone does not disqualify her from the roster. Possible honor: USD \"University Professorship\" 2022-23. Needs live-fetch verification before adding.",
+      "status": "duplicate",
+      "note": "duplicate: already in roster as vp-1074 \"Truc Thanh Ngo\" (added in the prior 2026-09-02 batch).",
       "rosterId": "vp-1074"
     },
     {
@@ -3605,7 +3605,8 @@
       "country": "NO",
       "npapers": 4,
       "cited": 39,
-      "status": "pending"
+      "status": "excluded",
+      "note": "excluded: only traceable role is a PhD student/researcher at U. Oslo CMA (~2010-2011, atkieu@math.uio.no); no faculty appointment or any trace found after ~2011."
     },
     {
       "name": "Hang Do",
@@ -3629,7 +3630,8 @@
       "country": "AU",
       "npapers": 2,
       "cited": 38,
-      "status": "pending"
+      "status": "excluded",
+      "note": "excluded: confirmed via UWA Profiles/Research Repository as a current PhD Candidate in Marketing at UWA Business School, not faculty."
     },
     {
       "name": "Dinh, Huong",
@@ -3637,7 +3639,8 @@
       "country": "AU",
       "npapers": 3,
       "cited": 38,
-      "status": "pending"
+      "status": "excluded",
+      "note": "excluded: stale UC Research Associate lead; now Senior Economist at the Australian federal Dept. of Industry, Science and Resources (non-university); ANU affiliation is an unpaid Visiting Fellow designation, not a qualifying appointment."
     },
     {
       "name": "Minh‐Phuong Huynh‐Le",
@@ -3685,7 +3688,8 @@
       "country": "TW",
       "npapers": 2,
       "cited": 37,
-      "status": "pending"
+      "status": "excluded",
+      "note": "excluded: no trace of this person at National Kaohsiung Marine University or its successor NKUST in faculty listings, Scholar, ORCID, or web search; likely a stale/erroneous dataset entry."
     },
     {
       "name": "Quoc Hung Nguyen",
@@ -3709,7 +3713,8 @@
       "country": "AU",
       "npapers": 5,
       "cited": 37,
-      "status": "pending"
+      "status": "excluded",
+      "note": "excluded: no University of Canberra faculty profile or directory listing found; only trace is as a Vietnam-based economics paper co-author with no outside-Vietnam university affiliation."
     },
     {
       "name": "Huy Thanh Vo",
@@ -3725,7 +3730,8 @@
       "country": "GB",
       "npapers": 2,
       "cited": 37,
-      "status": "pending"
+      "status": "excluded",
+      "note": "excluded: current status at University of Aberdeen is PhD Candidate / Teaching Assistant in Finance (official page titles her \"MISS\"), not faculty; a distinct same-named Heriot-Watt associate professor is a different person with no Aberdeen tie."
     },
     {
       "name": "Nguyen Thi Phuong Lan",
@@ -3741,7 +3747,8 @@
       "country": "HU",
       "npapers": 4,
       "cited": 36,
-      "status": "pending"
+      "status": "excluded",
+      "note": "excluded: real person, PhD from BME 2003 with 2007 co-authored papers, but no evidence of any faculty appointment there or elsewhere since; current status unverifiable."
     },
     {
       "name": "Hang Thi Thu Vu",
@@ -3749,7 +3756,8 @@
       "country": "FJ",
       "npapers": 2,
       "cited": 36,
-      "status": "pending"
+      "status": "excluded",
+      "note": "excluded: no official University of the South Pacific staff profile or faculty listing found under this name or plausible reorderings."
     },
     {
       "name": "Thi Mai Luong",
@@ -3757,7 +3765,8 @@
       "country": "AU",
       "npapers": 4,
       "cited": 36,
-      "status": "pending"
+      "status": "excluded",
+      "note": "excluded: UTS Business School PhD (~2020) with a Scholar profile, but her own ResearchGate profile lists her as \"PhD Student\" and no lecturer/faculty listing was found at UTS or elsewhere."
     },
     {
       "name": "Hong Than‐Thi",
@@ -3765,7 +3774,8 @@
       "country": "TW",
       "npapers": 4,
       "cited": 36,
-      "status": "pending"
+      "status": "excluded",
+      "note": "excluded: name confirmed genuine (published surname \"Than-Thi\", given name \"Hong\", Feng Chia PhD 2019 under Cathy W.S. Chen), but no current faculty appointment found at Feng Chia or elsewhere; last traceable activity ~2021."
     },
     {
       "name": "Hoang Nguyen",
