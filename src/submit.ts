@@ -339,13 +339,15 @@ function buildBulkSubmissionBody(bulkText: string, entry: SubmissionDraft): stri
 }
 
 function buildUpdateBody(matchedEntry: RosterEntry, entry: SubmissionDraft, notes: string): string {
+  const nameChanged = Boolean(entry.name) && entry.name !== matchedEntry.name;
   const lines = [
     'Request: Update existing entry',
     '',
     `VietProfs ID: ${matchedEntry.id}`,
     `VietProfs profile: https://vietprofs.roars.dev/${personPath(matchedEntry.id)}`,
-    `Current name: ${matchedEntry.name}`,
-    `Proposed name: ${entry.name}`,
+    ...(nameChanged
+      ? [`Current name: ${matchedEntry.name}`, `Proposed name: ${entry.name}`]
+      : [`Name: ${matchedEntry.name}`]),
     '',
     'Changes:',
   ];
