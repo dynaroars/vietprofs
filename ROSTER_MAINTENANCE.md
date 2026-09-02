@@ -366,7 +366,10 @@ personal homepage. An honor should normally fit one of these patterns:
 Do not add routine conference best-paper or distinguished-paper awards, paper awards with only
 runner-up or candidate status, institution-local student, departmental, university
 service/teaching, or community-engagement awards, generic grants, invited talks, or ambiguous
-honors whose standing cannot be established. "Distinguished Paper Award," "Best Paper Award," and
+honors whose standing cannot be established. This also excludes NSF's seed/exploratory programs for
+researchers without prior NSF funding, such as the CISE Research Initiation Initiative (CRII) award
+or comparable "research initiation" grants — these are not competitive career awards on the level of
+NSF CAREER, PECASE, or a Sloan Research Fellowship and do not qualify on their own. "Distinguished Paper Award," "Best Paper Award," and
 similarly named per-year paper-selection recognitions are routine even at a top-tier venue and do
 not qualify on their own, regardless of a comparable award already present in the roster; do not
 treat an existing roster entry as precedent for adding another one. A conference paper recognition
