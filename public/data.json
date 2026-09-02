@@ -18212,7 +18212,16 @@
     "phdInstitution": "University of Strasbourg",
     "portrait": "portraits/237-viet-khoa-tran-nguyen-universite-paris-cite.webp",
     "portraitSource": "https://bfa.u-pariscite.fr/wp-content/uploads/sites/73/2025/02/Viet-Khoa-professional-avatar-new.jpg",
-    "msInstitution": "Grenoble Alpes University"
+    "msInstitution": "Grenoble Alpes University",
+    "honors": [
+      {
+        "name": "Young Academic Investigator Award in Medicinal Chemistry",
+        "year": 2024,
+        "category": "career_award",
+        "organization": "Société de Chimie Thérapeutique",
+        "source": "https://www.sct-asso.fr/ymc-academia-award"
+      }
+    ]
   },
   {
     "id": "vp-0624",
@@ -18256,6 +18265,15 @@
     ],
     "phdYear": 2011,
     "phdInstitution": "Université Pierre et Marie Curie",
+    "honors": [
+      {
+        "name": "Member, Institut Universitaire de France",
+        "year": 2020,
+        "category": "career_award",
+        "organization": "Institut Universitaire de France",
+        "source": "https://www.iufrance.fr/les-membres-de-liuf/membre/2094-hai-son-nguyen.html"
+      }
+    ],
     "portrait": "portraits/646-hai-son-nguyen-ecole-centrale-de-lyon.webp",
     "portraitSource": "https://www.normalesup.org/~haison/images/PhotoColor2.jpg"
   },
@@ -18286,14 +18304,14 @@
     "id": "vp-0627",
     "name": "Thanh-Phuong Nguyen",
     "vietnameseName": "Nguyễn Thanh-Phương",
-    "university": "University of Toulon",
-    "city": "Toulon",
+    "university": "Université Côte d'Azur",
+    "city": "Nice",
     "country": "France",
-    "department": "Department of Multimedia and Internet Professions",
-    "rank": "Associate Professor",
+    "department": "Laboratoire d'Informatique, Signaux et Systèmes de Sophia Antipolis (I3S)",
+    "rank": "Professor",
     "track": "Tenure-line",
-    "profileUrl": "https://tpnguyen.univ-tln.fr/download/CV_TPNGUYEN.pdf",
-    "lastUpdatedAt": "2026-08-26T18:38:23.000Z",
+    "profileUrl": "https://webusers.i3s.unice.fr/~tpnguyen/index.html",
+    "lastUpdatedAt": "2026-09-02T10:46:09.000Z",
     "researchAreas": [
       "Computer Vision",
       "Image Processing",
@@ -18301,7 +18319,9 @@
       "Pattern Recognition"
     ],
     "phdYear": 2010,
-    "phdInstitution": "Université Nancy 1",
+    "phdInstitution": "Université de Lorraine",
+    "postdocInstitution": "Mines ParisTech and ENSTA ParisTech",
+    "postdocYear": 2015,
     "portrait": "portraits/240-thanh-phuong-nguyen-university-of-toulon.webp",
     "portraitSource": "https://tpnguyen.univ-tln.fr/download/CV_TPNGUYEN.pdf"
   },
