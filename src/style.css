@@ -1123,6 +1123,61 @@ a.entry-name:focus-visible {
   transition: width 0.3s ease;
 }
 
+/* Roster Growth Line Chart */
+.growth-chart-wrap {
+  position: relative;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+}
+
+.growth-chart {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.growth-area {
+  fill: color-mix(in srgb, var(--focus-ring) 12%, transparent);
+  stroke: none;
+}
+
+.growth-line {
+  fill: none;
+  stroke: var(--focus-ring);
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.growth-dot {
+  fill: var(--card-bg);
+  stroke: var(--focus-ring);
+  stroke-width: 1.5;
+}
+
+.growth-crosshair {
+  stroke: var(--text-muted);
+  stroke-width: 1;
+  stroke-dasharray: 3 3;
+}
+
+.growth-tooltip {
+  position: absolute;
+  top: 0.25rem;
+  transform: translateX(-50%);
+  background: var(--text-primary);
+  color: var(--card-bg);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  padding: 0.25rem 0.55rem;
+  border-radius: 6px;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 1;
+}
+
 .fun-facts {
   list-style: none;
   border-top: 1px solid var(--border-color);

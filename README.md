@@ -17,7 +17,7 @@ Repository documentation is intentionally limited to four files:
 
 The search box matches names, universities, departments, ranks, locations, research areas, honors, and degree institutions. Use the selector at the left of the search box to limit the search to name, university, department, rank, research area, honors, PhD institution, or undergraduate institution; it defaults to `Everything`. Location, field, and appointment track remain dedicated filters. Matching is diacritic-insensitive, so `Nguyen` finds `Nguyễn`.
 
-The location, field, and track filters can be combined. Shareable URLs preserve the active search and filters. The “Show me something interesting” option provides roster-derived observations about geography, institutions, fields, and appointment tracks. It does not make claims about institutional prestige or Vietnamese population size.
+The location, field, and track filters can be combined. Shareable URLs preserve the active search and filters. The “Show me something interesting” option provides roster-derived observations about geography, institutions, fields, and appointment tracks, alongside interactive charts (distribution by field, career stage, and country; PhD-cohort and top-institution rankings; and roster growth over time, built from `public/data.json`'s git history). It does not make claims about institutional prestige or Vietnamese population size.
 
 ## Commands
 

@@ -1,6 +1,6 @@
 import './style.css';
-import { loadRoster, buildSearchIndex, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueUndergradInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, LOCATION_LABELS, countryFlag, canonicalRank, displayName, fieldOf, locationMatches, filterRoster, buildFunFacts, buildUsObservations, buildInternationalObservations, buildLocationObservations, buildQualifiedObservations, buildAwardsFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, STATE_ABBR, type Roster, type RosterEntry, type SearchIndex } from './data.ts';
-import { escapeHtml } from './utils.ts';
+import { loadRoster, loadStatsHistory, buildSearchIndex, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueUndergradInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, LOCATION_LABELS, countryFlag, canonicalRank, displayName, fieldOf, locationMatches, filterRoster, buildFunFacts, buildUsObservations, buildInternationalObservations, buildLocationObservations, buildQualifiedObservations, buildAwardsFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, buildFieldCounts, buildTopCountries, buildTrackCounts, STATE_ABBR, type Roster, type RosterEntry, type SearchIndex, type StatsHistoryPoint } from './data.ts';
+import { escapeHtml, formatRosterDate } from './utils.ts';
 import { STATE_GRID } from './state-grid.ts';
 import { applyFavoriteToggle, fieldDropdownLabel, renderRosterEntry } from './render.ts';
 import { loadFavorites, toggleFavorite } from './favorites-store.ts';
@@ -365,7 +365,98 @@ function renderLeaderboards(subRoster: Roster, { titleUni = 'Top Faculty Hubs', 
   `;
 }
 
-function renderFunFacts(visibleRoster: Roster, selectedLocationLabel: string, selectedLocation: string, fullRoster: Roster) {
+// Shared renderer for the field / career-stage / country breakdown bars: same visual language
+// as renderLeaderboards' ranked bars, but clicking sets a dropdown/location filter directly
+// (via data-filter/data-value) instead of running a scoped search.
+function renderFilterBreakdown(counts: [string, number][], { title, caption, filterKey, formatLabel = (v: string) => v }: { title: string; caption: string; filterKey: 'field' | 'track' | 'country'; formatLabel?: (value: string) => string }): string {
+  if (!counts.length) return '';
+  const total = counts.reduce((sum, [, c]) => sum + c, 0);
+  const max = counts[0][1];
+  const rows = counts
+    .map(([value, count]) => {
+      const pct = Math.round((count / max) * 100);
+      const share = Math.round((count / total) * 100);
+      return `
+        <button type="button" class="ranked-item" data-filter="${filterKey}" data-value="${escapeHtml(value)}" title="Filter by ${escapeHtml(formatLabel(value))}">
+          <div class="ranked-header">
+            <span class="ranked-name">${escapeHtml(formatLabel(value))}</span>
+            <span class="ranked-count">${count} <span class="chart-share">(${share}%)</span></span>
+          </div>
+          <div class="ranked-track"><div class="ranked-bar" style="width: ${pct}%;"></div></div>
+        </button>
+      `;
+    })
+    .join('');
+  return `
+    <div class="insights-card">
+      <h3 class="insights-heading">${escapeHtml(title)}</h3>
+      <p class="insights-caption">${escapeHtml(caption)}</p>
+      <div class="ranked-list">${rows}</div>
+    </div>
+  `;
+}
+
+function renderDistributionCharts(subRoster: Roster, { includeCountry = false }: { includeCountry?: boolean } = {}): string {
+  const fieldCard = renderFilterBreakdown(buildFieldCounts(subRoster), {
+    title: 'By Field',
+    caption: 'Broad academic field; click a bar to filter.',
+    filterKey: 'field',
+  });
+  const trackCard = renderFilterBreakdown(buildTrackCounts(subRoster), {
+    title: 'By Career Stage',
+    caption: 'Appointment track; click a bar to filter.',
+    filterKey: 'track',
+  });
+  const countryCard = includeCountry
+    ? renderFilterBreakdown(buildTopCountries(subRoster, 8), {
+        title: 'By Country',
+        caption: 'Top countries by faculty count; click a bar to filter.',
+        filterKey: 'country',
+        formatLabel: (country) => `${countryFlag(country)} ${country}`,
+      })
+    : '';
+  if (!fieldCard && !trackCard && !countryCard) return '';
+  return `<div class="insights-grid">${fieldCard}${trackCard}${countryCard}</div>`;
+}
+
+function renderGrowthChart(history: StatsHistoryPoint[]): string {
+  if (history.length < 2) return '';
+  const width = 640;
+  const height = 180;
+  const padX = 8;
+  const padTop = 12;
+  const padBottom = 28;
+  const minCount = Math.min(...history.map((p) => p.count));
+  const maxCount = Math.max(...history.map((p) => p.count));
+  const range = Math.max(1, maxCount - minCount);
+  const xFor = (i: number) => padX + (i / (history.length - 1)) * (width - padX * 2);
+  const yFor = (count: number) => padTop + (1 - (count - minCount) / range) * (height - padTop - padBottom);
+  const linePoints = history.map((p, i) => `${xFor(i).toFixed(1)},${yFor(p.count).toFixed(1)}`).join(' ');
+  const areaPoints = `${padX},${(height - padBottom).toFixed(1)} ${linePoints} ${(width - padX).toFixed(1)},${(height - padBottom).toFixed(1)}`;
+  const first = history[0];
+  const last = history[history.length - 1];
+  const dots = history
+    .map((p, i) => `<circle class="growth-dot" cx="${xFor(i).toFixed(1)}" cy="${yFor(p.count).toFixed(1)}" r="2.5" data-date="${escapeHtml(p.date)}" data-count="${p.count}"></circle>`)
+    .join('');
+  const pointsData = escapeHtml(JSON.stringify(history.map((p, i) => [xFor(i), p.date, p.count])));
+  return `
+    <div class="insights-section">
+      <h3 class="insights-heading">Roster Growth</h3>
+      <p class="insights-caption">Total people on record over time, from ${escapeHtml(first.date)} (${first.count}) to ${escapeHtml(last.date)} (${last.count}); hover to inspect a date.</p>
+      <div class="growth-chart-wrap">
+        <svg class="growth-chart" viewBox="0 0 ${width} ${height}" data-points="${pointsData}" data-height="${height}" data-pad-bottom="${padBottom}" role="img" aria-label="Line chart of total roster size over time">
+          <polygon class="growth-area" points="${areaPoints}"></polygon>
+          <polyline class="growth-line" points="${linePoints}"></polyline>
+          ${dots}
+          <line class="growth-crosshair" x1="0" y1="${padTop}" x2="0" y2="${height - padBottom}" hidden></line>
+        </svg>
+        <div class="growth-tooltip" hidden></div>
+      </div>
+    </div>
+  `;
+}
+
+function renderFunFacts(visibleRoster: Roster, selectedLocationLabel: string, selectedLocation: string, fullRoster: Roster, statsHistory: StatsHistoryPoint[]) {
   const rosterEl = document.getElementById('roster');
   const countEl = document.getElementById('result-count');
   countEl.textContent = 'Insights and patterns for the selected location and the worldwide diaspora:';
@@ -410,6 +501,7 @@ function renderFunFacts(visibleRoster: Roster, selectedLocationLabel: string, se
           <p class="insights-main-desc">${selectedRoster.length} ${selectedRoster.length === 1 ? 'person' : 'people'} across ${selectedUniversities} universit${selectedUniversities === 1 ? 'y' : 'ies'} in ${escapeHtml(selectedIsUs ? 'the United States' : selectedLocationLabel.replace(/^\S+\s+/, ''))}.</p>
         </div>
         ${selectedIsUs && selectedRoster.length ? renderStateGrid(selectedRoster) : ''}
+        ${selectedRoster.length ? renderDistributionCharts(selectedRoster) : ''}
         ${selectedRoster.length ? renderDecadesChart(selectedRoster) : ''}
         ${selectedRoster.length ? renderLeaderboards(selectedRoster, { titleUni: selectedIsUs ? 'Top U.S. Faculty Hubs' : 'Top Faculty Hubs', descUni: 'Universities with the most Vietnamese faculty in the selected location; click to search.', titlePhd: selectedIsUs ? 'Top U.S. PhD Alma Maters' : 'Top PhD Alma Maters', descPhd: 'Doctoral institutions that trained faculty in the selected location; click to search.' }) : ''}
         <div class="insights-section">
@@ -430,6 +522,8 @@ function renderFunFacts(visibleRoster: Roster, selectedLocationLabel: string, se
           <h2 class="insights-main-heading">Global &amp; Worldwide Diaspora Landscape</h2>
           <p class="insights-main-desc">${fullRoster.length} people across ${worldUniversities} universities in the World.</p>
         </div>
+        ${renderDistributionCharts(fullRoster, { includeCountry: true })}
+        ${renderGrowthChart(statsHistory)}
         ${renderDecadesChart(fullRoster)}
         ${worldInternationalRoster.length ? renderLeaderboards(worldInternationalRoster, { titleUni: 'Top International Faculty Hubs', descUni: 'Global universities outside the U.S. with the most Vietnamese faculty; click to search.', titlePhd: 'Top International PhD Alma Maters', descPhd: 'Doctoral institutions that trained global faculty; click to search.' }) : ''}
         <div class="insights-section">
@@ -455,6 +549,7 @@ async function init() {
     return;
   }
   const searchIndex = buildSearchIndex(roster);
+  const statsHistory = await loadStatsHistory();
 
   // Matches everything filterRoster actually searches over (name, university, city, state, country,
   // department, rank, research areas, degree institutions, and honors) so a suggestion always yields at least one result.
@@ -725,7 +820,7 @@ async function init() {
     }
     const locRoster = roster.filter((p) => locationMatches(p, locationSelect.value));
     if (filterState.insights) {
-      renderFunFacts(locRoster, locationLabel(locationSelect.value), locationSelect.value, roster);
+      renderFunFacts(locRoster, locationLabel(locationSelect.value), locationSelect.value, roster, statsHistory);
       syncUrl();
       return;
     }
@@ -894,6 +989,21 @@ async function init() {
       update();
       return;
     }
+    const breakdownItem = target.closest<HTMLButtonElement>('.ranked-item');
+    if (breakdownItem?.dataset.filter && breakdownItem.dataset.value) {
+      clearSearch();
+      filterState.insights = false;
+      const { filter, value } = breakdownItem.dataset;
+      if (filter === 'field') {
+        setFilterValues({ location: locationSelect.value, field: value });
+      } else if (filter === 'track') {
+        setFilterValues({ location: locationSelect.value, track: value });
+      } else if (filter === 'country') {
+        setFilterValues({ location: value });
+      }
+      update();
+      return;
+    }
     const rankedItem = target.closest<HTMLButtonElement>('.ranked-item');
     if (rankedItem && rankedItem.dataset.search) {
       const rankedScope = rankedItem.dataset.scope;
@@ -905,6 +1015,53 @@ async function init() {
       trackSelect.value = 'all';
       update({ fromSearch: true });
     }
+  });
+
+  // Growth chart hover: crosshair + tooltip snapped to the nearest data point. Delegated (like
+  // the click handler above) since renderFunFacts() replaces #roster's innerHTML wholesale.
+  document.getElementById('roster').addEventListener('mousemove', (e) => {
+    const target = e.target as HTMLElement;
+    const svg = target.closest?.('.growth-chart') as SVGSVGElement | null;
+    document.querySelectorAll<SVGSVGElement>('.growth-chart').forEach((el) => {
+      if (el !== svg) {
+        el.querySelector('.growth-crosshair')?.setAttribute('hidden', '');
+        el.parentElement?.querySelector('.growth-tooltip')?.setAttribute('hidden', '');
+      }
+    });
+    if (!svg) return;
+    const points = JSON.parse(svg.dataset.points || '[]') as [number, string, number][];
+    if (!points.length) return;
+    const rect = svg.getBoundingClientRect();
+    const vbWidth = svg.viewBox.baseVal.width || 640;
+    const x = ((e.clientX - rect.left) / rect.width) * vbWidth;
+    let nearest = points[0];
+    let bestDist = Math.abs(points[0][0] - x);
+    for (const p of points) {
+      const d = Math.abs(p[0] - x);
+      if (d < bestDist) {
+        bestDist = d;
+        nearest = p;
+      }
+    }
+    const [nx, date, count] = nearest;
+    const crosshair = svg.querySelector<SVGLineElement>('.growth-crosshair');
+    if (crosshair) {
+      crosshair.setAttribute('x1', String(nx));
+      crosshair.setAttribute('x2', String(nx));
+      crosshair.removeAttribute('hidden');
+    }
+    const tooltip = svg.parentElement?.querySelector<HTMLElement>('.growth-tooltip');
+    if (tooltip) {
+      tooltip.textContent = `${formatRosterDate(`${date}T00:00:00Z`)}: ${count} ${count === 1 ? 'person' : 'people'}`;
+      tooltip.removeAttribute('hidden');
+      tooltip.style.left = `${(nx / vbWidth) * 100}%`;
+    }
+  });
+  document.getElementById('roster').addEventListener('mouseleave', () => {
+    document.querySelectorAll<SVGSVGElement>('.growth-chart').forEach((el) => {
+      el.querySelector('.growth-crosshair')?.setAttribute('hidden', '');
+      el.parentElement?.querySelector('.growth-tooltip')?.setAttribute('hidden', '');
+    });
   });
 
   const backToTopBtn = document.getElementById('back-to-top');
