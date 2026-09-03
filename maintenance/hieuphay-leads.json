@@ -2912,7 +2912,7 @@
       "npapers": 2,
       "cited": 53,
       "status": "pending",
-      "note": "Likely = Ly Nguyen, Assistant Professor, Agricultural Economics, Florida A&M University (Google Scholar has verified famu.edu email, 694 citations, matching research area). Not resolved after 3 independent research sessions: famu.edu/cafs.famu.edu consistently unreachable (egress-blocked) and no individual faculty bio page was found via search, so no working official profileUrl and no confirmed exact department wording. Distinguish from an unrelated same-name 'Ly Nguyen' at Texas A&M Higher Education Center McAllen. Needs a direct fetch of the FAMU CAFS faculty directory once reachable."
+      "note": "Likely = Ly Nguyen, Asst. Prof. Agricultural Economics, Florida A&M (verified famu.edu Scholar email, 694 citations, matching research area) — same conclusion as 3 prior sessions. 4th session (2026-09-03) also blocked: this session's network egress proxy denies ALL external fetches (WebFetch and curl alike returned 403 for every domain tried, not just famu.edu/web.archive.org — confirmed via www.google.com and www.utpb.edu also failing), so only WebSearch snippets were available and still no individual FAMU bio page surfaced. Needs a session with working direct page fetch to resolve the official profileUrl and confirm department wording."
     },
     {
       "name": "Quynh Anh",
@@ -4389,7 +4389,7 @@
       "npapers": 2,
       "cited": 25,
       "status": "pending",
-      "note": "Core faculty at Sasin School of Management, Chulalongkorn University (personal site + Google Scholar with verified sasin.edu email; multiple sources list her as a current DBA thesis mentor) — appointment itself well corroborated, but exact rank/title and an individual official profileUrl remain unconfirmed after 3 independent sessions; sasin.edu consistently unreachable (egress-blocked) and no individual bio page found via search. PhD from ESMT Berlin, year unconfirmed (conflicting 2021/2022 signals)."
+      "note": "Core faculty at Sasin School of Management (personal site + verified sasin.edu Scholar email, listed as DBA thesis mentor) — appointment corroborated across 4 sessions, but rank/track still unconfirmed: 2026-09-03 session found she is also described as Senior Research Fellow, Max Planck Institute for Research on Collective Goods (Bonn) and Visiting Researcher, ESMT Berlin, raising the possibility Sasin is secondary to a German primary post rather than the reverse. sasin.edu remains unreachable (this session's egress proxy blocks all external domains outright). PhD ESMT Berlin, year conflicting (2021 vs 2022) — do not record phdYear. Needs a live sasin.edu/team/faculty check to confirm primary appointment and exact title."
     },
     {
       "name": "Thi Minh Hoa Nguyen",
@@ -4606,7 +4606,8 @@
       "country": "US",
       "npapers": 7,
       "cited": 22,
-      "status": "pending"
+      "status": "pending",
+      "note": "No longer at SUNY Poly — moved to The University of Texas Permian Basin, Dept. of Management, College of Business (official directory: utpb.edu/directory/faculty-staff/luong_p, email luong_p@utpb.edu). Blocked from a firm call: UTPB directory snippets say 'Assistant Professor' but both his LinkedIn header and a ZoomInfo listing independently say 'Visiting Professor' (excluded track) — could not fetch the UTPB page directly to read the literal title (egress-blocked). PhD Rutgers Business School, MBA UT Arlington, BEng Ho Chi Minh City University of Technology (via LinkedIn/UTPB snippets, unverified against a raw page — do not record until confirmed). Needs a live utpb.edu fetch to resolve title/track and update institution off SUNY Poly regardless."
     },
     {
       "name": "Chau Jo Vu",
@@ -4614,7 +4615,9 @@
       "country": "AU",
       "npapers": 3,
       "cited": 22,
-      "status": "pending"
+      "status": "included",
+      "note": "Published academic name is 'Jo (Chau) Vu' (VU's own page uses this order, not the lead's 'Chau Jo Vu'). Senior Lecturer, Victoria University Business School, continuing appointment since 1991 (Tenure-line). profileUrl https://www.vu.edu.au/research/jo-chau-vu confirmed live via repeated search-engine indexing under her name (direct fetch unavailable this session — egress-blocked); a separate vu.edu.au/contact-us/jo-chau-vu URL 404s. No Scholar profile found (only ResearchGate). No portrait obtained — image download blocked this session (egress proxy denies all external fetches).",
+      "rosterId": "vp-1092"
     },
     {
       "name": "Irwin Tran",
@@ -4622,7 +4625,8 @@
       "country": "US",
       "npapers": 8,
       "cited": 21,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No evidence of any faculty appointment at College of Alameda (a community college); only match is an unrelated health-tech coach in Alameda, CA."
     },
     {
       "name": "Thuy Nguyen",
@@ -4638,7 +4642,8 @@
       "country": "US",
       "npapers": 5,
       "cited": 21,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No trace of a David Truong in economics or any department at Texas A&M after extensive searching (TAMU econ/agecon/Mays pages, RePEc, Scholar, LinkedIn); all hits are unrelated same-name people. Likely an erroneous/unverifiable OpenAlex lead."
     },
     {
       "name": "Hien Tran",
@@ -4670,7 +4675,8 @@
       "country": "US",
       "npapers": 3,
       "cited": 21,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No trace of a Toan Pho in economics or any department at UMass Lowell; the only 'Toan Pho' found is an unrelated BASF chemist (UC Santa Barbara PhD). Likely an erroneous/unverifiable OpenAlex lead."
     },
     {
       "name": "Hong Thi Nguyen",
@@ -4774,7 +4780,9 @@
       "country": "US",
       "npapers": 11,
       "cited": 20,
-      "status": "pending"
+      "status": "included",
+      "note": "Assistant Professor, School of Mathematical and Statistical Sciences, UTRGV (Tenure-line; appears on UTRGV's Tenure and Evaluation Advisory Committee roster, which is specifically for tenure-track faculty). PhD Mathematics, University of Tennessee Knoxville, 2022; postdoc as Research Assistant Professor, University of Illinois Chicago, 2022-2024. Field is numerical PDEs/probability, not economics — hieuphay's economics classification appears to be a misclassification, but he independently qualifies for the general roster.",
+      "rosterId": "vp-1091"
     },
     {
       "name": "Phap Tran Ngoc Hoang",
@@ -4798,7 +4806,9 @@
       "country": "US",
       "npapers": 2,
       "cited": 20,
-      "status": "pending"
+      "status": "duplicate",
+      "note": "Same person as existing roster entry 'Nguyen Nguyen' (vp-0138) — Assistant Professor, Finance, Minnesota State University Mankato, same PhD (Auburn 2021) and research areas (Banking, Banking Regulation, Financial Inclusion, Corporate Finance). Lead's dedup missed it due to name-token reordering ('Nguyen T. H. Nguyen' vs stored 'Nguyen Nguyen').",
+      "rosterId": "vp-0138"
     },
     {
       "name": "Phuong Le",
@@ -4814,7 +4824,8 @@
       "country": "GB",
       "npapers": 2,
       "cited": 20,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Was a PhD student/researcher at Sussex (~2015-2019, fractional Poisson/Hawkes processes under Enrico Scalas) but no traceable academic activity, faculty listing, or current CV since 2019 — reads as having left academia or moved untraceably, not a current faculty appointment."
     },
     {
       "name": "Linh Dang",
@@ -4822,7 +4833,8 @@
       "country": "AU",
       "npapers": 7,
       "cited": 20,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Is a Research Assistant at ANU's Global Institute for Women's Leadership who is still completing an undergraduate degree (Public Policy/Arts) — not faculty. Misclassified lead (student research assistant, not academic staff)."
     },
     {
       "name": "Duong Dang",
@@ -4830,7 +4842,8 @@
       "country": "US",
       "npapers": 3,
       "cited": 19,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Official UW-Madison Economics page lists her as a current 'PhD Job Market Candidate' — an on-the-market candidacy, explicitly excluded by the inclusion standard, not a faculty appointment."
     },
     {
       "name": "Tam Nguyen",
@@ -4846,7 +4859,8 @@
       "country": "DE",
       "npapers": 2,
       "cited": 19,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Stuttgart affiliation is outdated (postdoc 2013-2017); moved to Queen's University Belfast (2017-2020) then Bosch Center for AI, and is currently at VinGroup's robotics subsidiary (industry) — no current university faculty appointment found anywhere."
     },
     {
       "name": "Phuong Dung Le",
@@ -4886,7 +4900,8 @@
       "country": "AU",
       "npapers": 4,
       "cited": 19,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No Griffith University faculty/staff profile exists for this person (checked Griffith directories). Google Scholar lists her actual affiliation as Vietnam National University-Ho Chi Minh City (Ben Tre), inside Vietnam — an unrelated institution from the lead and outside the roster's scope."
     },
     {
       "name": "My Tran",
@@ -4894,7 +4909,8 @@
       "country": "AU",
       "npapers": 3,
       "cited": 19,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Real ANU researcher (Dr My Tran, Research Fellow, National Centre for Health Workforce Studies; PhD Economics, University of Queensland 2023), but her Research Fellow role is tied to specific funded projects (AusPathogen, Australian Vaccine Preferences Study) with no 'continuing'/'permanent' language found — reads as grant-limited/project-based, which the Research track explicitly excludes."
     },
     {
       "name": "Thu Anh Nguyen",
