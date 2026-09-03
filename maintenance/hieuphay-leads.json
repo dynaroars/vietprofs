@@ -4183,7 +4183,8 @@
       "country": "AU",
       "npapers": 2,
       "cited": 29,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Casual Academic, Faculty of Health, School of Health & Social Development, Deakin University — casual/sessional appointment, not continuing/permanent; fails inclusion standard."
     },
     {
       "name": "Ha Nguyen",
@@ -4199,7 +4200,8 @@
       "country": "US",
       "npapers": 3,
       "cited": 28,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No identifiable academic found matching this name at University of Washington or elsewhere despite extensive search (direct name, reversed order, Vietnamese-diacritic form); likely a stale/erroneous OpenAlex name-institution pairing."
     },
     {
       "name": "Pham Le Hoa",
@@ -4207,7 +4209,8 @@
       "country": "JP",
       "npapers": 6,
       "cited": 28,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No identifiable academic found at Kyoto University (Graduate School of Economics, KIER) or elsewhere matching this name despite extensive search; likely erroneous OpenAlex lead."
     },
     {
       "name": "Anh Pham",
@@ -4231,7 +4234,8 @@
       "country": "CA",
       "npapers": 3,
       "cited": 27,
-      "status": "pending"
+      "status": "pending",
+      "note": "Real, current academic: Assistant Professor, Departments of Oncology and Pediatrics, Cumming School of Medicine, University of Calgary (pediatric oncologist/stem-cell-transplant physician; UCalgary Profiles page at profiles.ucalgary.ca/tony-truong; actively publishing through 2026). Not an economist — the OpenAlex 'economist' tag appears to be a field mismatch, not an institution mismatch. Track (Clinical vs. Tenure-line) and exact rank wording unconfirmed since profiles.ucalgary.ca was blocked from direct fetch in this session (network egress policy); the one honor found (an Alberta Health Services internal 'President's Excellence Award') is a local/institutional award that does not meet the honors bar. Needs direct verification of profiles.ucalgary.ca before inclusion/exclusion."
     },
     {
       "name": "Phuong Hoang",
@@ -4255,7 +4259,8 @@
       "country": "JP",
       "npapers": 2,
       "cited": 27,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Current identifiable role is 'Resident Director of Josai International University' at UC Riverside — an administrative study-abroad-site role, not a teaching/research faculty position; last verifiable 'Professor' title at Josai dates to ~2008-2013 with no current faculty listing found; no emeritus conferral found."
     },
     {
       "name": "T. Robert Vu",
@@ -4263,7 +4268,8 @@
       "country": "US",
       "npapers": 3,
       "cited": 27,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No identifiable person found matching this name at College of Charleston or elsewhere despite extensive search across department directories (Economics, Business, Finance, Communication, Music, English, Engineering) and name variants; likely erroneous OpenAlex lead."
     },
     {
       "name": "Kevin A. Nguyen",
@@ -4271,7 +4277,8 @@
       "country": "US",
       "npapers": 4,
       "cited": 27,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No 'Kevin A. Nguyen' found in UCLA Economics or Anderson faculty listings; the only matching Google Scholar profile under this exact name belongs to a Sonoma State University researcher in Learning Sciences — different institution and field. Confirmed distinct from existing roster entry 'Kevin H. Nguyen' (different person, not a duplicate)."
     },
     {
       "name": "Thu Thuy Nguyen",
@@ -4287,7 +4294,9 @@
       "country": "US",
       "npapers": 5,
       "cited": 27,
-      "status": "pending"
+      "status": "included",
+      "note": "Verified: Assistant Professor of Economics, USC Dornsife College of Letters, Arts and Sciences. profileUrl https://dornsife.usc.edu/profile/simon-quach/, websiteUrl https://sites.google.com/view/simonquach/home, scholarUrl (verified via usc.edu email) https://scholar.google.com/citations?user=EhSam0cAAAAJ&hl=en. PhD Economics, Princeton University (year not explicitly stated, omitted). No qualifying honors found (a Jan 2026 Schmidt Sciences $200k research grant does not meet the honors bar). No portrait sourced — could not fetch official profile image in this session (network egress policy blocks all external domains for WebFetch).",
+      "rosterId": "vp-1084"
     },
     {
       "name": "Nguyen, Thang",
@@ -4351,7 +4360,8 @@
       "country": "GB",
       "npapers": 2,
       "cited": 25,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Middlesbrough College is a UK further-education/sixth-form college, not a university — disqualifying regardless of which 'Ly Nguyen' this OpenAlex signal refers to; no university-level appointment for this citation profile could be identified."
     },
     {
       "name": "Thi Canh Dien Huynh",
@@ -4359,7 +4369,8 @@
       "country": "SG",
       "npapers": 2,
       "cited": 25,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No NTU Economics Division or Nanyang Business School faculty member matching this name found; the only identifiable profile under this name is a LinkedIn page for an education consultancy ('Viet-Sing Edu House') in Singapore, not an academic post."
     },
     {
       "name": "Thanh Son Luong",
@@ -4367,7 +4378,8 @@
       "country": "AU",
       "npapers": 4,
       "cited": 25,
-      "status": "pending"
+      "status": "excluded",
+      "note": "PhD graduate (Finance), University of Sydney Business School, thesis on corporate finance/information asymmetry; current role is Manager, Modelling and Analytics at Macquarie Group (industry) — no current university faculty appointment found. Confirmed distinct from existing roster entry 'Son Thanh Dam' (University of Chicago physicist) — different surname and field, not a duplicate."
     },
     {
       "name": "Nghi Truong",
@@ -4375,7 +4387,8 @@
       "country": "TH",
       "npapers": 2,
       "cited": 25,
-      "status": "pending"
+      "status": "pending",
+      "note": "Likely a genuine current faculty appointment — described in multiple sources as a core faculty member of Sasin School of Management, Chulalongkorn University, teaching in the EMBA/MBA/DBA programs; personal site https://sites.google.com/view/nghitruong and Google Scholar (verified sasin.edu email) https://scholar.google.com/citations?hl=en&user=-kOQKMwAAAAJ found. But exact rank/title, an official individual profileUrl, and a portrait could not be confirmed — sasin.edu/team/faculty was blocked from direct fetch in this session (network egress policy). PhD from ESMT Berlin, exact year unconfirmed (conflicting 2021/2022 signals). Needs direct verification of sasin.edu/team/faculty before inclusion/exclusion."
     },
     {
       "name": "Thi Minh Hoa Nguyen",
@@ -4407,7 +4420,8 @@
       "country": "US",
       "npapers": 2,
       "cited": 25,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No 'Jason Luu' found in any Wake Forest faculty listing searched (Economics, Finance, Business, Physics, Chemistry, Biology, Computer Science); the only identifiable person by this name is a computer engineer (FPGA/CAD researcher) at the University of Toronto — unrelated field and institution. Likely erroneous OpenAlex lead."
     },
     {
       "name": "Quyen D. Chu",
