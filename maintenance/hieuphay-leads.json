@@ -2556,7 +2556,7 @@
       "npapers": 7,
       "cited": 64,
       "status": "pending",
-      "note": "RESEARCH LEAD (2026-09-02, third pass, still unverified — WebFetch/curl to external domains blocked again this session, WebSearch only): confirmed via matching Scholar ID (9HD6m-EAAAAJ) that the Macquarie Hearing Research Centre page and the Sydney Faculty of Medicine and Health page describe the same person, not two people — but her current PRIMARY appointment (Macquarie vs. Sydney, or a genuine joint role) and whether 'Senior Research Fellow' is a stable faculty-level appointment (vs. grant-funded) remain unresolved from search snippets alone. Also unresolved: her field (audiology/biostatistics) doesn't obviously match an 'economics' lead, a possible person/field mismatch. Needs a direct page fetch to resolve."
+      "note": "RESEARCH LEAD (2026-09-03, fourth pass, still unverified — WebFetch/curl blocked for mq.edu.au and sydney.edu.au again this session, WebSearch only): field confirmed as biostatistics/audiology, not economics (source misclassification). Recent (2024-2025) publications on HEIDI/stroke-hearing protocols list her affiliation as Macquarie University Hearing Research Centre with a verified @mq.edu.au Scholar email, which now looks like the current primary institution over the older University of Sydney profile — but her exact title/rank and whether \"Senior Research Fellow\" is a stable, continuing faculty-level research appointment (vs. grant-funded) still could not be confirmed from any source found. Needs a direct fetch of researchers.mq.edu.au/en/organisations/hearing-research-centre/persons/ or the Hearing Research Centre \"our people\" page from an unblocked network to resolve title and stability."
     },
     {
       "name": "David K. Nguyen",
@@ -2912,7 +2912,7 @@
       "npapers": 2,
       "cited": 53,
       "status": "pending",
-      "note": "RESEARCH LEAD (2026-09-02, third pass, still unverified — WebFetch/curl blocked, WebSearch only): appointment now well-supported — a 2026 Agribusiness journal article (DOI 10.1002/agr.70098) explicitly states her affiliation as FAMU's Agribusiness Program, College of Agriculture and Food Sciences, and her Scholar profile carries a verified famu.edu email. Still missing: an actual official FAMU faculty-directory bio page/CV to use as profileUrl and to confirm exact rank wording (only the CAFS directory index pages were found, not her individual page) — https://cafs.famu.edu/about-cafs/faculty-staff.php and https://www.famu.edu/info/faculty-staff/profiles/cafs/index.php are candidates to check directly. PhD (Auburn, 2016) and UF postdoc claims remain unconfirmed by any official source."
+      "note": "RESEARCH LEAD (2026-09-03, fourth pass, still unverified — WebFetch/curl blocked for famu.edu again this session, WebSearch only): appointment strongly evidenced (Assistant Professor, Agribusiness Program, College of Agriculture and Food Sciences, FAMU; co-author on a 2026 Agribusiness journal article naming this affiliation; famu.edu-verified Scholar email). Still could not find or confirm a working, official individual FAMU faculty-profile URL despite extensive search (only directory index pages — cafs.famu.edu/about-cafs/faculty-staff.php, famu.edu/info/faculty-staff/profiles/cafs/index.php, and a third-party agribusinessfamu.weebly.com/our-faculty.html page — surfaced, none with her individual page confirmed reachable). Claimed PhD (Auburn, 2016) and University of Florida postdoc remain sourced only via a prior session's unconfirmed claim, not independently verified this pass. Needs a direct fetch of the CAFS faculty directory from an unblocked network to get an individual profileUrl before this can be added (a required field)."
     },
     {
       "name": "Quynh Anh",
@@ -3596,8 +3596,8 @@
       "country": "US",
       "npapers": 2,
       "cited": 39,
-      "status": "pending",
-      "note": "RESEARCH LEAD (2026-09-02, unresolved — WebFetch/curl blocked, WebSearch only): 'Ke Nguyen' is a very generic name; no economics faculty by this name found at UTK (checked Haslam College of Business Economics department via RePEc/EDIRC listings and general search). The only 'Ke Nguyen' confirmed at UTK is in Mechanical, Aerospace, and Biomedical Engineering (mabe.utk.edu/people/ke-nguyen/) — a different field, with no found connection to economics research. A separate 'Ke Nguyen' (Director, National Economics University, Hanoi) is in Vietnam and ineligible regardless. Needs either the underlying OpenAlex paper/DOI for this lead to identify the actual person, or a direct fetch of the UTK MABE profile to check for a secondary economics affiliation."
+      "status": "excluded",
+      "note": "Excluded (2026-09-03): exhaustive search (RePEc/IDEAS, UTK Haslam College of Business Economics, Google Scholar) found no economics faculty named \"Ke Nguyen\" at UTK or any UT campus. The only \"Ke Nguyen\" at UTK is in Mechanical/Aerospace/Biomedical Engineering (mabe.utk.edu/people/ke-nguyen/), unrelated field, no economics connection found. A separate \"Ke Nguyen\" is Director at National Economics University, Hanoi (in-Vietnam, ineligible regardless). Could not identify the actual person behind this OpenAlex lead; likely a spurious/mismatched record."
     },
     {
       "name": "Ta Thi Kieu An",
@@ -3823,7 +3823,9 @@
       "country": "SG",
       "npapers": 5,
       "cited": 36,
-      "status": "pending"
+      "status": "included",
+      "rosterId": "vp-1079",
+      "note": "Included (2026-09-03): Senior Lecturer of Economics, School of Economics, Singapore Management University — SMU's Senior Lecturer rank is institutionally defined as a continuing, non-tenure-track teaching rank (SMU Policy 2.3), so classified Teaching track. PhD Economics (SMU, 2015), BEng Hons (NUS, 2006). No honors meeting the eligibility bar found (only a local SMU Centre for Teaching Excellence award nomination)."
     },
     {
       "name": "Thuy Duong To",
@@ -3831,7 +3833,9 @@
       "country": "AU",
       "npapers": 11,
       "cited": 35,
-      "status": "pending"
+      "status": "included",
+      "rosterId": "vp-1080",
+      "note": "Included (2026-09-03), but claimed institution was WRONG/STALE: she is Associate Professor, School of Banking and Finance, UNSW Business School (University of New South Wales) — not University of Queensland; no evidence found of any UQ affiliation at any career stage. Added to roster as \"Thuy-Duong To\" / University of New South Wales. PhD in Finance and Economics, University of Technology Sydney (no year found). No honors meeting the eligibility bar found (a UTS Vice-Chancellor's List distinction was a student-era PhD-thesis award, excluded)."
     },
     {
       "name": "Minh Tam Thi BUI",
@@ -3839,7 +3843,8 @@
       "country": "TH",
       "npapers": 6,
       "cited": 35,
-      "status": "pending"
+      "status": "duplicate",
+      "note": "Duplicate (2026-09-03) of existing roster entry \"Minh-Tam Thi Bui\" (vp-1073), same institution (Srinakharinwirot University, Bangkok, Thailand) and same Scholar ID."
     },
     {
       "name": "Vinh Q. Tran",
@@ -3855,7 +3860,8 @@
       "country": "US",
       "npapers": 2,
       "cited": 35,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Excluded (2026-09-03): primary employer is Gillette Children's Specialty Healthcare (a freestanding pediatric hospital, not a university); his University of Minnesota \"Assistant Professor, Department of Orthopaedic Surgery\" title surfaces via the department's \"Additional Faculty Appointments\" page rather than its core faculty roster, and directly comparable Gillette-based colleagues (e.g. Elizabeth Boyer, Mo Chen) hold explicit Adjunct/Affiliate UMN titles for the same arrangement. Could not confirm this is a stable, primary academic appointment rather than an adjunct/affiliate one (WebFetch/curl blocked for med.umn.edu, so his literal printed title could not be directly read)."
     },
     {
       "name": "Hoang Thanh Hue Ton",
@@ -3863,7 +3869,8 @@
       "country": "CN",
       "npapers": 3,
       "cited": 35,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Excluded (2026-09-03): only located via a ResearchGate scientific-contributions page listing a dual affiliation — School of Management, Shanghai University AND School of Economics and Business Management, Hong Duc University (Thanh Hoa, Vietnam) — with no job title, rank, or individual faculty-profile page found at either institution despite extensive name-order variants tried. The Vietnam co-affiliation and complete absence of any faculty-directory hit is consistent with this being a graduate student (or a stale/unconfirmed dual listing) rather than a verified faculty appointment."
     },
     {
       "name": "Thuy Bui",
@@ -3871,7 +3878,9 @@
       "country": "US",
       "npapers": 4,
       "cited": 35,
-      "status": "pending"
+      "status": "included",
+      "rosterId": "vp-1081",
+      "note": "Included (2026-09-03) as \"Thuy D. Bui\": Associate Professor of Medicine, Division of General Internal Medicine, Department of Medicine, University of Pittsburgh School of Medicine — on faculty since 1999, still active as of 2024 (received a Chancellor's Distinguished Public Service Award that year), clearly a stable clinical-faculty appointment. MD, Washington University in St. Louis School of Medicine (1991, per physician-directory aggregators, not an official Pitt bio); undergraduate at Tulane University (no year found). No honors meeting the eligibility bar found (several Pitt/local humanism and public-service teaching awards, all institution-local, excluded)."
     },
     {
       "name": "Huy N. Chau",
@@ -3889,7 +3898,8 @@
       "country": "AU",
       "npapers": 6,
       "cited": 35,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Excluded (2026-09-03): current title is Research Fellow (Health Economics), Flinders Health and Medical Research Institute, Flinders University — despite extensive search, no source states this role is continuing/permanent rather than fixed-term/grant-funded, and Australian \"Research Fellow\" (Level B) titles are frequently soft-money positions. The inclusion standard requires particular scrutiny and explicit stability evidence for Research-track titles, which was not found (WebFetch/curl blocked for flinders.edu.au, so her profile page's exact language could not be directly read). Previously a Lecturer (tenure-track) at University of Adelaide, since moved to this Flinders research role."
     },
     {
       "name": "Duc Tran",
@@ -3905,7 +3915,8 @@
       "country": "US",
       "npapers": 4,
       "cited": 34,
-      "status": "pending"
+      "status": "duplicate",
+      "note": "Duplicate (2026-09-03) of existing roster entry \"Phong H. Duong\" (vp-0057), Professor of Mathematics, Columbia University — this is Duong Hong Phong, the well-known complex-geometry/PDE/string-theory mathematician, who publishes as \"D.H. Phong.\""
     },
     {
       "name": "Nguyen X. Nguyen",
@@ -3913,7 +3924,8 @@
       "country": "US",
       "npapers": 2,
       "cited": 34,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Excluded (2026-09-03): the only matching Google Scholar profile (path.utah.edu-verified email, Immunology) could not be confirmed to hold any faculty rank at University of Utah despite checking Pathology, Microbiology & Immunology, and training-grant faculty listings — the low citation count and pathology-department trainee email pattern are consistent with a graduate student or postdoc rather than faculty. Name is highly generic (\"Nguyen X. Nguyen\"); could not confirm this OpenAlex lead even matches the same person found on Scholar."
     },
     {
       "name": "Trung Duc Tran",
@@ -3921,7 +3933,8 @@
       "country": "KR",
       "npapers": 3,
       "cited": 34,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Excluded (2026-09-03): Google Scholar profile (verified ulsan.ac.kr email) explicitly and repeatedly identifies him as \"Post Doc at University of Ulsan,\" School of Civil and Environmental Engineering — postdoctoral roles are excluded outright by the inclusion standard regardless of research quality or citation count. No evidence found of a subsequent move to a faculty appointment."
     },
     {
       "name": "Thang N. Dao",
@@ -3937,7 +3950,8 @@
       "country": "AU",
       "npapers": 5,
       "cited": 33,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Excluded (2026-09-03): no evidence of any Western Sydney University affiliation found despite extensive targeted search (staff directory, researcher profiles, ORCID). All discoverable affiliation evidence (ResearchGate scientific-contributions page, a 2025 SAGE Open co-authored paper) points to Ho Chi Minh City Open University, Vietnam — which would place him inside Vietnam, not satisfying the inclusion standard's \"outside Vietnam\" requirement even if a faculty role there were separately confirmed (it is not). Likely a stale or incorrect OpenAlex institution tag."
     },
     {
       "name": "Ly Nguyen",
@@ -3945,7 +3959,8 @@
       "country": "US",
       "npapers": 6,
       "cited": 33,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Excluded (2026-09-03): \"Jones College\" cannot be confirmed as naming any current accredited university — the Jacksonville, FL \"Jones College\" closed permanently in 2017; Jones College in Ellisville, MS is a two-year community college; the most likely real referent, MTSU's Jennings A. Jones College of Business, has no faculty named \"Ly Nguyen\" or matching \"Nguyen\" in its directories. No \"Ly Nguyen\" identity matching the ~33-citation OpenAlex signal could be confidently linked to any of these; the closest citation-count match found (a University of Florida \"Visiting Scholar\") is excluded by category (visiting) regardless."
     },
     {
       "name": "Tran Huu Dung",
