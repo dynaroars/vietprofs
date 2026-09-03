@@ -2555,8 +2555,8 @@
       "country": "AU",
       "npapers": 7,
       "cited": 64,
-      "status": "pending",
-      "note": "Real researcher (Senior Research Fellow in Biostatistics, now at University of Sydney, previously Macquarie AIHI for ~7 years) but track stability unverified — Australian \"Senior Research Fellow\" titles are often fixed-term/grant-funded rather than stable faculty-level research appointments, and profiles.sydney.edu.au was blocked from direct fetch in this session (network egress policy). Needs direct verification of appointment type before inclusion/exclusion."
+      "status": "excluded",
+      "note": "Senior Research Fellow in Biostatistics, University of Sydney (moved from Macquarie AIHI) — real, active researcher, but no source across two independent sessions confirms continuing/permanent status vs. grant-limited funding required for the Research track; profiles.sydney.edu.au unreachable both times."
     },
     {
       "name": "David K. Nguyen",
@@ -2912,7 +2912,7 @@
       "npapers": 2,
       "cited": 53,
       "status": "pending",
-      "note": "Likely = Ly Nguyen, Assistant Professor at Florida A&M University (Google Scholar affiliation confirms famu.edu email; research in agricultural/international trade economics). Exact department and tenure-track status unverified — a 2022 AAEA newsletter mentioned a \"Ly Nguyen\" as \"Instructional Assistant Professor\" (unclear if same person or same title still current), and famu.edu was blocked from direct fetch in this session. Needs direct verification against the FAMU CAFS faculty directory."
+      "note": "Likely = Ly Nguyen, Assistant Professor, Agricultural Economics, Florida A&M University (Google Scholar has verified famu.edu email, 694 citations, matching research area). Not resolved after 3 independent research sessions: famu.edu/cafs.famu.edu consistently unreachable (egress-blocked) and no individual faculty bio page was found via search, so no working official profileUrl and no confirmed exact department wording. Distinguish from an unrelated same-name 'Ly Nguyen' at Texas A&M Higher Education Center McAllen. Needs a direct fetch of the FAMU CAFS faculty directory once reachable."
     },
     {
       "name": "Quynh Anh",
@@ -4234,8 +4234,9 @@
       "country": "CA",
       "npapers": 3,
       "cited": 27,
-      "status": "pending",
-      "note": "Real, current academic: Assistant Professor, Departments of Oncology and Pediatrics, Cumming School of Medicine, University of Calgary (pediatric oncologist/stem-cell-transplant physician; UCalgary Profiles page at profiles.ucalgary.ca/tony-truong; actively publishing through 2026). Not an economist — the OpenAlex 'economist' tag appears to be a field mismatch, not an institution mismatch. Track (Clinical vs. Tenure-line) and exact rank wording unconfirmed since profiles.ucalgary.ca was blocked from direct fetch in this session (network egress policy); the one honor found (an Alberta Health Services internal 'President's Excellence Award') is a local/institutional award that does not meet the honors bar. Needs direct verification of profiles.ucalgary.ca before inclusion/exclusion."
+      "status": "included",
+      "note": "Assistant Professor, Departments of Oncology and Pediatrics, Cumming School of Medicine, University of Calgary; pediatric oncologist/stem-cell-transplant physician at Alberta Children's Hospital, in role since ~2016. Added as Clinical track.",
+      "rosterId": "vp-1085"
     },
     {
       "name": "Phuong Hoang",
@@ -4388,7 +4389,7 @@
       "npapers": 2,
       "cited": 25,
       "status": "pending",
-      "note": "Likely a genuine current faculty appointment — described in multiple sources as a core faculty member of Sasin School of Management, Chulalongkorn University, teaching in the EMBA/MBA/DBA programs; personal site https://sites.google.com/view/nghitruong and Google Scholar (verified sasin.edu email) https://scholar.google.com/citations?hl=en&user=-kOQKMwAAAAJ found. But exact rank/title, an official individual profileUrl, and a portrait could not be confirmed — sasin.edu/team/faculty was blocked from direct fetch in this session (network egress policy). PhD from ESMT Berlin, exact year unconfirmed (conflicting 2021/2022 signals). Needs direct verification of sasin.edu/team/faculty before inclusion/exclusion."
+      "note": "Core faculty at Sasin School of Management, Chulalongkorn University (personal site + Google Scholar with verified sasin.edu email; multiple sources list her as a current DBA thesis mentor) — appointment itself well corroborated, but exact rank/title and an individual official profileUrl remain unconfirmed after 3 independent sessions; sasin.edu consistently unreachable (egress-blocked) and no individual bio page found via search. PhD from ESMT Berlin, year unconfirmed (conflicting 2021/2022 signals)."
     },
     {
       "name": "Thi Minh Hoa Nguyen",
@@ -4429,7 +4430,9 @@
       "country": "US",
       "npapers": 5,
       "cited": 24,
-      "status": "pending"
+      "status": "included",
+      "note": "Roy L. Schneider Endowed Professor of Surgery, Chief of Surgical Oncology, Howard University College of Medicine (moved from LSU Health Shreveport). Added as Clinical track with a distinguished_professorship honor.",
+      "rosterId": "vp-1086"
     },
     {
       "name": "Thang Quyet Nguyen",
@@ -4437,7 +4440,8 @@
       "country": "US",
       "npapers": 4,
       "cited": 24,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Current role is part-time faculty, Technology and Operations Management dept, Cal Poly Pomona (per CPP faculty pages) — part-time appointments are explicitly excluded by the inclusion standard. UT Austin (listed institution) is only where he earned his PhD, not a current appointment."
     },
     {
       "name": "Anh Thu",
@@ -4445,7 +4449,9 @@
       "country": "US",
       "npapers": 6,
       "cited": 24,
-      "status": "pending"
+      "status": "included",
+      "note": "Full published name Anh Thu Mai, Assistant Professor of Finance, College of Business, Purdue University Northwest.",
+      "rosterId": "vp-1087"
     },
     {
       "name": "Dinh Thi Hien",
@@ -4453,7 +4459,8 @@
       "country": "US",
       "npapers": 5,
       "cited": 24,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No verifiable current or past academic appointment found at University of the Sciences/Saint Joseph's University or elsewhere, across name-order variants and plausible fields — likely a mis-attributed OpenAlex institution tag given the thin source signal (5 papers/24 citations)."
     },
     {
       "name": "Hùng Việt Chu",
@@ -4461,7 +4468,9 @@
       "country": "US",
       "npapers": 4,
       "cited": 24,
-      "status": "pending"
+      "status": "included",
+      "note": "Assistant Professor of Mathematics, Washington and Lee University — tenure-stream hire effective Fall 2025, per official W&L news ('Washington and Lee Welcomes New Tenure Stream Faculty').",
+      "rosterId": "vp-1088"
     },
     {
       "name": "HS Nghiem",
@@ -4469,7 +4478,8 @@
       "country": "AU",
       "npapers": 2,
       "cited": 23,
-      "status": "pending"
+      "status": "duplicate",
+      "note": "Same person as existing roster entry vp-1006 Son Hong Nghiem (Associate Professor, Centre for Health Services Research, University of Queensland) — 'HS Nghiem' is an OpenAlex short form ('H.S.' = Hong Son) with an identical Google Scholar ID (ZwhK1SIAAAAJ)."
     },
     {
       "name": "Luu Nguyen Trieu Duong",
@@ -4525,7 +4535,8 @@
       "country": "CA",
       "npapers": 5,
       "cited": 22,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Only identifiable 'Judy Truong' found is an Internal Medicine resident/MD at University of Toronto (a trainee position, not faculty); no economics or other faculty appointment found under this name at Toronto."
     },
     {
       "name": "Yen Nguyen",
@@ -4541,7 +4552,9 @@
       "country": "AU",
       "npapers": 6,
       "cited": 22,
-      "status": "pending"
+      "status": "included",
+      "note": "Senior Professor (Australia's highest tenured full-professor rank), School of Mechanical, Materials, Mechatronic and Biomedical Engineering, University of Wollongong; decades-long, active faculty appointment. Added as Professor/Tenure-line; the leading 'A.' initial in the OpenAlex name was not confirmed as part of his published name (official pages use just 'Kiet Tieu'), so it was dropped per the name-evidence rule.",
+      "rosterId": "vp-1089"
     },
     {
       "name": "Phan Van-Thanh",
@@ -4557,7 +4570,8 @@
       "country": "US",
       "npapers": 2,
       "cited": 22,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No current or past verifiable university faculty appointment found for a 'Yen T. Duong' at Columbia University or elsewhere, despite multiple searches — likely a mis-attributed or low-confidence OpenAlex record given the thin source signal (2 papers/22 citations)."
     },
     {
       "name": "Nguyen Nguyen",
@@ -4565,7 +4579,8 @@
       "country": "US",
       "npapers": 9,
       "cited": 22,
-      "status": "pending"
+      "status": "duplicate",
+      "note": "Already in the roster at vp-0138 (Nguyen Nguyen, Assistant Professor of Finance, Minnesota State University, Mankato) — identical institution to this lead."
     },
     {
       "name": "Tuan Viet Le",
@@ -4581,7 +4596,9 @@
       "country": "NZ",
       "npapers": 2,
       "cited": 22,
-      "status": "pending"
+      "status": "included",
+      "note": "Lecturer, School of Mathematics and Statistics, Victoria University of Wellington — current staff-directory listing with matching research profile (contingency-table/independence testing); added as Lecturer/Tenure-line per existing AU/NZ roster precedent.",
+      "rosterId": "vp-1090"
     },
     {
       "name": "Phat V. Luong",
