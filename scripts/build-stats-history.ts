@@ -37,7 +37,9 @@ async function main() {
       .filter(Boolean)
       .map((line) => {
         const [hash, iso] = line.split(' ');
-        return { hash, date: iso.slice(0, 10) };
+        // %aI prints the author date in that commit's own recorded offset, not UTC; convert
+        // before slicing so commits made in different timezones map to the same calendar day.
+        return { hash, date: new Date(iso).toISOString().slice(0, 10) };
       })
       .reverse(); // oldest first
 
