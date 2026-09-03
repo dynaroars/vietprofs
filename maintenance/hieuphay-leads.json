@@ -2556,7 +2556,7 @@
       "npapers": 7,
       "cited": 64,
       "status": "pending",
-      "note": "RESEARCH LEAD (2026-09-03, fourth pass, still unverified — WebFetch/curl blocked for mq.edu.au and sydney.edu.au again this session, WebSearch only): field confirmed as biostatistics/audiology, not economics (source misclassification). Recent (2024-2025) publications on HEIDI/stroke-hearing protocols list her affiliation as Macquarie University Hearing Research Centre with a verified @mq.edu.au Scholar email, which now looks like the current primary institution over the older University of Sydney profile — but her exact title/rank and whether \"Senior Research Fellow\" is a stable, continuing faculty-level research appointment (vs. grant-funded) still could not be confirmed from any source found. Needs a direct fetch of researchers.mq.edu.au/en/organisations/hearing-research-centre/persons/ or the Hearing Research Centre \"our people\" page from an unblocked network to resolve title and stability."
+      "note": "Real researcher (Senior Research Fellow in Biostatistics, now at University of Sydney, previously Macquarie AIHI for ~7 years) but track stability unverified — Australian \"Senior Research Fellow\" titles are often fixed-term/grant-funded rather than stable faculty-level research appointments, and profiles.sydney.edu.au was blocked from direct fetch in this session (network egress policy). Needs direct verification of appointment type before inclusion/exclusion."
     },
     {
       "name": "David K. Nguyen",
@@ -2912,7 +2912,7 @@
       "npapers": 2,
       "cited": 53,
       "status": "pending",
-      "note": "RESEARCH LEAD (2026-09-03, fourth pass, still unverified — WebFetch/curl blocked for famu.edu again this session, WebSearch only): appointment strongly evidenced (Assistant Professor, Agribusiness Program, College of Agriculture and Food Sciences, FAMU; co-author on a 2026 Agribusiness journal article naming this affiliation; famu.edu-verified Scholar email). Still could not find or confirm a working, official individual FAMU faculty-profile URL despite extensive search (only directory index pages — cafs.famu.edu/about-cafs/faculty-staff.php, famu.edu/info/faculty-staff/profiles/cafs/index.php, and a third-party agribusinessfamu.weebly.com/our-faculty.html page — surfaced, none with her individual page confirmed reachable). Claimed PhD (Auburn, 2016) and University of Florida postdoc remain sourced only via a prior session's unconfirmed claim, not independently verified this pass. Needs a direct fetch of the CAFS faculty directory from an unblocked network to get an individual profileUrl before this can be added (a required field)."
+      "note": "Likely = Ly Nguyen, Assistant Professor at Florida A&M University (Google Scholar affiliation confirms famu.edu email; research in agricultural/international trade economics). Exact department and tenure-track status unverified — a 2022 AAEA newsletter mentioned a \"Ly Nguyen\" as \"Instructional Assistant Professor\" (unclear if same person or same title still current), and famu.edu was blocked from direct fetch in this session. Needs direct verification against the FAMU CAFS faculty directory."
     },
     {
       "name": "Quynh Anh",
@@ -4000,7 +4000,8 @@
       "country": "AU",
       "npapers": 2,
       "cited": 33,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Vietnamese govt official (Ministry of Natural Resources and Environment / National Assembly); ANU affiliation is misattributed from co-authorship on a 2022 Marine Policy paper, not employment."
     },
     {
       "name": "Toan Thanh Nguyen",
@@ -4024,7 +4025,8 @@
       "country": "AU",
       "npapers": 2,
       "cited": 32,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Recent UWA PhD graduate (2023 thesis, Accounting & Finance); no current faculty appointment found anywhere."
     },
     {
       "name": "Tilo Nguyen",
@@ -4032,7 +4034,8 @@
       "country": "US",
       "npapers": 2,
       "cited": 32,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No verifiable faculty presence, Scholar/ORCID/arXiv profile, or university directory listing found anywhere."
     },
     {
       "name": "Anh Nu Vu",
@@ -4040,7 +4043,8 @@
       "country": "SE",
       "npapers": 2,
       "cited": 32,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No verifiable identity or faculty appointment found at Umea University or elsewhere."
     },
     {
       "name": "Tina Duong",
@@ -4048,7 +4052,8 @@
       "country": "US",
       "npapers": 2,
       "cited": 31,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Director/Senior Clinical Research Scientist at Stanford Medicine — a staff research-administration title, not a faculty rank; only faculty role found (Marymount Univ. adjunct, 2004-2008) is adjunct and no longer current."
     },
     {
       "name": "Hana Nguyen",
@@ -4056,7 +4061,9 @@
       "country": "US",
       "npapers": 7,
       "cited": 31,
-      "status": "pending"
+      "status": "included",
+      "note": "Assistant Professor of Business Law (tenure-line), CSUN Nazarian College of Business and Economics; confirmed via CSUN catalog and official Tenured/Tenure-Track Faculty (BLAW) listing.",
+      "rosterId": "vp-1082"
     },
     {
       "name": "Trang My Tran",
@@ -4080,7 +4087,8 @@
       "country": "SG",
       "npapers": 8,
       "cited": 31,
-      "status": "pending"
+      "status": "duplicate",
+      "note": "Same person as existing roster entry vp-0492 \"Minh Khuong Vu\" (Vu Khuong Minh), Lee Kuan Yew School of Public Policy, NUS — name is a reordered/garbled rendering."
     },
     {
       "name": "Thuy Duong Dang",
@@ -4088,7 +4096,8 @@
       "country": "DE",
       "npapers": 3,
       "cited": 30,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Completed PhD at Leibniz University Hannover, Institute of Finance and Commodity Markets, Dec 2023; no subsequent faculty appointment found anywhere."
     },
     {
       "name": "Thuyen Thi Pham",
@@ -4096,7 +4105,8 @@
       "country": "US",
       "npapers": 2,
       "cited": 30,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No faculty appointment found at UMass Amherst; only matches found are an undergraduate research assistant and an unrelated PhD fellow at University of Copenhagen."
     },
     {
       "name": "Khanh V. Tran",
@@ -4136,7 +4146,9 @@
       "country": "US",
       "npapers": 5,
       "cited": 29,
-      "status": "pending"
+      "status": "included",
+      "note": "Assistant Professor of Public Health (tenure-line CSU hire), CSUB, joined as part of the new public health program; confirmed via CSUB official news article (news.csub.edu) and department contact listing.",
+      "rosterId": "vp-1083"
     },
     {
       "name": "Hien Thi Ho",
@@ -4144,7 +4156,8 @@
       "country": "GB",
       "npapers": 6,
       "cited": 29,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Primary appointment is Acting Deputy Head, Faculty of Clinical Medicine, Hanoi University of Public Health (in Vietnam); Queen's University Belfast role is an unpaid Honorary Senior Lecturer title, not a full-time faculty appointment."
     },
     {
       "name": "Khanh Duong",
@@ -4152,7 +4165,8 @@
       "country": "NL",
       "npapers": 6,
       "cited": 29,
-      "status": "pending"
+      "status": "excluded",
+      "note": "PhD fellow / postgraduate research student (UNU-MERIT Maastricht and Maynooth University Social Sciences Institute), not a faculty member."
     },
     {
       "name": "Dai Thich Phan",
@@ -4160,7 +4174,8 @@
       "country": "HU",
       "npapers": 3,
       "cited": 29,
-      "status": "pending"
+      "status": "excluded",
+      "note": "PhD candidate at Hantos Elemer Doctoral School, University of Miskolc; no faculty listing found."
     },
     {
       "name": "Thi Quynh Anh Ho",
