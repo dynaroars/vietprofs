@@ -108,6 +108,10 @@ test('Information Studies defaults to computing but UCLA GSEIS stays Education',
   assert.equal(fieldOf('IST'), 'Computer & Information Sciences');
 });
 
+test('university libraries map to Computer & Information Sciences', () => {
+  assert.equal(fieldOf('University Libraries', 'Stony Brook University'), 'Computer & Information Sciences');
+});
+
 test('FIELDS is alphabetically ordered with the Others catch-all last', () => {
   const withoutOthers = FIELDS.slice(0, -1);
   assert.deepEqual(withoutOthers, [...withoutOthers].sort());
