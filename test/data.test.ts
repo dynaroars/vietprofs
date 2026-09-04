@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
-import { FIELDS, LOCATIONS, HEALTH_SUBFIELDS, canonicalRank, displayName, displayUniversity, fieldOf, healthSubfieldOf, continentOf, locationMatches, buildFunFacts, buildAwardsFunFacts, buildInternationalObservations, buildLocationObservations, filterRoster, looksSurnameFirst, buildFieldCounts, buildTopCountries, buildTrackCounts, type Roster } from '../src/data.ts';
+import { FIELDS, LOCATIONS, HEALTH_SUBFIELDS, canonicalRank, displayName, displayUniversity, fieldOf, healthSubfieldOf, continentOf, locationMatches, buildFunFacts, buildAwardsFunFacts, buildInternationalObservations, buildLocationObservations, filterRoster, looksSurnameFirst, buildFieldCounts, buildTopCountries, buildTrackCounts, buildTopUndergradInstitutions, buildPhdToFacultyPairings, type Roster } from '../src/data.ts';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const roster: Roster = JSON.parse(readFileSync(join(__dirname, '../public/data.json'), 'utf8'));
@@ -285,6 +285,22 @@ test('buildTrackCounts covers every track present and omits empty ones', () => {
   assert.ok(counts.every(([, count]) => count > 0));
   const tracksSeen = new Set(roster.map((p) => p.track));
   assert.equal(counts.length, tracksSeen.size);
+});
+
+test('buildTopUndergradInstitutions and buildPhdToFacultyPairings aggregate properly', () => {
+  const topUg = buildTopUndergradInstitutions(roster, 5);
+  assert.ok(Array.isArray(topUg));
+  assert.ok(topUg.length <= 5);
+  for (let i = 1; i < topUg.length; i++) assert.ok(topUg[i - 1][1] >= topUg[i][1]);
+
+  const pairings = buildPhdToFacultyPairings(roster, 5);
+  assert.ok(Array.isArray(pairings));
+  assert.ok(pairings.length <= 5);
+  for (const [phd, country, count] of pairings) {
+    assert.equal(typeof phd, 'string');
+    assert.equal(typeof country, 'string');
+    assert.ok(count > 0);
+  }
 });
 
 test('search is diacritic-insensitive in both directions', () => {

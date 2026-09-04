@@ -719,6 +719,31 @@ export function buildTopPhdInstitutions(roster: Roster, limit = 8): [string, num
   return [...counts.entries()].sort((a, b) => b[1] - a[1]).slice(0, limit);
 }
 
+export function buildTopUndergradInstitutions(roster: Roster, limit = 8): [string, number][] {
+  const counts = new Map<string, number>();
+  for (const p of roster) {
+    if (!p.undergradInstitution) continue;
+    counts.set(p.undergradInstitution, (counts.get(p.undergradInstitution) ?? 0) + 1);
+  }
+  return [...counts.entries()].sort((a, b) => b[1] - a[1]).slice(0, limit);
+}
+
+export function buildPhdToFacultyPairings(roster: Roster, limit = 6): [string, string, number][] {
+  const pairCounts = new Map<string, number>();
+  for (const p of roster) {
+    if (!p.phdInstitution) continue;
+    const country = p.country || 'United States';
+    const key = `${p.phdInstitution} → ${country}`;
+    pairCounts.set(key, (pairCounts.get(key) ?? 0) + 1);
+  }
+  const sorted = [...pairCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, limit);
+  return sorted.map(([key, count]) => {
+    const parts = key.split(' → ');
+    return [parts[0], parts[1], count];
+  });
+}
+
+
 export function buildTopUniversities(roster: Roster, limit = 8): [string, number][] {
   const counts = new Map<string, number>();
   for (const p of roster) {
