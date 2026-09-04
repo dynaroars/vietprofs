@@ -2912,7 +2912,7 @@
       "npapers": 2,
       "cited": 53,
       "status": "pending",
-      "note": "Likely = Ly Nguyen, Asst. Prof. Agribusiness Program, CAFS, Florida A&M (694-citation famu.edu-verified Scholar profile) — same conclusion across 6 sessions now (2026-09-04 confirmed again via WebSearch only, plus 2 new 2025-2026 papers listing her under FAMU CAFS Agribusiness Program). Still blocked: this session's egress proxy again denies ALL external fetches (confirmed on famu.edu, utpb.edu, en.wikipedia.org), and no individual FAMU bio-page URL is indexed by search (only the CAFS faculty-list index and two co-authored papers). A guessed ly-nguyen.php URL analog to the confirmed daniel-solis.php pattern was NOT used since it isn't confirmed live. Needs a session with working direct page fetch to load the CAFS index and find her specific bio-page URL."
+      "note": "Likely = Ly Nguyen, Asst. Prof. Agribusiness Program, CAFS, Florida A&M (694-citation famu.edu-verified Scholar profile) — same conclusion across 7 sessions now (2026-09-04: WebSearch-only pass, this session's egress proxy confirmed via curl+WebFetch to universally block ALL external domains except a small npm/pypi/anthropic allowlist — not domain-specific, tested famu.edu, scholar.google.com, linkedin.com, wikipedia.org, all connect_rejected). No individual FAMU bio-page URL found indexed (only cafs.famu.edu/academic/agribusiness/index.php listing page and the SBI/CST profile-index pages, none confirmed to list her). Needs a session with working direct page fetch."
     },
     {
       "name": "Quynh Anh",
@@ -4389,7 +4389,7 @@
       "npapers": 2,
       "cited": 25,
       "status": "pending",
-      "note": "Sasin School of Management (Chulalongkorn) core-faculty appointment reconfirmed across 6 sessions (personal site, ESMT Berlin bio, Scholar profile), but she is described everywhere as \"core faculty\" without an explicit professorial rank, and she simultaneously holds Senior Research Fellow (Max Planck Institute for Research on Collective Goods, Bonn) and Visiting Researcher (ESMT Berlin) roles with no source stating which appointment is primary. 2026-09-04 WebSearch pass (this session) found the same three-way affiliation picture again and could not resolve exact rank or primary appointment; sasin.edu/team/faculty remains unreachable (this session's egress proxy blocks all external domains). PhD ESMT Berlin, year still conflicting (2021 vs 2022) — do not record phdYear. Needs a live sasin.edu/team/faculty fetch to resolve rank and primary appointment."
+      "note": "Sasin School of Management (Chulalongkorn) core-faculty appointment reconfirmed again 2026-09-04 (WebSearch only; sasin.edu/team faculty list exists but rank/primary-appointment still not resolvable from snippets — same three-way Sasin/Max Planck/ESMT ambiguity as prior 6 sessions). This session's egress proxy again universally blocks all external fetches (confirmed via curl, not domain-specific). PhD ESMT Berlin, year still conflicting (2021 vs 2022) — do not record phdYear. Needs a live sasin.edu/team fetch to resolve rank and primary appointment."
     },
     {
       "name": "Thi Minh Hoa Nguyen",
@@ -5186,7 +5186,7 @@
       "npapers": 2,
       "cited": 17,
       "status": "pending",
-      "note": "No current Wageningen University & Research faculty member of this name found despite extensive WebSearch (staff pages, environmental/agricultural/development economics and rural sociology groups, Scholar, LinkedIn, Vietnamese-language search) — only an unrelated Can Tho University (Vietnam) \"Le Van Khoa\" Associate Professor and unrelated industry \"Van Khoa Le\" profiles turned up. Given the lead's very low output (2 papers/17 citations), may be a PhD student or a Vietnam-based co-author whose paper carried a WUR affiliation rather than current WUR faculty. This session's egress block prevented a direct wur.nl staff-directory search. Needs a session with working direct page fetch."
+      "note": "Still no current Wageningen University & Research faculty member of this name found (2026-09-04 fresh WUR rural-sociology/development-economics group searches, no hit). Checked against roster: NOT the same as existing vp-1065 'Khoa Le' (University of Leeds, Mathematics/Stochastic Analysis) — different field and institution, a coincidental 2-token overlap only. Given persistent egress block (confirmed universal via curl this session) prevents a direct wur.nl staff-directory fetch, and given the very low output (2 papers/17 citations), still plausibly a non-faculty co-author. Needs a session with working direct page fetch."
     },
     {
       "name": "Anh Dang Bao Phan",
@@ -5222,7 +5222,7 @@
       "npapers": 7,
       "cited": 17,
       "status": "pending",
-      "note": "Common name with several distinct unrelated \"Truc Le\"/\"Le Truc\" people found (tourism, sports science, agriculture); no duplicate in current roster. The one finance-related hit tied to UTS (co-author with Eckhard Platen, UTS Quantitative Finance Research Centre, on ~2006-era growth-optimal-portfolio papers) could not be confirmed as a current faculty member — no current UTS staff profile, LinkedIn, or RePEc listing found, and a UTS Finance PhD \"past students\" placement page could not be read (this session's egress block on WebFetch/curl). Cannot confirm current UTS appointment, track, or rank, or rule out a stale historical co-authorship. Needs a session with working direct page fetch."
+      "note": "2026-09-04 fresh WebSearch pass again found no current UTS staff/finance directory listing for a 'Truc Le' — only unrelated namesakes (tourism, sports science, agriculture) and the old ~2006-era Eckhard Platen co-authorship, unconfirmed as current faculty. Egress proxy again universally blocks all external fetches this session (confirmed via curl, not domain-specific — same block documented in 6 prior sessions). Needs a session with working direct page fetch."
     },
     {
       "name": "Vinh Nguyen",
@@ -5255,7 +5255,7 @@
       "npapers": 2,
       "cited": 16,
       "status": "pending",
-      "note": "Very common name; multiple unrelated \"Tam Pham\"s found (chef, clinical-psychology grad student, IP lawyer, physician, VP of Product with an NTU business degree) but no NTU (Nanyang Business School Economics/Finance/Accounting) faculty listing under this name found in repeated targeted searches. Given the low lead output (2 papers/16 citations), plausibly a PhD student or the \"VP of Product\" alumnus rather than current faculty, but unconfirmed either way — no profile URL found to verify against. Needs a session with working direct page fetch or a narrower disambiguating detail."
+      "note": "2026-09-04 fresh WebSearch pass again found no Nanyang Business School (economics/finance/accounting) faculty listing under this name; NTU faculty directory pages did not surface a match. Given low lead output (2 papers/16 citations) and no profile URL, plausibly a non-faculty coauthor. Egress proxy again universally blocks all external fetches this session (confirmed via curl). Needs a session with working direct page fetch or a narrower disambiguating detail."
     },
     {
       "name": "Diep Nguyen",
@@ -5320,7 +5320,7 @@
       "npapers": 2,
       "cited": 16,
       "status": "pending",
-      "note": "No faculty directory or current profile found anywhere; only lead is a 2015 co-authored paper (with a Prof. Wang) consistent with having been a grad student, not confirmed current faculty. Compounding issue: \"National Kaohsiung University of Applied Sciences\" ceased to exist as an independent institution after its 2018 merger into National Kaohsiung University of Science and Technology (NKUST); could not locate this person on NKUST's current department directories (mechanical, IEM, business) or on Google Scholar/RePEc. Note: this lead's institution field is stale regardless of outcome. Needs a session with working direct page fetch or a name-spelling variant to check."
+      "note": "2026-09-04 fresh WebSearch pass again found no faculty directory or current profile at NKUST (the successor to the defunct National Kaohsiung University of Applied Sciences) College of Management despite its 8-department, 118-faculty listing being findable. Only lead remains the 2015 co-authored paper consistent with a former grad student. Egress proxy again universally blocks all external fetches this session (confirmed via curl). Institution field is stale regardless of outcome (post-2018 merger). Needs a session with working direct page fetch or a name-spelling variant."
     },
     {
       "name": "Hien Thi Kim Nguyen",
@@ -5345,7 +5345,7 @@
       "npapers": 3,
       "cited": 16,
       "status": "pending",
-      "note": "No University of Alberta directory listing found (searched apps.ualberta.ca directly and via multiple query variants). Only trace is a ResearchGate \"scientific contributions\" aggregation page showing co-authorship on burn-wound/exosome research tied to U of Alberta pediatric/plastic-surgery burn research — consistent with a trainee/research-assistant/coauthor role rather than confirmed faculty. Missing: any title, department, or official profile page confirming (or ruling out) a faculty appointment. Needs a session with working direct page fetch."
+      "note": "2026-09-04 fresh WebSearch pass against University of Alberta Dept. of Surgery / Plastic Surgery / burn-treatment program pages again found no directory listing for this name — only the same ResearchGate 'scientific contributions' aggregation tying her to U of Alberta burn/exosome research, consistent with a trainee or research-assistant role rather than confirmed faculty. Egress proxy again universally blocks all external fetches this session (confirmed via curl), preventing a direct apps.ualberta.ca directory fetch. Needs a session with working direct page fetch."
     },
     {
       "name": "QuynhChau D. Doan",
@@ -5363,7 +5363,7 @@
       "npapers": 3,
       "cited": 16,
       "status": "pending",
-      "note": "No profile, faculty listing, researchmap entry, or publication record could be located matching this name at Tokyo Metropolitan University despite many name-order and department-guess variants. Name is too sparse in search results to even locate a candidate person, let alone confirm/deny a faculty appointment. Needs a name-spelling variant or a more specific field/department to narrow the search."
+      "note": "2026-09-04 fresh WebSearch pass (including 'Khanh Thai' and 'Quoc Khanh Thai' variants) again found no profile, faculty listing, or researchmap entry at Tokyo Metropolitan University. Name remains too sparse in search results to even locate a candidate person. Egress proxy again universally blocks all external fetches this session (confirmed via curl). Needs a name-spelling variant or a more specific field/department to narrow the search."
     },
     {
       "name": "Le Phuong Nguyen",
@@ -5396,7 +5396,8 @@
       "country": "TW",
       "npapers": 2,
       "cited": 15,
-      "status": "pending"
+      "status": "excluded",
+      "note": "2026-09-04: WebSearch shows she was a Master's student in Industrial Engineering & Management at National Kaohsiung University of Science and Technology (2018-2019, not the listed 'National Kaohsiung University of Science and Technology' as faculty), and is now a PhD student at National Taiwan University of Science and Technology (NTUST) — a current graduate student, not faculty at any institution. Does not meet inclusion standard."
     },
     {
       "name": "Khac Lam Pham",
@@ -5420,7 +5421,8 @@
       "country": "US",
       "npapers": 4,
       "cited": 15,
-      "status": "pending"
+      "status": "excluded",
+      "note": "2026-09-04: WebSearch confirms he was an undergraduate (B.A.) student at DePauw University (won the Ferid Murad Medal as a graduating senior), then went on to Stanford for an M.S./Ph.D. in Computer Science — a student at DePauw, never faculty there, and currently a PhD student at Stanford, not faculty anywhere. Does not meet inclusion standard."
     },
     {
       "name": "Thomy Phan",
@@ -5428,7 +5430,9 @@
       "country": "DE",
       "npapers": 4,
       "cited": 15,
-      "status": "pending"
+      "status": "included",
+      "note": "Junior Professor (Prof. Dr.) at University of Bayreuth, holding the Chair of Applied Computer Science XIII — Artificial Intelligence and Machine Learning, since 2025-11-01; PhD Computer Science, LMU Munich, 2023 (advisor Claudia Linnhoff-Popien); prior postdoc at UC Irvine/USC (advisor Sven Koenig, no explicit completion year found so postdocYear omitted). Verified via official ai.uni-bayreuth.de department page content (surfaced through WebSearch; this session's egress block prevented a direct fetch to confirm liveness), personal homepage (thomyphan.github.io), Google Scholar, LinkedIn, and ResearchGate, all independently consistent. No portrait downloaded — this session's egress proxy blocks all external image/file fetches too.",
+      "rosterId": "vp-1099"
     },
     {
       "name": "Quang Tam Nguyen",
@@ -5460,7 +5464,8 @@
       "country": "CH",
       "npapers": 2,
       "cited": 15,
-      "status": "pending"
+      "status": "excluded",
+      "note": "2026-09-04: No academic faculty appointment found anywhere in Switzerland. The only clearly matching LinkedIn profile for this name shows a non-academic role in international student services (Melbourne, Australia). 'Victoria School of Management' listing appears stale/unverifiable and no Swiss faculty directory listing was found. Does not meet inclusion standard."
     },
     {
       "name": "Ha Bui",
@@ -5484,7 +5489,8 @@
       "country": "FI",
       "npapers": 4,
       "cited": 15,
-      "status": "pending"
+      "status": "excluded",
+      "note": "2026-09-04: Confirmed via University of Vaasa's own uwasa.fi staff directory (found through WebSearch) as a 'Project Researcher', School of Technology and Innovations / Energy Technology — a grant-funded, non-faculty research role, not a stable faculty-level Research-track appointment per inclusion standard."
     },
     {
       "name": "Tuyen P. Le",
@@ -5492,7 +5498,8 @@
       "country": "KR",
       "npapers": 2,
       "cited": 15,
-      "status": "pending"
+      "status": "excluded",
+      "note": "2026-09-04: Currently a Senior Researcher at AgileSoDA (industry, Seoul) per LinkedIn; Kyung Hee University appears to be his degree-granting alma mater, not a current employer — no Kyung Hee faculty directory listing or any other university faculty appointment found. Non-academic industry position; does not meet inclusion standard."
     },
     {
       "name": "Hoa Van Nguyen",
@@ -5508,7 +5515,8 @@
       "country": "CN",
       "npapers": 2,
       "cited": 14,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Name reads as Burmese in origin ('Si Thu' is a common Burmese male given name), not Vietnamese — an evident hieuphay.com name-classifier mismatch. Excluded per inclusion-standard triage without individual research, per ROSTER_MAINTENANCE.md's 'obvious non-Vietnamese name' rule."
     },
     {
       "name": "L. P. Thai",
