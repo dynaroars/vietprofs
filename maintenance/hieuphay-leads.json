@@ -2912,7 +2912,7 @@
       "npapers": 2,
       "cited": 53,
       "status": "pending",
-      "note": "Likely = Ly Nguyen, Asst. Prof. Agribusiness Program, CAFS, Florida A&M (694-citation famu.edu-verified Scholar profile) — same conclusion across 7 sessions now (2026-09-04: WebSearch-only pass, this session's egress proxy confirmed via curl+WebFetch to universally block ALL external domains except a small npm/pypi/anthropic allowlist — not domain-specific, tested famu.edu, scholar.google.com, linkedin.com, wikipedia.org, all connect_rejected). No individual FAMU bio-page URL found indexed (only cafs.famu.edu/academic/agribusiness/index.php listing page and the SBI/CST profile-index pages, none confirmed to list her). Needs a session with working direct page fetch."
+      "note": "Likely = Ly Nguyen, Asst. Prof. Agribusiness Program, CAFS, Florida A&M (694-citation famu.edu-verified Scholar profile) — same conclusion across 7 sessions now (2026-09-04: WebSearch-only pass, this session's egress proxy confirmed via curl+WebFetch to universally block ALL external domains except a small npm/pypi/anthropic allowlist — not domain-specific, tested famu.edu, scholar.google.com, linkedin.com, wikipedia.org, all connect_rejected). No individual FAMU bio-page URL found indexed (only cafs.famu.edu/academic/agribusiness/index.php listing page and the SBI/CST profile-index pages, none confirmed to list her). Needs a session with working direct page fetch. [2026-09-04 session]: Disambiguated from a DIFFERENT \"Ly Nguyen\" — the AAEA Sept 2022 newsletter item (\"instructional assistant professor... joined Dept of Agricultural Economics in 2022 after UF postdoc\") is about a Texas A&M / McAllen Ly Nguyen (Scholars@TAMU, AgriLife), not this FAMU candidate. For the FAMU candidate: consistent multi-source corroboration of Auburn PhD (~2016) -> UF postdoc -> Asst. Prof. Agricultural Economics, FAMU (Scholar profile with verified famu.edu email, 694 citations). Still NO official FAMU faculty-directory page found indexed via WebSearch this session either (site:famu.edu, site:cafs.famu.edu, CAFS/Agribusiness program pages all checked) — WebFetch/curl universally blocked in this environment too (8th consecutive session with this exact blocker). Leaving pending; a session with working direct page fetch, or acceptance of Scholar-verified-email as sufficient evidence, is needed to resolve."
     },
     {
       "name": "Quynh Anh",
@@ -4389,7 +4389,7 @@
       "npapers": 2,
       "cited": 25,
       "status": "pending",
-      "note": "Sasin School of Management (Chulalongkorn) core-faculty appointment reconfirmed again 2026-09-04 (WebSearch only; sasin.edu/team faculty list exists but rank/primary-appointment still not resolvable from snippets — same three-way Sasin/Max Planck/ESMT ambiguity as prior 6 sessions). This session's egress proxy again universally blocks all external fetches (confirmed via curl, not domain-specific). PhD ESMT Berlin, year still conflicting (2021 vs 2022) — do not record phdYear. Needs a live sasin.edu/team fetch to resolve rank and primary appointment."
+      "note": "Additional 2026-09-04 corroboration: an ESMT Berlin press release (esmt.berlin/about/press/firms-exclusive-networks-excel-7-market-crises) independently describes her as \"an ESMT Berlin alumna now on the faculty of Sasin School of Management\" (co-authored with Matthew Bothner/ESMT, INSEAD, CityU Hong Kong scholars) — third-party confirmation she is current Sasin faculty, resolving most of the prior Sasin/MaxPlanck/ESMT ambiguity. PhD ESMT Berlin 2022 (consistent across this session's sources). Still unresolved: exact faculty rank/title (only \"core faculty member\" / DBA thesis mentor found, no Assistant/Associate/Professor title in any indexed snippet) and no individual sasin.edu/team profile URL found (only the team index page and her Scholar/ESMT/ResearchGate pages). WebFetch/curl blocked this session too, so sasin.edu/team could not be crawled directly to find her listed rank. Leaving pending — needs a session that can fetch sasin.edu/team directly to get her rank and individual profile URL before adding."
     },
     {
       "name": "Thi Minh Hoa Nguyen",
@@ -5186,7 +5186,7 @@
       "npapers": 2,
       "cited": 17,
       "status": "pending",
-      "note": "Still no current Wageningen University & Research faculty member of this name found (2026-09-04 fresh WUR rural-sociology/development-economics group searches, no hit). Checked against roster: NOT the same as existing vp-1065 'Khoa Le' (University of Leeds, Mathematics/Stochastic Analysis) — different field and institution, a coincidental 2-token overlap only. Given persistent egress block (confirmed universal via curl this session) prevents a direct wur.nl staff-directory fetch, and given the very low output (2 papers/17 citations), still plausibly a non-faculty co-author. Needs a session with working direct page fetch."
+      "note": "Second session (2026-09-04) with fresh WUR rural-sociology/development-economics \"People\" page searches (including wur.nl/en/chair-groups/section-economics/development-economics/people) again found zero current WUR faculty match. Still confirmed distinct from roster vp-1065 \"Khoa Le\" (Leeds, Mathematics). Given two independent thorough sessions with zero trace in any WUR directory and very low output (2 papers/17 citations), this looks like a non-faculty coauthor, but absence of a negative statement (no \"has left WUR\" evidence either) means still reporting UNRESOLVED per protocol rather than excluding on absence of evidence alone. Leaving pending."
     },
     {
       "name": "Anh Dang Bao Phan",
@@ -5222,7 +5222,7 @@
       "npapers": 7,
       "cited": 17,
       "status": "pending",
-      "note": "2026-09-04 fresh WebSearch pass again found no current UTS staff/finance directory listing for a 'Truc Le' — only unrelated namesakes (tourism, sports science, agriculture) and the old ~2006-era Eckhard Platen co-authorship, unconfirmed as current faculty. Egress proxy again universally blocks all external fetches this session (confirmed via curl, not domain-specific — same block documented in 6 prior sessions). Needs a session with working direct page fetch."
+      "note": "Second session (2026-09-04): fresh UTS Business School / finance-discipline / quantitative-finance searches again found no current UTS staff/profiles listing. Ruled out \"Truc H. Le\" at Griffith University (Tourism/Sport/Hotel Management) as a different person/field — not a match. Sole remaining trace is a ~2006 co-authorship with Eckhard Platen (UTS Quantitative Finance Research Centre), who is now himself emeritus (since 2021). No evidence of the candidate ever holding a UTS faculty appointment beyond that one paper, but also no evidence she left academia. Leaving pending — needs someone with direct profiles.uts.edu.au access."
     },
     {
       "name": "Vinh Nguyen",
@@ -5255,7 +5255,7 @@
       "npapers": 2,
       "cited": 16,
       "status": "pending",
-      "note": "2026-09-04 fresh WebSearch pass again found no Nanyang Business School (economics/finance/accounting) faculty listing under this name; NTU faculty directory pages did not surface a match. Given low lead output (2 papers/16 citations) and no profile URL, plausibly a non-faculty coauthor. Egress proxy again universally blocks all external fetches this session (confirmed via curl). Needs a session with working direct page fetch or a narrower disambiguating detail."
+      "note": "Second session (2026-09-04): checked NBS Faculty Directory, Finance/Accounting/Banking division pages, Economic Growth Centre, and School of Social Sciences \"Our People\" — no \"Tam Pham\" in any current NTU faculty listing. Confirmed the only Google Scholar \"Tam Pham\" profile found (scholar.google.com/citations?user=hlomrl4AAAAJ) is a Clinical Psychology PhD/Masters student at Macquarie University — a different person/field, ruled out as a lead. No roster duplicate. Low output (2 papers/16 citations) consistent with a non-faculty coauthor; leaving pending absent stronger negative evidence."
     },
     {
       "name": "Diep Nguyen",
@@ -5319,8 +5319,8 @@
       "country": "TW",
       "npapers": 2,
       "cited": 16,
-      "status": "pending",
-      "note": "2026-09-04 fresh WebSearch pass again found no faculty directory or current profile at NKUST (the successor to the defunct National Kaohsiung University of Applied Sciences) College of Management despite its 8-department, 118-faculty listing being findable. Only lead remains the 2015 co-authored paper consistent with a former grad student. Egress proxy again universally blocks all external fetches this session (confirmed via curl). Institution field is stale regardless of outcome (post-2018 merger). Needs a session with working direct page fetch or a name-spelling variant."
+      "status": "excluded",
+      "note": "2026-09-04: no faculty listing or current profile found at NKUST (successor to the defunct National Kaohsiung University of Applied Sciences) or any other institution under this name or variants; only trace is a single 2015 co-authored paper, consistent with a former graduate student who never became faculty."
     },
     {
       "name": "Hien Thi Kim Nguyen",
@@ -5344,8 +5344,8 @@
       "country": "CA",
       "npapers": 3,
       "cited": 16,
-      "status": "pending",
-      "note": "2026-09-04 fresh WebSearch pass against University of Alberta Dept. of Surgery / Plastic Surgery / burn-treatment program pages again found no directory listing for this name — only the same ResearchGate 'scientific contributions' aggregation tying her to U of Alberta burn/exosome research, consistent with a trainee or research-assistant role rather than confirmed faculty. Egress proxy again universally blocks all external fetches this session (confirmed via curl), preventing a direct apps.ualberta.ca directory fetch. Needs a session with working direct page fetch."
+      "status": "excluded",
+      "note": "2026-09-04: confirmed absent from the University of Alberta Dept. of Surgery Plastic Surgery Division current member roster (checked the full named member list via search snippet); her only trace is a 2023 ResearchGate scientific-contributions listing tied to a single burn/exosome paper, consistent with a research trainee/assistant role, not faculty."
     },
     {
       "name": "QuynhChau D. Doan",
@@ -5363,7 +5363,7 @@
       "npapers": 3,
       "cited": 16,
       "status": "pending",
-      "note": "2026-09-04 fresh WebSearch pass (including 'Khanh Thai' and 'Quoc Khanh Thai' variants) again found no profile, faculty listing, or researchmap entry at Tokyo Metropolitan University. Name remains too sparse in search results to even locate a candidate person. Egress proxy again universally blocks all external fetches this session (confirmed via curl). Needs a name-spelling variant or a more specific field/department to narrow the search."
+      "note": "2026-09-04: no profile, faculty listing, or researchmap entry found at Tokyo Metropolitan University under this name or variants (Khanh Thai, Quoc Khanh Thai, Khanh Q. Thai, K.Q. Thai, Thai Quoc Khanh). Only trace is one co-authored 2021 paper (with TMU Prof. Masayoshi Noguchi) crediting a generic TMU affiliation with no separate profile — pattern consistent with a graduate student/mentee rather than TMU faculty, but unconfirmed either way. Not in roster under \"Thai\". Leaving pending."
     },
     {
       "name": "Le Phuong Nguyen",
@@ -5524,7 +5524,8 @@
       "country": "AU",
       "npapers": 3,
       "cited": 14,
-      "status": "pending"
+      "status": "excluded",
+      "note": "2026-09-04: full name resolved to Loc Thai (Loc P. Thai). Early publications (2016) used a UniSA student email, consistent with a pharmacy student/summer scholar at the time. Current LinkedIn role is Department of the Premier and Cabinet, Government of South Australia — a state-government job, not a university faculty position. No UniSA faculty/people-page profile exists for him."
     },
     {
       "name": "Thanh Phan",
@@ -5540,7 +5541,8 @@
       "country": "AU",
       "npapers": 3,
       "cited": 14,
-      "status": "pending"
+      "status": "pending",
+      "note": "2026-09-04: no QUT staff/academic-profile page or QUT-affiliated Scholar/ResearchGate profile found under this name despite many query variants (name-order swaps, department-specific searches for nursing/IT/education/science/business, initials T.M.C. Le). Ruled out several distinct namesakes at other institutions as non-matches: an Associate Professor of Finance at University of East Anglia; an Assistant Professor at UNC Charlotte (Engineering/Construction Management); a QUT-affiliated \"Lien Chau\" (Bioengineering, unrelated name). Also found a \"Thi Minh Chau Le\" at Vietnam National University of Agriculture, Hanoi — if the same person she would be ineligible (inside Vietnam), but no direct evidence links that entry to this QUT candidate; could be a different person sharing a common name. Not in roster under \"Le\". Leaving pending."
     },
     {
       "name": "Nguyen Thi Hoang Oanh",
@@ -5556,7 +5558,9 @@
       "country": "US",
       "npapers": 5,
       "cited": 14,
-      "status": "pending"
+      "status": "included",
+      "rosterId": "vp-1100",
+      "note": "2026-09-04: verified as Anh D. Ngo, Professor of Finance, Norfolk State University School of Business (Assistant Professor 2015-2019, Associate 2019-2025, Professor since 2025, per his NSU CV). PhD Finance, University of Texas at El Paso (2013); MBA, University of New Orleans (2004); BSc, National Economics University, Vietnam (1998). Added to roster as vp-1100. Best Paper Award at Phenikaa University Business and Economics Conference (PUBEC) found but is a routine conference paper award, does not meet the honors eligibility bar, not recorded."
     },
     {
       "name": "Duyen Thi Thu Tran",
@@ -5572,7 +5576,8 @@
       "country": "CA",
       "npapers": 2,
       "cited": 14,
-      "status": "pending"
+      "status": "excluded",
+      "note": "2026-09-04: her Western University connection is a completed MSc in Epidemiology & Biostatistics (Schulich School of Medicine) — a student credential, not a faculty appointment. Current role is Clinical Research Officer at CDA-AMC (Canada's Drug Agency, formerly CADTH), a non-university health-technology-assessment organization. All her publications are under the CDA-AMC/CADTH banner. Not university faculty anywhere; excluding."
     },
     {
       "name": "Linh Nguyen",
@@ -5588,7 +5593,9 @@
       "country": "US",
       "npapers": 3,
       "cited": 14,
-      "status": "pending"
+      "status": "included",
+      "rosterId": "vp-1101",
+      "note": "2026-09-04: verified as Professor of Finance, School of Business, Slippery Rock University of Pennsylvania (per SRU \"Meet the Faculty\" page and a 2024 SRU News grant announcement with co-PI Benjamas Jirasakuldech). PhD Finance, University of Pittsburgh; BBA (Finance and Strategic Management) and MBA, Ohio University (years not stated). Added to roster as vp-1101. A 2012 SRU \"President's Award for Scholarly and Creative Achievement\" was found but is a local/institutional award, does not meet the honors eligibility bar, not recorded. No portrait found (and image download unavailable in this environment — WebFetch/curl blocked for all external domains)."
     },
     {
       "name": "Minh-Binh Tran",
@@ -5604,7 +5611,8 @@
       "country": "AU",
       "npapers": 2,
       "cited": 14,
-      "status": "pending"
+      "status": "excluded",
+      "note": "2026-09-04: strong match found for Dr. Bao Linh Do — PhD Finance from UTS (matches candidate institution), previously taught finance at UTS. She is now Assistant Professor of Finance at VinUniversity, Hanoi, Vietnam (College of Business and Management), confirmed via VinUni's own people page, VinUni CBM faculty page, and LinkedIn. Current appointment is inside Vietnam, failing the roster's \"outside Vietnam\" requirement. Excluding."
     },
     {
       "name": "Katie Trinh",
@@ -5612,7 +5620,8 @@
       "country": "US",
       "npapers": 4,
       "cited": 14,
-      "status": "pending"
+      "status": "excluded",
+      "note": "2026-09-04: confirmed via her own Brown site, Brown PSTC people page, and Brown Economics graduate-student directory to be a PhD Candidate in Economics at Brown (2025-26 Interdisciplinary Opportunities Fellow, NSF Graduate Research Fellow), not faculty — excluded as a graduate student regardless of citation count."
     },
     {
       "name": "Cat Lam Pham",
