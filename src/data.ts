@@ -51,6 +51,7 @@ export interface RosterEntry {
 
 export type Roster = RosterEntry[];
 
+import { TRACKS } from './roster-constants.ts';
 export { TRACKS } from './roster-constants.ts';
 
 let cached: Roster | null = null;
@@ -114,6 +115,19 @@ export async function loadRoster(): Promise<Roster> {
   if (!res.ok) throw new Error(`Failed to load data.json: ${res.status}`);
   cached = await res.json();
   return cached;
+}
+
+// A build-time-generated daily time series of total roster size (see scripts/build-stats-history.ts).
+// It's a nice-to-have chart, not core roster content, so a fetch failure returns an empty
+// series rather than breaking the page.
+export async function loadStatsHistory(): Promise<StatsHistoryPoint[]> {
+  try {
+    const res = await fetch(`${import.meta.env.BASE_URL}stats-history.json`);
+    if (!res.ok) return [];
+    return await res.json();
+  } catch {
+    return [];
+  }
 }
 
 export function uniqueStates(roster: Roster): string[] {
@@ -705,12 +719,68 @@ export function buildTopPhdInstitutions(roster: Roster, limit = 8): [string, num
   return [...counts.entries()].sort((a, b) => b[1] - a[1]).slice(0, limit);
 }
 
+export function buildTopUndergradInstitutions(roster: Roster, limit = 8): [string, number][] {
+  const counts = new Map<string, number>();
+  for (const p of roster) {
+    if (!p.undergradInstitution) continue;
+    counts.set(p.undergradInstitution, (counts.get(p.undergradInstitution) ?? 0) + 1);
+  }
+  return [...counts.entries()].sort((a, b) => b[1] - a[1]).slice(0, limit);
+}
+
+export function buildPhdToFacultyPairings(roster: Roster, limit = 6): [string, string, number][] {
+  const pairCounts = new Map<string, number>();
+  for (const p of roster) {
+    if (!p.phdInstitution) continue;
+    const country = p.country || 'United States';
+    const key = `${p.phdInstitution} → ${country}`;
+    pairCounts.set(key, (pairCounts.get(key) ?? 0) + 1);
+  }
+  const sorted = [...pairCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, limit);
+  return sorted.map(([key, count]) => {
+    const parts = key.split(' → ');
+    return [parts[0], parts[1], count];
+  });
+}
+
+
 export function buildTopUniversities(roster: Roster, limit = 8): [string, number][] {
   const counts = new Map<string, number>();
   for (const p of roster) {
     counts.set(p.university, (counts.get(p.university) ?? 0) + 1);
   }
   return [...counts.entries()].sort((a, b) => b[1] - a[1]).slice(0, limit);
+}
+
+export function buildFieldCounts(roster: Roster): [string, number][] {
+  const counts = new Map<string, number>();
+  for (const p of roster) {
+    const field = fieldOf(p.department, p.university);
+    counts.set(field, (counts.get(field) ?? 0) + 1);
+  }
+  return [...counts.entries()].sort((a, b) => b[1] - a[1]);
+}
+
+export function buildTopCountries(roster: Roster, limit = 8): [string, number][] {
+  const counts = new Map<string, number>();
+  for (const p of roster) {
+    const country = p.country || 'United States';
+    counts.set(country, (counts.get(country) ?? 0) + 1);
+  }
+  return [...counts.entries()].sort((a, b) => b[1] - a[1]).slice(0, limit);
+}
+
+export function buildTrackCounts(roster: Roster): [string, number][] {
+  const counts = new Map<string, number>();
+  for (const p of roster) {
+    counts.set(p.track, (counts.get(p.track) ?? 0) + 1);
+  }
+  return TRACKS.map((track) => [track, counts.get(track) ?? 0] as [string, number]).filter(([, count]) => count > 0);
+}
+
+export interface StatsHistoryPoint {
+  date: string;
+  count: number;
 }
 
 function stripDiacritics(s: string): string {

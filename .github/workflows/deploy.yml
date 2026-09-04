@@ -19,6 +19,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0 # full history, so build-stats-history can chart roster growth over time
       - uses: actions/setup-node@v5
         with:
           node-version: 24

@@ -426,6 +426,20 @@ When changing the observation logic, add tests for the underlying calculation an
 small filtered rosters. Run `npm test`, `npm run build`, and `git diff --check` before submitting
 the change.
 
+### Roster growth chart
+
+The "Show me something interesting" view's growth-over-time chart is the one place that
+satisfies the Git-history exception above: `scripts/build-stats-history.ts` walks `git log` for
+`public/data.json`, keeps the last commit of each UTC day, and writes total roster size per day to
+the build-generated (gitignored) `public/stats-history.json`, consumed by `renderGrowthChart` in
+`src/main.ts`. It runs as part of `predev`/`prebuild`/`pretest`, so it always reflects whatever git
+history is actually present in the current checkout — a shallow clone (a sandboxed agent checkout,
+or CI without `fetch-depth: 0`) yields a short or single-point series rather than a failure. The
+deploy workflow (`.github/workflows/deploy.yml`) uses `fetch-depth: 0` specifically so the
+production build gets full history. Do not commit `public/stats-history.json` itself, and do not
+extend it to chart per-country/per-field history without also reconciling that with the
+no-historical-trend rule above.
+
 ## Fields
 
 The canonical field list is:

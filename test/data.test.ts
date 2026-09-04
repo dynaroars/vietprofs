@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
-import { FIELDS, LOCATIONS, HEALTH_SUBFIELDS, canonicalRank, displayName, displayUniversity, fieldOf, healthSubfieldOf, continentOf, locationMatches, buildFunFacts, buildAwardsFunFacts, buildInternationalObservations, buildLocationObservations, filterRoster, looksSurnameFirst, type Roster } from '../src/data.ts';
+import { FIELDS, LOCATIONS, HEALTH_SUBFIELDS, canonicalRank, displayName, displayUniversity, fieldOf, healthSubfieldOf, continentOf, locationMatches, buildFunFacts, buildAwardsFunFacts, buildInternationalObservations, buildLocationObservations, filterRoster, looksSurnameFirst, buildFieldCounts, buildTopCountries, buildTrackCounts, buildTopUndergradInstitutions, buildPhdToFacultyPairings, type Roster } from '../src/data.ts';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const roster: Roster = JSON.parse(readFileSync(join(__dirname, '../public/data.json'), 'utf8'));
@@ -22,6 +22,17 @@ test('reviewed portraits use local WebP files with source provenance', () => {
 test('roster is a non-empty array', () => {
   assert.ok(Array.isArray(roster));
   assert.ok(roster.length > 0);
+});
+
+test('generated stats-history.json is a non-decreasing-date time series ending at the current roster size', () => {
+  const history: { date: string; count: number }[] = JSON.parse(readFileSync(join(__dirname, '../public/stats-history.json'), 'utf8'));
+  assert.ok(history.length > 0);
+  for (const point of history) {
+    assert.match(point.date, /^\d{4}-\d{2}-\d{2}$/);
+    assert.ok(Number.isInteger(point.count) && point.count > 0);
+  }
+  for (let i = 1; i < history.length; i++) assert.ok(history[i].date > history[i - 1].date);
+  assert.equal(history[history.length - 1].count, roster.length);
 });
 
 test('health subfields are the only derived field subdivisions', () => {
@@ -249,6 +260,47 @@ test('buildAwardsFunFacts reports major award categories and NSF CAREER holders'
   assert.ok(facts.some((f) => /MacArthur Fellows: \d+; Fields Medalists: \d+/.test(f)));
   assert.ok(facts.some((f) => /Marquee honors represented: .*Fields Medal \(\d+\).*MacArthur Fellow \(\d+\)/.test(f)));
   assert.ok(facts.some((f) => /national-academy/.test(f)));
+});
+
+test('buildFieldCounts sums to the roster size and sorts descending', () => {
+  const counts = buildFieldCounts(roster);
+  assert.equal(counts.reduce((sum, [, c]) => sum + c, 0), roster.length);
+  for (let i = 1; i < counts.length; i++) assert.ok(counts[i - 1][1] >= counts[i][1]);
+  assert.ok(counts.every(([field]) => FIELDS.includes(field)));
+});
+
+test('buildTopCountries defaults a missing country to United States and respects the limit', () => {
+  const withMissingCountry = [{ ...roster[0], country: undefined }, { ...roster[1], country: 'Elsewhere' }];
+  const counts = buildTopCountries(withMissingCountry, 1);
+  assert.equal(counts.length, 1);
+  assert.ok(counts[0][0] === 'United States' || counts[0][0] === 'Elsewhere');
+  const full = buildTopCountries(roster, 8);
+  assert.ok(full.length <= 8);
+  for (let i = 1; i < full.length; i++) assert.ok(full[i - 1][1] >= full[i][1]);
+});
+
+test('buildTrackCounts covers every track present and omits empty ones', () => {
+  const counts = buildTrackCounts(roster);
+  assert.equal(counts.reduce((sum, [, c]) => sum + c, 0), roster.length);
+  assert.ok(counts.every(([, count]) => count > 0));
+  const tracksSeen = new Set(roster.map((p) => p.track));
+  assert.equal(counts.length, tracksSeen.size);
+});
+
+test('buildTopUndergradInstitutions and buildPhdToFacultyPairings aggregate properly', () => {
+  const topUg = buildTopUndergradInstitutions(roster, 5);
+  assert.ok(Array.isArray(topUg));
+  assert.ok(topUg.length <= 5);
+  for (let i = 1; i < topUg.length; i++) assert.ok(topUg[i - 1][1] >= topUg[i][1]);
+
+  const pairings = buildPhdToFacultyPairings(roster, 5);
+  assert.ok(Array.isArray(pairings));
+  assert.ok(pairings.length <= 5);
+  for (const [phd, country, count] of pairings) {
+    assert.equal(typeof phd, 'string');
+    assert.equal(typeof country, 'string');
+    assert.ok(count > 0);
+  }
 });
 
 test('search is diacritic-insensitive in both directions', () => {
