@@ -5776,7 +5776,8 @@
       "country": "NG",
       "npapers": 2,
       "cited": 13,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Non-Vietnamese classifier mismatch: \"Sok\" is a common Khmer/Cambodian given name, not Vietnamese; excluded without individual research per step 5."
     },
     {
       "name": "Ma Tin Chomar",
@@ -5784,7 +5785,8 @@
       "country": "MY",
       "npapers": 2,
       "cited": 13,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Non-Vietnamese classifier mismatch: name does not follow Vietnamese naming patterns (reads as South/Southeast Asian, e.g. Rohingya/Burmese); excluded without individual research per step 5."
     },
     {
       "name": "Ngochien Bui",
