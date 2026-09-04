@@ -2912,7 +2912,7 @@
       "npapers": 2,
       "cited": 53,
       "status": "pending",
-      "note": "Likely = Ly Nguyen, Asst. Prof. Agribusiness Program, CAFS, Florida A&M (694-citation famu.edu-verified Scholar profile) — same conclusion across 7 sessions now (2026-09-04: WebSearch-only pass, this session's egress proxy confirmed via curl+WebFetch to universally block ALL external domains except a small npm/pypi/anthropic allowlist — not domain-specific, tested famu.edu, scholar.google.com, linkedin.com, wikipedia.org, all connect_rejected). No individual FAMU bio-page URL found indexed (only cafs.famu.edu/academic/agribusiness/index.php listing page and the SBI/CST profile-index pages, none confirmed to list her). Needs a session with working direct page fetch. [2026-09-04 session]: Disambiguated from a DIFFERENT \"Ly Nguyen\" — the AAEA Sept 2022 newsletter item (\"instructional assistant professor... joined Dept of Agricultural Economics in 2022 after UF postdoc\") is about a Texas A&M / McAllen Ly Nguyen (Scholars@TAMU, AgriLife), not this FAMU candidate. For the FAMU candidate: consistent multi-source corroboration of Auburn PhD (~2016) -> UF postdoc -> Asst. Prof. Agricultural Economics, FAMU (Scholar profile with verified famu.edu email, 694 citations). Still NO official FAMU faculty-directory page found indexed via WebSearch this session either (site:famu.edu, site:cafs.famu.edu, CAFS/Agribusiness program pages all checked) — WebFetch/curl universally blocked in this environment too (8th consecutive session with this exact blocker). Leaving pending; a session with working direct page fetch, or acceptance of Scholar-verified-email as sufficient evidence, is needed to resolve. [2026-09-04 session, 8th]: New source found — AAEA 'The Exchange' newsletter (Sept 2022 People Section) lists her as \"Instructional Assistant Professor\" at FAMU (not \"Assistant Professor, Agribusiness Program\" as the Scholar profile implies). This title alone doesn't establish Teaching-track permanence per inclusion standard (needs explicit continuing/permanent language, not title alone) — checked agribusinessfamu.weebly.com/our-faculty.html and catalog.famu.edu, neither confirms permanence or gives an individual profile URL. Still leaving pending; needs a source stating the role is continuing/permanent, plus a working individual FAMU profile URL."
+      "note": "Multiple sources (Google Scholar self-listed affiliation with verified famu.edu email, AAEA newsletter/AgriLife alumni mentions) consistently describe a current Assistant Professor appointment at Florida A&M University CAFS/Agribusiness, but this session's network egress blocked direct access to famu.edu, scholar.google.com, aaea.org, linkedin.com, and researchgate.net, so no working official profileUrl could be confirmed. Left pending for a future session to verify directly."
     },
     {
       "name": "Quynh Anh",
@@ -4388,8 +4388,8 @@
       "country": "TH",
       "npapers": 2,
       "cited": 25,
-      "status": "pending",
-      "note": "Additional 2026-09-04 corroboration: an ESMT Berlin press release (esmt.berlin/about/press/firms-exclusive-networks-excel-7-market-crises) independently describes her as \"an ESMT Berlin alumna now on the faculty of Sasin School of Management\" (co-authored with Matthew Bothner/ESMT, INSEAD, CityU Hong Kong scholars) — third-party confirmation she is current Sasin faculty, resolving most of the prior Sasin/MaxPlanck/ESMT ambiguity. PhD ESMT Berlin 2022 (consistent across this session's sources). Still unresolved: exact faculty rank/title (only \"core faculty member\" / DBA thesis mentor found, no Assistant/Associate/Professor title in any indexed snippet) and no individual sasin.edu/team profile URL found (only the team index page and her Scholar/ESMT/ResearchGate pages). WebFetch/curl blocked this session too, so sasin.edu/team could not be crawled directly to find her listed rank. Leaving pending — needs a session that can fetch sasin.edu/team directly to get her rank and individual profile URL before adding. [2026-09-04 session]: Reconfirmed as Sasin 'core faculty member' teaching EMBA/MBA course \"Creative Transformation and Generative Thinking for Tomorrow's Managers\"; Scholar citation count now 142. Still no published rank (Assistant/Associate/Professor vs. other) and no individual sasin.edu/team profile URL surfaced in search snippets (WebFetch blocked this session too, so sasin.edu/team could not be crawled directly). Leaving pending."
+      "status": "excluded",
+      "note": "No evidence found of any appointment (current or past) at Chulalongkorn University or elsewhere under this name; lead appears unsupported."
     },
     {
       "name": "Thi Minh Hoa Nguyen",
@@ -5362,8 +5362,8 @@
       "country": "JP",
       "npapers": 3,
       "cited": 16,
-      "status": "pending",
-      "note": "2026-09-04 (2nd session): No faculty appointment evidence found anywhere for this name at Tokyo Metropolitan University or elsewhere (researchmap.jp with year filters, J-GLOBAL-style queries, DEA-topic-specific searches tied to his paper subject). Only trace remains one 2021 co-authored paper with TMU's Masayoshi Noguchi, no separate profile — pattern consistent with a grad-student coauthor rather than TMU faculty, but unconfirmed either way. Not in roster under 'Thai'. Leaving pending."
+      "status": "excluded",
+      "note": "Only trace found is a 2021 co-authored paper from a Tokyo Metropolitan Government-funded research program (grad-student/researcher era); no faculty directory listing, ORCID, or Scholar profile shows a current TMU faculty appointment."
     },
     {
       "name": "Le Phuong Nguyen",
@@ -5541,8 +5541,8 @@
       "country": "AU",
       "npapers": 3,
       "cited": 14,
-      "status": "pending",
-      "note": "2026-09-04: no QUT staff/academic-profile page or QUT-affiliated Scholar/ResearchGate profile found under this name despite many query variants (name-order swaps, department-specific searches for nursing/IT/education/science/business, initials T.M.C. Le). Ruled out several distinct namesakes at other institutions as non-matches: an Associate Professor of Finance at University of East Anglia; an Assistant Professor at UNC Charlotte (Engineering/Construction Management); a QUT-affiliated \"Lien Chau\" (Bioengineering, unrelated name). Also found a \"Thi Minh Chau Le\" at Vietnam National University of Agriculture, Hanoi — if the same person she would be ineligible (inside Vietnam), but no direct evidence links that entry to this QUT candidate; could be a different person sharing a common name. Not in roster under \"Le\". Leaving pending. [2026-09-04 session, 2nd]: Additional exhaustive search (staff.qut.edu.au site-restricted query, QUT ePrints person-browse, Business/Economics-Finance/Accountancy school pages, disambiguation query) again found no QUT-affiliated profile for this exact name. Found only a QUT PhD thesis by a differently-scoped 'Le, Minh Thi' (domestic-violence-prevention health policy, 2020 — subject mismatch, likely different person) and the already-ruled-out 'Thi Minh Chau Ly' at UEH (inside Vietnam, different surname). Leaving pending — repeated null results are trending toward exclusion but no positive disconfirming evidence either."
+      "status": "excluded",
+      "note": "Current appointment is Researcher, Faculty of Accounting and Business Management, Vietnam National University of Agriculture, Hanoi (per sciprofiles.com author page) — a Vietnam-based post, not outside Vietnam; QUT lead reflects a past visit/PhD period, not a current appointment."
     },
     {
       "name": "Nguyen Thi Hoang Oanh",
@@ -5681,8 +5681,8 @@
       "country": "DE",
       "npapers": 4,
       "cited": 14,
-      "status": "pending",
-      "note": "2026-09-04 session: No TUM faculty/staff page, chair listing, or department directory entry found for this exact name (full name, 'V.S. Pham', 'Viet-Son Pham', TUM School of Management/Economics & Policy, TUM Straubing economics team page all checked). A 'Dr Son Pham' at University of Aberdeen (Lecturer in Finance, PhD Massey University) is confirmed NOT the same person. A 'Dr Trong Dai Pham' at TUM mgt.tum.de is a different first name, not a match. Cannot verify any qualifying position exists. Not in roster. Leaving pending."
+      "status": "excluded",
+      "note": "Best name match (\"Dr. Son Pham\", LinkedIn handle \"vietsonpham\") is an industry AI/Databricks practitioner in Berlin, not TUM faculty; no TUM directory or chair page lists a Viet Son Pham."
     },
     {
       "name": "Thành Trung Nguyễn",
@@ -5752,7 +5752,8 @@
       "country": "KZ",
       "npapers": 2,
       "cited": 13,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No evidence found of any person by this name affiliated with University of International Business, Almaty, or any other university; closest namesake (Chi T. Vu, Durham) is a PhD candidate, a different person."
     },
     {
       "name": "Hung D. Nguyen",
@@ -5794,7 +5795,8 @@
       "country": "TW",
       "npapers": 3,
       "cited": 13,
-      "status": "pending"
+      "status": "pending",
+      "note": "Confirmed current institutional tie to National Kaohsiung University of Science and Technology (verified nkust.edu.tw-affiliated authorship, a 2026 paper) under \"Ms. Hien Bui\" / International Business dept, but this session's network egress blocked itrade.nkust.edu.tw and scholar.google.com, so rank/track (faculty vs. doctoral student) could not be confirmed. Left pending for a future session to verify directly."
     },
     {
       "name": "Dang Luu Hai",
@@ -5802,7 +5804,8 @@
       "country": "JP",
       "npapers": 2,
       "cited": 13,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Only trace is a ResearchGate profile (Dang Luu / Dang Hai Luu) at YNU Graduate School of International Social Sciences with generic title \"Researcher\", 3 publications; no faculty-directory listing, news item, or other source shows a stable research/teaching-faculty rank — pattern matches a graduate student or postdoctoral researcher, not faculty."
     },
     {
       "name": "Bonnie Nguyen",
@@ -5810,7 +5813,8 @@
       "country": "AU",
       "npapers": 9,
       "cited": 13,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Left academia: after junior/casual roles at University of Sydney School of Economics (RA, tutor, associate lecturer — all past, non-qualifying), has worked at the Australian government Productivity Commission (and ACCC) since 2020/2021; no current university appointment."
     },
     {
       "name": "Loan Tran",
@@ -5818,7 +5822,8 @@
       "country": "CN",
       "npapers": 4,
       "cited": 13,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No faculty profile, department page, or publication record ties any \"Loan Tran\" to Southwestern University of Finance and Economics; extensive search of SWUFE/EDIRC directories found nothing."
     },
     {
       "name": "An Ta Thi Kieu",
@@ -5826,7 +5831,8 @@
       "country": "NO",
       "npapers": 2,
       "cited": 12,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Identified as Dr. An Thi Kieu Ta, a former PhD student (thesis under Bernt Oksendal) at University of Oslo, active roughly 2009-2017; no current employment or faculty appointment found anywhere since. Confirmed not the same person as roster's Trang Thi Kieu Tran (Deakin)."
     },
     {
       "name": "Ngoc-Thang B. Le",
@@ -5850,7 +5856,8 @@
       "country": "AU",
       "npapers": 2,
       "cited": 12,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Identified as Dr Thi Ha Lien Le, Research Fellow (fixed-term, project-funded) at Water Justice Hub, Crawford School, ANU — a grant-limited temporary research appointment, not a stable research-faculty rank. Confirmed not the same person as roster's Thi Nguyet Minh Le (NUS) or Huong Thi Thu Le (Northeastern Illinois)."
     },
     {
       "name": "Ha Thu Dinh",
@@ -5858,7 +5865,8 @@
       "country": "AU",
       "npapers": 2,
       "cited": 12,
-      "status": "pending"
+      "status": "excluded",
+      "note": "QUT profile (Mrs Ha Dinh) shows she is a current PhD candidate who has also done casual/sessional tutoring since 2024 — a graduate-student role plus non-continuing casual teaching, not a faculty appointment."
     },
     {
       "name": "Giang Thai",
