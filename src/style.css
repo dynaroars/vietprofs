@@ -613,6 +613,7 @@ a.entry-name:focus-visible {
 
 .personal-site-link,
 .scholar-link,
+.linkedin-link,
 .profile-link {
   color: var(--text-muted);
   display: inline-flex;
@@ -623,6 +624,8 @@ a.entry-name:focus-visible {
 .personal-site-link:focus-visible,
 .scholar-link:hover,
 .scholar-link:focus-visible,
+.linkedin-link:hover,
+.linkedin-link:focus-visible,
 .profile-link:hover,
 .profile-link:focus-visible {
   color: var(--text-primary);
@@ -630,6 +633,7 @@ a.entry-name:focus-visible {
 
 .personal-site-link svg,
 .scholar-link svg,
+.linkedin-link svg,
 .profile-link svg {
   height: 1rem;
   width: 1rem;
@@ -1673,6 +1677,7 @@ a.entry-name:focus-visible {
   .entry-name,
   .personal-site-link,
   .scholar-link,
+  .linkedin-link,
   .profile-link,
   .favorite-toggle,
   .search-input,
@@ -1690,6 +1695,7 @@ a.entry-name:focus-visible {
   .entry-name,
   .personal-site-link,
   .scholar-link,
+  .linkedin-link,
   .profile-link,
   .favorite-toggle {
     min-width: 44px;
@@ -1698,6 +1704,7 @@ a.entry-name:focus-visible {
   .entry-name,
   .personal-site-link,
   .scholar-link,
+  .linkedin-link,
   .profile-link,
   .favorite-toggle,
   .link-button {
@@ -1711,6 +1718,7 @@ a.entry-name:focus-visible {
 
   .personal-site-link,
   .scholar-link,
+  .linkedin-link,
   .profile-link,
   .favorite-toggle {
     justify-content: center;

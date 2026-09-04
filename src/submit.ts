@@ -28,6 +28,7 @@ interface SubmissionDraft {
   websiteUrl?: string;
   universityProfileUrl?: string;
   scholarUrl?: string;
+  linkedinUrl?: string;
   portraitSource?: string;
   university?: string;
   city?: string;
@@ -127,6 +128,11 @@ function renderShell() {
       <div class="form-section">
         <label for="scholarUrl">Google Scholar profile</label>
         <input id="scholarUrl" name="scholarUrl" type="url" placeholder="https://scholar.google.com/…" />
+      </div>
+
+      <div class="form-section">
+        <label for="linkedinUrl">LinkedIn profile</label>
+        <input id="linkedinUrl" name="linkedinUrl" type="url" placeholder="https://www.linkedin.com/in/…" />
       </div>
 
       <div class="form-section">
@@ -283,6 +289,7 @@ const FIELD_LABELS: Partial<Record<keyof SubmissionDraft, string>> = {
   websiteUrl: 'Personal/lab website',
   universityProfileUrl: 'University profile website',
   scholarUrl: 'Google Scholar',
+  linkedinUrl: 'LinkedIn',
   portraitSource: 'Profile picture URL',
   university: 'University',
   department: 'Department',
@@ -385,6 +392,7 @@ function populateEntry(form: SubmitForm, entry: RosterEntry): void {
   // existing entry never has anything to pre-fill here.
   form.universityProfileUrl.value = '';
   form.scholarUrl.value = entry.scholarUrl ?? '';
+  form.linkedinUrl.value = entry.linkedinUrl ?? '';
   form.portraitSource.value = entry.portraitSource ?? '';
   updatePortraitPreview(form, entry);
   form.university.value = entry.university ?? '';
@@ -477,6 +485,7 @@ function onSubmit(e: SubmitEvent, entriesById: Map<string, RosterEntry> | null, 
     websiteUrl: form.websiteUrl.value.trim() || undefined,
     universityProfileUrl: form.universityProfileUrl.value.trim() || undefined,
     scholarUrl: form.scholarUrl.value.trim() || undefined,
+    linkedinUrl: form.linkedinUrl.value.trim() || undefined,
     portraitSource: form.portraitSource.value.trim() || undefined,
     university: form.university.value.trim() || undefined,
     city: form.city.value.trim() || undefined,

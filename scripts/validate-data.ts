@@ -58,6 +58,7 @@ const names = new Set<string>();
 const ids = new Set<string>();
 const profileUrls = new Set();
 const scholarUrls = new Set();
+const linkedinUrls = new Set();
 const portraits = new Set();
 for (const [index, person] of roster.entries()) {
   const label = `entry ${index + 1}`;
@@ -77,6 +78,13 @@ for (const [index, person] of roster.entries()) {
   if (person.scholarUrl !== undefined) {
     if (scholarUrls.has(person.scholarUrl)) fail(rosterFile, `${label} duplicates scholarUrl ${person.scholarUrl} — a Google Scholar profile belongs to one person; this usually means a placeholder/wrong ID got copied across a batch`);
     scholarUrls.add(person.scholarUrl);
+  }
+  if (person.linkedinUrl !== undefined && !/^https:\/\/(www\.)?linkedin\.com\//.test(person.linkedinUrl)) {
+    fail(rosterFile, `${label} linkedinUrl must be an https://linkedin.com/ URL`);
+  }
+  if (person.linkedinUrl !== undefined) {
+    if (linkedinUrls.has(person.linkedinUrl)) fail(rosterFile, `${label} duplicates linkedinUrl ${person.linkedinUrl} — a LinkedIn profile belongs to one person; this usually means a placeholder/wrong ID got copied across a batch`);
+    linkedinUrls.add(person.linkedinUrl);
   }
   if (looksSurnameFirst(person.name) && !surnameFirstAllowlist.has(person.name)) {
     fail(rosterFile, `${label} name "${person.name}" looks stored surname-first (Vietnamese order) instead of "First (Middle) Last" — reorder it, or if the first token is genuinely this person's given name, add it to surnameFirstAllowlist in scripts/validate-data.ts with a note on how you confirmed it`);

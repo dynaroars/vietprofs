@@ -22,6 +22,7 @@ export const ROSTER_FIELDS = [
   ...REQUIRED_ROSTER_STRINGS,
   'websiteUrl',
   'scholarUrl',
+  'linkedinUrl',
   'state',
   'country',
   'rank',

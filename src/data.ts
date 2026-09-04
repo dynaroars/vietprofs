@@ -43,6 +43,7 @@ export interface RosterEntry {
   profileUrl?: string;
   websiteUrl?: string;
   scholarUrl?: string;
+  linkedinUrl?: string;
   lastUpdatedAt?: string;
   portrait?: string;
   portraitSource?: string;

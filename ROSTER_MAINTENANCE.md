@@ -291,7 +291,7 @@ name samples.
   verify IDs and do not edit the roster. Preserve the generated ID when correcting a name,
   appointment, or other facts.
 - `track` must be `Tenure-line`, `Teaching`, `Research`, `Clinical`, or `Emeritus`.
-- `profileUrl` must be a current, working academic or official university profile and must not be a Google Scholar URL. Store Scholar separately in `scholarUrl`; store a maintained personal or lab homepage in `websiteUrl`.
+- `profileUrl` must be a current, working academic or official university profile and must not be a Google Scholar URL. Store Scholar separately in `scholarUrl`; store a maintained personal or lab homepage in `websiteUrl`; store a verified LinkedIn profile in `linkedinUrl` (must be an `https://linkedin.com/` or `https://www.linkedin.com/` URL). Verify a LinkedIn match the same way as Scholar: confirm name, institution, and field before attaching it — never guess from name alone.
 - `lastUpdatedAt` is required and must be a canonical UTC ISO timestamp in
   `YYYY-MM-DDTHH:mm:ss.sssZ` form. It records when roster content for
   the person last materially changed, whether by adding the person or changing a profile,
