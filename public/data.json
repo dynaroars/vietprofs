@@ -26341,7 +26341,13 @@
     "rank": "Assistant Research Professor of Anesthesia",
     "phdInstitution": "Indiana University",
     "phdYear": 2020,
-    "msInstitution": "Indiana University",
+    "otherDegrees": [
+      {
+        "degree": "MPA",
+        "institution": "Indiana University",
+        "year": 2012
+      }
+    ],
     "msYear": 2017,
     "undergradInstitution": "Purdue University",
     "undergradYear": 2012,
@@ -30742,5 +30748,52 @@
     ],
     "portrait": "portraits/kevin-nguyen-drexel-university.webp",
     "portraitSource": "https://drexel.edu/~/media/Images/cnhp/Faculty_New_pics/Nguyen_Kevin_150x150.ashx?h=150&hash=C132D0D254CD806F669823C1F3426FA3A691E6CF&la=en&w=150"
+  },
+  {
+    "id": "vp-1117",
+    "name": "Thuy Dieu Nguyen",
+    "profileUrl": "https://sph.umich.edu/faculty-profiles/nguyen-thuy.html",
+    "lastUpdatedAt": "2026-09-04T23:45:00.000Z",
+    "university": "University of Michigan",
+    "city": "Ann Arbor",
+    "state": "Michigan",
+    "country": "United States",
+    "researchAreas": [
+      "Health Economics",
+      "Health Policy",
+      "Substance Use Policy"
+    ],
+    "track": "Tenure-line",
+    "department": "Health Management and Policy",
+    "rank": "Associate Professor",
+    "phdYear": 2016,
+    "phdInstitution": "Maastricht University",
+    "undergradInstitution": "National Economics University",
+    "undergradYear": 2008,
+    "undergradMajor": "Finance and Banking",
+    "msInstitution": "Indiana University",
+    "portrait": "portraits/thuy-dieu-nguyen-university-of-michigan.webp",
+    "portraitSource": "https://sph.umich.edu/faculty-profiles/images/thuydn.jpg"
+  },
+  {
+    "id": "vp-1118",
+    "name": "Thuy-Anh T. Nguyen",
+    "profileUrl": "https://lsa.umich.edu/asian/people/faculty/tanguyen.html",
+    "lastUpdatedAt": "2026-09-04T23:45:00.000Z",
+    "university": "University of Michigan",
+    "city": "Ann Arbor",
+    "state": "Michigan",
+    "country": "United States",
+    "researchAreas": [
+      "Vietnamese Language",
+      "Language and Culture",
+      "Literature",
+      "Language Assessment"
+    ],
+    "track": "Teaching",
+    "department": "Asian Languages and Cultures",
+    "rank": "Teaching Professor of Vietnamese Language",
+    "portrait": "portraits/thuy-anh-t-nguyen-university-of-michigan.webp",
+    "portraitSource": "https://lsa.umich.edu/content/michigan-lsa/asian/en/people/faculty/tanguyen/jcr:content/profileImage.transform/profile_portrait/image.jpg"
   }
 ]
