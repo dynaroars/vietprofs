@@ -2912,7 +2912,7 @@
       "npapers": 2,
       "cited": 53,
       "status": "pending",
-      "note": "Likely = Ly Nguyen, Asst. Prof. Agricultural Economics, Florida A&M (694-citation famu.edu-verified Scholar profile, matching research area: international trade/consumer behavior/food price analysis) — same conclusion across 5 sessions now (2026-09-04 confirmed again via WebSearch only). Still blocked: this session's egress proxy again denies ALL external fetches (WebFetch AND raw curl both return 403/EGRESS_BLOCKED for every domain tried, confirmed via famu.edu, scholar.google.com, and google.com), so no individual FAMU bio page URL could be located — only found the CAFS faculty-list index (famu.edu/info/faculty-staff/profiles/cafs/index.php), not a page identifying her individually, so it does not satisfy the profileUrl requirement. Needs a session with working direct page fetch to load that index and find her specific bio-page URL."
+      "note": "Likely = Ly Nguyen, Asst. Prof. Agribusiness Program, CAFS, Florida A&M (694-citation famu.edu-verified Scholar profile) — same conclusion across 6 sessions now (2026-09-04 confirmed again via WebSearch only, plus 2 new 2025-2026 papers listing her under FAMU CAFS Agribusiness Program). Still blocked: this session's egress proxy again denies ALL external fetches (confirmed on famu.edu, utpb.edu, en.wikipedia.org), and no individual FAMU bio-page URL is indexed by search (only the CAFS faculty-list index and two co-authored papers). A guessed ly-nguyen.php URL analog to the confirmed daniel-solis.php pattern was NOT used since it isn't confirmed live. Needs a session with working direct page fetch to load the CAFS index and find her specific bio-page URL."
     },
     {
       "name": "Quynh Anh",
@@ -4389,7 +4389,7 @@
       "npapers": 2,
       "cited": 25,
       "status": "pending",
-      "note": "Core faculty at Sasin School of Management, Chulalongkorn (personal indicators + sasin.edu Scholar email; teaches in the DBA program, e.g. Organizational Analytics) — appointment corroborated across 5 sessions, but rank/track still unconfirmed: prior session found she may also hold Senior Research Fellow (Max Planck Institute for Research on Collective Goods, Bonn) and Visiting Researcher (ESMT Berlin) roles, raising the possibility Sasin is secondary rather than primary. 2026-09-04 WebSearch pass found nothing to resolve exact title (Assistant Professor vs. Lecturer vs. other) or confirm which appointment is primary. sasin.edu/team/faculty remains unreachable (this session's egress proxy blocks all external domains outright, confirmed via multiple test domains). PhD ESMT Berlin, year conflicting (2021 vs 2022) — do not record phdYear. Needs a live sasin.edu/team/faculty fetch."
+      "note": "Sasin School of Management (Chulalongkorn) core-faculty appointment reconfirmed across 6 sessions (personal site, ESMT Berlin bio, Scholar profile), but she is described everywhere as \"core faculty\" without an explicit professorial rank, and she simultaneously holds Senior Research Fellow (Max Planck Institute for Research on Collective Goods, Bonn) and Visiting Researcher (ESMT Berlin) roles with no source stating which appointment is primary. 2026-09-04 WebSearch pass (this session) found the same three-way affiliation picture again and could not resolve exact rank or primary appointment; sasin.edu/team/faculty remains unreachable (this session's egress proxy blocks all external domains). PhD ESMT Berlin, year still conflicting (2021 vs 2022) — do not record phdYear. Needs a live sasin.edu/team/faculty fetch to resolve rank and primary appointment."
     },
     {
       "name": "Thi Minh Hoa Nguyen",
@@ -4606,8 +4606,9 @@
       "country": "US",
       "npapers": 7,
       "cited": 22,
-      "status": "pending",
-      "note": "No longer at SUNY Poly — moved to The University of Texas Permian Basin, Dept. of Management, College of Business (utpb.edu/directory/faculty-staff/luong_p, email luong_p@utpb.edu). Title still unresolved after 5 sessions: UTPB's own directory page reportedly shows 'Assistant Professor' per search-result summaries, but both his own LinkedIn header and an independent ZoomInfo listing say 'Visiting Professor' (an excluded track) — self-reported LinkedIn titles are normally reliable, so this is a real conflict, not just a stale secondary source. 2026-09-04 WebSearch pass could not resolve it either way; this session's egress proxy blocks all direct fetches (WebFetch and curl alike return 403/EGRESS_BLOCKED for every domain), so the literal utpb.edu page text still can't be read. PhD Rutgers Business School, MBA UT Arlington, BEng Ho Chi Minh City University of Technology (via LinkedIn/UTPB snippets, unverified against a raw page — do not record until confirmed). Needs a live utpb.edu fetch to resolve title/track definitively."
+      "status": "included",
+      "note": "Moved from SUNY Poly to The University of Texas Permian Basin (UTPB), Dept. of Management, Marketing, & Industrial Technology, Assistant Professor. Prior-session title conflict (UTPB directory vs. LinkedIn/ZoomInfo \"Visiting Professor\") resolved 2026-09-04: many independently-worded WebSearch queries against the official utpb.edu directory consistently return \"Assistant Professor,\" while \"Visiting Professor\" appears only on LinkedIn/ZoomInfo (plausibly stale from an earlier visiting stint before the permanent appointment). Added to roster as Phat Vinh Luong (full name per Scholar profile). rosterId: vp-1096",
+      "rosterId": "vp-1096"
     },
     {
       "name": "Chau Jo Vu",
@@ -5165,7 +5166,9 @@
       "country": "US",
       "npapers": 9,
       "cited": 17,
-      "status": "pending"
+      "status": "included",
+      "note": "Tenure-track faculty librarian, Rohrbach Library, Kutztown University of Pennsylvania — APSCUF tenure-track faculty status confirmed (Kutztown librarians go through the same tenure process as teaching faculty); official library profile lists title as Assistant Professor. rosterId: vp-1097",
+      "rosterId": "vp-1097"
     },
     {
       "name": "Khoa Trinh",
@@ -5173,7 +5176,8 @@
       "country": "US",
       "npapers": 2,
       "cited": 17,
-      "status": "pending"
+      "status": "excluded",
+      "note": "PhD alumnus of UMD CS (not current UMD faculty); currently a Research Scientist at Google Research (industry-only, no university faculty appointment found)."
     },
     {
       "name": "Lê Văn Khoa",
@@ -5181,7 +5185,8 @@
       "country": "NL",
       "npapers": 2,
       "cited": 17,
-      "status": "pending"
+      "status": "pending",
+      "note": "No current Wageningen University & Research faculty member of this name found despite extensive WebSearch (staff pages, environmental/agricultural/development economics and rural sociology groups, Scholar, LinkedIn, Vietnamese-language search) — only an unrelated Can Tho University (Vietnam) \"Le Van Khoa\" Associate Professor and unrelated industry \"Van Khoa Le\" profiles turned up. Given the lead's very low output (2 papers/17 citations), may be a PhD student or a Vietnam-based co-author whose paper carried a WUR affiliation rather than current WUR faculty. This session's egress block prevented a direct wur.nl staff-directory search. Needs a session with working direct page fetch."
     },
     {
       "name": "Anh Dang Bao Phan",
@@ -5189,7 +5194,8 @@
       "country": "GB",
       "npapers": 2,
       "cited": 17,
-      "status": "pending"
+      "status": "excluded",
+      "note": "PhD student in Finance at University of Liverpool Management School (per CEPR profile and ResearchGate), not a faculty appointment."
     },
     {
       "name": "Nguyen Huu Khanh Quan",
@@ -5205,7 +5211,9 @@
       "country": "GB",
       "npapers": 5,
       "cited": 17,
-      "status": "pending"
+      "status": "included",
+      "note": "Lead placed her at Aston University, but she has moved on — Aston is now only an unpaid Visiting Fellow tie. Current primary appointment is Lecturer (tenure-line equivalent), International Business and Strategy, Henley Business School, University of Reading, confirmed via her Henley staff page plus corroborating ResearchGate/Google Scholar. Added to roster as Ha Phuong Luong. rosterId: vp-1098",
+      "rosterId": "vp-1098"
     },
     {
       "name": "Truc Le",
@@ -5213,7 +5221,8 @@
       "country": "AU",
       "npapers": 7,
       "cited": 17,
-      "status": "pending"
+      "status": "pending",
+      "note": "Common name with several distinct unrelated \"Truc Le\"/\"Le Truc\" people found (tourism, sports science, agriculture); no duplicate in current roster. The one finance-related hit tied to UTS (co-author with Eckhard Platen, UTS Quantitative Finance Research Centre, on ~2006-era growth-optimal-portfolio papers) could not be confirmed as a current faculty member — no current UTS staff profile, LinkedIn, or RePEc listing found, and a UTS Finance PhD \"past students\" placement page could not be read (this session's egress block on WebFetch/curl). Cannot confirm current UTS appointment, track, or rank, or rule out a stale historical co-authorship. Needs a session with working direct page fetch."
     },
     {
       "name": "Vinh Nguyen",
@@ -5245,7 +5254,8 @@
       "country": "SG",
       "npapers": 2,
       "cited": 16,
-      "status": "pending"
+      "status": "pending",
+      "note": "Very common name; multiple unrelated \"Tam Pham\"s found (chef, clinical-psychology grad student, IP lawyer, physician, VP of Product with an NTU business degree) but no NTU (Nanyang Business School Economics/Finance/Accounting) faculty listing under this name found in repeated targeted searches. Given the low lead output (2 papers/16 citations), plausibly a PhD student or the \"VP of Product\" alumnus rather than current faculty, but unconfirmed either way — no profile URL found to verify against. Needs a session with working direct page fetch or a narrower disambiguating detail."
     },
     {
       "name": "Diep Nguyen",
@@ -5309,7 +5319,8 @@
       "country": "TW",
       "npapers": 2,
       "cited": 16,
-      "status": "pending"
+      "status": "pending",
+      "note": "No faculty directory or current profile found anywhere; only lead is a 2015 co-authored paper (with a Prof. Wang) consistent with having been a grad student, not confirmed current faculty. Compounding issue: \"National Kaohsiung University of Applied Sciences\" ceased to exist as an independent institution after its 2018 merger into National Kaohsiung University of Science and Technology (NKUST); could not locate this person on NKUST's current department directories (mechanical, IEM, business) or on Google Scholar/RePEc. Note: this lead's institution field is stale regardless of outcome. Needs a session with working direct page fetch or a name-spelling variant to check."
     },
     {
       "name": "Hien Thi Kim Nguyen",
@@ -5333,7 +5344,8 @@
       "country": "CA",
       "npapers": 3,
       "cited": 16,
-      "status": "pending"
+      "status": "pending",
+      "note": "No University of Alberta directory listing found (searched apps.ualberta.ca directly and via multiple query variants). Only trace is a ResearchGate \"scientific contributions\" aggregation page showing co-authorship on burn-wound/exosome research tied to U of Alberta pediatric/plastic-surgery burn research — consistent with a trainee/research-assistant/coauthor role rather than confirmed faculty. Missing: any title, department, or official profile page confirming (or ruling out) a faculty appointment. Needs a session with working direct page fetch."
     },
     {
       "name": "QuynhChau D. Doan",
@@ -5341,7 +5353,8 @@
       "country": "US",
       "npapers": 2,
       "cited": 16,
-      "status": "pending"
+      "status": "excluded",
+      "note": "UT Austin alumna (BS 1993, MS 1998, PhD 2006, per UT Austin's own PharmD alumni \"Career Contacts\" page), not current faculty; current role is Regional Health Economics and Outcomes Liaison, an industry position (San Marcos, TX) — no UT Austin faculty or adjunct listing found."
     },
     {
       "name": "Khanh Quoc Thai",
@@ -5349,7 +5362,8 @@
       "country": "JP",
       "npapers": 3,
       "cited": 16,
-      "status": "pending"
+      "status": "pending",
+      "note": "No profile, faculty listing, researchmap entry, or publication record could be located matching this name at Tokyo Metropolitan University despite many name-order and department-guess variants. Name is too sparse in search results to even locate a candidate person, let alone confirm/deny a faculty appointment. Needs a name-spelling variant or a more specific field/department to narrow the search."
     },
     {
       "name": "Le Phuong Nguyen",
@@ -5365,7 +5379,8 @@
       "country": "AU",
       "npapers": 8,
       "cited": 16,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Multiple sources (LinkedIn, embassy-alumna context, search snippets) describe her as a casual/sessional academic at La Trobe University's Business School (not full-time continuing faculty), while her substantive appointment is as a lecturer at Can Tho University in Vietnam — inside Vietnam, disqualifying under the roster's \"outside Vietnam\" geographic requirement. PhD La Trobe 2017. Does not meet the stability bar at any qualifying institution outside Vietnam."
     },
     {
       "name": "Anh Tran",
