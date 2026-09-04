@@ -3656,7 +3656,7 @@
     "name": "Thi Vo",
     "vietnameseName": "Võ Thi",
     "profileUrl": "https://engineering.jhu.edu/chembe/faculty/thi-vo/",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "lastUpdatedAt": "2026-09-04T03:23:10.819Z",
     "scholarUrl": "https://scholar.google.com/citations?user=BRl557sAAAAJ",
     "university": "Johns Hopkins University",
     "city": "Baltimore",
@@ -3673,14 +3673,29 @@
     "phdInstitution": "Columbia University",
     "country": "United States",
     "portrait": "portraits/099-thi-vo-johns-hopkins-university.webp",
-    "portraitSource": "https://engineering.jhu.edu/chembe/wp-content/uploads/2024/02/thi-vo-300x200.jpg"
+    "portraitSource": "https://engineering.jhu.edu/chembe/wp-content/uploads/2024/02/thi-vo-300x200.jpg",
+    "websiteUrl": "https://vogroup.wse.jhu.edu/",
+    "undergradInstitution": "Rice University",
+    "undergradYear": 2012,
+    "undergradMajor": "Chemical and Biomolecular Engineering",
+    "postdocInstitution": "University of Michigan",
+    "postdocYear": 2022,
+    "honors": [
+      {
+        "name": "DOE Office of Science Early Career Research Program Award",
+        "year": 2024,
+        "category": "career_award",
+        "organization": "U.S. Department of Energy",
+        "source": "https://engineering.jhu.edu/chembe/news/thi-vo-receives-u-s-department-of-energy-award/"
+      }
+    ]
   },
   {
     "id": "vp-0100",
     "name": "Nhat Ho",
     "vietnameseName": "Hồ Nhật",
     "profileUrl": "https://stat.utexas.edu/directory/nhat-ho",
-    "lastUpdatedAt": "2026-08-26T05:16:16.000Z",
+    "lastUpdatedAt": "2026-09-04T03:23:10.819Z",
     "scholarUrl": "https://scholar.google.com/citations?user=Xs7cKMwAAAAJ",
     "university": "The University of Texas at Austin",
     "city": "Austin",
@@ -3706,14 +3721,15 @@
       }
     ],
     "portrait": "portraits/099-nhat-ho-the-university-of-texas-at-austin.webp",
-    "portraitSource": "https://directory.cns.utexas.edu/sites/default/files/2023-01/21SDS_Profilepage_Faculty_Ho_1-1_2400X2400.png"
+    "portraitSource": "https://directory.cns.utexas.edu/sites/default/files/2023-01/21SDS_Profilepage_Faculty_Ho_1-1_2400X2400.png",
+    "websiteUrl": "https://nhatptnk8912.github.io/"
   },
   {
     "id": "vp-0101",
     "name": "Kayla Nguyen",
     "vietnameseName": "Nguyễn Kayla",
     "profileUrl": "https://cas.uoregon.edu/directory/physics/all/kxn",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "lastUpdatedAt": "2026-09-04T03:23:10.819Z",
     "scholarUrl": "https://scholar.google.com/citations?hl=en&user=RTvzFSYAAAAJ",
     "university": "University of Oregon",
     "city": "Eugene",
@@ -3746,14 +3762,17 @@
       }
     ],
     "portrait": "portraits/101-kayla-nguyen-university-of-oregon.webp",
-    "portraitSource": "https://cas.uoregon.edu/sites/default/files/uo_profiles/kxn_cas_db23a4.png"
+    "portraitSource": "https://cas.uoregon.edu/sites/default/files/uo_profiles/kxn_cas_db23a4.png",
+    "undergradInstitution": "University of California, Santa Barbara",
+    "undergradYear": 2011,
+    "undergradMajor": "Physics"
   },
   {
     "id": "vp-0102",
     "name": "James Huynh",
     "vietnameseName": "Huỳnh James",
-    "profileUrl": "https://thejameshuynh.com/",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "profileUrl": "https://sph.umich.edu/faculty-profiles/huynh-james.html",
+    "lastUpdatedAt": "2026-09-04T03:23:10.819Z",
     "scholarUrl": "https://scholar.google.com/citations?user=bt26kFYAAAAJ",
     "university": "University of Michigan",
     "city": "Ann Arbor",
@@ -3768,11 +3787,24 @@
     "rank": "Assistant Professor",
     "phdInstitution": "University of California, Los Angeles",
     "country": "United States",
-    "phdYear": 2015,
+    "phdYear": 2024,
     "undergradInstitution": "Stanford University",
     "undergradYear": 2015,
     "portrait": "portraits/100-james-huynh-university-of-michigan.webp",
-    "portraitSource": "https://thejameshuynh.com/wp-content/uploads/2023/08/huynh-um-sph-small-file-1.jpg?w=1024"
+    "portraitSource": "https://thejameshuynh.com/wp-content/uploads/2023/08/huynh-um-sph-small-file-1.jpg?w=1024",
+    "websiteUrl": "https://thejameshuynh.com/",
+    "phdMajor": "Community Health Sciences",
+    "msInstitution": "University of California, Los Angeles",
+    "msYear": 2019,
+    "msMajor": "Asian American Studies",
+    "otherDegrees": [
+      {
+        "degree": "MPH",
+        "institution": "University of California, Los Angeles",
+        "year": 2019,
+        "major": "Community Health Sciences"
+      }
+    ]
   },
   {
     "id": "vp-0103",
@@ -3813,7 +3845,7 @@
     "name": "Phong Nguyen - University of Virginia",
     "vietnameseName": "Nguyễn Phong",
     "profileUrl": "https://datascience.virginia.edu/people/phong-nguyen",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "lastUpdatedAt": "2026-09-04T03:23:10.819Z",
     "scholarUrl": "https://scholar.google.com/citations?user=dTI5u5wAAAAJ",
     "university": "University of Virginia",
     "city": "Charlottesville",
@@ -3830,15 +3862,16 @@
     "phdInstitution": "Chung-Ang University",
     "country": "United States",
     "portrait": "portraits/104-phong-nguyen-university-of-virginia.webp",
-    "portraitSource": "https://api.dsi.virginia.edu/sites/default/files/styles/square_md/public/headshots/people/2022-09/PhongNguyen02-crop.png"
+    "portraitSource": "https://api.dsi.virginia.edu/sites/default/files/styles/square_md/public/headshots/people/2022-09/PhongNguyen02-crop.png",
+    "phdMajor": "Mechanical Engineering"
   },
   {
     "id": "vp-0105",
     "name": "Tran B. Nguyen",
     "vietnameseName": "Nguyễn B. Tran",
-    "profileUrl": "https://nguyenlab.ucdavis.edu/about-pi",
+    "profileUrl": "https://www.etox.ucdavis.edu/people/tran-nguyen",
     "scholarUrl": "https://scholar.google.com/citations?user=wzwqzhQAAAAJ&hl=en",
-    "lastUpdatedAt": "2026-09-02T02:43:53.000Z",
+    "lastUpdatedAt": "2026-09-04T03:23:10.819Z",
     "university": "University of California, Davis",
     "city": "Davis",
     "state": "California",
@@ -3854,14 +3887,43 @@
     "phdInstitution": "University of California, Irvine",
     "country": "United States",
     "portrait": "portraits/105-tran-b-nguyen-university-of-california-davis.webp",
-    "portraitSource": "http://internal.metro.ucdavis.edu/profiles/images/6743_nguyen.jpg"
+    "portraitSource": "http://internal.metro.ucdavis.edu/profiles/images/6743_nguyen.jpg",
+    "websiteUrl": "https://nguyenlab.ucdavis.edu/about-pi",
+    "undergradInstitution": "University of Southern California",
+    "undergradYear": 2007,
+    "undergradMajor": "Chemistry",
+    "postdocInstitution": "California Institute of Technology",
+    "postdocYear": 2015,
+    "honors": [
+      {
+        "name": "NSF CAREER Award",
+        "year": 2021,
+        "category": "career_award",
+        "organization": "National Science Foundation",
+        "source": "https://cpo.noaa.gov/meet-our-scientists-tran-nguyen/"
+      },
+      {
+        "name": "Kenneth T. Whitby Award",
+        "year": 2022,
+        "category": "major_award",
+        "organization": "American Association for Aerosol Research",
+        "source": "https://www.aaar.org/awards/annual-awards/kenneth-t-whitby-award/"
+      },
+      {
+        "name": "Presidential Early Career Award for Scientists and Engineers (PECASE)",
+        "year": 2025,
+        "category": "career_award",
+        "organization": "White House Office of Science and Technology Policy",
+        "source": "https://aggiehero.ucdavis.edu/news/pecase-1"
+      }
+    ]
   },
   {
     "id": "vp-0106",
     "name": "Trieu Le",
     "vietnameseName": "Lê Triều",
     "profileUrl": "https://www.utoledo.edu/nsm/mathstats/faculty-staff/trieu-le/",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "lastUpdatedAt": "2026-09-04T03:23:10.819Z",
     "scholarUrl": "https://scholar.google.com/citations?user=0Gx8LmsAAAAJ",
     "university": "University of Toledo",
     "city": "Toledo",
@@ -3877,7 +3939,10 @@
     "phdInstitution": "University at Buffalo",
     "country": "United States",
     "portrait": "portraits/106-trieu-le-university-of-toledo.webp",
-    "portraitSource": "https://www.utoledo.edu/nsm/mathstats/faculty-staff/images/trieu-le-10262015-3215.jpg"
+    "portraitSource": "https://www.utoledo.edu/nsm/mathstats/faculty-staff/images/trieu-le-10262015-3215.jpg",
+    "undergradInstitution": "University of Science, Ho Chi Minh City",
+    "undergradYear": 2001,
+    "undergradMajor": "Mathematics"
   },
   {
     "id": "vp-0107",
@@ -3913,8 +3978,8 @@
     "id": "vp-0108",
     "name": "Huy Tai Ha",
     "vietnameseName": "Hà Tài Huy",
-    "profileUrl": "https://www.math.tulane.edu/~tai/",
-    "lastUpdatedAt": "2026-08-24T04:46:20.000Z",
+    "profileUrl": "https://sse.tulane.edu/tai-huy-ha",
+    "lastUpdatedAt": "2026-09-04T03:23:10.819Z",
     "scholarUrl": "https://scholar.google.com/citations?user=1qqEPYYAAAAJ",
     "university": "Tulane University",
     "city": "New Orleans",
@@ -3933,7 +3998,11 @@
     "portrait": "portraits/108-huy-tai-ha-tulane-university.webp",
     "portraitSource": "https://www.math.tulane.edu/~tai/Tai2022.jpg",
     "undergradInstitution": "Curtin University of Technology",
-    "undergradYear": 1996
+    "undergradYear": 1996,
+    "websiteUrl": "https://www.math.tulane.edu/~tai/",
+    "postdocInstitution": "University of Missouri",
+    "postdocYear": 2004,
+    "undergradMajor": "Mathematics"
   },
   {
     "id": "vp-0109",
@@ -4080,8 +4149,8 @@
     "id": "vp-0114",
     "name": "Chanh Kieu",
     "vietnameseName": "Chanh Kiều",
-    "profileUrl": "https://ckieu.pages.iu.edu/",
-    "lastUpdatedAt": "2026-08-26T05:16:16.000Z",
+    "profileUrl": "https://earth.indiana.edu/directory/faculty/kieu-chanh.html",
+    "lastUpdatedAt": "2026-09-04T03:23:10.819Z",
     "scholarUrl": "https://scholar.google.com/citations?user=OGXqC3MAAAAJ",
     "university": "Indiana University Bloomington",
     "city": "Bloomington",
@@ -4110,8 +4179,11 @@
     "portraitSource": "https://ckieu.pages.iu.edu/images/tc.png",
     "msInstitution": "University of Maryland",
     "msYear": 2005,
-    "undergradInstitution": "Vietnam National University",
-    "undergradYear": 2003
+    "undergradInstitution": "Vietnam National University, Hanoi",
+    "undergradYear": 2003,
+    "websiteUrl": "https://ckieu.pages.iu.edu/",
+    "msMajor": "Atmospheric and Oceanic Science",
+    "phdMajor": "Atmospheric and Oceanic Science"
   },
   {
     "id": "vp-0115",
@@ -4196,7 +4268,7 @@
     "name": "Helen Nguyen",
     "vietnameseName": "Nguyễn Helen",
     "profileUrl": "https://cee.illinois.edu/directory/profile/thn",
-    "lastUpdatedAt": "2026-08-26T05:16:16.000Z",
+    "lastUpdatedAt": "2026-09-04T03:23:10.819Z",
     "scholarUrl": "https://scholar.google.com/citations?user=-iqhJgQAAAAJ",
     "university": "University of Illinois Urbana-Champaign",
     "city": "Urbana",
@@ -4225,15 +4297,24 @@
         "category": "distinguished_professorship",
         "organization": "University of Illinois Urbana-Champaign",
         "source": "https://cee.illinois.edu/directory/profile/thn"
+      },
+      {
+        "name": "NSF CAREER Award",
+        "year": 2010,
+        "category": "career_award",
+        "organization": "National Science Foundation",
+        "source": "https://www.aiche.org/community/bio/thanh-huong-nguyen"
       }
-    ]
+    ],
+    "postdocInstitution": "Yale University",
+    "postdocYear": 2006
   },
   {
     "id": "vp-0118",
     "name": "Thang Pham",
     "vietnameseName": "Phạm Thắng",
     "profileUrl": "https://mse.vt.edu/faculty-staff/Faculty/thangpham.html",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "lastUpdatedAt": "2026-09-04T03:23:10.819Z",
     "scholarUrl": "https://scholar.google.com/citations?user=nUDYpcAAAAAJ",
     "university": "Virginia Tech",
     "city": "Blacksburg",
@@ -4252,14 +4333,19 @@
     "undergradInstitution": "Hanoi University of Technology , Vietnam",
     "undergradYear": 2011,
     "portrait": "portraits/119-thang-pham-virginia-tech.webp",
-    "portraitSource": "https://mse.vt.edu/content/mse_vt_edu/en/faculty-staff/Faculty/thangpham/_jcr_content/image.transform/l-medium/image.jpg"
+    "portraitSource": "https://mse.vt.edu/content/mse_vt_edu/en/faculty-staff/Faculty/thangpham/_jcr_content/image.transform/l-medium/image.jpg",
+    "msInstitution": "University of California, Berkeley",
+    "msYear": 2014,
+    "postdocInstitution": "Northwestern University",
+    "postdocYear": 2024,
+    "websiteUrl": "https://sites.google.com/view/nanoqm/home"
   },
   {
     "id": "vp-0119",
     "name": "Quan Nguyen",
     "vietnameseName": "Nguyễn Quân",
     "profileUrl": "https://viterbi.usc.edu/directory/faculty/Nguyen/Quan",
-    "lastUpdatedAt": "2026-08-30T05:30:30.296Z",
+    "lastUpdatedAt": "2026-09-04T03:23:10.819Z",
     "university": "University of Southern California",
     "city": "Los Angeles",
     "state": "California",
@@ -4280,7 +4366,9 @@
     "undergradInstitution": "Hanoi University of Science and Technology Hanoi",
     "undergradYear": 2012,
     "scholarUrl": "https://scholar.google.com/citations?user=s5_69i0AAAAJ&hl=en",
-    "postdocInstitution": "Massachusetts Institute of Technology"
+    "postdocInstitution": "Massachusetts Institute of Technology",
+    "websiteUrl": "https://sites.usc.edu/quann/",
+    "postdocYear": 2019
   },
   {
     "id": "vp-0120",
@@ -4460,7 +4548,7 @@
     "name": "Nam T. Dinh",
     "vietnameseName": "Đinh T. Nam",
     "profileUrl": "https://ne.ncsu.edu/directory/ntdinh/",
-    "lastUpdatedAt": "2026-08-30T05:06:15.410Z",
+    "lastUpdatedAt": "2026-09-04T03:23:10.819Z",
     "scholarUrl": "https://scholar.google.com/citations?user=k66mpoIAAAAJ",
     "university": "North Carolina State University",
     "city": "Raleigh",
@@ -4483,6 +4571,13 @@
         "category": "distinguished_professorship",
         "organization": "North Carolina State University",
         "source": "https://ne.ncsu.edu/directory/ntdinh/"
+      },
+      {
+        "name": "Fellow of the American Nuclear Society",
+        "year": 2013,
+        "category": "fellow",
+        "organization": "American Nuclear Society",
+        "source": "https://engr.ncsu.edu/news/2013/10/17/dinh-named-fellow-of-american-nuclear-society/"
       }
     ],
     "undergradInstitution": "Moscow Power Engineering Institute",
@@ -4692,8 +4787,8 @@
     "id": "vp-0130",
     "name": "Hung V.-T. Nguyen",
     "vietnameseName": "Nguyễn V.-T. Hung",
-    "profileUrl": "https://sites.dartmouth.edu/nguyen-group/",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "profileUrl": "https://engineering.dartmouth.edu/community/faculty/hung-nguyen",
+    "lastUpdatedAt": "2026-09-04T03:23:10.819Z",
     "scholarUrl": "https://scholar.google.com/citations?user=zRJXPCMAAAAJ",
     "university": "Dartmouth College",
     "city": "Hanover",
@@ -4710,7 +4805,11 @@
     "phdInstitution": "Massachusetts Institute of Technology",
     "country": "United States",
     "portrait": "portraits/131-hung-v-t-nguyen-dartmouth-college.webp",
-    "portraitSource": "https://sites.dartmouth.edu/nguyen-group/files/2024/04/HUNG-V.-T.-NGUYEN-9da34b1489dc6f0c.jpeg"
+    "portraitSource": "https://sites.dartmouth.edu/nguyen-group/files/2024/04/HUNG-V.-T.-NGUYEN-9da34b1489dc6f0c.jpeg",
+    "websiteUrl": "https://sites.dartmouth.edu/nguyen-group/",
+    "undergradInstitution": "University of North Carolina at Chapel Hill",
+    "undergradYear": 2013,
+    "undergradMajor": "Chemistry"
   },
   {
     "id": "vp-0131",
@@ -4899,8 +4998,8 @@
     "id": "vp-0134",
     "name": "Vinh Nguyen - Michigan Technological University",
     "vietnameseName": "Nguyễn Vinh",
-    "profileUrl": "https://sites.google.com/mtu.edu/vinh-nguyen",
-    "lastUpdatedAt": "2026-08-31T15:04:06.003Z",
+    "profileUrl": "https://www.mtu.edu/mechanical-aerospace/people/faculty/nguyen/",
+    "lastUpdatedAt": "2026-09-04T03:23:10.819Z",
     "scholarUrl": "https://scholar.google.com/citations?user=nmpd1SkAAAAJ",
     "university": "Michigan Technological University",
     "city": "Houghton",
@@ -4912,11 +5011,12 @@
     ],
     "track": "Tenure-line",
     "department": "Mechanical and Aerospace Engineering",
-    "rank": "Associate Professor",
+    "rank": "Assistant Professor",
     "phdInstitution": "Georgia Institute of Technology",
     "country": "United States",
     "portrait": "portraits/135-vinh-nguyen-michigan-technological-university.webp",
-    "portraitSource": "https://sites.google.com/mtu.edu/vinh-nguyen"
+    "portraitSource": "https://sites.google.com/mtu.edu/vinh-nguyen",
+    "websiteUrl": "https://sites.google.com/mtu.edu/vinh-nguyen"
   },
   {
     "id": "vp-0135",
@@ -5176,8 +5276,8 @@
     "id": "vp-0143",
     "name": "Giang Nguyen",
     "vietnameseName": "Nguyễn Giang",
-    "profileUrl": "http://sites.google.com/site/ghn8888",
-    "lastUpdatedAt": "2026-08-24T04:18:46.000Z",
+    "profileUrl": "https://directory.smeal.psu.edu/gxn13",
+    "lastUpdatedAt": "2026-09-04T03:23:10.819Z",
     "scholarUrl": "https://scholar.google.com/citations?user=UTWwGKoAAAAJ&hl=en",
     "university": "Pennsylvania State University",
     "city": "University Park",
@@ -5194,7 +5294,8 @@
     "phdInstitution": "University of North Carolina at Chapel Hill",
     "country": "United States",
     "portrait": "portraits/144-giang-nguyen-pennsylvania-state-university.webp",
-    "portraitSource": "https://media.smeal.psu.edu/content_php/directory/photos/gxn13-web.jpg"
+    "portraitSource": "https://media.smeal.psu.edu/content_php/directory/photos/gxn13-web.jpg",
+    "websiteUrl": "http://sites.google.com/site/ghn8888"
   },
   {
     "id": "vp-0144",
@@ -5370,7 +5471,7 @@
     "vietnameseName": "Pham Nguyễn",
     "profileUrl": "https://www.monmouth.edu/directory/profiles/npham/",
     "scholarUrl": "https://scholar.google.com/citations?user=n2s5WuQAAAAJ&hl=en",
-    "lastUpdatedAt": "2026-09-02T02:51:42.000Z",
+    "lastUpdatedAt": "2026-09-04T03:23:10.819Z",
     "university": "Monmouth University",
     "city": "West Long Branch",
     "state": "New Jersey",
@@ -5386,9 +5487,15 @@
     "rank": "Associate Professor",
     "phdInstitution": "Arizona State University",
     "country": "United States",
-    "undergradInstitution": "Rutgers University",
+    "undergradInstitution": "Vietnam National University",
     "portrait": "portraits/151-nguyen-pham-monmouth-university.webp",
-    "portraitSource": "https://www.monmouth.edu/directory/wp-content/uploads/sites/476/2019/08/Pham-Nguyen-2.jpg"
+    "portraitSource": "https://www.monmouth.edu/directory/wp-content/uploads/sites/476/2019/08/Pham-Nguyen-2.jpg",
+    "otherDegrees": [
+      {
+        "degree": "MBA",
+        "institution": "Rutgers University"
+      }
+    ]
   },
   {
     "id": "vp-0151",
