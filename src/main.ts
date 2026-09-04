@@ -432,12 +432,10 @@ interface LeaderboardLabels {
   descPhd?: string;
 }
 
-function renderLeaderboards(subRoster: Roster, { titleUni = 'Top Faculty Hubs', descUni = 'Universities with the most Vietnamese faculty; click to search.', titlePhd = 'Top PhD Alma Maters', descPhd = 'Doctoral institutions that trained the most faculty; click to search.' }: LeaderboardLabels = {}): string {
-  const topUnis = buildTopUniversities(subRoster, 6);
-  const topPhd = buildTopPhdInstitutions(subRoster, 6);
-  if (topUnis.length === 0 && topPhd.length === 0) return '';
+function renderTopFacultyHubs(subRoster: Roster, title = 'Top Faculty Hubs', desc = 'Universities with the most Vietnamese faculty; click to search.'): string {
+  const topUnis = buildTopUniversities(subRoster, 8);
+  if (!topUnis.length) return '';
   const maxUni = topUnis[0] ? topUnis[0][1] : 1;
-  const maxPhd = topPhd[0] ? topPhd[0][1] : 1;
 
   const uniRows = topUnis
     .map(([uni, count], idx) => {
@@ -454,41 +452,18 @@ function renderLeaderboards(subRoster: Roster, { titleUni = 'Top Faculty Hubs', 
     })
     .join('');
 
-  const phdRows = topPhd
-    .map(([inst, count], idx) => {
-      const pct = Math.round((count / maxPhd) * 100);
-      return `
-        <button type="button" class="ranked-item" data-search="${escapeHtml(inst)}" data-scope="phd" title="Search faculty from ${escapeHtml(inst)}">
-          <div class="ranked-header">
-            <span class="ranked-name"><span class="ranked-num">${idx + 1}.</span> ${escapeHtml(inst)}</span>
-            <span class="ranked-count">${count}</span>
-          </div>
-          <div class="ranked-track"><div class="ranked-bar" style="width: ${pct}%;"></div></div>
-        </button>
-      `;
-    })
-    .join('');
-
   return `
-    <div class="insights-grid">
-      <div class="insights-card">
-        <h3 class="insights-heading">${escapeHtml(titleUni)}</h3>
-        <p class="insights-caption">${escapeHtml(descUni)}</p>
-        <div class="ranked-list">${uniRows}</div>
-      </div>
-      <div class="insights-card">
-        <h3 class="insights-heading">${escapeHtml(titlePhd)}</h3>
-        <p class="insights-caption">${escapeHtml(descPhd)}</p>
-        <div class="ranked-list">${phdRows}</div>
-      </div>
+    <div class="insights-section">
+      <h3 class="insights-heading">${escapeHtml(title)}</h3>
+      <p class="insights-caption">${escapeHtml(desc)}</p>
+      <div class="ranked-list">${uniRows}</div>
     </div>
   `;
 }
 
-// Shared renderer for the field / career-stage / country breakdown bars: same visual language
-// as renderLeaderboards' ranked bars, but clicking sets a dropdown/location filter directly
-// (via data-filter/data-value) instead of running a scoped search.
-function renderFilterBreakdown(counts: [string, number][], { title, caption, filterKey, formatLabel = (v: string) => v }: { title: string; caption: string; filterKey: 'field' | 'track' | 'country'; formatLabel?: (value: string) => string }): string {
+// Shared renderer for the field / career-stage breakdown bars: same visual language
+// as ranked bars, but clicking sets a dropdown filter directly (via data-filter/data-value).
+function renderFilterBreakdown(counts: [string, number][], { title, caption, filterKey, formatLabel = (v: string) => v }: { title: string; caption: string; filterKey: 'field' | 'track'; formatLabel?: (value: string) => string }): string {
   if (!counts.length) return '';
   const total = counts.reduce((sum, [, c]) => sum + c, 0);
   const max = counts[0][1];
@@ -516,7 +491,7 @@ function renderFilterBreakdown(counts: [string, number][], { title, caption, fil
   `;
 }
 
-function renderDistributionCharts(subRoster: Roster, { includeCountry = false }: { includeCountry?: boolean } = {}): string {
+function renderDistributionCharts(subRoster: Roster): string {
   const fieldCard = renderFilterBreakdown(buildFieldCounts(subRoster), {
     title: 'By Field',
     caption: 'Broad academic field; click a bar to filter.',
@@ -527,17 +502,10 @@ function renderDistributionCharts(subRoster: Roster, { includeCountry = false }:
     caption: 'Appointment track; click a bar to filter.',
     filterKey: 'track',
   });
-  const countryCard = includeCountry
-    ? renderFilterBreakdown(buildTopCountries(subRoster, 8), {
-        title: 'By Country',
-        caption: 'Top countries by faculty count; click a bar to filter.',
-        filterKey: 'country',
-        formatLabel: (country) => `${countryFlag(country)} ${country}`,
-      })
-    : '';
-  if (!fieldCard && !trackCard && !countryCard) return '';
-  return `<div class="insights-grid">${fieldCard}${trackCard}${countryCard}</div>`;
+  if (!fieldCard && !trackCard) return '';
+  return `<div class="insights-grid">${fieldCard}${trackCard}</div>`;
 }
+
 
 function renderGrowthChart(history: StatsHistoryPoint[]): string {
   if (history.length < 2) return '';
@@ -623,10 +591,10 @@ function renderFunFacts(visibleRoster: Roster, selectedLocationLabel: string, se
         ${selectedIsUs && selectedRoster.length ? renderStateGrid(selectedRoster) : ''}
         ${!selectedIsUs && selectedRoster.length ? renderWorldCountryGrid(selectedRoster) : ''}
         ${selectedRoster.length ? renderDistributionCharts(selectedRoster) : ''}
+        ${selectedRoster.length ? renderTopFacultyHubs(selectedRoster, selectedIsUs ? 'Top U.S. Faculty Hubs' : 'Top Faculty Hubs', 'Universities with the most Vietnamese faculty in the selected location; click to search.') : ''}
         ${selectedRoster.length ? renderAlmaMaterOriginsMap(selectedRoster) : ''}
         ${selectedRoster.length ? renderAcademicFlowSummary(selectedRoster) : ''}
         ${selectedRoster.length ? renderDecadesChart(selectedRoster) : ''}
-        ${selectedRoster.length ? renderLeaderboards(selectedRoster, { titleUni: selectedIsUs ? 'Top U.S. Faculty Hubs' : 'Top Faculty Hubs', descUni: 'Universities with the most Vietnamese faculty in the selected location; click to search.', titlePhd: selectedIsUs ? 'Top U.S. PhD Alma Maters' : 'Top PhD Alma Maters', descPhd: 'Doctoral institutions that trained faculty in the selected location; click to search.' }) : ''}
         <div class="insights-section">
           <h3 class="insights-heading">${escapeHtml(selectedLabel)} Highlights</h3>
           <ul class="fun-facts">${formatList([...selectedFacts, ...selectedAwardsFacts])}</ul>
@@ -646,12 +614,12 @@ function renderFunFacts(visibleRoster: Roster, selectedLocationLabel: string, se
           <p class="insights-main-desc">${fullRoster.length} people across ${worldUniversities} universities in the World.</p>
         </div>
         ${renderWorldCountryGrid(fullRoster)}
-        ${renderDistributionCharts(fullRoster, { includeCountry: true })}
+        ${renderDistributionCharts(fullRoster)}
+        ${worldInternationalRoster.length ? renderTopFacultyHubs(worldInternationalRoster, 'Top International Faculty Hubs', 'Global universities outside the U.S. with the most Vietnamese faculty; click to search.') : ''}
         ${renderAlmaMaterOriginsMap(fullRoster)}
         ${renderAcademicFlowSummary(fullRoster)}
         ${renderGrowthChart(statsHistory)}
         ${renderDecadesChart(fullRoster)}
-        ${worldInternationalRoster.length ? renderLeaderboards(worldInternationalRoster, { titleUni: 'Top International Faculty Hubs', descUni: 'Global universities outside the U.S. with the most Vietnamese faculty; click to search.', titlePhd: 'Top International PhD Alma Maters', descPhd: 'Doctoral institutions that trained global faculty; click to search.' }) : ''}
         <div class="insights-section">
           <h3 class="insights-heading">World Highlights</h3>
           <ul class="fun-facts">${formatList([...worldFacts, ...worldAwardsFacts])}</ul>
