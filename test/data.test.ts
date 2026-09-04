@@ -386,6 +386,20 @@ test('filterRoster narrows by track and "all" leaves it unfiltered', () => {
   assert.equal(omitted.length, roster.length);
 });
 
+test('institution type is searchable and independently filterable', () => {
+  const instituteEntry = {
+    ...roster[0],
+    id: 'vp-99999',
+    name: 'Synthetic Institute Researcher',
+    university: 'Example Research Institute',
+    institutionType: 'Independent nonprofit research institute',
+    track: 'Research',
+  };
+  const sample = [roster[0], instituteEntry];
+  assert.deepEqual(filterRoster(sample, { institutionType: 'Independent nonprofit research institute' }), [instituteEntry]);
+  assert.deepEqual(filterRoster(sample, { query: 'nonprofit research institute', searchScope: 'institution' }), [instituteEntry]);
+});
+
 test('duplicate-name university suffixes are hidden from display', () => {
   assert.equal(displayName('Chi Nguyen - University of Arizona'), 'Chi Nguyen');
   assert.equal(displayName('Chi L. Nguyen'), 'Chi L. Nguyen');

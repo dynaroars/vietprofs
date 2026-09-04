@@ -15,7 +15,8 @@
 // This gives free `loc==1 & econ==1` filtering that would otherwise require a manual
 // surname/given-name web-search sweep (see ROSTER_MAINTENANCE.md's "Research workflow"). It is
 // still only a source of unverified leads: each candidate still needs the full inclusion-standard
-// verification (current university appointment, track, official source) before being added.
+// verification (current eligible academic appointment, track, institution type, official source)
+// before being added.
 //
 // Usage: ./scripts/extract-hieuphay-leads.ts
 // Writes/updates maintenance/hieuphay-leads.json, preserving the status of any lead already
@@ -60,22 +61,28 @@ function b64ToUint32(s: string): number[] {
   return out;
 }
 
-// Institution strings that indicate a non-university employer (hospitals, government agencies,
-// central banks, NGOs, think tanks, companies). A university-track roster addition needs a
-// current university appointment, so these are filtered out at the lead stage rather than left
-// for every downstream verifier to re-notice.
+// Institution strings that indicate an ineligible employer (hospitals without an academic
+// appointment, government agencies, central banks, NGOs, think tanks, and companies). Eligible
+// public/nonprofit scholarly institutes are recognized first; every lead still needs individual
+// permanence and faculty-equivalence verification.
 const NON_UNI_HINTS = [
   'world bank', 'oecd', 'organisation de coop', 'united states', 'u.s.', 'federal reserve',
   'census bureau', 'food and drug', 'hospital', 'clinic', 'bank of', 'imf',
   'international monetary', 'ministry', 'national bureau of economic research',
-  'centre national de la recherche', 'cnrs', 'institute of', 'ird', 'ihe', 'embassy',
+  'institute of', 'embassy',
   'consult', 'inc.', 'corp', 'company', 'llc', 'ltd', 'foundation', 'ngo ', 'ngo(',
   'unesco', 'unicef', 'who ', 'asian development bank', 'motu economic',
 ];
 
-function looksLikeUniversity(inst: string): boolean {
+const ELIGIBLE_RESEARCH_INSTITUTE_HINTS = [
+  'centre national de la recherche', 'cnrs', 'inria', 'institut national de recherche',
+  'max planck', 'academia sinica', 'allen institute', 'broad institute', 'janelia',
+];
+
+function looksLikeEligibleInstitution(inst: string): boolean {
   if (!inst) return false;
   const low = inst.toLowerCase();
+  if (ELIGIBLE_RESEARCH_INSTITUTE_HINTS.some((hint) => low.includes(hint))) return true;
   if (NON_UNI_HINTS.some((h) => low.includes(h))) return false;
   return (
     low.includes('university') ||
@@ -144,7 +151,7 @@ async function main() {
   for (let i = 0; i < table.n; i++) {
     if (loc[i] !== 1 || econ[i] !== 1) continue; // diaspora abroad, economics-focused only
     const inst = table.instDict[instIdx[i]] ?? '';
-    if (!looksLikeUniversity(inst)) continue;
+    if (!looksLikeEligibleInstitution(inst)) continue;
     const name = names[i];
 
     const key = `${name}|${inst}`;
@@ -180,7 +187,8 @@ async function main() {
     datasetBuilt: payload.meta?.built,
     method:
       'loc==1 (diaspora abroad) & econ==1 (economics-focused) from the site\'s own name/location ' +
-      'classifier, filtered to institution strings that look like a university, deduplicated ' +
+      'classifier, filtered to institution strings that look like an eligible university or ' +
+      'public/nonprofit scholarly research institute, deduplicated ' +
       'against public/data.json by order-independent name-token match. Sorted by citation count ' +
       'descending as a rough proxy for verification priority. See ROSTER_MAINTENANCE.md\'s ' +
       '"hieuphay.com lead queue" section for the resumable review workflow.',

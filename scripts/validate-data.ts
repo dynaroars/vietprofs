@@ -3,6 +3,7 @@ import { resolve } from 'node:path';
 import {
   HONOR_CATEGORIES,
   HONOR_FIELDS,
+  INSTITUTION_TYPES,
   OTHER_DEGREE_FIELDS,
   REQUIRED_ROSTER_STRINGS,
   ROSTER_FIELDS,
@@ -14,6 +15,7 @@ import { looksSurnameFirst } from '../src/data.ts';
 const rosterFile = resolve('public/data.json');
 const verificationFile = resolve('maintenance/verification.json');
 const allowedTracks = new Set<string>(TRACKS);
+const allowedInstitutionTypes = new Set<string>(INSTITUTION_TYPES);
 const allowedHonorCategories = new Set<string>(HONOR_CATEGORIES);
 const allowedRosterFields = new Set<string>(ROSTER_FIELDS);
 const allowedHonorFields = new Set<string>(HONOR_FIELDS);
@@ -141,6 +143,12 @@ for (const [index, person] of roster.entries()) {
     }
   }
   if (!allowedTracks.has(person.track)) fail(rosterFile, `${label} has unsupported track ${person.track}`);
+  if (person.institutionType !== undefined && !allowedInstitutionTypes.has(person.institutionType)) {
+    fail(rosterFile, `${label} has unsupported institutionType ${person.institutionType}`);
+  }
+  if (person.institutionType !== undefined && person.institutionType !== 'University' && person.track !== 'Research') {
+    fail(rosterFile, `${label} non-university institutionType requires the Research track`);
+  }
   if (!Array.isArray(person.researchAreas) || person.researchAreas.length === 0) fail(rosterFile, `${label} needs researchAreas`);
   if (person.state !== undefined && typeof person.state !== 'string') fail(rosterFile, `${label} state must be a string`);
   if (person.country !== undefined && typeof person.country !== 'string') fail(rosterFile, `${label} country must be a string`);

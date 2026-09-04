@@ -48,7 +48,7 @@ import process from 'node:process';
 import { fileURLToPath } from 'node:url';
 import { isDeepStrictEqual } from 'node:util';
 import { FIELDS, fieldOf, type Roster, type RosterEntry } from '../src/data.ts';
-import { HONOR_CATEGORIES, HONOR_FIELDS, OTHER_DEGREE_FIELDS, ROSTER_FIELDS, TRACKS } from '../src/roster-constants.ts';
+import { HONOR_CATEGORIES, HONOR_FIELDS, INSTITUTION_TYPES, OTHER_DEGREE_FIELDS, ROSTER_FIELDS, TRACKS } from '../src/roster-constants.ts';
 
 const SCRIPT_PATH = fileURLToPath(import.meta.url);
 const REPO_ROOT = resolve(dirname(SCRIPT_PATH), '..');
@@ -571,6 +571,8 @@ export function proposalValidationError(proposal: JsonRecord): string | null {
   if (!/^https?:\/\//.test(proposal.profileUrl)) return 'proposal profileUrl must use HTTP(S)';
   if (!Array.isArray(proposal.researchAreas) || proposal.researchAreas.length === 0 || proposal.researchAreas.some((area) => typeof area !== 'string' || !area.trim())) return 'proposal needs valid researchAreas';
   if (!TRACKS.includes(proposal.track)) return 'proposal has unsupported track';
+  if (proposal.institutionType !== undefined && !INSTITUTION_TYPES.includes(proposal.institutionType)) return 'proposal has unsupported institutionType';
+  if (proposal.institutionType !== undefined && proposal.institutionType !== 'University' && proposal.track !== 'Research') return 'proposal non-university institutionType requires the Research track';
   if (proposal.websiteUrl !== undefined && proposal.websiteUrl === proposal.profileUrl) return 'proposal websiteUrl must differ from profileUrl';
   if (proposal.websiteUrl !== undefined && !/^https?:\/\//.test(proposal.websiteUrl)) return 'proposal websiteUrl must use HTTP(S)';
   if (proposal.scholarUrl !== undefined && !/^https:\/\//.test(proposal.scholarUrl)) return 'proposal scholarUrl must use HTTPS';
@@ -937,10 +939,11 @@ ${JSON.stringify(baseline, null, 2)}
 
 Read AGENTS.md, README.md, and ROSTER_MAINTENANCE.md completely. Use live authoritative sources
 to perform the entire periodic verification: identity and Vietnamese-diaspora eligibility,
-current primary university appointment, department, rank/track, official profile URL,
+current primary academic or eligible research-institute appointment, institution type, department
+or research unit, rank/track, official profile URL,
 personal/lab website, portrait and portrait source, and continued inclusion
 eligibility. Audit both stored URL fields independently: fetch profileUrl and websiteUrl when
-present, identify which live page is the official university/department profile and which is the
+present, identify which live page is the official institutional profile and which is the
 maintained personal or lab homepage, and correct swapped values. If only one usable page exists,
 place it in the appropriate field and omit the other. A reachable URL is not enough; verify its
 role and that it identifies this person. Search for a Google Scholar profile even if scholarUrl is missing, verify identity
@@ -981,14 +984,14 @@ ${JSON.stringify(current.proposal, null, 2)}
 
 Read ROSTER_MAINTENANCE.md and independently browse live authoritative sources. Distrust the first
 review until you confirm identity, eligibility, current primary appointment, department,
-rank/track, official profile, personal/lab URLs, portrait and source, every
+rank/track, institution type, official profile, personal/lab URLs, portrait and source, every
 documented degree/major/graduation year, completed postdoctoral institution,
 and any explicitly documented end/completion year, honors eligibility (including that each stored
 honor is a faculty-level distinction, not a dissertation award/fellowship or other student/trainee
 award), and every proposed change. Approve only when the
 complete verification standard is satisfied and the normalized proposal is correct.
 Pay special attention to URL-role errors: independently verify that profileUrl is the official
-university/department profile and websiteUrl, when present, is a maintained personal or lab site;
+institutional profile and websiteUrl, when present, is a maintained personal or lab site;
 if only one exists, ensure it is stored in the correct field rather than copying it into both.
 Independently search for and identity-check Google Scholar when missing or changed; confirm that a
 verified Scholar URL is stored only in scholarUrl.

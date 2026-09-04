@@ -58,7 +58,7 @@ function profilePage(person: RosterEntry) {
     ? `<section><h2>Selected honors</h2><ul>${person.honors.map((honor) => `<li><a href="${escapeHtml(honor.source || '#')}">${escapeHtml(honor.name)}${honor.year ? ` (${honor.year})` : ''}</a></li>`).join('')}</ul></section>`
     : '';
   const links = [
-    person.profileUrl && ['Official university profile', person.profileUrl],
+    person.profileUrl && [person.institutionType && person.institutionType !== 'University' ? 'Official institution profile' : 'Official university profile', person.profileUrl],
     person.websiteUrl && ['Personal or lab website', person.websiteUrl],
     person.scholarUrl && ['Google Scholar', person.scholarUrl],
   ].filter(Boolean) as [string, string][];
@@ -107,9 +107,9 @@ function profilePage(person: RosterEntry) {
   <header><a class="eyebrow" href="../"><img class="brand-logo" src="../vietprofs-bamboo-v.svg" alt="" width="32" height="32">VietProfs</a></header>
   <main>
     <article>
-      <div class="identity">${portrait}<div><h1>${escapeHtml(name)}</h1><p class="native">${escapeHtml(nativeName)}</p><p class="meta">${escapeHtml(role)}${locationOf(person) ? ` · ${escapeHtml(locationOf(person))}` : ''} <span class="loc-badge" title="${escapeHtml(person.country || 'United States')}"><span class="country-flag" aria-hidden="true">${countryFlag(person.country)}</span></span></p><div class="tags"><span class="tag">${escapeHtml(fieldOf(person.department, person.university))}</span><span class="tag">${escapeHtml(person.track || '')}</span></div></div></div>
+      <div class="identity">${portrait}<div><h1>${escapeHtml(name)}</h1><p class="native">${escapeHtml(nativeName)}</p><p class="meta">${escapeHtml(role)}${locationOf(person) ? ` · ${escapeHtml(locationOf(person))}` : ''} <span class="loc-badge" title="${escapeHtml(person.country || 'United States')}"><span class="country-flag" aria-hidden="true">${countryFlag(person.country)}</span></span></p><div class="tags"><span class="tag">${escapeHtml(fieldOf(person.department, person.university))}</span><span class="tag">${escapeHtml(person.track || '')}</span>${person.institutionType && person.institutionType !== 'University' ? `<span class="tag">${escapeHtml(person.institutionType)}</span>` : ''}</div></div></div>
       ${linkSection}<p><a class="submission-link" href="${escapeHtml(editUrl)}">Add or update info</a></p>${research}${educationSection}${honors}
-      <footer><p class="updated">Roster information last updated ${escapeHtml(formatRosterDate(person.lastUpdatedAt || ''))}.</p><p>VietProfs is a community-maintained directory. See the linked university and personal sources for the most current details.</p></footer>
+      <footer><p class="updated">Roster information last updated ${escapeHtml(formatRosterDate(person.lastUpdatedAt || ''))}.</p><p>VietProfs is a community-maintained directory. See the linked institutional and personal sources for the most current details.</p></footer>
     </article>
   </main>
 </body>

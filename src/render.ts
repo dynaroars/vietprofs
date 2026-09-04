@@ -61,6 +61,9 @@ export function renderRosterEntry(person: RosterEntry, baseUrl = '/') {
   const fieldLabel = `${fieldDropdownLabel(personField)}${healthSubfield ? ` (${healthSubfield})` : ''}`;
   const fieldTag = `<span class="tag tag-field">${escapeHtml(fieldLabel)}</span>`;
   const trackTag = `<span class="tag tag-track">${escapeHtml(person.track)}</span>`;
+  const institutionTypeTag = person.institutionType && person.institutionType !== 'University'
+    ? `<span class="tag tag-institution-type">${escapeHtml(person.institutionType)}</span>`
+    : '';
   const topicTags = (person.researchAreas ?? [])
     .map((area) => `<span class="tag tag-topic">${escapeHtml(area)}</span>`)
     .join('');
@@ -79,7 +82,8 @@ export function renderRosterEntry(person: RosterEntry, baseUrl = '/') {
     (person.mdYear || person.mdInstitution) && `MD: ${[displayUniversity(person.mdInstitution), person.mdYear].filter(Boolean).join(', ')}`,
     ...(person.otherDegrees ?? []).map((degree) => `${degree.degree}: ${[displayUniversity(degree.institution), degree.year, degree.major].filter(Boolean).join(', ')}`),
   ].filter(Boolean);
-  const profileIcon = entryIconLink({ className: 'profile-link', href: person.profileUrl, label: `${visibleName} official university profile`, title: 'Official university profile', icon: PROFILE_ICON });
+  const institutionLabel = person.institutionType && person.institutionType !== 'University' ? 'institution' : 'university';
+  const profileIcon = entryIconLink({ className: 'profile-link', href: person.profileUrl, label: `${visibleName} official ${institutionLabel} profile`, title: `Official ${institutionLabel} profile`, icon: PROFILE_ICON });
   const personalSiteIcon = person.websiteUrl
     ? entryIconLink({ className: 'personal-site-link', href: person.websiteUrl, label: `${visibleName} personal or lab website`, title: 'Personal or lab website', icon: PERSONAL_SITE_ICON })
     : '';
@@ -105,7 +109,7 @@ export function renderRosterEntry(person: RosterEntry, baseUrl = '/') {
         <div class="entry-meta">${escapeHtml(entryMeta)} <span class="loc-badge" title="${escapeHtml(person.country || 'United States')}"><span class="country-flag" aria-hidden="true">${countryFlag(person.country)}</span></span></div>
         ${educationDetails.length ? `<div class="entry-details">${educationDetails.map((value) => escapeHtml(value)).join('; ')}</div>` : ''}
         ${honors ? `<div class="entry-honors"><span class="honors-label">Honors:</span> ${honors}</div>` : ''}
-        <div class="tags">${fieldTag}${trackTag}${topicTags}</div>
+        <div class="tags">${fieldTag}${trackTag}${institutionTypeTag}${topicTags}</div>
       </div>
     </div>
   `;
