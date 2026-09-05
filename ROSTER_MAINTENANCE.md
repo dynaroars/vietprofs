@@ -39,8 +39,10 @@ Accepted tracks:
 
 Eligible non-university employers are limited to public research bodies (for example, CNRS, INRIA,
 national academies, Max Planck institutes, U.S. Department of Energy national laboratories,
-NIH intramural institutes, NIST, NASA research centers, NOAA research laboratories, and USGS
-research centers) and independent nonprofit scholarly research institutes (for example, the Allen
+NIH intramural institutes, NIST, NASA research centers, NOAA research laboratories, USGS
+research centers, the U.S. Naval Research Laboratory, Air Force Research Laboratory, and
+Army Research Laboratory/DEVCOM ARL) and independent nonprofit scholarly research institutes
+(for example, the Allen
 Institute, Broad Institute, and HHMI Janelia). University-managed or university-affiliated U.S.
 research centers such as MIT Lincoln Laboratory (an FFRDC) and Johns Hopkins Applied Physics
 Laboratory (a UARC) may also be included when the individual appointment is permanent and
@@ -50,6 +52,15 @@ comparable independent researcher rather than support staff or a trainee. Corpor
 including Microsoft Research, are excluded even when the work is scholarly. Government agencies,
 hospitals without a qualifying university appointment, think tanks, advocacy organizations, and
 other non-academic employers remain excluded.
+
+For U.S. federal laboratories, treat the laboratory itself as an eligible public research institute,
+not every person employed there as an academic. Include only career-level Staff, Senior, or
+Principal Researchers/Scientists, Principal Investigators, laboratory or branch directors, and
+comparable permanent research appointments. Exclude contractor-only personnel, postdocs, fellows,
+students, interns, visiting researchers, temporary project staff, technical or administrative staff,
+and funding-agency program officers whose role is not to conduct research. The Office of Naval
+Research (ONR), for example, is primarily a funding and program-management agency; its program
+officers are not roster entries unless they separately hold a qualifying research appointment.
 
 Exclude adjunct, visiting, postdoctoral, affiliate/courtesy, graduate teaching-assistant,
 industry-only, and other term-limited or part-time appointments. Plain `Instructor` requires
