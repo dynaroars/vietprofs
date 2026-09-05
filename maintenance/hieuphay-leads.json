@@ -2912,7 +2912,7 @@
       "npapers": 2,
       "cited": 53,
       "status": "pending",
-      "note": "Fifth session: reconfirmed the same three converging papers (JAAEA 2025, Agribusiness 2025-2026, MDPI Agriculture Mar 2026 DOI 10.3390/agriculture16060661) plus Google Scholar (scholar.google.com/citations?user=RnH55PsAAAAJ) with verified famu.edu email; located the likely official faculty page (agribusinessfamu.weebly.com/our-faculty.html) but famu.edu/cafs.famu.edu and the weebly page are still network-egress-blocked this session, so no working profileUrl, portrait, or track-defining institutional page could be verified. Left pending; evidence remains strong, needs a session with unblocked web access to finish."
+      "note": "Eighth session: reconfirmed via fresh WebSearch the same strong circumstantial evidence — two 2026 peer-reviewed papers (Agriculture MDPI vol 16 issue 6 art 661, DOI 10.3390/agriculture16060661; and Agribusiness/Wiley DOI 10.1002/agr.70098) list her as 'Agribusiness Program, College of Agriculture and Food Sciences, Florida A&M University,' co-authored with confirmed FAMU faculty member Daniel Solis. However, this session independently confirmed (via a direct WebFetch attempt and the agent-proxy status log) that famu.edu, cafs.famu.edu, and the weebly faculty page are blocked by this environment's network egress policy — the same block prior sessions hit — so no official page could be loaded to confirm exact rank, a working profileUrl, portrait, or education. No FAMU-hosted profile page for her could even be located via search (only a same-department colleague's page and the CAFS agribusiness program page surfaced). Left pending; the appointment looks real and current, but still needs a session with working access to famu.edu to finish."
     },
     {
       "name": "Quynh Anh",
@@ -5994,8 +5994,8 @@
       "country": "NL",
       "npapers": 4,
       "cited": 12,
-      "status": "pending",
-      "note": "Fifth session tried further name expansions (Diep Thi Ngoc, Dang Thi, Dinh Thi, Do Thi) and Dutch-language/THUAS-site-scoped searches (Team Data Science, Faculty of Business Finance & Marketing); still no matching staff member found. Only near-miss (Diep Thi Ngoc Nguyen, IDEAS/RePEc) traces to a Vietnam-based institution, unrelated. Very thin footprint; likely a stale or misattributed OpenAlex affiliation. Left pending for a session with direct THUAS staff-directory access."
+      "status": "excluded",
+      "note": "Seventh session: another thorough attempt (name expansions, Dutch-language and THUAS-site-scoped searches) found no matching staff member at THUAS. After 7 independent sessions with zero identification of any specific person, excluding as no verifiable faculty appointment found; likely a stale or misattributed OpenAlex affiliation."
     },
     {
       "name": "Anh Tuan Bui",
@@ -6202,8 +6202,8 @@
       "country": "US",
       "npapers": 4,
       "cited": 10,
-      "status": "pending",
-      "note": "Sixth session: still no matching person found at Utah or elsewhere; OpenAlex/Google Scholar direct access remains blocked, preventing a coauthor/title cross-check on her 2 source papers that would likely disambiguate her. Left pending."
+      "status": "excluded",
+      "note": "Seventh session: still no matching person found at Utah or elsewhere despite fresh searches of Utah econ/business/finance faculty listings and name-order variants. After 7 sessions with zero identification, excluding as no verifiable faculty appointment found; likely a stale or misattributed OpenAlex affiliation."
     },
     {
       "name": "Thuan Gia-Nhat Tran",
@@ -6211,8 +6211,8 @@
       "country": "US",
       "npapers": 2,
       "cited": 10,
-      "status": "pending",
-      "note": "Sixth session: still no matching profile found at UC Irvine or elsewhere (only unrelated ORCID near-matches); same OpenAlex/Scholar access block as Lan My Le prevents a coauthor cross-check. Left pending."
+      "status": "excluded",
+      "note": "Seventh session: no matching profile found at UC Irvine's faculty/profile systems or elsewhere; only unrelated Tran-surnamed individuals at UCI surfaced. After 7 sessions with zero identification, excluding as no verifiable faculty appointment found; likely a stale or misattributed OpenAlex affiliation."
     },
     {
       "name": "T.P. Tran",
@@ -6220,8 +6220,8 @@
       "country": "JP",
       "npapers": 2,
       "cited": 10,
-      "status": "pending",
-      "note": "Sixth session: name remains too abbreviated to resolve to a real person; Keio's Pure/k-ris systems and general search again found no matching faculty member. Left pending."
+      "status": "excluded",
+      "note": "Seventh session: name remains too abbreviated to resolve to a real person at Keio; the one 'Tran, A.T.' hit in Keio's research database works in topology (math), a field mismatch with this economics-dataset lead, and initials don't match. Excluding after repeated inability to identify any matching person."
     },
     {
       "name": "Vu Duy Thanh",
@@ -6230,7 +6230,7 @@
       "npapers": 3,
       "cited": 10,
       "status": "pending",
-      "note": "Second session: reconfirmed as the same real person (Thanh (Harris) Vu, PhD Auckland, AUT Centre for Financial Research); still no source uses a rank word beyond 'Researcher'/'Fellow', and AUT's own staff pages (academics.aut.ac.nz/harris.vu, AUT Finance Dept staff list) remain network-egress-blocked. Left pending; needs direct access to those two AUT pages to resolve rank/permanence."
+      "note": "Third session: reconfirmed the same real person, Thanh (Harris) Vu — PhD Finance, University of Auckland; AUT Centre for Financial Research (ACFR) — via WebSearch (academics.aut.ac.nz and acfr.aut.ac.nz remain blocked by this environment's network egress policy, matching prior sessions). Still no source gives a rank beyond 'Researcher'/'Fellow'; a live AUT job posting for a similar FinTech/AI-in-finance role at the time of this search was an explicitly 2-year fixed-term Postdoctoral Research Fellow position, which raises rather than resolves the concern that his role may be a term-limited research fellowship rather than a stable faculty-equivalent appointment. Left pending; needs direct access to his ACFR/academics.aut.ac.nz pages to resolve rank/permanence."
     },
     {
       "name": "Monica Tran",
@@ -6373,8 +6373,8 @@
       "country": "GB",
       "npapers": 2,
       "cited": 9,
-      "status": "pending",
-      "note": "First session: no source at all connects a Kieu Thi Hoang (or name-order variants) to Oxford in any capacity; very low footprint (cited=9, npapers=2) may reflect a scraping artifact or short-term visitor. Left pending."
+      "status": "excluded",
+      "note": "Second session: again found zero sources connecting this name (or name-order variants) to Oxford in any capacity; the only real person by this name found (Thi Kieu Anh Hoang, a UK immigration case) has no Oxford academic connection. Excluding as no verifiable faculty appointment found; the very low citation count (9) and paper count (2) is consistent with a scraping artifact."
     },
     {
       "name": "Louis L. Nguyen",
@@ -6382,7 +6382,8 @@
       "country": "US",
       "npapers": 5,
       "cited": 9,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No evidence of any Louis Nguyen faculty member at National Louis University despite searching its faculty/department directories. The only well-documented 'Louis L. Nguyen' is an Associate Professor of Surgery at Harvard Medical School / Brigham and Women's Hospital, unconnected to National Louis University. Excluding as a likely name/institution collision in the source dataset."
     },
     {
       "name": "Hung Tran",
@@ -6398,7 +6399,8 @@
       "country": "US",
       "npapers": 3,
       "cited": 9,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Identified as Thanh Le Nhat Dang, a recent Boston University math PhD who held a postdoctoral position in the FSU Mathematics department (a Rate My Professors review explicitly describes him as 'one of the best postdoc professors in math'). Postdoctoral appointments are excluded under the inclusion standard regardless of teaching duties."
     },
     {
       "name": "Phuong Uyen Le",
@@ -6414,7 +6416,8 @@
       "country": "TW",
       "npapers": 2,
       "cited": 9,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No source connects this name to National Cheng Kung University after searching multiple NCKU departments. The only well-documented 'Le Thu Trang' is a Lecturer at the University of Social Sciences and Humanities, Vietnam National University Hanoi (ussh.vnu.edu.vn) — a different institution located inside Vietnam. Excluding as a likely misattributed lead."
     },
     {
       "name": "Thu Ha Nguyen",
@@ -6446,7 +6449,8 @@
       "country": "AU",
       "npapers": 2,
       "cited": 9,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Identified as Thi Thanh Mai Giang, UQ School of Social Science, explicitly described on two official UQ profile pages as a 'PhD candidate, teaching academic, and senior research assistant' — a graduate student role, not a qualifying faculty appointment. Sources: https://social-science.uq.edu.au/profile/6428/thi-thanh-mai-giang and https://social-science.uq.edu.au/profile/5382/thi-thanh-mai-giang"
     },
     {
       "name": "Phuong Nguyen",
@@ -6462,7 +6466,9 @@
       "country": "US",
       "npapers": 7,
       "cited": 9,
-      "status": "pending"
+      "status": "included",
+      "note": "Not at Michigan (that link traces to working as a research assistant for a UMich economist during her PhD, not an appointment). Identified as Ha Bui, Assistant Professor of Economics (tenure-track), Grinnell College, since August 2024; PhD Economics 2024 and MA Economics, University of Texas at Austin; BA International Economics, Diplomatic Academy of Vietnam. Added to roster as Grinnell College. Portrait could not be obtained this session (network egress blocked); a future session should add one.",
+      "rosterId": "vp-1164"
     },
     {
       "name": "Thi Hao Pham",
@@ -6470,7 +6476,8 @@
       "country": "NL",
       "npapers": 4,
       "cited": 9,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Confirmed via University of Groningen research portal as a PhD candidate in the Unit of Global Health, Dept. of Health Sciences, UMCG — not a faculty appointment. Sources: https://research.rug.nl/en/persons/hao-pham and https://www.rug.nl/staff/p.thi.hao/?lang=en"
     },
     {
       "name": "Elisabeth A. Bui",
@@ -6478,7 +6485,8 @@
       "country": "KR",
       "npapers": 2,
       "cited": 9,
-      "status": "pending"
+      "status": "excluded",
+      "note": "\"Korea University of International Studies\" is not an accredited institution under that exact name (the real Korea University College/Graduate School of International Studies faculty lists show no matching person). No person named Elisabeth (A.) Bui or plausible Vietnamese-name variant could be found affiliated with any Korea-based university; the only substantial 'Elisabeth Bui' found is an unrelated, much more senior CSIRO Australia scientist. Excluding as an unresolvable/likely fictitious institution attribution."
     },
     {
       "name": "Ha Nguyen",
@@ -6502,7 +6510,8 @@
       "country": "JP",
       "npapers": 2,
       "cited": 9,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Only documented association is as a co-author with genuine Nagaoka faculty member Kazushi Sano on transportation-engineering papers; the listed contact email (nguyeny@stn.nagaokaut.ac.jp) uses Nagaoka's student email subdomain, indicating a graduate student, not faculty. No faculty profile or current appointment found anywhere."
     },
     {
       "name": "Thai Hien Nguyen",
