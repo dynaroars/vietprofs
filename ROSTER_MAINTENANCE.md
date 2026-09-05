@@ -54,13 +54,19 @@ hospitals without a qualifying university appointment, think tanks, advocacy org
 other non-academic employers remain excluded.
 
 For U.S. federal laboratories, treat the laboratory itself as an eligible public research institute,
-not every person employed there as an academic. Include only career-level Staff, Senior, or
-Principal Researchers/Scientists, Principal Investigators, laboratory or branch directors, and
-comparable permanent research appointments. Exclude contractor-only personnel, postdocs, fellows,
-students, interns, visiting researchers, temporary project staff, technical or administrative staff,
-and funding-agency program officers whose role is not to conduct research. The Office of Naval
-Research (ONR), for example, is primarily a funding and program-management agency; its program
-officers are not roster entries unless they separately hold a qualifying research appointment.
+not every person employed there as an academic. Include only career-level Staff, Senior, Distinguished,
+or Principal Researchers/Scientists, Principal Investigators, laboratory/group/branch/division leaders,
+and comparable permanent research appointments. Laboratory Fellow titles qualify only when the source
+shows a continuing career research appointment; postdoctoral, visiting, or fixed-term fellowships do not.
+Ordinary engineers, engineering staff, and technical specialists are excluded by default, particularly
+roles requiring only a bachelor's degree. A Research Engineer may qualify only when the appointment
+clearly entails doctoral-level independent research or faculty-equivalent research leadership (for
+example, Principal/Distinguished Research Engineer, PI, or research-group leader). Also exclude
+contractor-only personnel, postdocs, students, interns, visiting researchers, temporary project staff,
+technical or administrative staff, and funding-agency program officers whose role is not to conduct
+research. The Office of Naval Research (ONR), for example, is primarily a funding and program-management
+agency; its program officers are not roster entries unless they separately hold a qualifying research
+appointment.
 
 Exclude adjunct, visiting, postdoctoral, affiliate/courtesy, graduate teaching-assistant,
 industry-only, and other term-limited or part-time appointments. Plain `Instructor` requires
