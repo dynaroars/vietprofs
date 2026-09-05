@@ -264,8 +264,8 @@ test('every roster card exposes its official profile link', async () => {
   const profileLinks = page.locator('.profile-link');
   assert.equal(await profileLinks.count(), entryCount);
   assert.ok(await profileLinks.evaluateAll((links: HTMLAnchorElement[]) => links.every((link) => (
-    link.getAttribute('title') === 'Official university profile'
-      && link.getAttribute('aria-label')?.endsWith(' official university profile')
+    /^Official (university|institution) profile$/.test(link.getAttribute('title') || '')
+      && / official (university|institution) profile$/.test(link.getAttribute('aria-label') || '')
       && /^https?:\/\//.test(link.href)
   ))));
   const [actualUrls, expectedUrls] = await Promise.all([

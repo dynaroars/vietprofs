@@ -13,6 +13,7 @@ import {
   vietnameseName,
 } from '../src/data.ts';
 import { escapeHtml, formatRosterDate } from '../src/utils.ts';
+import { formatEducationDetails } from '../src/render.ts';
 
 const siteUrl = 'https://vietprofs.roars.dev';
 const root = resolve(import.meta.dirname, '..');
@@ -51,14 +52,7 @@ function profilePage(person: RosterEntry) {
   const research = person.researchAreas?.length
     ? `<section class="man-section"><h2>RESEARCH</h2><ul>${person.researchAreas.map((area) => `<li>${escapeHtml(area)}</li>`).join('')}</ul></section>`
     : '';
-  const education = [
-    person.postdocInstitution && `Postdoctoral training: ${[displayUniversity(person.postdocInstitution), person.postdocYear].filter(Boolean).join(', ')}`,
-    person.phdInstitution && `PhD: ${[displayUniversity(person.phdInstitution), person.phdYear, person.phdMajor].filter(Boolean).join(', ')}`,
-    person.msInstitution && `MS: ${[displayUniversity(person.msInstitution), person.msYear, person.msMajor].filter(Boolean).join(', ')}`,
-    person.mdInstitution && `MD: ${[displayUniversity(person.mdInstitution), person.mdYear].filter(Boolean).join(', ')}`,
-    person.undergradInstitution && `Undergraduate: ${[displayUniversity(person.undergradInstitution), person.undergradYear, person.undergradMajor].filter(Boolean).join(', ')}`,
-    ...(person.otherDegrees ?? []).map((degree) => `${degree.degree}: ${[displayUniversity(degree.institution), degree.year, degree.major].filter(Boolean).join(', ')}`),
-  ].filter(Boolean);
+  const education = formatEducationDetails(person, { fullLabels: true });
   const educationSection = education.length
     ? `<section class="man-section"><h2>EDUCATION</h2><ul>${education.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul></section>`
     : '';
@@ -117,7 +111,7 @@ function profilePage(person: RosterEntry) {
   <main>
     <article class="man-page">
       <p class="man-running-head"><span>VIETPROFS(1)</span><span>VietProfs Profile Manual</span><span>VIETPROFS(1)</span></p>
-      <section class="man-section name-section"><h2>NAME</h2><div class="identity">${portrait}<div><div class="name-heading"><h1>${escapeHtml(name)}</h1><nav class="profile-actions" aria-label="Roster actions"><a class="submission-link" href="${escapeHtml(editUrl)}">Add or update info</a></nav></div><p class="native">${escapeHtml(nativeName)}</p><p class="record-id">${escapeHtml(person.id)}</p></div></div></section>
+      <section class="man-section name-section"><h2>NAME</h2><div class="identity">${portrait}<div class="identity-details"><div class="name-heading"><h1>${escapeHtml(name)}</h1><nav class="profile-actions" aria-label="Roster actions"><a class="submission-link" href="${escapeHtml(editUrl)}">Add or update info</a></nav></div><p class="native">${escapeHtml(nativeName)}</p><p class="record-id">${escapeHtml(person.id)}</p></div></div></section>
       <section class="man-section"><h2>SYNOPSIS</h2><p class="synopsis">${escapeHtml(role)}${locationOf(person) ? ` · ${escapeHtml(locationOf(person))}` : ''} <span class="loc-badge" title="${escapeHtml(person.country || 'United States')}"><span class="country-flag" aria-hidden="true">${countryFlag(person.country)}</span></span></p><div class="tags"><span class="tag">${escapeHtml(fieldOf(person.department, person.university))}</span><span class="tag">${escapeHtml(person.track || '')}</span>${person.institutionType && person.institutionType !== 'University' ? `<span class="tag">${escapeHtml(person.institutionType)}</span>` : ''}</div></section>
       ${research}${educationSection}${honors}${linkSection}
       <section class="man-section"><h2>ROSTER METADATA</h2><dl class="roster-metadata"><div><dt>record</dt><dd>${escapeHtml(person.id)}</dd></div><div><dt>last verified</dt><dd>${escapeHtml(formatRosterDate(person.lastUpdatedAt || ''))}</dd></div><div><dt>build</dt><dd><a href="https://github.com/dynaroars/vietprofs/commit/${escapeHtml(commit)}">${escapeHtml(commit)}</a></dd></div></dl><details class="raw-record"><summary>view raw record</summary><pre><code>${rawRecord}</code></pre></details></section>

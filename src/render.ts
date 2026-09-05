@@ -52,6 +52,19 @@ export function applyFavoriteToggle(button: HTMLButtonElement, favorited: boolea
   button.title = label;
 }
 
+export function formatEducationDetails(person: RosterEntry, { fullLabels = false } = {}): string[] {
+  const postdocPrefix = fullLabels ? 'Postdoctoral training' : 'Postdoc';
+  const undergradPrefix = fullLabels ? 'Undergraduate' : 'Undergrad';
+  return [
+    person.postdocInstitution && `${postdocPrefix}: ${[displayUniversity(person.postdocInstitution), person.postdocYear].filter(Boolean).join(', ')}`,
+    person.phdInstitution && `PhD: ${[displayUniversity(person.phdInstitution), person.phdYear, person.phdMajor].filter(Boolean).join(', ')}`,
+    person.msInstitution && `MS: ${[displayUniversity(person.msInstitution), person.msYear, person.msMajor].filter(Boolean).join(', ')}`,
+    (person.mdYear || person.mdInstitution) && `MD: ${[displayUniversity(person.mdInstitution), person.mdYear].filter(Boolean).join(', ')}`,
+    person.undergradInstitution && `${undergradPrefix}: ${[displayUniversity(person.undergradInstitution), person.undergradYear, person.undergradMajor].filter(Boolean).join(', ')}`,
+    ...(person.otherDegrees ?? []).map((degree) => `${degree.degree}: ${[displayUniversity(degree.institution), degree.year, degree.major].filter(Boolean).join(', ')}`),
+  ].filter(Boolean) as string[];
+}
+
 export function renderRosterEntry(person: RosterEntry, baseUrl = '/') {
   const visibleName = displayName(person.name);
   const nativeName = vietnameseName(person);
@@ -74,14 +87,7 @@ export function renderRosterEntry(person: RosterEntry, baseUrl = '/') {
   const portrait = person.portrait
     ? `<img class="entry-portrait" src="${escapeHtml(`${baseUrl}${person.portrait}`)}" alt="" width="64" height="64" loading="lazy" decoding="async">`
     : `<img class="entry-portrait entry-portrait-placeholder" src="${escapeHtml(`${baseUrl}default-portrait.svg`)}" alt="" width="64" height="64" loading="lazy" decoding="async">`;
-  const educationDetails = [
-    person.postdocInstitution && `Postdoc: ${[displayUniversity(person.postdocInstitution), person.postdocYear].filter(Boolean).join(', ')}`,
-    person.phdInstitution && `PhD: ${[displayUniversity(person.phdInstitution), person.phdYear, person.phdMajor].filter(Boolean).join(', ')}`,
-    person.msInstitution && `MS: ${[displayUniversity(person.msInstitution), person.msYear, person.msMajor].filter(Boolean).join(', ')}`,
-    person.undergradInstitution && `Undergrad: ${[displayUniversity(person.undergradInstitution), person.undergradYear, person.undergradMajor].filter(Boolean).join(', ')}`,
-    (person.mdYear || person.mdInstitution) && `MD: ${[displayUniversity(person.mdInstitution), person.mdYear].filter(Boolean).join(', ')}`,
-    ...(person.otherDegrees ?? []).map((degree) => `${degree.degree}: ${[displayUniversity(degree.institution), degree.year, degree.major].filter(Boolean).join(', ')}`),
-  ].filter(Boolean);
+  const educationDetails = formatEducationDetails(person);
   const institutionLabel = person.institutionType && person.institutionType !== 'University' ? 'institution' : 'university';
   const profileIcon = entryIconLink({ className: 'profile-link', href: person.profileUrl, label: `${visibleName} official ${institutionLabel} profile`, title: `Official ${institutionLabel} profile`, icon: PROFILE_ICON });
   const personalSiteIcon = person.websiteUrl

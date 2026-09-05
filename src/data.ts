@@ -53,8 +53,22 @@ export interface RosterEntry {
 
 export type Roster = RosterEntry[];
 
-import { INSTITUTION_TYPES, TRACKS } from './roster-constants.ts';
-export { INSTITUTION_TYPES, TRACKS } from './roster-constants.ts';
+import {
+  COUNTRY_FLAGS,
+  COUNTRY_TO_CONTINENT,
+  INSTITUTION_TYPES,
+  LOCATION_LABELS,
+  LOCATIONS,
+  TRACKS,
+} from './roster-constants.ts';
+export {
+  COUNTRY_FLAGS,
+  COUNTRY_TO_CONTINENT,
+  INSTITUTION_TYPES,
+  LOCATION_LABELS,
+  LOCATIONS,
+  TRACKS,
+} from './roster-constants.ts';
 
 let cached: Roster | null = null;
 
@@ -296,159 +310,11 @@ export function uniqueResearchAreas(roster: Roster): string[] {
 // part-time positions; those stay excluded from the roster. See ROSTER_MAINTENANCE.md.
 // Continent/region values supported by structured location queries and the second
 // ("by continent") section of the visible location dropdown.
-export const LOCATIONS: string[] = [
-  'US',
-  'North America',
-  'South America',
-  'Africa',
-  'Asia',
-  'Australasia',
-  'Europe',
-  'World',
-];
-
-export const COUNTRY_TO_CONTINENT: Record<string, string> = {
-  // North America
-  'United States': 'North America',
-  'US': 'North America',
-  'USA': 'North America',
-  'Canada': 'North America',
-  'Mexico': 'North America',
-
-  // South America
-  'Brazil': 'South America',
-  'Argentina': 'South America',
-  'Chile': 'South America',
-  'Colombia': 'South America',
-  'Peru': 'South America',
-
-  // Europe
-  'United Kingdom': 'Europe',
-  'UK': 'Europe',
-  'Great Britain': 'Europe',
-  'France': 'Europe',
-  'Germany': 'Europe',
-  'Switzerland': 'Europe',
-  'Netherlands': 'Europe',
-  'Belgium': 'Europe',
-  'Sweden': 'Europe',
-  'Norway': 'Europe',
-  'Denmark': 'Europe',
-  'Finland': 'Europe',
-  'Italy': 'Europe',
-  'Spain': 'Europe',
-  'Austria': 'Europe',
-  'Ireland': 'Europe',
-  'Poland': 'Europe',
-  'Czech Republic': 'Europe',
-  'Portugal': 'Europe',
-  'Greece': 'Europe',
-  'Hungary': 'Europe',
-  'Estonia': 'Europe',
-  'Luxembourg': 'Europe',
-  'Iceland': 'Europe',
-
-  // Asia
-  'Singapore': 'Asia',
-  'Vietnam': 'Asia',
-  'Hong Kong': 'Asia',
-  'Japan': 'Asia',
-  'South Korea': 'Asia',
-  'Korea': 'Asia',
-  'Taiwan': 'Asia',
-  'China': 'Asia',
-  'India': 'Asia',
-  'Israel': 'Asia',
-  'Saudi Arabia': 'Asia',
-  'United Arab Emirates': 'Asia',
-  'UAE': 'Asia',
-  'Qatar': 'Asia',
-  'Thailand': 'Asia',
-  'Malaysia': 'Asia',
-  'Philippines': 'Asia',
-  'Indonesia': 'Asia',
-
-  // Australasia
-  'Australia': 'Australasia',
-  'New Zealand': 'Australasia',
-
-  // Africa
-  'South Africa': 'Africa',
-  'Egypt': 'Africa',
-  'Nigeria': 'Africa',
-  'Kenya': 'Africa',
-  'Morocco': 'Africa',
-};
-
-export const COUNTRY_FLAGS: Record<string, string> = {
-  'United States': '🇺🇸',
-  'US': '🇺🇸',
-  'USA': '🇺🇸',
-  'Canada': '🇨🇦',
-  'United Kingdom': '🇬🇧',
-  'UK': '🇬🇧',
-  'Australia': '🇦🇺',
-  'France': '🇫🇷',
-  'Germany': '🇩🇪',
-  'Netherlands': '🇳🇱',
-  'Switzerland': '🇨🇭',
-  'Sweden': '🇸🇪',
-  'Norway': '🇳🇴',
-  'Belgium': '🇧🇪',
-  'Poland': '🇵🇱',
-  'Ireland': '🇮🇪',
-  'Singapore': '🇸🇬',
-  'Vietnam': '🇻🇳',
-  'Japan': '🇯🇵',
-  'Hong Kong': '🇭🇰',
-  'New Zealand': '🇳🇿',
-  'South Korea': '🇰🇷',
-  'Korea': '🇰🇷',
-  'Taiwan': '🇹🇼',
-  'China': '🇨🇳',
-  'Denmark': '🇩🇰',
-  'Finland': '🇫🇮',
-  'Austria': '🇦🇹',
-  'Italy': '🇮🇹',
-  'Spain': '🇪🇸',
-  'Portugal': '🇵🇹',
-  'Israel': '🇮🇱',
-  'Saudi Arabia': '🇸🇦',
-  'United Arab Emirates': '🇦🇪',
-  'UAE': '🇦🇪',
-  'Qatar': '🇶🇦',
-  'India': '🇮🇳',
-  'Thailand': '🇹🇭',
-  'Malaysia': '🇲🇾',
-  'Philippines': '🇵🇭',
-  'Indonesia': '🇮🇩',
-  'South Africa': '🇿🇦',
-  'Egypt': '🇪🇬',
-  'Nigeria': '🇳🇬',
-  'Kenya': '🇰🇪',
-  'Morocco': '🇲🇦',
-  'Brazil': '🇧🇷',
-  'Mexico': '🇲🇽',
-  'Argentina': '🇦🇷',
-  'Chile': '🇨🇱',
-  'Colombia': '🇨🇴',
-};
 
 export function countryFlag(country?: string): string {
   if (!country) return '🇺🇸';
   return COUNTRY_FLAGS[country] || '🌐';
 }
-
-export const LOCATION_LABELS: Record<string, string> = {
-  'US': '🇺🇸 United States',
-  'North America': '🌎 North America',
-  'South America': '🌎 South America',
-  'Europe': '🌍 Europe',
-  'Australasia': '🌏 Australasia',
-  'Asia': '🌏 Asia',
-  'Africa': '🌍 Africa',
-  'World': '🌐 World',
-};
 
 export function continentOf(country?: string): string {
   if (!country) return 'North America';
