@@ -2,7 +2,8 @@ import './style.css';
 import { loadRoster, loadStatsHistory, buildSearchIndex, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueUndergradInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, LOCATION_LABELS, countryFlag, canonicalRank, displayName, fieldOf, locationMatches, filterRoster, buildFunFacts, buildUsObservations, buildInternationalObservations, buildLocationObservations, buildQualifiedObservations, buildAwardsFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, buildFieldCounts, buildTopCountries, buildTrackCounts, STATE_ABBR, type Roster, type RosterEntry, type SearchIndex, type StatsHistoryPoint } from './data.ts';
 import { escapeHtml, formatRosterDate } from './utils.ts';
 import { STATE_GRID } from './state-grid.ts';
-import { applyFavoriteToggle, fieldDropdownLabel, renderRosterEntry } from './render.ts';
+import { fieldDropdownLabel, renderRosterEntry } from './render.ts';
+import { applyFavoriteToggle, celebrateFavorite } from './favorites-ui.ts';
 import { loadFavorites, toggleFavorite } from './favorites-store.ts';
 import { locationForQuery } from './filter-state.ts';
 
@@ -977,7 +978,12 @@ async function init() {
     const target = e.target as HTMLElement;
     const favorite = target.closest<HTMLButtonElement>('.favorite-toggle');
     if (favorite?.dataset.id) {
-      applyFavoriteToggle(favorite, toggleFavorite(favorite.dataset.id));
+      const favorited = toggleFavorite(favorite.dataset.id);
+      applyFavoriteToggle(favorite, favorited);
+      if (favorited) {
+        const name = favorite.closest('.entry')?.querySelector('.entry-name')?.textContent?.trim() || 'Professor';
+        celebrateFavorite(favorite, name);
+      }
       return;
     }
     const tile = target.closest<HTMLButtonElement>('.state-tile');

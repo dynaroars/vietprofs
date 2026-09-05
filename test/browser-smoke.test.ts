@@ -431,3 +431,24 @@ test('profile pages honor dark mode through the shared stylesheet', async () => 
   assert.equal(await page.evaluate(() => getComputedStyle(document.body).backgroundColor), 'rgb(21, 24, 28)');
   await page.close();
 });
+
+test('profile pages can star a professor with toast feedback', async () => {
+  const page = await context.newPage();
+  await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
+  await page.evaluate(() => localStorage.removeItem('vietprofs:favorites'));
+  const person = await page.evaluate(async () => {
+    const entry = (await (await fetch('/data.json')).json())[0];
+    return { id: entry.id, name: entry.name.replace(/\s+-\s+.+$/, '').trim() };
+  });
+  await page.goto(`${baseUrl}/people/${person.id}.html`, { waitUntil: 'networkidle' });
+  const star = page.locator('.favorite-toggle');
+  assert.equal(await star.count(), 1);
+  assert.equal(await star.getAttribute('aria-pressed'), 'false');
+  await star.click();
+  assert.equal(await star.getAttribute('aria-pressed'), 'true');
+  const toast = page.locator('#favorite-toast');
+  await toast.waitFor({ state: 'visible' });
+  assert.match((await toast.textContent()) ?? '', new RegExp(`${person.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')} has been starred`));
+  assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem('vietprofs:favorites') ?? '[]')[0]), person.id);
+  await page.close();
+});

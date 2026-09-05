@@ -13,6 +13,10 @@ export default defineConfig({
       input: {
         main: resolve(root, 'index.html'),
         submit: resolve(root, 'submit.html'),
+        profile: resolve(root, 'src/profile.ts'),
+      },
+      output: {
+        entryFileNames: (chunk) => (chunk.name === 'profile' ? 'profile.js' : 'assets/[name]-[hash].js'),
       },
     },
   },

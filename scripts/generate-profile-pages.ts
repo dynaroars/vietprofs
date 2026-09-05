@@ -12,12 +12,16 @@ import {
   vietnameseName,
 } from '../src/data.ts';
 import { escapeHtml, formatRosterDate } from '../src/utils.ts';
+import { STAR_ICON } from '../src/favorites-ui.ts';
 
 const siteUrl = 'https://vietprofs.roars.dev';
 const root = resolve(import.meta.dirname, '..');
 const development = process.argv.includes('--dev');
 const output = resolve(root, development ? 'public' : 'dist');
 const peopleDir = resolve(output, 'people');
+const profileScript = development
+  ? '<script type="module" src="../src/profile.ts"></script>'
+  : '<script type="module" src="../profile.js"></script>';
 
 function absoluteUrl(path: string) {
   return `${siteUrl}/${path}`;
@@ -65,6 +69,7 @@ function profilePage(person: RosterEntry) {
   const linkSection = links.length
     ? `<nav class="links" aria-label="External profiles">${links.map(([label, href]) => `<a href="${escapeHtml(href)}" rel="noopener noreferrer">${escapeHtml(label)}</a>`).join('')}</nav>`
     : '';
+  const favoriteToggle = `<button type="button" class="favorite-toggle" data-id="${escapeHtml(person.id)}" data-name="${escapeHtml(name)}" aria-pressed="false" aria-label="Add to favorites" title="Add to favorites"><svg viewBox="0 0 24 24" aria-hidden="true">${STAR_ICON}</svg></button>`;
   const editUrl = `../submit.html?edit=${encodeURIComponent(person.id)}`;
   const jsonLd = JSON.stringify({
     '@context': 'https://schema.org',
@@ -107,11 +112,12 @@ function profilePage(person: RosterEntry) {
   <header><a class="eyebrow" href="../"><img class="brand-logo" src="../vietprofs-bamboo-v.svg" alt="" width="32" height="32">VietProfs</a></header>
   <main>
     <article>
-      <div class="identity">${portrait}<div><h1>${escapeHtml(name)}</h1><p class="native">${escapeHtml(nativeName)}</p><p class="meta">${escapeHtml(role)}${locationOf(person) ? ` · ${escapeHtml(locationOf(person))}` : ''} <span class="loc-badge" title="${escapeHtml(person.country || 'United States')}"><span class="country-flag" aria-hidden="true">${countryFlag(person.country)}</span></span></p><div class="tags"><span class="tag">${escapeHtml(fieldOf(person.department, person.university))}</span><span class="tag">${escapeHtml(person.track || '')}</span></div></div></div>
+      <div class="identity">${portrait}<div><div class="profile-heading"><h1>${escapeHtml(name)}</h1>${favoriteToggle}</div><p class="native">${escapeHtml(nativeName)}</p><p class="meta">${escapeHtml(role)}${locationOf(person) ? ` · ${escapeHtml(locationOf(person))}` : ''} <span class="loc-badge" title="${escapeHtml(person.country || 'United States')}"><span class="country-flag" aria-hidden="true">${countryFlag(person.country)}</span></span></p><div class="tags"><span class="tag">${escapeHtml(fieldOf(person.department, person.university))}</span><span class="tag">${escapeHtml(person.track || '')}</span></div></div></div>
       ${linkSection}<p><a class="submission-link" href="${escapeHtml(editUrl)}">Add or update info</a></p>${research}${educationSection}${honors}
       <footer><p class="updated">Roster information last updated ${escapeHtml(formatRosterDate(person.lastUpdatedAt || ''))}.</p><p>VietProfs is a community-maintained directory. See the linked university and personal sources for the most current details.</p></footer>
     </article>
   </main>
+  ${profileScript}
 </body>
 </html>`;
 }
