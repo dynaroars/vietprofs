@@ -5679,7 +5679,7 @@
     "vietnameseName": "Nguyễn (Hans) Thanh",
     "profileUrl": "https://www.qu.edu/faculty-and-staff/hans-nguyen/",
     "scholarUrl": "https://scholar.google.com/citations?user=irYpLS8AAAAJ&hl=en",
-    "lastUpdatedAt": "2026-09-02T02:51:42.000Z",
+    "lastUpdatedAt": "2026-09-05T18:17:52.000Z",
     "university": "Quinnipiac University",
     "city": "Hamden",
     "state": "Connecticut",
@@ -5697,8 +5697,14 @@
     "portrait": "portraits/155-thanh-hans-nguyen-quinnipiac-university.webp",
     "portraitSource": "https://reservoir.qu.edu/api/profile/0xB1DC17854F0F5E5471CB223D323B0D97.jpg",
     "phdYear": 2023,
-    "undergradInstitution": "University of Missouri",
-    "undergradYear": 2013
+    "undergradInstitution": "Foreign Trade University",
+    "otherDegrees": [
+      {
+        "degree": "MBA (Marketing Analytics Certificate)",
+        "institution": "University of Missouri",
+        "source": "https://www.qu.edu/faculty-and-staff/hans-nguyen/"
+      }
+    ]
   },
   {
     "id": "vp-0155",
@@ -5767,7 +5773,7 @@
     "vietnameseName": "Trần Uyên",
     "profileUrl": "https://search.asu.edu/profile/764174",
     "scholarUrl": "https://scholar.google.com/citations?user=lmEWjpIAAAAJ&hl=en",
-    "lastUpdatedAt": "2026-09-02T02:51:42.000Z",
+    "lastUpdatedAt": "2026-09-05T18:17:52.000Z",
     "university": "Arizona State University",
     "city": "Phoenix",
     "state": "Arizona",
@@ -5785,7 +5791,18 @@
     "country": "United States",
     "portrait": "portraits/158-uyen-tran-arizona-state-university.webp",
     "portraitSource": "https://webapp4.asu.edu/photo-ws/directory_photo/utran?size=medium&break=1787459047&blankImage2=1",
-    "phdYear": 2022
+    "phdYear": 2022,
+    "websiteUrl": "https://uyenbtran.com/",
+    "undergradInstitution": "Arizona State University",
+    "msInstitution": "University of North Carolina at Chapel Hill",
+    "msMajor": "Economics",
+    "otherDegrees": [
+      {
+        "degree": "MBA",
+        "institution": "University of Chicago Booth School of Business",
+        "source": "https://uyenbtran.com/"
+      }
+    ]
   },
   {
     "id": "vp-0158",
@@ -5793,7 +5810,7 @@
     "vietnameseName": "Nguyễn Peter",
     "profileUrl": "https://www.fsb.miamioh.edu/directory/nguyen49",
     "scholarUrl": "https://scholar.google.com/citations?user=luuIZ7EAAAAJ&hl=en",
-    "lastUpdatedAt": "2026-09-02T02:51:42.000Z",
+    "lastUpdatedAt": "2026-09-05T18:17:52.000Z",
     "university": "Miami University",
     "city": "Oxford",
     "state": "Ohio",
@@ -5812,7 +5829,9 @@
     "msInstitution": "Western University",
     "msYear": 2013,
     "undergradInstitution": "Western University",
-    "undergradYear": 2011
+    "undergradYear": 2011,
+    "msMajor": "Neuroscience",
+    "undergradMajor": "Psychology and Medical Sciences"
   },
   {
     "id": "vp-0159",
@@ -5820,7 +5839,7 @@
     "vietnameseName": "Trần An",
     "profileUrl": "https://www.laverne.edu/directory/person/an-tran/",
     "scholarUrl": "https://scholar.google.com/citations?hl=en&user=RUgf7n8AAAAJ",
-    "lastUpdatedAt": "2026-09-02T02:51:42.000Z",
+    "lastUpdatedAt": "2026-09-05T18:17:52.000Z",
     "university": "University of La Verne",
     "city": "La Verne",
     "state": "California",
@@ -5835,7 +5854,9 @@
     "portrait": "portraits/160-an-tran-university-of-la-verne.webp",
     "portraitSource": "https://www.laverne.edu/directory/wp-content/uploads/sites/3/2018/04/An-Tran.jpg",
     "phdInstitution": "University of Colorado Boulder",
-    "undergradInstitution": "Singapore Management University"
+    "undergradInstitution": "Singapore Management University",
+    "phdYear": 2014,
+    "websiteUrl": "https://www.drantran.com"
   },
   {
     "id": "vp-0160",
@@ -5843,7 +5864,7 @@
     "vietnameseName": "Tạ Hà",
     "profileUrl": "https://business.fiu.edu/about/directory/profile/tah",
     "scholarUrl": "https://scholar.google.com/citations?user=Mkx_B3kAAAAJ&hl=en",
-    "lastUpdatedAt": "2026-09-02T02:51:42.000Z",
+    "lastUpdatedAt": "2026-09-05T18:17:52.000Z",
     "university": "Florida International University",
     "city": "Miami",
     "state": "Florida",
@@ -5861,7 +5882,19 @@
     "phdInstitution": "University of Arkansas",
     "country": "United States",
     "portrait": "portraits/161-ha-ta-florida-international-university.webp",
-    "portraitSource": "https://business.fiu.edu/files/highresolutionpicture/tah080720192176.jpg"
+    "portraitSource": "https://business.fiu.edu/files/highresolutionpicture/tah080720192176.jpg",
+    "otherDegrees": [
+      {
+        "degree": "BS International Economics",
+        "institution": "Foreign Trade University",
+        "source": "https://business.fiu.edu/about/directory/profile/tah"
+      },
+      {
+        "degree": "MBA",
+        "institution": "Clark University",
+        "source": "https://business.fiu.edu/about/directory/profile/tah"
+      }
+    ]
   },
   {
     "id": "vp-0161",
@@ -5869,7 +5902,7 @@
     "vietnameseName": "Phạm Long",
     "profileUrl": "https://www.tamucc.edu/business/about/directory/long-pham.php",
     "scholarUrl": "https://scholar.google.com/citations?user=H0aRUYkAAAAJ&hl=en",
-    "lastUpdatedAt": "2026-09-02T02:51:42.000Z",
+    "lastUpdatedAt": "2026-09-05T18:17:52.000Z",
     "university": "Texas A&M University-Corpus Christi",
     "city": "Corpus Christi",
     "state": "Texas",
@@ -5891,7 +5924,27 @@
     "portrait": "portraits/162-long-pham-texas-a-m-university-corpus-christi.webp",
     "portraitSource": "https://www.tamucc.edu/business/about/directory-pics/dse/long-pham.jpg",
     "msInstitution": "New Mexico State University",
-    "msYear": 2011
+    "msYear": 2011,
+    "otherDegrees": [
+      {
+        "degree": "MBA International Business",
+        "institution": "University of the Thai Chamber of Commerce",
+        "year": 2003,
+        "source": "https://www.tamucc.edu/business/about/directory/long-pham.php"
+      },
+      {
+        "degree": "MBA International Banking and Finance",
+        "institution": "Texas A&M International University",
+        "year": 2024,
+        "source": "https://www.tamucc.edu/business/about/directory/long-pham.php"
+      },
+      {
+        "degree": "MS Accountancy",
+        "institution": "Texas A&M University-Corpus Christi",
+        "year": 2023,
+        "source": "https://www.tamucc.edu/business/about/directory/long-pham.php"
+      }
+    ]
   },
   {
     "id": "vp-0162",
@@ -5993,7 +6046,7 @@
     "name": "Phuong Anh Nguyen",
     "vietnameseName": "Nguyễn Anh Phương",
     "profileUrl": "https://scholars.stmarys-ca.edu/en/persons/phuong-anh-nguyen/",
-    "lastUpdatedAt": "2026-08-26T12:28:41.000Z",
+    "lastUpdatedAt": "2026-09-05T18:17:52.000Z",
     "university": "Saint Mary's College of California",
     "city": "Moraga",
     "state": "California",
@@ -6015,6 +6068,7 @@
     "portrait": "portraits/166-phuong-anh-nguyen-saint-mary-s-college-of-california.webp",
     "portraitSource": "https://scholars.stmarys-ca.edu/files-asset/40349080/anh-nguyen-saint-marys-college.jpg/",
     "undergradYear": 1998,
+    "undergradMajor": "Molecular and Cell Biology",
     "otherDegrees": [
       {
         "degree": "MBA",
@@ -6030,7 +6084,7 @@
     "vietnameseName": "Nguyễn Thanh",
     "profileUrl": "https://business.purdue.edu/faculty/home.php?username=nguye161",
     "scholarUrl": "https://scholar.google.com/citations?user=3Zx3cEMAAAAJ&hl=en",
-    "lastUpdatedAt": "2026-09-02T02:51:42.000Z",
+    "lastUpdatedAt": "2026-09-05T18:17:52.000Z",
     "university": "Purdue University",
     "city": "West Lafayette",
     "state": "Indiana",
@@ -6043,7 +6097,7 @@
       "Business Analytics"
     ],
     "track": "Tenure-line",
-    "department": "Quantitative Methods, Daniels School of Business",
+    "department": "Quantitative Methods, Mitch Daniels School of Business",
     "rank": "Professor",
     "phdInstitution": "Cornell University",
     "country": "United States",
@@ -6102,7 +6156,7 @@
     "name": "Thien Dong",
     "vietnameseName": "Thiện Dong",
     "profileUrl": "https://greatvalley.psu.edu/person/thien-dong",
-    "lastUpdatedAt": "2026-08-24T03:03:40.000Z",
+    "lastUpdatedAt": "2026-09-05T18:17:52.000Z",
     "university": "Pennsylvania State University",
     "city": "Malvern",
     "state": "Pennsylvania",
@@ -6121,7 +6175,12 @@
     "country": "United States",
     "portrait": "portraits/169-thien-dong-pennsylvania-state-university.webp",
     "portraitSource": "https://greatvalley.psu.edu/sites/greatvalley/files/styles/person_headshot/public/2025-08/thien-dong-2-cropped.jpg?itok=BAHdb53g",
-    "msInstitution": "University of Amsterdam"
+    "msInstitution": "University of Amsterdam",
+    "msMajor": "Business in Society",
+    "phdYear": 2025,
+    "undergradInstitution": "Foreign Trade University, Ho Chi Minh City Campus",
+    "undergradMajor": "International Business and Economics",
+    "websiteUrl": "https://www.mythien.com/"
   },
   {
     "id": "vp-0169",
