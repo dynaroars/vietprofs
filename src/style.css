@@ -213,7 +213,7 @@ h1 {
 .controls {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 0.75rem;
   margin: 2rem 0 0.75rem;
 }
@@ -613,6 +613,7 @@ a.entry-name:focus-visible {
 
 .personal-site-link,
 .scholar-link,
+.linkedin-link,
 .profile-link {
   color: var(--text-muted);
   display: inline-flex;
@@ -623,6 +624,8 @@ a.entry-name:focus-visible {
 .personal-site-link:focus-visible,
 .scholar-link:hover,
 .scholar-link:focus-visible,
+.linkedin-link:hover,
+.linkedin-link:focus-visible,
 .profile-link:hover,
 .profile-link:focus-visible {
   color: var(--text-primary);
@@ -630,6 +633,7 @@ a.entry-name:focus-visible {
 
 .personal-site-link svg,
 .scholar-link svg,
+.linkedin-link svg,
 .profile-link svg {
   height: 1rem;
   width: 1rem;
@@ -1040,6 +1044,119 @@ a.entry-name:focus-visible {
   background: var(--focus-ring);
   color: #fff;
 }
+
+/* Global Host Country Map Grid */
+.country-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 0.5rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.country-grid-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  padding: 0.65rem 0.4rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  cursor: pointer;
+  text-align: center;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.country-grid-tile:hover {
+  border-color: var(--focus-ring);
+}
+
+.country-grid-tile.heat-0 {
+  color: var(--text-muted);
+}
+
+.country-grid-tile.heat-1 {
+  background: color-mix(in srgb, var(--focus-ring) 12%, var(--card-bg));
+}
+
+.country-grid-tile.heat-2 {
+  background: color-mix(in srgb, var(--focus-ring) 28%, var(--card-bg));
+}
+
+.country-grid-tile.heat-3 {
+  background: color-mix(in srgb, var(--focus-ring) 50%, var(--card-bg));
+}
+
+.country-grid-tile.heat-4 {
+  background: var(--focus-ring);
+  color: #fff;
+}
+
+.country-grid-tile.heat-4 .country-name,
+.country-grid-tile.heat-4 .country-count,
+.country-grid-tile.heat-4 .country-share {
+  color: #fff;
+}
+
+.country-flag {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.country-name {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.country-count {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.country-share {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+}
+
+/* Doctoral-to-Faculty Pairings */
+.flow-pair-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.flow-pair-btn {
+  width: 100%;
+}
+
+.flow-phd {
+  font-weight: 600;
+}
+
+.flow-arrow {
+  color: var(--text-muted);
+  margin: 0 0.25rem;
+}
+
+.flow-dest {
+  font-weight: 600;
+  color: var(--focus-ring);
+}
+
 
 /* Timeline / Decades Bar Chart */
 .chart-container {
@@ -1619,6 +1736,7 @@ a.entry-name:focus-visible {
   .entry-name,
   .personal-site-link,
   .scholar-link,
+  .linkedin-link,
   .profile-link,
   .favorite-toggle,
   .search-input,
@@ -1636,6 +1754,7 @@ a.entry-name:focus-visible {
   .entry-name,
   .personal-site-link,
   .scholar-link,
+  .linkedin-link,
   .profile-link,
   .favorite-toggle,
   .example-chip {
@@ -1645,6 +1764,7 @@ a.entry-name:focus-visible {
   .entry-name,
   .personal-site-link,
   .scholar-link,
+  .linkedin-link,
   .profile-link,
   .favorite-toggle,
   .link-button {
@@ -1658,6 +1778,7 @@ a.entry-name:focus-visible {
 
   .personal-site-link,
   .scholar-link,
+  .linkedin-link,
   .profile-link,
   .favorite-toggle {
     justify-content: center;

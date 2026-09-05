@@ -209,6 +209,18 @@ test('every roster entry has a safe Vietnamese display-name variant and the requ
   assert.match(html, /Add to favorites|Remove from favorites/);
 });
 
+test('non-university research institutes receive a visible institution-type label', () => {
+  const sample = {
+    ...roster[0],
+    institutionType: 'Public research institute',
+    track: 'Research',
+  };
+  const html = renderRosterEntry(sample, '/');
+  assert.match(html, /tag-institution-type/);
+  assert.match(html, /Public research institute/);
+  assert.match(html, /Official institution profile/);
+});
+
 test('authoritative full Vietnamese names preserve accent marks and Vietnamese order', () => {
   const thanhVu = roster.find((p) => p.name === 'ThanhVu H. Nguyen');
   assert.equal(vietnameseName(thanhVu), 'Nguyễn Huy Thanh Vũ');

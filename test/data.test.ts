@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
-import { FIELDS, LOCATIONS, HEALTH_SUBFIELDS, canonicalRank, displayName, displayUniversity, fieldOf, healthSubfieldOf, continentOf, locationMatches, buildFunFacts, buildAwardsFunFacts, buildInternationalObservations, buildLocationObservations, filterRoster, looksSurnameFirst, buildFieldCounts, buildTopCountries, buildTrackCounts, type Roster } from '../src/data.ts';
+import { FIELDS, LOCATIONS, HEALTH_SUBFIELDS, canonicalRank, displayName, displayUniversity, fieldOf, healthSubfieldOf, continentOf, locationMatches, buildFunFacts, buildAwardsFunFacts, buildInternationalObservations, buildLocationObservations, filterRoster, looksSurnameFirst, buildFieldCounts, buildTopCountries, buildTrackCounts, buildTopUndergradInstitutions, buildPhdToFacultyPairings, type Roster } from '../src/data.ts';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const roster: Roster = JSON.parse(readFileSync(join(__dirname, '../public/data.json'), 'utf8'));
@@ -106,6 +106,10 @@ test('Information Studies defaults to computing but UCLA GSEIS stays Education',
   assert.equal(fieldOf('Information Studies'), 'Computer & Information Sciences');
   assert.equal(fieldOf('Information Science and Technology'), 'Computer & Information Sciences');
   assert.equal(fieldOf('IST'), 'Computer & Information Sciences');
+});
+
+test('university libraries map to Computer & Information Sciences', () => {
+  assert.equal(fieldOf('University Libraries', 'Stony Brook University'), 'Computer & Information Sciences');
 });
 
 test('FIELDS is alphabetically ordered with the Others catch-all last', () => {
@@ -287,6 +291,22 @@ test('buildTrackCounts covers every track present and omits empty ones', () => {
   assert.equal(counts.length, tracksSeen.size);
 });
 
+test('buildTopUndergradInstitutions and buildPhdToFacultyPairings aggregate properly', () => {
+  const topUg = buildTopUndergradInstitutions(roster, 5);
+  assert.ok(Array.isArray(topUg));
+  assert.ok(topUg.length <= 5);
+  for (let i = 1; i < topUg.length; i++) assert.ok(topUg[i - 1][1] >= topUg[i][1]);
+
+  const pairings = buildPhdToFacultyPairings(roster, 5);
+  assert.ok(Array.isArray(pairings));
+  assert.ok(pairings.length <= 5);
+  for (const [phd, country, count] of pairings) {
+    assert.equal(typeof phd, 'string');
+    assert.equal(typeof country, 'string');
+    assert.ok(count > 0);
+  }
+});
+
 test('search is diacritic-insensitive in both directions', () => {
   const plain = filterRoster(roster, { query: 'Nguyen', field: 'all' });
   const accented = filterRoster(roster, { query: 'Nguyễn', field: 'all' });
@@ -368,6 +388,20 @@ test('filterRoster narrows by track and "all" leaves it unfiltered', () => {
 
   const omitted = filterRoster(roster, { query: '', field: 'all' });
   assert.equal(omitted.length, roster.length);
+});
+
+test('institution type is searchable and independently filterable', () => {
+  const instituteEntry = {
+    ...roster[0],
+    id: 'vp-99999',
+    name: 'Synthetic Institute Researcher',
+    university: 'Example Research Institute',
+    institutionType: 'Independent nonprofit research institute',
+    track: 'Research',
+  };
+  const sample = [roster[0], instituteEntry];
+  assert.deepEqual(filterRoster(sample, { institutionType: 'Independent nonprofit research institute' }), [instituteEntry]);
+  assert.deepEqual(filterRoster(sample, { query: 'nonprofit research institute', searchScope: 'institution' }), [instituteEntry]);
 });
 
 test('duplicate-name university suffixes are hidden from display', () => {

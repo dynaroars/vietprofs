@@ -1,5 +1,5 @@
 import './style.css';
-import { loadRoster, loadStatsHistory, buildSearchIndex, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueUndergradInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, LOCATION_LABELS, countryFlag, canonicalRank, displayName, fieldOf, locationMatches, filterRoster, buildFunFacts, buildUsObservations, buildInternationalObservations, buildLocationObservations, buildQualifiedObservations, buildAwardsFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUniversities, buildFieldCounts, buildTopCountries, buildTrackCounts, STATE_ABBR, type Roster, type RosterEntry, type SearchIndex, type StatsHistoryPoint } from './data.ts';
+import { loadRoster, loadStatsHistory, buildSearchIndex, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueUndergradInstitutions, uniqueCountries, FIELDS, TRACKS, INSTITUTION_TYPES, LOCATIONS, LOCATION_LABELS, countryFlag, canonicalRank, displayName, fieldOf, institutionTypeOf, locationMatches, filterRoster, buildFunFacts, buildUsObservations, buildInternationalObservations, buildLocationObservations, buildQualifiedObservations, buildAwardsFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUndergradInstitutions, buildPhdToFacultyPairings, buildTopUniversities, buildFieldCounts, buildTopCountries, buildTrackCounts, STATE_ABBR, type Roster, type RosterEntry, type SearchIndex, type StatsHistoryPoint } from './data.ts';
 import { escapeHtml, formatRosterDate } from './utils.ts';
 import { STATE_GRID } from './state-grid.ts';
 import { fieldDropdownLabel, renderRosterEntry } from './render.ts';
@@ -45,6 +45,7 @@ function debounce<Args extends unknown[]>(fn: (...args: Args) => void, delayMs: 
 const KEYWORD_LABELS: Record<string, string> = {
   name: 'Name',
   university: 'University',
+  institution: 'Institution',
   department: 'Department',
   rank: 'Rank',
   research: 'Research',
@@ -56,6 +57,7 @@ const KEYWORD_LABELS: Record<string, string> = {
 const KEYWORD_ICONS: Record<string, string> = {
   name: '👤',
   university: '🏛️',
+  institution: '🏛️',
   department: '🏢',
   rank: '🎓',
   research: '🔬',
@@ -67,6 +69,7 @@ const KEYWORD_ICONS: Record<string, string> = {
 const KEYWORD_EXAMPLES: Record<string, string> = {
   name: 'ThanhVu Nguyen',
   university: 'George Mason University',
+  institution: 'Public research institute',
   department: 'Computer Science',
   rank: 'Associate Professor',
   research: 'Software Engineering',
@@ -79,6 +82,8 @@ const KEYWORD_ALIASES: Record<string, string> = {
   name: 'name',
   university: 'university',
   uni: 'university',
+  institution: 'institution',
+  institutiontype: 'institution',
   department: 'department',
   dept: 'department',
   rank: 'rank',
@@ -150,9 +155,12 @@ function renderShell() {
         <option value="all">All fields</option>
       </select>
       <select id="track-filter" class="field-select track-select" aria-label="Filter by faculty type">
-        <option value="all">All faculty types</option>
+        <option value="all">All Faculty</option>
       </select>
-      <select id="sort-order" class="field-select sort-select" aria-label="Sort professors">
+      <select id="institution-type-filter" class="field-select" aria-label="Filter by institution type">
+        <option value="all">All institution</option>
+      </select>
+      <select id="sort-order" class="field-select sort-select" aria-label="Sort academics">
         <option value="random">Random order</option>
         <option value="last-name">Last name</option>
         <option value="first-name">First name</option>
@@ -189,6 +197,10 @@ const TRACK_INFO: Record<string, { label: string; tooltip: string }> = {
   Clinical: {
     label: 'clinical-track',
     tooltip: 'A stable clinical faculty appointment — not adjunct, visiting, or other temporary clinical work.',
+  },
+  'Academic staff': {
+    label: 'academic-staff',
+    tooltip: 'A faculty-status or senior permanent academic librarian or archivist — not an ordinary staff or temporary role.',
   },
   Emeritus: {
     label: 'emeritus',
@@ -237,11 +249,11 @@ function sortRoster(roster: Roster, order: string): Roster {
 function renderRoster(roster: Roster, { field, location }: RenderOptions = {}) {
   const rosterEl = document.getElementById('roster');
   const countEl = document.getElementById('result-count');
-  const universities = new Set(roster.map((p) => p.university)).size;
+  const institutions = new Set(roster.map((p) => p.university)).size;
   const fieldPhrase = field && field !== 'all' ? ` in ${escapeHtml(field)}` : '';
   const locationName = location === 'US' ? 'the United States' : location === 'World' || !location ? 'the World' : location;
   const peopleLabel = roster.length === 1 ? 'person' : 'people';
-  countEl.innerHTML = `${roster.length}${trackQualifier(roster)} ${peopleLabel}${fieldPhrase} across ${universities} universit${universities === 1 ? 'y' : 'ies'} in ${escapeHtml(locationName)}.`;
+  countEl.innerHTML = `${roster.length}${trackQualifier(roster)} ${peopleLabel}${fieldPhrase} across ${institutions} institution${institutions === 1 ? '' : 's'} in ${escapeHtml(locationName)}.`;
 
   if (roster.length === 0) {
     rosterEl.innerHTML = '<p class="empty-state">No matches. Try a different search or filter.</p>';
@@ -276,6 +288,126 @@ function renderStateGrid(roster: Roster): string {
     </div>
   `;
 }
+
+function renderWorldCountryGrid(roster: Roster): string {
+  const counts = new Map<string, number>();
+  for (const p of roster) {
+    const country = p.country || 'United States';
+    counts.set(country, (counts.get(country) ?? 0) + 1);
+  }
+  if (counts.size === 0) return '';
+  const sorted = [...counts.entries()].sort((a, b) => b[1] - a[1]);
+  const max = sorted[0] ? sorted[0][1] : 1;
+  const total = roster.length || 1;
+
+  const tiles = sorted.map(([country, count]) => {
+    const tier = heatTier(count, max);
+    const flag = countryFlag(country);
+    const pct = Math.round((count / total) * 100);
+    const label = `${flag} ${country}: ${count} ${count === 1 ? 'person' : 'people'} (${pct}%)`;
+    return `
+      <button type="button" class="country-grid-tile heat-${tier} ranked-item" data-filter="country" data-value="${escapeHtml(country)}" title="${escapeHtml(label)}" aria-label="${escapeHtml(label)}">
+        <span class="country-flag" aria-hidden="true">${flag}</span>
+        <span class="country-name">${escapeHtml(country)}</span>
+        <span class="country-count">${count}</span>
+        <span class="country-share">${pct}%</span>
+      </button>
+    `;
+  }).join('');
+
+  return `
+    <div class="insights-section">
+      <h3 class="insights-heading">Global Diaspora Host Country Map Grid</h3>
+      <p class="insights-caption">Faculty distribution across ${counts.size} host countries worldwide — darker tiles indicate higher counts; click a tile to filter by country.</p>
+      <div class="country-grid">${tiles}</div>
+    </div>
+  `;
+}
+
+function renderAlmaMaterOriginsMap(subRoster: Roster): string {
+  const topUndergrad = buildTopUndergradInstitutions(subRoster, 6);
+  const topPhd = buildTopPhdInstitutions(subRoster, 6);
+  if (topUndergrad.length === 0 && topPhd.length === 0) return '';
+  const maxUg = topUndergrad[0] ? topUndergrad[0][1] : 1;
+  const maxPhd = topPhd[0] ? topPhd[0][1] : 1;
+
+  const ugRows = topUndergrad
+    .map(([inst, count], idx) => {
+      const pct = Math.round((count / maxUg) * 100);
+      return `
+        <button type="button" class="ranked-item" data-search="${escapeHtml(inst)}" data-scope="undergrad" title="Search faculty with undergrad degree from ${escapeHtml(inst)}">
+          <div class="ranked-header">
+            <span class="ranked-name"><span class="ranked-num">${idx + 1}.</span> ${escapeHtml(inst)}</span>
+            <span class="ranked-count">${count}</span>
+          </div>
+          <div class="ranked-track"><div class="ranked-bar" style="width: ${pct}%;"></div></div>
+        </button>
+      `;
+    })
+    .join('');
+
+  const phdRows = topPhd
+    .map(([inst, count], idx) => {
+      const pct = Math.round((count / maxPhd) * 100);
+      return `
+        <button type="button" class="ranked-item" data-search="${escapeHtml(inst)}" data-scope="phd" title="Search faculty with PhD from ${escapeHtml(inst)}">
+          <div class="ranked-header">
+            <span class="ranked-name"><span class="ranked-num">${idx + 1}.</span> ${escapeHtml(inst)}</span>
+            <span class="ranked-count">${count}</span>
+          </div>
+          <div class="ranked-track"><div class="ranked-bar" style="width: ${pct}%;"></div></div>
+        </button>
+      `;
+    })
+    .join('');
+
+  return `
+    <div class="insights-grid">
+      <div class="insights-card">
+        <h3 class="insights-heading">Undergraduate Origins</h3>
+        <p class="insights-caption">Top undergraduate institutions recorded in the roster; click to search alumni.</p>
+        <div class="ranked-list">${ugRows.length ? ugRows : '<p class="empty-state">No undergraduate data recorded in selection.</p>'}</div>
+      </div>
+      <div class="insights-card">
+        <h3 class="insights-heading">Doctoral Alma Maters</h3>
+        <p class="insights-caption">Top PhD-granting institutions across the roster; click to search alumni.</p>
+        <div class="ranked-list">${phdRows.length ? phdRows : '<p class="empty-state">No PhD data recorded in selection.</p>'}</div>
+      </div>
+    </div>
+  `;
+}
+
+function renderAcademicFlowSummary(subRoster: Roster): string {
+  const pairings = buildPhdToFacultyPairings(subRoster, 6);
+  if (!pairings.length) return '';
+  const max = pairings[0][2];
+  const items = pairings
+    .map(([phd, country, count]) => {
+      const pct = Math.round((count / max) * 100);
+      const flag = countryFlag(country);
+      return `
+        <div class="flow-pair-item">
+          <button type="button" class="ranked-item flow-pair-btn" data-search="${escapeHtml(phd)}" data-scope="phd" title="Search faculty who earned PhD at ${escapeHtml(phd)}">
+            <div class="ranked-header">
+              <span class="ranked-name"><span class="flow-phd">🎓 ${escapeHtml(phd)}</span> <span class="flow-arrow">➔</span> <span class="flow-dest">${flag} ${escapeHtml(country)}</span></span>
+              <span class="ranked-count">${count} ${count === 1 ? 'person' : 'people'}</span>
+            </div>
+            <div class="ranked-track"><div class="ranked-bar" style="width: ${pct}%;"></div></div>
+          </button>
+        </div>
+      `;
+    })
+    .join('');
+
+  return `
+    <div class="insights-section">
+      <h3 class="insights-heading">Doctoral-to-Faculty Pairings</h3>
+      <p class="insights-caption">Most frequent PhD institution and faculty host country pairs in the roster; click to search alumni.</p>
+      <div class="flow-pair-list">${items}</div>
+    </div>
+  `;
+}
+
 
 function renderDecadesChart(roster: Roster): string {
   const decadeCounts = buildDecadeCounts(roster);
@@ -313,12 +445,10 @@ interface LeaderboardLabels {
   descPhd?: string;
 }
 
-function renderLeaderboards(subRoster: Roster, { titleUni = 'Top Faculty Hubs', descUni = 'Universities with the most Vietnamese faculty; click to search.', titlePhd = 'Top PhD Alma Maters', descPhd = 'Doctoral institutions that trained the most faculty; click to search.' }: LeaderboardLabels = {}): string {
-  const topUnis = buildTopUniversities(subRoster, 6);
-  const topPhd = buildTopPhdInstitutions(subRoster, 6);
-  if (topUnis.length === 0 && topPhd.length === 0) return '';
+function renderTopFacultyHubs(subRoster: Roster, title = 'Top Faculty Hubs', desc = 'Universities with the most Vietnamese faculty; click to search.'): string {
+  const topUnis = buildTopUniversities(subRoster, 8);
+  if (!topUnis.length) return '';
   const maxUni = topUnis[0] ? topUnis[0][1] : 1;
-  const maxPhd = topPhd[0] ? topPhd[0][1] : 1;
 
   const uniRows = topUnis
     .map(([uni, count], idx) => {
@@ -335,41 +465,18 @@ function renderLeaderboards(subRoster: Roster, { titleUni = 'Top Faculty Hubs', 
     })
     .join('');
 
-  const phdRows = topPhd
-    .map(([inst, count], idx) => {
-      const pct = Math.round((count / maxPhd) * 100);
-      return `
-        <button type="button" class="ranked-item" data-search="${escapeHtml(inst)}" data-scope="phd" title="Search faculty from ${escapeHtml(inst)}">
-          <div class="ranked-header">
-            <span class="ranked-name"><span class="ranked-num">${idx + 1}.</span> ${escapeHtml(inst)}</span>
-            <span class="ranked-count">${count}</span>
-          </div>
-          <div class="ranked-track"><div class="ranked-bar" style="width: ${pct}%;"></div></div>
-        </button>
-      `;
-    })
-    .join('');
-
   return `
-    <div class="insights-grid">
-      <div class="insights-card">
-        <h3 class="insights-heading">${escapeHtml(titleUni)}</h3>
-        <p class="insights-caption">${escapeHtml(descUni)}</p>
-        <div class="ranked-list">${uniRows}</div>
-      </div>
-      <div class="insights-card">
-        <h3 class="insights-heading">${escapeHtml(titlePhd)}</h3>
-        <p class="insights-caption">${escapeHtml(descPhd)}</p>
-        <div class="ranked-list">${phdRows}</div>
-      </div>
+    <div class="insights-section">
+      <h3 class="insights-heading">${escapeHtml(title)}</h3>
+      <p class="insights-caption">${escapeHtml(desc)}</p>
+      <div class="ranked-list">${uniRows}</div>
     </div>
   `;
 }
 
-// Shared renderer for the field / career-stage / country breakdown bars: same visual language
-// as renderLeaderboards' ranked bars, but clicking sets a dropdown/location filter directly
-// (via data-filter/data-value) instead of running a scoped search.
-function renderFilterBreakdown(counts: [string, number][], { title, caption, filterKey, formatLabel = (v: string) => v }: { title: string; caption: string; filterKey: 'field' | 'track' | 'country'; formatLabel?: (value: string) => string }): string {
+// Shared renderer for the field / career-stage breakdown bars: same visual language
+// as ranked bars, but clicking sets a dropdown filter directly (via data-filter/data-value).
+function renderFilterBreakdown(counts: [string, number][], { title, caption, filterKey, formatLabel = (v: string) => v }: { title: string; caption: string; filterKey: 'field' | 'track'; formatLabel?: (value: string) => string }): string {
   if (!counts.length) return '';
   const total = counts.reduce((sum, [, c]) => sum + c, 0);
   const max = counts[0][1];
@@ -397,7 +504,7 @@ function renderFilterBreakdown(counts: [string, number][], { title, caption, fil
   `;
 }
 
-function renderDistributionCharts(subRoster: Roster, { includeCountry = false }: { includeCountry?: boolean } = {}): string {
+function renderDistributionCharts(subRoster: Roster): string {
   const fieldCard = renderFilterBreakdown(buildFieldCounts(subRoster), {
     title: 'By Field',
     caption: 'Broad academic field; click a bar to filter.',
@@ -408,17 +515,10 @@ function renderDistributionCharts(subRoster: Roster, { includeCountry = false }:
     caption: 'Appointment track; click a bar to filter.',
     filterKey: 'track',
   });
-  const countryCard = includeCountry
-    ? renderFilterBreakdown(buildTopCountries(subRoster, 8), {
-        title: 'By Country',
-        caption: 'Top countries by faculty count; click a bar to filter.',
-        filterKey: 'country',
-        formatLabel: (country) => `${countryFlag(country)} ${country}`,
-      })
-    : '';
-  if (!fieldCard && !trackCard && !countryCard) return '';
-  return `<div class="insights-grid">${fieldCard}${trackCard}${countryCard}</div>`;
+  if (!fieldCard && !trackCard) return '';
+  return `<div class="insights-grid">${fieldCard}${trackCard}</div>`;
 }
+
 
 function renderGrowthChart(history: StatsHistoryPoint[]): string {
   if (history.length < 2) return '';
@@ -499,12 +599,15 @@ function renderFunFacts(visibleRoster: Roster, selectedLocationLabel: string, se
         <div class="insights-section-header">
           <span class="insights-badge">${escapeHtml(selectedLabel)}</span>
           <h2 class="insights-main-heading">${escapeHtml(selectedIsUs ? 'United States Academic Landscape' : `${selectedLocationLabel} Academic Landscape`)}</h2>
-          <p class="insights-main-desc">${selectedRoster.length} ${selectedRoster.length === 1 ? 'person' : 'people'} across ${selectedUniversities} universit${selectedUniversities === 1 ? 'y' : 'ies'} in ${escapeHtml(selectedIsUs ? 'the United States' : selectedLocationLabel.replace(/^\S+\s+/, ''))}.</p>
+          <p class="insights-main-desc">${selectedRoster.length} ${selectedRoster.length === 1 ? 'person' : 'people'} across ${selectedUniversities} institution${selectedUniversities === 1 ? '' : 's'} in ${escapeHtml(selectedIsUs ? 'the United States' : selectedLocationLabel.replace(/^\S+\s+/, ''))}.</p>
         </div>
         ${selectedIsUs && selectedRoster.length ? renderStateGrid(selectedRoster) : ''}
+        ${!selectedIsUs && selectedRoster.length ? renderWorldCountryGrid(selectedRoster) : ''}
         ${selectedRoster.length ? renderDistributionCharts(selectedRoster) : ''}
+        ${selectedRoster.length ? renderTopFacultyHubs(selectedRoster, selectedIsUs ? 'Top U.S. Faculty Hubs' : 'Top Faculty Hubs', 'Institutions with the most Vietnamese academics in the selected location; click to search.') : ''}
+        ${selectedRoster.length ? renderAlmaMaterOriginsMap(selectedRoster) : ''}
+        ${selectedRoster.length ? renderAcademicFlowSummary(selectedRoster) : ''}
         ${selectedRoster.length ? renderDecadesChart(selectedRoster) : ''}
-        ${selectedRoster.length ? renderLeaderboards(selectedRoster, { titleUni: selectedIsUs ? 'Top U.S. Faculty Hubs' : 'Top Faculty Hubs', descUni: 'Universities with the most Vietnamese faculty in the selected location; click to search.', titlePhd: selectedIsUs ? 'Top U.S. PhD Alma Maters' : 'Top PhD Alma Maters', descPhd: 'Doctoral institutions that trained faculty in the selected location; click to search.' }) : ''}
         <div class="insights-section">
           <h3 class="insights-heading">${escapeHtml(selectedLabel)} Highlights</h3>
           <ul class="fun-facts">${formatList([...selectedFacts, ...selectedAwardsFacts])}</ul>
@@ -521,12 +624,15 @@ function renderFunFacts(visibleRoster: Roster, selectedLocationLabel: string, se
         <div class="insights-section-header">
           <span class="insights-badge">🌐 World</span>
           <h2 class="insights-main-heading">Global &amp; Worldwide Diaspora Landscape</h2>
-          <p class="insights-main-desc">${fullRoster.length} people across ${worldUniversities} universities in the World.</p>
+          <p class="insights-main-desc">${fullRoster.length} people across ${worldUniversities} institutions in the World.</p>
         </div>
-        ${renderDistributionCharts(fullRoster, { includeCountry: true })}
+        ${renderWorldCountryGrid(fullRoster)}
+        ${renderDistributionCharts(fullRoster)}
+        ${worldInternationalRoster.length ? renderTopFacultyHubs(worldInternationalRoster, 'Top International Faculty Hubs', 'Global institutions outside the U.S. with the most Vietnamese academics; click to search.') : ''}
+        ${renderAlmaMaterOriginsMap(fullRoster)}
+        ${renderAcademicFlowSummary(fullRoster)}
         ${renderGrowthChart(statsHistory)}
         ${renderDecadesChart(fullRoster)}
-        ${worldInternationalRoster.length ? renderLeaderboards(worldInternationalRoster, { titleUni: 'Top International Faculty Hubs', descUni: 'Global universities outside the U.S. with the most Vietnamese faculty; click to search.', titlePhd: 'Top International PhD Alma Maters', descPhd: 'Doctoral institutions that trained global faculty; click to search.' }) : ''}
         <div class="insights-section">
           <h3 class="insights-heading">World Highlights</h3>
           <ul class="fun-facts">${formatList([...worldFacts, ...worldAwardsFacts])}</ul>
@@ -585,6 +691,7 @@ async function init() {
     ['research', uniqueResearchAreas(roster)],
     ['honors', [...new Set(roster.flatMap((p) => (p.honors || []).flatMap((honor) => [honor.name, honor.organization]).filter(Boolean)))].sort()],
     ['university', [...new Set(roster.map((p) => p.university))].sort()],
+    ['institution', [...INSTITUTION_TYPES]],
     ['department', uniqueDepartments(roster)],
     ['phd', uniquePhdInstitutions(roster)],
     ['undergrad', uniqueUndergradInstitutions(roster)],
@@ -596,6 +703,7 @@ async function init() {
   const locationSelect = document.getElementById('location-filter') as HTMLSelectElement;
   const fieldSelect = document.getElementById('field-filter') as HTMLSelectElement;
   const trackSelect = document.getElementById('track-filter') as HTMLSelectElement;
+  const institutionTypeSelect = document.getElementById('institution-type-filter') as HTMLSelectElement;
   const sortSelect = document.getElementById('sort-order') as HTMLSelectElement;
   const filterState = { state: '', insights: false };
 
@@ -645,11 +753,12 @@ async function init() {
   const locationOptions = [...countryOptions, ...continentOptions];
   const locationLabel = (loc: string): string => LOCATION_LABELS[loc] || `${countryFlag(loc)} ${loc}`;
 
-  function filtersHaveResults(location: string, field: string, track: string): boolean {
+  function filtersHaveResults(location: string, field: string, track: string, institutionType = 'all'): boolean {
     return roster.some((person) =>
       locationMatches(person, location) &&
       (field === 'all' || fieldOf(person.department, person.university) === field) &&
-      (track === 'all' || person.track === track)
+      (track === 'all' || person.track === track) &&
+      (institutionType === 'all' || institutionTypeOf(person) === institutionType)
     );
   }
 
@@ -682,32 +791,35 @@ async function init() {
       ],
       'all',
     );
-    const trackEntries = countedOptions(
-      TRACKS,
-      roster,
-      (person, value) => person.track === value,
-      (value) => value,
-    );
     setOptions(
       trackSelect,
       [
-        { value: 'all', label: 'All faculty types' },
-        ...trackEntries,
+        { value: 'all', label: 'All Faculty' },
+        ...countedOptions(TRACKS, roster, (person, value) => person.track === value, (value) => value),
+      ],
+      'all',
+    );
+    setOptions(
+      institutionTypeSelect,
+      [
+        { value: 'all', label: 'All institution' },
+        ...countedOptions(INSTITUTION_TYPES, roster, (person, value) => institutionTypeOf(person) === value, (value) => value),
       ],
       'all',
     );
   }
 
-  function setFilterValues({ location, field = 'all', track = 'all' }: { location: string; field?: string; track?: string }) {
+  function setFilterValues({ location, field = 'all', track = 'all', institutionType = 'all' }: { location: string; field?: string; track?: string; institutionType?: string }) {
     const safeLocation = locationOptions.includes(location) && roster.some((person) => locationMatches(person, location))
       ? location
       : 'World';
-    const safeFilters = filtersHaveResults(safeLocation, field, track)
-      ? { location: safeLocation, field, track }
-      : { location: safeLocation, field: 'all', track: 'all' };
+    const safeFilters = filtersHaveResults(safeLocation, field, track, institutionType)
+      ? { location: safeLocation, field, track, institutionType }
+      : { location: safeLocation, field: 'all', track: 'all', institutionType: 'all' };
     locationSelect.value = safeFilters.location;
     fieldSelect.value = safeFilters.field;
     trackSelect.value = safeFilters.track;
+    institutionTypeSelect.value = safeFilters.institutionType;
   }
 
   initializeDropdowns();
@@ -765,6 +877,7 @@ async function init() {
       currentLocation: locationSelect.value,
       field: fieldSelect.value,
       track: trackSelect.value,
+      institutionType: institutionTypeSelect.value,
     });
   }
 
@@ -776,6 +889,7 @@ async function init() {
   filterState.state = params.get('state') ?? '';
   const requestedField = params.get('field');
   const requestedTrack = params.get('track');
+  const requestedInstitutionType = params.get('institutionType');
   const requestedSort = params.get('sort');
   let initialLocation = 'World';
   if (requestedLocation && locationOptions.includes(requestedLocation) && roster.some((p) => locationMatches(p, requestedLocation))) {
@@ -793,7 +907,11 @@ async function init() {
   if (TRACKS.some((track) => track === requestedTrack) && roster.some((p) => p.track === requestedTrack)) {
     initialTrack = requestedTrack;
   }
-  setFilterValues({ location: initialLocation, field: initialField, track: initialTrack });
+  let initialInstitutionType = 'all';
+  if (INSTITUTION_TYPES.some((type) => type === requestedInstitutionType)) {
+    initialInstitutionType = requestedInstitutionType;
+  }
+  setFilterValues({ location: initialLocation, field: initialField, track: initialTrack, institutionType: initialInstitutionType });
   if (['random', 'last-name', 'first-name', 'recent'].includes(requestedSort)) {
     sortSelect.value = requestedSort;
   }
@@ -806,6 +924,7 @@ async function init() {
     if (locationSelect.value !== 'World') next.set('loc', locationSelect.value);
     if (fieldSelect.value !== 'all') next.set('field', fieldSelect.value);
     if (trackSelect.value !== 'all') next.set('track', trackSelect.value);
+    if (institutionTypeSelect.value !== 'all') next.set('institutionType', institutionTypeSelect.value);
     if (sortSelect.value !== 'random') next.set('sort', sortSelect.value);
     if (filterState.insights) next.set('view', 'insights');
     const query = next.toString();
@@ -833,6 +952,7 @@ async function init() {
       location: locationSelect.value,
       field: fieldSelect.value,
       track: trackSelect.value,
+      institutionType: institutionTypeSelect.value,
     });
     renderRoster(sortRoster(filtered, sortSelect.value), {
       field: fieldSelect.value,
@@ -961,6 +1081,7 @@ async function init() {
     update();
   });
   trackSelect.addEventListener('change', () => update({ fromSearch: false }));
+  institutionTypeSelect.addEventListener('change', () => update({ fromSearch: false }));
   sortSelect.addEventListener('change', () => update({ fromSearch: false }));
 
   document.getElementById('home-link').addEventListener('click', (e) => {
@@ -1019,6 +1140,7 @@ async function init() {
       filterState.insights = false;
       fieldSelect.value = 'all';
       trackSelect.value = 'all';
+      institutionTypeSelect.value = 'all';
       update({ fromSearch: true });
     }
   });
@@ -1095,7 +1217,7 @@ async function init() {
     ...pickRandomUnique(uniqueStates(roster), 1).map((value) => ({ type: 'search' as const, value })),
     ...pickRandomUnique(roster.flatMap((person) => person.researchAreas), 1).map((value) => ({ type: 'search' as const, value })),
     ...pickRandomUnique(populatedFields, 2).map((value) => ({ type: 'field' as const, value, label: fieldDropdownLabel(value) })),
-    ...pickRandomUnique(TRACKS, 1).map((value) => ({ type: 'track' as const, value })),
+    ...pickRandomUnique(TRACKS.filter((track) => roster.some((person) => person.track === track)), 1).map((value) => ({ type: 'track' as const, value })),
     ...pickRandomUnique(populatedLocations, 1).map((value) => ({ type: 'loc' as const, value })),
   ] as Example[]);
   examples.push({ type: 'fact', value: randomFact });
@@ -1159,6 +1281,7 @@ async function init() {
     }
     fieldSelect.value = 'all';
     trackSelect.value = 'all';
+    institutionTypeSelect.value = 'all';
     update();
   });
 

@@ -17,7 +17,7 @@ interface UrlEntry {
 
 const entries: UrlEntry[] = [];
 for (const person of roster) {
-  for (const field of ['profileUrl', 'websiteUrl', 'scholarUrl', 'portraitSource']) {
+  for (const field of ['profileUrl', 'websiteUrl', 'scholarUrl', 'linkedinUrl', 'portraitSource']) {
     if (person[field]) entries.push({ id: person.id, name: person.name, field, url: person[field] });
   }
   for (const honor of person.honors ?? []) {

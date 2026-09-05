@@ -3,6 +3,7 @@ import { resolve } from 'node:path';
 import {
   HONOR_CATEGORIES,
   HONOR_FIELDS,
+  INSTITUTION_TYPES,
   OTHER_DEGREE_FIELDS,
   REQUIRED_ROSTER_STRINGS,
   ROSTER_FIELDS,
@@ -14,6 +15,7 @@ import { looksSurnameFirst } from '../src/data.ts';
 const rosterFile = resolve('public/data.json');
 const verificationFile = resolve('maintenance/verification.json');
 const allowedTracks = new Set<string>(TRACKS);
+const allowedInstitutionTypes = new Set<string>(INSTITUTION_TYPES);
 const allowedHonorCategories = new Set<string>(HONOR_CATEGORIES);
 const allowedRosterFields = new Set<string>(ROSTER_FIELDS);
 const allowedHonorFields = new Set<string>(HONOR_FIELDS);
@@ -27,6 +29,10 @@ const surnameFirstAllowlist = new Set<string>([
   'Truong Nghiem', // published as "Truong X. Nghiem" across 83 DBLP entries; Nghiem is his surname
   'Dinh Phung', // published as "Dinh Q. Phung" / "Dinh Quoc Phung" across 552 DBLP entries; Phung is his surname
   'Tran Nguyen Templeton', // "Nguyen" is a preserved maiden name, not a misordered surname
+  'Mai Tuyet Pho', // published as "Mai Tuyet Pho, MD" across her UChicago bio, MD/MPH listings, and
+  // LinkedIn, and referred to as "Dr. Pho" in UChicago news articles — Pho is her surname.
+  'Ha Phuong Luong', // published as "Dr Ha Phuong Luong" on her official Henley Business School
+  // (University of Reading) staff profile and on ResearchGate/Google Scholar; Luong is her surname.
 ]);
 
 function fail(file: string, message: string): never {
@@ -54,6 +60,7 @@ const names = new Set<string>();
 const ids = new Set<string>();
 const profileUrls = new Set();
 const scholarUrls = new Set();
+const linkedinUrls = new Set();
 const portraits = new Set();
 for (const [index, person] of roster.entries()) {
   const label = `entry ${index + 1}`;
@@ -73,6 +80,13 @@ for (const [index, person] of roster.entries()) {
   if (person.scholarUrl !== undefined) {
     if (scholarUrls.has(person.scholarUrl)) fail(rosterFile, `${label} duplicates scholarUrl ${person.scholarUrl} — a Google Scholar profile belongs to one person; this usually means a placeholder/wrong ID got copied across a batch`);
     scholarUrls.add(person.scholarUrl);
+  }
+  if (person.linkedinUrl !== undefined && !/^https:\/\/(www\.)?linkedin\.com\//.test(person.linkedinUrl)) {
+    fail(rosterFile, `${label} linkedinUrl must be an https://linkedin.com/ URL`);
+  }
+  if (person.linkedinUrl !== undefined) {
+    if (linkedinUrls.has(person.linkedinUrl)) fail(rosterFile, `${label} duplicates linkedinUrl ${person.linkedinUrl} — a LinkedIn profile belongs to one person; this usually means a placeholder/wrong ID got copied across a batch`);
+    linkedinUrls.add(person.linkedinUrl);
   }
   if (looksSurnameFirst(person.name) && !surnameFirstAllowlist.has(person.name)) {
     fail(rosterFile, `${label} name "${person.name}" looks stored surname-first (Vietnamese order) instead of "First (Middle) Last" — reorder it, or if the first token is genuinely this person's given name, add it to surnameFirstAllowlist in scripts/validate-data.ts with a note on how you confirmed it`);
@@ -129,6 +143,12 @@ for (const [index, person] of roster.entries()) {
     }
   }
   if (!allowedTracks.has(person.track)) fail(rosterFile, `${label} has unsupported track ${person.track}`);
+  if (person.institutionType !== undefined && !allowedInstitutionTypes.has(person.institutionType)) {
+    fail(rosterFile, `${label} has unsupported institutionType ${person.institutionType}`);
+  }
+  if (person.institutionType !== undefined && person.institutionType !== 'University' && person.track !== 'Research') {
+    fail(rosterFile, `${label} non-university institutionType requires the Research track`);
+  }
   if (!Array.isArray(person.researchAreas) || person.researchAreas.length === 0) fail(rosterFile, `${label} needs researchAreas`);
   if (person.state !== undefined && typeof person.state !== 'string') fail(rosterFile, `${label} state must be a string`);
   if (person.country !== undefined && typeof person.country !== 'string') fail(rosterFile, `${label} country must be a string`);

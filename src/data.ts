@@ -18,6 +18,7 @@ export interface RosterEntry {
   id: string;
   name: string;
   university: string;
+  institutionType?: string;
   city?: string;
   state?: string;
   country?: string;
@@ -43,6 +44,7 @@ export interface RosterEntry {
   profileUrl?: string;
   websiteUrl?: string;
   scholarUrl?: string;
+  linkedinUrl?: string;
   lastUpdatedAt?: string;
   portrait?: string;
   portraitSource?: string;
@@ -51,10 +53,14 @@ export interface RosterEntry {
 
 export type Roster = RosterEntry[];
 
-import { TRACKS } from './roster-constants.ts';
-export { TRACKS } from './roster-constants.ts';
+import { INSTITUTION_TYPES, TRACKS } from './roster-constants.ts';
+export { INSTITUTION_TYPES, TRACKS } from './roster-constants.ts';
 
 let cached: Roster | null = null;
+
+export function institutionTypeOf(person: Pick<RosterEntry, 'institutionType'>): string {
+  return person.institutionType || 'University';
+}
 
 export interface SearchIndex {
   roster: Roster;
@@ -68,6 +74,7 @@ function searchableFields(person: RosterEntry) {
     displayName(person.name),
     vietnameseName(person),
     person.university,
+    person.institutionType,
     person.city,
     person.state,
     person.country,
@@ -276,7 +283,10 @@ export function uniqueResearchAreas(roster: Roster): string[] {
   return [...new Set(roster.flatMap((p) => p.researchAreas).filter(Boolean))].sort();
 }
 
-// Employment tracks a roster entry can carry. Tenure-line means tenure-track or already tenured.
+// Employment tracks a roster entry can carry. Institution type is modeled separately: Research
+// can cover stable faculty-level university appointments and permanent faculty-equivalent roles at
+// eligible public or independent nonprofit scholarly institutes. Corporate research labs remain
+// outside the roster. Tenure-line means tenure-track or already tenured.
 // Teaching means a full-time, continuing/permanent non-tenure-track teaching appointment, including
 // stable Professor of Practice and equivalent appointments. Research and Clinical are stable faculty
 // or faculty-equivalent appointments in their respective institutional tracks; their exact title
@@ -634,7 +644,7 @@ const FIELD_RULES = [
     field: 'Business & Economics',
     match: /business|economic|\bfinanc(?:e|ial|es)\b|accounting|marketing|management|entrepreneurship|\binsurance\b|real estate|human resource|industrial relations|organi[zs]ation|work and organi[zs]ation|supply chain|\blogistics\b|\bMBA\b/i,
   },
-  { field: 'Computer & Information Sciences', match: /computer science|computing|informati(?:cs?|que)|information science|information studies|information systems|information technology|cybersecurity|\bIST\b|\bCIS\b|library|machine learning|artificial intelligence|natural language processing|multimedia/i },
+  { field: 'Computer & Information Sciences', match: /computer science|computing|informati(?:cs?|que)|information science|information studies|information systems|information technology|cybersecurity|\bIST\b|\bCIS\b|librar(?:y|ies)|machine learning|artificial intelligence|natural language processing|multimedia/i },
   // Stem match (not just "mathematics") so "Mathematical Sciences" — UT Dallas's actual
   // department name — lands here too, without fabricating a different department string.
   { field: 'Mathematics', match: /mathematic|mathématiq|géométrie/i },
@@ -719,6 +729,31 @@ export function buildTopPhdInstitutions(roster: Roster, limit = 8): [string, num
   return [...counts.entries()].sort((a, b) => b[1] - a[1]).slice(0, limit);
 }
 
+export function buildTopUndergradInstitutions(roster: Roster, limit = 8): [string, number][] {
+  const counts = new Map<string, number>();
+  for (const p of roster) {
+    if (!p.undergradInstitution) continue;
+    counts.set(p.undergradInstitution, (counts.get(p.undergradInstitution) ?? 0) + 1);
+  }
+  return [...counts.entries()].sort((a, b) => b[1] - a[1]).slice(0, limit);
+}
+
+export function buildPhdToFacultyPairings(roster: Roster, limit = 6): [string, string, number][] {
+  const pairCounts = new Map<string, number>();
+  for (const p of roster) {
+    if (!p.phdInstitution) continue;
+    const country = p.country || 'United States';
+    const key = `${p.phdInstitution} → ${country}`;
+    pairCounts.set(key, (pairCounts.get(key) ?? 0) + 1);
+  }
+  const sorted = [...pairCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, limit);
+  return sorted.map(([key, count]) => {
+    const parts = key.split(' → ');
+    return [parts[0], parts[1], count];
+  });
+}
+
+
 export function buildTopUniversities(roster: Roster, limit = 8): [string, number][] {
   const counts = new Map<string, number>();
   for (const p of roster) {
@@ -780,6 +815,7 @@ interface FilterOptions {
   location?: string;
   field?: string;
   track?: string;
+  institutionType?: string;
   university?: string;
   phdInstitution?: string;
   state?: string;
@@ -791,6 +827,7 @@ function matchesSearchScope(person: RosterEntry, scope: string, target: string):
   const scopedValues: Record<string, (string | undefined)[]> = {
     name: [displayName(person.name)],
     university: [person.university],
+    institution: [person.university, institutionTypeOf(person)],
     department: [person.department],
     field: [fieldOf(person.department, person.university)],
     track: [person.track],
@@ -805,7 +842,7 @@ function matchesSearchScope(person: RosterEntry, scope: string, target: string):
   return (values || []).filter(Boolean).some((value) => stripDiacritics(value.toLowerCase()).includes(target));
 }
 
-export function filterRoster(roster: Roster | SearchIndex, { query = '', location, field, track, university, phdInstitution, state, country, searchScope = 'all' }: FilterOptions = {}): Roster {
+export function filterRoster(roster: Roster | SearchIndex, { query = '', location, field, track, institutionType, university, phdInstitution, state, country, searchScope = 'all' }: FilterOptions = {}): Roster {
   const index = Array.isArray(roster) ? buildSearchIndex(roster) : roster;
   let result = index.roster;
 
@@ -817,6 +854,9 @@ export function filterRoster(roster: Roster | SearchIndex, { query = '', locatio
   }
   if (track && track !== 'all') {
     result = result.filter((p) => p.track === track);
+  }
+  if (institutionType && institutionType !== 'all') {
+    result = result.filter((p) => institutionTypeOf(p) === institutionType);
   }
   if (country) {
     const norm = stripDiacritics(country.trim().toLowerCase());
@@ -1039,7 +1079,7 @@ function addRosterObservations(facts: string[], roster: Roster, label: string): 
 export function buildUsObservations(roster: Roster | null | undefined): string[] {
   const usRoster = (roster || []).filter((p) => (p.country || 'United States') === 'United States');
   if (usRoster.length === 0) return ['No United States faculty currently listed under the active filter selection.'];
-  const facts = [`${usRoster.length} U.S. entries across ${new Set(usRoster.map((p) => p.university)).size} universities.`];
+  const facts = [`${usRoster.length} U.S. entries across ${new Set(usRoster.map((p) => p.university)).size} institutions.`];
   const places = countBy(usRoster, (p) => p.state);
   if (places.length >= 2 && places[0][1] + places[1][1] >= usRoster.length * 0.2) {
     facts.push(`${places[0][0]} and ${places[1][0]} together contain ${observationShare(places[0][1] + places[1][1], usRoster.length)} of U.S. entries.`);
@@ -1053,7 +1093,7 @@ export function buildUsObservations(roster: Roster | null | undefined): string[]
 export function buildInternationalObservations(roster: Roster | null | undefined): string[] {
   const international = (roster || []).filter((p) => (p.country || 'United States') !== 'United States');
   if (international.length === 0) return ['No international diaspora faculty currently listed under the active filter selection.'];
-  const facts = [`${international.length} international entries across ${new Set(international.map((p) => p.university)).size} universities in ${new Set(international.map((p) => p.country)).size} countries.`];
+  const facts = [`${international.length} international entries across ${new Set(international.map((p) => p.university)).size} institutions in ${new Set(international.map((p) => p.country)).size} countries.`];
   const countries = countBy(international, (p) => p.country);
   if (countries.length) facts.push(`The largest international country groups are ${countries.slice(0, 3).map(([country, count]) => `${country} (${count})`).join(', ')}.`);
   const cities = countBy(international, (p) => p.city);
@@ -1071,7 +1111,7 @@ export function buildLocationObservations(roster: Roster | null | undefined, lab
   if (selected.length === 0) return ['No faculty currently listed under the active location selection.'];
   const countries = new Set(selected.map((person) => person.country || 'United States')).size;
   const facts = [
-    `${selected.length} entries across ${new Set(selected.map((person) => person.university)).size} universities in ${countries} countr${countries === 1 ? 'y' : 'ies'}.`,
+    `${selected.length} entries across ${new Set(selected.map((person) => person.university)).size} institutions in ${countries} countr${countries === 1 ? 'y' : 'ies'}.`,
   ];
   const fields = observationFields(selected);
   if (fields.length >= 3 && fields[0][1] - fields[2][1] <= Math.max(3, Math.round(selected.length * 0.04))) {

@@ -29,7 +29,7 @@
 \newcommand{\commitlink}[1]{\href{\ghrepo/commit/#1}{\code{#1}}}
 \newcommand{\vplink}[2]{\href{https://vietprofs.roars.dev/?q=#1}{#2}}
 \title{\includegraphics[width=0.14\textwidth]{../vietprofs-bamboo-v-2048.png}\\[-2pt]
-VietProfs: A Public Directory of the Vietnamese Academic Diaspora\\[4pt]
+VietProfs: A Public Directory of the Vietnamese Academic and Research Diaspora\\[4pt]
 \large Purpose, Eligibility, and Design, with a Technical Report on Keeping It Accurate}
 \author{ThanhVu Nguyen\\George Mason University\\}
 \date{August 2026}
@@ -39,7 +39,7 @@ VietProfs: A Public Directory of the Vietnamese Academic Diaspora\\[4pt]
 
 \begin{abstract}
 The Vietnamese academic diaspora is large and growing, yet no public, searchable record of it exists.
-Individual scholars are discoverable one at a time on their own university pages, but there is no shared directory that lets a student, journalist, organizer, or fellow academic find Vietnamese and Vietnamese-diaspora faculty across institutions, countries, and fields.
+Individual scholars are discoverable one at a time on university or research-institute pages, but there is no shared directory that lets a student, journalist, organizer, or fellow academic find Vietnamese and Vietnamese-diaspora faculty and faculty-equivalent researchers across institutions, countries, and fields.
 We built VietProfs to fill this gap: a public directory intended to stay accurate as a living reference rather than a one-time listing.
 Each entry pairs a portrait and Vietnamese-diacritic name with verified appointment, education, and honors information, browsable on a dynamic web interface with easy search, filtering, and sorting capabilities.
 The directory is designed to be a living document that reflects the current state of the Vietnamese academic diaspora.
@@ -65,7 +65,7 @@ Vietnamese-diaspora---people who are either Vietnamese or have Vietnamese herita
 A prospective graduate student looking for a Vietnamese advisor in their field, a journalist profiling the diaspora, or a scholar looking for compatriots at nearby institutions currently has no better option than ad hoc Google search, one name at a time.
 Communities of comparable size often sustain an informal directory through an alumni association or professional society, where expatriate researcher networks support mentorship, collaboration, and technology diffusion back toward their country of origin \cite{meyer1999scientific,kerr2008ethnic}.
 
-\textbf{VietProfs} was built to be that resource: a public, searchable directory of Vietnamese and Vietnamese-diaspora faculty, useful only if it stays current as people are promoted, move, or retire. By leveraging AI LLM agents to find and propose updates, and verify them against the public web, the open-source system maintains itself with minimal human intervention and therefore reduces the risk of being out of date, neglected or abandoned.
+\textbf{VietProfs} was built to be that resource: a public, searchable directory of Vietnamese and Vietnamese-diaspora faculty and faculty-equivalent research leaders, useful only if it stays current as people are promoted, move, or retire. By leveraging AI LLM agents to find and propose updates, and verify them against the public web, the open-source system maintains itself with minimal human intervention and therefore reduces the risk of being out of date, neglected or abandoned.
 
 \subsection{What VietProfs Is: Motivation, Goals, and Design}
 \label{sec:intro-what}
@@ -80,7 +80,7 @@ And, independent of any specific task, it lets the community---and outsiders---s
 % It is not a test of Vietnamese identity.
 % And it is not a census of the full population (Section~\ref{sec:limitations}).
 
-Inclusion is governed by a single, name-independent rule: a current academic appointment at a university outside Vietnam, in one of five accepted tracks---Tenure-line, Teaching, Research, Clinical, or Emeritus.
+Inclusion is governed by a single, name-independent rule: a current academic appointment at a university or eligible public/nonprofit scholarly research institute outside Vietnam, in one of six accepted tracks---Tenure-line, Teaching, Research, Clinical, Academic staff, or Emeritus. The Research track includes permanent, faculty-equivalent institute researchers because they publish, lead research groups, obtain funding, and mentor students much like university faculty; examples include CNRS and INRIA researchers, Max Planck group leaders, RIKEN scientists, and CSIRO researchers.
 Each track is defined precisely enough that a stable, full-time, faculty-level role is included, while a temporary, visiting, postdoctoral, or adjunct one is not (Section~\ref{sec:eligibility}).
 % Vietnamese names and surnames are used only to find candidates worth checking.
 % No documentary proof of ethnicity is ever required.
@@ -92,7 +92,7 @@ As of 31 August 2026, the canonical snapshot holds 993 records at 423 universiti
 Each person's displaying card is designed around what a visitor actually needs, such as a portrait, Vietnamese-diacritic name, current university, department, rank, and location, education history, curated honors, and short research-area tags.
 Curated honors are limited to real field-wide distinctions such as national-academy election or a major career award.
 Short research-area tags support topic-level search, and a visible last-verified date lets a reader judge how current a given fact is (Section~\ref{sec:whatshown}).
-The site itself supports free-text search that can be narrowed to a single attribute (Name, University, Department, Rank, Research area, Honors, or PhD institution) with a scope selector, combinable location/field/track filters, shareable filtered URLs, university and PhD-institution leaderboards, a state-by-state map of U.S. records, and a \href{https://vietprofs.roars.dev/submit.html}{public form} for anyone to submit a new person or a correction (Section~\ref{sec:ui}).
+The site itself supports free-text search that can be narrowed to a single attribute (including Name, Institution, Department, Rank, Research area, Honors, or PhD institution), combinable location/field/track/institution-type filters, shareable filtered URLs, institution and PhD-institution leaderboards, a state-by-state map of U.S. records, and a \href{https://vietprofs.roars.dev/submit.html}{public form} for anyone to submit a new person or a correction (Section~\ref{sec:ui}).
 
 \subsection{The Engineering Challenge: Keeping VietProfs Accurate}
 \label{sec:intro-how}
@@ -190,11 +190,13 @@ Tenure-line & Tenure-track or already-tenured faculty (Assistant, Associate, or 
 Teaching & Stable, full-time, continuing non-tenure-track teaching faculty, including Professor of
 Practice and equivalent titles, confirmed by the institution's own language (e.g., ``full-time,''
 ``continuing appointment,'' a named promotion ladder) rather than inferred from the title alone. \\
-Research & A stable, faculty-level research appointment such as Research Professor or a documented
-research-faculty promotion ladder---not a postdoctoral, visiting, grant-limited, or otherwise
-temporary research role. \\
+Research & A stable, faculty-level or faculty-equivalent appointment at a university or eligible
+public/nonprofit scholarly research institute---not a postdoctoral, visiting, grant-limited, or
+otherwise temporary research role. \\
 Clinical & A stable clinical-faculty appointment such as Clinical Professor or a documented
 clinical-faculty ladder---not an adjunct or temporary clinical-teaching role. \\
+Academic staff & A university librarian or archivist with documented faculty status or a senior,
+permanent academic appointment---not an ordinary staff or temporary role. \\
 Emeritus & A formally conferred emeritus/emerita title following a tenure-line career, evidenced by
 an active emeritus listing or a documented conferral---not plain retirement, resignation, or an
 in-memoriam page. \\
@@ -202,14 +204,14 @@ in-memoriam page. \\
 \end{tabularx}
 \end{table}
 
-A person is included only if reliable evidence---preferably an official university page---supports two things at once: (1) a current academic appointment at a university anywhere outside Vietnam (with a narrow exception for Emeritus, discussed below), and (2) that appointment falling into one of five accepted tracks, summarized in Table~\ref{tab:tracks}.
+A person is included only if reliable evidence---preferably an official institutional page---supports two things at once: (1) a current academic appointment at a university or eligible public/nonprofit scholarly research institute anywhere outside Vietnam (with a narrow exception for Emeritus, discussed below), and (2) that appointment falling into one of six accepted tracks, summarized in Table~\ref{tab:tracks}.
 
 \emph{Outside Vietnam} is a scope decision, not a value judgment about scholars based in Vietnam: the directory is specifically about the diaspora, a population scattered across hundreds of institutions in dozens of countries with no shared index, which is the gap this project set out to fill. Besides, it also does not make too much sense to have a directory of Vietnamese professors \emph{in} Vietnam, because most likely every professor in Vietnam is Vietnamese, and the official university pages already provide a complete index of them.
 
 Each track has a real counterpart already in the roster: Nam-Trung Nguyen holds a Tenure-line professorship in engineering at Griffith University; \vplink{Thanh+Tran}{Thanh Tran} is a Professor in the Practice of electrical and computer engineering at Rice University under the Teaching track; Khiem Pham-Nguyen holds a Clinical Assistant Professorship in orthodontics at Boston University; and Xuong Nguyen-Huu, whose 1962 PhD from UC Berkeley predates every other recorded degree in the snapshot, holds an Emeritus appointment at UC San Diego.
 
 \subsection{Who is not included, and why}
-The tracks deliberately exclude several kinds of appointment that a casual search would otherwise surface: adjunct, visiting, postdoctoral, affiliate/courtesy, graduate teaching-assistant, non-university, industry-only, and other term-limited or part-time positions.
+The tracks deliberately exclude several kinds of appointment that a casual search would otherwise surface: adjunct, visiting, postdoctoral, affiliate/courtesy, graduate teaching-assistant, industry-only, and other term-limited or part-time positions. Corporate research labs, including Microsoft Research, remain outside scope; eligible non-university employers are limited to public research bodies and independent nonprofit scholarly research institutes, whose entries are explicitly labeled by institution type.
 This is not a judgment about the people who hold these roles---many are excellent scholars, and several will later hold an included appointment---but a decision about what a stable directory entry can promise.
 A visiting or postdoctoral appointment typically lasts one to three years and is, by design, temporary; including it would either commit the directory to constant churn or invite stale entries for people who have long since moved on.
 A plain \code{Instructor} title is treated case by case rather than included from the title alone, because the same word covers everything from a permanent teaching-track position to a single-semester contract depending on the institution.
@@ -352,7 +354,7 @@ And it does not display any ranking, score, or comparative judgment across peopl
 \label{sec:model}
 The public source of truth is \codelink{public/data.json}; the browser loads it and performs search, filtering, sorting, and aggregation.
 Table~\ref{tab:schema} lists the record schema implemented by the \code{RosterEntry} TypeScript interface in \codelink{src/data.ts}.
-A record contains an immutable \code{vp-} identifier followed by digits, a name, current profile URL, university, city, state or province when applicable, country, department, research areas, rank and appointment track, optional education across five credential types (undergraduate, master's, PhD, postdoctoral, and professional degrees such as MD), optional honors with source citations, optional Scholar and personal-site URLs, portrait provenance, and \code{lastUpdatedAt}.
+A record contains an immutable \code{vp-} identifier followed by digits, a name, current profile URL, employing institution and optional non-university \code{institutionType}, city, state or province when applicable, country, department, research areas, rank and appointment track, optional education across five credential types (undergraduate, master's, PhD, postdoctoral, and professional degrees such as MD), optional honors with source citations, optional Scholar and personal-site URLs, portrait provenance, and \code{lastUpdatedAt}.
 The separate \codelink{maintenance/verification.json} ledger records the time of a completed full review, keyed by canonical name. It is not part of the public JSON payload, so maintenance state travels with the repository across machines without inflating what a browser downloads.
 
 \begin{table}[t]
@@ -369,6 +371,7 @@ Required & \code{id}, \code{name}, \code{university}, \code{department}, \code{r
 \code{profileUrl}, \code{lastUpdatedAt}, \code{researchAreas[]} \\
 Location & \code{city}, \code{state}, \code{country} \\
 Identity & \code{vietnameseName} (diacritic form) \\
+Institution & \code{institutionType} (required for eligible non-university institutes) \\
 Education & \code{undergradInstitution}/\code{Year}/\code{Major},
 \code{msInstitution}/\code{Year}/\code{Major},
 \code{phdInstitution}/\code{Year}/\code{Major}, \code{postdocInstitution}/\code{Year},
@@ -383,8 +386,8 @@ Portrait & \code{portrait} (local \code{.webp} path), \code{portraitSource} (pro
 \end{table}
 
 The inclusion rule is a classification policy, restated here as it is literally implemented after being introduced for a general reader in Section~\ref{sec:eligibility}.
-A person must have a current primary university appointment outside Vietnam, except for qualifying emeritus appointments, and must fit one of five tracks: Tenure-line, Teaching, Research, Clinical, or Emeritus.
-Adjunct, visiting, postdoctoral, affiliate/courtesy, temporary, part-time, non-university, and industry-only positions are excluded.
+A person must have a current primary appointment at a university or eligible public/nonprofit scholarly research institute outside Vietnam, except for qualifying emeritus appointments, and must fit one of six tracks: Tenure-line, Teaching, Research, Clinical, Academic staff, or Emeritus.
+Adjunct, visiting, postdoctoral, affiliate/courtesy, temporary, part-time, industry-only, and corporate-research positions are excluded.
 Teaching includes stable full-time non-tenure-track appointments such as Professor of Practice; Research and Clinical require evidence that the appointment is faculty-level and stable; Emeritus requires a formally conferred title following a tenure-line career.
 The published rank is normalized for the public vocabulary where appropriate, while institution-specific titles are preserved when they clarify a non-tenure appointment.
 [CODE: \codelinkd{ROSTER_MAINTENANCE.md}{ROSTER\_MAINTENANCE.md}; \codelink{src/data.ts}]
@@ -435,7 +438,7 @@ The line is deliberately conservative: a shorter, verifiable list of real distin
 \section{User Interface and Interaction Model}
 \label{sec:ui}
 Because the roster is only useful if the population it describes can actually find themselves and each other in it, the client-side search and browsing interface is a first-class part of the system, not a thin wrapper over the JSON file.
-Figure~\ref{fig:home} shows the landing view: a free-text search box with a selectable scope, three combinable filters (location, field, and faculty track), a row of example queries generated from the current roster, a result count, and a card per matching person showing name, Vietnamese-diacritic form, current rank/department/university/location, education, honors, research tags, and a \code{lastUpdatedAt} badge so a visitor can see how fresh a given record is.
+Figure~\ref{fig:home} shows the landing view: a free-text search box with field-specific keyword scopes, four combinable filters (location, field, appointment track, and institution type), a row of example queries generated from the current roster, a result count, and a card per matching person showing name, Vietnamese-diacritic form, current rank/department/institution/location, education, honors, research tags, and a \code{lastUpdatedAt} badge so a visitor can see how fresh a given record is.
 
 \begin{figure}[t]
 \centering
@@ -447,7 +450,7 @@ education, honors, and research tags.}
 \end{figure}
 
 \subsection{Scoped search and diacritic normalization}
-The search box matches names, universities, departments, ranks, research areas, honors, and PhD institutions by default, with matching performed on a diacritic-stripped, lowercased index (\code{buildSearchIndex}/\code{normalizeSearchText} in \code{src/data.ts}) so that typing \code{Nguyen} finds \code{Nguy\~{e}n}. A selector at the left of the search box can narrow the same text to Name, Rank, Research area, Honors, University, Department, or PhD institution. Location, field, and track are intentionally exposed as dedicated combinable filters rather than search scopes. Small finite scopes expose their available values immediately as suggestions.
+The search box matches names, institutions and institution types, departments, ranks, research areas, honors, and PhD institutions by default, with matching performed on a diacritic-stripped, lowercased index (\code{buildSearchIndex}/\code{normalizeSearchText} in \code{src/data.ts}) so that typing \code{Nguyen} finds \code{Nguy\~{e}n}. Keyword prefixes can narrow the same text to Name, Rank, Research area, Honors, University, Institution, Department, or PhD institution. Location, field, track, and institution type are exposed as dedicated combinable filters. Small finite scopes expose their available values immediately as suggestions.
 The active search text, selected scope, and filters are mirrored into the URL query string, so a filtered view---for example, all Clinical-track faculty in Health Sciences at a named university---is directly shareable as a link rather than requiring the recipient to reproduce the same clicks.
 
 \begin{figure}[t]

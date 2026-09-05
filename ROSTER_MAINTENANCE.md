@@ -4,14 +4,17 @@ This document is for maintainers and automated agents. It contains the detailed 
 
 ## Inclusion standard
 
-Include a person only when reliable evidence, preferably an official university page, supports all of the following:
+Include a person only when reliable evidence, preferably an official institutional page, supports all of the following:
 
-- A current university appointment anywhere outside Vietnam, except for Emeritus entries. An
+- A current appointment at a university or an eligible public/nonprofit scholarly research
+  institute anywhere outside Vietnam, except for Emeritus entries. An
   incoming appointment also qualifies — one an official or otherwise reliable source (typically
   the person's own site, since the hiring institution often has no page live yet) confirms has
   been offered and accepted, with a start date, even if that date is still in the future — but not
   a mere on-the-market candidacy, an application, or an interview.
-- A primary academic appointment and one of the accepted tracks below.
+- A primary academic appointment and one of the accepted tracks below. University leaders qualify
+  only through a substantial underlying academic appointment; an administrative title alone is not
+  sufficient.
 
 Use Vietnamese names and other relevant discovery signals to find roster candidates. Do not require
 separate documentary evidence of Vietnamese or Vietnamese-diaspora identity once the candidate is
@@ -21,33 +24,142 @@ Accepted tracks:
 
 - `Tenure-line`: tenure-track or tenured.
 - `Teaching`: full-time, continuing/permanent non-tenure-track teaching faculty, including stable Professor of Practice and equivalent appointments. Confirm permanence from the university's language, such as “full-time,” “continuing appointment,” “non-tenure-track faculty,” or a named teaching promotion ladder. Do not infer it from the title alone.
-- `Research`: a stable, faculty-level research appointment, such as Research Professor or a research-faculty promotion ladder. Do not include postdoctoral, visiting, grant-limited, or otherwise temporary research roles.
-- `Clinical`: a stable clinical-faculty appointment, such as Clinical Professor or a documented clinical-faculty ladder. Do not include adjunct or temporary clinical teaching.
+- `Research`: a stable, faculty-level or faculty-equivalent research appointment. This includes
+  university Research Assistant/Associate/Full Professors, permanent Research Scientists and
+  Principal Scientists when equivalence is documented, and permanent principal investigators,
+  group leaders, researchers, or directors at eligible public or independent nonprofit scholarly
+  research institutes. Do not include postdoctoral, visiting, grant-limited, or otherwise temporary
+  research roles.
+- `Clinical`: a stable, full-time, continuing clinical-faculty appointment, such as Clinical
+  Professor or a documented clinical-faculty ladder. Do not include adjunct or temporary clinical
+  teaching.
+- `Academic staff`: university librarians and archivists with documented faculty status or a
+  senior, permanent academic appointment. Ordinary professional staff roles do not qualify.
 - `Emeritus`: a formally conferred emeritus/emerita title following a tenure-line career. Prefer an active emeritus listing or a source documenting the conferral. Plain retirement, resignation, former-faculty status, and in-memoriam listings do not qualify.
 
-Exclude adjunct, visiting, postdoctoral, affiliate/courtesy, graduate teaching-assistant, non-university, industry-only, and other term-limited or part-time appointments. Plain `Instructor` requires case-by-case verification and should not be included from the title alone.
+Eligible non-university employers are limited to public research bodies (for example, CNRS, INRIA,
+national academies, Max Planck institutes, Japan's RIKEN, Australia's CSIRO, U.S. Department of
+Energy national laboratories, NIH intramural institutes, NIST, NASA research centers, NOAA research
+laboratories, USGS research centers, the U.S. Naval Research Laboratory, Air Force Research Laboratory, and
+Army Research Laboratory/DEVCOM ARL) and independent nonprofit scholarly research institutes
+(for example, the Allen
+Institute, Broad Institute, and HHMI Janelia). University-managed or university-affiliated U.S.
+research centers such as MIT Lincoln Laboratory (an FFRDC) and Johns Hopkins Applied Physics
+Laboratory (a UARC) may also be included when the individual appointment is permanent and
+faculty-equivalent. The appointment must be permanent and faculty-equivalent: a principal investigator,
+group leader, director, or comparable independent researcher rather than support staff or a trainee. Titles
+need not say `Professor`; for example, RIKEN Research Scientists/Unit Leaders and CSIRO Senior or Principal
+Research Scientists/Research Group Leaders may qualify when the appointment is ongoing and independent.
+Corporate research labs,
+including Microsoft Research, are excluded even when the work is scholarly. Government agencies,
+hospitals without a qualifying university appointment, think tanks, advocacy organizations, and
+other non-academic employers remain excluded.
+
+For U.S. federal laboratories, treat the laboratory itself as an eligible public research institute,
+not every person employed there as an academic. Include only career-level Staff, Senior, Distinguished,
+or Principal Researchers/Scientists, Principal Investigators, laboratory/group/branch/division leaders,
+and comparable permanent research appointments. Laboratory Fellow titles qualify only when the source
+shows a continuing career research appointment; postdoctoral, visiting, or fixed-term fellowships do not.
+Ordinary engineers, engineering staff, and technical specialists are excluded by default, particularly
+roles requiring only a bachelor's degree. A Research Engineer may qualify only when the appointment
+clearly entails doctoral-level independent research or faculty-equivalent research leadership (for
+example, Principal/Distinguished Research Engineer, PI, or research-group leader). Also exclude
+contractor-only personnel, postdocs, students, interns, visiting researchers, temporary project staff,
+technical or administrative staff, and funding-agency program officers whose role is not to conduct
+research. The Office of Naval Research (ONR), for example, is primarily a funding and program-management
+agency; its program officers are not roster entries unless they separately hold a qualifying research
+appointment.
+
+Exclude adjunct, visiting, postdoctoral, affiliate/courtesy, graduate teaching-assistant,
+industry-only, and other term-limited or part-time appointments. Plain `Instructor` requires
+case-by-case verification and should not be included from the title alone.
 
 ### Evaluating Research, Clinical, and Practice titles
 
-Titles alone do not establish eligibility. For a proposed `Research` or `Clinical` entry, find an official university source that identifies the person and their current appointment, then establish that the role is faculty-level and stable through one or more of the following: a departmental faculty directory, an institutional faculty profile, an established promotion ladder, explicit continuing/permanent/full-time language, or an enduring university appointment page.
+Titles alone do not establish eligibility. For a proposed `Research` or `Clinical` entry, find an
+official institutional source that identifies the person and their current appointment, then
+establish that the role is faculty-level or faculty-equivalent and stable through one or more of the
+following: a departmental faculty directory, an institutional profile, an established promotion
+ladder, explicit continuing/permanent/full-time language, or an enduring appointment page.
 
-`Research Assistant Professor` needs particular care. Include it only when the institution treats it as a genuine research-faculty rank or there is comparably strong evidence of a career-type appointment; do not treat a senior postdoctoral role as faculty merely because it uses that title. Similarly, only include a Senior or Principal Research Scientist when the official evidence establishes a faculty-equivalent or long-term university academic appointment.
+`Research Assistant Professor` needs particular care. Include it only when the institution treats it as a genuine research-faculty rank or there is comparably strong evidence of a career-type appointment; do not treat a senior postdoctoral role as faculty merely because it uses that title. Similarly, only include a Senior or Principal Research Scientist when the official evidence establishes a faculty-equivalent, permanent university or eligible research-institute appointment.
 
 Professor of Practice, Associate Professor of Practice, Assistant Professor of Practice, and equivalent institution-specific practice titles belong in `Teaching`, not a separate track. They still require evidence that the appointment is stable and substantive; exclude visiting and adjunct practice roles. Keep the published practice title in `rank`.
 
+Artist in Residence and Writer in Residence titles also belong in `Teaching`, but only when an
+official source establishes a full-time, continuing position. The title by itself usually denotes a
+temporary residency and is not enough.
+
+Keep leadership titles in `rank` only when they are the institution's published academic title and
+the underlying academic appointment is independently eligible. Do not use a presidency,
+provostship, deanship, or center directorship to convert an otherwise ineligible administrative or
+temporary role into an academic appointment.
+
+### Institution type
+
+The `university` field retains the canonical name of the employing institution for compatibility.
+For a university, omit `institutionType` (legacy records therefore mean `University`). For every
+eligible non-university employer, set `institutionType` to `Public research institute` or
+`Independent nonprofit research institute`. These labels are displayed publicly and must not be
+used for corporate laboratories. Non-university entries must use the `Research` track.
+
 ## Research workflow
 
-Work on one university or broad field at a time. Audit existing entries before adding candidates. For every candidate, verify identity, current appointment, primary department, rank/track, and profile URL individually. Deduplicate by person rather than URL and check for former affiliations or recent moves.
+Work on one institution or broad field at a time. Audit existing entries before adding candidates. For every candidate, verify identity, current appointment, primary department or research unit, rank/track, institution type, and profile URL individually. Deduplicate by person rather than URL and check for former affiliations or recent moves.
 
 Use all relevant candidate sources:
 
-- official department, school, college, and university faculty directories;
+- official department, school, college, university, and research-institute directories;
 - linked person pages, including opaque directory URLs such as `/profile/tn294`;
-- official university news, research-center, lab, grant, and award pages;
+- official institutional news, research-center, lab, grant, and award pages;
 - personal academic homepages, Google Sites, lab pages, and CVs, followed by confirmation of the current appointment on an official page; and
 - broad search-engine queries using the institution, field, Vietnamese surnames (`Nguyen`, `Tran`, `Le`, `Pham`, `Vo`, `Vu`, `Bui`, `Do`, `Phan`, `Lai`, `Huynh`, `Duong`, `Truong`, `Dang`, `Ngo`, `Mai`, `Dao`), and common Vietnamese given names.
 
 Do not depend on URL shape, visible diacritics, or a faculty page being linked from a department homepage. A research mention, dissertation-supervision link, coauthorship, student page, or grant page is a lead—not proof of a current faculty appointment.
+
+### Emeritus-focused discovery
+
+Emeritus coverage is often much thinner than active-faculty coverage because universities place
+retired scholars in separate directories or preserve them only in faculty catalogs. Run a dedicated
+emeritus pass after the active-faculty pass, starting with large universities and their central
+provost, registrar, library, and department emeriti pages. Search both Vietnamese-name signals and
+the local-language appointment terms; do not search only the English word “emeritus.” Useful forms
+include:
+
+- English: `Professor Emeritus`, `Professor Emerita`, `Associate Professor Emeritus`, `Faculty
+  Emeriti`, `Emeritus Faculty`, and `Research Professor Emeritus`;
+- French: `professeur émérite`, `professeure émérite`, `enseignant-chercheur émérite`, and
+  `directeur de recherche émérite`;
+- Spanish/Portuguese/Italian: `profesor(a) emérito(a)`, `professor(a) emérito(a)`, and
+  `professore emerito`;
+- German/Dutch/Nordic usage: `Professor emeritus`, `Professor im Ruhestand`, `emeritierter
+  Professor`, `emeritus hoogleraar`, and the corresponding national-language variants; and
+- Korean/Japanese/Chinese pages: English “emeritus” alongside local faculty-directory terms such
+  as Korean `명예교수` / `전임교수`, Japanese `名誉教授`, and Chinese `荣休教授` / `名誉教授`.
+
+Use queries combining the institution, a Vietnamese surname or given-name token, and one or more
+of these terms (for example, `site:mcgill.ca Nguyen "Professor Emeritus"` or
+`site:univ-amu.fr Nguyen "professeur émérite"`). Check the current institutional directory or
+official emeritus list first, then use an official appointment/conferral notice, CV, or reputable
+academy profile to fill in the former rank, department, degrees, and research areas. A personal
+homepage, obituary, conference program, or research mention is a lead only. Exclude plain “retired,”
+“former professor,” visiting/honorary titles without a formal emeritus conferral, and in-memoriam
+pages; a deceased scholar is not a current emeritus roster entry. Deduplicate by person and
+institution because emeriti commonly appear in both a central list and a department page.
+
+When a page gives a surname-first Vietnamese name (for example, `Nguyen Cac`), normalize the
+public `name` to the repository’s first/middle/last display order (`Cac Nguyen`) and preserve the
+authoritative Vietnamese form in `vietnameseName` when available. Run the name-order validator and
+check for an existing record before adding a new emeritus entry.
+
+### Postdoctoral and temporary-role guardrail
+
+Personal sites frequently describe joint university/institute postdocs as “research fellows” or
+show them prominently beside permanent faculty. These remain out of scope: a postdoctoral fellow,
+research fellow, visiting scholar, grant-funded fellow, or other trainee/term appointment does not
+become eligible merely because the host is a major university or an eligible nonprofit institute.
+For example, a joint postdoctoral appointment at Harvard and a research institute is still excluded
+unless a separate, current permanent faculty-equivalent appointment is documented.
 
 Generate repeatable search queries with:
 
@@ -290,15 +402,18 @@ name samples.
   an ID strictly higher than every ID currently in the roster. Tests, development, and builds only
   verify IDs and do not edit the roster. Preserve the generated ID when correcting a name,
   appointment, or other facts.
-- `track` must be `Tenure-line`, `Teaching`, `Research`, `Clinical`, or `Emeritus`.
-- `profileUrl` must be a current, working academic or official university profile and must not be a Google Scholar URL. Store Scholar separately in `scholarUrl`; store a maintained personal or lab homepage in `websiteUrl`.
+- `track` must be `Tenure-line`, `Teaching`, `Research`, `Clinical`, `Academic staff`, or `Emeritus`.
+- `institutionType`, when present, must be `University`, `Public research institute`, or
+  `Independent nonprofit research institute`. Omit it for ordinary university records; it is
+  required for eligible non-university institutes, which must use the `Research` track.
+- `profileUrl` must be a current, working academic or official institutional profile and must not be a Google Scholar URL. Store Scholar separately in `scholarUrl`; store a maintained personal or lab homepage in `websiteUrl`; store a verified LinkedIn profile in `linkedinUrl` (must be an `https://linkedin.com/` or `https://www.linkedin.com/` URL). Verify a LinkedIn match the same way as Scholar: confirm name, institution, and field before attaching it — never guess from name alone.
 - `lastUpdatedAt` is required and must be a canonical UTC ISO timestamp in
   `YYYY-MM-DDTHH:mm:ss.sssZ` form. It records when roster content for
   the person last materially changed, whether by adding the person or changing a profile,
   appointment, degree, honor, portrait, source, or another stored fact. A verification that finds
   no data change must not advance it.
 - Preserve an existing Scholar URL by moving it to `scholarUrl` before replacing `profileUrl`. Verify replacement URLs follow redirects and do not return 404.
-- Use only `Assistant Professor`, `Associate Professor`, or `Professor` as the rank vocabulary for Tenure-line entries; use `Teaching` and `Emeritus` for those corresponding tracks. For Research and Clinical entries, preserve the institution's published appointment title in `rank`. Preserve a Professor of Practice title in `rank` for Teaching entries when that is the institution's published title.
+- Use only `Assistant Professor`, `Associate Professor`, or `Professor` as the rank vocabulary for Tenure-line entries; use `Teaching` and `Emeritus` for those corresponding tracks. For Research, Clinical, and Academic staff entries, preserve the institution's published appointment title in `rank`. Preserve a Professor of Practice title in `rank` for Teaching entries when that is the institution's published title.
 - Add `phdYear` and `phdInstitution` only when a source explicitly states them. Never infer them from dates, CV chronology, or context.
 - Record completed postdoctoral training when a source explicitly identifies the institution. Add
   `postdocYear` only when the source also explicitly states an end or completion year; never infer

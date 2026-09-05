@@ -1,10 +1,15 @@
 # VietProfs
 
-VietProfs is a searchable, community-maintained directory of Vietnamese and Vietnamese-diaspora professors at universities worldwide.
+[VietProfs](https://vietroars.roars.dev) is a searchable, community-maintained directory of Vietnamese and Vietnamese-diaspora academics at universities and eligible public or nonprofit scholarly research institutes worldwide. It includes university faculty and faculty-equivalent permanent researchers---such as CNRS and INRIA researchers, Max Planck group leaders, RIKEN scientists, and CSIRO researchers---because they publish, lead research groups, obtain funding, and mentor students much like university faculty. Corporate research labs are outside its scope. This [paper](https://vietprofs.roars.dev/vietprofs.pdf) describes the project.
 
-The site is a static Vite application. The roster is stored in [`public/data.json`](./public/data.json) and loaded, searched, filtered, and sorted in the browser.
+This site is maintained by users all around the world (e.g., [submitting new or editing existing entries](https://vietprofs.roars.dev/submit.html)) _and_ AI bots that continuously validates and updates the directory database.  
 
-Live site: <https://vietprofs.roars.dev>
+## Search and filters
+
+The search box matches names, employing institutions and institution types, departments, ranks, locations, research areas, honors, and degree institutions. Keyword prefixes can limit a search to a particular field; it defaults to everything. Location, field, appointment track, and institution type have dedicated filters. Matching is diacritic-insensitive, so `Nguyen` finds `Nguyễn`.
+
+The location, field, and track filters can be combined. Shareable URLs preserve the active search and filters. The “Show me something interesting” option provides roster-derived observations about geography, institutions, fields, and appointment tracks, alongside interactive charts (distribution by field, career stage, and country; PhD-cohort and top-institution rankings; and roster growth over time, built from `public/data.json`'s git history). It does not make claims about institutional prestige or Vietnamese population size.
+
 
 Repository documentation is intentionally limited to four files:
 
@@ -13,11 +18,6 @@ Repository documentation is intentionally limited to four files:
 - [`paper/PAPER_NOTES.md`](./paper/PAPER_NOTES.md): reproducible manuscript metrics, claim audit, and publication checklist.
 - [`AGENTS.md`](./AGENTS.md): concise instructions for automated contributors.
 
-## Search and filters
-
-The search box matches names, universities, departments, ranks, locations, research areas, honors, and degree institutions. Use the selector at the left of the search box to limit the search to name, university, department, rank, research area, honors, PhD institution, or undergraduate institution; it defaults to `Everything`. Location, field, and appointment track remain dedicated filters. Matching is diacritic-insensitive, so `Nguyen` finds `Nguyễn`.
-
-The location, field, and track filters can be combined. Shareable URLs preserve the active search and filters. The “Show me something interesting” option provides roster-derived observations about geography, institutions, fields, and appointment tracks, alongside interactive charts (distribution by field, career stage, and country; PhD-cohort and top-institution rankings; and roster growth over time, built from `public/data.json`'s git history). It does not make claims about institutional prestige or Vietnamese population size.
 
 ## Commands
 
