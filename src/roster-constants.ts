@@ -1,4 +1,4 @@
-export const TRACKS = ['Tenure-line', 'Teaching', 'Research', 'Clinical', 'Academic staff', 'Emeritus'] as const;
+export const TRACKS = ['Tenure-line', 'Teaching', 'Research', 'Clinical', 'Academic staff', 'Emeritus', 'Deceased'] as const;
 
 export const INSTITUTION_TYPES = [
   'University',

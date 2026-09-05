@@ -146,8 +146,8 @@ for (const [index, person] of roster.entries()) {
   if (person.institutionType !== undefined && !allowedInstitutionTypes.has(person.institutionType)) {
     fail(rosterFile, `${label} has unsupported institutionType ${person.institutionType}`);
   }
-  if (person.institutionType !== undefined && person.institutionType !== 'University' && person.track !== 'Research') {
-    fail(rosterFile, `${label} non-university institutionType requires the Research track`);
+  if (person.institutionType !== undefined && person.institutionType !== 'University' && !['Research', 'Emeritus', 'Deceased'].includes(person.track)) {
+    fail(rosterFile, `${label} non-university institutionType requires the Research, Emeritus, or Deceased track`);
   }
   if (!Array.isArray(person.researchAreas) || person.researchAreas.length === 0) fail(rosterFile, `${label} needs researchAreas`);
   if (person.state !== undefined && typeof person.state !== 'string') fail(rosterFile, `${label} state must be a string`);

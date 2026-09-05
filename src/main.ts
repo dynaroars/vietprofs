@@ -243,6 +243,10 @@ const TRACK_INFO: Record<string, { label: string; tooltip: string }> = {
     label: 'emeritus',
     tooltip: 'A formally conferred emeritus title after a tenure-line career — not just retirement without the conferred title.',
   },
+  Deceased: {
+    label: 'deceased',
+    tooltip: 'Deceased or historical scholars who held a qualifying university faculty or eligible research-institute appointment outside Vietnam.',
+  },
 };
 
 function trackQualifier(roster: Roster): string {

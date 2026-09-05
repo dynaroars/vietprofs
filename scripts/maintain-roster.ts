@@ -572,7 +572,7 @@ export function proposalValidationError(proposal: JsonRecord): string | null {
   if (!Array.isArray(proposal.researchAreas) || proposal.researchAreas.length === 0 || proposal.researchAreas.some((area) => typeof area !== 'string' || !area.trim())) return 'proposal needs valid researchAreas';
   if (!TRACKS.includes(proposal.track)) return 'proposal has unsupported track';
   if (proposal.institutionType !== undefined && !INSTITUTION_TYPES.includes(proposal.institutionType)) return 'proposal has unsupported institutionType';
-  if (proposal.institutionType !== undefined && proposal.institutionType !== 'University' && proposal.track !== 'Research') return 'proposal non-university institutionType requires the Research track';
+  if (proposal.institutionType !== undefined && proposal.institutionType !== 'University' && !['Research', 'Emeritus', 'Deceased'].includes(proposal.track)) return 'proposal non-university institutionType requires the Research, Emeritus, or Deceased track';
   if (proposal.websiteUrl !== undefined && proposal.websiteUrl === proposal.profileUrl) return 'proposal websiteUrl must differ from profileUrl';
   if (proposal.websiteUrl !== undefined && !/^https?:\/\//.test(proposal.websiteUrl)) return 'proposal websiteUrl must use HTTP(S)';
   if (proposal.scholarUrl !== undefined && !/^https:\/\//.test(proposal.scholarUrl)) return 'proposal scholarUrl must use HTTPS';

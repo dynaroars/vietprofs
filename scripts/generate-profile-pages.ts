@@ -45,6 +45,7 @@ const TRACK_SECTION: Record<string, number> = {
   'Clinical': 4,
   'Academic staff': 5,
   'Emeritus': 6,
+  'Deceased': 7,
 };
 
 function profilePage(person: RosterEntry) {
@@ -124,7 +125,7 @@ function profilePage(person: RosterEntry) {
       <article class="man-page">
         <p class="man-running-head"><span>${sectionLabel}</span><span>VietProfs Profile Manual</span><span>${sectionLabel}</span></p>
         <section class="man-section name-section"><h2>NAME</h2><div class="identity">${portrait}<div class="identity-details"><div class="name-heading"><h1>${escapeHtml(name)}</h1><nav class="profile-actions" aria-label="Roster actions"><a class="submission-link" href="${escapeHtml(editUrl)}">Add or update info</a></nav></div><p class="native">${escapeHtml(nativeName)} <span class="loc-badge" title="${escapeHtml(person.country || 'United States')}"><span class="country-flag" aria-hidden="true">${countryFlag(person.country)}</span></span></p><p class="record-id">${escapeHtml(person.id)}</p></div></div></section>
-        <section class="man-section"><h2>SYNOPSIS</h2><p class="synopsis">${escapeHtml(role)}${locationOf(person) ? ` · ${escapeHtml(locationOf(person))}` : ''}</p><div class="tags"><span class="tag">${escapeHtml(fieldOf(person.department, person.university))}</span><span class="tag">${escapeHtml(person.track || '')}</span>${person.institutionType && person.institutionType !== 'University' ? `<span class="tag">${escapeHtml(person.institutionType)}</span>` : ''}</div></section>
+        <section class="man-section"><h2>SYNOPSIS</h2><p class="synopsis">${escapeHtml(role)}${locationOf(person) ? ` · ${escapeHtml(locationOf(person))}` : ''}</p><div class="tags"><span class="tag">${escapeHtml(fieldOf(person.department, person.university))}</span><span class="tag${person.track === 'Emeritus' ? ' tag-emeritus' : person.track === 'Deceased' ? ' tag-deceased' : ''}">${person.track === 'Emeritus' ? '🎓 Emeritus' : person.track === 'Deceased' ? '🏛️ Deceased' : escapeHtml(person.track || '')}</span>${person.institutionType && person.institutionType !== 'University' ? `<span class="tag">${escapeHtml(person.institutionType)}</span>` : ''}</div></section>
         ${research}${educationSection}${honors}${linkSection}
         <section class="man-section"><h2>ROSTER METADATA</h2><dl class="roster-metadata"><div><dt>record</dt><dd>${escapeHtml(person.id)}</dd></div><div><dt>last verified</dt><dd>${escapeHtml(formatRosterDate(person.lastUpdatedAt || ''))}</dd></div><div><dt>build</dt><dd><a href="https://github.com/dynaroars/vietprofs/commit/${escapeHtml(commit)}">${escapeHtml(commit)}</a></dd></div></dl><details class="raw-record"><summary>view raw record</summary><pre><code>${rawRecord}</code></pre></details></section>
         <footer><p>VietProfs is a community-maintained directory. Consult the linked sources for the most current details.</p><p class="man-footer-line">${sectionLabel} · ${escapeHtml(person.id)} · ${sectionLabel}</p></footer>

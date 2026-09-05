@@ -7,7 +7,7 @@ This document is for maintainers and automated agents. It contains the detailed 
 Include a person only when reliable evidence, preferably an official institutional page, supports all of the following:
 
 - A current appointment at a university or an eligible public/nonprofit scholarly research
-  institute anywhere outside Vietnam, except for Emeritus entries. An
+  institute anywhere outside Vietnam, except for Emeritus and Deceased entries. An
   incoming appointment also qualifies — one an official or otherwise reliable source (typically
   the person's own site, since the hiring institution often has no page live yet) confirms has
   been offered and accepted, with a start date, even if that date is still in the future — but not
@@ -35,7 +35,8 @@ Accepted tracks:
   teaching.
 - `Academic staff`: university librarians and archivists with documented faculty status or a
   senior, permanent academic appointment. Ordinary professional staff roles do not qualify.
-- `Emeritus`: a formally conferred emeritus/emerita title following a tenure-line career. Prefer an active emeritus listing or a source documenting the conferral. Plain retirement, resignation, former-faculty status, and in-memoriam listings do not qualify.
+- `Emeritus`: a formally conferred emeritus/emerita title following a tenure-line career. Prefer an active emeritus listing or a source documenting the conferral.
+- `Deceased`: deceased or historical scholars who held an eligible tenure-line, permanent teaching/research, or emeritus faculty appointment at a university or eligible public/nonprofit research institute outside Vietnam during their career.
 
 Eligible non-university employers are limited to public research bodies (for example, CNRS, INRIA,
 national academies, Max Planck institutes, Japan's RIKEN, Australia's CSIRO, U.S. Department of
@@ -478,7 +479,12 @@ personal homepage. An honor should normally fit one of these patterns:
   award, such as NSF CAREER, Sloan Research Fellowship, Simons Investigator, PECASE, or a
   comparable national-agency or foundation program (`career_award`);
 - a major field-wide medal, prize, book award, lifetime/impact or test-of-time award, or another
-  distinction with clear disciplinary standing (`major_award`); or
+  distinction with clear disciplinary standing (`major_award`);
+- an eponymous scientific discovery, foundational algorithm/theorem/concept bearing the scholar's name
+  (e.g., Phong shading, Brieskorn-Pham singularities, Lê cycles/numbers), or seminal landmark publication
+  that fundamentally shaped a discipline (`major_award`, linking to the authoritative DOI or disciplinary record);
+- a formal retrospective honor, dedicated historical tribute, or memorial symposium organized by a premier
+  international professional society or academy (`major_award`); or
 - a named endowed chair, distinguished professorship, university professorship, or comparable
   research chair that represents a significant appointment distinction (`distinguished_professorship`).
 
