@@ -560,14 +560,22 @@ h1 {
 .field-select {
   width: 100%;
   min-width: 0;
-  padding: 0.6rem 0.9rem;
+  padding: 0.55rem 0.65rem;
   border: 1px solid var(--border-color);
   border-radius: 8px;
   background: var(--card-bg);
   color: var(--text-primary);
   font-family: var(--font-body);
-  font-size: var(--text-base);
+  font-size: var(--text-sm);
   cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.field-select.is-active {
+  border-color: var(--bamboo-green);
+  background-color: color-mix(in srgb, var(--bamboo-green) 12%, var(--card-bg));
+  font-weight: 600;
+  box-shadow: 0 0 0 1px var(--bamboo-green);
 }
 
 .track-select {

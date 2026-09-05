@@ -425,11 +425,16 @@ test('filter choices stay stable and stale filters recover', async () => {
   await page.locator('#location-filter').selectOption('World');
   await page.locator('#field-filter').selectOption('Physics & Astronomy');
   await page.locator('#track-filter').selectOption('Emeritus');
+  assert.equal(await page.locator('#field-filter').evaluate((el) => el.classList.contains('is-active')), true);
+  assert.equal(await page.locator('#track-filter').evaluate((el) => el.classList.contains('is-active')), true);
+  assert.equal(await page.locator('#location-filter').evaluate((el) => el.classList.contains('is-active')), false);
   assert.equal(await page.locator('#location-filter option[value="US"]').count(), 1);
   await page.locator('#home-link').click();
   assert.equal(await page.locator('#location-filter').inputValue(), 'World');
   assert.equal(await page.locator('#field-filter').inputValue(), 'all');
   assert.equal(await page.locator('#track-filter').inputValue(), 'all');
+  assert.equal(await page.locator('#field-filter').evaluate((el) => el.classList.contains('is-active')), false);
+  assert.equal(await page.locator('#track-filter').evaluate((el) => el.classList.contains('is-active')), false);
   assert.ok((await page.locator('.entry').count()) > 0);
   await page.goto(`${baseUrl}/?state=Vermont&loc=US`, { waitUntil: 'networkidle' });
   assert.match(page.url(), /state=Vermont/);

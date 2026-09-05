@@ -401,12 +401,12 @@ async function init() {
   const suggestionSources = new Map([
     ['name', nameSuggestionValues],
     ['rank', [...new Set([...uniqueRanks(roster), ...roster.map((p) => canonicalRank(p))])].sort()],
-    ['field', FIELDS],
-    ['track', [...TRACKS]],
+    ['field', FIELDS.filter((field) => roster.some((p) => fieldOf(p.department, p.university) === field))],
+    ['track', TRACKS.filter((track) => roster.some((p) => p.track === track))],
     ['research', uniqueResearchAreas(roster)],
     ['honors', [...new Set(roster.flatMap((p) => (p.honors || []).flatMap((honor) => [honor.name, honor.organization]).filter(Boolean)))].sort()],
     ['university', [...new Set(roster.map((p) => p.university))].sort()],
-    ['institution', [...INSTITUTION_TYPES]],
+    ['institution', INSTITUTION_TYPES.filter((type) => roster.some((p) => institutionTypeOf(p) === type))],
     ['department', uniqueDepartments(roster)],
     ['phd', uniquePhdInstitutions(roster)],
     ['undergrad', uniqueUndergradInstitutions(roster)],
@@ -494,12 +494,12 @@ async function init() {
   const countryOptions = [
     'US',
     ...countryLocations.filter((country) => !['United States', 'US', 'USA'].includes(country)),
-  ];
+  ].filter((country) => roster.some((person) => locationMatches(person, country)));
   const countryCounts = new Map(
     countryOptions.map((country) => [country, roster.filter((person) => locationMatches(person, country)).length]),
   );
   countryOptions.sort((a, b) => (countryCounts.get(b) ?? 0) - (countryCounts.get(a) ?? 0) || a.localeCompare(b));
-  const continentOptions = LOCATIONS.filter((loc) => loc !== 'US');
+  const continentOptions = LOCATIONS.filter((loc) => loc !== 'US' && (loc === 'World' || roster.some((person) => locationMatches(person, loc))));
   const locationOptions = [...countryOptions, ...continentOptions];
   const locationLabel = (loc: string): string => LOCATION_LABELS[loc] || `${countryFlag(loc)} ${loc}`;
 
@@ -515,24 +515,33 @@ async function init() {
   function countedOptions<T>(values: readonly T[], subset: Roster, matches: (person: RosterEntry, value: T) => boolean, labelFor: (value: T) => string): OptionEntry[] {
     return values.flatMap((value) => {
       const count = subset.filter((person) => matches(person, value)).length;
-      return count > 0 ? [{ value: String(value), label: labelFor(value) }] : [];
+      return count > 0 ? [{ value: String(value), label: `${labelFor(value)} (${count})` }] : [];
     });
   }
 
   function initializeDropdowns() {
-    const locationEntries = (values: string[]) => values.map((value) => ({
-      value: String(value),
-      label: locationLabel(value),
+    const countryEntries = countryOptions.map((country) => ({
+      value: country,
+      label: `${locationLabel(country)} (${countryCounts.get(country) ?? 0})`,
     }));
-    setLocationOptions(locationEntries(countryOptions), locationEntries(continentOptions), 'World');
-    const fieldEntries = FIELDS.map((value) => ({
-      value,
-      label: fieldDropdownLabel(value),
-    }));
+    const continentEntries = continentOptions.map((continent) => {
+      const count = continent === 'World' ? roster.length : roster.filter((person) => locationMatches(person, continent)).length;
+      return {
+        value: continent,
+        label: `${locationLabel(continent)} (${count})`,
+      };
+    });
+    setLocationOptions(countryEntries, continentEntries, 'World');
+    const fieldEntries = countedOptions(
+      FIELDS,
+      roster,
+      (person, value) => fieldOf(person.department, person.university) === value,
+      (value) => fieldDropdownLabel(value),
+    );
     setOptions(
       fieldSelect,
       [
-        { value: 'all', label: 'All fields' },
+        { value: 'all', label: `All fields (${roster.length})` },
         ...fieldEntries,
       ],
       'all',
@@ -540,7 +549,7 @@ async function init() {
     setOptions(
       trackSelect,
       [
-        { value: 'all', label: 'All Faculty' },
+        { value: 'all', label: `All Faculty (${roster.length})` },
         ...countedOptions(TRACKS, roster, (person, value) => person.track === value, (value) => value),
       ],
       'all',
@@ -548,11 +557,19 @@ async function init() {
     setOptions(
       institutionTypeSelect,
       [
-        { value: 'all', label: 'All institution' },
+        { value: 'all', label: `All institution (${roster.length})` },
         ...countedOptions(INSTITUTION_TYPES, roster, (person, value) => institutionTypeOf(person) === value, (value) => value),
       ],
       'all',
     );
+  }
+
+  function updateDropdownHighlights() {
+    locationSelect.classList.toggle('is-active', locationSelect.value !== 'World');
+    fieldSelect.classList.toggle('is-active', fieldSelect.value !== 'all');
+    trackSelect.classList.toggle('is-active', trackSelect.value !== 'all');
+    institutionTypeSelect.classList.toggle('is-active', institutionTypeSelect.value !== 'all');
+    sortSelect.classList.toggle('is-active', sortSelect.value !== 'random');
   }
 
   function setFilterValues({ location, field = 'all', track = 'all', institutionType = 'all' }: { location: string; field?: string; track?: string; institutionType?: string }) {
@@ -566,6 +583,7 @@ async function init() {
     fieldSelect.value = safeFilters.field;
     trackSelect.value = safeFilters.track;
     institutionTypeSelect.value = safeFilters.institutionType;
+    updateDropdownHighlights();
   }
 
   initializeDropdowns();
@@ -684,6 +702,7 @@ async function init() {
       filterState.insights = false;
       autoSelectLocationForQuery();
     }
+    updateDropdownHighlights();
     const locRoster = roster.filter((p) => locationMatches(p, locationSelect.value));
     if (filterState.insights) {
       renderFunFacts(locRoster, locationLabel(locationSelect.value), locationSelect.value, roster, statsHistory);
