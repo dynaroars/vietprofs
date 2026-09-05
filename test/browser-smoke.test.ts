@@ -257,9 +257,26 @@ test('mobile pages avoid horizontal overflow and provide usable tap targets', as
   await page.close();
 });
 
+test('directory lazy loads entries in batches of 50 as user scrolls', async () => {
+  const page = await context.newPage();
+  await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
+  assert.equal(await page.locator('.entry').count(), 50);
+  assert.equal(await page.locator('#roster-sentinel').count(), 1);
+
+  // Scroll down to trigger next batch
+  await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+  await page.waitForFunction(() => document.querySelectorAll('.entry').length >= 100);
+  assert.equal(await page.locator('.entry').count(), 100);
+  await page.close();
+});
+
 test('every roster card exposes its official profile link', async () => {
   const page = await context.newPage();
   await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
+  while (await page.locator('#roster-sentinel').count() > 0) {
+    await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+    await page.waitForTimeout(50);
+  }
   const entryCount = await page.locator('.entry').count();
   const profileLinks = page.locator('.profile-link');
   assert.equal(await profileLinks.count(), entryCount);
