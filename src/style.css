@@ -699,6 +699,14 @@ h1 {
   gap: 0.75rem;
 }
 
+.entry-portrait-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  width: 64px;
+}
+
 .entry-portrait {
   width: 64px;
   height: 64px;
@@ -956,11 +964,9 @@ a.entry-name:focus-visible {
 }
 
 /* Static profile pages receive this same stylesheet through the build sync script. */
-.profile-page header,
-.profile-page main {
-  max-width: 880px;
-  margin-inline: auto;
-  padding-inline: 1.5rem;
+.profile-page #app {
+  padding-top: 2.5rem;
+  padding-bottom: 3.5rem;
 }
 
 .profile-page {
@@ -976,13 +982,13 @@ a.entry-name:focus-visible {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 0;
-  padding-top: 1.5rem;
+  padding-top: 0;
   padding-bottom: 0.75rem;
   border-bottom: 1px solid var(--border-color);
 }
 
 .profile-page main {
-  padding-bottom: 2.5rem;
+  padding-bottom: 0;
 }
 
 .profile-page .eyebrow {
@@ -1046,7 +1052,7 @@ a.entry-name:focus-visible {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
-  margin-left: -0.5rem;
+  margin-left: 0;
 }
 
 .profile-page .man-section > :not(h2) {
@@ -1090,6 +1096,11 @@ a.entry-name:focus-visible {
   color: var(--text-primary);
   letter-spacing: -0.02em;
   line-height: 1.2;
+}
+
+.profile-page h1 .loc-badge {
+  font-size: 0.8em;
+  vertical-align: 0.05em;
 }
 
 .profile-page .native {
@@ -2146,11 +2157,6 @@ a.entry-name:focus-visible {
 
   .profile-page .man-section > :not(h2) {
     margin-left: 0.75rem;
-  }
-
-  .profile-page header,
-  .profile-page main {
-    padding-inline: 1rem;
   }
 
   .profile-page .man-running-head {

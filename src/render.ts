@@ -105,14 +105,17 @@ export function renderRosterEntry(person: RosterEntry, baseUrl = '/') {
 
   return `
     <div class="entry entry-with-portrait">
-      ${portrait}
+      <div class="entry-portrait-col">
+        <span class="loc-badge" title="${escapeHtml(person.country || 'United States')}"><span class="country-flag" aria-hidden="true">${countryFlag(person.country)}</span></span>
+        ${portrait}
+      </div>
       ${favoriteToggle}
       <div class="entry-content">
         <div class="entry-name-row">
           <a class="entry-name" href="${escapeHtml(`${baseUrl}${personPath(person.id)}`)}">${escapeHtml(visibleName)}</a>
           <span class="entry-vietnamese-name">(${escapeHtml(nativeName)})</span>${profileIcon}${personalSiteIcon}${scholarIcon}${linkedinIcon}${updatedTime}
         </div>
-        <div class="entry-meta">${escapeHtml(entryMeta)} <span class="loc-badge" title="${escapeHtml(person.country || 'United States')}"><span class="country-flag" aria-hidden="true">${countryFlag(person.country)}</span></span></div>
+        <div class="entry-meta">${escapeHtml(entryMeta)}</div>
         ${educationDetails.length ? `<div class="entry-details">${educationDetails.map((value) => escapeHtml(value)).join('; ')}</div>` : ''}
         ${honors ? `<div class="entry-honors"><span class="honors-label">Honors:</span> ${honors}</div>` : ''}
         <div class="tags">${fieldTag}${trackTag}${institutionTypeTag}${topicTags}</div>
