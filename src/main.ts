@@ -794,7 +794,7 @@ async function init() {
       trackSelect,
       [
         { value: 'all', label: 'All Faculty' },
-        ...TRACKS.map((value) => ({ value, label: value })),
+        ...countedOptions(TRACKS, roster, (person, value) => person.track === value, (value) => value),
       ],
       'all',
     );
@@ -802,7 +802,7 @@ async function init() {
       institutionTypeSelect,
       [
         { value: 'all', label: 'All institution' },
-        ...INSTITUTION_TYPES.map((value) => ({ value, label: value })),
+        ...countedOptions(INSTITUTION_TYPES, roster, (person, value) => institutionTypeOf(person) === value, (value) => value),
       ],
       'all',
     );
