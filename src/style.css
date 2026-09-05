@@ -699,14 +699,6 @@ h1 {
   gap: 0.75rem;
 }
 
-.entry-portrait-col {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.25rem;
-  width: 64px;
-}
-
 .roster-sentinel {
   width: 100%;
   height: 1px;
@@ -1105,11 +1097,6 @@ a.entry-name:focus-visible {
   color: var(--text-primary);
   letter-spacing: -0.02em;
   line-height: 1.2;
-}
-
-.profile-page h1 .loc-badge {
-  font-size: 0.8em;
-  vertical-align: 0.05em;
 }
 
 .profile-page .native {
