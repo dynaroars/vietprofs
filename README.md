@@ -75,10 +75,10 @@ interesting" view are in its [interesting-facts
 section](./ROSTER_MAINTENANCE.md#interesting-facts-guidelines).
 
 Thanks to [hieuphay.com](https://hieuphay.com/ban-do-kinh-te-viet-nam/) for a dataset of
-Vietnamese-diaspora economists that seeded a batch of entries, and to the many contributors over
+Vietnamese economists that seeded a batch of entries, and to the many contributors over
 LinkedIn and other channels who've suggested corrections and additions.
 
-An unattended maintenance controller ([`scripts/maintain-roster.ts`](./scripts/maintain-roster.ts))
+An unattended AI-based maintenance controller ([`scripts/maintain-roster.ts`](./scripts/maintain-roster.ts))
 periodically re-verifies existing entries and pushes updates directly to `main`; see
 [ROSTER_MAINTENANCE.md](./ROSTER_MAINTENANCE.md#periodic-full-roster-refresh) for how it works and
 how to run it manually.
