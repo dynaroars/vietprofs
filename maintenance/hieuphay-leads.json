@@ -2912,7 +2912,7 @@
       "npapers": 2,
       "cited": 53,
       "status": "pending",
-      "note": "Fourth session: found a new independent 2026 peer-reviewed source (MDPI Agriculture, DOI 10.3390/agriculture16060661, Mar 2026) co-authored with FAMU Agribusiness Program Leader Daniel Solis, explicitly affiliated with 'Agribusiness Program, CAFS, Florida A&M University' -- now three independent papers (JAAEA 2025, Agribusiness 2025-2026, Agriculture Mar 2026) plus a self-maintained Google Scholar profile with verified famu.edu email converge on current FAMU Assistant Professor status. Still no official famu.edu/cafs individual faculty page found (network egress to famu.edu/cafs.famu.edu blocked again this session) and no institutional source confirms track. Left pending; evidence is strong enough that a session with working famu.edu access should likely be able to include her."
+      "note": "Fifth session: reconfirmed the same three converging papers (JAAEA 2025, Agribusiness 2025-2026, MDPI Agriculture Mar 2026 DOI 10.3390/agriculture16060661) plus Google Scholar (scholar.google.com/citations?user=RnH55PsAAAAJ) with verified famu.edu email; located the likely official faculty page (agribusinessfamu.weebly.com/our-faculty.html) but famu.edu/cafs.famu.edu and the weebly page are still network-egress-blocked this session, so no working profileUrl, portrait, or track-defining institutional page could be verified. Left pending; evidence remains strong, needs a session with unblocked web access to finish."
     },
     {
       "name": "Quynh Anh",
@@ -5958,8 +5958,8 @@
       "country": "US",
       "npapers": 4,
       "cited": 12,
-      "status": "pending",
-      "note": "Fourth session found no faculty member named Mary Nguyen at Baylor College of Medicine in any department; only unrelated Nguyens (Dianne, Diane, Theresa, Quan, Anvinh, Loan, My) found. Left pending for a session with working bcm.edu access."
+      "status": "excluded",
+      "note": "No Baylor College of Medicine faculty found under this name across two independent sessions (only unrelated Nguyens on staff); no traceable faculty appointment anywhere under this name."
     },
     {
       "name": "Huu Phu Nguyen",
@@ -5995,7 +5995,7 @@
       "npapers": 4,
       "cited": 12,
       "status": "pending",
-      "note": "Fourth session tried further first-name expansions (Duong Trung, Duc Khuong, Dinh Trung) against THUAS finance/data-science context; found only unrelated Vietnamese academics at other institutions. No match at THUAS. Left pending."
+      "note": "Fifth session tried further name expansions (Diep Thi Ngoc, Dang Thi, Dinh Thi, Do Thi) and Dutch-language/THUAS-site-scoped searches (Team Data Science, Faculty of Business Finance & Marketing); still no matching staff member found. Only near-miss (Diep Thi Ngoc Nguyen, IDEAS/RePEc) traces to a Vietnam-based institution, unrelated. Very thin footprint; likely a stale or misattributed OpenAlex affiliation. Left pending for a session with direct THUAS staff-directory access."
     },
     {
       "name": "Anh Tuan Bui",
@@ -6116,8 +6116,8 @@
       "country": "US",
       "npapers": 3,
       "cited": 11,
-      "status": "pending",
-      "note": "Fourth session re-checked Monmouth University's Economics/Finance/Business faculty pages and LinkedIn; no Mary Tran found affiliated with Monmouth in any capacity. Left pending."
+      "status": "excluded",
+      "note": "No Mary Tran found on Monmouth's Economics/Finance/Business faculty list or LinkedIn across two independent sessions; confirmed absent from the department's current faculty roster."
     },
     {
       "name": "Le Thanh Forsberg",
@@ -6142,8 +6142,8 @@
       "country": "CN",
       "npapers": 2,
       "cited": 10,
-      "status": "pending",
-      "note": "Fourth session checked HZAU's own faculty portal (faculty.hzau.edu.cn) plus Chinese- and English-language search; found no trace of this person. Very low citation/paper footprint (cited=10, npapers=2) still consistent with a graduate student rather than faculty. Left pending."
+      "status": "excluded",
+      "note": "No trace found at HZAU's faculty portal or in Chinese/English search across two sessions; very low citation footprint (cited=10, npapers=2) consistent with a graduate student, not faculty."
     },
     {
       "name": "Nguyen Trieu Duong Luu",
@@ -6159,8 +6159,8 @@
       "country": "DK",
       "npapers": 2,
       "cited": 10,
-      "status": "pending",
-      "note": "Fifth session: only confirmed record remains a ~2016 PhD student affiliation at Aalborg University Business School (vbn.aau.dk/da/persons/140276); Google Scholar profile (scholar.google.com/citations?user=mxPWypEAAAAJ) shows no listed institutional affiliation. No LinkedIn or other source shows a subsequent faculty appointment anywhere. Left pending."
+      "status": "excluded",
+      "note": "Only confirmed record is a 2016 PhD-student affiliation at Aalborg University Business School; no subsequent faculty appointment found anywhere across two sessions."
     },
     {
       "name": "Ho Thi Minh Hop",
@@ -6168,8 +6168,8 @@
       "country": "BE",
       "npapers": 3,
       "cited": 10,
-      "status": "pending",
-      "note": "Fifth session: ULiège/Gembloux Agro-Bio Tech directory listing (uid=u222953) and ORBi profile (uid=p078511) persist but rank/status unconfirmed (possibly non-faculty 'collaborateur scientifique'); no publication activity found post-2018. NEW LEAD: a vn.linkedin.com profile for 'Thi Minh Hop Ho' lists title 'Director at Department of Research' (linkedin.com/in/thi-minh-hop-ho-2b50258) -- a Vietnam-domain LinkedIn URL suggesting she may have returned to a Vietnam-based position, which would disqualify the stale ULiège listing and/or fail the outside-Vietnam requirement. Could not verify employer behind LinkedIn login wall. Left pending; a session with LinkedIn access should resolve this quickly."
+      "status": "excluded",
+      "note": "No confirmed faculty rank at ULiège (bare directory/ORBi listing, no title, no activity since 2018, and a 2025 coauthored paper lists her without ULiège affiliation while a coauthor is tagged with it); a vn.linkedin.com profile suggests she has since taken a Director role in Vietnam."
     },
     {
       "name": "Nguyen T. Quan",
@@ -6203,7 +6203,7 @@
       "npapers": 4,
       "cited": 10,
       "status": "pending",
-      "note": "Fifth session: no matching person found at University of Utah under this name or variants (Lan-My Le, My-Lan Le) via Scholar/ResearchGate/LinkedIn/faculty-directory searches. Only near-matches are a different 'Lan Le' (PhD Univ. of Basel, health economics) and 'My-Lan Le' (Univ. of Washington genetic counseling, different institution/field). Still unresolved and likely a graduate student without a public faculty page."
+      "note": "Sixth session: still no matching person found at Utah or elsewhere; OpenAlex/Google Scholar direct access remains blocked, preventing a coauthor/title cross-check on her 2 source papers that would likely disambiguate her. Left pending."
     },
     {
       "name": "Thuan Gia-Nhat Tran",
@@ -6212,7 +6212,7 @@
       "npapers": 2,
       "cited": 10,
       "status": "pending",
-      "note": "Fifth session: no matching profile found at UC Irvine under this name or variants (Gia-Nhat Tran, Thuan Tran) via faculty directory, LinkedIn, or general search. Other UCI 'Tran' faculty/staff confirmed different people. Very low citation count consistent with an unlisted graduate student. Left pending."
+      "note": "Sixth session: still no matching profile found at UC Irvine or elsewhere (only unrelated ORCID near-matches); same OpenAlex/Scholar access block as Lan My Le prevents a coauthor cross-check. Left pending."
     },
     {
       "name": "T.P. Tran",
@@ -6221,7 +6221,7 @@
       "npapers": 2,
       "cited": 10,
       "status": "pending",
-      "note": "Fifth session: name too abbreviated to resolve to a real person. Keio's Elsevier Pure database, k-ris.keio.ac.jp researcher system, and general search found no matching 'T.P. Tran' faculty member; only unrelated match is 'Tran, A.T.' (co-author with Keio's Morifuji T. on a topology paper). Left pending."
+      "note": "Sixth session: name remains too abbreviated to resolve to a real person; Keio's Pure/k-ris systems and general search again found no matching faculty member. Left pending."
     },
     {
       "name": "Vu Duy Thanh",
@@ -6230,7 +6230,7 @@
       "npapers": 3,
       "cited": 10,
       "status": "pending",
-      "note": "First research pass: confirmed as a real person (also known as Thanh (Harris) Vu), PhD in Finance from University of Auckland, affiliated with AUT's Centre for Financial Research (ACFR) -- distinct from an unrelated 'Thanh Vu' at University of Auckland (profiles.auckland.ac.nz/thanh-vu, different institution). Could not confirm actual job title/rank: his LinkedIn headline is 'Researcher in Finance and Economics' and ACFR lists him only as a centre 'Fellow', neither of which establishes a stable/permanent (non-postdoc, non-visiting) appointment. Left pending; needs a source that can access academics.aut.ac.nz/harris.vu or an AUT HR listing directly."
+      "note": "Second session: reconfirmed as the same real person (Thanh (Harris) Vu, PhD Auckland, AUT Centre for Financial Research); still no source uses a rank word beyond 'Researcher'/'Fellow', and AUT's own staff pages (academics.aut.ac.nz/harris.vu, AUT Finance Dept staff list) remain network-egress-blocked. Left pending; needs direct access to those two AUT pages to resolve rank/permanence."
     },
     {
       "name": "Monica Tran",
@@ -6330,7 +6330,8 @@
       "country": "HK",
       "npapers": 3,
       "cited": 9,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Hoi Kuan Lam is a Cantonese/Hong Kong name, not Vietnamese; name-classifier false positive, excluded without individual verification per triage rule."
     },
     {
       "name": "Minh Phan",
@@ -6338,7 +6339,8 @@
       "country": "US",
       "npapers": 5,
       "cited": 9,
-      "status": "pending"
+      "status": "excluded",
+      "note": "All located matches under this name are Columbia PhD students (Accounting PhD directory entry, Google Scholar profile self-labeled 'PhD Student'), not faculty; no economics faculty appointment found."
     },
     {
       "name": "Dat Thanh Nguyen",
@@ -6354,7 +6356,8 @@
       "country": "AU",
       "npapers": 3,
       "cited": 9,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Moved from Melbourne (where his only role was a term-limited Research Fellow post) to Queen Mary University of London; QMUL rank/permanence could not be verified as faculty-level, so neither institution currently supports inclusion."
     },
     {
       "name": "A. Nam Tran",
@@ -6370,7 +6373,8 @@
       "country": "GB",
       "npapers": 2,
       "cited": 9,
-      "status": "pending"
+      "status": "pending",
+      "note": "First session: no source at all connects a Kieu Thi Hoang (or name-order variants) to Oxford in any capacity; very low footprint (cited=9, npapers=2) may reflect a scraping artifact or short-term visitor. Left pending."
     },
     {
       "name": "Louis L. Nguyen",
