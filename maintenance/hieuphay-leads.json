@@ -2912,7 +2912,7 @@
       "npapers": 2,
       "cited": 53,
       "status": "pending",
-      "note": "Google Scholar (user RnH55PsAAAAJ, 694 citations) self-lists a verified famu.edu email and 'Assistant Professor'; a 2025 peer-reviewed paper (JAAEA, DOI 10.1002/jaa2.70012) independently lists her affiliation as Agribusiness Program, CAFS, Florida A&M University. But no official famu.edu/CAFS faculty-directory or department page could be found after repeated targeted searches (site:famu.edu, CAFS/Agribusiness directory, weebly faculty page) across two sessions, so no working official profileUrl exists to add her with. Also unresolved: a same-named 'Ly Nguyen, PhD (Auburn)' was an Instructional Assistant Professor at Texas A&M Higher Education Center at McAllen from 2022 — plausibly the same person who later moved to FAMU (chronologically consistent with the 2025 paper), but not confirmed. Left pending for a future session with different network access to find an official profile page."
+      "note": "Third session, still no official famu.edu/CAFS individual faculty-profile page found despite targeted searches. Strong converging evidence she is current Assistant Professor, Agribusiness Program, CAFS, Florida A&M University: self-maintained Google Scholar (scholar.google.com/citations?user=RnH55PsAAAAJ) with verified famu.edu email; two 2025-2026 peer-reviewed papers (JAAEA DOI 10.1002/jaa2.70012; Agribusiness DOI 10.1002/agr.70098, co-authored with FAMU Agribusiness Program Leader Daniel Solis) list FAMU/CAFS/Agribusiness Program affiliation. Career trajectory (Auburn PhD -> UF postdoc ~2016 -> TAMU-McAllen Instructional Asst Prof 2022, not listed in TAMU's 2024 hiring wave -> FAMU Asst Prof, current) is internally consistent, suggesting the 2022 McAllen 'Ly Nguyen' is the same person, but this is not confirmed by a single source. Left pending: no compliant official-institution profileUrl found, and this session's network egress policy blocked WebFetch/curl to every external domain tried (famu.edu, cafs.famu.edu, etc.), limiting verification to search-engine snippets. Needs a session with working direct page-fetch access to famu.edu/cafs.famu.edu."
     },
     {
       "name": "Quynh Anh",
@@ -5959,7 +5959,7 @@
       "npapers": 4,
       "cited": 12,
       "status": "pending",
-      "note": "Could not resolve identity: extensive search of Baylor College of Medicine's people-search (for 'Nguyen', 'Mary Nguyen', + health economics/health policy/health services research), Google Scholar, ResearchGate, and PubMed-style author searches found no 'Mary Nguyen' tied to BCM or to economics research. Other 'Mary Nguyen' academics found (LSE Health and Social Care Centre; a University of Illinois Scholar hit; a UMSL non-faculty listing) are unrelated. WebFetch/direct site access to bcm.edu and OpenAlex was blocked in this session, limiting verification to WebSearch snippets. Left pending for a future session."
+      "note": "Third session found no faculty member named 'Mary Nguyen' at Baylor College of Medicine in any field (BCM people-search snippets, Scholar, PubMed-style, ResearchGate, health-services-research and health-policy department pages all checked). Other BCM 'Nguyen' faculty found (Bich-May Nguyen MD MPH, Diane Nguyen, Anh Tuan Nguyen, and others) are confirmed different people. This session's network egress policy blocked WebFetch/curl to bcm.edu entirely, preventing a live query of BCM's own people-search tool -- only indexed search-engine snippets were available. Left pending for a session with working direct access to bcm.edu/find-a-person."
     },
     {
       "name": "Huu Phu Nguyen",
@@ -5995,7 +5995,7 @@
       "npapers": 4,
       "cited": 12,
       "status": "pending",
-      "note": "Could not resolve which 'D. T. Nguyen' this initialed OpenAlex lead refers to. Tried several plausible given-name expansions (Duc/Dung/Diem/Dat/Duong + T. Nguyen) combined with 'Hague University of Applied Sciences'/'THUAS' + economics/finance/trade, and RePEc/IDEAS lookups — no match found; the only 'Duc Nguyen ... Hague University of Applied Sciences' hit was a LinkedIn profile listing it as a past degree, not a current faculty role. WebFetch to THUAS's own staff directory and to OpenAlex was blocked in this session. Left pending for a future session to resolve identity directly against the THUAS directory or OpenAlex author record."
+      "note": "Third session checked THUAS's New Finance and Data Science lectoraat/team pages (Centre of Expertise Digital Operations & Finance) via search snippets -- team-member lists found (van der Linden, van der Kooij, Bolte, Jansen, Hillen, de Boer) contain no Nguyen. Also checked whether the affiliation might actually belong to ISS/Erasmus University Rotterdam (also 'The Hague') -- no match. Duc/Dung/Diem/Dat/Duong-Trung name-expansion attempts again found only unrelated people at other institutions. This session's network egress policy blocked WebFetch/curl to THUAS's domains entirely, so THUAS's own staff/lector directory could not be searched directly by name -- only search-engine snippets were available. Left pending."
     },
     {
       "name": "Anh Tuan Bui",
@@ -6011,8 +6011,8 @@
       "country": "TW",
       "npapers": 4,
       "cited": 11,
-      "status": "pending",
-      "note": "Could not confirm identity or appointment. The one matching-name ResearchGate profile found ('Le THI THANH HA, Lecturer, PhD Business Administration') has a publication record (livestream/impulse-buying, gamification/brand-love in Vietnamese e-commerce) pointing to a Vietnam-based marketing researcher, not Asia University (Taiwan) econ/finance faculty; no page on asia.edu.tw or its subdomains (fn./csie.) surfaced this name via search. May be a stale/garbled OpenAlex affiliation. WebFetch to asia.edu.tw was blocked in this session, limiting a definitive directory check. Left pending."
+      "status": "excluded",
+      "note": "No verifiable faculty appointment found at Asia University (Taiwan) across two independent research sessions (finance, business-administration, and general staff directories checked). The only confirmed matching public profile under this exact name (ResearchGate, 'Lecturer, PhD Business Administration') has a publication record entirely focused on Vietnam/Ho Chi Minh City e-commerce and livestream-shopping research, consistent with a Vietnam-based marketing lecturer at an unspecified 'Faculty of Business Administration' -- not this diaspora institution. Likely a stale/garbled OpenAlex affiliation rather than a real Asia University Taiwan appointment."
     },
     {
       "name": "Duc A. Tran",
@@ -6097,7 +6097,9 @@
       "country": "US",
       "npapers": 2,
       "cited": 11,
-      "status": "pending"
+      "status": "included",
+      "note": "Professor and Chair, Radiation Oncology, Boston University Chobanian & Avedisian School of Medicine (also Chief of Radiation Oncology, Boston Medical Center); appointed Chief/Chair 2016 per bumc.bu.edu announcement. FASTRO (Fellow, American Society for Radiation Oncology) 2022. Confirmed via official BU/BMC profile pages and Google Scholar (LuVYu_gAAAAJ, 4,229 citations) found via WebSearch snippets; this session's network egress policy blocked direct WebFetch/curl to bumc.bu.edu and bmc.org, so the profile page contents (and a portrait image) could not be directly fetched or downloaded -- added without a portrait for now.",
+      "rosterId": "vp-1143"
     },
     {
       "name": "Dan Hoang",
@@ -6105,7 +6107,8 @@
       "country": "US",
       "npapers": 4,
       "cited": 11,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Identified as Dan K. Hoang, Data Manager, UCI MIND Institute / UCI Alzheimer's Disease Research Center, Data Management and Statistics Core -- a staff role, not a faculty appointment. No evidence of any UCI faculty position under this name."
     },
     {
       "name": "Mary Tran",
@@ -6113,7 +6116,8 @@
       "country": "US",
       "npapers": 3,
       "cited": 11,
-      "status": "pending"
+      "status": "pending",
+      "note": "Extensive search (Monmouth faculty directories across several departments, LinkedIn, site-restricted searches) found no person named Mary Tran affiliated with Monmouth University in any capacity. This session's network egress policy blocked WebFetch/curl to monmouth.edu and web.archive.org entirely, preventing a direct text search of Monmouth's authoritative faculty roster/PDF -- only search-engine snippets were available. Left pending."
     },
     {
       "name": "Le Thanh Forsberg",
@@ -6121,7 +6125,8 @@
       "country": "SE",
       "npapers": 2,
       "cited": 10,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Real, identifiable person (PhD Lund University 2007, dissertation on Vietnamese development planning; postdoc Oxford GEG 2009-11) but current role is Senior Advisor, Regional Development Cooperation, Embassy of Sweden in Thailand -- a government/diplomatic position, not an academic appointment. Fails the current-university/institute-appointment requirement."
     },
     {
       "name": "Thang Dao",
@@ -6137,7 +6142,8 @@
       "country": "CN",
       "npapers": 2,
       "cited": 10,
-      "status": "pending"
+      "status": "pending",
+      "note": "No trace of this person found at Huazhong Agricultural University (English- and Chinese-language searches of faculty/graduate-school/horticulture pages, ResearchGate/DBLP/ORCID, and Vietnamese-language search for the Vietnamese name of HZAU). Other similarly-named people found (a measles researcher, a French CS-school professor, a Rome-based cardiologist) are confirmed unrelated. Very low citation/paper footprint (cited=10, npapers=2) is consistent with a graduate student rather than faculty, but this is not confirmed. Left pending."
     },
     {
       "name": "Nguyen Trieu Duong Luu",
@@ -6153,7 +6159,8 @@
       "country": "DK",
       "npapers": 2,
       "cited": 10,
-      "status": "pending"
+      "status": "pending",
+      "note": "Only confirmed record is as a PhD student, Aalborg University Business School / International Business Centre, circa 2016 (co-authored Procedia CIRP paper; vbn.aau.dk profile id 140276). No subsequent faculty appointment found anywhere (Denmark, Vietnam, or elsewhere) via LinkedIn or general search; a distinct 'Minh Quang Tran' (Associate Professor, HCMUT) is a confirmed different person, not a duplicate. This session's network egress policy blocked WebFetch/curl to vbn.aau.dk and scholar.google.com, limiting verification to search-engine snippets, which were incomplete. Left pending."
     },
     {
       "name": "Ho Thi Minh Hop",
@@ -6161,7 +6168,8 @@
       "country": "BE",
       "npapers": 3,
       "cited": 10,
-      "status": "pending"
+      "status": "pending",
+      "note": "Has (or had) a directory listing at Gembloux Agro-Bio Tech, University of Liège (ULiège directory uid=u222953; ORBi profile uid=p078511), but exact title/rank (e.g. professor vs. 'collaborateur scientifique', a non-faculty status common in Belgian academia) could not be determined -- this session's network egress policy blocked WebFetch/curl to all uliege.be subdomains, and search snippets don't surface the role field. No publication or activity found from 2019 onward (most-cited work is her ~2012 PhD thesis and a 2018 MDPI paper), suggesting the listing may be stale. Left pending."
     },
     {
       "name": "Nguyen T. Quan",
@@ -6185,7 +6193,8 @@
       "country": "GB",
       "npapers": 4,
       "cited": 10,
-      "status": "pending"
+      "status": "duplicate",
+      "note": "Same person as existing roster entry vp-1050, \"Tuyet Nhung Vu\" (Loughborough University Business School, Lecturer, Tenure-line) -- same institution, distinctive given name, profileUrl literally contains \"nhung-vu\". No action needed; existing record is current."
     },
     {
       "name": "Lan My Le",
@@ -6193,7 +6202,8 @@
       "country": "US",
       "npapers": 4,
       "cited": 10,
-      "status": "pending"
+      "status": "pending",
+      "note": "No matching person found at the University of Utah under this name or close variants ('Lan-My Le', 'My-Lan Le') via site-restricted, Scholar/ResearchGate/LinkedIn, and department searches. Note: public/data.json contains an unrelated 'An-My Le' (id vp-0202, Bard College photography professor) -- a near-homograph, not a duplicate. This session's network egress policy blocked WebFetch to utah.edu, preventing a direct name search of the university faculty directory. Left pending."
     },
     {
       "name": "Thuan Gia-Nhat Tran",
@@ -6201,7 +6211,8 @@
       "country": "US",
       "npapers": 2,
       "cited": 10,
-      "status": "pending"
+      "status": "pending",
+      "note": "No matching profile found at UC Irvine under this name (faculty-directory search snippets, LinkedIn, arXiv/IEEE, thesis repositories checked). Other UCI 'Tran' faculty/staff found (Thuy Tran, Ich Tran, Thi Tran, Tri C. Tran) are confirmed different people. Very low citation/paper count (cited=10, npapers=2) may indicate a graduate student without a public faculty profile, but this is not confirmed. Left pending."
     },
     {
       "name": "T.P. Tran",
@@ -6209,7 +6220,8 @@
       "country": "JP",
       "npapers": 2,
       "cited": 10,
-      "status": "pending"
+      "status": "pending",
+      "note": "Too ambiguous/abbreviated to resolve via search-snippet tools: found only a differently-initialed 'Tran, A.T.' (co-author with Keio's Morifuji T. on a topology paper), likely a different person and possibly not even Keio-affiliated. Keio's Pure research-output database and researchmap.jp searches found no other match. This session's network egress policy blocked WebFetch to keio.ac.jp/keio.elsevierpure.com, preventing a direct faculty-directory browse. Left pending."
     },
     {
       "name": "Vu Duy Thanh",
