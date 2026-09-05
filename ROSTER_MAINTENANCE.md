@@ -93,6 +93,50 @@ Use all relevant candidate sources:
 
 Do not depend on URL shape, visible diacritics, or a faculty page being linked from a department homepage. A research mention, dissertation-supervision link, coauthorship, student page, or grant page is a lead—not proof of a current faculty appointment.
 
+### Emeritus-focused discovery
+
+Emeritus coverage is often much thinner than active-faculty coverage because universities place
+retired scholars in separate directories or preserve them only in faculty catalogs. Run a dedicated
+emeritus pass after the active-faculty pass, starting with large universities and their central
+provost, registrar, library, and department emeriti pages. Search both Vietnamese-name signals and
+the local-language appointment terms; do not search only the English word “emeritus.” Useful forms
+include:
+
+- English: `Professor Emeritus`, `Professor Emerita`, `Associate Professor Emeritus`, `Faculty
+  Emeriti`, `Emeritus Faculty`, and `Research Professor Emeritus`;
+- French: `professeur émérite`, `professeure émérite`, `enseignant-chercheur émérite`, and
+  `directeur de recherche émérite`;
+- Spanish/Portuguese/Italian: `profesor(a) emérito(a)`, `professor(a) emérito(a)`, and
+  `professore emerito`;
+- German/Dutch/Nordic usage: `Professor emeritus`, `Professor im Ruhestand`, `emeritierter
+  Professor`, `emeritus hoogleraar`, and the corresponding national-language variants; and
+- Korean/Japanese/Chinese pages: English “emeritus” alongside local faculty-directory terms such
+  as Korean `명예교수` / `전임교수`, Japanese `名誉教授`, and Chinese `荣休教授` / `名誉教授`.
+
+Use queries combining the institution, a Vietnamese surname or given-name token, and one or more
+of these terms (for example, `site:mcgill.ca Nguyen "Professor Emeritus"` or
+`site:univ-amu.fr Nguyen "professeur émérite"`). Check the current institutional directory or
+official emeritus list first, then use an official appointment/conferral notice, CV, or reputable
+academy profile to fill in the former rank, department, degrees, and research areas. A personal
+homepage, obituary, conference program, or research mention is a lead only. Exclude plain “retired,”
+“former professor,” visiting/honorary titles without a formal emeritus conferral, and in-memoriam
+pages; a deceased scholar is not a current emeritus roster entry. Deduplicate by person and
+institution because emeriti commonly appear in both a central list and a department page.
+
+When a page gives a surname-first Vietnamese name (for example, `Nguyen Cac`), normalize the
+public `name` to the repository’s first/middle/last display order (`Cac Nguyen`) and preserve the
+authoritative Vietnamese form in `vietnameseName` when available. Run the name-order validator and
+check for an existing record before adding a new emeritus entry.
+
+### Postdoctoral and temporary-role guardrail
+
+Personal sites frequently describe joint university/institute postdocs as “research fellows” or
+show them prominently beside permanent faculty. These remain out of scope: a postdoctoral fellow,
+research fellow, visiting scholar, grant-funded fellow, or other trainee/term appointment does not
+become eligible merely because the host is a major university or an eligible nonprofit institute.
+For example, a joint postdoctoral appointment at Harvard and a research institute is still excluded
+unless a separate, current permanent faculty-equivalent appointment is documented.
+
 Generate repeatable search queries with:
 
 ```bash
