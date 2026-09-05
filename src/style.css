@@ -330,6 +330,62 @@ h1 {
   margin-bottom: 1.25rem;
 }
 
+.pin-search-btn {
+  flex: 0 0 auto;
+  min-height: 38px;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  background: var(--tag-bg);
+  color: var(--text-secondary);
+  font: 600 var(--text-xs) var(--font-body);
+  cursor: pointer;
+}
+
+.pin-search-btn:hover,
+.pin-search-btn.is-pinned {
+  color: var(--favorite-color);
+  border-color: var(--favorite-color);
+}
+
+.pin-search-btn:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.browser-shelf {
+  display: grid;
+  gap: 0.35rem;
+  margin: -0.15rem 0 1rem;
+}
+
+.browser-shelf-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.browser-shelf-group > span {
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+}
+
+.browser-shelf-chip {
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  color: var(--text-secondary);
+  font-size: var(--text-xs);
+  padding: 0.15rem 0.55rem;
+  text-decoration: none;
+}
+
+.browser-shelf-chip:hover,
+.browser-shelf-chip:focus-visible {
+  border-color: var(--bamboo-green);
+  color: var(--bamboo-green);
+}
+
 .examples-label {
   color: var(--text-muted);
   font-size: var(--text-xs);

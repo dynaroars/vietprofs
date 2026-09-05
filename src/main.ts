@@ -33,7 +33,7 @@ import {
 } from './data.ts';
 import { escapeHtml, formatRosterDate } from './utils.ts';
 import { applyFavoriteToggle, fieldDropdownLabel, renderRosterEntry } from './render.ts';
-import { loadFavorites, toggleFavorite } from './favorites-store.ts';
+import { loadFavorites, loadPinnedSearches, loadRecentProfiles, toggleFavorite, togglePinnedSearch } from './favorites-store.ts';
 import { openRosterShell } from './roster-shell.ts';
 import { locationForQuery } from './filter-state.ts';
 import { renderFunFacts, renderGrowthChart, type GrowthMetricKey } from './insights.ts';
@@ -162,6 +162,7 @@ function renderShell() {
           </div>
           <div id="search-suggestion-panel" class="search-suggestion-panel" role="listbox" hidden></div>
         </div>
+        <button type="button" id="pin-search-btn" class="pin-search-btn" aria-pressed="false" title="Pin current search">Pin search</button>
         <button type="button" id="search-help-btn" class="search-help-btn" aria-haspopup="dialog" aria-expanded="false" aria-controls="search-help-panel" aria-label="Search syntax and keyboard help" title="Search syntax and keyboard help">?</button>
         <div id="search-help-panel" class="search-help-panel" role="dialog" aria-label="Search syntax help" hidden>
           <p><strong>QUERY SYNTAX</strong></p>
@@ -193,6 +194,7 @@ function renderShell() {
         <option value="recent">Recently modified</option>
       </select>
     </div>
+    <div class="browser-shelf" id="browser-shelf" aria-label="Saved browser data" hidden></div>
     <output class="command-output" id="command-output" aria-live="polite" hidden></output>
     <div class="examples" id="examples"></div>
     <div class="result-row">
@@ -413,6 +415,8 @@ async function init() {
   const searchScopeChip = document.getElementById('search-scope-chip') as HTMLButtonElement;
   const searchScopeChipLabel = document.getElementById('search-scope-chip-label') as HTMLElement;
   const suggestionPanel = document.getElementById('search-suggestion-panel') as HTMLElement;
+  const pinSearchBtn = document.getElementById('pin-search-btn') as HTMLButtonElement;
+  const browserShelf = document.getElementById('browser-shelf') as HTMLElement;
   const locationSelect = document.getElementById('location-filter') as HTMLSelectElement;
   const fieldSelect = document.getElementById('field-filter') as HTMLSelectElement;
   const trackSelect = document.getElementById('track-filter') as HTMLSelectElement;
@@ -695,6 +699,55 @@ async function init() {
     window.history.replaceState(null, '', url);
   }
 
+  function pinnedSearchLabel(query: string): string {
+    const params = new URLSearchParams(query);
+    const labels = [
+      params.get('q'),
+      params.get('loc') && `in ${params.get('loc')}`,
+      params.get('field'),
+      params.get('track'),
+      params.get('institutionType'),
+    ].filter(Boolean);
+    return (labels.join(' · ') || 'Saved search').slice(0, 80);
+  }
+
+  function renderBrowserShelf() {
+    const currentQuery = window.location.search.slice(1);
+    const pins = loadPinnedSearches();
+    pinSearchBtn.disabled = !currentQuery;
+    pinSearchBtn.classList.toggle('is-pinned', pins.includes(currentQuery));
+    pinSearchBtn.setAttribute('aria-pressed', String(pins.includes(currentQuery)));
+    pinSearchBtn.textContent = pins.includes(currentQuery) ? 'Unpin search' : 'Pin search';
+
+    const recent = loadRecentProfiles()
+      .map((id) => roster.find((person) => person.id === id))
+      .filter((person): person is RosterEntry => Boolean(person));
+    browserShelf.replaceChildren();
+    if (!pins.length && !recent.length) {
+      browserShelf.hidden = true;
+      return;
+    }
+    browserShelf.hidden = false;
+    const appendGroup = (label: string, entries: { href: string; text: string }[]) => {
+      if (!entries.length) return;
+      const group = document.createElement('div');
+      group.className = 'browser-shelf-group';
+      const heading = document.createElement('span');
+      heading.textContent = label;
+      group.append(heading);
+      entries.forEach(({ href, text }) => {
+        const link = document.createElement('a');
+        link.className = 'browser-shelf-chip';
+        link.href = href;
+        link.textContent = text;
+        group.append(link);
+      });
+      browserShelf.append(group);
+    };
+    appendGroup('Pinned:', pins.map((query) => ({ href: `${window.location.pathname}?${query}`, text: pinnedSearchLabel(query) })));
+    appendGroup('Recent:', recent.map((person) => ({ href: `${import.meta.env.BASE_URL}${personPath(person.id)}`, text: displayName(person.name) })));
+  }
+
   function update({ fromSearch = false } = {}) {
     if (fromSearch) {
       filterState.state = '';
@@ -707,6 +760,7 @@ async function init() {
       renderFunFacts(locRoster, locationLabel(locationSelect.value), locationSelect.value, roster, statsHistory, currentGrowthMetric);
       renderQueryPlan(locRoster.length, 'insights');
       syncUrl();
+      renderBrowserShelf();
       return;
     }
     const { scope, query } = effectiveSearch();
@@ -726,7 +780,13 @@ async function init() {
     keyboardSelectedIndex = -1;
     renderQueryPlan(filtered.length);
     syncUrl();
+    renderBrowserShelf();
   }
+
+  pinSearchBtn.addEventListener('click', () => {
+    togglePinnedSearch(window.location.search.slice(1));
+    renderBrowserShelf();
+  });
 
   function resetDirectory() {
     clearSearch();

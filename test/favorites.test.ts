@@ -1,6 +1,6 @@
 import { test, beforeEach } from 'node:test';
 import assert from 'node:assert/strict';
-import { isFavorite, loadFavorites, saveFavorites, toggleFavorite } from '../src/favorites-store.ts';
+import { isFavorite, loadFavorites, loadPinnedSearches, loadRecentProfiles, recordRecentProfile, saveFavorites, toggleFavorite, togglePinnedSearch } from '../src/favorites-store.ts';
 
 function installMemoryStorage() {
   const data = new Map<string, string>();
@@ -40,4 +40,19 @@ test('favorites ignore invalid ids and keep unique values', () => {
   assert.deepEqual(loadFavorites(), ['vp-0001']);
   localStorage.setItem('vietprofs:favorites', '{bad');
   assert.deepEqual(loadFavorites(), []);
+});
+
+test('recent profiles retain unique valid ids in visit order', () => {
+  recordRecentProfile('vp-0002');
+  recordRecentProfile('vp-0001');
+  recordRecentProfile('vp-0002');
+  recordRecentProfile('invalid');
+  assert.deepEqual(loadRecentProfiles(), ['vp-0002', 'vp-0001']);
+});
+
+test('pinned searches retain only query state and toggle cleanly', () => {
+  assert.equal(togglePinnedSearch('q=Nguyen&loc=US&unsafe=value'), true);
+  assert.deepEqual(loadPinnedSearches(), ['q=Nguyen&loc=US']);
+  assert.equal(togglePinnedSearch('loc=US&q=Nguyen'), false);
+  assert.deepEqual(loadPinnedSearches(), []);
 });

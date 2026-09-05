@@ -175,6 +175,37 @@ test('search suggestions remain visible while results update', async () => {
   await page.close();
 });
 
+test('pinned searches and recently viewed profiles stay in browser storage', async () => {
+  const page = await context.newPage();
+  await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
+  await page.evaluate(() => {
+    localStorage.removeItem('vietprofs:pinned-searches');
+    localStorage.removeItem('vietprofs:recent-profiles');
+  });
+  const search = page.locator('#search');
+  await search.fill('ThanhVu');
+  await page.waitForTimeout(250);
+  const pin = page.locator('#pin-search-btn');
+  assert.equal(await pin.isDisabled(), false);
+  await pin.click();
+  const shelf = page.locator('#browser-shelf');
+  const pinned = shelf.locator('.browser-shelf-group').filter({ hasText: 'Pinned:' }).locator('a');
+  assert.equal(await pinned.count(), 1);
+  assert.match(await pinned.getAttribute('href'), /q=ThanhVu/);
+
+  const profileHref = await page.locator('.entry-name').first().getAttribute('href');
+  await page.goto(new URL(profileHref!, `${baseUrl}/`).href, { waitUntil: 'networkidle' });
+  await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
+  const recent = shelf.locator('.browser-shelf-group').filter({ hasText: 'Recent:' }).locator('a');
+  assert.equal(await recent.count(), 1);
+  assert.equal(await recent.getAttribute('href'), profileHref);
+  await page.evaluate(() => {
+    localStorage.removeItem('vietprofs:pinned-searches');
+    localStorage.removeItem('vietprofs:recent-profiles');
+  });
+  await page.close();
+});
+
 test('keyboard navigation, query plan, and terminal commands work without leaving the directory', async () => {
   const page = await context.newPage();
   await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
