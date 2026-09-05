@@ -38,17 +38,19 @@ Accepted tracks:
 - `Emeritus`: a formally conferred emeritus/emerita title following a tenure-line career. Prefer an active emeritus listing or a source documenting the conferral. Plain retirement, resignation, former-faculty status, and in-memoriam listings do not qualify.
 
 Eligible non-university employers are limited to public research bodies (for example, CNRS, INRIA,
-national academies, Max Planck institutes, U.S. Department of Energy national laboratories,
-NIH intramural institutes, NIST, NASA research centers, NOAA research laboratories, USGS
-research centers, the U.S. Naval Research Laboratory, Air Force Research Laboratory, and
+national academies, Max Planck institutes, Japan's RIKEN, Australia's CSIRO, U.S. Department of
+Energy national laboratories, NIH intramural institutes, NIST, NASA research centers, NOAA research
+laboratories, USGS research centers, the U.S. Naval Research Laboratory, Air Force Research Laboratory, and
 Army Research Laboratory/DEVCOM ARL) and independent nonprofit scholarly research institutes
 (for example, the Allen
 Institute, Broad Institute, and HHMI Janelia). University-managed or university-affiliated U.S.
 research centers such as MIT Lincoln Laboratory (an FFRDC) and Johns Hopkins Applied Physics
 Laboratory (a UARC) may also be included when the individual appointment is permanent and
-faculty-equivalent. The appointment
-must be permanent and faculty-equivalent: a principal investigator, group leader, director, or
-comparable independent researcher rather than support staff or a trainee. Corporate research labs,
+faculty-equivalent. The appointment must be permanent and faculty-equivalent: a principal investigator,
+group leader, director, or comparable independent researcher rather than support staff or a trainee. Titles
+need not say `Professor`; for example, RIKEN Research Scientists/Unit Leaders and CSIRO Senior or Principal
+Research Scientists/Research Group Leaders may qualify when the appointment is ongoing and independent.
+Corporate research labs,
 including Microsoft Research, are excluded even when the work is scholarly. Government agencies,
 hospitals without a qualifying university appointment, think tanks, advocacy organizations, and
 other non-academic employers remain excluded.
