@@ -22,35 +22,34 @@ corresponding `paper.tex` claims together after any cited roster change.
 
 ## Current snapshot
 
-Generated on 2026-08-31 from `public/data.json` with `npm run analyze`.
+Generated on 2026-09-05 from `public/data.json` with `npm run analyze`.
 
 | Metric | Value | Caveat |
 |---|---:|---|
-| roster records | 993 | current maintained snapshot, not a census |
-| universities | 423 | exact canonicalized roster strings |
-| countries | 20 | current-country field |
-| U.S. / international records | 659 / 334 | missing country defaults to U.S. in the app |
+| roster records | 1152 | current maintained snapshot, not a census |
+| universities | 492 | exact canonicalized roster strings |
+| countries | 23 | current-country field |
+| U.S. / international records | 729 / 423 | missing country defaults to U.S. in the app |
 | broad fields | 17 | canonical rules plus explicit overrides |
-| profile URLs | 993 | presence, not live HTTP validity |
-| Scholar URLs | 219 | presence, not identity correctness |
-| personal/lab websites | 127 | presence only |
-| explicit PhD institutions / years | 751 / 549 | recorded evidence only; year range 1962--2026 |
-| honors-bearing records | 182 | at least one eligible stored honor |
+| profile URLs | 1152 | presence, not live HTTP validity |
+| Scholar URLs | 662 | presence, not identity correctness |
+| personal/lab websites | 211 | presence only |
+| explicit PhD institutions / years | 868 / 613 | recorded evidence only; year range 1939--2026 |
+| honors-bearing records | 208 | at least one eligible stored honor |
 
-Track counts are Tenure-line 774, Clinical 96, Teaching 68, Emeritus 37, and Research 18. The
-largest exact university groups are Stanford and UC San Diego (14 each), Monash (13), UC Irvine,
-UCLA, and the University of Florida (11 each). Country counts include U.S. 659, Australia 64,
-U.K. 54, Canada 47, France 36, Japan 33, Singapore 25, and Taiwan 21.
+Track counts are Tenure-line 878, Clinical 104, Teaching 74, Emeritus 48, Research 35, Academic staff 8, and Deceased 5. The
+largest exact university groups are Monash (18), Stanford (15), UC San Diego (14), University of Florida (12), UC Irvine (11),
+UCLA (11), National University of Singapore (10), Pennsylvania State University (10), Texas Tech (10), and University of Melbourne (10). Country counts include U.S. 729, Australia 100,
+U.K. 73, Canada 53, France 46, Japan 35, Singapore 26, Taiwan 22, Netherlands 10, and New Zealand 10.
 
 Conservative observations supported by the analysis include:
 
-- The snapshot spans 17 fields; Health Sciences (203), Computer & Information Sciences (148),
-  Business & Economics (143), and Engineering (139) are the four largest.
-- California and Texas contain 218 of the 659 U.S. records (33%). This is a roster observation,
+- The snapshot spans 17 fields; Health Sciences (228), Business & Economics (220), Computer & Information Sciences (163), and Engineering (152) are the four largest.
+- California and Texas contain 229 of the 729 U.S. records (31%). This is a roster observation,
   not evidence about population size, prestige, causation, or migration.
-- Computing represents 11% of U.S. entries and 22% of international entries; health represents
+- Computing represents 11% of U.S. entries and 19% of international entries; health represents
   27% and 8%, respectively. Coverage and selection differences prevent population inference.
-- Monash and Stanford each span 12 distinct stored departments; department naming granularity
+- Monash and Stanford span 14 and 13 distinct stored departments, respectively; department naming granularity
   affects this comparison.
 - Missingness is measurable: the education and external-link counts above are coverage signals,
   not correctness claims.
