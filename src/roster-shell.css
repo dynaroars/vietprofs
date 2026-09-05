@@ -1,0 +1,28 @@
+.roster-shell {
+  color-scheme: dark;
+  color: #71f59a;
+  background: repeating-linear-gradient(0deg, #ffffff03 0 1px, transparent 1px 4px), #07120b;
+  border: 1px solid #71f59a66;
+  border-radius: 10px;
+  padding: 0;
+  width: min(760px, calc(100vw - 24px));
+  max-width: calc(100vw - 24px);
+  height: min(560px, calc(100dvh - 32px));
+  max-height: calc(100dvh - 32px);
+  box-shadow: 0 24px 100px #0009;
+  font: 14px/1.7 'Courier New', monospace;
+}
+.roster-shell[open] { display: flex; flex-direction: column; }
+.roster-shell::backdrop { background: #080d0bd9; backdrop-filter: blur(4px); }
+.roster-shell header, .shell-prompt { display: flex; align-items: center; gap: 12px; padding: 12px 16px; }
+.roster-shell header { justify-content: space-between; border-bottom: 1px solid #71f59a33; font-size: 12px; }
+.roster-shell button { color: inherit; background: transparent; border: 0; font: inherit; cursor: pointer; min-height: 44px; }
+.shell-output { flex: 1; min-height: 0; overflow: auto; padding: 16px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.shell-output a { display: block; color: #a7f3c0; text-decoration: underline; text-underline-offset: 3px; }
+.shell-prompt { border-top: 1px solid #71f59a33; margin: 0; }
+.shell-prompt input { flex: 1; min-width: 0; background: transparent; color: inherit; border: 0; font: inherit; font-size: 16px; caret-color: #71f59a; }
+.roster-shell :focus-visible { outline: 1px solid #71f59a; outline-offset: 3px; }
+@media (prefers-reduced-motion: no-preference) {
+  .roster-shell[open] { animation: shell-connect 180ms ease-out; }
+  @keyframes shell-connect { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+}

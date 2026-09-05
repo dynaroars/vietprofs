@@ -18,9 +18,8 @@ const buildLabel = new Intl.DateTimeFormat('en-US', {
   day: 'numeric',
   hour: 'numeric',
   minute: '2-digit',
-  timeZone: 'UTC',
-  timeZoneName: 'short',
-}).format(new Date(buildTimestamp))
+  timeZone: 'America/New_York',
+}).format(new Date(buildTimestamp)) + ' ET'
 
 export default defineConfig({
   // Relative base so the build works under a GitHub Pages project path

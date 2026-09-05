@@ -53,6 +53,7 @@ after(async () => {
 test('directory loads and searching changes the roster', async () => {
   const page = await context.newPage();
   await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
+  assert.equal(await page.locator('#query-inspector').count(), 0);
   const initial = await page.locator('.entry').count();
   assert.ok(initial > 0);
   assert.equal(await page.locator('.entry-updated').count(), initial);
@@ -93,6 +94,63 @@ test('directory loads and searching changes the roster', async () => {
   assert.match(resultCount, /people/);
   assert.match(resultCount, /in the World\.$/);
   assert.doesNotMatch(resultCount, /countr(?:y|ies)/);
+  await page.locator('#search').fill('query plan');
+  await page.locator('#search').press('Enter');
+  assert.match(await page.locator('#command-output').textContent(), /query plan: mode=roster/);
+  assert.match(await page.locator('#command-output').textContent(), /matches=\d+/);
+  await page.close();
+});
+
+test('hidden roster shell searches, reads favorites, recalls commands, and restores focus', async () => {
+  const page = await context.newPage();
+  await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
+  const roster: RosterEntry[] = await page.evaluate(async () => (await fetch('/data.json')).json());
+  const person = roster[0];
+  await page.evaluate(id => localStorage.setItem('vietprofs:favorites', JSON.stringify([id])), person.id);
+  const search = page.locator('#search');
+  await search.fill('sudo vietprofs');
+  await search.press('Enter');
+  const shell = page.locator('.roster-shell');
+  const input = shell.locator('input');
+  const output = shell.locator('.shell-output');
+  assert.equal(await shell.isVisible(), true);
+  assert.equal(await shell.evaluate(el => getComputedStyle(el).color), 'rgb(113, 245, 154)');
+  async function command(text: string) {
+    await input.fill(text);
+    await input.press('Enter');
+  }
+  await command('stats');
+  assert.ok((await output.innerText()).includes(`${roster.length} roster entries`));
+  await command('favorites');
+  assert.equal(await output.locator('a').count(), 1);
+  assert.equal(await output.locator('a').evaluate(el => (el as HTMLAnchorElement).pathname), `/people/${person.id}.html`);
+  await command('open 0');
+  assert.match(await output.innerText(), /Choose a valid number/);
+  await command('clear');
+  await command(`find ${person.name}`);
+  assert.ok(await output.locator(`a[href$="/people/${person.id}.html"]`).count() > 0);
+  await input.press('ArrowUp');
+  assert.equal(await input.inputValue(), `find ${person.name}`);
+  await input.press('ArrowDown');
+  assert.equal(await input.inputValue(), '');
+  await command('top countries');
+  assert.match(await output.innerText(), /Top countries by roster entries/);
+  await command('<img src=x onerror=alert(1)>');
+  assert.equal(await output.locator('img').count(), 0);
+  await input.press('Escape');
+  await shell.waitFor({ state: 'detached' });
+  assert.equal(await shell.count(), 0);
+  assert.equal(await search.evaluate(el => document.activeElement === el), true);
+  await page.setViewportSize({ width: 375, height: 667 });
+  await search.fill('sudo vietprofs');
+  await search.press('Enter');
+  assert.equal(await shell.evaluate(el => el.scrollWidth <= el.clientWidth), true);
+  await command('random');
+  assert.equal(await output.locator('a').count(), 1);
+  const href = await output.locator('a').getAttribute('href');
+  await command('open 1');
+  await page.waitForURL(new URL(href!, `${baseUrl}/`).href);
+  await page.evaluate(() => localStorage.removeItem('vietprofs:favorites'));
   await page.close();
 });
 
@@ -132,7 +190,9 @@ test('keyboard navigation, query plan, and terminal commands work without leavin
   await page.locator('#search').press('Enter');
   assert.match(await page.locator('#command-output').textContent(), /community-maintained index/);
   assert.equal(await page.locator('#search').inputValue(), '');
-  assert.match(await page.locator('#query-plan').textContent(), /matches=\d+/);
+  await page.locator('#search').fill('query plan');
+  await page.locator('#search').press('Enter');
+  assert.match(await page.locator('#command-output').textContent(), /query plan: .*matches=\d+/);
 
   await page.locator('#search').fill('theme crt');
   await page.locator('#search').press('Enter');
@@ -476,6 +536,9 @@ test('profile pages honor dark mode through the shared stylesheet', async () => 
   await page.emulateMedia({ colorScheme: 'dark' });
   await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
   const id = await page.evaluate(async () => (await (await fetch('/data.json')).json())[0].id);
+  await page.evaluate((profileId) => {
+    localStorage.setItem('vietprofs:favorites', JSON.stringify([profileId]));
+  }, id);
   await page.goto(`${baseUrl}/people/${id}.html`, { waitUntil: 'networkidle' });
   assert.equal(await page.locator('link[href="../profile.css"]').count(), 1);
   assert.equal(await page.evaluate(() => getComputedStyle(document.documentElement).colorScheme), 'light dark');
@@ -486,5 +549,9 @@ test('profile pages honor dark mode through the shared stylesheet', async () => 
   assert.equal(await page.locator('.raw-record').count(), 1);
   assert.equal(await page.locator('.profile-actions .submission-link').count(), 1);
   assert.equal(await page.locator('.name-heading .profile-actions').count(), 1);
+  const profileStar = page.locator('.profile-actions .favorite-toggle');
+  assert.equal(await profileStar.getAttribute('aria-pressed'), 'true');
+  await profileStar.click();
+  assert.equal(await profileStar.getAttribute('aria-pressed'), 'false');
   await page.close();
 });

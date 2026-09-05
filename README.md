@@ -17,6 +17,10 @@ Easter eggs such as `help`, `whoami`, `uname -a`, `fortune`, `/dev/random`, and 
 Individual profile pages use a compact Unix-manual layout and expose roster provenance and the raw
 record behind the rendered page.
 
+Type `sudo vietprofs` in search and press Enter to open a hidden roster shell. Type `help`
+for commands to search, count, rank countries/institutions by roster entries, and view favorites.
+The shell runs locally on the loaded roster; Escape closes it.
+
 
 Repository documentation is intentionally limited to four files:
 

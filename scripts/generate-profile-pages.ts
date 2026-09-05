@@ -15,6 +15,8 @@ import {
 import { escapeHtml, formatRosterDate } from '../src/utils.ts';
 import { formatEducationDetails } from '../src/render.ts';
 
+const STAR_ICON = '<path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>';
+
 const siteUrl = 'https://vietprofs.roars.dev';
 const root = resolve(import.meta.dirname, '..');
 const development = process.argv.includes('--dev');
@@ -80,6 +82,9 @@ function profilePage(person: RosterEntry) {
     ? `<section class="man-section"><h2>SOURCES</h2><nav class="links" aria-label="External profiles">${links.map(([label, href]) => `<a href="${escapeHtml(href)}" rel="noopener noreferrer">${escapeHtml(label)}</a>`).join('')}</nav></section>`
     : '';
   const editUrl = `../submit.html?edit=${encodeURIComponent(person.id)}`;
+  const favoriteLabel = 'Add to favorites';
+  const favoriteToggle = `<button type="button" class="favorite-toggle profile-favorite-toggle" data-id="${escapeHtml(person.id)}" data-name="${escapeHtml(name)}" aria-pressed="false" aria-label="${favoriteLabel}" title="${favoriteLabel}"><svg viewBox="0 0 24 24" aria-hidden="true">${STAR_ICON}</svg></button>`;
+  const profileScript = `<script type="module">const KEY='vietprofs:favorites';const id=${JSON.stringify(person.id)};const button=document.querySelector('.favorite-toggle[data-id]');if(button){const load=()=>{try{const value=JSON.parse(localStorage.getItem(KEY)||'[]');return Array.isArray(value)?value:[]}catch{return[]}};const save=(values)=>localStorage.setItem(KEY,JSON.stringify(values));const apply=(favorited)=>{button.classList.toggle('is-favorite',favorited);button.setAttribute('aria-pressed',favorited?'true':'false');const label=favorited?'Remove from favorites':'Add to favorites';button.setAttribute('aria-label',label);button.title=label;};apply(load().includes(id));button.addEventListener('click',()=>{const current=load();const next=current.includes(id)?current.filter((value)=>value!==id):[...current,id];save(next);apply(next.includes(id));});}</script>`;
   const rawRecord = escapeHtml(JSON.stringify(person, null, 2));
   const jsonLd = JSON.stringify({
     '@context': 'https://schema.org',
@@ -124,13 +129,14 @@ function profilePage(person: RosterEntry) {
     <main>
       <article class="man-page">
         <p class="man-running-head"><span>${sectionLabel}</span><span>VietProfs Profile Manual</span><span>${sectionLabel}</span></p>
-        <section class="man-section name-section"><h2>NAME</h2><div class="identity">${portrait}<div class="identity-details"><div class="name-heading"><h1>${escapeHtml(name)}</h1><nav class="profile-actions" aria-label="Roster actions"><a class="submission-link" href="${escapeHtml(editUrl)}">Add or update info</a></nav></div><p class="native">${escapeHtml(nativeName)} <span class="loc-badge" title="${escapeHtml(person.country || 'United States')}"><span class="country-flag" aria-hidden="true">${countryFlag(person.country)}</span></span></p><p class="record-id">${escapeHtml(person.id)}</p></div></div></section>
+        <section class="man-section name-section"><h2>NAME</h2><div class="identity">${portrait}<div class="identity-details"><div class="name-heading"><h1>${escapeHtml(name)}</h1><div class="profile-actions" aria-label="Roster actions">${favoriteToggle}<a class="submission-link" href="${escapeHtml(editUrl)}">Add or update info</a></div></div><p class="native">${escapeHtml(nativeName)} <span class="loc-badge" title="${escapeHtml(person.country || 'United States')}"><span class="country-flag" aria-hidden="true">${countryFlag(person.country)}</span></span></p><p class="record-id">${escapeHtml(person.id)}</p></div></div></section>
         <section class="man-section"><h2>SYNOPSIS</h2><p class="synopsis">${escapeHtml(role)}${locationOf(person) ? ` · ${escapeHtml(locationOf(person))}` : ''}</p><div class="tags"><span class="tag">${escapeHtml(fieldOf(person.department, person.university))}</span><span class="tag${person.track === 'Emeritus' ? ' tag-emeritus' : person.track === 'Deceased' ? ' tag-deceased' : ''}">${person.track === 'Emeritus' ? '🎓 Emeritus' : person.track === 'Deceased' ? '🏛️ Deceased' : escapeHtml(person.track || '')}</span>${person.institutionType && person.institutionType !== 'University' ? `<span class="tag">${escapeHtml(person.institutionType)}</span>` : ''}</div></section>
         ${research}${educationSection}${honors}${linkSection}
         <section class="man-section"><h2>ROSTER METADATA</h2><dl class="roster-metadata"><div><dt>record</dt><dd>${escapeHtml(person.id)}</dd></div><div><dt>last verified</dt><dd>${escapeHtml(formatRosterDate(person.lastUpdatedAt || ''))}</dd></div><div><dt>build</dt><dd><a href="https://github.com/dynaroars/vietprofs/commit/${escapeHtml(commit)}">${escapeHtml(commit)}</a></dd></div></dl><details class="raw-record"><summary>view raw record</summary><pre><code>${rawRecord}</code></pre></details></section>
         <footer><p>VietProfs is a community-maintained directory. Consult the linked sources for the most current details.</p><p class="man-footer-line">${sectionLabel} · ${escapeHtml(person.id)} · ${sectionLabel}</p></footer>
       </article>
     </main>
+    ${profileScript}
   </div>
 </body>
 </html>`;

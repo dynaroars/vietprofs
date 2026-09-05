@@ -34,6 +34,7 @@ import {
 import { escapeHtml, formatRosterDate } from './utils.ts';
 import { applyFavoriteToggle, fieldDropdownLabel, renderRosterEntry } from './render.ts';
 import { loadFavorites, toggleFavorite } from './favorites-store.ts';
+import { openRosterShell } from './roster-shell.ts';
 import { locationForQuery } from './filter-state.ts';
 import { renderFunFacts, renderGrowthChart, type GrowthMetricKey } from './insights.ts';
 
@@ -157,7 +158,7 @@ function renderShell() {
               <span id="search-scope-chip-label"></span>
               <span class="search-scope-chip-remove" aria-hidden="true">×</span>
             </button>
-            <input id="search" class="search-input" type="search" autocomplete="off" placeholder="Search the roster…" aria-label="Search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-suggestion-panel" />
+            <input id="search" class="search-input" type="search" autocomplete="off" placeholder="Roster last updated ${escapeHtml(__BUILD_LABEL__)}" aria-label="Search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-suggestion-panel" />
           </div>
           <div id="search-suggestion-panel" class="search-suggestion-panel" role="listbox" hidden></div>
         </div>
@@ -171,7 +172,7 @@ function renderShell() {
           <p><strong>KEYBOARD</strong></p>
           <p><code>/</code> search · <code>j</code>/<code>k</code> move · <code>Enter</code> open · <code>f</code> favorite · <code>r</code> random · <code>Esc</code> clear</p>
           <p><strong>COMMANDS</strong></p>
-          <p><code>help</code> · <code>whoami</code> · <code>uname -a</code> · <code>fortune</code> · <code>/dev/random</code> · <code>theme crt</code></p>
+          <p><code>help</code> · <code>query plan</code> · <code>whoami</code> · <code>uname -a</code> · <code>fortune</code> · <code>/dev/random</code> · <code>theme crt</code></p>
         </div>
       </div>
       <select id="location-filter" class="field-select location-select" aria-label="Filter by location">
@@ -192,10 +193,6 @@ function renderShell() {
         <option value="recent">Recently modified</option>
       </select>
     </div>
-    <details class="query-inspector" id="query-inspector">
-      <summary>query plan</summary>
-      <code id="query-plan"></code>
-    </details>
     <output class="command-output" id="command-output" aria-live="polite" hidden></output>
     <div class="examples" id="examples"></div>
     <div class="result-row">
@@ -208,10 +205,6 @@ function renderShell() {
         <path d="M18 15l-6-6-6 6"/>
       </svg>
     </button>
-    <footer class="system-footer">
-      <span class="footer-easter-egg">🎉 Wow, congrats! You actually scrolled all the way to the end! 🎓</span>
-      <time class="footer-updated" datetime="${escapeHtml(__BUILD_TIMESTAMP__)}">Last updated ${escapeHtml(__BUILD_LABEL__)}</time>
-    </footer>
   `;
 }
 
@@ -427,7 +420,7 @@ async function init() {
   const sortSelect = document.getElementById('sort-order') as HTMLSelectElement;
   const filterState = { state: '', insights: false };
   const commandOutput = document.getElementById('command-output') as HTMLOutputElement;
-  const queryPlan = document.getElementById('query-plan') as HTMLElement;
+  let queryPlan = '';
   let keyboardSelectedIndex = -1;
   let currentGrowthMetric: GrowthMetricKey = 'count';
 
@@ -443,7 +436,7 @@ async function init() {
 
   function renderQueryPlan(matches: number, mode = 'roster') {
     const { scope, query } = effectiveSearch();
-    queryPlan.textContent = [
+    queryPlan = [
       `mode=${mode}`,
       `scope=${scope}`,
       `query=${query.trim() ? JSON.stringify(query.trim()) : '*'}`,
@@ -748,11 +741,23 @@ async function init() {
   function runCommand(raw: string): boolean {
     const command = raw.trim().toLocaleLowerCase().replace(/^:/, '');
     if (!command) return false;
+    if (command === 'sudo vietprofs') {
+      clearSearch();
+      hideSuggestions();
+      hideCommandOutput();
+      update();
+      openRosterShell(searchIndex);
+      return true;
+    }
     if (command === 'help') {
       hideSuggestions();
       searchHelpPanel.hidden = false;
       searchHelpBtn.setAttribute('aria-expanded', 'true');
       completeCommand('help: query prefixes, shortcuts, and commands are listed above');
+      return true;
+    }
+    if (command === 'query plan') {
+      completeCommand(`query plan: ${queryPlan}`);
       return true;
     }
     if (command === 'whoami') {

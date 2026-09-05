@@ -11,8 +11,8 @@
   --tag-bg: #f1f5f9;
   --tag-text: #334155;
   --focus-ring: #2563eb;
-  --favorite-color: #b45309;
-  --favorite-hover: #92400e;
+  --favorite-color: #fbbf24;
+  --favorite-hover: #fcd34d;
   --bamboo-green: #2e9e64;
   --bamboo-green-hover: #1d7a4c;
 
@@ -47,8 +47,6 @@
     --tag-bg: #232a31;
     --tag-text: #cbd5e1;
     --focus-ring: #7dd3fc;
-    --favorite-color: #fbbf24;
-    --favorite-hover: #fcd34d;
   }
 }
 
@@ -69,7 +67,6 @@ body {
 
 .terminal-kicker,
 .site-subtitle,
-.query-inspector,
 .command-output,
 .system-footer,
 .record-id,
@@ -365,7 +362,7 @@ h1 {
   flex: 1;
   width: 100%;
   min-width: 0;
-  padding: 0.6rem 0.9rem;
+  padding: 0.6rem 12.5rem 0.6rem 0.9rem;
   border: 0;
   border-radius: 8px;
   background: transparent;
@@ -521,26 +518,11 @@ h1 {
   font-size: 0.85em;
 }
 
-.query-inspector {
-  margin: -0.15rem 0 0.75rem;
-  color: var(--text-muted);
-  font-size: 0.72rem;
-}
-
-.query-inspector summary,
 .calculation-details summary,
 .raw-record summary {
   width: max-content;
   cursor: pointer;
   color: var(--text-muted);
-}
-
-.query-inspector code {
-  display: block;
-  margin-top: 0.35rem;
-  padding-left: 0.9rem;
-  overflow-wrap: anywhere;
-  color: var(--text-secondary);
 }
 
 .command-output {
@@ -958,11 +940,6 @@ a.entry-name:focus-visible {
   border-top: 1px solid var(--border-color);
   color: var(--text-muted);
   font-size: 0.75rem;
-}
-
-.footer-easter-egg {
-  font-style: italic;
-  color: var(--text-secondary);
 }
 
 .footer-updated {
