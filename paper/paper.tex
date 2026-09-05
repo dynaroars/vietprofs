@@ -29,7 +29,7 @@
 \newcommand{\commitlink}[1]{\href{\ghrepo/commit/#1}{\code{#1}}}
 \newcommand{\vplink}[2]{\href{https://vietprofs.roars.dev/?q=#1}{#2}}
 \title{\includegraphics[width=0.14\textwidth]{../vietprofs-bamboo-v-2048.png}\\[-2pt]
-VietProfs: A Public Directory of the Vietnamese Academic Diaspora\\[4pt]
+VietProfs: A Public Directory of the Vietnamese Academic and Research Diaspora\\[4pt]
 \large Purpose, Eligibility, and Design, with a Technical Report on Keeping It Accurate}
 \author{ThanhVu Nguyen\\George Mason University\\}
 \date{August 2026}
@@ -39,7 +39,7 @@ VietProfs: A Public Directory of the Vietnamese Academic Diaspora\\[4pt]
 
 \begin{abstract}
 The Vietnamese academic diaspora is large and growing, yet no public, searchable record of it exists.
-Individual scholars are discoverable one at a time on their own university pages, but there is no shared directory that lets a student, journalist, organizer, or fellow academic find Vietnamese and Vietnamese-diaspora faculty across institutions, countries, and fields.
+Individual scholars are discoverable one at a time on university or research-institute pages, but there is no shared directory that lets a student, journalist, organizer, or fellow academic find Vietnamese and Vietnamese-diaspora faculty and faculty-equivalent researchers across institutions, countries, and fields.
 We built VietProfs to fill this gap: a public directory intended to stay accurate as a living reference rather than a one-time listing.
 Each entry pairs a portrait and Vietnamese-diacritic name with verified appointment, education, and honors information, browsable on a dynamic web interface with easy search, filtering, and sorting capabilities.
 The directory is designed to be a living document that reflects the current state of the Vietnamese academic diaspora.
@@ -65,7 +65,7 @@ Vietnamese-diaspora---people who are either Vietnamese or have Vietnamese herita
 A prospective graduate student looking for a Vietnamese advisor in their field, a journalist profiling the diaspora, or a scholar looking for compatriots at nearby institutions currently has no better option than ad hoc Google search, one name at a time.
 Communities of comparable size often sustain an informal directory through an alumni association or professional society, where expatriate researcher networks support mentorship, collaboration, and technology diffusion back toward their country of origin \cite{meyer1999scientific,kerr2008ethnic}.
 
-\textbf{VietProfs} was built to be that resource: a public, searchable directory of Vietnamese and Vietnamese-diaspora faculty, useful only if it stays current as people are promoted, move, or retire. By leveraging AI LLM agents to find and propose updates, and verify them against the public web, the open-source system maintains itself with minimal human intervention and therefore reduces the risk of being out of date, neglected or abandoned.
+\textbf{VietProfs} was built to be that resource: a public, searchable directory of Vietnamese and Vietnamese-diaspora faculty and faculty-equivalent research leaders, useful only if it stays current as people are promoted, move, or retire. By leveraging AI LLM agents to find and propose updates, and verify them against the public web, the open-source system maintains itself with minimal human intervention and therefore reduces the risk of being out of date, neglected or abandoned.
 
 \subsection{What VietProfs Is: Motivation, Goals, and Design}
 \label{sec:intro-what}
@@ -80,7 +80,7 @@ And, independent of any specific task, it lets the community---and outsiders---s
 % It is not a test of Vietnamese identity.
 % And it is not a census of the full population (Section~\ref{sec:limitations}).
 
-Inclusion is governed by a single, name-independent rule: a current academic appointment at a university or eligible public/nonprofit scholarly research institute outside Vietnam, in one of six accepted tracks---Tenure-line, Teaching, Research, Clinical, Academic staff, or Emeritus.
+Inclusion is governed by a single, name-independent rule: a current academic appointment at a university or eligible public/nonprofit scholarly research institute outside Vietnam, in one of six accepted tracks---Tenure-line, Teaching, Research, Clinical, Academic staff, or Emeritus. The Research track includes permanent, faculty-equivalent institute researchers because they publish, lead research groups, obtain funding, and mentor students much like university faculty; examples include CNRS and INRIA researchers, Max Planck group leaders, RIKEN scientists, and CSIRO researchers.
 Each track is defined precisely enough that a stable, full-time, faculty-level role is included, while a temporary, visiting, postdoctoral, or adjunct one is not (Section~\ref{sec:eligibility}).
 % Vietnamese names and surnames are used only to find candidates worth checking.
 % No documentary proof of ethnicity is ever required.
