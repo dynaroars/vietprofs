@@ -1877,28 +1877,36 @@ a.entry-name:focus-visible {
 /* Quick chips */
 .world-map-quick-chips {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  gap: 0.4rem;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 0.25rem;
 }
 
 .world-map-chip {
   display: inline-flex;
+  flex-direction: row;
   align-items: center;
   gap: 0.35rem;
+  width: auto;
   padding: 0.35rem 0.65rem;
   background: var(--card-bg);
   border: 1px solid var(--border-color);
-  border-radius: 6px;
+  border-radius: 9999px;
   color: var(--text-primary);
   font-family: var(--font-body);
   font-size: var(--text-xs);
   cursor: pointer;
-  transition: border-color 0.15s ease, background 0.15s ease, transform 0.15s ease;
+  white-space: nowrap;
+  transition: border-color 0.15s ease, background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.world-map-chip:hover {
+.world-map-chip:hover,
+.world-map-chip.is-hovered {
   border-color: var(--focus-ring);
   transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 .world-map-chip .chip-flag {

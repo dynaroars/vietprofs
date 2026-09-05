@@ -85,17 +85,17 @@ export function renderWorldMap(roster: Roster, selectedLocation?: string): strin
     </g>
   `;
 
-  // Top Country Quick Chips
-  const quickChips = sortedCountries.slice(0, 10).map(([countryName, count]) => {
+  // Host Countries Quick Chips
+  const quickChips = sortedCountries.map(([countryName, count]) => {
     const tier = heatTier(count, max);
     const flag = countryFlag(countryName);
-    const pct = Math.round((count / total) * 100);
+    const pct = total > 0 ? Math.round((count / total) * 100) : 0;
     return `
-      <button type="button" class="world-map-chip heat-${tier} ranked-item" data-filter="country" data-value="${escapeHtml(countryName)}" title="Filter by ${escapeHtml(countryName)} (${count} people)">
+      <button type="button" class="world-map-chip heat-${tier}" data-filter="country" data-value="${escapeHtml(countryName)}" data-country="${escapeHtml(countryName)}" data-count="${count}" data-flag="${flag}" data-share="${pct}" title="Filter by ${escapeHtml(countryName)}: ${count} ${count === 1 ? 'person' : 'people'} (${pct}%)">
         <span class="chip-flag" aria-hidden="true">${flag}</span>
         <span class="chip-name">${escapeHtml(countryName)}</span>
         <span class="chip-count">${count}</span>
-        <span class="chip-share">${pct}%</span>
+        <span class="chip-share">(${pct}%)</span>
       </button>
     `;
   }).join('');

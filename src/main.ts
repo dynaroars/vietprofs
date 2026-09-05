@@ -1046,24 +1046,25 @@ async function init() {
   document.getElementById('roster').addEventListener('mousemove', (e) => {
     const target = e.target as HTMLElement;
 
-    // 1. World Map hover
-    const mapWrap = target.closest<HTMLElement>('.world-map-svg-wrap');
-    document.querySelectorAll<HTMLElement>('.world-map-svg-wrap').forEach((wrap) => {
-      if (wrap !== mapWrap) {
-        wrap.querySelector('.world-map-tooltip')?.setAttribute('hidden', '');
-        wrap.querySelectorAll('.is-hovered').forEach((el) => el.classList.remove('is-hovered'));
+    // 1. World Map & Chips hover
+    const mapSection = target.closest<HTMLElement>('.world-map-section');
+    document.querySelectorAll<HTMLElement>('.world-map-section').forEach((sec) => {
+      if (sec !== mapSection) {
+        sec.querySelector('.world-map-tooltip')?.setAttribute('hidden', '');
+        sec.querySelectorAll('.is-hovered').forEach((el) => el.classList.remove('is-hovered'));
       }
     });
 
-    if (mapWrap) {
-      const tooltip = mapWrap.querySelector<HTMLElement>('.world-map-tooltip');
-      const countryEl = target.closest<SVGElement>('.world-map-country, .world-map-pin');
+    if (mapSection) {
+      const mapWrap = mapSection.querySelector<HTMLElement>('.world-map-svg-wrap');
+      const tooltip = mapSection.querySelector<HTMLElement>('.world-map-tooltip');
+      const countryEl = target.closest<HTMLElement | SVGElement>('.world-map-country, .world-map-pin, .world-map-chip');
       if (countryEl && countryEl.dataset.country) {
         const { country, count, flag, share } = countryEl.dataset;
         const numCount = parseInt(count || '0', 10);
         const isOrigin = country === 'Vietnam';
 
-        mapWrap.querySelectorAll('.world-map-country, .world-map-pin').forEach((el) => {
+        mapSection.querySelectorAll('.world-map-country, .world-map-pin, .world-map-chip').forEach((el) => {
           if (el.getAttribute('data-country') === country) {
             el.classList.add('is-hovered');
           } else {
@@ -1071,7 +1072,7 @@ async function init() {
           }
         });
 
-        if (tooltip) {
+        if (tooltip && mapWrap) {
           tooltip.innerHTML = `
             <div class="tooltip-header">
               <span class="tooltip-flag">${flag || '🌐'}</span>
@@ -1098,8 +1099,7 @@ async function init() {
           tooltip.style.top = `${top}px`;
         }
       } else {
-        mapWrap.querySelectorAll('.is-hovered').forEach((el) => el.classList.remove('is-hovered'));
-        const tooltip = mapWrap.querySelector<HTMLElement>('.world-map-tooltip');
+        mapSection.querySelectorAll('.is-hovered').forEach((el) => el.classList.remove('is-hovered'));
         if (tooltip) tooltip.setAttribute('hidden', '');
       }
     }
