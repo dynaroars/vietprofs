@@ -31,4 +31,14 @@ test('generated profile pages use the same stylesheet source as the directory', 
   assert.match(generator, /countryFlag/);
   assert.match(generator, /class="loc-badge"/);
   assert.match(generator, /class="country-flag"/);
+  assert.match(generator, /class="man-page"/);
+  assert.match(generator, />SYNOPSIS</);
+  assert.match(generator, />ROSTER METADATA</);
+  assert.match(generator, /view raw record/);
+  assert.doesNotMatch(generator, /Report stale record/);
+  assert.match(sourceStylesheet, /\.profile-page \.man-section/);
+  assert.ok(
+    generator.indexOf('class="profile-actions"') < generator.indexOf('class="native"'),
+    'profile actions should appear alongside the person\'s name',
+  );
 });

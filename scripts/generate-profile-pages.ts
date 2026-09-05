@@ -1,5 +1,6 @@
 import { mkdir, readFile, rm, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
+import { execFileSync } from 'node:child_process';
 import {
   canonicalRank,
   countryFlag,
@@ -18,6 +19,13 @@ const root = resolve(import.meta.dirname, '..');
 const development = process.argv.includes('--dev');
 const output = resolve(root, development ? 'public' : 'dist');
 const peopleDir = resolve(output, 'people');
+const commit = process.env.VITE_GIT_COMMIT || (() => {
+  try {
+    return execFileSync('git', ['rev-parse', '--short=8', 'HEAD'], { cwd: root, encoding: 'utf8' }).trim();
+  } catch {
+    return 'development';
+  }
+})();
 
 function absoluteUrl(path: string) {
   return `${siteUrl}/${path}`;
@@ -41,7 +49,7 @@ function profilePage(person: RosterEntry) {
     ? `<img class="portrait" src="../${escapeHtml(person.portrait)}" alt="Portrait of ${escapeHtml(name)}" width="240" height="240">`
     : `<img class="portrait portrait-placeholder" src="../default-portrait.svg" alt="No portrait on file yet for ${escapeHtml(name)}" width="240" height="240">`;
   const research = person.researchAreas?.length
-    ? `<section><h2>Research areas</h2><ul>${person.researchAreas.map((area) => `<li>${escapeHtml(area)}</li>`).join('')}</ul></section>`
+    ? `<section class="man-section"><h2>RESEARCH</h2><ul>${person.researchAreas.map((area) => `<li>${escapeHtml(area)}</li>`).join('')}</ul></section>`
     : '';
   const education = [
     person.postdocInstitution && `Postdoctoral training: ${[displayUniversity(person.postdocInstitution), person.postdocYear].filter(Boolean).join(', ')}`,
@@ -52,20 +60,21 @@ function profilePage(person: RosterEntry) {
     ...(person.otherDegrees ?? []).map((degree) => `${degree.degree}: ${[displayUniversity(degree.institution), degree.year, degree.major].filter(Boolean).join(', ')}`),
   ].filter(Boolean);
   const educationSection = education.length
-    ? `<section><h2>Education and training</h2><ul>${education.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul></section>`
+    ? `<section class="man-section"><h2>EDUCATION</h2><ul>${education.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul></section>`
     : '';
   const honors = person.honors?.length
-    ? `<section><h2>Selected honors</h2><ul>${person.honors.map((honor) => `<li><a href="${escapeHtml(honor.source || '#')}">${escapeHtml(honor.name)}${honor.year ? ` (${honor.year})` : ''}</a></li>`).join('')}</ul></section>`
+    ? `<section class="man-section"><h2>HONORS</h2><ul>${person.honors.map((honor) => `<li>${honor.source ? `<a href="${escapeHtml(honor.source)}" rel="noopener noreferrer">` : ''}${escapeHtml(honor.name)}${honor.year ? ` (${honor.year})` : ''}${honor.source ? '</a>' : ''}</li>`).join('')}</ul></section>`
     : '';
   const links = [
-    person.profileUrl && ['Official university profile', person.profileUrl],
+    person.profileUrl && ['University profile', person.profileUrl],
     person.websiteUrl && ['Personal or lab website', person.websiteUrl],
     person.scholarUrl && ['Google Scholar', person.scholarUrl],
   ].filter(Boolean) as [string, string][];
   const linkSection = links.length
-    ? `<nav class="links" aria-label="External profiles">${links.map(([label, href]) => `<a href="${escapeHtml(href)}" rel="noopener noreferrer">${escapeHtml(label)}</a>`).join('')}</nav>`
+    ? `<section class="man-section"><h2>SOURCES</h2><nav class="links" aria-label="External profiles">${links.map(([label, href]) => `<a href="${escapeHtml(href)}" rel="noopener noreferrer">${escapeHtml(label)}</a>`).join('')}</nav></section>`
     : '';
   const editUrl = `../submit.html?edit=${encodeURIComponent(person.id)}`;
+  const rawRecord = escapeHtml(JSON.stringify(person, null, 2));
   const jsonLd = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'Person',
@@ -104,12 +113,15 @@ function profilePage(person: RosterEntry) {
   <link rel="stylesheet" href="../profile.css">
 </head>
 <body class="profile-page">
-  <header><a class="eyebrow" href="../"><img class="brand-logo" src="../vietprofs-bamboo-v.svg" alt="" width="32" height="32">VietProfs</a></header>
+  <header><a class="eyebrow" href="../"><img class="brand-logo" src="../vietprofs-bamboo-v.svg" alt="" width="32" height="32">VietProfs</a><span class="man-page-title">Profile manual</span></header>
   <main>
-    <article>
-      <div class="identity">${portrait}<div><h1>${escapeHtml(name)}</h1><p class="native">${escapeHtml(nativeName)}</p><p class="meta">${escapeHtml(role)}${locationOf(person) ? ` · ${escapeHtml(locationOf(person))}` : ''} <span class="loc-badge" title="${escapeHtml(person.country || 'United States')}"><span class="country-flag" aria-hidden="true">${countryFlag(person.country)}</span></span></p><div class="tags"><span class="tag">${escapeHtml(fieldOf(person.department, person.university))}</span><span class="tag">${escapeHtml(person.track || '')}</span></div></div></div>
-      ${linkSection}<p><a class="submission-link" href="${escapeHtml(editUrl)}">Add or update info</a></p>${research}${educationSection}${honors}
-      <footer><p class="updated">Roster information last updated ${escapeHtml(formatRosterDate(person.lastUpdatedAt || ''))}.</p><p>VietProfs is a community-maintained directory. See the linked university and personal sources for the most current details.</p></footer>
+    <article class="man-page">
+      <p class="man-running-head"><span>VIETPROFS(1)</span><span>VietProfs Profile Manual</span><span>VIETPROFS(1)</span></p>
+      <section class="man-section name-section"><h2>NAME</h2><div class="identity">${portrait}<div><div class="name-heading"><h1>${escapeHtml(name)}</h1><nav class="profile-actions" aria-label="Roster actions"><a class="submission-link" href="${escapeHtml(editUrl)}">Add or update info</a></nav></div><p class="native">${escapeHtml(nativeName)}</p><p class="record-id">${escapeHtml(person.id)}</p></div></div></section>
+      <section class="man-section"><h2>SYNOPSIS</h2><p class="synopsis">${escapeHtml(role)}${locationOf(person) ? ` · ${escapeHtml(locationOf(person))}` : ''} <span class="loc-badge" title="${escapeHtml(person.country || 'United States')}"><span class="country-flag" aria-hidden="true">${countryFlag(person.country)}</span></span></p><div class="tags"><span class="tag">${escapeHtml(fieldOf(person.department, person.university))}</span><span class="tag">${escapeHtml(person.track || '')}</span></div></section>
+      ${research}${educationSection}${honors}${linkSection}
+      <section class="man-section"><h2>ROSTER METADATA</h2><dl class="roster-metadata"><div><dt>record</dt><dd>${escapeHtml(person.id)}</dd></div><div><dt>last verified</dt><dd>${escapeHtml(formatRosterDate(person.lastUpdatedAt || ''))}</dd></div><div><dt>build</dt><dd><a href="https://github.com/dynaroars/vietprofs/commit/${escapeHtml(commit)}">${escapeHtml(commit)}</a></dd></div></dl><details class="raw-record"><summary>view raw record</summary><pre><code>${rawRecord}</code></pre></details></section>
+      <footer><p>VietProfs is a community-maintained directory. Consult the linked sources for the most current details.</p><p class="man-footer-line">VIETPROFS(1) · ${escapeHtml(person.id)} · VIETPROFS(1)</p></footer>
     </article>
   </main>
 </body>

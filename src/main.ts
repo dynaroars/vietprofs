@@ -1,5 +1,5 @@
 import './style.css';
-import { loadRoster, loadStatsHistory, buildSearchIndex, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueUndergradInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, LOCATION_LABELS, countryFlag, canonicalRank, displayName, fieldOf, locationMatches, filterRoster, buildFunFacts, buildUsObservations, buildInternationalObservations, buildLocationObservations, buildQualifiedObservations, buildAwardsFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUndergradInstitutions, buildPhdToFacultyPairings, buildTopUniversities, buildFieldCounts, buildTopCountries, buildTrackCounts, STATE_ABBR, type Roster, type RosterEntry, type SearchIndex, type StatsHistoryPoint } from './data.ts';
+import { loadRoster, loadStatsHistory, buildSearchIndex, uniqueStates, uniqueCities, uniqueDepartments, uniqueRanks, uniqueResearchAreas, uniquePhdInstitutions, uniqueUndergradInstitutions, uniqueCountries, FIELDS, TRACKS, LOCATIONS, LOCATION_LABELS, countryFlag, canonicalRank, displayName, fieldOf, locationMatches, filterRoster, buildFunFacts, buildUsObservations, buildInternationalObservations, buildLocationObservations, buildQualifiedObservations, buildAwardsFunFacts, buildDecadeCounts, buildTopPhdInstitutions, buildTopUndergradInstitutions, buildPhdToFacultyPairings, buildTopUniversities, buildFieldCounts, buildTopCountries, buildTrackCounts, personPath, STATE_ABBR, type Roster, type RosterEntry, type SearchIndex, type StatsHistoryPoint } from './data.ts';
 import { escapeHtml, formatRosterDate } from './utils.ts';
 import { STATE_GRID } from './state-grid.ts';
 import { applyFavoriteToggle, fieldDropdownLabel, renderRosterEntry } from './render.ts';
@@ -109,18 +109,18 @@ function renderShell() {
       <div class="title-row">
         <h1><a class="home-link brand-link" href="${import.meta.env.BASE_URL}" id="home-link"><img class="brand-logo" src="${import.meta.env.BASE_URL}vietprofs-bamboo-v.svg" alt="" width="56" height="56"><span>Vietnamese Academic Diaspora</span></a></h1>
         <div class="header-icons">
-          <a class="icon-link roars-link" href="https://roars.dev" target="_blank" rel="noopener noreferrer" aria-label="ROARS Lab" title="ROARS Lab"></a>
-          <a class="icon-link github-link" href="https://github.com/dynaroars/vietprofs" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository" title="GitHub repository">
+          <a class="icon-link roars-link" href="https://roars.dev" target="_blank" rel="noopener noreferrer" aria-label="ROARS Lab website" title="ROARS Lab website"></a>
+          <a class="icon-link github-link" href="https://github.com/dynaroars/vietprofs" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository" title="GitHub repository and source code">
             <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+          </a>
+          <a class="icon-link paper-link" href="${import.meta.env.BASE_URL}vietprofs.pdf" target="_blank" rel="noopener noreferrer" aria-label="Read the paper" title="Read the paper (PDF)">
+            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 1.75C4 .783 4.783 0 5.75 0h4.5c.464 0 .91.184 1.237.513l2.5 2.5c.329.328.513.774.513 1.237v9.999c0 .967-.783 1.75-1.75 1.75H5.75A1.75 1.75 0 0 1 4 14.249V1.75Zm1.75-.25a.25.25 0 0 0-.25.25v12.499c0 .138.112.25.25.25h8.499a.25.25 0 0 0 .25-.25V4.5H11.75A1.75 1.75 0 0 1 10 2.75V1.5H5.75Zm5.75 0v1.25c0 .138.112.25.25.25h1.25L11.5 1.5ZM7 7a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5H7Zm0 3a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5H7Z"/></svg>
           </a>
         </div>
       </div>
       <div class="subtitle-row">
-        <p class="site-subtitle">An open directory of Vietnamese academics worldwide</p>
-        <div class="header-actions">
-          <a class="paper-link" href="${import.meta.env.BASE_URL}vietprofs.pdf" target="_blank" rel="noopener noreferrer">Read the paper</a>
-          <a class="submission-link" href="submit.html">Add or update info</a>
-        </div>
+        <p class="site-subtitle"><span>vietprofs@world</span>:~$ An open directory of Vietnamese academics worldwide</p>
+        <a class="submission-link" href="submit.html">Add or update info</a>
       </div>
     </header>
     <div class="controls">
@@ -131,16 +131,21 @@ function renderShell() {
               <span id="search-scope-chip-label"></span>
               <span class="search-scope-chip-remove" aria-hidden="true">×</span>
             </button>
-            <input id="search" class="search-input" type="search" placeholder="Search the roster…" aria-label="Search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-suggestion-panel" />
+            <input id="search" class="search-input" type="search" autocomplete="off" placeholder="Search the roster…" aria-label="Search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-suggestion-panel" />
           </div>
           <div id="search-suggestion-panel" class="search-suggestion-panel" role="listbox" hidden></div>
         </div>
-        <button type="button" id="search-help-btn" class="search-help-btn" aria-haspopup="dialog" aria-expanded="false" aria-controls="search-help-panel" aria-label="Search syntax help" title="Search syntax help">i</button>
+        <button type="button" id="search-help-btn" class="search-help-btn" aria-haspopup="dialog" aria-expanded="false" aria-controls="search-help-panel" aria-label="Search syntax and keyboard help" title="Search syntax and keyboard help">?</button>
         <div id="search-help-panel" class="search-help-panel" role="dialog" aria-label="Search syntax help" hidden>
+          <p><strong>QUERY SYNTAX</strong></p>
           <p>Type a keyword prefix to search one field directly:</p>
           <ul>
             ${Object.entries(KEYWORD_LABELS).map(([scope, label]) => `<li><code>${escapeHtml(label)}:</code> ${escapeHtml(KEYWORD_EXAMPLES[scope] ?? '')}</li>`).join('')}
           </ul>
+          <p><strong>KEYBOARD</strong></p>
+          <p><code>/</code> search · <code>j</code>/<code>k</code> move · <code>Enter</code> open · <code>f</code> favorite · <code>r</code> random · <code>Esc</code> clear</p>
+          <p><strong>COMMANDS</strong></p>
+          <p><code>help</code> · <code>whoami</code> · <code>uname -a</code> · <code>fortune</code> · <code>/dev/random</code> · <code>theme crt</code></p>
         </div>
       </div>
       <select id="location-filter" class="field-select location-select" aria-label="Filter by location">
@@ -158,6 +163,11 @@ function renderShell() {
         <option value="recent">Recently modified</option>
       </select>
     </div>
+    <details class="query-inspector" id="query-inspector">
+      <summary>query plan</summary>
+      <code id="query-plan"></code>
+    </details>
+    <output class="command-output" id="command-output" aria-live="polite" hidden></output>
     <div class="examples" id="examples"></div>
     <p class="result-count" id="result-count" aria-live="polite"></p>
     <div class="roster" id="roster"></div>
@@ -166,6 +176,9 @@ function renderShell() {
         <path d="M18 15l-6-6-6 6"/>
       </svg>
     </button>
+    <footer class="system-footer">
+      <time datetime="${escapeHtml(__BUILD_TIMESTAMP__)}">Last updated ${escapeHtml(__BUILD_LABEL__)}</time>
+    </footer>
   `;
 }
 
@@ -248,6 +261,11 @@ function renderRoster(roster: Roster, { field, location }: RenderOptions = {}) {
   }
 
   rosterEl.innerHTML = roster.map((person) => renderRosterEntry(person, import.meta.env.BASE_URL)).join('');
+}
+
+function calculationBasis(roster: Roster, scope: string): string {
+  const universities = new Set(roster.map((person) => person.university)).size;
+  return `<details class="calculation-details"><summary>show calculation basis</summary><code>source=public/data.json · scope=${escapeHtml(scope)} · records=${roster.length} · universities=${universities} · generated in browser from explicit roster fields</code></details>`;
 }
 
 const NGUYEN_TOOLTIP = 'Nguyễn was Vietnam’s last ruling dynasty (1802–1945); many people adopted '
@@ -598,6 +616,7 @@ function renderFunFacts(visibleRoster: Roster, selectedLocationLabel: string, se
         <div class="insights-section">
           <h3 class="insights-heading">${escapeHtml(selectedLabel)} Highlights</h3>
           <ul class="fun-facts">${formatList([...selectedFacts, ...selectedAwardsFacts])}</ul>
+          ${calculationBasis(selectedRoster, selectedLabel)}
         </div>
       </section>
   `;
@@ -623,6 +642,7 @@ function renderFunFacts(visibleRoster: Roster, selectedLocationLabel: string, se
         <div class="insights-section">
           <h3 class="insights-heading">World Highlights</h3>
           <ul class="fun-facts">${formatList([...worldFacts, ...worldAwardsFacts])}</ul>
+          ${calculationBasis(fullRoster, 'World')}
         </div>
       </section>
     </div>
@@ -644,6 +664,7 @@ async function init() {
   }
   const searchIndex = buildSearchIndex(roster);
   const statsHistory = await loadStatsHistory();
+  const allFacts = buildFunFacts(roster);
 
   // Matches everything filterRoster actually searches over (name, university, city, state, country,
   // department, rank, research areas, degree institutions, and honors) so a suggestion always yields at least one result.
@@ -691,6 +712,40 @@ async function init() {
   const trackSelect = document.getElementById('track-filter') as HTMLSelectElement;
   const sortSelect = document.getElementById('sort-order') as HTMLSelectElement;
   const filterState = { state: '', insights: false };
+  const commandOutput = document.getElementById('command-output') as HTMLOutputElement;
+  const queryPlan = document.getElementById('query-plan') as HTMLElement;
+  let keyboardSelectedIndex = -1;
+
+  function showCommandOutput(message: string) {
+    commandOutput.textContent = message;
+    commandOutput.hidden = false;
+  }
+
+  function hideCommandOutput() {
+    commandOutput.hidden = true;
+    commandOutput.textContent = '';
+  }
+
+  function renderQueryPlan(matches: number, mode = 'roster') {
+    const { scope, query } = effectiveSearch();
+    queryPlan.textContent = [
+      `mode=${mode}`,
+      `scope=${scope}`,
+      `query=${query.trim() ? JSON.stringify(query.trim()) : '*'}`,
+      `location=${JSON.stringify(locationSelect.value)}`,
+      `field=${JSON.stringify(fieldSelect.value)}`,
+      `track=${JSON.stringify(trackSelect.value)}`,
+      filterState.state ? `state=${JSON.stringify(filterState.state)}` : '',
+      `sort=${sortSelect.value}`,
+      `matches=${matches}`,
+    ].filter(Boolean).join('  ');
+  }
+
+  function completeCommand(message: string) {
+    clearSearch();
+    showCommandOutput(message);
+    update({ fromSearch: true });
+  }
 
   function optionElement(value: string, label: string): HTMLOptionElement {
     const option = document.createElement('option');
@@ -754,19 +809,15 @@ async function init() {
   }
 
   function initializeDropdowns() {
-    const locationEntries = (values: string[]) => countedOptions(
-      values,
-      roster,
-      locationMatches,
-      locationLabel,
-    );
+    const locationEntries = (values: string[]) => values.map((value) => ({
+      value: String(value),
+      label: locationLabel(value),
+    }));
     setLocationOptions(locationEntries(countryOptions), locationEntries(continentOptions), 'World');
-    const fieldEntries = countedOptions(
-      FIELDS,
-      roster,
-      (person, value) => fieldOf(person.department, person.university) === value,
-      fieldDropdownLabel,
-    );
+    const fieldEntries = FIELDS.map((value) => ({
+      value,
+      label: fieldDropdownLabel(value),
+    }));
     setOptions(
       fieldSelect,
       [
@@ -775,12 +826,10 @@ async function init() {
       ],
       'all',
     );
-    const trackEntries = countedOptions(
-      TRACKS,
-      roster,
-      (person, value) => person.track === value,
-      (value) => value,
-    );
+    const trackEntries = TRACKS.map((value) => ({
+      value,
+      label: value,
+    }));
     setOptions(
       trackSelect,
       [
@@ -915,6 +964,7 @@ async function init() {
     const locRoster = roster.filter((p) => locationMatches(p, locationSelect.value));
     if (filterState.insights) {
       renderFunFacts(locRoster, locationLabel(locationSelect.value), locationSelect.value, roster, statsHistory);
+      renderQueryPlan(locRoster.length, 'insights');
       syncUrl();
       return;
     }
@@ -931,8 +981,67 @@ async function init() {
       field: fieldSelect.value,
       location: locationSelect.value,
     });
+    keyboardSelectedIndex = -1;
+    renderQueryPlan(filtered.length);
     syncUrl();
   }
+
+  function resetDirectory() {
+    clearSearch();
+    hideCommandOutput();
+    filterState.state = '';
+    filterState.insights = false;
+    setFilterValues({ location: 'World' });
+    sortSelect.value = 'random';
+    update();
+  }
+
+  function runCommand(raw: string): boolean {
+    const command = raw.trim().toLocaleLowerCase().replace(/^:/, '');
+    if (!command) return false;
+    if (command === 'help') {
+      hideSuggestions();
+      searchHelpPanel.hidden = false;
+      searchHelpBtn.setAttribute('aria-expanded', 'true');
+      completeCommand('help: query prefixes, shortcuts, and commands are listed above');
+      return true;
+    }
+    if (command === 'whoami') {
+      completeCommand('VietProfs — an open, community-maintained index of the Vietnamese academic diaspora.');
+      return true;
+    }
+    if (command === 'uname -a') {
+      completeCommand(`VietProfs static-web TypeScript/Vite build ${__BUILD_COMMIT__} browser/${navigator.platform || 'unknown'}`);
+      return true;
+    }
+    if (command === 'sudo find professor' || command === 'sudo find faculty') {
+      completeCommand('Permission granted. Academic credentials still require independent verification.');
+      return true;
+    }
+    if (command === 'fortune') {
+      const fact = allFacts[Math.floor(Math.random() * allFacts.length)];
+      completeCommand(`fortune: ${fact}`);
+      return true;
+    }
+    if (command === '/dev/random' || command === 'random') {
+      const person = roster[Math.floor(Math.random() * roster.length)];
+      window.location.href = `${import.meta.env.BASE_URL}${personPath(person.id)}`;
+      return true;
+    }
+    if (command === 'theme crt') {
+      const enabled = document.documentElement.classList.toggle('crt-mode');
+      localStorage.setItem('vietprofs:crt', enabled ? '1' : '0');
+      completeCommand(`crt theme ${enabled ? 'enabled' : 'disabled'}; reduced-motion preferences are respected`);
+      return true;
+    }
+    if (command === 'clear' || command === 'reset') {
+      resetDirectory();
+      return true;
+    }
+    return false;
+  }
+
+  if (localStorage.getItem('vietprofs:crt') === '1') document.documentElement.classList.add('crt-mode');
 
   // Use an in-page listbox rather than a native <datalist>. Browser-owned datalist popups
   // can flicker or close while the debounced search results update, especially in Chromium.
@@ -995,9 +1104,19 @@ async function init() {
     showSuggestions();
   });
   searchInput.addEventListener('keydown', (event) => {
-      const options = [...suggestionPanel.querySelectorAll<HTMLButtonElement>('.search-suggestion')];
+    const options = [...suggestionPanel.querySelectorAll<HTMLButtonElement>('.search-suggestion')];
     if (event.key === 'Escape') {
       hideSuggestions();
+      if (searchInput.value || activeSearchScope) {
+        event.preventDefault();
+        clearSearch();
+        hideCommandOutput();
+        update({ fromSearch: true });
+      }
+      return;
+    }
+    if (event.key === 'Enter' && runCommand(searchQueryValue())) {
+      event.preventDefault();
       return;
     }
     if (!options.length || !['ArrowDown', 'ArrowUp', 'Enter'].includes(event.key)) return;
@@ -1043,6 +1162,47 @@ async function init() {
   });
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && !searchHelpPanel.hidden) hideSearchHelp();
+    const target = e.target as HTMLElement;
+    const typing = target.matches('input, textarea, select, [contenteditable="true"]');
+    if (e.key === '/' && !typing) {
+      e.preventDefault();
+      searchInput.focus();
+      showSuggestions();
+      return;
+    }
+    if (e.key === '?' && !typing) {
+      e.preventDefault();
+      searchHelpBtn.click();
+      return;
+    }
+    if (typing || e.metaKey || e.ctrlKey || e.altKey) return;
+    const entries = [...document.querySelectorAll<HTMLElement>('.entry')];
+    if ((e.key === 'j' || e.key === 'k') && entries.length) {
+      e.preventDefault();
+      entries[keyboardSelectedIndex]?.classList.remove('entry-keyboard-selected');
+      keyboardSelectedIndex = e.key === 'j'
+        ? (keyboardSelectedIndex + 1) % entries.length
+        : (keyboardSelectedIndex - 1 + entries.length) % entries.length;
+      const selected = entries[keyboardSelectedIndex];
+      selected.classList.add('entry-keyboard-selected');
+      selected.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      return;
+    }
+    const selected = entries[keyboardSelectedIndex];
+    if (e.key === 'Enter' && selected) {
+      e.preventDefault();
+      selected.querySelector<HTMLAnchorElement>('.entry-name')?.click();
+      return;
+    }
+    if (e.key === 'f' && selected) {
+      e.preventDefault();
+      selected.querySelector<HTMLButtonElement>('.favorite-toggle')?.click();
+      return;
+    }
+    if (e.key === 'r') {
+      e.preventDefault();
+      runCommand('/dev/random');
+    }
   });
 
   locationSelect.addEventListener('change', () => {
@@ -1058,11 +1218,7 @@ async function init() {
 
   document.getElementById('home-link').addEventListener('click', (e) => {
     e.preventDefault(); // already on this page — reset in place instead of reloading
-    clearSearch();
-    filterState.state = '';
-    filterState.insights = false;
-    setFilterValues({ location: 'World' });
-    update();
+    resetDirectory();
   });
 
   // Delegated on the roster container itself (attached once) rather than per-entry/per-tile,
@@ -1174,8 +1330,7 @@ async function init() {
   const populatedLocations = locationOptions.filter((location) =>
     !['US', 'World'].includes(location) && filtersHaveResults(location, 'all', 'all')
   );
-  const facts = buildFunFacts(roster);
-  const randomFact = facts[Math.floor(Math.random() * facts.length)];
+  const randomFact = allFacts[Math.floor(Math.random() * allFacts.length)];
   type Example = { type: 'search' | 'field' | 'track' | 'loc' | 'fact'; value: string; label?: string };
   const examples: Example[] = shuffle([
     ...pickRandomUnique(roster.map((person) => displayName(person.name)), 2).map((value) => ({ type: 'search' as const, value })),
@@ -1251,6 +1406,10 @@ async function init() {
   });
 
   update();
+
+  console.info(`%cVietProfs ${__BUILD_COMMIT__}`, 'color:#2e9e64;font-weight:bold;font-size:16px');
+  console.info('The roster is open source: https://github.com/dynaroars/vietprofs');
+  console.info('Try typing “help”, “fortune”, or “uname -a” into search.');
 }
 
 init();

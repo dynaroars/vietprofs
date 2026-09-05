@@ -117,6 +117,35 @@ test('search suggestions remain visible while results update', async () => {
   await page.close();
 });
 
+test('keyboard navigation, query plan, and terminal commands work without leaving the directory', async () => {
+  const page = await context.newPage();
+  await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
+  await page.evaluate(() => {
+    localStorage.removeItem('vietprofs:favorites');
+    localStorage.removeItem('vietprofs:crt');
+  });
+  await page.reload({ waitUntil: 'networkidle' });
+
+  await page.keyboard.press('/');
+  assert.equal(await page.locator('#search').evaluate((element) => element === document.activeElement), true);
+  await page.locator('#search').fill('whoami');
+  await page.locator('#search').press('Enter');
+  assert.match(await page.locator('#command-output').textContent(), /community-maintained index/);
+  assert.equal(await page.locator('#search').inputValue(), '');
+  assert.match(await page.locator('#query-plan').textContent(), /matches=\d+/);
+
+  await page.locator('#search').fill('theme crt');
+  await page.locator('#search').press('Enter');
+  assert.equal(await page.locator('html').evaluate((element) => element.classList.contains('crt-mode')), true);
+  await page.locator('#search').blur();
+  await page.keyboard.press('j');
+  const selected = page.locator('.entry-keyboard-selected');
+  assert.equal(await selected.count(), 1);
+  await page.keyboard.press('f');
+  assert.equal(await selected.locator('.favorite-toggle').getAttribute('aria-pressed'), 'true');
+  await page.close();
+});
+
 test('undergraduate institution keyword prefix filters the roster and persists in the URL', async () => {
   const page = await context.newPage();
   await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
@@ -224,7 +253,7 @@ test('mobile pages avoid horizontal overflow and provide usable tap targets', as
 
   await page.goto(`${baseUrl}/people/vp-0242.html`, { waitUntil: 'networkidle' });
   await assertNoOverflow();
-  await assertTapTargets('.eyebrow, .edit-link, .links a');
+  await assertTapTargets('.eyebrow, .profile-actions a, .links a');
   await page.close();
 });
 
@@ -429,5 +458,11 @@ test('profile pages honor dark mode through the shared stylesheet', async () => 
   assert.equal(await page.locator('link[href="../profile.css"]').count(), 1);
   assert.equal(await page.evaluate(() => getComputedStyle(document.documentElement).colorScheme), 'light dark');
   assert.equal(await page.evaluate(() => getComputedStyle(document.body).backgroundColor), 'rgb(21, 24, 28)');
+  assert.equal(await page.locator('.man-page').count(), 1);
+  assert.equal(await page.locator('.man-section').filter({ hasText: 'SYNOPSIS' }).count(), 1);
+  assert.match(await page.locator('.record-id').textContent(), /^vp-\d+$/);
+  assert.equal(await page.locator('.raw-record').count(), 1);
+  assert.equal(await page.locator('.profile-actions .submission-link').count(), 1);
+  assert.equal(await page.locator('.name-heading .profile-actions').count(), 1);
   await page.close();
 });

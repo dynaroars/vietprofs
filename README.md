@@ -10,6 +10,13 @@ The search box matches names, universities, departments, ranks, locations, resea
 
 The location, field, and track filters can be combined. Shareable URLs preserve the active search and filters. The “Show me something interesting” option provides roster-derived observations about geography, institutions, fields, and appointment tracks, alongside interactive charts (distribution by field, career stage, and country; PhD-cohort and top-institution rankings; and roster growth over time, built from `public/data.json`'s git history). It does not make claims about institutional prestige or Vietnamese population size.
 
+The directory also has a keyboard-first interface: `/` focuses search, `j` and `k` move through
+results, `Enter` opens the selected profile, `f` toggles its favorite state, `r` opens a random
+profile, and `?` shows help. Search accepts the documented field prefixes as well as small terminal
+Easter eggs such as `help`, `whoami`, `uname -a`, `fortune`, `/dev/random`, and `theme crt`.
+Individual profile pages use a compact Unix-manual layout and expose roster provenance and the raw
+record behind the rendered page.
+
 
 Repository documentation is intentionally limited to four files:
 
