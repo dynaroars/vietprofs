@@ -154,10 +154,10 @@ function renderShell() {
         <option value="all">All fields</option>
       </select>
       <select id="track-filter" class="field-select track-select" aria-label="Filter by faculty type">
-        <option value="all">All faculty types</option>
+        <option value="all">All Faculty</option>
       </select>
       <select id="institution-type-filter" class="field-select" aria-label="Filter by institution type">
-        <option value="all">All institution types</option>
+        <option value="all">All institution</option>
       </select>
       <select id="sort-order" class="field-select sort-select" aria-label="Sort academics">
         <option value="random">Random order</option>
@@ -793,7 +793,7 @@ async function init() {
     setOptions(
       trackSelect,
       [
-        { value: 'all', label: 'All faculty types' },
+        { value: 'all', label: 'All Faculty' },
         ...TRACKS.map((value) => ({ value, label: value })),
       ],
       'all',
@@ -801,7 +801,7 @@ async function init() {
     setOptions(
       institutionTypeSelect,
       [
-        { value: 'all', label: 'All institution types' },
+        { value: 'all', label: 'All institution' },
         ...INSTITUTION_TYPES.map((value) => ({ value, label: value })),
       ],
       'all',
