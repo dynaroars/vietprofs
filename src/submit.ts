@@ -1,5 +1,5 @@
 import './style.css';
-import { FIELDS, fieldOf, loadRoster, personPath, TRACKS, type RosterEntry } from './data.ts';
+import { FIELDS, fieldOf, INSTITUTION_TYPES, loadRoster, personPath, TRACKS, type RosterEntry } from './data.ts';
 import { escapeHtml } from './utils.ts';
 
 const SUBMISSION_EMAIL = 'root@roars.dev';
@@ -28,8 +28,10 @@ interface SubmissionDraft {
   websiteUrl?: string;
   universityProfileUrl?: string;
   scholarUrl?: string;
+  linkedinUrl?: string;
   portraitSource?: string;
   university?: string;
+  institutionType?: string;
   city?: string;
   state?: string;
   country?: string;
@@ -54,7 +56,7 @@ function renderShell() {
   app.innerHTML = `
     <header>
       <h1><a class="home-link brand-link" href="${import.meta.env.BASE_URL}"><img class="brand-logo" src="${import.meta.env.BASE_URL}vietprofs-bamboo-v.svg" alt="" width="56" height="56"><span>Vietnamese Academic Diaspora</span></a></h1>
-      <p class="tagline">Submit a new professor or suggest an update</p>
+      <p class="tagline">Submit a new academic or suggest an update</p>
     </header>
 
     <fieldset class="form-section purpose-toggle" id="purpose-toggle">
@@ -72,7 +74,7 @@ function renderShell() {
     <form id="submit-form" class="submit-form" novalidate>
       <section class="form-group" id="add-mode-section">
         <p class="criteria" id="bulk-criteria">
-          Paste anything: a name, a link to someone's university profile or homepage, or a link to a
+          Paste anything: a name, a link to someone's institutional profile or homepage, or a link to a
           page that lists several people (a department directory, a lab site). Plain text is fine —
           one item per line, or however you have it. Feel free to include any other notes or evidence
           here too — whatever helps us verify and add them.
@@ -99,7 +101,7 @@ function renderShell() {
       </div>
 
       <div class="form-section">
-        <label for="profileUrl">Profile or verification link <span class="info-icon" tabindex="0" role="img" aria-label="Why this is required" data-tooltip="We need at least one link (university profile, personal site, LinkedIn, etc.) to verify and add this entry.">i</span></label>
+        <label for="profileUrl">Profile or verification link <span class="info-icon" tabindex="0" role="img" aria-label="Why this is required" data-tooltip="We need at least one link (institutional profile, personal site, LinkedIn, etc.) to verify and add this entry.">i</span></label>
         <input id="profileUrl" name="profileUrl" type="url" placeholder="https://… (any link that helps verify this person)" />
       </div>
 
@@ -120,8 +122,8 @@ function renderShell() {
       </div>
 
       <div class="form-section">
-        <label for="universityProfileUrl">University profile website</label>
-        <input id="universityProfileUrl" name="universityProfileUrl" type="url" placeholder="https://… (official university faculty/directory page)" />
+        <label for="universityProfileUrl">Institutional profile website</label>
+        <input id="universityProfileUrl" name="universityProfileUrl" type="url" placeholder="https://… (official university or research-institute page)" />
       </div>
 
       <div class="form-section">
@@ -130,18 +132,30 @@ function renderShell() {
       </div>
 
       <div class="form-section">
+        <label for="linkedinUrl">LinkedIn profile</label>
+        <input id="linkedinUrl" name="linkedinUrl" type="url" placeholder="https://www.linkedin.com/in/…" />
+      </div>
+
+      <div class="form-section">
         <label for="portraitSource">Profile picture URL</label>
         <div id="portrait-preview" class="portrait-preview" hidden>
           <img id="portrait-preview-image" src="" alt="Existing profile picture" width="96" height="96" />
           <span>Existing picture</span>
         </div>
-        <input id="portraitSource" name="portraitSource" type="url" placeholder="https://… (official university or personal profile image)" />
+        <input id="portraitSource" name="portraitSource" type="url" placeholder="https://… (official institutional or personal profile image)" />
         <p class="form-help">You may provide a direct image URL. Maintainers will review it and create the roster portrait.</p>
       </div>
 
       <div class="form-section">
-        <label for="university">University</label>
-        <input id="university" name="university" type="text" placeholder="e.g. University of Washington, NUS, Monash University, etc." />
+        <label for="university">Employing institution</label>
+        <input id="university" name="university" type="text" placeholder="e.g. University of Washington, Allen Institute, etc." />
+      </div>
+
+      <div class="form-section">
+        <label for="institutionType">Institution type</label>
+        <select id="institutionType" name="institutionType">
+          ${INSTITUTION_TYPES.map((type) => `<option value="${escapeHtml(type)}">${escapeHtml(type)}</option>`).join('')}
+        </select>
       </div>
 
       <div class="form-section">
@@ -281,10 +295,12 @@ const FIELD_LABELS: Partial<Record<keyof SubmissionDraft, string>> = {
   profileUrl: 'Profile or verification link',
   vietnameseName: 'Vietnamese name',
   websiteUrl: 'Personal/lab website',
-  universityProfileUrl: 'University profile website',
+  universityProfileUrl: 'Institutional profile website',
   scholarUrl: 'Google Scholar',
+  linkedinUrl: 'LinkedIn',
   portraitSource: 'Profile picture URL',
-  university: 'University',
+  university: 'Employing institution',
+  institutionType: 'Institution type',
   department: 'Department',
   field: 'Broad field',
   city: 'City',
@@ -385,9 +401,11 @@ function populateEntry(form: SubmitForm, entry: RosterEntry): void {
   // existing entry never has anything to pre-fill here.
   form.universityProfileUrl.value = '';
   form.scholarUrl.value = entry.scholarUrl ?? '';
+  form.linkedinUrl.value = entry.linkedinUrl ?? '';
   form.portraitSource.value = entry.portraitSource ?? '';
   updatePortraitPreview(form, entry);
   form.university.value = entry.university ?? '';
+  form.institutionType.value = entry.institutionType ?? 'University';
   form.city.value = entry.city ?? '';
   form.state.value = entry.state ?? '';
   form.country.value = entry.country ?? '';
@@ -477,8 +495,10 @@ function onSubmit(e: SubmitEvent, entriesById: Map<string, RosterEntry> | null, 
     websiteUrl: form.websiteUrl.value.trim() || undefined,
     universityProfileUrl: form.universityProfileUrl.value.trim() || undefined,
     scholarUrl: form.scholarUrl.value.trim() || undefined,
+    linkedinUrl: form.linkedinUrl.value.trim() || undefined,
     portraitSource: form.portraitSource.value.trim() || undefined,
     university: form.university.value.trim() || undefined,
+    institutionType: form.institutionType.value || undefined,
     city: form.city.value.trim() || undefined,
     state: form.state.value.trim() || undefined,
     country: form.country.value.trim() || undefined,
@@ -538,7 +558,7 @@ function applyPurpose(purpose: string): void {
     : 'These two fields are needed to identify which entry to update.';
   bulkHelp.hidden = !isAdd;
   bulkCriteria.textContent = isAdd
-    ? "Paste anything: a name, a link to someone's university profile or homepage, or a link to a page that lists several people (a department directory, a lab site). Plain text is fine — one item per line, or however you have it. Feel free to include any other notes or evidence here too — whatever helps us verify and add them."
+    ? "Paste anything: a name, a link to someone's institutional profile or homepage, or a link to a page that lists several people (a department directory, a lab site). Plain text is fine — one item per line, or however you have it. Feel free to include any other notes or evidence here too — whatever helps us verify and add them."
     : 'Add any notes, corrections, or evidence links that will help us verify this update.';
   bulkLabel.textContent = isAdd ? 'Names, links, or notes' : 'Notes';
   bulkInput.placeholder = isAdd

@@ -108,6 +108,10 @@ test('Information Studies defaults to computing but UCLA GSEIS stays Education',
   assert.equal(fieldOf('IST'), 'Computer & Information Sciences');
 });
 
+test('university libraries map to Computer & Information Sciences', () => {
+  assert.equal(fieldOf('University Libraries', 'Stony Brook University'), 'Computer & Information Sciences');
+});
+
 test('FIELDS is alphabetically ordered with the Others catch-all last', () => {
   const withoutOthers = FIELDS.slice(0, -1);
   assert.deepEqual(withoutOthers, [...withoutOthers].sort());
@@ -384,6 +388,20 @@ test('filterRoster narrows by track and "all" leaves it unfiltered', () => {
 
   const omitted = filterRoster(roster, { query: '', field: 'all' });
   assert.equal(omitted.length, roster.length);
+});
+
+test('institution type is searchable and independently filterable', () => {
+  const instituteEntry = {
+    ...roster[0],
+    id: 'vp-99999',
+    name: 'Synthetic Institute Researcher',
+    university: 'Example Research Institute',
+    institutionType: 'Independent nonprofit research institute',
+    track: 'Research',
+  };
+  const sample = [roster[0], instituteEntry];
+  assert.deepEqual(filterRoster(sample, { institutionType: 'Independent nonprofit research institute' }), [instituteEntry]);
+  assert.deepEqual(filterRoster(sample, { query: 'nonprofit research institute', searchScope: 'institution' }), [instituteEntry]);
 });
 
 test('duplicate-name university suffixes are hidden from display', () => {

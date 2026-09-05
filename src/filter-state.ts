@@ -17,6 +17,7 @@ interface LocationForQueryOptions {
   state?: string;
   field?: string;
   track?: string;
+  institutionType?: string;
 }
 
 export function locationForQuery(roster: Roster, searchIndex: Roster | SearchIndex, {
@@ -26,6 +27,7 @@ export function locationForQuery(roster: Roster, searchIndex: Roster | SearchInd
   state = '',
   field = 'all',
   track = 'all',
+  institutionType = 'all',
 }: LocationForQueryOptions): string {
   const value = query.trim();
   if (!value) return currentLocation;
@@ -41,7 +43,7 @@ export function locationForQuery(roster: Roster, searchIndex: Roster | SearchInd
   );
   if (isCountryQuery || CONTINENT_QUERIES.has(normalized) || exactInternationalUniversity) return 'World';
 
-  const filters = { query: value, searchScope, state, field, track };
+  const filters = { query: value, searchScope, state, field, track, institutionType };
   const matchesCurrent = filterRoster(searchIndex, { ...filters, location: currentLocation }).length;
   const matchesWorld = filterRoster(searchIndex, { ...filters, location: 'World' }).length;
   return matchesCurrent === 0 && matchesWorld > 0 ? 'World' : currentLocation;

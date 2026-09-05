@@ -1,4 +1,10 @@
-export const TRACKS = ['Tenure-line', 'Teaching', 'Research', 'Clinical', 'Emeritus'] as const;
+export const TRACKS = ['Tenure-line', 'Teaching', 'Research', 'Clinical', 'Academic staff', 'Emeritus'] as const;
+
+export const INSTITUTION_TYPES = [
+  'University',
+  'Public research institute',
+  'Independent nonprofit research institute',
+] as const;
 
 export const HONOR_CATEGORIES = [
   'academy',
@@ -20,8 +26,10 @@ export const REQUIRED_ROSTER_STRINGS = [
 
 export const ROSTER_FIELDS = [
   ...REQUIRED_ROSTER_STRINGS,
+  'institutionType',
   'websiteUrl',
   'scholarUrl',
+  'linkedinUrl',
   'state',
   'country',
   'rank',

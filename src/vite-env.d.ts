@@ -15,7 +15,7 @@ interface Document {
   getElementById(elementId: 'search'): HTMLInputElement;
   getElementById(elementId: 'search-scope'): HTMLSelectElement;
   getElementById(elementId: 'search-suggestion-panel'): HTMLDivElement;
-  getElementById(elementId: 'location-filter' | 'field-filter' | 'track-filter'): HTMLSelectElement;
+  getElementById(elementId: 'location-filter' | 'field-filter' | 'track-filter' | 'institution-type-filter'): HTMLSelectElement;
   getElementById(elementId: 'home-link'): HTMLAnchorElement;
   getElementById(elementId: 'roster' | 'examples'): HTMLDivElement;
   getElementById(elementId: 'result-count'): HTMLParagraphElement;
