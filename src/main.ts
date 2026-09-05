@@ -35,7 +35,7 @@ import { escapeHtml, formatRosterDate } from './utils.ts';
 import { applyFavoriteToggle, fieldDropdownLabel, renderRosterEntry } from './render.ts';
 import { loadFavorites, toggleFavorite } from './favorites-store.ts';
 import { locationForQuery } from './filter-state.ts';
-import { renderFunFacts } from './insights.ts';
+import { renderFunFacts, renderGrowthChart, type GrowthMetricKey } from './insights.ts';
 
 const app = document.getElementById('app');
 
@@ -209,7 +209,8 @@ function renderShell() {
       </svg>
     </button>
     <footer class="system-footer">
-      <time datetime="${escapeHtml(__BUILD_TIMESTAMP__)}">Last updated ${escapeHtml(__BUILD_LABEL__)}</time>
+      <span class="footer-easter-egg">🎉 Wow, congrats! You actually scrolled all the way to the end! 🎓</span>
+      <time class="footer-updated" datetime="${escapeHtml(__BUILD_TIMESTAMP__)}">Last updated ${escapeHtml(__BUILD_LABEL__)}</time>
     </footer>
   `;
 }
@@ -424,6 +425,7 @@ async function init() {
   const commandOutput = document.getElementById('command-output') as HTMLOutputElement;
   const queryPlan = document.getElementById('query-plan') as HTMLElement;
   let keyboardSelectedIndex = -1;
+  let currentGrowthMetric: GrowthMetricKey = 'count';
 
   function showCommandOutput(message: string) {
     commandOutput.textContent = message;
@@ -705,7 +707,7 @@ async function init() {
     updateDropdownHighlights();
     const locRoster = roster.filter((p) => locationMatches(p, locationSelect.value));
     if (filterState.insights) {
-      renderFunFacts(locRoster, locationLabel(locationSelect.value), locationSelect.value, roster, statsHistory);
+      renderFunFacts(locRoster, locationLabel(locationSelect.value), locationSelect.value, roster, statsHistory, currentGrowthMetric);
       renderQueryPlan(locRoster.length, 'insights');
       syncUrl();
       return;
@@ -1008,6 +1010,24 @@ async function init() {
       update();
       return;
     }
+    const worldMapItem = target.closest<HTMLElement>('.world-map-country, .world-map-pin, .world-map-chip');
+    if (worldMapItem?.dataset.country) {
+      const country = worldMapItem.dataset.country;
+      clearSearch();
+      filterState.insights = false;
+      setFilterValues({ location: country });
+      update();
+      return;
+    }
+    const growthMetricBtn = target.closest<HTMLButtonElement>('.growth-metric-btn');
+    if (growthMetricBtn && growthMetricBtn.dataset.metric) {
+      currentGrowthMetric = growthMetricBtn.dataset.metric as GrowthMetricKey;
+      const growthSection = document.getElementById('growth-section');
+      if (growthSection) {
+        growthSection.outerHTML = renderGrowthChart(statsHistory, currentGrowthMetric);
+      }
+      return;
+    }
     const rankedItem = target.closest<HTMLButtonElement>('.ranked-item');
     if (rankedItem && rankedItem.dataset.search) {
       const rankedScope = rankedItem.dataset.scope;
@@ -1022,10 +1042,69 @@ async function init() {
     }
   });
 
-  // Growth chart hover: crosshair + tooltip snapped to the nearest data point. Delegated (like
-  // the click handler above) since renderFunFacts() replaces #roster's innerHTML wholesale.
+  // World map hover tooltip & highlight + Growth chart crosshairs
   document.getElementById('roster').addEventListener('mousemove', (e) => {
     const target = e.target as HTMLElement;
+
+    // 1. World Map hover
+    const mapWrap = target.closest<HTMLElement>('.world-map-svg-wrap');
+    document.querySelectorAll<HTMLElement>('.world-map-svg-wrap').forEach((wrap) => {
+      if (wrap !== mapWrap) {
+        wrap.querySelector('.world-map-tooltip')?.setAttribute('hidden', '');
+        wrap.querySelectorAll('.is-hovered').forEach((el) => el.classList.remove('is-hovered'));
+      }
+    });
+
+    if (mapWrap) {
+      const tooltip = mapWrap.querySelector<HTMLElement>('.world-map-tooltip');
+      const countryEl = target.closest<SVGElement>('.world-map-country, .world-map-pin');
+      if (countryEl && countryEl.dataset.country) {
+        const { country, count, flag, share } = countryEl.dataset;
+        const numCount = parseInt(count || '0', 10);
+        const isOrigin = country === 'Vietnam';
+
+        mapWrap.querySelectorAll('.world-map-country, .world-map-pin').forEach((el) => {
+          if (el.getAttribute('data-country') === country) {
+            el.classList.add('is-hovered');
+          } else {
+            el.classList.remove('is-hovered');
+          }
+        });
+
+        if (tooltip) {
+          tooltip.innerHTML = `
+            <div class="tooltip-header">
+              <span class="tooltip-flag">${flag || '🌐'}</span>
+              <span class="tooltip-title">${escapeHtml(country)}</span>
+            </div>
+            ${isOrigin ? `
+              <div class="tooltip-stat"><strong>Origin</strong> of Vietnamese diaspora</div>
+              <div class="tooltip-action">Heritage &amp; roots</div>
+            ` : `
+              <div class="tooltip-stat">
+                <strong>${numCount.toLocaleString()}</strong> ${numCount === 1 ? 'person' : 'people'}
+                ${share ? `<span class="tooltip-share">(${share}% of diaspora)</span>` : ''}
+              </div>
+              <div class="tooltip-action">Click to filter roster by ${escapeHtml(country)}</div>
+            `}
+          `;
+          tooltip.removeAttribute('hidden');
+          const wrapRect = mapWrap.getBoundingClientRect();
+          const mouseX = e.clientX - wrapRect.left;
+          const mouseY = e.clientY - wrapRect.top;
+          const left = Math.max(10, Math.min(wrapRect.width - 230, mouseX + 15));
+          const top = Math.max(10, Math.min(wrapRect.height - 100, mouseY + 15));
+          tooltip.style.left = `${left}px`;
+          tooltip.style.top = `${top}px`;
+        }
+      } else {
+        mapWrap.querySelectorAll('.is-hovered').forEach((el) => el.classList.remove('is-hovered'));
+        const tooltip = mapWrap.querySelector<HTMLElement>('.world-map-tooltip');
+        if (tooltip) tooltip.setAttribute('hidden', '');
+      }
+    }
+
+    // 2. Growth chart hover
     const svg = target.closest?.('.growth-chart') as SVGSVGElement | null;
     document.querySelectorAll<SVGSVGElement>('.growth-chart').forEach((el) => {
       if (el !== svg) {
@@ -1034,7 +1113,7 @@ async function init() {
       }
     });
     if (!svg) return;
-    const points = JSON.parse(svg.dataset.points || '[]') as [number, string, number][];
+    const points = JSON.parse(svg.dataset.points || '[]') as [number, string, number, string?, string?][];
     if (!points.length) return;
     const rect = svg.getBoundingClientRect();
     const vbWidth = svg.viewBox.baseVal.width || 640;
@@ -1048,7 +1127,8 @@ async function init() {
         nearest = p;
       }
     }
-    const [nx, date, count] = nearest;
+    const [nx, date, val, unit, pluralUnit] = nearest;
+    const unitLabel = val === 1 ? (unit || svg.dataset.unit || 'item') : (pluralUnit || svg.dataset.plural || 'items');
     const crosshair = svg.querySelector<SVGLineElement>('.growth-crosshair');
     if (crosshair) {
       crosshair.setAttribute('x1', String(nx));
@@ -1057,7 +1137,7 @@ async function init() {
     }
     const tooltip = svg.parentElement?.querySelector<HTMLElement>('.growth-tooltip');
     if (tooltip) {
-      tooltip.textContent = `${formatRosterDate(`${date}T00:00:00Z`)}: ${count} ${count === 1 ? 'person' : 'people'}`;
+      tooltip.textContent = `${formatRosterDate(`${date}T00:00:00Z`)}: ${val.toLocaleString()} ${unitLabel}`;
       tooltip.removeAttribute('hidden');
       tooltip.style.left = `${(nx / vbWidth) * 100}%`;
     }
@@ -1067,6 +1147,8 @@ async function init() {
       el.querySelector('.growth-crosshair')?.setAttribute('hidden', '');
       el.parentElement?.querySelector('.growth-tooltip')?.setAttribute('hidden', '');
     });
+    document.querySelectorAll<HTMLElement>('.world-map-tooltip').forEach((el) => el.setAttribute('hidden', ''));
+    document.querySelectorAll('.world-map-country.is-hovered, .world-map-pin.is-hovered').forEach((el) => el.classList.remove('is-hovered'));
   });
 
   const backToTopBtn = document.getElementById('back-to-top');

@@ -73,7 +73,7 @@ export function renderRosterEntry(person: RosterEntry, baseUrl = '/') {
   const healthSubfield = healthSubfieldOf(person);
   const fieldLabel = `${fieldDropdownLabel(personField)}${healthSubfield ? ` (${healthSubfield})` : ''}`;
   const fieldTag = `<span class="tag tag-field">${escapeHtml(fieldLabel)}</span>`;
-  const trackTag = `<span class="tag tag-track">${escapeHtml(person.track)}</span>`;
+  const trackTag = `<span class="tag tag-track${person.track === 'Emeritus' ? ' tag-emeritus' : ''}">${person.track === 'Emeritus' ? '🎓 Emeritus' : escapeHtml(person.track)}</span>`;
   const institutionTypeTag = person.institutionType && person.institutionType !== 'University'
     ? `<span class="tag tag-institution-type">${escapeHtml(person.institutionType)}</span>`
     : '';

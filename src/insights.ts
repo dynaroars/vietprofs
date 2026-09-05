@@ -19,6 +19,9 @@ import {
 } from './data.ts';
 import { STATE_GRID } from './state-grid.ts';
 import { escapeHtml } from './utils.ts';
+import { renderWorldMap } from './world-map.ts';
+
+export { renderWorldMap };
 
 export function heatTier(count: number, max: number): number {
   if (count === 0 || max === 0) return 0;
@@ -293,32 +296,124 @@ export function renderDistributionCharts(subRoster: Roster): string {
   return `<div class="insights-grid">${fieldCard}${trackCard}</div>`;
 }
 
-export function renderGrowthChart(history: StatsHistoryPoint[]): string {
+export type GrowthMetricKey = 'count' | 'institutions' | 'countries' | 'portraits' | 'honors' | 'codeLines';
+
+export interface GrowthMetricConfig {
+  key: GrowthMetricKey;
+  label: string;
+  icon: string;
+  unit: string;
+  pluralUnit: string;
+  description: string;
+}
+
+export const GROWTH_METRICS: Record<GrowthMetricKey, GrowthMetricConfig> = {
+  count: {
+    key: 'count',
+    label: 'Roster Size',
+    icon: '👥',
+    unit: 'person',
+    pluralUnit: 'people',
+    description: 'Total verified academics on record',
+  },
+  institutions: {
+    key: 'institutions',
+    label: 'Institutions',
+    icon: '🏛️',
+    unit: 'institution',
+    pluralUnit: 'institutions',
+    description: 'Distinct universities and research institutes represented',
+  },
+  countries: {
+    key: 'countries',
+    label: 'Countries',
+    icon: '🌐',
+    unit: 'country',
+    pluralUnit: 'countries',
+    description: 'Distinct countries and territories with diaspora faculty',
+  },
+  portraits: {
+    key: 'portraits',
+    label: 'Portraits',
+    icon: '🖼️',
+    unit: 'portrait',
+    pluralUnit: 'portraits',
+    description: 'Faculty portraits collected and archived',
+  },
+  honors: {
+    key: 'honors',
+    label: 'Honors & Awards',
+    icon: '🏆',
+    unit: 'honor',
+    pluralUnit: 'honors',
+    description: 'Major scholarly honors, awards, fellowships, and chairs',
+  },
+  codeLines: {
+    key: 'codeLines',
+    label: 'Codebase (LOC)',
+    icon: '💻',
+    unit: 'source line',
+    pluralUnit: 'source lines',
+    description: 'Application source code lines in src/ (TypeScript, CSS, HTML)',
+  },
+};
+
+export function renderGrowthChart(history: StatsHistoryPoint[], activeMetric: GrowthMetricKey = 'count'): string {
   if (history.length < 2) return '';
+  const metric = GROWTH_METRICS[activeMetric] ?? GROWTH_METRICS.count;
+  const values = history.map((p) => {
+    const val = p[activeMetric];
+    return typeof val === 'number' ? val : p.count;
+  });
   const width = 640;
   const height = 180;
   const padX = 8;
-  const padTop = 12;
+  const padTop = 14;
   const padBottom = 28;
-  const minCount = Math.min(...history.map((p) => p.count));
-  const maxCount = Math.max(...history.map((p) => p.count));
-  const range = Math.max(1, maxCount - minCount);
+  const minVal = Math.min(...values);
+  const maxVal = Math.max(...values);
+  const range = Math.max(1, maxVal - minVal);
   const xFor = (i: number) => padX + (i / (history.length - 1)) * (width - padX * 2);
-  const yFor = (count: number) => padTop + (1 - (count - minCount) / range) * (height - padTop - padBottom);
-  const linePoints = history.map((p, i) => `${xFor(i).toFixed(1)},${yFor(p.count).toFixed(1)}`).join(' ');
+  const yFor = (val: number) => padTop + (1 - (val - minVal) / range) * (height - padTop - padBottom);
+  const linePoints = values.map((val, i) => `${xFor(i).toFixed(1)},${yFor(val).toFixed(1)}`).join(' ');
   const areaPoints = `${padX},${(height - padBottom).toFixed(1)} ${linePoints} ${(width - padX).toFixed(1)},${(height - padBottom).toFixed(1)}`;
   const first = history[0];
   const last = history[history.length - 1];
+  const firstVal = values[0];
+  const lastVal = values[values.length - 1];
   const dots = history
-    .map((p, i) => `<circle class="growth-dot" cx="${xFor(i).toFixed(1)}" cy="${yFor(p.count).toFixed(1)}" r="2.5" data-date="${escapeHtml(p.date)}" data-count="${p.count}"></circle>`)
+    .map((p, i) => `<circle class="growth-dot" cx="${xFor(i).toFixed(1)}" cy="${yFor(values[i]).toFixed(1)}" r="2.5" data-date="${escapeHtml(p.date)}" data-count="${values[i]}"></circle>`)
     .join('');
-  const pointsData = escapeHtml(JSON.stringify(history.map((p, i) => [xFor(i), p.date, p.count])));
+  const pointsData = escapeHtml(JSON.stringify(history.map((p, i) => [xFor(i), p.date, values[i], metric.unit, metric.pluralUnit])));
+
+  const metricKeys: GrowthMetricKey[] = ['count', 'institutions', 'countries', 'portraits', 'honors', 'codeLines'];
+  const metricButtons = metricKeys
+    .map((key) => {
+      const cfg = GROWTH_METRICS[key];
+      const cur = last[key] ?? last.count;
+      const init = first[key] ?? first.count;
+      const pctChange = init > 0 ? `+${Math.round(((cur - init) / init) * 100)}%` : `+${cur}`;
+      const isActive = key === activeMetric;
+      return `
+        <button type="button" class="growth-metric-btn${isActive ? ' is-active' : ''}" data-metric="${key}" aria-pressed="${isActive}">
+          <span class="growth-metric-icon">${cfg.icon}</span>
+          <span class="growth-metric-label">${cfg.label}</span>
+          <span class="growth-metric-val">${cur.toLocaleString()}</span>
+          <span class="growth-metric-badge">${pctChange}</span>
+        </button>
+      `;
+    })
+    .join('');
+
   return `
-    <div class="insights-section">
-      <h3 class="insights-heading">Roster Growth</h3>
-      <p class="insights-caption">Total people on record over time, from ${escapeHtml(first.date)} (${first.count}) to ${escapeHtml(last.date)} (${last.count}); hover to inspect a date.</p>
+    <div class="insights-section" id="growth-section">
+      <h3 class="insights-heading">Project &amp; Roster Growth</h3>
+      <p class="insights-caption">${escapeHtml(metric.description)}, from ${escapeHtml(first.date)} (${firstVal.toLocaleString()} ${firstVal === 1 ? metric.unit : metric.pluralUnit}) to ${escapeHtml(last.date)} (${lastVal.toLocaleString()} ${lastVal === 1 ? metric.unit : metric.pluralUnit}); click any metric to switch dimension.</p>
+      <div class="growth-metrics-bar" role="group" aria-label="Growth dimensions">
+        ${metricButtons}
+      </div>
       <div class="growth-chart-wrap">
-        <svg class="growth-chart" viewBox="0 0 ${width} ${height}" data-points="${pointsData}" data-height="${height}" data-pad-bottom="${padBottom}" role="img" aria-label="Line chart of total roster size over time">
+        <svg class="growth-chart" viewBox="0 0 ${width} ${height}" data-points="${pointsData}" data-metric="${metric.key}" data-unit="${metric.unit}" data-plural="${metric.pluralUnit}" data-height="${height}" data-pad-bottom="${padBottom}" role="img" aria-label="Line chart of ${escapeHtml(metric.label)} over time">
           <polygon class="growth-area" points="${areaPoints}"></polygon>
           <polyline class="growth-line" points="${linePoints}"></polyline>
           ${dots}
@@ -336,6 +431,7 @@ export function renderFunFacts(
   selectedLocation: string,
   fullRoster: Roster,
   statsHistory: StatsHistoryPoint[],
+  activeGrowthMetric: GrowthMetricKey = 'count',
 ) {
   const rosterEl = document.getElementById('roster');
   const countEl = document.getElementById('result-count');
@@ -383,7 +479,7 @@ export function renderFunFacts(
           <p class="insights-main-desc">${selectedRoster.length} ${selectedRoster.length === 1 ? 'person' : 'people'} across ${selectedUniversities} institution${selectedUniversities === 1 ? '' : 's'} in ${escapeHtml(selectedIsUs ? 'the United States' : selectedLocationLabel.replace(/^\S+\s+/, ''))}.</p>
         </div>
         ${selectedIsUs && selectedRoster.length ? renderStateGrid(selectedRoster) : ''}
-        ${!selectedIsUs && selectedRoster.length ? renderWorldCountryGrid(selectedRoster) : ''}
+        ${!selectedIsUs && selectedRoster.length ? renderWorldMap(selectedRoster, selectedLocation) : ''}
         ${selectedRoster.length ? renderDistributionCharts(selectedRoster) : ''}
         ${selectedRoster.length ? renderTopFacultyHubs(selectedRoster, selectedIsUs ? 'Top U.S. Faculty Hubs' : 'Top Faculty Hubs', 'Institutions with the most Vietnamese academics in the selected location; click to search.') : ''}
         ${selectedRoster.length ? renderAlmaMaterOriginsMap(selectedRoster) : ''}
@@ -409,12 +505,12 @@ export function renderFunFacts(
             <h2 class="insights-main-heading">Global &amp; Worldwide Diaspora Landscape</h2>
             <p class="insights-main-desc">${fullRoster.length} people across ${worldUniversities} institutions in the World.</p>
           </div>
-          ${renderWorldCountryGrid(fullRoster)}
+          ${renderWorldMap(fullRoster, selectedLocation)}
           ${renderDistributionCharts(fullRoster)}
           ${worldInternationalRoster.length ? renderTopFacultyHubs(worldInternationalRoster, 'Top International Faculty Hubs', 'Global institutions outside the U.S. with the most Vietnamese academics; click to search.') : ''}
           ${renderAlmaMaterOriginsMap(fullRoster)}
           ${renderAcademicFlowSummary(fullRoster)}
-          ${renderGrowthChart(statsHistory)}
+          ${renderGrowthChart(statsHistory, activeGrowthMetric)}
           ${renderDecadesChart(fullRoster)}
           <div class="insights-section">
             <h3 class="insights-heading">World Highlights</h3>

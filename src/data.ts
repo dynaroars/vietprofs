@@ -381,6 +381,8 @@ export const HEALTH_SUBFIELDS = [
 // generic keyword to FIELD_RULES below — whenever a department's correct field depends on which
 // institution it's at, not just the department string.
 const FIELD_OVERRIDES = new Map([
+  ['Accelerator Directorate|SLAC National Accelerator Laboratory', 'Physics & Astronomy'],
+  ['Direction Europe et International|CNRS (Centre National de la Recherche Scientifique)', 'Biological & Biomedical Sciences'],
   ['Information Studies|University of California, Los Angeles', 'Education'],
   // These new research appointments have department or center names whose disciplinary home
   // is clearer from their official university context than from the generic words alone.
@@ -657,6 +659,11 @@ export function buildTrackCounts(roster: Roster): [string, number][] {
 export interface StatsHistoryPoint {
   date: string;
   count: number;
+  institutions?: number;
+  countries?: number;
+  portraits?: number;
+  honors?: number;
+  codeLines?: number;
 }
 
 function stripDiacritics(s: string): string {
