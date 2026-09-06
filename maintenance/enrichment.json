@@ -4605,9 +4605,10 @@
     },
     "vp-0013": {
       "overview": "verified",
-      "work": "pending",
+      "work": "verified",
       "sourcesChecked": [
-        "https://www.unr.edu/cse/people/hung-la"
+        "https://www.unr.edu/cse/people/hung-la",
+        "https://ara.cse.unr.edu/?page_id=28"
       ],
       "evidence": [
         {
@@ -4665,18 +4666,26 @@
           "excerpt": "Prior to working at CAIT he was a lecturer in the Department of Electrical Engineering at the Thai Nguyen University of Technology, Vietnam from 2001 to 2007.",
           "retrievedAt": "2026-09-06T15:09:29.755Z",
           "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0013-work-1",
+          "url": "https://ara.cse.unr.edu/?page_id=28",
+          "excerpt": "The official ARA Laboratory publications page lists Exploiting Gaussian Noise Variance for Dynamic Differential Poisoning in Federated Learning (2025), Trajectory Tracking Control for a Quadcopter under External Disturbances (2024), and Concrete spalling detection system based on semantic segmentation using deep architectures (2024), each naming H. La as an author.",
+          "retrievedAt": "2026-09-06T22:16:20.265Z",
+          "details": "Official maintained laboratory publication list; selected as the latest three dated works and identity-verified by the author entries."
         }
       ],
       "errors": [],
-      "updatedAt": "2026-09-06T20:31:38.551Z",
-      "nextAction": "Generate and independently verify overview/work proposal."
+      "updatedAt": "2026-09-06T22:16:20.265Z",
+      "nextAction": "Audit rendered work section and continue unresolved work searches."
     },
     "vp-0014": {
       "overview": "verified",
-      "work": "pending",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.cics.umass.edu/about/directory/hung-le",
-        "https://hunglvosu.github.io/"
+        "https://hunglvosu.github.io/",
+        "https://hunglvosu.github.io/Publications/"
       ],
       "evidence": [
         {
@@ -4790,11 +4799,18 @@
           "excerpt": "Check out our FOCS 2022 workshop “ Advances on Metric Embeddings ” I co-organize with Arnold Filtser .",
           "retrievedAt": "2026-09-06T15:09:30.342Z",
           "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0014-work-1",
+          "url": "https://hunglvosu.github.io/Publications/",
+          "excerpt": "Hung Le’s maintained publications page explicitly lists Charting the Diameter Computation Landscape on Intersection Graphs in the Plane, A Polynomial Coreset for Furthest Neighbor in Planar Metrics, and Tree-Like Shortcuttings of Trees among the 2026 selected publications.",
+          "retrievedAt": "2026-09-06T22:16:20.265Z",
+          "details": "Official maintained personal publication list; preserved the page’s selected-publication order and identity-verified by the author lists."
         }
       ],
       "errors": [],
-      "updatedAt": "2026-09-06T20:31:38.551Z",
-      "nextAction": "Generate and independently verify overview/work proposal."
+      "updatedAt": "2026-09-06T22:16:20.265Z",
+      "nextAction": "Audit rendered work section and continue unresolved work searches."
     },
     "vp-0015": {
       "overview": "verified",
@@ -4826,10 +4842,11 @@
     },
     "vp-0016": {
       "overview": "verified",
-      "work": "pending",
+      "work": "verified",
       "sourcesChecked": [
         "https://luddy.iu.edu/people/le-thai.html",
-        "https://lethaiq.github.io/tql3/"
+        "https://lethaiq.github.io/tql3/",
+        "https://lethaiq.github.io/tql3/publication.html"
       ],
       "evidence": [
         {
@@ -4943,11 +4960,18 @@
           "excerpt": "We focus on benchmarking deepfake text and audio detectors, studying the linguistic sensitivity of audio LMs, and stress-testing reasoning pathways to build robust detection models against adaptive, AI-driven manipulation.",
           "retrievedAt": "2026-09-06T15:09:47.823Z",
           "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0016-work-1",
+          "url": "https://lethaiq.github.io/tql3/publication.html",
+          "excerpt": "Thai Le’s maintained publication list includes PreUnlearn: Auditing Collateral Knowledge Damage Before Large Language Model Unlearning (EMNLP 2026), SARA: Stress Test Reasoning in Audio Deepfake Detection (EMNLP 2026), and Verification-Guided Falsification for Safe RL via Explainable Abstraction and Risk-Aware Exploration (JAAMAS 2026).",
+          "retrievedAt": "2026-09-06T22:16:20.265Z",
+          "details": "Official maintained research-lab publication list; selected as the latest three dated works and identity-verified by the author entries."
         }
       ],
       "errors": [],
-      "updatedAt": "2026-09-06T20:31:38.551Z",
-      "nextAction": "Generate and independently verify overview/work proposal."
+      "updatedAt": "2026-09-06T22:16:20.265Z",
+      "nextAction": "Audit rendered work section and continue unresolved work searches."
     },
     "vp-0017": {
       "overview": "verified",
@@ -5242,10 +5266,11 @@
     },
     "vp-0020": {
       "overview": "verified",
-      "work": "pending",
+      "work": "verified",
       "sourcesChecked": [
         "https://harrisburg.psu.edu/faculty-and-staff/truong-tran-phd",
-        "https://sites.psu.edu/truongtran/"
+        "https://sites.psu.edu/truongtran/",
+        "https://pure.psu.edu/en/persons/truong-tran/"
       ],
       "evidence": [
         {
@@ -5303,13 +5328,20 @@
           "excerpt": "The project represents a new collaboration between Penn State Harrisburg and University Park and supports emerging research at the intersection of AI, smart infrastructure, digital construction, and sustainable communities.",
           "retrievedAt": "2026-09-06T15:09:55.591Z",
           "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0020-work-1",
+          "url": "https://pure.psu.edu/en/persons/truong-tran/",
+          "excerpt": "Penn State’s official research profile lists FedImp: Enhancing Federated Learning Convergence With Impurity-Based Weighting, SemiXAI-Net: XAI-driven semi-supervised object detection via iterative pseudo-label refinement and spatiotemporal consistency, and Why is Data Misclassified? Quantifying Data Difficulty for Machine Learning Models With Dual Probability Difficulty Measure, all dated 2026 and naming Tran, T. X.",
+          "retrievedAt": "2026-09-06T22:16:20.265Z",
+          "details": "Official university research profile; selected as the latest three dated works in source order and identity-verified by the profile’s author entries."
         }
       ],
       "errors": [
         "https://harrisburg.psu.edu/faculty-and-staff/truong-tran-phd: HTTP 403"
       ],
-      "updatedAt": "2026-09-06T20:31:38.551Z",
-      "nextAction": "Generate and independently verify overview/work proposal."
+      "updatedAt": "2026-09-06T22:16:20.265Z",
+      "nextAction": "Audit rendered work section and continue unresolved work searches."
     },
     "vp-0021": {
       "overview": "pending",
