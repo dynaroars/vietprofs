@@ -940,7 +940,9 @@ ${JSON.stringify(baseline, null, 2)}
 Read AGENTS.md, README.md, and ROSTER_MAINTENANCE.md completely. Use live authoritative sources
 to perform the entire periodic verification: identity and Vietnamese-diaspora eligibility,
 current primary academic or eligible research-institute appointment, institution type, department
-or research unit, rank/track, official profile URL,
+or research unit, rank/track, and official profile URL when available. If official
+current-appointment evidence is unavailable but reliable identity-resolved sources support every
+eligibility requirement, set confirmed to false and use the strongest source as profileUrl,
 personal/lab website, portrait and portrait source, and continued inclusion
 eligibility. Audit both stored URL fields independently: fetch profileUrl and websiteUrl when
 present, identify which live page is the official institutional profile and which is the
@@ -984,14 +986,15 @@ ${JSON.stringify(current.proposal, null, 2)}
 
 Read ROSTER_MAINTENANCE.md and independently browse live authoritative sources. Distrust the first
 review until you confirm identity, eligibility, current primary appointment, department,
-rank/track, institution type, official profile, personal/lab URLs, portrait and source, every
+rank/track, institution type, official profile when available, personal/lab URLs, portrait and source, every
 documented degree/major/graduation year, completed postdoctoral institution,
 and any explicitly documented end/completion year, honors eligibility (including that each stored
 honor is a faculty-level distinction, not a dissertation award/fellowship or other student/trainee
 award), and every proposed change. Approve only when the
 complete verification standard is satisfied and the normalized proposal is correct.
 Pay special attention to URL-role errors: independently verify that profileUrl is the official
-institutional profile and websiteUrl, when present, is a maintained personal or lab site;
+institutional profile when one is available; otherwise, it must be the strongest verification
+source and the record must set confirmed to false. websiteUrl, when present, is a maintained personal or lab site;
 if only one exists, ensure it is stored in the correct field rather than copying it into both.
 Independently search for and identity-check Google Scholar when missing or changed; confirm that a
 verified Scholar URL is stored only in scholarUrl.

@@ -30,6 +30,7 @@ export const ROSTER_FIELDS = [
   'websiteUrl',
   'scholarUrl',
   'linkedinUrl',
+  'confirmed',
   'state',
   'country',
   'rank',

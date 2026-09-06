@@ -883,6 +883,11 @@ a.entry-name:focus-visible {
   margin-left: auto;
 }
 
+.tag-unconfirmed {
+  border-color: #b7791f;
+  color: #a15c0d;
+}
+
 .favorite-toggle {
   position: absolute;
   top: 0.65rem;

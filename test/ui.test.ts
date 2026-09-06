@@ -221,6 +221,15 @@ test('non-university research institutes receive a visible institution-type labe
   assert.match(html, /Official institution profile/);
 });
 
+test('unconfirmed records are visibly labeled and use a verification-source link', () => {
+  const sample = { ...roster[0], confirmed: false };
+  const html = renderRosterEntry(sample, '/');
+  assert.match(html, /tag-unconfirmed/);
+  assert.match(html, />Unconfirmed</);
+  assert.match(html, /Verification source/);
+  assert.doesNotMatch(html, /Official university profile/);
+});
+
 test('authoritative full Vietnamese names preserve accent marks and Vietnamese order', () => {
   const thanhVu = roster.find((p) => p.name === 'ThanhVu H. Nguyen');
   assert.equal(vietnameseName(thanhVu), 'Nguyễn Huy Thanh Vũ');

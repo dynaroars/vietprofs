@@ -314,7 +314,7 @@ export const GROWTH_METRICS: Record<GrowthMetricKey, GrowthMetricConfig> = {
     icon: '👥',
     unit: 'person',
     pluralUnit: 'people',
-    description: 'Total verified academics on record',
+    description: 'Total academics on record',
   },
   institutions: {
     key: 'institutions',

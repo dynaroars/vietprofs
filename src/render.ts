@@ -77,6 +77,9 @@ export function renderRosterEntry(person: RosterEntry, baseUrl = '/') {
   const institutionTypeTag = person.institutionType && person.institutionType !== 'University'
     ? `<span class="tag tag-institution-type">${escapeHtml(person.institutionType)}</span>`
     : '';
+  const confirmationTag = person.confirmed === false
+    ? '<span class="tag tag-unconfirmed" title="Reliable evidence supports this appointment, but an official current institutional profile was unavailable when it was added.">Unconfirmed</span>'
+    : '';
   const topicTags = (person.researchAreas ?? [])
     .map((area) => `<span class="tag tag-topic">${escapeHtml(area)}</span>`)
     .join('');
@@ -89,7 +92,8 @@ export function renderRosterEntry(person: RosterEntry, baseUrl = '/') {
     : `<img class="entry-portrait entry-portrait-placeholder" src="${escapeHtml(`${baseUrl}default-portrait.svg`)}" alt="" width="64" height="64" loading="lazy" decoding="async">`;
   const educationDetails = formatEducationDetails(person);
   const institutionLabel = person.institutionType && person.institutionType !== 'University' ? 'institution' : 'university';
-  const profileIcon = entryIconLink({ className: 'profile-link', href: person.profileUrl, label: `${visibleName} official ${institutionLabel} profile`, title: `Official ${institutionLabel} profile`, icon: PROFILE_ICON });
+  const profileSourceLabel = person.confirmed === false ? 'Verification source' : `Official ${institutionLabel} profile`;
+  const profileIcon = entryIconLink({ className: 'profile-link', href: person.profileUrl, label: `${visibleName} ${profileSourceLabel.toLowerCase()}`, title: profileSourceLabel, icon: PROFILE_ICON });
   const personalSiteIcon = person.websiteUrl
     ? entryIconLink({ className: 'personal-site-link', href: person.websiteUrl, label: `${visibleName} personal or lab website`, title: 'Personal or lab website', icon: PERSONAL_SITE_ICON })
     : '';
@@ -115,7 +119,7 @@ export function renderRosterEntry(person: RosterEntry, baseUrl = '/') {
         <div class="entry-meta">${escapeHtml(entryMeta)}</div>
         ${educationDetails.length ? `<div class="entry-details">${educationDetails.map((value) => escapeHtml(value)).join('; ')}</div>` : ''}
         ${honors ? `<div class="entry-honors"><span class="honors-label">Honors:</span> ${honors}</div>` : ''}
-        <div class="tags">${fieldTag}${trackTag}${institutionTypeTag}${topicTags}</div>
+        <div class="tags">${fieldTag}${trackTag}${institutionTypeTag}${confirmationTag}${topicTags}</div>
       </div>
     </div>
   `;

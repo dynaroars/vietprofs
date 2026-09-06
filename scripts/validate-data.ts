@@ -74,6 +74,7 @@ for (const [index, person] of roster.entries()) {
   if (!/^vp-\d{4,}$/.test(person.id)) fail(rosterFile, `${label} has invalid id ${person.id}`);
   validateTimestamp(rosterFile, person.lastUpdatedAt, label, 'lastUpdatedAt');
   if (!/^https?:\/\//.test(person.profileUrl)) fail(rosterFile, `${label} profileUrl must use HTTP(S)`);
+  if (person.confirmed !== undefined && typeof person.confirmed !== 'boolean') fail(rosterFile, `${label} confirmed must be a boolean`);
   if (person.websiteUrl !== undefined && !/^https?:\/\//.test(person.websiteUrl)) fail(rosterFile, `${label} websiteUrl must use HTTP(S)`);
   if (person.websiteUrl !== undefined && person.websiteUrl === person.profileUrl) fail(rosterFile, `${label} websiteUrl must differ from profileUrl`);
   if (person.scholarUrl !== undefined && !/^https:\/\//.test(person.scholarUrl)) fail(rosterFile, `${label} scholarUrl must use HTTPS`);

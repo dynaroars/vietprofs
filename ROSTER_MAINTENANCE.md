@@ -16,6 +16,13 @@ Include a person only when reliable evidence, preferably an official institution
   only through a substantial underlying academic appointment; an administrative title alone is not
   sufficient.
 
+An official current institutional profile makes an entry **confirmed** and remains the preferred
+standard. When that profile is unavailable but reliable, identity-resolved evidence supports an
+otherwise eligible current appointment, include the person with `"confirmed": false`. The site
+labels those records **Unconfirmed** and calls the linked page a verification source. Do not use
+this status to bypass the appointment, identity, institution-type, or track requirements, and
+replace it with confirmed status when an official profile becomes available.
+
 Use Vietnamese names and other relevant discovery signals to find roster candidates. Do not require
 separate documentary evidence of Vietnamese or Vietnamese-diaspora identity once the candidate is
 otherwise eligible.
@@ -77,19 +84,20 @@ case-by-case verification and should not be included from the title alone.
 
 ### Evaluating Research, Clinical, and Practice titles
 
-Titles alone do not establish eligibility. For a proposed `Research` or `Clinical` entry, find an
-official institutional source that identifies the person and their current appointment, then
+Titles alone do not establish eligibility. For a proposed `Research` or `Clinical` entry, prefer an
+official institutional source that identifies the person and their current appointment. If none is
+available, use multiple reliable identity-resolved sources and set `"confirmed": false`, then
 establish that the role is faculty-level or faculty-equivalent and stable through one or more of the
 following: a departmental faculty directory, an institutional profile, an established promotion
 ladder, explicit continuing/permanent/full-time language, or an enduring appointment page.
 
-`Research Assistant Professor` needs particular care. Include it only when the institution treats it as a genuine research-faculty rank or there is comparably strong evidence of a career-type appointment; do not treat a senior postdoctoral role as faculty merely because it uses that title. Similarly, only include a Senior or Principal Research Scientist when the official evidence establishes a faculty-equivalent, permanent university or eligible research-institute appointment.
+`Research Assistant Professor` needs particular care. Include it only when the institution treats it as a genuine research-faculty rank or there is comparably strong evidence of a career-type appointment; do not treat a senior postdoctoral role as faculty merely because it uses that title. Similarly, only include a Senior or Principal Research Scientist when reliable evidence establishes a faculty-equivalent, permanent university or eligible research-institute appointment; mark the record unconfirmed if no official current profile is available.
 
 Professor of Practice, Associate Professor of Practice, Assistant Professor of Practice, and equivalent institution-specific practice titles belong in `Teaching`, not a separate track. They still require evidence that the appointment is stable and substantive; exclude visiting and adjunct practice roles. Keep the published practice title in `rank`.
 
-Artist in Residence and Writer in Residence titles also belong in `Teaching`, but only when an
-official source establishes a full-time, continuing position. The title by itself usually denotes a
-temporary residency and is not enough.
+Artist in Residence and Writer in Residence titles also belong in `Teaching`, but only when reliable
+evidence establishes a full-time, continuing position. The title by itself usually denotes a temporary
+residency and is not enough; mark a record unconfirmed if the evidence is not official.
 
 Keep leadership titles in `rank` only when they are the institution's published academic title and
 the underlying academic appointment is independently eligible. Do not use a presidency,
@@ -113,10 +121,40 @@ Use all relevant candidate sources:
 - official department, school, college, university, and research-institute directories;
 - linked person pages, including opaque directory URLs such as `/profile/tn294`;
 - official institutional news, research-center, lab, grant, and award pages;
-- personal academic homepages, Google Sites, lab pages, and CVs, followed by confirmation of the current appointment on an official page; and
+- personal academic homepages, Google Sites, lab pages, CVs, Google Scholar, and reputable conference profiles; mark the entry unconfirmed if these are the best available current-appointment evidence; and
 - broad search-engine queries using the institution, field, Vietnamese surnames (`Nguyen`, `Tran`, `Le`, `Pham`, `Vo`, `Vu`, `Bui`, `Do`, `Phan`, `Lai`, `Huynh`, `Duong`, `Truong`, `Dang`, `Ngo`, `Mai`, `Dao`), and common Vietnamese given names.
 
 Do not depend on URL shape, visible diacritics, or a faculty page being linked from a department homepage. A research mention, dissertation-supervision link, coauthorship, student page, or grant page is a lead—not proof of a current faculty appointment.
+
+### Alumni-network discovery
+
+Faculty and research-group alumni pages are a bounded discovery route worth testing. One initial
+WiiLAB sweep produced two additions: an alumnus with an announced tenure-track placement and a
+missing professor named in its collaborator list. This is a source-specific result, not evidence of
+a general yield. Start from an existing roster member whose maintained lab site has `Alumni`,
+`Former Members`, `Students`, `People`, or placement-news pages. Scan the named people and any
+explicit faculty-placement announcements, then take at most one outward step to verify a promising
+placement on the hiring institution's official profile or news page. Check `public/data.json`,
+including published-name variants and initials, before doing detailed research.
+
+Treat a lab's listed “current job” or former affiliation as a lead only: it can be stale. A placement
+announcement can establish an accepted incoming appointment when it names the institution, rank or
+track, and start date; confirm the current appointment independently once the destination publishes
+a profile. Record the lab page and the hiring institution's evidence together, since this combination
+both resolves identity and confirms eligibility.
+
+Also scan a lab's named academic collaborators. A collaborator list can expose missing professors
+at universities or eligible public/nonprofit research institutes, especially when the person appears
+under a shortened publishing name. Deduplicate each named collaborator against the roster first,
+then verify the current official appointment, institution type, and track. A `Dr.` title,
+coauthorship, or old affiliation is insufficient; research-scientist titles require the same
+permanence and faculty-equivalence evidence as every other Research-track candidate.
+
+For every alumni-network sweep, retain a resumable source record in
+`maintenance/network-discovery.json`: seed member, scan date, source URLs, candidate and aliases,
+reported institution, status (`included`, `already-listed`, `excluded`, or `unresolved`), evidence,
+and next action. Record student, postdoctoral, corporate, Vietnam-based, and other ineligible
+outcomes with their reason. An unsuccessful identity or appointment search remains `unresolved`.
 
 ### Emeritus-focused discovery
 

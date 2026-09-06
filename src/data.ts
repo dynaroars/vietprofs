@@ -45,6 +45,8 @@ export interface RosterEntry {
   websiteUrl?: string;
   scholarUrl?: string;
   linkedinUrl?: string;
+  /** False when the appointment has reliable evidence but lacks an official current profile. */
+  confirmed?: boolean;
   lastUpdatedAt?: string;
   portrait?: string;
   portraitSource?: string;

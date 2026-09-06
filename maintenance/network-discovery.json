@@ -1,0 +1,456 @@
+{
+  "updatedAt": "2026-09-06T03:15:00.000Z",
+  "scope": "Alumni, former-member, placement-announcement, and collaborator discovery; excludes the separately scheduled hieuphay economics queue.",
+  "sources": [
+    {
+      "seedMember": "Duy H. N. Nguyen",
+      "scanDate": "2026-09-05",
+      "sourceUrls": [
+        "https://nguyen.sdsu.edu/WiiLAB/WiiLAB.html",
+        "https://nguyen.sdsu.edu/WiiLAB/alumni.html",
+        "https://nguyen.sdsu.edu/WiiLAB/collaborator.html"
+      ],
+      "status": "partially-resolved",
+      "candidates": [
+        {
+          "name": "Van Ly Nguyen",
+          "aliases": ["Ly V. Nguyen", "L. V. Nguyen"],
+          "reportedInstitution": "University of Kansas",
+          "status": "included",
+          "rosterId": "vp-1165",
+          "evidenceUrls": [
+            "https://eecs.ku.edu/people/van-ly-nguyen",
+            "https://people.eecs.ku.edu/~v532n390/",
+            "https://engr.ku.edu/news/article/nine-faculty-to-join-ku-school-of-engineering-for-2025-2026",
+            "https://nguyen.sdsu.edu/WiiLAB/WiiLAB.html"
+          ],
+          "nextAction": "Added to the roster; future full refresh can reverify normally."
+        },
+        {
+          "name": "Long Bao Le",
+          "aliases": ["Long Le", "Long B. Le"],
+          "reportedInstitution": "INRS (Institut national de la recherche scientifique)",
+          "status": "included",
+          "rosterId": "vp-1166",
+          "evidenceUrls": [
+            "https://inrs.ca/la-recherche/professeurs/long-le/",
+            "https://longbaole.github.io/",
+            "https://nguyen.sdsu.edu/WiiLAB/collaborator.html"
+          ],
+          "nextAction": "Added to the roster; future full refresh can reverify normally."
+        },
+        {
+          "name": "Nghi H. Tran",
+          "aliases": [],
+          "reportedInstitution": "University of Akron",
+          "status": "already-listed",
+          "rosterId": "vp-0442",
+          "evidenceUrls": ["https://nguyen.sdsu.edu/WiiLAB/collaborator.html"],
+          "nextAction": "None."
+        },
+        {
+          "name": "Tho Le-Ngoc",
+          "aliases": [],
+          "reportedInstitution": "McGill University",
+          "status": "already-listed",
+          "rosterId": "vp-0507",
+          "evidenceUrls": ["https://nguyen.sdsu.edu/WiiLAB/collaborator.html"],
+          "nextAction": "None."
+        },
+        {
+          "name": "Vu N. Ha",
+          "aliases": ["Vu Nguyen Ha"],
+          "reportedInstitution": "École Polytechnique de Montréal (stale); current search result identifies École de technologie supérieure",
+          "status": "unresolved",
+          "evidenceUrls": [
+            "https://nguyen.sdsu.edu/WiiLAB/collaborator.html",
+            "https://adscientificindex.com/scientist/vu-n-ha/660171/"
+          ],
+          "nextAction": "Find a current official institutional profile and evidence that any research appointment is permanent and faculty-equivalent before considering inclusion."
+        },
+        {
+          "name": "Other WiiLAB former members",
+          "aliases": [],
+          "reportedInstitution": "Various",
+          "status": "excluded",
+          "evidenceUrls": ["https://nguyen.sdsu.edu/WiiLAB/alumni.html"],
+          "nextAction": "No follow-up from this list: listed outcomes are postdoctoral, student, engineering, or industry roles, which are outside the roster criteria."
+        }
+      ]
+    },
+    {
+      "seedMember": "Tien Nguyen",
+      "scanDate": "2026-09-06",
+      "sourceUrls": ["https://personal.utdallas.edu/~tien.n.nguyen/students.html"],
+      "status": "resolved",
+      "candidates": [
+        {
+          "name": "Tung Thanh Nguyen",
+          "aliases": [],
+          "reportedInstitution": "Texas A&M University (the alumni source may show an older affiliation)",
+          "status": "already-listed",
+          "rosterId": "vp-0267",
+          "evidenceUrls": ["https://personal.utdallas.edu/~tien.n.nguyen/students.html"],
+          "nextAction": "None."
+        },
+        {
+          "name": "Anh Tuan Nguyen",
+          "aliases": [],
+          "reportedInstitution": "Misfit Wearables",
+          "status": "excluded",
+          "evidenceUrls": ["https://personal.utdallas.edu/~tien.n.nguyen/students.html"],
+          "nextAction": "No follow-up: the source identifies an industry role."
+        },
+        {
+          "name": "Hung Dang Phan",
+          "aliases": [],
+          "reportedInstitution": "Iowa State University",
+          "status": "excluded",
+          "evidenceUrls": [
+            "https://personal.utdallas.edu/~tien.n.nguyen/students.html",
+            "https://govsalaries.com/salaries/IA/iowa-state-university?page=79"
+          ],
+          "nextAction": "No follow-up: 2025 listing identifies a postdoctoral research appointment."
+        },
+        {
+          "name": "An Ngoc Lam",
+          "aliases": [],
+          "reportedInstitution": "SINTEF Digital",
+          "status": "unresolved",
+          "evidenceUrls": [
+            "https://personal.utdallas.edu/~tien.n.nguyen/students.html",
+            "https://www.csauthors.net/an-ngoc-lam/"
+          ],
+          "nextAction": "Find a current official SINTEF profile and evidence of a permanent faculty-equivalent research appointment."
+        },
+        {
+          "name": "Hung Viet Nguyen",
+          "aliases": [],
+          "reportedInstitution": "Former Iowa State University affiliation; later source metadata includes Mountain View College",
+          "status": "unresolved",
+          "evidenceUrls": [
+            "https://personal.utdallas.edu/~tien.n.nguyen/students.html",
+            "https://adscientificindex.com/scientist/hung-viet-nguyen/1326413/"
+          ],
+          "nextAction": "Find an official current institutional profile before making any appointment determination."
+        },
+        {
+          "name": "Thanh Van Nguyen",
+          "aliases": [],
+          "reportedInstitution": "Former Iowa State University affiliation",
+          "status": "unresolved",
+          "evidenceUrls": ["https://personal.utdallas.edu/~tien.n.nguyen/students.html"],
+          "nextAction": "Resolve current identity and appointment; searches returned namesakes and no confirmed faculty role."
+        },
+        {
+          "name": "Trong Duc Nguyen",
+          "aliases": [],
+          "reportedInstitution": "Former Iowa State University affiliation",
+          "status": "unresolved",
+          "evidenceUrls": [
+            "https://personal.utdallas.edu/~tien.n.nguyen/students.html",
+            "https://www.engineering.iastate.edu/~trong/TrongNguyen.pdf"
+          ],
+          "nextAction": "Resolve a current appointment with an official source; results include unrelated namesakes and non-academic work."
+        },
+        {
+          "name": "Son V. Nguyen",
+          "aliases": [],
+          "reportedInstitution": "Former UT Dallas affiliation",
+          "status": "unresolved",
+          "evidenceUrls": ["https://personal.utdallas.edu/~tien.n.nguyen/students.html"],
+          "nextAction": "Resolve identity and current appointment; name alone is insufficient."
+        }
+      ]
+    },
+    {
+      "seedMember": "Khoa Luu",
+      "scanDate": "2026-09-06",
+      "sourceUrls": ["https://uark-quantumai.github.io/people.html"],
+      "status": "resolved",
+      "candidates": [
+        {
+          "name": "Khoa Luu lab alumni",
+          "aliases": [],
+          "reportedInstitution": "University of Arkansas source page",
+          "status": "excluded",
+          "evidenceUrls": ["https://uark-quantumai.github.io/people.html"],
+          "nextAction": "No follow-up: the named alumni are master's or undergraduate students, with no faculty placement listed."
+        }
+      ]
+    },
+    {
+      "seedMember": "Tu Vu",
+      "scanDate": "2026-09-06",
+      "sourceUrls": ["https://tuvllms.github.io/"],
+      "status": "resolved",
+      "candidates": [
+        {
+          "name": "Jaydon Bingham; Christian Calvo",
+          "aliases": [],
+          "reportedInstitution": "Google; University of Michigan",
+          "status": "excluded",
+          "evidenceUrls": ["https://tuvllms.github.io/"],
+          "nextAction": "No follow-up: the listed alumni are a software engineer and an MS student."
+        }
+      ]
+    },
+    {
+      "seedMember": "Truyen Tran",
+      "scanDate": "2026-09-06",
+      "sourceUrls": ["https://truyentran.github.io/people.html"],
+      "status": "unresolved",
+      "candidates": [
+        {
+          "name": "Xuan-Tuyen Tran; Tien-Kha Pham; Duy-Hung Tran; Hoang-Anh Pham; Xuan-Duc Nguyen; Hoang-Long Dang; Minh-Tri Nguyen; Thai-Hung Le; Duc-Kien Do",
+          "aliases": [],
+          "reportedInstitution": "Former Deakin University group members",
+          "status": "unresolved",
+          "evidenceUrls": ["https://truyentran.github.io/people.html"],
+          "nextAction": "The page gives no current roles; resolve individual identities and appointments before eligibility research."
+        }
+      ]
+    },
+    {
+      "seedMember": "Long Bao Le",
+      "scanDate": "2026-09-06",
+      "sourceUrls": ["https://longbaole.github.io/"],
+      "status": "resolved",
+      "candidates": [
+        {
+          "name": "Duong Nguyen",
+          "aliases": [],
+          "reportedInstitution": "Arizona State University",
+          "status": "already-listed",
+          "rosterId": "vp-0358",
+          "evidenceUrls": ["https://longbaole.github.io/"],
+          "nextAction": "None."
+        },
+        {
+          "name": "Tung Phan",
+          "aliases": [],
+          "reportedInstitution": "Thuyloi University",
+          "status": "excluded",
+          "evidenceUrls": ["https://longbaole.github.io/"],
+          "nextAction": "No follow-up: the listed faculty appointment is in Vietnam."
+        },
+        {
+          "name": "Other listed Long Bao Le past members",
+          "aliases": [],
+          "reportedInstitution": "Various",
+          "status": "excluded",
+          "evidenceUrls": ["https://longbaole.github.io/"],
+          "nextAction": "No follow-up: listed roles are industry, postdoctoral, or staff research roles without faculty-equivalence evidence."
+        }
+      ]
+    },
+    {
+      "seedMember": "Thien Huu Nguyen",
+      "scanDate": "2026-09-06",
+      "sourceUrls": ["https://ix.cs.uoregon.edu/~thien/"],
+      "status": "resolved",
+      "candidates": [
+        {
+          "name": "Viet Lai; Amir Veyseh; Qiuhao Lu; Luis Fernando Guzman-Nateras; Haoran Wang; Tuan Ngo",
+          "aliases": [],
+          "reportedInstitution": "Kensho Technologies; Zoom; University of Texas Health Science Center at Houston; Rice University; Illinois Institute of Technology; University of Arizona",
+          "status": "excluded",
+          "evidenceUrls": ["https://ix.cs.uoregon.edu/~thien/"],
+          "nextAction": "No follow-up from this source: destinations are industry, research-staff, or continuing student roles; Luis Fernando Guzman-Nateras is a lecturer but has no Vietnamese identity indication."
+        }
+      ]
+    },
+    {
+      "seedMember": "XuanLong Nguyen",
+      "scanDate": "2026-09-06",
+      "sourceUrls": ["https://dept.stat.lsa.umich.edu/~xuanlong/"],
+      "status": "resolved",
+      "candidates": [
+        {
+          "name": "XuanLong Nguyen group students and alumni",
+          "aliases": [],
+          "reportedInstitution": "University of Michigan source page",
+          "status": "excluded",
+          "evidenceUrls": ["https://dept.stat.lsa.umich.edu/~xuanlong/"],
+          "nextAction": "No follow-up: the page's named current and former members do not provide a Vietnamese identity signal; listed destinations include industry and non-Vietnamese faculty/research roles."
+        }
+      ]
+    },
+    {
+      "seedMember": "Nghi H. Tran",
+      "scanDate": "2026-09-06",
+      "sourceUrls": ["https://blogs.uakron.edu/ccrg/people/"],
+      "status": "resolved",
+      "candidates": [
+        {
+          "name": "Hung Vu; Tuyen Tran; other former CCRG members",
+          "aliases": [],
+          "reportedInstitution": "McGill University; Rutgers University; various",
+          "status": "excluded",
+          "evidenceUrls": ["https://blogs.uakron.edu/ccrg/people/"],
+          "nextAction": "No follow-up: the source lists continuing PhD study, industry, or other non-qualifying destinations, with no verified faculty placement."
+        }
+      ]
+    },
+    {
+      "seedMember": "Thang N. Dinh",
+      "scanDate": "2026-09-06",
+      "sourceUrls": ["https://thang-dinh.github.io/"],
+      "status": "resolved",
+      "candidates": [
+        {
+          "name": "Thinh Nguyen; Cong Cao; Bao Tran; Jonah Minkoff",
+          "aliases": [],
+          "reportedInstitution": "Virginia Commonwealth University",
+          "status": "excluded",
+          "evidenceUrls": ["https://thang-dinh.github.io/"],
+          "nextAction": "No follow-up: the page identifies current PhD or undergraduate students, not alumni with qualifying appointments."
+        }
+      ]
+    },
+    {
+      "seedMember": "Thai Le",
+      "scanDate": "2026-09-06",
+      "sourceUrls": ["https://lethaiq.github.io/tql3/group.html"],
+      "status": "resolved",
+      "candidates": [
+        {
+          "name": "ARKAI Lab alumni",
+          "aliases": [],
+          "reportedInstitution": "Indiana University Bloomington",
+          "status": "excluded",
+          "evidenceUrls": ["https://lethaiq.github.io/tql3/group.html"],
+          "nextAction": "No follow-up: the alumni section does not identify a qualifying faculty placement; named active members are students."
+        }
+      ]
+    },
+    {
+      "seedMember": "Thao D. (Vicky) Nguyen",
+      "scanDate": "2026-09-06",
+      "sourceUrls": ["https://nguyenlab.wse.jhu.edu/people/", "https://nguyenlab.wse.jhu.edu/alumni/"],
+      "status": "resolved",
+      "candidates": [
+        {
+          "name": "Zheliang Wang; Hai Dong; Zheng Jia; other Nguyen Lab alumni",
+          "aliases": [],
+          "reportedInstitution": "Fudan University; Emory University; Zhejiang University; various",
+          "status": "excluded",
+          "evidenceUrls": ["https://nguyenlab.wse.jhu.edu/people/"],
+          "nextAction": "No follow-up: named faculty placements are for people without a Vietnamese identity indication; remaining listed outcomes are postdoctoral, student, industry, or research-staff roles."
+        }
+      ]
+    },
+    {
+      "seedMember": "Vinhthuy Phan",
+      "scanDate": "2026-09-06",
+      "sourceUrls": ["https://vtphan.github.io/cv.pdf"],
+      "status": "unresolved",
+      "candidates": [
+        {
+          "name": "Nam Sy Vo; Sujoy Roy; Quang Tran; Diem-Trang Pham",
+          "aliases": [],
+          "reportedInstitution": "University of Memphis advising record",
+          "status": "unresolved",
+          "evidenceUrls": ["https://vtphan.github.io/cv.pdf"],
+          "nextAction": "The CV identifies advisees but does not provide current placements. Resolve identities and appointments only if an official source identifies an eligible faculty role."
+        }
+      ]
+    },
+    {
+      "seedMember": "Thi Vo",
+      "scanDate": "2026-09-06",
+      "sourceUrls": ["https://vogroup.wse.jhu.edu/team/"],
+      "status": "resolved",
+      "candidates": [
+        {
+          "name": "Emily Yao; Jarett Ren; Sile Wang; Amy Lin; Brandon Chang; Cole Jeffeson",
+          "aliases": [],
+          "reportedInstitution": "University of Delaware; Carnegie Mellon University; University of California, Los Angeles; ClearView Healthcare Partners",
+          "status": "excluded",
+          "evidenceUrls": ["https://vogroup.wse.jhu.edu/team/"],
+          "nextAction": "No follow-up: the listed alumni are continuing PhD students, an industry analyst, or have no qualifying appointment shown."
+        }
+      ]
+    },
+    {
+      "seedMember": "My Thai",
+      "scanDate": "2026-09-06",
+      "sourceUrls": [
+        "https://www.cise.ufl.edu/~mythai/",
+        "https://optnetsci.cise.ufl.edu/people/"
+      ],
+      "status": "partially-resolved",
+      "candidates": [
+        {
+          "name": "Nam P. Nguyen",
+          "aliases": ["Nam Nguyen"],
+          "reportedInstitution": "Towson University",
+          "status": "already-listed",
+          "rosterId": "vp-0029",
+          "evidenceUrls": [
+            "https://optnetsci.cise.ufl.edu/people/",
+            "https://www.towson.edu/fcsm/departments/computerinfosci/facultystaff/nnguyen.html"
+          ],
+          "nextAction": "None. Official Towson profile confirms the University of Florida PhD and current professor appointment."
+        },
+        {
+          "name": "Thang N. Dinh",
+          "aliases": [],
+          "reportedInstitution": "Virginia Commonwealth University",
+          "status": "already-listed",
+          "rosterId": "vp-0004",
+          "evidenceUrls": ["https://optnetsci.cise.ufl.edu/people/"],
+          "nextAction": "None."
+        },
+        {
+          "name": "Truc Nguyen",
+          "aliases": [],
+          "reportedInstitution": "National Renewable Energy Laboratory",
+          "status": "excluded",
+          "evidenceUrls": [
+            "https://www.cise.ufl.edu/~mythai/",
+            "https://www.linkedin.com/in/trucndt"
+          ],
+          "nextAction": "No follow-up: current NREL evidence identifies postdoctoral work, which is outside the roster criteria."
+        },
+        {
+          "name": "Lan Nguyen",
+          "aliases": [],
+          "reportedInstitution": "Meta",
+          "status": "excluded",
+          "evidenceUrls": ["https://optnetsci.cise.ufl.edu/people/"],
+          "nextAction": "No follow-up: the source identifies an industry role."
+        },
+        {
+          "name": "Dzung T. Nguyen",
+          "aliases": [],
+          "reportedInstitution": "Microsoft",
+          "status": "excluded",
+          "evidenceUrls": ["https://optnetsci.cise.ufl.edu/people/"],
+          "nextAction": "No follow-up: the source identifies an industry role."
+        },
+        {
+          "name": "Minh N. Vu",
+          "aliases": ["Minh Vu"],
+          "reportedInstitution": "Los Alamos National Laboratory",
+          "status": "included",
+          "evidenceUrls": [
+            "https://www.cise.ufl.edu/~mythai/",
+            "https://www.linkedin.com/in/minhvu-ufl",
+            "https://openreview.net/pdf/9dd5b84b8cfe95bee95df733adad2d12b8251701.pdf",
+            "https://www.newx.sg/paper/detail/95f73751-0b40-11f1-b84c-00163e10baa7"
+          ],
+          "nextAction": "Included as a Los Alamos Staff Scientist in the Theoretical Division, Computing and Artificial Intelligence (vp-1180). Google Scholar and OpenReview establish the current appointment; do not conflate this computer-science alumnus with Stanford's clinical faculty member of the same name."
+        },
+        {
+          "name": "Other Adaptive Learning and Optimization Lab alumni",
+          "aliases": [],
+          "reportedInstitution": "Various",
+          "status": "excluded",
+          "evidenceUrls": ["https://optnetsci.cise.ufl.edu/people/"],
+          "nextAction": "No follow-up: the page identifies non-Vietnamese faculty placements, industry appointments, or research roles without faculty-equivalence evidence."
+        }
+      ]
+    }
+  ]
+}
