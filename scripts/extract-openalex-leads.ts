@@ -118,16 +118,24 @@ function recentEligibleAffiliation(author: Author): { institution: Institution; 
       years.some((year) => year >= currentYear - 2))
     .sort((a, b) => Math.max(...b.years) - Math.max(...a.years))[0];
 }
+let globalQuotaExhausted = false;
+
 async function fetchQuery(query: string, maxPages: number): Promise<Author[]> {
   const authors: Author[] = [];
   let cursor = '*';
-  for (let page = 0; page < maxPages && cursor; page++) {
+  for (let page = 0; page < maxPages && cursor && !globalQuotaExhausted; page++) {
     const url = `${API_URL}?search=${encodeURIComponent(query)}&per-page=200&cursor=${encodeURIComponent(cursor)}&mailto=vietprofs@roars.dev`;
     let response: Response | null = null;
     for (let attempt = 0; attempt < 5; attempt++) {
       try {
         response = await fetch(url, { headers: { 'User-Agent': 'VietProfs-Discovery/1.0 (mailto:vietprofs@roars.dev)' } });
         if (response.status === 429) {
+          const retryAfter = Number(response.headers.get('retry-after')) || 0;
+          if (retryAfter > 120) {
+            console.warn(`  [OpenAlex daily quota limit reached] Reset in ${Math.round(retryAfter / 60)} minutes (${retryAfter}s). Halting API querying.`);
+            globalQuotaExhausted = true;
+            break;
+          }
           const delay = (attempt + 1) * 3000;
           console.warn(`  [429 rate limit] query "${query}" page ${page + 1}, waiting ${delay}ms before retry ${attempt + 1}/5...`);
           await new Promise((r) => setTimeout(r, delay));
@@ -144,14 +152,16 @@ async function fetchQuery(query: string, maxPages: number): Promise<Author[]> {
         await new Promise((r) => setTimeout(r, 2000));
       }
     }
-    if (!response || !response.ok) {
-      console.warn(`Warning: OpenAlex query "${query}" page ${page + 1} failed with status ${response?.status}`);
+    if (globalQuotaExhausted || !response || !response.ok) {
+      if (!globalQuotaExhausted) {
+        console.warn(`Warning: OpenAlex query "${query}" page ${page + 1} failed with status ${response?.status}`);
+      }
       break;
     }
     const payload = await response.json() as { results?: Author[]; meta?: { next_cursor?: string } };
     authors.push(...(payload.results ?? []));
     cursor = payload.meta?.next_cursor ?? '';
-    await new Promise((r) => setTimeout(r, 250)); // polite delay
+    await new Promise((r) => setTimeout(r, 500)); // polite delay
   }
   return authors;
 }
@@ -164,8 +174,15 @@ async function main() {
     previous = existing.pipelineVersion && existing.pipelineVersion >= 3 ? existing.batches ?? {} : {};
   } catch { /* first run */ }
   const previousById = new Map(Object.values(previous).flatMap((queue) => queue.candidates).map((lead) => [lead.openAlexId, lead]));
-  const batches: Record<string, Queue> = Object.fromEntries(broadFields.map((field) => [field, { candidates: [] as Lead[] }]));
-  const seen = new Set<string>();
+  const batches: Record<string, Queue> = Object.fromEntries(
+    broadFields.map((field) => [
+      field,
+      { candidates: [...(previous[field]?.candidates ?? [])] }
+    ])
+  );
+  const seen = new Set<string>(
+    Object.values(batches).flatMap((queue) => queue.candidates).map((lead) => lead.openAlexId)
+  );
 
   function processAuthor(author: Author, sourceLabel: string) {
     const authorTokens = tokens(author.display_name);
@@ -200,6 +217,7 @@ async function main() {
   // 1. Search by primary and secondary surnames
   if (!givenNamesOnly && !diacriticsOnly) {
     for (const surname of surnames) {
+      if (globalQuotaExhausted) break;
       console.log(`Fetching OpenAlex authors matching surname: ${surname}...`);
       for (const author of await fetchQuery(surname, pages)) {
         processAuthor(author, surname);
@@ -210,6 +228,7 @@ async function main() {
   // 2. Search by distinct Vietnamese given names
   if (!surnamesOnly && !diacriticsOnly) {
     for (const given of givenNames) {
+      if (globalQuotaExhausted) break;
       console.log(`Fetching OpenAlex authors matching given name: ${given}...`);
       for (const author of await fetchQuery(given, 1)) {
         processAuthor(author, given);
@@ -220,6 +239,7 @@ async function main() {
   // 3. Search with full diacritic strings
   if (includeDiacritics) {
     for (const diacritic of diacriticSurnames) {
+      if (globalQuotaExhausted) break;
       console.log(`Fetching OpenAlex authors matching diacritics: ${diacritic}...`);
       for (const author of await fetchQuery(diacritic, 1)) {
         processAuthor(author, diacritic);
