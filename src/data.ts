@@ -535,6 +535,9 @@ const FIELD_OVERRIDES = new Map([
   ['MaIAGE (Mathématiques et Informatique Appliquées du Génome à l\'Environnement)|INRAE (Institut National de Recherche pour l\'Agriculture, l\'Alimentation et l\'Environnement)', 'Mathematics'],
   ['Wyant College of Optical Sciences|University of Arizona', 'Physics & Astronomy'],
   ['Chemical Sciences Division|National Institute of Standards and Technology', 'Chemistry'],
+  ['Laboratoire Navier|École des Ponts ParisTech', 'Engineering'],
+  ['Laboratoire Vibrations Acoustique|INSA Lyon', 'Engineering'],
+  ['CEA Tech / LITEN|Commissariat à l\'Énergie Atomique et aux Énergies Alternatives', 'Engineering'],
 ]);
 
 // Buckets granular `department` values into the broad fields above. Order matters, and is not
