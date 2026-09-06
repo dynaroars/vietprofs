@@ -8,6 +8,51 @@ Before researching or modifying the roster, review:
 
 ---
 
+## Next Agent Quickstart / Resumption Guide
+
+> [!IMPORTANT]
+> **Status at Session Close:**
+> - **Phase 1 (Expanded Surnames)**: **100% completed & pushed** across all 9 disciplines (roster at **1,381** profiles).
+> - **OpenAlex Daily Quota:** OpenAlex daily free-tier search quota resets at **00:00 UTC (midnight UTC)**.
+> - **Next Goal:** Execute **Phase 2 (High-Specificity Given-Name Discovery)**.
+
+### Immediate Steps to Resume:
+1. **Pull Latest Main:**
+   ```bash
+   git pull origin main
+   ```
+2. **Run Phase 2 Extraction (after 00:00 UTC quota reset):**
+   ```bash
+   npm run extract-openalex-leads -- --given-names-only
+   ```
+   *(Note: The extractor automatically merges new leads into existing queues and preserves all previous verification statuses).*
+3. **Inspect Lead Queues:**
+   ```bash
+   node -e 'const l = JSON.parse(require("fs").readFileSync("maintenance/openalex-leads.json")); for (const [k, v] of Object.entries(l.batches||{})) { const s = {}; (v.candidates||[]).forEach(c => s[c.status] = (s[c.status]||0)+1); console.log(k, s); }'
+   ```
+4. **Triage & Resolve Discipline by Discipline:**
+   - For each discipline in Phase 2 (`Computer Science`, `Engineering`, `Physical Sciences`, `Life Sciences`, `Medicine & Health`, `Agriculture & Environment`, `Social Sciences`, `Mathematics & Statistics`, `Other`):
+     - Check each pending lead against [ROSTER_MAINTENANCE.md](ROSTER_MAINTENANCE.md).
+     - For `included`: Add to `public/data.json` with next `vp-####` ID, add ISO timestamp to `maintenance/verification.json`, add any required overrides to `src/data.ts` or `scripts/validate-data.ts`.
+     - For `duplicate`: Mark `status: "duplicate"`, `matchedId: "vp-####"`, and `note` in `maintenance/openalex-leads.json`.
+     - For `excluded`: Mark `status: "excluded"` with specific `reason` in `maintenance/openalex-leads.json`.
+     - For `unresolved`: Mark `status: "unresolved"` with reason in `maintenance/openalex-leads.json`.
+   - Run verification and tests:
+     ```bash
+     npm test && npm run build && git diff --check
+     ```
+   - Update `TODO.md` checklist with exact counts and profile ID range.
+   - Commit and push immediately:
+     ```bash
+     git add TODO.md maintenance/openalex-leads.json maintenance/verification.json public/data.json scripts/validate-data.ts src/data.ts
+     git commit -m "Resolve OpenAlex Phase 2 <Discipline> leads"
+     git push origin main
+     ```
+5. **Advance to Phase 3 & Phase 4:**
+   - Once Phase 2 is complete, run Phase 3 (`npm run extract-openalex-leads -- --pages 3`) and Phase 4 (`npm run extract-openalex-leads -- --diacritics-only`).
+
+---
+
 ## Strategic Roadmap: 4 Discovery Phases
 
 This plan expands candidate discovery beyond the initial 17 surnames across 4 sequential, reproducible strategies:
