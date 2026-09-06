@@ -30,7 +30,43 @@
     "portrait": "portraits/001-hieu-bui-catholic-university-of-america.webp",
     "portraitSource": "https://engineering.catholic.edu/research-and-faculty/faculty-profiles/computer-science/hieu-bui/hieu-bui.jpg",
     "msInstitution": "Boise State University",
-    "msYear": 2011
+    "msYear": 2011,
+    "researchOverview": {
+      "text": "Hieu Bui studies molecular computing, DNA nanotechnology, and synthetic biology by modeling molecular interactions and DNA systems for computation and biomarker detection.",
+      "sources": [
+        "https://engineering.catholic.edu/research-and-faculty/faculty-profiles/computer-science/hieu-bui/buiresearch/index.html"
+      ],
+      "verifiedAt": "2026-09-06T20:28:54.000Z"
+    },
+    "selectedWork": [
+      {
+        "title": "Coupling Single Domain Antibodies to Catalytic Hairpin Assemblies for Homogeneous Assays",
+        "type": "paper",
+        "url": "https://doi.org/10.1002/adsr.202300111",
+        "selectionSource": "https://engineering.catholic.edu/research-and-faculty/faculty-profiles/computer-science/hieu-bui/index.html",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-06T20:40:00.000Z",
+        "year": 2023
+      },
+      {
+        "title": "DNA Microsystems for Biodiagnosis",
+        "type": "paper",
+        "url": "https://doi.org/10.3390/mi11040445",
+        "selectionSource": "https://engineering.catholic.edu/research-and-faculty/faculty-profiles/computer-science/hieu-bui/index.html",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-06T20:40:00.000Z",
+        "year": 2020
+      },
+      {
+        "title": "Fast and compact DNA logic circuits based on single-stranded gates using strand-displacing polymerase",
+        "type": "paper",
+        "url": "https://doi.org/10.1038/s41565-019-0544-5",
+        "selectionSource": "https://engineering.catholic.edu/research-and-faculty/faculty-profiles/computer-science/hieu-bui/index.html",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-06T20:40:00.000Z",
+        "year": 2019
+      }
+    ]
   },
   {
     "id": "vp-0002",
@@ -60,7 +96,43 @@
     "msYear": 2009,
     "websiteUrl": "https://www.myweb.ttu.edu/tnhondan/",
     "undergradInstitution": "Ho Chi Minh City University of Technology",
-    "undergradYear": 2006
+    "undergradYear": 2006,
+    "researchOverview": {
+      "text": "Tommy Dang studies virtual and augmented reality, big-data visualization, human-computer interaction, computer animation, and statistical data analysis.",
+      "sources": [
+        "https://www.depts.ttu.edu/cs/faculty/tommy_dang/index.php"
+      ],
+      "verifiedAt": "2026-09-06T20:28:54.000Z"
+    },
+    "selectedWork": [
+      {
+        "title": "TimeArcs: Visualizing Fluctuations in Dynamic Networks",
+        "type": "paper",
+        "url": "https://diglib.eg.org/handle/10.1111/cgf12882",
+        "selectionSource": "https://www.myweb.ttu.edu/tnhondan/",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-06T20:40:00.000Z",
+        "year": 2016
+      },
+      {
+        "title": "Transforming Scagnostics to Reveal Hidden Features",
+        "type": "paper",
+        "url": "https://doi.org/10.1109/TVCG.2014.2346572",
+        "selectionSource": "https://www.myweb.ttu.edu/tnhondan/",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-06T20:40:00.000Z",
+        "year": 2014
+      },
+      {
+        "title": "TimeSeer: Scagnostics for High-Dimensional Time Series",
+        "type": "paper",
+        "url": "https://doi.org/10.1109/TVCG.2012.128",
+        "selectionSource": "https://www.myweb.ttu.edu/tnhondan/",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-06T20:40:00.000Z",
+        "year": 2012
+      }
+    ]
   },
   {
     "id": "vp-0003",
@@ -95,7 +167,43 @@
     "portrait": "portraits/003-tri-dao-princeton-university.webp",
     "portraitSource": "https://engineering.princeton.edu/wp-content/uploads/2025/02/tri-dao-card-1-150x150.png",
     "msInstitution": "Stanford University",
-    "undergradInstitution": "Stanford University"
+    "undergradInstitution": "Stanford University",
+    "researchOverview": {
+      "text": "Tri Dao studies sequence models with long-range memory and structured matrices for compact deep-learning models.",
+      "sources": [
+        "https://engineering.princeton.edu/faculty/tri-dao"
+      ],
+      "verifiedAt": "2026-09-06T20:28:54.000Z"
+    },
+    "selectedWork": [
+      {
+        "title": "Marconi: Prefix Caching for the Era of Hybrid LLMs",
+        "type": "paper",
+        "url": "https://arxiv.org/abs/2411.19379",
+        "selectionSource": "https://tridao.me/",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-06T20:40:00.000Z",
+        "year": 2025
+      },
+      {
+        "title": "FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision",
+        "type": "paper",
+        "url": "https://arxiv.org/abs/2407.08608",
+        "selectionSource": "https://tridao.me/",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-06T20:40:00.000Z",
+        "year": 2024
+      },
+      {
+        "title": "Mamba: Linear-Time Sequence Modeling with Selective State Spaces",
+        "type": "paper",
+        "url": "https://arxiv.org/abs/2312.00752",
+        "selectionSource": "https://tridao.me/",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-06T20:40:00.000Z",
+        "year": 2024
+      }
+    ]
   },
   {
     "id": "vp-0004",
@@ -123,7 +231,43 @@
     "undergradYear": 2007,
     "country": "United States",
     "portrait": "portraits/004-thang-n-dinh-virginia-commonwealth-university.webp",
-    "portraitSource": "https://thang-dinh.github.io/img/thang.png"
+    "portraitSource": "https://thang-dinh.github.io/img/thang.png",
+    "researchOverview": {
+      "text": "Thang Dinh studies security and scalability in complex systems using quantum intelligence, quantum and graph machine learning, and applications to critical infrastructures, networks, and blockchain systems.",
+      "sources": [
+        "https://thang-dinh.github.io/"
+      ],
+      "verifiedAt": "2026-09-06T20:28:54.000Z"
+    },
+    "selectedWork": [
+      {
+        "title": "CoSpaN: Permissionless Consensus in Sparse Networks",
+        "type": "paper",
+        "url": "https://thang-dinh.github.io/",
+        "selectionSource": "https://thang-dinh.github.io/",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-06T20:40:00.000Z",
+        "year": 2026
+      },
+      {
+        "title": "Differentiable Spectral Normalization for Large-Scale Ising Optimization",
+        "type": "paper",
+        "url": "https://thang-dinh.github.io/",
+        "selectionSource": "https://thang-dinh.github.io/",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-06T20:40:00.000Z",
+        "year": 2026
+      },
+      {
+        "title": "Scalable Quantum-Inspired Optimization through Dynamic Qubit Compression",
+        "type": "paper",
+        "url": "https://arxiv.org/abs/2412.18571",
+        "selectionSource": "https://thang-dinh.github.io/",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-06T20:40:00.000Z",
+        "year": 2025
+      }
+    ]
   },
   {
     "id": "vp-0005",
@@ -173,7 +317,14 @@
     "portrait": "portraits/005-minh-n-do-university-of-illinois-at-urbana-champaign.webp",
     "portraitSource": "https://minhdo.ece.illinois.edu/minhdo_research.jpg",
     "undergradInstitution": "University of Canberra",
-    "undergradYear": 1997
+    "undergradYear": 1997,
+    "researchOverview": {
+      "text": "Minh Do develops multidimensional signal-processing tools and applies geometric representations to image processing, image formation, and reconstruction from multiple sensors.",
+      "sources": [
+        "https://compimg.ece.illinois.edu/research/"
+      ],
+      "verifiedAt": "2026-09-06T20:28:54.000Z"
+    }
   },
   {
     "id": "vp-0006",
@@ -202,7 +353,43 @@
     "portraitSource": "https://zyrcant.github.io/authors/admin/avatar_hufb6bb054339788fce68249343291e86e_366264_270x270_fill_q75_lanczos_center.jpg",
     "msInstitution": "University of Texas at Dallas",
     "msYear": 2019,
-    "lastUpdatedAt": "2026-08-28T19:03:20.824Z"
+    "lastUpdatedAt": "2026-08-28T19:03:20.824Z",
+    "researchOverview": {
+      "text": "Tiffany Do studies human-centered AI, augmented and virtual reality, virtual avatars, applied language models, and user design, including how identity shapes interactions with these technologies.",
+      "sources": [
+        "https://drexel.edu/cci/about/directory/D/Do-Tiffany-D/"
+      ],
+      "verifiedAt": "2026-09-06T20:28:54.000Z"
+    },
+    "selectedWork": [
+      {
+        "title": "PAIGE: Examining Learning Outcomes and Experiences with Personalized AI-Generated Educational Podcasts",
+        "type": "paper",
+        "url": "https://zyrcant.github.io/publication/do-2024-paige/",
+        "selectionSource": "https://zyrcant.github.io/",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-06T20:50:00.000Z",
+        "year": 2025
+      },
+      {
+        "title": "Cultural Reflections in Virtual Reality: The Effects of User Ethnicity in Avatar Matching Experiences on Sense of Embodiment",
+        "type": "paper",
+        "url": "https://zyrcant.github.io/publication/do-cultural-2024/",
+        "selectionSource": "https://zyrcant.github.io/",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-06T20:50:00.000Z",
+        "year": 2024
+      },
+      {
+        "title": "Stepping into the Right Shoes: The Effects of User-Matched Avatar Ethnicity and Gender on Sense of Embodiment in Virtual Reality",
+        "type": "paper",
+        "url": "https://zyrcant.github.io/publication/do-stepping-2024-a/",
+        "selectionSource": "https://zyrcant.github.io/",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-06T20:50:00.000Z",
+        "year": 2024
+      }
+    ]
   },
   {
     "id": "vp-0007",
@@ -260,7 +447,43 @@
     ],
     "portrait": "portraits/007-anhai-doan-university-of-wisconsin-madison.webp",
     "portraitSource": "https://pages.cs.wisc.edu/~anhai/pictures/AnHaiDoan.png",
-    "websiteUrl": "https://pages.cs.wisc.edu/~anhai/bio/"
+    "websiteUrl": "https://pages.cs.wisc.edu/~anhai/bio/",
+    "researchOverview": {
+      "text": "AnHai Doan studies data exploration, cleaning, matching, and integration as foundational steps in data-science pipelines and preparation of data for AI models.",
+      "sources": [
+        "https://pages.cs.wisc.edu/~anhai/"
+      ],
+      "verifiedAt": "2026-09-06T20:28:54.000Z"
+    },
+    "recentWork": [
+      {
+        "title": "Columbo: Expanding Abbreviated Column Names for Tabular Data Using Large Language Models",
+        "type": "paper",
+        "url": "https://aclanthology.org/2025.findings-emnlp.1348/",
+        "selectionSource": "https://pages.cs.wisc.edu/~anhai/publications.html",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T20:50:00.000Z",
+        "year": 2025
+      },
+      {
+        "title": "Sparkly: A Simple yet Surprisingly Strong TF/IDF Blocker for Entity Matching",
+        "type": "paper",
+        "url": "https://www.vldb.org/pvldb/vol16/p1507-paulsen.pdf",
+        "selectionSource": "https://pages.cs.wisc.edu/~anhai/publications.html",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T20:50:00.000Z",
+        "year": 2023
+      },
+      {
+        "title": "Toward Data Cleaning with a Target Accuracy: A Case Study for Value Normalization",
+        "type": "paper",
+        "url": "https://pages.cs.wisc.edu/~anhai/publications.html",
+        "selectionSource": "https://pages.cs.wisc.edu/~anhai/publications.html",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T20:50:00.000Z",
+        "year": 2022
+      }
+    ]
   },
   {
     "id": "vp-0008",
@@ -297,7 +520,43 @@
     ],
     "portrait": "portraits/008-nghia-hoang-washington-state-university.webp",
     "portraitSource": "https://s3.wp.wsu.edu/uploads/sites/908/2022/05/Nghia-square.png",
-    "lastUpdatedAt": "2026-08-28T19:09:17.413Z"
+    "lastUpdatedAt": "2026-08-28T19:09:17.413Z",
+    "researchOverview": {
+      "text": "Nghia Hoang develops machine-learning methods for uncertainty calibration, cross-modal fine-tuning, offline optimization, and materials discovery.",
+      "sources": [
+        "https://htnghia87.github.io/"
+      ],
+      "verifiedAt": "2026-09-06T20:28:54.000Z"
+    },
+    "recentWork": [
+      {
+        "title": "Black-Box Optimization from Small Offline Datasets via Meta Learning with Synthetic Tasks",
+        "type": "paper",
+        "url": "https://htnghia87.github.io/publication/aistats26b",
+        "selectionSource": "https://htnghia87.github.io/publications/",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T20:50:00.000Z",
+        "year": 2026
+      },
+      {
+        "title": "Rethinking Cross-Modal Fine-Tuning: Optimizing the Interaction between Feature Alignment and Target Fitting",
+        "type": "paper",
+        "url": "https://htnghia87.github.io/publication/aistats26a",
+        "selectionSource": "https://htnghia87.github.io/publications/",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T20:50:00.000Z",
+        "year": 2026
+      },
+      {
+        "title": "ForeSWE: Forecasting Snow-Water Equivalent with an Uncertainty-Aware Attention Model",
+        "type": "paper",
+        "url": "https://htnghia87.github.io/publication/aaai26b",
+        "selectionSource": "https://htnghia87.github.io/publications/",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T20:50:00.000Z",
+        "year": 2025
+      }
+    ]
   },
   {
     "id": "vp-0009",
@@ -327,7 +586,43 @@
     "msInstitution": "Chonnam National University, South Korea",
     "msYear": 2014,
     "undergradInstitution": "University of Science, Vietnam National University Ho Chi Minh City",
-    "undergradYear": 2010
+    "undergradYear": 2010,
+    "researchOverview": {
+      "text": "Thang Hoang studies applied cryptography, security and privacy, and biometrics.",
+      "sources": [
+        "https://website.cs.vt.edu/people/faculty/thang-hoang.html"
+      ],
+      "verifiedAt": "2026-09-06T20:28:54.000Z"
+    },
+    "recentWork": [
+      {
+        "title": "Efficient Single-Round Obfuscation of Search and Result Patterns in Searchable Encryption",
+        "type": "paper",
+        "url": "https://thanghoang.github.io/",
+        "selectionSource": "https://thanghoang.github.io/",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T21:00:00.000Z",
+        "year": 2026
+      },
+      {
+        "title": "A Full Threshold NIST PQC-Compliant Framework for Distributed Trust in Federal Public Key Infrastructure",
+        "type": "paper",
+        "url": "https://thanghoang.github.io/",
+        "selectionSource": "https://thanghoang.github.io/",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T21:00:00.000Z",
+        "year": 2026
+      },
+      {
+        "title": "Trustworthy Federated Learning with Local Differential Privacy",
+        "type": "paper",
+        "url": "https://thanghoang.github.io/",
+        "selectionSource": "https://thanghoang.github.io/",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T21:00:00.000Z",
+        "year": 2025
+      }
+    ]
   },
   {
     "id": "vp-0010",
@@ -363,7 +658,43 @@
       }
     ],
     "portrait": "portraits/010-viet-tung-hoang-florida-state-university.webp",
-    "portraitSource": "https://www.cs.fsu.edu/~tvhoang/avatar2.jpg"
+    "portraitSource": "https://www.cs.fsu.edu/~tvhoang/avatar2.jpg",
+    "researchOverview": {
+      "text": "Viet Tung Hoang studies the security of real-world cryptographic schemes and the performance gap between provable-security designs and heuristic ones.",
+      "sources": [
+        "https://www.cs.fsu.edu/~tvhoang/"
+      ],
+      "verifiedAt": "2026-09-06T20:28:54.000Z"
+    },
+    "recentWork": [
+      {
+        "title": "Rethinking Tamper-Evident Logging: A High-Performance, Co-Designed Auditing System",
+        "type": "paper",
+        "url": "https://www.cs.fsu.edu/~tvhoang/research.html",
+        "selectionSource": "https://www.cs.fsu.edu/~tvhoang/research.html",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T21:00:00.000Z",
+        "year": 2025
+      },
+      {
+        "title": "The OCH Authenticated Encryption Scheme",
+        "type": "paper",
+        "url": "https://www.cs.fsu.edu/~tvhoang/research.html",
+        "selectionSource": "https://www.cs.fsu.edu/~tvhoang/research.html",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T21:00:00.000Z",
+        "year": 2025
+      },
+      {
+        "title": "Robust AE with Committing Security",
+        "type": "paper",
+        "url": "https://www.cs.fsu.edu/~tvhoang/research.html",
+        "selectionSource": "https://www.cs.fsu.edu/~tvhoang/research.html",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T21:00:00.000Z",
+        "year": 2024
+      }
+    ]
   },
   {
     "id": "vp-0011",
@@ -390,7 +721,43 @@
     "portrait": "portraits/011-dung-t-huynh-university-of-texas-at-dallas.webp",
     "portraitSource": "https://profiles.utdallas.edu/storage/media/82/conversions/2477_0_14791-medium.jpg",
     "msInstitution": "University of Saarland",
-    "msYear": 1977
+    "msYear": 1977,
+    "researchOverview": {
+      "text": "Dung Huynh studies computational complexity theory, automata and formal languages, concurrency theory, communications networks and protocols, parallel computation, and software metrics.",
+      "sources": [
+        "https://profiles.utdallas.edu/huynh"
+      ],
+      "verifiedAt": "2026-09-06T20:28:54.000Z"
+    },
+    "recentWork": [
+      {
+        "title": "Minimum Edge Interference in Wireless Sensor Networks",
+        "type": "paper",
+        "url": "https://profiles.utdallas.edu/huynh",
+        "selectionSource": "https://profiles.utdallas.edu/huynh",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T21:00:00.000Z",
+        "year": 2010
+      },
+      {
+        "title": "Minimum Total Node Interference in Wireless Sensor Networks",
+        "type": "paper",
+        "url": "https://profiles.utdallas.edu/huynh",
+        "selectionSource": "https://profiles.utdallas.edu/huynh",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T21:00:00.000Z",
+        "year": 2010
+      },
+      {
+        "title": "Minimum Data Aggregation Schedule in Wireless Sensor Networks",
+        "type": "paper",
+        "url": "https://profiles.utdallas.edu/huynh",
+        "selectionSource": "https://profiles.utdallas.edu/huynh",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T21:00:00.000Z",
+        "year": 2010
+      }
+    ]
   },
   {
     "id": "vp-0012",
@@ -418,7 +785,44 @@
     "country": "United States",
     "portrait": "portraits/012-truong-son-hy-university-of-alabama-at-birmingham.webp",
     "portraitSource": "https://www.uab.edu/cas/computerscience/images/Images/Faculty/hytruong-son-333x500.jpg",
-    "websiteUrl": "https://hytruongson.github.io/HySonLab/"
+    "websiteUrl": "https://hytruongson.github.io/HySonLab/",
+    "researchOverview": {
+      "text": "Truong-Son Hy studies AI for science and engineering, including graph learning and generative models for bioinformatics, drug discovery, drug repurposing, and medical AI.",
+      "sources": [
+        "https://www.uab.edu/cas/computerscience/people/faculty-directory/faculty/truong-son-hy",
+        "https://hytruongson.github.io/HySonLab/"
+      ],
+      "verifiedAt": "2026-09-06T20:28:54.000Z"
+    },
+    "selectedWork": [
+      {
+        "title": "RainbowPlus: Enhancing Adversarial Prompt Generation via Evolutionary Quality-Diversity Search",
+        "type": "paper",
+        "url": "https://hytruongson.github.io/HySonLab/",
+        "selectionSource": "https://hytruongson.github.io/HySonLab/",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-06T21:00:00.000Z",
+        "year": 2026
+      },
+      {
+        "title": "From SQL to Knowledge Graphs: An LLM-Driven Multi-Agent Approach with Data Schema Improvement",
+        "type": "paper",
+        "url": "https://hytruongson.github.io/HySonLab/",
+        "selectionSource": "https://hytruongson.github.io/HySonLab/",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-06T21:00:00.000Z",
+        "year": 2026
+      },
+      {
+        "title": "DiFlow-TTS: Discrete Flow Matching with Factorized Speech Tokens for Low-Latency Zero-Shot Text-To-Speech",
+        "type": "paper",
+        "url": "https://hytruongson.github.io/HySonLab/",
+        "selectionSource": "https://hytruongson.github.io/HySonLab/",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-06T21:00:00.000Z",
+        "year": 2026
+      }
+    ]
   },
   {
     "id": "vp-0013",
@@ -457,7 +861,14 @@
       }
     ],
     "portrait": "portraits/013-hung-manh-la-university-of-nevada-reno.webp",
-    "portraitSource": "https://www.unr.edu/main/images/colleges-schools/engineering/cse/profiles/HungLa.jpg"
+    "portraitSource": "https://www.unr.edu/main/images/colleges-schools/engineering/cse/profiles/HungLa.jpg",
+    "researchOverview": {
+      "text": "Hung La researches advanced robotics and automation within computer science and engineering.",
+      "sources": [
+        "https://www.unr.edu/cse/people/hung-la"
+      ],
+      "verifiedAt": "2026-09-06T20:28:54.000Z"
+    }
   },
   {
     "id": "vp-0014",
@@ -492,7 +903,14 @@
     ],
     "portrait": "portraits/014-hung-le-university-of-massachusetts-amherst-university-of-massachusetts-amherst.webp",
     "portraitSource": "https://www.cics.umass.edu/sites/g/files/ijdqth246/files/styles/1_1_l/public/2022-10/hung_le.jpg?h=8a0e61cf&itok=CZj4DXzV",
-    "websiteUrl": "https://hunglvosu.github.io/"
+    "websiteUrl": "https://hunglvosu.github.io/",
+    "researchOverview": {
+      "text": "Hung Le designs algorithms for graph problems, including approximation algorithms, sparse and light networks, and theoretical guarantees for local-search heuristics.",
+      "sources": [
+        "https://www.cics.umass.edu/about/directory/hung-le"
+      ],
+      "verifiedAt": "2026-09-06T20:28:54.000Z"
+    }
   },
   {
     "id": "vp-0015",
@@ -531,7 +949,14 @@
       }
     ],
     "portrait": "portraits/015-ngan-hoang-le-university-of-arkansas.webp",
-    "portraitSource": "https://campusdata.uark.edu/resources/images/articles/2025-04-25_04-38-48-PM_77380.jpg"
+    "portraitSource": "https://campusdata.uark.edu/resources/images/articles/2025-04-25_04-38-48-PM_77380.jpg",
+    "researchOverview": {
+      "text": "Ngan Hoang Le studies artificial intelligence and computer vision, including robotic interaction with unfamiliar objects and visual tracking when people move behind obstacles.",
+      "sources": [
+        "https://news.uark.edu/articles/77380/technology-ventures-inventor-s-spotlight-ngan-le"
+      ],
+      "verifiedAt": "2026-09-06T20:28:54.000Z"
+    }
   },
   {
     "id": "vp-0016",
@@ -557,7 +982,15 @@
     "country": "United States",
     "portrait": "portraits/016-thai-le-indiana-university-bloomington.webp",
     "portraitSource": "https://luddy.iu.edu/images/people/tle.jpg",
-    "lastUpdatedAt": "2026-09-05T02:43:50.000Z"
+    "lastUpdatedAt": "2026-09-05T02:43:50.000Z",
+    "researchOverview": {
+      "text": "Thai Le studies the trustworthiness of AI and machine-learning models, particularly in natural-language processing, with work on robustness, safety, transparency, and model interpretability.",
+      "sources": [
+        "https://luddy.iu.edu/people/le-thai.html",
+        "https://lethaiq.github.io/tql3/"
+      ],
+      "verifiedAt": "2026-09-06T20:28:54.000Z"
+    }
   },
   {
     "id": "vp-0017",
@@ -587,7 +1020,14 @@
     "portraitSource": "https://computerscience.nmsu.edu/facultydirectory/_images/photo_tuanle-250x250.jpg",
     "undergradInstitution": "Ho Chi Minh City University of Technology",
     "msInstitution": "Ho Chi Minh City University of Technology",
-    "lastUpdatedAt": "2026-08-28T23:37:39.161Z"
+    "lastUpdatedAt": "2026-08-28T23:37:39.161Z",
+    "researchOverview": {
+      "text": "Tuan Le researches data mining and machine learning, with a focus on text mining, visualization, and graph mining.",
+      "sources": [
+        "https://computerscience.nmsu.edu/facultydirectory/individual-bio-pages/tuan-le.html"
+      ],
+      "verifiedAt": "2026-09-06T20:28:54.000Z"
+    }
   },
   {
     "id": "vp-0018",
@@ -625,7 +1065,14 @@
       }
     ],
     "portrait": "portraits/018-khoa-luu-university-of-arkansas.webp",
-    "portraitSource": "https://campusdata.uark.edu/resources/images/FacultyStaffProfile/khoaluu.jpg"
+    "portraitSource": "https://campusdata.uark.edu/resources/images/FacultyStaffProfile/khoaluu.jpg",
+    "researchOverview": {
+      "text": "Khoa Luu's lab researches computer vision, deep learning, biometrics, machine intelligence, and quantum machine learning.",
+      "sources": [
+        "https://uark-cviu.github.io/"
+      ],
+      "verifiedAt": "2026-09-06T20:28:54.000Z"
+    }
   },
   {
     "id": "vp-0019",
@@ -660,7 +1107,15 @@
     "portrait": "portraits/019-truong-nghiem-university-of-central-florida.webp",
     "portraitSource": "https://www.cecs.ucf.edu/web/wp-content/uploads/2024/08/Truong-Ngheim-cropped-1x1_8.jpg",
     "msInstitution": "University of Pennsylvania",
-    "lastUpdatedAt": "2026-09-05T02:43:50.000Z"
+    "lastUpdatedAt": "2026-09-05T02:43:50.000Z",
+    "researchOverview": {
+      "text": "Truong Nghiem studies intelligent cyber-physical systems by integrating control, optimization, machine learning, and computation for digital twins, smart buildings, energy systems, autonomous vehicles, and robotics.",
+      "sources": [
+        "https://www.cecs.ucf.edu/faculty/truong-nghiem/",
+        "https://nxtlab.org/"
+      ],
+      "verifiedAt": "2026-09-06T20:28:54.000Z"
+    }
   },
   {
     "id": "vp-0020",
@@ -688,7 +1143,14 @@
     "country": "United States",
     "portrait": "portraits/020-truong-x-tran-penn-state-harrisburg.webp",
     "portraitSource": "https://harrisburg.psu.edu/sites/harrisburg/files/styles/person_headshot/public/tran-truong5.jpg?itok=tK1-mNYu",
-    "lastUpdatedAt": "2026-08-28T23:41:02.395Z"
+    "lastUpdatedAt": "2026-08-28T23:41:02.395Z",
+    "researchOverview": {
+      "text": "Truong Tran's Trustworthy AI Lab develops AI, sensing, and monitoring technologies for healthcare, smart communities, cyber-physical systems, and intelligent infrastructure.",
+      "sources": [
+        "https://sites.psu.edu/truongtran/"
+      ],
+      "verifiedAt": "2026-09-06T20:28:54.000Z"
+    }
   },
   {
     "id": "vp-0021",

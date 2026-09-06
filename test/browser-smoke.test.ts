@@ -206,16 +206,24 @@ test('pinned searches and recently viewed profiles stay in browser storage', asy
   assert.equal(await pin.isDisabled(), false);
   await pin.click();
   const shelf = page.locator('#browser-shelf');
-  const pinned = shelf.locator('.browser-shelf-group').filter({ hasText: 'Pinned:' }).locator('a');
+  const pinned = shelf.locator('.browser-shelf-group').filter({ hasText: 'Pinned' }).locator('a');
   assert.equal(await pinned.count(), 1);
   assert.match(await pinned.getAttribute('href'), /q=ThanhVu/);
+  const clearPinned = shelf.locator('button[aria-label="Clear pinned searches"]');
+  assert.equal(await clearPinned.count(), 1);
 
   const profileHref = await page.locator('.entry-name').first().getAttribute('href');
   await page.goto(new URL(profileHref!, `${baseUrl}/`).href, { waitUntil: 'networkidle' });
   await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
-  const recent = shelf.locator('.browser-shelf-group').filter({ hasText: 'Recent:' }).locator('a');
+  const recent = shelf.locator('.browser-shelf-group').filter({ hasText: 'Recent' }).locator('a');
   assert.equal(await recent.count(), 1);
   assert.equal(await recent.getAttribute('href'), profileHref);
+  const clearRecent = shelf.locator('button[aria-label="Clear recent profiles"]');
+  assert.equal(await clearRecent.count(), 1);
+  await clearPinned.click();
+  assert.equal(await shelf.locator('.browser-shelf-group').filter({ hasText: 'Pinned' }).locator('a').count(), 0);
+  await clearRecent.click();
+  assert.equal(await shelf.isHidden(), true);
   await page.evaluate(() => {
     localStorage.removeItem('vietprofs:pinned-searches');
     localStorage.removeItem('vietprofs:recent-profiles');

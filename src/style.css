@@ -13,6 +13,8 @@
   --focus-ring: #2563eb;
   --favorite-color: #fbbf24;
   --favorite-hover: #fcd34d;
+  --danger-color: #b42318;
+  --danger-hover: #8f1d14;
   --bamboo-green: #2e9e64;
   --bamboo-green-hover: #1d7a4c;
 
@@ -47,6 +49,8 @@
     --tag-bg: #232a31;
     --tag-text: #cbd5e1;
     --focus-ring: #7dd3fc;
+    --danger-color: #ff6b6b;
+    --danger-hover: #ff9a9a;
   }
 }
 
@@ -373,17 +377,16 @@ h1 {
 
 .browser-shelf-clear {
   border: 0;
-  padding: 0.15rem 0.35rem;
+  padding: 0 0.1rem;
   background: transparent;
-  color: var(--text-muted);
+  color: var(--danger-color);
   font: 600 var(--text-xs) var(--font-body);
   cursor: pointer;
 }
 
 .browser-shelf-clear:hover,
 .browser-shelf-clear:focus-visible {
-  color: var(--bamboo-green);
-  text-decoration: underline;
+  color: var(--danger-hover);
 }
 
 .browser-shelf-chip {
