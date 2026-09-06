@@ -1330,7 +1330,44 @@
     "msInstitution": "University of Wyoming",
     "websiteUrl": "https://anhnguyen.me/",
     "linkedinUrl": "https://www.linkedin.com/in/anhng8/",
-    "lastUpdatedAt": "2026-09-05T02:43:50.000Z"
+    "lastUpdatedAt": "2026-09-05T02:43:50.000Z",
+    "researchOverview": {
+      "text": "Anh Totti Nguyen studies how artificial intelligence systems fail and how to make them more trustworthy, explainable, and understandable.",
+      "sources": [
+        "https://anhnguyen.me/about/",
+        "https://anhnguyen.me/"
+      ],
+      "verifiedAt": "2026-09-06T22:20:00.000Z"
+    },
+    "selectedWork": [
+      {
+        "title": "PageGuide: Browser Extension to Assist Users in Navigating a Webpage and Locating Information",
+        "type": "project",
+        "url": "https://anhnguyen.me/",
+        "selectionSource": "https://anhnguyen.me/",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-06T22:20:00.000Z",
+        "year": 2026
+      },
+      {
+        "title": "SketchVLM: Vision-Language Models Can Annotate Images to Explain Thoughts and Guide Users",
+        "type": "project",
+        "url": "https://anhnguyen.me/",
+        "selectionSource": "https://anhnguyen.me/",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-06T22:20:00.000Z",
+        "year": 2026
+      },
+      {
+        "title": "Improving Human Verification of LLM Reasoning through Interactive Explanation Interfaces",
+        "type": "project",
+        "url": "https://anhnguyen.me/",
+        "selectionSource": "https://anhnguyen.me/",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-06T22:20:00.000Z",
+        "year": 2026
+      }
+    ]
   },
   {
     "id": "vp-0022",
@@ -1386,7 +1423,14 @@
       }
     ],
     "portrait": "portraits/022-clark-t-c-nguyen-university-of-california-berkeley.webp",
-    "portraitSource": "https://bsac.berkeley.edu/sites/default/files/styles/openberkeley_brand_widgets_square/public/20250729_nguyen_avl_3681_crop.jpg"
+    "portraitSource": "https://bsac.berkeley.edu/sites/default/files/styles/openberkeley_brand_widgets_square/public/20250729_nguyen_avl_3681_crop.jpg",
+    "researchOverview": {
+      "text": "Clark Nguyen develops micromechanical and radio-frequency devices, including resonators and filters for sensing, timing, and wireless systems.",
+      "sources": [
+        "https://www2.eecs.berkeley.edu/Faculty/Homepages/ctnguyen.html"
+      ],
+      "verifiedAt": "2026-09-06T22:20:00.000Z"
+    }
   },
   {
     "id": "vp-0023",
@@ -1450,7 +1494,44 @@
     ],
     "portrait": "portraits/024-huy-le-nguyen-northeastern-university.webp",
     "portraitSource": "https://s44427.pcdn.co/wp-content/uploads/2016/08/Nguyen_Huy-Le_linderpix-53847-1200x800-1.jpg",
-    "msInstitution": "Massachusetts Institute of Technology"
+    "msInstitution": "Massachusetts Institute of Technology",
+    "researchOverview": {
+      "text": "Huy Le Nguyen studies algorithms for optimization, streaming, privacy, and related problems in theoretical computer science.",
+      "sources": [
+        "https://www.khoury.northeastern.edu/people/huy-le-nguyen/",
+        "https://www.ccs.neu.edu/home/hlnguyen/publications.html"
+      ],
+      "verifiedAt": "2026-09-06T22:20:00.000Z"
+    },
+    "recentWork": [
+      {
+        "title": "One-Sided Matrix Completion from Ultra-Sparse Samples",
+        "type": "paper",
+        "url": "https://www.khoury.northeastern.edu/people/huy-le-nguyen/",
+        "selectionSource": "https://www.khoury.northeastern.edu/people/huy-le-nguyen/",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T22:20:00.000Z",
+        "year": 2026
+      },
+      {
+        "title": "Lean and Mean Adaptive Optimization via Subset-Norm and Subspace-Momentum with Convergence Guarantees",
+        "type": "paper",
+        "url": "https://proceedings.mlr.press/v267/nguyen25f.html",
+        "selectionSource": "https://www.khoury.northeastern.edu/people/huy-le-nguyen/",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T22:20:00.000Z",
+        "year": 2025
+      },
+      {
+        "title": "Maximum Coverage in Turnstile Streams with Applications to Fingerprinting Measures",
+        "type": "paper",
+        "url": "https://proceedings.mlr.press/v267/ene25a.html",
+        "selectionSource": "https://www.khoury.northeastern.edu/people/huy-le-nguyen/",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T22:20:00.000Z",
+        "year": 2025
+      }
+    ]
   },
   {
     "id": "vp-0025",
@@ -1480,7 +1561,44 @@
     "undergradYear": 2012,
     "country": "United States",
     "portrait": "portraits/025-khanh-nguyen-texas-a-m-university.webp",
-    "portraitSource": "https://khanhtn.engr.tamu.edu/wp-content/uploads/sites/205/2020/10/Khanh5B.jpg"
+    "portraitSource": "https://khanhtn.engr.tamu.edu/wp-content/uploads/sites/205/2020/10/Khanh5B.jpg",
+    "researchOverview": {
+      "text": "Khanh Nguyen develops programming-language, compiler, and runtime techniques to improve the resource efficiency, scalability, and tail latency of big-data and machine-learning workloads.",
+      "sources": [
+        "https://khanhtn.engr.tamu.edu/",
+        "https://engineering.tamu.edu/cse/profiles/Nguyen-Khanh.html"
+      ],
+      "verifiedAt": "2026-09-06T22:35:00.000Z"
+    },
+    "selectedWork": [
+      {
+        "title": "Gerenuk: Thin Computation over Big Native Data Using Speculative Program Transformation",
+        "type": "paper",
+        "url": "https://engineering.tamu.edu/cse/profiles/Nguyen-Khanh.html",
+        "selectionSource": "https://engineering.tamu.edu/cse/profiles/Nguyen-Khanh.html",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-06T22:35:00.000Z",
+        "year": 2019
+      },
+      {
+        "title": "Skyway: Connecting Managed Heaps in Distributed Big Data Systems",
+        "type": "paper",
+        "url": "https://engineering.tamu.edu/cse/profiles/Nguyen-Khanh.html",
+        "selectionSource": "https://engineering.tamu.edu/cse/profiles/Nguyen-Khanh.html",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-06T22:35:00.000Z",
+        "year": 2018
+      },
+      {
+        "title": "Yak: A High-Performance Big-Data-Friendly Garbage Collector",
+        "type": "paper",
+        "url": "https://engineering.tamu.edu/cse/profiles/Nguyen-Khanh.html",
+        "selectionSource": "https://engineering.tamu.edu/cse/profiles/Nguyen-Khanh.html",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-06T22:35:00.000Z",
+        "year": 2016
+      }
+    ]
   },
   {
     "id": "vp-0026",
@@ -1511,7 +1629,14 @@
     "portrait": "portraits/026-anh-nguyen-university-of-montana-university-of-montana.webp",
     "portraitSource": "https://umimpact.umt.edu/files-asset/36656872/Nguyen_Anh.jpg/",
     "msInstitution": "Chonnam National University",
-    "msYear": 2012
+    "msYear": 2012,
+    "researchOverview": {
+      "text": "Anh Nguyen develops mobile cyber-physical systems that combine sensing, multimodal data interpretation, and intervention for smart health, human-computer interaction, and Internet-of-Things applications.",
+      "sources": [
+        "https://mcyphi.org/"
+      ],
+      "verifiedAt": "2026-09-06T22:35:00.000Z"
+    }
   },
   {
     "id": "vp-0027",
@@ -1569,7 +1694,43 @@
     "portrait": "portraits/028-luan-v-nguyen-university-of-dayton.webp",
     "portraitSource": "https://udayton.edu/directory/engineering/computerscience/images/nguyen-luan-2020.jpg",
     "msInstitution": "The Catholic University of America",
-    "msYear": 2012
+    "msYear": 2012,
+    "researchOverview": {
+      "text": "Luan Nguyen develops formal-verification techniques and software tools to enforce safety, reliability, security, and resilience in autonomous cyber-physical systems.",
+      "sources": [
+        "https://udayton.edu/directory/engineering/computerscience/nguyen-luan.php"
+      ],
+      "verifiedAt": "2026-09-06T22:35:00.000Z"
+    },
+    "selectedWork": [
+      {
+        "title": "Detecting Security Leaks in Hybrid Systems with Information Flow Analysis",
+        "type": "paper",
+        "url": "https://udayton.edu/directory/engineering/computerscience/nguyen-luan.php",
+        "selectionSource": "https://udayton.edu/directory/engineering/computerscience/nguyen-luan.php",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-06T22:35:00.000Z",
+        "year": 2019
+      },
+      {
+        "title": "Star-Based Reachability Analysis of Deep Neural Networks",
+        "type": "paper",
+        "url": "https://udayton.edu/directory/engineering/computerscience/nguyen-luan.php",
+        "selectionSource": "https://udayton.edu/directory/engineering/computerscience/nguyen-luan.php",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-06T22:35:00.000Z",
+        "year": 2019
+      },
+      {
+        "title": "Decentralized Real-Time Safety Verification for Distributed Cyber-Physical Systems",
+        "type": "paper",
+        "url": "https://udayton.edu/directory/engineering/computerscience/nguyen-luan.php",
+        "selectionSource": "https://udayton.edu/directory/engineering/computerscience/nguyen-luan.php",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-06T22:35:00.000Z",
+        "year": 2019
+      }
+    ]
   },
   {
     "id": "vp-0029",

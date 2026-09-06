@@ -129,9 +129,9 @@ completion while temporary failures or unresolved verification remain.
 
 ## Batch checklist
 
-- [ ] Batch 1 — `vp-0001`–`vp-0020`; 20 people; ledger status `in_progress`; source collection pending.
+- [x] ~~Batch 1 — `vp-0001`–`vp-0020`; 20 people; all outcomes complete~~ — published in `8d7be62`; counts: 20 verified overviews, 16 verified work sections, 4 no-suitable-evidence work searches; 0 unresolved retries.
 
-Progress note: source collection completed for batch 1; all 20 research overviews and all 20 work searches now have completed outcomes: 16 verified sections and 4 no-suitable-evidence results. Batch publication is pending the final validation and commit.
+Progress note: batch 1 was published in `8d7be62`; all 20 research overviews and all 20 work searches have completed outcomes: 16 verified sections and 4 no-suitable-evidence results. Batch 2 source collection is complete and its enrichment pass is in progress.
 
 Populate at execution time from the saved ID snapshot. Each entry must include batch number,
 ledger reference or exact IDs, outcome counts, remaining retries, and publication status.

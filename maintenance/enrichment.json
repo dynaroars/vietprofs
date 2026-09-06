@@ -1506,8 +1506,10 @@
         "vp-0019",
         "vp-0020"
       ],
-      "status": "in_progress",
-      "startedAt": "2026-09-06T15:06:19.462Z"
+      "status": "complete",
+      "startedAt": "2026-09-06T15:06:19.462Z",
+      "publishedAt": "2026-09-06T22:06:00.000Z",
+      "commit": "8d7be62"
     },
     {
       "number": 2,
@@ -1533,7 +1535,8 @@
         "vp-0039",
         "vp-0040"
       ],
-      "status": "pending"
+      "status": "in_progress",
+      "startedAt": "2026-09-06T22:27:35.529Z"
     },
     {
       "number": 3,
@@ -5401,26 +5404,201 @@
       "nextAction": "Audit rendered work section and continue unresolved work searches."
     },
     "vp-0021": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://eng.auburn.edu/directory/azn0044",
         "https://anhnguyen.me/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0021-1",
+          "url": "https://eng.auburn.edu/directory/azn0044",
+          "excerpt": "profile Cookie Acknowledgement This website uses cookies to collect information to improve your browsing experience.",
+          "retrievedAt": "2026-09-06T22:27:36.208Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0021-2",
+          "url": "https://eng.auburn.edu/directory/azn0044",
+          "excerpt": "I Understand Skip to Primary Navigation Skip to Content Cookie Acknowledgement This website uses cookies to collect information to improve your browsing experience.",
+          "retrievedAt": "2026-09-06T22:27:36.209Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0021-3",
+          "url": "https://eng.auburn.edu/directory/azn0044",
+          "excerpt": "ees Awarded Aerospace Biosystems Chemical Civil and Environmental Computer Science and Software Electrical and Computer Industrial and Systems Materials Mechanical Wireless Students Undergraduate Student Graduate Student Future Undergraduate Student Future Graduate Student Online Student Transfer Student Engineering Student Center Student Organizations Careers Career Development and Corporate Relations Featured Engineering Jobs + Internships Research Giving Alumni News Spirit Store Anh Nguyen Research Profile Computer Science and Software Engineering Associate Professor 3101R Shelby Center 334.",
+          "retrievedAt": "2026-09-06T22:27:36.209Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0021-4",
+          "url": "https://eng.auburn.edu/directory/azn0044",
+          "excerpt": "Computer Science, Assumption University Research Interests Deep Learning Computer Vision Generative Modeling Visualization Artificial General Intelligence In The News Doctoral student in CSSE is lead author on research paper published in leading computational science and AI journal Pooyan Rahmanzadehgervi, a doctoral student in the Department of Computer Science and Software Engineering, was lead author on research accepted for publication in “Nature Communications AI & Computing,” a leading journal in computational science and artificial intelligence.",
+          "retrievedAt": "2026-09-06T22:27:36.209Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0021-5",
+          "url": "https://eng.auburn.edu/directory/azn0044",
+          "excerpt": "Three students in CSSE earn Computing Research Association Outstanding Researcher Awards Owen Strength, Logan Bolton and Luke Robinson were recognized by the Computing Research Association.",
+          "retrievedAt": "2026-09-06T22:27:36.209Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0021-6",
+          "url": "https://eng.auburn.edu/directory/azn0044",
+          "excerpt": "Auburn researcher shows how artificial intelligence can be fooled Auburn Engineering faculty member Anh Nguyen was recently interviewed by Horizons magazine on how researchers can fool artificial intelligence with some pretty basic tricks.",
+          "retrievedAt": "2026-09-06T22:27:36.209Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0021-7",
+          "url": "https://anhnguyen.me/",
+          "excerpt": "Artificial Intelligence Research | Anh Totti Nguyen Skip to content Anh Totti Nguyen Associate Professor of Computer Science, Auburn University Expand Menu Current Page Parent Research Lab Press Work with me Teaching Toggle Child Menu Courses K-6 AI club About CV Expand Menu Current Page Parent Research Lab Press Work with me Teaching Toggle Child Menu Courses K-6 AI club About CV I'm interested in (1) understanding the weaknesses, behaviors, and inner-workings of AIs; and (2) making these systems more trustworthy and explainable.",
+          "retrievedAt": "2026-09-06T22:27:38.278Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0021-8",
+          "url": "https://anhnguyen.me/",
+          "excerpt": "Below are selected projects in Vision , NLP , Explainable AI , and HCI where I'm a lead contributor (the first or senior author).",
+          "retrievedAt": "2026-09-06T22:27:38.278Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0021-9",
+          "url": "https://anhnguyen.me/",
+          "excerpt": "Explainable AI Human-Computer Interaction PageGuide: Browser Extension to Assist Users in Navigating a Webpage and Locating Information Users browsing the web daily struggle to quickly locate relevant information in cluttered pages, complete unfamiliar multi-step tasks, and stay&#46;&#46;&#46; 2026 | | 0 Computer Vision Explainable AI Human-Computer Interaction SketchVLM: Vision-Language Models Can Annotate Images to Explain Thoughts and Guide Users When answering questions about images, humans naturally point, label, and draw to explain their reasoning.",
+          "retrievedAt": "2026-09-06T22:27:38.278Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0021-10",
+          "url": "https://anhnguyen.me/",
+          "excerpt": "promise for automating everyday image editing tasks, especially following the recent release of GPT-4o on&#46;&#46;&#46; 2026 WACV | | Computer Vision Vision Language Models are Biased Large language models (LLMs) memorize a vast amount of prior knowledge from the Internet that help them on downstream tasks&#46;&#46;&#46; 2026 ICLR | | Computer Vision Explainable AI TAB: Transformer Attention Bottlenecks enable User Intervention and Debugging in Vision-Language Models Multi-head self-attention (MHSA) is a key component of Transformers, a widely popular architecture in both language and vision.",
+          "retrievedAt": "2026-09-06T22:27:38.278Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0021-11",
+          "url": "https://anhnguyen.me/",
+          "excerpt": "Multiple heads&#46;&#46;&#46; 2025 ICCV | | Explainable AI Human-Computer Interaction NLP Interpretable LLM-based Table Question Answering Interpretability for Table Question Answering (Table QA) is critical, particularly in high-stakes industries like finance or healthcare.",
+          "retrievedAt": "2026-09-06T22:27:38.278Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0021-12",
+          "url": "https://anhnguyen.me/",
+          "excerpt": "Although recent approaches&#46;&#46;&#46; 2025 TMLR | | Computer Vision Improving zero-shot object-level change detection by incorporating visual correspondence Detecting object-level changes between two images across possibly different views is a core task in many applications that involve visual&#46;&#46;&#46; 2025 WACV | | Explainable AI Human-Computer Interaction NLP HoT: Highlighted Chain of Thought for Referencing Supporting Facts from Inputs An Achilles heel of Large Language Models (LLMs) is their tendency to hallucinate nonfactual statements.",
+          "retrievedAt": "2026-09-06T22:27:38.278Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0021-13",
+          "url": "https://anhnguyen.me/",
+          "excerpt": "A response mixed of factual&#46;&#46;&#46; 2025 | | NLP B-score: Detecting biases in large language models using response history Large language models (LLMs) often exhibit strong biases, e.",
+          "retrievedAt": "2026-09-06T22:27:38.278Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0021-14",
+          "url": "https://anhnguyen.me/",
+          "excerpt": "We investigate&#46;&#46;&#46; 2025 ICML | | Computer Vision Explainable AI Fast and Interpretable Face Identification for Out-Of-Distribution Data Using Vision Transformers Most face identification approaches employ a Siamese neural network to compare two images at the image embedding level.",
+          "retrievedAt": "2026-09-06T22:27:38.278Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0021-enrichment-1",
+          "url": "https://anhnguyen.me/",
+          "excerpt": "Anh Totti Nguyen’s maintained site describes selected projects including PageGuide, SketchVLM, and Improving Human Verification of LLM Reasoning through Interactive Explanation Interfaces, each attributed to his research work and dated 2026.",
+          "retrievedAt": "2026-09-06T22:29:46.073Z",
+          "details": "Official maintained personal research site; preserved the explicit selected-project order and identity-verified the works."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T22:29:46.073Z",
+      "nextAction": "Continue batch 2 source verification and work collection."
     },
     "vp-0022": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://bsac.berkeley.edu/people/clark-t-c-nguyen",
-        "https://people.eecs.berkeley.edu/~ctnguyen/"
+        "https://people.eecs.berkeley.edu/~ctnguyen/",
+        "https://www2.eecs.berkeley.edu/Faculty/Homepages/ctnguyen.html"
       ],
-      "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "evidence": [
+        {
+          "id": "vp-0022-1",
+          "url": "https://bsac.berkeley.edu/people/clark-t-c-nguyen",
+          "excerpt": "Nguyen | Berkeley Sensor & Actuator Center Skip to main content Toggle navigation Berkeley Sensor & Actuator Center Search Terms Submit Search Home About BSAC BSAC is an interdisciplinary engineering research consortium designed to enable commercially relevant, pre-competitive research through collaboration and sustained partnerships between industry and academia.",
+          "retrievedAt": "2026-09-06T22:27:39.225Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0022-2",
+          "url": "https://bsac.berkeley.edu/people/clark-t-c-nguyen",
+          "excerpt": "Overview What We Do People Contact Us Visiting Membership BSAC is supported and guided by a consortium of industry leaders.",
+          "retrievedAt": "2026-09-06T22:27:39.225Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0022-3",
+          "url": "https://bsac.berkeley.edu/people/clark-t-c-nguyen",
+          "excerpt": "With a relatively modest investment, BSAC members gain unique access to cutting-edge interdisciplinary MEMS research and BSAC faculty, students, and postdocs.",
+          "retrievedAt": "2026-09-06T22:27:39.225Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0022-4",
+          "url": "https://bsac.berkeley.edu/people/clark-t-c-nguyen",
+          "excerpt": "Overview Benefits of BSAC Membership Collaboration Membership Visiting Industrial Fellow Program Industry Members BSAC IP & Patent Policy Become a BSAC Member Research BSAC's multi-disciplinary research team includes nearly 100 graduate students and post-doctoral researchers that are led by 10 co-directors from the engineering faculties of electrical, mechanical, and bioengineering at UC Berkeley and UC Davis.",
+          "retrievedAt": "2026-09-06T22:27:39.225Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0022-5",
+          "url": "https://bsac.berkeley.edu/people/clark-t-c-nguyen",
+          "excerpt": "BSAC co-directors oversee nearly 100 projects for which prepublication research is reported to BSAC Industrial Members during the semiannual research review.",
+          "retrievedAt": "2026-09-06T22:27:39.225Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0022-6",
+          "url": "https://bsac.berkeley.edu/people/clark-t-c-nguyen",
+          "excerpt": "Overview Projects Publications Tutorials Research Highlights News & Events BSAC Semi-annual Research Review & Industrial Advisory Board (IAB) Meetings give BSAC members the opportunity to preview BSAC research and future technologies.",
+          "retrievedAt": "2026-09-06T22:27:39.225Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0022-7",
+          "url": "https://bsac.berkeley.edu/people/clark-t-c-nguyen",
+          "excerpt": "Overview BSAC Conference BSAC Seminar Series Honors & Awards Best of BSAC Secondary navigation Join BSAC Login Home Clark T.",
+          "retrievedAt": "2026-09-06T22:27:39.225Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0022-8",
+          "url": "https://bsac.berkeley.edu/people/clark-t-c-nguyen",
+          "excerpt": "Nguyen CURRENT AND PAST BSAC PROJECTS CURRENT AND PAST BSAC RESEARCHERS ADVISED Job title: Professor Affiliation: Electrical Engineering and Computer Sciences Berkeley Sensor & Actuator Center (BSAC) Ph.",
+          "retrievedAt": "2026-09-06T22:27:39.225Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0022-enrichment-1",
+          "url": "https://www2.eecs.berkeley.edu/Faculty/Homepages/ctnguyen.html",
+          "excerpt": "UC Berkeley’s official faculty page identifies Clark T.-C. Nguyen and describes his research in micromechanical and radio-frequency devices, including resonators and filters.",
+          "retrievedAt": "2026-09-06T22:29:46.073Z",
+          "details": "Official university faculty page; used for the research overview. No current dated work list was added."
+        }
+      ],
+      "errors": [
+        "https://people.eecs.berkeley.edu/~ctnguyen/: HTTP 404"
+      ],
+      "updatedAt": "2026-09-06T22:29:46.073Z",
+      "nextAction": "Continue batch 2 source verification and work collection."
     },
     "vp-0023": {
       "overview": "pending",
@@ -5429,42 +5607,506 @@
         "https://www.uwyo.edu/eecs/faculty-staff/faculty/duong-nguyen/index.html",
         "https://duongnn.github.io/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0023-1",
+          "url": "https://www.uwyo.edu/eecs/faculty-staff/faculty/duong-nguyen/index.html",
+          "excerpt": "Duong Ngoc Nguyen Skip to Main Content Skip to Footer WyoWeb Giving Athletics Alumni + Application Login Search the UW Site.",
+          "retrievedAt": "2026-09-06T22:27:41.033Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0023-2",
+          "url": "https://www.uwyo.edu/eecs/faculty-staff/faculty/duong-nguyen/index.html",
+          "excerpt": "from Students President's Podcast UW Art Museum American Heritage Center Geological Museum Undergraduate Research Research & Economic Development Quick Links Quick Links Pay Your Tuition Register for Classes Find Your Advisor Important Student Dates Campus Maps Employment & HR IT Help Desk Marketing & Brand Center UW News Visit Campus Request Info Apply to UW Visit Campus Request Info WyoWeb Giving Athletics Alumni + Application Login Home Department of Electrical Engineering and Computer Science Faculty & Staff Duong Nguyen Duong Ngoc Nguyen Assistant Professor EECS Contact Information duong.",
+          "retrievedAt": "2026-09-06T22:27:41.033Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0023-3",
+          "url": "https://www.uwyo.edu/eecs/faculty-staff/faculty/duong-nguyen/index.html",
+          "excerpt": "Duong Nguyen research focuses on distributed computing, distributed systems, fault-tolerance, cloud computing, Internet of Things, and distributed machine learning.",
+          "retrievedAt": "2026-09-06T22:27:41.033Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0023-4",
+          "url": "https://www.uwyo.edu/eecs/faculty-staff/faculty/duong-nguyen/index.html",
+          "excerpt": ", Information Technology, Hanoi University of Science and Technology, Hanoi, Vietnam Recent publications Journal articles Duong N.",
+          "retrievedAt": "2026-09-06T22:27:41.033Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0023-5",
+          "url": "https://www.uwyo.edu/eecs/faculty-staff/faculty/duong-nguyen/index.html",
+          "excerpt": "Precision, recall, and sensitivity of monitoring partially synchronous distributed systems.",
+          "retrievedAt": "2026-09-06T22:27:41.033Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0023-6",
+          "url": "https://www.uwyo.edu/eecs/faculty-staff/faculty/duong-nguyen/index.html",
+          "excerpt": "Using weaker consistency models with monitoring and recovery for improving performance of key-value stores.",
+          "retrievedAt": "2026-09-06T22:27:41.033Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0023-7",
+          "url": "https://www.uwyo.edu/eecs/faculty-staff/faculty/duong-nguyen/index.html",
+          "excerpt": "In 23 th International Conference on Distributed Computing and Networking , ICDCN 2022, pages 97 – 106, 2022.",
+          "retrievedAt": "2026-09-06T22:27:41.033Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0023-8",
+          "url": "https://www.uwyo.edu/eecs/faculty-staff/faculty/duong-nguyen/index.html",
+          "excerpt": "Benefits of Stabilization versus Rollback in Self-Stabilizing Graph-Based Applications on Eventually Consistent Key-Value Stores.",
+          "retrievedAt": "2026-09-06T22:27:41.033Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0023-9",
+          "url": "https://duongnn.github.io/",
+          "excerpt": "Duong Nguyen Publications Teaching Duong Ngoc Nguyen 5060 Engineering Building Department of Electrical Engineering and Computer Science University of Wyoming Follow Laramie, Wyoming, USA Email Github ORCID I am an Assistant Professor in the Department of Electrical Engineering and Computer Science at the University of Wyoming.",
+          "retrievedAt": "2026-09-06T22:27:41.205Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0023-10",
+          "url": "https://duongnn.github.io/",
+          "excerpt": "S studies at Georgetown University, Michigan State University, Purdue University, Hanoi University of Science and Technology (respectively).",
+          "retrievedAt": "2026-09-06T22:27:41.205Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0023-11",
+          "url": "https://duongnn.github.io/",
+          "excerpt": "My research interests include Distributed Systems/Computing (including cloud computing, blockchain/smart contracts, distributed machine learning), Fault Tolerance, Runtime Monitoring, Self-Stabilization, and Formal Methods.",
+          "retrievedAt": "2026-09-06T22:27:41.205Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0023-12",
+          "url": "https://duongnn.github.io/",
+          "excerpt": "PhD positions in Computer Science are available I am looking for self-motivated candidates to join my research group.",
+          "retrievedAt": "2026-09-06T22:27:41.205Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0023-13",
+          "url": "https://duongnn.github.io/",
+          "excerpt": "If interested, please send your full CV, transcripts, and research statement to duong.",
+          "retrievedAt": "2026-09-06T22:27:41.205Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0023-14",
+          "url": "https://duongnn.github.io/",
+          "excerpt": "If you are an international student, please also send me your TOEFL/IELTS score and GRE score (if available – please see below).",
+          "retrievedAt": "2026-09-06T22:27:41.205Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0023-15",
+          "url": "https://duongnn.github.io/",
+          "excerpt": "International applicants must have TOEFL/IELTS scores meeting the department requirement .",
+          "retrievedAt": "2026-09-06T22:27:41.205Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0023-16",
+          "url": "https://duongnn.github.io/",
+          "excerpt": "Preferred Qualifications: Background in computer science or computer engineering.",
+          "retrievedAt": "2026-09-06T22:27:41.205Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T22:27:41.205Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0024": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.khoury.northeastern.edu/people/huy-le-nguyen/",
         "https://www.ccs.neu.edu/home/hlnguyen/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0024-1",
+          "url": "https://www.khoury.northeastern.edu/people/huy-le-nguyen/",
+          "excerpt": "Huy Lê Nguyen - Khoury College of Computer Sciences Khoury College of Computer Sciences Open Search Modal &times; Close this dialog window Search What are you looking for?",
+          "retrievedAt": "2026-09-06T22:27:44.540Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0024-2",
+          "url": "https://www.khoury.northeastern.edu/people/huy-le-nguyen/",
+          "excerpt": "Search About Column one Mission and Vision Oath for Computing Professionals Belonging at Khoury College Global Campuses Khoury College Facilities Column two Life at Khoury College Khoury News Events History of Khoury College Awards Featured Dean&#8217;s Welcome To Our Community Join us in making a shared vision of computer science for everyone a powerful reality.",
+          "retrievedAt": "2026-09-06T22:27:44.540Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0024-3",
+          "url": "https://www.khoury.northeastern.edu/people/huy-le-nguyen/",
+          "excerpt": "Nearly 100% of new Northeastern graduates are working or in master&#039;s programs within nine months.",
+          "retrievedAt": "2026-09-06T22:27:44.540Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0024-4",
+          "url": "https://www.khoury.northeastern.edu/people/huy-le-nguyen/",
+          "excerpt": "Education Undergraduate Undergraduate Programs Combined Majors PlusOne Accelerated Master's Programs Co-ops and Internships Research Clubs and Organizations Graduate PhD Programs Master’s Programs and Graduate Certificates Align Programs Co-ops and Internships Research Clubs and Organizations Featured Khoury College: Leading in AI innovation and education In the age of AI, why pursue a CS degree?",
+          "retrievedAt": "2026-09-06T22:27:44.540Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0024-5",
+          "url": "https://www.khoury.northeastern.edu/people/huy-le-nguyen/",
+          "excerpt": "From our AI-forward educational ethos to cutting-edge AI research, there actually has never been a better time to join the field.",
+          "retrievedAt": "2026-09-06T22:27:44.540Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0024-6",
+          "url": "https://www.khoury.northeastern.edu/people/huy-le-nguyen/",
+          "excerpt": "Experiential Learning It's the Northeastern advantage: Learn about the many experiential learning opportunities that set our students apart.",
+          "retrievedAt": "2026-09-06T22:27:44.540Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0024-7",
+          "url": "https://www.khoury.northeastern.edu/people/huy-le-nguyen/",
+          "excerpt": "Global Campus Experience Study, work, and research at one of our nine network campuses as well as at a wide range of locations on seven continents.",
+          "retrievedAt": "2026-09-06T22:27:44.540Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0024-8",
+          "url": "https://www.khoury.northeastern.edu/people/huy-le-nguyen/",
+          "excerpt": "Research Column one Research at Khoury College Research Areas Research Spaces Institutes and Centers Column two Labs and Groups Research Honors and Awards Research Impacts Khoury College at Conferences Featured The partnership that fuels America From our smartphones to the milk we drink, the partnership between government investment, academic research, and industry innovation has driven decades of technological progress and economic growth for the US.",
+          "retrievedAt": "2026-09-06T22:27:44.540Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0024-9",
+          "url": "https://www.ccs.neu.edu/home/hlnguyen/",
+          "excerpt": "Huy Le Nguyen Huy Lê Nguyễn I am an associate professor at Northeastern University.",
+          "retrievedAt": "2026-09-06T22:27:44.771Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0024-10",
+          "url": "https://www.ccs.neu.edu/home/hlnguyen/",
+          "excerpt": "Before coming here, I spent a year at the Toyota Technological Institute at Chicago and a year at the Simons Institute at UC Berkeley.",
+          "retrievedAt": "2026-09-06T22:27:44.771Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0024-11",
+          "url": "https://www.ccs.neu.edu/home/hlnguyen/",
+          "excerpt": "My main research interests are algorithms for data streams and massively parallel computation, discrete and continuous optimization, differentially private algorithms, machine learning algorithms.",
+          "retrievedAt": "2026-09-06T22:27:44.771Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0024-12",
+          "url": "https://www.ccs.neu.edu/home/hlnguyen/",
+          "excerpt": "Before coming to Princeton, I studied computer science and math (courses 6 and 18) at MIT.",
+          "retrievedAt": "2026-09-06T22:27:44.771Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0024-13",
+          "url": "https://www.ccs.neu.edu/home/hlnguyen/",
+          "excerpt": "Current students Former students Lydia Zakynthinou (co-advised with Jon Ullman), Assistant Professor, Johns Hopkins University Anamay Chaturvedi , Postdoc Researcher, Institute of Science and Technology Austria (ISTA) Thy Nguyen , Research Scientist, Lendbuzz Matthew Jones Thien Nguyen , Software Engineer, Contextual AI Konstantina Bairaktari , Postdoc Researcher, Aarhus University Publications Miscellanea I was a guest co-editor of ACM XRDS issue on \"Big Data\".",
+          "retrievedAt": "2026-09-06T22:27:44.771Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0024-14",
+          "url": "https://www.ccs.neu.edu/home/hlnguyen/",
+          "excerpt": "Check out the issue's overview article (written with Andrew Cron and Aditya Parameswaran).",
+          "retrievedAt": "2026-09-06T22:27:44.771Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0024-enrichment-1",
+          "url": "https://www.khoury.northeastern.edu/people/huy-le-nguyen/",
+          "excerpt": "Northeastern’s official profile lists One-Sided Matrix Completion from Ultra-Sparse Samples (2026), Lean and Mean Adaptive Optimization via Subset-Norm and Subspace-Momentum with Convergence Guarantees (2025), and Maximum Coverage in Turnstile Streams with Applications to Fingerprinting Measures (2025), with Huy L. Nguyen named among the authors.",
+          "retrievedAt": "2026-09-06T22:29:46.073Z",
+          "details": "Official university profile and linked publication records; selected as the latest three dated identity-verified works."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T22:29:46.073Z",
+      "nextAction": "Continue batch 2 source verification and work collection."
     },
     "vp-0025": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://engineering.tamu.edu/cse/profiles/Nguyen-Khanh.html",
         "https://khanhtn.engr.tamu.edu/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0025-1",
+          "url": "https://engineering.tamu.edu/cse/profiles/Nguyen-Khanh.html",
+          "excerpt": "ions CSCE News Contact Us Faculty Positions Academics Academics Advising Engineering Honors Computer Engineering Global Programs Student Organizations Peer Teachers Fast Track Admissions & Aid Admissions and Aid Entry to a Major Process Research Research Research Areas Labs Undergraduate Research Seminars and Distinguished Lectures People Leadership Faculty Staff Partner With Us Industry Capstone Program Industrial Affiliates Program Home Computer Science and Engineering People Khanh Nguyen Khanh Nguyen Assistant Professor, Computer Science & Engineering Phone: 979-458-1904 Email: khanhtn@tamu.",
+          "retrievedAt": "2026-09-06T22:27:45.638Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0025-2",
+          "url": "https://engineering.tamu.edu/cse/profiles/Nguyen-Khanh.html",
+          "excerpt": "edu Office: PETR 229 Website: Personal Website Google Scholar Profile Educational Background Ph.",
+          "retrievedAt": "2026-09-06T22:27:45.638Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0025-3",
+          "url": "https://engineering.tamu.edu/cse/profiles/Nguyen-Khanh.html",
+          "excerpt": ", Computer Science, University of California, Irvine, 2012 Research Interests Programming languages Compiler & runtime support Memory management Big data systems Awards & Honors Google Ph.",
+          "retrievedAt": "2026-09-06T22:27:45.638Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0025-4",
+          "url": "https://engineering.tamu.edu/cse/profiles/Nguyen-Khanh.html",
+          "excerpt": "Fellowship Finalist, 2017 Selected Publications Christian Navasca, Cheng Cai, Khanh Nguyen, Brian Demsky, Shan Lu, Miryung Kim, and Guoqing Xu.",
+          "retrievedAt": "2026-09-06T22:27:45.638Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0025-5",
+          "url": "https://engineering.tamu.edu/cse/profiles/Nguyen-Khanh.html",
+          "excerpt": "\"Gerenuk: Thin Computation over Big Native Data Using Speculative Program Transformation\", Proceedings of the ACM Symposium on Operating Systems Principles (SOSP), 2019.",
+          "retrievedAt": "2026-09-06T22:27:45.638Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0025-6",
+          "url": "https://engineering.tamu.edu/cse/profiles/Nguyen-Khanh.html",
+          "excerpt": "Khanh Nguyen, Lu Fang, Christian Navasca, Guoqing Xu, Brian Demsky, and Shan Lu.",
+          "retrievedAt": "2026-09-06T22:27:45.638Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0025-7",
+          "url": "https://engineering.tamu.edu/cse/profiles/Nguyen-Khanh.html",
+          "excerpt": "\"Skyway: Connecting Managed Heaps in Distributed Big Data Systems\", Proceedings of the International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS), 2018.",
+          "retrievedAt": "2026-09-06T22:27:45.638Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0025-8",
+          "url": "https://engineering.tamu.edu/cse/profiles/Nguyen-Khanh.html",
+          "excerpt": "Khanh Nguyen, Lu Fang, Guoqing Xu, Brian Demsky, Shan Lu, Sanazsadat Alamian, and Onur Mutlu.",
+          "retrievedAt": "2026-09-06T22:27:45.638Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0025-9",
+          "url": "https://khanhtn.engr.tamu.edu/",
+          "excerpt": "Khanh Nguyen – CSE@TAMU Skip to primary navigation Skip to main content Home Research Teaching Publications Service Khanh Nguyen CSE@TAMU Menu I am an Assistant Professor in the Department of Computer Science & Engineering at Texas A&M University.",
+          "retrievedAt": "2026-09-06T22:27:46.097Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0025-10",
+          "url": "https://khanhtn.engr.tamu.edu/",
+          "excerpt": "My research aims to develop practical techniques to solve scalability issues in Big Data systems, including ML workloads.",
+          "retrievedAt": "2026-09-06T22:27:46.097Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0025-11",
+          "url": "https://khanhtn.engr.tamu.edu/",
+          "excerpt": "Specifically, I am interested in developing programming language extensions, compiler and runtime support to improve system performance in terms of resource efficiency, workload scalability, and tail latency.",
+          "retrievedAt": "2026-09-06T22:27:46.097Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0025-12",
+          "url": "https://khanhtn.engr.tamu.edu/",
+          "excerpt": "My research group has openings for students who are interested in systems research.",
+          "retrievedAt": "2026-09-06T22:27:46.097Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0025-13",
+          "url": "https://khanhtn.engr.tamu.edu/",
+          "excerpt": "If you are a prospective student, please email me a brief description of your research interests, experience, and your CV after reading this .",
+          "retrievedAt": "2026-09-06T22:27:46.097Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0025-14",
+          "url": "https://khanhtn.engr.tamu.edu/",
+          "excerpt": "Contact Information: Email: khanhtn at tamu dot edu Phone: 979-458-1904 Office: 229 Peterson 435 Naggle Street 3112 TAMU College Station, TX 77843-3112 Need to meet me?",
+          "retrievedAt": "2026-09-06T22:27:46.097Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0025-15",
+          "url": "https://khanhtn.engr.tamu.edu/",
+          "excerpt": "Check my availability here: --> CV --> News 12/2022: Invited to serve on PC of ISMM 2023 11/2022: Seed funding provided by the Indonesian Ministry of Education, Culture, Research and Technology for a collaborative research.",
+          "retrievedAt": "2026-09-06T22:27:46.097Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0025-16",
+          "url": "https://khanhtn.engr.tamu.edu/",
+          "excerpt": "02/2022: Invited to serve on PC of ISMM 2022 02/2022: Invited to serve on PC of APSys 2022 01/2022: Invited to serve on PC of ATC 2022 My advisor was Prof.",
+          "retrievedAt": "2026-09-06T22:27:46.097Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0025-enrichment-1",
+          "url": "https://engineering.tamu.edu/cse/profiles/Nguyen-Khanh.html",
+          "excerpt": "Texas A&M’s official profile describes Khanh Nguyen’s work on programming languages, compiler and runtime support, memory management, and big-data systems, and explicitly lists Gerenuk, Skyway, and Yak as selected publications.",
+          "retrievedAt": "2026-09-06T22:30:54.501Z",
+          "details": "Official university profile; preserved its explicit selected-publication list and identity-verified the author entries."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T22:30:54.501Z",
+      "nextAction": "Continue batch 2 source verification and work collection."
     },
     "vp-0026": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://umimpact.umt.edu/en/persons/anh-nguyen/",
-        "https://mcyphi.org/anhnguyen/"
+        "https://mcyphi.org/anhnguyen/",
+        "https://mcyphi.org/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0026-1",
+          "url": "https://umimpact.umt.edu/en/persons/anh-nguyen/",
+          "excerpt": "Anh Nguyen - UM Impact Skip to main navigation Skip to search Skip to main content UM Impact Home Help & FAQ Link opens in a new tab Search content at UM Impact Home Profiles Research units Publications and Performances Projects Equipment Datasets Prizes Engagement View Scopus Profile Anh Nguyen Assistant Professor , Computer Science Affiliate , Montana Biotechnology Center Affiliate , Neural Injury Center Email anh.",
+          "retrievedAt": "2026-09-06T22:27:46.449Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0026-2",
+          "url": "https://umimpact.umt.edu/en/persons/anh-nguyen/",
+          "excerpt": "nguyen umontana edu 2012 2026 Research activity per year Overview Fingerprint Network Publications and Performances (33) Similar Profiles (2) Personal profile Research Interests The Mobile Cyber-physical Intelligence Lab at the University of Montana, directed by Dr.",
+          "retrievedAt": "2026-09-06T22:27:46.449Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0026-3",
+          "url": "https://umimpact.umt.edu/en/persons/anh-nguyen/",
+          "excerpt": "Anh Nguyen, is at the forefront of designing and implementing cutting-edge sensing and intervention technologies for smart health, the Internet of Things, and human-computer interactions.",
+          "retrievedAt": "2026-09-06T22:27:46.449Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0026-4",
+          "url": "https://umimpact.umt.edu/en/persons/anh-nguyen/",
+          "excerpt": "Our lab's mission is to expand the possibilities of cyber-physical systems through innovative multimodal data fusion and interpretation frameworks.",
+          "retrievedAt": "2026-09-06T22:27:46.449Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0026-5",
+          "url": "https://umimpact.umt.edu/en/persons/anh-nguyen/",
+          "excerpt": "We are dedicated to advancing multidisciplinary research that encompasses understanding human activities, augmenting human capabilities, predicting future health issues, and operating in challenging environments with greater efficiency.",
+          "retrievedAt": "2026-09-06T22:27:46.449Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0026-6",
+          "url": "https://umimpact.umt.edu/en/persons/anh-nguyen/",
+          "excerpt": "lthcare, internet of things Teaching Experience CSCI 232 - Intermediate Data Structures and Algorithms CSCI 460/591 - Operating Systems CSCI 461/561 - Internet of Things CSCI 455/556 - Embedded Systems Education/Academic qualification Master, Computer Science, Chonnam National University Doctorate, Computer Science, University of Colorado Boulder Bachelor, Computer Science, University of Science Expertise related to UN Sustainable Development Goals In 2015, UN member states agreed to 17 global Sustainable Development Goals (SDGs) to end poverty, protect the planet and ensure prosperity for all.",
+          "retrievedAt": "2026-09-06T22:27:46.449Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0026-7",
+          "url": "https://umimpact.umt.edu/en/persons/anh-nguyen/",
+          "excerpt": "This person’s work contributes towards the following SDG(s): SDG 3 Good Health and Well-being Fingerprint Dive into the research topics where Anh Nguyen is active.",
+          "retrievedAt": "2026-09-06T22:27:46.449Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0026-8",
+          "url": "https://umimpact.umt.edu/en/persons/anh-nguyen/",
+          "excerpt": "2 Similar Profiles Human Computer Interaction Computer Science 100% Experimental Result Computer Science 91% Active Contour Model Computer Science 85% segmentation algorithm Computer Science 85% hand gesture recognition Computer Science 73% Active Contour Computer Science 61% Evaluation Result Computer Science 61% nonnegative matrix factorization Computer Science 61% View full fingerprint Collaborations and top research areas from the last five years Recent external collaboration on country/territory level.",
+          "retrievedAt": "2026-09-06T22:27:46.449Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0026-9",
+          "url": "https://mcyphi.org/anhnguyen/",
+          "excerpt": "--> Anh Nguyen @ UM Menu Home Education --> Research Publications Patents Teaching Activities Awards Misc.",
+          "retrievedAt": "2026-09-06T22:27:46.983Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0026-10",
+          "url": "https://mcyphi.org/anhnguyen/",
+          "excerpt": "Anh Nguyen Assistant Professor - CV ] - -->[ Google Scholar ] - [ LinkedIn ] Director, Mobile Cyber-Physical Intelligence (mCyPhi) Lab Affliate, Montana Biotechnology Center Affliate, Neural Injury Center University of Montana --> Department of Computer Science University of Montana 32 Campus Dr, Missoula, MT 59812 Social Science Building - SS413 Email: anh {dot} nguyen {at} umontana {dot} edu --> Dr.",
+          "retrievedAt": "2026-09-06T22:27:46.983Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0026-11",
+          "url": "https://mcyphi.org/anhnguyen/",
+          "excerpt": "Anh Nguyen is the visionary founder and director of the Mobile Cyber-Physical Intelligence (mCyPhI) Lab at the University of Montana .",
+          "retrievedAt": "2026-09-06T22:27:46.983Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0026-12",
+          "url": "https://mcyphi.org/anhnguyen/",
+          "excerpt": "Her team is at the forefront of innovation, designing and developing next-generation sensing and intervention platforms that enable systems to perceive complex human and environmental signals, reason about uncertainty, and support adaptive responses , with an emphasis on real-time decision-making in resource-constrained environments.",
+          "retrievedAt": "2026-09-06T22:27:46.983Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0026-13",
+          "url": "https://mcyphi.org/anhnguyen/",
+          "excerpt": "Driven by a mission to augment human capabilities and enable reliable intelligent systems in real-world conditions, her research focuses on AI-enabled cyber-physical systems that integrate multimodal sensing, edge intelligence, and embedded computing for applications in smart health, human-AI interaction, and resilient infrastructure.",
+          "retrievedAt": "2026-09-06T22:27:46.983Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0026-14",
+          "url": "https://mcyphi.org/anhnguyen/",
+          "excerpt": "Nguyen is committed to bringing her research to real-world application, with four patents filed and a strong emphasis on technology transfer.",
+          "retrievedAt": "2026-09-06T22:27:46.983Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0026-15",
+          "url": "https://mcyphi.org/anhnguyen/",
+          "excerpt": "Her groundbreaking work has earned her numerous accolades, including CACM Research Highlights in 2018 and 2021, ACM SIGMOBILE Research Highlights in 2016 and 2017, and multiple Best Paper Awards at prestigious conferences like ACM SenSys and ACM MobiCom.",
+          "retrievedAt": "2026-09-06T22:27:46.983Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0026-16",
+          "url": "https://mcyphi.org/anhnguyen/",
+          "excerpt": "Her research has garnered wide press coverage from outlets such as MIT TechReview and The Children's Hospital Colorado Center for Innovation.",
+          "retrievedAt": "2026-09-06T22:27:46.983Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0026-enrichment-1",
+          "url": "https://mcyphi.org/",
+          "excerpt": "The official mCyPhI Lab site identifies Anh Nguyen as lab director and describes work in mobile systems, smart healthcare, machine learning, multimodal data fusion, and human-computer interaction.",
+          "retrievedAt": "2026-09-06T22:30:54.501Z",
+          "details": "Official maintained lab site; used for the research overview. No current author-specific dated work list was added."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T22:30:54.501Z",
+      "nextAction": "Continue batch 2 source verification and work collection."
     },
     "vp-0027": {
       "overview": "pending",
@@ -5473,20 +6115,220 @@
         "https://engineering.louisville.edu/faculty/hoang-long-nguyen/",
         "https://litpuvn.github.io/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0027-1",
+          "url": "https://engineering.louisville.edu/faculty/hoang-long-nguyen/",
+          "excerpt": "Hoang Long Nguyen &raquo; logowhite logofullcolor googlescholar checkmark_red checkmark_checkmark envelope instagram phone pointer seemore menu chevron_black chevron_blue chevron_red chevron_white contactwatermark coopwatermark relatedwatermark chevron close facebook flickr home linkedin minus pinterest play plus quote search twitter youtube Jump to Header Jump to Main Content Jump to Footer Menu Louisville.",
+          "retrievedAt": "2026-09-06T22:27:47.239Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0027-2",
+          "url": "https://engineering.louisville.edu/faculty/hoang-long-nguyen/",
+          "excerpt": "26 Spring CSE 694 - SP TOP-CSE CSE 694 - SP TOP-CSE Fall CSE 532 - PYTHON & DATA ANALYTICS CSE 532 - PYTHON & DATA ANALYTICS CSE 532 - PYTHON & DATA ANALYTICS CSE 532 - PYTHON & DATA ANALYTICS 2025 Spring CSE 590 - SPECIAL TOPICS - CECS CSE 590 - SPECIAL TOPICS - CECS CSE 693 - INDEP STUDY CECS Fall CSE 532 - PYTHON & DATA ANALYTICS CSE 532 - PYTHON & DATA ANALYTICS CSE 532 - PYTHON & DATA ANALYTICS CSE 532 - PYTHON & DATA ANALYTICS 2024 Fall CSE 532 - PYTHON & DATA ANALYTICS CSE 532 - PYTHON & DATA ANALYTICS Hoang Long Nguyen Asst Professor Computer Science and Engineering h0nguy12@louisville.",
+          "retrievedAt": "2026-09-06T22:27:47.239Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0027-3",
+          "url": "https://engineering.louisville.edu/faculty/hoang-long-nguyen/",
+          "excerpt": "edu Visit Apply News Events Careers Alumni Contact Us SHOP University of Louisville 132 Eastern Pkwy.",
+          "retrievedAt": "2026-09-06T22:27:47.239Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0027-4",
+          "url": "https://litpuvn.github.io/",
+          "excerpt": "People --> --> TING Lab Home --> Team --> --> Research & Grants Teaching Projects People--> Meet the team --> --> --> --> Home --> --> &ndash;&gt;--> --> TING - T ext, I nterpretation, N etwork, and G enerative AI Lab Long Nguyen, Ph.",
+          "retrievedAt": "2026-09-06T22:27:47.395Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0027-5",
+          "url": "https://litpuvn.github.io/",
+          "excerpt": "I am an Assistant Professor in the Department of Computer Science and Engineering at University of Louisville.",
+          "retrievedAt": "2026-09-06T22:27:47.395Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0027-6",
+          "url": "https://litpuvn.github.io/",
+          "excerpt": "Previously, I was an Assistant Professor in the Department of Computer Science and Data Science at Meharry Medical College.",
+          "retrievedAt": "2026-09-06T22:27:47.395Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0027-7",
+          "url": "https://litpuvn.github.io/",
+          "excerpt": "I had worked over 10 years in software industry in different countries before turning to academia career.",
+          "retrievedAt": "2026-09-06T22:27:47.395Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0027-8",
+          "url": "https://litpuvn.github.io/",
+          "excerpt": "My research interests include data mining, artificial intelligence, and machine learning, with special interests in TING aspects - T ext, I nterpretation, N etwork, and G enerative AI.",
+          "retrievedAt": "2026-09-06T22:27:47.395Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0027-9",
+          "url": "https://litpuvn.github.io/",
+          "excerpt": "Some specific areas are including but not limited to Foundation Models, Large Language Models, Natural Language Processing, Time-series Analysis and Anomaly Detection.",
+          "retrievedAt": "2026-09-06T22:27:47.395Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0027-10",
+          "url": "https://litpuvn.github.io/",
+          "excerpt": "I enjoy advancing AI techniques and turning science to benefit community at large.",
+          "retrievedAt": "2026-09-06T22:27:47.395Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0027-11",
+          "url": "https://litpuvn.github.io/",
+          "excerpt": "--> Lab's Research --> --> --> Research Interest: Generative AI, Deep Learning on Graphs, Responsible AI/ML, Natural Language Processing, Representation & Interpretable methods News & Highlights August 2026, NSF awarded our projects: \"Building a large predictive model for severe flooding events\" (PI role) and \"Identifying Essential Competencies for Artificial Intelligence Assisted Programming in Foundational Engineering Courses\" (Co-PI role) .",
+          "retrievedAt": "2026-09-06T22:27:47.395Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T22:27:47.395Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0028": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://udayton.edu/directory/engineering/computerscience/nguyen-luan.php",
         "https://luanvietnguyen.github.io/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0028-1",
+          "url": "https://udayton.edu/directory/engineering/computerscience/nguyen-luan.php",
+          "excerpt": "Luan Nguyen : University of Dayton, Ohio Skip to content /////// Luan Nguyen Home Directory Luan Nguyen Luan Nguyen Associate Professor Full-Time Faculty School of Engineering: Department of Computer Science Contact Email Luan Nguyen Website Luan Nguyen Associate Professor Full-Time Faculty School of Engineering: Department of Computer Science Degrees Ph.",
+          "retrievedAt": "2026-09-06T22:27:47.704Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0028-2",
+          "url": "https://udayton.edu/directory/engineering/computerscience/nguyen-luan.php",
+          "excerpt": "Luan Nguyen is an Assistant Professor at the Department of Computer Science, University of Dayton.",
+          "retrievedAt": "2026-09-06T22:27:47.704Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0028-3",
+          "url": "https://udayton.edu/directory/engineering/computerscience/nguyen-luan.php",
+          "excerpt": "Previously, He was a postdoctoral research associate at the Department of Electrical Engineering, University of Notre Dame and at the PRECISE Center, University of Pennsylvania.",
+          "retrievedAt": "2026-09-06T22:27:47.704Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0028-4",
+          "url": "https://udayton.edu/directory/engineering/computerscience/nguyen-luan.php",
+          "excerpt": ", he was a member of the Verivital Lab at The University of Texas at Arlington, under the supervision of Prof.",
+          "retrievedAt": "2026-09-06T22:27:47.704Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0028-5",
+          "url": "https://udayton.edu/directory/engineering/computerscience/nguyen-luan.php",
+          "excerpt": "His research interest is developing formal verification techniques and state-of-the-art software tools to enforce safety, reliability, security and resiliency of autonomous cyber-physical systems (CPS), with practical applications across CPS domains such as power and energy systems, medical devices, automotive, aerospace and robotics.",
+          "retrievedAt": "2026-09-06T22:27:47.704Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0028-6",
+          "url": "https://udayton.edu/directory/engineering/computerscience/nguyen-luan.php",
+          "excerpt": "ference ACM International Conference on Hybrid Systems: Computation and Control (HSCC) ACM 32nd International Conference on Computer-Aided Verification (CAV) IEEE Transactions on Power Electronics IEEE Transactions on Neural Networks and Learning Systems Selected publications and presentations Luan Viet Nguyen , Gautam Mohan, James Weimer, Oleg Sokolsky, Insup Lee, and Rajeev Alur, &#8220;Detecting Security Leaks in Hybrid Systems with Information Flow Analysis,&#8221; 17th ACM-IEEE International Conference on Formal Methods and Models for System Design (MEMOCODE 2019), San Diego, October 2019.",
+          "retrievedAt": "2026-09-06T22:27:47.704Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0028-7",
+          "url": "https://udayton.edu/directory/engineering/computerscience/nguyen-luan.php",
+          "excerpt": "Hoang Dung Tran, Patrick Musau, Manxanas Lopez Diego, Xiao Dong Yang, Luan Viet Nguyen , Weiming Xiang, and Taylor T.",
+          "retrievedAt": "2026-09-06T22:27:47.704Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0028-8",
+          "url": "https://udayton.edu/directory/engineering/computerscience/nguyen-luan.php",
+          "excerpt": "Johnson, &#8220;Star-Based Reachability Analysis of Deep Neural Networks,&#8221; 23rd International Symposium on Formal Methods (FM 2019), Portugal, October 2019.",
+          "retrievedAt": "2026-09-06T22:27:47.704Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0028-9",
+          "url": "https://luanvietnguyen.github.io/",
+          "excerpt": "Nguyen Home CV Google Scholar Linkedin Research Group Members Collaborators Publications News Fundings Welcome to Luan V.",
+          "retrievedAt": "2026-09-06T22:27:47.846Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0028-10",
+          "url": "https://luanvietnguyen.github.io/",
+          "excerpt": "Assistant Professor Department of Computer Science University of Dayton Office: JHH 104, 300 College Park Ave, Dayton, OH 45469 Phone: (937) 229 3831 Email: lnguyen1(at)udayton(dot)edu Brief Bio : I am currently an Assistant Professor at the Department of Computer Science , University of Dayton .",
+          "retrievedAt": "2026-09-06T22:27:47.846Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0028-11",
+          "url": "https://luanvietnguyen.github.io/",
+          "excerpt": "Previously, I was a postdoctoral research associate at the Department of Electrical Engineering , University of Notre Dame (Oct 2019 - July 2020), and at the PRECISE Center , University of Pennsylvania (June 2018 - Sep 2019).",
+          "retrievedAt": "2026-09-06T22:27:47.846Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0028-12",
+          "url": "https://luanvietnguyen.github.io/",
+          "excerpt": ", I was a member of the Verivital Lab at The University of Texas at Arlington , under the supervision of Prof.",
+          "retrievedAt": "2026-09-06T22:27:47.846Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0028-13",
+          "url": "https://luanvietnguyen.github.io/",
+          "excerpt": "My research interest is to develop formal verification techniques and state-of-the-art software tools to enforce safety, reliability, security and resiliency of autonomous cyber-physical systems (CPS), with practical applications across CPS domains such as power and energy systems, medical devices, automotive, aerospace, and robotics.",
+          "retrievedAt": "2026-09-06T22:27:47.846Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0028-14",
+          "url": "https://luanvietnguyen.github.io/",
+          "excerpt": "Prospective students I am looking for self-motivated graduate and undergraduate students in the areas of cyber-physical systems, model-based design, formal verification, and safe autonomy.",
+          "retrievedAt": "2026-09-06T22:27:47.846Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0028-15",
+          "url": "https://luanvietnguyen.github.io/",
+          "excerpt": "Funding support is available for competitive applicants with excellent qualifications.",
+          "retrievedAt": "2026-09-06T22:27:47.846Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0028-16",
+          "url": "https://luanvietnguyen.github.io/",
+          "excerpt": "If you are interested, please send me an email with your CV or drop by my office if you are on campus.",
+          "retrievedAt": "2026-09-06T22:27:47.846Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0028-enrichment-1",
+          "url": "https://udayton.edu/directory/engineering/computerscience/nguyen-luan.php",
+          "excerpt": "The official University of Dayton profile describes Luan Nguyen’s formal-verification work for autonomous cyber-physical systems and explicitly labels three selected publications: Detecting Security Leaks..., Star-Based Reachability Analysis..., and Decentralized Real-Time Safety Verification....",
+          "retrievedAt": "2026-09-06T22:30:54.501Z",
+          "details": "Official university profile; preserved its explicit selected-publication order and identity-verified the author entries."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T22:30:54.501Z",
+      "nextAction": "Continue batch 2 source verification and work collection."
     },
     "vp-0029": {
       "overview": "pending",
@@ -5494,9 +6336,67 @@
       "sourcesChecked": [
         "https://www.towson.edu/fcsm/departments/computerinfosci/facultystaff/nnguyen.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0029-1",
+          "url": "https://www.towson.edu/fcsm/departments/computerinfosci/facultystaff/nnguyen.html",
+          "excerpt": "duate Programs Application Request Information Take a Campus Tour Housing & Dining Tuition Financial Aid Parents Family Network Family Weekend Request Information Undergraduate Admissions Visit TU Tuition Financial Aid Emergency Text Alerts Alumni Tiger Connect Alumni Events Alumni Benefits University Store TU Magazine Request a Transcript Office of Alumni Relations Faculty & Staff myTU for Faculty & Staff Email Blackboard Timesheets TechHelp Library Academic Calendar TU Webcam Business BTU-Partnerships at Work for Greater Baltimore StarTUp Center for GIS Regional Economic Studies Institute Dr.",
+          "retrievedAt": "2026-09-06T22:27:48.060Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0029-2",
+          "url": "https://www.towson.edu/fcsm/departments/computerinfosci/facultystaff/nnguyen.html",
+          "excerpt": "duate Programs Application Request Information Take a Campus Tour Housing & Dining Tuition Financial Aid Parents Family Network Family Weekend Request Information Undergraduate Admissions Visit TU Tuition Financial Aid Emergency Text Alerts Alumni Tiger Connect Alumni Events Alumni Benefits University Store TU Magazine Request a Transcript Office of Alumni Relations Faculty & Staff myTU for Faculty & Staff Email Blackboard Timesheets TechHelp Library Academic Calendar TU Webcam Business BTU-Partnerships at Work for Greater Baltimore StarTUp Center for GIS Regional Economic Studies Institute Dr.",
+          "retrievedAt": "2026-09-06T22:27:48.060Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0029-3",
+          "url": "https://www.towson.edu/fcsm/departments/computerinfosci/facultystaff/nnguyen.html",
+          "excerpt": "Nancy Grasmick Leadership Institute Sponsorship & Advertising Opportunities Hiring TU Students Visit TU Apply Now Request Information Give to TU Calendars & Events Directories Home FCSM Departments & Programs Dept of Computer & Information Sciences Faculty & Staff Nam Nguyen Nam Nguyen Professor Contact Info Phone: 410-704-3089 Office: YR-206N Email: npnguyen@towson.",
+          "retrievedAt": "2026-09-06T22:27:48.060Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0029-4",
+          "url": "https://www.towson.edu/fcsm/departments/computerinfosci/facultystaff/nnguyen.html",
+          "excerpt": ", Computer Science, University of Florida Areas of Expertise Complex Network Analysis, Mobile Computing, Social Data Analysis and Data Mining Biography Nam Nguyen is currently a Professor in the Computer and Information Sciences Department.",
+          "retrievedAt": "2026-09-06T22:27:48.060Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0029-5",
+          "url": "https://www.towson.edu/fcsm/departments/computerinfosci/facultystaff/nnguyen.html",
+          "excerpt": "He received his PhD degree in Computer Science from the University of Florida in 2013.",
+          "retrievedAt": "2026-09-06T22:27:48.060Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0029-6",
+          "url": "https://www.towson.edu/fcsm/departments/computerinfosci/facultystaff/nnguyen.html",
+          "excerpt": "Nguyen's research interests focus on Network Structure Analysis, BigData, Social-aware Information Mining, Cyber Security, and Practical Mobile Computing applications.",
+          "retrievedAt": "2026-09-06T22:27:48.060Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0029-7",
+          "url": "https://www.towson.edu/fcsm/departments/computerinfosci/facultystaff/nnguyen.html",
+          "excerpt": "He has served as an Associate Editor of Springer's Computational Social Network jounal, the TPC Co-chair for CSoNet 2015 and as a TPC member for many research conferences including IEEE INFOCOM'16 and MSN'14 - 15.",
+          "retrievedAt": "2026-09-06T22:27:48.060Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0029-8",
+          "url": "https://www.towson.edu/fcsm/departments/computerinfosci/facultystaff/nnguyen.html",
+          "excerpt": "In 2015, Nguyen served as a panelist for the National Foundation of Science, USA.",
+          "retrievedAt": "2026-09-06T22:27:48.060Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T22:27:48.060Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0030": {
       "overview": "pending",
@@ -5505,9 +6405,123 @@
         "https://udayton.edu/directory/engineering/computerscience/nguyen-tam.php",
         "https://sites.google.com/site/vantam/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0030-1",
+          "url": "https://udayton.edu/directory/engineering/computerscience/nguyen-tam.php",
+          "excerpt": "Tam Nguyen : University of Dayton, Ohio Skip to content /////// Tam Nguyen Home Directory Tam Nguyen Tam Nguyen Associate Professor; Director of Graduate Program in Computer Science Full-Time Faculty School of Engineering: Department of Computer Science Contact 937-229-3893 Email Tam Nguyen Website Curriculum Vitae Tam Nguyen Associate Professor; Director of Graduate Program in Computer Science Full-Time Faculty School of Engineering: Department of Computer Science Degrees Ph.",
+          "retrievedAt": "2026-09-06T22:27:48.168Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0030-2",
+          "url": "https://udayton.edu/directory/engineering/computerscience/nguyen-tam.php",
+          "excerpt": "His research topics include artificial intelligence, computer vision, machine learning and multimedia content analysis.",
+          "retrievedAt": "2026-09-06T22:27:48.168Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0030-3",
+          "url": "https://udayton.edu/directory/engineering/computerscience/nguyen-tam.php",
+          "excerpt": "&#160; He has authored and co-authored 100-plus research papers with 2,200-plus citations.",
+          "retrievedAt": "2026-09-06T22:27:48.168Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0030-4",
+          "url": "https://udayton.edu/directory/engineering/computerscience/nguyen-tam.php",
+          "excerpt": ", International Journal of Computer Vision (IJCV), IEEE Transactions on Image Processing (T-IP), IEEE Transactions on Neural Networks and Learning Systems (T-NNLS), IEEE Transactions on Multimedia (T-MM), IEEE Transactions on Circuits and Systems for Video Technology (T-CSVT), Neurocomputing (NEUCOM), Computer Vision and Image Understanding (CVIU), Journal of Computer-Aided Civil and Infrastructure Engineering (CACIE), Journal of Virtual Reality, ACM Computing Surveys, and ACM Transactions on Multimedia Computing, Communications, and Applications (TOMM).",
+          "retrievedAt": "2026-09-06T22:27:48.168Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0030-5",
+          "url": "https://udayton.edu/directory/engineering/computerscience/nguyen-tam.php",
+          "excerpt": "He's also published his research work in the top-tier conferences such as International Joint Conference on Artificial Intelligence (IJCAI), AAAI Conference on Artificial Intelligence (AAAI), European Conference on Computer Vision (ECCV), ACM Multimedia (ACM MM) and International Symposium on Mixed and Augmented Reality (ISMAR).",
+          "retrievedAt": "2026-09-06T22:27:48.168Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0030-6",
+          "url": "https://udayton.edu/directory/engineering/computerscience/nguyen-tam.php",
+          "excerpt": "He has secured more than $1 million in funding from different agencies, including the National Science Foundation, Lam Research, NVIDIA, Singapore National Research Foundation, Singapore Ministry of Education, UDRI and VINIF.",
+          "retrievedAt": "2026-09-06T22:27:48.168Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0030-7",
+          "url": "https://udayton.edu/directory/engineering/computerscience/nguyen-tam.php",
+          "excerpt": "Nguyen is the recipient of numerous awards, including Young Vietnamese of the Year in 2005, the runner-up of ICPR 2012 contest on action recognition, the best technical demonstration from ACM Multimedia 2012, the best student paper award at NUS-GSS 2013, Singapore Polytechnic R&D commendation award 2015, the 3rd Prize at the CVPR 2019 contest of &#8220;DAVIS Video Object Segmentation Challenge,\" the 2021 IEEE Dayton Section Ravi Pallerla Memorial Award for Young Professionals and the runner-up award at AI City Challenge 2022 (track 2).",
+          "retrievedAt": "2026-09-06T22:27:48.168Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0030-8",
+          "url": "https://udayton.edu/directory/engineering/computerscience/nguyen-tam.php",
+          "excerpt": "MMITTEE MEMBER CVPR, ICCV, ECCV, AAAI, ACM MM and ICMR JOURNAL REVIEWER IEEE:&#160; T-PAMI, T-IP, T-MM, T-CSVT and T-NNLS ACM:&#160; Transactions on Multimedia Computing, Communications and Applications, Transactions on Intelligent Systems and Technology Springer: &#160;Artificial Intelligence Review, Multimedia Systems Journal, The Visual Computer, Journal of Ambient Intelligence and Humanized Computing Elsevier:&#160; Computer Vision and Image Understanding, Pattern Recognition Letters, Neurocomputing, Journal of Visual Communication and Image Representation, Expert Systems with Applications.",
+          "retrievedAt": "2026-09-06T22:27:48.168Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0030-9",
+          "url": "https://sites.google.com/site/vantam/",
+          "excerpt": "Tam Nguyen Search this site Embedded Files Skip to main content Skip to navigation Dr.",
+          "retrievedAt": "2026-09-06T22:27:48.447Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0030-10",
+          "url": "https://sites.google.com/site/vantam/",
+          "excerpt": "Tam Nguyen Home Research Grants Teaching Jobs News Archive Vision and Mixed Reality Lab Dr.",
+          "retrievedAt": "2026-09-06T22:27:48.447Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0030-11",
+          "url": "https://sites.google.com/site/vantam/",
+          "excerpt": "Currently I am an Associate Professor and Graduate Program Director at Department of Computer Science , University of Dayton (UD).",
+          "retrievedAt": "2026-09-06T22:27:48.447Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0030-12",
+          "url": "https://sites.google.com/site/vantam/",
+          "excerpt": "Prior to that, I was a research scientist and principal investigator at ARTIC research centre in Singapore.",
+          "retrievedAt": "2026-09-06T22:27:48.447Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0030-13",
+          "url": "https://sites.google.com/site/vantam/",
+          "excerpt": "I received PhD degree in National University of Singapore ( NUS ) under the guidance of Prof.",
+          "retrievedAt": "2026-09-06T22:27:48.447Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0030-14",
+          "url": "https://sites.google.com/site/vantam/",
+          "excerpt": "I graduated with first ranking in terms of GPA in both bachelor and master&#39;s study.",
+          "retrievedAt": "2026-09-06T22:27:48.447Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0030-15",
+          "url": "https://sites.google.com/site/vantam/",
+          "excerpt": "My research topics include artificial intelligence, computer vision, machine learning, multimedia content analysis, and mixed reality.",
+          "retrievedAt": "2026-09-06T22:27:48.447Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0030-16",
+          "url": "https://sites.google.com/site/vantam/",
+          "excerpt": "I have authored and co-authored 200 + research papers with 5,500 + citations (from Google Scholar ).",
+          "retrievedAt": "2026-09-06T22:27:48.447Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T22:27:48.447Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0031": {
       "overview": "pending",
@@ -5516,9 +6530,123 @@
         "https://cas.uoregon.edu/directory/computer-science/all/tnguye11",
         "https://ix.cs.uoregon.edu/~thanhhng/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0031-1",
+          "url": "https://cas.uoregon.edu/directory/computer-science/all/tnguye11",
+          "excerpt": "re Overview Humanities Natural Sciences School of Global Studies and Languages Social Sciences Give to CAS Give to CAS Overview CAS Advisory Board Territorial Acknowledgment Events CAS Strategy CAS Strategy Overview Vision and Mission Values Strategic Priorities Strategy Development Steering Committee CAS Budget Advisory Committee CAS Awards CAS Awards Overview CAS Recognition Awards Recent CAS Awardees Previous CAS Recognition Recipients Take Action One Stop Apply Visit Give College of Arts and Sciences Computer Science Thanh Nguyen Associate Professor Computer Science Email: tnguye11@uoregon.",
+          "retrievedAt": "2026-09-06T22:27:49.250Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0031-2",
+          "url": "https://cas.uoregon.edu/directory/computer-science/all/tnguye11",
+          "excerpt": "edu Phone: 541-346-3974 Office: 303 Deschutes Hall, 1202 University of Oregon, Eugene OR 97403-120 Research Interests: Artificial Intelligence, Multi-agent Systems, Reinforcement Learning, Generative AI, Game Theory, Optimization Website: https://ix.",
+          "retrievedAt": "2026-09-06T22:27:49.250Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0031-3",
+          "url": "https://cas.uoregon.edu/directory/computer-science/all/tnguye11",
+          "excerpt": "edu/~thanhhng/ Biography Thanh Nguyen is an Associate Professor in the Department of Computer Science at the University of Oregon (UO).",
+          "retrievedAt": "2026-09-06T22:27:49.250Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0031-4",
+          "url": "https://cas.uoregon.edu/directory/computer-science/all/tnguye11",
+          "excerpt": "Prior to joining UO, she was a postdoctoral researcher at the University of Michigan and earned her Ph.",
+          "retrievedAt": "2026-09-06T22:27:49.250Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0031-5",
+          "url": "https://cas.uoregon.edu/directory/computer-science/all/tnguye11",
+          "excerpt": "Her research in Artificial Intelligence (AI) is driven by interdisciplinary real-world challenges, with a particular focus on public safety and security, conservation, and public health.",
+          "retrievedAt": "2026-09-06T22:27:49.250Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0031-6",
+          "url": "https://cas.uoregon.edu/directory/computer-science/all/tnguye11",
+          "excerpt": "She develops advanced AI methods by integrating multi-agent systems, reinforcement learning, generative AI, and game theory to address complex decision-making problems under uncertainty while incorporating domain knowledge, operational constraints, and human preferences.",
+          "retrievedAt": "2026-09-06T22:27:49.250Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0031-7",
+          "url": "https://cas.uoregon.edu/directory/computer-science/all/tnguye11",
+          "excerpt": "Her research has received multiple recognitions, including the IAAI-16 Deployed Application Award and the AAMAS-16 Runner-up Best Innovative Application Paper Award.",
+          "retrievedAt": "2026-09-06T22:27:49.250Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0031-8",
+          "url": "https://cas.uoregon.edu/directory/computer-science/all/tnguye11",
+          "excerpt": "She has published extensively in leading AI and machine learning venues, including NeurIPS, ICML, ICLR, AAAI, and IJCAI.",
+          "retrievedAt": "2026-09-06T22:27:49.250Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0031-9",
+          "url": "https://ix.cs.uoregon.edu/~thanhhng/",
+          "excerpt": "Nguyen About News COMPASS Lab People Publications Teaching Gallery Contact CV 🌙 Thanh H.",
+          "retrievedAt": "2026-09-06T22:27:49.800Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0031-10",
+          "url": "https://ix.cs.uoregon.edu/~thanhhng/",
+          "excerpt": "Nguyen Associate Professor · Department of Computer Science · University of Oregon I am an Associate Professor in the Department of Computer Science at the University of Oregon.",
+          "retrievedAt": "2026-09-06T22:27:49.800Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0031-11",
+          "url": "https://ix.cs.uoregon.edu/~thanhhng/",
+          "excerpt": "My research interests span Artificial Intelligence , Multi-Agent Systems , Reinforcement Learning , Generative AI , and Optimization .",
+          "retrievedAt": "2026-09-06T22:27:49.800Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0031-12",
+          "url": "https://ix.cs.uoregon.edu/~thanhhng/",
+          "excerpt": "My work is driven by real-world interdisciplinary challenges and develops advanced AI/ML methods with applications across diverse domains, including Physics (e.",
+          "retrievedAt": "2026-09-06T22:27:49.800Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0031-13",
+          "url": "https://ix.cs.uoregon.edu/~thanhhng/",
+          "excerpt": ", diabetes prevention and tumor microenvironment analysis), Public Safety and Security (e.",
+          "retrievedAt": "2026-09-06T22:27:49.800Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0031-14",
+          "url": "https://ix.cs.uoregon.edu/~thanhhng/",
+          "excerpt": "Email Google Scholar DBLP Curriculum Vitae Academic Positions 2025 – present Associate Professor Department of Computer Science, University of Oregon 2018 – 2025 Assistant Professor Department of Computer Science, University of Oregon Education & Training 2016 – 2018 Postdoctoral Researcher Computer Science & Engineering, University of Michigan — with Prof.",
+          "retrievedAt": "2026-09-06T22:27:49.800Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0031-15",
+          "url": "https://ix.cs.uoregon.edu/~thanhhng/",
+          "excerpt": "nated Attacks in Security Domains with Real-time Information (Grant W911NF-20-1-0344, 2020–2024) 2016 Deployed Application Award, IAAI For &ldquo;Deploying PAWS: Field Optimization of the Protection Assistant for Wildlife Security,&rdquo; Innovative Applications of Artificial Intelligence 2016 Best Innovative Application Paper Award, Runner-up, AAMAS For &ldquo;CAPTURE: A New Predictive Anti-Poaching Tool for Wildlife Protection,&rdquo; 15th International Conference on Autonomous Agents and Multiagent Systems 2015 WiSE Merit Fellowship, University of Southern California Awarded to two women Ph.",
+          "retrievedAt": "2026-09-06T22:27:49.800Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0031-16",
+          "url": "https://ix.cs.uoregon.edu/~thanhhng/",
+          "excerpt": "a Science for Social Good (DSSG) @ KDD 2021 · Strategic Reasoning for Societal Challenges @ AAMAS 2019 · Computer Poker & Imperfect Information Games @ AAAI 2016 & 2017 · Conservation, Criminology and Computation (C4) Conference, USC 2015 · Wildlife Crime Workshop, USC 2014 Invited Talks 2025 Robust Decision-Making with Limited and Adversarial Data School of Electrical Engineering and Computer Science, Oregon State University 2024 Data-Driven Decision Making in Adversarial Environments: Challenges and Applications Carnegie Mellon University · University of Chicago · Washington University in St.",
+          "retrievedAt": "2026-09-06T22:27:49.800Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T22:27:49.800Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0032": {
       "overview": "pending",
@@ -5527,9 +6655,62 @@
         "https://www.gmu.edu/profiles/tvn",
         "https://tvn.roars.dev/"
       ],
-      "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "evidence": [
+        {
+          "id": "vp-0032-1",
+          "url": "https://tvn.roars.dev/",
+          "excerpt": "ThanhVu Nguyen's Personal Website ThanhVu Nguyen's Personal Website Bio ThanhVu (Vu) Nguyen is an associate professor of Computer Science and the director of the MS Software Engineering program at George Mason University .",
+          "retrievedAt": "2026-09-06T22:27:50.171Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0032-2",
+          "url": "https://tvn.roars.dev/",
+          "excerpt": "in Computer Science at the University of New Mexico-Albuquerque and a postdoc at the University of Maryland-College Park .",
+          "retrievedAt": "2026-09-06T22:27:50.171Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0032-3",
+          "url": "https://tvn.roars.dev/",
+          "excerpt": "Before joining Mason, he worked at the University of Nebraska-Lincoln , the Naval Research Laboratory and Lockheed Martin .",
+          "retrievedAt": "2026-09-06T22:27:50.171Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0032-4",
+          "url": "https://tvn.roars.dev/",
+          "excerpt": "Nguyen's' research lies at the intersection of Software Engineering and Formal Methods, focusing on AI safety and program correctness.",
+          "retrievedAt": "2026-09-06T22:27:50.171Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0032-5",
+          "url": "https://tvn.roars.dev/",
+          "excerpt": "He is the recipient of the NSF CAREER Award, the NSF CRII Award, Amazon Research Award (2x), and three test-of-time paper awards: an IEEE TSE Most Influential Paper Award, the ACM SIGSOFT ICSE 10-year Most Influential Paper Award, and the ACM SIGEVO 10-Year Impact Award.",
+          "retrievedAt": "2026-09-06T22:27:50.171Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0032-6",
+          "url": "https://tvn.roars.dev/",
+          "excerpt": "We have three children, all born while I was an assistant professor in Nebraska.",
+          "retrievedAt": "2026-09-06T22:27:50.171Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0032-7",
+          "url": "https://tvn.roars.dev/",
+          "excerpt": "gle Scholar profile Teaching Summary Software Specification and Construction: SWE 419/619 ( student feedback ) AI Safety and Assurance: CS 695 Compilers: CSCE 425/825 ( student feedback ) Software Testing, Verification, and Analysis: CSCE 467/867 ( student feedback ) Automata, Computation, and Formal Languages Software Engineering II (Specification and analysis of complex software systems) Software Verification (or Ensuring Software Dependability) Seminar: CSCE 990 ThanhVu Nguyen George Mason University Nguyen Engineering Building #4430 4400 University Drive Fairfax, VA 22030 Email : tvn@roars.",
+          "retrievedAt": "2026-09-06T22:27:50.171Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
+      "errors": [
+        "https://www.gmu.edu/profiles/tvn: HTTP 403"
+      ],
+      "updatedAt": "2026-09-06T22:27:50.171Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0033": {
       "overview": "pending",
@@ -5538,9 +6719,123 @@
         "https://cas.uoregon.edu/directory/computer-science/all/thienn",
         "https://ix.cs.uoregon.edu/~thien/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0033-1",
+          "url": "https://cas.uoregon.edu/directory/computer-science/all/thienn",
+          "excerpt": "ture Overview Humanities Natural Sciences School of Global Studies and Languages Social Sciences Give to CAS Give to CAS Overview CAS Advisory Board Territorial Acknowledgment Events CAS Strategy CAS Strategy Overview Vision and Mission Values Strategic Priorities Strategy Development Steering Committee CAS Budget Advisory Committee CAS Awards CAS Awards Overview CAS Recognition Awards Recent CAS Awardees Previous CAS Recognition Recipients Take Action One Stop Apply Visit Give College of Arts and Sciences Computer Science Thien Nguyen Associate Professor Computer Science Email: thienn@uoregon.",
+          "retrievedAt": "2026-09-06T22:27:50.966Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0033-2",
+          "url": "https://cas.uoregon.edu/directory/computer-science/all/thienn",
+          "excerpt": "edu Phone: 541-346-1398 Office: 330 Deschutes Hall, 1202 University of Oregon, Eugene OR 97403-1202 Research Interests: Information Extraction, Natural Language Processing, Deep Learning, Machine Learning Website: https://ix.",
+          "retrievedAt": "2026-09-06T22:27:50.966Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0033-3",
+          "url": "https://cas.uoregon.edu/directory/computer-science/all/thienn",
+          "excerpt": "edu/~thien Biography I am an Assistant Professor in the Department of Computer and Information Science at the University of Oregon.",
+          "retrievedAt": "2026-09-06T22:27:50.966Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0033-4",
+          "url": "https://cas.uoregon.edu/directory/computer-science/all/thienn",
+          "excerpt": "Back to Top Education BS, Hanoi University of Science and Technology MS, New York University PhD, New York University Back to Top Research Interests My research explores mechanisms to understand human languages for computers so that computers can perform cognitive language-related tasks for us.",
+          "retrievedAt": "2026-09-06T22:27:50.966Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0033-5",
+          "url": "https://cas.uoregon.edu/directory/computer-science/all/thienn",
+          "excerpt": "Among others, I am especially interested in distilling structured information and mining useful knowledge from the massive human-written text of various domains.",
+          "retrievedAt": "2026-09-06T22:27:50.966Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0033-6",
+          "url": "https://cas.uoregon.edu/directory/computer-science/all/thienn",
+          "excerpt": "Toward this end, our lab employs and designs effective learning algorithms for information extraction and text mining in natural language processing and data mining.",
+          "retrievedAt": "2026-09-06T22:27:50.966Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0033-7",
+          "url": "https://cas.uoregon.edu/directory/computer-science/all/thienn",
+          "excerpt": "We are among the first groups that develop deep learning models and demonstrate their effectiveness for information extraction.",
+          "retrievedAt": "2026-09-06T22:27:50.966Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0033-8",
+          "url": "https://cas.uoregon.edu/directory/computer-science/all/thienn",
+          "excerpt": "We are also targeting other language-related problems with deep learning, including reading comprehension, machine translation, natural language generation, and chatbots.",
+          "retrievedAt": "2026-09-06T22:27:50.966Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0033-9",
+          "url": "https://ix.cs.uoregon.edu/~thien/",
+          "excerpt": "Thien Huu Nguyen --> Thien Huu Nguyen Department of Computer Science University of Oregon --> Home --> About me News --> Research Research --> Publications Students Teaching Professional Services Funding NLP Group NLP Reading Group --> Alex Smith I'm --> About Magnam dolores commodi suscipit.",
+          "retrievedAt": "2026-09-06T22:27:51.067Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0033-10",
+          "url": "https://ix.cs.uoregon.edu/~thien/",
+          "excerpt": "--> Thien Huu Nguyen Associate Professor - Department of Computer Science - University of Oregon Email: thienn AT uoregon dot edu Google scholar: Address: 330, Deschutes Hall University of Oregon 1477 E.",
+          "retrievedAt": "2026-09-06T22:27:51.067Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0033-11",
+          "url": "https://ix.cs.uoregon.edu/~thien/",
+          "excerpt": "13th Avenue Eugene, OR 97403, USA I am an Associate Professor in the Department of Computer Science at the University of Oregon .",
+          "retrievedAt": "2026-09-06T22:27:51.067Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0033-12",
+          "url": "https://ix.cs.uoregon.edu/~thien/",
+          "excerpt": "I am an Associate Professor in the Department of Computer Science at the University of Oregon .",
+          "retrievedAt": "2026-09-06T22:27:51.067Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0033-13",
+          "url": "https://ix.cs.uoregon.edu/~thien/",
+          "excerpt": "I am currently recruiting one or two graduate students each year to work on interesting projects of natural language processing and deep learning.",
+          "retrievedAt": "2026-09-06T22:27:51.067Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0033-14",
+          "url": "https://ix.cs.uoregon.edu/~thien/",
+          "excerpt": "The application procedure for graduate students in the Department of Computer Science can be found here .",
+          "retrievedAt": "2026-09-06T22:27:51.067Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0033-15",
+          "url": "https://ix.cs.uoregon.edu/~thien/",
+          "excerpt": "I am also willing to supervise students at UO who would like to do research on natural language processing, deep learning and the related topics.",
+          "retrievedAt": "2026-09-06T22:27:51.067Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0033-16",
+          "url": "https://ix.cs.uoregon.edu/~thien/",
+          "excerpt": "Research My research explores mechanisms to understand human languages for computers so that computers can perform cognitive language-related tasks for us.",
+          "retrievedAt": "2026-09-06T22:27:51.067Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T22:27:51.067Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0034": {
       "overview": "pending",
@@ -5549,9 +6844,102 @@
         "https://engineering.oregonstate.edu/about/people/thinh-nguyen",
         "https://web.engr.oregonstate.edu/~thinhq/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0034-1",
+          "url": "https://engineering.oregonstate.edu/about/people/thinh-nguyen",
+          "excerpt": "t College of Engineering Search Search Open Search Page Facilities People Tools & Services Schools Chemical, Biological, and Environmental Engineering Civil and Construction Engineering Electrical Engineering and Computer Science Mechanical, Industrial, and Manufacturing Engineering Nuclear Science and Engineering Biological & Ecological Engineering About Academics Research Alumni & Partners Breadcrumb Home About College of Engineering Faculty & Staff Thinh Nguyen Not Accepting New Students Thinh Nguyen Title Professor Organizations Electrical Engineering and Computer Science Email thinhq@eecs.",
+          "retrievedAt": "2026-09-06T22:27:51.600Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0034-2",
+          "url": "https://engineering.oregonstate.edu/about/people/thinh-nguyen",
+          "excerpt": "edu Office Phone (541) 737-3470 Fax (541) 737-1300 Address 3115 Kelley Engineering Center Corvallis , OR 97331 United States About Biography Thinh Nguyen earned a B.",
+          "retrievedAt": "2026-09-06T22:27:51.600Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0034-3",
+          "url": "https://engineering.oregonstate.edu/about/people/thinh-nguyen",
+          "excerpt": "He is a recipient of the NSF CAREER Award and the Engelbrecht Young Faculty Award.",
+          "retrievedAt": "2026-09-06T22:27:51.600Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0034-4",
+          "url": "https://engineering.oregonstate.edu/about/people/thinh-nguyen",
+          "excerpt": "His current and past research projects span a number of application areas ranging from signal processing and video coding, to networking and communication, and recently quantum information theory.",
+          "retrievedAt": "2026-09-06T22:27:51.600Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0034-5",
+          "url": "https://engineering.oregonstate.edu/about/people/thinh-nguyen",
+          "excerpt": ", Electrical Engineering and Computer Science, University of California at Berkeley, 2003 B.",
+          "retrievedAt": "2026-09-06T22:27:51.600Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0034-6",
+          "url": "https://engineering.oregonstate.edu/about/people/thinh-nguyen",
+          "excerpt": "ward 2007 College of Engineering Engelbrecht Young Faculty Award Documents Research Research Interests Research Groups Communications and Signal Processing Networking and Computer Systems Research Website Thinh Nguyen Website Labs Publications Recent Related Stories Spin-off company develops wireless for undersea platforms E-Lambda LLC, an Oregon State University spin-off, was just awarded a Navy Small Business Innovation Research contract for $225,000 to develop a high… Read more Thinh Nguyen Profile Thinh Nguyen’s escape to the US began with a solo swim to a small boat in the South China Sea.",
+          "retrievedAt": "2026-09-06T22:27:51.600Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0034-7",
+          "url": "https://engineering.oregonstate.edu/about/people/thinh-nguyen",
+          "excerpt": "… Read more Related Media Oregon State University College of Engineering Get in Touch College of Engineering Oregon State University 101 Covell Hall Corvallis, OR 97331-2409 541.",
+          "retrievedAt": "2026-09-06T22:27:51.600Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0034-8",
+          "url": "https://web.engr.oregonstate.edu/~thinhq/",
+          "excerpt": "Home Page THINH NGUYEN HOME NEWS RESEARCH TEACHING PUBLICATION Professor Email: thinhq at eecs dot oregonstate dot edu Phone: 541-737-3470 Welcome I am a faculty in the School of Electrical Engineering and Computer Science at Oregon State University .",
+          "retrievedAt": "2026-09-06T22:27:52.455Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0034-9",
+          "url": "https://web.engr.oregonstate.edu/~thinhq/",
+          "excerpt": "Broadly speaking, I am interested in theories and applications of all things stochastic.",
+          "retrievedAt": "2026-09-06T22:27:52.455Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0034-10",
+          "url": "https://web.engr.oregonstate.edu/~thinhq/",
+          "excerpt": "My current and past research projects span a number of application areas ranging from signal processing and video coding, to networking and communication, and quantum computing.",
+          "retrievedAt": "2026-09-06T22:27:52.455Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0034-11",
+          "url": "https://web.engr.oregonstate.edu/~thinhq/",
+          "excerpt": "We are currently looking for talented undergraduate students to work on the WiFO.",
+          "retrievedAt": "2026-09-06T22:27:52.455Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0034-12",
+          "url": "https://web.engr.oregonstate.edu/~thinhq/",
+          "excerpt": "WiFO is a novel communication system using Wi-Fi and Free Space Optic technologies to provide order of magnitude improvement in bandwidth over the existing Wi-Fi networks.",
+          "retrievedAt": "2026-09-06T22:27:52.455Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0034-13",
+          "url": "https://web.engr.oregonstate.edu/~thinhq/",
+          "excerpt": "in Electrical Engineering and Computer Science from the University of California at Berkeley.",
+          "retrievedAt": "2026-09-06T22:27:52.455Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T22:27:52.455Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0035": {
       "overview": "pending",
@@ -5560,9 +6948,123 @@
         "https://www.cs.rutgers.edu/people/professors/details/thu-nguyen",
         "https://thu-d-nguyen.cs.rutgers.edu/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0035-1",
+          "url": "https://www.cs.rutgers.edu/people/professors/details/thu-nguyen",
+          "excerpt": "vents Videos of Past Events Research Computer and Network Systems Intelligent Systems Theory of Computing Resources Business Office Internal Applications Technical Support & Services Donate Alumni Alumni Distinguished Alumni Alumni News Contact People Professors Lecturers Affiliated Faculty Researchers Administrative Staff Graduate Students Technical Staff Emeritus In Memoriam Faculty Details Thu Nguyen Professor Website: Personal Website Email Address: Phone: (848)445-7292 Research Group(s): Computer and Networked Systems Computer Architecture Linked News Items: $4 million DIBBS grant awarded.",
+          "retrievedAt": "2026-09-06T22:27:53.223Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0035-2",
+          "url": "https://www.cs.rutgers.edu/people/professors/details/thu-nguyen",
+          "excerpt": "From “Moneyball” to Medicine, Data Science is Emerging as Hot New Field Living-Learning Community for Women in Computer Science Marian and Nguyen’s Google Research Grant featured on Rutgers News.",
+          "retrievedAt": "2026-09-06T22:27:53.223Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0035-3",
+          "url": "https://www.cs.rutgers.edu/people/professors/details/thu-nguyen",
+          "excerpt": "Nguyen receive NSF award; \"A Unified Monitoring Approach to Enhancing the Security and Resiliency of Hazard Workflows on Heterogeneous Infrastructures.",
+          "retrievedAt": "2026-09-06T22:27:53.223Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0035-4",
+          "url": "https://www.cs.rutgers.edu/people/professors/details/thu-nguyen",
+          "excerpt": "Trees, Nguyen and colleagues receive NSF CSforAll grant Rutgers receives $2M grant to develop Critical Technology Studies program Thu D.",
+          "retrievedAt": "2026-09-06T22:27:53.223Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0035-5",
+          "url": "https://www.cs.rutgers.edu/people/professors/details/thu-nguyen",
+          "excerpt": "Nguyen named Area Dean for Mathematical and Physical Sciences Office: Hill 409 SAS Events SAS News rutgers.",
+          "retrievedAt": "2026-09-06T22:27:53.223Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0035-6",
+          "url": "https://www.cs.rutgers.edu/people/professors/details/thu-nguyen",
+          "excerpt": "edu SAS Search People Search Website Connect with Rutgers Rutgers New Brunswick Rutgers Today myRutgers Academic Calendar Rutgers Schedule of Classes One Stop Student Service Center getINVOLVED Plan a Visit Explore SAS Majors and Minors Departments and Programs SAS Research Centers SAS Offices Support SAS Notices University Operating Status Privacy Quick Links We Are Hiring!",
+          "retrievedAt": "2026-09-06T22:27:53.223Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0035-7",
+          "url": "https://www.cs.rutgers.edu/people/professors/details/thu-nguyen",
+          "excerpt": "Undergraduate Academic Advising Undergraduate Program Graduate Program Welcome New CS Undergraduate Students Course Registration and Special Permission Course Schedule Contact Us Department of Computer Science Rutgers, The State University of New Jersey 110 Frelinghuysen Road Piscataway, NJ 08854-8019 (848) 445-2001 Facebook Twitter Instagram LinkedIn Home Site Map Search Login Rutgers is an equal access/equal opportunity institution.",
+          "retrievedAt": "2026-09-06T22:27:53.223Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0035-8",
+          "url": "https://www.cs.rutgers.edu/people/professors/details/thu-nguyen",
+          "excerpt": "Individuals with disabilities are encouraged to direct suggestions, comments, or complaints concerning any accessibility issues with Rutgers websites to or complete the Report Accessibility Barrier / Provide Feedback form.",
+          "retrievedAt": "2026-09-06T22:27:53.223Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0035-9",
+          "url": "https://thu-d-nguyen.cs.rutgers.edu/",
+          "excerpt": "Nguyen Professor Department of Computer Science Hill Center 409, 110 Frelinghuysen Rd, Piscataway, NJ thu.",
+          "retrievedAt": "2026-09-06T22:27:53.769Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0035-10",
+          "url": "https://thu-d-nguyen.cs.rutgers.edu/",
+          "excerpt": "edu (848) 445 8326 New Data Science Major at Rutgers-New Brunswick October 16, 2023 Rutgers-New Brunswick now offers an undergraduate certificate, minor, and major in Data Science.",
+          "retrievedAt": "2026-09-06T22:27:53.769Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0035-11",
+          "url": "https://thu-d-nguyen.cs.rutgers.edu/",
+          "excerpt": "Article: From &#8220;Moneyball&#8221; to Medicine, Data Science is Emerging as Hot New Read More » 6th Annual NJ CS Summit on Scalability and Diversity April 25, 2022 The 6th Annual NJ CS Summit on Scalability and Diversity will be held in-person at Rutgers University-New Brunswick on Friday May 13th, 2022.",
+          "retrievedAt": "2026-09-06T22:27:53.769Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0035-12",
+          "url": "https://thu-d-nguyen.cs.rutgers.edu/",
+          "excerpt": "From the Read More » CV | LinkedIn Profile Research Datacenters, Sustainability, Computer Systems, Approximate Computing, Computer Science Education Research Group Publications Honors and Awards Rutgers Big Ten Academic Alliance Department Executive Officers Fellow, 2018.",
+          "retrievedAt": "2026-09-06T22:27:53.769Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0035-13",
+          "url": "https://thu-d-nguyen.cs.rutgers.edu/",
+          "excerpt": "IEEE Micro Top Picks 2014 PlanetP: Using Gossiping to Build Content Addressable Peer-to-Peer Information Sharing Communities .",
+          "retrievedAt": "2026-09-06T22:27:53.769Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0035-14",
+          "url": "https://thu-d-nguyen.cs.rutgers.edu/",
+          "excerpt": "Republished in &#8220; Best Papers From The Last 20 Years of HPDC &#8220;, 2012.",
+          "retrievedAt": "2026-09-06T22:27:53.769Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0035-15",
+          "url": "https://thu-d-nguyen.cs.rutgers.edu/",
+          "excerpt": "Also IEEE Sustainable Computing Register (Newsletter of the Computer Society Technical Community on Sustainable Computing) Pick of the Month, April 2012.",
+          "retrievedAt": "2026-09-06T22:27:53.769Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0035-16",
+          "url": "https://thu-d-nguyen.cs.rutgers.edu/",
+          "excerpt": "Computer Science Graduate Student Society of Rutgers University, awarded in 2000 and 2002.",
+          "retrievedAt": "2026-09-06T22:27:53.769Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T22:27:53.769Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0036": {
       "overview": "pending",
@@ -5571,9 +7073,46 @@
         "https://profiles.utdallas.edu/tien.n.nguyen",
         "https://personal.utdallas.edu/~tien.n.nguyen/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0036-1",
+          "url": "https://profiles.utdallas.edu/tien.n.nguyen",
+          "excerpt": "School of Arts, Humanities, and Technology School of Behavioral and Brain Sciences Erik Jonsson School of Engineering and Computer Science School of Economic, Political and Policy Sciences School of Interdisciplinary Studies Naveen Jindal School of Management School of Natural Sciences and Mathematics Browse All Students Get Started with Research Login Home Erik Jonsson School of Engineering and Computer Science Tien Nguyen Skip to main content Tien Nguyen Associate Professor - Computer Science +1 (972) 883-3893 ECS4.",
+          "retrievedAt": "2026-09-06T22:27:54.207Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0036-2",
+          "url": "https://personal.utdallas.edu/~tien.n.nguyen/",
+          "excerpt": "Nguyen, Professor Home Research Publications Services Teaching Students Funding Awards Tien N.",
+          "retrievedAt": "2026-09-06T22:27:54.521Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0036-3",
+          "url": "https://personal.utdallas.edu/~tien.n.nguyen/",
+          "excerpt": ", IEEE Fellow Professor Computer Science Department Erik Jonsson School of Engineering and Computer Science The University of Texas at Dallas 800 W.",
+          "retrievedAt": "2026-09-06T22:27:54.521Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0036-4",
+          "url": "https://personal.utdallas.edu/~tien.n.nguyen/",
+          "excerpt": "229 Richardson, TX 75080-3021, USA Phone : (972) 883-3893 Fax : (972) 883-2349 Email : tien dot n dot nguyen at utdallas.",
+          "retrievedAt": "2026-09-06T22:27:54.521Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0036-5",
+          "url": "https://personal.utdallas.edu/~tien.n.nguyen/",
+          "excerpt": "edu IEEE Fellow &quot;for contributions to synergizing program analysis and artificial intelligence for effective automated software engineering&quot; Research Interests : Artificial Intelligence, Machine Learning, Software Security, Software Engineering, NLP 1) Artificial Intelligence, Machine Learning, NLP 2) Software Security and Program Analysis 3) Software Testing 4) Software Mining and Analysis 5) Software Evolution and Maintenance I have open TA/RA positions.",
+          "retrievedAt": "2026-09-06T22:27:54.521Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T22:27:54.521Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0037": {
       "overview": "pending",
@@ -5582,9 +7121,95 @@
         "https://eng.auburn.edu/directory/tcn0015",
         "https://tinnguyen-lab.com/home/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0037-1",
+          "url": "https://eng.auburn.edu/directory/tcn0015",
+          "excerpt": "profile Cookie Acknowledgement This website uses cookies to collect information to improve your browsing experience.",
+          "retrievedAt": "2026-09-06T22:27:54.670Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0037-2",
+          "url": "https://eng.auburn.edu/directory/tcn0015",
+          "excerpt": "I Understand Skip to Primary Navigation Skip to Content Cookie Acknowledgement This website uses cookies to collect information to improve your browsing experience.",
+          "retrievedAt": "2026-09-06T22:27:54.670Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0037-3",
+          "url": "https://eng.auburn.edu/directory/tcn0015",
+          "excerpt": "ospace Biosystems Chemical Civil and Environmental Computer Science and Software Electrical and Computer Industrial and Systems Materials Mechanical Wireless Students Undergraduate Student Graduate Student Future Undergraduate Student Future Graduate Student Online Student Transfer Student Engineering Student Center Student Organizations Careers Career Development and Corporate Relations Featured Engineering Jobs + Internships Research Giving Alumni News Spirit Store Tin Nguyen Computer Science and Software Engineering Associate Professor Ginn Faculty Achievement Fellow 3101M Shelby Center 334.",
+          "retrievedAt": "2026-09-06T22:27:54.670Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0037-4",
+          "url": "https://eng.auburn.edu/directory/tcn0015",
+          "excerpt": "Computer Science, Eotvos Lorand University Research Interests Data science Machine learning Disease subtyping Pathway analysis Single-cell analysis In The News Four Auburn Engineering faculty members named Ginn Faculty Achievement Fellows The Ginn Faculty Achievement Fellowship recognizes and rewards junior faculty who receive prestigious young investigator awards, including the National Science Foundation CAREER, Department of Defense, Department of Energy or National Institute of Health Young Investigator awards.",
+          "retrievedAt": "2026-09-06T22:27:54.670Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0037-5",
+          "url": "https://tinnguyen-lab.com/home/",
+          "excerpt": "Bioinformatics Lab Search Bioinformatics Lab Home Publications Software Awards Outreach Services Contact Bioinformatics Lab @ Wayne State University Welcome to the Bioinformatics Lab at Wayne State University Room 2062, Manufacturing Engineering Building (MEB), Wayne State University Tin Nguyen Professor Industrial and Systems Engineering, Wayne State University Bioinformatics Lab This is the website for Bioinformatics Lab at Wayne State University.",
+          "retrievedAt": "2026-09-06T22:27:54.987Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0037-6",
+          "url": "https://tinnguyen-lab.com/home/",
+          "excerpt": "We have been involved in developing state of the art solutions to help tackle problems in the ever-evolving world of Bioinformatics.",
+          "retrievedAt": "2026-09-06T22:27:54.987Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0037-7",
+          "url": "https://tinnguyen-lab.com/home/",
+          "excerpt": "With the aim of solving different problems in the world that ranges from finding subtypes of diseases to research in single cell, we do not know what the future holds for the lab but it is certainly going to be interesting!",
+          "retrievedAt": "2026-09-06T22:27:54.987Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0037-8",
+          "url": "https://tinnguyen-lab.com/home/",
+          "excerpt": "Interests Data Science Machine Learning Disease Subtyping Pathway Analysis Single-cell Analysis Education Ph.",
+          "retrievedAt": "2026-09-06T22:27:54.987Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0037-9",
+          "url": "https://tinnguyen-lab.com/home/",
+          "excerpt": "hang Postdoctoral Researcher Bang Tran Assistant Professor Duc Tran Bioinformatics Scientist Current Undergraduate Students Trainees Dung Vuong Trainee Emily Tran Trainee Master Alumni Augustine Ofoegbu Graduate Student Monikrishna Roy Software Engineer Sangam Shrestha Senior Data Scientist Undergraduate Alumni Brian Marks Undergraduate Student Nina Hees Undergraduate Student Christian McDowell Undergraduate Student Jesus Casillas Manzano Undergraduate Student Mark Minkoff Undergraduate Student Monte McRae Undergraduate Student News Tin Nguyen Jan 2, 2024 Associate professor in CSSE part of $1.",
+          "retrievedAt": "2026-09-06T22:27:54.987Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0037-10",
+          "url": "https://tinnguyen-lab.com/home/",
+          "excerpt": "8 million NIH study to pioneer platform for the analysis of single-cell data Associate Professor Tin Nguyen&rsquo;s collaborative study will enable software to analyze extremely large-scale data and infer cellular development for multiple sets of cells and cell types.",
+          "retrievedAt": "2026-09-06T22:27:54.987Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0037-11",
+          "url": "https://tinnguyen-lab.com/home/",
+          "excerpt": "Tin Nguyen Dec 13, 2023 Professor in computer science and software engineering uses data science, machine learning to combat cancer subtype misdiagnoses Associate Professor Tin Nguyen is set to begin NIH NCI-funded research that could combat cancer subtype misdiagnoses.",
+          "retrievedAt": "2026-09-06T22:27:54.987Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0037-12",
+          "url": "https://tinnguyen-lab.com/home/",
+          "excerpt": "Bang Tran , Phi Bya , Duc Tran , Seungil Ro , Tin Nguyen Aug 29, 2022 The method scCAN is in the news of the Journal of Science and Development, Vietnamese Ministry of Science Nhóm nghiên cứu của TS.",
+          "retrievedAt": "2026-09-06T22:27:54.987Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T22:27:54.987Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0038": {
       "overview": "pending",
@@ -5592,9 +7217,67 @@
       "sourcesChecked": [
         "https://ksuweb.kennesaw.edu/~tnguy360/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0038-1",
+          "url": "https://ksuweb.kennesaw.edu/~tnguy360/",
+          "excerpt": "Nguyen's Homepage Tu Nguyen Associate Professor Department of Computer Science College of Computing and Software Engineering --> --> --> Recent News May 2026 : Our NSF proposal was awarded.",
+          "retrievedAt": "2026-09-06T22:27:55.300Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0038-2",
+          "url": "https://ksuweb.kennesaw.edu/~tnguy360/",
+          "excerpt": "May 2026 : My great honor to receive the Outstanding Scholarship and Creative Activity of the Year Award from both CCSE and KSU.",
+          "retrievedAt": "2026-09-06T22:27:55.300Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0038-3",
+          "url": "https://ksuweb.kennesaw.edu/~tnguy360/",
+          "excerpt": "August 2025 : Serving as Chair of Student Grants for the IEEE Quantum Week (IEEE QCE).",
+          "retrievedAt": "2026-09-06T22:27:55.300Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0038-4",
+          "url": "https://ksuweb.kennesaw.edu/~tnguy360/",
+          "excerpt": "August 2025 : My pleasure to join the Editorial Board of IEEE Transactions on Quantum Engineering (TQE).",
+          "retrievedAt": "2026-09-06T22:27:55.300Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0038-5",
+          "url": "https://ksuweb.kennesaw.edu/~tnguy360/",
+          "excerpt": "July 2025 : Two papers have been accepted to IEEE QCE 2025 Jan 2025 : It is my pleasure to join the organizing commitee again for IEEE QCE.",
+          "retrievedAt": "2026-09-06T22:27:55.300Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0038-6",
+          "url": "https://ksuweb.kennesaw.edu/~tnguy360/",
+          "excerpt": "Feb 2024 : It is my pleasure to serve as the Student Travel Grant Chair for IEEE QCE 2024.",
+          "retrievedAt": "2026-09-06T22:27:55.300Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0038-7",
+          "url": "https://ksuweb.kennesaw.edu/~tnguy360/",
+          "excerpt": "Dec 2023 : Our proposal was awarded Affordable Learning Georgia Affordable Materials Grant.",
+          "retrievedAt": "2026-09-06T22:27:55.300Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0038-8",
+          "url": "https://ksuweb.kennesaw.edu/~tnguy360/",
+          "excerpt": "July 2023 : Three papers have been accepted to IEEE QCE 2023 Feb 2023 : The paper: \"Quantum Annealing Approach for Selective Traveling Salesman Problem\" has been accepted to IEEE ICC 2023 August 2022 : The paper: \"Keep Clear of the Edges: An Empirical Study of Artificial Intelligence Workload Performance and Resource Footprint on Edge Devices\" has been accepted to IEEE IPCCC 2022 August 2022 : Our NSF AMPS proposal was awarded.",
+          "retrievedAt": "2026-09-06T22:27:55.300Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T22:27:55.300Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0039": {
       "overview": "pending",
@@ -5603,9 +7286,123 @@
         "https://www.cics.umass.edu/about/directory/vp-nguyen",
         "https://wsslab.org/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0039-1",
+          "url": "https://www.cics.umass.edu/about/directory/vp-nguyen",
+          "excerpt": "VP Nguyen : Manning College of Information & Computer Sciences : UMass Amherst Skip to main content The University of Massachusetts Amherst Open UMass Global Links Menu Visit Apply Give Search UMass.",
+          "retrievedAt": "2026-09-06T22:27:55.623Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0039-2",
+          "url": "https://www.cics.umass.edu/about/directory/vp-nguyen",
+          "excerpt": "ull A-Z Directory Faculty Staff About Toggle submenu for About Overview College Overview Leadership Our New Building The Manning Gift News & Events News & Stories Events Calendar Significant Bits Magazine Connect Visiting CICS Contact Us Employment Offices & Services Info For Toggle submenu for Info For Current Undergraduate Students Current Graduate Students Faculty and Staff Newly Accepted Undergraduate Students Breadcrumb About Directory Image VP Nguyen Assistant Professor Contact vp [dot] nguyen [at] cs [dot] umass [dot] edu Location Room A323 Lederle Graduate Research Center Lowrise 740 N.",
+          "retrievedAt": "2026-09-06T22:27:55.623Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0039-3",
+          "url": "https://www.cics.umass.edu/about/directory/vp-nguyen",
+          "excerpt": "Pleasant Street Amherst , MA 01003 United States Research Areas Mobile and Sensor Systems Networking and Distributed Systems About Professor Nguyen founded and directs the Wireless and Sensor Systems Laboratory (WSSL) .",
+          "retrievedAt": "2026-09-06T22:27:55.623Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0039-4",
+          "url": "https://www.cics.umass.edu/about/directory/vp-nguyen",
+          "excerpt": "His broad research interests are mobile and ubiquitous computing, wireless communication, and embedded systems.",
+          "retrievedAt": "2026-09-06T22:27:55.623Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0039-5",
+          "url": "https://www.cics.umass.edu/about/directory/vp-nguyen",
+          "excerpt": "His research agenda has focused on Sustainable Autonomous Things (SATs) for the vision of the Internet of Sustainable Medical Things, the Internet of Sustainable Living Things, and the Internet of Sustainable Flying Things.",
+          "retrievedAt": "2026-09-06T22:27:55.623Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0039-6",
+          "url": "https://www.cics.umass.edu/about/directory/vp-nguyen",
+          "excerpt": "His team develops new techniques in sensor and sensing system development, algorithms, data analytics, signal processing, hardware, and firmware optimization to invent (1) a new class of \"medical devices\" that can continuously and unobtrusively collect novel and important health data in non-clinical settings, (2) a new class of \"living sensors\" that can live with plants/animals, and (3) a new class of \"unmanned aerial vehicles\" that requires extremely low maintenance.",
+          "retrievedAt": "2026-09-06T22:27:55.623Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0039-7",
+          "url": "https://www.cics.umass.edu/about/directory/vp-nguyen",
+          "excerpt": "Professor Nguyen is the recipient of SONY Faculty Innovation Award, CACM Research Highlights 2020, ACM SIGMOBILE Research Highlights 2017, 2020, 2022, UTA CSE Pre-Tenure Research Award 2022, Best Paper Award at ACM MobiCom 2019, Best Paper Runner-up at ACM SenSys 2018, Best Paper Nominee at ACM SenSys 2017, and Best Paper Awards at ACM MobiCom-S3 2016-2017.",
+          "retrievedAt": "2026-09-06T22:27:55.623Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0039-8",
+          "url": "https://www.cics.umass.edu/about/directory/vp-nguyen",
+          "excerpt": "forum chair for multiple flagship conferences in Mobile Computing and Wireless Networking.",
+          "retrievedAt": "2026-09-06T22:27:55.623Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0039-9",
+          "url": "https://wsslab.org/",
+          "excerpt": "Wireless and Sensor Systems Lab (WSSL) - Home Toggle navigation Wireless and Sensor Systems Lab (WSSL) Home People News --> Publications Openings --> Hosted Events Previous Next About the Lab WSSL's broad research interests are in the areas of AI-powered mobile/wearable computing and sustainable computing.",
+          "retrievedAt": "2026-09-06T22:27:55.929Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0039-10",
+          "url": "https://wsslab.org/",
+          "excerpt": "Our research agenda has focused on Sustainable Autonomous Things (SATs) for the vision of the Internet of Sustainable Medical Things, Internet of Sustainable Living Things , and Internet of Sustainable Flying Things .",
+          "retrievedAt": "2026-09-06T22:27:55.929Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0039-11",
+          "url": "https://wsslab.org/",
+          "excerpt": "Our work is interdisciplinary in nature, where we develop new techniques in sensor and sensing system development, algorithms, data analytics, signal processing, hardware, and firmware optimization to invent: (1) a new class of medical devices that can continuously and unobtrusively collect novel and important health data in non-clinical settings (2) a new class of living sensors that can live with plants/animals (3) a new class of unmanned aerial vehicles that requires extremely low maintenance.",
+          "retrievedAt": "2026-09-06T22:27:55.929Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0039-12",
+          "url": "https://wsslab.org/",
+          "excerpt": "(4) We are also interested in sustainable quantum computing , and with Berkeley Lab, we have made some exciting progress.",
+          "retrievedAt": "2026-09-06T22:27:55.929Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0039-13",
+          "url": "https://wsslab.org/",
+          "excerpt": "Nguyen is grateful to receive NSF CAREER Award to develop \" Neuromorphic Computing Earables \"!",
+          "retrievedAt": "2026-09-06T22:27:55.929Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0039-14",
+          "url": "https://wsslab.org/",
+          "excerpt": "06/2026: Our collaborative team from Columbia University , Dartmouth College , our lab at UMass Amherst , and industry partners has been awarded a ARPA-H MOCS project .",
+          "retrievedAt": "2026-09-06T22:27:55.929Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0039-15",
+          "url": "https://wsslab.org/",
+          "excerpt": "06/2026: Our paper on a Self-Maintaining Electrode-Skin Interface for Motion-Robust Biosignal Monitoring has been accepted to Advanced Healthcare Materials 2026 (Impact Factor: 10.",
+          "retrievedAt": "2026-09-06T22:27:55.929Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0039-16",
+          "url": "https://wsslab.org/",
+          "excerpt": "06/2026: Our collaborative team from Columbia University, Dartmouth College, our lab at UMass Amherst, and industry partners has been awarded an ARPA-H MOCS project .",
+          "retrievedAt": "2026-09-06T22:27:55.929Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T22:27:55.929Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0040": {
       "overview": "pending",
@@ -5613,9 +7410,67 @@
       "sourcesChecked": [
         "https://dept.stat.lsa.umich.edu/~xuanlong/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0040-1",
+          "url": "https://dept.stat.lsa.umich.edu/~xuanlong/",
+          "excerpt": "Long Nguyen @ University of Michigan Long Nguyen Professor of Statistics, Department of Statistics, University of Michigan Other affiliations: Professor of Electrical Engineering and Computer Science (by courtesy) Faculty member, Michigan Institute for Data Science Long-term member, Vietnam Institute for Advanced Study in Mathematics Email: xuanlong@umich.",
+          "retrievedAt": "2026-09-06T22:27:56.476Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0040-2",
+          "url": "https://dept.stat.lsa.umich.edu/~xuanlong/",
+          "excerpt": "edu Office: 243 West Hall Mail Address: 323 West Hall, 1085 South University, Ann Arbor, MI 48109-1107 --> --> [ Research ] [ Teaching ] [ Students ] [ Publications ] [ Projects/ Talks and lectures ] [ Biography ] Prospective PhD students: Please consider applying to Michigan and thank you for your interest.",
+          "retrievedAt": "2026-09-06T22:27:56.476Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0040-3",
+          "url": "https://dept.stat.lsa.umich.edu/~xuanlong/",
+          "excerpt": "I apologize if you have not received my response to your enquiry about the program.",
+          "retrievedAt": "2026-09-06T22:27:56.476Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0040-4",
+          "url": "https://dept.stat.lsa.umich.edu/~xuanlong/",
+          "excerpt": "Admission decision is made a graduate admissions committee, please see this link for further information.",
+          "retrievedAt": "2026-09-06T22:27:56.476Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0040-5",
+          "url": "https://dept.stat.lsa.umich.edu/~xuanlong/",
+          "excerpt": "Research interests Nonparametric Bayesian statistics Optimal transport and statistical inference Machine learning and optimization Hierarchical, mixture and graphical models Spatiotemporal and functional data analysis Stochastic, variational and geometric methods in statistical inference Synopsis: Statistical inference / learning is the computational process of turning data into statistics, prediction and understanding.",
+          "retrievedAt": "2026-09-06T22:27:56.476Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0040-6",
+          "url": "https://dept.stat.lsa.umich.edu/~xuanlong/",
+          "excerpt": "I work with richly structured data, such as those extracted from texts, images and other spatiotemporal signals.",
+          "retrievedAt": "2026-09-06T22:27:56.476Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0040-7",
+          "url": "https://dept.stat.lsa.umich.edu/~xuanlong/",
+          "excerpt": "I am particularly interested in a field in statistics known as Bayesian nonparametrics, which provides a fertile and powerful mathematical framework for the development of many computational and statistical modeling ideas.",
+          "retrievedAt": "2026-09-06T22:27:56.476Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0040-8",
+          "url": "https://dept.stat.lsa.umich.edu/~xuanlong/",
+          "excerpt": "The spirit of Bayesian nonparametric statistics is to enable the kind of inferential procedures according to which both the statistical modeling and computational complexity may adapt to increasingly large and complex data patterns in a probabilistically graceful and effective way.",
+          "retrievedAt": "2026-09-06T22:27:56.476Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T22:27:56.476Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0041": {
       "overview": "pending",
