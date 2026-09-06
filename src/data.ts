@@ -389,6 +389,7 @@ const FIELD_OVERRIDES = new Map([
   ['Institut de Biosciences et Biotechnologies d\'Aix-Marseille|CNRS (Centre National de la Recherche Scientifique)', 'Biological & Biomedical Sciences'],
   ['Faculté de Santé|Université Paris Cité', 'Health Sciences'],
   ['Faculty of Science and Technology|Middlesex University', 'Computer & Information Sciences'],
+  ['HAMK Bio|Häme University of Applied Sciences', 'Agricultural & Natural Resource Sciences'],
   ['Information Studies|University of California, Los Angeles', 'Education'],
   // These new research appointments have department or center names whose disciplinary home
   // is clearer from their official university context than from the generic words alone.

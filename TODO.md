@@ -128,7 +128,7 @@ This plan expands candidate discovery beyond the initial 17 surnames across 4 se
 - [ ] **Physical Sciences**
 - [x] **Life Sciences** (17/17 resolved — 5 included `vp-1388`..`vp-1392`, 12 excluded)
 - [ ] **Medicine & Health**
-- [ ] **Agriculture & Environment**
+- [x] **Agriculture & Environment** (100/100 resolved — 4 included `vp-1408`..`vp-1411`, 96 excluded)
 - [x] **Social Sciences** (34/34 resolved — 4 included `vp-1393`..`vp-1396`, 30 excluded)
 - [x] **Other** (72/72 resolved — 3 included `vp-1405`..`vp-1407`, 69 excluded)
 
