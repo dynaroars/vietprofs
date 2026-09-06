@@ -14,16 +14,33 @@ import { resolve } from 'node:path';
 const API_URL = 'https://api.openalex.org/authors';
 const LEADS_FILE = resolve('maintenance/openalex-leads.json');
 const ROSTER_FILE = resolve('public/data.json');
-const surnames = ['Nguyen', 'Tran', 'Le', 'Pham', 'Vo', 'Vu', 'Bui', 'Do', 'Phan', 'Lai', 'Huynh', 'Duong', 'Truong', 'Dang', 'Ngo', 'Mai', 'Dao'];
+
+// High-frequency primary and secondary Vietnamese surnames
+const surnames = [
+  'Nguyen', 'Tran', 'Le', 'Pham', 'Vo', 'Vu', 'Bui', 'Do', 'Phan', 'Lai', 'Huynh', 'Duong', 'Truong', 'Dang', 'Ngo', 'Mai', 'Dao',
+  'Dinh', 'Trinh', 'Cao', 'Doan', 'Vuong', 'Nghiem', 'Luu', 'Phung', 'Ta', 'To', 'Ho', 'Lam', 'Ly', 'Chau', 'Bach', 'Ha', 'Diep', 'Quach', 'Kieu', 'Mac', 'Khuong', 'La', 'Ton That'
+];
+
+// High-specificity Vietnamese given names to find scholars with hyphenated/Western surnames
+const givenNames = [
+  'Quoc', 'Duy', 'Khang', 'Hieu', 'Kien', 'Tung', 'Triet', 'Bao', 'Phuong', 'Thao', 'Giang', 'Trang', 'Viet', 'Thanh', 'Tuan', 'Hung', 'Cuong', 'Xuan', 'Thuan', 'Nhat', 'Quyen', 'Linh', 'Huyen', 'Manh', 'Duc'
+];
+
+const allSurnamesSet = new Set(surnames.map((s) => s.toLowerCase().replace(/[^a-z]/g, '')));
+
 // A surname alone is much too broad internationally (especially Le, Do, Mai, and Dang). This is
 // deliberately a discovery lexicon, not an identity determination: a candidate still needs
 // identity-resolved appointment evidence before inclusion.
 const vietnameseNameTokens = new Set([
-  'anh', 'bach', 'bao', 'binh', 'cam', 'chau', 'chinh', 'cuong', 'dinh', 'duy', 'giang', 'hai',
-  'hanh', 'hieu', 'hoai', 'hoang', 'hong', 'huong', 'huy', 'khanh', 'kien', 'kim', 'lam', 'lan',
-  'lien', 'linh', 'loc', 'long', 'minh', 'my', 'nam', 'ngan', 'ngoc', 'nhat', 'phuc', 'phuong',
-  'quang', 'quan', 'quoc', 'quyen', 'son', 'tan', 'thanh', 'thang', 'thai', 'thao', 'thi', 'thien',
-  'thuan', 'thuy', 'toan', 'trang', 'trinh', 'truc', 'tuan', 'tuyet', 'van', 'viet', 'vinh', 'xuan', 'yen',
+  'anh', 'bach', 'bao', 'binh', 'cam', 'cao', 'chau', 'chinh', 'cuong', 'diep', 'dinh', 'doan', 'duc', 'duy',
+  'giang', 'ha', 'hai', 'han', 'hanh', 'hau', 'hien', 'hiep', 'hieu', 'ho', 'hoa', 'hoai', 'hoang', 'hong',
+  'hung', 'huong', 'huu', 'huy', 'huyen', 'khai', 'khanh', 'khang', 'khiem', 'khoa', 'khuong', 'kieu', 'kien',
+  'kim', 'la', 'lam', 'lan', 'lap', 'le', 'lien', 'liem', 'linh', 'loc', 'loi', 'long', 'luan', 'luu', 'ly',
+  'mac', 'mai', 'manh', 'minh', 'my', 'nam', 'ngan', 'nghia', 'nghiem', 'ngoc', 'nhat', 'nhu', 'nhung', 'phat',
+  'phu', 'phuc', 'phung', 'phuoc', 'phuong', 'quach', 'quang', 'quan', 'quoc', 'quyen', 'quynh', 'sang', 'son',
+  'ta', 'tai', 'tam', 'tan', 'thang', 'thanh', 'thai', 'thao', 'thi', 'thien', 'thinh', 'thuan', 'thuy', 'to',
+  'toan', 'ton', 'trang', 'tri', 'triet', 'trinh', 'truc', 'trung', 'tu', 'tuan', 'tung', 'tuyet', 'van',
+  'viet', 'vinh', 'vuong', 'xuan', 'yen'
 ]);
 const broadFields = [
   'Computer Science', 'Engineering', 'Mathematics & Statistics', 'Physical Sciences',
@@ -50,10 +67,19 @@ interface Lead {
 }
 interface Queue { candidates: Lead[]; }
 
+const diacriticSurnames = [
+  'Nguyễn', 'Trần', 'Lê', 'Phạm', 'Võ', 'Vũ', 'Bùi', 'Đỗ', 'Phan', 'Huỳnh', 'Dương', 'Trương', 'Đặng', 'Ngô', 'Đào',
+  'Đinh', 'Trịnh', 'Cao', 'Đoàn', 'Vương', 'Nghiêm', 'Lưu', 'Phùng', 'Tạ', 'Tô', 'Hồ', 'Lâm', 'Lý', 'Châu', 'Bạch', 'Hà', 'Diệp'
+];
+
 const args = process.argv.slice(2);
 const pagesArg = args.indexOf('--pages');
 const pages = Math.max(1, Math.min(10, Number(pagesArg === -1 ? 1 : args[pagesArg + 1]) || 1));
 const includeEconomics = args.includes('--include-economics');
+const surnamesOnly = args.includes('--surnames-only');
+const givenNamesOnly = args.includes('--given-names-only');
+const diacriticsOnly = args.includes('--diacritics-only');
+const includeDiacritics = diacriticsOnly || args.includes('--include-diacritics');
 const currentYear = new Date().getUTCFullYear();
 
 function tokens(value: string): Set<string> {
@@ -92,73 +118,124 @@ function recentEligibleAffiliation(author: Author): { institution: Institution; 
       years.some((year) => year >= currentYear - 2))
     .sort((a, b) => Math.max(...b.years) - Math.max(...a.years))[0];
 }
-async function fetchSurname(surname: string): Promise<Author[]> {
+async function fetchQuery(query: string, maxPages: number): Promise<Author[]> {
   const authors: Author[] = [];
   let cursor = '*';
-  for (let page = 0; page < pages && cursor; page++) {
-    const url = `${API_URL}?search=${encodeURIComponent(surname)}&per-page=200&cursor=${encodeURIComponent(cursor)}`;
-    const response = await fetch(url, { headers: { 'User-Agent': 'VietProfs discovery (https://vietprofs.roars.dev)' } });
-    if (!response.ok) throw new Error(`OpenAlex ${surname} page ${page + 1}: ${response.status}`);
+  for (let page = 0; page < maxPages && cursor; page++) {
+    const url = `${API_URL}?search=${encodeURIComponent(query)}&per-page=200&cursor=${encodeURIComponent(cursor)}&mailto=vietprofs@roars.dev`;
+    let response: Response | null = null;
+    for (let attempt = 0; attempt < 5; attempt++) {
+      try {
+        response = await fetch(url, { headers: { 'User-Agent': 'VietProfs-Discovery/1.0 (mailto:vietprofs@roars.dev)' } });
+        if (response.status === 429) {
+          const delay = (attempt + 1) * 3000;
+          console.warn(`  [429 rate limit] query "${query}" page ${page + 1}, waiting ${delay}ms before retry ${attempt + 1}/5...`);
+          await new Promise((r) => setTimeout(r, delay));
+          continue;
+        }
+        if (!response.ok) {
+          console.warn(`  [status ${response.status}] query "${query}" page ${page + 1}, waiting 2000ms...`);
+          await new Promise((r) => setTimeout(r, 2000));
+          continue;
+        }
+        break;
+      } catch (err) {
+        console.warn(`  [network error] query "${query}": ${err}, waiting 2000ms...`);
+        await new Promise((r) => setTimeout(r, 2000));
+      }
+    }
+    if (!response || !response.ok) {
+      console.warn(`Warning: OpenAlex query "${query}" page ${page + 1} failed with status ${response?.status}`);
+      break;
+    }
     const payload = await response.json() as { results?: Author[]; meta?: { next_cursor?: string } };
     authors.push(...(payload.results ?? []));
     cursor = payload.meta?.next_cursor ?? '';
+    await new Promise((r) => setTimeout(r, 250)); // polite delay
   }
   return authors;
 }
 
 async function main() {
   const roster: Array<{ name: string; vietnameseName?: string }> = JSON.parse(await readFile(ROSTER_FILE, 'utf8'));
-  const rosterNames = roster.flatMap((person) => [person.name, person.vietnameseName].filter((name): name is string => !!name));
   let previous: Record<string, Queue> = {};
   try {
     const existing = JSON.parse(await readFile(LEADS_FILE, 'utf8')) as { pipelineVersion?: number; batches?: Record<string, Queue> };
-    // Earlier versions were generated before the stricter name signal existed. Do not retain
-    // their automated statuses; later versions preserve human-reviewed outcomes by author ID.
-    previous = existing.pipelineVersion === 3 ? existing.batches ?? {} : {};
+    previous = existing.pipelineVersion && existing.pipelineVersion >= 3 ? existing.batches ?? {} : {};
   } catch { /* first run */ }
   const previousById = new Map(Object.values(previous).flatMap((queue) => queue.candidates).map((lead) => [lead.openAlexId, lead]));
   const batches: Record<string, Queue> = Object.fromEntries(broadFields.map((field) => [field, { candidates: [] as Lead[] }]));
   const seen = new Set<string>();
 
-  for (const surname of surnames) {
-    console.log(`Fetching OpenAlex authors matching ${surname} (${pages} page${pages === 1 ? '' : 's'})...`);
-    for (const author of await fetchSurname(surname)) {
-      const authorTokens = tokens(author.display_name);
-      const hasSurname = authorTokens.has(surname.toLowerCase());
-      const signal = [...authorTokens].find((token) => token !== surname.toLowerCase() && vietnameseNameTokens.has(token));
-      if (seen.has(author.id) || !author.display_name || !hasSurname || !signal || (author.works_count ?? 0) < 3) continue;
-      seen.add(author.id);
-      const affiliation = recentEligibleAffiliation(author);
-      if (!affiliation) continue;
-      const topic = [...(author.topics ?? [])].sort((a, b) => (b.count ?? 0) - (a.count ?? 0))[0];
-      const openAlexField = topic?.field?.display_name ?? topic?.domain?.display_name ?? 'Unknown';
-      const broadField = classify(openAlexField, topic?.domain?.display_name ?? '');
-      if (!includeEconomics && broadField === 'Business & Economics') continue;
-      const prior = previousById.get(author.id);
-      const rosterMatch = roster.find((person) => samePerson(tokens(author.display_name), tokens(person.name)) ||
-        (person.vietnameseName ? samePerson(tokens(author.display_name), tokens(person.vietnameseName)) : false));
-      const lead: Lead = {
-        openAlexId: author.id, name: author.display_name, aliases: author.raw_author_names ?? [], sourceSurname: surname,
-        nameSignal: `${surname} + ${signal}`,
-        institution: affiliation.institution.display_name ?? 'Unknown', country: affiliation.institution.country_code ?? '',
-        institutionType: affiliation.institution.type ?? '', affiliationYears: affiliation.years,
-        broadField, openAlexField, primaryTopic: topic?.display_name ?? 'Unknown', works: author.works_count ?? 0,
-        cited: author.cited_by_count ?? 0, status: prior?.status ?? (rosterMatch ? 'duplicate' : 'pending'),
-        note: prior?.note ?? (rosterMatch ? `Possible roster match: ${rosterMatch.name}. Verify identity before treating as duplicate.` : undefined),
-        rosterId: prior?.rosterId,
-      };
-      batches[broadField].candidates.push(lead);
+  function processAuthor(author: Author, sourceLabel: string) {
+    const authorTokens = tokens(author.display_name);
+    // Find Vietnamese token matches in the author's name
+    const matchingTokens = [...authorTokens].filter((token) => vietnameseNameTokens.has(token));
+    if (matchingTokens.length < 2) return; // Require at least 2 Vietnamese name tokens to minimize false positives
+
+    if (seen.has(author.id) || !author.display_name || (author.works_count ?? 0) < 3) return;
+    seen.add(author.id);
+    const affiliation = recentEligibleAffiliation(author);
+    if (!affiliation) return;
+    const topic = [...(author.topics ?? [])].sort((a, b) => (b.count ?? 0) - (a.count ?? 0))[0];
+    const openAlexField = topic?.field?.display_name ?? topic?.domain?.display_name ?? 'Unknown';
+    const broadField = classify(openAlexField, topic?.domain?.display_name ?? '');
+    if (!includeEconomics && broadField === 'Business & Economics') return;
+    const prior = previousById.get(author.id);
+    const rosterMatch = roster.find((person) => samePerson(tokens(author.display_name), tokens(person.name)) ||
+      (person.vietnameseName ? samePerson(tokens(author.display_name), tokens(person.vietnameseName)) : false));
+    const lead: Lead = {
+      openAlexId: author.id, name: author.display_name, aliases: author.raw_author_names ?? [], sourceSurname: sourceLabel,
+      nameSignal: matchingTokens.join(' + '),
+      institution: affiliation.institution.display_name ?? 'Unknown', country: affiliation.institution.country_code ?? '',
+      institutionType: affiliation.institution.type ?? '', affiliationYears: affiliation.years,
+      broadField, openAlexField, primaryTopic: topic?.display_name ?? 'Unknown', works: author.works_count ?? 0,
+      cited: author.cited_by_count ?? 0, status: prior?.status ?? (rosterMatch ? 'duplicate' : 'pending'),
+      note: prior?.note ?? (rosterMatch ? `Possible roster match: ${rosterMatch.name}. Verify identity before treating as duplicate.` : undefined),
+      rosterId: prior?.rosterId,
+    };
+    batches[broadField].candidates.push(lead);
+  }
+
+  // 1. Search by primary and secondary surnames
+  if (!givenNamesOnly && !diacriticsOnly) {
+    for (const surname of surnames) {
+      console.log(`Fetching OpenAlex authors matching surname: ${surname}...`);
+      for (const author of await fetchQuery(surname, pages)) {
+        processAuthor(author, surname);
+      }
     }
   }
+
+  // 2. Search by distinct Vietnamese given names
+  if (!surnamesOnly && !diacriticsOnly) {
+    for (const given of givenNames) {
+      console.log(`Fetching OpenAlex authors matching given name: ${given}...`);
+      for (const author of await fetchQuery(given, 1)) {
+        processAuthor(author, given);
+      }
+    }
+  }
+
+  // 3. Search with full diacritic strings
+  if (includeDiacritics) {
+    for (const diacritic of diacriticSurnames) {
+      console.log(`Fetching OpenAlex authors matching diacritics: ${diacritic}...`);
+      for (const author of await fetchQuery(diacritic, 1)) {
+        processAuthor(author, diacritic);
+      }
+    }
+  }
+
   for (const queue of Object.values(batches)) queue.candidates.sort((a, b) => b.cited - a.cited);
   const output = {
-    pipelineVersion: 3, source: API_URL, extractedAt: new Date().toISOString(), query: { surnames, pagesPerSurname: pages, includeEconomics },
-    method: 'OpenAlex author text-search by Vietnamese surname plus a Vietnamese given/middle-name token; at least three works; a 2024-or-later non-Vietnam education, government, nonprofit, or facility affiliation; field from highest-count OpenAlex topic; conservative roster-token deduplication. These are unverified discovery leads, not appointment evidence.',
+    pipelineVersion: 4, source: API_URL, extractedAt: new Date().toISOString(), query: { surnames, givenNames, pagesPerSurname: pages, includeEconomics },
+    method: 'OpenAlex author text-search by expanded Vietnamese surnames, high-specificity given names, and diacritics; minimum 2 Vietnamese name tokens co-occurrence; at least three works; recent non-Vietnam affiliation at higher education, government, nonprofit, or research facility; topic classification; conservative roster deduplication.',
     reviewInstructions: 'For each pending lead, resolve identity and independently verify a current eligible appointment, track, institution type, and reliable evidence before adding. OpenAlex affiliations can be stale and do not establish faculty status. Preserve included/excluded/duplicate/unresolved statuses and notes on reruns.',
     batches,
   };
   await writeFile(LEADS_FILE, `${JSON.stringify(output, null, 2)}\n`);
   console.log(`Wrote ${seen.size} unique searched authors into ${LEADS_FILE}`);
-  for (const field of broadFields) console.log(`${field}: ${batches[field].candidates.length}`);
+  for (const field of broadFields) console.log(`${field}: ${batches[field].candidates.length} total`);
 }
 main().catch((error: unknown) => { console.error(error); process.exit(1); });

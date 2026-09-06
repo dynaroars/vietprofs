@@ -1,32 +1,56 @@
-# OpenAlex Cross-Discipline Verification Pass — TODO
+# OpenAlex Cross-Discipline Discovery & Verification Pass — TODO
 
 ## Context & Essential References
-Before modifying the roster, review:
+Before researching or modifying the roster, review:
 - [AGENTS.md](AGENTS.md)
 - [README.md](README.md)
 - [ROSTER_MAINTENANCE.md](ROSTER_MAINTENANCE.md) (authoritative criteria for eligibility, appointment tracks, degrees, honors, portraits, and evidence)
 
-## Workflow & Rules
-1. **Lead Queue:** `maintenance/openalex-leads.json`.
-2. **Resolution Standard:** OpenAlex affiliations are leads only and may be stale. Resolve each candidate using current, identity-resolved evidence:
-   - `included`: Add to roster with assigned `rosterId` and detailed `note` (official institutional profile $\rightarrow$ `"confirmed": true`; otherwise reliable evidence with `"confirmed": false`).
-   - `duplicate`: Existing profile matched $\rightarrow$ set status to `"duplicate"` and reference the roster ID.
-   - `excluded`: Ineligible (e.g. based in Vietnam, corporate/industry, student/postdoc, vocational institution) $\rightarrow$ set status to `"excluded"` with reason in `note`.
-   - `unresolved`: Cannot verify identity or current appointment $\rightarrow$ set status to `"unresolved"` with reason in `note`.
-3. **Inclusion Checklist:**
-   - Update `public/data.json` (ensure fields, tracks, locations, degrees, honors match schema).
-   - If a new country or institution field mapping is added, update `src/roster-constants.ts` (`COUNTRY_FLAGS`) and/or `src/data.ts` (`FIELD_OVERRIDES`).
-   - Update `maintenance/verification.json` with entry verification record.
-   - Update `maintenance/openalex-leads.json` candidate entry.
-   - Run profile ID assignment: `npm run assign-profile-ids -- --apply`.
-   - Validate and build: `npm test && npm run build && git diff --check`.
-   - Commit and push changes per batch.
+---
+
+## Strategic Roadmap: 4 Discovery Phases
+
+This plan expands candidate discovery beyond the initial 17 surnames across 4 sequential, reproducible strategies:
+
+1. **Phase 1: Expanded Surnames Pass (20+ New Vietnamese Surnames)**
+   - Target queries: `Dinh`, `Trinh`, `Cao`, `Doan`, `Vuong`, `Nghiem`, `Luu`, `Phung`, `Ta`, `To`, `Ho`, `Lam`, `Ly`, `Chau`, `Bach`, `Ha`, `Diep`, `Quach`, `Kieu`, `Mac`, `Khuong`, `La`, `Ton That`.
+   - Command: `npm run extract-openalex-leads -- --surnames-only`
+2. **Phase 2: High-Specificity Given-Name Discovery (Inverted Search)**
+   - Discovers diaspora scholars with hyphenated/Western surnames (e.g. *Le-Trilling*, *Nguyen-Brown*, *Smith*).
+   - Target queries: `Quoc`, `Duy`, `Khang`, `Hieu`, `Kien`, `Tung`, `Triet`, `Bao`, `Phuong`, `Thao`, `Giang`, `Trang`, `Viet`, `Thanh`, `Tuan`, `Hung`, `Cuong`, `Xuan`, `Thuan`, `Nhat`, `Quyen`, `Linh`, `Huyen`, `Manh`, `Duc`.
+   - Command: `npm run extract-openalex-leads -- --given-names-only`
+3. **Phase 3: Deep Pagination on High-Volume Surnames (`--pages 2..5`)**
+   - Targets rising Assistant & Associate Professors in the 500–2,500 citation tier for high-volume surnames (`Nguyen`, `Tran`, `Le`, `Pham`, `Vu`, `Vo`, `Bui`, `Do`, `Phan`, `Dang`, `Huynh`, `Duong`, `Truong`, `Ngo`, `Mai`, `Dao`).
+   - Command: `npm run extract-openalex-leads -- --pages 3`
+4. **Phase 4: Full Diacritic & Compound Search Passes**
+   - Target queries: Full Vietnamese diacritics (`Nguyễn`, `Trần`, `Lê`, `Phạm`, `Võ`, `Vũ`, `Bùi`, `Đỗ`, `Phan`, `Huỳnh`, `Dương`, `Trương`, `Đặng`, `Ngô`, `Đào`, `Hoàng`, `Đoàn`, `Trịnh`, `Vương`) and compound names (`Ton That`, `Ton Nu`, `Doan Pham`).
+   - Command: `npm run extract-openalex-leads -- --diacritics-only`
 
 ---
 
-## Current Queue Status (as of 2026-09-05)
+## Workflow & Resolution Standard
 
-### Completed Batches
+1. **Lead Queue:** `maintenance/openalex-leads.json`.
+2. **Resolution Standard:** OpenAlex affiliations are leads only and may be stale. Resolve each candidate using current, identity-resolved evidence:
+   - `included`: Add to roster (`public/data.json`) with assigned `vp-####` ID and verification timestamp in `maintenance/verification.json`.
+   - `duplicate`: Matched existing profile $\rightarrow$ set `status: "duplicate"`, `matchedId: "vp-####"`, and `note`.
+   - `excluded`: Ineligible (e.g. primary appointment based in Vietnam, non-Vietnamese heritage homonym, industry/corporate scientist, student/postdoc, non-faculty hospital staff) $\rightarrow$ set `status: "excluded"` with specific `reason`.
+   - `unresolved`: Cannot verify identity or current appointment $\rightarrow$ set `status: "unresolved"` with reason in `note`.
+3. **Inclusion Checklist:**
+   - Update `public/data.json` (ensure `track`, `institutionType`, locations, degrees, honors match schema).
+   - If a new department/institute string is added, update `src/data.ts` (`FIELD_OVERRIDES`).
+   - If an author has a hyphenated/married name where the first token looks like a Vietnamese surname, add to `surnameFirstAllowlist` in `scripts/validate-data.ts`.
+   - Update `maintenance/verification.json` with entry verification record (`"<Person Name>": "YYYY-MM-DDTHH:mm:ss.000Z"`).
+   - Update candidate entry in `maintenance/openalex-leads.json`.
+   - Run immutable profile ID assignment: `npm run assign-profile-ids -- --apply`.
+   - Validate and build: `npm test && npm run build && git diff --check`.
+   - Commit and push changes per batch immediately.
+
+---
+
+## Queue Status & Progress Tracking
+
+### Initial Baseline Pass (17 Surnames, Page 1) — 100% Completed
 - [x] **Computer Science** (52/52 resolved — 8 included, 16 duplicates, 27 excluded, 1 unresolved)
 - [x] **Mathematics & Statistics** (8/8 resolved — 6 included, 2 duplicates)
 - [x] **Life Sciences** (22/22 resolved — 7 included, 1 duplicate, 14 excluded)
@@ -39,33 +63,89 @@ Before modifying the roster, review:
 
 ---
 
-### Remaining Batches to Process
-All non-empty queues in `maintenance/openalex-leads.json` have been fully processed and resolved (100% complete across all 9 non-empty disciplines).
+### Active Execution Queues
 
-#### Empty Batches (No leads found / No action needed)
-- Business & Economics (0)
-- Humanities & Arts (0)
-- Education (0)
-- Law (0)
+#### Phase 1: Expanded Surnames Queue (`npm run extract-openalex-leads -- --surnames-only`)
+- [ ] **Computer Science** (31 pending)
+- [ ] **Engineering** (64 pending)
+- [x] **Mathematics & Statistics** (2/2 resolved — 1 included `vp-1301`, 1 excluded)
+- [ ] **Physical Sciences** (45 pending)
+- [x] **Life Sciences** (17/17 resolved — 6 included `vp-1308`..`vp-1313`, 11 excluded)
+- [ ] **Medicine & Health** (90 pending)
+- [ ] **Agriculture & Environment** (39 pending)
+- [x] **Social Sciences** (16/16 resolved — 6 included `vp-1302`..`vp-1307`, 10 excluded)
+- [ ] **Other** (32 pending)
+
+#### Phase 2: High-Specificity Given-Name Queue (`npm run extract-openalex-leads -- --given-names-only`)
+- [ ] **Computer Science**
+- [ ] **Engineering**
+- [ ] **Mathematics & Statistics**
+- [ ] **Physical Sciences**
+- [ ] **Life Sciences**
+- [ ] **Medicine & Health**
+- [ ] **Agriculture & Environment**
+- [ ] **Social Sciences**
+- [ ] **Other**
+
+#### Phase 3: Deep Pagination Queue (`npm run extract-openalex-leads -- --pages 3`)
+- [ ] **Computer Science**
+- [ ] **Engineering**
+- [ ] **Mathematics & Statistics**
+- [ ] **Physical Sciences**
+- [ ] **Life Sciences**
+- [ ] **Medicine & Health**
+- [ ] **Agriculture & Environment**
+- [ ] **Social Sciences**
+- [ ] **Other**
+
+#### Phase 4: Diacritic & Compound Name Queue (`npm run extract-openalex-leads -- --diacritics-only`)
+- [ ] **Computer Science**
+- [ ] **Engineering**
+- [ ] **Mathematics & Statistics**
+- [ ] **Physical Sciences**
+- [ ] **Life Sciences**
+- [ ] **Medicine & Health**
+- [ ] **Agriculture & Environment**
+- [ ] **Social Sciences**
+- [ ] **Other**
 
 ---
 
 ## Handy Commands for Agent Execution
-- Inspect pending counts:
+
+- **Inspect pending counts across all batches:**
   ```bash
-  node -e 'const l = JSON.parse(fs.readFileSync("maintenance/openalex-leads.json")); for (const [k, v] of Object.entries(l.batches||{})) { const s = {}; (v.candidates||[]).forEach(c => s[c.status] = (s[c.status]||0)+1); console.log(k, s); }'
+  node -e 'const l = JSON.parse(require("fs").readFileSync("maintenance/openalex-leads.json")); for (const [k, v] of Object.entries(l.batches||{})) { const s = {}; (v.candidates||[]).forEach(c => s[c.status] = (s[c.status]||0)+1); console.log(k, s); }'
   ```
-- Assign IDs:
+
+- **Run extraction by phase:**
+  ```bash
+  # Phase 1: Expanded Surnames
+  npm run extract-openalex-leads -- --surnames-only
+
+  # Phase 2: Given Names (Inverted Search)
+  npm run extract-openalex-leads -- --given-names-only
+
+  # Phase 3: Multi-page depth
+  npm run extract-openalex-leads -- --pages 3
+
+  # Phase 4: Full diacritics
+  npm run extract-openalex-leads -- --diacritics-only
+  ```
+
+- **Assign immutable profile IDs:**
   ```bash
   npm run assign-profile-ids -- --apply
   ```
-- Test and verify:
+
+- **Validate data and build:**
   ```bash
   npm test && npm run build && git diff --check
   ```
-- Commit and push batch:
+
+- **Commit and push batch:**
   ```bash
-  git add maintenance/openalex-leads.json maintenance/verification.json public/data.json src/data.ts src/roster-constants.ts
-  git commit -m "Resolve all pending OpenAlex <Discipline> leads"
+  git add TODO.md maintenance/openalex-leads.json maintenance/verification.json public/data.json scripts/validate-data.ts src/data.ts
+  git commit -m "Resolve OpenAlex <Phase> <Discipline> leads"
   git push origin main
   ```
