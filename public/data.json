@@ -1139,7 +1139,7 @@
     "name": "Thien Huu Nguyen",
     "vietnameseName": "Nguyễn Hữu Thiện",
     "profileUrl": "https://cas.uoregon.edu/directory/computer-science/all/thienn",
-    "lastUpdatedAt": "2026-09-05T08:44:10.000Z",
+    "lastUpdatedAt": "2026-08-29T00:33:36.308Z",
     "scholarUrl": "https://scholar.google.com/citations?user=Da2FhegAAAAJ",
     "websiteUrl": "https://ix.cs.uoregon.edu/~thien/",
     "linkedinUrl": "https://www.linkedin.com/in/thien-huu-nguyen-7a193030/",
@@ -1171,8 +1171,7 @@
       }
     ],
     "portrait": "portraits/033-thien-huu-nguyen-university-of-oregon.webp",
-    "portraitSource": "https://ix.cs.uoregon.edu/~thien/assets/thien-img/thien.png",
-    "lastUpdatedAt": "2026-08-29T00:33:36.308Z"
+    "portraitSource": "https://ix.cs.uoregon.edu/~thien/assets/thien-img/thien.png"
   },
   {
     "id": "vp-0034",
@@ -1215,7 +1214,7 @@
     "name": "Thu Duc Nguyen",
     "vietnameseName": "Nguyễn Đức Thu",
     "profileUrl": "https://www.cs.rutgers.edu/people/professors/details/thu-nguyen",
-    "lastUpdatedAt": "2026-09-05T08:44:10.000Z",
+    "lastUpdatedAt": "2026-08-29T00:35:36.015Z",
     "scholarUrl": "https://scholar.google.com/citations?user=sm9xJEkAAAAJ",
     "websiteUrl": "https://thu-d-nguyen.cs.rutgers.edu/",
     "linkedinUrl": "https://www.linkedin.com/in/thu-duc-nguyen/",
@@ -1249,15 +1248,14 @@
       }
     ],
     "portrait": "portraits/035-thu-duc-nguyen-rutgers-university.webp",
-    "portraitSource": "https://www.cs.rutgers.edu/images/people/id20_thu-nguyen_032041.jpg",
-    "lastUpdatedAt": "2026-08-29T00:35:36.015Z"
+    "portraitSource": "https://www.cs.rutgers.edu/images/people/id20_thu-nguyen_032041.jpg"
   },
   {
     "id": "vp-0036",
     "name": "Tien Nguyen",
     "vietnameseName": "Nguyễn Tiến",
     "profileUrl": "https://profiles.utdallas.edu/tien.n.nguyen",
-    "lastUpdatedAt": "2026-09-05T08:44:10.000Z",
+    "lastUpdatedAt": "2026-08-29T00:36:46.256Z",
     "scholarUrl": "https://scholar.google.com/citations?user=l4QhOVoAAAAJ",
     "linkedinUrl": "https://www.linkedin.com/in/tien-nguyen-3118353/",
     "university": "University of Texas at Dallas",
@@ -1285,15 +1283,14 @@
     ],
     "portrait": "portraits/036-tien-nguyen-university-of-texas-at-dallas.webp",
     "portraitSource": "https://personal.utdallas.edu/~tien.n.nguyen/images/tn-new.JPG",
-    "websiteUrl": "https://personal.utdallas.edu/~tien.n.nguyen/",
-    "lastUpdatedAt": "2026-08-29T00:36:46.256Z"
+    "websiteUrl": "https://personal.utdallas.edu/~tien.n.nguyen/"
   },
   {
     "id": "vp-0037",
     "name": "Tin Nguyen - Auburn University",
     "vietnameseName": "Nguyễn Tin",
     "profileUrl": "https://eng.auburn.edu/directory/tcn0015",
-    "lastUpdatedAt": "2026-09-05T08:44:10.000Z",
+    "lastUpdatedAt": "2026-08-29T00:37:35.080Z",
     "scholarUrl": "https://scholar.google.com/citations?user=aUjOGMEAAAAJ",
     "websiteUrl": "https://tinnguyen-lab.com/home/",
     "linkedinUrl": "https://www.linkedin.com/in/tinnguyenchi/",
@@ -1322,8 +1319,7 @@
     ],
     "portrait": "portraits/037-tin-nguyen-wayne-state-university-wayne-state-university.webp",
     "portraitSource": "https://eng.auburn.edu/images/programs/csse/headshots/nguyen-tin.jpg",
-    "msInstitution": "Eotvos Lorand University",
-    "lastUpdatedAt": "2026-08-29T00:37:35.080Z"
+    "msInstitution": "Eotvos Lorand University"
   },
   {
     "id": "vp-0038",
@@ -32142,7 +32138,10 @@
     "city": "Grinnell",
     "state": "Iowa",
     "country": "United States",
-    "researchAreas": ["Macroeconomics", "International Economics"],
+    "researchAreas": [
+      "Macroeconomics",
+      "International Economics"
+    ],
     "track": "Tenure-line",
     "department": "Economics",
     "rank": "Assistant Professor",
@@ -32150,5 +32149,36 @@
     "phdInstitution": "University of Texas at Austin",
     "msInstitution": "University of Texas at Austin",
     "undergradInstitution": "Diplomatic Academy of Vietnam"
+  },
+  {
+    "id": "vp-1165",
+    "name": "Joy Marie Doan",
+    "profileUrl": "https://cci.utk.edu/sis/about/directory/joy-marie-doan/",
+    "websiteUrl": "https://utk.academia.edu/JoyDoan",
+    "lastUpdatedAt": "2026-09-06T00:27:28.000Z",
+    "university": "University of Tennessee, Knoxville",
+    "city": "Knoxville",
+    "state": "Tennessee",
+    "country": "United States",
+    "researchAreas": [
+      "Academic Librarianship",
+      "Information Organization",
+      "Archives and Records Management"
+    ],
+    "track": "Teaching",
+    "department": "School of Information Sciences",
+    "rank": "Associate Professor of Practice",
+    "undergradInstitution": "University of Michigan",
+    "undergradYear": 2008,
+    "undergradMajor": "English Literature and Music",
+    "msInstitution": "Case Western Reserve University",
+    "msYear": 2010,
+    "msMajor": "Music History",
+    "otherDegrees": [
+      {
+        "degree": "MLIS",
+        "institution": "San Jose State University"
+      }
+    ]
   }
 ]

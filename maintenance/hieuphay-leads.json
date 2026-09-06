@@ -2912,7 +2912,7 @@
       "npapers": 2,
       "cited": 53,
       "status": "pending",
-      "note": "Eighth session: reconfirmed via fresh WebSearch the same strong circumstantial evidence — two 2026 peer-reviewed papers (Agriculture MDPI vol 16 issue 6 art 661, DOI 10.3390/agriculture16060661; and Agribusiness/Wiley DOI 10.1002/agr.70098) list her as 'Agribusiness Program, College of Agriculture and Food Sciences, Florida A&M University,' co-authored with confirmed FAMU faculty member Daniel Solis. However, this session independently confirmed (via a direct WebFetch attempt and the agent-proxy status log) that famu.edu, cafs.famu.edu, and the weebly faculty page are blocked by this environment's network egress policy — the same block prior sessions hit — so no official page could be loaded to confirm exact rank, a working profileUrl, portrait, or education. No FAMU-hosted profile page for her could even be located via search (only a same-department colleague's page and the CAFS agribusiness program page surfaced). Left pending; the appointment looks real and current, but still needs a session with working access to famu.edu to finish."
+      "note": "Eighth session: reconfirmed via fresh WebSearch the same strong circumstantial evidence — two 2026 peer-reviewed papers (Agriculture MDPI vol 16 issue 6 art 661, DOI 10.3390/agriculture16060661; and Agribusiness/Wiley DOI 10.1002/agr.70098) list her as 'Agribusiness Program, College of Agriculture and Food Sciences, Florida A&M University,' co-authored with confirmed FAMU faculty member Daniel Solis. However, this session independently confirmed (via a direct WebFetch attempt and the agent-proxy status log) that famu.edu, cafs.famu.edu, and the weebly faculty page are blocked by this environment's network egress policy — the same block prior sessions hit — so no official page could be loaded to confirm exact rank, a working profileUrl, portrait, or education. No FAMU-hosted profile page for her could even be located via search (only a same-department colleague's page and the CAFS agribusiness program page surfaced). Left pending; the appointment looks real and current, but still needs a session with working access to famu.edu to finish. Ninth session (2026-09-06): reconfirmed again via WebFetch and raw curl that www.famu.edu returns a 403 CONNECT rejection from this environment's network egress proxy; WebSearch corroborates she is Assistant Professor, Agricultural Economics/Agribusiness, FAMU College of Agriculture and Food Sciences, cited by 694 scholars per Google Scholar verified via famu.edu email, but a working profileUrl, rank confirmation, portrait, and education still need direct famu.edu access."
     },
     {
       "name": "Quynh Anh",
@@ -6230,7 +6230,7 @@
       "npapers": 3,
       "cited": 10,
       "status": "pending",
-      "note": "Third session: reconfirmed the same real person, Thanh (Harris) Vu — PhD Finance, University of Auckland; AUT Centre for Financial Research (ACFR) — via WebSearch (academics.aut.ac.nz and acfr.aut.ac.nz remain blocked by this environment's network egress policy, matching prior sessions). Still no source gives a rank beyond 'Researcher'/'Fellow'; a live AUT job posting for a similar FinTech/AI-in-finance role at the time of this search was an explicitly 2-year fixed-term Postdoctoral Research Fellow position, which raises rather than resolves the concern that his role may be a term-limited research fellowship rather than a stable faculty-equivalent appointment. Left pending; needs direct access to his ACFR/academics.aut.ac.nz pages to resolve rank/permanence."
+      "note": "Third session: reconfirmed the same real person, Thanh (Harris) Vu — PhD Finance, University of Auckland; AUT Centre for Financial Research (ACFR) — via WebSearch (academics.aut.ac.nz and acfr.aut.ac.nz remain blocked by this environment's network egress policy, matching prior sessions). Still no source gives a rank beyond 'Researcher'/'Fellow'; a live AUT job posting for a similar FinTech/AI-in-finance role at the time of this search was an explicitly 2-year fixed-term Postdoctoral Research Fellow position, which raises rather than resolves the concern that his role may be a term-limited research fellowship rather than a stable faculty-equivalent appointment. Left pending; needs direct access to his ACFR/academics.aut.ac.nz pages to resolve rank/permanence. Fourth session (2026-09-06): reconfirmed both acfr.aut.ac.nz and profiles.auckland.ac.nz are EGRESS_BLOCKED in this environment; also found he has a University of Auckland profile page (profiles.auckland.ac.nz/thanh-vu), raising a further question of whether his primary appointment is AUT or Auckland. Still needs direct access to resolve institution, rank, and permanence."
     },
     {
       "name": "Monica Tran",
@@ -6559,7 +6559,8 @@
       "country": "TW",
       "npapers": 2,
       "cited": 8,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Best-match person (Trương Kim Phụng, name-order reversed) currently appears to hold a faculty post at Trường Đại học Công Thương TP.HCM (HUIT) in Vietnam, not outside Vietnam; no current Taiwan faculty appointment found (the listed institution itself no longer exists standalone, merged into NKUST in 2018)."
     },
     {
       "name": "Joy Doan",
@@ -6567,7 +6568,9 @@
       "country": "US",
       "npapers": 2,
       "cited": 8,
-      "status": "pending"
+      "status": "included",
+      "rosterId": "vp-1165",
+      "note": "Added as Joy Marie Doan, vp-1165 — moved from CSUN (listed institution, now stale) to University of Tennessee, Knoxville, Associate Professor of Practice, School of Information Sciences (Teaching track). Official utk.edu profile pages could not be directly fetched (blocked by this environment's network egress policy); verified via multiple independent, mutually consistent secondary sources (ZoomInfo, RateMyProfessors, SJSU iSchool speaker bio, search-indexed titles of both the cci.utk.edu and sis.utk.edu profile pages)."
     },
     {
       "name": "Stephanie Tran",
@@ -6575,7 +6578,8 @@
       "country": "US",
       "npapers": 4,
       "cited": 8,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No matching current Johns Hopkins faculty member found across Economics, Sociology, Political Science, SAIS, Bloomberg School of Public Health, or Carey Business School; likely a stale/incorrect OpenAlex affiliation."
     },
     {
       "name": "Chau Truong",
@@ -6583,7 +6587,8 @@
       "country": "US",
       "npapers": 3,
       "cited": 8,
-      "status": "pending"
+      "status": "excluded",
+      "note": "PhD in Health Services Research from UTHealth Houston School of Public Health; now Lead Analyst at Arcadia (health-data analytics), an industry role with no current faculty appointment."
     },
     {
       "name": "Thong Nguyen",
@@ -6591,7 +6596,8 @@
       "country": "SG",
       "npapers": 2,
       "cited": 8,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Only matching person found (Thong Thanh Nguyen, NLP/data science) is a current PhD student at NUS Institute of Data Science, not faculty; no economics/social-science faculty match found under this name."
     },
     {
       "name": "Truong Chau",
@@ -6599,7 +6605,8 @@
       "country": "US",
       "npapers": 2,
       "cited": 8,
-      "status": "pending"
+      "status": "excluded",
+      "note": "PhD from Penn State; now Senior Director of Outcomes Research at ADVI Health (previously Booz Allen Hamilton), an industry role with no current faculty appointment found at Penn State or elsewhere."
     },
     {
       "name": "Vasyl Bui",
@@ -6633,7 +6640,8 @@
       "country": "US",
       "npapers": 3,
       "cited": 8,
-      "status": "pending"
+      "status": "pending",
+      "note": "Identity and title confirmed (Assistant Research Professor, Voinovich School Center for Economic Development & Community Resilience, PhD Economics West Virginia University, joined Aug 2021) via multiple independent search snippets, but ohio.edu and her personal site are blocked by this environment's network egress policy, so whether the role is a continuing research-faculty appointment or a grant/soft-money-limited position (she co-PIs $3.5M+ in funded research) could not be resolved. Needs a session with working access to ohio.edu."
     },
     {
       "name": "Yen Phan",
@@ -6641,7 +6649,8 @@
       "country": "AU",
       "npapers": 2,
       "cited": 8,
-      "status": "pending"
+      "status": "pending",
+      "note": "Likely match is Phi Yen Phan (UTS Business School, PhD 2021 on Vietnamese agricultural supply chains, co-authored a 2025 paper still listing UTS Business School affiliation), but her current title/employment classification (continuing academic vs. casual/postdoctoral) could not be confirmed because profiles.uts.edu.au is blocked by this environment's network egress policy. Needs a session with working access to profiles.uts.edu.au."
     },
     {
       "name": "Trang Le",
@@ -6649,7 +6658,8 @@
       "country": "JP",
       "npapers": 2,
       "cited": 8,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Only matching person found (LE, Thi Huyen Trang, phonetics) is a current doctoral student at Waseda GSICCS, not faculty; distinct from existing roster entry \"Trang Dung Le\" (deceased mathematician)."
     },
     {
       "name": "Hop S. Tran Cao",
@@ -6681,7 +6691,8 @@
       "country": "NL",
       "npapers": 2,
       "cited": 7,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No person by this name (in any order/initial variant) found affiliated with University of Twente in any field; only \"Truong\" match there is Khiet P. Truong (speech communication), a confirmed different, unrelated person."
     },
     {
       "name": "Minh Khoa Nguyen",
