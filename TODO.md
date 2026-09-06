@@ -72,7 +72,7 @@ This plan expands candidate discovery beyond the initial 17 surnames across 4 se
 - [ ] **Physical Sciences** (45 pending)
 - [x] **Life Sciences** (17/17 resolved — 6 included `vp-1308`..`vp-1313`, 11 excluded)
 - [ ] **Medicine & Health** (90 pending)
-- [ ] **Agriculture & Environment** (39 pending)
+- [x] **Agriculture & Environment** (39/39 resolved — 7 included `vp-1326`..`vp-1332`, 1 duplicate, 31 excluded)
 - [x] **Social Sciences** (16/16 resolved — 6 included `vp-1302`..`vp-1307`, 10 excluded)
 - [x] **Other** (32/32 resolved — 3 included `vp-1323`..`vp-1325`, 29 excluded)
 
