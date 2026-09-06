@@ -143,16 +143,16 @@ This plan expands candidate discovery beyond the initial 17 surnames across 4 se
 - [x] **Engineering** (216/216 resolved — 7 included `vp-1477`..`vp-1483`, 209 excluded)
 - [x] **Medicine & Health** (329/329 resolved — 5 included `vp-1484`..`vp-1488`, 2 duplicates, 322 excluded)
 
-#### Phase 4: Diacritic & Compound Name Queue (`npm run extract-openalex-leads -- --diacritics-only`)
-- [ ] **Computer Science**
-- [ ] **Engineering**
-- [ ] **Mathematics & Statistics**
-- [ ] **Physical Sciences**
-- [ ] **Life Sciences**
-- [ ] **Medicine & Health**
-- [ ] **Agriculture & Environment**
-- [ ] **Social Sciences**
-- [ ] **Other**
+#### Phase 4: Diacritic & Compound Name Queue (`npm run extract-openalex-leads -- --diacritics-only`) — 100% Completed
+- [x] **Computer Science** (1/1 resolved — 1 excluded)
+- [x] **Engineering** (2/2 resolved — 2 excluded)
+- [x] **Mathematics & Statistics** (0/0 pending)
+- [x] **Physical Sciences** (6/6 resolved — 1 included `vp-1489`, 5 excluded)
+- [x] **Life Sciences** (0/0 pending)
+- [x] **Medicine & Health** (5/5 resolved — 5 excluded)
+- [x] **Agriculture & Environment** (8/8 resolved — 8 excluded)
+- [x] **Social Sciences** (0/0 pending)
+- [x] **Other** (4/4 resolved — 4 excluded)
 
 ---
 

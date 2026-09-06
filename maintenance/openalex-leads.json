@@ -1,7 +1,7 @@
 {
   "pipelineVersion": 4,
   "source": "https://api.openalex.org/authors",
-  "extractedAt": "2026-09-06T13:06:45.182Z",
+  "extractedAt": "2026-09-06T13:35:40.967Z",
   "query": {
     "surnames": [
       "Nguyen",
@@ -72,7 +72,7 @@
       "Manh",
       "Duc"
     ],
-    "pagesPerSurname": 3,
+    "pagesPerSurname": 1,
     "includeEconomics": false
   },
   "method": "OpenAlex author text-search by expanded Vietnamese surnames, high-specificity given names, and diacritics; minimum 2 Vietnamese name tokens co-occurrence; at least three works; recent non-Vietnam affiliation at higher education, government, nonprofit, or research facility; topic classification; conservative roster deduplication.",
@@ -5318,6 +5318,35 @@
           "cited": 611,
           "status": "excluded",
           "note": "Industry researcher at Huawei Munich Research Center."
+        },
+        {
+          "openAlexId": "https://openalex.org/A5024590923",
+          "name": "Anh Thai",
+          "aliases": [
+            "Anh Thai",
+            "Anh Võ Thái",
+            "Ha Anh Thai",
+            "Thai, Anh"
+          ],
+          "sourceSurname": "Võ",
+          "nameSignal": "anh + thai",
+          "institution": "Georgia Institute of Technology",
+          "country": "US",
+          "institutionType": "education",
+          "affiliationYears": [
+            2025,
+            2024,
+            2023,
+            2022,
+            2021
+          ],
+          "broadField": "Computer Science",
+          "openAlexField": "Computer Science",
+          "primaryTopic": "Optical measurement and interference techniques",
+          "works": 37,
+          "cited": 583,
+          "status": "excluded",
+          "note": "Doctoral researcher at Georgia Institute of Technology; non-faculty position."
         },
         {
           "openAlexId": "https://openalex.org/A5018101883",
@@ -11124,6 +11153,49 @@
           "note": "Possible roster match: Minh-Son Pham. Verify identity before treating as duplicate."
         },
         {
+          "openAlexId": "https://openalex.org/A5010124586",
+          "name": "Hai Long",
+          "aliases": [
+            "H Long",
+            "H. De Long",
+            "H. Long",
+            "Hai Long",
+            "Hai Long Ma",
+            "Hà Đình Long"
+          ],
+          "sourceSurname": "Hà",
+          "nameSignal": "hai + long",
+          "institution": "National Laboratory of the Rockies",
+          "country": "US",
+          "institutionType": "facility",
+          "affiliationYears": [
+            2025,
+            2024,
+            2022,
+            2021,
+            2020,
+            2019,
+            2018,
+            2017,
+            2016,
+            2015,
+            2014,
+            2013,
+            2012,
+            2011,
+            2010,
+            2009,
+            2008
+          ],
+          "broadField": "Engineering",
+          "openAlexField": "Engineering",
+          "primaryTopic": "Fuel Cells and Related Materials",
+          "works": 83,
+          "cited": 3998,
+          "status": "excluded",
+          "note": "Research engineer at National Renewable Energy Laboratory (NREL); non-permanent faculty appointment."
+        },
+        {
           "openAlexId": "https://openalex.org/A5007891798",
           "name": "Tuan A. Ho",
           "aliases": [
@@ -12580,6 +12652,41 @@
           "cited": 2642,
           "status": "excluded",
           "note": "Excluded: non-faculty/postdoc/industry/ineligible or based in Vietnam (unaffiliated)."
+        },
+        {
+          "openAlexId": "https://openalex.org/A5084522721",
+          "name": "Nguyễn Hữu Huy Phúc",
+          "aliases": [
+            "Huu Huy Phuc Nguyen",
+            "N H H Phuc",
+            "N. Phuc",
+            "Nguyen H. H. Phuc",
+            "Nguyen H.H. PHUC",
+            "Nguyen H.H. Phuc",
+            "Nguyen Hong Phuc",
+            "Nguyen Huu Huy PHUC",
+            "Nguyen Huu Huy Phuc",
+            "Nguyen Huu Phuc",
+            "Nguyen Phuc",
+            "Nguyễn Hữu Huy Phúc",
+            "Nguyễn Hữu Phúc",
+            "Đào Xuân Phúc, Nguyễn Thống Nhất"
+          ],
+          "sourceSurname": "Đào",
+          "nameSignal": "huu + huy + phuc",
+          "institution": "Historical Association",
+          "country": "GB",
+          "institutionType": "nonprofit",
+          "affiliationYears": [
+            2025
+          ],
+          "broadField": "Engineering",
+          "openAlexField": "Engineering",
+          "primaryTopic": "Advancements in Battery Materials",
+          "works": 133,
+          "cited": 2594,
+          "status": "excluded",
+          "note": "Primary appointment in Vietnam (Ho Chi Minh City University of Technology, VNU-HCM)."
         },
         {
           "openAlexId": "https://openalex.org/A5061680998",
@@ -26169,6 +26276,72 @@
           "note": "Epidemiologist at WHO Regional Office for the Western Pacific (intergovernmental agency, no qualifying university faculty appointment)."
         },
         {
+          "openAlexId": "https://openalex.org/A5065706599",
+          "name": "Huy Tài Hà",
+          "aliases": [
+            "H. T. Hà",
+            "H\\`A, Huy T\\`Ai",
+            "H\\`a, Huy T\\`ai",
+            "Ha",
+            "Ha Huy Tai",
+            "Ha, Huy Tai",
+            "Ha, Tai Huy",
+            "Huy Hà",
+            "Huy Khôi Hà",
+            "Huy T`ai H`a",
+            "Huy Tai Ha",
+            "Huy Tài Hà",
+            "HÀ, Huy TÀi",
+            "Hà Huy Tài",
+            "Hà, Huy Tài",
+            "Hà, Tài Huy",
+            "H� Huy T�i",
+            "T. Ha",
+            "T. T. HA",
+            "T.T. Ha",
+            "Tai, Ha Huy",
+            "Tài Huy Hà",
+            "Tài Hà"
+          ],
+          "sourceSurname": "Hà",
+          "nameSignal": "huy + tai + ha",
+          "institution": "Tulane University",
+          "country": "US",
+          "institutionType": "education",
+          "affiliationYears": [
+            2026,
+            2025,
+            2024,
+            2023,
+            2022,
+            2021,
+            2020,
+            2019,
+            2018,
+            2017,
+            2016,
+            2015,
+            2014,
+            2013,
+            2012,
+            2011,
+            2010,
+            2009,
+            2008,
+            2007,
+            2006,
+            2005,
+            2004
+          ],
+          "broadField": "Mathematics & Statistics",
+          "openAlexField": "Mathematics",
+          "primaryTopic": "Commutative Algebra and Its Applications",
+          "works": 175,
+          "cited": 1693,
+          "status": "duplicate",
+          "note": "Possible roster match: Huy Tai Ha. Verify identity before treating as duplicate."
+        },
+        {
           "openAlexId": "https://openalex.org/A5046665214",
           "name": "Vu Kim Tuan",
           "aliases": [
@@ -31211,6 +31384,47 @@
           "note": "Excluded: non-faculty/postdoc/industry/ineligible or based in Vietnam (unaffiliated)."
         },
         {
+          "openAlexId": "https://openalex.org/A5020779526",
+          "name": "Anh Lê",
+          "aliases": [
+            "A LE",
+            "A Le",
+            "A. Le",
+            "A.H. Le",
+            "Aden Y Le",
+            "Anh H Le",
+            "Anh H. Le",
+            "Anh H. T. Le",
+            "Anh HongTu Le",
+            "Anh Khoa Le",
+            "Anh Le",
+            "Anh Lê",
+            "Anh Thi Hai Le",
+            "Anson Le",
+            "Le, Anh",
+            "Le, Anh H.",
+            "Le, Anjie",
+            "Li, Josephine"
+          ],
+          "sourceSurname": "Lê",
+          "nameSignal": "anh + le",
+          "institution": "University of Colorado Denver",
+          "country": "US",
+          "institutionType": "education",
+          "affiliationYears": [
+            2026,
+            2010,
+            2009
+          ],
+          "broadField": "Physical Sciences",
+          "openAlexField": "Physics and Astronomy",
+          "primaryTopic": "Advanced Radiotherapy Techniques",
+          "works": 141,
+          "cited": 2659,
+          "status": "duplicate",
+          "note": "Possible roster match: Anh Le. Verify identity before treating as duplicate."
+        },
+        {
           "openAlexId": "https://openalex.org/A5078191796",
           "name": "Ho Tat Lam",
           "aliases": [
@@ -32067,6 +32281,36 @@
           "status": "included",
           "note": "Included as Group Leader at MRC Laboratory of Molecular Biology",
           "rosterId": "vp-1248"
+        },
+        {
+          "openAlexId": "https://openalex.org/A5079094542",
+          "name": "Hồ Nam Nguyễn",
+          "aliases": [
+            "H. Nguyen",
+            "Ho Nam Nguyen",
+            "Hồ Nam Nguyễn",
+            "Nam Nguyen",
+            "Nam Nguyen, Ho",
+            "Nguyen, Ho Nam",
+            "Nguyen, Nam"
+          ],
+          "sourceSurname": "Hồ",
+          "nameSignal": "ho + nam",
+          "institution": "University of California, Berkeley",
+          "country": "US",
+          "institutionType": "education",
+          "affiliationYears": [
+            2026,
+            2024,
+            2022
+          ],
+          "broadField": "Physical Sciences",
+          "openAlexField": "Physics and Astronomy",
+          "primaryTopic": "Radio Astronomy Observations and Technology",
+          "works": 20,
+          "cited": 2148,
+          "status": "duplicate",
+          "note": "Possible roster match: Nam Ho-Nguyen. Verify identity before treating as duplicate."
         },
         {
           "openAlexId": "https://openalex.org/A5000547846",
@@ -33915,6 +34159,45 @@
           "note": "Researcher / non-faculty at British Antarctic Survey; non-permanent faculty appointment."
         },
         {
+          "openAlexId": "https://openalex.org/A5072210745",
+          "name": "Anh Tuấn Trần",
+          "aliases": [
+            "A. T. Tran",
+            "A. Tran",
+            "ANH TRAN",
+            "ANH TUAN TRAN",
+            "Anh T. T. Tran",
+            "Anh T. Tran",
+            "Anh Tran",
+            "Anh Tuan Tran",
+            "Anh Tuấn Trần",
+            "Anh Tú Trần",
+            "T A Tran",
+            "Tran Nho Huong",
+            "Tran Tuan Anh",
+            "Tran, Anh",
+            "Tran, Anh Tuan",
+            "Trần Tuấn Anh",
+            "Tuan Anh Tran",
+            "Tuan-Anh Tran"
+          ],
+          "sourceSurname": "Trần",
+          "nameSignal": "anh + tuan",
+          "institution": "University of Stuttgart",
+          "country": "DE",
+          "institutionType": "education",
+          "affiliationYears": [
+            2025
+          ],
+          "broadField": "Physical Sciences",
+          "openAlexField": "Chemistry",
+          "primaryTopic": "Carbohydrate Chemistry and Synthesis",
+          "works": 128,
+          "cited": 1325,
+          "status": "duplicate",
+          "note": "Possible roster match: Anh Tuan Tran. Verify identity before treating as duplicate."
+        },
+        {
           "openAlexId": "https://openalex.org/A5101671598",
           "name": "Thanh Hoa Tran",
           "aliases": [
@@ -34007,6 +34290,51 @@
           "cited": 1290,
           "status": "duplicate",
           "note": "Possible roster match: Phuong Hong Nguyen. Verify identity before treating as duplicate."
+        },
+        {
+          "openAlexId": "https://openalex.org/A5061566752",
+          "name": "Thanh Nguyen Le",
+          "aliases": [
+            "Bùi Thị Thanh Mai , Lê Quý Đức",
+            "Hai-Nam Nguyen",
+            "Le N. Thanh",
+            "Le Nguyen Thanh",
+            "Le Thanh",
+            "Le, Thanh",
+            "Le, Thanh Nguyen",
+            "Le, Thanh Nguyen;Cho, Won-Jea;",
+            "LÊ NGUYÊN THANH",
+            "Lê Bảo Thanh",
+            "Lê Nguyễn Thành",
+            "Lê Nhật Thành",
+            "Lê Thanh",
+            "Lê Thanh Chi Lê Thanh Chi",
+            "Lê Tiến Thành",
+            "Nguyen Thanh Le",
+            "Thanh Le",
+            "Thanh Le Nguyen",
+            "Thanh Nghi Le",
+            "Thanh Nguyen Le",
+            "Thanh Thái Lê",
+            "Thanh Thùy Lê",
+            "Thành Lê",
+            "Thành Phát Lê"
+          ],
+          "sourceSurname": "Bùi",
+          "nameSignal": "thanh + le",
+          "institution": "Ministry of Health",
+          "country": "MN",
+          "institutionType": "government",
+          "affiliationYears": [
+            2025
+          ],
+          "broadField": "Physical Sciences",
+          "openAlexField": "Biochemistry, Genetics and Molecular Biology",
+          "primaryTopic": "Natural product bioactivities and synthesis",
+          "works": 134,
+          "cited": 1265,
+          "status": "excluded",
+          "note": "Primary appointment in Vietnam (Hanoi University of Pharmacy / NIVR)."
         },
         {
           "openAlexId": "https://openalex.org/A5061440918",
@@ -34234,6 +34562,39 @@
           "cited": 1157,
           "status": "excluded",
           "note": "Excluded: non-faculty/postdoc/industry/ineligible or based in Vietnam (unaffiliated)."
+        },
+        {
+          "openAlexId": "https://openalex.org/A5007920882",
+          "name": "Trần Thị Vân Anh",
+          "aliases": [
+            "Anh Thi Van Tran",
+            "Anh Tran",
+            "Anh Tuong Thi Tran",
+            "T. V.A. Tran",
+            "Thi Van Anh TRAN",
+            "Thi Van Anh Tran",
+            "ThiVan Anh Tran",
+            "Thị Vân Anh Trần",
+            "Thị Vân Trần",
+            "Tran, Thi Van Anh",
+            "Trần Thị Vân Anh",
+            "Van Anh Thi Tran"
+          ],
+          "sourceSurname": "Trần",
+          "nameSignal": "thi + van + anh",
+          "institution": "Technische Universität Dresden",
+          "country": "DE",
+          "institutionType": "education",
+          "affiliationYears": [
+            2026
+          ],
+          "broadField": "Physical Sciences",
+          "openAlexField": "Biochemistry, Genetics and Molecular Biology",
+          "primaryTopic": "Natural product bioactivities and synthesis",
+          "works": 67,
+          "cited": 1118,
+          "status": "excluded",
+          "note": "Primary appointment in Vietnam (Nha Trang University / Ton Duc Thang University)."
         },
         {
           "openAlexId": "https://openalex.org/A5003286516",
@@ -35097,6 +35458,31 @@
           "rosterId": "vp-1247"
         },
         {
+          "openAlexId": "https://openalex.org/A5089272189",
+          "name": "Vũ Quốc Luận",
+          "aliases": [
+            "V.Q. LUAN",
+            "Vu Quoc Luan",
+            "Vũ Quốc Luận",
+            "Vũ Quốc Luật"
+          ],
+          "sourceSurname": "Vũ",
+          "nameSignal": "quoc + luan",
+          "institution": "Institute of Life Sciences",
+          "country": "IN",
+          "institutionType": "education",
+          "affiliationYears": [
+            2026
+          ],
+          "broadField": "Physical Sciences",
+          "openAlexField": "Biochemistry, Genetics and Molecular Biology",
+          "primaryTopic": "Plant tissue culture and regeneration",
+          "works": 87,
+          "cited": 912,
+          "status": "excluded",
+          "note": "Primary appointment in Vietnam (Dalat University / VAST)."
+        },
+        {
           "openAlexId": "https://openalex.org/A5003328364",
           "name": "Kien Xuan Ngo",
           "aliases": [
@@ -35309,6 +35695,42 @@
           "cited": 885,
           "status": "excluded",
           "note": "Trainee, postdoctoral researcher, or non-permanent appointment outside Vietnam."
+        },
+        {
+          "openAlexId": "https://openalex.org/A5007571091",
+          "name": "Hà Quang Minh",
+          "aliases": [
+            "H. Quang Minh",
+            "Ha Quang Minh",
+            "Hà Quang Minh",
+            "M. Ha Quang",
+            "Minh, Ha Quang",
+            "Minh, HÃ  Quang",
+            "Minh, Hà Quang"
+          ],
+          "sourceSurname": "Hà",
+          "nameSignal": "ha + quang + minh",
+          "institution": "RIKEN Center for Advanced Intelligence Project",
+          "country": "JP",
+          "institutionType": "facility",
+          "affiliationYears": [
+            2026,
+            2024,
+            2023,
+            2022,
+            2021,
+            2020,
+            2019,
+            2018
+          ],
+          "broadField": "Physical Sciences",
+          "openAlexField": "Physics and Astronomy",
+          "primaryTopic": "Statistical Mechanics and Entropy",
+          "works": 59,
+          "cited": 882,
+          "status": "included",
+          "note": "Senior Research Scientist in Center for Advanced Intelligence Project (AIP) at RIKEN (Japan).",
+          "rosterId": "vp-1489"
         },
         {
           "openAlexId": "https://openalex.org/A5055162708",
@@ -36605,6 +37027,47 @@
           "note": "Trainee, postdoctoral researcher, or non-permanent appointment outside Vietnam."
         },
         {
+          "openAlexId": "https://openalex.org/A5034968392",
+          "name": "Thanh‐Son Phạm",
+          "aliases": [
+            "Pham, Thanh-Son",
+            "T -S Phạm",
+            "T. Pham",
+            "T.T. Thuy Pham",
+            "Thanh Son Pham",
+            "Thanh-Son Pham",
+            "Thanh-Son Phạm",
+            "Thanh-Son Phạm",
+            "Thanh‐Son Pham",
+            "Thanh‐Son Phạm",
+            "Thanh‐Son Phạm"
+          ],
+          "sourceSurname": "Phạm",
+          "nameSignal": "thanh + son",
+          "institution": "Australian National University",
+          "country": "AU",
+          "institutionType": "education",
+          "affiliationYears": [
+            2026,
+            2025,
+            2024,
+            2023,
+            2022,
+            2021,
+            2020,
+            2019,
+            2018,
+            2017
+          ],
+          "broadField": "Physical Sciences",
+          "openAlexField": "Earth and Planetary Sciences",
+          "primaryTopic": "Seismic Waves and Analysis",
+          "works": 65,
+          "cited": 614,
+          "status": "excluded",
+          "note": "Postdoctoral fellow / research fellow at Australian National University; non-faculty appointment."
+        },
+        {
           "openAlexId": "https://openalex.org/A5023018938",
           "name": "Huy Cuong Tran",
           "aliases": [
@@ -36834,6 +37297,33 @@
           "cited": 573,
           "status": "excluded",
           "note": "Trainee, postdoctoral researcher, or non-permanent appointment outside Vietnam."
+        },
+        {
+          "openAlexId": "https://openalex.org/A5078611030",
+          "name": "Vũ Ngọc Toán",
+          "aliases": [
+            "Toan, Vu Ngoc",
+            "Vu  Ngoc Toan",
+            "Vu N. Toan",
+            "Vu Ngoc Toan",
+            "Vu Ngoc Toan",
+            "Vũ Ngọc Toán"
+          ],
+          "sourceSurname": "Vũ",
+          "nameSignal": "ngoc + toan",
+          "institution": "United States Military Academy",
+          "country": "US",
+          "institutionType": "education",
+          "affiliationYears": [
+            2025
+          ],
+          "broadField": "Physical Sciences",
+          "openAlexField": "Chemistry",
+          "primaryTopic": "Synthesis and biological activity",
+          "works": 58,
+          "cited": 572,
+          "status": "excluded",
+          "note": "Primary appointment in Vietnam (VAST / VNU Hanoi)."
         },
         {
           "openAlexId": "https://openalex.org/A5113100912",
@@ -43350,6 +43840,35 @@
           "note": "Postdoctoral researcher at Chonnam National University Hospital / Vaxcell-Bio; non-faculty."
         },
         {
+          "openAlexId": "https://openalex.org/A5004760175",
+          "name": "Đỗ Thị Thanh Hương",
+          "aliases": [
+            "Do  Thi Thanh Huong",
+            "Do Huong",
+            "Do Thanh Huong",
+            "Do Thi Thanh HUONG",
+            "Do Thi Thanh Huong",
+            "Huong, D.T.T.",
+            "Huong, Do Thi Thanh",
+            "Đỗ Thị Thanh Hương"
+          ],
+          "sourceSurname": "Đỗ",
+          "nameSignal": "thi + thanh + huong",
+          "institution": "Gunma University",
+          "country": "JP",
+          "institutionType": "education",
+          "affiliationYears": [
+            2024
+          ],
+          "broadField": "Life Sciences",
+          "openAlexField": "Immunology and Microbiology",
+          "primaryTopic": "Aquaculture disease management and microbiota",
+          "works": 37,
+          "cited": 729,
+          "status": "duplicate",
+          "note": "Possible roster match: Huong Thanh Bui. Verify identity before treating as duplicate."
+        },
+        {
           "openAlexId": "https://openalex.org/A5070380010",
           "name": "Trang T. Lam",
           "aliases": [
@@ -48899,6 +49418,33 @@
           "note": "Non-Vietnamese researcher (Korean faculty/researcher at Kyungpook National University)."
         },
         {
+          "openAlexId": "https://openalex.org/A5113907625",
+          "name": "Minh Quan Lê",
+          "aliases": [
+            "Le, Minh Quan",
+            "Minh Le",
+            "Minh Q. Le",
+            "Minh Quan Le",
+            "Minh Quan Lê",
+            "Minh Quan T. Le"
+          ],
+          "sourceSurname": "Lê",
+          "nameSignal": "minh + quan + le",
+          "institution": "Children’s Institute",
+          "country": "US",
+          "institutionType": "nonprofit",
+          "affiliationYears": [
+            2025
+          ],
+          "broadField": "Medicine & Health",
+          "openAlexField": "Medicine",
+          "primaryTopic": "COVID-19 Clinical Research Studies",
+          "works": 34,
+          "cited": 5937,
+          "status": "excluded",
+          "note": "Clinical / research fellow at Johns Hopkins All Children's Hospital; trainee position."
+        },
+        {
           "openAlexId": "https://openalex.org/A5057452538",
           "name": "Gheun‐Ho Kim",
           "aliases": [
@@ -49749,6 +50295,36 @@
           "cited": 4564,
           "status": "excluded",
           "note": "Trainee, postdoctoral researcher, clinical fellow, or non-permanent appointment outside Vietnam."
+        },
+        {
+          "openAlexId": "https://openalex.org/A5043869212",
+          "name": "Hong Sang",
+          "aliases": [
+            "H Sang",
+            "H. SANG",
+            "H. Sang",
+            "H., Sang",
+            "Heng Sang",
+            "Hong Sang",
+            "Hồ Ánh Sáng",
+            "Sang, Hong",
+            "桑鸿"
+          ],
+          "sourceSurname": "Hồ",
+          "nameSignal": "hong + sang",
+          "institution": "Jilin University",
+          "country": "CN",
+          "institutionType": "education",
+          "affiliationYears": [
+            2025
+          ],
+          "broadField": "Medicine & Health",
+          "openAlexField": "Medicine",
+          "primaryTopic": "Fungal Infections and Studies",
+          "works": 195,
+          "cited": 4511,
+          "status": "excluded",
+          "note": "Non-Vietnamese researcher (Chinese researcher at Jilin University / Nanjing)."
         },
         {
           "openAlexId": "https://openalex.org/A5009242728",
@@ -54063,6 +54639,59 @@
           "note": "Researcher / non-faculty at Kyungpook National University; non-permanent faculty appointment."
         },
         {
+          "openAlexId": "https://openalex.org/A5091034850",
+          "name": "Minh Lê",
+          "aliases": [
+            "Le, M.",
+            "M -P Lê",
+            "M Le",
+            "M P Lê",
+            "M. Le",
+            "M. Lê",
+            "M. P. Le",
+            "M. P. Lê",
+            "Minh Hoang Le",
+            "Minh Le",
+            "Minh Lê",
+            "Minh P Le",
+            "Minh P Lê",
+            "Minh P. Le",
+            "Minh P. Lê",
+            "Minh Patrick Le",
+            "Minh Patrick LÊ",
+            "Minh Patrick Lê",
+            "Minh T Lê",
+            "Minh T. Lê",
+            "Minh-Patrick Le",
+            "Minh-Patrick Lê"
+          ],
+          "sourceSurname": "Lê",
+          "nameSignal": "minh + le",
+          "institution": "Inserm",
+          "country": "FR",
+          "institutionType": "government",
+          "affiliationYears": [
+            2026,
+            2025,
+            2024,
+            2023,
+            2022,
+            2021,
+            2020,
+            2019,
+            2018,
+            2017,
+            2016
+          ],
+          "broadField": "Medicine & Health",
+          "openAlexField": "Medicine",
+          "primaryTopic": "HIV/AIDS drug development and treatment",
+          "works": 117,
+          "cited": 2003,
+          "status": "duplicate",
+          "note": "Possible roster match: Minh T. N. Le. Verify identity before treating as duplicate."
+        },
+        {
           "openAlexId": "https://openalex.org/A5102891859",
           "name": "Gun-Ha Kim",
           "aliases": [
@@ -58196,6 +58825,52 @@
           "cited": 1105,
           "status": "excluded",
           "note": "Trainee, postdoctoral researcher, clinical fellow, or non-permanent appointment outside Vietnam."
+        },
+        {
+          "openAlexId": "https://openalex.org/A5031593281",
+          "name": "Lam Van Nguyen",
+          "aliases": [
+            "L Nguyen",
+            "L. Nguyen",
+            "L. Van Nguyen",
+            "L.V. Nguyen",
+            "Lam  Van Nguyen",
+            "Lam Nguyen",
+            "Lam V Nguyen",
+            "Lam V. Nguyen",
+            "Lam Van Nguyen",
+            "Lam Van Nguyen",
+            "Le-Y. Nguyen",
+            "Lâm Nguyễn",
+            "Lưu Hải Anh Nguyễn",
+            "Lương Thục Anh Nguyễn",
+            "Nguyen, L.V.",
+            "Nguyen, Lam",
+            "Nguyen, V. L.",
+            "Nguyen, Van Lam",
+            "V H Nguyen",
+            "V. H. Nguyen",
+            "V. Nguyen",
+            "Van Lam NGuyen",
+            "Van Lam Nguyen",
+            "Van Nguyen",
+            "Văn Lâm Nguyễn"
+          ],
+          "sourceSurname": "Lưu",
+          "nameSignal": "lam + van",
+          "institution": "Incheon National University",
+          "country": "KR",
+          "institutionType": "education",
+          "affiliationYears": [
+            2026
+          ],
+          "broadField": "Medicine & Health",
+          "openAlexField": "Medicine",
+          "primaryTopic": "HIV/AIDS Research and Interventions",
+          "works": 114,
+          "cited": 1101,
+          "status": "excluded",
+          "note": "Postdoctoral researcher at Incheon National University; non-faculty position."
         },
         {
           "openAlexId": "https://openalex.org/A5029947022",
@@ -63388,6 +64063,31 @@
           "note": "Primary appointment in Vietnam (Duy Tan University)."
         },
         {
+          "openAlexId": "https://openalex.org/A5034710378",
+          "name": "Viet Phương Đào",
+          "aliases": [
+            "Viet Dao",
+            "Viet Phuong Dao",
+            "Viet Phương Dao",
+            "Viet Phương Đào"
+          ],
+          "sourceSurname": "Đào",
+          "nameSignal": "viet + phuong",
+          "institution": "Spinal Cord Injury BC",
+          "country": "CA",
+          "institutionType": "nonprofit",
+          "affiliationYears": [
+            2025
+          ],
+          "broadField": "Medicine & Health",
+          "openAlexField": "Medicine",
+          "primaryTopic": "Acute Ischemic Stroke Management",
+          "works": 15,
+          "cited": 439,
+          "status": "excluded",
+          "note": "Clinical researcher / fellow at University of British Columbia / Spinal Cord Injury BC; non-permanent appointment."
+        },
+        {
           "openAlexId": "https://openalex.org/A5021204360",
           "name": "Trang Thi Huyen Tu",
           "aliases": [
@@ -64203,6 +64903,34 @@
           "cited": 395,
           "status": "excluded",
           "note": "Primary appointment in Vietnam."
+        },
+        {
+          "openAlexId": "https://openalex.org/A5058115577",
+          "name": "Tuấn Cường Võ",
+          "aliases": [
+            "Tuấn Cường Võ"
+          ],
+          "sourceSurname": "Võ",
+          "nameSignal": "tuan + cuong",
+          "institution": "Gyeongsang National University",
+          "country": "KR",
+          "institutionType": "education",
+          "affiliationYears": [
+            2026,
+            2025,
+            2024,
+            2023,
+            2022,
+            2021,
+            2020
+          ],
+          "broadField": "Medicine & Health",
+          "openAlexField": "Medicine",
+          "primaryTopic": "Malaria Research and Control",
+          "works": 45,
+          "cited": 388,
+          "status": "excluded",
+          "note": "Postdoctoral researcher at Gyeongsang National University; non-faculty position."
         },
         {
           "openAlexId": "https://openalex.org/A5091402414",
@@ -71306,6 +72034,43 @@
           "note": "Primary appointment in Vietnam (VinUniversity)."
         },
         {
+          "openAlexId": "https://openalex.org/A5034407625",
+          "name": "Thị Thùy",
+          "aliases": [
+            "Do, Thi Thuy",
+            "T. T. MD",
+            "Thi Thuy Do",
+            "Thi thuy Do",
+            "Thuy Thi Do",
+            "Thị Thuý Đỗ",
+            "Thị Thùy",
+            "Thị Thùy Vi",
+            "Thị Thúy"
+          ],
+          "sourceSurname": "Đỗ",
+          "nameSignal": "thi + thuy",
+          "institution": "National University of Ireland, Maynooth",
+          "country": "IE",
+          "institutionType": "education",
+          "affiliationYears": [
+            2025,
+            2024,
+            2023,
+            2022,
+            2021,
+            2020,
+            2019,
+            2017
+          ],
+          "broadField": "Agriculture & Environment",
+          "openAlexField": "Environmental Science",
+          "primaryTopic": "Pharmaceutical and Antibiotic Environmental Impacts",
+          "works": 32,
+          "cited": 2493,
+          "status": "excluded",
+          "note": "Postdoctoral researcher at Maynooth University Ireland; non-faculty position."
+        },
+        {
           "openAlexId": "https://openalex.org/A5100635560",
           "name": "Nguyễn Thanh Bình",
           "aliases": [
@@ -72064,6 +72829,36 @@
           "note": "Associate Professor at University of Tsukuba"
         },
         {
+          "openAlexId": "https://openalex.org/A5083701880",
+          "name": "Thiện Hồ",
+          "aliases": [
+            "Ho, Thien",
+            "Hữu Thiện Hồ",
+            "T. Ho",
+            "Tan Phat Ho",
+            "Thach N Ho",
+            "Thien Ho",
+            "Thien X. Ho",
+            "Thien Xuan Ho",
+            "Thiện Hồ"
+          ],
+          "sourceSurname": "Hồ",
+          "nameSignal": "thien + ho",
+          "institution": "Silliman University",
+          "country": "PH",
+          "institutionType": "education",
+          "affiliationYears": [
+            2026
+          ],
+          "broadField": "Agriculture & Environment",
+          "openAlexField": "Agricultural and Biological Sciences",
+          "primaryTopic": "Plant Virus Research Studies",
+          "works": 58,
+          "cited": 1701,
+          "status": "excluded",
+          "note": "Resident / fellow at Driscoll Children's Hospital; trainee position."
+        },
+        {
           "openAlexId": "https://openalex.org/A5001991757",
           "name": "Trung Quang Nguyen",
           "aliases": [
@@ -72522,6 +73317,81 @@
           "note": "Postdoctoral researcher at IPK Gatersleben / Martin Luther University; non-faculty position."
         },
         {
+          "openAlexId": "https://openalex.org/A5072516040",
+          "name": "Hong Xuan",
+          "aliases": [
+            "Do Xuan Hong",
+            "Do, Hong Xuan",
+            "Hong Do",
+            "Hong Xuan",
+            "Hong Xuan Do",
+            "Hồng Tô Mai Xuân"
+          ],
+          "sourceSurname": "Tô",
+          "nameSignal": "hong + xuan",
+          "institution": "Peking University",
+          "country": "CN",
+          "institutionType": "education",
+          "affiliationYears": [
+            2026,
+            2025,
+            2024
+          ],
+          "broadField": "Agriculture & Environment",
+          "openAlexField": "Environmental Science",
+          "primaryTopic": "Hydrology and Watershed Management Studies",
+          "works": 60,
+          "cited": 1447,
+          "status": "excluded",
+          "note": "Non-Vietnamese researcher (Chinese researcher at Peking University)."
+        },
+        {
+          "openAlexId": "https://openalex.org/A5080060889",
+          "name": "Lê Thị Hương",
+          "aliases": [
+            "HUONG, LE THI THANH",
+            "Huong (Cindy) Le",
+            "Huong Le",
+            "Huong Le Thi Thanh",
+            "Huong Thi Thanh Le",
+            "Huong, Le Thi Thanh",
+            "L. Huong",
+            "L. T. T. Huong",
+            "Lan Ta Thi Huong Lan Ta Thi Huong",
+            "Le Huong",
+            "Le T T Huong",
+            "Le Thi Huong",
+            "Le Thi Thanh Huong",
+            "Le Thi Thu Huong",
+            "Le Thi Thuy Huong",
+            "Lê Thi Huong",
+            "Lê Thị Hương",
+            "Lê Thị DIệp Hương",
+            "Lê Thị Hương",
+            "Lê Thị Hồng Hưởng",
+            "Lê Thị Thanh Hương",
+            "Lê Thị Thu Hường",
+            "T. Le",
+            "Thi  Thanh Huong Le",
+            "Thi Thanh Huong Le"
+          ],
+          "sourceSurname": "Diệp",
+          "nameSignal": "le + thi + huong",
+          "institution": "Volga Region State Academy of Physical Culture, Sports and Tourism",
+          "country": "RU",
+          "institutionType": "education",
+          "affiliationYears": [
+            2025
+          ],
+          "broadField": "Agriculture & Environment",
+          "openAlexField": "Environmental Science",
+          "primaryTopic": "Research studies in Vietnam",
+          "works": 226,
+          "cited": 1447,
+          "status": "duplicate",
+          "note": "Possible roster match: Huong Thi Thu Le. Verify identity before treating as duplicate."
+        },
+        {
           "openAlexId": "https://openalex.org/A5060789932",
           "name": "Hong‐Minh Hoang",
           "aliases": [
@@ -72739,6 +73609,40 @@
           "cited": 1327,
           "status": "excluded",
           "note": "USDA researcher / University of Virginia alumnus; government research position."
+        },
+        {
+          "openAlexId": "https://openalex.org/A5022415558",
+          "name": "Đỗ Thị Thanh Toàn",
+          "aliases": [
+            "D. T. T. TOAN",
+            "Do Thanh Toan",
+            "Do Thi Thanh Toan",
+            "Thanh Toan, Do Thi",
+            "Thi Thanh Toan DO",
+            "Thi Thanh Toan Do",
+            "Toan Do",
+            "Toan T. T. Do",
+            "Toan Thanh Thi Do",
+            "Toan Thi Thanh Do",
+            "Toan, D.T.",
+            "Toan, Do Thi Thanh",
+            "Đỗ Thị Thanh Toàn"
+          ],
+          "sourceSurname": "Đỗ",
+          "nameSignal": "thi + thanh + toan",
+          "institution": "University of San Diego",
+          "country": "US",
+          "institutionType": "education",
+          "affiliationYears": [
+            2025
+          ],
+          "broadField": "Agriculture & Environment",
+          "openAlexField": "Environmental Science",
+          "primaryTopic": "Research studies in Vietnam",
+          "works": 98,
+          "cited": 1326,
+          "status": "excluded",
+          "note": "Primary appointment in Vietnam (Hanoi Medical University)."
         },
         {
           "openAlexId": "https://openalex.org/A5084816546",
@@ -74490,6 +75394,37 @@
           "reason": "Postdoc, graduate student, industry researcher, staff scientist, or non-faculty researcher"
         },
         {
+          "openAlexId": "https://openalex.org/A5027214099",
+          "name": "Hà Thị Thu",
+          "aliases": [
+            "Do Thi Thu Ha",
+            "Ha  Thi Thu Do",
+            "Ha Do Thi Thu",
+            "Ha T. Thu",
+            "Ha Thi Minh Thu",
+            "Ha Thi Thu",
+            "Ha Thi Thu Do",
+            "Hà Thị Minh Thư",
+            "Hà Thị Thu",
+            "Thị Thu Hà Đỗ"
+          ],
+          "sourceSurname": "Hà",
+          "nameSignal": "ha + thi",
+          "institution": "Agency for Science, Technology and Research",
+          "country": "SG",
+          "institutionType": "government",
+          "affiliationYears": [
+            2024
+          ],
+          "broadField": "Agriculture & Environment",
+          "openAlexField": "Agricultural and Biological Sciences",
+          "primaryTopic": "Insect and Pesticide Research",
+          "works": 50,
+          "cited": 757,
+          "status": "excluded",
+          "note": "Primary appointment in Vietnam (State Bank of Vietnam / ULIS)."
+        },
+        {
           "openAlexId": "https://openalex.org/A5085948544",
           "name": "Trinh Thi Phuong Vy",
           "aliases": [
@@ -74786,6 +75721,36 @@
           "works": 44,
           "cited": 719,
           "status": "excluded"
+        },
+        {
+          "openAlexId": "https://openalex.org/A5008646614",
+          "name": "Anh Ngoc Thi",
+          "aliases": [
+            "A.N.T. DO",
+            "Anh Ngoc Thi",
+            "Anh Ngoc Thi Do",
+            "Do Thi Ngoc Anh",
+            "Thi Ngoc Anh Do",
+            "Thị Ngọc Anh Đỗ",
+            "Thị Ngọc Ánh Đỗ",
+            "Thị Ngọc Đỗ",
+            "Đỗ Thị Ngọc Anh"
+          ],
+          "sourceSurname": "Đỗ",
+          "nameSignal": "anh + ngoc + thi",
+          "institution": "Uniwersytet SWPS",
+          "country": "PL",
+          "institutionType": "education",
+          "affiliationYears": [
+            2024
+          ],
+          "broadField": "Agriculture & Environment",
+          "openAlexField": "Environmental Science",
+          "primaryTopic": "Remote Sensing in Agriculture",
+          "works": 46,
+          "cited": 713,
+          "status": "excluded",
+          "note": "Primary appointment in Vietnam (Van Lang University / VNU Hanoi)."
         },
         {
           "openAlexId": "https://openalex.org/A5043579443",
@@ -75101,6 +76066,39 @@
           "cited": 685,
           "status": "excluded",
           "note": "Primary appointment in Vietnam (Hanoi University of Mining and Geology)."
+        },
+        {
+          "openAlexId": "https://openalex.org/A5041228849",
+          "name": "Đặng Thị Cẩm Hà",
+          "aliases": [
+            "D T Ha",
+            "D. Ha",
+            "Dang Hoang Ha",
+            "Dang T. C. Ha",
+            "Dang Thi Cam Ha",
+            "Dang Thi Ha",
+            "Dang Thi Hà",
+            "Dang Thi Thu Ha",
+            "Dinda Triski Oktaria Ha",
+            "Ha, Dang",
+            "Thi Cam Ha Dang",
+            "Đặng Thị Cẩm Hà"
+          ],
+          "sourceSurname": "Đặng",
+          "nameSignal": "thi + cam + ha",
+          "institution": "University of Bengkulu",
+          "country": "ID",
+          "institutionType": "education",
+          "affiliationYears": [
+            2025
+          ],
+          "broadField": "Agriculture & Environment",
+          "openAlexField": "Environmental Science",
+          "primaryTopic": "Microbial bioremediation and biosurfactants",
+          "works": 46,
+          "cited": 678,
+          "status": "excluded",
+          "note": "Primary appointment in Vietnam (VAST / IBT)."
         },
         {
           "openAlexId": "https://openalex.org/A5055258265",
@@ -75711,6 +76709,46 @@
           "cited": 548,
           "status": "duplicate",
           "note": "Possible roster match: Quôc Dinh Nguyên. Verify identity before treating as duplicate."
+        },
+        {
+          "openAlexId": "https://openalex.org/A5067830940",
+          "name": "Vũ Thị Thanh Tâm",
+          "aliases": [
+            "T. Vu",
+            "T.T.T. Vu",
+            "TAM T.T. VU",
+            "Tam T. T. Vu",
+            "Tam T. Vu",
+            "Tam T.T. VU",
+            "Tam T.T. Vu",
+            "Tam Thi Thanh Vu",
+            "Tam Vu",
+            "Thuy Xuan Vu",
+            "Tran Quang Vu",
+            "V T T Tam",
+            "Vu Tam",
+            "Vu Thi Thanh Tam",
+            "Vu, Tam",
+            "Vu, Tam T. T.",
+            "Vũ Thị Tâm",
+            "Vũ Thị Thanh Tâm",
+            "Vũ Thị Tâm"
+          ],
+          "sourceSurname": "Vũ",
+          "nameSignal": "thi + thanh + tam",
+          "institution": "Department of Medical Sciences",
+          "country": "RU",
+          "institutionType": "government",
+          "affiliationYears": [
+            2024
+          ],
+          "broadField": "Agriculture & Environment",
+          "openAlexField": "Environmental Science",
+          "primaryTopic": "Parasite Biology and Host Interactions",
+          "works": 79,
+          "cited": 548,
+          "status": "excluded",
+          "note": "Primary appointment in Vietnam (VAST)."
         },
         {
           "openAlexId": "https://openalex.org/A5087242738",
@@ -80109,6 +81147,60 @@
           "note": "Primary appointment based in Vietnam (Vietnam Academy of Social Sciences)."
         },
         {
+          "openAlexId": "https://openalex.org/A5049210356",
+          "name": "Yến Lê Espiritu",
+          "aliases": [
+            "Espiritu, Yen Le",
+            "Espiritu, Yến Lê",
+            "Y. Le Espiritu",
+            "YEN LE ESPIRITU",
+            "Yen Espiritu",
+            "Yen Le Espiritu",
+            "Yen Lê Espiritu",
+            "Yen Le Espiritu",
+            "Yên Lê Espiritu",
+            "Yẽn Lê Espiritu",
+            "Yến Lê Espiritu"
+          ],
+          "sourceSurname": "Lê",
+          "nameSignal": "yen + le",
+          "institution": "University of California San Diego",
+          "country": "US",
+          "institutionType": "education",
+          "affiliationYears": [
+            2026,
+            2024,
+            2023,
+            2021,
+            2020,
+            2018,
+            2017,
+            2016,
+            2015,
+            2014,
+            2013,
+            2012,
+            2011,
+            2010,
+            2009,
+            2008,
+            2005,
+            2002,
+            2000,
+            1999,
+            1996,
+            1995,
+            1994
+          ],
+          "broadField": "Social Sciences",
+          "openAlexField": "Social Sciences",
+          "primaryTopic": "Migration, Ethnicity, and Economy",
+          "works": 146,
+          "cited": 5240,
+          "status": "duplicate",
+          "note": "Possible roster match: Yen Le Espiritu. Verify identity before treating as duplicate."
+        },
+        {
           "openAlexId": "https://openalex.org/A5050413008",
           "name": "Cuong Viet Nguyen",
           "aliases": [
@@ -81285,6 +82377,41 @@
           "status": "duplicate",
           "matchedId": "vp-0601",
           "note": "Duplicate of Yen Dang (University of Leeds)"
+        },
+        {
+          "openAlexId": "https://openalex.org/A5005047623",
+          "name": "Nguyễn Thanh Lâm",
+          "aliases": [
+            "Lam Nguyen",
+            "Lam T. Nguyen",
+            "Lam Thanh Nguyen",
+            "Lam, Nguyen",
+            "Lam, Nguyen Thanh",
+            "N. Lam",
+            "N. T. Lam",
+            "N.T. Lam",
+            "Nguyen Lam",
+            "Nguyen Thanh LAM",
+            "Nguyen Thanh Lam",
+            "Nguyen Thi Thanh Lam Nguyen Thi Thanh Lam",
+            "Nguyen, Lam T.",
+            "Nguyễn Thanh Lâm"
+          ],
+          "sourceSurname": "Lâm",
+          "nameSignal": "thanh + lam",
+          "institution": "Memorial University of Newfoundland",
+          "country": "CA",
+          "institutionType": "education",
+          "affiliationYears": [
+            2025
+          ],
+          "broadField": "Social Sciences",
+          "openAlexField": "Social Sciences",
+          "primaryTopic": "Vietnamese History and Culture Studies",
+          "works": 64,
+          "cited": 1291,
+          "status": "duplicate",
+          "note": "Possible roster match: Thanh Lam Nguyen. Verify identity before treating as duplicate."
         },
         {
           "openAlexId": "https://openalex.org/A5011218050",
@@ -87707,6 +88834,33 @@
           "note": "Faculty at VNU HCMC / VNU Hanoi, Vietnam"
         },
         {
+          "openAlexId": "https://openalex.org/A5037851022",
+          "name": "Đỗ Quang Trung",
+          "aliases": [
+            "D. Q. Trung",
+            "D.Q. Trung",
+            "DO Quang Trung",
+            "Do Quang Trung",
+            "Trung, D., Q.",
+            "Đỗ Quang Trung"
+          ],
+          "sourceSurname": "Đỗ",
+          "nameSignal": "quang + trung",
+          "institution": "National Alliance on Mental Illness",
+          "country": "US",
+          "institutionType": "nonprofit",
+          "affiliationYears": [
+            2024
+          ],
+          "broadField": "Other",
+          "openAlexField": "Materials Science",
+          "primaryTopic": "Luminescence Properties of Advanced Materials",
+          "works": 98,
+          "cited": 1775,
+          "status": "excluded",
+          "note": "Primary appointment in Vietnam (Phenikaa University / VNU Hanoi)."
+        },
+        {
           "openAlexId": "https://openalex.org/A5026607220",
           "name": "Le T. Hoa",
           "aliases": [
@@ -88875,6 +90029,49 @@
           "cited": 1121,
           "status": "excluded",
           "note": "Conflated profile / primary in Vietnam (VNU-HCM)."
+        },
+        {
+          "openAlexId": "https://openalex.org/A5086812774",
+          "name": "Lê Tiến Hà",
+          "aliases": [
+            "Ha Le Tien",
+            "Ha T. Le",
+            "Ha Tien Le",
+            "L T Ha",
+            "L.  T. Ha",
+            "L. T. Ha",
+            "L.T. Ha",
+            "Le Ha",
+            "Le Ha Chi",
+            "Le Ngoc Ha",
+            "Le Thi My Ha",
+            "Le Thi Viet Ha",
+            "Le Tien Ha",
+            "LeTien Ha",
+            "Lue Ha",
+            "Luna Ha",
+            "LÊ THANH HÀ",
+            "Lê Tiến Hà",
+            "Lê Vũ Hà",
+            "Nguyen Le Thai",
+            "Tien Ha Le",
+            "Tien-Ha Le"
+          ],
+          "sourceSurname": "Hà",
+          "nameSignal": "le + ha",
+          "institution": "National Academy of Education",
+          "country": "US",
+          "institutionType": "nonprofit",
+          "affiliationYears": [
+            2025
+          ],
+          "broadField": "Other",
+          "openAlexField": "Materials Science",
+          "primaryTopic": "Luminescence Properties of Advanced Materials",
+          "works": 109,
+          "cited": 1119,
+          "status": "excluded",
+          "note": "Primary appointment in Vietnam (Thai Nguyen University / HUMG)."
         },
         {
           "openAlexId": "https://openalex.org/A5076317574",
@@ -90900,6 +92097,39 @@
           "note": "Postdoctoral researcher at Changwon National University; non-faculty position."
         },
         {
+          "openAlexId": "https://openalex.org/A5055020296",
+          "name": "Văn Tú Vũ",
+          "aliases": [
+            "Tu V. Vu",
+            "Van T. H. Vu",
+            "Van T.H. Vu",
+            "Van Thang Vu",
+            "Van Tri Vu",
+            "Van Tu Vu",
+            "Văn Thảo Vũ",
+            "Văn Tú Vũ"
+          ],
+          "sourceSurname": "Vũ",
+          "nameSignal": "van + tu",
+          "institution": "Sungkyunkwan University",
+          "country": "KR",
+          "institutionType": "education",
+          "affiliationYears": [
+            2025,
+            2024,
+            2022,
+            2021,
+            2020
+          ],
+          "broadField": "Other",
+          "openAlexField": "Materials Science",
+          "primaryTopic": "2D Materials and Applications",
+          "works": 34,
+          "cited": 488,
+          "status": "excluded",
+          "note": "Primary appointment in Vietnam (VAST / INST)."
+        },
+        {
           "openAlexId": "https://openalex.org/A5004148989",
           "name": "Thi Ha Lien Nghiem",
           "aliases": [
@@ -91070,6 +92300,35 @@
           "cited": 444,
           "status": "excluded",
           "note": "Primary appointment in Vietnam (VAST / Nha Trang University)."
+        },
+        {
+          "openAlexId": "https://openalex.org/A5013275740",
+          "name": "Ngoc Duc Le",
+          "aliases": [
+            "Duc Ngoc Le",
+            "Le, Ngoc Duc",
+            "N. D. Le",
+            "N. Le",
+            "N.D. Le",
+            "Ngoc Duc Le",
+            "Ngọc Diệp Lê",
+            "Nhu D. Le"
+          ],
+          "sourceSurname": "Diệp",
+          "nameSignal": "ngoc + duc + le",
+          "institution": "Lyon 1 Université",
+          "country": "FR",
+          "institutionType": "education",
+          "affiliationYears": [
+            2024
+          ],
+          "broadField": "Other",
+          "openAlexField": "Materials Science",
+          "primaryTopic": "Thermal properties of materials",
+          "works": 22,
+          "cited": 421,
+          "status": "excluded",
+          "note": "Postdoctoral researcher at Université Claude Bernard Lyon 1 / CNRS; non-faculty position."
         },
         {
           "openAlexId": "https://openalex.org/A5101714345",
