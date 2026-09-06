@@ -6331,8 +6331,8 @@
       "nextAction": "Continue batch 2 source verification and work collection."
     },
     "vp-0029": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.towson.edu/fcsm/departments/computerinfosci/facultystaff/nnguyen.html"
       ],
@@ -6392,18 +6392,26 @@
           "excerpt": "In 2015, Nguyen served as a panelist for the National Foundation of Science, USA.",
           "retrievedAt": "2026-09-06T22:27:48.060Z",
           "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0029-enrichment-1",
+          "url": "https://www.towson.edu/fcsm/departments/computerinfosci/facultystaff/nnguyen.html",
+          "excerpt": "Towson’s official faculty profile describes Nam Nguyen’s work in complex-network analysis, mobile computing, social data analysis, data mining, and cybersecurity, and explicitly lists three selected publications.",
+          "retrievedAt": "2026-09-06T22:33:26.749Z",
+          "details": "Official university or maintained personal page; identity and selected-work evidence checked against the person-specific page."
         }
       ],
       "errors": [],
-      "updatedAt": "2026-09-06T22:27:48.060Z",
-      "nextAction": "Generate and independently verify overview/work proposal."
+      "updatedAt": "2026-09-06T22:33:26.749Z",
+      "nextAction": "Continue batch 2 source verification and work collection."
     },
     "vp-0030": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://udayton.edu/directory/engineering/computerscience/nguyen-tam.php",
-        "https://sites.google.com/site/vantam/"
+        "https://sites.google.com/site/vantam/",
+        "https://sites.google.com/site/vantam/home"
       ],
       "evidence": [
         {
@@ -6517,15 +6525,22 @@
           "excerpt": "I have authored and co-authored 200 + research papers with 5,500 + citations (from Google Scholar ).",
           "retrievedAt": "2026-09-06T22:27:48.447Z",
           "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0030-enrichment-1",
+          "url": "https://sites.google.com/site/vantam/home",
+          "excerpt": "Tam Nguyen’s maintained personal page identifies him as an Associate Professor at the University of Dayton and describes research in artificial intelligence, computer vision, machine learning, multimedia content analysis, and mixed reality.",
+          "retrievedAt": "2026-09-06T22:33:26.749Z",
+          "details": "Official university or maintained personal page; identity and selected-work evidence checked against the person-specific page."
         }
       ],
       "errors": [],
-      "updatedAt": "2026-09-06T22:27:48.447Z",
-      "nextAction": "Generate and independently verify overview/work proposal."
+      "updatedAt": "2026-09-06T22:33:26.749Z",
+      "nextAction": "Continue batch 2 source verification and work collection."
     },
     "vp-0031": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://cas.uoregon.edu/directory/computer-science/all/tnguye11",
         "https://ix.cs.uoregon.edu/~thanhhng/"
@@ -6642,11 +6657,18 @@
           "excerpt": "a Science for Social Good (DSSG) @ KDD 2021 · Strategic Reasoning for Societal Challenges @ AAMAS 2019 · Computer Poker & Imperfect Information Games @ AAAI 2016 & 2017 · Conservation, Criminology and Computation (C4) Conference, USC 2015 · Wildlife Crime Workshop, USC 2014 Invited Talks 2025 Robust Decision-Making with Limited and Adversarial Data School of Electrical Engineering and Computer Science, Oregon State University 2024 Data-Driven Decision Making in Adversarial Environments: Challenges and Applications Carnegie Mellon University · University of Chicago · Washington University in St.",
           "retrievedAt": "2026-09-06T22:27:49.800Z",
           "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0031-enrichment-1",
+          "url": "https://ix.cs.uoregon.edu/~thanhhng/",
+          "excerpt": "Thanh H. Nguyen’s maintained page describes the COMPASS Lab as an AI research group focused on learning and decision intelligence and explicitly lists MTA, MIPIC, and CTPD among its 2026 selected publications.",
+          "retrievedAt": "2026-09-06T22:33:26.749Z",
+          "details": "Official university or maintained personal page; identity and selected-work evidence checked against the person-specific page."
         }
       ],
       "errors": [],
-      "updatedAt": "2026-09-06T22:27:49.800Z",
-      "nextAction": "Generate and independently verify overview/work proposal."
+      "updatedAt": "2026-09-06T22:33:26.749Z",
+      "nextAction": "Continue batch 2 source verification and work collection."
     },
     "vp-0032": {
       "overview": "pending",
