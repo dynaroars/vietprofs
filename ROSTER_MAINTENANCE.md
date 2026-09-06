@@ -418,6 +418,24 @@ Resuming across sessions (including on a different machine):
    accumulating one giant diff — this is what makes the queue resumable if a session ends
    mid-batch: the last pushed commit plus `maintenance/hieuphay-leads.json`'s recorded statuses are
    the entire state a fresh session needs to continue. Push immediately after each commit.
+
+### OpenAlex cross-discipline lead queues
+
+`npm run extract-openalex-leads` queries the OpenAlex author API for a bounded set of Vietnamese
+surname searches, then writes `maintenance/openalex-leads.json`, grouped into broad disciplines.
+It retains only authors with at least three works and a recent non-Vietnam affiliation at an
+OpenAlex education, government, nonprofit, or research-facility institution. The author's
+highest-count OpenAlex topic assigns the broad-field batch. Business and economics are omitted by
+default because `hieuphay-leads.json` is the more targeted source; pass `-- --include-economics`
+only when that separate queue is exhausted or unsuitable. Pass `-- --pages N` (up to 10) to fetch
+more than the default first 200 search results per surname.
+
+OpenAlex has no Vietnamese-identity or current-faculty-status field. Its name matches, topics, and
+affiliation histories are discovery signals only and can be stale or incorrectly disambiguated.
+Review `pending` leads field by field, starting with high-citation candidates, and apply the full
+inclusion standard before editing the roster. The script preserves human-set `included`,
+`excluded`, `duplicate`, and `unresolved` statuses by OpenAlex author ID across reruns; record a
+short note and roster ID where applicable.
 6. If you're running low on context or budget mid-session, stop after finishing your current
    batch's commit — don't leave `public/data.json` and `maintenance/hieuphay-leads.json` out of
    sync with each other (a `status: included` lead must always have a matching roster entry, and
