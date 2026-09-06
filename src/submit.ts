@@ -154,6 +154,7 @@ function renderShell() {
       <div class="form-section">
         <label for="institutionType">Institution type</label>
         <select id="institutionType" name="institutionType">
+          <option value="">Unspecified / Maintainer will check</option>
           ${INSTITUTION_TYPES.map((type) => `<option value="${escapeHtml(type)}">${escapeHtml(type)}</option>`).join('')}
         </select>
       </div>
@@ -343,7 +344,7 @@ function buildNewEntryBody(entry: SubmissionDraft, notes: string): string {
 // research workflow (see ROSTER_MAINTENANCE.md) treats a supplied name or link as a lead to
 // independently verify, not as pre-validated facts, so passing it through raw is correct.
 function buildBulkSubmissionBody(bulkText: string, entry: SubmissionDraft): string {
-  const lines = ['Request: New entry submission (raw)', '', 'Raw input:', bulkText];
+  const lines = ['Request: New entry submission', '', 'Submitted information:', bulkText];
   const structuredLines: string[] = [];
   if (entry.name) structuredLines.push(`Name: ${entry.name}`);
   for (const key of FIELD_ORDER) {
@@ -405,7 +406,7 @@ function populateEntry(form: SubmitForm, entry: RosterEntry): void {
   form.portraitSource.value = entry.portraitSource ?? '';
   updatePortraitPreview(form, entry);
   form.university.value = entry.university ?? '';
-  form.institutionType.value = entry.institutionType ?? 'University';
+  form.institutionType.value = entry.institutionType ?? '';
   form.city.value = entry.city ?? '';
   form.state.value = entry.state ?? '';
   form.country.value = entry.country ?? '';
@@ -423,10 +424,9 @@ function populateEntry(form: SubmitForm, entry: RosterEntry): void {
   form.mdYear.value = entry.mdYear ? String(entry.mdYear) : '';
   form.mdInstitution.value = entry.mdInstitution ?? '';
   form.researchAreas.value = entry.researchAreas ? entry.researchAreas.join(', ') : '';
-  if (entry.track) {
-    const radio = form.querySelector(`input[name="track"][value="${entry.track}"]`) as HTMLInputElement | null;
-    if (radio) radio.checked = true;
-  }
+  const trackValue = entry.track ?? '';
+  const radio = form.querySelector(`input[name="track"][value="${trackValue}"]`) as HTMLInputElement | null;
+  if (radio) radio.checked = true;
 }
 
 function updatePortraitPreview(form: SubmitForm, entry: RosterEntry | null): void {

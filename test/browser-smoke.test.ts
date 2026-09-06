@@ -372,8 +372,8 @@ test('every roster card exposes its official profile link', async () => {
   const profileLinks = page.locator('.profile-link');
   assert.equal(await profileLinks.count(), entryCount);
   assert.ok(await profileLinks.evaluateAll((links: HTMLAnchorElement[]) => links.every((link) => (
-    /^Official (university|institution) profile$/.test(link.getAttribute('title') || '')
-      && / official (university|institution) profile$/.test(link.getAttribute('aria-label') || '')
+    /^(Official (university|institution) profile|Verification source)$/.test(link.getAttribute('title') || '')
+      && / (official (university|institution) profile|verification source)$/.test(link.getAttribute('aria-label') || '')
       && /^https?:\/\//.test(link.href)
   ))));
   const [actualUrls, expectedUrls] = await Promise.all([
@@ -538,7 +538,7 @@ test('filter choices stay stable and stale filters recover', async () => {
     await page.locator(selector).first().click();
     assert.ok((await page.locator('.entry').count()) > 0, `${selector} should always produce roster results`);
   }
-  await page.goto(`${baseUrl}/?loc=Africa`, { waitUntil: 'networkidle' });
+  await page.goto(`${baseUrl}/?loc=South%20America`, { waitUntil: 'networkidle' });
   assert.equal(await page.locator('#location-filter').inputValue(), 'World');
   assert.ok((await page.locator('.entry').count()) > 0);
   await page.goto(`${baseUrl}/?loc=France&field=Law%20%26%20Public%20Affairs&track=Teaching`, { waitUntil: 'networkidle' });
