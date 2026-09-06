@@ -192,6 +192,7 @@ function renderShell() {
         <option value="last-name">Last name</option>
         <option value="first-name">First name</option>
         <option value="recent">Recently modified</option>
+        <option value="vp-newest">Newest VP ID</option>
       </select>
     </div>
     <div class="browser-shelf" id="browser-shelf" aria-label="Saved browser data" hidden></div>
@@ -277,6 +278,8 @@ function sortRoster(roster: Roster, order: string): Roster {
       ? byName('first')
       : order === 'recent'
         ? (a: RosterEntry, b: RosterEntry) => (b.lastUpdatedAt ?? '').localeCompare(a.lastUpdatedAt ?? '')
+        : order === 'vp-newest'
+          ? (a: RosterEntry, b: RosterEntry) => Number.parseInt(b.id.slice(3), 10) - Number.parseInt(a.id.slice(3), 10)
         : () => 0;
 
   return [...roster].sort((a, b) => Number(favorites.has(b.id)) - Number(favorites.has(a.id)) || bySelectedOrder(a, b));
@@ -679,7 +682,7 @@ async function init() {
     initialInstitutionType = requestedInstitutionType;
   }
   setFilterValues({ location: initialLocation, field: initialField, track: initialTrack, institutionType: initialInstitutionType });
-  if (['random', 'last-name', 'first-name', 'recent'].includes(requestedSort)) {
+  if (['random', 'last-name', 'first-name', 'recent', 'vp-newest'].includes(requestedSort)) {
     sortSelect.value = requestedSort;
   }
 
