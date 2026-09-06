@@ -18,7 +18,7 @@ const rosterPath = resolve('public/data.json');
 const ledgerPath = resolve('maintenance/enrichment.json');
 const BATCH_SIZE = 20;
 
-interface Batch { number: number; ids: string[]; status: 'pending' | 'complete'; publishedAt?: string; commit?: string; }
+interface Batch { number: number; ids: string[]; status: 'pending' | 'in_progress' | 'complete'; startedAt?: string; publishedAt?: string; commit?: string; }
 interface Ledger { version: 1; snapshotAt: string; ids: string[]; batches: Batch[]; entries: Record<string, {
   overview: 'pending' | 'verified' | 'no suitable evidence' | 'retry needed';
   work: 'pending' | 'verified' | 'no suitable evidence' | 'retry needed';
@@ -57,6 +57,63 @@ async function status() {
   console.log(JSON.stringify({ snapshotAt: ledger.snapshotAt, people: ledger.ids.length, batches: ledger.batches, overview: counts('overview'), work: counts('work') }, null, 2));
 }
 
+async function startBatch(number: number) {
+  const { ledger } = await load();
+  if (!ledger) throw new Error('No enrichment snapshot exists; run snapshot first.');
+  const batch = ledger.batches.find((candidate) => candidate.number === number);
+  if (!batch) throw new Error(`Unknown batch: ${number}`);
+  if (batch.status === 'complete') throw new Error(`Batch ${number} is already complete.`);
+  batch.status = 'in_progress';
+  batch.startedAt ??= new Date().toISOString();
+  await save(ledger);
+  console.log(`Started batch ${number}: ${batch.ids.length} people.`);
+}
+
+function extractEvidence(html: string): string[] {
+  const text = html
+    .replace(/<(script|style|noscript)[^>]*>[\s\S]*?<\/\1>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&nbsp;/gi, ' ')
+    .replace(/&amp;/gi, '&')
+    .replace(/\s+/g, ' ')
+    .trim();
+  return [...text.matchAll(/[^.!?]{80,600}[.!?]/g)].slice(0, 8).map((match) => match[0].trim());
+}
+
+async function collectBatch(number: number) {
+  const { roster, ledger } = await load();
+  if (!ledger) throw new Error('No enrichment snapshot exists; run snapshot first.');
+  const batch = ledger.batches.find((candidate) => candidate.number === number);
+  if (!batch) throw new Error(`Unknown batch: ${number}`);
+  batch.status = 'in_progress';
+  batch.startedAt ??= new Date().toISOString();
+  for (const id of batch.ids) {
+    const person = roster.find((candidate) => candidate.id === id);
+    const entry = ledger.entries[id];
+    if (!person || !entry) continue;
+    if (entry.evidence.length || entry.errors.length) continue;
+    entry.errors = [];
+    entry.evidence = [];
+    for (const url of [person.profileUrl, ...(person.websiteUrl ? [person.websiteUrl] : [])]) {
+      try {
+        const response = await fetch(url, { signal: AbortSignal.timeout(20_000) });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const excerpts = extractEvidence(await response.text());
+        entry.evidence.push(...excerpts.map((excerpt, index) => ({ id: `${id}-${entry.evidence.length + index + 1}`, url, excerpt, retrievedAt: new Date().toISOString(), details: 'Automatically extracted paragraph candidate; requires identity and clause verification.' })));
+      } catch (error) {
+        entry.errors.push(`${url}: ${error instanceof Error ? error.message : String(error)}`);
+      }
+    }
+    entry.overview = entry.evidence.length ? 'pending' : 'retry needed';
+    entry.work = entry.evidence.length ? 'pending' : 'retry needed';
+    entry.nextAction = entry.evidence.length ? 'Generate and independently verify overview/work proposal.' : 'Retry inaccessible source fetch.';
+    entry.updatedAt = new Date().toISOString();
+    await save(ledger);
+    console.log(`${id}: ${entry.evidence.length ? 'evidence collected' : 'retry needed'}`);
+  }
+  await save(ledger);
+}
+
 async function apply(inputPath: string) {
   const { roster, ledger } = await load();
   if (!ledger) throw new Error('No enrichment snapshot exists; run snapshot first.');
@@ -83,5 +140,7 @@ async function apply(inputPath: string) {
 const [command = 'status', argument] = process.argv.slice(2);
 if (command === 'snapshot') await snapshot();
 else if (command === 'status') await status();
+else if (command === 'start' && argument && /^\d+$/.test(argument)) await startBatch(Number(argument));
+else if (command === 'collect' && argument && /^\d+$/.test(argument)) await collectBatch(Number(argument));
 else if (command === 'apply' && argument) await apply(argument);
-else throw new Error('Usage: enrich-roster.ts snapshot|status|apply proposals.json');
+else throw new Error('Usage: enrich-roster.ts snapshot|status|start N|collect N|apply proposals.json');

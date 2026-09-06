@@ -1504,7 +1504,8 @@
         "vp-0019",
         "vp-0020"
       ],
-      "status": "pending"
+      "status": "in_progress",
+      "startedAt": "2026-09-06T15:06:19.462Z"
     },
     {
       "number": 2,
@@ -3403,15 +3404,19 @@
   ],
   "entries": {
     "vp-0001": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://engineering.catholic.edu/research-and-faculty/faculty-profiles/computer-science/hieu-bui/index.html",
         "https://engineering.catholic.edu/research-and-faculty/faculty-profiles/computer-science/hieu-bui/buiresearch/index.html"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://engineering.catholic.edu/research-and-faculty/faculty-profiles/computer-science/hieu-bui/index.html: HTTP 403",
+        "https://engineering.catholic.edu/research-and-faculty/faculty-profiles/computer-science/hieu-bui/buiresearch/index.html: HTTP 403"
+      ],
+      "updatedAt": "2026-09-06T15:09:21.030Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-0002": {
       "overview": "pending",
@@ -3420,9 +3425,109 @@
         "https://www.depts.ttu.edu/cs/faculty/tommy_dang/index.php",
         "https://www.myweb.ttu.edu/tnhondan/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0002-1",
+          "url": "https://www.depts.ttu.edu/cs/faculty/tommy_dang/index.php",
+          "excerpt": "--> Texas Tech University Directory Raiderlink A-Z Index Menu --> Department of Computer Science Menu Search Texas Tech Whitacre College of Engineering Department of Computer Science Faculty Tommy Dang, Ph.",
+          "retrievedAt": "2026-09-06T15:09:21.426Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0002-2",
+          "url": "https://www.depts.ttu.edu/cs/faculty/tommy_dang/index.php",
+          "excerpt": "3519 Office: EC 306C Mailing Address: Texas Tech University Department of Computer Science Box 43104 Lubbock, TX 79409−3104 Personal Website: http://www.",
+          "retrievedAt": "2026-09-06T15:09:21.426Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0002-3",
+          "url": "https://www.depts.ttu.edu/cs/faculty/tommy_dang/index.php",
+          "excerpt": "php Research Interests Virtual and Augmented Reality Big Data Visualization and Visual Analytics Human and Computer Interaction Computer Animation Statistical data analysis Personal Information Curriculum Vitae Education PhD in Computer Science at University of Illinois at Chicago M.",
+          "retrievedAt": "2026-09-06T15:09:21.426Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0002-4",
+          "url": "https://www.depts.ttu.edu/cs/faculty/tommy_dang/index.php",
+          "excerpt": "(with honor) in Computer Science, Ho Chi Minh City University of Technology, Vietnam Department of Computer Science Like Department of Computer Science on Facebook Like Department of Computer Science on Facebook Follow Department of Computer Science on Instagram Follow Department of Computer Science on Instagram Connect with Department of Computer Science on LinkedIn Connect with Department of Computer Science on LinkedIn Address Texas Tech University, Box 43104 | Lubbock, TX 79409-3104 Phone 806.",
+          "retrievedAt": "2026-09-06T15:09:21.426Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0002-5",
+          "url": "https://www.depts.ttu.edu/cs/faculty/tommy_dang/index.php",
+          "excerpt": "tern State University Statewide Search State of Texas Texas Homeland Security Texas Veterans Portal Texas CREWS SAO Fraud Reporting Open Records Requests © 2026 Texas Tech University Jul 1, 2026 8:28 AM Department of Computer Science About CS Department of Computer Science Back Department Department of Computer Science Back Overview Meet the Chair Department Flyer Jobs Resources Department of Computer Science Back Safety Plan Seminar Series Faculty & Staff Department of Computer Science Back Faculty Directory Staff Directory News Department of Computer Science Back News Archived News Apply Now!",
+          "retrievedAt": "2026-09-06T15:09:21.426Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0002-6",
+          "url": "https://www.depts.ttu.edu/cs/faculty/tommy_dang/index.php",
+          "excerpt": "ack Graduate Programs Department of Computer Science Graduate Programs Back Apply Now Graduate Scholarships Undergraduate Programs Department of Computer Science Undergraduate Programs Back Apply Now Undergraduate Scholarships Tuition Estimator Programs Department of Computer Science Back Undergraduate Department of Computer Science Back Overview Undergraduate Advising Curriculum & Courses Objectives & Outcomes Flowchart Accelerated Bachelor's and Master's Programs Minors FAQs Graduate Department of Computer Science Back Overview Graduate Advising Accelerated Bachelor's and Master's Programs M.",
+          "retrievedAt": "2026-09-06T15:09:21.426Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0002-7",
+          "url": "https://www.myweb.ttu.edu/tnhondan/",
+          "excerpt": "Tommy Dang: Homepage Tommy Dang Associate Professor Department of Computer Science Texas Tech University Phone: 806-319-3156 Email: tommy.",
+          "retrievedAt": "2026-09-06T15:09:21.897Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0002-8",
+          "url": "https://www.myweb.ttu.edu/tnhondan/",
+          "excerpt": "edu Activities Projects Teaching Publications Home --> ABOUT I am an associate professor and director of the interactive Data Visualization Lab (iDVL) at Texas Tech University .",
+          "retrievedAt": "2026-09-06T15:09:21.897Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0002-9",
+          "url": "https://www.myweb.ttu.edu/tnhondan/",
+          "excerpt": "CURRENT PROJECTs Virtual and Augmented Reality Dynamic Network visualization: Developing visual systems for interacting with biological networks across multiple layers of abstraction.",
+          "retrievedAt": "2026-09-06T15:09:21.897Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0002-10",
+          "url": "https://www.myweb.ttu.edu/tnhondan/",
+          "excerpt": "Visual features and automatic visualizations: Adapting visual features to cluster and provide an meaningful overview of complex data.",
+          "retrievedAt": "2026-09-06T15:09:21.897Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0002-11",
+          "url": "https://www.myweb.ttu.edu/tnhondan/",
+          "excerpt": "The effects of an instructional avatar's gestures on teaching foreign languages: The goal of this project is to determine the role instructional gesturing plays in second language acquisition.",
+          "retrievedAt": "2026-09-06T15:09:21.897Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0002-12",
+          "url": "https://www.myweb.ttu.edu/tnhondan/",
+          "excerpt": "--> RESEARCH INTERESTs Developing methods and tools for visual analytics - an integrated approach combining visualization, human factors and data analysis to derive insight from massive, dynamic, and ambiguous data.",
+          "retrievedAt": "2026-09-06T15:09:21.897Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0002-13",
+          "url": "https://www.myweb.ttu.edu/tnhondan/",
+          "excerpt": "EDUCATION 2010-2014: Phd in Computer Science, University of Illinois at Chicago .",
+          "retrievedAt": "2026-09-06T15:09:21.897Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0002-14",
+          "url": "https://www.myweb.ttu.edu/tnhondan/",
+          "excerpt": "in Computer Science, University of Technology , Vietnam WORK EXPERIENCE 2024-Present: Associate Professor at Texas Tech University , Lubbock, Texas 2016-2024: Assistant Professor at Texas Tech University , Lubbock, Texas 2014-2016: Postdoctoral researcher at Electronic Visualization Laboratory , Chicago 2017-2018: Consultant in computational visualization for Wave Computing , Santa Clara, CA 2015-2016: Consultant in network visualization for Objectivity Inc.",
+          "retrievedAt": "2026-09-06T15:09:21.897Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T15:09:21.897Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0003": {
       "overview": "pending",
@@ -3431,9 +3536,123 @@
         "https://engineering.princeton.edu/faculty/tri-dao",
         "https://tridao.me/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0003-1",
+          "url": "https://engineering.princeton.edu/faculty/tri-dao",
+          "excerpt": "omic growth Information for Prospective Students Why become a Princeton Engineer Corporate Partners Research partnerships, licensing, and recruiting Entrepreneurs Helping students turn inspiration into action Alumni Stay connected to Princeton Engineering Visitors Directions, and tour information Undergraduate Studies General information Overview Rigorous foundation, hands-on experience, liberal arts context Admission and Tours Sign up for a tour Admissions & Tours Overview Prospective Students FAQ Guidance for high school students Academics Six departments offer BSE degrees; one also offers A.",
+          "retrievedAt": "2026-09-06T15:09:22.097Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0003-2",
+          "url": "https://engineering.princeton.edu/faculty/tri-dao",
+          "excerpt": "B Academics Overview ABET Accreditation Minors and Certificate programs For current students Advising We are here to help Advising Overview First-Year Advising Degree Requirements Q and A About the First Year in Engineering Faculty Advisers and Interactors Faculty Advisers Engineering Interactors Changing your Degree Candidacy Rising Sophomore FAQ Senior Thesis/Independent Work Funding Summer Course Information Study Abroad Careers What do engineering students go on to do?",
+          "retrievedAt": "2026-09-06T15:09:22.097Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0003-3",
+          "url": "https://engineering.princeton.edu/faculty/tri-dao",
+          "excerpt": "around special interests Social Life Life outside the EQuad is key to your growth Summer Research Experiences Prepare yourself for graduate school and professional opportunities Graduate General information Overview Learn to push the boundaries of your field and lead projects Academic Pathways Meet faculty and grad students, learn about applying Pathways to Graduate School for Rising College Seniors Princeton Pathway into the Academy Program Degrees and Research Doctoral programs in six departments cover 40 specialties Princeton Engineers Profiles of current graduate students Funding Every Ph.",
+          "retrievedAt": "2026-09-06T15:09:22.097Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0003-4",
+          "url": "https://engineering.princeton.edu/faculty/tri-dao",
+          "excerpt": "edures Policy Overview Poster Policy Resource Recovery Program Gas Cylinders Lab Coats Machine Shop Request Form Mailroom, Shipping and Receiving Nitrogen Policy Pet Policy and Guidelines Vehicle Reservations Safety Overview Roles and Responsibilities Emergency Response Illness and Injury Reporting Dale Grieb Safety Award Safety Handbook Guidelines for Student Organizations, Funding Funding Overview Clusters of Excellence Innovation Grants Seed Grants Grant writing and Funding Resources William Pierson Field Fund for Visiting Lecturers Travel funds Diversity and Inclusion Initiatives William R.",
+          "retrievedAt": "2026-09-06T15:09:22.097Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0003-5",
+          "url": "https://engineering.princeton.edu/faculty/tri-dao",
+          "excerpt": "faculty positions across engineering and applied science Contact A dean’s welcome and key points of contact Visit Directions and a map News and Events News A filterable listing of news and features Events Upcoming events across the school Podcasts A deeper look at the research from our faculty, students and alumni EQuad Magazine Our semiannual news magazine Media Inquiries Information for journalists Search for: Tri Dao Assistant Professor of Computer Science Website Email Phone Research interests: Sequence models with long-range memory and structured matrices for compact deep learning models.",
+          "retrievedAt": "2026-09-06T15:09:22.097Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0003-6",
+          "url": "https://engineering.princeton.edu/faculty/tri-dao",
+          "excerpt": "Affiliations Computer Science Leading the field through foundational theory, applications, and societal impact School of Engineering & Applied Science School of Engineering and Applied Science Princeton, New Jersey 08544 Engineering Newsletter Signup Diversity and Non-Discrimination Princeton University is committed to equal opportunity and non-discrimination .",
+          "retrievedAt": "2026-09-06T15:09:22.097Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0003-7",
+          "url": "https://engineering.princeton.edu/faculty/tri-dao",
+          "excerpt": "To maximize excellence, we seek talent from all segments of American society and the world, and we take steps to ensure everyone at Princeton can thrive while they are here.",
+          "retrievedAt": "2026-09-06T15:09:22.097Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0003-8",
+          "url": "https://engineering.princeton.edu/faculty/tri-dao",
+          "excerpt": "That is the sole rationale and purpose of our diversity and inclusion programs, all of which are voluntary and open to all, and which comply with federal and state non-discrimination laws.",
+          "retrievedAt": "2026-09-06T15:09:22.097Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0003-9",
+          "url": "https://tridao.me/",
+          "excerpt": "Tri Dao Toggle navigation About (current) Blog Publications Awards Teaching Repositories ctrl k Tri Dao tri [at] tridao (dot) me Assistant Professor of Computer Science at Princeton University , leading the Dao AI Lab .",
+          "retrievedAt": "2026-09-06T15:09:22.348Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0003-10",
+          "url": "https://tridao.me/",
+          "excerpt": "CV (updated 01/2026) Previously: PhD, Department of Computer Science , Stanford University Research Interests Machine learning and systems, with a focus on efficient training and inference: Hardware-aware algorithms.",
+          "retrievedAt": "2026-09-06T15:09:22.348Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0003-11",
+          "url": "https://tridao.me/",
+          "excerpt": "Current PhD Students Ted Zadouri Berlin Chen Wentao Guo Xinle Cheng (co-advised with Ravi Netravali ) Lijie Yang (co-advised with Ravi Netravali ) Liane Galanti (co-advised with Elad Hazan ) Mayank Mishra (co-advised with Ion Stoica and Joey Gonzalez ) Ze-Wei Liou Selected Honors and Awards Schmidt Sciences AI2050 Fellowship, 2025.",
+          "retrievedAt": "2026-09-06T15:09:22.348Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0003-12",
+          "url": "https://tridao.me/",
+          "excerpt": "Conference on Machine Learning and Systems (MLSys), Best Paper Honorable Mention, 2026.",
+          "retrievedAt": "2026-09-06T15:09:22.348Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0003-13",
+          "url": "https://tridao.me/",
+          "excerpt": "Conference on Machine Learning and Systems (MLSys), Outstanding Paper Honorable Mention, 2025.",
+          "retrievedAt": "2026-09-06T15:09:22.348Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0003-14",
+          "url": "https://tridao.me/",
+          "excerpt": "International Conference on Machine Learning (ICML), Outstanding Paper runner-up, 2022.",
+          "retrievedAt": "2026-09-06T15:09:22.348Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0003-15",
+          "url": "https://tridao.me/",
+          "excerpt": "Advising and Investing I’m an advisor or investor in the following companies (listed roughly by founding date): Cartesia , Etched , Adaptive ML , Cognition , Prime Intellect , Sequence AI Holdings , Thinking Machines , Radical Numerics , Dedalus Labs , Simile , Morpheus AI , Sail Research , and Core Automation .",
+          "retrievedAt": "2026-09-06T15:09:22.348Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0003-16",
+          "url": "https://tridao.me/",
+          "excerpt": "hakkar, Pradeep Ramani, and Tri Dao In Advances in Neural Information Processing Systems (NeurIPS) , 2024 arXiv Code Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality Tri Dao * and Albert Gu * In International Conference on Machine Learning (ICML) , 2024 arXiv Code Mamba: Linear-Time Sequence Modeling with Selective State Spaces Albert Gu * and Tri Dao * Conference on Language Modeling (COLM) , 2024 Outstanding Paper arXiv Code Outstanding Paper FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness Tri Dao , Daniel Y.",
+          "retrievedAt": "2026-09-06T15:09:22.348Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T15:09:22.348Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0004": {
       "overview": "pending",
@@ -3442,9 +3661,109 @@
         "https://egr.vcu.edu/directory/thang.dinh/",
         "https://thang-dinh.github.io/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0004-1",
+          "url": "https://egr.vcu.edu/directory/thang.dinh/",
+          "excerpt": "- Engineering - Virginia Commonwealth University Skip to header Skip to main navigation Skip to main content Skip to footer &#x1F40F; New name.",
+          "retrievedAt": "2026-09-06T15:09:22.610Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0004-2",
+          "url": "https://egr.vcu.edu/directory/thang.dinh/",
+          "excerpt": "The Department of Chemical & Life Science Engineering is now the Department of Chemical & Biomolecular Engineering .",
+          "retrievedAt": "2026-09-06T15:09:22.610Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0004-3",
+          "url": "https://egr.vcu.edu/directory/thang.dinh/",
+          "excerpt": "Graduate Student Connections Cost to Attend Frequently Asked Questions (FAQ) International Current Students Student Services Undergraduate Student Services Graduate Student Services Student Success Change your Major Computer Recommendations Engineering Career Services Student Organizations Beyond the classroom Academics Biomedical Engineering Chemical & Biomolecular Engineering Computer Science Electrical & Computer Engineering Mechanical & Nuclear Engineering Specialty Programs Research Research Centers Student Research Opportunities Engineering Sponsored Programs Research News Engage Why VCU?",
+          "retrievedAt": "2026-09-06T15:09:22.610Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0004-4",
+          "url": "https://egr.vcu.edu/directory/thang.dinh/",
+          "excerpt": "About the College From the Dean History Facts, Figures and Impact Tech-Talent Pathways Bank of America Partnership Engineering Foundation Parents & Families Industry Partnerships Apply Home Directory Thang Dinh, Ph.",
+          "retrievedAt": "2026-09-06T15:09:22.610Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0004-5",
+          "url": "https://egr.vcu.edu/directory/thang.dinh/",
+          "excerpt": "Virginia Commonwealth University College of Engineering 601 West Main Street Box 843068 Richmond, VA 23284-3068 Biomedical Engineering Chemical & Biomolecular Engineering Computer Science Electrical & Computer Engineering Mechanical & Nuclear Engineering Facebook X YouTube LinkedIn Instagram Privacy Accessibility Webmaster Compass: The University Web Framework Updated : 12/11/2023 Virginia Commonwealth University is a nationally renowned public research institution dedicated to the success and well-being of all members of its community.",
+          "retrievedAt": "2026-09-06T15:09:22.610Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0004-6",
+          "url": "https://egr.vcu.edu/directory/thang.dinh/",
+          "excerpt": "VCU student, faculty and staff groups and associations are open without regard to any characteristic or identity protected by law.",
+          "retrievedAt": "2026-09-06T15:09:22.610Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0004-7",
+          "url": "https://thang-dinh.github.io/",
+          "excerpt": "Dinh's Personal Website SecQ Lab PI Information Member Publications Research Teaching The SecQ Lab advances the foundations of security and scalability in complex systems through the integration of quantum intelligence (quantum optimization and quantum machine learning) and graph machine learning .",
+          "retrievedAt": "2026-09-06T15:09:22.844Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0004-8",
+          "url": "https://thang-dinh.github.io/",
+          "excerpt": "Our research spans critical infrastructures, social and technological networks, and blockchain systems, with a focus on developing trustworthy, resilient, and scalable solutions.",
+          "retrievedAt": "2026-09-06T15:09:22.844Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0004-9",
+          "url": "https://thang-dinh.github.io/",
+          "excerpt": "2026: ESORICS 2026 paper accepted Our paper “CoSpaN: Permissionless Consensus in Sparse Networks” has been accepted to ESORICS 2026, the 31st European Symposium on Research in Computer Security.",
+          "retrievedAt": "2026-09-06T15:09:22.844Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0004-10",
+          "url": "https://thang-dinh.github.io/",
+          "excerpt": "May 2026: IJCAI-ECAI 2026 paper accepted Our paper “Differentiable Spectral Normalization for Large-Scale Ising Optimization” has been accepted for presentation at IJCAI-ECAI 2026 (the 35th International Joint Conference on Artificial Intelligence).",
+          "retrievedAt": "2026-09-06T15:09:22.844Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0004-11",
+          "url": "https://thang-dinh.github.io/",
+          "excerpt": "2026: CHRI pilot grant awarded Our proposal “Genetic Architecture of Neurodevelopmental Disorders: A Pilot Study Integrating Biobank-Scale Sequencing, Phenotypic Data, and Deep Learning Analysis” (Co-PI) has received support from the Children’s Health Research Institute (CHRI) of Richmond.",
+          "retrievedAt": "2026-09-06T15:09:22.844Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0004-12",
+          "url": "https://thang-dinh.github.io/",
+          "excerpt": "2025: CCI grant awarded We are grateful for the support of Commonwealth Cyber Initiative (CCI) for our project “Quantum-AI Detection of Cyber-Physical Attacks on Smart Water Networks” (Lead PI) Sep.",
+          "retrievedAt": "2026-09-06T15:09:22.844Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0004-13",
+          "url": "https://thang-dinh.github.io/",
+          "excerpt": "2025: IonQ Research grant awarded \"Quantum Approximate Optimization and Machine Learning for Real-World Applications\" (PI) received support from IonQ Research (Google/IonQ Cloud credits); see IonQ for program details.",
+          "retrievedAt": "2026-09-06T15:09:22.844Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0004-14",
+          "url": "https://thang-dinh.github.io/",
+          "excerpt": "2025: CCI CVN grant awarded Our proposal on securing CPS using quantum computing was funded by the Commonwealth Cyber Initiative – Central Virginia Node (CCI CVN) (Lead PI); see CCI .",
+          "retrievedAt": "2026-09-06T15:09:22.844Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T15:09:22.844Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0005": {
       "overview": "pending",
@@ -3452,9 +3771,18 @@
       "sourcesChecked": [
         "https://minhdo.ece.illinois.edu/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0005-1",
+          "url": "https://minhdo.ece.illinois.edu/",
+          "excerpt": "Do Biography | Research | Teaching | Publications | Talks | Software | Collaborations | Home Minh N.",
+          "retrievedAt": "2026-09-06T15:09:23.155Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T15:09:23.155Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0006": {
       "overview": "pending",
@@ -3463,9 +3791,123 @@
         "https://drexel.edu/cci/about/directory/D/Do-Tiffany-D/",
         "https://zyrcant.github.io/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0006-1",
+          "url": "https://drexel.edu/cci/about/directory/D/Do-Tiffany-D/",
+          "excerpt": "ources International Students Learning Resources Student and Professional Organizations Awards Summer Programs Research Research Overview Research Areas Centers & Labs Partnerships About About the School Our Home Directory Strategic Plan Make a Gift Contact Dean's Executive Advisory Council Culture & Community Council Subscribe to Our Research Newsletter Submit a Website Edit Submit News Jobs iSchools Caucus Community Resources Current Students Alumni Events News Stories Invest in the Future & Make a Gift Drexel Home Open Drexel search Search Drexel Submit Search Home About Directory Tiffany D.",
+          "retrievedAt": "2026-09-06T15:09:23.502Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0006-2",
+          "url": "https://drexel.edu/cci/about/directory/D/Do-Tiffany-D/",
+          "excerpt": "Do Assistant Professor Pronouns: she/her Computer Science Biography Tiffany is an Assistant Professor in Computer Science, specializing in Human-Centered AI, augmented reality (AR), virtual reality (VR) and virtual avatars.",
+          "retrievedAt": "2026-09-06T15:09:23.502Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0006-3",
+          "url": "https://drexel.edu/cci/about/directory/D/Do-Tiffany-D/",
+          "excerpt": "Her research focuses on the potential of AI to personalize experiences for individuals, placing a premium on their unique identities and perspectives.",
+          "retrievedAt": "2026-09-06T15:09:23.502Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0006-4",
+          "url": "https://drexel.edu/cci/about/directory/D/Do-Tiffany-D/",
+          "excerpt": "She aims to create AI systems and virtual avatars that enable people to explore diverse identities and experiences, drawing on her expertise in immersive technologies, applied language models and user design.",
+          "retrievedAt": "2026-09-06T15:09:23.502Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0006-5",
+          "url": "https://drexel.edu/cci/about/directory/D/Do-Tiffany-D/",
+          "excerpt": "Previously, Tiffany conducted research at Microsoft Research and Google, where she focused on user experience (UX) and interactions with language applications, particularly large language models (LLMs).",
+          "retrievedAt": "2026-09-06T15:09:23.502Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0006-6",
+          "url": "https://drexel.edu/cci/about/directory/D/Do-Tiffany-D/",
+          "excerpt": "Her work examines how identity intersects with and impacts user perceptions and interactions with these technologies.",
+          "retrievedAt": "2026-09-06T15:09:23.502Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0006-7",
+          "url": "https://drexel.edu/cci/about/directory/D/Do-Tiffany-D/",
+          "excerpt": "Research Areas AI, Machine Learning, and Robotics Human-Centered Computing Research Interests Human-Centered AI, Virtual Avatars, Virtual Reality Academic Distinctions PhD, Computer Science, University of Central Florida MS, Computer Science, University of Texas at Dallas BS, Computer Science, University of Texas at Dallas CV Select Publications Tiffany D.",
+          "retrievedAt": "2026-09-06T15:09:23.502Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0006-8",
+          "url": "https://drexel.edu/cci/about/directory/D/Do-Tiffany-D/",
+          "excerpt": "Cultural Reflections in Virtual Reality: The Effects of User Ethnicity in Avatar Matching Experiences on Sense of Embodiment.",
+          "retrievedAt": "2026-09-06T15:09:23.502Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0006-9",
+          "url": "https://zyrcant.github.io/",
+          "excerpt": "Do Assistant Professor of Computer Science Drexel University About ☕️ I am an Assistant Professor in Computer Science, specializing in Human-Centered AI, augmented reality (AR), virtual reality (VR), and virtual avatars.",
+          "retrievedAt": "2026-09-06T15:09:23.730Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0006-10",
+          "url": "https://zyrcant.github.io/",
+          "excerpt": "My research focuses on the potential of AI to personalize experiences for individuals, placing a premium on their unique identities and perspectives.",
+          "retrievedAt": "2026-09-06T15:09:23.730Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0006-11",
+          "url": "https://zyrcant.github.io/",
+          "excerpt": "Previously, I conducted research at Microsoft Research and Google, where I focused on user experience (UX) and interactions with AI language applications, particularly large language models (LLMs) and virtual agents.",
+          "retrievedAt": "2026-09-06T15:09:23.730Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0006-12",
+          "url": "https://zyrcant.github.io/",
+          "excerpt": "My work examines how identity intersects with and impacts user perceptions and interactions.",
+          "retrievedAt": "2026-09-06T15:09:23.730Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0006-13",
+          "url": "https://zyrcant.github.io/",
+          "excerpt": "As the proud daughter of a Vietnamese refugee family, I go by both my American name, Tiffany, and my native name, Diễm.",
+          "retrievedAt": "2026-09-06T15:09:23.730Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0006-14",
+          "url": "https://zyrcant.github.io/",
+          "excerpt": "I am active in diversity in computing organizations, which you can find more about in service.",
+          "retrievedAt": "2026-09-06T15:09:23.730Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0006-15",
+          "url": "https://zyrcant.github.io/",
+          "excerpt": "In my freetime, I enjoy playing the guitar (I&rsquo;m the lead guitarist of a jrock band [1] [2] ), drawing (check out my gallery!",
+          "retrievedAt": "2026-09-06T15:09:23.730Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0006-16",
+          "url": "https://zyrcant.github.io/",
+          "excerpt": "I do advise undergraduate volunteers looking for research experience, and encourage you to send me an email if you are interested.",
+          "retrievedAt": "2026-09-06T15:09:23.730Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T15:09:23.730Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0007": {
       "overview": "pending",
@@ -3474,9 +3916,123 @@
         "https://pages.cs.wisc.edu/~anhai/",
         "https://pages.cs.wisc.edu/~anhai/bio/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0007-1",
+          "url": "https://pages.cs.wisc.edu/~anhai/",
+          "excerpt": "AnHai Doan AnHai Doan News Research Teaching Service News Research Teaching Service Gurindar S.",
+          "retrievedAt": "2026-09-06T15:09:24.141Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0007-2",
+          "url": "https://pages.cs.wisc.edu/~anhai/",
+          "excerpt": "Sohi Professor Vilas Distinguished Achievement Professor Department of Computer Sciences, University of Wisconsin Room 7586, Morgridge Hall 1205 University Ave, Madison WI 53706 anhai@cs.",
+          "retrievedAt": "2026-09-06T15:09:24.141Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0007-3",
+          "url": "https://pages.cs.wisc.edu/~anhai/",
+          "excerpt": "edu Bio/Personal Database Group UW/CS/Living in Madison News Jan 2026: Collaborated with my student Dev Ahluwalia to launch MadMatcher , an entity matching startup.",
+          "retrievedAt": "2026-09-06T15:09:24.141Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0007-4",
+          "url": "https://pages.cs.wisc.edu/~anhai/",
+          "excerpt": "2025: Started SmartCat , a project to build AI-driven data catalog management systems.",
+          "retrievedAt": "2026-09-06T15:09:24.141Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0007-5",
+          "url": "https://pages.cs.wisc.edu/~anhai/",
+          "excerpt": "2017–2019: Contributed to efforts to grow the CS department, build a new CS building , and establish the College of Computing and AI .",
+          "retrievedAt": "2026-09-06T15:09:24.141Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0007-6",
+          "url": "https://pages.cs.wisc.edu/~anhai/",
+          "excerpt": "I work on data exploration, cleaning, matching, and integration—foundational steps in data science pipelines and in preparing high-quality data for AI models.",
+          "retrievedAt": "2026-09-06T15:09:24.141Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0007-7",
+          "url": "https://pages.cs.wisc.edu/~anhai/",
+          "excerpt": "We build end-to-end systems, develop production-grade software, and work closely with real users to solve practical problems.",
+          "retrievedAt": "2026-09-06T15:09:24.141Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0007-8",
+          "url": "https://pages.cs.wisc.edu/~anhai/",
+          "excerpt": "Our work draws on databases, AI/ML, and large-scale data processing, and often incorporates ideas from crowdsourcing and user interaction.",
+          "retrievedAt": "2026-09-06T15:09:24.141Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0007-9",
+          "url": "https://pages.cs.wisc.edu/~anhai/bio/",
+          "excerpt": "Bio/Personal AnHai Doan News Research Teaching Service News Research Teaching Service Bio/Personal AnHai Doan is the Vilas Distinguished Achievement Professor and Gurindar S.",
+          "retrievedAt": "2026-09-06T15:09:24.310Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0007-10",
+          "url": "https://pages.cs.wisc.edu/~anhai/bio/",
+          "excerpt": "He works on data integration, data science, and machine learning, building end-to-end systems that are deployed in real-world settings.",
+          "retrievedAt": "2026-09-06T15:09:24.310Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0007-11",
+          "url": "https://pages.cs.wisc.edu/~anhai/bio/",
+          "excerpt": "He has received the ACM Doctoral Dissertation Award, NSF CAREER Award, and Sloan Fellowship, and co-authored Principles of Data Integration , a widely used textbook.",
+          "retrievedAt": "2026-09-06T15:09:24.310Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0007-12",
+          "url": "https://pages.cs.wisc.edu/~anhai/bio/",
+          "excerpt": "He served on the advisory board of Transformic (acquired by Google), was Chief Scientist at Kosmix ( acquired by Walmart), and co-founded GreenBay Technologies ( acquired by Informatica).",
+          "retrievedAt": "2026-09-06T15:09:24.310Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0007-13",
+          "url": "https://pages.cs.wisc.edu/~anhai/bio/",
+          "excerpt": "He has also served on the SIGMOD Advisory and Executive Committees, and was Co-Chair of SIGMOD 2020.",
+          "retrievedAt": "2026-09-06T15:09:24.310Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0007-14",
+          "url": "https://pages.cs.wisc.edu/~anhai/bio/",
+          "excerpt": "I attended high school in Vinh, Nghe An (1983–1986), then spent two years studying Hungarian (1986–1988), before going to university in Debrecen, Hungary (1988–1993).",
+          "retrievedAt": "2026-09-06T15:09:24.310Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0007-15",
+          "url": "https://pages.cs.wisc.edu/~anhai/bio/",
+          "excerpt": "My life has taken a number of interesting turns: At age two, I remember sitting in a bomb shelter with my mother during the Vietnam War, hearing explosions in the distance.",
+          "retrievedAt": "2026-09-06T15:09:24.310Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0007-16",
+          "url": "https://pages.cs.wisc.edu/~anhai/bio/",
+          "excerpt": "I grew up in rural central Vietnam without electricity; I did not see a cassette player until I was 17.",
+          "retrievedAt": "2026-09-06T15:09:24.310Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T15:09:24.310Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0008": {
       "overview": "pending",
@@ -3485,9 +4041,109 @@
         "https://school.eecs.wsu.edu/directory/wsu-profile/trongnghia.hoang/",
         "https://htnghia87.github.io/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0008-1",
+          "url": "https://school.eecs.wsu.edu/directory/wsu-profile/trongnghia.hoang/",
+          "excerpt": "Nghia Hoang | School of Electrical Engineering & Computer Science | Washington State University Skip to content Washington State University School of Electrical Engineering & Computer Science Voiland College of Engineering and Architecture School of Electrical Engineering & Computer Science Menu Quicklinks / Search Give Close Quick Links Close Search Choose to search this site or all WSU sites school.",
+          "retrievedAt": "2026-09-06T15:09:25.412Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0008-2",
+          "url": "https://school.eecs.wsu.edu/directory/wsu-profile/trongnghia.hoang/",
+          "excerpt": "edu Quick Links Employee Directory IT Support Academic Advising Internships and Tutoring Recent News Researchers use AI to ‘democratize’ 3D printing of crucial metal alloy AI technique used by WSU team to sort through millions of options to find the best approach could be adapted in other fields.",
+          "retrievedAt": "2026-09-06T15:09:25.412Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0008-3",
+          "url": "https://school.eecs.wsu.edu/directory/wsu-profile/trongnghia.hoang/",
+          "excerpt": "ptop Requirements Scholarships and Awards Student Clubs Research Electronic Design Automation (EDA) High Performance Computing (HPC) and Scalable Data Science Artificial Intelligence and Machine Learning Cybersecurity Bioinformatics Power Engineering Systems Engineering Software Engineering and Programming Languages People Faculty and Staff Emeritus Faculty EECS Executive Council News and Events Giving Computer Science Scholarships Contact Us Faculty Openings Voiland College School of Electrical Engineering & Computer Science Nghia Hoang Nghia Hoang Assistant Professor Email Address trongnghia.",
+          "retrievedAt": "2026-09-06T15:09:25.412Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0008-4",
+          "url": "https://school.eecs.wsu.edu/directory/wsu-profile/trongnghia.hoang/",
+          "excerpt": "edu Location EME 131 Phone 509-335-8260 Biography Website Nghia Hoang&#8217;s website (This link leads to an external website that is not hosted by the university.",
+          "retrievedAt": "2026-09-06T15:09:25.412Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0008-5",
+          "url": "https://school.eecs.wsu.edu/directory/wsu-profile/trongnghia.hoang/",
+          "excerpt": "The views and content expressed are those of the faculty member and do not represent the official positions of the university.",
+          "retrievedAt": "2026-09-06T15:09:25.412Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0008-6",
+          "url": "https://school.eecs.wsu.edu/directory/wsu-profile/trongnghia.hoang/",
+          "excerpt": ", Information Technology, University of Science, Vietnam National University, 2009 More Resources Employee Resources IT Support Voiland College of Engineering and Architecture Notice of Nondiscrimination Go to School of EECS Facebook Go to School of EECS Instagram Go to School of EECS LinkedIn School of Electrical Engineering & Computer Science, PO Box 642752, Pullman, WA, 99164-2752, 509-335-6602 eecs.",
+          "retrievedAt": "2026-09-06T15:09:25.412Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0008-7",
+          "url": "https://htnghia87.github.io/",
+          "excerpt": "Nghia Hoang Publications Students Teaching Research Resume Services Nghia Hoang Assistant Professor Follow Pullman, Washington Washington State University Email LinkedIn Github Google Scholar Welcome to my personal page!",
+          "retrievedAt": "2026-09-06T15:09:25.615Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0008-8",
+          "url": "https://htnghia87.github.io/",
+          "excerpt": "PREPRINT Our recent work develops a new method to reconfigure pre-trained transformers (e.",
+          "retrievedAt": "2026-09-06T15:09:25.615Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0008-9",
+          "url": "https://htnghia87.github.io/",
+          "excerpt": ", ViT) on neuralized Gaussian Markov chain (similar to a diffusion structure) which facilitates substantially improved uncertainty calibration for prediction as demonstrated on a wide variety of computer vision datasets.",
+          "retrievedAt": "2026-09-06T15:09:25.615Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0008-10",
+          "url": "https://htnghia87.github.io/",
+          "excerpt": "NEWS A paper on Rethinking Cross-Modal Fine-Tuning: Optimizing the Interaction between Feature Alignment and Target Fitting has been accepted to AISTATS-26.",
+          "retrievedAt": "2026-09-06T15:09:25.615Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0008-11",
+          "url": "https://htnghia87.github.io/",
+          "excerpt": "Our work establishes the first theoretical framework for understanding and developing cross-modal fine-tuning algorithms to adapt large foundation models to unseen data modalities.",
+          "retrievedAt": "2026-09-06T15:09:25.615Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0008-12",
+          "url": "https://htnghia87.github.io/",
+          "excerpt": "NEWS A paper on Black-Box Optimization from Small Offline Datasets via Meta Learning with Synthetic Tasks has been accepted to AISTATS-26.",
+          "retrievedAt": "2026-09-06T15:09:25.615Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0008-13",
+          "url": "https://htnghia87.github.io/",
+          "excerpt": "NEWS A paper on Nanoporous Materials Discovery via Search Bias-Guided Surrogate Modeling has been accepted to AAAI-26, AI for Social Impact (AISI) Track.",
+          "retrievedAt": "2026-09-06T15:09:25.615Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0008-14",
+          "url": "https://htnghia87.github.io/",
+          "excerpt": "Our paper features an interesting application of offline optimization in discovering nanoporous materials with high adsorption properties.",
+          "retrievedAt": "2026-09-06T15:09:25.615Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T15:09:25.615Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0009": {
       "overview": "pending",
@@ -3496,9 +4152,123 @@
         "https://website.cs.vt.edu/people/faculty/thang-hoang.html",
         "https://thanghoang.github.io/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0009-1",
+          "url": "https://website.cs.vt.edu/people/faculty/thang-hoang.html",
+          "excerpt": "s Centers and institutes Seminars and distinguished lectures Engage Engage Submenu Toggle Alumni Giving Industry (CS|Source) Entrepreneurship (cs/root) Apply Visit Give Shop Hokie Sports Shop Apparel, clothing, gear and merchandise Hokie Shop University Bookstore, merchandise and gifts Hokie Gear Everything you need to know about Hokie gear Hokie License Plates Part of every Virginia Tech plate purchase funds scholarships Resources for Future Students Current Students Parents and Families Faculty and Staff Alumni Industry and Partners Search Search query × search Search this site Search all vt.",
+          "retrievedAt": "2026-09-06T15:09:25.905Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0009-2",
+          "url": "https://website.cs.vt.edu/people/faculty/thang-hoang.html",
+          "excerpt": "ng Cao Yan Chen Jin-Hee Cho Tijay Chung Jiaming Cui Sanmay Das Brendan David-John Dan Dunlap Bob Edmison Stephen Edwards Hoda Eldardiry Margaret Ellis Onyeka Emebo Mohammed Farghally Wu-chun Feng Steven Flammia Peng Gao Vaibhav Garg Denis Gracanin Muhammad Ali Gulzar Sally Hamouda Shaddi Hasan Matthew Hicks Heath Hillman Current page: Thang Hoang Sara Hooshangi Reza Jafari Bo Ji Xun (Steve) Jian Christine Julien Murat Kantarcioglu Anuj Karpatne Sumeet Khatri Greg Kulczycki Sang Won Lee Jiaqi Leng Huaicheng Li Wenjing Lou Chang-Tien Lu Kurt Luther Atul Mantri Brian Mayer Scott McCrickard Ryan P.",
+          "retrievedAt": "2026-09-06T15:09:25.905Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0009-3",
+          "url": "https://website.cs.vt.edu/people/faculty/thang-hoang.html",
+          "excerpt": "Noh Chris North Erika Olimpiew Alexey Onufriev Eric Pauley Naren Ramakrishnan Chandan Reddy Eugenia Rho Kirsten E.",
+          "retrievedAt": "2026-09-06T15:09:25.905Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0009-4",
+          "url": "https://website.cs.vt.edu/people/faculty/thang-hoang.html",
+          "excerpt": "Richards Timothy Richards Adrian Sandu Palash Sashittal Allyson Senger Mohammed Seyam Cliff Shaffer Jamie Sikora David H Smith IV Patrick Sullivan Kirshanthan Sundararajah Chris Thomas Eli Tilevich Bimal Viswanath Tu Vu Xuan Wang Dan Williams Ihudiya Finda Williams Pinar Yanardag Liqing Zhang Dawei Zhou Advisory board Thang Hoang Assistant Professor Facebook X Copy page address to clipboard Location: Gilbert Place, RM 4304 220 Gilbert St.",
+          "retrievedAt": "2026-09-06T15:09:25.905Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0009-5",
+          "url": "https://website.cs.vt.edu/people/faculty/thang-hoang.html",
+          "excerpt": "edu (540) 231-0908 Research interests applied cryptograhy security and privacy biometrics Google Scholar | Homepage Education 2020: Ph.",
+          "retrievedAt": "2026-09-06T15:09:25.905Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0009-6",
+          "url": "https://website.cs.vt.edu/people/faculty/thang-hoang.html",
+          "excerpt": ", computer science, University of Science, Viet Nam National University Ho Chi Minh City Follow Computer Science Facebook X Instagram Linked In YouTube Blacksburg campus Torgersen Hall RM 3160 620 Drillfield Dr.",
+          "retrievedAt": "2026-09-06T15:09:25.905Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0009-7",
+          "url": "https://website.cs.vt.edu/people/faculty/thang-hoang.html",
+          "excerpt": "Blacksburg, VA 24061 (540) 231-6931 (undergraduate) (540) 231-0746 (graduate) Institute for Advanced Computing 3625 Potomac Ave.",
+          "retrievedAt": "2026-09-06T15:09:25.905Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0009-8",
+          "url": "https://website.cs.vt.edu/people/faculty/thang-hoang.html",
+          "excerpt": "Arlington, VA 22203 (571) 858-3000 Intranet (Internal) Get Directions See All Locations Contact Virginia Tech University Status Principles of Community Privacy Statement Acceptable Use We Remember University Libraries Accessibility Consumer Information Cost & Aid SAFE at VT Policies Equal Opportunity WVTF University Bookstore Jobs at Virginia Tech &copy; 2026 Virginia Polytechnic Institute and State University.",
+          "retrievedAt": "2026-09-06T15:09:25.905Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0009-9",
+          "url": "https://thanghoang.github.io/",
+          "excerpt": "Thang Hoang Search Thang Hoang Thang Hoang Home Publication Teaching Group Service Contact CV Light Dark Automatic Thang Hoang Assistant Professor About I am an Assistant Professor in the department of Computer Science @ Virginia Tech and a CCI Researcher .",
+          "retrievedAt": "2026-09-06T15:09:26.098Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0009-10",
+          "url": "https://thanghoang.github.io/",
+          "excerpt": "Prior to joining VT, I was a Postdoctoral Fellow @ Carnegie Mellon University (CMU) hosted by Prof.",
+          "retrievedAt": "2026-09-06T15:09:26.098Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0009-11",
+          "url": "https://thanghoang.github.io/",
+          "excerpt": "Elaine Shi and a Research Associate @ University of South Florida (USF) hosted by Prof.",
+          "retrievedAt": "2026-09-06T15:09:26.098Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0009-12",
+          "url": "https://thanghoang.github.io/",
+          "excerpt": "I am interested in privacy, secure and verifiable computation, zero-knowledge proof, fuzzy cryptography, and trustworthy machine learning.",
+          "retrievedAt": "2026-09-06T15:09:26.098Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0009-13",
+          "url": "https://thanghoang.github.io/",
+          "excerpt": "I will be on PC of IEEE S&P 2027 , PETS 2027 , ACSAC 2026 , ACM CCS 2026 , IEEE S&P 2026 , ACISP 2026 .",
+          "retrievedAt": "2026-09-06T15:09:26.098Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0009-14",
+          "url": "https://thanghoang.github.io/",
+          "excerpt": "Interests Applied Cryptograhy Security and Privacy Biometrics Education PhD in Computer Science, 2020 University of South Florida MS in Computer Science, 2014 Chonnam National University BS in Computer Science, 2010 University of Science, VNU-HCMC Recent News All news Apr 10, 2026 Paper on oblivious search accepted to ACM CCS 2026 .",
+          "retrievedAt": "2026-09-06T15:09:26.098Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0009-15",
+          "url": "https://thanghoang.github.io/",
+          "excerpt": "Le for wrapping up his dissertation with a full collection of big-4 (plus PETS)!",
+          "retrievedAt": "2026-09-06T15:09:26.098Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0009-16",
+          "url": "https://thanghoang.github.io/",
+          "excerpt": "Dec 19, 2025 Paper on Federated Learning with Differential Privacy received the Prabuddha De Best Paper Award with $1,000 cash prize at WITS 2025 .",
+          "retrievedAt": "2026-09-06T15:09:26.098Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T15:09:26.098Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0010": {
       "overview": "pending",
@@ -3506,9 +4276,32 @@
       "sourcesChecked": [
         "https://www.cs.fsu.edu/~tvhoang/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0010-1",
+          "url": "https://www.cs.fsu.edu/~tvhoang/",
+          "excerpt": "Viet Tung Hoang- Homepage Viet Tung Hoang I am an associate professor in the Department of Computer Science at Florida State University , USA.",
+          "retrievedAt": "2026-09-06T15:09:26.356Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0010-2",
+          "url": "https://www.cs.fsu.edu/~tvhoang/",
+          "excerpt": "I am interested in broadening the theory of cryptography to understand the exact security of real-world schemes and narrow the performance gap between provable-security designs and heuristic ones.",
+          "retrievedAt": "2026-09-06T15:09:26.356Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0010-3",
+          "url": "https://www.cs.fsu.edu/~tvhoang/",
+          "excerpt": "Office : 261 Love Building, Florida State University, Tallahassee, FL 32306 Email : vhoang@fsu.",
+          "retrievedAt": "2026-09-06T15:09:26.356Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T15:09:26.356Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0011": {
       "overview": "pending",
@@ -3516,9 +4309,67 @@
       "sourcesChecked": [
         "https://profiles.utdallas.edu/huynh"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0011-1",
+          "url": "https://profiles.utdallas.edu/huynh",
+          "excerpt": "School of Arts, Humanities, and Technology School of Behavioral and Brain Sciences Erik Jonsson School of Engineering and Computer Science School of Economic, Political and Policy Sciences School of Interdisciplinary Studies Naveen Jindal School of Management School of Natural Sciences and Mathematics Browse All Students Get Started with Research Login Home Erik Jonsson School of Engineering and Computer Science Dung Huynh Skip to main content Dung Huynh Professor - Computer Science 972-883-2169 ECS3801 Faculty Homepage Tags: Computer Science Please type your desired tags, e.",
+          "retrievedAt": "2026-09-06T15:09:26.822Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0011-2",
+          "url": "https://profiles.utdallas.edu/huynh",
+          "excerpt": "Women&#039;s Studies, Waves in Complex Media, bipolar disorder, coal science, Charles Sanders Peirce, Data analysis, Actarial Science and Insurance Data Science, HPC, human neuroimaging, Low-wage Working Women , and etc.",
+          "retrievedAt": "2026-09-06T15:09:26.822Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0011-3",
+          "url": "https://profiles.utdallas.edu/huynh",
+          "excerpt": "Tags: Computer Science Cancel Update Tags Professional Preparation Research Areas Publications Appointments Additional Information Professional Preparation Ph.",
+          "retrievedAt": "2026-09-06T15:09:26.822Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0011-4",
+          "url": "https://profiles.utdallas.edu/huynh",
+          "excerpt": "- Computer Science University of Saarlandes - 1977 Research Areas Research Interests Computational complexity theory Automata and formal languages Concurrency theory Communications networks and protocols Parallel computation Software metrics Publications “Minimum Edge Interference in Wireless Sensor Networks”, (with Trac Nguyen, Nhat Lam, and Jason Bolla) Proc.",
+          "retrievedAt": "2026-09-06T15:09:26.822Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0011-5",
+          "url": "https://profiles.utdallas.edu/huynh",
+          "excerpt": "of 5th International Conference on Wireless Algorithms, Systems, and Applications, Lecture Notes in Computer Science 6221, 2010.",
+          "retrievedAt": "2026-09-06T15:09:26.822Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0011-6",
+          "url": "https://profiles.utdallas.edu/huynh",
+          "excerpt": "2010 - Publication “Minimum Total Node Interference in Wireless Sensor Networks”, (with Nhat Lam and Trac Nguyen) Proc.",
+          "retrievedAt": "2026-09-06T15:09:26.822Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0011-7",
+          "url": "https://profiles.utdallas.edu/huynh",
+          "excerpt": "of 2nd International ICST Conference on Ad Hoc Networks, Victoria, Canada, 2010.",
+          "retrievedAt": "2026-09-06T15:09:26.822Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0011-8",
+          "url": "https://profiles.utdallas.edu/huynh",
+          "excerpt": "2010 - Publication “Minimum Data Aggregation Schedule in Wireless Sensor Networks”, (with Min An, Nhat Lam, and Trac Nguyen) Proc.",
+          "retrievedAt": "2026-09-06T15:09:26.822Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T15:09:26.822Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0012": {
       "overview": "pending",
@@ -3527,9 +4378,123 @@
         "https://www.uab.edu/cas/computerscience/people/faculty-directory/faculty/truong-son-hy",
         "https://hytruongson.github.io/HySonLab/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0012-1",
+          "url": "https://www.uab.edu/cas/computerscience/people/faculty-directory/faculty/truong-son-hy",
+          "excerpt": "> Athletics Campus Map Give Calendar News Contact Us Colleges & Schools Arts & Sciences Collat School of Business Dentistry Education Engineering Graduate School Health Professions Honors College Medicine Nursing Optometry Public Health Blaze a Brighter Future Blaze a Brighter Future Explore UAB Department of Computer Science College of Arts and Sciences Contact Us Apply Undergraduate Graduate Give Search This Site All Sites Search Search Home About Undergraduate Graduate Research Overview Research Clusters Research Hubs and Labs Undergraduate Research Software Resources Opens an external link.",
+          "retrievedAt": "2026-09-06T15:09:28.868Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0012-2",
+          "url": "https://www.uab.edu/cas/computerscience/people/faculty-directory/faculty/truong-son-hy",
+          "excerpt": "People Overview Faculty Directory Staff Directory Alumni Events Opens an external link.",
+          "retrievedAt": "2026-09-06T15:09:28.868Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0012-3",
+          "url": "https://www.uab.edu/cas/computerscience/people/faculty-directory/faculty/truong-son-hy",
+          "excerpt": "Department of Computer Science Close Contact Us Apply Undergraduate Graduate Give Home About Undergraduate Graduate Research Overview Research Clusters Research Hubs and Labs Undergraduate Research Software Resources Opens an external link.",
+          "retrievedAt": "2026-09-06T15:09:28.868Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0012-4",
+          "url": "https://www.uab.edu/cas/computerscience/people/faculty-directory/faculty/truong-son-hy",
+          "excerpt": "People Overview Faculty Directory Staff Directory Alumni Events Opens an external link.",
+          "retrievedAt": "2026-09-06T15:09:28.868Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0012-5",
+          "url": "https://www.uab.edu/cas/computerscience/people/faculty-directory/faculty/truong-son-hy",
+          "excerpt": "People Faculty Directory Emeritus Directory Staff Directory Outstanding Alumni Less More in this section People Faculty Directory Emeritus Directory Staff Directory Outstanding Alumni Truong-Son Hy Assistant Professor This email address is being protected from spambots.",
+          "retrievedAt": "2026-09-06T15:09:28.868Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0012-6",
+          "url": "https://www.uab.edu/cas/computerscience/people/faculty-directory/faculty/truong-son-hy",
+          "excerpt": "Truong-Son Hy is currently a tenure-track Assistant Professor in the Department of Computer Science at University of Alabama at Birmingham.",
+          "retrievedAt": "2026-09-06T15:09:28.868Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0012-7",
+          "url": "https://www.uab.edu/cas/computerscience/people/faculty-directory/faculty/truong-son-hy",
+          "excerpt": "Prior to his faculty appointment, he has been a Lecturer and Postdoctoral Fellow in the Halicioglu Data Science Institute, University of California San Diego.",
+          "retrievedAt": "2026-09-06T15:09:28.868Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0012-8",
+          "url": "https://www.uab.edu/cas/computerscience/people/faculty-directory/faculty/truong-son-hy",
+          "excerpt": "Truong-Son Hy's group, focuses on AI for Science and Engineering, especially deep learning for drug discovery and drug repurposing.",
+          "retrievedAt": "2026-09-06T15:09:28.868Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0012-9",
+          "url": "https://hytruongson.github.io/HySonLab/",
+          "excerpt": "Truong-Son Hy Tenure-Track Assistant Professor Department of Computer Science & Heersink School of Medicine The University of Alabama at Birmingham, United States Basic Information Resume: [pdf] Google Scholar: [link] ORCID: [link] UAB Scholars: [link] Faculty Profile: [link] HySonLab: [website] Research HySonLab [website] is my research group.",
+          "retrievedAt": "2026-09-06T15:09:29.117Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0012-10",
+          "url": "https://hytruongson.github.io/HySonLab/",
+          "excerpt": "We work on graph neural networks, deep generative models on graphs, multiresolution matrix factorization, graph wavelets, group equivariant and multiscale hierarchical models for the purpose of modeling, learning and generating graphs, hypergraphs, N-Body systems, hierarchical structures and highly symmetric structures in the direction of AI for Science, Bioinformatics, Drug Discovery, Drug Repurposing, and Medical AI .",
+          "retrievedAt": "2026-09-06T15:09:29.117Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0012-11",
+          "url": "https://hytruongson.github.io/HySonLab/",
+          "excerpt": "Doctoral Student Opportunities: HySonLab has a plan to recruit 1 fully-funded PhD position for the Spring 2026.",
+          "retrievedAt": "2026-09-06T15:09:29.117Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0012-12",
+          "url": "https://hytruongson.github.io/HySonLab/",
+          "excerpt": "The University of Alabama at Birmingham is an R1 university, the highest level of research universities in the United States.",
+          "retrievedAt": "2026-09-06T15:09:29.117Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0012-13",
+          "url": "https://hytruongson.github.io/HySonLab/",
+          "excerpt": "Computer Science (September 2016 -- June 2022) The University of Chicago, IL, USA Thesis: Graph representation learning, deep generative models on graphs, group equivariant molecular neural networks and multiresolution machine learning [PhD-Thesis.",
+          "retrievedAt": "2026-09-06T15:09:29.117Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0012-14",
+          "url": "https://hytruongson.github.io/HySonLab/",
+          "excerpt": "Computer Science (September 2016 -- December 2018) The University of Chicago, IL, USA Thesis: Covariant compositional networks for learning graphs and GraphFlow deep learning framework in C++/CUDA [MSc-Thesis.",
+          "retrievedAt": "2026-09-06T15:09:29.117Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0012-15",
+          "url": "https://hytruongson.github.io/HySonLab/",
+          "excerpt": "Computer Science (September 2013 -- July 2016) Eotvos Lorand University, Budapest, Hungary Thesis: Semi-supervised Adaptive Facial Tracking Method [BSc-Thesis.",
+          "retrievedAt": "2026-09-06T15:09:29.117Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0012-16",
+          "url": "https://hytruongson.github.io/HySonLab/",
+          "excerpt": "Andras Lorincz [website] Award: First-class Graduation Honour Sponsor: Stipendium Hungaricum Full Scholarship from the Government of Hungary Current Positions The University of Alabama at Birmingham (August 2024 -- Present) Tenure-Track Assistant Professor, Department of Computer Science, Birmingham, Alabama, United States [info] Research and advise PhD students in AI for Science, Bioinformatics, Drug Discovery & Medical AI.",
+          "retrievedAt": "2026-09-06T15:09:29.117Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T15:09:29.117Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0013": {
       "overview": "pending",
@@ -3537,9 +4502,67 @@
       "sourcesChecked": [
         "https://www.unr.edu/cse/people/hung-la"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0013-1",
+          "url": "https://www.unr.edu/cse/people/hung-la",
+          "excerpt": "sity of Nevada, Reno skip to main content Engineering news and events Quicklinks Search Apply Faculty resources Innovation Day Donate to the College &times; Quicklinks University Tools MYNEVADA WEBCAMPUS EMAIL ACCESS INTERFOLIO NEVADABOX WORKDAY ZOOM LOGIN Academic resources ACADEMIC ADVISING ACADEMIC CALENDAR COLLEGES & SCHOOLS COURSE CATALOG LIBRARY NAVIGATE PACK AI Campus resources CAMPUS MAP EMPLOYEE DIRECTORY HUMAN RESOURCES PARKING STUDENT HEALTH CENTER UNIVERSITY EVENTS UNIVERSITY POLICE DEPARTMENT Information for CURRENT STUDENTS FACULTY & STAFF PARENTS ALUMNI &times; Search Search www.",
+          "retrievedAt": "2026-09-06T15:09:29.755Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0013-2",
+          "url": "https://www.unr.edu/cse/people/hung-la",
+          "excerpt": "edu Search Popular Searches: MyNevada WebCampus Housing Computer Science and Engineering College of Engineering About CSE Undergrad program Graduate programs People Research Menu About CSE Accreditation Undergrad program Why major in computer science and engineering?",
+          "retrievedAt": "2026-09-06T15:09:29.755Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0013-3",
+          "url": "https://www.unr.edu/cse/people/hung-la",
+          "excerpt": "Advising How to get credit for your internship Graduate programs Fellowships and scholarships Accelerated B.",
+          "retrievedAt": "2026-09-06T15:09:29.755Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0013-4",
+          "url": "https://www.unr.edu/cse/people/hung-la",
+          "excerpt": "in computer science CSE graduate program handbook People Research Cybersecurity & network systems Data & software systems Software engineering research projects Intelligent & autonomous systems Robotics and computer vision research projects Summer research experience for undergraduates How to apply Research projects Faculty resources Innovation Day Donate to the College Hung (Jim) La Professor Department: Computer Science & Engineering Phone: (775) 682-6862 Email: hla@unr.",
+          "retrievedAt": "2026-09-06T15:09:29.755Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0013-5",
+          "url": "https://www.unr.edu/cse/people/hung-la",
+          "excerpt": "edu Building: WPEB Room: 305 Mail stop: 0171 Website: Advanced Robotics and Automation Lab website Website: Jim La&#39;s Google Scholar page Biography --> Hung (Jim) La is currently a professor in the Department of Computer Science and Engineering at the University of Nevada Reno.",
+          "retrievedAt": "2026-09-06T15:09:29.755Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0013-6",
+          "url": "https://www.unr.edu/cse/people/hung-la",
+          "excerpt": "He was previously research faculty with the Center for Advanced Infrastructure and Transportation (CAIT) at Rutgers University from 2012 to 2014.",
+          "retrievedAt": "2026-09-06T15:09:29.755Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0013-7",
+          "url": "https://www.unr.edu/cse/people/hung-la",
+          "excerpt": "He also worked as a postdoctoral researcher in robotics and control systems at Rutgers University from 2011 to 2012.",
+          "retrievedAt": "2026-09-06T15:09:29.755Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0013-8",
+          "url": "https://www.unr.edu/cse/people/hung-la",
+          "excerpt": "Prior to working at CAIT he was a lecturer in the Department of Electrical Engineering at the Thai Nguyen University of Technology, Vietnam from 2001 to 2007.",
+          "retrievedAt": "2026-09-06T15:09:29.755Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T15:09:29.755Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0014": {
       "overview": "pending",
@@ -3548,9 +4571,123 @@
         "https://www.cics.umass.edu/about/directory/hung-le",
         "https://hunglvosu.github.io/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0014-1",
+          "url": "https://www.cics.umass.edu/about/directory/hung-le",
+          "excerpt": "Hung Le : Manning College of Information & Computer Sciences : UMass Amherst Skip to main content The University of Massachusetts Amherst Open UMass Global Links Menu Visit Apply Give Search UMass.",
+          "retrievedAt": "2026-09-06T15:09:30.176Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0014-2",
+          "url": "https://www.cics.umass.edu/about/directory/hung-le",
+          "excerpt": "s & Events News & Stories Events Calendar Significant Bits Magazine Connect Visiting CICS Contact Us Employment Offices & Services Info For Toggle submenu for Info For Current Undergraduate Students Current Graduate Students Faculty and Staff Newly Accepted Undergraduate Students Breadcrumb About Directory Image Hung Le Associate Professor Contact hungle [at] cs [dot] umass [dot] edu Location Room W332 Computer Science Building 140 Governors Dr Amherst , MA 01003 United States Research Areas Theoretical Computer Science About Hung Le has been focusing on designing algorithms for graph problems.",
+          "retrievedAt": "2026-09-06T15:09:30.176Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0014-3",
+          "url": "https://www.cics.umass.edu/about/directory/hung-le",
+          "excerpt": "He is particularly interested in understanding the power and limits of structures of graphs in algorithm design.",
+          "retrievedAt": "2026-09-06T15:09:30.176Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0014-4",
+          "url": "https://www.cics.umass.edu/about/directory/hung-le",
+          "excerpt": "His major contributions include efficient approximation algorithms for the Traveling Salesperson Problem, constructions of optimally sparse and light networks, and providing theoretical guarantees for local search heuristics.",
+          "retrievedAt": "2026-09-06T15:09:30.176Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0014-5",
+          "url": "https://www.cics.umass.edu/about/directory/hung-le",
+          "excerpt": "He has served as a reviewer for major conferences and journals in theoretical computer science.",
+          "retrievedAt": "2026-09-06T15:09:30.176Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0014-6",
+          "url": "https://www.cics.umass.edu/about/directory/hung-le",
+          "excerpt": "Links Website Primary research Lab Theoretical Computer Science Group Education PhD, computer science, Oregon State University, 2018 BS, computer science, Hanoi University of Science and Technology Hung Le in the News Community Board of Trustees Awards Tenure to Seven CICS Faculty Members Seven CICS faculty members have been granted tenure at the UMass Board of Trustees quarterly meeting on June 11, 2025.",
+          "retrievedAt": "2026-09-06T15:09:30.176Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0014-7",
+          "url": "https://www.cics.umass.edu/about/directory/hung-le",
+          "excerpt": "Read more Awards Hung Le Selected for 2024 Google Research Scholar Program Manning College of Information and Computer Sciences Assistant Professor Hung Le was selected for the 2024 Google Research Scholar Program.",
+          "retrievedAt": "2026-09-06T15:09:30.176Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0014-8",
+          "url": "https://www.cics.umass.edu/about/directory/hung-le",
+          "excerpt": "Read more Awards Hung Le Receives NSF CAREER Award for Work on Graph Theory Algorithms Assistant Professor Hung Le has received an NSF CAREER award of $655,466 for his project to advance the theoretical understanding of topological graphs.",
+          "retrievedAt": "2026-09-06T15:09:30.176Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0014-9",
+          "url": "https://hunglvosu.github.io/",
+          "excerpt": "Hung Le / Home Page Publications Teaching Students Services Miscellanea Hung Le Associate Professor College of Information & Computer Sciences University of Massachusetts Amherst hungle (at) cs.",
+          "retrievedAt": "2026-09-06T15:09:30.342Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0014-10",
+          "url": "https://hunglvosu.github.io/",
+          "excerpt": "edu Follow Twitter Google Scholar About me I am an Associate Assistant Professor of Computer Science at UMass Amherst.",
+          "retrievedAt": "2026-09-06T15:09:30.342Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0014-11",
+          "url": "https://hunglvosu.github.io/",
+          "excerpt": "I am interested in Theoretical Computer Science in general and Graph Algorithms in particular.",
+          "retrievedAt": "2026-09-06T15:09:30.342Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0014-12",
+          "url": "https://hunglvosu.github.io/",
+          "excerpt": "I am a member of Umass Theory Group Bio (in 3rd person for talks): Hung Le has been a faculty member at Umass Amherst since 2020.",
+          "retrievedAt": "2026-09-06T15:09:30.342Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0014-13",
+          "url": "https://hunglvosu.github.io/",
+          "excerpt": "He was a PIMS postdoc at the University of Victoria with Valerie King and a PhD student at Oregon State University, advised by Cora Borradaile .",
+          "retrievedAt": "2026-09-06T15:09:30.342Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0014-14",
+          "url": "https://hunglvosu.github.io/",
+          "excerpt": "He got his undergraduate degree from Hanoi University of Science and Technology , Vietnam.",
+          "retrievedAt": "2026-09-06T15:09:30.342Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0014-15",
+          "url": "https://hunglvosu.github.io/",
+          "excerpt": "My research has been generously supported by two NSF small grants ( CCF-2517033 and CCF-2121952 ), an NSF CAREER Award ( CCF-2237288 ) and a Google Research Scholar Award.",
+          "retrievedAt": "2026-09-06T15:09:30.342Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0014-16",
+          "url": "https://hunglvosu.github.io/",
+          "excerpt": "Check out our FOCS 2022 workshop “ Advances on Metric Embeddings ” I co-organize with Arnold Filtser .",
+          "retrievedAt": "2026-09-06T15:09:30.342Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T15:09:30.342Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0015": {
       "overview": "pending",
@@ -3559,9 +4696,18 @@
         "https://engineering.uark.edu/directory/profile/uid/thile/name/Ngan+Le/",
         "https://uark-aicv.github.io/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0015-1",
+          "url": "https://uark-aicv.github.io/",
+          "excerpt": "AICV Lab AICV Lab Home Team Research Publications Join Us Contact Home Team Research Publications Join Us Contact Loading content.",
+          "retrievedAt": "2026-09-06T15:09:46.965Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T15:09:46.965Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0016": {
       "overview": "pending",
@@ -3570,9 +4716,123 @@
         "https://luddy.iu.edu/people/le-thai.html",
         "https://lethaiq.github.io/tql3/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0016-1",
+          "url": "https://luddy.iu.edu/people/le-thai.html",
+          "excerpt": "cal Engineering Business Intelligence and Data Science Computer Engineering Computer Science Cybersecurity and Global Policy Data Science Informatics Intelligent Systems Engineering Robotics Undergraduate Certificates and Minors Master's Degrees Bioinformatics Computer Science Cybersecurity Risk Management Data Science (Residential) Data Science (Online) Human-Computer Interaction Design Informatics Information Science Intelligent Systems Engineering Library Science Secure Computing Dual Master's Degrees Data Science and Applied Statistics Statistical Science and Data Science Library Science M.",
+          "retrievedAt": "2026-09-06T15:09:47.581Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0016-2",
+          "url": "https://luddy.iu.edu/people/le-thai.html",
+          "excerpt": "Informatics Animal Informatics Bioinformatics Computing, Culture, and Society Complex Networks and Systems Human Computer Interaction Health Informatics Intelligent and Interactive Systems Security Informatics Virtual Heritage Ph.",
+          "retrievedAt": "2026-09-06T15:09:47.581Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0016-3",
+          "url": "https://luddy.iu.edu/people/le-thai.html",
+          "excerpt": "te Admissions Graduate Admissions - Online Transfer Applicants Plan a Visit Cost & Financial Aid Undergraduate Scholarships Graduate Funding Student Experience Living Learning Center Career Services Advising Learning Hubs International Student Support Student Organizations Academic Events Student Recognition Celebration Research Centers and Labs Research Areas Student Research About Contact Us Request More Information Leadership Luddy Store Strategic Plan Luddy Events People Directory Alumni & Giving Student Portal Home People Directory Thai Le Thai Le Assistant Professor Thai Le Email: tle@iu.",
+          "retrievedAt": "2026-09-06T15:09:47.581Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0016-4",
+          "url": "https://luddy.iu.edu/people/le-thai.html",
+          "excerpt": "edu Phone: 8128561612 Office Building: Luddy Artificial Intelligence Center (1015 E.",
+          "retrievedAt": "2026-09-06T15:09:47.581Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0016-5",
+          "url": "https://luddy.iu.edu/people/le-thai.html",
+          "excerpt": ") Room: 3024 Website: Homepage Profile Education Research & Publications Office Hours Courses taught Dr.",
+          "retrievedAt": "2026-09-06T15:09:47.581Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0016-6",
+          "url": "https://luddy.iu.edu/people/le-thai.html",
+          "excerpt": "Thai Le is an Assistant Professor of Computer Science at the Indiana University Luddy School of Informatics, Computing, and Engineering.",
+          "retrievedAt": "2026-09-06T15:09:47.581Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0016-7",
+          "url": "https://luddy.iu.edu/people/le-thai.html",
+          "excerpt": "Before joining Indiana University, he was an Assistant Professor at the University of Mississippi and an Applied Scientist at Amazon Alexa.",
+          "retrievedAt": "2026-09-06T15:09:47.581Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0016-8",
+          "url": "https://luddy.iu.edu/people/le-thai.html",
+          "excerpt": "Le&#39;s research focuses on the trustworthiness of AI/ML models, particularly in Natural Language Processing (NLP).",
+          "retrievedAt": "2026-09-06T15:09:47.581Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0016-9",
+          "url": "https://lethaiq.github.io/tql3/",
+          "excerpt": "ARKAI Research Lab | AI Safety, Robustness & Accountability ARKAI Lab The ARKAI Research Lab at School of Luddy , Indiana University aims to advance Accountable, Resilient, and Kind AI through multi-disciplinary research in robustness, safety, and transparency.",
+          "retrievedAt": "2026-09-06T15:09:47.823Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0016-10",
+          "url": "https://lethaiq.github.io/tql3/",
+          "excerpt": "Email Scholar GitHub Research Projects Publications Blog and News Meet the Team Resources Knowledge Transfer Home Publications Blog and News Team Resources Teaching News Ticker Lab News 02/2026 - Towards Robust and Trustworthy AI Speech Models at Purdue CERIAS Security Seminar 12/2025 - Student team is ranked 3rd in NeurIPS 2025 Embodied AI Challenge!",
+          "retrievedAt": "2026-09-06T15:09:47.823Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0016-11",
+          "url": "https://lethaiq.github.io/tql3/",
+          "excerpt": "Behavior Control of Generative AI Model Unlearning, Reasoning and Steering We delve into the high-dimensional latent space of LLMs to achieve causal interpretability and steerability.",
+          "retrievedAt": "2026-09-06T15:09:47.823Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0016-12",
+          "url": "https://lethaiq.github.io/tql3/",
+          "excerpt": "Our research focuses on AI Control and Interpretability, developing representation engineering, latent activation steering, and online machine unlearning algorithms that verifiably align models with human intent.",
+          "retrievedAt": "2026-09-06T15:09:47.823Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0016-13",
+          "url": "https://lethaiq.github.io/tql3/",
+          "excerpt": "Related Topics: Model Steering Unlearning Gen AI Explainable AI AI Security & Privacy Adversarial Attacks & Defensive Schemes We build defenses for systems operating in contested environments.",
+          "retrievedAt": "2026-09-06T15:09:47.823Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0016-14",
+          "url": "https://lethaiq.github.io/tql3/",
+          "excerpt": "To improve Adversarial Robustness, we design algorithms to mitigate training data poisoning and backdoor injection, protect interactive web agents from prompt injections, and secure continual learning streams against long-term model corruption.",
+          "retrievedAt": "2026-09-06T15:09:47.823Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0016-15",
+          "url": "https://lethaiq.github.io/tql3/",
+          "excerpt": "Related Topics: Security Privacy Robustness Social Media AI Authenticity and Synthetic Media Verification and Generation Artifacts We investigate the vulnerabilities of generative and classification models to ensure authenticity.",
+          "retrievedAt": "2026-09-06T15:09:47.823Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0016-16",
+          "url": "https://lethaiq.github.io/tql3/",
+          "excerpt": "We focus on benchmarking deepfake text and audio detectors, studying the linguistic sensitivity of audio LMs, and stress-testing reasoning pathways to build robust detection models against adaptive, AI-driven manipulation.",
+          "retrievedAt": "2026-09-06T15:09:47.823Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T15:09:47.823Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0017": {
       "overview": "pending",
@@ -3581,9 +4841,74 @@
         "https://computerscience.nmsu.edu/facultydirectory/individual-bio-pages/tuan-le.html",
         "https://sites.google.com/site/vmtuanle/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0017-1",
+          "url": "https://computerscience.nmsu.edu/facultydirectory/individual-bio-pages/tuan-le.html",
+          "excerpt": "Skip to main content Toggle navigation Menu | Quick Links Aggie One Stop Phonebook Campus Map Campuses Campus Calendars & Events Library Canvas Email myNMSU NMSU LEADS 2025 Department of Computer Science Department Template Apply • Visit • Give • InsideNMSU Home Department Mission and Vision Newsletters Enrollment and Graduation Data Committees Endowed Professorship Facilities Room Reservations Contact Information Internal Documents Job Openings Program-Level Learning Outcomes for CS Department Programs Majors Why CS at NMSU?",
+          "retrievedAt": "2026-09-06T15:09:48.179Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0017-2",
+          "url": "https://computerscience.nmsu.edu/facultydirectory/individual-bio-pages/tuan-le.html",
+          "excerpt": "Students Graduate Student FAQ Prospective Graduates Graduate Degrees Graduate Financial Aid Graduate Forms Courses, Catalogs, & Scheduling Master in Bioinformatics Professional Masters in Data Analytics People Faculty & Staff Directory Computer Operations Group Student Organizations Distinguished Alumni Board of Advisors News Open Positions All Posts Research Groups & Labs Awards Software Technical Reports Colloquium Outreach Outreach Programs Summer Programs Outreach Affiliates Giving to CS CS Home Tuan Le Tuan Le Assistant Professor Tenure Track and Research Faculty Contact Info tuanle@nmsu.",
+          "retrievedAt": "2026-09-06T15:09:48.179Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0017-3",
+          "url": "https://computerscience.nmsu.edu/facultydirectory/individual-bio-pages/tuan-le.html",
+          "excerpt": "edu (575) 646-3234 SH 149 Expertise: Graph Mining, Text Mining, Visualization Biography Ph.",
+          "retrievedAt": "2026-09-06T15:09:48.179Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0017-4",
+          "url": "https://computerscience.nmsu.edu/facultydirectory/individual-bio-pages/tuan-le.html",
+          "excerpt": "from the School of Information Systems at Singapore Management University (SMU).",
+          "retrievedAt": "2026-09-06T15:09:48.179Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0017-5",
+          "url": "https://computerscience.nmsu.edu/facultydirectory/individual-bio-pages/tuan-le.html",
+          "excerpt": "His research interests are in data mining and machine learning, with a focus on text mining, visualization, and graph mining.",
+          "retrievedAt": "2026-09-06T15:09:48.179Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0017-6",
+          "url": "https://computerscience.nmsu.edu/facultydirectory/individual-bio-pages/tuan-le.html",
+          "excerpt": "Before joining NMSU, he was a visiting assistant professor at Oakland University.",
+          "retrievedAt": "2026-09-06T15:09:48.179Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0017-7",
+          "url": "https://computerscience.nmsu.edu/facultydirectory/individual-bio-pages/tuan-le.html",
+          "excerpt": "Earlier on, he was a postdoctoral researcher at Heinz College, Carnegie Mellon University.",
+          "retrievedAt": "2026-09-06T15:09:48.179Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0017-8",
+          "url": "https://computerscience.nmsu.edu/facultydirectory/individual-bio-pages/tuan-le.html",
+          "excerpt": "Location Postal Address Department of Computer Science New Mexico State University P.",
+          "retrievedAt": "2026-09-06T15:09:48.179Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0017-9",
+          "url": "https://sites.google.com/site/vmtuanle/",
+          "excerpt": "Home Search this site Embedded Files Skip to main content Skip to navigation Home News Publications People Teaching Activities Contact About me Home News Publications People Teaching Activities Contact About me More Home News Publications People Teaching Activities Contact About me Tuan Le Associate Professor Coordinator of the Master of Data Analytics Program Department of Computer Science New Mexico State University Email: tuanle at nmsu dot edu Links: Google Scholar , Github Research Interests : Text Mining, Visualization, Graph Mining.",
+          "retrievedAt": "2026-09-06T15:09:48.536Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T15:09:48.536Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0018": {
       "overview": "pending",
@@ -3592,9 +4917,88 @@
         "https://directory.uark.edu/people/khoaluu",
         "https://uark-cviu.github.io/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0018-1",
+          "url": "https://directory.uark.edu/people/khoaluu",
+          "excerpt": "Khoa Luu | University of Arkansas CLOSE Search Search A-Z Index Blackboard Learn Campus Map Directory Email myApps Workday Campus Directory Quick Links University of Arkansas A-Z Index Blackboard Learn Campus Map Directory Email myApps Workday Search Search MENU Directory List Name Email Comments Submit Thank you for submitting your feedback!",
+          "retrievedAt": "2026-09-06T15:09:52.637Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0018-2",
+          "url": "https://directory.uark.edu/people/khoaluu",
+          "excerpt": "hier: 575-5651 University IT Services Help Desk: 575-2905 Financial Aid & Scholarships: 575-3806 Health Center: 575-4451 Housing: 575-4687 Fraud Hotline (Confidential): 866-252-9838 Libraries 575-4104 New Student and Family Programs: 575-5002 Off-Campus Student Services: 575-7351 Payroll: 575-5351 Purchasing: 575-2551 Research: 575-5901 Registrar: 575-5451 Scholarships: 575-4464 Treasurer: 575-5651 University Relations: 575-5555 Campus Directory Assistance — 479-575-2000 We provide available phone numbers and assistance in finding various campus contacts, departments, facilities, and resources.",
+          "retrievedAt": "2026-09-06T15:09:52.637Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0018-3",
+          "url": "https://directory.uark.edu/people/khoaluu",
+          "excerpt": "Media Inquiries — 479-575-5555 Interview requests and media questions are coordinated by the Office of University Relations.",
+          "retrievedAt": "2026-09-06T15:09:52.637Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0018-4",
+          "url": "https://uark-cviu.github.io/",
+          "excerpt": "Computer Vision And Image Understanding Lab C omputer V ision and I mage U nderstanding Lab Home Publication Data & Code Projects & News People Contact Research Computer Vision and Image Understanding (CVIU) Lab was founded by Dr.",
+          "retrievedAt": "2026-09-06T15:09:52.853Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0018-5",
+          "url": "https://uark-cviu.github.io/",
+          "excerpt": "Khoa Luu in Fall 2018 after he moved to University of Arkansas from Carnegie Mellon University (CMU), U.",
+          "retrievedAt": "2026-09-06T15:09:52.853Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0018-6",
+          "url": "https://uark-cviu.github.io/",
+          "excerpt": "CVIU Lab promotes advanced research in Computer Vision , Deep Learning , Biometrics , Machine Intelligence , and Quantum Machine Learning technologies.",
+          "retrievedAt": "2026-09-06T15:09:52.853Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0018-7",
+          "url": "https://uark-cviu.github.io/",
+          "excerpt": "There are five key research topics in CVIU Lab: Autonomous Driving & Perception , Quantum Machine Learning , Smart Health , Precision Agriculture , and Biometric Privacy Protection .",
+          "retrievedAt": "2026-09-06T15:09:52.853Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0018-8",
+          "url": "https://uark-cviu.github.io/",
+          "excerpt": "Autonomous Driving & Perception Quantum Machine Learning Quantum Optimization Smart Health & Medical Imaging Precision Agriculture Biometric Privacy Protection News Feb 2025 We have two papers accepted in The IEEE / CVF Computer Vision and Pattern Recognition Conference (CVPR) , Nashville, Jun.",
+          "retrievedAt": "2026-09-06T15:09:52.853Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0018-9",
+          "url": "https://uark-cviu.github.io/",
+          "excerpt": "Luu will serve as the Area Chair at the Conference on Neural Information Processing Systems (NeurIPS) , San Diego, Dec.",
+          "retrievedAt": "2026-09-06T15:09:52.853Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0018-10",
+          "url": "https://uark-cviu.github.io/",
+          "excerpt": "D Thesis Proposal \"Towards Vision-Brain Understanding At Scales: From Classical to Quantum Machine Learning Approaches\".",
+          "retrievedAt": "2026-09-06T15:09:52.853Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0018-11",
+          "url": "https://uark-cviu.github.io/",
+          "excerpt": "Trong-Thuan successfully defended his Master Thesis \"Towards Multimodal Scene Graph Generation Approaches to Video Understanding\".",
+          "retrievedAt": "2026-09-06T15:09:52.853Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T15:09:52.853Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0019": {
       "overview": "pending",
@@ -3603,9 +5007,123 @@
         "https://www.cecs.ucf.edu/faculty/truong-nghiem/",
         "https://nxtlab.org/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0019-1",
+          "url": "https://www.cecs.ucf.edu/faculty/truong-nghiem/",
+          "excerpt": "ing Undergraduate Programs and Advising Scholarships Internships and Fellowships Student Organizations Faculty and Research Faculty Directory Faculty Career Opportunities Virtual Faculty Research Talks 3D Virtual Lab Tours Newsroom Latest News Share Your News Publications Social Media Directory Lend Me Your Engineers Industry Partners Alumni &#038; Donors CECS Alumni Chapter Why Support Giving Give Now UCF Planned Giving Contact Us Return to Directory Truong Nghiem Associate Professor Email Department Electrical and Computer Engineering Office L3Harris Engineering Center Room 443 E-mail truong.",
+          "retrievedAt": "2026-09-06T15:09:54.368Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0019-2",
+          "url": "https://www.cecs.ucf.edu/faculty/truong-nghiem/",
+          "excerpt": "edu Phone 407-823-1438 Intelligent Cyber-Physical Systems (iCPS) Lab Google Scholar LinkedIn Biography & Research Education & Specialties News & Media Biography Truong X.",
+          "retrievedAt": "2026-09-06T15:09:54.368Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0019-3",
+          "url": "https://www.cecs.ucf.edu/faculty/truong-nghiem/",
+          "excerpt": "Nghiem received his doctoral degree in electrical and systems engineering from the University of Pennsylvania.",
+          "retrievedAt": "2026-09-06T15:09:54.368Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0019-4",
+          "url": "https://www.cecs.ucf.edu/faculty/truong-nghiem/",
+          "excerpt": "He was an assistant professor, then an associate professor at Northern Arizona University from 2018 until he joined UCF in 2024.",
+          "retrievedAt": "2026-09-06T15:09:54.368Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0019-5",
+          "url": "https://www.cecs.ucf.edu/faculty/truong-nghiem/",
+          "excerpt": "Nghiem received the NSF CAREER Award in 2023, the NSF ERI Award in 2022 and the Best Paper Award from the ACM/IEEE International Conference on Cyber-Physical Systems in 2018.",
+          "retrievedAt": "2026-09-06T15:09:54.368Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0019-6",
+          "url": "https://www.cecs.ucf.edu/faculty/truong-nghiem/",
+          "excerpt": "He is a senior member of the Institute of Electrical and Electronics Engineers and a member of the Association for Computing Machinery.",
+          "retrievedAt": "2026-09-06T15:09:54.368Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0019-7",
+          "url": "https://www.cecs.ucf.edu/faculty/truong-nghiem/",
+          "excerpt": "Nghiem’s research interests include the integration of control, optimization, machine learning and computation to address cyber-physical system challenges across various domains.",
+          "retrievedAt": "2026-09-06T15:09:54.368Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0019-8",
+          "url": "https://www.cecs.ucf.edu/faculty/truong-nghiem/",
+          "excerpt": "His research laboratory, the intelligent Cyber-Physical Systems (iCPS) Lab, focuses on developing the scientific and engineering foundations of intelligent cyber-physical systems, with applications such as digital twins, smart buildings & energy systems, autonomous vehicles and robotics.",
+          "retrievedAt": "2026-09-06T15:09:54.368Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0019-9",
+          "url": "https://nxtlab.org/",
+          "excerpt": "Intelligent Cyber-Physical Systems (iCPS) Lab Search Intelligent Cyber-Physical Systems (iCPS) Lab Intelligent Cyber-Physical Systems (iCPS) Lab Home News People Policies Misc Upcoming Events Contact Intelligent Cyber-Physical Systems (iCPS) Laboratory At the iCPS Lab, we develop autonomous and intelligent cyber-physical systems using control, optimization, machine learning / artificial intelligence, and advanced computing .",
+          "retrievedAt": "2026-09-06T15:09:54.779Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0019-10",
+          "url": "https://nxtlab.org/",
+          "excerpt": "An iCPS integrates tightly machine learning and AI for decision and real-time control of a CPS to achieve high performance , adaptability , autonomy , and safety .",
+          "retrievedAt": "2026-09-06T15:09:54.779Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0019-11",
+          "url": "https://nxtlab.org/",
+          "excerpt": "Our research approach integrates learning, AI, control, optimization, and computing to create methods, algorithms, and engineering solutions for iCPS.",
+          "retrievedAt": "2026-09-06T15:09:54.779Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0019-12",
+          "url": "https://nxtlab.org/",
+          "excerpt": "The bedrock of our research is a fundamental research thrust that advances the theoretical and algorithmic foundation of learning and control of iCPS.",
+          "retrievedAt": "2026-09-06T15:09:54.779Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0019-13",
+          "url": "https://nxtlab.org/",
+          "excerpt": "Our practical research thrusts focus on developing smart and autonomous systems in various application domains and on building cyberinstructures for iCPS.",
+          "retrievedAt": "2026-09-06T15:09:54.779Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0019-14",
+          "url": "https://nxtlab.org/",
+          "excerpt": "The iCPS Lab is in the Department of Electrical and Computer Engineering , College of Engineering and Computer Science at the University of Central Florida (UCF).",
+          "retrievedAt": "2026-09-06T15:09:54.779Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0019-15",
+          "url": "https://nxtlab.org/",
+          "excerpt": "We are also affiliated with the School of Modeling, Simulation, and Training and the Department of Computer Science .",
+          "retrievedAt": "2026-09-06T15:09:54.779Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0019-16",
+          "url": "https://nxtlab.org/",
+          "excerpt": "Latest News Paper published in Franklin Open Paper on communication-efficient ADMM with Gaussian process regression and adaptive quantization was published in Franklin Open.",
+          "retrievedAt": "2026-09-06T15:09:54.779Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T15:09:54.779Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0020": {
       "overview": "pending",
@@ -3614,9 +5132,69 @@
         "https://harrisburg.psu.edu/faculty-and-staff/truong-tran-phd",
         "https://sites.psu.edu/truongtran/"
       ],
-      "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "evidence": [
+        {
+          "id": "vp-0020-1",
+          "url": "https://sites.psu.edu/truongtran/",
+          "excerpt": "I Chatbot AI Robot AI in Computer Network &#038; Cloud AI in Cybersercurity Data Analytics Motion Tracking Resources for Students Teaching Publications Faculty Career Advices People 2026 Mid-Year Research Highlights: New Awards, Continuing Collaborations, and Scholarly Contributions The first half of 2026 has been an exciting period of growth for the Trustworthy AI Lab , marked by new research awards, continued support for externally funded collaborations, and new scholarly publications spanning artificial intelligence, networking, cybersecurity, computer vision, and intelligent infrastructure.",
+          "retrievedAt": "2026-09-06T15:09:55.591Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0020-2",
+          "url": "https://sites.psu.edu/truongtran/",
+          "excerpt": "These accomplishments reflect the lab&#8217;s continued commitment to developing trustworthy AI solutions that address important challenges in healthcare, smart communities, cyber-physical systems, and next-generation intelligent networks.",
+          "retrievedAt": "2026-09-06T15:09:55.591Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0020-3",
+          "url": "https://sites.psu.edu/truongtran/",
+          "excerpt": "ntinues its contribution to the second year of the externally funded project: Project: Multimodal Retrieval-Augmented Database for Pediatric Brain Tumors: Enhancing Clinical Insights and Research through AI Funding Agency: Four Diamonds Fund Research Program Role: Co-Investigator Project Period: September 1, 2025 – August 31, 2027 Total Award: $248,405 This multidisciplinary project continues to develop an AI-powered multimodal retrieval-augmented database that integrates radiology images, pathology data, clinical records, and biomedical information to accelerate pediatric brain tumor research.",
+          "retrievedAt": "2026-09-06T15:09:55.591Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0020-4",
+          "url": "https://sites.psu.edu/truongtran/",
+          "excerpt": "Tran works closely with colleagues in the Penn State College of Medicine to develop trustworthy AI technologies that improve clinical data exploration, support translational research, and enable more informed clinical decision-making.",
+          "retrievedAt": "2026-09-06T15:09:55.591Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0020-5",
+          "url": "https://sites.psu.edu/truongtran/",
+          "excerpt": "During the second year of the project, the team is expanding the multimodal AI framework while enhancing retrieval capabilities for researchers and clinicians.",
+          "retrievedAt": "2026-09-06T15:09:55.591Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0020-6",
+          "url": "https://sites.psu.edu/truongtran/",
+          "excerpt": "New Research Award Smart Infrastructure for Future Housing: Structural and Environmental Monitoring of 3D Concrete Printed Houses Funding Agency: Cocoziello Institute of Real Estate Innovation Role: Principal Investigator &#8211; Truong Tran &#8211; collaborate with collcolleagues at Penn State University Park Project Period: July 1, 2026 – June 30, 2027 Award Amount: $50,000 This new interdisciplinary project explores how artificial intelligence, sensing technologies, and structural monitoring can improve the safety and long-term performance of 3D concrete printed residential buildings .",
+          "retrievedAt": "2026-09-06T15:09:55.591Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0020-7",
+          "url": "https://sites.psu.edu/truongtran/",
+          "excerpt": "The research integrates environmental sensing, structural health monitoring, and intelligent data analytics to evaluate the resilience of next-generation housing systems under real-world conditions.",
+          "retrievedAt": "2026-09-06T15:09:55.591Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0020-8",
+          "url": "https://sites.psu.edu/truongtran/",
+          "excerpt": "The project represents a new collaboration between Penn State Harrisburg and University Park and supports emerging research at the intersection of AI, smart infrastructure, digital construction, and sustainable communities.",
+          "retrievedAt": "2026-09-06T15:09:55.591Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
+      "errors": [
+        "https://harrisburg.psu.edu/faculty-and-staff/truong-tran-phd: HTTP 403"
+      ],
+      "updatedAt": "2026-09-06T15:09:55.591Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0021": {
       "overview": "pending",

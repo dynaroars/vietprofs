@@ -129,7 +129,7 @@ completion while temporary failures or unresolved verification remain.
 
 ## Batch checklist
 
-- [ ] Batch snapshot — 1,476 people; IDs in `maintenance/enrichment.json`; pending source collection.
+- [ ] Batch 1 — `vp-0001`–`vp-0020`; 20 people; ledger status `in_progress`; source collection pending.
 
 Populate at execution time from the saved ID snapshot. Each entry must include batch number,
 ledger reference or exact IDs, outcome counts, remaining retries, and publication status.
