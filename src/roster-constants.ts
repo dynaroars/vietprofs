@@ -112,6 +112,8 @@ export const COUNTRY_TO_CONTINENT: Record<string, string> = {
   'Estonia': 'Europe',
   'Luxembourg': 'Europe',
   'Iceland': 'Europe',
+  'Russia': 'Europe',
+  'Russian Federation': 'Europe',
 
   // Asia
   'Singapore': 'Asia',
@@ -178,6 +180,8 @@ export const COUNTRY_FLAGS: Record<string, string> = {
   'Spain': '🇪🇸',
   'Portugal': '🇵🇹',
   'Luxembourg': '🇱🇺',
+  'Russia': '🇷🇺',
+  'Russian Federation': '🇷🇺',
   'Israel': '🇮🇱',
   'Saudi Arabia': '🇸🇦',
   'United Arab Emirates': '🇦🇪',

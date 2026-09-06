@@ -385,6 +385,9 @@ export const HEALTH_SUBFIELDS = [
 const FIELD_OVERRIDES = new Map([
   ['Accelerator Directorate|SLAC National Accelerator Laboratory', 'Physics & Astronomy'],
   ['Direction Europe et International|CNRS (Centre National de la Recherche Scientifique)', 'Biological & Biomedical Sciences'],
+  ['Centre de Recherche sur l\'Inflammation|CNRS (Centre National de la Recherche Scientifique)', 'Biological & Biomedical Sciences'],
+  ['Institut de Biosciences et Biotechnologies d\'Aix-Marseille|CNRS (Centre National de la Recherche Scientifique)', 'Biological & Biomedical Sciences'],
+  ['Faculté de Santé|Université Paris Cité', 'Health Sciences'],
   ['Information Studies|University of California, Los Angeles', 'Education'],
   // These new research appointments have department or center names whose disciplinary home
   // is clearer from their official university context than from the generic words alone.
@@ -473,6 +476,16 @@ const FIELD_OVERRIDES = new Map([
   ['Department of Genome Sciences, John Curtin School of Medical Research|Australian National University', 'Business & Economics'],
   // SnT (Interdisciplinary Centre for Security, Reliability and Trust) is Luxembourg's computer science/cybersecurity research centre.
   ['Interdisciplinary Centre for Security, Reliability and Trust|University of Luxembourg', 'Computer & Information Sciences'],
+  ['Laboratory for Energy Systems Analysis|Paul Scherrer Institute', 'Engineering'],
+  ['School of Aviation|Massey University', 'Engineering'],
+  ['Faculty of Humanities and Social Sciences|University of Tsukuba', 'Social & Behavioral Sciences'],
+  ['College of Asia Pacific Studies|Ritsumeikan Asia Pacific University', 'Social & Behavioral Sciences'],
+  ['UMR Agroécologie|INRAE (Institut National de Recherche pour l\u0027Agriculture, l\u0027Alimentation et l\u0027Environnement)', 'Agricultural & Natural Resource Sciences'],
+  ['Department of Nematology|University of California, Riverside', 'Agricultural & Natural Resource Sciences'],
+  ['Centre RAPSODEE|IMT Mines Albi', 'Engineering'],
+  ['CSIRO Manufacturing|CSIRO (Commonwealth Scientific and Industrial Research Organisation)', 'Engineering'],
+  ['Center for Low-temperature Plasma Sciences|Nagoya University', 'Physics & Astronomy'],
+  ['Institut des Sciences Moléculaires|CNRS (Centre National de la Recherche Scientifique)', 'Chemistry'],
 ]);
 
 // Buckets granular `department` values into the broad fields above. Order matters, and is not

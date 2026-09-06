@@ -28,40 +28,25 @@ Before modifying the roster, review:
 
 ### Completed Batches
 - [x] **Computer Science** (52/52 resolved — 8 included, 16 duplicates, 27 excluded, 1 unresolved)
+- [x] **Mathematics & Statistics** (8/8 resolved — 6 included, 2 duplicates)
+- [x] **Life Sciences** (22/22 resolved — 7 included, 1 duplicate, 14 excluded)
+- [x] **Social Sciences** (36/36 resolved — 12 included, 10 duplicates, 14 excluded)
+- [x] **Agriculture & Environment** (54/54 resolved — 8 included, 10 duplicates, 36 excluded)
+- [x] **Other** (69/69 resolved — 11 included, 16 duplicates, 42 excluded)
 
 ---
 
 ### Remaining Batches to Process (in recommended order)
 
-#### 1. Mathematics & Statistics (Small Batch — Quick Win)
-- **Status:** 6 pending / 8 total (2 duplicates already marked)
-- **Target:** `batches["Mathematics & Statistics"].candidates`
+#### 1. Physical Sciences
+- **Status:** 91 pending / 123 total (32 duplicates already marked)
+- **Target:** `batches["Physical Sciences"].candidates`
 
 #### 2. Engineering (Large Batch)
 - **Status:** 103 pending / 131 total (28 duplicates already marked)
 - **Target:** `batches["Engineering"].candidates`
 
-#### 3. Life Sciences
-- **Status:** 19 pending / 22 total (3 duplicates already marked)
-- **Target:** `batches["Life Sciences"].candidates`
-
-#### 4. Social Sciences
-- **Status:** 26 pending / 36 total (10 duplicates already marked)
-- **Target:** `batches["Social Sciences"].candidates`
-
-#### 5. Agriculture & Environment
-- **Status:** 44 pending / 54 total (10 duplicates already marked)
-- **Target:** `batches["Agriculture & Environment"].candidates`
-
-#### 6. Physical Sciences
-- **Status:** 91 pending / 123 total (32 duplicates already marked)
-- **Target:** `batches["Physical Sciences"].candidates`
-
-#### 7. Other
-- **Status:** 53 pending / 69 total (16 duplicates already marked)
-- **Target:** `batches["Other"].candidates`
-
-#### 8. Medicine & Health (Largest Batch)
+#### 3. Medicine & Health (Largest Batch)
 - **Status:** 164 pending / 210 total (46 duplicates already marked)
 - **Target:** `batches["Medicine & Health"].candidates`
 
