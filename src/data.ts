@@ -459,6 +459,8 @@ const FIELD_OVERRIDES = new Map([
   // LISN (Laboratoire Interdisciplinaire des Sciences du Numerique) is Paris-Saclay's digital
   // sciences lab; the acronym alone has no computing keyword.
   ['LISN/CNRS|Université Paris-Saclay', 'Computer & Information Sciences'],
+  // ETIS (Équipes Traitement de l'Information et Systèmes) is CY Cergy Paris's information processing / CS lab.
+  ['ETIS Laboratory|CY Cergy Paris Université', 'Computer & Information Sciences'],
   // Bare "Social Sciences" gives no field signal, but Van Tho Tran's own research (international
   // and development economics) is Business & Economics.
   ['Social Sciences|Waseda University', 'Business & Economics'],
