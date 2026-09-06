@@ -419,36 +419,77 @@ Resuming across sessions (including on a different machine):
    mid-batch: the last pushed commit plus `maintenance/hieuphay-leads.json`'s recorded statuses are
    the entire state a fresh session needs to continue. Push immediately after each commit.
 
-### OpenAlex cross-discipline lead queues
+### OpenAlex cross-discipline lead queues & triage methodology
 
-`npm run extract-openalex-leads` queries the OpenAlex author API for a bounded set of Vietnamese
-surname searches, then writes `maintenance/openalex-leads.json`, grouped into broad disciplines.
-It retains only authors with at least three works and a recent non-Vietnam affiliation at an
-OpenAlex education, government, nonprofit, or research-facility institution. The author's
-highest-count OpenAlex topic assigns the broad-field batch. Business and economics are omitted by
-default because `hieuphay-leads.json` is the more targeted source; pass `-- --include-economics`
-only when that separate queue is exhausted or unsuitable. Pass `-- --pages N` (up to 10) to fetch
-more than the default first 200 search results per surname.
+`npm run extract-openalex-leads` queries the OpenAlex author API for a bounded set of Vietnamese surname searches, then writes `maintenance/openalex-leads.json`, grouped into broad disciplines. It establishes an automated candidate harvesting pipeline that feeds the roster maintenance workflow.
 
-OpenAlex has no Vietnamese-identity or current-faculty-status field. Its name matches, topics, and
-affiliation histories are discovery signals only and can be stale or incorrectly disambiguated.
-Review `pending` leads field by field, starting with high-citation candidates, and apply the full
-inclusion standard before editing the roster. The script preserves human-set `included`,
-`excluded`, `duplicate`, and `unresolved` statuses by OpenAlex author ID across reruns; record a
-short note and roster ID where applicable.
-6. If you're running low on context or budget mid-session, stop after finishing your current
-   batch's commit — don't leave `public/data.json` and `maintenance/hieuphay-leads.json` out of
-   sync with each other (a `status: included` lead must always have a matching roster entry, and
-   vice versa). A future session resumes at step 1.
+#### 1. Candidate Harvesting Architecture (`scripts/extract-openalex-leads.ts`)
 
-The roster-token-subset dedup used both by the extraction script and by manual checks is a coarse
-heuristic: a 2-token overlap (e.g. "Kim-Huong Nguyen" against an unrelated "Kim ... Nguyen"
-already in the roster from a different field entirely) can occasionally mark a genuinely new,
-distinct person as `duplicate` by coincidence. Since `duplicate` leads are kept in the file (never
-deleted), an occasional spot-check of a few `duplicate`-status entries — confirming the name
-really does belong to the existing roster person and not a namesake — is worth doing periodically,
-the same way the Vietnamese-name-lexicon section above recommends testing against non-Vietnamese
-name samples.
+- **Multi-signal name filtering:** Querying open international bibliographic APIs by surname alone produces massive false-positive rates (e.g. French surnames like *Le Cam* or *Le Bihan*, Spanish surnames like *Dao*, and East Asian surname overlaps like *Mai*, *Lai*, *Dang*, *Do*). The extractor enforces a **Vietnamese name token signal** (`surnames` + `vietnameseNameTokens` intersection) to ensure candidates exhibit recognizable Vietnamese given/middle name tokens before entering the triage queue.
+- **Affiliation & Recency Filter:** The extraction pipeline retains only authors with $\ge 3$ works and an active overseas affiliation in the last two years (`currentYear - 2` or newer) at an OpenAlex `education`, `government`, `nonprofit`, or `facility` institution. Authors whose sole or most recent affiliations are in Vietnam are filtered out.
+- **Discipline Partitioning:** Each author is mapped to a broad discipline batch (e.g., Computer Science, Engineering, Mathematics & Statistics, Physical Sciences, Life Sciences, Medicine & Health, Agriculture & Environment, Social Sciences) based on OpenAlex primary topic taxonomy and domain classification.
+- **Pagination and Resumability:** The extractor supports `-- --pages N` (fetching up to 2,000 authors per surname) and preserves all existing human/agent-reviewed statuses (`included`, `duplicate`, `excluded`, `unresolved`) by OpenAlex author ID across re-extractions using `pipelineVersion: 3`.
+
+#### 2. Systematic Triage & Resolution Playbook
+
+OpenAlex author profiles are **leads only** — OpenAlex does not know faculty status, tenure eligibility, or Vietnamese heritage. Maintainers and automated agents process each candidate queue using the following step-by-step verification standard:
+
+1. **Fast-path Deduplication & Entity Matching:**
+   - Check the candidate against the existing roster (`public/data.json`) by canonical name, full diacritic `vietnameseName`, and OpenAlex raw aliases.
+   - Detect **split OpenAlex profiles** (multiple author IDs corresponding to the same individual). Map all duplicate OpenAlex author IDs to the single primary canonical roster ID (`matchedId: "vp-####"`).
+   - Beware of false-positive duplicate collisions on 2-token names (e.g., "Minh Huynh" at CSIRO vs an unrelated clinical namesake). Always verify institution and research domain before marking as duplicate.
+
+2. **Geographic & Primary Appointment Verification:**
+   - Confirm the candidate's primary active appointment is located outside Vietnam.
+   - Exclude researchers whose primary, full-time appointment is at a Vietnamese university or institute (e.g., VNU, Hanoi Medical University, Pasteur Institute Ho Chi Minh City, VinUni), even if they hold adjunct, honorary, or visiting positions abroad. Mark `status: "excluded"` with `reason: "Primary academic affiliation is based in Vietnam (...) "`.
+
+3. **Academic Position & Track Eligibility Standard:**
+   - Verify that the candidate holds an eligible, continuing faculty appointment at an accredited university or eligible public/nonprofit research institute:
+     - `Tenure-line`: Assistant Professor, Associate Professor, Full Professor, Chaired Professor.
+     - `Research`: Faculty-equivalent permanent researchers (e.g., CNRS *Directeur/Chargé de Recherche*, INRIA Research Scientist, CSIRO Group Leader / Senior Principal Research Scientist, RIKEN Unit Leader, U.S. National Lab Staff/Senior/Distinguished Scientist, AFRL Principal Engineer).
+     - `Clinical`: Continuing, full-time clinical-faculty appointment (e.g., Clinical Assistant/Associate/Full Professor, PU-PH / MCU-PH hospital-university practitioners in France).
+     - `Teaching`: Full-time permanent teaching faculty (e.g., Associate Professor of Teaching, Professor of Practice).
+     - `Emeritus`: Formally conferred emeritus/emerita faculty.
+   - Exclude ineligible roles:
+     - Postdoctoral fellows, research assistants, and graduate students.
+     - Purely clinical medical staff, hospital residents, and fellows without a qualifying university academic faculty appointment.
+     - Corporate/industry scientists and commercial R&D staff (e.g. pharmaceutical or software companies).
+     - Funding agency program officers without active research appointments.
+
+4. **Cultural & Disambiguation Checks:**
+   - Exclude candidates matching substring/surname filters who are not of Vietnamese heritage:
+     - Korean researchers matching prefix/substring "Do" (e.g., *Do-Hyung Kim*, *Do Young Kim*, *Do-Hyun Nam*).
+     - Chinese researchers sharing romanized surnames (e.g., *Hai-Qiang Mai*, *Hong-Shiee Lai*, *Hong Dang* from Peking University).
+     - Western researchers sharing romanized surname spellings (e.g., *Laurent Le Cam* with Breton surname *Le Cam*).
+
+5. **Metadata Structuring & Roster Enrichment:**
+   - **Name order:** Canonical roster name must use Western order `"First (Middle) Last"`. For hyphenated or maiden names, verify against publications and add to `surnameFirstAllowlist` in `scripts/validate-data.ts` if a Vietnamese token is the first name.
+   - **Vietnamese name:** Record full diacritic Vietnamese name (`vietnameseName`) in `"Họ Tên"` order when verified from authoritative sources (e.g., Vietnamese media, thesis, university bio).
+   - **Academic degrees:** Extract explicit degree credentials (`phdInstitution`, `phdYear`, `phdMajor`, `mdInstitution`, `mdYear`, `msInstitution`, `undergradInstitution`) only when explicitly documented in institutional bios or CVs.
+   - **Honors & Awards:** Record major academy memberships, fellow titles (e.g., IEEE Fellow, AIAA Fellow, NAI Fellow, ACM Fellow), national orders (e.g., *Légion d'honneur*), and career awards with proper category, year, organization, and HTTPS source URL.
+   - **Field Classification & Overrides:** Ensure the candidate's department maps correctly to `FIELD_RULES`. For specialized research labs, foreign institutes, or clinical divisions that do not match default regex rules (e.g. French UMRs, medical service units), add an explicit entry to `FIELD_OVERRIDES` in `src/data.ts`.
+
+#### 3. State Synchronization & Resumable Commit Protocol
+
+To prevent desynchronization between data files and ensure interrupted runs are cleanly resumable:
+
+1. Update `public/data.json` with new entries.
+2. Update `maintenance/verification.json` with entry verification timestamps matching canonical roster names.
+3. Update `maintenance/openalex-leads.json` with updated candidate statuses (`included`, `duplicate`, `excluded`, `unresolved`).
+4. Run immutable ID assignment:
+   ```bash
+   npm run assign-profile-ids -- --apply
+   ```
+5. Run the strict verification suite:
+   ```bash
+   npm test && npm run build && git diff --check
+   ```
+6. Commit and push each batch immediately after validation:
+   ```bash
+   git add TODO.md maintenance/openalex-leads.json maintenance/verification.json public/data.json scripts/validate-data.ts src/data.ts
+   git commit -m "Resolve OpenAlex <Discipline> leads batch"
+   git push origin main
+   ```
 
 ## Data-entry rules
 
