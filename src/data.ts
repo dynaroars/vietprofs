@@ -519,6 +519,8 @@ const FIELD_OVERRIDES = new Map([
   ['Water Resources Management Group|Wageningen University & Research', 'Earth & Environmental Sciences'],
   ['Plant Pathology and Host Plant Resistance Group|International Rice Research Institute', 'Agricultural & Natural Resource Sciences'],
   ['Center for Computational Sciences|University of Tsukuba', 'Earth & Environmental Sciences'],
+  ['Laboratoire d\u0027Optique Appliquée (LOA)|CNRS (Centre National de la Recherche Scientifique)', 'Physics & Astronomy'],
+  ['Laboratoire de Physique Théorique|CNRS (Centre National de la Recherche Scientifique)', 'Physics & Astronomy'],
 ]);
 
 // Buckets granular `department` values into the broad fields above. Order matters, and is not
@@ -570,7 +572,7 @@ const FIELD_RULES = [
   // "materials science" alone (no "engineering" in the name) still lands here — combined
   // "Materials Science and Engineering" departments already match the bare "engineering" term.
   { field: 'Engineering', match: /engineering|materials(?: science)?|aviation science|aeronautic|astronautic|aerospace|electrical communication|mechatronic|nanotechnology|nanotechnologie|microsystem/i },
-  { field: 'Physics & Astronomy', match: /physics|astronomy/i },
+  { field: 'Physics & Astronomy', match: /physics|physique|astronomy|astrophysi/i },
   { field: 'Chemistry', match: /chemistry|chimie/i },
   {
     field: 'Biological & Biomedical Sciences',

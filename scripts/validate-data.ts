@@ -35,6 +35,7 @@ const surnameFirstAllowlist = new Set<string>([
   // (University of Reading) staff profile and on ResearchGate/Google Scholar; Luong is her surname.
   'Doan Pham Minh', // published as "Doan Pham Minh" across official IMT Mines Albi directory and publications; Pham is his surname and Doan is his given name.
   'Vu Thuy Khanh Le-Trilling', // published as "Vu Thuy Khanh Le-Trilling" across University Hospital Essen directory and virology publications.
+  'Tran Trung Luu', // published as "Tran Trung Luu" / "T. T. Luu" across Nature, HKU directory, and ORCID; Luu is his surname and Tran Trung is his given name.
 ]);
 
 function fail(file: string, message: string): never {
