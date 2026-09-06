@@ -40,6 +40,9 @@ test('generated profile pages use the same stylesheet source as the directory', 
   assert.match(generator, />SYNOPSIS</);
   assert.match(generator, />ROSTER METADATA</);
   assert.match(generator, /view raw record/);
+  assert.match(generator, /class="section-note research-overview-note"/);
+  assert.match(generator, /<a href="\$\{escapeHtml\(person\.researchOverview\.sources\[0\]\)\}"[^>]*>Automatically summarized<\/a>/);
+  assert.doesNotMatch(generator, /Automatically summarized from/);
   assert.doesNotMatch(generator, /Report stale record/);
   assert.match(sourceStylesheet, /\.profile-page \.man-section/);
   assert.match(sourceStylesheet, /\.profile-page \.links a svg/);
