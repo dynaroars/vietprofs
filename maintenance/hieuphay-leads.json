@@ -2911,8 +2911,9 @@
       "country": "US",
       "npapers": 2,
       "cited": 53,
-      "status": "pending",
-      "note": "Second session (2026-09-06): identity ambiguous between two current-seeming positions — 'Ly Nguyen', Instructional Assistant Professor of Agricultural Economics, Texas A&M Higher Education Center at McAllen (joined 2022, per Sept 2024 AgriLife Today article on new faculty) vs. a 2026 MDPI paper (Solis, Alvarez, Nguyen L., \"Agriculture Under Pressure,\" Agriculture 16(6):661) listing her affiliation as Florida A&M University Agribusiness Program. Cannot confirm which is her actual current appointment, or her exact rank/track at either, without direct site access (famu.edu and related domains egress-blocked this session). Left pending."
+      "status": "included",
+      "note": "Third session (2026-09-06): resolved to Ly Nguyen, Assistant Professor, Agribusiness Program, Florida A&M University — most recent evidence (2026 MDPI paper + Google Scholar self-declared famu.edu-verified affiliation) supersedes a stale 2024 Texas A&M–McAllen hire announcement; added confirmed:false (no official FAMU profile page found).",
+      "rosterId": "vp-1490"
     },
     {
       "name": "Quynh Anh",
@@ -6230,7 +6231,7 @@
       "npapers": 3,
       "cited": 10,
       "status": "pending",
-      "note": "Second session (2026-09-06): identity resolved to Thanh (Harris) Vu, listed on AUT's official academic-staff profile system (academics.aut.ac.nz/harris.vu) and the Auckland Centre for Financial Research people page (acfr.aut.ac.nz/our-people/harris-vu); PhD in Finance, University of Auckland. Not on ACFR's visiting-researchers list. However exact rank/track (Lecturer vs. Research Fellow vs. other) could not be confirmed via search snippets alone — aut.ac.nz domains egress-blocked this session. Left pending; needs direct page access to confirm rank before adding."
+      "note": "Third session (2026-09-06): identity confirmed as Thanh (Harris) Vu on AUT's official academic-staff system (academics.aut.ac.nz/harris.vu) and ACFR fellow page, not on ACFR visiting-researchers list — genuine continuing appointment likely, but exact rank (Lecturer/Senior Lecturer/Research Fellow) still unconfirmable via search snippets alone after many query variants; aut.ac.nz pages remain egress-blocked. Left pending — needs direct page access to confirm rank before adding."
     },
     {
       "name": "Monica Tran",
@@ -6650,8 +6651,8 @@
       "country": "AU",
       "npapers": 2,
       "cited": 8,
-      "status": "pending",
-      "note": "Second session (2026-09-06): likely identity is Phi Yen Phan, who has an official UTS Discovery research-profile page (profiles.uts.edu.au/PhiYen.Phan). Could not determine from search snippets whether this reflects a current faculty appointment (Lecturer/Senior Lecturer) or a PhD-candidate profile (UTS uses the same profile system for both). A distinct 'Yen Phan, Lecturer' found elsewhere is at Technological University Dublin, not UTS — different person, not a match. Left pending; needs direct profiles.uts.edu.au access to resolve."
+      "status": "excluded",
+      "note": "Third session (2026-09-06): likely identity Phi Yen Phan has a profiles.uts.edu.au page but only one co-authored paper as apparent junior collaborator under a senior UTS professor, no independent Scholar/ResearchGate identity, and no title found anywhere — pattern more consistent with a PhD-candidate profile (UTS uses the same template for students and faculty) than a confirmed Lecturer/Senior Lecturer appointment."
     },
     {
       "name": "Trang Le",
@@ -6803,7 +6804,7 @@
       "npapers": 3,
       "cited": 7,
       "status": "pending",
-      "note": "Second session (2026-09-06): identity confirmed as Diem-Thuy Dinh, Senior Research Fellow, Dept of Epidemiology and Preventive Medicine, Monash University; Program Manager of the Victorian Cardiac Outcomes Registry (VCOR) continuously since 2013 and previously the ANZSCTS National Cardiac Surgery Database. The long, continuous tenure in the role is suggestive of stability, but Australian 'Research Fellow' titles are frequently grant/fellowship-funded and can still be fixed-term even when renewed for years; research.monash.edu and monash.edu remain egress-blocked in this session, so it is still unresolved whether this is a genuinely permanent, faculty-equivalent Research-track appointment as opposed to a continuing-but-contract registry-management role. Left pending pending direct access to research.monash.edu/en/persons/diem-dinh/ to confirm appointment type."
+      "note": "Third session (2026-09-06): confirmed as Dr. Diem Dinh, Senior Research Fellow, Victorian Heart Institute, Monash University, Program Manager of VCOR since 2013 (and the ANZSCTS National Cardiac Surgery Database before that) — 20+ years of continuous registry-management research work, but no explicit \"continuing\"/\"permanent\" appointment language found in any accessible source; Australian Research Fellow titles are frequently grant-funded even when renewed for years, and ROSTER_MAINTENANCE.md calls for particular care here. Left pending rather than assuming permanence from tenure length alone."
     },
     {
       "name": "Hoang‐Phuong Do",
@@ -6811,8 +6812,8 @@
       "country": "TW",
       "npapers": 2,
       "cited": 7,
-      "status": "pending",
-      "note": "Second session (2026-09-06): independently repeated the search with the same result as the first session — no faculty profile, personal site, or Scholar page found for anyone matching this name at Ming Chi University of Technology; the only 'Do Hoang Phuong'-type match found is affiliated with VNU University of Economics and Business, Hanoi (inside Vietnam, ineligible even if the same person). api.openalex.org remains egress-blocked. Left pending; needs OpenAlex API access or a native Chinese-language search of MCUT rosters to resolve identity."
+      "status": "excluded",
+      "note": "Third session (2026-09-06): repeated search including Chinese-language (明志科技大學 副教授/助理教授/教授) and department-specific queries at Ming Chi University of Technology; no faculty profile, personal site, Scholar page, or publication record found there. The only real-person matches for this name are inside Vietnam (Fulbright School of Public Policy and Management; British University Vietnam) and therefore ineligible regardless. No eligible appointment exists."
     },
     {
       "name": "Nguyen Phuong Dung",
@@ -6915,8 +6916,8 @@
       "country": "US",
       "npapers": 2,
       "cited": 6,
-      "status": "pending",
-      "note": "Second session (2026-09-06): repeated the search across UTHSC's general, Pharmacy, Pharmaceutical Sciences, Neurosurgery, Family Medicine, and Molecular Sciences faculty listings and Google Scholar; found no confirmed faculty member named Michael Tran at UTHSC. The only 'Michael Tran' tied to UTHSC is a PharmD alumnus now in industry/hospital pharmacy (not UTHSC faculty); a 'Michael N. Tran, MD' Assistant Clinical Professor is at UC Irvine, a different institution. uthsc.edu domain egress-blocked this session. Left pending; needs a direct UTHSC faculty-directory search to resolve either way."
+      "status": "excluded",
+      "note": "Third session (2026-09-06): no current UTHSC faculty member named Michael Tran found in any department directory. The only UTHSC-linked \"Michael Tran\" is a PharmD alumnus now in industry/hospital pharmacy; a separate \"Michael N. Tran, MD\" Assistant Clinical Professor at UC Irvine has no evidentiary tie to UTHSC/Tennessee or to any economics/research-paper trail. No identifiable eligible person."
     },
     {
       "name": "Luyen K. Bui",
@@ -6933,8 +6934,8 @@
       "country": "US",
       "npapers": 2,
       "cited": 6,
-      "status": "pending",
-      "note": "Second session (2026-09-06): only a bare surname given. Exhaustively searched Georgetown's Economics (core/affiliated/adjunct), McCourt School, McDonough School of Business, SFS (main + Qatar), and Government Dept faculty listings plus general web/SSRN/NBER for a current faculty/researcher surnamed exactly 'Tran'; none found. The only Georgetown person with 'Tran' in their name is Van Tran Nguyen (surname Nguyen, Tran is a given/middle name), Assistant Professor of Performing Arts/Film & Media Studies (joined Fall 2024) — a plausible identity mismatch given the different field (Performing Arts vs. this lead's economics/social-science origin) and insufficient evidence (no matching paper/OpenAlex ID) to confirm as the same person. Left pending; needs the underlying OpenAlex source record (api.openalex.org egress-blocked this session) to identify who this lead actually refers to."
+      "status": "excluded",
+      "note": "Third session (2026-09-06): bare surname only. Two full search sessions across Georgetown Economics, McCourt, McDonough, SFS, and Government faculty listings plus SSRN/NBER found no current faculty/researcher surnamed exactly \"Tran.\" The only Georgetown \"Tran\" is Van Tran Nguyen (surname Nguyen, Performing Arts/Film & Media Studies) — wrong surname and wrong field, not treated as a match. No identifiable eligible person after exhaustive search."
     },
     {
       "name": "Pham Van Dai",
@@ -7003,7 +7004,8 @@
       "country": "AU",
       "npapers": 2,
       "cited": 6,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Third session (2026-09-06): no person by this name (in either token order) found at University of Wollongong in any faculty directory, ResearchGate, or Google Scholar. Nearby-name candidates (Thong Pham at U. South Australia, Tho Pham at U. of York, Thanh Le at UOW Business School) are all different people/institutions. No identifiable eligible person."
     },
     {
       "name": "Tanh T.N. Nguyen",
@@ -7011,7 +7013,8 @@
       "country": "US",
       "npapers": 2,
       "cited": 6,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Third session (2026-09-06): identified via ResearchGate/ORCID (0000-0002-0847-4185) as Tanh T. N. Nguyen, PhD (Univ. of Florida), former postdoc at Idaho State University and Stephen F. Austin State University — but he is currently Dean, Faculty of Engineering, Technology, and Environment at An Giang University (VNU-HCM), i.e. based in Vietnam. Fails the outside-Vietnam requirement; the Idaho State affiliation is a long-stale postdoc."
     },
     {
       "name": "Ta Duy Nguyen",
@@ -7035,7 +7038,8 @@
       "country": "US",
       "npapers": 2,
       "cited": 6,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Third session (2026-09-06): disambiguated from an unrelated same-surname CSULB psychology professor (Hannah-Hanh D. Nguyen, since moved to U. Hawaiʻi). The actual \"Jimmy H. Nguyen\" match is an MS-level human-factors researcher (cockpit displays, ATC simulation studies) with no faculty appointment found at CSULB, UH, or elsewhere — best evidence suggests he moved into industry. No identifiable eligible person."
     },
     {
       "name": "Trinh T. Nguyen",
@@ -7043,7 +7047,8 @@
       "country": "US",
       "npapers": 2,
       "cited": 6,
-      "status": "pending"
+      "status": "pending",
+      "note": "Third session (2026-09-06): no evidence found of any Harvard appointment under this name despite many query variants (Harvard Economics/HKS/Chan School, NBER/RePEc/EconJobMarket, Scholar). Every resolvable \"Trinh (T.) Nguyen\" is a different person (a PDE mathematician now at Shanghai Jiao Tong University; a Natixis economist in Hong Kong; an RMIT Vietnam lecturer — inside Vietnam even if a match). Genuinely unresolved; would need the source paper/citation this lead was built from to disambiguate."
     },
     {
       "name": "Bùi An Tôn",
@@ -7051,7 +7056,9 @@
       "country": "CA",
       "npapers": 2,
       "cited": 6,
-      "status": "pending"
+      "status": "included",
+      "rosterId": "vp-1491",
+      "note": "Third session (2026-09-06): resolved to Ton (An) Bui, Professor Emeritus, Department of Mathematics, University of British Columbia (stochastic control/differential games) — PhD MIT, undergraduate Licence ès Sciences from University of Saigon; hieuphay's econ flag appears to be a false-positive pickup of his game-theory/stochastic-control work rather than an actual economics appointment."
     },
     {
       "name": "Quoc-Bao Nguyen",
@@ -7083,7 +7090,8 @@
       "country": "SE",
       "npapers": 2,
       "cited": 6,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Third session (2026-09-06): documented role is Sektionschef (Section Chief)/Lead surgeon of pediatric cardiac surgery at Skåne University Hospital, with a Lund University LUCAT research-portal listing but no documented clinical-faculty title (Clinical Professor or equivalent) meeting the standard's permanence/rank evidence bar. Field (pediatric cardiac surgery) also has nothing to do with economics — likely a hieuphay econ-classifier false positive."
     },
     {
       "name": "Minh H. Dinh",
@@ -7091,7 +7099,8 @@
       "country": "US",
       "npapers": 2,
       "cited": 6,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Third session (2026-09-06): was Assistant Professor, Division of Infectious Diseases, Feinberg School of Medicine, Northwestern University around 2009, but current evidence (LinkedIn) shows a move to industry as a Clinical Development Leader; no current Feinberg faculty profile found in the A-Z directory. Stale institution — no current qualifying appointment."
     },
     {
       "name": "Hoa Tran",
@@ -7115,7 +7124,8 @@
       "country": "SG",
       "npapers": 2,
       "cited": 6,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Third session (2026-09-06): only match found is \"Hoang Minh Duy,\" a Research Assistant at National University of Singapore (LinkedIn) — below the faculty threshold. No subsequent faculty appointment or job-market placement found anywhere. No identifiable eligible person."
     },
     {
       "name": "Nina Linh Nguyen",
