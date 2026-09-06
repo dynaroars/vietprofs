@@ -75,6 +75,8 @@ const diacriticSurnames = [
 const args = process.argv.slice(2);
 const pagesArg = args.indexOf('--pages');
 const pages = Math.max(1, Math.min(10, Number(pagesArg === -1 ? 1 : args[pagesArg + 1]) || 1));
+const apiKeyArg = args.indexOf('--api-key');
+const apiKey = process.env.OPENALEX_API_KEY || (apiKeyArg !== -1 ? args[apiKeyArg + 1] : '');
 const includeEconomics = args.includes('--include-economics');
 const surnamesOnly = args.includes('--surnames-only');
 const givenNamesOnly = args.includes('--given-names-only');
@@ -123,12 +125,17 @@ let globalQuotaExhausted = false;
 async function fetchQuery(query: string, maxPages: number): Promise<Author[]> {
   const authors: Author[] = [];
   let cursor = '*';
+  const apiKeyParam = apiKey ? `&api_key=${encodeURIComponent(apiKey)}` : '';
   for (let page = 0; page < maxPages && cursor && !globalQuotaExhausted; page++) {
-    const url = `${API_URL}?search=${encodeURIComponent(query)}&per-page=200&cursor=${encodeURIComponent(cursor)}&mailto=vietprofs@roars.dev`;
+    const url = `${API_URL}?search=${encodeURIComponent(query)}&per-page=200&cursor=${encodeURIComponent(cursor)}&mailto=vietprofs@roars.dev${apiKeyParam}`;
     let response: Response | null = null;
     for (let attempt = 0; attempt < 5; attempt++) {
       try {
-        response = await fetch(url, { headers: { 'User-Agent': 'VietProfs-Discovery/1.0 (mailto:vietprofs@roars.dev)' } });
+        const headers: Record<string, string> = { 'User-Agent': 'VietProfs-Discovery/1.0 (mailto:vietprofs@roars.dev)' };
+        if (apiKey) {
+          headers['api_key'] = apiKey;
+        }
+        response = await fetch(url, { headers });
         if (response.status === 429) {
           const retryAfter = Number(response.headers.get('retry-after')) || 0;
           if (retryAfter > 120) {
