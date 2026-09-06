@@ -5,9 +5,21 @@ import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { FIELDS, LOCATIONS, HEALTH_SUBFIELDS, canonicalRank, displayName, displayUniversity, fieldOf, healthSubfieldOf, continentOf, locationMatches, buildFunFacts, buildAwardsFunFacts, buildInternationalObservations, buildLocationObservations, filterRoster, looksSurnameFirst, buildFieldCounts, buildTopCountries, buildTrackCounts, buildTopUndergradInstitutions, buildPhdToFacultyPairings, type Roster } from '../src/data.ts';
+import { chooseWork, validateEnrichment } from '../src/enrichment.ts';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const roster: Roster = JSON.parse(readFileSync(join(__dirname, '../public/data.json'), 'utf8'));
+
+test('enrichment validation rejects unsafe links and duplicate work', () => {
+  assert.ok(validateEnrichment({ researchOverview: { text: 'Studies networks.', sources: ['javascript:alert(1)'], verifiedAt: '2026-01-01T00:00:00.000Z' } }).some((error) => /unsafe/.test(error)));
+  const work = { title: 'A', type: 'paper', url: 'https://example.org/a', selectionSource: 'https://example.org/list', selectionMode: 'recent' as const, verifiedAt: '2026-01-01T00:00:00.000Z', year: 2025 };
+  assert.ok(validateEnrichment({ recentWork: [work, work] }).some((error) => /duplicates/.test(error)));
+});
+
+test('recent work selection deduplicates and sorts by documented date', () => {
+  const base = (title: string, date: string) => ({ title, date, type: 'paper', url: `https://example.org/${title}`, selectionSource: 'https://example.org/list', selectionMode: 'recent' as const, verifiedAt: '2026-01-01T00:00:00.000Z' });
+  assert.deepEqual(chooseWork([base('old', '2020-01-01'), base('new', '2025-01-01'), base('new', '2024-01-01')], 'recent').map((item) => item.title), ['new', 'old']);
+});
 
 test('reviewed portraits use local WebP files with source provenance', () => {
   const portraits = roster.filter((person) => person.portrait);

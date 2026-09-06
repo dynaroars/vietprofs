@@ -14,6 +14,24 @@ export interface OtherDegree {
   source?: string;
 }
 
+export interface ResearchOverview {
+  text: string;
+  sources: string[];
+  verifiedAt: string;
+}
+
+export interface WorkItem {
+  title: string;
+  type: string;
+  year?: number;
+  date?: string;
+  url: string;
+  selectionSource: string;
+  selectionMode: 'selected' | 'recent';
+  verifiedAt: string;
+  description?: string;
+}
+
 export interface RosterEntry {
   id: string;
   name: string;
@@ -51,6 +69,9 @@ export interface RosterEntry {
   portrait?: string;
   portraitSource?: string;
   otherDegrees?: OtherDegree[];
+  researchOverview?: ResearchOverview;
+  selectedWork?: WorkItem[];
+  recentWork?: WorkItem[];
 }
 
 export type Roster = RosterEntry[];

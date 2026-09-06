@@ -72,6 +72,19 @@ function profilePage(person: RosterEntry) {
   const research = person.researchAreas?.length
     ? `<section class="man-section"><h2>RESEARCH</h2><ul>${person.researchAreas.map((area) => `<li>${escapeHtml(area)}</li>`).join('')}</ul></section>`
     : '';
+  const researchOverview = person.researchOverview
+    ? `<section class="man-section"><h2>RESEARCH OVERVIEW</h2><p>${escapeHtml(person.researchOverview.text)}</p><p class="section-note">Automatically summarized from <a href="${escapeHtml(person.researchOverview.sources[0])}" target="_blank" rel="noopener noreferrer">a verified source</a>; checked ${escapeHtml(formatRosterDate(person.researchOverview.verifiedAt))}.</p></section>`
+    : '';
+  const work = person.selectedWork ?? person.recentWork;
+  const workHeading = person.selectedWork ? 'SELECTED WORK' : person.recentWork ? 'RECENT WORK' : '';
+  const workNote = person.selectedWork
+    ? 'Author-selected items from the verified profile or personal site.'
+    : person.recentWork
+      ? 'Latest works found in the checked list; this is not necessarily a complete bibliography.'
+      : '';
+  const workSection = work?.length
+    ? `<section class="man-section"><h2>${workHeading}</h2><ul>${work.map((item) => `<li><a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.title)}</a>${item.type ? ` <span class="work-type">(${escapeHtml(item.type)})</span>` : ''}${item.date || item.year ? ` <span class="work-date">${escapeHtml(item.date ?? String(item.year))}</span>` : ''}${item.description ? `<p>${escapeHtml(item.description)}</p>` : ''}</li>`).join('')}</ul><p class="section-note">${workNote}</p></section>`
+    : '';
   const education = formatEducationDetails(person, { fullLabels: true });
   const educationSection = education.length
     ? `<section class="man-section"><h2>EDUCATION</h2><ul>${education.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul></section>`
@@ -138,7 +151,7 @@ function profilePage(person: RosterEntry) {
         <p class="man-running-head"><span>${sectionLabel}</span><span>VietProfs Profile Manual</span><span>${sectionLabel}</span></p>
         <section class="man-section name-section"><h2>NAME</h2><div class="identity">${portrait}<div class="identity-details"><div class="name-heading"><h1>${escapeHtml(name)}</h1><div class="profile-actions" aria-label="Roster actions">${favoriteToggle}<a class="submission-link" href="${escapeHtml(editUrl)}">Add or update info</a></div></div><p class="native">${escapeHtml(nativeName)} <span class="loc-badge" title="${escapeHtml(person.country || 'United States')}"><span class="country-flag" aria-hidden="true">${countryFlag(person.country)}</span></span></p><p class="record-id">${escapeHtml(person.id)}</p></div></div></section>
         <section class="man-section"><h2>SYNOPSIS</h2><p class="synopsis">${escapeHtml(role)}${locationOf(person) ? ` · ${escapeHtml(locationOf(person))}` : ''}</p><div class="tags"><span class="tag">${escapeHtml(fieldOf(person.department, person.university))}</span><span class="tag${person.track === 'Emeritus' ? ' tag-emeritus' : person.track === 'Deceased' ? ' tag-deceased' : ''}">${person.track === 'Emeritus' ? '🎓 Emeritus' : person.track === 'Deceased' ? '🏛️ Deceased' : escapeHtml(person.track || '')}</span>${person.institutionType && person.institutionType !== 'University' ? `<span class="tag">${escapeHtml(person.institutionType)}</span>` : ''}${person.confirmed === false ? '<span class="tag tag-unconfirmed">Unconfirmed</span>' : ''}</div></section>
-        ${research}${educationSection}${honors}${linkSection}
+        ${research}${researchOverview}${workSection}${educationSection}${honors}${linkSection}
         <section class="man-section"><h2>ROSTER METADATA</h2><dl class="roster-metadata"><div><dt>record</dt><dd>${escapeHtml(person.id)}</dd></div><div><dt>confirmation</dt><dd>${person.confirmed === false ? 'Unconfirmed — reliable non-official evidence' : 'Confirmed'}</dd></div><div><dt>last verified</dt><dd>${escapeHtml(formatRosterDate(person.lastUpdatedAt || ''))}</dd></div><div><dt>build</dt><dd><a href="https://github.com/dynaroars/vietprofs/commit/${escapeHtml(commit)}">${escapeHtml(commit)}</a></dd></div></dl><details class="raw-record"><summary>view raw record</summary><pre><code>${rawRecord}</code></pre></details></section>
         <footer><p>VietProfs is a community-maintained directory. Consult the linked sources for the most current details.</p><p class="man-footer-line">${sectionLabel} · ${escapeHtml(person.id)} · ${sectionLabel}</p></footer>
       </article>

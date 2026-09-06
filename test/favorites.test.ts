@@ -1,6 +1,6 @@
 import { test, beforeEach } from 'node:test';
 import assert from 'node:assert/strict';
-import { isFavorite, loadFavorites, loadPinnedSearches, loadRecentProfiles, recordRecentProfile, saveFavorites, toggleFavorite, togglePinnedSearch } from '../src/favorites-store.ts';
+import { clearPinnedSearches, clearRecentProfiles, isFavorite, loadFavorites, loadPinnedSearches, loadRecentProfiles, recordRecentProfile, saveFavorites, toggleFavorite, togglePinnedSearch } from '../src/favorites-store.ts';
 
 function installMemoryStorage() {
   const data = new Map<string, string>();
@@ -55,4 +55,13 @@ test('pinned searches retain only query state and toggle cleanly', () => {
   assert.deepEqual(loadPinnedSearches(), ['q=Nguyen&loc=US']);
   assert.equal(togglePinnedSearch('loc=US&q=Nguyen'), false);
   assert.deepEqual(loadPinnedSearches(), []);
+});
+
+test('clear actions remove all pinned searches and recent profiles', () => {
+  togglePinnedSearch('q=Nguyen');
+  recordRecentProfile('vp-0001');
+  clearPinnedSearches();
+  clearRecentProfiles();
+  assert.deepEqual(loadPinnedSearches(), []);
+  assert.deepEqual(loadRecentProfiles(), []);
 });

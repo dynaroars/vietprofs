@@ -49,6 +49,7 @@ import { fileURLToPath } from 'node:url';
 import { isDeepStrictEqual } from 'node:util';
 import { FIELDS, fieldOf, type Roster, type RosterEntry } from '../src/data.ts';
 import { HONOR_CATEGORIES, HONOR_FIELDS, INSTITUTION_TYPES, OTHER_DEGREE_FIELDS, ROSTER_FIELDS, TRACKS } from '../src/roster-constants.ts';
+import { validateEnrichment } from '../src/enrichment.ts';
 
 const SCRIPT_PATH = fileURLToPath(import.meta.url);
 const REPO_ROOT = resolve(dirname(SCRIPT_PATH), '..');
@@ -68,7 +69,7 @@ const MAX_PROPOSAL_REVISIONS = 2;
 const DEFAULT_AGENT_TIMEOUT_MINUTES = 90;
 const DEFAULT_RATE_LIMIT_WAIT_MINUTES = 30;
 const MAX_CAPTURE_CHARS = 2_000_000;
-const MAINTAINED_PATHS = new Set(['public/data.json', 'maintenance/verification.json']);
+const MAINTAINED_PATHS = new Set(['public/data.json', 'maintenance/verification.json', 'maintenance/enrichment.json']);
 const ALLOWED_ROSTER_FIELDS = new Set<string>(ROSTER_FIELDS);
 const ALLOWED_HONOR_FIELDS = new Set<string>(HONOR_FIELDS);
 const ALLOWED_OTHER_DEGREE_FIELDS = new Set<string>(OTHER_DEGREE_FIELDS);
@@ -621,6 +622,8 @@ export function proposalValidationError(proposal: JsonRecord): string | null {
   }
   if (proposal.state !== undefined && typeof proposal.state !== 'string') return 'proposal state must be a string';
   if (proposal.country !== undefined && typeof proposal.country !== 'string') return 'proposal country must be a string';
+  const enrichmentErrors = validateEnrichment(proposal);
+  if (enrichmentErrors.length) return `proposal enrichment: ${enrichmentErrors.join('; ')}`;
   return null;
 }
 
@@ -1188,7 +1191,7 @@ async function commitBatch() {
     return 'existing';
   }
   if (status === 'none') return 'none';
-  await git(['add', 'public/data.json', 'maintenance/verification.json']);
+  await git(['add', 'public/data.json', 'maintenance/verification.json', 'maintenance/enrichment.json']);
   await git([
     'commit',
     '-m', `Automated roster maintenance: batch ${state.runId}`,

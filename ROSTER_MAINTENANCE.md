@@ -114,6 +114,19 @@ used for corporate laboratories. Non-university entries must use the `Research` 
 
 ## Research workflow
 
+### Optional research enrichment
+
+Research overviews and work lists are optional, source-backed fields on an existing roster
+entry. The public record may contain `researchOverview`, `selectedWork`, or `recentWork`; long
+excerpts, source-fetch details, outcomes, errors, and resumable batch state belong in
+`maintenance/enrichment.json`, keyed by immutable `vp-####` ID. `selectedWork` and `recentWork`
+are mutually exclusive. A generated overview is one sentence and must be independently checked
+against its stored evidence; work items retain their exact title, type, documented date/year,
+canonical URL, selection source/mode, and verification timestamp. The command
+`npm run enrich -- snapshot` creates a stable 20-person batch snapshot, `status` reports coverage,
+and `apply proposals.json` accepts only validated structured proposals. Enrichment does not alter
+`lastUpdatedAt` or appointment verification status.
+
 Work on one institution or broad field at a time. Audit existing entries before adding candidates. For every candidate, verify identity, current appointment, primary department or research unit, rank/track, institution type, and profile URL individually. Deduplicate by person rather than URL and check for former affiliations or recent moves.
 
 Use all relevant candidate sources:

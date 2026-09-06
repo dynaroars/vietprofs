@@ -14,8 +14,8 @@ Use unchecked boxes for pending work. When a task is finished, check its box and
 its description: `- [x] ~~Completed task~~`. Leave unresolved work unchecked and record the
 reason and next action. Never cross out work merely because it was attempted.
 
-- [ ] Implement the data model, evidence ledger, validation, and profile display.
-- [ ] Implement automated collection, generation, verification, and resumable batch processing.
+- [x] ~~Implement the data model, evidence ledger, validation, and profile display.~~
+- [ ] Implement automated collection, generation, verification, and resumable batch processing. Structured proposal application and resumable ID snapshots are implemented; live source collection/model generation remains unresolved. Next action: run a bounded public-source collector/model pass and record evidence per ID.
 - [ ] Process and publish the first batch of 20 people; inspect the results before continuing.
 - [ ] Process and publish all remaining batches, 20 people per batch.
 - [ ] Resolve outstanding retries and audit coverage, evidence, and rendering.
@@ -128,6 +128,8 @@ retries. Finish with an evidence/rendering audit and all required checks. Do not
 completion while temporary failures or unresolved verification remain.
 
 ## Batch checklist
+
+- [ ] Batch snapshot — 1,476 people; IDs in `maintenance/enrichment.json`; pending source collection.
 
 Populate at execution time from the saved ID snapshot. Each entry must include batch number,
 ledger reference or exact IDs, outcome counts, remaining retries, and publication status.

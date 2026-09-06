@@ -33,7 +33,7 @@ import {
 } from './data.ts';
 import { escapeHtml, formatRosterDate } from './utils.ts';
 import { applyFavoriteToggle, fieldDropdownLabel, renderRosterEntry } from './render.ts';
-import { loadFavorites, loadPinnedSearches, loadRecentProfiles, toggleFavorite, togglePinnedSearch } from './favorites-store.ts';
+import { clearPinnedSearches, clearRecentProfiles, loadFavorites, loadPinnedSearches, loadRecentProfiles, toggleFavorite, togglePinnedSearch } from './favorites-store.ts';
 import { openRosterShell } from './roster-shell.ts';
 import { locationForQuery } from './filter-state.ts';
 import { renderFunFacts, renderGrowthChart, type GrowthMetricKey } from './insights.ts';
@@ -728,13 +728,19 @@ async function init() {
       return;
     }
     browserShelf.hidden = false;
-    const appendGroup = (label: string, entries: { href: string; text: string }[]) => {
+    const appendGroup = (label: string, clearAction: 'pinned' | 'recent', entries: { href: string; text: string }[]) => {
       if (!entries.length) return;
       const group = document.createElement('div');
       group.className = 'browser-shelf-group';
       const heading = document.createElement('span');
       heading.textContent = label;
-      group.append(heading);
+      const clearButton = document.createElement('button');
+      clearButton.type = 'button';
+      clearButton.className = 'browser-shelf-clear';
+      clearButton.dataset.clearSaved = clearAction;
+      clearButton.textContent = clearAction === 'pinned' ? 'Unpinned all' : 'Clear Recent searches';
+      clearButton.setAttribute('aria-label', clearButton.textContent);
+      group.append(heading, clearButton);
       entries.forEach(({ href, text }) => {
         const link = document.createElement('a');
         link.className = 'browser-shelf-chip';
@@ -744,8 +750,8 @@ async function init() {
       });
       browserShelf.append(group);
     };
-    appendGroup('Pinned:', pins.map((query) => ({ href: `${window.location.pathname}?${query}`, text: pinnedSearchLabel(query) })));
-    appendGroup('Recent:', recent.map((person) => ({ href: `${import.meta.env.BASE_URL}${personPath(person.id)}`, text: displayName(person.name) })));
+    appendGroup('Pinned:', 'pinned', pins.map((query) => ({ href: `${window.location.pathname}?${query}`, text: pinnedSearchLabel(query) })));
+    appendGroup('Recent:', 'recent', recent.map((person) => ({ href: `${import.meta.env.BASE_URL}${personPath(person.id)}`, text: displayName(person.name) })));
   }
 
   function update({ fromSearch = false } = {}) {
@@ -785,6 +791,14 @@ async function init() {
 
   pinSearchBtn.addEventListener('click', () => {
     togglePinnedSearch(window.location.search.slice(1));
+    renderBrowserShelf();
+  });
+
+  browserShelf.addEventListener('click', (event) => {
+    const button = (event.target as HTMLElement).closest<HTMLButtonElement>('[data-clear-saved]');
+    if (!button) return;
+    if (button.dataset.clearSaved === 'pinned') clearPinnedSearches();
+    if (button.dataset.clearSaved === 'recent') clearRecentProfiles();
     renderBrowserShelf();
   });
 

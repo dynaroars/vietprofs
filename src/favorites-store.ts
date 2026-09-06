@@ -98,3 +98,11 @@ export function togglePinnedSearch(query: string): boolean {
   storage()?.setItem(PINNED_STORAGE_KEY, JSON.stringify(next));
   return pinned;
 }
+
+export function clearPinnedSearches(): void {
+  storage()?.removeItem(PINNED_STORAGE_KEY);
+}
+
+export function clearRecentProfiles(): void {
+  storage()?.removeItem(RECENT_STORAGE_KEY);
+}

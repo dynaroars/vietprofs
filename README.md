@@ -72,6 +72,11 @@ To suggest an addition or correction, use [`submit.html`](./submit.html) rather 
 repository directly — paste a name, a profile/homepage link, or a directory page, and it opens a
 pre-filled email or GitHub issue for maintainers to research and verify.
 
+Optional research overviews and selected/recent work are source-backed enrichment fields. Their
+operational evidence and resumable batch state are kept in [`maintenance/enrichment.json`](./maintenance/enrichment.json);
+run `npm run enrich -- status` to inspect coverage or `npm run enrich -- snapshot` to create a
+stable 20-person snapshot before collecting proposals.
+
 Full eligibility, evidence, and data-format rules — accepted appointment tracks, honors criteria,
 degree fields, and more — are documented in
 [`ROSTER_MAINTENANCE.md`](./ROSTER_MAINTENANCE.md). The rules behind the "Show me something

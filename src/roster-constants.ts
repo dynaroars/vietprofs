@@ -54,6 +54,9 @@ export const ROSTER_FIELDS = [
   'undergradYear',
   'undergradMajor',
   'otherDegrees',
+  'researchOverview',
+  'selectedWork',
+  'recentWork',
 ] as const;
 
 export const HONOR_FIELDS = ['name', 'organization', 'category', 'year', 'source'] as const;
