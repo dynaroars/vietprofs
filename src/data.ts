@@ -471,6 +471,8 @@ const FIELD_OVERRIDES = new Map([
   // title ("Associate Professor of Health Economics") and research (health economics, public
   // health modelling) are Business & Economics, not biology.
   ['Department of Genome Sciences, John Curtin School of Medical Research|Australian National University', 'Business & Economics'],
+  // SnT (Interdisciplinary Centre for Security, Reliability and Trust) is Luxembourg's computer science/cybersecurity research centre.
+  ['Interdisciplinary Centre for Security, Reliability and Trust|University of Luxembourg', 'Computer & Information Sciences'],
 ]);
 
 // Buckets granular `department` values into the broad fields above. Order matters, and is not

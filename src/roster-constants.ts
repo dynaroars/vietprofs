@@ -177,6 +177,7 @@ export const COUNTRY_FLAGS: Record<string, string> = {
   'Italy': '🇮🇹',
   'Spain': '🇪🇸',
   'Portugal': '🇵🇹',
+  'Luxembourg': '🇱🇺',
   'Israel': '🇮🇱',
   'Saudi Arabia': '🇸🇦',
   'United Arab Emirates': '🇦🇪',
