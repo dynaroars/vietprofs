@@ -461,6 +461,10 @@ const FIELD_OVERRIDES = new Map([
   ['LISN/CNRS|Université Paris-Saclay', 'Computer & Information Sciences'],
   // ETIS (Équipes Traitement de l'Information et Systèmes) is CY Cergy Paris's information processing / CS lab.
   ['ETIS Laboratory|CY Cergy Paris Université', 'Computer & Information Sciences'],
+  // ISMO (Institut des Sciences Moléculaires d'Orsay) is a joint CNRS / Université Paris-Saclay molecular physics and chemistry lab.
+  ["Institut des Sciences Moléculaires d'Orsay (ISMO) / Université Paris-Saclay|CNRS (Centre National de la Recherche Scientifique)", 'Physics & Astronomy'],
+  // NRC Automotive and Surface Transportation Research Centre is materials and automotive engineering.
+  ['Automotive and Surface Transportation Research Centre|National Research Council Canada', 'Engineering'],
   // Bare "Social Sciences" gives no field signal, but Van Tho Tran's own research (international
   // and development economics) is Business & Economics.
   ['Social Sciences|Waseda University', 'Business & Economics'],
