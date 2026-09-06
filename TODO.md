@@ -122,7 +122,7 @@ This plan expands candidate discovery beyond the initial 17 surnames across 4 se
 - [x] **Other** (32/32 resolved — 3 included `vp-1323`..`vp-1325`, 29 excluded)
 
 #### Phase 2: High-Specificity Given-Name Queue (`npm run extract-openalex-leads -- --given-names-only`)
-- [ ] **Computer Science**
+- [x] **Computer Science** (61/61 resolved — 8 included `vp-1397`..`vp-1404`, 53 excluded)
 - [ ] **Engineering**
 - [x] **Mathematics & Statistics** (10/10 resolved — 3 included `vp-1382`..`vp-1384`, 7 excluded)
 - [ ] **Physical Sciences**
