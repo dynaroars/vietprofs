@@ -365,16 +365,12 @@ test('mobile pages avoid horizontal overflow and provide usable tap targets', as
   await page.close();
 });
 
-test('directory lazy loads entries in batches of 50 as user scrolls', async () => {
+test('directory renders the complete result list without lazy-scroll batches', async () => {
   const page = await context.newPage();
   await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
-  assert.equal(await page.locator('.entry').count(), 50);
-  assert.equal(await page.locator('#roster-sentinel').count(), 1);
-
-  // Scroll down to trigger next batch
-  await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
-  await page.waitForFunction(() => document.querySelectorAll('.entry').length >= 100);
-  assert.equal(await page.locator('.entry').count(), 100);
+  const expected = await page.evaluate(async () => (await (await fetch('/data.json')).json()).length);
+  assert.equal(await page.locator('.entry').count(), expected);
+  assert.equal(await page.locator('#roster-sentinel').count(), 0);
   await page.close();
 });
 

@@ -285,47 +285,7 @@ function sortRoster(roster: Roster, order: string): Roster {
   return [...roster].sort((a, b) => Number(favorites.has(b.id)) - Number(favorites.has(a.id)) || bySelectedOrder(a, b));
 }
 
-const PAGE_SIZE = 50;
 let currentRoster: Roster = [];
-let renderedCount = 0;
-let rosterObserver: IntersectionObserver | null = null;
-
-function appendBatch() {
-  if (renderedCount >= currentRoster.length) return;
-  const rosterEl = document.getElementById('roster');
-  if (!rosterEl) return;
-  const nextBatch = currentRoster.slice(renderedCount, renderedCount + PAGE_SIZE);
-  const html = nextBatch.map((person) => renderRosterEntry(person, import.meta.env.BASE_URL)).join('');
-  renderedCount += nextBatch.length;
-
-  const sentinel = document.getElementById('roster-sentinel');
-  if (sentinel) {
-    sentinel.insertAdjacentHTML('beforebegin', html);
-    if (renderedCount >= currentRoster.length) {
-      if (rosterObserver) rosterObserver.disconnect();
-      sentinel.remove();
-    }
-  } else {
-    rosterEl.insertAdjacentHTML('beforeend', html);
-  }
-}
-
-function setupSentinelObserver() {
-  if (rosterObserver) {
-    rosterObserver.disconnect();
-  }
-  const sentinel = document.getElementById('roster-sentinel');
-  if (!sentinel) return;
-
-  if (typeof IntersectionObserver !== 'undefined') {
-    rosterObserver = new IntersectionObserver((entries) => {
-      if (entries.some((entry) => entry.isIntersecting)) {
-        appendBatch();
-      }
-    }, { rootMargin: '600px 0px' });
-    rosterObserver.observe(sentinel);
-  }
-}
 
 function renderRoster(roster: Roster, { field, location }: RenderOptions = {}) {
   const rosterEl = document.getElementById('roster');
@@ -337,26 +297,13 @@ function renderRoster(roster: Roster, { field, location }: RenderOptions = {}) {
   countEl.innerHTML = `${roster.length}${trackQualifier(roster)} ${peopleLabel}${fieldPhrase} across ${institutions} institution${institutions === 1 ? '' : 's'} in ${escapeHtml(locationName)}.`;
 
   currentRoster = roster;
-  renderedCount = 0;
-  if (rosterObserver) {
-    rosterObserver.disconnect();
-  }
 
   if (roster.length === 0) {
     rosterEl.innerHTML = '<p class="empty-state">No matches. Try a different search or filter.</p>';
     return;
   }
 
-  const initialBatch = roster.slice(0, PAGE_SIZE);
-  renderedCount = initialBatch.length;
-  const initialHtml = initialBatch.map((person) => renderRosterEntry(person, import.meta.env.BASE_URL)).join('');
-
-  if (renderedCount < roster.length) {
-    rosterEl.innerHTML = `${initialHtml}<div id="roster-sentinel" class="roster-sentinel" aria-hidden="true"></div>`;
-    setupSentinelObserver();
-  } else {
-    rosterEl.innerHTML = initialHtml;
-  }
+  rosterEl.innerHTML = roster.map((person) => renderRosterEntry(person, import.meta.env.BASE_URL)).join('');
 }
 
 async function init() {
@@ -1017,9 +964,6 @@ async function init() {
       currentEntries[keyboardSelectedIndex]?.classList.remove('entry-keyboard-selected');
       if (e.key === 'j') {
         const nextIndex = keyboardSelectedIndex + 1;
-        while (nextIndex >= renderedCount && renderedCount < currentRoster.length) {
-          appendBatch();
-        }
         const updatedEntries = document.querySelectorAll<HTMLElement>('.entry');
         keyboardSelectedIndex = updatedEntries.length ? nextIndex % updatedEntries.length : -1;
       } else {
