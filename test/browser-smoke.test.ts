@@ -175,6 +175,23 @@ test('search suggestions remain visible while results update', async () => {
   await page.close();
 });
 
+test('clicking a search suggestion fills the search input', async () => {
+  const page = await context.newPage();
+  await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
+  const search = page.locator('#search');
+  const panel = page.locator('#search-suggestion-panel');
+  const suggestion = panel.locator('.search-suggestion').first();
+
+  await search.fill('Thanh');
+  await suggestion.waitFor();
+  const value = await suggestion.textContent();
+  await suggestion.click();
+
+  assert.equal(await search.inputValue(), value);
+  assert.equal(await panel.isHidden(), true);
+  await page.close();
+});
+
 test('pinned searches and recently viewed profiles stay in browser storage', async () => {
   const page = await context.newPage();
   await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });

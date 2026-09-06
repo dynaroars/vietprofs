@@ -32,11 +32,17 @@ test('generated profile pages use the same stylesheet source as the directory', 
   assert.match(generator, /class="loc-badge"/);
   assert.match(generator, /class="country-flag"/);
   assert.match(generator, /class="man-page"/);
+  assert.match(generator, /PROFILE_ICON/);
+  assert.match(generator, /PERSONAL_SITE_ICON/);
+  assert.match(generator, /SCHOLAR_ICON/);
+  assert.match(generator, /LINKEDIN_ICON/);
+  assert.match(generator, /<svg viewBox="0 0 24 24" aria-hidden="true">\$\{icon\}<\/svg>/);
   assert.match(generator, />SYNOPSIS</);
   assert.match(generator, />ROSTER METADATA</);
   assert.match(generator, /view raw record/);
   assert.doesNotMatch(generator, /Report stale record/);
   assert.match(sourceStylesheet, /\.profile-page \.man-section/);
+  assert.match(sourceStylesheet, /\.profile-page \.links a svg/);
   assert.ok(
     generator.indexOf('class="profile-actions"') < generator.indexOf('class="native"'),
     'profile actions should appear alongside the person\'s name',

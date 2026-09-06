@@ -147,7 +147,7 @@ function renderShell() {
         </div>
       </div>
       <div class="subtitle-row">
-        <p class="site-subtitle"><span>vietprofs@world</span>:~$ An open directory of Vietnamese academics worldwide</p>
+        <p class="site-subtitle"><span>vietprofs@world</span>:~$ An open directory of Vietnamese scholars at universities and research institutes worldwide</p>
       </div>
     </header>
     <div class="controls">
@@ -894,6 +894,9 @@ async function init() {
       option.role = 'option';
       option.textContent = value;
       option.dataset.index = String(index);
+      // Keep focus on the search input until the click has selected this option.
+      // Otherwise its blur handler can hide the list before a mouse click arrives.
+      option.addEventListener('mousedown', (event) => event.preventDefault());
       option.addEventListener('click', () => {
         setSearchValue(isKeyword ? `${KEYWORD_LABELS[scope]}: ${value}` : value);
         hideSuggestions();

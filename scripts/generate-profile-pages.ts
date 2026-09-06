@@ -13,7 +13,13 @@ import {
   vietnameseName,
 } from '../src/data.ts';
 import { escapeHtml, formatRosterDate } from '../src/utils.ts';
-import { formatEducationDetails } from '../src/render.ts';
+import {
+  formatEducationDetails,
+  LINKEDIN_ICON,
+  PERSONAL_SITE_ICON,
+  PROFILE_ICON,
+  SCHOLAR_ICON,
+} from '../src/render.ts';
 
 const STAR_ICON = '<path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>';
 
@@ -74,12 +80,13 @@ function profilePage(person: RosterEntry) {
     ? `<section class="man-section"><h2>HONORS</h2><ul>${person.honors.map((honor) => `<li>${honor.source ? `<a href="${escapeHtml(honor.source)}" rel="noopener noreferrer">` : ''}${escapeHtml(honor.name)}${honor.year ? ` (${honor.year})` : ''}${honor.source ? '</a>' : ''}</li>`).join('')}</ul></section>`
     : '';
   const links = [
-    person.profileUrl && [person.confirmed === false ? 'Verification source' : person.institutionType && person.institutionType !== 'University' ? 'Official institution profile' : 'Official university profile', person.profileUrl],
-    person.websiteUrl && ['Personal or lab website', person.websiteUrl],
-    person.scholarUrl && ['Google Scholar', person.scholarUrl],
-  ].filter(Boolean) as [string, string][];
+    person.profileUrl && { label: person.confirmed === false ? 'Verification source' : person.institutionType && person.institutionType !== 'University' ? 'Official institution profile' : 'Official university profile', href: person.profileUrl, icon: PROFILE_ICON },
+    person.websiteUrl && { label: 'Personal or lab website', href: person.websiteUrl, icon: PERSONAL_SITE_ICON },
+    person.scholarUrl && { label: 'Google Scholar', href: person.scholarUrl, icon: SCHOLAR_ICON },
+    person.linkedinUrl && { label: 'LinkedIn', href: person.linkedinUrl, icon: LINKEDIN_ICON },
+  ].filter(Boolean) as { label: string; href: string; icon: string }[];
   const linkSection = links.length
-    ? `<section class="man-section"><h2>SOURCES</h2><nav class="links" aria-label="External profiles">${links.map(([label, href]) => `<a href="${escapeHtml(href)}" rel="noopener noreferrer">${escapeHtml(label)}</a>`).join('')}</nav></section>`
+    ? `<section class="man-section"><h2>SOURCES</h2><nav class="links" aria-label="External profiles">${links.map(({ label, href, icon }) => `<a href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true">${icon}</svg>${escapeHtml(label)}</a>`).join('')}</nav></section>`
     : '';
   const editUrl = `../submit.html?edit=${encodeURIComponent(person.id)}`;
   const favoriteLabel = 'Add to favorites';

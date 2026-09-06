@@ -1255,6 +1255,7 @@ a.entry-name:focus-visible {
 .profile-page .links a {
   display: inline-flex;
   align-items: center;
+  gap: 0.35rem;
   padding: 0.4rem 0.75rem;
   border: 1px solid var(--border-color);
   border-radius: var(--radius-sm);
@@ -1264,6 +1265,13 @@ a.entry-name:focus-visible {
   font-weight: 600;
   text-decoration: none;
   transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.profile-page .links a svg {
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
+  flex: 0 0 auto;
 }
 
 .profile-page .links a:hover,
