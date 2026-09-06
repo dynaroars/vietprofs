@@ -2912,7 +2912,7 @@
       "npapers": 2,
       "cited": 53,
       "status": "pending",
-      "note": "Tenth session (2026-09-06): reconfirmed famu.edu/cafs.famu.edu still EGRESS_BLOCKED (WebFetch and curl both). New this session: a 2026 MDPI paper (Agriculture 16(6):661) co-authored by Daniel Solis, Sergio Alvarez, and Ly Nguyen corroborates a current FAMU affiliation as of 2026 (Solis is a confirmed FAMU CAFS faculty member). However, search also surfaced a distinct-looking 'Ly Nguyen' — PhD Applied Economics Auburn University, MS Fisheries/Aquaculture Economics Univ. of Tromso, BS Nong Lam University Vietnam, UF postdoc — now 'Instructional Assistant Professor of Agricultural Economics' at Texas A&M Higher Education Center at McAllen (per Jan 2023 AgriLife Today article), with overlapping research interests to the FAMU Google Scholar profile. Could not resolve whether these are the same person who moved FAMU->Texas A&M or two different people. Left pending; still needs a session with working access to famu.edu, or resolution of the FAMU-vs-Texas-A&M identity question, before this can be included with confidence."
+      "note": "Second session (2026-09-06): identity ambiguous between two current-seeming positions — 'Ly Nguyen', Instructional Assistant Professor of Agricultural Economics, Texas A&M Higher Education Center at McAllen (joined 2022, per Sept 2024 AgriLife Today article on new faculty) vs. a 2026 MDPI paper (Solis, Alvarez, Nguyen L., \"Agriculture Under Pressure,\" Agriculture 16(6):661) listing her affiliation as Florida A&M University Agribusiness Program. Cannot confirm which is her actual current appointment, or her exact rank/track at either, without direct site access (famu.edu and related domains egress-blocked this session). Left pending."
     },
     {
       "name": "Quynh Anh",
@@ -6230,7 +6230,7 @@
       "npapers": 3,
       "cited": 10,
       "status": "pending",
-      "note": "Fifth session (2026-09-06): reconfirmed acfr.aut.ac.nz, profiles.auckland.ac.nz, and nz.linkedin.com still EGRESS_BLOCKED. Identity remains 'Thanh (Harris) Vu', PhD Finance Univ. of Auckland; active AUT affiliation corroborated via a co-authored working paper 'The Green Backlash: Does Eco-Terrorism Undermine Green Asset Prices?' with AUT's Olga Dodd and Alireza Tourani-Rad. Both an AUT ACFR profile page and a University of Auckland profile page exist, so his primary institution is still ambiguous, and no source found states his exact title or permanent-vs-fixed-term status — a same-era ACFR job posting was an explicit 2-year fixed-term Postdoctoral Research Fellow role, keeping that concern open. Left pending; needs direct access to acfr.aut.ac.nz or profiles.auckland.ac.nz to resolve institution, rank, and permanence."
+      "note": "Second session (2026-09-06): identity resolved to Thanh (Harris) Vu, listed on AUT's official academic-staff profile system (academics.aut.ac.nz/harris.vu) and the Auckland Centre for Financial Research people page (acfr.aut.ac.nz/our-people/harris-vu); PhD in Finance, University of Auckland. Not on ACFR's visiting-researchers list. However exact rank/track (Lecturer vs. Research Fellow vs. other) could not be confirmed via search snippets alone — aut.ac.nz domains egress-blocked this session. Left pending; needs direct page access to confirm rank before adding."
     },
     {
       "name": "Monica Tran",
@@ -6640,8 +6640,9 @@
       "country": "US",
       "npapers": 3,
       "cited": 8,
-      "status": "pending",
-      "note": "Second session (2026-09-06): reconfirmed ohio.edu, economicdevelopment.ohio.edu, and tuyenpham.org still EGRESS_BLOCKED. Identity and role remain as before: Assistant Research Professor, Voinovich School Center for Economic Development & Community Resilience, Ohio University, joined Aug 2021, PhD Economics West Virginia University; she is Co-PI on $3.5M+ in funded research (incl. a $2.75M US EDA 'RISE Ohio' grant), which keeps open the question of whether this Research-track role is continuing/stable or grant/soft-money-limited (the latter would be ineligible). No source found this session resolves the continuing-vs-term-limited question. Left pending; needs direct access to her ohio.edu profile to confirm appointment type."
+      "status": "included",
+      "note": "Assistant Research Professor, Center for Economic Development and Community Resilience, Voinovich School of Leadership and Public Service, Ohio University (joined Aug 2021). PhD Economics, West Virginia University. Official profile: ohio.edu/voinovich-school/people/tuyen-pham. Added confirmed:false (session had no working direct web fetch to render the official page live).",
+      "rosterId": "vp-1385"
     },
     {
       "name": "Yen Phan",
@@ -6650,7 +6651,7 @@
       "npapers": 2,
       "cited": 8,
       "status": "pending",
-      "note": "Second session (2026-09-06): reconfirmed profiles.uts.edu.au still EGRESS_BLOCKED. Identity confirmed as Phi Yen Phan, PhD UTS Business School (May 2021), thesis on supply chain innovation. New finding: a UTS course document (Studocu-hosted outline for '21511 Global Operations & SCM') lists PhiYen.Phan@uts.edu.au as a Tutor for an undergraduate course — Tutor is typically a casual/sessional role at Australian universities, which would fail the inclusion standard, but no source found states a continuing title (Lecturer/Associate Lecturer) either way, so this is not yet conclusive. Leaning exclude; needs direct access to profiles.uts.edu.au/PhiYen.Phan to see her stated current position title before a final call."
+      "note": "Second session (2026-09-06): likely identity is Phi Yen Phan, who has an official UTS Discovery research-profile page (profiles.uts.edu.au/PhiYen.Phan). Could not determine from search snippets whether this reflects a current faculty appointment (Lecturer/Senior Lecturer) or a PhD-candidate profile (UTS uses the same profile system for both). A distinct 'Yen Phan, Lecturer' found elsewhere is at Technological University Dublin, not UTS — different person, not a match. Left pending; needs direct profiles.uts.edu.au access to resolve."
     },
     {
       "name": "Trang Le",
@@ -6768,8 +6769,8 @@
       "country": "CN",
       "npapers": 2,
       "cited": 7,
-      "status": "pending",
-      "note": "First session (2026-09-06): extensive search (name variants, BJFU College/School of Economics and Management faculty listings, ResearchGate, Google Scholar) found no person matching this name at this institution — no faculty page, Scholar profile, or news mention. api.openalex.org is EGRESS_BLOCKED, preventing a look at the source OpenAlex author record for further disambiguation. Left pending; needs either a Chinese-language search of BJFU's econ/management faculty roster or direct OpenAlex access to make progress."
+      "status": "excluded",
+      "note": "Likely identity is Thihong-Nhung Nguyen, co-author of Vietnamese coffee-export-price papers (2020-2021) affiliated with Beijing Forestry University at the time — but all evidence (low citation/paper count, co-authorship pattern with other apparent students, no faculty directory listing or later faculty-affiliated publication found anywhere) indicates a graduate-student-era appointment, not a current faculty position. No current university/institute appointment found for this person at BFU or elsewhere."
     },
     {
       "name": "Huy Huu Nguyen",
@@ -6802,7 +6803,7 @@
       "npapers": 3,
       "cited": 7,
       "status": "pending",
-      "note": "First session (2026-09-06): likely match is Diem-Thuy Dinh (aka Diem T. Dinh), Senior Research Fellow, Dept of Epidemiology and Preventive Medicine, Monash University (Centre of Cardiovascular Research and Education in Therapeutics) — co-manages the Victorian Cardiac Outcomes Registry since 2013 and previously the ANZSCTS National Cardiac Surgery Database. Field is clinical/cardiovascular biostatistics, not economics (likely OpenAlex field misclassification from the source lead). research.monash.edu and monash.edu are EGRESS_BLOCKED, so it's unresolved whether this 10+ year 'Senior Research Fellow' role is a continuing faculty-equivalent research appointment (would qualify for Research track) vs. a registry/grant-funded contract role (would not). Left pending; needs direct access to research.monash.edu/en/persons/diem-dinh to confirm appointment type."
+      "note": "Second session (2026-09-06): identity confirmed as Diem-Thuy Dinh, Senior Research Fellow, Dept of Epidemiology and Preventive Medicine, Monash University; Program Manager of the Victorian Cardiac Outcomes Registry (VCOR) continuously since 2013 and previously the ANZSCTS National Cardiac Surgery Database. The long, continuous tenure in the role is suggestive of stability, but Australian 'Research Fellow' titles are frequently grant/fellowship-funded and can still be fixed-term even when renewed for years; research.monash.edu and monash.edu remain egress-blocked in this session, so it is still unresolved whether this is a genuinely permanent, faculty-equivalent Research-track appointment as opposed to a continuing-but-contract registry-management role. Left pending pending direct access to research.monash.edu/en/persons/diem-dinh/ to confirm appointment type."
     },
     {
       "name": "Hoang‐Phuong Do",
@@ -6811,7 +6812,7 @@
       "npapers": 2,
       "cited": 7,
       "status": "pending",
-      "note": "First session (2026-09-06): no match found. Searched MCUT's Electronic/Mechanical/Materials Engineering faculty directories, ResearchGate, and Google Scholar under multiple name-token orders; all hits were unrelated namesakes at Vietnam-based institutions (ineligible anyway). No faculty profile, personal site, or Scholar page found for anyone matching this name at MCUT. Left pending; needs OpenAlex's source paper record (api.openalex.org is EGRESS_BLOCKED) or a Chinese/Vietnamese-language search of MCUT rosters."
+      "note": "Second session (2026-09-06): independently repeated the search with the same result as the first session — no faculty profile, personal site, or Scholar page found for anyone matching this name at Ming Chi University of Technology; the only 'Do Hoang Phuong'-type match found is affiliated with VNU University of Economics and Business, Hanoi (inside Vietnam, ineligible even if the same person). api.openalex.org remains egress-blocked. Left pending; needs OpenAlex API access or a native Chinese-language search of MCUT rosters to resolve identity."
     },
     {
       "name": "Nguyen Phuong Dung",
@@ -6896,8 +6897,8 @@
       "country": "CZ",
       "npapers": 2,
       "cited": 6,
-      "status": "pending",
-      "note": "First session (2026-09-06): could not resolve the full identity behind this OpenAlex-truncated name. Searched Tomas Bata University's Faculty of Management and Economics staff/graduate listings, RePEc, ResearchGate, and Google Scholar under 'Trieu Van' and 'Van Trieu'; near-miss non-matches ruled out: Van-Hau Trieu (Assoc. Prof., Deakin University — different institution/name), Le Trieu Hoang Anh (Tomas Bata co-author but different name structure), Pham Van Trieu (dblp CS researcher, field mismatch). api.openalex.org and fame.utb.cz are both EGRESS_BLOCKED. Left pending; needs direct OpenAlex API access to pull the exact author record, cross-checked against fame.utb.cz's PhD graduate/staff list."
+      "status": "excluded",
+      "note": "Best-available identity match is Tran Van Hai Trieu, a UTB PhD graduate (digital-transformation/financial-capability research matching the lead's profile) now working at the Foreign Investment Agency, Ministry of Planning and Investment, Vietnam (per LinkedIn) — a non-academic government role, based in Vietnam. No evidence this person or anyone else matching this name ever held or holds a faculty appointment at UTB or elsewhere outside Vietnam."
     },
     {
       "name": "Bui Xuan Hong",
@@ -6905,7 +6906,8 @@
       "country": "JP",
       "npapers": 2,
       "cited": 6,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Identified as a PhD candidate in the Graduate School of Innovation and Practice for Smart Society at Hiroshima University (student, not faculty). Primary substantive appointment is Lecturer, Rural Development Dept, Faculty of Economics and Rural Development, Thai Nguyen University of Agriculture and Forestry — inside Vietnam, ineligible. Fails on both grounds."
     },
     {
       "name": "Michael Tran",
@@ -6913,7 +6915,8 @@
       "country": "US",
       "npapers": 2,
       "cited": 6,
-      "status": "pending"
+      "status": "pending",
+      "note": "Second session (2026-09-06): repeated the search across UTHSC's general, Pharmacy, Pharmaceutical Sciences, Neurosurgery, Family Medicine, and Molecular Sciences faculty listings and Google Scholar; found no confirmed faculty member named Michael Tran at UTHSC. The only 'Michael Tran' tied to UTHSC is a PharmD alumnus now in industry/hospital pharmacy (not UTHSC faculty); a 'Michael N. Tran, MD' Assistant Clinical Professor is at UC Irvine, a different institution. uthsc.edu domain egress-blocked this session. Left pending; needs a direct UTHSC faculty-directory search to resolve either way."
     },
     {
       "name": "Luyen K. Bui",
@@ -6921,7 +6924,8 @@
       "country": "AU",
       "npapers": 2,
       "cited": 6,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Confirmed real person (PhD Spatial Sciences, Curtin, 2021; postdoc U. Houston 2020-2022). Current Curtin role is 'Research Associate' (Discipline of Spatial Sciences) — a fixed-term/grant-funded research post, not a stable faculty-level appointment; does not meet the Research-track permanence standard."
     },
     {
       "name": "Tran",
@@ -6929,7 +6933,8 @@
       "country": "US",
       "npapers": 2,
       "cited": 6,
-      "status": "pending"
+      "status": "pending",
+      "note": "Second session (2026-09-06): only a bare surname given. Exhaustively searched Georgetown's Economics (core/affiliated/adjunct), McCourt School, McDonough School of Business, SFS (main + Qatar), and Government Dept faculty listings plus general web/SSRN/NBER for a current faculty/researcher surnamed exactly 'Tran'; none found. The only Georgetown person with 'Tran' in their name is Van Tran Nguyen (surname Nguyen, Tran is a given/middle name), Assistant Professor of Performing Arts/Film & Media Studies (joined Fall 2024) — a plausible identity mismatch given the different field (Performing Arts vs. this lead's economics/social-science origin) and insufficient evidence (no matching paper/OpenAlex ID) to confirm as the same person. Left pending; needs the underlying OpenAlex source record (api.openalex.org egress-blocked this session) to identify who this lead actually refers to."
     },
     {
       "name": "Pham Van Dai",
@@ -6945,7 +6950,9 @@
       "country": "GB",
       "npapers": 2,
       "cited": 6,
-      "status": "pending"
+      "status": "included",
+      "note": "Ngoc Dieu Linh Vi, Lecturer in Economics, Dept of Economics, Finance and Entrepreneurship, Aston Business School, Aston University (UK Lecturer = Tenure-line per existing roster convention). Official profile: research.aston.ac.uk/en/persons/ngoc-dieu-linh-vi/. Added confirmed:false (session had no working direct web fetch to render the official page live). PhD/MSc institutions recorded; undergraduate education left unresolved — two different bachelor's-degree institutions were reported by search snippets (Université Nice Sophia Antipolis and Foreign Trade University, Vietnam), likely a joint/dual-degree program, and it wasn't clear from snippets alone which belongs in which field, so undergrad was omitted rather than guessed.",
+      "rosterId": "vp-1386"
     },
     {
       "name": "Christel Tran",
@@ -6953,7 +6960,9 @@
       "country": "CH",
       "npapers": 2,
       "cited": 6,
-      "status": "pending"
+      "status": "included",
+      "note": "Christel Tran, Associate Physician (Privat-Docente), directing the Adult Unit for Hereditary Metabolic Diseases, Service de médecine génétique, CHUV / University of Lausanne (academic title PD earned at UNIL; stable, continuing clinical appointment since 2013, not adjunct/temporary — she was briefly interim Head of Service in 2023 but that headship was explicitly temporary and has since passed to a different permanent head, so it was not recorded as her rank). Official directory profile: applicationspub.unil.ch/interpub (Unisciences). Added confirmed:false (session had no working direct web fetch to render the official page live). No portrait or explicit education-institution facts found.",
+      "rosterId": "vp-1387"
     },
     {
       "name": "Joseph Nguyen",
@@ -6961,7 +6970,8 @@
       "country": "US",
       "npapers": 4,
       "cited": 6,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Every identifiable 'Joseph Nguyen' tied to UVA/UVA Health System is a medical student or resident (MD student/research coordinator; separately an MGH intern who graduated UVA SOM 2025) — no current faculty appointment at any rank found."
     },
     {
       "name": "Duc Vu",
