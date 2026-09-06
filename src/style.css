@@ -1146,8 +1146,12 @@ a.entry-name:focus-visible {
   margin-left: 0;
 }
 
-.profile-page .man-section > :not(h2) {
+.profile-page .man-section > :not(h2):not(summary) {
   margin-left: 1.25rem;
+}
+
+.profile-page .man-section > summary {
+  margin-left: 0;
 }
 
 .profile-page .identity {
@@ -2385,6 +2389,86 @@ a.entry-name:focus-visible {
   cursor: pointer;
 }
 
+.submit-page .submit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 0;
+}
+
+.submit-page .man-section.form-group {
+  padding: 0.85rem 0;
+  border: none;
+  border-bottom: 1px solid var(--border-color);
+  border-radius: 0;
+  background: transparent;
+  gap: 0;
+}
+
+.submit-page .man-section.form-group[hidden] {
+  display: none;
+}
+
+.submit-page .required-group {
+  border-color: var(--border-color);
+  background: transparent;
+}
+
+.submit-page .purpose-toggle {
+  margin-bottom: 0;
+  border: none;
+  padding: 0;
+  gap: 1.5rem;
+}
+
+.submit-page .optional-group {
+  display: block;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.submit-page .optional-group summary {
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-left: 0;
+  padding: 0.25rem 0;
+}
+
+.submit-page .optional-group summary:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.submit-page .optional-group > * + * {
+  margin-top: 0.85rem;
+}
+
+.submit-page .optional-group > .form-group-description {
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.submit-page .form-section {
+  margin-top: 0.85rem;
+}
+
+.submit-page .man-section > .form-section:first-of-type {
+  margin-top: 0.5rem;
+}
+
+.submit-page .submit-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
 .optional-group {
   display: block;
 }
@@ -2718,8 +2802,12 @@ a.entry-name:focus-visible {
     font-size: 0.9rem;
   }
 
-  .profile-page .man-section > :not(h2) {
+  .profile-page .man-section > :not(h2):not(summary) {
     margin-left: 0.75rem;
+  }
+
+  .profile-page .man-section > summary {
+    margin-left: 0;
   }
 
   .profile-page .man-running-head {

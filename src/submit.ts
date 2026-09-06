@@ -55,231 +55,259 @@ interface SubmissionDraft {
 function renderShell() {
   app.innerHTML = `
     <header>
-      <h1><a class="home-link brand-link" href="${import.meta.env.BASE_URL}"><img class="brand-logo" src="${import.meta.env.BASE_URL}vietprofs-bamboo-v.svg" alt="" width="56" height="56"><span>Vietnamese Academic Diaspora</span></a></h1>
-      <p class="tagline">Submit a new academic or suggest an update</p>
+      <a class="eyebrow" href="${import.meta.env.BASE_URL}"><img class="brand-logo" src="${import.meta.env.BASE_URL}vietprofs-bamboo-v.svg" alt="" width="32" height="32">VietProfs</a>
+      <span class="man-page-title">SUBMIT(1)</span>
     </header>
 
-    <fieldset class="form-section purpose-toggle" id="purpose-toggle">
-      <legend>What are you doing?</legend>
-      <label class="radio-row">
-        <input type="radio" name="purpose" value="add" checked />
-        Add new people
-      </label>
-      <label class="radio-row">
-        <input type="radio" name="purpose" value="update" />
-        Modify an existing entry
-      </label>
-    </fieldset>
+    <main>
+      <article class="man-page">
+        <p class="man-running-head"><span>SUBMIT(1)</span><span>VietProfs Submission Manual</span><span>SUBMIT(1)</span></p>
 
-    <form id="submit-form" class="submit-form" novalidate>
-      <section class="form-group" id="add-mode-section">
-        <p class="criteria" id="bulk-criteria">
-          Paste anything: a name, a link to someone's institutional profile or homepage, or a link to a
-          page that lists several people (a department directory, a lab site). Plain text is fine —
-          one item per line, or however you have it. Feel free to include any other notes or evidence
-          here too — whatever helps us verify and add them.
-        </p>
-        <div class="form-section">
-          <label for="bulkInput" id="bulkInput-label">Names, links, or notes</label>
-          <textarea id="bulkInput" name="bulkInput" rows="8" placeholder="e.g.&#10;Jane T. Nguyen — https://cs.example.edu/~jnguyen&#10;https://example.edu/faculty-directory&#10;Some Name, Some University"></textarea>
-        </div>
-        <p class="form-help" id="add-mode-details-help">
-          Have full details for one person instead of a link? <button type="button" class="link-button" id="add-mode-details-toggle">Enter them directly</button>.
-        </p>
-      </section>
+        <section class="man-section name-section">
+          <h2>NAME</h2>
+          <div class="identity">
+            <div class="identity-details">
+              <div class="name-heading">
+                <h1>Submit or Update an Entry</h1>
+              </div>
+              <p class="synopsis">Submit a new academic to the directory or suggest corrections for an existing profile.</p>
+            </div>
+          </div>
+        </section>
 
-      <section class="form-group required-group" aria-labelledby="required-heading" id="required-section">
-        <h2 id="required-heading">Required</h2>
-        <p class="form-group-description" id="required-description">These two fields are needed to verify the submission.</p>
+        <section class="man-section">
+          <h2>ACTION</h2>
+          <fieldset class="form-section purpose-toggle" id="purpose-toggle">
+            <legend>What are you doing?</legend>
+            <label class="radio-row">
+              <input type="radio" name="purpose" value="add" checked />
+              Add new people
+            </label>
+            <label class="radio-row">
+              <input type="radio" name="purpose" value="update" />
+              Modify an existing entry
+            </label>
+          </fieldset>
+        </section>
 
-      <div class="form-section">
-        <label for="name">Full name</label>
-        <input id="name" name="name" type="text" placeholder="e.g. ThanhVu H. Nguyen" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="name-suggestions" aria-describedby="name-hint" />
-        <div id="name-suggestions" class="correction-suggestions" role="listbox" hidden></div>
-        <p class="form-help" id="name-hint">If this professor is already listed, typing their name will suggest them and pre-fill their details for editing.</p>
-        <p class="form-help notice" id="name-match-notice" hidden></p>
-      </div>
+        <form id="submit-form" class="submit-form" novalidate>
+          <section class="man-section form-group" id="add-mode-section">
+            <h2>SUBMIT INFORMATION</h2>
+            <p class="criteria" id="bulk-criteria">
+              Paste anything: a name, a link to someone's institutional profile or homepage, or a link to a
+              page that lists several people (a department directory, a lab site). Plain text is fine —
+              one item per line, or however you have it. Feel free to include any other notes or evidence
+              here too — whatever helps us verify and add them.
+            </p>
+            <div class="form-section">
+              <label for="bulkInput" id="bulkInput-label">Names, links, or notes</label>
+              <textarea id="bulkInput" name="bulkInput" rows="7" placeholder="e.g.&#10;Jane T. Nguyen — https://cs.example.edu/~jnguyen&#10;https://example.edu/faculty-directory&#10;Some Name, Some University"></textarea>
+            </div>
+            <p class="form-help" id="add-mode-details-help">
+              Have full details for one person instead of a link? <button type="button" class="link-button" id="add-mode-details-toggle">Enter them directly</button>.
+            </p>
+          </section>
 
-      <div class="form-section">
-        <label for="profileUrl">Profile or verification link <span class="info-icon" tabindex="0" role="img" aria-label="Why this is required" data-tooltip="We need at least one link (institutional profile, personal site, LinkedIn, etc.) to verify and add this entry.">i</span></label>
-        <input id="profileUrl" name="profileUrl" type="url" placeholder="https://… (any link that helps verify this person)" />
-      </div>
+          <section class="man-section form-group required-group" aria-labelledby="required-heading" id="required-section">
+            <h2 id="required-heading">Required</h2>
+            <p class="form-group-description" id="required-description">These two fields are needed to verify the submission.</p>
 
-      </section>
+            <div class="form-section">
+              <label for="name">Full name</label>
+              <input id="name" name="name" type="text" placeholder="e.g. ThanhVu H. Nguyen" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="name-suggestions" aria-describedby="name-hint" />
+              <div id="name-suggestions" class="correction-suggestions" role="listbox" hidden></div>
+              <p class="form-help" id="name-hint">If this professor is already listed, typing their name will suggest them and pre-fill their details for editing.</p>
+              <p class="form-help notice" id="name-match-notice" hidden></p>
+            </div>
 
-      <details class="form-group optional-group" id="optional-details">
-        <summary id="optional-heading">Optional details</summary>
-        <p class="form-group-description">Share any details you have; maintainers will verify and complete the record.</p>
+            <div class="form-section">
+              <label for="profileUrl">Profile or verification link <span class="info-icon" tabindex="0" role="img" aria-label="Why this is required" data-tooltip="We need at least one link (institutional profile, personal site, LinkedIn, etc.) to verify and add this entry.">i</span></label>
+              <input id="profileUrl" name="profileUrl" type="url" placeholder="https://… (any link that helps verify this person)" />
+            </div>
+          </section>
 
-      <div class="form-section">
-        <label for="vietnameseName">Vietnamese name</label>
-        <input id="vietnameseName" name="vietnameseName" type="text" placeholder="e.g. Trần Lê-Nam (type with diacritics, e.g. Họ Tên)" />
-      </div>
+          <details class="man-section form-group optional-group" id="optional-details">
+            <summary id="optional-heading">Optional details</summary>
+            <p class="form-group-description">Share any details you have; maintainers will verify and complete the record.</p>
 
-      <div class="form-section">
-        <label for="websiteUrl">Personal or lab website</label>
-        <input id="websiteUrl" name="websiteUrl" type="url" placeholder="https:// (personal homepage or lab site)" />
-      </div>
+            <div class="form-section">
+              <label for="vietnameseName">Vietnamese name</label>
+              <input id="vietnameseName" name="vietnameseName" type="text" placeholder="e.g. Trần Lê-Nam (type with diacritics, e.g. Họ Tên)" />
+            </div>
 
-      <div class="form-section">
-        <label for="universityProfileUrl">Institutional profile website</label>
-        <input id="universityProfileUrl" name="universityProfileUrl" type="url" placeholder="https://… (official university or research-institute page)" />
-      </div>
+            <div class="form-section">
+              <label for="websiteUrl">Personal or lab website</label>
+              <input id="websiteUrl" name="websiteUrl" type="url" placeholder="https:// (personal homepage or lab site)" />
+            </div>
 
-      <div class="form-section">
-        <label for="scholarUrl">Google Scholar profile</label>
-        <input id="scholarUrl" name="scholarUrl" type="url" placeholder="https://scholar.google.com/…" />
-      </div>
+            <div class="form-section">
+              <label for="universityProfileUrl">Institutional profile website</label>
+              <input id="universityProfileUrl" name="universityProfileUrl" type="url" placeholder="https://… (official university or research-institute page)" />
+            </div>
 
-      <div class="form-section">
-        <label for="linkedinUrl">LinkedIn profile</label>
-        <input id="linkedinUrl" name="linkedinUrl" type="url" placeholder="https://www.linkedin.com/in/…" />
-      </div>
+            <div class="form-section">
+              <label for="scholarUrl">Google Scholar profile</label>
+              <input id="scholarUrl" name="scholarUrl" type="url" placeholder="https://scholar.google.com/…" />
+            </div>
 
-      <div class="form-section">
-        <label for="portraitSource">Profile picture URL</label>
-        <div id="portrait-preview" class="portrait-preview" hidden>
-          <img id="portrait-preview-image" src="" alt="Existing profile picture" width="96" height="96" />
-          <span>Existing picture</span>
-        </div>
-        <input id="portraitSource" name="portraitSource" type="url" placeholder="https://… (official institutional or personal profile image)" />
-        <p class="form-help">You may provide a direct image URL. Maintainers will review it and create the roster portrait.</p>
-      </div>
+            <div class="form-section">
+              <label for="linkedinUrl">LinkedIn profile</label>
+              <input id="linkedinUrl" name="linkedinUrl" type="url" placeholder="https://www.linkedin.com/in/…" />
+            </div>
 
-      <div class="form-section">
-        <label for="university">Employing institution</label>
-        <input id="university" name="university" type="text" placeholder="e.g. University of Washington, Allen Institute, etc." />
-      </div>
+            <div class="form-section">
+              <label for="portraitSource">Profile picture URL</label>
+              <div id="portrait-preview" class="portrait-preview" hidden>
+                <img id="portrait-preview-image" src="" alt="Existing profile picture" width="96" height="96" />
+                <span>Existing picture</span>
+              </div>
+              <input id="portraitSource" name="portraitSource" type="url" placeholder="https://… (official institutional or personal profile image)" />
+              <p class="form-help">You may provide a direct image URL. Maintainers will review it and create the roster portrait.</p>
+            </div>
 
-      <div class="form-section">
-        <label for="institutionType">Institution type</label>
-        <select id="institutionType" name="institutionType">
-          <option value="">Unspecified / Maintainer will check</option>
-          ${INSTITUTION_TYPES.map((type) => `<option value="${escapeHtml(type)}">${escapeHtml(type)}</option>`).join('')}
-        </select>
-      </div>
+            <div class="form-section">
+              <label for="university">Employing institution</label>
+              <input id="university" name="university" type="text" placeholder="e.g. University of Washington, Allen Institute, etc." />
+            </div>
 
-      <div class="form-section">
-        <label for="department">Department</label>
-        <input id="department" name="department" type="text" placeholder="e.g. Computer Science" />
-      </div>
+            <div class="form-section">
+              <label for="institutionType">Institution type</label>
+              <select id="institutionType" name="institutionType">
+                <option value="">Unspecified / Maintainer will check</option>
+                ${INSTITUTION_TYPES.map((type) => `<option value="${escapeHtml(type)}">${escapeHtml(type)}</option>`).join('')}
+              </select>
+            </div>
 
-      <div class="form-section">
-        <label for="field">Broad field</label>
-        <select id="field" name="field">
-          <option value="">Unspecified / Maintainer will check</option>
-          ${FIELDS.map((field) => `<option value="${escapeHtml(field)}">${escapeHtml(field)}</option>`).join('')}
-        </select>
-      </div>
+            <div class="form-section">
+              <label for="department">Department</label>
+              <input id="department" name="department" type="text" placeholder="e.g. Computer Science" />
+            </div>
 
-      <div class="form-section form-row">
-        <div>
-          <label for="city">City</label>
-          <input id="city" name="city" type="text" placeholder="e.g. Seattle, Singapore, Paris" />
-        </div>
-        <div>
-          <label for="state">State / Province</label>
-          <input id="state" name="state" type="text" placeholder="e.g. Washington, Ontario, NSW" />
-        </div>
-      </div>
+            <div class="form-section">
+              <label for="field">Broad field</label>
+              <select id="field" name="field">
+                <option value="">Unspecified / Maintainer will check</option>
+                ${FIELDS.map((field) => `<option value="${escapeHtml(field)}">${escapeHtml(field)}</option>`).join('')}
+              </select>
+            </div>
 
-      <div class="form-section">
-        <label for="country">Country</label>
-        <input id="country" name="country" type="text" placeholder="e.g. United States, Singapore, Australia, France, Canada" />
-      </div>
+            <div class="form-section form-row">
+              <div>
+                <label for="city">City</label>
+                <input id="city" name="city" type="text" placeholder="e.g. Seattle, Singapore, Paris" />
+              </div>
+              <div>
+                <label for="state">State / Province</label>
+                <input id="state" name="state" type="text" placeholder="e.g. Washington, Ontario, NSW" />
+              </div>
+            </div>
 
-      <fieldset class="form-section">
-        <legend>Employment track</legend>
-        <label class="radio-row">
-          <input type="radio" name="track" value="" checked />
-          Unspecified / Maintainer will check
-        </label>
-        ${TRACKS.map(
-          (track) => `
-        <label class="radio-row">
-          <input type="radio" name="track" value="${escapeHtml(track)}" />
-          ${escapeHtml(track)}
-        </label>`,
-        ).join('')}
-      </fieldset>
+            <div class="form-section">
+              <label for="country">Country</label>
+              <input id="country" name="country" type="text" placeholder="e.g. United States, Singapore, Australia, France, Canada" />
+            </div>
 
-      <div class="form-section">
-        <label for="rank">Simplified academic rank</label>
-        <input id="rank" name="rank" type="text" placeholder="Assistant Professor, Clinical Professor, Professor of Practice, or other official title" />
-      </div>
+            <fieldset class="form-section">
+              <legend>Employment track</legend>
+              <label class="radio-row">
+                <input type="radio" name="track" value="" checked />
+                Unspecified / Maintainer will check
+              </label>
+              ${TRACKS.map(
+                (track) => `
+              <label class="radio-row">
+                <input type="radio" name="track" value="${escapeHtml(track)}" />
+                ${escapeHtml(track)}
+              </label>`,
+              ).join('')}
+            </fieldset>
 
-      <div class="form-section form-row">
-        <div>
-          <label for="undergradYear">Undergraduate completion year</label>
-          <input id="undergradYear" name="undergradYear" type="number" min="1900" max="${new Date().getFullYear()}" placeholder="e.g. 2010" />
-        </div>
-        <div>
-          <label for="undergradInstitution">Undergraduate institution</label>
-          <input id="undergradInstitution" name="undergradInstitution" type="text" placeholder="e.g. University of Washington" />
-        </div>
-      </div>
+            <div class="form-section">
+              <label for="rank">Simplified academic rank</label>
+              <input id="rank" name="rank" type="text" placeholder="Assistant Professor, Clinical Professor, Professor of Practice, or other official title" />
+            </div>
 
-      <div class="form-section form-row">
-        <div>
-          <label for="msYear">Master's completion year</label>
-          <input id="msYear" name="msYear" type="number" min="1900" max="${new Date().getFullYear()}" placeholder="e.g. 2014" />
-        </div>
-        <div>
-          <label for="msInstitution">Master's institution</label>
-          <input id="msInstitution" name="msInstitution" type="text" placeholder="e.g. Stanford University" />
-        </div>
-      </div>
+            <div class="form-section form-row">
+              <div>
+                <label for="undergradYear">Undergraduate completion year</label>
+                <input id="undergradYear" name="undergradYear" type="number" min="1900" max="${new Date().getFullYear()}" placeholder="e.g. 2010" />
+              </div>
+              <div>
+                <label for="undergradInstitution">Undergraduate institution</label>
+                <input id="undergradInstitution" name="undergradInstitution" type="text" placeholder="e.g. University of Washington" />
+              </div>
+            </div>
 
-      <div class="form-section form-row">
-        <div>
-          <label for="phdYear">PhD year</label>
-          <input id="phdYear" name="phdYear" type="number" min="1900" max="${new Date().getFullYear()}" placeholder="e.g. 2018" />
-        </div>
-        <div>
-          <label for="phdInstitution">PhD institution</label>
-          <input id="phdInstitution" name="phdInstitution" type="text" placeholder="e.g. MIT" />
-        </div>
-      </div>
+            <div class="form-section form-row">
+              <div>
+                <label for="msYear">Master's completion year</label>
+                <input id="msYear" name="msYear" type="number" min="1900" max="${new Date().getFullYear()}" placeholder="e.g. 2014" />
+              </div>
+              <div>
+                <label for="msInstitution">Master's institution</label>
+                <input id="msInstitution" name="msInstitution" type="text" placeholder="e.g. Stanford University" />
+              </div>
+            </div>
 
-      <div class="form-section form-row">
-        <div>
-          <label for="mdYear">MD completion year</label>
-          <input id="mdYear" name="mdYear" type="number" min="1900" max="${new Date().getFullYear()}" placeholder="e.g. 2016" />
-        </div>
-        <div>
-          <label for="mdInstitution">MD institution</label>
-          <input id="mdInstitution" name="mdInstitution" type="text" placeholder="e.g. Johns Hopkins University" />
-        </div>
-      </div>
+            <div class="form-section form-row">
+              <div>
+                <label for="phdYear">PhD year</label>
+                <input id="phdYear" name="phdYear" type="number" min="1900" max="${new Date().getFullYear()}" placeholder="e.g. 2018" />
+              </div>
+              <div>
+                <label for="phdInstitution">PhD institution</label>
+                <input id="phdInstitution" name="phdInstitution" type="text" placeholder="e.g. MIT" />
+              </div>
+            </div>
 
-      <div class="form-section form-row">
-        <div>
-          <label for="postdocYear">Postdoc completion year</label>
-          <input id="postdocYear" name="postdocYear" type="number" min="1900" max="${new Date().getFullYear()}" placeholder="e.g. 2022" />
-        </div>
-        <div>
-          <label for="postdocInstitution">Postdoc institution</label>
-          <input id="postdocInstitution" name="postdocInstitution" type="text" placeholder="e.g. Carnegie Mellon University" />
-        </div>
-      </div>
+            <div class="form-section form-row">
+              <div>
+                <label for="mdYear">MD completion year</label>
+                <input id="mdYear" name="mdYear" type="number" min="1900" max="${new Date().getFullYear()}" placeholder="e.g. 2016" />
+              </div>
+              <div>
+                <label for="mdInstitution">MD institution</label>
+                <input id="mdInstitution" name="mdInstitution" type="text" placeholder="e.g. Johns Hopkins University" />
+              </div>
+            </div>
 
-      <div class="form-section">
-        <label for="researchAreas">Research areas (comma-separated)</label>
-        <input id="researchAreas" name="researchAreas" type="text" placeholder="e.g. Machine Learning, Robotics" />
-      </div>
+            <div class="form-section form-row">
+              <div>
+                <label for="postdocYear">Postdoc completion year</label>
+                <input id="postdocYear" name="postdocYear" type="number" min="1900" max="${new Date().getFullYear()}" placeholder="e.g. 2022" />
+              </div>
+              <div>
+                <label for="postdocInstitution">Postdoc institution</label>
+                <input id="postdocInstitution" name="postdocInstitution" type="text" placeholder="e.g. Carnegie Mellon University" />
+              </div>
+            </div>
 
-      </details>
+            <div class="form-section">
+              <label for="researchAreas">Research areas (comma-separated)</label>
+              <input id="researchAreas" name="researchAreas" type="text" placeholder="e.g. Machine Learning, Robotics" />
+            </div>
+          </details>
 
-      <div class="submit-actions">
-        <button type="submit" class="submit-btn" name="delivery" value="email">Send by email</button>
-        <button type="submit" class="submit-btn" name="delivery" value="github">Submit as a GitHub issue</button>
-      </div>
-      <p class="submit-hint" id="submit-hint">
-        Email is the easiest option and does not require a GitHub account. It opens a pre-filled
-        message to the maintainers. GitHub is optional and opens a pre-filled issue for anyone who
-        prefers to submit there.
-      </p>
-    </form>
+          <section class="man-section">
+            <h2>DELIVERY</h2>
+            <div class="submit-actions">
+              <button type="submit" class="submit-btn" name="delivery" value="email">Send by email</button>
+              <button type="submit" class="submit-btn" name="delivery" value="github">Submit as a GitHub issue</button>
+            </div>
+            <p class="submit-hint" id="submit-hint">
+              Email is the easiest option and does not require a GitHub account. It opens a pre-filled
+              message to the maintainers. GitHub is optional and opens a pre-filled issue for anyone who
+              prefers to submit there.
+            </p>
+          </section>
+        </form>
+
+        <footer>
+          <p>VietProfs is a community-maintained directory. Consult the linked sources for the most current details.</p>
+          <p class="man-footer-line">SUBMIT(1) · VietProfs Submission · SUBMIT(1)</p>
+        </footer>
+      </article>
+    </main>
   `;
 }
 
