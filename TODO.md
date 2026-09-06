@@ -139,7 +139,7 @@ This plan expands candidate discovery beyond the initial 17 surnames across 4 se
 - [x] **Computer Science** (95/95 resolved — 7 included `vp-1459`..`vp-1465`, 88 excluded)
 - [x] **Other** (101/101 resolved — 3 included `vp-1466`..`vp-1468`, 98 excluded)
 - [x] **Agriculture & Environment** (127/127 resolved — 4 included `vp-1469`..`vp-1472`, 123 excluded)
-- [ ] **Physical Sciences** (182 pending)
+- [x] **Physical Sciences** (182/182 resolved — 4 included `vp-1473`..`vp-1476`, 178 excluded)
 - [ ] **Engineering** (216 pending)
 - [ ] **Medicine & Health** (329 pending)
 

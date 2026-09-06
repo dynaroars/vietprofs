@@ -548,6 +548,8 @@ const FIELD_OVERRIDES = new Map([
   ['CEA Tech / LITEN|Commissariat à l\'Énergie Atomique et aux Énergies Alternatives', 'Engineering'],
   ['Environmental Engineering and Management, Department of Water Resources and Environmental Engineering|Asian Institute of Technology', 'Earth & Environmental Sciences'],
   ['Département d\'études urbaines et touristiques|Université du Québec à Montréal', 'Earth & Environmental Sciences'],
+  ['Laboratoire Interuniversitaire des Systèmes Atmosphériques (LISA)|Université Paris-Est Créteil', 'Physics & Astronomy'],
+  ['Department of Animal and Aquacultural Sciences, Faculty of Biosciences|Norwegian University of Life Sciences', 'Agricultural & Natural Resource Sciences'],
 ]);
 
 // Buckets granular `department` values into the broad fields above. Order matters, and is not
