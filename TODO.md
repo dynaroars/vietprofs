@@ -35,16 +35,14 @@ Before modifying the roster, review:
 - [x] **Other** (69/69 resolved — 11 included, 16 duplicates, 42 excluded)
 - [x] **Physical Sciences** (123/123 resolved — 23 included, 33 duplicates, 67 excluded)
 - [x] **Engineering** (131/131 resolved — 15 included, 35 duplicates, 81 excluded)
+- [x] **Medicine & Health** (210/210 resolved — 35 leads / 29 unique included profiles, 65 duplicates, 110 excluded)
 
 ---
 
-### Remaining Batches to Process (in recommended order)
+### Remaining Batches to Process
+All non-empty queues in `maintenance/openalex-leads.json` have been fully processed and resolved (100% complete across all 9 non-empty disciplines).
 
-#### 1. Medicine & Health (Final Large Batch)
-- **Status:** 164 pending / 210 total (46 duplicates already marked)
-- **Target:** `batches["Medicine & Health"].candidates`
-
-#### Empty Batches (No action needed)
+#### Empty Batches (No leads found / No action needed)
 - Business & Economics (0)
 - Humanities & Arts (0)
 - Education (0)

@@ -500,6 +500,17 @@ const FIELD_OVERRIDES = new Map([
   ['LIST3N|Université de Technologie de Troyes', 'Engineering'],
   ['FEMTO-ST Institute|Supmicrotech-ENSMM', 'Engineering'],
   ['Space Vehicles Directorate|Air Force Research Laboratory', 'Engineering'],
+  ['Département de Pathologie|Université Paris-Est Créteil', 'Health Sciences'],
+  ['Division of Infectious Diseases|University of Pittsburgh', 'Health Sciences'],
+  ['Service de Pathologie|Université Paris Cité', 'Health Sciences'],
+  ['Division of Cardiology|McGill University', 'Health Sciences'],
+  ['Service de Rhumatologie|Aix-Marseille Université', 'Health Sciences'],
+  ['Centre de Recherche en Épidémiologie et Statistiques|Université Paris Cité', 'Health Sciences'],
+  ['Département de Pédiatrie|Université de Montréal', 'Health Sciences'],
+  ['Division of Cardiology|University of California, San Francisco', 'Health Sciences'],
+  ['Laboratoire ITODYS|Université Paris Cité', 'Chemistry'],
+  ['Laboratoire MIVEGEC|Institut de Recherche pour le Développement', 'Health Sciences'],
+  ['Institute for Virology|University of Duisburg-Essen', 'Health Sciences'],
 ]);
 
 // Buckets granular `department` values into the broad fields above. Order matters, and is not
