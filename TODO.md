@@ -33,20 +33,17 @@ Before modifying the roster, review:
 - [x] **Social Sciences** (36/36 resolved — 12 included, 10 duplicates, 14 excluded)
 - [x] **Agriculture & Environment** (54/54 resolved — 8 included, 10 duplicates, 36 excluded)
 - [x] **Other** (69/69 resolved — 11 included, 16 duplicates, 42 excluded)
+- [x] **Physical Sciences** (123/123 resolved — 23 included, 33 duplicates, 67 excluded)
 
 ---
 
 ### Remaining Batches to Process (in recommended order)
 
-#### 1. Physical Sciences
-- **Status:** 91 pending / 123 total (32 duplicates already marked)
-- **Target:** `batches["Physical Sciences"].candidates`
-
-#### 2. Engineering (Large Batch)
+#### 1. Engineering (Large Batch)
 - **Status:** 103 pending / 131 total (28 duplicates already marked)
 - **Target:** `batches["Engineering"].candidates`
 
-#### 3. Medicine & Health (Largest Batch)
+#### 2. Medicine & Health (Largest Batch)
 - **Status:** 164 pending / 210 total (46 duplicates already marked)
 - **Target:** `batches["Medicine & Health"].candidates`
 

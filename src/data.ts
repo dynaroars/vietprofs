@@ -486,6 +486,13 @@ const FIELD_OVERRIDES = new Map([
   ['CSIRO Manufacturing|CSIRO (Commonwealth Scientific and Industrial Research Organisation)', 'Engineering'],
   ['Center for Low-temperature Plasma Sciences|Nagoya University', 'Physics & Astronomy'],
   ['Institut des Sciences Moléculaires|CNRS (Centre National de la Recherche Scientifique)', 'Chemistry'],
+  ['Lurie Family Imaging Center|Dana-Farber Cancer Institute', 'Health Sciences'],
+  ['Institut des Sciences de la Terre|Université Grenoble Alpes', 'Earth & Environmental Sciences'],
+  ['Structural Studies Division|MRC Laboratory of Molecular Biology', 'Biological & Biomedical Sciences'],
+  ['Nishina Center for Accelerator-Based Science|RIKEN', 'Physics & Astronomy'],
+  ['Centre for Atom Optics and Ultrafast Spectroscopy|Swinburne University of Technology', 'Physics & Astronomy'],
+  ['Light-Matter Interactions for Quantum Technologies Unit|Okinawa Institute of Science and Technology', 'Physics & Astronomy'],
+  ['National Center for Computational Sciences|Oak Ridge National Laboratory', 'Computer & Information Sciences'],
 ]);
 
 // Buckets granular `department` values into the broad fields above. Order matters, and is not
