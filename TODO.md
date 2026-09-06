@@ -67,7 +67,7 @@ This plan expands candidate discovery beyond the initial 17 surnames across 4 se
 
 #### Phase 1: Expanded Surnames Queue (`npm run extract-openalex-leads -- --surnames-only`)
 - [x] **Computer Science** (31/31 resolved — 9 included `vp-1314`..`vp-1322`, 1 duplicate, 21 excluded)
-- [ ] **Engineering** (64 pending)
+- [x] **Engineering** (64/64 resolved — 10 included `vp-1339`..`vp-1348`, 2 duplicates, 52 excluded)
 - [x] **Mathematics & Statistics** (2/2 resolved — 1 included `vp-1301`, 1 excluded)
 - [x] **Physical Sciences** (45/45 resolved — 6 included `vp-1333`..`vp-1338`, 39 excluded)
 - [x] **Life Sciences** (17/17 resolved — 6 included `vp-1308`..`vp-1313`, 11 excluded)

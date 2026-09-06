@@ -521,6 +521,8 @@ const FIELD_OVERRIDES = new Map([
   ['Center for Computational Sciences|University of Tsukuba', 'Earth & Environmental Sciences'],
   ['Laboratoire d\u0027Optique Appliquée (LOA)|CNRS (Centre National de la Recherche Scientifique)', 'Physics & Astronomy'],
   ['Laboratoire de Physique Théorique|CNRS (Centre National de la Recherche Scientifique)', 'Physics & Astronomy'],
+  ['UMR TETIS|INRAE (Institut National de Recherche pour l\u0027Agriculture, l\u0027Alimentation et l\u0027Environnement)', 'Earth & Environmental Sciences'],
+  ['Laboratoire de Conception et d\u0027Intégration des Systèmes (LCIS)|Institut polytechnique de Grenoble', 'Engineering'],
 ]);
 
 // Buckets granular `department` values into the broad fields above. Order matters, and is not
@@ -571,7 +573,7 @@ const FIELD_RULES = [
   { field: 'Statistics & Data Science', match: /statistics|biostatistics|operations research|decision sciences|data science/i },
   // "materials science" alone (no "engineering" in the name) still lands here — combined
   // "Materials Science and Engineering" departments already match the bare "engineering" term.
-  { field: 'Engineering', match: /engineering|materials(?: science)?|aviation science|aeronautic|astronautic|aerospace|electrical communication|mechatronic|nanotechnology|nanotechnologie|microsystem/i },
+  { field: 'Engineering', match: /engineering|génie|genie|materials(?: science)?|aviation science|aeronautic|astronautic|aerospace|electrical communication|mechatronic|nanotechnology|nanotechnologie|microsystem/i },
   { field: 'Physics & Astronomy', match: /physics|physique|astronomy|astrophysi/i },
   { field: 'Chemistry', match: /chemistry|chimie/i },
   {
