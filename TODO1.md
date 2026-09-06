@@ -131,7 +131,7 @@ completion while temporary failures or unresolved verification remain.
 
 - [ ] Batch 1 — `vp-0001`–`vp-0020`; 20 people; ledger status `in_progress`; source collection pending.
 
-Progress note: source collection completed for batch 1; all 20 research overviews and 15 selected/recent-work sections were verified and published; 5 work outcomes remain pending.
+Progress note: source collection completed for batch 1; all 20 research overviews and all 20 work searches now have completed outcomes: 16 verified sections and 4 no-suitable-evidence results. Batch publication is pending the final validation and commit.
 
 Populate at execution time from the saved ID snapshot. Each entry must include batch number,
 ledger reference or exact IDs, outcome counts, remaining retries, and publication status.

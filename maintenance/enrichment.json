@@ -3814,10 +3814,12 @@
     },
     "vp-0005": {
       "overview": "verified",
-      "work": "pending",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://minhdo.ece.illinois.edu/",
-        "https://compimg.ece.illinois.edu/research/"
+        "https://compimg.ece.illinois.edu/research/",
+        "https://minhdo.ece.illinois.edu/publications/index.html",
+        "https://ece.illinois.edu/about/directory/faculty/minhdo"
       ],
       "evidence": [
         {
@@ -3833,11 +3835,18 @@
           "excerpt": "My primary research goal has been developing new multidimensional tools that can capture geometrical structures in images and multidimensional data, with applications to image processing, image formation, and reconstruction from multiple cameras and sensors.",
           "retrievedAt": "2026-09-06T20:35:00.000Z",
           "details": "Official University of Illinois research statement used to independently verify the overview."
+        },
+        {
+          "id": "vp-0005-work-no-evidence",
+          "url": "https://minhdo.ece.illinois.edu/publications/index.html",
+          "excerpt": "The official publications page says its manually maintained list was updated only through 2017 and directs readers to automatically updated external indexes; the official faculty profile does not provide a dated publication list.",
+          "retrievedAt": "2026-09-06T22:25:59.331Z",
+          "details": "Completed search with no suitable current work list: the available official list is explicitly stale, so older items were not labeled recent."
         }
       ],
       "errors": [],
-      "updatedAt": "2026-09-06T20:31:38.551Z",
-      "nextAction": "Generate and independently verify overview/work proposal."
+      "updatedAt": "2026-09-06T22:25:59.331Z",
+      "nextAction": "No further work action for this batch; revisit on a future source refresh."
     },
     "vp-0006": {
       "overview": "verified",
@@ -4814,11 +4823,12 @@
     },
     "vp-0015": {
       "overview": "verified",
-      "work": "pending",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://engineering.uark.edu/directory/profile/uid/thile/name/Ngan+Le/",
         "https://uark-aicv.github.io/",
-        "https://news.uark.edu/articles/77380/technology-ventures-inventor-s-spotlight-ngan-le"
+        "https://news.uark.edu/articles/77380/technology-ventures-inventor-s-spotlight-ngan-le",
+        "https://uark-aicv.github.io/cv/NganLe-CV.pdf"
       ],
       "evidence": [
         {
@@ -4834,11 +4844,18 @@
           "excerpt": "Through her research on artificial intelligence and computer vision, Ngan Le works to bridge the gap between human intuition and machine logic; her lab teaches robots to interact with unfamiliar objects and track people behind obstacles.",
           "retrievedAt": "2026-09-06T20:35:00.000Z",
           "details": "Official University of Arkansas news source used to independently verify the overview."
+        },
+        {
+          "id": "vp-0015-work-no-evidence",
+          "url": "https://uark-aicv.github.io/",
+          "excerpt": "The official AICV site provides current lab news and research context, while the available CV publication list is dated through 2021 and does not provide a current maintained work list.",
+          "retrievedAt": "2026-09-06T22:25:59.331Z",
+          "details": "Completed search with no suitable current work list: available publication evidence is stale for a recent-work section."
         }
       ],
       "errors": [],
-      "updatedAt": "2026-09-06T20:31:38.551Z",
-      "nextAction": "Generate and independently verify overview/work proposal."
+      "updatedAt": "2026-09-06T22:25:59.331Z",
+      "nextAction": "No further work action for this batch; revisit on a future source refresh."
     },
     "vp-0016": {
       "overview": "verified",
@@ -4975,10 +4992,11 @@
     },
     "vp-0017": {
       "overview": "verified",
-      "work": "pending",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://computerscience.nmsu.edu/facultydirectory/individual-bio-pages/tuan-le.html",
-        "https://sites.google.com/site/vmtuanle/"
+        "https://sites.google.com/site/vmtuanle/",
+        "https://sites.google.com/site/vmtuanle/home"
       ],
       "evidence": [
         {
@@ -5043,18 +5061,26 @@
           "excerpt": "Home Search this site Embedded Files Skip to main content Skip to navigation Home News Publications People Teaching Activities Contact About me Home News Publications People Teaching Activities Contact About me More Home News Publications People Teaching Activities Contact About me Tuan Le Associate Professor Coordinator of the Master of Data Analytics Program Department of Computer Science New Mexico State University Email: tuanle at nmsu dot edu Links: Google Scholar , Github Research Interests : Text Mining, Visualization, Graph Mining.",
           "retrievedAt": "2026-09-06T15:09:48.536Z",
           "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0017-work-no-evidence",
+          "url": "https://computerscience.nmsu.edu/facultydirectory/individual-bio-pages/tuan-le.html",
+          "excerpt": "The official NMSU profile and maintained personal page identify Tuan Le and list research interests, but neither provides a dated publication list or explicit selected works.",
+          "retrievedAt": "2026-09-06T22:25:59.331Z",
+          "details": "Completed search with no suitable work evidence: identity and research interests were verified, but no qualifying dated work list was available."
         }
       ],
       "errors": [],
-      "updatedAt": "2026-09-06T20:31:38.551Z",
-      "nextAction": "Generate and independently verify overview/work proposal."
+      "updatedAt": "2026-09-06T22:25:59.331Z",
+      "nextAction": "No further work action for this batch; revisit on a future source refresh."
     },
     "vp-0018": {
       "overview": "verified",
-      "work": "pending",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://directory.uark.edu/people/khoaluu",
-        "https://uark-cviu.github.io/"
+        "https://uark-cviu.github.io/",
+        "https://cviu.uark.edu/publications/"
       ],
       "evidence": [
         {
@@ -5133,18 +5159,28 @@
           "excerpt": "Trong-Thuan successfully defended his Master Thesis \"Towards Multimodal Scene Graph Generation Approaches to Video Understanding\".",
           "retrievedAt": "2026-09-06T15:09:52.853Z",
           "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0018-work-no-evidence",
+          "url": "https://uark-cviu.github.io/",
+          "excerpt": "The official CVIU site identifies Khoa Luu and describes lab topics and news, but the publications endpoint was unavailable during collection and the accessible pages did not expose a current Khoa-authored dated list.",
+          "retrievedAt": "2026-09-06T22:25:59.331Z",
+          "details": "Completed search with no suitable work evidence: lab-wide output was not attributed to Khoa without an accessible author-specific publication list."
         }
       ],
       "errors": [],
-      "updatedAt": "2026-09-06T20:31:38.551Z",
-      "nextAction": "Generate and independently verify overview/work proposal."
+      "updatedAt": "2026-09-06T22:25:59.331Z",
+      "nextAction": "No further work action for this batch; revisit on a future source refresh."
     },
     "vp-0019": {
       "overview": "verified",
-      "work": "pending",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.cecs.ucf.edu/faculty/truong-nghiem/",
-        "https://nxtlab.org/"
+        "https://nxtlab.org/",
+        "https://nxtlab.org/post/2026/03/paper-published-in-franklin-open/",
+        "https://nxtlab.org/post/2026/01/paper-published-in-ieee-access/",
+        "https://nxtlab.org/post/2025/08/paper-at-ieee-case-2025/"
       ],
       "evidence": [
         {
@@ -5258,11 +5294,32 @@
           "excerpt": "Latest News Paper published in Franklin Open Paper on communication-efficient ADMM with Gaussian process regression and adaptive quantization was published in Franklin Open.",
           "retrievedAt": "2026-09-06T15:09:54.779Z",
           "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0019-work-1",
+          "url": "https://nxtlab.org/post/2026/03/paper-published-in-franklin-open/",
+          "excerpt": "The official iCPS Lab post identifies Communication-efficient ADMM using Gaussian process regression and fully adaptive uniform quantization and names Truong X. Nghiem as a coauthor.",
+          "retrievedAt": "2026-09-06T22:25:59.331Z",
+          "details": "Official lab publication post; included as the latest dated identity-verified work."
+        },
+        {
+          "id": "vp-0019-work-2",
+          "url": "https://nxtlab.org/post/2026/01/paper-published-in-ieee-access/",
+          "excerpt": "The official iCPS Lab post identifies Physics-Informed Data-Driven Modeling of HVAC Systems: A Systematic Analysis and names Truong X. Nghiem as a coauthor.",
+          "retrievedAt": "2026-09-06T22:25:59.331Z",
+          "details": "Official lab publication post; included as the latest dated identity-verified work."
+        },
+        {
+          "id": "vp-0019-work-3",
+          "url": "https://nxtlab.org/post/2025/08/paper-at-ieee-case-2025/",
+          "excerpt": "The official iCPS Lab post identifies CRADLE: Cooperative Adaptive Decentralized Learning and Execution for UAV network to monitor Wildfire Front and names Truong Nghiem as a coauthor.",
+          "retrievedAt": "2026-09-06T22:25:59.331Z",
+          "details": "Official lab publication post; included as the latest dated identity-verified work."
         }
       ],
       "errors": [],
-      "updatedAt": "2026-09-06T20:31:38.551Z",
-      "nextAction": "Generate and independently verify overview/work proposal."
+      "updatedAt": "2026-09-06T22:25:59.331Z",
+      "nextAction": "Audit rendered work section; batch work outcomes are complete."
     },
     "vp-0020": {
       "overview": "verified",
