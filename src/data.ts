@@ -550,6 +550,10 @@ const FIELD_OVERRIDES = new Map([
   ['Département d\'études urbaines et touristiques|Université du Québec à Montréal', 'Earth & Environmental Sciences'],
   ['Laboratoire Interuniversitaire des Systèmes Atmosphériques (LISA)|Université Paris-Est Créteil', 'Physics & Astronomy'],
   ['Department of Animal and Aquacultural Sciences, Faculty of Biosciences|Norwegian University of Life Sciences', 'Agricultural & Natural Resource Sciences'],
+  ['Laboratoire Auscultation et Modélisation des Structures (LAMES), Département Matériaux et Structures (MAST)|Université Gustave Eiffel', 'Engineering'],
+  ['Laboratoire des Matériaux Composites pour la Construction (LMC2)|Université Claude Bernard Lyon 1', 'Engineering'],
+  ['Department of Engineering Technology and Construction Management|University of North Carolina at Charlotte', 'Engineering'],
+  ['Laboratoire Plasma et Conversion d\'Énergie (LAPLACE), ENSEEIHT|Toulouse INP', 'Engineering'],
 ]);
 
 // Buckets granular `department` values into the broad fields above. Order matters, and is not
