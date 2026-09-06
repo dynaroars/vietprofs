@@ -74,7 +74,7 @@ This plan expands candidate discovery beyond the initial 17 surnames across 4 se
 - [ ] **Medicine & Health** (90 pending)
 - [ ] **Agriculture & Environment** (39 pending)
 - [x] **Social Sciences** (16/16 resolved — 6 included `vp-1302`..`vp-1307`, 10 excluded)
-- [ ] **Other** (32 pending)
+- [x] **Other** (32/32 resolved — 3 included `vp-1323`..`vp-1325`, 29 excluded)
 
 #### Phase 2: High-Specificity Given-Name Queue (`npm run extract-openalex-leads -- --given-names-only`)
 - [ ] **Computer Science**
