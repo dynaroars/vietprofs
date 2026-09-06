@@ -462,6 +462,8 @@ const FIELD_OVERRIDES = new Map([
   // Bare "Social Sciences" gives no field signal, but Van Tho Tran's own research (international
   // and development economics) is Business & Economics.
   ['Social Sciences|Waseda University', 'Business & Economics'],
+  // Khanh Duy Trinh is in the Global Center for Science and Engineering; his research is probability theory/mathematics.
+  ['Global Center for Science and Engineering|Waseda University', 'Mathematics'],
   // Department name gives no field signal, but Hieu T. Nguyen's own research (IoT, wireless
   // communications, MIMO) is electrical/communications engineering.
   ['Department of Science and Industry Systems|University of South-Eastern Norway', 'Engineering'],

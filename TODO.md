@@ -133,15 +133,15 @@ This plan expands candidate discovery beyond the initial 17 surnames across 4 se
 - [x] **Other** (72/72 resolved — 3 included `vp-1405`..`vp-1407`, 69 excluded)
 
 #### Phase 3: Deep Pagination Queue (`npm run extract-openalex-leads -- --pages 3`)
-- [ ] **Computer Science**
-- [ ] **Engineering**
-- [ ] **Mathematics & Statistics**
-- [ ] **Physical Sciences**
-- [ ] **Life Sciences**
-- [ ] **Medicine & Health**
-- [ ] **Agriculture & Environment**
-- [ ] **Social Sciences**
-- [ ] **Other**
+- [x] **Mathematics & Statistics** (13/13 resolved — 3 included `vp-1444`..`vp-1446`, 10 excluded)
+- [ ] **Life Sciences** (34 pending)
+- [ ] **Social Sciences** (77 pending)
+- [ ] **Computer Science** (95 pending)
+- [ ] **Other** (101 pending)
+- [ ] **Agriculture & Environment** (127 pending)
+- [ ] **Physical Sciences** (182 pending)
+- [ ] **Engineering** (216 pending)
+- [ ] **Medicine & Health** (329 pending)
 
 #### Phase 4: Diacritic & Compound Name Queue (`npm run extract-openalex-leads -- --diacritics-only`)
 - [ ] **Computer Science**
