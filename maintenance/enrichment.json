@@ -3158,7 +3158,8 @@
         "vp-1232",
         "vp-1233"
       ],
-      "status": "pending"
+      "status": "in_progress",
+      "startedAt": "2026-09-07T19:35:22.837Z"
     },
     {
       "number": 62,
@@ -74749,204 +74750,559 @@
       "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1214": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.essex.ac.uk/people/ngohv57704/hong-viet-ngo"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.essex.ac.uk/people/ngohv57704/hong-viet-ngo: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:36:17.803Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1215": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.uah.edu/faculty-staff/hieu-pham"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.uah.edu/faculty-staff/hieu-pham: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:36:17.803Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1216": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.ifpri.org/expert/phuong-hong-nguyen"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:36:17.803Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1217": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www6.dijon.inrae.fr/agroecologie"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www6.dijon.inrae.fr/agroecologie: fetch failed"
+      ],
+      "updatedAt": "2026-09-07T19:36:17.803Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1218": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://profiles.ucr.edu/app/home/profile/baolam.huynh"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:36:17.803Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1219": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.surrey.ac.uk/people/anh-phan"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1219-1",
+          "url": "https://www.surrey.ac.uk/people/anh-phan",
+          "excerpt": "Dr Anh Phan | University of Surrey This website uses cookies Some of these cookies are necessary and are used to help make our site work.",
+          "retrievedAt": "2026-09-07T19:35:26.272Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1219-2",
+          "url": "https://www.surrey.ac.uk/people/anh-phan",
+          "excerpt": "With your consent, we will also use cookies to improve your experience, analyse site usage and assist in our marketing efforts.",
+          "retrievedAt": "2026-09-07T19:35:26.272Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1219-3",
+          "url": "https://www.surrey.ac.uk/people/anh-phan",
+          "excerpt": "You can learn more about these cookies and manage your preferences at any time on our cookies page .",
+          "retrievedAt": "2026-09-07T19:35:26.272Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1219-4",
+          "url": "https://www.surrey.ac.uk/people/anh-phan",
+          "excerpt": "Necessary Necessary These cookies enable essential website functions and ensure the site operates properly.",
+          "retrievedAt": "2026-09-07T19:35:26.272Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1219-5",
+          "url": "https://www.surrey.ac.uk/people/anh-phan",
+          "excerpt": "While you can disable them in your browser settings, some features may not function correctly.",
+          "retrievedAt": "2026-09-07T19:35:26.272Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1219-6",
+          "url": "https://www.surrey.ac.uk/people/anh-phan",
+          "excerpt": "Analytics Analytics These cookies help us understand how visitors interact with our website by collecting anonymous usage data.",
+          "retrievedAt": "2026-09-07T19:35:26.272Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1219-7",
+          "url": "https://www.surrey.ac.uk/people/anh-phan",
+          "excerpt": "We use this information to improve website performance and enhance your experience.",
+          "retrievedAt": "2026-09-07T19:35:26.272Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1219-8",
+          "url": "https://www.surrey.ac.uk/people/anh-phan",
+          "excerpt": "Personalisation Personalisation These cookies allow us to customise the content you see based on your activity, such as the courses you view, applications you make, or your location.",
+          "retrievedAt": "2026-09-07T19:35:26.272Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:36:17.803Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1220": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://people.ucd.ie/anhvu.vo"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:36:17.803Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1221": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://staffprofile.unisq.edu.au/profile/duc-anh-an-vo"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1221-1",
+          "url": "https://staffprofile.unisq.edu.au/profile/duc-anh-an-vo",
+          "excerpt": "Dr Duc-Anh An-Vo Skip to content Toggle navigation Open Search Search Term Search Close Search UConnect Saved Degrees Study Study Degrees and courses Mature-age students Career Finder Pathways to Uni High school students Key dates Undergraduate study Parents and guardians Study online Postgraduate study Information for Schools Fees and scholarships Research degrees and PhD International students UniSQ Stories Find out how to apply to study at UniSQ.",
+          "retrievedAt": "2026-09-07T19:35:28.427Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1221-2",
+          "url": "https://staffprofile.unisq.edu.au/profile/duc-anh-an-vo",
+          "excerpt": "Apply to UniSQ Current Students Current Students New to UniSQ Your study UniSQ Handbook Important dates Services and support Careers and graduation Student life and opportunities Students as Partners Student events Get in touch and find answers to frequently asked questions.",
+          "retrievedAt": "2026-09-07T19:35:28.427Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1221-3",
+          "url": "https://staffprofile.unisq.edu.au/profile/duc-anh-an-vo",
+          "excerpt": "Ask UniSQ Research Research Higher degrees by research Graduate Research School Partner with us Research institutes and centres SQNNSW Innovation Hub iLAuNCH CRDC ACDC Explore our areas of research strength.",
+          "retrievedAt": "2026-09-07T19:35:28.427Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1221-4",
+          "url": "https://staffprofile.unisq.edu.au/profile/duc-anh-an-vo",
+          "excerpt": "UniSQ flagships Alumni Alumni Alumni benefits Alumnus of the Year Awards Contribute to UniSQ Career services Reunion toolkit Connect with UniSQ and your fellow alumni.",
+          "retrievedAt": "2026-09-07T19:35:28.427Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1221-5",
+          "url": "https://staffprofile.unisq.edu.au/profile/duc-anh-an-vo",
+          "excerpt": "Update your details About About Governance and leadership Our schools Jobs at UniSQ Our values and culture UniSQ News Locations Accommodation UniSQ Events Contributing to our communities There are many ways you can make a difference, and your support can transform lives.",
+          "retrievedAt": "2026-09-07T19:35:28.427Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1221-6",
+          "url": "https://staffprofile.unisq.edu.au/profile/duc-anh-an-vo",
+          "excerpt": "n Search Library International Contact Saved Degrees UConnect Search Term Search Close Search Home UniSQ search Corporate Directory Staff Profile Corporate Directory Staff search Contact us Send Recognition (STARS) Corporate Directory Staff search Contact us Send Recognition (STARS) Dr Duc-Anh An-Vo Name Duc-Anh An-Vo Position Senior Lecturer (Pathways) Section School of Business, Law, Humanities and Pathways Office Z442 Location Toowoomba Campus Email Qualifications BEng HoChiMinh City Uni of Tech , MEng Toyohashi University of Techno , PhD University of Southern Qld Homepage https://research.",
+          "retrievedAt": "2026-09-07T19:35:28.427Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1221-7",
+          "url": "https://staffprofile.unisq.edu.au/profile/duc-anh-an-vo",
+          "excerpt": "au/researcher/80q5q/dr-duc-anh-an-vo The views expressed on staff homepages may not reflect the views of the University.",
+          "retrievedAt": "2026-09-07T19:35:28.427Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1221-8",
+          "url": "https://staffprofile.unisq.edu.au/profile/duc-anh-an-vo",
+          "excerpt": "Biography Duc-Anh grew up in Vietnamese Mekong Delta and was fortunate experiencing education in three great nations – Japan, US and Australia – in his youth age.",
+          "retrievedAt": "2026-09-07T19:35:28.427Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:36:17.803Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1222": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.cee.ed.tum.de/wb/personen/dr-habil-minh-duc-bui/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.cee.ed.tum.de/wb/personen/dr-habil-minh-duc-bui/: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:36:17.803Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1223": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://icpees.unistra.fr/annuaire/fiche/1118-pham-huu-cuong"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://icpees.unistra.fr/annuaire/fiche/1118-pham-huu-cuong: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:36:17.803Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1224": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://oraprdnt.uqtr.uquebec.ca/pls/public/gscw031?owa_no_site=1173&owa_no_fiche=1432"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://oraprdnt.uqtr.uquebec.ca/pls/public/gscw031?owa_no_site=1173&owa_no_fiche=1432: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:36:17.803Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1225": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.imt-mines-albi.fr/en/doan-pham-minh"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.imt-mines-albi.fr/en/doan-pham-minh: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:36:17.803Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1226": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://profiles.uts.edu.au/ToanTrong.Tran"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1226-1",
+          "url": "https://profiles.uts.edu.au/ToanTrong.Tran",
+          "excerpt": "Discovery Browser Not Supported Your browser (Internet Explorer or other legacy browser) is not supported by this application.",
+          "retrievedAt": "2026-09-07T19:35:32.995Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:36:17.803Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1227": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://people.csiro.au/T/Y/Yen-Truong"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1227-1",
+          "url": "https://people.csiro.au/T/Y/Yen-Truong",
+          "excerpt": "Dr Yen Truong Blog icon Home Share Contact Dr Yen Truong Principal Research Scientist https://people.",
+          "retrievedAt": "2026-09-07T19:35:34.458Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1227-2",
+          "url": "https://people.csiro.au/T/Y/Yen-Truong",
+          "excerpt": "First name * Please enter a valid first name Last Name * Please enter a valid last name Email Address * Please enter a valid email address Your Enquiry * Please enter your message to send to the contact Send Message Your enquiry has been successfully sent Your enquiry could not be processed.",
+          "retrievedAt": "2026-09-07T19:35:34.458Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1227-3",
+          "url": "https://people.csiro.au/T/Y/Yen-Truong",
+          "excerpt": "au/Contact to make your enquiry Contact details: Contact Yen GATE 3 STORE, NORMANBY ROAD CLAYTON VIC 3168 AUSTRALIA Download Yen's vCard View digital business card --> --> Biography Dr Yen Bach Truong is a Principal Research Scientist and Team Leader of the Functional Materials Team at CSIRO Manufacturing.",
+          "retrievedAt": "2026-09-07T19:35:34.458Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1227-4",
+          "url": "https://people.csiro.au/T/Y/Yen-Truong",
+          "excerpt": "She is a globally recognised leader in electrospinning, developing advanced nanostructured and multifunctional materials for applications in filtration, separation, and protective systems.",
+          "retrievedAt": "2026-09-07T19:35:34.458Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1227-5",
+          "url": "https://people.csiro.au/T/Y/Yen-Truong",
+          "excerpt": "Her work focuses on nanofibre composites for national priority areas, including aerosol filtration, environmental DNA (e-DNA) collection, carotenoid adsorption, biomaterials for drug delivery and tissue engineering, and the development of PFAS-free oleophobic material systems.",
+          "retrievedAt": "2026-09-07T19:35:34.458Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1227-6",
+          "url": "https://people.csiro.au/T/Y/Yen-Truong",
+          "excerpt": "Dr Truong has led major multidisciplinary projects, including a $2M program on advanced nanostructured fabrics for low-burden personal protection, and has extensive experience working with industry, defence, and academic partners to translate research into real-world applications.",
+          "retrievedAt": "2026-09-07T19:35:34.458Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1227-7",
+          "url": "https://people.csiro.au/T/Y/Yen-Truong",
+          "excerpt": "She has also played a leading role in the global electrospinning community, chairing the inaugural International Conference on Electrospinning (Electrospin 2010) and delivering over 20 invited presentations at international conferences and workshops.",
+          "retrievedAt": "2026-09-07T19:35:34.458Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1227-8",
+          "url": "https://people.csiro.au/T/Y/Yen-Truong",
+          "excerpt": "Dr Truong is internationally recognised as a leader in electrospun nanofibre technologies.",
+          "retrievedAt": "2026-09-07T19:35:34.458Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:36:17.803Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1228": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://netl.doe.gov/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1228-1",
+          "url": "https://netl.doe.gov/",
+          "excerpt": "nical Reports NETL Publication Search NETL R&D Publication Search NETL Site Environmental Quality Oil and Gas Projects Summaries Peer Review Reports Project Landing Page Summary Information for External R&D Awards About About Mission and Overview --> Visit NETL Contact NETL Organization --> Key Staff History Awards and Recognition NETL Logo News and Events News and Events News Stories Events Education Education Internship & Fellowship Programs STEM Education and Outreach Menu NETL Partners with NLR on Geothermal Center of Excellence Hydrocarbons and Geothermal Energy Office Announces Up To $10.",
+          "retrievedAt": "2026-09-07T19:35:34.845Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1228-2",
+          "url": "https://netl.doe.gov/",
+          "excerpt": "75 Million To Support University Training and Research for Subsurface Energy Development Energy Department Announces Up to $65.",
+          "retrievedAt": "2026-09-07T19:35:34.845Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1228-3",
+          "url": "https://netl.doe.gov/",
+          "excerpt": "5 Million to Advance Domestic Oil and Natural Gas Production and Delivery Spotting Early Signs of Corrosion To Prevent Pipeline Failures Energy Department Announces Up to $150 Million to Boost Unconventional Oil and Gas Recovery More Stories --> CENTERS OF EXCELLENCE We will ground our work in science and economics; applying technology to work efficiently, partnering with industry and leveraging national lab capabilities to solve challenges with commercial viability.",
+          "retrievedAt": "2026-09-07T19:35:34.845Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1228-4",
+          "url": "https://netl.doe.gov/",
+          "excerpt": "ineering - 5/31/2026 A new method could maximize the US’s oil and natural gas production (story features NETL research to recover oil and gas left behind after fracking) Tomorrow’s World Today - 6/3/2026 Partner with us Research Partnerships and Tech Transfer supports NETL and NETL staff in identifying, exploring, and securing opportunities to leverage NETL’s core capabilities and competencies through strategic engagement, collaboration, and partnership with domestic and international government organizations, national laboratories, academia, industry, and other private and public stakeholders.",
+          "retrievedAt": "2026-09-07T19:35:34.845Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:36:17.803Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1229": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://researchmap.jp/nongnv?lang=en"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://researchmap.jp/nongnv?lang=en: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T19:36:17.803Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1230": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://engineering.tufts.edu/bme"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1230-1",
+          "url": "https://engineering.tufts.edu/bme",
+          "excerpt": "PhD Certificates People Faculty Staff Research Centers and Laboratories Innovation Hub for Food and Materials Safety Training Biological Shipping Research Travel Purchasing Policy Computer Policy Community Alumni Student Organizations TUBERS News & Events News Events Seminars Newsletter Information for Students Faculty & Staff Alumni Industry Partners Find Faculty Apply Give Home page Carousel Tufts Launches Innovation Hub for New Technologies in Food and Materials A new shared resource for product development will help take industry, community, and academic innovations from concept to market.",
+          "retrievedAt": "2026-09-07T19:35:37.387Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1230-2",
+          "url": "https://engineering.tufts.edu/bme",
+          "excerpt": "Read about the Innovation Hub Curating Ultra-Precise Cells to Treat Spinal Cord Injuries Tiampo Family Assistant Professor Nisha Iyer received a grant from the Craig H.",
+          "retrievedAt": "2026-09-07T19:35:37.387Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1230-3",
+          "url": "https://engineering.tufts.edu/bme",
+          "excerpt": "Neilsen Foundation to study how stem cells matched to specific cell types and locations within the spinal cord could improve recovery from spinal cord injuries.",
+          "retrievedAt": "2026-09-07T19:35:37.387Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1230-4",
+          "url": "https://engineering.tufts.edu/bme",
+          "excerpt": "Read about Stem Cells Tufts Startup ClAIrVuE Wins Audience Choice Award at MALSI Day The AI-powered transplant surgery venture was one of five Tufts-affiliated startups selected to pitch at the state’s leading life sciences innovation showcase.",
+          "retrievedAt": "2026-09-07T19:35:37.387Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1230-5",
+          "url": "https://engineering.tufts.edu/bme",
+          "excerpt": "Read about ClAIrVuE Peering Into Materials Down to the Nanoscale in the COCOON Lab Imaging service now available to customers in academia and industry, capable of zooming in from the macro to the molecular scale to link structure with material function.",
+          "retrievedAt": "2026-09-07T19:35:37.387Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1230-6",
+          "url": "https://engineering.tufts.edu/bme",
+          "excerpt": "Read about the COCOON Lab New Research Examines How Naming Shapes Consumer Acceptance of Cultivated Meat A new study from the Tufts University Center for Cellular Agriculture explores how terminology influences consumer perceptions of cultivated meat products in the United States and Germany.",
+          "retrievedAt": "2026-09-07T19:35:37.387Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1230-7",
+          "url": "https://engineering.tufts.edu/bme",
+          "excerpt": "Read about Consumer Perceptions From Education to Expertise: Lily Haile At Tufts, Lily Haile cultivated technical expertise and a meticulous mindset that would help her succeed in the biotechnology industry.",
+          "retrievedAt": "2026-09-07T19:35:37.387Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1230-8",
+          "url": "https://engineering.tufts.edu/bme",
+          "excerpt": "Read about Haile Degree Programs Undergraduate Program Master&#039;s Program PhD Program Certificate Program Interested in Biomedical Engineering at Tufts?",
+          "retrievedAt": "2026-09-07T19:35:37.387Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:36:17.803Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1231": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://lppi.cyu.fr/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1231-1",
+          "url": "https://lppi.cyu.fr/",
+          "excerpt": "ici : Unité de recherche CY LPPI Imprimer Partager Partager cette page Facebook Twitter Linkedin Laboratoire LPPI Imprimer Partager Partager cette page Facebook Twitter Linkedin Situé sur le site de Neuville-sur-Oise, le Laboratoire de Physicochimie des Polymères et des Interfaces (LPPI) regroupe une vingtaine d’enseignants-chercheurs de diverses spécialités scientifiques (polyméristes, électrochimistes, chimistes inorganiciens, physiciens des surfaces et interfaces,…), 5 membres permanents administratifs et techniques et une trentaine de membres non-permanents (post-doctorants, doctorants, …).",
+          "retrievedAt": "2026-09-07T19:35:38.259Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1231-2",
+          "url": "https://lppi.cyu.fr/",
+          "excerpt": "Fort de cette pluridisciplinarité, le LPPI développe des thématiques de recherche concernant les matériaux polymères à architecture contrôlée, les matériaux polymères conducteurs ioniques et les matériaux (macro)moléculaires semi-conducteurs et conducteurs électroniques et leur modélisation.",
+          "retrievedAt": "2026-09-07T19:35:38.259Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1231-3",
+          "url": "https://lppi.cyu.fr/",
+          "excerpt": "4 THEMATIQUES Matériaux polymère à architecture controlée Matériaux polymères conducteur Ioniques Matériaux polymères conducteur électronique Modélisation 3 DOMAINES D'APPLICATIONS Matériaux pour le stockage et la conversion de l'énergie Matériaux pour la préservation du patrimoine Ces compétences lui permettent de proposer des solutions innovantes, voire des ruptures technologiques, sur des problématiques transversales et fédératrices nécessitant des matériaux structurels, fonctionnels ou stimulables.",
+          "retrievedAt": "2026-09-07T19:35:38.259Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1231-4",
+          "url": "https://lppi.cyu.fr/",
+          "excerpt": "Aujourd’hui cette démarche est principalement appliquée aux problématiques de stockage et conversion de l’énergie, à la préservation et la restauration du patrimoine matériel et, plus récemment, aux matériaux pour la santé.",
+          "retrievedAt": "2026-09-07T19:35:38.259Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1231-5",
+          "url": "https://lppi.cyu.fr/",
+          "excerpt": "Parallèlement, le LPPI est un des membres fondateurs de la Structure Fédérative « Institut des Matériaux » (I-Mat) avec trois autres laboratoires de l’université ( ERRMECe - Biologie, L2MGC - Génie Civil et GEC - Géo-science).",
+          "retrievedAt": "2026-09-07T19:35:38.259Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1231-6",
+          "url": "https://lppi.cyu.fr/",
+          "excerpt": "Laboratoire International Associé (LIA): Depuis un dizaine d’année, le LPPI (CY Cergy Paris Université) et le SensorLab (University of the Western Cape/UWC, Afrique du Sud) ont développé des projets de recherche conjoints dans le domaine des matériaux polymères et de l’électrochimie.",
+          "retrievedAt": "2026-09-07T19:35:38.259Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1231-7",
+          "url": "https://lppi.cyu.fr/",
+          "excerpt": "Fortes de cette collaboration privilégiée et en accord avec les strategies respectives des deux laboratoires, les deux universités ont décidé de renforcer ce partenariat scientifique en créant un Laboratoire International Associé (LIA) appelé SENERGYLAB (Sensors and Energy International Laboratory) Suivez-nous Facebook Twitter LinkedIn Bluesky Mentions Légales Accessibilité non conforme Personnalisation des cookies Visiter le campus © CY LPPI - CY Cergy Paris université 2026 5 mail Gay Lussac Neuville sur Oise 95031 Cergy-Pontoise cedex +33 01 34 25 70 50 Haut de page https://lppi.",
+          "retrievedAt": "2026-09-07T19:35:38.259Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:36:17.803Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1232": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.icmmo.universite-paris-saclay.fr/fr/perso/giang-vo-thanh/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.icmmo.universite-paris-saclay.fr/fr/perso/giang-vo-thanh/: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:36:17.803Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1233": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.ism.u-bordeaux.fr/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.ism.u-bordeaux.fr/: fetch failed"
+      ],
+      "updatedAt": "2026-09-07T19:36:17.803Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1234": {
       "overview": "pending",
