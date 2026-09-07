@@ -3347,7 +3347,8 @@
         "vp-1372",
         "vp-1373"
       ],
-      "status": "pending"
+      "status": "in_progress",
+      "startedAt": "2026-09-07T19:48:16.592Z"
     },
     {
       "number": 69,
@@ -79880,204 +79881,762 @@
       "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1354": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://experts.griffith.edu.au/7133-hai-phung"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:49:23.376Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1355": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://profiles.uts.edu.au/Quan.Vuong"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1355-1",
+          "url": "https://profiles.uts.edu.au/Quan.Vuong",
+          "excerpt": "Discovery Browser Not Supported Your browser (Internet Explorer or other legacy browser) is not supported by this application.",
+          "retrievedAt": "2026-09-07T19:48:18.517Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:49:23.376Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1356": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://med.nyu.edu/faculty/chau-trinh-shevrin"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1356-1",
+          "url": "https://med.nyu.edu/faculty/chau-trinh-shevrin",
+          "excerpt": "Chau Trinh-Shevrin We use cookies and similar tools to give you the best website experience.",
+          "retrievedAt": "2026-09-07T19:48:18.957Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1356-2",
+          "url": "https://med.nyu.edu/faculty/chau-trinh-shevrin",
+          "excerpt": "Opens in a new tab Close Skip to Main Content Patient Care NYU Grossman School of Medicine NYU Grossman School of Medicine NYU Grossman Long Island School of Medicine Apply Alumni Events Give .",
+          "retrievedAt": "2026-09-07T19:48:18.957Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1356-3",
+          "url": "https://med.nyu.edu/faculty/chau-trinh-shevrin",
+          "excerpt": "Education Residency & Fellowship Programs For Incoming House Staff For Current House Staff Policies & Services PhD Degree MD/PhD Degree Postdoctoral Affairs Other Educational Programs MS in Biomedical Informatics Emergency Medical Technician Program MS in Genome Health Analysis Lerner Holistic Integrative Health Nursing Fellowship Pharmacy Residency Programs Pharmacy Technician Training Program Summer Undergraduate Research Program Surgical Technology Program WISE Program Continuing Medical Education About Us For Participants For Course Directors & Speakers Accommodations Join Our Email List .",
+          "retrievedAt": "2026-09-07T19:48:18.957Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1356-4",
+          "url": "https://med.nyu.edu/faculty/chau-trinh-shevrin",
+          "excerpt": "Education Residency & Fellowship Programs For Incoming House Staff For Current House Staff Policies & Services PhD Degree MD/PhD Degree Postdoctoral Affairs Other Educational Programs MS in Biomedical Informatics Emergency Medical Technician Program MS in Genome Health Analysis Lerner Holistic Integrative Health Nursing Fellowship Pharmacy Residency Programs Pharmacy Technician Training Program Summer Undergraduate Research Program Surgical Technology Program WISE Program Continuing Medical Education About Us For Participants For Course Directors & Speakers Accommodations Join Our Email List .",
+          "retrievedAt": "2026-09-07T19:48:18.957Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1356-5",
+          "url": "https://med.nyu.edu/faculty/chau-trinh-shevrin",
+          "excerpt": "Opens in a new tab Research Research Research News, Events & Awards Scientific Cores & Shared Resources Technology Opportunities & Ventures .",
+          "retrievedAt": "2026-09-07T19:48:18.957Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1356-6",
+          "url": "https://med.nyu.edu/faculty/chau-trinh-shevrin",
+          "excerpt": "Research Sponsored Programs Administration Regulatory & Compliance Resources Research Facilities Federal Work Study Program Vilcek Institute of Graduate Biomedical Sciences PhD Program MD/PhD Program MS in Biomedical Informatics MS in Genome Health Analysis Summer Undergraduate Research Program PhD Training Faculty Administration Postdoctoral Affairs Available Postdoc Positions Resources for Postdoctoral Fellows Professional Development Scholar to Faculty Pathway Program For Faculty & Administrators News, Events & Awards Scientific Cores & Shared Resources Technology Opportunities & Ventures .",
+          "retrievedAt": "2026-09-07T19:48:18.957Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1356-7",
+          "url": "https://med.nyu.edu/faculty/chau-trinh-shevrin",
+          "excerpt": "opment Professional Fulfillment & Wellbeing Health Technology About Us Programs Health Tech Hub Team Contact Us About Us Deans Administrative Offices Life at NYU Grossman School of Medicine Housing Life as a Medical Student Life as a Graduate Student Life as a Postdoc Why NYU Grossman School of Medicine Office of Professional Development Innovation Mentorship & Professional Development Professional Fulfillment & Wellbeing Health Technology About Us Programs Health Tech Hub Team Contact Us Search Search Education & Research Ask AI Site search Clear Search Search Search Apply Alumni Events Give .",
+          "retrievedAt": "2026-09-07T19:48:18.957Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1356-8",
+          "url": "https://med.nyu.edu/faculty/chau-trinh-shevrin",
+          "excerpt": "Opens in a new tab Contact Main content Chau Trinh-Shevrin, DrPH Professor, Department of Population Health Professor, Department of Medicine My Research Positions & Education Clinical Trials Publications Related News My Research Summary Chau Trinh-Shevrin, DrPH, is a professor in the Departments of Medicine and Population Health, where she is director of the Division of Health and Behavior as well as Vice Chair for Research.",
+          "retrievedAt": "2026-09-07T19:48:18.957Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:49:23.376Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1357": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://profiles.ucsf.edu/thuy.doan"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1357-1",
+          "url": "https://profiles.ucsf.edu/thuy.doan",
+          "excerpt": "huy Doan | UCSF Profiles University of California, San Francisco About UCSF Search UCSF UCSF Medical Center Home About Help/FAQs Search Options UC Davis UCI UCLA UCSD UCSF All UC Health USC All Everything Research Concepts Awards People &#160;&#160;&#160;UC Health People &#160;&#160;&#160;UC Davis People &#160;&#160;&#160;UCI People &#160;&#160;&#160;UCLA People &#160;&#160;&#160;UCSD People &#160;&#160;&#160;UCSF People &#160;&#160;&#160;USC People on next line to remove space between --> Find People Find Everything Login to edit your profile (add a photo, awards, links to other websites, etc.",
+          "retrievedAt": "2026-09-07T19:48:19.522Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1357-2",
+          "url": "https://profiles.ucsf.edu/thuy.doan",
+          "excerpt": ") Edit My Profile My Person List ( 0 ) Return to Top Thuy Doan, MD, PhD Title(s) Professor, Proctor Foundation School Chancellor/EVC/FAS Pronouns She/Her/Hers ORCID 0000-0003-2733-8370 vCard Download vCard Biography education and training University of Washington Ph.",
+          "retrievedAt": "2026-09-07T19:48:19.522Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1357-3",
+          "url": "https://profiles.ucsf.edu/thuy.doan",
+          "excerpt": "Research Clinical Trials Featured Content webpage Doan Lab Bibliographic publications Publications listed below are automatically derived from MEDLINE/PubMed and other sources, which might result in incorrect or missing publications.",
+          "retrievedAt": "2026-09-07T19:48:19.522Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1357-4",
+          "url": "https://profiles.ucsf.edu/thuy.doan",
+          "excerpt": "Researchers can login to make corrections and additions, or contact us for help .",
+          "retrievedAt": "2026-09-07T19:48:19.522Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1357-5",
+          "url": "https://profiles.ucsf.edu/thuy.doan",
+          "excerpt": "Newest | Oldest | Most Cited | Most Discussed | Timeline | Field Summary | Plain Text Altmetrics Details PMC Citations indicate the number of times the publication was cited by articles in PubMed Central, and the Altmetric score represents citations in news articles and social media.",
+          "retrievedAt": "2026-09-07T19:48:19.522Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1357-6",
+          "url": "https://profiles.ucsf.edu/thuy.doan",
+          "excerpt": "(Note that publications are often cited in additional ways that are not shown here.",
+          "retrievedAt": "2026-09-07T19:48:19.522Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1357-7",
+          "url": "https://profiles.ucsf.edu/thuy.doan",
+          "excerpt": ") Fields are based on how the National Library of Medicine (NLM) classifies the publication's journal and might not represent the specific topic of the publication.",
+          "retrievedAt": "2026-09-07T19:48:19.522Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1357-8",
+          "url": "https://profiles.ucsf.edu/thuy.doan",
+          "excerpt": "Translation tags are based on the publication type and the MeSH terms NLM assigns to the publication.",
+          "retrievedAt": "2026-09-07T19:48:19.522Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:49:23.376Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1358": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.uclahealth.org/providers/steven-huy-han"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1358-1",
+          "url": "https://www.uclahealth.org/providers/steven-huy-han",
+          "excerpt": "Han, MD - Transplant Hepatology - Pfleger Liver Institute | UCLA Health Skip to main content Explore links (header) { leftIsLimited = ($el.",
+          "retrievedAt": "2026-09-07T19:48:20.130Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1358-2",
+          "url": "https://www.uclahealth.org/providers/steven-huy-han",
+          "excerpt": "left) Explore UCLA Health UCLA Health Home About Us Cancer Center Hospitals & Clinics School of Medicine Academic Departments News & Insights Community & Equity Refer a Patient Universal links (header) myUCLAhealth Donate Contact Us Translate English العربية 中文 Italiano 日本語 한국어 فارسی Русский Español Tiếng Việt Translate English العربية 中文 Italiano 日本語 한국어 فارسی Русский Español Tiếng Việt Search Search Try looking up a doctor, a clinic location, or information about a condition/treatment.",
+          "retrievedAt": "2026-09-07T19:48:20.130Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1358-3",
+          "url": "https://www.uclahealth.org/providers/steven-huy-han",
+          "excerpt": "mediate Care Primary Care Pediatric Care Cancer Care Surgical Centers Imaging/Radiology Hospitals All Locations Discover About UCLA Health News & Insights Patient Stories Events Calendar Donate to UCLA Health Work at UCLA Health For Health Care Professionals Connect with UCLA Health Explore links (mobile) Explore UCLA Health UCLA Health Home About Us Cancer Center Hospitals & Clinics School of Medicine Academic Departments News & Insights Community & Equity Refer a Patient Universal links (mobile) myUCLAhealth Donate Contact Us Breadcrumb Home Physicians & Healthcare Professionals Steven-Huy B.",
+          "retrievedAt": "2026-09-07T19:48:20.130Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1358-4",
+          "url": "https://www.uclahealth.org/providers/steven-huy-han",
+          "excerpt": "Han, MD Transplant Hepatology Pfleger Liver Institute | 100 Medical Plaza, Suite 700 Los Angeles , CA 90095 US 310-825-6078 Request an Appointment What insurance is accepted?",
+          "retrievedAt": "2026-09-07T19:48:20.130Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1358-5",
+          "url": "https://www.uclahealth.org/providers/steven-huy-han",
+          "excerpt": "Jump to: Jump to: About Locations Medical Services Research Insurance About Additional Contact Info: 310-794-7788 (Asian Liver Program) Philip L.",
+          "retrievedAt": "2026-09-07T19:48:20.130Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1358-6",
+          "url": "https://www.uclahealth.org/providers/steven-huy-han",
+          "excerpt": "Palumbo Chair in Clinical Hepatology Program Director, Transplant Hepatology Fellowship Director, Hepatology Clinical Research Center Director, UCLA Asian Liver Center Dr.",
+          "retrievedAt": "2026-09-07T19:48:20.130Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1358-7",
+          "url": "https://www.uclahealth.org/providers/steven-huy-han",
+          "excerpt": "Han received his undergraduate degree in biochemistry from the University of California, Berkeley and then attended medical school at Albany Medical College in Albany, New York where he received his MD degree.",
+          "retrievedAt": "2026-09-07T19:48:20.130Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1358-8",
+          "url": "https://www.uclahealth.org/providers/steven-huy-han",
+          "excerpt": "Following a residency in internal medicine at Santa Clara Valley Medical Center and Stanford University, Dr.",
+          "retrievedAt": "2026-09-07T19:48:20.130Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:49:23.376Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1359": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://healthsci.mcmaster.ca/fammed/people/faculty-directory"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://healthsci.mcmaster.ca/fammed/people/faculty-directory: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:49:23.376Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1360": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://directory.uthscsa.edu/academics/profile/phungt"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://directory.uthscsa.edu/academics/profile/phungt: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:49:23.376Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1361": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.uni-saarland.de"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1361-1",
+          "url": "https://www.uni-saarland.de",
+          "excerpt": "hüler Presse Unternehmen Alumni Uni-Beschäftigte Direkt zu Studienangebot Bewerben & Einschreiben Studienorganisation Moodle Unisport Gasthörerstudium Stellenausschreibungen Intranet (SharePoint) Fakultäten Alle Fakultäten Fakultät HW Fakultät M Fakultät MI Fakultät NT Fakultät P Fakultät R de en fr Studium Studium Studienangebot Bachelor Master Lehramt Staatsprüfung Weiterbildendes Studium Abschlüsse und Fächergruppen Internationale Programme Zertifikate Bewerben & Einschreiben Grundständiges Studium Masterstudium Internationale Bewerber Andere Bewerbergruppen Einschreibung NC-Grenzwerte Mehr.",
+          "retrievedAt": "2026-09-07T19:48:22.399Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1361-2",
+          "url": "https://www.uni-saarland.de",
+          "excerpt": "Studienorganisation Start ins Studium Vorlesungsverzeichnis Semestertermine Beiträge und Gebühren Studienfinanzierung Alltag im Studium Mehr.",
+          "retrievedAt": "2026-09-07T19:48:22.399Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1361-3",
+          "url": "https://www.uni-saarland.de",
+          "excerpt": "Beratung & Hilfe Zentrale Studienberatung Studierendensekretariat Studierenden-Service-Center Studienfachberatung Internationale Beratungsstellen Mentoringangebote Weitere Beratungsstellen Studienorientierung Hilfe bei der Studienwahl Study Finder Erfahrungsberichte Schülerangebote Studieren im Saarland Flyer und Broschüren Future Students Club Nach dem Studium Karrierestart Netzwerke Weiterbildung Stellensuche Beratungsangebote Unser Campus Essen und Trinken Läden und Dienstleistungen Freizeit gestalten Engagiert euch!",
+          "retrievedAt": "2026-09-07T19:48:22.399Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1361-4",
+          "url": "https://www.uni-saarland.de",
+          "excerpt": "len Internationales Profil Internationalisierung Kooperationen Einrichtungen und Angebote Studium und Promotion international Forschung international Internationalität in Zahlen Schwerpunkt Europa Studiengänge und Zertifikate Frankreich im Fokus Erasmus+ Transform4Europe Universität der Großregion Forschung Studium Studienangebot Bachelor Master Lehramt Staatsprüfung Weiterbildendes Studium Abschlüsse und Fächergruppen Internationale Programme Zertifikate Bewerben & Einschreiben Grundständiges Studium Masterstudium Internationale Bewerber Andere Bewerbergruppen Einschreibung NC-Grenzwerte Mehr.",
+          "retrievedAt": "2026-09-07T19:48:22.399Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1361-5",
+          "url": "https://www.uni-saarland.de",
+          "excerpt": "Studienorganisation Start ins Studium Vorlesungsverzeichnis Semestertermine Beiträge und Gebühren Studienfinanzierung Alltag im Studium Mehr.",
+          "retrievedAt": "2026-09-07T19:48:22.399Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1361-6",
+          "url": "https://www.uni-saarland.de",
+          "excerpt": "Beratung & Hilfe Zentrale Studienberatung Studierendensekretariat Studierenden-Service-Center Studienfachberatung Internationale Beratungsstellen Mentoringangebote Weitere Beratungsstellen Studienorientierung Hilfe bei der Studienwahl Study Finder Erfahrungsberichte Schülerangebote Studieren im Saarland Flyer und Broschüren Future Students Club Nach dem Studium Karrierestart Netzwerke Weiterbildung Stellensuche Beratungsangebote Unser Campus Essen und Trinken Läden und Dienstleistungen Freizeit gestalten Engagiert euch!",
+          "retrievedAt": "2026-09-07T19:48:22.399Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1361-7",
+          "url": "https://www.uni-saarland.de",
+          "excerpt": "n Internationales Profil Internationalisierung Kooperationen Einrichtungen und Angebote Studium und Promotion international Forschung international Internationalität in Zahlen Schwerpunkt Europa Studiengänge und Zertifikate Frankreich im Fokus Erasmus+ Transform4Europe Universität der Großregion Universität Studium Studienangebot Bachelor Master Lehramt Staatsprüfung Weiterbildendes Studium Abschlüsse und Fächergruppen Internationale Programme Zertifikate Bewerben & Einschreiben Grundständiges Studium Masterstudium Internationale Bewerber Andere Bewerbergruppen Einschreibung NC-Grenzwerte Mehr.",
+          "retrievedAt": "2026-09-07T19:48:22.399Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1361-8",
+          "url": "https://www.uni-saarland.de",
+          "excerpt": "Studienorganisation Start ins Studium Vorlesungsverzeichnis Semestertermine Beiträge und Gebühren Studienfinanzierung Alltag im Studium Mehr.",
+          "retrievedAt": "2026-09-07T19:48:22.399Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:49:23.376Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1362": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.usherbrooke.ca/recherche/specialistes/details/le-mai.tu"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1362-1",
+          "url": "https://www.usherbrooke.ca/recherche/specialistes/details/le-mai.tu",
+          "excerpt": "Détails - Recherche - Université de Sherbrooke Aller au contenu Pour une expérience de navigation optimale, veuillez activer Javascript sur votre navigateur.",
+          "retrievedAt": "2026-09-07T19:48:23.527Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1362-2",
+          "url": "https://www.usherbrooke.ca/recherche/specialistes/details/le-mai.tu",
+          "excerpt": "de bibliothèque Mon accès Mon profil UdeS Demande d’aide informatique (Casius) Impression mobile (SIMUS) Genote Microsoft 365 Moodle Tous les services informatiques Changer l'avenir Emplois monPortail Bottin Découvrir l' UdeS Programmes et admission La Recherche Partenariats Communauté étudiante Personnel de L' UdeS Recherche Accueil La recherche à l&#039;UdeS Nos thèmes fédérateurs Notre caractère distinctif Grandes Conférences de l&#039;UdeS Expertise reconnue Regroupements d&#039;excellence Le soutien que nous offrons Carrières en recherche Étudier en recherche Pourquoi choisir l&#039;UdeS?",
+          "retrievedAt": "2026-09-07T19:48:23.527Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1362-3",
+          "url": "https://www.usherbrooke.ca/recherche/specialistes/details/le-mai.tu",
+          "excerpt": "ues (CITE) Centre de calcul scientifique Centre de Collaboration MiQro Innovation (C2MI) Centre de mise à l&#039;échelle Centre de technologies avancées (CTA) BRP-UdeS Complexe de recherche multiéchelle en hydrologie, hydraulique et environnement Laboratoire de recherche sur la performance, l&#039;hydratation et la thermorégulation Laboratoire intégré de recherche en valorisation des matériaux et de structures innovatrices durables Parc solaire, le plus grand au Canada Station SIRENE Plateformes de recherche Grandes Conférences de l&#039;UdeS Conférences institutionnelles Conférences Monique-F.",
+          "retrievedAt": "2026-09-07T19:48:23.527Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1362-4",
+          "url": "https://www.usherbrooke.ca/recherche/specialistes/details/le-mai.tu",
+          "excerpt": "interdisciplinaire d&#039;innovation technologique (3IT) Institut quantique (IQ) Institut universitaire de première ligne en santé et services sociaux (IUPLSSS) Regroupements internationaux Centre de recherche international CNRS (IRC) Laboratoires de recherche internationaux (IRL) Pôle universitaire de santé numérique de l’Estrie Le soutien que nous offrons Trouver du financement Créer une plateforme de recherche Valoriser la propriété intellectuelle Bénéficier du programme de mentorat Encadrer des étudiants en recherche Carrières en recherche Étudier en recherche Pourquoi choisir l&#039;UdeS?",
+          "retrievedAt": "2026-09-07T19:48:23.527Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1362-5",
+          "url": "https://www.usherbrooke.ca/recherche/specialistes/details/le-mai.tu",
+          "excerpt": "e candidature Conclure une entente d&#039;encadrement Conseils pour trouver un directeur de recherche Tableau de référence Conclure un accord pour un stage postdoctoral Nous recrutons en recherche Projets de recherche Personnes participantes à des projets de recherche Implantation et efficacité d&#039;un programme de prévention de l&#039;agression sexuelle Recherche clinique sur le spectre autistique et le syndrome du X fragile Étude sur les douleurs au dos Étude sur l&#039;activité physique dans la prévention du diabète Étude sur le diabète de type 2 : exposition au froid ou activité physique?",
+          "retrievedAt": "2026-09-07T19:48:23.527Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1362-6",
+          "url": "https://www.usherbrooke.ca/recherche/specialistes/details/le-mai.tu",
+          "excerpt": "Étude sur la violence sexuelle envers les hommes La gouvernance Vice-rectorat à la recherche Valeurs fondamentales Objectifs stratégiques Milieu inclusif et bienveillant Institutions affiliées Responsabilités Conduite responsable en recherche Équité, diversité et inclusion Politiques et directives Conseil de la recherche Communiquez avec nous Vous êtes ici Recherche Répertoire des spécialistes Spécialiste Une erreur est survenue Une erreur est survenue, veuillez réessayer plus tard.",
+          "retrievedAt": "2026-09-07T19:48:23.527Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1362-7",
+          "url": "https://www.usherbrooke.ca/recherche/specialistes/details/le-mai.tu",
+          "excerpt": "ssion Recherche Communauté étudiante Personnel de l’UdeS International Formation continue UTA FACULTÉS, CENTRES ET INSTITUTS Droit École de gestion Éducation Génie Lettres et sciences humaines Médecine et sciences de la santé Sciences Sciences de l'activité physique Centres et instituts SERVICES Bibliothèques, archives et gestion de l'information Centre culturel Centre sportif La Fondation Ressources financières Ressources humaines Stages et développement professionnel Tous les services MÉDIAS Relations médias Actualités et événements Répertoire des médias sociaux CAMPUS PRINCIPAL : 2500, boul.",
+          "retrievedAt": "2026-09-07T19:48:23.527Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1362-8",
+          "url": "https://www.usherbrooke.ca/recherche/specialistes/details/le-mai.tu",
+          "excerpt": "de l'Université, Sherbrooke (Québec) J1K 2R1, 819 821&#8209;8000 CAMPUS DE LA SANTÉ : 3001, 12 e Avenue Nord, Sherbrooke (Québec) J1H 5N4, 819 821&#8209;8000 CAMPUS DE LONGUEUIL : 150, place Charles&#8209;Le Moyne, C.",
+          "retrievedAt": "2026-09-07T19:48:23.527Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:49:23.376Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1363": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://psychology.columbian.gwu.edu/huynh-nhu-mimi-le"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1363-1",
+          "url": "https://psychology.columbian.gwu.edu/huynh-nhu-mimi-le",
+          "excerpt": "Research Undergraduate Student Research Research Funding People Core Faculty Affiliated Faculty Doctoral Students & Postdoctoral Fellows Faculty Emeriti The Meltzer Center About News & Events Colloquium Series Alumni Outcomes Testimonials Support Psychology Contact Us Undergraduate BA in Psychological & Brain Sciences BS in Psychological & Brain Sciences BS in Cognitive Neuroscience Minor Combined BA/MA Student Resources PBS Undergraduate Events Graduate MS in Applied Psychology PhD in Applied Social Psychology PhD in Clinical Psychology PhD in Cognitive Neuroscience Cognitive Neuroscience Ph.",
+          "retrievedAt": "2026-09-07T19:48:23.895Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1363-2",
+          "url": "https://psychology.columbian.gwu.edu/huynh-nhu-mimi-le",
+          "excerpt": "Alumni Testimonials Student Resources Research Undergraduate Student Research Research Funding People Core Faculty Affiliated Faculty Doctoral Students & Postdoctoral Fellows Faculty Emeriti The Meltzer Center Home Le, Huynh-Nhu (Mimi) Huynh-Nhu (Mimi) Le Huynh-Nhu (Mimi) Le Professor, Clinical/Community Psychology Core Contact: Email: Huynh-Nhu (Mimi) Le Office Phone: (202) 994-6808 Mothers and Babies Lab 2013 H Street Room 519 Washington DC 20006 .",
+          "retrievedAt": "2026-09-07T19:48:23.895Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1363-3",
+          "url": "https://psychology.columbian.gwu.edu/huynh-nhu-mimi-le",
+          "excerpt": "Research Education Research The ultimate goal of my research program is to develop and evaluate interventions which will prevent perinatal depression among low-income Spanish- and English-speaking pregnant women and new mothers.",
+          "retrievedAt": "2026-09-07T19:48:23.895Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1363-4",
+          "url": "https://psychology.columbian.gwu.edu/huynh-nhu-mimi-le",
+          "excerpt": "My current work focuses on cultural adaptation and evaluation of perinatal depression preventive interventions for low-income ethnic minority populations; feasibility of integrating mental health screening and interventions in various primary care settings; US and international interests.",
+          "retrievedAt": "2026-09-07T19:48:23.895Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1363-5",
+          "url": "https://psychology.columbian.gwu.edu/huynh-nhu-mimi-le",
+          "excerpt": "For more information, visit the Mothers and Babies: Mood and Health Research Program webpage .",
+          "retrievedAt": "2026-09-07T19:48:23.895Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1363-6",
+          "url": "https://psychology.columbian.gwu.edu/huynh-nhu-mimi-le",
+          "excerpt": "1997, University of Illinois at Urbana-Champaign Department of Psychological & Brain Sciences Columbian College of Arts & Sciences 2013 H St.",
+          "retrievedAt": "2026-09-07T19:48:23.895Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:49:23.376Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1364": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.iric.ca/en/research/principal-investigators/vincent-trinh"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.iric.ca/en/research/principal-investigators/vincent-trinh: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:49:23.376Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1365": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.uantwerpen.be/en/staff/xuanbich-trinh/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1365-1",
+          "url": "https://www.uantwerpen.be/en/staff/xuanbich-trinh/",
+          "excerpt": "About Xuan Bich Trinh | Xuan Bich Trinh | University of Antwerp menu search content Study Research Life in Antwerp About UAntwerp Library Calendar Jobs Contact search Login Students Staff Online preregistration Webadmin nl en Xuan Bich Trinh unpaid guest prof.",
+          "retrievedAt": "2026-09-07T19:48:26.244Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1365-2",
+          "url": "https://www.uantwerpen.be/en/staff/xuanbich-trinh/",
+          "excerpt": "Research Publications About Xuan Bich Trinh Contact Xuan Bich Trinh Department Antwerp Surgical Training, Anatomy and Research Centre Statute & functions Bijzonder academisch personeel unpaid guest prof.",
+          "retrievedAt": "2026-09-07T19:48:26.244Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1365-3",
+          "url": "https://www.uantwerpen.be/en/staff/xuanbich-trinh/",
+          "excerpt": "© UAntwerpen Privacy policy Cookie policy Terms of use Cookie consent The University of Antwerp website uses cookies and similar technologies to ensure the basic functionality of the site and for statistical and optimisation purposes.",
+          "retrievedAt": "2026-09-07T19:48:26.244Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1365-4",
+          "url": "https://www.uantwerpen.be/en/staff/xuanbich-trinh/",
+          "excerpt": "It also uses cookies to display content such as YouTube videos and for marketing purposes.",
+          "retrievedAt": "2026-09-07T19:48:26.244Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1365-5",
+          "url": "https://www.uantwerpen.be/en/staff/xuanbich-trinh/",
+          "excerpt": "This last category consists of tracking cookies: these make it possible for your online behaviour to be tracked.",
+          "retrievedAt": "2026-09-07T19:48:26.244Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1365-6",
+          "url": "https://www.uantwerpen.be/en/staff/xuanbich-trinh/",
+          "excerpt": "Also read our Privacy statement Manage your personal preferences Accept all cookies Cookie prreferences Strictly necessary cookies They are necessary for the proper functioning of the website and can not be switched off.",
+          "retrievedAt": "2026-09-07T19:48:26.244Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1365-7",
+          "url": "https://www.uantwerpen.be/en/staff/xuanbich-trinh/",
+          "excerpt": "They are generally defined only as a result of actions you carry out and that enable you to make use of the services we offer (definition of your privacy preferences, connection, filling in forms, etc.",
+          "retrievedAt": "2026-09-07T19:48:26.244Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1365-8",
+          "url": "https://www.uantwerpen.be/en/staff/xuanbich-trinh/",
+          "excerpt": "You can configure your browser so that these cookies are blocked or you are warned about these cookies, but then some parts of the site will no longer work.",
+          "retrievedAt": "2026-09-07T19:48:26.244Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:49:23.376Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1366": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://faculty.mdanderson.org/profiles/hung_doan.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1366-1",
+          "url": "https://faculty.mdanderson.org/profiles/hung_doan.html",
+          "excerpt": "Doan | UT MD Anderson Skip to Content My Chart Log in to our secure, personalized website to manage your care (formerly myMDAnderson).",
+          "retrievedAt": "2026-09-07T19:48:26.850Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1366-2",
+          "url": "https://faculty.mdanderson.org/profiles/hung_doan.html",
+          "excerpt": "Request an Appointment Request an Appointment If you are ready to make an appointment, select a button on the right.",
+          "retrievedAt": "2026-09-07T19:48:26.850Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1366-3",
+          "url": "https://faculty.mdanderson.org/profiles/hung_doan.html",
+          "excerpt": "If you have questions about UT MD Anderson’s appointment process, our information page may be the best place to start.",
+          "retrievedAt": "2026-09-07T19:48:26.850Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1366-4",
+          "url": "https://faculty.mdanderson.org/profiles/hung_doan.html",
+          "excerpt": "re Centers & Clinics Emotional & Physical Effects Patient Support Clinical Trials Supporting a Loved One Supporting a Loved One Supporting a Loved One Home Caregiver Roles & Challenges Children and Teens Taking Care of Yourself Helping a UT MD Anderson Patient Dealing with Loss Life After Cancer Life After Cancer Life After Cancer Home Follow-up Care After Cancer Treatment Long-Term Effects of Cancer Social & Emotional Impacts of Cancer Legal & Financial Impacts of Cancer Survivorship Week Request an Appointment Current Patients Find information and resources for current and returning patients.",
+          "retrievedAt": "2026-09-07T19:48:26.850Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1366-5",
+          "url": "https://faculty.mdanderson.org/profiles/hung_doan.html",
+          "excerpt": "Clinical Trials Learn about clinical trials at UT MD Anderson and search our database for open studies.",
+          "retrievedAt": "2026-09-07T19:48:26.850Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1366-6",
+          "url": "https://faculty.mdanderson.org/profiles/hung_doan.html",
+          "excerpt": "mily History Home Genetic Testing Hereditary Cancer Syndromes Genetic Counseling and Testing FAQs Cancer Screenings Cancer Screenings Cancer Screenings Home Mammograms & Breast Cancer Screening Cervical Cancer Screening Colorectal Cancer Screening Endometrial Cancer Screening Liver Cancer Screening Lung Cancer Screening Mobile Mammography Ovarian Cancer Screening Prostate Cancer Screening Skin Cancer Screening Women&#39;s Cancer Screening Men&#39;s Cancer Screening Cancer Prevention Center The Lyda Hill Cancer Prevention Center provides cancer risk assessment, screening and diagnostic services.",
+          "retrievedAt": "2026-09-07T19:48:26.850Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1366-7",
+          "url": "https://faculty.mdanderson.org/profiles/hung_doan.html",
+          "excerpt": "on Relations Volunteer Volunteer Volunteer Home Why Volunteer On-Site Volunteers Volunteer Endowment Patient Experience Teen Volunteer Leadership Program Children&#39;s Cancer Hospital Councils Other Ways to Help Other Ways to Help Other Ways to Help Home Give Blood Shop UT MD Anderson Children&#39;s Art Project Donate Goods or Services Attend Events Cord Blood Bank Corporate Alliances Corporate Alliances Corporate Alliances Home Current Alliances Join the Campaign to End Cancer Help us celebrate and fuel the groundbreaking innovations and transformative advancements that define UT MD Anderson.",
+          "retrievedAt": "2026-09-07T19:48:26.850Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1366-8",
+          "url": "https://faculty.mdanderson.org/profiles/hung_doan.html",
+          "excerpt": "For Physicians Refer a Patient Refer a Patient Refer a Patient Home Health Care Provider Resource Center Referring Provider Team Insurance Information International Referrals myMDAnderson for Physicians Second Opinion Pathology Clinical Trials Clinical Trials Clinical Trials Home Clinical Tools & Resources Clinical Tools & Resources Clinical Tools & Resources Home Clinical Calculators Clinical Practice Algorithms myMDAnderson for Physicians Our personalized portal helps you refer your patients and communicate with their UT MD Anderson care team.",
+          "retrievedAt": "2026-09-07T19:48:26.850Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:49:23.376Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1367": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://connects.catalyst.harvard.edu/Profiles/display/Person/26859"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://connects.catalyst.harvard.edu/Profiles/display/Person/26859: HTTP 410"
+      ],
+      "updatedAt": "2026-09-07T19:49:23.376Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1368": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://medicine.duke.edu/news/memoriam-phuong-doan-md"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://medicine.duke.edu/news/memoriam-phuong-doan-md: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:49:23.376Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1369": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.niid.go.jp/niid/en/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.niid.go.jp/niid/en/: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:49:23.376Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1370": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://medecine.umontreal.ca/communaute/les-professeurs-et-chercheurs/profil/Nguyen_Quoc_Dinh/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://medecine.umontreal.ca/communaute/les-professeurs-et-chercheurs/profil/Nguyen_Quoc_Dinh/: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:49:23.376Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1371": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.flinders.edu.au/people/minh-son.to"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.flinders.edu.au/people/minh-son.to: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:49:23.376Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1372": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://uit.no/ansatte/person?p_document_id=783515"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1372-1",
+          "url": "https://uit.no/ansatte/person?p_document_id=783515",
+          "excerpt": "Studentkort | UiT Gå til hovedinnhold UiT Norges arktiske universitet Søk Meny Studier Forskning Universitetsbiblioteket Universitetsmuseet Arrangementer (Tavla) Om UiT Kontakt oss Si ifra!",
+          "retrievedAt": "2026-09-07T19:48:34.117Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1372-2",
+          "url": "https://uit.no/ansatte/person?p_document_id=783515",
+          "excerpt": "elet Studentparlamentet Individuell tilrettelegging HMS / HR-portalen Arrangementer (Tavla) Beredskap og sikkerhet For ansatte Intranett TOPdesk serviceportal Velkommen som ansatt Velkommen som leder Personalhåndbok ARBEIDSSTØTTE: Økonomi og innkjøp Utdanning Personalområdet Kommunikasjon, grafisk og studentrekruttering Rekruttering av ansatte Bygg, eiendom og rom HMS-håndbok Canvas Kvalitetssystem for utdanning Parkering Møter og referater IT brukerstøtte / Orakelet Interne kurs E-post Legg visittkort i kontaktlisten din (vcard) --> Studentkort Om Forskning og undervisning Akutt hjelp Si ifra!",
+          "retrievedAt": "2026-09-07T19:48:34.117Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:49:23.376Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1373": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://profiles.ucsf.edu/nghiem.ha"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1373-1",
+          "url": "https://profiles.ucsf.edu/nghiem.ha",
+          "excerpt": "ghiem Ha | UCSF Profiles University of California, San Francisco About UCSF Search UCSF UCSF Medical Center Home About Help/FAQs Search Options UC Davis UCI UCLA UCSD UCSF All UC Health USC All Everything Research Concepts Awards People &#160;&#160;&#160;UC Health People &#160;&#160;&#160;UC Davis People &#160;&#160;&#160;UCI People &#160;&#160;&#160;UCLA People &#160;&#160;&#160;UCSD People &#160;&#160;&#160;UCSF People &#160;&#160;&#160;USC People on next line to remove space between --> Find People Find Everything Login to edit your profile (add a photo, awards, links to other websites, etc.",
+          "retrievedAt": "2026-09-07T19:48:34.497Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1373-2",
+          "url": "https://profiles.ucsf.edu/nghiem.ha",
+          "excerpt": "e(s) Assistant Professor, Medicine School School of Medicine Address 513 Parnassus Avenue MSB, #357 San Francisco CA 94143 Pronouns He/Him/His ORCID 0000-0002-1980-1807 vCard Download vCard Biography education and training University of California, San Francisco Fellowship 2024 Advanced/Transplant Hepatology University of California, San Francisco Fellowship 2023 Gastroenterology University of California, San Francisco 2021 Diversity, Equity, and Inclusion Champion Training University of California, San Francisco Internship and Residency 2019 Internal Medicine University of California, Davis M.",
+          "retrievedAt": "2026-09-07T19:48:34.497Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1373-3",
+          "url": "https://profiles.ucsf.edu/nghiem.ha",
+          "excerpt": "2016 Clinical Research awards and honors American College of Gastroenterology 2026 Early Career Leadership Award University of California, San Francisco 2025 Patricia Cornett Subspecialty Faculty Teaching Award American Association for the Study of Liver Diseases & American Gastroenterological Association 2024 Academic Skill Workshop Scholar American Association for the Study of Liver Diseases 2023 Anna S.",
+          "retrievedAt": "2026-09-07T19:48:34.497Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1373-4",
+          "url": "https://profiles.ucsf.edu/nghiem.ha",
+          "excerpt": "Research Foundation 2016 Clinical Research Award Johnson & Johnson 2015 Tylenol Future Care Award University of California, Davis 2015 Health System Leadership Council Award University of California, Davis Clinical and Translational Science Center 2015 NIH T32 Predoctoral Research Fellow University of California, Davis 2015 Gold Humanism Honor Society University of California, Davis 2015 Alpha Omega Alpha, Junior Inductee Bibliographic publications Publications listed below are automatically derived from MEDLINE/PubMed and other sources, which might result in incorrect or missing publications.",
+          "retrievedAt": "2026-09-07T19:48:34.497Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1373-5",
+          "url": "https://profiles.ucsf.edu/nghiem.ha",
+          "excerpt": "Researchers can login to make corrections and additions, or contact us for help .",
+          "retrievedAt": "2026-09-07T19:48:34.497Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1373-6",
+          "url": "https://profiles.ucsf.edu/nghiem.ha",
+          "excerpt": "Newest | Oldest | Most Cited | Most Discussed | Timeline | Field Summary | Plain Text Altmetrics Details PMC Citations indicate the number of times the publication was cited by articles in PubMed Central, and the Altmetric score represents citations in news articles and social media.",
+          "retrievedAt": "2026-09-07T19:48:34.497Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1373-7",
+          "url": "https://profiles.ucsf.edu/nghiem.ha",
+          "excerpt": "(Note that publications are often cited in additional ways that are not shown here.",
+          "retrievedAt": "2026-09-07T19:48:34.497Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1373-8",
+          "url": "https://profiles.ucsf.edu/nghiem.ha",
+          "excerpt": ") Fields are based on how the National Library of Medicine (NLM) classifies the publication's journal and might not represent the specific topic of the publication.",
+          "retrievedAt": "2026-09-07T19:48:34.497Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:49:23.376Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1374": {
       "overview": "pending",
