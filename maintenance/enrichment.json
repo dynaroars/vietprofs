@@ -2564,7 +2564,8 @@
         "vp-0781",
         "vp-0782"
       ],
-      "status": "pending"
+      "status": "in_progress",
+      "startedAt": "2026-09-07T18:47:19.806Z"
     },
     {
       "number": 40,
@@ -50403,208 +50404,1123 @@
       "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0763": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://cs.ccu.edu.tw/p/404-1094-7009.php?Lang=en",
         "https://sites.google.com/view/nvlinh"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0763-1",
+          "url": "https://cs.ccu.edu.tw/p/404-1094-7009.php?Lang=en",
+          "excerpt": "ASSISTANT PROFESSOR Jump to the main content block MENU Burger Button HOME CCU 中文版 Sitemap Burger Button INTRODUCTION NEWS INTERNATIONAL STUDENT MEMBER Professor Staff LABORATORY COURSE DOWNLOAD Home MEMBER MEMBER PROFESSOR ASSOCIATE PROFESSOR ASSISTANT PROFESSOR RETIRED PROFESSOR ::: ASSISTANT PROFESSOR Assistant_Professor Name: Li-Hsuan Chen Academic degree: Ph.",
+          "retrievedAt": "2026-09-07T18:47:21.447Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0763-2",
+          "url": "https://cs.ccu.edu.tw/p/404-1094-7009.php?Lang=en",
+          "excerpt": "in Computer Science and Information Engineering, National Chung Cheng University E-mail: lhchen(at)cs.",
+          "retrievedAt": "2026-09-07T18:47:21.447Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0763-3",
+          "url": "https://cs.ccu.edu.tw/p/404-1094-7009.php?Lang=en",
+          "excerpt": "tw Expertise: Algorithm Analysis, Graph Algorithms, Approximation Algorithms, Fixed-Parameter Algorithms Office: EA507 Extension: 33109 Career Mentor Name: Pei-Yi Lu Academic degree: Ph.",
+          "retrievedAt": "2026-09-07T18:47:21.447Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0763-4",
+          "url": "https://cs.ccu.edu.tw/p/404-1094-7009.php?Lang=en",
+          "excerpt": "in Computer Science and Engineering, National Yang Ming Chiao Tung University E-mail: peggylu(at)cs.",
+          "retrievedAt": "2026-09-07T18:47:21.447Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0763-5",
+          "url": "https://cs.ccu.edu.tw/p/404-1094-7009.php?Lang=en",
+          "excerpt": "tw Expertise: Computer Vision, Image Processing, Artificial Intelligence, Big Data Analytics Office: EA512 Extension: 33145 Name: Chih-Hang Wang Academic degree: Ph.",
+          "retrievedAt": "2026-09-07T18:47:21.447Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0763-6",
+          "url": "https://cs.ccu.edu.tw/p/404-1094-7009.php?Lang=en",
+          "excerpt": "tw Expertise: AI and Social Internet of Things, Next-Generation Wireless Networks, Mobile Edge Computing, Metaverse Multimedia Networks, Algorithm Design Office:313 Extension:33106 Name: Tsung-Wei Chiang Academic degree: Ph.",
+          "retrievedAt": "2026-09-07T18:47:21.447Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0763-7",
+          "url": "https://cs.ccu.edu.tw/p/404-1094-7009.php?Lang=en",
+          "excerpt": "in Communications Engineering, National Taiwan University E-mail: twchiang(at)ccu.",
+          "retrievedAt": "2026-09-07T18:47:21.447Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0763-8",
+          "url": "https://cs.ccu.edu.tw/p/404-1094-7009.php?Lang=en",
+          "excerpt": "tw Expertise: Wireless Communications, Machine Learning, Big Data Privacy and Security Office:311 Extension:33142 Name: Chung-Chin Shih Academic degree: Ph.",
+          "retrievedAt": "2026-09-07T18:47:21.447Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0763-9",
+          "url": "https://sites.google.com/view/nvlinh",
+          "excerpt": "esearch & Facilities Conference deadline Scholarships Scholarship Internship Accepted List How to apply CCU/CISLab Scholarship Research group Academic Visitors More Home Teaching & Awards System and Software Security Security in Wireless Cellular Networks Computer Networks AI Security Publications Funding & Projects Experience & Service Research & Facilities Conference deadline Scholarships Scholarship Internship Accepted List How to apply CCU/CISLab Scholarship Research group Academic Visitors 中文地址： 阮文齡， 國立中正大學資訊工程學系 621301 嘉義縣民雄鄉大學路一段168號 Van-Linh Nguyen (Senior Member, IEEE) received the Ph.",
+          "retrievedAt": "2026-09-07T18:47:21.638Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0763-10",
+          "url": "https://sites.google.com/view/nvlinh",
+          "excerpt": "degree in computer science and information engineering from National Chung Cheng University (CCU), Taiwan, in December 2019.",
+          "retrievedAt": "2026-09-07T18:47:21.638Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0763-11",
+          "url": "https://sites.google.com/view/nvlinh",
+          "excerpt": "He was a Postdoctoral Fellow at CCU from 2020 to 2022 before joining the Department of Computer Science and Information Engineering, CCU, as a faculty member in August 2022, where he is currently an Associate Professor and Director of the Cyber Information Security Laboratory (CISLab) .",
+          "retrievedAt": "2026-09-07T18:47:21.638Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0763-12",
+          "url": "https://sites.google.com/view/nvlinh",
+          "excerpt": "He has authored more than 70 publications and was recognized with the CCU Young Faculty Award in 2026 and was included in the Stanford/Elsevier Top 2% Scientists Worldwide List (Single Year 2025).",
+          "retrievedAt": "2026-09-07T18:47:21.638Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0763-13",
+          "url": "https://sites.google.com/view/nvlinh",
+          "excerpt": "He was the TPC chair and the leading organizer of IEEE GLOBECOM 2025 WS20, 2026 WS02.",
+          "retrievedAt": "2026-09-07T18:47:21.638Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0763-14",
+          "url": "https://sites.google.com/view/nvlinh",
+          "excerpt": "He currently serves as an Associate Editor for IEEE COMST, TGCN, COMML, and Springer Quantum Machine Intelligence.",
+          "retrievedAt": "2026-09-07T18:47:21.638Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0763-15",
+          "url": "https://sites.google.com/view/nvlinh",
+          "excerpt": "Nguyen has also served as Principal Investigator (PI) and Co-PI on several national projects funded by Taiwan’s National Science and Technology Council (NSTC), with total funding exceeding NTD 46 million.",
+          "retrievedAt": "2026-09-07T18:47:21.638Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0763-16",
+          "url": "https://sites.google.com/view/nvlinh",
+          "excerpt": "He is also a consortium partner in a CHIST-ERA project SHIELD (2025–2028) funded jointly with European partners.",
+          "retrievedAt": "2026-09-07T18:47:21.638Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:49:55.157Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0764": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.gmba.ntpu.edu.tw/web/about/about.jsp?cp_id=CP1674008146021"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0764-1",
+          "url": "https://www.gmba.ntpu.edu.tw/web/about/about.jsp?cp_id=CP1674008146021",
+          "excerpt": "Message from the Director Mission and Vision Tuition & Fees Financial Aids About ICSI Campus Life and Activities Welcome to MBA in Finance!",
+          "retrievedAt": "2026-09-07T18:47:23.179Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0764-2",
+          "url": "https://www.gmba.ntpu.edu.tw/web/about/about.jsp?cp_id=CP1674008146021",
+          "excerpt": "Message from the Director Mission and Vision Tuition & Fees Financial Aids About ICSI Campus Life and Activities Faculty Curriculum Curriculum Thesis Academic Research Ethics Education Global Citizenship Passport Dual Degree Programs International Exchange Programs Curriculum Thesis Academic Research Ethics Education Global Citizenship Passport Dual Degree Programs International Exchange Programs Admission How to Apply How to Apply Careers Resource Alumni Our Alumni Alumni Sharing Our Alumni Alumni Sharing --> Homepage About Us Welcome to MBA in Finance!",
+          "retrievedAt": "2026-09-07T18:47:23.179Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0764-3",
+          "url": "https://www.gmba.ntpu.edu.tw/web/about/about.jsp?cp_id=CP1674008146021",
+          "excerpt": "Message from the Director Mission and Vision Tuition & Fees Financial Aids About ICSI Campus Life and Activities Quang Thai Truong (Harry), Assistant Professor Name ： Quang Tha i Truong (Harry) / 張光泰 Title ： Assistant Professor Highest Degree Received ： Ph.",
+          "retrievedAt": "2026-09-07T18:47:23.179Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0764-4",
+          "url": "https://www.gmba.ntpu.edu.tw/web/about/about.jsp?cp_id=CP1674008146021",
+          "excerpt": "in Finance, National Chiao Tung University Research Fields ： Corporate Finance, ESG/CSR, Sustainable Finance, Innovation, Asset Pricing E-Mail ： thaitq@gm.",
+          "retrievedAt": "2026-09-07T18:47:23.179Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0764-5",
+          "url": "https://www.gmba.ntpu.edu.tw/web/about/about.jsp?cp_id=CP1674008146021",
+          "excerpt": "user=B1xgba8AAAAJ&hl=en Journal Editorial Services Associate Editor, SN Business & Economics , Springer Nature (Scopus-indexed) Publications Song, D.",
+          "retrievedAt": "2026-09-07T18:47:23.179Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0764-6",
+          "url": "https://www.gmba.ntpu.edu.tw/web/about/about.jsp?cp_id=CP1674008146021",
+          "excerpt": "Central Banks&rsquo; Assessments of Economic Outlook and Corporate Cash Holdings: Evidence of Strategic Motives.",
+          "retrievedAt": "2026-09-07T18:47:23.179Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0764-7",
+          "url": "https://www.gmba.ntpu.edu.tw/web/about/about.jsp?cp_id=CP1674008146021",
+          "excerpt": "Corporate Misconduct and Environmental Performance: The Role of Sustainability in Reputation Recovery.",
+          "retrievedAt": "2026-09-07T18:47:23.179Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0764-8",
+          "url": "https://www.gmba.ntpu.edu.tw/web/about/about.jsp?cp_id=CP1674008146021",
+          "excerpt": "Gender diversity in the boardroom: The role of female directors in mitigating stock price crash risk.",
+          "retrievedAt": "2026-09-07T18:47:23.179Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:49:55.157Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0765": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.me.tku.edu.tw/me/?tkumembers=tran-thanh-nhat-trung"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0765-1",
+          "url": "https://www.me.tku.edu.tw/me/?tkumembers=tran-thanh-nhat-trung",
+          "excerpt": "TRAN THANH NHAT TRUNG &#8211; 機械與機電工程學系 網站導覽 | 淡江大學首頁 | English 登入 最新消息 最新公告 課程及選課訊息 系所公告 獎助學金公告 競賽訊息 徵才資訊 其他訊息 招生資訊 大學部 碩士班 博士班 淡江報考資訊 系所簡介 系所沿革 發展策略 教育目標 大學部 研究所 核心能力 設備資源 系品質屋 畢業生就業追蹤統計 系所位置 系所成員 歷屆系主任 本系教師 專任師資 兼任師資 行政人員 課程資訊 大學部 大學部課程地圖 大學部修業規定 大學部實驗課程專區 輔系及雙主修 彈性學制 碩士班 碩士班修業規定 碩士班畢業論文專區 博士班 博士班修業規定 博士班畢業論文專區 學分學程 高中生專區 機械系懶人包 系所特色 教學特色 獎學金與工讀機會 大學生活 專業師資群 獲獎榮譽 畢業出路 智慧製造研究中心 中心簡介 中心成員 研究設備 TRAN THANH NHAT TRUNG Basic Data Office Phone : 55619 Fax: 02-26209745 Office: E768 Email: 170550@o365.",
+          "retrievedAt": "2026-09-07T18:47:26.146Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0765-2",
+          "url": "https://www.me.tku.edu.tw/me/?tkumembers=tran-thanh-nhat-trung",
+          "excerpt": ", Department of Power Mechanical Engineering, National Formosa University Work Experiences: Assistant Professor, Department of Mechanical and Electro-Mechanical Engineering, Tamkang University Postdoctoral Fellow, Department of Electronic and Computer Engineering, National Taiwan University of Science and Technology Teacher Job Title: Assistant Professor Office Hour: Office Hour Teaching Areas : 1.",
+          "retrievedAt": "2026-09-07T18:47:26.146Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0765-3",
+          "url": "https://www.me.tku.edu.tw/me/?tkumembers=tran-thanh-nhat-trung",
+          "excerpt": "Power Converter Design Teacher eP ortfolio : Teacher ePortfolio System Go Back 聯絡資訊 CONTACT +886-2-26215656 ext.",
+          "retrievedAt": "2026-09-07T18:47:26.146Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0765-4",
+          "url": "https://www.me.tku.edu.tw/me/?tkumembers=tran-thanh-nhat-trung",
+          "excerpt": "tw 251301新北市淡水區英專路151號E790室 系網頁負責人：吳昱萱助理 個資保護聯絡窗口：吳昱萱助理 電話 ： 02-26215656#2573 傳真 ： 02-26209745 個資政策 ｜ 隱私權政策 ｜ 個人資料告知聲明 ｜ 智慧財產權專區 Copyright© 2024 淡江大學-機械與機電工程學系-版權所有 All Right Reserve.",
+          "retrievedAt": "2026-09-07T18:47:26.146Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:49:55.157Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0766": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://genedu.fcu.edu.tw/en/teachers-detail/?id=T03050&unit_id=GE00",
         "https://www.gis.tw/en-US/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0766-1",
+          "url": "https://genedu.fcu.edu.tw/en/teachers-detail/?id=T03050&unit_id=GE00",
+          "excerpt": "ucation 新聞與活動 新聞與活動 新聞與活動 Unit news & announcement 校園新聞 校園公告 全校性競賽 校園活動 通識教育中心 通識教育中心 中心沿革 中心簡介 組織架構 服務團隊 師資 教學單位 課程地圖(112學年度起適用) 課程地圖(112學年度起適用) 通識選修 通識特色課程 通識國際體驗計畫 人文與科技大講堂 微學分 115學年度入學新生專區 人文與藝術展演 人文與藝術展演 藝文活動 通識沙龍 FCU Theater 其他服務 其他服務 影音專區 TEAMs操作懶人包 Search Search Search 新聞與活動 新聞與活動 Unit news & announcement 校園新聞 校園公告 全校性競賽 校園活動 通識教育中心 中心沿革 中心簡介 組織架構 服務團隊 師資 教學單位 課程地圖(112學年度起適用) 通識選修 通識特色課程 通識國際體驗計畫 人文與科技大講堂 115學年度入學新生專區 人文與藝術展演 藝文活動 通識沙龍 FCU Theater 其他服務 影音專區 TEAMs操作懶人包 Search Search Index 通識教育中心 師資 Thanh-Van Hoang Thanh-Van Hoang Associate Professor Basic information Mail | tvhoang@o365.",
+          "retrievedAt": "2026-09-07T18:47:28.625Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0766-2",
+          "url": "https://genedu.fcu.edu.tw/en/teachers-detail/?id=T03050&unit_id=GE00",
+          "excerpt": "fcuExp\" :force-unique=\"true\" :table-head=\"['任職單位', '職稱']\" > 0\" :info-data=\"personData.",
+          "retrievedAt": "2026-09-07T18:47:28.625Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0766-3",
+          "url": "https://genedu.fcu.edu.tw/en/teachers-detail/?id=T03050&unit_id=GE00",
+          "excerpt": "otherExp\" :table-head=\"['學校名稱或公司名稱', '任職單位', '職稱', '起始日', '終止日']\" > 0\" :info-data=\"personData.",
+          "retrievedAt": "2026-09-07T18:47:28.625Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0766-4",
+          "url": "https://genedu.fcu.edu.tw/en/teachers-detail/?id=T03050&unit_id=GE00",
+          "excerpt": "book\" :table-head=\"['類別', '作者群', '書名', '出版單位', '出版單位國別', '出版年月', '備註', '頁數', '內容來源']\" > 0\" :info-data=\"personData.",
+          "retrievedAt": "2026-09-07T18:47:28.625Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0766-5",
+          "url": "https://genedu.fcu.edu.tw/en/teachers-detail/?id=T03050&unit_id=GE00",
+          "excerpt": "tech\" :table-head=\"['作者群', '論文題目', '書名', '出版單位', '出版年月', '卷期別頁數', '備註']\" > 0\" :info-data=\"personData.",
+          "retrievedAt": "2026-09-07T18:47:28.625Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0766-6",
+          "url": "https://genedu.fcu.edu.tw/en/teachers-detail/?id=T03050&unit_id=GE00",
+          "excerpt": "most\" :table-head=\"['Project Title', 'Academic Year']\" > 0\" :info-data=\"personData.",
+          "retrievedAt": "2026-09-07T18:47:28.625Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0766-7",
+          "url": "https://genedu.fcu.edu.tw/en/teachers-detail/?id=T03050&unit_id=GE00",
+          "excerpt": "tal\" :table-head=\"['Project Title', 'Academic Year']\" > 0\" :info-data=\"personData.",
+          "retrievedAt": "2026-09-07T18:47:28.625Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0766-8",
+          "url": "https://genedu.fcu.edu.tw/en/teachers-detail/?id=T03050&unit_id=GE00",
+          "excerpt": "induAca\" :table-head=\"['Project Title', 'Start Date', 'End Date']\" > 0\" :info-data=\"personData.",
+          "retrievedAt": "2026-09-07T18:47:28.625Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0766-9",
+          "url": "https://www.gis.tw/en-US/",
+          "excerpt": "GIS Research Center, Feng Chia University 跳至主要內容 找不到符合條件的結果 Services News Center Sustainability About GIS.",
+          "retrievedAt": "2026-09-07T18:47:31.513Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0766-10",
+          "url": "https://www.gis.tw/en-US/",
+          "excerpt": "FCU Overview Honors and Awards Philosophy Management Team Contact Us 繁體中文 Services News Center Sustainability About GIS.",
+          "retrievedAt": "2026-09-07T18:47:31.513Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0766-11",
+          "url": "https://www.gis.tw/en-US/",
+          "excerpt": "FCU Overview Honors and Awards Philosophy Management Team Contact Us English 繁體中文 搜尋 搜尋 選單 The Pioneer of Geo-Sciences About GIS.",
+          "retrievedAt": "2026-09-07T18:47:31.513Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0766-12",
+          "url": "https://www.gis.tw/en-US/",
+          "excerpt": "icators | Decision making News center Go To News center SOS GIS Online Course Now in Session 2026-07-08 [APFITA 2026] Call for Papers & Sponsorship Opportunities – Taipei, Taiwan 2026-06-22 [Call for Papers] APFITA 2026 in Taipei: Foresee Global Trend in New Horizon of Asia-Pacific Agriculture 2026-03-30 Services leading technology & Top services Cross-domain integration of professional teams to provide a full range of spatial information solutions Smart City Smart AIoT Intelligent Management Smart Transportation Sustainable environment Success Cases 3DGIS AIoT Standard Data Analysis About GIS.",
+          "retrievedAt": "2026-09-07T18:47:31.513Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0766-13",
+          "url": "https://www.gis.tw/en-US/",
+          "excerpt": "It has developed into the largest GIS professional research organization in Taiwan with the business philosophy of I 2 C+S (Interoperability + Integration + Communication + Sharing).",
+          "retrievedAt": "2026-09-07T18:47:31.513Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0766-14",
+          "url": "https://www.gis.tw/en-US/",
+          "excerpt": "Including four technology companies which are SkyEyes GPS Technology, Focus Intelligence Technology, Geosense Digital Technology, EasyMap Technology, providing professional spatial information services for domestic and foreign production, officials, academia, and research circles.",
+          "retrievedAt": "2026-09-07T18:47:31.513Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0766-15",
+          "url": "https://www.gis.tw/en-US/",
+          "excerpt": "FCU Overview Partner ESG Sstainable development, create a better future Read More → Related Companies ADDRESS TEL:886-4-24516669 FAX:886-4-24519278 22F-1.",
+          "retrievedAt": "2026-09-07T18:47:31.513Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0766-16",
+          "url": "https://www.gis.tw/en-US/",
+          "excerpt": ", Taichung, Taiwan Google Map cONTENT SkyEyes GPS Technology Focus Intelligence Technology Geosense Digital Technology EasyMap Technology OGC Asia Forum FOLLOW US Facebook Instagram Youtube Envelope Subscribe Email Copyright © GIS Research Center, Feng Chia University Privacy Policy Information Security Policy Statement We use cookies to improve your user experience and for web traffic statistics purposes.",
+          "retrievedAt": "2026-09-07T18:47:31.513Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:49:55.157Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0767": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://imba.mcut.edu.tw/p/16-1035-54829.php?Lang=en"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:49:55.157Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-0768": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://acade.must.edu.tw/member/page.aspx?UnitID=43&id=5290"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0768-1",
+          "url": "https://acade.must.edu.tw/member/page.aspx?UnitID=43&id=5290",
+          "excerpt": "(選修課部分進供參考，須以當學期實際開課為準) 教育部外生輔導網頁 國際教育與交流中心 外國學生專區網頁 每週上課課表 教育部境外生諮詢專線 招生資訊-印尼二技(2+i)產學合作國際專班 越南專班招生簡章 新型專班 INTENSE Program 首頁 最新消息 校園行事曆 單位介紹 沿革 教學特色 未來展望 單位地點 教育目標 師資陣容 系主任 教授 副教授 助理教授 兼任教師 講師 行政人員 課程及實驗室設備 學生就業地圖 課程 土環系環境設備介紹 校外實習Q&A 招生資訊 明新科大早鳥平台 115學年度土環系招生名額 高中申請入學 技優甄審入學 四技甄選 聯合登記分發 研究所招生 進修部招生 轉學招生資訊 土環系微電影 特色教學與入學管道 學生畢業出路、競賽、證照、校外實習 入學常見問題Q&A 甄選實作考題範例 全國四技二專招生資訊 校友資訊 傑出校友 土環系友 下載專區 碩博士學位考試表單 活動影音 榮譽榜 系所同學榮譽榜 校外參賽 外國學生專區 時序表(選修課部分進供參考，須以當學期實際開課為準) 教育部外生輔導網頁 國際教育與交流中心 外國學生專區網頁 每週上課課表 教育部境外生諮詢專線 招生資訊-印尼二技(2+i)產學合作國際專班 越南專班招生簡章 新型專班 INTENSE Program 明新校網 英文版 助理教授 助理教授 阮玉梅 Email nnmai@must.",
+          "retrievedAt": "2026-09-07T18:47:35.676Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0768-2",
+          "url": "https://acade.must.edu.tw/member/page.aspx?UnitID=43&id=5290",
+          "excerpt": "ndlestick forecast system for financial time-series analysis using metaheuristics-optimized multi-output machine learning 學術活動 年份 標題 2026 資安教育課程-資安與社交工程教育訓練 2025 資安教育課程-資安與社交工程教育訓練 2025 2025第五屆工程科技技術應用研討會 2025 資安教育課程-校園個資暨資安防護教育訓練 2024 112-2全校教師輔導知能研習-校園性別事件欲罷-不能-校園霸凌事件樣態與案例分享 2024 全校教師教學暨輔導知能精進研討會-ChatGPT對於教育領域的影響與實務應用 2022 產學合作經驗分享及教師進行產業研習或研究說明 2022 2022年工程科技技術應用研討會 2022 教師多元升等經驗分享座談會 獲獎資料 年份 標題 2024 2024年學生BIM軟體應用競賽-(笑到BIM Great-GB)-第二名 2024 2024年學生BIM軟體應用競賽 (Technobuilders_MUST)-佳作 回上頁 校園連結 資訊公開連結 聯絡資訊 明新科技大學Minghsin University of Science and Technology 地址：30401新竹縣新豐鄉新興路1號 土環館 Address: No.",
+          "retrievedAt": "2026-09-07T18:47:35.676Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0768-3",
+          "url": "https://acade.must.edu.tw/member/page.aspx?UnitID=43&id=5290",
+          "excerpt": "C) 電話/傳真：(03)5593142#3281 / (03)5573718 TEL/FAX：+886-3-5593142#3281/ +886-3-5573718 Email: mustcivil@must.",
+          "retrievedAt": "2026-09-07T18:47:35.676Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:49:55.157Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0769": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://ie-en.ncut.edu.tw/content_teacher_detail.php?teacher_rkey=A71PIB7EVW"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://ie-en.ncut.edu.tw/content_teacher_detail.php?teacher_rkey=A71PIB7EVW: fetch failed"
+      ],
+      "updatedAt": "2026-09-07T18:49:55.157Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-0770": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://iavt.npust.edu.tw/blog/teacher/6327/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0770-1",
+          "url": "https://iavt.npust.edu.tw/blog/teacher/6327/",
+          "excerpt": "Doan Thi Thu Dung &#8211; International Degree Program in Animal Vaccine Technology 跳到主要內容 Home About us History Education goals Core Capabilities Career prospects Future development Facilities News Faculty Partners Curriculum Admission Sitemap Alliance Downloads Home About us History Education goals Core Capabilities Career prospects Future development Facilities News Faculty Partners Curriculum Admission Sitemap Alliance Downloads ::: Doan Thi Thu Dung 段氏秋容 Doan Thi Thu Dung 段氏秋容 Assistant Professor 分機：5506 研究室：IC208 電子郵件：doanttd@mail.",
+          "retrievedAt": "2026-09-07T18:47:49.085Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0770-2",
+          "url": "https://iavt.npust.edu.tw/blog/teacher/6327/",
+          "excerpt": "tw Specialty Research NPUST ::: 1, Shuefu Road, Neipu, Pingtung 91201, Taiwan +886-8-7703202 #6390 iavt@mail.",
+          "retrievedAt": "2026-09-07T18:47:49.085Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:49:55.157Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0771": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://deal.nuk.edu.tw/p/405-1049-26179,c3166.php?Lang=zh-tw"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0771-1",
+          "url": "https://deal.nuk.edu.tw/p/405-1049-26179,c3166.php?Lang=zh-tw",
+          "excerpt": "陳氏蘭 跳到主要內容區 Menu 漢堡鈕選單 回首頁 高大首頁 ENGLISH 日本語 한국어 Tiếng Việt 漢堡鈕選單 系所介紹 設系宗旨 課程特色 發展方向 系所成員 專任教師 兼任教師 行政助理 課程介紹 課程結構規劃 課程地圖 課表資訊 跨領域學程 雙主修標準 輔系 學生專區 交換留學專區 轉學(系)、出國交換學分抵免 實習專區 獎學金資訊 招生資訊 申請入學 分發入學 繁星計畫 轉學考 轉系(組)訊息 碩士班招生 規章辦法 系務相關 教師相關 學生相關 姊妹校 表單下載 系務 教師 學生 系友專區 Facebook專頁(本系官方) Instagram(本系官方) Facebook社團 活動訊息 系友榮譽榜 學術成果 教師著作 研究計畫 首頁 系所成員 專任教師 姓名 陳氏蘭 職稱 副教授兼越南研究中心主任兼推廣教育中心進修教學組組長 最高學歷 國立成功大學教育研究所博士 研究專長 越南語教學、對照語言學、越南教育 開設課程 越語發音、初級越語、越語語法、中級越語會話、觀光越語 電子郵件 tranlan1809@nuk.",
+          "retrievedAt": "2026-09-07T18:47:50.661Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0771-2",
+          "url": "https://deal.nuk.edu.tw/p/405-1049-26179,c3166.php?Lang=zh-tw",
+          "excerpt": "tw 聯絡方式 (07)5916560 教學經驗 其他計畫 專書/學位論文 期刊論文 研討會論文 繁體 简体 English 國立高雄大學東亞語文學系 700, Kaohsiung University Rd.",
+          "retrievedAt": "2026-09-07T18:47:50.661Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0771-3",
+          "url": "https://deal.nuk.edu.tw/p/405-1049-26179,c3166.php?Lang=zh-tw",
+          "excerpt": "81148 高雄市楠梓區高雄大學路 700 號 ｜電話總機 (Phone):07-5919000#1601 ｜ Fax:07-5919762｜專線:07-5919761 ｜ Email:donya@nuk.",
+          "retrievedAt": "2026-09-07T18:47:50.661Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:49:55.157Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0772": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://me.yuntech.edu.tw/faculty-and-staff/B-Manufacturing-and-Material-Science"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0772-1",
+          "url": "https://me.yuntech.edu.tw/faculty-and-staff/B-Manufacturing-and-Material-Science",
+          "excerpt": "一頁 系所沿革 教育目標及核心能力 圖儀設備 傑出校友 校園配置 系所成員 faculty and staff 回上一頁 系所主任 甲組 機電整合與自動控制組 乙組 機械製造與材料工程組 丙組 機械設計與固體力學組 丁組 能源工程與熱流科技組 技術教師 兼任教師 退休教職員 行政人員 招生考試資訊 Admission 回上一頁 博士班 碩士班 大學部 系所典藏 Album 學生專區 Students 回上一頁 學生產業實習 國際交換學生 課程流程圖 畢業修課規定 跨領域學程 表單下載 Download 回上一頁 畢業離校相關表單 碩博班 校外實習專區 導生聚餐 相關連結 Link 乙組 機械製造與材料工程組 首頁 系所成員 系所成員 系所主任 甲組 機電整合與自動控制組 乙組 機械製造與材料工程組 丙組 機械設計與固體力學組 丁組 能源工程與熱流科技組 技術教師 兼任教師 退休教職員 行政人員 系所主任 甲組 機電整合與自動控制組 乙組 機械製造與材料工程組 丙組 機械設計與固體力學組 丁組 能源工程與熱流科技組 技術教師 兼任教師 退休教職員 行政人員 曾世昌 教授 最高學歷：美國威斯康辛大學麥迪生校區機械博士 經歷：國際事務處 處長 工程學院 院長 工程學院 副院長 機械系 主任 雲科大註冊組 組長 辦公室及分機：EM312；4146 電子郵件： tsengsc@yuntech.",
+          "retrievedAt": "2026-09-07T18:47:56.891Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0772-2",
+          "url": "https://me.yuntech.edu.tw/faculty-and-staff/B-Manufacturing-and-Material-Science",
+          "excerpt": "tw 實驗室及分機：EM221高分子加工實驗室；4188 實驗室介紹： (請點此連結至實驗室網站) 研究領域：機械工程、高分子加工、微機電 研究論文、著作： (請點此連結查看) 張世穎 教授 最高學歷：德國席根大學機械系材料所博士 經歷：國立雲林科技大學教務處課教組 組長 工業技術研究院微系統技術部 研究員 德國席根大學材料所 研究員 辦公室及分機：EM316；4148 電子郵件： changsy@yuntech.",
+          "retrievedAt": "2026-09-07T18:47:56.891Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0772-3",
+          "url": "https://me.yuntech.edu.tw/faculty-and-staff/B-Manufacturing-and-Material-Science",
+          "excerpt": "tw 實驗室及分機：EM113電子構裝實驗室；4172 實驗室介紹： (請點此連結至實驗室網站) 研究領域：材料接合、電子構裝、高溫氧化、表面工程 研究論文、著作： (請點此連結查看) 梅文逢 助理教授 最高學歷：國立成功大學工程科學系博士 經歷：國立臺灣大學 博士後研究員 國立成功大學 博士後研究員 辦公室及分機：EM311；4129 電子郵件： maivp@yuntech.",
+          "retrievedAt": "2026-09-07T18:47:56.891Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0772-4",
+          "url": "https://me.yuntech.edu.tw/faculty-and-staff/B-Manufacturing-and-Material-Science",
+          "excerpt": "tw 實驗室及分機：EM216奈米能量與分子分離實驗室；4186 實驗室介紹： (請點此連結至實驗室網站) 研究領域：奈米材料、綠色能量、分子分離、複合膜、奈米流體 研究論文、著作： (請點此連結查看1) (請點此連結查看2) 徐昌鴻 副教授 最高學歷：中央大學機械博士 長庚大學電機博士 經歷：亞東科技大學機械工程系副教授兼系主任 銘傳大學電子工程系助理教授 華城電機公司/研發經理/生產副經理/課長 辦公室及分機：EM235；4134 電子郵件： chshiu@yuntech.",
+          "retrievedAt": "2026-09-07T18:47:56.891Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0772-5",
+          "url": "https://me.yuntech.edu.tw/faculty-and-staff/B-Manufacturing-and-Material-Science",
+          "excerpt": "tw 實驗室及分機：EM331智慧控制與磁材應用實驗室；4199 實驗室介紹： (請點此連結至實驗室網站) 研究領域：噪音振動量測、軟磁性材料應用、智慧製造設計、機器人控制、生醫骨板釘分析 研究論文、著作： (請點此連結查看) 林育全 助理教授 最高學歷：國立臺灣大學工程科學及海洋工程學系博士 經歷：國立高雄科技大學機電工程系 助理教授 國家實驗研究院儀器科技研究中心 副研究員 辦公室及分機：EM336；4126 電子郵件： yclint@yuntech.",
+          "retrievedAt": "2026-09-07T18:47:56.891Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0772-6",
+          "url": "https://me.yuntech.edu.tw/faculty-and-staff/B-Manufacturing-and-Material-Science",
+          "excerpt": "tw 實驗室及分機：EM127光機與光電實驗室；4175 實驗室介紹： (請點此連結至實驗室簡介) (請點此連結至實驗室網站) 研究領域：光機設計、光子晶體元件、電腦輔助分析、光機整合 研究論文、著作： (請點此連結查看) 黃柏欽 助理教授 最高學歷：國立成功大學材料科學及工程學系博士 經歷：國立成功大學材料科學及工程學系博士後研究員 辦公室及分機：EM309；---- 電子郵件： frt4y6asd@gmail.",
+          "retrievedAt": "2026-09-07T18:47:56.891Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0772-7",
+          "url": "https://me.yuntech.edu.tw/faculty-and-staff/B-Manufacturing-and-Material-Science",
+          "excerpt": "com 實驗室及分機：EM---金屬材料及磨潤科技實驗室；---- 實驗室介紹： 研究領域：輕金屬材料、金屬熱處理、材料表面磨耗、材料破壞解析、多重物理耦合分析 研究論文、著作： 國立雲林科技大學 機械工程系 電話： (05)534-2601#4101~#4105 傳真： (05)531-2062 信箱： uem@yuntech.",
+          "retrievedAt": "2026-09-07T18:47:56.891Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:49:55.157Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0773": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://mse.nfu.edu.tw/zh_tw/department/Full_time"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0773-1",
+          "url": "https://mse.nfu.edu.tw/zh_tw/department/Full_time",
+          "excerpt": "領域 奈米結構能源材料、機能型環保材料 聯絡電話 05-6315475 電子郵件 姓名 蔡朝伊 職稱 助理教授 專長領域 磁性材料、垂直磁異向性、垂直交換偏移、染料敏化太陽能電池、奈米複合材料、半導體薄膜製程 聯絡電話 (05)6313491 電子郵件 姓名 黃信智 職稱 助理教授 專長領域 能源材料、電化學觸媒、氫能和燃料電池 聯絡電話 05-6313351 電子郵件 姓名 陳苡諺 職稱 助理教授 專長領域 電子顯微鏡、薄膜製程、缺陷分析、透明導電薄膜 聯絡電話 05-6315480 電子郵件 姓名 呂芳賢 職稱 助理教授 專長領域 奈米材料、觸媒材料、稀土與各式金屬回收暨精煉技術開發、廢水處理技術開發 聯絡電話 05-6315465 電子郵件 姓名 阮氏儀仁 職稱 助理教授 專長領域 半導體薄膜、表面工程、壓電材料、光催化、電化學反應 聯絡電話 05-6315482 電子郵件 Share Tweet Print this page ::: 國立虎尾科技大學材料科學與工程系 聯絡地址：632雲林縣虎尾鎮文化路64號 聯絡電話：(05)631-5461、5463 傳真電話：(05)636-1981 E-mail： Copyright © Department Materials Science and Engineering, National Formosa University.",
+          "retrievedAt": "2026-09-07T18:48:03.349Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:49:55.157Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0774": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://ib3.nhu.edu.tw/Web/UserDetail?id=102639&unitid=3911&n=%E5%B0%88%E4%BB%BB%E6%95%99%E5%B8%AB"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0774-1",
+          "url": "https://ib3.nhu.edu.tw/Web/UserDetail?id=102639&unitid=3911&n=%E5%B0%88%E4%BB%BB%E6%95%99%E5%B8%AB",
+          "excerpt": "南華大學 管理學院國際企業學士學位學程 歡迎您 English --> --> 1 2 3 4 5 6 首頁 > 專任教師 助理教授 杜氏燕 Mail信箱：hannah@nhu.",
+          "retrievedAt": "2026-09-07T18:48:13.100Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0774-2",
+          "url": "https://ib3.nhu.edu.tw/Web/UserDetail?id=102639&unitid=3911&n=%E5%B0%88%E4%BB%BB%E6%95%99%E5%B8%AB",
+          "excerpt": "tw 辦公室分機：56530 個人網站： Links Office Hour： Links 期刊論文一覽 年度 著作 著作人 113 Entrepreneurship, Innovation and New Product Development: The Moderating Effect of Risk Taking and Social Competition 杜氏燕 研討會論文一覽 年度 會議期間 著作 著作人 113 2025-05-22 2025-05-22 The relationship between students’ attitudes and ChatGPT usage.",
+          "retrievedAt": "2026-09-07T18:48:13.100Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0774-3",
+          "url": "https://ib3.nhu.edu.tw/Web/UserDetail?id=102639&unitid=3911&n=%E5%B0%88%E4%BB%BB%E6%95%99%E5%B8%AB",
+          "excerpt": "A deep dive into key influencing factors 杜氏燕 113 2025-05-22 2025-05-22 The impact of Celebrity Endorsement on Consumer Behaviors 杜氏燕 113 2025-05-22 2025-05-22 Influence of Popular Culture on Young Adults’ Consumer Behavior 杜氏燕 113 2024-11-21 2024-11-22 FACTORS AFFECTING STAFF&#39;S INTENTION TO REMAIN: A STUDY AT VIETNAMESE NONPROFIT ORGANIZATIONS 杜氏燕 113 2024-11-05 2024-11-08 Toward a comprehensive model of green adoption behavior.",
+          "retrievedAt": "2026-09-07T18:48:13.100Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0774-4",
+          "url": "https://ib3.nhu.edu.tw/Web/UserDetail?id=102639&unitid=3911&n=%E5%B0%88%E4%BB%BB%E6%95%99%E5%B8%AB",
+          "excerpt": "Unveiling the impact of perceived social responsibility and psychological benefits 杜氏燕 113 2024-11-21 2024-11-22 EXAMINING WORKING CONDITIONS, ORGANIZATIONAL JUSTICE, LEADERSHIP CAPABILITIES TO FOSTER KNOWLEDGE SHARING AND ENHANCE ORGANIZATIONAL INNOVATION 杜氏燕 專書一覽 年度 出版日期 專書名稱 著作人 教師報告與其他一覽 年度 名稱 教師姓名 教師研究專案 姓名 年度 計畫名稱 計畫編號 --> 杜氏燕 112 國-稀少性效應之整合研究模型: 前因,中介及調節因素 item.",
+          "retrievedAt": "2026-09-07T18:48:13.100Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0774-5",
+          "url": "https://ib3.nhu.edu.tw/Web/UserDetail?id=102639&unitid=3911&n=%E5%B0%88%E4%BB%BB%E6%95%99%E5%B8%AB",
+          "excerpt": "計畫名稱 --> 關於國企學程 簡介 學程成員 專任教師 兼任教師 行政人員 教育目標及核心能力 歷史沿革 未來發展 設備設施 高中生專區 招生公告 招生管道 特殊選才 繁星推薦 申請入學 分發入學 國際生招生管道 招生績效 招生DM 辦學績效 高中職營隊/競賽 活動照片 國際招生International Admissions 新生獎學金 新生專區 選課資訊 學雜費資訊 宿舍資訊 交通資訊 課程專區 課程時序表 課程進路圖 非正式課程 通識課程 教學績效 證照 專題 國際交流活動 雙學位留學專班 美國西來大學2+2雙學位 英國密德薩斯大學 3+1 雙學位 美國西來大學ESL專區 海外交換計畫 海外學習分享心得 國際交流照片 榮譽榜 新聞快訊 下載專區 常用表格及操作教學 專題製作 SOP與法規 SOP 會議 其他 獎學金 恭賀國企學程通過「華文商管教育認證組織(ACCBE)」四年期(2024年-2028年) --> 管理學院國際企業學士學位學程 歡迎您 校址 ：622301 嘉義縣大林鎮南華路一段55號( 南華大學學慧樓H511) 電話：05-3102133; E-mail: yenling@nhu.",
+          "retrievedAt": "2026-09-07T18:48:13.100Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:49:55.157Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0775": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://imba.mcut.edu.tw/p/405-1035-73950,c8497.php?Lang=en"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0775-1",
+          "url": "https://imba.mcut.edu.tw/p/405-1035-73950,c8497.php?Lang=en",
+          "excerpt": "Jump to the main content block MCUT Site Map 中文 MCUT Portal APP Search Menu About IMBA Introduction Adimissions Information Lab Faculty Contact us FQAs Academics Curriculum General Table Course Outline Academic Calendar Scholarships Leave Application Form Form & Regulations Form Download Regulations Graduation Procedure Activities Workshop Student Experience Home About IMBA Faculty Nam-Tien Duong, Ph.",
+          "retrievedAt": "2026-09-07T18:48:14.034Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0775-2",
+          "url": "https://imba.mcut.edu.tw/p/405-1035-73950,c8497.php?Lang=en",
+          "excerpt": ", Yuan Ze University, Taiwan Research Interests: Information Management, Digital Marketing, Organizational Behavior Click Num: Print Share 繁體 简体 English TEL: 886-2-2908-9899 ext.",
+          "retrievedAt": "2026-09-07T18:48:14.034Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0775-3",
+          "url": "https://imba.mcut.edu.tw/p/405-1035-73950,c8497.php?Lang=en",
+          "excerpt": "New Taipei City 243303, Taiwan Service Center: Innovation Building 5F E-mail： wwwbm@mail.",
+          "retrievedAt": "2026-09-07T18:48:14.034Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:49:55.157Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0776": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.depts.ttu.edu/artsandsciences/news_events/2025/ferderal_grant_to_aid_vietnam_war_accounting_efforts.php"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0776-1",
+          "url": "https://www.depts.ttu.edu/artsandsciences/news_events/2025/ferderal_grant_to_aid_vietnam_war_accounting_efforts.php",
+          "excerpt": "Texas Tech Secures Federal Grant to Aid Vietnam War Accounting Efforts | News and Events | College of Arts & Sciences | Texas Tech For Android.",
+          "retrievedAt": "2026-09-07T18:48:14.548Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0776-2",
+          "url": "https://www.depts.ttu.edu/artsandsciences/news_events/2025/ferderal_grant_to_aid_vietnam_war_accounting_efforts.php",
+          "excerpt": "--> Texas Tech University Directory Raiderlink A-Z Index Menu --> College of Arts & Sciences Menu Search Texas Tech College of Arts & Sciences News and Events Texas Tech Secures Federal Grant to Aid Vietnam War Accounting Efforts Story By: College of Arts & Sciences Researchers at Texas Tech University&#x92;s Vietnam Center and Sam Johnson Vietnam Archive and the Institute for Peace and Conflict are leading a project that brings closure to thousands of Vietnamese families.",
+          "retrievedAt": "2026-09-07T18:48:14.548Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0776-3",
+          "url": "https://www.depts.ttu.edu/artsandsciences/news_events/2025/ferderal_grant_to_aid_vietnam_war_accounting_efforts.php",
+          "excerpt": "Department of War, these programs will advance the Vietnam Wartime Accounting Initiative (VWAI).",
+          "retrievedAt": "2026-09-07T18:48:14.548Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0776-4",
+          "url": "https://www.depts.ttu.edu/artsandsciences/news_events/2025/ferderal_grant_to_aid_vietnam_war_accounting_efforts.php",
+          "excerpt": "The initiative is a humanitarian program designed to assist the Vietnamese government in locating and identifying the remains of more than 200,000 soldiers and civilians still missing from the Vietnam War.",
+          "retrievedAt": "2026-09-07T18:48:14.548Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0776-5",
+          "url": "https://www.depts.ttu.edu/artsandsciences/news_events/2025/ferderal_grant_to_aid_vietnam_war_accounting_efforts.php",
+          "excerpt": "Steve Maxner, director of the Vietnam Center and Sam Johnson Vietnam Archive, said the project&#x92;s foundation lies in a remarkable archival resource known as the Combined Document Exploitation Center (CDEC) collection.",
+          "retrievedAt": "2026-09-07T18:48:14.548Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0776-6",
+          "url": "https://www.depts.ttu.edu/artsandsciences/news_events/2025/ferderal_grant_to_aid_vietnam_war_accounting_efforts.php",
+          "excerpt": "Each document has been digitized from microfilm and contains clues to a soldier&#x92;s final moments through letters, diaries, commendations and battlefield coordinates marking where they fell.",
+          "retrievedAt": "2026-09-07T18:48:14.548Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0776-7",
+          "url": "https://www.depts.ttu.edu/artsandsciences/news_events/2025/ferderal_grant_to_aid_vietnam_war_accounting_efforts.php",
+          "excerpt": "Steve Maxner being interviewed at this year's ceremony “Our mission is to leverage those documents to help Vietnamese families locate possible burial sites,” Maxner said.",
+          "retrievedAt": "2026-09-07T18:48:14.548Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0776-8",
+          "url": "https://www.depts.ttu.edu/artsandsciences/news_events/2025/ferderal_grant_to_aid_vietnam_war_accounting_efforts.php",
+          "excerpt": "If their remains can&#x92;t be found, sometimes we can at least return their diaries or letters, and for the families, that can be just as meaningful.",
+          "retrievedAt": "2026-09-07T18:48:14.548Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:49:55.157Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0777": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://pharmacy.temple.edu/vanhellerslia",
         "https://sites.temple.edu/vietcapacity/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0777-1",
+          "url": "https://pharmacy.temple.edu/vanhellerslia",
+          "excerpt": "eaching & Academic Contributions PharmD Courses: Pathophysiology and Therapeutics Course: Neurology/Psychiatry Pathophysiology and Therapeutics Course: Immunology/Oncology Clinical Pharmacokinetics Course Social and Economic Aspects of Pharmacy Pharmacy Care Recitation III Experiential Education: Preceptor, IPPE/APPE students in neurology inpatient care settings Coordinator, Interprofessional case-based learning Graduate & Residency Training: Advanced Pharmacotherapeutics Advanced Dental Pharmacology and Therapeutics Mentor, Neurology residents in clinical research Research Focus & Practice Dr.",
+          "retrievedAt": "2026-09-07T18:48:14.894Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0777-2",
+          "url": "https://pharmacy.temple.edu/vanhellerslia",
+          "excerpt": "Van Hellerslia is a Board-Certified Pharmacotherapy Specialist (BCPS) with expertise in acute clinical care and community engagement.",
+          "retrievedAt": "2026-09-07T18:48:14.894Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0777-3",
+          "url": "https://pharmacy.temple.edu/vanhellerslia",
+          "excerpt": "Her practice focuses on comprehensive medication management of neurological diseases.",
+          "retrievedAt": "2026-09-07T18:48:14.894Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0777-4",
+          "url": "https://pharmacy.temple.edu/vanhellerslia",
+          "excerpt": "She is actively involved in clinical research on pharmacist-led interventions to improve patient outcomes.",
+          "retrievedAt": "2026-09-07T18:48:14.894Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0777-5",
+          "url": "https://pharmacy.temple.edu/vanhellerslia",
+          "excerpt": "Key Interests: capacity building; immigrant health; neuro-pharmacotherapy and antithrombotic strategies.",
+          "retrievedAt": "2026-09-07T18:48:14.894Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0777-6",
+          "url": "https://pharmacy.temple.edu/vanhellerslia",
+          "excerpt": "Pharmacist Interventions in Immigrant and Refugee Populations: A Scoping Review.",
+          "retrievedAt": "2026-09-07T18:48:14.894Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0777-7",
+          "url": "https://pharmacy.temple.edu/vanhellerslia",
+          "excerpt": "A pilot interprofessional stroke education program trains student to plan and implement culturally tailored community-based stroke education.",
+          "retrievedAt": "2026-09-07T18:48:14.894Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0777-8",
+          "url": "https://pharmacy.temple.edu/vanhellerslia",
+          "excerpt": "Comparison of stroke process measures and clinical outcomes between English and Non-English preferring patients.",
+          "retrievedAt": "2026-09-07T18:48:14.894Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0777-9",
+          "url": "https://sites.temple.edu/vietcapacity/",
+          "excerpt": "erican Pharmacists Educating the Vietnamese Community about Stroke Menu About Viet-Capacity Importance of Viet-Capacity Project Description Stroke Resources Ambassadors Contact Us Search for: About Viet-Capacity Vietnamese American Pharmacists Educating the Vietnamese Community about Stroke Nhóm dược sĩ cung cấp kiến thức về bệnh đột quỵ tới cộng đồng người Việt Viet-Capacity started on June 4th, 2022, as a project for Vietnamese American Pharmacists and other Healthcare professionals to come together to discuss the importance of stroke awareness within the Vietnamese community in Philadelphia.",
+          "retrievedAt": "2026-09-07T18:48:15.236Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0777-10",
+          "url": "https://sites.temple.edu/vietcapacity/",
+          "excerpt": "These professionals included Temple University faculty, alums, and students from the different schools within the Health and Sciences Campus, from the Temple University School of Pharmacy to the Lewis Katz School of Medicine at Temple University.",
+          "retrievedAt": "2026-09-07T18:48:15.236Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0777-11",
+          "url": "https://sites.temple.edu/vietcapacity/",
+          "excerpt": "From August 2022 through July 2024, pharmacists and pharmacy students were trained to reach the Vietnamese community&#8217;s core with the importance of stroke education through various events, such as health fairs and community outreach in local community centers.",
+          "retrievedAt": "2026-09-07T18:48:15.236Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0777-12",
+          "url": "https://sites.temple.edu/vietcapacity/",
+          "excerpt": "Research Collaborators Van Hellerslia, PharmD, is a clinical associate professor at Temple University School of Pharmacy, assistant professor at Lewis Katz School of Medicine at Temple University, and clinical pharmacist at the Department of Neurology at Temple University Hospital.",
+          "retrievedAt": "2026-09-07T18:48:15.236Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0777-13",
+          "url": "https://sites.temple.edu/vietcapacity/",
+          "excerpt": "She is the primary investigator of Viet-Capacity and her expertise includes neuro pharmacotherapy, including stroke care, and she is Vietnamese speaking.",
+          "retrievedAt": "2026-09-07T18:48:15.236Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0777-14",
+          "url": "https://sites.temple.edu/vietcapacity/",
+          "excerpt": "Tina Tran, PharmD is an assistant professor at Temple University School of Pharmacy in the Department of Pharmacy Practice.",
+          "retrievedAt": "2026-09-07T18:48:15.236Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0777-15",
+          "url": "https://sites.temple.edu/vietcapacity/",
+          "excerpt": "Her expertise includes health services and outcomes research, implementation science research, and pharmacotherapy.",
+          "retrievedAt": "2026-09-07T18:48:15.236Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0777-16",
+          "url": "https://sites.temple.edu/vietcapacity/",
+          "excerpt": "Charles Ruchalski, PharmD is a clinical professor at Temple University School of Pharmacy and a clinical pharmacist at the Stroke Prevention Clinic and the Temple University Neurology Clinic.",
+          "retrievedAt": "2026-09-07T18:48:15.236Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:49:55.157Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0778": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://liberalarts.tulane.edu/communication/people/daniella-zalcman",
         "https://www.dan.iella.net/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0778-1",
+          "url": "https://liberalarts.tulane.edu/communication/people/daniella-zalcman",
+          "excerpt": "Daniella Zalcman | School of Liberal Arts at Tulane University Skip to main content Search Close Search Give Apply Request Info Visit $refs.",
+          "retrievedAt": "2026-09-07T18:48:15.535Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0778-2",
+          "url": "https://liberalarts.tulane.edu/communication/people/daniella-zalcman",
+          "excerpt": "focus());\"> Search Main Navigation Menu Department of Communication Communication Home People Academics The Communication Major Advising & Major Declaration Internships Study Abroad Cinema Studies Resources Carol S.",
+          "retrievedAt": "2026-09-07T18:48:15.535Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0778-3",
+          "url": "https://liberalarts.tulane.edu/communication/people/daniella-zalcman",
+          "excerpt": "Levin Grant Silverstein Grant Radio and Television Fund News & Events Communication News Faculty Webinars & Keynotes Get TU Know Our Students Student Awards Communication Contact the Communication Department 219 Newcomb Hall 1229 Broadway New Orleans, Louisiana 70118 504-865-5730 comminfo@tulane.",
+          "retrievedAt": "2026-09-07T18:48:15.535Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0778-4",
+          "url": "https://liberalarts.tulane.edu/communication/people/daniella-zalcman",
+          "excerpt": "edu Maps & Directions Department of Communication Daniella Zalcman Professor of Practice Reveal Email Address 219 Newcomb Hall 504-865-5730 Biography Daniella Zalcman is a Vietnamese-American documentary photographer, curator, and community organizer who got her start working as a tabloid photographer while a college student.",
+          "retrievedAt": "2026-09-07T18:48:15.535Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0778-5",
+          "url": "https://liberalarts.tulane.edu/communication/people/daniella-zalcman",
+          "excerpt": "Since then, she's spent nearly two decades reporting for National Geographic, The Wall Street Journal, Smithsonian Magazine, BuzzFeed News, TIME, and others — from Svalbard to South Sudan.",
+          "retrievedAt": "2026-09-07T18:48:15.535Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0778-6",
+          "url": "https://liberalarts.tulane.edu/communication/people/daniella-zalcman",
+          "excerpt": "Her work tends to focus on the legacies of western colonization, from the rise of homophobia in East Africa to the forced assimilation education of Indigenous children in North America.",
+          "retrievedAt": "2026-09-07T18:48:15.535Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0778-7",
+          "url": "https://liberalarts.tulane.edu/communication/people/daniella-zalcman",
+          "excerpt": "Her ongoing project, Signs of Your Identity, is the recipient of the Arnold Newman Prize, a Robert F Kennedy Journalism Award, the FotoEvidence Book Award, the Magnum Foundation's Inge Morath Award, and part of Open Society Foundation's Moving Walls 24.",
+          "retrievedAt": "2026-09-07T18:48:15.535Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0778-8",
+          "url": "https://liberalarts.tulane.edu/communication/people/daniella-zalcman",
+          "excerpt": "Daniella is also the founder and executive director of Women Photograph, a nonprofit working to elevate the voices of women and nonbinary visual journalists worldwide.",
+          "retrievedAt": "2026-09-07T18:48:15.535Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0778-9",
+          "url": "https://www.dan.iella.net/",
+          "excerpt": "Daniella Zalcman Projects About Workshops The NDA Workshop IN PERSON 2026 Contact Prints Patreon Instagram Twitter Menu Daniella Zalcman Projects About Workshops The NDA Workshop IN PERSON 2026 Contact Prints Patreon Instagram Twitter SIGNS OF YOUR IDENTITY NATIVE MASCOTS SLAVE REBELLION REENACTMENT TO MAKE THE WASTE LAND GROW SUNDAY SOLDIERS WE ARE KUCHUS ECHOSIGHT ISLE OF EIGG NEW YORK + LONDON dani@dan.",
+          "retrievedAt": "2026-09-07T18:48:15.897Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:49:55.157Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0779": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.albany.edu/cihs/faculty/trang-nguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0779-1",
+          "url": "https://www.albany.edu/cihs/faculty/trang-nguyen",
+          "excerpt": "Life About Leadership Alumni Public Engagement News Events Jobs Inclusive Excellence Staff Directory A-Z Index Research Division for Research & Economic Development Undergraduate Research Institutes, Centers & Labs Experts Athletics Trang Nguyen Research Professor College of Integrated Health Sciences Department of Epidemiology & Biostatistics Contact [email&#160;protected] Education DrPH - University at Albany, Epidemiology 2008 MPH - East Stroudsburg University of Pennsylvania, Epidemiology and Community Health 2000 MD - Hanoi Medical University, Internal Medicine and Dentistry 1995 About Dr.",
+          "retrievedAt": "2026-09-07T18:48:16.318Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0779-2",
+          "url": "https://www.albany.edu/cihs/faculty/trang-nguyen",
+          "excerpt": "Nguyen has more than 25 years of experience in healthcare and public health fields.",
+          "retrievedAt": "2026-09-07T18:48:16.318Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0779-3",
+          "url": "https://www.albany.edu/cihs/faculty/trang-nguyen",
+          "excerpt": "She has extensive background in medicine, healthcare, statistics, epidemiology, surveillance and public health program evaluation and quality improvement.",
+          "retrievedAt": "2026-09-07T18:48:16.318Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0779-4",
+          "url": "https://www.albany.edu/cihs/faculty/trang-nguyen",
+          "excerpt": "Nguyen is experienced in design and direct the development of large surveillance system and comprehensive data dashboards, evaluating effectiveness of program interventions and policies, grant writing, research design, data collection, analysis, data privacy and confidentiality and developing manuscripts.",
+          "retrievedAt": "2026-09-07T18:48:16.318Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0779-5",
+          "url": "https://www.albany.edu/cihs/faculty/trang-nguyen",
+          "excerpt": "She is skilled in working with large databases, health query and dashboard development, SAS and SUDAAN programming.",
+          "retrievedAt": "2026-09-07T18:48:16.318Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:49:55.157Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0780": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://directory.uthscsa.edu/academics/profile/nguyenp1"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0780-1",
+          "url": "https://directory.uthscsa.edu/academics/profile/nguyenp1",
+          "excerpt": "Nguyen, Patrick | Faculty Directory Skip to main content Quicklinks Menu Faculty Directory Login Contact 210-567-5730 Programs M.",
+          "retrievedAt": "2026-09-07T18:48:16.588Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0780-2",
+          "url": "https://directory.uthscsa.edu/academics/profile/nguyenp1",
+          "excerpt": "in Doctor of Medicine Departments & Divisions Department of Surgery Division of General and Minimally Invasive Surgery Patrick Nguyen, M.",
+          "retrievedAt": "2026-09-07T18:48:16.588Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0780-3",
+          "url": "https://directory.uthscsa.edu/academics/profile/nguyenp1",
+          "excerpt": "Associate Professor/Clinical Medical Student Clerkship Director Vice Chair for Finance and Administration, Department of Surgery Dr.",
+          "retrievedAt": "2026-09-07T18:48:16.588Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0780-4",
+          "url": "https://directory.uthscsa.edu/academics/profile/nguyenp1",
+          "excerpt": "Nguyen graduated from the University of Texas at Austin with a BA in Microbiology in 2000.",
+          "retrievedAt": "2026-09-07T18:48:16.588Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0780-5",
+          "url": "https://directory.uthscsa.edu/academics/profile/nguyenp1",
+          "excerpt": "at the Long School of Medicine in San Antonio in 2004 and five years of General Surgery Training in June 2009 at UT Health San Antonio.",
+          "retrievedAt": "2026-09-07T18:48:16.588Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0780-6",
+          "url": "https://directory.uthscsa.edu/academics/profile/nguyenp1",
+          "excerpt": "Nguyen was recognized for outstanding teaching as recipient of the Excellence in Teaching Medical Students Award (2008, 2009) and the Outstanding Resident Teaching Award (2008).",
+          "retrievedAt": "2026-09-07T18:48:16.588Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0780-7",
+          "url": "https://directory.uthscsa.edu/academics/profile/nguyenp1",
+          "excerpt": "He joined the UT Health Long School of Medicine faculty after his training and for thirteen years he practiced General Surgery at UT Health Westover Hills and Christus Santa Rosa Westover Hills.",
+          "retrievedAt": "2026-09-07T18:48:16.588Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0780-8",
+          "url": "https://directory.uthscsa.edu/academics/profile/nguyenp1",
+          "excerpt": "Today he maintains a general surgery practice at University Hospital, Christus Santa Rosa Medical Center Hospital, and his outpatient clinics at the UT Health MARC and University Health System Clinics.",
+          "retrievedAt": "2026-09-07T18:48:16.588Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:49:55.157Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0781": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://medicine.tamu.edu/faculty-listings/nguyen-e.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0781-1",
+          "url": "https://medicine.tamu.edu/faculty-listings/nguyen-e.html",
+          "excerpt": "ucation Special Programs Admissions Degrees & Programs Early Assurance MD Admissions MD/PhD Admissions PhD Admissions Education for Healthcare Professionals Research Funding Support & Resources Research Focus Areas Postdoctoral Affairs Research Excellence Awards Academic Departments Core Facilities Centers & Institutes Student Research Opportunities Research Calendar Clinical Clinical Learning Resource Center Patient Care Community Rapport Society Student Organizations Health and Well-being Programs Alumni Give Search Search Close Menu Collapsed content that can be toggled with the menu button.",
+          "retrievedAt": "2026-09-07T18:48:17.110Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0781-2",
+          "url": "https://medicine.tamu.edu/faculty-listings/nguyen-e.html",
+          "excerpt": "D Admissions EDHP Research Research Focus Areas Research Funding Support & Resources Postdoctoral Affairs Research Excellence Awards Academic Departments Core Facilities Centers & Institutes Undergraduate Research Opportunities Research Calendar Clinical Clinical Learning Resource Center Patient Care Community Rapport Society Student Organizations Health wellbeing Programs Alumni Elizabeth Nguyen, MD, FAAP Home Vashisht College of Medicine Faculty Elizabeth Nguyen , MD Elizabeth Nguyen , MD Clinical Assistant Professor Contact 2900 East 29th Street, Suite 100 Bryan, TX 77802 enguyen8@athletics.",
+          "retrievedAt": "2026-09-07T18:48:17.110Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0781-3",
+          "url": "https://medicine.tamu.edu/faculty-listings/nguyen-e.html",
+          "excerpt": "edu Education and Training University of Notre Dame, BS, 2013 Texas A&M University Naresh K.",
+          "retrievedAt": "2026-09-07T18:48:17.110Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:49:55.157Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0782": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://engineering.uci.edu/users/quoc-viet-dang"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0782-1",
+          "url": "https://engineering.uci.edu/users/quoc-viet-dang",
+          "excerpt": "Executive Office Chief Administrative Officers Personnel Unit Finance Unit Purchasing Unit Computing Unit Facilities Unit Curriculum, Analytical Studies, & Accreditation (CASA) Communications Office Development and External Relations Office Outreach Unit Engineering Research Management Computing Support Helpdesk Office of Information Technology Faculty Websites Computer Labs & Laptops Facilities Support Engineering Facilities Request Form Safety Procedures zotALERT Campus Evacuation Zones Zone Crew Environmental Health & Safety UCI Police Department Helpful Links Org Charts At Your Service Zot!",
+          "retrievedAt": "2026-09-07T18:48:18.124Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0782-2",
+          "url": "https://engineering.uci.edu/users/quoc-viet-dang",
+          "excerpt": "Portal FAQs for Engineering Instructors Spring Awards Process Improvement Alumni & Friends Alumni Spotlight Donor News Hall of Fame Ways to Give UCI Engineering Alumni Society UC Irvine Alumni Association Contact Us About Dean's Message Strategic Plan Facts and Figures Henry Samueli School Leadership Engineering Leadership Council Accreditation Orange County Employment Visit Us Admissions Undergraduate Enrollment and Degrees Awarded Why UCI?",
+          "retrievedAt": "2026-09-07T18:48:18.124Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0782-3",
+          "url": "https://engineering.uci.edu/users/quoc-viet-dang",
+          "excerpt": "How to Apply Prospective Students Newly Admitted Majors and Minors Offered Graduate Programs and Concentrations How to Apply Meet Us on the Road Anteater Voices Ph.",
+          "retrievedAt": "2026-09-07T18:48:18.124Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0782-4",
+          "url": "https://engineering.uci.edu/users/quoc-viet-dang",
+          "excerpt": "hip Council External Relations Office Office for Experiential Learning Outreach K-12 Community College International International Opportunities Stacey Nicholas Office of Outreach, Access and Inclusion News & Events Newsroom Samueli Shoutouts Media Watch Archives Podcasts Videos Annual Review 2023-24 2022-23 2021-22 2020-21 2019-20 2018-19 2017-18 2016-17 2015-16 2014-15 2013-14 2012-13 Facts & Figures Events E-Newsletter Social Media Contact Us Style Guide Quoc-Viet Dang Associate Professor of Teaching Electrical Engineering and Computer Science Location 3219 Engineering Hall Email qpdang@uci.",
+          "retrievedAt": "2026-09-07T18:48:18.124Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0782-5",
+          "url": "https://engineering.uci.edu/users/quoc-viet-dang",
+          "excerpt": "edu Phone (949) 824-9013 Address Samueli School of Engineering University of California, Irvine Irvine, CA 92697 ZOT Code 2625 Research E-learning, data analysis, autonomous vehicle racing, cyber-physical systems, making the world a better place Links Faculty Website Contact Us Samueli School of Engineering 5200 Engineering Hall Irvine, CA 92697-2700 Undergraduate Student Affairs +1-949-824-4334 ugengr@uci.",
+          "retrievedAt": "2026-09-07T18:48:18.124Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0782-6",
+          "url": "https://engineering.uci.edu/users/quoc-viet-dang",
+          "excerpt": "eater Twitter Facebook YouTube Instagram LinkedIn Mail ©2026 Samueli School of Engineering University of California, Irvine About Dean&#039;s Message Strategic Plan Facts and Figures Henry Samueli School Leadership Engineering Leadership Council Accreditation Orange County Employment Faculty Positions View All Open Positions Application Help Lecturer Positions Postdoctoral Scholar Positions Research Positions Open Samueli School of Engineering Staff Positions Visit Us Driving Directions Parking and Maps Walking Map UCI Campus Maps Admissions Undergraduate Enrollment and Degrees Awarded Why UCI?",
+          "retrievedAt": "2026-09-07T18:48:18.124Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0782-7",
+          "url": "https://engineering.uci.edu/users/quoc-viet-dang",
+          "excerpt": "Study Abroad Southern California Location Experiential Learning Research Opportunities Campus Living Chemistry for Engineering Entrepreneurial Opportunities Student Groups How to Apply Deadlines Financial Aid Admissions Office Prospective Students UCI-IVC Engineering Academy Engineering Ambassadors Newly Admitted Freshmen Transfers Majors and Minors Offered Graduate Programs and Concentrations How to Apply Meet Us on the Road Anteater Voices Dean Magnus Egerstedt Assoc.",
+          "retrievedAt": "2026-09-07T18:48:18.124Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0782-8",
+          "url": "https://engineering.uci.edu/users/quoc-viet-dang",
+          "excerpt": "-15 2013-14 2012-13 Facts & Figures Events Archives E-Newsletter Subscribe 2026 2024 2025 2024 2023 2022 2021 2020 2019 2018 2017 2016 Social Media Contact Us Style Guide Color Palette Logos and Wordmarks Dept Logos and Wordmarks Email Signature PowerPoint Current Students Undergraduate Graduate Departments Biomedical Engineering Message From Chair About Facts & Figures Undergraduate Educational Missions Biomedical Engineering Program Biomedical Engineering: Premedical Biomedical Engineering Biomedical Engineering: Premedical Biomedical Engineering Minor Graduate Prospective Students Why Apply?",
+          "retrievedAt": "2026-09-07T18:48:18.124Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:49:55.157Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0784": {
       "overview": "pending",
