@@ -2154,7 +2154,9 @@
         "vp-0479",
         "vp-0480"
       ],
-      "status": "pending"
+      "status": "complete",
+      "startedAt": "2026-09-07T05:00:23.147Z",
+      "publishedAt": "2026-09-07T05:03:01.745Z"
     },
     {
       "number": 25,
@@ -33415,206 +33417,1362 @@
       "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0461": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://researchworks.laverne.edu/esploro/profile/ngoc_bui"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://researchworks.laverne.edu/esploro/profile/ngoc_bui: SPA client-rendered page"
+      ],
+      "updatedAt": "2026-09-07T05:03:01.745Z",
+      "nextAction": "Fetch via headless browser or find server-rendered faculty profile"
     },
     "vp-0462": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://sph.umd.edu/people/thu-nguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0462-1",
+          "url": "https://sph.umd.edu/people/thu-nguyen",
+          "excerpt": "search Day U21 Health Research Exchange (HREx) The SPH Happiness and Wellness Initiative Faculty & Staff School Leadership Alumni Community Career Exploration Mentorship Professional Development Internships Student Research Opportunities Student Organizations, Honor Societies and Honor Programs Advising & Academic Resources Delta Omega Public Health Honorary Society Peace Corps Prep Program Fund Your Idea Public Health Practice & Community Engagement About News Events Apply Give About News Events Apply Give Thu Nguyen Home People Thu Nguyen Thu Nguyen Associate Professor, Epidemiology ttxn@umd.",
+          "retrievedAt": "2026-09-07T05:00:24.573Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0462-2",
+          "url": "https://sph.umd.edu/people/thu-nguyen",
+          "excerpt": "edu SPH 2234DD Thu Nguyen, ScD, MSPH is an associate professor of epidemiology and biostatistics at the University of Maryland School of Public Health.",
+          "retrievedAt": "2026-09-07T05:00:24.573Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0462-3",
+          "url": "https://sph.umd.edu/people/thu-nguyen",
+          "excerpt": "She is a social epidemiologist whose research focuses on the impact of modifiable social factors on minority health and health disparities.",
+          "retrievedAt": "2026-09-07T05:00:24.573Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0462-4",
+          "url": "https://sph.umd.edu/people/thu-nguyen",
+          "excerpt": "A primary line of focus of her research is investigating the influence of racism and discrimination in creating and perpetuating health equities.",
+          "retrievedAt": "2026-09-07T05:00:24.573Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0462-5",
+          "url": "https://sph.umd.edu/people/thu-nguyen",
+          "excerpt": "Department Information Department of Epidemiology and Biostatistics Faculty Role Core Faculty Expertise Big data, modeling and research methods Family health, maternal/child and reproductive health Health equity, disparities, community and population health Curriculum Vitae Thu Nguyen CV UMD 012925.",
+          "retrievedAt": "2026-09-07T05:00:24.573Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0462-6",
+          "url": "https://sph.umd.edu/people/thu-nguyen",
+          "excerpt": "Nguyen uses a variety of different data sources (including Big Data) and approaches (including quantitative and qualitative research methods) to advance our understanding of social determinants of health.",
+          "retrievedAt": "2026-09-07T05:00:24.573Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0462-7",
+          "url": "https://sph.umd.edu/people/thu-nguyen",
+          "excerpt": "Nguyen also leads the interdisciplinary research collaborative, Big Data for Health Equity (BD4HE).",
+          "retrievedAt": "2026-09-07T05:00:24.573Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0462-8",
+          "url": "https://sph.umd.edu/people/thu-nguyen",
+          "excerpt": "BD4HE is comprised of faculty, trainees, and students from universities across the U.",
+          "retrievedAt": "2026-09-07T05:00:24.573Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:03:01.745Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0463": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.uml.edu/sciences/mathematics/people/tran-thao.aspx"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0463-1",
+          "url": "https://www.uml.edu/sciences/mathematics/people/tran-thao.aspx",
+          "excerpt": "Thao Tran | People | Mathematics and Statistics | Kennedy College of Sciences | UMass Lowell Skip to Main Content UMass Lowell is #1 in What Matters Most!",
+          "retrievedAt": "2026-09-07T05:00:24.946Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0463-2",
+          "url": "https://www.uml.edu/sciences/mathematics/people/tran-thao.aspx",
+          "excerpt": "Read Why⁠ ⁠ Visit A-Z Directory Alumni MyUML Request Info Make A Gift Search Menu Viewbook About Academics Research Admissions & Aid Student Life Athletics Home Kennedy College of Sciences Mathematics and Statistics People Thao Tran Mathematics and Statistics Programs For Students People Staff Adjunct Faculty Emeritus Faculty Tools for Faculty Alumni Research News & Events Contact Kennedy College of Sciences Thao T.",
+          "retrievedAt": "2026-09-07T05:00:24.946Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0463-3",
+          "url": "https://www.uml.edu/sciences/mathematics/people/tran-thao.aspx",
+          "excerpt": "Tran Assistant Teaching Professor College College of Sciences Department Mathematics & Statistics Phone 978-934-2444 Office Falmouth 207C Email Thao_Tran2@uml.",
+          "retrievedAt": "2026-09-07T05:00:24.946Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0463-4",
+          "url": "https://www.uml.edu/sciences/mathematics/people/tran-thao.aspx",
+          "excerpt": "edu Quick Links Request Information Apply Check Application Status Visit Find us on TikTok Find us on Facebook Follow us on X Watch us on YouTube Find us on Instagram Find us on Linkedin Menu Viewbook About Academics Research Admissions & Aid Student Life Athletics Department of Mathematics and Statistics Southwick Hall 303 11 University Ave.",
+          "retrievedAt": "2026-09-07T05:00:24.946Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0463-5",
+          "url": "https://www.uml.edu/sciences/mathematics/people/tran-thao.aspx",
+          "excerpt": ", Lowell, MA 01854 Phone: 978-934-2410 or 978-934-2416 Fax: 978-934-3053 | Email: mathematics@uml.",
+          "retrievedAt": "2026-09-07T05:00:24.946Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0463-6",
+          "url": "https://www.uml.edu/sciences/mathematics/people/tran-thao.aspx",
+          "excerpt": "edu Maps & Directions Contact Us UMass System Privacy Policy Accessibility Feedback This Browser is Not Supported For an optimum web experience we recommend the latest version of Firefox, Chrome, Edge, or Safari.",
+          "retrievedAt": "2026-09-07T05:00:24.946Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:03:01.745Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0464": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.memphis.edu/music/fac-staff/nguyen-a.php"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0464-1",
+          "url": "https://www.memphis.edu/music/fac-staff/nguyen-a.php",
+          "excerpt": "Canvas Academic Calendar Libraries Research & Innovation Campus Life Student Affairs Student Advocacy Career Services Housing & Residence Life Campus Dining Student Engagement Campus Recreation TigerZone - Student Events About Us About the UofM Office of the President University Governance Alumni & Advancement UofM Newsroom City of Memphis Other Campuses UofM Lambuth UofM Global - Online Contact Us Contact the UofM Apply Visit Events Athletics News Give umMail MyMemphis About Us Admissions Academics Ensembles Support Events Community Music Home Music Faculty Albert Nguyen Director of Bands 901.",
+          "retrievedAt": "2026-09-07T05:00:25.342Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0464-2",
+          "url": "https://www.memphis.edu/music/fac-staff/nguyen-a.php",
+          "excerpt": "Scheidt School of Music, where he also leads the Conducting Area and serves as Executive Director of the Summer at the Scheidt Music Camps.",
+          "retrievedAt": "2026-09-07T05:00:25.342Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0464-3",
+          "url": "https://www.memphis.edu/music/fac-staff/nguyen-a.php",
+          "excerpt": "His primary responsibilities include overseeing the University Bands Program, conducting the Wind Ensemble, directing the graduate Wind Conducting Program, and teaching graduate-level courses in wind/band repertoire and rehearsal techniques.",
+          "retrievedAt": "2026-09-07T05:00:25.342Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0464-4",
+          "url": "https://www.memphis.edu/music/fac-staff/nguyen-a.php",
+          "excerpt": "Nguyen’s leadership, the University of Memphis Wind Ensemble has performed at prestigious events including the College Band Directors National Association (CBDNA) Southern Division Conference, the Tennessee Music Education Association (TNMEA) All-State Conference, and international venues in Austria and Italy.",
+          "retrievedAt": "2026-09-07T05:00:25.342Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0464-5",
+          "url": "https://www.memphis.edu/music/fac-staff/nguyen-a.php",
+          "excerpt": "He is a sought-after conductor and clinician, having worked with ensembles across the United States, including All-State Bands in Arkansas, Kentucky, South Carolina, and Texas.",
+          "retrievedAt": "2026-09-07T05:00:25.342Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0464-6",
+          "url": "https://www.memphis.edu/music/fac-staff/nguyen-a.php",
+          "excerpt": "His presentations on leadership, conducting, and rehearsal strategies have been featured at the Midwest Clinic and numerous music educator conferences nationwide.",
+          "retrievedAt": "2026-09-07T05:00:25.342Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0464-7",
+          "url": "https://www.memphis.edu/music/fac-staff/nguyen-a.php",
+          "excerpt": "Nguyen began his professional career as Director of Bands at Morrilton High School in Morrilton, Arkansas.",
+          "retrievedAt": "2026-09-07T05:00:25.342Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0464-8",
+          "url": "https://www.memphis.edu/music/fac-staff/nguyen-a.php",
+          "excerpt": "He earned a Bachelor of Arts in Music Education from Arkansas Tech University and both his Master’s and Doctor of Musical Arts degrees in Wind Conducting from The University of Texas at Austin.",
+          "retrievedAt": "2026-09-07T05:00:25.342Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:03:01.745Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0465": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://med.umn.edu/bio/lahn-nguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0465-1",
+          "url": "https://med.umn.edu/bio/lahn-nguyen",
+          "excerpt": "Lahn Nguyen | Medical School Skip to main content Go to the University of Minnesota Twin Cities home page One Stop MyU Search Department of Pediatrics Medical School About Leadership Contact Honors & Awards Work in Pediatrics!",
+          "retrievedAt": "2026-09-07T05:00:25.610Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0465-2",
+          "url": "https://med.umn.edu/bio/lahn-nguyen",
+          "excerpt": "rch Advocacy Education & Training Get Involved Diversity & Inclusion Divisions Blood and Marrow Transplantation & Cellular Therapy Faculty Research Staff & Trainees Cardiology Faculty Research Staff & Trainees Clinical Behavioral Neuroscience Education Autism Training Social Skills & Other Therapy Services Workshops and Trainings Staff & Trainees Faculty Critical Care Medicine Faculty Staff & Trainees Emergency Medicine Faculty Staff & Trainees Endocrinology Faculty Staff & Trainees Patient Care Research Epidemiology Faculty Research in Pediatric Epidemiology & Clinical Research CARES MN CPP 2.",
+          "retrievedAt": "2026-09-07T05:00:25.610Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0465-3",
+          "url": "https://med.umn.edu/bio/lahn-nguyen",
+          "excerpt": "e Healthy Environments for Vulnerable Youth Ingolfsland Lab for Retinopathy of Prematurity Islet Autotransplant Research Program Kyba Lab Largaespada Laboratory Moriarity Lab Lab Members Move + Thrive Neonatal Jaundice Research Program Panoskaltsis-Mortari Laboratory Saydam Laboratory Schleiss Lab (Cytomegalovirus) Schuldt Lab Shlafer Program for Research on Criminal Justice & Health About Community-Engaged Research Modules Healthy Start Act Minnesota Model Jail Project Resources Team Perinatal Supports Family-Centered Jails Caring for Kids Thielen Lab Be Antibiotic Hero MINNE-LOVE-2: Got Snot?",
+          "retrievedAt": "2026-09-07T05:00:25.610Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0465-4",
+          "url": "https://med.umn.edu/bio/lahn-nguyen",
+          "excerpt": "y/Oncology Faculty, Department of Pediatrics Email [email&#160;protected] Office Phone (612) 625-6678 Copy URL QR code Scan with smart phone camera Assistant Professor, Division of Pediatric Hematology/Oncology Faculty, Department of Pediatrics Administrative Contact Lynn Wodziak Administrative Phone: 612-626-2602 Administrative Email: [email&#160;protected] Address Pediatric Hospital Medicine Academic Office Building 2450 Riverside Ave S AO-301 Minneapolis, MN 55454 Additional Links Department of Pediatrics Division of Pediatric Hematology and Oncology Experts@Minnesota profile + Biography Dr.",
+          "retrievedAt": "2026-09-07T05:00:25.610Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0465-5",
+          "url": "https://med.umn.edu/bio/lahn-nguyen",
+          "excerpt": "After medical school she took a transitional year at Peconic Bay Medical Center in Riverhead.",
+          "retrievedAt": "2026-09-07T05:00:25.610Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0465-6",
+          "url": "https://med.umn.edu/bio/lahn-nguyen",
+          "excerpt": "Nguyen completed her residency in Pediatrics in Brooklyn, NY at the Coney Island Hospital, SUNY Downstate Medical Center and Kings County Hospital in 2019.",
+          "retrievedAt": "2026-09-07T05:00:25.610Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0465-7",
+          "url": "https://med.umn.edu/bio/lahn-nguyen",
+          "excerpt": "Nguyen graduated from one of the largest Pediatric Hospice and Palliative Care Fellowship programs in the USA at UTHSCSA in San Antonio, TX in the Summer of 2020.",
+          "retrievedAt": "2026-09-07T05:00:25.610Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0465-8",
+          "url": "https://med.umn.edu/bio/lahn-nguyen",
+          "excerpt": "Nguyen spent her formative years growing up in the Twin Cities of Minnesota before moving to Des Moines, IA where she received her BA in Biology and History from Drake University.",
+          "retrievedAt": "2026-09-07T05:00:25.610Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:03:01.745Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0466": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://med.umn.edu/bio/mai-nguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0466-1",
+          "url": "https://med.umn.edu/bio/mai-nguyen",
+          "excerpt": "Mai Nguyen | Medical School Skip to main content Go to the University of Minnesota Twin Cities home page One Stop MyU Search Department of Orthopedic Surgery Medical School About What is Orthopedics?",
+          "retrievedAt": "2026-09-07T05:00:25.761Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0466-2",
+          "url": "https://med.umn.edu/bio/mai-nguyen",
+          "excerpt": "SMFA Resources Interdisciplinary Musculoskeletal Research Training Program (IMSKR T32) Frequently Asked Questions Musculoskeletal Seminar & Journal Club MRI of Osteonecrosis of the Femoral Head Study Trial (MOST) Patient Care News, Events, & Grand Rounds Athletic Medicine Archive Grand Rounds Archive Sports Medicine Archive Grand Rounds Joint Venture Newsletter GIVE Alloy Alliance Menu Mai Nguyen, MD Copy URL QR code Scan with smart phone camera Mai Nguyen, MD Associate Professor Email [email&#160;protected] Copy URL QR code Scan with smart phone camera Associate Professor Highlighted News Dr.",
+          "retrievedAt": "2026-09-07T05:00:25.761Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0466-3",
+          "url": "https://med.umn.edu/bio/mai-nguyen",
+          "excerpt": "Mai Nguyen Champions Patient-Centered Approach, Crafting Research Based on Patient Questions + Biography Mai Nguyen, MD, is a board certified orthopedic surgeon, fellowship trained in orthopedic trauma, and assistant professor at the University of Minnesota.",
+          "retrievedAt": "2026-09-07T05:00:25.761Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0466-4",
+          "url": "https://med.umn.edu/bio/mai-nguyen",
+          "excerpt": "Specialty Trauma - Ortho + Education Medical School Vanderbilt University School of Medicine, Nashville, Tennessee Residency Orthopedic Surgery, University of Iowa Hospitals and Clinics, Iowa City, Iowa Fellowships Orthopedic Trauma, Case Western Reserve University, Cleveland, Ohio + Publications Experts@Minnesota Publications + Research Research Interests In addition to her clinical interests, Dr.",
+          "retrievedAt": "2026-09-07T05:00:25.761Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0466-5",
+          "url": "https://med.umn.edu/bio/mai-nguyen",
+          "excerpt": "She has delivered several lectures on a variety of trauma topics in national conferences and authored multiple orthopedic research abstracts, manuscripts, and textbook chapters.",
+          "retrievedAt": "2026-09-07T05:00:25.761Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0466-6",
+          "url": "https://med.umn.edu/bio/mai-nguyen",
+          "excerpt": "Nguyen is particularly passionate about resident education having mentored medical students and residents throughout her career.",
+          "retrievedAt": "2026-09-07T05:00:25.761Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0466-7",
+          "url": "https://med.umn.edu/bio/mai-nguyen",
+          "excerpt": "+ Licensures & Certifications American Board of Orthopaedic Surgery; 2018 - present + Awards, Honors and Recognitions Mpls.",
+          "retrievedAt": "2026-09-07T05:00:25.761Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0466-8",
+          "url": "https://med.umn.edu/bio/mai-nguyen",
+          "excerpt": "Paul Magazine \"Top Doctor—Rising Star\": 2022 Research mentor for the Ernst Dehne Research Award Resident – William Beaumont Army Medical Center and Texas Tech University Health Sciences Center: 2019 Research mentor for the Physician in Training Award-Mid-America Orthopaedic Association: 2018 AO Davos Fellows Initiative Recipient: 2016 AO Trauma North American’s Fellows Research Grant: 2015 OTA Kathy Cramer Young Clinician Memorial Scholarship Award: 2015 AAOS/OREF/ORS Clinician Scholar Career Development Program: 2015 AO Trauma North America Resident Research Grant: 2012 Andrew E.",
+          "retrievedAt": "2026-09-07T05:00:25.761Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:03:01.745Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0467": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://dentistry.unc.edu/person/tung-nguyen/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0467-1",
+          "url": "https://dentistry.unc.edu/person/tung-nguyen/",
+          "excerpt": "ernational Dentists (ASPID) Continuing Dental Education Outreach Outreach Service to the State Our Global Reach Alumni Alumni Dental Alumni Association Dental Hygiene Alumni Association (DHAA) Dental Foundation of North Carolina Research Research About Our Research Events People Patient Care Patient Care New Patients Current Patients UNC MyChart Our Clinics Home &gt; People &gt; Tung Nguyen, DMD, MS Tung Nguyen, DMD, MS Orthodontics Program Director Education MS, Oral Biology, UNC Adams School of Dentistry, 2008 DMD, Dental Medicine, Tufts University School of Dental Medicine, 2005 Overview Dr.",
+          "retrievedAt": "2026-09-07T05:00:26.133Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0467-2",
+          "url": "https://dentistry.unc.edu/person/tung-nguyen/",
+          "excerpt": "Tung Nguyen DMD, MS, is the Zaytoun Distinguish Tenured Professor and Program Director for UNC’s department of Orthodontics.",
+          "retrievedAt": "2026-09-07T05:00:26.133Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0467-3",
+          "url": "https://dentistry.unc.edu/person/tung-nguyen/",
+          "excerpt": "He received his Doctorate of Dental Medicine from Tufts University School of Dental Medicine in 2005 and Certificate and Masters in Orthodontics from UNC Adams School of Dentistry in 2008.",
+          "retrievedAt": "2026-09-07T05:00:26.133Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0467-4",
+          "url": "https://dentistry.unc.edu/person/tung-nguyen/",
+          "excerpt": "He completed the William R Proffit Teaching fellowship before joining the faculty at UNC.",
+          "retrievedAt": "2026-09-07T05:00:26.133Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0467-5",
+          "url": "https://dentistry.unc.edu/person/tung-nguyen/",
+          "excerpt": "He enjoys teaching Orthodontics residents, overseeing patient care in our Graduate Clinic, golf and nature.",
+          "retrievedAt": "2026-09-07T05:00:26.133Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0467-6",
+          "url": "https://dentistry.unc.edu/person/tung-nguyen/",
+          "excerpt": "His research interests include Skeletal anchorage and orthopedics, as well as 3D imaging and technology in orthodontics.",
+          "retrievedAt": "2026-09-07T05:00:26.133Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0467-7",
+          "url": "https://dentistry.unc.edu/person/tung-nguyen/",
+          "excerpt": "He is an internationally recognized orthodontist and given over 100 lectures in 6 continents.",
+          "retrievedAt": "2026-09-07T05:00:26.133Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0467-8",
+          "url": "https://dentistry.unc.edu/person/tung-nguyen/",
+          "excerpt": "Research Interests Skeletal anchorage and orthopedics 3D Imaging and Technology in orthodontics Research Summary My imaging lab’s focus to is to develop 3D software to evaluate growth and treatment changes.",
+          "retrievedAt": "2026-09-07T05:00:26.133Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:02:57.769Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0468": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.med.upenn.edu/apps/faculty/index.php/g275/p9543200"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0468-1",
+          "url": "https://www.med.upenn.edu/apps/faculty/index.php/g275/p9543200",
+          "excerpt": "Care Supporting Penn Medicine Home About Us Office of the Dean Office of the EVD/CSO Overview Our Faculty School Leadership School Administration Strategic Plan Careers at PSOM Education Overview MD Program PhD Program MD-PhD and Dual Degree Programs Master’s & Certificate Programs Visiting Students Continuing Medical and Interprofessional Education Biomedical Postdoctoral Programs Graduate Medical Education Other Educational Programs Research Academic Departments Centers & Institutes Equal Opportunity Engagement Community Outreach Global Initiatives Employment About Us Our Faculty Minh-huy L.",
+          "retrievedAt": "2026-09-07T05:00:26.642Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0468-2",
+          "url": "https://www.med.upenn.edu/apps/faculty/index.php/g275/p9543200",
+          "excerpt": "e Medical Staff, Hospital of the University of Pennsylvania, Department of Radiology, Philadelphia, PA Active Medical Staff, Pennsylvania Hospital, Department of Radiology, Philadelphia, PA Attending Radiologist, Children's Hospital of Philadelphia, Divisions of Body Imaging and Fetal Imaging, Department of Radiology, Philadelphia, PA Director, Body Imaging Protocols, Children's Hospital of Philadelphia, Division of Body Imaging, Department of Radiology, Philadelphia, PA Department: Radiology Contact information Children's Hospital of Philadelphia Department of Radiology 3401 Civic Center Blvd.",
+          "retrievedAt": "2026-09-07T05:00:26.642Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0468-3",
+          "url": "https://www.med.upenn.edu/apps/faculty/index.php/g275/p9543200",
+          "excerpt": "edu Education BA (Public Health Studies (Natural Science Concentration)) Johns Hopkins University, Baltimore, MD, 2010.",
+          "retrievedAt": "2026-09-07T05:00:26.642Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0468-4",
+          "url": "https://www.med.upenn.edu/apps/faculty/index.php/g275/p9543200",
+          "excerpt": "MD (Doctor of Medicine) Johns Hopkins University School of Medicine, Baltimore, MD, 2016.",
+          "retrievedAt": "2026-09-07T05:00:26.642Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0468-5",
+          "url": "https://www.med.upenn.edu/apps/faculty/index.php/g275/p9543200",
+          "excerpt": "Permanent link &gt; Perelman School of Medicine &gt; Faculty &gt; Details Selected Publications Huynh, M.",
+          "retrievedAt": "2026-09-07T05:00:26.642Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0468-6",
+          "url": "https://www.med.upenn.edu/apps/faculty/index.php/g275/p9543200",
+          "excerpt": ": Hot Takes and Hard Choices” Inside Pediatric Radiology Aug 2026 Notes: *Contributor; Audio Podcast Episode (8/28/2026); https://www.",
+          "retrievedAt": "2026-09-07T05:00:26.642Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0468-7",
+          "url": "https://www.med.upenn.edu/apps/faculty/index.php/g275/p9543200",
+          "excerpt": "Boulter AC, Weber KL, Huynh MH, Steele J, Mattei P, Hill-Kayser CE, Godlewski K, Crane JN : Paraneoplastic Inflammatory Syndrome as the Sole Presenting Symptom of Angiomatoid Fibrous Histiocytoma in a Pediatric Patient .",
+          "retrievedAt": "2026-09-07T05:00:26.642Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0468-8",
+          "url": "https://www.med.upenn.edu/apps/faculty/index.php/g275/p9543200",
+          "excerpt": "Pediatric blood & cancer Page: e70601, Aug 2026 Notes: Online ahead of print as of August 2026.",
+          "retrievedAt": "2026-09-07T05:00:26.642Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:03:01.745Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0469": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://health.usf.edu/medicine/neurology/faculty#hung-tran"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0469-1",
+          "url": "https://health.usf.edu/medicine/neurology/faculty#hung-tran",
+          "excerpt": "ology About Us Faculty Contact Us Visit Tampa Bay Divisions Education Medical Student Program Neurology Residency Program PMR Residency Program Fellowship Programs Multiple Sclerosis Clinical Fellowship SCI Fellowship Program Research USF Department of Neurology&#x27;s Clinical Trials USF Neuroscience Institute Patient Care Giving Submit Search Quick Links Education Research Patient Care News USF Contribute USF Health Morsani College of Medicine Neurology Faculty Faculty Neurology Faculty Kevin Allison, PA-C Kevin Allison, PA-C Multiple Sclerosis Physician Assistant, Instructor ll kalliso1@usf.",
+          "retrievedAt": "2026-09-07T05:00:27.106Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0469-2",
+          "url": "https://health.usf.edu/medicine/neurology/faculty#hung-tran",
+          "excerpt": "edu (813) 396-9478 Ushtar Amin, MD Ushtar Amin, MD Epilepsy, EEG, & Sleep Medicine Assistant Professor uamin@usf.",
+          "retrievedAt": "2026-09-07T05:00:27.106Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0469-3",
+          "url": "https://health.usf.edu/medicine/neurology/faculty#hung-tran",
+          "excerpt": "edu Mark Armanious, MD Mark Armanious, MD Neuromuscular Medicine & EMG, Pain, Headache Medicine Assistant Professor miarmani@usf.",
+          "retrievedAt": "2026-09-07T05:00:27.106Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0469-4",
+          "url": "https://health.usf.edu/medicine/neurology/faculty#hung-tran",
+          "excerpt": "edu Kanita Beba Abadal, MD Kanita Beba Abadal, MD Vascular Neurology Assistant Professor Associate Program Director, Vascular Neurology Fellowship kbeba@usf.",
+          "retrievedAt": "2026-09-07T05:00:27.106Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0469-5",
+          "url": "https://health.usf.edu/medicine/neurology/faculty#hung-tran",
+          "excerpt": "edu Selim Benbadis, MD Selim Benbadis, MD Epilepsy, EEG, & Sleep Medicine Professor Division Director sbenbadi@usf.",
+          "retrievedAt": "2026-09-07T05:00:27.106Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0469-6",
+          "url": "https://health.usf.edu/medicine/neurology/faculty#hung-tran",
+          "excerpt": "edu (813) 259-8577 Andrea Bozeman, APRN Andrea Bozeman, APRN Vascular Neurology Advanced Practice Registered Nurse Research Nurse abozeman@usf.",
+          "retrievedAt": "2026-09-07T05:00:27.106Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0469-7",
+          "url": "https://health.usf.edu/medicine/neurology/faculty#hung-tran",
+          "excerpt": "edu Anthony Bradshaw, MD Anthony Bradshaw, MD Neuromuscular Medicine & EMG Assistant Professor anthonybradshaw@usf.",
+          "retrievedAt": "2026-09-07T05:00:27.106Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0469-8",
+          "url": "https://health.usf.edu/medicine/neurology/faculty#hung-tran",
+          "excerpt": "edu (813) 974-3541 Ornella Bricoune Ornella Bricoune Interventional Pain Medicine Assistant Professor ornella@usf.",
+          "retrievedAt": "2026-09-07T05:00:27.106Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:03:01.745Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0470": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://health.usf.edu/medicine/neurology/faculty#johanna-tran"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0470-1",
+          "url": "https://health.usf.edu/medicine/neurology/faculty#johanna-tran",
+          "excerpt": "ology About Us Faculty Contact Us Visit Tampa Bay Divisions Education Medical Student Program Neurology Residency Program PMR Residency Program Fellowship Programs Multiple Sclerosis Clinical Fellowship SCI Fellowship Program Research USF Department of Neurology&#x27;s Clinical Trials USF Neuroscience Institute Patient Care Giving Submit Search Quick Links Education Research Patient Care News USF Contribute USF Health Morsani College of Medicine Neurology Faculty Faculty Neurology Faculty Kevin Allison, PA-C Kevin Allison, PA-C Multiple Sclerosis Physician Assistant, Instructor ll kalliso1@usf.",
+          "retrievedAt": "2026-09-07T05:00:27.331Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0470-2",
+          "url": "https://health.usf.edu/medicine/neurology/faculty#johanna-tran",
+          "excerpt": "edu (813) 396-9478 Ushtar Amin, MD Ushtar Amin, MD Epilepsy, EEG, & Sleep Medicine Assistant Professor uamin@usf.",
+          "retrievedAt": "2026-09-07T05:00:27.331Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0470-3",
+          "url": "https://health.usf.edu/medicine/neurology/faculty#johanna-tran",
+          "excerpt": "edu Mark Armanious, MD Mark Armanious, MD Neuromuscular Medicine & EMG, Pain, Headache Medicine Assistant Professor miarmani@usf.",
+          "retrievedAt": "2026-09-07T05:00:27.331Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0470-4",
+          "url": "https://health.usf.edu/medicine/neurology/faculty#johanna-tran",
+          "excerpt": "edu Kanita Beba Abadal, MD Kanita Beba Abadal, MD Vascular Neurology Assistant Professor Associate Program Director, Vascular Neurology Fellowship kbeba@usf.",
+          "retrievedAt": "2026-09-07T05:00:27.331Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0470-5",
+          "url": "https://health.usf.edu/medicine/neurology/faculty#johanna-tran",
+          "excerpt": "edu Selim Benbadis, MD Selim Benbadis, MD Epilepsy, EEG, & Sleep Medicine Professor Division Director sbenbadi@usf.",
+          "retrievedAt": "2026-09-07T05:00:27.331Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0470-6",
+          "url": "https://health.usf.edu/medicine/neurology/faculty#johanna-tran",
+          "excerpt": "edu (813) 259-8577 Andrea Bozeman, APRN Andrea Bozeman, APRN Vascular Neurology Advanced Practice Registered Nurse Research Nurse abozeman@usf.",
+          "retrievedAt": "2026-09-07T05:00:27.331Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0470-7",
+          "url": "https://health.usf.edu/medicine/neurology/faculty#johanna-tran",
+          "excerpt": "edu Anthony Bradshaw, MD Anthony Bradshaw, MD Neuromuscular Medicine & EMG Assistant Professor anthonybradshaw@usf.",
+          "retrievedAt": "2026-09-07T05:00:27.331Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0470-8",
+          "url": "https://health.usf.edu/medicine/neurology/faculty#johanna-tran",
+          "excerpt": "edu (813) 974-3541 Ornella Bricoune Ornella Bricoune Interventional Pain Medicine Assistant Professor ornella@usf.",
+          "retrievedAt": "2026-09-07T05:00:27.331Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:03:01.745Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0471": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://health.usf.edu/medicine/neurology/faculty#nam-tran"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0471-1",
+          "url": "https://health.usf.edu/medicine/neurology/faculty#nam-tran",
+          "excerpt": "ology About Us Faculty Contact Us Visit Tampa Bay Divisions Education Medical Student Program Neurology Residency Program PMR Residency Program Fellowship Programs Multiple Sclerosis Clinical Fellowship SCI Fellowship Program Research USF Department of Neurology&#x27;s Clinical Trials USF Neuroscience Institute Patient Care Giving Submit Search Quick Links Education Research Patient Care News USF Contribute USF Health Morsani College of Medicine Neurology Faculty Faculty Neurology Faculty Kevin Allison, PA-C Kevin Allison, PA-C Multiple Sclerosis Physician Assistant, Instructor ll kalliso1@usf.",
+          "retrievedAt": "2026-09-07T05:00:27.556Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0471-2",
+          "url": "https://health.usf.edu/medicine/neurology/faculty#nam-tran",
+          "excerpt": "edu (813) 396-9478 Ushtar Amin, MD Ushtar Amin, MD Epilepsy, EEG, & Sleep Medicine Assistant Professor uamin@usf.",
+          "retrievedAt": "2026-09-07T05:00:27.556Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0471-3",
+          "url": "https://health.usf.edu/medicine/neurology/faculty#nam-tran",
+          "excerpt": "edu Mark Armanious, MD Mark Armanious, MD Neuromuscular Medicine & EMG, Pain, Headache Medicine Assistant Professor miarmani@usf.",
+          "retrievedAt": "2026-09-07T05:00:27.556Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0471-4",
+          "url": "https://health.usf.edu/medicine/neurology/faculty#nam-tran",
+          "excerpt": "edu Kanita Beba Abadal, MD Kanita Beba Abadal, MD Vascular Neurology Assistant Professor Associate Program Director, Vascular Neurology Fellowship kbeba@usf.",
+          "retrievedAt": "2026-09-07T05:00:27.556Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0471-5",
+          "url": "https://health.usf.edu/medicine/neurology/faculty#nam-tran",
+          "excerpt": "edu Selim Benbadis, MD Selim Benbadis, MD Epilepsy, EEG, & Sleep Medicine Professor Division Director sbenbadi@usf.",
+          "retrievedAt": "2026-09-07T05:00:27.556Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0471-6",
+          "url": "https://health.usf.edu/medicine/neurology/faculty#nam-tran",
+          "excerpt": "edu (813) 259-8577 Andrea Bozeman, APRN Andrea Bozeman, APRN Vascular Neurology Advanced Practice Registered Nurse Research Nurse abozeman@usf.",
+          "retrievedAt": "2026-09-07T05:00:27.556Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0471-7",
+          "url": "https://health.usf.edu/medicine/neurology/faculty#nam-tran",
+          "excerpt": "edu Anthony Bradshaw, MD Anthony Bradshaw, MD Neuromuscular Medicine & EMG Assistant Professor anthonybradshaw@usf.",
+          "retrievedAt": "2026-09-07T05:00:27.556Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0471-8",
+          "url": "https://health.usf.edu/medicine/neurology/faculty#nam-tran",
+          "excerpt": "edu (813) 974-3541 Ornella Bricoune Ornella Bricoune Interventional Pain Medicine Assistant Professor ornella@usf.",
+          "retrievedAt": "2026-09-07T05:00:27.556Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:03:01.745Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0472": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://health.usf.edu/medicine/neurology/faculty/tvu6"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0472-1",
+          "url": "https://health.usf.edu/medicine/neurology/faculty/tvu6",
+          "excerpt": "ducation Medical Student Program Neurology Residency Program PMR Residency Program Fellowship Programs Multiple Sclerosis Clinical Fellowship SCI Fellowship Program Research USF Department of Neurology&#x27;s Clinical Trials USF Neuroscience Institute Patient Care Giving Submit Search Quick Links Education Research Patient Care News USF Contribute USF Health Morsani College of Medicine Neurology Faculty Tuan Vu, MD Professor, Department of Neurology Division Director, Neuromuscular Medicine & Emg Neuromuscular Medicine & Emg Contact Info 4001 East Fletcher Ave Tampa FL Academic Email: tvu6@usf.",
+          "retrievedAt": "2026-09-07T05:00:27.641Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0472-2",
+          "url": "https://health.usf.edu/medicine/neurology/faculty/tvu6",
+          "excerpt": "edu Education MD , Medicine, the Pennsylvania State University, 1989 Interdisciplinary and Emerging Signature Programs Neuroscience Research Interests Dr.",
+          "retrievedAt": "2026-09-07T05:00:27.641Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0472-3",
+          "url": "https://health.usf.edu/medicine/neurology/faculty/tvu6",
+          "excerpt": "Vu&#x27;s current research focus is on treatment of amyotrophic lateral sclerosis (ALS; Lou Gehrig&#x27;s disease), myasthenia gravis, peripheral neuropathy, and myositis.",
+          "retrievedAt": "2026-09-07T05:00:27.641Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0472-4",
+          "url": "https://health.usf.edu/medicine/neurology/faculty/tvu6",
+          "excerpt": "Recent Publications Plowman EK Tabor LC Robison R Gaziano J Dion C Watts SA Vu T Gooch C.",
+          "retrievedAt": "2026-09-07T05:00:27.641Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0472-5",
+          "url": "https://health.usf.edu/medicine/neurology/faculty/tvu6",
+          "excerpt": "Discriminant ability of the Eating Assessment Tool-10 to detect aspiration in individuals with amyotrophic lateral sclerosis.",
+          "retrievedAt": "2026-09-07T05:00:27.641Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0472-6",
+          "url": "https://health.usf.edu/medicine/neurology/faculty/tvu6",
+          "excerpt": "Plowman EK Watts SA Tabor L Robison R Gaziano J Domer AS Richter J Vu T Gooch C.",
+          "retrievedAt": "2026-09-07T05:00:27.641Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0472-7",
+          "url": "https://health.usf.edu/medicine/neurology/faculty/tvu6",
+          "excerpt": "Voluntary Cough Airflow Differentiates Safe Versus Unsafe Swallowing in Amyotrophic Lateral Sclerosis.",
+          "retrievedAt": "2026-09-07T05:00:27.641Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0472-8",
+          "url": "https://health.usf.edu/medicine/neurology/faculty/tvu6",
+          "excerpt": "Ehrhart J Smith AJ Kuzmin-Nichols N Zesiewicz TA Jahan I Shytle RD Kim SH Sanberg CD Vu TH Gooch CL Sanberg PR Garbuzova-Davis .",
+          "retrievedAt": "2026-09-07T05:00:27.641Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:02:57.769Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0473": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://geography.utk.edu/wp-content/uploads/2023/10/Tran_CV_April2023.pdf"
       ],
-      "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "evidence": [
+        {
+          "id": "vp-0473-1",
+          "url": "https://geography.utk.edu/wp-content/uploads/2023/10/Tran_CV_April2023.pdf",
+          "excerpt": "7 %���� 1 0 obj >/Metadata 975 0 R/ViewerPreferences 976 0 R>> endobj 2 0 obj > endobj 3 0 obj >/ExtGState >/ProcSet[/PDF/Text/ImageB/ImageC/ImageI] >>/Annots[ 11 0 R] /MediaBox[ 0 0 612 792] /Contents 4 0 R/Group >/Tabs/S/StructParents 0>> endobj 4 0 obj > stream x��]ko�6\u0016�n��������ŗ\u001em\u0010���N��n6�\u001f�b1�Ƕ����h�z��KR��\u001a=��\u0000�x$]��K�\u001c^�T�OVmu��lɋ\u0017�'m���]^�_�O��m�=�x|X\u001e�[�T��������\u0016\u000f}�4�r��%9}���qx�&)�+)#)��w^2�Z\u001e\u001e��5�\u000f\u000fN/\u000e\u000f����Lʌ\\\\\u001f\u001eP�,%��,I� �Hx*��=\\v�!",
+          "retrievedAt": "2026-09-07T05:00:28.585Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0473-2",
+          "url": "https://geography.utk.edu/wp-content/uploads/2023/10/Tran_CV_April2023.pdf",
+          "excerpt": "�\u0005�j�� |,�Gr�߯����Y@@���\u001ck`ll�h�\u0012^��\u0010�Bv� l��`]a�����j� Ϩ0��'�rF��\u0015�@E�9�k��\u0011��fuU�/�z�C(��h���^���\u0018c��\u0004�۩\u0002/�D����\u0002�G�UQ$)�\u0003�8౴�\u00159�h�ֶ���vx\u0006��\\v-��0tM=Q\\LG�8\u0016��\u0018\u001d\u0017�%��,K]����O�ݬ��q�\u0002�,OR�C��l>� h\u001c�x` ��\"= �~��8R3QՂ|P|of���?",
+          "retrievedAt": "2026-09-07T05:00:28.585Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0473-3",
+          "url": "https://geography.utk.edu/wp-content/uploads/2023/10/Tran_CV_April2023.pdf",
+          "excerpt": "�%\u000e]��9�3\u0006��\"I3\u001f�2:T�`j� W^a�H�:�$��k��U�5�Ӫm\u0003c}L����U�\u0006@��]�����G�mq\u001aWO���+�s� 5ӵ\\��u�q>�G��y����1�\u0001��\u001f��Җ��uD���K1�� �>��Nة\u001f�E��җc�\u001c\u0013\u0004y��� �x��\u0006�X��3���X��� �S.",
+          "retrievedAt": "2026-09-07T05:00:28.585Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0473-4",
+          "url": "https://geography.utk.edu/wp-content/uploads/2023/10/Tran_CV_April2023.pdf",
+          "excerpt": "��+��Xj�z�8\"�\u001c\u000e �(yBw��W\u0002j�Y���z;�\u0012��ح�\u0017i*i��W�Y�g�R�a)�'3�s��ϔ�'4 Q��)�-^�x���#���h�V��\u001a������Qʭ޲wἲ�B�h��[�a���O\u0011\u0007\u0000R�&y�\u0003��a��DҾ�g�\u001a\u0006m#��|����넜�G(O�v}23ȋ\u0012ƫ�ϋ��t�OD� \u001a�$&h\u001b\u0011\u0018�� 0���{�y���A��2�pF\\���qP��x�XN��B�\u0016\u0015\u0016\u0003�� �6&,Y �FD%�/}��\u0010D�wH���',c��E\u0019q\u0019���\u0005L�2& ����2\u0016-�O�DV���2�\u001f�Ș\u00070.",
+          "retrievedAt": "2026-09-07T05:00:28.585Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0473-5",
+          "url": "https://geography.utk.edu/wp-content/uploads/2023/10/Tran_CV_April2023.pdf",
+          "excerpt": "۰��+�69A\u0005��*�\u0010\u0007�L��\u001d�+���+Xn+X�6�`\u001ew�y����p>\u0005��̀� )�V���b\u001c�Q0\u001c�h,Tkq\u0005Ӑq\u0005+l\u0005 ��\u0015,�%��5\u0000�\u0014IY�LX��L�}ī��+`\u001a�wQ�fY�4�n+��z[��½ᨔ���@�ӓ�� ?",
+          "retrievedAt": "2026-09-07T05:00:28.585Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0473-6",
+          "url": "https://geography.utk.edu/wp-content/uploads/2023/10/Tran_CV_April2023.pdf",
+          "excerpt": "�Z�X����)A��r�\u001a��5#:��z>ԃ\u001a\u0017N�\u0018\u0015N���\u0019��\b��j�&g�MB��Oժ��՜v��� �\u0000\u00078ؤt�F�\u0010N\u0003\u0019\u0015NNm� �F���.",
+          "retrievedAt": "2026-09-07T05:00:28.585Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0473-7",
+          "url": "https://geography.utk.edu/wp-content/uploads/2023/10/Tran_CV_April2023.pdf",
+          "excerpt": "D\u0005��� ��\u001a#h\u001b\u0011\u001c���,���\u0007�Wp�pA�\u0019T8#8{��8�Np�q\u0014���P�E\u0005�@�\u0005�^�\u00122�\bN�S�Dg\u0000�L9N6���Ct> F��Ȍ\u0000w ��E�ӧ���yh�R�,�)�P����7��Š��KU}�;�����׎L����\u0007�ϏIv#򾫲}�RyF�\u0011��H\u001c\u0003���v���ɵ�jG\u000fei�1\u001f��\u0004�\u0019�mE��8����5#XMw�ن��R9�I�j�UH�̙���$�Co���\u001fg�q���n��鬩�ɻE}��4��\u001e�=�;Ph��57��\u0018gn\u001f�V �cjw�T�\u0016��\u00129n\u001f}\u001e,tDo��_��G\u0013�\u0012/q7�\u0007��ۮul���\u0019�\u0007���}s���>�q�\u001d\u001e��ٕ�v��S��*��6\u0005�R&��9z4\u0019J�\b�C�_���� \u000fM��*h�\u0010�˧Mr �^>m_�`�\u000e������g0��{�$ng�Ӱ�ܼ3��,{zc\u0004\u001a�����p���y%p#\u0019t�\u0000A\u0005�ܱ �-�\u0006v2 a A�6\"\u0004\"s�d\u001d/����\u0000p�\u0018�M��'�:�4��\"C��6��l#��v��\u0007\u0003\u0004�`���x}���\u0007x�q*��\u000f`ǆ\u0006R�a(��M�!",
+          "retrievedAt": "2026-09-07T05:00:28.585Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0473-8",
+          "url": "https://geography.utk.edu/wp-content/uploads/2023/10/Tran_CV_April2023.pdf",
+          "excerpt": "�\b���=�x\u0005\u0016u�\u0001��3����\u0011��4�\u0011�Sn3s�6LqnoYJs/� \u0001���`v�> ���\u001eԾ޵G�G�Jh7�KqC��� �2�<>�@\u0014{>�\u000f}51*t���J�^#������}��c�&�$\u0006_ \u0018y+ศ�(J\u001e��Bc\u001a- �ij�+��၅�K�ԧ�ð@q�gXz ���a\u0006B�A�\u001bk�A� �n\u0014�K?",
+          "retrievedAt": "2026-09-07T05:00:28.585Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
+      "errors": [
+        "https://geography.utk.edu/wp-content/uploads/2023/10/Tran_CV_April2023.pdf: binary PDF document requires PDF text extractor"
+      ],
+      "updatedAt": "2026-09-07T05:03:01.745Z",
+      "nextAction": "Extract text from PDF CV or locate HTML department directory profile"
     },
     "vp-0474": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "verified",
       "sourcesChecked": [
         "https://profiles.utsouthwestern.edu/profile/181972/bau-tran.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0474-1",
+          "url": "https://profiles.utsouthwestern.edu/profile/181972/bau-tran.html",
+          "excerpt": "- Faculty Profile - UT Southwestern Skip to Main Content Back to UT Southwestern Home Faculty Directory Back to Faculty Directory UT Southwestern Sites UT Southwestern Home Home - EDU Research Education & Training Patient Care Faculty Departments & Centers Media Hub Careers About Us Employee Resources Faculty Resources Search Search All Faculty A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Bau Tran , PHARM.",
+          "retrievedAt": "2026-09-07T05:00:29.154Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0474-2",
+          "url": "https://profiles.utsouthwestern.edu/profile/181972/bau-tran.html",
+          "excerpt": "Titles and Appointments Assistant Professor Schools School of Health Professions Departments Physician Assistant Studies Biography Dr.",
+          "retrievedAt": "2026-09-07T05:00:29.154Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0474-3",
+          "url": "https://profiles.utsouthwestern.edu/profile/181972/bau-tran.html",
+          "excerpt": "Tran completed his physician assistant training in 2008 at Red Rocks Physician Assistant Program in Arvada, CO, a Master of Medical Science from St.",
+          "retrievedAt": "2026-09-07T05:00:29.154Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0474-4",
+          "url": "https://profiles.utsouthwestern.edu/profile/181972/bau-tran.html",
+          "excerpt": "Francis University, and PhD in Learning Technology from the University of North Texas.",
+          "retrievedAt": "2026-09-07T05:00:29.154Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0474-5",
+          "url": "https://profiles.utsouthwestern.edu/profile/181972/bau-tran.html",
+          "excerpt": "In addition, he completed a physician assistant fellowship program in Critical Care Medicine with an emphasis in Emergency Medicine at the University of Massachusetts Memorial Medical Center in Worcester, MA.",
+          "retrievedAt": "2026-09-07T05:00:29.154Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0474-6",
+          "url": "https://profiles.utsouthwestern.edu/profile/181972/bau-tran.html",
+          "excerpt": "Prior to his work at UT Southwestern Medical Center, he received his Bachelor of Pharmacy in 1997 and his Doctorate in Pharmacology in 2001 from the University of Oklahoma College of Pharmacy.",
+          "retrievedAt": "2026-09-07T05:00:29.154Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0474-7",
+          "url": "https://profiles.utsouthwestern.edu/profile/181972/bau-tran.html",
+          "excerpt": "His clinical experiences have focused on Internal Medicine and Infectious Disease.",
+          "retrievedAt": "2026-09-07T05:00:29.154Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0474-8",
+          "url": "https://profiles.utsouthwestern.edu/profile/181972/bau-tran.html",
+          "excerpt": "Education Other Red Rocks Commnity College (2008), Certificate Other Saint Francis University (2008), Master of Medicine Other Saint Francis University (2008), Master of Medicine Graduate School Saint Francis University (2008), Master of Medicine Research Interest Curriculum development Incorporating teaching methodologies and correlation with student outcomes Innovate use of technology in medical educaiton Pharmacology related research Publications Featured Publications We can do better.",
+          "retrievedAt": "2026-09-07T05:00:29.154Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:03:01.745Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0475": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "verified",
       "sourcesChecked": [
         "https://profiles.utsouthwestern.edu/profile/96328/benjamin-nguyen.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0475-1",
+          "url": "https://profiles.utsouthwestern.edu/profile/96328/benjamin-nguyen.html",
+          "excerpt": "- Faculty Profile - UT Southwestern Skip to Main Content Back to UT Southwestern Home Faculty Directory Back to Faculty Directory UT Southwestern Sites UT Southwestern Home Home - EDU Research Education & Training Patient Care Faculty Departments & Centers Media Hub Careers About Us Employee Resources Faculty Resources Search Search All Faculty A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Benjamin Nguyen , M.",
+          "retrievedAt": "2026-09-07T05:00:29.297Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0475-2",
+          "url": "https://profiles.utsouthwestern.edu/profile/96328/benjamin-nguyen.html",
+          "excerpt": "Titles and Appointments Professor Schools Medical School Departments Physical Medicine & Rehabilitation You have reached the Academic Profile .",
+          "retrievedAt": "2026-09-07T05:00:29.297Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0475-3",
+          "url": "https://profiles.utsouthwestern.edu/profile/96328/benjamin-nguyen.html",
+          "excerpt": "For more information on the doctor and patient care, please visit the clinical profile .",
+          "retrievedAt": "2026-09-07T05:00:29.297Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0475-4",
+          "url": "https://profiles.utsouthwestern.edu/profile/96328/benjamin-nguyen.html",
+          "excerpt": "Education Medical Education Baylor College of Medicine (1996) Internship Baylor College of Medicine (1997), Physical Medicine & Rehabilitation Residency Baylor College of Medicine (2000), Physical Medicine & Rehabilitation Fellowship Mississippi Hosp.",
+          "retrievedAt": "2026-09-07T05:00:29.297Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0475-5",
+          "url": "https://profiles.utsouthwestern.edu/profile/96328/benjamin-nguyen.html",
+          "excerpt": "(2001), Brain Injury Rehabilitation Research Interest Traumatic brain injury outcomes Publications Featured Publications Comparison of stochastic vs.",
+          "retrievedAt": "2026-09-07T05:00:29.297Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0475-6",
+          "url": "https://profiles.utsouthwestern.edu/profile/96328/benjamin-nguyen.html",
+          "excerpt": "conventional transcutaneous electrical stimulation for pain modulation in patients with electromyographically documented radiculopathy.",
+          "retrievedAt": "2026-09-07T05:00:29.297Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0475-7",
+          "url": "https://profiles.utsouthwestern.edu/profile/96328/benjamin-nguyen.html",
+          "excerpt": "Bloodworth DM, Nguyen BN, Garver W, Moss F, Pedroza C, Tran T, Chiou-Tan FY Am J Phys Med Rehabil 2004 Aug 83 8 584-91 Hypodipsic hypernatremia and diabetes insipidus following anterior communicating artery aneurysm clipping: diagnostic and therapeutic challenges in the amnestic rehabilitation patient.",
+          "retrievedAt": "2026-09-07T05:00:29.297Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0475-8",
+          "url": "https://profiles.utsouthwestern.edu/profile/96328/benjamin-nguyen.html",
+          "excerpt": "Nguyen BN, Yablon SA, Chen CY Brain Inj 2001 Nov 15 11 975-80 Results 1-2 of 2 1 Books Featured Books Mild TBI and PCS.",
+          "retrievedAt": "2026-09-07T05:00:29.297Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:03:01.745Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0476": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://philosophy.utah.edu/directory/faculty.php",
         "https://objectionable.net/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0476-1",
+          "url": "https://philosophy.utah.edu/directory/faculty.php",
+          "excerpt": "Philosophy Faculty Directory - Department of Philosophy - The University of Utah Skip to content Search Site: Powered by Search Campus: Powered by Search Campus Campus Alert The University of Utah Department of Philosophy College of Humanities About About Us Department History Why Philosophy?",
+          "retrievedAt": "2026-09-07T05:00:30.019Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0476-2",
+          "url": "https://philosophy.utah.edu/directory/faculty.php",
+          "excerpt": "f & Administration STUDENTS Graduate Students Student Spotlights Graduate GRADUATE PROGRAM Masters Program PHD Program Admission Courses Graduate Student Placement Undergraduate UNDERGRADUATE PROGRAM HONORS DEGREE COURSES Undergraduate Forms Undergraduate Research Resources Academic Advising PHILOSOPHY Club Scholarships INTERNSHIPS & Careers Career & Student Development Major Map Forms NEWS & EVENTS Department News Events Calendar Conferences / Workshops Past Events Colloquium Series Giving Search Reveal Menu Reveal Menu Main Navigation Main Menu Home About Us Department History Why Philosophy?",
+          "retrievedAt": "2026-09-07T05:00:30.019Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0476-3",
+          "url": "https://philosophy.utah.edu/directory/faculty.php",
+          "excerpt": "s Student Spotlights Graduate Graduate Program Master's Program PhD Program Admission Courses Graduate Student Placement Undergraduate Undergraduate Programs Honors Degree Courses Undergraduate Forms Undergraduate Research Student Resources Academic Advising Philosophy Club Scholarships Internships & Careers Career & Student Development Major Map Forms News & Events Department News Events Calendar Conferences / Workshops Past Events Colloquium Series Giving Home Directory current page: Philosophy Faculty Directory Philosophy Faculty Directory 91 Andreou Chrisoula Andreou Professor Philosophy c.",
+          "retrievedAt": "2026-09-07T05:00:30.019Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0476-4",
+          "url": "https://philosophy.utah.edu/directory/faculty.php",
+          "excerpt": "edu CTIHB , Room: 415 Profile for Chrisoula Andreou 80 Barrios Edison Barrios Associate Professor (Lecturer) Philosophy edison.",
+          "retrievedAt": "2026-09-07T05:00:30.019Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0476-5",
+          "url": "https://philosophy.utah.edu/directory/faculty.php",
+          "excerpt": "edu CTIHB , Room: 361 Profile for Edison Barrios 90 Beeghly Erin Beeghly Associate Professor Philosophy erin.",
+          "retrievedAt": "2026-09-07T05:00:30.019Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0476-6",
+          "url": "https://philosophy.utah.edu/directory/faculty.php",
+          "excerpt": "edu CTIHB , Room: 419 Profile for Erin Beeghly 89 Cohen Eliya Cohen Assistant Professor Philosophy eliya.",
+          "retrievedAt": "2026-09-07T05:00:30.019Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0476-7",
+          "url": "https://philosophy.utah.edu/directory/faculty.php",
+          "excerpt": "edu CTIHB , Room: 443 Profile for Eliya Cohen 75 Courtwright Andrew Courtwright Adjunct Assistant Professor Philosophy (801) 581-7806 andrew.",
+          "retrievedAt": "2026-09-07T05:00:30.019Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0476-8",
+          "url": "https://philosophy.utah.edu/directory/faculty.php",
+          "excerpt": "edu Profile for Andrew Courtwright 75 Dentinger Rachel mason Dentinger Adjunct Assistant Professor Philosophy rachel.",
+          "retrievedAt": "2026-09-07T05:00:30.019Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0476-9",
+          "url": "https://objectionable.net/",
+          "excerpt": "Objectionable Skip to primary content Objectionable Search Main menu Home Research Public Philosophy Games: Agency as Art Teaching Food Writing Blog Welcome!",
+          "retrievedAt": "2026-09-07T05:00:30.455Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0476-10",
+          "url": "https://objectionable.net/",
+          "excerpt": "I used to be a food writer, now I&#8217;m a philosophy professor at University of Utah.",
+          "retrievedAt": "2026-09-07T05:00:30.455Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0476-11",
+          "url": "https://objectionable.net/",
+          "excerpt": "I&#8217;m interested in the ways that our social structures and technologies shape how we think and what we value.",
+          "retrievedAt": "2026-09-07T05:00:30.455Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0476-12",
+          "url": "https://objectionable.net/",
+          "excerpt": "A game designer doesn&#8217;t just create a world &#8211; they create who we are in that world.",
+          "retrievedAt": "2026-09-07T05:00:30.455Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0476-13",
+          "url": "https://objectionable.net/",
+          "excerpt": "And games turn out to be our way of writing down and communicating modes of agency; by playing them, we can try out different forms of agency.",
+          "retrievedAt": "2026-09-07T05:00:30.455Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0476-14",
+          "url": "https://objectionable.net/",
+          "excerpt": "I was named to Vox&#8217;s 2024 Future Perfect 50 &#8211; their list of &#8220;thinkers, innovators, and changemakers who are working to make the world a better place.",
+          "retrievedAt": "2026-09-07T05:00:30.455Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0476-15",
+          "url": "https://objectionable.net/",
+          "excerpt": "social For speaking engagements, please contact Alysyn Reinhardt at the Penguin Random House Speakers Bureau at speakers@penguinrandomhouse.",
+          "retrievedAt": "2026-09-07T05:00:30.455Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0476-16",
+          "url": "https://objectionable.net/",
+          "excerpt": "com Selected Papers (and the complete list ) Games and the Art of Agency ( Philosophical Review ) (2020 APA Article Prize; selected for Philosopher Annual &#8216;s &#8220;10 Best Philosophy Articles of 2019&#8221;) Value Capture ( JESP ) Trust as an Unquestioning Attitude ( OSE ) Transparency is Surveillance ( Philosophy and Phenomenological Research ) ( short summary ) Hostile Epistemology (keynote for the 2022 NASSP.",
+          "retrievedAt": "2026-09-07T05:00:30.455Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:02:57.770Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0477": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://americanstudies.as.virginia.edu/office-hours"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0477-1",
+          "url": "https://americanstudies.as.virginia.edu/office-hours",
+          "excerpt": "Office Hours | Department of American Studies Skip to main content Department of American Studies Make a Gift Department of American Studies What is American Studies?",
+          "retrievedAt": "2026-09-07T05:00:30.934Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0477-2",
+          "url": "https://americanstudies.as.virginia.edu/office-hours",
+          "excerpt": "Major How to Declare your Major Major requirements (beginning fall 2026) Optional Concentrations Distinguished Majors Program Approved non-AMST electives Requirements for majors who declared in summer 2026 or earlier New major (fall 2026) vs.",
+          "retrievedAt": "2026-09-07T05:00:30.934Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0477-3",
+          "url": "https://americanstudies.as.virginia.edu/office-hours",
+          "excerpt": "old major Minors Asian Pacific American Studies Minor Latinx Studies Minor Native American Indigenous Studies Minor Courses Fall 2026 Courses Graduate People Core Faculty Affiliated Faculty Teaching Faculty Publications Staff Office Hours Contact Us Events Core Faculty Affiliated Faculty Teaching Faculty Publications Staff Office Hours Contact Us Office Hours Anneleise Azúa Assistant Professor of American Studies Wilson 130, Thursdays 12:30-2pm Lawrie Balfour James Hart Professor of Politics Office Hours: Wednesday 1-3pm | Gibson S395 Nemata Blyden Armstead L.",
+          "retrievedAt": "2026-09-07T05:00:30.934Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0477-4",
+          "url": "https://americanstudies.as.virginia.edu/office-hours",
+          "excerpt": "Robinson Professor of 19th Century African American History Minor Hall 227C Anna Brickhouse Linden Kent Memorial Professor of English and American Studies Office Hours: Tuesdays and Thursdays 12:30pm-2:00pm | Bryan Hall 411 Lisa Marie Cacho Associate Professor of American Studies Office Hours: By Appointment | Wilson Hall 125 Tamika L.",
+          "retrievedAt": "2026-09-07T05:00:30.934Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0477-5",
+          "url": "https://americanstudies.as.virginia.edu/office-hours",
+          "excerpt": "atthew Chin Assistant Professor, Women, Gender & Sexuality Studies On Research Leave for the 2023-24 academic year Sylvia Chong Associate Professor of English and American Studies, Director of Minor in Asian Pacific American Studies Office hours: Thursdays 11am -1:00pm | by appointment only | Bryan Hall 108 David Coyoca Assistant Professor of American Studies and Director of the American Studies Distinguished Majors Program Office Hours: By appointment | Wilson Hall 127 Shilpa Davé Associate Professor and Assistant Dean in the College of Arts and Sciences 270 Monroe Hall by Appointment Kevin K.",
+          "retrievedAt": "2026-09-07T05:00:30.934Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0477-6",
+          "url": "https://americanstudies.as.virginia.edu/office-hours",
+          "excerpt": "ffice Address: 2-5pm on Fridays; Virtually or in-person by request | 412 Bryan Hall) Ian Grandison Professor of English, American Studies Affiliate Office Hours: Wednesdays 3:30pm - 5:00pm Jennifer Greeson Associate Professor of English and American Studies Office Hours: Tuesdays 9-11am and by appointment | 431 Bryan Hall Grace Elizabeth Hale Commonwealth Professor of American Studies and History Nau Hall 283 (On Leave Spring 2024) Jack Hamilton Associate Professor of Media Studies and American Studies Office Hours: Mondays and Wednesdays 1:00pm-3:00pm | Reserve appointment at https://calendly.",
+          "retrievedAt": "2026-09-07T05:00:30.934Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0477-7",
+          "url": "https://americanstudies.as.virginia.edu/office-hours",
+          "excerpt": "Hedstrom Associate Professor of Religious Studies and American Studies Office Hours: Tuesday and Thursdays 2-3pm and by appointment | Gibson Hall S-013 Kasey Jernigan Assistant Professor of Anthropology and American Studies Office Hours: By appointment only | Brooks Hall, 310B Tiffany King Barbara and John Glynn Research Professorship in Democracy and Equity; Associate Professor of Women, Gender, & Sexuality 201 Levering Hall Joshua Miller Associate Professor of English Bryan Hall 214, Tuesdays 11am-2pm and by appointment.",
+          "retrievedAt": "2026-09-07T05:00:30.934Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0477-8",
+          "url": "https://americanstudies.as.virginia.edu/office-hours",
+          "excerpt": "Associate Professor of Urban Planning, American Studies Affiliate Office Hours: Mondays, 11:00 - 12:00 | Peyton House 108 Sandhya Shukla Department Chair, Professor of English and American Studies Student Hours: Thursdays 10:45 am - 1 pm, and by appointment | Bryan Hall 437 David Singerman Assistant Professor of History and American Studies Office Hours: on leave Hayley Spear Department Manager Wilson 119 Kirt von Daacke Assistant Dean and Professor of History, American Studies Affiliate Monroe 269-c | Office hours by appointment only | Call 434-924-8986 to schedule Penny Von Eschen William R.",
+          "retrievedAt": "2026-09-07T05:00:30.934Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:03:01.745Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0478": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://mathstat.vcu.edu/directory/anh-bui.html",
         "https://sites.google.com/vcu.edu/anhbui/home"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0478-1",
+          "url": "https://mathstat.vcu.edu/directory/anh-bui.html",
+          "excerpt": "Anh Bui - Mathematics - Virginia Commonwealth University Skip to header Skip to main navigation Skip to sub navigation Skip to main content Skip to footer Department of Mathematics and Statistics College of Humanities and Sciences Links Search Close Current Students Math Placement Give Search Menu About About Contact Us Goals and Objectives Programs Undergraduate B.",
+          "retrievedAt": "2026-09-07T05:00:31.468Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0478-2",
+          "url": "https://mathstat.vcu.edu/directory/anh-bui.html",
+          "excerpt": "Minors Courses Badges Math Placement Research Opportunities Student Math Clubs Graduate Graduate Certificate in Applied Statistics M.",
+          "retrievedAt": "2026-09-07T05:00:31.468Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0478-3",
+          "url": "https://mathstat.vcu.edu/directory/anh-bui.html",
+          "excerpt": "Courses Badges Student Math Clubs Research Research Applied Mathematics Discrete Mathematics Geometry, Topology and Mathematical Physics Logic and Set Theory Mathematical Biology Mathematics Education Statistical Sciences and Operations Research Directory Directory Administration Faculty Adjunct Faculty Emeriti Faculty Staff News Events K-12 Outreach Directory Administration Faculty Adjunct Faculty Emeriti Faculty Staff Home Directory Anh Bui Anh T.",
+          "retrievedAt": "2026-09-07T05:00:31.468Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0478-4",
+          "url": "https://mathstat.vcu.edu/directory/anh-bui.html",
+          "excerpt": ", Industrial and Management Engineering, Pohang University of Science and Technology Ph.",
+          "retrievedAt": "2026-09-07T05:00:31.468Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0478-5",
+          "url": "https://mathstat.vcu.edu/directory/anh-bui.html",
+          "excerpt": ", Industrial Engineering & Management Sciences, Northwestern University Get started.",
+          "retrievedAt": "2026-09-07T05:00:31.468Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0478-6",
+          "url": "https://mathstat.vcu.edu/directory/anh-bui.html",
+          "excerpt": "Request Info Visit VCU Apply Now Virginia Commonwealth University College of Humanities and Sciences Department of Mathematics and Statistics Grace E.",
+          "retrievedAt": "2026-09-07T05:00:31.468Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0478-7",
+          "url": "https://mathstat.vcu.edu/directory/anh-bui.html",
+          "excerpt": "edu Popular Links Math placement Override requests Math Help Center Faculty and staff directory Instagram Privacy Accessibility Webmaster Compass: The University Web Framework Updated : 08/25/2026 Virginia Commonwealth University is a nationally renowned public research institution dedicated to the success and well-being of all members of its community.",
+          "retrievedAt": "2026-09-07T05:00:31.468Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0478-8",
+          "url": "https://mathstat.vcu.edu/directory/anh-bui.html",
+          "excerpt": "VCU student, faculty and staff groups and associations are open without regard to any characteristic or identity protected by law.",
+          "retrievedAt": "2026-09-07T05:00:31.468Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0478-9",
+          "url": "https://sites.google.com/vcu.edu/anhbui/home",
+          "excerpt": "Google Drive: Sign-in Sign in to continue to Google Drive Email or phone Forgot email?",
+          "retrievedAt": "2026-09-07T05:00:32.189Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:03:01.745Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0479": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.wcupa.edu/_admin/research/forms/ram-research-directory/profile.aspx?id=428"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0479-1",
+          "url": "https://www.wcupa.edu/_admin/research/forms/ram-research-directory/profile.aspx?id=428",
+          "excerpt": "Ram Research Directory : Linh Ngo Profile - WCU of PA Request Info Visit Campus Apply Now Give Today Menu Search the WCU website Main Search Search WCU Academics Admissions Student Life Athletics Arts Faculty/Staff Alumni Give Ram Research Directory Linh Ngo Profile Contact Ram Research Directory Ram Research Directory Address: University Ave West Chester, PA 19382 Phone: 610-436-1000 Fax: 610-436-4567 --> Email: webmaster@wcupa.",
+          "retrievedAt": "2026-09-07T05:00:32.601Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0479-2",
+          "url": "https://www.wcupa.edu/_admin/research/forms/ram-research-directory/profile.aspx?id=428",
+          "excerpt": "No need to enter anything inside of this: Linh Ngo Associate Professor Department: Computer Science Research Cluster: Mathematics & Computer Science Institution: West Chester University of Pennsylvania Email: LNGO@wcupa.",
+          "retrievedAt": "2026-09-07T05:00:32.601Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0479-3",
+          "url": "https://www.wcupa.edu/_admin/research/forms/ram-research-directory/profile.aspx?id=428",
+          "excerpt": "S in Computer Engineering, University of Arkansas Research Interests Cloud Computing Engineering Big Data Engineering Computer Science Education Opportunities Work Study Positions Available: No Grant Funded Positions Available: No Course-Credit Research Opportunities Available: No Volunteer Research Positions Available: No Biography I am an associate professor in the Computer Science Department at West Chester University of Pennsylvania.",
+          "retrievedAt": "2026-09-07T05:00:32.601Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0479-4",
+          "url": "https://www.wcupa.edu/_admin/research/forms/ram-research-directory/profile.aspx?id=428",
+          "excerpt": "This is my academic website, where I provide and update information related to my current research and teaching activities.",
+          "retrievedAt": "2026-09-07T05:00:32.601Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0479-5",
+          "url": "https://www.wcupa.edu/_admin/research/forms/ram-research-directory/profile.aspx?id=428",
+          "excerpt": "My general research focuses on the areas of distributed systems, big data computing, cloud computing, and computer science education.",
+          "retrievedAt": "2026-09-07T05:00:32.601Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0479-6",
+          "url": "https://www.wcupa.edu/_admin/research/forms/ram-research-directory/profile.aspx?id=428",
+          "excerpt": "I also am interested in interdisciplinary collaborative work where research computing technologies are combined with domain knowledge to address socially relevant research problems.",
+          "retrievedAt": "2026-09-07T05:00:32.601Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0479-7",
+          "url": "https://www.wcupa.edu/_admin/research/forms/ram-research-directory/profile.aspx?id=428",
+          "excerpt": "Outside of work, I enjoy books, computer games, and sport, not necessarily in this order.",
+          "retrievedAt": "2026-09-07T05:00:32.601Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0479-8",
+          "url": "https://www.wcupa.edu/_admin/research/forms/ram-research-directory/profile.aspx?id=428",
+          "excerpt": "Similarly, I play mostly RPG games, although I also enjoy turn-based strategies and FPS when my time is limited.",
+          "retrievedAt": "2026-09-07T05:00:32.601Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:02:57.770Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0480": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://medicine.yale.edu/profile/don-nguyen/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0480-1",
+          "url": "https://medicine.yale.edu/profile/don-nguyen/",
+          "excerpt": "Don Nguyen, PhD | Yale School of Medicine Your browser is antiquated and no longer supported on this website.",
+          "retrievedAt": "2026-09-07T05:00:33.386Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0480-2",
+          "url": "https://medicine.yale.edu/profile/don-nguyen/",
+          "excerpt": "Dean Strategic Plan 2026 Mission Statement & Process Beyond Sterling Hall Dean&#x27;s Workshop Yale Biomedical Imaging Institute: Advancing the Understanding of Health & Guiding Treatment Stephen & Denise Adams Center for Parkinson’s Disease Research Integrating Systems Immunology, Engineering, and AI to Monitor, Predict, and Improve Human Health Y-Weight Organoids & Stem Cells Policies & Procedures A-Z Websites & Lists Websites: A to Z Lab Websites: A to Z Faculty List: A to Z Staff List: A to Z Abbreviations: A to Z Terms, Privacy & Notices Contact Us Collaborative Excellence Who We Are Dept.",
+          "retrievedAt": "2026-09-07T05:00:33.386Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0480-3",
+          "url": "https://medicine.yale.edu/profile/don-nguyen/",
+          "excerpt": "ors Community Research Consultants Network Community Engagement Research Studios OHER News Strategic Planning News Beyond Sterling Hall BSH Archive Yale Medicine Magazine Social Media Media Relations YSM & the Community Patient Care MyYSM YSM Home INFORMATION FOR About YSM Faculty Staff Students Residents & Fellows Patients Researchers Alumni Don Nguyen, PhD Associate Professor of Pathology and Medical Oncology Download Hi-Res Photo Cards Appointments Pathology Primary Additional Titles Co-Leader, Cancer Signaling Networks, Yale Cancer Center Learn more about Additional Titles Contact Info don.",
+          "retrievedAt": "2026-09-07T05:00:33.386Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0480-4",
+          "url": "https://medicine.yale.edu/profile/don-nguyen/",
+          "excerpt": "4514 Learn more about Contact Info Appointments Pathology Primary Additional Titles Co-Leader, Cancer Signaling Networks, Yale Cancer Center Learn more about Additional Titles Contact Info don.",
+          "retrievedAt": "2026-09-07T05:00:33.386Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0480-5",
+          "url": "https://medicine.yale.edu/profile/don-nguyen/",
+          "excerpt": "4514 Learn more about Contact Info Appointments Pathology Primary Additional Titles Co-Leader, Cancer Signaling Networks, Yale Cancer Center Learn more about Additional Titles Contact Info don.",
+          "retrievedAt": "2026-09-07T05:00:33.386Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0480-6",
+          "url": "https://medicine.yale.edu/profile/don-nguyen/",
+          "excerpt": "4514 Learn more about Contact Info About Research Achievements Links Get In Touch About Copy Link Titles Associate Professor of Pathology and Medical Oncology Co-Leader, Cancer Signaling Networks, Yale Cancer Center Biography Don X.",
+          "retrievedAt": "2026-09-07T05:00:33.386Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0480-7",
+          "url": "https://medicine.yale.edu/profile/don-nguyen/",
+          "excerpt": "degree in 2004 from the University of Rochester, NY, before pursuing his post-doctoral training at the Memorial Sloan Kettering Institute, New York, NY.",
+          "retrievedAt": "2026-09-07T05:00:33.386Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0480-8",
+          "url": "https://medicine.yale.edu/profile/don-nguyen/",
+          "excerpt": "Don joined the faculty at the Yale School of Medicine in 2010 and is currently an Associate Professor (tenured) in the Department of Pathology and Medicine (Medical Oncology).",
+          "retrievedAt": "2026-09-07T05:00:33.386Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:02:57.770Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0481": {
       "overview": "pending",
