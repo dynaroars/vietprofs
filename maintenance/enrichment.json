@@ -2780,7 +2780,8 @@
         "vp-0948",
         "vp-0949"
       ],
-      "status": "pending"
+      "status": "in_progress",
+      "startedAt": "2026-09-07T19:04:02.105Z"
     },
     {
       "number": 48,
@@ -59535,209 +59536,1268 @@
       "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0930": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://fp.jaist.ac.jp/public/Default2.aspx?id=764&l=1",
         "https://www.jaist.ac.jp/english/laboratory/cs/canhdo.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0930-1",
+          "url": "https://fp.jaist.ac.jp/public/Default2.aspx?id=764&l=1",
+          "excerpt": "北陸先端科学技術大学院大学：研究者総覧 - DO, Minh Canh ▶Japanese | ▶English Profile Lab IS Building Ⅲ 9F Tel:0761-51-1308 To Area's Site ❏ JAIST Repository TOP &gt; Personal Info.",
+          "retrievedAt": "2026-09-07T19:04:02.872Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0930-2",
+          "url": "https://fp.jaist.ac.jp/public/Default2.aspx?id=764&l=1",
+          "excerpt": "DO, Minh Canh Senior Lecturer Information Science, Computing Science, Transition Arena for Quantum Materials and Information Sciences (taQumi) (Neo Excellent Core) ◆Degrees Ph.",
+          "retrievedAt": "2026-09-07T19:04:02.872Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0930-3",
+          "url": "https://fp.jaist.ac.jp/public/Default2.aspx?id=764&l=1",
+          "excerpt": "am Committee 2026 - 2026 3/7 Display ALL ■Academic Awards ・ Best Paper/Presentation Award for Young Researcher , The 15th International Workshop on Rewriting Logic and Its Applications (WRLA 2024) , 2024 ・ Outstanding Student Award , Japan Advanced Institute of Science and Technology , 2022 ・ Special Doctoral Research Fellow (DRF) , Japan Advanced Institute of Science and Technology , 2019 HOME Official Site Japan Advanced Institute of Science and Technology Access 1-1 Asahidai, Nomi, Ishikawa 923-1292 Japan Copyright&copy; Japan Advanced Institute of Science and Technology All rights reserved.",
+          "retrievedAt": "2026-09-07T19:04:02.872Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0930-4",
+          "url": "https://www.jaist.ac.jp/english/laboratory/cs/canhdo.html",
+          "excerpt": "ding a trustworthy quantum era through formal verification Laboratory on Formal Methods for Quantum Computing Senior Lecturer：DO Minh Canh E-mail： ［Research areas］ Formal Methods, Quantum Computing ［Keywords］ Formal Specification, Model Checking, Theorem Proving, Quantum Computation, Quantum Information Skills and background we are looking for in prospective students We welcome highly motivated students with an interest in formal methods and quantum computing, a good knowledge of mathematics (especially mathematical logic and linear algebra), and strong programming skills (C ++ , Java, Python).",
+          "retrievedAt": "2026-09-07T19:04:03.628Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0930-5",
+          "url": "https://www.jaist.ac.jp/english/laboratory/cs/canhdo.html",
+          "excerpt": "What you can expect to learn in this laboratory In our laboratory, students will learn how to formalize quantum systems as state machines; how to specify state machines in a formal specification language, such as Maude or CafeOBJ; and how to formally verify that state machines enjoy desired properties using model checking and/or theorem proving techniques.",
+          "retrievedAt": "2026-09-07T19:04:03.628Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0930-6",
+          "url": "https://www.jaist.ac.jp/english/laboratory/cs/canhdo.html",
+          "excerpt": "Through these research activities, students are expected to acquire a solid theoretical foundation, advanced practical skills, and a passion for advancing both conventional and quantum technologies in ways that benefit society.",
+          "retrievedAt": "2026-09-07T19:04:03.628Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0930-7",
+          "url": "https://www.jaist.ac.jp/english/laboratory/cs/canhdo.html",
+          "excerpt": "【Job category of graduates】 Researcher & Engineer Research outline With recent exponential investments from governments and major companies, building large-scale quantum computers capable of running advanced algorithms, such as Shor’s algorithm for effectively solving the factoring and discrete logarithm problems, is becoming increasingly feasible.",
+          "retrievedAt": "2026-09-07T19:04:03.628Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0930-8",
+          "url": "https://www.jaist.ac.jp/english/laboratory/cs/canhdo.html",
+          "excerpt": "Despite its promise, quantum computing is fundamentally different from classical computing because it relies on principles of quantum mechanics that are often counterintuitive, making it challenging to design and implement quantum systems accurately.",
+          "retrievedAt": "2026-09-07T19:04:03.628Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0930-9",
+          "url": "https://www.jaist.ac.jp/english/laboratory/cs/canhdo.html",
+          "excerpt": "Moreover, traditional testing techniques are much less effective for quantum systems due to the nondeterminism and probabilistic outcomes of quantum measurement.",
+          "retrievedAt": "2026-09-07T19:04:03.628Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0930-10",
+          "url": "https://www.jaist.ac.jp/english/laboratory/cs/canhdo.html",
+          "excerpt": "Thus, formal verification is essential to ensure their correctness before they can be trusted in practice.",
+          "retrievedAt": "2026-09-07T19:04:03.628Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0930-11",
+          "url": "https://www.jaist.ac.jp/english/laboratory/cs/canhdo.html",
+          "excerpt": "Our research focuses on formal methods for quantum computing, including but not limited to the following research topics.",
+          "retrievedAt": "2026-09-07T19:04:03.628Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:05:19.698Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0931": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://fp.jaist.ac.jp/public/Default2.aspx?id=787&l=1",
         "https://www.jaist.ac.jp/english/laboratory/cs/vu-tran.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0931-1",
+          "url": "https://fp.jaist.ac.jp/public/Default2.aspx?id=787&l=1",
+          "excerpt": "北陸先端科学技術大学院大学：研究者総覧 - TRAN, Vu Duc ▶Japanese | ▶English Profile Lab IS BuildingＩ 7F Tel:0761-51-1222 To Area's Site ❏ JAIST Repository TOP &gt; Personal Info.",
+          "retrievedAt": "2026-09-07T19:04:04.018Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0931-2",
+          "url": "https://fp.jaist.ac.jp/public/Default2.aspx?id=787&l=1",
+          "excerpt": "ion using emotion trends via Twitter emoji analysis: A case study in Japan Vu Tran, Tomoko Matsui Frontiers in Public Health, 11, -, 2023 5/47 Display ALL ■Contributions to Society ◆Academic Contribution Competition on Legal Information Extraction/Entailment (COLIEE) International Workshop on Juris-informatics (JURISIN) Automated Legal Question Answering Competition (ALQAC) 3/6 Display ALL HOME Official Site Japan Advanced Institute of Science and Technology Access 1-1 Asahidai, Nomi, Ishikawa 923-1292 Japan Copyright&copy; Japan Advanced Institute of Science and Technology All rights reserved.",
+          "retrievedAt": "2026-09-07T19:04:04.018Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0931-3",
+          "url": "https://www.jaist.ac.jp/english/laboratory/cs/vu-tran.html",
+          "excerpt": "Laboratory on Human-AI Synergy｜JAIST Computing Science → Safe domain- savvy AI for reliable human–AI synergy Laboratory on Human-AI Synergy Senior Lecturer：TRAN Vu Duc E-mail： ［Research areas］ Artificial Intelligence, Natural Language Processing, Machine Learning ［Keywords］ Deep Learning, Natural Language Understanding, Generative AI, Legal Engineering, Social Media Analysis Skills and background we are looking for in prospective students Mathematics (statistics is a bonus), Programing (Python, R, C++), Machine learning (deep learning, optimization).",
+          "retrievedAt": "2026-09-07T19:04:04.208Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0931-4",
+          "url": "https://www.jaist.ac.jp/english/laboratory/cs/vu-tran.html",
+          "excerpt": "Having experience with Natural Language Processing and Generative AI is a plus point.",
+          "retrievedAt": "2026-09-07T19:04:04.208Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0931-5",
+          "url": "https://www.jaist.ac.jp/english/laboratory/cs/vu-tran.html",
+          "excerpt": "What you can expect to learn in this laboratory Through studying, for instance, generative AI, and idea of blending knowledge in human-understandable form and machine-understandable form to achieve consistent and creative results, students shall obtain knowledge of currently developed methods/technologies and understanding of the methodological evolution of communication with Generative AI systems and be able to utilize available methods/technologies for solving problems and think about new problems and new methods.",
+          "retrievedAt": "2026-09-07T19:04:04.208Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0931-6",
+          "url": "https://www.jaist.ac.jp/english/laboratory/cs/vu-tran.html",
+          "excerpt": "【Job category of graduates】 AI academia & industry Research outline We study topics revolving around generative AI, NLP, and domain-specific applications in, for example, the legal domain, biology, and sociology.",
+          "retrievedAt": "2026-09-07T19:04:04.208Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0931-7",
+          "url": "https://www.jaist.ac.jp/english/laboratory/cs/vu-tran.html",
+          "excerpt": "Efficient NLP, Generative AI in specialized domains Specialized domains require technical understanding often deviated from common understanding, so models trained on common data need adjustment to align with the value required for the given domain, e.",
+          "retrievedAt": "2026-09-07T19:04:04.208Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0931-8",
+          "url": "https://www.jaist.ac.jp/english/laboratory/cs/vu-tran.html",
+          "excerpt": "understanding legal norms in the legal domain, and understanding social norms in social media data.",
+          "retrievedAt": "2026-09-07T19:04:04.208Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0931-9",
+          "url": "https://www.jaist.ac.jp/english/laboratory/cs/vu-tran.html",
+          "excerpt": "However, for example, re-training is considered costly and environment unfriendly.",
+          "retrievedAt": "2026-09-07T19:04:04.208Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0931-10",
+          "url": "https://www.jaist.ac.jp/english/laboratory/cs/vu-tran.html",
+          "excerpt": "For that, it is valuable to make efficient systems from fundamental models for specialized domains.",
+          "retrievedAt": "2026-09-07T19:04:04.208Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:05:19.698Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0932": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://naistpedia.naist.jp/researchers/detail/347",
         "https://isw3.naist.jp/Research/cs-arch-en.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0932-1",
+          "url": "https://naistpedia.naist.jp/researchers/detail/347",
+          "excerpt": "奈良先端科学技術大学院大学 教員研究活動データベース --> --> --> トップ 検索結果 PHAM HOAI LUAN 研究キーワード 研究分野 研究室概要 学術論文 受賞 所属学協会 PHAM HOAI LUAN 所属 情報科学領域 AI基盤情報学 職位 助教 学位 研究室 コンピューティング・アーキテクチャ 研究キーワード 研究分野 研究室概要 Society5.",
+          "retrievedAt": "2026-09-07T19:04:05.504Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0932-2",
+          "url": "https://naistpedia.naist.jp/researchers/detail/347",
+          "excerpt": "0への実装に適した次世代超小型・超低電力・高性能計算基盤の研究開発を実施。特に、限界が見えてきたノイマン型コンピュータと、 今後有望な各種非ノイマン型コンピュータの融合による、画像処理、科学技術計算、エッジAIコンピューティング基盤、ブロックチェインアクセラレータについて、 デバイス、ハードウェア、アーキテクチャ、ソフトウェアまでの幅広い先端基盤技術を追求する。 学術論文 \"A Low-SRAM Fully Streaming Accelerator for Real-Time Speech Enhancement,\" IEEE Embedded Systems Letters, 31 Aug.",
+          "retrievedAt": "2026-09-07T19:04:05.504Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0932-3",
+          "url": "https://naistpedia.naist.jp/researchers/detail/347",
+          "excerpt": "2026 Hsuan-Jung Lai, Shanq-Jang Ruan, Pham Hoai Luan \"HPQEA: A Scalable FPGA-Based High-Performance Quantum Emulator with Parallel Architecture and High-Bandwidth Memory Optimization,\" Concurrency and Computation: Practice and Experience, 2 Aug.",
+          "retrievedAt": "2026-09-07T19:04:05.504Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0932-4",
+          "url": "https://naistpedia.naist.jp/researchers/detail/347",
+          "excerpt": "2026 Tran Van Duy, Vu Tuan Hai, Pham Hoai Luan, Bui Cao Doanh, Le Vu Trung Duong, Yasuhiko Nakashima \"Performance and Memory Trade-offs in SM4 Implementation on Embedded ARM Cortex-M Microcontrollers,\" REV Journal on Electronics and Communications, 26 Jun.",
+          "retrievedAt": "2026-09-07T19:04:05.504Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0932-5",
+          "url": "https://naistpedia.naist.jp/researchers/detail/347",
+          "excerpt": "2026 Vu Hoang Gia, Khanh-Tuong Tran, Tuan-Khang Nguyen, Dinh-Tuan Nguyen, Khanh-Nghia Truong, Pham Hoai Luan \"UPVM-ASR: An Ultralight Parallel Dual-Stream Visual Mamba U-Net with Sub-Million Parameters for Audio Super-Resolution,\" IEEE Internet of Things Journal, 20 Mar.",
+          "retrievedAt": "2026-09-07T19:04:05.504Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0932-6",
+          "url": "https://naistpedia.naist.jp/researchers/detail/347",
+          "excerpt": "2026 Nguyen Phuong Quang, Pham Hoai Luan, Sang-Jang Ruan, Lieber Po-Hung Li \" UniCrypt-Ultra: A 64-bit Quad-Core Universal Cryptographic Engine for Multi-mode Cryptographic Processing in Blockchain IoT and Society 5.",
+          "retrievedAt": "2026-09-07T19:04:05.504Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0932-7",
+          "url": "https://naistpedia.naist.jp/researchers/detail/347",
+          "excerpt": "2026 Le Vu Trung Duong, Pham Hoai Luan, Vu Tuan Hai, Tran Van Duy, Yasuhiko Nakashima \"An innovative HLS framework for all network architectures: From Python to SoC,\" Integration, 1 Dec.",
+          "retrievedAt": "2026-09-07T19:04:05.504Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0932-8",
+          "url": "https://naistpedia.naist.jp/researchers/detail/347",
+          "excerpt": "2025 Thi Diem Tran, Minh Tan Ha, Xuan Thao Tran, Ngoc Quoc Tran, Vu Trung Duong Le, Pham Hoai Luan, Van Tinh Nguyen \"Benchmarking variants of the Adam optimizer for Quantum Machine Learning Applications,\" IEEE Open Journal of the Computer Society, 6 Jul.",
+          "retrievedAt": "2026-09-07T19:04:05.504Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0932-9",
+          "url": "https://isw3.naist.jp/Research/cs-arch-en.html",
+          "excerpt": "&#106;&#112; &#114;&#122;&#104;&#97;&#110;&#103;&#64;&#105;&#115;&#46;&#110;&#97;&#105;&#115;&#116;&#46;&#106;&#112; &#104;&#111;&#110;&#103;&#64;&#105;&#115;&#46;&#110;&#97;&#105;&#115;&#116;&#46;&#106;&#112; --> &#107;&#97;&#110;&#46;&#121;&#105;&#114;&#111;&#110;&#103;&#64;&#105;&#115;&#46;&#110;&#97;&#105;&#115;&#116;&#46;&#106;&#112; &#112;&#104;&#97;&#109;&#46;&#108;&#117;&#97;&#110;&#64;&#105;&#115;&#46;&#110;&#97;&#105;&#115;&#116;&#46;&#106;&#112; &#108;&#101;&#46;&#100;&#117;&#111;&#110;&#103;&#64;&#110;&#97;&#105;&#115;&#116;&#46;&#97;&#99;&#46;&#106;&#112; To the site https://sites.",
+          "retrievedAt": "2026-09-07T19:04:06.470Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0932-10",
+          "url": "https://isw3.naist.jp/Research/cs-arch-en.html",
+          "excerpt": "tal-oxide semiconductor thin-film synapses for 3D structures Neuromorphic architecture and leaning rules for astronomical scale integration Brain-type integrated systems with artificial humanity Energy efficient system architecture for next generation machine learning Research and development of next generation machine learning system architecture with edge computing Probabilistic reasoning algorithms with Bayesian networks IoT + blockchain for secure smart systems IoT and blockchain technologies are combined to develop smart systems such as smart healthcare systems, smart city management, etc.",
+          "retrievedAt": "2026-09-07T19:04:06.470Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0932-11",
+          "url": "https://isw3.naist.jp/Research/cs-arch-en.html",
+          "excerpt": "Key Features In our laboratory, we study state-of-the-art technologies for next-generation computing paradigms.",
+          "retrievedAt": "2026-09-07T19:04:06.470Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0932-12",
+          "url": "https://isw3.naist.jp/Research/cs-arch-en.html",
+          "excerpt": "Our goal is to realize environment-friendly, high-performance, and robust computer systems under energy constraints.",
+          "retrievedAt": "2026-09-07T19:04:06.470Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0932-13",
+          "url": "https://isw3.naist.jp/Research/cs-arch-en.html",
+          "excerpt": "From a wide viewpoint (from new theories to LSI implementations), we promote cutting-edge research and the highest degree of education within various research themes, particularly: high-performance, low-energy and dependable computation, and hardware/software co-design.",
+          "retrievedAt": "2026-09-07T19:04:06.470Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:05:19.698Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0933": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://naistpedia.naist.jp/researchers/detail/410",
         "https://isw3.naist.jp/Research/cs-arch-en.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0933-1",
+          "url": "https://naistpedia.naist.jp/researchers/detail/410",
+          "excerpt": "奈良先端科学技術大学院大学 教員研究活動データベース --> --> --> トップ 検索結果 LE VU TRUNG DUONG 研究キーワード 研究分野 研究室概要 学術論文 受賞 所属学協会 LE VU TRUNG DUONG 所属 情報科学領域 AI基盤情報学 職位 助教 学位 研究室 コンピューティング・アーキテクチャ 研究キーワード 研究分野 研究室概要 Society5.",
+          "retrievedAt": "2026-09-07T19:04:06.711Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0933-2",
+          "url": "https://naistpedia.naist.jp/researchers/detail/410",
+          "excerpt": "0への実装に適した次世代超小型・超低電力・高性能計算基盤の研究開発を実施。特に、限界が見えてきたノイマン型コンピュータと、 今後有望な各種非ノイマン型コンピュータの融合による、画像処理、科学技術計算、エッジAIコンピューティング基盤、ブロックチェインアクセラレータについて、 デバイス、ハードウェア、アーキテクチャ、ソフトウェアまでの幅広い先端基盤技術を追求する。 学術論文 受賞 所属学協会 資料 他の研究者 / MORE --> 他の研究者 中島 康彦 職位 教授 領域 情報科学領域 AI基盤情報学 研究室 コンピューティング・アーキテクチャ Society5.",
+          "retrievedAt": "2026-09-07T19:04:06.711Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0933-3",
+          "url": "https://naistpedia.naist.jp/researchers/detail/410",
+          "excerpt": "0への実装に適した次世代超小型・超低電力・高性能計算基盤の研究開発を実施。特に、限界が見えてきたノイマン型コンピュータと、 今後有望な各種非ノイマン型コンピュータの融合による、画像処理、科学技術計算、エッジAIコンピューティング基盤、ブロックチェインアクセラレータについて、 デバイス、ハードウェア、アーキテクチャ、ソフトウェアまでの幅広い先端基盤技術を追求する。 木村 睦 職位 客員教授 領域 情報科学領域 AI基盤情報学 研究室 コンピューティング・アーキテクチャ Society5.",
+          "retrievedAt": "2026-09-07T19:04:06.711Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0933-4",
+          "url": "https://naistpedia.naist.jp/researchers/detail/410",
+          "excerpt": "0への実装に適した次世代超小型・超低電力・高性能計算基盤の研究開発を実施。特に、限界が見えてきたノイマン型コンピュータと、 今後有望な各種非ノイマン型コンピュータの融合による、画像処理、科学技術計算、エッジAIコンピューティング基盤、ブロックチェインアクセラレータについて、 デバイス、ハードウェア、アーキテクチャ、ソフトウェアまでの幅広い先端基盤技術を追求する。 Tran Thi Hong 職位 客員准教授 領域 情報科学領域 AI基盤情報学 研究室 コンピューティング・アーキテクチャ Society5.",
+          "retrievedAt": "2026-09-07T19:04:06.711Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0933-5",
+          "url": "https://naistpedia.naist.jp/researchers/detail/410",
+          "excerpt": "0への実装に適した次世代超小型・超低電力・高性能計算基盤の研究開発を実施。特に、限界が見えてきたノイマン型コンピュータと、 今後有望な各種非ノイマン型コンピュータの融合による、画像処理、科学技術計算、エッジAIコンピューティング基盤、ブロックチェインアクセラレータについて、 デバイス、ハードウェア、アーキテクチャ、ソフトウェアまでの幅広い先端基盤技術を追求する。 KAN YIRONG 職位 助教 領域 情報科学領域 AI基盤情報学 研究室 コンピューティング・アーキテクチャ Society5.",
+          "retrievedAt": "2026-09-07T19:04:06.711Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0933-6",
+          "url": "https://naistpedia.naist.jp/researchers/detail/410",
+          "excerpt": "0への実装に適した次世代超小型・超低電力・高性能計算基盤の研究開発を実施。特に、限界が見えてきたノイマン型コンピュータと、 今後有望な各種非ノイマン型コンピュータの融合による、画像処理、科学技術計算、エッジAIコンピューティング基盤、ブロックチェインアクセラレータについて、 デバイス、ハードウェア、アーキテクチャ、ソフトウェアまでの幅広い先端基盤技術を追求する。 PHAM HOAI LUAN 職位 助教 領域 情報科学領域 AI基盤情報学 研究室 コンピューティング・アーキテクチャ Society5.",
+          "retrievedAt": "2026-09-07T19:04:06.711Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0933-7",
+          "url": "https://naistpedia.naist.jp/researchers/detail/410",
+          "excerpt": "0への実装に適した次世代超小型・超低電力・高性能計算基盤の研究開発を実施。特に、限界が見えてきたノイマン型コンピュータと、 今後有望な各種非ノイマン型コンピュータの融合による、画像処理、科学技術計算、エッジAIコンピューティング基盤、ブロックチェインアクセラレータについて、 デバイス、ハードウェア、アーキテクチャ、ソフトウェアまでの幅広い先端基盤技術を追求する。 &copy; 2022 NARA INSITUTE of SCIENCE and TECHNOLOGY ALL RIGHTS RESERVED.",
+          "retrievedAt": "2026-09-07T19:04:06.711Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0933-8",
+          "url": "https://isw3.naist.jp/Research/cs-arch-en.html",
+          "excerpt": "&#106;&#112; &#114;&#122;&#104;&#97;&#110;&#103;&#64;&#105;&#115;&#46;&#110;&#97;&#105;&#115;&#116;&#46;&#106;&#112; &#104;&#111;&#110;&#103;&#64;&#105;&#115;&#46;&#110;&#97;&#105;&#115;&#116;&#46;&#106;&#112; --> &#107;&#97;&#110;&#46;&#121;&#105;&#114;&#111;&#110;&#103;&#64;&#105;&#115;&#46;&#110;&#97;&#105;&#115;&#116;&#46;&#106;&#112; &#112;&#104;&#97;&#109;&#46;&#108;&#117;&#97;&#110;&#64;&#105;&#115;&#46;&#110;&#97;&#105;&#115;&#116;&#46;&#106;&#112; &#108;&#101;&#46;&#100;&#117;&#111;&#110;&#103;&#64;&#110;&#97;&#105;&#115;&#116;&#46;&#97;&#99;&#46;&#106;&#112; To the site https://sites.",
+          "retrievedAt": "2026-09-07T19:04:06.904Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0933-9",
+          "url": "https://isw3.naist.jp/Research/cs-arch-en.html",
+          "excerpt": "tal-oxide semiconductor thin-film synapses for 3D structures Neuromorphic architecture and leaning rules for astronomical scale integration Brain-type integrated systems with artificial humanity Energy efficient system architecture for next generation machine learning Research and development of next generation machine learning system architecture with edge computing Probabilistic reasoning algorithms with Bayesian networks IoT + blockchain for secure smart systems IoT and blockchain technologies are combined to develop smart systems such as smart healthcare systems, smart city management, etc.",
+          "retrievedAt": "2026-09-07T19:04:06.904Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0933-10",
+          "url": "https://isw3.naist.jp/Research/cs-arch-en.html",
+          "excerpt": "Key Features In our laboratory, we study state-of-the-art technologies for next-generation computing paradigms.",
+          "retrievedAt": "2026-09-07T19:04:06.904Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0933-11",
+          "url": "https://isw3.naist.jp/Research/cs-arch-en.html",
+          "excerpt": "Our goal is to realize environment-friendly, high-performance, and robust computer systems under energy constraints.",
+          "retrievedAt": "2026-09-07T19:04:06.904Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0933-12",
+          "url": "https://isw3.naist.jp/Research/cs-arch-en.html",
+          "excerpt": "From a wide viewpoint (from new theories to LSI implementations), we promote cutting-edge research and the highest degree of education within various research themes, particularly: high-performance, low-energy and dependable computation, and hardware/software co-design.",
+          "retrievedAt": "2026-09-07T19:04:06.904Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:05:19.698Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0934": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://medicine.iu.edu/faculty/18189/nguyen-tyler"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0934-1",
+          "url": "https://medicine.iu.edu/faculty/18189/nguyen-tyler",
+          "excerpt": "tetrics and Gynecology Ophthalmology Orthopaedic Surgery Otolaryngology Pathology Pediatrics Physical Medicine and Rehabilitation Psychiatry Radiation Medicine Radiology and Imaging Sciences Surgery Urology News & Stories Toggle Sub-navigation Newsroom Blog Magazine Events Office of Strategic Communications More More More About Leadership Faculty Staff Give Wellness Careers Toggle Search Box Search Search Faculty Affairs and Professional Development Home Faculty Affairs and Professional Development Tyler Nguyen, PhD Tyler Nguyen, PhD Assistant Research Professor of Anesthesia Email ptnguyen@iu.",
+          "retrievedAt": "2026-09-07T19:04:07.337Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0934-2",
+          "url": "https://medicine.iu.edu/faculty/18189/nguyen-tyler",
+          "excerpt": "edu Phone 317-278-5840 Address FH 203 ANES IN Indianapolis, IN PubMed: Bio Tyler Nguyen M.",
+          "retrievedAt": "2026-09-07T19:04:07.337Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0934-3",
+          "url": "https://medicine.iu.edu/faculty/18189/nguyen-tyler",
+          "excerpt": "is a neuroscientist with expertise in translational pain research spanning both preclinical and clinical domains.",
+          "retrievedAt": "2026-09-07T19:04:07.337Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0934-4",
+          "url": "https://medicine.iu.edu/faculty/18189/nguyen-tyler",
+          "excerpt": "in Medical Neuroscience from Indiana University School of Medicine, followed by postdoctoral training at IU School of Medicine.",
+          "retrievedAt": "2026-09-07T19:04:07.337Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0934-5",
+          "url": "https://medicine.iu.edu/faculty/18189/nguyen-tyler",
+          "excerpt": "He currently serves as a Research Assistant Professor in the Department of Anesthesia at Indiana University School of Medicine and as a faculty scientist at the Richard L.",
+          "retrievedAt": "2026-09-07T19:04:07.337Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0934-6",
+          "url": "https://medicine.iu.edu/faculty/18189/nguyen-tyler",
+          "excerpt": "Nguyen’s research focuses on central nervous system plasticity and neuroinflammatory mechanisms that contribute to the development and maintenance of chronic pain.",
+          "retrievedAt": "2026-09-07T19:04:07.337Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0934-7",
+          "url": "https://medicine.iu.edu/faculty/18189/nguyen-tyler",
+          "excerpt": "His work encompasses many different painful disorder ranging from traumatic brain injury-related persistent headaches, bone fracture pain, chemotherapy-induced peripheral neuropathy (CIPN), and interstitial cystitis/bladder pain syndrome (IC/BPS).",
+          "retrievedAt": "2026-09-07T19:04:07.337Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0934-8",
+          "url": "https://medicine.iu.edu/faculty/18189/nguyen-tyler",
+          "excerpt": "By integrating mechanistic studies in preclinical models with clinical investigations, he examines the cellular and molecular pathways that drive the transition from acute injury to chronic pain.",
+          "retrievedAt": "2026-09-07T19:04:07.337Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:05:19.698Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0935": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://medicine.iu.edu/faculty/61254/nguyen-chi"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0935-1",
+          "url": "https://medicine.iu.edu/faculty/61254/nguyen-chi",
+          "excerpt": "edicine Medical and Molecular Genetics Internal Medicine Neurological Surgery Neurology Obstetrics and Gynecology Ophthalmology Orthopaedic Surgery Otolaryngology Pathology Pediatrics Physical Medicine and Rehabilitation Psychiatry Radiation Medicine Radiology and Imaging Sciences Surgery Urology News & Stories Toggle Sub-navigation Newsroom Blog Magazine Events Office of Strategic Communications More More More About Leadership Faculty Staff Give Wellness Careers Toggle Search Box Search Search Faculty Affairs and Professional Development Home Faculty Affairs and Professional Development Chi M.",
+          "retrievedAt": "2026-09-07T19:04:07.764Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0935-2",
+          "url": "https://medicine.iu.edu/faculty/61254/nguyen-chi",
+          "excerpt": "Nguyen, PhD Assistant Research Professor of Biostatistics & Health Data Science Address 410 W 10th St.",
+          "retrievedAt": "2026-09-07T19:04:07.764Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0935-3",
+          "url": "https://medicine.iu.edu/faculty/61254/nguyen-chi",
+          "excerpt": "Chi Mai Nguyen is an Research Assistant Professor in the Department of Biostatistics and Health Data Science and the Biostatistics & Data Management Core, Indiana Univeristy School of Medicine and Richard M.",
+          "retrievedAt": "2026-09-07T19:04:07.764Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0935-4",
+          "url": "https://medicine.iu.edu/faculty/61254/nguyen-chi",
+          "excerpt": "She specializes in leveraging diverse real-world data, from electronic health records and insurance claims to genomic sequencing and patient-reported outcomes, to drive evidence-based clinical practice and inform health policy.",
+          "retrievedAt": "2026-09-07T19:04:07.764Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0935-5",
+          "url": "https://medicine.iu.edu/faculty/61254/nguyen-chi",
+          "excerpt": "Her work focuses on mapping structural pathways to health outcomes and applying advanced methods to correct bias and disentangle complex confounding.",
+          "retrievedAt": "2026-09-07T19:04:07.764Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0935-6",
+          "url": "https://medicine.iu.edu/faculty/61254/nguyen-chi",
+          "excerpt": "Patient Preferences for Public and Private Diabetes Care: A Discrete Choice Experiment Study in Vietnam.",
+          "retrievedAt": "2026-09-07T19:04:07.764Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0935-7",
+          "url": "https://medicine.iu.edu/faculty/61254/nguyen-chi",
+          "excerpt": "; Blaney, Hanna L; Su, Jing; Jiang, Shihui; Li, Yang; Li, Yining; Gawrieh, Samer; Tu, Wanzhu; Liangpunsakul, Suthat (2026).",
+          "retrievedAt": "2026-09-07T19:04:07.764Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0935-8",
+          "url": "https://medicine.iu.edu/faculty/61254/nguyen-chi",
+          "excerpt": "Real-world impact of AUD pharmacotherapy on healthcare utilization, cost, and cost-effectiveness in the United States.",
+          "retrievedAt": "2026-09-07T19:04:07.764Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:05:19.698Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0936": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://medicine.iu.edu/faculty/27262/dinh-paul"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0936-1",
+          "url": "https://medicine.iu.edu/faculty/27262/dinh-paul",
+          "excerpt": "dicine Medical and Molecular Genetics Internal Medicine Neurological Surgery Neurology Obstetrics and Gynecology Ophthalmology Orthopaedic Surgery Otolaryngology Pathology Pediatrics Physical Medicine and Rehabilitation Psychiatry Radiation Medicine Radiology and Imaging Sciences Surgery Urology News & Stories Toggle Sub-navigation Newsroom Blog Magazine Events Office of Strategic Communications More More More About Leadership Faculty Staff Give Wellness Careers Toggle Search Box Search Search Faculty Affairs and Professional Development Home Faculty Affairs and Professional Development Paul C.",
+          "retrievedAt": "2026-09-07T19:04:08.099Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0936-2",
+          "url": "https://medicine.iu.edu/faculty/27262/dinh-paul",
+          "excerpt": "Dinh, PhD, MPH Assistant Research Professor of Medicine Address RT 370 HEMO IN Indianapolis, IN PubMed: Education Default table Year Degree Institution 2020 PhD Indiana University 2013 MPH University of Michigan 2011 MS University of Michigan 2009 BS University of Michigan Publications Prevalence and risk factors for ototoxicity after cisplatin-based chemotherapy.",
+          "retrievedAt": "2026-09-07T19:04:08.099Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0936-3",
+          "url": "https://medicine.iu.edu/faculty/27262/dinh-paul",
+          "excerpt": "Sanchez VA; Dinh PC Jr; Rooker J; Monahan PO; Althouse SK; Fung C; Sesso HD; Einhorn LH; Dolan ME; Frisina RD; Travis LB; Journal of cancer survivorship : research and practice 2023 Jan 13 Patient-Reported Functional Impairment Due to Hearing Loss and Tinnitus After Cisplatin-Based Chemotherapy.",
+          "retrievedAt": "2026-09-07T19:04:08.099Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0936-4",
+          "url": "https://medicine.iu.edu/faculty/27262/dinh-paul",
+          "excerpt": "Sanchez VA; Shuey MM; Dinh PC Jr; Monahan PO; Foss&#229; SD; Sesso HD; Dolan ME; Einhorn LH; Vaughn DJ; Martin NE; Feldman DR; Kroenke K; Fung C; Frisina RD; Travis LB; Journal of clinical oncology : official journal of the American Society of Clinical Oncology 2023 Jan 10 Comprehensive association analysis of speech recognition thresholds after cisplatin-based chemotherapy in survivors of adult-onset cancer.",
+          "retrievedAt": "2026-09-07T19:04:08.099Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0936-5",
+          "url": "https://medicine.iu.edu/faculty/27262/dinh-paul",
+          "excerpt": "Shahbazi M; Zhang X; Dinh PC; Sanchez VA; Trendowski MR; Shuey MM; Nguyen T; Regeneron Genetics Center; Feldman DR; Vaughn DJ; Fung C; Kollmannsberger C; Martin NE; Einhorn LH; Cox NJ; Frisina RD; Travis LB; Dolan ME; Cancer medicine 2022 Sep 12 Pharmacogenomics of cisplatin-induced neurotoxicities: Hearing loss, tinnitus, and peripheral sensory neuropathy.",
+          "retrievedAt": "2026-09-07T19:04:08.099Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0936-6",
+          "url": "https://medicine.iu.edu/faculty/27262/dinh-paul",
+          "excerpt": "Zhang X; Trendowski MR; Wilkinson E; Shahbazi M; Dinh PC; Shuey MM; Regeneron Genetics Center.",
+          "retrievedAt": "2026-09-07T19:04:08.099Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0936-7",
+          "url": "https://medicine.iu.edu/faculty/27262/dinh-paul",
+          "excerpt": "; Feldman DR; Hamilton RJ; Vaughn DJ; Fung C; Kollmannsberger C; Huddart R; Martin NE; Sanchez VA; Frisina RD; Einhorn LH; Cox NJ; Travis LB; Dolan ME; Cancer medicine 2022 Mar 23 Associations of Body Fat Distribution and Cardiometabolic Risk of Testicular Cancer Survivors After Cisplatin-Based Chemotherapy.",
+          "retrievedAt": "2026-09-07T19:04:08.099Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0936-8",
+          "url": "https://medicine.iu.edu/faculty/27262/dinh-paul",
+          "excerpt": "Wibmer AG; Dinh PC; Travis LB; Chen C; Bromberg M; Zheng J; Capanu M; Sesso HD; Feldman DR; Vargas HA; JNCI cancer spectrum 2022 Jul 1 Ototoxicity After Cisplatin-Based Chemotherapy: Factors Associated With Discrepancies Between Patient-Reported Outcomes and Audiometric Assessments.",
+          "retrievedAt": "2026-09-07T19:04:08.099Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:05:19.698Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0937": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://che.utexas.edu/person/annalee-nguyen/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0937-1",
+          "url": "https://che.utexas.edu/person/annalee-nguyen/",
+          "excerpt": "Annalee Nguyen - McKetta Department of Chemical Engineering Skip to content utexas.",
+          "retrievedAt": "2026-09-07T19:04:08.665Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0937-2",
+          "url": "https://che.utexas.edu/person/annalee-nguyen/",
+          "excerpt": "edu News Events Directory Intranet Info for Alumni Industry K-12 Community Visitors & Families Employees (EID Login) ChE Intranet Give About About Overview Mission & Values Facts & Rankings Department History Facilities Broadening Participation in ChE Accreditation What is Chemical Engineering?",
+          "retrievedAt": "2026-09-07T19:04:08.665Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0937-3",
+          "url": "https://che.utexas.edu/person/annalee-nguyen/",
+          "excerpt": "Academics Academics Overview Undergraduate Graduate Student Organizations People People Overview Department Leadership Faculty Staff Faculty Openings Research Research Overview Research Areas Research Centers Connect Connect Overview Alumni Industry Giving Visit Us Contact Us Info for Alumni Industry K-12 Community Visitors & Families Employees (EID Login) ChE Intranet News Events Directory Intranet Give Search Open Mobile Navigation Annalee Nguyen Research Assistant Professor nguyen@che.",
+          "retrievedAt": "2026-09-07T19:04:08.665Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0937-4",
+          "url": "https://che.utexas.edu/person/annalee-nguyen/",
+          "excerpt": "402 Research Areas Bioengineering Research Interests Development and optimization of potent and tolerable protein therapeutics About While therapeutic advances over the last century can dramatically extend life after terrible diagnoses, even the most modern disease treatments may have brutal and painful side effects.",
+          "retrievedAt": "2026-09-07T19:04:08.665Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0937-5",
+          "url": "https://che.utexas.edu/person/annalee-nguyen/",
+          "excerpt": "Physicians have been moving toward a “whole patient” focus that places a high value on quality-of-life during treatment, but this effort is limited by the available therapies for many diseases.",
+          "retrievedAt": "2026-09-07T19:04:08.665Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0937-6",
+          "url": "https://che.utexas.edu/person/annalee-nguyen/",
+          "excerpt": "Building on a background in protein engineering, Nguyen is interested in harnessing proteins to localize and function on and in cells and tissues of interest.",
+          "retrievedAt": "2026-09-07T19:04:08.665Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0937-7",
+          "url": "https://che.utexas.edu/person/annalee-nguyen/",
+          "excerpt": "Her work focuses on the development of antibody-based therapies for infectious disease and cancer that potently prevent or treat disease with minimal adverse events.",
+          "retrievedAt": "2026-09-07T19:04:08.665Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0937-8",
+          "url": "https://che.utexas.edu/person/annalee-nguyen/",
+          "excerpt": "Specific ongoing projects include reducing on-target off-tumor side effects of anti-cancer antibodies by leveraging the relative acidity of the tumor microenvironment and precision control of bispecific antibody binding.",
+          "retrievedAt": "2026-09-07T19:04:08.665Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:05:19.698Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0938": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.unlv.edu/people/van-vo-phd"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0938-1",
+          "url": "https://www.unlv.edu/people/van-vo-phd",
+          "excerpt": "on Find Search A-Z Index Directories × Important Notice: Major IT service outages April 7-10 --> Quick Links Bookstore Bookstore Calendar Calendar Campus Maps Campus Maps Degrees Degrees Libraries Libraries MyUNLV MyUNLV News Center News Center RebelCard RebelCard Rebelmail Rebelmail Social Media Social Media UNLV Mail UNLV Mail WebCampus WebCampus Loading Directories Home A-Z Index Colleges, Schools, and Departments Administrative Units Research Centers and Institutes Resources and Services Employee Directory Contact UNLV Social Media Directory UNLV Mobile Apps Breadcrumb UNLV Home Van Vo, Ph.",
+          "retrievedAt": "2026-09-07T19:04:09.757Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0938-2",
+          "url": "https://www.unlv.edu/people/van-vo-phd",
+          "excerpt": "Assistant Research Professor Office SEB Mail Code 4022 Phone 702-895-4638 Email van.",
+          "retrievedAt": "2026-09-07T19:04:09.757Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0938-3",
+          "url": "https://www.unlv.edu/people/van-vo-phd",
+          "excerpt": "0 Campus Notifications University Statements and Compliance Web Privacy Statement Web Accessibility Website Feedback University of Nevada, Las Vegas 4505 S.",
+          "retrievedAt": "2026-09-07T19:04:09.757Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:05:19.698Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0939": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://chem.ufl.edu/people-2/scientists/nguyen-bio/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0939-1",
+          "url": "https://chem.ufl.edu/people-2/scientists/nguyen-bio/",
+          "excerpt": "Nguyen Bio - Chemistry Skip to main content School Logo Link Department of Chemistry MENU College of Liberal Arts and Sciences University of Florida Apply Undergraduate PhD Program Campaign Signup MENU About Chair’s Message Contact Us Dept.",
+          "retrievedAt": "2026-09-07T19:04:10.919Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0939-2",
+          "url": "https://chem.ufl.edu/people-2/scientists/nguyen-bio/",
+          "excerpt": "Broader Impacts Student Organizations Submit Outreach Info Support Leadership Board Strong Bonds Home People Scientists Nguyen Bio UF Department of Chemistry New Physics Building 2348 352-392-9237 Send Email Thanh Lam Nguyen Associate Scientist Research & Teaching Focus Our research interest focuses on investigating reaction mechanisms, thermochemistry, kinetics, and dynamics of elementary reactions occurring various environments such as combustion, atmosphere, and interstellar mediums using master-equation techniques, molecular dynamics, and high-accuracy potential energy surface calculations.",
+          "retrievedAt": "2026-09-07T19:04:10.919Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0939-3",
+          "url": "https://chem.ufl.edu/people-2/scientists/nguyen-bio/",
+          "excerpt": "Education and Training 2002–2006: PhD Chemistry, University of Leuven (KULeuven), Belgium.",
+          "retrievedAt": "2026-09-07T19:04:10.919Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0939-4",
+          "url": "https://chem.ufl.edu/people-2/scientists/nguyen-bio/",
+          "excerpt": "High-accuracy theoretical rate coefficients for the reaction of H2S with OH, Phys.",
+          "retrievedAt": "2026-09-07T19:04:10.919Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0939-5",
+          "url": "https://chem.ufl.edu/people-2/scientists/nguyen-bio/",
+          "excerpt": "Methalnediol from cloud-processed formaldehyde is only a minor source of atmospheric formic acid.",
+          "retrievedAt": "2026-09-07T19:04:10.919Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0939-6",
+          "url": "https://chem.ufl.edu/people-2/scientists/nguyen-bio/",
+          "excerpt": "School Logo Link College of Liberal Arts and Sciences Connect with Chemistry LinkedIn Icon Instagram Icon Contact the Department of Chemistry PO Box 117200 University of Florida Gainesville, FL 32611 Chemistry Menu About Chair’s Message Contact Us Dept.",
+          "retrievedAt": "2026-09-07T19:04:10.919Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:05:19.698Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0940": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.hajim.rochester.edu/ece/people/faculty/dinh_van_tuan/index.html"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.hajim.rochester.edu/ece/people/faculty/dinh_van_tuan/index.html: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:05:19.698Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-0941": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.eng.auburn.edu/directory/nht0002.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0941-1",
+          "url": "https://www.eng.auburn.edu/directory/nht0002.html",
+          "excerpt": "profile Cookie Acknowledgement This website uses cookies to collect information to improve your browsing experience.",
+          "retrievedAt": "2026-09-07T19:04:11.617Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0941-2",
+          "url": "https://www.eng.auburn.edu/directory/nht0002.html",
+          "excerpt": "I Understand Skip to Primary Navigation Skip to Content Cookie Acknowledgement This website uses cookies to collect information to improve your browsing experience.",
+          "retrievedAt": "2026-09-07T19:04:11.617Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0941-3",
+          "url": "https://www.eng.auburn.edu/directory/nht0002.html",
+          "excerpt": "Chemical Civil and Environmental Computer Science and Software Electrical and Computer Industrial and Systems Materials Mechanical Wireless Students Undergraduate Student Graduate Student Future Undergraduate Student Future Graduate Student Online Student Transfer Student Engineering Student Center Student Organizations Careers Career Development and Corporate Relations Featured Engineering Jobs + Internships Research Giving Alumni News Spirit Store Nam Tran Research Profile National Center for Asphalt Technology Research Professor Assistant Director, National Center for Asphalt Technology 334.",
+          "retrievedAt": "2026-09-07T19:04:11.617Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:05:19.698Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0942": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://med.virginia.edu/surgery/faculty-listing/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0942-1",
+          "url": "https://med.virginia.edu/surgery/faculty-listing/",
+          "excerpt": "l Health Psychiatry &#038; Neurobehavioral Sciences Radiation Oncology Radiology &#038; Medical Imaging Surgery Urology UVA Health: Patient Care Faculty Faculty Affairs &#038; Development Home Awards &#038; Honors Leadership Programs Professional Development Meet Our Team Policies, Administration &#038; Governance Promotion, Tenure &#038; Faculty Actions News About Explore the UVA Health System Search Submit UVA Department of Surgery Faculty At the University of Virginia, we take great pride in our diverse faculty, whose extensive knowledge and experience enrich every aspect of our institution.",
+          "retrievedAt": "2026-09-07T19:04:11.831Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0942-2",
+          "url": "https://med.virginia.edu/surgery/faculty-listing/",
+          "excerpt": "Our faculty are committed to advancing excellence across the four pillars of the School of Medicine: clinical care, research, education, and community engagement.",
+          "retrievedAt": "2026-09-07T19:04:11.831Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0942-3",
+          "url": "https://med.virginia.edu/surgery/faculty-listing/",
+          "excerpt": "Browse by Division: Cardiothoracic | General | Pediatric | Surgical Oncology | Transplant | Vascular & Endovascular | Surgical Sciences | Community Health Surgery Chair, UVA Department of Surgery Allan Tsung, MD Professor of Surgery Chair, Department of Surgery Cardiothoracic Surgery Clinical Faculty John A.",
+          "retrievedAt": "2026-09-07T19:04:11.831Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0942-4",
+          "url": "https://med.virginia.edu/surgery/faculty-listing/",
+          "excerpt": "Kern, MD Professor of Surgery Chief, Division of Cardiothoracic Surgery Adanna Akujuo, MD Professor of Surgery Jared P.",
+          "retrievedAt": "2026-09-07T19:04:11.831Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0942-5",
+          "url": "https://med.virginia.edu/surgery/faculty-listing/",
+          "excerpt": "Carrott, MD Associate Professor of Surgery James Gangemi, MD Professor of Surgery Michael Ibrahim, MD, PhD, MBA Associate Professor of Surgery Walker Julliard, MD Associate Professor of Surgery Linda Martin, MD, MPH Professor of Surgery Leora T.",
+          "retrievedAt": "2026-09-07T19:04:11.831Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0942-6",
+          "url": "https://med.virginia.edu/surgery/faculty-listing/",
+          "excerpt": "Yarboro, MD Professor of Surgery General Surgery Clinical Faculty Colorectal Section Traci L.",
+          "retrievedAt": "2026-09-07T19:04:11.831Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0942-7",
+          "url": "https://med.virginia.edu/surgery/faculty-listing/",
+          "excerpt": "Friel, MD Professor of Surgery Sook Hoang, MD Associate Professor of Surgery Bariatric Section Cullen Carter, MD Associate Professor of Surgery Peter T.",
+          "retrievedAt": "2026-09-07T19:04:11.831Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0942-8",
+          "url": "https://med.virginia.edu/surgery/faculty-listing/",
+          "excerpt": "Schirmer, MD Professor of Surgery Acute Care & Trauma Evan DeCan, MD Assistant Professor of Surgery Molly Flannagan, MD Associate Professor of Surgery Joshua Gazzetta, DO Assistant Professor of Surgery Matthew Noorbakhsh, MD Associate Professor of Surgery Jade Nunez, MD Associate Professor of Surgery Carlos A.",
+          "retrievedAt": "2026-09-07T19:04:11.831Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:05:19.698Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0943": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.qmul.ac.uk/sbm/staff/academic/profiles/huynht.html",
         "https://sites.google.com/view/toanluu"
       ],
-      "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "evidence": [
+        {
+          "id": "vp-0943-1",
+          "url": "https://sites.google.com/view/toanluu",
+          "excerpt": "Home Search this site Embedded Files Skip to main content Skip to navigation Home Publications Teaching Services Vietnamese studies Home Publications Teaching Services Vietnamese studies More Home Publications Teaching Services Vietnamese studies Luu Duc Toan Huynh Associate Professor @ Queen Mary University of London 4.",
+          "retrievedAt": "2026-09-07T19:04:12.314Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0943-2",
+          "url": "https://sites.google.com/view/toanluu",
+          "excerpt": "ected working papers The Unseen Pain of the Vietnam War: Long Term Effects of Agent Orange on Labor Market Outcomes (Minor Revise & Resubmit ) (with Po-Yin Wong ) Presented: Asian Economic Development Conference 2025 (Peking, China), 2025 World Congress of the Econometrics Society (Seoul, South Korea), German Development Economics Conference 2025 (Frankfurt, Germany), 30th Annual Conference of the European Association of Environmental and Resource Economists (Bergen, Norway), Wealth, Medical Spending, and Health: Evidence from a Housing Reform (with Zeen He ) What Matters for the Rise in Trade?",
+          "retrievedAt": "2026-09-07T19:04:12.314Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0943-3",
+          "url": "https://sites.google.com/view/toanluu",
+          "excerpt": "uring the First Trade War (Major Revise & Resubmit) (solo-authored) Grants Received BA/Leverhulme Small Research Grant ( Sanctions and Russian firm responses) (SRG 2023 Round) as the main Principal Investigator (PI) Sanctions and inventories: Evidence from Russian energy firms ( with Kiet Duong and Quan Nguyen ) Energy Economics Selected publications Regional bombs and public labour obligations (solo-authored, 2026) International Public Management Journal Paper in one sentence: War bombing has a U-shaped effect on public labour contributions: less at moderate exposure, more at extreme exposure.",
+          "retrievedAt": "2026-09-07T19:04:12.314Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0943-4",
+          "url": "https://sites.google.com/view/toanluu",
+          "excerpt": "When doing good feels wrong: The double-edged influence of perceived organizational opportunism on employee CSR behavior (2026) (with Jintao Lu, Yue Li, Benjamin Laker, Chunyan Wang, Valerie Onyia Babatope, and Malin Song) Journal of Management Studies Paper in one sentence: Perceived opportunism in corporate social responsibility makes employees act superficially rather than genuinely, unless they feel empowered.",
+          "retrievedAt": "2026-09-07T19:04:12.314Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0943-5",
+          "url": "https://sites.google.com/view/toanluu",
+          "excerpt": "The real effects of Brexit on labor demand: Evidence from firm-level data (2025) (with Hang Do , Kiet T.",
+          "retrievedAt": "2026-09-07T19:04:12.314Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0943-6",
+          "url": "https://sites.google.com/view/toanluu",
+          "excerpt": "Vu ) Journal of International Economics Paper in one sentence: Brexit’s 2020 implementation cut jobs and growth in exposed UK firms but spurred R&D, eased by prior trade.",
+          "retrievedAt": "2026-09-07T19:04:12.314Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0943-7",
+          "url": "https://sites.google.com/view/toanluu",
+          "excerpt": ") Presented: WHU Finance & Accounting Seminar (2024), Swedish Network for European Studies in Economics and Business (2024), Macro Development Annual Workshop (2024), Midwest Macroeconomics Meetings (MMM) (2024), 14th European Meeting of the Urban Economics Association (2025) Best paper award at 2025 Asian Summer School in Econometrics and Statistics What Vietnam’s localized lockdown policy showed: It did not work and was too late (solo-authored, 2023) Regional Studies Paper in one sentence: The number of infected cases is found to increase despite the lockdowns reducing visits to public areas.",
+          "retrievedAt": "2026-09-07T19:04:12.314Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
+      "errors": [
+        "https://www.qmul.ac.uk/sbm/staff/academic/profiles/huynht.html: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T19:05:19.698Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0944": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.york.ac.uk/business-society/people/kiet-duong/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0944-1",
+          "url": "https://www.york.ac.uk/business-society/people/kiet-duong/",
+          "excerpt": "versity | A to Z | Departments School for Business and Society People Kiet Duong Study People Leadership team Postgraduate researchers Research Engagement and impact About us Contact us Current staff and students Dr Kiet Duong Lecturer in Accounting and Finance Full research profile --> Visit Dr Kiet Duong's profile on the York Research Database to: See a full list of publications Browse activities and projects Explore connections, collaborators, related work and more Profile Biography Kiet Duong is a Lecturer in Accounting and Finance at the School for Business and Society, University of York.",
+          "retrievedAt": "2026-09-07T19:04:13.060Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0944-2",
+          "url": "https://www.york.ac.uk/business-society/people/kiet-duong/",
+          "excerpt": "Prior to joining the University of York in December 2021, he held the position of Lecturer in Accounting and Finance at the Huddersfield Business School, University of Huddersfield.",
+          "retrievedAt": "2026-09-07T19:04:13.060Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0944-3",
+          "url": "https://www.york.ac.uk/business-society/people/kiet-duong/",
+          "excerpt": "His previous academic appointments include roles as Assistant Lecturer in Accounting and Finance and as Tutor in Mathematics and Statistics at the University of Essex, in addition to serving as an External Examiner for the London School of Economics and Political Science (LSE).",
+          "retrievedAt": "2026-09-07T19:04:13.060Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0944-4",
+          "url": "https://www.york.ac.uk/business-society/people/kiet-duong/",
+          "excerpt": "He also brings professional experience from the banking sector, gained prior to the commencement of his academic career.",
+          "retrievedAt": "2026-09-07T19:04:13.060Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0944-5",
+          "url": "https://www.york.ac.uk/business-society/people/kiet-duong/",
+          "excerpt": "He holds administrative responsibilities as Database Coordinator and serves as a member of the Research Committee within the School for Business and Society, University of York.",
+          "retrievedAt": "2026-09-07T19:04:13.060Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0944-6",
+          "url": "https://www.york.ac.uk/business-society/people/kiet-duong/",
+          "excerpt": "He also participates in partnership initiatives, collaborating with universities outside the United Kingdom.",
+          "retrievedAt": "2026-09-07T19:04:13.060Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0944-7",
+          "url": "https://www.york.ac.uk/business-society/people/kiet-duong/",
+          "excerpt": "In addition, he has been part of the organising team for the Student-Managed Investment Fund (SMIF) conferences&mdash;SMIFUK22 and SMIFUK23, which were hosted by the University of York.",
+          "retrievedAt": "2026-09-07T19:04:13.060Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0944-8",
+          "url": "https://www.york.ac.uk/business-society/people/kiet-duong/",
+          "excerpt": "His research interests encompass corporate finance, corporate governance, and CEO and board director characteristics.",
+          "retrievedAt": "2026-09-07T19:04:13.060Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:05:19.698Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0945": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.regents.ac.uk/about/our-people/dr-daniel-dao"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.regents.ac.uk/about/our-people/dr-daniel-dao: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T19:05:19.698Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-0946": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.southampton.ac.uk/people/5y5kzk/doctor-thuy-hang-do"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0946-1",
+          "url": "https://www.southampton.ac.uk/people/5y5kzk/doctor-thuy-hang-do",
+          "excerpt": "ost a placement student Collaborate on a short term student project Advertise graduate jobs and internships Become a supplier - - Find people and expertise Global International students Visiting delegations University of Southampton Delhi Career Advantage International Office Visiting fellowships University of Southampton Malaysia Partnerships and initiatives Online master&#039;s degrees View all staff Dr Thuy Hang Do PhD Principal Teaching Fellow Research interests SME Internationalisation Innovation Management Entrepreneurial Orientation More research Accepting applications from PhD students.",
+          "retrievedAt": "2026-09-07T19:04:14.176Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0946-2",
+          "url": "https://www.southampton.ac.uk/people/5y5kzk/doctor-thuy-hang-do",
+          "excerpt": "uk Tel: +44 23 8059 3628 ORCID LinkedIn On this page About Research Publications Teaching Biography About Research Publications Teaching Biography About Dr Hang Do is a Principal Teaching Fellow in Strategy, Innovation and Entrepreneurship.",
+          "retrievedAt": "2026-09-07T19:04:14.176Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0946-3",
+          "url": "https://www.southampton.ac.uk/people/5y5kzk/doctor-thuy-hang-do",
+          "excerpt": "She is the Programme Director of the MSc in International Entrepreneurship and Management, Undergraduate Senior Tutor for several business programmes (International Business, Business Management, and Entrepreneurship), and Study Abroad Coordinator for the School.",
+          "retrievedAt": "2026-09-07T19:04:14.176Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0946-4",
+          "url": "https://www.southampton.ac.uk/people/5y5kzk/doctor-thuy-hang-do",
+          "excerpt": "She serves on the Editorial Board of the Journal of Small Business and Enterprise Development and mentors early-career researchers through the Doctoral Consortium of the European Academy of Management and the British Council scheme via the Vietnamese Intellectual Society for the UK and Ireland.",
+          "retrievedAt": "2026-09-07T19:04:14.176Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0946-5",
+          "url": "https://www.southampton.ac.uk/people/5y5kzk/doctor-thuy-hang-do",
+          "excerpt": "Her research has been published in high-ranked international journals such as the Journal of International Economics , IEEE Transactions on Engineering Management, and Journal of Innovation Management, International Review of Entrepreneurship.",
+          "retrievedAt": "2026-09-07T19:04:14.176Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0946-6",
+          "url": "https://www.southampton.ac.uk/people/5y5kzk/doctor-thuy-hang-do",
+          "excerpt": "She has received multiple nominations for teaching and student support and has won the Best Academic Support Award (2025) and Highly Commended Most Engaging Lecturer (2024) by the Southampton University Students' Union, and was shortlisted for the Vice-Chancellor’s Teaching Award (2025).",
+          "retrievedAt": "2026-09-07T19:04:14.176Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0946-7",
+          "url": "https://www.southampton.ac.uk/people/5y5kzk/doctor-thuy-hang-do",
+          "excerpt": "Research Research Research groups Member of: Centre for Inclusive and Sustainable Entrepreneurship and Innovation Research interests SME Internationalisation Innovation Management Entrepreneurial Orientation Global supply chain management Sustainability, CSR Current research Hang's research projects: 1.",
+          "retrievedAt": "2026-09-07T19:04:14.176Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0946-8",
+          "url": "https://www.southampton.ac.uk/people/5y5kzk/doctor-thuy-hang-do",
+          "excerpt": "Entrepreneurial orientation of international SMEs and international business support for born globals (completed) 5.",
+          "retrievedAt": "2026-09-07T19:04:14.176Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:05:19.698Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0947": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.bristol.ac.uk/person/Quoc%20Tuan-Ho-908ea753-f956-4425-a775-c436f41007d8/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0947-1",
+          "url": "https://www.bristol.ac.uk/person/Quoc%20Tuan-Ho-908ea753-f956-4425-a775-c436f41007d8/",
+          "excerpt": "Dr Quoc Tuan Ho - Our People Our people menu Menu Home Study at Bristol arrow-down About Schools & faculties Research Business & partnerships News People Current students Current staff Alumni Back Dr Quoc Tuan Ho PhD(Manchester), Mcom(Melbourne), BSc(Ho Chi Minh city) Current positions Associate Professor in Accounting and Finance University of Bristol Business School Contact Tuan.",
+          "retrievedAt": "2026-09-07T19:04:14.924Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0947-2",
+          "url": "https://www.bristol.ac.uk/person/Quoc%20Tuan-Ho-908ea753-f956-4425-a775-c436f41007d8/",
+          "excerpt": "uk 15-19 Tyndall&#x27;s Park Rd Bristol BS8 1PQ +44 117 455 7977 Press and media Many of our academics speak to the media as experts in their field of research.",
+          "retrievedAt": "2026-09-07T19:04:14.924Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0947-3",
+          "url": "https://www.bristol.ac.uk/person/Quoc%20Tuan-Ho-908ea753-f956-4425-a775-c436f41007d8/",
+          "excerpt": "If you are a journalist, please contact the University’s Media and PR Team: +44 117 428 2489 press-office@bristol.",
+          "retrievedAt": "2026-09-07T19:04:14.924Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0947-4",
+          "url": "https://www.bristol.ac.uk/person/Quoc%20Tuan-Ho-908ea753-f956-4425-a775-c436f41007d8/",
+          "excerpt": "uk Edit profile Research interests My research interests: Financial Analysis Valuation of Firms Investment Strategies and Stock Market Anomalies Financial Analysts' Forecasts and Behaviours Financial Technology Machine Learning in Accounting and Finance Use of Alternative Data in Accounting and Finance PhD Supervision I am looking for good applications for PhD under my supervision.",
+          "retrievedAt": "2026-09-07T19:04:14.924Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0947-5",
+          "url": "https://www.bristol.ac.uk/person/Quoc%20Tuan-Ho-908ea753-f956-4425-a775-c436f41007d8/",
+          "excerpt": "A successful candidate should be able to demonstrate strong academic background, high level of numeracy and original thinking.",
+          "retrievedAt": "2026-09-07T19:04:14.924Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0947-6",
+          "url": "https://www.bristol.ac.uk/person/Quoc%20Tuan-Ho-908ea753-f956-4425-a775-c436f41007d8/",
+          "excerpt": "Projects and supervisions Research projects Entrepreneur firms and sources of finance Quoc Tuan Ho Principal Investigator Quoc Tuan Ho Dates 01/10/2021 to 31/05/2023 FINISHED Thesis supervisions Essays on Real Options and Tail Risks Yang Li Supervisors Quoc Tuan Ho , Fangming Xu Essays on sell-side analysts’ non-GAAP and GAAP reporting M Zhu Supervisors Mark Clatworthy , Tuan Ho Publications Selected publications 15/04/2022 Disagreement about the past: An empirical assessment of bank analysts' GAAP and non-GAAP earnings measures Mark A Clatworthy , et al.",
+          "retrievedAt": "2026-09-07T19:04:14.924Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0947-7",
+          "url": "https://www.bristol.ac.uk/person/Quoc%20Tuan-Ho-908ea753-f956-4425-a775-c436f41007d8/",
+          "excerpt": "Journal of Business Finance and Accounting Article Published 01/03/2024 Is the mispricing of bank earnings related to financial regulation uncertainty?",
+          "retrievedAt": "2026-09-07T19:04:14.924Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0947-8",
+          "url": "https://www.bristol.ac.uk/person/Quoc%20Tuan-Ho-908ea753-f956-4425-a775-c436f41007d8/",
+          "excerpt": "Journal of Accounting and Public Policy Article Published 01/03/2023 Can Real Options Explain the Skewness of Stock Returns?",
+          "retrievedAt": "2026-09-07T19:04:14.924Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:05:19.698Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0948": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.nottingham.ac.uk/business/people/lizln1.phtml"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0948-1",
+          "url": "https://www.nottingham.ac.uk/business/people/lizln1.phtml",
+          "excerpt": "You are here: University of Nottingham Business School People Academic staff Dr Linh Nguyen Nottingham University Business School Print Home Study with us Open days Research Who we are Executive Education Careers and employability News People Academic staff Professional staff Research staff Special appointments Advisory Boards Professors of Practice Alumni Events Blog Connect with us Dr Linh Nguyen Profile Publications Teaching Research & Knowledge Exchange PhD in Finance (university of exeter) Assistant Professor in Accounting & Finance Department: Finance, Accounting and Banking E-mail: linh.",
+          "retrievedAt": "2026-09-07T19:04:15.722Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0948-2",
+          "url": "https://www.nottingham.ac.uk/business/people/lizln1.phtml",
+          "excerpt": "uk Tel: +44 (0) 115 7484098 Location: B22 (Si Yuan Building, Jubilee Campus) Linh H.",
+          "retrievedAt": "2026-09-07T19:04:15.722Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0948-3",
+          "url": "https://www.nottingham.ac.uk/business/people/lizln1.phtml",
+          "excerpt": "Before joining the University of Nottingham, Linh worked as a Research Analyst at Spinnaker Capital Limited and Broad Reach Investment Management LLP in London.",
+          "retrievedAt": "2026-09-07T19:04:15.722Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0948-4",
+          "url": "https://www.nottingham.ac.uk/business/people/lizln1.phtml",
+          "excerpt": "He also served as a Senior Lecturer in Accounting and Finance at De Montfort University.",
+          "retrievedAt": "2026-09-07T19:04:15.722Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0948-5",
+          "url": "https://www.nottingham.ac.uk/business/people/lizln1.phtml",
+          "excerpt": "His research interests lie in asset pricing, risk modeling, portfolio optimisation, cryptocurrencies, and the application of Artificial Intelligence in Finance.",
+          "retrievedAt": "2026-09-07T19:04:15.722Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0948-6",
+          "url": "https://www.nottingham.ac.uk/business/people/lizln1.phtml",
+          "excerpt": "Linh's research has been published in various academic journals, including the Journal of Empirical Finance, the Journal of International Financial Markets, Institutions and Money, Quantitative Finance, and the International Journal of Finance & Economics, among others.",
+          "retrievedAt": "2026-09-07T19:04:15.722Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0948-7",
+          "url": "https://www.nottingham.ac.uk/business/people/lizln1.phtml",
+          "excerpt": "Linh also serves as a referee for the International Review of Financial Analysis, the Journal of International Money and Finance, the Journal of Forecasting, the International Journal of Finance & Economics, and other finance outlets.",
+          "retrievedAt": "2026-09-07T19:04:15.722Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0948-8",
+          "url": "https://www.nottingham.ac.uk/business/people/lizln1.phtml",
+          "excerpt": "Additionally, he currently holds the position of Senior Manager of Empowerment and Intellectual Advancement at the Finance and Banking Network (FBNet), a division of the Association of Vietnamese Scientists and Experts Global (AVSE Global).",
+          "retrievedAt": "2026-09-07T19:04:15.722Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:05:19.698Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0949": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.lakeforest.edu/academics/faculty/lpham"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0949-1",
+          "url": "https://www.lakeforest.edu/academics/faculty/lpham",
+          "excerpt": "Linh Pham | Lake Forest College This website uses cookies so that we can provide you with the best user experience.",
+          "retrievedAt": "2026-09-07T19:04:16.371Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0949-2",
+          "url": "https://www.lakeforest.edu/academics/faculty/lpham",
+          "excerpt": "Accept Privacy Policy Apply Visit Campus Request Info Give Students, Faculty, and Staff Search Menu Economics Business and Finance Lake Forest College / Academics / Faculty / lpham Linh Pham Associate Professor of Economics Economics Business and Finance 8477355172 lpham@lakeforest.",
+          "retrievedAt": "2026-09-07T19:04:16.371Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0949-3",
+          "url": "https://www.lakeforest.edu/academics/faculty/lpham",
+          "excerpt": "edu Specializations Economics, Finance, Empirical Methods Interests Energy and Climate Finance, Sustainable Finance, Corporate Finance, Financial Modeling, Technological Change, Environmental Economics, Energy Economics, Empirical Research Design Education Ph.",
+          "retrievedAt": "2026-09-07T19:04:16.371Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0949-4",
+          "url": "https://www.lakeforest.edu/academics/faculty/lpham",
+          "excerpt": ", University of Wisconsin-La Crosse (summa cum laude) Courses taught Principles of Economics, Financial Management, Macroeconomic Theory, Corporate Finance, Financial Modeling, Sustainable and Energy Finance Selected Publications OPEC News & Clean Energy Market, Global Finance Journal , 2026, with One Kenosi, Seneme Mashaba, Artur Petrosyan, Student co-authors Corporate Greewashing, in Trinh, Vu & Pham , Thinh (Eds.",
+          "retrievedAt": "2026-09-07T19:04:16.371Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0949-5",
+          "url": "https://www.lakeforest.edu/academics/faculty/lpham",
+          "excerpt": "y Visit Campus Request Information Conference and Event Services Accessibility Services Campus Map College Catalog Consumer Information Emergency Information Non-Discrimination Policy Privacy &copy; 2026 Lake Forest College Accessibility Services Campus Map College Catalog Consumer Information Emergency Information Non-Discrimination Policy Apply Visit Campus Request Info Give About Us Academics Admissions Alumni Athletics Calendar of Events Careers Chicago Community Giving News and Events Offices and Departments Parents Student Life Students, Faculty, and Staff Students, Faculty, and Staff my.",
+          "retrievedAt": "2026-09-07T19:04:16.371Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0949-6",
+          "url": "https://www.lakeforest.edu/academics/faculty/lpham",
+          "excerpt": "lakeforest Quicklinks College Catalog Commencement Faculty & Staff Directory Students, Faculty, and Staff Canvas my.",
+          "retrievedAt": "2026-09-07T19:04:16.371Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0949-7",
+          "url": "https://www.lakeforest.edu/academics/faculty/lpham",
+          "excerpt": "ter of Arts in Teaching (MAT) Faculty Course Descriptions Requirements Additional Endorsements Education Studies Minor Student Learning Outcomes Internships and Careers Fieldwork and Student Teaching Social Justice and Anti-Racism Focus Developmental Portfolio Identifying&#160;Dispositions (Institutional Standards) Paedagogia Academic Journal English and Creative Writing Fielding Fellows Faculty Course Descriptions Requirements Student Learning Outcomes Internships and Careers Literature Track Writing Track Lake Forest College Press / &NOW Books Opportunities After Graduation Why Study English?",
+          "retrievedAt": "2026-09-07T19:04:16.371Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0949-8",
+          "url": "https://www.lakeforest.edu/academics/faculty/lpham",
+          "excerpt": "ments Summer Research Student Learning Outcomes Critical Thinking Student Learning Outcomes Internships and Careers Jensen Physics Scholarship Politics Faculty Course Descriptions Requirements Student Learning Outcomes 2024 Presidential Election Programming Mojekwu Fund Pre-Health Advising Join the Health Professions Program Course Recommendations Dual Degree Programs and Affiliations How to Find Your Advisor Pre-Health Advising Committee Preparing for a Career in Pre-Health Success Stories Join Future Health Professionals Pre-Health Program Sheet Pre-Law Faculty Advisors Is Law School for You?",
+          "retrievedAt": "2026-09-07T19:04:16.371Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:05:19.698Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0950": {
       "overview": "pending",
