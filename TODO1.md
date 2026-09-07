@@ -133,9 +133,10 @@ completion while temporary failures or unresolved verification remain.
 - [x] ~~Batch 2 — `vp-0021`–`vp-0040`; 20 people; all outcomes complete~~ — published in `c92a004`; counts: 20 verified overviews, 20 verified work sections (10 selected, 10 recent), 0 no-suitable-evidence work searches; 0 unresolved retries.
 - [x] ~~Batch 3 — `vp-0041`–`vp-0060`; 20 people; all outcomes complete~~ — published in `94c1bb2`; counts: 20 verified overviews, 17 verified work sections (5 selected, 12 recent), 3 no-suitable-evidence work searches; 0 unresolved retries.
 - [x] ~~Batch 4 — `vp-0061`–`vp-0080`; 20 people; all outcomes complete~~ — published in `d1e3f2e`; counts: 20 verified overviews, 14 verified work sections (6 selected, 8 recent), 6 no-suitable-evidence work searches; 0 unresolved retries.
-- [ ] Batch 5 — `vp-0081`–`vp-0100`; 20 people; 18 complete outcomes; counts: 18 verified overviews, 11 verified work sections (2 selected, 9 recent), 7 no-suitable-evidence work searches; 2 retries in queue (`vp-0083`, `vp-0099` due to JHU endpoint Cloudflare block).
+- [ ] Batch 5 — `vp-0081`–`vp-0100`; 20 people; 18 complete outcomes — published in `aff3add`; counts: 18 verified overviews, 11 verified work sections (2 selected, 9 recent), 7 no-suitable-evidence work searches; 2 retries in queue (`vp-0083`, `vp-0099` due to JHU endpoint Cloudflare block).
+- [ ] Batch 6 — `vp-0101`–`vp-0120`; 20 people; 17 complete outcomes; counts: 17 verified overviews, 9 verified work sections (2 selected, 7 recent), 8 no-suitable-evidence work searches; 3 retries in queue (`vp-0102`, `vp-0104`, `vp-0105`).
 
-Progress note: batches 1 through 5 processed (98 verified overviews, 78 verified work sections, 20 no-suitable-evidence results, 2 retries in queue). Batch 5 is ready for publication. Batch 6 will be processed next.
+Progress note: batches 1 through 6 processed (115 verified overviews, 87 verified work sections, 28 no-suitable-evidence results, 5 retries in queue). Batch 6 is ready for publication. Batch 7 will be processed next.
 
 Populate at execution time from the saved ID snapshot. Each entry must include batch number,
 ledger reference or exact IDs, outcome counts, remaining retries, and publication status.
@@ -143,3 +144,4 @@ ledger reference or exact IDs, outcome counts, remaining retries, and publicatio
 Entry format: `- [ ] Batch N — 20 people; IDs in ledger; pending.`
 
 Completed format: `- [x] ~~Batch N — all outcomes complete~~ — published in COMMIT; counts: …`
+

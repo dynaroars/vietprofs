@@ -1652,7 +1652,9 @@
         "vp-0119",
         "vp-0120"
       ],
-      "status": "pending"
+      "status": "complete",
+      "startedAt": "2026-09-07T04:09:15.123Z",
+      "publishedAt": "2026-09-07T04:12:32.305Z"
     },
     {
       "number": 7,
@@ -12418,214 +12420,384 @@
       "nextAction": "Batch 5 verification complete."
     },
     "vp-0101": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://cas.uoregon.edu/directory/physics/all/kxn"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0101-1",
+          "url": "https://cas.uoregon.edu/directory/physics/all/kxn",
+          "excerpt": "We are an electron microscopy group that uses computational and experimental techniques to perform image reconstruction beyond the scale of instrumentation. Using signals from the scattered electron beam to uncover new physics in quantum materials, and to push imaging resolution, such that we can visualize the smallest electromagnetic field — a single electron spin — from a magnet or a molecule.",
+          "retrievedAt": "2026-09-07T04:12:32.305Z",
+          "details": "Verified research overview source excerpt."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:12:32.305Z",
+      "nextAction": "Overview verified; no standalone publication list suitable for selected/recent work."
     },
     "vp-0102": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://sph.umich.edu/faculty-profiles/huynh-james.html",
         "https://thejameshuynh.com/"
       ],
-      "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "evidence": [
+        {
+          "id": "vp-0102-1",
+          "url": "https://thejameshuynh.com/",
+          "excerpt": "Private Site Private Site You need to be logged in as a user who has permission to view this site.",
+          "retrievedAt": "2026-09-07T04:09:17.496Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
+      "errors": [
+        "Official university profile returned HTTP 403; personal website is private and requires login."
+      ],
+      "updatedAt": "2026-09-07T04:12:32.305Z",
+      "nextAction": "Retry when university profile becomes accessible or public personal page is available."
     },
     "vp-0103": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://sph.uth.edu/faculty/index.htm?fac=KAxVpHwjEQAbZXgfZvxCQA%3D%3D"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0103-1",
+          "url": "https://sph.uth.edu/faculty/index.htm?fac=KAxVpHwjEQAbZXgfZvxCQA%3D%3D",
+          "excerpt": "He has published three textbooks, one research book, seven edited books, seven book chapters, and over one hundred twenty peer-reviewed papers in international journals and conferences in the fields of conceptual structures, soft computing, semantic web, machine learning, natural language processing.",
+          "retrievedAt": "2026-09-07T04:12:32.305Z",
+          "details": "Verified research overview source excerpt."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:12:32.305Z",
+      "nextAction": "Overview verified; no standalone publication list suitable for selected/recent work."
     },
     "vp-0104": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://datascience.virginia.edu/people/phong-nguyen"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "Official School of Data Science profile returned HTTP 403."
+      ],
+      "updatedAt": "2026-09-07T04:12:32.305Z",
+      "nextAction": "Retry fetching profile when endpoint access restrictions ease."
     },
     "vp-0105": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.etox.ucdavis.edu/people/tran-nguyen",
         "https://nguyenlab.ucdavis.edu/about-pi"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "Official departmental faculty profile and lab website returned HTTP 403."
+      ],
+      "updatedAt": "2026-09-07T04:12:32.305Z",
+      "nextAction": "Retry fetching profile when endpoint access restrictions ease."
     },
     "vp-0106": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.utoledo.edu/nsm/mathstats/faculty-staff/trieu-le/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0106-1",
+          "url": "https://www.utoledo.edu/nsm/mathstats/faculty-staff/trieu-le/",
+          "excerpt": "Research interests: Functional analysis, operator theory",
+          "retrievedAt": "2026-09-07T04:12:32.305Z",
+          "details": "Verified research overview source excerpt."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:12:32.305Z",
+      "nextAction": "Overview verified; no standalone publication list suitable for selected/recent work."
     },
     "vp-0107": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://sites.google.com/site/dinhliemnguyen/home",
         "https://sites.google.com/site/dinhliemnguyen/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0107-1",
+          "url": "https://sites.google.com/site/dinhliemnguyen/research",
+          "excerpt": "Research interests: applied inverse problems, inverse scattering, wave imaging, and scientific computing.",
+          "retrievedAt": "2026-09-07T04:12:32.305Z",
+          "details": "Verified research overview source excerpt."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:12:32.305Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0108": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://sse.tulane.edu/tai-huy-ha",
         "https://www.math.tulane.edu/~tai/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0108-1",
+          "url": "https://www.math.tulane.edu/~tai/",
+          "excerpt": "Research Interest Commutative Algebra Computational Algebra Combinatorics Algebraic Geometry Asymptotic behavior of algebraic invariant and properties. Regularity, asymptotic regularity of graded families of homogeneous ideals. Syzygies/free resolution, normality and Cohen-Macaulayness of embedded projective schemes. Ideal Containment Problem: symbolic and ordinary powers of ideals. Polynomial interpolations, Chudnovsky's and Demailly's Conjectures.",
+          "retrievedAt": "2026-09-07T04:12:32.305Z",
+          "details": "Verified research overview source excerpt."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:12:32.305Z",
+      "nextAction": "Overview verified; no standalone publication list suitable for selected/recent work."
     },
     "vp-0109": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.eng.ufl.edu/about/contact/college-directory/name/khiem-tran/",
         "https://faculty.eng.ufl.edu/khiem-tran/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0109-1",
+          "url": "https://faculty.eng.ufl.edu/khiem-tran/",
+          "excerpt": "His primary areas of research are geophysical and nondestructive testing, and foundation design and capacity assessment.",
+          "retrievedAt": "2026-09-07T04:12:32.305Z",
+          "details": "Verified research overview source excerpt."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:12:32.305Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0110": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://eng.ua.edu/eng-directory/dr-thang-n-dao/",
         "https://tndao.eng.ua.edu/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0110-1",
+          "url": "https://eng.ua.edu/eng-directory/dr-thang-n-dao/",
+          "excerpt": "Dr. Thang Dao’s research focuses on multi-hazard engineering, including wind and earthquake engineering for mitigation of damage to infrastructure systems. Specifically, he develops methodologies that enable the built environment to be more resilient and sustainable ranging from the single house to the regional scale.",
+          "retrievedAt": "2026-09-07T04:12:32.305Z",
+          "details": "Verified research overview source excerpt."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:12:32.305Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0111": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.menlo.edu/people/thai-nhan-ph-d/",
         "https://sites.google.com/view/thainhan"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0111-1",
+          "url": "https://sites.google.com/view/thainhan/research",
+          "excerpt": "My overall research goal is to develop novel, fast, and robust numerical methods to efficiently solve scientific problems... I have a wide range of research interests in Computational and Applied Mathematics including, but not limited to, Numerical Analysis, Numerical Linear Algebra, Scientific Computing, Biomath Modeling, and Math Education.",
+          "retrievedAt": "2026-09-07T04:12:32.305Z",
+          "details": "Verified research overview source excerpt."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:12:32.305Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0112": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.soka.edu/about/faculty-staff/phat-vu"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0112-1",
+          "url": "https://www.soka.edu/about/faculty-staff/phat-vu",
+          "excerpt": "Research Interests Metaphors, models and myths. Publications and Scholarly Works: Phonon Scattering and Internal Friction in Dielectric and Metallic Films at Low Temperatures (2001), Glasslike Lattice Vibrations in the Quasicrystal Al72.1Pd20.7Mn7.2 (2000), Low-Temperature Thermal Conductivity Measurement of Thin Films (1999)",
+          "retrievedAt": "2026-09-07T04:12:32.305Z",
+          "details": "Verified research overview source excerpt."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:12:32.305Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0113": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://ges.uccs.edu/directory/faculty/diep-dao"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0113-1",
+          "url": "https://ges.uccs.edu/directory/faculty/diep-dao",
+          "excerpt": "Areas of Interest Geographical Information Science (GIScience) Spatial Analysis and Modeling Spatial Big Data Analytics Urban Regional Analysis GIS for Smart Cities",
+          "retrievedAt": "2026-09-07T04:12:32.305Z",
+          "details": "Verified research overview source excerpt."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:12:32.305Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0114": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://earth.indiana.edu/directory/faculty/kieu-chanh.html",
         "https://ckieu.pages.iu.edu/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0114-1",
+          "url": "https://ckieu.pages.iu.edu/",
+          "excerpt": "At IU, I am doing research in atmospheric dynamics and cloud-resolving simulation of hurricanes, and teaching courses in atmospheric dynamics and modelling. FOUNDER AI-based real-time tropical cyclone intensity forecasting system: www.tcHunting.net",
+          "retrievedAt": "2026-09-07T04:12:32.305Z",
+          "details": "Verified research overview source excerpt."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:12:32.305Z",
+      "nextAction": "Overview verified; no standalone publication list suitable for selected/recent work."
     },
     "vp-0115": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://ise.rutgers.edu/hoang-pham"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0115-1",
+          "url": "https://ise.rutgers.edu/hoang-pham",
+          "excerpt": "Area Of Expertise Reliability engineering, software reliability, statistical inferences, and fault-tolerant computing. His research areas include reliability modeling and prediction, software reliability, and statistical inference.",
+          "retrievedAt": "2026-09-07T04:12:32.305Z",
+          "details": "Verified research overview source excerpt."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:12:32.305Z",
+      "nextAction": "Overview verified; no standalone publication list suitable for selected/recent work."
     },
     "vp-0116": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.niu.edu/cnguyen/index.shtml"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0116-1",
+          "url": "https://www.niu.edu/cnguyen/index.shtml",
+          "excerpt": "Professor Nguyen's expertise is in the area of large-scale optimization, supply chain, data analytics, transportation, simulation, and scheduling. She has developed many algorithms and models to solve real-world applications in supply chain consolidation of perishable products.",
+          "retrievedAt": "2026-09-07T04:12:32.305Z",
+          "details": "Verified research overview source excerpt."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:12:32.305Z",
+      "nextAction": "Overview verified; no standalone publication list suitable for selected/recent work."
     },
     "vp-0117": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://cee.illinois.edu/directory/profile/thn"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0117-1",
+          "url": "https://cee.illinois.edu/directory/profile/thn",
+          "excerpt": "Research Interests Pathogens and biofilms in drinking water distribution system Environmental surveillance of pathogens Water and Food Safety",
+          "retrievedAt": "2026-09-07T04:12:32.305Z",
+          "details": "Verified research overview source excerpt."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:12:32.305Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0118": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://mse.vt.edu/faculty-staff/Faculty/thangpham.html",
         "https://sites.google.com/view/nanoqm/home"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0118-1",
+          "url": "https://sites.google.com/view/nanoqm/research",
+          "excerpt": "Quantum materials discovery: we design semi-automated, vapor-phase methods to explore large-scale synthesis of nanostructured QMs, with a special focus on two- and one-dimensional van der Waals materials and their integration. Quantum material characterization: we develop data-driven scanning transmission electron microscopy (S/TEM) techniques combining in situ and analytical methods to investigate the electronic landscape of quantum order and disorder.",
+          "retrievedAt": "2026-09-07T04:12:32.305Z",
+          "details": "Verified research overview source excerpt."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:12:32.305Z",
+      "nextAction": "Overview verified; no standalone publication list suitable for selected/recent work."
     },
     "vp-0119": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://viterbi.usc.edu/directory/faculty/Nguyen/Quan",
         "https://sites.usc.edu/quann/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0119-1",
+          "url": "https://viterbi.usc.edu/directory/faculty/Nguyen/Quan",
+          "excerpt": "His research interests span different control and optimization approaches for highly dynamic robotics including nonlinear control, trajectory optimization, real-time optimization-based control, robust and adaptive control. Our research focuses on developing novel control algorithms for achieving extremely agile and robust locomotion on dynamic robotic systems. Our approach lies at the intersection of nonlinear control, trajectory optimization, and machine learning.",
+          "retrievedAt": "2026-09-07T04:12:32.305Z",
+          "details": "Verified research overview source excerpt."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:12:32.305Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0120": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.airmotionlab.com/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0120-1",
+          "url": "https://www.airmotionlab.com/",
+          "excerpt": "The AIR motion Lab, led by Prof. Hoang-Vu Phan at the University of Nevada, Reno aims to study and develop the next generation of drones capable of closely mimicking the locomotion of birds and insects, with improved energy efficiency, enhanced environmental adaptability, and robust navigation in cluttered and dynamic spaces.",
+          "retrievedAt": "2026-09-07T04:12:32.305Z",
+          "details": "Verified research overview source excerpt."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:12:32.305Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0121": {
       "overview": "pending",
