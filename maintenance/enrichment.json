@@ -2291,7 +2291,8 @@
         "vp-0579",
         "vp-0580"
       ],
-      "status": "pending"
+      "status": "complete",
+      "startedAt": "2026-09-07T05:12:20.492Z"
     },
     {
       "number": 30,
@@ -38351,204 +38352,1093 @@
       "nextAction": "Completed: overview and work verified."
     },
     "vp-0561": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://findanexpert.unimelb.edu.au/profile/875569-thuan-pham"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://findanexpert.unimelb.edu.au/profile/875569-thuan-pham: Client-rendered JS / empty static response"
+      ],
+      "updatedAt": "2026-09-07T05:13:28.341Z",
+      "nextAction": "Retry client-rendered profile URL (Find an Expert)."
     },
     "vp-0562": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://researchers.westernsydney.edu.au/en/persons/quang-vinh-nguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0562-1",
+          "url": "https://researchers.westernsydney.edu.au/en/persons/quang-vinh-nguyen",
+          "excerpt": "Quang Vinh Nguyen - Western Sydney University Skip to main navigation Skip to search Skip to main content Western Sydney University Home Research Profiles Login Link opens in a new tab Search content at Western Sydney University Home Profiles Research outputs Projects Datasets HDR theses Activities Press/Media Prizes Subjects Research units &copy; Nil View Scopus Profile Quang Vinh Nguyen Associate Professor in Visual Analysis , School of Computer, Data & Mathematical Sciences https://orcid.",
+          "retrievedAt": "2026-09-07T05:12:23.185Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0562-2",
+          "url": "https://researchers.westernsydney.edu.au/en/persons/quang-vinh-nguyen",
+          "excerpt": "edu au Accepting HDR Candidates Available HDR projects Research projects in the areas of Information Visualisation, visual analytics, immersive analytics, human-machine interaction, explainable artificial intelligence, health data analytics, machine learning.",
+          "retrievedAt": "2026-09-07T05:12:23.186Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0562-3",
+          "url": "https://researchers.westernsydney.edu.au/en/persons/quang-vinh-nguyen",
+          "excerpt": "ions from PlumX 1997 &hellip; 2026 Research activity per year Overview Fingerprint Network Research outputs (143) Projects (7) Datasets (1) Activities (2) Press/Media (3) Similar Profiles (1) Supervised HDR Completions (7) Personal profile Biography Dr Nguyen is the Associate Dean \u2013 Graduate Studies at the School of Computer, Data and Mathematical Sciences, and MARCS Institute for Brain, Behaviour and Development, Western Sydney University, and an Associate Professor in Visual Analytics whose theoretical research contributions and interests are in visual analytics and information visualisation.",
+          "retrievedAt": "2026-09-07T05:12:23.186Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0562-4",
+          "url": "https://researchers.westernsydney.edu.au/en/persons/quang-vinh-nguyen",
+          "excerpt": "His focus is to find effective visualisations to support the analysis of large and complex data sets, particularly genomics, omics and biomedical data as well as other applications.",
+          "retrievedAt": "2026-09-07T05:12:23.186Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0562-5",
+          "url": "https://researchers.westernsydney.edu.au/en/persons/quang-vinh-nguyen",
+          "excerpt": "His research expertise has been built up since his PhD study, his experiences at Western Sydney University (WSU) and University of Technology, Sydney (UTS), as well as visiting positions at various institutions and organizations, including J.",
+          "retrievedAt": "2026-09-07T05:12:23.186Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0562-6",
+          "url": "https://researchers.westernsydney.edu.au/en/persons/quang-vinh-nguyen",
+          "excerpt": "Craig Venter Institute, University of Texas at Dallas, USA, Parkland Centre for Clinical Innovation at Parkland Hospital, Dallas, Texas, USA and Tianjin University, China.",
+          "retrievedAt": "2026-09-07T05:12:23.186Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0562-7",
+          "url": "https://researchers.westernsydney.edu.au/en/persons/quang-vinh-nguyen",
+          "excerpt": "He has successfully supervised and co-supervised to completion over 10 research students, published over 120 refereed publications and received over 1.",
+          "retrievedAt": "2026-09-07T05:12:23.186Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0562-8",
+          "url": "https://researchers.westernsydney.edu.au/en/persons/quang-vinh-nguyen",
+          "excerpt": "Related links Google Scholar Qualifications Bachelor of Computer Science and Technology Doctor of Philosophy, University of Technology Sydney Master of Science in Computing, University of Technology Sydney Research keywords Information Visualisation Visual Analytics Immersive Analytics Visual Analytics for Health Data Human Machine Interaction Virtual Reality human-centre computing Expertise related to UN Sustainable Development Goals In 2015, UN member states agreed to 17 global Sustainable Development Goals (SDGs) to end poverty, protect the planet and ensure prosperity for all.",
+          "retrievedAt": "2026-09-07T05:12:23.186Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:13:28.341Z",
+      "nextAction": "Completed: overview verified, no suitable evidence for work section."
     },
     "vp-0563": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.dongnguyen.nl"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0563-1",
+          "url": "https://www.dongnguyen.nl",
+          "excerpt": "I received a master's degree from the Language Technologies Institute at Carnegie Mellon University and a bachelor's degree in Computer Science from the University of Twente.",
+          "retrievedAt": "2026-09-07T05:12:23.709Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0563-2",
+          "url": "https://www.dongnguyen.nl",
+          "excerpt": "I have interned at Facebook (fall 2011), Microsoft Research (fall 2013), and Google (summer 2014).",
+          "retrievedAt": "2026-09-07T05:12:23.709Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0563-3",
+          "url": "https://www.dongnguyen.nl",
+          "excerpt": "I'm especially interested in computational text analysis for research questions from the social sciences.",
+          "retrievedAt": "2026-09-07T05:12:23.709Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0563-4",
+          "url": "https://www.dongnguyen.nl",
+          "excerpt": "Computational sociolinguistics : The emerging research area of computational sociolinguistics ( Nguyen et al.",
+          "retrievedAt": "2026-09-07T05:12:23.709Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0563-5",
+          "url": "https://www.dongnguyen.nl",
+          "excerpt": "Computational Linguistics 2016 ) aims to model and analyze language variation and change using computational approaches.",
+          "retrievedAt": "2026-09-07T05:12:23.709Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0563-6",
+          "url": "https://www.dongnguyen.nl",
+          "excerpt": "Recent (selected) articles: automatic detection of semantic change ( Shoemark and Liza et al.",
+          "retrievedAt": "2026-09-07T05:12:23.709Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0563-7",
+          "url": "https://www.dongnguyen.nl",
+          "excerpt": ", EMNLP 2019 ) and analysis of dialect variation in social media ( Nguyen, book chapter to appear 2020 ).",
+          "retrievedAt": "2026-09-07T05:12:23.709Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0563-8",
+          "url": "https://www.dongnguyen.nl",
+          "excerpt": "NLP for computational social science : The development of NLP tools to study social phenomena, often in close collaboration with researchers from the social sciences.",
+          "retrievedAt": "2026-09-07T05:12:23.709Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:13:28.341Z",
+      "nextAction": "Completed: overview verified, no suitable evidence for work section."
     },
     "vp-0564": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://people.utwente.nl/v.d.le"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0564-1",
+          "url": "https://people.utwente.nl/v.d.le",
+          "excerpt": "Le Viet Duc | People Pages: Find employees &#38; contact details | University of Twente Skip to content People Pages EN Nederlands English Zilverling dr.",
+          "retrievedAt": "2026-09-07T05:12:24.990Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0564-2",
+          "url": "https://people.utwente.nl/v.d.le",
+          "excerpt": "Le Viet Duc is Assistant Professor at the Department of Computer Science at the University of Twente.",
+          "retrievedAt": "2026-09-07T05:12:24.990Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0564-3",
+          "url": "https://people.utwente.nl/v.d.le",
+          "excerpt": "He is broadly interested in bringing Machine Learning and Deep Learning into real-world behavior analytics.",
+          "retrievedAt": "2026-09-07T05:12:24.990Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0564-4",
+          "url": "https://people.utwente.nl/v.d.le",
+          "excerpt": "In addition to his academia research experience, he also has 10-years R&D experience on smart devices in industry.",
+          "retrievedAt": "2026-09-07T05:12:24.990Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0564-5",
+          "url": "https://people.utwente.nl/v.d.le",
+          "excerpt": "Inspired by the way human brain learns the world, he is eager to develop a cognitive sensing system that can minimize obtrusiveness and adapt itself to individuals and environments with limited prior knowledge.",
+          "retrievedAt": "2026-09-07T05:12:24.990Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0564-6",
+          "url": "https://people.utwente.nl/v.d.le",
+          "excerpt": "His focus is on employing recent advances in transfer learning and deep reinforcement learning to find hidden representations from long-term unlabeled data collected in unstructured environments.",
+          "retrievedAt": "2026-09-07T05:12:24.990Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0564-7",
+          "url": "https://people.utwente.nl/v.d.le",
+          "excerpt": "Over the years, he has built up his experience in embedded systems, mobile sensing, localization, and deep learning.",
+          "retrievedAt": "2026-09-07T05:12:24.990Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0564-8",
+          "url": "https://people.utwente.nl/v.d.le",
+          "excerpt": "Examples include an infrastructure-independent framework for robust and reliable sensing in smart cities (best paper award 2012), a novel algorithm for context detection (best paper award 2014) to detect the transition of human activities, and an innovative localization algorithm (patented in 2017) for human and device tracking in unstructured environments.",
+          "retrievedAt": "2026-09-07T05:12:24.990Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:13:28.341Z",
+      "nextAction": "Completed: overview verified, no suitable evidence for work section."
     },
     "vp-0565": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://dnductien.github.io"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0565-1",
+          "url": "https://dnductien.github.io",
+          "excerpt": "Duc-Tien Dang-Nguyen Projects Publications Teaching Talks Blog Duc Tien Computer Scientist, Puzzler, and Video Gamer.",
+          "retrievedAt": "2026-09-07T05:12:25.265Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0565-2",
+          "url": "https://dnductien.github.io",
+          "excerpt": "Passionate about technology, recreational mathematics, photography, video games, and hiking.",
+          "retrievedAt": "2026-09-07T05:12:25.265Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0565-3",
+          "url": "https://dnductien.github.io",
+          "excerpt": "Follow Twitter LinkedIn Github Google Scholar ORCID I am a Professor at the University of Bergen (UiB), Department of Information Science and Media Studies.",
+          "retrievedAt": "2026-09-07T05:12:25.265Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0565-4",
+          "url": "https://dnductien.github.io",
+          "excerpt": "I do research in multimedia verification, multimedia forensics, multimedia retrieval and personal data analytics.",
+          "retrievedAt": "2026-09-07T05:12:25.265Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0565-5",
+          "url": "https://dnductien.github.io",
+          "excerpt": "On this page you can find my curriculum vitae , my projects , modules , and a list of my publications \u2013 which may all be more or less up-to-date.",
+          "retrievedAt": "2026-09-07T05:12:25.265Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0565-6",
+          "url": "https://dnductien.github.io",
+          "excerpt": "121 Infomedia, Media City Bergen (MCB), Lars Hilles gate 30, 5008 Bergen Postal address: Postboks 7802, 5020 Bergen Office hours: upon e-mail request Phone: (47) 55 58 91 73 Email: ductien [dot] dangnguyen [at] uib [dot] no Sitemap Follow: GitHub Feed &copy; 2025 Duc Tien.",
+          "retrievedAt": "2026-09-07T05:12:25.265Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:13:28.341Z",
+      "nextAction": "Completed: overview verified, no suitable evidence for work section."
     },
     "vp-0566": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://uit.no/ansatte/phuong.hoai.ha"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0566-1",
+          "url": "https://uit.no/ansatte/phuong.hoai.ha",
+          "excerpt": "ha \u2013 Institutt for informatikk | UiT G\u00e5 til hovedinnhold UiT Norges arktiske universitet S\u00f8k Meny Studier Forskning Universitetsbiblioteket Universitetsmuseet Arrangementer (Tavla) Om UiT Kontakt oss Si ifra!",
+          "retrievedAt": "2026-09-07T05:12:27.779Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0566-2",
+          "url": "https://uit.no/ansatte/phuong.hoai.ha",
+          "excerpt": "erviceportal IT-brukerst\u00f8tte / Orakelet Studentparlamentet Individuell tilrettelegging HMS / HR-portalen Arrangementer (Tavla) Beredskap og sikkerhet For ansatte Intranett TOPdesk serviceportal Velkommen som ansatt Velkommen som leder Personalh\u00e5ndbok ARBEIDSST\u00d8TTE: \u00d8konomi og innkj\u00f8p Utdanning Personalomr\u00e5det Kommunikasjon, grafisk og studentrekruttering Rekruttering av ansatte Bygg, eiendom og rom HMS-h\u00e5ndbok Canvas Kvalitetssystem for utdanning Parkering M\u00f8ter og referater IT brukerst\u00f8tte / Orakelet Interne kurs E-post Enheten Ansatte Hoai Phuong Ha Professor Institutt for informatikk phuong.",
+          "retrievedAt": "2026-09-07T05:12:27.779Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0566-3",
+          "url": "https://uit.no/ansatte/phuong.hoai.ha",
+          "excerpt": "no +4777644032 Troms&oslash; Her finner du meg Legg visittkort i kontaktlisten din (vcard) --> Hoai Phuong Ha Om Forskning og undervisning Her finner du meg Stillingsbeskrivelse Phuong H.",
+          "retrievedAt": "2026-09-07T05:12:27.779Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0566-4",
+          "url": "https://uit.no/ansatte/phuong.hoai.ha",
+          "excerpt": "degree in Computer Science from Chalmers University of Technology, Sweden in 2006.",
+          "retrievedAt": "2026-09-07T05:12:27.779Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0566-5",
+          "url": "https://uit.no/ansatte/phuong.hoai.ha",
+          "excerpt": "He has been a full professor at the Department of Computer Science, UiT The Arctic University of Norway since 2019, and the leader of the Arctic Green Computing (AGC) research group since 2014.",
+          "retrievedAt": "2026-09-07T05:12:27.779Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0566-6",
+          "url": "https://uit.no/ansatte/phuong.hoai.ha",
+          "excerpt": "His current research interests are sustainability in ICT and by ICT, including Green AI, efficient cloud-edge-IoT computing, and sustainable environmental observation systems.",
+          "retrievedAt": "2026-09-07T05:12:27.779Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0566-7",
+          "url": "https://uit.no/ansatte/phuong.hoai.ha",
+          "excerpt": "Research projects : International EXCESS: Execution Models for Energy-Efficient Computing Systems, EU FP7 ICT, 2013 - 2016 (WP-leader, PI from Norway).",
+          "retrievedAt": "2026-09-07T05:12:27.779Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0566-8",
+          "url": "https://uit.no/ansatte/phuong.hoai.ha",
+          "excerpt": "arallel Programming, RCN FRIPRO Young Research Talents, 2014 - 2019 (Project leader, PI) eX3 - Experimental Infrastructure for Exploration of Exascale Computing, RCN Research Infrastructure, 2017 - 2022 (WP-leader, PI from UiT) Distributed Arctic Observatory (DAO): A Cyber-Physical System for Ubiquitous Data and Services Covering the Arctic Tundra, RCN IKTPLUSS initiative, 2017 - 2022 (WP-leader, Co-PI) CEHOW - Controlling Energy Harvesting Operation in Wireless Devices, RCN Commercialization, 2025 (Co-PI) UiT ARC - Arctic Center for Sustainable Energy, UiT, 2017 - 2025 (Founder member, Co-PI).",
+          "retrievedAt": "2026-09-07T05:12:27.779Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:13:28.341Z",
+      "nextAction": "Completed: overview verified, no suitable evidence for work section."
     },
     "vp-0567": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://pure.qub.ac.uk/en/persons/hien-quoc-ngo"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0567-1",
+          "url": "https://pure.qub.ac.uk/en/persons/hien-quoc-ngo",
+          "excerpt": "Hien-Quoc Ngo - Queen&#39;s University Belfast Skip to main navigation Skip to search Skip to main content Queen's University Belfast Home Help & FAQ Link opens in a new tab Search content at Queen&#39;s University Belfast Home Profiles Research units Research output Projects Impacts Datasets Activities Prizes Press/Media Student theses Equipment View Scopus Profile Hien-Quoc Ngo Professor Professor , School of Electronics, Electrical Engineering and Computer Science https://orcid.",
+          "retrievedAt": "2026-09-07T05:12:29.632Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0567-2",
+          "url": "https://pure.qub.ac.uk/en/persons/hien-quoc-ngo",
+          "excerpt": "arch output (284) Prizes (31) Activities (113) Press/Media (5) Similar Profiles (12) Supervised Work (10) Personal profile Research Interests Cell-Free Massive MIMO: fundamental limits, power control, pilot assignment, and channel estimation schemes Massive (large-scale) MIMO systems: pilot contamination, power efficiency, capacity bounds, channel estimation, and resource allocation Physical layer security for Massive MIMO Cooperative communications: two-way relay and full-duplex relaying channels Millimeter wave technologies in multi-antenna cellular systems Other Hien Quoc Ngo received the B.",
+          "retrievedAt": "2026-09-07T05:12:29.632Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0567-3",
+          "url": "https://pure.qub.ac.uk/en/persons/hien-quoc-ngo",
+          "excerpt": "degree in electrical engineering from the Ho Chi Minh City University of Technology, Vietnam, in 2007, the M.",
+          "retrievedAt": "2026-09-07T05:12:29.632Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0567-4",
+          "url": "https://pure.qub.ac.uk/en/persons/hien-quoc-ngo",
+          "excerpt": "degree in electronics and radio engineering from Kyung Hee University, South Korea, in 2010, and the Ph .",
+          "retrievedAt": "2026-09-07T05:12:29.632Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0567-5",
+          "url": "https://pure.qub.ac.uk/en/persons/hien-quoc-ngo",
+          "excerpt": "degree in communication systems from Link oping University ( LiU ), Sweden, in 2015.",
+          "retrievedAt": "2026-09-07T05:12:29.632Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0567-6",
+          "url": "https://pure.qub.ac.uk/en/persons/hien-quoc-ngo",
+          "excerpt": "From January 2016 to April 2017, Hien Quoc Ngo was a VR researcher at the Department of Electrical Engineering ( ISY ), LiU .",
+          "retrievedAt": "2026-09-07T05:12:29.632Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0567-7",
+          "url": "https://pure.qub.ac.uk/en/persons/hien-quoc-ngo",
+          "excerpt": "He was also a Visiting Research Fellow at the School of Electronics, Electrical Engineering and Computer Science, Queen's University Belfast, UK, funded by the Swedish Research Council.",
+          "retrievedAt": "2026-09-07T05:12:29.632Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0567-8",
+          "url": "https://pure.qub.ac.uk/en/persons/hien-quoc-ngo",
+          "excerpt": "Hien Quoc Ngo is currently a Reader at Queen's University Belfast, UK, and a UKRI Future Leaders Fellow.",
+          "retrievedAt": "2026-09-07T05:12:29.632Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:13:28.341Z",
+      "nextAction": "Completed: overview verified, no suitable evidence for work section."
     },
     "vp-0568": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.kcl.ac.uk/people/ngoc-khanh-nguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0568-1",
+          "url": "https://www.kcl.ac.uk/people/ngoc-khanh-nguyen",
+          "excerpt": "Ngoc Khanh Nguyen | King&#x27;s College London Skip to main content Opens navigation menu Study Navigation category.",
+          "retrievedAt": "2026-09-07T05:12:32.057Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0568-2",
+          "url": "https://www.kcl.ac.uk/people/ngoc-khanh-nguyen",
+          "excerpt": "Press escape key to return to main menu Undergraduate Navigation link in category Study.",
+          "retrievedAt": "2026-09-07T05:12:32.057Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0568-3",
+          "url": "https://www.kcl.ac.uk/people/ngoc-khanh-nguyen",
+          "excerpt": "Press escape key to return to main menu Postgraduate taught Navigation link in category Study.",
+          "retrievedAt": "2026-09-07T05:12:32.057Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0568-4",
+          "url": "https://www.kcl.ac.uk/people/ngoc-khanh-nguyen",
+          "excerpt": "Press escape key to return to main menu Postgraduate Research Navigation link in category Study.",
+          "retrievedAt": "2026-09-07T05:12:32.057Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0568-5",
+          "url": "https://www.kcl.ac.uk/people/ngoc-khanh-nguyen",
+          "excerpt": "Press escape key to return to main menu Professional Education Navigation link in category Study.",
+          "retrievedAt": "2026-09-07T05:12:32.057Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0568-6",
+          "url": "https://www.kcl.ac.uk/people/ngoc-khanh-nguyen",
+          "excerpt": "Press escape key to return to main menu International Education & Languages Navigation link in category Study.",
+          "retrievedAt": "2026-09-07T05:12:32.057Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0568-7",
+          "url": "https://www.kcl.ac.uk/people/ngoc-khanh-nguyen",
+          "excerpt": "Press escape key to return to main menu International Navigation link in category Study.",
+          "retrievedAt": "2026-09-07T05:12:32.057Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0568-8",
+          "url": "https://www.kcl.ac.uk/people/ngoc-khanh-nguyen",
+          "excerpt": "Press escape key to return to main menu Study Abroad Navigation link in category Study.",
+          "retrievedAt": "2026-09-07T05:12:32.057Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:13:28.341Z",
+      "nextAction": "Completed: no suitable evidence found on official profile."
     },
     "vp-0569": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.southampton.ac.uk/people/5xfl2w"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0569-1",
+          "url": "https://www.southampton.ac.uk/people/5xfl2w",
+          "excerpt": "t up a staff secondment Host a placement student Collaborate on a short term student project Advertise graduate jobs and internships Become a supplier - - Find people and expertise Global International students Visiting delegations University of Southampton Delhi Career Advantage International Office Visiting fellowships University of Southampton Malaysia Partnerships and initiatives Online master&#039;s degrees View all staff Dr Son Hoang Associate Professor Research interests Formal System Development Program Semantics Autonomous Systems More research Accepting applications from PhD students.",
+          "retrievedAt": "2026-09-07T05:12:33.296Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0569-2",
+          "url": "https://www.southampton.ac.uk/people/5xfl2w",
+          "excerpt": "uk Tel: +44 23 8059 7084 Google Scholar ORCID LinkedIn On this page About Research Publications Teaching Biography About Research Publications Teaching Biography About Dr Son Hoang is a Lecturer in the Cyber-Physical Systems Group (a part of School of Electronics and Computer Science ).",
+          "retrievedAt": "2026-09-07T05:12:33.296Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0569-3",
+          "url": "https://www.southampton.ac.uk/people/5xfl2w",
+          "excerpt": "He was awarded a first class honours degree in Computer Engineering from the University of New South Wales (UNSW), Sydney, Australia in 2001.",
+          "retrievedAt": "2026-09-07T05:12:33.296Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0569-4",
+          "url": "https://www.southampton.ac.uk/people/5xfl2w",
+          "excerpt": "Subsequently, he studied for a PhD (also at UNSW) and was awarded his PhD in 2006 for his thesis on \" The Development of a Probabilistic B-Method and a Supporting Toolkit \".",
+          "retrievedAt": "2026-09-07T05:12:33.296Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0569-5",
+          "url": "https://www.southampton.ac.uk/people/5xfl2w",
+          "excerpt": "Event-B Son Hoang, Morgan Carroll & Annabelle McIver, 2026 Type: bookChapter Student allocation - a case study with UML-B and ProB Thai Son Hoang , Abdolbaghi Rezazadeh, Asieh Salehi Fathabadi , Colin Snook & Michael Butler , 2026 Type: bookChapter Proceedings of the 13th 13th Rodin User and Developer Workshop Asieh Salehi Fathabadi , Son Hoang, Neeraj Kumar Singh , Laurent Voisin & Michael Leuschel, 2026 Type: book Refinement-centric hazard analysis with SHARCS: A case study bridging requirements and formal model Asieh Salehi Fathabadi , Colin Snook, Son Hoang & Michael Butler , 2026 DOI: 10.",
+          "retrievedAt": "2026-09-07T05:12:33.296Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0569-6",
+          "url": "https://www.southampton.ac.uk/people/5xfl2w",
+          "excerpt": "der Al-Shareefy, Michael Butler & Thai Son Hoang, 2025 Type: conference Comprehensive multi-environment operational design domain (ODD) taxonomy for intelligent systems safety design Haider Al-Shareefy, Michael Butler & Thai Son Hoang, 2025 Type: conference Proceedings of the 12th Rodin user and developer workshop Asieh Salehi Fathabadi , Laurent Vision, Neeraj Kumar Singh, Michael Lauschel & Son Hoang, 2025 Type: book Analysing the safety implications of security risks in cyber-physical systems Colin Snook, Thai Son Hoang, Asieh Salehi Fathabadi , Michael Butler & Martin Kubisch, 2024 DOI: 10.",
+          "retrievedAt": "2026-09-07T05:12:33.296Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0569-7",
+          "url": "https://www.southampton.ac.uk/people/5xfl2w",
+          "excerpt": "1007/978-3-031-66673-5_6 Type: bookChapter Pagination Page 1 Page 2 Page 3 Page 4 &hellip; Next page Next -&gt; Research Teaching Teaching Dr Son Hoang lectures on programming, software engineering and system development.",
+          "retrievedAt": "2026-09-07T05:12:33.296Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0569-8",
+          "url": "https://www.southampton.ac.uk/people/5xfl2w",
+          "excerpt": "He supervises a number of Undergraduate and MSc projects, and is an Admissions Tutor for the undergraduate Aerospace Electronic Engineering (AEE) degree programme.",
+          "retrievedAt": "2026-09-07T05:12:33.296Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:13:28.341Z",
+      "nextAction": "Completed: overview and work verified."
     },
     "vp-0570": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.ims.uni-stuttgart.de/en/institute/team/Vu-00002/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0570-1",
+          "url": "https://www.ims.uni-stuttgart.de/en/institute/team/Vu-00002/",
+          "excerpt": "Thang Vu | Institute for Natural Language Processing | University of Stuttgart jump to content jump to footer Institute for Natural Language Processing Uni versity of Stuttgart F aculty 05 Language of this page de en Search Main navigation Search Suche back Institute Research Teaching Institute Research Groups Team Contact News History and Commemoration Information for Institute Members History and Commemoration 1986.",
+          "retrievedAt": "2026-09-07T05:12:34.565Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0570-2",
+          "url": "https://www.ims.uni-stuttgart.de/en/institute/team/Vu-00002/",
+          "excerpt": "irs and Research Groups Former Departments, Chairs and Research Groups CL Rohrer FL Kamp EP Dogil TCL Rooth TCL Sch\u00fctze JP CL Van der Plas JP CL Vu Research Group IEI Heisenberg SemRel Research Group Maletti Theoretical Computational Linguistics Thesis Theoretical Computational Linguistics Team Team Research Groups Team Research Groups Team Digital Phonetics Team Foundations of Computational Linguistics Team Theoretical Computational Linguistics Team E-DELIB Team MisT Research Projects Colloquium Publications Events IMS Blog Demos Events Festive Colloquium Hans Kamp Projects CEAT Change is Key!",
+          "retrievedAt": "2026-09-07T05:12:34.565Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0570-3",
+          "url": "https://www.ims.uni-stuttgart.de/en/institute/team/Vu-00002/",
+          "excerpt": "ng QuaDramA QUOTE Relator RePlay-DH SAGT SEAT SemChangeMWE SemVarMWE SFB 340 CRC 732 Research Group Textcorpora and Lexicon Textual corpora and tools for their exploration TextKlang TIGER TT in MT Verbmobil WordGraph Language-Knowledge Interaction Publications IMS Bibliography AIMS Verbmobil-Reports Student theses Teaching Courses Theses Examination Committee Exchange Programs Interships Doctoral Degree Studies Habilitation close navigation Position within the page tree Move path to the left Move path to the right Institute for Natural Language Processing Institute Team Vu, Thang Thang Vu Prof.",
+          "retrievedAt": "2026-09-07T05:12:34.565Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0570-4",
+          "url": "https://www.ims.uni-stuttgart.de/en/institute/team/Vu-00002/",
+          "excerpt": "Chair of Digital Phonetics Institute for Natural Language Processing (IMS) Digital Phonetics Contact +49 711 685 81372 +49 711 685 81366 Email Pfaffenwaldring 5 b 70569 Stuttgart Deutschland Room: 02.",
+          "retrievedAt": "2026-09-07T05:12:34.565Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0570-5",
+          "url": "https://www.ims.uni-stuttgart.de/en/institute/team/Vu-00002/",
+          "excerpt": "010 Office Hours Please write me an email if you would like to have a meeting with me.",
+          "retrievedAt": "2026-09-07T05:12:34.565Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0570-6",
+          "url": "https://www.ims.uni-stuttgart.de/en/institute/team/Vu-00002/",
+          "excerpt": "Publications See Google Scholar and Github Teaching More details in C@MPUS Vita 06/2018 - now Full Professor at IMS, University of Stuttgart 10/2015 - 05/2018 Assistant Professor at IMS, University of Stuttgart 10-2014 - 09/2015 Acting Professor at CIS, LMU University of Munich 04/2014 - 09/2015 Senior Research Scientist, Nuance 09/2009 - 03/2014 Research Assistant at CSL, Karlsruhe Insitute of Technology PhD student in Computer Science Supervision I offer several BSc and MSc thesis topics related to language technology and machine learning.",
+          "retrievedAt": "2026-09-07T05:12:34.565Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:13:28.341Z",
+      "nextAction": "Completed: overview verified, no suitable evidence for work section."
     },
     "vp-0571": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://users.informatik.uni-rostock.de/~le/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0571-1",
+          "url": "https://users.informatik.uni-rostock.de/~le/",
+          "excerpt": "Van Bang Le Diplom (Math), Promotion (Math) TU Berlin, Habilitation (CS) Uni Rostock Anschrift: --> Universit&auml;t Rostock, Institut f&uuml;r Informatik Email: van-bang.",
+          "retrievedAt": "2026-09-07T05:12:35.978Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0571-2",
+          "url": "https://users.informatik.uni-rostock.de/~le/",
+          "excerpt": "de Here is a full list of my publications with some papers available on-line and links to my co-authors.",
+          "retrievedAt": "2026-09-07T05:12:35.978Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:13:28.341Z",
+      "nextAction": "Completed: no suitable evidence found on official profile."
     },
     "vp-0572": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.mimuw.edu.pl/~son/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0572-1",
+          "url": "https://www.mimuw.edu.pl/~son/",
+          "excerpt": "Hung Son Nguyen Group of Logics , Institute of Mathematics , Faculty of Mathematics, Informatics and Mechanics , Warsaw University .",
+          "retrievedAt": "2026-09-07T05:12:36.619Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:13:28.341Z",
+      "nextAction": "Completed: no suitable evidence found on official profile."
     },
     "vp-0573": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.mimuw.edu.pl/~nguyen/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0573-1",
+          "url": "https://www.mimuw.edu.pl/~nguyen/",
+          "excerpt": "Linh Anh Nguyen's Homepage Linh Anh Nguyen Institute of Informatics University of Warsaw nguyen@mimuw.",
+          "retrievedAt": "2026-09-07T05:12:36.788Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0573-2",
+          "url": "https://www.mimuw.edu.pl/~nguyen/",
+          "excerpt": "pl (+48) 22 55-44-440 About Me Associate Professor, Institute of Informatics, University of Warsaw.",
+          "retrievedAt": "2026-09-07T05:12:36.788Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:13:28.341Z",
+      "nextAction": "Completed: no suitable evidence found on official profile."
     },
     "vp-0574": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://hvpham.github.io"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0574-1",
+          "url": "https://hvpham.github.io",
+          "excerpt": "Hung Viet Pham Publications Talks CV Hung Viet Pham Assistant Professor at York University, interested in Software Engineering and Machine Learning Follow Toronto, Canada Email Bitbucket Github Google Scholar Hung Viet Pham I am an Assistant Professor at the Department of Electrical Engineering and Computer Science at York University.",
+          "retrievedAt": "2026-09-07T05:12:36.984Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0574-2",
+          "url": "https://hvpham.github.io",
+          "excerpt": "My work applies software engineering testing techniques to ensure the reliability of machine learning and deep learning systems.",
+          "retrievedAt": "2026-09-07T05:12:36.984Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0574-3",
+          "url": "https://hvpham.github.io",
+          "excerpt": "My research interests include software testing, program repair, software engineering, and machine learning.",
+          "retrievedAt": "2026-09-07T05:12:36.984Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0574-4",
+          "url": "https://hvpham.github.io",
+          "excerpt": "Publications TOSEM-24 - Journal History-Driven Fuzzing For Deep Learning Libraries Nima Shiri Harzevili, Mohammad Mahdi Mohajer, Moshi Wei, Hung Viet Pham , and Song Wang AIware-24 Effectiveness of ChatGPT for Static Analysis: How Far Are We?",
+          "retrievedAt": "2026-09-07T05:12:36.984Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0574-5",
+          "url": "https://hvpham.github.io",
+          "excerpt": "Mohammad Mahdi Mohajer, Reem Aleithan, Nima Shiri harzevili, Moshi Wei, Alvine Boaye Belle, Hung Viet Pham , and Song Wang MSR-24 - Mining Challenge Can ChatGPT Support Developers?",
+          "retrievedAt": "2026-09-07T05:12:36.984Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0574-6",
+          "url": "https://hvpham.github.io",
+          "excerpt": "An Empirical Evaluation of Large Language Models for Code Generation Kailun Jin, Chung-Yu Wang, Hung Viet Pham , Hadi Hemmati ISSTA-23 How Effective are Neural Networks for Fixing Security Vulnerabilities?",
+          "retrievedAt": "2026-09-07T05:12:36.984Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0574-7",
+          "url": "https://hvpham.github.io",
+          "excerpt": "Nan Jiang, Hung Viet Pham , Thibaud Lutellier, Jordan Davis, Lin Tan, Petr Babkin, and Sameena Shah AAAI-23 DisGUIDE: Disagreement-Guided Data-Free Model Extraction_ Jonathan Rosenthal, Eric Enouen, Hung Viet Pham , and Lin Tan ISSTA-22 DocTer: Documentation-Guided Fuzzing for Testing Deep Learning API Functions Danning Xie, Yitong Li, Mijung Kim, Hung Viet Pham , Lin Tan, Xiangyu Zhang, Mike Godfrey ICSE-22 EAGLE: Creating Equivalent Graphs to Test Deep Learning Libraries Jiannan Wang, Thibaud Lutellier, Shangshu Qian, Hung Viet Pham , and Lin Tan NeurIPS-21 Are My Deep Learning Systems Fair?",
+          "retrievedAt": "2026-09-07T05:12:36.984Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0574-8",
+          "url": "https://hvpham.github.io",
+          "excerpt": "An Empirical Study of Fixed-Seed Training Shangshu Qian, Hung Viet Pham , Thibaud Lutellier, Zeou Hu, Jungwon Kim, Lin Tan, Yaoliang Yu, Jiahao Chen, and Sameena Shah ETR&D-21(Jornal) Designing for robot-mediated interaction among culturally and linguistically diverse children Yanghee Kim, Sherry Marx, Hung Viet Pham , Tung T.",
+          "retrievedAt": "2026-09-07T05:12:36.984Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:13:28.341Z",
+      "nextAction": "Completed: overview and work verified."
     },
     "vp-0575": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.concordia.ca/faculty/tien-bui.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0575-1",
+          "url": "https://www.concordia.ca/faculty/tien-bui.html",
+          "excerpt": "lty of Fine Arts Gina Cody School of Engineering and Computer Science John Molson School of Business School of Graduate Studies School of Health News & events Latest news Event calendar Media Relations About Concordia chevron_forward IT services Library A-Z index Contact us Admissions Admissions overview chevron_forward Undergraduate Admissions Programs Tuition & fees Scholarships & funding Financial aid Graduate Admissions Programs Tuition & fees Awards & funding Financial aid Tours & events Events & information sessions Virtual & guided tours Open House Speak with a recruiter International U.",
+          "retrievedAt": "2026-09-07T05:12:37.551Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0575-2",
+          "url": "https://www.concordia.ca/faculty/tien-bui.html",
+          "excerpt": "IT services Library A-Z index Contact us Academics Academics overview chevron_forward Programs Undergraduate programs Graduate programs Professional & executive education Courses & workshops Programs Continuing Education John Molson Executive Centre Corporate training Co-op & careers Co-operative education Experiential learning Study abroad Co-op & careers overview Courses Course search Online courses (eConcordia) Undergraduate Calendar Graduate Calendar Academic advising Undergraduate advising Graduate advising Birks Student Service Centre French at Concordia Succeeding in French OUI can help!",
+          "retrievedAt": "2026-09-07T05:12:37.551Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0575-3",
+          "url": "https://www.concordia.ca/faculty/tien-bui.html",
+          "excerpt": "viewers Resources for researchers International Research abroad Visiting researchers Research at Concordia chevron_forward IT services Library A-Z index Contact us Apply Visit Give Useful links Maps Safety & prevention Wi-Fi access Printing IT support Library Contact us Concordia app Info for Future students Current students Alumni & friends Faculty & staff Employers Parents Media Quick links Undergraduate Welcome Guide Graduate Welcome Guide Academic dates Student Service Centre (Birks) International Students Office (ISO) Exchanges & partnerships All academic resources Open search form Tien D.",
+          "retrievedAt": "2026-09-07T05:12:37.551Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0575-4",
+          "url": "https://www.concordia.ca/faculty/tien-bui.html",
+          "excerpt": "Bui, PhD Professor, Computer Science and Software Engineering On this page Contact information Biography Are you the profile owner?",
+          "retrievedAt": "2026-09-07T05:12:37.551Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0575-5",
+          "url": "https://www.concordia.ca/faculty/tien-bui.html",
+          "excerpt": "Biography Areas of expertise Digital image processing and analysis Hand-written and historical documents processing Energy models and wavelets in multi-dimensional signal processing Are you the profile owner?",
+          "retrievedAt": "2026-09-07T05:12:37.551Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0575-6",
+          "url": "https://www.concordia.ca/faculty/tien-bui.html",
+          "excerpt": "Sign in to edit Took 43 milliseconds Back to top &copy; Concordia University About Academics Admissions Campus life Research Careers Future students Current students Alumni & friends Faculty & staff Employers Parents Media Sir George Williams Campus 1455 De Maisonneuve Blvd.",
+          "retrievedAt": "2026-09-07T05:12:37.551Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0575-7",
+          "url": "https://www.concordia.ca/faculty/tien-bui.html",
+          "excerpt": "Montreal , Quebec , Canada H3G 1M8 SGW Campus map Loyola Campus 7141 Sherbrooke Street W.",
+          "retrievedAt": "2026-09-07T05:12:37.551Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0575-8",
+          "url": "https://www.concordia.ca/faculty/tien-bui.html",
+          "excerpt": "Montreal , Quebec , Canada H4B 1R6 Loyola Campus map Central 514-848-2424 | Emergency 514-848-3717 Safety & prevention | Accessibility | Privacy | Terms | Cookie settings | Contact us | Site feedback &copy; Concordia University.",
+          "retrievedAt": "2026-09-07T05:12:37.551Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:13:28.341Z",
+      "nextAction": "Completed: overview verified, no suitable evidence for work section."
     },
     "vp-0576": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://dinhtta.github.io/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0576-1",
+          "url": "https://dinhtta.github.io/",
+          "excerpt": "Anh Dinh \u2013 Senior Lecturer Anh Dinh Senior Lecturer Deakin University Deakin University, Burwood 3125 anh.",
+          "retrievedAt": "2026-09-07T05:12:37.795Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0576-2",
+          "url": "https://dinhtta.github.io/",
+          "excerpt": "au Home Research Teaching Jobs ---> Blog ---> I am a senior lecturer (cyber security) at Deakin University.",
+          "retrievedAt": "2026-09-07T05:12:37.795Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0576-3",
+          "url": "https://dinhtta.github.io/",
+          "excerpt": "Previously I was a tenure-track faculty at the Singapore University of Technology and Design, in the Information System and Technology Design (ISTD) pillar.",
+          "retrievedAt": "2026-09-07T05:12:37.795Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0576-4",
+          "url": "https://dinhtta.github.io/",
+          "excerpt": "I am interested in performance and security aspects of distributed systems (including blockchains, databases, and cloud-native systems).",
+          "retrievedAt": "2026-09-07T05:12:37.795Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0576-5",
+          "url": "https://dinhtta.github.io/",
+          "excerpt": "I am a recipient of VLDB 2019\u2019s best paper award, and MM\u201915 best paper runner up award.",
+          "retrievedAt": "2026-09-07T05:12:37.795Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0576-6",
+          "url": "https://dinhtta.github.io/",
+          "excerpt": "I serve as associate editor of VLDB 2024, 2026, and am a regular PC member of SIGMOD, ICDE, SoCC, NDSS.",
+          "retrievedAt": "2026-09-07T05:12:37.795Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0576-7",
+          "url": "https://dinhtta.github.io/",
+          "excerpt": "I will server as an associate editor for IEEE Transactions on Dependable and Secure Computing (TDSC).",
+          "retrievedAt": "2026-09-07T05:12:37.795Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0576-8",
+          "url": "https://dinhtta.github.io/",
+          "excerpt": "I co-chair the first workshop on verifable database system (VDBS) , which is colocated with SIGMOD 2023.",
+          "retrievedAt": "2026-09-07T05:12:37.795Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:13:28.341Z",
+      "nextAction": "Completed: overview verified, no suitable evidence for work section."
     },
     "vp-0577": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://research.monash.edu/en/persons/nathalie-nguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0577-1",
+          "url": "https://research.monash.edu/en/persons/nathalie-nguyen",
+          "excerpt": "Nathalie Nguyen - Monash University Skip to main navigation Skip to search Skip to main content Monash University Home Search content at Monash University Home Profiles Research units Research Infrastructure Projects Outputs Prizes Activities Press/Media View Scopus Profile Nathalie Nguyen Professor Professor , History https://orcid.",
+          "retrievedAt": "2026-09-07T05:12:39.734Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0577-2",
+          "url": "https://research.monash.edu/en/persons/nathalie-nguyen",
+          "excerpt": "edu/arts/graduate_research 2000 2025 Research activity per year Overview Network Projects (6) Outputs (69) Prizes (12) Activities (10) Press/Media (13) Personal profile Biography An award-winning researcher, Professor Nathalie Nguyen is a leading international scholar on the Vietnamese diaspora and the experiences of Vietnamese refugees.",
+          "retrievedAt": "2026-09-07T05:12:39.734Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0577-3",
+          "url": "https://research.monash.edu/en/persons/nathalie-nguyen",
+          "excerpt": "A Commonwealth Scholar at Oxford University and former ARC Future Fellow, her work focuses on memory, war and migration.",
+          "retrievedAt": "2026-09-07T05:12:39.734Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0577-4",
+          "url": "https://research.monash.edu/en/persons/nathalie-nguyen",
+          "excerpt": "She is an expert on oral history projects involving the Vietnamese in Australia, and her work has led to the creation of 2 key new oral history collections at the National Library of Australia.",
+          "retrievedAt": "2026-09-07T05:12:39.734Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0577-5",
+          "url": "https://research.monash.edu/en/persons/nathalie-nguyen",
+          "excerpt": "In 2021, she was elected a Fellow of the Academy of the Social Sciences in Australia.",
+          "retrievedAt": "2026-09-07T05:12:39.734Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0577-6",
+          "url": "https://research.monash.edu/en/persons/nathalie-nguyen",
+          "excerpt": "Nathalie has been Primary or Chief Investigator of ARC and industry-funded projects totalling $2.",
+          "retrievedAt": "2026-09-07T05:12:39.734Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0577-7",
+          "url": "https://research.monash.edu/en/persons/nathalie-nguyen",
+          "excerpt": "She is one of 5 Chief Investigators on an ARC Discovery Project on \"Grandparenting in Australia: A History (1945-2025)\" (2025-2028) and recently completed an ARC Discovery Project on the refugee legacy for second generation Vietnamese in Australia (2018-2024).",
+          "retrievedAt": "2026-09-07T05:12:39.734Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0577-8",
+          "url": "https://research.monash.edu/en/persons/nathalie-nguyen",
+          "excerpt": "Nathalie is the author of 4 books including South Vietnamese Soldiers: Memories of the Vietnam War and After and 2010 Choice Outstanding Academic Title , Memory Is Another Country: Women of the Vietnamese Diaspora (both reprinted by Bloomsbury Academic in 2024), and editor of 4 works including The Routledge Handbook of the Vietnamese Diaspora (Routledge, 2024), the first major reference work in the field.",
+          "retrievedAt": "2026-09-07T05:12:39.734Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:13:28.341Z",
+      "nextAction": "Completed: overview and work verified."
     },
     "vp-0578": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://findanexpert.unimelb.edu.au/profile/388487-cuc-nguyen"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://findanexpert.unimelb.edu.au/profile/388487-cuc-nguyen: Client-rendered JS / empty static response"
+      ],
+      "updatedAt": "2026-09-07T05:13:28.341Z",
+      "nextAction": "Retry client-rendered profile URL (Find an Expert)."
     },
     "vp-0579": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://research.monash.edu/en/persons/thanh-pham"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0579-1",
+          "url": "https://research.monash.edu/en/persons/thanh-pham",
+          "excerpt": "Thanh Pham - Monash University Skip to main navigation Skip to search Skip to main content Monash University Home Search content at Monash University Home Profiles Research units Research Infrastructure Projects Outputs Prizes Activities Press/Media View Scopus Profile Thanh Pham Assoc Professor Associate Professor , School of Education and Culture https://orcid.",
+          "retrievedAt": "2026-09-07T05:12:40.968Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0579-2",
+          "url": "https://research.monash.edu/en/persons/thanh-pham",
+          "excerpt": "Pham monash edu 2006 2026 Research activity per year Overview Network Projects (6) Outputs (78) Prizes (2) Activities (21) Press/Media (14) Personal profile Biography I am an Associate Professor at Monash University with an international research profile in graduate employability, education-to-work transitions, globalisation and intercultural education .",
+          "retrievedAt": "2026-09-07T05:12:40.968Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0579-3",
+          "url": "https://research.monash.edu/en/persons/thanh-pham",
+          "excerpt": "My research is driven by a central question: how can education better enable students to develop and mobilise the resources, agency and capabilities needed to navigate increasingly complex educational and professional futures?",
+          "retrievedAt": "2026-09-07T05:12:40.968Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0579-4",
+          "url": "https://research.monash.edu/en/persons/thanh-pham",
+          "excerpt": "A distinctive contribution of my scholarship has been advancing new ways of conceptualising graduate employability.",
+          "retrievedAt": "2026-09-07T05:12:40.968Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0579-5",
+          "url": "https://research.monash.edu/en/persons/thanh-pham",
+          "excerpt": "I developed the concepts of agentic capital , the capitals-based approach to graduate employability , and the Employability Agency Framework , which position employability as more than the acquisition of skills.",
+          "retrievedAt": "2026-09-07T05:12:40.968Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0579-6",
+          "url": "https://research.monash.edu/en/persons/thanh-pham",
+          "excerpt": "My work explains how individuals develop, connect and strategically mobilise personal and external resources in response to opportunities, constraints and changing contexts.",
+          "retrievedAt": "2026-09-07T05:12:40.968Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0579-7",
+          "url": "https://research.monash.edu/en/persons/thanh-pham",
+          "excerpt": "These ideas have informed research internationally and have been applied by researchers and practitioners across diverse educational settings and student populations.",
+          "retrievedAt": "2026-09-07T05:12:40.968Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0579-8",
+          "url": "https://research.monash.edu/en/persons/thanh-pham",
+          "excerpt": "I work across higher education, vocational education, government, industry and philanthropic sectors to translate research into programs, frameworks and practices that strengthen employability, student agency and intercultural learning.",
+          "retrievedAt": "2026-09-07T05:12:40.968Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:13:28.341Z",
+      "nextAction": "Completed: overview verified, no suitable evidence for work section."
     },
     "vp-0580": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://research.monash.edu/en/persons/nga-pham"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0580-1",
+          "url": "https://research.monash.edu/en/persons/nga-pham",
+          "excerpt": "Nga Pham - Monash University Skip to main navigation Skip to search Skip to main content Monash University Home Search content at Monash University Home Profiles Research units Research Infrastructure Projects Outputs Prizes Activities Press/Media View Scopus Profile Nga Pham Assoc Professor Associate Professor (Research) , Monash Centre for Financial Studies https://orcid.",
+          "retrievedAt": "2026-09-07T05:12:43.217Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0580-2",
+          "url": "https://research.monash.edu/en/persons/nga-pham",
+          "excerpt": "Pham monash edu 2015 2026 Research activity per year Overview Network Projects (10) Outputs (21) Prizes (5) Activities (26) Press/Media (19) Personal profile Biography Dr.",
+          "retrievedAt": "2026-09-07T05:12:43.217Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0580-3",
+          "url": "https://research.monash.edu/en/persons/nga-pham",
+          "excerpt": "Prior to that, Nga has over 15 years of experience in financial education, research and advisory services in various areas of finance such as corporate governance, investment and portfolio management, corporate finance and international finance.",
+          "retrievedAt": "2026-09-07T05:12:43.217Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0580-4",
+          "url": "https://research.monash.edu/en/persons/nga-pham",
+          "excerpt": "During her time there, Nga had been through various managerial roles including the Head of Finance Department, Vice Dean and Dean of the Business Faculty.",
+          "retrievedAt": "2026-09-07T05:12:43.217Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0580-5",
+          "url": "https://research.monash.edu/en/persons/nga-pham",
+          "excerpt": "She was also the Executive Director of the Joint program between La Trobe University and Hanoi University in Vietnam.",
+          "retrievedAt": "2026-09-07T05:12:43.217Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0580-6",
+          "url": "https://research.monash.edu/en/persons/nga-pham",
+          "excerpt": "Nga has also taught in the MBA and Master of International Business programs at La Trobe University in Melbourne.",
+          "retrievedAt": "2026-09-07T05:12:43.217Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0580-7",
+          "url": "https://research.monash.edu/en/persons/nga-pham",
+          "excerpt": "Nga also worked as an equity analyst for Vietnam Asset Management and Bien Viet Securities (now Woori CBV Securities).",
+          "retrievedAt": "2026-09-07T05:12:43.217Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0580-8",
+          "url": "https://research.monash.edu/en/persons/nga-pham",
+          "excerpt": "Nga had leadership placement with the Commonwealth Bank of Australia in Melbourne in 2011.",
+          "retrievedAt": "2026-09-07T05:12:43.217Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:13:28.341Z",
+      "nextAction": "Completed: overview verified, no suitable evidence for work section."
     },
     "vp-0581": {
       "overview": "pending",
