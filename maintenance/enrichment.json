@@ -3401,7 +3401,8 @@
         "vp-1412",
         "vp-1413"
       ],
-      "status": "pending"
+      "status": "in_progress",
+      "startedAt": "2026-09-07T19:51:09.160Z"
     },
     {
       "number": 71,
@@ -81489,204 +81490,496 @@
       "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1394": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://search.asu.edu/profile/2371900"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://search.asu.edu/profile/2371900: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:52:00.829Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1395": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://geography.osu.edu/people/le.240"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://geography.osu.edu/people/le.240: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:52:00.830Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1396": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.notredame.edu.au/about/schools/sydney/education/school-staff/thuan-thai"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.notredame.edu.au/about/schools/sydney/education/school-staff/thuan-thai: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T19:52:00.830Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1397": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.deakin.edu.au/about-deakin/people/duc-thanh-nguyen"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.deakin.edu.au/about-deakin/people/duc-thanh-nguyen: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T19:52:00.830Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1398": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.usn.no/om-usn/kontakt-oss/ansatte/anh-nguyen-duc"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.usn.no/om-usn/kontakt-oss/ansatte/anh-nguyen-duc: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:52:00.830Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1399": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.mdx.ac.uk/about-us/our-people/staff-directory/profile/vien-quoc-tuan"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1399-1",
+          "url": "https://www.mdx.ac.uk/about-us/our-people/staff-directory/profile/vien-quoc-tuan",
+          "excerpt": "Staff directory | Middlesex University --> Skip to main content Broken links across staff profiles Due to an ongoing technical issue, some links to publications and other resources in staff profiles may not always work.",
+          "retrievedAt": "2026-09-07T19:51:14.508Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1399-2",
+          "url": "https://www.mdx.ac.uk/about-us/our-people/staff-directory/profile/vien-quoc-tuan",
+          "excerpt": "ticeships Supporting our region Academic partnerships About us add remove About us News Our story Leadership and strategy People and services Academic faculties Campuses Events Upcoming Event Sep 8 Postgraduate Open Event Quick links Open days Contact us Find a course Request a prospectus Quick links Open days Contact us Find a course Request a prospectus Home About us Our people Staff directory Search the Website close Staff directory --> Staff directory Search staff Submit Search Our academic community includes active practitioners and committed researchers and teachers who lead their fields.",
+          "retrievedAt": "2026-09-07T19:51:14.508Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:52:00.830Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1400": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://staffportal.curtin.edu.au/staff/profile/view/duc-son-pham-863a3d2e/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1400-1",
+          "url": "https://staffportal.curtin.edu.au/staff/profile/view/duc-son-pham-863a3d2e/",
+          "excerpt": "Public Staff Profile | Curtin University, Perth, Australia Public Staff Profile - Staff Portal Skip to the content This internet browser is outdated and does not support all features of this site.",
+          "retrievedAt": "2026-09-07T19:51:15.932Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1400-2",
+          "url": "https://staffportal.curtin.edu.au/staff/profile/view/duc-son-pham-863a3d2e/",
+          "excerpt": "Staff Profile Public Staff Profile Campuses Australia Dubai Malaysia Mauritius Singapore Teaching areas Centre for Aboriginal Studies Business and Law Health Sciences Humanities Science and Engineering Curtin University acknowledges all First Nations of this place we call Australia and recognises the many nations who have looked after Country for more than 60,000 years.",
+          "retrievedAt": "2026-09-07T19:51:15.932Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1400-3",
+          "url": "https://staffportal.curtin.edu.au/staff/profile/view/duc-son-pham-863a3d2e/",
+          "excerpt": "We are honoured and grateful for the privilege to maintain campuses operating in Boorloo (Perth) and Karlkurla (Kalgoorlie) in Australia.",
+          "retrievedAt": "2026-09-07T19:51:15.932Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1400-4",
+          "url": "https://staffportal.curtin.edu.au/staff/profile/view/duc-son-pham-863a3d2e/",
+          "excerpt": "We pay our respects to Elders past and present as Custodians and Owners of these lands.",
+          "retrievedAt": "2026-09-07T19:51:15.932Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1400-5",
+          "url": "https://staffportal.curtin.edu.au/staff/profile/view/duc-son-pham-863a3d2e/",
+          "excerpt": "We recognise their deep knowledge and their cultural, spiritual and educational practices, and aspire to learn and teach in partnership with them.",
+          "retrievedAt": "2026-09-07T19:51:15.932Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1400-6",
+          "url": "https://staffportal.curtin.edu.au/staff/profile/view/duc-son-pham-863a3d2e/",
+          "excerpt": "Curtin also acknowledges First Nations peoples connected with our global campuses.",
+          "retrievedAt": "2026-09-07T19:51:15.932Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1400-7",
+          "url": "https://staffportal.curtin.edu.au/staff/profile/view/duc-son-pham-863a3d2e/",
+          "excerpt": "We are committed to working in partnership with all Custodians and Owners to strengthen and embed First Nations’ voices and perspectives in our decision-making, now and into the future.",
+          "retrievedAt": "2026-09-07T19:51:15.932Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:52:00.830Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1401": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.etsmtl.ca/en/research/professors-researchers/knguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1401-1",
+          "url": "https://www.etsmtl.ca/en/research/professors-researchers/knguyen",
+          "excerpt": "vertes Horaire ChemiNot Programmes Bibliothèque Centre sportif 51 Résultats pour : « Portes ouvertes » Programmes 5 Départements 5 Cours 12 Bottin 8 Pages 22 Articles 17 Clubs étudiants 2 Événements 8 Activités 3 Portes ouvertes Page L'ÉTS vous donne rendez-vous à sa journée portes ouvertes qui aura lieu sur son campus à l'automne et à l'hiver : Samedi 18 novembre 2023 Samedi 17 février 2024 Le dépôt de votre demande d'admission à un programme de baccalauréat ou au cheminement universitaire en technologie sera gratuit si vous étudiez ou détenez un diplôme collégial d'un établissement québécois.",
+          "retrievedAt": "2026-09-07T19:51:19.847Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1401-2",
+          "url": "https://www.etsmtl.ca/en/research/professors-researchers/knguyen",
+          "excerpt": "S in numbers Armoiries Retour Governance Office of the Chief Executive Officer General Secretariat Retour Sustainable Development Teaching Research Communities Operations BIXI Retour Equity, Diversity and Inclusion EDI in Research Women and Engineering Retour Graduates Services and discounts After graduation: employment and professional development An engineering network: statistical profile ÉTS Ambassadors Keep in touch with ÉTS Réseau ÉTS (in French) Admission Submit an application for admission Info-ÉTS Learn about ÉTS and its study programs Current students Everything you need in one place!",
+          "retrievedAt": "2026-09-07T19:51:19.847Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1401-3",
+          "url": "https://www.etsmtl.ca/en/research/professors-researchers/knguyen",
+          "excerpt": "Admission Submit an application for admission Info-ÉTS Learn about ÉTS and its study programs Admission Submit an application for admission Info-ÉTS Learn about ÉTS and its study programs Current students Everything you need in one place!",
+          "retrievedAt": "2026-09-07T19:51:19.847Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1401-4",
+          "url": "https://www.etsmtl.ca/en/research/professors-researchers/knguyen",
+          "excerpt": "ÉTS Bureau du respect de la personne (Respectful Campus Office) Consult the available resources Careers Check the job offers at ÉTS Graduates Keep in touch with ÉTS Upcoming events Sep 16, 2026 at 11:00 Student Clubs Festival and Corn Roast Oct 7, 2026 at 08:00 10th International Colloquium on Scientific and Fundamental Aspects of GNSS Home Study at ÉTS Faculty Nguyen, Kim Khoa 01 Overview 02 Courses and supervision 03 Publications 04 News Overview Nguyen, Kim Khoa Overview Courses and supervision Publications News Kim Khoa Nguyen Professeur Department Département de génie électrique Degrees B.",
+          "retrievedAt": "2026-09-07T19:51:19.847Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1401-5",
+          "url": "https://www.etsmtl.ca/en/research/professors-researchers/knguyen",
+          "excerpt": "ver 2025 L'application d'Internet des objets pour l'assistance de la navigation intérieure des personnes malvoyantes, par Redha Charef Été 2025 Développement des applications intelligentes pour contrôler le réseau 5G O-RAN privé, par Firmin Nanfack Kemda Automne 2025 Applications intelligentes (xApps et rApps) pour l’optimisation de réseaux 5G O-RAN privés, par Yves Heziewe Awesso Hiver 2026 Optimisation de faible consommation d’énergie dans l'environnement O-RAN via rApp et xApp, par Taieb Esedik Samadi Automne 2025 Évaluation expérimentale de la localisation indoor par Bluetooth Low Energy 5.",
+          "retrievedAt": "2026-09-07T19:51:19.847Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1401-6",
+          "url": "https://www.etsmtl.ca/en/research/professors-researchers/knguyen",
+          "excerpt": "uébec et de ses filiales, par Arthur Gambet Automne 2018 Accompagnement d'un opérateur dans l'obtention des bandes de fréquence \"5G\", par Thomas Mahéo Hiver 2023 Système pour l'état de charge de batteries de drones, par Maxence Bollon Hiver 2024 Étude d'une solution de simulation de réseau répondant aux besoins de l'entreprise, par Flavien Noirot Hiver 2024 Conception et mise en œuvre d’un tableau de bord de supervision et de gestion de crise en temps réel pour un système distribué d’alerte aux catastrophes naturelles, par Thinhinane Senoune Été 2026 Stage industriel et rapport technique, 3 cr.",
+          "retrievedAt": "2026-09-07T19:51:19.847Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1401-7",
+          "url": "https://www.etsmtl.ca/en/research/professors-researchers/knguyen",
+          "excerpt": "sur les objets connectés, par Hamza Trabelsi Hiver 2024 Développement d'une application intelligente rApp pour la détection d’anomalie dans le réseau O-RAN privé, par Mory Moussa Nabe Été 2025 Optimisation des processus industriels par les approches Lean Six Sigma : Revue de littérature et étude de cas, par Mohamed Mourad Été 2025 Conception d'un système de localisation interne par des empreintes digitales pour l'aide à la navigation intérieure des personnes malvoyantes, par Ritch Olsen Dezo Tsata Automne 2025 Publications Publications Poster 8 Nassim Haddaji, Kim Khoa Nguyen, Mohamed Cheriet.",
+          "retrievedAt": "2026-09-07T19:51:19.847Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1401-8",
+          "url": "https://www.etsmtl.ca/en/research/professors-researchers/knguyen",
+          "excerpt": "2016 « Transformative design model towards an end-to-end integrated-optical-packet-network in metro and core networks ».",
+          "retrievedAt": "2026-09-07T19:51:19.847Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:52:00.830Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1402": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.kcg.edu/en/faculty/associate-professors/dinh-duy-tai"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.kcg.edu/en/faculty/associate-professors/dinh-duy-tai: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:52:00.830Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1403": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://wit.edu/directory/faculty-staff"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://wit.edu/directory/faculty-staff: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:52:00.830Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1404": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://researchers.adelaide.edu.au/profile/triet.h.le"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://researchers.adelaide.edu.au/profile/triet.h.le: fetch failed"
+      ],
+      "updatedAt": "2026-09-07T19:52:00.830Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1405": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://profiles.uts.edu.au/Cuong.Ton-That"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1405-1",
+          "url": "https://profiles.uts.edu.au/Cuong.Ton-That",
+          "excerpt": "Discovery Browser Not Supported Your browser (Internet Explorer or other legacy browser) is not supported by this application.",
+          "retrievedAt": "2026-09-07T19:51:24.311Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:52:00.830Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1406": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.fris.tohoku.ac.jp/en/researcher/creative/hung.html"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.fris.tohoku.ac.jp/en/researcher/creative/hung.html: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:52:00.830Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1407": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.uis.no/en/profile/quoc-duy-ho"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.uis.no/en/profile/quoc-duy-ho: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:52:00.830Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1408": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.lichttechnik.tu-darmstadt.de/fachgebiet_lt/team_lt/mitarbeiter_details_14912.en.jsp"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.lichttechnik.tu-darmstadt.de/fachgebiet_lt/team_lt/mitarbeiter_details_14912.en.jsp: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:52:00.830Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1409": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://researchportal.helsinki.fi/en/persons/thao-ho"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://researchportal.helsinki.fi/en/persons/thao-ho: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:52:00.830Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1410": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.un-ihe.org/people/lap-cuong-hua"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.un-ihe.org/people/lap-cuong-hua: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:52:00.830Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1411": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.rmit.edu.au/contact/staff-contacts/academic-staff/p/phan-le-dr-tram"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.rmit.edu.au/contact/staff-contacts/academic-staff/p/phan-le-dr-tram: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:52:00.830Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1412": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://hub.tmu.edu.tw/en/persons/nguyen-quoc-khanh-le/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1412-1",
+          "url": "https://hub.tmu.edu.tw/en/persons/nguyen-quoc-khanh-le/",
+          "excerpt": "o search Skip to main content Taipei Medical University Home Help & FAQ, Link opens in a new tab English 中文 Search content at Taipei Medical University Home Profiles Research units Projects Research output Datasets Activities View Scopus Profile Nguyen Quoc Khanh Le Associate Professor , ​Professional Master Program in Artificial Intelligence in Medicine Joint-Appointment Associate Professor , International Master Program in Medicine Joint-Appointment Associate Professor , Interdisciplinary Undergraduate Program in Intelligent Healthcare Joint-Appointment Associate Professor , International Ph.",
+          "retrievedAt": "2026-09-07T19:51:32.942Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1412-2",
+          "url": "https://hub.tmu.edu.tw/en/persons/nguyen-quoc-khanh-le/",
+          "excerpt": "Program in Medicine Member , TMU Research Center of Artificial Intelligence in Medicine and Health https://orcid.",
+          "retrievedAt": "2026-09-07T19:51:32.942Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1412-3",
+          "url": "https://hub.tmu.edu.tw/en/persons/nguyen-quoc-khanh-le/",
+          "excerpt": "edu tw h-index 5272 Citations 51 h-index Calculated based on number of publications stored in Pure and citations from Scopus 2016 2026 Research activity per year Overview Fingerprint Network Projects (12) Research output (190) Datasets (6) Similar Profiles (6) Personal profile Education 2014-2018 Ph.",
+          "retrievedAt": "2026-09-07T19:51:32.942Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1412-4",
+          "url": "https://hub.tmu.edu.tw/en/persons/nguyen-quoc-khanh-le/",
+          "excerpt": ", Department of Computer Science and Engineering, Yuan Ze University 2012-2014 M.",
+          "retrievedAt": "2026-09-07T19:51:32.942Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1412-5",
+          "url": "https://hub.tmu.edu.tw/en/persons/nguyen-quoc-khanh-le/",
+          "excerpt": ", Department of Computer Science and Engineering, Yuan Ze University 2 005-2010 B.",
+          "retrievedAt": "2026-09-07T19:51:32.942Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1412-6",
+          "url": "https://hub.tmu.edu.tw/en/persons/nguyen-quoc-khanh-le/",
+          "excerpt": "02- Associate Professor, Professional Master Program in Artificial Intelligence in Medicine, Taipei Medical University 2020.",
+          "retrievedAt": "2026-09-07T19:51:32.942Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1412-7",
+          "url": "https://hub.tmu.edu.tw/en/persons/nguyen-quoc-khanh-le/",
+          "excerpt": "01 Assistant Professor, Professional Master Program in Artificial Intelligence in Medicine, Taipei Medical University 2018.",
+          "retrievedAt": "2026-09-07T19:51:32.942Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1412-8",
+          "url": "https://hub.tmu.edu.tw/en/persons/nguyen-quoc-khanh-le/",
+          "excerpt": "08 Postdoctoral Research Fellow, School of Humanities, Nanyang Technological University, Singapore Awards TMU Research Paper Excellence Award 2023 (Taipei Medical University) TMU Young Scholar Research Award 2023 (Taipei Medical University) Outstanding Curriculum Award for Open Education 2023 (Taiwan Open Curriculum and Education Consortium - TOCEC) Creative Award (2023 H.",
+          "retrievedAt": "2026-09-07T19:51:32.942Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:52:00.830Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1413": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://bioscience.ucla.edu/people/hung-ton-that"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1413-1",
+          "url": "https://bioscience.ucla.edu/people/hung-ton-that",
+          "excerpt": "Neuroscience Physics &#038; Biology in Medicine Systems Biology Admissions Admissions Overview Application Procedure Admissions Statistics Admissions FAQs Faculty Training &#038; Development UCLA&#8217;s Core Professional Skills for Grads Grad School Hacks Leadership Training Retreats Fellowship Writing Support Self-Directed Training Mentorship Training Mentoring Up (Mentee Training) Graduate Student Mentor Training Postdoc Mentor Training Faculty Mentor Training Facilitator Training Our Facilitators (Mentor Training) Mentorship Resources For Undergrads CA STEM Symposium Bruins-In-Genomics (B.",
+          "retrievedAt": "2026-09-07T19:51:37.134Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1413-2",
+          "url": "https://bioscience.ucla.edu/people/hung-ton-that",
+          "excerpt": ") Summer Program Brain Research Institute (BRI-SURE) UC-HBCU Neuroscience Pathways UCLA-HSI SOMA Summer Professional Development Resources News &#038; Events Headlines Calendar Resources Student Wellness &#038; Reporting Resources Research Trainee Mistreatment Other Campus Resources International &#038; Undocumented Student Resources Bioscience Student Groups Fellowship Incentive Program Suzanne Eaton, Ph.",
+          "retrievedAt": "2026-09-07T19:51:37.134Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1413-3",
+          "url": "https://bioscience.ucla.edu/people/hung-ton-that",
+          "excerpt": "Neuroscience Physics &#038; Biology in Medicine Systems Biology Admissions Admissions Overview Application Procedure Admissions Statistics Admissions FAQs Faculty Training &#038; Development UCLA&#8217;s Core Professional Skills for Grads Grad School Hacks Leadership Training Retreats Fellowship Writing Support Self-Directed Training Mentorship Training Mentoring Up (Mentee Training) Graduate Student Mentor Training Postdoc Mentor Training Faculty Mentor Training Facilitator Training Our Facilitators (Mentor Training) Mentorship Resources For Undergrads CA STEM Symposium Bruins-In-Genomics (B.",
+          "retrievedAt": "2026-09-07T19:51:37.134Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1413-4",
+          "url": "https://bioscience.ucla.edu/people/hung-ton-that",
+          "excerpt": ") Summer Program Brain Research Institute (BRI-SURE) UC-HBCU Neuroscience Pathways UCLA-HSI SOMA Summer Professional Development Resources News &#038; Events Headlines Calendar Resources Student Wellness &#038; Reporting Resources Research Trainee Mistreatment Other Campus Resources International &#038; Undocumented Student Resources Bioscience Student Groups Fellowship Incentive Program Suzanne Eaton, Ph.",
+          "retrievedAt": "2026-09-07T19:51:37.134Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1413-5",
+          "url": "https://bioscience.ucla.edu/people/hung-ton-that",
+          "excerpt": "Brown Memorial Award Asrican Sophie &#038; Jack Award GPB Emergency Short-Term Loan Program Student Billing Calendar Research Training Funding NIH T32 Training Grants Bioscience Postdoctoral Affairs Contact Hung Ton-That Professor , Dentistry Dept.",
+          "retrievedAt": "2026-09-07T19:51:37.134Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1413-6",
+          "url": "https://bioscience.ucla.edu/people/hung-ton-that",
+          "excerpt": ", University of California Los Angeles Professor , MIMG, University of California Los Angeles Email: htonthat@dentistry.",
+          "retrievedAt": "2026-09-07T19:51:37.134Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1413-7",
+          "url": "https://bioscience.ucla.edu/people/hung-ton-that",
+          "excerpt": "edu UC Profile Hung Ton-That (Dentistry) Ton-That Lab Education and Training University of Chicago Postdoc 2004 Microbiology UCLA Postdoc 2001 Microbiology UCLA Ph.",
+          "retrievedAt": "2026-09-07T19:51:37.134Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1413-8",
+          "url": "https://bioscience.ucla.edu/people/hung-ton-that",
+          "excerpt": "Dean’s Teaching Excellence Award, McGovern Medical School - UTHealth Houston, 2013.",
+          "retrievedAt": "2026-09-07T19:51:37.134Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:52:00.830Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1414": {
       "overview": "pending",
