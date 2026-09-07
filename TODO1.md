@@ -15,8 +15,8 @@ its description: `- [x] ~~Completed task~~`. Leave unresolved work unchecked and
 reason and next action. Never cross out work merely because it was attempted.
 
 - [x] ~~Implement the data model, evidence ledger, validation, and profile display.~~
-- [ ] Implement automated collection, generation, verification, and resumable batch processing. Structured proposal application, resumable ID snapshots, and bounded source collection are implemented; automated model generation and independent verification remain unresolved. Batch 1 has a completed overview pass, while work-item collection is still pending.
-- [ ] Process and publish the first batch of 20 people; inspect the results before continuing.
+- [x] ~~Implement automated collection, generation, verification, and resumable batch processing.~~ Structured proposal application, resumable ID snapshots, bounded source collection, automated evidence generation, and independent verification are implemented.
+- [x] ~~Process and publish the first batch of 20 people; inspect the results before continuing.~~
 - [ ] Process and publish all remaining batches, 20 people per batch.
 - [ ] Resolve outstanding retries and audit coverage, evidence, and rendering.
 - [ ] Integrate subsequent refreshes into the existing maintenance workflow.
@@ -130,8 +130,9 @@ completion while temporary failures or unresolved verification remain.
 ## Batch checklist
 
 - [x] ~~Batch 1 — `vp-0001`–`vp-0020`; 20 people; all outcomes complete~~ — published in `8d7be62`; counts: 20 verified overviews, 16 verified work sections, 4 no-suitable-evidence work searches; 0 unresolved retries.
+- [ ] Batch 2 — `vp-0021`–`vp-0040`; 20 people; all outcomes complete; counts: 20 verified overviews, 20 verified work sections (10 selected, 10 recent), 0 no-suitable-evidence work searches; 0 unresolved retries.
 
-Progress note: batch 1 was published in `8d7be62`; all 20 research overviews and all 20 work searches have completed outcomes: 16 verified sections and 4 no-suitable-evidence results. Batch 2 source collection is complete and its enrichment pass is in progress.
+Progress note: batches 1 and 2 have all outcomes completed (40 verified overviews, 36 verified work sections, 4 no-suitable-evidence results, 0 unresolved retries). Batch 2 is ready for publication. Batch 3 will be processed next.
 
 Populate at execution time from the saved ID snapshot. Each entry must include batch number,
 ledger reference or exact IDs, outcome counts, remaining retries, and publication status.

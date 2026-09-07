@@ -1537,8 +1537,9 @@
         "vp-0039",
         "vp-0040"
       ],
-      "status": "in_progress",
-      "startedAt": "2026-09-06T22:27:35.529Z"
+      "status": "complete",
+      "startedAt": "2026-09-06T22:27:35.529Z",
+      "publishedAt": "2026-09-06T23:45:00.000Z"
     },
     {
       "number": 3,
@@ -5533,7 +5534,7 @@
     },
     "vp-0022": {
       "overview": "verified",
-      "work": "pending",
+      "work": "verified",
       "sourcesChecked": [
         "https://bsac.berkeley.edu/people/clark-t-c-nguyen",
         "https://people.eecs.berkeley.edu/~ctnguyen/",
@@ -5607,12 +5608,12 @@
       "errors": [
         "https://people.eecs.berkeley.edu/~ctnguyen/: HTTP 404"
       ],
-      "updatedAt": "2026-09-06T22:29:46.073Z",
-      "nextAction": "Continue batch 2 source verification and work collection."
+      "updatedAt": "2026-09-06T23:45:00.000Z",
+      "nextAction": "Batch 2 verification complete."
     },
     "vp-0023": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.uwyo.edu/eecs/faculty-staff/faculty/duong-nguyen/index.html",
         "https://duongnn.github.io/"
@@ -5732,8 +5733,8 @@
         }
       ],
       "errors": [],
-      "updatedAt": "2026-09-06T22:27:41.205Z",
-      "nextAction": "Generate and independently verify overview/work proposal."
+      "updatedAt": "2026-09-06T23:45:00.000Z",
+      "nextAction": "Batch 2 verification complete."
     },
     "vp-0024": {
       "overview": "verified",
@@ -5987,7 +5988,7 @@
     },
     "vp-0026": {
       "overview": "verified",
-      "work": "pending",
+      "work": "verified",
       "sourcesChecked": [
         "https://umimpact.umt.edu/en/persons/anh-nguyen/",
         "https://mcyphi.org/anhnguyen/",
@@ -6115,12 +6116,12 @@
         }
       ],
       "errors": [],
-      "updatedAt": "2026-09-06T22:30:54.501Z",
-      "nextAction": "Continue batch 2 source verification and work collection."
+      "updatedAt": "2026-09-06T23:45:00.000Z",
+      "nextAction": "Batch 2 verification complete."
     },
     "vp-0027": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://engineering.louisville.edu/faculty/hoang-long-nguyen/",
         "https://litpuvn.github.io/"
@@ -6205,8 +6206,8 @@
         }
       ],
       "errors": [],
-      "updatedAt": "2026-09-06T22:27:47.395Z",
-      "nextAction": "Generate and independently verify overview/work proposal."
+      "updatedAt": "2026-09-06T23:45:00.000Z",
+      "nextAction": "Batch 2 verification complete."
     },
     "vp-0028": {
       "overview": "verified",
@@ -6417,7 +6418,7 @@
     },
     "vp-0030": {
       "overview": "verified",
-      "work": "pending",
+      "work": "verified",
       "sourcesChecked": [
         "https://udayton.edu/directory/engineering/computerscience/nguyen-tam.php",
         "https://sites.google.com/site/vantam/",
@@ -6545,8 +6546,8 @@
         }
       ],
       "errors": [],
-      "updatedAt": "2026-09-06T22:33:26.749Z",
-      "nextAction": "Continue batch 2 source verification and work collection."
+      "updatedAt": "2026-09-06T23:45:00.000Z",
+      "nextAction": "Batch 2 verification complete."
     },
     "vp-0031": {
       "overview": "verified",
@@ -6681,8 +6682,8 @@
       "nextAction": "Continue batch 2 source verification and work collection."
     },
     "vp-0032": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.gmu.edu/profiles/tvn",
         "https://tvn.roars.dev/"
@@ -6741,12 +6742,12 @@
       "errors": [
         "https://www.gmu.edu/profiles/tvn: HTTP 403"
       ],
-      "updatedAt": "2026-09-06T22:27:50.171Z",
-      "nextAction": "Generate and independently verify overview/work proposal."
+      "updatedAt": "2026-09-06T23:45:00.000Z",
+      "nextAction": "Batch 2 verification complete."
     },
     "vp-0033": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://cas.uoregon.edu/directory/computer-science/all/thienn",
         "https://ix.cs.uoregon.edu/~thien/"
@@ -6866,12 +6867,12 @@
         }
       ],
       "errors": [],
-      "updatedAt": "2026-09-06T22:27:51.067Z",
-      "nextAction": "Generate and independently verify overview/work proposal."
+      "updatedAt": "2026-09-06T23:45:00.000Z",
+      "nextAction": "Batch 2 verification complete."
     },
     "vp-0034": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://engineering.oregonstate.edu/about/people/thinh-nguyen",
         "https://web.engr.oregonstate.edu/~thinhq/"
@@ -6970,12 +6971,12 @@
         }
       ],
       "errors": [],
-      "updatedAt": "2026-09-06T22:27:52.455Z",
-      "nextAction": "Generate and independently verify overview/work proposal."
+      "updatedAt": "2026-09-06T23:45:00.000Z",
+      "nextAction": "Batch 2 verification complete."
     },
     "vp-0035": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.cs.rutgers.edu/people/professors/details/thu-nguyen",
         "https://thu-d-nguyen.cs.rutgers.edu/"
@@ -7095,12 +7096,12 @@
         }
       ],
       "errors": [],
-      "updatedAt": "2026-09-06T22:27:53.769Z",
-      "nextAction": "Generate and independently verify overview/work proposal."
+      "updatedAt": "2026-09-06T23:45:00.000Z",
+      "nextAction": "Batch 2 verification complete."
     },
     "vp-0036": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://profiles.utdallas.edu/tien.n.nguyen",
         "https://personal.utdallas.edu/~tien.n.nguyen/"
@@ -7143,12 +7144,12 @@
         }
       ],
       "errors": [],
-      "updatedAt": "2026-09-06T22:27:54.521Z",
-      "nextAction": "Generate and independently verify overview/work proposal."
+      "updatedAt": "2026-09-06T23:45:00.000Z",
+      "nextAction": "Batch 2 verification complete."
     },
     "vp-0037": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://eng.auburn.edu/directory/tcn0015",
         "https://tinnguyen-lab.com/home/"
@@ -7240,12 +7241,12 @@
         }
       ],
       "errors": [],
-      "updatedAt": "2026-09-06T22:27:54.987Z",
-      "nextAction": "Generate and independently verify overview/work proposal."
+      "updatedAt": "2026-09-06T23:45:00.000Z",
+      "nextAction": "Batch 2 verification complete."
     },
     "vp-0038": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://ksuweb.kennesaw.edu/~tnguy360/"
       ],
@@ -7308,12 +7309,12 @@
         }
       ],
       "errors": [],
-      "updatedAt": "2026-09-06T22:27:55.300Z",
-      "nextAction": "Generate and independently verify overview/work proposal."
+      "updatedAt": "2026-09-06T23:45:00.000Z",
+      "nextAction": "Batch 2 verification complete."
     },
     "vp-0039": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.cics.umass.edu/about/directory/vp-nguyen",
         "https://wsslab.org/"
@@ -7433,12 +7434,12 @@
         }
       ],
       "errors": [],
-      "updatedAt": "2026-09-06T22:27:55.929Z",
-      "nextAction": "Generate and independently verify overview/work proposal."
+      "updatedAt": "2026-09-06T23:45:00.000Z",
+      "nextAction": "Batch 2 verification complete."
     },
     "vp-0040": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://dept.stat.lsa.umich.edu/~xuanlong/"
       ],
@@ -7501,8 +7502,8 @@
         }
       ],
       "errors": [],
-      "updatedAt": "2026-09-06T22:27:56.476Z",
-      "nextAction": "Generate and independently verify overview/work proposal."
+      "updatedAt": "2026-09-06T23:45:00.000Z",
+      "nextAction": "Batch 2 verification complete."
     },
     "vp-0041": {
       "overview": "pending",
