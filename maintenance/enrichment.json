@@ -2042,7 +2042,9 @@
         "vp-0399",
         "vp-0400"
       ],
-      "status": "pending"
+      "status": "complete",
+      "startedAt": "2026-09-07T04:51:28.000Z",
+      "publishedAt": "2026-09-07T04:52:37.931Z"
     },
     {
       "number": 21,
@@ -28648,205 +28650,1154 @@
       "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0381": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.calstatela.edu/faculty/nguyen-uy"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:52:37.931Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-0382": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://academics.csun.edu/faculty/quelam.huynh",
         "http://www.csun.edu/~qhuynh"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0382-1",
+          "url": "https://academics.csun.edu/faculty/quelam.huynh",
+          "excerpt": "Que-Lam Huynh | CSUN Skip to content | Accessibility | Directory | Calendar | A to Z | Webmail Toggle navigation Home Profiles Stories Scholarship About Login Que-Lam Huynh Professor Faculty - Psychology quelam.",
+          "retrievedAt": "2026-09-07T04:51:30.483Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0382-2",
+          "url": "https://academics.csun.edu/faculty/quelam.huynh",
+          "excerpt": "edu/~qhuynh Printer Friendly Door Sign Brief Biography I am Professor of Psychology at California State University, Northridge.",
+          "retrievedAt": "2026-09-07T04:51:30.483Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0382-3",
+          "url": "https://academics.csun.edu/faculty/quelam.huynh",
+          "excerpt": "My work within and outside of the university--research, teaching, and service--is guided by a Third World consciousness and critical race perspectives.",
+          "retrievedAt": "2026-09-07T04:51:30.483Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0382-4",
+          "url": "https://academics.csun.edu/faculty/quelam.huynh",
+          "excerpt": "My goal is to center and empower people from historically marginalized and under-served groups through my activities in the research group, classroom, and community.",
+          "retrievedAt": "2026-09-07T04:51:30.483Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0382-5",
+          "url": "https://academics.csun.edu/faculty/quelam.huynh",
+          "excerpt": "2002, University of San Diego Research critical race psychology anti-colonial approaches mixed methods transdisciplinary research intergenerational trauma microaggressions Classes Fall Semester 2026 Summer Term 2026 Spring Semester 2026 Class # Catalog # Title Days Time (Start-End) Location Syllabus Office Hours Fall Semester 2026 Summer Term 2026 Spring Semester 2026 Day Hours Location Description Connections Psychology Faculty SH301 MailDrop: 91330-8255 http://www.",
+          "retrievedAt": "2026-09-07T04:51:30.483Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:52:37.931Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0383": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://academics.csun.edu/faculty/virginia.huynh"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0383-1",
+          "url": "https://academics.csun.edu/faculty/virginia.huynh",
+          "excerpt": "Virginia Huynh | CSUN Skip to content | Accessibility | Directory | Calendar | A to Z | Webmail Toggle navigation Home Profiles Stories Scholarship About Login Virginia Huynh Professor Faculty - Child and Adolescent Development virginia.",
+          "retrievedAt": "2026-09-07T04:51:31.773Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0383-2",
+          "url": "https://academics.csun.edu/faculty/virginia.huynh",
+          "excerpt": "Huynh (pronounced &quot;win&quot;) holds a doctorate in Developmental Psychology from UCLA.",
+          "retrievedAt": "2026-09-07T04:51:31.773Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0383-3",
+          "url": "https://academics.csun.edu/faculty/virginia.huynh",
+          "excerpt": "Her research areas include cultural and social factors that impact the mental and physical health of ethnic minority and immigrant youth.",
+          "retrievedAt": "2026-09-07T04:51:31.773Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0383-4",
+          "url": "https://academics.csun.edu/faculty/virginia.huynh",
+          "excerpt": "She earned a dissertation award from the Society for Research on Adolescence&mdash;the multidisciplinary and international organization dedicated to understanding adolescence through research and dissemination.",
+          "retrievedAt": "2026-09-07T04:51:31.773Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0383-5",
+          "url": "https://academics.csun.edu/faculty/virginia.huynh",
+          "excerpt": "She was the 2021 Jerome Richfield Memorial Fellow and the 2020-2021 Research Fellow at CSUN.",
+          "retrievedAt": "2026-09-07T04:51:31.773Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0383-6",
+          "url": "https://academics.csun.edu/faculty/virginia.huynh",
+          "excerpt": "2005, Loyola Marymount University Research This person has not added any Research Interests.",
+          "retrievedAt": "2026-09-07T04:51:31.773Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0383-7",
+          "url": "https://academics.csun.edu/faculty/virginia.huynh",
+          "excerpt": "Classes Fall Semester 2026 Summer Term 2026 Spring Semester 2026 Class # Catalog # Title Days Time (Start-End) Location Syllabus Office Hours Fall Semester 2026 Summer Term 2026 Spring Semester 2026 Day Hours Location Description Connections Child and Adolescent Development Faculty SQ 289A MailDrop: 91330-8263 virginia.",
+          "retrievedAt": "2026-09-07T04:51:31.773Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:52:37.931Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0384": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.chapman.edu/our-faculty/index.aspx"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0384-1",
+          "url": "https://www.chapman.edu/our-faculty/index.aspx",
+          "excerpt": "Chapman University Faculty Directory | Chapman University Skip to main content Section Menu Toggle Section Menu Menu Menu Chapman University Logo Close Off-Canvas Menu Our Faculty Chapman Menu Our Faculty Our Faculty Our Faculty Tenured and Tenure-Track Faculty Faculty By Rank Fellows Mona Shadia Sam Harirforoosh Nicole Rangel Jacob Bohrod Dr.",
+          "retrievedAt": "2026-09-07T04:51:34.436Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0384-2",
+          "url": "https://www.chapman.edu/our-faculty/index.aspx",
+          "excerpt": "Skye Niles Angelina Hicks Kirsten Moore-Sheeley Cole Cook Eva Chengyuan Marya Mazor Dr.",
+          "retrievedAt": "2026-09-07T04:51:34.436Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0384-3",
+          "url": "https://www.chapman.edu/our-faculty/index.aspx",
+          "excerpt": "David Erkens rebecca gold allison fisher Tom Provost Raj Mitra Miki Hayashi Sunrise Changala Richard Harris Marisa S.",
+          "retrievedAt": "2026-09-07T04:51:34.436Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0384-4",
+          "url": "https://www.chapman.edu/our-faculty/index.aspx",
+          "excerpt": "Cianciarulo Kaitlin Peterson Kenneth Lee Vincent Monaco Benjamin Tremblay-Auger Dennis Lam Carrie Nocella Minju Kim Jeanne Behling Faythe Gutierrez Dr.",
+          "retrievedAt": "2026-09-07T04:51:34.436Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0384-5",
+          "url": "https://www.chapman.edu/our-faculty/index.aspx",
+          "excerpt": "Jessica Kim-Gina Christine Araoka Evangeliya Delizonas Robert MacNeil Brian Park Dr.",
+          "retrievedAt": "2026-09-07T04:51:34.436Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0384-6",
+          "url": "https://www.chapman.edu/our-faculty/index.aspx",
+          "excerpt": "Athletics Bookstore and Gift Shop Events Fish Interfaith Center Church Relations Health and Wellness Housing Student Life Research Research Overview Sponsored Projects Services Research Integrity Institutes and Centers Center for Undergraduate Excellence Industry Alliances and Commercialization Graduate Education Support Support Chapman Overview Inspire Campaign Give to Chapman Areas of Giving Donor Communities Get Involved Contact Us » Chapman University Faculty Directory Our faculty is renowned in their fields and distinguished by their excellence in teaching, research, and creative activity.",
+          "retrievedAt": "2026-09-07T04:51:34.436Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0384-7",
+          "url": "https://www.chapman.edu/our-faculty/index.aspx",
+          "excerpt": "Use this searchable directory to find faculty by name, school, other key information found in their biography.",
+          "retrievedAt": "2026-09-07T04:51:34.436Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0384-8",
+          "url": "https://www.chapman.edu/our-faculty/index.aspx",
+          "excerpt": "Search Faculty FILTER BY: Filter By School or College Filter By School or College Attallah College of Educational Studies College of Performing Arts Crean College of Health and Behavioral Sciences Dale E.",
+          "retrievedAt": "2026-09-07T04:51:34.436Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:52:37.931Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0385": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.ccny.cuny.edu/profiles/truong-thao-nguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0385-1",
+          "url": "https://www.ccny.cuny.edu/profiles/truong-thao-nguyen",
+          "excerpt": "ork Orders Employee Timesheets Students Student E-Mail Password Reset Degreeworks / FACTS E-Permit City Central Brightspace search Login About Academics Admissions Research Student Affairs Support CCNY Faculty and Staff profiles &gt; Home / Faculty and Staff Profiles / Truong-Thao Nguyen Truong-Thao Nguyen Associate Professor Main Affiliation Electrical Engineering Additional Departments/Affiliated Programs Computer Engineering Building Steinman Hall Office ST 624 Phone (212) 650-6627 Fax (212) 650-8249 Email tngu&#x79;e&#110;&#x40;c&#99;ny&#x2e;&#99;uny&#46;edu Truong-Thao Nguyen Education Ph.",
+          "retrievedAt": "2026-09-07T04:51:35.095Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0385-2",
+          "url": "https://www.ccny.cuny.edu/profiles/truong-thao-nguyen",
+          "excerpt": ", Electrical Engineering, Princeton University, Princeton, NJ, 1986 Diplôme d'Ingénieur, Electrical Engineering, Ecole Nationale Supérieure des Télécommunications, Paris, France, 1986 Diplôme d'Ingénieur, Ecole Polytechnique, Palaiseau, France, 1984 Courses Taught Digital Signal Processing Research Interests Mathematical analysis of data acquisition: generalized nonuniform sampling (linear but not time-invariant processing), Sigma-Delta modulation (time-invariant but not linear processing).",
+          "retrievedAt": "2026-09-07T04:51:35.095Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0385-3",
+          "url": "https://www.ccny.cuny.edu/profiles/truong-thao-nguyen",
+          "excerpt": "Miśkowicz, \"Bandlimited Signal Reconstruction From Leaky Integrate-and-Fire Encoding Using POCS,\" in IEEE Transactions on Signal Processing, vol.",
+          "retrievedAt": "2026-09-07T04:51:35.095Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0385-4",
+          "url": "https://www.ccny.cuny.edu/profiles/truong-thao-nguyen",
+          "excerpt": "Thao, “Unrestricted (random) products of projections in Hilbert space: Regularity, absolute convergence of trajectories and statistics of displacements,” Pure and Applied Functional Analysis, Volume 8, Number 2, pp.",
+          "retrievedAt": "2026-09-07T04:51:35.095Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0385-5",
+          "url": "https://www.ccny.cuny.edu/profiles/truong-thao-nguyen",
+          "excerpt": "\"Coarse‐arithmetic coordinate descent for the resolution of semidefinite linear systems.",
+          "retrievedAt": "2026-09-07T04:51:35.095Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0385-6",
+          "url": "https://www.ccny.cuny.edu/profiles/truong-thao-nguyen",
+          "excerpt": "Rzepka, \"Time Encoding of Bandlimited Signals: Reconstruction by Pseudo-Inversion and Time-Varying Multiplierless FIR Filtering,\" IEEE Transactions on Signal Processing , vol.",
+          "retrievedAt": "2026-09-07T04:51:35.095Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0385-7",
+          "url": "https://www.ccny.cuny.edu/profiles/truong-thao-nguyen",
+          "excerpt": "Thao, “On the geometry and regularity of invariant sets of piecewise-affine automorphisms on the Euclidean space,” Ergodic Theory and Dynamical Systems , vol.",
+          "retrievedAt": "2026-09-07T04:51:35.095Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0385-8",
+          "url": "https://www.ccny.cuny.edu/profiles/truong-thao-nguyen",
+          "excerpt": "Thao, \"Reconstruction of Signals From Level-Crossing Samples Using Implicit Information,\" IEEE Access , vol.",
+          "retrievedAt": "2026-09-07T04:51:35.095Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:52:37.931Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0386": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.ccny.cuny.edu/profiles/raymond-tu"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0386-1",
+          "url": "https://www.ccny.cuny.edu/profiles/raymond-tu",
+          "excerpt": "ifts 2023-2024 NYS Charitable Tax Contributions Credit CUNY Related Links CUNYfirst Loaner Devices Discrimination and Retaliation Reporting Portal CUNY Accommodate Faculty & Staff Faculty / Staff E-Mail (New Outlook 365) Password Reset Brightspace Content Editor Grants Management System Visual Course Roster Work Orders Employee Timesheets Students Student E-Mail Password Reset Degreeworks / FACTS E-Permit City Central Brightspace search Login About Academics Admissions Research Student Affairs Support CCNY Faculty and Staff profiles &gt; Home / Faculty and Staff Profiles / Raymond Tu Raymond S.",
+          "retrievedAt": "2026-09-07T04:51:35.767Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0386-2",
+          "url": "https://www.ccny.cuny.edu/profiles/raymond-tu",
+          "excerpt": "Tu Professor Main Affiliation Chemical Engineering Areas of Expertise/Research Biomolecules Self-Assembly Interfaces Building Steinman Hall Office T313 Phone (212) 650-7031 Fax (212) 650-6660 Email t&#x75;&#x40;c&#99;ny&#46;&#x63;&#117;ny&#x2e;ed&#x75; Website https://www.",
+          "retrievedAt": "2026-09-07T04:51:35.767Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0386-3",
+          "url": "https://www.ccny.cuny.edu/profiles/raymond-tu",
+          "excerpt": "Tu Profile Raymond Tu received his PhD in chemical engineering from the University of California - Santa Barbara in 2004, studying the design and self-assembly of peptide functionalized molecular architectures.",
+          "retrievedAt": "2026-09-07T04:51:35.767Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0386-4",
+          "url": "https://www.ccny.cuny.edu/profiles/raymond-tu",
+          "excerpt": "He completed a post-doctoral fellowship in 2005 at Georgia Institute of Technology investigating rheological properties of biologically functionalized polymer-based materials.",
+          "retrievedAt": "2026-09-07T04:51:35.767Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0386-5",
+          "url": "https://www.ccny.cuny.edu/profiles/raymond-tu",
+          "excerpt": "Currently, he is an associate professor in the Chemical Engineering Department at The City College of The City University of New York.",
+          "retrievedAt": "2026-09-07T04:51:35.767Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0386-6",
+          "url": "https://www.ccny.cuny.edu/profiles/raymond-tu",
+          "excerpt": "The focus of his research program is the synthesis of surface-active molecular building blocks, which are derived from the combination of elements that direct interfacial assembly with components responsible for selective binding.",
+          "retrievedAt": "2026-09-07T04:51:35.767Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0386-7",
+          "url": "https://www.ccny.cuny.edu/profiles/raymond-tu",
+          "excerpt": "This methodology is proving to be an effective tool for engineering complex composite materials that contain structures with multiple length-scales.",
+          "retrievedAt": "2026-09-07T04:51:35.767Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0386-8",
+          "url": "https://www.ccny.cuny.edu/profiles/raymond-tu",
+          "excerpt": "edu/ Education University of Florida, BS 1998 University of California – Santa Barbara, PhD 2004 Georgia Institute of Technology, PostDoc Publications J ournal ar ti c l es Ortuno Macias, L.",
+          "retrievedAt": "2026-09-07T04:51:35.767Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:52:37.931Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0387": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://ealac.columbia.edu/content/john-phan"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0387-1",
+          "url": "https://ealac.columbia.edu/content/john-phan",
+          "excerpt": "John Phan Skip to main content Skip to primary sidebar Skip to footer ABOUT Greetings from the Department Chair Department History News Affiliates Support Contact EALAC PEOPLE Faculty Administration Graduate Students Recent Alumni PROGRAMS Undergraduate Graduate Language Programs Academic Year 2025-2026 Courses EVENTS SUPPORT Search this website John Phan Associate Professor of Vietnamese Humanities Office: 620 Kent Hall Office Hours: Thursdays, 2-4pm Phone: (212) 854-5744 Email: jp3720@columbia.",
+          "retrievedAt": "2026-09-07T04:51:36.584Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0387-2",
+          "url": "https://ealac.columbia.edu/content/john-phan",
+          "excerpt": "Writing in a Cosmopolitan East Asia EAAS UN3710 Fiction & Film in the Making of Modern Vietnams HSEA GR6300 Vietnamese Studies: Historiography & Methodology Research Interests Language as an historical record, Language ethics through time, Translation, Vietnamese Writing Systems and Vernacular Scripts, Historical Linguistics, Linguistic Contact between China and Vietnam John Phan is a language historian focused on the ways in which the history of spoken language, literary language, and writing systems can reveal social, cultural and political realities of the premodern and early modern worlds.",
+          "retrievedAt": "2026-09-07T04:51:36.584Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0387-3",
+          "url": "https://ealac.columbia.edu/content/john-phan",
+          "excerpt": "His first book, entitled Lost Tongues of the Red River: Annamese Middle Chinese & the Origins of the Vietnames Language, focuses on the history of Sino-Vietic linguistic contact, and is forthcoming from Harvard Asia Center Press.",
+          "retrievedAt": "2026-09-07T04:51:36.584Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0387-4",
+          "url": "https://ealac.columbia.edu/content/john-phan",
+          "excerpt": "His second project focuses on the vernacularization of early modern Vietnamese society, as exemplified by a vigorous practice of translation from Literary Sinitic into vernacular Vietnamese over the 17th -18th centuries, amidst the sociopolitical regionalization of that period.",
+          "retrievedAt": "2026-09-07T04:51:36.584Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0387-5",
+          "url": "https://ealac.columbia.edu/content/john-phan",
+          "excerpt": "In addition to the nature of linguistic contact, and broad issues in linguistic change and historical phonology as they pertain to broader historical issues, he is keenly interested in the cultural and intellectual ramifications of multiple languages coexisting in single East Asian societies, of linguistic pluralism in general, and of the transformation of oral languages into written literary mediums in historically diglossic cultures of East and Southeast Asia.",
+          "retrievedAt": "2026-09-07T04:51:36.584Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0387-6",
+          "url": "https://ealac.columbia.edu/content/john-phan",
+          "excerpt": "Selected Publications “Sesquisyllabicity, Chữ Nôm, and the Early Modern embrace of vernacular writing in Vietnam.",
+          "retrievedAt": "2026-09-07T04:51:36.584Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0387-7",
+          "url": "https://ealac.columbia.edu/content/john-phan",
+          "excerpt": "” In Journal of Chinese Writing Systems, Online First advance version (2020), pp.",
+          "retrievedAt": "2026-09-07T04:51:36.584Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0387-8",
+          "url": "https://ealac.columbia.edu/content/john-phan",
+          "excerpt": "booting the Vernacular in 17th Century Vietnam,” in Rethinking East Asian Languages, Vernaculars, and Literacies, 1000-1919 (Brill, 2014) “Chữ Nôm and the Taming of the South: A Bilingual Defense for Vernacular Writing in the Chỉ Nam Ngọc Âm Giải Nghĩa,” The Journal of Vietnamese Studies (2013) Primary Sidebar People FACULTY All Faculty Professors Lecturers Adjuncts Affiliated Faculty Postdoctoral Fellows Research Scholars Emeritus ADMINISTRATION GRADUATE STUDENTS PhD Students Master&#8217;s Students RECENT ALUMNI Before Footer EALAC &#8211; Columbia University 407 Kent Hall 1140 Amsterdam Ave.",
+          "retrievedAt": "2026-09-07T04:51:36.584Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:52:37.931Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0388": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://ealac.columbia.edu/chung-nguyen/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0388-1",
+          "url": "https://ealac.columbia.edu/chung-nguyen/",
+          "excerpt": "Phuong Chung Nguyen Skip to main content Skip to primary sidebar Skip to footer ABOUT Greetings from the Department Chair Department History News Affiliates Support Contact EALAC PEOPLE Faculty Administration Graduate Students Recent Alumni PROGRAMS Undergraduate Graduate Language Programs Academic Year 2025-2026 Courses EVENTS SUPPORT Search this website Phuong Chung Nguyen Senior Lecturer in Vietnamese, Director of the Vietnamese Language Program Office: 502-A Kent Hall Office Hours: T 4:00–6:00 PM Email: cn2496@columbia.",
+          "retrievedAt": "2026-09-07T04:51:36.868Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0388-2",
+          "url": "https://ealac.columbia.edu/chung-nguyen/",
+          "excerpt": "noi University Classes Taught VIET UN1101 & UN1102 First Year Vietnamese VIET UN2201& UN2202 Second Year Vietnamese VIET UN3301 & 3302 Third Year Vietnamese VIET GU4401 & 4402 Mixed Advanced Vietnamese Research Interests Vietnamese Language Pedagogy Vietnamese for Special Purposes Materials Development Language Testing and Assessment Task-Based Language Teaching (TBLT) Heritage Vietnamese Language Education Phuong Chung Nguyen began her teaching career at Hanoi University, where she taught Vietnamese and English and developed instructional materials for international students and professionals.",
+          "retrievedAt": "2026-09-07T04:51:36.868Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0388-3",
+          "url": "https://ealac.columbia.edu/chung-nguyen/",
+          "excerpt": "She later served as Vietnamese Language Coordinator for the Post Language Program at the U.",
+          "retrievedAt": "2026-09-07T04:51:36.868Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0388-4",
+          "url": "https://ealac.columbia.edu/chung-nguyen/",
+          "excerpt": "Embassy in Hanoi, directing intensive Vietnamese language training for diplomats and overseeing curriculum development and assessment.",
+          "retrievedAt": "2026-09-07T04:51:36.868Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0388-5",
+          "url": "https://ealac.columbia.edu/chung-nguyen/",
+          "excerpt": "She is currently Senior Lecturer in Vietnamese and Director of the Vietnamese Language Program at Columbia University.",
+          "retrievedAt": "2026-09-07T04:51:36.868Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0388-6",
+          "url": "https://ealac.columbia.edu/chung-nguyen/",
+          "excerpt": "Her work focuses on curriculum design, proficiency-based instruction, and innovative approaches to Vietnamese language teaching, including task-based pedagogy and technology-enhanced learning.",
+          "retrievedAt": "2026-09-07T04:51:36.868Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0388-7",
+          "url": "https://ealac.columbia.edu/chung-nguyen/",
+          "excerpt": "An Integrated Approach to Contextual Pronunciation Teaching and Listening Comprehension in Vietnamese: A Case Study at Columbia University .",
+          "retrievedAt": "2026-09-07T04:51:36.868Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0388-8",
+          "url": "https://ealac.columbia.edu/chung-nguyen/",
+          "excerpt": "Primary Sidebar People FACULTY All Faculty Professors Lecturers Adjuncts Affiliated Faculty Postdoctoral Fellows Research Scholars Emeritus ADMINISTRATION GRADUATE STUDENTS PhD Students Master&#8217;s Students RECENT ALUMNI Before Footer EALAC &#8211; Columbia University 407 Kent Hall 1140 Amsterdam Ave.",
+          "retrievedAt": "2026-09-07T04:51:36.868Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:52:37.931Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0389": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://vivo.weill.cornell.edu/display/cwid-qat9001"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0389-1",
+          "url": "https://vivo.weill.cornell.edu/display/cwid-qat9001",
+          "excerpt": "--> VIVO Weill Cornell Medical College Index Log in Search form Home People Organizations Research Support Quynh A.",
+          "retrievedAt": "2026-09-07T04:51:38.144Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0389-2",
+          "url": "https://vivo.weill.cornell.edu/display/cwid-qat9001",
+          "excerpt": "Truong Professor of Radiology Affiliation Publications Background Contact External Relationships Professor of Medicine , Medicine , Weill Cornell Medical College 2020 - Professor of Radiology , Radiology , Weill Cornell Medical College 2020 - Publications Sort by Newest Oldest Times Cited Publication Type Journal Name Co-Author Network selected publications Postpartum ovarian vein thrombosis: Report of 2 cases and review of diagnosis.",
+          "retrievedAt": "2026-09-07T04:51:38.145Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0389-3",
+          "url": "https://vivo.weill.cornell.edu/display/cwid-qat9001",
+          "excerpt": "2025 Article GET IT ACC/AHA/ASE/HFSA/HRS/SCAI/SCCT/SCMR 2025 Appropriate Use Criteria for Implantable Cardioverter-Defibrillators, Cardiac Resynchronization Therapy, and Pacing.",
+          "retrievedAt": "2026-09-07T04:51:38.145Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0389-4",
+          "url": "https://vivo.weill.cornell.edu/display/cwid-qat9001",
+          "excerpt": "2025 Information Resource GET IT Times cited: 61 Management of Adults With Anomalous Aortic Origin of the Coronary Arteries: State-of-the-Art Review.",
+          "retrievedAt": "2026-09-07T04:51:38.145Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0389-5",
+          "url": "https://vivo.weill.cornell.edu/display/cwid-qat9001",
+          "excerpt": "2023 Information Resource GET IT Times cited: 49 Management of Adults With Anomalous Aortic Origin of the Coronary Arteries: State-of-the-Art Review.",
+          "retrievedAt": "2026-09-07T04:51:38.145Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0389-6",
+          "url": "https://vivo.weill.cornell.edu/display/cwid-qat9001",
+          "excerpt": "formation Resource GET IT Times cited: 15 Standardized Medical Terminology for Cardiac Computed Tomography 2023 Update: An Expert Consensus Document of the Society of Cardiovascular Computed Tomography (SCCT), American Association of Physicists in Medicine (AAPM), American College of Radiology (ACR), North American Society for Cardiovascular Imaging (NASCI), and Radiological Society of North America (RSNA) with endorsement by the Asian Society of Cardiovascular Imaging (ASCI), the European Association of Cardiovascular Imaging (EACI), and the European Society of Cardiovascular Radiology (ESCR).",
+          "retrievedAt": "2026-09-07T04:51:38.145Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0389-7",
+          "url": "https://vivo.weill.cornell.edu/display/cwid-qat9001",
+          "excerpt": "023 Academic Article GET IT Times cited: 5 Standardized medical terminology for cardiac computed tomography 2023 update: An Expert Consensus Document of the Society of Cardiovascular Computed Tomography (SCCT), American Association of Physicists in Medicine (AAPM), American College of Radiology (ACR), North American Society for Cardiovascular Imaging (NASCI) and Radiological Society of North America (RSNA) with endorsement by the Asian Society of Cardiovascular Imaging (ASCI), the European Association of Cardiovascular Imaging (EACI), and the European Society of Cardiovascular Radiology (ESCR).",
+          "retrievedAt": "2026-09-07T04:51:38.145Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0389-8",
+          "url": "https://vivo.weill.cornell.edu/display/cwid-qat9001",
+          "excerpt": "0: Changes, challenges and considerations for implementation-commentary by North American Society of Cardiovascular Imaging (NASCI).",
+          "retrievedAt": "2026-09-07T04:51:38.145Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:52:37.931Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0390": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.depaul.edu/faculty/hai-tran"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0390-1",
+          "url": "https://www.depaul.edu/faculty/hai-tran",
+          "excerpt": "Hai Tran | DePaul University - Chicago, IL Skip to main content Request Info Apply Search Menu DePaul University Faculty And Staff Di… Hai Tran Hai Tran College of Communication Journalism Digital Communication and Media Arts Communication and Technology Associate Professor Faculty Full Time Degrees PhD (University of North Carolina, Chapel Hill) Contact htran10@depaul.",
+          "retrievedAt": "2026-09-07T04:51:38.674Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0390-2",
+          "url": "https://www.depaul.edu/faculty/hai-tran",
+          "excerpt": "He teaches graduate and undergraduate courses in multimedia storytelling, data journalism, news production, and international reporting.",
+          "retrievedAt": "2026-09-07T04:51:38.674Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0390-3",
+          "url": "https://www.depaul.edu/faculty/hai-tran",
+          "excerpt": "Hai creates experiential, project-based learning opportunities for his students through sustained collaboration with the Center for Strategic and International Studies (a D.",
+          "retrievedAt": "2026-09-07T04:51:38.674Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0390-4",
+          "url": "https://www.depaul.edu/faculty/hai-tran",
+          "excerpt": "-based bipartisan think tank) in the CSIS Journalism Bootcamp program and with his Global Learning Experience partner from Yonsei University in Seoul.",
+          "retrievedAt": "2026-09-07T04:51:38.674Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0390-5",
+          "url": "https://www.depaul.edu/faculty/hai-tran",
+          "excerpt": "His research covers an eclectic mix of topics, including the science of communicating evidence, multimedia effects, online agenda setting, journalism studies, and research methodology.",
+          "retrievedAt": "2026-09-07T04:51:38.674Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0390-6",
+          "url": "https://www.depaul.edu/faculty/hai-tran",
+          "excerpt": "He is the author of Data and Narrative in News Media , a solo book featured in the Routledge Focus on Journalism Studies series.",
+          "retrievedAt": "2026-09-07T04:51:38.674Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0390-7",
+          "url": "https://www.depaul.edu/faculty/hai-tran",
+          "excerpt": "A recipient of multiple “Top Paper\" awards, Hai publishes in flagship mass communication journals (e.",
+          "retrievedAt": "2026-09-07T04:51:38.674Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0390-8",
+          "url": "https://www.depaul.edu/faculty/hai-tran",
+          "excerpt": ", Journalism & Mass Communication Quarterly , Media Psychology, Journalism Studies , Journal of Advertising Research ) and contributes to other publications by leading international providers of academic content (e.",
+          "retrievedAt": "2026-09-07T04:51:38.674Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:52:37.931Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0391": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://psychology.ecu.edu/tran/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0391-1",
+          "url": "https://psychology.ecu.edu/tran/",
+          "excerpt": "bstitution Form General Inquiries Graduate Programs Graduate Programs Application Instructions Clinical Health Psychology Occupational Health Psychology Pediatric School Psychology Industrial/Organizational Psychology Quantitative Methods School Psychology (MA/SSP) Psychology Clinic Psychology Clinic Information Appointments Supervising Faculty & Staff Psychology Clinic FAQs Clinical Services Training & Facilities Resources Directions & Parking Support Online Tuan Tran, PhD Associate Professor Neuroscience Program Director Director of Undergraduate Research | REDE Office: Rawl 225 | Phone: 252.",
+          "retrievedAt": "2026-09-07T04:51:38.995Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0391-2",
+          "url": "https://psychology.ecu.edu/tran/",
+          "excerpt": "earch Council Faculty of the STEM Center&#8217;s Summer Ventures in Science and Mathematics Program President and Treasurer | Eastern Carolina Chapter of the Society for Neuroscience Adjunct Faculty, Department of Anatomy and Cell Biology Adjunct Faculty, Department of Pharmacology & Toxicology Psychology Department Graduate Faculty Faculty Advisor, Neuroscience Student Association Research Agenda Behavioral Neuroscience | Developmental Psychobiology | Learning & Memory | Quantitative Neuroanatomy My research involves studying rodent models of neurodevelopmental and neurodegenerative disorders.",
+          "retrievedAt": "2026-09-07T04:51:38.995Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0391-3",
+          "url": "https://psychology.ecu.edu/tran/",
+          "excerpt": "My lab uses behavioral tests that assess cognitive function and neuroanatomical techniques that measure brain changes.",
+          "retrievedAt": "2026-09-07T04:51:38.995Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0391-4",
+          "url": "https://psychology.ecu.edu/tran/",
+          "excerpt": "Altogether, I incorporate methodological approaches that may provide better understanding of brain-behavior relationships (i.",
+          "retrievedAt": "2026-09-07T04:51:38.995Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0391-5",
+          "url": "https://psychology.ecu.edu/tran/",
+          "excerpt": "In one line of research, I study fetal alcohol spectrum disorders (FASDs), which includes fetal alcohol syndrome (FAS) and other maternal alcohol-related deficits.",
+          "retrievedAt": "2026-09-07T04:51:38.995Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0391-6",
+          "url": "https://psychology.ecu.edu/tran/",
+          "excerpt": "Currently, I am examining whether early alcohol exposure in rodents leads to learning deficits as measured by eyeblink classical conditioning, the most well-studied form of associative learning in mammalian neuroscience.",
+          "retrievedAt": "2026-09-07T04:51:38.995Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0391-7",
+          "url": "https://psychology.ecu.edu/tran/",
+          "excerpt": "I also use the Morris water maze task to assess spatial and non-spatial learning/memory.",
+          "retrievedAt": "2026-09-07T04:51:38.995Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0391-8",
+          "url": "https://psychology.ecu.edu/tran/",
+          "excerpt": "To determine whether the early alcohol insult also results in brain dysfunction that correlates with the behavioral deficits, I use a variety of histological, histochemical, and morphometric techniques.",
+          "retrievedAt": "2026-09-07T04:51:38.995Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:52:37.931Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0392": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://scholarscommons.fgcu.edu/esploro/profile/long_nguyen"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:52:37.931Z",
+      "nextAction": "Retry fetching Florida Gulf Coast University profile or discover alternate official faculty page."
     },
     "vp-0393": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://case.fiu.edu/about/directory/profiles/pham-andy.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0393-1",
+          "url": "https://case.fiu.edu/about/directory/profiles/pham-andy.html",
+          "excerpt": "dy Pham Event Resources + Support Advancement Resources Academics Advising Research Opportunities News & Events Give Close Search this website SEARCH Quick Links Phonebook Parking & Transportation Wellness & Recreation Centers Campus Maps Libraries Wi-Fi/Internet Access University Calendar Dining & Shopping Course Catalog FIU Police Bookstore A to Z Index Resources Future Students & Parents Current Students Faculty & Staff Home / About / Directory / Andy Pham Andy Pham Professor; Director, EdS in School Psychology Counseling, Recreation and School Psychology Phone 305-348-3199 Email avpham@fiu.",
+          "retrievedAt": "2026-09-07T04:51:39.868Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0393-2",
+          "url": "https://case.fiu.edu/about/directory/profiles/pham-andy.html",
+          "excerpt": "Pham is Professor and Program Director of the School Psychology Program at Florida International University.",
+          "retrievedAt": "2026-09-07T04:51:39.868Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0393-3",
+          "url": "https://case.fiu.edu/about/directory/profiles/pham-andy.html",
+          "excerpt": "After completing an APA-accredited predoctoral internship at Virginia Beach City Public Schools, Dr.",
+          "retrievedAt": "2026-09-07T04:51:39.868Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0393-4",
+          "url": "https://case.fiu.edu/about/directory/profiles/pham-andy.html",
+          "excerpt": "Pham was a postdoctoral fellow in child neuropsychology at New York University Child Study Center, where he was also clinical instructor in the Department of Child and Adolescent Psychiatry.",
+          "retrievedAt": "2026-09-07T04:51:39.868Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0393-5",
+          "url": "https://case.fiu.edu/about/directory/profiles/pham-andy.html",
+          "excerpt": "Pham is a certified school psychologist in the state of Florida and is a nationally certified school psychologist (NCSP).",
+          "retrievedAt": "2026-09-07T04:51:39.868Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0393-6",
+          "url": "https://case.fiu.edu/about/directory/profiles/pham-andy.html",
+          "excerpt": "His teaching interests include professional issues in school psychology and academic assessment.",
+          "retrievedAt": "2026-09-07T04:51:39.868Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0393-7",
+          "url": "https://case.fiu.edu/about/directory/profiles/pham-andy.html",
+          "excerpt": "Pham has conducted research examining how neurocognitive and sociocultural factors influence academic and mental health outcomes of diverse children.",
+          "retrievedAt": "2026-09-07T04:51:39.868Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0393-8",
+          "url": "https://case.fiu.edu/about/directory/profiles/pham-andy.html",
+          "excerpt": "His work has been published in top journals including &#160; Review of Educational Research, School Psychology Review, Journal of Cross-Cultural Psychology, Current Psychiatry Reports, &#160; and others.",
+          "retrievedAt": "2026-09-07T04:51:39.868Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:52:37.931Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0394": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://medicine.fiu.edu/about/faculty-and-staff/profiles/tom-nguyen-m.d.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0394-1",
+          "url": "https://medicine.fiu.edu/about/faculty-and-staff/profiles/tom-nguyen-m.d.html",
+          "excerpt": "| FIU Herbert Wertheim College of Medicine Skip to Main Content Florida International University Search Menu About Overview From the Dean Accreditation Directory Admin Offices Departments Mission, Vision and Values News Events NeighborhoodHELP Strategic Plan Academics Overview Doctor of Medicine (M.",
+          "retrievedAt": "2026-09-07T04:51:40.158Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0394-2",
+          "url": "https://medicine.fiu.edu/about/faculty-and-staff/profiles/tom-nguyen-m.d.html",
+          "excerpt": ") Master in Physician Assistant Studies (MPAS) Residencies & Fellowships Combined Degree Programs Ph.",
+          "retrievedAt": "2026-09-07T04:51:40.159Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0394-3",
+          "url": "https://medicine.fiu.edu/about/faculty-and-staff/profiles/tom-nguyen-m.d.html",
+          "excerpt": "in Biomedical Science Graduate Certificate in Molecular & Biomedical Sciences Pre-med Programs Graduate Medical Education Continuing Medical Education International Medical Student Program Research Overview Labs Funding Information Benjamin León, Jr.",
+          "retrievedAt": "2026-09-07T04:51:40.159Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0394-4",
+          "url": "https://medicine.fiu.edu/about/faculty-and-staff/profiles/tom-nguyen-m.d.html",
+          "excerpt": "Summer Research Fellowship Program Leadership Lecture Series Annual Research Symposium Resources Overview Medical Library Current Students Financial Assistance Faculty Albert & Debbie Taño Medical Simulation Center Employees Marketing Request Form Career Opportunities Media Inquiries Giving Overview Alumni Network Staff Patient Care News Overview Latest News FIU Medicine Magazine Media Contacts Close Home About Overview From the Dean Accreditation Directory Admin Offices Departments Mission, Vision and Values News Events NeighborhoodHELP Strategic Plan Academics Overview Doctor of Medicine (M.",
+          "retrievedAt": "2026-09-07T04:51:40.159Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0394-5",
+          "url": "https://medicine.fiu.edu/about/faculty-and-staff/profiles/tom-nguyen-m.d.html",
+          "excerpt": ") Master in Physician Assistant Studies (MPAS) Residencies & Fellowships Combined Degree Programs Ph.",
+          "retrievedAt": "2026-09-07T04:51:40.159Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0394-6",
+          "url": "https://medicine.fiu.edu/about/faculty-and-staff/profiles/tom-nguyen-m.d.html",
+          "excerpt": "in Biomedical Science Graduate Certificate in Molecular & Biomedical Sciences Pre-med Programs Graduate Medical Education Continuing Medical Education International Medical Student Program Research Overview Labs Funding Information Benjamin León, Jr.",
+          "retrievedAt": "2026-09-07T04:51:40.159Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0394-7",
+          "url": "https://medicine.fiu.edu/about/faculty-and-staff/profiles/tom-nguyen-m.d.html",
+          "excerpt": "Assistance Faculty Albert & Debbie Taño Medical Simulation Center Employees Marketing Request Form Career Opportunities Media Inquiries Giving Overview Alumni Network Staff Patient Care News Overview Latest News FIU Medicine Magazine Media Contacts Close Search this website SEARCH Quick Links Phonebook Parking & Transportation Wellness & Recreation Centers Campus Maps Libraries Wi-Fi/Internet Access University Calendar Dining & Shopping Course Catalog FIU Police Bookstore A to Z Index Resources Future Students & Parents Current Students Faculty & Staff Home / About / Directory / Tom Nguyen, M.",
+          "retrievedAt": "2026-09-07T04:51:40.159Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0394-8",
+          "url": "https://medicine.fiu.edu/about/faculty-and-staff/profiles/tom-nguyen-m.d.html",
+          "excerpt": "Professor Chair Department of Cardiovascular Sciences Phone 305-348-9280 Email tonguyen@fiu.",
+          "retrievedAt": "2026-09-07T04:51:40.159Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:52:37.931Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0395": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://schar.gmu.edu/profiles/apham16"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://schar.gmu.edu/profiles/apham16: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T04:52:37.931Z",
+      "nextAction": "Retry fetching George Mason University Schar School profile or discover alternate official faculty page."
     },
     "vp-0396": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://english.gmu.edu/people/tnguy265"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0396-1",
+          "url": "https://english.gmu.edu/people/tnguy265",
+          "excerpt": "--> English | Faculty and Staff: Michelle Tram Nguyen We use cookies and similar technologies to improve your website experience and help us understand how you use our website.",
+          "retrievedAt": "2026-09-07T04:51:40.906Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0396-2",
+          "url": "https://english.gmu.edu/people/tnguy265",
+          "excerpt": "Minors Composition Program Courses English Folklore Linguistics Internships For Students Seeking Internships About ENGH 459/504 For Faculty People Research News Events Give Apply Contact Subscribe Current Graduate Students Current Undergraduates Prospective Graduate Students Alumni & Friends Current Graduate Students Current Undergraduates Prospective Graduate Students Alumni & Friends Give Apply Contact Subscribe Faculty and Staff All Faculty All Faculty Full-time Tenure-line Part-time Research Affiliate Emeritus Staff Graduate Assistants Contact Information and Office Hours General inquiries?",
+          "retrievedAt": "2026-09-07T04:51:40.906Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0396-3",
+          "url": "https://english.gmu.edu/people/tnguy265",
+          "excerpt": "edu Michelle Tram Nguyen Michelle Tram Nguyen Assistant Professor Writing and Rhetoric: Multilingual Writing, Digital Literacy, Inclusive and Trauma-Informed Pedagogies Ph.",
+          "retrievedAt": "2026-09-07T04:51:40.906Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0396-4",
+          "url": "https://english.gmu.edu/people/tnguy265",
+          "excerpt": "Applied Linguistics and TESOL, Minnesota State University, Mankato Office Hours (In-person or Zoom) : Tuesdays & Thursdays 9:00 -10:00 am ET Mondays: 4:00 - 5:00 pm ET By appointment.",
+          "retrievedAt": "2026-09-07T04:51:40.906Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0396-5",
+          "url": "https://english.gmu.edu/people/tnguy265",
+          "excerpt": "1160 Personal Pronouns she/her/hers Affiliations English Summer 2026 Classes ENGH 101-102: Composition 10:30 AM to 12:15 PM T Hybrid ENGH 101-103: Composition 01:30 PM to 03:15 PM T Hybrid Fall 2026 Classes ENGH 100-005: Composition Multilingl Writers 10:30 AM to 12:20 PM TR ENGH 100-006: Composition Multilingl Writers 01:30 PM to 03:20 PM TR ENGH 100-007: Composition Multilingl Writers 04:30 PM to 06:20 PM TR Is this you?",
+          "retrievedAt": "2026-09-07T04:51:40.906Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0396-6",
+          "url": "https://english.gmu.edu/people/tnguy265",
+          "excerpt": "English --> --> --> --> --> --> --> --> --> 4400 University Drive, 3E4 Fairfax, VA 22030 Contact us Horizon Hall, Room 4200 +1-703-993-1160 +1-703-993-1161 english@gmu.",
+          "retrievedAt": "2026-09-07T04:51:40.906Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:52:37.931Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0397": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://spea.indiana.edu/faculty-research/directory/profiles/faculty/full-time/tran-anh.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0397-1",
+          "url": "https://spea.indiana.edu/faculty-research/directory/profiles/faculty/full-time/tran-anh.html",
+          "excerpt": "Learning Civic Leaders Center Director’s Welcome Rising Leaders Program Sample Itinerary NextGeneration Leadership Network O’Neill Leadership Program Washington Leadership Program Courses & Faculty Estimated Costs Honors Program Student Spotlights Required Internship Accelerated Graduate Degree Pathways Accelerated Master's Program O'Neill + Maurer JD How to Apply Current IU Bloomington Students High School Students Transfer students Second Undergraduate Degree Cost & Financial Aid O’Neill Scholarships Non-O’Neill Funding Opportunities Contact & Visit Masters Experiential Learning Why O’Neill?",
+          "retrievedAt": "2026-09-07T04:51:41.284Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0397-2",
+          "url": "https://spea.indiana.edu/faculty-research/directory/profiles/faculty/full-time/tran-anh.html",
+          "excerpt": "Leadership Seminar Series Capstone Mission and Goals Student Honor Code Military & Veteran Community Degrees & Certificates Master of Public Affairs (MPA) Core Curriculum Concentrations Washington, D.",
+          "retrievedAt": "2026-09-07T04:51:41.284Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0397-3",
+          "url": "https://spea.indiana.edu/faculty-research/directory/profiles/faculty/full-time/tran-anh.html",
+          "excerpt": "acobs Students For Doctoral Students Online Programs Dual Degree Programs Certificates Compare Degrees How to Apply Cost & Financial Aid Fellowships & Financial Resources O’Neill Leadership Program Environmental Justice Fellows Prior Professional Experience Benefits Volunteer Benefits & Programs AmeriCorps Peace Corps Teach for America Military and Veteran Benefits Funding for Current Students Funding for International Students Federal Financial Aid Contact & Visit Experience Day Virtual Sessions & Webinars O'Neill Visits You Schedule a Visit Connect with a Current Student Doctoral Why O'Neill?",
+          "retrievedAt": "2026-09-07T04:51:41.284Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0397-4",
+          "url": "https://spea.indiana.edu/faculty-research/directory/profiles/faculty/full-time/tran-anh.html",
+          "excerpt": "in Public Affairs Environmental Policy Public Finance Public Management Public Policy Analysis Ph.",
+          "retrievedAt": "2026-09-07T04:51:41.284Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0397-5",
+          "url": "https://spea.indiana.edu/faculty-research/directory/profiles/faculty/full-time/tran-anh.html",
+          "excerpt": "in Environmental Science How to Apply Student Funding Environmental Science Funding Public Affairs Funding Brass Fellowship in Public Affairs Roy W.",
+          "retrievedAt": "2026-09-07T04:51:41.284Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0397-6",
+          "url": "https://spea.indiana.edu/faculty-research/directory/profiles/faculty/full-time/tran-anh.html",
+          "excerpt": "Shin Fellowship On the Job Market Recent Placements Current Students Dissertations Contact Online About Why O’Neill ?",
+          "retrievedAt": "2026-09-07T04:51:41.284Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0397-7",
+          "url": "https://spea.indiana.edu/faculty-research/directory/profiles/faculty/full-time/tran-anh.html",
+          "excerpt": "xecutive Faculty & Research Faculty Directory Research Research Areas Laboratories Centers & Initiatives Speaker Series Journals & Books Career Services For Students Undergraduate Students Internships Career Outcomes Graduate Students Career Coaching Internships Career Outcomes For Alumni For Employers Our Team Student Life Life at O’Neill Life in Bloomington Precollege Programs For International Students Resilience and Wellbeing Initiative O’Neill International Leadership Opportunities Student Organizations Virtual Tour About Dean’s Welcome Leadership Strategic Goals and Progress About Paul H.",
+          "retrievedAt": "2026-09-07T04:51:41.284Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0397-8",
+          "url": "https://spea.indiana.edu/faculty-research/directory/profiles/faculty/full-time/tran-anh.html",
+          "excerpt": "O’Neill Center for Leadership in Public Service Environment, Climate, and Sustainability Mission, Vision, and Values Rankings School Profile Global and International Partnerships Vietnam Initiatives Vietnam Young Leaders Award Belonging, Engagement, and Success Resources & Services Bloomington & Indianapolis Careers at O'Neill Administration & Staff Directory Dean’s Council Executives in Residence History Alumni & Giving Contact Events News IU Indy Current Students Paul H.",
+          "retrievedAt": "2026-09-07T04:51:41.284Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:52:37.931Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0398": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://eskenazi.indiana.edu/faculty/directory/vo-hoa.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0398-1",
+          "url": "https://eskenazi.indiana.edu/faculty/directory/vo-hoa.html",
+          "excerpt": "d Hall Fabrication Lab Wood and Metal Shop Columbus Fabrication Lab ArtShop at the Eskenazi School Museums + Libraries Centers and Collections Eskenazi Technology and Innovation Lab (ETIL) Members Research Center for Innovative Merchandising ServeDesign Center Sage Collection Accreditation History Careers/Opportunities Community and Student Success CASS Committee Cultivate and Create Scholarship Community Impact Fund Kudos Corner Canvas of Care Series Emergency Preparedness Staff Directory Contact Faculty Leadership Faculty Directory Faculty Research Undergraduate Majors Comprehensive Design B.",
+          "retrievedAt": "2026-09-07T04:51:41.678Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0398-2",
+          "url": "https://eskenazi.indiana.edu/faculty/directory/vo-hoa.html",
+          "excerpt": "Minors Creative Core How to Apply Laptop Requirement Scholarships + Financial Aid Visit/Contact Us Graduate M.",
+          "retrievedAt": "2026-09-07T04:51:41.678Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0398-3",
+          "url": "https://eskenazi.indiana.edu/faculty/directory/vo-hoa.html",
+          "excerpt": "(Accelerated Master's Program) How to Apply Graduate Student Funding Schedule a Visit Current Students Career Preparation Student Organizations Student Resources Curricular Forms Independent Study Application Undergraduate Teaching Assistant/Intern (UTA/UTIN) Application Academic Advising Career Advising + Internships Talk to a Career Advisor Student Emergency Relief Fund Eskenazi School Student Emergency Relief Fund Application Applying to the B.",
+          "retrievedAt": "2026-09-07T04:51:41.678Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0398-4",
+          "url": "https://eskenazi.indiana.edu/faculty/directory/vo-hoa.html",
+          "excerpt": "Application Scholarships + Awards Studio Art Thesis Exhibitions Graduation Eskenazi Ambassadors Student Special Project Fund Overseas Study Programs Exhibitions Grunwald Gallery Archive 2026 2025 2024 2023 2022 2021 2020 2019 2018 2017 2016 2015 2014 2013 2012 Miller M.",
+          "retrievedAt": "2026-09-07T04:51:41.678Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0398-5",
+          "url": "https://eskenazi.indiana.edu/faculty/directory/vo-hoa.html",
+          "excerpt": "Arch Gallery Archive Sage Collection Archive News 2026 2025 2024 2023 2022 News Archive 2021 2020 2019 2018 2017 2016 2015 Vision: the Eskenazi School's annual report Vision 2025-26 Vision 2024–25 Vision 2023-24 Vision 2022-23 Vision 2021-22 Vision 2020–21 Vision 2018–19 Events Speaker Series McKinney Visiting Artist Series Archive 2025-2026 2024-2025 2023-2024 2022-2023 2021–2022 2020–2021 2019–2020 2018–2019 2017–2018 2016–2017 2015–2016 Miller M.",
+          "retrievedAt": "2026-09-07T04:51:41.678Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0398-6",
+          "url": "https://eskenazi.indiana.edu/faculty/directory/vo-hoa.html",
+          "excerpt": "ts 2020-2021 Events 2019-2020 Events 2018-2019 Events 2017-2018 Events 2016-2017 Events Alumni Alumni Excellence Awards Alumni Connect Giving Connect Contact Us Staff Directory Community + Collaboration Eskenazi School of Art, Architecture + Design Home About Areas and Programs Facilities Centers and Collections Accreditation History Careers/Opportunities Community and Student Success Emergency Preparedness Staff Directory Contact Faculty Leadership Faculty Directory Faculty Research Undergraduate Majors Minors Creative Core How to Apply Scholarships + Financial Aid Visit/Contact Us Graduate M.",
+          "retrievedAt": "2026-09-07T04:51:41.678Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0398-7",
+          "url": "https://eskenazi.indiana.edu/faculty/directory/vo-hoa.html",
+          "excerpt": "(Accelerated Master's Program) How to Apply Graduate Student Funding Schedule a Visit Current Students Career Preparation Student Organizations Student Resources Overseas Study Programs Exhibitions Grunwald Gallery Miller M.",
+          "retrievedAt": "2026-09-07T04:51:41.678Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0398-8",
+          "url": "https://eskenazi.indiana.edu/faculty/directory/vo-hoa.html",
+          "excerpt": "Arch Gallery Sage Collection News 2026 2025 2024 2023 2022 News Archive Vision: the Eskenazi School's annual report Events Speaker Series Special Events Alumni Alumni Excellence Awards Alumni Connect Giving Connect Home Faculty Faculty Directory Hoa Vo Hoa Vo Assistant Professor, Interior Design Pronouns: she/her/hers Email: &#104;&#111;&#97;&#118;&#111;&#64;&#105;&#117;&#46;&#101;&#100;&#117; Website: https://www.",
+          "retrievedAt": "2026-09-07T04:51:41.678Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:52:37.931Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0399": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://catalog.iastate.edu/faculty/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0399-1",
+          "url": "https://catalog.iastate.edu/faculty/",
+          "excerpt": "gistration and Policies Registration Academics Exchange Programs and Study Abroad Academic Conduct Academic Standing Tuition and Fees Index Download Apply Now &raquo; Undergraduate Majors, Certificates, Minors Four Year Plan Innovate at Iowa State Graduate Graduate College Programs, Certificates, Minors Veterinary Medicine A-Z Courses Registration and Policies Registration Academics Exchange Programs and Study Abroad Academic Conduct Academic Standing Tuition and Fees Index Schedule of Classes University Homepage Archive Faculty List Apply Now &raquo; Search Iowa State Faculty Select a section.",
+          "retrievedAt": "2026-09-07T04:51:42.500Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0399-2",
+          "url": "https://catalog.iastate.edu/faculty/",
+          "excerpt": "Catalog Home &gt; Iowa State Faculty A ABARCA, SAUL Assistant Teaching Professor of Horticulture.",
+          "retrievedAt": "2026-09-07T04:51:42.500Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0399-3",
+          "url": "https://catalog.iastate.edu/faculty/",
+          "excerpt": "ABBOTT, ERIC ALAN Emeritus Professor of Greenlee School of Journalism and Communication.",
+          "retrievedAt": "2026-09-07T04:51:42.500Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0399-4",
+          "url": "https://catalog.iastate.edu/faculty/",
+          "excerpt": "ABEL, CRAIG Affiliate Professor of Plant Pathology, Entomology, and Microbiology.",
+          "retrievedAt": "2026-09-07T04:51:42.500Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0399-5",
+          "url": "https://catalog.iastate.edu/faculty/",
+          "excerpt": "Emeritus Associate Professor of Civil, Construction, and Environmental Engineering.",
+          "retrievedAt": "2026-09-07T04:51:42.500Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0399-6",
+          "url": "https://catalog.iastate.edu/faculty/",
+          "excerpt": "ADELMAN, JAMES STEPHEN Affiliate Assistant Professor of Natural Resource Ecology and Management.",
+          "retrievedAt": "2026-09-07T04:51:42.500Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0399-7",
+          "url": "https://catalog.iastate.edu/faculty/",
+          "excerpt": "AHAMED, MD MARUF Assistant Teaching Professor of Electrical and Computer Engineering.",
+          "retrievedAt": "2026-09-07T04:51:42.500Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0399-8",
+          "url": "https://catalog.iastate.edu/faculty/",
+          "excerpt": "AHMAD, ARSALAN Research Associate Professor of Electrical and Computer Engineering.",
+          "retrievedAt": "2026-09-07T04:51:42.500Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:52:37.931Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0400": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://scholars.lmu.edu/en/persons/lan-ngo/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0400-1",
+          "url": "https://scholars.lmu.edu/en/persons/lan-ngo/",
+          "excerpt": "Lan Ngo - Loyola Marymount University Skip to main navigation Skip to search Skip to main content Loyola Marymount University Home Learn more about Scholars &#64; LMU Link opens in a new tab Search content at Loyola Marymount University Home Profiles Departments Research Outputs Projects Activities Prizes Courses Lan Ngo, S.",
+          "retrievedAt": "2026-09-07T04:51:42.964Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0400-2",
+          "url": "https://scholars.lmu.edu/en/persons/lan-ngo/",
+          "excerpt": "Clinical Assistant Professor , Asian and Asian American Studies Overview Research Outputs (5) Personal profile About Lân A.",
+          "retrievedAt": "2026-09-07T04:51:42.964Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0400-3",
+          "url": "https://scholars.lmu.edu/en/persons/lan-ngo/",
+          "excerpt": "He has been a professor of history in the Department of Asian and Asian-American Studies at Loyola Marymount University since 2018.",
+          "retrievedAt": "2026-09-07T04:51:42.964Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0400-4",
+          "url": "https://scholars.lmu.edu/en/persons/lan-ngo/",
+          "excerpt": "His research, featured in articles published in the Journal of Vietnam Studies and the Dong-A University Journal of Science, focuses on the Nguyen dynasty and the vibrant role of the local Catholics in the nineteenth century.",
+          "retrievedAt": "2026-09-07T04:51:42.964Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0400-5",
+          "url": "https://scholars.lmu.edu/en/persons/lan-ngo/",
+          "excerpt": "Research Interests Asian Civilizations Early Modern Church History, 1517-present East Asian Church History Vietnamese Church History Vietnamese History Nguyen Dynastic History Early Modern Global History Disciplines Asian History History of Religion Research output 2 Chapter 2 Article 1 Doctoral Thesis Research output per year Research output per year A Cultural Interpretation of Nineteenth-Century Vietnamese Martyrdom Based on Traditionally Established Codes of Exemplary Deified Deaths Ngo, L.",
+          "retrievedAt": "2026-09-07T04:51:42.964Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0400-6",
+          "url": "https://scholars.lmu.edu/en/persons/lan-ngo/",
+          "excerpt": "Boston: Brill Research output : Chapter in Book/Report/Conference proceeding › Chapter Imperial Policies, Local Agency, and Colonial Entanglement: Vietnamese Catholics in the Later Half of the Nineteenth Century Ngo, L.",
+          "retrievedAt": "2026-09-07T04:51:42.964Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0400-7",
+          "url": "https://scholars.lmu.edu/en/persons/lan-ngo/",
+          "excerpt": "205-234 Research output : Chapter in Book/Report/Conference proceeding › Chapter Catholic Personages and Their Involvement in the Nguyen Restoration Ngo, L.",
+          "retrievedAt": "2026-09-07T04:51:42.964Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0400-8",
+          "url": "https://scholars.lmu.edu/en/persons/lan-ngo/",
+          "excerpt": "148-171 Research output : Contribution to journal › Article › peer-review Prophets and Zealots: The 1873 Synodal Document, Nonconformist Confucianism, and the Vietnamese Clergy Ngo, L.",
+          "retrievedAt": "2026-09-07T04:51:42.964Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:52:37.931Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0401": {
       "overview": "pending",
