@@ -2807,7 +2807,8 @@
         "vp-0968",
         "vp-0969"
       ],
-      "status": "pending"
+      "status": "in_progress",
+      "startedAt": "2026-09-07T19:05:49.854Z"
     },
     {
       "number": 49,
@@ -60800,207 +60801,1172 @@
       "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0950": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://researchers.lincoln.ac.nz/cuong.nguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0950-1",
+          "url": "https://researchers.lincoln.ac.nz/cuong.nguyen",
+          "excerpt": "Discovery Browser Not Supported Your browser (Internet Explorer or other legacy browser) is not supported by this application.",
+          "retrievedAt": "2026-09-07T19:05:50.770Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:06:50.611Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0951": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.umu.se/en/staff/quang-evansluong/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0951-1",
+          "url": "https://www.umu.se/en/staff/quang-evansluong/",
+          "excerpt": "se For students For researchers Library For staff Login Students Log into the student web Edit Edit content at umu.",
+          "retrievedAt": "2026-09-07T19:05:51.615Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0951-2",
+          "url": "https://www.umu.se/en/staff/quang-evansluong/",
+          "excerpt": "se Svensk webbplats Search Menu X close menu Menu Search Search within: Search within: All Education Research Staff Student web News Main menu hidden.",
+          "retrievedAt": "2026-09-07T19:05:51.615Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0951-3",
+          "url": "https://www.umu.se/en/staff/quang-evansluong/",
+          "excerpt": "se Svenska Quang Evansluong Associate Professor (Docent) with research interest on immigrant entrepreneurship, integration, sustainable entrepreneurship and CSR.",
+          "retrievedAt": "2026-09-07T19:05:51.615Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0951-4",
+          "url": "https://www.umu.se/en/staff/quang-evansluong/",
+          "excerpt": "Research qualifications: Docent Educational qualifications: Recognised university teacher Contact E-mail quang.",
+          "retrievedAt": "2026-09-07T19:05:51.615Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0951-5",
+          "url": "https://www.umu.se/en/staff/quang-evansluong/",
+          "excerpt": "se Phone +46 90 786 72 57 Works as Affiliation Associate professor at Ume&#229; School of Business, Economics and Statistics (USBE) Section: Business Administration, Entrepreneurship Location Samh&#228;llsvetarhuset, Biblioteksgr&#228;nd 6, A36001 Ume&#229; universitet, 901 87 Ume&#229; Presentation Presentation Publications Publications Research Research Teaching Teaching Mentions Mentions LinkedIn , Google Scholar , Research Gate , ORCID, GRI , Twitter Dr.",
+          "retrievedAt": "2026-09-07T19:05:51.615Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0951-6",
+          "url": "https://www.umu.se/en/staff/quang-evansluong/",
+          "excerpt": "Quang David Evansluong is Associate Professor (Docent) in Entrepreneurship at the Ume&aring; School of Business, Economics and Statistics (USBE), Ume&aring; University.",
+          "retrievedAt": "2026-09-07T19:05:51.615Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0951-7",
+          "url": "https://www.umu.se/en/staff/quang-evansluong/",
+          "excerpt": "His research interests center on immigrant entrepreneurship, the entrepreneurial opportunity creation process, social integration, diversity, sustainable entrepreneurship, digital entrepreneurship and sports entrepreneurship.",
+          "retrievedAt": "2026-09-07T19:05:51.615Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0951-8",
+          "url": "https://www.umu.se/en/staff/quang-evansluong/",
+          "excerpt": "Quang earned his PhD in Entrepreneurship in October 2016 at the J&ouml;nk&ouml;ping International Business School, J&ouml;nk&ouml;ping University in Sweden.",
+          "retrievedAt": "2026-09-07T19:05:51.615Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:06:50.611Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0952": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.mbs-education.com/faculte-recherche/faculte-et-departements/annuaire-professeurs/hoang-thi-hong-van/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0952-1",
+          "url": "https://www.mbs-education.com/faculte-recherche/faculte-et-departements/annuaire-professeurs/hoang-thi-hong-van/",
+          "excerpt": "HOANG Thi Hong Van - Montpellier Business School Brochures Prendre rendez-vous Contactez-nous MBS Alumni Candidater en ligne ' data-url=\"https://www.",
+          "retrievedAt": "2026-09-07T19:05:52.419Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0952-2",
+          "url": "https://www.mbs-education.com/faculte-recherche/faculte-et-departements/annuaire-professeurs/hoang-thi-hong-van/",
+          "excerpt": "faculté de MBS Départements Annuaire du corps professoral Recherche La recherche à MBS Pédagogie La pédagogie à MBS Listes L’école A propos de MBS Bienvenue à MBS Mission, vision et valeurs Classements et accréditations Classements Accréditations Diversité et Egalité des chances MBS école de l’inclusion Financer ses études RSE et développement durable Besoins spécifiques et handicap International MBS, une école ouverte sur le monde Universités partenaires Alternance et professionalisation Alternance césure et stages Débouchés et carrières L&#8217;entrepreneuriat à MBS L&#8217;incubateur MBS 1.",
+          "retrievedAt": "2026-09-07T19:05:52.419Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0952-3",
+          "url": "https://www.mbs-education.com/faculte-recherche/faculte-et-departements/annuaire-professeurs/hoang-thi-hong-van/",
+          "excerpt": "618 Listes Mini-site RSE Espace presse MBS recrute Les campus Le campus de Montpellier MBS Montpellier L’expérience étudiante Vivre à Montpellier Transports et logement Les associations étudiantes Learning Center L&#8217;espace de Life Coaching Le campus de Paris MBS Paris Vivre à Paris Agenda Rechercher HOANG Thi Hong Van Position Associate Professor Academic department Finance & Accounting Contact thv.",
+          "retrievedAt": "2026-09-07T19:05:52.419Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0952-4",
+          "url": "https://www.mbs-education.com/faculte-recherche/faculte-et-departements/annuaire-professeurs/hoang-thi-hong-van/",
+          "excerpt": "Thi Hong Van HOANG is Full Professor and Associate Dean for Research at MBS School of Business (France).",
+          "retrievedAt": "2026-09-07T19:05:52.419Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0952-5",
+          "url": "https://www.mbs-education.com/faculte-recherche/faculte-et-departements/annuaire-professeurs/hoang-thi-hong-van/",
+          "excerpt": "She is also responsible for the AMF Sustainable Finance certificate at MBS School of Business.",
+          "retrievedAt": "2026-09-07T19:05:52.419Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0952-6",
+          "url": "https://www.mbs-education.com/faculte-recherche/faculte-et-departements/annuaire-professeurs/hoang-thi-hong-van/",
+          "excerpt": "She obtained her Habilitation to Supervise Research (HDR) in 2021 at the University of Montpellier (France) and her Ph.",
+          "retrievedAt": "2026-09-07T19:05:52.419Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0952-7",
+          "url": "https://www.mbs-education.com/faculte-recherche/faculte-et-departements/annuaire-professeurs/hoang-thi-hong-van/",
+          "excerpt": "in Management Sciences in December 2010 at the University of Orl&eacute;ans (France).",
+          "retrievedAt": "2026-09-07T19:05:52.419Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0952-8",
+          "url": "https://www.mbs-education.com/faculte-recherche/faculte-et-departements/annuaire-professeurs/hoang-thi-hong-van/",
+          "excerpt": "Her teaching and research topics deal with sustainable finance, financial markets, corporate finance, and environmental economics.",
+          "retrievedAt": "2026-09-07T19:05:52.419Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:06:50.611Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0953": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://profiles.ucl.ac.uk/77363-quang-loc-le",
         "https://loc.bitbucket.io/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0953-1",
+          "url": "https://loc.bitbucket.io/",
+          "excerpt": "Le, Quang Loc --> --> Lê Quang Lộc Lecturer Programming Principles, Logic, and Verification Group - Department of Computer Science University College London &nbsp Office: Room 310, 66-72 Gower St, London, UK, WC1E 6EA &nbsp Office hour: Thursday 14.",
+          "retrievedAt": "2026-09-07T19:05:53.712Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0953-2",
+          "url": "https://loc.bitbucket.io/",
+          "excerpt": "uk Greig Building, Borough Road, Middlesbrough, TS1 3BA, UK Senior Lecturer in Computer Science Q.",
+          "retrievedAt": "2026-09-07T19:05:53.712Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0953-3",
+          "url": "https://loc.bitbucket.io/",
+          "excerpt": "uk Tel: +44 (0) 1642 342670 --> Advisers: Peter O'Hearn and James Brotherston --> \"The whole of science is nothing more than a refinement of everyday thinking\".",
+          "retrievedAt": "2026-09-07T19:05:53.712Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0953-4",
+          "url": "https://loc.bitbucket.io/",
+          "excerpt": "Albert Einstein My research focuses on automatic, effective methods for finding bugs in real codebase.",
+          "retrievedAt": "2026-09-07T19:05:53.712Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0953-5",
+          "url": "https://loc.bitbucket.io/",
+          "excerpt": "We have used an approach based on bug-reporting criterion, bi-abduction, and incorrectness logic.",
+          "retrievedAt": "2026-09-07T19:05:53.712Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0953-6",
+          "url": "https://loc.bitbucket.io/",
+          "excerpt": "Quang Loc Le, Azalea Raad, Jules Villard, Josh Berdine, Derek Dreyer, and Peter W.",
+          "retrievedAt": "2026-09-07T19:05:53.712Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0953-7",
+          "url": "https://loc.bitbucket.io/",
+          "excerpt": "[Click here] for application process of UCL EPSRC Landcape scholarship and [here] for application process of UCL CS scholarship.",
+          "retrievedAt": "2026-09-07T19:05:53.712Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0953-8",
+          "url": "https://loc.bitbucket.io/",
+          "excerpt": "Respect ALL, Fear NONE --> Biography Associate Professor, UCL, 2026 - Lecturer, UCL, 2022 - 2026 Deputy Director of MEng in Mathematical Computations , UCL, 2025 - Research Scientist II (part time), Meta, 2020-2022 Senior Lecturer, Teesside University, 2017-2020 I am a Lecturer in Programming Principles, Logic, and Verification (PPLV) .",
+          "retrievedAt": "2026-09-07T19:05:53.712Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:06:50.611Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0954": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.emlv.fr/en/team/tan-vo-thanh/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0954-1",
+          "url": "https://www.emlv.fr/en/team/tan-vo-thanh/",
+          "excerpt": "tions Bachelor Technology &#038; Management Bachelor Digital &#038; International Business MSc Marketing &#038; Digital Communication MSc Luxury &#038; Innovation Management MSc Accountability and Corporate Sustainability MSc Supply Chain Management MSc International Business MSc Finance &#038; Investment MSc Digital Business Analytics MSc Fintech &#038; Digital Banking MBA – AMBA &#038; AACSB Accredited DBA – AACSB Accredited Exchange programmes – For students from partners universities Close Corporate relations A Strategic Approach to Corporate Engagement – Shaping minds, skills, and futures.",
+          "retrievedAt": "2026-09-07T19:05:55.850Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0954-2",
+          "url": "https://www.emlv.fr/en/team/tan-vo-thanh/",
+          "excerpt": "Becoming a corporate partner – Recruit top talent, and grow your brand at the crossroads of business, tech and design.",
+          "retrievedAt": "2026-09-07T19:05:55.850Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0954-3",
+          "url": "https://www.emlv.fr/en/team/tan-vo-thanh/",
+          "excerpt": "Corporate Resources Internships Company Projects Graduates and employment Alumni Network Latest news HR: the 10 qualities needed to succeed in human resources 28/05/2026 Close Faculty &#038; research Our Faculty – Academic excellence meets real-world expertise in a multidisciplinary, international teaching Research activities – Interdisciplinary and applied research addressing business, technology, and societal transitions.",
+          "retrievedAt": "2026-09-07T19:05:55.850Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0954-4",
+          "url": "https://www.emlv.fr/en/team/tan-vo-thanh/",
+          "excerpt": "De Vinci Research Center Data Science, Digital Transformation, Risks &#038; Complex Systems Energy Efficiency &#038; Socially Responsible Markets New Materials, Intelligent Systems, and Innovative Companies Latest news Corporate venture capital and green innovation: Fatima Shuwaikh’s tribune for FNEGE Médias 01/09/2026 Close International Educating for a globalised world – A global approach to partnerships, student experience and pedagogy.",
+          "retrievedAt": "2026-09-07T19:05:55.850Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0954-5",
+          "url": "https://www.emlv.fr/en/team/tan-vo-thanh/",
+          "excerpt": "Student Mobility at EMLV: A Global Learning Experience – Mobility and internships shaping agile, globally minded profiles.",
+          "retrievedAt": "2026-09-07T19:05:55.850Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0954-6",
+          "url": "https://www.emlv.fr/en/team/tan-vo-thanh/",
+          "excerpt": "ional Student Guide Student Testimonials Latest News De Vinci Welcome Desk: Checklist to Prepare Your Arrival in France 16/07/2026 Close Schedule a call Close Tan Vo-Thanh Full professor, Head of the MSc Luxury & Innovation Management Doctorat &#8211; Université de Perpignan Digital Marketing, Marketing du tourisme, Merchandising, Smart technology adoption, Digitalization process, Sustainable tourism, Customer experience, Customer engagement, Consumer behavior, Employee engagement, Organizational behavior Il y a des moments dont on se souvient longtemps, Heyyy, vous êtes nouveaux dans l’école ?",
+          "retrievedAt": "2026-09-07T19:05:55.850Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0954-7",
+          "url": "https://www.emlv.fr/en/team/tan-vo-thanh/",
+          "excerpt": "👏 More tha Les étudiants parisien de la Promo 2031 du Program Les étudiants de la promo 2031 sont là !",
+          "retrievedAt": "2026-09-07T19:05:55.850Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0954-8",
+          "url": "https://www.emlv.fr/en/team/tan-vo-thanh/",
+          "excerpt": "y Saint Helena Saint Lucia Saint Martin Saint Pierre and Miquelon Samoa San Marino Saudi Arabia Senegal Serbia Seychelles Sierra Leone Singapore Sint Maarten Slovakia Slovenia Solomon Islands Somalia South Africa South Georgia and South Sandwich Islands South Korea South Sudan Spain Sri Lanka St Kitts and Nevis St Vincent and Grenadines Sudan Suriname Svalbard and Jan Mayen Sweden Switzerland Syria São Tomé and Príncipe Taiwan Tajikistan Tanzania Thailand The Gambia The Netherlands Timor-Leste Togo Tokelau Tonga Trinidad and Tobago Tunisia Turkmenistan Turks and Caicos Islands Tuvalu Türkiye U.",
+          "retrievedAt": "2026-09-07T19:05:55.850Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:06:50.611Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0955": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.massey.ac.nz/massey/expertise/profile.cfm?stref=972450"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0955-1",
+          "url": "https://www.massey.ac.nz/massey/expertise/profile.cfm?stref=972450",
+          "excerpt": "Professor Hung Do - Professor in Finance - Massey University You are using an outdated browser.",
+          "retrievedAt": "2026-09-07T19:05:58.080Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0955-2",
+          "url": "https://www.massey.ac.nz/massey/expertise/profile.cfm?stref=972450",
+          "excerpt": "Skip to content Main navigation menu Menu Tahua Study Ako Explore interest areas to study All qualifications list Planning your study Qualifications search Courses search Short courses & professional development Why choose Massey?",
+          "retrievedAt": "2026-09-07T19:05:58.080Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0955-3",
+          "url": "https://www.massey.ac.nz/massey/expertise/profile.cfm?stref=972450",
+          "excerpt": "ia Position / Job Title College Department Reset Expertise search - Show advanced search Thematic All 21st Century Citizenship Design – for Commerce, Community and Culture Future Food Systems Health and Well-being Resource Development and Management Keywords Name Academic expert All staff General staff Reset Contact details +6492136160 Professor Hung Do MApplEcoEcmets, PhD Professor in Finance Doctoral Mentor Supervisor School of Accountancy, Economics and Finance Finance Discipline Lead School of Accountancy, Economics and Finance Hung is a Professor in Finance at Massey Business School (MBS).",
+          "retrievedAt": "2026-09-07T19:05:58.080Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0955-4",
+          "url": "https://www.massey.ac.nz/massey/expertise/profile.cfm?stref=972450",
+          "excerpt": "He is also the Director of the Sustainable Finance Cluster and is the professorial representative in the MBS Board.",
+          "retrievedAt": "2026-09-07T19:05:58.080Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0955-5",
+          "url": "https://www.massey.ac.nz/massey/expertise/profile.cfm?stref=972450",
+          "excerpt": "Hung served as an Associate Head of School of Economics and Finance and the Director of Master of Finance program.",
+          "retrievedAt": "2026-09-07T19:05:58.080Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0955-6",
+          "url": "https://www.massey.ac.nz/massey/expertise/profile.cfm?stref=972450",
+          "excerpt": "He was a member of the MBS Assurance of Learning committee between 2019 and 2024, and was a member of the MBS board between 2019 and 2020.",
+          "retrievedAt": "2026-09-07T19:05:58.080Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0955-7",
+          "url": "https://www.massey.ac.nz/massey/expertise/profile.cfm?stref=972450",
+          "excerpt": "Prior to this, he had worked for major banks in Australia including Westpac and Commonwealth Bank of Australia.",
+          "retrievedAt": "2026-09-07T19:05:58.080Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0955-8",
+          "url": "https://www.massey.ac.nz/massey/expertise/profile.cfm?stref=972450",
+          "excerpt": "On the academic side, he had worked as a Lecturer at the School of Business, Monash University Malaysia, and a Postdoctoral Research Associate at the University of Technology, Sydney.",
+          "retrievedAt": "2026-09-07T19:05:58.080Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:06:50.611Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0956": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.emlv.fr/en/team/duc-khuong-nguyen/",
         "https://www.nguyenduckhuong.org/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0956-1",
+          "url": "https://www.emlv.fr/en/team/duc-khuong-nguyen/",
+          "excerpt": "tions Bachelor Technology &#038; Management Bachelor Digital &#038; International Business MSc Marketing &#038; Digital Communication MSc Luxury &#038; Innovation Management MSc Accountability and Corporate Sustainability MSc Supply Chain Management MSc International Business MSc Finance &#038; Investment MSc Digital Business Analytics MSc Fintech &#038; Digital Banking MBA – AMBA &#038; AACSB Accredited DBA – AACSB Accredited Exchange programmes – For students from partners universities Close Corporate relations A Strategic Approach to Corporate Engagement – Shaping minds, skills, and futures.",
+          "retrievedAt": "2026-09-07T19:06:00.200Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0956-2",
+          "url": "https://www.emlv.fr/en/team/duc-khuong-nguyen/",
+          "excerpt": "Becoming a corporate partner – Recruit top talent, and grow your brand at the crossroads of business, tech and design.",
+          "retrievedAt": "2026-09-07T19:06:00.200Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0956-3",
+          "url": "https://www.emlv.fr/en/team/duc-khuong-nguyen/",
+          "excerpt": "Corporate Resources Internships Company Projects Graduates and employment Alumni Network Latest news HR: the 10 qualities needed to succeed in human resources 28/05/2026 Close Faculty &#038; research Our Faculty – Academic excellence meets real-world expertise in a multidisciplinary, international teaching Research activities – Interdisciplinary and applied research addressing business, technology, and societal transitions.",
+          "retrievedAt": "2026-09-07T19:06:00.200Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0956-4",
+          "url": "https://www.emlv.fr/en/team/duc-khuong-nguyen/",
+          "excerpt": "De Vinci Research Center Data Science, Digital Transformation, Risks &#038; Complex Systems Energy Efficiency &#038; Socially Responsible Markets New Materials, Intelligent Systems, and Innovative Companies Latest news Corporate venture capital and green innovation: Fatima Shuwaikh’s tribune for FNEGE Médias 01/09/2026 Close International Educating for a globalised world – A global approach to partnerships, student experience and pedagogy.",
+          "retrievedAt": "2026-09-07T19:06:00.200Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0956-5",
+          "url": "https://www.emlv.fr/en/team/duc-khuong-nguyen/",
+          "excerpt": "Student Mobility at EMLV: A Global Learning Experience – Mobility and internships shaping agile, globally minded profiles.",
+          "retrievedAt": "2026-09-07T19:06:00.200Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0956-6",
+          "url": "https://www.emlv.fr/en/team/duc-khuong-nguyen/",
+          "excerpt": "International Resources Welcome Desk Partner Universities International Double Degrees International Student Guide Student Testimonials Latest News De Vinci Welcome Desk: Checklist to Prepare Your Arrival in France 16/07/2026 Close Schedule a call Close Duc Khuong Nguyen Head of MSc Fintech & Digital Banking HDR &#8211; CY Cergy Paris Universités, PhD in Finance &#8211; Université de Grenoble.",
+          "retrievedAt": "2026-09-07T19:06:00.200Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0956-7",
+          "url": "https://www.emlv.fr/en/team/duc-khuong-nguyen/",
+          "excerpt": "fr/enseignant-chercheur/duckhuong-nguyen/ Il y a des moments dont on se souvient longtemps, Heyyy, vous êtes nouveaux dans l’école ?",
+          "retrievedAt": "2026-09-07T19:06:00.200Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0956-8",
+          "url": "https://www.emlv.fr/en/team/duc-khuong-nguyen/",
+          "excerpt": "👏 More tha Les étudiants parisien de la Promo 2031 du Program Les étudiants de la promo 2031 sont là !",
+          "retrievedAt": "2026-09-07T19:06:00.200Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0956-9",
+          "url": "https://www.nguyenduckhuong.org/",
+          "excerpt": "--> HOME | nguyenduckhuong top of page Duc Khuong Nguyen Professor of Finance HOME RESUME RESEARCH Books Book Chapters TEACHING EVENTS CALL FOR CONTRIBUTIONS More Use tab to navigate through the menu items.",
+          "retrievedAt": "2026-09-07T19:06:00.611Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0956-10",
+          "url": "https://www.nguyenduckhuong.org/",
+          "excerpt": "Duc Khuong Nguyen Professor Duc Khuong Nguyen brings extensive experience in strategic consulting and advisory services across financial economics and sustainable development, working with governments, local authorities, and multinational corporations.",
+          "retrievedAt": "2026-09-07T19:06:00.611Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0956-11",
+          "url": "https://www.nguyenduckhuong.org/",
+          "excerpt": "in Finance from the University of Grenoble Alpes (France) and an HDR (Habilitation to Supervise Doctoral Research) in Management Science from the CY Cergy Paris University (France).",
+          "retrievedAt": "2026-09-07T19:06:00.611Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0956-12",
+          "url": "https://www.nguyenduckhuong.org/",
+          "excerpt": "In 2013, he completed the &quot;Leaders in Development&quot; Executive Education program at Harvard University , John F.",
+          "retrievedAt": "2026-09-07T19:06:00.611Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0956-13",
+          "url": "https://www.nguyenduckhuong.org/",
+          "excerpt": "Professor Nguyen currently serves on Vietnam&rsquo;s National Advisory Council on Science, Technology, Digital Transformation, and Innovation, and previously served on the Economic Advisory Council to the Prime Minister of Vietnam (2017&ndash;2021).",
+          "retrievedAt": "2026-09-07T19:06:00.611Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0956-14",
+          "url": "https://www.nguyenduckhuong.org/",
+          "excerpt": "In September 2023, Professor Nguyen joined De Vinci Higher Education as Director of International Development and Associate Dean at EMLV Business School (AACSB/AMBA/EFMD-accredited).",
+          "retrievedAt": "2026-09-07T19:06:00.611Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0956-15",
+          "url": "https://www.nguyenduckhuong.org/",
+          "excerpt": "He later served as Acting Dean and Dean (Managing Director) of EMLV Business School from December 2023 to November 2025.",
+          "retrievedAt": "2026-09-07T19:06:00.611Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0956-16",
+          "url": "https://www.nguyenduckhuong.org/",
+          "excerpt": "Prior to this, he held senior leadership positions at IPAG Business School , including Department Head, Dean for Research, Dean of Faculty and Research, and Interim Director General.",
+          "retrievedAt": "2026-09-07T19:06:00.611Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:06:50.611Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0957": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://esec.illinois.edu/directory/profile/hungn"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0957-1",
+          "url": "https://esec.illinois.edu/directory/profile/hungn",
+          "excerpt": "og Field Trips Research Research Areas Labs & Facilities Field Research Related Research Programs Colloquium Directions to the Department & Colloquia Undergraduate Research People Administration & Staff Faculty Emeritus Faculty Affiliate/Adjunct Faculty Graduate Students Postdoctoral Researchers Resources Geology Careers Geology Library Geology Resource Links Event Calendar News Statement on Diversity, Equity, and Inclusion Teaching Resources Alumni Alumni Information Donate to Geology Geology Alumni Board Departmental Newsletters Alumni Achievement Award Alumni Homecoming: 75 Years of Geology!",
+          "retrievedAt": "2026-09-07T19:06:00.853Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0957-2",
+          "url": "https://esec.illinois.edu/directory/profile/hungn",
+          "excerpt": "Home Directory: All Staff Directory Profile Hưng Nguyễn Hưng Nguyễn hungn@illinois.",
+          "retrievedAt": "2026-09-07T19:06:00.853Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0957-3",
+          "url": "https://esec.illinois.edu/directory/profile/hungn",
+          "excerpt": "edu Research Areas Global Change and Paleoclimate Edit Your Profile Assistant Professor View CV Personal website Biography My work explores the intimate feedback loop between the water cycle and humanity .",
+          "retrievedAt": "2026-09-07T19:06:00.853Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0957-4",
+          "url": "https://esec.illinois.edu/directory/profile/hungn",
+          "excerpt": "I use paleoclimate proxies (mainly tree rings) as well as climate and hydrological models to study the water cycle—its behavior over space and time across scales, in the past, present, and future.",
+          "retrievedAt": "2026-09-07T19:06:00.853Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0957-5",
+          "url": "https://esec.illinois.edu/directory/profile/hungn",
+          "excerpt": "Working with historians and archaeologists, I examine how societies were affected by, and adapted to, such changes.",
+          "retrievedAt": "2026-09-07T19:06:00.853Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0957-6",
+          "url": "https://esec.illinois.edu/directory/profile/hungn",
+          "excerpt": "This knowledge of the past is key to help societies cope with climate change in the future.",
+          "retrievedAt": "2026-09-07T19:06:00.853Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0957-7",
+          "url": "https://esec.illinois.edu/directory/profile/hungn",
+          "excerpt": "Research Interests Dendrochronology Hydrology Water resources management Paleoclimate Education PhD, Singapore University of Technology and Design MS, Delft University of Technology MS, National University of Singapore BEng, National University of Singapore and University of Melbourne Grants ICEtree: I nvestigating the C limatic E volution of North American Ice Sheets with TREE Rings.",
+          "retrievedAt": "2026-09-07T19:06:00.853Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0957-8",
+          "url": "https://esec.illinois.edu/directory/profile/hungn",
+          "excerpt": "Shifting Snow, Changing Flow: Quantifying the Impacts of Warming-Induced Seasonal Streamflow Changes in the Snow-Fed Columbia River over the Past 500 years (National Science Foundation) Ultra-High Resolution Paleostreamflow in Southeast Asia: Proxy/Model Comparison (National Science Foundation) Courses Taught Geology of the National Parks - Springs 2025, 2026 Tree Rings and Climate - Fall 2025 Additional Campus Affiliations Assistant Professor, Earth Science and Environmental Change Highlighted Publications Guo, R.",
+          "retrievedAt": "2026-09-07T19:06:00.853Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:06:50.611Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0958": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.wesleyan.edu/about/directory/profile.html?id=tvnguyen"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:06:50.611Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-0959": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://sociology.la.psu.edu/people/hfn5028/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0959-1",
+          "url": "https://sociology.la.psu.edu/people/hfn5028/",
+          "excerpt": "Holly Nguyen - Department of Sociology and Criminology Skip to content Students on the Market News Events Make a Gift Home About Close About Open About About Meet the Department Our Programs Affiliated Centers and Programs Diversity Available Jobs Undergraduate Close Undergraduate Open Undergraduate Sociology Majors Minor Sociology BS + Public Policy MS Learning Objectives Student Organizations Careers in Sociology Criminology Majors Criminology BS + Public Policy MS B.",
+          "retrievedAt": "2026-09-07T19:06:01.426Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0959-2",
+          "url": "https://sociology.la.psu.edu/people/hfn5028/",
+          "excerpt": "inancial Support Prospective Students Program Information How to Apply FAQ's Placements Students on the Market People Alumni Close Alumni Open Alumni Alumni Board of Visitors Take Our Alumni Survey Alumni Awards Past Recipients make a gift Search &hellip; Department of Sociology and Criminology Students on the Market News Events Make a Gift Department of Sociology and Criminology Home About Close About Open About About Meet the Department Our Programs Affiliated Centers and Programs Diversity Available Jobs Undergraduate Close Undergraduate Open Undergraduate Sociology Majors Minor Sociology B.",
+          "retrievedAt": "2026-09-07T19:06:01.426Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0959-3",
+          "url": "https://sociology.la.psu.edu/people/hfn5028/",
+          "excerpt": "and Master of Public Policy Learning Objectives Student Organizations Careers in Sociology Criminology Majors Criminology B.",
+          "retrievedAt": "2026-09-07T19:06:01.426Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0959-4",
+          "url": "https://sociology.la.psu.edu/people/hfn5028/",
+          "excerpt": "xperiences Internship Opportunities Research Opportunities Being a Teaching Assistant Honors Program Guidelines FAQ Awards and Scholarships Education Abroad Mentoring Program Life After State Finding a Job Career Enrichment Network Graduate School Law School Submit a Student Success Story Graduate Close Graduate Open Graduate Sociology Requirements Graduate Courses Concentrations Register for Thesis and Dissertation Credits Handbook Criminology Requirements Graduate Courses Our Research Faculty Research Student Research Register for Thesis and Dissertation Credits Handbook Dual-Title Degrees M.",
+          "retrievedAt": "2026-09-07T19:06:01.426Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0959-5",
+          "url": "https://sociology.la.psu.edu/people/hfn5028/",
+          "excerpt": "ogy Certificate Social Network Analysis Certificate Quantitative Methodology Certificate Statistics Minor Social Thought Minor Social Data Analytics Minor Department Resources Financial Support Prospective Students Program Information How to Apply FAQ’s Placements Students on the Market People Alumni Close Alumni Open Alumni Alumni Board of Visitors Take Our Alumni Survey Alumni Awards Past Recipients make a gift Search &hellip; Holly Nguyen Home People Holly Nguyen Director of Graduate Studies (DGS) in Criminology Professor of Sociology and Criminology Curriculum Vitae View my CV Education Ph.",
+          "retrievedAt": "2026-09-07T19:06:01.426Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0959-6",
+          "url": "https://sociology.la.psu.edu/people/hfn5028/",
+          "excerpt": ", University of Maryland Research Interests by Concentration Criminology Rewards from criminal and non-criminal behavior, consequences of group crime, illicit drug markets Family and Relationships Rewards from Crime, Groups and Crime, Illicit Drug Markets, Criminological Theory Social Institutions and Culture Rewards from Crime, Groups and Crime, Illicit Drug Markets, Criminological Theory hollynguyen@psu.",
+          "retrievedAt": "2026-09-07T19:06:01.426Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0959-7",
+          "url": "https://sociology.la.psu.edu/people/hfn5028/",
+          "excerpt": "edu 814-863-5404 Department of Sociology and Criminology 601 Susan Welch Liberal Arts Building, University Park, PA 16802 sociology@psu.",
+          "retrievedAt": "2026-09-07T19:06:01.426Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:06:50.611Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0960": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://art.unc.edu/person/truong-hong-an/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0960-1",
+          "url": "https://art.unc.edu/person/truong-hong-an/",
+          "excerpt": "udio Art Faculty MFA Students Emeritus Faculty Student Associations Alumni News and Events News Events Galleries Alumni Sculpture Garden John and June Allcott Galleries SAMple Gallery Lecture Series The Bettie Allison Rand Lectures in Art History The Hanes Visiting Artist Lecture Series Lectures in Art History The Riggins Lecture in Art Publications African Arts Digital Art History Projects Apply Give Hồng-Ân Trương Home » People » Studio Art Faculty Professor Website Hồng-An Trương uses photography, sound, video, and performance to examine histories of war and immigrant and refugee narratives.",
+          "retrievedAt": "2026-09-07T19:06:01.660Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0960-2",
+          "url": "https://art.unc.edu/person/truong-hong-an/",
+          "excerpt": "By interrogating archival materials, she examines the production of knowledge through structures of time and memory.",
+          "retrievedAt": "2026-09-07T19:06:01.660Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0960-3",
+          "url": "https://art.unc.edu/person/truong-hong-an/",
+          "excerpt": "Her interdisciplinary projects are premised on the concept that aesthetic battles are also political and ideological battles.",
+          "retrievedAt": "2026-09-07T19:06:01.660Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0960-4",
+          "url": "https://art.unc.edu/person/truong-hong-an/",
+          "excerpt": "Her work has been shown internationally including at the International Center for Photography (NY), Art in General (NY), The Drawing Center (NY), The Nasher Museum of Art at Duke University (NC), Istanbul Modern (Istanbul, Turkey), and Fundación PROA (Buenos Aires), The Kitchen (NY), Nhà Sàn (Hanoi) and the Irish Museum of Modern Art (Dublin) among others.",
+          "retrievedAt": "2026-09-07T19:06:01.660Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0960-5",
+          "url": "https://art.unc.edu/person/truong-hong-an/",
+          "excerpt": "From 2016-2018 she was a fellow in the Open Sessions Program at The Drawing Center in New York.",
+          "retrievedAt": "2026-09-07T19:06:01.660Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0960-6",
+          "url": "https://art.unc.edu/person/truong-hong-an/",
+          "excerpt": "4 New Orleans: The Lotus in Spite of the Swamp in 2017-2018, and her collaborative work with Hương Ngô was included in Being: New Photography 2018 at the Museum of Modern Art (MoMA) in New York.",
+          "retrievedAt": "2026-09-07T19:06:01.660Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0960-7",
+          "url": "https://art.unc.edu/person/truong-hong-an/",
+          "excerpt": "Education University of California, Irvine (2008) Whitney Independent Study Program (2009) Classes Taught Arts 106 – Introduction to Video Arts 206 – Intermediate Video Arts 390/490 – Art as Social Action Arts 700 – Graduate Seminar Arts 798 – Graduate Critique Art and Art History Hanes Art Center 115 South Columbia Street CB# 3405 Chapel Hill, NC 27599-3405 Email unc_aah@unc.",
+          "retrievedAt": "2026-09-07T19:06:01.660Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:06:50.611Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0961": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://umaine.edu/directory/ums_directory/dinh-loc-duong/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0961-1",
+          "url": "https://umaine.edu/directory/ums_directory/dinh-loc-duong/",
+          "excerpt": "ages Undergraduate Admissions Graduate School Online Programs Majors & Minors Cost & Aid Quick links myUMaine A-Z Directory News Calendar Careers Map myUMaine A-Z Directory News Calendar Careers Map Incoming Student Current Student Faculty & Staff Community Member About Become A Student Academics Research Athletics Give Popular Pages Undergraduate Admissions Graduate School Online Programs Majors & Minors Cost & Aid Quick links myUMaine A-Z Directory News Calendar Careers Map myUMaine A-Z Directory News Calendar Careers Map Dinh Loc Duong Assistant Professor Physics and Astronomy Contact P 207.",
+          "retrievedAt": "2026-09-07T19:06:01.985Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0961-2",
+          "url": "https://umaine.edu/directory/ums_directory/dinh-loc-duong/",
+          "excerpt": "edu Location Barrows Hall, Room 263 Website Quantum Phenomena at High Temperature Lab The main aim of our research is to generate new multi-functional devices for the development of disruptive technologies based on the synthesis and exploration of unprecedented physics of novel materials.",
+          "retrievedAt": "2026-09-07T19:06:01.985Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0961-3",
+          "url": "https://umaine.edu/directory/ums_directory/dinh-loc-duong/",
+          "excerpt": "The focus is to synthesize novel materials to realize low-dissipation or dissipationless devices including magnetic semiconductors for low-power spintronics, magnetic oscillations (e.",
+          "retrievedAt": "2026-09-07T19:06:01.985Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0961-4",
+          "url": "https://umaine.edu/directory/ums_directory/dinh-loc-duong/",
+          "excerpt": ", quantum Hall effects, quantum spin Hall effect) with a low magnetic field for a dissipationless current, and condensation (e.",
+          "retrievedAt": "2026-09-07T19:06:01.985Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0961-5",
+          "url": "https://umaine.edu/directory/ums_directory/dinh-loc-duong/",
+          "excerpt": "These quantum phenomena usually appear at low temperatures, which impede the practical applications of these exotic physics.",
+          "retrievedAt": "2026-09-07T19:06:01.985Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0961-6",
+          "url": "https://umaine.edu/directory/ums_directory/dinh-loc-duong/",
+          "excerpt": "Therefore, our ambitious targets are to induce the quantum phenomena at room temperature and realize quantum devices operating in daily-life conditions.",
+          "retrievedAt": "2026-09-07T19:06:01.985Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0961-7",
+          "url": "https://umaine.edu/directory/ums_directory/dinh-loc-duong/",
+          "excerpt": "Research Current active research topics 2D Magnetism: Diluted Magnetic 2D Semiconductors and Devices Quantum Emitters in 2D Materials Spin-glass Materials for Stochastic Neural Computing Topological Materials and Superconductivity in Disorder Systems Quantum Entanglement in Condensed Matters (e.",
+          "retrievedAt": "2026-09-07T19:06:01.985Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0961-8",
+          "url": "https://umaine.edu/directory/ums_directory/dinh-loc-duong/",
+          "excerpt": ", quantum spin liquid and glass) Previous projects Ferromagnetic Semiconductor in V-doped WSe 2 Periodic Lattice Distortion and Superconductivity Graphene Transistors Large-area Single Crystal Graphene Hot Carrier and Multiple Exciton Generation in 2D Materials Selected Publications Lan-Anh T.",
+          "retrievedAt": "2026-09-07T19:06:01.985Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:06:50.611Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0962": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://physics.wwu.edu/people/huynht29"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0962-1",
+          "url": "https://physics.wwu.edu/people/huynht29",
+          "excerpt": "Trà Huỳnh | Physics & Astronomy | Western Washington University Skip to Content Home About Equity and Inclusion Mission Planetarium Support our work For Students Registering for Classes Advice for registration & waitlist problems Override policies Waitlist Policy Advising / Course Planning For Incoming Students Declaring Major & Minors Plan of Study Schedule of Electives Applying to Graduate Connecting Dept.",
+          "retrievedAt": "2026-09-07T19:06:02.472Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0962-2",
+          "url": "https://physics.wwu.edu/people/huynht29",
+          "excerpt": "Canvas Hub Student Work Opportunities Join the LinkedIn Group for Alumni & Majors!",
+          "retrievedAt": "2026-09-07T19:06:02.472Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0962-3",
+          "url": "https://physics.wwu.edu/people/huynht29",
+          "excerpt": "com/view/trahuynh/home Trà Huỳnh Assistant Professor she/her/hers Office Location CF 381 Hours I hold meetings over zoom and/or in person (CF381).",
+          "retrievedAt": "2026-09-07T19:06:02.472Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0962-4",
+          "url": "https://physics.wwu.edu/people/huynht29",
+          "excerpt": "edu Phone 360-6503803 My research area is Physics Education Research (PER) and my research interest centers on equity and justice in physics and physics education.",
+          "retrievedAt": "2026-09-07T19:06:02.472Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0962-5",
+          "url": "https://physics.wwu.edu/people/huynht29",
+          "excerpt": "Specifically, my research seeks to understand the structures of learning and teaching physics that continue to reproduce inequities and discourage the participation of students from non-dominant communities by analyzing discourses and phenomena of learning and being in physics from multiple theoretical lenses.",
+          "retrievedAt": "2026-09-07T19:06:02.472Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0962-6",
+          "url": "https://physics.wwu.edu/people/huynht29",
+          "excerpt": "I am also passionate about facilitating and developing professional development for physics practitioners (undergraduate instructional assistants, teachers, and faculty) to support a cultural and practical shift toward equitable and just physics education.",
+          "retrievedAt": "2026-09-07T19:06:02.472Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0962-7",
+          "url": "https://physics.wwu.edu/people/huynht29",
+          "excerpt": "I'm interested in qualitative research using classroom observations, interviews, surveys, etc.",
+          "retrievedAt": "2026-09-07T19:06:02.472Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0962-8",
+          "url": "https://physics.wwu.edu/people/huynht29",
+          "excerpt": "I'm looking forward to working with undergraduate researchers who are interested in (learning) a critical approach towards learning and teaching physics and in reimagining a liberatory physics learning space.",
+          "retrievedAt": "2026-09-07T19:06:02.472Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:06:50.611Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0963": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.tc.columbia.edu/faculty/ttn2114/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0963-1",
+          "url": "https://www.tc.columbia.edu/faculty/ttn2114/",
+          "excerpt": "Templeton | Faculty Profile | Teachers College, Columbia University Templeton, Tran N.",
+          "retrievedAt": "2026-09-07T19:06:02.699Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0963-2",
+          "url": "https://www.tc.columbia.edu/faculty/ttn2114/",
+          "excerpt": "(ttn2114) Skip to content Skip to primary navigation Skip to search box Skip to admissions quick links Skip to breadcrumb TC Menu Search for people, news & websites Go Resource Links Prospective Students Current Students Faculty & Staff Alumni Quick Links Columbia Library TC Portal Student Employee Alumni Forgot Password Directory Events Apply Now Request Info Search Bar Primary Navigation About Academics Admission & Aid Faculty & Research News Giving Apply WWW View All Faculty Profiles Home Related Articles Attachments Tran N.",
+          "retrievedAt": "2026-09-07T19:06:02.699Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0963-3",
+          "url": "https://www.tc.columbia.edu/faculty/ttn2114/",
+          "excerpt": "Templeton Assistant Professor Faculty Co-Director, Rita Gold Center Office Location: 302E Zankel Office Hours: Tuesdays 4:00 - 6:00 p.",
+          "retrievedAt": "2026-09-07T19:06:02.699Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0963-4",
+          "url": "https://www.tc.columbia.edu/faculty/ttn2114/",
+          "excerpt": "ly childhood literacies and play; children’s environments and geographies; disability studies in education; qualitative, image-based, and ethnographic research methods __________________________________________________________________________________________________ Taking up a critical childhoods framework that troubles the adult-child binary, Tran's work grapples with questions of how particular social and political structures, policies, and phenomena are brought to bear on childhoods, as well as how young children continually work to negotiate and refigure their social worlds and identities.",
+          "retrievedAt": "2026-09-07T19:06:02.699Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0963-5",
+          "url": "https://www.tc.columbia.edu/faculty/ttn2114/",
+          "excerpt": "Through visual research that examines young children's photographs , performances, and narrations of their own lives, Tran juxtaposes children's versions of themselves against adults’ renditions of children.",
+          "retrievedAt": "2026-09-07T19:06:02.699Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0963-6",
+          "url": "https://www.tc.columbia.edu/faculty/ttn2114/",
+          "excerpt": "She’s concerned with how adults mis-recognize, and therefore misrepresent , children, especially young children and disabled children, whose ways of knowing and relating far exceed adults’ capacities to understand them.",
+          "retrievedAt": "2026-09-07T19:06:02.699Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0963-7",
+          "url": "https://www.tc.columbia.edu/faculty/ttn2114/",
+          "excerpt": "The implications of this are manifest in the processes, policies, and practices of school where adult agendas can override children’s desires, interests, and intentions .",
+          "retrievedAt": "2026-09-07T19:06:02.699Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0963-8",
+          "url": "https://www.tc.columbia.edu/faculty/ttn2114/",
+          "excerpt": "Throughout her body of work, Tran proposes that enlargening our adult visions of children has significant implications for the ways that curriculum, schooling, and research are enacted, especially as we account for the historical, social, and political conditions wherein childhoods play out.",
+          "retrievedAt": "2026-09-07T19:06:02.699Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:06:50.611Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0964": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.usfca.edu/faculty/quynh-pham"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.usfca.edu/faculty/quynh-pham: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T19:06:50.611Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-0965": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://medschool.vanderbilt.edu/pharmacology/person/quynh-anh-nguyen-ph-d/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0965-1",
+          "url": "https://medschool.vanderbilt.edu/pharmacology/person/quynh-anh-nguyen-ph-d/",
+          "excerpt": "| Pharmacology | Vanderbilt University > Vanderbilt University Vanderbilt University Menu Department of Pharmacology Welcome About Us Leadership & Mission Statement Department History Ph.",
+          "retrievedAt": "2026-09-07T19:06:04.428Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0965-2",
+          "url": "https://medschool.vanderbilt.edu/pharmacology/person/quynh-anh-nguyen-ph-d/",
+          "excerpt": "Training Program Handbook of the Pharmacology Training Program Pharmacology Student Directory Pharmacology T32 Grant How to Apply Research De materia medica Department News Faculty Pharmacology Faculty Directory Principal Investigator Research Focus Events Department Calendar Department Lectureships Vanderbilt-Meharry Annual Pharmacology Retreat Joel G.",
+          "retrievedAt": "2026-09-07T19:06:04.428Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0965-3",
+          "url": "https://medschool.vanderbilt.edu/pharmacology/person/quynh-anh-nguyen-ph-d/",
+          "excerpt": "Hardman Student-Invited Pharmacology Forum GPCR Invited Postdoctoral Seminar Series 2026-2027 Alpaca Day Seminar Series Contact Us Give Close Menu Vanderbilt University Department of Pharmacology All Vanderbilt Welcome About Us Leadership & Mission Statement Department History Ph.",
+          "retrievedAt": "2026-09-07T19:06:04.428Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0965-4",
+          "url": "https://medschool.vanderbilt.edu/pharmacology/person/quynh-anh-nguyen-ph-d/",
+          "excerpt": "Training Program Handbook of the Pharmacology Training Program Pharmacology Student Directory Pharmacology T32 Grant How to Apply Research De materia medica Department News Faculty Pharmacology Faculty Directory Principal Investigator Research Focus Events Department Calendar Department Lectureships Vanderbilt-Meharry Annual Pharmacology Retreat Joel G.",
+          "retrievedAt": "2026-09-07T19:06:04.428Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0965-5",
+          "url": "https://medschool.vanderbilt.edu/pharmacology/person/quynh-anh-nguyen-ph-d/",
+          "excerpt": "Hardman Student-Invited Pharmacology Forum GPCR Invited Postdoctoral Seminar Series 2026-2027 Alpaca Day Seminar Series Contact Us Give About About Vanderbilt History Quick Facts University Leadership Contact Academics Academics Overview Program Finder Admissions Undergraduate Admissions Graduate & Professional School Admissions Cost & Financial Aid Athletics Campus Life Life at Vanderbilt Nashville Our Campuses Housing & Dining Organizations & Community Health & Safety Research News Quynh Anh Nguyen, Ph.",
+          "retrievedAt": "2026-09-07T19:06:04.428Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0965-6",
+          "url": "https://medschool.vanderbilt.edu/pharmacology/person/quynh-anh-nguyen-ph-d/",
+          "excerpt": "edu 8160A Medical Research Building III 465 21st Avenue South Nashville, Tennessee - 37232 CV : Quynh Anh Nguyen, Ph.",
+          "retrievedAt": "2026-09-07T19:06:04.428Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0965-7",
+          "url": "https://medschool.vanderbilt.edu/pharmacology/person/quynh-anh-nguyen-ph-d/",
+          "excerpt": "- CV Research Description The Nguyen Lab aims to bridge our understanding of neural function and dysfunction at the level of molecules, cells, circuits, and behavior.",
+          "retrievedAt": "2026-09-07T19:06:04.428Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0965-8",
+          "url": "https://medschool.vanderbilt.edu/pharmacology/person/quynh-anh-nguyen-ph-d/",
+          "excerpt": "A central focus of the lab is to understand mechanisms of hyperexcitability in the brain.",
+          "retrievedAt": "2026-09-07T19:06:04.428Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:06:50.611Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0966": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://le.ac.uk/people/quynh-hoang"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://le.ac.uk/people/quynh-hoang: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T19:06:50.611Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-0967": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.math.ubc.ca/profiles/khanh-dao-duc",
         "https://kdaoduc.com/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0967-1",
+          "url": "https://www.math.ubc.ca/profiles/khanh-dao-duc",
+          "excerpt": "tudy Math Majors Employment Undergrad FAQs Courses Graduate Students Prospective Students Newly Arriving Students Current Students Graduate Alumni Math Graduate Committee Research Research Fields Postdoctoral Researchers Department Directory FAQs Equity Committee Teaching Resources Jobs Donations In Memoriam News & Events News Seminars and colloquia Other events Awards You are here Home kdd Khanh Dao Duc Faculty Khanh Dao Duc obtained a PhD in Mathematics from the Ecole Normale Superieure (France) (2013) and was a Postdoctoral Fellow at the University of Berkeley and University of Pennsylvania.",
+          "retrievedAt": "2026-09-07T19:06:05.305Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0967-2",
+          "url": "https://www.math.ubc.ca/profiles/khanh-dao-duc",
+          "excerpt": "He has been at UBC since 2019 and is currently an Assistant Professor in the Department of Mathematics, also affiliated with The Computer Science and Zoology departments.",
+          "retrievedAt": "2026-09-07T19:06:05.305Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0967-3",
+          "url": "https://www.math.ubc.ca/profiles/khanh-dao-duc",
+          "excerpt": "His research interests include Molecular and Cell biology, Gene expression, Cryo-EM microscopy, Biological shape and image analysis, Machine learning and Applied stochastic processes.",
+          "retrievedAt": "2026-09-07T19:06:05.305Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0967-4",
+          "url": "https://www.math.ubc.ca/profiles/khanh-dao-duc",
+          "excerpt": "For more details on the group, research and teaching, please consult the lab webpage at https://kdaoduc.",
+          "retrievedAt": "2026-09-07T19:06:05.305Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0967-5",
+          "url": "https://www.math.ubc.ca/profiles/khanh-dao-duc",
+          "excerpt": "com Cross Affiliations Associate member of the Departments of Computer Science and Zoology.",
+          "retrievedAt": "2026-09-07T19:06:05.305Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0967-6",
+          "url": "https://kdaoduc.com/",
+          "excerpt": "Khanh Dao Duc | Assistant Professor, Department of Mathematics, University of British Columbia Khanh Dao Duc Assistant Professor, Department of Mathematics, University of British Columbia Menu Skip to content Research Group Publications Links Contact Research I am an Assistant Professor in the Department of Mathematics at the University of British Columbia, and associate member of the Department of Computer Science .",
+          "retrievedAt": "2026-09-07T19:06:05.438Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0967-7",
+          "url": "https://kdaoduc.com/",
+          "excerpt": "My research group combines mathematical, computational and statistical tools to study fundamental biological processes and analyze complex datasets (for more details, see my publications ).",
+          "retrievedAt": "2026-09-07T19:06:05.438Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0967-8",
+          "url": "https://kdaoduc.com/",
+          "excerpt": "We are currently mostly focusing on studying the properties of the ribosome across scales and system (NSERC Discovery grant RGPIN-2020-05348), and d eveloping new algorithms for Cryo-EM data and shape analysis ( New Frontiers of Research NFRFE-2019-00486), and Closing the Gap in Agricultural Climate Action: Harmonizing Data, Enhancing Emission Models, and Empowering Canadian Farmers (NSERC Alliance Society ALL-RP 608868 &#8211; 25).",
+          "retrievedAt": "2026-09-07T19:06:05.438Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0967-9",
+          "url": "https://kdaoduc.com/",
+          "excerpt": "These projects connect with larger group initiatives for developing ready-to-deploy antibody treatments with Canada’s Immuno-Engineering and Biomanufacturing Hub (CIEBH) ( https://progeniter.",
+          "retrievedAt": "2026-09-07T19:06:05.438Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0967-10",
+          "url": "https://kdaoduc.com/",
+          "excerpt": "ca ) and methods for climate change mitigation with the Climate Solutions Research Collective ( Solution scholars program ) I am also currently supervising the development of the following web applications: https://ribosome.",
+          "retrievedAt": "2026-09-07T19:06:05.438Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0967-11",
+          "url": "https://kdaoduc.com/",
+          "excerpt": "xyz/ (Comprehensive database for visualizing and analyzing ribosome structures) https://data.",
+          "retrievedAt": "2026-09-07T19:06:05.438Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0967-12",
+          "url": "https://kdaoduc.com/",
+          "excerpt": "org/home/ (web-based platform designed to help farmers, researchers, and stakeholders gain actionable insights into farm performance and sustainability.",
+          "retrievedAt": "2026-09-07T19:06:05.438Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:06:50.611Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0968": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.sussex.ac.uk/business-school/people-and-departments/accounting-and-finance/people/person/421779"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0968-1",
+          "url": "https://www.sussex.ac.uk/business-school/people-and-departments/accounting-and-finance/people/person/421779",
+          "excerpt": "Discovery Browser Not Supported Your browser (Internet Explorer or other legacy browser) is not supported by this application.",
+          "retrievedAt": "2026-09-07T19:06:08.558Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:06:50.611Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0969": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.chbe.uh.edu/faculty/vu-binh"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0969-1",
+          "url": "https://www.chbe.uh.edu/faculty/vu-binh",
+          "excerpt": "Brookshire Department of Chemical and Biomolecular Engineering Skip to main content Search Giving Contact Make a Gift Cullen College of Engineering William A.",
+          "retrievedAt": "2026-09-07T19:06:09.194Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0969-2",
+          "url": "https://www.chbe.uh.edu/faculty/vu-binh",
+          "excerpt": "eminars Theses and Dissertations Theses and Dissertations Archive Industrial Relations The Stutts Program for Undergraduate Research Undergraduate Accreditation Admissions Degree Programs Advising Courses Class Schedules Scholarships ChBE Department College of Engineering FAQ Accelerated BS/MS Graduate Overview Admissions & FAQs Degree Programs Courses Degree Plans Class Schedules Graduate Guide Graduate Tuition Fellowships Resources Forms Online Programs UH-Extend Online Master of Chemical Engineering Online Programs at the Cullen College News News Transport Newsletter Home Faculty Faculty Dr.",
+          "retrievedAt": "2026-09-07T19:06:09.194Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0969-3",
+          "url": "https://www.chbe.uh.edu/faculty/vu-binh",
+          "excerpt": "Binh Vu Research Associate Professor Office Location S185A, Engineering Building 1 Fax 713-743-4323 Email bvvu [at] uh.",
+          "retrievedAt": "2026-09-07T19:06:09.194Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0969-4",
+          "url": "https://www.chbe.uh.edu/faculty/vu-binh",
+          "excerpt": "in Biology, University of Houston, Houston, TX (2002) Courses Research Interests Point-of-Care Diagnostics | Mobile Health | Process Analytical Technology | Nanotechnology | Microfluidics | Biosensors My body of work is centered around bringing low-cost diagnostic technology to underserved communities without sacrificing the sensitivity of lab-based assays.",
+          "retrievedAt": "2026-09-07T19:06:09.194Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0969-5",
+          "url": "https://www.chbe.uh.edu/faculty/vu-binh",
+          "excerpt": "My research interests include novel reporters for diagnostic tests, nanotechnology, spectroscopy, biosensors, image analysis, and mobile-health technology (mHealth).",
+          "retrievedAt": "2026-09-07T19:06:09.194Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0969-6",
+          "url": "https://www.chbe.uh.edu/faculty/vu-binh",
+          "excerpt": "My extensive experience in industry and academia in sensors and medical devices enables me to drive sensitive, low-cost, non-invasive point-of-care (POC) and mobile-health diagnostics to underserved communities and low-resource settings.",
+          "retrievedAt": "2026-09-07T19:06:09.194Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0969-7",
+          "url": "https://www.chbe.uh.edu/faculty/vu-binh",
+          "excerpt": "Awards & Honors 2021-2022 Young Innovator Award in the Cullen College of Engineering Google Scholar Patents Binh V.",
+          "retrievedAt": "2026-09-07T19:06:09.194Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0969-8",
+          "url": "https://www.chbe.uh.edu/faculty/vu-binh",
+          "excerpt": "Vu, Olga Patricia Vázquez-Villegas, Federico Augusto Ruiz-Ruiz, Marco Antonio Rito-Palomares.",
+          "retrievedAt": "2026-09-07T19:06:09.194Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:06:50.611Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0970": {
       "overview": "pending",
