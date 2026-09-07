@@ -2753,7 +2753,8 @@
         "vp-0928",
         "vp-0929"
       ],
-      "status": "pending"
+      "status": "in_progress",
+      "startedAt": "2026-09-07T19:02:28.771Z"
     },
     {
       "number": 47,
@@ -57932,214 +57933,1606 @@
       "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0910": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://keck.usc.edu/faculty-search/nam-x-nguyen/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://keck.usc.edu/faculty-search/nam-x-nguyen/: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T19:03:44.317Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-0911": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://profiles.stanford.edu/andrew-dinh"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0911-1",
+          "url": "https://profiles.stanford.edu/andrew-dinh",
+          "excerpt": "esearch Vice Provost for Student Affairs Vice Provost for Undergraduate Education Sign In Edit My Profile Andrew Dinh Clinical Assistant Professor, Anesthesiology, Perioperative and Pain Medicine Practices at Stanford Health Care Stanford Medicine Children&#39;s Health Print Profile Email Profile View Stanford-only Profile Tab Menu Bio Publications Clinical Focus Pediatric Anesthesiology Pediatric Pain Management Academic Appointments Clinical Assistant Professor, Anesthesiology, Perioperative and Pain Medicine Member, Maternal & Child Health Research Institute (MCHRI) Honors & Awards Kelley M.",
+          "retrievedAt": "2026-09-07T19:02:29.594Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0911-2",
+          "url": "https://profiles.stanford.edu/andrew-dinh",
+          "excerpt": "Skeff GME Professionalism Award - Nominee, Stanford School of Medicine (2021) John P.",
+          "retrievedAt": "2026-09-07T19:02:29.594Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0911-3",
+          "url": "https://profiles.stanford.edu/andrew-dinh",
+          "excerpt": "McGovern Academy of Oslerian Medicine - Thayer Award for Excellence in Teaching, University of Texas Medical Branch (2019) GME Quality Improvement & Patient Safety Poster Session - 2nd place, University of Texas Medical Branch (2019) Charles R.",
+          "retrievedAt": "2026-09-07T19:02:29.594Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0911-4",
+          "url": "https://profiles.stanford.edu/andrew-dinh",
+          "excerpt": "e - Pediatric Pain Medicine, CA (2021) Fellowship: Stanford University Pediatric Anesthesia Fellowship (2020) CA Residency: University of Texas Medical Branch Anesthesiology Residency (2019) TX Internship: University of Texas Medical Branch (2016) TX Medical Education: Texas Tech University Health Sciences Center School of Medicine (2015) TX Contact Clinical (Primary) Anesthesia 300 Pasteur Dr Rm H3580 MC 5640 Stanford, CA 94305 (650) 723-6412 (office) (650) 725-8544 (fax) Additional Clinical Info Stanford Health Care Stanford Medicine Children&#39;s Health Additional Info ORCID: https://orcid.",
+          "retrievedAt": "2026-09-07T19:02:29.594Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0911-5",
+          "url": "https://profiles.stanford.edu/andrew-dinh",
+          "excerpt": "org/0000-0003-2406-6883 All Publications Comorbidities Associated With Chronic Pain Among Adolescents.",
+          "retrievedAt": "2026-09-07T19:02:29.594Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0911-6",
+          "url": "https://profiles.stanford.edu/andrew-dinh",
+          "excerpt": "0000000000008053 View details for PubMedID 42213915 Analgesic Drug Development for Children: A History of Shortcomings Until Now.",
+          "retrievedAt": "2026-09-07T19:02:29.594Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0911-7",
+          "url": "https://profiles.stanford.edu/andrew-dinh",
+          "excerpt": "S291594 View details for PubMedID 33833564 The virtual visit: Using immersive technology to visit hospitals during social distancing and beyond.",
+          "retrievedAt": "2026-09-07T19:02:29.594Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0911-8",
+          "url": "https://profiles.stanford.edu/andrew-dinh",
+          "excerpt": "2020 ; 30 (8) : 954–56 Abstract Medical trainees face substantial financial and scheduling burdens during the interview process at various levels of training.",
+          "retrievedAt": "2026-09-07T19:02:29.594Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:03:44.318Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0912": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://nyulangone.org/doctors/1225043029/linh-t-dinh"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0912-1",
+          "url": "https://nyulangone.org/doctors/1225043029/linh-t-dinh",
+          "excerpt": "Dinh, MD | NYU Langone Health We use cookies and similar tools to give you the best website experience.",
+          "retrievedAt": "2026-09-07T19:02:29.913Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0912-2",
+          "url": "https://nyulangone.org/doctors/1225043029/linh-t-dinh",
+          "excerpt": "Close If you need help accessing our website, call 855-698-9991 Open accessibility Menu.",
+          "retrievedAt": "2026-09-07T19:02:29.913Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0912-3",
+          "url": "https://nyulangone.org/doctors/1225043029/linh-t-dinh",
+          "excerpt": "Open Accessibility Menu Accessibility Menu not currently available on this page.",
+          "retrievedAt": "2026-09-07T19:02:29.913Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0912-4",
+          "url": "https://nyulangone.org/doctors/1225043029/linh-t-dinh",
+          "excerpt": "If you need help, call 855-698-9991 Skip to main content Patient Care Education & Research NYU Grossman School of Medicine NYU Grossman Long Island School of Medicine MyChart Patient Login .",
+          "retrievedAt": "2026-09-07T19:02:29.913Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0912-5",
+          "url": "https://nyulangone.org/doctors/1225043029/linh-t-dinh",
+          "excerpt": "Opens in a new tab Patient Care Patient Care Explore NYU Langone Health Patient Care NYU Grossman School of Medicine NYU Grossman Long Island School of Medicine Open Menu Search Education & Research Back Menu Open Menu Close Close Menu Find a Doctor Care & Services Care & Services Care & Services We offer the highest quality of care and expertise in all specialty care areas.",
+          "retrievedAt": "2026-09-07T19:02:29.913Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0912-6",
+          "url": "https://nyulangone.org/doctors/1225043029/linh-t-dinh",
+          "excerpt": "vices Brain & Spine Care Cancer Care NYU Langone Heart NYU Langone Orthopedics Pediatrics & Hassenfeld Children's Hospital Primary Care Women&acirc;&#128;&#153;s Health View All Services Same-Day Care Virtual Urgent Care Urgent Care Care on Demand (Primary Care) Orthopedic Immediate Care Emergency Care Learn About Same-Day Care Virtual Urgent Care Urgent Care Care on Demand (Primary Care) Orthopedic Immediate Care Emergency Care Learn About Same-Day Care Imaging Services Our radiology experts offer imaging services from CT and MRI scans to ultrasound and X-ray throughout the New York City area.",
+          "retrievedAt": "2026-09-07T19:02:29.913Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0912-7",
+          "url": "https://nyulangone.org/doctors/1225043029/linh-t-dinh",
+          "excerpt": "View Imaging Services Digital Services MyChart Patient Login NYU Langone Health App Video Doctor Visits MyChart Patient Login NYU Langone Health App Video Doctor Visits Locations Locations Locations Find care close to you at our locations throughout the New York City area and in Florida.",
+          "retrievedAt": "2026-09-07T19:02:29.913Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0912-8",
+          "url": "https://nyulangone.org/doctors/1225043029/linh-t-dinh",
+          "excerpt": "hildren&acirc;&#128;&#153;s Hospital NYU Langone Orthopedic Hospital NYU Langone Hospital&acirc;&#128;&#148;Brooklyn NYU Langone Hospital&acirc;&#128;&#148;Long Island NYU Langone Hospital&acirc;&#128;&#148;Suffolk Tisch Hospital Kimmel Pavilion Hassenfeld Children&acirc;&#128;&#153;s Hospital NYU Langone Orthopedic Hospital NYU Langone Hospital&acirc;&#128;&#148;Brooklyn NYU Langone Hospital&acirc;&#128;&#148;Long Island NYU Langone Hospital&acirc;&#128;&#148;Suffolk Conditions We Treat Conditions We Treat Conditions We Treat Explore our approach to diagnosing and treating adults and children.",
+          "retrievedAt": "2026-09-07T19:02:29.913Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:03:44.318Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0913": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://med.stanford.edu/profiles/303474"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0913-1",
+          "url": "https://med.stanford.edu/profiles/303474",
+          "excerpt": "Training Postdoctoral scholars Clinical research fellows Research News Neuroscientist Michelle Monje awarded MacArthur 'genius grant' Explore Research Learn how we are fueling innovation Back Education MD program PA Programs PhD programs Masters programs Continuing Medical Education Postdoctoral scholars Residencies & fellowships High School & Undergraduate Programs See all Education Resources Academic profiles School Administration Basic science departments Clinical science departments Alumni services Faculty resources Community engagement Lane Library Student resources Education News Alice L.",
+          "retrievedAt": "2026-09-07T19:02:30.482Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0913-2",
+          "url": "https://med.stanford.edu/profiles/303474",
+          "excerpt": "Walton School of Medicine and Stanford Medicine host AI conference on community health Explore Education Learn how we empower tomorrow's leaders Back Give Support Stanford Medicine Support teaching, research, and patient care.",
+          "retrievedAt": "2026-09-07T19:02:30.482Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0913-3",
+          "url": "https://med.stanford.edu/profiles/303474",
+          "excerpt": "Ways to give Why giving matters Make a gift online Support Children's Health Support Lucile Packard Children's Hospital Stanford and child and maternal health Ways to give How your gift helps Make an online gift Back About About us News Contacts Maps & directions Leadership Vision Global health Community engagement Events How you can help Stanford School of Medicine Stanford Health Care Stanford Children's Health Back Site Search Close menu Close menu Julie Ngoc Thai, MD, MPH Clinical Assistant Professor, Medicine - Primary Care and Population Health Print Profile Email Profile Bio Bio Bio Dr.",
+          "retrievedAt": "2026-09-07T19:02:30.482Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0913-4",
+          "url": "https://med.stanford.edu/profiles/303474",
+          "excerpt": "She completed her fellowship training at the University of California, San Francisco.",
+          "retrievedAt": "2026-09-07T19:02:30.482Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0913-5",
+          "url": "https://med.stanford.edu/profiles/303474",
+          "excerpt": "She is board-certified in family medicine through the American Board of Family Medicine .",
+          "retrievedAt": "2026-09-07T19:02:30.482Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0913-6",
+          "url": "https://med.stanford.edu/profiles/303474",
+          "excerpt": "Thai earned her medical degree from Michigan State University College of Human Medicine.",
+          "retrievedAt": "2026-09-07T19:02:30.482Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0913-7",
+          "url": "https://med.stanford.edu/profiles/303474",
+          "excerpt": "She completed her residency in family medicine at McLaren Flint/Michigan State University College of Human Medicine where she served as chief resident.",
+          "retrievedAt": "2026-09-07T19:02:30.482Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0913-8",
+          "url": "https://med.stanford.edu/profiles/303474",
+          "excerpt": "She recently received a grant from the Blue Cross Blue Shield of Michigan Foundation to study the role of motivational interviewing in smoking cessation.",
+          "retrievedAt": "2026-09-07T19:02:30.482Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:03:44.318Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0914": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://scholars.houstonmethodist.org/en/persons/quoc-anh-thai/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0914-1",
+          "url": "https://scholars.houstonmethodist.org/en/persons/quoc-anh-thai/",
+          "excerpt": "te , Academic Institute Department of Neurosurgery Neurological Institute Houston Methodist Clear Lake Hospital Houston Methodist Weill Cornell Medical College h-index 723 Citations 17 h-index Calculated based on number of publications stored in Pure and citations from Scopus 1993 2018 Research activity per year Overview Fingerprint Network Research output (28) Personal profile External positions Assistant Professor of Clinical Neurological Surgery, Weill Cornell Medicine Apr 1 2021 → … Research Area Keywords Neurosciences Fingerprint Dive into the research topics where Quoc-Anh Thai is active.",
+          "retrievedAt": "2026-09-07T19:02:30.791Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0914-2",
+          "url": "https://scholars.houstonmethodist.org/en/persons/quoc-anh-thai/",
+          "excerpt": "s Keyphrases 100% Vasospasm Keyphrases 75% Subarachnoid Hemorrhage Keyphrases 66% Nitric Oxide Keyphrases 54% Cerebral Microcirculation Keyphrases 52% Microvessels Keyphrases 50% Cerebral Vasospasm Keyphrases 38% Vasoconstriction Keyphrases 38% View full fingerprint Research output Research output per year 1993 1994 1996 2004 2005 2006 2015 2017 2018 23 Article 2 Review article 1 Comment/debate 1 Editorial 1 More 1 Letter Research output per year Research output per year Reversible 'hemiparkinsonism' following surgery for a lateral ventricle liponeurocytoma in a 24-year old student Ben Nsir, A.",
+          "retrievedAt": "2026-09-07T19:02:30.791Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0914-3",
+          "url": "https://scholars.houstonmethodist.org/en/persons/quoc-anh-thai/",
+          "excerpt": "S145-S149 Research output : Contribution to journal › Letter › peer-review 3 Link opens in a new tab Scopus citations Abstracts from Hydrocephalus 2016 Adam, A.",
+          "retrievedAt": "2026-09-07T19:02:30.791Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0914-4",
+          "url": "https://scholars.houstonmethodist.org/en/persons/quoc-anh-thai/",
+          "excerpt": "Research output : Contribution to journal › Article › peer-review Open Access 4 Link opens in a new tab Scopus citations Posttraumatic Uncal Herniation in a Conscious Patient Ben Nsir, A.",
+          "retrievedAt": "2026-09-07T19:02:30.791Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0914-5",
+          "url": "https://scholars.houstonmethodist.org/en/persons/quoc-anh-thai/",
+          "excerpt": "e6 Research output : Contribution to journal › Article › peer-review Post-traumatic 100% Loss of Consciousness 100% Uncal Herniation 100% Hernia 100% Nerve Paralysis 100% 1 Link opens in a new tab Scopus citations Intraventricular Glioblastomas Ben Nsir, A.",
+          "retrievedAt": "2026-09-07T19:02:30.791Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0914-6",
+          "url": "https://scholars.houstonmethodist.org/en/persons/quoc-anh-thai/",
+          "excerpt": "Research output : Contribution to journal › Article › peer-review Intraventricular Glioblastoma 100% Lateral Ventricle 100% Isocitrate Dehydrogenase 100% Glioblastoma 100% Tumor 75% 19 Link opens in a new tab Scopus citations Calcified Suprasellar Xanthogranuloma Presenting with Primary Amenorrhea in a 17-Year-Old Girl: Case Report and Literature Review Ben Nsir, A.",
+          "retrievedAt": "2026-09-07T19:02:30.791Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0914-7",
+          "url": "https://scholars.houstonmethodist.org/en/persons/quoc-anh-thai/",
+          "excerpt": "E14 Research output : Contribution to journal › Article › peer-review Primary Amenorrhea 100% Suprasellar 100% Juvenile Xanthogranuloma 100% Xanthogranuloma 100% Pediatric Population 40% 12 Link opens in a new tab Scopus citations View all 28 Research outputs Powered by Pure Link opens in a new tab , Scopus Link opens in a new tab & Elsevier Fingerprint Engine&trade; Link opens in a new tab All content on this site: Copyright &copy; 2026 Houston Methodist Scholars, its licensors, and contributors.",
+          "retrievedAt": "2026-09-07T19:02:30.791Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0914-8",
+          "url": "https://scholars.houstonmethodist.org/en/persons/quoc-anh-thai/",
+          "excerpt": "All rights are reserved, including those for text and data mining, AI training, and similar technologies.",
+          "retrievedAt": "2026-09-07T19:02:30.791Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:03:44.318Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0915": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.kumc.edu/hdoan.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0915-1",
+          "url": "https://www.kumc.edu/hdoan.html",
+          "excerpt": "edu School of Health Professions School of Medicine School of Nursing University of Kansas The University of Kansas Health System The University of Kansas Cancer Center Search keywords, names, etc.",
+          "retrievedAt": "2026-09-07T19:02:31.136Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0915-2",
+          "url": "https://www.kumc.edu/hdoan.html",
+          "excerpt": "Search within this section Search all sites Home Academics Research Patient Care Outreach Student Life About Our Campuses Make a Gift Info for Current Students Blackboard Webmail myKUMC Prospective Students Prospective Employees Alumni Faculty & Staff Residents & Fellows Patients Donors Researchers Visitors Our Campuses Make a Gift Info for kumc.",
+          "retrievedAt": "2026-09-07T19:02:31.136Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0915-3",
+          "url": "https://www.kumc.edu/hdoan.html",
+          "excerpt": "edu Our Campuses Make a Gift Info for Academics Academics Prepare for your health care career with top-ranked programs, state-of-the-art facilities and unmatched opportunities for clinical training.",
+          "retrievedAt": "2026-09-07T19:02:31.136Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0915-4",
+          "url": "https://www.kumc.edu/hdoan.html",
+          "excerpt": "Admissions & Aid Degree Programs International Education Clinical Education Interprofessional Education Libraries Student Handbooks Related Links: School of Health Professions School of Medicine School of Nursing Research Research Explore world-class research programs that advance the health sciences and attract national recognition.",
+          "retrievedAt": "2026-09-07T19:02:31.136Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0915-5",
+          "url": "https://www.kumc.edu/hdoan.html",
+          "excerpt": "Research Centers & Institutes Cores, Facilities and Shared Resources Basic Science Departments Research Administration Human Research Protection Program Scheduling Research Facilities Research News Related Links: KU Experts KU Center for Technology Commercialization Core Showcase Summer Research Training Program Student Research Forum Patient Care Patient Care As an academic medical center, we work with The University of Kansas Health System and other regional partners to provide high-quality, compassionate clinical care.",
+          "retrievedAt": "2026-09-07T19:02:31.136Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0915-6",
+          "url": "https://www.kumc.edu/hdoan.html",
+          "excerpt": "The University of Kansas Health System The University of Kansas Cancer Center Student-Run Clinics Clinical Education University and Faculty Practice Outreach Outreach We build partnerships throughout the state to find new ways to improve the lives of Kansans.",
+          "retrievedAt": "2026-09-07T19:02:31.136Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0915-7",
+          "url": "https://www.kumc.edu/hdoan.html",
+          "excerpt": "Social Impact Rural Education Global Health Career Development Community Programs Outreach News Related Links: Community Engagement Masonic Cancer Alliance Student Life Student Life Our three campus communities offer unique social events and cultural attractions—the perfect backdrop to our world-class education programs.",
+          "retrievedAt": "2026-09-07T19:02:31.136Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0915-8",
+          "url": "https://www.kumc.edu/hdoan.html",
+          "excerpt": "Related Links: Office of Student Life Impact & Belonging Office of International Programs About About The University of Kansas Medical Center's mission is to improve lives and communities in Kansas and beyond through innovation in education, research and health care.",
+          "retrievedAt": "2026-09-07T19:02:31.136Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:03:44.318Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0916": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://medicine.arizona.edu/person/truc-anh-nguyen-md"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0916-1",
+          "url": "https://medicine.arizona.edu/person/truc-anh-nguyen-md",
+          "excerpt": "Current Residents and Fellows Prospective Residents & Fellows Visiting Residents & Fellows Community Education Financial Aid Research News Alumni & Donors Support the College Alumni Fuel Wonder Submenu for Fuel Wonder Comprehensive Cardiovascular Institute Student Success Valley Fever Center Events Submenu for Events Research Day Student Milestones Submenu for Student Milestones White Coat Match Day Convocation Calendar College of Medicine – Tucson Person Truc-Anh Nguyen, MD Truc-Anh Nguyen, MD Associate Clinical Professor, Anesthesiology Obstetric Anesthesia Specialty Chief trucanh21@arizona.",
+          "retrievedAt": "2026-09-07T19:02:31.892Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0916-2",
+          "url": "https://medicine.arizona.edu/person/truc-anh-nguyen-md",
+          "excerpt": "k Information For Future Students Current Students Faculty & Staff Alumni & Donors Parents & Visitors Corporations & Businesses Topics About the University Academics Arts & Museums Athletics & Recreation Campus Store Colleges, Schools, Departments Environment & Sustainability International Engagement Health & Medical Libraries Research & Innovation Purpose, Mission & Values Resources Directory Calendars Campus Map News Phonebook Weather Connect Facebook Twitter Instagram LinkedIn YouTube We respectfully acknowledge the University of Arizona is on the land and territories of Indigenous peoples .",
+          "retrievedAt": "2026-09-07T19:02:31.892Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0916-3",
+          "url": "https://medicine.arizona.edu/person/truc-anh-nguyen-md",
+          "excerpt": "Today, Arizona is home to 22 federally recognized tribes, with Tucson being home to the O’odham and the Yaqui.",
+          "retrievedAt": "2026-09-07T19:02:31.892Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0916-4",
+          "url": "https://medicine.arizona.edu/person/truc-anh-nguyen-md",
+          "excerpt": "The university strives to build sustainable relationships with sovereign Native Nations and Indigenous communities through education offerings, partnerships, and community service.",
+          "retrievedAt": "2026-09-07T19:02:31.892Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0916-5",
+          "url": "https://medicine.arizona.edu/person/truc-anh-nguyen-md",
+          "excerpt": "University Information Security and Privacy &copy; 2026 The Arizona Board of Regents on behalf of The University of Arizona .",
+          "retrievedAt": "2026-09-07T19:02:31.892Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:03:44.318Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0917": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://u-aizu.ac.jp/research/faculty/detail?cd=90042&lng=en",
         "https://www.u-aizu.ac.jp/labs/ce-cc/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0917-1",
+          "url": "https://u-aizu.ac.jp/research/faculty/detail?cd=90042&lng=en",
+          "excerpt": "PHAM Tuan Anh | Research Detail | University of Aizu Search 日本語 Request Menu Access Contact Us Text Size Small Medium Large FACULTY Research and Industry-Academia Collaboration 研究・産学連携 &gt; Research and Industry-Academia Collaboration &gt; Faculty List &gt; Faculty Detail PHAM Tuan Anh Professor Affiliation Department of Computer Science and Engineering/Division of Computer Engineering Title Professor E-Mail pham@u-aizu.",
+          "retrievedAt": "2026-09-07T19:02:33.629Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0917-2",
+          "url": "https://u-aizu.ac.jp/research/faculty/detail?cd=90042&lng=en",
+          "excerpt": "rses - Graduate - CNC03: Selected Topics of Future Internet (CNS FoS core course, shared with other professors, Q2) - CNC01F: Computer Communications and Networking (GS Fundamental course, Q3) - CNC06: Performance Evaluation of Network Systems (CNS FoS core course, Q3) - CNA07: Optical Communications and Networks (CNS FoS advanced course, Q4) - RPW2 (for PhD students): Research Paper Writing II (course coordinator, shared with other professors, Q3 & Q4) Research Specialization Communication and network engineering Information network Information security Educational Background, Biography Anh T.",
+          "retrievedAt": "2026-09-07T19:02:33.629Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0917-3",
+          "url": "https://u-aizu.ac.jp/research/faculty/detail?cd=90042&lng=en",
+          "excerpt": "in Information and Mathematical Sciences from Saitama University, Japan, in 2005.",
+          "retrievedAt": "2026-09-07T19:02:33.629Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0917-4",
+          "url": "https://u-aizu.ac.jp/research/faculty/detail?cd=90042&lng=en",
+          "excerpt": "Since April 2005, he has been on the faculty at the University of Aizu, where he is currently a Professor of Computer Communications.",
+          "retrievedAt": "2026-09-07T19:02:33.629Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0917-5",
+          "url": "https://u-aizu.ac.jp/research/faculty/detail?cd=90042&lng=en",
+          "excerpt": "He has received several awards, including an award from the Japan Sasagawa Foundation, a few best-paper awards, and the Japanese government scholarship (MonbuKagaku-sho) for PhD study.",
+          "retrievedAt": "2026-09-07T19:02:33.629Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0917-6",
+          "url": "https://u-aizu.ac.jp/research/faculty/detail?cd=90042&lng=en",
+          "excerpt": "Professor Pham&#39;s research interests are in the broad areas of communication theory and networking with a particular emphasis on modeling, design, and performance evaluation of broadband wired/wireless communication systems and networks.",
+          "retrievedAt": "2026-09-07T19:02:33.629Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0917-7",
+          "url": "https://u-aizu.ac.jp/research/faculty/detail?cd=90042&lng=en",
+          "excerpt": "In particular, he has been involved in many research projects, focusing on enabling technologies and architecture for optical access networks, modeling and cross-layer design of ultra high-speed free-space optical communication networks, design, and development of visible light communication networks to support media transport, cognitive radio networks, video streaming and Internet of Things (IoT).",
+          "retrievedAt": "2026-09-07T19:02:33.629Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0917-8",
+          "url": "https://u-aizu.ac.jp/research/faculty/detail?cd=90042&lng=en",
+          "excerpt": "Over the years, he has served on the technical program committee of many international conferences and workshops in the communications and networking area.",
+          "retrievedAt": "2026-09-07T19:02:33.629Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:03:44.318Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0918": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.cn.chiba-u.jp/en/researcher/nguyen_kien/",
         "https://www.s-lab.nd.chiba-u.jp/english/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0918-1",
+          "url": "https://www.cn.chiba-u.jp/en/researcher/nguyen_kien/",
+          "excerpt": "グエンキエン &#8211; CHIBADAI NEXT JP About Series NewsRelease InfoGraphics Researcher Keyword #Data Science #Mathematics #FOREST Program #J-PEAKS Institute for Advanced Academic Research / Graduate School of Informatics, Chiba University Kien NGUYEN Associate Professor My research focuses on the design, architecture, and evaluation of networked systems, ranging from Wireless Sensor Networks (WSNs) and the Internet of Things (IoT) to the core Internet.",
+          "retrievedAt": "2026-09-07T19:02:36.823Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0918-2",
+          "url": "https://www.cn.chiba-u.jp/en/researcher/nguyen_kien/",
+          "excerpt": "My objective is to advance state-of-the-art technologies that enhance the performance of networked systems (e.",
+          "retrievedAt": "2026-09-07T19:02:36.823Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0918-3",
+          "url": "https://www.cn.chiba-u.jp/en/researcher/nguyen_kien/",
+          "excerpt": ", energy efficiency, throughput, and latency) and enable better provisioning of Quality of Service (QoS) and Quality of Experience (QoE).",
+          "retrievedAt": "2026-09-07T19:02:36.823Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0918-4",
+          "url": "https://www.cn.chiba-u.jp/en/researcher/nguyen_kien/",
+          "excerpt": "I employ both theoretical analysis and practical implementation to solve complex research problems.",
+          "retrievedAt": "2026-09-07T19:02:36.823Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0918-5",
+          "url": "https://www.cn.chiba-u.jp/en/researcher/nguyen_kien/",
+          "excerpt": "My current work centers on the convergence of IoT with Distributed Ledger Technologies (Blockchain), the optimization of IoT system efficiency, and the application of AI to network operations and protocols.",
+          "retrievedAt": "2026-09-07T19:02:36.823Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0918-6",
+          "url": "https://www.cn.chiba-u.jp/en/researcher/nguyen_kien/",
+          "excerpt": "Recent Topics of Interest: IoT-Blockchain Convergence, Distributed Ledger Technologies (DLT), AI for networking, Multipath Communication (MPTCP/MPQUIC), Network Softwarization (SDN/NFV) Motto in Research or in Life: Working hard is beautiful.",
+          "retrievedAt": "2026-09-07T19:02:36.823Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0918-7",
+          "url": "https://www.cn.chiba-u.jp/en/researcher/nguyen_kien/",
+          "excerpt": "Hobby / Holiday: I am a passionate soccer enthusiast, enjoying both playing and watching the game.",
+          "retrievedAt": "2026-09-07T19:02:36.823Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0918-8",
+          "url": "https://www.cn.chiba-u.jp/en/researcher/nguyen_kien/",
+          "excerpt": "n Department Institute for Advanced Academic Research / Graduate School of Informatics, Chiba University Job title Associate Professor keyword IoT, blockchain, AI for networking, OpenFlow, Network virtualization, Software-Defined Networking、QoS/QoE provisioning Related website SEKIYA & NGUYEN LABORATORY Information on academic societies Institute of Electrical and Electronics Engineers Information Processing Society of Japan The Institute of Electronics, Information and Communication Engineers Kien NGUYEN's article / News Release News Release Making Blockchain Fast Enough for IoT Networks 2026.",
+          "retrievedAt": "2026-09-07T19:02:36.823Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0918-9",
+          "url": "https://www.s-lab.nd.chiba-u.jp/english/",
+          "excerpt": "&lt;&lt;&lt; Top Research Publications Life Members Link 2026/8/26 A paper by Fukuda (alumnus) and co-authors, titled \"ML-Based Fully-Numerical Design Method for Load-Independent Class-EF WPT Systems,\" has been nominated as a candidate for the Power Electronics Award in the September 2026 issue of Nikkei Electronics, released on August 20.",
+          "retrievedAt": "2026-09-07T19:02:38.310Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0918-10",
+          "url": "https://www.s-lab.nd.chiba-u.jp/english/",
+          "excerpt": "2026/8/25 M1 Dat will give a presentation at the Technical Committee on Energy Engineering in Electronics and Communications (EE) meeting held in Kyoto on October 8th to 9th.",
+          "retrievedAt": "2026-09-07T19:02:38.310Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0918-11",
+          "url": "https://www.s-lab.nd.chiba-u.jp/english/",
+          "excerpt": "2026/8/25 D3 Komanaka and M2 Kaneiso will give presentations at The IEEE Energy Conversion Congress & Expo 2026 (ECCE 2026) held in Canada from October 4th to 8th.",
+          "retrievedAt": "2026-09-07T19:02:38.310Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0918-12",
+          "url": "https://www.s-lab.nd.chiba-u.jp/english/",
+          "excerpt": "Sekiya will give a presentation titled \"Development of Ultra-High Frequency Power Converters Opened Up by GaN Devices\" at the Institute of Electrical Engineers of Japan, A Division Conference.",
+          "retrievedAt": "2026-09-07T19:02:38.310Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0918-13",
+          "url": "https://www.s-lab.nd.chiba-u.jp/english/",
+          "excerpt": "[Power Academy] 2026/8/25 A paper titled \"Metaheuristic-Based Optimization-Driven Design of MHz LLC Resonant Converters Considering Multiphysics and Multiple Objectives\" by D3 Xie has been accepted for publication in IEEE Transactions on Power Electronics.",
+          "retrievedAt": "2026-09-07T19:02:38.310Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0918-14",
+          "url": "https://www.s-lab.nd.chiba-u.jp/english/",
+          "excerpt": "Click here for past topics Click here for past topics --> --> --> --> Address 263-8522 Faculty of Engineering, Building 1, 5F, Room 506 & 508 Chiba University, 1-33, Yayoi-cho, Inage-ku, Chiba-shi, Chiba, Japan MAP Access 1 minute walk from Nishi-Chiba Station on the JR Sobu Line Telephone Number Laboratory 043-290-3276 Professor Sekiya 043-290-3258 Assoc.",
+          "retrievedAt": "2026-09-07T19:02:38.310Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0918-15",
+          "url": "https://www.s-lab.nd.chiba-u.jp/english/",
+          "excerpt": "of Applied and Cognitive Informatics, Graduate School of Science and Engineering, Chiba Univ.",
+          "retrievedAt": "2026-09-07T19:02:38.310Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:03:44.318Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0919": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://tdb.shizuoka.ac.jp/rdb/public/Default2.aspx?id=11326&l=0",
         "https://lete143.wixsite.com/home"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0919-1",
+          "url": "https://tdb.shizuoka.ac.jp/rdb/public/Default2.aspx?id=11326&l=0",
+          "excerpt": "論文 等 学会発表・研究発表 科学研究費助成事業 外部資金（科研費以外） 受賞 教育関連情報 今年度担当授業科目 指導学生数 指導学生の受賞 社会活動 学外の審議会・委員会等 国際貢献実績 管理運営・その他 トップページ &gt; 教員個別情報 静岡大学教員データベース - 教員個別情報 : PHAM VAN THANH （PHAM VAN THANH） PHAM VAN THANH （PHAM VAN THANH） 准教授 [ORCID] 0000-0002-7228-3172 [Scopus Author ID] 56022936800 学術院工学領域 - 数理システム工学系列 工学部 - 数理システム工学科 大学院総合科学技術研究科工学専攻 創造科学技術研究部 最終更新日：2026/07/16 2:16:41 教員基本情報 【取得学位】 博士（コンピュータ理工学） 会津大学 2019年3月 【研究分野】 ものづくり技術（機械・電気電子・化学工学） - 通信工学 情報通信 - 情報ネットワーク 【研究キーワード】 光無線通信, 通信理論, 通信工学, 無線通信 【所属学会】 ・Institute of Electrical and Electronics Engineers (IEEE) ・電子情報通信学会 ・情報処理学会 【個人ホームページ】 https://lete143.",
+          "retrievedAt": "2026-09-07T19:02:39.762Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0919-2",
+          "url": "https://tdb.shizuoka.ac.jp/rdb/public/Default2.aspx?id=11326&l=0",
+          "excerpt": "Optimization of Probabilistic Constellation Shaping for Optical OFDM Systems With Clipping Distortion IEEE Communications Letters 30/- 562 -566 （2025年） [査読] 有 [国際共著論文] 該当しない [責任著者・共著者の別] 責任著者 [著者] Thanh V.",
+          "retrievedAt": "2026-09-07T19:02:39.762Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0919-3",
+          "url": "https://tdb.shizuoka.ac.jp/rdb/public/Default2.aspx?id=11326&l=0",
+          "excerpt": "Design of an Adaptive Hybrid Downlink NOMA-TDMA for Visible Light Communication Systems IEEE Wireless Communications Letters 15/- 585 -589 （2025年） [査読] 有 [国際共著論文] 該当する [責任著者・共著者の別] 共著者 [著者] Tuan A.",
+          "retrievedAt": "2026-09-07T19:02:39.762Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0919-4",
+          "url": "https://tdb.shizuoka.ac.jp/rdb/public/Default2.aspx?id=11326&l=0",
+          "excerpt": "Multi-User Visible Light Communications with Probabilistic Constellation Shaping and Precoding IEEE Transactions on Communications 73/9 7740 -7754 （2025年） [査読] 有 [国際共著論文] 該当する [責任著者・共著者の別] 責任著者 [著者] Thang K.",
+          "retrievedAt": "2026-09-07T19:02:39.762Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0919-5",
+          "url": "https://tdb.shizuoka.ac.jp/rdb/public/Default2.aspx?id=11326&l=0",
+          "excerpt": "Practical Design of Probabilistic Constellation Shaping for Enhancing Performance of Physical Layer Security in Visible Light Communications IEEE Transactions on Communications 73/8 6236 -6250 （2025年） [査読] 有 [国際共著論文] 該当しない [責任著者・共著者の別] 責任著者 [著者] Thanh V.",
+          "retrievedAt": "2026-09-07T19:02:39.762Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0919-6",
+          "url": "https://tdb.shizuoka.ac.jp/rdb/public/Default2.aspx?id=11326&l=0",
+          "excerpt": "On the Design of Artificial Noise for Physical Layer Security in Visible Light Communication Channels With Clipping IEEE Transactions on Wireless Communications 23/11 16062 -16075 （2024年） [査読] 有 [国際共著論文] 該当する [責任著者・共著者の別] 責任著者 [著者] Thanh V.",
+          "retrievedAt": "2026-09-07T19:02:39.762Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0919-7",
+          "url": "https://tdb.shizuoka.ac.jp/rdb/public/Default2.aspx?id=11326&l=0",
+          "excerpt": "Performance Analysis of NOMA-Assisted Optical OFDM ISAC Systems with Clipping Distortion 2026 IEEE Wireless Communications and Networking Conference (WCNC) （2026年4月） 招待講演以外 [発表者]Nam N.",
+          "retrievedAt": "2026-09-07T19:02:39.762Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0919-8",
+          "url": "https://tdb.shizuoka.ac.jp/rdb/public/Default2.aspx?id=11326&l=0",
+          "excerpt": "大型排水路検査の省力化のための自律走行検査ロボットの設計と実装 情報処理学会第88回全国大会 （2026年3月） 招待講演以外 [発表者]重光洋輝，ウカシュ バウディガ, 山田浩之, 石川正浩, Thanh V.",
+          "retrievedAt": "2026-09-07T19:02:39.762Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0919-9",
+          "url": "https://lete143.wixsite.com/home",
+          "excerpt": "Pham Associate Professor, Department of Mathematical and Systems Engineering, Shizuoka University, Shizuoka, Japan.",
+          "retrievedAt": "2026-09-07T19:02:39.993Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0919-10",
+          "url": "https://lete143.wixsite.com/home",
+          "excerpt": "jp HOME RESEARCH MEMBERS PUBLICATIONS TSP-2020 TEACHING OTHERS BLOG More Use tab to navigate through the menu items.",
+          "retrievedAt": "2026-09-07T19:02:39.993Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0919-11",
+          "url": "https://lete143.wixsite.com/home",
+          "excerpt": "I am currently an associate professor in the Department of Mathematical and Systems Engineering at Shizuoka University, Japan.",
+          "retrievedAt": "2026-09-07T19:02:39.993Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0919-12",
+          "url": "https://lete143.wixsite.com/home",
+          "excerpt": "Previously, I was a research fellow of the Japan Society for the Promotion of Science (JSPS) (2018-2020), the University of Aizu, Japan (2020-2021), a postdoctoral researcher at McMaster University, Canada (2021-2022), and an assistant professor at the Department of Mathematical and Systems Engineering, Shizuoka University, Japan (2022-2026).",
+          "retrievedAt": "2026-09-07T19:02:39.993Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0919-13",
+          "url": "https://lete143.wixsite.com/home",
+          "excerpt": "My research interests are in the areas of optical wireless communications, network security, communications networks, and communication theory.",
+          "retrievedAt": "2026-09-07T19:02:39.993Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0919-14",
+          "url": "https://lete143.wixsite.com/home",
+          "excerpt": "​ Aside from doing research, I do some photography and read about history (especially the history of the 20th century), astronomy, and astrophysics.",
+          "retrievedAt": "2026-09-07T19:02:39.993Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0919-15",
+          "url": "https://lete143.wixsite.com/home",
+          "excerpt": "​ Ishihara・Pham Lab ResearchMap Google Scholar Research Gate Flickr News 8/2026: Tuan (M1) presented his research at the 2026 Tokai-Section Joint Conference on Electrical, Electronics, Information, and Related Engineering.",
+          "retrievedAt": "2026-09-07T19:02:39.993Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0919-16",
+          "url": "https://lete143.wixsite.com/home",
+          "excerpt": "8/2026: Yoneyama (M1) and Tuan (M1) received the IEEE VTS Tokyo/Japan Chapter APWCS 2026 Encouragement Award for their research presented at APWCS 2026.",
+          "retrievedAt": "2026-09-07T19:02:39.993Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:03:44.318Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0920": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.shibaura-it.ac.jp/en/research/laboratory/00005.html",
         "https://sites.google.com/view/phanxuantan"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0920-1",
+          "url": "https://www.shibaura-it.ac.jp/en/research/laboratory/00005.html",
+          "excerpt": "Mobile Multimedia Communications Laboratory ｜Shibaura Institute of Technology index main contents Headline Research Study at SIT About SIT Academics Campus Life HOME Research Laboratory Mobile Multimedia Communications Laboratory Mobile Multimedia Communications Laboratory Assoc.",
+          "retrievedAt": "2026-09-07T19:02:41.024Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0920-2",
+          "url": "https://sites.google.com/view/phanxuantan",
+          "excerpt": "kip to navigation Phan Xuan Tan Home Biography Research Publications Teaching and Supervision Professional Services Phan Xuan Tan Home Biography Research Publications Teaching and Supervision Professional Services More Home Biography Research Publications Teaching and Supervision Professional Services Associate Professor at College of Engineering, Shibaura Institute of Technology Contact Shibaura Institute of Technology 3 Chome-7-5 Toyosu, Koto City, Tokyo 135-8548 Email: tanpx at shibaura-it dot ac dot jp My research focuses are Computer Vision, Image Processing, Deep Learning, and AI Safety .",
+          "retrievedAt": "2026-09-07T19:02:41.278Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0920-3",
+          "url": "https://sites.google.com/view/phanxuantan",
+          "excerpt": "Currently, I am leading a research team, newly established from April 2022 , consisting of students from diverse nationalities, including Japan, India, China, and Vietnam.",
+          "retrievedAt": "2026-09-07T19:02:41.278Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0920-4",
+          "url": "https://sites.google.com/view/phanxuantan",
+          "excerpt": "students, Master Students and Exchange Students working on the following topics: Image & Video Processing and applications.",
+          "retrievedAt": "2026-09-07T19:02:41.278Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0920-5",
+          "url": "https://sites.google.com/view/phanxuantan",
+          "excerpt": "Computer Vision for Robotics (Visual SLAM, View synthesis, underwater image enhancement, 6D pose estimation, depth estimation, etc.",
+          "retrievedAt": "2026-09-07T19:02:41.278Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0920-6",
+          "url": "https://sites.google.com/view/phanxuantan",
+          "excerpt": "News 2026/02/01: Alice Saito has joined MIT, USA for two-week BlenDED program consisting of 2 PBLs on Operational Strategy and AI and Computer Vision and AI.",
+          "retrievedAt": "2026-09-07T19:02:41.278Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0920-7",
+          "url": "https://sites.google.com/view/phanxuantan",
+          "excerpt": "2026/01/09: Strahinja Janjusevic from MIT , USA have joined our team to work on the topic of Constitutional AI .",
+          "retrievedAt": "2026-09-07T19:02:41.278Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0920-8",
+          "url": "https://sites.google.com/view/phanxuantan",
+          "excerpt": "At the same time, Gia Minh from HUST, Vietnam also joined our Generative AI team.",
+          "retrievedAt": "2026-09-07T19:02:41.278Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0920-9",
+          "url": "https://sites.google.com/view/phanxuantan",
+          "excerpt": "2025/10/09: Hershraj Niranjani from UC Berkeley, USA and Alice Saito from the University of Tokyo, Japan , Ryan Yessou from University of Milan - Bicocca, Ujwal Kumar from SIT , Japan have joined our team to work on the topic of Constitutional AI 2025/10/09: Viet Hoang from HUST, Vietnam has joined our team to work on the topic Generative AI for Image Editing.",
+          "retrievedAt": "2026-09-07T19:02:41.278Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:03:44.318Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0921": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://u-aizu.ac.jp/research/faculty/detail?cd=90043&lng=en",
         "http://www.u-aizu.ac.jp/~thang/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0921-1",
+          "url": "https://u-aizu.ac.jp/research/faculty/detail?cd=90043&lng=en",
+          "excerpt": "TRUONG Cong Thang | Research Detail | University of Aizu Search 日本語 Request Menu Access Contact Us Text Size Small Medium Large FACULTY Research and Industry-Academia Collaboration 研究・産学連携 &gt; Research and Industry-Academia Collaboration &gt; Faculty List &gt; Faculty Detail TRUONG Cong Thang Senior Associate Professor Affiliation Department of Computer Science and Engineering/Division of Computer Engineering Title Senior Associate Professor E-Mail thang@u-aizu.",
+          "retrievedAt": "2026-09-07T19:02:42.746Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0921-2",
+          "url": "https://u-aizu.ac.jp/research/faculty/detail?cd=90043&lng=en",
+          "excerpt": "bra I - Network Programming - Computer Network Organization & Design Courses - Graduate - Multimedia Networking- Selected Topics of Future Internet Research Specialization Communication and network engineering Theory of informatics Computer system Software Information network Perceptual information processing Human interface and interaction Intelligent informatics Soft computing Intelligent robotics Life\\, health and medical informatics Entertainment and game informatics AI, Multimedia big data, Machine learning, Computer vision, Image processing, Networks Educational Background, Biography - B.",
+          "retrievedAt": "2026-09-07T19:02:42.746Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0921-3",
+          "url": "https://u-aizu.ac.jp/research/faculty/detail?cd=90043&lng=en",
+          "excerpt": "Current Research Theme My fields of study: CS, SY, CN, IT Themes: AI, Multimedia big data, Computer vision, Internet, e-Health Key Topic AI for Multimedia, Big data, VR/AR for metaverse (My fields of study: CS, SY, CN, IT) Affiliated Academic Society IEEE, IEICE Others Hobbies Cultures, nature, philosophies School days' Dream Becoming a world citizen Current Dream A seamless network connecting everything (people, content, places, things, etc.",
+          "retrievedAt": "2026-09-07T19:02:42.746Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0921-4",
+          "url": "https://u-aizu.ac.jp/research/faculty/detail?cd=90043&lng=en",
+          "excerpt": ") Motto \"Humility is the solid foundation of all virtues\" Favorite Books \"Education and the Significance of Life\" by Krishnamurti Messages for Students \"What is your big picture?",
+          "retrievedAt": "2026-09-07T19:02:42.746Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0921-5",
+          "url": "http://www.u-aizu.ac.jp/~thang/",
+          "excerpt": "Truong Cong Thang homepage This page uses frames, but your browser doesn't support them.",
+          "retrievedAt": "2026-09-07T19:02:43.196Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:03:44.318Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0922": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://u-aizu.ac.jp/research/faculty/detail?cd=90142&lng=en",
         "https://u-aizu.ac.jp/~khanh/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0922-1",
+          "url": "https://u-aizu.ac.jp/research/faculty/detail?cd=90142&lng=en",
+          "excerpt": "DANG Nam Khanh | Research Detail | University of Aizu Search 日本語 Request Menu Access Contact Us Text Size Small Medium Large FACULTY Research and Industry-Academia Collaboration 研究・産学連携 &gt; Research and Industry-Academia Collaboration &gt; Faculty List &gt; Faculty Detail DANG Nam Khanh Associate Professor Affiliation Department of Computer Science and Engineering/Division of Computer Engineering Title Associate Professor E-Mail khanh@u-aizu.",
+          "retrievedAt": "2026-09-07T19:02:44.741Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0922-2",
+          "url": "https://u-aizu.ac.jp/research/faculty/detail?cd=90142&lng=en",
+          "excerpt": "jp/~khanh/ Education Research Others Main research Dissertation and Published Works Education Courses - Undergraduate PL03: JAVA Programming I (Ex.",
+          "retrievedAt": "2026-09-07T19:02:44.741Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0922-3",
+          "url": "https://u-aizu.ac.jp/research/faculty/detail?cd=90142&lng=en",
+          "excerpt": "Research Specialization Control and system engineering Electron device and electronic equipment Computer system Computational science Educational Background, Biography Educational Background - Ph.",
+          "retrievedAt": "2026-09-07T19:02:44.741Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0922-4",
+          "url": "https://u-aizu.ac.jp/research/faculty/detail?cd=90142&lng=en",
+          "excerpt": "in Electronics & Telecommunications, Vietnam National University, Vietnam, 2011 Work Experience - Associate Professor, The University of Aizu, 2022 April - now.",
+          "retrievedAt": "2026-09-07T19:02:44.741Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0922-5",
+          "url": "https://u-aizu.ac.jp/research/faculty/detail?cd=90142&lng=en",
+          "excerpt": "- Assistant Professor, Vietnam National University, Hanoi, 2017 November - 2022 March.",
+          "retrievedAt": "2026-09-07T19:02:44.741Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0922-6",
+          "url": "https://u-aizu.ac.jp/research/faculty/detail?cd=90142&lng=en",
+          "excerpt": "Current Research Theme - Neuromorphic engineering - AI - Low-power VLSI Key Topic Neuromorphic Computing, Faul-tolerance, VLSI, 3D Integrated Circuits, Generative AI Affiliated Academic Society Others Messages for Students I firmly believe in mastering the fundamentals before tackling advanced topics.",
+          "retrievedAt": "2026-09-07T19:02:44.741Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0922-7",
+          "url": "https://u-aizu.ac.jp/research/faculty/detail?cd=90142&lng=en",
+          "excerpt": "Take the time to read, study, and practice essential subjects like mathematics, English, and programming.",
+          "retrievedAt": "2026-09-07T19:02:44.741Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0922-8",
+          "url": "https://u-aizu.ac.jp/research/faculty/detail?cd=90142&lng=en",
+          "excerpt": "Main research Energy-Efficient Architectures: From Bio-Inspired AI SoCs to Green Computing Our research in power and energy-efficient computing systems is essential to meeting the growing demand for more powerful and sustainable technology.",
+          "retrievedAt": "2026-09-07T19:02:44.741Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:03:44.318Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0923": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://u-aizu.ac.jp/research/faculty/detail?cd=90154&lng=en",
         "https://u-aizu.ac.jp/~hoangle/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0923-1",
+          "url": "https://u-aizu.ac.jp/research/faculty/detail?cd=90154&lng=en",
+          "excerpt": "LE Doan Hoang | Research Detail | University of Aizu Search 日本語 Request Menu Access Contact Us Text Size Small Medium Large FACULTY Research and Industry-Academia Collaboration 研究・産学連携 &gt; Research and Industry-Academia Collaboration &gt; Faculty List &gt; Faculty Detail LE Doan Hoang Associate Professor Affiliation Department of Computer Science and Engineering/Division of Computer Engineering Title Associate Professor E-Mail hoangle@u-aizu.",
+          "retrievedAt": "2026-09-07T19:02:46.981Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0923-2",
+          "url": "https://u-aizu.ac.jp/research/faculty/detail?cd=90154&lng=en",
+          "excerpt": "jp/~hoangle/ Education Research Others Main research Dissertation and Published Works Education Courses - Undergraduate - FU14: Introduction to Software Engineering (Ex.",
+          "retrievedAt": "2026-09-07T19:02:46.981Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0923-3",
+          "url": "https://u-aizu.ac.jp/research/faculty/detail?cd=90154&lng=en",
+          "excerpt": ") - LI11: Introduction to Computer Network (Lecture) - FU02: Information Theory and Data Compression (Ex.",
+          "retrievedAt": "2026-09-07T19:02:46.981Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0923-4",
+          "url": "https://u-aizu.ac.jp/research/faculty/detail?cd=90154&lng=en",
+          "excerpt": "nce/Machine Learning (AI/ML) Educational Background, Biography - Associate Professor, The University of Aizu, 2023 - Present Current Research Theme - Internet From Space - AI/Machine Learning for Wireless Network Optimization - Quantum Key Distribution Key Topic Optical Wireless Communications, Satellite/Vehicular Networks, AI/Machine Learning, Quantum Key Distributions Affiliated Academic Society IEEE (Member), IEICE (Member) Others Hobbies Soccer, Marathon, Table Tennis School days' Dream To become a physics teacher Dissertation and Published Works Selected Publications (visit https://u-aizu.",
+          "retrievedAt": "2026-09-07T19:02:46.981Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0923-5",
+          "url": "https://u-aizu.ac.jp/research/faculty/detail?cd=90154&lng=en",
+          "excerpt": "Pham, \"FSO-Based HAP-Assisted Multi-UAV Backhauling Over F Channels With Imperfect CSI,\" IEEE Transactions on Vehicular Technology, August 2024 2) Tinh V.",
+          "retrievedAt": "2026-09-07T19:02:46.981Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0923-6",
+          "url": "https://u-aizu.ac.jp/research/faculty/detail?cd=90154&lng=en",
+          "excerpt": "Pham, \"Adaptive Rate/Power Control with ML-based Channel Prediction for Optical Satellite Systems,\" IEEE Transactions on Aerospace and Electronic Systems, May 2024 3) Hoang D.",
+          "retrievedAt": "2026-09-07T19:02:46.981Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0923-7",
+          "url": "https://u-aizu.ac.jp/research/faculty/detail?cd=90154&lng=en",
+          "excerpt": "Pham, \"Hybrid FSO/Sub-THz-based Vertical Networks for Internet of Vehicles,\" IEEE Transactions on Aerospace and Electronic Systems, vol.",
+          "retrievedAt": "2026-09-07T19:02:46.981Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0923-8",
+          "url": "https://u-aizu.ac.jp/research/faculty/detail?cd=90154&lng=en",
+          "excerpt": "Pham, \"FSO-based Space-Air-Ground Integrated Vehicular Networks: Cooperative HARQ with Rate Adaptation,\" IEEE Transactions on Aerospace and Electronic Systems, Vol.",
+          "retrievedAt": "2026-09-07T19:02:46.981Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0923-9",
+          "url": "https://u-aizu.ac.jp/~hoangle/",
+          "excerpt": "Hoang Le | 会津大学 LE Doan Hoang Associate Professor/准教授 University of Aizu/会津大学 Home/ホーム About Me/自己紹介 Teaching/教育 Supervision/学生指導 Research/研究 Publication/業績リスト Service/サービス Awards/賞 Contact/接触 こんにちわ!",
+          "retrievedAt": "2026-09-07T19:02:48.846Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0923-10",
+          "url": "https://u-aizu.ac.jp/~hoangle/",
+          "excerpt": "I'm About Me/自己紹介 LE Doan Hoang (レ ドアン ホアン) [ UoA Profile ] Position: Associate Professor, The University of Aizu, Japan Affiliation: School of Computer Science and Engineering Lab Website: https://u-aizu.",
+          "retrievedAt": "2026-09-07T19:02:48.846Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0923-11",
+          "url": "https://u-aizu.ac.jp/~hoangle/",
+          "excerpt": "jp/labs/ce-cc/ Research Interests: Optical Wireless Networks, Applied AI/ML, Quantum Key Distribution Office: Room 306 A, Research Quadrangles Email: hoangle@u-aizu.",
+          "retrievedAt": "2026-09-07T19:02:48.846Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0923-12",
+          "url": "https://u-aizu.ac.jp/~hoangle/",
+          "excerpt": "jp Phone: (+81) 80-9980-8449 Bio Hoang Le is currently an Associate Professor with the School of Computer Science and Engineering at the University of Aizu (UoA), Japan.",
+          "retrievedAt": "2026-09-07T19:02:48.846Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0923-13",
+          "url": "https://u-aizu.ac.jp/~hoangle/",
+          "excerpt": "His research interests are in the areas of optical wireless communications, satellite/vehicular networks, applied AI/ML, and network security-based quantum cryptography.",
+          "retrievedAt": "2026-09-07T19:02:48.846Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0923-14",
+          "url": "https://u-aizu.ac.jp/~hoangle/",
+          "excerpt": "He was a recipient of several awards, including the 2018 KICS/IEEE ICTC Best Paper Award, 2019 IEEE VTS Tokyo Chapter Young Researcher Encouragement Award, 2019 IEEE ComSoc Sendai Chapter Student Excellent Research Award, and the honor of being a selected young researcher for the 9th Heidelberg Laureate Forum in 2022.",
+          "retrievedAt": "2026-09-07T19:02:48.846Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0923-15",
+          "url": "https://u-aizu.ac.jp/~hoangle/",
+          "excerpt": "Other accolades include the 2022 IEEE ICCE Best Paper Award, 2023 ICETC Best Poster Award, 2024 IEICE Comex Top Downloaded Letter, and 2024 IEEE/IET CSNDSP Best Paper Award.",
+          "retrievedAt": "2026-09-07T19:02:48.846Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0923-16",
+          "url": "https://u-aizu.ac.jp/~hoangle/",
+          "excerpt": "He has also served as Chair of the IEEE University of Aizu Student Branch and as a committee member of the IEEE Sendai Young Professionals Affinity Group.",
+          "retrievedAt": "2026-09-07T19:02:48.846Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:03:44.318Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0924": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.csit.ist.hokudai.ac.jp/en/news/new-faculty-associate-professor-dr-nguyen-dai-hai.html",
         "https://sites.google.com/view/daihnguyen0909/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0924-1",
+          "url": "https://www.csit.ist.hokudai.ac.jp/en/news/new-faculty-associate-professor-dr-nguyen-dai-hai.html",
+          "excerpt": "NGUYEN Dai Hai | Computer Science and Information Technology - Hokkaido University [New Faculty] Associate Professor, Dr.",
+          "retrievedAt": "2026-09-07T19:02:50.595Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0924-2",
+          "url": "https://www.csit.ist.hokudai.ac.jp/en/news/new-faculty-associate-professor-dr-nguyen-dai-hai.html",
+          "excerpt": "NGUYEN Dai Hai &#8211; Computer Science and Information Technology &#8211; Hokkaido University Japanese --> --> Research Themes Curriculum and Environment Job Info トピックス [New Faculty] Associate Professor, Dr.",
+          "retrievedAt": "2026-09-07T19:02:50.595Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0924-3",
+          "url": "https://www.csit.ist.hokudai.ac.jp/en/news/new-faculty-associate-professor-dr-nguyen-dai-hai.html",
+          "excerpt": "NGUYEN Dai Hai Name: NGUYEN Dai Hai Affiliation: Laboratory of Algorithmics Position: Associate Professor Profile: I obtained Ph.",
+          "retrievedAt": "2026-09-07T19:02:50.595Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0924-4",
+          "url": "https://www.csit.ist.hokudai.ac.jp/en/news/new-faculty-associate-professor-dr-nguyen-dai-hai.html",
+          "excerpt": "From November 2020 to March 2022, I worked as a researcher at the University of Tokyo.",
+          "retrievedAt": "2026-09-07T19:02:50.595Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0924-5",
+          "url": "https://www.csit.ist.hokudai.ac.jp/en/news/new-faculty-associate-professor-dr-nguyen-dai-hai.html",
+          "excerpt": "Then I worked as an assistant professor at the University of Tsukuba from April 2022 to December 2024.",
+          "retrievedAt": "2026-09-07T19:02:50.595Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0924-6",
+          "url": "https://www.csit.ist.hokudai.ac.jp/en/news/new-faculty-associate-professor-dr-nguyen-dai-hai.html",
+          "excerpt": "My research interests lie in both the theoretical and applied aspects of machine learning.",
+          "retrievedAt": "2026-09-07T19:02:50.595Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0924-7",
+          "url": "https://www.csit.ist.hokudai.ac.jp/en/news/new-faculty-associate-professor-dr-nguyen-dai-hai.html",
+          "excerpt": "Message: My research is multidisciplinary&#8211; I not only use mathematical approaches to analyze machine learning methods, but I am also interested in applying them to a wide range of scientific fields, including computer vision, natural language processing, bioinformatics and chemo-informatics.",
+          "retrievedAt": "2026-09-07T19:02:50.595Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0924-8",
+          "url": "https://www.csit.ist.hokudai.ac.jp/en/news/new-faculty-associate-professor-dr-nguyen-dai-hai.html",
+          "excerpt": "I am always open to collaborations with experts from both information science and other disciplines.",
+          "retrievedAt": "2026-09-07T19:02:50.595Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0924-9",
+          "url": "https://sites.google.com/view/daihnguyen0909/",
+          "excerpt": "Nguyen @ Hokkaido University Search this site Embedded Files Skip to main content Skip to navigation D.",
+          "retrievedAt": "2026-09-07T19:02:50.760Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0924-10",
+          "url": "https://sites.google.com/view/daihnguyen0909/",
+          "excerpt": "Nguyen @ Hokkaido University Home Dai Hai Nguyen (Nguyễn Đại Hải in Vietnamese) Associate Professor Laboratory for Algorithms Knowledge Software Science Group Division of Computer Science and Information Technology Graduate School of Information Science and Technology Hokkaido University Research Interests I am interested in machine learning, especially: Convex Optimization; Kernel Methods; Optimal Transport; Information Geometry.",
+          "retrievedAt": "2026-09-07T19:02:50.760Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0924-11",
+          "url": "https://sites.google.com/view/daihnguyen0909/",
+          "excerpt": ", 202 9 : JSPS KAKENHI Grant number 26K21294, Grant-in-Aid for Early-Career Scientists ( Principal Investigator ).",
+          "retrievedAt": "2026-09-07T19:02:50.760Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0924-12",
+          "url": "https://sites.google.com/view/daihnguyen0909/",
+          "excerpt": ", 202 7 : International Collaborative Research Program of ICR, Kyoto University ( Principal Investigator ).",
+          "retrievedAt": "2026-09-07T19:02:50.760Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0924-13",
+          "url": "https://sites.google.com/view/daihnguyen0909/",
+          "excerpt": ", 2026: International Collaborative Research Program of ICR, Kyoto University ( Principal Investigator ).",
+          "retrievedAt": "2026-09-07T19:02:50.760Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0924-14",
+          "url": "https://sites.google.com/view/daihnguyen0909/",
+          "excerpt": ", 2026: JSPS KAKENHI Grant number 23K16939, Grant-in-Aid for Early-Career Scientists ( Principal Investigator ).",
+          "retrievedAt": "2026-09-07T19:02:50.760Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0924-15",
+          "url": "https://sites.google.com/view/daihnguyen0909/",
+          "excerpt": ", 2020 : JSPS KAKENHI Grant number 19J14714 , Grant-in-Aid for JSPS Fellows ( Principal Investigator ) .",
+          "retrievedAt": "2026-09-07T19:02:50.760Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0924-16",
+          "url": "https://sites.google.com/view/daihnguyen0909/",
+          "excerpt": "[Link] Lectures 2025 Program Theory and Language at Hokkaido University Theory and Practice of Algorithms (Optimization for Machine Learning) at Hokkaido University Programming and Practice at Hokkaido University 2023, 2024 Probability Theory at University of Tsukuba Introduction to Bioinformatics at T-LSI, University of Tsukuba Selected Publications 1 5 .",
+          "retrievedAt": "2026-09-07T19:02:50.760Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:03:44.318Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0925": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.sanken.osaka-u.ac.jp/en/organization/fir/fir05.html",
         "https://thongpham.net/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0925-1",
+          "url": "https://www.sanken.osaka-u.ac.jp/en/organization/fir/fir05.html",
+          "excerpt": "知能推論研究分野&lt;br&gt;(清水研)｜SANKEN, The University of Osaka Contact JP About SANKEN Greeting Mission statement Outline Directors・Emeritus Professor Organization SANKEN'S DATA SANKEN Actions Research & Facilities Div.",
+          "retrievedAt": "2026-09-07T19:02:52.228Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0925-2",
+          "url": "https://www.sanken.osaka-u.ac.jp/en/organization/fir/fir05.html",
+          "excerpt": "turing Achievements ユースケース --> インタビュー --> Events 出展情報 --> SANKEN Research Park Technical & Academic Consultation Donation The SANKEN Strategy Office Osaka University Foundation for the Future Education Student Life How to enter SANKEN SANKEN organized Events General and School Activities SANKEN Photo Tour SDGs サステナビリティ --> Contact For Media 施設見学お申し込み --> Recruit Access 産研同窓会 産研協会WEB Site Map Site Policy Search --> For Media Recruit Access About SANKEN Greeting Mission statement Outline Directors・Emeritus Professor Organization SANKEN'S DATA SANKEN Actions 情報公開・刊行物 --> Research & Facilities Div.",
+          "retrievedAt": "2026-09-07T19:02:52.228Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0925-3",
+          "url": "https://www.sanken.osaka-u.ac.jp/en/organization/fir/fir05.html",
+          "excerpt": "s Project Research Awards Media Coverage Press briefing Activity Report Other Activities Research at Osaka University ResOU Socialinnovation SANKEN Startup Venturing Achievements ユースケース --> インタビュー --> Events 出展情報 --> SANKEN Research Park Technical & Academic Consultation Donation The SANKEN Strategy Office Osaka University Foundation for the Future Socialinnovation As the only research institute in our country bearing the name of industrial science, we are dedicated to conducting world-class research and linking it with companies worldwide, thus making significant contributions to the industry.",
+          "retrievedAt": "2026-09-07T19:02:52.228Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0925-4",
+          "url": "https://www.sanken.osaka-u.ac.jp/en/organization/fir/fir05.html",
+          "excerpt": "Education Student Life How to enter SANKEN SANKEN organized Events General and School Activities SANKEN Photo Tour SDGs Education SANKEN currently has 28 laboratories and 210 graduate students from Osaka University‘s Graduate Schools of Science, Engineering, Engineering Science, Pharmaceutical Sciences, Information Science and Technology, and Frontier Biosciences.",
+          "retrievedAt": "2026-09-07T19:02:52.228Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0925-5",
+          "url": "https://www.sanken.osaka-u.ac.jp/en/organization/fir/fir05.html",
+          "excerpt": "SANKEN is also committed to contributing to society and the region as a center for education, research, and innovation through activities aimed at students and adults in Japan and abroad to increase interest in science, introduce research in the fields of science and technology, and serve as a center for education, research, and innovation.",
+          "retrievedAt": "2026-09-07T19:02:52.228Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0925-6",
+          "url": "https://www.sanken.osaka-u.ac.jp/en/organization/fir/fir05.html",
+          "excerpt": "Reasoning for Intelligence (Shimizu Lab) website # Data Science # AI # Statistical Causal Inference # Machine Learning Data science is a discipline that involves extracting valuable information from data and utilizing it for decision-making.",
+          "retrievedAt": "2026-09-07T19:02:52.228Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0925-7",
+          "url": "https://www.sanken.osaka-u.ac.jp/en/organization/fir/fir05.html",
+          "excerpt": "Machine learning has been highly successful in making predictions based on correlations and is widely used in society.",
+          "retrievedAt": "2026-09-07T19:02:52.228Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0925-8",
+          "url": "https://www.sanken.osaka-u.ac.jp/en/organization/fir/fir05.html",
+          "excerpt": "However, understanding causal relationships, not just correlations, is also crucial for informed decision-making.",
+          "retrievedAt": "2026-09-07T19:02:52.228Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0925-9",
+          "url": "https://thongpham.net/",
+          "excerpt": "Thong Pham TP \"> Toggle navigation about (current) Pham Lab publications software teaching Thong Pham Associate Professor, Osaka University Specially Appointed Associate Professor, Shiga University Room N503 Bldg.",
+          "retrievedAt": "2026-09-07T19:02:53.121Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0925-10",
+          "url": "https://thongpham.net/",
+          "excerpt": "N SANKEN, Osaka University I am an Associate Professor (tenured) at SANKEN, Osaka University .",
+          "retrievedAt": "2026-09-07T19:02:53.121Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0925-11",
+          "url": "https://thongpham.net/",
+          "excerpt": "I also hold a cross-appointment at the Data Science and AI Innovation Research Promotion Center, Shiga University .",
+          "retrievedAt": "2026-09-07T19:02:53.121Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0925-12",
+          "url": "https://thongpham.net/",
+          "excerpt": "In addition, I am a Visiting Scientist at the Causal Inference Team, RIKEN AIP , and a Visiting Researcher at Fukuma Research Group, Kyoto University Graduate School of Medicine .",
+          "retrievedAt": "2026-09-07T19:02:53.121Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0925-13",
+          "url": "https://thongpham.net/",
+          "excerpt": "My current research focuses on causal discovery methods that are robust in real-world settings, particularly those that can handle hidden variables and capture complex data-generating mechanisms.",
+          "retrievedAt": "2026-09-07T19:02:53.121Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0925-14",
+          "url": "https://thongpham.net/",
+          "excerpt": "news Jun 9, 2026 A causal discovery method for hidden-variable settings with heteroscedastic noise.",
+          "retrievedAt": "2026-09-07T19:02:53.121Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0925-15",
+          "url": "https://thongpham.net/",
+          "excerpt": "Mar 21, 2026 Our paper has been published in Environmental Toxicology and Chemistry .",
+          "retrievedAt": "2026-09-07T19:02:53.121Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0925-16",
+          "url": "https://thongpham.net/",
+          "excerpt": "fundings 04/2025 - 03/2028 Group Leader, JST CREST JPMJCR22D2 04/2024 - 03/2029 JSPS Grant-in-Aid for Early-Career Scientists 24K20741 (Direct cost: 5.",
+          "retrievedAt": "2026-09-07T19:02:53.121Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:03:44.318Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0926": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://kyoiku-kenkyudb.omu.ac.jp/html/100001108_en.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0926-1",
+          "url": "https://kyoiku-kenkyudb.omu.ac.jp/html/100001108_en.html",
+          "excerpt": "Researcher Profiles - TRAN THI HONG Researchers Information Osaka Metropolitan University Menu Researcher Profiles 日本語 / English Japanese Page Back to Osaka Metropolitan Univ.",
+          "retrievedAt": "2026-09-07T19:02:55.084Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0926-2",
+          "url": "https://kyoiku-kenkyudb.omu.ac.jp/html/100001108_en.html",
+          "excerpt": "hed by graduate students ◆ Number of instructed thesis, researches International exchange ◆ Foreigner acceptance Updated on 2026/04/15 TRAN THI HONG Organization Graduate School of Informatics Department of Core Informatics Associate Professor School of Engineering Department of Information Science Title Associate Professor Affiliation Institute of Informatics Profile Thi hong Tran: received a bachelor's degree in physics and a master's degree in microelectronics from Vietnam National University Ho Chi Minh City (VNU-HCM) University of Science, Vietnam, in 2008 and 2012, respectively, and a Ph.",
+          "retrievedAt": "2026-09-07T19:02:55.084Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0926-3",
+          "url": "https://kyoiku-kenkyudb.omu.ac.jp/html/100001108_en.html",
+          "excerpt": "degree in information science from the Kyushu Institute of Technology, Japan, in 2014.",
+          "retrievedAt": "2026-09-07T19:02:55.084Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0926-4",
+          "url": "https://kyoiku-kenkyudb.omu.ac.jp/html/100001108_en.html",
+          "excerpt": "From 2015/1 to 2021/9, she has been with the Nara Institute of Science and Technology (NAIST), Japan, as a Full Time Assistant Professor.",
+          "retrievedAt": "2026-09-07T19:02:55.084Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0926-5",
+          "url": "https://kyoiku-kenkyudb.omu.ac.jp/html/100001108_en.html",
+          "excerpt": "Since 2021/10, she has been with Osaka city University, Japan as a full time lecturer, and with NAIST as a visiting associate professor.",
+          "retrievedAt": "2026-09-07T19:02:55.084Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0926-6",
+          "url": "https://kyoiku-kenkyudb.omu.ac.jp/html/100001108_en.html",
+          "excerpt": "Since 2022/4 she has been with Osaka Metropolitan University (OMU) as full lecturer, and from 2025/4 she was promoted to Associate Professor in OMU.",
+          "retrievedAt": "2026-09-07T19:02:55.084Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0926-7",
+          "url": "https://kyoiku-kenkyudb.omu.ac.jp/html/100001108_en.html",
+          "excerpt": "Her research interests include digital hardware circuit design, algorithms related to wireless communication, communication security, blockchain technology, SHA-2, SHA-3, cryptography, etc.",
+          "retrievedAt": "2026-09-07T19:02:55.084Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0926-8",
+          "url": "https://kyoiku-kenkyudb.omu.ac.jp/html/100001108_en.html",
+          "excerpt": "Affiliation campus Sugimoto Campus Position Position Graduate School of Informatics Department of Core Informatics Associate Professor 2025.",
+          "retrievedAt": "2026-09-07T19:02:55.084Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:03:44.318Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0927": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://fp.jaist.ac.jp/public/Default2.aspx?id=669&l=1"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0927-1",
+          "url": "https://fp.jaist.ac.jp/public/Default2.aspx?id=669&l=1",
+          "excerpt": "北陸先端科学技術大学院大学：研究者総覧 - HO, Anh Van ▶Japanese | ▶English Profile Lab Multidisciplinary Research Center 4F Tel:0761-51-1584 To Lab's Site ❏ To Area's Site ❏ JAIST Repository TOP &gt; Personal Info.",
+          "retrievedAt": "2026-09-07T19:02:56.092Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0927-2",
+          "url": "https://fp.jaist.ac.jp/public/Default2.aspx?id=669&l=1",
+          "excerpt": "HO, Anh Van Professor, Director of Research Center for AI and Soft Robots (Research Core) Transdisciplinary Sciences, Materials Science, AI Wisdom, Research Center for Biological Function and Sensory Information, Research Center for Empathetic and Symbiotic Technology with Nature, Research Center for AI and Soft Robots (Research Core) ◆Degrees M.",
+          "retrievedAt": "2026-09-07T19:02:56.092Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0927-3",
+          "url": "https://fp.jaist.ac.jp/public/Default2.aspx?id=669&l=1",
+          "excerpt": "D from Ritsumeikan University (2012) ◆Professional Experience : JSPS Research Fellow at Ritsumeikan University (DC2)(2011), JSPS Research Fellow at Ritsumeikan University (PD)(2012), Researcher at Mitsubishi Electric Corporation (2013), Assistant Professor at Ryukoku University (2015) ◆Research Keywords Tangible device, Manipulation, Tactile sensing, Soft Robotics ■Publications ◆Published Papers HoLoArm: Deformable Arms for Collision-Tolerant Quadrotor Flight.",
+          "retrievedAt": "2026-09-07T19:02:56.092Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0927-4",
+          "url": "https://fp.jaist.ac.jp/public/Default2.aspx?id=669&l=1",
+          "excerpt": "Quang Ngoc Pham, Jonas Eschmann, Yang Zhou 0029, Alejandro Ojeda Olarte, Giuseppe Loianno, Van Anh Ho IEEE Robotics Autom.",
+          "retrievedAt": "2026-09-07T19:02:56.092Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0927-5",
+          "url": "https://fp.jaist.ac.jp/public/Default2.aspx?id=669&l=1",
+          "excerpt": ", 11, 3, 3582-3589, 2026 Mechanical and optical evaluation of a vision-based tactile sensor inspired by human fingernail and bone structures.",
+          "retrievedAt": "2026-09-07T19:02:56.092Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0927-6",
+          "url": "https://fp.jaist.ac.jp/public/Default2.aspx?id=669&l=1",
+          "excerpt": "Robotics, 40, 6, 299-319, 2026 Enhancing Vision-Based Tactile Sensing Through a Fingernail-Inspired Structure for Improved Contact and Texture Detection.",
+          "retrievedAt": "2026-09-07T19:02:56.092Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0927-7",
+          "url": "https://fp.jaist.ac.jp/public/Default2.aspx?id=669&l=1",
+          "excerpt": "Takeshi Tomomizu, Van Anh Ho SII, 277-284, 2026 TacBalloon: Soft Balloon Catheter Tactile Sensor With Simulation-Driven Learning.",
+          "retrievedAt": "2026-09-07T19:02:56.092Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0927-8",
+          "url": "https://fp.jaist.ac.jp/public/Default2.aspx?id=669&l=1",
+          "excerpt": "Satoshi Nagasawa, Kota Tsukamoto, Tatsufumi Nomura, Van Anh Ho IEEE Access, 14, 10053-10063, 2026 Vi2TaP: A Cross-Polarization Based Mechanism for Perception Transition in Tactile-Proximity Sensing With Applications to Soft Grippers.",
+          "retrievedAt": "2026-09-07T19:02:56.092Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:03:44.318Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0928": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.jaist.ac.jp/profiles/info_e.php?profile_id=417"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0928-1",
+          "url": "https://www.jaist.ac.jp/profiles/info_e.php?profile_id=417",
+          "excerpt": "北陸先端科学技術大学院大学：研究者総覧 - DAM, Hieu Chi ▶Japanese | ▶English Profile Lab KS Building Ⅲ 5F Tel:0761-51-1731 To Area's Site ❏ JAIST Repository TOP &gt; Personal Info.",
+          "retrievedAt": "2026-09-07T19:02:57.623Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0928-2",
+          "url": "https://www.jaist.ac.jp/profiles/info_e.php?profile_id=417",
+          "excerpt": "DAM, Hieu Chi Professor Knowledge Science, Social Data and Media, International Research Center for Materials Informatics (Excellent Core), Transition Arena for Quantum Materials and Information Sciences (taQumi) (Neo Excellent Core), Center for Unlimited Data-Driven Materials Exploration ◆Degrees The University of Tokyo, Faculty of Science, Department of Physics, Bachelor（Physics）（1998）JAIST, Master（Materials Science）(2000) JAIST, Ph.",
+          "retrievedAt": "2026-09-07T19:02:57.623Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0928-3",
+          "url": "https://www.jaist.ac.jp/profiles/info_e.php?profile_id=417",
+          "excerpt": "n-metal binary alloys with respect to the Curie temperature Duong-Nguyen Nguyen, Tien-Lam Pham, Viet-Cuong Nguyen, Hiori Kino, Takashi Miyake, Hieu-Chi Dam Journal of Physics: Materials, 2, 3, 034009-034009, 2019 Oxygen-diffusion-driven oxidation behavior and tracking areas visualized by X-ray spectro-ptychography with unsupervised learning Makoto Hirose, Nozomu Ishiguro, Kei Shimomura, Duong-Nguyen Nguyen, Hirosuke Matsui, Hieu Chi Dam, Mizuki Tada, Yukio Takahashi COMMUNICATIONS CHEMISTRY, 2, -, 2019 Measuring the Similarity between Materials with an Emphasis on the Materials Distinctiveness.",
+          "retrievedAt": "2026-09-07T19:02:57.623Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0928-4",
+          "url": "https://www.jaist.ac.jp/profiles/info_e.php?profile_id=417",
+          "excerpt": "Tran-Thai Dang, Tien-Lam Pham, Hiori Kino, Takashi Miyake, Hieu-Chi Dam CoRR, abs/1903.",
+          "retrievedAt": "2026-09-07T19:02:57.623Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0928-5",
+          "url": "https://www.jaist.ac.jp/profiles/info_e.php?profile_id=417",
+          "excerpt": "the Curie temperature (vol 2, 034009, 2019) Duong-Nguyen Nguyen, Tien-Lam Pham, Viet-Cuong Nguyen, Hiori Kino, Takashi Miyake, Hieu-Chi Dam JOURNAL OF PHYSICS-MATERIALS, 3, 1, -, 2020 知識共創力を高めるメタ認知スキルの学び方の学び:議論のファシリテーションを通じた経験学習 田中孝治, 田中孝治, CHEN Wei, DAM Hieu‐Chi, 小林重人, 橋本敬, 橋本敬, 池田満, 池田満 電子情報通信学会論文誌 D(Web), J101-D, 6, 830‐842 (WEB ONLY)-, 2018 Learning How to Learn Meta-cognition Skill for Facilitating the Knowledge Co-creating Session 田中 孝治, ダム ヒョウ チ, 小林 重人 日本教育工学会研究報告集, 15, 4, 11-16, 2015 5/7 Display ALL ◆Books Progressive Trends in Knowledge and System-based Science for Service Innovation.",
+          "retrievedAt": "2026-09-07T19:02:57.623Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0928-6",
+          "url": "https://www.jaist.ac.jp/profiles/info_e.php?profile_id=417",
+          "excerpt": "(Chapter 7) Big Data and Service Science IGI Global, 2013 Series on Innovation and Knowledge Management Vol.",
+          "retrievedAt": "2026-09-07T19:02:57.623Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0928-7",
+          "url": "https://www.jaist.ac.jp/profiles/info_e.php?profile_id=417",
+          "excerpt": "CCMS-Theme Meeting on Multiscale Modelling of Materials for Sustainable Development (ACCMS-TM 2018), University of Engineering and Technology, Ha Noi, Viet Nam, 2018 5/42 Display ALL ■Academic Awards ・ ACCMS-Theme Meeting on Multiscale Modelling of Materials for Sustainable Development (ACCMS-TM 2018), Excellent Oral Presentation , Asian Consortium on Computational Materials Science , 2018 HOME Official Site Japan Advanced Institute of Science and Technology Access 1-1 Asahidai, Nomi, Ishikawa 923-1292 Japan Copyright&copy; Japan Advanced Institute of Science and Technology All rights reserved.",
+          "retrievedAt": "2026-09-07T19:02:57.623Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:03:44.318Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0929": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://fp.jaist.ac.jp/public/Default2.aspx?id=766&l=1",
         "https://www.jaist.ac.jp/english/laboratory/aiw/nhnhan.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0929-1",
+          "url": "https://fp.jaist.ac.jp/public/Default2.aspx?id=766&l=1",
+          "excerpt": "北陸先端科学技術大学院大学：研究者総覧 - NGUYEN, Huu Nhan ▶Japanese | ▶English Profile Lab Multidisciplinary Research Center 1F To Area's Site ❏ JAIST Repository TOP &gt; Personal Info.",
+          "retrievedAt": "2026-09-07T19:02:57.999Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0929-2",
+          "url": "https://fp.jaist.ac.jp/public/Default2.aspx?id=766&l=1",
+          "excerpt": "NGUYEN, Huu Nhan Senior Lecturer Information Science, AI Wisdom, Research Center for AI and Soft Robots (Research Core) ◆Degrees Ph.",
+          "retrievedAt": "2026-09-07T19:02:57.999Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0929-3",
+          "url": "https://fp.jaist.ac.jp/public/Default2.aspx?id=766&l=1",
+          "excerpt": "chnology , School of Materials Science ◆Specialties Mechanics and mechatronics, Robotics and intelligent systems ◆Research Keywords Tactile Sensing, Embodied Intelligence, Soft Robotics ■Publications ◆Published Papers Vi2TaP: A Cross-Polarization Based Mechanism for Perception Transition in Tactile-Proximity Sensing With Applications to Soft Grippers Nhan Huu Nguyen, Nhat Minh Dinh Le, Quan Khanh Luu, Tuan Tai Nguyen, Van Anh Ho IEEE Robotics and Automation Letters, 10, 6, 6288-6295, 2025 VBAMS: Vision-Based Sensing for Estimating and Controlling Shrinkage Ratios in McKibben Artificial Muscles.",
+          "retrievedAt": "2026-09-07T19:02:58.000Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0929-4",
+          "url": "https://fp.jaist.ac.jp/public/Default2.aspx?id=766&l=1",
+          "excerpt": "Taichi Tamura, Taiga Ikegami, Nhan Huu Nguyen, Sota Matsumoto, Van Anh Ho RoboSoft, 1-6, 2025 A Sustainable Development Framework for Soft Pneumatic Actuators that are: Biodegradable, Self-healable and Re-programmable.",
+          "retrievedAt": "2026-09-07T19:02:58.000Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0929-5",
+          "url": "https://fp.jaist.ac.jp/public/Default2.aspx?id=766&l=1",
+          "excerpt": "Nhan Huu Nguyen, Long Duy Nguyen, Quoc-Viet Do, Masayuki Yamaguchi, Van Anh Ho RoboSoft, 1-6, 2025 Development of a Suction-type Soft Robotic Gripper with Variable Diameter for Increasing the Versatility.",
+          "retrievedAt": "2026-09-07T19:02:58.000Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0929-6",
+          "url": "https://fp.jaist.ac.jp/public/Default2.aspx?id=766&l=1",
+          "excerpt": "Sota Matsumoto, Taichi Tamura, Nhan Huu Nguyen, Van Anh Ho RoboSoft, 1-6, 2025 Vision-Based Proximity and Tactile Sensing for Robot Arms: Design, Perception, and Control Quan Khanh Luu, Dinh Quang Nguyen, Nhan Huu Nguyen, Nam Phuong Dam, Van Anh Ho IEEE Transactions on Robotics, -, 2025 5/18 Display ALL ◆Conference Activities & Talks Morphological Approach for Adaptive Behaviors and Control in Soft Robots Workshop on Physical Intelligence and Adaptive Behaviors: How can soft robotics become an ally?",
+          "retrievedAt": "2026-09-07T19:02:58.000Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0929-7",
+          "url": "https://fp.jaist.ac.jp/public/Default2.aspx?id=766&l=1",
+          "excerpt": "ternational Conference on Soft Robotics (RoboSoft 2023) 2023 - 2023 ・ Workshop on Large-Scale Robotic Skin: Perception, Interaction and Control , 2022 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2022) 2022 ・ Workshop on Soft Sensing: Environment, Morphology, Brain in Biology and Robotics , 2022 IEEE/RAS International Conference on Soft Robotics (RoboSoft 2022) 2022 ■Academic Awards ・ IEEE Robotics and Automation Society Japan Joint Chapter (JJC) Young Award , Nhan Huu Nguyen , IEEE Robotics and Automation Society Japan Joint Chapter , 2025 ・ Best student paper , D.",
+          "retrievedAt": "2026-09-07T19:02:58.000Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0929-8",
+          "url": "https://fp.jaist.ac.jp/public/Default2.aspx?id=766&l=1",
+          "excerpt": "Ngo , IEEE/SICE International Symposium on System Integration (SII 2024) , 2024 ・ Winner of Robotics Innovation Competition: Manipulation Task specialized for Harversting of Delicate Fruits , Nhan Huu Nguyen, Khoi Thanh Nguyen, Van Anh Ho , 8th IEEE/RAS International Conference on Soft Robotics (RoboSoft 2025) , 2025 3/4 Display ALL HOME Official Site Japan Advanced Institute of Science and Technology Access 1-1 Asahidai, Nomi, Ishikawa 923-1292 Japan Copyright&copy; Japan Advanced Institute of Science and Technology All rights reserved.",
+          "retrievedAt": "2026-09-07T19:02:58.000Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0929-9",
+          "url": "https://www.jaist.ac.jp/english/laboratory/aiw/nhnhan.html",
+          "excerpt": "g Soft Robots beyond Softness towards Intelligence through Embodiment Laboratory on Soft Robotics and Embodied Intelligence (SoREI) Senior Lecturer：NGUYEN Huu Nhan E-mail： ［Research areas］ Human Information Science Research Area ［Keywords］ Soft Robotics, Embodied Intelligence, Mechanical Intelligence, Robot Learning Skills and background we are looking for in prospective students We welcome students from diverse academic backgrounds, including mechanical engineering, computer vision, mechatronics, control, and automation, who are passionate about creating highly functional soft robotic systems.",
+          "retrievedAt": "2026-09-07T19:02:58.192Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0929-10",
+          "url": "https://www.jaist.ac.jp/english/laboratory/aiw/nhnhan.html",
+          "excerpt": "Prospective students are encouraged to have basic knowledge in at least one relevant area, including mechanical system design and fabrication, mechanics of materials, or programming, although this is not a strict requirement.",
+          "retrievedAt": "2026-09-07T19:02:58.192Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0929-11",
+          "url": "https://www.jaist.ac.jp/english/laboratory/aiw/nhnhan.html",
+          "excerpt": "More importantly, we value curiosity, motivation, and a willingness to step beyond one’s comfort zone to engage in interdisciplinary research and learn new skills.",
+          "retrievedAt": "2026-09-07T19:02:58.192Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0929-12",
+          "url": "https://www.jaist.ac.jp/english/laboratory/aiw/nhnhan.html",
+          "excerpt": "What you can expect to learn in this laboratory In this laboratory, students can expect to learn how the morphology of soft robots can be leveraged together with physical interaction with the environment to create novel robotic designs, mechanisms, and intelligent behaviors.",
+          "retrievedAt": "2026-09-07T19:02:58.192Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0929-13",
+          "url": "https://www.jaist.ac.jp/english/laboratory/aiw/nhnhan.html",
+          "excerpt": "Our research covers a wide range of activities, allowing students to gain hands-on experience in designing, analyzing, and fabricating soft-material mechanical devices, as well as in optimization and control of soft robotic systems.",
+          "retrievedAt": "2026-09-07T19:02:58.192Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0929-14",
+          "url": "https://www.jaist.ac.jp/english/laboratory/aiw/nhnhan.html",
+          "excerpt": "【Job category of graduates】 Mechanical Engineers, Roboticists, Academia and Industrial Professional Researcher.",
+          "retrievedAt": "2026-09-07T19:02:58.192Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0929-15",
+          "url": "https://www.jaist.ac.jp/english/laboratory/aiw/nhnhan.html",
+          "excerpt": "Research outline Our laboratory explores soft robotics as a new paradigm for building robotic systems that are safer, more adaptive, and more capable of interacting with complex real-world environments.",
+          "retrievedAt": "2026-09-07T19:02:58.192Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0929-16",
+          "url": "https://www.jaist.ac.jp/english/laboratory/aiw/nhnhan.html",
+          "excerpt": "Our research focuses on understanding and utilizing these unique properties to create novel robot mechanisms, sensing principles, and embodied control strategies.",
+          "retrievedAt": "2026-09-07T19:02:58.192Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:03:44.318Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0930": {
       "overview": "pending",
