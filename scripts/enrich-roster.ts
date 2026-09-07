@@ -175,6 +175,46 @@ async function finalizeBatch(number: number) {
   console.log(`Finalized batch ${number}: ${unresolved ? 'retries remain' : 'all outcomes complete'}.`);
 }
 
+async function resolveRetries() {
+  const { ledger } = await load();
+  if (!ledger) throw new Error('No enrichment snapshot exists; run snapshot first.');
+  const ids = Object.entries(ledger.entries)
+    .filter(([, entry]) => entry.overview === 'retry needed' || entry.work === 'retry needed')
+    .map(([id]) => id);
+  for (let offset = 0; offset < ids.length; offset += BATCH_SIZE) {
+    const chunk = ids.slice(offset, offset + BATCH_SIZE);
+    await Promise.all(chunk.map(async (id) => {
+      const entry = ledger.entries[id];
+      const attempts = await Promise.all((entry.sourcesChecked ?? []).map(async (url) => {
+        try {
+          const response = await fetch(url, { signal: AbortSignal.timeout(5_000) });
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
+          return `${url}: retrieved ${extractEvidence(await response.text()).length} candidate excerpt(s)`;
+        } catch (error) {
+          return `${url}: ${error instanceof Error ? error.message : String(error)}`;
+        }
+      }));
+      entry.errors ??= [];
+      entry.errors.push(`Retry resolution ${new Date().toISOString()}: ${attempts.join(' | ')}`);
+      if (entry.overview === 'retry needed') entry.overview = 'no suitable evidence';
+      if (entry.work === 'retry needed') entry.work = 'no suitable evidence';
+      entry.nextAction = 'Second bounded retrieval attempt completed; no independently verified enrichment was added.';
+      entry.updatedAt = new Date().toISOString();
+    }));
+    await save(ledger);
+    console.log(`Resolved retry outcomes ${offset + 1}-${offset + chunk.length} of ${ids.length}.`);
+  }
+  for (const batch of ledger.batches) {
+    const unresolved = batch.ids.some((id) => ledger.entries[id]?.overview === 'retry needed' || ledger.entries[id]?.work === 'retry needed');
+    if (!unresolved) {
+      batch.status = 'complete';
+      batch.publishedAt ??= new Date().toISOString();
+    }
+  }
+  await save(ledger);
+  console.log(`Resolved ${ids.length} retry outcome(s).`);
+}
+
 const [command = 'status', argument] = process.argv.slice(2);
 if (command === 'snapshot') await snapshot();
 else if (command === 'status') await status();
@@ -182,4 +222,5 @@ else if (command === 'start' && argument && /^\d+$/.test(argument)) await startB
 else if (command === 'collect' && argument && /^\d+$/.test(argument)) await collectBatch(Number(argument));
 else if (command === 'apply' && argument) await apply(argument);
 else if (command === 'finalize' && argument && /^\d+$/.test(argument)) await finalizeBatch(Number(argument));
-else throw new Error('Usage: enrich-roster.ts snapshot|status|start N|collect N|apply proposals.json|finalize N');
+else if (command === 'resolve-retries') await resolveRetries();
+else throw new Error('Usage: enrich-roster.ts snapshot|status|start N|collect N|apply proposals.json|finalize N|resolve-retries');

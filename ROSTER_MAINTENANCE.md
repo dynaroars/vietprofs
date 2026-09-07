@@ -124,8 +124,13 @@ are mutually exclusive. A generated overview is one sentence and must be indepen
 against its stored evidence; work items retain their exact title, type, documented date/year,
 canonical URL, selection source/mode, and verification timestamp. The command
 `npm run enrich -- snapshot` creates a stable 20-person batch snapshot, `status` reports coverage,
-and `apply proposals.json` accepts only validated structured proposals. Enrichment does not alter
-`lastUpdatedAt` or appointment verification status.
+`collect N` records bounded source retrieval, `apply proposals.json` accepts only validated
+structured proposals, and `finalize N` closes a batch's reviewed outcomes. After a run, use
+`resolve-retries` for one recorded, bounded second retrieval attempt; it retains both retrieval
+results and closes a retry only as `no suitable evidence` when no independently verified public
+enrichment is added. For subsequent roster additions, rerun `snapshot` only after the prior
+snapshot is complete, then repeat the collect/verify/apply/finalize cycle for the new stable ID
+set. Enrichment does not alter `lastUpdatedAt` or appointment verification status.
 
 Work on one institution or broad field at a time. Audit existing entries before adding candidates. For every candidate, verify identity, current appointment, primary department or research unit, rank/track, institution type, and profile URL individually. Deduplicate by person rather than URL and check for former affiliations or recent moves.
 

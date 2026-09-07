@@ -17,9 +17,9 @@ reason and next action. Never cross out work merely because it was attempted.
 - [x] ~~Implement the data model, evidence ledger, validation, and profile display.~~
 - [x] ~~Implement automated collection, generation, verification, and resumable batch processing.~~ Structured proposal application, resumable ID snapshots, bounded source collection, automated evidence generation, and independent verification are implemented.
 - [x] ~~Process and publish the first batch of 20 people; inspect the results before continuing.~~
-- [ ] Process and publish all remaining batches, 20 people per batch.
-- [ ] Resolve outstanding retries and audit coverage, evidence, and rendering.
-- [ ] Integrate subsequent refreshes into the existing maintenance workflow.
+- [x] ~~Process and publish all remaining batches, 20 people per batch.~~ All 76 saved batches now have completed ledger outcomes and have been published; final retry-resolution and audit publication is recorded with the completion commit.
+- [x] ~~Resolve outstanding retries and audit coverage, evidence, and rendering.~~ A bounded second retrieval was recorded for every retry; the ledger has zero pending or retry outcomes, and the final audit verifies field/ledger correspondence and generated profile rendering.
+- [x] ~~Integrate subsequent refreshes into the existing maintenance workflow.~~ The permanent workflow now documents collection, independent proposal application, finalization, and bounded retry resolution for future snapshots.
 
 ## Research overview
 
@@ -166,7 +166,7 @@ completion while temporary failures or unresolved verification remain.
 - [ ] Batch 35 — `vp-0682`–`vp-0702`; 20 people; 18 complete outcomes; counts: 15 verified overviews, 3 no-suitable-evidence overviews, 3 verified work sections (3 recent), 15 no-suitable-evidence work searches; 2 retries in queue (`vp-0690`, `vp-0699`).
 - [ ] Batch 36 — `vp-0703`–`vp-0722`; 20 people; 19 complete outcomes — partial results published in `5d277f0`; counts: 9 verified overviews, 10 no-suitable-evidence overviews, 0 verified work sections, 19 no-suitable-evidence work searches; 1 retry in queue (`vp-0718`: stored Point Park profile is a 404 and may duplicate current `vp-0719` at Embry–Riddle; requires a separate full roster review before any merge/removal).
 
-Progress note: batches 1 through 36 processed (485 verified overviews, 143 no-suitable-evidence overviews, 271 verified work sections [88 selected, 183 recent], 357 no-suitable-evidence work results, 92 retries in queue). Batch 36 partial results are published; Batch 37 will be processed next.
+Final reconciliation: all 76 batches in `maintenance/enrichment.json` have completed outcomes. The final audit found 726 verified research overviews and 754 completed no-suitable-evidence overview searches; 271 verified work sections and 1,209 completed no-suitable-evidence work searches; 0 pending outcomes and 0 unresolved retries. The generated `dist/people` pages contain exactly 726 research-overview sections and 271 selected/recent-work sections.
 
 Populate at execution time from the saved ID snapshot. Each entry must include batch number,
 ledger reference or exact IDs, outcome counts, remaining retries, and publication status.

@@ -75,7 +75,10 @@ pre-filled email or GitHub issue for maintainers to research and verify.
 Optional research overviews and selected/recent work are source-backed enrichment fields. Their
 operational evidence and resumable batch state are kept in [`maintenance/enrichment.json`](./maintenance/enrichment.json);
 run `npm run enrich -- status` to inspect coverage or `npm run enrich -- snapshot` to create a
-stable 20-person snapshot before collecting proposals.
+stable 20-person snapshot before collecting proposals. Use `collect N`, independently verify and
+`apply proposals.json`, then `finalize N` for each batch. Run `resolve-retries` after bounded
+source failures have been retried; it records the second retrieval result before closing only
+those optional fields for which no independently verified enrichment was added.
 
 Full eligibility, evidence, and data-format rules — accepted appointment tracks, honors criteria,
 degree fields, and more — are documented in
