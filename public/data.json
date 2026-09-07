@@ -15721,7 +15721,14 @@
     "phdYear": 2019,
     "country": "United States",
     "portrait": "portraits/263-yen-kim-nguyen-university-of-washington.webp",
-    "portraitSource": "https://asian.washington.edu/sites/asian/files/styles/medium/public/photos/yen_-_lop_hoc.jpeg?h=626b719a&itok=aD8WBo0V"
+    "portraitSource": "https://asian.washington.edu/sites/asian/files/styles/medium/public/photos/yen_-_lop_hoc.jpeg?h=626b719a&itok=aD8WBo0V",
+    "researchOverview": {
+      "text": "Yen Kim Nguyen focuses on Vietnamese language pedagogy and Vietnamese culture education for international learners.",
+      "sources": [
+        "https://asian.washington.edu/news/2022/02/16/asian-ll-welcomes-new-faculty-member-yen-kim-nguyen"
+      ],
+      "verifiedAt": "2026-09-07T04:35:27.263Z"
+    }
   },
   {
     "id": "vp-0262",
@@ -15743,7 +15750,14 @@
     "phdInstitution": "Cornell University",
     "country": "United States",
     "portrait": "portraits/264-thuy-d-tranviet-cornell-university.webp",
-    "portraitSource": "https://people.as.cornell.edu/sites/default/files/styles/person_image/public/2025-09/thuy-2025-resized0.jpg"
+    "portraitSource": "https://people.as.cornell.edu/sites/default/files/styles/person_image/public/2025-09/thuy-2025-resized0.jpg",
+    "researchOverview": {
+      "text": "Thuy D Tranviet leads Vietnamese language instruction and curriculum development within Southeast Asian studies.",
+      "sources": [
+        "https://asianstudies.cornell.edu/thuy-d-tranviet"
+      ],
+      "verifiedAt": "2026-09-07T04:35:27.263Z"
+    }
   },
   {
     "id": "vp-0263",
@@ -15765,7 +15779,14 @@
     "phdInstitution": "University of Oregon",
     "country": "United States",
     "portrait": "portraits/265-quang-phu-van-yale-university.webp",
-    "portraitSource": "https://macmillan.yale.edu/sites/default/files/styles/portrait_360/public/2026-03/IMG_3368.jpg?h=d58c2a50&itok=Q1LBk5H1"
+    "portraitSource": "https://macmillan.yale.edu/sites/default/files/styles/portrait_360/public/2026-03/IMG_3368.jpg?h=d58c2a50&itok=Q1LBk5H1",
+    "researchOverview": {
+      "text": "Quang Phu Van teaches Vietnamese language and literature, focusing on Daoist and Confucian thought, philosophy of religion, and Vietnamese cultural history.",
+      "sources": [
+        "https://macmillan.yale.edu/southeast-asia/person/quang-phu-van"
+      ],
+      "verifiedAt": "2026-09-07T04:35:27.263Z"
+    }
   },
   {
     "id": "vp-0264",
@@ -15796,7 +15817,14 @@
         "year": 1999,
         "source": "https://law.ufl.edu/wp-content/uploads/2025/08/Nguyen_CV-2024.pdf"
       }
-    ]
+    ],
+    "researchOverview": {
+      "text": "Thinh Nguyen focuses on technology law and intellectual property transactions, specializing in legal frameworks for artificial intelligence, machine learning, and connected devices.",
+      "sources": [
+        "https://law.ufl.edu/faculty/thinh-nguyen/"
+      ],
+      "verifiedAt": "2026-09-07T04:35:27.263Z"
+    }
   },
   {
     "id": "vp-0265",
@@ -15818,7 +15846,14 @@
     "phdInstitution": "Case Western Reserve University",
     "country": "United States",
     "portrait": "portraits/267-tim-nguyen-middlebury-college.webp",
-    "portraitSource": "https://www.middlebury.edu/college/sites/default/files/2022-05/tm.jpg?fv=ESu9DheA"
+    "portraitSource": "https://www.middlebury.edu/college/sites/default/files/2022-05/tm.jpg?fv=ESu9DheA",
+    "researchOverview": {
+      "text": "Tim Nguyen directs business and finance practice programs, with interdisciplinary teaching interests spanning finance, comparative literature, and environmental studies.",
+      "sources": [
+        "https://www.middlebury.edu/college/people/tim-nguyen"
+      ],
+      "verifiedAt": "2026-09-07T04:35:27.263Z"
+    }
   },
   {
     "id": "vp-0266",
@@ -15842,7 +15877,43 @@
     "phdInstitution": "University of Utah",
     "country": "United States",
     "portrait": "portraits/268-han-duc-tran-texas-a-m-university.webp",
-    "portraitSource": "https://engineering.tamu.edu/cse/_files/_images/_profile-images/tran-han-profilepic-27aug2024.jpg"
+    "portraitSource": "https://engineering.tamu.edu/cse/_files/_images/_profile-images/tran-han-profilepic-27aug2024.jpg",
+    "researchOverview": {
+      "text": "Han Duc Tran researches high-performance parallel algorithms, scientific computing, and computational mechanics, with applications to scalable transport simulations and matrix operations on heterogeneous architectures.",
+      "sources": [
+        "https://engineering.tamu.edu/cse/profiles/tran-han.html"
+      ],
+      "verifiedAt": "2026-09-07T04:35:27.263Z"
+    },
+    "selectedWork": [
+      {
+        "title": "Scalable Parallelization for the Solution of Phonon Boltzmann Transport Equation",
+        "type": "paper",
+        "year": 2023,
+        "url": "https://engineering.tamu.edu/cse/profiles/tran-han.html",
+        "selectionSource": "https://engineering.tamu.edu/cse/profiles/tran-han.html",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-07T04:35:27.263Z"
+      },
+      {
+        "title": "A Scalable Adaptive-Matrix SpMV for Heterogeneous Architectures",
+        "type": "paper",
+        "year": 2022,
+        "url": "https://engineering.tamu.edu/cse/profiles/tran-han.html",
+        "selectionSource": "https://engineering.tamu.edu/cse/profiles/tran-han.html",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-07T04:35:27.263Z"
+      },
+      {
+        "title": "Calculation of T-Stress for Cracks in Two-Dimensional Anisotropic Elastic Media by Boundary Integral Equation Method",
+        "type": "article",
+        "year": 2018,
+        "url": "https://engineering.tamu.edu/cse/profiles/tran-han.html",
+        "selectionSource": "https://engineering.tamu.edu/cse/profiles/tran-han.html",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-07T04:35:27.263Z"
+      }
+    ]
   },
   {
     "id": "vp-0267",
@@ -15909,7 +15980,40 @@
     "country": "United States",
     "portrait": "portraits/271-thu-ba-nguyen-hoai-university-of-california-los-angeles.webp",
     "portraitSource": "https://alc.ucla.edu/wp-content/uploads/2015/02/image1-e1424710262363-300x300.jpg",
-    "msInstitution": "Vietnam National University, Ho Chi Minh City"
+    "msInstitution": "Vietnam National University, Ho Chi Minh City",
+    "researchOverview": {
+      "text": "Thu-Ba Nguyen Hoai investigates Vietnamese linguistics and heritage language pedagogy, authoring language reference dictionaries and instructional materials.",
+      "sources": [
+        "https://www.alc.ucla.edu/person/thu-ba-nguyen-hoai/"
+      ],
+      "verifiedAt": "2026-09-07T04:35:27.263Z"
+    },
+    "selectedWork": [
+      {
+        "title": "Vietnamese Grammar Dictionary",
+        "type": "book",
+        "url": "https://www.alc.ucla.edu/person/thu-ba-nguyen-hoai/",
+        "selectionSource": "https://www.alc.ucla.edu/person/thu-ba-nguyen-hoai/",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-07T04:35:27.263Z"
+      },
+      {
+        "title": "Vietnamese in Industrialization and Modernization",
+        "type": "book",
+        "url": "https://www.alc.ucla.edu/person/thu-ba-nguyen-hoai/",
+        "selectionSource": "https://www.alc.ucla.edu/person/thu-ba-nguyen-hoai/",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-07T04:35:27.263Z"
+      },
+      {
+        "title": "Vietnamese Concise Dictionary",
+        "type": "book",
+        "url": "https://www.alc.ucla.edu/person/thu-ba-nguyen-hoai/",
+        "selectionSource": "https://www.alc.ucla.edu/person/thu-ba-nguyen-hoai/",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-07T04:35:27.263Z"
+      }
+    ]
   },
   {
     "id": "vp-0270",
@@ -15946,6 +16050,31 @@
         "organization": "NC State University Alumni Association",
         "source": "https://math.sciences.ncsu.edu/people/tran/"
       }
+    ],
+    "researchOverview": {
+      "text": "Hien Tran researches control theory, nonlinear dynamical systems, and data-driven mathematical modeling of cardiovascular, respiratory, and biological processes.",
+      "sources": [
+        "https://math.sciences.ncsu.edu/people/tran/"
+      ],
+      "verifiedAt": "2026-09-07T04:35:27.263Z"
+    },
+    "selectedWork": [
+      {
+        "title": "Cardiovascular and Respiratory Systems: Modeling, Analysis and Control",
+        "type": "book",
+        "url": "https://math.sciences.ncsu.edu/people/tran/",
+        "selectionSource": "https://math.sciences.ncsu.edu/people/tran/",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-07T04:35:27.263Z"
+      },
+      {
+        "title": "Mathematical and Experimental Modeling of Physical and Biological Processes",
+        "type": "book",
+        "url": "https://math.sciences.ncsu.edu/people/tran/",
+        "selectionSource": "https://math.sciences.ncsu.edu/people/tran/",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-07T04:35:27.263Z"
+      }
     ]
   },
   {
@@ -15970,7 +16099,43 @@
     "country": "United States",
     "portrait": "portraits/274-thi-mai-anh-nguyen-new-york-university.webp",
     "portraitSource": "https://as.nyu.edu/faculty/thi-mai-anh-nguyen.html",
-    "websiteUrl": "https://www.anhnguyentm.com/"
+    "websiteUrl": "https://www.anhnguyentm.com/",
+    "researchOverview": {
+      "text": "Thi Mai Anh Nguyen conducts research in industrial organization and organizational economics, focusing on relational contracting and market efficiency in the freight and healthcare industries.",
+      "sources": [
+        "https://anhnguyentm.com"
+      ],
+      "verifiedAt": "2026-09-07T04:35:27.263Z"
+    },
+    "recentWork": [
+      {
+        "title": "Long-Term Relationships in the US Truckload Freight Industry",
+        "type": "article",
+        "year": 2025,
+        "url": "https://anhnguyentm.com",
+        "selectionSource": "https://anhnguyentm.com",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-07T04:35:27.263Z"
+      },
+      {
+        "title": "Long-Term Relationships and the Spot Market: Evidence from US Trucking",
+        "type": "paper",
+        "year": 2025,
+        "url": "https://anhnguyentm.com",
+        "selectionSource": "https://anhnguyentm.com",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-07T04:35:27.263Z"
+      },
+      {
+        "title": "Costs of Technological Frictions: Evidence from EHR (Non-)Interoperability",
+        "type": "paper",
+        "year": 2025,
+        "url": "https://anhnguyentm.com",
+        "selectionSource": "https://anhnguyentm.com",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-07T04:35:27.263Z"
+      }
+    ]
   },
   {
     "id": "vp-0272",
@@ -15994,7 +16159,14 @@
     "phdInstitution": "University of Minnesota",
     "country": "United States",
     "portrait": "portraits/275-lan-nguyen-chaplin-northwestern-university.webp",
-    "portraitSource": "https://www.medill.northwestern.edu/_imgs/directory/faculty/lan_chaplin_750x1125.jpg"
+    "portraitSource": "https://www.medill.northwestern.edu/_imgs/directory/faculty/lan_chaplin_750x1125.jpg",
+    "researchOverview": {
+      "text": "Lan Nguyen Chaplin studies children consumer behavior, branding, and developmental psychology in marketing contexts.",
+      "sources": [
+        "https://www.medill.northwestern.edu/directory/faculty/lan-nguyen-chaplin.html"
+      ],
+      "verifiedAt": "2026-09-07T04:35:27.263Z"
+    }
   },
   {
     "id": "vp-0273",
@@ -16020,7 +16192,14 @@
     "portrait": "portraits/276-bach-mai-dolly-nguyen-oregon-state-university.webp",
     "portraitSource": "https://education.oregonstate.edu/sites/education.oregonstate.edu/files/styles/profile_image/public/headshot_2018.jpg?itok=Yh9q-hZ6",
     "undergradInstitution": "University of Washington",
-    "undergradYear": 2005
+    "undergradYear": 2005,
+    "researchOverview": {
+      "text": "Bach Mai Dolly Nguyen examines the relationship between social categorization and educational inequality, focusing on racial classifications and organizational dynamics in minority-serving institutions.",
+      "sources": [
+        "https://education.oregonstate.edu/directory/bach-mai-dolly-nguyen"
+      ],
+      "verifiedAt": "2026-09-07T04:35:27.263Z"
+    }
   },
   {
     "id": "vp-0274",
@@ -16045,7 +16224,44 @@
     "country": "United States",
     "phdYear": 2020,
     "portrait": "portraits/277-hoang-pham-oregon-state-university-oregon-state-university.webp",
-    "portraitSource": "https://liberalarts.oregonstate.edu/sites/liberalarts.oregonstate.edu/files/styles/800x800_directory_square/public/2024-10/ee3_9151_5.jpg?itok=K-NsYIh0"
+    "portraitSource": "https://liberalarts.oregonstate.edu/sites/liberalarts.oregonstate.edu/files/styles/800x800_directory_square/public/2024-10/ee3_9151_5.jpg?itok=K-NsYIh0",
+    "researchOverview": {
+      "text": "Hoang Pham studies international trade, labor economics, and productivity growth, analyzing the effects of global trade and foreign direct investment on labor markets and mobility.",
+      "sources": [
+        "https://sites.google.com/view/hoangpham/home",
+        "https://sites.google.com/view/hoangpham/research"
+      ],
+      "verifiedAt": "2026-09-07T04:35:27.263Z"
+    },
+    "recentWork": [
+      {
+        "title": "International Trade with Labor Market Imperfections",
+        "type": "chapter",
+        "year": 2026,
+        "url": "https://sites.google.com/view/hoangpham/research",
+        "selectionSource": "https://sites.google.com/view/hoangpham/research",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-07T04:35:27.263Z"
+      },
+      {
+        "title": "Supply Function Competition with CEO Bias",
+        "type": "article",
+        "year": 2025,
+        "url": "https://sites.google.com/view/hoangpham/research",
+        "selectionSource": "https://sites.google.com/view/hoangpham/research",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-07T04:35:27.263Z"
+      },
+      {
+        "title": "Trade Reform, Oligopsony, and Labor Market Distortion: Theory and Evidence",
+        "type": "article",
+        "year": 2023,
+        "url": "https://sites.google.com/view/hoangpham/research",
+        "selectionSource": "https://sites.google.com/view/hoangpham/research",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-07T04:35:27.263Z"
+      }
+    ]
   },
   {
     "id": "vp-0275",
@@ -16071,7 +16287,43 @@
     "phdYear": 1985,
     "msInstitution": "Massachusetts Institute of Technology",
     "msYear": 1983,
-    "undergradInstitution": "Carnegie Mellon University"
+    "undergradInstitution": "Carnegie Mellon University",
+    "researchOverview": {
+      "text": "Thang N Bui researches genetic algorithms, ant colony optimization, and swarm intelligence to solve complex combinatorial optimization and graph coloring problems.",
+      "sources": [
+        "https://harrisburg.psu.edu/faculty-and-staff/thang-bui-phd"
+      ],
+      "verifiedAt": "2026-09-07T04:35:27.263Z"
+    },
+    "recentWork": [
+      {
+        "title": "An Improved Ant-Based Algorithm for the Degree-Constrained Minimum Spanning Tree Problem",
+        "type": "article",
+        "year": 2012,
+        "url": "https://harrisburg.psu.edu/faculty-and-staff/thang-bui-phd",
+        "selectionSource": "https://harrisburg.psu.edu/faculty-and-staff/thang-bui-phd",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-07T04:35:27.263Z"
+      },
+      {
+        "title": "Parallel Shared Memory Strategies for Ant-Based Optimization Algorithms",
+        "type": "paper",
+        "year": 2009,
+        "url": "https://harrisburg.psu.edu/faculty-and-staff/thang-bui-phd",
+        "selectionSource": "https://harrisburg.psu.edu/faculty-and-staff/thang-bui-phd",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-07T04:35:27.263Z"
+      },
+      {
+        "title": "An Ant-Based Algorithm for Coloring Graphs",
+        "type": "article",
+        "year": 2008,
+        "url": "https://harrisburg.psu.edu/faculty-and-staff/thang-bui-phd",
+        "selectionSource": "https://harrisburg.psu.edu/faculty-and-staff/thang-bui-phd",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-07T04:35:27.263Z"
+      }
+    ]
   },
   {
     "id": "vp-0276",
@@ -16092,7 +16344,14 @@
     "rank": "Teaching",
     "country": "United States",
     "portrait": "portraits/279-triet-pham-rutgers-university.webp",
-    "portraitSource": "https://math.rutgers.edu/images/people/profileimg/608_5f469e1d266d6.jpg"
+    "portraitSource": "https://math.rutgers.edu/images/people/profileimg/608_5f469e1d266d6.jpg",
+    "researchOverview": {
+      "text": "Triet Pham conducts research in mathematical finance, focusing on stochastic analysis, path-dependent partial differential equations, and nonlinear expectation.",
+      "sources": [
+        "https://math.rutgers.edu/component/comprofiler/userprofile/tmp140?Itemid=714"
+      ],
+      "verifiedAt": "2026-09-07T04:35:27.263Z"
+    }
   },
   {
     "id": "vp-0277",
@@ -16119,7 +16378,14 @@
     "portraitSource": "https://www.stmarys-ca.edu/sites/default/files/styles/max_650x650/public/2024-08/1516818973078.jpg",
     "msInstitution": "University of Texas at Arlington",
     "undergradInstitution": "James Madison University",
-    "undergradYear": 2014
+    "undergradYear": 2014,
+    "researchOverview": {
+      "text": "Long Thai Bui investigates the role of accounting information in corporate governance and supply chain contracting using machine learning and natural language processing.",
+      "sources": [
+        "https://scholars.stmarys-ca.edu/en/persons/david-bui/"
+      ],
+      "verifiedAt": "2026-09-07T04:35:27.263Z"
+    }
   },
   {
     "id": "vp-0278",
