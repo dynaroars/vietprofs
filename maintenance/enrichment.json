@@ -2372,7 +2372,8 @@
         "vp-0639",
         "vp-0640"
       ],
-      "status": "pending"
+      "status": "in_progress",
+      "startedAt": "2026-09-07T05:17:20.083Z"
     },
     {
       "number": 33,
@@ -41782,204 +41783,1252 @@
       "nextAction": "None; overview and work verified."
     },
     "vp-0621": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://luuquangtrung.github.io/cv/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0621-1",
+          "url": "https://luuquangtrung.github.io/cv/",
+          "excerpt": "cv | Quang-Trung Luu Quang-Trung Luu Toggle navigation home cv (current) research publications teaching data services blog misc cv Link to PDF files (last updated: Feb.",
+          "retrievedAt": "2026-09-07T05:17:21.081Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0621-2",
+          "url": "https://luuquangtrung.github.io/cv/",
+          "excerpt": "12, 2026) Link to my online CV on the HAL open archive: {cv-hal} Experiences 09/2025-present: Associate Professor, Université Paris-Saclay , France 05/2023-08/2025: Assistant Professor, Hanoi University of Science and Technology , Vietnam 09/2021-03/2022: Postdoctoral Fellow, French National Centre for Scientific Research (CNRS) , France 03/2021-09/2021: Postdoctoral Fellow, University of Avignon , France 11/2017-11/2020: Research Engineer, Nokia Bell Labs , France 04/2017-09/2017: Research Intern, Inria & Ecole Normale Supérieure de Lyon , France Education 2017-2020: Ph.",
+          "retrievedAt": "2026-09-07T05:17:21.081Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0621-3",
+          "url": "https://luuquangtrung.github.io/cv/",
+          "excerpt": "i University of Science and Technology (HUST) , Vietnam 2005-2008: Baccalaureate, HUS High School for Gifted Students (HSGS) , VNU-Hanoi, Vietnam Awards 2023: Best Poster Award, Asian Internet Engineering Conference (AINTEC) 2023: Travel Grant, Asian Internet Engineering Conference (AINTEC) 2022: Best PhD Dissertation on Distributed Systems and Networks , GDR-RSD and ACM SigOps France 2020: ENSA Publication Award, Nokia Bell Labs France 2019: Travel Grant, Global Young Vietnamese Scholars Network 2018: Student Travel Grant Award , IEEE Global Communications Conference (GLOBECOM) 2017: CIFRE Ph.",
+          "retrievedAt": "2026-09-07T05:17:21.081Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0621-4",
+          "url": "https://luuquangtrung.github.io/cv/",
+          "excerpt": "D Fellowship, French National Association for Technical Research 2015: IDEX International Master’s Scholarship, Université Paris-Saclay 2013: Student Research Prize (first runner-up), Hanoi University of Science and Technology © Copyright 2026 Quang-Trung Luu.",
+          "retrievedAt": "2026-09-07T05:17:21.081Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:25:00.000Z",
+      "nextAction": "None; profile lacks narrative overview and publication list."
     },
     "vp-0622": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://perso.telecom-paristech.fr/vtnguyen/biography/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0622-1",
+          "url": "https://perso.telecom-paristech.fr/vtnguyen/biography/",
+          "excerpt": "�� \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000v\u0000\\\u0000:\u0000*\u0000 \u0000{\u0000b\u0000e\u0000h\u0000a\u0000v\u0000i\u0000o\u0000r\u0000:\u0000u\u0000r\u0000l\u0000(\u0000#\u0000d\u0000e\u0000f\u0000a\u0000u\u0000l\u0000t\u0000#\u0000V\u0000M\u0000L\u0000)\u0000;\u0000}\u0000 \u0000 \u0000o\u0000\\\u0000:\u0000*\u0000 \u0000{\u0000b\u0000e\u0000h\u0000a\u0000v\u0000i\u0000o\u0000r\u0000:\u0000u\u0000r\u0000l\u0000(\u0000#\u0000d\u0000e\u0000f\u0000a\u0000u\u0000l\u0000t\u0000#\u0000V\u0000M\u0000L\u0000)\u0000;\u0000}\u0000 \u0000 \u0000w\u0000\\\u0000:\u0000*\u0000 \u0000{\u0000b\u0000e\u0000h\u0000a\u0000v\u0000i\u0000o\u0000r\u0000:\u0000u\u0000r\u0000l\u0000(\u0000#\u0000d\u0000e\u0000f\u0000a\u0000u\u0000l\u0000t\u0000#\u0000V\u0000M\u0000L\u0000)\u0000;\u0000}\u0000 \u0000 \u0000.",
+          "retrievedAt": "2026-09-07T05:17:21.640Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0622-2",
+          "url": "https://perso.telecom-paristech.fr/vtnguyen/biography/",
+          "excerpt": "\u0000s\u0000h\u0000a\u0000p\u0000e\u0000 \u0000{\u0000b\u0000e\u0000h\u0000a\u0000v\u0000i\u0000o\u0000r\u0000:\u0000u\u0000r\u0000l\u0000(\u0000#\u0000d\u0000e\u0000f\u0000a\u0000u\u0000l\u0000t\u0000#\u0000V\u0000M\u0000L\u0000)\u0000;\u0000}\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000M\u0000i\u0000c\u0000r\u0000o\u0000s\u0000o\u0000f\u0000t\u0000 \u0000O\u0000f\u0000f\u0000i\u0000c\u0000e\u0000 \u0000U\u0000s\u0000e\u0000r\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000i\u0000n\u0000d\u0000e\u0000x\u0000.",
+          "retrievedAt": "2026-09-07T05:17:21.641Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0622-3",
+          "url": "https://perso.telecom-paristech.fr/vtnguyen/biography/",
+          "excerpt": "\u0000d\u0000o\u0000t\u0000x\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000M\u0000i\u0000c\u0000r\u0000o\u0000s\u0000o\u0000f\u0000t\u0000 \u0000O\u0000f\u0000f\u0000i\u0000c\u0000e\u0000 \u0000U\u0000s\u0000e\u0000r\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u00004\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u00002\u00002\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u00002\u00000\u00002\u00005\u0000-\u00000\u00004\u0000-\u00002\u00007\u0000T\u00001\u00009\u0000:\u00001\u00000\u0000:\u00000\u00000\u0000Z\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u00002\u00000\u00002\u00005\u0000-\u00001\u00001\u0000-\u00001\u00008\u0000T\u00001\u00003\u0000:\u00003\u00001\u0000:\u00000\u00000\u0000Z\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u00002\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u00003\u00008\u00005\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u00002\u00001\u00009\u00006\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u00001\u00008\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u00005\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u00002\u00005\u00007\u00006\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u00001\u00006\u0000.",
+          "retrievedAt": "2026-09-07T05:17:21.641Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0622-4",
+          "url": "https://perso.telecom-paristech.fr/vtnguyen/biography/",
+          "excerpt": "\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000/\u0000*\u0000 \u0000S\u0000t\u0000y\u0000l\u0000e\u0000 \u0000D\u0000e\u0000f\u0000i\u0000n\u0000i\u0000t\u0000i\u0000o\u0000n\u0000s\u0000 \u0000*\u0000/\u0000 \u0000 \u0000 \u0000t\u0000a\u0000b\u0000l\u0000e\u0000.",
+          "retrievedAt": "2026-09-07T05:17:21.641Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0622-5",
+          "url": "https://perso.telecom-paristech.fr/vtnguyen/biography/",
+          "excerpt": "\u0000M\u0000s\u0000o\u0000N\u0000o\u0000r\u0000m\u0000a\u0000l\u0000T\u0000a\u0000b\u0000l\u0000e\u0000 \u0000 \u0000 \u0000{\u0000m\u0000s\u0000o\u0000-\u0000s\u0000t\u0000y\u0000l\u0000e\u0000-\u0000n\u0000a\u0000m\u0000e\u0000:\u0000\"\u0000T\u0000a\u0000b\u0000l\u0000e\u0000 \u0000N\u0000o\u0000r\u0000m\u0000a\u0000l\u0000\"\u0000;\u0000 \u0000 \u0000 \u0000m\u0000s\u0000o\u0000-\u0000t\u0000s\u0000t\u0000y\u0000l\u0000e\u0000-\u0000r\u0000o\u0000w\u0000b\u0000a\u0000n\u0000d\u0000-\u0000s\u0000i\u0000z\u0000e\u0000:\u00000\u0000;\u0000 \u0000 \u0000 \u0000m\u0000s\u0000o\u0000-\u0000t\u0000s\u0000t\u0000y\u0000l\u0000e\u0000-\u0000c\u0000o\u0000l\u0000b\u0000a\u0000n\u0000d\u0000-\u0000s\u0000i\u0000z\u0000e\u0000:\u00000\u0000;\u0000 \u0000 \u0000 \u0000m\u0000s\u0000o\u0000-\u0000s\u0000t\u0000y\u0000l\u0000e\u0000-\u0000n\u0000o\u0000s\u0000h\u0000o\u0000w\u0000:\u0000y\u0000e\u0000s\u0000;\u0000 \u0000 \u0000 \u0000m\u0000s\u0000o\u0000-\u0000s\u0000t\u0000y\u0000l\u0000e\u0000-\u0000p\u0000r\u0000i\u0000o\u0000r\u0000i\u0000t\u0000y\u0000:\u00009\u00009\u0000;\u0000 \u0000 \u0000 \u0000m\u0000s\u0000o\u0000-\u0000s\u0000t\u0000y\u0000l\u0000e\u0000-\u0000p\u0000a\u0000r\u0000e\u0000n\u0000t\u0000:\u0000\"\u0000\"\u0000;\u0000 \u0000 \u0000 \u0000m\u0000s\u0000o\u0000-\u0000p\u0000a\u0000d\u0000d\u0000i\u0000n\u0000g\u0000-\u0000a\u0000l\u0000t\u0000:\u00000\u0000i\u0000n\u0000 \u00005\u0000.",
+          "retrievedAt": "2026-09-07T05:17:21.641Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0622-6",
+          "url": "https://perso.telecom-paristech.fr/vtnguyen/biography/",
+          "excerpt": "\u00004\u0000p\u0000t\u0000;\u0000 \u0000 \u0000 \u0000m\u0000s\u0000o\u0000-\u0000p\u0000a\u0000r\u0000a\u0000-\u0000m\u0000a\u0000r\u0000g\u0000i\u0000n\u0000:\u00000\u0000i\u0000n\u0000;\u0000 \u0000 \u0000 \u0000m\u0000s\u0000o\u0000-\u0000p\u0000a\u0000g\u0000i\u0000n\u0000a\u0000t\u0000i\u0000o\u0000n\u0000:\u0000w\u0000i\u0000d\u0000o\u0000w\u0000-\u0000o\u0000r\u0000p\u0000h\u0000a\u0000n\u0000;\u0000 \u0000 \u0000 \u0000f\u0000o\u0000n\u0000t\u0000-\u0000s\u0000i\u0000z\u0000e\u0000:\u00001\u00000\u0000.",
+          "retrievedAt": "2026-09-07T05:17:21.641Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0622-7",
+          "url": "https://perso.telecom-paristech.fr/vtnguyen/biography/",
+          "excerpt": "\u00000\u0000p\u0000t\u0000;\u0000 \u0000 \u0000 \u0000f\u0000o\u0000n\u0000t\u0000-\u0000f\u0000a\u0000m\u0000i\u0000l\u0000y\u0000:\u0000\"\u0000C\u0000a\u0000l\u0000i\u0000b\u0000r\u0000i\u0000\"\u0000,\u0000s\u0000a\u0000n\u0000s\u0000-\u0000s\u0000e\u0000r\u0000i\u0000f\u0000;\u0000 \u0000 \u0000 \u0000m\u0000s\u0000o\u0000-\u0000a\u0000s\u0000c\u0000i\u0000i\u0000-\u0000f\u0000o\u0000n\u0000t\u0000-\u0000f\u0000a\u0000m\u0000i\u0000l\u0000y\u0000:\u0000C\u0000a\u0000l\u0000i\u0000b\u0000r\u0000i\u0000;\u0000 \u0000 \u0000 \u0000m\u0000s\u0000o\u0000-\u0000a\u0000s\u0000c\u0000i\u0000i\u0000-\u0000t\u0000h\u0000e\u0000m\u0000e\u0000-\u0000f\u0000o\u0000n\u0000t\u0000:\u0000m\u0000i\u0000n\u0000o\u0000r\u0000-\u0000l\u0000a\u0000t\u0000i\u0000n\u0000;\u0000 \u0000 \u0000 \u0000m\u0000s\u0000o\u0000-\u0000h\u0000a\u0000n\u0000s\u0000i\u0000-\u0000f\u0000o\u0000n\u0000t\u0000-\u0000f\u0000a\u0000m\u0000i\u0000l\u0000y\u0000:\u0000C\u0000a\u0000l\u0000i\u0000b\u0000r\u0000i\u0000;\u0000 \u0000 \u0000 \u0000m\u0000s\u0000o\u0000-\u0000h\u0000a\u0000n\u0000s\u0000i\u0000-\u0000t\u0000h\u0000e\u0000m\u0000e\u0000-\u0000f\u0000o\u0000n\u0000t\u0000:\u0000m\u0000i\u0000n\u0000o\u0000r\u0000-\u0000l\u0000a\u0000t\u0000i\u0000n\u0000;\u0000 \u0000 \u0000 \u0000m\u0000s\u0000o\u0000-\u0000b\u0000i\u0000d\u0000i\u0000-\u0000f\u0000o\u0000n\u0000t\u0000-\u0000f\u0000a\u0000m\u0000i\u0000l\u0000y\u0000:\u0000\"\u0000T\u0000i\u0000m\u0000e\u0000s\u0000 \u0000N\u0000e\u0000w\u0000 \u0000R\u0000o\u0000m\u0000a\u0000n\u0000\"\u0000;\u0000 \u0000 \u0000 \u0000m\u0000s\u0000o\u0000-\u0000b\u0000i\u0000d\u0000i\u0000-\u0000t\u0000h\u0000e\u0000m\u0000e\u0000-\u0000f\u0000o\u0000n\u0000t\u0000:\u0000m\u0000i\u0000n\u0000o\u0000r\u0000-\u0000b\u0000i\u0000d\u0000i\u0000;\u0000}\u0000 \u0000 \u0000t\u0000a\u0000b\u0000l\u0000e\u0000.",
+          "retrievedAt": "2026-09-07T05:17:21.641Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0622-8",
+          "url": "https://perso.telecom-paristech.fr/vtnguyen/biography/",
+          "excerpt": "\u0000M\u0000s\u0000o\u0000T\u0000a\u0000b\u0000l\u0000e\u0000G\u0000r\u0000i\u0000d\u0000 \u0000 \u0000 \u0000{\u0000m\u0000s\u0000o\u0000-\u0000s\u0000t\u0000y\u0000l\u0000e\u0000-\u0000n\u0000a\u0000m\u0000e\u0000:\u0000\"\u0000T\u0000a\u0000b\u0000l\u0000e\u0000 \u0000G\u0000r\u0000i\u0000d\u0000\"\u0000;\u0000 \u0000 \u0000 \u0000m\u0000s\u0000o\u0000-\u0000t\u0000s\u0000t\u0000y\u0000l\u0000e\u0000-\u0000r\u0000o\u0000w\u0000b\u0000a\u0000n\u0000d\u0000-\u0000s\u0000i\u0000z\u0000e\u0000:\u00000\u0000;\u0000 \u0000 \u0000 \u0000m\u0000s\u0000o\u0000-\u0000t\u0000s\u0000t\u0000y\u0000l\u0000e\u0000-\u0000c\u0000o\u0000l\u0000b\u0000a\u0000n\u0000d\u0000-\u0000s\u0000i\u0000z\u0000e\u0000:\u00000\u0000;\u0000 \u0000 \u0000 \u0000m\u0000s\u0000o\u0000-\u0000s\u0000t\u0000y\u0000l\u0000e\u0000-\u0000p\u0000r\u0000i\u0000o\u0000r\u0000i\u0000t\u0000y\u0000:\u00005\u00009\u0000;\u0000 \u0000 \u0000 \u0000m\u0000s\u0000o\u0000-\u0000s\u0000t\u0000y\u0000l\u0000e\u0000-\u0000u\u0000n\u0000h\u0000i\u0000d\u0000e\u0000:\u0000n\u0000o\u0000;\u0000 \u0000 \u0000 \u0000b\u0000o\u0000r\u0000d\u0000e\u0000r\u0000:\u0000s\u0000o\u0000l\u0000i\u0000d\u0000 \u0000w\u0000i\u0000n\u0000d\u0000o\u0000w\u0000t\u0000e\u0000x\u0000t\u0000 \u00001\u0000.",
+          "retrievedAt": "2026-09-07T05:17:21.641Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:25:00.000Z",
+      "nextAction": "Retry inaccessible source fetch (malformed HTML)."
     },
     "vp-0623": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://bfa.u-pariscite.fr/annuaire/viet-khoa-tran-nguyen-2/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0623-1",
+          "url": "https://bfa.u-pariscite.fr/annuaire/viet-khoa-tran-nguyen-2/",
+          "excerpt": "Viet Khoa Tran Nguyen | BFA --> Nous rejoindre Contact Intranet L&#8217;unité BFA Présentation Membres Actualités Venir à BFA Organisation scientifique Équipes de recherche Ressources téchnologiques Activités scientifiques Colloques Séminaires Dernières thèses Publications HAL Grand public Dans les médias Évènements Le saviez-vous ?",
+          "retrievedAt": "2026-09-07T05:17:23.206Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0623-2",
+          "url": "https://bfa.u-pariscite.fr/annuaire/viet-khoa-tran-nguyen-2/",
+          "excerpt": "Formation Licence, Masters Graduate schools Écoles doctorales Sélectionner une page Viet Khoa Tran Nguyen Fév 19, 2025 Viet Khoa TRAN NGUYEN MCF Université Paris Cité viet-khoa.",
+          "retrievedAt": "2026-09-07T05:17:23.206Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0623-3",
+          "url": "https://bfa.u-pariscite.fr/annuaire/viet-khoa-tran-nguyen-2/",
+          "excerpt": "fr Assistant Professor in Cheminformatics at Université Paris Cité, France since September 2023 Nationality: French, Vietnamese Postal address: Bâtiment Lamarck A, 35 rue Hélène Brion, 75013 Paris, France Email addresses: viet-khoa.",
+          "retrievedAt": "2026-09-07T05:17:23.206Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0623-4",
+          "url": "https://bfa.u-pariscite.fr/annuaire/viet-khoa-tran-nguyen-2/",
+          "excerpt": "com/vktrannguyen ORCID: 0000-0001-7497-333X DIPLOMAS 2020 Doctoral degree in Cheminformatics-Theoretical Chemistry University of Strasbourg, France Two PhD thesis prizes from the Foundation for Research in Chemistry and the French Society of Cheminformatics 2017 Master’s degree in Medicinal Chemistry and Innovations in Pharmacology Grenoble Alpes University, France – GPA: 16.",
+          "retrievedAt": "2026-09-07T05:17:23.206Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0623-5",
+          "url": "https://bfa.u-pariscite.fr/annuaire/viet-khoa-tran-nguyen-2/",
+          "excerpt": "946/20 ; Ranking: 1st/12 ; Grade: Very Good 2016 National Pharmacist degree University of Medicine and Pharmacy of Ho Chi Minh City, Vietnam – GPA: 8.",
+          "retrievedAt": "2026-09-07T05:17:23.206Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0623-6",
+          "url": "https://bfa.u-pariscite.fr/annuaire/viet-khoa-tran-nguyen-2/",
+          "excerpt": "12/10 ; Grade: Very Good PROFESSIONAL EXPERIENCE Sep 2023 – present: Assistant Professor (MCF) Department of Life Sciences, Faculty of Sciences, Université Paris Cité, France Research project: Application of machine-learning algorithms and data integration in drug design/drug discovery Project overview: • A new support vector machine model, called “ClassyPose,” was developed to predict native and near-native target-bound conformations of docked molecules, and was proven effective as a pose selection tool in various virtual screening tasks.",
+          "retrievedAt": "2026-09-07T05:17:23.206Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0623-7",
+          "url": "https://bfa.u-pariscite.fr/annuaire/viet-khoa-tran-nguyen-2/",
+          "excerpt": "An article presenting this model (as 1st and co-corresponding author) was published in Advanced Intelligent Systems , and a possible extension of “ClassyPose” is being planned.",
+          "retrievedAt": "2026-09-07T05:17:23.206Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0623-8",
+          "url": "https://bfa.u-pariscite.fr/annuaire/viet-khoa-tran-nguyen-2/",
+          "excerpt": "• Experimental bioactivity data from PubChem and ChEMBL are being processed to develop ligand-based and structure-based machine-learning models/scoring functions for bioactivity prediction.",
+          "retrievedAt": "2026-09-07T05:17:23.206Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:25:00.000Z",
+      "nextAction": "None; overview verified, work omitted until authoritative list available."
     },
     "vp-0624": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://u-paris.fr/lcao/en/contacts-academic-teams/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0624-1",
+          "url": "https://u-paris.fr/lcao/en/contacts-academic-teams/",
+          "excerpt": "tions Contacts Education Chinese studies Korean studies Japanese Studies Vietnamese Studies Graduate School of East Asian Studies Preparation for National Exams Career Opportunities University Diplomas Internships Research Laboratories Seminars Grants and Doctoral Contracts Travel Abroad Study in China Study in Korea Study in Japan Study in Vietnam Ressources The LCAO Library Archives Campus life Dining Scholarships and Financial Assistance Health and Wellness Education and Disabilities Sports Culture Select Page Contacts Academic Teams Chinese Studies Head of Section : Junliang Pan , junliang.",
+          "retrievedAt": "2026-09-07T05:17:24.308Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0624-2",
+          "url": "https://u-paris.fr/lcao/en/contacts-academic-teams/",
+          "excerpt": "fr Faculty [ MCF : Associate Professor, PU : Professor ] Alice Bianchi , MCF, Art History and Social History of Late Imperial China, CRCAO , alice.",
+          "retrievedAt": "2026-09-07T05:17:24.308Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0624-3",
+          "url": "https://u-paris.fr/lcao/en/contacts-academic-teams/",
+          "excerpt": "fr ; Sébastien Billioud , PU, Anthropology, Intellectual History, Religion, IFRAE , sebastien.",
+          "retrievedAt": "2026-09-07T05:17:24.308Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0624-4",
+          "url": "https://u-paris.fr/lcao/en/contacts-academic-teams/",
+          "excerpt": "fr ; Stéphane Feuillas , PU, Philosophy and Classical Literature, CRCAO , stephane.",
+          "retrievedAt": "2026-09-07T05:17:24.308Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0624-5",
+          "url": "https://u-paris.fr/lcao/en/contacts-academic-teams/",
+          "excerpt": "fr ; Eric Guerassimoff , PU, History of Modern and Contemporary China, Migration, CESSMA , eric.",
+          "retrievedAt": "2026-09-07T05:17:24.308Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0624-6",
+          "url": "https://u-paris.fr/lcao/en/contacts-academic-teams/",
+          "excerpt": "fr ; Béatrice L’Haridon , MCF, Intellectual History, Historiography of Ancient China, CRCAO , beatrice.",
+          "retrievedAt": "2026-09-07T05:17:24.308Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0624-7",
+          "url": "https://u-paris.fr/lcao/en/contacts-academic-teams/",
+          "excerpt": "fr ; Junliang Pan , MCF, History of China in the Middle Ages, Religions of the Chinese Community in France, IFRAE , junliang.",
+          "retrievedAt": "2026-09-07T05:17:24.308Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0624-8",
+          "url": "https://u-paris.fr/lcao/en/contacts-academic-teams/",
+          "excerpt": "fr ; Victor Vuilleumier , MCF Late Qing and 20th Century Literature, Comparative Literature, CRCAO , victor.",
+          "retrievedAt": "2026-09-07T05:17:24.308Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:25:00.000Z",
+      "nextAction": "None; profile lacks narrative overview and publication list."
     },
     "vp-0625": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.normalesup.org/~haison/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0625-1",
+          "url": "https://www.normalesup.org/~haison/",
+          "excerpt": "nologies de Lyon ( INL ), France CNRS International NTU–Thales Research Alliance (CINTRA) , Singapore ✨ Open Positions I am currently recruiting PhD students and Postdoctoral Researchers to work on projects between Lyon (INL–CNRS) and Singapore (CINTRA/NTU) , in areas including: Non-Hermitian and topological photonic crystal slabs Moiré and bilayer photonic architectures Perovskite metasurfaces and polaritonics Quantum emitters and quantum nanophotonics Strong light–matter interaction & room-temperature polaritons If you are interested, please send a CV and a short motivation email to: hai-son.",
+          "retrievedAt": "2026-09-07T05:17:24.945Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0625-2",
+          "url": "https://www.normalesup.org/~haison/",
+          "excerpt": "About I am a French–Vietnamese physicist, born in Ha Noi (Vietnam) and living in France since 2003.",
+          "retrievedAt": "2026-09-07T05:17:24.945Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0625-3",
+          "url": "https://www.normalesup.org/~haison/",
+          "excerpt": "After studying physics in Paris, completing my PhD at the École Normale Supérieure and a postdoctoral fellowship at LPN–CNRS, I settled in Lyon in 2014 as an Associate Professor at École Centrale de Lyon and a researcher at the Institut des Nanotechnologies de Lyon (INL–CNRS).",
+          "retrievedAt": "2026-09-07T05:17:24.946Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0625-4",
+          "url": "https://www.normalesup.org/~haison/",
+          "excerpt": "My research is driven by fundamental questions about the nature of light: How do radiation and leakage reshape optical modes?",
+          "retrievedAt": "2026-09-07T05:17:24.946Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0625-5",
+          "url": "https://www.normalesup.org/~haison/",
+          "excerpt": "What forms of collective behaviour emerge when photons, excitons, or emitters interact in tailored nanostructures?",
+          "retrievedAt": "2026-09-07T05:17:24.946Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0625-6",
+          "url": "https://www.normalesup.org/~haison/",
+          "excerpt": "These questions guide my work at the interface of nanophotonics, quantum optics and condensed-matter physics.",
+          "retrievedAt": "2026-09-07T05:17:24.946Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0625-7",
+          "url": "https://www.normalesup.org/~haison/",
+          "excerpt": "To explore these directions, I combine theoretical modelling, advanced numerical simulations, nanofabrication, and state-of-the-art optical spectroscopy.",
+          "retrievedAt": "2026-09-07T05:17:24.946Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0625-8",
+          "url": "https://www.normalesup.org/~haison/",
+          "excerpt": "I develop concepts in non-Hermitian photonics, topological singularities, multilayer and moiré photonic crystals, and exciton–polaritons, and translate them into new optoelectronic and quantum-optical devices.",
+          "retrievedAt": "2026-09-07T05:17:24.946Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:25:00.000Z",
+      "nextAction": "None; overview verified, work omitted until authoritative list available."
     },
     "vp-0626": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.math.univ-paris13.fr/~phamngoc/CV-Page-Web.pdf"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0626-1",
+          "url": "https://www.math.univ-paris13.fr/~phamngoc/CV-Page-Web.pdf",
+          "excerpt": "5 %���� 5 0 obj > stream xڭY�v�8\u0016��+� uN��D��U�N�)���bU-�\\ �b\"����}���0Q�,��c�L� ���\u001b6\u0017?",
+          "retrievedAt": "2026-09-07T05:17:27.463Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0626-2",
+          "url": "https://www.math.univ-paris13.fr/~phamngoc/CV-Page-Web.pdf",
+          "excerpt": "~����\u0005�(�)9rG�\u0002�Ի���$\u0007\u0013\u0018��%��c���\u001bFz]\u0014y�~�4��D�3vc\u001f\u001e��n�z���Z[Oa�\u000f�\u001b\\�\u0011�\u001a�>�\u0012\u0019� P����Φ�%M�m����r��_ᗮ���ʇ\u0015v���\u00072��t�V�ݯU���[ݨB\u0017�U�!",
+          "retrievedAt": "2026-09-07T05:17:27.463Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0626-3",
+          "url": "https://www.math.univ-paris13.fr/~phamngoc/CV-Page-Web.pdf",
+          "excerpt": "\u0012a����^�����5g\u001a\u0013��C�|Y�`�\u001a�vC�f�jt������\u001f�[/M�lef��+ch���nsU�\u0019Wj\u000f�u���\u0006�����O\"�}�`\u000eg\u001eu�k���o�K��>]�&\\������s���[m���Q�n�z�}�7.",
+          "retrievedAt": "2026-09-07T05:17:27.463Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0626-4",
+          "url": "https://www.math.univ-paris13.fr/~phamngoc/CV-Page-Web.pdf",
+          "excerpt": "4M��o\\Ñ�s\b�=2� `:3�vӾ�\u0018I�Β�\u001c�\u0001My@\u0012�\u001eI t�� � ������80\u001dC�j+j��|�;��ڳ�N\u001fh��檮 �\u0001١J�5��\u0016�Q\u001c�u\u0004ڤO�\u0004@y-7\u000e�!",
+          "retrievedAt": "2026-09-07T05:17:27.463Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0626-5",
+          "url": "https://www.math.univ-paris13.fr/~phamngoc/CV-Page-Web.pdf",
+          "excerpt": "n-��������:\u0012b&h8�\u0005�b\u0013����\\�`�bkE\u0019��\u0016���y�\u001c�\u0000,��\u0019xEL�L6SiK����o��$�O�+�48AG8T�}�Lx�w}��)o��{���\u0004Bi\u0003!",
+          "retrievedAt": "2026-09-07T05:17:27.463Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0626-6",
+          "url": "https://www.math.univ-paris13.fr/~phamngoc/CV-Page-Web.pdf",
+          "excerpt": "7�(B\u0018�iV��\u001e�\u0012ZGvz0�M\b�w���/9���O@��y\b)\u0005��\u0012�Be�q����yr\u0015l\u0011����,F�l�`���*�m���� �ь�W��9�)(\u0006\u0006��[��c�\u001d ���d�7��&�#�x���O�E����n�\"V|�N�筟3�8 ��\u001b� ��P��It �B��\u0000b\u0014�p��R����w��`�x����q13�����r�߃��\u0003\u000e��F@��V؆\"\u0006 ]�4��p�nk��6\u0001���|&x�m��:`G� �����\u0002w����}\u0001�b\u0012�}Y1\u001e]rM*F�*I�J:υ$\u00011\u001fsr\u001e�x�\u0004�\u0011�3Qđ �j�Cq:hç7���m�A\u001e\u001e��� > stream xڵZMs�8\u0012��W�r�T\u0015#�7�7��$vَw��e ˗KS��0y\u0016���N+ �� ��_`�д�Nl�\u0001��Պ�\u0001z�`�tQ:\u0007�~�i\u001b1�\u0002�=`Q\u000f`\u0011C��\u0003!",
+          "retrievedAt": "2026-09-07T05:17:27.463Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0626-7",
+          "url": "https://www.math.univ-paris13.fr/~phamngoc/CV-Page-Web.pdf",
+          "excerpt": "x{ ��qm�\u0004��O\u0000eSŖA�'6��F`�4R� D\u0010N��ze���*(��Qo\u001c��c\\�Ct�kw���\u0003q�p����\u001e��(mn�Y 4\u000fW7qU\u0017I��E��\bQ�(�\u0003!",
+          "retrievedAt": "2026-09-07T05:17:27.463Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0626-8",
+          "url": "https://www.math.univ-paris13.fr/~phamngoc/CV-Page-Web.pdf",
+          "excerpt": "t�� �\u00074E\u0010&\u0003 ]H\u0016P8x���̓�����f\u0001�\bX\u0011�XxGw\u0000n���\b\u001eW\u000f \u0000�1���Ҳ>��j�\u0002���v\u000f|= (��@��K�\u0004c��s�\u000f�o*�t\u001d���xn\u0007�~㮓,T ��j#�\u000f��+\u0019�^�fD:�kK�dj�Y� ���=(q�\":\u0010H\\�H�_�LP�qˋ�\u000eö\u0012��R��,~��g�)z�`\u0018��@b�3\u000e\u0013���#���\u0003�U�\u0007D-\u001f�L��� ��dR\"�}丬�\u001f]m���Qyx�tY\u001b��� ��\ba5Pi�\u0004CdO���ٶ�Ahms�6��>_ \u0005D\\/��\u000fq��P@�l��Ճ�1|g�~oo�7޵__2&\u0010TT\u0003A�#$# �ۃ*_�\"Iv�{ ���� x޶\u001a��D�5������@e�\"�A-a�dPI\u0001��\u0003@%�/ endstream endobj 20 0 obj > stream xڭYMs�6\u0010��W�)5\u0013��7У��i&N�X�%�\u0001�h�3\u0014��é�}\u0017\u0004@J���\u0013��# \u0004���ۇ�������$�\u0018i�I����B��H%\u0004qŢ�:�\u0012�)S���mV.",
+          "retrievedAt": "2026-09-07T05:17:27.463Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:25:00.000Z",
+      "nextAction": "Retry inaccessible source fetch (PDF binary endpoint)."
     },
     "vp-0627": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://webusers.i3s.unice.fr/~tpnguyen/index.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0627-1",
+          "url": "https://webusers.i3s.unice.fr/~tpnguyen/index.html",
+          "excerpt": "Welcome to Thanh Phuong Nguyen's homepage Thanh Phuong Nguyen HOME - PUBLICATIONS - RESEARCH - TEACHING - DIVERS About me Full professor at University of C&ocircte d'Azur and at I3S laboratory, UMR 7271 .",
+          "retrievedAt": "2026-09-07T05:17:28.449Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0627-2",
+          "url": "https://webusers.i3s.unice.fr/~tpnguyen/index.html",
+          "excerpt": "Thanh Phuong NGUYEN received his PhD in computer science at Lorraine University and at ADAGIo team of LORIA laboratory , France, in 2010 under the supervision of Prof.",
+          "retrievedAt": "2026-09-07T05:17:28.449Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0627-3",
+          "url": "https://webusers.i3s.unice.fr/~tpnguyen/index.html",
+          "excerpt": "He has been contracted lecturer (ATER) at Lorrain University from 2009 to 2011, then he has worked as a postdoctoral fellow at CMM , Mines Paristech in 2012, at U2IS , Computer Science and System Engineering lab, ENSTA Paristech from 2013 to 2015.",
+          "retrievedAt": "2026-09-07T05:17:28.449Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0627-4",
+          "url": "https://webusers.i3s.unice.fr/~tpnguyen/index.html",
+          "excerpt": "at University of Toulon , France and member of SIIM team, LIS laboratory from 2015 to 2024.",
+          "retrievedAt": "2026-09-07T05:17:28.449Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0627-5",
+          "url": "https://webusers.i3s.unice.fr/~tpnguyen/index.html",
+          "excerpt": "He is currently a full professor at University of C&ocircte d'Azur and at I3S laboratory, UMR 7271 .",
+          "retrievedAt": "2026-09-07T05:17:28.449Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0627-6",
+          "url": "https://webusers.i3s.unice.fr/~tpnguyen/index.html",
+          "excerpt": "His research interests include deep learning, image analysis, visual descriptor, action recognition, texture analysis, shape representation and discrete geometry in which he has published 46 journals .",
+          "retrievedAt": "2026-09-07T05:17:28.449Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0627-7",
+          "url": "https://webusers.i3s.unice.fr/~tpnguyen/index.html",
+          "excerpt": "I am currently a postdoctoral fellow at Robotics and Computer Vision lab, ENSTA Paristech .",
+          "retrievedAt": "2026-09-07T05:17:28.449Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0627-8",
+          "url": "https://webusers.i3s.unice.fr/~tpnguyen/index.html",
+          "excerpt": "I was a graduate assistant (ATER) at Nancy 2 and Nancy 1 Universities for 2 years 2010 and 2011.",
+          "retrievedAt": "2026-09-07T05:17:28.449Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:25:00.000Z",
+      "nextAction": "None; overview verified, work omitted until authoritative list available."
     },
     "vp-0628": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://sites.google.com/site/ngocthachdinh/home"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0628-1",
+          "url": "https://sites.google.com/site/ngocthachdinh/home",
+          "excerpt": "Thach&#39;s webpage Search this site Embedded Files Skip to main content Skip to navigation Thach&#39;s webpage HOME OVERVIEW PUBLICATIONS ACADEMIC SERVICES COLLABORATORS TEACHING PICTURES TIẾNG VIỆT PAST NEWS Thach&#39;s webpage HOME OVERVIEW PUBLICATIONS ACADEMIC SERVICES COLLABORATORS TEACHING PICTURES TIẾNG VIỆT PAST NEWS More HOME OVERVIEW PUBLICATIONS ACADEMIC SERVICES COLLABORATORS TEACHING PICTURES TIẾNG VIỆT PAST NEWS Dr.",
+          "retrievedAt": "2026-09-07T05:17:28.761Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0628-2",
+          "url": "https://sites.google.com/site/ngocthachdinh/home",
+          "excerpt": "Thach Ngoc Dinh Associate Professor (Maître de conférences HDR) Elected Member of the EEAP Department council (2025–present) Elected Member of the Cedric-Lab council (2023 – present) Conservatoire National des Arts et Métiers , Sorbonne University Alliance My name in Vietnamese: Đinh Ngọc Thạch My name in Japanese: タック ゴック デイン My entry in the directory of Cedric-Lab Biographical sketch Thach Ngoc Dinh received the Accreditation to Supervise Research ( HDR ) in Automatic Control and Robotics from Cnam, Sorbonne University Alliance, France, in 2025, and the Ph.",
+          "retrievedAt": "2026-09-07T05:17:28.761Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0628-3",
+          "url": "https://sites.google.com/site/ngocthachdinh/home",
+          "excerpt": "His doctoral research was funded by Inria and conducted jointly at the CAOR Laboratory of Mines Paris–PSL and the Laboratoire des Signaux et Systèmes (L2S, UMR 8506).",
+          "retrievedAt": "2026-09-07T05:17:28.761Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0628-4",
+          "url": "https://sites.google.com/site/ngocthachdinh/home",
+          "excerpt": "degree (with honors) in Electrical Engineering and Automatic Control from INSA Lyon, France, in 2011.",
+          "retrievedAt": "2026-09-07T05:17:28.761Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0628-5",
+          "url": "https://sites.google.com/site/ngocthachdinh/home",
+          "excerpt": "Since 2017, he has been a tenured Associate Professor at Cnam, Sorbonne University Alliance, France.",
+          "retrievedAt": "2026-09-07T05:17:28.761Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0628-6",
+          "url": "https://sites.google.com/site/ngocthachdinh/home",
+          "excerpt": "He was appointed Adjunct Professor at Vietnam National University, Ho Chi Minh City (VNU-HCM), Vietnam, for the 2025–2027 period under the VNU350 excellence program.",
+          "retrievedAt": "2026-09-07T05:17:28.761Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0628-7",
+          "url": "https://sites.google.com/site/ngocthachdinh/home",
+          "excerpt": "He was previously a JSPS Postdoctoral Fellow at the Kyushu Institute of Technology, Japan, from 2015 to 2016, and held a temporary Assistant Professor ( ATER ) position at the Polytechnic University of Hauts-de-France, France, from 2016 to 2017.",
+          "retrievedAt": "2026-09-07T05:17:28.761Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0628-8",
+          "url": "https://sites.google.com/site/ngocthachdinh/home",
+          "excerpt": "He has held visiting positions at several international institutions, including the University of Tokyo and the Kyushu Institute of Technology (Japan), Harbin Institute of Technology (China), Carl von Ossietzky University of Oldenburg and the Hanse-Wissenschaftskolleg Institute for Advanced Study (Germany), and the Vietnam Institute for Advanced Study in Mathematics (Vietnam).",
+          "retrievedAt": "2026-09-07T05:17:28.761Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:25:00.000Z",
+      "nextAction": "None; profile lacks narrative overview and publication list."
     },
     "vp-0629": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://iad.donga.edu.vn/detail/senior-assoc-prof-kim-phuc-tran-28225"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0629-1",
+          "url": "https://iad.donga.edu.vn/detail/senior-assoc-prof-kim-phuc-tran-28225",
+          "excerpt": "24 Smart Life Summit 2024: The AI Era 2025 International workshop DSBFI 3rd 2026 RAIDS 2nd International Chair in DS and XAI Permanent External Scientific Advisory Board News International Student Exchange Back Home About Members Research Congress Organization DSBFI 1st Webinar 2021 Webinar 2022 International Workshop 2023 International Conference 2023 DSBFI 2nd Smart Life Summit 2024: The AI Era International workshop DSBFI 3rd RAIDS 2nd International Chair in DS and XAI Permanent External Scientific Advisory Board News International Student Exchange Danh mục tổng hợp Home detail Senior Assoc.",
+          "retrievedAt": "2026-09-07T05:17:33.506Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0629-2",
+          "url": "https://iad.donga.edu.vn/detail/senior-assoc-prof-kim-phuc-tran-28225",
+          "excerpt": "Kim Phuc Tran 10/05/2022 | 155 lượt xem 09:23 - --> Senior Lecturer at University of Lille, ENSAIT, GEMTEX, France.",
+          "retrievedAt": "2026-09-07T05:17:33.506Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0629-3",
+          "url": "https://iad.donga.edu.vn/detail/senior-assoc-prof-kim-phuc-tran-28225",
+          "excerpt": "Kim Phuc Tran, PhD, Senior Member of IEEE, is a French&ndash;Vietnamese senior expert in Explainable Artificial Intelligence (XAI), scientific advisor, and venture builder, with over 17 years of experience supporting industrial innovation, research evaluation, and decision-support systems across Europe, Asia, and broader international ecosystems.",
+          "retrievedAt": "2026-09-07T05:17:33.506Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0629-4",
+          "url": "https://iad.donga.edu.vn/detail/senior-assoc-prof-kim-phuc-tran-28225",
+          "excerpt": "He is currently a Senior Associate Professor (HDR) in Artificial Intelligence and Data Science at ENSAIT &ndash; University of Lille (France) and a senior researcher at the GEMTEX laboratory.",
+          "retrievedAt": "2026-09-07T05:17:33.506Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0629-5",
+          "url": "https://iad.donga.edu.vn/detail/senior-assoc-prof-kim-phuc-tran-28225",
+          "excerpt": "Since 2017, he has also served as Senior Scientific Advisor at Dong A University and the International Research Institute for Artificial Intelligence and Data Science (IAD), Vietnam, where he contributes to long-term AI research, innovation, and technology-transfer strategies at the interface between Europe and Southeast Asia.",
+          "retrievedAt": "2026-09-07T05:17:33.506Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0629-6",
+          "url": "https://iad.donga.edu.vn/detail/senior-assoc-prof-kim-phuc-tran-28225",
+          "excerpt": "Tran was elected President of the Permanent External Scientific Advisory Board of Dong A University, positioning him at the highest strategic level of research and innovation governance.",
+          "retrievedAt": "2026-09-07T05:17:33.506Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0629-7",
+          "url": "https://iad.donga.edu.vn/detail/senior-assoc-prof-kim-phuc-tran-28225",
+          "excerpt": "In this role, he oversees research quality, international partnerships, and strategic alignment with European and Asian industrial, regulatory, and societal priorities.",
+          "retrievedAt": "2026-09-07T05:17:33.506Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0629-8",
+          "url": "https://iad.donga.edu.vn/detail/senior-assoc-prof-kim-phuc-tran-28225",
+          "excerpt": "Tran is widely recognized as an independent expert and evaluator for major national and international research and innovation programs in France, Belgium, Canada, Israel, and other advanced research ecosystems.",
+          "retrievedAt": "2026-09-07T05:17:33.506Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:25:00.000Z",
+      "nextAction": "None; overview verified, work omitted until authoritative list available."
     },
     "vp-0630": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://faculty.essec.edu/en/cv/nguyen-liem/pdf"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0630-1",
+          "url": "https://faculty.essec.edu/en/cv/nguyen-liem/pdf",
+          "excerpt": "4 %���� 6 0 obj >stream x��Y�n�F\u0010]�oʃ��\u000e��\u0001\bTq|I��%��� ��Fs�)����}IK/6����EM\u001dxQ��_\u001b��\\�D*\u0006bG(q*\u0012�N�\u001c E\u001f���%\u001f����3+W-6 �؊ \u001bJ\u0005-?",
+          "retrievedAt": "2026-09-07T05:17:34.417Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0630-2",
+          "url": "https://faculty.essec.edu/en/cv/nguyen-liem/pdf",
+          "excerpt": "�5�8�Ͽ7��-)\b �� ��( �\u0013`r�\u0005U6%�C~Ѐ�s�M���\u0014K��� K*�h�R��x���Oǭ�Ͽq�\u0013�\u0014\u000e#����Do�\u0014��:m�*�Q\u0004vY��\u0006֭\u0010{ƕJ'߆� %\u0007ٹ?",
+          "retrievedAt": "2026-09-07T05:17:34.417Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0630-3",
+          "url": "https://faculty.essec.edu/en/cv/nguyen-liem/pdf",
+          "excerpt": "\u0006��wh��\u000f\\�M��TP\\1�;�'Fu��UW ����Ȧ��$�5M��K���d ��\u001b�Ԇ���5'/3�\u0011*,�2 j��7\u001a��Gs퓇��U\u0014��@_�'t���\b�%\bP%bl3�\u001d�O�?",
+          "retrievedAt": "2026-09-07T05:17:34.417Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0630-4",
+          "url": "https://faculty.essec.edu/en/cv/nguyen-liem/pdf",
+          "excerpt": "��\u0012�'~\u0010Oq=�u���\u001f�\\�> endstream endobj 1 0 obj >/Contents 6 0 R/Type/Page/Resources >/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]/Font >>>/Parent 7 0 R/MediaBox[0 0 595 842]>> endobj 8 0 obj [1 0 R/XYZ 0 852 0] endobj 2 0 obj > endobj 9 0 obj >stream x���y|���?",
+          "retrievedAt": "2026-09-07T05:17:34.417Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0630-5",
+          "url": "https://faculty.essec.edu/en/cv/nguyen-liem/pdf",
+          "excerpt": "�\u0004�a |B��8�$o�\u000f��\u000fWA7���e�=�U���U�����/�\u0013�'*9@^\u0014J�{�n��$�,\u0018q>�P\"�q�Y�#x\u0011ހ������J\u0018 �q�_�t\u0012 �(�w����+��a �� g�\u0004�A\u0014wd\u001f쇃(�?",
+          "retrievedAt": "2026-09-07T05:17:34.417Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0630-6",
+          "url": "https://faculty.essec.edu/en/cv/nguyen-liem/pdf",
+          "excerpt": "\u0017& ۅ��K�)�R�-��\u001fK��;�_����)\u0006�y�h�\u0013uWFM�\u0015%�\u0018 LF��O��b�/fV�ssR/��8E��\"�b�\u001f��/a�H9�|/t�\u000fh/�2� ��f���n\u0012ޤA؉�h\u0003=@��\u0011��V�it+\u0007�8�\u000e�QߗÃ�z�\bv��d(������\u000euq��\u001dP\u0019��D!",
+          "retrievedAt": "2026-09-07T05:17:34.417Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0630-7",
+          "url": "https://faculty.essec.edu/en/cv/nguyen-liem/pdf",
+          "excerpt": "Z\u0018Z\u0019lG��\u0007���\u001cG-9�y��\u001a-]E_R�V]\u000f�a6܆^oc �/��{�\u0002��|���\u001b�\u0006��\u001d���\u0007-h����G$W�\b{Y��ۊ�|\u0010m�\u0014����\u0017p�P��\u0015]����O\u001d�y\u0006�~ w�G�\u0013Kf��·�p�f2�.",
+          "retrievedAt": "2026-09-07T05:17:34.417Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0630-8",
+          "url": "https://faculty.essec.edu/en/cv/nguyen-liem/pdf",
+          "excerpt": "��4�i\u0013z�\u001e��\u0007�\u0011J;�ϫ\u0000�B ��}} W�l\u001ca0ԓ�P\u001bߋ�j w\u0010Ϙ8���� ��V��\u0005��\u0007N2\u0001�b��@Ӵ��U\u000e\u001bZ1��,RZ2��h`aA8?",
+          "retrievedAt": "2026-09-07T05:17:34.417Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:25:00.000Z",
+      "nextAction": "Retry inaccessible source fetch (PDF binary endpoint)."
     },
     "vp-0631": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.inalco.fr/annuaire-enseignement-recherche/doan-cam-thi"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0631-1",
+          "url": "https://www.inalco.fr/annuaire-enseignement-recherche/doan-cam-thi",
+          "excerpt": "d’enseignement Littérature populaire du Vietnam, Littérature en Asie du Sud-Est, La construction du genre binaire, Littérature moderne & contemporaine du Vietnam, Théorie d&#039;analyse littéraire Recherche Équipe(s) de recherche IFRAE Thème(s) de recherche Littérature vietnamienne, Ecriture de soi, Autobiographie, Guerre et littérature, Ecriture féminine Liens utiles Consulter le CV HAL Consulter LaCAS Consulter son site personnel Consulter ORCID Responsabilités administratives et pédagogiques Directrice de la collection « Littérature vietnamienne contemporaine » de Riveneuve Editions (Paris).",
+          "retrievedAt": "2026-09-07T05:17:35.155Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0631-2",
+          "url": "https://www.inalco.fr/annuaire-enseignement-recherche/doan-cam-thi",
+          "excerpt": "Membre du Conseil de l’École doctorale n°265 Membre du CNU (15e section) de 2014 à 2020.",
+          "retrievedAt": "2026-09-07T05:17:35.155Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0631-3",
+          "url": "https://www.inalco.fr/annuaire-enseignement-recherche/doan-cam-thi",
+          "excerpt": "Membre du comité de rédaction de la revue Siècle 21 (Paris) Co-responsable de l'équipe \"Genre en Asie\" de l'Ifrae.",
+          "retrievedAt": "2026-09-07T05:17:35.155Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0631-4",
+          "url": "https://www.inalco.fr/annuaire-enseignement-recherche/doan-cam-thi",
+          "excerpt": "Co-responsable (avec Etienne Naveau) du séminaire M1 \"Littérature et société en Asie du Sud et en Asie du Sud-Est\" (Inalco) Responsable du Cycle de cinéma vietnamien , Inalco & Université de Paris-Cité.",
+          "retrievedAt": "2026-09-07T05:17:35.155Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0631-5",
+          "url": "https://www.inalco.fr/annuaire-enseignement-recherche/doan-cam-thi",
+          "excerpt": "Lauréate du prix « Le Mot d’Or de la Traduction 2005 » (AIF – Société française des traducteurs).",
+          "retrievedAt": "2026-09-07T05:17:35.155Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0631-6",
+          "url": "https://www.inalco.fr/annuaire-enseignement-recherche/doan-cam-thi",
+          "excerpt": "Compte-rendu in Moussons , Recherche en sciences humaines sur l'Asie du Sud-Est , n° 35, 2020.",
+          "retrievedAt": "2026-09-07T05:17:35.155Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0631-7",
+          "url": "https://www.inalco.fr/annuaire-enseignement-recherche/doan-cam-thi",
+          "excerpt": "Review in The Journal of Asian Studies , Cambridge University Press, Volume 80, Issue 4, November 2021, pp.",
+          "retrievedAt": "2026-09-07T05:17:35.155Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0631-8",
+          "url": "https://www.inalco.fr/annuaire-enseignement-recherche/doan-cam-thi",
+          "excerpt": "Compte-rendu in Péninsule , Etudes interdisciplinaires sur l'Asie du Sud-Est péninsulaire , N°22, 2021, pp.",
+          "retrievedAt": "2026-09-07T05:17:35.155Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:25:00.000Z",
+      "nextAction": "None; overview verified, work omitted until authoritative list available."
     },
     "vp-0632": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.math.lmu.de/de/personen/kontaktseite/phan-thanh-nam-146705d9.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0632-1",
+          "url": "https://www.math.lmu.de/de/personen/kontaktseite/phan-thanh-nam-146705d9.html",
+          "excerpt": "Kontaktseite - Mathematisches Institut - LMU München Navigation und Service Direkt zu: Inhalt Hauptnavigation Mathematisches Institut Hauptnavigation Forschung Studium Schule und Öffentlichkeit Sie sind in folgender Website - Hierarchie: Startseite Personen Sie sind hier: Kontaktseite Prof.",
+          "retrievedAt": "2026-09-07T05:17:36.179Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0632-2",
+          "url": "https://www.math.lmu.de/de/personen/kontaktseite/phan-thanh-nam-146705d9.html",
+          "excerpt": "Phan Thành Nam Mathematisches Institut der Universität München Analysis, Mathematische Physik und Numerik Büroadresse: Theresienstr.",
+          "retrievedAt": "2026-09-07T05:17:36.179Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0632-3",
+          "url": "https://www.math.lmu.de/de/personen/kontaktseite/phan-thanh-nam-146705d9.html",
+          "excerpt": "39 Raum B 328 80333 München E-Mail schreiben +49 89 2180-4456 Webseite nach oben Weiterführende Links Startseite Ludwig-Maximilians-Universität München Route anzeigen Facebook Bluesky Instagram LinkedIn Ludwig-Maximilians-Universität München Mathematisches Institut Theresienstr.",
+          "retrievedAt": "2026-09-07T05:17:36.179Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:25:00.000Z",
+      "nextAction": "None; profile lacks narrative overview and publication list."
     },
     "vp-0633": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://cn.ifn.et.tu-dresden.de/team-member/giang-nguyen/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0633-1",
+          "url": "https://cn.ifn.et.tu-dresden.de/team-member/giang-nguyen/",
+          "excerpt": "Im Hintergrund läuft gerade eine kleine mathematische Herausforderung - ganz automatisch zur Bestätigung, dass Sie kein Bot sind 🔒.",
+          "retrievedAt": "2026-09-07T05:17:37.056Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0633-2",
+          "url": "https://cn.ifn.et.tu-dresden.de/team-member/giang-nguyen/",
+          "excerpt": "A small mathematical challenge is running in the background - fully automatic to confirm you're not a bot 🔒.",
+          "retrievedAt": "2026-09-07T05:17:37.056Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:25:00.000Z",
+      "nextAction": "Retry inaccessible source fetch (bot challenge)."
     },
     "vp-0634": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.gif.uni-hannover.de/fileadmin/gif/CVs/CV_Giang_Nghiem_Feb2025.pdf"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0634-1",
+          "url": "https://www.gif.uni-hannover.de/fileadmin/gif/CVs/CV_Giang_Nghiem_Feb2025.pdf",
+          "excerpt": "���=�\u0012�(_�8$�F�P�=ł*t\u0013��,^��c^��[pM�`\u000f��b����N\u001c�Q\u001d��,��\bn��\u0004\u0017�'މ�\u0010I @Ԏ� t1r\u0017�t\u0004g c��M8����;�\u00154���\u000f���P\u0006薀��;�{�u��q7���a��a'�x�kC�$ۇ����\u0005���L��8����ǣ\u000f��7�q0i ��4�^�yn�~�>�C�iip ,\u001fa� �\u0004���v @����6A.",
+          "retrievedAt": "2026-09-07T05:17:38.224Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0634-2",
+          "url": "https://www.gif.uni-hannover.de/fileadmin/gif/CVs/CV_Giang_Nghiem_Feb2025.pdf",
+          "excerpt": "��׏���S+sט�αaK$l2�3���C��\u001f\u0004r0�\b�[�\u0012�3��\u0013�dH\u001d�����\u0016��\u0006�}ڙ:�ch0 #V\u001coy\u0015��z�Wv� Z�� Um\u0017��d���If��H2|�D�����\u001eN0���U���?",
+          "retrievedAt": "2026-09-07T05:17:38.224Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0634-3",
+          "url": "https://www.gif.uni-hannover.de/fileadmin/gif/CVs/CV_Giang_Nghiem_Feb2025.pdf",
+          "excerpt": "�sÅR��+1) R\u001b/wa�x�߃�t endstream endobj 2 0 obj > endobj 3 0 obj > >> endobj 4 0 obj > >> endobj 16 0 obj > >> endobj 5 0 obj > >> endobj 17 0 obj > >> endobj 6 0 obj > >> endobj 10 0 obj > endobj 11 0 obj > endobj 8 0 obj > /ProcSet [ /PDF /Text ] >> endobj 24 0 obj > stream x��X[S�H\u0016~�W�-r\u0015֨o��˖�\u0006� ��MR[a\u001e\u0014����\u0012�\u0005B~���ݒe� a��}�����w�#op;�\u0006�\u0007^�� Ƞ�\u0017|��\u001e\u001c-\u000f~;a�xn�Ed��\u0019\b��#6\b���\u0004FV�/εG�Yv�1\u0011W*φ#\u001a��\u0007U�\"N��!",
+          "retrievedAt": "2026-09-07T05:17:38.224Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0634-4",
+          "url": "https://www.gif.uni-hannover.de/fileadmin/gif/CVs/CV_Giang_Nghiem_Feb2025.pdf",
+          "excerpt": "s\u000ea( �\u0019L\u0011gg���=�:2��hi\u0017�� \u0017\u0004�r\u0018r���ʼ*������XfC�_\u0015qj\u0006�b}Ϸ G�\bgl�-��\u0001�ɧ�{ ��'�\u001ed���}k��\u0017���\u0013�!",
+          "retrievedAt": "2026-09-07T05:17:38.224Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0634-5",
+          "url": "https://www.gif.uni-hannover.de/fileadmin/gif/CVs/CV_Giang_Nghiem_Feb2025.pdf",
+          "excerpt": "\u0015��anD�+xd�T��p�\u0018s>�,�'�L�k���,\u000e�L�$򾒫C (�h��\u001b��4\u0019��ɳ|���Lis��\u0002�XV8�o��K�FBP�i�\\5��� ��t�8���\u0002� �2\u0013`�,A'���nAU\u001e8gy]ʻ ��,L�m�0\u00181�h�b>\u0004�^��Ds0�t�\u001f4|\u001a���_\u0003\u001a�!",
+          "retrievedAt": "2026-09-07T05:17:38.224Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0634-6",
+          "url": "https://www.gif.uni-hannover.de/fileadmin/gif/CVs/CV_Giang_Nghiem_Feb2025.pdf",
+          "excerpt": "\u001a�'��\bA��>�2 ��\u0005v�\u0018�\u0000�\u0006¬b\u001d)#+�\b�9��~\u0006t\u0000((\u001b4JSyk�4\u0017��h���F�}v\u001c5\u001b^0'�]�\b0\u0004����@ϮAY�]���\u0011�ҥ�1�pv>nX�b�K�Y蹞\b@c�Fa`y��l>�\u0012�9�.",
+          "retrievedAt": "2026-09-07T05:17:38.224Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0634-7",
+          "url": "https://www.gif.uni-hannover.de/fileadmin/gif/CVs/CV_Giang_Nghiem_Feb2025.pdf",
+          "excerpt": "x8Ğ��]�)�\u0002�و�g�Z�C\u001a�̈��`\u0018kh��V�6���\u0003�zB��� `h�\\\u001fx�V��Y�ɾ\u0014;l�������,а\u000e�\u0014؎g�e]�\u0000��!",
+          "retrievedAt": "2026-09-07T05:17:38.224Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0634-8",
+          "url": "https://www.gif.uni-hannover.de/fileadmin/gif/CVs/CV_Giang_Nghiem_Feb2025.pdf",
+          "excerpt": "1�^؊p[���X��\"���� h6�}\\Y�1��;p`���u[\\�Ĭ�\u0016 �j��������x\u000f�\u0005肛~g�jKj\u0010�m\u0000l\"ba{�4\u0006���[�̝SKW,�jʉ&�m\u000f� O�g�8�vS#��\u0016 �\u0013\u001bz ��\u0002�\"�-\u0001kH\u0003\u001cy��\u0006𫑡��o�x�bg�DZ���;ME�~,0>kz k�~�\u001f\u00054�Pf�˚�5uڸ�\u001d�\u001b[\u0006\u001b[>wC�O-�\u001b d z�Xj��X����{g\u000f�����\u0017\u0007�\u0000w�a(i\"�\"}Z߫xu������\u0000��i]���qz+�B\u0006���& ��{�\b��`��@�k ��R��.",
+          "retrievedAt": "2026-09-07T05:17:38.224Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:25:00.000Z",
+      "nextAction": "Retry inaccessible source fetch (PDF binary endpoint)."
     },
     "vp-0635": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.uu.nl/staff/LNNguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0635-1",
+          "url": "https://www.uu.nl/staff/LNNguyen",
+          "excerpt": "Lan Nguyen - Utrecht University search Nederlands Edit search NL Employees Organogram Dr.",
+          "retrievedAt": "2026-09-07T05:17:39.020Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0635-2",
+          "url": "https://www.uu.nl/staff/LNNguyen",
+          "excerpt": "Lan Nguyen Assistant Professor Law, Economics and Governance Utrecht University School of Law International and European Law International and European Law l.",
+          "retrievedAt": "2026-09-07T05:17:39.020Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0635-3",
+          "url": "https://www.uu.nl/staff/LNNguyen",
+          "excerpt": "nl Profile Publications Activities In the media Teaching Contact Profile Publications Activities In the media Teaching Contact Areas of expertise Public International Law International Law of the Sea Dispute Settlement Research areas Pathways to Sustainability (PtS) Lan Nguyen is an Assistant Professor at Utrecht University School of Law, Department International and European Law.",
+          "retrievedAt": "2026-09-07T05:17:39.020Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0635-4",
+          "url": "https://www.uu.nl/staff/LNNguyen",
+          "excerpt": "She currently teaches courses in public international Law, law of the sea and dispute settlement.",
+          "retrievedAt": "2026-09-07T05:17:39.020Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0635-5",
+          "url": "https://www.uu.nl/staff/LNNguyen",
+          "excerpt": "She is also a Senior Research Associate of the Netherlands Institute for the Law of the Sea and a member of the Utrecht University Centre for Water, Ocean and Sustainability Law.",
+          "retrievedAt": "2026-09-07T05:17:39.020Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0635-6",
+          "url": "https://www.uu.nl/staff/LNNguyen",
+          "excerpt": "Before joining Utrecht University, Lan worked at theDiplomatic Academy of Vietnam and served as an intern at the Legal Office of the International Tribunal for the Law of the Sea.",
+          "retrievedAt": "2026-09-07T05:17:39.020Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0635-7",
+          "url": "https://www.uu.nl/staff/LNNguyen",
+          "excerpt": "A in International Relations ( summa cum laude ) from the Diplomatic Academy of Vietnam, and an LL.",
+          "retrievedAt": "2026-09-07T05:17:39.020Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0635-8",
+          "url": "https://www.uu.nl/staff/LNNguyen",
+          "excerpt": "M in International Law (First Class Honours) from the University of Cambridge, for which she was awarded the Clive Parry (Overseas) Prize for International Law.",
+          "retrievedAt": "2026-09-07T05:17:39.020Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:25:00.000Z",
+      "nextAction": "None; overview verified, work omitted until authoritative list available."
     },
     "vp-0636": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.uu.nl/staff/DNguyen1"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0636-1",
+          "url": "https://www.uu.nl/staff/DNguyen1",
+          "excerpt": "Dennis Nguyen - Utrecht University search Nederlands Edit search NL Employees Organogram Dr.",
+          "retrievedAt": "2026-09-07T05:17:39.208Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0636-2",
+          "url": "https://www.uu.nl/staff/DNguyen1",
+          "excerpt": "Dennis Nguyen Humanities Institute for Cultural Inquiry Media and Performance Studies Media and Performance Studies Assistant Professor Humanities Department of Media and Culture Studies Media and Performance Studies Media and Performance Studies d.",
+          "retrievedAt": "2026-09-07T05:17:39.208Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0636-3",
+          "url": "https://www.uu.nl/staff/DNguyen1",
+          "excerpt": "Dennis Nguyen Media and Performance Studies Assistant Professor Media and Performance Studies d.",
+          "retrievedAt": "2026-09-07T05:17:39.208Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0636-4",
+          "url": "https://www.uu.nl/staff/DNguyen1",
+          "excerpt": "s of expertise Datafication Digital Methods Digital Humanities Framing Interdisciplinary Education Nationalism and Transnationalism Digital Society and Culture Skills Quantitative Research and Research Design Qualitative Methods and Research Design Python (Programming Language) Interdisciplinary Education and Research Research areas Applied Data Science Governing the Digital Society Human-centered Artificial Intelligence IOS – Futures of Democracy I am a Senior Assistant Professor (UD1) of Digital Literacy and Digital Methods at the Department of Media and Culture Studies at Utrecht University.",
+          "retrievedAt": "2026-09-07T05:17:39.208Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0636-5",
+          "url": "https://www.uu.nl/staff/DNguyen1",
+          "excerpt": "My current research focuses on public epistemologies of artificial intelligence and datafication, differences across digital cultures, digital nationalism, crisis discourses, and the role of media in public sphere dynamics, as well as the implications of artificial intelligence for the production of academic and professional knowledge.",
+          "retrievedAt": "2026-09-07T05:17:39.208Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0636-6",
+          "url": "https://www.uu.nl/staff/DNguyen1",
+          "excerpt": "Methodologically, I work with a range of digital and computational methods alongside more conventional approaches, spanning the qualitative–quantitative spectrum.",
+          "retrievedAt": "2026-09-07T05:17:39.208Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0636-7",
+          "url": "https://www.uu.nl/staff/DNguyen1",
+          "excerpt": "I am also AI Methods Lead at the Inclusive AI Lab , a Senior Researcher at Utrecht's Data Schoo l, and an affiliate of the Future Literacies Lab .",
+          "retrievedAt": "2026-09-07T05:17:39.208Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0636-8",
+          "url": "https://www.uu.nl/staff/DNguyen1",
+          "excerpt": "My work has been published in several international peer-reviewed journals , including AI & Society , Big Data & Society , Information, Communication & Society , Journalism Studies , Journalism Practice , International Journal of Communication , and Internet Policy Review .",
+          "retrievedAt": "2026-09-07T05:17:39.208Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:25:00.000Z",
+      "nextAction": "None; overview verified, work omitted until authoritative list available."
     },
     "vp-0637": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.rug.nl/staff/n.h.nguyen/?lang=en"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0637-1",
+          "url": "https://www.rug.nl/staff/n.h.nguyen/?lang=en",
+          "excerpt": "iversity Student Portal Nederlands English Contrast modus Search page &lt;div class=\"rug-mask js--requires-cookie-consent-trigger\"&gt;&lt;div class=\"rug-warning--overlay rug-hidden rug-theme--content\"&gt;&lt;span class=\"rug-icon rug-icon--close rug-absolute rug-absolute--top-right rug-mt-xs rug-mr-xs rug-cursor--pointer js--requires-cookie-consent-close\"/&gt;&lt;div class=\"rug-notification--info rug-p js-id--alert\"&gt;&lt;span class=\"rug-icon rug-icon--warn rug-icon--xl rug-mr-s\" aria-hidden=\"true\"/&gt;&lt;p&gt;We need your permission for setting certain cookies to be able to show this content.",
+          "retrievedAt": "2026-09-07T05:17:40.209Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0637-2",
+          "url": "https://www.rug.nl/staff/n.h.nguyen/?lang=en",
+          "excerpt": "&lt;/p&gt;&lt;p&gt;You can &lt;button class=\"rug-inline-button js--cookie-consent-popup\"&gt;change your cookie settings&lt;/button&gt;.",
+          "retrievedAt": "2026-09-07T05:17:40.209Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0637-3",
+          "url": "https://www.rug.nl/staff/n.h.nguyen/?lang=en",
+          "excerpt": "utes PhD programmes Find research and researchers Podcasts Research videos Open Science Research Support Portal Library Society/business Society/business Knowledge and learning Collaborating with the UG Young talent Schools for Science & Society Alumni Alumni For alumni About alumni Magazine Broerstraat 5 Support research and education Update your information Contact News Magazine News overview Latest news About us About us Latest news Profile Policy and strategy Organization Working at the University of Groningen Contact and practical matters Search About us Practical matters How to find us N.",
+          "retrievedAt": "2026-09-07T05:17:40.209Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0637-4",
+          "url": "https://www.rug.nl/staff/n.h.nguyen/?lang=en",
+          "excerpt": "(Ngoc H&acirc;n) Nguyen, PhD HOME Education Research Society/business Alumni News About us N.",
+          "retrievedAt": "2026-09-07T05:17:40.209Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0637-5",
+          "url": "https://www.rug.nl/staff/n.h.nguyen/?lang=en",
+          "excerpt": "(Ngoc H&acirc;n) Nguyen, PhD Profile Research Teaching Ancillary activities Curriculum vitae Projects Contact My University Student Portal Nederlands English Contrast modus N.",
+          "retrievedAt": "2026-09-07T05:17:40.209Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0637-6",
+          "url": "https://www.rug.nl/staff/n.h.nguyen/?lang=en",
+          "excerpt": "(Ngoc H&acirc;n) Nguyen, PhD Assistant Professor in Human Resource Management Faculty of Economics and Business Telephone: +31 50 36 34288 E-mail: n.",
+          "retrievedAt": "2026-09-07T05:17:40.209Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0637-7",
+          "url": "https://www.rug.nl/staff/n.h.nguyen/?lang=en",
+          "excerpt": "nl Homepage ORCID Research Portal Field/Discipline Human Resource Management & Organizational Behaviour Expertise Highly skilled migrant employment, global talent management, flexible employment, and innovation.",
+          "retrievedAt": "2026-09-07T05:17:40.209Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0637-8",
+          "url": "https://www.rug.nl/staff/n.h.nguyen/?lang=en",
+          "excerpt": "Other positions Lecturer at University of Economics Ho Chi Minh City (on leave) External researcher at Statistics Netherlands HR ambassador in the HR division of the Academy of Management (AOM) Member in the Management Board of Dutch Association of Migration Research (DAMR) Last modified: 02 September 2026 11.",
+          "retrievedAt": "2026-09-07T05:17:40.209Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:25:00.000Z",
+      "nextAction": "None; overview verified, work omitted until authoritative list available."
     },
     "vp-0638": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://research.tue.nl/en/persons/phuong-h-nguyen/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0638-1",
+          "url": "https://research.tue.nl/en/persons/phuong-h-nguyen/",
+          "excerpt": "Nguyen - Research portal Eindhoven University of Technology Skip to main navigation Skip to search Skip to main content Research portal Eindhoven University of Technology Home Help & FAQ Link opens in a new tab English Nederlands Search content at Research portal Eindhoven University of Technology Home Researchers Research output Organisational Units Activities Projects Prizes Press/Media Facility/Lab/Equipment Datasets Courses Research areas Student theses View Scopus Profile Phuong H.",
+          "retrievedAt": "2026-09-07T05:17:41.574Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0638-2",
+          "url": "https://research.tue.nl/en/persons/phuong-h-nguyen/",
+          "excerpt": "Associate Professor , EAISI Foundational Electrical Engineering , Intelligent Energy Systems Associate Professor , EIRES Research Associate Professor , Electrical Engineering , Electrical Energy Systems https://orcid.",
+          "retrievedAt": "2026-09-07T05:17:41.574Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0638-3",
+          "url": "https://research.tue.nl/en/persons/phuong-h-nguyen/",
+          "excerpt": "hong tue nl 5851 Citations - based on content available in repository [source: Scopus] 2007 2027 Content available in repository Overview Fingerprint Network Projects (12) Research output (314) Prizes (1) Activities (2) Courses (5) Press/Media (39) Similar Profiles (12) Supervised Work (75) Personal profile Quote Energy transition from micro grids towards future integrated system requires extensive research on the complex network and on uncertainty reduction, to optimally invoke local flexibility resources.",
+          "retrievedAt": "2026-09-07T05:17:41.574Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0638-4",
+          "url": "https://research.tue.nl/en/persons/phuong-h-nguyen/",
+          "excerpt": "Research profile Phuong Nguyen is an associate professor with the research group Electrical Energy Systems at the TU/e department of Electrical Engineering.",
+          "retrievedAt": "2026-09-07T05:17:41.574Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0638-5",
+          "url": "https://research.tue.nl/en/persons/phuong-h-nguyen/",
+          "excerpt": "His research interests include applications of ICT in smart energy systems, distributed state estimation, control and operation of the power system, distributed and computational intelligence, and applications in the future power delivery system.",
+          "retrievedAt": "2026-09-07T05:17:41.574Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0638-6",
+          "url": "https://research.tue.nl/en/persons/phuong-h-nguyen/",
+          "excerpt": "He is a founder of the digital Power & Energy Systems lab (digi-PES) which aims to enable an energy transition from micro energy grids towards the future integrated energy system.",
+          "retrievedAt": "2026-09-07T05:17:41.574Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0638-7",
+          "url": "https://research.tue.nl/en/persons/phuong-h-nguyen/",
+          "excerpt": "This laboratory environment is a cyber-physical ecosystem for students and researchers to explore innovations in various energy-related aspects of (but not limited to) nano/micro-grids, local energy communities, local flexibility/energy markets, optimal power/energy flow, and congestion management.",
+          "retrievedAt": "2026-09-07T05:17:41.574Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0638-8",
+          "url": "https://research.tue.nl/en/persons/phuong-h-nguyen/",
+          "excerpt": "Hand-in-hand with emerging (big) data and Internet-of-Things (IoT) domains, such research provides a foundation for comprehensive data-driven and inter-dependency models of energy system integration.",
+          "retrievedAt": "2026-09-07T05:17:41.574Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:25:00.000Z",
+      "nextAction": "None; overview verified, work omitted until authoritative list available."
     },
     "vp-0639": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://quynhnguyenunibern.com/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0639-1",
+          "url": "https://quynhnguyenunibern.com/",
+          "excerpt": "Quynh Nguyen &#8211; I am an associate professor at the Wyss Academy for Nature at the University of Bern (Switzerland) and am affiliated with the Institute of Political Science at the University of Bern (Switzerland).",
+          "retrievedAt": "2026-09-07T05:17:41.796Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0639-2",
+          "url": "https://quynhnguyenunibern.com/",
+          "excerpt": "Skip to content Quynh Nguyen About Research Teaching Contact ABOUT QUYNH NGUYEN Welcome!",
+          "retrievedAt": "2026-09-07T05:17:41.796Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0639-3",
+          "url": "https://quynhnguyenunibern.com/",
+          "excerpt": "I am an associate professor at the Wyss Academy for Nature at the University of Bern (Switzerland) and am affiliated with the Institute of Political Science at the University of Bern (Switzerland).",
+          "retrievedAt": "2026-09-07T05:17:41.796Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0639-4",
+          "url": "https://quynhnguyenunibern.com/",
+          "excerpt": "I earned my PhD in Political Science from the Swiss Federal Institute of Technology (ETH Zurich)’s Center for Comparative and International Studies and was a postdoctoral fellow at the Niehaus Center for Globalization and Governance at Princeton University during the academic year 2018-19.",
+          "retrievedAt": "2026-09-07T05:17:41.796Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0639-5",
+          "url": "https://quynhnguyenunibern.com/",
+          "excerpt": "Prior to my appointment in Bern, I was a senior lecturer at the School of Politics and International Relations at the Australian National University.",
+          "retrievedAt": "2026-09-07T05:17:41.796Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0639-6",
+          "url": "https://quynhnguyenunibern.com/",
+          "excerpt": "For more see my CV Read more : ABOUT CV_QuynhNguyen_July26 Download My research interests are at the intersection of environmental politics, international political economy, public opinion and political psychology .",
+          "retrievedAt": "2026-09-07T05:17:41.796Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0639-7",
+          "url": "https://quynhnguyenunibern.com/",
+          "excerpt": "In my free time, I enjoy hiking, reading and terrorizing family and friends with my culinary experiments.",
+          "retrievedAt": "2026-09-07T05:17:41.796Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:25:00.000Z",
+      "nextAction": "None; overview verified, work omitted until authoritative list available."
     },
     "vp-0640": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www2.philosophy.su.se/nguyen/CV.pdf"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0640-1",
+          "url": "https://www2.philosophy.su.se/nguyen/CV.pdf",
+          "excerpt": "5 %���� 188 0 obj > endobj 189 0 obj > /W [ 1 3 1 ] /Index [ 188 15 ] /Info 22 0 R /Root 190 0 R /Size 203 /Prev 267663 /ID [ ] >> stream x�cbd`�g`b``8 \"�րHƩ`�[`�\u0014\u0010ɹ\u0013D�V�Ȗ\u000e ɘ$\u0000bg\u0007�ة�A쉇@�x\u0005\u0010�{\u0019\u0003\u0000�W 8 endstream endobj 190 0 obj > >> endobj 191 0 obj > stream x�c```b``�d`\u00012z\u0018�\u0018�\u0000�f\u0006�2�L\u0000 \\�l����Ö�\u0018�\u00107A�\b�l�\u0004�0�I\u0017��*�;Ӂ �bW�.",
+          "retrievedAt": "2026-09-07T05:17:43.549Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0640-2",
+          "url": "https://www2.philosophy.su.se/nguyen/CV.pdf",
+          "excerpt": "\u001c �@��y�F � � > endobj 193 0 obj > stream x��Y�s�6\u0012~�_��#��5��ݧK\\�i��|�{7s�=0\u0014,��H����\u0003\u0002�)JT\u0014���xD�X�b��o\u0017\u0010�\u0016\u0011�~8#{��YD���i#���.",
+          "retrievedAt": "2026-09-07T05:17:43.549Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0640-3",
+          "url": "https://www2.philosophy.su.se/nguyen/CV.pdf",
+          "excerpt": "\"�\u0000��NCJ�h\u0015� �h�5\\������z�����2{��Ӭ@\u0011\u00190\u0012�3� ���\b��z#f]���� fM�����y���}��vY� ��~\\&��2R\u0001�fw�ٕ�L� %��~2\u0005�#�\u0007��g2@�GS��m�}�.",
+          "retrievedAt": "2026-09-07T05:17:43.549Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0640-4",
+          "url": "https://www2.philosophy.su.se/nguyen/CV.pdf",
+          "excerpt": "5MN\u0019��;����h�x�GB\u001b�\\F��\u0017�\bJʈ�sLc���| C =�2�\u0012(s:\u0015p\u0016\u0018d�����6/��h��������(\u0001C ���(�>�\u0006��W��\u0005�ﳉE�_S�ا� j=N}��x�\u0017�ʧX�Ѣ�N�\u0002Tl��rJ�\u0002!",
+          "retrievedAt": "2026-09-07T05:17:43.549Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0640-5",
+          "url": "https://www2.philosophy.su.se/nguyen/CV.pdf",
+          "excerpt": "�-m݄�� E���yQ- \u000f�~�q�_\b���;\u0015\u0014\u0014�]��{�L�Obi�T\u0006�\u0007 �'�#�\u001c#�1$��[���g�2m��(\b��^i\u0012�\b \u0007����6@wʾ\b�Ԁ�:�\u0014A\u0018}\"\u0016Q�RlWh���rK\u001d��=Tr�#f \u0010\u001e��g �\u0004hj�/��R���\u0018��ꀊ������Y���,]h�\u0018'�bCİ_>\u0018 �~�ڮ��=�F������\u0000�l�P�85t�`]\u0016��U��x^W��De�)��M�'z�+q�7�A�\u0002�3\u001a1�A�\u0013Y\u0017%\u0001�jW�2`�q�OD��W#\"�e�\u001fs~s��nݸ��}񅊈x\u0016�o�y3h���E��������n��d\u0011��M]�]�\u001c@f}�,}���n���WE�����n�6�'\u0017]�oZٙ�C���\u001b��w\u0004w3�r�s�1 �4�\u0013�M�\u0017'�\u001e\u0014��o�*w�C�>#�A�>�^\u0002Fo�n hI#�\u0018HM�@e Ĉ\u0000�Ԯ���h u�_Ԁ3��\u001256)\u0015���TO\u001bN�e]�va�����\u0010rВE� �� �u�\\޸� d���7\u0010;}����\u0003\u0005DhO\u0001bpƘ(\u001e �V��c ʉ\u001a2w/��\u0010d��\u001e�\u001b65��\u0017���A�n�y����9�i�W��i���!",
+          "retrievedAt": "2026-09-07T05:17:43.549Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0640-6",
+          "url": "https://www2.philosophy.su.se/nguyen/CV.pdf",
+          "excerpt": "�a�mp�{�v���^�\u001b����_�6\u001f w�[7A��z�U���_�5�b\u0001�\u0015�������6�L\u0016_f��6Ee�%ݿ��]� _��g�7Y�1\u00112Κy��_���]\b��-ˢ�\u0003?",
+          "retrievedAt": "2026-09-07T05:17:43.549Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0640-7",
+          "url": "https://www2.philosophy.su.se/nguyen/CV.pdf",
+          "excerpt": "{\u001f\u0001\u0012���C�4f \u0000\u0012\u0000�����/@�1\u0000~*��_BP��eCǾ+d�^r�~|�QJ9\u0003-���\u00037�����9J^��׃-�\u0015�o\u0013'���阫~(�n��n�I���c����e�r�\u001f�b��J\u001a��\u0000�o�K\u0001E bsSz��P\u0016���\u0003i;�w�\u0002�ճ�\u0006�y�f�nY7v�2���\u000fku��A]\u001e�чuY~�Cy]��\u0007�h�.",
+          "retrievedAt": "2026-09-07T05:17:43.549Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0640-8",
+          "url": "https://www2.philosophy.su.se/nguyen/CV.pdf",
+          "excerpt": "\u000f�endstream endobj 194 0 obj > stream x��zct]��vl��Ic�fc��1wl�il5��ض�\u0018�\u001a4�7� \u0000\u000f '���\u0013��@I)�`.",
+          "retrievedAt": "2026-09-07T05:17:43.549Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:25:00.000Z",
+      "nextAction": "Retry inaccessible source fetch (PDF binary endpoint)."
     },
     "vp-0641": {
       "overview": "pending",
@@ -50456,5 +51505,5 @@
       "work": "pending"
     }
   },
-  "generatedAt": "2026-09-07T05:20:00.000Z"
+  "generatedAt": "2026-09-07T05:25:00.000Z"
 }
