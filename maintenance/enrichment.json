@@ -2126,7 +2126,9 @@
         "vp-0459",
         "vp-0460"
       ],
-      "status": "pending"
+      "status": "complete",
+      "startedAt": "2026-09-07T04:56:27.001Z",
+      "publishedAt": "2026-09-07T04:59:49.741Z"
     },
     {
       "number": 24,
@@ -32163,204 +32165,1254 @@
       "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0441": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://dentistry.uth.edu/directory/profile/long-d-tran"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0441-1",
+          "url": "https://dentistry.uth.edu/directory/profile/long-d-tran",
+          "excerpt": "l Hub A-Z Webmail Inside the University Quicklinks Alumni Giving About Academic Departments Administration History of the School Meet the Dean Student Life Accreditation Education Doctor of Dental Surgery Dental Hygiene Advanced Education IDEP Continuing Education Preceptors Patient Care Student Clinics Resident Clinics Faculty Practice (UT Dentists) Office of Patient Care Patient Resources Research Research Centers Research Groups Student Research PACE Alumni Communications Continuing Education Job Postings Practice Consulting Search Search UTHealth Houston Home icon Directory Current: Long D.",
+          "retrievedAt": "2026-09-07T04:56:27.846Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:59:49.741Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0442": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://blogs.uakron.edu/tran/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0442-1",
+          "url": "https://blogs.uakron.edu/tran/",
+          "excerpt": "Tran&#039;s Homepage Home Research Funding Professional Activities Honors and Awards Publications Group Courses About HOME Dr.",
+          "retrievedAt": "2026-09-07T04:56:28.069Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0442-2",
+          "url": "https://blogs.uakron.edu/tran/",
+          "excerpt": "Tran Professor Department of Electrical and Computer Engineering College of Engineering University of Akron ASEC 352, Auburn Science and Engineering Building Phone: (330) 972-7168 Email: nghi.",
+          "retrievedAt": "2026-09-07T04:56:28.069Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:59:44.604Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0443": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.uakron.edu/math/our-people/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0443-1",
+          "url": "https://www.uakron.edu/math/our-people/",
+          "excerpt": "tion Students Support Services & Resources Health & Wellness Accessibility About About Overview About UA Strategic Plan History & Mission Leadership Find A Resource Campus Maps & Locations Offices & Departments Faculty & Staff Directory University Policies Connect Careers at UA Contact Us Mathematics Full-time Faculty College of Engineering and Polymer Science Discover more Math Home Undergraduate Graduate Research Faculty & Staff Contact Us Mathematics Home Undergraduate Graduate Research Our People + Faculty Part-time Faculty Emeritus Faculty Staff Contact Us Mathematics Full-time Faculty Mr.",
+          "retrievedAt": "2026-09-07T04:56:28.621Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0443-2",
+          "url": "https://www.uakron.edu/math/our-people/",
+          "excerpt": "Naman Al-Niemi Title: Professor of Instruction Dept/Program: Mathematics Phone: 330-972-7519 Email: alniemn@uakron.",
+          "retrievedAt": "2026-09-07T04:56:28.621Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0443-3",
+          "url": "https://www.uakron.edu/math/our-people/",
+          "excerpt": "Andreas Aristotelous Title: Associate Professor Dept/Program: Mathematics Phone: 330-972-6817 Email: aaristotelous@uakron.",
+          "retrievedAt": "2026-09-07T04:56:28.621Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0443-4",
+          "url": "https://www.uakron.edu/math/our-people/",
+          "excerpt": "Cerrone Title: Professor Dept/Program: Mathematics Phone: 330-972-8809 Email: kc24@uakron.",
+          "retrievedAt": "2026-09-07T04:56:28.621Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0443-5",
+          "url": "https://www.uakron.edu/math/our-people/",
+          "excerpt": "Cossey Title: Professor Dept/Program: Mathematics Phone: 330-972-8127 Email: cossey@uakron.",
+          "retrievedAt": "2026-09-07T04:56:28.621Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0443-6",
+          "url": "https://www.uakron.edu/math/our-people/",
+          "excerpt": "Koshal Dahal Title: Professor of Instruction Dept/Program: Mathematics Phone: 330-972-6157 Email: kdahal@uakron.",
+          "retrievedAt": "2026-09-07T04:56:28.621Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0443-7",
+          "url": "https://www.uakron.edu/math/our-people/",
+          "excerpt": "Stefan Forcey Title: Professor Dept/Program: Mathematics Phone: 330-972-6779 Email: sforcey@uakron.",
+          "retrievedAt": "2026-09-07T04:56:28.621Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0443-8",
+          "url": "https://www.uakron.edu/math/our-people/",
+          "excerpt": "Dmitry Golovaty Title: Professor Dept/Program: Mathematics Phone: 330-972-8012 Email: dmitry@uakron.",
+          "retrievedAt": "2026-09-07T04:56:28.621Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:59:49.741Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0444": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.dpo.uab.edu/medicine/physicalmedicine/faculty/nguyen-vu-q-m-d-mba"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0444-1",
+          "url": "https://www.dpo.uab.edu/medicine/physicalmedicine/faculty/nguyen-vu-q-m-d-mba",
+          "excerpt": "at School of Business Dentistry Education Engineering Graduate School Health Professions Honors College Medicine Nursing Optometry Public Health Blaze a Brighter Future Blaze a Brighter Future Explore UAB Department of Physical Medicine & Rehabilitation Heersink School of Medicine News Events Contact Directory Faculty Staff Residents Search This Site All Sites Search Search Faculty Research Education Clinical About Department of Physical Medicine & Rehabilitation Close News Events Contact Directory Faculty Staff Residents Faculty Research Education Clinical About PM&R Home Faculty Nguyen, Vu Q.",
+          "retrievedAt": "2026-09-07T04:56:30.813Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0444-2",
+          "url": "https://www.dpo.uab.edu/medicine/physicalmedicine/faculty/nguyen-vu-q-m-d-mba",
+          "excerpt": "Kyle Endowed Professor Areas of Interest Neuromodulation of Hemiplegic Shoulder Pain, Stroke Population Health, and Pedagogic Processes Physician Profile Scholars Profile Biography Vu Nguyen, M.",
+          "retrievedAt": "2026-09-07T04:56:30.813Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0444-3",
+          "url": "https://www.dpo.uab.edu/medicine/physicalmedicine/faculty/nguyen-vu-q-m-d-mba",
+          "excerpt": "Kyle Endowed Professor and Chair of the UAB Heersink School of Medicine Department of Physical Medicine and Rehabilitation.",
+          "retrievedAt": "2026-09-07T04:56:30.813Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0444-4",
+          "url": "https://www.dpo.uab.edu/medicine/physicalmedicine/faculty/nguyen-vu-q-m-d-mba",
+          "excerpt": "Nguyen completed his residency training at Carolinas Rehabilitation/Carolinas Medical Center with Atrium Health/Wake Forest University.",
+          "retrievedAt": "2026-09-07T04:56:30.813Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0444-5",
+          "url": "https://www.dpo.uab.edu/medicine/physicalmedicine/faculty/nguyen-vu-q-m-d-mba",
+          "excerpt": "He received his MD from Michigan State University, College of Human Medicine; his MBA from East Carolina University; and his BS from Drake University.",
+          "retrievedAt": "2026-09-07T04:56:30.813Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0444-6",
+          "url": "https://www.dpo.uab.edu/medicine/physicalmedicine/faculty/nguyen-vu-q-m-d-mba",
+          "excerpt": "He is passionate about empowering patients with stroke to achieve their optimal functional outcome.",
+          "retrievedAt": "2026-09-07T04:56:30.813Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0444-7",
+          "url": "https://www.dpo.uab.edu/medicine/physicalmedicine/faculty/nguyen-vu-q-m-d-mba",
+          "excerpt": "At one time, he was the Medical Director of one of the largest and most comprehensive stroke rehabilitation service in the nation.",
+          "retrievedAt": "2026-09-07T04:56:30.813Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0444-8",
+          "url": "https://www.dpo.uab.edu/medicine/physicalmedicine/faculty/nguyen-vu-q-m-d-mba",
+          "excerpt": "At UAB, he sees patients in the PM&R Clinics and performs specialized injections such as botulinum toxin to optimize the patient's function.",
+          "retrievedAt": "2026-09-07T04:56:30.813Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:59:49.741Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0445": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.uab.edu/medicine/peds/faculty/brittany-huynh-m-d"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0445-1",
+          "url": "https://www.uab.edu/medicine/peds/faculty/brittany-huynh-m-d",
+          "excerpt": "h Professions Honors College Medicine Nursing Optometry Public Health Blaze a Brighter Future Blaze a Brighter Future Explore UAB Department of Pediatrics Heersink School of Medicine News Events Contact Directory Faculty Leadership Residents Fellows Search This Site All Sites Search Search Faculty Divisions Research Education Clinical About Department of Pediatrics Close News Events Contact Directory Faculty Leadership Residents Fellows Faculty Divisions Research Education Clinical About Division of Adolescent Medicine Less More in this section Division of Adolescent Medicine Brittany Huynh, M.",
+          "retrievedAt": "2026-09-07T04:56:33.473Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0445-2",
+          "url": "https://www.uab.edu/medicine/peds/faculty/brittany-huynh-m-d",
+          "excerpt": "MPH Assistant Professor Education Medical School Indiana University School of Medicine Residency General pediatrics-Indiana University School of Medicine Fellowship Pediatric Rheumatology and Adolescent Medicine-Indiana University School of Medicine Board Certifications Pediatrics, American Board of Pediatrics Interets Dr.",
+          "retrievedAt": "2026-09-07T04:56:33.473Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0445-3",
+          "url": "https://www.uab.edu/medicine/peds/faculty/brittany-huynh-m-d",
+          "excerpt": "Huynh interets includes reproductive health needs among adolescents and young adults with rheumatic and other complex chronic diseases; Health communication around teratogenicity in adolescents and young adults on teratogenic medications.",
+          "retrievedAt": "2026-09-07T04:56:33.473Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0445-4",
+          "url": "https://www.uab.edu/medicine/peds/faculty/brittany-huynh-m-d",
+          "excerpt": "ettings Contact UAB opens a new website Privacy opens a new website Terms of Use opens a new website Nondiscrimination Statement Site Login Administrator Login Frontend Login 2026 The University of Alabama at Birmingham 2026 The University of Alabama at Birmingham Nondiscrimination Statement UAB is an Equal Employment/Equal Educational Opportunity Institution dedicated to providing equal opportunities and equal access to all individuals regardless of race, color, religion, ethnic or national origin, sex (including pregnancy), genetic information, age, disability, religion, and veteran’s status.",
+          "retrievedAt": "2026-09-07T04:56:33.473Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0445-5",
+          "url": "https://www.uab.edu/medicine/peds/faculty/brittany-huynh-m-d",
+          "excerpt": "As required by Title IX, UAB prohibits sex discrimination in any education program or activity that it operates.",
+          "retrievedAt": "2026-09-07T04:56:33.473Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0445-6",
+          "url": "https://www.uab.edu/medicine/peds/faculty/brittany-huynh-m-d",
+          "excerpt": "Individuals may report concerns or questions to UAB’s Assistant Vice President and Senior Title IX Coordinator.",
+          "retrievedAt": "2026-09-07T04:56:33.473Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:59:49.741Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0446": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://classics.ucla.edu/person/kelly-nguyen/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0446-1",
+          "url": "https://classics.ucla.edu/person/kelly-nguyen/",
+          "excerpt": "ate Post-Baccalaureate Summer Intensive Greek and Latin 2026 Summer Classes Faculty Projects Performing Cicero Philodemus Project Ancient Methone Archaeological Project RomeLab The Refugee Material Culture Initiative News &#038; Events News Events Conferences Palevsky Lecture Alumni Our Alumni Keep in Touch Chancellor’s Society Resources Classics Resources Living in Los Angeles Gallery Search Home » Kelly Nguyen Kelly Nguyen My research and teaching engages classical studies in a comparative manner to explore histories of empires, forced displacement, and race and ethnicity in a global context.",
+          "retrievedAt": "2026-09-07T04:56:34.362Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0446-2",
+          "url": "https://classics.ucla.edu/person/kelly-nguyen/",
+          "excerpt": "I have published on ethnic identity and racial rhetoric in the Roman world, as well as on classical reception through the lenses of postcolonial theory, queer of color critique, critical race theory and critical refugee studies.",
+          "retrievedAt": "2026-09-07T04:56:34.362Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0446-3",
+          "url": "https://classics.ucla.edu/person/kelly-nguyen/",
+          "excerpt": "My current book manuscript, Critical Classicality in Vietnam and the Diaspora (under contract with Oxford University Press), is the first major project to explore how Vietnamese intellectuals—both national and diasporic, from the French colonization era to contemporary times—have engaged with the Greco-Roman classical tradition for different liberatory purposes.",
+          "retrievedAt": "2026-09-07T04:56:34.362Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0446-4",
+          "url": "https://classics.ucla.edu/person/kelly-nguyen/",
+          "excerpt": "I recently launched a new community-engaged digital humanities project called the Refugee Material Culture Initiative that aims to digitally preserve art and artifacts made and/or used by refugees, create a free and accessible database of these digital outputs, and generate educational resources to teach about refugee histories.",
+          "retrievedAt": "2026-09-07T04:56:34.362Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0446-5",
+          "url": "https://classics.ucla.edu/person/kelly-nguyen/",
+          "excerpt": "I teach an annual course in relation to this project on comparative refugee narratives, with a focus on Greco-Roman antiquity and contemporary Vietnamese history.",
+          "retrievedAt": "2026-09-07T04:56:34.362Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0446-6",
+          "url": "https://classics.ucla.edu/person/kelly-nguyen/",
+          "excerpt": "As a member of the inaugural cohort of the UCLA Mellon Data/Social Justice Curriculum Initiative, I split my teaching between Classics and the new Social Justice curriculum.",
+          "retrievedAt": "2026-09-07T04:56:34.362Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0446-7",
+          "url": "https://classics.ucla.edu/person/kelly-nguyen/",
+          "excerpt": "I teach courses that globalize and decolonize classical studies, such as Asian and Asian American Classical , Classics and Social Justice, and Decolonizing Refugee Data from Rome to Vietnam .",
+          "retrievedAt": "2026-09-07T04:56:34.362Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0446-8",
+          "url": "https://classics.ucla.edu/person/kelly-nguyen/",
+          "excerpt": "Recent Publications “The Gauls in Ancient Rome and Colonial Vietnam: Race, Empire and Classical Inheritance,” TAPA 155 (2025): 155-203.",
+          "retrievedAt": "2026-09-07T04:56:34.362Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:59:44.605Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0447": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.faculty.uci.edu/profile/?facultyId=6988"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0447-1",
+          "url": "https://www.faculty.uci.edu/profile/?facultyId=6988",
+          "excerpt": "UC Irvine - Faculty Profile System For Faculty Search Tips About Diu-Huong Nguyen Assistant Professor, History School of Humanities Ph.",
+          "retrievedAt": "2026-09-07T04:56:35.296Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0447-2",
+          "url": "https://www.faculty.uci.edu/profile/?facultyId=6988",
+          "excerpt": ", Ohio University, 2010, Southeast Asian Studies Phone: (949) 824-6521 Fax: (949) 824-2865 Email: diuhuong@uci.",
+          "retrievedAt": "2026-09-07T04:56:35.296Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0447-3",
+          "url": "https://www.faculty.uci.edu/profile/?facultyId=6988",
+          "excerpt": "edu University of California, Irvine 200 Murray Krieger Hall Mail Code: 3275 Irvine, CA 92697 Research Interests Viet Nam; Southeast Asia; social history; oral history.",
+          "retrievedAt": "2026-09-07T04:56:35.296Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0447-4",
+          "url": "https://www.faculty.uci.edu/profile/?facultyId=6988",
+          "excerpt": "edu Appointments Chancellor’s Postdoctoral Fellow, Department of History, University of California, Riverside Visiting Assistant Professor, Department of History; Mellon Postdoctoral Fellow, John B.",
+          "retrievedAt": "2026-09-07T04:56:35.296Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0447-5",
+          "url": "https://www.faculty.uci.edu/profile/?facultyId=6988",
+          "excerpt": "Research Abstract Histories of the mid-twentieth century conflict in Viet Nam thus far have focused largely on macro-level political and military realities with scant attention to everyday on-the-ground life of those most actively affected – particularly the experiences of ordinary civilians as both participants in and victims of the war.",
+          "retrievedAt": "2026-09-07T04:56:35.296Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0447-6",
+          "url": "https://www.faculty.uci.edu/profile/?facultyId=6988",
+          "excerpt": "My current book project – Eve of Destruction: A Social History of Viet Nam’s Royal City, 1957-1967 – illuminates how war transformed society and the daily life of residents of the imperial city of Hue in central Viet Nam from the establishment of the University of Hue in 1957 to the start of the Tet Offensive in late January 1968.",
+          "retrievedAt": "2026-09-07T04:56:35.296Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0447-7",
+          "url": "https://www.faculty.uci.edu/profile/?facultyId=6988",
+          "excerpt": "Relying on both written and oral historical sources and extensive field research this grassroots history seeks to understand how the people of Hue lived through the decade culminating in the 1968 destruction of their city and to the extent possible, reconstruct the historical atmosphere of wartime Viet Nam based on what was considered significant to the locals.",
+          "retrievedAt": "2026-09-07T04:56:35.296Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0447-8",
+          "url": "https://www.faculty.uci.edu/profile/?facultyId=6988",
+          "excerpt": "In a similar vein, and drawing on a 2019 conference I organized at Haverford College, I am completing work on the volume Voices from the Everyday South: Civilian Lives During the Viet Nam War, which in edited versions of the conference presentations presents offers a wide range of personal narratives by ordinary Vietnamese civilians from diverse social communities and geographical regions, reflecting varied aspects of social and cultural life in the wartime South as they experienced it.",
+          "retrievedAt": "2026-09-07T04:56:35.296Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:59:44.605Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0448": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.faculty.uci.edu/profile/?facultyId=5621"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0448-1",
+          "url": "https://www.faculty.uci.edu/profile/?facultyId=5621",
+          "excerpt": "UC Irvine - Faculty Profile System For Faculty Search Tips About Ninh Tuan Nguyen Interim Chair, Surgery School of Medicine Chief of Gastrointestinal Division, Surgery School of Medicine Professor, Surgery School of Medicine B.",
+          "retrievedAt": "2026-09-07T04:56:35.551Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0448-2",
+          "url": "https://www.faculty.uci.edu/profile/?facultyId=5621",
+          "excerpt": ", University of Texas Health Science Center, 1990, Medicine Phone: (714) 456-8598 Fax: (714) 456-3967 Email: ninhn@uci.",
+          "retrievedAt": "2026-09-07T04:56:35.551Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0448-3",
+          "url": "https://www.faculty.uci.edu/profile/?facultyId=5621",
+          "excerpt": "S) 2000 Outstanding poster award (second place) “Prospective evaluation of laparoscopic intracorporeal small bowel anastomosis in patients undergoing gastric bypass”, American Society for Bariatric Surgery 2002 Circon young researcher “Golden Scope” award, SAGES 2006 2006 physicians of excellence by the Orange County Medical Association 2009 2009 physicians of excellence by the Orange County Medical Association 2013 2013 physicians of excellence by the Orange County Medical Association Appointments 1997-1998 Clinical Instructor of Surgery University of Pittsburgh Medical Center, Pittsburgh, PA.",
+          "retrievedAt": "2026-09-07T04:56:35.551Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0448-4",
+          "url": "https://www.faculty.uci.edu/profile/?facultyId=5621",
+          "excerpt": "1998-2001 Assistant Professor of Clinical Surgery University of California, Davis Medical Center, Sacramento, CA 2002-present Chief, Division of Gastrointestinal Surgery Professor of Surgery University of California, Irvine Medical Center, Orange, CA Publications Journal Publications: 1.",
+          "retrievedAt": "2026-09-07T04:56:35.551Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0448-5",
+          "url": "https://www.faculty.uci.edu/profile/?facultyId=5621",
+          "excerpt": "1997 Luketich JD, Schauer P, Landreneau R, Nguyen N, Urso K, Ferson P, Keenan R,Kim R.",
+          "retrievedAt": "2026-09-07T04:56:35.551Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0448-6",
+          "url": "https://www.faculty.uci.edu/profile/?facultyId=5621",
+          "excerpt": "Minimally invasive surgical staging is superior to endoscopic ultrasound in detecting lymph node metastases in esophageal cancer.",
+          "retrievedAt": "2026-09-07T04:56:35.551Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0448-7",
+          "url": "https://www.faculty.uci.edu/profile/?facultyId=5621",
+          "excerpt": "Coagulation modifications after laparoscopic and open cholecystectomy in a swine model.",
+          "retrievedAt": "2026-09-07T04:56:35.551Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0448-8",
+          "url": "https://www.faculty.uci.edu/profile/?facultyId=5621",
+          "excerpt": "Laparoscopic transhiatal esophagectomy for Barrett’s esophagus with high grade dysplasia.",
+          "retrievedAt": "2026-09-07T04:56:35.551Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:59:49.741Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0449": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.faculty.uci.edu/profile/?facultyId=6329"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0449-1",
+          "url": "https://www.faculty.uci.edu/profile/?facultyId=6329",
+          "excerpt": "edu University of California, Irvine 5141 California Ave Irvine, CA 92617 Research Interests Biostatistics; Clinical trials; Research methodology and rigor; Research ethics, ethics in clinical trials; Fragile X spectrum of disorders; Nephrology; Epidemiology; Clinical and translational science Websites Google Scholar Research-website Publications Selected Publications (from > 200) Nguyen DV, Rocke DM (2002) Tumor classification by partial least squares using microarray gene expression data.",
+          "retrievedAt": "2026-09-07T04:56:35.722Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0449-2",
+          "url": "https://www.faculty.uci.edu/profile/?facultyId=6329",
+          "excerpt": "Nguyen DV, Rocke DM (2002) Multi-class cancer classification via partial least squares using gene expression profiles.",
+          "retrievedAt": "2026-09-07T04:56:35.722Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0449-3",
+          "url": "https://www.faculty.uci.edu/profile/?facultyId=6329",
+          "excerpt": "Nguyen DV, Rocke DM (2002) Partial least squares proportional hazard regression for application to DNA microarray survival data.",
+          "retrievedAt": "2026-09-07T04:56:35.722Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0449-4",
+          "url": "https://www.faculty.uci.edu/profile/?facultyId=6329",
+          "excerpt": "Nguyen DV, Arpat AB, Wang N, Carroll RJ (2002) DNA microarray experiments: Biological and technological aspects.",
+          "retrievedAt": "2026-09-07T04:56:35.722Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0449-5",
+          "url": "https://www.faculty.uci.edu/profile/?facultyId=6329",
+          "excerpt": "Nguyen DV, Wang N, Carroll RJ (2004) Evaluation of missing value estimation for microarray data.",
+          "retrievedAt": "2026-09-07T04:56:35.722Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0449-6",
+          "url": "https://www.faculty.uci.edu/profile/?facultyId=6329",
+          "excerpt": "Nguyen DV, Senturk D, Carroll RJ (2008) Covariate-adjusted linear mixed effects models with an application to longitudinal data.",
+          "retrievedAt": "2026-09-07T04:56:35.722Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0449-7",
+          "url": "https://www.faculty.uci.edu/profile/?facultyId=6329",
+          "excerpt": "Chee KG, Nguyen DV, Brown M, Gandara DR, Wun T, Lara PN (2008) Positron emission tomography and improved survival in lung cancer: The Will Rogers phenomenon revisited.",
+          "retrievedAt": "2026-09-07T04:56:35.722Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0449-8",
+          "url": "https://www.faculty.uci.edu/profile/?facultyId=6329",
+          "excerpt": "Senturk D, Nguyen DV, Tassone F, Hagerman RJ, Carroll RJ, Hagerman PJ (2009) Covariate adjusted correlation analysis with application to FMR1 premutation female carrier data.",
+          "retrievedAt": "2026-09-07T04:56:35.722Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:59:49.741Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0450": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.faculty.uci.edu/profile/?facultyId=6127"
       ],
-      "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "evidence": [
+        {
+          "id": "vp-0450-1",
+          "url": "https://www.faculty.uci.edu/profile/?facultyId=6127",
+          "excerpt": "UC Irvine - Faculty Profile System For Faculty Search Tips About Wengui Yu Professor of Clinical Neurology and Vice Chair for Hospital Affairs, Neurology School of Medicine Director, UCI Health Comprehensive Stroke & Cerebrovascular Center School of Medicine M.",
+          "retrievedAt": "2026-09-07T04:56:35.893Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0450-2",
+          "url": "https://www.faculty.uci.edu/profile/?facultyId=6127",
+          "excerpt": ", McGill University, 1997, Experimental Medicine Phone: (714) 456-2889 Email: wyu@hs.",
+          "retrievedAt": "2026-09-07T04:56:35.893Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0450-3",
+          "url": "https://www.faculty.uci.edu/profile/?facultyId=6127",
+          "excerpt": "#206E Orange, CA Mail Code: 4280 Irvine, CA 92697 Research Interests Acute basilar artery occlusion, intracerebral hemorrhage, intracranial stenosis and stenting, resistant hypertension, arterial dissection, and coma Publications 1.",
+          "retrievedAt": "2026-09-07T04:56:35.893Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0450-4",
+          "url": "https://www.faculty.uci.edu/profile/?facultyId=6127",
+          "excerpt": "Effects of sodium ferulate on 14C-arachidonic acid metabolism by rabbit platelets.",
+          "retrievedAt": "2026-09-07T04:56:35.893Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0450-5",
+          "url": "https://www.faculty.uci.edu/profile/?facultyId=6127",
+          "excerpt": "Formation of monohydroxy derivatives of arachidonic acid, linoleic acid, and oleic acid during oxidation of low-density lipoprotein by copper ions and endothelial cells.",
+          "retrievedAt": "2026-09-07T04:56:35.893Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0450-6",
+          "url": "https://www.faculty.uci.edu/profile/?facultyId=6127",
+          "excerpt": "Analysis of leukotrienes, lipoxins, and monooxygenated metabolites of arachidonic acid by reversed-phase high-pressure liquid chromatography.",
+          "retrievedAt": "2026-09-07T04:56:35.893Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0450-7",
+          "url": "https://www.faculty.uci.edu/profile/?facultyId=6127",
+          "excerpt": "Eicosanoid synthesis and cellular infiltration in Brown Norway rat lung after allergen challenge.",
+          "retrievedAt": "2026-09-07T04:56:35.893Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0450-8",
+          "url": "https://www.faculty.uci.edu/profile/?facultyId=6127",
+          "excerpt": "Eosinophil lipid bodies: specific, inducible intracellular sites for enhanced eicosanoid formation.",
+          "retrievedAt": "2026-09-07T04:56:35.893Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
+      "errors": [
+        "https://www.faculty.uci.edu/profile/?facultyId=6127: profile page corresponds to Wengui Yu, not An H. Do (ID reassigned/mismatched)"
+      ],
+      "updatedAt": "2026-09-07T04:59:49.741Z",
+      "nextAction": "Update roster with correct profile URL for An H. Do"
     },
     "vp-0451": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://faculty.uci.edu/profile/?facultyId=4876"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0451-1",
+          "url": "https://faculty.uci.edu/profile/?facultyId=4876",
+          "excerpt": "UC Irvine - Faculty Profile System For Faculty Search Tips About Linda Trinh Vo Professor Emeritus, Asian American Studies School of Humanities Affiliate Faculty, Department of Sociology School of Social Sciences Affiliate Faculty, Department of Urban Planning and Public Policy School of Social Ecology Ph.",
+          "retrievedAt": "2026-09-07T04:56:36.386Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0451-2",
+          "url": "https://faculty.uci.edu/profile/?facultyId=4876",
+          "excerpt": ", University of California, San Diego, 1995, Sociology Phone: (949) 232-0084 Email: volt@uci.",
+          "retrievedAt": "2026-09-07T04:56:36.386Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0451-3",
+          "url": "https://faculty.uci.edu/profile/?facultyId=4876",
+          "excerpt": "edu University of California, Irvine Humanities Gateway Building, Room 3307 Mail Code: 6900 Irvine, CA 92697 Research Interests Asian American studies; racial and ethnic relations; immigrants and refugees; gender relations; and community and urban studies Academic Distinctions University of California, Irvine Chancellor's Fellow (2006-2009) Appointments University of California, Berkeley Chancellor’s Postdoctoral Fellowship for Diversity.",
+          "retrievedAt": "2026-09-07T04:56:36.386Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0451-4",
+          "url": "https://faculty.uci.edu/profile/?facultyId=4876",
+          "excerpt": "Minority Discourse III: “The Case of California: Processes of Diversity in Community.",
+          "retrievedAt": "2026-09-07T04:56:36.386Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0451-5",
+          "url": "https://faculty.uci.edu/profile/?facultyId=4876",
+          "excerpt": "Linda Trinh Vo is a Professor Emeritus and former Chair of the Department of Asian American Studies at the University of California, Irvine.",
+          "retrievedAt": "2026-09-07T04:56:36.386Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0451-6",
+          "url": "https://faculty.uci.edu/profile/?facultyId=4876",
+          "excerpt": "in Sociology from the University of California, San Diego and was a faculty member in the Sociology Department at Oberlin College and the Comparative Cultures Department at Washington State University.",
+          "retrievedAt": "2026-09-07T04:56:36.386Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0451-7",
+          "url": "https://faculty.uci.edu/profile/?facultyId=4876",
+          "excerpt": "She received a UC Berkeley Chancellor's Postdoctoral Fellowship (1994-1996) and was a UC Irvine Chancellor's Fellow (2006-2009).",
+          "retrievedAt": "2026-09-07T04:56:36.386Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0451-8",
+          "url": "https://faculty.uci.edu/profile/?facultyId=4876",
+          "excerpt": "She was an Equity Advisor for the UC Irvine School of Humanities, working as a Faculty Assistant to the Dean to improve gender and ethnic diversity in the professoriate, focusing on equal opportunity and equity practices in hiring, mentoring, and retention.",
+          "retrievedAt": "2026-09-07T04:56:36.386Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:59:44.605Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0452": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://pediatrics.ucsd.edu/research/centers/lung/members-list.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0452-1",
+          "url": "https://pediatrics.ucsd.edu/research/centers/lung/members-list.html",
+          "excerpt": "sources Events Research Clinical Research Faculty Labs Research Centers Resources Events Pediatrics Research Symposium Grand Rounds Pediatric Fellow Research Seminars Pediatric Post-Doc/ Student Seminar Series Symposium for Innovation in Medical Education Academic & Faculty Resources Faculty Onboarding Mentorship Well-Being Equity, Diversity, & Inclusion Faculty Promotions Women in Pediatrics Medical Education Faculty Resources Recognize a Colleague Search Scope This Site All UCSD Sites Faculty/Staff Search Term HOME Research Research Centers Lung Center Lung Center Members Members Xin Sun, Ph.",
+          "retrievedAt": "2026-09-07T04:56:37.060Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0452-2",
+          "url": "https://pediatrics.ucsd.edu/research/centers/lung/members-list.html",
+          "excerpt": "Xin Sun is the inaugural Director of the UC San Diego Center for Lung Research and Innovation.",
+          "retrievedAt": "2026-09-07T04:56:37.060Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0452-3",
+          "url": "https://pediatrics.ucsd.edu/research/centers/lung/members-list.html",
+          "excerpt": "She is a leader in lung development, stem cell biology, lung injury repair and lung-brain crosstalk in the emerging discipline of interoception.",
+          "retrievedAt": "2026-09-07T04:56:37.060Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0452-4",
+          "url": "https://pediatrics.ucsd.edu/research/centers/lung/members-list.html",
+          "excerpt": "Working with others at the Center, she leads efforts at NIH LungMAP and HuBMAP consortia to map the human lung at single-cell resolution.",
+          "retrievedAt": "2026-09-07T04:56:37.060Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0452-5",
+          "url": "https://pediatrics.ucsd.edu/research/centers/lung/members-list.html",
+          "excerpt": "Haddad's laboratory is in the effect of hypoxia (and hypercapnia) on cell function and development.",
+          "retrievedAt": "2026-09-07T04:56:37.060Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0452-6",
+          "url": "https://pediatrics.ucsd.edu/research/centers/lung/members-list.html",
+          "excerpt": "Mammalian tissues are extremely sensitive to the stress of hypoxia and can only survive for relatively short periods of time.",
+          "retrievedAt": "2026-09-07T04:56:37.060Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0452-7",
+          "url": "https://pediatrics.ucsd.edu/research/centers/lung/members-list.html",
+          "excerpt": "In particular, his laboratory is interested in the mechanisms of tolerance and susceptibility to low oxygen environment.",
+          "retrievedAt": "2026-09-07T04:56:37.060Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0452-8",
+          "url": "https://pediatrics.ucsd.edu/research/centers/lung/members-list.html",
+          "excerpt": "Haddad's research is in high altitude abnormal erythropoiesis and the role of specific genes (coding and non-coding) in this phenomenon.",
+          "retrievedAt": "2026-09-07T04:56:37.060Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:59:49.741Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0453": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://english.uchicago.edu/people/vu-tran"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0453-1",
+          "url": "https://english.uchicago.edu/people/vu-tran",
+          "excerpt": "erature Skip to main content The University of Chicago Secondary Menu PhD Admissions Contact &quot;The Dirt&quot; Give to English search menu Department of English Language and Literature The University of Chicago Search Search Main navigation About Fields of Study Affiliated Journals Contact Resources Subscribe to &quot;The Dirt&quot; Support the Department People Faculty and Lecturers Graduate Students Staff Alumni Emeriti Faculty Faculty Bookshelf Graduate Overview Joint PhD Programs Teaching Courses Intellectual Life Career For Current Students Admissions Undergraduate Why Study Literature?",
+          "retrievedAt": "2026-09-07T04:56:37.399Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0453-2",
+          "url": "https://english.uchicago.edu/people/vu-tran",
+          "excerpt": "Major & Minor BA/MA Option Study Abroad Honors and Awards For Current Students English Research Labs BA Thesis Research and Fellowships Courses Creative Writing News & Events News Events Secondary Menu PhD Admissions Contact &quot;The Dirt&quot; Give to English Home People Vu Tran Vu Tran Associate Professor of Practice in the Arts vtran@uchicago.",
+          "retrievedAt": "2026-09-07T04:56:37.399Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0453-3",
+          "url": "https://english.uchicago.edu/people/vu-tran",
+          "excerpt": "edu Taft House 302 PhD, University of Nevada, Las Vegas, 2006; MFA, University of Iowa, 2002 Teaching at UChicago since 2010 Synopsis I am a novelist and short story writer.",
+          "retrievedAt": "2026-09-07T04:56:37.399Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0453-4",
+          "url": "https://english.uchicago.edu/people/vu-tran",
+          "excerpt": "My fiction primarily concerns the Vietnamese diaspora in America and the ongoing and inherited effects of displacement—specifically its muddling of memory and the self, of domestic and interracial bonds, of the Vietnamese as well as American identity.",
+          "retrievedAt": "2026-09-07T04:56:37.399Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0453-5",
+          "url": "https://english.uchicago.edu/people/vu-tran",
+          "excerpt": "My recent work recasts these immigrant stories of rootlessness in the deeply rooted narrative structures of Western genre fiction—in part, a tension that mirrors the struggles of the characters and heightens what is at once familiar, strange, and liminal in their experience of America.",
+          "retrievedAt": "2026-09-07T04:56:37.399Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0453-6",
+          "url": "https://english.uchicago.edu/people/vu-tran",
+          "excerpt": "Biography My first novel, Dragonfish —a NY Times Notable Book—is a literary noir that follows a white police officer’s search in Las Vegas for his ex-wife, a troubled Vietnamese woman who escaped their marriage, has now vanished from an abusive new husband, and is secretly writing letters to the daughter she abandoned two decades ago, when they first came to the US as refugees from Vietnam.",
+          "retrievedAt": "2026-09-07T04:56:37.399Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0453-7",
+          "url": "https://english.uchicago.edu/people/vu-tran",
+          "excerpt": "In my novel-in-progress, Your Origins—which draws on the tropes of the gothic romance—a failed writer recounts the three mysteries of his life: the circumstances that left him orphaned during the war in Vietnam; the uncommunicative white nurse who becomes his mother and raises him in Oklahoma; and following her sudden death, the young half-Vietnamese widow he meets after college, whose story of recent tragedy echoes his own and tells of a place where one can glimpse the life they might have lived had tragedy never befallen them.",
+          "retrievedAt": "2026-09-07T04:56:37.399Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0453-8",
+          "url": "https://english.uchicago.edu/people/vu-tran",
+          "excerpt": "Henry Prize Stories and the Best American Mystery Stories , and along with the Whiting Award, I’ve received fellowships from the National Endowment of the Arts, MacDowell, Yaddo, Bread Loaf, Sewanee, and other organizations.",
+          "retrievedAt": "2026-09-07T04:56:37.399Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:59:49.741Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0454": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://researchdirectory.uc.edu/p/trangq"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0454-1",
+          "url": "https://researchdirectory.uc.edu/p/trangq",
+          "excerpt": "Expert Profile: Giao Tran | Research Directory Toggle navigation Research Directory Search Search Home Facilities Profile Home Facilities Search Browse Experts Giao Q.",
+          "retrievedAt": "2026-09-07T04:56:40.226Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0454-2",
+          "url": "https://researchdirectory.uc.edu/p/trangq",
+          "excerpt": "Tran, PhD Associate Professor Associate Professor UC Women&apos;s, Gender and Sexuality Studies Departmen FRENCH-WEST 3408 2815 Commons Way Cincinnati, Ohio 45221-0164 Phone (513) 442-9743 Email Giao.",
+          "retrievedAt": "2026-09-07T04:56:40.226Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0454-3",
+          "url": "https://researchdirectory.uc.edu/p/trangq",
+          "excerpt": "Tran is an Ohio-licensed clinical psychologist who focuses on research and treatment of anxiety and alcohol disorders.",
+          "retrievedAt": "2026-09-07T04:56:40.226Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0454-4",
+          "url": "https://researchdirectory.uc.edu/p/trangq",
+          "excerpt": "Tran has taught several graduate and undergraduate courses related to clinical psychology, health psychology, and research methods.",
+          "retrievedAt": "2026-09-07T04:56:40.226Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0454-5",
+          "url": "https://researchdirectory.uc.edu/p/trangq",
+          "excerpt": "Education PhD: American University Washington, DC, 1998 (Clinical Psychology) MA: American University Washington, DC, 1995 (Clinical Psychology) B.",
+          "retrievedAt": "2026-09-07T04:56:40.226Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0454-6",
+          "url": "https://researchdirectory.uc.edu/p/trangq",
+          "excerpt": ": University of Pennsylvania Philadelphia, PA , 1988 (Biology) Research and Practice Interests Social anxiety and alcohol use in college students, comorbidity of psychiatric and substance use disorders with emphasis on social phobia and alcohol abuse, cognitive-behavioral therapies for anxiety and addictive disorders, motivational enhancement therapy, gender issues in addiction.",
+          "retrievedAt": "2026-09-07T04:56:40.226Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0454-7",
+          "url": "https://researchdirectory.uc.edu/p/trangq",
+          "excerpt": "ty of Cincinnati,, Cincinnati, OH 09-2000 -08-2006 Assistant Professor , Department of Psychology (tenured primary appointment),, University of Cincinnati,, Cincinnati, OH 09-1998 -07-2000 Postdoctoral Fellow,, Center for Addiction and Pregnancy,, Johns Hopkins University School of Medicine,, Baltimore, MD 09-1997 -08-1998 Psychology Intern,, Eastern Pennsylvania Psychiatric Institute,, Philadelphia, PA 09-1991 -08-1997 Data Analyst and Lab Manager,, Agoraphobia and Anxiety Program,, American University,, Washington, DC Research Support Grant: #K-23 026517-01A1 Investigators:Jaimee Heffner, Ph.",
+          "retrievedAt": "2026-09-07T04:56:40.226Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0454-8",
+          "url": "https://researchdirectory.uc.edu/p/trangq",
+          "excerpt": "(PI) 07-01-2009 -06-30-2014 National Institute on Drug Abuse Targeted intervention for bipolar smokers Role:Adviser $595,816 Active Type:Grant Level:National Grant: #1R21AA017291-01A1 Investigators:Giao Tran, Ph.",
+          "retrievedAt": "2026-09-07T04:56:40.226Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:59:44.605Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0455": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.colorado.edu/music/alexandra-nguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0455-1",
+          "url": "https://www.colorado.edu/music/alexandra-nguyen",
+          "excerpt": "Alexandra Nguyen | College of Music | University of Colorado Boulder Skip to main content College of Music Home About us Admissions Academics Ensembles Events News People Alumni Giving Translate English Spanish Chinese French German Korean Lao Nepali Japanese Tibetan Search Enter the terms you wish to search for.",
+          "retrievedAt": "2026-09-07T04:56:40.709Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0455-2",
+          "url": "https://www.colorado.edu/music/alexandra-nguyen",
+          "excerpt": "Other ways to search: Events Calendar Campus Map College of Music Home About us Admissions Academics Ensembles Events News People Alumni Giving Alexandra Nguyen Professor of Collaborative Piano PIANO + KEYBOARD Alexandra.",
+          "retrievedAt": "2026-09-07T04:56:40.709Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0455-3",
+          "url": "https://www.colorado.edu/music/alexandra-nguyen",
+          "excerpt": "edu 303-492-6512 Address Imig Music Building , S324 A native of Montréal, Alexandra Nguyen cultivates a multifaceted career as pianist, pedagogue and advocate for the collaborative arts.",
+          "retrievedAt": "2026-09-07T04:56:40.709Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0455-4",
+          "url": "https://www.colorado.edu/music/alexandra-nguyen",
+          "excerpt": "She has performed widely across the United States and Canada with recent international appearances in Italy, Spain and Malaysia at distinguished venues including Weill Hall at Carnegie Hall (New York), The Barns at Wolf Trap (Vienna, Virginia), Teatro Nacional (Panama City, Panama), Merkin Hall at Kaufman Music Center (New York), Van Cliburn Hall (Fort Worth, Texas) and the High Commission of Canada (Kuala Lumpur, Malaysia).",
+          "retrievedAt": "2026-09-07T04:56:40.709Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0455-5",
+          "url": "https://www.colorado.edu/music/alexandra-nguyen",
+          "excerpt": "A sought-after collaborator, Nguyen has appeared with artists such as baritone John Fulton, bassoonist Peter Kolkay and pianist Jennifer Hayghe with whom she maintains long-standing partnerships.",
+          "retrievedAt": "2026-09-07T04:56:40.709Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0455-6",
+          "url": "https://www.colorado.edu/music/alexandra-nguyen",
+          "excerpt": "Nguyen is professor of collaborative piano at the University of Colorado Boulder College of Music where she co-directs the graduate program in collaborative piano.",
+          "retrievedAt": "2026-09-07T04:56:40.709Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0455-7",
+          "url": "https://www.colorado.edu/music/alexandra-nguyen",
+          "excerpt": "An active clinician, she presents master classes and workshops nationwide and is the creator of Three-Tiered Listening (3TL©), a pedagogical framework for ensemble performance.",
+          "retrievedAt": "2026-09-07T04:56:40.709Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0455-8",
+          "url": "https://www.colorado.edu/music/alexandra-nguyen",
+          "excerpt": "She is on the faculty of the Collaborative Piano Institute and has previously worked with Quartet Program West, Opera Orvieto and Orvieto Musica.",
+          "retrievedAt": "2026-09-07T04:56:40.709Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:59:49.741Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0456": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.vetmed.ufl.edu/profile/nguyen-cuong/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0456-1",
+          "url": "https://www.vetmed.ufl.edu/profile/nguyen-cuong/",
+          "excerpt": "Cuong Nguyen &raquo; College of Veterinary Medicine &raquo; University of Florida Skip to main content Skip to main menu UF Health University of Florida College of Veterinary Medicine UNIVERSITY of FLORIDA We're Hiring!",
+          "retrievedAt": "2026-09-07T04:56:41.384Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0456-2",
+          "url": "https://www.vetmed.ufl.edu/profile/nguyen-cuong/",
+          "excerpt": "ions Institutes and Centers Outreach Show submenu for Outreach Outreach Overview Extension Aquatic Animal Health Operation Catnip Shelter Medicine Youth Pathways and Outreach Programs Visual Guides of Animal Reproduction UF Veterinary Emergency Treatment Service (UF VETS) Hospitals Show submenu for Hospitals Hospitals Overview Large Animal Hospital Small Animal Hospital Diagnostic Laboratories World Equestrian Center: Ocala Giving/Alumni Contact Cuong Nguyen Associate Professor Department: Department of Infectious Diseases & Immunology Business Phone: (352) 294-4180 Business Email: nguyenc@ufl.",
+          "retrievedAt": "2026-09-07T04:56:41.384Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0456-3",
+          "url": "https://www.vetmed.ufl.edu/profile/nguyen-cuong/",
+          "excerpt": "edu On This Page Back To Top About Cuong Nguyen Related Links: Lab website https://nguyenlab.",
+          "retrievedAt": "2026-09-07T04:56:41.384Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0456-4",
+          "url": "https://www.vetmed.ufl.edu/profile/nguyen-cuong/",
+          "excerpt": "website/ Accomplishments Career Development Award “Immune-Pathophysiology of Lymphocytic Foci in Sjögren’s Syndrome” 2009-2014 National Institute of Dental and Craniofacial Research Mentoring Opportunity Scholarship 2005 Graduate Student Council, University of Florida Teaching Profile Courses Taught Research Profile I.",
+          "retrievedAt": "2026-09-07T04:56:41.384Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0456-5",
+          "url": "https://www.vetmed.ufl.edu/profile/nguyen-cuong/",
+          "excerpt": "Sjögren&#8217;s disease (SjD) is a chronic autoimmune disorder that progressively destroys the salivary and lacrimal glands, leading to exocrine dysfunction.",
+          "retrievedAt": "2026-09-07T04:56:41.384Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0456-6",
+          "url": "https://www.vetmed.ufl.edu/profile/nguyen-cuong/",
+          "excerpt": "Characterized by inflammatory cell infiltration and acinar epithelial cell atrophy, SjD affects an estimated 0.",
+          "retrievedAt": "2026-09-07T04:56:41.384Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0456-7",
+          "url": "https://www.vetmed.ufl.edu/profile/nguyen-cuong/",
+          "excerpt": "1-3% of the general population, approximately 4 million individuals in the US, predominantly postmenopausal women.",
+          "retrievedAt": "2026-09-07T04:56:41.384Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0456-8",
+          "url": "https://www.vetmed.ufl.edu/profile/nguyen-cuong/",
+          "excerpt": "Notably, recent studies have revealed a surprising increase in SjD cases among pediatric patients.",
+          "retrievedAt": "2026-09-07T04:56:41.384Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:59:49.741Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0457": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://mgm.ufl.edu/profile/nguyen-lien/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0457-1",
+          "url": "https://mgm.ufl.edu/profile/nguyen-lien/",
+          "excerpt": "tructions Current Fellows SIMR Alumni Mini-Symposia SIMR Photo Gallery Additional Resources Department Show submenu for Department Department Overview Faculty Joint Faculty Research Faculty Postdocs Graduate Students Administration Faculty Accepting Students Research Show submenu for Research Research Overview Genetics Virology RNA Biology News & Events Show submenu for News & Events News & Events Overview Virology Retreat Resources College of Medicine Make a Gift Lien T Nguyen Assistant Professor Department: Molecular Genetics & Microbiology Business Phone: (352) 273-5112 Business Email: lien.",
+          "retrievedAt": "2026-09-07T04:56:41.805Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0457-2",
+          "url": "https://mgm.ufl.edu/profile/nguyen-lien/",
+          "excerpt": "edu On This Page Back To Top About Lien T Nguyen My research group is interested in understanding the roles of repetitive elements or “genomic dark matter” in disease and health.",
+          "retrievedAt": "2026-09-07T04:56:41.805Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0457-3",
+          "url": "https://mgm.ufl.edu/profile/nguyen-lien/",
+          "excerpt": "Our research focuses are: 1] Detecting novel pathogenic or functional tandem repeats and repeat expansions.",
+          "retrievedAt": "2026-09-07T04:56:41.805Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0457-4",
+          "url": "https://mgm.ufl.edu/profile/nguyen-lien/",
+          "excerpt": "We use molecular, genetic, and repeat enrichment; advanced sequencing and computational tools; animal models, patient samples and patient-derived models to identify and study pathogenic or functional tandem repeats.",
+          "retrievedAt": "2026-09-07T04:56:41.805Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0457-5",
+          "url": "https://mgm.ufl.edu/profile/nguyen-lien/",
+          "excerpt": "Disease focus: Alzheimer’s disease, amyotrophic lateral sclerosis, frontotemporal dementia and diseases with unknown etiologies.",
+          "retrievedAt": "2026-09-07T04:56:41.805Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0457-6",
+          "url": "https://mgm.ufl.edu/profile/nguyen-lien/",
+          "excerpt": "Two books that I find the most impressive and helpful are Dế Mèn Phiêu Lưu ký by Tô Hoài and the 7 Habits of Highly Effective People by Stephen Covey.",
+          "retrievedAt": "2026-09-07T04:56:41.805Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0457-7",
+          "url": "https://mgm.ufl.edu/profile/nguyen-lien/",
+          "excerpt": "Favorite sentences: “Nothing in life is to be feared, it is only to be understood” &#8211; Marie Curie.",
+          "retrievedAt": "2026-09-07T04:56:41.805Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0457-8",
+          "url": "https://mgm.ufl.edu/profile/nguyen-lien/",
+          "excerpt": "edu/faculty-labs/nguyen-lab/ Teaching Profile Courses Taught GMS6012 &#8211; Human Genetics 2023-2024 College of Medicine GMS7980 &#8211; Research for Doctoral Dissertation 2024-2026 College of Medicine BMS6003 &#8211; Genetics and Health 2024-2026 College of Medicine GMS6001 &#8211; Fundamentals of Biomedical Sciences I 2024 College of Medicine GMS7979 &#8211; Advanced Research 2025-2026 College of Medicine Research Profile We study the roles of tandem repeats and repeat expansions in disease and cellular function.",
+          "retrievedAt": "2026-09-07T04:56:41.805Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:59:49.741Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0458": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "verified",
       "sourcesChecked": [
         "https://radiology.med.jax.ufl.edu/profile/nguyen-minh/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0458-1",
+          "url": "https://radiology.med.jax.ufl.edu/profile/nguyen-minh/",
+          "excerpt": "riculum Benefits Residents How to Apply Breast Imaging and Intervention Fellowship Program Director's Welcome Curriculum Benefits Fellows How to Apply Musculoskeletal Imaging Fellowship Program Director's Welcome Curriculum Benefits Fellows How to Apply Medical Student Education Continuing Medical Education School of Radiologic Technology (Radiography Program) Virtual Tour Visiting Professors and Guest Speakers Patient Care Research Show submenu for Research Research Overview View Clinical Research Abstracts and Publications Research Fees Imaging CD Requests Faculty Contact Us Minh X Nguyen, M.",
+          "retrievedAt": "2026-09-07T04:56:42.554Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0458-2",
+          "url": "https://radiology.med.jax.ufl.edu/profile/nguyen-minh/",
+          "excerpt": "Assistant Professor Department: Radiology – Jacksonville Business Phone: (904) 244-4202 Business Email: minh.",
+          "retrievedAt": "2026-09-07T04:56:42.554Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0458-3",
+          "url": "https://radiology.med.jax.ufl.edu/profile/nguyen-minh/",
+          "excerpt": ", is a University of Florida assistant professor of radiology and a board-certified diagnostic radiologist and nuclear medicine physician at UF Health Jacksonville.",
+          "retrievedAt": "2026-09-07T04:56:42.554Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0458-4",
+          "url": "https://radiology.med.jax.ufl.edu/profile/nguyen-minh/",
+          "excerpt": "He received his medical degree from the University of Texas Southwestern Medical Center at Dallas in Dallas, Texas.",
+          "retrievedAt": "2026-09-07T04:56:42.554Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0458-5",
+          "url": "https://radiology.med.jax.ufl.edu/profile/nguyen-minh/",
+          "excerpt": "Nguyen completed his residency in nuclear medicine at Emory University School of Medicine in Atlanta, Georgia, and completed a diagnostic radiology residency and cardiovascular imaging fellowship at the University of Florida College of Medicine – Jacksonville in Jacksonville, Florida.",
+          "retrievedAt": "2026-09-07T04:56:42.554Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0458-6",
+          "url": "https://radiology.med.jax.ufl.edu/profile/nguyen-minh/",
+          "excerpt": "Board Certifications Diagnostic Radiology American Board of Radiology Nuclear Medicine American Board of Nuclear Medicine Clinical Profile Specialties Nuclear Medicine Radiology Publications Academic Articles A case of Muir-Torre syndrome on [18F]FDG PET/CT.",
+          "retrievedAt": "2026-09-07T04:56:42.554Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0458-7",
+          "url": "https://radiology.med.jax.ufl.edu/profile/nguyen-minh/",
+          "excerpt": "PubMed Publisher&#8217;s Site Education Radiology Residency 2010 University of Florida College of Medicine – Jacksonville Cardiovascular Imaging Fellowship 2006 University of Florida College of Medicine – Jacksonville Nuclear Medicine Residency 2004 Emory University School of Medicine Doctor of Medicine 2001 University of Texas Southwestern Medical Center at Dallas Contact Details Phones: Business: (904) 244-4202 Emails: Business: minh.",
+          "retrievedAt": "2026-09-07T04:56:42.554Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:59:49.741Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0459": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://manoa.hawaii.edu/tpss/people/nhu-nguyen/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0459-1",
+          "url": "https://manoa.hawaii.edu/tpss/people/nhu-nguyen/",
+          "excerpt": "ens, and Invasive Species Plant Production and Management Minor in Plant Production and Management Graduate Master of Science Master in Plant and Soil Studies Plan B Doctor of Philosophy Graduate Application Information Graduate Program Documents Graduate Assistantships Course Descriptions Student Opportunities Internships and Careers Scholarship Sources People Research Extension Resources News Give Search this site Search this site Site search Home About Us Students Undergraduate Graduate Course Descriptions Student Opportunities People Research Extension Resources News Give Home People Nhu H.",
+          "retrievedAt": "2026-09-07T04:56:44.541Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0459-2",
+          "url": "https://manoa.hawaii.edu/tpss/people/nhu-nguyen/",
+          "excerpt": "Research Specialties and Interests ▴ Soil microbial ecology ▴ Agroecosystem function ▴ Fungal-bacterial interactions ▴ Rhizosphere processes ▴ Mycology Education Ph.",
+          "retrievedAt": "2026-09-07T04:56:44.541Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0459-3",
+          "url": "https://manoa.hawaii.edu/tpss/people/nhu-nguyen/",
+          "excerpt": "︱Biological Sciences, Louisiana State University Courses Taught ‣ BOT 430/L &#8211; The Biology of Fungi ‣ TPSS 480/L &#8211; Life in the Soil Environment ‣ TPSS 604 &#8211; Advanced Soil Microbiology ‣ TPSS 667 &#8211; Graduate Seminar ‣ TPSS 711 &#8211; Special Topics Membership and Service Mycological Society of America (MSA) American Society for Microbiology (ASM) Awards and Honor 2024 — A.",
+          "retrievedAt": "2026-09-07T04:56:44.541Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0459-4",
+          "url": "https://manoa.hawaii.edu/tpss/people/nhu-nguyen/",
+          "excerpt": "Buller Medal, Young Mycologist Award, International Mycological Association 2023 — C.",
+          "retrievedAt": "2026-09-07T04:56:44.541Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0459-5",
+          "url": "https://manoa.hawaii.edu/tpss/people/nhu-nguyen/",
+          "excerpt": "Alexopoulos Prize for Outstanding Early Career Mycologist, Mycological Society of America Publication Links Google Scholar Research Gate ORCID Nhu H.",
+          "retrievedAt": "2026-09-07T04:56:44.541Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0459-6",
+          "url": "https://manoa.hawaii.edu/tpss/people/nhu-nguyen/",
+          "excerpt": "edu 808-956-6593 Sherman Laboratory Room 221 (office) Room 212 (lab) 1910 East-West Rd, Honolulu, HI More Information Graduate Faculty Github Twitter Rhizobia of Hawai‘i Department Office St.",
+          "retrievedAt": "2026-09-07T04:56:44.541Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0459-7",
+          "url": "https://manoa.hawaii.edu/tpss/people/nhu-nguyen/",
+          "excerpt": "John Plant Science Laboratory, Room 102 3190 Maile Way, Honolulu, HI, 96822 Contact Us Telephone: (808) 956-8351 Fax: (808) 956-3894 Email: tpss@hawaii.",
+          "retrievedAt": "2026-09-07T04:56:44.541Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0459-8",
+          "url": "https://manoa.hawaii.edu/tpss/people/nhu-nguyen/",
+          "excerpt": "edu Search Get in Touch If you have any issues accessing this site, please contact us at the email provided.",
+          "retrievedAt": "2026-09-07T04:56:44.541Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:59:49.741Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0460": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.opt.uh.edu/profiles/chi-nguyen.cfm"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0460-1",
+          "url": "https://www.opt.uh.edu/profiles/chi-nguyen.cfm",
+          "excerpt": "Chi Nguyen - UH College of Optometry --> --> Apply MyUHCO Refer a Patient Schedule an Appointment Give Now Home About Education Research Alumni & Giving Patient Care Home Chi Nguyen Chi Nguyen Faculty Profile Return to College Directory Chi Nguyen , EdD.",
+          "retrievedAt": "2026-09-07T04:56:45.205Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0460-2",
+          "url": "https://www.opt.uh.edu/profiles/chi-nguyen.cfm",
+          "excerpt": ", FAAO Instructional Assistant Professor Department: Clinical Sciences Email: lcnguye2@Central.",
+          "retrievedAt": "2026-09-07T04:56:45.206Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0460-3",
+          "url": "https://www.opt.uh.edu/profiles/chi-nguyen.cfm",
+          "excerpt": "Lan Chi Nguyen obtained her Bachelor of Science in Ophthalmic Medical Technology from the Louisiana State University Medical Center in New Orleans.",
+          "retrievedAt": "2026-09-07T04:56:45.206Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0460-4",
+          "url": "https://www.opt.uh.edu/profiles/chi-nguyen.cfm",
+          "excerpt": "Following this, she joined the University of Texas Medical Branch, where she excelled in direct patient care, clinical operations, and teaching.",
+          "retrievedAt": "2026-09-07T04:56:45.206Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0460-5",
+          "url": "https://www.opt.uh.edu/profiles/chi-nguyen.cfm",
+          "excerpt": "In 2006, she became a part of the University of Houston College of Optometry in a research and operational capacity, collaborating closely with research scientists, graduate students, optometry students, and mentoring undergraduate students.",
+          "retrievedAt": "2026-09-07T04:56:45.206Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0460-6",
+          "url": "https://www.opt.uh.edu/profiles/chi-nguyen.cfm",
+          "excerpt": "Nguyen furthered her education at the University of Houston and obtained her Doctor of Education (EdD) degree in 2022.",
+          "retrievedAt": "2026-09-07T04:56:45.206Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0460-7",
+          "url": "https://www.opt.uh.edu/profiles/chi-nguyen.cfm",
+          "excerpt": "Nguyen is a Fellow of the American Academy of Optometry (FAAO) and a Research Fellow of the Scleral Lens Education Society (FSLS).",
+          "retrievedAt": "2026-09-07T04:56:45.206Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0460-8",
+          "url": "https://www.opt.uh.edu/profiles/chi-nguyen.cfm",
+          "excerpt": "Nguyen aims to apply her theoretical knowledge from the field of education to enhance the instructional design, implementation, and outcome assessment of optometry teaching in her role as an Instructional Assistant Professor in the Clinical Sciences department.",
+          "retrievedAt": "2026-09-07T04:56:45.206Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:59:49.741Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0461": {
       "overview": "pending",
