@@ -3320,7 +3320,8 @@
         "vp-1352",
         "vp-1353"
       ],
-      "status": "pending"
+      "status": "in_progress",
+      "startedAt": "2026-09-07T19:46:55.234Z"
     },
     {
       "number": 68,
@@ -79325,204 +79326,558 @@
       "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1334": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://medicine.nus.edu.sg/pharmacy/staff/minh-le/"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:47:59.856Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1335": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.physics.hku.hk/people/academic/7330"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1335-1",
+          "url": "https://www.physics.hku.hk/people/academic/7330",
+          "excerpt": "nformation for Visitor Alumni Corner A A A Important Notices --> About Us Introduction History History Honours and Awards Job Vacancies About Us --> People Academic Staff Research Staff Research Staff Supporting Staff Visitors People --> Research Research Highlights Research Stories Publication Highlights Research Groups Research Centers Research Groups Research Centers Facilities Research Grants Publications State Key Laboratory of Optical Quantum Materials Research --> Undergraduate Studies For Prospective Students Application and Admission Major / Intensive Major / Minor Options Why Physics?",
+          "retrievedAt": "2026-09-07T19:46:59.506Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1335-2",
+          "url": "https://www.physics.hku.hk/people/academic/7330",
+          "excerpt": "ews and Events Important Notices HKU Home Faculty of Science Sitemap Job Vacancies Information for Visitor A A A About Us Introduction History Honours and Awards Honours of Our Staff Honours of Our Students Job Vacancies People Academic Staff Research Staff Supporting Staff Visitors Research Research Highlights Research Stories Publication Highlights Research Groups Research Centers Facilities Research Grants Publications State Key Laboratory of Optical Quantum Materials Undergraduate Studies For Prospective Students Application and Admission Major / Intensive Major / Minor Options Why Physics?",
+          "retrievedAt": "2026-09-07T19:46:59.506Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1335-3",
+          "url": "https://www.physics.hku.hk/people/academic/7330",
+          "excerpt": "nts Past Events Internal User Health and Safety Policy Emergencies Staff-Student Consultative Committee Meetings Agenda Minutes Useful Links Alumni Corner People Academic Staff Teaching Staff Emeritus Professors Honorary/ Visiting / Visiting Research Professors Honorary Assistant Professors Honorary Associate Professors Adjunct/ Visiting Scholars Research Assistant Professors Teaching Staff Emeritus Professors Honorary/ Visiting / Visiting Research Professors Honorary Assistant Professors Honorary Associate Professors Adjunct/ Visiting Scholars Research Assistant Professors Teaching Staff Prof.",
+          "retrievedAt": "2026-09-07T19:46:59.506Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1335-4",
+          "url": "https://www.physics.hku.hk/people/academic/7330",
+          "excerpt": "hk Research Interests Quantum Information Processing, Quantum Cryptography, Quantum Speed Limit Consultation Hours Wednesday 3:00 p.",
+          "retrievedAt": "2026-09-07T19:46:59.506Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1335-5",
+          "url": "https://www.physics.hku.hk/people/academic/7330",
+          "excerpt": "Guanhua Chen Adjunct with Department of Physics Chair Professor, Department of Chemistry Room 605, Chong Yuet Ming Chemistry Building 2859 2164 2859 2164 ghc@yangtze.",
+          "retrievedAt": "2026-09-07T19:46:59.506Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1335-6",
+          "url": "https://www.physics.hku.hk/people/academic/7330",
+          "excerpt": "Giulio Chiribella Professor (by courtesy) Professor, Department of Computer Science Room 304, Chow Yei Ching Building 2859 2193 2859 2193 giulio@cs.",
+          "retrievedAt": "2026-09-07T19:46:59.506Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1335-7",
+          "url": "https://www.physics.hku.hk/people/academic/7330",
+          "excerpt": "HKU Room 104C, Chong Yuet Ming Physics Building 3917 4265 3917 4265 judychow@hku.",
+          "retrievedAt": "2026-09-07T19:46:59.506Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1335-8",
+          "url": "https://www.physics.hku.hk/people/academic/7330",
+          "excerpt": "hk Research Interests Computational physics and Econophysics Consultation Hours Wednesday 3:00 p.",
+          "retrievedAt": "2026-09-07T19:46:59.506Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:47:59.857Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1336": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://dornsife.usc.edu/profile/le-trinh/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1336-1",
+          "url": "https://dornsife.usc.edu/profile/le-trinh/",
+          "excerpt": "Le Trinh - USC Dornsife Skip to Content Open Site Navigation / Menu Search What are you looking for?",
+          "retrievedAt": "2026-09-07T19:47:00.668Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1336-2",
+          "url": "https://dornsife.usc.edu/profile/le-trinh/",
+          "excerpt": "What you're looking for Submit News and Events Public Exchange Info For Current Students Faculty Staff Directories Faculty Directory Staff Directory Alumni Giving USC.",
+          "retrievedAt": "2026-09-07T19:47:00.668Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1336-3",
+          "url": "https://dornsife.usc.edu/profile/le-trinh/",
+          "excerpt": "edu The Dornsife Difference Back The Academy in the Public Square Beyond the laboratories, research centers and classrooms, USC Dornsife serves as a dynamic intellectual resource that is woven into the fabric of our communities.",
+          "retrievedAt": "2026-09-07T19:47:00.668Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1336-4",
+          "url": "https://dornsife.usc.edu/profile/le-trinh/",
+          "excerpt": "PHYSICAL SCIENCES Agilent Center of Excellence in Biomolecular Characterization Center for Applied Mathematical Sciences Center for Quantum Information and Science Technology Center of Excellence in Molecular Characterization Center of Excellence in NanoBiophysics Core Center of Excellence in Nano Imaging Loker Hydrocarbon Research Institute Statewide California Earthquake Center The Plastics Problem The Urban Critical Zone Explore All Browse all of our departments, programs, centers, and institutes Le Trinh Associate Professor (Research) of Molecular and Cellular Biosciences Email letrinh@usc.",
+          "retrievedAt": "2026-09-07T19:47:00.668Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1336-5",
+          "url": "https://dornsife.usc.edu/profile/le-trinh/",
+          "excerpt": "edu Office RRI 403G Office Phone (213) 821-3983 USC Dornsife faculty and staff may update profiles via MyDornsife.",
+          "retrievedAt": "2026-09-07T19:47:00.668Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:47:59.857Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1337": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.lpt.irsamc.ups-tlse.fr/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.lpt.irsamc.ups-tlse.fr/: fetch failed"
+      ],
+      "updatedAt": "2026-09-07T19:47:59.857Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1338": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://ki.se/en/people/trung-nghia-vu"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://ki.se/en/people/trung-nghia-vu: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:47:59.857Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1339": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://rd.iai.osaka-u.ac.jp/en/5e9c1c5ce5dae8a7.html"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://rd.iai.osaka-u.ac.jp/en/5e9c1c5ce5dae8a7.html: fetch failed"
+      ],
+      "updatedAt": "2026-09-07T19:47:59.857Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1340": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://tetis.teledetection.fr/index.php/fr/presentation/organigramme/personnel-permanent/18-membres-tetis/inrae/521-ho-tong-minh-dinh"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://tetis.teledetection.fr/index.php/fr/presentation/organigramme/personnel-permanent/18-membres-tetis/inrae/521-ho-tong-minh-dinh: fetch failed"
+      ],
+      "updatedAt": "2026-09-07T19:47:59.857Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1341": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://lcis.grenoble-inp.fr/fr/le-laboratoire/membres-du-lcis"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://lcis.grenoble-inp.fr/fr/le-laboratoire/membres-du-lcis: fetch failed"
+      ],
+      "updatedAt": "2026-09-07T19:47:59.857Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1342": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.sydney.edu.au/engineering/about/our-people/academic-staff/caohung-pham.html"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:47:59.857Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1343": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://engineering.usask.ca/people/ece/dinh,-anh.php"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://engineering.usask.ca/people/ece/dinh,-anh.php: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:47:59.857Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1344": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.polymtl.ca/expertises/vo-huu-duc"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:47:59.857Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1345": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://portail.umons.ac.be/"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:47:59.857Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1346": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.ecu.edu.au/schools/engineering/staff/profiles/lecturers/dr-quoc-viet-phung"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.ecu.edu.au/schools/engineering/staff/profiles/lecturers/dr-quoc-viet-phung: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T19:47:59.857Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1347": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.idpoisson.fr/phung/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1347-1",
+          "url": "https://www.idpoisson.fr/phung/",
+          "excerpt": "Kim Dang Phung Published Papers [28] Laurent Desvillettes , Kim Dang Phung , Bao Quoc Tang .",
+          "retrievedAt": "2026-09-07T19:47:28.263Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1347-2",
+          "url": "https://www.idpoisson.fr/phung/",
+          "excerpt": "On the equilibriation of chemical reaction-diffusion systems with degenerate reactions .",
+          "retrievedAt": "2026-09-07T19:47:28.263Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1347-3",
+          "url": "https://www.idpoisson.fr/phung/",
+          "excerpt": "Observation estimate for the heat equations with Neumann boundary conditions via logarithmic convexity .",
+          "retrievedAt": "2026-09-07T19:47:28.263Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1347-4",
+          "url": "https://www.idpoisson.fr/phung/",
+          "excerpt": "Exponential decay toward equilibrium via log convexity for a degenerate reaction-diffusion system .",
+          "retrievedAt": "2026-09-07T19:47:28.263Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1347-5",
+          "url": "https://www.idpoisson.fr/phung/",
+          "excerpt": "Observation estimate for kinetic transport equations by diffusion approximation .",
+          "retrievedAt": "2026-09-07T19:47:28.263Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1347-6",
+          "url": "https://www.idpoisson.fr/phung/",
+          "excerpt": "Annales de l'Institut Henri Poincar&eacute; Analyse Non Lin&eacute;aire 31 (3) (2014) 477-499.",
+          "retrievedAt": "2026-09-07T19:47:28.263Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1347-7",
+          "url": "https://www.idpoisson.fr/phung/",
+          "excerpt": "Energy decay for Maxwell's equations with Ohm's law in partially cubic domains .",
+          "retrievedAt": "2026-09-07T19:47:28.263Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1347-8",
+          "url": "https://www.idpoisson.fr/phung/",
+          "excerpt": "An observability estimate for parabolic equations from a measurable set in time and its applications .",
+          "retrievedAt": "2026-09-07T19:47:28.263Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:47:59.857Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1348": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://ampere-lab.fr/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://ampere-lab.fr/: fetch failed"
+      ],
+      "updatedAt": "2026-09-07T19:47:59.857Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1349": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://peoplefinder.lsbu.ac.uk/researcher/827w4/dr-emily-ngan"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://peoplefinder.lsbu.ac.uk/researcher/827w4/dr-emily-ngan: fetch failed"
+      ],
+      "updatedAt": "2026-09-07T19:47:59.857Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1350": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://institutducerveau.org/en/team/team-hoang-xuan"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://institutducerveau.org/en/team/team-hoang-xuan: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:47:59.857Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1351": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.urology.pitt.edu/people/quoc-dien-trinh-md-mba"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1351-1",
+          "url": "https://www.urology.pitt.edu/people/quoc-dien-trinh-md-mba",
+          "excerpt": "Quoc-Dien Trinh, MD, MBA | Department of Urology | University of Pittsburgh Skip to main content The University of Pittsburgh Pitt Home Find People Department of Urology Toggle navigation Search form Search 2026-2027 Applicants About Faculty Residents Alumni Education Research #UPMCUrology Visiting Medical Student Program Quoc-Dien Trinh, MD, MBA Professor and Chair, Department of Urology, University of Pittsburgh School of Medicine Frederic N.",
+          "retrievedAt": "2026-09-07T19:47:30.530Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1351-2",
+          "url": "https://www.urology.pitt.edu/people/quoc-dien-trinh-md-mba",
+          "excerpt": "Schwentker Endowed Chair in Urological Surgery Quoc-Dien Trinh, MD, MBA, serves as the Chair of the Department of Urology, University of Pittsburgh School of Medicine, and Chair of Urology, UPMC.",
+          "retrievedAt": "2026-09-07T19:47:30.530Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1351-3",
+          "url": "https://www.urology.pitt.edu/people/quoc-dien-trinh-md-mba",
+          "excerpt": "Trinh has been honored with the 2021 Outstanding Citizenship Award from Brigham and Women’s Hospital and the 2022 American Urological Association Young Urologist of the Year award for New England.",
+          "retrievedAt": "2026-09-07T19:47:30.530Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1351-4",
+          "url": "https://www.urology.pitt.edu/people/quoc-dien-trinh-md-mba",
+          "excerpt": "He is recognized as a Castle Connolly Top Doctor and a Top Asian American Pacific Islander Doctor.",
+          "retrievedAt": "2026-09-07T19:47:30.530Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1351-5",
+          "url": "https://www.urology.pitt.edu/people/quoc-dien-trinh-md-mba",
+          "excerpt": "Trinh specializes in minimally invasive treatments for prostatic diseases, such as prostate cancer and benign prostatic hyperplasia.",
+          "retrievedAt": "2026-09-07T19:47:30.530Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1351-6",
+          "url": "https://www.urology.pitt.edu/people/quoc-dien-trinh-md-mba",
+          "excerpt": "An expert in robotic prostate surgery, he has performed over 1,500 robotic radical and simple prostatectomies.",
+          "retrievedAt": "2026-09-07T19:47:30.530Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1351-7",
+          "url": "https://www.urology.pitt.edu/people/quoc-dien-trinh-md-mba",
+          "excerpt": "Trinh’s research is focused on health equity and outcomes in cancer care delivery.",
+          "retrievedAt": "2026-09-07T19:47:30.530Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1351-8",
+          "url": "https://www.urology.pitt.edu/people/quoc-dien-trinh-md-mba",
+          "excerpt": "Trinh has authored over 600 peer-reviewed articles, editorials, and book chapters, and his research has received funding from the American Cancer Society, the Conquer Cancer Foundation, and the Department of Defense.",
+          "retrievedAt": "2026-09-07T19:47:30.530Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:47:59.857Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1352": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://u-paris.fr/en/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1352-1",
+          "url": "https://u-paris.fr/en/",
+          "excerpt": "Université Paris Cité | Welcome to Université Paris Cité --> ENLIGHTEN THE FUTURE You are Programmes JOIN US Students Researchers and PhD students Scholarships Living in France UNIVERSITY About us Organisation Circle U.",
+          "retrievedAt": "2026-09-07T19:47:32.146Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1352-2",
+          "url": "https://u-paris.fr/en/",
+          "excerpt": "to 57th place worldwide Read more Antimicrobial resistance: doctoral researcher Yaëlle Wormser explores a new lead to speed up tuberculosis research Read more Breaking Away from Hydrocarbon Dependence: A PhD Student Analyzes Gulf States’ Strategies Amid Regional Crisis Read more President Emmanuel Macron lays the foundation stone of the Robert-Debré Institute for the Child’s Brain Read more News Learn French as a foreign language with ‘Décalages culturels’, the podcast from RFI and Université Paris Cité | Science and society People with disabilities and staff members: meet through DuoDay 2026!",
+          "retrievedAt": "2026-09-07T19:47:32.146Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1352-3",
+          "url": "https://u-paris.fr/en/",
+          "excerpt": "| Université Paris Cité Results of the 2026 Joint Research Call for Proposals Université Paris Cité – University of Toronto | International Sports Villages 2026: back to Université Paris Cité | Student life Circle U.",
+          "retrievedAt": "2026-09-07T19:47:32.146Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1352-4",
+          "url": "https://u-paris.fr/en/",
+          "excerpt": ": Université Paris Cité is recruiting for its new ‘Democracy’ chair | Circle U Looking for accommodation for the start of term?",
+          "retrievedAt": "2026-09-07T19:47:32.146Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1352-5",
+          "url": "https://u-paris.fr/en/",
+          "excerpt": "| Student life New Zealand and Norwegian Delegations Visit Université Paris Cité | International June 12, 13 and 14: three days of student engagement for an ecological and socially responsible society | Student life Two EURIP students share their experience as part of the Circle U.",
+          "retrievedAt": "2026-09-07T19:47:32.146Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1352-6",
+          "url": "https://u-paris.fr/en/",
+          "excerpt": "delegation at the Model United Nations (MUN) in Rome | Circle U Recent news Find your programme Université Paris Cité offers international joint programmes at the undergraduate and graduate levels as well as programmes taught in english.",
+          "retrievedAt": "2026-09-07T19:47:32.147Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1352-7",
+          "url": "https://u-paris.fr/en/",
+          "excerpt": "Find your programme Events 8 September 2026 [Nature x PITOR Conference] An exceptional international event dedicated to AI in healthcare Grand Amphithéâtre de la Sorbonne 17 September 2026 Welcome Desk: a warm welcome to international students!",
+          "retrievedAt": "2026-09-07T19:47:32.147Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:47:59.857Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1353": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.bccrc.ca/dept/ccr/people/nhu-le"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1353-1",
+          "url": "https://www.bccrc.ca/dept/ccr/people/nhu-le",
+          "excerpt": "Nhu Le | Population Health Sciences Skip to main content Breadcrumb Population Health Sciences People Nhu Le Dr.",
+          "retrievedAt": "2026-09-07T19:47:32.908Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1353-2",
+          "url": "https://www.bccrc.ca/dept/ccr/people/nhu-le",
+          "excerpt": "Nhu Le trained as a statistician, and began working as a research scientist with BC Cancer in 1992.",
+          "retrievedAt": "2026-09-07T19:47:32.908Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1353-3",
+          "url": "https://www.bccrc.ca/dept/ccr/people/nhu-le",
+          "excerpt": "Le has contributed significantly to research and care at BC Cancer and in his field.",
+          "retrievedAt": "2026-09-07T19:47:32.908Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1353-4",
+          "url": "https://www.bccrc.ca/dept/ccr/people/nhu-le",
+          "excerpt": "Among these is the development of new statistical methodologies such as theories for measurement error adjustment in case-control studies and for interpolation of environmental fields.",
+          "retrievedAt": "2026-09-07T19:47:32.908Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1353-5",
+          "url": "https://www.bccrc.ca/dept/ccr/people/nhu-le",
+          "excerpt": "With his extensive experience in environmental and occupational epidemiology, Dr.",
+          "retrievedAt": "2026-09-07T19:47:32.908Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1353-6",
+          "url": "https://www.bccrc.ca/dept/ccr/people/nhu-le",
+          "excerpt": "Le has conducted several large-scale epidemiologic studies, particularly in the pulp/paper and aluminum smelting industries, along with population-based case-control cancer studies including more recent work examining the gene-environment effects on ovarian cancer risk.",
+          "retrievedAt": "2026-09-07T19:47:32.908Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1353-7",
+          "url": "https://www.bccrc.ca/dept/ccr/people/nhu-le",
+          "excerpt": "Finally, collaborations with clinical colleagues at BC Cancer examining the effects of radiation and chemo-therapy on prognosis of ovarian cancer patients have led to changes in practice resulting in improved patient care for ovarian cancer patients.",
+          "retrievedAt": "2026-09-07T19:47:32.908Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1353-8",
+          "url": "https://www.bccrc.ca/dept/ccr/people/nhu-le",
+          "excerpt": "in Computer Science and Mathematics, University of British Columbia Back to top BC Cancer Foundation is the fundraising partner of BC Cancer, which includes BC Cancer Research.",
+          "retrievedAt": "2026-09-07T19:47:32.908Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:47:59.857Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1354": {
       "overview": "pending",
