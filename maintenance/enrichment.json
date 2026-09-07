@@ -1736,7 +1736,9 @@
         "vp-0179",
         "vp-0180"
       ],
-      "status": "pending"
+      "status": "complete",
+      "startedAt": "2026-09-07T04:20:56.496Z",
+      "publishedAt": "2026-09-07T04:22:34.853Z"
     },
     {
       "number": 10,
@@ -14518,210 +14520,1362 @@
       "nextAction": "Batch 8 complete."
     },
     "vp-0161": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.tamucc.edu/business/about/directory/long-pham.php"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0161-1",
+          "url": "https://www.tamucc.edu/business/about/directory/long-pham.php",
+          "excerpt": "Long Pham | Faculty Bio | About the College of Business | College of Business | Texas A&M University-Corpus Christi Jump to Header Jump to Main Content Jump to Footer Academics Explore Areas of Study Academic Advising and Planning Academic Support Colleges Graduate Education Online Programs Registrar Faculty Directory Library Admissions Apply Today!",
+          "retrievedAt": "2026-09-07T04:20:58.849Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0161-2",
+          "url": "https://www.tamucc.edu/business/about/directory/long-pham.php",
+          "excerpt": "ampus Resources Sports & Recreation Health & Wellness Spirit & Traditions Research Overview Centers & Institutes Funding Opportunities Sponsored Projects Research Engagement Research Integrity About Us Campus Map Campus Directory Parents & Families Community Leadership The Arts Campus Divisions Campus Facilities Campus Initiatives History Contact Us Current Students Alumni Athletics Calendar Careers News MyTAMU-CC Academic Calendar Campus Store Islander Dining SAIL Banner Canvas Web Mail Reset Password Faculty and Staff College of Business About the College of Business Faculty Bio Long Pham Dr.",
+          "retrievedAt": "2026-09-07T04:20:58.849Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0161-3",
+          "url": "https://www.tamucc.edu/business/about/directory/long-pham.php",
+          "excerpt": "Long Pham Associate Professor of Operations Management Office: OCNR 343 Phone: (361) 825-2663 Email:&#160; long.",
+          "retrievedAt": "2026-09-07T04:20:58.849Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0161-4",
+          "url": "https://www.tamucc.edu/business/about/directory/long-pham.php",
+          "excerpt": "user=H0aRUYkAAAAJ&hl=en&oi=ao Researcher of the Year,2024 - 2025 &#160; Education MBA.",
+          "retrievedAt": "2026-09-07T04:20:58.849Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0161-5",
+          "url": "https://www.tamucc.edu/business/about/directory/long-pham.php",
+          "excerpt": "Management (Concentration: Operations Management; Minor: Applied Statistics), New Mexico State University, 2011.",
+          "retrievedAt": "2026-09-07T04:20:58.849Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0161-6",
+          "url": "https://www.tamucc.edu/business/about/directory/long-pham.php",
+          "excerpt": "International Business, The University of Thai Chamber of Commerce, Bangkok, Thailand, 2003.",
+          "retrievedAt": "2026-09-07T04:20:58.849Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0161-7",
+          "url": "https://www.tamucc.edu/business/about/directory/long-pham.php",
+          "excerpt": "Economics (Major: Commercial Banking), National Economics University, Hanoi, Vietnam, 1998.",
+          "retrievedAt": "2026-09-07T04:20:58.849Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0161-8",
+          "url": "https://www.tamucc.edu/business/about/directory/long-pham.php",
+          "excerpt": "Business Analytics: From Data to Insights (Certificate), University of Pennsylvania, 2019.",
+          "retrievedAt": "2026-09-07T04:20:58.849Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:22:34.853Z",
+      "nextAction": "Batch 9 complete."
     },
     "vp-0162": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.wcupa.edu/business-PublicManagement/pPham.aspx"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0162-1",
+          "url": "https://www.wcupa.edu/business-PublicManagement/pPham.aspx",
+          "excerpt": "Phuoc Pham - WCU of PA Skip to Main Content of Page Request Info Visit Campus Apply Now Give Today Menu Search the WCU website Main Search Search WCU Academics Admissions Student Life Athletics Arts Faculty/Staff Alumni Give WCU Home &gt; Business & Public Management &gt; Dr.",
+          "retrievedAt": "2026-09-07T04:20:59.204Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0162-2",
+          "url": "https://www.wcupa.edu/business-PublicManagement/pPham.aspx",
+          "excerpt": "Phuoc Pham Contact Business & Public Management Business & Public Management Address: Business and Public Management Center Third Floor 50 Sharpless Street West Chester, PA 19383 Email: CBPM@wcupa.",
+          "retrievedAt": "2026-09-07T04:20:59.204Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0162-3",
+          "url": "https://www.wcupa.edu/business-PublicManagement/pPham.aspx",
+          "excerpt": "edu Phone: 610-436-2930 Staff Contact Information Home Undergraduate Graduate Current Students School of Business Centers Faculty and Staff Directory Dr.",
+          "retrievedAt": "2026-09-07T04:20:59.204Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0162-4",
+          "url": "https://www.wcupa.edu/business-PublicManagement/pPham.aspx",
+          "excerpt": "Phuoc Pham Title: Associate Professor Location: 435 BPM Center Email: PPham@wcupa.",
+          "retrievedAt": "2026-09-07T04:20:59.204Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0162-5",
+          "url": "https://www.wcupa.edu/business-PublicManagement/pPham.aspx",
+          "excerpt": "Phuoc Pham’s teaching interest are Operations Management, Supply Chain Management, Project Management and Management Information System.",
+          "retrievedAt": "2026-09-07T04:20:59.204Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0162-6",
+          "url": "https://www.wcupa.edu/business-PublicManagement/pPham.aspx",
+          "excerpt": "Before pursuing his doctoral degree, he enjoyed a 10-year career in Sales and Marketing, and Project Management.",
+          "retrievedAt": "2026-09-07T04:20:59.204Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0162-7",
+          "url": "https://www.wcupa.edu/business-PublicManagement/pPham.aspx",
+          "excerpt": "His research interests include supply chain technology, and marketing and supply chain interface.",
+          "retrievedAt": "2026-09-07T04:20:59.204Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0162-8",
+          "url": "https://www.wcupa.edu/business-PublicManagement/pPham.aspx",
+          "excerpt": "(ABD), University of Toledo Faculty Directory Go to the WCU facebook page Go to the WCU X page Go to the WCU youtube page Go to the WCU instagram page West Chester University 700 South High Street West Chester, PA 19383 610-436-1000 Campus Map WCU Alert Text Messaging WCU Weather Emergency Services Facilities News & Reports Right to Know Requests HEA Student Consumer Fraud, Waste, & Abuse PA Whistleblower Law (PDF) Non-Discrimination Statement (PDF) West Chester University 700 South High Street West Chester, PA 19383 610-436-1000 &copy; West Chester University Last Updated: Back to top of page.",
+          "retrievedAt": "2026-09-07T04:20:59.204Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:22:34.853Z",
+      "nextAction": "No publication list available on WCU profile."
     },
     "vp-0163": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://business.fau.edu/faculty-research/faculty-profiles/profile/minhnguyen.php",
         "https://sites.google.com/view/minhn/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0163-1",
+          "url": "https://business.fau.edu/faculty-research/faculty-profiles/profile/minhnguyen.php",
+          "excerpt": "Profile | FAU Business FLORIDA ATLANTIC UNIVERSITY &reg; COLLEGE OF BUSINESS QUICK LINKS Alumni Business Communications Economics Executive Education Faculty in the Media Faculty Research Finance Giving Health Administration Hospitality & Tourism Management Information Technology & Operations Management Management Programs Marketing Masters & Ph.",
+          "retrievedAt": "2026-09-07T04:20:59.760Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0163-2",
+          "url": "https://business.fau.edu/faculty-research/faculty-profiles/profile/minhnguyen.php",
+          "excerpt": "School of Accounting open menu close menu College of Business Home Page Faculty & Research Faculty & Staff Profiles Search SEARCH QUICK LINKS!",
+          "retrievedAt": "2026-09-07T04:20:59.760Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0163-3",
+          "url": "https://business.fau.edu/faculty-research/faculty-profiles/profile/minhnguyen.php",
+          "excerpt": "Alumni Business Communications Economics Executive Education Faculty in the Media Faculty Research Finance Giving Health Administration Hospitality & Tourism Management Information Technology & Operations Management Management Programs Marketing Masters & Ph.",
+          "retrievedAt": "2026-09-07T04:20:59.760Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0163-4",
+          "url": "https://business.fau.edu/faculty-research/faculty-profiles/profile/minhnguyen.php",
+          "excerpt": "School of Accounting UNDERGRADUATE BUSINESS PROGRAMS Overview Admissions Business Career Development Current Undergraduate Students Education Abroad Majors Minors & Certificates Online Bachelor&rsquo;s Programs MASTERS & PH.",
+          "retrievedAt": "2026-09-07T04:20:59.760Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0163-5",
+          "url": "https://business.fau.edu/faculty-research/faculty-profiles/profile/minhnguyen.php",
+          "excerpt": "Students Education Abroad Programs MBA Master of Accounting Master of Health Administration Master's in Business Analytics Master's in Data Science & Analytics Master of Science - Economics Master of Science - Finance Master's in IT Management Master of Science - International Business Master's in Supply Chain Management Master of Taxation Ph.",
+          "retrievedAt": "2026-09-07T04:20:59.760Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0163-6",
+          "url": "https://business.fau.edu/faculty-research/faculty-profiles/profile/minhnguyen.php",
+          "excerpt": "and Procedures Rankings and Recognitions Strategic Plan DEPARTMENTS Overview School of Accounting Business Communications Economics Finance Information Technology & Operations Management Management Programs Marketing NEWSROOM Overview Press Releases Features Faculty \"In the Media\" Business Faculty Research Newsletters Podcasts Social Media Hub Communications Portal College of Business Home Page Faculty & Research Faculty & Staff Profiles Minh Nguyen Assistant Professor Information Technology and Operations Management Department Office: Fleming Hall - Room 328 (Boca Raton) Email: minhnguyen@fau.",
+          "retrievedAt": "2026-09-07T04:20:59.760Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0163-7",
+          "url": "https://business.fau.edu/faculty-research/faculty-profiles/profile/minhnguyen.php",
+          "excerpt": "edu Phone: (561) 297-3812 Website Education PhD (2023) Economics, University of Hawaii at Manoa MS (2023) Mathematics, University of Hawaii at Manoa BS (2017) Mathematics, Vietnam National University, Ho Chi Minh City MA (2014) Business Economics, University of Toulouse 1 BA (2011) Economics, Vietnam National University, Ho Chi Minh City Research Interests Causal AI/ML, AI in Business, Science of Science Intellectual Contributions Nguyen, Minh; Jung, J.",
+          "retrievedAt": "2026-09-07T04:20:59.760Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0163-8",
+          "url": "https://business.fau.edu/faculty-research/faculty-profiles/profile/minhnguyen.php",
+          "excerpt": "Impact of cybersecurity readiness on firm performance: Evidence from conference calls, HICSS 2026 Conference Proceedings, 6167 Nguyen, Minh; Le, Le.",
+          "retrievedAt": "2026-09-07T04:20:59.760Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0163-9",
+          "url": "https://sites.google.com/view/minhn/",
+          "excerpt": "Minh Nguyen Search this site Embedded Files Skip to main content Skip to navigation Minh Nguyen Home AI & Business Seminar AI & Business Conference CIAI Lab CV Links Some pics Minh Nguyen Home AI & Business Seminar AI & Business Conference CIAI Lab CV Links Some pics More Home AI & Business Seminar AI & Business Conference CIAI Lab CV Links Some pics Minh Nguyen Assistant Professor, Florida Atlantic University I am an Assistant Professor at the Department of IT and Operations Management , Florida Atlantic University.",
+          "retrievedAt": "2026-09-07T04:21:00.029Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0163-10",
+          "url": "https://sites.google.com/view/minhn/",
+          "excerpt": "I am the founder of Viet AI & Business Academic Network , a network to connect Vietnamese scholars worldwide who are interested in doing research in the intersection of AI and business.",
+          "retrievedAt": "2026-09-07T04:21:00.029Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0163-11",
+          "url": "https://sites.google.com/view/minhn/",
+          "excerpt": "I will organize AI & Causal Inference Seminar (online) for any topics related to AI and/or causal inference in Fall 2026.",
+          "retrievedAt": "2026-09-07T04:21:00.029Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0163-12",
+          "url": "https://sites.google.com/view/minhn/",
+          "excerpt": "I was a Postdoctoral Researcher in information systems and causal machine learning at the Department of Accounting and Information Systems, Broad College of Business, Michigan State University.",
+          "retrievedAt": "2026-09-07T04:21:00.029Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0163-13",
+          "url": "https://sites.google.com/view/minhn/",
+          "excerpt": "I was very fortunate to work with Anjana Susarla ( MSU ), Rema Padman (CMU), and Xiao Liu (ASU) on a causal machine learning project using social media data.",
+          "retrievedAt": "2026-09-07T04:21:00.029Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0163-14",
+          "url": "https://sites.google.com/view/minhn/",
+          "excerpt": "I received double degrees , PhD in Economics and Master in Mathematic s, from University of Hawaii at Manoa in 2023 under the supervision of Ruben Juarez and Farzana Nasrin , respectively.",
+          "retrievedAt": "2026-09-07T04:21:00.029Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0163-15",
+          "url": "https://sites.google.com/view/minhn/",
+          "excerpt": "I develop methods/theories and do empirical research in information systems , science of science , causal inference , and AI/ML/Data Science .",
+          "retrievedAt": "2026-09-07T04:21:00.029Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0163-16",
+          "url": "https://sites.google.com/view/minhn/",
+          "excerpt": "I approach information systems and business research through the lens of economics and mathematics.",
+          "retrievedAt": "2026-09-07T04:21:00.029Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:22:34.853Z",
+      "nextAction": "Batch 9 complete."
     },
     "vp-0164": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.binghamton.edu/som/research/profile.html?id=ttran9"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0164-1",
+          "url": "https://www.binghamton.edu/som/research/profile.html?id=ttran9",
+          "excerpt": "Thi Tran - Our Faculty | School of Management | Binghamton University Skip to main content Binghamton University: The State University of New York School of Management search menu Search School of Management School of Management About Undergraduate Graduate News Student Resources Faculty/Research Bass Center for Leadership Studies Research Seminars & Workshops Faculty Support Resources Alumni Our Faculty Thi Tran Assistant Professor of Management Information Systems School of Management 607-777-2960 AA 260 ttran9@binghamton.",
+          "retrievedAt": "2026-09-07T04:21:01.266Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0164-2",
+          "url": "https://www.binghamton.edu/som/research/profile.html?id=ttran9",
+          "excerpt": "edu Biography Thi Tran is currently an assistant professor of management information systems at the Binghamton University School of Management.",
+          "retrievedAt": "2026-09-07T04:21:01.266Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0164-3",
+          "url": "https://www.binghamton.edu/som/research/profile.html?id=ttran9",
+          "excerpt": "He holds a PhD in Information Technology, specializing in cyber security research from the Department of Information Management and Cyber Security at the University of Texas at San Antonio.",
+          "retrievedAt": "2026-09-07T04:21:01.266Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0164-4",
+          "url": "https://www.binghamton.edu/som/research/profile.html?id=ttran9",
+          "excerpt": "He also obtained a Master of Science in Information Technology and Management, specializing in data analytics and IT project management from The University of Texas at Dallas.",
+          "retrievedAt": "2026-09-07T04:21:01.266Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0164-5",
+          "url": "https://www.binghamton.edu/som/research/profile.html?id=ttran9",
+          "excerpt": "Before joining the information technology field, he graduated from a Bachelor of Business Administration program at the University of Economics in Ho Chi Minh City, Vietnam, specializing in human resource management and strategic management.",
+          "retrievedAt": "2026-09-07T04:21:01.266Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0164-6",
+          "url": "https://www.binghamton.edu/som/research/profile.html?id=ttran9",
+          "excerpt": "Tran’s current research interests are confronting cyber security issues, including but not limited to investigating misinformation harms, designing misinformation handling systems, and examining social impacts of cyberattacks, data breaches and phishing emails.",
+          "retrievedAt": "2026-09-07T04:21:01.266Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0164-7",
+          "url": "https://www.binghamton.edu/som/research/profile.html?id=ttran9",
+          "excerpt": "He has published in several reputable high-impact information systems – computer science journals, including the International Journal of Information Management (IJIM), Information Systems Frontiers , AIS Transactions on Human Computer Interactions , and IEEE Transactions on Professional Communication , as well as some papers under review at leading information systems journals.",
+          "retrievedAt": "2026-09-07T04:21:01.266Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0164-8",
+          "url": "https://www.binghamton.edu/som/research/profile.html?id=ttran9",
+          "excerpt": "He has presented his studies at peer-reviewed conference proceedings publications at several information systems and cyber security conferences such as IEEE Big Data, IEEE AI for Good, International Conference on Information Systems (ICIS), American Conference on Information Systems (AMCIS), Secure Knowledge Management Conference in Artificial Intelligence Era (SKM), IDeaS Annual Conferences, or IFIP WG8.",
+          "retrievedAt": "2026-09-07T04:21:01.266Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:22:34.853Z",
+      "nextAction": "No individual publication titles listed on Binghamton profile."
     },
     "vp-0165": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://scholars.stmarys-ca.edu/en/persons/phuong-anh-nguyen/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0165-1",
+          "url": "https://scholars.stmarys-ca.edu/en/persons/phuong-anh-nguyen/",
+          "excerpt": "Mary&#39;s College of California Home Profiles Research units Research output Projects Activities Prizes Press/Media Courses Contact Expert View Scopus Profile Phuong Anh Nguyen Faculty Member School of Economics and Business Administration School of Economics and Business Administration , Business Analytics & Data Science Email ppn4 stmarys-ca edu Overview Research output (8) Activities (10) Personal profile About Phuong Anh Nguyen is Chair and Associate Professor in the Business Analytics Department in the School of Economics and Business Administration at Saint Mary’s College of California.",
+          "retrievedAt": "2026-09-07T04:21:02.166Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0165-2",
+          "url": "https://scholars.stmarys-ca.edu/en/persons/phuong-anh-nguyen/",
+          "excerpt": "Her current research interests are in Continuous Improvement, Lean Production, Quality Management, Innovation and Creativity, Global and Sustainable Operations Management, Operations in the Gig-Economy.",
+          "retrievedAt": "2026-09-07T04:21:02.166Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0165-3",
+          "url": "https://scholars.stmarys-ca.edu/en/persons/phuong-anh-nguyen/",
+          "excerpt": "Contact Information Department: School of Economics and Business Administration » Business Analytics SMC Email Address: [email&#160;protected] Contact Information: Office Galileo Hall - 305 Contact: Email: [email&#160;protected] Related documents SMC Profile Education/Academic qualification Ph.",
+          "retrievedAt": "2026-09-07T04:21:02.166Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0165-4",
+          "url": "https://scholars.stmarys-ca.edu/en/persons/phuong-anh-nguyen/",
+          "excerpt": ", University of California - Berkeley 1998 → … Research Interests Continuous Improvement Innovation and Creativity Lean Production Quality Management Global and Sustainable Operations Management Disciplines Business Research output 8 Article Research output per year Research output per year Times are changing: the case of Movado Group Nguyen, P.",
+          "retrievedAt": "2026-09-07T04:21:02.166Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0165-5",
+          "url": "https://scholars.stmarys-ca.edu/en/persons/phuong-anh-nguyen/",
+          "excerpt": "Research output : Contribution to journal › Article › peer-review Optimizing Multi-Team System Behaviors: Insights From Modelling Team Communication Kennedy, D.",
+          "retrievedAt": "2026-09-07T04:21:02.166Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0165-6",
+          "url": "https://scholars.stmarys-ca.edu/en/persons/phuong-anh-nguyen/",
+          "excerpt": "258 Research output : Contribution to journal › Article › peer-review Continuous Improvement in an Emerging Market: Findings From Vietnam Nguyen, P.",
+          "retrievedAt": "2026-09-07T04:21:02.166Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0165-7",
+          "url": "https://scholars.stmarys-ca.edu/en/persons/phuong-anh-nguyen/",
+          "excerpt": "14 Research output : Contribution to journal › Article › peer-review Continuous Improvement in Vietnam: Unique Approaches for a Unique Culture Nguyen, P.",
+          "retrievedAt": "2026-09-07T04:21:02.166Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0165-8",
+          "url": "https://scholars.stmarys-ca.edu/en/persons/phuong-anh-nguyen/",
+          "excerpt": "9 Research output : Contribution to journal › Article › peer-review Issues and Challenges in the Establishment of Continuous Improvement in Vietnam Nguyen, P.",
+          "retrievedAt": "2026-09-07T04:21:02.166Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:22:34.853Z",
+      "nextAction": "Batch 9 complete."
     },
     "vp-0166": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://business.purdue.edu/faculty/home.php?username=nguye161"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0166-1",
+          "url": "https://business.purdue.edu/faculty/home.php?username=nguye161",
+          "excerpt": "u About About Us Administrative Offices Daniels School in Indianapolis General Information Meet our Dean School History Strategic Pillars Community Alumni Board Daniels Fellows School Directory Contacts Contact Information News & Events Daniels Insights Events News Rankings Working at the Business School Student Employment Other Purdue Employment Opportunities Student Experience Undergraduate Blog Case Competitions Clubs Academic Advising Honors Program Learning Communities Student Experience Study Abroad Visit Graduate Specialized Master's Online Master's Graduate Programs Blog PHD Why Purdue?",
+          "retrievedAt": "2026-09-07T04:21:04.793Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0166-2",
+          "url": "https://business.purdue.edu/faculty/home.php?username=nguye161",
+          "excerpt": "ster Honors Dean's Office Development Office Faculty & Staff Directory Marketing and Communications Purdue IT School Awards Alumni Alumni Board Purdue Business Journal Alumni Events Get Involved Volunteer Your Time Business Career Services For Undergraduate Students For Masters Students For Employers Contact Us Office of Business Partnerships Collaborate with Us Share Your Expertise Consulting Recruit Talent Upskill Your Team Centers & Initiatives Academic Centers & Libraries BOP Brock-Wilson Center Business Military Association Center for Business Communication Cornerstone for Business Dean V.",
+          "retrievedAt": "2026-09-07T04:21:04.793Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0166-3",
+          "url": "https://business.purdue.edu/faculty/home.php?username=nguye161",
+          "excerpt": "White Real Estate Finance Program Experiential Learning Larsen Leaders Academy Purdue Finance Workshop Roland G.",
+          "retrievedAt": "2026-09-07T04:21:04.793Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0166-4",
+          "url": "https://business.purdue.edu/faculty/home.php?username=nguye161",
+          "excerpt": "Experiments and Public Policy Center for Inflation and Price Research Center for Working Well Data Science Center for Decision Making Dauch Center for the Management of Manufacturing Enterprises Global Supply Chain Management Initiative Hayes Leadership Coaching Institute Krenicki Center for Business Analytics & Machine Learning Purdue Center for Economic Education Purdue Fintech Center Purdue University Research Center in Economics Susan Bulkeley Butler Center Vernon Smith Experimental Economics Laboratory Daniels School Faculty Thanh Nguyen Department Head, Quantitative Methods Education Ph.",
+          "retrievedAt": "2026-09-07T04:21:04.793Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0166-5",
+          "url": "https://business.purdue.edu/faculty/home.php?username=nguye161",
+          "excerpt": "S, Eotvos Lorand University, Budapest, Hungary Bio Publications CV Research Media Thanh Nguyen is the Quantitative Methods Department Head at the Daniels School of Business, Purdue University.",
+          "retrievedAt": "2026-09-07T04:21:04.793Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0166-6",
+          "url": "https://business.purdue.edu/faculty/home.php?username=nguye161",
+          "excerpt": "from Cornell and a bachelor&rsquo;s degree from Eotvos Lorand University, Hungary.",
+          "retrievedAt": "2026-09-07T04:21:04.793Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0166-7",
+          "url": "https://business.purdue.edu/faculty/home.php?username=nguye161",
+          "excerpt": "His research spans the intersection of economics, management science, and computer science.",
+          "retrievedAt": "2026-09-07T04:21:04.793Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0166-8",
+          "url": "https://business.purdue.edu/faculty/home.php?username=nguye161",
+          "excerpt": "Thanh Nguyen is particularly interested in Market Design, Network Economics, Computational Game Theory, and Combinatorial Optimization.",
+          "retrievedAt": "2026-09-07T04:21:04.793Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:22:34.853Z",
+      "nextAction": "Batch 9 complete."
     },
     "vp-0167": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://catalog.csun.edu/academics/acct/faculty/nguyen-dat-dao/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0167-1",
+          "url": "https://catalog.csun.edu/academics/acct/faculty/nguyen-dat-dao/",
+          "excerpt": "Nguyen, Dat-Dao Skip Nav Accessibility Calendar Directory A to Z Webmail Search Catalog: Search Advanced Search Home Majors Minors Policies &#038; Procedures General Education Graduate Studies Faculty Courses Faculty and Administrators Accounting Overview Programs Faculty Courses Emeritus Faculty: Nguyen, Dat-Dao Home / David Nazarian College of Business and Economics / Accounting / Faculty / Nguyen, Dat-Dao (2000) Professor Emeritus of Accounting and Information Systems.",
+          "retrievedAt": "2026-09-07T04:21:05.250Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0167-2",
+          "url": "https://catalog.csun.edu/academics/acct/faculty/nguyen-dat-dao/",
+          "excerpt": "Contact information for Dat-Dao Nguyen can be found using the Faculty Application .",
+          "retrievedAt": "2026-09-07T04:21:05.250Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0167-3",
+          "url": "https://catalog.csun.edu/academics/acct/faculty/nguyen-dat-dao/",
+          "excerpt": "Top View Catalog Archives, Degree Road Maps and external resources here: Resources California State University, Northridge 18111 Nordhoff Street, Northridge, CA 91330 Phone: (818) 677-1200 | Contact Us www.",
+          "retrievedAt": "2026-09-07T04:21:05.250Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:22:34.853Z",
+      "nextAction": "CSUN catalog lists emeritus status without bio or publications."
     },
     "vp-0168": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://greatvalley.psu.edu/person/thien-dong",
         "https://www.mythien.com/"
       ],
-      "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "evidence": [
+        {
+          "id": "vp-0168-1",
+          "url": "https://www.mythien.com/",
+          "excerpt": "Home Search this site Embedded Files Skip to main content Skip to navigation Home Research Teaching CV Let&#39;s connect Home Research Teaching CV Let&#39;s connect More Home Research Teaching CV Let&#39;s connect Hello!",
+          "retrievedAt": "2026-09-07T04:21:05.881Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0168-2",
+          "url": "https://www.mythien.com/",
+          "excerpt": "My name is Thien Dong, and I&#39;m an Assistant Professor of Management & Organization in the Management Division at the School of Graduate Professional Studies, Pennsylvania State University.",
+          "retrievedAt": "2026-09-07T04:21:05.881Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0168-3",
+          "url": "https://www.mythien.com/",
+          "excerpt": "I focus on entrepreneurial finance, technology commercialization, artificial intelligence, and strategic partnerships.",
+          "retrievedAt": "2026-09-07T04:21:05.881Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0168-4",
+          "url": "https://www.mythien.com/",
+          "excerpt": "I employ a mix of quantitative methods and machine learning techniques to build novel datasets that help answer a wide range of questions.",
+          "retrievedAt": "2026-09-07T04:21:05.881Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0168-5",
+          "url": "https://www.mythien.com/",
+          "excerpt": "Originally from Saigon, I earned my undergraduate degree in International Business and Economics.",
+          "retrievedAt": "2026-09-07T04:21:05.881Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0168-6",
+          "url": "https://www.mythien.com/",
+          "excerpt": "My professional journey spans education, pharmacy automation, fashion sourcing, and consulting (deals valuation).",
+          "retrievedAt": "2026-09-07T04:21:05.881Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0168-7",
+          "url": "https://www.mythien.com/",
+          "excerpt": "I completed a research Master’s program at the University of Amsterdam and Vrije Universiteit Amsterdam, then earned my PhD in Management (Strategy & Innovation) from the Scheller College of Business at Georgia Institute of Technology.",
+          "retrievedAt": "2026-09-07T04:21:05.881Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0168-8",
+          "url": "https://www.mythien.com/",
+          "excerpt": "I like pretty much all types of cardio, with swimming and rope jumping being my absolute favorites.",
+          "retrievedAt": "2026-09-07T04:21:05.881Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
+      "errors": [
+        "https://greatvalley.psu.edu/person/thien-dong: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T04:22:34.853Z",
+      "nextAction": "Batch 9 complete."
     },
     "vp-0169": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://scranton.psu.edu/person/emily-loan-pham"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://scranton.psu.edu/person/emily-loan-pham: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T04:22:34.853Z",
+      "nextAction": "Batch 9 complete."
     },
     "vp-0170": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.metrostate.edu/about/directory/loi-nguyen"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.metrostate.edu/about/directory/loi-nguyen: fetch failed"
+      ],
+      "updatedAt": "2026-09-07T04:22:34.853Z",
+      "nextAction": "Retry endpoint when available."
     },
     "vp-0171": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://researchwith.montclair.edu/en/persons/huy-nguyen/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0171-1",
+          "url": "https://researchwith.montclair.edu/en/persons/huy-nguyen/",
+          "excerpt": "Huy Nguyen - Montclair State University Skip to main navigation Skip to search Skip to main content Montclair State University Home Help & FAQ Link opens in a new tab Search content at Montclair State University Home Profiles Research units Core Facilities Grants/Projects Research output Prizes Press/Media View Scopus Profile Huy Nguyen Management Email nguyenh mail.",
+          "retrievedAt": "2026-09-07T04:21:07.208Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0171-2",
+          "url": "https://researchwith.montclair.edu/en/persons/huy-nguyen/",
+          "excerpt": "montclair edu h-index 39 Citations 4 h-index Calculated based on number of publications stored in Pure and citations from Scopus 2015 2026 Research activity per year Overview Fingerprint Network Research output (10) Press/Media (1) Similar Profiles (4) Personal profile Expertise related to UN Sustainable Development Goals In 2015, UN member states agreed to 17 global Sustainable Development Goals (SDGs) to end poverty, protect the planet and ensure prosperity for all.",
+          "retrievedAt": "2026-09-07T04:21:07.208Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0171-3",
+          "url": "https://researchwith.montclair.edu/en/persons/huy-nguyen/",
+          "excerpt": "This person’s work contributes towards the following SDG(s): SDG 8 Decent Work and Economic Growth SDG 9 Industry, Innovation, and Infrastructure Fingerprint Dive into the research topics where Huy Nguyen is active.",
+          "retrievedAt": "2026-09-07T04:21:07.208Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0171-4",
+          "url": "https://researchwith.montclair.edu/en/persons/huy-nguyen/",
+          "excerpt": "4 Similar Profiles Mergers and Acquisitions Keyphrases 100% Organizational Level Keyphrases 84% Strategy Course Keyphrases 75% Ebb-and-flow Keyphrases 75% Market Reaction Keyphrases 75% Foreign Market Entry Keyphrases 75% Firm Reputation Keyphrases 75% Social Capital Perspective Keyphrases 75% View full fingerprint Collaborations and top research areas from the last five years Recent external collaboration on country/territory level.",
+          "retrievedAt": "2026-09-07T04:21:07.208Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0171-5",
+          "url": "https://researchwith.montclair.edu/en/persons/huy-nguyen/",
+          "excerpt": "Dive into details by clicking on the dots or Select a country/territory from the list Dive into details Select a country/territory to view shared publications and projects Close Select a country/territory from the list Explore network further Research output Research output per year 2015 2015 2018 2020 2021 2022 2024 2025 2026 2026 7 Article 3 Conference article Research output per year Research output per year The Ebbs and Flows of Reputation as Meaningful Signals: Market Reactions to Firms’ Reputation Instability Nguyen, H.",
+          "retrievedAt": "2026-09-07T04:21:07.208Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0171-6",
+          "url": "https://researchwith.montclair.edu/en/persons/huy-nguyen/",
+          "excerpt": "Research output : Contribution to journal › Article › peer-review Open Access Firm Reputation 100% Market Reaction 100% Ebb-and-flow 100% Theoretical Framework 100% Boundary Condition 100% 1 Link opens in a new tab Scopus citations ARE SHE-E-OS MORE RISK AVERSE?",
+          "retrievedAt": "2026-09-07T04:21:07.208Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0171-7",
+          "url": "https://researchwith.montclair.edu/en/persons/huy-nguyen/",
+          "excerpt": "2025 , 1 Research output : Contribution to journal › Conference article › peer-review Risk-averse 100% CEO Gender 100% Managerial Risk-taking 100% Risk-Taking 100% Risk Behavior 100% Not the usual project management: a better way to prepare for major disruptions Wu, T.",
+          "retrievedAt": "2026-09-07T04:21:07.208Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0171-8",
+          "url": "https://researchwith.montclair.edu/en/persons/huy-nguyen/",
+          "excerpt": "Research output : Contribution to journal › Article › peer-review Project Management 100% Major Disturbance 100% Project Portfolio Management 100% Daily Operation 28% Unpredictable Future 28% 4 Link opens in a new tab Scopus citations The social media industry: where is it heading?",
+          "retrievedAt": "2026-09-07T04:21:07.208Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:22:34.853Z",
+      "nextAction": "Batch 9 complete."
     },
     "vp-0172": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://shidler.hawaii.edu/mir/directory/hannah-hanh-d-nguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0172-1",
+          "url": "https://shidler.hawaii.edu/mir/directory/hannah-hanh-d-nguyen",
+          "excerpt": "Nguyen | The Shidler College of Business Skip to main content The Shidler College of Business Menu Close MIR: Menu: Mobile (Types) About News Events Academics BBA in Entrepreneurship BBA in Human Resource Management BBA in International Business BBA in Management Master of Human Resource Management Course Catalog People Roberta Baird Dharm Bhawuk Tian Chen Caroline Fry Sonia Ghumman Marjan Houshmand Kiyohiko Ito Tamar Kreps Natalia Lagmay Kimberly Miyashiro Hannah-Hanh D.",
+          "retrievedAt": "2026-09-07T04:21:08.717Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0172-2",
+          "url": "https://shidler.hawaii.edu/mir/directory/hannah-hanh-d-nguyen",
+          "excerpt": "Nguyen Ronald Nicholas Milomir Ognjanovic Carol Parker Robert Robinson Wonbin Sohn Masa Yamaguchi Dalee Yoon Stephen Zurcher Contact University of Hawaiʻi at Mānoa News & Events Giving Contact [search] --> [search] University of Hawaiʻi at Mānoa Shidler College of Business MIR: Menu (Types) About Academics People Contact Management and Industrial Relations Hannah-Hanh D.",
+          "retrievedAt": "2026-09-07T04:21:08.717Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0172-3",
+          "url": "https://shidler.hawaii.edu/mir/directory/hannah-hanh-d-nguyen",
+          "excerpt": "Nguyen Breadcrumb The Shidler College of Business Management and Industrial Relations People Hannah-Hanh D.",
+          "retrievedAt": "2026-09-07T04:21:08.717Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0172-4",
+          "url": "https://shidler.hawaii.edu/mir/directory/hannah-hanh-d-nguyen",
+          "excerpt": ", Psychology, Orange Coast College, 1997 Courses Taught HRM 351 Human Resource Management (3) HRM 354 Organizational Change and Effectiveness (3) HRM 673 Advanced Organizational Behavior (3) HRM 671 Human Resource Management (3) BUS 626 Leadership and Organizational Behavior (3) MGT 650 Management Topics (3) MGT 660 Negotiation (3) MGT 399 Directed Reading and Research (V) Selected Publications Referred Journal Articles Derous, E.",
+          "retrievedAt": "2026-09-07T04:21:08.717Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0172-5",
+          "url": "https://shidler.hawaii.edu/mir/directory/hannah-hanh-d-nguyen",
+          "excerpt": "An updated examination of gender differences in sexual harassment perception: A meta-analysis and a survey study.",
+          "retrievedAt": "2026-09-07T04:21:08.717Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0172-6",
+          "url": "https://shidler.hawaii.edu/mir/directory/hannah-hanh-d-nguyen",
+          "excerpt": "Reducing ethnic discrimination in resume-screening: a test of two training interventions.",
+          "retrievedAt": "2026-09-07T04:21:08.717Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0172-7",
+          "url": "https://shidler.hawaii.edu/mir/directory/hannah-hanh-d-nguyen",
+          "excerpt": "behaving as such : A multi-study project on Chinese organizational identification and Chinese employees’ identification profiles.",
+          "retrievedAt": "2026-09-07T04:21:08.717Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0172-8",
+          "url": "https://shidler.hawaii.edu/mir/directory/hannah-hanh-d-nguyen",
+          "excerpt": "Application of the extended Health Control Belief model to predict Hepatitis A and B vaccinations.",
+          "retrievedAt": "2026-09-07T04:21:08.717Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:22:34.853Z",
+      "nextAction": "Batch 9 complete."
     },
     "vp-0173": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.fgcu.edu/school-of-entrepreneurship/about/dksoe-directory"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0173-1",
+          "url": "https://www.fgcu.edu/school-of-entrepreneurship/about/dksoe-directory",
+          "excerpt": "Faculty and Staff Skip to the content FGCU Privacy Policy This website stores cookies on your computer to improve your browsing experience.",
+          "retrievedAt": "2026-09-07T04:21:11.426Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0173-2",
+          "url": "https://www.fgcu.edu/school-of-entrepreneurship/about/dksoe-directory",
+          "excerpt": "Accept Close Apply Directory MyFGCU About About Explore what makes our campus unique and how to visit.",
+          "retrievedAt": "2026-09-07T04:21:11.426Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0173-3",
+          "url": "https://www.fgcu.edu/school-of-entrepreneurship/about/dksoe-directory",
+          "excerpt": "Meet our leadership team and learn about our history, mission, values, accreditations, and policies.",
+          "retrievedAt": "2026-09-07T04:21:11.426Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0173-4",
+          "url": "https://www.fgcu.edu/school-of-entrepreneurship/about/dksoe-directory",
+          "excerpt": "Visit About At a Glance Accreditation Campus Map/Directions Contact Us Fast Facts FGCU Jobs Visit FGCU Institution Advancement / Foundation Faculty Senate EO/VET/Title IX General Counsel Government Relations Office of Compliance and Ethics Support FGCU Engagement Civic Engagement Community Engagement Eagle Advocacy Environment & Sustainability Expert Directory Speakers Bureau Academics Academics Start your path to an undergraduate or graduate degree by exploring programs taught by world-class faculty.",
+          "retrievedAt": "2026-09-07T04:21:11.426Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0173-5",
+          "url": "https://www.fgcu.edu/school-of-entrepreneurship/about/dksoe-directory",
+          "excerpt": "lleges and Schools Degree Completion Digital Badges FGCU Online General Education Graduate Studies International Services Internships & Co-op Programs Innovative Education & Partnerships Study Abroad Academic Resources Academic Calendar Academic Catalog Course Descriptions Course Listing/Schedule Degree and Programs Library Programs Guide Records & Registration Research & Sponsored Programs Student Research/Learning Testing & Assessment The Writing Lab Colleges College of Arts & Sciences College of Education Honors College Lutgert College of Business Marieb College of Health & Human Services U.",
+          "retrievedAt": "2026-09-07T04:21:11.426Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0173-6",
+          "url": "https://www.fgcu.edu/school-of-entrepreneurship/about/dksoe-directory",
+          "excerpt": "Whitaker College of Engineering Bower School of Music & the Arts Daveler & Kauanui School of Entrepreneurship School of Nursing School of Resort & Hospitality Management The Water School Admissions & Aid Admissions & Aid Apply for undergraduate or graduate admission and explore financial aid options to support your goals.",
+          "retrievedAt": "2026-09-07T04:21:11.426Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0173-7",
+          "url": "https://www.fgcu.edu/school-of-entrepreneurship/about/dksoe-directory",
+          "excerpt": "Undergraduate Admissions - Undergraduate Admitted Undergraduates Begin Undergraduate Application Explore Majors Freshman/New Student International Undergraduates Non-Degree Students Returning Students Transfer Student Graduate Admissions - Graduate Begin Graduate Application Graduate Programs Enrollment Colleges and Schools Dual Enrollment Financial Aid & Scholarships Enrollment Services Center Net Price Calculator Programs Guide/List Visit FGCU Virtual Tour Student Life Student Life Discover state-of-the-art residence halls, dining, student organizations, health services, recreation, and more.",
+          "retrievedAt": "2026-09-07T04:21:11.426Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0173-8",
+          "url": "https://www.fgcu.edu/school-of-entrepreneurship/about/dksoe-directory",
+          "excerpt": "tives Career Services Counseling and Psychological Services Enrollment Services Center First Year Experience Health and Safety Service-Learning Student Health Services University Police Department Campus Life Athletics Bookstore Campus Life Dean of Students Office Dining Services Fraternity/Sorority Life Getting Around Housing & Residence Life Organizations & Student Involvement Student Government The Leadership Experience University Recreation & Wellness Community Community FGCU is actively engaged with Southwest Florida through cultural activities, educational programs and exciting athletics.",
+          "retrievedAt": "2026-09-07T04:21:11.426Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:22:34.853Z",
+      "nextAction": "FGCU directory contains name and email only."
     },
     "vp-0174": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.seattleu.edu/directory/profiles/linda-nguyen.php"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0174-1",
+          "url": "https://www.seattleu.edu/directory/profiles/linda-nguyen.php",
+          "excerpt": "Library Academic Calendar Academic Resources Life at Seattle U Our Campus Housing & Dining Get Involved Pep Band and Spirit Faith, Spirituality and Meaning University Recreation Graduate Student Life International Student Community Public Safety Health & Wellness Who We Are The Seattle U Impact Mission, Vision & Values Jesuit Education A Diverse & Inclusive Community Global Engagement Sustainability and Climate Action Leadership Move to Semesters SU 23rd President Contact Us Search Linda Nguyen — Faculty ; Assistant Professor ; Department of Management , Albers School of Business & Economics .",
+          "retrievedAt": "2026-09-07T04:21:11.669Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0174-2",
+          "url": "https://www.seattleu.edu/directory/profiles/linda-nguyen.php",
+          "excerpt": "Profile Type: Faculty Assistant Professor, Department of Management Faculty & Staff Directory Linda Nguyen Contact Information lnguyen34@seattleu.",
+          "retrievedAt": "2026-09-07T04:21:11.669Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0174-3",
+          "url": "https://www.seattleu.edu/directory/profiles/linda-nguyen.php",
+          "excerpt": "edu Pronouns she/her/hers Office/Department Department of Management School/College Albers School of Business & Economics Campus First Hill Professional Information CV Linda Nguyen is an Assistant Professor in the Department of Management and specializes in DEI research.",
+          "retrievedAt": "2026-09-07T04:21:11.669Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0174-4",
+          "url": "https://www.seattleu.edu/directory/profiles/linda-nguyen.php",
+          "excerpt": "Compare Biography Linda Nguyen is an Assistant Professor in the Department of Management and specializes in DEI research.",
+          "retrievedAt": "2026-09-07T04:21:11.669Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0174-5",
+          "url": "https://www.seattleu.edu/directory/profiles/linda-nguyen.php",
+          "excerpt": "Her work focuses broadly on perceptions of diversity, social inequities in the workplace, and challenging misconceptions in diversity rhetoric.",
+          "retrievedAt": "2026-09-07T04:21:11.669Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:22:34.853Z",
+      "nextAction": "No publication list available on Seattle U profile."
     },
     "vp-0175": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.maryville.edu/bu/faculty-listing",
         "https://sites.google.com/site/sangtran2906"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0175-1",
+          "url": "https://www.maryville.edu/bu/faculty-listing",
+          "excerpt": "School of Business &#8211; Faculty and Staff --> Accessibility Statement --> About Programs Admissions Athletics Student Experience Alumni Giving Online Menu About Programs Admissions Athletics Student Experience Alumni Giving Online Current Student Login Calendar of Events Search &#215; What are you looking for?",
+          "retrievedAt": "2026-09-07T04:21:12.010Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0175-2",
+          "url": "https://www.maryville.edu/bu/faculty-listing",
+          "excerpt": "Schedule A Visit How to Apply Request Information Find My Major School of Business &#8211; Faculty and Staff Robert Barrett Instructor - School of Business 2209 Phone: 314.",
+          "retrievedAt": "2026-09-07T04:21:12.010Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0175-3",
+          "url": "https://www.maryville.edu/bu/faculty-listing",
+          "excerpt": "edu Antoinette Boyd Assistant Professor of Business Administration Anheuser-Busch Hall 2208 Phone: 314.",
+          "retrievedAt": "2026-09-07T04:21:12.010Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0175-4",
+          "url": "https://www.maryville.edu/bu/faculty-listing",
+          "excerpt": "edu Timothy Brown Instructor of Software Development Anheuser-Busch Hall 2222 Phone: 314.",
+          "retrievedAt": "2026-09-07T04:21:12.010Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0175-5",
+          "url": "https://www.maryville.edu/bu/faculty-listing",
+          "excerpt": "edu Elizabeth Cudney Professor of Data Analytics Anheuser-Busch Hall 2218 Phone: 314.",
+          "retrievedAt": "2026-09-07T04:21:12.010Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0175-6",
+          "url": "https://www.maryville.edu/bu/faculty-listing",
+          "excerpt": "edu Phyllis Davis Instructor - School of Business Anheuser-Busch Hall 2207 Phone: 314.",
+          "retrievedAt": "2026-09-07T04:21:12.010Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0175-7",
+          "url": "https://www.maryville.edu/bu/faculty-listing",
+          "excerpt": "edu Lawrence Dorr Instructor of Finance and Accounting Anheuser-Busch Hall 2219 Phone: 314.",
+          "retrievedAt": "2026-09-07T04:21:12.010Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0175-8",
+          "url": "https://www.maryville.edu/bu/faculty-listing",
+          "excerpt": "edu Brian Gant Assistant Professor of Cybersecurity/Program Coordinator - Undergraduate Cybersecurity/Interim Assistant Dean Anheuser-Busch Hall 2210 Phone: 314.",
+          "retrievedAt": "2026-09-07T04:21:12.010Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0175-9",
+          "url": "https://sites.google.com/site/sangtran2906",
+          "excerpt": "sangtran Search this site Embedded Files Skip to main content Skip to navigation sangtran Sang Dinh Tran, DBA, CPA Assistant Professor of Accounting John E.",
+          "retrievedAt": "2026-09-07T04:21:12.347Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0175-10",
+          "url": "https://sites.google.com/site/sangtran2906",
+          "excerpt": "Simon School of Business 221 2 Anheuser Busch Hall Maryville University 650 Maryville University Dr St Louis, MO 63141 Phone: 314-529-6371 Email: s tran3@maryville.",
+          "retrievedAt": "2026-09-07T04:21:12.347Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0175-11",
+          "url": "https://sites.google.com/site/sangtran2906",
+          "excerpt": "Tran is interested in teaching accounting researches, and also audit quality, factors affect audit quality, the effects of IT on audit quality, the relationship between financial ratio and transfer pricing.",
+          "retrievedAt": "2026-09-07T04:21:12.347Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0175-12",
+          "url": "https://sites.google.com/site/sangtran2906",
+          "excerpt": "Education History Argosy University · Sarasota Campus | Doctor of Business Administration in Accounting (2010) National Economics University · Hanoi, Vietnam | MBA in Management (2002) National Economics University · Hanoi, Vietnam | B.",
+          "retrievedAt": "2026-09-07T04:21:12.347Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0175-13",
+          "url": "https://sites.google.com/site/sangtran2906",
+          "excerpt": "C207); · Mathematics for finance (BUS209) · Individual Taxation (ACC210) · Government and Non-profit Accounting (ACC303) · Corporate & Partnership Taxation (ACC405) ® Taught online courses: · Accounting Information System (ACC207); ® Prepared online courses: · Accounting information system (ACC207) · Individual Taxation (ACC210) · Government and Non profit Accounting (ACC303) · Corporate & partnership Taxation (ACC405) ® Services: Advising students, member of Gen Education committee, program review committee, and member of search committee for assistant professor of management position in 2017.",
+          "retrievedAt": "2026-09-07T04:21:12.347Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0175-14",
+          "url": "https://sites.google.com/site/sangtran2906",
+          "excerpt": "nternational and domestic projects including bidding, express interest, and proposal ® Represent VITIS to set up agreements with domestic and foreigner partners ® Collaborate with domestic and foreigner parties for training and research ® Taught intermediate accounting, financial accounting, and managerial accounting Vice Dean of Advanced Training Faculty (09/2011 - 04/2012) ® Researched demand, set up, and reviewed training programs such as a training program for officers of market control department, or a training program for representative officers of ministry of trade and industry overseas.",
+          "retrievedAt": "2026-09-07T04:21:12.347Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0175-15",
+          "url": "https://sites.google.com/site/sangtran2906",
+          "excerpt": "® Taught intermediate accounting, financial accounting, managerial accounting, corporate finance, financial management, and accounting in practice.",
+          "retrievedAt": "2026-09-07T04:21:12.347Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0175-16",
+          "url": "https://sites.google.com/site/sangtran2906",
+          "excerpt": "® Advised and mentoring students, managed internship, completed other professional activities Lecturer (12/1998 – 09/2005) ® Taught accounting principles ® Conducted classes on accounting, financial management, marketing and business administration.",
+          "retrievedAt": "2026-09-07T04:21:12.347Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:22:34.853Z",
+      "nextAction": "No publication list available on Maryville profile or Google Site."
     },
     "vp-0176": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.susqu.edu/live/profiles/3271-viet-tuan-pham",
         "https://sites.google.com/view/vietpham/home"
       ],
-      "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "evidence": [
+        {
+          "id": "vp-0176-1",
+          "url": "https://sites.google.com/view/vietpham/home",
+          "excerpt": "Pham Search this site Embedded Files Skip to main content Skip to navigation Viet T.",
+          "retrievedAt": "2026-09-07T04:21:14.820Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0176-2",
+          "url": "https://sites.google.com/view/vietpham/home",
+          "excerpt": "I am an Assistant Professor of Accounting at the Sigmund Weis School of Business, Susquehanna University.",
+          "retrievedAt": "2026-09-07T04:21:14.821Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0176-3",
+          "url": "https://sites.google.com/view/vietpham/home",
+          "excerpt": "My primary research interests are in auditing, corporate disclosure, and corporate finance.",
+          "retrievedAt": "2026-09-07T04:21:14.821Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0176-4",
+          "url": "https://sites.google.com/view/vietpham/home",
+          "excerpt": "My work has appeared in journals such as the Journal of Corporate Finance , Journal of Business Ethics , the British Accounting Review , and The Financial Review , among others.",
+          "retrievedAt": "2026-09-07T04:21:14.821Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
+      "errors": [
+        "https://www.susqu.edu/live/profiles/3271-viet-tuan-pham: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T04:22:34.853Z",
+      "nextAction": "No individual publication titles listed on personal Google Site."
     },
     "vp-0177": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.chicagobooth.edu/faculty/directory/l/anthony-le",
         "https://sites.google.com/view/leantho/home"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0177-1",
+          "url": "https://www.chicagobooth.edu/faculty/directory/l/anthony-le",
+          "excerpt": "niversity of Chicago Booth School of Business Skip to main content The University of Chicago Booth School of Business Why Booth Degree Programs Executive Education Faculty & Insights Alumni Recruiting Events Admissions Home --> Faculty and Insights Faculty Directory Emeriti Faculty Academic Areas Nobel Laureates Past Faculty Awards Apply to Faculty Positions Research Workshops Research Centers Chicago Booth Review Booth Academic Journals Research Staff Program Faculty Directory Anthony Le Faculty and Insights Faculty Directory Anthony Le Anthony Le Assistant Professor of Accounting and James S.",
+          "retrievedAt": "2026-09-07T04:21:15.359Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0177-2",
+          "url": "https://www.chicagobooth.edu/faculty/directory/l/anthony-le",
+          "excerpt": "Kemper Faculty Scholar Biography Academic Areas In The News Social Media Course Schedule Executive Education Schedule Chicago Booth Review Additional Information Personal Website Biography Anthony Le’s research interests lie at the intersection of accounting and labor economics.",
+          "retrievedAt": "2026-09-07T04:21:15.359Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0177-3",
+          "url": "https://www.chicagobooth.edu/faculty/directory/l/anthony-le",
+          "excerpt": "His current research addresses topics such as the impact of accounting regulation and standard setting on the accountant labor market, firms' human capital disclosures, labor unions' financial reporting mandates, and gender representation in corporate governance.",
+          "retrievedAt": "2026-09-07T04:21:15.359Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0177-4",
+          "url": "https://www.chicagobooth.edu/faculty/directory/l/anthony-le",
+          "excerpt": "He also holds an MA in economics and a BComm in commerce and economics both from the University of Toronto.",
+          "retrievedAt": "2026-09-07T04:21:15.359Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0177-5",
+          "url": "https://www.chicagobooth.edu/faculty/directory/l/anthony-le",
+          "excerpt": "orkshop in Accounting Research 2027 (Spring) The University of Chicago Booth School of Business Explore Why Booth Degree Programs Executive Education Faculty & Insights Alumni Events Recruiting Admissions About Careers at Booth Media Relations Chicago Booth Magazine Chicago Booth Review Request Information Apply Give Other Offerings Undergraduates Taking Classes All Other Offerings Global Locations Harper Center Gleacher Center Executive MBA Chicago Executive MBA London Executive MBA Hong Kong Executive Education Global Locations Follow The University of Chicago Booth School of Business 5807 S.",
+          "retrievedAt": "2026-09-07T04:21:15.359Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0177-6",
+          "url": "https://sites.google.com/view/leantho/home",
+          "excerpt": "Home Search this site Embedded Files Skip to main content Skip to navigation Home Research Teaching CV Personal Home Research Teaching CV Personal More Home Research Teaching CV Personal Anthony Le Welcome!",
+          "retrievedAt": "2026-09-07T04:21:15.482Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0177-7",
+          "url": "https://sites.google.com/view/leantho/home",
+          "excerpt": "I am an Assistant Professor of Accounting at the University of Chicago, Booth School of Business.",
+          "retrievedAt": "2026-09-07T04:21:15.482Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0177-8",
+          "url": "https://sites.google.com/view/leantho/home",
+          "excerpt": "My research interests lie at the intersection of accounting and labor economics.",
+          "retrievedAt": "2026-09-07T04:21:15.482Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0177-9",
+          "url": "https://sites.google.com/view/leantho/home",
+          "excerpt": "⁺ My current research addresses topics related to (i) the impact of accounting regulation and standard -setting on the labor market and (ii) firms&#39; labor-related disclosures.",
+          "retrievedAt": "2026-09-07T04:21:15.482Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0177-10",
+          "url": "https://sites.google.com/view/leantho/home",
+          "excerpt": "edu Other: LinkedIn , SSRN , Google Scholar , UChicago Page ⁺ Note : For a discussion of the inherent connection between accounting and economics, see this 1909 Journal of Accountancy piece .",
+          "retrievedAt": "2026-09-07T04:21:15.482Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:22:34.853Z",
+      "nextAction": "Batch 9 complete."
     },
     "vp-0178": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://cas.uoregon.edu/directory/political-science/all/thvu"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0178-1",
+          "url": "https://cas.uoregon.edu/directory/political-science/all/thvu",
+          "excerpt": "Academic Structure Overview Humanities Natural Sciences School of Global Studies and Languages Social Sciences Give to CAS Give to CAS Overview CAS Advisory Board Territorial Acknowledgment Events CAS Strategy CAS Strategy Overview Vision and Mission Values Strategic Priorities Strategy Development Steering Committee CAS Budget Advisory Committee CAS Awards CAS Awards Overview CAS Recognition Awards Recent CAS Awardees Previous CAS Recognition Recipients Take Action One Stop Apply Visit Give College of Arts and Sciences Political Science Tuong Vu Professor Political Science Email: thvu@uoregon.",
+          "retrievedAt": "2026-09-07T04:21:16.435Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0178-2",
+          "url": "https://cas.uoregon.edu/directory/political-science/all/thvu",
+          "excerpt": "edu Phone: 541-346-4866 Office: 918 PLC, 1284 University of Oregon, Eugene OR 97403 Office Hours: Spring 2026: Thursday 11:00-2:00 Research Interests: Comparative Politics, Ideology, Revolution, Communism, Nationalism, East and Southeast Asia Website: https://polisci.",
+          "retrievedAt": "2026-09-07T04:21:16.435Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0178-3",
+          "url": "https://cas.uoregon.edu/directory/political-science/all/thvu",
+          "excerpt": "edu/profile/thvu/ Download CV Statement Professor Tuong Vu has taught at the University of Oregon since 2008.",
+          "retrievedAt": "2026-09-07T04:21:16.435Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0178-4",
+          "url": "https://cas.uoregon.edu/directory/political-science/all/thvu",
+          "excerpt": "He has held visiting appointments at Seoul National University, Princeton University and the National University of Singapore, and taught at the Naval Postgraduate School.",
+          "retrievedAt": "2026-09-07T04:21:16.435Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0178-5",
+          "url": "https://cas.uoregon.edu/directory/political-science/all/thvu",
+          "excerpt": "Vu is the founding director of the US-Vietnam Research Center based at the Global Studies Institute, University of Oregon.",
+          "retrievedAt": "2026-09-07T04:21:16.435Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0178-6",
+          "url": "https://cas.uoregon.edu/directory/political-science/all/thvu",
+          "excerpt": "His research has focused broadly on the comparative politics of state formation, development, and revolutions in East and Southeast Asia, together with studies of Vietnamese nationalism, republicanism, and communism, and Vietnamese American history.",
+          "retrievedAt": "2026-09-07T04:21:16.435Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0178-7",
+          "url": "https://cas.uoregon.edu/directory/political-science/all/thvu",
+          "excerpt": "He is the author and co-editor of nine books and numerous peer-reviewed journal articles and book chapters.",
+          "retrievedAt": "2026-09-07T04:21:16.435Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0178-8",
+          "url": "https://cas.uoregon.edu/directory/political-science/all/thvu",
+          "excerpt": "Vu serves on the editorial boards of several journals and is frequently consulted by national and international media.",
+          "retrievedAt": "2026-09-07T04:21:16.435Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:22:34.853Z",
+      "nextAction": "Batch 9 complete."
     },
     "vp-0179": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.globalstudies.uci.edu/people/faculty.php",
         "https://faculty.sites.uci.edu/longbui"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0179-1",
+          "url": "https://www.globalstudies.uci.edu/people/faculty.php",
+          "excerpt": "Core Faculty | Global Studies ROBOTO FONT FROM GOOGLE CSS FILE --> Search this site We use cookies on this site to support site functionality, improve user experience, and collect limited statistical information.",
+          "retrievedAt": "2026-09-07T04:21:17.469Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0179-2",
+          "url": "https://www.globalstudies.uci.edu/people/faculty.php",
+          "excerpt": "I Accept Home About Undergraduate Major Overview Major Honors Course Offerings Professional Learning Outcomes Minors International Studies Opportunities International Experience Opportunities Research Opportunities Student Engagement Scholarships and Awards Opportunities UROP SSARC LARC UCI Student Services Graduate Doctoral Program Welcome Overview Admissions Funding Requirements Course Offerings Awards Publications Forms .",
+          "retrievedAt": "2026-09-07T04:21:17.470Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0179-3",
+          "url": "https://www.globalstudies.uci.edu/people/faculty.php",
+          "excerpt": "s Research Opportunities Student Engagement Scholarships and Awards Opportunities UROP SSARC LARC UCI Student Services Graduate Doctoral Program Welcome Overview Admissions Funding Requirements Course Offerings Awards Publications Forms Resources Professional Learning Outcomes Emphasis Program Overview Course Offerings Emphasis Students Research Faculty Publications Faculty Awards Research Labs People Core Faculty Lecturers Graduate Students Associated Faculty Researchers and Postdoc Scholars Graduate Student Alumni Resources New & Events News News Alumni News Commentaries Events Global & Intl.",
+          "retrievedAt": "2026-09-07T04:21:17.470Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0179-4",
+          "url": "https://www.globalstudies.uci.edu/people/faculty.php",
+          "excerpt": "Studies Forum Upcoming Events Past Events Conference Employment Contact Core Faculty You are here: global and international studies People Yousuf Al-Bulushi Associate Professor Ph.",
+          "retrievedAt": "2026-09-07T04:21:17.470Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0179-5",
+          "url": "https://www.globalstudies.uci.edu/people/faculty.php",
+          "excerpt": ", Geography, University of North Carolina at Chapel Hill political theory, racial regimes, political economy of globalization, urban geography, comparative global movements, africa and africana studies 583 Social Science Tower yalbulus@uci.",
+          "retrievedAt": "2026-09-07T04:21:17.470Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0179-6",
+          "url": "https://www.globalstudies.uci.edu/people/faculty.php",
+          "excerpt": ", UC San Diego critical refugee studies, Global Asias and Vietnam studies, race gender sexuality studies, media cultural studies, critical university studies 559 Social Science Tower longb@uci.",
+          "retrievedAt": "2026-09-07T04:21:17.470Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0179-7",
+          "url": "https://www.globalstudies.uci.edu/people/faculty.php",
+          "excerpt": ", Sociology, University of Stellenbosch political sociology, (everyday) urban politics/authoritarianism; urban planning, housing, mobility, finance, infrastructure; global urban development/policy/expertise; Southern urbanism, global urbanism; Angola, Africa, African cities; transdisciplinary research/ knowledge co-production/methods; (post)colonialism, decoloniality 545 Social Science Tower scroese@uci.",
+          "retrievedAt": "2026-09-07T04:21:17.470Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0179-8",
+          "url": "https://www.globalstudies.uci.edu/people/faculty.php",
+          "excerpt": ", Harvard University, 1991 LLB, University of Melbourne, 1988 human rights, global governance, postcolonial and decolonial theory, rising authoritarianism, ethnographic approaches 569 Social Science Tower Website Christopher Paul Harris Associate Professor Ph.",
+          "retrievedAt": "2026-09-07T04:21:17.470Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0179-9",
+          "url": "https://faculty.sites.uci.edu/longbui",
+          "excerpt": "Long Bui Log In Search Skip to content Home Curriculum Vitae News Artwork Menu Toggle extended navigation Long T.",
+          "retrievedAt": "2026-09-07T04:21:18.856Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0179-10",
+          "url": "https://faculty.sites.uci.edu/longbui",
+          "excerpt": "Bui Professor Global and International Studies 559 Social Science Tower Irvine, CA 92697-5100 Email: longb@uci.",
+          "retrievedAt": "2026-09-07T04:21:18.856Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0179-11",
+          "url": "https://faculty.sites.uci.edu/longbui",
+          "excerpt": "edu Research Areas : Global Asias and Orientalism, Critical Refugee Studies and Vietnam, Critical University Studies, Cultural and Media Studies Race, Gender and Sexuality, Histories of Science and Technology Biography : Long T.",
+          "retrievedAt": "2026-09-07T04:21:18.856Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0179-12",
+          "url": "https://faculty.sites.uci.edu/longbui",
+          "excerpt": "Bui is a Professor of Global and International Studies at the University of California, Irvine.",
+          "retrievedAt": "2026-09-07T04:21:18.856Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0179-13",
+          "url": "https://faculty.sites.uci.edu/longbui",
+          "excerpt": "His scholarly interests include refugee memory, contemporary Vietnam and Global Asias, higher education, race/gender/sexuality in the media, and the history of technology.",
+          "retrievedAt": "2026-09-07T04:21:18.856Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0179-14",
+          "url": "https://faculty.sites.uci.edu/longbui",
+          "excerpt": "He is the author of books such as Returns of War: South Vietnam and the Price of Refugee Memory (2018), a nd Model Machines: A History of the Asian as Automaton (202 2), and Viral World: Global Relations during the COVID-19 Pandemic (2024).",
+          "retrievedAt": "2026-09-07T04:21:18.856Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0179-15",
+          "url": "https://faculty.sites.uci.edu/longbui",
+          "excerpt": "He has published articles in Journal of Asian American Studies, Feminist Media Studie s, Global Society etc.",
+          "retrievedAt": "2026-09-07T04:21:18.856Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0179-16",
+          "url": "https://faculty.sites.uci.edu/longbui",
+          "excerpt": "They touch on a range of issues like cyberhacking, film, reality tv, music, graphic novels, currency wars, drag, consumerism, urbanization.",
+          "retrievedAt": "2026-09-07T04:21:18.856Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:22:34.853Z",
+      "nextAction": "Batch 9 complete."
     },
     "vp-0180": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.sjsu.edu/people/hien.do/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0180-1",
+          "url": "https://www.sjsu.edu/people/hien.do/",
+          "excerpt": "Do, Hien D | People | San Jose State University Skip to Main Content Phone calls to campus are currently offline Please call 408-808-2037 to reach campus while we work with AT&T to resolve the issue.",
+          "retrievedAt": "2026-09-07T04:21:19.493Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0180-2",
+          "url": "https://www.sjsu.edu/people/hien.do/",
+          "excerpt": "Visit our Financial Aid and Scholarship Office for updated information, workshops and FAQs.",
+          "retrievedAt": "2026-09-07T04:21:19.493Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0180-3",
+          "url": "https://www.sjsu.edu/people/hien.do/",
+          "excerpt": "--> WARNING Earthquake Advisory Campus closed until further notice --> Do, Hien D San José State University Site Navigation SJSU Home &gt; People &gt; Do, Hien D Do, Hien D one.",
+          "retrievedAt": "2026-09-07T04:21:19.493Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0180-4",
+          "url": "https://www.sjsu.edu/people/hien.do/",
+          "excerpt": "SJSU MySJSU --> Canvas Athletics Give to SJSU Navigate BACK to A-Z People Index Dir.",
+          "retrievedAt": "2026-09-07T04:21:19.493Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0180-5",
+          "url": "https://www.sjsu.edu/people/hien.do/",
+          "excerpt": "Student Success Center, College of Social Sciences Professor, Sociology & Interdisc Soc Sci Email Preferred: hien.",
+          "retrievedAt": "2026-09-07T04:21:19.493Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0180-6",
+          "url": "https://www.sjsu.edu/people/hien.do/",
+          "excerpt": "edu Telephone Preferred: (408) 924-5747 Office Hours MW 9:30-11:30 AM, T 10:30-11:30 AM Education Doctor of Philosophy, Univ Of Cal-Santa Barbara, 1992 Bio Professor Hien Duc Do received his Ph.",
+          "retrievedAt": "2026-09-07T04:21:19.493Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0180-7",
+          "url": "https://www.sjsu.edu/people/hien.do/",
+          "excerpt": "His primary research interests is Vietnamese Americans, race relations, the development of Asian American Communities, and the impact of religion on immigration.",
+          "retrievedAt": "2026-09-07T04:21:19.493Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0180-8",
+          "url": "https://www.sjsu.edu/people/hien.do/",
+          "excerpt": "He is the author The Vietnamese Americans (Greenwood Press, 1999), an associate producer of \"Viet Nam: At the Crossroads\" (PBS, 1994)a documentary film on Viet Nam, numerous articles, and is currently working on a manusript with colleagues at the University of San Francisco on the impact of religion on immigration.",
+          "retrievedAt": "2026-09-07T04:21:19.493Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:22:34.853Z",
+      "nextAction": "Batch 9 complete."
     },
     "vp-0181": {
       "overview": "pending",
