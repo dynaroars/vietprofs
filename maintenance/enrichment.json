@@ -3212,7 +3212,8 @@
         "vp-1272",
         "vp-1273"
       ],
-      "status": "pending"
+      "status": "in_progress",
+      "startedAt": "2026-09-07T19:37:54.696Z"
     },
     {
       "number": 64,
@@ -75841,206 +75842,1086 @@
       "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1254": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://nanolsi.kanazawa-u.ac.jp/en/researchers/kien-xuan-ngo/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://nanolsi.kanazawa-u.ac.jp/en/researchers/kien-xuan-ngo/: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:39:43.515Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1255": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.ornl.gov/staff-profile/van-a-ngo"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.ornl.gov/staff-profile/van-a-ngo: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:39:43.515Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1256": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.pasteur.fr/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1256-1",
+          "url": "https://www.pasteur.fr/",
+          "excerpt": "Institut Pasteur | Pour chaque vie, la science agit Aller au contenu principal Accès rapides Espace donateurs Vos dons et reçus fiscaux Centre médical Consultations et vaccinations Carrières Emplois, doctorats, alternances Professionnels Espace presse Communiqués, ressources et contacts Enseignement Etudiants et professionnels Innovation Investissement, entreprenariat, brevets Recherche Site &quot;Research&quot; pour la communauté scientifique Santé publique CNR, CCOMS, CIBU, EURL.",
+          "retrievedAt": "2026-09-07T19:37:57.048Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1256-2",
+          "url": "https://www.pasteur.fr/",
+          "excerpt": "International Coopérations, programmes et opportunités Français English Institut Pasteur Accueil du site Rechercher sur le site Navigation principale Votre santé Les maladies de A à Z Tout savoir sur la vaccination Recommandations sanitaires par pays Centre médical de l&#039;Institut Pasteur Les grandes menaces pathogènes Surveillance sanitaire Actualité Trois questions sur les tiques : combien d’espèces ?",
+          "retrievedAt": "2026-09-07T19:37:57.048Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1256-3",
+          "url": "https://www.pasteur.fr/",
+          "excerpt": "notte solidaire Espace donateurs Taxe d&#039;apprentissage Soutenez une formation d&#039;excellence pour une recherche d&#039;excellence Affectez votre taxe d’apprentissage à l’Institut Pasteur Accès rapides Espace donateurs Vos dons et reçus fiscaux Centre médical Consultations et vaccinations Carrières Emplois, doctorats, alternances Professionnels Espace presse Communiqués, ressources et contacts Enseignement Etudiants et professionnels Innovation Investissement, entreprenariat, brevets Recherche Site &quot;Research&quot; pour la communauté scientifique Santé publique CNR, CCOMS, CIBU, EURL.",
+          "retrievedAt": "2026-09-07T19:37:57.048Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1256-4",
+          "url": "https://www.pasteur.fr/",
+          "excerpt": "International Coopérations, programmes et opportunités Français English Faire un don Dans cette rubrique Pour chaque vie, l a science agit.",
+          "retrievedAt": "2026-09-07T19:37:57.048Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1256-5",
+          "url": "https://www.pasteur.fr/",
+          "excerpt": "Faites un don pour la recherche Fréquence du don Don ponctuel Don mensuel 60 € 100 € 150 € 200 € 10 € 20 € 30 € 50 € € Faire un don Opening in a new Window Votre don ne vous coûte réellement que 34 € après déduction fiscale de 66 % sur votre impôt sur le revenu.",
+          "retrievedAt": "2026-09-07T19:37:57.048Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1256-6",
+          "url": "https://www.pasteur.fr/",
+          "excerpt": "Faire un don IFI Opening in a new Window En savoir plus sur vos avantages fiscaux Je suis déjà donateur Opening in a new Window La recherche en action 22 juin 2026 Intelligence artificielle : l’IA en sciences, un outil pour explorer de nouvelles frontières Accélérer les découvertes, décrypter les mécanismes du vivant, anticiper les crises sanitaires, former les chercheurs de demain et ouvrir de nouvelles voies thérapeutiques : autant de défis que l&#039;Intelligence artificielle (IA) commence déjà à transformer en résultats tangibles dans la recherche médicale.",
+          "retrievedAt": "2026-09-07T19:37:57.048Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1256-7",
+          "url": "https://www.pasteur.fr/",
+          "excerpt": "Des laboratoires aux salles de cours, des serveurs de calcul aux start-ups, nous dressons ici le panorama d&#039;une révolution scientifique en marche à l&#039;Institut Pasteur.",
+          "retrievedAt": "2026-09-07T19:37:57.048Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1256-8",
+          "url": "https://www.pasteur.fr/",
+          "excerpt": "Actualité 21 juillet 2026 Un code génomique universel pour mieux surveiller les bactéries pathogènes Communiqué de presse 8 juin 2026 Accélérer la mise au point d’un vaccin contre le chikungunya en Afrique : Lancement du projet ACT CHIK Actualité 4 mai 2026 Comment les sentinelles et les murailles du cerveau coopèrent dès la phase embryonnaire De la découverte au traitement De la recherche fondamentale à la découverte de nouveaux traitements, et jusqu’à la formation des futurs scientifiques, l&#039;Institut Pasteur mobilise tout un continuum d’expertises au service de la santé des populations.",
+          "retrievedAt": "2026-09-07T19:37:57.048Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:39:43.515Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1257": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.cesbio.cnrs.fr/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1257-1",
+          "url": "https://www.cesbio.cnrs.fr/",
+          "excerpt": "ment Valorisation Production scientifique Publications Thèses en cours Thèses et HDR soutenues Transfert Données Blogs Axes thématiques Eau Dynamique régionale des surfaces Agroécosystèmes Outils DART MAJA : la chaîne de détection des nuages et de correction atmosphérique multi-temporelle iota2 PoMoS & GloMo Cesbio Centre d&#039;Etudes Spatiales de la Biosphère C entre d&rsquo; E tudes S patiales de la Bio sphère English version La vocation du Cesbio est de développer des connaissances sur le fonctionnement de la biosphère continentale en faisant un usage important de la télédétection spatiale.",
+          "retrievedAt": "2026-09-07T19:38:00.274Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1257-2",
+          "url": "https://www.cesbio.cnrs.fr/",
+          "excerpt": "Ces connaissances lui permettent de proposer de nouvelles missions spatiales d&rsquo;observation de la Terre.",
+          "retrievedAt": "2026-09-07T19:38:00.274Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1257-3",
+          "url": "https://www.cesbio.cnrs.fr/",
+          "excerpt": "Le Cesbio est une unité mixte de recherche dont les tutelles sont : Centre National de la Recherche Scientifique ( CNRS ) Centre National d&rsquo;Etudes Spatiales ( CNES ) Institut de Recherche pour le Développement ( IRD ) Université de Toulouse ( UT ) Le Cesbio est aussi une unité sous contrat de l&rsquo;Institut national de recherche pour l’agriculture, l’alimentation et l’environnement ( INRAE ).",
+          "retrievedAt": "2026-09-07T19:38:00.274Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1257-4",
+          "url": "https://www.cesbio.cnrs.fr/",
+          "excerpt": "En savoir plus sur le Cesbio&#8230; Dernières actualités Juliette Ortet récompensée par la Société canadienne de télédétection La Société canadienne de télédétection (CRSS-SCT) a remis le prix de la Meilleure thèse de doctorat à Juliette Ortet (ex aequo avec Michael Allan Merchant) lors du Congrès ISPRS 2026 à Toronto pour sa thèse intitulée « Mesure et suivi des températures de surface et pergélisol des milieux arctiques par télédétection satellite« .",
+          "retrievedAt": "2026-09-07T19:38:00.274Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1257-5",
+          "url": "https://www.cesbio.cnrs.fr/",
+          "excerpt": "2026 Lire la suite → Ouverture d&rsquo;un poste d&rsquo;ingénieur de recherche au concours externe du CNRS : experte ou expert en calcul scientifique Mission : L&rsquo;expert-e en calcul scientifique participera au développement et à la mise en œuvre de méthodes d&rsquo;Intelligence Artificielle permettant l&rsquo;exploitation des données massives de télédétection pour le suivi des écosystèmes continentaux.",
+          "retrievedAt": "2026-09-07T19:38:00.274Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1257-6",
+          "url": "https://www.cesbio.cnrs.fr/",
+          "excerpt": "Il/Elle travaillera sur l&rsquo;implémentation et l&rsquo;adaptation d&rsquo;algorithmes issus des recherches du laboratoire .",
+          "retrievedAt": "2026-09-07T19:38:00.274Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1257-7",
+          "url": "https://www.cesbio.cnrs.fr/",
+          "excerpt": "Il/Elle centralisera leur développement dans les plateformes de modélisation [&hellip;] 08.",
+          "retrievedAt": "2026-09-07T19:38:00.274Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1257-8",
+          "url": "https://www.cesbio.cnrs.fr/",
+          "excerpt": "2026 Lire la suite → Soutenance de thèse de Romain Démoulin : Suivi de traits bio-physiques de parcelles cultivées par télédétection optique et modélisation 3D du transfert radiatif [English below] Félicitation à Romain pour sa soutenance de thèse soutenue le vendredi 3 juillet, 9h00 en salle de conférence du CESBIO intitulée: « Suivi de traits bio-physiques de parcelles cultivées par télédétection optique et modélisation 3D du transfert radiatif » Composition du jury : Membres invités : Résumé de la thèse en français : Dans le contexte de [&hellip;] 07.",
+          "retrievedAt": "2026-09-07T19:38:00.274Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:39:43.515Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1258": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://sites.google.com/view/anh-tu-nguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1258-1",
+          "url": "https://sites.google.com/view/anh-tu-nguyen",
+          "excerpt": "Anh-Tu Nguyen Search this site Embedded Files Skip to main content Skip to navigation Anh-Tu Nguyen Home Bio Publications People Academic services Talks Teaching Misc.",
+          "retrievedAt": "2026-09-07T19:38:00.580Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1258-2",
+          "url": "https://sites.google.com/view/anh-tu-nguyen",
+          "excerpt": "Anh-Tu Nguyen Home Bio Publications People Academic services Talks Teaching Misc.",
+          "retrievedAt": "2026-09-07T19:38:00.580Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1258-3",
+          "url": "https://sites.google.com/view/anh-tu-nguyen",
+          "excerpt": "Anh-Tu Nguyen Associate Professor (Maître de Conférences HDR) Control Department, LAMIH-Lab CNRS 8201 INSA Hauts-de-France, Université Polytechnique Hauts-de-France E-mail: nguyen.",
+          "retrievedAt": "2026-09-07T19:38:00.580Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1258-4",
+          "url": "https://sites.google.com/view/anh-tu-nguyen",
+          "excerpt": "I visit the University of Glasgow as part of our joint France-UK LEARN-SAFE project .",
+          "retrievedAt": "2026-09-07T19:38:00.580Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1258-5",
+          "url": "https://sites.google.com/view/anh-tu-nguyen",
+          "excerpt": "Two papers on Support Vector Machines are accepted for presentation at the 23rd International Conference on Electrical Engineering, Computing Science and Automatic Control ( IEEE CCE 2026 ), Mexico City, Mexico.",
+          "retrievedAt": "2026-09-07T19:38:00.580Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1258-6",
+          "url": "https://sites.google.com/view/anh-tu-nguyen",
+          "excerpt": "Our paper “ Resilient Trajectory Tracking Output-Feedback Control for Autonomous Vehicles under Denial of Service Attacks ” is accepted for publication in the SAE International Journal of Vehicle Dynamics, Stability, and NVH .",
+          "retrievedAt": "2026-09-07T19:38:00.580Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1258-7",
+          "url": "https://sites.google.com/view/anh-tu-nguyen",
+          "excerpt": "Our paper “The Influence Factors, Prediction and Application of Driver’s Takeover Performance in Intelligent Cockpit: A Literature Review” is accepted for publication in the IEEE Transactions on Human-Machine Systems .",
+          "retrievedAt": "2026-09-07T19:38:00.580Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1258-8",
+          "url": "https://sites.google.com/view/anh-tu-nguyen",
+          "excerpt": "We offer two fully funded PhD positions, focusing on Resilient Control and Estimation for Electrified Vehicles.",
+          "retrievedAt": "2026-09-07T19:38:00.580Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:39:43.515Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1259": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.ntnu.edu/employees/khanh-quang.tran"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1259-1",
+          "url": "https://www.ntnu.edu/employees/khanh-quang.tran",
+          "excerpt": "ancing Language requirements Application process Academic calendar FAQ Research and innovation NTNU research Research excellence Strategic research areas Innovation resources PhD opportunities Life and housing Student in Trondheim Student in Gjøvik Student in Ålesund For researchers Life and housing About NTNU Contact us Faculties and departments Libraries International researcher support Vacancies About NTNU Maps Employees Språkvelger Norsk Quang Khanh Tran Download press photo Download press photo Foto: Close Quang Khanh Tran Professor Department of Energy and Process Engineering khanh-quang.",
+          "retrievedAt": "2026-09-07T19:38:02.363Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1259-2",
+          "url": "https://www.ntnu.edu/employees/khanh-quang.tran",
+          "excerpt": "biomass for production of biofuels and chemicals - Process intensification and integration - Torrefaction and densification of biomass fuels - Biomass combustion for heat and power generation - Pyrolysis and gasification of biomass - Kinetic modelling for thermochemical conversions of biomass - Combustion emission control and gas cleaning - Ash treatment and utilisation - Environmental catalysis Projects - nCO2pp - BioSynGas - Fast-HTL project number: 315420 Publications Chronological By category All publications registered in NVA 2025 Malhotra, Milan; Pawlak-Kruczek, Halina; Tran, Khanh-Quang.",
+          "retrievedAt": "2026-09-07T19:38:02.363Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1259-3",
+          "url": "https://www.ntnu.edu/employees/khanh-quang.tran",
+          "excerpt": "Environmental and Climate Technologies Academic article Malhotra, Milan; Trinh, Thuat; Tran, Khanh-Quang.",
+          "retrievedAt": "2026-09-07T19:38:02.363Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1259-4",
+          "url": "https://www.ntnu.edu/employees/khanh-quang.tran",
+          "excerpt": "(2025) Fate of microplastics during conventional and hydrothermal treatments of sewage sludge: a short review.",
+          "retrievedAt": "2026-09-07T19:38:02.363Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1259-5",
+          "url": "https://www.ntnu.edu/employees/khanh-quang.tran",
+          "excerpt": "IOP Conference Series: Earth and Environmental Science (EES) Academic article Truong, Thi Be Ta; Do, Tuong Ha; Tran, Khanh-Quang; Trinh, Thuat.",
+          "retrievedAt": "2026-09-07T19:38:02.363Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1259-6",
+          "url": "https://www.ntnu.edu/employees/khanh-quang.tran",
+          "excerpt": "(2025) The role of heating rate in hydrothermal liquefaction of lignin: Insights from reactive molecular dynamics simulations.",
+          "retrievedAt": "2026-09-07T19:38:02.363Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1259-7",
+          "url": "https://www.ntnu.edu/employees/khanh-quang.tran",
+          "excerpt": "(2024) The role of chemical functional groups in dewaterability of hydrochar: A molecular simulation study.",
+          "retrievedAt": "2026-09-07T19:38:02.363Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1259-8",
+          "url": "https://www.ntnu.edu/employees/khanh-quang.tran",
+          "excerpt": "Journal of Molecular Liquids Academic article Do, Tuong Ha; Tran, Khanh-Quang; Trinh, Thuat.",
+          "retrievedAt": "2026-09-07T19:38:02.363Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:39:43.515Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1260": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://icr-amu.cnrs.fr/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://icr-amu.cnrs.fr/: fetch failed"
+      ],
+      "updatedAt": "2026-09-07T19:39:43.515Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1261": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://warwick.ac.uk/fac/sci/wmg/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1261-1",
+          "url": "https://warwick.ac.uk/fac/sci/wmg/",
+          "excerpt": "port Training and Skills Skills Centre About us Training Solutions Contact us News and Events News Events Industry Success Stories WMG Insights About WMG Careers Equity, Diversity and Inclusion Health and Safety Location and Facilities Our 45th Anniversary Our Journey Our People Outreach and Widening Participation WMG Annual Report Alumni Graduation Celebrations 2026 Share your career story Contact us Warwick Manufacturing Group WMG Warwick Manufacturing Group (WMG) is a world-leading research and education group, creating knowledge to deliver impact - for industry, people, and the environment.",
+          "retrievedAt": "2026-09-07T19:38:04.658Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1261-2",
+          "url": "https://warwick.ac.uk/fac/sci/wmg/",
+          "excerpt": "34,000+ Alumni 700 + Industry partners 800 + Staff members 25 + Research areas Why choose WMG?",
+          "retrievedAt": "2026-09-07T19:38:04.658Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1261-3",
+          "url": "https://warwick.ac.uk/fac/sci/wmg/",
+          "excerpt": "Founded in 1980 by the late Professor Lord Kumar Bhattacharyya, it was born out of a bold mission: to reinvigorate UK manufacturing and drive competitiveness through innovation and skills development.",
+          "retrievedAt": "2026-09-07T19:38:04.658Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1261-4",
+          "url": "https://warwick.ac.uk/fac/sci/wmg/",
+          "excerpt": "It now employs around 800 people across 13 buildings, is home to over 2,500 students, and partners with over 700 organisations.",
+          "retrievedAt": "2026-09-07T19:38:04.658Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1261-5",
+          "url": "https://warwick.ac.uk/fac/sci/wmg/",
+          "excerpt": "We empower manufacturing industries and innovation-led organisations to thrive by being more sustainable, resilient, competitive and future-fit.",
+          "retrievedAt": "2026-09-07T19:38:04.658Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1261-6",
+          "url": "https://warwick.ac.uk/fac/sci/wmg/",
+          "excerpt": "Find out more Scroll items left Scroll items right Study at WMG Education at WMG is more than learning - it’s shaping future leaders and innovators.",
+          "retrievedAt": "2026-09-07T19:38:04.658Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1261-7",
+          "url": "https://warwick.ac.uk/fac/sci/wmg/",
+          "excerpt": "From WMG Academies for Young Engineers to our undergraduate, postgraduate and professional courses, we deliver qualifications and tailored short courses that equip people and organisations with essential knowledge and skills.",
+          "retrievedAt": "2026-09-07T19:38:04.658Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1261-8",
+          "url": "https://warwick.ac.uk/fac/sci/wmg/",
+          "excerpt": "Our diverse, collaborative student community benefits from teaching that blends academic excellence with practical relevance, supported by strong links with business, industry and government.",
+          "retrievedAt": "2026-09-07T19:38:04.658Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:39:43.515Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1262": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://sejong.elsevierpure.com/en/persons/nhu-ngoc-dao",
         "https://nndao.github.io/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1262-1",
+          "url": "https://sejong.elsevierpure.com/en/persons/nhu-ngoc-dao",
+          "excerpt": "Nhu-Ngoc Dao - Sejong University Skip to main navigation Skip to search Skip to main content Sejong University Home Search content at Sejong University Home Profiles Research units Research output Projects Activities Press/Media Contact Expert View Scopus Profile Nhu-Ngoc Dao Professor Researcher , Department of Computer Science and Engineering Email nndao sejong.",
+          "retrievedAt": "2026-09-07T19:38:07.051Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1262-2",
+          "url": "https://sejong.elsevierpure.com/en/persons/nhu-ngoc-dao",
+          "excerpt": "ac kr h-index 3167 Citations 28 h-index Calculated based on number of publications stored in Pure and citations from Scopus 2015 2026 Research activity per year Overview Fingerprint Network Research output (154) Similar Profiles (12) Personal profile Education • 2019 Ph.",
+          "retrievedAt": "2026-09-07T19:38:07.051Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1262-3",
+          "url": "https://sejong.elsevierpure.com/en/persons/nhu-ngoc-dao",
+          "excerpt": ", Posts and Telecommunications Institute of Technology, Vietnam Professional Experience • (2009-2014) Engineer, Technology Department, Global Telecommunication Corporation (GTEL), Vietnam • (2019-2020) Postdoctoral researcher of Institute of Computer Science, University of Bern, Switzerland • (2020-present) Assistant professor of Department of Computer Science and Engineering, Sejong University, South Korea Research Interests Network softwarization, mobile cloudification, communication security, intelligent systems, and Internet of Things Major Research Achievements Visit https://pshhlab.",
+          "retrievedAt": "2026-09-07T19:38:07.051Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1262-4",
+          "url": "https://sejong.elsevierpure.com/en/persons/nhu-ngoc-dao",
+          "excerpt": "12 Similar Profiles Internet-Of-Things Computer Science 100% Multiple Access Computer Science 33% Deep Reinforcement Learning Computer Science 31% Multi-Access Edge Computing Computer Science 30% Edge Computing Computer Science 25% Unmanned Aerial Vehicle Computer Science 25% Reinforcement Learning Computer Science 22% Radio Access Network Computer Science 22% View full fingerprint Collaborations and top research areas from the last five years Recent external collaboration on country/territory level.",
+          "retrievedAt": "2026-09-07T19:38:07.051Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1262-5",
+          "url": "https://sejong.elsevierpure.com/en/persons/nhu-ngoc-dao",
+          "excerpt": "Dive into details by clicking on the dots or Select a country/territory from the list Dive into details Select a country/territory to view shared publications and projects Close Select a country/territory from the list Explore network further Research output Research output per year 2015 2021 2022 2023 2024 2026 2026 85 Article 42 Conference contribution 13 Editorial 9 Review article 5 More 4 Chapter 1 Short survey Research output per year Research output per year Adaptive risk analysis framework for network-Level moving target defense under adversarial intelligence uncertainty Sa'ad, U.",
+          "retrievedAt": "2026-09-07T19:38:07.051Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1262-6",
+          "url": "https://sejong.elsevierpure.com/en/persons/nhu-ngoc-dao",
+          "excerpt": "Research output : Contribution to journal › Article › peer-review Moving Target Defense 100% Analysis Framework 100% Attackers 16% Advanced Persistent Threat 16% Dynamic Bayesian Network 16% Adversarial-aware multi-agent reinforcement learning for secure resource allocation in Heterogeneous Aerial Access IoT networks Sa’ad, U.",
+          "retrievedAt": "2026-09-07T19:38:07.051Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1262-7",
+          "url": "https://sejong.elsevierpure.com/en/persons/nhu-ngoc-dao",
+          "excerpt": "Research output : Contribution to journal › Article › peer-review Open Access multi agent 100% Resource Allocation 100% Internet-Of-Things 100% Multi-Agent Reinforcement Learning 100% Access Network 50% Beyond Connectivity: Semantic Communication Unlocks the Hyper-Connected City with 6G Na, W.",
+          "retrievedAt": "2026-09-07T19:38:07.051Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1262-8",
+          "url": "https://sejong.elsevierpure.com/en/persons/nhu-ngoc-dao",
+          "excerpt": "Research output : Contribution to journal › Article › peer-review Artificial Intelligence 100% 6G 100% Testbed 66% Data Recovery 33% Security and Privacy 33% Dynamic dependency-aware vulnerability and patch management for critical interconnected systems Sa’ad, U.",
+          "retrievedAt": "2026-09-07T19:38:07.051Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1262-9",
+          "url": "https://nndao.github.io/",
+          "excerpt": "Nhu-Ngoc Dao Nhu-Ngoc Dao Associate Professor Research Institute for Data Science and Artificial Intelligence, Hallym University, South Korea Biography Nhu-Ngoc Dao is an Associate Professor at the Research Institute for Data Science and Artificial Intelligence, Hallym University, South Korea.",
+          "retrievedAt": "2026-09-07T19:38:07.239Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1262-10",
+          "url": "https://nndao.github.io/",
+          "excerpt": "degrees in computer science at the School of Computer Science and Engineering, Chung-Ang University, Seoul, South Korea, in 2016 and 2019, respectively.",
+          "retrievedAt": "2026-09-07T19:38:07.239Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1262-11",
+          "url": "https://nndao.github.io/",
+          "excerpt": "degree in electronics and telecommunications from the Posts and Telecommunications Institute of Technology, Hanoi, Viet Nam, in 2009.",
+          "retrievedAt": "2026-09-07T19:38:07.239Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1262-12",
+          "url": "https://nndao.github.io/",
+          "excerpt": "Prior to joining Hallym University, he was an Assistant Professor with Sejong University from 2020 to 2026, a Visiting Researcher with the University of Newcastle, Callaghan, NSW, Australia, in 2019 and a Postdoc Researcher with the Institute of Computer Science, University of Bern, Switzerland, from 2019 to 2020.",
+          "retrievedAt": "2026-09-07T19:38:07.239Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1262-13",
+          "url": "https://nndao.github.io/",
+          "excerpt": "He is currently an Editor of the ICT Express , Scientific Reports , and PLOS ONE journals.",
+          "retrievedAt": "2026-09-07T19:38:07.239Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1262-14",
+          "url": "https://nndao.github.io/",
+          "excerpt": "Research interests: network softwarization, mobile cloudification, communication security, intelligent systems, and Internet of Things.",
+          "retrievedAt": "2026-09-07T19:38:07.239Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1262-15",
+          "url": "https://nndao.github.io/",
+          "excerpt": "2026 – Present Associate Professor, Research Institute for Data Science and Artificial Intelligence, Hallym University, South Korea.",
+          "retrievedAt": "2026-09-07T19:38:07.239Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1262-16",
+          "url": "https://nndao.github.io/",
+          "excerpt": "2026 Assistant Professor (2020); Associate Professor (2026), Department of Computer Science and Engineering, Sejong University, South Korea.",
+          "retrievedAt": "2026-09-07T19:38:07.239Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:39:43.515Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1263": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://centralelille.fr/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1263-1",
+          "url": "https://centralelille.fr/",
+          "excerpt": "8211; Enseignement et Recherche Passer au contenu LinkedIn Tiktok YouTube Facebook Forum Rencontre Fondation Alumni Taxe d’apprentissage Centrale Lille Vision Mission Valeurs Réseaux Gouvernance Organisation Instances Responsabilité sociétale et environnementale Démarche qualité Ouverture sociale Histoire de Centrale Lille Travailler à Centrale Lille Offres d’emplois Enseignant vacataire Communiquer sur l’institut IMPACT 2035 Formation Titres d’ingénieurs École Centrale de Lille IG2I ITEEM ENSCL Masters Doctorat Bachelor Diplômes d’établissement Centrale Digital Lab Lean Modular Construction 4.",
+          "retrievedAt": "2026-09-07T19:38:09.826Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1263-2",
+          "url": "https://centralelille.fr/",
+          "excerpt": "us France et le réseau consulaire Erasmus+ Erasmus+ et Centrale Lille Réseaux Internationaux Certifications Cervantes – DELE Rechercher: Centrale Lille Vision Mission Valeurs Réseaux Gouvernance Organisation Instances Responsabilité sociétale et environnementale Démarche qualité Ouverture sociale Histoire de Centrale Lille Travailler à Centrale Lille Offres d’emplois Enseignant vacataire Communiquer sur l’institut IMPACT 2035 Formation Titres d’ingénieurs École Centrale de Lille IG2I ITEEM ENSCL Masters Doctorat Bachelor Diplômes d’établissement Centrale Digital Lab Lean Modular Construction 4.",
+          "retrievedAt": "2026-09-07T19:38:09.826Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1263-3",
+          "url": "https://centralelille.fr/",
+          "excerpt": "us France et le réseau consulaire Erasmus+ Erasmus+ et Centrale Lille Réseaux Internationaux Certifications Cervantes – DELE Rechercher: Centrale Lille Vision Mission Valeurs Réseaux Gouvernance Organisation Instances Responsabilité sociétale et environnementale Démarche qualité Ouverture sociale Histoire de Centrale Lille Travailler à Centrale Lille Offres d’emplois Enseignant vacataire Communiquer sur l’institut IMPACT 2035 Formation Titres d’ingénieurs École Centrale de Lille IG2I ITEEM ENSCL Masters Doctorat Bachelor Diplômes d’établissement Centrale Digital Lab Lean Modular Construction 4.",
+          "retrievedAt": "2026-09-07T19:38:09.826Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1263-4",
+          "url": "https://centralelille.fr/",
+          "excerpt": "eurs Entreprises Taxe d’apprentissage Entreprendre à Centrale Lille International Partir à l’international Choisir ma mobilité Nos partenaires Les référents géographiques Financer ma mobilité Venir étudier à Centrale Lille Programmes Masters et doctorats Français Langue Étrangère Vie sur le campus Candidater Financer sa mobilité Préparer son arrivée Accueil et accompagnement Campus France et le réseau consulaire Erasmus+ Erasmus+ et Centrale Lille Réseaux Internationaux Certifications Cervantes – DELE Home 2024 priadmin 2026-09-07T08:26:56+02:00 Rentrée 2026 Félicitations pour votre admission !",
+          "retrievedAt": "2026-09-07T19:38:09.826Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1263-5",
+          "url": "https://centralelille.fr/",
+          "excerpt": "Vous intégrez Centrale Lille Institut, un établissement tourné vers l’innovation, l’industrie et les transitions majeures de notre société.",
+          "retrievedAt": "2026-09-07T19:38:09.826Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1263-6",
+          "url": "https://centralelille.fr/",
+          "excerpt": "Vous rejoignez une communauté de plus de 2 200 élèves, 400 membres du personnel, et un réseau d’alumni présent dans le monde entier.",
+          "retrievedAt": "2026-09-07T19:38:09.826Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1263-7",
+          "url": "https://centralelille.fr/",
+          "excerpt": "En savoir plus Les écoles d&rsquo;ingénieurs Quatre écoles d’ingénieur au cœur des enjeux sociétaux.",
+          "retrievedAt": "2026-09-07T19:38:09.826Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1263-8",
+          "url": "https://centralelille.fr/",
+          "excerpt": "École Centrale Lille Devenez Ingénieur Généraliste ENSCL Devenez Ingénieur Chimiste IG2I Devenez Ingénieur du numérique ITEEM Devenez Ingénieur Manager La formation Découvrez une offre de formation de Bac+4 à Bac+ 8 reconnue pour son excellence académique et scientifique.",
+          "retrievedAt": "2026-09-07T19:38:09.826Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:39:43.515Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1264": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.liverpool.ac.uk/electrical-engineering-and-electronics/staff/nguyen-huynh/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.liverpool.ac.uk/electrical-engineering-and-electronics/staff/nguyen-huynh/: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:39:43.515Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1265": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://umdearborn.edu/users/vhbui",
         "https://vhbui.wixsite.com/smart-energy-lab"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://umdearborn.edu/users/vhbui: HTTP 403",
+        "https://vhbui.wixsite.com/smart-energy-lab: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:39:43.515Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1266": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.u-pec.fr/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1266-1",
+          "url": "https://www.u-pec.fr/",
+          "excerpt": "--> Université Paris-Est Créteil (UPEC) — UPEC Aller au contenu Navigation Accès directs Recherche menu Soutenez-nous Fondation UPEC Taxe d'apprentissage bibliothèques Accès rapides eCampus Emplois du temps en ligne EPREL (cours en ligne) Inscription pédagogique en ligne Intranet des personnels Messagerie étudiante Messagerie des personnels Office 365 Portail BU Athéna Réseau Pro UPEC.",
+          "retrievedAt": "2026-09-07T19:38:12.937Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1266-2",
+          "url": "https://www.u-pec.fr/",
+          "excerpt": "CFA Vous êtes Lycéen Étudiant Étudiant international Enseignant-chercheur Adulte en reprise d'études Entreprises et partenaires Ancien étudiant Personnel administratif et technique Journaliste Recherche fr Fermer le menu Soutenez-nous Fondation UPEC Taxe d'apprentissage bibliothèques Accès rapides eCampus Emplois du temps en ligne EPREL (cours en ligne) Inscription pédagogique en ligne Intranet des personnels Messagerie étudiante Messagerie des personnels Office 365 Portail BU Athéna Réseau Pro UPEC.",
+          "retrievedAt": "2026-09-07T19:38:12.937Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1266-3",
+          "url": "https://www.u-pec.fr/",
+          "excerpt": "umériques Bibliothèques Sport Culture Composantes Composantes Composantes AEI International School Droit EPISEN Ecole d'urbanisme de Paris IAE Paris-Est Inspé Créteil Institut d'Études Politiques de Fontainebleau IUT de Créteil-Vitry IUT Sénart-Fontainebleau Lettres, langues, sciences humaines OSU-EFLUVE Santé ESM Formation & Recherche en soins Institut de formation en ergothérapie Sciences économiques et de gestion Sciences de l'éducation, sciences sociales et Staps Sciences et technologie Université Paris-Est Créteil Val de Marne (UPEC) 61, avenue du Général de Gaulle 94010 Créteil cedex www.",
+          "retrievedAt": "2026-09-07T19:38:12.937Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1266-4",
+          "url": "https://www.u-pec.fr/",
+          "excerpt": "fr Imprimer Télécharger en PDF Partager Partager cette page Envoyer par email Facebook X (Twitter) Linkedin Télécharger en PDF Vous êtes ici : Site de l'Université Université Paris-Est Créteil Consulter le programme Erasme Depuis mai 2022, l’UPEC déploie le programme Erasme pour concrétiser la vision d’être l’université engagée de référence ; une université centrée sur les défis des transformations sociétales et environnementales ; une université en lien étroit avec son territoire.",
+          "retrievedAt": "2026-09-07T19:38:12.937Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1266-5",
+          "url": "https://www.u-pec.fr/",
+          "excerpt": "Inscriptions et réinscriptions La procédure d&#039;inscription diffère selon votre profil et le diplôme visé.",
+          "retrievedAt": "2026-09-07T19:38:12.937Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1266-6",
+          "url": "https://www.u-pec.fr/",
+          "excerpt": "Découvrez quelle modalité vous concerne, le calendrier associé et les étapes à suivre.",
+          "retrievedAt": "2026-09-07T19:38:12.937Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1266-7",
+          "url": "https://www.u-pec.fr/",
+          "excerpt": "International L’UPEC mène une politique internationale dynamique de développement de partenariats et de projets internationaux qui favorise l’ouverture Les unités de recherche L’UPEC favorise une approche transversale, source de créativité et d’innovation, pour répondre aux défis sociétaux.",
+          "retrievedAt": "2026-09-07T19:38:12.937Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1266-8",
+          "url": "https://www.u-pec.fr/",
+          "excerpt": "La recherche y est structurée autour de 5 axes stratégiques et s’appuie sur 28 laboratoires.",
+          "retrievedAt": "2026-09-07T19:38:12.937Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:39:43.515Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1267": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.uia.no/en/about-uia/employees/khang-huynh"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.uia.no/en/about-uia/employees/khang-huynh: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:39:43.515Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1268": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.utt.fr/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1268-1",
+          "url": "https://www.utt.fr/",
+          "excerpt": "uis de l’Expérience Double diplôme Cursus aménagés Ingénierie, Société et Humanités L'international et les langues Les Projets Etudiants, démarche Pédagogie MIND Les Projets Etudiants, démarche Pédagogie MIND ODD3 – Bonne santé et bien-être ODD10 – Inégalités réduites ODD15 – Vie terrestre L'entrepreneuriat à l'UTT Informations pratiques Découvrir les études d'ingénieur L'insertion des ingénieurs en chiffres Admission & Candidature Inscription & Réinscription Rencontrez-nous Rencontrez-nous L'UTT en live Salons Journées Portes Ouvertes UTT Days Les Rencontres Formation Ingénieur 5 minutes avec.",
+          "retrievedAt": "2026-09-07T19:38:16.715Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1268-2",
+          "url": "https://www.utt.fr/",
+          "excerpt": "ur Poste d'enseignant-chercheur contractuel Poste d'enseignant titulaire Poste d'enseignant contractuel Poste de post-doctorant Marchés Publics Actualités Imprimer Partager Partager cette page Facebook Twitter Google+ Linkedin Viadeo Accueil etudiant Navigation 01 / 03 Lire la suite 02 / 03 Lire la suite 03 / 03 Lire la suite search Rechercher Candidater Diplôme d&#039;ingénieur Master Autres diplômes - Formation Continue Study at UTT Apprentissage L&#039;UTT en bref Rencontrez-nous Nos dernières actualités Voir toutes les actualités Rencontrez-nous Evénements Campus Etudiant C’est la rentrée !",
+          "retrievedAt": "2026-09-07T19:38:16.715Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1268-3",
+          "url": "https://www.utt.fr/",
+          "excerpt": "31 août 2026 Pr Christophe Collet, Président de l’UTT, a accueilli les parents des nouveaux étudiants ingénieurs de l’UTT samedi 29 août 2026, accompagné d’Elias Khoury, responsable du Tronc Commun (TC).",
+          "retrievedAt": "2026-09-07T19:38:16.715Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1268-4",
+          "url": "https://www.utt.fr/",
+          "excerpt": "Campus Evénements L'UTT vous partage le goût des Sciences et de la Technologie, du 8 au 10 octobre 2026 !",
+          "retrievedAt": "2026-09-07T19:38:16.715Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1268-5",
+          "url": "https://www.utt.fr/",
+          "excerpt": "27 août 2026 À l’occasion de la 35e édition de la Fête de la Science, l’Université de Technologie de Troyes vous invite à découvrir la science autrement, à travers des ateliers, des démonstrations et des échanges autour des savoirs et des technologies.",
+          "retrievedAt": "2026-09-07T19:38:16.715Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1268-6",
+          "url": "https://www.utt.fr/",
+          "excerpt": "Cette manifestation nationale est portée par le Ministère de l’Enseignement Supérieur, de la Recherche et de l'Espace, qui vise à promouvoir la culture scientifique auprès de toutes les générations.",
+          "retrievedAt": "2026-09-07T19:38:16.715Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1268-7",
+          "url": "https://www.utt.fr/",
+          "excerpt": "International Recherche Partenariats Cap sur le Québec : L’UTT concrétise son Hub stratégique transatlantique 26 août 2026 À l’heure où les coopérations technologiques et académiques se recomposent à l’échelle mondiale, l’UTT franchit une nouvelle étape de son développement international hors d’Europe.",
+          "retrievedAt": "2026-09-07T19:38:16.715Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1268-8",
+          "url": "https://www.utt.fr/",
+          "excerpt": "Du 31 août au 4 septembre 2026, le président de l’UTT, Pr Christophe Collet, conduira une délégation au Québec.",
+          "retrievedAt": "2026-09-07T19:38:16.715Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:39:43.515Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1269": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.femto-st.fr/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1269-1",
+          "url": "https://www.femto-st.fr/",
+          "excerpt": "cialisation Intelligente Programmes d&#039;Investissements d&#039;Avenir Projets européens Plateformes technologiques Centrale de technologie MIMENTO Autres plateformes Partenariats Partenaires industriels FEMTO Engineering Laboratoires communs Spin-offs Partenaires institutionnels et académiques Unité d&#039;Appui et de Recherche FCLAB LNE-LTFB Collegium international SMYLE Emploi Un partenariat FEMTO-ST–Diaclone pour accélérer la sélection de nouveaux anticorps Comment identifier rapidement les meilleurs anticorps parmi plusieurs centaines de candidats, sans devoir les purifier au préalable ?",
+          "retrievedAt": "2026-09-07T19:38:18.144Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1269-2",
+          "url": "https://www.femto-st.fr/",
+          "excerpt": "C’est le défi scientifique auquel s’attaquent aujourd’hui les chercheurs de FEMTO-ST, en collaboration avec la société bisontine Diaclone.",
+          "retrievedAt": "2026-09-07T19:38:18.144Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1269-3",
+          "url": "https://www.femto-st.fr/",
+          "excerpt": "Lire la suite FEMTO-ST : Muamer Kadic nommé à l’IUF L’enseignant-chercheur Muamer Kadic intègre la promotion 2026 de l’Institut Universitaire de France en tant que membre senior de la chaire fondamentale, une distinction qui récompense l’excellence de ses travaux sur les métamatériaux.",
+          "retrievedAt": "2026-09-07T19:38:18.144Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1269-4",
+          "url": "https://www.femto-st.fr/",
+          "excerpt": "Lire la suite Collaboration renforcée avec le CNES en tribologie spatiale FEMTO-ST et le CNES unissent leurs expertises pour développer les lubrifiants des futures applications spatiales dans des conditions extrêmes.",
+          "retrievedAt": "2026-09-07T19:38:18.144Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1269-5",
+          "url": "https://www.femto-st.fr/",
+          "excerpt": "nes, Benjamin Dynamic EIS of fuel cells under transient operating conditions for fault detection Energy Conversion and Management (Volume 386, nov 2026 , Pages :122004 (14)) Millet, Jules | Depernet, Daniel | Sari, Ali | Gustin, Frédéric | Helbling, Hugo Multi-polarization scattering model induced by acoustic-elastic analogy for customized versatility of elastic meta-atoms International Journal of Solids and Structures (Volume 339, oct 2026 , Pages :114146 (18)) Tian, Yu-Ze | Cui, Yi-Ming | Cao, Li-Yun | Wang, Yan-Feng | Laude, Vincent | Wang, Yue - Sheng Toutes les publications FEMTO recrute !",
+          "retrievedAt": "2026-09-07T19:38:18.144Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1269-6",
+          "url": "https://www.femto-st.fr/",
+          "excerpt": "MIMENTO : Assistant(e)-Ingénieur(e) en exploitation maintenance et installation des équipements en salle blanche MN2S : Microfluidic instrumentation for studying the ice-forming properties of aerosols.",
+          "retrievedAt": "2026-09-07T19:38:18.144Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1269-7",
+          "url": "https://www.femto-st.fr/",
+          "excerpt": "Application to marine environments Accès rapide Agenda Annuaire institut Documents en ligne Emploi-stage Menu du compte de l&#039;utilisateur Boite à outils Se connecter .",
+          "retrievedAt": "2026-09-07T19:38:18.144Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:39:43.515Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1270": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://people.llnl.gov/pham16"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1270-1",
+          "url": "https://people.llnl.gov/pham16",
+          "excerpt": "gov Skip to main content An official website of the United States government Here's how you know Here’s how you know Official websites use .",
+          "retrievedAt": "2026-09-07T19:38:18.678Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1270-2",
+          "url": "https://people.llnl.gov/pham16",
+          "excerpt": "gov websites use HTTPS A lock ( Lock Locked padlock icon ) or https:// means you’ve safely connected to the .",
+          "retrievedAt": "2026-09-07T19:38:18.678Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1270-3",
+          "url": "https://people.llnl.gov/pham16",
+          "excerpt": "Our Purpose Our Science and Technology Join Our Team Partner with Us News Community and Education About people.",
+          "retrievedAt": "2026-09-07T19:38:18.678Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1270-4",
+          "url": "https://people.llnl.gov/pham16",
+          "excerpt": "gov Search Search Search Tuan Anh Pham Send Email Download Hi-res Title Group Leader, Quantum Simulations Group Email pham16@llnl.",
+          "retrievedAt": "2026-09-07T19:38:18.678Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1270-5",
+          "url": "https://people.llnl.gov/pham16",
+          "excerpt": "gov Phone (925) 423-6501 Organization PLS-MSD-MATERIALS SCIENCE DIVISION Biography Education Publications Awards Research Interests Anh Pham is the Group Leader of the Quantum Simulations Group in Materials Science Division.",
+          "retrievedAt": "2026-09-07T19:38:18.678Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1270-6",
+          "url": "https://people.llnl.gov/pham16",
+          "excerpt": "His r esearch interests lie in the integration of atomistic simulation, high performance computing, and data science for predicting properties of functional materials under non-equilibrium conditions.",
+          "retrievedAt": "2026-09-07T19:38:18.678Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1270-7",
+          "url": "https://people.llnl.gov/pham16",
+          "excerpt": "A particular focus is approaches for bridging simulation methods across broad scales, and for accelerating theory-experiment feedback.",
+          "retrievedAt": "2026-09-07T19:38:18.678Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1270-8",
+          "url": "https://people.llnl.gov/pham16",
+          "excerpt": "Primary topics of interest include energy conversion and storage, degradation and corrosion science, and chemical separation.",
+          "retrievedAt": "2026-09-07T19:38:18.678Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:39:43.515Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1271": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.afresearchlab.com/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1271-1",
+          "url": "https://www.afresearchlab.com/",
+          "excerpt": "Air Force Research Laboratory | Win the Future TECHNOLOGY AEROSPACE ARTIFICIAL INTELLIGENCE BASIC RESEARCH CROSS DOMAIN DIRECTED ENERGY HUMAN PERFORMANCE INFORMATION INTEGRATED CAPABILITIES MATERIALS & MANUFACTURING MUNITIONS QUANTUM SENSORS SPACE Air Force Vanguards AFRL TECH ARCHIVES PARTNER Careers CAREER EMPLOYMENT STUDENTS AND FACULTY AFRL Internship Programs ABOUT LabLife 100 YEARS OF HISTORY AFRL FELLOWS AND ECAS AFRL FIGHTS ON!",
+          "retrievedAt": "2026-09-07T19:38:19.192Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1271-2",
+          "url": "https://www.afresearchlab.com/",
+          "excerpt": "AFRL INSPIRE AFRL REGIONAL NETWORK AFRL TECH VLOG AI TALK BASIC RESEARCH CHATTER COLLABORATION PROGRAMS #HACKINGAF LAB LIFE PODCAST NOT ANOTHER ACRONYM STEM NEWS EVENTS SOCIAL Facebook Twitter/X LinkedIn Instagram Youtube Podcast DVIDS TECHNOLOGY PARTNER WITH AFRL Careers ABOUT LAB LIFE EVENTS AIR FORCE RESEARCH LABORATORY WIN THE FUTURE AFRL Business & Industry Guide (BIG) FREEDOM 250 AFRL Careers LEAD | DISCOVER | DEVELOP | DELIVER AFRL demonstrates neural network control of satellite bus in orbit Jul 28, 2026 | Artificial Intelligence , NEWS , Space read more.",
+          "retrievedAt": "2026-09-07T19:38:19.192Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1271-3",
+          "url": "https://www.afresearchlab.com/",
+          "excerpt": "AFRL, NASA partner to test lunar landing safety; active-duty volunteers needed Jul 23, 2026 | AEROSPACE , Human Performance , NEWS , Space read more.",
+          "retrievedAt": "2026-09-07T19:38:19.192Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1271-4",
+          "url": "https://www.afresearchlab.com/",
+          "excerpt": "AFRL&#8217;s C-STARS Omaha prepares to train USPHS personnel for Ebola response deployment Jul 21, 2026 | Human Performance , NEWS read more.",
+          "retrievedAt": "2026-09-07T19:38:19.192Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1271-5",
+          "url": "https://www.afresearchlab.com/",
+          "excerpt": "VENOM program progresses to piloted flights, autonomy tests Jul 16, 2026 | AEROSPACE , ARTICLE , NEWS read more.",
+          "retrievedAt": "2026-09-07T19:38:19.192Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1271-6",
+          "url": "https://www.afresearchlab.com/",
+          "excerpt": "Air Force Research Laboratory initiatives strengthen warfighting connections Jul 14, 2026 | ARTICLE , NEWS read more.",
+          "retrievedAt": "2026-09-07T19:38:19.192Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1271-7",
+          "url": "https://www.afresearchlab.com/",
+          "excerpt": "Space Force integrates with Air Force in AI sprint to ensure mission dominance Jun 30, 2026 | NEWS , Space read more.",
+          "retrievedAt": "2026-09-07T19:38:19.192Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1271-8",
+          "url": "https://www.afresearchlab.com/",
+          "excerpt": "HOME TECHNOLOGY PARTNER CAREERS ABOUT LABLIFE NEWS EVENTS TERMS SITEMAP Follow Follow Follow Follow Follow Follow Have a question for AFRL?",
+          "retrievedAt": "2026-09-07T19:38:19.192Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:39:43.515Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1272": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.massgeneral.org/pathology/treatments-and-services/dermatopathology"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1272-1",
+          "url": "https://www.massgeneral.org/pathology/treatments-and-services/dermatopathology",
+          "excerpt": "About Massachusetts General Hospital | Mass General Brigham false About Massachusetts General Hospital Massachusetts General Hospital, a founding member of Mass General Brigham, is a teaching hospital of Harvard Medical School.",
+          "retrievedAt": "2026-09-07T19:38:19.883Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1272-2",
+          "url": "https://www.massgeneral.org/pathology/treatments-and-services/dermatopathology",
+          "excerpt": "As a leading world-class academic medical center, we provide advanced medical care based on innovative research and clinical trials.",
+          "retrievedAt": "2026-09-07T19:38:19.883Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1272-3",
+          "url": "https://www.massgeneral.org/pathology/treatments-and-services/dermatopathology",
+          "excerpt": "The image shows the exterior of a large, modern hospital complex with multiple high-rise buildings.",
+          "retrievedAt": "2026-09-07T19:38:19.883Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1272-4",
+          "url": "https://www.massgeneral.org/pathology/treatments-and-services/dermatopathology",
+          "excerpt": "The main entrance is clearly marked, and several people and vehicles are visible in front of the entrance area.",
+          "retrievedAt": "2026-09-07T19:38:19.883Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1272-5",
+          "url": "https://www.massgeneral.org/pathology/treatments-and-services/dermatopathology",
+          "excerpt": "full-fill primary internal Visit the hospital /content/unified-xwalk/en/locations/boston-ma/massachusetts-general-hospital-loc0000246778 secondary internal Find a doctor /content/unified-xwalk/en/search/doctors style palette-deep-blue showJumplinks true Dedicated to innovation and clinical excellence At Massachusetts General Hospital, a founding member of Mass General Brigham, we are committed to providing the highest quality and safest care possible for every patient—near and far.",
+          "retrievedAt": "2026-09-07T19:38:19.883Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1272-6",
+          "url": "https://www.massgeneral.org/pathology/treatments-and-services/dermatopathology",
+          "excerpt": ", we foster a culture of collaboration and education, pushing the boundaries of medical research and maintaining an unwavering commitment to the diverse communities we serve.",
+          "retrievedAt": "2026-09-07T19:38:19.883Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1272-7",
+          "url": "https://www.massgeneral.org/pathology/treatments-and-services/dermatopathology",
+          "excerpt": "Our expert clinicians are leaders in their medical fields and handle the most complex cases.",
+          "retrievedAt": "2026-09-07T19:38:19.883Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1272-8",
+          "url": "https://www.massgeneral.org/pathology/treatments-and-services/dermatopathology",
+          "excerpt": "Today, patients from around New England—and across the globe—trust us for their medical care.",
+          "retrievedAt": "2026-09-07T19:38:19.883Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:39:43.515Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1273": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://ufhealth.org/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1273-1",
+          "url": "https://ufhealth.org/",
+          "excerpt": "UFHealth UF Health Home Search Search Close Menu Find a Doctor Conditions & Treatments Locations Patients & Visitors Clinical Trials Community MyUFHealth Billing Insurance Events Make a gift Careers Volunteer Education Research About Close World-class care , built for you Find a Doctor Find a Location Search Find doctors by these popular areas of care Family Medicine Pediatrics Cardiology Search Find locations by these popular areas of care Family Medicine Pediatrics Cardiology Your health , on your time MyUFHealth is a secure application that lets you manage your health at home and on the go.",
+          "retrievedAt": "2026-09-07T19:38:20.376Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1273-2",
+          "url": "https://ufhealth.org/",
+          "excerpt": "Manage your appointments View your test results Send messages to your doctor Request medication refills Pay your bill Sign in or Sign Up What is MyUFHealth?",
+          "retrievedAt": "2026-09-07T19:38:20.376Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1273-3",
+          "url": "https://ufhealth.org/",
+          "excerpt": "Excellent care, close to home With locations all over Florida, you'll find convenient care for you and your family.",
+          "retrievedAt": "2026-09-07T19:38:20.376Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1273-4",
+          "url": "https://ufhealth.org/",
+          "excerpt": "140 Primary Care & Specialty Practices 2k Health Care Providers 26 Emergency & Urgent Care Locations 5 Dental Locations 12 Hospitals View All Locations Leading the way to better health care Nationally ranked among the best About Our Rankings Get the right care, when you need it Primary Care Choose from our network of highly skilled doctors and providers for your regular care.",
+          "retrievedAt": "2026-09-07T19:38:20.376Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1273-5",
+          "url": "https://ufhealth.org/",
+          "excerpt": "Find Adult Primary Care Find Pediatric Primary Care Specialty Care Our experts are here to treat your unique medical and surgical needs.",
+          "retrievedAt": "2026-09-07T19:38:20.376Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1273-6",
+          "url": "https://ufhealth.org/",
+          "excerpt": "Find Adult Specialty Care Find Pediatric Specialty Care Urgent Care Visit Urgent Care when you can&#039;t wait to be seen by your primary care provider.",
+          "retrievedAt": "2026-09-07T19:38:20.376Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1273-7",
+          "url": "https://ufhealth.org/",
+          "excerpt": "Find Urgent Care Emergency Care Our ER and trauma centers are available 24/7 for when you need immediate help.",
+          "retrievedAt": "2026-09-07T19:38:20.376Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1273-8",
+          "url": "https://ufhealth.org/",
+          "excerpt": "Find Emergency Care Dental Care We offer a complete range of dental and oral health care for adults and children.",
+          "retrievedAt": "2026-09-07T19:38:20.376Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:39:43.515Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1274": {
       "overview": "pending",
