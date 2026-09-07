@@ -3077,7 +3077,8 @@
         "vp-1172",
         "vp-1173"
       ],
-      "status": "pending"
+      "status": "in_progress",
+      "startedAt": "2026-09-07T19:27:05.576Z"
     },
     {
       "number": 59,
@@ -72288,206 +72289,910 @@
       "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1152": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://math.nmsu.edu/emeriti.html"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://math.nmsu.edu/emeriti.html: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:28:05.604Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1153": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://uwaterloo.ca/economics/profile/ttnguyen"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://uwaterloo.ca/economics/profile/ttnguyen: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:28:05.604Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1154": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.fondation-cnrs.org/nous-connaitre/equipe/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1154-1",
+          "url": "https://www.fondation-cnrs.org/nous-connaitre/equipe/",
+          "excerpt": "�PNG \u001a \u0000\u0000\u0000 IHDR\u0000\u0000\u0005�\u0000\u0000\u0002X\b\u0006\u0000\u0000\u0000��A2\u0000\u0000\u0000 pHYs\u0000\u0000 \u0013\u0000\u0000 \u0013\u0001\u0000��\u0018\u0000\u0000\u0000\u0001sRGB\u0000��\u001c�\u0000\u0000\u0000\u0004gAMA\u0000\u0000�� �a\u0005\u0000\u0012/�IDATx\u0001��Y�mIr\u001e�y��g��c�P3� (��\u0004 �\u0000H4�Ɇ�@�[��L�ߠ\u0017����\u001ed�\u0007Y�$�d�\u001aM�@��ʪ�̛��\u001d�\u001dθ�������X{��Y`[��[眽׊\u0015��\u000f�{�����?",
+          "retrievedAt": "2026-09-07T19:27:09.410Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1154-2",
+          "url": "https://www.fondation-cnrs.org/nous-connaitre/equipe/",
+          "excerpt": "׃�C��J�)�Lz%Z�&:88h�W������|�^��j�i���B�w���������J��$�I��yM�'7�����g���jE��ky(�ֶ��ͬV{�� ��`s����\u0019�꣟ӓ�\u001e���>��V���\u001f7��,q��\"���F/�J�+s{�.",
+          "retrievedAt": "2026-09-07T19:27:09.410Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1154-3",
+          "url": "https://www.fondation-cnrs.org/nous-connaitre/equipe/",
+          "excerpt": "�|�_��yֹҾ\u0015L��Q��J��\u0015�; 7�=� �C�O�;n�i$�\u001ecZ)�6�����g\u0012Jqn��併\u0012�:� �Ӕ@��w�_9)}Zs6j2��y��m� ��\u001c'�\u001b��� ������ iW��{|N�\u0000�7��&��\u0010_�c�x�Z��\u0016��M�}���\u001ah;�#^�����\u0017]�j����\u001bs����2K��Ϳ�T���w� �\u0014x�˱�D���\u001d�4Ҹ~R��&�G�UD\u0016���8�|�\u001dS��Jڞ����TD�t\u0019\u001dz���5.",
+          "retrievedAt": "2026-09-07T19:27:09.410Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1154-4",
+          "url": "https://www.fondation-cnrs.org/nous-connaitre/equipe/",
+          "excerpt": "���wI���������w��W�kz�ï���\u0019=�����'������t��\u001b��\u000f�ŋ�t��M�s�\u001e���|��~�+�����������?",
+          "retrievedAt": "2026-09-07T19:27:09.410Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1154-5",
+          "url": "https://www.fondation-cnrs.org/nous-connaitre/equipe/",
+          "excerpt": "��6�\u0007(E�����O���q�\u001e��J�pv�+a�5 �\"�>\u001f�ߠ�\u0014t\u0016os�\"�y�\u0005ng~��y�m\"�-��nh�����+�l�j�\u0001�m�f�m.",
+          "retrievedAt": "2026-09-07T19:27:09.410Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1154-6",
+          "url": "https://www.fondation-cnrs.org/nous-connaitre/equipe/",
+          "excerpt": "֪_�|Z���sm��{�\u000e}냷��`��\u001d�m�١� � S �7�˧Iy��UE��κɢu�g��}���D��m��s��-:�y��n�)�\u001e��qyyAO�=�Ǐ\u001e�\u001e\u0006���8�\u0017I�DnT�f�)D?",
+          "retrievedAt": "2026-09-07T19:27:09.410Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1154-7",
+          "url": "https://www.fondation-cnrs.org/nous-connaitre/equipe/",
+          "excerpt": "[�@i�mw�[`�ԚFr� �\u001cz�h0��o�[��{���\u001bG���U\u0014{hsu��5�����ߓg��-�X/a\u001ac�>��з�W&�[�n�� \u0017Y��\u00034�\u0017�NuR'H���\u0004��I�lo%�\"b�\u0006���0�g��Yl}�J�V�W�zd�t� �-�,�\u0007��T諸Ox�gө�\u001fb���}M�nJA�*&� $3��\u0014�pv�'�1�2�\u0004�m����-�&%�іH�Yܳ�Y�B/}m�l���0���wۯ�]��X֓��9�gxF\u0012\u001d:>c#l���&כE�4{c����r^�uR[��`k\u0004���?",
+          "retrievedAt": "2026-09-07T19:27:09.410Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1154-8",
+          "url": "https://www.fondation-cnrs.org/nous-connaitre/equipe/",
+          "excerpt": "�\u0010�E�&'\b |\u0007\u001a@�\u0002������mK;��5 ���V\"\u001a\u001d\u001dX�>\u0001����s@��\u0001d��M9\u0007(\u0017x~���Q��x��۽� mJw��a���)�$o�wP����u�\u001b���L\u0003\u0005�ʔLkW]Q\u001c_a\u001fk\u0000A\u001e y^�9�/���?",
+          "retrievedAt": "2026-09-07T19:27:09.410Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:28:05.604Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1155": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.macfound.org/fellows/class-of-2007/my-hang-huynh"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1155-1",
+          "url": "https://www.macfound.org/fellows/class-of-2007/my-hang-huynh",
+          "excerpt": "riminal Justice Local News Awards 100&Change MacArthur Fellows Enduring Commitments Chicago Commitment Journalism & Media Field Support Impact Investments Philanthropy Technology in the Public Interest Initiatives Native Self-Determination New Work Nigeria Next Past Work Learnings Evaluation Strategy Evaluations Grantee Research Perspectives About Mission and Values How We Work Reflections & Annual Essays Our History Financials Investments Policies Employment FAQs Contact Us Communication Guidelines Press & Media Information Stay Informed Sign up for periodic news updates and event invitations.",
+          "retrievedAt": "2026-09-07T19:27:09.746Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1155-2",
+          "url": "https://www.macfound.org/fellows/class-of-2007/my-hang-huynh",
+          "excerpt": "View Privacy Policy Submit Menu Account Login Login into your grantee account, reset your password, or submit an idea to the MacArthur Foundation.",
+          "retrievedAt": "2026-09-07T19:27:09.746Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1155-3",
+          "url": "https://www.macfound.org/fellows/class-of-2007/my-hang-huynh",
+          "excerpt": "Login or Submit Idea Programs Awards Fellows My Hang Huynh My Hang Huynh Chemist Class of 2007 Developing novel techniques for synthesizing highly energetic compounds, such as explosives, that substitute benign elements for environmentally toxic heavy metals and improve the safety of workers and military personnel who handle these materials.",
+          "retrievedAt": "2026-09-07T19:27:09.746Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1155-4",
+          "url": "https://www.macfound.org/fellows/class-of-2007/my-hang-huynh",
+          "excerpt": "Location Los Alamos, New Mexico Age 45 at time of award Area of Focus Chemistry About My Hang's Work My Hang Huynh is a scientist working at the boundary of organic and inorganic chemistry to devise novel techniques for synthesizing highly energetic compounds.",
+          "retrievedAt": "2026-09-07T19:27:09.746Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1155-5",
+          "url": "https://www.macfound.org/fellows/class-of-2007/my-hang-huynh",
+          "excerpt": "Energetic compounds such as explosives are employed in a wide variety of applications but pose hazards in two respects: thermostability and environmental contamination.",
+          "retrievedAt": "2026-09-07T19:27:09.746Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1155-6",
+          "url": "https://www.macfound.org/fellows/class-of-2007/my-hang-huynh",
+          "excerpt": "Huynh has developed a new class of reactions based on constituents such as azides and alkynes that address both issues.",
+          "retrievedAt": "2026-09-07T19:27:09.746Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1155-7",
+          "url": "https://www.macfound.org/fellows/class-of-2007/my-hang-huynh",
+          "excerpt": "The thermodynamic properties of substances she has synthesized make them remarkably stable under a wide temperature range, and their structure allows the substitution of toxic heavy metals such as lead or mercury with more benign elements like copper and iron.",
+          "retrievedAt": "2026-09-07T19:27:09.746Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1155-8",
+          "url": "https://www.macfound.org/fellows/class-of-2007/my-hang-huynh",
+          "excerpt": "Moreover, the methods that she has developed highlight the potential for nitrogen-based reaction centers to serve as the backbone in the synthesis of complex molecules, challenging the orthodoxy of synthetic approaches based on covalent carbon bonding in organic chemistry.",
+          "retrievedAt": "2026-09-07T19:27:09.746Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:28:05.604Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1156": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.deakin.edu.au/about-deakin/people/ly-tran"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.deakin.edu.au/about-deakin/people/ly-tran: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T19:28:05.604Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1157": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://science.jpl.nasa.gov/people/hien-nguyen/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://science.jpl.nasa.gov/people/hien-nguyen/: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:28:05.604Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1158": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://math.univ-cotedazur.fr/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1158-1",
+          "url": "https://math.univ-cotedazur.fr/",
+          "excerpt": "Home | Mathématiques et Interactions à Nice Skip to main content User account menu Log in Search Mathématiques et Interactions à Nice Main navigation Recherche Enseignement Annuaire Wiki RECHERCHE Directeur: Thierry GOUDON Secrétaire général: Ahmed AHMED Téléphone : +33 (0)4 89 15 05 10 Laboratoire J.",
+          "retrievedAt": "2026-09-07T19:27:11.311Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1158-2",
+          "url": "https://math.univ-cotedazur.fr/",
+          "excerpt": "6108 Nice CEDEX 2 France Subscribe to Charte De Conduite et D'Environnement Professionnel Postes POSTES 2026 Actualités et Annonces MECABIONIC Lancement de l’Institut Fédératif de Recherche… CPJ math for Neurosciences LJAD and… PhD Awards Congratulations to Gianluigi Lopardo https:/… ANR 2025 L'ANR a retenu les projets OCARINA… IUF 2025 Congratulations to … Agenda Spectral characterizations of central limit theorems for functionals of stationary Gaussian fields Tue, 09/08/2026 - 14:00 Moduli spaces of connections and spectral curves: WKB or Topological Recursion, the role of integrable systems.",
+          "retrievedAt": "2026-09-07T19:27:11.311Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:28:05.604Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1159": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://arxiv.org/abs/2404.14376v1"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1159-1",
+          "url": "https://arxiv.org/abs/2404.14376v1",
+          "excerpt": "14376v1] The Life and Legacy of Bui Tuong Phong Skip to main content Search Submit Donate Log in Search arXiv Press Enter to search &middot; Advanced search --> Computer Science > Graphics arXiv:2404.",
+          "retrievedAt": "2026-09-07T19:27:11.534Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1159-2",
+          "url": "https://arxiv.org/abs/2404.14376v1",
+          "excerpt": "14376v1 (cs) [Submitted on 22 Apr 2024 (this version), latest version 23 Jul 2024 ( v2 )] Title: The Life and Legacy of Bui Tuong Phong Authors: Yoehan Oh , Jacinda Tran , Theodore Kim View a PDF of the paper titled The Life and Legacy of Bui Tuong Phong, by Yoehan Oh and Jacinda Tran and Theodore Kim View PDF HTML (experimental) Abstract: We examine the life and legacy of pioneering Vietnamese American computer scientist Bùi Tuong Phong, whose shading and lighting models turned 50 last year.",
+          "retrievedAt": "2026-09-07T19:27:11.534Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1159-3",
+          "url": "https://arxiv.org/abs/2404.14376v1",
+          "excerpt": "We trace the trajectory of his life through Vietnam, France, and the United States, and its intersections with global conflicts.",
+          "retrievedAt": "2026-09-07T19:27:11.534Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1159-4",
+          "url": "https://arxiv.org/abs/2404.14376v1",
+          "excerpt": "Crucially, we present evidence that his name has been cited incorrectly over the last five decades.",
+          "retrievedAt": "2026-09-07T19:27:11.534Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1159-5",
+          "url": "https://arxiv.org/abs/2404.14376v1",
+          "excerpt": "By presenting these facts at SIGGRAPH, we hope to collect more information about his life, and ensure that his name is remembered correctly in the future.",
+          "retrievedAt": "2026-09-07T19:27:11.534Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1159-6",
+          "url": "https://arxiv.org/abs/2404.14376v1",
+          "excerpt": "14376 Focus to learn more arXiv-issued DOI via DataCite Submission history From: Theodore Kim [ view email ] [v1] Mon, 22 Apr 2024 17:28:52 UTC (5,702 KB) [v2] Tue, 23 Jul 2024 20:00:25 UTC (6,900 KB) Full-text links: Access Paper: View a PDF of the paper titled The Life and Legacy of Bui Tuong Phong, by Yoehan Oh and Jacinda Tran and Theodore Kim View PDF HTML (experimental) TeX Source view license Current browse context: cs.",
+          "retrievedAt": "2026-09-07T19:27:11.534Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1159-7",
+          "url": "https://arxiv.org/abs/2404.14376v1",
+          "excerpt": "GR &lt; prev | next &gt; new | recent | 2024-04 Change to browse by: cs References & Citations NASA ADS Google Scholar Semantic Scholar export BibTeX citation Loading.",
+          "retrievedAt": "2026-09-07T19:27:11.534Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1159-8",
+          "url": "https://arxiv.org/abs/2404.14376v1",
+          "excerpt": "Data provided by: Bookmark Bibliographic Tools Bibliographic and Citation Tools Bibliographic Explorer Toggle Bibliographic Explorer ( What is the Explorer?",
+          "retrievedAt": "2026-09-07T19:27:11.534Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:28:05.604Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1160": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://en.wikipedia.org/wiki/B%E1%BB%ADu_H%E1%BB%99i"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1160-1",
+          "url": "https://en.wikipedia.org/wiki/B%E1%BB%ADu_H%E1%BB%99i",
+          "excerpt": "Bửu Hội - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account Log in Personal tools Donate Create account Log in Contents move to sidebar hide (Top) 1 Family 2 Education 3 Scientific work Toggle Scientific work subsection 3.",
+          "retrievedAt": "2026-09-07T19:27:11.857Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1160-2",
+          "url": "https://en.wikipedia.org/wiki/B%E1%BB%ADu_H%E1%BB%99i",
+          "excerpt": "3 Chemical carcinogenesis 4 Professional appointments 5 Political pursuits Toggle Political pursuits subsection 5.",
+          "retrievedAt": "2026-09-07T19:27:11.857Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1160-3",
+          "url": "https://en.wikipedia.org/wiki/B%E1%BB%ADu_H%E1%BB%99i",
+          "excerpt": "er in Da Lat 6 Awards 7 Death 8 References 9 Sources Toggle the table of contents Bửu Hội 3 languages Français Tiếng Việt 中文 Edit links Article Talk English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Upload file Permanent link Page information Cite this page Get shortened URL Switch to legacy parser Print/export Download as PDF Printable version In other projects Wikimedia Commons Wikidata item Appearance move to sidebar hide From Wikipedia, the free encyclopedia In this Vietnamese name , the surname is Nguyễn .",
+          "retrievedAt": "2026-09-07T19:27:11.857Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1160-4",
+          "url": "https://en.wikipedia.org/wiki/B%E1%BB%ADu_H%E1%BB%99i",
+          "excerpt": "In accordance with Vietnamese custom, this person should be referred to by the given name , Bửu Hội .",
+          "retrievedAt": "2026-09-07T19:27:11.857Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1160-5",
+          "url": "https://en.wikipedia.org/wiki/B%E1%BB%ADu_H%E1%BB%99i",
+          "excerpt": "Vietnamese diplomat, scientist and cancer researcher Nguyễn Phúc Bửu Hội Born 1915 ( 1915 ) Huế Died January 28, 1972 (1972-01-28) (aged 56–57) Parent Ưng Úy Prince Nguyễn Phúc Bửu Hội ( c.",
+          "retrievedAt": "2026-09-07T19:27:11.857Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1160-6",
+          "url": "https://en.wikipedia.org/wiki/B%E1%BB%ADu_H%E1%BB%99i",
+          "excerpt": "1915 – 28 January 1972) was a Vietnamese diplomat, scientist and cancer researcher.",
+          "retrievedAt": "2026-09-07T19:27:11.857Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1160-7",
+          "url": "https://en.wikipedia.org/wiki/B%E1%BB%ADu_H%E1%BB%99i",
+          "excerpt": "[ 1 ] [ 2 ] He was a great-great-grandson of Emperor Minh Mạng , who ruled Vietnam from 1820 until his death in 1841.",
+          "retrievedAt": "2026-09-07T19:27:11.857Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1160-8",
+          "url": "https://en.wikipedia.org/wiki/B%E1%BB%ADu_H%E1%BB%99i",
+          "excerpt": "Mạng had been a staunch Confucianist , known for his conservative philosophy, in which he shunned the western world and technological and scientific innovations.",
+          "retrievedAt": "2026-09-07T19:27:11.857Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:28:05.604Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1161": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://en.wikipedia.org/wiki/L%C3%AA_D%C5%A9ng_Tr%C3%A1ng"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1161-1",
+          "url": "https://en.wikipedia.org/wiki/L%C3%AA_D%C5%A9ng_Tr%C3%A1ng",
+          "excerpt": "s Toggle the table of contents Lê Dũng Tráng 3 languages Deutsch Français Tiếng Việt Edit links Article Talk English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Upload file Permanent link Page information Cite this page Get shortened URL Switch to legacy parser Print/export Download as PDF Printable version In other projects Wikimedia Commons Wikidata item Appearance move to sidebar hide From Wikipedia, the free encyclopedia Vietnamese-French mathematician (1947–2025) In this Vietnamese name , the surname is Lê .",
+          "retrievedAt": "2026-09-07T19:27:11.909Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1161-2",
+          "url": "https://en.wikipedia.org/wiki/L%C3%AA_D%C5%A9ng_Tr%C3%A1ng",
+          "excerpt": "In accordance with Vietnamese custom, this person should be referred to by the given name , Tráng .",
+          "retrievedAt": "2026-09-07T19:27:11.909Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1161-3",
+          "url": "https://en.wikipedia.org/wiki/L%C3%AA_D%C5%A9ng_Tr%C3%A1ng",
+          "excerpt": "Find sources: \"Lê Dũng Tráng\" – news · newspapers · books · scholar · JSTOR ( June 2014 ) ( Learn how and when to remove this message ) Tráng in 2004 Lê Dũng Tráng (27 July 1947 – 19 November 2025) was a Vietnamese-French mathematician.",
+          "retrievedAt": "2026-09-07T19:27:11.909Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1161-4",
+          "url": "https://en.wikipedia.org/wiki/L%C3%AA_D%C5%A9ng_Tr%C3%A1ng",
+          "excerpt": "degree at the University of Paris in 1969 and 1971 under the supervision of Claude Chevalley and Pierre Deligne .",
+          "retrievedAt": "2026-09-07T19:27:11.909Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1161-5",
+          "url": "https://en.wikipedia.org/wiki/L%C3%AA_D%C5%A9ng_Tr%C3%A1ng",
+          "excerpt": "[ 1 ] From 1975 to 1999, he was professor at the University of Paris VII and research director of the CNRS .",
+          "retrievedAt": "2026-09-07T19:27:11.909Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1161-6",
+          "url": "https://en.wikipedia.org/wiki/L%C3%AA_D%C5%A9ng_Tr%C3%A1ng",
+          "excerpt": "From 2002 to 2009, he headed the department of mathematics at the International Centre for Theoretical Physics (ICTP), in Trieste , Italy.",
+          "retrievedAt": "2026-09-07T19:27:11.909Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1161-7",
+          "url": "https://en.wikipedia.org/wiki/L%C3%AA_D%C5%A9ng_Tr%C3%A1ng",
+          "excerpt": "Tráng was a frequent guest scientist at Harvard University (with Heisuke Hironaka ) and Northeastern University (with Terence Gaffney and David B.",
+          "retrievedAt": "2026-09-07T19:27:11.909Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1161-8",
+          "url": "https://en.wikipedia.org/wiki/L%C3%AA_D%C5%A9ng_Tr%C3%A1ng",
+          "excerpt": "He was particularly concerned with singularity theory in the complex domain ( Milnor fibrations , perverse sheaves ).",
+          "retrievedAt": "2026-09-07T19:27:11.909Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:28:05.604Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1162": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://en.wikipedia.org/wiki/Ng%C3%B4_%C4%90%E1%BB%93ng"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1162-1",
+          "url": "https://en.wikipedia.org/wiki/Ng%C3%B4_%C4%90%E1%BB%93ng",
+          "excerpt": "m Vietnam 4 Notes 5 Sources 6 External links Toggle the table of contents Ngô Đồng 1 language Tiếng Việt Edit links Article Talk English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Upload file Permanent link Page information Cite this page Get shortened URL Switch to legacy parser Print/export Download as PDF Printable version In other projects Wikidata item Appearance move to sidebar hide From Wikipedia, the free encyclopedia Vietnamese-American entomologist and martial artist This article needs more citations .",
+          "retrievedAt": "2026-09-07T19:27:12.151Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1162-2",
+          "url": "https://en.wikipedia.org/wiki/Ng%C3%B4_%C4%90%E1%BB%93ng",
+          "excerpt": "Find sources: \"Ngô Đồng\" – news · newspapers · books · scholar · JSTOR ( May 2010 ) ( Learn how and when to remove this message ) Ngo Dong Born South Vietnam Died ( 2000-05-15 ) May 15, 2000 Education University of Florida Known for Founding Cuong Nhu Oriental Martial Arts Ngô Đồng (born South Vietnam - died 15 May 2000), known also by the Japanese title O Sensei , was a Vietnam-born naturalised American entomologist and martial arts instructor.",
+          "retrievedAt": "2026-09-07T19:27:12.151Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1162-3",
+          "url": "https://en.wikipedia.org/wiki/Ng%C3%B4_%C4%90%E1%BB%93ng",
+          "excerpt": "He is chiefly known as the founder and grandmaster of the international school of Cuong Nhu Oriental Martial Arts .",
+          "retrievedAt": "2026-09-07T19:27:12.151Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1162-4",
+          "url": "https://en.wikipedia.org/wiki/Ng%C3%B4_%C4%90%E1%BB%93ng",
+          "excerpt": "Having served as a college president in South Vietnam before the fall of Saigon in 1975, he spent time in a re-education camp until escaping in a small boat.",
+          "retrievedAt": "2026-09-07T19:27:12.151Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1162-5",
+          "url": "https://en.wikipedia.org/wiki/Ng%C3%B4_%C4%90%E1%BB%93ng",
+          "excerpt": "He taught entomology at the University of Florida while continuing to guide the international Cuong Nhu martial arts community.",
+          "retrievedAt": "2026-09-07T19:27:12.151Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1162-6",
+          "url": "https://en.wikipedia.org/wiki/Ng%C3%B4_%C4%90%E1%BB%93ng",
+          "excerpt": "Biography [ edit ] From 1961 to 1971 he was a professor in the Department of Biology of Hue University , South Vietnam , during which time he founded the Cuong Nhu style of martial arts.",
+          "retrievedAt": "2026-09-07T19:27:12.151Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1162-7",
+          "url": "https://en.wikipedia.org/wiki/Ng%C3%B4_%C4%90%E1%BB%93ng",
+          "excerpt": "After the devastating 1968 Tet Offensive and the communist Massacre at Hue , Grandmaster Dong organized a civil defense organization, the People's Self-Defense Forces of Hue, to help protect the public from the violence spawned by the war.",
+          "retrievedAt": "2026-09-07T19:27:12.151Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1162-8",
+          "url": "https://en.wikipedia.org/wiki/Ng%C3%B4_%C4%90%E1%BB%93ng",
+          "excerpt": "His organization engaged some 25,000 people in a program of karate, games and friendly competition to rebuild morale and spirit during the Vietnam War .",
+          "retrievedAt": "2026-09-07T19:27:12.151Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:28:05.604Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1163": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://en.wikipedia.org/wiki/Tr%E1%BA%A7n_Quang_H%E1%BA%A3i"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1163-1",
+          "url": "https://en.wikipedia.org/wiki/Tr%E1%BA%A7n_Quang_H%E1%BA%A3i",
+          "excerpt": "links here Related changes Upload file Permanent link Page information Cite this page Get shortened URL Switch to legacy parser Print/export Download as PDF Printable version In other projects Wikidata item Appearance move to sidebar hide From Wikipedia, the free encyclopedia Vietnamese ethnomusicologist Trần Quang Hải Born ( 1944-05-13 ) 13 May 1944 Gia Định , French Indochina Died 28 December 2021 (2021-12-28) (aged 77) Limeil-Brévannes , France Occupation Ethnomusicologist Parent Trần Văn Khê (father) Trần Quang Hải (13 May 1944 [ 1 ] – 28 December 2021) was a Vietnamese ethnomusicologist .",
+          "retrievedAt": "2026-09-07T19:27:12.370Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1163-2",
+          "url": "https://en.wikipedia.org/wiki/Tr%E1%BA%A7n_Quang_H%E1%BA%A3i",
+          "excerpt": "[ 2 ] Hải died on 28 December 2021 of blood cancer in Limeil-Brévannes , at the age of 77.",
+          "retrievedAt": "2026-09-07T19:27:12.370Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1163-3",
+          "url": "https://en.wikipedia.org/wiki/Tr%E1%BA%A7n_Quang_H%E1%BA%A3i",
+          "excerpt": "\"Nghệ sĩ Trần Quang Hải, người tiếp nối sự nghiệp GS Trần Văn Khê, qua đời ở Pháp\" .",
+          "retrievedAt": "2026-09-07T19:27:12.370Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1163-4",
+          "url": "https://en.wikipedia.org/wiki/Tr%E1%BA%A7n_Quang_H%E1%BA%A3i",
+          "excerpt": "Authority control databases International ISNI VIAF GND WorldCat National United States France BnF data Netherlands Norway Israel Belgium Artists MusicBrainz People Trove Other IdRef This Vietnamese biographical article is a stub .",
+          "retrievedAt": "2026-09-07T19:27:12.370Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1163-5",
+          "url": "https://en.wikipedia.org/wiki/Tr%E1%BA%A7n_Quang_H%E1%BA%A3i",
+          "excerpt": "title=Trần_Quang_Hải&oldid=1344300319 \" Categories : 1944 births 2021 deaths Vietnamese ethnomusicologists Knights of the Legion of Honour Deaths from blood cancer in France Musicians from Ho Chi Minh City Vietnamese people stubs Hidden categories: Articles with short description Short description is different from Wikidata Use dmy dates from March 2026 Articles with hCards CS1 Vietnamese-language sources (vi) All stub articles This page was last edited on 19 March 2026, at 15:58 &#160;(UTC) .",
+          "retrievedAt": "2026-09-07T19:27:12.370Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:28:05.604Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1164": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.grinnell.edu/user/buithuha",
         "https://www.thuhabui.com/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1164-1",
+          "url": "https://www.grinnell.edu/user/buithuha",
+          "excerpt": "l Financial Aid and Cost of Attendance Visit Grinnell Apply to Grinnell Academics Expand Majors, Concentrations, and Career Pathways The Academic Experience Global Learning Centers, Programs, and Resources Libraries Academic Advising at Grinnell Life at Grinnell Expand Distinctly Grinnellian Student Life Athletics Arts & Culture Beyond Campus Health, Wellness, & Recreation Transportation Civic Engagement Student Organizations After Grinnell Expand Center for Careers, Life, and Service Graduate Outcomes Grinnellians Around the Globe Alumni Outcomes Stories Alumni Contact Email buithuha@grinnell.",
+          "retrievedAt": "2026-09-07T19:27:12.849Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1164-2",
+          "url": "https://www.grinnell.edu/user/buithuha",
+          "excerpt": "edu Phone 641-269-4025 Address Humanities and Social Studies Center, Room S3350 1226 Park St.",
+          "retrievedAt": "2026-09-07T19:27:12.849Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1164-3",
+          "url": "https://www.grinnell.edu/user/buithuha",
+          "excerpt": "Grinnell , IA 50112 United States Personal Website Ha Bui Assistant Professor Offices, Departments, or Centers: Economics , Ha Bui, Assistant Professor, received a B.",
+          "retrievedAt": "2026-09-07T19:27:12.849Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1164-4",
+          "url": "https://www.grinnell.edu/user/buithuha",
+          "excerpt": "Her research interests are in the areas of Macroeconomics and International Economics, including inequality, monetary policy, expectation formation, information frictions, and global value chains.",
+          "retrievedAt": "2026-09-07T19:27:12.849Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1164-5",
+          "url": "https://www.grinnell.edu/user/buithuha",
+          "excerpt": "00 Directions and Map Museum of Art Athletics Bookstore Careers Policies PRIVACY STATEMENT Consumer Information Sexual Respect Web Accessibility Statement Facebook Instagram Linkedin Tiktok Youtube Nondiscrimination Statement: Grinnell College does not discriminate on the basis of race, color, ethnicity, national origin, age, sex, gender, sexual orientation, gender identity or expression, marital status, veteran status, pregnancy, childbirth, religion, disability, creed or any other protected class, in admission, employment, housing, education, services, and all other activities of the College.",
+          "retrievedAt": "2026-09-07T19:27:12.849Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1164-6",
+          "url": "https://www.grinnell.edu/user/buithuha",
+          "excerpt": "For additional information, see the full policy We use cookies to enable essential services and functionality on our site, enhance your user experience, provide better service through personalized content, collect data on how visitors interact with our site, and enable advertising services.",
+          "retrievedAt": "2026-09-07T19:27:12.849Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1164-7",
+          "url": "https://www.grinnell.edu/user/buithuha",
+          "excerpt": "&quot; For more information about our use of cookies and how to opt out, please refer to our website privacy policy.",
+          "retrievedAt": "2026-09-07T19:27:12.849Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1164-8",
+          "url": "https://www.thuhabui.com/",
+          "excerpt": "Ha Bui Search this site Embedded Files Skip to main content Skip to navigation Ha Bui Home Research Teaching CV Ha Bui Home Research Teaching CV More Home Research Teaching CV Ha Bui Assistant Professor Department of Economics Grinnell College Welcome and thank you for visiting my website!",
+          "retrievedAt": "2026-09-07T19:27:13.309Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1164-9",
+          "url": "https://www.thuhabui.com/",
+          "excerpt": "I am a n Assistant Professor in the Department of Economics at Grinnell College .",
+          "retrievedAt": "2026-09-07T19:27:13.309Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1164-10",
+          "url": "https://www.thuhabui.com/",
+          "excerpt": "My primary areas of interests are in Macroeconomics and International Economics .",
+          "retrievedAt": "2026-09-07T19:27:13.309Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:28:05.604Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1165": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://cci.utk.edu/sis/about/directory/joy-marie-doan/",
         "https://utk.academia.edu/JoyDoan"
       ],
-      "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "evidence": [
+        {
+          "id": "vp-1165-1",
+          "url": "https://cci.utk.edu/sis/about/directory/joy-marie-doan/",
+          "excerpt": "Experience Student Experience Overview Student Organizations Undergraduate Careers Graduate Careers Labs & Facilities ↗ Alumni & Friends Alumni & Friends Overview Advisory Board Alumni Engagement About Information Sciences About Information Sciences Overview Faculty & Staff Directory Faculty Showcase Visit Us Home About Information Sciences Directory Joy Marie Doan Joy Marie Doan Associate Professor of Practice Contact Information [email&#160;protected] Joy Marie Doan is an associate professor of practice in the School of Information Sciences (SIS) at the University of Tennessee Knoxville (UT).",
+          "retrievedAt": "2026-09-07T19:27:14.621Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1165-2",
+          "url": "https://cci.utk.edu/sis/about/directory/joy-marie-doan/",
+          "excerpt": "Prior to joining the faculty at UT in January 2021, Joy-Marie worked as an academic librarian at University of Miami; Northwestern University; California State University, Northridge; and the University of California, Los Angeles.",
+          "retrievedAt": "2026-09-07T19:27:14.621Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1165-3",
+          "url": "https://cci.utk.edu/sis/about/directory/joy-marie-doan/",
+          "excerpt": "Doan has published and presented extensively in the areas of academic libraries and access and belonging.",
+          "retrievedAt": "2026-09-07T19:27:14.621Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1165-4",
+          "url": "https://cci.utk.edu/sis/about/directory/joy-marie-doan/",
+          "excerpt": "She also has extensive experience with grants and has served as a grant reviewer for the Institute of Museum and Library Services (IMLS) and USArtists International.",
+          "retrievedAt": "2026-09-07T19:27:14.621Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1165-5",
+          "url": "https://cci.utk.edu/sis/about/directory/joy-marie-doan/",
+          "excerpt": "Doan&#8217;s fellowship experiences at Rutger&#8217;s University Institute of Jazz Studies and the Association of Research Libraries, as well as her experiences as an intern at the Smithsonian Institute&#8217;s National Museum of American History have greatly informed her research, LIS professional trajectory, and pedagogical praxis.",
+          "retrievedAt": "2026-09-07T19:27:14.621Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1165-6",
+          "url": "https://cci.utk.edu/sis/about/directory/joy-marie-doan/",
+          "excerpt": "At SIS, she advises students on the public and academic library pathways, emphasizing the importance of blending theoretical knowledge and practical application.",
+          "retrievedAt": "2026-09-07T19:27:14.621Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1165-7",
+          "url": "https://cci.utk.edu/sis/about/directory/joy-marie-doan/",
+          "excerpt": "She teaches courses information foundations and concepts, information organization and retrieval, academic libraries, grant development, collection development and management.",
+          "retrievedAt": "2026-09-07T19:27:14.621Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1165-8",
+          "url": "https://cci.utk.edu/sis/about/directory/joy-marie-doan/",
+          "excerpt": "Joy-Marie also serves as the faculty advisor for the SIS student chapter of ALA.",
+          "retrievedAt": "2026-09-07T19:27:14.621Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
+      "errors": [
+        "https://utk.academia.edu/JoyDoan: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T19:28:05.604Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1166": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://dornsife.usc.edu/profile/viet-nguyen/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1166-1",
+          "url": "https://dornsife.usc.edu/profile/viet-nguyen/",
+          "excerpt": "Viet Nguyen - USC Dornsife Skip to Content Open Site Navigation / Menu Search What are you looking for?",
+          "retrievedAt": "2026-09-07T19:27:14.986Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1166-2",
+          "url": "https://dornsife.usc.edu/profile/viet-nguyen/",
+          "excerpt": "What you're looking for Submit News and Events Public Exchange Info For Current Students Faculty Staff Directories Faculty Directory Staff Directory Alumni Giving USC.",
+          "retrievedAt": "2026-09-07T19:27:14.986Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1166-3",
+          "url": "https://dornsife.usc.edu/profile/viet-nguyen/",
+          "excerpt": "edu The Dornsife Difference Back The Academy in the Public Square Beyond the laboratories, research centers and classrooms, USC Dornsife serves as a dynamic intellectual resource that is woven into the fabric of our communities.",
+          "retrievedAt": "2026-09-07T19:27:14.986Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1166-4",
+          "url": "https://dornsife.usc.edu/profile/viet-nguyen/",
+          "excerpt": "erization Center for Applied Mathematical Sciences Center for Quantum Information and Science Technology Center of Excellence in Molecular Characterization Center of Excellence in NanoBiophysics Core Center of Excellence in Nano Imaging Loker Hydrocarbon Research Institute Statewide California Earthquake Center The Plastics Problem The Urban Critical Zone Explore All Browse all of our departments, programs, centers, and institutes Viet Nguyen University Professor, Aerol Arnold Chair of English and Professor of English, American Studies and Ethnicity and Comparative Literature Email vnguyen@usc.",
+          "retrievedAt": "2026-09-07T19:27:14.986Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1166-5",
+          "url": "https://dornsife.usc.edu/profile/viet-nguyen/",
+          "excerpt": "edu Office THH 404D Office Phone (213) 740-3746 Links My Website diaCRITICS: on Vietnamese and diasporic arts, culture and politics DVAN: the Diasporic Vietnamese Artists Network Center for Transpacific Studies Biography Viet Thanh Nguyen&rsquo;s novel The Sympathizer is a New York Times best seller and won the Pulitzer Prize for Fiction.",
+          "retrievedAt": "2026-09-07T19:27:14.986Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1166-6",
+          "url": "https://dornsife.usc.edu/profile/viet-nguyen/",
+          "excerpt": "Other honors include the Dayton Literary Peace Prize, the Edgar Award for Best First Novel from the Mystery Writers of America, the First Novel Prize from the Center for Fiction, the Andrew Carnegie Medal for Literary Excellence from the American Library Association, a California Book Award, and the Asian/Pacific American Award for Literature in Fiction from the Asian/Pacific American Librarians Association.",
+          "retrievedAt": "2026-09-07T19:27:14.986Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1166-7",
+          "url": "https://dornsife.usc.edu/profile/viet-nguyen/",
+          "excerpt": "Bingham Prize for Debut Fiction, the PEN Faulkner Award, and an LA Times Book Prize in the Mystery/Thriller category, The Sympathizer made it to over thirty best of the year lists, including those of the New York Times , Publishers Weekly , Amazon.",
+          "retrievedAt": "2026-09-07T19:27:14.986Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1166-8",
+          "url": "https://dornsife.usc.edu/profile/viet-nguyen/",
+          "excerpt": "com, Public Books , Kirkus Reviews , The Guardian, Library Journal, Flavorwire, and BuzzFeed , among other venues .",
+          "retrievedAt": "2026-09-07T19:27:14.986Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:28:05.604Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1167": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://medicine.duke.edu/profile/thuy-le"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1167-1",
+          "url": "https://medicine.duke.edu/profile/thuy-le",
+          "excerpt": "Fellowship Programs Medical Student Education Training Sites Our Trainees Trainee Career Development About Duke and Durham News toggle sub nav items Calendar of Events Annual Reports Utility Give Home 315 Trent Drive, Room #257, Durham, NC 27710 Mailing address Duke Box 102359, Durham, NC 27710, Durham, NC 27710 Thuy Le Positions Associate Professor of Medicine Associate Professor of Molecular Genetics and Microbiology Affiliate, Duke Global Health Institute 315 Trent Drive, Room #257, Durham, NC 27710 Mailing address Duke Box 102359, Durham, NC 27710, Durham, NC 27710 Infectious Diseases thuy.",
+          "retrievedAt": "2026-09-07T19:27:15.745Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1167-2",
+          "url": "https://medicine.duke.edu/profile/thuy-le",
+          "excerpt": "edu Main navigation About the Department Divisions Faculty Patient Care Research Education and Training News Footer Careers Giving About Duke and Durham Terms and Conditions Give medschool.",
+          "retrievedAt": "2026-09-07T19:27:15.745Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:28:05.604Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1170": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://comp.anu.edu.au/people/minh-bui/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1170-1",
+          "url": "https://comp.anu.edu.au/people/minh-bui/",
+          "excerpt": "Minh Bui | ANU School of Computing Skip to main content School of Computing Open main menu Search this site School Sharepoint College Sharepoint ANU College of Systems & Society Navigation menu School of Computing /people/minh-bui/, people About Study Research Engage News Events Join People Contact Close main menu Search this site Search this site (powered by Google) Powered by Google Close search Home / People / Minh Bui Minh Bui Associate Professor and HDR Convener Computational Science Location Hanna Neumann Building 145, Office 4.",
+          "retrievedAt": "2026-09-07T19:27:17.113Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1170-2",
+          "url": "https://comp.anu.edu.au/people/minh-bui/",
+          "excerpt": "au Phone +61 2 6125 0047 Clusters Computational Science Research Students Hashara Kumarasinghe Huaiyan Ren Nhan Ly-Trong Piyumal Demotte Van Nguyen Hoang Website https://anu-phylogenomics.",
+          "retrievedAt": "2026-09-07T19:27:17.114Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1170-3",
+          "url": "https://comp.anu.edu.au/people/minh-bui/",
+          "excerpt": "io Publications ORCiD dblp Google Scholar ANU Research Profile minh-bui Social Github Office hours Every Monday noon-1pm.",
+          "retrievedAt": "2026-09-07T19:27:17.114Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1170-4",
+          "url": "https://comp.anu.edu.au/people/minh-bui/",
+          "excerpt": "Students of Master of Computing or COMP1730 Programming Scientists can drop during these hours for consultation/questions.",
+          "retrievedAt": "2026-09-07T19:27:17.114Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1170-5",
+          "url": "https://comp.anu.edu.au/people/minh-bui/",
+          "excerpt": "The research in his lab lies at the interface between Computing, Biology, and Statistics, with the motto to enable evolutionary research in the genomic era .",
+          "retrievedAt": "2026-09-07T19:27:17.114Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1170-6",
+          "url": "https://comp.anu.edu.au/people/minh-bui/",
+          "excerpt": "His lab develops bioinformatic methods and algorithms, statistical models, and high-performance computing techniques for phylogenetic inference from ultra-large genomic data.",
+          "retrievedAt": "2026-09-07T19:27:17.114Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1170-7",
+          "url": "https://comp.anu.edu.au/people/minh-bui/",
+          "excerpt": "Minh leads an international team that jointly develops the widely-used IQ-TREE software , winner of the 2023 Eureka prize .",
+          "retrievedAt": "2026-09-07T19:27:17.114Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1170-8",
+          "url": "https://comp.anu.edu.au/people/minh-bui/",
+          "excerpt": "IQ-TREE usages are ranging from identifying new variants of the coronavirus that caused the COVID-19 pandemic to understanding the origin of Life on Earth billions of years ago.",
+          "retrievedAt": "2026-09-07T19:27:17.114Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:28:05.604Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1171": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://scholars.latrobe.edu.au/dhphan"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1171-1",
+          "url": "https://scholars.latrobe.edu.au/dhphan",
+          "excerpt": "Discovery Browser Not Supported Your browser (Internet Explorer or other legacy browser) is not supported by this application.",
+          "retrievedAt": "2026-09-07T19:27:18.155Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:28:05.604Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1172": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://staffdirectory.griffith.edu.au/phone-details.php?id=24598709&string=marketing"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1172-1",
+          "url": "https://staffdirectory.griffith.edu.au/phone-details.php?id=24598709&string=marketing",
+          "excerpt": "s skip to content | preferences | --> A- | A+ Breadcrumb Home &gt; Contact us Contact us Contact us Website search Advanced search Browse directory Campus contacts Addresses Name or keyword There was no user with these details Please note Some search results may not be available unless you are signed in Update staff directory Back to top Member of Innovative Research Universities Australia Footer Privacy policy | Copyright matters | CRICOS Provider - 00233E | TEQSA - PRV12076 This document has been optimised for printing, some elements from the original webpage may have been altered or removed.",
+          "retrievedAt": "2026-09-07T19:27:19.661Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:28:05.604Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1173": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://profiles.uts.edu.au/HuuHao.Ngo"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1173-1",
+          "url": "https://profiles.uts.edu.au/HuuHao.Ngo",
+          "excerpt": "Discovery Browser Not Supported Your browser (Internet Explorer or other legacy browser) is not supported by this application.",
+          "retrievedAt": "2026-09-07T19:27:20.476Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:28:05.604Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1174": {
       "overview": "pending",
