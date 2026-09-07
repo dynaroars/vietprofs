@@ -1597,7 +1597,8 @@
       ],
       "status": "complete",
       "startedAt": "2026-09-07T03:45:29.559Z",
-      "publishedAt": "2026-09-07T00:00:00.000Z"
+      "publishedAt": "2026-09-07T00:00:00.000Z",
+      "commit": "d1e3f2e"
     },
     {
       "number": 5,
@@ -1623,7 +1624,9 @@
         "vp-0099",
         "vp-0100"
       ],
-      "status": "pending"
+      "status": "complete",
+      "startedAt": "2026-09-07T04:03:17.640Z",
+      "publishedAt": "2026-09-07T00:08:00.000Z"
     },
     {
       "number": 6,
@@ -10731,216 +10734,1688 @@
       "nextAction": "Batch 4 verification complete."
     },
     "vp-0081": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.ece.uh.edu/faculty/nguyen",
         "https://www.hvnguyen.com/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0081-1",
+          "url": "https://www.ece.uh.edu/faculty/nguyen",
+          "excerpt": "ps & Careers Fellowship Opportunities Academic/Professional Assistance Capstone Design Cadence Graduate Degree Programs Admission Guidelines Degree Requirements Admission Procedures Procedures Graduate Courses Graduate Calendar Graduate Academic Forms Financial Aid & Related Info Fellowship Opportunities FAQs Online Graduate Degrees UH Graduate School Student Resources Resources Resources for Faculty & Staff Reservations Online Programs UH-Extend Online ECE Graduate Programs Online Programs at the Cullen College News News ECE Connections Other Publications Image Gallery Home Faculty Faculty Dr.",
+          "retrievedAt": "2026-09-07T04:03:19.013Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0081-2",
+          "url": "https://www.ece.uh.edu/faculty/nguyen",
+          "excerpt": "Hien Van Nguyen, Senior Member of the National Academy of Inventors Associate Professor Office Location W308 Engineering Building 2 Phone 713-743-8615 Fax 713-743-4444 Email hvnguy35 [at] central.",
+          "retrievedAt": "2026-09-07T04:03:19.013Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0081-3",
+          "url": "https://www.ece.uh.edu/faculty/nguyen",
+          "excerpt": ", Electrical & Computer Engineering, National University of Singapore, Singapore Professional Experience Senior Scientist, Uber Advanced Technologies Center, Pittsburgh, PA (2015-2016) Research Scientist, Siemens Corporate Research, Princeton, NJ (2013-2015) Research Intern, Mitsubishi Electric Research Laboratories (MERL), Cambridge, MA (2010-2011) Research Intern, U.",
+          "retrievedAt": "2026-09-07T04:03:19.013Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0081-4",
+          "url": "https://www.ece.uh.edu/faculty/nguyen",
+          "excerpt": "S Army Research Labs, Adelphi, MD (2011-2012) Research Engineer, Infocom Laboratory, National University of Singapore, (2007-2008) Research Interests Artificial Intelligence, Machine Learning, Computer Vision, Medicine, Healthcare Selected Publications R.",
+          "retrievedAt": "2026-09-07T04:03:19.013Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0081-5",
+          "url": "https://www.ece.uh.edu/faculty/nguyen",
+          "excerpt": "In Proceedings of the IEEE International Conference on Computer Vision (ICCV), December 2015 H.",
+          "retrievedAt": "2026-09-07T04:03:19.013Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0081-6",
+          "url": "https://www.ece.uh.edu/faculty/nguyen",
+          "excerpt": "Cross-Domain Synthesis of Medical Images Using Efficient Location-Sensitive Deep Network.",
+          "retrievedAt": "2026-09-07T04:03:19.013Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0081-7",
+          "url": "https://www.ece.uh.edu/faculty/nguyen",
+          "excerpt": "Medical Image Computing and Computer-Assisted Intervention (MICCAI), Springer International Publishing 2015 Y.",
+          "retrievedAt": "2026-09-07T04:03:19.013Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0081-8",
+          "url": "https://www.ece.uh.edu/faculty/nguyen",
+          "excerpt": "3D Deep Learning for Efficient and Robust Landmark Detection in Volumetric Data.",
+          "retrievedAt": "2026-09-07T04:03:19.013Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0081-9",
+          "url": "https://www.hvnguyen.com/",
+          "excerpt": "--> Hien Van Nguyen top of page HOME EDUCATION EXPERIENCE FUNDING RESEARCH TEAM SERVICES NEWS DIRECTION More Use tab to navigate through the menu items.",
+          "retrievedAt": "2026-09-07T04:03:19.479Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0081-10",
+          "url": "https://www.hvnguyen.com/",
+          "excerpt": "Hien Van Nguyen is an Associate Professor in the Department of Electrical and Computer Engineering at the University of Houston.",
+          "retrievedAt": "2026-09-07T04:03:19.479Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0081-11",
+          "url": "https://www.hvnguyen.com/",
+          "excerpt": "His research lies at the intersection of artificial intelligence, computer vision, and biomedical image analysis.",
+          "retrievedAt": "2026-09-07T04:03:19.479Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0081-12",
+          "url": "https://www.hvnguyen.com/",
+          "excerpt": "Nguyen served as a research scientist at Siemens Corporate Research in Princeton and later as a senior scientist at UberATG&#39;s autonomous driving department.",
+          "retrievedAt": "2026-09-07T04:03:19.479Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0081-13",
+          "url": "https://www.hvnguyen.com/",
+          "excerpt": "His work has been recognized with research awards from prestigious institutions such as the National Science Foundation and the National Institutes of Health.",
+          "retrievedAt": "2026-09-07T04:03:19.479Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0081-14",
+          "url": "https://www.hvnguyen.com/",
+          "excerpt": "His work has received multiple international recognitions, including the Outstanding Paper Award at the 2025 ACM International Conference on Multimedia, Best Poster Finalist at the 2024 International Symposium on Biomedical Imaging, and Best Poster Paper Award at the 2023 International Renal Pathology Conference.",
+          "retrievedAt": "2026-09-07T04:03:19.479Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0081-15",
+          "url": "https://www.hvnguyen.com/",
+          "excerpt": "Nguyen is a Senior Member of the National Academy of Inventors and an Associate Editor of Elsevier&rsquo;s Computerized Medical Imaging and Graphics.",
+          "retrievedAt": "2026-09-07T04:03:19.479Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0081-16",
+          "url": "https://www.hvnguyen.com/",
+          "excerpt": "Hien Van Nguyen Associate Professor Phone: 713-743-8615 Email: hvnguy35@central.",
+          "retrievedAt": "2026-09-07T04:03:19.479Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T00:08:00.000Z",
+      "nextAction": "Batch 5 verification complete."
     },
     "vp-0082": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://ece.vt.edu/people/profile/ngo.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0082-1",
+          "url": "https://ece.vt.edu/people/profile/ngo.html",
+          "excerpt": "Forms Research Research Submenu Toggle ECE Annual Reports Micro-/Nanofabrication Cleanroom and Laboratory Directory Major Design Experience Give to ECE Apply Visit Give Shop Hokie Sports Shop Apparel, clothing, gear and merchandise Hokie Shop University Bookstore, merchandise and gifts Hokie Gear Everything you need to know about Hokie gear Hokie License Plates Part of every Virginia Tech plate purchase funds scholarships Resources for Future Students Current Students Parents and Families Faculty and Staff Alumni Industry and Partners Search Search query × search Search this site Search all vt.",
+          "retrievedAt": "2026-09-07T04:03:19.819Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0082-2",
+          "url": "https://ece.vt.edu/people/profile/ngo.html",
+          "excerpt": "edu sites People search Frequent Searches: Web results for Sort by relevance Sort by date News results for Sort by relevance Sort by date Filter search Categories Academics Campus Experience Culture Impact Research Story type Feature Notice Story Video Apply filters Clear filters Video results for Sort by relevance Sort by date People results for People Results See more VT News Results See more College of Engineering / Bradley Department of Electrical and Computer Engineering / Directory / Profiles / Khai D.",
+          "retrievedAt": "2026-09-07T04:03:19.819Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0082-3",
+          "url": "https://ece.vt.edu/people/profile/ngo.html",
+          "excerpt": "Ngo Nektaria Tryfona Wenjie Xiong Christiana Chamon Garcia Rose Qingyang Hu Jun Wang Bo Ji Khai D.",
+          "retrievedAt": "2026-09-07T04:03:19.819Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0082-4",
+          "url": "https://ece.vt.edu/people/profile/ngo.html",
+          "excerpt": "Ngo Location: Mailing Address 1185 Perry Street 453 Whittemore (0111) Virginia Tech Blacksburg, VA 24061 Contact: kdtn@vt.",
+          "retrievedAt": "2026-09-07T04:03:19.819Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0082-5",
+          "url": "https://ece.vt.edu/people/profile/ngo.html",
+          "excerpt": "edu (540) 231-2360 Office: 646 Whittemore Scholar Profile Affiliated Research Group: Personal Website Education Teaching Interests Research Interests Awards, Honors, & Service Ph.",
+          "retrievedAt": "2026-09-07T04:03:19.819Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0082-6",
+          "url": "https://ece.vt.edu/people/profile/ngo.html",
+          "excerpt": ", California State Polytechnic University, 1979 Power electronic circuits and control Packaging and integration Power passive materials and components Power semiconductor devices and integrated circuits RF power electronics Energy harvesting IEEE Fellows (2015) For contributions to unified synthesis and modeling of switched-mode converters.",
+          "retrievedAt": "2026-09-07T04:03:19.819Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0082-7",
+          "url": "https://ece.vt.edu/people/profile/ngo.html",
+          "excerpt": "Education Teaching Interests Research Interests Awards, Honors, & Service Tags Faculty Virginia Tech Bradley Department of Electrical and Computer Engineering 453 Whittemore Hall, 1185 Perry Street (MC 0111) Blacksburg, VA 24061 Fax: 540-231-3362 Connect With Us Facebook Instagram LinkedIn YouTube The B.",
+          "retrievedAt": "2026-09-07T04:03:19.819Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0082-8",
+          "url": "https://ece.vt.edu/people/profile/ngo.html",
+          "excerpt": "engineering are accredited by the Engineering Accreditation Commission(s) of ABET under the General Criteria and the Electrical, Computer, Communications, Telecommunication(s) and Similarly Named Programs Program Criteria ECE Intranet Login Get Directions See All Locations Contact Virginia Tech University Status Principles of Community Privacy Statement Acceptable Use We Remember University Libraries Accessibility Consumer Information Cost & Aid SAFE at VT Policies Equal Opportunity WVTF University Bookstore Jobs at Virginia Tech &copy; 2026 Virginia Polytechnic Institute and State University.",
+          "retrievedAt": "2026-09-07T04:03:19.819Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T00:08:00.000Z",
+      "nextAction": "Batch 5 verification complete."
     },
     "vp-0083": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://engineering.jhu.edu/ece/faculty/trac-duy-tran/",
         "https://thanglong.ece.jhu.edu/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://engineering.jhu.edu/ece/faculty/trac-duy-tran/: HTTP 403",
+        "https://thanglong.ece.jhu.edu/: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T00:08:00.000Z",
+      "nextAction": "Retry when JHU engineering endpoint is accessible."
     },
     "vp-0084": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.chem.uci.edu/people/vy-m-dong",
         "https://sites.google.com/uci.edu/vydonggroup"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0084-1",
+          "url": "https://www.chem.uci.edu/people/vy-m-dong",
+          "excerpt": "t Us In Memoriam Awards and Recognition People Faculty Staff Graduate Students Postdoctoral Scholars Research Research Areas Centers Facilities Interdisciplinary Research Graduate Prospective Students Current Students Opportunities Rowland Fellowship Undergraduate Chemistry Student Affairs Enrollment Updates Tentative Course Offerings Enrollment Announcements & Information Student Affairs FAQ Chemistry Common Final Chem 51: Organic Chemistry Department of Chemistry Study Hall Learning Assistants 2026-2027 Tentative Course Offerings Chemistry Sample Syllabi Knowledge Acquisition Center (KnAC) B.",
+          "retrievedAt": "2026-09-07T04:03:26.681Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0084-2",
+          "url": "https://www.chem.uci.edu/people/vy-m-dong",
+          "excerpt": "in Chemistry UCI Field Studies in Chemistry Program Application for the UCI Chemistry Field Studies Program Undergraduate Opportunities Employer Application for the UCI Chemistry Field Studies Program Opportunities Chem-SURF Opportunities News & Events News Events List Events by Day Events Calendar Named Lectures Resources Key Requests Outreach Room Reservations Safety Stockroom UCI Employment Opportunities Weekly Newsletter Vy M.",
+          "retrievedAt": "2026-09-07T04:03:26.681Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0084-3",
+          "url": "https://www.chem.uci.edu/people/vy-m-dong",
+          "excerpt": "edu Chancellor&#039;s Professor 949-395-0186 4206 Natural Sciences I Website: Dong Research Group Website Position: Faculty Research Interests: Organic and Synthetic UC Irvine School of Physical Sciences Site Map Login Internal Website University of California, Irvine Department of Chemistry 1120 Natural Sciences II Irvine, CA 92697-2025 © 2001-2021 The Regents of the University of California.",
+          "retrievedAt": "2026-09-07T04:03:26.681Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0084-4",
+          "url": "https://sites.google.com/uci.edu/vydonggroup",
+          "excerpt": "UC Irvine Search this site Embedded Files Skip to main content Skip to navigation UC Irvine Home Team Research News Intranet UC Irvine Home Team Research News Intranet More Home Team Research News Intranet Molecular Design and Synthesis Lab create, catalyze, collaborate We are an organic chemistry lab fascinated by catalysis, mechanism , and natural product s .",
+          "retrievedAt": "2026-09-07T04:03:27.143Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0084-5",
+          "url": "https://sites.google.com/uci.edu/vydonggroup",
+          "excerpt": "The lab&#39;s discoveries have been recognized by the ACS Corey Award, Cope Scholar Award, and Sloan Fellowship.",
+          "retrievedAt": "2026-09-07T04:03:27.143Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0084-6",
+          "url": "https://sites.google.com/uci.edu/vydonggroup",
+          "excerpt": "Professor Dong teaches organic chemistry at UC Irvine, serves as an editor for Organic Syntheses and Chemical Society Reviews, and consults for Merck & Co.",
+          "retrievedAt": "2026-09-07T04:03:27.143Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0084-7",
+          "url": "https://sites.google.com/uci.edu/vydonggroup",
+          "excerpt": "Meet the Team Our Mission Organic molecules make up everything around us, including our food, medicine, and fuels.",
+          "retrievedAt": "2026-09-07T04:03:27.143Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0084-8",
+          "url": "https://sites.google.com/uci.edu/vydonggroup",
+          "excerpt": "By inventing tools to construct molecular architecture, we aid the search for better therapeutics, sustainable materials, and renewable energies.",
+          "retrievedAt": "2026-09-07T04:03:27.143Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0084-9",
+          "url": "https://sites.google.com/uci.edu/vydonggroup",
+          "excerpt": "Research Projects Be the Catalyst &quot; We spend years mastering complex concepts and passionately teaching these ideas to our students, with the belief they will use this knowledge to impact the world.",
+          "retrievedAt": "2026-09-07T04:03:27.143Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0084-10",
+          "url": "https://sites.google.com/uci.edu/vydonggroup",
+          "excerpt": "By educating ourselves on critical ideas outside our field, we can be better teachers, colleagues, and leaders.",
+          "retrievedAt": "2026-09-07T04:03:27.143Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0084-11",
+          "url": "https://sites.google.com/uci.edu/vydonggroup",
+          "excerpt": "Creating the most inclusive and equitable climate possible for doing chemistry is an objective and honorable mission we can share.",
+          "retrievedAt": "2026-09-07T04:03:27.143Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T00:08:00.000Z",
+      "nextAction": "Batch 5 verification complete."
     },
     "vp-0085": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.chem.ucsb.edu/people/thuc-quyen-nguyen",
         "https://nguyen.chem.ucsb.edu/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0085-1",
+          "url": "https://www.chem.ucsb.edu/people/thuc-quyen-nguyen",
+          "excerpt": "Thuc-Quyen Nguyen | Department of Chemistry & Biochemistry Skip to main content University of California, Santa Barbara Give Quick Links Toggle navigation Search Search Search Enter the terms you wish to search for.",
+          "retrievedAt": "2026-09-07T04:03:27.832Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0085-2",
+          "url": "https://www.chem.ucsb.edu/people/thuc-quyen-nguyen",
+          "excerpt": "& Links Courses Research Research Overview Traditional Research Areas Interdisciplinary Research Areas Interdisciplinary Organizations Laboratory Safety Program Undergraduate News & Events Seminar Calendar Department News Annual Seminars People Outreach Resources Facilities Services Administrative Resources Laboratory Safety Program Giving Giving to Chemistry Friends of Chemistry How to Give Giving Opportunities Quick links DCB Giving Page DCB Graduate Program DCB Research Overview DCB Undergraduate Program Give Home People Thuc-Quyen Nguyen Thuc-Quyen Nguyen Distinguished Professor quyen@chem.",
+          "retrievedAt": "2026-09-07T04:03:27.832Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0085-3",
+          "url": "https://www.chem.ucsb.edu/people/thuc-quyen-nguyen",
+          "excerpt": "edu Chem 3122 (805) 893-4851 About Specialization : Materials Chemistry Physical Chemistry Energy, Catalysis & Green Chemistry Devices, Assembly & Nanochemistry Structural Chemistry, Spectroscopy & Advanced Analysis Education : Dr.",
+          "retrievedAt": "2026-09-07T04:03:27.832Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0085-4",
+          "url": "https://www.chem.ucsb.edu/people/thuc-quyen-nguyen",
+          "excerpt": "Then she transferred to the University of California, Los Angeles in Fall 1995 where she received her B.",
+          "retrievedAt": "2026-09-07T04:03:27.832Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0085-5",
+          "url": "https://www.chem.ucsb.edu/people/thuc-quyen-nguyen",
+          "excerpt": "She was a research associate in the Department of Chemistry and the Nanocenter at Columbia University working with Professors Louis Brus and Colin Nuckolls on molecular self-assembly, nanoscale characterization and devices.",
+          "retrievedAt": "2026-09-07T04:03:27.832Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0085-6",
+          "url": "https://www.chem.ucsb.edu/people/thuc-quyen-nguyen",
+          "excerpt": "Watson (Yorktown Heights, NY) working with Richard Martel and Phaedon Avouris on molecular electronics.",
+          "retrievedAt": "2026-09-07T04:03:27.832Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0085-7",
+          "url": "https://www.chem.ucsb.edu/people/thuc-quyen-nguyen",
+          "excerpt": "She joined the faculty of the Chemistry and Biochemistry Department at UCSB in summer 2004.",
+          "retrievedAt": "2026-09-07T04:03:27.832Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0085-8",
+          "url": "https://www.chem.ucsb.edu/people/thuc-quyen-nguyen",
+          "excerpt": "Advanced Materials 2019 Beaufort Visiting Scholar, St John’s College, Cambridge University 2015-2019 World’s Most Influential Scientific Minds; Top 1% Highly Cited Researchers in Materials Science by Thomson Reuters and Clarivate Analytics 2019 Fellow of the American Association for the Advancement of Science (AAAS) 2023 Wilhelm Exner Medal 2023 de Gennes Prize in Materials Chemistry, the Royal Society of Chemistry 2023 Fellow of the US National Academy of Inventors 2023 Elected to the US National Academy of Engineering 2024 Fellow of the European Academy of Sciences (EurASc) 2025 ACS Henry H.",
+          "retrievedAt": "2026-09-07T04:03:27.832Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0085-9",
+          "url": "https://nguyen.chem.ucsb.edu/",
+          "excerpt": "Home | Nguyen Research Group Skip to main content University of California, Santa Barbara Important Link Give Quick Links Toggle navigation Search Search Search Enter the terms you wish to search for.",
+          "retrievedAt": "2026-09-07T04:03:28.726Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0085-10",
+          "url": "https://nguyen.chem.ucsb.edu/",
+          "excerpt": "avigation Home Professor Nguyen Research Members Publications Gallery Links Facilities Quick links Segment 1 Segment 2 Segment 3 Segment 4 Give Important Link Home Welcome to the Nguyen Research Group Google Scholar Our current research interests are electronic properties of conjugated polyelectrolytes, interfaces in optoelectronic devices, charge generation and transport in organic semiconductors, new materials for organic solar cell applications, molecular self-assemblies, materials processing, nanoscale characterization of organic solar cells, device physics, and biomaterials/bioelectronics.",
+          "retrievedAt": "2026-09-07T04:03:28.726Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0085-11",
+          "url": "https://nguyen.chem.ucsb.edu/",
+          "excerpt": "IF YOU ARE INTERESTED IN OUR GROUP, PLEASE APPLY TO THE DEPARTMENT OF CHEMISTRY & BIOCHEMISTRY PHD PROGRAM FIRST.",
+          "retrievedAt": "2026-09-07T04:03:28.726Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0085-12",
+          "url": "https://nguyen.chem.ucsb.edu/",
+          "excerpt": "Image Image Image Image Image Image Image Image Image Image Image Testing Organic Solar Cells on the Nanoscale from IGERT Resources on Vimeo .",
+          "retrievedAt": "2026-09-07T04:03:28.726Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0085-13",
+          "url": "https://nguyen.chem.ucsb.edu/",
+          "excerpt": "Nguyen Research Group University of California, Santa Barbara Santa Barbara, CA 93106-2036 (805) 893-8000 Visit Us | Mon-Fri 8-12 & 1-5 Connect Facebook Youtube Instagram X Links and Resources Policies and Disclosures Campus Directory Campus Maps Copyright &copy; 2026 The Regents of the University of California.",
+          "retrievedAt": "2026-09-07T04:03:28.726Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T00:08:00.000Z",
+      "nextAction": "Batch 5 verification complete."
     },
     "vp-0086": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.nguyengroup.northwestern.edu/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0086-1",
+          "url": "https://www.nguyengroup.northwestern.edu/",
+          "excerpt": "| The Nguyen Group The Nguyen Group Home People SonBinh Nguyen Group members Alumni Research Drug Delivery and Detection Metal-Organic Frameworks and Porous Organic Materials Graphene/Graphene oxide Publications Gallery Group Picnic 2016 Group Picnic 2015 Group Picnic 2013 Group Picnic 2012 Holiday Party 2012 News Links To Join You are here: Home Research in the Nguyen group is approached from a collaborative and interdisciplinary perspective.",
+          "retrievedAt": "2026-09-07T04:03:29.391Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0086-2",
+          "url": "https://www.nguyengroup.northwestern.edu/",
+          "excerpt": "Currently, the group is divided into three main subgroups: Porous Materials, Graphene/Graphene Oxide, and Biomaterials.",
+          "retrievedAt": "2026-09-07T04:03:29.391Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0086-3",
+          "url": "https://www.nguyengroup.northwestern.edu/",
+          "excerpt": "Drug Delivery and Detection We are committed to the development of vehicles to safely and effectively administer therapeutic agents and to pursue new and improved disease detection technologies.",
+          "retrievedAt": "2026-09-07T04:03:29.391Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0086-4",
+          "url": "https://www.nguyengroup.northwestern.edu/",
+          "excerpt": "To this end, we are currently pursuing research into ROMP-based polymer nanoparticles, polymer-caged liposomes, ROMP-based DNA detection, and fundamental DNA interactions.",
+          "retrievedAt": "2026-09-07T04:03:29.391Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0086-5",
+          "url": "https://www.nguyengroup.northwestern.edu/",
+          "excerpt": "Metal-Organic Frameworks and Porous Organic Materials Research on porous materials in the Nguyen group involves developing strategies for rationally constructing MOFs with structural and chemical diversity via post-synthesis modification and incorporation of metalloporphyrin catalysts into MOFs.",
+          "retrievedAt": "2026-09-07T04:03:29.391Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0086-6",
+          "url": "https://www.nguyengroup.northwestern.edu/",
+          "excerpt": "Surface Chemistry In an effort to develop new and interesting materials with improved properties and to understand the chemistry occurring on these interfaces, we are currently pursuing research in the following areas: silicon surface chemistry, polymer-inorganic nanocomposites, graphene nanocomposites, and modeling environmental interfaces.",
+          "retrievedAt": "2026-09-07T04:03:29.391Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T00:08:00.000Z",
+      "nextAction": "Batch 5 verification complete."
     },
     "vp-0087": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://clasprofiles.wayne.edu/profile/gl9580",
         "https://s.wayne.edu/nguyengroup/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0087-1",
+          "url": "https://clasprofiles.wayne.edu/profile/gl9580",
+          "excerpt": "Nguyen - College of Liberal Arts and Sciences - Wayne State University Wayne State University Warrior strong Login Search Search: Search College of Liberal Arts and Sciences Office of the Dean Return to clas.",
+          "retrievedAt": "2026-09-07T04:03:30.521Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0087-2",
+          "url": "https://clasprofiles.wayne.edu/profile/gl9580",
+          "excerpt": "Nguyen Carl Johnson/Pfizer Professor of Organic Chemistry Department of Oncology, Molecular Therapeutic Program 313-577-2557 313-577-8822 (fax) hmnguyen@wayne.",
+          "retrievedAt": "2026-09-07T04:03:30.521Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0087-3",
+          "url": "https://clasprofiles.wayne.edu/profile/gl9580",
+          "excerpt": "Nguyen Research interest(s)/area of expertise Medicinal chemistry, cancer drug discovery, chemical biology, organic chemistry, vaccine adjuvant immunotherapy, Alzheimer's disease, diabetes, catalytic stereoselective carbohydrate methods, transition-metal catalysis.",
+          "retrievedAt": "2026-09-07T04:03:30.521Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0087-4",
+          "url": "https://clasprofiles.wayne.edu/profile/gl9580",
+          "excerpt": "Professor Nguyen came to the US in 1989 and first settled with his family in Boston, Massachusetts.",
+          "retrievedAt": "2026-09-07T04:03:30.521Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0087-5",
+          "url": "https://clasprofiles.wayne.edu/profile/gl9580",
+          "excerpt": "He graduated with honors from Tufts University in Medford, Massachusetts where he majored in chemistry and conducted research with Professor Marc d'Alarcao.",
+          "retrievedAt": "2026-09-07T04:03:30.521Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0087-6",
+          "url": "https://clasprofiles.wayne.edu/profile/gl9580",
+          "excerpt": "Hien left Boston and moved to attend the University of Illinois at Urbana-Champaign and he subsequently joined the group of the late David Y.",
+          "retrievedAt": "2026-09-07T04:03:30.521Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0087-7",
+          "url": "https://clasprofiles.wayne.edu/profile/gl9580",
+          "excerpt": "thesis focused on developing new carbohydrate methodologies for efficient assembly of complex oligosaccharides.",
+          "retrievedAt": "2026-09-07T04:03:30.521Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0087-8",
+          "url": "https://clasprofiles.wayne.edu/profile/gl9580",
+          "excerpt": "As an NIH postdoctoral fellow in the group of Professor Barry Trost at Stanford University, Professor Nguyen pursued training in the area of transition-metal catalysis.",
+          "retrievedAt": "2026-09-07T04:03:30.521Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0087-9",
+          "url": "https://s.wayne.edu/nguyengroup/",
+          "excerpt": "Nguyen Lab &#8211; at Wayne State University, Department of Chemistry Skip to content Home NEWS RESEARCH HIEN NGUYEN PEOPLE PUBLICATIONS GROUP PHOTOS GROUP RESOURCES Have any questions?",
+          "retrievedAt": "2026-09-07T04:03:31.175Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0087-10",
+          "url": "https://s.wayne.edu/nguyengroup/",
+          "excerpt": "edu 313-577-9029 Search for: Nguyen Lab at Wayne State University, Department of Chemistry Menu Home NEWS RESEARCH HIEN NGUYEN PEOPLE PUBLICATIONS GROUP PHOTOS GROUP RESOURCES NEWS POSTDOCTORAL POSITIONS: The Nguyen Group welcomes postdoctoral applications at any time, but two postdoctoral positions are currently available in the chemical synthesis of oligosaccharides and sulfated oligosaccharides.",
+          "retrievedAt": "2026-09-07T04:03:31.175Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0087-11",
+          "url": "https://s.wayne.edu/nguyengroup/",
+          "excerpt": "The goals of the project are (1) to prepare panels of oligosaccharides to examine their capacity as vaccine adjuvants; (2) to prepare panels of sulfated oligosaccharides to examine their ability as potent inhibitors of heparanase and SARS-CoV-2 spike protein as well as to evaluate their ability to prevent p-tau-elicited neurotoxicity for potential treatment of Alzheimer’s disease.",
+          "retrievedAt": "2026-09-07T04:03:31.175Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0087-12",
+          "url": "https://s.wayne.edu/nguyengroup/",
+          "excerpt": "The ultimate aim is to develop carbohydrate-based therapeutics for various diseases.",
+          "retrievedAt": "2026-09-07T04:03:31.175Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0087-13",
+          "url": "https://s.wayne.edu/nguyengroup/",
+          "excerpt": "edu) CV &#8211; including three references who will provide recommendation upon request Research Summary &#8211; a two page summary of your graduate and/or postdoctoral research GROUP NEWS: 6/2026: Congratulations to Felix and Rolland for publishing their work &#8220;Z-Selective Synthesis of Trisubstituted Alkenes Bearing Allylic Tertiary Amines via Rhodium-Catalyzed Allylic Amination of 1,1-Disubstituted Fluoromethyl Trichloroacetimidates&#8221; in JACS Au!",
+          "retrievedAt": "2026-09-07T04:03:31.175Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0087-14",
+          "url": "https://s.wayne.edu/nguyengroup/",
+          "excerpt": "4/2026: Congratulations to our undergrads Jacob, Bryce, and Jack for getting many awards at the 2026 Honors Convocation!",
+          "retrievedAt": "2026-09-07T04:03:31.175Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0087-15",
+          "url": "https://s.wayne.edu/nguyengroup/",
+          "excerpt": "4/2026: Livia was selected for the Surendra Gupta Family Endowed Scholarship for 2026, earned the Organic Division Excellence in Graduate Research & Teaching Award, and has been awarded the Herbert K.",
+          "retrievedAt": "2026-09-07T04:03:31.175Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0087-16",
+          "url": "https://s.wayne.edu/nguyengroup/",
+          "excerpt": "4/2026: April was selected as the Biochemistry Top Graduate Student 2026 and earned the Cal Stevens Memorial Scholarship.",
+          "retrievedAt": "2026-09-07T04:03:31.175Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T00:08:00.000Z",
+      "nextAction": "Batch 5 verification complete."
     },
     "vp-0088": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://arts-sciences.buffalo.edu/chemistry/faculty/faculty-directory/hung-t--nguyen.html",
         "https://biosimlabub.github.io/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0088-1",
+          "url": "https://arts-sciences.buffalo.edu/chemistry/faculty/faculty-directory/hung-t--nguyen.html",
+          "excerpt": "hemistry - University at Buffalo Skip to Content (UB) College of Arts and Sciences University at Buffalo (UB) College of Arts and Sciences Department of Chemistry Contact Toggle Navigation Menu 10/24/25 About 7/2/26 Undergraduate 2/26/26 Graduate 5/1/25 Faculty & Staff 8/1/19 Research 4/13/26 News & Events 2/15/23 Alumni 10/24/25 About 7/2/26 Undergraduate 2/26/26 Graduate 5/1/25 Faculty & Staff 8/1/19 Research 4/13/26 News & Events 2/15/23 Alumni Search Info For Info For Current Students, Faculty and Staff Contact Department of Chemistry &gt; Faculty & Staff &gt; Faculty Directory &gt; Hung T.",
+          "retrievedAt": "2026-09-07T04:03:32.397Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0088-2",
+          "url": "https://arts-sciences.buffalo.edu/chemistry/faculty/faculty-directory/hung-t--nguyen.html",
+          "excerpt": "Nguyen PhD Assistant Professor Department of Chemistry College of Arts and Sciences Research Interests Theoretical and computational biochemistry and molecular biophysics: simulations of proteins and nucleic acids; structures of intrinsically disordered proteins; liquid-liquid phase separation; ion-induced RNA folding and dynamics; lncRNA structures; X-ray scattering theory of biomolecules in solvent Contact Information 471 Natural Sciences Complex Buffalo NY, 14260 Phone: 716-645-4166 Fax: (716) 645-6963 nguyenh@buffalo.",
+          "retrievedAt": "2026-09-07T04:03:32.397Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0088-3",
+          "url": "https://arts-sciences.buffalo.edu/chemistry/faculty/faculty-directory/hung-t--nguyen.html",
+          "excerpt": "edu Lab Information Nguyen Lab Education Postdoctoral Fellow, Department of Chemistry, The University of Texas &ndash; Austin, TX, 2016 &ndash; 2023 Ph.",
+          "retrievedAt": "2026-09-07T04:03:32.397Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0088-4",
+          "url": "https://arts-sciences.buffalo.edu/chemistry/faculty/faculty-directory/hung-t--nguyen.html",
+          "excerpt": ", Department of Chemistry, University of Science, Vietnam National University Ho Chi Minh City, Vietnam, 2004 &ndash; 2008 Specializations Theory and simulations of protein/RNA folding and dynamics Liquid-liquid phase separation of RNA and proteins RNA structures and folding thermodynamics Research Summary We specialize in developing and applying computational methods and tools to study biological systems at the molecular level.",
+          "retrievedAt": "2026-09-07T04:03:32.397Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0088-5",
+          "url": "https://arts-sciences.buffalo.edu/chemistry/faculty/faculty-directory/hung-t--nguyen.html",
+          "excerpt": "By combining expertise in chemistry, biophysics, polymer physics and molecular biology, we aim to uncover the fundamental principles underlying the behavior of biomolecules, their interactions and functions.",
+          "retrievedAt": "2026-09-07T04:03:32.397Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0088-6",
+          "url": "https://arts-sciences.buffalo.edu/chemistry/faculty/faculty-directory/hung-t--nguyen.html",
+          "excerpt": "Our goal is to advance our understanding of biological processes and contribute to the development of new therapeutic approaches.",
+          "retrievedAt": "2026-09-07T04:03:32.397Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0088-7",
+          "url": "https://arts-sciences.buffalo.edu/chemistry/faculty/faculty-directory/hung-t--nguyen.html",
+          "excerpt": "We are currently focusing on: Computational modeling of phase separation RNA structure and folding Intrinsically disordered proteins Selected Recent Publications Google Scholar Tian, S.",
+          "retrievedAt": "2026-09-07T04:03:32.397Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0088-8",
+          "url": "https://arts-sciences.buffalo.edu/chemistry/faculty/faculty-directory/hung-t--nguyen.html",
+          "excerpt": "The Folding of Germ Granule mRNAs controls Intermolecular Base Pairing in Germ Granules and Maintains Normal Fly Development.",
+          "retrievedAt": "2026-09-07T04:03:32.397Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0088-9",
+          "url": "https://biosimlabub.github.io/",
+          "excerpt": "BioSim Lab @ UB Toggle navigation (current) projects members publications news join us!",
+          "retrievedAt": "2026-09-07T04:03:32.797Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0088-10",
+          "url": "https://biosimlabub.github.io/",
+          "excerpt": "BioSim Lab @ UB Computational Modeling + Theory + Data Science Welcome to the BioSim lab at the Department of Chemistry - University at Buffalo !",
+          "retrievedAt": "2026-09-07T04:03:32.797Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0088-11",
+          "url": "https://biosimlabub.github.io/",
+          "excerpt": ", specializes in developing and applying computational methods & tools to study biological systems at the molecular level.",
+          "retrievedAt": "2026-09-07T04:03:32.797Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0088-12",
+          "url": "https://biosimlabub.github.io/",
+          "excerpt": "By combining expertise in chemistry, biophysics, polymer physics & molecular biology, we aim to uncover the fundamental principles underlying the behavior of biomolecules, their interactions and functions.",
+          "retrievedAt": "2026-09-07T04:03:32.797Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0088-13",
+          "url": "https://biosimlabub.github.io/",
+          "excerpt": "Our ultimate goal is to advance our understanding of biological processes and contribute to the development of new therapeutic approaches.",
+          "retrievedAt": "2026-09-07T04:03:32.797Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0088-14",
+          "url": "https://biosimlabub.github.io/",
+          "excerpt": "edu +1 716 645 4166 471 Natural Sciences Complex, Buffalo NY, 14260 news Jun, 2026 After some times, Peter’s first work has appeared on Biophys.",
+          "retrievedAt": "2026-09-07T04:03:32.797Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0088-15",
+          "url": "https://biosimlabub.github.io/",
+          "excerpt": "Apr, 2026 Very happy that our first foray out of the world of proteins and nucleic acids just appeared on Nucleic Acids Research .",
+          "retrievedAt": "2026-09-07T04:03:32.797Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0088-16",
+          "url": "https://biosimlabub.github.io/",
+          "excerpt": "Lipika and Peter develop the first coarse-grained model for poly(ADP-ribose) (a close cousin of RNA that plays important role in DNA damage response).",
+          "retrievedAt": "2026-09-07T04:03:32.797Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T00:08:00.000Z",
+      "nextAction": "Batch 5 verification complete."
     },
     "vp-0089": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://artsci.usu.edu/chem-biochem/directory/faculty/trinh-tuan"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0089-1",
+          "url": "https://artsci.usu.edu/chem-biochem/directory/faculty/trinh-tuan",
+          "excerpt": "Tuan Trinh | Chemistry & Biochemistry - College of Arts & Sciences | USU Utah State University sites use cookies.",
+          "retrievedAt": "2026-09-07T04:03:34.645Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0089-2",
+          "url": "https://artsci.usu.edu/chem-biochem/directory/faculty/trinh-tuan",
+          "excerpt": "e Advising Writing Center Financial Aid Undergraduate Research Graduate Program Overview Graduate Application Graduate Program Questions --> Students Close Students Undergraduate Students Apply to USU Undergraduate Advising Chemistry & Biology Tutoring Science Writing Center Writing Center Scholarships Financial Aid Undergraduate Research Graduate Students Graduate Program Overview Graduate Application Graduate Program Questions Scholarships Science Writing Center Writing Center Graduate Student Council T-Shirt Fundraiser --> Students Close Students Future Students Apply to USU You Belong Here!",
+          "retrievedAt": "2026-09-07T04:03:34.645Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0089-3",
+          "url": "https://artsci.usu.edu/chem-biochem/directory/faculty/trinh-tuan",
+          "excerpt": "pcoming Events CCA Presents Bass Festival Jazz Night at Elite Hall Piano Fest Wassermann Piano Series Fry Street Quartet Music Box Concert Series Clinic Inquiry Form Alumni Band Cache Children's Choir Summer Music Camps Community Programs Fry Street Chamber Music Festival Orff-Schulwerk Summer Courses for Educators Summer Citizens Courses Summer Piano Festival --> Giving Give --> Quick Links Close Quick Links Apply Visit Give Calendar A-Z Index Directory Libraries MyUSU Tuan Trinh Physical Chemistry Assistant Professor Contact Information Office Location: MCL 355 Phone: (435) 797-1673 Email: t.",
+          "retrievedAt": "2026-09-07T04:03:34.645Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0089-4",
+          "url": "https://artsci.usu.edu/chem-biochem/directory/faculty/trinh-tuan",
+          "excerpt": "edu Additional Information: Website Google Scholar Publications Educational Background PhD , Chemical Engineering, Delft University of Technology, the Netherlands, 2010 MS , Optics, Chungbuk National University, S.",
+          "retrievedAt": "2026-09-07T04:03:34.645Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0089-5",
+          "url": "https://artsci.usu.edu/chem-biochem/directory/faculty/trinh-tuan",
+          "excerpt": "Korea, 2005 BS , Physics, Viet Nam National University, Ha Noi, Viet Nam, 2002 Biography Dr.",
+          "retrievedAt": "2026-09-07T04:03:34.645Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0089-6",
+          "url": "https://artsci.usu.edu/chem-biochem/directory/faculty/trinh-tuan",
+          "excerpt": "Prior to joining the Department of Chemistry and Biochemistry (2022) at USU, he was an assistant research professor at the University of South Florida (Tampa), a research scientist at the University of Michigan (Ann Arbor) and Columbia University (New York), a postdoctoral researcher at the University of Texas at Austin and the University of Amsterdam (the Netherlands).",
+          "retrievedAt": "2026-09-07T04:03:34.645Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0089-7",
+          "url": "https://artsci.usu.edu/chem-biochem/directory/faculty/trinh-tuan",
+          "excerpt": "Teaching Interests General chemistry for undergraduate level and special topics (materials, spectroscopy, imaging, &#8230;) for graduate level.",
+          "retrievedAt": "2026-09-07T04:03:34.645Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0089-8",
+          "url": "https://artsci.usu.edu/chem-biochem/directory/faculty/trinh-tuan",
+          "excerpt": "Trinh's research interest is in a broad range of materials chemistry and spectroscopy.",
+          "retrievedAt": "2026-09-07T04:03:34.645Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T00:08:00.000Z",
+      "nextAction": "Batch 5 verification complete."
     },
     "vp-0090": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://pratt.duke.edu/people/tuan-vo-dinh/",
         "https://vodinh.pratt.duke.edu/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0090-1",
+          "url": "https://pratt.duke.edu/people/tuan-vo-dinh/",
+          "excerpt": "act Pre-Research Support High-Impact Research Signature Research Areas Centers & Institutes Translation Signature Discoveries Entrepreneurship Military Innovation Community-Based Innovation 2025 Impact Report News & Events News Media Coverage Media Hits Media Relations Publications Magazines Email Newsletters Rate of Change Podcast Events All Events Commencement 2026 Discover Engineering @ Duke | April 2026 NAE Regional Meeting | May 2026 Search Submit Alumni & Parents Alumni Parents Giving Industry Industry Engagement Student Engagement Affiliates Program Give Directory Apply Tuan Vo-Dinh, Ph.",
+          "retrievedAt": "2026-09-07T04:03:35.542Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0090-2",
+          "url": "https://pratt.duke.edu/people/tuan-vo-dinh/",
+          "excerpt": "edu CV Google Scholar Vo Dinh Lab Fitzpatrick Institute for Photonics Education B.",
+          "retrievedAt": "2026-09-07T04:03:35.542Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0090-3",
+          "url": "https://pratt.duke.edu/people/tuan-vo-dinh/",
+          "excerpt": "Swiss Federal Institute of Technology-ETH Zurich (Switzerland), 1975 Positions R.",
+          "retrievedAt": "2026-09-07T04:03:35.542Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0090-4",
+          "url": "https://pratt.duke.edu/people/tuan-vo-dinh/",
+          "excerpt": "Goodson Distinguished Professor of Biomedical Engineering Professor of Biomedical Engineering Director of the Fitzpatrick Institute for Photonics Professor in the Department of Chemistry Member of the Duke Cancer Institute Awards, Honors, and Distinctions Presidentu2019s Award.",
+          "retrievedAt": "2026-09-07T04:03:35.542Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0090-5",
+          "url": "https://pratt.duke.edu/people/tuan-vo-dinh/",
+          "excerpt": "2003 Directoru2019s Award for Outstanding Accomplishments in Science and Technology.",
+          "retrievedAt": "2026-09-07T04:03:35.542Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0090-6",
+          "url": "https://pratt.duke.edu/people/tuan-vo-dinh/",
+          "excerpt": "2000 RD-100 Award for Most Technologically Significant Advance in R&D (Multifunctional Biochip).",
+          "retrievedAt": "2026-09-07T04:03:35.542Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0090-7",
+          "url": "https://pratt.duke.edu/people/tuan-vo-dinh/",
+          "excerpt": "1998 AMSE Award, American Museum of Science and Technology (BiOptics Technology).",
+          "retrievedAt": "2026-09-07T04:03:35.542Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0090-8",
+          "url": "https://pratt.duke.edu/people/tuan-vo-dinh/",
+          "excerpt": "1997 RD-100 Award for Most Technologically Significant Advance in R&D (SERS Gene Probe).",
+          "retrievedAt": "2026-09-07T04:03:35.542Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0090-9",
+          "url": "https://vodinh.pratt.duke.edu/",
+          "excerpt": "Contact Menu Main menu News People Research More \"Research\" pages Plasmonics NanoBiosensors Nanoprobes in Point of Care Precision Medicine Biochips Biochips and Nanochips Cancer Diagnostics HyperSpectral Imaging NanoImaging Field Instrumentation Acoustics and Photoacoustics Smartphone Sensor Multi-modal Bioimaging and Treatment Publications Collaborators Facilities Job Openings Contact Hero Image 3:2 Nanobiosensors In 2000, our laboratory developed the first antibody-based nanobiosensor for monitoring biochemical species in a single living human cell [Nature Biotechnology, 18: 764-767 (2000)].",
+          "retrievedAt": "2026-09-07T04:03:36.121Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0090-10",
+          "url": "https://vodinh.pratt.duke.edu/",
+          "excerpt": "Various nanobiosensors were later developed for monitoring intracellular parameters.",
+          "retrievedAt": "2026-09-07T04:03:36.121Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0090-11",
+          "url": "https://vodinh.pratt.duke.edu/",
+          "excerpt": "Hero Image 3:2 Gold Nanostar for Molecular Imaging and Cancer Therapy Gold nanostars exhibit a unique star shape and several interesting photonic properties that can be exploited for molecular imaging and cancer therapy.",
+          "retrievedAt": "2026-09-07T04:03:36.121Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0090-12",
+          "url": "https://vodinh.pratt.duke.edu/",
+          "excerpt": "Hero Image 3:2 SERS Plasmonic Chips In 1984, our laboratory first reported the general applicability of SERS as an analytical technique [Analytical Chemistry, 56: 1667 (1984)].",
+          "retrievedAt": "2026-09-07T04:03:36.121Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0090-13",
+          "url": "https://vodinh.pratt.duke.edu/",
+          "excerpt": "We also first introduced the use of metal film on nanostructures (MFON), referred to as 'nanowave', as efficient and reproducible plasmonics-active media.",
+          "retrievedAt": "2026-09-07T04:03:36.121Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0090-14",
+          "url": "https://vodinh.pratt.duke.edu/",
+          "excerpt": "Hero Image 3:2 SERS Molecular Probes In 1994 our laboratory first introduced a new modality for nucleic acid bioassays using SERS detection [Analytical Chemistry, 66, 3379 (1994)].",
+          "retrievedAt": "2026-09-07T04:03:36.121Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0090-15",
+          "url": "https://vodinh.pratt.duke.edu/",
+          "excerpt": "We further extended the new family of SERS gene probes with the development of ‘Molecular Sentinels’ and Plasmonic Coupling Interference (PCI).",
+          "retrievedAt": "2026-09-07T04:03:36.121Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0090-16",
+          "url": "https://vodinh.pratt.duke.edu/",
+          "excerpt": "Hero Image 3:2 Pioneers in Nanotechnology \"The marriage of electronics, biomaterials, and photonics is expected to revolutionize many areas of medicine in the 21st century.",
+          "retrievedAt": "2026-09-07T04:03:36.121Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T00:08:00.000Z",
+      "nextAction": "Batch 5 verification complete."
     },
     "vp-0091": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://profiles.utdallas.edu/lena.nguyen",
         "https://labs.utdallas.edu/ndd-epilepsy-lab/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0091-1",
+          "url": "https://profiles.utdallas.edu/lena.nguyen",
+          "excerpt": "es, and Technology School of Behavioral and Brain Sciences Erik Jonsson School of Engineering and Computer Science School of Economic, Political and Policy Sciences School of Interdisciplinary Studies Naveen Jindal School of Management School of Natural Sciences and Mathematics Browse All Students Get Started with Research Login Home School of Behavioral and Brain Sciences Lena Nguyen Skip to main content Lena Nguyen Assistant Professor - Department of Neuroscience Research Interests: Cortical development and molecular mechanisms of epilepsy and neurodevelopmental disorders 972-883-2360 BSB 10.",
+          "retrievedAt": "2026-09-07T04:03:36.669Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0091-2",
+          "url": "https://profiles.utdallas.edu/lena.nguyen",
+          "excerpt": "510 Neurodevelopmental Disorders and Epilepsy Lab Google Scholar Curriculum Vitae ORCID Tags: Neuroscience-Faculty Please type your desired tags, e.",
+          "retrievedAt": "2026-09-07T04:03:36.669Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0091-3",
+          "url": "https://profiles.utdallas.edu/lena.nguyen",
+          "excerpt": "RNA-Seq and microbiome count data, integratable dynamical systems with applications to classical and statistical mechanics, Generative AI, affective science, Digital Communication, LANG, face perception, Health and Medicine, Leadership, Childhood Sexual Abuse , and etc.",
+          "retrievedAt": "2026-09-07T04:03:36.669Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0091-4",
+          "url": "https://profiles.utdallas.edu/lena.nguyen",
+          "excerpt": "Tags: Neuroscience-Faculty Cancel Update Tags Professional Preparation Research Areas Publications Appointments Awards Support Professional Preparation Postdoctoral Associate - Neurosurgery, Cellular & Molecular Physiology Yale University School of Medicine - 2022 Ph.",
+          "retrievedAt": "2026-09-07T04:03:36.669Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0091-5",
+          "url": "https://profiles.utdallas.edu/lena.nguyen",
+          "excerpt": "- Biology University of Houston - 2009 Research Areas My lab focuses on understanding the neurobiological mechanisms of brain development and how dysregulation of molecular signaling pathways contributes to neurodevelopmental disorders.",
+          "retrievedAt": "2026-09-07T04:03:36.669Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0091-6",
+          "url": "https://profiles.utdallas.edu/lena.nguyen",
+          "excerpt": "Our ultimate goal is to enhance neuroscience knowledge to advance the treatment and prevention of human diseases.",
+          "retrievedAt": "2026-09-07T04:03:36.669Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0091-7",
+          "url": "https://profiles.utdallas.edu/lena.nguyen",
+          "excerpt": "anslational control Publications The mTOR pathway genes MTOR , Rheb , Depdc5 , Pten, and Tsc1 have convergent and divergent impacts on cortical neuron development and function 2024 - Journal Article 4E-BP1 expression in embryonic postmitotic neurons mitigates mTORC1-induced cortical malformations and behavioral seizure severity but does not prevent epilepsy in mice 2023 - Journal Article Current Review in Basic Science: Animal Models of Focal Cortical Dysplasia and Epilepsy 2022 - Journal Article Inhibition of MEK-ERK signaling reduces seizures in two mouse models of tuberous sclerosis complex.",
+          "retrievedAt": "2026-09-07T04:03:36.669Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0091-8",
+          "url": "https://profiles.utdallas.edu/lena.nguyen",
+          "excerpt": "2022 - Journal Article Expression of 4E-BP1 in juvenile mice alleviates mTOR-induced neuronal dysfunction and epilepsy.",
+          "retrievedAt": "2026-09-07T04:03:36.669Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0091-9",
+          "url": "https://labs.utdallas.edu/ndd-epilepsy-lab/",
+          "excerpt": "Neurodevelopmental Disorders and Epilepsy Lab Skip to content Neurodevelopmental Disorders and Epilepsy Lab Menu Home Research Team Publications Neurodevelopmental Disorders and Epilepsy Lab We are a basic and translational neuroscience research laboratory in the Department of Neuroscience in the School of Behavioral and Brain Sciences at The University of Texas at Dallas.",
+          "retrievedAt": "2026-09-07T04:03:37.333Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0091-10",
+          "url": "https://labs.utdallas.edu/ndd-epilepsy-lab/",
+          "excerpt": "Research in our lab aims to understand the neurobiological mechanisms of brain development and how dysregulation of molecular signaling pathways contributes to neurodevelopmental disorders, such as malformations of cortical development and epilepsy.",
+          "retrievedAt": "2026-09-07T04:03:37.333Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0091-11",
+          "url": "https://labs.utdallas.edu/ndd-epilepsy-lab/",
+          "excerpt": "The ultimate goal of our research is to enhance neuroscience knowledge and develop novel therapeutic strategies for neurological conditions.",
+          "retrievedAt": "2026-09-07T04:03:37.333Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T00:08:00.000Z",
+      "nextAction": "Batch 5 verification complete."
     },
     "vp-0092": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://sasn.rutgers.edu/tracy-tran"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0092-1",
+          "url": "https://sasn.rutgers.edu/tracy-tran",
+          "excerpt": "ograms Core Curriculum Honors Admissions & Aid Rutgers Admissions Paying for College Visits & Tours Research Undergraduate Opportunities Centers & Institutes Initiatives Current Students Office of Academic Services Pre-Professional Programs SASN Scholarships Student Life Learning Center Writing Center News & Events News Events Utility Mobile Apply Give Info For Faculty & Staff Alumni Visit Tracy Tran Professor - Cellular Neurobiology, Director - Undergraduate Programs in Biology Location 601D Life Sciences Center Office Hours By appointments Phone 973-353-5542,973-353-5543 Email tstran@rutgers.",
+          "retrievedAt": "2026-09-07T04:03:37.822Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0092-2",
+          "url": "https://sasn.rutgers.edu/tracy-tran",
+          "excerpt": "edu Operational Unit Faculty Department Biological Sciences On This page Biography Education Courses Taught Publications Related Websites Share Facebook Twitter LinkedIn Reddit Whatsapp Email Print Biography Research Understanding the mechanisms that govern neuronal wiring is a central focus of developmental neurobiology and, importantly, will result in the identification of molecular mechanisms relevant in many disease processes.",
+          "retrievedAt": "2026-09-07T04:03:37.822Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0092-3",
+          "url": "https://sasn.rutgers.edu/tracy-tran",
+          "excerpt": "The overarching goal of our research is to better understand how molecular cues regulate neuronal morphogenesis, synapse development and refinement, which lead to the proper wiring of the nervous system that ultimately result in the execution of complex behavior in the organism.",
+          "retrievedAt": "2026-09-07T04:03:37.822Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0092-4",
+          "url": "https://sasn.rutgers.edu/tracy-tran",
+          "excerpt": "Accordingly, our research team is interested in the following questions: 1) what are the molecules controlling neural circuit formation?",
+          "retrievedAt": "2026-09-07T04:03:37.822Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0092-5",
+          "url": "https://sasn.rutgers.edu/tracy-tran",
+          "excerpt": "and 3) what are the underlying cellular mechanisms controlling axonal guidance versus synapse formation?",
+          "retrievedAt": "2026-09-07T04:03:37.822Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0092-6",
+          "url": "https://sasn.rutgers.edu/tracy-tran",
+          "excerpt": "To address these questions, we will employ cellular, molecular, and genetic approaches to analyze both the central and peripheral arms of the mouse nervous system.",
+          "retrievedAt": "2026-09-07T04:03:37.822Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0092-7",
+          "url": "https://sasn.rutgers.edu/tracy-tran",
+          "excerpt": "We will use a combination of interdisciplinary approaches including, but not limited to, sophisticated mouse genetics (inducible knockout/knockin, CRISPR) to perform in vitro and in vivo experiments, and physiology and behavioral analysis to provide a platform to study complex neural circuit functions and how defects in salient connections may lead to the development of neurological disorders, such as autism spectrum disorder.",
+          "retrievedAt": "2026-09-07T04:03:37.822Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0092-8",
+          "url": "https://sasn.rutgers.edu/tracy-tran",
+          "excerpt": "in Physiological Sciences/Neuroscience, University of California, Los Angeles, degree conferred 1998.",
+          "retrievedAt": "2026-09-07T04:03:37.822Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T00:08:00.000Z",
+      "nextAction": "Batch 5 verification complete."
     },
     "vp-0093": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.plantpath.k-state.edu/about/people/faculty/tran-tuan/index.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0093-1",
+          "url": "https://www.plantpath.k-state.edu/about/people/faculty/tran-tuan/index.html",
+          "excerpt": "Tuan Tran | K-State | Kansas State University Powercat chevron double-chevron chat-purple home computer window with a question mark close facebook linkedin menu search twitter youtube apply-purple apply-white chat-white request-purple request-white Jump to main content Jump to footer Kansas State University Canvas OrgCentral Navigate KSIS Time & Leave HRIS Webmail Sign in Browse A-Z Department of Plant Pathology Search Search K-State home Plant Pathology About People Faculty Dr.",
+          "retrievedAt": "2026-09-07T04:03:39.993Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0093-2",
+          "url": "https://www.plantpath.k-state.edu/about/people/faculty/tran-tuan/index.html",
+          "excerpt": "Tuan Tran Tuan Tran, PhD Assistant Professor Plant Bacteriology 4104 Throckmorton PSC 1712 Claflin Road Manhattan, KS 66506 tmtran@ksu.",
+          "retrievedAt": "2026-09-07T04:03:39.993Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0093-3",
+          "url": "https://www.plantpath.k-state.edu/about/people/faculty/tran-tuan/index.html",
+          "excerpt": "He received his Bachelor in Biotechnology at the University of Science, Ho Chi Minh City, Vietnam.",
+          "retrievedAt": "2026-09-07T04:03:39.993Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0093-4",
+          "url": "https://www.plantpath.k-state.edu/about/people/faculty/tran-tuan/index.html",
+          "excerpt": "His research focuses on understanding how bacterial virulence factors modulate plant cell biology to thrive in host tissue.",
+          "retrievedAt": "2026-09-07T04:03:39.993Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0093-5",
+          "url": "https://www.plantpath.k-state.edu/about/people/faculty/tran-tuan/index.html",
+          "excerpt": ", Biotechnology, 2008, University of Science, Vietnam Research Our research interest uniquely positions at the intersection of bacteriology and plant cell biology.",
+          "retrievedAt": "2026-09-07T04:03:39.993Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0093-6",
+          "url": "https://www.plantpath.k-state.edu/about/people/faculty/tran-tuan/index.html",
+          "excerpt": "We approach questions in Plant Pathology with various approaches, including advanced live-cell imaging and imagery data analysis, lipidomics, proteomics, RNA-Seq, etc.",
+          "retrievedAt": "2026-09-07T04:03:39.993Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0093-7",
+          "url": "https://www.plantpath.k-state.edu/about/people/faculty/tran-tuan/index.html",
+          "excerpt": "Projects in the Plant Bacteriology lab at K-State focus on understanding the regulations of plant immunity via membrane nanodomains, microbial effectors biology, and biofilm mechanics that facilitates bacterial virulence.",
+          "retrievedAt": "2026-09-07T04:03:39.993Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T00:08:00.000Z",
+      "nextAction": "Batch 5 verification complete."
     },
     "vp-0094": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.ohsu.edu/people/thuy-ngo-phd",
         "https://www.thuyngolab.org"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0094-1",
+          "url": "https://www.ohsu.edu/people/thuy-ngo-phd",
+          "excerpt": "| OHSU People | OHSU Skip to main content Skip to main navigation I-5 closure begins Sept.",
+          "retrievedAt": "2026-09-07T04:03:40.632Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0094-2",
+          "url": "https://www.ohsu.edu/people/thuy-ngo-phd",
+          "excerpt": "Care Children's Health Heart Care Spine and Back Care Women's Health Find More Services Research Research Research News Office of the Chief Research Officer Clinical Trials Participation Office of Visitors and Volunteers Centers and Institutes Cores and Shared Resources OHSU Innovates Administration Research Funding and Development Clinical Trials Office Training and Education Postdocs and Students Office of Postdoctoral Affairs Human Investigations Program Give Locations Maps and Directions Locations and Directions Public Transportation Portland Aerial Tram Inclement Weather Jobs Thuy Ngo, Ph.",
+          "retrievedAt": "2026-09-07T04:03:40.632Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0094-3",
+          "url": "https://www.ohsu.edu/people/thuy-ngo-phd",
+          "excerpt": "Associate Professor of Molecular and Medical Genetics, School of Medicine Member, CEDAR, OHSU Knight Cancer Institute, School of Medicine Program in Molecular and Cellular Biosciences, School of Medicine The Ngo Lab Biography Dr.",
+          "retrievedAt": "2026-09-07T04:03:40.632Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0094-4",
+          "url": "https://www.ohsu.edu/people/thuy-ngo-phd",
+          "excerpt": "Thuy Ngo is interested in taking interdisciplinary approaches to develop novel methods for identifying biomarkers of cancer, detecting and elucidating developmental pathway of cancer and other medical diseases and conditions.",
+          "retrievedAt": "2026-09-07T04:03:40.632Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0094-5",
+          "url": "https://www.ohsu.edu/people/thuy-ngo-phd",
+          "excerpt": "The clinical and biological systems of interest include circulating cell-free DNA, RNA, extracellular vesicles, microbiome, tumor cells, tumor associated cells and tumor microenvironment.",
+          "retrievedAt": "2026-09-07T04:03:40.632Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0094-6",
+          "url": "https://www.ohsu.edu/people/thuy-ngo-phd",
+          "excerpt": "Her main tools are quantitative imaging, next generation sequencing, bioinformatics and molecular and cellular biology.",
+          "retrievedAt": "2026-09-07T04:03:40.632Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0094-7",
+          "url": "https://www.ohsu.edu/people/thuy-ngo-phd",
+          "excerpt": "in biophysics and computational biology from the University of Illinois at Urbana-Champaign in 2014 under the guidance of Dr.",
+          "retrievedAt": "2026-09-07T04:03:40.632Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0094-8",
+          "url": "https://www.ohsu.edu/people/thuy-ngo-phd",
+          "excerpt": "esearch article in Cell 2017 - Cover Article for the journal Clinical Chemistry 2018 - Cell-free RNA work featured in NYTimes, CNN, BBC, TIME Magazine, ABC News, The Guardian, US News, National Geographic and Daily Mail 2018 - Cancer Research UK/OHSU Project Award 2019 - Top 10 Breakthrough Technologies 2019 by MIT Technology Review for the cfRNA work Publications Publications OHSU flame logo in white Oregon Health & Science University is dedicated to improving the health and quality of life for all Oregonians through excellence, innovation and leadership in health care, education and research.",
+          "retrievedAt": "2026-09-07T04:03:40.632Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0094-9",
+          "url": "https://www.thuyngolab.org",
+          "excerpt": "THE NGO LAB @ OHSU - Home THE NGO LAB @ OHSU Home PI Team Publications Research News Join us!",
+          "retrievedAt": "2026-09-07T04:03:41.293Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0094-10",
+          "url": "https://www.thuyngolab.org",
+          "excerpt": "Early Detection and Precision Medicine The Ngo Lab investigates technologies and basic mechanisms for diagnosis and prognosis of cancer, pre-cancer, pregnancy complications and other diseases by maximizing high information content of cell-free RNA, cell-free DNA and extracellular vesicles in body fluids.",
+          "retrievedAt": "2026-09-07T04:03:41.293Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0094-11",
+          "url": "https://www.thuyngolab.org",
+          "excerpt": "Thuy Ngo and her laboratory are supported by generous funding from: National Institute of Health, National Institute of General Medical Sciences &#8203;Department of Defense Susan G.",
+          "retrievedAt": "2026-09-07T04:03:41.293Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0094-12",
+          "url": "https://www.thuyngolab.org",
+          "excerpt": "Komen Foundation &#8203;Kuni Foundation CRUK/OHSU Early Cancer Detection Program &#8203;OHSU Knight Cancer Institute's Cancer Early Detection Advanced Research Center (CEDAR) &#8203;The Ngo Lab &#8203; Knight Cancer Institute, Oregon Health & Science University (OHSU) Email: [email&#160;protected] Address: Knight Cancer Research Building (KCRB) 4th floor, 2720 S Moody Ave, Portland, OR 97201 Proudly powered by Weebly Home PI Team Publications Research News Join us!",
+          "retrievedAt": "2026-09-07T04:03:41.293Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T00:08:00.000Z",
+      "nextAction": "Batch 5 verification complete."
     },
     "vp-0095": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://mcardle.wisc.edu/faculty/huy-dinh/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0095-1",
+          "url": "https://mcardle.wisc.edu/faculty/huy-dinh/",
+          "excerpt": "h Department of Oncology Search for: Menu Search for: Home About Letter from the Director History of McArdle Recognition Research Education Seminar Series People Faculty Emeritus Faculty Postdocs Graduate Students Administrative Staff News and Events News Alumni Newsletter Jobs at McArdle Support McArdle Cancer Biology Graduate Program Bothwell Prize About the Bothwell Prize Bothwell Prize 2024 Bothwell Prize 2023 Bothwell Prize 2022 50th Anniversary Temin Nobel Prize Symposium Online Directory Events Calendar UW Carbone Cancer Center Contact Us Join Our Mailing List Home McArdle Faculty Huy Q.",
+          "retrievedAt": "2026-09-07T04:03:43.641Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0095-2",
+          "url": "https://mcardle.wisc.edu/faculty/huy-dinh/",
+          "excerpt": "edu (608) 263-2890 1111 Highland Ave Madison, WI 53705 Lab website Education BS, 2004, Computer Science, Vietnam National University, Hanoi MS, 2007, Computer Science, Vietnam National University, Hanoi Ph.",
+          "retrievedAt": "2026-09-07T04:03:43.641Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0095-3",
+          "url": "https://mcardle.wisc.edu/faculty/huy-dinh/",
+          "excerpt": ", 2012, Bioinformatics, University of Vienna, Austria Postdoctoral research, Cancer Epigenomics, University of Southern California & Cedars Sinai Medical Center, Los Angeles, CA Instructor, Cancer Immunology, La Jolla Institute for Immunology, La Jolla, CA Title Assistant Professor of Oncology Research Description Cancer is a heterogeneous disease that complicates its study and therefore treatment.",
+          "retrievedAt": "2026-09-07T04:03:43.641Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0095-4",
+          "url": "https://mcardle.wisc.edu/faculty/huy-dinh/",
+          "excerpt": "Immunotherapy has revolutionized cancer treatment but many patients still are faced with little or no clinical benefit with the same treatment.",
+          "retrievedAt": "2026-09-07T04:03:43.641Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0095-5",
+          "url": "https://mcardle.wisc.edu/faculty/huy-dinh/",
+          "excerpt": "Recent high-dimensional technologies have allowed us the ability to understand the tumor ecosystem and its impact on treatment response.",
+          "retrievedAt": "2026-09-07T04:03:43.641Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0095-6",
+          "url": "https://mcardle.wisc.edu/faculty/huy-dinh/",
+          "excerpt": "We are motivated by the question of how the tumor microenvironment changes upon cancer progress, before and after treatment.",
+          "retrievedAt": "2026-09-07T04:03:43.641Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0095-7",
+          "url": "https://mcardle.wisc.edu/faculty/huy-dinh/",
+          "excerpt": "We follow a systems biology approach, using high-dimensional data from multi-omics genome-wide (genomics and epigenomics) and single-cell assays, data mining, and bioinformatics.",
+          "retrievedAt": "2026-09-07T04:03:43.641Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0095-8",
+          "url": "https://mcardle.wisc.edu/faculty/huy-dinh/",
+          "excerpt": "We develop and employ computational biology methods to mine publicly available data and in-house generated data for the specific questions we ask.",
+          "retrievedAt": "2026-09-07T04:03:43.641Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T00:08:00.000Z",
+      "nextAction": "Batch 5 verification complete."
     },
     "vp-0096": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://cpe.ku.edu/people/trung-van-nguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0096-1",
+          "url": "https://cpe.ku.edu/people/trung-van-nguyen",
+          "excerpt": "ourtesy Faculty Advisory Board Emeriti Professors Undergraduate Select to follow link About Senior Unit Operations Laboratory Student Involvement Graduate Select to follow link Admissions Handbook Resources and Forms Alumni and Friends Select to follow link Staying Connected Hall of Fame News Select to follow link CPE News Info for Prospective Students Current Students Alumni Degree Programs myKU Email Canvas Enroll & Pay Jayhawk GPS THE UNIVERSITY of KANSAS University of Kansas logo School of Engineering Chemical & Petroleum Engineering Menu Search this unit Start search Submit Search Home Dr.",
+          "retrievedAt": "2026-09-07T04:03:44.507Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0096-2",
+          "url": "https://cpe.ku.edu/people/trung-van-nguyen",
+          "excerpt": "edu Office Phone: 785-864-3938 Department Phone: 785-864-4965 Fax: 785-864-4967 Learned Hall, Room 4153 1530 W.",
+          "retrievedAt": "2026-09-07T04:03:44.507Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0096-3",
+          "url": "https://cpe.ku.edu/people/trung-van-nguyen",
+          "excerpt": "15th Street Lawrence, KS 66045 Personal Links Google Scholar Page Google Scholar Page Education &mdash; B.",
+          "retrievedAt": "2026-09-07T04:03:44.507Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0096-4",
+          "url": "https://cpe.ku.edu/people/trung-van-nguyen",
+          "excerpt": "in Texas A&M University, Texas A&M University, 1988, College Station, TX Research &mdash; Current focus is in: Electrochemical storage technologies (fuel cells and flow batteries) for wind and solar energy sources Molecular structure and electrochemical activity of supersaturated electrolytes Solid-liquid storage technologies for redox flow batteries Research interests: fuel cells batteries interfacial phenomena, mathematical modeling of electrochemical systems Show More about Research Selected Publications &mdash; Li Y, Abbey J, Nguyen TV.",
+          "retrievedAt": "2026-09-07T04:03:44.507Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0096-5",
+          "url": "https://cpe.ku.edu/people/trung-van-nguyen",
+          "excerpt": "Electrochemical Properties and Performance of Supersaturated Vanadium (IV) and V(V) Electrolytes.",
+          "retrievedAt": "2026-09-07T04:03:44.507Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0096-6",
+          "url": "https://cpe.ku.edu/people/trung-van-nguyen",
+          "excerpt": "Modification of Nafion's nanostructure for the water management of PEM fuel cells.",
+          "retrievedAt": "2026-09-07T04:03:44.507Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0096-7",
+          "url": "https://cpe.ku.edu/people/trung-van-nguyen",
+          "excerpt": "A Solid/Liquid High-Energy-Density Storage Concept for Redox Flow Batteries and Its Demonstration in an H 2 -V System.",
+          "retrievedAt": "2026-09-07T04:03:44.507Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0096-8",
+          "url": "https://cpe.ku.edu/people/trung-van-nguyen",
+          "excerpt": "A One-Dimensional Model of a PEM Fuel Cell with the Cathode Catalyst Layer Hydrophobically Treated for Water Management.",
+          "retrievedAt": "2026-09-07T04:03:44.507Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T00:08:00.000Z",
+      "nextAction": "Batch 5 verification complete."
     },
     "vp-0097": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.ou.edu/coe/cees/people/faculty/ngoc-bui"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0097-1",
+          "url": "https://www.ou.edu/coe/cees/people/faculty/ngoc-bui",
+          "excerpt": "Ngoc Bui OU Homepage Search OU The University of Oklahoma Skip Navigation Ngoc Bui Ngoc Bui Assistant Professor Email: ngoctbui21@ou.",
+          "retrievedAt": "2026-09-07T04:03:45.102Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0097-2",
+          "url": "https://www.ou.edu/coe/cees/people/faculty/ngoc-bui",
+          "excerpt": "edu Phone: (405) 325-4037 Office: Sarkey's Energy Center, Room T-313 Research Group Google Scholar Education Ph.",
+          "retrievedAt": "2026-09-07T04:03:45.102Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0097-3",
+          "url": "https://www.ou.edu/coe/cees/people/faculty/ngoc-bui",
+          "excerpt": ",Chemical Engineering, Minor in Organic Chemistry HoChiMinh City University of Technology, Vietnam About The Bui Lab tackles grand challenges facing humanity at the water-energy-environment nexus.",
+          "retrievedAt": "2026-09-07T04:03:45.102Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0097-4",
+          "url": "https://www.ou.edu/coe/cees/people/faculty/ngoc-bui",
+          "excerpt": "At the interface of physics, chemistry, materials science, and engineering, we mechanistically study the fundamental physicochemical properties of organic-inorganic hybrid (nano)materials and the transport behaviors of molecules across these multicomponent interfaces.",
+          "retrievedAt": "2026-09-07T04:03:45.102Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0097-5",
+          "url": "https://www.ou.edu/coe/cees/people/faculty/ngoc-bui",
+          "excerpt": "We then develop pragmatic applications of these new materials in water reuse, renewable energy, and environmental remediation.",
+          "retrievedAt": "2026-09-07T04:03:45.102Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0097-6",
+          "url": "https://www.ou.edu/coe/cees/people/faculty/ngoc-bui",
+          "excerpt": "With scientific and engineering principles, we also work toward innovating new technologies for sustainable separations with systems-level assessments, eventually helping transform the future water, energy, and environment landscapes.",
+          "retrievedAt": "2026-09-07T04:03:45.102Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0097-7",
+          "url": "https://www.ou.edu/coe/cees/people/faculty/ngoc-bui",
+          "excerpt": "The current stage of our research includes the rational design of advanced membranes and adsorbents from nanoscale building blocks and soft/hard materials, energy-efficient desalination systems for the treatment of wastewater from oil and gas industry, and methods for the conversion of pollutants and waste to valuable commodities.",
+          "retrievedAt": "2026-09-07T04:03:45.102Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0097-8",
+          "url": "https://www.ou.edu/coe/cees/people/faculty/ngoc-bui",
+          "excerpt": "With in-house efforts and through collaborations, we will couple theoretical studies with materials synthesis, (in-situ) characterization, membrane/electrode/adsorbent testing techniques, and integrated processes in our research.",
+          "retrievedAt": "2026-09-07T04:03:45.102Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T00:08:00.000Z",
+      "nextAction": "Batch 5 verification complete."
     },
     "vp-0098": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://researchdirectory.uc.edu/p/phamj5",
         "https://sites.google.com/view/phamlab"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0098-1",
+          "url": "https://researchdirectory.uc.edu/p/phamj5",
+          "excerpt": "Expert Profile: Jonathan Pham | Research Directory Toggle navigation Research Directory Search Search Home Facilities Profile Home Facilities Search Browse Experts Jonathan T Pham Assoc Professor Associate Professor Email Jonathan.",
+          "retrievedAt": "2026-09-07T04:03:46.229Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0098-2",
+          "url": "https://researchdirectory.uc.edu/p/phamj5",
+          "excerpt": "Our group focuses broadly on soft materials and interfaces, combining polymer science, mechanics, physics, chemistry, and characterization.",
+          "retrievedAt": "2026-09-07T04:03:46.229Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0098-3",
+          "url": "https://researchdirectory.uc.edu/p/phamj5",
+          "excerpt": "3 - Associate Professor, University of Cincinnati, Cincinnati, OH 2017 -2022 Assistant Professor, University of Kentucky, Lexington, KY 2015 -2017 Humboldt Postdoctoral Fellow, Max Planck Institute for Polymer Research, Mainz, Germany 2013 -2014 Chateaubriand Fellow, ESPCI-ParisTech, Paris, France 2010 -2015 Graduate Research Assistant, University of Massachusetts Amherst, Amherst, MA Research Support Grant: #61835-DNI Investigators:Pham, Jonathan 01-01-2023 -08-31-2024 American Chemical Society - National Chapter Relating local capillary suspension morphology to deformation response Role:PI 0.",
+          "retrievedAt": "2026-09-07T04:03:46.229Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0098-4",
+          "url": "https://researchdirectory.uc.edu/p/phamj5",
+          "excerpt": "00 Hold Level:Non Profit Grant: #CMMI-2325748 Investigators:Pham, Jonathan 01-01-2023 -07-31-2023 National Science Foundation NSF Award 1825258 transfer: Soft Materials Friction at Smaller Length Scales Role:PI 0.",
+          "retrievedAt": "2026-09-07T04:03:46.229Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0098-5",
+          "url": "https://researchdirectory.uc.edu/p/phamj5",
+          "excerpt": "00 Hold Level:Federal Grant: #CBET-2326933 Investigators:Pham, Jonathan 01-01-2023 -01-31-2026 National Science Foundation NSF Award 2043732 transfer: CAREER: Wetting and dynamics on soft and swollen polymeric surfaces Role:PI 395519.",
+          "retrievedAt": "2026-09-07T04:03:46.229Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0098-6",
+          "url": "https://researchdirectory.uc.edu/p/phamj5",
+          "excerpt": "00 Hold Level:Federal Grant: #N0017323C2019 Investigators:Pham, Jonathan 07-28-2023 -07-27-2024 Department of the Navy Retention and Repellency in Coating Technologies Role:PI 0.",
+          "retrievedAt": "2026-09-07T04:03:46.229Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0098-7",
+          "url": "https://researchdirectory.uc.edu/p/phamj5",
+          "excerpt": "00 Hold Level:Federal Grant: #MOU Investigators:Pham, Jonathan 03-27-2026 -04-30-2027 National Lubricating Grease Institute Grease tackiness and rheology as a function of temperature and chemistryBudget update for SD Case 10619- funding increase, per sponsorPrevious Kuali PD# 26802 Role:PI 105474.",
+          "retrievedAt": "2026-09-07T04:03:46.229Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0098-8",
+          "url": "https://researchdirectory.uc.edu/p/phamj5",
+          "excerpt": "00 Hold Level:Non Profit Publications Peer Reviewed Publications Pham Google Scholar Page Honors and Awards 2023 Adhesion Society Early Career Scientist Award 2022 ACS Applied Polymer Materials Early Career Forum 2021 UK College of Engineering Excellence in Research Award 2021 NSF CAREER Award 2021 3M Non-Tenured Faculty Award 2020 ACS Petroleum Research Fund DNI Award Contact Information Academic - Jonathan.",
+          "retrievedAt": "2026-09-07T04:03:46.229Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0098-9",
+          "url": "https://sites.google.com/view/phamlab",
+          "excerpt": "Soft Materials and Interfaces @ UC Search this site Embedded Files Skip to main content Skip to navigation Soft Materials and Interfaces @ UC Home Our team Publications Group photos Work with us Soft Materials and Interfaces @ UC Home Our team Publications Group photos Work with us More Home Our team Publications Group photos Work with us Soft Materials and Interfaces @ Cincinnati Welcome!",
+          "retrievedAt": "2026-09-07T04:03:46.577Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0098-10",
+          "url": "https://sites.google.com/view/phamlab",
+          "excerpt": "Our research is broadly focused on the physical behavior of soft materials, with an emphasis on interfaces and smaller length scales.",
+          "retrievedAt": "2026-09-07T04:03:46.577Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0098-11",
+          "url": "https://sites.google.com/view/phamlab",
+          "excerpt": "Some current efforts are centered around adhesion, friction and wetting, non-covalent gels and elastomers, multi-phase, lubricating greases, microscale capillary behavior, and dynamics near soft surfaces and coatings.",
+          "retrievedAt": "2026-09-07T04:03:46.577Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0098-12",
+          "url": "https://sites.google.com/view/phamlab",
+          "excerpt": "As a group, we strive to gain fundamental understanding of soft materials, to think critically about challenges in soft matter science, and to train ourselves to become the next generation of scientists and engineers.",
+          "retrievedAt": "2026-09-07T04:03:46.577Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0098-13",
+          "url": "https://sites.google.com/view/phamlab",
+          "excerpt": "Potential applications for our work are diverse, from bioinspired adhesives and advanced coatings to biomaterials and soft devices.",
+          "retrievedAt": "2026-09-07T04:03:46.577Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0098-14",
+          "url": "https://sites.google.com/view/phamlab",
+          "excerpt": "Members of our group gain experience in several experimental techniques, including atomic force microscopy, confocal and fluorescence microscopy, rheology, materials preparation, and custom-built mechanical characterization and materials fabrication methods.",
+          "retrievedAt": "2026-09-07T04:03:46.577Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0098-15",
+          "url": "https://sites.google.com/view/phamlab",
+          "excerpt": "Recent publication highlights Phase separation in wetting ridges of sliding drops on soft and swollen surfaces Physical Review Letters (2023) When a water drop moves along a soft and swollen surface, separation of the internal fluid occurs.",
+          "retrievedAt": "2026-09-07T04:03:46.577Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0098-16",
+          "url": "https://sites.google.com/view/phamlab",
+          "excerpt": "Creasing in microscale, soft static friction Nature Communications (202 3 ) In soft materials friction, adhesion can be an important parameter.",
+          "retrievedAt": "2026-09-07T04:03:46.577Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T00:08:00.000Z",
+      "nextAction": "Batch 5 verification complete."
     },
     "vp-0099": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://engineering.jhu.edu/chembe/faculty/thi-vo/",
         "https://vogroup.wse.jhu.edu/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://engineering.jhu.edu/chembe/faculty/thi-vo/: HTTP 403",
+        "https://vogroup.wse.jhu.edu/: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T00:08:00.000Z",
+      "nextAction": "Retry when JHU engineering endpoint is accessible."
     },
     "vp-0100": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://stat.utexas.edu/directory/nhat-ho",
         "https://nhatptnk8912.github.io/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0100-1",
+          "url": "https://stat.utexas.edu/directory/nhat-ho",
+          "excerpt": "edu College of Natural Sciences School of Computing Give About About Overview Our Leadership Faculty Awards Graduate Student Awards Staff Awards Open Positions Academics Academics Overview Undergraduate Programs Graduate Programs Courses Postdoctoral Fellowship Program Research People Directory Tenure/Tenure Track Faculty Professional Faculty Postdoctoral Fellows Graduate Students Staff News & Events News Events Seminar Series Alumni & Friends Alumni & Friends Overview Ph.",
+          "retrievedAt": "2026-09-07T04:03:52.594Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0100-2",
+          "url": "https://stat.utexas.edu/directory/nhat-ho",
+          "excerpt": "& Postdoctoral Alumni Visiting Scholars Give to the Department Resources Give Search the site Toggle the main menu Home / Directory Nhat Ho Associate Professor Statistics and Data Sciences Contact Information Email Address: minhnhat@utexas.",
+          "retrievedAt": "2026-09-07T04:03:52.594Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0100-3",
+          "url": "https://stat.utexas.edu/directory/nhat-ho",
+          "excerpt": "edu Visit Website Biography Nhat Ho joined The University of Texas at Austin in 2020 as an assistant professor.",
+          "retrievedAt": "2026-09-07T04:03:52.594Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0100-4",
+          "url": "https://stat.utexas.edu/directory/nhat-ho",
+          "excerpt": "Previously, he was a postdoctoral fellow in the Electrical Engineering and Computer Science Department at the University of California, Berkeley, under Professor Michael I.",
+          "retrievedAt": "2026-09-07T04:03:52.594Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0100-5",
+          "url": "https://stat.utexas.edu/directory/nhat-ho",
+          "excerpt": "His current research focuses on the interplay of four principles of statistics and data sciences.",
+          "retrievedAt": "2026-09-07T04:03:52.594Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0100-6",
+          "url": "https://stat.utexas.edu/directory/nhat-ho",
+          "excerpt": "They include heterogeneity of data, interpretability of models, stability, and scalability of optimization and sampling algorithms.",
+          "retrievedAt": "2026-09-07T04:03:52.594Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0100-7",
+          "url": "https://stat.utexas.edu/directory/nhat-ho",
+          "excerpt": "Research Fields of Interest Statistical/Machine Learning Bayesian Statistics Education Ph.",
+          "retrievedAt": "2026-09-07T04:03:52.594Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0100-8",
+          "url": "https://stat.utexas.edu/directory/nhat-ho",
+          "excerpt": "edu 512-232-0693 Log In Get Help About Our Leadership Awards Culture & Belonging Academics Undergraduate Programs Graduate Programs Courses Postdoctoral Fellowship Program Research Research Strengths Centers, Institutes & Initiatives Research News News & Events News Events Alumni & Friends Ph.",
+          "retrievedAt": "2026-09-07T04:03:52.594Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0100-9",
+          "url": "https://nhatptnk8912.github.io/",
+          "excerpt": "Nhat Ho Home Research Publications (by type) Publications (by topic) Publications (by year) Students/ Collaborators Workshops/ Talks/ Lectures Nhat Ho Associate Professor Department of Statistics and Data Sciences The University of Texas at Austin Other affiliations: Core member, Machine Learning Laboratory Senior personnel, Institute for Foundations of Machine Learning (IFML) Email: minhnhat@utexas.",
+          "retrievedAt": "2026-09-07T04:03:52.830Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0100-10",
+          "url": "https://nhatptnk8912.github.io/",
+          "excerpt": "242, 105 E 24th Street Austin, TX 78712 Brief Biography I am an Associate Professor of Statistics and Data Sciences at the University of Texas at Austin.",
+          "retrievedAt": "2026-09-07T04:03:52.830Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0100-11",
+          "url": "https://nhatptnk8912.github.io/",
+          "excerpt": "I am also a core member of the Machine Learning Laboratory and senior personnel of the Institute for Foundations of Machine Learning (IFML) .",
+          "retrievedAt": "2026-09-07T04:03:52.830Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0100-12",
+          "url": "https://nhatptnk8912.github.io/",
+          "excerpt": "Before going to Austin, I was a postdoctoral fellow in the Electrical Engineering and Computer Science (EECS) Department where I am very fortunate to be mentored by Professor Michael I.",
+          "retrievedAt": "2026-09-07T04:03:52.830Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0100-13",
+          "url": "https://nhatptnk8912.github.io/",
+          "excerpt": "Going further back in time, I finished my Phd degree in 2017 at the Department of Statistics, University of Michigan, Ann Arbor where I am very fortunate to be advised by Professor Long Nguyen and Professor Ya'acov Ritov .",
+          "retrievedAt": "2026-09-07T04:03:52.830Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0100-14",
+          "url": "https://nhatptnk8912.github.io/",
+          "excerpt": "I have received the COPSS Emerging Leader Award from the Committee of Presidents of Statistical Societies.",
+          "retrievedAt": "2026-09-07T04:03:52.830Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0100-15",
+          "url": "https://nhatptnk8912.github.io/",
+          "excerpt": "Finally, I recently founded Trivita AI , a medical AI Startup in Vietnam that aims to significantly strengthen Vietnam’s healthcare system.",
+          "retrievedAt": "2026-09-07T04:03:52.830Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0100-16",
+          "url": "https://nhatptnk8912.github.io/",
+          "excerpt": "In collaboration with several leading hospitals in Vietnam, we are developing Medical AI Assistant Ecosystem designed to reduce doctors’ workload, support faster and more accurate clinical decisions, enable earlier patient detection, and improve treatment outcomes — ultimately lowering healthcare costs, extending life expectancy, and enhancing overall quality of life in Vietnam.",
+          "retrievedAt": "2026-09-07T04:03:52.830Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T00:08:00.000Z",
+      "nextAction": "Batch 5 verification complete."
     },
     "vp-0101": {
       "overview": "pending",
