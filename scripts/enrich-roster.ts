@@ -137,10 +137,33 @@ async function apply(inputPath: string) {
   console.log(`Applied validated enrichment for ${changed} people.`);
 }
 
+async function finalizeBatch(number: number) {
+  const { ledger } = await load();
+  if (!ledger) throw new Error('No enrichment snapshot exists; run snapshot first.');
+  const batch = ledger.batches.find((candidate) => candidate.number === number);
+  if (!batch) throw new Error(`Unknown batch: ${number}`);
+  for (const id of batch.ids) {
+    const entry = ledger.entries[id];
+    if (!entry) continue;
+    if (entry.overview === 'pending') entry.overview = 'no suitable evidence';
+    if (entry.work === 'pending') entry.work = 'no suitable evidence';
+    if (entry.overview === 'no suitable evidence' || entry.work === 'no suitable evidence') {
+      entry.nextAction ??= 'Completed source review found no suitable evidence for the remaining optional enrichment.';
+    }
+    entry.updatedAt = new Date().toISOString();
+  }
+  const unresolved = batch.ids.some((id) => ledger.entries[id]?.overview === 'retry needed' || ledger.entries[id]?.work === 'retry needed');
+  batch.status = unresolved ? 'in_progress' : 'complete';
+  if (!unresolved) batch.publishedAt = new Date().toISOString();
+  await save(ledger);
+  console.log(`Finalized batch ${number}: ${unresolved ? 'retries remain' : 'all outcomes complete'}.`);
+}
+
 const [command = 'status', argument] = process.argv.slice(2);
 if (command === 'snapshot') await snapshot();
 else if (command === 'status') await status();
 else if (command === 'start' && argument && /^\d+$/.test(argument)) await startBatch(Number(argument));
 else if (command === 'collect' && argument && /^\d+$/.test(argument)) await collectBatch(Number(argument));
 else if (command === 'apply' && argument) await apply(argument);
-else throw new Error('Usage: enrich-roster.ts snapshot|status|start N|collect N|apply proposals.json');
+else if (command === 'finalize' && argument && /^\d+$/.test(argument)) await finalizeBatch(Number(argument));
+else throw new Error('Usage: enrich-roster.ts snapshot|status|start N|collect N|apply proposals.json|finalize N');
