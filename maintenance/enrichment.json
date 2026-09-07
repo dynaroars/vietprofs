@@ -1792,7 +1792,9 @@
         "vp-0219",
         "vp-0220"
       ],
-      "status": "pending"
+      "status": "complete",
+      "startedAt": "2026-09-07T04:24:30.764Z",
+      "publishedAt": "2026-09-07T04:26:20.206Z"
     },
     {
       "number": 12,
@@ -17408,216 +17410,1706 @@
       "nextAction": "Batch 10 complete."
     },
     "vp-0201": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://law.temple.edu/contact/trang-mae-nguyen/",
         "https://www.maenguyen.com/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0201-1",
+          "url": "https://law.temple.edu/contact/trang-mae-nguyen/",
+          "excerpt": "Trang (Mae) Nguyen - Temple Law Skip to Main Content For Prospective Students For Current Students For Faculty For Alumni Directories Academic Calendar TUPortal Apply Make a Gift Beasley School of Law Menu About Dean&#8217;s Welcome Mission &#038; History Diversity, Equity, Inclusion, and Belonging Areas of Study Student Spotlight Faculty Spotlight Alumni Spotlight Commitment to Service Consumer Information (ABA Required Disclosures) Graduate Employment Outcomes Tuition & Cost Life in Philadelphia Advocacy Is&#8230; Admissions J.",
+          "retrievedAt": "2026-09-07T04:24:33.988Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0201-2",
+          "url": "https://law.temple.edu/contact/trang-mae-nguyen/",
+          "excerpt": "and Graduate Program Admissions Academics Degrees and Programs Areas of Study J.",
+          "retrievedAt": "2026-09-07T04:24:33.988Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0201-3",
+          "url": "https://law.temple.edu/contact/trang-mae-nguyen/",
+          "excerpt": "s Prospective Student Resources Current Student Resources Faculty Resources Alumni Resources Financial Aid Career Strategy & Professional Development Student Services Technology Services Law Library Media and Communications Location Requests and Event Planning Directions & Parking Temple Law School Faculty &#038; Staff Directory Policies &#038; Procedures More Library Calendar News Directory Directory Trang (Mae) Nguyen Trang (Mae) Nguyen Associate Professor of Law Office: Klein Hall, 808 1719 North Broad Street Philadelphia, PA 19122 Get Directions Phone: (215) 204-7873 Email: tmnguyen@temple.",
+          "retrievedAt": "2026-09-07T04:24:33.988Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0201-4",
+          "url": "https://law.temple.edu/contact/trang-mae-nguyen/",
+          "excerpt": "edu Download Photo Download CV Download vCard Trang (Mae) Nguyen is Associate Professor of Law at Temple University Beasley School of Law and an Affiliated Scholar at the U.",
+          "retrievedAt": "2026-09-07T04:24:33.988Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0201-5",
+          "url": "https://law.temple.edu/contact/trang-mae-nguyen/",
+          "excerpt": "Hazard Fellow in Comparative and International Law at NYU Law and a visiting scholar at UC Berkeley’s Center for the Study of Law and Society.",
+          "retrievedAt": "2026-09-07T04:24:33.988Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0201-6",
+          "url": "https://law.temple.edu/contact/trang-mae-nguyen/",
+          "excerpt": "Professor Nguyen’s research and teaching expertise are in the areas of business law, contracts, transnational law, and international law.",
+          "retrievedAt": "2026-09-07T04:24:33.988Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0201-7",
+          "url": "https://law.temple.edu/contact/trang-mae-nguyen/",
+          "excerpt": "Her work has appeared or is forthcoming in the Southern California Law Review, the Harvard International Law Journal , the American Journal of International Law Unbound , the Stanford Law and Policy Review , the Harvard Human Rights Journal , and the New York University Law Review , among others.",
+          "retrievedAt": "2026-09-07T04:24:33.988Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0201-8",
+          "url": "https://law.temple.edu/contact/trang-mae-nguyen/",
+          "excerpt": "She has served as invited researcher at numerous institutions around the world, including the University of Hong Kong Faculty of Law, the National University of Singapore Centre for Asian Legal Studies, and the Singapore Management University Yong Pung How School of Law.",
+          "retrievedAt": "2026-09-07T04:24:33.988Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0201-9",
+          "url": "https://www.maenguyen.com/",
+          "excerpt": "Trang (Mae) Nguyen &mdash; Law Professor, Temple University 0 Skip to Content Trang (Mae) Nguyen Home Research Policy Engagement C.",
+          "retrievedAt": "2026-09-07T04:24:41.546Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0201-10",
+          "url": "https://www.maenguyen.com/",
+          "excerpt": "I am an Associate Professor of Law at Temple University Beasley School of Law and an Affiliated Scholar at New York University School of Law’s U.",
+          "retrievedAt": "2026-09-07T04:24:41.546Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0201-11",
+          "url": "https://www.maenguyen.com/",
+          "excerpt": "My work examines how cross-border business activity is organized, governed, and contested through the interaction of corporate law, contracts, and trade and investment rules.",
+          "retrievedAt": "2026-09-07T04:24:41.546Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0201-12",
+          "url": "https://www.maenguyen.com/",
+          "excerpt": "I'm also drawn to the bigger geoeconomic picture: how middle powers use legal and institutional tools, including their positions in global commerce, to navigate great power competition and what that means for the fast-changing international legal order.",
+          "retrievedAt": "2026-09-07T04:24:41.546Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0201-13",
+          "url": "https://www.maenguyen.com/",
+          "excerpt": "Outside of my core research, I enjoy engaging with policy and practitioner audiences on these questions.",
+          "retrievedAt": "2026-09-07T04:24:41.546Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0201-14",
+          "url": "https://www.maenguyen.com/",
+          "excerpt": "I'm always glad to connect with scholars and practitioners working at the intersection of transnational business law, corporate governance, trade law, and Asia (especially East & Southeast Asia).",
+          "retrievedAt": "2026-09-07T04:24:41.546Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0201-15",
+          "url": "https://www.maenguyen.com/",
+          "excerpt": "My SSRN Featured Projects Hidden Power in Global Supply Chains Harvard International Law Journal (2023) ComplianceNet Outstanding Junior Scholars’ Paper Award Today, transnational first-tier “Big Suppliers,” not brands, increasingly quarterback global production.",
+          "retrievedAt": "2026-09-07T04:24:41.546Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0201-16",
+          "url": "https://www.maenguyen.com/",
+          "excerpt": "In so doing, they reshape the legal and economic organizations of global supply chains and challenge conventional wisdom on corporate compliance.",
+          "retrievedAt": "2026-09-07T04:24:41.546Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:26:20.206Z",
+      "nextAction": "Batch 11 complete."
     },
     "vp-0202": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.bard.edu/faculty/an-my-le",
         "https://anmyle.com/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0202-1",
+          "url": "https://www.bard.edu/faculty/an-my-le",
+          "excerpt": "gue Faculty Bard Abroad Libraries Dual-Degree Programs Bard Conservatory of Music Other Study Opportunities Graduate Programs Early Colleges Admission sub-menu Admission Applying Financial Aid Tuition + Payment Campus Tours Meet Our Students + Alumni/ae For Families / Familias Join Our Mailing List Contact Us Campus Life sub-menu Campus Life Living on Campus: Housing + Dining Campus Services + Resources Campus Activities New Students Visiting + Transportation Athletics + Recreation Montgomery Place Campus Civic Engagement sub-menu Civic Engagement Bard CCE Campus + Community In the Classroom U.",
+          "retrievedAt": "2026-09-07T04:24:42.047Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0202-2",
+          "url": "https://www.bard.edu/faculty/an-my-le",
+          "excerpt": "ic sub-menu Curriculum Structure of the First Year Courses Requirements Progs sub-menu Programs + Divisions Division of the Arts Division of Social Studies Division of Science, Mathematics, and Computing Division of Languages + Literature Interdivisional Programs + Concentrations Faculty Resources menu Resources Academic Calendar College Catalogue Libraries Dean of the College Additional menu Additional Study Opportunities Dual-Degree Programs Bard Abroad Graduate Programs Early Colleges Academics Home Bard Faculty News View All Faculty News &rarr; An-My Le Charles Franklin Kellogg and Grace E.",
+          "retrievedAt": "2026-09-07T04:24:42.047Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0202-3",
+          "url": "https://www.bard.edu/faculty/an-my-le",
+          "excerpt": "Ramsey Kellogg Professor in the Arts Academic Program Affiliation(s): Photography About An-My Le -->B.",
+          "retrievedAt": "2026-09-07T04:24:42.047Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0202-4",
+          "url": "https://www.bard.edu/faculty/an-my-le",
+          "excerpt": "Solo shows at Dia:Beacon (2006&ndash;07); Museum of Contemporary Photography, Chicago (2006); RISD Museum of Art, Providence, Rhode Island (2006); P.",
+          "retrievedAt": "2026-09-07T04:24:42.047Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0202-5",
+          "url": "https://www.bard.edu/faculty/an-my-le",
+          "excerpt": "Group shows at Museum of Modern Art (2006); Whitney Museum of American Art (2005).",
+          "retrievedAt": "2026-09-07T04:24:42.047Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0202-6",
+          "url": "https://www.bard.edu/faculty/an-my-le",
+          "excerpt": "Recipient, MacArthur Fellowship (2012), New York State Foundation for the Arts grant (1996), Guggenheim Fellowship (1997).",
+          "retrievedAt": "2026-09-07T04:24:42.047Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0202-7",
+          "url": "https://www.bard.edu/faculty/an-my-le",
+          "excerpt": "Contact: Phone: 845-758-7330 Email: Office: Woods Studio, 105 30 Campus Road, PO Box 5000 Annandale-on-Hudson, New York 12504-5000 Phone: 845-758-6822 Admission Email: [email&#160;protected] Information For Prospective Students Current Employees Alumni/ae Families &copy;2026 Bard College Quick Links Employment Travel to Bard Search Support Bard Bard IT Policies + Security Bard Privacy Notice Bard has a long history of creating inclusive environments for all races, creeds, ethnicities, and genders.",
+          "retrievedAt": "2026-09-07T04:24:42.047Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0202-8",
+          "url": "https://www.bard.edu/faculty/an-my-le",
+          "excerpt": "We will continue to monitor and adhere to all Federal and New York State laws and guidance.",
+          "retrievedAt": "2026-09-07T04:24:42.047Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:26:20.206Z",
+      "nextAction": "No publication list on Bard profile."
     },
     "vp-0203": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://cinema.usc.edu/directories/profile.cfm?id=44789",
         "https://landuong.com/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0203-1",
+          "url": "https://cinema.usc.edu/directories/profile.cfm?id=44789",
+          "excerpt": "USC Cinematic Arts | School of Cinematic Arts Directory Profile About SCA Board of Councilors Culture & Community Contact Copyright at SCA Corporate Partners History SCA Turns 90 Make a Gift Directories Faculty Directory Staff Directory News & Events News Events Announcements USC University of Southern California USC Cinematic Arts Search Menu Programs John C.",
+          "retrievedAt": "2026-09-07T04:24:42.871Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0203-2",
+          "url": "https://cinema.usc.edu/directories/profile.cfm?id=44789",
+          "excerpt": "Hench Division of Animation + Digital Arts Division of Cinema & Media Studies The Kevin Feige Division of Film & Television Production Interactive Media & Games Media Arts + Practice Peter Stark Producing Program John Wells Division of Writing for Screen & Television The John H.",
+          "retrievedAt": "2026-09-07T04:24:42.871Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0203-3",
+          "url": "https://cinema.usc.edu/directories/profile.cfm?id=44789",
+          "excerpt": "Parent Partners Alumni SCA Alumni SCA Community Get Involved Quarterly Hot Sheet Awards and Festival Selections In Motion Donate Online SCA Network First Jobs Career Pathways Research Research Overview Research Initiatives Research Labs Close Home Profile School of Cinematic Arts Directory Profile View Related Pages News Directories Faculty Directory Staff Directory Directory Profile Lan Duong, PhD Associate Professor Research areas: Feminist Film Theory, Postcolonial Literature, Asian American Cinema, Genre Studies Affiliated Divisions: Division of Cinema & Media Studies Email: lduong@cinema.",
+          "retrievedAt": "2026-09-07T04:24:42.871Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0203-4",
+          "url": "https://cinema.usc.edu/directories/profile.cfm?id=44789",
+          "excerpt": "edu Lan Duong is Associate Professor in Cinema & Media Studies at the University of Southern California.",
+          "retrievedAt": "2026-09-07T04:24:42.871Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0203-5",
+          "url": "https://cinema.usc.edu/directories/profile.cfm?id=44789",
+          "excerpt": "She is the author of Treacherous Subjects: Gender, Culture, and Trans-Vietnamese Feminism .",
+          "retrievedAt": "2026-09-07T04:24:42.871Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0203-6",
+          "url": "https://cinema.usc.edu/directories/profile.cfm?id=44789",
+          "excerpt": "Duong&rsquo;s second book project, Transnational Vietnamese Cinemas and the Archives of Memory, examines Vietnamese cinema from its inception to the present day through the lens of the archival site.",
+          "retrievedAt": "2026-09-07T04:24:42.871Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0203-7",
+          "url": "https://cinema.usc.edu/directories/profile.cfm?id=44789",
+          "excerpt": "Her research interests include feminist film theory, theories of the archive, and Asian and American film.",
+          "retrievedAt": "2026-09-07T04:24:42.871Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0203-8",
+          "url": "https://cinema.usc.edu/directories/profile.cfm?id=44789",
+          "excerpt": "Duong&rsquo;s critical works can be found in Signs, MELUS, Journal of Southeast Asian Studies , Journal of Asian American Studies, Inter-Asia Cultural Studies, Amerasia , Asian Cinema , Discourse, and the anthologies, Transnational Feminism in Film and Media, Southeast Asian Cinema , Recollecting Vietnam, Gendering the Transpacific, and the The Refugee Handbook .",
+          "retrievedAt": "2026-09-07T04:24:42.871Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0203-9",
+          "url": "https://landuong.com/",
+          "excerpt": "Home - Lan Duong Skip to content Bio Books Essays Events Contact Bio Books Essays Events Contact Refugee Poet and Scholar Welcome to Lan P.",
+          "retrievedAt": "2026-09-07T04:24:43.333Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0203-10",
+          "url": "https://landuong.com/",
+          "excerpt": "Duong’s website, an archive of her creative and scholarly work on refugee girlhoods and Vietnamese/diasporic cinemas.",
+          "retrievedAt": "2026-09-07T04:24:43.333Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0203-11",
+          "url": "https://landuong.com/",
+          "excerpt": "Originally from Việt Nam, Lan is a Vietnamese American writer whose scholarship and poetry revolve around Việt Nam and all that follows in the wake of war.",
+          "retrievedAt": "2026-09-07T04:24:43.333Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0203-12",
+          "url": "https://landuong.com/",
+          "excerpt": "She was inspired to write by her sister, chị Hương, pictured above when she was a young girl, who survived a brutal war and family life.",
+          "retrievedAt": "2026-09-07T04:24:43.333Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0203-13",
+          "url": "https://landuong.com/",
+          "excerpt": "Here, the girl in the picture looks back, which mirrors this website’s look back at Lan’s writing and thinking life since coming to the US as a refugee with her family.",
+          "retrievedAt": "2026-09-07T04:24:43.333Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0203-14",
+          "url": "https://landuong.com/",
+          "excerpt": "bio Facebook About the Art Privacy Policy Facebook About the Art Privacy Policy ©2026 Lan P.",
+          "retrievedAt": "2026-09-07T04:24:43.333Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:26:20.206Z",
+      "nextAction": "Batch 11 complete."
     },
     "vp-0204": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.cca.edu/humanities-sciences/history-of-art-and-visual-culture/",
         "https://vietle.net/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0204-1",
+          "url": "https://www.cca.edu/humanities-sciences/history-of-art-and-visual-culture/",
+          "excerpt": "History of Art & Visual Culture BA - San Francisco | CCA Search Academics Admissions Events & Exhibitions Campus Giving Newsroom Search CCA Alert Banner CCA will close in June 2027.",
+          "retrievedAt": "2026-09-07T04:24:44.827Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0204-2",
+          "url": "https://www.cca.edu/humanities-sciences/history-of-art-and-visual-culture/",
+          "excerpt": "Academics Admissions Events & Exhibitions Campus Giving Newsroom Search CCA Clear Submit form Apply to CCA Undergraduate Transfer Graduate Pre-College CCA’s blend of theory and practice inspires students at every level to make work that matters.",
+          "retrievedAt": "2026-09-07T04:24:44.827Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0204-3",
+          "url": "https://www.cca.edu/humanities-sciences/history-of-art-and-visual-culture/",
+          "excerpt": "Select your status to learn about the application process, requirements, and deadlines, as well as contact information should you need any support along the way.",
+          "retrievedAt": "2026-09-07T04:24:44.827Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0204-4",
+          "url": "https://www.cca.edu/humanities-sciences/history-of-art-and-visual-culture/",
+          "excerpt": "Undergraduate Transfer Graduate Pre-College Kian Talai (BA Visual Studies 2018) presenting his work at the CCA 2018 Visual Studies symposium.",
+          "retrievedAt": "2026-09-07T04:24:44.827Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0204-5",
+          "url": "https://www.cca.edu/humanities-sciences/history-of-art-and-visual-culture/",
+          "excerpt": "BA History of Art & Visual Culture Learn to think critically and write eloquently about historical and contemporary art.",
+          "retrievedAt": "2026-09-07T04:24:44.827Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0204-6",
+          "url": "https://www.cca.edu/humanities-sciences/history-of-art-and-visual-culture/",
+          "excerpt": "On this page Top Overview Studios & Shops Faculty Curriculum Careers Overview Traditional art history meets modern visual culture The History of Art and Visual Culture program challenges you to think and write critically about the past, present, and future of visual culture.",
+          "retrievedAt": "2026-09-07T04:24:44.827Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0204-7",
+          "url": "https://www.cca.edu/humanities-sciences/history-of-art-and-visual-culture/",
+          "excerpt": "You’ll learn to analyze art objects and artifacts of pop culture from the perspectives of historian, theorist, writer, and maker.",
+          "retrievedAt": "2026-09-07T04:24:44.827Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0204-8",
+          "url": "https://www.cca.edu/humanities-sciences/history-of-art-and-visual-culture/",
+          "excerpt": "Positioned within one of the best art and design schools in the country, you’ll work alongside fine artists from many different disciplines, not to mention our renowned faculty, who frequently contribute to high-profile publications and curate exhibitions around the globe.",
+          "retrievedAt": "2026-09-07T04:24:44.827Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0204-9",
+          "url": "https://vietle.net/",
+          "excerpt": "Việt Lê website W s √ Việt Lê, MFA, PhD | updates :: I e Smithsonian talk May 23, 6-7p &quot;Returns, Refugees, Refusals with Việt Lê&quot; &quot; White Gaze on &quot;Top 10 of 2018&quot; lists (photo poetry book/ performance collab) Waseda University, Tokyo | Art Talks July 2-7, 2019 Queering Contemporary Asian American Art featured artist s://news.",
+          "retrievedAt": "2026-09-07T04:24:45.184Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0204-10",
+          "url": "https://vietle.net/",
+          "excerpt": "com/art-world/queeringcontem Vargas Museum solo show University of the Philippines, 2020 Myriad Modernities special journal double issue coeditor tps://www.",
+          "retrievedAt": "2026-09-07T04:24:45.184Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0204-11",
+          "url": "https://vietle.net/",
+          "excerpt": "v=RZczRBV43qU Love in the Time of War co-curator UC Santa Barbara | SF Camerawork Vi&#x1EC7;t L&ecirc; is an artist, creative writer, and curator.",
+          "retrievedAt": "2026-09-07T04:24:45.184Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0204-12",
+          "url": "https://vietle.net/",
+          "excerpt": "His work has been featured in Fuse; Amerasia Journal; Art in Asia; corpus; the 2004 and 2006 Tebot Bach poetry anthologies (Huntington Beach: Tebot Bach), West Coast Line (Toronto: West Coast Line), Love, West Hollywood (New York: Alyson Books); among others.",
+          "retrievedAt": "2026-09-07T04:24:45.184Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0204-13",
+          "url": "https://vietle.net/",
+          "excerpt": "L&ecirc;&rsquo;s artwork has been exhibited at DoBaeBacSa Gallery, Seoul, Korea; Laguna Art Museum, Laguna, CA; Cape Museum of Fine Arts, MA; Highways Performance Space, Santa Monica, CA; The Banff Centre, Alberta, Canada; Shoshin Performance Space at NYU, NYC, NY; among other venues.",
+          "retrievedAt": "2026-09-07T04:24:45.184Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0204-14",
+          "url": "https://vietle.net/",
+          "excerpt": "L&ecirc; curated Miss Saigon with the Wind (Highways, Santa Monica) and Charlie Don&rsquo;t Surf!",
+          "retrievedAt": "2026-09-07T04:24:45.184Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0204-15",
+          "url": "https://vietle.net/",
+          "excerpt": "(Centre A, Vancouver, BC); and co-curated humor us (Los Angeles Municipal Art Gallery, LA, CA), and transPOP: Korea Vi&#x1EC7;t Nam Remix (Seoul, S&agrave;i G&ograve;n, Irvine, San Francisco).",
+          "retrievedAt": "2026-09-07T04:24:45.184Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0204-16",
+          "url": "https://vietle.net/",
+          "excerpt": "He has received fellowships from the Civitella Ranieri Foundation, Fulbright-Hays, William Joiner Center, Fine Arts Work Center, and PEN Center USA.",
+          "retrievedAt": "2026-09-07T04:24:45.184Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:26:20.206Z",
+      "nextAction": "No publication list on CCA profile or personal site."
     },
     "vp-0205": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://cafnr.missouri.edu/directory/henry-nguyen/",
         "http://soybeangenomics.missouri.edu/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0205-1",
+          "url": "https://cafnr.missouri.edu/directory/henry-nguyen/",
+          "excerpt": "evelopment Clubs &#038; Organizations Current Student Resources About CAFNR expand_more Overview College Leadership Mission, Vision &#038; Values Accelerate the Drive: CAFNR Strategic Plan History International Programs Awards Giving CAFNR Services expand_more Overview Buck’s Ice Cream Mizzou Meat Market NutriZou Nutrition Coaching Tiger Garden Floral Shop Labs &#038; Services Event Space Rental Divisions expand_more Overview Animal Sciences Biochemistry Division of Applied Social Sciences Food, Nutrition and Exercise Sciences Plant Science &#038; Technology School of Natural Resources Henry T.",
+          "retrievedAt": "2026-09-07T04:24:46.297Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0205-2",
+          "url": "https://cafnr.missouri.edu/directory/henry-nguyen/",
+          "excerpt": "Professor of Plant Genetics and Biotechnology Division of Plant Science and Technology email NguyenHenry@missouri.",
+          "retrievedAt": "2026-09-07T04:24:46.297Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0205-3",
+          "url": "https://cafnr.missouri.edu/directory/henry-nguyen/",
+          "excerpt": "edu phone 573-882-5494 place 25 Agriculture Lab Research at a glance Area(s) of Expertise Plant Stress Plant Structure & Function Soybean Research Summary Henry Nguyen has a research program in molecular genetics, genomics, and biotechnology.",
+          "retrievedAt": "2026-09-07T04:24:46.297Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0205-4",
+          "url": "https://cafnr.missouri.edu/directory/henry-nguyen/",
+          "excerpt": "His long-standing research interest is abiotic stress adaptation and tolerance in plants with a current emphasis on soybean.",
+          "retrievedAt": "2026-09-07T04:24:46.297Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0205-5",
+          "url": "https://cafnr.missouri.edu/directory/henry-nguyen/",
+          "excerpt": "Molecular genetics and integrated functional genomics of plant adaptation and resilience to stress environments (root system architecture, drought, flood, and temperature stress).",
+          "retrievedAt": "2026-09-07T04:24:46.297Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0205-6",
+          "url": "https://cafnr.missouri.edu/directory/henry-nguyen/",
+          "excerpt": "Application of pan-genomic technologies to studying natural genetic variation and inheritance of complex traits in soybean.",
+          "retrievedAt": "2026-09-07T04:24:46.297Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0205-7",
+          "url": "https://cafnr.missouri.edu/directory/henry-nguyen/",
+          "excerpt": "Development and application of genomics-assisted breeding strategies for crop improvement.",
+          "retrievedAt": "2026-09-07T04:24:46.297Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0205-8",
+          "url": "https://cafnr.missouri.edu/directory/henry-nguyen/",
+          "excerpt": "Nguyen is a Distinguished Professor of Plant Genetics at the University of Missouri.",
+          "retrievedAt": "2026-09-07T04:24:46.297Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0205-9",
+          "url": "http://soybeangenomics.missouri.edu/",
+          "excerpt": "Plant Stress Genetics and Genomics Group // University of Missouri Skip to navigation Skip to content University of Missouri Plant Stress Genetics and Genomics Group Home Personnel Research Publications News Resources MENU Welcome Welcome to the Molecular Genetics and Crop Genomics Laboratory at the University of Missouri.",
+          "retrievedAt": "2026-09-07T04:24:47.606Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0205-10",
+          "url": "http://soybeangenomics.missouri.edu/",
+          "excerpt": "Research interests in the laboratory focus on the molecular genetics of plant stress tolerance and the application of genomic technologies with a current focus on soybean improvement.",
+          "retrievedAt": "2026-09-07T04:24:47.607Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0205-11",
+          "url": "http://soybeangenomics.missouri.edu/",
+          "excerpt": "Home Personnel Research Publications News Resources Development of variations map for USDA core collection Soybean pangenome Near gapless soybean genomes Development of a global soybean haplotype variations map for enhanced trait mapping MU is an equal opportunity employer .",
+          "retrievedAt": "2026-09-07T04:24:47.607Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:26:20.206Z",
+      "nextAction": "No publication list on Mizzou profile."
     },
     "vp-0206": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.tnstate.edu/agriculture/resumes/doc_lap_tran.aspx"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0206-1",
+          "url": "https://www.tnstate.edu/agriculture/resumes/doc_lap_tran.aspx",
+          "excerpt": "Doc Lap Tran Access Banner(employees) EAB-Navigate e learn email m y TSU tech help _______________ curriculum mgmt emergency system event/room reservations hr system maintenance procurement TN Online univ accreditation univ assessment _______________ other directory campus map Tennessee State University academics Undergraduate Graduate Online / Distance Learning Transfer High School / Other SMART Tech Center libraries & media centers academic calendar catalog & courses freshmen advising You have unlimited possibilities for success at Tennessee State University.",
+          "retrievedAt": "2026-09-07T04:24:49.906Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0206-2",
+          "url": "https://www.tnstate.edu/agriculture/resumes/doc_lap_tran.aspx",
+          "excerpt": "We’re a leading institution of higher learning and provide students with the opportunity to experience academic and personal growth.",
+          "retrievedAt": "2026-09-07T04:24:49.906Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0206-3",
+          "url": "https://www.tnstate.edu/agriculture/resumes/doc_lap_tran.aspx",
+          "excerpt": "You’ll receive instruction from top-notch faculty and be immersed in research, service learning, and student life activities, including internships, cultural, and study abroad opportunities.",
+          "retrievedAt": "2026-09-07T04:24:49.906Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0206-4",
+          "url": "https://www.tnstate.edu/agriculture/resumes/doc_lap_tran.aspx",
+          "excerpt": "admissions & aid Undergraduate request information apply to TSU tuition & costs financial aid campus tour counselors orientation contact admissions Graduate Graduate Admissions Our world-class faculty will teach you how to apply what you learn in the classroom to real-world situations.",
+          "retrievedAt": "2026-09-07T04:24:49.906Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0206-5",
+          "url": "https://www.tnstate.edu/agriculture/resumes/doc_lap_tran.aspx",
+          "excerpt": "The university also assists in providing information on financial aid services, work-study, fellowships and scholarships based on eligibility and other rules and regulations established by the agencies.",
+          "retrievedAt": "2026-09-07T04:24:49.906Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0206-6",
+          "url": "https://www.tnstate.edu/agriculture/resumes/doc_lap_tran.aspx",
+          "excerpt": "student life TSU at a glance student activities student services residence life life in Nashville our history & tradition Tennessee State University students go by the motto: “Think.",
+          "retrievedAt": "2026-09-07T04:24:49.906Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0206-7",
+          "url": "https://www.tnstate.edu/agriculture/resumes/doc_lap_tran.aspx",
+          "excerpt": "” But we also realize a little fun should be part of the collegiate experience to create a holistic approach to learning.",
+          "retrievedAt": "2026-09-07T04:24:49.906Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0206-8",
+          "url": "https://www.tnstate.edu/agriculture/resumes/doc_lap_tran.aspx",
+          "excerpt": "With a variety of social, professional and civic clubs for students to participate in, there are many opportunities for you to share your time and talents and enjoy connecting with your fellow students to create the work-life balance needed for success in college and beyond.",
+          "retrievedAt": "2026-09-07T04:24:49.906Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:26:20.206Z",
+      "nextAction": "Batch 11 complete."
     },
     "vp-0207": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://experts.okstate.edu/chi.l.nguyen",
         "https://nguyenbreeding.com"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0207-1",
+          "url": "https://experts.okstate.edu/chi.l.nguyen",
+          "excerpt": "Chi Nguyen | About | Oklahoma State University Skip to main content All experts Chi Nguyen Assistant Professor Horticulture & Landscape Architecture Contact External links Orcid identifier 0000-0002-1766-2145 (opens in a new tab) ⁠ Assistant Professor Horticulture & Landscape Architecture (405) 744-5497 (Work) chi.",
+          "retrievedAt": "2026-09-07T04:24:50.729Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0207-2",
+          "url": "https://experts.okstate.edu/chi.l.nguyen",
+          "excerpt": "edu (Work) (opens in a new tab) Lab Website (opens in a new tab) ⁠ ResearchGate (opens in a new tab) ⁠ Google Scholar (opens in a new tab) ⁠ Want to connect?",
+          "retrievedAt": "2026-09-07T04:24:50.729Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0207-3",
+          "url": "https://experts.okstate.edu/chi.l.nguyen",
+          "excerpt": "Edit your profile ABOUT SCHOLARLY & CREATIVE WORKS FUNDING MORE BIO & RESEARCH INTERESTs Dr.",
+          "retrievedAt": "2026-09-07T04:24:50.729Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0207-4",
+          "url": "https://experts.okstate.edu/chi.l.nguyen",
+          "excerpt": "Chi Nguyen's research integrates plant breeding, biotechnology, and molecular genetics to develop stress-resilient and commercially valuable crops.",
+          "retrievedAt": "2026-09-07T04:24:50.729Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0207-5",
+          "url": "https://experts.okstate.edu/chi.l.nguyen",
+          "excerpt": "At OSU, her program emphasizes ornamental and nursery crop plant improvement with direct industry applications, focusing on: &#160; Breeding and releasing new cultivars of ornamental and specialty crops adapted to Oklahoma’s climate.",
+          "retrievedAt": "2026-09-07T04:24:50.729Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0207-6",
+          "url": "https://experts.okstate.edu/chi.l.nguyen",
+          "excerpt": "Applying molecular and genomic approaches to accelerate trait discovery and cultivar development.",
+          "retrievedAt": "2026-09-07T04:24:50.729Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0207-7",
+          "url": "https://experts.okstate.edu/chi.l.nguyen",
+          "excerpt": "Strengthening collaborations with industry partners to ensure rapid translation of research outcomes.",
+          "retrievedAt": "2026-09-07T04:24:50.729Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0207-8",
+          "url": "https://experts.okstate.edu/chi.l.nguyen",
+          "excerpt": "&#160; Her long-term goal is to build a comprehensive breeding pipeline that integrates fundamental molecular insights with applied breeding to deliver innovative cultivars that meet grower and consumer needs.",
+          "retrievedAt": "2026-09-07T04:24:50.729Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0207-9",
+          "url": "https://nguyenbreeding.com",
+          "excerpt": "--> Home | Nguyen Ornamental Plant Breeding Lab top of page OKLAHOMA STATE UNIVERSITY NGUYEN LAB Home Our Team Research Teaching & Extension Downloadable Experiments Material Resources Herbaceous Propagation Woody Propagation Seed Germination News Contact Us More Use tab to navigate through the menu items.",
+          "retrievedAt": "2026-09-07T04:24:51.808Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0207-10",
+          "url": "https://nguyenbreeding.com",
+          "excerpt": "ORNAMENTAL PLANT BREEDING Department of Horticulture and Landscape Architecture WELCOME TO THE LAB The Nguyen Lab integrates plant breeding, propagation, biotechnology, and field evaluation to develop woody and herbaceous ornamentals with improved regional performance, production reliability, and landscape value.",
+          "retrievedAt": "2026-09-07T04:24:51.808Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0207-11",
+          "url": "https://nguyenbreeding.com",
+          "excerpt": "Built for Oklahoma Designed for the Green Industry ​ ​ Oklahoma&rsquo;s heat, drought, variable winters, and demanding production conditions create a challenging environment for ornamental plants.",
+          "retrievedAt": "2026-09-07T04:24:51.808Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0207-12",
+          "url": "https://nguyenbreeding.com",
+          "excerpt": "Our program develops and evaluates woody and herbaceous ornamentals that can perform reliably under these conditions while meeting the needs of growers, landscapers, and consumers.",
+          "retrievedAt": "2026-09-07T04:24:51.808Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0207-13",
+          "url": "https://nguyenbreeding.com",
+          "excerpt": "​ We focus on regional adaptation, efficient propagation, low-input performance, and improved flowering and foliage traits.",
+          "retrievedAt": "2026-09-07T04:24:51.808Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0207-14",
+          "url": "https://nguyenbreeding.com",
+          "excerpt": "By connecting plant breeding with nursery production, field testing, and industry feedback, we aim to develop plants with lasting value for landscapes and the ornamental horticulture industry.",
+          "retrievedAt": "2026-09-07T04:24:51.808Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0207-15",
+          "url": "https://nguyenbreeding.com",
+          "excerpt": "Hybridization and Mutation We create new ornamental variation through controlled hybridization, seedling selection, and mutation breeding, with an emphasis on distinctive traits and improved regional performance.",
+          "retrievedAt": "2026-09-07T04:24:51.808Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0207-16",
+          "url": "https://nguyenbreeding.com",
+          "excerpt": "Biotechnology and Propagation ​ ​ We develop tissue culture, molecular, and propagation tools that support efficient plant multiplication, trait discovery, and future cultivar development.",
+          "retrievedAt": "2026-09-07T04:24:51.808Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:26:20.206Z",
+      "nextAction": "No publication list on OSU profile or lab site."
     },
     "vp-0208": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://engineering.uconn.edu/faculty/me/thanh-nguyen/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0208-1",
+          "url": "https://engineering.uconn.edu/faculty/me/thanh-nguyen/",
+          "excerpt": "Nguyen, Thanh | College of Engineering | University of Connecticut Skip to Navigation Skip to UConn Search Skip to Content UConn Cookie Information What are Cookies?",
+          "retrievedAt": "2026-09-07T04:24:53.357Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0208-2",
+          "url": "https://engineering.uconn.edu/faculty/me/thanh-nguyen/",
+          "excerpt": "Authentication Cookies Analytics Cookies Opt Out Web cookies (also called HTTP cookies , browser cookies , or simply cookies ) are small pieces of data that websites store on your device (computer, phone, etc.",
+          "retrievedAt": "2026-09-07T04:24:53.357Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0208-3",
+          "url": "https://engineering.uconn.edu/faculty/me/thanh-nguyen/",
+          "excerpt": "They are used to remember information about you and your interactions with the site.",
+          "retrievedAt": "2026-09-07T04:24:53.357Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0208-4",
+          "url": "https://engineering.uconn.edu/faculty/me/thanh-nguyen/",
+          "excerpt": "Purpose of Cookies: Session Management : Keeping you logged in Remembering items in a shopping cart Saving language or theme preferences Personalization : Tailoring content or ads based on your previous activity Tracking & Analytics : Monitoring browsing behavior for analytics or marketing purposes Types of Cookies: Session Cookies : Temporary; deleted when you close your browser Used for things like keeping you logged in during a single session Persistent Cookies : Stored on your device until they expire or are manually deleted Used for remembering login credentials, settings, etc.",
+          "retrievedAt": "2026-09-07T04:24:53.357Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0208-5",
+          "url": "https://engineering.uconn.edu/faculty/me/thanh-nguyen/",
+          "excerpt": "First-Party Cookies : Set by the website you're visiting directly Third-Party Cookies : Set by other domains (usually advertisers) embedded in the website Commonly used for tracking across multiple sites Authentication cookies are a special type of web cookie used to identify and verify a user after they log in to a website or web application.",
+          "retrievedAt": "2026-09-07T04:24:53.357Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0208-6",
+          "url": "https://engineering.uconn.edu/faculty/me/thanh-nguyen/",
+          "excerpt": "What They Do: Once you log in to a site, the server creates an authentication cookie and sends it to your browser.",
+          "retrievedAt": "2026-09-07T04:24:53.357Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0208-7",
+          "url": "https://engineering.uconn.edu/faculty/me/thanh-nguyen/",
+          "excerpt": "This cookie: Proves to the website that you're logged in Prevents you from having to log in again on every page you visit Can persist across sessions if you select \"Remember me\" What's Inside an Authentication Cookie?",
+          "retrievedAt": "2026-09-07T04:24:53.357Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0208-8",
+          "url": "https://engineering.uconn.edu/faculty/me/thanh-nguyen/",
+          "excerpt": "Typically, it contains: A unique session ID (not your actual password) Optional metadata (e.",
+          "retrievedAt": "2026-09-07T04:24:53.357Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:26:20.206Z",
+      "nextAction": "Batch 11 complete."
     },
     "vp-0209": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://appliedmath.brown.edu/people/oanh-nguyen",
         "https://sites.google.com/view/oanh-nguyen/home"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0209-1",
+          "url": "https://appliedmath.brown.edu/people/oanh-nguyen",
+          "excerpt": "Oanh Nguyen | Applied Mathematics Skip to Main Content Brown University Applied Mathematics Search Menu Site Navigation Home About Contact Fast Facts History Position Openings Academics Undergraduate Program Graduate Program Community Student Groups Ph.",
+          "retrievedAt": "2026-09-07T04:24:53.661Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0209-2",
+          "url": "https://appliedmath.brown.edu/people/oanh-nguyen",
+          "excerpt": "Alumni People Faculty Graduate Students Postdoctoral Researchers Visiting Scholars Staff Research Research Areas Research Grants Events Seminars Archive News Search Applied Mathematics Breadcrumb Home People Oanh Nguyen Assistant Professor of Applied Mathematics oanh_nguyen1@brown.",
+          "retrievedAt": "2026-09-07T04:24:53.661Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0209-3",
+          "url": "https://appliedmath.brown.edu/people/oanh-nguyen",
+          "excerpt": ", 10:30am - 12pm Research Profile Oanh Nguyen&#039;s website Biography Oanh Nguyen is an assistant professor in the Division of Applied Mathematics at Brown University.",
+          "retrievedAt": "2026-09-07T04:24:53.661Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0209-4",
+          "url": "https://appliedmath.brown.edu/people/oanh-nguyen",
+          "excerpt": "Before moving to Brown, Oanh held positions at Princeton University and the University of Illinois.",
+          "retrievedAt": "2026-09-07T04:24:53.661Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0209-5",
+          "url": "https://appliedmath.brown.edu/people/oanh-nguyen",
+          "excerpt": "Her research publications have made significant contributions to the studies of universality properties for random functions and the spread of epidemics on random networks.",
+          "retrievedAt": "2026-09-07T04:24:53.661Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0209-6",
+          "url": "https://appliedmath.brown.edu/people/oanh-nguyen",
+          "excerpt": "She received an NSF grant, AIM SQuaREs, and a Salomon research award from Brown University.",
+          "retrievedAt": "2026-09-07T04:24:53.661Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0209-7",
+          "url": "https://appliedmath.brown.edu/people/oanh-nguyen",
+          "excerpt": "Brown University Providence RI 02912 401-863-1000 Quick Navigation Visit Brown Campus Map A to Z Contact Us Footer Navigation News Events Campus Safety Accessibility Careers at Brown Give To Brown &copy; Brown University Brown University For You Search Menu Mobile Site Navigation Mobile Site Navigation Home About Contact Fast Facts History Position Openings Academics Undergraduate Program Graduate Program Community Student Groups Ph.",
+          "retrievedAt": "2026-09-07T04:24:53.661Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0209-8",
+          "url": "https://appliedmath.brown.edu/people/oanh-nguyen",
+          "excerpt": "Alumni People Faculty Graduate Students Postdoctoral Researchers Visiting Scholars Staff Research Research Areas Research Grants Events Seminars Archive News This Site All of Brown.",
+          "retrievedAt": "2026-09-07T04:24:53.661Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0209-9",
+          "url": "https://sites.google.com/view/oanh-nguyen/home",
+          "excerpt": "Oanh Nguyen Search this site Embedded Files Skip to main content Skip to navigation Oanh Nguyen Home Teaching in Vietnamese VN 2026: Graduate Probability Math Sphere Oanh Nguyen Home Teaching in Vietnamese VN 2026: Graduate Probability Math Sphere More Home Teaching in Vietnamese VN 2026: Graduate Probability Math Sphere There are several ways that Vietnamese people pronounce my first name, and one of them sounds like &quot;On&quot;.",
+          "retrievedAt": "2026-09-07T04:24:53.987Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0209-10",
+          "url": "https://sites.google.com/view/oanh-nguyen/home",
+          "excerpt": "I&#39;m a Vietnamese mathematician, currently an assistant professor in the Division of Applied Mathematics at Brown University.",
+          "retrievedAt": "2026-09-07T04:24:53.987Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0209-11",
+          "url": "https://sites.google.com/view/oanh-nguyen/home",
+          "excerpt": "You can reach me at oanh_nguyen1 at brown dot edu Office: Room 325, 182 George Street CV Research interests I am excited about Math, especially things related to Analysis and Probability.",
+          "retrievedAt": "2026-09-07T04:24:53.987Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0209-12",
+          "url": "https://sites.google.com/view/oanh-nguyen/home",
+          "excerpt": "Some of my interests include random polynomials, random graphs, epidemic processes, and optimal transports.",
+          "retrievedAt": "2026-09-07T04:24:53.987Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0209-13",
+          "url": "https://sites.google.com/view/oanh-nguyen/home",
+          "excerpt": "More broadly, I&#39;m interested in universality phenomenon for random structures and the phase transition of stochastic processes.",
+          "retrievedAt": "2026-09-07T04:24:53.987Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0209-14",
+          "url": "https://sites.google.com/view/oanh-nguyen/home",
+          "excerpt": "If you are interested in getting a copy of the course materials, feel free to let me know.",
+          "retrievedAt": "2026-09-07T04:24:53.987Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0209-15",
+          "url": "https://sites.google.com/view/oanh-nguyen/home",
+          "excerpt": "Undergraduate/Graduate course on Recent applications of Probability and Statistics (APMA 1740/2610) Lecture notes Graduate Probability I (APMA 2630) Lecture notes Undergraduate course on random graphs and stochastic processes on random graphs (APMA 1860) Lecture notes Graduate topic course: Introduction to random graphs (APMA 2812H) Publications Convergence of higher derivatives of random polynomials with independent roots (with Jürgen Angst and Guillaume Poly) , arxiv preprint arxiv:2 6 0 1 .",
+          "retrievedAt": "2026-09-07T04:24:53.987Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0209-16",
+          "url": "https://sites.google.com/view/oanh-nguyen/home",
+          "excerpt": "[ pdf ][ abs ] Even after repeatedly differentiating a random polynomial, its zeros remarkably retain the original distribution they were drawn from—and this holds even when taking derivatives nearly as high as the polynomial’s degree, surpassing previous limits on how far differentiation could go while preserving the root pattern.",
+          "retrievedAt": "2026-09-07T04:24:53.987Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:26:20.206Z",
+      "nextAction": "Batch 11 complete."
     },
     "vp-0210": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://about.byuh.edu/directory/tuan-pham"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0210-1",
+          "url": "https://about.byuh.edu/directory/tuan-pham",
+          "excerpt": "Tuan Pham Close Home Burger Menu Icon Skip to main content About Menu Search Mission & Vision Leadership History Visiting BYU–Hawaii Tuan Pham Assistant Professor Faculty of Math & Computing Website: https://blogs.",
+          "retrievedAt": "2026-09-07T04:24:54.734Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0210-2",
+          "url": "https://about.byuh.edu/directory/tuan-pham",
+          "excerpt": "Pham was born and raised in Buon Ma Thuot City, Daklak, Vietnam, being the elder of two.",
+          "retrievedAt": "2026-09-07T04:24:54.734Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0210-3",
+          "url": "https://about.byuh.edu/directory/tuan-pham",
+          "excerpt": "He came to the United States in 2012 to attend the graduate school in Mathematics at the University of Minnesota.",
+          "retrievedAt": "2026-09-07T04:24:54.734Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0210-4",
+          "url": "https://about.byuh.edu/directory/tuan-pham",
+          "excerpt": "During this time, he found the restored church of Jesus Christ and was baptized.",
+          "retrievedAt": "2026-09-07T04:24:54.734Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0210-5",
+          "url": "https://about.byuh.edu/directory/tuan-pham",
+          "excerpt": "Here he met his eternal companion, Kathy Sherwood, who was then a high school Spanish teacher.",
+          "retrievedAt": "2026-09-07T04:24:54.734Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0210-6",
+          "url": "https://about.byuh.edu/directory/tuan-pham",
+          "excerpt": "He taught at Brigham Young University the following 2 years and Eastern Oregon University the following year before joining Brigham Young University-Hawaii in 2023.",
+          "retrievedAt": "2026-09-07T04:24:54.734Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0210-7",
+          "url": "https://about.byuh.edu/directory/tuan-pham",
+          "excerpt": "He enjoys learning and teaching math, playing the guitar, researching genealogy, and spending time with his precious family.",
+          "retrievedAt": "2026-09-07T04:24:54.734Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0210-8",
+          "url": "https://about.byuh.edu/directory/tuan-pham",
+          "excerpt": "With his Vietnamese background, he is excited to contribute to the cultural diversity of the campus community.",
+          "retrievedAt": "2026-09-07T04:24:54.734Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:26:20.206Z",
+      "nextAction": "No publication list on BYU-Hawaii profile."
     },
     "vp-0211": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.sdstate.edu/directory/trang-nguyen",
         "https://daitrangng.github.io/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0211-1",
+          "url": "https://www.sdstate.edu/directory/trang-nguyen",
+          "excerpt": "hools General Education Academic Calendar Academic Catalog Graduate School Honors College Library Admissions Undergraduate Transfer Graduate Online Dual Credit International Paying for College Student Life Housing Campus Dining Student Success Student Experience University Wellbeing Student Resources Parents and Families Research Events and Trainings Find Funding Research Impact Proposal Development Research Support Student Research Opportunities Community Attractions Camps and Conferences Family Weekend SDState Experience SDSU Metro Center Event Calendar Search Apply Today SDSTATE Breadcrumb .",
+          "retrievedAt": "2026-09-07T04:24:55.813Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0211-2",
+          "url": "https://www.sdstate.edu/directory/trang-nguyen",
+          "excerpt": "Home Faculty and Staff Directory Trang Nguyen Assistant Professor of Statistics Email 605-688-5846 Education B.",
+          "retrievedAt": "2026-09-07T04:24:55.813Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0211-3",
+          "url": "https://www.sdstate.edu/directory/trang-nguyen",
+          "excerpt": "in applied mathematics | Wayne State University | 2025 Mailing Address: Chicoine Architecture, Math & Engineering Building Math & Statistics-Box 2225 University Station Brookings, SD 57007 Office Location: Chicoine Architecture, Mathematics and Engineering Hall View Location Back to Directory Related Links Google Scholar Homepage Associated Areas Department of Mathematics and Statistics Visit Us Come Meet Your Future Meet the people that will help shape your future and define your college experience!",
+          "retrievedAt": "2026-09-07T04:24:55.813Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0211-4",
+          "url": "https://www.sdstate.edu/directory/trang-nguyen",
+          "excerpt": "Apply Today Plan Your Visit Request Info Get Directions Give to SDSU Office Directory Explore About SDState Academics Admissions Student Life Research Community Connect Alumni Athletics Bookstore Event Calendar Giving Library News For Students D2L Jacks Club Hub Jacks Email MyJacks Card MyState Self Service For Faculty and Staff Employment Faculty and Staff Directory InsideState My Account &copy; 2026 All Rights Reserved.",
+          "retrievedAt": "2026-09-07T04:24:55.813Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0211-5",
+          "url": "https://daitrangng.github.io/",
+          "excerpt": "Trang Nguyen Toggle navigation Trang Nguyen Publications Teaching Conferences Awards Activities Trang Nguyen My full name is \"Thi Dai Trang Nguyen\", I am an Assistant Professor in the Department of Mathematics and Statistics at South Dakota State University.",
+          "retrievedAt": "2026-09-07T04:24:56.156Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0211-6",
+          "url": "https://daitrangng.github.io/",
+          "excerpt": "Research interest: Optimization, Optimal Control and Applications, Nonlinear and Variational Analysis AI & Machine Learning, Statistics I am seeking motivated graduate students (Master’s and Ph.",
+          "retrievedAt": "2026-09-07T04:24:56.156Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0211-7",
+          "url": "https://daitrangng.github.io/",
+          "excerpt": "Research focuses on optimization, optimal control, machine learning, and statistical learning.",
+          "retrievedAt": "2026-09-07T04:24:56.156Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0211-8",
+          "url": "https://daitrangng.github.io/",
+          "excerpt": "Research Assistant (RA) and Teaching Assistant (TA) positions are available, and fully-funded.",
+          "retrievedAt": "2026-09-07T04:24:56.156Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0211-9",
+          "url": "https://daitrangng.github.io/",
+          "excerpt": "In particular, RA positions are will be awarded as soon as qualified candidates are identified.",
+          "retrievedAt": "2026-09-07T04:24:56.156Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0211-10",
+          "url": "https://daitrangng.github.io/",
+          "excerpt": "Bachelor Degree in Mathematics and Education- Advisor: Professor Dang Ky Luong .",
+          "retrievedAt": "2026-09-07T04:24:56.156Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0211-11",
+          "url": "https://daitrangng.github.io/",
+          "excerpt": "Publications Optimal Control of Nonconvex Sweeping Processes with Variable Time via Finite-Difference Approximations.",
+          "retrievedAt": "2026-09-07T04:24:56.156Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0211-12",
+          "url": "https://daitrangng.github.io/",
+          "excerpt": "00667 Well-posedness and stability of discrete approximations for controlled sweeping processes with time delay.",
+          "retrievedAt": "2026-09-07T04:24:56.156Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:26:20.206Z",
+      "nextAction": "Batch 11 complete."
     },
     "vp-0212": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.usf.edu/arts-sciences/departments/physics/people/faculty/manh-huong-phan.aspx",
         "https://www.usf.edu/arts-sciences/departments/physics/research/labs/manh-huong-phan/index.aspx"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0212-1",
+          "url": "https://www.usf.edu/arts-sciences/departments/physics/people/faculty/manh-huong-phan.aspx",
+          "excerpt": "Manh Huong Phan | Department of Physics | College of Arts and Sciences | University of South Florida Skip to Main Content University of South Florida - 70 Est.",
+          "retrievedAt": "2026-09-07T04:24:56.475Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0212-2",
+          "url": "https://www.usf.edu/arts-sciences/departments/physics/people/faculty/manh-huong-phan.aspx",
+          "excerpt": "1956 Search Search USF: Department of Physics College of Arts and Sciences About Us People Undergraduate Graduate Research Areas News Quick Links Visit USF Parking Permits Activate USF NetID Fall Academic Calendar BullTracker&reg; USF Athletics Student Tickets St.",
+          "retrievedAt": "2026-09-07T04:24:56.475Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0212-3",
+          "url": "https://www.usf.edu/arts-sciences/departments/physics/people/faculty/manh-huong-phan.aspx",
+          "excerpt": "Petersburg Campus USF Health Give Search MyUSF Apply Quick Links Visit USF Parking Permits Activate USF NetID Fall Academic Calendar BullTracker&reg; USF Athletics Student Tickets St.",
+          "retrievedAt": "2026-09-07T04:24:56.475Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0212-4",
+          "url": "https://www.usf.edu/arts-sciences/departments/physics/people/faculty/manh-huong-phan.aspx",
+          "excerpt": "Petersburg Campus USF Health Give Search Search USF: MyUSF Apply Department of Physics College of Arts and Sciences About Us People Undergraduate Graduate Research Areas News Faculty Skip Over Breadcrumbs Breadcrumb Navigation Physics People Faculty Manh-Huong Phan Manh-Huong Phan Research Professor contact Office: ISA 4212 Phone: (813) 974-4322 Lab: ISA 5043 Email Website Education Ph.",
+          "retrievedAt": "2026-09-07T04:24:56.475Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0212-5",
+          "url": "https://www.usf.edu/arts-sciences/departments/physics/people/faculty/manh-huong-phan.aspx",
+          "excerpt": "in Applied Physics, Chungbuk National University , South Korea, 2003 research areas Solid State & Materials Physics University of South Florida Located in Tampa and St.",
+          "retrievedAt": "2026-09-07T04:24:56.475Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0212-6",
+          "url": "https://www.usf.edu/arts-sciences/departments/physics/people/faculty/manh-huong-phan.aspx",
+          "excerpt": "Fowler Avenue Tampa, FL 33620, USA 813-974-2871 Connect with us: Facebook X YouTube Instagram About USF Academics Admissions Locations Campus Life Research Administrative Units Regulations & Policies Human Resources Work at USF Emergency & Safety Title IX Awards and News Spotlights REU application Special Programs Advising and Permits New Science Building Copyright © 2026, University of South Florida.",
+          "retrievedAt": "2026-09-07T04:24:56.475Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0212-7",
+          "url": "https://www.usf.edu/arts-sciences/departments/physics/research/labs/manh-huong-phan/index.aspx",
+          "excerpt": "Laboratory for Advanced Materials and Sensors | Department of Physics | College of Arts and Sciences | University of South Florida Skip to Main Content University of South Florida - 70 Est.",
+          "retrievedAt": "2026-09-07T04:24:56.695Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0212-8",
+          "url": "https://www.usf.edu/arts-sciences/departments/physics/research/labs/manh-huong-phan/index.aspx",
+          "excerpt": "1956 Search Search USF: Department of Physics College of Arts and Sciences About Us People Undergraduate Graduate Research Areas News Quick Links Visit USF Parking Permits Activate USF NetID Fall Academic Calendar BullTracker&reg; USF Athletics Student Tickets St.",
+          "retrievedAt": "2026-09-07T04:24:56.695Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0212-9",
+          "url": "https://www.usf.edu/arts-sciences/departments/physics/research/labs/manh-huong-phan/index.aspx",
+          "excerpt": "Petersburg Campus USF Health Give Search MyUSF Apply Quick Links Visit USF Parking Permits Activate USF NetID Fall Academic Calendar BullTracker&reg; USF Athletics Student Tickets St.",
+          "retrievedAt": "2026-09-07T04:24:56.695Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0212-10",
+          "url": "https://www.usf.edu/arts-sciences/departments/physics/research/labs/manh-huong-phan/index.aspx",
+          "excerpt": "Petersburg Campus USF Health Give Search Search USF: MyUSF Apply Department of Physics College of Arts and Sciences About Us People Undergraduate Graduate Research Areas News Laboratory for Advanced Materials and Sensors Skip Over Breadcrumbs and Secondary Navigation Breadcrumb Navigation Physics Research Areas Labs Laboratory for Advanced Materials and Sensors Manh-Huong Phan Secondary Navigation Manh-Huong Phan Research Publications Awards Members Links Manh-Huong Phan Prof.",
+          "retrievedAt": "2026-09-07T04:24:56.695Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0212-11",
+          "url": "https://www.usf.edu/arts-sciences/departments/physics/research/labs/manh-huong-phan/index.aspx",
+          "excerpt": "Manh-Huong Phan Department of Physics University of South Florida 4202 East Fowler Avenue Tampa, Florida 33620, USA Phone: 813-974-4322 Fax: 813-974-5813 Email Director, The Laboratory for Advanced Materials and Sensors Education Ph.",
+          "retrievedAt": "2026-09-07T04:24:56.695Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0212-12",
+          "url": "https://www.usf.edu/arts-sciences/departments/physics/research/labs/manh-huong-phan/index.aspx",
+          "excerpt": "State Physics, Vietnam National University , Vietnam, 2000 Research Interests Nanomagnetism and nanospintronics Smart sensing technologies and biosensors Energy-efficient multicaloric materials Functional magnetic oxides Magnetic nanoparticles and nanomedicine Multiferroic films and heterostructures Helical magnets and magnetic skyrmions Atomically thin van der Waals magnets Transition metal chalcogenides and heterostructures Quantum materials and devices Professional Activities Managing Editor & Founding Member, Journal of Science: Advanced Materials and Devices (Elsevier, SCI journal, IF = 8.",
+          "retrievedAt": "2026-09-07T04:24:56.695Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0212-13",
+          "url": "https://www.usf.edu/arts-sciences/departments/physics/research/labs/manh-huong-phan/index.aspx",
+          "excerpt": "0, 2016 - present) Editor, Journal of Electronic Materials (Springer, SCI journal, IF = 1.",
+          "retrievedAt": "2026-09-07T04:24:56.695Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0212-14",
+          "url": "https://www.usf.edu/arts-sciences/departments/physics/research/labs/manh-huong-phan/index.aspx",
+          "excerpt": "67, 2018 - 2020) Editorial Board Member, Scientific Reports (Springer - Nature Research Publisher, IF = 4.",
+          "retrievedAt": "2026-09-07T04:24:56.695Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:26:20.206Z",
+      "nextAction": "No publication list on USF profile or lab site."
     },
     "vp-0213": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.marist.edu/computer-science-math/faculty/duy-nguyen",
         "https://sites.google.com/site/nducduy/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0213-1",
+          "url": "https://www.marist.edu/computer-science-math/faculty/duy-nguyen",
+          "excerpt": "Duy Nguyen, Mathematics - Marist University Skip to Main Content About Marist Fall 2026 Open House Join us for a Fall Open House and see Marist for yourself.",
+          "retrievedAt": "2026-09-07T04:24:57.425Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0213-2",
+          "url": "https://www.marist.edu/computer-science-math/faculty/duy-nguyen",
+          "excerpt": "Explore our stunning riverfront campus, learn more about academics and admissions, and get a firsthand look at life as a Red Fox.",
+          "retrievedAt": "2026-09-07T04:24:57.425Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0213-3",
+          "url": "https://www.marist.edu/computer-science-math/faculty/duy-nguyen",
+          "excerpt": "Along the way, you'll hear from students, faculty, and staff about the opportunities, connections, and experiences that make Marist special.",
+          "retrievedAt": "2026-09-07T04:24:57.425Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0213-4",
+          "url": "https://www.marist.edu/computer-science-math/faculty/duy-nguyen",
+          "excerpt": "nd Belonging Leadership &lt;em&gt;Marist 100&lt;/em&gt; Strategic Plan Explore the Hudson River Valley History & Heritage Accreditation Financial Statements Campus Offices Admissions & Financial Aid Counseling Services Events Services First Year Experience Housing & Residential Life Human Resources President&#39;s Office Campus Safety Title IX and Title VI Connect with Us Schedule a Visit Careers at Marist Give to Marist Events Calendar Host Events at Marist News Subscribe to Inside Marist Directory Academics Marist Fall 2026 Open House Join us for a Fall Open House and see Marist for yourself.",
+          "retrievedAt": "2026-09-07T04:24:57.425Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0213-5",
+          "url": "https://www.marist.edu/computer-science-math/faculty/duy-nguyen",
+          "excerpt": "Explore our stunning riverfront campus, learn more about academics and admissions, and get a firsthand look at life as a Red Fox.",
+          "retrievedAt": "2026-09-07T04:24:57.425Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0213-6",
+          "url": "https://www.marist.edu/computer-science-math/faculty/duy-nguyen",
+          "excerpt": "Along the way, you'll hear from students, faculty, and staff about the opportunities, connections, and experiences that make Marist special.",
+          "retrievedAt": "2026-09-07T04:24:57.425Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0213-7",
+          "url": "https://www.marist.edu/computer-science-math/faculty/duy-nguyen",
+          "excerpt": "iences Division of Extended Learning Resources Academic Learning Center Accommodations and Accessibility Advising and Academic Services Career Services Library Office of the Provost Presidential Fund for Equity in the Marist Experience Registrar Science and Health Initiative Writing Center Experiential Learning Internships Study Abroad Centers for Research and Engagement Marist Italy Undergraduate Research Dean’s Circle Hudson River Valley Institute Marist/IBM Joint Study Marist Poll Admission & Financial Aid Marist Fall 2026 Open House Join us for a Fall Open House and see Marist for yourself.",
+          "retrievedAt": "2026-09-07T04:24:57.425Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0213-8",
+          "url": "https://www.marist.edu/computer-science-math/faculty/duy-nguyen",
+          "excerpt": "Explore our stunning riverfront campus, learn more about academics and admissions, and get a firsthand look at life as a Red Fox.",
+          "retrievedAt": "2026-09-07T04:24:57.425Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:26:20.206Z",
+      "nextAction": "No publication list on Marist profile."
     },
     "vp-0214": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://bdp.jhu.edu/bd-professors/chi-van-dang/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://bdp.jhu.edu/bd-professors/chi-van-dang/: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T04:26:20.206Z",
+      "nextAction": "Retry JHU endpoint when available."
     },
     "vp-0215": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://biology.ucsd.edu/research/faculty/vnguyen",
         "https://nguyenlab.biosci.ucsd.edu/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0215-1",
+          "url": "https://biology.ucsd.edu/research/faculty/vnguyen",
+          "excerpt": "Concurrent Enrollment Career & Professional Development Equity, Diversity, Inclusion Faculty Expectations Resources Calendar Impact Accountability Jobs Faculty Postdoctoral Instructional Professional Researcher Instructional Assistants Summer Session Partner with Us Industry Alumni Giving Administration Units & Resources Directories Policies (SSO) Search Scope This Site All UCSD Sites Faculty/Staff Search Term HOME Research Faculty Vu Nguyen Vu Nguyen Research Publications Biography Research The cell maintains its state and type by expressing proper levels of the right genes at the right time.",
+          "retrievedAt": "2026-09-07T04:24:58.337Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0215-2",
+          "url": "https://biology.ucsd.edu/research/faculty/vnguyen",
+          "excerpt": "In the nucleus, such specificity demands constant actions by numerous factors that organize and transcribe the genome, much of which is condensed in \"closed\" chromatin.",
+          "retrievedAt": "2026-09-07T04:24:58.337Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0215-3",
+          "url": "https://biology.ucsd.edu/research/faculty/vnguyen",
+          "excerpt": "These factors must search the nuclear space and compete for binding to DNA in \"open\" chromatin.",
+          "retrievedAt": "2026-09-07T04:24:58.337Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0215-4",
+          "url": "https://biology.ucsd.edu/research/faculty/vnguyen",
+          "excerpt": "Timing is of the essence here&#8212;individual components must arrive in time to form complexes that must coordinate their functions sequentially to transcribe the target gene.",
+          "retrievedAt": "2026-09-07T04:24:58.337Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0215-5",
+          "url": "https://biology.ucsd.edu/research/faculty/vnguyen",
+          "excerpt": "In the confined and highly crowded cell nucleus, how is the genome organized and how do factors find the right genes at the right time?",
+          "retrievedAt": "2026-09-07T04:24:58.337Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0215-6",
+          "url": "https://biology.ucsd.edu/research/faculty/vnguyen",
+          "excerpt": "The general transcription factor TFIIH, required for transcription initiation, is present at &#126;2,000 molecules per yeast cell.",
+          "retrievedAt": "2026-09-07T04:24:58.337Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0215-7",
+          "url": "https://biology.ucsd.edu/research/faculty/vnguyen",
+          "excerpt": "A single molecule, imaged every 10 milliseconds, takes under 1 second to survey the entire nuclear space.",
+          "retrievedAt": "2026-09-07T04:24:58.337Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0215-8",
+          "url": "https://biology.ucsd.edu/research/faculty/vnguyen",
+          "excerpt": "The Nguyen Lab uses superresolution microscopy to visualize and track genome regulators&#8212;chromatin-remodeling, epigenetic, and transcription machineries&#8212;in real time and at single-molecule resolution.",
+          "retrievedAt": "2026-09-07T04:24:58.337Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0215-9",
+          "url": "https://nguyenlab.biosci.ucsd.edu/",
+          "excerpt": "Skip to content SCIENCE Research Tools Gallery Papers TEAM Members Gallery CONTACT Search for: Search SCIENCE Research Tools Gallery Papers TEAM Gallery LIVE TRAFFIC INSIDE THE CELL NUCLEUS The cell must express proper levels of the right genes at the right time to maintain its state and type.",
+          "retrievedAt": "2026-09-07T04:25:00.678Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0215-10",
+          "url": "https://nguyenlab.biosci.ucsd.edu/",
+          "excerpt": "This specificity demands constant and coordinated actions by numerous factors that organize and transcribe the genome.",
+          "retrievedAt": "2026-09-07T04:25:00.678Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0215-11",
+          "url": "https://nguyenlab.biosci.ucsd.edu/",
+          "excerpt": "In the highly crowded and dynamic nucleus, how do genome regulators find the right genes at the right time?",
+          "retrievedAt": "2026-09-07T04:25:00.678Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0215-12",
+          "url": "https://nguyenlab.biosci.ucsd.edu/",
+          "excerpt": "LEARN MORE MEET OUR TEAM JOIN US NEWS 3/1/2023 – Nguyen Lab opens in Bonner Hall!",
+          "retrievedAt": "2026-09-07T04:25:00.678Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0215-13",
+          "url": "https://nguyenlab.biosci.ucsd.edu/",
+          "excerpt": "edu 1 858 534 9110 9500 Gilman Dr, MC 0322 La Jolla, CA 92093 Site link Research Tools Papers Members Follow Us Facebook-f Twitter Tumblr Instagram Tripadvisor Pinterest-p Youtube © 2023 Nguyen Lab UCSD.",
+          "retrievedAt": "2026-09-07T04:25:00.678Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:26:20.206Z",
+      "nextAction": "Batch 11 complete."
     },
     "vp-0216": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://sites.google.com/view/trang-t-h-nguyen/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0216-1",
+          "url": "https://sites.google.com/view/trang-t-h-nguyen/",
+          "excerpt": "Nguyen Search this site Embedded Files Skip to main content Skip to navigation Prof.",
+          "retrievedAt": "2026-09-07T04:25:00.810Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0216-2",
+          "url": "https://sites.google.com/view/trang-t-h-nguyen/",
+          "excerpt": "Nguyen Home Research Lab Group Teaching Service News Photos More Home Research Lab Group Teaching Service News Photos Trang T.",
+          "retrievedAt": "2026-09-07T04:25:00.810Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0216-3",
+          "url": "https://sites.google.com/view/trang-t-h-nguyen/",
+          "excerpt": "Nguyen Microbial Ecologist || Biogeochemist || Ecosystem Modeler Assistant Professor of Microbiology Department of Biological Sciences Science Jonesboro, Arkansas, USA trnguyen[a]astate[dot]edu huyentrang194[a]gmail[dot]com ABOUT ME I am a soil scientist and a biogeochemist.",
+          "retrievedAt": "2026-09-07T04:25:00.810Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0216-4",
+          "url": "https://sites.google.com/view/trang-t-h-nguyen/",
+          "excerpt": "My research seeks to understand the biogeochemical functions of microorganisms at multiple biological organization levels from micro- to global scale in both terrestrial and marine environments.",
+          "retrievedAt": "2026-09-07T04:25:00.810Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0216-5",
+          "url": "https://sites.google.com/view/trang-t-h-nguyen/",
+          "excerpt": "I use a combination of research approaches including biochemical, molecular, and modeling techniques to define the mechanisms under which microbial communities respond to and mediate biogeochemical cycling and quantify the functional shifts of microbial communities in a changing environment and the potential feedback of the microbial community dynamics on the environment.",
+          "retrievedAt": "2026-09-07T04:25:00.810Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0216-6",
+          "url": "https://sites.google.com/view/trang-t-h-nguyen/",
+          "excerpt": "I am also extending my research to (1) carbon cycling in the complicated food web of the Arctic Ocean, (2) arsenic biogeochemical dynamics in tropical paddy soils, and (3) integrating AI into studying hidden biodiversity in Vietnam.",
+          "retrievedAt": "2026-09-07T04:25:00.810Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:26:20.206Z",
+      "nextAction": "No publication list on Arkansas State site."
     },
     "vp-0217": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.binghamton.edu/decker/nursing/people/profile.html?id=tvo5"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0217-1",
+          "url": "https://www.binghamton.edu/decker/nursing/people/profile.html?id=tvo5",
+          "excerpt": "Timothea Vo, PhD, RN, CTN-B - Our Faculty | Nursing | Binghamton University Skip to main content Binghamton University: The State University of New York Nursing search menu Search Nursing Nursing About Undergraduate Graduate People Faculty Staff Division of Advising Centers / Labs / Clinics Research Our Faculty Timothea Vo, PhD, RN, CTN-B Assistant Professor Decker College of Nursing and Health Sciences 607-777-6980 HSB 416 tvo5@binghamton.",
+          "retrievedAt": "2026-09-07T04:25:01.862Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0217-2",
+          "url": "https://www.binghamton.edu/decker/nursing/people/profile.html?id=tvo5",
+          "excerpt": "edu Biography Timothea Vo joined Binghamton University in September 2024 as an assistant professor in the Division of Nursing at Decker College of Nursing and Health Sciences.",
+          "retrievedAt": "2026-09-07T04:25:01.862Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0217-3",
+          "url": "https://www.binghamton.edu/decker/nursing/people/profile.html?id=tvo5",
+          "excerpt": "She previously received postdoctoral training in advanced sleep and circadian rhythms at Northeastern University (primary mentor: Lichuan Ye).",
+          "retrievedAt": "2026-09-07T04:25:01.862Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0217-4",
+          "url": "https://www.binghamton.edu/decker/nursing/people/profile.html?id=tvo5",
+          "excerpt": "Her research interest is how cultural health-related practices, sleep and circadian rhythms, in the context of maternal-infant dyads and family relationships, shape trajectories of glucose metabolism, homeostasis and disease.",
+          "retrievedAt": "2026-09-07T04:25:01.862Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0217-5",
+          "url": "https://www.binghamton.edu/decker/nursing/people/profile.html?id=tvo5",
+          "excerpt": "Vo completed her PhD in nursing at the University of Connecticut, where she received rigorous training in qualitative research methodologies (primary mentor: Cheryl Beck).",
+          "retrievedAt": "2026-09-07T04:25:01.862Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0217-6",
+          "url": "https://www.binghamton.edu/decker/nursing/people/profile.html?id=tvo5",
+          "excerpt": "Her long-term career goal is to apply a social rhythm framework to nursing research by focusing the role of sleep and circadian rhythms on glycemic control during pregnancy.",
+          "retrievedAt": "2026-09-07T04:25:01.862Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0217-7",
+          "url": "https://www.binghamton.edu/decker/nursing/people/profile.html?id=tvo5",
+          "excerpt": "niversity of Connecticut BS, nursing, University of Connecticut Research Interests Asian and Asian-American health Maternal mental health Sleep Culture Glycemic control Teaching Interests Maternal child health nursing Qualitative research Theoretical applications Clinical Interests Postpartum/newborn nursing Honors and Awards 2024 Article of the Year Award, MCN : The American Journal of Maternal/Child Health Nursing, dissertation titled, \"The lived experience of postpartum intergenerational conflict of Vietnamese American women with their Vietnamese immigrant parents: It's A Generational Thing!",
+          "retrievedAt": "2026-09-07T04:25:01.862Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:26:20.206Z",
+      "nextAction": "No publication list on Binghamton nursing profile."
     },
     "vp-0218": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://pharmacy.cnsu.edu/directory/bios/uyen-minh-le.php"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0218-1",
+          "url": "https://pharmacy.cnsu.edu/directory/bios/uyen-minh-le.php",
+          "excerpt": "Uyen Minh Le, PhD To advance the science and art of healthcare through education, service, research, personal wellness, and social accountability.",
+          "retrievedAt": "2026-09-07T04:25:02.570Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0218-2",
+          "url": "https://pharmacy.cnsu.edu/directory/bios/uyen-minh-le.php",
+          "excerpt": "tory University CNU Administration CNU Admin Staff COP COP Administration COP Admin Staff Departments Clinical Administrative Sciences Experiential Education Pharmaceutical and Biomedical Sciences Organizational Chart Alumni --> Resources Alumni Services CNU Alumni Memorial Scholarship Fund In Memorial (PDF) Alumni Magazine October 2025 Alumni Magazine 2024 Alumni Magazine Make a Gift Participation Opportunities Events California Northstate University College of Pharmacy is pleased to announce the nation's first 3+4 PharmD-MD Pathway and 3+4 PharmD-DMD Pathway, with both beginning Fall of 2026.",
+          "retrievedAt": "2026-09-07T04:25:02.570Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0218-3",
+          "url": "https://pharmacy.cnsu.edu/directory/bios/uyen-minh-le.php",
+          "excerpt": "These innovative pathways reflect our commitment to advancing interdisciplinary education and expanding opportunities for our students.",
+          "retrievedAt": "2026-09-07T04:25:02.570Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0218-4",
+          "url": "https://pharmacy.cnsu.edu/directory/bios/uyen-minh-le.php",
+          "excerpt": "edu --> California Northstate University College of Pharmacy is pleased to announce the nation's first 3+4 PharmD-MD Pathway and 3+4 PharmD-DMD Pathway, with both beginning Fall of 2026.",
+          "retrievedAt": "2026-09-07T04:25:02.570Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0218-5",
+          "url": "https://pharmacy.cnsu.edu/directory/bios/uyen-minh-le.php",
+          "excerpt": "These innovative pathways reflect our commitment to advancing interdisciplinary education and expanding opportunities for our students.",
+          "retrievedAt": "2026-09-07T04:25:02.570Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0218-6",
+          "url": "https://pharmacy.cnsu.edu/directory/bios/uyen-minh-le.php",
+          "excerpt": "edu Home &rsaquo; Directory &rsaquo; Uyen Minh Le, PharmBS, PhD Uyen Minh Le, PhD Assistant Dean of Academic Affairs Chair of Department of Pharmaceutical and Biomedical Sciences Chair and Professor, Pharmaceutics and Pharmacokinetics Phone: (916) 686-8552 Uyen.",
+          "retrievedAt": "2026-09-07T04:25:02.570Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0218-7",
+          "url": "https://pharmacy.cnsu.edu/directory/bios/uyen-minh-le.php",
+          "excerpt": "Pharmaceutical Sciences (major) and Statistics (minor) (2008), Oregon State University College of Pharmacy M.",
+          "retrievedAt": "2026-09-07T04:25:02.570Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0218-8",
+          "url": "https://pharmacy.cnsu.edu/directory/bios/uyen-minh-le.php",
+          "excerpt": "Pharmaceutical Sciences (2003), Hochiminh city University of Medicine & Pharmacy, Vietnam B.",
+          "retrievedAt": "2026-09-07T04:25:02.570Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:26:20.206Z",
+      "nextAction": "Batch 11 complete."
     },
     "vp-0219": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://pharmacy.cnsu.edu/directory/bios/hiep-nguyen.php"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0219-1",
+          "url": "https://pharmacy.cnsu.edu/directory/bios/hiep-nguyen.php",
+          "excerpt": "To advance the science and art of healthcare through education, service, research, personal wellness, and social accountability.",
+          "retrievedAt": "2026-09-07T04:25:02.781Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0219-2",
+          "url": "https://pharmacy.cnsu.edu/directory/bios/hiep-nguyen.php",
+          "excerpt": "tory University CNU Administration CNU Admin Staff COP COP Administration COP Admin Staff Departments Clinical Administrative Sciences Experiential Education Pharmaceutical and Biomedical Sciences Organizational Chart Alumni --> Resources Alumni Services CNU Alumni Memorial Scholarship Fund In Memorial (PDF) Alumni Magazine October 2025 Alumni Magazine 2024 Alumni Magazine Make a Gift Participation Opportunities Events California Northstate University College of Pharmacy is pleased to announce the nation's first 3+4 PharmD-MD Pathway and 3+4 PharmD-DMD Pathway, with both beginning Fall of 2026.",
+          "retrievedAt": "2026-09-07T04:25:02.781Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0219-3",
+          "url": "https://pharmacy.cnsu.edu/directory/bios/hiep-nguyen.php",
+          "excerpt": "These innovative pathways reflect our commitment to advancing interdisciplinary education and expanding opportunities for our students.",
+          "retrievedAt": "2026-09-07T04:25:02.781Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0219-4",
+          "url": "https://pharmacy.cnsu.edu/directory/bios/hiep-nguyen.php",
+          "excerpt": "edu --> California Northstate University College of Pharmacy is pleased to announce the nation's first 3+4 PharmD-MD Pathway and 3+4 PharmD-DMD Pathway, with both beginning Fall of 2026.",
+          "retrievedAt": "2026-09-07T04:25:02.781Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0219-5",
+          "url": "https://pharmacy.cnsu.edu/directory/bios/hiep-nguyen.php",
+          "excerpt": "These innovative pathways reflect our commitment to advancing interdisciplinary education and expanding opportunities for our students.",
+          "retrievedAt": "2026-09-07T04:25:02.781Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0219-6",
+          "url": "https://pharmacy.cnsu.edu/directory/bios/hiep-nguyen.php",
+          "excerpt": ", DTM Pharmaceutical and Biomedical Sciences Assistant Professor, Pharmaceutics and Pharmacokinetics Phone: (404) 820-4015 Hiep.",
+          "retrievedAt": "2026-09-07T04:25:02.781Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0219-7",
+          "url": "https://pharmacy.cnsu.edu/directory/bios/hiep-nguyen.php",
+          "excerpt": "in Pharmaceutical Sciences from Mercer University, Atlanta, Georgia, USA, a Degree of Pharmacist from Hanoi University of Pharmacy, Hanoi, Vietnam, a Distinguished Toastmaster (DTM) from Toastmasters International, USA, and 10+ years of experience developing various products (Topical semisolid, transdermal patch, and injectable products).",
+          "retrievedAt": "2026-09-07T04:25:02.781Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0219-8",
+          "url": "https://pharmacy.cnsu.edu/directory/bios/hiep-nguyen.php",
+          "excerpt": "I currently serve as an Assistant Professor at the Department of Pharmaceutical & Biomedical Sciences, College of Pharmacy, California Northstate University, Elk Grove, California, USA.",
+          "retrievedAt": "2026-09-07T04:25:02.781Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:26:20.206Z",
+      "nextAction": "Batch 11 complete."
     },
     "vp-0220": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://finance.pamplin.vt.edu/faculty/directory/tran.html",
         "https://www.nktran.com/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0220-1",
+          "url": "https://finance.pamplin.vt.edu/faculty/directory/tran.html",
+          "excerpt": "or Future Students Current Students Parents and Families Faculty and Staff Alumni Industry and Partners Finance, Insurance, and Business Law Menu Pamplin College of Business / Finance, Insurance, and Business Law About Us Beyond the Classroom Beyond the Classroom Submenu Toggle Student Organizations Careers Academics Academics Submenu Toggle Undergraduate Programs Graduate Programs Scholarships and Financial Aid Alumni Alumni Submenu Toggle Finance Advisory Board Former Advisory Board Members Finance Student Advisory Council Faculty Faculty Submenu Toggle Directory Emeritus & Former Faculty Ph.",
+          "retrievedAt": "2026-09-07T04:25:03.235Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0220-2",
+          "url": "https://finance.pamplin.vt.edu/faculty/directory/tran.html",
+          "excerpt": "tes Research Research Submenu Toggle Faculty Publications Research Resources Giving Giving Submenu Toggle Financial Giving Opportunities Finance Donors Apply Visit Give Shop Hokie Sports Shop Apparel, clothing, gear and merchandise Hokie Shop University Bookstore, merchandise and gifts Hokie Gear Everything you need to know about Hokie gear Hokie License Plates Part of every Virginia Tech plate purchase funds scholarships Resources for Future Students Current Students Parents and Families Faculty and Staff Alumni Industry and Partners Search Search query × search Search this site Search all vt.",
+          "retrievedAt": "2026-09-07T04:25:03.235Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0220-3",
+          "url": "https://finance.pamplin.vt.edu/faculty/directory/tran.html",
+          "excerpt": "edu sites People search Frequent Searches: Web results for Sort by relevance Sort by date News results for Sort by relevance Sort by date Filter search Categories Academics Campus Experience Culture Impact Research Story type Feature Notice Story Video Apply filters Clear filters Video results for Sort by relevance Sort by date People results for People Results See more VT News Results See more Pamplin College of Business / Finance, Insurance, and Business Law / Faculty / Directory / Ngoc-Khanh Tran / Explore Directory Current page: Ngoc-Khanh Tran Emeritus & Former Faculty Ph.",
+          "retrievedAt": "2026-09-07T04:25:03.235Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0220-4",
+          "url": "https://finance.pamplin.vt.edu/faculty/directory/tran.html",
+          "excerpt": "Graduates Ngoc-Khanh Tran Assistant Professor Copy page address to clipboard Location: 2126 Pamplin (0221) 880 West Campus Drive Blacksburg, VA 24061 Contact: nktran7@vt.",
+          "retrievedAt": "2026-09-07T04:25:03.235Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0220-5",
+          "url": "https://finance.pamplin.vt.edu/faculty/directory/tran.html",
+          "excerpt": "edu 540-231-5737 Tags faculty-fulltime Download CV outside links Personal Website Education & Certification Ph.",
+          "retrievedAt": "2026-09-07T04:25:03.235Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0220-6",
+          "url": "https://finance.pamplin.vt.edu/faculty/directory/tran.html",
+          "excerpt": ", Financial Economics, Massachusetts Institute of Technology, Sloan School of Management, 2012 Ph.",
+          "retrievedAt": "2026-09-07T04:25:03.235Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0220-7",
+          "url": "https://finance.pamplin.vt.edu/faculty/directory/tran.html",
+          "excerpt": ", Physics, Gdansk University & Universite Paris-Sud Pamplin Hall 1016 880 West Campus Drive Blacksburg, VA 24061 Phone: 540-231-5904 Fax: 540-231-3155 Email: Fin&#64;vt.",
+          "retrievedAt": "2026-09-07T04:25:03.235Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0220-8",
+          "url": "https://finance.pamplin.vt.edu/faculty/directory/tran.html",
+          "excerpt": "edu Get Directions See All Locations Contact Virginia Tech University Status Principles of Community Privacy Statement Acceptable Use We Remember University Libraries Accessibility Consumer Information Cost & Aid SAFE at VT Policies Equal Opportunity WVTF University Bookstore Jobs at Virginia Tech &copy; 2026 Virginia Polytechnic Institute and State University.",
+          "retrievedAt": "2026-09-07T04:25:03.235Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0220-9",
+          "url": "https://www.nktran.com/",
+          "excerpt": "--> Ngoc-Khanh Tran research homepage top of page N goc-Khanh Tran Emai l: nktran7@gmail.",
+          "retrievedAt": "2026-09-07T04:25:03.643Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0220-10",
+          "url": "https://www.nktran.com/",
+          "excerpt": "fs , &quot; with Hui Chen and Scott Joslin , (2012, Review of Financial Studies) &quot; Affine Disagreement and Asset Pricing , &quot; with Hui Chen and Scott Joslin , (2010, American Economic Review: Papers and Proceeding ) Wo rking Papers: &quot; Incomplete Asset Market View of the Exchange Rate Determination, &quot; with Thomas Ma urer ​ &quot; Loss Sequencin g in Banking Network: Threatened Banks as Strategic Dominoes , &quot; with Thao Vuong and Richard Zeckhauser &quot; The Hirshleifer Effect in a Dynamic Setting, &quot; with Thomas Maurer &quot; C heap TIPS or E xpensive Inflation Swaps?",
+          "retrievedAt": "2026-09-07T04:25:03.643Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:26:20.206Z",
+      "nextAction": "Batch 11 complete."
     },
     "vp-0221": {
       "overview": "pending",
