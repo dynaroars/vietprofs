@@ -3023,7 +3023,8 @@
         "vp-1128",
         "vp-1129"
       ],
-      "status": "pending"
+      "status": "in_progress",
+      "startedAt": "2026-09-07T19:22:37.874Z"
     },
     {
       "number": 57,
@@ -70381,205 +70382,977 @@
       "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1109": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://ung.edu/mathematics/faculty-staff-bio/phong-luu.php",
         "https://sites.google.com/site/pluu66/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1109-1",
+          "url": "https://ung.edu/mathematics/faculty-staff-bio/phong-luu.php",
+          "excerpt": "Phong Luu --> --> Skip to Main Content Skip to Main Navigation Skip to Footer Info For.",
+          "retrievedAt": "2026-09-07T19:22:38.259Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1109-2",
+          "url": "https://ung.edu/mathematics/faculty-staff-bio/phong-luu.php",
+          "excerpt": "Accepted Students Current Students Parents & Family Faculty & Staff Alumni Business & Community International Students Quicklinks Directories myUNG Email Academic Catalogs Academic Transcripts Accessibility at UNG Athletics Banner Bookstore Calendars Campuses & Maps D2L Employment / HR Evergreen Learning IT Service Desk Libraries Testing UNG Foundation UNG Listens Search Search Admissions Corps of Cadets Academics Cost & Aid Student Life News & Events Athletics About Us Mathematics Academic Programs Bachelor's Degrees Mathematics (B.",
+          "retrievedAt": "2026-09-07T19:22:38.259Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1109-3",
+          "url": "https://ung.edu/mathematics/faculty-staff-bio/phong-luu.php",
+          "excerpt": "Math Tournament Gainesville Math Tournament Dahlonega High School Math Tournament Helpful Links Contact More UNG Academics Mathematics Faculty/Staff Phong Luu Assistant Professor Mathematics Phone 678-717-3758 Office location Watkins Academic Building, 125, Gainesville Contact Us Request Information Quick Facts Campus Maps & Directions Student Consumer Information UNG Listens Campus Safety Emergency Information Employment/HR UNG Policies & Procedures Title IX Campus Hazing Transparency Report UNG Alumni Association UNG Foundation Ethics & Compliance Hotline Human Trafficking Notice Equal Empl.",
+          "retrievedAt": "2026-09-07T19:22:38.259Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1109-4",
+          "url": "https://ung.edu/mathematics/faculty-staff-bio/phong-luu.php",
+          "excerpt": "Opportunity &#169; 2026 The University System of Georgia and the University of North Georgia.",
+          "retrievedAt": "2026-09-07T19:22:38.259Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1109-5",
+          "url": "https://ung.edu/mathematics/faculty-staff-bio/phong-luu.php",
+          "excerpt": "&#160;If you require this content in another format, please send an email to the ADA Coordinator.",
+          "retrievedAt": "2026-09-07T19:22:38.259Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1109-6",
+          "url": "https://sites.google.com/site/pluu66/",
+          "excerpt": "25_f16 ma126_su17 math1111_f2017 math1113_f14 math1113_f2017 math1113_s14 math1113_s15 Unit 1 Unit 2 Unit 3 Unit 4 Unit 5 Unit 6 and Final Exam math1113_s16 problem sets math2250_f13 math2250_f15 math2260_su14 math2260_su15 Unit 1 Unit 2 Unit 3 Unit 4 math2260_su16 math2460_f2007 st210_f16 st210_su17 ST315 - APPLIED PROBABILITY AND STATISTICS - SPRING 2017 STAT 210 teaching 0101 0101 bk notes abstract algebra computer contact linux Tennis Phong Luu HOME TEACHING | RESEARCH | INTERESTS Department of Mathematics University of North Georgia Oakwood, GA 30566 Office: Watkins 192 678-717-3439 phong.",
+          "retrievedAt": "2026-09-07T19:22:38.528Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:23:53.023Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1110": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.nottingham.ac.uk/business/people/lizhml.phtml"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1110-1",
+          "url": "https://www.nottingham.ac.uk/business/people/lizhml.phtml",
+          "excerpt": "Le Nottingham University Business School Print Home Study with us Open days Research Who we are Executive Education Careers and employability News People Academic staff Professional staff Research staff Special appointments Advisory Boards Professors of Practice Alumni Events Blog Connect with us Dr Hang Le Profile Publications Teaching Research & Knowledge Exchange Leadership, Management & Citizenship BA (NEU_Vietnam), MSc (Durham), PhD (Durham), PGCHE (Nottingham Trent University) Associate Professor in Finance Department: Finance, Accounting and Banking Centre/Institute: CRIBS E-mail: Hang.",
+          "retrievedAt": "2026-09-07T19:22:39.100Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1110-2",
+          "url": "https://www.nottingham.ac.uk/business/people/lizhml.phtml",
+          "excerpt": "uk Tel: +44 (0) 115 8466075 Location: C33 (South Building, Jubilee Campus) Hang Le is an Associate Professor in Finance and currently the Head of Department of Finance, Accounting and Banking.",
+          "retrievedAt": "2026-09-07T19:22:39.100Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1110-3",
+          "url": "https://www.nottingham.ac.uk/business/people/lizhml.phtml",
+          "excerpt": "Her current work explores the impact of health and environment issues on financial decisions such as portfolio choices and retirement planning.",
+          "retrievedAt": "2026-09-07T19:22:39.100Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1110-4",
+          "url": "https://www.nottingham.ac.uk/business/people/lizhml.phtml",
+          "excerpt": "In 2024 Hang co-authored a report on financial well-being and disabilities and long-term conditions with the Money and Pensions Service, an arm's-length body, sponsored by the Department for Work and Pensions.",
+          "retrievedAt": "2026-09-07T19:22:39.100Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1110-5",
+          "url": "https://www.nottingham.ac.uk/business/people/lizhml.phtml",
+          "excerpt": "She was awarded the UK Building Societies 250th Anniversary Research Grant in 2025.",
+          "retrievedAt": "2026-09-07T19:22:39.100Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1110-6",
+          "url": "https://www.nottingham.ac.uk/business/people/lizhml.phtml",
+          "excerpt": "She has published in leading journals (Regional Studies, British Journal of Management, Journal of Economic Behavior and Organisations, Financial Review, European Financial Management, Cambridge Journal of Economics and European Journal of Finance).",
+          "retrievedAt": "2026-09-07T19:22:39.100Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1110-7",
+          "url": "https://www.nottingham.ac.uk/business/people/lizhml.phtml",
+          "excerpt": "She has acted as a reviewer for various journals, publishers and funding bodies (The Social Sciences and Humanity Research Council of Canada, The Leverhulme Trust, the British Academy).",
+          "retrievedAt": "2026-09-07T19:22:39.100Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1110-8",
+          "url": "https://www.nottingham.ac.uk/business/people/lizhml.phtml",
+          "excerpt": "Hang is an editor for Annals of Corporate Governance, which is published under the auspices of the International Corporate Governance Society (https://www.",
+          "retrievedAt": "2026-09-07T19:22:39.100Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:23:53.023Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1111": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.monash.edu/science/schools/school-of-mathematics/Our-People/staff/ngan-le"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.monash.edu/science/schools/school-of-mathematics/Our-People/staff/ngan-le: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T19:23:53.023Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1112": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.seattleu.edu/directory/profiles/yen-tran.php"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1112-1",
+          "url": "https://www.seattleu.edu/directory/profiles/yen-tran.php",
+          "excerpt": "demic Resources Life at Seattle U Our Campus Housing & Dining Get Involved Pep Band and Spirit Faith, Spirituality and Meaning University Recreation Graduate Student Life International Student Community Public Safety Health & Wellness Who We Are The Seattle U Impact Mission, Vision & Values Jesuit Education A Diverse & Inclusive Community Global Engagement Sustainability and Climate Action AI at Seattle University Leadership Move to Semesters Contact Us Search Yen Tran — Faculty ; Associate Librarian, Scholarly Services Librarian ; Lemieux Library ; Areas of Expertise: Education | Social Work .",
+          "retrievedAt": "2026-09-07T19:22:39.535Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1112-2",
+          "url": "https://www.seattleu.edu/directory/profiles/yen-tran.php",
+          "excerpt": "Profile Type: Faculty Associate Librarian Scholarly Services Librarian Faculty & Staff Directory Yen Tran Contact Information yentran@seattleu.",
+          "retrievedAt": "2026-09-07T19:22:39.535Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:23:53.023Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1113": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.libraries.rutgers.edu/directory/tony-nguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1113-1",
+          "url": "https://www.libraries.rutgers.edu/directory/tony-nguyen",
+          "excerpt": "Tony Nguyen | Rutgers University Libraries Skip to main content Menu Change Campus Libraries Home Camden Health Sciences Newark New Brunswick Archives Law External links Rutgers.",
+          "retrievedAt": "2026-09-07T19:22:39.877Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1113-2",
+          "url": "https://www.libraries.rutgers.edu/directory/tony-nguyen",
+          "excerpt": "edu Hours My Account Ask Us Mobile App Site Search Main navigation Libraries Home Camden Health Sciences Newark New Brunswick Archives Law Home Directory Tony Nguyen Associate University Librarian, Rutgers Health Librarian, George F.",
+          "retrievedAt": "2026-09-07T19:22:39.877Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1113-3",
+          "url": "https://www.libraries.rutgers.edu/directory/tony-nguyen",
+          "excerpt": "Smith Library of the Health Sciences Library Faculty, Health Sciences Contact tony.",
+          "retrievedAt": "2026-09-07T19:22:39.877Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1113-4",
+          "url": "https://www.libraries.rutgers.edu/directory/tony-nguyen",
+          "excerpt": "Newark , NJ 07101 Rutgers University Libraries 169 College Ave New Brunswick, NJ 08901-1163 Contact Us Giving to the Libraries Staff Resources Social-Core Instagram Facebook LinkedIn Threads Twitter YouTube About Rutgers University Libraries Our Organization Accessibility Policies & Guidelines Contact the Libraries Ask a Librarian Employment Staff & Faculty Directory Website Feedback Privacy Policy External links Rutgers.",
+          "retrievedAt": "2026-09-07T19:22:39.877Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1113-5",
+          "url": "https://www.libraries.rutgers.edu/directory/tony-nguyen",
+          "excerpt": "edu © 2026, Rutgers, The State University of New Jersey Rutgers is an equal access/equal opportunity institution.",
+          "retrievedAt": "2026-09-07T19:22:39.877Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1113-6",
+          "url": "https://www.libraries.rutgers.edu/directory/tony-nguyen",
+          "excerpt": "Individuals with disabilities are encouraged to direct suggestions, comments, or complaints concerning any accessibility issues with Rutgers websites to accessibility@rutgers.",
+          "retrievedAt": "2026-09-07T19:22:39.877Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:23:53.023Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1114": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://library.stonybrook.edu/about-us/directory/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1114-1",
+          "url": "https://library.stonybrook.edu/about-us/directory/",
+          "excerpt": "ssibility Answers / FAQ Policies &#038; Procedures Research &#038; Learning Instruction &#038; Skills Research &#038; Instruction Request a Class Research Tutorials Citing Sources Events &#038; Workshops Open Scholarship Home Open Access &#038; OER Scholarly Publishing Research Data Institutional Repository Contact Special Collections Collections Home Search Collections Manuscripts &#038; Papers Rare Books Historical Maps University Archives Get Help Ask a Librarian Answers / FAQ Request a Research Consultation Librarian Profiles &#038; Teams Libraries &#038; Hours Libraries Frank Melville, Jr.",
+          "retrievedAt": "2026-09-07T19:22:40.786Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1114-2",
+          "url": "https://library.stonybrook.edu/about-us/directory/",
+          "excerpt": "Memorial Library Health Sciences Library Music Library Special Collections Southampton Library All Locations &#038; Hours View All Libraries &#038; Hours How Busy Are We?",
+          "retrievedAt": "2026-09-07T19:22:40.786Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1114-3",
+          "url": "https://library.stonybrook.edu/about-us/directory/",
+          "excerpt": "Committees &#038; Teams Redesigned Spaces Information Policies &#038; Procedures Student Staff News Employment Give to the Libraries Giving Opportunities Endowment Gifts Student Employee Award My Library Account Course Reserves Interlibrary Loan Health Sciences Library About &#038; Services Research Help &#038; Contact FAQ&#8217;s Health Sciences Library About &#038; Services Research Help &#038; Contact FAQ&#8217;s HSL Menu Home » About the Libraries » Faculty &#038; Staff Directory Library Organization Chart View the reporting structure and leadership hierarchy across all library departments.",
+          "retrievedAt": "2026-09-07T19:22:40.786Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1114-4",
+          "url": "https://library.stonybrook.edu/about-us/directory/",
+          "excerpt": "View Org Chart All Departments Access & User Services Cataloging & Metadata Services Content Acquisitions and Services Content Services Digital Services Health Sciences Library Library Administration Preservation Services Research & Learning Special Collections and University Archives All A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Ahmad Pratama Associate Librarian Data Literacies Lead Research & Learning Frank Melville Jr.",
+          "retrievedAt": "2026-09-07T19:22:40.786Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1114-5",
+          "url": "https://library.stonybrook.edu/about-us/directory/",
+          "excerpt": "edu (631) 632-1909 Annette Mims Senior Assistant Librarian Content Acquisitions Manager Content Acquisitions and Services Frank Melville Jr.",
+          "retrievedAt": "2026-09-07T19:22:40.786Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1114-6",
+          "url": "https://library.stonybrook.edu/about-us/directory/",
+          "excerpt": "edu (631) 632-7323 Arie Taxier Southampton Library Supervisor Access & User Services Southamton Library arie.",
+          "retrievedAt": "2026-09-07T19:22:40.786Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1114-7",
+          "url": "https://library.stonybrook.edu/about-us/directory/",
+          "excerpt": "edu (631) 632-5134 Ashley Tschakert-Foertmeyer Senior Assistant Librarian Academic Engagement Librarian Research & Learning Frank Melville Jr.",
+          "retrievedAt": "2026-09-07T19:22:40.786Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1114-8",
+          "url": "https://library.stonybrook.edu/about-us/directory/",
+          "excerpt": "edu (631) 632-2976 Bee Farina Instructional Support Technician Content Acquisitions and Services Frank Melville Jr.",
+          "retrievedAt": "2026-09-07T19:22:40.786Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:23:53.023Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1115": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://optometry.iu.edu/people-directory/nguyen-tracy.html"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://optometry.iu.edu/people-directory/nguyen-tracy.html: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:23:53.023Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1116": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://drexel.edu/cnhp/faculty/profiles/NguyenKevin/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1116-1",
+          "url": "https://drexel.edu/cnhp/faculty/profiles/NguyenKevin/",
+          "excerpt": "Kevin Nguyen | College of Nursing and Health Professions | Drexel University Skip to main content For a better experience, click the icon above to turn off Compatibility Mode, which is only for viewing older websites.",
+          "retrievedAt": "2026-09-07T19:22:41.693Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1116-2",
+          "url": "https://drexel.edu/cnhp/faculty/profiles/NguyenKevin/",
+          "excerpt": "rformance and Research Center Stephen and Sandra Sheller 11th Street Family Health Services Faculty Faculty Profiles Creative Arts Therapies Food and Hospitality Management Division of Graduate Nursing Health Sciences Nutrition Sciences Physical Therapy and Rehabilitation Sciences Physician Assistant Division of Undergraduate Nursing Faculty Fellows News and Events Current News Events In the Media About About the College Dean's Office Accreditation Clinical Compliance Culture, Climate and Belonging Contact Give to CNHP Home Faculty Faculty Profiles Kevin Nguyen Contact Information kbn37@drexel.",
+          "retrievedAt": "2026-09-07T19:22:41.693Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1116-3",
+          "url": "https://drexel.edu/cnhp/faculty/profiles/NguyenKevin/",
+          "excerpt": "edu Health Sciences Building, Room 11E09 Kevin Nguyen PharmD, BCIDP Assistant Clinical Professor Physician Assistant Department Biography Academic Distinctions, Research and Publications Education History Kevin Nguyen, PharmD, BCIDP, is an assistant clinical professor in the Physician Assistant program in the College of Nursing and Health Professions at Drexel University.",
+          "retrievedAt": "2026-09-07T19:22:41.693Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1116-4",
+          "url": "https://drexel.edu/cnhp/faculty/profiles/NguyenKevin/",
+          "excerpt": "After pharmacy school, he completed his PGY-1 Pharmacy residency at Jefferson Einstein Medical Center and went on to finish a PGY-2 Infectious Diseases residency at Boston Medical Center.",
+          "retrievedAt": "2026-09-07T19:22:41.693Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1116-5",
+          "url": "https://drexel.edu/cnhp/faculty/profiles/NguyenKevin/",
+          "excerpt": "Nguyen is the course director for all three Pharmacology and Therapeutics courses (I, II and III), while serving as a seminar leader for Ethics and advisor to students.",
+          "retrievedAt": "2026-09-07T19:22:41.693Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1116-6",
+          "url": "https://drexel.edu/cnhp/faculty/profiles/NguyenKevin/",
+          "excerpt": "He continues a strong interest in research and publications, specifically in the areas of gram-negative resistance, beta-lactam therapeutic drug monitoring, pharmacoeconomics and invasive pediatric infections.",
+          "retrievedAt": "2026-09-07T19:22:41.693Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1116-7",
+          "url": "https://drexel.edu/cnhp/faculty/profiles/NguyenKevin/",
+          "excerpt": "Academic Distinctions 2023 Temple University 30 Under 30 Awardee Professional Society American College of Clinical Pharmacy (ACCP) Society of Infectious Disease Pharmacist (SIDP) American Society of Health-System Pharmacists (ASHP) Pennsylvania Pharmacists Association (PPA) Selected Publications Sedlock, C.",
+          "retrievedAt": "2026-09-07T19:22:41.693Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1116-8",
+          "url": "https://drexel.edu/cnhp/faculty/profiles/NguyenKevin/",
+          "excerpt": "Appropriateness of prescribed oral antibiotic duration at the time of hospital discharge.",
+          "retrievedAt": "2026-09-07T19:22:41.693Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:23:53.023Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1117": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://sph.umich.edu/faculty-profiles/nguyen-thuy.html"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://sph.umich.edu/faculty-profiles/nguyen-thuy.html: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T19:23:53.023Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1118": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://lsa.umich.edu/asian/people/faculty/tanguyen.html"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://lsa.umich.edu/asian/people/faculty/tanguyen.html: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T19:23:53.023Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1119": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://history.fas.harvard.edu/people/uyen-nguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1119-1",
+          "url": "https://history.fas.harvard.edu/people/uyen-nguyen",
+          "excerpt": "uyen | Department of History Skip to main content arrow_circle_down menu close Menu Search Search search Home About About expand_more About the Department Annual Newsletters Affiliated Programs & Centers Academic Programs Academic Programs expand_more Graduate Undergraduate Digital History Courses Courses expand_more Course Listings Course Locations People People expand_more Faculty Graduate Students Staff Emeriti Visitors News & Events News & Events expand_more News Events Contact Contact expand_more Information Employment Breadcrumbs Home chevron_right People chevron_right Uyen Nguyen Uyen T.",
+          "retrievedAt": "2026-09-07T19:22:42.869Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1119-2",
+          "url": "https://history.fas.harvard.edu/people/uyen-nguyen",
+          "excerpt": "Nguyen Assistant Professor of History and of East Asian Languages and Civilizations location_on Robinson Hall 213, 35 Quincy Street, Cambridge, MA 02138 smartphone (617) 495-3093 email unguyen@fas.",
+          "retrievedAt": "2026-09-07T19:22:42.869Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1119-3",
+          "url": "https://history.fas.harvard.edu/people/uyen-nguyen",
+          "excerpt": "or by appointment via email | On Zoom or in-person at Robinson Hall 213 | Please check for availability and sign up in advance here .",
+          "retrievedAt": "2026-09-07T19:22:42.869Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1119-4",
+          "url": "https://history.fas.harvard.edu/people/uyen-nguyen",
+          "excerpt": "Nguyen is a historian of modern Vietnam whose research and teaching focus on historical transitions through interdisciplinary and comparative perspectives.",
+          "retrievedAt": "2026-09-07T19:22:42.869Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1119-5",
+          "url": "https://history.fas.harvard.edu/people/uyen-nguyen",
+          "excerpt": "Her current book project, Beloved City, Depraved City: Communist Takeovers and Socialist Transformations in North Vietnam’s Cities (1949–1958) examines the communist takeover of previously French-controlled cities in North Vietnam and the political, economic, and socio-cultural transformations that took place in these cities between 1949 and 1958.",
+          "retrievedAt": "2026-09-07T19:22:42.869Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1119-6",
+          "url": "https://history.fas.harvard.edu/people/uyen-nguyen",
+          "excerpt": "Drawing on a wide range of underutilized Vietnamese-language sources, including archival documents and oral histories, Nguyen reconstructs and seeks to understand the perspectives and actions of both Communist “liberators” and members of the urban society “liberated” by Ho Chi Minh’s forces.",
+          "retrievedAt": "2026-09-07T19:22:42.869Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1119-7",
+          "url": "https://history.fas.harvard.edu/people/uyen-nguyen",
+          "excerpt": "Her second book project will be a comparative study of modern Korea and Vietnam, examining their historical convergences and divergences in the 20th century against the backdrop of significant political and cultural influences from China.",
+          "retrievedAt": "2026-09-07T19:22:42.869Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1119-8",
+          "url": "https://history.fas.harvard.edu/people/uyen-nguyen",
+          "excerpt": "Nguyen’s broader scholarship seeks to situate Vietnamese experiences within frameworks that reach beyond national borders and the disciplinary boundaries of history.",
+          "retrievedAt": "2026-09-07T19:22:42.869Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:23:53.023Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1120": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://profiles.stanford.edu/linda-nguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1120-1",
+          "url": "https://profiles.stanford.edu/linda-nguyen",
+          "excerpt": "Administration Office of External Relations Office of VP for University Human Resources Office of Vice President for Business Affairs and Chief Financial Officer Office of the Vice President for the Arts Stanford University Libraries Vice Provost and Dean of Research Vice Provost for Student Affairs Vice Provost for Undergraduate Education Sign In Edit My Profile Linda Nguyen Clinical Professor, Medicine - Gastroenterology & Hepatology Print Profile Email Profile View Stanford-only Profile Tab Menu Bio Research & Scholarship Teaching Publications Bio Food has always been a big part of my life.",
+          "retrievedAt": "2026-09-07T19:22:44.618Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1120-2",
+          "url": "https://profiles.stanford.edu/linda-nguyen",
+          "excerpt": "Because we need food to survive and we are social creatures who revolve much of our lives around food, not being able to eat impacts physical, mental and social well-being.",
+          "retrievedAt": "2026-09-07T19:22:44.618Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1120-3",
+          "url": "https://profiles.stanford.edu/linda-nguyen",
+          "excerpt": "It is this intricate interconnection between the brain and the gut which drew me to the field of Neurogastroenterology & Motility.",
+          "retrievedAt": "2026-09-07T19:22:44.618Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1120-4",
+          "url": "https://profiles.stanford.edu/linda-nguyen",
+          "excerpt": "Disorders affecting the function of the gastrointestinal tract can lead to a variety of disorders, including gastroparesis, functional dyspepsia and irritable bowel syndrome (IBS).",
+          "retrievedAt": "2026-09-07T19:22:44.618Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1120-5",
+          "url": "https://profiles.stanford.edu/linda-nguyen",
+          "excerpt": "My research includes understanding the role/impact of physiologic testing on clinical care, exploring novel therapies for gastroparesis and expanding the role of neuromodulation in the treatment of GI motility disorders and pain.",
+          "retrievedAt": "2026-09-07T19:22:44.618Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1120-6",
+          "url": "https://profiles.stanford.edu/linda-nguyen",
+          "excerpt": "I am also interested in understanding overlapping conditions such as chronic fatigue syndrome and Ehlers-Danlos syndrome as it relates to pathophysiology and impact on gastrointestinal symptoms and outcomes.",
+          "retrievedAt": "2026-09-07T19:22:44.618Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1120-7",
+          "url": "https://profiles.stanford.edu/linda-nguyen",
+          "excerpt": "As part of this interest, I have served on two ad-hoc committees for the National Academy of Science (Institute of Medicine): “Development of a Consensus Case Definition for Chronic Multisystem Illness in 1990-1991 Gulf War Veterans” and “Health Care Utilization and Adults with Disabilities”.",
+          "retrievedAt": "2026-09-07T19:22:44.618Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1120-8",
+          "url": "https://profiles.stanford.edu/linda-nguyen",
+          "excerpt": "I strive to improve quality of life for patients and health care providers through development of mindfulness, resilience, engagement and advocacy.",
+          "retrievedAt": "2026-09-07T19:22:44.618Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:23:53.023Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1121": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://nursing.utexas.edu/faculty/vinh-nguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1121-1",
+          "url": "https://nursing.utexas.edu/faculty/vinh-nguyen",
+          "excerpt": "Giving More Alumni & Giving pages Overview Our Donors Alumni Awards Make a Gift Update Your Information Advisory Council Support the School Online Gift Shop Alumni Reunion Contact Faculty & Staff More Faculty & Staff pages Overview Faculty Affairs Faculty Directory Staff Directory Faculty Position Openings Forms, Policies and Procedures (EID) Staff Award Preceptors Header Menu News Events Directory Give Intranet Search Breadcrumb Home Vinh Nguyen Vinh Nguyen PhD Clinical Assistant Professor Associate Dean for Student Services Area Adult Health Contact Information Email Address: vnguyen@nursing.",
+          "retrievedAt": "2026-09-07T19:22:44.971Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:23:53.023Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1122": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.maths.ox.ac.uk/people/luc.nguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1122-1",
+          "url": "https://www.maths.ox.ac.uk/people/luc.nguyen",
+          "excerpt": "tters MIORPA PROMYS Europe Oxfordshire Maths Masterclasses Outreach Information Oxford Unbounded Mailing List Events Venue Hire Public Lectures & Events Departmental Seminars & Events Special Lectures Conferences Summer Schools Past Events Info for Event Organisers & Attendees People Key Contacts People List A Global Department Research Fellowship Programmes Professional Services Teams About Us Contact Us Travel & Maps Supporting Mathematics Industry Engagement News Alumni History Our Building Art and Oxford Mathematics Equality, Diversity and Inclusion Vacancies Primary tabs View Contact Prof.",
+          "retrievedAt": "2026-09-07T19:22:45.902Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1122-2",
+          "url": "https://www.maths.ox.ac.uk/people/luc.nguyen",
+          "excerpt": "Luc Nguyen Status Academic Faculty Professor of Mathematics Tutorial Fellow at St Edmund Hall luc.",
+          "retrievedAt": "2026-09-07T19:22:45.902Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1122-3",
+          "url": "https://www.maths.ox.ac.uk/people/luc.nguyen",
+          "excerpt": "ear Yamabe problem on Riemannian manifolds Dong, W Li, Y Nguyen, L Discrete and Continuous Dynamical Systems volume 56 77-102 (18 May 2026) The σk-Loewner-Nirenberg problem on Riemannian manifolds for k = n/2 and beyond Duncan, J Nguyen, L Journal of Functional Analysis volume 290 issue 6 (08 Dec 2025) The σk-Loewner-Nirenberg problem on Riemannian manifolds for k &lt; n2 Duncan, J Nguyen, L Analysis & PDE volume 18 issue 9 2203-2240 (05 Sep 2025) Zero-homogeneous and $O(2)$-equivariant critical points of the Oseen-Frank energy with multiple Frank constants Nguyen, L (28 Mar 2025) http://arxiv.",
+          "retrievedAt": "2026-09-07T19:22:45.902Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:23:53.023Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1124": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://pediatrics.med.ubc.ca/about/current-faculty/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1124-1",
+          "url": "https://pediatrics.med.ubc.ca/about/current-faculty/",
+          "excerpt": "eaching Sites Scholarly Activity Resources Orientation Onboarding Resources Systems Innovation, Quality Improvement and Patient Safety (SIQIPS): Promotions Faculty Peer Mentorship Program Awards and Funding Communication Request Website Update Request Mailing List Sign-Up Departmental Forms » Faculty of Medicine » Home » About » Current Faculty About Department Head VISION 2028 | Our New Strategic Direction Annual Reports Equity, Diversity & Inclusion Current Faculty In Memoriam Provincial Mandate Facts & Figures Careers Contact Current Faculty UPDATED May 25, 2026 Professors Alex Rauscher, Ph.",
+          "retrievedAt": "2026-09-07T19:22:47.073Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1124-2",
+          "url": "https://pediatrics.med.ubc.ca/about/current-faculty/",
+          "excerpt": "Macnab, MBBS, MD (London), FRCPC, MRCS, LRCP(UK), FRCPCH, Division of Critical Care Bruce Carleton BSc PharmD FCP FISPE, Director, Pharmaceutical Outcomes Programme Bruce Vallance, PhD, Division of Gastroenterology Christopher A.",
+          "retrievedAt": "2026-09-07T19:22:47.073Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1124-3",
+          "url": "https://pediatrics.med.ubc.ca/about/current-faculty/",
+          "excerpt": "Maxwell, PhD, Childhood Cancer and Blood Research Dawn Gano, MD, MAS, FRCPC Douglas G.",
+          "retrievedAt": "2026-09-07T19:22:47.073Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1124-4",
+          "url": "https://pediatrics.med.ubc.ca/about/current-faculty/",
+          "excerpt": "Matsell, MD CM, FRCPC, Division of Nephrology Julie Bettinger, MPH, PhD Kirk Schultz, MD, AAP, Division of Hematology, Oncology & BMT Laura Sly, MSc, PhD, Division of Gastroenterology Magdalena Janus, PhD, Division of Developmental Pediatrics Manish Sadarangani, B.",
+          "retrievedAt": "2026-09-07T19:22:47.073Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1124-5",
+          "url": "https://pediatrics.med.ubc.ca/about/current-faculty/",
+          "excerpt": "), Division of Infectious Diseases Mariana Brussoni, BA (Hon), MA, PhD, Developmental Neurosciences & Child Health Pascal Lavoie, MDCM, PhD, FRCPC, Division of Neonatology Quynh Doan, MD, MHSc.",
+          "retrievedAt": "2026-09-07T19:22:47.073Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1124-6",
+          "url": "https://pediatrics.med.ubc.ca/about/current-faculty/",
+          "excerpt": "rlander, MD CM, LMCC, FRCPC, Division of Developmental Pediatrics Tom Blydt-Hansen, MDCM FRCPC, Division of Nephrology Professors Emeritus and Emerita Alan Hill, MD, PhD, FRCPC, FRCPC Alexander Ferguson, MBChB, FRCPC, Division of Allergy Allison Eddy, MD, FRCPC Anne George, PhD Anne Junker, MD, FRCPC, Division of Immunology Aubrey Tingle, MD, PhD, FRCPC, FAAP Barrie MacLean, MD, FRCPC Catherine Pallen, PhD, Division of Hematology, Oncology & BMT Christopher Fryer, MD, FRCPC David Israel, MD, FCFP, FRCPC, FAAP, Division of Gastroenterology David Matheson, MD, FRCPC David Paul Speert, MD David S.",
+          "retrievedAt": "2026-09-07T19:22:47.073Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1124-7",
+          "url": "https://pediatrics.med.ubc.ca/about/current-faculty/",
+          "excerpt": "Scheifele, MD, FRCPC, Division of Infectious & Immunological Diseases, Director, Vaccine Evaluation Center Eric Hassall, MBChB, DCH, FRCPC, FACG, Division of Gastroenterology Franklyn Jagdis, MD, FRCPC George Sandor, MBChB, DCH, MRCP, FRCPC, Division of Cardiology Godfrey Baumgard, MD, FRCPC Ian Pike, BSPE, MSc, PhD, Director, BC Injury Research and Prevention Unit (BCIRPU) James E.",
+          "retrievedAt": "2026-09-07T19:22:47.073Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1124-8",
+          "url": "https://pediatrics.med.ubc.ca/about/current-faculty/",
+          "excerpt": "Jan, MD, FRCPC, Division of Developmental Pediatrics Jean Hlady, MD, FRCPC Jeffrey Davis, MD, FRCPC Jeffrey Simons, MD, FRCPC Joan Fraser, MD, FRCPC John Forbes, MBChB, FRCPC, Division of Infectious and Immunological Diseases John Melville Dean, MD, FRCPC John Wu, MD, FRCPC Joseph Scala, MD, PhD, FRCPC Judith Hall, OC, MD, MS (Genetics), FCAHS Julie Prendiville, MD, FRCPC Kenneth Poskitt, MD, FRCPC Kevin Farrell, MBChB, MRCP, CHRCP, FRCPC, FRCPE, Division of Neurology Kwadwo Asante, MD, FRCPC L.",
+          "retrievedAt": "2026-09-07T19:22:47.073Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:23:53.023Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1125": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://mathsci.kaist.ac.kr/home/en/math-people/professor/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1125-1",
+          "url": "https://mathsci.kaist.ac.kr/home/en/math-people/professor/",
+          "excerpt": "Professors | KAIST 수리과학과 KAIST 수리과학과 Login English 한국어 Toggle navigation News News 학생 뉴스 Alumni News Introduction Introduction Directions Committee Fund Raising Notice Employment From ICN Airport to KAIST Mathematical Science Logo KAIST Campus Education Admission Class Schedules Requirements Ph.",
+          "retrievedAt": "2026-09-07T19:22:49.270Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1125-2",
+          "url": "https://mathsci.kaist.ac.kr/home/en/math-people/professor/",
+          "excerpt": "Degree Policy Doctoral Qualifying Exam Problem of the Week People Professors Researchers Staffs Research Research Areas Research Highlights Schedules Department Seminars &#038; Colloquia Graduate Seminars IBS-KAIST Seminars Graduate School of AI for Math Seminar Conferences &#038; Workshops Hiring &#038; Events Tools &#038; Resources Seminar Room Reservations Visitor Laboratory Reservations Newsletter Document forms Previous Exams IT Service Professors Fulltime Prof.",
+          "retrievedAt": "2026-09-07T19:22:49.270Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1125-3",
+          "url": "https://mathsci.kaist.ac.kr/home/en/math-people/professor/",
+          "excerpt": "All --> Bae, Myoungjean (배명진) Associate Professor Partial Differential Equations E2-1 B/D 4410, T2719.",
+          "retrievedAt": "2026-09-07T19:22:49.270Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1125-4",
+          "url": "https://mathsci.kaist.ac.kr/home/en/math-people/professor/",
+          "excerpt": "Bae, Sunghan (배성한) Emeritus Professor Algebra Number Theory E6-1 B/D 3410, T2723.",
+          "retrievedAt": "2026-09-07T19:22:49.270Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1125-5",
+          "url": "https://mathsci.kaist.ac.kr/home/en/math-people/professor/",
+          "excerpt": "Baik, Hyungryul (백형렬) Associate Professor Topology Geometry, Geometric Topology, Geometric Group Theory, Hyperbolic Geometry E6-1 B/D 4407, T2712.",
+          "retrievedAt": "2026-09-07T19:22:49.270Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1125-6",
+          "url": "https://mathsci.kaist.ac.kr/home/en/math-people/professor/",
+          "excerpt": "Byeon, Jaeyoung (변재형) Professor Partial Differential Equations E6-1 B/D 4401, T7310.",
+          "retrievedAt": "2026-09-07T19:22:49.270Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1125-7",
+          "url": "https://mathsci.kaist.ac.kr/home/en/math-people/professor/",
+          "excerpt": "Choe, Geon Ho (최건호) Emeritus Professor Analysis Dynamical Systems, Financial Mathematics E6-1 B/D 3405, T2725.",
+          "retrievedAt": "2026-09-07T19:22:49.270Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1125-8",
+          "url": "https://mathsci.kaist.ac.kr/home/en/math-people/professor/",
+          "excerpt": "Choi, Beomjun (최범준) Associate Professor Geometric Analysis T2721 Columbia University, Ph.",
+          "retrievedAt": "2026-09-07T19:22:49.270Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:23:53.023Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1126": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://engineering.tamu.edu/electrical/profiles/cnguyen.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1126-1",
+          "url": "https://engineering.tamu.edu/electrical/profiles/cnguyen.html",
+          "excerpt": "ms Research Experiences for Undergraduates Student Organizations Admissions & Aid Admissions and Aid Entry to a Major Process Scholarships and Financial Aid Research Research Research Experiences for Undergraduates Research Highlights Research Centers Patents and Startups People Leadership Faculty Staff Partner with Us Alumni Collaboration Team Capstone Involvement Industrial Affiliates Program Junior Research Scholars Program Home Electrical and Computer People Cam Nguyen Cam Nguyen Professor Emeritus, Electrical & Computer Engineering TI Professor II in Analog Engineering Email: cnguyen@tamu.",
+          "retrievedAt": "2026-09-07T19:22:49.965Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1126-2",
+          "url": "https://engineering.tamu.edu/electrical/profiles/cnguyen.html",
+          "excerpt": "echnic University – 1980 Research Interests RF, Microwave and Millimeter-Wave Integrated Circuits, Antennas, and Communication, Radar and Sensing Systems CMOS/BiCMOS RFICs Ultra-Wideband (UWB) Integrated Circuits, Antennas, and Communication, Radar and Sensor Systems RF, Electromagnetics Interconnects, Interferences and Wave Propagation Wireless Communications Sensors and Sensor Networks Awards & Honors Texas A&M University&#146;s TEES Fellow Award Texas A&M University&#146;s 3 M Faculty Fellow IEEE Fellow (for Contributions to Microwave Integrated Circuits and Systems) Selected Publications S.",
+          "retrievedAt": "2026-09-07T19:22:49.965Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1126-3",
+          "url": "https://engineering.tamu.edu/electrical/profiles/cnguyen.html",
+          "excerpt": "Nguyen, \"A Displacement Measurement Technique Using Millimeter-Wave Interferometry,\" IEEE Trans.",
+          "retrievedAt": "2026-09-07T19:22:49.965Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1126-4",
+          "url": "https://engineering.tamu.edu/electrical/profiles/cnguyen.html",
+          "excerpt": "Nguyen, \"Development of New Electronically Tunable Ultra-Wideband Pulse Generators,\"IEEE Microwave and Wireless Components Letters, Vol.",
+          "retrievedAt": "2026-09-07T19:22:49.965Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1126-5",
+          "url": "https://engineering.tamu.edu/electrical/profiles/cnguyen.html",
+          "excerpt": "Nguyen, \"Integrated Balanced Sampling Circuit for Ultra-Wideband Communications and Radar Systems,\" IEEE Microwave and Wireless Components Letters, Vol.",
+          "retrievedAt": "2026-09-07T19:22:49.965Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1126-6",
+          "url": "https://engineering.tamu.edu/electrical/profiles/cnguyen.html",
+          "excerpt": "Nguyen, \"On the Development of a Multifunction Millimeter-Wave Sensor for Displacement Sensing and Low-Velocity Measurement,\" IEEE Trans.",
+          "retrievedAt": "2026-09-07T19:22:49.965Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1126-7",
+          "url": "https://engineering.tamu.edu/electrical/profiles/cnguyen.html",
+          "excerpt": "Scullion, \"A Novel Compact, Low-cost Impulse Ground Penetrating Radar for Nondestructive Evaluation of Pavements,\" IEEE Trans.",
+          "retrievedAt": "2026-09-07T19:22:49.965Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1126-8",
+          "url": "https://engineering.tamu.edu/electrical/profiles/cnguyen.html",
+          "excerpt": "Nguyen, \"Coupled-Slotline-Hybrid Sampling Mixer Integrated with Step-Recovery-Diode Pulse Generator for UWB Applications,\" IEEE Trans.",
+          "retrievedAt": "2026-09-07T19:22:49.965Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:23:53.023Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1127": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.inria.fr/fr/phong-nguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1127-1",
+          "url": "https://www.inria.fr/fr/phong-nguyen",
+          "excerpt": "Phong Nguyen | Inria Aller au contenu principal Menu Nos enjeux Rechercher fr Phong Nguyen LAUREAT 2019 - Membre de l&#039;équipe-projet Cascade Accueil Recherche & innovation Phong Nguyen Phong Nguyen, lauréat 2019 de la bourse ERC - Advanced Grant, est directeur de recherche à Inria de Paris au sein de l’équipe-projet Cascade.",
+          "retrievedAt": "2026-09-07T19:22:51.135Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1127-2",
+          "url": "https://www.inria.fr/fr/phong-nguyen",
+          "excerpt": "Son projet vise à sécuriser la cryptographie reposant sur les réseaux euclidiens pour parer aux risques liés à l’ordinateur quantique et concilier big data et vie privée.",
+          "retrievedAt": "2026-09-07T19:22:51.135Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1127-3",
+          "url": "https://www.inria.fr/fr/phong-nguyen",
+          "excerpt": "Avant ce résultat, l’ordinateur quantique constituait plutôt une curiosité, on ne savait pas vraiment à quoi il pourrait réellement servir.",
+          "retrievedAt": "2026-09-07T19:22:51.135Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1127-4",
+          "url": "https://www.inria.fr/fr/phong-nguyen",
+          "excerpt": "À l’époque, construire un ordinateur quantique relevait de la science-fiction, mais cette découverte a poussé les cryptographes à imaginer des alternatives.",
+          "retrievedAt": "2026-09-07T19:22:51.135Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1127-5",
+          "url": "https://www.inria.fr/fr/phong-nguyen",
+          "excerpt": "Retrouvez son interview Phong NGuyen obtient une bourse ERC Advanced Grant Sur cette page Infos pratiques / Ressources Infos pratiques Prestataires Marchés publics Adresses des sites Inria Ressources Médiathèque Logos Simulation de l&#039;accessibilité numérique Nous suivre Linkedin Mastodon Twitter Instagram Youtube Flux rss Liens identités Inria Alumni Le réseau de celles & ceux qui ont fait Inria La Fondation Inria Et si votre taxe d&#039;apprentissage soutenait la féminisation de la tech ?",
+          "retrievedAt": "2026-09-07T19:22:51.135Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1127-6",
+          "url": "https://www.inria.fr/fr/phong-nguyen",
+          "excerpt": "F Membre de l&#039;équipe-projet Ascola Membre de l&#039;équipe-projet Bacchus Membre de l&#039;équipe-projet Bamboo Membre de l&#039;équipe-projet Cascade Membre de l&#039;équipe-projet Gemo Membre de l&#039;équipe-projet Prosecco Membre de l&#039;équipe-projet Simpaf Membre de l&#039;équipe-projet Willow Membre de l’équipe EX-SITU Membre de l’équipe Inria Modélisation numérique en médecine Membre de l’équipe Secret - Laureate 2016 Membre de l’équipe Secret du centre Inria de Paris Membre de l’équipe-projet BiPoP Membre de l’équipe-projet Thoth Mieux classifier les données de neurosciences Ph.",
+          "retrievedAt": "2026-09-07T19:22:51.135Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:23:53.023Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1128": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.univ-orleans.fr/lifo/membre/Benjamin.NGUYEN"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1128-1",
+          "url": "https://www.univ-orleans.fr/lifo/membre/Benjamin.NGUYEN",
+          "excerpt": "lication du LIFO dans les formations Doctorat Le Guide du Doctorat École doctorale Offres d&#039;emploi Laboratoire d'Informatique Fondamentale d'Orléans UR 4022 - Université d'Orléans - INSA Centre-Val-de-Loire Laboratoire d'Informatique Fondamentale d'Orléans UR 4022 - Université d'Orléans - INSA Centre-Val-de-Loire Laboratoire d'Informatique Fondamentale d'Orléans UR 4022 - Université d'Orléans - INSA Centre-Val-de-Loire Fil d'Ariane Présentation Membres Benjamin NGUYEN Benjamin NGUYEN Professeur des universités INSA Centre Val de Loire SDS Responsable équipe-projet INRIA PETSCRAFT benjamin.",
+          "retrievedAt": "2026-09-07T19:22:52.015Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1128-2",
+          "url": "https://www.univ-orleans.fr/lifo/membre/Benjamin.NGUYEN",
+          "excerpt": "fr Page web +33 (0)2 48 48 40 94 Publications HAL de Benjamin NGUYEN sous affiliation au LIFO - 65 publications Pour une liste indépendante de l'affiliation, consulter DBLP .",
+          "retrievedAt": "2026-09-07T19:22:52.015Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1128-3",
+          "url": "https://www.univ-orleans.fr/lifo/membre/Benjamin.NGUYEN",
+          "excerpt": "in Here: Using Projection to Improve Differential Privacy on RDF Graphs Auteur(s) : Sara TAKI , Cédric EICHLER , Benjamin NGUYEN HAL : 3770679 It’s too noisy in here: using projection to improve Differential Privacy on RDF graphs Auteur(s) : Sara TAKI , Cédric EICHLER , Benjamin NGUYEN HAL : 4249522 Privacy Operators for Semantic Graph Databases as Graph Rewriting Auteur(s) : Adrien BOIRET , Cédric EICHLER , Benjamin NGUYEN HAL : 3768318 Back on SEmantic Networks of Data: Utility and Privacy Auteur(s) : Cédric EICHLER , Jacques CHABIN , Nicolas HIOT , Benjamin NGUYEN , Rachid ECHAHED, Mirian H.",
+          "retrievedAt": "2026-09-07T19:22:52.015Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1128-4",
+          "url": "https://www.univ-orleans.fr/lifo/membre/Benjamin.NGUYEN",
+          "excerpt": "e - (1) Personal Data Management Systems: The security and functionality standpoint Auteur(s) : Nicolas ANCIAUX , Benjamin NGUYEN , Philippe BONNET, Luc BOUGANIM, Philippe PUCHERAL, Iulian SANDU-POPA, Guillaume SCERRI HAL : 2464918 2018 - (2) Chapitre d&#039;ouvrages scientifiques - (1) The Case for Personalized Anonymization of Database Query Results Auteur(s) : Benjamin NGUYEN , Axel MICHEL, Philippe PUCHERAL HAL : 1945674 Communications sans actes - (1) Personalized k-anonymity Auteur(s) : Benjamin NGUYEN HAL : 1994719 2017 - (5) Communications sans actes - (4) What is Fair Data Processing ?",
+          "retrievedAt": "2026-09-07T19:22:52.015Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1128-5",
+          "url": "https://www.univ-orleans.fr/lifo/membre/Benjamin.NGUYEN",
+          "excerpt": "php/publications/proceedings - HAL : 1994667 Personalized Anonymization or the art of Private (Fair ?",
+          "retrievedAt": "2026-09-07T19:22:52.015Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1128-6",
+          "url": "https://www.univ-orleans.fr/lifo/membre/Benjamin.NGUYEN",
+          "excerpt": ") Data Processing Auteur(s) : Benjamin NGUYEN HAL : 1994712 Projet GIRAFON: Protection de la vie privée dans le cadre de l&#039;interrogation, la fouille et l&#039;analyse de grands graphes Auteur(s) : Cédric EICHLER , Pascal BERTHOMÉ , Benjamin NGUYEN HAL : 1985987 Private, Secure and Distributed Computation of k-cores Auteur(s) : Pascal BERTHOMÉ , Cédric EICHLER , Benjamin NGUYEN , Maria Evgenia G.",
+          "retrievedAt": "2026-09-07T19:22:52.015Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1128-7",
+          "url": "https://www.univ-orleans.fr/lifo/membre/Benjamin.NGUYEN",
+          "excerpt": "e internationale à comité de lecture - (1) Private and Scalable Execution of SQL Aggregates on a Secure Decentralized Architecture Auteur(s) : Benjamin NGUYEN , Cuong Quoc TO, Philippe PUCHERAL HAL : 1296432 2015 - (9) Communications sans actes - (4) TrustedMR: A Trusted MapReduce System based on Tamper Resistance Auteur(s) : Benjamin NGUYEN , Quoc-Cuong TO, Philippe PUCHERAL HAL : 1176539 Secure Portable Tokens for Sensitive Questionnaires Surveys Auteur(s) : Benjamin NGUYEN , Athanasia KATSOURAKI, Luc BOUGANIM, Paul TRAN-VAN HAL : 1176544 Managing Personal Data with Strong Privacy Guarantees.",
+          "retrievedAt": "2026-09-07T19:22:52.015Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1128-8",
+          "url": "https://www.univ-orleans.fr/lifo/membre/Benjamin.NGUYEN",
+          "excerpt": "Tutoriel Auteur(s) : Nicolas ANCIAUX , Benjamin NGUYEN HAL : 1178684 TrustedMR : Un système MapReduce de confiance basé sur l&#039;utilisation de matériel sécurisé Auteur(s) : Benjamin NGUYEN , Cuong Quoc TO, Philippe PUCHERAL HAL : 1296448 Conférence donnée sur invitation - (2) Towards an Era of Trust in Personal Data Management Auteur(s) : Nicolas ANCIAUX , Benjamin NGUYEN , Iulian SANDU-POPA HAL : 1176512 To be or not to be (anonymous)?",
+          "retrievedAt": "2026-09-07T19:22:52.015Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:23:53.023Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1129": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.umoncton.ca/notreumoncton/node/27"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1129-1",
+          "url": "https://www.umoncton.ca/notreumoncton/node/27",
+          "excerpt": "rsité icon Distinctions honorifiques Notre université Menu --> --> Notre université À propos Historique Distinctions honorifiques --> --> Distinctions honorifiques Distinctions honorifiques Distinctions honorifiques Chancelier émérite Liste à ce jour Nom, Prénom Grade Date Lieu Maillet Antonine Chancelier émérite Octobre 2001 Moncton Vice-recteur émérite Liste des récipiendaires à ce jour Nom, Prénom Grade Date Lieu Collette Médard Vice-recteur émérite Octobre 2002 Moncton Docteure ou docteur d’honneur Le doctorat honoris causa est la plus haute distinction décerner par l’Université de Moncton.",
+          "retrievedAt": "2026-09-07T19:22:52.762Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1129-2",
+          "url": "https://www.umoncton.ca/notreumoncton/node/27",
+          "excerpt": "Le récipiendaire ou la récipiendaire doit exceller ou avoir excellé dans l’un des principaux domaines de l’activité humaine : scientifique, littéraire, culturel, social, politique, économique, administratif, financier, industriel, etc.",
+          "retrievedAt": "2026-09-07T19:22:52.762Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1129-3",
+          "url": "https://www.umoncton.ca/notreumoncton/node/27",
+          "excerpt": "Cette contribution exceptionnelle se caractérise par sa durabilité et sa profondeur.",
+          "retrievedAt": "2026-09-07T19:22:52.762Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1129-4",
+          "url": "https://www.umoncton.ca/notreumoncton/node/27",
+          "excerpt": "Il est important que les raisons motivant la proposition soient bien détaillées.",
+          "retrievedAt": "2026-09-07T19:22:52.762Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1129-5",
+          "url": "https://www.umoncton.ca/notreumoncton/node/27",
+          "excerpt": "Liste des récipiendaires à ce jour Nom, Prénom Grade Date Lieu Adam Dyane Docteure en psychologie Juin 1999 Moncton Albert Jacques G.",
+          "retrievedAt": "2026-09-07T19:22:52.762Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1129-6",
+          "url": "https://www.umoncton.ca/notreumoncton/node/27",
+          "excerpt": "Docteur en éducation Mai 2026 Edmundston Albert Paul Marcel Docteur en arts Mai 2026 Shippagan Albina Mère M.",
+          "retrievedAt": "2026-09-07T19:22:52.762Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1129-7",
+          "url": "https://www.umoncton.ca/notreumoncton/node/27",
+          "excerpt": "St-Joseph (Moncton) André Louise Docteure en musique Mai 1990 Moncton Arbour Louise Docteure en droit Mai 2001 Moncton Arsenault Aubin E.",
+          "retrievedAt": "2026-09-07T19:22:52.762Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1129-8",
+          "url": "https://www.umoncton.ca/notreumoncton/node/27",
+          "excerpt": "St-Joseph Arsenault Bona Docteur ès lettres Octobre 1979 Moncton Arsenault George Docteur en histoire Mai 2017 Moncton Arsenault J.",
+          "retrievedAt": "2026-09-07T19:22:52.762Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:23:53.023Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1130": {
       "overview": "pending",
