@@ -3293,7 +3293,8 @@
         "vp-1332",
         "vp-1333"
       ],
-      "status": "pending"
+      "status": "in_progress",
+      "startedAt": "2026-09-07T19:43:41.653Z"
     },
     {
       "number": 67,
@@ -78822,204 +78823,506 @@
       "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1314": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://eecs.uark.edu/directory/index/uid/thnganle/name/Ngan+Le/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1314-1",
+          "url": "https://eecs.uark.edu/directory/index/uid/thnganle/name/Ngan+Le/",
+          "excerpt": "& Aid News & Events Directory Faculty College Administration Staff About Accolades Accreditation Commencement Councils & Committees History Jobs Outreach Strategic Plans & Reports Info For Alumni Current Students Donors Employers Faculty & Staff K-12 Educators Prospective Graduate Students Researchers Transfer Students Youth Interested in STEM Electrical Engineering & Computer Science In the department of Electrical Engineering and Computer Science, faculty and students are working to improve existing technology and create the next generation of electronics and computing hardware and software.",
+          "retrievedAt": "2026-09-07T19:43:42.529Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1314-2",
+          "url": "https://eecs.uark.edu/directory/index/uid/thnganle/name/Ngan+Le/",
+          "excerpt": "Apply Request Info Visit Give Undergraduate Student Hub Graduate Student Hub Degrees Offered Electrical Engineering Degrees Computer Science Degrees Computer Engineering Degrees Certificates and Online Degrees Electrical Engineering Bachelor of Science in Electrical Engineering, B.",
+          "retrievedAt": "2026-09-07T19:43:42.529Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1314-3",
+          "url": "https://eecs.uark.edu/directory/index/uid/thnganle/name/Ngan+Le/",
+          "excerpt": "4+1: Combines BS/MS in Electrical Engineering Master of Science in Electrical Engineering, M.",
+          "retrievedAt": "2026-09-07T19:43:42.529Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1314-4",
+          "url": "https://eecs.uark.edu/directory/index/uid/thnganle/name/Ngan+Le/",
+          "excerpt": "Certificates and Online Degrees Cybersecurity Graduate Certificate (CSCE) Graduate Certificate of Entrepreneurship (EE) Graduate Certificate in Sustainability (EE) Master of Science Engineering, M.",
+          "retrievedAt": "2026-09-07T19:43:42.529Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1314-5",
+          "url": "https://eecs.uark.edu/directory/index/uid/thnganle/name/Ngan+Le/",
+          "excerpt": "(On-campus or Online) Career Outlook Our personalized approach not only enhances your skills and knowledge but also ensures that your education is relevant and fulfilling, positioning you for success in your engineering career.",
+          "retrievedAt": "2026-09-07T19:43:42.529Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1314-6",
+          "url": "https://eecs.uark.edu/directory/index/uid/thnganle/name/Ngan+Le/",
+          "excerpt": "stem Design Lab Cybersecurity and Privacy Lab JinLab Resilient Information and Operational Technology (RIOT) Lab Social Awareness and Intelligent Learning Lab Social Media Research Group Trustable Logic Circuit Design Laboratory Resources About Us UAACSCE AAEE Industry Advisory Board EECS Handbooks Strategic Plan Our Faculty & Staff Electrical Engineering and Computer Science Faculty Electrical Engineering and Computer Science Staff Multimedia Spotlight Department News Student Organizations and Clubs Join to gain experience, enhance your degree, connect with peers, and make a collective impact.",
+          "retrievedAt": "2026-09-07T19:43:42.529Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1314-7",
+          "url": "https://eecs.uark.edu/directory/index/uid/thnganle/name/Ngan+Le/",
+          "excerpt": "Association for Computing Machinery Institute of Electrical and Electronics Engineers CyberHogs Girls in Tech Trustworthy Machine Learning Reading Group Contact Us E-mail: eecs@uark.",
+          "retrievedAt": "2026-09-07T19:43:42.529Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:44:31.667Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1315": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://scholars.uow.edu.au/son-lam-phung"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1315-1",
+          "url": "https://scholars.uow.edu.au/son-lam-phung",
+          "excerpt": "Discovery Browser Not Supported Your browser (Internet Explorer or other legacy browser) is not supported by this application.",
+          "retrievedAt": "2026-09-07T19:43:43.578Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:44:31.667Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1316": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.kent.edu/trumbull/profile/hai-q-dinh-phd"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.kent.edu/trumbull/profile/hai-q-dinh-phd: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:44:31.667Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1317": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.southampton.ac.uk/people/5x5mt5/doctor-phan-vuong"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1317-1",
+          "url": "https://www.southampton.ac.uk/people/5x5mt5/doctor-phan-vuong",
+          "excerpt": "s Research Centre School of Biological Sciences School of Chemistry and Chemical Engineering School of Economic Social and Political Science School of Electronics and Computer Science School of Engineering School of Geography and Environmental Sciences School of Health Sciences School of Healthcare, Enterprise and Innovation School of Humanities School of Mathematical Sciences School of Ocean and Earth Science School of Physics and Astronomy School of Psychology Southampton Business School Southampton Education School Southampton Law School Winchester School of Art 4025 Results Page 1 Doctor A.",
+          "retrievedAt": "2026-09-07T19:43:45.950Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1317-2",
+          "url": "https://www.southampton.ac.uk/people/5x5mt5/doctor-phan-vuong",
+          "excerpt": "uk ORCID Professor Aaron Ridley Professor of Philosophy Research interests Aesthetics Philosophy of Music Nietzsche Accepting applications from PhD students Connect with Aaron Email: amr3@soton.",
+          "retrievedAt": "2026-09-07T19:43:45.951Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1317-3",
+          "url": "https://www.southampton.ac.uk/people/5x5mt5/doctor-phan-vuong",
+          "excerpt": "uk Tel: +44 23 8059 2908 ORCID Mr Aaron Smith Senior Teaching Fellow in Cardiac Physiology Connect with Aaron Email: A.",
+          "retrievedAt": "2026-09-07T19:43:45.951Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1317-4",
+          "url": "https://www.southampton.ac.uk/people/5x5mt5/doctor-phan-vuong",
+          "excerpt": "uk ORCID Doctor Abdulkadir Celik Associate Professor Research interests Next-Generation Wireless Communications AI-Native Networks Accepting applications from PhD students Connect with Abdulkadir Email: a.",
+          "retrievedAt": "2026-09-07T19:43:45.951Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1317-5",
+          "url": "https://www.southampton.ac.uk/people/5x5mt5/doctor-phan-vuong",
+          "excerpt": "uk Google Scholar ORCID LinkedIn Mr Abdullah Afzal Connect with Abdullah Email: A.",
+          "retrievedAt": "2026-09-07T19:43:45.951Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1317-6",
+          "url": "https://www.southampton.ac.uk/people/5x5mt5/doctor-phan-vuong",
+          "excerpt": "uk Tel: +44 7307104230 ORCID Doctor Abhinav Kumar Singh Lecturer in Electrical/Electronic Power Systems Research interests Power system dynamics Power system estimation and control Accepting applications from PhD students Connect with Abhinav Kumar Email: A.",
+          "retrievedAt": "2026-09-07T19:43:45.951Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1317-7",
+          "url": "https://www.southampton.ac.uk/people/5x5mt5/doctor-phan-vuong",
+          "excerpt": "uk Tel: +44 23 8059 2025 Google Scholar ORCID Mr Abhishek Issac Connect with Abhishek Email: A.",
+          "retrievedAt": "2026-09-07T19:43:45.951Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1317-8",
+          "url": "https://www.southampton.ac.uk/people/5x5mt5/doctor-phan-vuong",
+          "excerpt": "uk ORCID Pagination Page 1 Page 2 Page 3 Page 4 &hellip; Next page Next -&gt; Part of the Information For visitors For staff & students For schools & colleges For researchers For employers & recruiters For parents & guardians For international students Website feedback Contact us Tel: +44(0)23 8059 5000 Fax: +44(0)23 8059 3131 University of Southampton University Road Southampton SO17 1BJ United Kingdom Get directions Connect with us Facebook Twitter Instagram LinkedIn YouTube Bluesky Download a copy of our prospectus or order a printed copy to be delivered to your door.",
+          "retrievedAt": "2026-09-07T19:43:45.951Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:44:31.667Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1318": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://dr.ntu.edu.sg/cris/rp/rp01479"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://dr.ntu.edu.sg/cris/rp/rp01479: HTTP 405"
+      ],
+      "updatedAt": "2026-09-07T19:44:31.667Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1319": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://profiles.uts.edu.au/Doan.Hoang"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1319-1",
+          "url": "https://profiles.uts.edu.au/Doan.Hoang",
+          "excerpt": "Discovery Browser Not Supported Your browser (Internet Explorer or other legacy browser) is not supported by this application.",
+          "retrievedAt": "2026-09-07T19:43:47.229Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:44:31.667Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1320": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.brunel.ac.uk/people/thai-doan-chuong"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.brunel.ac.uk/people/thai-doan-chuong: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:44:31.667Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1321": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.dfki.de/en/web/about-us/employee/person/ngdu01"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.dfki.de/en/web/about-us/employee/person/ngdu01: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T19:44:31.667Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1322": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.ae.utexas.edu/people/faculty/faculty-directory/doan"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1322-1",
+          "url": "https://www.ae.utexas.edu/people/faculty/faculty-directory/doan",
+          "excerpt": "Thinh Doan - Department of Aerospace Engineering and Engineering Mechanics Skip to content utexas.",
+          "retrievedAt": "2026-09-07T19:43:49.134Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1322-2",
+          "url": "https://www.ae.utexas.edu/people/faculty/faculty-directory/doan",
+          "excerpt": "edu News Events Directory Intranet Info for Alumni Industry K-12 Community Visitors & Families Employes (EID Login) About About Overview Facts and Rankings Strategic Plan Facilities Department History Accreditation Department Resources Academics Academics Overview Undergraduate Graduate B.",
+          "retrievedAt": "2026-09-07T19:43:49.134Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1322-3",
+          "url": "https://www.ae.utexas.edu/people/faculty/faculty-directory/doan",
+          "excerpt": "Integrated Program Student Community People People Overview Department Leadership Faculty Staff External Advisory Committee Research Research Overview Research Areas Affiliated Research Centers Connect Connect Overview Alumni Industry Engagement Giving Visit Contact Us Info for Alumni Industry K-12 Community Visitors & Families Employes (EID Login) News Events Directory Intranet Search Open Mobile Navigation Thinh Doan Assistant Professor thinhdoan@utexas.",
+          "retrievedAt": "2026-09-07T19:43:49.134Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1322-4",
+          "url": "https://www.ae.utexas.edu/people/faculty/faculty-directory/doan",
+          "excerpt": "206 Research Areas Estimation, Decision-Making, and Control for Aerospace and Robotic Systems Research Interests Real-time decision making for autonomy; Control theory; Optimization and applied probability theory; Reinforcement learning, generative AI and distributed learning About Thinh T.",
+          "retrievedAt": "2026-09-07T19:43:49.134Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1322-5",
+          "url": "https://www.ae.utexas.edu/people/faculty/faculty-directory/doan",
+          "excerpt": "Doan joined us as an assistant professor in the Department of Aerospace Engineering and Engineering Mechanics in August of 2024.",
+          "retrievedAt": "2026-09-07T19:43:49.134Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1322-6",
+          "url": "https://www.ae.utexas.edu/people/faculty/faculty-directory/doan",
+          "excerpt": "Before joining UT’s Cockrell School of Engineering, he was an assistant professor in the Department of Electrical and Computer Engineering (ECE) at Virginia Tech (VT).",
+          "retrievedAt": "2026-09-07T19:43:49.134Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1322-7",
+          "url": "https://www.ae.utexas.edu/people/faculty/faculty-directory/doan",
+          "excerpt": "Doan received his bachelor’s degree in ECE at Hanoi University of Science and Technology in Vietnam in 2008.",
+          "retrievedAt": "2026-09-07T19:43:49.134Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1322-8",
+          "url": "https://www.ae.utexas.edu/people/faculty/faculty-directory/doan",
+          "excerpt": "He then obtained his master&#8217;s degree at the University of Oklahoma in 2013 and his Ph.",
+          "retrievedAt": "2026-09-07T19:43:49.134Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:44:31.667Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1323": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://chemeng.queensu.ca/people/faculty/cao-thang-dinh.html"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://chemeng.queensu.ca/people/faculty/cao-thang-dinh.html: fetch failed"
+      ],
+      "updatedAt": "2026-09-07T19:44:31.667Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1324": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://academics.rmit.edu.au/tu-le/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1324-1",
+          "url": "https://academics.rmit.edu.au/tu-le/",
+          "excerpt": "Discovery Browser Not Supported Your browser (Internet Explorer or other legacy browser) is not supported by this application.",
+          "retrievedAt": "2026-09-07T19:43:50.368Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:44:31.667Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1325": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.iclehs.fr/teams/seisad/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1325-1",
+          "url": "https://www.iclehs.fr/teams/seisad/",
+          "excerpt": "SEISAD Skip to content &#8212; Institute of Chemistry for Life & Health Sciences &#8212; Menu Welcome Presentation Research Teams CSB2D TCM ICB SEISAD SCiFLOW News&Events Contact us SEISAD Actually, the Team develops projects aimed at elaborating processes and tools for the early detection of pathological signals using chemical and analytical methodologies.",
+          "retrievedAt": "2026-09-07T19:43:50.866Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1325-2",
+          "url": "https://www.iclehs.fr/teams/seisad/",
+          "excerpt": "ration of targeted optical and MR imaging agents , development of molecular magnetic resonance imaging MRI methods & functional imaging methods for the characterization and therapeutic follow-up of cancer in preclinics and (iv) characterization of new nano-supports and selective objects : peptide nanotubes, aptamers, nanobodies, design and characterization of original biocompatible nano-objects and quantitative characterization of their non-covalent interactions, development of miniaturized total analysis systems for applications ranging from environmental control to in-vitro medical diagnosis.",
+          "retrievedAt": "2026-09-07T19:43:50.866Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1325-3",
+          "url": "https://www.iclehs.fr/teams/seisad/",
+          "excerpt": "Research Themes Development of new synthetic and/or radio-labelling methodologies Development of new electrochemical sensors Development of new optical and MR imaging agents Design and conception of integrated micro-total analysis systems for diagnostics Permanent Staff Members Recent Publications Partager : Share on X (Opens in new window) X Share on Facebook (Opens in new window) Facebook Like Loading.",
+          "retrievedAt": "2026-09-07T19:43:50.866Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1325-4",
+          "url": "https://www.iclehs.fr/teams/seisad/",
+          "excerpt": "fr Sign up Log in Copy shortlink Report this content Manage subscriptions Loading Comments.",
+          "retrievedAt": "2026-09-07T19:43:50.866Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:44:31.667Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1326": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www1.montpellier.inrae.fr/wp-inra/bpmp/en/research/teams/aquaporins-membrane-traffic-stress-response/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1326-1",
+          "url": "https://www1.montpellier.inrae.fr/wp-inra/bpmp/en/research/teams/aquaporins-membrane-traffic-stress-response/",
+          "excerpt": "Ferme wordpress INRA &#8211; Un site utilisant WordPress Aller au contenu Ferme wordpress INRA Un site utilisant WordPress Menu et widgets Méta Connexion Flux des publications Flux des commentaires Site de WordPress-FR Bonjour tout le monde !",
+          "retrievedAt": "2026-09-07T19:43:53.305Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:44:31.667Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1327": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.wur.nl/en/persons/loc-dr.-hh-ho-huu.htm"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.wur.nl/en/persons/loc-dr.-hh-ho-huu.htm: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:44:31.667Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1328": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.torontomu.ca/chemical-engineering/people/faculty/huu-doan/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.torontomu.ca/chemical-engineering/people/faculty/huu-doan/: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:44:31.667Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1329": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.irri.org/our-people/van-schepler-luu"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.irri.org/our-people/van-schepler-luu: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:44:31.667Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1330": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://trios.tsukuba.ac.jp/en/researcher/0000004183"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1330-1",
+          "url": "https://trios.tsukuba.ac.jp/en/researcher/0000004183",
+          "excerpt": "TRIOS Researchers Information 研究者総覧 Researchers Information Search 日本語 Researchers list List by affiliations List by research fields Advanced search Manual Contact us Researcher This researcher has already left the University of Tsukuba.",
+          "retrievedAt": "2026-09-07T19:44:03.116Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1330-2",
+          "url": "https://trios.tsukuba.ac.jp/en/researcher/0000004183",
+          "excerpt": "このサイトについて | --> Department of Research Promotion, University of Tsukuba 1-1-1 Tennodai, Tsukuba, Ibaraki 305-8577 Japan Copyright (c) University of Tsukuba All Rights Reserved.",
+          "retrievedAt": "2026-09-07T19:44:03.116Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:44:31.667Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1331": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://research.monash.edu/en/persons/trong-anh-trinh"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://research.monash.edu/en/persons/trong-anh-trinh: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:44:31.667Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1332": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://yudb.kj.yamagata-u.ac.jp/html/100000854_en.html"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://yudb.kj.yamagata-u.ac.jp/html/100000854_en.html: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:44:31.667Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1333": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://loa.ensta-paris.fr/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1333-1",
+          "url": "https://loa.ensta-paris.fr/",
+          "excerpt": "Contact Contact Salles lasers Plan Social Bluesky Linkedin Youtube Home The laboratory History Organization Experimental Infrastructures Partnership Access News Research FLUX F-ILM UPX APPLI PCO QUANTUM Publications Recruitment Multimedia Home The laboratory History Organization Experimental Infrastructures Partnership Access News Research FLUX F-ILM UPX APPLI PCO QUANTUM Publications Recruitment Multimedia Member of the Institut Polytechnique de Paris (IP-Paris), the Laboratoire d’Optique Appliquée has played a pioneer role on laser-matter interaction and plasma physics for more than 30 years.",
+          "retrievedAt": "2026-09-07T19:44:10.296Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1333-2",
+          "url": "https://loa.ensta-paris.fr/",
+          "excerpt": "The research activity covers a broad spectrum of topics in ultrafast laser science including the development of ultra-intense femtosecond laser systems, the physics of laser filamentation in air and the realization of compact sources of ultrafast energetic radiation and particles for societal, academic and industrial applications.",
+          "retrievedAt": "2026-09-07T19:44:10.296Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1333-3",
+          "url": "https://loa.ensta-paris.fr/",
+          "excerpt": "tructive Testing 16 July 2026 Radiobiology with laser-accelerated very-high-energy electrons 9 June 2026 The Paris-Saclay Cancer Cluster supports Philippe Zeitoun&#8217;s startup company 9 June 2026 LOA’s newest doctor : Camilla Giaccaglia 2 June 2026 IP-Paris Best Thesis Award in physics for Aimé Matheron 12 May 2026 Bayesian optimization for the design of laser-plasma accelerators 21 April 2026 Laboratoire d’Optique Appliquée (LOA) 181 Chemin de la Hunière 91762 PALAISEAU cedex, FRANCE Phone : +33 (0)1 69 31 97 09 Copyright &copy; 2026 Laboratoire d&#039;Optique Appliquée All rights reserved.",
+          "retrievedAt": "2026-09-07T19:44:10.296Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:44:31.667Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1334": {
       "overview": "pending",
