@@ -2070,7 +2070,9 @@
         "vp-0419",
         "vp-0420"
       ],
-      "status": "pending"
+      "status": "complete",
+      "startedAt": "2026-09-07T04:53:02.604Z",
+      "publishedAt": "2026-09-07T04:54:16.828Z"
     },
     {
       "number": 22,
@@ -29800,208 +29802,1205 @@
       "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0401": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.maryville.edu/as/faculty-listing/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0401-1",
+          "url": "https://www.maryville.edu/as/faculty-listing/",
+          "excerpt": "College Of Arts and Sciences &#8211; Faculty and Staff --> Accessibility Statement --> About Programs Admissions Athletics Student Experience Alumni Giving Online Menu About Programs Admissions Athletics Student Experience Alumni Giving Online Current Student Login Calendar of Events Search &#215; What are you looking for?",
+          "retrievedAt": "2026-09-07T04:53:03.581Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0401-2",
+          "url": "https://www.maryville.edu/as/faculty-listing/",
+          "excerpt": "Schedule A Visit How to Apply Request Information Find My Major College Of Arts and Sciences &#8211; Faculty and Staff Design &#038; Visual Art Communication Humanities Social Sciences Sciences and Mathematics All College of Arts and Sciences Faculty and Staff Vaughn Anderson Assistant Professor of English Anheuser-Busch Hall 1312A Phone: 314.",
+          "retrievedAt": "2026-09-07T04:53:03.582Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0401-3",
+          "url": "https://www.maryville.edu/as/faculty-listing/",
+          "excerpt": "edu Shirley Ashauer Associate Professor of Psychology and Organizational Leadership Anheuser-Busch Hall 3261 Phone: 314.",
+          "retrievedAt": "2026-09-07T04:53:03.582Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0401-4",
+          "url": "https://www.maryville.edu/as/faculty-listing/",
+          "excerpt": "edu Robbie Beane Director of Computer Science Program/Associate Professor of Data Science 3216 Phone: 314.",
+          "retrievedAt": "2026-09-07T04:53:03.582Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0401-5",
+          "url": "https://www.maryville.edu/as/faculty-listing/",
+          "excerpt": "edu Robert Bertolino Program Director for Clinical Mental Health Counseling/Professor of Clinical Mental Health Walker Hall 153A Phone: 314.",
+          "retrievedAt": "2026-09-07T04:53:03.582Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0401-6",
+          "url": "https://www.maryville.edu/as/faculty-listing/",
+          "excerpt": "edu Geriann Brandt Director of the Criminal Justice/Criminology Program/Assistant Professor of Criminal Justice and Criminology Anheuser-Busch Hall 3215 Phone: 314.",
+          "retrievedAt": "2026-09-07T04:53:03.582Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0401-7",
+          "url": "https://www.maryville.edu/as/faculty-listing/",
+          "excerpt": "edu Todd Brenningmeyer Director of the Art History Program/Professor of Art History Design & Visual Art 115 Phone: 314.",
+          "retrievedAt": "2026-09-07T04:53:03.582Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0401-8",
+          "url": "https://www.maryville.edu/as/faculty-listing/",
+          "excerpt": "edu Lindsey Buening Instructor of Art & Design Design & Visual Art 121 Phone: 314.",
+          "retrievedAt": "2026-09-07T04:53:03.582Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:54:16.828Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0402": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.metrostate.edu/about/directory/minh-vo"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.metrostate.edu/about/directory/minh-vo: fetch failed"
+      ],
+      "updatedAt": "2026-09-07T04:54:16.828Z",
+      "nextAction": "Retry fetching Metropolitan State University directory profile or discover alternate official faculty page."
     },
     "vp-0403": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.fsb.miamioh.edu/fsb/directory/vita/vunt.pdf"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0403-1",
+          "url": "https://www.fsb.miamioh.edu/fsb/directory/vita/vunt.pdf",
+          "excerpt": "7 %���� 1 0 obj >/Metadata 171 0 R/ViewerPreferences 172 0 R>> endobj 2 0 obj > endobj 3 0 obj >/ExtGState >/ProcSet[/PDF/Text/ImageB/ImageC/ImageI] >>/MediaBox[ 0 0 612 792] /Contents 4 0 R/Group >/Tabs/S/StructParents 0>> endobj 4 0 obj > stream x��\\K��\u0011�7��A��\u0000��- h\u0018���H�=,v�\u001c�\u001c\u0016�fO\u0019����T\u0015��X\u001a�Mw�\u001c�m[\u0012�d�W_=��������������?",
+          "retrievedAt": "2026-09-07T04:53:04.552Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0403-2",
+          "url": "https://www.fsb.miamioh.edu/fsb/directory/vita/vunt.pdf",
+          "excerpt": ">\u000f�r��=��y=:�\u0016\u0007�/`} ���\u001e�,��������9:|�|����a\u0005_�u˥��%p�8�p�z �F�3���0_m�@_l�c�j�|���\u0016�>4�z%� &�3� �&�qM��\u0016K:K��g��� 7�gxs ��h�����I���|\u0004YUq��,Ue\u0012�_�D\u0004�QM��Hy\u0006� b��}4\\M`亽t�l�|\u000f 7�[;�* �lC���H�L� �ll\b*me\u0003�\u0013�x�JD�*������\u0017%�o�f�a\u001e�@3e���\u0010x�b�*7�\u0014�\"��\u0015ɠj��^��UE���M|�� \\\u0006��Z�kr� $4yxT�%\u0016��O\u000e�#\u0012t�\u001f\u0012t���\u0002iN��U�T���z*�Ce\u0017\u0017��\u0019A\"���\u0001�\u0016\u0012��5s��F(L�\u0018�.",
+          "retrievedAt": "2026-09-07T04:53:04.552Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0403-3",
+          "url": "https://www.fsb.miamioh.edu/fsb/directory/vita/vunt.pdf",
+          "excerpt": "%m�n*\u0017� ӲR���\"��^H���\u001aX/��l�2\u0001k��'���\u001ek�M���'7�\u0004#ÌU�ߟa�\u001cfv \u001fj�\u0007�\u0017�\u0019�rY\u0011L�;�J�K��V��r�|7}��\u001c-k��)�\\d�7%\u001bY�l���.",
+          "retrievedAt": "2026-09-07T04:53:04.552Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0403-4",
+          "url": "https://www.fsb.miamioh.edu/fsb/directory/vita/vunt.pdf",
+          "excerpt": "IjO�I����\u001a�F���x�t�Sٻ�^�pK*��G\\\u001a�u�G(�G�� _\u0014�ݔ���Gp/\u001a��NB\u000f\u00071\u0002 \u000f��A%eA�\u000e_�歷ɴ�o��^S��}M�aĳ���Up\u0015�Ug\u0013:���W�8�r�\u0019C\u0006N�~�\u0003\u0012\u0013��@�-�\\�]�@\u0016_�H􀊌�\u0010�� �\u0007�\u001e�$�\"Ռ��V� ����a.",
+          "retrievedAt": "2026-09-07T04:53:04.552Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0403-5",
+          "url": "https://www.fsb.miamioh.edu/fsb/directory/vita/vunt.pdf",
+          "excerpt": "u^Δ$�6T �@�~O�\u0012��\u0018����O�d�[p�ɒ�)t�\u0006 ŏҭ���4�w� �>v\u001cܝ�:�\u0010{� p���J' bI`O��1\u0005�E��\u00132§�F�$Hג6iҐT6\u0011W�`�M��T�\u0013�\u0017��T���\"����[�-��� \u001c[l�ן-6G������97\u0010�3�T���Z�\u0014 �C_sdW�ƌ\u001cB���z@\\�Z� B�rj�)��h@}\u001e�9��5�.",
+          "retrievedAt": "2026-09-07T04:53:04.552Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0403-6",
+          "url": "https://www.fsb.miamioh.edu/fsb/directory/vita/vunt.pdf",
+          "excerpt": "N7B�g�7��\u0015�����܏���֑\u0010*�����;�A-G�#�GK��3�+���Z�Z�bu�\u0007�8�\u001b�؈nʁ���We\u0000�%\u000f��t\u001df����ؔ\u00056��gF3\u001eE�\u0006��S����+�F�&�GW�j�ǌC�j0ŵUįW3�\u0019�� wEd�6�Oأ�\u001e�\u001b\u0015T75O0TPM\u0006�C{L�\u0011C6Ż���0��x݉`s�*k8�#Y%���\u0015�\u001c#\u000e�V�U��U��R��3]���,����� ����f���9$�O��'N��؍���\u0013+{ɿ^�N���5�yX>x\u0010f��KQ�uZ\u0015� \b�u�4�W\u0017e�\"\u001d�8\u001c�ŧ�l�ב4�5��EⲰ�\u000fCT9�qn\u001d{0s�8T��6\u0010�QҪh���Ā\u0006��i.",
+          "retrievedAt": "2026-09-07T04:53:04.552Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0403-7",
+          "url": "https://www.fsb.miamioh.edu/fsb/directory/vita/vunt.pdf",
+          "excerpt": "�0�Pߗ\u0016��L�,�E�jw# T� �*�-0���u&~+j؏�I��s=\u000f�Y�6v�~�MIL\u000e�Ì\u0002Pq\u0003�R6�s��md {Ӧ5����\u000e��̋��E)琛�?",
+          "retrievedAt": "2026-09-07T04:53:04.552Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0403-8",
+          "url": "https://www.fsb.miamioh.edu/fsb/directory/vita/vunt.pdf",
+          "excerpt": "*\u0017(�\u001ae�� Mgټޑ�iJµ��G�nj�fȚ��T�%k�B�vS\u000f+C֚�u'k�Q*�\u0016�$D�\u001b>���\u0005�������$-�\u001c�R�$ �\bQAӥ�5��F\u0015��mku\u00136��L@\u001a\u0015?",
+          "retrievedAt": "2026-09-07T04:53:04.552Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:54:16.828Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0404": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.mtu.edu/cege/people/faculty-staff/faculty/tran/",
         "https://sites.google.com/view/trans-mtu-lab/home"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0404-1",
+          "url": "https://www.mtu.edu/cege/people/faculty-staff/faculty/tran/",
+          "excerpt": "Give Resources for You Prospective Students Admitted Students Current Students Faculty and Staff Alumni and Friends Parents and Family Industry and Partners Tech Links A to Z Campus Directory Canvas Concur Email Experience Safety Data Sheets Website Settings Civil, Environmental, and Geospatial Engineering Home Engineering CEGE Faculty and Staff Directory Faculty Directory Quang Ngoc Vinh Tran Also in this section People and Groups Faculty and Staff Directory Clubs and Groups Alumni Academy Professional Advisory Board CTT Directory Quang Ngoc Vinh Tran Contact Quang Ngoc Vinh Tran qntran2@mtu.",
+          "retrievedAt": "2026-09-07T04:53:06.340Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0404-2",
+          "url": "https://www.mtu.edu/cege/people/faculty-staff/faculty/tran/",
+          "excerpt": "edu 906-487-3053 Dillman 301H Expanded CV LinkedIn Assistant Professor, Civil, Environmental, and Geospatial Engineering PhD, Civil and Environmental Engineering, University of Illinois at Urbana Champaign MS, Civil and Environmental Engineering, California State University, Fullerton BS, Industrial and System Engineering, Ho Chi Minh University of Technology, Vietnam Biography Dr.",
+          "retrievedAt": "2026-09-07T04:53:06.340Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0404-3",
+          "url": "https://www.mtu.edu/cege/people/faculty-staff/faculty/tran/",
+          "excerpt": "Quang Tran is an Assistant Professor in the Department of Civil, Environmental, and Geospatial Engineering at Michigan Technological University.",
+          "retrievedAt": "2026-09-07T04:53:06.340Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0404-4",
+          "url": "https://www.mtu.edu/cege/people/faculty-staff/faculty/tran/",
+          "excerpt": "He earned his PhD degree in Civil Engineering at the University of Illinois at Urbana-Champaign.",
+          "retrievedAt": "2026-09-07T04:53:06.340Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0404-5",
+          "url": "https://www.mtu.edu/cege/people/faculty-staff/faculty/tran/",
+          "excerpt": "Tran dedicated three years to postdoctoral research, contributing his expertise to prestigious institutions including Harvard Medical School, Harvard affiliated hospitals, and the Bioacoustics Research Lab at the University of Illinois at Urbana-Champaign.",
+          "retrievedAt": "2026-09-07T04:53:06.340Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0404-6",
+          "url": "https://www.mtu.edu/cege/people/faculty-staff/faculty/tran/",
+          "excerpt": "His research pursuits have spanned diverse disciplines, encompassing material characterization, nondestructive evaluation (NDE), and advanced sensing technologies, which find applications in civil and environmental engineering as well as biomedical challenges.",
+          "retrievedAt": "2026-09-07T04:53:06.340Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0404-7",
+          "url": "https://www.mtu.edu/cege/people/faculty-staff/faculty/tran/",
+          "excerpt": "Tran's contributions to the scientific community are evident through his authorship and co-authorship of over 30 peer-reviewed journal and conference papers.",
+          "retrievedAt": "2026-09-07T04:53:06.340Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0404-8",
+          "url": "https://www.mtu.edu/cege/people/faculty-staff/faculty/tran/",
+          "excerpt": "Additionally, he participates as a member of prominent organizations such as the American Concrete Institute (ACI) and the American Society of Civil Engineers (ASCE).",
+          "retrievedAt": "2026-09-07T04:53:06.340Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0404-9",
+          "url": "https://sites.google.com/view/trans-mtu-lab/home",
+          "excerpt": "Tran&#39;s Lab Search this site Embedded Files Skip to main content Skip to navigation Tran&#39;s Lab Home Research Publications Journal articles Conference publications Conference and seminar presetations Funding Teaching Team News Join us Tran&#39;s Lab Home Research Publications Journal articles Conference publications Conference and seminar presetations Funding Teaching Team News Join us More Home Research Publications Journal articles Conference publications Conference and seminar presetations Funding Teaching Team News Join us Nondestructive Research Lab (NRL) Quang Tran, Ph.",
+          "retrievedAt": "2026-09-07T04:53:06.686Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0404-10",
+          "url": "https://sites.google.com/view/trans-mtu-lab/home",
+          "excerpt": "Assistant Professor Department of Civil, Environmental, and Geospatial Engineering Michigan Technological University, 301H Dillman Hall 1400 Townsend Drive, Houghton, Michigan, USA 49931 MTU Profile | LinkedIn | Google Scholar Greetings !",
+          "retrievedAt": "2026-09-07T04:53:06.686Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0404-11",
+          "url": "https://sites.google.com/view/trans-mtu-lab/home",
+          "excerpt": "My research lab integrates various disciplines and concentrates on creating novel non-invasive methods for use in civil and biomedical fields.",
+          "retrievedAt": "2026-09-07T04:53:06.686Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0404-12",
+          "url": "https://sites.google.com/view/trans-mtu-lab/home",
+          "excerpt": "If you are interested in working with me , please email me at qntran2 AT mtu DOT edu Education : PhD, Civil and Environmental Engineering, University of Illinois at Urbana Champaign Research Interests: Noninvasive characterization of construction materials and biological tissues.",
+          "retrievedAt": "2026-09-07T04:53:06.686Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:54:16.828Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0405": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://ced.ncsu.edu/people/lpham4/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0405-1",
+          "url": "https://ced.ncsu.edu/people/lpham4/",
+          "excerpt": "ars Student Services and Advising Center (SSAC) Office of Graduate Student Services Admissions Admissions Visit Us Scholarships and Financial Aid Apply Now Research Research Research Office Research Office Research Office Research Office Research Expertise Research Projects Finding Research Collaborators Examples of Successful Proposals Proposal Budget Resources Become a Reviewer University Research Links Pre-Award Services Pre-Award Services Proposal Intake Form Funding Opportunity Search Data Use Agreement PI Responsibilities and Eligibility Proposal Submission Timeline Is it a Grant or Gift?",
+          "retrievedAt": "2026-09-07T04:53:07.147Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0405-2",
+          "url": "https://ced.ncsu.edu/people/lpham4/",
+          "excerpt": "Proposal Budget Resources Post-Award Services Pre-Award Services Post-Award Services Belk Center Friday Institute Giving News Give Now Filter By Dean Leadership Team Development Faculty and Academic Affairs Marketing and Communication Operations Professional Education Research and Innovation Student Success Department of Educational Leadership, Policy, and Human Development Department of STEM Education Department of Teacher Education and Learning Sciences Elevate Belk Center Friday Institute Lam Pham LP Associate Professor [email&#160;protected] View CV Bio Lam D.",
+          "retrievedAt": "2026-09-07T04:53:07.147Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0405-3",
+          "url": "https://ced.ncsu.edu/people/lpham4/",
+          "excerpt": "Pham is an associate professor in the Department of Educational Leadership, Policy, and Human Development at North Carolina State University.",
+          "retrievedAt": "2026-09-07T04:53:07.147Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0405-4",
+          "url": "https://ced.ncsu.edu/people/lpham4/",
+          "excerpt": "A first generation Vietnamese immigrant, Lam grew up attending schools serving primarily students from low-income backgrounds and students of color.",
+          "retrievedAt": "2026-09-07T04:53:07.147Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0405-5",
+          "url": "https://ced.ncsu.edu/people/lpham4/",
+          "excerpt": "These firsthand experiences shape his research, which investigates policies that affect the educator workforce (e.",
+          "retrievedAt": "2026-09-07T04:53:07.147Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0405-6",
+          "url": "https://ced.ncsu.edu/people/lpham4/",
+          "excerpt": ", compensation, professional learning, performance evaluation), especially in low-performing schools.",
+          "retrievedAt": "2026-09-07T04:53:07.147Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0405-7",
+          "url": "https://ced.ncsu.edu/people/lpham4/",
+          "excerpt": "in K-12 Educational Leadership and Policy Studies from Vanderbilt University, specializing in quantitative methods.",
+          "retrievedAt": "2026-09-07T04:53:07.147Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0405-8",
+          "url": "https://ced.ncsu.edu/people/lpham4/",
+          "excerpt": "Before his doctoral studies, Lam received a Fulbright award (Vietnam), taught math in a turnaround high school in Oklahoma City, and served as an instructional coach for Oklahoma City Public Schools.",
+          "retrievedAt": "2026-09-07T04:53:07.147Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:54:16.828Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0406": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://cos.northeastern.edu/people/vy-nguyen/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0406-1",
+          "url": "https://cos.northeastern.edu/people/vy-nguyen/",
+          "excerpt": "dents Advising and Academic Resources Student Programs and Organizations Scholarship and Achievement COS Student Portals Connect with the College of Science Contact Apply Give COS People About Us Executive Leadership Faculty and Staff Directory Alumni and Friends Belonging and Engagement COS Faculty &#038; Staff Intranet Connect with the College of Science Contact Apply Give Connections Events News COS Communications Contact Us Connect with the College of Science Contact Apply Give Search Search for Submit search Close All People Vy Nguyen Assistant Teaching Professor Department Mathematics Dr.",
+          "retrievedAt": "2026-09-07T04:53:07.916Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0406-2",
+          "url": "https://cos.northeastern.edu/people/vy-nguyen/",
+          "excerpt": "Vy Nguyen earned the PhD in Mathematics from the University of Massachusetts, Amherst.",
+          "retrievedAt": "2026-09-07T04:53:07.916Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0406-3",
+          "url": "https://cos.northeastern.edu/people/vy-nguyen/",
+          "excerpt": "Nguyen’s research includes power residues of Fourier coefficients of product of two elliptic curves.",
+          "retrievedAt": "2026-09-07T04:53:07.916Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0406-4",
+          "url": "https://cos.northeastern.edu/people/vy-nguyen/",
+          "excerpt": "She has extensive experience teaching lower and upper-level mathematics courses including calculus I and II, differential equations, and statistics.",
+          "retrievedAt": "2026-09-07T04:53:07.916Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0406-5",
+          "url": "https://cos.northeastern.edu/people/vy-nguyen/",
+          "excerpt": "Campus Oakland Contact [email&#160;protected] Follow @NortheasternCOS Facebook X Instagram Youtube LinkedIn Bluesky Contact Us About COS Who We Are Education Research Strategic Plan Community News Events COS Faculty &#038; Staff Intranet COS Student Portals Support COS If you share our passion for discovery, we invite you to make a gift to the College of Science.",
+          "retrievedAt": "2026-09-07T04:53:07.916Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:54:16.828Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0407": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.niu.edu/clas/polisci/about/faculty-staff/tran.shtml",
         "https://maivantran.weebly.com/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0407-1",
+          "url": "https://www.niu.edu/clas/polisci/about/faculty-staff/tran.shtml",
+          "excerpt": "dar Libraries Make a Gift Quick Links Blackboard My NIU MyScholarships Huskie Hub Office 365 Anywhere Apps Qualtrics Navigate Huskies Get Hired Student Email Password Self-Service A-Z Directory Calendar Libraries Search NIU --> Quick Links Blackboard My NIU Huskies Get Hired Huskie Hub Office 365 Student Email Anywhere Apps Password Self-Service Toggle Main Navigation Main Navigation Site home page About About the Department of Political Science Message From The Chair Our Mission Faculty and Staff Advisory Board POLS A to Z Index Academics Undergraduate Graduate Accelerated Law Degree Online B.",
+          "retrievedAt": "2026-09-07T04:53:08.237Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0407-2",
+          "url": "https://www.niu.edu/clas/polisci/about/faculty-staff/tran.shtml",
+          "excerpt": "Degree Educator Licensure Advising Course Offerings Opportunities Scholarships Internships Washington, D.",
+          "retrievedAt": "2026-09-07T04:53:08.237Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0407-3",
+          "url": "https://www.niu.edu/clas/polisci/about/faculty-staff/tran.shtml",
+          "excerpt": "Spring Break Trip Study Abroad: Oxford Program Commencement and Awards Resources for Faculty and Staff Campus Experiences Honors Program Mentorship Program Student Organizations Why Political Science?",
+          "retrievedAt": "2026-09-07T04:53:08.237Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0407-4",
+          "url": "https://www.niu.edu/clas/polisci/about/faculty-staff/tran.shtml",
+          "excerpt": "Careers Donate Home About Faculty and Staff Mai Van Tran Mai Van Tran Emphasis Comparative politics Authoritarian politics Social movements Transnational advocacy Platform governance/big tech governance Southeast Asia Mixed methods Overview of Scholarly Activity Mai Van Tran (Ph.",
+          "retrievedAt": "2026-09-07T04:53:08.237Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0407-5",
+          "url": "https://www.niu.edu/clas/polisci/about/faculty-staff/tran.shtml",
+          "excerpt": ", Cornell University) is an assistant professor in the Department of Political Science and a faculty associate with the Center for Southeast Asian Studies.",
+          "retrievedAt": "2026-09-07T04:53:08.237Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0407-6",
+          "url": "https://www.niu.edu/clas/polisci/about/faculty-staff/tran.shtml",
+          "excerpt": "Her research agenda focuses on the changing dynamics of contentious politics in non-democracies, especially in Southeast Asian contexts.",
+          "retrievedAt": "2026-09-07T04:53:08.237Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0407-7",
+          "url": "https://www.niu.edu/clas/polisci/about/faculty-staff/tran.shtml",
+          "excerpt": "Her ongoing work examines resistance to digital repression in the Global South, by analyzing cross-platform authoritarian repression, dissidents' resilience capacity, and drivers of impactful platform advocacy in Southeast Asia.",
+          "retrievedAt": "2026-09-07T04:53:08.237Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0407-8",
+          "url": "https://www.niu.edu/clas/polisci/about/faculty-staff/tran.shtml",
+          "excerpt": "Adopting an engaged mixed methods research agenda, her research has integrated social media analysis with in-depth interviews with digital rights advocates and marginalized activists across Myanmar, Thailand, and Cambodia.",
+          "retrievedAt": "2026-09-07T04:53:08.237Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0407-9",
+          "url": "https://maivantran.weebly.com/",
+          "excerpt": "Mai Van Tran - Home Mai Van Tran Home Research Teaching CV Mai Van Tran [email&#160;protected] &#8203; [email&#160;protected] &#8203; LinkedIn &#8203; Bluesky Welcome!",
+          "retrievedAt": "2026-09-07T04:53:08.617Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0407-10",
+          "url": "https://maivantran.weebly.com/",
+          "excerpt": "I am an Assistant Professor at the Department of Political Science and faculty associate with the Center for Southeast Asian Studies, Northern Illinois University .",
+          "retrievedAt": "2026-09-07T04:53:08.617Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0407-11",
+          "url": "https://maivantran.weebly.com/",
+          "excerpt": "I am also a research associate with the Centre for Digitalisation, Democracy and Innovation ( Brussels School of Governance, Vrije Universiteit Brussel) and a member of the Folke Bernadotte Academy's International Research Working Group.",
+          "retrievedAt": "2026-09-07T04:53:08.617Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0407-12",
+          "url": "https://maivantran.weebly.com/",
+          "excerpt": "I hold a PhD in political science from Cornell University and have previously worked as a postdoc at the Vrije Universiteit Brussel and University of Copenhagen.",
+          "retrievedAt": "2026-09-07T04:53:08.617Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0407-13",
+          "url": "https://maivantran.weebly.com/",
+          "excerpt": "My research has focused on the changing dynamics of contentious politics in non-democracies, especially in Southeast Asian contexts .",
+          "retrievedAt": "2026-09-07T04:53:08.617Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0407-14",
+          "url": "https://maivantran.weebly.com/",
+          "excerpt": "&#8203;&#8203; My current research examines resistance to digital repression in the Global South , by analyzing cross-platform authoritarian repression, dissidents' resilience capacity, and drivers of impactful platform advocacy in Southeast Asia.",
+          "retrievedAt": "2026-09-07T04:53:08.617Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0407-15",
+          "url": "https://maivantran.weebly.com/",
+          "excerpt": "Adopting an engaged mixed methods research agenda, my work has integrated social media analysis with in-depth interviews with digital rights advocates and marginalised activists in Myanmar, Thailand, and Cambodia.",
+          "retrievedAt": "2026-09-07T04:53:08.617Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0407-16",
+          "url": "https://maivantran.weebly.com/",
+          "excerpt": "My academic research and book review are published at &#8203;International Affairs, Big Data & Society, Journal of Contemporary Asia , Asian Politics & Policy, Asian Journal of Comparative Politics, and Open Research Europe .",
+          "retrievedAt": "2026-09-07T04:53:08.617Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:54:16.828Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0408": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://asianamerican.northwestern.edu/people/faculty-and-staff-profiles/keva-bui.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0408-1",
+          "url": "https://asianamerican.northwestern.edu/people/faculty-and-staff-profiles/keva-bui.html",
+          "excerpt": "Keva Bui: Asian American Studies Program - Northwestern University Skip to main content Your browser is out-of-date and has known security flaws .",
+          "retrievedAt": "2026-09-07T04:53:08.967Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0408-2",
+          "url": "https://asianamerican.northwestern.edu/people/faculty-and-staff-profiles/keva-bui.html",
+          "excerpt": "We recommend you update your browser: Chrome - Firefox - Internet Explorer - Safari .",
+          "retrievedAt": "2026-09-07T04:53:08.967Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0408-3",
+          "url": "https://asianamerican.northwestern.edu/people/faculty-and-staff-profiles/keva-bui.html",
+          "excerpt": "Weinberg College of Arts & Sciences Events ASIAN AMERICAN STUDIES PROGRAM Search this site Search Menu About Expand About Submenu History Expand History Submenu Letter from President Bienen to Mr.",
+          "retrievedAt": "2026-09-07T04:53:08.967Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0408-4",
+          "url": "https://asianamerican.northwestern.edu/people/faculty-and-staff-profiles/keva-bui.html",
+          "excerpt": "Robert Yap Letter from CAS Dean Dumas Letter from President Bienen - April 17, 1995 University Evaluates Proposal Letter from President Bienen - April 24, 1995 Events Expand Events Submenu Past Events Crossings 2023 News Expand News Submenu 2023 2022 2021 2020 2019 2018 2017 2016 2015 Newsletter Join Our Mailing List!",
+          "retrievedAt": "2026-09-07T04:53:08.967Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0408-5",
+          "url": "https://asianamerican.northwestern.edu/people/faculty-and-staff-profiles/keva-bui.html",
+          "excerpt": "ipients Submenu Yiming Fu Kristy Park Alicia Cai 2023 Recipients Expand 2023 Recipients Submenu Anna Dellit Kiran Bhat Lena Rhie 2025 Recipients Expand 2025 Recipients Submenu Esther Lian Student Works AASP Small Grants Initiative Graduate Expand Graduate Submenu Colloquium on Ethnicity and Diaspora Comparative Race and Diaspora Cluster Apply to be a Graduate Assistant AASP Small Grants Initiative People Collapse People Submenu Faculty Affiliated Faculty Administration Graduate Students Make a Gift Events Search Search this site Search About History Events News Newsletter Join Our Mailing List!",
+          "retrievedAt": "2026-09-07T04:53:08.967Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0408-6",
+          "url": "https://asianamerican.northwestern.edu/people/faculty-and-staff-profiles/keva-bui.html",
+          "excerpt": "Undergraduate Major Minor First-Year Focus Courses Awards Community Summer Fellowship Student Works AASP Small Grants Initiative Graduate Colloquium on Ethnicity and Diaspora Comparative Race and Diaspora Cluster Apply to be a Graduate Assistant AASP Small Grants Initiative People Faculty Affiliated Faculty Administration Graduate Students Make a Gift Home People Profiles Keva Bui People Faculty Affiliated Faculty Administration Graduate Students Keva Bui Assistant Professor of Asian American Studies kxbui@northwestern.",
+          "retrievedAt": "2026-09-07T04:53:08.967Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0408-7",
+          "url": "https://asianamerican.northwestern.edu/people/faculty-and-staff-profiles/keva-bui.html",
+          "excerpt": "Bui (they/them) is a scholar of war and US empire, science and technology, and anti-war social movements with specific focus on the US Cold War in Asia and the Pacific.",
+          "retrievedAt": "2026-09-07T04:53:08.967Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0408-8",
+          "url": "https://asianamerican.northwestern.edu/people/faculty-and-staff-profiles/keva-bui.html",
+          "excerpt": "in Ethnic Studies with a certificate in Critical Gender Studies from the University of California, San Diego.",
+          "retrievedAt": "2026-09-07T04:53:08.967Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:54:16.828Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0409": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.ohsu.edu/people/thuan-nguyen-phd"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0409-1",
+          "url": "https://www.ohsu.edu/people/thuan-nguyen-phd",
+          "excerpt": "| OHSU People | OHSU Skip to main content Skip to main navigation I-5 closure begins Sept.",
+          "retrievedAt": "2026-09-07T04:53:10.071Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0409-2",
+          "url": "https://www.ohsu.edu/people/thuan-nguyen-phd",
+          "excerpt": "Children's Health Heart Care Spine and Back Care Women's Health Find More Services Research Research Research News Office of the Chief Research Officer Clinical Trials Participation Office of Visitors and Volunteers Centers and Institutes Cores and Shared Resources OHSU Innovates Administration Research Funding and Development Clinical Trials Office Training and Education Postdocs and Students Office of Postdoctoral Affairs Human Investigations Program Give Locations Maps and Directions Locations and Directions Public Transportation Portland Aerial Tram Inclement Weather Jobs Thuan Nguyen, Ph.",
+          "retrievedAt": "2026-09-07T04:53:10.071Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0409-3",
+          "url": "https://www.ohsu.edu/people/thuan-nguyen-phd",
+          "excerpt": "Associate Professor, OHSU-PSU School of Public Health 503-494-3697 Biography Thuan Nguyen is an associate professor of biostatistics in the School of Public Health.",
+          "retrievedAt": "2026-09-07T04:53:10.071Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0409-4",
+          "url": "https://www.ohsu.edu/people/thuan-nguyen-phd",
+          "excerpt": "She teaches and advises graduate students in biostatistics and teaches two graduate courses – Linear Models and Survey Designs and Analysis.",
+          "retrievedAt": "2026-09-07T04:53:10.071Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0409-5",
+          "url": "https://www.ohsu.edu/people/thuan-nguyen-phd",
+          "excerpt": "Her research of interest includes mixed effects models, statistical genetics, model selection, small area estimation and longitudinal data analysis.",
+          "retrievedAt": "2026-09-07T04:53:10.071Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0409-6",
+          "url": "https://www.ohsu.edu/people/thuan-nguyen-phd",
+          "excerpt": "She has been involved with the Biostatistics Design Program at the Oregon Clinical Translational Research Institute since 2008 and has collaborated with many investigators on a wide range of research projects in clinical care, public health, health policy, basic science and social behavior science.",
+          "retrievedAt": "2026-09-07T04:53:10.071Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0409-7",
+          "url": "https://www.ohsu.edu/people/thuan-nguyen-phd",
+          "excerpt": ", 2008, University of California, Davis Areas of interest Biostatistics Statistical methodology Additional information OHSU-PSU School of Public Health Honors and awards 2014: PHPH Mentoring Award 2002: Hee-bok Award Publications Publications OHSU flame logo in white Oregon Health & Science University is dedicated to improving the health and quality of life for all Oregonians through excellence, innovation and leadership in health care, education and research.",
+          "retrievedAt": "2026-09-07T04:53:10.071Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:54:16.828Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0410": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.ohsu.edu/people/trang-huynh-md"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0410-1",
+          "url": "https://www.ohsu.edu/people/trang-huynh-md",
+          "excerpt": "| OHSU People | OHSU Skip to main content Skip to main navigation I-5 closure begins Sept.",
+          "retrievedAt": "2026-09-07T04:53:10.752Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0410-2",
+          "url": "https://www.ohsu.edu/people/trang-huynh-md",
+          "excerpt": "re Children's Health Heart Care Spine and Back Care Women's Health Find More Services Research Research Research News Office of the Chief Research Officer Clinical Trials Participation Office of Visitors and Volunteers Centers and Institutes Cores and Shared Resources OHSU Innovates Administration Research Funding and Development Clinical Trials Office Training and Education Postdocs and Students Office of Postdoctoral Affairs Human Investigations Program Give Locations Maps and Directions Locations and Directions Public Transportation Portland Aerial Tram Inclement Weather Jobs Trang Huynh, M.",
+          "retrievedAt": "2026-09-07T04:53:10.752Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0410-3",
+          "url": "https://www.ohsu.edu/people/trang-huynh-md",
+          "excerpt": "Associate Professor of Pediatrics, Division of Neonatology, School of Medicine Read health care profile Education and training Degrees M.",
+          "retrievedAt": "2026-09-07T04:53:10.752Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0410-4",
+          "url": "https://www.ohsu.edu/people/trang-huynh-md",
+          "excerpt": ", 2002, State University of New York Upstate Medical University, College of Medicine Residency Pediatrics, Thomas Jefferson University, 2005 Fellowship Neonatal-perinatal medicine, Columbia University Medical Center, 2008 Certifications American Board of Pediatrics Publications Elsevier pure profile Publications OHSU flame logo in white Oregon Health & Science University is dedicated to improving the health and quality of life for all Oregonians through excellence, innovation and leadership in health care, education and research.",
+          "retrievedAt": "2026-09-07T04:53:10.752Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:54:16.828Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0411": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.ohsu.edu/people/khanh-p-nguyen-md-mcr"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0411-1",
+          "url": "https://www.ohsu.edu/people/khanh-p-nguyen-md-mcr",
+          "excerpt": "| OHSU People | OHSU Skip to main content Skip to main navigation I-5 closure begins Sept.",
+          "retrievedAt": "2026-09-07T04:53:11.551Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0411-2",
+          "url": "https://www.ohsu.edu/people/khanh-p-nguyen-md-mcr",
+          "excerpt": "ncer Care Children's Health Heart Care Spine and Back Care Women's Health Find More Services Research Research Research News Office of the Chief Research Officer Clinical Trials Participation Office of Visitors and Volunteers Centers and Institutes Cores and Shared Resources OHSU Innovates Administration Research Funding and Development Clinical Trials Office Training and Education Postdocs and Students Office of Postdoctoral Affairs Human Investigations Program Give Locations Maps and Directions Locations and Directions Public Transportation Portland Aerial Tram Inclement Weather Jobs Khanh P.",
+          "retrievedAt": "2026-09-07T04:53:11.551Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0411-3",
+          "url": "https://www.ohsu.edu/people/khanh-p-nguyen-md-mcr",
+          "excerpt": "(she/her) Associate Professor of Surgery, Division of Vascular Surgery, School of Medicine Read health care profile Knight Cardiovascular Institute Clinical Trials Biography Dr.",
+          "retrievedAt": "2026-09-07T04:53:11.551Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0411-4",
+          "url": "https://www.ohsu.edu/people/khanh-p-nguyen-md-mcr",
+          "excerpt": "Khanh Nguyen is a vascular surgeon and associate professor of surgery in the Division of Vascular Surgery at the OHSU School of Medicine.",
+          "retrievedAt": "2026-09-07T04:53:11.551Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0411-5",
+          "url": "https://www.ohsu.edu/people/khanh-p-nguyen-md-mcr",
+          "excerpt": "She is also a principal investigator leading multiple clinical trials and basic science research projects.",
+          "retrievedAt": "2026-09-07T04:53:11.551Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0411-6",
+          "url": "https://www.ohsu.edu/people/khanh-p-nguyen-md-mcr",
+          "excerpt": "She works with hematologists (blood experts) and biomedical engineers to study anticoagulants, venous thrombosis and other vascular disorders.",
+          "retrievedAt": "2026-09-07T04:53:11.551Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0411-7",
+          "url": "https://www.ohsu.edu/people/khanh-p-nguyen-md-mcr",
+          "excerpt": "She also has been a provider in OHSU's Wound and Hyperbaric Medicine Center since it opened in December 2016.",
+          "retrievedAt": "2026-09-07T04:53:11.551Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0411-8",
+          "url": "https://www.ohsu.edu/people/khanh-p-nguyen-md-mcr",
+          "excerpt": "degree from Tufts University School of Medicine in Boston, then completed her residency in general surgery at Loma Linda University in California.",
+          "retrievedAt": "2026-09-07T04:53:11.551Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:54:16.828Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0412": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.ohsu.edu/people/khoa-a-nguyen-md"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0412-1",
+          "url": "https://www.ohsu.edu/people/khoa-a-nguyen-md",
+          "excerpt": "| OHSU People | OHSU Skip to main content Skip to main navigation I-5 closure begins Sept.",
+          "retrievedAt": "2026-09-07T04:53:12.338Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0412-2",
+          "url": "https://www.ohsu.edu/people/khoa-a-nguyen-md",
+          "excerpt": "ancer Care Children's Health Heart Care Spine and Back Care Women's Health Find More Services Research Research Research News Office of the Chief Research Officer Clinical Trials Participation Office of Visitors and Volunteers Centers and Institutes Cores and Shared Resources OHSU Innovates Administration Research Funding and Development Clinical Trials Office Training and Education Postdocs and Students Office of Postdoctoral Affairs Human Investigations Program Give Locations Maps and Directions Locations and Directions Public Transportation Portland Aerial Tram Inclement Weather Jobs Khoa A.",
+          "retrievedAt": "2026-09-07T04:53:12.338Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0412-3",
+          "url": "https://www.ohsu.edu/people/khoa-a-nguyen-md",
+          "excerpt": "(he/him) Assistant Professor of Medicine, Division of Cardiovascular Medicine, School of Medicine Read health care profile Biography I am a critical care cardiologist who treats adult patients with life-threatening cardiovascular conditions, including: heart attacks heart failure valvular heart disease arrhythmias cardiac arrest In addition to my work in the cardiovascular ICU, I also see patients in a post-ICU clinic, where I focus on their physical, cognitive, and mental health recovery following critical cardiac illness.",
+          "retrievedAt": "2026-09-07T04:53:12.338Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0412-4",
+          "url": "https://www.ohsu.edu/people/khoa-a-nguyen-md",
+          "excerpt": "Some of the treatments I provide include invasive and noninvasive hemodynamic monitoring, mechanical ventilation, airway management and post-cardiac surgery care.",
+          "retrievedAt": "2026-09-07T04:53:12.338Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0412-5",
+          "url": "https://www.ohsu.edu/people/khoa-a-nguyen-md",
+          "excerpt": "I emphasize compassionate care, evidence-based practices and shared decision-making to ensure the highest quality outcomes.",
+          "retrievedAt": "2026-09-07T04:53:12.338Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0412-6",
+          "url": "https://www.ohsu.edu/people/khoa-a-nguyen-md",
+          "excerpt": "I truly enjoy the dynamic and collaborative environment of cardiac critical care.",
+          "retrievedAt": "2026-09-07T04:53:12.338Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0412-7",
+          "url": "https://www.ohsu.edu/people/khoa-a-nguyen-md",
+          "excerpt": "It’s a privilege to work alongside exceptional colleagues and serve the diverse patient population of Oregon.",
+          "retrievedAt": "2026-09-07T04:53:12.338Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0412-8",
+          "url": "https://www.ohsu.edu/people/khoa-a-nguyen-md",
+          "excerpt": "Outside of work, I love spending time outdoors snowboarding, surfing and hiking.",
+          "retrievedAt": "2026-09-07T04:53:12.338Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:54:16.828Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0413": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.ohsu.edu/people/angela-tu-nguyen-md"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0413-1",
+          "url": "https://www.ohsu.edu/people/angela-tu-nguyen-md",
+          "excerpt": "| OHSU People | OHSU Skip to main content Skip to main navigation I-5 closure begins Sept.",
+          "retrievedAt": "2026-09-07T04:53:13.174Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0413-2",
+          "url": "https://www.ohsu.edu/people/angela-tu-nguyen-md",
+          "excerpt": "ildren's Health Heart Care Spine and Back Care Women's Health Find More Services Research Research Research News Office of the Chief Research Officer Clinical Trials Participation Office of Visitors and Volunteers Centers and Institutes Cores and Shared Resources OHSU Innovates Administration Research Funding and Development Clinical Trials Office Training and Education Postdocs and Students Office of Postdoctoral Affairs Human Investigations Program Give Locations Maps and Directions Locations and Directions Public Transportation Portland Aerial Tram Inclement Weather Jobs Angela-Tu Nguyen, M.",
+          "retrievedAt": "2026-09-07T04:53:13.174Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0413-3",
+          "url": "https://www.ohsu.edu/people/angela-tu-nguyen-md",
+          "excerpt": "Assistant Professor of Pediatrics, Division of General Pediatrics, School of Medicine Read health care profile Education and training Degrees M.",
+          "retrievedAt": "2026-09-07T04:53:13.174Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0413-4",
+          "url": "https://www.ohsu.edu/people/angela-tu-nguyen-md",
+          "excerpt": ", 2013, Virginia Commonwealth University Residency Pediatrics, Johns Hopkins Hospital, Baltimore, MD, 2016 Certifications The American Board of Pediatrics, 2016 American Board of Obesity Medicine, 2023 Memberships and associations: American Academy of Pediatrics Obesity Medicine Association Publications Elsevier pure profile Publications OHSU flame logo in white Oregon Health & Science University is dedicated to improving the health and quality of life for all Oregonians through excellence, innovation and leadership in health care, education and research.",
+          "retrievedAt": "2026-09-07T04:53:13.174Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:54:16.828Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0414": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://cls.la.psu.edu/people/tran-troung/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0414-1",
+          "url": "https://cls.la.psu.edu/people/tran-troung/",
+          "excerpt": "ence News Events Make a Gift Search &hellip; Menu Home About People People Overview CLS Directors Faculty Staff Postdoctoral Fellows Graduate Students Visiting Scholars Affiliates Alumni Research Public Engagement Public Engagement Overview People Bilingualism Matters Newsletters Language Science Activities Linguistic Discrimination Research Repository FAQ's About Bilingualism Matters Links and Other Resources Funding Opportunities Center for Language Science Next in the Speaker Series Center for Language Science Speaker Series: Dissertation Pilot and Summer School Funding Presentations 9:00 a.",
+          "retrievedAt": "2026-09-07T04:53:14.633Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0414-2",
+          "url": "https://cls.la.psu.edu/people/tran-troung/",
+          "excerpt": "Foster Auditorium, 102 Paterno Library Sep 4 Home About People Close People Open People CLS Directors Faculty Postdoctoral Fellows Staff Graduate Students Visiting Scholars Affiliates Alumni Research Public Engagement Close Public Engagement Open Public Engagement Public Engagement Overview People Bilingualism Matters Newsletters Language Science Activities Linguistic Discrimination Research Repository FAQs About Bilingualism Links and Other Resources Funding Opportunities Tran Truong Home People Tran Truong Assistant Teaching Professor tpt5331@psu.",
+          "retrievedAt": "2026-09-07T04:53:14.633Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0414-3",
+          "url": "https://cls.la.psu.edu/people/tran-troung/",
+          "excerpt": "io/elixir/ Biography: Tran Truong is a theoretical morphosyntactician who works on Japanese.",
+          "retrievedAt": "2026-09-07T04:53:14.633Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0414-4",
+          "url": "https://cls.la.psu.edu/people/tran-troung/",
+          "excerpt": "He is broadly interested in the discrepancy between constraints on cognition and constraints on linguistic form, especially in the context of pronouns, honorifics, and kinship terms.",
+          "retrievedAt": "2026-09-07T04:53:14.633Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0414-5",
+          "url": "https://cls.la.psu.edu/people/tran-troung/",
+          "excerpt": "At Penn State, he teaches undergraduate courses on syntax, morphology, historical linguistics, and signed languages, as well as graduate courses on linguistic diversity and human-computer interaction.",
+          "retrievedAt": "2026-09-07T04:53:14.633Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0414-6",
+          "url": "https://cls.la.psu.edu/people/tran-troung/",
+          "excerpt": "He has supervised undergraduate research on syncretism, language and religion, language and politics, and the experiences of signers in medical settings.",
+          "retrievedAt": "2026-09-07T04:53:14.633Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:54:16.828Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0415": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://ag.purdue.edu/directory/ejtran",
         "https://ag.purdue.edu/biochem/tranlabrna/"
       ],
-      "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "evidence": [
+        {
+          "id": "vp-0415-1",
+          "url": "https://ag.purdue.edu/directory/ejtran",
+          "excerpt": "Directory Skip to Main Content facebook X linkedin youtube instagram Contact College of Ag Find Info For Academics Admissions Current Students Athletics About Careers Prospective Students Research and Partnerships Entrepreneurship and Commercialization Apply News President Shop Visit Give Emergency Quick Links Apply News President Shop Visit Give Emergency Search (press Tab to enter search field) Loading Purdue University College of Agriculture Logo --> Navigation After opening, the search field will appear below.",
+          "retrievedAt": "2026-09-07T04:53:15.013Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0415-2",
+          "url": "https://ag.purdue.edu/directory/ejtran",
+          "excerpt": "ok myPurdue University Resources University Resources Purdue Faculty & Staff Purdue Careers Physical Facilities Purdue Directory Campus Map Purdue Events Construction Purdue IT Help Services COA Resources COA Resources Faculty & Staff CoA Directory CoA Events Agricultural Communications Request an AgComm Project Publications & Resources Publications & Resources CoA News and Stories The Education Store Contact Purdue Ag Purdue University College of Agriculture Logo footer --> facebook X linkedin-in youtube instagram Page last modified: January 23, 2025 Purdue Agriculture, 615 Mitch Daniels Blvd.",
+          "retrievedAt": "2026-09-07T04:53:15.013Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0415-3",
+          "url": "https://ag.purdue.edu/directory/ejtran",
+          "excerpt": ", West Lafayette, IN 47907-2053 USA, (765) 494-8392 © The Trustees of Purdue University | Accessibility | An Equal Access/Equal Opportunity University | USDA non-discrimination statement | Integrity Statement | Free Expression | DOE Degree Scorecards | Copyright Complaints | Maintained by Purdue Agricultural Communications Trouble with this page?",
+          "retrievedAt": "2026-09-07T04:53:15.013Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
+      "errors": [
+        "https://ag.purdue.edu/biochem/tranlabrna/: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T04:54:16.828Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0416": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.qc.cuny.edu/academics/economics/faculty-staff/",
         "https://sites.google.com/view/thaobui/home"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0416-1",
+          "url": "https://www.qc.cuny.edu/academics/economics/faculty-staff/",
+          "excerpt": "ts --More-- Parents Admissions Athletics --More-- Apply Calendar Give Directory Search Athletics Library IT Help Desk HR Assist PR Assist Brightspace Email Campus Map CUNYFirst Quick Links Current Students Faculty Staff Email Access CUNYfirst Brightspace Library Give to QC Directory Campus Map Home About QC QC at a Glance Mission History Past Presidents WOWs QC History Highlights Fast Facts College Profile Rankings Accreditation Student Consumer Information News and Media Publications Queens Magazine QView Economic Impact Strategic Plan Press Releases YouTube Channel Big Ideas QC & Reverend Dr.",
+          "retrievedAt": "2026-09-07T04:53:15.569Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0416-2",
+          "url": "https://www.qc.cuny.edu/academics/economics/faculty-staff/",
+          "excerpt": "Legacy Connection Diversity, Equity & Inclusion Office of Compliance and Diversity Events Diversity Week Freedom Summer Anniversary Footsteps of Dr.",
+          "retrievedAt": "2026-09-07T04:53:15.569Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0416-3",
+          "url": "https://www.qc.cuny.edu/academics/economics/faculty-staff/",
+          "excerpt": "Services for Students with Disabilities Institutional Research & Accreditation Institutional Effectiveness About OIE College Profile IPEDS Reports College Rankings and Ratings Data Dashboards Data for Academic Departments Strategic Plan Accreditation Assessment Assessment of Student Learning OIE Assessment Support Academic Program Review Alumni & Giving Alumni & Giving Home Support Queens College Scholarship Support Naming Opportunities Planned Giving Commemorative Gifts Alumni Relations QC Gold (Graduates of the Last Decade) Reunions Alumni Resources Update Your Alumni Information Donate Now!",
+          "retrievedAt": "2026-09-07T04:53:15.569Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0416-4",
+          "url": "https://www.qc.cuny.edu/academics/economics/faculty-staff/",
+          "excerpt": "hildhood Education Secondary Education and Youth Services Social Science Anthropology History School of Information Studies Philosophy Political Science Sociology Urban Studies Business Business & Liberal Arts (BALA) Accounting Economics Risk Management Interdisciplinary Programs Africana Studies Irish Studies Jewish Studies Latin American and Latino Studies SEEK Women and Gender Studies Graduate Studies Centers & Institutes Asian American & Asian Research Institute Barry Commoner Center for Health and the Environment Center for Byzantine & Modern Greek Studies Center for Jewish Studies John D.",
+          "retrievedAt": "2026-09-07T04:53:15.569Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0416-5",
+          "url": "https://www.qc.cuny.edu/academics/economics/faculty-staff/",
+          "excerpt": "ties Sustainability Initiatives Venue Rentals Public Safety Human Resources Human Resources Home Page Forms New Jobs Training and Development Compensation Benefits Policies Information Technology Services ITS Home About Support Home Submit A Ticket Knowledge Base Projects Brightspace Learning Management System Guide for Students Guide for Faculty Institutional Advancement & Alumni Institutional Advancement & Alumni Student Affairs & Enrollment Management Student Affairs & Enrollment Management Student Affairs Dean of Students Enrollment Management CREAR Futuros Research Research Centers John D.",
+          "retrievedAt": "2026-09-07T04:53:15.569Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0416-6",
+          "url": "https://www.qc.cuny.edu/academics/economics/faculty-staff/",
+          "excerpt": "Faculty & Staff Home Academics Major/Minor in Economics Major in Quantitative Economics Majors in Business (BBA) Finance International Business Actuarial Studies Course Electives Minor in Business & Liberal Arts MS in Risk Management BBA Application Advising Student Support COIL Tutoring Scholarships & Awards Honors Courses Economics Senior Theses Research Research by Faculty Seminars People Faculty & Staff Student Life Internships & Development Events Clubs Alumni FAQ FACULTY LEADERSHIP DEPARTMENT CHAIR Head of the Economics Department since 2025 Feliciano, Zadia Professor Follow Education Ph.",
+          "retrievedAt": "2026-09-07T04:53:15.569Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0416-7",
+          "url": "https://www.qc.cuny.edu/academics/economics/faculty-staff/",
+          "excerpt": ", Economics, University of Chicago Research interests International Trade, Foreign Direct Investment, Labor Economics, and Economic Development Contact zadia.",
+          "retrievedAt": "2026-09-07T04:53:15.569Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0416-8",
+          "url": "https://www.qc.cuny.edu/academics/economics/faculty-staff/",
+          "excerpt": "Flushing, NY 11367 MEET THE TEAM FULL-TIME FACULTY Diverse group of scholars from the U.",
+          "retrievedAt": "2026-09-07T04:53:15.569Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0416-9",
+          "url": "https://sites.google.com/view/thaobui/home",
+          "excerpt": "THAO BUI Search this site Embedded Files Skip to main content Skip to navigation THAO BUI Home Research Teaching THAO BUI Home Research Teaching More Home Research Teaching Welcome to my website!",
+          "retrievedAt": "2026-09-07T04:53:15.802Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0416-10",
+          "url": "https://sites.google.com/view/thaobui/home",
+          "excerpt": "I am an Assistant Professor in the Department of Economics at Queens College, The City University of New York (CUNY).",
+          "retrievedAt": "2026-09-07T04:53:15.802Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0416-11",
+          "url": "https://sites.google.com/view/thaobui/home",
+          "excerpt": "Born and raised in Vietnam, I pursued my undergraduate studies in Finland and Switzerland.",
+          "retrievedAt": "2026-09-07T04:53:15.802Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0416-12",
+          "url": "https://sites.google.com/view/thaobui/home",
+          "excerpt": "I received my Master’s degrees in Economics from Ohio University and Louisiana State University and my Ph.",
+          "retrievedAt": "2026-09-07T04:53:15.802Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0416-13",
+          "url": "https://sites.google.com/view/thaobui/home",
+          "excerpt": "My research interests are in the field of Applied Microeconomics, with a particular emphasis on Health Economics and Economics of Education.",
+          "retrievedAt": "2026-09-07T04:53:15.802Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0416-14",
+          "url": "https://sites.google.com/view/thaobui/home",
+          "excerpt": "My research is focused on understanding the effects of public policies related to health and education in various contexts, as well as the long-term effects of prenatal conditions.",
+          "retrievedAt": "2026-09-07T04:53:15.802Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0416-15",
+          "url": "https://sites.google.com/view/thaobui/home",
+          "excerpt": "Contact information: Queens College CUNY Department of Economics 65-30 Kissena Blvd.",
+          "retrievedAt": "2026-09-07T04:53:15.802Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:54:16.828Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0417": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://profiles.rice.edu/faculty/thanh-tran"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://profiles.rice.edu/faculty/thanh-tran: HTTP 406"
+      ],
+      "updatedAt": "2026-09-07T04:54:16.828Z",
+      "nextAction": "Retry fetching Rice University profile or discover alternate official faculty page."
     },
     "vp-0418": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://chem.rutgers.edu/people/teaching-faculty/teaching-faculty-member/1607-le-kim-phuong"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://chem.rutgers.edu/people/teaching-faculty/teaching-faculty-member/1607-le-kim-phuong: fetch failed"
+      ],
+      "updatedAt": "2026-09-07T04:54:16.828Z",
+      "nextAction": "Retry fetching Rutgers University chemistry teaching faculty profile or discover alternate official faculty page."
     },
     "vp-0419": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://sped.sfsu.edu/faculty-and-staff"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0419-1",
+          "url": "https://sped.sfsu.edu/faculty-and-staff",
+          "excerpt": "Faculty and Staff | Department of Special Education Skip to main content SAN FRANCISCO STATE UNIVERSITY | Department of Special Education A–Z Calendar Login Search SF State Search SF State Button SF State This Site Toggle navigation Menu Main navigation About Us Expand Message from the Chair Mission & Guiding Values Why Choose Us?",
+          "retrievedAt": "2026-09-07T04:53:17.006Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0419-2",
+          "url": "https://sped.sfsu.edu/faculty-and-staff",
+          "excerpt": "graduate Programs Master of Arts Teaching Credentials Graduate Certificates Joint Doctorate Intern Credential Students Expand Student Resources Student Teaching Guidelines Master&#039;s Exam Program Handbooks Steps to Graduation (MA degree) Applying for the Award of the Credential People Expand Faculty and Staff Faculty Advising Hours Lecturer Faculty Advisory Committee Research/Projects Expand Project Arise SF Inclusion Project California Deaf Blind Services Project AAC for ALL Contact Us Apply Now Faculty and Staff Get to know the individuals that comprise the Department of Special Education.",
+          "retrievedAt": "2026-09-07T04:53:17.006Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0419-3",
+          "url": "https://sped.sfsu.edu/faculty-and-staff",
+          "excerpt": "Lecturer Faculty Faculty Advising Hours Faculty Amber Friesen Professor Special Education Department Chair afriesen@sfsu.",
+          "retrievedAt": "2026-09-07T04:53:17.006Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0419-4",
+          "url": "https://sped.sfsu.edu/faculty-and-staff",
+          "excerpt": "Friesen&#039;s Full Biography Yvonne Bui Professor, O&M Program Coordinator Orientation & Mobility ybui@sfsu.",
+          "retrievedAt": "2026-09-07T04:53:17.006Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0419-5",
+          "url": "https://sped.sfsu.edu/faculty-and-staff",
+          "excerpt": "Bui&#039;s Full Biography Marijke Devos Faculty Advisor and Lecturer Visual Impairments mxdevos@sfsu.",
+          "retrievedAt": "2026-09-07T04:53:17.006Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0419-6",
+          "url": "https://sped.sfsu.edu/faculty-and-staff",
+          "excerpt": "edu Marijke&#039;s Full Biography Adam Graves Assistant Professor Visual Impairments adamgraves@sfsu.",
+          "retrievedAt": "2026-09-07T04:53:17.006Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0419-7",
+          "url": "https://sped.sfsu.edu/faculty-and-staff",
+          "excerpt": "Graves&#039; Full Biography Mayumi Hagiwara Associate Professor, ESN CalTPA Coordinator Extensive Support Needs mhagiwara@sfsu.",
+          "retrievedAt": "2026-09-07T04:53:17.006Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0419-8",
+          "url": "https://sped.sfsu.edu/faculty-and-staff",
+          "excerpt": "Hagiwara&#039;s Full Biography Maryssa Kucskar Mitsch Associate Professor, ECSE Program Coordinator, SPED Minor Program Coordinator Early Childhood Special Education mmitsch@sfsu.",
+          "retrievedAt": "2026-09-07T04:53:17.006Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:54:16.828Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0420": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://cob.sfsu.edu/directory"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0420-1",
+          "url": "https://cob.sfsu.edu/directory",
+          "excerpt": "SF State Button SF State This Site Toggle navigation Menu Main navigation About Us Expand Home Explore the College Meet Our Faculty LFCoB Featured Alumni Business Advisory Council Programs Admissions Apply Academic Departments Expand All Academic Departments Accounting Decision Sciences Economics Finance Hospitality, Tourism & Event Management Information Systems International Business Labor and Employment Studies Program Management Marketing Initiatives & Centers Student Resources Contact Us Donate Directory Accounting Role Name Department Email Phone Position Faculty Chun-Chia Amy Chang, Ph.",
+          "retrievedAt": "2026-09-07T04:53:18.824Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0420-2",
+          "url": "https://cob.sfsu.edu/directory",
+          "excerpt": "edu (415) 338-1204 Department Chair, Associate Professor Faculty Katherine Hetherington Accounting kkmh@sfsu.",
+          "retrievedAt": "2026-09-07T04:53:18.824Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0420-3",
+          "url": "https://cob.sfsu.edu/directory",
+          "excerpt": "edu (415) 338-6391 Associate Professor Staff Ashley Wolff Accounting, Marketing awolff@sfsu.",
+          "retrievedAt": "2026-09-07T04:53:18.824Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0420-4",
+          "url": "https://cob.sfsu.edu/directory",
+          "excerpt": "edu (415) 338-1756 Assistant Professor Business Communications Role Name Department Email Phone Position Faculty Jessica Belluomini Business Communications belluominij@sfsu.",
+          "retrievedAt": "2026-09-07T04:53:18.824Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0420-5",
+          "url": "https://cob.sfsu.edu/directory",
+          "excerpt": "edu Lecturer Faculty Faculty Antoine De Fridman Business Communications anto108@sfsu.",
+          "retrievedAt": "2026-09-07T04:53:18.824Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0420-6",
+          "url": "https://cob.sfsu.edu/directory",
+          "excerpt": "edu Lecturer Faculty Retired Faculty Susana Leong Business Communications leong@sfsu.",
+          "retrievedAt": "2026-09-07T04:53:18.824Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0420-7",
+          "url": "https://cob.sfsu.edu/directory",
+          "excerpt": "edu Lecturer Faculty Faculty Alexandria Leyton Business Communications aleyton@mail.",
+          "retrievedAt": "2026-09-07T04:53:18.824Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0420-8",
+          "url": "https://cob.sfsu.edu/directory",
+          "excerpt": "edu Lecturer Faculty Staff Time Tantay Ubungen Business Communications, Finance, International Business time@sfsu.",
+          "retrievedAt": "2026-09-07T04:53:18.824Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:54:16.828Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0421": {
       "overview": "pending",
