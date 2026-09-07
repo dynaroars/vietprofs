@@ -3482,7 +3482,8 @@
         "vp-1472",
         "vp-1473"
       ],
-      "status": "pending"
+      "status": "in_progress",
+      "startedAt": "2026-09-07T19:56:31.804Z"
     },
     {
       "number": 74,
@@ -84059,204 +84060,618 @@
       "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1454": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.kent.ac.uk/centre-for-the-study-of-higher-education/people/4100/phan-ngoc-quynh-anh"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.kent.ac.uk/centre-for-the-study-of-higher-education/people/4100/phan-ngoc-quynh-anh: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:57:33.020Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1455": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://shbie.ubd.edu.bn/academic-staff/prof-dr-phan-le-ha/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://shbie.ubd.edu.bn/academic-staff/prof-dr-phan-le-ha/: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:57:33.020Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1456": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://staff-profiles.cqu.edu.au/home/view/25390"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1456-1",
+          "url": "https://staff-profiles.cqu.edu.au/home/view/25390",
+          "excerpt": "CQUni Profiles Home Search Find an Expert Sign In Home Search Find an Expert Sign In Sorry, we couldn't find this Staff Profile The staff profile you are trying to view does not exist.",
+          "retrievedAt": "2026-09-07T19:56:37.222Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1456-2",
+          "url": "https://staff-profiles.cqu.edu.au/home/view/25390",
+          "excerpt": "Let's get you back on track TAKE ME HOME Within Australia 13 27 86 Outside Australia +61 7 4930 9000 MORE CONTACTS CQUniversity acknowledges Traditional Owners and Custodians and pays respect to the Elders of all First Nations peoples of Australia.",
+          "retrievedAt": "2026-09-07T19:56:37.222Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:57:33.020Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1457": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://profiles.auckland.ac.nz/l-kieu"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1457-1",
+          "url": "https://profiles.auckland.ac.nz/l-kieu",
+          "excerpt": "Discovery Browser Not Supported Your browser (Internet Explorer or other legacy browser) is not supported by this application.",
+          "retrievedAt": "2026-09-07T19:56:38.237Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:57:33.020Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1458": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://asianstudies.unc.edu/person/huy-phung/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://asianstudies.unc.edu/person/huy-phung/: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:57:33.020Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1459": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://people.wgtn.ac.nz/bach.nguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1459-1",
+          "url": "https://people.wgtn.ac.nz/bach.nguyen",
+          "excerpt": "Discovery Browser Not Supported Your browser (Internet Explorer or other legacy browser) is not supported by this application.",
+          "retrievedAt": "2026-09-07T19:56:39.974Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:57:33.020Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1460": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.edgehill.ac.uk/person/vinh-thong-ta/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.edgehill.ac.uk/person/vinh-thong-ta/: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:57:33.020Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1461": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.univ-orleans.fr/lifo/membres/dao/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1461-1",
+          "url": "https://www.univ-orleans.fr/lifo/membres/dao/",
+          "excerpt": "Thi-Bich-Hanh Dao Thi-Bich-Hanh Dao Home Research Publication Teaching Docteur en Informatique Professeur des universit&eacute;s - Full Professor Laboratoire d’Informatique Fondamentale d’Orléans Université d’Orléans LIFO, Bâtiment 3IA, Rue Léonard de Vinci, BP 6759 F-45067 Orléans Tél : +33 (0)2 38 49 47 22 Fax : +33 (0)2 38 41 71 37 E-mail : thi-bich-hanh POINT dao [a t] univ-orleans.",
+          "retrievedAt": "2026-09-07T19:56:43.757Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1461-2",
+          "url": "https://www.univ-orleans.fr/lifo/membres/dao/",
+          "excerpt": "fr Je suis professeur des universit&eacute;s au D&eacute;partement Informatique , membre de l’équipe Contraintes et Apprentissage du LIFO , Universit&eacute; d'Orl&eacute;ans.",
+          "retrievedAt": "2026-09-07T19:56:43.757Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1461-3",
+          "url": "https://www.univ-orleans.fr/lifo/membres/dao/",
+          "excerpt": "Mes travaux de recherche actuels sont sur la programmation par contraintes, l'apprentissage automatique et la fouille de donn&eacute;es, et l'int&eacute;gration entre ces deux domaines.",
+          "retrievedAt": "2026-09-07T19:56:43.757Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1461-4",
+          "url": "https://www.univ-orleans.fr/lifo/membres/dao/",
+          "excerpt": "pour la fouille de donn&eacute;es int&eacute;gration de connaissances dans des m&eacute;thodes d'apprentissage et de fouille de donn&eacute;es explicabilit&eacute; des m&eacute;thodes d'apprentissage Mes autres activit&eacute;s : Directrice des &eacute;tudes du M2 Informatique ARIAS et responsable du Master Informatique Repr&eacute;sentante du LIFO &agrave; l'&eacute;cole doctorale MIPTIS Co-animatrice du GT CAVIAR Contraintes et Apprentissage du GDR RADIA (Raisonnement, Apprentissage et D&eacute;cision en Intelligence Artificielle) I am an full professor at the Department of Computer Science .",
+          "retrievedAt": "2026-09-07T19:56:43.757Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1461-5",
+          "url": "https://www.univ-orleans.fr/lifo/membres/dao/",
+          "excerpt": "I am a member of the Constraints and Machine Learning team at LIFO , University of Orl&eacute;ans.",
+          "retrievedAt": "2026-09-07T19:56:43.757Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1461-6",
+          "url": "https://www.univ-orleans.fr/lifo/membres/dao/",
+          "excerpt": "My research interests are in Constraint Programming, Machine Learning and Data Mining and the integration of these fields.",
+          "retrievedAt": "2026-09-07T19:56:43.757Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:57:33.020Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1462": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://etis.ensea.fr/membres/ngoc-son-vu/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://etis.ensea.fr/membres/ngoc-son-vu/: fetch failed"
+      ],
+      "updatedAt": "2026-09-07T19:57:33.020Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1463": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.centralesupelec.fr/fr/bich-lien-doan"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.centralesupelec.fr/fr/bich-lien-doan: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:57:33.020Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1464": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://pages.lip6.fr/Binh-Minh.Bui-Xuan/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://pages.lip6.fr/Binh-Minh.Bui-Xuan/: fetch failed"
+      ],
+      "updatedAt": "2026-09-07T19:57:33.020Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1465": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://ung.edu/degrees/faculty/thinh-kieu.php"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://ung.edu/degrees/faculty/thinh-kieu.php: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:57:33.020Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1466": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://engineering.wayne.edu/profile/ez5298"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://engineering.wayne.edu/profile/ez5298: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:57:33.020Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1467": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.ismo.universite-paris-saclay.fr/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1467-1",
+          "url": "https://www.ismo.universite-paris-saclay.fr/",
+          "excerpt": "iversité Côté LAB Réservations (vpn) Intranet (vpn) Présentation Historique des actus Espace Doctorant·es Accès Annuaire CoNRS section 04 RECHERCHE Publications Thèses en cours Thématiques Lumière-matière Particules-matière Basse dimension Approches innovantes Défis sociétaux Equipes Scientifiques DIRAM NANOBIO NANOPHYS SIM2D SYSIPHE SYSTEMAE Equipes Supports Électronique Études-mécaniques Informatique Instrumentation EMPLOIS Stages Thèses Post-docs/CDD PLATEFORMES DTPI CPBM CPC SEMFIB Institut des Sciences Moléculaires d'Orsay Unité mixte CNRS/Université Paris-Saclay Évènements, informations .",
+          "retrievedAt": "2026-09-07T19:56:59.836Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1467-2",
+          "url": "https://www.ismo.universite-paris-saclay.fr/",
+          "excerpt": "pment of innovative radiotherapy techniques Lundi 26 octobre à 10 h Amphithéâtre de l&rsquo;ISMO Lire la suite septembre 10 2026 Soutenance de thèse de My Dang Photoinduced Electron Transfer and Charge Accumulation in Polyoxometalate-Based Donor-Acceptor Assemblies for Artificial Photosynthesis 10 septembre à 14h Amphithéâtre de l&rsquo;ISMO Lire la suite 23 septembre 2026 PhD defense of Francisco Matos Super-resolved microscopy by temporal encoding of single-molecule localization Mercredi 23 septembre Amphithéâtre de l&rsquo;ISMO Lire la suite septembre 30 2026 Soutenance de thèse de Mariah S.",
+          "retrievedAt": "2026-09-07T19:56:59.836Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1467-3",
+          "url": "https://www.ismo.universite-paris-saclay.fr/",
+          "excerpt": "sshauer Mercredi 15 juillet à 11h Amphithéâtre de l&rsquo;ISMO Lire la suite 8 octobre 2026 Optique et Photonique : Avancées sur Les matÉriaux (OPALE) Journée thématique de la communauté du plateau de Saclay de l&rsquo;Institut Intégratif des Matériaux (2IM) Jeudi 8 octobre 2026 à l&rsquo;IOGS, bât 503 à Orsay Les inscriptions sont ouvertes Lire la suite 7 octobre 2026 Journées PyMoDAQ Les 7, 8 et 9 octobre 2026, la communauté des utilisateurs et des développeurs autour du logiciel PyMoDAQ, « Modular Data Acquisition with Python » se retrouvera une nouvelle fois pour une édition à l&rsquo;ISMO.",
+          "retrievedAt": "2026-09-07T19:56:59.836Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1467-4",
+          "url": "https://www.ismo.universite-paris-saclay.fr/",
+          "excerpt": "z Leon Soutenance de thèse de Jesus Alfredo Godinez Leon 20 juillet à 14h Amphithéâtre de l&rsquo;ISMO Lire la suite juin 23 2026 Addressing the out-of-equilibrium dynamics of nano-objects with plasmon-enhanced spectroscopy Aurelian Loirette-Pelous Mardi 23 juin, 11h Amphithéâtre de l&rsquo;ISMO Lire la suite juin 2 2026 Soutenance de thèse d&rsquo;Alice Guillaume-Manca Alice Guillaume-Manca Institut de Biologie de l&rsquo;ENS &#8211; 46 rue d&rsquo;Ulm Salle Favart Lire la suite 19 mai 2026 Silver Nanoclusters: From Molecular Photophysics to Non-Invasive Strategies for Caries Arrest Gustavo A.",
+          "retrievedAt": "2026-09-07T19:56:59.836Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1467-5",
+          "url": "https://www.ismo.universite-paris-saclay.fr/",
+          "excerpt": "Pino Mardi 19 mai à 11h ISMO Amphitheater Lire la suite 9 avril 2026 SYMPOSIUM « Molecules in Matrices » en l&rsquo;honneur de la carrière du Dr.",
+          "retrievedAt": "2026-09-07T19:56:59.836Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1467-6",
+          "url": "https://www.ismo.universite-paris-saclay.fr/",
+          "excerpt": "utions by Vibrational Spectroscopy in the CH/CD and OH Stretching Regions Ke Lin Mardi 7 avril, 11h Amphithéâtre de l&rsquo;ISMO Lire la suite 24 mars 2026 Characterization of molecular aggregates in jets using mass-resolved laser spectroscopy Fernando Torres Hernandez Mardi 24 mars, 11h Amphithéâtre de l&rsquo;ISMO Lire la suite mars 12 2026 Photoemission Orbital Tomography – An Overview Hans Kirchner Jeudi 12 mars à 14h Amphithéâtre de l&rsquo;ISMO Lire la suite février 17 2026 Formation and transfer of HCl in a macromolecular noncovalent complex: does the roaming atom mechanism play a role ?",
+          "retrievedAt": "2026-09-07T19:56:59.836Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1467-7",
+          "url": "https://www.ismo.universite-paris-saclay.fr/",
+          "excerpt": "Mardi 17 février, 11h Amphithéâtre de l&rsquo;ISMO Lire la suite 10 février 2026 Design and synthesis of composite nanomaterials Florian Aubrit Mardi 10 février à 11h Amphithéâtre de l&rsquo;ISMO Lire la suite 8 juin 2026 27ème édition du Forum des Microscopies à Sondes Locales Ce forum fédère la communauté francophone des utilisateurs de microscopies à champ proche (AFM, STM, SNOM et techniques dérivées) Il aura lieu du 8 au 12 juin 2026 au Domaine de Saint-Paul à Saint-Rémy-lès-Chevreuse.",
+          "retrievedAt": "2026-09-07T19:56:59.836Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1467-8",
+          "url": "https://www.ismo.universite-paris-saclay.fr/",
+          "excerpt": "systèmes moléculaires : du laboratoire aux environnements extrêmes Léo Lavy Mardi 13 janvier, 11 h Amphitheâtre de l&rsquo;ISMO Lire la suite décembre 12 2025 Soutenance de thèse de Chloé Magne Chloé Magne Vendredi 12 décembre à 14h I2BC, campus CNRS- Gif/Yvette B24, salle du conseil (3ème étage) Lire la suite décembre 12 2025 Soutenance de thèse de Yimin GUAN Yimin GUAN Vendredi 12 décembre à 14h Amphithéâtre de l&rsquo;ISMO Lire la suite 5 décembre 2025 Coupled Resonances to Explain Asymmetric Lineshapes in Photoelectron Spectra, with a Bonus Feature on a new Electronic Structure Model Prof.",
+          "retrievedAt": "2026-09-07T19:56:59.836Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:57:33.020Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1468": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://nrc.canada.ca/en/corporate/contact-us/nrc-directory-people/minh-tan-ton-that"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://nrc.canada.ca/en/corporate/contact-us/nrc-directory-people/minh-tan-ton-that: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:57:33.020Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1469": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://ait.ac.th/people/faculty/prof-nguyen-thi-kim-oanh/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1469-1",
+          "url": "https://ait.ac.th/people/faculty/prof-nguyen-thi-kim-oanh/",
+          "excerpt": "uestions Research Research Overview Research Themes AIT Publications Research Projects Know Our Researcher Centers Faculties Campus life Housing Dining Health and Wellness Cultural diversity Athletics Career development Facilities AIT Conference Center Virtual tour Key thematic areas Climate change Smart Communities Food-Energy Water Infrastructure Technology, Policy &#038; Society Sustainability Partners News Events Work at AIT BOI Science & Technology Park Intranet Students Contact Giving Alumni Emergency contacts & Covid-19 management Home &gt; Meet our faculty &gt; Nguyen Thi Kim Oanh Prof.",
+          "retrievedAt": "2026-09-07T19:57:02.744Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1469-2",
+          "url": "https://ait.ac.th/people/faculty/prof-nguyen-thi-kim-oanh/",
+          "excerpt": "Nguyen Thi Kim Oanh Position Distinguished Emeritus Professor Director Unit Environmental Engineering and Management, Department of Water Resources and Environmental Engineering, Air Quality Nexus Center Contact Info (+66-2)524 5641 kimoanh@ait.",
+          "retrievedAt": "2026-09-07T19:57:02.744Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1469-3",
+          "url": "https://ait.ac.th/people/faculty/prof-nguyen-thi-kim-oanh/",
+          "excerpt": "th Download full CV Media Links Personal website PROFILE EDUCATIONAL BACKGROUND RESEARCH INTERESTS TEACHING SELECTED PUBLICATIONS ON GOING AND COMPLETED PROJECTS AWARDS AND HONORS PROFESSIONAL AFFILIATIONS RESEARCH KEYWORDS Prof.",
+          "retrievedAt": "2026-09-07T19:57:02.744Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1469-4",
+          "url": "https://ait.ac.th/people/faculty/prof-nguyen-thi-kim-oanh/",
+          "excerpt": "Kim Oanh is the Distinguished Professor of the Environmental Engineering and Management Program at the Asian Institute of Technology (AIT), Thailand.",
+          "retrievedAt": "2026-09-07T19:57:02.744Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1469-5",
+          "url": "https://ait.ac.th/people/faculty/prof-nguyen-thi-kim-oanh/",
+          "excerpt": "She is also the founding Director of Center for Nexus of Air Quality, Health, Ecosystem, and Climate at AIT.",
+          "retrievedAt": "2026-09-07T19:57:02.744Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1469-6",
+          "url": "https://ait.ac.th/people/faculty/prof-nguyen-thi-kim-oanh/",
+          "excerpt": "She has over 35 years of working experience in research, education, consultancy, and capacity building and is internationally recognized for her work on air pollution and climate in Asia with a focus on Southeast Asia.",
+          "retrievedAt": "2026-09-07T19:57:02.744Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1469-7",
+          "url": "https://ait.ac.th/people/faculty/prof-nguyen-thi-kim-oanh/",
+          "excerpt": "She spends untiring efforts to provide a better characterization of air pollution issues in Asian developing countries through field measurements, emission inventory, and modeling studies at urban, national, and regional scales.",
+          "retrievedAt": "2026-09-07T19:57:02.744Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1469-8",
+          "url": "https://ait.ac.th/people/faculty/prof-nguyen-thi-kim-oanh/",
+          "excerpt": "), 130+ international peer-reviewed scientific papers, 45+ book chapters, and 60+ important development reports.",
+          "retrievedAt": "2026-09-07T19:57:02.744Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:57:33.020Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1470": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://professeurs.uqam.ca/professeur/pham.thi_thanh_hien/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1470-1",
+          "url": "https://professeurs.uqam.ca/professeur/pham.thi_thanh_hien/",
+          "excerpt": "QAM Page d’accueil de l’UQAM Étudier à l’UQAM Bottin du personnel Plan du campus Bibliothèques Nous joindre Répertoire des professeures et professeurs UQAM Répertoire des professeures et professeurs Répertoire des professeures et professeurs Chercher par nom ou par expertise Soumettre la recherche Chercher par nom ou par expertise Soumettre la recherche Liste des professeures et professeurs par départements et écoles Mettre à jour votre fiche Thi Thanh Hien Pham Thi Thanh Hien Pham Professeure Thi Thanh Hien Pham Professeure Unité : Département d'études urbaines et touristiques Courriel : pham.",
+          "retrievedAt": "2026-09-07T19:57:04.427Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1470-2",
+          "url": "https://professeurs.uqam.ca/professeur/pham.thi_thanh_hien/",
+          "excerpt": "ca Téléphone : (514) 987-3000 poste 5540 Langues : Français, Anglais, Vietnamien Domaines d'expertise Accessibilité spatiale Analyse spatiale Équité environnementale Espaces publics Études urbaines Petites et moyennes villes Qualité de vie urbaine Systèmes d'information géographique (SIG) Télédétection Urbanisation frontalière Liens d'intérêt ORCID Academia.",
+          "retrievedAt": "2026-09-07T19:57:04.427Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1470-3",
+          "url": "https://professeurs.uqam.ca/professeur/pham.thi_thanh_hien/",
+          "excerpt": "edu Share Research Google Scholar Research Gate Page personnelle Informations générales Cheminement académique Post-doc (2012), Géographie, McGill University Post-doc (2011), Études urbaines, INRS-UCS Doctorat (2009), Géomatique appliquée, Univ.",
+          "retrievedAt": "2026-09-07T19:57:04.427Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1470-4",
+          "url": "https://professeurs.uqam.ca/professeur/pham.thi_thanh_hien/",
+          "excerpt": "Unités de recherche Chaire de recherche du Canada sur les petites et moyennes villes en transformation Institut des sciences de l'environnement de l'UQAM (ISE) Villes Régions Monde, Réseau interuniversitaire d'études urbaines et régionales (VRM) Projets de recherche et/ou de recherche-création en cours Small cities, big regional impacts : Frontier urbanization in northern upland Vietnam, 2015-2020.",
+          "retrievedAt": "2026-09-07T19:57:04.427Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1470-5",
+          "url": "https://professeurs.uqam.ca/professeur/pham.thi_thanh_hien/",
+          "excerpt": "Contactez-moi si vous êtes intéressé à faire un projet de maitrise ou doctorat sur ce sujet.",
+          "retrievedAt": "2026-09-07T19:57:04.427Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1470-6",
+          "url": "https://professeurs.uqam.ca/professeur/pham.thi_thanh_hien/",
+          "excerpt": "Examiner la distribution spatiale et la typologie des ruelles vertes à Montréal Contactez-moi si vous êtes intéressé à faire un projet de maitrise sur ce sujet.",
+          "retrievedAt": "2026-09-07T19:57:04.427Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1470-7",
+          "url": "https://professeurs.uqam.ca/professeur/pham.thi_thanh_hien/",
+          "excerpt": "Évaluation de l'agriculture urbaine comme infrastructure verte de résilience individuelle et collective face aux changements environnementaux et sociaux.",
+          "retrievedAt": "2026-09-07T19:57:04.427Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1470-8",
+          "url": "https://professeurs.uqam.ca/professeur/pham.thi_thanh_hien/",
+          "excerpt": "Co-chercheure avec Eric Duchemin (UQAM) et Nathan McClinctock (Portland State University)).",
+          "retrievedAt": "2026-09-07T19:57:04.427Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:57:33.020Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1471": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://frise.inrae.fr/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1471-1",
+          "url": "https://frise.inrae.fr/",
+          "excerpt": "es METFRI et ENERFRI Collaborations et partenariats Projets de recherche Projets en cours Projets terminés Production scientifique Publications Thèses & Post-doctorats HDR Données partagées Outils & modèles Toutes les rubriques L&#039;unité Nos infrastructures Organigramme Fiche FRISE à télécharger Recherche Axes de recherche Les équipes METFRI et ENERFRI Recherche Froid Aliment Recherche Froid Energie Collaborations et partenariats Projets de recherche Projets en cours Projets terminés Production scientifique Publications Thèses & Post-doctorats HDR Données partagées Outils & modèles Accueil .",
+          "retrievedAt": "2026-09-07T19:57:05.769Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1471-2",
+          "url": "https://frise.inrae.fr/",
+          "excerpt": "Unité de recherche FRISE L&rsquo;unit&eacute; de recherche FRISE, G&eacute;nie des Proc&eacute;d&eacute;s FRIgorifiques pour la S&eacute;curit&eacute; alimentaire et l&rsquo;Environnement, d&eacute;veloppe des travaux de recherche dans le domaine frigorifique de la production de froid &agrave; la conservation des aliments.",
+          "retrievedAt": "2026-09-07T19:57:05.769Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1471-3",
+          "url": "https://frise.inrae.fr/",
+          "excerpt": "Les travaux portent &agrave; la fois sur les technologies du froid et les &eacute;quipements frigorifiques de la cha&icirc;ne du froid (tunnel, chambre de stockage, caisse de camion, meuble frigorifique, r&eacute;frig&eacute;rateur domestique&hellip;).",
+          "retrievedAt": "2026-09-07T19:57:05.769Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1471-4",
+          "url": "https://frise.inrae.fr/",
+          "excerpt": "Liste des actualités Toutes les actualités article 21 avril 2026 Rédaction : FRISE Présentation du projet SUPERSHIELD au salon CFIA Le superchilling est une technique de conservation alimentaire située entre la réfrigération et la congélation.",
+          "retrievedAt": "2026-09-07T19:57:05.769Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1471-5",
+          "url": "https://frise.inrae.fr/",
+          "excerpt": "Graciela Alvarez et Denis Leducq ont présenté le 10 mars 2026 au salon CFIA à Rennes les premiers résultats du projet SUPERSHIELD.",
+          "retrievedAt": "2026-09-07T19:57:05.769Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1471-6",
+          "url": "https://frise.inrae.fr/",
+          "excerpt": "En savoir plus Soutenance de thèse de Damien Thomas le 16 décembre 2025 En savoir plus Damien Thomas a soutenu sa thèse intitulée &quot;Dosage en eau pour le refroidissement évaporatif : Étude du bouchage d&#039;échangeur de chaleur et de la mouillabilité des films d&#039;eau &quot; le 16 décembre 2025 à 9h à Sorbonne Université, campus Jussieu, tour 55/65 salle 401.",
+          "retrievedAt": "2026-09-07T19:57:05.769Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1471-7",
+          "url": "https://frise.inrae.fr/",
+          "excerpt": "Soutenance de thèse de Maria Aurely Yedmel le 03 décembre 2025 En savoir plus Maria Aurely Yedmel a brillament soutenu sa thèse intitulée &quot;Caractérisation d’un dispositif de stockage de froid à thermosiphon intégré dans des systèmes de réfrigération à compression de vapeur : application aux meubles de vente et à la gestion de la demande&quot; le 03 décembre 2025 à INRAE Antony.",
+          "retrievedAt": "2026-09-07T19:57:05.769Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1471-8",
+          "url": "https://frise.inrae.fr/",
+          "excerpt": "Soutenance de thèse de Dihia Aguenihanai le 09 avril 2025 En savoir plus Dihia Aguenihanai a brillament soutenu sa thèse intitulée &quot;Etude pour la maîtrise des températures en régime instationnaire des aliments conditionnés en palette qui dégagent de la chaleur tout au long de la chaîne logistique : application aux fromages&quot; le 09 avril 2025 à INRAE Antony.",
+          "retrievedAt": "2026-09-07T19:57:05.769Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:57:33.020Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1472": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.chapman.edu/our-faculty/uyen-phan.aspx"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1472-1",
+          "url": "https://www.chapman.edu/our-faculty/uyen-phan.aspx",
+          "excerpt": "Thuy Xuan Uyen Phan | Chapman University Skip to main content Section Menu Toggle Section Menu Menu Menu Chapman University Logo Close Off-Canvas Menu Our Faculty Chapman Menu Our Faculty Our Faculty Our Faculty Tenured and Tenure-Track Faculty Faculty By Rank Fellows Mona Shadia Sam Harirforoosh Nicole Rangel Jacob Bohrod Dr.",
+          "retrievedAt": "2026-09-07T19:57:06.543Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1472-2",
+          "url": "https://www.chapman.edu/our-faculty/uyen-phan.aspx",
+          "excerpt": "Skye Niles Angelina Hicks Kirsten Moore-Sheeley Cole Cook Eva Chengyuan Marya Mazor Dr.",
+          "retrievedAt": "2026-09-07T19:57:06.543Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1472-3",
+          "url": "https://www.chapman.edu/our-faculty/uyen-phan.aspx",
+          "excerpt": "David Erkens rebecca gold allison fisher Tom Provost Raj Mitra Miki Hayashi Sunrise Changala Richard Harris Marisa S.",
+          "retrievedAt": "2026-09-07T19:57:06.543Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1472-4",
+          "url": "https://www.chapman.edu/our-faculty/uyen-phan.aspx",
+          "excerpt": "Cianciarulo Kaitlin Peterson Kenneth Lee Vincent Monaco Benjamin Tremblay-Auger Dennis Lam Carrie Nocella Minju Kim Jeanne Behling Faythe Gutierrez Dr.",
+          "retrievedAt": "2026-09-07T19:57:06.543Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1472-5",
+          "url": "https://www.chapman.edu/our-faculty/uyen-phan.aspx",
+          "excerpt": "Jessica Kim-Gina Christine Araoka Evangeliya Delizonas Robert MacNeil Brian Park Dr.",
+          "retrievedAt": "2026-09-07T19:57:06.543Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1472-6",
+          "url": "https://www.chapman.edu/our-faculty/uyen-phan.aspx",
+          "excerpt": "ts Events Escalette Permanent Collection of Art Guggenheim Gallery Hilbert Museum of California Art Musco Center for the Arts Campus Life Campus Life Overview Athletics Bookstore and Gift Shop Events Fish Interfaith Center Church Relations Health and Wellness Housing Student Life Research Research Overview Sponsored Projects Services Research Integrity Institutes and Centers Center for Undergraduate Excellence Industry Alliances and Commercialization Graduate Education Support Support Chapman Overview Inspire Campaign Give to Chapman Areas of Giving Donor Communities Get Involved Contact Us Dr.",
+          "retrievedAt": "2026-09-07T19:57:06.543Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1472-7",
+          "url": "https://www.chapman.edu/our-faculty/uyen-phan.aspx",
+          "excerpt": "Thuy Xuan Uyen Phan Assistant Professor Food Science, Schmid College of Science and Technology Media Contact » Lecture/Speaker Requests » Office Location: Keck Center for Science and Engineering 154 Email: uphan@chapman.",
+          "retrievedAt": "2026-09-07T19:57:06.543Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1472-8",
+          "url": "https://www.chapman.edu/our-faculty/uyen-phan.aspx",
+          "excerpt": "edu National Cheng Kung University, Master of Science Kansas State University, Ph.",
+          "retrievedAt": "2026-09-07T19:57:06.543Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:57:33.020Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1473": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://lam-nguyen.de/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1473-1",
+          "url": "https://lam-nguyen.de/",
+          "excerpt": "Lam Nguyen Fourier Transform Microwave Spectroscopy HOME Publications Cover art 2022-now 2021 2020 2019-2009 ERC-LACRIDO PARIS-FTMW Big cavity Microwavers IPAC IUF News Awards About me Ha Vinh Lam Nguyen Fourier Transform Microwave Spectroscopy Lam Nguyen I'm a microwaver.",
+          "retrievedAt": "2026-09-07T19:57:07.373Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1473-2",
+          "url": "https://lam-nguyen.de/",
+          "excerpt": "Associate professor at Université Paris-Est Créteil (UPEC) Researcher at Laboratoire Interuniversitaire des Systèmes Atmosphériques (LISA) Junior member of the Institut Universitaire de France (IUF) Leader of the Spectroscopie & Télédétection (SpecAt) group Laboratoire Interuniversitaire des Systèmes Atmosphériques 61 avenue du Générale de Gaulle 94010 Créteil, France +33 1 82 39 2044 lam.",
+          "retrievedAt": "2026-09-07T19:57:07.373Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:57:33.020Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1474": {
       "overview": "pending",
