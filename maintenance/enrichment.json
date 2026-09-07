@@ -3185,7 +3185,8 @@
         "vp-1252",
         "vp-1253"
       ],
-      "status": "pending"
+      "status": "in_progress",
+      "startedAt": "2026-09-07T19:36:39.189Z"
     },
     {
       "number": 63,
@@ -75305,208 +75306,539 @@
       "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1234": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://findanexpert.unimelb.edu.au/profile/773335-kim-anh-le-cao"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:37:33.519Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1235": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.flinders.edu.au/people/vikhanh.truong"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1235-1",
+          "url": "https://www.flinders.edu.au/people/vikhanh.truong",
+          "excerpt": "Dr Vi Khanh Truong - Flinders University &#xE316; Staff Students Library Study Study areas Business Computer science and information technology Creative arts and media Criminology Defence and national security Education Engineering Environment Health Humanities and social sciences International relations and political science Languages Law Medicine Nursing and midwifery Psychology Science Social work Sport I am.",
+          "retrievedAt": "2026-09-07T19:36:40.718Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1235-2",
+          "url": "https://www.flinders.edu.au/people/vikhanh.truong",
+          "excerpt": "igenous student an international student a parent a school counsellor/teacher Explore Admission pathways Apply Contact us Study International study areas Business Creative arts Education Engineering Environment Government Health sciences Humanities Information technology Law Medicine Nursing Psychology Public health Science Social sciences Social work International websites China Vietnam Explore Flinders Apply Contact us Research Research that matters Our research impact Our researchers Institutes & centres Industry Partnerships Collaborate with us Study with us Higher degrees by research I am.",
+          "retrievedAt": "2026-09-07T19:36:40.718Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1235-3",
+          "url": "https://www.flinders.edu.au/people/vikhanh.truong",
+          "excerpt": "a potential collaborator a researcher a potential research student a current research student Research Research that matters Our research impact Our researchers Institutes & centres Industry Partnerships Collaborate with us Study with us Higher degrees by research I am.",
+          "retrievedAt": "2026-09-07T19:36:40.718Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1235-4",
+          "url": "https://www.flinders.edu.au/people/vikhanh.truong",
+          "excerpt": "a potential collaborator a researcher a potential research student a current research student Engage I want to.",
+          "retrievedAt": "2026-09-07T19:36:40.718Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1235-5",
+          "url": "https://www.flinders.edu.au/people/vikhanh.truong",
+          "excerpt": "Engage with us Connect with students Locate a clinic Book a campus venue Find a tender Give to Flinders Work at Flinders Participate in a research study See what&#39;s on Shop Flinders merchandise Register as a contractor Explore Indigenous education Related links Flinders New Venture Institute Alumni Health2Go Flinders University Museum of Art Flinders One Sport and Fitness Business and government Community Culture International Alumni I want to.",
+          "retrievedAt": "2026-09-07T19:36:40.718Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1235-6",
+          "url": "https://www.flinders.edu.au/people/vikhanh.truong",
+          "excerpt": "Join an Alumni network Establish an Alumni network Share a memory Access career services Order a transcript Give to Flinders Update my details Find a classmate Shop Flinders merchandise Our alumni Benefits and services Get involved Stay connected Giving Donate today Donate online Donate via post (PDF) Donate via phone +61 8 8201 3721 Ways to give Donate to the greatest need Give in memory or celebration.",
+          "retrievedAt": "2026-09-07T19:36:40.718Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1235-7",
+          "url": "https://www.flinders.edu.au/people/vikhanh.truong",
+          "excerpt": "Join staff workplace giving Get involved Donate to Why give Our donors About Our strategic plan Agenda 2035 Flinders Village Festival Plaza Governance and leadership University Council Chancellor Vice-Chancellor Our organisation Colleges Library Professional services Staff directory Sustainability at Flinders Thriving @ Flinders Impact rankings Campus and locations Bedford Park Tonsley City Campus Flinders in the NT Health and Medical Research Building Fast facts History Structure Contact us Staff Students Library I am a Domestic Student I am an International Student You have no saved courses.",
+          "retrievedAt": "2026-09-07T19:36:40.718Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1235-8",
+          "url": "https://www.flinders.edu.au/people/vikhanh.truong",
+          "excerpt": "t a citizen of Australia or New Zealand Switch to International I am a Domestic Student I am an Australian or New Zealand Citizen I am an Australian Permanent Resident (including Humanitarian Visa holders) Switch to Domestic Quick links &#xE867; Current students Staff Library Flinders Online Flinders dashboard (Okta) Ask Flinders Parking Campus map: Bedford Park Staff directory Jobs at Flinders Shop Flinders merchandise &#xE8B6; Toggle navigation &#xE5CD; Dr Vi Khanh Truong ARC Future Fellow College of Medicine and Public Health Profile Research Teaching Media expertise +61 8 7221 8553 vikhanh.",
+          "retrievedAt": "2026-09-07T19:36:40.718Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:37:33.520Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1236": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://analytics-physics.fnal.gov/people/nhan-tran/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://analytics-physics.fnal.gov/people/nhan-tran/: fetch failed"
+      ],
+      "updatedAt": "2026-09-07T19:37:33.520Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1237": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.montefiore.uliege.be/~huynh-thu/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.montefiore.uliege.be/~huynh-thu/: fetch failed"
+      ],
+      "updatedAt": "2026-09-07T19:37:33.520Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1238": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.fabinet.up.ac.za/index.php/people-profile?profile=79"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1238-1",
+          "url": "https://www.fabinet.up.ac.za/index.php/people-profile?profile=79",
+          "excerpt": "eople Current Staff and Students FABI Graduates Masters Graduates Doctoral Graduates Past Postdoctoral Fellows Honorary Awards Resources Sirex website Forest Pathologists and Entomologists Photo Gallery FIMT database Diagnostic clinic Sentinel Plant Project Ceratocystis wilt in Kiwi PSHB Bark Beetle Microbiome Pest and Pathogen Profiles TPCP Macadamia Protection Programme Fungal Culture Collections Grain Pest Surveillance Galleries FABI's Videos Opportunities × Warning JUser: :_load: Unable to load user with ID: 79 Profile Type --> Department This email address is being protected from spambots.",
+          "retrievedAt": "2026-09-07T19:36:49.367Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1238-2",
+          "url": "https://www.fabinet.up.ac.za/index.php/people-profile?profile=79",
+          "excerpt": "--> About FABI Contact Details Disclaimers Login UP Library web &copy; Forestry and Agricultural Biotechnology Institute 2026 back to top × .",
+          "retrievedAt": "2026-09-07T19:36:49.367Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:37:33.520Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1239": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://lfic.dana-farber.org/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://lfic.dana-farber.org/: fetch failed"
+      ],
+      "updatedAt": "2026-09-07T19:37:33.520Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1240": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://astronomy.fas.harvard.edu/people/kim-vy-tran",
         "https://kimvytran.org/"
       ],
-      "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "evidence": [
+        {
+          "id": "vp-1240-1",
+          "url": "https://astronomy.fas.harvard.edu/people/kim-vy-tran",
+          "excerpt": "und Astrophysics Assessment Requirements Committees and Advising Research Project University Resources Teaching Timeline Forms PhD Thesis University Requirements Public Outreach Project Thesis Topics Research Research expand_more Astrophysics Advisors People News Alumni About About expand_more Contact Directions History Prizes and Awards Resources Breadcrumbs Home chevron_right People chevron_right Kim-Vy Tran Kim-Vy Tran Lecturer in Astronomy Associate Director for Internal Relations, CfA location_on 60 Garden Street, MS-45 Cambridge, MA 02138 Office P-224 smartphone 617-384-7689 email kim-vy.",
+          "retrievedAt": "2026-09-07T19:36:50.178Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1240-2",
+          "url": "https://astronomy.fas.harvard.edu/people/kim-vy-tran",
+          "excerpt": "edu laptop_windows Professional Website Research Interests: Galaxy formation and evolution; Strong gravitational lensing; Extragalactic surveys; Cosmology; Space-based observations Kim-Vy Tran has been a professional astronomer for 20+ years.",
+          "retrievedAt": "2026-09-07T19:36:50.178Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1240-3",
+          "url": "https://astronomy.fas.harvard.edu/people/kim-vy-tran",
+          "excerpt": "Prior to joining the CfA, she was a professor at the University of New South Wales, University of Zürich, and Texas A&M University.",
+          "retrievedAt": "2026-09-07T19:36:50.178Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1240-4",
+          "url": "https://astronomy.fas.harvard.edu/people/kim-vy-tran",
+          "excerpt": "She received her PhD in Astronomy & Astrophysics from the UCSC and held postdoctoral fellowships at the CfA, at Leiden Observatory, and at ETH Zürich.",
+          "retrievedAt": "2026-09-07T19:36:50.178Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1240-5",
+          "url": "https://astronomy.fas.harvard.edu/people/kim-vy-tran",
+          "excerpt": "Kim-Vy's astronomy research program advances our knowledge of how galaxies assemble over cosmic time by capitalizing on the high resolution, extreme sensitivity, and broad wavelength coverage of ground and space-based telescopes.",
+          "retrievedAt": "2026-09-07T19:36:50.178Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
+      "errors": [
+        "https://kimvytran.org/: fetch failed"
+      ],
+      "updatedAt": "2026-09-07T19:37:33.520Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1241": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://people.csiro.au/h/m/minh-huynh"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:37:33.520Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1242": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.mcgill.ca/cellbio/faculty-staff/professors/khanh-huy-bui"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.mcgill.ca/cellbio/faculty-staff/professors/khanh-huy-bui: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:37:33.520Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1243": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://researchers.uq.edu.au/researcher/2568"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://researchers.uq.edu.au/researcher/2568: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:37:33.520Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1244": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.i2bc.paris-saclay.fr/teams/calcium-signalling-and-microbial-infections/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.i2bc.paris-saclay.fr/teams/calcium-signalling-and-microbial-infections/: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:37:33.520Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1245": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.depts.ttu.edu/ece/faculty/faculty.php?name=Hieu%20Pham%20Trung%20Nguyen"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.depts.ttu.edu/ece/faculty/faculty.php?name=Hieu%20Pham%20Trung%20Nguyen: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:37:33.520Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1246": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.pa.ucla.edu/faculty/tuan-do.html",
         "https://www.astro.ucla.edu/~tdo/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.pa.ucla.edu/faculty/tuan-do.html: fetch failed",
+        "https://www.astro.ucla.edu/~tdo/: fetch failed"
+      ],
+      "updatedAt": "2026-09-07T19:37:33.520Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1247": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.isterre.fr/annuaire/pages-web-du-personnel/mai-linh-doan/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1247-1",
+          "url": "https://www.isterre.fr/annuaire/pages-web-du-personnel/mai-linh-doan/",
+          "excerpt": "ervice Gestion et administration Service Instrumentations géophysiques (SIG) Service GEODATA Plateforme Géochimie - Minéralogie (G&M) Plateforme Géo-thermo-chronologie (GTC) Plateforme MicroAnalytique ISTerre IMAP Formations Les filières La formation doctorale Stages Visiter le laboratoire Sciences pour tous·tes Actualités A la une Agenda scientifique Séminaires Vie au Labo Grand public Offres d&#8217;emploi --> Menu contextuel Pages web du personnel Fabien ALBINO Laurence AUDIN David AMITRANO Anne-Line AUZENDE Fabrice BRUNET Données Professionnelles Publications Teaching Research interests (F.",
+          "retrievedAt": "2026-09-07T19:36:57.184Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1247-2",
+          "url": "https://www.isterre.fr/annuaire/pages-web-du-personnel/mai-linh-doan/",
+          "excerpt": "CAUSSE Olivier COUTANT documents sismalp Emmanuel CHALJUB Nathalie COTTE Christian CROUZET Projets Carole CORDIER Julien CARCAILLET Publications Technical Responsabilities Collective Responsibilities Thesis supervision Cécile CORNOU Sylvain CAMPILLO Maintenance ICP-MS David CEBRON Details Journal publications Popular science publications Research interests Teaching Oral communications Marielle COLLOMBET Laurent CHARLET Francis COEUR Kristen COOK Mai-Linh DOAN Marie-Pierre DOIN Renaud DEGUEN Arjan DE LEEUW Alex FERNANDEZ-MARTINEZ Stéphane GUILLOT Jean-Luc GOT Philippe GUEGUEN Urban seismology .",
+          "retrievedAt": "2026-09-07T19:36:57.184Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1247-3",
+          "url": "https://www.isterre.fr/annuaire/pages-web-du-personnel/mai-linh-doan/",
+          "excerpt": "for earthquake-proof cities More information Atelier Epos-France New Earthquake Data recorded in buildings (NDE1.",
+          "retrievedAt": "2026-09-07T19:36:57.184Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1247-4",
+          "url": "https://www.isterre.fr/annuaire/pages-web-du-personnel/mai-linh-doan/",
+          "excerpt": "0) SISM@LP-Swarm Earthquake losses flatfiles Stéphane GUEDRON Fabienne GIRAUD Nicolas GILLET Stéphane GARAMBOIS Pascale HUYGHE Agnès HELMSTETTER Roland HELLMANN James HOLLINGSWORTH Laurent HUSSON François JOUANNE Etienne JAILLARD Emilie JANOTS ANR-JC Mona Gaël JANEX Dominique JAULT Stanislav JELAVIĆ Publications Éric LEWIN Zone Privée d&#8217;É.",
+          "retrievedAt": "2026-09-07T19:36:57.184Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1247-5",
+          "url": "https://www.isterre.fr/annuaire/pages-web-du-personnel/mai-linh-doan/",
+          "excerpt": "s Scientific activities Seismic tomography Underground laboratory LSBB Initial training CV Diffusion Coralie AUBERT François LAVOUÉ Laura Calzolari Denis HATZFELD Photos Jacques GRANGEON Mélanie Balvay Etienne REY Stéphane Mercier Jean Soubestre Pierre Valla Cécile GAUTHERON Nouméa Paradis Sabine SENTENAC Oliver Henriot Xavier Arnauld de Sartre --> Pages web du personnel Anne-Line AUZENDE David AMITRANO Fabien ALBINO Laurence AUDIN Alain BURGISSER Céline BEAUVAL Christian BECK Christophe BASILE Claire BOULIGAND Fabrice BRUNET Données Professionnelles Publications Teaching Research interests (F.",
+          "retrievedAt": "2026-09-07T19:36:57.184Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1247-6",
+          "url": "https://www.isterre.fr/annuaire/pages-web-du-personnel/mai-linh-doan/",
+          "excerpt": "N Details Journal publications Popular science publications Research interests Teaching Oral communications --> Emmanuel CHALJUB Francis COEUR Julien CARCAILLET Publications Technical Responsabilities Collective Responsibilities Thesis supervision --> Kristen COOK Laurent CHARLET Marielle COLLOMBET Mathieu CAUSSE Nathalie COTTE Olivier COUTANT documents sismalp --> Philippe CARDIN Archives --> Sylvain CAMPILLO Maintenance ICP-MS --> Arjan DE LEEUW Mai-Linh DOAN Marie-Pierre DOIN Renaud DEGUEN Alex FERNANDEZ-MARTINEZ Fabienne GIRAUD Jean-Luc GOT Nicolas GILLET Philippe GUEGUEN Urban seismology .",
+          "retrievedAt": "2026-09-07T19:36:57.184Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1247-7",
+          "url": "https://www.isterre.fr/annuaire/pages-web-du-personnel/mai-linh-doan/",
+          "excerpt": "for earthquake-proof cities More information Atelier Epos-France New Earthquake Data recorded in buildings (NDE1.",
+          "retrievedAt": "2026-09-07T19:36:57.184Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1247-8",
+          "url": "https://www.isterre.fr/annuaire/pages-web-du-personnel/mai-linh-doan/",
+          "excerpt": "0) SISM@LP-Swarm Earthquake losses flatfiles --> Stéphane GARAMBOIS Stéphane GUEDRON Stéphane GUILLOT Agnès HELMSTETTER James HOLLINGSWORTH Laurent HUSSON Pascale HUYGHE Roland HELLMANN Dominique JAULT Emilie JANOTS ANR-JC Mona --> Etienne JAILLARD François JOUANNE Gaël JANEX Stanislav JELAVIĆ Publications --> Albanne LECOINTRE Bruno LANSON Thématique scientifique Thématiques : structure cristallochimique des phyllomanganates Bibliographie Téléchargements - Downloads Données personnelles IMACS - MNA --> Eric LAROSE Éric LEWIN Zone Privée d&#8217;É.",
+          "retrievedAt": "2026-09-07T19:36:57.184Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:37:33.520Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1248": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www2.mrc-lmb.cam.ac.uk/groups/knguyen/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www2.mrc-lmb.cam.ac.uk/groups/knguyen/: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:37:33.520Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1249": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://ribf.riken.jp/~dang/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1249-1",
+          "url": "https://ribf.riken.jp/~dang/",
+          "excerpt": "Nguyen Dinh Dang's Home Page Nguyen Dinh Dang's Home Page EMBRACING ART AND SCIENCE (by I.",
+          "retrievedAt": "2026-09-07T19:36:58.967Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:37:33.520Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1250": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.swinburne.edu.au/research/our-research/access-our-research/find-a-researcher-or-supervisor/researcher-profile/?id=ldao"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:37:33.520Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1251": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.uottawa.ca/faculty-science/professors/tuan-bui",
         "https://www.bui-lab.com/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1251-1",
+          "url": "https://www.uottawa.ca/faculty-science/professors/tuan-bui",
+          "excerpt": "n Bui | Faculty of Science Skip to main content Tertiary navigation Current students Faculty and staff Alumni Giving Primary navigation close Close search menu Study Campus life Research and innovation About us Current students Faculty and staff Alumni Giving Study Campus life Research and innovation About us search close Close Study Campus life Research and innovation About us search en fr person arrow_drop_down Login menu uoZone Brightspace VirtuO search menu home Faculty of Science Professors Tuan Bui Profile Tuan Bui Chair, Biology Department Professor Room GNN 285 Phone (613) 562-5800 ext.",
+          "retrievedAt": "2026-09-07T19:37:00.233Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1251-2",
+          "url": "https://www.uottawa.ca/faculty-science/professors/tuan-bui",
+          "excerpt": "7888 Email [email&#160;protected] Department of Biology Biography The main goal of my research program is to understand how the nervous system controls movement, in particular, through the activity of the spinal cord.",
+          "retrievedAt": "2026-09-07T19:37:00.233Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1251-3",
+          "url": "https://www.uottawa.ca/faculty-science/professors/tuan-bui",
+          "excerpt": "The lab seeks to characterize neurons involved in motor control, identify the circuits that they form and study their involvement in motor tasks such as locomotion (e.",
+          "retrievedAt": "2026-09-07T19:37:00.233Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1251-4",
+          "url": "https://www.uottawa.ca/faculty-science/professors/tuan-bui",
+          "excerpt": "Experimental techniques include electrophysiology, immunocytochemistry, and computational modelling, and experimental models include zebrafish and mouse.",
+          "retrievedAt": "2026-09-07T19:37:00.233Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1251-5",
+          "url": "https://www.uottawa.ca/faculty-science/professors/tuan-bui",
+          "excerpt": "Selected publications Bui TV, Akay T, Loubani O, Hnasko TS, Jessell TM, and Brownstone RM.",
+          "retrievedAt": "2026-09-07T19:37:00.233Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1251-6",
+          "url": "https://www.uottawa.ca/faculty-science/professors/tuan-bui",
+          "excerpt": "Circuits for grasping: spinal dI3 interneurons mediate cutaneous control of motor behavior.",
+          "retrievedAt": "2026-09-07T19:37:00.233Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1251-7",
+          "url": "https://www.uottawa.ca/faculty-science/professors/tuan-bui",
+          "excerpt": "Progress in Brain Research (2010); 187: 81-95, 2010 Carlin KP*, Bui TV*, Dai Y, and Brownstone RM.",
+          "retrievedAt": "2026-09-07T19:37:00.233Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1251-8",
+          "url": "https://www.uottawa.ca/faculty-science/professors/tuan-bui",
+          "excerpt": "Staircase currents in motoneurons: insight into the spatial arrangement of calcium channels in the dendritic tree.",
+          "retrievedAt": "2026-09-07T19:37:00.233Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1251-9",
+          "url": "https://www.bui-lab.com/",
+          "excerpt": "Tuan Bui Laboratory &#8211; Neural Motor Control | Understanding how our nervous system enables us to move Tuan Bui Laboratory &#8211; Neural Motor Control Understanding how our nervous system enables us to move Menu Skip to content Home NEWS RESEARCH Maturation of motor control Motor circuits Spinal cord injury PERSONNEL Lab alumni PUBLICATIONS TEACHING LAB PHOTOS AFFILIATIONS POSITIONS AVAILABLE SOFTWARE REPOSITORY CONTACT US Search Search for: RECENT NEWS PhD student, Shahriar Nasiri , published his first first-author paper in the Journal of Neurophysiology.",
+          "retrievedAt": "2026-09-07T19:37:00.479Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1251-10",
+          "url": "https://www.bui-lab.com/",
+          "excerpt": "Sensorimotor circuits formed by dI3 neurons have distinct connectivity within and across the lumbar and cervical spinal cord .",
+          "retrievedAt": "2026-09-07T19:37:00.479Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1251-11",
+          "url": "https://www.bui-lab.com/",
+          "excerpt": "Using optogenetic and ex-vivo nerve recordings, Shahriar and team mapped out precise connectivity patterns between dI3 neurons within and across cervical and lumbar spinal segments.",
+          "retrievedAt": "2026-09-07T19:37:00.479Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1251-12",
+          "url": "https://www.bui-lab.com/",
+          "excerpt": "This work provides important insights into how dI3 neurons coordinate sensorimotor circuits for forelimb and hindlimb function.",
+          "retrievedAt": "2026-09-07T19:37:00.479Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1251-13",
+          "url": "https://www.bui-lab.com/",
+          "excerpt": "Our lab is interested in three aspects of how the nervous system controls movement for the purpose of understanding motor control and treating loss of motor function due to disease or injury.",
+          "retrievedAt": "2026-09-07T19:37:00.479Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1251-14",
+          "url": "https://www.bui-lab.com/",
+          "excerpt": "They are found in the brain, brainstem, and the spinal cord, and they all play specialized roles.",
+          "retrievedAt": "2026-09-07T19:37:00.479Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1251-15",
+          "url": "https://www.bui-lab.com/",
+          "excerpt": "For instance, our lab has characterized a population of spinal neurons in mammals, named dI3 interneurons, and show that they are vital for our control of our grip strength, and they play a role in shaping our locomotor activity.",
+          "retrievedAt": "2026-09-07T19:37:00.479Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1251-16",
+          "url": "https://www.bui-lab.com/",
+          "excerpt": "Several biological features of zebrafish (rapid development, ease of visualization and access of neurons, phylogenetic conservation of many neuron populations) are leveraged to shed insights into the operation of spinal circuits in fish but also across vertebrates.",
+          "retrievedAt": "2026-09-07T19:37:00.479Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:37:33.520Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1252": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://groups.oist.jp/light/viet-giang-truong"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://groups.oist.jp/light/viet-giang-truong: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:37:33.520Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1253": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://mechmining.uq.edu.au/profile/10292/thang-vo-doan",
         "https://vodoanlab.wordpress.com/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://mechmining.uq.edu.au/profile/10292/thang-vo-doan: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:37:33.520Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1254": {
       "overview": "pending",
