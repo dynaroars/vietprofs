@@ -144,10 +144,11 @@ completion while temporary failures or unresolved verification remain.
 - [ ] Batch 13 — `vp-0241`–`vp-0260`; 20 people; 18 complete outcomes — published in `f5b184e`; counts: 11 verified overviews, 7 no-suitable-evidence overviews, 3 verified work sections (2 selected, 1 recent), 15 no-suitable-evidence work searches; 2 retries in queue (`vp-0250`, `vp-0251`).
 - [ ] Batch 14 — `vp-0261`–`vp-0280`; 20 people; 19 complete outcomes — published in `9dd625b`; counts: 15 verified overviews, 4 no-suitable-evidence overviews, 6 verified work sections (3 selected, 3 recent), 13 no-suitable-evidence work searches; 1 retry in queue (`vp-0280`).
 - [ ] Batch 15 — `vp-0281`–`vp-0300`; 20 people; 18 complete outcomes — published in `66c9261`; counts: 13 verified overviews, 5 no-suitable-evidence overviews, 11 verified work sections (3 selected, 8 recent), 7 no-suitable-evidence work searches; 2 retries in queue (`vp-0281`, `vp-0294`).
-- [ ] Batch 16 — `vp-0301`–`vp-0320`; 20 people; 19 complete outcomes; counts: 15 verified overviews, 4 no-suitable-evidence overviews, 11 verified work sections (4 selected, 7 recent), 8 no-suitable-evidence work searches; 1 retry in queue (`vp-0305`).
-- [ ] Batch 17 — `vp-0321`–`vp-0340`; 20 people; pending.
+- [ ] Batch 16 — `vp-0301`–`vp-0320`; 20 people; 19 complete outcomes — published in `bd6ac3b`; counts: 15 verified overviews, 4 no-suitable-evidence overviews, 11 verified work sections (4 selected, 7 recent), 8 no-suitable-evidence work searches; 1 retry in queue (`vp-0305`).
+- [ ] Batch 17 — `vp-0321`–`vp-0340`; 20 people; 19 complete outcomes; counts: 11 verified overviews, 8 no-suitable-evidence overviews, 6 verified work sections (2 selected, 4 recent), 13 no-suitable-evidence work searches; 1 retry in queue (`vp-0337`).
+- [ ] Batch 18 — `vp-0341`–`vp-0360`; 20 people; pending.
 
-Progress note: batches 1 through 16 processed (273 verified overviews, 27 no-suitable-evidence overviews, 196 verified work sections [54 selected, 142 recent], 104 no-suitable-evidence work results, 20 retries in queue). Batch 16 will be published now; Batch 17 will be processed next.
+Progress note: batches 1 through 17 processed (284 verified overviews, 35 no-suitable-evidence overviews, 202 verified work sections [56 selected, 146 recent], 117 no-suitable-evidence work results, 21 retries in queue). Batch 17 will be published now; Batch 18 will be processed next.
 
 Populate at execution time from the saved ID snapshot. Each entry must include batch number,
 ledger reference or exact IDs, outcome counts, remaining retries, and publication status.
