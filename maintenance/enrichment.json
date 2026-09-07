@@ -2888,7 +2888,8 @@
         "vp-1027",
         "vp-1028"
       ],
-      "status": "pending"
+      "status": "in_progress",
+      "startedAt": "2026-09-07T19:10:38.873Z"
     },
     {
       "number": 52,
@@ -64371,211 +64372,1305 @@
       "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1008": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.ulethbridge.ca/directory/person/kien.tran"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1008-1",
+          "url": "https://www.ulethbridge.ca/directory/person/kien.tran",
+          "excerpt": "Tran, Kien | University of Lethbridge Skip to main content Library Directory Intranet MyExperience Webmail Bridge Moodle Study here Give Search Campus Directory Close Search Home Help Library Directory Intranet MyExperience Webmail Bridge Moodle Study here Give Search Study here Give Tran, Kien Professor Economics Department Phone (403) 329-2511 Fax (403) 329-2519 Email kien.",
+          "retrievedAt": "2026-09-07T19:10:39.420Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1008-2",
+          "url": "https://www.ulethbridge.ca/directory/person/kien.tran",
+          "excerpt": "ca About Me I am currently a Professor in the Department of Economics and a Research Affiliate at the Center for Big Data in Economics and Finance (CEBDA), Faculty of Economic Sciences, HSE University, Moscow, Russia.",
+          "retrievedAt": "2026-09-07T19:10:39.420Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1008-3",
+          "url": "https://www.ulethbridge.ca/directory/person/kien.tran",
+          "excerpt": "My current research mainly focuses on Nonparametric/semiparametric mixture models, IV-free approaches to endogeneity in regression models, Spatial Autoregressive (SAR) models, and the Parametric/Nonparametric Panel Stochastic Frontier Framework, with most applications in the Banking and Finance sectors.",
+          "retrievedAt": "2026-09-07T19:10:39.420Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1008-4",
+          "url": "https://www.ulethbridge.ca/directory/person/kien.tran",
+          "excerpt": "On a lighter note, I am just a simple guy living a simple life, and fortunate enough to be given the opportunity to do the things that I love (and love the things that I do) and to learn from others every day (my children, students, colleagues, and good friends around the world).",
+          "retrievedAt": "2026-09-07T19:10:39.420Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1008-5",
+          "url": "https://www.ulethbridge.ca/directory/person/kien.tran",
+          "excerpt": "Current Research The papers below are my current work with some of my close friends and co-authors&#58; Tran, K.",
+          "retrievedAt": "2026-09-07T19:10:39.420Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1008-6",
+          "url": "https://www.ulethbridge.ca/directory/person/kien.tran",
+          "excerpt": "(2026), &quot;Three-Dimensional Panel Stochastic Frontier Models&#58; Estimation and Model Selection.",
+          "retrievedAt": "2026-09-07T19:10:39.420Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1008-7",
+          "url": "https://www.ulethbridge.ca/directory/person/kien.tran",
+          "excerpt": "&quot;Estimation of Latent Class &#160;Spatial Autoregressive Stochastic Frontier Models with Endogenous Spatial Weights and Regressors .",
+          "retrievedAt": "2026-09-07T19:10:39.420Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1008-8",
+          "url": "https://www.ulethbridge.ca/directory/person/kien.tran",
+          "excerpt": "&quot; Specification Test for Spatial Autoregressive Stochastic Frontier Models .",
+          "retrievedAt": "2026-09-07T19:10:39.420Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:12:21.340Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1009": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://ib.nccu.edu.tw/en/Members/Dien-Giau-Richard-Bui-44674554",
         "https://diengiau.github.io"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1009-1",
+          "url": "https://ib.nccu.edu.tw/en/Members/Dien-Giau-Richard-Bui-44674554",
+          "excerpt": "Dien Giau Richard Bui | Department of International Business NCCU College of Commerce Open login Close login close Login Department of International Business NCCU College of Commerce Username Password Login Forgot your password?",
+          "retrievedAt": "2026-09-07T19:10:45.738Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1009-2",
+          "url": "https://diengiau.github.io",
+          "excerpt": "Richard - & finance Richard & finance About Blog Research Code & finance Richard Dien Giau Bui I work at NCCU | CV I do research in finance.",
+          "retrievedAt": "2026-09-07T19:10:45.904Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1009-3",
+          "url": "https://diengiau.github.io",
+          "excerpt": "My works are: corporate finance, banking, and recently some empirical asset pricing.",
+          "retrievedAt": "2026-09-07T19:10:45.904Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:12:21.340Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1010": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://public-health.uq.edu.au/profile/11560/kim-huong-nguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1010-1",
+          "url": "https://public-health.uq.edu.au/profile/11560/kim-huong-nguyen",
+          "excerpt": "and Torres Strait Islander Impact and Excellence Strategy (2021-2025) Current students Show Current students sub-navigation Orientation Student support Health Communication Essentials Projects and dissertations Summer and Winter research program Future students Research Show Research sub-navigation Centres and groups Mental Health and Climate Change Research Network Research outputs Engage Show Engage sub-navigation Work with us Industry placements Public Health Connect SPH Seminar Series Events Our people Contact Dr Kim-Huong Nguyen Senior Lecturer School of Public Health +61 7 344 35124 kim.",
+          "retrievedAt": "2026-09-07T19:10:47.012Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1010-2",
+          "url": "https://public-health.uq.edu.au/profile/11560/kim-huong-nguyen",
+          "excerpt": "au View researcher profile Researcher biography Dr Kim-Huong Nguyen is a Senior Lecturer in Health Economics at the University of Queensland.",
+          "retrievedAt": "2026-09-07T19:10:47.012Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1010-3",
+          "url": "https://public-health.uq.edu.au/profile/11560/kim-huong-nguyen",
+          "excerpt": "Her research centres on the efficient and equitable allocation of resources to support brain health in disadvantaged populations.",
+          "retrievedAt": "2026-09-07T19:10:47.012Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1010-4",
+          "url": "https://public-health.uq.edu.au/profile/11560/kim-huong-nguyen",
+          "excerpt": "She applies economic methods and theories to evaluate interventions, programmes and public policies for neurodegenerative diseases, brain injuries, and mental disorders.",
+          "retrievedAt": "2026-09-07T19:10:47.012Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1010-5",
+          "url": "https://public-health.uq.edu.au/profile/11560/kim-huong-nguyen",
+          "excerpt": "As a Global Atlantic Fellow for Equity in Brain Health with the Global Brain Health Institute (Trinity College Dublin and University of California, San Francisco), she collaborates closely with multidisciplinary teams—including artists, medical professionals, engineers, industry partners, advocates, and health and social care consumers—to advance knowledge and transform practices for brain health.",
+          "retrievedAt": "2026-09-07T19:10:47.012Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1010-6",
+          "url": "https://public-health.uq.edu.au/profile/11560/kim-huong-nguyen",
+          "excerpt": "Publications Book (1) Book Chapters (2) Journal Articles (76) Conference Papers (10) Department Technical Report (1) Thesis (1) Research Reports (13) Data Collections (2) Book Comans, Tracy , Nguyen, Kim-Huong and Welch, Alyssa ( 2020 ).",
+          "retrievedAt": "2026-09-07T19:10:47.012Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1010-7",
+          "url": "https://public-health.uq.edu.au/profile/11560/kim-huong-nguyen",
+          "excerpt": "Learnings from the development of a disease-specific utility instrument for economic evaluation .",
+          "retrievedAt": "2026-09-07T19:10:47.012Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1010-8",
+          "url": "https://public-health.uq.edu.au/profile/11560/kim-huong-nguyen",
+          "excerpt": "4135/9781529742855 Book Chapters Leroi, Iracema , Nguyen, Kim-Huong , Ibañez, Agustin and Ibrahim, Hany ( 2026 ).",
+          "retrievedAt": "2026-09-07T19:10:47.012Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:12:21.340Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1011": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.durham.ac.uk/staff/business-staff/duc-d-nguyen/",
         "https://sites.google.com/site/louisnguyen6589/home"
       ],
-      "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "evidence": [
+        {
+          "id": "vp-1011-1",
+          "url": "https://sites.google.com/site/louisnguyen6589/home",
+          "excerpt": "Duc Duy (Louis) Nguyen Search this site Embedded Files Skip to main content Skip to navigation Duc Duy (Louis) Nguyen Publications Duc Duy (Louis) Nguyen Publications More Duc Duy (Louis) Nguyen Publications Duc Duy (Louis) Nguyen Professor of Finance @ Durham University Research interests: C orporate finance, Banking, Household Finance Email: duc.",
+          "retrievedAt": "2026-09-07T19:10:47.567Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1011-2",
+          "url": "https://sites.google.com/site/louisnguyen6589/home",
+          "excerpt": "ERS Paid Sick Leave Mandates and Household Portfolio Choice (with Yibing Wang , Steven Ongena & Tarik Driouchi ) R&R, Journal of Financial and Quantitative Analysis Biodiversity Transition Risk and Corporate Employment (with Huyen Nguyen , Trang Nguyen & Vathunyoo Sila ) R&R, Review of Finance Biodiversity Risk and Small Business Lending (with Steven Ongena , Shusen Qi , Vathunyoo Sila & Yibing Wang ) R&R, Journal of Money, Credit, and Banking When Wages Become Visible: Pay Transparency, Employee Sorting, and Firm Value (with Tarik Driouchi , Vathunyoo Sila & Yibing Wang ) MAIN PUBLICATIONS 19.",
+          "retrievedAt": "2026-09-07T19:10:47.567Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1011-3",
+          "url": "https://sites.google.com/site/louisnguyen6589/home",
+          "excerpt": "Regulating Zombie Mortgages (with Jonathan Lee & Huyen Nguyen ) Review of Finance , forthcoming 18.",
+          "retrievedAt": "2026-09-07T19:10:47.567Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1011-4",
+          "url": "https://sites.google.com/site/louisnguyen6589/home",
+          "excerpt": "Corporate Hiring under Uncertainty (with Vathunyoo Sila ) Review of Corporate Finance Studies , 2025, 14(4), 949-988 (Lead article) Best Registered Report on &quot;Politics and Corporate Power&quot;, Review of Corporate Finance Studies 1 7 .",
+          "retrievedAt": "2026-09-07T19:10:47.567Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1011-5",
+          "url": "https://sites.google.com/site/louisnguyen6589/home",
+          "excerpt": "Proximity to Bank Headquarters and Branch Efficiency: Evidence from Mortgage Lending (with Ivan Lim , Linh Nguyen & John Wilson ) Journal of Money, Credit and Banking , 2025, 57(6), 1465-1508 Coverage: The monthly magazine of the Association of MBAs 16.",
+          "retrievedAt": "2026-09-07T19:10:47.567Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1011-6",
+          "url": "https://sites.google.com/site/louisnguyen6589/home",
+          "excerpt": "Evidence From Securities Class Action Lawsuits (with Jonathan Brogaard , Nhan Le , & Vathunyoo Sila ) Journal of Financial and Quantitative Analysis , 2024, 59 ( 4 ), 1726-1759 15.",
+          "retrievedAt": "2026-09-07T19:10:47.567Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1011-7",
+          "url": "https://sites.google.com/site/louisnguyen6589/home",
+          "excerpt": "Regulatory Spillovers in Local Mortgage Markets (with Ivan Lim & Linh Nguyen ) Review of Corporate Finance Studies, 2024, 13(3), 775-817 Presented at the Public Company Accounting Oversight Board Semi-finalist, 2018 FMA Europe Best Paper Award 14.",
+          "retrievedAt": "2026-09-07T19:10:47.567Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1011-8",
+          "url": "https://sites.google.com/site/louisnguyen6589/home",
+          "excerpt": "Lender Trust and Bank Loan Contracts (with Jens Hagendorff & Sonya Lim ) Management Science, 2023, 69(3): 1758-1779 13.",
+          "retrievedAt": "2026-09-07T19:10:47.567Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
+      "errors": [
+        "https://www.durham.ac.uk/staff/business-staff/duc-d-nguyen/: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T19:12:21.340Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1012": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.brandeis.edu/economics/women-bios/bui.html"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.brandeis.edu/economics/women-bios/bui.html: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T19:12:21.340Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1013": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://researchportalplus.anu.edu.au/en/persons/phong-ngo/",
         "https://sites.google.com/site/phongthngo/home"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1013-1",
+          "url": "https://researchportalplus.anu.edu.au/en/persons/phong-ngo/",
+          "excerpt": "Phong Ngo - The Australian National University Skip to main navigation Skip to search Skip to main content The Australian National University Home Help & FAQ Link opens in a new tab Search content at The Australian National University Home Profiles Research output Projects Research units Prizes Activities View Scopus Profile AsPr Phong Ngo Gender Institute Research School of Finance, Actuarial Studies & Statistics https://orcid.",
+          "retrievedAt": "2026-09-07T19:10:48.940Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1013-2",
+          "url": "https://researchportalplus.anu.edu.au/en/persons/phong-ngo/",
+          "excerpt": "edu au h-index h10-index h5-index 396 Citations 7 h-index Calculated based on number of publications stored in Pure and citations from Scopus 312 Citations 7 h-index Calculated based on number of publications stored in Pure and citations from Scopus 162 Citations 5 h-index Calculated based on number of publications stored in Pure and citations from Scopus 2007 2025 Research activity per year Overview Fingerprint Network Research output (13) Projects (1) Similar Profiles (1) Personal profile Qualifications B.",
+          "retrievedAt": "2026-09-07T19:10:48.940Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1013-3",
+          "url": "https://researchportalplus.anu.edu.au/en/persons/phong-ngo/",
+          "excerpt": "Ec (Hons), PhD (Economics) Research Interests My research theme is \"Finance and Society\" and so I have an interest in doing research that is of policy and social relevance.",
+          "retrievedAt": "2026-09-07T19:10:48.940Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1013-4",
+          "url": "https://researchportalplus.anu.edu.au/en/persons/phong-ngo/",
+          "excerpt": "My papers span an eclectic mix of topics which include banking, political economy & the role of government, household finance, gender & the economy, media and labour & migration Biography Phong Ngo is an Associate Professor of Finance.",
+          "retrievedAt": "2026-09-07T19:10:48.940Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1013-5",
+          "url": "https://researchportalplus.anu.edu.au/en/persons/phong-ngo/",
+          "excerpt": "He is a member of the American Economic Association, American Finance Association, Vietnamese Finance Association, European Finance Association, Financial Research Network, and Economic Society of Australia.",
+          "retrievedAt": "2026-09-07T19:10:48.940Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1013-6",
+          "url": "https://researchportalplus.anu.edu.au/en/persons/phong-ngo/",
+          "excerpt": "Phong’s research interests are banking, political economy & the role of government, household finance, gender & the economy, media and labour & migration.",
+          "retrievedAt": "2026-09-07T19:10:48.940Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1013-7",
+          "url": "https://researchportalplus.anu.edu.au/en/persons/phong-ngo/",
+          "excerpt": "His current research focuses on the impact of financial media on household financial decisions (e.",
+          "retrievedAt": "2026-09-07T19:10:48.940Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1013-8",
+          "url": "https://researchportalplus.anu.edu.au/en/persons/phong-ngo/",
+          "excerpt": ", how financial media impacts mortgage refinancing decisions), the financial causes of domestic violence (e.",
+          "retrievedAt": "2026-09-07T19:10:48.940Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1013-9",
+          "url": "https://sites.google.com/site/phongthngo/home",
+          "excerpt": "Ngo Search this site Embedded Files Skip to main content Skip to navigation Phong T.",
+          "retrievedAt": "2026-09-07T19:10:49.032Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1013-10",
+          "url": "https://sites.google.com/site/phongthngo/home",
+          "excerpt": "Ngo Welcome Research Major Work in Progress Contact More Welcome Research Major Work in Progress Contact Welcome Bio I am an Associate Professor with the Research School of Finance, Actuarial Studies and Statistics which is part of The College of Business and Economics at The Australian National University .",
+          "retrievedAt": "2026-09-07T19:10:49.032Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1013-11",
+          "url": "https://sites.google.com/site/phongthngo/home",
+          "excerpt": "My research theme is &quot;Finance and Society&quot; and so I have an interest in doing financial research that is of policy and social relevance.",
+          "retrievedAt": "2026-09-07T19:10:49.032Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1013-12",
+          "url": "https://sites.google.com/site/phongthngo/home",
+          "excerpt": "My papers span an eclectic mix of topics which include banking, political economy & the role of government, household finance, gender & the economy, media and labour & migration and have been published in leading journals such as the Journal of Financial Economics, Review of Financial Studies and Journal of Financial and Quantitative Analysis.",
+          "retrievedAt": "2026-09-07T19:10:49.032Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1013-13",
+          "url": "https://sites.google.com/site/phongthngo/home",
+          "excerpt": "News New working paper: Regulation versus courts: The equity market&#39;s view (with Bharat Raj Parajuli and Tom Smith) New working paper: The rise of distant non-bank lending: Evidence from the mortgage market (with Lin Hu and Kun Li) New publication: What can volatility smiles tell us about the too big to fail problem?",
+          "retrievedAt": "2026-09-07T19:10:49.032Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1013-14",
+          "url": "https://sites.google.com/site/phongthngo/home",
+          "excerpt": "(with Diego Puente) has appeared in Journal of Financial and Quantitative Analysis Updated working paper: Can financial education reduce domestic violence?",
+          "retrievedAt": "2026-09-07T19:10:49.032Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:12:21.340Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1014": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://nceph.anu.edu.au/people/academics/dr-elisabeth-huynh"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1014-1",
+          "url": "https://nceph.anu.edu.au/people/academics/dr-elisabeth-huynh",
+          "excerpt": "w, Governance and Policy ANU College of Law, Governance and Policy School of Law School of Regulation and Global Governance Crawford School of Public Policy Home About us Toggle submenu Overview Director’s welcome Vision & mission History Centre leadership Welcome to the National Centre for Epidemiology and Population Health The National Centre for Epidemiology and Population Health (NCEPH) is a highly collaborative, engaged, interdisciplinary Research School that seeks to improve population health and wellbeing in Australia, regionally and throughout the world to ensure that people can thrive.",
+          "retrievedAt": "2026-09-07T19:10:51.801Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1014-2",
+          "url": "https://nceph.anu.edu.au/people/academics/dr-elisabeth-huynh",
+          "excerpt": "Learn more Contact us Visit Give to ANU Facebook Instagram Twitter YouTube Study Toggle submenu Overview Undergraduate Postgraduate Scholarships & prizes Campus life Forms and Guidelines Study at the National Centre for Epidemiology and Population Health We offer distinctive, rigorous, and policy-relevant programs to nurture future leaders in population health, equipping them to address complex and emerging challenges.",
+          "retrievedAt": "2026-09-07T19:10:51.801Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1014-3",
+          "url": "https://nceph.anu.edu.au/people/academics/dr-elisabeth-huynh",
+          "excerpt": "Learn more Contact us Visit Give to ANU Facebook Instagram Twitter YouTube People Toggle submenu Overview Profile directory Centre experts Profile directory Explore our comprehensive profile directory to find contacts for our people.",
+          "retrievedAt": "2026-09-07T19:10:51.801Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1014-4",
+          "url": "https://nceph.anu.edu.au/people/academics/dr-elisabeth-huynh",
+          "excerpt": "Learn more Contact us Visit Give to ANU Facebook Instagram Twitter YouTube Research & innovation Toggle submenu Overview Centres & departments Research groups Research projects Research stories Tools & resources ANU trio recognised with national awards for health research Three NCEPH researchers have received awards from the National Health and Medical Research Council.",
+          "retrievedAt": "2026-09-07T19:10:51.801Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1014-5",
+          "url": "https://nceph.anu.edu.au/people/academics/dr-elisabeth-huynh",
+          "excerpt": "Learn more Contact us Visit Give to ANU Facebook Instagram Twitter YouTube Our impact Toggle submenu Overview Success stories Alumni & friends How do climate experts feel about the future?",
+          "retrievedAt": "2026-09-07T19:10:51.801Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1014-6",
+          "url": "https://nceph.anu.edu.au/people/academics/dr-elisabeth-huynh",
+          "excerpt": "We asked them While it’s already too late to repair some damage caused by climate change, researchers still believe in a sustainable future.",
+          "retrievedAt": "2026-09-07T19:10:51.801Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1014-7",
+          "url": "https://nceph.anu.edu.au/people/academics/dr-elisabeth-huynh",
+          "excerpt": "Learn more Contact us Visit Give to ANU Facebook Instagram Twitter YouTube Partner with us Toggle submenu Overview Giving Collaborate with us Partner with us Your support enables us to advance research, nurture talent, and make a lasting impact on the well-being of individuals and communities.",
+          "retrievedAt": "2026-09-07T19:10:51.801Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1014-8",
+          "url": "https://nceph.anu.edu.au/people/academics/dr-elisabeth-huynh",
+          "excerpt": "Learn more Contact us Visit Give to ANU Facebook Instagram Twitter YouTube People Dr Elisabeth Huynh Associate Professor PhD in Economics (Econometrics), USYD; B.",
+          "retrievedAt": "2026-09-07T19:10:51.801Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:12:21.340Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1015": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://researchers.lincoln.ac.nz/khanh.hoang"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1015-1",
+          "url": "https://researchers.lincoln.ac.nz/khanh.hoang",
+          "excerpt": "Discovery Browser Not Supported Your browser (Internet Explorer or other legacy browser) is not supported by this application.",
+          "retrievedAt": "2026-09-07T19:10:53.049Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:12:21.340Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1016": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://faculty.haas.berkeley.edu/hqn/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1016-1",
+          "url": "https://faculty.haas.berkeley.edu/hqn/",
+          "excerpt": "Nguyen --> Home | Research | CV (pdf) | Link here | Link here | Link here --> Assistant Professor Haas School of Business University of California at Berkeley Office Location F-620 Contact Information University of California at Berkeley Haas School of Business 545 Student Services Building Berkeley, CA 94720-1900 (510) 664-7669 hqn@berkeley.",
+          "retrievedAt": "2026-09-07T19:10:54.052Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1016-2",
+          "url": "https://faculty.haas.berkeley.edu/hqn/",
+          "excerpt": "edu more &gt;&gt;&gt; This page is not an official publication of the Haas School of Business.",
+          "retrievedAt": "2026-09-07T19:10:54.052Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1016-3",
+          "url": "https://faculty.haas.berkeley.edu/hqn/",
+          "excerpt": "It has not been reviewed or approved by the Haas School of Business or the University of California, Berkeley.",
+          "retrievedAt": "2026-09-07T19:10:54.052Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:12:21.340Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1018": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.neiu.edu/faculty/huong-anne-le"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1018-1",
+          "url": "https://www.neiu.edu/faculty/huong-anne-le",
+          "excerpt": "ng Your Net Cost Scholarship Opportunities Scholarship Listing Applying for Federal & State Assistance Documents Summer Financial Aid Resources Financial Aid Forms & Documents Resources Applying for Student Loans Student Employment Opportunities Student Payment Services Academics Taking Classes Class Schedules & Registration Academic Calendar Advising Center Majors, Minors, Graduate Programs & Certificates University Core Curriculum / General Education Community & Professional Education Academic Units All Academic Departments College of Arts & Sciences College of Business & Technology Daniel L.",
+          "retrievedAt": "2026-09-07T19:10:55.893Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1018-2",
+          "url": "https://www.neiu.edu/faculty/huong-anne-le",
+          "excerpt": "i Events Office of Alumni Relations Giving Giving Opportunities Impact of Your Gift Scholarships Foundation Meet Our Staff Transforming Lives About Who We Are Northeastern News Facts & Distinctions Community & Visitor Guide Northeastern History Mission, Vision and Values Strategic Planning Accreditation Office of Institutional Research & Assessment Our Leadership University Leadership President Executive Team Shared Governance Board of Trustees Employment Working Here Resources Brand Guide Complaints Northeastern Neighbors Legal Menu Audience Menu Audience Placeholder What can we help you find?",
+          "retrievedAt": "2026-09-07T19:10:55.893Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1018-3",
+          "url": "https://www.neiu.edu/faculty/huong-anne-le",
+          "excerpt": "Menu Actions Menu Actions Give Now Request Info Visit Apply Home — Huong (Anne) Le Huong (Anne) Le Associate Professor Office: CBT 142 Phone: 773-442-6149 Email: h-le9@neiu.",
+          "retrievedAt": "2026-09-07T19:10:55.893Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1018-4",
+          "url": "https://www.neiu.edu/faculty/huong-anne-le",
+          "excerpt": "edu Office Hours: Posted on Office Door Country: United States Courses Taught FINA 360 Principles of Financial Management I FINA 363 Security Analysis Research Interests Accounting Business Law and Finance Education • Ph.",
+          "retrievedAt": "2026-09-07T19:10:55.893Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1018-5",
+          "url": "https://www.neiu.edu/faculty/huong-anne-le",
+          "excerpt": "Foreign Trade University, Vietnam, Economics, 2001 Our Mission is You Request Information Plan a Visit Apply Now Footer Menu 1 Footer Menu 1 Online Learning Academic Calendar NEIUPort Maps & Directions Housing Events Employment Directory Community Library Main Campus 5500 North St.",
+          "retrievedAt": "2026-09-07T19:10:55.893Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1018-6",
+          "url": "https://www.neiu.edu/faculty/huong-anne-le",
+          "excerpt": "Louis Avenue Chicago, IL 60625 (773) 583-4050 Carruthers Center 700 East Oakwood Blvd.",
+          "retrievedAt": "2026-09-07T19:10:55.893Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:12:21.340Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1019": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://smp.uq.edu.au/profile/216/duy-minh-dang",
         "https://people.smp.uq.edu.au/Duy-MinhDang/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1019-1",
+          "url": "https://smp.uq.edu.au/profile/216/duy-minh-dang",
+          "excerpt": "avigation Pitch Drop experiment Junior Physics Odyssey UQ / QAMT Problem Solving Competition Industry Engagement Queensland Mathematics Summer School School seminars and colloquia Annual Nesbit Lecture Current students Show Current students sub-navigation Academic Advisers Course Lists Scholarships and Prizes Industry Engagement Support for HDR candidates Summer & Winter Research Programs First Year Learning Centres Inclusivity Information Quiet Classes Contact Show Contact sub-navigation Staff directory Dr Duy-Minh Dang Senior Lecturer School of Mathematics and Physics +61 7 336 52686 duyminh.",
+          "retrievedAt": "2026-09-07T19:10:57.049Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1019-2",
+          "url": "https://smp.uq.edu.au/profile/216/duy-minh-dang",
+          "excerpt": "au Priestley Building (67), Room 744 View researcher profile Personal page Dr Duy-Minh Dang's personal page Teaching and learning Dr Dang teaches 3rd and 4th year financial mathematics, postgraduate financial mathematics and is the Director of the Masters of Financial Mathematics.",
+          "retrievedAt": "2026-09-07T19:10:57.049Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1019-3",
+          "url": "https://smp.uq.edu.au/profile/216/duy-minh-dang",
+          "excerpt": "Researcher biography I joined UQ in September 2014 as Senior Lecturer in Mathematics and Director of the Master of Financial Mathematics (MFinMath) Program.",
+          "retrievedAt": "2026-09-07T19:10:57.049Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1019-4",
+          "url": "https://smp.uq.edu.au/profile/216/duy-minh-dang",
+          "excerpt": "Through strategic and effective leadership, I've overseen the Program's transformation into one of Australia's largest.",
+          "retrievedAt": "2026-09-07T19:10:57.049Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1019-5",
+          "url": "https://smp.uq.edu.au/profile/216/duy-minh-dang",
+          "excerpt": "My commitment to enhancing teaching methodologies, fostering a vibrant student and alumni community, and emphasising industry relevance and collaboration, has significantly contributed to this growth.",
+          "retrievedAt": "2026-09-07T19:10:57.049Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1019-6",
+          "url": "https://smp.uq.edu.au/profile/216/duy-minh-dang",
+          "excerpt": "Additionally, I've had the privilege of supervising well over 100 MFinMath graduates and several PhD candidates, many of whom are making significant contributions in corporations worldwide.",
+          "retrievedAt": "2026-09-07T19:10:57.049Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1019-7",
+          "url": "https://smp.uq.edu.au/profile/216/duy-minh-dang",
+          "excerpt": "My commitment to academic rigour, industry relevance and collaboration ensures our graduates are well-prepared for their careers.",
+          "retrievedAt": "2026-09-07T19:10:57.049Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1019-8",
+          "url": "https://smp.uq.edu.au/profile/216/duy-minh-dang",
+          "excerpt": "My research focuses on the development of reliable numerical methods for stochastic control problems in finance.",
+          "retrievedAt": "2026-09-07T19:10:57.049Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1019-9",
+          "url": "https://people.smp.uq.edu.au/Duy-MinhDang/",
+          "excerpt": "au Mailing address: School of Mathematics and Physics University of Queensland St Lucia, Brisbane 4072 Office: Building 67 (Priestly) Room 744 Phone: +61 (7) 3365 2686 Fax: +61 (7) 3365 1477 RESEARCH | PAPERS | STUDENTS | TEACHING Welcome!",
+          "retrievedAt": "2026-09-07T19:10:58.977Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1019-10",
+          "url": "https://people.smp.uq.edu.au/Duy-MinhDang/",
+          "excerpt": "I am a Senior Lecturer with the School of Mathematics and Physics at the University of Queensland , Brisbane, Australia.",
+          "retrievedAt": "2026-09-07T19:10:58.977Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1019-11",
+          "url": "https://people.smp.uq.edu.au/Duy-MinhDang/",
+          "excerpt": "I completed a PhD in Computer Science at the University of Toronto , where I specialized in numerical analysis and computational mathematics.",
+          "retrievedAt": "2026-09-07T19:10:58.977Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1019-12",
+          "url": "https://people.smp.uq.edu.au/Duy-MinhDang/",
+          "excerpt": "Following my PhD, I was very fortunate to work with Professor Peter Forsyth during my two years as an NSERC Postdoctoral Fellow at the University of Waterloo, focusing on portfolio optimization.",
+          "retrievedAt": "2026-09-07T19:10:58.977Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1019-13",
+          "url": "https://people.smp.uq.edu.au/Duy-MinhDang/",
+          "excerpt": "Widely regarded as one of the pioneers in computational finance, Peter's work-- particularly in the development and application of partial differential equation (PDE) methods -- has laid the foundation for many of the numerical techniques now standard in both academia and industry.",
+          "retrievedAt": "2026-09-07T19:10:58.977Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1019-14",
+          "url": "https://people.smp.uq.edu.au/Duy-MinhDang/",
+          "excerpt": "He is not only an exceptional researcher but also a generous mentor and a friend.",
+          "retrievedAt": "2026-09-07T19:10:58.977Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1019-15",
+          "url": "https://people.smp.uq.edu.au/Duy-MinhDang/",
+          "excerpt": "Since joining UQ in September 2014, I have led the Master of Financial Mathematics (MFinMath) Program, helping shape it into one of Australia's largest through strategic and sustained leadership.",
+          "retrievedAt": "2026-09-07T19:10:58.977Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1019-16",
+          "url": "https://people.smp.uq.edu.au/Duy-MinhDang/",
+          "excerpt": "A key part of this transformation has been enhancing our teaching methodologies and cultivating a strong student and alumni community.",
+          "retrievedAt": "2026-09-07T19:10:58.977Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:12:21.340Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1020": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.dmu.ac.uk/about-dmu/academic-staff/business-and-law/tuan-luong/tuan-luong.aspx",
         "http://www.tuanluong.com/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1020-1",
+          "url": "https://www.dmu.ac.uk/about-dmu/academic-staff/business-and-law/tuan-luong/tuan-luong.aspx",
+          "excerpt": "Festival Who we work with Recruit our students and graduates Venue hire and event space Campus Go to Campus Estates and facilities DMU Museum Leisure services Sustainability Transport and car parking Scroll through campus Venue hire and event space Where to eat and drink Engage with us Go to Engage with us Sustainable Development Goals Public engagement Alumni - DMU for Life Work with us Confucius Institute Events Current students Go to Current students Student support - The Student Gateway MyDMU Student resources Student news Campus security Student safety Building opening times Are You Okay?",
+          "retrievedAt": "2026-09-07T19:11:01.239Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1020-2",
+          "url": "https://www.dmu.ac.uk/about-dmu/academic-staff/business-and-law/tuan-luong/tuan-luong.aspx",
+          "excerpt": "HealthyDMU – your health and wellbeing Mentoring for all DMUsport DMU Careers Team Academic calendar Making online payments More About DMU Home Full listing of DMU academic staff Dr Tuan Anh Luong Job: Associate Professor Faculty: Business and Law School/department: Leicester Castle Business School Address: De Montfort University, The Gateway, Leicester, LE1 9BH T: 0116 257 7262 E: tuan.",
+          "retrievedAt": "2026-09-07T19:11:01.239Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1020-3",
+          "url": "https://www.dmu.ac.uk/about-dmu/academic-staff/business-and-law/tuan-luong/tuan-luong.aspx",
+          "excerpt": "com Close all sections Open all sections Personal profile Tuan Anh Luong is currently an Associate Professor at De Montfort University.",
+          "retrievedAt": "2026-09-07T19:11:01.239Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1020-4",
+          "url": "https://www.dmu.ac.uk/about-dmu/academic-staff/business-and-law/tuan-luong/tuan-luong.aspx",
+          "excerpt": "He is also the Vice Director of the Institute for Research in Economics, Environment and Data Science.",
+          "retrievedAt": "2026-09-07T19:11:01.239Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1020-5",
+          "url": "https://www.dmu.ac.uk/about-dmu/academic-staff/business-and-law/tuan-luong/tuan-luong.aspx",
+          "excerpt": "His research focuses on using firm-level data to gain insights on the impacts of globalization on firms&rsquo; performance, labour market and recently on the environment.",
+          "retrievedAt": "2026-09-07T19:11:01.239Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1020-6",
+          "url": "https://www.dmu.ac.uk/about-dmu/academic-staff/business-and-law/tuan-luong/tuan-luong.aspx",
+          "excerpt": "He is particularly interested in the intersections between Globalization and Climate Change.",
+          "retrievedAt": "2026-09-07T19:11:01.239Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1020-7",
+          "url": "https://www.dmu.ac.uk/about-dmu/academic-staff/business-and-law/tuan-luong/tuan-luong.aspx",
+          "excerpt": "His work was published in the Journal of Development Economics, Canadian Journal of Economics, Journal of Comparative Economics, the World Economy, Review of International Economics, among others.",
+          "retrievedAt": "2026-09-07T19:11:01.239Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1020-8",
+          "url": "https://www.dmu.ac.uk/about-dmu/academic-staff/business-and-law/tuan-luong/tuan-luong.aspx",
+          "excerpt": "Research group affiliations Royal Economic Society Agricultural Economic Society American Economic Association China Trade Research Group Empirical Investigation in Trade and Investment International Economic and Finance Society Asia Pacific Trade Seminar MidWest Conference in Trade Australian Trade Workshop Publications and outputs 1.",
+          "retrievedAt": "2026-09-07T19:11:01.239Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1020-9",
+          "url": "http://www.tuanluong.com/",
+          "excerpt": "Tuan Anh Luong - Home Tuan Anh Luong Home Achievements CV Publications Fundings Research Teaching Data Economics of Financial Markets I am in the Media About me I am an academic researcher specializing in sustainable development, with a focus on using firm-level data to understand the impacts of globalization and climate change.",
+          "retrievedAt": "2026-09-07T19:11:01.714Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1020-10",
+          "url": "http://www.tuanluong.com/",
+          "excerpt": "My work contributes to building a more sustainable future through evidence-based research and policy recommendations.",
+          "retrievedAt": "2026-09-07T19:11:01.714Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1020-11",
+          "url": "http://www.tuanluong.com/",
+          "excerpt": "As a co-founder of the Vietnam Symposium in Global Economy and an active member of various international research organizations, I am committed to fostering collaboration between academia and policymakers to address global challenges including food security, energy transition, and climate change impacts on public health and labor markets.",
+          "retrievedAt": "2026-09-07T19:11:01.714Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1020-12",
+          "url": "http://www.tuanluong.com/",
+          "excerpt": "Associate Professor of Economics Faculty of Business and Law De Montfort University Office: Hugh Aston Building Room 2.",
+          "retrievedAt": "2026-09-07T19:11:01.714Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1020-13",
+          "url": "http://www.tuanluong.com/",
+          "excerpt": "79 The Gateway Leicester LE1 9BH United Kingdom Email: &#65279; &#65279; here or here Webpage: here &copy; 2025 Dr.",
+          "retrievedAt": "2026-09-07T19:11:01.714Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:12:21.340Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1021": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.nottingham.ac.uk/business/people/lizkl1.phtml"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1021-1",
+          "url": "https://www.nottingham.ac.uk/business/people/lizkl1.phtml",
+          "excerpt": "ere: University of Nottingham Business School People Academic staff Dr Kim Ly Nottingham University Business School Print Home Study with us Open days Research Who we are Executive Education Careers and employability News People Academic staff Professional staff Research staff Special appointments Advisory Boards Professors of Practice Alumni Events Blog Connect with us Dr Kim Ly Profile Publications Teaching Research & Knowledge Exchange MSc (Bangor University), PhD (University of Glasgow) Assistant Professor in Finance, Risk and Banking Department: Finance, Accounting and Banking E-mail: Kim.",
+          "retrievedAt": "2026-09-07T19:11:02.439Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1021-2",
+          "url": "https://www.nottingham.ac.uk/business/people/lizkl1.phtml",
+          "excerpt": "uk Tel: +44 (0) 115 9515257 Location: B27 (South Building, Jubilee Campus) Kim Cuong Ly graduated from Bangor University for a MSc degree in Banking and Finance (Distinction) (2012) and University of Glasgow for a PhD degree in Accounting and Finance (2017).",
+          "retrievedAt": "2026-09-07T19:11:02.439Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1021-3",
+          "url": "https://www.nottingham.ac.uk/business/people/lizkl1.phtml",
+          "excerpt": "Prior to this appointment, she worked as a lecturer in Finance at Swansea University.",
+          "retrievedAt": "2026-09-07T19:11:02.439Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1021-4",
+          "url": "https://www.nottingham.ac.uk/business/people/lizkl1.phtml",
+          "excerpt": "She achieved the best researcher in Finance award (2018) and Staff Research award (2019) in Accounting and Finance department, Swansea University.",
+          "retrievedAt": "2026-09-07T19:11:02.439Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1021-5",
+          "url": "https://www.nottingham.ac.uk/business/people/lizkl1.phtml",
+          "excerpt": "She was nominated to be a representative of Accounting and Finance department in the Central Panel assessors of School of Management in Swansea University?",
+          "retrievedAt": "2026-09-07T19:11:02.439Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1021-6",
+          "url": "https://www.nottingham.ac.uk/business/people/lizkl1.phtml",
+          "excerpt": "She published in Journal of Corporate Finance, Journal of Financial Stability, Journal of International Financial Markets, Institutions & Money, International Review of Financial Analysis, Research in International Business and Finance and Journal of Multinational Financial Management.",
+          "retrievedAt": "2026-09-07T19:11:02.439Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1021-7",
+          "url": "https://www.nottingham.ac.uk/business/people/lizkl1.phtml",
+          "excerpt": "She was awarded FY 2018 JSPS International Fellowships for Research in Japan (2018) and Nagoya IAR (Institute for Advanced Research) Short-term fellowship program (2019), IAR Short-Term Fellowship Program (2024) orcid.",
+          "retrievedAt": "2026-09-07T19:11:02.439Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1021-8",
+          "url": "https://www.nottingham.ac.uk/business/people/lizkl1.phtml",
+          "excerpt": "org/0000-0001-5856-4560 Recent Publications The following lists my publications from 2014 to the present day.",
+          "retrievedAt": "2026-09-07T19:11:02.439Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:12:21.340Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1022": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://research.monash.edu/en/persons/binh-do/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1022-1",
+          "url": "https://research.monash.edu/en/persons/binh-do/",
+          "excerpt": "Binh Do - Monash University Skip to main navigation Skip to search Skip to main content Monash University Home Search content at Monash University Home Profiles Research units Research Infrastructure Projects Outputs Prizes Activities Press/Media View Scopus Profile Binh Do Dr Senior Lecturer , Banking & Finance https://orcid.",
+          "retrievedAt": "2026-09-07T19:11:02.953Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1022-2",
+          "url": "https://research.monash.edu/en/persons/binh-do/",
+          "excerpt": "Do monash edu 2002 2021 Research activity per year Overview Network Projects (3) Outputs (10) Personal profile Biography Dr Binh Do is a Senior Lecturer in Finance with the Department of Banking and Finance.",
+          "retrievedAt": "2026-09-07T19:11:02.953Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1022-3",
+          "url": "https://research.monash.edu/en/persons/binh-do/",
+          "excerpt": "Dr Do has published in leading international journals including Journal of Banking and Finance, Financial Analysts Journal, Journal of Futures Markets and Journal of Financial Research.",
+          "retrievedAt": "2026-09-07T19:11:02.953Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1022-4",
+          "url": "https://research.monash.edu/en/persons/binh-do/",
+          "excerpt": "He lectures in derivatives units and received Dean's Commendation for Outstanding Teaching in 2011.",
+          "retrievedAt": "2026-09-07T19:11:02.953Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1022-5",
+          "url": "https://research.monash.edu/en/persons/binh-do/",
+          "excerpt": "Research area keywords Short selling Statistical arbitrage Derivatives Media and asset pricing Projects Projects per year 2008 2008 2010 2014 2015 3 Finished Projects per year Fundamental risk and statistical arbitrage in equity markets Do, B.",
+          "retrievedAt": "2026-09-07T19:11:02.953Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1022-6",
+          "url": "https://research.monash.edu/en/persons/binh-do/",
+          "excerpt": "(Primary Chief Investigator (PCI)) Accounting & Finance Association of Australia and New Zealand 1/07/14 → 30/06/15 Project : Research Understanding the Economic Nature of the Effect of Media Coverage on the Cross-section of Stock Returns.",
+          "retrievedAt": "2026-09-07T19:11:02.953Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1022-7",
+          "url": "https://research.monash.edu/en/persons/binh-do/",
+          "excerpt": "(Chief Investigator (CI)) Accounting & Finance Association of Australia and New Zealand 15/06/10 → 30/11/11 Project : Research Is equity pairs trading profitable?",
+          "retrievedAt": "2026-09-07T19:11:02.953Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1022-8",
+          "url": "https://research.monash.edu/en/persons/binh-do/",
+          "excerpt": "(Chief Investigator (CI)) Accounting & Finance Association of Australia and New Zealand 1/08/08 → 30/11/09 Project : Research Research output Research output per year 2002 2012 2016 2021 10 Article Research output per year Research output per year Pairs trading and idiosyncratic cash flow risk Do, B.",
+          "retrievedAt": "2026-09-07T19:11:02.953Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:12:21.340Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1023": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://uwm.edu/biomedical-sciences-healthcare-administration/directory/trinh-hanh/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1023-1",
+          "url": "https://uwm.edu/biomedical-sciences-healthcare-administration/directory/trinh-hanh/",
+          "excerpt": "ealth Care Administration Site Menu Academics All Academic Programs Major Minor Master&#8217;s Doctoral Accelerated Graduate Degree Certificate Pre-professional Student Resources Research Research Overview Laboratories Centers Community About About Overview Request Information Alumni Events Faculty &#038; Staff Directory Contact For Faculty &#038; Staff Request Info Visit Give Apply Resources for You Future Students Current Students International Students Parents & Family Faculty & Staff Alumni & Friends Quicklinks Canvas PAWS Email Microsoft 365 Libraries Site Search What can we help you find?",
+          "retrievedAt": "2026-09-07T19:11:04.654Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1023-2",
+          "url": "https://uwm.edu/biomedical-sciences-healthcare-administration/directory/trinh-hanh/",
+          "excerpt": "Search for: Search Search collection Search School of Biomedical Sciences & Health Care Administration Search all UWM Home Faculty & Staff Directory Hanh Trinh All People hanht@uwm.",
+          "retrievedAt": "2026-09-07T19:11:04.654Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1023-3",
+          "url": "https://uwm.edu/biomedical-sciences-healthcare-administration/directory/trinh-hanh/",
+          "excerpt": "edu Directory Categories Faculty Emeriti Hanh Trinh, PhD Associate Professor Emeritus , Health Care Administration Speaker Topics Health Care Costs Managed Care and Its Marketplace Operations and Human Resources Management Strategic Management of the Health Care Industry Interests & Expertise Hanh Trinh is a member of the Academy of Management, Southern Management Association, Association of Health Services Research and Wisconsin Network for Health Policy Research.",
+          "retrievedAt": "2026-09-07T19:11:04.654Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1023-4",
+          "url": "https://uwm.edu/biomedical-sciences-healthcare-administration/directory/trinh-hanh/",
+          "excerpt": "He has presented papers at the national and international conferences and currently reviews manuscripts for a number of academic journals.",
+          "retrievedAt": "2026-09-07T19:11:04.654Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1023-5",
+          "url": "https://uwm.edu/biomedical-sciences-healthcare-administration/directory/trinh-hanh/",
+          "excerpt": "He has published in management and health care journals, including Health Services Research, Health Care Management Review, Health Services Management Research, Health Care Management Science, Advances in Health Care Management, Quality Management in Health Care, Health Marketing Quarterly , and Journal of Professional Services Marketing.",
+          "retrievedAt": "2026-09-07T19:11:04.654Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1023-6",
+          "url": "https://uwm.edu/biomedical-sciences-healthcare-administration/directory/trinh-hanh/",
+          "excerpt": "For information on what information is collected, how this information is used, and with whom the information is shared please review UWM’s website privacy statement.",
+          "retrievedAt": "2026-09-07T19:11:04.654Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1023-7",
+          "url": "https://uwm.edu/biomedical-sciences-healthcare-administration/directory/trinh-hanh/",
+          "excerpt": "Close School of Biomedical Sciences & Health Care Administration Enderis Hall 2400 E.",
+          "retrievedAt": "2026-09-07T19:11:04.654Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1023-8",
+          "url": "https://uwm.edu/biomedical-sciences-healthcare-administration/directory/trinh-hanh/",
+          "excerpt": "Milwaukee WI 53211 Contact Facebook Twitter YouTube Instagram Map & Directory Safety Free Speech Employment News Events For Business &#038; Community For Media Website Privacy Statement Accessibility Feedback Universities of Wisconsin Copyright &copy; University of Wisconsin-Milwaukee and University of Wisconsin Board of Regents.",
+          "retrievedAt": "2026-09-07T19:11:04.654Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:12:21.340Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1024": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://experts.griffith.edu.au/54199-david-huynh",
         "https://sites.google.com/view/david-huynh"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1024-1",
+          "url": "https://sites.google.com/view/david-huynh",
+          "excerpt": "David Huynh Search this site Embedded Files Skip to main content Skip to navigation David Huynh Home Research Teaching Others David Huynh Home Research Teaching Others More Home Research Teaching Others Nhan Huynh - David davidhuynh.",
+          "retrievedAt": "2026-09-07T19:11:05.907Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1024-2",
+          "url": "https://sites.google.com/view/david-huynh",
+          "excerpt": "I am a Lecturer (Assistant Professor) in Finance and Financial Planning at Griffith Business School, Griffith University, Australia.",
+          "retrievedAt": "2026-09-07T19:11:05.907Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1024-3",
+          "url": "https://sites.google.com/view/david-huynh",
+          "excerpt": "My research has been published in leading journals, including the International Review of Financial Analysis , Journal of International Financial Markets, Institutions and Money , Economics Letters , International Review of Economics & Finance , Pacific-Basin Finance Journal , Finance Research Letters , and Journal of Behavioral and Experimental Finance .",
+          "retrievedAt": "2026-09-07T19:11:05.907Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1024-4",
+          "url": "https://sites.google.com/view/david-huynh",
+          "excerpt": "In recognition of my research contributions, I have received several Best Paper Awards at conferences such as AFAANZ, ACBES, and RSFE , and have secured more than A$60,000 in competitive research funding from Macquarie University, RMIT, Griffith University, and other institutions.",
+          "retrievedAt": "2026-09-07T19:11:05.907Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1024-5",
+          "url": "https://sites.google.com/view/david-huynh",
+          "excerpt": "I have also presented my work at major international conferences, including AFA, AAA, FMA, EFMA, SFA, FIRN , and SWFA , and currently serve as an ad hoc reviewer for a range of peer-reviewed journals in finance and economics.",
+          "retrievedAt": "2026-09-07T19:11:05.907Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1024-6",
+          "url": "https://sites.google.com/view/david-huynh",
+          "excerpt": "⏩I currently serve as the Research Seminar Coordinator for the Finance and Financial Planning Discipline.",
+          "retrievedAt": "2026-09-07T19:11:05.907Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1024-7",
+          "url": "https://sites.google.com/view/david-huynh",
+          "excerpt": "🎓 Education: PhD in Applied Finance - Macquarie University (2021 - 2024) Master of Finance and Banking (Advanced)- Swinburne University of Technology (2018 - 2020) Double bachelor&#39;s degrees (Finance and Business English) - Banking University of Ho Chi Minh City (2012-2017) 📚 Research Interests: Behavioral Finance & Financial Literacy Fitech & Financial Services Corporate Finance 🔊 News : August 2026: My paper is accepted for publication by Business Strategy and the Environment (ABDC-A; ABS 3*) .",
+          "retrievedAt": "2026-09-07T19:11:05.907Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1024-8",
+          "url": "https://sites.google.com/view/david-huynh",
+          "excerpt": "My paper received a Revise & Resubmit (R&R) decision from the International Review of Financial Analysis (ABDC-A ; ABS 3* ) .",
+          "retrievedAt": "2026-09-07T19:11:05.907Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:12:21.340Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1025": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://robinson.gsu.edu/profile/thao-le/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1025-1",
+          "url": "https://robinson.gsu.edu/profile/thao-le/",
+          "excerpt": "Thao Le - Georgia State Robinson College of Business Alumni Faculty & Staff Students Robinson College of Business General Resources Help for Existing Students Career Advancement Center Scholarships Student Organizations and Clubs What kind of laptop do I need?",
+          "retrievedAt": "2026-09-07T19:11:06.809Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1025-2",
+          "url": "https://robinson.gsu.edu/profile/thao-le/",
+          "excerpt": "AR iCollege Digital Learning@GSU Campus Services Get Emergency Alerts Parking & Transportation PantherDining Bookstore PantherCard MOBILE Useful Links Directory (Login Required) Student A-Z Index Calendar Library Help Center Safety & Security Facilities Ethics Hotline MyHousing (STARREZ) Portal Get The LiveSafe App Robinson College of Business Intranet Services TheHUB Form Requests Research Workshops Policies & Procedures Board of Regents USG Copyright Policy Resources University Style Guide Robinson Marketing & Communications Page College Technology Services Georgia State Menu Finance & Admin.",
+          "retrievedAt": "2026-09-07T19:11:06.809Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1025-3",
+          "url": "https://robinson.gsu.edu/profile/thao-le/",
+          "excerpt": "Toolkit Forms Training University Policies University Senate Staff Council Budget & Planning Disbursement & Accts.",
+          "retrievedAt": "2026-09-07T19:11:06.809Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1025-4",
+          "url": "https://robinson.gsu.edu/profile/thao-le/",
+          "excerpt": "Handbook Campus Services Facilities Management URSA Mail Services Printing PantherDining & Catering Parking & Transportation PantherCard MOBILE Travel Reservations PR & Marketing Communications Legal Services Institutional Effectiveness Emeriti Association Technology Email Send A File Digital Measures PAWS GoSOLAR iCollege OneUSG Connect Panthermart Spectrum (requires VPN) Asset Works Training and Learning CETLOE Stacks for State Useful Links Directory (Login Required) Student A-Z Index Calendar Academic Calendar Library Help Center Safety & Security Facilities Ethics Hotline Identity & Comms.",
+          "retrievedAt": "2026-09-07T19:11:06.809Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1025-5",
+          "url": "https://robinson.gsu.edu/profile/thao-le/",
+          "excerpt": "ToolKit College to Career Get The LiveSafe App --> Robinson Robinson College of Business Georgia State Menu Robinson College of Business Georgia State Menu End Remove Directory Search Fields --> Georgia State Campus Directory End Remove Directory Search Radio --> Robinson College Georgia State Home Main navigation Discover Robinson Message from the Dean Leadership Rankings and Recognition Commencement President's and Dean's Lists Honors Day Our Strategic Plan – Accelerate 2025 About J.",
+          "retrievedAt": "2026-09-07T19:11:06.809Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1025-6",
+          "url": "https://robinson.gsu.edu/profile/thao-le/",
+          "excerpt": "Mack Robinson The Atlanta Advantage AI at Robinson Robinson Stories News Center Identity, Placemaking & Belonging Contact Us Calendar of Events Campus Locations Office of Marketing and Communications Careers Degrees & Programs Undergraduate Programs Graduate Programs MBA Programs Specialized Master's Programs Dual Degree Programs Graduate Certificates International Engagement Certificate Programs Minor Offerings Doctoral Programs Ph.",
+          "retrievedAt": "2026-09-07T19:11:06.809Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1025-7",
+          "url": "https://robinson.gsu.edu/profile/thao-le/",
+          "excerpt": "demic Advisement Career Advancement Center Student Experience Experiential Signature Programs Honors Experience in Business Panthers Accelerated Career Experience Robinson Immersive Sophomore Experience Undergraduate Business Research Experience WomenLead Panther Immersion Programs Panthers in Charlotte Panthers in Chicago Panthers in the District Panthers on Wall Street Admissions Undergraduate Admissions Graduate Admissions Executive MBA MBA Specialized Master's Programs Dual Degree Programs Flexible Graduate Certificates in Innovation Doctoral Admissions Doctor of Business Administration Ph.",
+          "retrievedAt": "2026-09-07T19:11:06.809Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1025-8",
+          "url": "https://robinson.gsu.edu/profile/thao-le/",
+          "excerpt": "e Honorary Board GSU-CIBER Advisory Council Institute of Health Administration Advisory Board School of Accountancy Advisory Council Faculty & Research Faculty Directory Research Workshops &#038; Events Faculty Job Openings Research Centers Center for Digital Innovation Center for the Economic Analysis of Risk Center for Engaged Business Research Center for Health Services Research Center for International Business Education &#038; Research Center for Research in Information Systems Center for Research in Information Security and Privacy Economic Forecasting Center Academic Departments Cecil B.",
+          "retrievedAt": "2026-09-07T19:11:06.809Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:12:21.340Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1026": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.clemson.edu/cbshs/about/profiles/index.html?userid=ktruong"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1026-1",
+          "url": "https://www.clemson.edu/cbshs/about/profiles/index.html?userid=ktruong",
+          "excerpt": "Khoa Dang Truong | Faculty and Staff Profile Skip to content let's begin --> Clemson University Clemson University Search Menu Close Sorry, your browser does not support inline SVG.",
+          "retrievedAt": "2026-09-07T19:11:07.477Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1026-2",
+          "url": "https://www.clemson.edu/cbshs/about/profiles/index.html?userid=ktruong",
+          "excerpt": "Apply Giving News Resources for Current Students Faculty & Staff Parents Alumni Clemson University Academics Forward Arrow Back Arrow Back Academics Home Employment Opportunities Explore Experiential Learning Colleges College of Agriculture, Forestry and Life Sciences College of Architecture, Art and Construction College of Arts and Humanities College of Behavioral, Social and Health Sciences Wilbur O.",
+          "retrievedAt": "2026-09-07T19:11:07.477Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1026-3",
+          "url": "https://www.clemson.edu/cbshs/about/profiles/index.html?userid=ktruong",
+          "excerpt": "and Ann Powers College of Business College of Education College of Engineering, Computing and Applied Sciences College of Science Harvey S.",
+          "retrievedAt": "2026-09-07T19:11:07.477Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1026-4",
+          "url": "https://www.clemson.edu/cbshs/about/profiles/index.html?userid=ktruong",
+          "excerpt": "rrow Back Building Healthy Communities Engagement Forward Arrow Engagement Engagement Overview Global Engagement/Study Abroad Industry and Community Partnerships Community, Engagement, Belonging and Access Back Arrow Back Apply Giving News Sikes Hall Icon Main Menu Forward Arrow Icon Back Arrow Icon Back Clemson University Academics Academics Home Employment Opportunities Explore Experiential Learning Colleges College of Agriculture, Forestry and Life Sciences College of Architecture, Art and Construction College of Arts and Humanities College of Behavioral, Social and Health Sciences Wilbur O.",
+          "retrievedAt": "2026-09-07T19:11:07.477Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1026-5",
+          "url": "https://www.clemson.edu/cbshs/about/profiles/index.html?userid=ktruong",
+          "excerpt": "and Ann Powers College of Business College of Education College of Engineering, Computing and Applied Sciences College of Science Harvey S.",
+          "retrievedAt": "2026-09-07T19:11:07.477Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1026-6",
+          "url": "https://www.clemson.edu/cbshs/about/profiles/index.html?userid=ktruong",
+          "excerpt": "Modeling and Response Center for Research on Health Disparities Clemson Rural Health Human Factors Institute Institute for Engaged Aging Institute for Parks Social Media Listening Center Building Healthy Communities Engagement show submenu for Engagement Engagement Overview Global Engagement/Study Abroad Industry and Community Partnerships Community, Engagement, Belonging and Access Clemson Home College of Behavioral, Social and Health Sciences About Current: About Faculty and Staff Profile Khoa Dang Truong Associate Professor Office: 509 Edward Halls Phone: 864-656-5865 Email: KTRUONG@clemson.",
+          "retrievedAt": "2026-09-07T19:11:07.477Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1026-7",
+          "url": "https://www.clemson.edu/cbshs/about/profiles/index.html?userid=ktruong",
+          "excerpt": "onomics Hue College of Economics (Vietnam) 1993 Courses Taught UNDERGRADUATE Overview of Healthcare Systems Finance and Budgeting for Healthcare Organizations Research and Evaluation Methods Healthcare Economics Creative Inquiry in Public Health Creative Inquiry in Entrepreneurship Independent Study Honors Thesis GRADUATE Health Economics Research Design and Measurement Healthcare Delivery Systems Health Policy Outcome Assessment and Evaluation in Health Services Quantitative Analyses in Health Research & Evaluation Seminar in Applied Health Research and Evaluation Independent Study Profile Dr.",
+          "retrievedAt": "2026-09-07T19:11:07.477Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1026-8",
+          "url": "https://www.clemson.edu/cbshs/about/profiles/index.html?userid=ktruong",
+          "excerpt": "His research is data-driven and has been published in top-tier public health journals with findings cited by national media.",
+          "retrievedAt": "2026-09-07T19:11:07.477Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:12:21.340Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1027": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.bu.edu/sph/profile/kevin-nguyen/",
         "https://www.khnguyen.com/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1027-1",
+          "url": "https://www.bu.edu/sph/profile/kevin-nguyen/",
+          "excerpt": "of Public Health ​ Admissions Research Education Policy and Practice Give ​ Exit Menu Search Search for: Newsroom School News SPH This Week Newsletter SPH in the Media SPH This Year Magazine News Categories Contact Us Research Centers and Groups Academic Departments Biostatistics Community Health Sciences Environmental Health Epidemiology Global Health Health Law, Policy & Management Education MPH Online MPH MS PhD DrPH All Degrees & Programs Public Health Writing Workforce Development Training Centers Partnerships Apply Now Admissions Applying to BUSPH Degrees and Programs Why Study at BUSPH?",
+          "retrievedAt": "2026-09-07T19:11:08.173Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1027-2",
+          "url": "https://www.bu.edu/sph/profile/kevin-nguyen/",
+          "excerpt": "and Campus Visits Admissions Team Student Ambassadors Frequently Asked Questions Events Public Health Conversations Full Events Calendar Alumni and Friends Events Commencement Ceremony SPH Awards Practice Activist Lab Careers & Practicum For Students For Employers For Faculty & Staff For Alumni Graduate Employment & Practicum Data Connect with Career & Practicum Office Public Health Post Public Health Post Fellowship About SPH at a Glance Advisory Committees Strategy Map Senior Leadership Accreditation Diversity, Equity, Inclusion, and Justice Directory Contact SPH Giving 50 Years, One Mission.",
+          "retrievedAt": "2026-09-07T19:11:08.173Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1027-3",
+          "url": "https://www.bu.edu/sph/profile/kevin-nguyen/",
+          "excerpt": "For the health of all Support Our Students Support Our Research Support Our Impact Support Our Future How to Give Students Faculty &#038; Staff Alumni Directory Read More News insurance How Medicaid ACOs Can Lead the US Towards Maternal Health Equity climate and health Lessons from the Pacific: A Q&#038;A With Nik Karr (SPH&#8217;13) Profiles Kevin Nguyen , PhD Assistant Professor , Health Law, Policy & Management - Boston University School of Public Health (617) 358-1904 send-email nguyen@bu.",
+          "retrievedAt": "2026-09-07T19:11:08.173Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1027-4",
+          "url": "https://www.bu.edu/sph/profile/kevin-nguyen/",
+          "excerpt": "edu Talbot (T Bldg) View Full Profile at BUMC Biography Kevin Nguyen is an Assistant Professor in the Department of Health Law, Policy, and Management at the Boston University School of Public Health and co-director of the BU Medicaid Policy Lab.",
+          "retrievedAt": "2026-09-07T19:11:08.173Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1027-5",
+          "url": "https://www.bu.edu/sph/profile/kevin-nguyen/",
+          "excerpt": "His research examines the roles of Medicaid policies and care delivery reforms on quality and equity of care, with expertise in Medicaid managed care.",
+          "retrievedAt": "2026-09-07T19:11:08.173Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1027-6",
+          "url": "https://www.bu.edu/sph/profile/kevin-nguyen/",
+          "excerpt": "His work leverages econometric methods and varied data sources (all-payer claims data, electronic health records, patient surveys, provider directories, and patient registries).",
+          "retrievedAt": "2026-09-07T19:11:08.173Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1027-7",
+          "url": "https://www.bu.edu/sph/profile/kevin-nguyen/",
+          "excerpt": "Ongoing work spans the topics of Medicaid managed care plan performance, Medicaid accountable care organizations (ACOs), safety net program participation, and inequities in patient experiences of care.",
+          "retrievedAt": "2026-09-07T19:11:08.173Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1027-8",
+          "url": "https://www.bu.edu/sph/profile/kevin-nguyen/",
+          "excerpt": "He completed his PhD in Health Services Research at Brown University School of Public Health in 2021 and received a MS in Health Policy and Management at Harvard T.",
+          "retrievedAt": "2026-09-07T19:11:08.173Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1027-9",
+          "url": "https://www.khnguyen.com/",
+          "excerpt": "Nguyen HOME BIO RESEARCH CONTACT More Use tab to navigate through the menu items.",
+          "retrievedAt": "2026-09-07T19:11:09.140Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1027-10",
+          "url": "https://www.khnguyen.com/",
+          "excerpt": "About Me I am an Assistant Professor in the Department of Health Law, Policy, and Management at the Boston University School of Public Health and Co-Director of the Boston University Medicaid Policy Lab .",
+          "retrievedAt": "2026-09-07T19:11:09.140Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1027-11",
+          "url": "https://www.khnguyen.com/",
+          "excerpt": "I completed my PhD in the Department of Health Services, Policy, and Practice at Brown University School of Public Health in 2021.",
+          "retrievedAt": "2026-09-07T19:11:09.140Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1027-12",
+          "url": "https://www.khnguyen.com/",
+          "excerpt": "​ My research examines the roles of Medicaid policies and care delivery reforms on improving access to, quality of, and equity of care to historically marginalized populations.",
+          "retrievedAt": "2026-09-07T19:11:09.140Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1027-13",
+          "url": "https://www.khnguyen.com/",
+          "excerpt": "Ongoing work spans the topics of Medicaid managed care plan performance, Medicaid accountable care organizations (ACOs), safety net program participation, and inequities in patient experiences of care.",
+          "retrievedAt": "2026-09-07T19:11:09.140Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1027-14",
+          "url": "https://www.khnguyen.com/",
+          "excerpt": "My work has been covered by outlets including NPR, Kaiser Health News, and US News & World Report.",
+          "retrievedAt": "2026-09-07T19:11:09.140Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:12:21.340Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1028": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.governanceinstitute.edu.au/centres/national-centre-for-social-and-economic-modelling-natsem/person-3485/hai-anh-la"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.governanceinstitute.edu.au/centres/national-centre-for-social-and-economic-modelling-natsem/person-3485/hai-anh-la: fetch failed"
+      ],
+      "updatedAt": "2026-09-07T19:12:21.340Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1029": {
       "overview": "pending",
