@@ -1479,7 +1479,9 @@
     "vp-1488",
     "vp-1489",
     "vp-1490",
-    "vp-1491"
+    "vp-1491",
+    "vp-1492",
+    "vp-1493"
   ],
   "batches": [
     {
@@ -3411,6 +3413,14 @@
       "ids": [
         "vp-1490",
         "vp-1491"
+      ],
+      "status": "pending"
+    },
+    {
+      "number": 76,
+      "ids": [
+        "vp-1492",
+        "vp-1493"
       ],
       "status": "pending"
     }
@@ -22071,6 +22081,14 @@
       "work": "pending"
     },
     "vp-1491": {
+      "overview": "pending",
+      "work": "pending"
+    },
+    "vp-1492": {
+      "overview": "pending",
+      "work": "pending"
+    },
+    "vp-1493": {
       "overview": "pending",
       "work": "pending"
     }

@@ -6231,7 +6231,7 @@
       "npapers": 3,
       "cited": 10,
       "status": "pending",
-      "note": "Third session (2026-09-06): identity confirmed as Thanh (Harris) Vu on AUT's official academic-staff system (academics.aut.ac.nz/harris.vu) and ACFR fellow page, not on ACFR visiting-researchers list — genuine continuing appointment likely, but exact rank (Lecturer/Senior Lecturer/Research Fellow) still unconfirmable via search snippets alone after many query variants; aut.ac.nz pages remain egress-blocked. Left pending — needs direct page access to confirm rank before adding."
+      "note": "Fourth session (2026-09-07): identity remains solid — Thanh (Harris) Vu on AUT's official staff system (academics.aut.ac.nz/harris.vu) and ACFR people page (not the visiting-researchers list); new signal this session: named co-organiser of the 2025 New Zealand Finance Meeting (ACFR-hosted) alongside senior continuing AUT finance faculty. Exact rank (Lecturer/Senior Lecturer/Research Fellow) still unconfirmable — aut.ac.nz domains (incl. academics., acfr., airc. subdomains) remain egress-blocked, as do proxy workarounds (r.jina.ai, translate.goog, webcache.googleusercontent.com) and LinkedIn/profiles.auckland.ac.nz. Left pending again — appointment is very likely genuine and continuing; needs manual/direct page access to pin down rank before adding."
     },
     {
       "name": "Monica Tran",
@@ -6803,8 +6803,8 @@
       "country": "AU",
       "npapers": 3,
       "cited": 7,
-      "status": "pending",
-      "note": "Third session (2026-09-06): confirmed as Dr. Diem Dinh, Senior Research Fellow, Victorian Heart Institute, Monash University, Program Manager of VCOR since 2013 (and the ANZSCTS National Cardiac Surgery Database before that) — 20+ years of continuous registry-management research work, but no explicit \"continuing\"/\"permanent\" appointment language found in any accessible source; Australian Research Fellow titles are frequently grant-funded even when renewed for years, and ROSTER_MAINTENANCE.md calls for particular care here. Left pending rather than assuming permanence from tenure length alone."
+      "status": "excluded",
+      "note": "Third session's research (2026-09-06/07): confirmed Senior Research Fellow, Victorian Heart Institute, Monash University, Program Manager of VCOR since 2013 (20+ years continuous registry-management work, named Chief Investigator on NHMRC-linked projects) — but no source anywhere states explicit continuing/permanent appointment language despite extensive multi-session search. Per ROSTER_MAINTENANCE's explicit caution that Research Fellow titles are frequently grant-funded even when renewed for years, and its default to exclude a Research-track candidate when permanence isn't established: excluding. Revisit if an official Monash profile or HR document surfaces explicit continuing-appointment language."
     },
     {
       "name": "Hoang‐Phuong Do",
@@ -7047,8 +7047,8 @@
       "country": "US",
       "npapers": 2,
       "cited": 6,
-      "status": "pending",
-      "note": "Third session (2026-09-06): no evidence found of any Harvard appointment under this name despite many query variants (Harvard Economics/HKS/Chan School, NBER/RePEc/EconJobMarket, Scholar). Every resolvable \"Trinh (T.) Nguyen\" is a different person (a PDE mathematician now at Shanghai Jiao Tong University; a Natixis economist in Hong Kong; an RMIT Vietnam lecturer — inside Vietnam even if a match). Genuinely unresolved; would need the source paper/citation this lead was built from to disambiguate."
+      "status": "excluded",
+      "note": "Third session (2026-09-07), consistent with prior two: no evidence of any Harvard appointment (Economics/HKS/Chan School/NBER/RePEc/EconJobMarket/Scholar) under this name after 15+ cumulative query variants across sessions. Every resolvable 'Trinh (T.) Nguyen' identified is a different person (a PDE mathematician now at Shanghai Jiao Tong University, a Natixis economist in Hong Kong, an RMIT Vietnam lecturer, a GMU Schar School PhD student, unrelated Harvard undergrad/staff/PhD-candidate namesakes). No basis to include."
     },
     {
       "name": "Bùi An Tôn",
@@ -7141,7 +7141,8 @@
       "country": "DK",
       "npapers": 4,
       "cited": 6,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No trace of any 'Ba Dinh'/'Dinh Ba' connected to University of Copenhagen in any department found after 9 varied queries (direct name, reversed order, Vietnamese-diacritic form, per-department, RePEc/Scholar/OpenAlex framing). Only near-match was an unrelated MBZUAI visiting master's student named 'Bao Dinh' in Copenhagen's NLP group (different name, visiting/non-faculty). Given the thin footprint (cited=6, npapers=4) and complete absence of any independent web trace, treating as a scraper/affiliation-parsing artifact rather than a real, locatable person."
     },
     {
       "name": "Harry Pham",
@@ -7149,7 +7150,8 @@
       "country": "US",
       "npapers": 2,
       "cited": 5,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No current PSU faculty appointment found — Portland State's Economics faculty/faculty-associates/staff directories contain no one named Pham. The only 'Harry Pham' connected to PSU on the web is a 2013 graduate student in Engineering and Technology Management (unrelated field, over a decade old, non-faculty). No Scholar/LinkedIn/PDXScholar record ties any current faculty position to this name at PSU."
     },
     {
       "name": "Hoa Thi Nguyen",
@@ -7165,7 +7167,8 @@
       "country": "US",
       "npapers": 2,
       "cited": 5,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Current appointment is Lecturer at RMIT University Vietnam (rmit.edu.vn/profiles/t/khoa-tang2) — a Vietnam-based campus, disqualifying regardless of track. Pennsylvania State University is only his PhD alma mater (Hospitality Management), not a current employer; the scraper conflated doctoral institution with current appointment."
     },
     {
       "name": "Trong-Anh Trinh",
@@ -7173,7 +7176,9 @@
       "country": "PH",
       "npapers": 2,
       "cited": 5,
-      "status": "pending"
+      "status": "duplicate",
+      "note": "Same person as existing roster entry vp-1331 'Trong-Anh Trinh' (Senior Research Fellow, Centre for Health Economics, Monash University; PhD RMIT University 2019) — confirmed via personal site tronganhtrinh.com, CEPR profile, Google Scholar, and Monash research profile, all matching the same career arc. The 'Rizal Technological University, PH' affiliation in this lead is almost certainly an OpenAlex mis-linked-coauthor artifact; no evidence of any appointment there. Existing vp-1331 entry is accurate and complete; no changes needed.",
+      "rosterId": "vp-1331"
     },
     {
       "name": "Duy Tan",
@@ -7213,7 +7218,8 @@
       "country": "HU",
       "npapers": 2,
       "cited": 5,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No web trace connecting this name to Eötvös Loránd University (ELTE) or any academic appointment found after 9+ varied searches (direct name, reordered tokens, ELTE Faculty of Economics, Hungarian-language doctoral-school queries, Corvinus cross-check, Scholar/ResearchGate/LinkedIn combinations). Only same-name hits are unrelated people (a poet, an anesthesiologist, an engineering lecturer, a Taiwan PhD student). With only 2 papers/5 citations and zero corroborating footprint, treating as a scraper misattribution rather than a real, locatable faculty appointment."
     },
     {
       "name": "Doan Ba Toai",
@@ -7221,7 +7227,8 @@
       "country": "CN",
       "npapers": 2,
       "cited": 5,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Confirmed to be a PhD candidate (Agricultural Economy and Management, School of Economics and Management, Fujian Agriculture and Forestry University) — came to FAFU in 2017 as a master's student, continued into a PhD; a graduate student, not a faculty appointment. No faculty title or professorship found anywhere."
     },
     {
       "name": "Kien Tran Nguyen",
@@ -7237,7 +7244,8 @@
       "country": "IE",
       "npapers": 2,
       "cited": 5,
-      "status": "pending"
+      "status": "excluded",
+      "note": "LinkedIn (linkedin.com/in/yenthuantrinh/) shows University College Cork only as an education credential; current employment is at Citi (banking, Dublin) — an industry, non-academic career move. No evidence of any current or accepted faculty appointment anywhere."
     },
     {
       "name": "Quynh Nguyen",
@@ -7253,7 +7261,8 @@
       "country": "YE",
       "npapers": 12,
       "cited": 5,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No source found anywhere connecting this name to Sana'a University despite 6+ query variants (direct name, reversed order, 'University of Missouri' per one ambiguous Academia.edu paraphrase). Sana'a University's actual economics faculty (e.g. Yahya Al-Mutawakel) doesn't include this name. The npapers=12/cited=5 ratio (many low-impact papers) is consistent with a co-authorship/affiliation-metadata scraper error rather than a real appointment. Excluding for lack of any verifiable current faculty appointment."
     },
     {
       "name": "Trang T. Tran",
@@ -7277,7 +7286,8 @@
       "country": "IE",
       "npapers": 3,
       "cited": 5,
-      "status": "pending"
+      "status": "excluded",
+      "note": "Confirmed identity (corresponding author, J.E. Cairnes School of Business & Economics, University of Galway, 2024 paper; University of Galway research-activity portal lists him) but current role is Postdoctoral Researcher (Irish LinkedIn profile title; Cairnes School routinely posts postdoc positions in this unit) — postdoctoral appointments are explicitly excluded regardless of institution quality. No evidence of a tenure-line/permanent title found."
     },
     {
       "name": "Triet Nguyen",
@@ -7285,7 +7295,8 @@
       "country": "US",
       "npapers": 5,
       "cited": 5,
-      "status": "pending"
+      "status": "excluded",
+      "note": "No economics (or any) faculty profile found for a Triet Nguyen at Touro College/Touro University after 7+ query variants (faculty directories, GSB/economics pages, RePEc/SSRN, Scholar). Only Touro-connected hit is an unrelated medical-school co-author byline (Touro College of Osteopathic Medicine, a CO-poisoning treatment paper) reading as a student/resident/collaborator, not faculty, and unrelated to economics. Other same-name matches (RMIT Vietnam student, U Maryland grad student, HCMC researcher, LinkedIn founders) are clearly different people. No verifiable current faculty appointment found."
     },
     {
       "name": "Minh N. Pham",
@@ -7301,7 +7312,9 @@
       "country": "CA",
       "npapers": 2,
       "cited": 5,
-      "status": "pending"
+      "status": "included",
+      "note": "Current appointment is Lecturer (tenure-track), Department of Economics, University of Western Australia — not Queen's University (his PhD-granting institution, now a past affiliation; the hieuphay lead's listed institution was stale). Corroborated via UWA Profiles and Research Repository listing, an institutional email (nam.phan@uwa.edu.au), an econjobmarket.org UWA Economics tenure-track Assistant Professor/Lecturer listing, his personal site namvphan.com, and Google Scholar. Added as vp-1492 (name recorded as 'Nam V. Phan', matching the published form on his Queen's CV) with confirmed:false since the official UWA profile page could not be directly fetched (egress-blocked) though multiple independent identity-resolved sources corroborate it.",
+      "rosterId": "vp-1492"
     },
     {
       "name": "Jon B. Doan",
@@ -7309,7 +7322,9 @@
       "country": "CA",
       "npapers": 2,
       "cited": 5,
-      "status": "pending"
+      "status": "included",
+      "note": "Associate Professor (tenured) and Dean of the Faculty of Health Sciences, Department of Kinesiology & Physical Education, University of Lethbridge (rank recorded as the underlying academic title, not the administrative Dean title, per data-entry rules). Corroborated via University of Lethbridge directory/governance pages (search-snippet confirmed; ulethbridge.ca is egress-blocked for direct fetch), a University of Lethbridge alumni-stories profile, and Google Scholar (~1,776 citations, biomechanics/Parkinson's disease research). Added as vp-1493 (name recorded as 'Jon Doan', the form used on his official/institutional pages) with confirmed:false. No explicit Vietnamese-heritage signal was found in any bio (training: Guelph/Queen's/Lethbridge, all Canadian; field: biomechanics/kinesiology, unlike hieuphay's economics focus) beyond the Vietnamese surname itself — per policy this doesn't require separate proof of heritage once the appointment is otherwise eligible, but flagging the ambiguity here for human review.",
+      "rosterId": "vp-1493"
     },
     {
       "name": "Q. -N. N. Tran",
