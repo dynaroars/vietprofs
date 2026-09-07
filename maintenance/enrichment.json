@@ -2014,7 +2014,9 @@
         "vp-0379",
         "vp-0380"
       ],
-      "status": "pending"
+      "status": "complete",
+      "startedAt": "2026-09-07T04:49:28.606Z",
+      "publishedAt": "2026-09-07T04:51:07.520Z"
     },
     {
       "number": 20,
@@ -27613,204 +27615,1037 @@
       "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0361": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://hankamer.baylor.edu/person/van-h-pham"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://hankamer.baylor.edu/person/van-h-pham: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T04:51:07.520Z",
+      "nextAction": "Retry fetching Baylor University Hankamer School of Business profile or discover alternate official faculty page."
     },
     "vp-0362": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://profiles.bu.edu/PhuongThao.Le"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0362-1",
+          "url": "https://profiles.bu.edu/PhuongThao.Le",
+          "excerpt": "Resources Funding Opportunities Community News and Events Help About / FAQ How to Request a Profile Request Help Log in to Profiles PhuongThao \"PT\" Le, PhD, MPH Assistant Professor Boston University School of Public Health Community Health Sciences PhD , University of California, Los Angeles MPH , Columbia University BS , University of California, Los Angeles Websites LinkedIn ORCID : 0000-0002-3393-8199 Overview Research Publications Honors Keywords Mentoring Contact Info PhuongThao Le, PhD, MPH, is Assistant Professor of Community Health Sciences at Boston University School of Public Health.",
+          "retrievedAt": "2026-09-07T04:49:29.944Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0362-2",
+          "url": "https://profiles.bu.edu/PhuongThao.Le",
+          "excerpt": "Her research focuses on examining mental health and sociocultural issues to inform the design, implementation, and evaluation of health programs and policies among marginalized populations globally.",
+          "retrievedAt": "2026-09-07T04:49:29.944Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0362-3",
+          "url": "https://profiles.bu.edu/PhuongThao.Le",
+          "excerpt": "She has worked on several NIH- and foundation-funded projects on topics such as cancer health disparities, human trafficking, migration, maternal and child health, and evidence-based mental health interventions in low- and middle-income countries.",
+          "retrievedAt": "2026-09-07T04:49:29.944Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0362-4",
+          "url": "https://profiles.bu.edu/PhuongThao.Le",
+          "excerpt": "She is currently PI of a K01 Fogarty/NIH-funded study to adapt and pilot a group-based stress management intervention among breast and gynecologic cancer patients in Viet Nam and co-I in several NIH-funded projects on mental health and implementation science capacity building.",
+          "retrievedAt": "2026-09-07T04:49:29.944Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0362-5",
+          "url": "https://profiles.bu.edu/PhuongThao.Le",
+          "excerpt": "BU Research NIH RePORTER Research × Boston Medical Center Research This tab shows grant data from BMC Sponsored Research.",
+          "retrievedAt": "2026-09-07T04:49:29.944Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0362-6",
+          "url": "https://profiles.bu.edu/PhuongThao.Le",
+          "excerpt": "It includes: Grant title Project period and this person’s role on the grant PI name, if this person is not the PI (the name will link if PI has a BU Profile) Funding source(s).",
+          "retrievedAt": "2026-09-07T04:49:29.944Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0362-7",
+          "url": "https://profiles.bu.edu/PhuongThao.Le",
+          "excerpt": "Close × Boston University Research This tab shows grant data from BU Sponsored Research.",
+          "retrievedAt": "2026-09-07T04:49:29.944Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0362-8",
+          "url": "https://profiles.bu.edu/PhuongThao.Le",
+          "excerpt": "It includes: Grant title Project period and this person’s role on the grant PI name, if this person is not the PI (the name will link if PI has a BU Profile) Funding source(s).",
+          "retrievedAt": "2026-09-07T04:49:29.944Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:51:07.520Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0363": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://profiles.bu.edu/Thanh.Nguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0363-1",
+          "url": "https://profiles.bu.edu/Thanh.Nguyen",
+          "excerpt": "Thanh Nguyen | Profiles RNS Toggle navigation P ROFILES Search Features 2020 BU CTSI BU CTSI Home About Us Research Resources Funding Opportunities Community News and Events Help About / FAQ How to Request a Profile Request Help Log in to Profiles Thanh N.",
+          "retrievedAt": "2026-09-07T04:49:31.069Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0363-2",
+          "url": "https://profiles.bu.edu/Thanh.Nguyen",
+          "excerpt": "ovider Profile Google Scholar ResearchGate Boston Imaging Core Lab LINNC Global impact of the COVID-19 pandemic on Stroke Hospitalizations and Mechanical Thrombectomy Balloon-guided catheters provide better blood flow following stroke interventions Littleton woman who suffered stroke gifted a little Fenway dirt Guidance for treating stroke patients during COVID-19 crisis developed EV Today: The Global Impact of the COVID-19 Pandemic on Stroke and Mechanical Thrombectomy Volumes 2021 American Academy of Neurology Annual Meeting Highlights Advanced Imaging Not Needed for Late-Stroke Thrombectomy?",
+          "retrievedAt": "2026-09-07T04:49:31.069Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0363-3",
+          "url": "https://profiles.bu.edu/Thanh.Nguyen",
+          "excerpt": "Gustavo Saposnik - World Stroke Academy Paper of the month, January 2022 European Stroke Organization Paper of the Month Increased ruptured aneurysm coiling rate during COVID-19 pandemic suggests shift to endovascular techniques Neuro News Profile ORCID : 0000-0002-5919-6170 Overview Other Positions Research Publications Social/Media Honors Keywords Contact Info Thanh Nguyen, MD, FRCP, FSVIN, FAHA is the Director of Interventional Neurology/ Neuroradiology at Boston Medical Center (BMC) and Professor of Neurology, Neurosurgery and Radiology at Chobanian and Avedisian School of Medicine (BUSM).",
+          "retrievedAt": "2026-09-07T04:49:31.069Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0363-4",
+          "url": "https://profiles.bu.edu/Thanh.Nguyen",
+          "excerpt": "She is President of the Society of Vascular and Interventional Neurology (SVIN), the first woman in its 18-year history.",
+          "retrievedAt": "2026-09-07T04:49:31.069Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0363-5",
+          "url": "https://profiles.bu.edu/Thanh.Nguyen",
+          "excerpt": "After receiving her medical degree from McGill University Faculty of Medicine in Canada, Dr.",
+          "retrievedAt": "2026-09-07T04:49:31.069Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0363-6",
+          "url": "https://profiles.bu.edu/Thanh.Nguyen",
+          "excerpt": "Nguyen performed her neurology residency at Massachusetts General Hospital and Brigham and Women's Hospital in Boston.",
+          "retrievedAt": "2026-09-07T04:49:31.069Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0363-7",
+          "url": "https://profiles.bu.edu/Thanh.Nguyen",
+          "excerpt": "Following her fellowship in vascular neurology and neurocritical care at Massachusetts General Hospital, she completed a fellowship in interventional neuroradiology (INR) involving more than 1,000 INR procedures at Centre Hospitalier de l'Universite de Montreal with the internationally renowned experts Jean Raymond and others.",
+          "retrievedAt": "2026-09-07T04:49:31.069Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0363-8",
+          "url": "https://profiles.bu.edu/Thanh.Nguyen",
+          "excerpt": "She has now been involved in a total of more than 3,000 INR procedures, including more than 500 brain aneurysm interventions (coilings / flow diversion) and 400 acute stroke interventions.",
+          "retrievedAt": "2026-09-07T04:49:31.069Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:51:07.520Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0364": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.bu.edu/bands/profile/kinh-t-vu/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0364-1",
+          "url": "https://www.bu.edu/bands/profile/kinh-t-vu/",
+          "excerpt": "Vu | Bands Skip to Main Content Boston University Bands Menu Search About Faculty, Staff, & Student Leaders History Community Join Course Registration Information Non-Degree Students Bands and Ensembles Athletic Bands Concert Ensembles Jazz Ensembles Choirs & Choruses Non-Music Major Lessons Give Alumni Update Contact Information Alumni Events Events BU Bands Homecoming Members Search Search for: Dr.",
+          "retrievedAt": "2026-09-07T04:49:31.564Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0364-2",
+          "url": "https://www.bu.edu/bands/profile/kinh-t-vu/",
+          "excerpt": "Vu Assistant Professor of Music, Music Education Title Assistant Professor of Music, Music Education Office 855 Commonwealth Avenue, Room 227 Email kvu00001@bu.",
+          "retrievedAt": "2026-09-07T04:49:31.564Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0364-3",
+          "url": "https://www.bu.edu/bands/profile/kinh-t-vu/",
+          "excerpt": "3176 Education BM, Westminster College, PA; MM, The Pennsylvania State University; PhD, University of Minnesota, Twin Cities Dr.",
+          "retrievedAt": "2026-09-07T04:49:31.564Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0364-4",
+          "url": "https://www.bu.edu/bands/profile/kinh-t-vu/",
+          "excerpt": "Vu is an assistant professor of music at Boston University where he teaches music education and performance courses in general music methods, instrumental music, history, and philosophy.",
+          "retrievedAt": "2026-09-07T04:49:31.564Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0364-5",
+          "url": "https://www.bu.edu/bands/profile/kinh-t-vu/",
+          "excerpt": "Focusing his teaching, learning, and research model on global citizenship and intercultural literacy, Kính’s pedagogy is community-based with partnerships emerging in Boston and around the globe.",
+          "retrievedAt": "2026-09-07T04:49:31.564Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0364-6",
+          "url": "https://www.bu.edu/bands/profile/kinh-t-vu/",
+          "excerpt": "Current research centers on exploring connections between music education and involuntary or forced human displacement in Cambodia and Kinh’s homeland Viet Nam where he was abandoned at the end of the American War.",
+          "retrievedAt": "2026-09-07T04:49:31.564Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0364-7",
+          "url": "https://www.bu.edu/bands/profile/kinh-t-vu/",
+          "excerpt": "Forthcoming scholarship and teaching will center on Asian, Asian American, and Pacific Islander experiences of the arts.",
+          "retrievedAt": "2026-09-07T04:49:31.564Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0364-8",
+          "url": "https://www.bu.edu/bands/profile/kinh-t-vu/",
+          "excerpt": "Professor Vũ’s co-edited book (with André de Quadros ), My Body was Left on the Street: Music Education and Displacement , was published by Brill–Sense in 2020.",
+          "retrievedAt": "2026-09-07T04:49:31.564Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:51:07.520Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0365": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://pharmacy.cnsu.edu/directory/bios/tuan-tran.php"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0365-1",
+          "url": "https://pharmacy.cnsu.edu/directory/bios/tuan-tran.php",
+          "excerpt": "Tuan Tran, PhD Director of Institutional Research To advance the science and art of healthcare through education, service, research, personal wellness, and social accountability.",
+          "retrievedAt": "2026-09-07T04:49:32.153Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0365-2",
+          "url": "https://pharmacy.cnsu.edu/directory/bios/tuan-tran.php",
+          "excerpt": "tory University CNU Administration CNU Admin Staff COP COP Administration COP Admin Staff Departments Clinical Administrative Sciences Experiential Education Pharmaceutical and Biomedical Sciences Organizational Chart Alumni --> Resources Alumni Services CNU Alumni Memorial Scholarship Fund In Memorial (PDF) Alumni Magazine October 2025 Alumni Magazine 2024 Alumni Magazine Make a Gift Participation Opportunities Events California Northstate University College of Pharmacy is pleased to announce the nation's first 3+4 PharmD-MD Pathway and 3+4 PharmD-DMD Pathway, with both beginning Fall of 2026.",
+          "retrievedAt": "2026-09-07T04:49:32.153Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0365-3",
+          "url": "https://pharmacy.cnsu.edu/directory/bios/tuan-tran.php",
+          "excerpt": "These innovative pathways reflect our commitment to advancing interdisciplinary education and expanding opportunities for our students.",
+          "retrievedAt": "2026-09-07T04:49:32.153Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0365-4",
+          "url": "https://pharmacy.cnsu.edu/directory/bios/tuan-tran.php",
+          "excerpt": "edu --> California Northstate University College of Pharmacy is pleased to announce the nation's first 3+4 PharmD-MD Pathway and 3+4 PharmD-DMD Pathway, with both beginning Fall of 2026.",
+          "retrievedAt": "2026-09-07T04:49:32.153Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0365-5",
+          "url": "https://pharmacy.cnsu.edu/directory/bios/tuan-tran.php",
+          "excerpt": "These innovative pathways reflect our commitment to advancing interdisciplinary education and expanding opportunities for our students.",
+          "retrievedAt": "2026-09-07T04:49:32.153Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0365-6",
+          "url": "https://pharmacy.cnsu.edu/directory/bios/tuan-tran.php",
+          "excerpt": "edu Home &rsaquo; Directory &rsaquo; Tuan Tran, PhD Tuan Tran, PhD, Director of Institutional Research Department of Clinical and Administrative Sciences Assistant Professor of Clinical and Administrative Sciences Specialty - Biostatistics, public health data analysis, predictive models for health applications.",
+          "retrievedAt": "2026-09-07T04:49:32.153Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0365-7",
+          "url": "https://pharmacy.cnsu.edu/directory/bios/tuan-tran.php",
+          "excerpt": "edu About Tuan Tran is an assistant professor at the California Northstate University College of Pharmacy (CNUCOP).",
+          "retrievedAt": "2026-09-07T04:49:32.153Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0365-8",
+          "url": "https://pharmacy.cnsu.edu/directory/bios/tuan-tran.php",
+          "excerpt": "degree in computer engineering with a focus on data processing and coding for data systems from Oregon State University in 2010.",
+          "retrievedAt": "2026-09-07T04:49:32.153Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:51:07.520Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0366": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.csudh.edu/math/faculty/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0366-1",
+          "url": "https://www.csudh.edu/math/faculty/",
+          "excerpt": "Points of Distinction Campus Map & Directions History, Mission & Vision Campus Facts & Figures News & Media Transparency & Accountability Contact Us APPLY VISIT GIVE Search myCSUDH Calendar Faculty/Staff Faculty Affairs Alumni Administration Library Canvas Financial Aid University Catalog Human Resources Career Center Careers at CSUDH IT Help Desk Directory TORO email (Student) Office 365 Webmail Home / Mathematics / Faculty Faculty Expand Menu Program Description Faculty Resources Contact California Math Project @ CSUDH Latest News Mathematics Department Office: NSM A115 Department Chair: Dr.",
+          "retrievedAt": "2026-09-07T04:49:33.314Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0366-2",
+          "url": "https://www.csudh.edu/math/faculty/",
+          "excerpt": "Sheila Wood Faculty Directory Faculty indicated with an asterisk* are also advisors.",
+          "retrievedAt": "2026-09-07T04:49:33.314Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0366-3",
+          "url": "https://www.csudh.edu/math/faculty/",
+          "excerpt": "Jessalyn Bolkema* Assistant Professor Office: NSM A141 Phone: (310) 243 - 3395 Email: jbolkema@csudh.",
+          "retrievedAt": "2026-09-07T04:49:33.314Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0366-4",
+          "url": "https://www.csudh.edu/math/faculty/",
+          "excerpt": "edu Interests: Applied discrete mathematics, algebraic coding theory, applications of coding and information theory in data science Dr.",
+          "retrievedAt": "2026-09-07T04:49:33.314Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0366-5",
+          "url": "https://www.csudh.edu/math/faculty/",
+          "excerpt": "Alex Chen* Associate Professor Office: NSM A119 Phone: (310) 243-2448 Email: achen@csudh.",
+          "retrievedAt": "2026-09-07T04:49:33.314Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0366-6",
+          "url": "https://www.csudh.edu/math/faculty/",
+          "excerpt": "edu Interests: Computer vision, machine learning, deep learning, financial mathematics, differential equations modeling of physical and biological problems Ms.",
+          "retrievedAt": "2026-09-07T04:49:33.314Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0366-7",
+          "url": "https://www.csudh.edu/math/faculty/",
+          "excerpt": "Carla Gorbea Lecturer Office: NSM A124 Phone: (310) 243-2273 Email: cgorbea@csudh.",
+          "retrievedAt": "2026-09-07T04:49:33.314Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0366-8",
+          "url": "https://www.csudh.edu/math/faculty/",
+          "excerpt": "Matthew Jones* Professor, Interim Associate Dean of CNBS Office: LIB 5734 Phone: (310) 243-2547 Email: mjones@csudh.",
+          "retrievedAt": "2026-09-07T04:49:33.314Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:51:07.520Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0367": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.csudh.edu/human-services/faculty-staff/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0367-1",
+          "url": "https://www.csudh.edu/human-services/faculty-staff/",
+          "excerpt": "Contact Us APPLY VISIT GIVE Search myCSUDH Calendar Faculty/Staff Faculty Affairs Alumni Administration Library Canvas Financial Aid University Catalog Human Resources Career Center Careers at CSUDH IT Help Desk Directory TORO email (Student) Office 365 Webmail Home / Human Services / Faculty & Staff Faculty & Staff Expand Menu Admission Assessment Curriculum Fieldwork Information Faculty & Staff Student Resources Human Services Student Association Newsletters Events FAQ Contact Us Student Success Center, CHHSN CHHSN Home Latest News Department Chair Phu Phan, MSW, PhD 310-243-3495 pphan@csudh.",
+          "retrievedAt": "2026-09-07T04:49:34.081Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0367-2",
+          "url": "https://www.csudh.edu/human-services/faculty-staff/",
+          "excerpt": "edu Assistant Professors Annalyn Valdez-Dadia, DrPH 310-243-2411 avaldezdadia@csudh.",
+          "retrievedAt": "2026-09-07T04:49:34.081Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0367-3",
+          "url": "https://www.csudh.edu/human-services/faculty-staff/",
+          "excerpt": "edu Administrative Support Assistant Pamela Curtis SBS D-321 310-243-3461 pcurtis@csudh.",
+          "retrievedAt": "2026-09-07T04:49:34.081Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0367-4",
+          "url": "https://www.csudh.edu/human-services/faculty-staff/",
+          "excerpt": "edu Student Success Center, CHHSN California State University, Dominguez Hills 1000 E.",
+          "retrievedAt": "2026-09-07T04:49:34.081Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:51:07.520Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0368": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.csudh.edu/social-work/facultystaff/paul-duongtran"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0368-1",
+          "url": "https://www.csudh.edu/social-work/facultystaff/paul-duongtran",
+          "excerpt": "Careers at CSUDH IT Help Desk Directory TORO email (Student) Office 365 Webmail Home / Social Work, Master of Social Work Paul DuongTran Expand Menu About Us Faculty & Staff Accreditation Highlights Program Overview Curriculum Three-Year Program (Part-Time) Course Descriptions Stipend Programs Field Education Current Students Student & Alumni Organizations Prospective Students Information Sessions Frequently Asked Questions CHHSN Home Paul DuongTran College of Health, Human Services and Nursing Department of Social Work Professor 310-243-2521 California State University, Dominguez Hills 1000 E.",
+          "retrievedAt": "2026-09-07T04:49:34.816Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:51:07.520Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0369": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://csm.fresnostate.edu/math/faculty-staff/resident/khangt.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0369-1",
+          "url": "https://csm.fresnostate.edu/math/faculty-staff/resident/khangt.html",
+          "excerpt": "Khang Tran - Department of Mathematics Skip to main content Skip to main navigation Skip to footer content Close Quick Links menu Press Escape to close.",
+          "retrievedAt": "2026-09-07T04:49:37.761Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0369-2",
+          "url": "https://csm.fresnostate.edu/math/faculty-staff/resident/khangt.html",
+          "excerpt": "rogram Single Subject Credential Middle School Math Teaching Courses Students Workshops Placement Exams Computer Labs and Tutoring Scholarships Clubs and Organizations Advising Resources Events and Activities Events Activities and Programs Research Undergraduate Research Graduate Research Faculty Research Colloquia and Seminars Give Quick Links Calendar Canvas Catalog Directory Email Kennel Bookstore Library Map My Fresno State Technology Service Desk Zoom Conferencing Department of Mathematics College of Science and Mathematics Department of Mathematics Faculty and Staff Faculty Khang Tran Dr.",
+          "retrievedAt": "2026-09-07T04:49:37.761Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0369-3",
+          "url": "https://csm.fresnostate.edu/math/faculty-staff/resident/khangt.html",
+          "excerpt": "edu Student Support Hours Day Hour Tuesday (in PB 341) 4:00 PM - 5:00 PM Friday (in PB 013) 10:00 AM - 12:00 PM Fall 2026 Classes Class Time Day(s) Location Math 77 - 10 2:00 PM - 2:50 PM MTWTh ED 177 Math 77 - 12 3:00 PM - 3:50 PM MTWTh ED 177 Math 190 Math 271 5:30 PM - 6:45 PM TTh S2 308 Degrees Ph.",
+          "retrievedAt": "2026-09-07T04:49:37.761Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0369-4",
+          "url": "https://csm.fresnostate.edu/math/faculty-staff/resident/khangt.html",
+          "excerpt": "Mathematics and Computer Science, Truman State University Areas of Expertise and Interest Complex Analysis Analytic Number Theory Zero Distribution Hypergeometric and Basic Hypergeometric Series Department of Mathematics 5245 North Backer Avenue M/S PB108 Fresno, CA 93740 P 559.",
+          "retrievedAt": "2026-09-07T04:49:37.761Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0369-5",
+          "url": "https://csm.fresnostate.edu/math/faculty-staff/resident/khangt.html",
+          "excerpt": "2992 Accessibility & Support Accessibility Cookie Settings Comment Form Report an Issue Policies & Compliance Equal Access Title IX Compliance Disclaimer WSCUC Campus Information Emergencies COVID-19 Updates Opportunities for All Student Parent Resources © Fresno State 2026 Fresno State Facebook Fresno State Twitter Fresno State Instagram Fresno State YouTube Fresno State Tiktok Fresno State LinkedIn Donation All Fresno State programs and activities are open and available to all regardless of race, sex, color, ethnicity or national origin.",
+          "retrievedAt": "2026-09-07T04:49:37.761Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:51:07.520Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0370": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://disparities.fullerton.edu/faculty.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0370-1",
+          "url": "https://disparities.fullerton.edu/faculty.html",
+          "excerpt": "y | CSUF - Center for Cancer Prevention, Health Disparities Research and Training Skip to main content Last Published 7/8/26 Hours Hours Go Here Lock Icon - login required Portal Login Resources Search Dark Mode icon Switch to dark mode College of Health and Human Development Center for Cancer Prevention, Health Disparities Research and Training Center for Cancer Prevention, Health Disparities Research and Training on this page Page Topics You are now inside the main content area Show / Hide Left Navigation Menu Close left col Center Director and Members right col left col Archana McEligot, Ph.",
+          "retrievedAt": "2026-09-07T04:49:38.430Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0370-2",
+          "url": "https://disparities.fullerton.edu/faculty.html",
+          "excerpt": "of Health Science Telephone: (657)278-3822 Email: [email&#160;protected] right col left col Dr.",
+          "retrievedAt": "2026-09-07T04:49:38.430Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0370-3",
+          "url": "https://disparities.fullerton.edu/faculty.html",
+          "excerpt": "McEligot is the director of the Center for Cancer Disparities Research and a professor at the California State University, Fullerton.",
+          "retrievedAt": "2026-09-07T04:49:38.430Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0370-4",
+          "url": "https://disparities.fullerton.edu/faculty.html",
+          "excerpt": "Her primary research interests include examination of the association between dietary intake and cancer control and prevention.",
+          "retrievedAt": "2026-09-07T04:49:38.430Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0370-5",
+          "url": "https://disparities.fullerton.edu/faculty.html",
+          "excerpt": "Specifically she has examined dietary intakes in women diagnosed with breast cancer and in special populations, including Pacific Islanders.",
+          "retrievedAt": "2026-09-07T04:49:38.430Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0370-6",
+          "url": "https://disparities.fullerton.edu/faculty.html",
+          "excerpt": "She is also interested in assessing the relationship between dietary circulating biomarkers in blood such as folate and carotenoids in conjunction with genetic polymorphisms on cancer risk.",
+          "retrievedAt": "2026-09-07T04:49:38.430Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0370-7",
+          "url": "https://disparities.fullerton.edu/faculty.html",
+          "excerpt": "McEligot has over 50 research presentations, published 20 peer-reviewed manuscripts, 12 of which are first authored, and is the PI on NIH and USDA externally funded projects.",
+          "retrievedAt": "2026-09-07T04:49:38.430Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0370-8",
+          "url": "https://disparities.fullerton.edu/faculty.html",
+          "excerpt": "Her research has been cited in major peer-reviewed journals such as the Journal of the American Medical Association (JAMA), and has been featured in several popular magazines.",
+          "retrievedAt": "2026-09-07T04:49:38.430Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:51:07.520Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0371": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://psychology.fullerton.edu/amnguyen/people.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0371-1",
+          "url": "https://psychology.fullerton.edu/amnguyen/people.html",
+          "excerpt": "People | CSUF - Department of Psychology Skip to main content Last Published 8/20/26 Hours Hours Go Here Lock Icon - login required Portal Login Resources Search Icon Search Dark Mode Switch to dark mode College of Humanities and Social Sciences Department of Psychology Department of Psychology on this page Page Topics You are now inside the main content area Show / Hide Left Navigation Menu Close left col People right col left col Angela-MinhTú Đ.",
+          "retrievedAt": "2026-09-07T04:49:39.102Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0371-2",
+          "url": "https://psychology.fullerton.edu/amnguyen/people.html",
+          "excerpt": "Nguyễn (Co-Director) California State University, Fullerton Professor of Psychology University of California, Riverside Ph.",
+          "retrievedAt": "2026-09-07T04:49:39.103Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0371-3",
+          "url": "https://psychology.fullerton.edu/amnguyen/people.html",
+          "excerpt": "in Social/Personality Psychology | Minor in Quantitative Psychology | Emphasis in Cultural Psychology California State University, Long Beach M.",
+          "retrievedAt": "2026-09-07T04:49:39.103Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0371-4",
+          "url": "https://psychology.fullerton.edu/amnguyen/people.html",
+          "excerpt": "in Psychology | Minors in Art History, French, and Spanish right col left col *Prospective MA/MS Students If you are interested in working in my lab, please contact me before applying for either Master's program.",
+          "retrievedAt": "2026-09-07T04:49:39.103Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:51:07.520Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0372": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://mll.fullerton.edu/advising/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0372-1",
+          "url": "https://mll.fullerton.edu/advising/",
+          "excerpt": "o dark mode College of Humanities and Social Sciences Department of Modern Languages and Literatures Department of Modern Languages and Literatures on this page Page Topics You are now inside the main content area Show / Hide Left Navigation Menu Close Language Program Advisors MLL GE Advisor Kenneth Consedine Modern Languages and Literatures GE Advisor Handles: - General Education (GE) requirements (what you still need, what counts, and how it fits into your plan) - Understanding CSUF policies and processes (registration questions, academic standing, unit limits, and other “How does this work?",
+          "retrievedAt": "2026-09-07T04:49:39.762Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0372-2",
+          "url": "https://mll.fullerton.edu/advising/",
+          "excerpt": "” items) - Getting you connected with your faculty advisor and/or program coordinator for major-specific question Office: H-112 Phone: (657) 278-2594 Email: [email&#160;protected] Chinese Advisor Dr.",
+          "retrievedAt": "2026-09-07T04:49:39.762Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0372-3",
+          "url": "https://mll.fullerton.edu/advising/",
+          "excerpt": "Chinese Program Coordinator Professor of Chinese Office: H 710-A Phone: (657) 278-2183 Email: [email&#160;protected] Fall 2026 Office Hours : Wednesday 12:45pm - 2:45pm via Zoom; Thursday 10:30am - 11:30am In-Person French Advisors Dr.",
+          "retrievedAt": "2026-09-07T04:49:39.762Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0372-4",
+          "url": "https://mll.fullerton.edu/advising/",
+          "excerpt": "Fanny Daubigny Professor of French Office: H 835-I Phone: (657) 278-3570 Email: [email&#160;protected] Fall 2026 Office Hours: Monday 3:00pm - 6:00pm, Hybrid Students Last name begins with: A- Z Dr.",
+          "retrievedAt": "2026-09-07T04:49:39.762Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0372-5",
+          "url": "https://mll.fullerton.edu/advising/",
+          "excerpt": "French Program Coordinator Professor Emerita of French Office: H 835-E Phone: (657) 278-3498 Email: [email&#160;protected] Fall Office Hours: Monday and Wednesday 10:00am - 11:30am In-person Heritage Advisor (Arabic, German, Italian, Korean, and Persian) Dr.",
+          "retrievedAt": "2026-09-07T04:49:39.762Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0372-6",
+          "url": "https://mll.fullerton.edu/advising/",
+          "excerpt": "Professor of TESOL, MLL Department Chair, Heritage Advisor Office: H 710-B Phone: (657) 278-4410 Email: [email&#160;protected] Fall 2026 Office Hours : Monday 1:00pm - 2:00pm by Appointment and 2:00pm - 3:00pm, drop-ins, Tuesday 1:00pm - 2:00pm, drop-ins.",
+          "retrievedAt": "2026-09-07T04:49:39.762Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0372-7",
+          "url": "https://mll.fullerton.edu/advising/",
+          "excerpt": "Japanese Program Coordinator Professor of Japanese Office: H 830-H Phone: (657) 278-5347 Email: [email&#160;protected] Fall 2026 Office Hours: Mondays, 11:25am–12:45pm, in person, in Hum 835D; no appointment necessary.",
+          "retrievedAt": "2026-09-07T04:49:39.762Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0372-8",
+          "url": "https://mll.fullerton.edu/advising/",
+          "excerpt": "Tuesdays, 11:25am - 1:05pm, via Zoom, by appointment (Please sign up for a 20 minute time slot, before 12:00pm on the Monday prior, through Titan Apps Google Calendar using this link .",
+          "retrievedAt": "2026-09-07T04:49:39.762Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:51:07.520Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0373": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://anthro.fullerton.edu/People/NgaNguyen.aspx"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://anthro.fullerton.edu/People/NgaNguyen.aspx: HTTP 500"
+      ],
+      "updatedAt": "2026-09-07T04:51:07.520Z",
+      "nextAction": "Retry fetching CSU Fullerton anthropology profile or discover alternate official faculty page."
     },
     "vp-0374": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://itwebstg.fullerton.edu/husr/faculty/TruyenNguyen.php"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0374-1",
+          "url": "https://itwebstg.fullerton.edu/husr/faculty/TruyenNguyen.php",
+          "excerpt": "n Navigation About Us Show Extended Mission & Welcome Accreditation Resources Contact Us Degree Show Extended Exploring Human Services Major Minor Academic Roadmap Current Students Show Extended Advisement Fieldwork HUSR Online Graduate Advice HSSA Transfer Student Orientation Faculty Support the Department All Faculty Michelle Berelowitz Sapna Chopra John Doyle Gary Germo Stephen Hall Mikel Hogan Kristi Kanel Melanie Horn-Mallers Truyen Nguyen Carl Renold Adrian Rodriguez James Ruby Mia Sevier Yuying Tsong Truyen Nguyen Professor Office: EC-480 Phone: (657) 278-5695 Email: trunguyen@fullerton.",
+          "retrievedAt": "2026-09-07T04:49:41.036Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0374-2",
+          "url": "https://itwebstg.fullerton.edu/husr/faculty/TruyenNguyen.php",
+          "excerpt": "Nguyen has served on numerous thesis and dissertation committees, with research topics ranging from PTSD among war veterans to children in foster care.",
+          "retrievedAt": "2026-09-07T04:49:41.036Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0374-3",
+          "url": "https://itwebstg.fullerton.edu/husr/faculty/TruyenNguyen.php",
+          "excerpt": "Before coming to academia, Nguyen was in private practice working with court-ordered populations.",
+          "retrievedAt": "2026-09-07T04:49:41.036Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0374-4",
+          "url": "https://itwebstg.fullerton.edu/husr/faculty/TruyenNguyen.php",
+          "excerpt": "Over the past years Nguyen has consulted for non-profit agencies, such as Adult Day Health Centers and foster care organizations.",
+          "retrievedAt": "2026-09-07T04:49:41.036Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0374-5",
+          "url": "https://itwebstg.fullerton.edu/husr/faculty/TruyenNguyen.php",
+          "excerpt": "Last Published 1/22/20 To report problems or comments with this site, please contact hhdweb@fullerton.",
+          "retrievedAt": "2026-09-07T04:49:41.036Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0374-6",
+          "url": "https://itwebstg.fullerton.edu/husr/faculty/TruyenNguyen.php",
+          "excerpt": "Web Accessibility CSUF is committed to ensuring equal accessibility to our users.",
+          "retrievedAt": "2026-09-07T04:49:41.036Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0374-7",
+          "url": "https://itwebstg.fullerton.edu/husr/faculty/TruyenNguyen.php",
+          "excerpt": "Resources: Download Adobe Acrobat Reader Adobe Reader Download Word viewer, or download Excel viewer, or download PowerPoint viewer Microsoft Viewers Report An ATI Issue Accessible @ CSUF Version_4.",
+          "retrievedAt": "2026-09-07T04:49:41.036Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:51:07.520Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0375": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://news.fullerton.edu/spotlight/cal-state-fullerton-announces-61-faculty-tenure-and-promotions/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0375-1",
+          "url": "https://news.fullerton.edu/spotlight/cal-state-fullerton-announces-61-faculty-tenure-and-promotions/",
+          "excerpt": "Calendar Colleges The Arts Business and Economics Communications Education Engineering and Computer Sciences Health and Human Development Humanities and Social Sciences Natural Sciences and Mathematics Divisions President’s Office Academic Affairs Administrations and Finance Human Resources and Inclusive Excellence Information Technology Student Affairs University Advancement Emergency & Wellness Campus Police Emergency Information Student Health Center Student Wellness / Counseling Services Title IX Reporting Services & Supplies Academic Advisement Titan One-Stop Shop Associated Students, Inc.",
+          "retrievedAt": "2026-09-07T04:49:41.843Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0375-2",
+          "url": "https://news.fullerton.edu/spotlight/cal-state-fullerton-announces-61-faculty-tenure-and-promotions/",
+          "excerpt": "Disability Support Services Student Software Faculty & Staff Software Web Email Getting Here Campus Map and Directions Parking Quick Links A-Z Index Calendar CSUF News Career Bookstore Information For: Alumni Parents and Families Journalists Titan Spotlight Cal State Fullerton Announces 61 Faculty Tenure and Promotions Aug.",
+          "retrievedAt": "2026-09-07T04:49:41.843Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0375-3",
+          "url": "https://news.fullerton.edu/spotlight/cal-state-fullerton-announces-61-faculty-tenure-and-promotions/",
+          "excerpt": "18, 2025 By Greg Woodson Share This: Cal State Fullerton’s Office of Faculty Affairs and Records announced the tenure and/or promotion of 61 faculty members.",
+          "retrievedAt": "2026-09-07T04:49:41.843Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0375-4",
+          "url": "https://news.fullerton.edu/spotlight/cal-state-fullerton-announces-61-faculty-tenure-and-promotions/",
+          "excerpt": "essor of kinesiology Tags Academic Affairs College of Business and Economics College of Communications College of Education College of Engineering and Computer Science College of Health and Human Development College of Humanities and Social Sciences College of Natural Sciences and Mathematics College of the Arts Pollak Library Contact [email&#160;protected] Footer Browse All News Categories A-Z Athletics Follow Us Facebook Twitter LinkedIn Instagram YouTube About CSUF Facts Contact Media Relations Find an Expert Privacy Policy Submit a Story Do you have news you’d like to share with the campus?",
+          "retrievedAt": "2026-09-07T04:49:41.843Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0375-5",
+          "url": "https://news.fullerton.edu/spotlight/cal-state-fullerton-announces-61-faculty-tenure-and-promotions/",
+          "excerpt": "CSUF events are open to all who are interested or would like to participate, regardless of race, sex, color, ethnicity, national origin, or other protected statuses.",
+          "retrievedAt": "2026-09-07T04:49:41.843Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0375-6",
+          "url": "https://news.fullerton.edu/spotlight/cal-state-fullerton-announces-61-faculty-tenure-and-promotions/",
+          "excerpt": "Web Accessibility Learn about web accessibility Report a web accessbility problem Download Adobe Acrobat Reader Microsoft Viewers --> Search Close Window Search Type This Site Only All of Fullerton.",
+          "retrievedAt": "2026-09-07T04:49:41.843Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:51:07.520Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0376": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://experts.fullerton.edu/expert?ExpertID=584&SubjectID=99"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0376-1",
+          "url": "https://experts.fullerton.edu/expert?ExpertID=584&SubjectID=99",
+          "excerpt": "Expert Information | Faculty Experts Guide Skip to Content (Press Enter) warning_amber Campus closure due to severe storm and flooding in area.",
+          "retrievedAt": "2026-09-07T04:49:42.209Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0376-2",
+          "url": "https://experts.fullerton.edu/expert?ExpertID=584&SubjectID=99",
+          "excerpt": "Calendar Colleges The Arts Business and Economics Communications Education Engineering and Computer Sciences Health and Human Development Humanities and Social Sciences Natural Sciences and Mathematics Divisions President’s Office Academic Affairs Administrations and Finance Human Resources and Inclusive Excellence Information Technology Student Affairs University Advancement Emergency & Wellness Campus Police Emergency Information Student Health Center Student Wellness / Counseling Services Title IX Reporting Services & Supplies Academic Advisement Titan One-Stop Shop Associated Students, Inc.",
+          "retrievedAt": "2026-09-07T04:49:42.209Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0376-3",
+          "url": "https://experts.fullerton.edu/expert?ExpertID=584&SubjectID=99",
+          "excerpt": "Disability Support Services Student Software Faculty & Staff Software Web Email Getting Here place Campus Map and Directions local_parking Parking info Visitor Center --> Quick Links list A-Z Index calendar_month Calendar newspaper CSUF News work Career store Bookstore Information For: school Alumni people Parents and Families person Journalists info Latest coronavirus information and updates Learn More --> Tran, Lisa Professor of History Department of History Office: 657-278-2625 Department: 657-278-3474 Email: [email&#160;protected] Biography: Lisa Tran (B.",
+          "retrievedAt": "2026-09-07T04:49:42.209Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0376-4",
+          "url": "https://experts.fullerton.edu/expert?ExpertID=584&SubjectID=99",
+          "excerpt": "She has published extensively on women and the law in China, including a book, Concubines in Court: Marriage and Monogamy in Twentieth-Century China (Rowman & Littlefield, 2015).",
+          "retrievedAt": "2026-09-07T04:49:42.209Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0376-5",
+          "url": "https://experts.fullerton.edu/expert?ExpertID=584&SubjectID=99",
+          "excerpt": "Her current research focuses on the ethnic Chinese who left Vietnam in the late 1970s.",
+          "retrievedAt": "2026-09-07T04:49:42.209Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0376-6",
+          "url": "https://experts.fullerton.edu/expert?ExpertID=584&SubjectID=99",
+          "excerpt": "Areas of Knowledge: 20th-century China Overseas Chinese Global history Subject(s): Asia China Gender Studies Women's Studies Language(s): Mandarin Region(s): Asia Global back Need Help?",
+          "retrievedAt": "2026-09-07T04:49:42.209Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0376-7",
+          "url": "https://experts.fullerton.edu/expert?ExpertID=584&SubjectID=99",
+          "excerpt": "Please contact Strategic Communications at 657-278-4856 or at [email&#160;protected] .",
+          "retrievedAt": "2026-09-07T04:49:42.209Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0376-8",
+          "url": "https://experts.fullerton.edu/expert?ExpertID=584&SubjectID=99",
+          "excerpt": "Fullerton, CA 92831-3599 657-278-2011 --> This site is maintained by University Advancement.",
+          "retrievedAt": "2026-09-07T04:49:42.209Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:51:07.520Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0377": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.calstatela.edu/academic/aaas/affiliated.php"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0377-1",
+          "url": "https://www.calstatela.edu/academic/aaas/affiliated.php",
+          "excerpt": "ian American Studies Department of Asian and Asian American Studies College of Ethnic Studies CoES Home College Staff Departments Asian and Asian American Studies Chicana(o) and Latina(o) Studies Pan-African Studies Advising Faculty Searches Post-Bac Cerificate Faculty and Staff Resources Lecturer Resources Give Now Department of Asian and Asian American Studies Home Degree and Certificate Programs Bachelor of Arts Minor Programs Post-Baccalaureate Certificate Community Engagement Faculty Advising Career Pathways Student Resources Support AAAS AAAS Faculty Faculty May Fu Professor and Chair Ph.",
+          "retrievedAt": "2026-09-07T04:49:42.753Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0377-2",
+          "url": "https://www.calstatela.edu/academic/aaas/affiliated.php",
+          "excerpt": "Ethnic Studies, UC San Diego Office: KH C-4073A Email: [email&#160;protected] Areas: Comparative ethnic studies, race and social movements, women of color feminisms Paul Cheng Lecturer Ph.",
+          "retrievedAt": "2026-09-07T04:49:42.753Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0377-3",
+          "url": "https://www.calstatela.edu/academic/aaas/affiliated.php",
+          "excerpt": "English, UC Riverside Office: ESCT A628 Email: [email&#160;protected] Areas: Asian American literature, film, and visual cultures Wei-Lun Jason Chiu Assistant Professor Ed.",
+          "retrievedAt": "2026-09-07T04:49:42.753Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0377-4",
+          "url": "https://www.calstatela.edu/academic/aaas/affiliated.php",
+          "excerpt": "Educational Leadership, Cal State LA Office: KH C-4073A Email : [email&#160;protected] Areas: Mentorship in higher education, culturally relevant pedagogy, race and ethnicity in education Darron Michael Cunanan Lecturer M.",
+          "retrievedAt": "2026-09-07T04:49:42.753Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0377-5",
+          "url": "https://www.calstatela.edu/academic/aaas/affiliated.php",
+          "excerpt": "Sociology, Cal State LA Office: KH C-4073A Email: [email&#160;protected] Areas: Popular culture, gender, social media studies Loan Dao Professor Ph.",
+          "retrievedAt": "2026-09-07T04:49:42.753Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0377-6",
+          "url": "https://www.calstatela.edu/academic/aaas/affiliated.php",
+          "excerpt": "Ethnic Studies, UC Berkeley Office: KH C-4073A Email: [email&#160;protected] Areas: Southeast Asian American Studies, social movements, community-based participatory research Boone Nguyen Lecturer M.",
+          "retrievedAt": "2026-09-07T04:49:42.753Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0377-7",
+          "url": "https://www.calstatela.edu/academic/aaas/affiliated.php",
+          "excerpt": "Ethnic Studies, UC San Diego Office: KH C-4073A Email: [email&#160;protected] Areas: Critical ethnic studies, multimedia installation art, visual ethnography, war and ecology Website: www.",
+          "retrievedAt": "2026-09-07T04:49:42.753Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0377-8",
+          "url": "https://www.calstatela.edu/academic/aaas/affiliated.php",
+          "excerpt": "History, UC Irvine Office: KH C-4073A Email: [email&#160;protected] Areas: San Gabriel Valley, community organizing, environmental justice Kiki Rivera Lecturer M.",
+          "retrievedAt": "2026-09-07T04:49:42.753Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:51:07.520Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0378": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.calstatela.edu/academic/aaas/affiliated.php#juily"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0378-1",
+          "url": "https://www.calstatela.edu/academic/aaas/affiliated.php#juily",
+          "excerpt": "ian American Studies Department of Asian and Asian American Studies College of Ethnic Studies CoES Home College Staff Departments Asian and Asian American Studies Chicana(o) and Latina(o) Studies Pan-African Studies Advising Faculty Searches Post-Bac Cerificate Faculty and Staff Resources Lecturer Resources Give Now Department of Asian and Asian American Studies Home Degree and Certificate Programs Bachelor of Arts Minor Programs Post-Baccalaureate Certificate Community Engagement Faculty Advising Career Pathways Student Resources Support AAAS AAAS Faculty Faculty May Fu Professor and Chair Ph.",
+          "retrievedAt": "2026-09-07T04:49:43.013Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0378-2",
+          "url": "https://www.calstatela.edu/academic/aaas/affiliated.php#juily",
+          "excerpt": "Ethnic Studies, UC San Diego Office: KH C-4073A Email: [email&#160;protected] Areas: Comparative ethnic studies, race and social movements, women of color feminisms Paul Cheng Lecturer Ph.",
+          "retrievedAt": "2026-09-07T04:49:43.013Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0378-3",
+          "url": "https://www.calstatela.edu/academic/aaas/affiliated.php#juily",
+          "excerpt": "English, UC Riverside Office: ESCT A628 Email: [email&#160;protected] Areas: Asian American literature, film, and visual cultures Wei-Lun Jason Chiu Assistant Professor Ed.",
+          "retrievedAt": "2026-09-07T04:49:43.013Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0378-4",
+          "url": "https://www.calstatela.edu/academic/aaas/affiliated.php#juily",
+          "excerpt": "Educational Leadership, Cal State LA Office: KH C-4073A Email : [email&#160;protected] Areas: Mentorship in higher education, culturally relevant pedagogy, race and ethnicity in education Darron Michael Cunanan Lecturer M.",
+          "retrievedAt": "2026-09-07T04:49:43.013Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0378-5",
+          "url": "https://www.calstatela.edu/academic/aaas/affiliated.php#juily",
+          "excerpt": "Sociology, Cal State LA Office: KH C-4073A Email: [email&#160;protected] Areas: Popular culture, gender, social media studies Loan Dao Professor Ph.",
+          "retrievedAt": "2026-09-07T04:49:43.013Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0378-6",
+          "url": "https://www.calstatela.edu/academic/aaas/affiliated.php#juily",
+          "excerpt": "Ethnic Studies, UC Berkeley Office: KH C-4073A Email: [email&#160;protected] Areas: Southeast Asian American Studies, social movements, community-based participatory research Boone Nguyen Lecturer M.",
+          "retrievedAt": "2026-09-07T04:49:43.013Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0378-7",
+          "url": "https://www.calstatela.edu/academic/aaas/affiliated.php#juily",
+          "excerpt": "Ethnic Studies, UC San Diego Office: KH C-4073A Email: [email&#160;protected] Areas: Critical ethnic studies, multimedia installation art, visual ethnography, war and ecology Website: www.",
+          "retrievedAt": "2026-09-07T04:49:43.013Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0378-8",
+          "url": "https://www.calstatela.edu/academic/aaas/affiliated.php#juily",
+          "excerpt": "History, UC Irvine Office: KH C-4073A Email: [email&#160;protected] Areas: San Gabriel Valley, community organizing, environmental justice Kiki Rivera Lecturer M.",
+          "retrievedAt": "2026-09-07T04:49:43.013Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:51:07.520Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0379": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.boonenguyen.com/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0379-1",
+          "url": "https://www.boonenguyen.com/",
+          "excerpt": "Work - Boone Nguyen Boone Nguyen A Vietnamese Refugee in Aztlán, An Autogeography Landscape Memory Mai Vang Yang: Shaman, Healer Generations Đi thì không có đường về Bomb Crater Ponds Spiritual Practices Coconut Production About/Contact A Vietnamese Refugee in Aztlán, An Autogeography Landscape Memory Mai Vang Yang: Shaman, Healer Generations Đi thì không có đường về Bomb Crater Ponds Spiritual Practices Coconut Production Copyright © 2012-2025 Boone Nguyen.",
+          "retrievedAt": "2026-09-07T04:49:43.361Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:51:07.520Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0380": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://experts.calstatela.edu/expert/phung-huynh/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0380-1",
+          "url": "https://experts.calstatela.edu/expert/phung-huynh/",
+          "excerpt": "Phung Huynh | Cal State LA Close Cal State LA Experts Guide Search for: Find An Expert Become An Expert Departments Contact CalStateLA.",
+          "retrievedAt": "2026-09-07T04:49:44.647Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0380-2",
+          "url": "https://experts.calstatela.edu/expert/phung-huynh/",
+          "excerpt": "edu Follow Follow Follow Follow Find An Expert | Become An Expert | Departments | Contact | Cal State LA Follow Follow Follow Follow Search for: Cal State LA Find An Expert | Become An Expert | Departments | Contact Follow Follow Follow Follow Search for: Phung Huynh Assistant Professor of Art College of Arts and Letters phuynh37@calstatela.",
+          "retrievedAt": "2026-09-07T04:49:44.647Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0380-3",
+          "url": "https://experts.calstatela.edu/expert/phung-huynh/",
+          "excerpt": "edu (323) 343-4010 Fluent in: Chinese and Vietnamese Expertise Art and culture Public art Social justice and art Southeast Asian refugee Department Art Education M.",
+          "retrievedAt": "2026-09-07T04:49:44.647Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0380-4",
+          "url": "https://experts.calstatela.edu/expert/phung-huynh/",
+          "excerpt": ", Studio Art, New York University Find An Expert | Become An Expert | Departments | Contact Cal State LA Publications: Follow Follow Follow Follow Published by the Office of Strategic Communications Any external faculty website linked on this page or another university page does not necessarily reflect the view of the university, nor is it intended to endorse any opinions expressed.",
+          "retrievedAt": "2026-09-07T04:49:44.647Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0380-5",
+          "url": "https://experts.calstatela.edu/expert/phung-huynh/",
+          "excerpt": "© 2026 Trustees of the California State University Privacy Policy Find An Expert | Become An Expert | Departments | Contact University Publications: Find An Expert Become An Expert Departments Contact University Publications: Cal State LA Experts Guide Cal State LA Magazine Cal State LA Newsroom Follow Follow Follow Follow Published by the Office of Strategic Communications Any external faculty website linked on this page or another university page does not necessarily reflect the view of the university, nor is it intended to endorse any opinions expressed.",
+          "retrievedAt": "2026-09-07T04:49:44.647Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:51:07.520Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0381": {
       "overview": "pending",
