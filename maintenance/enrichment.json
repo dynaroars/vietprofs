@@ -2672,7 +2672,8 @@
         "vp-0867",
         "vp-0869"
       ],
-      "status": "pending"
+      "status": "in_progress",
+      "startedAt": "2026-09-07T18:56:42.971Z"
     },
     {
       "number": 44,
@@ -54894,204 +54895,966 @@
       "nextAction": "Retry inaccessible source fetch."
     },
     "vp-0849": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.cityofhope.org/patients/find-a-doctor/andrew-nguyen"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.cityofhope.org/patients/find-a-doctor/andrew-nguyen: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T18:58:15.976Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-0850": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.uclahealth.org/departments/medicine/gastro/research/labs-and-groups/nguyen-laboratory"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0850-1",
+          "url": "https://www.uclahealth.org/departments/medicine/gastro/research/labs-and-groups/nguyen-laboratory",
+          "excerpt": "Nguyen Lab - Digestive Diseases Research | UCLA Health Skip to main content Explore links (header) { leftIsLimited = ($el.",
+          "retrievedAt": "2026-09-07T18:56:43.993Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0850-2",
+          "url": "https://www.uclahealth.org/departments/medicine/gastro/research/labs-and-groups/nguyen-laboratory",
+          "excerpt": "left) Explore UCLA Health UCLA Health Home About Us Cancer Center Hospitals & Clinics School of Medicine Academic Departments News & Insights Community & Equity Refer a Patient Universal links (header) myUCLAhealth Donate Contact Us Translate English العربية 中文 Italiano 日本語 한국어 فارسی Русский Español Tiếng Việt Translate English العربية 中文 Italiano 日本語 한국어 فارسی Русский Español Tiếng Việt Search Search Try looking up a doctor, a clinic location, or information about a condition/treatment.",
+          "retrievedAt": "2026-09-07T18:56:43.993Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0850-3",
+          "url": "https://www.uclahealth.org/departments/medicine/gastro/research/labs-and-groups/nguyen-laboratory",
+          "excerpt": "and Groups Benhammou Lab Cai Lab Chang Lab Church Lab Donaldson Lab Familial Mediterranean Fever Lab Han Laboratory Hashibe Lab Hepatology Research Hernandez-Kapila Lab Hsiao Lab Interventional Endoscopy Research Issa Lab Jacobs Lab Jensen Lab Joshi Lab Kaunitz Lab Koon Lab Larauche Lab Limketkai Lab May Lab Membrane Biology Lab Meriwether Lab Mulugeta Lab Nguyen Lab Patel Lab Pisegna Lab Preclinical Neurogastroenterology Motility & Translational Research Group Rozengurt Lab Saab Lab Shin Lab Singh Lab Sternini Lab Videlock Lab PDGutBiopsyStudy Wong Research Group Key investigator Alexander H.",
+          "retrievedAt": "2026-09-07T18:56:43.993Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0850-4",
+          "url": "https://www.uclahealth.org/departments/medicine/gastro/research/labs-and-groups/nguyen-laboratory",
+          "excerpt": "Nguyen, MD, PhD Liver lipid metabolism Metabolic dysfunction-associated steatotic liver disease (MASLD) is the most common liver disease in America, affecting one in three adults.",
+          "retrievedAt": "2026-09-07T18:56:43.993Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0850-5",
+          "url": "https://www.uclahealth.org/departments/medicine/gastro/research/labs-and-groups/nguyen-laboratory",
+          "excerpt": "While most patients with this condition have an excellent prognosis, a subset of patients develop steatohepatitis, which is characterized by hepatocyte stress and immune cell activation.",
+          "retrievedAt": "2026-09-07T18:56:43.993Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0850-6",
+          "url": "https://www.uclahealth.org/departments/medicine/gastro/research/labs-and-groups/nguyen-laboratory",
+          "excerpt": "This chronic damage and inflammation lead to fibrosis, end-stage liver disease, and cancer.",
+          "retrievedAt": "2026-09-07T18:56:43.993Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0850-7",
+          "url": "https://www.uclahealth.org/departments/medicine/gastro/research/labs-and-groups/nguyen-laboratory",
+          "excerpt": "The goal of our research is to understand how lipid metabolism contributes to the development of steatohepatitis.",
+          "retrievedAt": "2026-09-07T18:56:43.993Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0850-8",
+          "url": "https://www.uclahealth.org/departments/medicine/gastro/research/labs-and-groups/nguyen-laboratory",
+          "excerpt": "We study genes and cellular processes that function to protect hepatocytes from environmental and genetic stressors.",
+          "retrievedAt": "2026-09-07T18:56:43.993Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:58:15.976Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0851": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://faculty.mdanderson.org/profiles/anh-thuy_nguyen.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0851-1",
+          "url": "https://faculty.mdanderson.org/profiles/anh-thuy_nguyen.html",
+          "excerpt": "Anh-Thuy Nguyen | UT MD Anderson Skip to Content My Chart Log in to our secure, personalized website to manage your care (formerly myMDAnderson).",
+          "retrievedAt": "2026-09-07T18:56:44.788Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0851-2",
+          "url": "https://faculty.mdanderson.org/profiles/anh-thuy_nguyen.html",
+          "excerpt": "Request an Appointment Request an Appointment If you are ready to make an appointment, select a button on the right.",
+          "retrievedAt": "2026-09-07T18:56:44.788Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0851-3",
+          "url": "https://faculty.mdanderson.org/profiles/anh-thuy_nguyen.html",
+          "excerpt": "If you have questions about UT MD Anderson’s appointment process, our information page may be the best place to start.",
+          "retrievedAt": "2026-09-07T18:56:44.788Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0851-4",
+          "url": "https://faculty.mdanderson.org/profiles/anh-thuy_nguyen.html",
+          "excerpt": "re Centers & Clinics Emotional & Physical Effects Patient Support Clinical Trials Supporting a Loved One Supporting a Loved One Supporting a Loved One Home Caregiver Roles & Challenges Children and Teens Taking Care of Yourself Helping a UT MD Anderson Patient Dealing with Loss Life After Cancer Life After Cancer Life After Cancer Home Follow-up Care After Cancer Treatment Long-Term Effects of Cancer Social & Emotional Impacts of Cancer Legal & Financial Impacts of Cancer Survivorship Week Request an Appointment Current Patients Find information and resources for current and returning patients.",
+          "retrievedAt": "2026-09-07T18:56:44.788Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0851-5",
+          "url": "https://faculty.mdanderson.org/profiles/anh-thuy_nguyen.html",
+          "excerpt": "Clinical Trials Learn about clinical trials at UT MD Anderson and search our database for open studies.",
+          "retrievedAt": "2026-09-07T18:56:44.788Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0851-6",
+          "url": "https://faculty.mdanderson.org/profiles/anh-thuy_nguyen.html",
+          "excerpt": "mily History Home Genetic Testing Hereditary Cancer Syndromes Genetic Counseling and Testing FAQs Cancer Screenings Cancer Screenings Cancer Screenings Home Mammograms & Breast Cancer Screening Cervical Cancer Screening Colorectal Cancer Screening Endometrial Cancer Screening Liver Cancer Screening Lung Cancer Screening Mobile Mammography Ovarian Cancer Screening Prostate Cancer Screening Skin Cancer Screening Women&#39;s Cancer Screening Men&#39;s Cancer Screening Cancer Prevention Center The Lyda Hill Cancer Prevention Center provides cancer risk assessment, screening and diagnostic services.",
+          "retrievedAt": "2026-09-07T18:56:44.788Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0851-7",
+          "url": "https://faculty.mdanderson.org/profiles/anh-thuy_nguyen.html",
+          "excerpt": "on Relations Volunteer Volunteer Volunteer Home Why Volunteer On-Site Volunteers Volunteer Endowment Patient Experience Teen Volunteer Leadership Program Children&#39;s Cancer Hospital Councils Other Ways to Help Other Ways to Help Other Ways to Help Home Give Blood Shop UT MD Anderson Children&#39;s Art Project Donate Goods or Services Attend Events Cord Blood Bank Corporate Alliances Corporate Alliances Corporate Alliances Home Current Alliances Join the Campaign to End Cancer Help us celebrate and fuel the groundbreaking innovations and transformative advancements that define UT MD Anderson.",
+          "retrievedAt": "2026-09-07T18:56:44.788Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0851-8",
+          "url": "https://faculty.mdanderson.org/profiles/anh-thuy_nguyen.html",
+          "excerpt": "For Physicians Refer a Patient Refer a Patient Refer a Patient Home Health Care Provider Resource Center Referring Provider Team Insurance Information International Referrals myMDAnderson for Physicians Second Opinion Pathology Clinical Trials Clinical Trials Clinical Trials Home Clinical Tools & Resources Clinical Tools & Resources Clinical Tools & Resources Home Clinical Calculators Clinical Practice Algorithms myMDAnderson for Physicians Our personalized portal helps you refer your patients and communicate with their UT MD Anderson care team.",
+          "retrievedAt": "2026-09-07T18:56:44.788Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:58:15.976Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0852": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://medicine.ucsf.edu/people/tung-nguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0852-1",
+          "url": "https://medicine.ucsf.edu/people/tung-nguyen",
+          "excerpt": "Medical Education & Research Program Department Leadership Message from the Chair Health Policy Faculty Fireside Chats Faculty Profiles Faculty Interviews Master Clinicians DOM Representation in NAM Holly Smith Visiting Professors Administration Parnassus Central Administrative Offices Parnassus Leadership Contact List SFVAHCS Central Administrative Offices SFVAHCS Leadership Contact List ZSFG Central Administrative Offices ZSFG Leadership Contact List News Chair&#039;s Corner 2018-2019 Biennial Report COVID-19 News Coverage Newsletters Calendar ROBERT WACHTER, MD Chair, Department of Medicine.",
+          "retrievedAt": "2026-09-07T18:56:45.373Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0852-2",
+          "url": "https://medicine.ucsf.edu/people/tung-nguyen",
+          "excerpt": "raining Sites Internal Medicine Primary Care Tracks Physician Scientist Training Program Program Leadership Current Housestaff IM Residency Website Internal Medicine Interns R2s R3s Recent Graduates Resident Benefits Resident Stories Jennifer Babik, MD, PhD (left) with former resident Anne Rohlfing, MD RESIDENCY PROGRAMS OVERVIEW Research Research By the Numbers Subspecialty Research Faculty Publications $ 234 M NIH FUNDING IN FY23 FROM 396 AWARDS Research Overview Breadcrumb Home About Faculty Faculty Profiles Tung Nguyen, MD View UCSF Profile Tung Nguyen, MD Professor of Clinical Medicine Dr.",
+          "retrievedAt": "2026-09-07T18:56:45.373Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0852-3",
+          "url": "https://medicine.ucsf.edu/people/tung-nguyen",
+          "excerpt": "McPhee, MD Endowed Chair in General Internal Medicine and Professor of Medicine at the University of California, San Francisco (UCSF).",
+          "retrievedAt": "2026-09-07T18:56:45.373Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0852-4",
+          "url": "https://medicine.ucsf.edu/people/tung-nguyen",
+          "excerpt": "Nguyen teaches medical students and residents about medicine, health equity, and community-based participatory research (CBPR).",
+          "retrievedAt": "2026-09-07T18:56:45.373Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0852-5",
+          "url": "https://medicine.ucsf.edu/people/tung-nguyen",
+          "excerpt": "He has conducted CBPR and patient-centered research with diverse populations including Chinese, Filipino, Hmong, Korean, and Vietnamese Americans on cancer control, tobacco control, hepatitis B and C screening, nutrition and physical activity, and end-of-life care.",
+          "retrievedAt": "2026-09-07T18:56:45.373Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0852-6",
+          "url": "https://medicine.ucsf.edu/people/tung-nguyen",
+          "excerpt": "Nguyen is the UCSF Associate Vice Chancellor for Research Inclusion, Diversity, Equity, and Anti-Racism (IDEA and a Multiple Principal Investigator of the UCSF Clinical and Translational Sciences Institute (CTSI).",
+          "retrievedAt": "2026-09-07T18:56:45.373Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0852-7",
+          "url": "https://medicine.ucsf.edu/people/tung-nguyen",
+          "excerpt": "org), which has over 40 individual and organizational members dedicated to improving the health of Asian Americans.",
+          "retrievedAt": "2026-09-07T18:56:45.373Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0852-8",
+          "url": "https://medicine.ucsf.edu/people/tung-nguyen",
+          "excerpt": "He served as a Commissioner on President Barack Obama’s Advisory Commission on Asian Americans and Pacific Islanders from 2011 to 2014 and as the Chair of the Commission from 2014 to 2017.",
+          "retrievedAt": "2026-09-07T18:56:45.373Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:58:15.976Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0853": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://fcm.ucsf.edu/people/sen-nguyen-md"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:58:15.976Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-0854": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.med.upenn.edu/apps/faculty/index.php/g275/p8330528"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0854-1",
+          "url": "https://www.med.upenn.edu/apps/faculty/index.php/g275/p8330528",
+          "excerpt": "ster’s & Certificate Programs Visiting Students Continuing Medical and Interprofessional Education Biomedical Postdoctoral Programs Graduate Medical Education Other Educational Programs Research Academic Departments Centers & Institutes Equal Opportunity Engagement Community Outreach Global Initiatives Employment About Us Our Faculty Thuong Hien vu Tran Thuong Hien Vu Tran, DO Assistant Professor of Clinical Medicine (Pulmonary, Allergy and Critical Care) Department: Medicine Contact information 800 Walnut Street Philadelphia, PA 19107 Education BS (Biological Sciences) Drexel University, 2012.",
+          "retrievedAt": "2026-09-07T18:56:46.813Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0854-2",
+          "url": "https://www.med.upenn.edu/apps/faculty/index.php/g275/p8330528",
+          "excerpt": "Permanent link &gt; Perelman School of Medicine &gt; Faculty &gt; Details Selected Publications Tran, T : Prevalence of Abnormal Spirometry in Ever smokers with No Known Obstructive Lung Disease .",
+          "retrievedAt": "2026-09-07T18:56:46.813Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0854-3",
+          "url": "https://www.med.upenn.edu/apps/faculty/index.php/g275/p8330528",
+          "excerpt": ": Rules are meant to be broken: successful lung transplantation in a patient with cystic fibrosis and HIV.",
+          "retrievedAt": "2026-09-07T18:56:46.813Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0854-4",
+          "url": "https://www.med.upenn.edu/apps/faculty/index.php/g275/p8330528",
+          "excerpt": ": First Impressions Matter: Diffuse Alveolar Hemorrhage After One Dose of Gemcitabine.",
+          "retrievedAt": "2026-09-07T18:56:46.813Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0854-5",
+          "url": "https://www.med.upenn.edu/apps/faculty/index.php/g275/p8330528",
+          "excerpt": ": A Novel High-Throughput Screening Assay to Identify Inhibitors of HIV-1 gp120 Protein Interaction with DC-SIGN.",
+          "retrievedAt": "2026-09-07T18:56:46.813Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0854-6",
+          "url": "https://www.med.upenn.edu/apps/faculty/index.php/g275/p8330528",
+          "excerpt": "back to top Last updated: 11/20/2024 The Trustees of the University of Pennsylvania Contact and Directions Perelman School of Medicine University of Pennsylvania 3400 Civic Center Boulevard Building 421, Philadelphia, PA 19104 More Contact Information Maps Social Media Follow Us on Facebook See our latest posts Quick Links For: Faculty Students Alumni Staff Calendar News A-Z Guide Webmail MY.",
+          "retrievedAt": "2026-09-07T18:56:46.813Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0854-7",
+          "url": "https://www.med.upenn.edu/apps/faculty/index.php/g275/p8330528",
+          "excerpt": "MED Penn Directory University of Pennsylvania &copy; The Trustees of the University of Pennsylvania | Site best viewed in a supported browser .",
+          "retrievedAt": "2026-09-07T18:56:46.813Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0854-8",
+          "url": "https://www.med.upenn.edu/apps/faculty/index.php/g275/p8330528",
+          "excerpt": "| Report Accessibility Issues and Get Help | Privacy Policy | Site Design: PMACS Web Team.",
+          "retrievedAt": "2026-09-07T18:56:46.813Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:58:15.976Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0855": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.med.upenn.edu/apps/faculty/index.php/g275/p9769423"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0855-1",
+          "url": "https://www.med.upenn.edu/apps/faculty/index.php/g275/p9769423",
+          "excerpt": "Programs Visiting Students Continuing Medical and Interprofessional Education Biomedical Postdoctoral Programs Graduate Medical Education Other Educational Programs Research Academic Departments Centers & Institutes Equal Opportunity Engagement Community Outreach Global Initiatives Employment About Us Our Faculty Nam Duy Nguyen Nam Duy Nguyen, DO Assistant Professor of Clinical Medicine (Rheumatology) Department: Medicine Contact information Division of Rheumatology University of Pennsylvania, School of Medicine 5th Floor White Bldg 3400 Spruce Street & CMC VA Medical Center 3900 Woodland Ave.",
+          "retrievedAt": "2026-09-07T18:56:47.003Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0855-2",
+          "url": "https://www.med.upenn.edu/apps/faculty/index.php/g275/p9769423",
+          "excerpt": "Bldg 21, Rm A215 Philadelphia, PA Links Linkedin Doximity Professional Website Education B.",
+          "retrievedAt": "2026-09-07T18:56:47.003Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0855-3",
+          "url": "https://www.med.upenn.edu/apps/faculty/index.php/g275/p9769423",
+          "excerpt": "(Doctor of Osteopathic Medicine) Philadelphia College of Osteopathic Medicine, Philadelphia, Pennsylvania, 2014.",
+          "retrievedAt": "2026-09-07T18:56:47.003Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0855-4",
+          "url": "https://www.med.upenn.edu/apps/faculty/index.php/g275/p9769423",
+          "excerpt": "MBA (Pharmaceutical and Healthcare Management) Saint Joseph's University - Haub School of Business, 2028.",
+          "retrievedAt": "2026-09-07T18:56:47.003Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0855-5",
+          "url": "https://www.med.upenn.edu/apps/faculty/index.php/g275/p9769423",
+          "excerpt": "Permanent link &gt; Perelman School of Medicine &gt; Faculty &gt; Details Description of Clinical Expertise Psoriatic Arthritis, Ankylosing Spondylitis, Musculoskeletal Ultrasound Description of Research Expertise Psoriatic Arthritis, Ankylosing Spondylitis Selected Publications Del Valle I, Farr D J, Downie S, Broadwater D, Barnes P, Nguyen N, Hofer, J.",
+          "retrievedAt": "2026-09-07T18:56:47.003Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0855-6",
+          "url": "https://www.med.upenn.edu/apps/faculty/index.php/g275/p9769423",
+          "excerpt": ": \"Livedoid Vasculopathy with Severe Debilitating Neuropathy in a Prior Professional Athlete\" Cureus.",
+          "retrievedAt": "2026-09-07T18:56:47.003Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0855-7",
+          "url": "https://www.med.upenn.edu/apps/faculty/index.php/g275/p9769423",
+          "excerpt": ": “An Atypical Case of Dermatomyositis” American College of Physicians Tri-Service Annual Meeting.",
+          "retrievedAt": "2026-09-07T18:56:47.003Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0855-8",
+          "url": "https://www.med.upenn.edu/apps/faculty/index.php/g275/p9769423",
+          "excerpt": ": “Saved by the Gel – Remitting Seronegative Symmetric Synovitis with Pitting Edema” Clinical Congress of Rheumatology, Destin, Florida May 2023 Notes: Poster.",
+          "retrievedAt": "2026-09-07T18:56:47.003Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:58:15.976Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0856": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.peds.uw.edu/directory/pearl_nguyen/2823"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0856-1",
+          "url": "https://www.peds.uw.edu/directory/pearl_nguyen/2823",
+          "excerpt": "Pearl Nguyen MD, MS | UW Pediatrics Skip to main content UW Pediatrics on Facebook UW Pediatrics on Instagram UW Pediatrics on Bluesky UW Pediatrics on LinkedIn Main navigation About About Us Our Leadership Centers & Institutes Values & Collaboratives News Clinical Care Education Our Education Programs Medical Student Program Residency Program Fellowship Programs Leadership Training Five-State Medical Education (WWAMI) Research Divisions Directory Make a Gift Pearl Nguyen, MD, MS mail Email Clinical Assistant Professor Division(s) General Pediatrics Professional Bio Dr.",
+          "retrievedAt": "2026-09-07T18:56:50.842Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0856-2",
+          "url": "https://www.peds.uw.edu/directory/pearl_nguyen/2823",
+          "excerpt": "Pearl Nguyen, MD, MS (she/her) is honored to be a community pediatrician at Odessa Brown Children’s Clinic, providing care to children being raised in the same communities that inspired and nurtured her journey into medicine.",
+          "retrievedAt": "2026-09-07T18:56:50.842Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0856-3",
+          "url": "https://www.peds.uw.edu/directory/pearl_nguyen/2823",
+          "excerpt": "Her clinical interests include data disaggregation for the Asian American and Pacific Islander pediatric population and care optimization for pediatric patients with sickle cell disease presenting in vaso-occlusive pain crisis.",
+          "retrievedAt": "2026-09-07T18:56:50.842Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0856-4",
+          "url": "https://www.peds.uw.edu/directory/pearl_nguyen/2823",
+          "excerpt": "Nguyen is also committed to increasing healthcare access for newcomers and unhoused women/children through community outreach clinics.",
+          "retrievedAt": "2026-09-07T18:56:50.842Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0856-5",
+          "url": "https://www.peds.uw.edu/directory/pearl_nguyen/2823",
+          "excerpt": "We acknowledge that the UW Department of Pediatrics resides on the ancestral homelands of the Coast Salish Peoples who have lived on and stewarded these lands since time immemorial, and continue today as diverse, strong, and enduring communities that uphold a sacred legacy of protecting future generations.",
+          "retrievedAt": "2026-09-07T18:56:50.842Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:58:15.976Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0857": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://phoenixmed.arizona.edu/directory/nguyen-george"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0857-1",
+          "url": "https://phoenixmed.arizona.edu/directory/nguyen-george",
+          "excerpt": "Programs Program Leadership Resources Giving Expand/Collapse Giving Give Now Get Involved Contact Expand/Collapse Contact Phoenix Bioscience Core Administrative Offices Location and Directions Campus Buildings and Addresses Campus Shuttle Service Campus Parking & Transportation Services Directory Advanced Faculty Search Resources Internal Resources Toggle Internal Resources menu links Phonebook UAccess Library Directory Breadcrumb Home Contact Directory Directory George Nguyen George Nguyen Contact Staff Directory Update Your UAccess Personal Information Research Faculty Directory Help James A.",
+          "retrievedAt": "2026-09-07T18:56:52.030Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0857-2",
+          "url": "https://phoenixmed.arizona.edu/directory/nguyen-george",
+          "excerpt": "Anger, MD, MPH Contact: Banner Health Center plus 4200 East Camelback Road, Phoenix, AZ 85018 Update Profile Assistant Clinical Professor, Clinical Series Assistant Clinical Professor, Clinical Series - Internal Medicine Faculty Internal Medicine Education Residency: University of Arizona College of Medicine - Phoenix, 2023 MD: University of Arizona College of Medicine - Phoenix, 2020 uofA_logo 475 N.",
+          "retrievedAt": "2026-09-07T18:56:52.030Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0857-3",
+          "url": "https://phoenixmed.arizona.edu/directory/nguyen-george",
+          "excerpt": "5th Street Phoenix, AZ 85004 Policies Privacy Security Accessibility Find us on Facebook Visit us on X Follow us on Instagram Subscribe on YouTube Connect with us on LinkedIn Subscribe to our Podcast Footer Menu About Programs News Contact Careers Media Inquiries Phoenix Biomedical Campus Parking Emergency Numbers ©2024 The Arizona Board of Regents on behalf of The University of Arizona.",
+          "retrievedAt": "2026-09-07T18:56:52.030Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:58:15.976Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0858": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://medicine.illinois.edu/about/directory/faculty/profile/ltnguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0858-1",
+          "url": "https://medicine.illinois.edu/about/directory/faculty/profile/ltnguyen",
+          "excerpt": "Lan Nguyen | Carle Illinois College of Medicine | Illinois --> Block I logo University of Illinois Urbana-Champaign My.",
+          "retrievedAt": "2026-09-07T18:56:53.171Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0858-2",
+          "url": "https://medicine.illinois.edu/about/directory/faculty/profile/ltnguyen",
+          "excerpt": "rdiovascular Medicine and Surgery Clinical Sciences Neurology and Neurosurgery Oncology Surgery and Digestive Health Threads Bioethics and Medical Humanities Engineering + Innovation Health Systems Lifespan Health Social and Structural Determinants of Health Learning Environment Faculty Course and Clerkship Directors Faculty Health Innovation Professors Research & Innovation Research & Innovation Research & Innovation Facilities Clinical Research Mentors Opportunities to Innovate Partnerships and Affiliations Jump Simulation Center Simulation Equipment Simulation Spaces & Suites Why Simulation?",
+          "retrievedAt": "2026-09-07T18:56:53.171Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0858-3",
+          "url": "https://medicine.illinois.edu/about/directory/faculty/profile/ltnguyen",
+          "excerpt": "lth Innovation Academy Student Life Student Life Wellness Program Wellness Services and Resources Innovation Pods Financial Education Life in Champaign-Urbana Student Handbook Student Interest Groups Student Blog Alumni Voices Giving Giving How to Give Butkus Foundation Partnership Professorships, Awards, and Endowments Giving Stories Alumni Stories Contact Us Impact Reports Summer '22 Newsletter Fall '22 Newsletter Spring '23 Newsletter News News CI MED In the Media Home About Directory Faculty Lan Nguyen Lan Nguyen she/her/hers Clinical Assistant Professor Clinical Sciences ltnguyen@illinois.",
+          "retrievedAt": "2026-09-07T18:56:53.171Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0858-4",
+          "url": "https://medicine.illinois.edu/about/directory/faculty/profile/ltnguyen",
+          "excerpt": "edu Related News Carle Illinois College of Medicine Twitter Instagram Facebook LinkedIn YouTube 506 South Mathews Ave Urbana , IL 61801 Phone: 217-300-5700 Fax: Email: medicine@illinois.",
+          "retrievedAt": "2026-09-07T18:56:53.171Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:58:15.976Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0859": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://medicine.illinois.edu/about/directory/faculty/profile/knguyen1"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0859-1",
+          "url": "https://medicine.illinois.edu/about/directory/faculty/profile/knguyen1",
+          "excerpt": "| Carle Illinois College of Medicine | Illinois --> Block I logo University of Illinois Urbana-Champaign My.",
+          "retrievedAt": "2026-09-07T18:56:53.760Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0859-2",
+          "url": "https://medicine.illinois.edu/about/directory/faculty/profile/knguyen1",
+          "excerpt": "rdiovascular Medicine and Surgery Clinical Sciences Neurology and Neurosurgery Oncology Surgery and Digestive Health Threads Bioethics and Medical Humanities Engineering + Innovation Health Systems Lifespan Health Social and Structural Determinants of Health Learning Environment Faculty Course and Clerkship Directors Faculty Health Innovation Professors Research & Innovation Research & Innovation Research & Innovation Facilities Clinical Research Mentors Opportunities to Innovate Partnerships and Affiliations Jump Simulation Center Simulation Equipment Simulation Spaces & Suites Why Simulation?",
+          "retrievedAt": "2026-09-07T18:56:53.760Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0859-3",
+          "url": "https://medicine.illinois.edu/about/directory/faculty/profile/knguyen1",
+          "excerpt": "s and Resources Innovation Pods Financial Education Life in Champaign-Urbana Student Handbook Student Interest Groups Student Blog Alumni Voices Giving Giving How to Give Butkus Foundation Partnership Professorships, Awards, and Endowments Giving Stories Alumni Stories Contact Us Impact Reports Summer '22 Newsletter Fall '22 Newsletter Spring '23 Newsletter News News CI MED In the Media Home About Directory Faculty Related News Carle Illinois College of Medicine Twitter Instagram Facebook LinkedIn YouTube 506 South Mathews Ave Urbana , IL 61801 Phone: 217-300-5700 Fax: Email: medicine@illinois.",
+          "retrievedAt": "2026-09-07T18:56:53.760Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:58:15.976Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0860": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://llu.edu/academics/faculty/tran-anh"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0860-1",
+          "url": "https://llu.edu/academics/faculty/tran-anh",
+          "excerpt": "Tran, DO | Loma Linda University Skip to main content Secondary Navigation University Healthcare Utility Navigation About LLU Contact Us Find A Program Give Search Site Menu Site Navigation About LLU Academics Admissions & Aid Campus & Spiritual Life Research Search submit Search submit Utility Navigation About LLU Contact Us Find A Program Give Search Site Home Academics Faculty Directory Anh C.",
+          "retrievedAt": "2026-09-07T18:56:54.905Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0860-2",
+          "url": "https://llu.edu/academics/faculty/tran-anh",
+          "excerpt": "Tran, DO Assistant Clinical Professor, Psychiatry School of Medicine Navigation Faculty Directory Update Your Profile We’re Stronger Together With your help, we can advance education and improve student success in our community.",
+          "retrievedAt": "2026-09-07T18:56:54.905Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0860-3",
+          "url": "https://llu.edu/academics/faculty/tran-anh",
+          "excerpt": "Learn How A Seventh-day Adventist Organization Facebook Instagram LinkedIn X Youtube Answer Your Calling You’re called to serve others.",
+          "retrievedAt": "2026-09-07T18:56:54.905Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:58:15.976Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0861": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://llu.edu/academics/faculty/nguyen-thuy-huynh"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0861-1",
+          "url": "https://llu.edu/academics/faculty/nguyen-thuy-huynh",
+          "excerpt": "About LLU Contact Us Find A Program Give Search Site Menu Site Navigation About LLU Academics Admissions & Aid Campus & Spiritual Life Research Search submit Search submit Utility Navigation About LLU Contact Us Find A Program Give Search Site Home Academics Faculty Directory Thuy-Huynh Nguyen, MD Thuy-Huynh Nguyen, MD Assistant Clinical Professor, Psychiatry School of Medicine Assistant Clinical Professor, Psychiatry School of Medicine Navigation Faculty Directory Update Your Profile We’re Stronger Together With your help, we can advance education and improve student success in our community.",
+          "retrievedAt": "2026-09-07T18:56:55.640Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0861-2",
+          "url": "https://llu.edu/academics/faculty/nguyen-thuy-huynh",
+          "excerpt": "Learn How A Seventh-day Adventist Organization Facebook Instagram LinkedIn X Youtube Answer Your Calling You’re called to serve others.",
+          "retrievedAt": "2026-09-07T18:56:55.640Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:58:15.976Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0862": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://keck.usc.edu/faculty-search/caroline-t-nguyen/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://keck.usc.edu/faculty-search/caroline-t-nguyen/: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T18:58:15.976Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-0863": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://research.tees.ac.uk/en/persons/the-anh-han/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0863-1",
+          "url": "https://research.tees.ac.uk/en/persons/the-anh-han/",
+          "excerpt": "The Anh Han - Teesside University&#39;s Research Portal Skip to main navigation Skip to search Skip to main content Teesside University's Research Portal Home Search content at Teesside University&#39;s Research Portal Home Profiles Research units TeesRep Student theses Projects Datasets Equipment Press/Media View Scopus Profile The Anh Han Professor Professor (Computer Science) , Department of Computing & Games Centre for Digital Innovation https://orcid.",
+          "retrievedAt": "2026-09-07T18:56:56.277Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0863-2",
+          "url": "https://research.tees.ac.uk/en/persons/the-anh-han/",
+          "excerpt": "ac uk Accepting PhD Students Overview Fingerprint Network Projects (15) TeesRep (199) Datasets (10) Press/Media (11) Similar Profiles (1) Supervised Work (7) Personal profile Academic Biography Dr The Anh Han is Professor in Computer Science and Lead of the Center for Digital Innovation (CDI) in the School of Computing, Engineering and Digital Technologies, and has been at Teesside since 2014.",
+          "retrievedAt": "2026-09-07T18:56:56.277Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0863-3",
+          "url": "https://research.tees.ac.uk/en/persons/the-anh-han/",
+          "excerpt": "Before joining Teesside, he was a postdoctoral research fellow at the AI Lab of the Free University of Brussels (VUB), funded by the Belgium national research foundation FWO, and obtained his PhD at the AI Center of the New University of Lisbon.",
+          "retrievedAt": "2026-09-07T18:56:56.277Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0863-4",
+          "url": "https://research.tees.ac.uk/en/persons/the-anh-han/",
+          "excerpt": "Prior to that, he completed a joint Masters degree, funded with an Eramus Mundus scholarship, at the New University of Lisbon and the Technical University of Dresden.",
+          "retrievedAt": "2026-09-07T18:56:56.277Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0863-5",
+          "url": "https://research.tees.ac.uk/en/persons/the-anh-han/",
+          "excerpt": "His current research interests span a wide range of topics within Artificial Intelligence and Multidisciplinary research, including AI safety behavioural modelling, dynamics of human cooperation, AI cognitive modelling, evolutionary game theory, agent-based modelling, intention recognition, and knowledge representation and reasoning.",
+          "retrievedAt": "2026-09-07T18:56:56.277Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0863-6",
+          "url": "https://research.tees.ac.uk/en/persons/the-anh-han/",
+          "excerpt": "He also collaborates with behavioral economists to perform experiments with real human subjects in order to validate theoretical models related to human cooperative behaviour.",
+          "retrievedAt": "2026-09-07T18:56:56.277Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0863-7",
+          "url": "https://research.tees.ac.uk/en/persons/the-anh-han/",
+          "excerpt": "Prof Han has been awarded sevearal prestigious fellowships and grants, including from the Future of Life Institute, Leverhulme and FWO Belgium.",
+          "retrievedAt": "2026-09-07T18:56:56.277Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0863-8",
+          "url": "https://research.tees.ac.uk/en/persons/the-anh-han/",
+          "excerpt": "Within these topics, Dr Han's research has resulted in a book (published by Springer) and over 100 referred papers in high-ranking international scientific journals and top computer science conferences, including the journal of the Journal of Artificial Intelligence Research (JAIR), Royal Society Interface, Nature Scientific Reports, JAAMAS, Mathematical Biology, Artificial Life journal, Dynamic Games and Applications, Adaptive Behaviour, AI Communications, IJCAI, AAAI, AAMAS, GECCO, CEC, ICLP, and LPAR.",
+          "retrievedAt": "2026-09-07T18:56:56.277Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:58:15.976Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0864": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://healthcare.utah.edu/find-a-doctor/duy-pham"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0864-1",
+          "url": "https://healthcare.utah.edu/find-a-doctor/duy-pham",
+          "excerpt": "Duy Pham | University of Utah Health Skip to main content Main navigation Find a Doctor Locations Patients & Visitors Patient Services Patient Services Questions About Your Bill?",
+          "retrievedAt": "2026-09-07T18:56:56.828Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0864-2",
+          "url": "https://healthcare.utah.edu/find-a-doctor/duy-pham",
+          "excerpt": "Urgent Care Where to Stay Patient & Family Services Visitor Policy COVID & Vaccine Information Clinical Trials University of Utah Hospital Main navigation University of Utah Hospital Staying at the Hospital Parking & Valet Looking for Another Location?",
+          "retrievedAt": "2026-09-07T18:56:56.828Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0864-3",
+          "url": "https://healthcare.utah.edu/find-a-doctor/duy-pham",
+          "excerpt": "h School of Dentistry Research Main navigation Research Improving Health Through Innovation Clinical Trials & Research Studies Community Main navigation Community Giving Billing & Insurance My Chart Search Menu No Rating Available (Learn About Our Rating System) Duy Pham, MD Languages spoken: English, Vietnamese Clinical Locations Primary Location Huntsman Mental Health Institute 501 Chipeta Way Salt Lake City , UT 84108 801-583-2500 Get Directions Clinical Information Academic Information Duy Pham, MD, Assistant Professor (Clinical), specializes in addiction and substance abuse related issues.",
+          "retrievedAt": "2026-09-07T18:56:56.828Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0864-4",
+          "url": "https://healthcare.utah.edu/find-a-doctor/duy-pham",
+          "excerpt": "He serves as an inpatient and outpatient physician at the University's Huntsman Mental Health Institute and supervises adult psychiatry residents through the Recovery Center there.",
+          "retrievedAt": "2026-09-07T18:56:56.828Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0864-5",
+          "url": "https://healthcare.utah.edu/find-a-doctor/duy-pham",
+          "excerpt": "Specialties Adult Behavioral Health Addiction Psychiatry Electroconvulsive Therapy Psychiatry Board Certification American Board of Psychiatry & Neurology (Sub: Addiction Psychiatry) Duy Pham, MD, Assistant Professor (Clinical), specializes in addiction and substance abuse related issues.",
+          "retrievedAt": "2026-09-07T18:56:56.828Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0864-6",
+          "url": "https://healthcare.utah.edu/find-a-doctor/duy-pham",
+          "excerpt": "He serves as an inpatient and outpatient physician at the University's Huntsman Mental Health Institute and supervises adult psychiatry residents through the Recovery Center there.",
+          "retrievedAt": "2026-09-07T18:56:56.828Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0864-7",
+          "url": "https://healthcare.utah.edu/find-a-doctor/duy-pham",
+          "excerpt": "Board Certification and Academic Information Academic Departments Psychiatry - Assistant Professor (Clinical) Academic Divisions Adult Psychiatry Board Certification American Board of Psychiatry & Neurology (Sub: Addiction Psychiatry) Education history Fellowship Addiction Psychiatry - Boston Medial Center Fellow Residency Psychiatry - Caritas St.",
+          "retrievedAt": "2026-09-07T18:56:56.828Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0864-8",
+          "url": "https://healthcare.utah.edu/find-a-doctor/duy-pham",
+          "excerpt": "Elizabeth&#039;s Medical Center Intern Professional Medical Medicine - University of Utah School of Medicine M.",
+          "retrievedAt": "2026-09-07T18:56:56.828Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:58:15.976Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0865": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://med.uc.edu/landing-pages/profile/index/pubs/phamvn"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0865-1",
+          "url": "https://med.uc.edu/landing-pages/profile/index/pubs/phamvn",
+          "excerpt": "formatics Hoxworth Blood Center Center for Integrative Health Center for Developmental Disabilities UC Center for Cardiovascular Research UC Gardner Neuroscience Institute University of Cincinnati Cancer Center Admissions Doctoral Degree Admissions Fellowship Admissions Master Degree Admissions Residency Admissions Connections Dual Admissions MD Admissions MD/PhD Program MD/MPH Program MD/MBA Dual Degree Hazardous Substances Certificate Undergrad Medical Sciences Undergrad Public Health Clinical Care Search By: Site Search Last Name Keyword Specialty Search Search Landing Pages / Profile Van T.",
+          "retrievedAt": "2026-09-07T18:56:57.514Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0865-2",
+          "url": "https://med.uc.edu/landing-pages/profile/index/pubs/phamvn",
+          "excerpt": "Pham, PhD, PsyD Assistant Professor of Clinical Psychiatry & Behavioral Neuroscience | College of Medicine Print Full CV Education/Credentials PsyD: Xavier University (Clinical Psychology) PhD: The Catholic University of America (Comparative Ethics) MA: Vanderbilt University Specialties Psychology-Clinical Contact Information Office 513-558-7700 Email phamvn@ucmail.",
+          "retrievedAt": "2026-09-07T18:56:57.514Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0865-3",
+          "url": "https://med.uc.edu/landing-pages/profile/index/pubs/phamvn",
+          "excerpt": "edu Clinical Interests Psychology Behavioral Disorders University of Cincinnati | 2600 Clifton Ave.",
+          "retrievedAt": "2026-09-07T18:56:57.514Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:58:15.976Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0866": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://med.nyu.edu/faculty/minh-thu-t-nguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0866-1",
+          "url": "https://med.nyu.edu/faculty/minh-thu-t-nguyen",
+          "excerpt": "Nguyen We use cookies and similar tools to give you the best website experience.",
+          "retrievedAt": "2026-09-07T18:56:57.956Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0866-2",
+          "url": "https://med.nyu.edu/faculty/minh-thu-t-nguyen",
+          "excerpt": "Opens in a new tab Close Skip to Main Content Patient Care NYU Grossman School of Medicine NYU Grossman School of Medicine NYU Grossman Long Island School of Medicine Apply Alumni Events Give .",
+          "retrievedAt": "2026-09-07T18:56:57.956Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0866-3",
+          "url": "https://med.nyu.edu/faculty/minh-thu-t-nguyen",
+          "excerpt": "Education Residency & Fellowship Programs For Incoming House Staff For Current House Staff Policies & Services PhD Degree MD/PhD Degree Postdoctoral Affairs Other Educational Programs MS in Biomedical Informatics Emergency Medical Technician Program MS in Genome Health Analysis Lerner Holistic Integrative Health Nursing Fellowship Pharmacy Residency Programs Pharmacy Technician Training Program Summer Undergraduate Research Program Surgical Technology Program WISE Program Continuing Medical Education About Us For Participants For Course Directors & Speakers Accommodations Join Our Email List .",
+          "retrievedAt": "2026-09-07T18:56:57.956Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0866-4",
+          "url": "https://med.nyu.edu/faculty/minh-thu-t-nguyen",
+          "excerpt": "Education Residency & Fellowship Programs For Incoming House Staff For Current House Staff Policies & Services PhD Degree MD/PhD Degree Postdoctoral Affairs Other Educational Programs MS in Biomedical Informatics Emergency Medical Technician Program MS in Genome Health Analysis Lerner Holistic Integrative Health Nursing Fellowship Pharmacy Residency Programs Pharmacy Technician Training Program Summer Undergraduate Research Program Surgical Technology Program WISE Program Continuing Medical Education About Us For Participants For Course Directors & Speakers Accommodations Join Our Email List .",
+          "retrievedAt": "2026-09-07T18:56:57.956Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0866-5",
+          "url": "https://med.nyu.edu/faculty/minh-thu-t-nguyen",
+          "excerpt": "Opens in a new tab Research Research Research News, Events & Awards Scientific Cores & Shared Resources Technology Opportunities & Ventures .",
+          "retrievedAt": "2026-09-07T18:56:57.956Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0866-6",
+          "url": "https://med.nyu.edu/faculty/minh-thu-t-nguyen",
+          "excerpt": "Research Sponsored Programs Administration Regulatory & Compliance Resources Research Facilities Federal Work Study Program Vilcek Institute of Graduate Biomedical Sciences PhD Program MD/PhD Program MS in Biomedical Informatics MS in Genome Health Analysis Summer Undergraduate Research Program PhD Training Faculty Administration Postdoctoral Affairs Available Postdoc Positions Resources for Postdoctoral Fellows Professional Development Scholar to Faculty Pathway Program For Faculty & Administrators News, Events & Awards Scientific Cores & Shared Resources Technology Opportunities & Ventures .",
+          "retrievedAt": "2026-09-07T18:56:57.956Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0866-7",
+          "url": "https://med.nyu.edu/faculty/minh-thu-t-nguyen",
+          "excerpt": "opment Professional Fulfillment & Wellbeing Health Technology About Us Programs Health Tech Hub Team Contact Us About Us Deans Administrative Offices Life at NYU Grossman School of Medicine Housing Life as a Medical Student Life as a Graduate Student Life as a Postdoc Why NYU Grossman School of Medicine Office of Professional Development Innovation Mentorship & Professional Development Professional Fulfillment & Wellbeing Health Technology About Us Programs Health Tech Hub Team Contact Us Search Search Education & Research Ask AI Site search Clear Search Search Search Apply Alumni Events Give .",
+          "retrievedAt": "2026-09-07T18:56:57.956Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0866-8",
+          "url": "https://med.nyu.edu/faculty/minh-thu-t-nguyen",
+          "excerpt": "Nguyen, MD Clinical Assistant Professor, Department of Medicine Positions & Education Publications Positions & Education Positions Clinical Assistant Professor, Department of Medicine at NYU Grossman School of Medicine Graduate Education MD from University of California, Los Angeles Contact Email Minhthu.",
+          "retrievedAt": "2026-09-07T18:56:57.956Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:58:15.976Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0867": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://nyulangone.org/doctors/1902267925/tuan-nguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0867-1",
+          "url": "https://nyulangone.org/doctors/1902267925/tuan-nguyen",
+          "excerpt": "Tuan Nguyen, DO | NYU Langone Health We use cookies and similar tools to give you the best website experience.",
+          "retrievedAt": "2026-09-07T18:56:58.397Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0867-2",
+          "url": "https://nyulangone.org/doctors/1902267925/tuan-nguyen",
+          "excerpt": "Close If you need help accessing our website, call 855-698-9991 Open accessibility Menu.",
+          "retrievedAt": "2026-09-07T18:56:58.397Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0867-3",
+          "url": "https://nyulangone.org/doctors/1902267925/tuan-nguyen",
+          "excerpt": "Open Accessibility Menu Accessibility Menu not currently available on this page.",
+          "retrievedAt": "2026-09-07T18:56:58.397Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0867-4",
+          "url": "https://nyulangone.org/doctors/1902267925/tuan-nguyen",
+          "excerpt": "If you need help, call 855-698-9991 Skip to main content Patient Care Education & Research NYU Grossman School of Medicine NYU Grossman Long Island School of Medicine MyChart Patient Login .",
+          "retrievedAt": "2026-09-07T18:56:58.397Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0867-5",
+          "url": "https://nyulangone.org/doctors/1902267925/tuan-nguyen",
+          "excerpt": "Opens in a new tab Patient Care Patient Care Explore NYU Langone Health Patient Care NYU Grossman School of Medicine NYU Grossman Long Island School of Medicine Open Menu Search Education & Research Back Menu Open Menu Close Close Menu Find a Doctor Care & Services Care & Services Care & Services We offer the highest quality of care and expertise in all specialty care areas.",
+          "retrievedAt": "2026-09-07T18:56:58.397Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0867-6",
+          "url": "https://nyulangone.org/doctors/1902267925/tuan-nguyen",
+          "excerpt": "vices Brain & Spine Care Cancer Care NYU Langone Heart NYU Langone Orthopedics Pediatrics & Hassenfeld Children's Hospital Primary Care Women&acirc;&#128;&#153;s Health View All Services Same-Day Care Virtual Urgent Care Urgent Care Care on Demand (Primary Care) Orthopedic Immediate Care Emergency Care Learn About Same-Day Care Virtual Urgent Care Urgent Care Care on Demand (Primary Care) Orthopedic Immediate Care Emergency Care Learn About Same-Day Care Imaging Services Our radiology experts offer imaging services from CT and MRI scans to ultrasound and X-ray throughout the New York City area.",
+          "retrievedAt": "2026-09-07T18:56:58.397Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0867-7",
+          "url": "https://nyulangone.org/doctors/1902267925/tuan-nguyen",
+          "excerpt": "View Imaging Services Digital Services MyChart Patient Login NYU Langone Health App Video Doctor Visits MyChart Patient Login NYU Langone Health App Video Doctor Visits Locations Locations Locations Find care close to you at our locations throughout the New York City area and in Florida.",
+          "retrievedAt": "2026-09-07T18:56:58.397Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0867-8",
+          "url": "https://nyulangone.org/doctors/1902267925/tuan-nguyen",
+          "excerpt": "hildren&acirc;&#128;&#153;s Hospital NYU Langone Orthopedic Hospital NYU Langone Hospital&acirc;&#128;&#148;Brooklyn NYU Langone Hospital&acirc;&#128;&#148;Long Island NYU Langone Hospital&acirc;&#128;&#148;Suffolk Tisch Hospital Kimmel Pavilion Hassenfeld Children&acirc;&#128;&#153;s Hospital NYU Langone Orthopedic Hospital NYU Langone Hospital&acirc;&#128;&#148;Brooklyn NYU Langone Hospital&acirc;&#128;&#148;Long Island NYU Langone Hospital&acirc;&#128;&#148;Suffolk Conditions We Treat Conditions We Treat Conditions We Treat Explore our approach to diagnosing and treating adults and children.",
+          "retrievedAt": "2026-09-07T18:56:58.397Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:58:15.976Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0869": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.kumc.edu/tho.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0869-1",
+          "url": "https://www.kumc.edu/tho.html",
+          "excerpt": "edu School of Health Professions School of Medicine School of Nursing University of Kansas The University of Kansas Health System The University of Kansas Cancer Center Search keywords, names, etc.",
+          "retrievedAt": "2026-09-07T18:56:58.857Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0869-2",
+          "url": "https://www.kumc.edu/tho.html",
+          "excerpt": "Search within this section Search all sites Home Academics Research Patient Care Outreach Student Life About Our Campuses Make a Gift Info for Current Students Blackboard Webmail myKUMC Prospective Students Prospective Employees Alumni Faculty & Staff Residents & Fellows Patients Donors Researchers Visitors Our Campuses Make a Gift Info for kumc.",
+          "retrievedAt": "2026-09-07T18:56:58.857Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0869-3",
+          "url": "https://www.kumc.edu/tho.html",
+          "excerpt": "edu Our Campuses Make a Gift Info for Academics Academics Prepare for your health care career with top-ranked programs, state-of-the-art facilities and unmatched opportunities for clinical training.",
+          "retrievedAt": "2026-09-07T18:56:58.857Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0869-4",
+          "url": "https://www.kumc.edu/tho.html",
+          "excerpt": "Admissions & Aid Degree Programs International Education Clinical Education Interprofessional Education Libraries Student Handbooks Related Links: School of Health Professions School of Medicine School of Nursing Research Research Explore world-class research programs that advance the health sciences and attract national recognition.",
+          "retrievedAt": "2026-09-07T18:56:58.857Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0869-5",
+          "url": "https://www.kumc.edu/tho.html",
+          "excerpt": "Research Centers & Institutes Cores, Facilities and Shared Resources Basic Science Departments Research Administration Human Research Protection Program Scheduling Research Facilities Research News Related Links: KU Experts KU Center for Technology Commercialization Core Showcase Summer Research Training Program Student Research Forum Patient Care Patient Care As an academic medical center, we work with The University of Kansas Health System and other regional partners to provide high-quality, compassionate clinical care.",
+          "retrievedAt": "2026-09-07T18:56:58.857Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0869-6",
+          "url": "https://www.kumc.edu/tho.html",
+          "excerpt": "The University of Kansas Health System The University of Kansas Cancer Center Student-Run Clinics Clinical Education University and Faculty Practice Outreach Outreach We build partnerships throughout the state to find new ways to improve the lives of Kansans.",
+          "retrievedAt": "2026-09-07T18:56:58.857Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0869-7",
+          "url": "https://www.kumc.edu/tho.html",
+          "excerpt": "Social Impact Rural Education Global Health Career Development Community Programs Outreach News Related Links: Community Engagement Masonic Cancer Alliance Student Life Student Life Our three campus communities offer unique social events and cultural attractions—the perfect backdrop to our world-class education programs.",
+          "retrievedAt": "2026-09-07T18:56:58.857Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0869-8",
+          "url": "https://www.kumc.edu/tho.html",
+          "excerpt": "Related Links: Office of Student Life Impact & Belonging Office of International Programs About About The University of Kansas Medical Center's mission is to improve lives and communities in Kansas and beyond through innovation in education, research and health care.",
+          "retrievedAt": "2026-09-07T18:56:58.857Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:58:15.976Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0870": {
       "overview": "pending",
