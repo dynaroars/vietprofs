@@ -2942,7 +2942,8 @@
         "vp-1067",
         "vp-1068"
       ],
-      "status": "pending"
+      "status": "in_progress",
+      "startedAt": "2026-09-07T19:14:49.597Z"
     },
     {
       "number": 54,
@@ -66775,208 +66776,1232 @@
       "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1049": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.abdn.ac.uk/business/people/profiles/huong.vu"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.abdn.ac.uk/business/people/profiles/huong.vu: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:16:50.274Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1050": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.lboro.ac.uk/schools/business-school/our-people/nhung-vu/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1050-1",
+          "url": "https://www.lboro.ac.uk/schools/business-school/our-people/nhung-vu/",
+          "excerpt": "site navigation Loughborough University Toggle global mobile menu Search Switch campus: London campus Staff / Students Businesses Alumni Study Research and Innovation Sport News and events About Loughborough Business School About us Our people Menu University home Schools Loughborough Business School Our people Nhung Vu Study Collaborate Research and innovation Our people About us News Events Contact us Dr Nhung Vu PhD (Glasgow), MSc (Bangor), BEc (Ho Chi Minh) Lecturer in Accounting and Finance Expertise: CEOs, compensation, corporate governance, bank risk-taking, credit ratings, bank lending.",
+          "retrievedAt": "2026-09-07T19:14:51.459Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1050-2",
+          "url": "https://www.lboro.ac.uk/schools/business-school/our-people/nhung-vu/",
+          "excerpt": "Research groups and centres Accounting and Finance Publications Research repository --> +44 (0)1509 228277 Send email Profile Research External activities and recognition Featured publications Nhung Vu is a Lecturer in Accounting and Finance since July 2020, with extensive work experience in both academia and industry.",
+          "retrievedAt": "2026-09-07T19:14:51.459Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1050-3",
+          "url": "https://www.lboro.ac.uk/schools/business-school/our-people/nhung-vu/",
+          "excerpt": "Prior to her appointment, she worked as a Graduate Teaching Assistant at the University of Glasgow for two years, as a Lecturer in Accounting and Auditing at the Banking University of Ho Chi Minh City for five years, and as an Auditor and Tax Senior Consultant at KPMG Limited in Vietnam for three years.",
+          "retrievedAt": "2026-09-07T19:14:51.459Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1050-4",
+          "url": "https://www.lboro.ac.uk/schools/business-school/our-people/nhung-vu/",
+          "excerpt": "Her degrees were sponsored by various scholarships, including Vietnamese Government Scholarship (Project 322) and University of Glasgow College of Social Sciences Scholarship.",
+          "retrievedAt": "2026-09-07T19:14:51.459Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1050-5",
+          "url": "https://www.lboro.ac.uk/schools/business-school/our-people/nhung-vu/",
+          "excerpt": "She holds a PhD in Accounting and Finance from the University of Glasgow, and further degrees in Banking and Finance from Bangor University (with Distinction, MSc) and Banking University of Ho Chi Minh City, Vietnam (BEc).",
+          "retrievedAt": "2026-09-07T19:14:51.459Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1050-6",
+          "url": "https://www.lboro.ac.uk/schools/business-school/our-people/nhung-vu/",
+          "excerpt": "Research grants: The effectiveness of internal control systems on bank lending activities in Vietnam, funded by Banking University of Ho Chi Minh City in 2015 (&pound;1,000).",
+          "retrievedAt": "2026-09-07T19:14:51.459Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1050-7",
+          "url": "https://www.lboro.ac.uk/schools/business-school/our-people/nhung-vu/",
+          "excerpt": "The effectiveness of operational performance of commercial banks in Vietnam, funded by Banking University of Ho Chi Minh City in 2014 (&pound;1,000).",
+          "retrievedAt": "2026-09-07T19:14:51.459Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1050-8",
+          "url": "https://www.lboro.ac.uk/schools/business-school/our-people/nhung-vu/",
+          "excerpt": "Foreign currency lending in the commercial banks for the de-dollarization in Vietnam to 2015: the features and solutions, funded by The State Bank of Vietnam in 2013 (&pound;6,000).",
+          "retrievedAt": "2026-09-07T19:14:51.459Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:16:50.274Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1051": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://business.uq.edu.au/profile/404/khoa-hoang"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1051-1",
+          "url": "https://business.uq.edu.au/profile/404/khoa-hoang",
+          "excerpt": "ing Geology Research Centre A Legacy in Stone: Unveiling the 50th grotesque in the Great Court Announcing UQ’s Dutton Park Campus CEDA State of the State, Brisbane Capitalising on the Clever Country Celebrating 15 years of the UQ Centre for Clinical Research (UQCCR) Celebrating 25 years of UQ’s Institute for Molecular Bioscience Celebrating 90 years of the Institute of Modern Languages at UQ Courage and confidence Dorothy Hill Women in Earth and Environmental Sciences Symposium Facts, evidence and discovery: The vital role of our universities in pandemic recovery Farewell to Chancellor Peter N.",
+          "retrievedAt": "2026-09-07T19:14:53.483Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1051-2",
+          "url": "https://business.uq.edu.au/profile/404/khoa-hoang",
+          "excerpt": "Professional staff allowances Academic staff salaries Casual academic staff salaries Research academic staff salaries Research staff (Australian Research Council) salaries Recruitment process Recruitment process Temporary employment (UQ Temps) Relocating to Queensland Equity, diversity and inclusion Log in to application portal Study Research Partners and community About UQ home News Events Give Contact Search term UQ home News Events Give Contact UQ home About\" href=\"/\">About UQ Experts\" href=\"/experts\">UQ Experts Dr Khoa Hoang\" href=\"/experts/13936\">Dr Khoa Hoang Dr Khoa Hoang Email:&ensp; t.",
+          "retrievedAt": "2026-09-07T19:14:53.483Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1051-3",
+          "url": "https://business.uq.edu.au/profile/404/khoa-hoang",
+          "excerpt": "au Phone:&ensp; +61 7 334 60753 Overview Works Funding Supervision Media Positions Senior Lecturer in Finance School of Business Faculty of Business, Economics and Law Overview Background Khoa Hoang is a senior lecturer in Finance at UQ Business School.",
+          "retrievedAt": "2026-09-07T19:14:53.483Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1051-4",
+          "url": "https://business.uq.edu.au/profile/404/khoa-hoang",
+          "excerpt": "and Bachelor of Commerce with First-Class Honours from the University of Queensland.",
+          "retrievedAt": "2026-09-07T19:14:53.483Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1051-5",
+          "url": "https://business.uq.edu.au/profile/404/khoa-hoang",
+          "excerpt": "With a focus on financial economics, Khoa's research expertise includes cost of capital estimation, earnings and returns predictability, corporate valuation, and trading anomalies.",
+          "retrievedAt": "2026-09-07T19:14:53.483Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1051-6",
+          "url": "https://business.uq.edu.au/profile/404/khoa-hoang",
+          "excerpt": "Khoa’s research has been presented in major national and international conferences and published in Accounting and Finance, Australian Journal of Management, Journal of Financial Markets , and Pacific-Basin Finance Journal .",
+          "retrievedAt": "2026-09-07T19:14:53.483Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1051-7",
+          "url": "https://business.uq.edu.au/profile/404/khoa-hoang",
+          "excerpt": "Khoa is an active consultant and has been involved in various industry projects including: - Development of a liquidity model to quantify investable value for emerging equity markets.",
+          "retrievedAt": "2026-09-07T19:14:53.483Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1051-8",
+          "url": "https://business.uq.edu.au/profile/404/khoa-hoang",
+          "excerpt": "- Construction of asset pricing factors to estimate cost of capital for Australian regulated entities.",
+          "retrievedAt": "2026-09-07T19:14:53.483Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:16:50.274Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1052": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://walton.uark.edu/departments/finance/directory/uid/cn061/name/Ca+Nguyen/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1052-1",
+          "url": "https://walton.uark.edu/departments/finance/directory/uid/cn061/name/Ca+Nguyen/",
+          "excerpt": "Ca Nguyen | Directory: Department of Finance | Walton College | University of Arkansas Skip to content CLOSE Search Search About Academics Students Research Alumni Give A-Z Index Blackboard Learn Campus Map Directory Email myApps Workday Sam M.",
+          "retrievedAt": "2026-09-07T19:14:54.492Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1052-2",
+          "url": "https://walton.uark.edu/departments/finance/directory/uid/cn061/name/Ca+Nguyen/",
+          "excerpt": "Walton College of Business Quick Links University of Arkansas A-Z Index Blackboard Learn Campus Map Directory Email myApps Workday Search Search MENU About Academics Students Research Alumni Give Department Home Courses Undergrad Graduate PhD Directory News Research Walton Alternative Investments Program Banking Competition Index Community Bank Stress Test Garrison Financial Institute Seminar Series Student Finance Club Directory: Department of Finance U of A Walton College Departments Finance Directory: Department of Finance Scroll to top What is AACSB Accreditation?",
+          "retrievedAt": "2026-09-07T19:14:54.492Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1052-3",
+          "url": "https://walton.uark.edu/departments/finance/directory/uid/cn061/name/Ca+Nguyen/",
+          "excerpt": "Walton College of Business University of Arkansas 191 N Harmon Ave Fayetteville, AR 72701 Phone: (479) 575-5949 Stay Informed Sam M.",
+          "retrievedAt": "2026-09-07T19:14:54.492Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:16:50.274Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1053": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://geiselmed.dartmouth.edu/tdi/profile/johnny-huynh-phd/",
         "https://sites.google.com/view/shjhuynh/home"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1053-1",
+          "url": "https://geiselmed.dartmouth.edu/tdi/profile/johnny-huynh-phd/",
+          "excerpt": "stdocs PhD Students Staff Research Collaborate with TDI Practice Innovation Academics PhD in Health Policy and Clinical Practice Health Equity Give About Us Open Positions History and Origins of TDI People Core Faculty Affiliated Faculty Instructional Faculty Research Scientists and Postdocs PhD Students Staff Research Collaborate with TDI Practice Innovation Academics PhD in Health Policy and Clinical Practice Health Equity Give Home Johnny Huynh, PhD Johnny Huynh, PhD Assistant Professor Johnny Huynh is an Assistant Professor at The Dartmouth Institute for Health Policy and Clinical Practice.",
+          "retrievedAt": "2026-09-07T19:14:55.241Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1053-2",
+          "url": "https://geiselmed.dartmouth.edu/tdi/profile/johnny-huynh-phd/",
+          "excerpt": "His work combines econometric modeling with large-scale national administrative datasets to understand the causes of health disparities among veterans, disabled individuals, and racial and ethnic minorities.",
+          "retrievedAt": "2026-09-07T19:14:55.241Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1053-3",
+          "url": "https://geiselmed.dartmouth.edu/tdi/profile/johnny-huynh-phd/",
+          "excerpt": "Huynh earned his undergraduate degree from Pomona College and his MA and PhD in economics from the University of California, Los Angeles.",
+          "retrievedAt": "2026-09-07T19:14:55.241Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1053-4",
+          "url": "https://geiselmed.dartmouth.edu/tdi/profile/johnny-huynh-phd/",
+          "excerpt": "He received specialized training from the Health Policy Research Scholars program with the Robert Wood Johnson Foundation.",
+          "retrievedAt": "2026-09-07T19:14:55.241Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1053-5",
+          "url": "https://geiselmed.dartmouth.edu/tdi/profile/johnny-huynh-phd/",
+          "excerpt": "1 Medical Center Drive, WTRB5 Lebanon, NH 03756 603-646-5678 Copyright &copy; 2026 Trustees of Dartmouth College Higher Education Act Information Dartmouth Compliance and Ethics Hotline This page may link to PDF files.",
+          "retrievedAt": "2026-09-07T19:14:55.241Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1053-6",
+          "url": "https://sites.google.com/view/shjhuynh/home",
+          "excerpt": "Home Search this site Embedded Files Skip to main content Skip to navigation Home CV Research Home CV Research More Home CV Research Johnny Huynh CV Google Scholar Johnny Huynh is an Assistant Professor at the Geisel School of Medicine at Dartmouth College.",
+          "retrievedAt": "2026-09-07T19:14:55.448Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:16:50.274Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1054": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://researchers.mq.edu.au/en/persons/chi-truong/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1054-1",
+          "url": "https://researchers.mq.edu.au/en/persons/chi-truong/",
+          "excerpt": "Chi Truong - Macquarie University Skip to main navigation Skip to search Skip to main content Macquarie University Home Help & FAQ Link opens in a new tab Search content at Macquarie University Home Profiles Research units Equipment Projects Research Outputs Datasets Prizes Activities Press/Media Impacts View Scopus Profile Chi Truong Dr Associate Professor , Department of Actuarial Studies and Business Analytics Emerging Risks Research Centre Transforming Energy Markets Research Centre https://orcid.",
+          "retrievedAt": "2026-09-07T19:14:56.534Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1054-2",
+          "url": "https://researchers.mq.edu.au/en/persons/chi-truong/",
+          "excerpt": "edu au h-index 177 Citations 9 h-index Calculated based on number of publications stored in Pure and citations from Scopus 2010 2025 Research activity per year Overview Fingerprint Network Projects (8) Research Outputs (23) Prizes (1) Impacts (2) Similar Profiles (1) Personal profile Biography Dr.",
+          "retrievedAt": "2026-09-07T19:14:56.534Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1054-3",
+          "url": "https://researchers.mq.edu.au/en/persons/chi-truong/",
+          "excerpt": "Chi Truong is an Associate Professor in Actuarial Studies and Business Analytics at Macquarie Business School, Macquarie University.",
+          "retrievedAt": "2026-09-07T19:14:56.534Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1054-4",
+          "url": "https://researchers.mq.edu.au/en/persons/chi-truong/",
+          "excerpt": "His research interests focus on risk quantification and management, especially disaster risk, systemic risk, and operational risk.",
+          "retrievedAt": "2026-09-07T19:14:56.534Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1054-5",
+          "url": "https://researchers.mq.edu.au/en/persons/chi-truong/",
+          "excerpt": "He has extensive experience in developing dynamic factor models for risk management, and evaluating risk mitigation strategies under climate change uncertainty.",
+          "retrievedAt": "2026-09-07T19:14:56.534Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1054-6",
+          "url": "https://researchers.mq.edu.au/en/persons/chi-truong/",
+          "excerpt": "His work has been published in leading journals, including European Journal of Operational Research , Conservation Biology , Journal of Financial Stability , Applied Energy , Energy Policy , North American Actuarial Journal, Journal of Environmental Management, Annals of Operations Research, Environmental and Resource Economics , Weather and Climate Extremes , Agricultural Water Management , Canadian Journal of Agricultural Economics .",
+          "retrievedAt": "2026-09-07T19:14:56.534Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1054-7",
+          "url": "https://researchers.mq.edu.au/en/persons/chi-truong/",
+          "excerpt": "Truong serves as reviewer for numerous top-tiered journals, including European Journal of Operational Research , Energy Economics , American Journal of Agricultural Economics , Journal of Economic Dynamics and Control , International Journal of Production Economics , ASTIN Bulletin , Environmental and Resource Economics , Journal of Environmental Management .",
+          "retrievedAt": "2026-09-07T19:14:56.534Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1054-8",
+          "url": "https://researchers.mq.edu.au/en/persons/chi-truong/",
+          "excerpt": "He has secured research funding from major organizations, including the Asian Development Bank, the Commonwealth Bank of Australia, Society of Actuaries (USA), Toyota, and the National Climate Change Adaptation Research Facility.",
+          "retrievedAt": "2026-09-07T19:14:56.534Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:16:50.274Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1055": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.lancaster.ac.uk/lums/our-departments/accounting-and-finance/people/manh-pham"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1055-1",
+          "url": "https://www.lancaster.ac.uk/lums/our-departments/accounting-and-finance/people/manh-pham",
+          "excerpt": "--> Manh Pham - Lancaster University Skip to content Accessibility help Our use of cookies We use necessary cookies to make our site work.",
+          "retrievedAt": "2026-09-07T19:14:57.449Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1055-2",
+          "url": "https://www.lancaster.ac.uk/lums/our-departments/accounting-and-finance/people/manh-pham",
+          "excerpt": "We'd also like to set optional cookies to help us measure web traffic and report on campaigns.",
+          "retrievedAt": "2026-09-07T19:14:57.449Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1055-3",
+          "url": "https://www.lancaster.ac.uk/lums/our-departments/accounting-and-finance/people/manh-pham",
+          "excerpt": "aduate open days LUMS lecture series Campus tours Working with schools Virtual tour Contact LUMS Give to LUMS Management School Departments in the Management School Accounting and Finance People in Accounting and Finance Manh Pham Management School Departments in the Management School Accounting and Finance People in Accounting and Finance Manh Pham Dr Manh Pham Lecturer in Finance Research Overview My research lies within the field of empirical finance, with particular interests in financial econometrics, market microstructure, time series analysis, empirical asset pricing, and option pricing.",
+          "retrievedAt": "2026-09-07T19:14:57.449Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1055-4",
+          "url": "https://www.lancaster.ac.uk/lums/our-departments/accounting-and-finance/people/manh-pham",
+          "excerpt": "My work focuses on (i) extracting information from the limit order books of equities to estimate and forecast volatility and price impact, and to detect price jumps, and (ii) estimating risk-neutral densities and deriving implied measures such as implied volatility using option data.",
+          "retrievedAt": "2026-09-07T19:14:57.449Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1055-5",
+          "url": "https://www.lancaster.ac.uk/lums/our-departments/accounting-and-finance/people/manh-pham",
+          "excerpt": "I am also interested in developing joint econometric models for returns, volatility and trade characteristics to examine the price formation process in financial markets, as well as in studying the impact of news sentiment on asset prices.",
+          "retrievedAt": "2026-09-07T19:14:57.449Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1055-6",
+          "url": "https://www.lancaster.ac.uk/lums/our-departments/accounting-and-finance/people/manh-pham",
+          "excerpt": "nference facilities Job vacancies Online payments Faculties and departments Health and Medicine Humanities, Arts and Social Sciences Management School Science and Technology Departments and centres Connect Facebook Instagram YouTube TikTok Bluesky LinkedIn The Student Room Weibo WeChat Contact us Lancaster University Management School Bailrigg Lancaster LA1 4YX United Kingdom +44 (0)1524 510752 lums&#64;lancaster&#46;ac&#46;uk Maps and travel Accessibility statement | Legal notice | Freedom of information | Privacy and cookies notices | Modern slavery statement &copy; 2026 Lancaster University.",
+          "retrievedAt": "2026-09-07T19:14:57.449Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:16:50.274Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1056": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://us.edu.pl/instytut/inoz/en/osoby/pham-quoc-bao/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1056-1",
+          "url": "https://us.edu.pl/instytut/inoz/en/osoby/pham-quoc-bao/",
+          "excerpt": "titute of Chemistry August Chełkowski Institute of Physics Institute of Computer Science Institute of BiomedicalEngineering Institute of Materials Engineering Institute of Mathematics Faculty of Law and Administration Institute of Law Faculty of Arts and Educational Science Institute of Music Institute of Fine Arts Faculty of Theology Institute of Theology Krzysztof Kieślowski Film School Institute of Film and Theatre Arts search search Section All Kandydat Student Doktorant Pracownik Absolwent Wydział Prawa i Administracji Wydział Sztuki i Nauk o Edukacji Wydział Teologiczny Szkoła Filmowa im.",
+          "retrievedAt": "2026-09-07T19:14:58.483Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1056-2",
+          "url": "https://us.edu.pl/instytut/inoz/en/osoby/pham-quoc-bao/",
+          "excerpt": "Krzysztofa Kieślowskiego Szkoła Doktorska Instytut Biologii, Biotechnologii i Ochrony Środowiska Instytut Psychologii Instytut Fizyki im.",
+          "retrievedAt": "2026-09-07T19:14:58.483Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1056-3",
+          "url": "https://us.edu.pl/instytut/inoz/en/osoby/pham-quoc-bao/",
+          "excerpt": "ute institute leadership The history of the Institute of Earth Sciences Scientific Board Members Scientific Board meeting schedule attachments employees institute’s evaluation and service office Administrative support Support for teams Forms to download research Research Teams Research Centres Laboratories and Apparatus Scientific Projects PhD thesis contact Institute of Earth Sciences COVID-19 security status Level 0 : no restrictions, basic health and safety at work rules The University operates in the traditional mode--> Coronavirus Statistics home link People PHAM QUOC BAO PHAM QUOC BAO 04.",
+          "retrievedAt": "2026-09-07T19:14:58.483Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1056-4",
+          "url": "https://us.edu.pl/instytut/inoz/en/osoby/pham-quoc-bao/",
+          "excerpt": "net/institution/University_of_Silesia_in_Katowice Data availability statement sitemap Institute of Earth Sciences ul.",
+          "retrievedAt": "2026-09-07T19:14:58.483Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1056-5",
+          "url": "https://us.edu.pl/instytut/inoz/en/osoby/pham-quoc-bao/",
+          "excerpt": "Będzinska 60 41-200 Sosnowiec, Poland Project \"Integrated Development Program of the University of Silesia in Katowice\" co-financed by the European Union under the European Social Fund Privacy policy The previous version of the page © Copyright 2026 - All Rights Reserved Załaduj ponownie stronę Fix It!",
+          "retrievedAt": "2026-09-07T19:14:58.483Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1056-6",
+          "url": "https://us.edu.pl/instytut/inoz/en/osoby/pham-quoc-bao/",
+          "excerpt": "Dear Users, The University of Silesia in Katowice attaches great importance to respecting the privacy of users visiting University websites.",
+          "retrievedAt": "2026-09-07T19:14:58.483Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1056-7",
+          "url": "https://us.edu.pl/instytut/inoz/en/osoby/pham-quoc-bao/",
+          "excerpt": "In order to optimise services, enable proper functioning and save the settings of individual users, websites of the University of Silesia in Katowice use the so-called ‘cookies’.",
+          "retrievedAt": "2026-09-07T19:14:58.483Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1056-8",
+          "url": "https://us.edu.pl/instytut/inoz/en/osoby/pham-quoc-bao/",
+          "excerpt": "Cookies are small text files sent by the website to the user’s browser on the end device (computer, tablet, smartphone, etc.",
+          "retrievedAt": "2026-09-07T19:14:58.483Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:16:50.274Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1057": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://profiles.ucalgary.ca/duy-dao"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1057-1",
+          "url": "https://profiles.ucalgary.ca/duy-dao",
+          "excerpt": "re Active Living Academic Calendar UCalgary Maps Faculty Websites Close Faculty Websites List Viewing: Faculty Websites Cumming School of Medicine Faculty of Arts Faculty of Graduate Studies Faculty of Kinesiology Faculty of Law Faculty of Nursing Faculty of Science Faculty of Social Work Faculty of Veterinary Medicine Haskayne School of Business School of Architecture, Planning and Landscape School of Public Policy Schulich School of Engineering Werklund School of Education Toggle Navigation UCalgary Profiles People Directory Business Directory Emergency Info Duy Dao Are you the profile owner?",
+          "retrievedAt": "2026-09-07T19:14:58.936Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1057-2",
+          "url": "https://profiles.ucalgary.ca/duy-dao",
+          "excerpt": "On This Page Contact information Background Courses Publications More Information Affiliations Associate Professor Haskayne School of Business, Business Technology Management [BTM] Area Chair Haskayne School of Business, Business Technology Management [BTM] Contact information Email duy.",
+          "retrievedAt": "2026-09-07T19:14:58.936Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1057-3",
+          "url": "https://profiles.ucalgary.ca/duy-dao",
+          "excerpt": ", University of California, San Diego, 2017 Curriculum Vitae Biography Duy Dao is an associate professor of Business Technology Management at the Haskayne School of Business.",
+          "retrievedAt": "2026-09-07T19:14:58.936Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1057-4",
+          "url": "https://profiles.ucalgary.ca/duy-dao",
+          "excerpt": "His research broadly spans the economics of software and digital goods, with interests in the economics of cybersecurity and the motion picture industry.",
+          "retrievedAt": "2026-09-07T19:14:58.936Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1057-5",
+          "url": "https://profiles.ucalgary.ca/duy-dao",
+          "excerpt": "His work was nominated for Best Student Paper at the Conference on Information Systems and Technology (2016) for the paper \"Market Segmentation and Software Security: Pricing Patching Rights,\" with co-authors Terrence August and Kihoon Kim.",
+          "retrievedAt": "2026-09-07T19:14:58.936Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1057-6",
+          "url": "https://profiles.ucalgary.ca/duy-dao",
+          "excerpt": "He is the recipient of the 2019 Haskayne School of Business Dean's Research Scholar Award and the 2022 Dean's Award for Innovative Research.",
+          "retrievedAt": "2026-09-07T19:14:58.936Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1057-7",
+          "url": "https://profiles.ucalgary.ca/duy-dao",
+          "excerpt": "He was also nominated for the Students' Union Teaching Excellence Award in 2024.",
+          "retrievedAt": "2026-09-07T19:14:58.936Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1057-8",
+          "url": "https://profiles.ucalgary.ca/duy-dao",
+          "excerpt": "students with strong quantitative backgrounds in economics, mathematics, industrial engineering, operations research, or related fields.",
+          "retrievedAt": "2026-09-07T19:14:58.936Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:16:50.274Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1058": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://research.manchester.ac.uk/en/persons/vietanh.dang"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1058-1",
+          "url": "https://research.manchester.ac.uk/en/persons/vietanh.dang",
+          "excerpt": "Viet Dang - Research Explorer The University of Manchester Skip to main navigation Skip to search Skip to main content Research Explorer The University of Manchester Home Search content at Research Explorer The University of Manchester Home Profiles Research units Research output Projects Impacts Activities Press/Media Prizes Equipment Student theses Viet Dang Prof Professor of Finance , A&F Accounting & Finance https://orcid.",
+          "retrievedAt": "2026-09-07T19:15:00.151Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1058-2",
+          "url": "https://research.manchester.ac.uk/en/persons/vietanh.dang",
+          "excerpt": "org/0000-0002-3719-3171 Accepting PhD Students Overview Fingerprint Network Research output (28) Activities (7) Press/Media (3) Similar Profiles (12) Supervised Work (5) Personal profile Biography Viet is a Professor of Finance at Alliance Manchester Business School.",
+          "retrievedAt": "2026-09-07T19:15:00.151Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1058-3",
+          "url": "https://research.manchester.ac.uk/en/persons/vietanh.dang",
+          "excerpt": "He is also an editor of the Journal of Business Finance and Accounting (ABS3 / ABDC A*), an internationally recognized outlet for research in accounting, corporate finance, and governance.",
+          "retrievedAt": "2026-09-07T19:15:00.151Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1058-4",
+          "url": "https://research.manchester.ac.uk/en/persons/vietanh.dang",
+          "excerpt": "His current research interests are empirical issues in corporate finance and sustainability.",
+          "retrievedAt": "2026-09-07T19:15:00.151Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1058-5",
+          "url": "https://research.manchester.ac.uk/en/persons/vietanh.dang",
+          "excerpt": "in Financial Economics at Leeds University Business School; his PhD thesis was awarded the Best PhD Paper Award at the Financial Management Association (FMA) European Conference.",
+          "retrievedAt": "2026-09-07T19:15:00.151Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1058-6",
+          "url": "https://research.manchester.ac.uk/en/persons/vietanh.dang",
+          "excerpt": "His recent studies have been nominated for various Best Paper Awards at the FMA Annual Meetings (Semi-finalist) and European Conference (Finalist), the European Financial Management Association (EFMA) Conference, and the Vietnam International Conference in Finance (Winner).",
+          "retrievedAt": "2026-09-07T19:15:00.151Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1058-7",
+          "url": "https://research.manchester.ac.uk/en/persons/vietanh.dang",
+          "excerpt": "Viet's research has been funded by the UK's Economic and Social Research Council (ESRC), British Academy (BA), and the Productivity Institute (TPI) and has appeared in world-leading finance and management journals, such as the Review of Financial Studies , Management Science , Journal of Corporate Finance , Journal of Banking and Finance, British Journal of Management , and Journal of Financial Markets.",
+          "retrievedAt": "2026-09-07T19:15:00.151Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1058-8",
+          "url": "https://research.manchester.ac.uk/en/persons/vietanh.dang",
+          "excerpt": "His research findings and implications have been featured in the Harvard Law School Forum on Corporate Governance and Forbes.",
+          "retrievedAt": "2026-09-07T19:15:00.151Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:16:50.274Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1059": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://rsfas.anu.edu.au/people/nhan-le",
         "https://sites.google.com/view/nhanle/home"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1059-1",
+          "url": "https://rsfas.anu.edu.au/people/nhan-le",
+          "excerpt": "and Financial Stability Meeting Contact us Staff resources RSFAS Health and Safety About About People News Academic Areas Academic Areas Actuarial Studies Finance Statistics Study Study Students Honours Student Managed Fund DataFest Research Research Research Review archive Events Events Seminar archive ANU-FIRN Money, Credit, and Financial Stability Meeting Contact us Staff resources Staff resources RSFAS Health and Safety Breadcrumb Home People Nhan Le Dr Nhan Le Senior Lecturer Area of expertise: Finance Research areas Corporate bankruptcy; Economic geography; Behavioral economics; Banking.",
+          "retrievedAt": "2026-09-07T19:15:02.624Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1059-2",
+          "url": "https://rsfas.anu.edu.au/people/nhan-le",
+          "excerpt": "Her research interests include economic geography, behavioral finance, the banking sector and labor economics.",
+          "retrievedAt": "2026-09-07T19:15:02.624Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1059-3",
+          "url": "https://rsfas.anu.edu.au/people/nhan-le",
+          "excerpt": "Nhan’s work has been published in internationally renowned journals including Review of Finance .",
+          "retrievedAt": "2026-09-07T19:15:02.624Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1059-4",
+          "url": "https://rsfas.anu.edu.au/people/nhan-le",
+          "excerpt": "Her research has also been recognised through the receipt of a best paper award.",
+          "retrievedAt": "2026-09-07T19:15:02.624Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1059-5",
+          "url": "https://rsfas.anu.edu.au/people/nhan-le",
+          "excerpt": "CV Grants Best paper award at VICIF conference in Vietnam, 2018 Publications Publication: Local Bankruptcy and Geographic Contagion in the Bank Loan Market (Jawad Addoum, Alok Kumar, Nhan Le and Alexandra Niessen-Ruenzi), Review of Finance 2020 Does risk of shareholder litigation affect corporate information environments?",
+          "retrievedAt": "2026-09-07T19:15:02.624Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1059-6",
+          "url": "https://rsfas.anu.edu.au/people/nhan-le",
+          "excerpt": "(Nhan Le, Duc Duy Nguyen and Vathunyoo Sila), Accepted on Journal of Financial Markets.",
+          "retrievedAt": "2026-09-07T19:15:02.624Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1059-7",
+          "url": "https://rsfas.anu.edu.au/people/nhan-le",
+          "excerpt": "Finalist for the Corporate Finance best paper award sponsored by CSMAR, FMA Asia 2019.",
+          "retrievedAt": "2026-09-07T19:15:02.624Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1059-8",
+          "url": "https://rsfas.anu.edu.au/people/nhan-le",
+          "excerpt": "Selected working papers: Local Information Environment and Accounting Fraud (Jens Hagendorff, Nhan Le, Duc Duy Nguyen), R&R on Journal of Money, Credit and Banking Financial Development and Productivity Growth of Stagnant Industries (Nhan Le, Ha Nguyen and Emma Schultz) - Best paper award at VICIF conference in Vietnam, 2018 Does Shareholder Litigation Risk Cause Public Firms to Delist?",
+          "retrievedAt": "2026-09-07T19:15:02.624Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1059-9",
+          "url": "https://sites.google.com/view/nhanle/home",
+          "excerpt": "Nhan Le Search this site Embedded Files Skip to main content Skip to navigation Nhan Le Home Working papers Published papers Nhan Le Home Working papers Published papers More Home Working papers Published papers Nhan Le Senior Lecturer College of Business and Economics Australian National University Rm.",
+          "retrievedAt": "2026-09-07T19:15:02.839Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:16:50.274Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1060": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://crawford.anu.edu.au/people/long-chu"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1060-1",
+          "url": "https://crawford.anu.edu.au/people/long-chu",
+          "excerpt": "t Research Knowledge Hub of past research People News & Events Alumni Give to Crawford Breadcrumb Home people Long Chu Prof Long Chu PhD in economics, The Australian National University (2009); Master of International and Development Economics (top rank), The Australian National University (2004); Bachelor of Economics, The Foreign Trade University - Vietnam (1997) Professor and Director of Research and Impact Crawford School of Public Policy Professor (Hoang) Long Chu is an economist specialising in applied modelling and quantitative analysis to support policymaking and evaluate policy impact.",
+          "retrievedAt": "2026-09-07T19:15:04.666Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1060-2",
+          "url": "https://crawford.anu.edu.au/people/long-chu",
+          "excerpt": "With expertise in various areas, including international trade, green growth strategies, structural reforms, biosecurity, resource management, and sustainable development, Long brings profound knowledge to his field.",
+          "retrievedAt": "2026-09-07T19:15:04.666Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1060-3",
+          "url": "https://crawford.anu.edu.au/people/long-chu",
+          "excerpt": "His contributions have been recognised with numerous prestigious awards and honours, such as the Eureka Prize (often referred to as the ‘Oscar’ in Australian science) and the Prize for the Quality of Research Discovery presented by the Australasian Agricultural & Resource Economics Society.",
+          "retrievedAt": "2026-09-07T19:15:04.666Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1060-4",
+          "url": "https://crawford.anu.edu.au/people/long-chu",
+          "excerpt": "Other recognition of his work includes the 2025 Award to Outstanding Contribution to Vietnam-Australia Relationship and the 2023 Award for Outstanding Contribution to the Vietnam Research Community in Australia, by Vietnam’s Ambassador to Australia.",
+          "retrievedAt": "2026-09-07T19:15:04.666Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1060-5",
+          "url": "https://crawford.anu.edu.au/people/long-chu",
+          "excerpt": "Long has extensive work experience in decision-making organisations in Vietnam, and he is the inaugural director of the ANU Hub for Vietnam Policy Studies .",
+          "retrievedAt": "2026-09-07T19:15:04.666Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1060-6",
+          "url": "https://crawford.anu.edu.au/people/long-chu",
+          "excerpt": "Research Interest Professor Long Chu has research interests, with peer-review publications, in constructing novel applied economic models and quantitative methods for decision-making in the following areas: carbon pricing and carbon markets, climate change impact, water resource management, green agriculture, the cost-effectiveness of public health policy, structural reform policy, fishery system management and resilience, forestry, and biosecurity.",
+          "retrievedAt": "2026-09-07T19:15:04.666Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1060-7",
+          "url": "https://crawford.anu.edu.au/people/long-chu",
+          "excerpt": "Expertise Area(s) Economic Modelling and Quantitative Data Analysis Applied Economics and Policy Analysis Environmental and Resource Economics Agricultural and Development Economics Contact Email Long.",
+          "retrievedAt": "2026-09-07T19:15:04.666Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:16:50.274Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1061": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://jcsmr.anu.edu.au/people/associate-professor-nhung-nghiem"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1061-1",
+          "url": "https://jcsmr.anu.edu.au/people/associate-professor-nhung-nghiem",
+          "excerpt": "dicine College website Research School of Astronomy & Astrophysics Research School of Biology Research School of Chemistry Research School of Earth Sciences Research School of Physics School of Medicine and Psychology Home About us Toggle submenu Overview Mission & Vision Our success Our building Honour roll Awards & prizes Equity & Diversity Welcome to The John Curtin School of Medical Research Our people excel in multidisciplinary, translational medical research in fields including immunology, cancer, genomics, neuroscience, mental health, infectious diseases, obesity and metabolic disorders.",
+          "retrievedAt": "2026-09-07T19:15:06.460Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1061-2",
+          "url": "https://jcsmr.anu.edu.au/people/associate-professor-nhung-nghiem",
+          "excerpt": "Learn more Contact us Visit Give to ANU Facebook Instagram Twitter Youtube Study with us Toggle submenu Overview Undergraduate Postgraduate Campus life Career services Scholarships Potential PhD projects Potential Research Projects Study at the John Curtin School of Medical Research We have a long and distinguished history in medical science.",
+          "retrievedAt": "2026-09-07T19:15:06.460Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1061-3",
+          "url": "https://jcsmr.anu.edu.au/people/associate-professor-nhung-nghiem",
+          "excerpt": "Undergraduate courses in biology and neuroscience; postgraduate programs in biology, neuroscience and computational biology; and Masters and PhD degrees - whatever your goals, we're equipping students to succeed.",
+          "retrievedAt": "2026-09-07T19:15:06.460Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1061-4",
+          "url": "https://jcsmr.anu.edu.au/people/associate-professor-nhung-nghiem",
+          "excerpt": "Learn more Contact us Visit Give to ANU Facebook Instagram Twitter Youtube Our people Toggle submenu Overview Profile directory Faculty experts School leadership Profile directory The people behind the life-changing medical discoveries.",
+          "retrievedAt": "2026-09-07T19:15:06.460Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1061-5",
+          "url": "https://jcsmr.anu.edu.au/people/associate-professor-nhung-nghiem",
+          "excerpt": "Find our experts Contact us Visit Give to ANU Facebook Instagram Twitter Youtube Research & Innovation Toggle submenu Overview Centres Services Research divisions Research groups Research infrastructure Research projects Publications Research stories Software resources Cutting-edge research We’re on a mission to transform healthcare with cutting-edge research in immunology, cancer, genomics, neuroscience, infectious diseases, and metabolic disorders.",
+          "retrievedAt": "2026-09-07T19:15:06.460Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1061-6",
+          "url": "https://jcsmr.anu.edu.au/people/associate-professor-nhung-nghiem",
+          "excerpt": "We aim to gain novel insights into diseases including cancer, diabetes, rheumatoid arthritis, epilepsy, and vision impairment.",
+          "retrievedAt": "2026-09-07T19:15:06.460Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1061-7",
+          "url": "https://jcsmr.anu.edu.au/people/associate-professor-nhung-nghiem",
+          "excerpt": "Learn more Contact us Visit Give to ANU Facebook Instagram Twitter Youtube Our impact Toggle submenu Overview Success stories Alumni & friends How many Nobel Laureates does it take to light up an auditorium?",
+          "retrievedAt": "2026-09-07T19:15:06.460Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1061-8",
+          "url": "https://jcsmr.anu.edu.au/people/associate-professor-nhung-nghiem",
+          "excerpt": "Academics share their success and their love of Science at their former research school.",
+          "retrievedAt": "2026-09-07T19:15:06.460Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:16:50.274Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1062": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.ntu.ac.uk/staff-profiles/business/thong-dao"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.ntu.ac.uk/staff-profiles/business/thong-dao: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T19:16:50.274Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1063": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://robins.richmond.edu/faculty/ntran/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1063-1",
+          "url": "https://robins.richmond.edu/faculty/ntran/",
+          "excerpt": "Nancy Tran - Robins School of Business - University of Richmond --> Skip to Main Content Skip to Footer &times; Close Modal robins.",
+          "retrievedAt": "2026-09-07T19:15:07.368Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1063-2",
+          "url": "https://robins.richmond.edu/faculty/ntran/",
+          "excerpt": "ent Managed Investment Fund (SMIF) Application Process Advisory Board SMIF History Career Development Robins Professional Readiness Opportunities (PRO) Executives in Residence Robins Mentoring Program Center for Professional Skills and Development Mentoring Program Recruiters and Employers Events Robins Entrepreneur Series 2025 (8th) CEBRA Workshop for Commodities & Macroeconomics Techstars' Startup Weekend Richmond Speakers Robins Executive Speaker Series Artificial Intelligence Panel Stuart Weitzman Michael West C-Suite Conversations Katherine O'Donnell Brian Schaller Past Speakers Stanley S.",
+          "retrievedAt": "2026-09-07T19:15:07.368Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1063-3",
+          "url": "https://robins.richmond.edu/faculty/ntran/",
+          "excerpt": "Watts Lectureship Executive in Residence Faculty Endowed Chairs Robins Case Network Adjunct & Visiting Faculty Faculty Committees & Campus Involvement Faculty Publications & Research Executive Advisory Council Directory Faculty Directory Graduate About Us Office of the Dean 75th Anniversary Staff Directory AACSB Accreditation Assurance of Learning Strategic Plan Sustainability Sustainability Strategy Sustainability Teaching Sustainability Research Student Engagement Network & Partners Contact Initiative on Commodities & Natural Resources Giving Apply Visit Give Info for.",
+          "retrievedAt": "2026-09-07T19:15:07.368Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1063-4",
+          "url": "https://robins.richmond.edu/faculty/ntran/",
+          "excerpt": "Students Faculty/Staff Parents Alumni Community Blackboard Canvas Box Bannerweb Workday Gmail Exchange Email Library SpiderTechNet Calendar Search Do Search www.",
+          "retrievedAt": "2026-09-07T19:15:07.368Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1063-5",
+          "url": "https://robins.richmond.edu/faculty/ntran/",
+          "excerpt": "Search Do Search Web Results Directory Results Close Robins School of Business Richmond Robins School of Business Faculty Current: Nancy Tran Undergraduate Show submenu for Undergraduate Undergraduate Business After two years of liberal arts studies, you'll begin your journey at Robins with a clear vision for where you want to go.",
+          "retrievedAt": "2026-09-07T19:15:07.368Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1063-6",
+          "url": "https://robins.richmond.edu/faculty/ntran/",
+          "excerpt": "With expert faculty and immersive experiences, we'll help you realize that vision so you can help make the world better.",
+          "retrievedAt": "2026-09-07T19:15:07.368Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1063-7",
+          "url": "https://robins.richmond.edu/faculty/ntran/",
+          "excerpt": "raduate Business Academic Departments Accounting Analytics & Operations Business Administration Economics Finance International Business Management Marketing The Robins Student Advising Declaration Process Study Abroad Student Organizations Robins Professional Readiness Opportunities Professional and Experiential Opportunities Show submenu for Professional and Experiential Opportunities Professional and Experiential Opportunities Professional and experiential opportunities are woven throughout the business school experience, ensuring every student gains hands-on learning and career preparation.",
+          "retrievedAt": "2026-09-07T19:15:07.368Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1063-8",
+          "url": "https://robins.richmond.edu/faculty/ntran/",
+          "excerpt": "Whether following a structured pathway or creating a personalized journey, each student can build the skills, experiences, and connections needed for success after graduation.",
+          "retrievedAt": "2026-09-07T19:15:07.368Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:16:50.274Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1064": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://experts.deakin.edu.au/7290-annette-nguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1064-1",
+          "url": "https://experts.deakin.edu.au/7290-annette-nguyen",
+          "excerpt": "Annette Nguyen | About me | Deakin University Skip to main content All experts Dr Annette Nguyen Senior Lecturer Faculty of Business and Law/Deakin Business School Contact External links View collaborators Orcid identifier 0000-0003-1272-9141 (opens in a new tab) ⁠ Senior Lecturer Faculty of Business and Law/Deakin Business School +61 3 924 46974 (Work) annette.",
+          "retrievedAt": "2026-09-07T19:15:08.699Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1064-2",
+          "url": "https://experts.deakin.edu.au/7290-annette-nguyen",
+          "excerpt": "au (opens in a new tab) Melbourne Burwood Campus, 221 Burwood Highway, Burwood, Victoria 3125 Collaboration Network Are you Annette Nguyen?",
+          "retrievedAt": "2026-09-07T19:15:08.699Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1064-3",
+          "url": "https://experts.deakin.edu.au/7290-annette-nguyen",
+          "excerpt": "Edit your profile ABOUT ME MY RESEARCH OUTPUTS MY RESEARCH PROFESSIONAL ACTIVITIES TEACHING & SUPERVISION MORE BIO Dr Annette Nguyen is a Senior Lecturer in the Department of Finance in Deakin&#160;Business School.",
+          "retrievedAt": "2026-09-07T19:15:08.699Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1064-4",
+          "url": "https://experts.deakin.edu.au/7290-annette-nguyen",
+          "excerpt": "Her&#160;research areas include informed trading in the option market, funds management&#160;and behavioural finance.",
+          "retrievedAt": "2026-09-07T19:15:08.699Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1064-5",
+          "url": "https://experts.deakin.edu.au/7290-annette-nguyen",
+          "excerpt": "DEAKIN UNIVERSITY CURRENT APPOINTMENT Senior Lecturer Deakin University, Finance Discipline Group DEGREES Doctor of Philosophy Monash University Graduate Certificate of Higher Education Deakin University Bachelor of Commerce Monash University FIELDS OF RESEARCH Banking, finance and investment Applied economics Accounting, auditing and accountability AREA/FACULTY Faculty of Business and Law DEPARTMENT/SCHOOL/INSTITUTE/DISCIPLINE Deakin Business School Finance Discipline Group CONTACT DEAKIN Contact Deakin CRICOS Provider Code 00113B 1800 693 888 enquire@deakin.",
+          "retrievedAt": "2026-09-07T19:15:08.699Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:16:50.274Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1065": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://eps.leeds.ac.uk/faculty-engineering-physical-sciences/staff/12207/khoa-le"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1065-1",
+          "url": "https://eps.leeds.ac.uk/faculty-engineering-physical-sciences/staff/12207/khoa-le",
+          "excerpt": "dent Education Service For students Students Minerva Mobile apps Faculties Faculty of Arts, Humanities and Cultures Faculty of Biological Sciences Faculty of Business Faculty of Engineering and Physical Sciences Faculty of Environment Faculty of Medicine and Health Faculty of Social Sciences Lifelong Learning Centre Language Centre Other A-Z Staff Alumni Campus map Contacts IT Jobs Leeds University Union Library Follow us Facebook Instagram LinkedIn Medium The Conversation Bluesky Weibo YouTube Close quicklinks Menu Search Destination Faculty of Engineering and Physical Sciences site All leeds.",
+          "retrievedAt": "2026-09-07T19:15:09.398Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1065-2",
+          "url": "https://eps.leeds.ac.uk/faculty-engineering-physical-sciences/staff/12207/khoa-le",
+          "excerpt": "earch Close Home School School of Chemical and Process Engineering School of Chemistry School of Civil Engineering School of Computer Science School of Electronic and Electrical Engineering School of Mathematics School of Mechanical Engineering School of Physics and Astronomy Research and Innovation Working with business Conferences People Contact us Faculty of Engineering and Physical Sciences People Profile Khoa Lê Position: Lecturer Areas of expertise: Stochastic analysis; rough paths; stochastic differential equations; stochastic partial differential equations; stochastic numerics Email: K.",
+          "retrievedAt": "2026-09-07T19:15:09.398Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1065-3",
+          "url": "https://eps.leeds.ac.uk/faculty-engineering-physical-sciences/staff/12207/khoa-le",
+          "excerpt": "uk Phone: +44(0)113 343 1661 Website: Googlescholar | Researchgate | ORCID Profile Education: PhD (2015) in applied mathematics, University of Kansas, advisor: Prof.",
+          "retrievedAt": "2026-09-07T19:15:09.398Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1065-4",
+          "url": "https://eps.leeds.ac.uk/faculty-engineering-physical-sciences/staff/12207/khoa-le",
+          "excerpt": "Yaozhong Hu Msc (2011) in mathematics, University of Texas at San Antonio, advisor: Prof.",
+          "retrievedAt": "2026-09-07T19:15:09.398Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1065-5",
+          "url": "https://eps.leeds.ac.uk/faculty-engineering-physical-sciences/staff/12207/khoa-le",
+          "excerpt": "Dung Le Bsc (2009) in mathematics and computer science, University of Natuaral Sciences, Ho Chi Minh city.",
+          "retrievedAt": "2026-09-07T19:15:09.398Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1065-6",
+          "url": "https://eps.leeds.ac.uk/faculty-engineering-physical-sciences/staff/12207/khoa-le",
+          "excerpt": "Professional services: Associate editor for Stochastic Analysis and Applications &lt;h4&gt;Research projects&lt;/h4&gt; &lt;p&gt;Some research projects I&#039;m currently working on, or have worked on, will be listed below.",
+          "retrievedAt": "2026-09-07T19:15:09.398Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1065-7",
+          "url": "https://eps.leeds.ac.uk/faculty-engineering-physical-sciences/staff/12207/khoa-le",
+          "excerpt": "uk/dir/research-projects&quot;&gt;research projects&lt;/a&gt; allows you to view and search the full list of projects in the faculty.",
+          "retrievedAt": "2026-09-07T19:15:09.398Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1065-8",
+          "url": "https://eps.leeds.ac.uk/faculty-engineering-physical-sciences/staff/12207/khoa-le",
+          "excerpt": "&lt;/p&gt; Co-investigator (Co-I) Regularisation by noise: beyond Itô&#039;s theory Research groups and institutes Probability and Financial Mathematics Current postgraduate researchers Teodor Holland &lt;h4&gt;Postgraduate research opportunities&lt;/h4&gt; &lt;p&gt;We welcome enquiries from motivated and qualified applicants from all around the world who are interested in PhD study.",
+          "retrievedAt": "2026-09-07T19:15:09.398Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:16:50.274Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1066": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://medschool.umich.edu/profile/10068/thanh-hoang",
         "https://hoanglabregen.com/"
       ],
-      "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "evidence": [
+        {
+          "id": "vp-1066-1",
+          "url": "https://hoanglabregen.com/",
+          "excerpt": "Neuroscience & Regeneration Skip to content Home Research Publications Our Team Lab activities Lab news Join us Contact Funding Support Welcome to the Hoang Lab Join Our Team &gt; Meet Our PI and Our Team Thanh Hoang Located at the University of Michigan Kellogg Eye Center, our lab studies fundamental biology of neurodevelopment and regeneration in the brain and retina.",
+          "retrievedAt": "2026-09-07T19:15:09.774Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1066-2",
+          "url": "https://hoanglabregen.com/",
+          "excerpt": "We employ large-scale multiomic and genetic approaches in both mouse and human systems.",
+          "retrievedAt": "2026-09-07T19:15:09.774Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1066-3",
+          "url": "https://hoanglabregen.com/",
+          "excerpt": "Our ultimate goal is to translate these understandings into therapeutic strategies for treating neurodegenerative diseases.",
+          "retrievedAt": "2026-09-07T19:15:09.774Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1066-4",
+          "url": "https://hoanglabregen.com/",
+          "excerpt": "Research Focus Regeneration of neurons through cell reprogramming Investigating cell type specification during neurodevelopment Modulating the cell interactions for neuroprotection Featured Publications Science Advances | 2024 Robust reprogramming of glia into neurons by inhibition of Notch signaling and nuclear factor I (NFI) factors in adult mammalian retina Nguyet Le, Trieu-Duc Vu, Isabella Palazzo, Ritvik Pulya, Yehna Kim, Seth Blackshaw, Thanh Hoang Suppressing Notch signaling (via Rbpj or Notch1/2 disruption) reprograms mature Müller glia into bipolar- and amacrine-like retinal neurons.",
+          "retrievedAt": "2026-09-07T19:15:09.774Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1066-5",
+          "url": "https://hoanglabregen.com/",
+          "excerpt": "Combined loss of Rbpj and Nfia/b/x converts nearly all glia to neurons, while Yap-driven proliferation further enhances neurogenesis.",
+          "retrievedAt": "2026-09-07T19:15:09.774Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1066-6",
+          "url": "https://hoanglabregen.com/",
+          "excerpt": "Notch/NFI pathways act in parallel to inhibit glial neurogenic competence, revealing targets for retinal regenerative therapies.",
+          "retrievedAt": "2026-09-07T19:15:09.774Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1066-7",
+          "url": "https://hoanglabregen.com/",
+          "excerpt": "Nature | 2023 Ptbp1 deletion does not induce astrocyte-to-neuron conversion Thanh Hoang, Dong Won Kim, Haley Appel, Manabu Ozawa, Sika Zheng, Juhyun Kim & Seth Blackshaw Genetic disruption of Ptbp1 in astrocytes using rigorous lineage tracing and single-cell RNA sequencing revealed no evidence of astrocyte-to-neuron conversion, contradicting prior claims.",
+          "retrievedAt": "2026-09-07T19:15:09.774Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1066-8",
+          "url": "https://hoanglabregen.com/",
+          "excerpt": "The observed &#8220;conversion&#8221; in earlier studies likely resulted from artifacts such as leaky neuronal labeling, emphasizing the need for stringent controls in reprogramming research.",
+          "retrievedAt": "2026-09-07T19:15:09.774Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
+      "errors": [
+        "https://medschool.umich.edu/profile/10068/thanh-hoang: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T19:16:50.274Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1067": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://research.manchester.ac.uk/en/persons/huy.chau",
         "https://sites.google.com/site/chaungochuyvn/home"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1067-1",
+          "url": "https://research.manchester.ac.uk/en/persons/huy.chau",
+          "excerpt": "Huy Chau - Research Explorer The University of Manchester Skip to main navigation Skip to search Skip to main content Research Explorer The University of Manchester Home Search content at Research Explorer The University of Manchester Home Profiles Research units Research output Projects Impacts Activities Press/Media Prizes Equipment Student theses Huy Chau Dr Lecturer in Financial Mathematics , Statistics https://orcid.",
+          "retrievedAt": "2026-09-07T19:15:10.813Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1067-2",
+          "url": "https://research.manchester.ac.uk/en/persons/huy.chau",
+          "excerpt": "ac uk Accepting PhD Students Overview Fingerprint Network Research output (16) Similar Profiles (2) Personal profile Further information My office: 2.",
+          "retrievedAt": "2026-09-07T19:15:10.813Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1067-3",
+          "url": "https://research.manchester.ac.uk/en/persons/huy.chau",
+          "excerpt": "119, Alan Turing Building, Oxford Rd, Manchester, M13 9PL Research interests Financial mathematics, Machine learning, Data Science Personal page https://sites.",
+          "retrievedAt": "2026-09-07T19:15:10.813Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1067-4",
+          "url": "https://research.manchester.ac.uk/en/persons/huy.chau",
+          "excerpt": "com/site/chaungochuyvn/ Biography Before joining the University of Manchester in November 2021, I was a Specially Appointed Assistant Professor at Center for Mathematical Modeling and Data Science, Osaka University, Japan (September 2019 - November 2021), a Post-doctoral researcher at Alfred Renyi Institute of Mathematics, Hungary (October, 2015 - August 2019).",
+          "retrievedAt": "2026-09-07T19:15:10.813Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1067-5",
+          "url": "https://research.manchester.ac.uk/en/persons/huy.chau",
+          "excerpt": "I completed my PhD at University of Padova and LPMA, University Paris Diderot in February 2016 under the supervision of Prof.",
+          "retrievedAt": "2026-09-07T19:15:10.813Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1067-6",
+          "url": "https://research.manchester.ac.uk/en/persons/huy.chau",
+          "excerpt": "2 Similar Profiles Stochastics Mathematics 100% Utility Maximization Mathematics 100% Arbitrage Mathematics 66% Numerical Example Mathematics 55% Asymptotics Mathematics 52% Investors Economics, Econometrics and Finance 38% Price Process Mathematics 36% Dependent Data Mathematics 33% View full fingerprint Collaborations and top research areas from the last five years Recent external collaboration on country/territory level.",
+          "retrievedAt": "2026-09-07T19:15:10.813Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1067-7",
+          "url": "https://research.manchester.ac.uk/en/persons/huy.chau",
+          "excerpt": "Dive into details by clicking on the dots or Select a country/territory from the list Dive into details Select a country/territory to view shared publications and projects Close Select a country/territory from the list Explore network further Research output 16 Article Research output per year Research output per year An efficient method to simulate diffusion bridges Chau, H.",
+          "retrievedAt": "2026-09-07T19:15:10.813Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1067-8",
+          "url": "https://research.manchester.ac.uk/en/persons/huy.chau",
+          "excerpt": "Research output : Contribution to journal › Article › peer-review Approximation (Algorithm) 100% Theoretical Framework 100% Numerical Example 100% Density Function 100% Wide Range 100% On Robust Fundamental Theorems of Asset Pricing in Discrete Time Chau, H.",
+          "retrievedAt": "2026-09-07T19:15:10.813Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1067-9",
+          "url": "https://sites.google.com/site/chaungochuyvn/home",
+          "excerpt": "Home Search this site Embedded Files Skip to main content Skip to navigation Home PhDs at Manchester Huy Chau (Châu Ngọc Huy) Lecturer, Department of Mathematics, The University of Manchester 2.",
+          "retrievedAt": "2026-09-07T19:15:10.967Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1067-10",
+          "url": "https://sites.google.com/site/chaungochuyvn/home",
+          "excerpt": "uk New updates : UoM - IISc Bangalore PhD project PhD s at Manchester Teaching current courses (2021-2022): MATH37002 Martingales with Applications to Finance 2021-22 2nd Semester Research Interests : Financial mathematics, Machine learning, Data Science.",
+          "retrievedAt": "2026-09-07T19:15:10.967Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1067-11",
+          "url": "https://sites.google.com/site/chaungochuyvn/home",
+          "excerpt": "M y CV Preprints and Publications Local market viability and superhedging under propositional transaction costs and model uncertainty (with Claudio Fontana and Masaaki Fukasawa).",
+          "retrievedAt": "2026-09-07T19:15:10.967Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1067-12",
+          "url": "https://sites.google.com/site/chaungochuyvn/home",
+          "excerpt": "2024 [ Arxiv ] Continuous-time optimal investment with portfolio constraints: a reinforcement learning approach (with Duy Nguyen, Thai Nguyen).",
+          "retrievedAt": "2026-09-07T19:15:10.967Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1067-13",
+          "url": "https://sites.google.com/site/chaungochuyvn/home",
+          "excerpt": "2024 [ Arxiv ] An efficient method to simulate diffusion bridges (with Lars Kirkby, Dang Nguyen, Duy Nguyen, Nhu Nguyen, Thai Nguyen).",
+          "retrievedAt": "2026-09-07T19:15:10.967Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1067-14",
+          "url": "https://sites.google.com/site/chaungochuyvn/home",
+          "excerpt": "Super-replication with transaction costs under model uncertainty for continuous processes, (with Masaaki Fukasawa, Miklós Rásonyi), 2021.",
+          "retrievedAt": "2026-09-07T19:15:10.967Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1067-15",
+          "url": "https://sites.google.com/site/chaungochuyvn/home",
+          "excerpt": "[ Arxiv ] On stochastic gradient Langevin dynamics with dependent data streams: the fully non-convex case, (with Éric Moulines, Miklós Rásonyi, Sotirios Sabanis, Ying Zhang), 2021.",
+          "retrievedAt": "2026-09-07T19:15:10.967Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1067-16",
+          "url": "https://sites.google.com/site/chaungochuyvn/home",
+          "excerpt": "[ Arxiv ] Stochastic Gradient Hamiltonian Monte Carlo for Non-Convex Learning, (with Miklós Rásonyi), Stochastic Processes and their Applications 20 22 .",
+          "retrievedAt": "2026-09-07T19:15:10.967Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:16:50.274Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1068": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.gre.ac.uk/people/rep/faculty-of-business/trung-bao-hoang"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1068-1",
+          "url": "https://www.gre.ac.uk/people/rep/faculty-of-business/trung-bao-hoang",
+          "excerpt": "Trung Bao Hoang | People | University of Greenwich Skip nav Portal Faculties Alumni and giving Study Upcoming Open Days We'd love to welcome you on one of our open days - you'll meet our expert tutors and fantastic support teams, explore our campuses and facilities, and chat with current students and discover the Greenwich experience.",
+          "retrievedAt": "2026-09-07T19:15:13.452Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1068-2",
+          "url": "https://www.gre.ac.uk/people/rep/faculty-of-business/trung-bao-hoang",
+          "excerpt": "Book now Courses Undergraduate study (BA, BSc) Postgraduate study (MA, MSc) Greenwich Online courses Short courses & CPD Apprenticeships: Learners Discover Why choose Greenwich?",
+          "retrievedAt": "2026-09-07T19:15:13.452Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1068-3",
+          "url": "https://www.gre.ac.uk/people/rep/faculty-of-business/trung-bao-hoang",
+          "excerpt": "Open Days --> Accommodation Careers Information for schools Apply How to apply Fees & finance Scholarships & Bursaries After you apply Student support & services Subjects International International students We welcome students from all over the world.",
+          "retrievedAt": "2026-09-07T19:15:13.452Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1068-4",
+          "url": "https://www.gre.ac.uk/people/rep/faculty-of-business/trung-bao-hoang",
+          "excerpt": "You'll find plenty of courses to choose from, historic campuses, and fellow students from more than 150 countries.",
+          "retrievedAt": "2026-09-07T19:15:13.452Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1068-5",
+          "url": "https://www.gre.ac.uk/people/rep/faculty-of-business/trung-bao-hoang",
+          "excerpt": "Discover Living in the UK Erasmus+ and Study Abroad Apply Greenwich in my country Applicants: Step-by-step guide Financing your studies Research Award-winning research Our research provides innovative solutions that benefit business, industry and communities in the UK and across the world and has won a series of awards.",
+          "retrievedAt": "2026-09-07T19:15:13.452Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1068-6",
+          "url": "https://www.gre.ac.uk/people/rep/faculty-of-business/trung-bao-hoang",
+          "excerpt": "Outcomes About GRE Disciplines Policy, governance and awards Community Research study & experience Community & support Studentships and scholarships Partnerships Business and partnerships Through partnerships we create opportunities for our students to thrive, and for organisations to benefit from our people, research and leading-edge facilities.",
+          "retrievedAt": "2026-09-07T19:15:13.452Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1068-7",
+          "url": "https://www.gre.ac.uk/people/rep/faculty-of-business/trung-bao-hoang",
+          "excerpt": "a venue Apprenticeships Education UK education partners International partnerships Clearing Study Courses: Undergraduate (BA, BSc) Postgraduate (MA, MSc) Greenwich Online courses Short courses & CPD Apprenticeships Subjects Discover: Open days Accommodation Careers Information for schools International students Apply: How to apply Fees & finance Scholarships & bursaries After you apply Student support & services More Upcoming events Whether you're looking to study in London or just expand your knowledge, come and join us in-person or online and see what the University of Greenwich has to offer.",
+          "retrievedAt": "2026-09-07T19:15:13.452Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1068-8",
+          "url": "https://www.gre.ac.uk/people/rep/faculty-of-business/trung-bao-hoang",
+          "excerpt": "Book now Faculties Research Partnerships Clearing Alumni & giving Dr Trung Bao Hoang BSc, FHEA, MSc, PhD Senior Lecturer in Financial Management Skip nav Home People School of Accounting, Finance and Economics Key details Dr Trung Bao Hoang Senior Lecturer in Financial Management Email: h.",
+          "retrievedAt": "2026-09-07T19:15:13.452Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:16:50.274Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1069": {
       "overview": "pending",
