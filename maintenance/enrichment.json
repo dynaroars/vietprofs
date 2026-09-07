@@ -3374,7 +3374,8 @@
         "vp-1392",
         "vp-1393"
       ],
-      "status": "pending"
+      "status": "in_progress",
+      "startedAt": "2026-09-07T19:49:53.289Z"
     },
     {
       "number": 70,
@@ -80639,206 +80640,853 @@
       "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1374": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://profiles.ucsf.edu/trang.trinh"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://profiles.ucsf.edu/trang.trinh: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:50:52.957Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1375": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.mayoclinic.org/biographies/dinh-tri-a-m-d/bio-20054746"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1375-1",
+          "url": "https://www.mayoclinic.org/biographies/dinh-tri-a-m-d/bio-20054746",
+          "excerpt": "Page Not Found - Site Help - Mayo Clinic This content does not have an English version.",
+          "retrievedAt": "2026-09-07T19:49:54.848Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1375-2",
+          "url": "https://www.mayoclinic.org/biographies/dinh-tri-a-m-d/bio-20054746",
+          "excerpt": "oral Fellowships Training Grant Programs Education Mayo Clinic College of Medicine and Science Mayo Clinic Graduate School of Biomedical Sciences Mayo Clinic Alix School of Medicine Mayo Clinic School of Graduate Medical Education Mayo Clinic School of Health Sciences Mayo Clinic School of Continuous Professional Development Mayo Clinic College of Medicine and Science Giving to Mayo Clinic Give Now Giving to Mayo Clinic Frequently Asked Questions Contact Us to Give Make a Donation Site Help Print Products and services Page Not Found The page you are trying to reach is not available on our site.",
+          "retrievedAt": "2026-09-07T19:49:54.848Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1375-3",
+          "url": "https://www.mayoclinic.org/biographies/dinh-tri-a-m-d/bio-20054746",
+          "excerpt": "The page name may have changed, you may have happened upon a broken link, or the URL may be entered incorrectly.",
+          "retrievedAt": "2026-09-07T19:49:54.848Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1375-4",
+          "url": "https://www.mayoclinic.org/biographies/dinh-tri-a-m-d/bio-20054746",
+          "excerpt": "Here are some alternatives for finding the information you seek: Our site search is located at the top of this page.",
+          "retrievedAt": "2026-09-07T19:49:54.848Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1375-5",
+          "url": "https://www.mayoclinic.org/biographies/dinh-tri-a-m-d/bio-20054746",
+          "excerpt": "ancial Assistance Documents – Minnesota Follow Mayo Clinic X YouTube Facebook LinkedIn Instagram Get the Mayo Clinic app Terms & Conditions Privacy Policy Notice of Privacy Practices Notice of Nondiscrimination Digital Accessibility Statement Advertising & Sponsorship Policy Site Map Manage Cookies Terms and Conditions Privacy Policy Notice of Privacy Practices Notice of Nondiscrimination Digital Accessibility Statement Advertising and Sponsorship Policy Site Map Manage Cookies Language: English English Español العربية 简体中文 © 1998-2026 Mayo Foundation for Medical Education and Research (MFMER).",
+          "retrievedAt": "2026-09-07T19:49:54.848Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:50:52.957Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1376": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://profiles.ucsf.edu/binh.trinh"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://profiles.ucsf.edu/binh.trinh: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:50:52.957Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1377": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.bcm.edu/people-search/tam-doan-20708"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.bcm.edu/people-search/tam-doan-20708: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:50:52.957Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1378": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://pophealth.wisc.edu/staff/phung-minh-tung/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1378-1",
+          "url": "https://pophealth.wisc.edu/staff/phung-minh-tung/",
+          "excerpt": "Our Mission History of the Department Newsletters and Monday Seminar Speaker Schedules People PHS Department Faculty Administrative Staff Emeritus Faculty Students Post Doctoral Fellows Preventive Medicine Residents Affiliated Faculty Scientists Academics Graduate Programs Health Disparities Research Scholars Preventive Medicine Residency Master of Public Health Population Health Service Fellowship Job Listings Events Contact Us Home Population Health MS/PhD Population Health MS/PhD Faculty Minh Tung Phung Minh Tung Phung PhD, MPH Assistant Professor of Population Health Sciences mphung2@wisc.",
+          "retrievedAt": "2026-09-07T19:49:56.763Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1378-2",
+          "url": "https://pophealth.wisc.edu/staff/phung-minh-tung/",
+          "excerpt": "edu Room 1007c WARF Office Building 610 Walnut Street Madison, WI 53726 Biography Dr.",
+          "retrievedAt": "2026-09-07T19:49:56.763Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1378-3",
+          "url": "https://pophealth.wisc.edu/staff/phung-minh-tung/",
+          "excerpt": "His research interests span across the cancer continuum, including cancer etiology, prevention, and survivorship.",
+          "retrievedAt": "2026-09-07T19:49:56.763Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1378-4",
+          "url": "https://pophealth.wisc.edu/staff/phung-minh-tung/",
+          "excerpt": "Phung’s research has focused on (1) establishing new population-based studies to study cancer risk and survivorship, (2) developing and validating models for precision medicine in cancer, and implementing these models into clinical practice; (3) partnering with communities to develop and implement evidence-based and scalable interventions to improve cancer screening and health equity in underserved populations both in the US and globally.",
+          "retrievedAt": "2026-09-07T19:49:56.763Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1378-5",
+          "url": "https://pophealth.wisc.edu/staff/phung-minh-tung/",
+          "excerpt": "Phung’s research has specifically focused on women’s cancers, including breast, cervical, endometrial, and ovarian cancers.",
+          "retrievedAt": "2026-09-07T19:49:56.763Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1378-6",
+          "url": "https://pophealth.wisc.edu/staff/phung-minh-tung/",
+          "excerpt": "Site footer content Part of the Universities of Wisconsin Contact Us Population Health Sciences 610 Walnut Street 707 WARF Building Madison, WI 53726 Email us Phone: (608) 263-2880 Website feedback, questions or accessibility issues: techsupport@hslc.",
+          "retrievedAt": "2026-09-07T19:49:56.763Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1378-7",
+          "url": "https://pophealth.wisc.edu/staff/phung-minh-tung/",
+          "excerpt": "0 | Privacy Notice | &copy; 2026 Board of Regents of the University of Wisconsin System .",
+          "retrievedAt": "2026-09-07T19:49:56.763Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:50:52.957Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1379": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://trios.tsukuba.ac.jp/en/researcher/0000003734"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1379-1",
+          "url": "https://trios.tsukuba.ac.jp/en/researcher/0000003734",
+          "excerpt": "TRIOS Researchers Information 研究者総覧 Researchers Information Search 日本語 Researchers list List by affiliations List by research fields Advanced search Manual Contact us OMORI Yuko Affiliation Institute of Life and Environmental Sciences Official title Assistant Professor URL https://www.",
+          "retrievedAt": "2026-09-07T19:49:57.717Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1379-2",
+          "url": "https://trios.tsukuba.ac.jp/en/researcher/0000003734",
+          "excerpt": "球環境研究センター特別研究員 Degree 2011-03 博士（理学） 筑波大学大学院 Academic societies 2008-09 -- (current) THE OCEANOGRAPHIC SOCIETY OF JAPAN 2012-09 -- (current) 日本地球化学会 2014-04 -- (current) 日本大気化学会 Honors & Awards 2011-03 筑波大学大学院生命環境科学研究科長賞 2017-09 日本地球化学会奨励賞 Articles Experimental evaluation for stability of phytoplanktonic organically bound tritium in seawater using a deuterium tracer Satoh Yuhi; Ono Tsukasa; Omori Yuko WATER RESEARCH/306, 2026-11 Accumulation possibility of tritium released from the Fukushima Daiichi Nuclear Power Station in marine organisms Satoh Yuhi; Tani Takashi; Ikenoue Tsubasa; Kawamura H.",
+          "retrievedAt": "2026-09-07T19:49:57.717Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1379-3",
+          "url": "https://trios.tsukuba.ac.jp/en/researcher/0000003734",
+          "excerpt": "Environmental Science and Pollution Research, 2026-03 Production of Oxygen- and Sulfur-Containing Volatile Organic Compounds by Marine Bacteria From Coastal Seawater Omori Yuko; Takahashi Toshiki; Wada Shigeki; Hama Tak.",
+          "retrievedAt": "2026-09-07T19:49:57.717Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1379-4",
+          "url": "https://trios.tsukuba.ac.jp/en/researcher/0000003734",
+          "excerpt": "JOURNAL OF GEOPHYSICAL RESEARCH-BIOGEOSCIENCES/130(10), 2025-09-30 Photoproduction of Acetaldehyde from Bacteria-Derived Dissolved Organic Matter Uning Royston; Omori Yuko; Wada Shigeki; Tanimoto Hir.",
+          "retrievedAt": "2026-09-07T19:49:57.717Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1379-5",
+          "url": "https://trios.tsukuba.ac.jp/en/researcher/0000003734",
+          "excerpt": "ENVIRONMENTAL SCIENCE & TECHNOLOGY, 2025/04/16 Evaluating production rates of particulate organic hydrogen by marine phytoplankton for estimating phytoplanktonic productivity of organically bound tritium Satoh Yuhi; Omori Yuko WATER RESEARCH/245, 2023-10-15 Number-Size Distribution and CCN Activity of Atmospheric Aerosols in the Western North Pacific During Spring Pre-Bloom Period: Influences of Terrestrial and Marine Sources Kawana Kaori; Miyazaki Yuzo; Omori Yuko; Tanimoto Hir.",
+          "retrievedAt": "2026-09-07T19:49:57.717Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1379-6",
+          "url": "https://trios.tsukuba.ac.jp/en/researcher/0000003734",
+          "excerpt": "JOURNAL OF GEOPHYSICAL RESEARCH-ATMOSPHERES/127(19), 2022-10 The contribution of coral-reef-derived dimethyl sulfide to aerosol burden over the Great Barrier Reef: a modelling study Fiddes S.",
+          "retrievedAt": "2026-09-07T19:49:57.717Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1379-7",
+          "url": "https://trios.tsukuba.ac.jp/en/researcher/0000003734",
+          "excerpt": "2419-2445, 2022-02 Parameterizing the Impact of Seawater Temperature and Irradiance on Dimethylsulfide (DMS) in the Great Barrier Reef and the Contribution of Coral Reefs to the Global Sulfur Cycle Jackson R.",
+          "retrievedAt": "2026-09-07T19:49:57.717Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1379-8",
+          "url": "https://trios.tsukuba.ac.jp/en/researcher/0000003734",
+          "excerpt": "JOURNAL OF GEOPHYSICAL RESEARCH-OCEANS/126(3), 2021-03 Ocean acidification increases phytobenthic carbon fixation and export in a warm-temperate system Shigeki Wada; Sylvain Agostini; Harvey Benjamin Paul; Yuk.",
+          "retrievedAt": "2026-09-07T19:49:57.717Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:50:52.957Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1380": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://nerps.yamanashi.ac.jp/en/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://nerps.yamanashi.ac.jp/en/: fetch failed"
+      ],
+      "updatedAt": "2026-09-07T19:50:52.957Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1381": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.a-star.edu.sg/i2r"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1381-1",
+          "url": "https://www.a-star.edu.sg/i2r",
+          "excerpt": "ort A*STAR Global Network Research About A*STAR Research Funding Opportunities S-SEAF ECR Overseas Exchange Research Ethics Biomedical Research Council Science and Engineering Research Council Our People Highly Cited Researchers Honours and Accolades Innovation & Enterprise About I&E Innovation Offerings Scholarships News A*STAR News Publicity Highlights Press Releases Features Committee Of Supply (COS) Debate Industry Stories Faces of A*STAR National Survey of RIE Connect with Us Career Government officials will never ask you to transfer money or disclose bank log-in details over a phone call.",
+          "retrievedAt": "2026-09-07T19:50:04.579Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1381-2",
+          "url": "https://www.a-star.edu.sg/i2r",
+          "excerpt": "You can also contact A*STAR via our online form or call the 24/7 ScamShield Helpline at 1799 if you are unsure if something is a scam.",
+          "retrievedAt": "2026-09-07T19:50:04.579Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1381-3",
+          "url": "https://www.a-star.edu.sg/i2r",
+          "excerpt": "× Home A*STAR I²R A*STAR Institute for Infocomm Research (A*STAR I²R) We are now the A*STAR Institute of Advanced Intelligence and Computing (A*STAR IAIC).",
+          "retrievedAt": "2026-09-07T19:50:04.579Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:50:52.957Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1382": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.inrae.fr"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1382-1",
+          "url": "https://www.inrae.fr",
+          "excerpt": "emploi Le guide des accueils internationaux Ceux qui font INRAE Des femmes et des hommes L’extraordinaire quotidien de nos agents Des prix et des distinctions Les Lauriers INRAE Un employeur engagé INRAE accessible à toutes les ambitions Le label HR Excellence Responsabilité sociétale et environnementale Europe & International Europe La stratégie européenne Nos lauréats ERC International La stratégie internationale Notre actualité internationale Nos scientifiques Vous êtes étudiant Le guide des accueils Les centres INRAE Trouver une unité Vous êtes chercheur Pourquoi et comment nous rejoindre ?",
+          "retrievedAt": "2026-09-07T19:50:05.165Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1382-2",
+          "url": "https://www.inrae.fr",
+          "excerpt": "6 Rennes INRAE au SPACE 2026 06 09 octobre 2026 Clermont-Ferrand (63) INRAE au Sommet de l&#039;élevage 2026 06 octobre 2026 De 13h00 à 17h15 INP - Agro Toulouse & en ligne Améliorer la santé des plantes par la sélection variétale Nos thématiques de recherche Agroécologie Agroécologie Pour des systèmes agricoles multiperformants L&#039;agroécologie consiste à mettre en œuvre des principes d’écologie dans les systèmes agricoles pour optimiser les interactions entre les végétaux, les animaux, les humains et l&#039;environnement pour conduire à des systèmes agrialimentaires durables et équitables.",
+          "retrievedAt": "2026-09-07T19:50:05.165Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1382-3",
+          "url": "https://www.inrae.fr",
+          "excerpt": "Nos recherches visent à : • Préserver les milieux cultivés • Réduire l’utilisation d’intrants de synthèse (pesticides, antibiotiques, engrais) grâce aux régulations biologiques • Diversifier les productions agricoles à toutes les échelles, du champ à l’assiette.",
+          "retrievedAt": "2026-09-07T19:50:05.165Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1382-4",
+          "url": "https://www.inrae.fr",
+          "excerpt": "Biodiversité Biodiversité Connaitre, préserver, restaurer la biodiversité Élaborer des stratégies de gestion durable de la biodiversité et des services qu’elle assure, à l’échelle des territoires.",
+          "retrievedAt": "2026-09-07T19:50:05.165Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1382-5",
+          "url": "https://www.inrae.fr",
+          "excerpt": "Comprendre les milieux vivants agricoles, naturels ou peu anthropisés et les agencements du paysage favorables à la biodiversité.",
+          "retrievedAt": "2026-09-07T19:50:05.165Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1382-6",
+          "url": "https://www.inrae.fr",
+          "excerpt": "Faire évoluer les écosystèmes agricoles vers une plus grande durabilité en lien avec les apports de l’agroécologie.",
+          "retrievedAt": "2026-09-07T19:50:05.165Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1382-7",
+          "url": "https://www.inrae.fr",
+          "excerpt": "Changement climatique et risques Changement climatique et risques S&#039;adapter au changement climatique et gérer les risques Contribuer à la neutralité climatique, par la réduction des émissions de gaz à effet de serre et le stockage durable du carbone dans les sols et la biomasse.",
+          "retrievedAt": "2026-09-07T19:50:05.165Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1382-8",
+          "url": "https://www.inrae.fr",
+          "excerpt": "Adapter l’agriculture, les forêts et la gestion de l’eau au changement climatique.",
+          "retrievedAt": "2026-09-07T19:50:05.165Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:50:52.957Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1383": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://publichealth.jhu.edu/faculty/3277/trang-quynh-nguyen"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://publichealth.jhu.edu/faculty/3277/trang-quynh-nguyen: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T19:50:52.957Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1384": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://mathematik.uni-graz.at"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1384-1",
+          "url": "https://mathematik.uni-graz.at",
+          "excerpt": "Institut für Mathematik und Wissenschaftliches Rechnen | Universität Graz - Institut für Mathematik und Wissenschaftliches Rechnen Um die Seite besser für Screen-Reader darstellen zu können, betätigen Sie diesen Link.",
+          "retrievedAt": "2026-09-07T19:50:06.460Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1384-2",
+          "url": "https://mathematik.uni-graz.at",
+          "excerpt": "Um die verbesserte Darstellung für Screen-Reader zu deaktivieren, bestätigen Sie diesen Link.",
+          "retrievedAt": "2026-09-07T19:50:06.460Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1384-3",
+          "url": "https://mathematik.uni-graz.at",
+          "excerpt": "Beginn des Seitenbereichs: Seitenbereiche: Zum Inhalt (Zugriffstaste 1) Zur Positionsanzeige (Zugriffstaste 2) Zur Hauptnavigation (Zugriffstaste 3) Zur Unternavigation (Zugriffstaste 4) Zu den Zusatzinformationen (Zugriffstaste 5) Zu den Seiteneinstellungen (Benutzer/Sprache) (Zugriffstaste 8) Zur Suche (Zugriffstaste 9) Ende dieses Seitenbereichs.",
+          "retrievedAt": "2026-09-07T19:50:06.460Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1384-4",
+          "url": "https://mathematik.uni-graz.at",
+          "excerpt": "Zur Übersicht der Seitenbereiche Beginn des Seitenbereichs: Seiteneinstellungen: Deutsch de English en Suche Anmelden Ende dieses Seitenbereichs.",
+          "retrievedAt": "2026-09-07T19:50:06.460Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1384-5",
+          "url": "https://mathematik.uni-graz.at",
+          "excerpt": "Zur Übersicht der Seitenbereiche Beginn des Seitenbereichs: Suche: Suche nach Details rund um die Uni Graz Schließen Ende dieses Seitenbereichs.",
+          "retrievedAt": "2026-09-07T19:50:06.460Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1384-6",
+          "url": "https://mathematik.uni-graz.at",
+          "excerpt": "Zur Übersicht der Seitenbereiche Suchen Beginn des Seitenbereichs: Hauptnavigation: Seitennavigation: Universität Universität Die Uni Graz im Portrait Organisation Strategie und Qualität Fakultäten Universitätsbibliothek Jobs Campus Lösungen für die Welt von morgen entwickeln – das ist unsere Mission.",
+          "retrievedAt": "2026-09-07T19:50:06.460Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1384-7",
+          "url": "https://mathematik.uni-graz.at",
+          "excerpt": "Unsere Studierenden und unsere Forscher:innen stellen sich den großen Herausforderungen der Gesellschaft und tragen das Wissen hinaus.",
+          "retrievedAt": "2026-09-07T19:50:06.460Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1384-8",
+          "url": "https://mathematik.uni-graz.at",
+          "excerpt": "Forschungsprofil Forschungsprofil Unsere Expertise Forschungsfragen Forschungsportal Forschung fördern Forschungstransfer Ethik in der Forschung Kommission für wissenschaftliche Integrität Wissenschaftliche Exzellenz und Mut, neue Wege zu gehen.",
+          "retrievedAt": "2026-09-07T19:50:06.460Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:50:52.957Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1385": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.ohio.edu/voinovich-school/people/tuyen-pham",
         "https://www.tuyenpham.org/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1385-1",
+          "url": "https://www.ohio.edu/voinovich-school/people/tuyen-pham",
+          "excerpt": "Faculty & Staff Directory | Ohio University Skip to main content Close Search Info for.",
+          "retrievedAt": "2026-09-07T19:50:06.828Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1385-2",
+          "url": "https://www.ohio.edu/voinovich-school/people/tuyen-pham",
+          "excerpt": "gional Campuses Medical Online Programs Transfer Students Visit Schedule a Visit Virtual Tour Campus/Parking Map Costs and Aid Tuition Guarantee Cost Scholarships and Financial Aid Admitted Students Admitted Students Transfer Your Credits Confirm Your Intent Life At OHIO Student Life Student Organizations Campus Recreation Employment Opportunities Athens Community Campus Services Culinary Services Housing and Residence Life Off-Campus Living Transportation Health & Safety Campus Safety Resources Campus Care Counseling and Psychological Services Emergency Alerts Athletics Helpful Links Info for.",
+          "retrievedAt": "2026-09-07T19:50:06.828Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1385-3",
+          "url": "https://www.ohio.edu/voinovich-school/people/tuyen-pham",
+          "excerpt": "Maintenance 2 Heritage College of Osteopathic Medicine Faculty Kelly Coon Adami Assistant Clinical Professor Staff Wendy Adams Associate Director, Center for Teaching, Learning, and Assessment Division of Student Affairs Staff Parker Adams General Manager Russ College of Engineering and Technology Faculty Chuck Adams Instructor Russ College of Engineering and Technology Staff Priyanka Adapala Postdoctoral Research Associate Heritage College of Osteopathic Medicine Staff Alyssa Addison Director, Residency Advising and Match Services Scripps College of Communication Faculty Roger Aden Charles E.",
+          "retrievedAt": "2026-09-07T19:50:06.828Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1385-4",
+          "url": "https://www.ohio.edu/voinovich-school/people/tuyen-pham",
+          "excerpt": "Zumkehr Professor of Speech Communication Regional Higher Education Staff Seymour Adeva Jr.",
+          "retrievedAt": "2026-09-07T19:50:06.828Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1385-5",
+          "url": "https://www.ohio.edu/voinovich-school/people/tuyen-pham",
+          "excerpt": "&hellip; Next page Next › Last page Last » Explore Apply Give Academic Programs Online Degrees Visit Campus Map & Parking Resources Event Calendar Academic Calendar News Libraries Work at OHIO Report a Website Issue Locations Athens Chillicothe Eastern Lancaster Southern Zanesville Contact Ohio University 1 Ohio University Athens OH 45701 Directions Contact Ohio University ADA Compliance AOHEA Compliance Employment Law Notices FORUM Act Report Mission and Statement of Commitment Notice of Non-Discrimination Privacy Statement State Authorization Title IX Coordinator &copy; 2026 Ohio University .",
+          "retrievedAt": "2026-09-07T19:50:06.828Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1385-6",
+          "url": "https://www.tuyenpham.org/",
+          "excerpt": "Tuyen Pham Search this site Embedded Files Skip to main content Skip to navigation Tuyen Pham Bio Funded Projects Research Technical Reports Teaching CV & Contact Information Tuyen Pham Tuyen Pham Assistant Research Professor Voinovich School of Leadership and Public Service Ohio University About me: Applied economist and regional scientist with a foundational background in mathematics and computer science , a Ph.",
+          "retrievedAt": "2026-09-07T19:50:07.328Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1385-7",
+          "url": "https://www.tuyenpham.org/",
+          "excerpt": "in Economics , an MBA , and 9+ years of experience in applied economic research, quantitative analysis, program evaluation, and policy assessment .",
+          "retrievedAt": "2026-09-07T19:50:07.328Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1385-8",
+          "url": "https://www.tuyenpham.org/",
+          "excerpt": "Research spans healthcare economics, labor markets, energy transition, and regional economic development in Appalachian Ohio and rural communities, with peer-reviewed publications in economics, health policy, and regional science journals.",
+          "retrievedAt": "2026-09-07T19:50:07.328Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1385-9",
+          "url": "https://www.tuyenpham.org/",
+          "excerpt": "IMPLAN Certified Economist with expertise in economic impact analysis (input-output analysis), regional labor market dynamics , and workforce development .",
+          "retrievedAt": "2026-09-07T19:50:07.328Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1385-10",
+          "url": "https://www.tuyenpham.org/",
+          "excerpt": "Leverages statistical methods, machine learning , and causal inference on large-scale administrative and survey datasets to deliver evidence-based and actionable recommendations that help policymakers and stakeholders make informed decisions.",
+          "retrievedAt": "2026-09-07T19:50:07.328Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1385-11",
+          "url": "https://www.tuyenpham.org/",
+          "excerpt": "Economic Development Administration (EDA) initiative (RISE Ohio) and $747,000 in additional federal, state, and locally funded projects, such as the U.",
+          "retrievedAt": "2026-09-07T19:50:07.328Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1385-12",
+          "url": "https://www.tuyenpham.org/",
+          "excerpt": "Department of Energy, Ohio Department of Health, and Ohio Department of Higher Education.",
+          "retrievedAt": "2026-09-07T19:50:07.328Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1385-13",
+          "url": "https://www.tuyenpham.org/",
+          "excerpt": "in Economics West Virginia University (2016 - 2022 ) Fields: Healthcare Economics, Public Economics 🎓 M.",
+          "retrievedAt": "2026-09-07T19:50:07.328Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:50:52.957Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1386": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://research.aston.ac.uk/en/persons/ngoc-dieu-linh-vi/",
         "https://ngocdieulinhvi.wixsite.com/linhvi"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1386-1",
+          "url": "https://research.aston.ac.uk/en/persons/ngoc-dieu-linh-vi/",
+          "excerpt": "Ngoc Dieu Linh Vi - Aston Research Explorer Skip to main navigation Skip to search Skip to main content Aston Research Explorer Home Help & FAQ Link opens in a new tab Search content at Aston Research Explorer Home Research units Profiles Research Outputs Datasets Student theses Activities Press/Media Prizes Equipment View Scopus Profile Ngoc Dieu Linh Vi Lecturer in Economics Aston University Lecturer , Aston Business School Lecturer , Economics & International Business https://orcid.",
+          "retrievedAt": "2026-09-07T19:50:08.235Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1386-2",
+          "url": "https://research.aston.ac.uk/en/persons/ngoc-dieu-linh-vi/",
+          "excerpt": "org/0000-0002-6339-4030 Aston Triangle B4 7ET Birmingham United Kingdom Accepting PhD Students Overview Fingerprint Network Research Outputs (6) Similar Profiles (1) Personal profile Contact Details Email: [email&#160;protected] Office: SW909 Research Interests Labour Economics, Public Economics, International Economics, Behavioural Economics and Finance.",
+          "retrievedAt": "2026-09-07T19:50:08.235Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1386-3",
+          "url": "https://research.aston.ac.uk/en/persons/ngoc-dieu-linh-vi/",
+          "excerpt": "Biography I am a Lecturer in Economics at the Department of Economics, Finance and Entrepreneurship at Aston Business School.",
+          "retrievedAt": "2026-09-07T19:50:08.235Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1386-4",
+          "url": "https://research.aston.ac.uk/en/persons/ngoc-dieu-linh-vi/",
+          "excerpt": "I hold a BSc in International Business Economics from Foreign Trade University (Vietnam), a BSc in Economics - Management from University of Nice - Sophia Antipolis (France), an MSc in Banking and Finance from University of Leicester (UK) and a PhD in Economics from University of Birmingham (UK).",
+          "retrievedAt": "2026-09-07T19:50:08.235Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1386-5",
+          "url": "https://research.aston.ac.uk/en/persons/ngoc-dieu-linh-vi/",
+          "excerpt": "Teaching Activity BS1136 Introduction to Finance - Undergraduate BS2284 Trading Strategies - Undergraduate Education/Academic qualification PhD, University of Birmingham 2019 → 2022 MSc, Banking and Finance, University of Leicester 2014 → 2015 BSc, International Business Economics, Foreign Trade University 2010 → 2014 BSc, Economics - Management, Université de Nice Sophia Antipolis 2010 → 2014 Expertise related to UN Sustainable Development Goals In 2015, UN member states agreed to 17 global Sustainable Development Goals (SDGs) to end poverty, protect the planet and ensure prosperity for all.",
+          "retrievedAt": "2026-09-07T19:50:08.235Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1386-6",
+          "url": "https://research.aston.ac.uk/en/persons/ngoc-dieu-linh-vi/",
+          "excerpt": "This person’s work contributes towards the following SDG(s): SDG 3 Good Health and Well-being SDG 16 Peace, Justice and Strong Institutions Fingerprint Dive into the research topics where Ngoc Dieu Linh Vi is active.",
+          "retrievedAt": "2026-09-07T19:50:08.235Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1386-7",
+          "url": "https://research.aston.ac.uk/en/persons/ngoc-dieu-linh-vi/",
+          "excerpt": "1 Similar Profiles Physical Attractiveness Social Sciences 100% Job Posting Social Sciences 100% Sex Differences Social Sciences 93% Charitable Giving Keyphrases 75% Labor Economics Keyphrases 75% Salience Effect Keyphrases 75% SMS Text Messaging Keyphrases 75% Financial Well-being Keyphrases 75% View full fingerprint Collaborations and top research areas from the last five years Recent external collaboration on country/territory level.",
+          "retrievedAt": "2026-09-07T19:50:08.235Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1386-8",
+          "url": "https://research.aston.ac.uk/en/persons/ngoc-dieu-linh-vi/",
+          "excerpt": "Dive into details by clicking on the dots or Select a country/territory from the list Dive into details Select a country/territory to view shared publications and projects Close Select a country/territory from the list Explore network further Research output 2 Article 1 Commissioned report 1 Entry for encyclopedia/dictionary 1 Discussion paper 1 More 1 Working paper Research output per year Research output per year Beauty premia in wage offers: Evidence from Vietnamese online job postings Perroni, C.",
+          "retrievedAt": "2026-09-07T19:50:08.235Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1386-9",
+          "url": "https://ngocdieulinhvi.wixsite.com/linhvi",
+          "excerpt": "Get Started (Ngoc Dieu) Linh Vi Lecturer in Economics Aston University ABOUT WORKING PAPER PUBLICATION CV MEDIA COVERAGE More Use tab to navigate through the menu items.",
+          "retrievedAt": "2026-09-07T19:50:08.963Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1386-10",
+          "url": "https://ngocdieulinhvi.wixsite.com/linhvi",
+          "excerpt": "My research interests include Labour Economics , Charitable Giving Economics and Data Science .",
+          "retrievedAt": "2026-09-07T19:50:08.963Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:50:52.957Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1387": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://applicationspub.unil.ch/interpub/noauth/php/Un/UnPers.php?PerNum=11398&LanCode=8"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://applicationspub.unil.ch/interpub/noauth/php/Un/UnPers.php?PerNum=11398&LanCode=8: fetch failed"
+      ],
+      "updatedAt": "2026-09-07T19:50:52.957Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1388": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.inserm.fr"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1388-1",
+          "url": "https://www.inserm.fr",
+          "excerpt": "Institut national de la santé et de la recherche médicale · Inserm, La science pour la santé You are using an outdated browser.",
+          "retrievedAt": "2026-09-07T19:50:10.206Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1388-2",
+          "url": "https://www.inserm.fr",
+          "excerpt": "cherche à l’Inserm La recherche à l’Inserm Du laboratoire jusqu’au patient Le continuum de la recherche La recherche fondamentale La recherche clinique La recherche en santé publique La recherche technologique Valorisation et transfert des découvertes La recherche participative Une recherche responsable Nos bonnes pratiques La science ouverte L’éthique à l’Inserm Les modèles animaux La transition écologique et sociétale Portraits et reportages Portraits de chercheuses et de chercheurs Reportages en labo Information en santé Information en santé Pour tout public Dossiers thématiques C’est quoi ?",
+          "retrievedAt": "2026-09-07T19:50:10.206Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1388-3",
+          "url": "https://www.inserm.fr",
+          "excerpt": "Les mots de la science Magazine de l’Inserm Podcast « Les Volontaires » Expositions et ressources pédagogiques Pour public avancé Expertises collectives Rapports thématiques Revue médecine/sciences Actualités & évènements Actualités & évènements Nos actualités Actu science Actu institutionnelle Toutes les actualités Nos évènements Évènéments Faire un don English Actualités Déployer la médecine génomique Actualité, Institut L’essor de la génomique transforme profondément la recherche biomédicale.",
+          "retrievedAt": "2026-09-07T19:50:10.206Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1388-4",
+          "url": "https://www.inserm.fr",
+          "excerpt": "En France, l’Inserm joue un… Exposition au cadmium : pourquoi il faut s’inquiéter Actualité, Science Alzheimer : des ondes cérébrales comme biomarqueur précoce de la maladie Actualité, Science Au cœur du langage Reportages en labo Toutes les actus L’information en santé Inserm Magazine n°69 Magazine Au sommaire du magazine de l’Inserm n°69, découvrez le dossier Les nouvelles addictions.",
+          "retrievedAt": "2026-09-07T19:50:10.206Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1388-5",
+          "url": "https://www.inserm.fr",
+          "excerpt": "C’est quoi le système vestibulaire C’est quoi Certains matins lorsque le réveil sonne, on ne se sait plus très bien où… médecine/sciences Nous connaître La revue médecine/sciences offre à ses lecteurs des textes sur les avancées de la… Écoutez le podcast « Les Volontaires » Partez à la rencontre de citoyens et citoyennes qui contribuent à la recherche médicale dans les laboratoires de l’Inserm.",
+          "retrievedAt": "2026-09-07T19:50:10.206Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1388-6",
+          "url": "https://www.inserm.fr",
+          "excerpt": "découvrir le podcast Tous les épisodes Phase 1 : Elle teste un nouveau médicament Podcast Le courage dans l’œsophage Podcast Ados, téléphones et santé mentale Podcast Découvrez nos dossiers d’infos !",
+          "retrievedAt": "2026-09-07T19:50:10.206Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1388-7",
+          "url": "https://www.inserm.fr",
+          "excerpt": "Ces dossiers font le point sur une maladie, une innovation en santé ou une thématique importante pour la recherche biomédicale.",
+          "retrievedAt": "2026-09-07T19:50:10.206Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1388-8",
+          "url": "https://www.inserm.fr",
+          "excerpt": "Ils présentent les connaissances actuelles et les recherches en cours, notamment à l’Inserm.",
+          "retrievedAt": "2026-09-07T19:50:10.206Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:50:52.957Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1389": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://ait.ac.th/2021/06/the-school-of-environment-resources-and-development-welcomes-dr-ha-thanh-dong/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1389-1",
+          "url": "https://ait.ac.th/2021/06/the-school-of-environment-resources-and-development-welcomes-dr-ha-thanh-dong/",
+          "excerpt": "verview Research Themes AIT Publications Research Projects Know Our Researcher Centers Faculties Campus life Housing Dining Health and Wellness Cultural diversity Athletics Career development Facilities AIT Conference Center Virtual tour Key thematic areas Climate change Smart Communities Food-Energy Water Infrastructure Technology, Policy &#038; Society Sustainability Partners News Events Work at AIT BOI Science & Technology Park Intranet Students Contact Giving Alumni Emergency contacts & Covid-19 management Home &gt; News &gt; The School of Environment, Resources and Development Welcomes Dr.",
+          "retrievedAt": "2026-09-07T19:50:11.217Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1389-2",
+          "url": "https://ait.ac.th/2021/06/the-school-of-environment-resources-and-development-welcomes-dr-ha-thanh-dong/",
+          "excerpt": "Ha Thanh Dong News The School of Environment, Resources and Development Welcomes Dr.",
+          "retrievedAt": "2026-09-07T19:50:11.217Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1389-3",
+          "url": "https://ait.ac.th/2021/06/the-school-of-environment-resources-and-development-welcomes-dr-ha-thanh-dong/",
+          "excerpt": "Ha Thanh Dong 30 Jun 2021 Sarina Pradhan Pradhan The School of Environment, Resources and Development is pleased to welcome Dr.",
+          "retrievedAt": "2026-09-07T19:50:11.217Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1389-4",
+          "url": "https://ait.ac.th/2021/06/the-school-of-environment-resources-and-development-welcomes-dr-ha-thanh-dong/",
+          "excerpt": "Ha Thanh Dong who has joined Aquaculture and Aquatic Resources Management (AARM), Academic Program, Department of Food, Agriculture and Bioresources/SERD as an Assistant Professor.",
+          "retrievedAt": "2026-09-07T19:50:11.217Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1389-5",
+          "url": "https://ait.ac.th/2021/06/the-school-of-environment-resources-and-development-welcomes-dr-ha-thanh-dong/",
+          "excerpt": "Ha Thanh Dongr received his Bachelor’s degree in Aquatic Animal Disease, Nha Trang University, Vietnam; obtained his Master and Ph.",
+          "retrievedAt": "2026-09-07T19:50:11.217Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1389-6",
+          "url": "https://ait.ac.th/2021/06/the-school-of-environment-resources-and-development-welcomes-dr-ha-thanh-dong/",
+          "excerpt": "Dong was an Instructor at Faculty of Science and Technology, Suan Sunandha Rajabhat University, Bangkok.",
+          "retrievedAt": "2026-09-07T19:50:11.217Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1389-7",
+          "url": "https://ait.ac.th/2021/06/the-school-of-environment-resources-and-development-welcomes-dr-ha-thanh-dong/",
+          "excerpt": "He can be contacted at: Room: AFE Building, Room No: 206 Extension number: 5476 Email: htdong@ait.",
+          "retrievedAt": "2026-09-07T19:50:11.217Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1389-8",
+          "url": "https://ait.ac.th/2021/06/the-school-of-environment-resources-and-development-welcomes-dr-ha-thanh-dong/",
+          "excerpt": "Bhutan Trust Fund for Environmental Conservation Delegation Visits AIT to Strengthen Climate and Conservation Collaboration 03 Sep 2026 News AIT and UNEP Sign Cooperation Agreement to Advance Nutrient Pollution Reduction in Thailand 02 Sep 2026 News Seven AIT Students Join Ochanomizu University&#8217;s Summer Program in Japan; Three Receive JASSO Grants 31 Aug 2026 News Stories from the Field: Where Forests and Communities Thrive Together 31 Aug 2026 News Launching FPSD Policy Dialogue Series at AIT 28 Aug 2026 Subscribe to our newsletter Subscribe to our newsletter Follow us on social media P.",
+          "retrievedAt": "2026-09-07T19:50:11.217Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:50:52.957Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1390": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://orcid.org/0000-0003-1847-7301"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:50:52.957Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1391": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.houstonmethodist.org"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1391-1",
+          "url": "https://www.houstonmethodist.org",
+          "excerpt": "Group Same Day Clinics Emergency Care Hospitals Breast Care Centers Comprehensive Care Centers Imaging Centers International Locations See All Locations Convenient Locations Across the Greater Houston Area Find a location for you and your family near work or home Find a Doctor Get Care Now Contact Us Pricing Transparency MyChart Login Academic Institute Giving International Patients Careers OFFERING THE FULL SPECTRUM OF QUALITY, PERSONALIZED CARE We treat everything, from complex brain tumors, cancer, heart disease and organ failure, to more common conditions like the flu, reflux and diabetes.",
+          "retrievedAt": "2026-09-07T19:50:12.130Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1391-2",
+          "url": "https://www.houstonmethodist.org",
+          "excerpt": "We treat everything, from complex brain tumors, cancer, heart disease and organ failure, to more common conditions like the flu, reflux and diabetes.",
+          "retrievedAt": "2026-09-07T19:50:12.130Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1391-3",
+          "url": "https://www.houstonmethodist.org",
+          "excerpt": "atology Hepatology Internal Medicine Nephrology Neurology Neurosurgery Obstetrics and Gynecology Ophthalmology Oral and Maxillofacial Surgery Orthopedics and Sports Medicine Pain Management Physical Medicine and Rehabilitation Plastic and Reconstructive Surgery Podiatry Pulmonology and Sleep Medicine Rheumatology Surgery Urogynecology Urology Women&#39;s Health Search Everyday Care Options For You Primary Care Group Same Day Clinics Virtual Urgent Care Mammogram Appointments Imaging Appointments Emergency Care Centers Same Day Orthopedic Clinics Same Day Spine Care Why Choose Houston Methodist?",
+          "retrievedAt": "2026-09-07T19:50:12.130Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1391-4",
+          "url": "https://www.houstonmethodist.org",
+          "excerpt": "Houston Methodist is one of the nation's leading health care systems and academic centers, providing unparalleled quality &mdash; and safety &mdash; in clinical care, advanced technology and patient experience.",
+          "retrievedAt": "2026-09-07T19:50:12.130Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1391-5",
+          "url": "https://www.houstonmethodist.org",
+          "excerpt": "Leading Care Everywhere Full Spectrum of Services Get Quality Care Now Personalized Care for You Leading Care Everywhere Leading Care Everywhere Whether you need primary, specialty, emergency or hospital care, Houston Methodist&rsquo;s expertise is conveniently located wherever you may need care.",
+          "retrievedAt": "2026-09-07T19:50:12.130Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1391-6",
+          "url": "https://www.houstonmethodist.org",
+          "excerpt": "Find a Location Near You Find a Location Full Spectrum of Services Full Spectrum of Services From annual checkups and mammograms to innovative, customized treatment plans for complex conditions, we offer a full spectrum of quality care for all your health care needs.",
+          "retrievedAt": "2026-09-07T19:50:12.130Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1391-7",
+          "url": "https://www.houstonmethodist.org",
+          "excerpt": "Learn More About Our Services & Specialties Learn More Get Quality Care Now Get Quality Care Now Whether you&rsquo;re suffering from allergies, a fever, a skin irritation or a broken bone, Houston Methodist offers a variety of ways to get the care you need when you need it.",
+          "retrievedAt": "2026-09-07T19:50:12.130Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1391-8",
+          "url": "https://www.houstonmethodist.org",
+          "excerpt": "Find Out How to Get Care Now Get Care Now Personalized Care for You Personalized Care We understand how important it is to treat you as an individual, with you own unique health history and needs.",
+          "retrievedAt": "2026-09-07T19:50:12.130Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:50:52.957Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1392": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://researchmap.jp/dinhhaduythuy"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://researchmap.jp/dinhhaduythuy: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T19:50:52.957Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1393": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.sydney.edu.au/business/about/our-people/academic-staff/chinh-ho.html"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:50:52.957Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1394": {
       "overview": "pending",
