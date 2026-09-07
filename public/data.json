@@ -2826,7 +2826,43 @@
       }
     ],
     "portrait": "portraits/041-linh-phan-university-of-pennsylvania.webp",
-    "portraitSource": "https://www.cis.upenn.edu/~linhphan/pics/linh.jpg"
+    "portraitSource": "https://www.cis.upenn.edu/~linhphan/pics/linh.jpg",
+    "researchOverview": {
+      "text": "Linh Phan studies real-time, embedded, and cyber-physical systems, developing scheduling, fault-tolerance, and resource-allocation techniques for provably safe and secure distributed systems.",
+      "sources": [
+        "https://www.cis.upenn.edu/~linhphan/"
+      ],
+      "verifiedAt": "2026-09-06T23:50:00.000Z"
+    },
+    "recentWork": [
+      {
+        "title": "Uncertainty-Aware Resource Allocation for Multi-Path Programs with In-Kernel Predictions",
+        "type": "paper",
+        "url": "https://www.cis.upenn.edu/~linhphan/papers/ecrts26-multipath.pdf",
+        "selectionSource": "https://www.cis.upenn.edu/~linhphan/",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2026
+      },
+      {
+        "title": "Generative Profiling for Soft Real-Time Systems and its Applications to Resource Allocation",
+        "type": "paper",
+        "url": "https://www.cis.upenn.edu/~linhphan/papers/rtas26-genprofile.pdf",
+        "selectionSource": "https://www.cis.upenn.edu/~linhphan/",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2026
+      },
+      {
+        "title": "Running Distributed Systems Like Clockwork",
+        "type": "paper",
+        "url": "https://www.cis.upenn.edu/~linhphan/papers/clockwork-nines2026.pdf",
+        "selectionSource": "https://www.cis.upenn.edu/~linhphan/",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2026
+      }
+    ]
   },
   {
     "id": "vp-0042",
@@ -2866,7 +2902,43 @@
       }
     ],
     "portrait": "portraits/042-vinhthuy-phan-university-of-memphis.webp",
-    "portraitSource": "https://www.memphis.edu/cs/images/people/vphan-big.jpg"
+    "portraitSource": "https://www.memphis.edu/cs/images/people/vphan-big.jpg",
+    "researchOverview": {
+      "text": "Vinhthuy Phan studies computer science education, data science, and bioinformatics, developing platforms, pedagogies, and algorithms for computational thinking, problem-solving, and genomic analysis.",
+      "sources": [
+        "https://vtphan.github.io/"
+      ],
+      "verifiedAt": "2026-09-06T23:50:00.000Z"
+    },
+    "recentWork": [
+      {
+        "title": "Understand Effective Coverage by Mapped Reads using Genome Repeat Complexity",
+        "type": "paper",
+        "url": "https://vtphan.github.io/publications.html",
+        "selectionSource": "https://vtphan.github.io/publications.html",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2019
+      },
+      {
+        "title": "Leveraging known genomic variants to improve detection of variants, especially close-by Indels",
+        "type": "paper",
+        "url": "https://vtphan.github.io/publications.html",
+        "selectionSource": "https://vtphan.github.io/publications.html",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2018
+      },
+      {
+        "title": "Code4Brownies: An Active Learning Solution for Teaching Programming and Problem Solving in the Classroom",
+        "type": "paper",
+        "url": "https://vtphan.github.io/publications.html",
+        "selectionSource": "https://vtphan.github.io/publications.html",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2018
+      }
+    ]
   },
   {
     "id": "vp-0043",
@@ -2895,7 +2967,14 @@
     "msInstitution": "University of Ulsan, South Korea",
     "msYear": 2006,
     "undergradInstitution": "Ho Chi Minh City University of Technology",
-    "undergradYear": 2001
+    "undergradYear": 2001,
+    "researchOverview": {
+      "text": "Phu Phung studies computer security for web, mobile, and Internet-of-Things systems, developing policy enforcement, malicious software detection, and machine-learning security techniques.",
+      "sources": [
+        "https://udayton.edu/directory/artssciences/computerscience/phung-phu.php"
+      ],
+      "verifiedAt": "2026-09-06T23:50:00.000Z"
+    }
   },
   {
     "id": "vp-0044",
@@ -2951,7 +3030,14 @@
       }
     ],
     "portrait": "portraits/044-my-thai-university-of-florida.webp",
-    "portraitSource": "https://www.cise.ufl.edu/~mythai/images/thai.png"
+    "portraitSource": "https://www.cise.ufl.edu/~mythai/images/thai.png",
+    "researchOverview": {
+      "text": "My Thai studies trustworthy artificial intelligence, massive graph mining, approximation algorithms, and optimization with applications to blockchain, cybersecurity, and critical networked infrastructure.",
+      "sources": [
+        "https://www.cise.ufl.edu/~mythai/"
+      ],
+      "verifiedAt": "2026-09-06T23:50:00.000Z"
+    }
   },
   {
     "id": "vp-0045",
@@ -2974,7 +3060,25 @@
     "phdInstitution": "University of Central Florida",
     "country": "United States",
     "portrait": "portraits/045-duc-david-tran-university-of-massachusetts-boston.webp",
-    "portraitSource": "https://www.cs.umb.edu/~duc/www/david_tran_portrait.png"
+    "portraitSource": "https://www.cs.umb.edu/~duc/www/david_tran_portrait.png",
+    "researchOverview": {
+      "text": "Duc Tran studies network computing, using machine learning and decentralized techniques to optimize blockchain, federated learning, peer-to-peer networks, and edge computing systems.",
+      "sources": [
+        "https://www.cs.umb.edu/~duc/www/"
+      ],
+      "verifiedAt": "2026-09-06T23:50:00.000Z"
+    },
+    "selectedWork": [
+      {
+        "title": "Handbook on Blockchain",
+        "type": "book",
+        "url": "https://link.springer.com/book/10.1007/978-3-031-07535-3",
+        "selectionSource": "https://www.cs.umb.edu/~duc/www/",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2022
+      }
+    ]
   },
   {
     "id": "vp-0046",
@@ -3008,7 +3112,43 @@
     ],
     "portrait": "portraits/046-dung-h-tran-university-of-florida.webp",
     "portraitSource": "https://cise.ufl.edu/wp-content/uploads/sites/15/connections-images/dung-tran/Dung-Tran-a657bcee1b59db8bbc6113ea608d7254.jpg",
-    "websiteUrl": "https://sites.google.com/view/v2a2/about"
+    "websiteUrl": "https://sites.google.com/view/v2a2/about",
+    "researchOverview": {
+      "text": "Dung Tran studies formal methods, safe artificial intelligence, and cyber-physical systems, developing reachability analysis and robustness certification techniques for deep neural networks and autonomous controllers.",
+      "sources": [
+        "https://sites.google.com/view/v2a2/about"
+      ],
+      "verifiedAt": "2026-09-06T23:50:00.000Z"
+    },
+    "recentWork": [
+      {
+        "title": "Real-Time Verification for Distributed Cyber-Physical Systems",
+        "type": "paper",
+        "url": "https://sites.google.com/view/v2a2/publications",
+        "selectionSource": "https://sites.google.com/view/v2a2/publications",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2023
+      },
+      {
+        "title": "Decentralized Safe Control for Distributed Cyber-Physical Systems using Real-time Reachability Analysis",
+        "type": "paper",
+        "url": "https://sites.google.com/view/v2a2/publications",
+        "selectionSource": "https://sites.google.com/view/v2a2/publications",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2023
+      },
+      {
+        "title": "Verification of Recurrent Neural Networks using Star Reachability",
+        "type": "paper",
+        "url": "https://sites.google.com/view/v2a2/publications",
+        "selectionSource": "https://sites.google.com/view/v2a2/publications",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2023
+      }
+    ]
   },
   {
     "id": "vp-0047",
@@ -3057,7 +3197,43 @@
       }
     ],
     "portrait": "portraits/047-son-tran-new-mexico-state-university.webp",
-    "portraitSource": "https://computerscience.nmsu.edu/facultydirectory/_images/Son-2019-sq-250x250.png"
+    "portraitSource": "https://computerscience.nmsu.edu/facultydirectory/_images/Son-2019-sq-250x250.png",
+    "researchOverview": {
+      "text": "Son Tran studies knowledge representation, reasoning about actions and change, automated planning, logic programming, and autonomous multi-agent systems.",
+      "sources": [
+        "https://www.cs.nmsu.edu/~tson/"
+      ],
+      "verifiedAt": "2026-09-06T23:50:00.000Z"
+    },
+    "selectedWork": [
+      {
+        "title": "Proceedings of the 12th International Conference on Logic Programming and NonMonotonic Reasoning",
+        "type": "book",
+        "url": "https://www.cs.nmsu.edu/~tson/",
+        "selectionSource": "https://www.cs.nmsu.edu/~tson/",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2013
+      },
+      {
+        "title": "Proceedings of the 14th International Workshop on Computational Logic and Multi-Agent Systems",
+        "type": "book",
+        "url": "https://www.cs.nmsu.edu/~tson/",
+        "selectionSource": "https://www.cs.nmsu.edu/~tson/",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2013
+      },
+      {
+        "title": "Logic Programming, Knowledge Representation, and Nonmonotonic Reasoning",
+        "type": "book",
+        "url": "https://www.cs.nmsu.edu/~tson/",
+        "selectionSource": "https://www.cs.nmsu.edu/~tson/",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2011
+      }
+    ]
   },
   {
     "id": "vp-0048",
@@ -3084,7 +3260,44 @@
     "portrait": "portraits/048-quoc-tran-dinh-university-of-north-carolina-at-chapel-hill.webp",
     "portraitSource": "https://stor.unc.edu/wp-content/uploads/sites/1319/2021/05/tran_dinh_quoc.jpg",
     "websiteUrl": "https://quoctd.web.unc.edu/",
-    "linkedinUrl": "https://www.linkedin.com/in/quoc-tran-dinh-ba746846/"
+    "linkedinUrl": "https://www.linkedin.com/in/quoc-tran-dinh-ba746846/",
+    "researchOverview": {
+      "text": "Quoc Tran-Dinh studies numerical optimization, developing theory and first- and second-order algorithmic frameworks for convex, nonconvex, and stochastic problems in machine learning and data science.",
+      "sources": [
+        "https://quoctd.web.unc.edu/",
+        "https://stor.unc.edu/faculty-member/tran-dinh-quoc/"
+      ],
+      "verifiedAt": "2026-09-06T23:50:00.000Z"
+    },
+    "recentWork": [
+      {
+        "title": "VFOG: Variance-Reduced Fast Optimistic Gradient Methods for a Class of Nonmonotone Generalized Equations",
+        "type": "paper",
+        "url": "https://arxiv.org/abs/2508.16791",
+        "selectionSource": "https://quoctd.web.unc.edu/publications/",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2025
+      },
+      {
+        "title": "Complexity of Linearized Perturbed Augmented Lagrangian Methods for Nonsmooth and Nonconvex Optimization with Nonlinear Equations Constraints",
+        "type": "paper",
+        "url": "https://arxiv.org/abs/2503.01056",
+        "selectionSource": "https://quoctd.web.unc.edu/publications/",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2025
+      },
+      {
+        "title": "Accelerated Extragradient-Type Methods: Generalization and Unified Convergence Analysis",
+        "type": "paper",
+        "url": "https://arxiv.org/abs/2501.07720",
+        "selectionSource": "https://quoctd.web.unc.edu/publications/",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2025
+      }
+    ]
   },
   {
     "id": "vp-0049",
@@ -3112,7 +3325,43 @@
     "undergradInstitution": "Saint-Petersburg State Polytechnic University",
     "undergradYear": 2013,
     "websiteUrl": "https://nitrieu.github.io/",
-    "linkedinUrl": "https://www.linkedin.com/in/nitrieu/"
+    "linkedinUrl": "https://www.linkedin.com/in/nitrieu/",
+    "researchOverview": {
+      "text": "Ni Trieu studies cryptography and security, focusing on secure computation techniques for private set intersection, private database queries, and privacy-preserving machine learning.",
+      "sources": [
+        "https://nitrieu.github.io/"
+      ],
+      "verifiedAt": "2026-09-06T23:50:00.000Z"
+    },
+    "recentWork": [
+      {
+        "title": "Is PSI Really Faster Than PSU? Achieving Efficient PSU with Invertible Bloom Filters",
+        "type": "paper",
+        "url": "https://nitrieu.github.io/publications/",
+        "selectionSource": "https://nitrieu.github.io/publications/",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2026
+      },
+      {
+        "title": "Malicious Private Set Union with Two-Sided Output",
+        "type": "paper",
+        "url": "https://nitrieu.github.io/publications/",
+        "selectionSource": "https://nitrieu.github.io/publications/",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2026
+      },
+      {
+        "title": "PULSE: Parallel Private Set Union for Large-Scale Entities",
+        "type": "paper",
+        "url": "https://nitrieu.github.io/publications/",
+        "selectionSource": "https://nitrieu.github.io/publications/",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2025
+      }
+    ]
   },
   {
     "id": "vp-0050",
@@ -3137,7 +3386,14 @@
     "portrait": "portraits/050-huy-t-vo-city-college-of-new-york-cuny.webp",
     "portraitSource": "https://www.ccny.cuny.edu/sites/default/files/profile_migration/Huy-Vo.jpg",
     "undergradInstitution": "University of Utah",
-    "undergradYear": 2005
+    "undergradYear": 2005,
+    "researchOverview": {
+      "text": "Huy Vo studies data science, big-data systems, large-scale visualization, scalable displays, and high-performance computing.",
+      "sources": [
+        "https://www.ccny.cuny.edu/profiles/huy-vo"
+      ],
+      "verifiedAt": "2026-09-06T23:50:00.000Z"
+    }
   },
   {
     "id": "vp-0051",
@@ -3163,7 +3419,44 @@
     "portrait": "portraits/051-mai-vu-tufts-university.webp",
     "portraitSource": "https://engineering.tufts.edu/ece/sites/g/files/lrezom581/files/styles/large/public/mvu01.jpeg?itok=E0nBDQvD",
     "msInstitution": "Stanford University, USA",
-    "msYear": 2006
+    "msYear": 2006,
+    "researchOverview": {
+      "text": "Mai Vu studies wireless communication networks, developing machine-learning and optimization algorithms for beamforming, resource allocation, and integrated sensing and communication in 5G and 6G systems.",
+      "sources": [
+        "https://engineering.tufts.edu/ece/people/faculty/mai-vu",
+        "https://sites.tufts.edu/links/"
+      ],
+      "verifiedAt": "2026-09-06T23:50:00.000Z"
+    },
+    "recentWork": [
+      {
+        "title": "Towards Achieving Integer and Load-balancing User Association in Wireless Networks with a Reparameterized Attention-based GNN",
+        "type": "paper",
+        "url": "https://sites.tufts.edu/links/?page_id=18",
+        "selectionSource": "https://sites.tufts.edu/links/?page_id=18",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2025
+      },
+      {
+        "title": "Efficient edge-update GNN structure for beamforming and power allocation in wireless networks",
+        "type": "paper",
+        "url": "https://sites.tufts.edu/links/?page_id=18",
+        "selectionSource": "https://sites.tufts.edu/links/?page_id=18",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2025
+      },
+      {
+        "title": "Joint Beamforming and Integer User Association using a GNN with Gumbel-Softmax Reparameterizations",
+        "type": "paper",
+        "url": "https://sites.tufts.edu/links/?page_id=18",
+        "selectionSource": "https://sites.tufts.edu/links/?page_id=18",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2025
+      }
+    ]
   },
   {
     "id": "vp-0052",
@@ -3210,7 +3503,43 @@
     "portrait": "portraits/052-tam-vu-dartmouth-college.webp",
     "portraitSource": "https://humanx.dartmouth.edu/tamvu/profile-pic.jpg",
     "websiteUrl": "https://humanx.dartmouth.edu/tamvu/",
-    "linkedinUrl": "https://www.linkedin.com/in/tamngocvu/"
+    "linkedinUrl": "https://www.linkedin.com/in/tamngocvu/",
+    "researchOverview": {
+      "text": "Tam Vu studies AI-powered wearable and mobile systems, pioneering earable computing platforms that capture physiological signals for noninvasive health monitoring, wellness, and cognitive enhancement.",
+      "sources": [
+        "https://humanx.dartmouth.edu/tamvu/"
+      ],
+      "verifiedAt": "2026-09-06T23:50:00.000Z"
+    },
+    "recentWork": [
+      {
+        "title": "Clinical Evaluation of a Polarization-Based Optical Noninvasive Glucose Sensing System",
+        "type": "paper",
+        "url": "https://humanx.dartmouth.edu/tamvu/",
+        "selectionSource": "https://humanx.dartmouth.edu/tamvu/",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2025
+      },
+      {
+        "title": "A Comprehensive Study on the Efficacy of a Wearable Sleep Aid Device Featuring Closed-Loop Real-Time Acoustic Stimulation",
+        "type": "paper",
+        "url": "https://humanx.dartmouth.edu/tamvu/",
+        "selectionSource": "https://humanx.dartmouth.edu/tamvu/",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2023
+      },
+      {
+        "title": "PROS: An Efficient Pattern-Driven Compressive Sensing Framework for Low-Power Biopotential-Based Wearables with On-Chip Intelligence",
+        "type": "paper",
+        "url": "https://humanx.dartmouth.edu/tamvu/",
+        "selectionSource": "https://humanx.dartmouth.edu/tamvu/",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2022
+      }
+    ]
   },
   {
     "id": "vp-0053",
@@ -3235,7 +3564,43 @@
     "portrait": "portraits/053-tu-vu-virginia-tech.webp",
     "portraitSource": "https://tuvllms.github.io/assets/img/prof_pic.jpg?f72c939782b58350d789d8d251e0efe0",
     "websiteUrl": "https://tuvllms.github.io/",
-    "linkedinUrl": "https://www.linkedin.com/in/tuvllms/"
+    "linkedinUrl": "https://www.linkedin.com/in/tuvllms/",
+    "researchOverview": {
+      "text": "Tu Vu studies large language models and artificial intelligence, developing methods for automated discovery, self-improvement, agentic context management, and efficient capability transfer across tasks and models.",
+      "sources": [
+        "https://tuvllms.github.io/"
+      ],
+      "verifiedAt": "2026-09-06T23:50:00.000Z"
+    },
+    "recentWork": [
+      {
+        "title": "The Master Key Hypothesis: Unlocking Cross-Model Capability Transfer via Linear Subspace Alignment",
+        "type": "paper",
+        "url": "https://tuvllms.github.io/publications/",
+        "selectionSource": "https://tuvllms.github.io/publications/",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2026
+      },
+      {
+        "title": "MERRIN: A Benchmark for Multimodal Evidence Retrieval",
+        "type": "paper",
+        "url": "https://tuvllms.github.io/publications/",
+        "selectionSource": "https://tuvllms.github.io/publications/",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2026
+      },
+      {
+        "title": "PRISM: Pushing the Frontier of Deep Think via Process Reward Model-Guided Inference",
+        "type": "paper",
+        "url": "https://tuvllms.github.io/publications/",
+        "selectionSource": "https://tuvllms.github.io/publications/",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2026
+      }
+    ]
   },
   {
     "id": "vp-0054",
@@ -3261,7 +3626,43 @@
     "portrait": "portraits/054-thuy-duong-vuong-university-of-california-san-diego.webp",
     "portraitSource": "https://thuyduongvuong.github.io/Vuong_2.jpg",
     "websiteUrl": "https://thuyduongvuong.github.io/",
-    "linkedinUrl": "https://www.linkedin.com/in/thuy-duong-vuong-167877133/"
+    "linkedinUrl": "https://www.linkedin.com/in/thuy-duong-vuong-167877133/",
+    "researchOverview": {
+      "text": "Thuy-Duong Vuong studies theoretical computer science, developing algorithms and mathematical techniques for sampling from complex high-dimensional distributions and discrete domains.",
+      "sources": [
+        "https://thuyduongvuong.github.io/"
+      ],
+      "verifiedAt": "2026-09-06T23:50:00.000Z"
+    },
+    "recentWork": [
+      {
+        "title": "Parallel sampling via autospeculation",
+        "type": "paper",
+        "url": "https://thuyduongvuong.github.io/",
+        "selectionSource": "https://thuyduongvuong.github.io/",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2026
+      },
+      {
+        "title": "Composable Coresets for Constrained Determinant Maximization and Beyond",
+        "type": "paper",
+        "url": "https://thuyduongvuong.github.io/",
+        "selectionSource": "https://thuyduongvuong.github.io/",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2026
+      },
+      {
+        "title": "Efficiently learning and sampling multimodal distributions with data-based initialization",
+        "type": "paper",
+        "url": "https://thuyduongvuong.github.io/",
+        "selectionSource": "https://thuyduongvuong.github.io/",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2025
+      }
+    ]
   },
   {
     "id": "vp-0055",
@@ -3333,7 +3734,43 @@
     "msYear": 1985,
     "postdocInstitution": "University of Essen",
     "postdocYear": 1995,
-    "websiteUrl": "https://sites.math.rutgers.edu/~pht19/"
+    "websiteUrl": "https://sites.math.rutgers.edu/~pht19/",
+    "researchOverview": {
+      "text": "Pham Huu Tiep studies group theory and representation theory, investigating character bounds, monodromy groups, and structural conjectures for finite simple and classical groups.",
+      "sources": [
+        "https://sites.math.rutgers.edu/~pht19/"
+      ],
+      "verifiedAt": "2026-09-06T23:50:00.000Z"
+    },
+    "selectedWork": [
+      {
+        "title": "Exponential sums, hypergeometric sheaves, and monodromy groups",
+        "type": "paper",
+        "url": "https://sites.math.rutgers.edu/~pht19/papers_selected.html",
+        "selectionSource": "https://sites.math.rutgers.edu/~pht19/papers_selected.html",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2025
+      },
+      {
+        "title": "Brauer's height zero conjecture",
+        "type": "paper",
+        "url": "https://sites.math.rutgers.edu/~pht19/papers_selected.html",
+        "selectionSource": "https://sites.math.rutgers.edu/~pht19/papers_selected.html",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2024
+      },
+      {
+        "title": "Uniform character bounds for finite classical groups",
+        "type": "paper",
+        "url": "https://sites.math.rutgers.edu/~pht19/papers_selected.html",
+        "selectionSource": "https://sites.math.rutgers.edu/~pht19/papers_selected.html",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2024
+      }
+    ]
   },
   {
     "id": "vp-0056",
@@ -3367,7 +3804,43 @@
     "portrait": "portraits/058-thang-le-georgia-institute-of-technology.webp",
     "portraitSource": "https://letu.math.gatech.edu/Thang%20Le%27s%20home%20page_files/Thang1.jpg",
     "websiteUrl": "https://letu.math.gatech.edu/",
-    "linkedinUrl": "https://www.linkedin.com/in/thang-le-ba949854/"
+    "linkedinUrl": "https://www.linkedin.com/in/thang-le-ba949854/",
+    "researchOverview": {
+      "text": "Thang Le studies differential topology, 3-manifold invariants, knot theory, skein algebras, and quasicrystals.",
+      "sources": [
+        "https://letu.math.gatech.edu/"
+      ],
+      "verifiedAt": "2026-09-06T23:50:00.000Z"
+    },
+    "recentWork": [
+      {
+        "title": "Frobenius homomorphisms for stated SLn-skein modules",
+        "type": "paper",
+        "url": "https://arxiv.org/abs/2504.08657",
+        "selectionSource": "https://letu.math.gatech.edu/",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2025
+      },
+      {
+        "title": "Sliced skein algebras and geometric Kauffman bracket",
+        "type": "paper",
+        "url": "https://letu.math.gatech.edu/",
+        "selectionSource": "https://letu.math.gatech.edu/",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2025
+      },
+      {
+        "title": "Degenerations Of Skein Algebras and Quantum Traces",
+        "type": "paper",
+        "url": "https://letu.math.gatech.edu/",
+        "selectionSource": "https://letu.math.gatech.edu/",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2023
+      }
+    ]
   },
   {
     "id": "vp-0057",
@@ -3430,7 +3903,25 @@
     ],
     "portrait": "portraits/057-phong-h-duong-columbia-university.webp",
     "portraitSource": "https://www.math.columbia.edu/~phong/phong.jpg",
-    "websiteUrl": "https://www.math.columbia.edu/~phong/"
+    "websiteUrl": "https://www.math.columbia.edu/~phong/",
+    "researchOverview": {
+      "text": "Phong Duong studies complex analysis and geometry, partial differential equations, and mathematical physics.",
+      "sources": [
+        "https://www.math.columbia.edu/people/faculty-by-rank/name/duong-phong/"
+      ],
+      "verifiedAt": "2026-09-06T23:50:00.000Z"
+    },
+    "selectedWork": [
+      {
+        "title": "Subelliptic Eigenvalue Problems",
+        "type": "paper",
+        "url": "https://www.math.columbia.edu/~phong/fefferman-phong",
+        "selectionSource": "https://www.math.columbia.edu/~phong/",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 1983
+      }
+    ]
   },
   {
     "id": "vp-0058",
@@ -3453,7 +3944,35 @@
     "country": "United States",
     "portrait": "portraits/058-hung-v-tran-university-of-wisconsin-madison.webp",
     "portraitSource": "https://www.math.wisc.edu/wp-content/uploads/sites/379/2020/12/hung-profile-scaled-e1612449749954.jpeg",
-    "websiteUrl": "https://people.math.wisc.edu/~htran24/"
+    "websiteUrl": "https://people.math.wisc.edu/~htran24/",
+    "researchOverview": {
+      "text": "Hung Tran studies partial differential equations, focusing on viscosity solutions, homogenization, and dynamical properties of Hamilton-Jacobi and nonlinear elliptic equations.",
+      "sources": [
+        "https://people.math.wisc.edu/~hung/research.html",
+        "https://people.math.wisc.edu/~hung/books.html"
+      ],
+      "verifiedAt": "2026-09-06T23:50:00.000Z"
+    },
+    "selectedWork": [
+      {
+        "title": "Hamilton--Jacobi Equations: Theory and Applications",
+        "type": "book",
+        "url": "https://people.math.wisc.edu/~hung/books.html",
+        "selectionSource": "https://people.math.wisc.edu/~hung/books.html",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2021
+      },
+      {
+        "title": "Dynamical and Geometric Aspects of Hamilton-Jacobi and Linearized Monge-Ampere Equations",
+        "type": "book",
+        "url": "https://people.math.wisc.edu/~hung/books.html",
+        "selectionSource": "https://people.math.wisc.edu/~hung/books.html",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2017
+      }
+    ]
   },
   {
     "id": "vp-0059",
@@ -3513,7 +4032,44 @@
     "msInstitution": "University of Texas at San Antonio",
     "msYear": 2006,
     "undergradInstitution": "Vietnam National University, Ho Chi Minh City",
-    "websiteUrl": "https://sites.psu.edu/nguyen/homepage/"
+    "websiteUrl": "https://sites.psu.edu/nguyen/homepage/",
+    "researchOverview": {
+      "text": "Toan Nguyen studies partial differential equations and mathematical physics, investigating hydrodynamic stability, boundary layers, kinetic theory, and wave-particle interactions in plasma physics.",
+      "sources": [
+        "https://sites.psu.edu/nguyen/homepage/",
+        "https://sites.psu.edu/nguyen/publications/"
+      ],
+      "verifiedAt": "2026-09-06T23:50:00.000Z"
+    },
+    "recentWork": [
+      {
+        "title": "Regular Lenard-Balescu equations in a Periodic Box",
+        "type": "paper",
+        "url": "https://arxiv.org/abs/2605.27802",
+        "selectionSource": "https://sites.psu.edu/nguyen/publications/",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2026
+      },
+      {
+        "title": "Asymptotic Stability of Hartree–Fock Homogenous Equilibria in R^d",
+        "type": "paper",
+        "url": "https://arxiv.org/abs/2604.18952",
+        "selectionSource": "https://sites.psu.edu/nguyen/publications/",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2026
+      },
+      {
+        "title": "Remarks on Landau damping",
+        "type": "paper",
+        "url": "https://arxiv.org/abs/2505.10058",
+        "selectionSource": "https://sites.psu.edu/nguyen/publications/",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2025
+      }
+    ]
   },
   {
     "id": "vp-0060",
@@ -3539,7 +4095,43 @@
     "country": "United States",
     "portrait": "portraits/060-khai-t-nguyen-north-carolina-state-university.webp",
     "portraitSource": "https://tnguye13.math.ncsu.edu/khaips.jpeg",
-    "websiteUrl": "https://tnguye13.math.ncsu.edu/"
+    "websiteUrl": "https://tnguye13.math.ncsu.edu/",
+    "researchOverview": {
+      "text": "Khai Nguyen studies nonlinear hyperbolic conservation laws, optimal control theory, differential games, and nonlinear analysis.",
+      "sources": [
+        "https://tnguye13.math.ncsu.edu/"
+      ],
+      "verifiedAt": "2026-09-06T23:50:00.000Z"
+    },
+    "recentWork": [
+      {
+        "title": "Two-point boundary value problems for quasi-monotone dynamical systems",
+        "type": "paper",
+        "url": "https://arxiv.org/abs/2508.01305",
+        "selectionSource": "https://tnguye13.math.ncsu.edu/research.html",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2025
+      },
+      {
+        "title": "On the rate of convergence in superquadratic Hamilton-Jacobi equations with state constraints",
+        "type": "paper",
+        "url": "https://arxiv.org/pdf/2508.01528",
+        "selectionSource": "https://tnguye13.math.ncsu.edu/research.html",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2025
+      },
+      {
+        "title": "Generic uniqueness and conjugate points for optimal control problems",
+        "type": "paper",
+        "url": "https://arxiv.org/abs/2501.10572",
+        "selectionSource": "https://tnguye13.math.ncsu.edu/research.html",
+        "selectionMode": "recent",
+        "verifiedAt": "2026-09-06T23:50:00.000Z",
+        "year": 2025
+      }
+    ]
   },
   {
     "id": "vp-0061",

@@ -130,9 +130,10 @@ completion while temporary failures or unresolved verification remain.
 ## Batch checklist
 
 - [x] ~~Batch 1 — `vp-0001`–`vp-0020`; 20 people; all outcomes complete~~ — published in `8d7be62`; counts: 20 verified overviews, 16 verified work sections, 4 no-suitable-evidence work searches; 0 unresolved retries.
-- [ ] Batch 2 — `vp-0021`–`vp-0040`; 20 people; all outcomes complete; counts: 20 verified overviews, 20 verified work sections (10 selected, 10 recent), 0 no-suitable-evidence work searches; 0 unresolved retries.
+- [x] ~~Batch 2 — `vp-0021`–`vp-0040`; 20 people; all outcomes complete~~ — published in `c92a004`; counts: 20 verified overviews, 20 verified work sections (10 selected, 10 recent), 0 no-suitable-evidence work searches; 0 unresolved retries.
+- [ ] Batch 3 — `vp-0041`–`vp-0060`; 20 people; all outcomes complete; counts: 20 verified overviews, 17 verified work sections (5 selected, 12 recent), 3 no-suitable-evidence work searches; 0 unresolved retries.
 
-Progress note: batches 1 and 2 have all outcomes completed (40 verified overviews, 36 verified work sections, 4 no-suitable-evidence results, 0 unresolved retries). Batch 2 is ready for publication. Batch 3 will be processed next.
+Progress note: batches 1, 2, and 3 have all outcomes completed (60 verified overviews, 53 verified work sections, 7 no-suitable-evidence results, 0 unresolved retries). Batch 3 is ready for publication. Batch 4 will be processed next.
 
 Populate at execution time from the saved ID snapshot. Each entry must include batch number,
 ledger reference or exact IDs, outcome counts, remaining retries, and publication status.

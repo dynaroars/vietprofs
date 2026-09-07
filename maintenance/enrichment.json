@@ -1539,7 +1539,8 @@
       ],
       "status": "complete",
       "startedAt": "2026-09-06T22:27:35.529Z",
-      "publishedAt": "2026-09-06T23:45:00.000Z"
+      "publishedAt": "2026-09-06T23:45:00.000Z",
+      "commit": "c92a004"
     },
     {
       "number": 3,
@@ -1565,7 +1566,9 @@
         "vp-0059",
         "vp-0060"
       ],
-      "status": "pending"
+      "status": "complete",
+      "startedAt": "2026-09-07T03:40:18.381Z",
+      "publishedAt": "2026-09-06T23:50:00.000Z"
     },
     {
       "number": 4,
@@ -7506,217 +7509,1629 @@
       "nextAction": "Batch 2 verification complete."
     },
     "vp-0041": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.cis.upenn.edu/~linhphan/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0041-1",
+          "url": "https://www.cis.upenn.edu/~linhphan/",
+          "excerpt": "Linh Thi Xuan Phan's Home Page Linh Thi Xuan PHAN Professor University of Pennsylvania Computer and Information Science Department Levine 576 3330 Walnut Street, Philadelphia, PA 19104-6389 Phone: +1 (215) 898-2012 Email: linhphan AT cis.",
+          "retrievedAt": "2026-09-07T03:40:21.543Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0041-2",
+          "url": "https://www.cis.upenn.edu/~linhphan/",
+          "excerpt": "My research interests include real-time, embedded systems, cyber-physical systems (CPS), distributed systems, robotics and security.",
+          "retrievedAt": "2026-09-07T03:40:21.544Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0041-3",
+          "url": "https://www.cis.upenn.edu/~linhphan/",
+          "excerpt": "I am especially interested in theoretical foundations and systems techniques for building cost-effective large-scale systems with provable safety, fault tolerance, security, and real-time performance.",
+          "retrievedAt": "2026-09-07T03:40:21.544Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0041-4",
+          "url": "https://www.cis.upenn.edu/~linhphan/",
+          "excerpt": "Recently, I have worked on compositional scheduling and analysis techniques, reliable real-time cloud infrastructure for safety-critical and mission-critical applications, the Internet of Things, and network function virtualization, as well as methods for diagnosing performance problems in data centers.",
+          "retrievedAt": "2026-09-07T03:40:21.544Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0041-5",
+          "url": "https://www.cis.upenn.edu/~linhphan/",
+          "excerpt": "Some of the projects I am currently working on include: efficient real-time fault tolerance techniques for distributed CPS, scalable adaptive resource allocation for modern hardware, computation-aware algorithmic design for CPS under uncertainty, fault detection, isolation and recovery strategies for distributed robotic systems, a new approach to defending cyber-physical systems and the cloud against security attacks, and a radically different architecture for large-scale data centers.",
+          "retrievedAt": "2026-09-07T03:40:21.544Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0041-6",
+          "url": "https://www.cis.upenn.edu/~linhphan/",
+          "excerpt": "I am a member of the PRECISE Center and the Distributed Systems Lab , and a co-director of the MSE in Data Science (DATS) program.",
+          "retrievedAt": "2026-09-07T03:40:21.544Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0041-7",
+          "url": "https://www.cis.upenn.edu/~linhphan/",
+          "excerpt": "Teaching CIS 5050: Software Systems (sole instructor since 2016; current: Fall 2026) CIS 4550/5550: Internet and Web Systems (Fall 2023) Current PhD students Yifan Cai Abby Eisenklam Suwei Ma (co-advised with Sebastian Angel) Karan Newatia (co-advised with Andreas Haeberlen) Xian Wang Graduated PhD students Dr.",
+          "retrievedAt": "2026-09-07T03:40:21.544Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0041-8",
+          "url": "https://www.cis.upenn.edu/~linhphan/",
+          "excerpt": "REER Award, National Science Foundation, 2018 Outstanding Paper Award, Real-Time and Embedded Technology and Applications Symposium (RTAS), 2018 Member of the inaugural class of the ACM Future of Computing Academy, 2017 Best Paper Award Nominee, Real-Time Systems Symposium (RTSS), 2013 Best Paper Award Nominee, International Conference on Embedded Software (EMSOFT), 2010 NUS Dean's Graduate Research Excellence, 2009 NUS Graduate Scholarship (2003 to 2007) Singapore Scholarship (1999 to 2003) Publications Uncertainty-Aware Resource Allocation for Multi-Path Programs with In-Kernel Predictions A.",
+          "retrievedAt": "2026-09-07T03:40:21.544Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T23:50:00.000Z",
+      "nextAction": "Batch 3 verification complete."
     },
     "vp-0042": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://classic.memphis.edu/cs/people/faculty_pages/vinhthuy-phan.php",
         "https://vtphan.github.io/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0042-1",
+          "url": "https://classic.memphis.edu/cs/people/faculty_pages/vinhthuy-phan.php",
+          "excerpt": "Vinhthuy Phan - Computer Science - The University of Memphis Skip to main content You are using an outdated browser.",
+          "retrievedAt": "2026-09-07T03:40:22.012Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0042-2",
+          "url": "https://classic.memphis.edu/cs/people/faculty_pages/vinhthuy-phan.php",
+          "excerpt": "Due to the ongoing severe winter weather conditions, all UofM locations will remain in modified campus operations through Thursday, Feb.",
+          "retrievedAt": "2026-09-07T03:40:22.012Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0042-3",
+          "url": "https://classic.memphis.edu/cs/people/faculty_pages/vinhthuy-phan.php",
+          "excerpt": "Degree Program UofM Lambuth - Jackson, TN Undergraduate Catalog Graduate Catalog Academic Calendar Admissions Undergraduate Graduate UofM Global - Online Law School International Transfer Students Virtual Tour Fees/Tuition Research & Innovation Division of Research & Innovation For Researchers For Industry and Partners Centers and Institutes FedEx Institute of Technology Office of Institutional Research Libraries University Libraries Renew Online Interlibrary Loan Digital Commons Special Collections Ask-a-Librarian Athletics Tiger Athletics Tickets Intramurals Campus Rec Make A Gift gotigersgo.",
+          "retrievedAt": "2026-09-07T03:40:22.012Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0042-4",
+          "url": "https://classic.memphis.edu/cs/people/faculty_pages/vinhthuy-phan.php",
+          "excerpt": "com Support UofM Make A Gift Alumni Association Athletics Development Corporate & Foundation Relations News & Events Tiger Zone - Student Events Campus Events Media Room: News and Magazines People Full-Time Faculty Affiliate Faculty Part-Time Instructors Staff Postdoctoral Fellows & Researchers Department Advisory Board Retired Faculty Alumni Take Action Career Paths Degree Programs Courses Contact Us Follow Us Online Facebook LinkedIn Home Computer Science People Faculty Pages Vinhthuy Phan Vinhthuy Phan Associate Chair and Associate Professor Phone 901.",
+          "retrievedAt": "2026-09-07T03:40:22.012Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0042-5",
+          "url": "https://classic.memphis.edu/cs/people/faculty_pages/vinhthuy-phan.php",
+          "excerpt": "1506 Office Dunn Hall 309 Office Hours Call for hours Degree: PhD, Computer Science, Stony Brook University, 2003 Research Interests: Computer science education, applications of generative AI in education and research, data science, bioinformatics Personal Website: https://vtphan.",
+          "retrievedAt": "2026-09-07T03:40:22.012Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0042-6",
+          "url": "https://classic.memphis.edu/cs/people/faculty_pages/vinhthuy-phan.php",
+          "excerpt": "Phan is an Associate Professor and Associate Chair of the Department of Computer Science.",
+          "retrievedAt": "2026-09-07T03:40:22.012Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0042-7",
+          "url": "https://classic.memphis.edu/cs/people/faculty_pages/vinhthuy-phan.php",
+          "excerpt": "His recent work in computer science education focuses on leveraging in-class coding exercises and generative AI to enable just-in-time and personalized interventions, enhance student performance prediction, and support active learning in programming courses.",
+          "retrievedAt": "2026-09-07T03:40:22.012Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0042-8",
+          "url": "https://classic.memphis.edu/cs/people/faculty_pages/vinhthuy-phan.php",
+          "excerpt": "His research also examines strategies for improving feedback practices among teaching assistants and developing cloud-based platforms to facilitate in-class exercises in data science and machine learning courses.",
+          "retrievedAt": "2026-09-07T03:40:22.012Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0042-9",
+          "url": "https://vtphan.github.io/",
+          "excerpt": "Vinhthuy Phan Vinhthuy Phan I am an Associate Professor of Computer Science at the University of Memphis .",
+          "retrievedAt": "2026-09-07T03:40:22.282Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0042-10",
+          "url": "https://vtphan.github.io/",
+          "excerpt": "I earned my Bachelor's degree in Mathematics and Computer Science from Brandeis University in Massachusetts, followed by a Ph.",
+          "retrievedAt": "2026-09-07T03:40:22.282Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0042-11",
+          "url": "https://vtphan.github.io/",
+          "excerpt": "in Computer Science from Stony Brook University , where I studied under Professor Steven Skiena .",
+          "retrievedAt": "2026-09-07T03:40:22.282Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0042-12",
+          "url": "https://vtphan.github.io/",
+          "excerpt": "Since joining the University of Memphis in 2003, I have taught courses focused on problem-solving methods and large-scale data analysis.",
+          "retrievedAt": "2026-09-07T03:40:22.282Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0042-13",
+          "url": "https://vtphan.github.io/",
+          "excerpt": "My research interests include computer science education, data science, and bioinformatics.",
+          "retrievedAt": "2026-09-07T03:40:22.282Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0042-14",
+          "url": "https://vtphan.github.io/",
+          "excerpt": "Recently, in developing tools to support my teaching, I have focused on platforms, techniques, and pedagogies for introducing computational thinking and problem-solving to beginners.",
+          "retrievedAt": "2026-09-07T03:40:22.282Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T23:50:00.000Z",
+      "nextAction": "Batch 3 verification complete."
     },
     "vp-0043": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://udayton.edu/directory/artssciences/computerscience/phung-phu.php"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0043-1",
+          "url": "https://udayton.edu/directory/artssciences/computerscience/phung-phu.php",
+          "excerpt": "Faculty and Staff : University of Dayton, Ohio Skip to content /////// Department of Computer Science Home School of Engineering Academics Department of Computer Science Faculty and Staff Navigation Department of Computer Science Opportunities and Activities Capstone Project Proposals Careers Faculty and Staff Faculty and Staff Are you interested in having a tour of the Department of Computer Science and potentially meeting with a current student?",
+          "retrievedAt": "2026-09-07T03:40:23.290Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0043-2",
+          "url": "https://udayton.edu/directory/artssciences/computerscience/phung-phu.php",
+          "excerpt": "For general inquiries, advising and prospective students, email us at CPSadvising@udayton.",
+          "retrievedAt": "2026-09-07T03:40:23.290Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0043-3",
+          "url": "https://udayton.edu/directory/artssciences/computerscience/phung-phu.php",
+          "excerpt": "Michael Poor Associate Professor; Chair of the Department of Computer Science Email G.",
+          "retrievedAt": "2026-09-07T03:40:23.290Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0043-4",
+          "url": "https://udayton.edu/directory/artssciences/computerscience/phung-phu.php",
+          "excerpt": "ghava Gowda Associate Professor 937-229-3831 Email Raghava Gowda View Raghava Gowda's Profile Luan Nguyen Associate Professor Email Luan Nguyen View Luan Nguyen's Profile Ngoc Nguyen Assistant Professor Email Ngoc Nguyen View Ngoc Nguyen's Profile Tam Nguyen Associate Professor; Director of Graduate Program in Computer Science 937-229-3893 Email Tam Nguyen View Tam Nguyen's Profile Tom Ongwere Assistant Professor 937-229-3330 Email Tom Ongwere View Tom Ongwere's Profile Phu Phung Professor; Director of the Intelligent Systems Security Lab 937-229-3831 Email Phu Phung View Phu Phung's Profile G.",
+          "retrievedAt": "2026-09-07T03:40:23.290Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0043-5",
+          "url": "https://udayton.edu/directory/artssciences/computerscience/phung-phu.php",
+          "excerpt": "Michael Poor 's Profile Mohammad Sayeh Adjunct Professor Email Mohammad Sayeh View Mohammad Sayeh's Profile Ju Shen Professor; Director of Interactive Visual Media Lab Email Ju Shen View Ju Shen's Profile R.",
+          "retrievedAt": "2026-09-07T03:40:23.290Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0043-6",
+          "url": "https://udayton.edu/directory/artssciences/computerscience/phung-phu.php",
+          "excerpt": "ianming Zhao's Profile Professional Staff Denise Brown Senior Administrative Assistant 937-229-3831 Email Denise Brown View Denise Brown's Profile Department of Computer Science Opportunities and Activities Capstone Project Proposals Careers Faculty and Staff Contact Department of Computer Science 300 College Park Dayton, Ohio 45469 - 0280 937-229-3831 email Explore Majors and Programs Academic Calendar Careers Libraries News Next Steps Request Info Apply Visit Give Connect Facebook X Instagram Youtube Linkedin Directions Contact Us 300 College Park Dayton, Ohio 45469 937-229-1000 info@udayton.",
+          "retrievedAt": "2026-09-07T03:40:23.290Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T23:50:00.000Z",
+      "nextAction": "Batch 3 verification complete."
     },
     "vp-0044": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.cise.ufl.edu/~mythai/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0044-1",
+          "url": "https://www.cise.ufl.edu/~mythai/",
+          "excerpt": "Thai is a UF Research Foundation Professor of Computer & Information Sciences & Engineering and Associate Director of Nelms Institute for the Connected World at the University of Florida.",
+          "retrievedAt": "2026-09-07T03:40:24.285Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0044-2",
+          "url": "https://www.cise.ufl.edu/~mythai/",
+          "excerpt": "Thai has extensive expertise in trustworthy AI, billion-scale data mining, and optimization, especially for complex graph data with applications to blockchain, social media, critical networking infrastructure, cybersecurity, and healthcare.",
+          "retrievedAt": "2026-09-07T03:40:24.285Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0044-3",
+          "url": "https://www.cise.ufl.edu/~mythai/",
+          "excerpt": "The results of her work have led to 7 books and 300+ publications in leading academic journals and conferences, including 2014 IEEE MSN Best Paper Award, 2017 IEEE ICDM Best Papers Award, 2018 IEEE/ACM ASONAM Best Paper Runner Up, and 2023 AAAI Distinguished Paper Award.",
+          "retrievedAt": "2026-09-07T03:40:24.285Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0044-4",
+          "url": "https://www.cise.ufl.edu/~mythai/",
+          "excerpt": "Thai was awarded the Young Investigator (YIP) from the Defense Threat Reduction Agency (DTRA) and in 2010, she won the NSF CAREER Award.",
+          "retrievedAt": "2026-09-07T03:40:24.285Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0044-5",
+          "url": "https://www.cise.ufl.edu/~mythai/",
+          "excerpt": "She currently serves as Editor-in-Chief of ACM Computing Surveys, Editor-in-Chief of Journal of Combinatorial Optimization, and Founding Editor-in-Chief of IET Blockchain Journal.",
+          "retrievedAt": "2026-09-07T03:40:24.285Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0044-6",
+          "url": "https://www.cise.ufl.edu/~mythai/",
+          "excerpt": "e Connected World Full Professor (2015-present), CISE Department , University of Florida Associate Chair for Research (2015-2018), CISE Department , University of Florida Associate Professor (2011-2015), CISE Department , University of Florida Assistant Professor (2006-2011), CISE Department , University of Florida Areas of Specialization: Trustworthy AI; Blockchain; Security and Privacy; Big Graph Mining, Complex Network Analysis; Approximation Algorithms; Quantum Computing; Optimization Other interests during my spare time: Writing, painting, and playing chess Education: 9/2001 - 12/2005: Ph.",
+          "retrievedAt": "2026-09-07T03:40:24.285Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0044-7",
+          "url": "https://www.cise.ufl.edu/~mythai/",
+          "excerpt": ", Mathematics , Iowa State University --> Contact Information: Mailing Address: CSE Building, Room E301, University of Florida, P.",
+          "retrievedAt": "2026-09-07T03:40:24.285Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0044-8",
+          "url": "https://www.cise.ufl.edu/~mythai/",
+          "excerpt": "Box 116120, Gainesville, Florida 32611-6120 Office: Room 550, CSE Building Phone: 352-450-1837 ---> Fax: 352-392-1220, attn: My T.",
+          "retrievedAt": "2026-09-07T03:40:24.285Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T23:50:00.000Z",
+      "nextAction": "Batch 3 verification complete."
     },
     "vp-0045": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.cs.umb.edu/~duc/www/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0045-1",
+          "url": "https://www.cs.umb.edu/~duc/www/",
+          "excerpt": "Duc (David) Tran | Home Duc (David) Tran Home Research Teaching Contact (Fall 2025) Office: McCormack M3-0201-18 Office hours: Tue/Thu 2PM-4PM Office tel: (617) 287-6452 duc.",
+          "retrievedAt": "2026-09-07T03:40:24.732Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0045-2",
+          "url": "https://www.cs.umb.edu/~duc/www/",
+          "excerpt": "A good read about Blockchain Technology for those who want to set foot in this exciting field.",
+          "retrievedAt": "2026-09-07T03:40:24.732Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0045-3",
+          "url": "https://www.cs.umb.edu/~duc/www/",
+          "excerpt": "Tran is a tenured Associate Professor in the Department of Computer Science at the University of Massachusetts at Boston , where he is Director of the Network Computing Laboratory .",
+          "retrievedAt": "2026-09-07T03:40:24.732Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0045-4",
+          "url": "https://www.cs.umb.edu/~duc/www/",
+          "excerpt": "His research interest is network computing, particularly using machine learning and decentralized techniques to optimize networked applications.",
+          "retrievedAt": "2026-09-07T03:40:24.732Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0045-5",
+          "url": "https://www.cs.umb.edu/~duc/www/",
+          "excerpt": "His current projects are about blockchain, decentralized learning, and edge computing.",
+          "retrievedAt": "2026-09-07T03:40:24.732Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0045-6",
+          "url": "https://www.cs.umb.edu/~duc/www/",
+          "excerpt": "He has received research funding awards from the National Science Foundation , Best Theory Paper Award at IEEE MASS 2014 , Best Paper Award at ICCCN 2008 , and Best Paper Recognition at DaWak 1999 .",
+          "retrievedAt": "2026-09-07T03:40:24.732Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0045-7",
+          "url": "https://www.cs.umb.edu/~duc/www/",
+          "excerpt": ", Editor for Elsevier Ad Hoc Networks Journal (2015-date), Editor for Springer Journal on Computational Social Networks (2013-date), Editor for Taylor Francis Journal on Parallel, Emergent, and Distributed Systems (2010-date), Guest-Editor for the Journal on Pervasive Computing and Communications (2009), TPC Symposium Co-Chair for ICNC 2017 , TPC Track Chair for VTC Fall 2015 , TPC Chair for WiMAN ( 2014 , 2017 ), CCNet ( 2010 , 2011 ), GridPeer ( 2009 , 2010 , 2011 ), and IRSN 2009 , TPC Vice-Chair for AINA 2007 , and Member of Organizing Committee for ACM Multimedia 2014 and IEEE DCOSS 2016 .",
+          "retrievedAt": "2026-09-07T03:40:24.732Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0045-8",
+          "url": "https://www.cs.umb.edu/~duc/www/",
+          "excerpt": "He was on the TPC for 80+ international conferences, and referee and session chair for numerous journals/conferences.",
+          "retrievedAt": "2026-09-07T03:40:24.732Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T23:50:00.000Z",
+      "nextAction": "Batch 3 verification complete."
     },
     "vp-0046": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://cise.ufl.edu/people/faculty/name/dung-tran/",
         "https://sites.google.com/view/v2a2/about"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0046-1",
+          "url": "https://cise.ufl.edu/people/faculty/name/dung-tran/",
+          "excerpt": "tion Science & Engineering MENU MENU About Accreditation Department History Department Administration Industrial Advisory Board (IAB) Faculty Openings Research Faculty Research Areas Research Centers & Labs Faculty Research Videos Academics Undergraduate Graduate Academic Advising Graduate Course Information Course Syllabi Admissions Undergraduate Transfer Graduate People Faculty Staff News & Events News Magazines & Newsletters Events Resources & Help Resources for Students Resources for Faculty & Staff IT Help Department Awards Departmental Committees Alumni & Friends Home People Dung Tran Ph.",
+          "retrievedAt": "2026-09-07T03:40:25.709Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0046-2",
+          "url": "https://cise.ufl.edu/people/faculty/name/dung-tran/",
+          "excerpt": "Assistant Professor Affiliations AI/Machine Learning , Faculty Office Mala 4102 home Email : dungtran@ufl.",
+          "retrievedAt": "2026-09-07T03:40:25.709Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0046-3",
+          "url": "https://cise.ufl.edu/people/faculty/name/dung-tran/",
+          "excerpt": "edu INTERNET Biography Primary Research Area: Formal Methods, AI Safety, Cyber-Physical Systems, Robotics Research Areas: Verification and Validation for Learning-enabled Autonomy Research Interests: Formal Verification, Specification and Modeling Languages, AI Safety Publications: See my Google Scholar: https://scholar.",
+          "retrievedAt": "2026-09-07T03:40:25.709Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0046-4",
+          "url": "https://cise.ufl.edu/people/faculty/name/dung-tran/",
+          "excerpt": "user=_RzS3uMAAAAJ&#038;hl=en Websites: (links to personal and professional websites): https://sites.",
+          "retrievedAt": "2026-09-07T03:40:25.709Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0046-5",
+          "url": "https://cise.ufl.edu/people/faculty/name/dung-tran/",
+          "excerpt": "com/view/v2a2/about Awards & Distinctions: NSF CAREER (2025) SIU PRIZE Golden Medal (2025) for Young Vietnamese Scientist in Computer Science Worldwide NSF EPSCoR Early Career First Award, 2022 IEEE TCCPS Outstanding PhD Dissertation Award (2021) Education PhD, Vanderbilt University --> School Logo Link Department of Computer & Information Science & Engineering Facebook X (formerly Twitter) YouTube LinkedIn Instagram Contact us 1889 Museum Road P.",
+          "retrievedAt": "2026-09-07T03:40:25.709Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0046-6",
+          "url": "https://cise.ufl.edu/people/faculty/name/dung-tran/",
+          "excerpt": "Box 116120 Gainesville, FL 32611 Student Services: 352-392-1090 Administrative Office: 352-392-1200 UF RESOURCES UF NEWS UF CALENDAR MYUFL ONE.",
+          "retrievedAt": "2026-09-07T03:40:25.709Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0046-7",
+          "url": "https://sites.google.com/view/v2a2/about",
+          "excerpt": "rV DLe-CPS SHRC DRREACH DAEV PDEV Publications V2A2 About Group Projects NNV StarV DLe-CPS SHRC DRREACH DAEV PDEV Publications More About Group Projects NNV StarV DLe-CPS SHRC DRREACH DAEV PDEV Publications Verification and Validation for Learning-enabled Autonomy Hoang-Dung Tran University of Florida Department of Computer and Information Science and Engineering (CISE) Research Interests: Formal Methods , Safe AI, Cyber-Physical Systems, Robotics, Control Bio : I am an Assistant Professor in the Department of Computer and Information Science and Engineering (CISE) at the University of Florida.",
+          "retrievedAt": "2026-09-07T03:40:26.108Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0046-8",
+          "url": "https://sites.google.com/view/v2a2/about",
+          "excerpt": "My research interests are reachability analysis and robustness certification of deep neural networks (DNN), formal verification of autonomous cyber-physical systems(CPS) with learning-enabled components, safe and robust training for DNN, real-time verification, and safe motion planning for distributed CPS.",
+          "retrievedAt": "2026-09-07T03:40:26.108Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0046-9",
+          "url": "https://sites.google.com/view/v2a2/about",
+          "excerpt": "I am also interested in robust control, stability analysis of nonlinear control systems, and networked control systems.",
+          "retrievedAt": "2026-09-07T03:40:26.108Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0046-10",
+          "url": "https://sites.google.com/view/v2a2/about",
+          "excerpt": "Google Scholar , ResearchGate Research I am leading the research and development of the following projects and tools.",
+          "retrievedAt": "2026-09-07T03:40:26.108Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0046-11",
+          "url": "https://sites.google.com/view/v2a2/about",
+          "excerpt": "tworks and Complex Learning-enabled Autonomy DLe-CPS : Indoor Learning-based Distributed Autonomous Driving Testbed SHRC : Safe Human-Robot-Collaboration DRREACH : Decentralized Realtime Verification and Safe Motion Planning for Distributed Autonomous Cyber-Physical Systems DAEV : Reachability Analysis, Verification, and Falsification for High-Index Differential Algebraic Equations PDEV : Reachability Analysis, Verification, and Falsification for Partial Differential Equations Awards NSF CAREER , 2025 SIU PRIZE ( Gold Medal ) for Young Vietnamese Researchers Worldwide in Computer Science, 2025.",
+          "retrievedAt": "2026-09-07T03:40:26.108Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0046-12",
+          "url": "https://sites.google.com/view/v2a2/about",
+          "excerpt": "UNL College of Engineering Research Excellence Award, 202 1, 2022 The NSF EPSCoR Early Car eer First Award, 202 2 The UNL School of Computing Teaching Excellence Award, 2022 (Graduate Level) The IEEE T echnical Committee on Cyber- Physical Systems Outstanding Ph.",
+          "retrievedAt": "2026-09-07T03:40:26.108Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0046-13",
+          "url": "https://sites.google.com/view/v2a2/about",
+          "excerpt": "Dissertation Award , 2021 Grants Hoang-Dung Tran ( UF-PI ), CPS-Medium : &quot; Causal Reinforcement Learning for Smart Building CPS &quot;, 2025-2028.",
+          "retrievedAt": "2026-09-07T03:40:26.108Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0046-14",
+          "url": "https://sites.google.com/view/v2a2/about",
+          "excerpt": "Hoang-Dung Tran (Sole-PI), NSF CAREER : &quot; Enabling Trustworthy Complex Learning-enabled Autonomy &quot;, 202 5 -20 30 .",
+          "retrievedAt": "2026-09-07T03:40:26.108Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T23:50:00.000Z",
+      "nextAction": "Batch 3 verification complete."
     },
     "vp-0047": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.cs.nmsu.edu/~tson/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0047-1",
+          "url": "https://www.cs.nmsu.edu/~tson/",
+          "excerpt": "Tran Cao Son Tran Cao Son's Home Page Professor in Computer Science , New Mexico State University , Las Cruces, New Mexico My Short CV Research Interest Reasoning about Actions and Changes, Planning, Scheduling Knowledge Representation and Reasoning (Argumentation, Logic Programming, Nonmonotonic Reasoning) Autonomous Agents, Robotics, and Control Theory Web Agents Activities: PC/General Chair/Local Organizer 20th International Conference on Principles of Knowledge Representation and Reasoning.",
+          "retrievedAt": "2026-09-07T03:40:26.961Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0047-2",
+          "url": "https://www.cs.nmsu.edu/~tson/",
+          "excerpt": "18th International Conference on Principles of Knowledge Representation and Reasoning.",
+          "retrievedAt": "2026-09-07T03:40:26.961Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0047-3",
+          "url": "https://www.cs.nmsu.edu/~tson/",
+          "excerpt": "19th Principles and Practice of Multi-Agent Systems conference agent-based modeling programming.",
+          "retrievedAt": "2026-09-07T03:40:26.961Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0047-4",
+          "url": "https://www.cs.nmsu.edu/~tson/",
+          "excerpt": "19th Principles and Practice of Multi-Agent Systems conference agent-based modeling programming.",
+          "retrievedAt": "2026-09-07T03:40:26.961Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0047-5",
+          "url": "https://www.cs.nmsu.edu/~tson/",
+          "excerpt": "Books (Edited) Proceedings of the 12th International Conference on Logic Programming and NonMonotonic Reasoning LNAI 8148 - Springer Verlag, 2013 (with Pedro Cabalar) LPNMR 2013 Proceedings of the 14th International Workshop on Computational Logic and Multi-Agent Systems LNAI 8143 - Springer Verlag, 2013 (with Leite, J.",
+          "retrievedAt": "2026-09-07T03:40:26.961Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0047-6",
+          "url": "https://www.cs.nmsu.edu/~tson/",
+          "excerpt": "Essays Dedicated to Michael Gelfond on the Occasion of His 65th Birthday LNAI 6565 - Springer Verlag, 2011 (with Marcello Balduccini) Declarative Agent Languages and Technologies VI (Revised Selected and Invited Papers) LNAI 5397 - Springer Verlag, 2008 (with Matteo Baldoni, Birna van Riemsdijk, and Michael Winikoff) Declarative Agent Languages and Technologies V (Revised Selected and Invited Papers) LNAI 4897 - Springer Verlag, 2007 (with Matteo Baldoni, Birna van Riemsdijk, and Michael Winikoff) Publications, Students, Systems, and Tutorials Publications (See Google scholar or DBLP server ).",
+          "retrievedAt": "2026-09-07T03:40:26.961Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0047-7",
+          "url": "https://www.cs.nmsu.edu/~tson/",
+          "excerpt": "Systems -- developed mainly by my students Students Tutorials Knowledge representation, Logic, and Advanced Programming Laboratory (KLAP) Other Stuffs Some pictures of my family My sister's art work Travel to Vietnam For Vietnamese students: A note on TA/RA (from my perspective) Favorite Links My Advisors: Chitta Baral , Phan Minh Dung , Michael Gelfond My Home Town: Nam Dinh (English).",
+          "retrievedAt": "2026-09-07T03:40:26.961Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T23:50:00.000Z",
+      "nextAction": "Batch 3 verification complete."
     },
     "vp-0048": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://stor.unc.edu/faculty-member/tran-dinh-quoc/",
         "https://quoctd.web.unc.edu/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0048-1",
+          "url": "https://stor.unc.edu/faculty-member/tran-dinh-quoc/",
+          "excerpt": "Tran-Dinh, Quoc | UNC Statistics & Operations Research skip to the end of the global utility bar The University of North Carolina at Chapel Hill Accessibility Events Libraries Maps Departments ConnectCarolina UNC Search Skip to main content You are using an outdated browser.",
+          "retrievedAt": "2026-09-07T03:40:27.260Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0048-2",
+          "url": "https://stor.unc.edu/faculty-member/tran-dinh-quoc/",
+          "excerpt": "Skip to main content --> Submit Search 318 Hanes Hall, CB #3260 Chapel Hill, NC 27599-3260 &emsp; 919-843-6024 &emsp; 919-962-1329 &emsp; stor@unc.",
+          "retrievedAt": "2026-09-07T03:40:27.260Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0048-3",
+          "url": "https://stor.unc.edu/faculty-member/tran-dinh-quoc/",
+          "excerpt": "edu &emsp; &emsp; Support Us Toggle navigation Home About About Available Positions Admin Resources History Newsletter News Archive Support Us Contact Us People Faculty Adjuncts & Joint Visiting & Research Scholars Emeriti Staff Graduate Students PhD Program Program Description Admissions Information FAQ Courses Resources Student Awards Student Website Alumni MS Program Program Description Why STANDS?",
+          "retrievedAt": "2026-09-07T03:40:27.260Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0048-4",
+          "url": "https://stor.unc.edu/faculty-member/tran-dinh-quoc/",
+          "excerpt": "or list After Graduation Alumni Profiles STAN awards Outreach Industry Contacts Consulting Data Science Lab ASA DataFest K-12 students Undergraduate Organizations Sports Analytics Intelligence Lab Events Upcoming Events Hotelling Lectures Colloquia Old Colloquia Seminars Student Events Leadbetter Celebration STOR Commencement Research Optimization Probability Statistics Stochastic Modeling RTG on Networks FRG on Compressible Data Books Home / Faculty Members / Tran-Dinh, Quoc Tran-Dinh, Quoc September 22, 2020 By Melissa Stewart Quoc Tran-Dinh Professor 333 Hanes Hall 919-843-6023 quoctd@email.",
+          "retrievedAt": "2026-09-07T03:40:27.260Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0048-5",
+          "url": "https://stor.unc.edu/faculty-member/tran-dinh-quoc/",
+          "excerpt": "edu Website Education I am an associate professor at the Department of Statistics and Operations Research, which I joined in July 2015.",
+          "retrievedAt": "2026-09-07T03:40:27.260Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0048-6",
+          "url": "https://stor.unc.edu/faculty-member/tran-dinh-quoc/",
+          "excerpt": "I was a postdoctoral researcher at Laboratory for Information and Inference Systems, LIONS, École Polytechnique Fédérale de Lausanne, EPFL, Switzerland from November 2012 to June 2015.",
+          "retrievedAt": "2026-09-07T03:40:27.260Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0048-7",
+          "url": "https://stor.unc.edu/faculty-member/tran-dinh-quoc/",
+          "excerpt": "in Optimization in Engineering in November 2012 at the Department of Electrical Engineering, ESAT, and Optimization in Engineering Center, OPTEC, under the supervision of Professor Moritz Diehl.",
+          "retrievedAt": "2026-09-07T03:40:27.260Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0048-8",
+          "url": "https://stor.unc.edu/faculty-member/tran-dinh-quoc/",
+          "excerpt": "Research Interests Numerical Optimization: Theory and Algorithms for Convex Optimization and Non-convex Continuous Optimization Research Synopsis My research is on numerical optimization: theory, algorithms, and applications.",
+          "retrievedAt": "2026-09-07T03:40:27.260Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0048-9",
+          "url": "https://quoctd.web.unc.edu/",
+          "excerpt": "search Publications Students Courses STOR 415: Introduction to Optimization STOR 612: Foundations of Optimization STOR 712: Optimization for Machine Learning and Data Science Teaching Scientific activities Software CV My Blog Home Contact QUOC TRAN-DINH + Department of Statistics and Operations Research + Adjunct Member of Department of Computer Science (2020-present) Address: 333 Hanes Hall CB #3260 The University of North Carolina at Chapel Hill Chapel Hill, NC 27599 E-mail: quoctd AT email DOT unc DOT edu Phone: +1-919-843-6023 Name in native language: Trần Đình Quốc (Quốc is my first name).",
+          "retrievedAt": "2026-09-07T03:40:27.906Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0048-10",
+          "url": "https://quoctd.web.unc.edu/",
+          "excerpt": "About me I am a professor at the Department of Statistics and Operations Research.",
+          "retrievedAt": "2026-09-07T03:40:27.906Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0048-11",
+          "url": "https://quoctd.web.unc.edu/",
+          "excerpt": "Before joining UNC Chapel Hill, I was a postdoctoral researcher at Laboratory for Information and Inference Systems (LIONS) , École Polytechnique Fédérale de Lausanne (EPFL), Switzerland from November 2012 to June 2015.",
+          "retrievedAt": "2026-09-07T03:40:27.906Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0048-12",
+          "url": "https://quoctd.web.unc.edu/",
+          "excerpt": "in Optimization in Engineering in November 2012 at the Department of Electrical Engineering (ESAT) and Optimization in Engineering Center (OPTEC) under the supervision of Prof.",
+          "retrievedAt": "2026-09-07T03:40:27.906Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0048-13",
+          "url": "https://quoctd.web.unc.edu/",
+          "excerpt": "October 30, 2020: Our paper A new homotopy proximal variable-metric framework for composite convex minimization gets accepted for publication on Mathematics of Operations Research (This is joint work with Ling Liang and Kim-Chuan Toh (NUS, Singapore)).",
+          "retrievedAt": "2026-09-07T03:40:27.906Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0048-14",
+          "url": "https://quoctd.web.unc.edu/",
+          "excerpt": "October 12: Our paper A Hybrid Stochastic Optimization Framework for Stochastic Composite Nonconvex Optimization gets accepted for publication on Mathematical Programming, Ser.",
+          "retrievedAt": "2026-09-07T03:40:27.906Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0048-15",
+          "url": "https://quoctd.web.unc.edu/",
+          "excerpt": "September 29: Our paper Hybrid Variance-Reduced SGD Algorithms for Nonconvex-Concave Minimax Problems ( Q.",
+          "retrievedAt": "2026-09-07T03:40:27.906Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0048-16",
+          "url": "https://quoctd.web.unc.edu/",
+          "excerpt": "September 29: I serve as an Associate Editor of Computational Optimization and Applications (COAP).",
+          "retrievedAt": "2026-09-07T03:40:27.906Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T23:50:00.000Z",
+      "nextAction": "Batch 3 verification complete."
     },
     "vp-0049": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://scai.engineering.asu.edu/faculty/computer-science-and-engineering/ni-trieu/",
         "https://nitrieu.github.io/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0049-1",
+          "url": "https://nitrieu.github.io/",
+          "excerpt": "Ni Trieu Publications Advising Teaching Service CV Ni Trieu Follow 130B, Biodesign Building B Email Twitter Github Google Scholar About me I am an Assistant Professor of computer science at Arizona State University .",
+          "retrievedAt": "2026-09-07T03:40:29.569Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0049-2",
+          "url": "https://nitrieu.github.io/",
+          "excerpt": "My research interests are in the area of cryptography and security, with a specific focus on secure computation and its applications such as private set intersection, private database queries, and privacy-preserving machine learning.",
+          "retrievedAt": "2026-09-07T03:40:29.569Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0049-3",
+          "url": "https://nitrieu.github.io/",
+          "excerpt": "Before joining ASU, I was a postdoc at UC Berkeley under the mentorship of Prof.",
+          "retrievedAt": "2026-09-07T03:40:29.569Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0049-4",
+          "url": "https://nitrieu.github.io/",
+          "excerpt": "I received my PhD and Master’s degrees from Oregon State University under the supervision of Prof.",
+          "retrievedAt": "2026-09-07T03:40:29.569Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0049-5",
+          "url": "https://nitrieu.github.io/",
+          "excerpt": "During my graduate studies, I spent several summers as a research intern at Bell Labs , Visa Research , and Google .",
+          "retrievedAt": "2026-09-07T03:40:29.569Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0049-6",
+          "url": "https://nitrieu.github.io/",
+          "excerpt": "January 2026: Two PSU papers — one accepted and one conditionally accepted to EUROCRYPT December 2025: I'll be on the 2026 PC for CCS and CRYPTO .",
+          "retrievedAt": "2026-09-07T03:40:29.569Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0049-7",
+          "url": "https://nitrieu.github.io/",
+          "excerpt": "August/September 2025: Busy months— talks at the Simons , VIASM , and NIST ; serving on the USENIX PC and joining an NSF panel review July 2025: A PSU paper accepted to CCS ; and another paper on Shared OT accepted to CiC .",
+          "retrievedAt": "2026-09-07T03:40:29.569Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T23:50:00.000Z",
+      "nextAction": "Batch 3 verification complete."
     },
     "vp-0050": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.ccny.cuny.edu/profiles/huy-vo"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0050-1",
+          "url": "https://www.ccny.cuny.edu/profiles/huy-vo",
+          "excerpt": "eets Students Student E-Mail Password Reset Degreeworks / FACTS E-Permit City Central Brightspace search Login About Academics Admissions Research Student Affairs Support CCNY Faculty and Staff profiles &gt; Home / Faculty and Staff Profiles / Huy Vo Huy Vo Associate Professor Main Affiliation Computer Science Areas of Expertise/Research Data Science Big Data Systems Large-Scale Visualization Scalable Display High-Performance Computing Building North Academic Center Office 8/203A Phone 212-650-6162 Fax 212-650-6248 Email hvo&#64;c&#99;ny&#x2e;cu&#110;y&#x2e;e&#x64;&#x75; Website https://www-cs.",
+          "retrievedAt": "2026-09-07T03:40:30.473Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0050-2",
+          "url": "https://www.ccny.cuny.edu/profiles/huy-vo",
+          "excerpt": "Computing, University of Utah May 2011 The City College of New York 160 Convent Avenue New York, NY 10031 p: 212.",
+          "retrievedAt": "2026-09-07T03:40:30.473Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0050-3",
+          "url": "https://www.ccny.cuny.edu/profiles/huy-vo",
+          "excerpt": "Bulletin Courses - CUNY list Apply Now - Undergraduate Apply Now - Graduate Libraries Benny&#039;s Campus Store Registrar Student Employment Faculty & Staff Webmail Directory Diversity & Compliance Employee Resources Faculty Resources Human Resources Payroll Offices and Services Work at CCNY Resources CCNY Navigate Contact Us Giving Safety CCNY and CUNY Policies Privacy Policy Employer Services Information Technology Discrimination and Retaliation Reporting Portal Freedom of Information Law Consumer Information Accessibility Accessibility Statement Loaner Devices © The City College of New York.",
+          "retrievedAt": "2026-09-07T03:40:30.473Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T23:50:00.000Z",
+      "nextAction": "Batch 3 verification complete."
     },
     "vp-0051": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://engineering.tufts.edu/ece/people/faculty/mai-vu"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0051-1",
+          "url": "https://engineering.tufts.edu/ece/people/faculty/mai-vu",
+          "excerpt": "search Research areas and labs Safety and support Tufts Institute for Artificial Intelligence Cadence University Program Member Community Alumni Student organizations Noonan Award News & Events News Events Colloquia Annual Reports Information for Students Faculty & Staff Alumni Industry Partners Find Faculty Apply Give Breadcrumb Home People Faculty Mai Vu Research Website Full Profile Career Highlights / Publications Research Professional Activities Courses / Teaching Activities Mai Vu Professor, Electrical and Computer Engineering Professor, Computer Science Academic Leave (617) 627-6412 mai.",
+          "retrievedAt": "2026-09-07T03:40:32.335Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0051-2",
+          "url": "https://engineering.tufts.edu/ece/people/faculty/mai-vu",
+          "excerpt": "edu) Research Website Full Profile Career Highlights / Publications Research Professional Activities Courses / Teaching Activities Research/Areas of Interest machine learning, applied optimization, wireless communications and networks, 5G/6G systems and techniques Education Ph.",
+          "retrievedAt": "2026-09-07T03:40:32.335Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0051-3",
+          "url": "https://engineering.tufts.edu/ece/people/faculty/mai-vu",
+          "excerpt": "in Electrical Engineering, Stanford University, United States, 2006 MS in Electrical Engineering, Stanford University, USA, 2006 M.",
+          "retrievedAt": "2026-09-07T03:40:32.335Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0051-4",
+          "url": "https://engineering.tufts.edu/ece/people/faculty/mai-vu",
+          "excerpt": "in Electrical Engineering, University of Melbourne, Melbourne, Australia, 1999 B.",
+          "retrievedAt": "2026-09-07T03:40:32.335Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0051-5",
+          "url": "https://engineering.tufts.edu/ece/people/faculty/mai-vu",
+          "excerpt": "in Computer Engineering, RMIT University, Australia, 1997 Biography Mai Vu is a professor in the Department of Electrical and Computer Engineering and holds a secondary appointment in the Department of Computer Science at Tufts School of Engineering.",
+          "retrievedAt": "2026-09-07T03:40:32.335Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0051-6",
+          "url": "https://engineering.tufts.edu/ece/people/faculty/mai-vu",
+          "excerpt": "She leads Tufts LiNKS, the Laboratory for Intelligent NetworKed Systems, which conducts research in machine learning and wireless networked systems.",
+          "retrievedAt": "2026-09-07T03:40:32.335Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0051-7",
+          "url": "https://engineering.tufts.edu/ece/people/faculty/mai-vu",
+          "excerpt": "Her research group has published extensively on algorithms for wireless communication networks with applications to 5G/6G systems.",
+          "retrievedAt": "2026-09-07T03:40:32.335Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0051-8",
+          "url": "https://engineering.tufts.edu/ece/people/faculty/mai-vu",
+          "excerpt": "She has served on the technical program committee of numerous IEEE conferences and served as a Technical Program Co-Chair of the IEEE Communication Theory Workshop 2023.",
+          "retrievedAt": "2026-09-07T03:40:32.335Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T23:50:00.000Z",
+      "nextAction": "Batch 3 verification complete."
     },
     "vp-0052": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://web.cs.dartmouth.edu/people/tam-vu",
         "https://humanx.dartmouth.edu/tamvu/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0052-1",
+          "url": "https://web.cs.dartmouth.edu/people/tam-vu",
+          "excerpt": "Tam Vu | Department of Computer Science Skip to main content Department of Computer Science Undergraduate Undergraduate Programs CS Major Modified Major/Minor Digital Arts Declare your Major/Minor Transfer Credits AIT-Budapest Exchange Program Courses Prerequisite Courses Three Pillars Topics Courses (49/69/89) Elective Courses Culminating Experience COSC 94 and COSC 99 Upcoming Class Schedule Considering Graduate School?",
+          "retrievedAt": "2026-09-07T03:40:33.272Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0052-2",
+          "url": "https://web.cs.dartmouth.edu/people/tam-vu",
+          "excerpt": "es & Funding Opportunities The Kemeny Prize Lovelace Research Program DALI Lab Graduate Graduate Programs Learning Outcomes Graduate Admissions PhD in Computer Science Masters in Computer Science Graduate Courses Upcoming Class Schedule Expectations, Policies, and Procedures Course Transfer Policy Graduate Life Alumni Professors Research Overview Faculty Publications Job Openings Technical Reports News & Events News Events People Inclusivity Diversity, Equity and Inclusion Women in Computer Science Jobs Contact Us Search Search this site Search all Dartmouth sites Search This field is required.",
+          "retrievedAt": "2026-09-07T03:40:33.272Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0052-3",
+          "url": "https://web.cs.dartmouth.edu/people/tam-vu",
+          "excerpt": "and Georgina Tugwell Russo 1977 Distinguished Professor Area of Expertise AI-powered Wearable and Mobile Systems for Human performance, Wellness, and Longevity.",
+          "retrievedAt": "2026-09-07T03:40:33.272Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0052-4",
+          "url": "https://web.cs.dartmouth.edu/people/tam-vu",
+          "excerpt": "and Georgina Tugwell Russo 1977 Distinguished Professor in Computer Science at Dartmouth College and the Founder and Chairman of Earable Neuroscience.",
+          "retrievedAt": "2026-09-07T03:40:33.272Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0052-5",
+          "url": "https://web.cs.dartmouth.edu/people/tam-vu",
+          "excerpt": "Prior to Dartmouth, he was an Associate Professor at Oxford University and the University of Colorado.",
+          "retrievedAt": "2026-09-07T03:40:33.272Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0052-6",
+          "url": "https://web.cs.dartmouth.edu/people/tam-vu",
+          "excerpt": "He introduced the term \"Earable Systems\", describing ear-based sensing and stimulation computing systems.",
+          "retrievedAt": "2026-09-07T03:40:33.272Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0052-7",
+          "url": "https://web.cs.dartmouth.edu/people/tam-vu",
+          "excerpt": "These systems use the ear's proximity to key physiological signals, such as brain activity, eye movements, and facial muscles, to capture data with high fidelity and low intrusion.",
+          "retrievedAt": "2026-09-07T03:40:33.272Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0052-8",
+          "url": "https://web.cs.dartmouth.edu/people/tam-vu",
+          "excerpt": "This approach has influenced the technology industry, including companies like Apple and Google, in the development of advanced human-computer interaction and health monitoring tools.",
+          "retrievedAt": "2026-09-07T03:40:33.272Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0052-9",
+          "url": "https://humanx.dartmouth.edu/tamvu/",
+          "excerpt": "Tam Vu - Dartmouth College About Projects Commercialization Publications Awards Career HumanX Lab Earable Neuroscience LinkedIn page Send an email Tam Vu Thomas A.",
+          "retrievedAt": "2026-09-07T03:40:33.793Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0052-10",
+          "url": "https://humanx.dartmouth.edu/tamvu/",
+          "excerpt": "and Georgina Tugwell Russo 1977 Distinguished Professor Department of Computer Science, Dartmouth College Cluster Head, Improving Healthcare Outcomes through Sensory Technology Cluster Director, HumanX Lab, Dartmouth College Founder and Chairman, Earable Neuroscience Tam Vu is the Thomas A.",
+          "retrievedAt": "2026-09-07T03:40:33.793Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0052-11",
+          "url": "https://humanx.dartmouth.edu/tamvu/",
+          "excerpt": "and Georgina Tugwell Russo 1977 Distinguished Professor in Computer Science at Dartmouth College and Founder of Earable Neuroscience.",
+          "retrievedAt": "2026-09-07T03:40:33.793Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0052-12",
+          "url": "https://humanx.dartmouth.edu/tamvu/",
+          "excerpt": "His research focuses on AI-powered wearable and mobile systems for human performance, wellness, and longevity, developing AI-powered platforms that capture physiological signals from the ear, head, and surrounding environment for healthcare monitoring and cognitive enhancement.",
+          "retrievedAt": "2026-09-07T03:40:33.793Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0052-13",
+          "url": "https://humanx.dartmouth.edu/tamvu/",
+          "excerpt": "Vu pioneered the field of Earable Computing, introducing ear-based sensing and stimulation systems that leverage the ear's proximity to brain, eye, and facial muscle signals for non-invasive health monitoring and intervention and brain-computer interaction.",
+          "retrievedAt": "2026-09-07T03:40:33.793Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0052-14",
+          "url": "https://humanx.dartmouth.edu/tamvu/",
+          "excerpt": "Vu translates research into deployed systems: Earable Neuroscience, which he founded and led as CEO from 2018 to 2025, raised $10M+ from Founders Fund and Samsung Ventures, shipped AI-powered sleep and focus wearables to 10,000+ users across 40+ countries, and earned three consecutive CES Innovation Awards (2023–2025).",
+          "retrievedAt": "2026-09-07T03:40:33.793Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0052-15",
+          "url": "https://humanx.dartmouth.edu/tamvu/",
+          "excerpt": "Prior to Dartmouth, he was an Associate Professor at Oxford University and the University of Colorado.",
+          "retrievedAt": "2026-09-07T03:40:33.793Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0052-16",
+          "url": "https://humanx.dartmouth.edu/tamvu/",
+          "excerpt": "and Georgina Tugwell Russo 1977 Distinguished Professor in Computer Science at Dartmouth College and the Founder and Chairman of Earable Neuroscience.",
+          "retrievedAt": "2026-09-07T03:40:33.793Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T23:50:00.000Z",
+      "nextAction": "Batch 3 verification complete."
     },
     "vp-0053": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://website.cs.vt.edu/people/faculty/tu-vu.html",
         "https://tuvllms.github.io/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0053-1",
+          "url": "https://website.cs.vt.edu/people/faculty/tu-vu.html",
+          "excerpt": "s Centers and institutes Seminars and distinguished lectures Engage Engage Submenu Toggle Alumni Giving Industry (CS|Source) Entrepreneurship (cs/root) Apply Visit Give Shop Hokie Sports Shop Apparel, clothing, gear and merchandise Hokie Shop University Bookstore, merchandise and gifts Hokie Gear Everything you need to know about Hokie gear Hokie License Plates Part of every Virginia Tech plate purchase funds scholarships Resources for Future Students Current Students Parents and Families Faculty and Staff Alumni Industry and Partners Search Search query × search Search this site Search all vt.",
+          "retrievedAt": "2026-09-07T03:40:34.208Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0053-2",
+          "url": "https://website.cs.vt.edu/people/faculty/tu-vu.html",
+          "excerpt": "o Siwei Cao Yang Cao Yan Chen Jin-Hee Cho Tijay Chung Jiaming Cui Sanmay Das Brendan David-John Dan Dunlap Bob Edmison Stephen Edwards Hoda Eldardiry Margaret Ellis Onyeka Emebo Mohammed Farghally Wu-chun Feng Steven Flammia Peng Gao Vaibhav Garg Denis Gracanin Muhammad Ali Gulzar Sally Hamouda Shaddi Hasan Matthew Hicks Heath Hillman Thang Hoang Sara Hooshangi Reza Jafari Bo Ji Xun (Steve) Jian Christine Julien Murat Kantarcioglu Anuj Karpatne Sumeet Khatri Greg Kulczycki Sang Won Lee Jiaqi Leng Huaicheng Li Wenjing Lou Chang-Tien Lu Kurt Luther Atul Mantri Brian Mayer Scott McCrickard Ryan P.",
+          "retrievedAt": "2026-09-07T03:40:34.208Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0053-3",
+          "url": "https://website.cs.vt.edu/people/faculty/tu-vu.html",
+          "excerpt": "Noh Chris North Erika Olimpiew Alexey Onufriev Eric Pauley Naren Ramakrishnan Chandan Reddy Eugenia Rho Kirsten E.",
+          "retrievedAt": "2026-09-07T03:40:34.208Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0053-4",
+          "url": "https://website.cs.vt.edu/people/faculty/tu-vu.html",
+          "excerpt": "Richards Timothy Richards Adrian Sandu Palash Sashittal Allyson Senger Mohammed Seyam Cliff Shaffer Jamie Sikora David H Smith IV Patrick Sullivan Kirshanthan Sundararajah Chris Thomas Eli Tilevich Bimal Viswanath Current page: Tu Vu Xuan Wang Dan Williams Ihudiya Finda Williams Pinar Yanardag Liqing Zhang Dawei Zhou Advisory board Tu Vu Assistant Professor Facebook X Copy page address to clipboard Location: Data and Decision Sciences, RM 374 727 Prices Fork Rd.",
+          "retrievedAt": "2026-09-07T03:40:34.208Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0053-5",
+          "url": "https://website.cs.vt.edu/people/faculty/tu-vu.html",
+          "excerpt": "edu (540) 231-9804 Research interests natural language processing large language models transfer learning Google Scholar | Homepage Education 2023: Ph.",
+          "retrievedAt": "2026-09-07T03:40:34.208Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0053-6",
+          "url": "https://website.cs.vt.edu/people/faculty/tu-vu.html",
+          "excerpt": ", honors program in computer science, Vietnam National University, Hanoi Follow Computer Science Facebook X Instagram Linked In YouTube Blacksburg campus Torgersen Hall RM 3160 620 Drillfield Dr.",
+          "retrievedAt": "2026-09-07T03:40:34.208Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0053-7",
+          "url": "https://website.cs.vt.edu/people/faculty/tu-vu.html",
+          "excerpt": "Blacksburg, VA 24061 (540) 231-6931 (undergraduate) (540) 231-0746 (graduate) Institute for Advanced Computing 3625 Potomac Ave.",
+          "retrievedAt": "2026-09-07T03:40:34.208Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0053-8",
+          "url": "https://website.cs.vt.edu/people/faculty/tu-vu.html",
+          "excerpt": "Arlington, VA 22203 (571) 858-3000 Intranet (Internal) Get Directions See All Locations Contact Virginia Tech University Status Principles of Community Privacy Statement Acceptable Use We Remember University Libraries Accessibility Consumer Information Cost & Aid SAFE at VT Policies Equal Opportunity WVTF University Bookstore Jobs at Virginia Tech &copy; 2026 Virginia Polytechnic Institute and State University.",
+          "retrievedAt": "2026-09-07T03:40:34.208Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0053-9",
+          "url": "https://tuvllms.github.io/",
+          "excerpt": "Tu Vu Toggle navigation home (current) publications courses CS 5624 (Fall 2026) CS 6804 (Spring 2026) CS 4804 (Fall 2025) CS 5624 (Spring 2025) CV Tu Vu I am an Assistant Professor at Virginia Tech (VT) and a Faculty Researcher at Google .",
+          "retrievedAt": "2026-09-07T03:40:34.512Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0053-10",
+          "url": "https://tuvllms.github.io/",
+          "excerpt": "At VT, I am also affiliated with the Sanghani Center for Artificial Intelligence & Data Analytics .",
+          "retrievedAt": "2026-09-07T03:40:34.512Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0053-11",
+          "url": "https://tuvllms.github.io/",
+          "excerpt": "My research aims to develop effective and efficient methods for advancing and democratizing artificial intelligence in the era of large language models (LLMs).",
+          "retrievedAt": "2026-09-07T03:40:34.512Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0053-12",
+          "url": "https://tuvllms.github.io/",
+          "excerpt": "Current areas of focus include: Automated discovery and self-improvement: Exploring diverse solutions while iteratively improving reasoning strategies, agent architectures, and execution harnesses (e.",
+          "retrievedAt": "2026-09-07T03:40:34.512Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0053-13",
+          "url": "https://tuvllms.github.io/",
+          "excerpt": "Agentic context management: Managing context efficiently for long-horizon reasoning.",
+          "retrievedAt": "2026-09-07T03:40:34.512Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0053-14",
+          "url": "https://tuvllms.github.io/",
+          "excerpt": "Efficient transfer and adaptation: Reusing learned capabilities across tasks, models, or languages to adapt efficiently.",
+          "retrievedAt": "2026-09-07T03:40:34.512Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0053-15",
+          "url": "https://tuvllms.github.io/",
+          "excerpt": "Continual learning and model updating: Keeping models up to date through learning and search.",
+          "retrievedAt": "2026-09-07T03:40:34.512Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0053-16",
+          "url": "https://tuvllms.github.io/",
+          "excerpt": "For prospective PhD students If you are interested in joining my group, please apply to the VT Graduate School and list me as a potential advisor.",
+          "retrievedAt": "2026-09-07T03:40:34.512Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T23:50:00.000Z",
+      "nextAction": "Batch 3 verification complete."
     },
     "vp-0054": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://cse.ucsd.edu/people/faculty-profiles/thuy-duong-june-vuong",
         "https://thuyduongvuong.github.io/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0054-1",
+          "url": "https://cse.ucsd.edu/people/faculty-profiles/thuy-duong-june-vuong",
+          "excerpt": "t Awards Degree Programs Graduating PhDs Admissions Courses Advising Financial Opportunities DeepMind Fellowships Undergraduate Prospective Students Courses and Enrollment Information Degree Programs Academic Advising Faculty Mentorship Tutors CSE Honors Program Student Success and Opportunities Internship and Career Resources Student Awards Diversity Events Book Club Student Organizations Community Student Organization CSE Alumni Board CSE Alumni Resources CSE Founded Companies Industry Giving Search Search People Faculty Profiles In Memoriam Staff Directory Thuy-Duong June Vuong thvuong@ucsd.",
+          "retrievedAt": "2026-09-07T03:40:35.154Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0054-2",
+          "url": "https://cse.ucsd.edu/people/faculty-profiles/thuy-duong-june-vuong",
+          "excerpt": "edu CSE 4204 Website Back Information Prospective Students Career Connections Alumni Health & Safety Emergency Action Plan Quicklinks Faculty Recruitment CSE Diversity, Equity & Inclusion Publications Stay Connected Dept of Computer Science and Engineering University of California, San Diego 9500 Gilman Drive La Jolla, CA 92093-0404 U.",
+          "retrievedAt": "2026-09-07T03:40:35.154Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0054-3",
+          "url": "https://thuyduongvuong.github.io/",
+          "excerpt": "Thuy-Duong \"June\" Vuong Thuy-Duong \"June\" Vuong Email: thvuong at ucsd dot edu Links: CV , Google Scholar I am an Assistant Professor in the Department of Computer Science and Engineering (CSE) at the University of California, San Diego.",
+          "retrievedAt": "2026-09-07T03:40:35.399Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0054-4",
+          "url": "https://thuyduongvuong.github.io/",
+          "excerpt": "Previously, I was a postdoctoral fellow (2024-2025) at the Miller Institute, Berkeley, hosted by Alistair Sinclair .",
+          "retrievedAt": "2026-09-07T03:40:35.399Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0054-5",
+          "url": "https://thuyduongvuong.github.io/",
+          "excerpt": "I received my PhD at Stanford University (2019-2024), where I was co-advised by Nima Anari and Moses Charikar , and before that, I received my Bachelor's degrees in Mathematics and Computer Science at the Massachusetts Institute of Technology (MIT).",
+          "retrievedAt": "2026-09-07T03:40:35.399Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0054-6",
+          "url": "https://thuyduongvuong.github.io/",
+          "excerpt": "My current research interest is in algorithms for sampling from complex high-dimensional distributions.",
+          "retrievedAt": "2026-09-07T03:40:35.399Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0054-7",
+          "url": "https://thuyduongvuong.github.io/",
+          "excerpt": "Publications and Preprints: In all publications except for those marked by an asterisk (*), authors are listed in alphabetical order, following the convention in mathematics and theoretical computer science.",
+          "retrievedAt": "2026-09-07T03:40:35.399Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0054-8",
+          "url": "https://thuyduongvuong.github.io/",
+          "excerpt": "Parallel sampling via autospeculation , joint with Nima Anari , Carlo Baronio, CJ Chen, Alireza Haqi , Frederic Koehler , and Anqi Li .",
+          "retrievedAt": "2026-09-07T03:40:35.399Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0054-9",
+          "url": "https://thuyduongvuong.github.io/",
+          "excerpt": "Slides at Caltech Combinatorics Seminar (60 minutes) Composable Coresets for Constrained Determinant Maximization and Beyond , with Sepideh Mahabadi .",
+          "retrievedAt": "2026-09-07T03:40:35.399Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0054-10",
+          "url": "https://thuyduongvuong.github.io/",
+          "excerpt": "International Conference on Artificial Intelligence and Statistics (AISTATS 2026) (Spotlight).",
+          "retrievedAt": "2026-09-07T03:40:35.399Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T23:50:00.000Z",
+      "nextAction": "Batch 3 verification complete."
     },
     "vp-0055": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://math.rutgers.edu/people/department-directory/detail/344-department-directory/1865-tiep-pham-huu",
         "https://sites.math.rutgers.edu/~pht19/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0055-1",
+          "url": "https://math.rutgers.edu/people/department-directory/detail/344-department-directory/1865-tiep-pham-huu",
+          "excerpt": "en in Mathematical Sciences Department Committees and Service Activities Department of Mathematics Directory Pham Huu Tiep Joshua Barlaz Professor Distinguished Professor of Mathematics TTF Faculty, Research Algebra and Algebraic Geometry, Lie Theory and Representation Theory Specialty Area: group theory, representation theory Click for Website Email: Location: HLL-720 Campus: busch Office hours - 1: HLL 720 Th 3:30pm 4:15pm Campus (2): busch Office hours - 2: HLL 720 Th 3:30pm 4:15pm Research Interests: Group Theory, Representation Theory Submit Website Corrections SAS Events SAS News rutgers.",
+          "retrievedAt": "2026-09-07T03:40:36.079Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0055-2",
+          "url": "https://math.rutgers.edu/people/department-directory/detail/344-department-directory/1865-tiep-pham-huu",
+          "excerpt": "tgers Academic Calendar Rutgers Schedule of Classes One Stop Student Service Center getINVOLVED Plan a Visit Explore SAS Majors and Minors Departments and Programs SAS Research Centers SAS Offices Support SAS Notices University Operating Status Privacy Quick Links Schedule of Classes Libraries Webreg SAS Core Curriculum Webmail RU Connect | Webmail ScarletMail University Search | IT Help Canvas Teaching Schedules Employment Contact Us Department of Mathematics Department of Mathematics Rutgers University Hill Center - Busch Campus 110 Frelinghuysen Road Piscataway, NJ 08854-8019, USA Phone: +1.",
+          "retrievedAt": "2026-09-07T03:40:36.079Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0055-3",
+          "url": "https://math.rutgers.edu/people/department-directory/detail/344-department-directory/1865-tiep-pham-huu",
+          "excerpt": "5530 Math Home Sitemap Search Login Rutgers is an equal access/equal opportunity institution.",
+          "retrievedAt": "2026-09-07T03:40:36.079Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0055-4",
+          "url": "https://math.rutgers.edu/people/department-directory/detail/344-department-directory/1865-tiep-pham-huu",
+          "excerpt": "Individuals with disabilities are encouraged to direct suggestions, comments, or complaints concerning any accessibility issues with Rutgers websites to or complete the Report Accessibility Barrier / Provide Feedback form.",
+          "retrievedAt": "2026-09-07T03:40:36.079Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0055-5",
+          "url": "https://sites.math.rutgers.edu/~pht19/",
+          "excerpt": "Pham Huu Tiep Pham Huu Tiep NAME: Pham Huu Tiep Joshua Barlaz Professor Distinguished Professor of Mathematics ADDRESS: Department of Mathematics Rutgers University Hill Center - Busch Campus 110 Frelinghuysen Road Piscataway, NJ 08854-8019 PHONE: (848) 445-6915 FAX: (732) 445-5530 E-MAIL: tiep@math.",
+          "retrievedAt": "2026-09-07T03:40:36.446Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0055-6",
+          "url": "https://sites.math.rutgers.edu/~pht19/",
+          "excerpt": "edu Research Interests Group theory Representation theory Curriculum Vitae Research Papers Recent Papers Selected Publications Awards, Invited Lectures, and Conferences International Congress of Mathematicians, ICM 2018 2019 Canadian Mathematical Society Summer Meeting Clay Senior Scholars Fellows of the AMS Simons Fellows Simons Visiting Professors 2021 Kalman Prize Invited Lectures and Colloquia Organized Conferences Representations of Finite Groups , Oberwolfach, March.",
+          "retrievedAt": "2026-09-07T03:40:36.446Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0055-7",
+          "url": "https://sites.math.rutgers.edu/~pht19/",
+          "excerpt": "7 - 9, 2023 Group Theory and Number Theory: Interactions , Princeton University, Oct.",
+          "retrievedAt": "2026-09-07T03:40:36.446Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0055-8",
+          "url": "https://sites.math.rutgers.edu/~pht19/",
+          "excerpt": "16 - 20, 2023 Representation Theory and Applications , PRIMA 2022, Vancouver, Canada, Dec.",
+          "retrievedAt": "2026-09-07T03:40:36.446Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0055-9",
+          "url": "https://sites.math.rutgers.edu/~pht19/",
+          "excerpt": "5 - 9, 2022 VIASM-ICTP Summer School in Group Theory and Representation Theory , VIASM, Hanoi, Vietnam, Aug.",
+          "retrievedAt": "2026-09-07T03:40:36.446Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0055-10",
+          "url": "https://sites.math.rutgers.edu/~pht19/",
+          "excerpt": "9 - 21, 2022 Groups, Representations, and Applications: New Perspectives , Isaac Newton Institute for Mathematical Sciences, Cambridge, UK, Jan.",
+          "retrievedAt": "2026-09-07T03:40:36.446Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0055-11",
+          "url": "https://sites.math.rutgers.edu/~pht19/",
+          "excerpt": "6 - March 18, 2020; May 3 - July 29, 2022 Algebra 2022 and Beyond: A conference in honor of the mathematical contributions of Michael Larsen , Indiana University, Bloomington, IN, June 3 - 5, 2022 Group Representation Theory and Applications , Mathematical Sciences Research Institute, Berkeley, CA, Jan.",
+          "retrievedAt": "2026-09-07T03:40:36.446Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0055-12",
+          "url": "https://sites.math.rutgers.edu/~pht19/",
+          "excerpt": "16 - May 25, 2018 New Perspectives in Representation Theory of Finite Groups , Banff International Research Station, Banff, Canada, Oct.",
+          "retrievedAt": "2026-09-07T03:40:36.446Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T23:50:00.000Z",
+      "nextAction": "Batch 3 verification complete."
     },
     "vp-0056": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://math.gatech.edu/people/thang-le",
         "https://letu.math.gatech.edu/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0056-1",
+          "url": "https://math.gatech.edu/people/thang-le",
+          "excerpt": "Advising Research Faculty Research Interests Research Activities External Awards Postdoctoral Programs News & Events News Archive Past Events Seminars and Colloquia Seminar Series People Faculty Adjunct Visitors Graduate Students Postdocs Emeriti and Retired Administration Staff Staff by Responsibilities Instructors of Record Outreach Alumni Giving High School Activities ProofReader The Distance Math Program Give Georgia Tech Home Campus Map Directory Offices Facebook Twitter YouTube Flickr Search Search form Enter your keywords You are here: GT Home Home tl117 Thang Le Professor https://letu.",
+          "retrievedAt": "2026-09-07T03:40:36.940Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0056-2",
+          "url": "https://letu.math.gatech.edu/",
+          "excerpt": "�� \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000v\u0000\\\u0000:\u0000*\u0000 \u0000{\u0000b\u0000e\u0000h\u0000a\u0000v\u0000i\u0000o\u0000r\u0000:\u0000u\u0000r\u0000l\u0000(\u0000#\u0000d\u0000e\u0000f\u0000a\u0000u\u0000l\u0000t\u0000#\u0000V\u0000M\u0000L\u0000)\u0000;\u0000}\u0000 \u0000 \u0000o\u0000\\\u0000:\u0000*\u0000 \u0000{\u0000b\u0000e\u0000h\u0000a\u0000v\u0000i\u0000o\u0000r\u0000:\u0000u\u0000r\u0000l\u0000(\u0000#\u0000d\u0000e\u0000f\u0000a\u0000u\u0000l\u0000t\u0000#\u0000V\u0000M\u0000L\u0000)\u0000;\u0000}\u0000 \u0000 \u0000w\u0000\\\u0000:\u0000*\u0000 \u0000{\u0000b\u0000e\u0000h\u0000a\u0000v\u0000i\u0000o\u0000r\u0000:\u0000u\u0000r\u0000l\u0000(\u0000#\u0000d\u0000e\u0000f\u0000a\u0000u\u0000l\u0000t\u0000#\u0000V\u0000M\u0000L\u0000)\u0000;\u0000}\u0000 \u0000 \u0000.",
+          "retrievedAt": "2026-09-07T03:40:37.412Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0056-3",
+          "url": "https://letu.math.gatech.edu/",
+          "excerpt": "\u0000s\u0000h\u0000a\u0000p\u0000e\u0000 \u0000{\u0000b\u0000e\u0000h\u0000a\u0000v\u0000i\u0000o\u0000r\u0000:\u0000u\u0000r\u0000l\u0000(\u0000#\u0000d\u0000e\u0000f\u0000a\u0000u\u0000l\u0000t\u0000#\u0000V\u0000M\u0000L\u0000)\u0000;\u0000}\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000T\u0000h\u0000a\u0000n\u0000g\u0000 \u0000L\u0000e\u0000'\u0000s\u0000 \u0000h\u0000o\u0000m\u0000e\u0000 \u0000p\u0000a\u0000g\u0000e\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000T\u0000h\u0000a\u0000n\u0000g\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000N\u0000o\u0000r\u0000m\u0000a\u0000l\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000L\u0000e\u0000,\u0000 \u0000T\u0000h\u0000a\u0000n\u0000g\u0000 \u0000T\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u00005\u00003\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u00001\u00002\u00005\u00004\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u00002\u00000\u00000\u00009\u0000-\u00000\u00009\u0000-\u00002\u00001\u0000T\u00001\u00004\u0000:\u00000\u00006\u0000:\u00000\u00000\u0000Z\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u00002\u00000\u00002\u00005\u0000-\u00000\u00004\u0000-\u00002\u00007\u0000T\u00002\u00001\u0000:\u00003\u00002\u0000:\u00000\u00000\u0000Z\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u00008\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u00003\u00003\u00006\u00002\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u00001\u00009\u00001\u00006\u00006\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000G\u0000e\u0000o\u0000r\u0000g\u0000i\u0000a\u0000 \u0000I\u0000n\u0000s\u0000t\u0000i\u0000t\u0000u\u0000t\u0000e\u0000 \u0000o\u0000f\u0000 \u0000T\u0000e\u0000c\u0000h\u0000n\u0000o\u0000l\u0000o\u0000g\u0000y\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u00001\u00005\u00009\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u00004\u00004\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u00002\u00002\u00004\u00008\u00004\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u00001\u00006\u0000.",
+          "retrievedAt": "2026-09-07T03:40:37.412Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0056-4",
+          "url": "https://letu.math.gatech.edu/",
+          "excerpt": "\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000/\u0000*\u0000 \u0000S\u0000t\u0000y\u0000l\u0000e\u0000 \u0000D\u0000e\u0000f\u0000i\u0000n\u0000i\u0000t\u0000i\u0000o\u0000n\u0000s\u0000 \u0000*\u0000/\u0000 \u0000 \u0000 \u0000t\u0000a\u0000b\u0000l\u0000e\u0000.",
+          "retrievedAt": "2026-09-07T03:40:37.412Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0056-5",
+          "url": "https://letu.math.gatech.edu/",
+          "excerpt": "\u0000M\u0000s\u0000o\u0000N\u0000o\u0000r\u0000m\u0000a\u0000l\u0000T\u0000a\u0000b\u0000l\u0000e\u0000 \u0000 \u0000 \u0000{\u0000m\u0000s\u0000o\u0000-\u0000s\u0000t\u0000y\u0000l\u0000e\u0000-\u0000n\u0000a\u0000m\u0000e\u0000:\u0000\"\u0000T\u0000a\u0000b\u0000l\u0000e\u0000 \u0000N\u0000o\u0000r\u0000m\u0000a\u0000l\u0000\"\u0000;\u0000 \u0000 \u0000 \u0000m\u0000s\u0000o\u0000-\u0000t\u0000s\u0000t\u0000y\u0000l\u0000e\u0000-\u0000r\u0000o\u0000w\u0000b\u0000a\u0000n\u0000d\u0000-\u0000s\u0000i\u0000z\u0000e\u0000:\u00000\u0000;\u0000 \u0000 \u0000 \u0000m\u0000s\u0000o\u0000-\u0000t\u0000s\u0000t\u0000y\u0000l\u0000e\u0000-\u0000c\u0000o\u0000l\u0000b\u0000a\u0000n\u0000d\u0000-\u0000s\u0000i\u0000z\u0000e\u0000:\u00000\u0000;\u0000 \u0000 \u0000 \u0000m\u0000s\u0000o\u0000-\u0000s\u0000t\u0000y\u0000l\u0000e\u0000-\u0000n\u0000o\u0000s\u0000h\u0000o\u0000w\u0000:\u0000y\u0000e\u0000s\u0000;\u0000 \u0000 \u0000 \u0000m\u0000s\u0000o\u0000-\u0000s\u0000t\u0000y\u0000l\u0000e\u0000-\u0000p\u0000r\u0000i\u0000o\u0000r\u0000i\u0000t\u0000y\u0000:\u00009\u00009\u0000;\u0000 \u0000 \u0000 \u0000m\u0000s\u0000o\u0000-\u0000s\u0000t\u0000y\u0000l\u0000e\u0000-\u0000p\u0000a\u0000r\u0000e\u0000n\u0000t\u0000:\u0000\"\u0000\"\u0000;\u0000 \u0000 \u0000 \u0000m\u0000s\u0000o\u0000-\u0000p\u0000a\u0000d\u0000d\u0000i\u0000n\u0000g\u0000-\u0000a\u0000l\u0000t\u0000:\u00000\u0000i\u0000n\u0000 \u00005\u0000.",
+          "retrievedAt": "2026-09-07T03:40:37.412Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0056-6",
+          "url": "https://letu.math.gatech.edu/",
+          "excerpt": "\u00004\u0000p\u0000t\u0000;\u0000 \u0000 \u0000 \u0000m\u0000s\u0000o\u0000-\u0000p\u0000a\u0000r\u0000a\u0000-\u0000m\u0000a\u0000r\u0000g\u0000i\u0000n\u0000:\u00000\u0000i\u0000n\u0000;\u0000 \u0000 \u0000 \u0000m\u0000s\u0000o\u0000-\u0000p\u0000a\u0000g\u0000i\u0000n\u0000a\u0000t\u0000i\u0000o\u0000n\u0000:\u0000w\u0000i\u0000d\u0000o\u0000w\u0000-\u0000o\u0000r\u0000p\u0000h\u0000a\u0000n\u0000;\u0000 \u0000 \u0000 \u0000f\u0000o\u0000n\u0000t\u0000-\u0000s\u0000i\u0000z\u0000e\u0000:\u00001\u00000\u0000.",
+          "retrievedAt": "2026-09-07T03:40:37.412Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0056-7",
+          "url": "https://letu.math.gatech.edu/",
+          "excerpt": "\u00000\u0000p\u0000t\u0000;\u0000 \u0000 \u0000 \u0000f\u0000o\u0000n\u0000t\u0000-\u0000f\u0000a\u0000m\u0000i\u0000l\u0000y\u0000:\u0000\"\u0000T\u0000i\u0000m\u0000e\u0000s\u0000 \u0000N\u0000e\u0000w\u0000 \u0000R\u0000o\u0000m\u0000a\u0000n\u0000\"\u0000,\u0000s\u0000e\u0000r\u0000i\u0000f\u0000;\u0000}\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000T\u0000h\u0000a\u0000n\u0000g\u0000 \u0000T\u0000.",
+          "retrievedAt": "2026-09-07T03:40:37.412Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0056-8",
+          "url": "https://letu.math.gatech.edu/",
+          "excerpt": "\u0000 \u0000L\u0000e\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000(\u0000L\u0000�\u0000 \u0000 \u0000T\u0000�\u001e \u0000 \u0000Q\u0000u\u0000�\u001ec\u0000 \u0000T\u0000h\u0000�\u001en\u0000g\u0000)\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000&\u0000n\u0000b\u0000s\u0000p\u0000;\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000P\u0000r\u0000o\u0000f\u0000e\u0000s\u0000s\u0000o\u0000r\u0000 \u0000 \u0000 \u0000 \u0000 \u0000S\u0000c\u0000h\u0000o\u0000o\u0000l\u0000 \u0000o\u0000f\u0000 \u0000M\u0000a\u0000t\u0000h\u0000e\u0000m\u0000a\u0000t\u0000i\u0000c\u0000s\u0000 \u0000 \u0000 \u0000 \u0000 \u0000G\u0000e\u0000o\u0000r\u0000g\u0000i\u0000a\u0000 \u0000I\u0000n\u0000s\u0000t\u0000i\u0000t\u0000u\u0000t\u0000e\u0000 \u0000o\u0000f\u0000 \u0000T\u0000e\u0000c\u0000h\u0000n\u0000o\u0000l\u0000o\u0000g\u0000y\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000A\u0000t\u0000l\u0000a\u0000n\u0000t\u0000a\u0000 \u0000,\u0000 \u0000 \u0000G\u0000A\u0000 \u0000 \u0000 \u00003\u00000\u00003\u00003\u00002\u0000-\u00000\u00001\u00006\u00000\u0000 \u0000,\u0000 \u0000 \u0000U\u0000S\u0000A\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000F\u0000A\u0000X\u0000:\u0000&\u0000n\u0000b\u0000s\u0000p\u0000;\u0000 \u0000(\u00004\u00000\u00004\u0000)\u00008\u00009\u00004\u0000-\u00004\u00004\u00000\u00009\u0000 \u0000 \u0000 \u0000E\u0000m\u0000a\u0000i\u0000l\u0000:\u0000&\u0000n\u0000b\u0000s\u0000p\u0000;\u0000 \u0000 \u0000l\u0000e\u0000t\u0000u\u0000@\u0000m\u0000a\u0000t\u0000h\u0000.",
+          "retrievedAt": "2026-09-07T03:40:37.412Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0056-9",
+          "url": "https://letu.math.gatech.edu/",
+          "excerpt": "\u0000e\u0000d\u0000u\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000&\u0000n\u0000b\u0000s\u0000p\u0000;\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000R\u0000e\u0000s\u0000e\u0000a\u0000r\u0000c\u0000h\u0000 \u0000I\u0000n\u0000t\u0000e\u0000r\u0000e\u0000s\u0000t\u0000s\u0000:\u0000 \u0000 \u0000 \u0000D\u0000i\u0000f\u0000f\u0000e\u0000r\u0000e\u0000n\u0000t\u0000i\u0000a\u0000l\u0000 \u0000t\u0000o\u0000p\u0000o\u0000l\u0000o\u0000g\u0000y\u0000,\u0000 \u00003\u0000-\u0000m\u0000a\u0000n\u0000i\u0000f\u0000o\u0000l\u0000d\u0000s\u0000,\u0000 \u0000k\u0000n\u0000o\u0000t\u0000 \u0000 \u0000t\u0000h\u0000e\u0000o\u0000r\u0000y\u0000,\u0000 \u0000q\u0000u\u0000a\u0000s\u0000i\u0000c\u0000r\u0000y\u0000s\u0000t\u0000a\u0000l\u0000s\u0000 \u0000.",
+          "retrievedAt": "2026-09-07T03:40:37.412Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T23:50:00.000Z",
+      "nextAction": "Batch 3 verification complete."
     },
     "vp-0057": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.math.columbia.edu/people/faculty-by-rank/name/duong-phong/",
         "https://www.math.columbia.edu/~phong/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0057-1",
+          "url": "https://www.math.columbia.edu/people/faculty-by-rank/name/duong-phong/",
+          "excerpt": "dar Weekly Seminars Department Colloquium Upcoming Conferences and Special Lectures Archived Seminars, Lectures, and Conferences Seminars at Nearby Institutions Academic Calendar Alumni Information for Alumni Events for Alumni PhD Placement Data Recent Doctoral Theses Contact Giving People Department Directory Alphabetical Faculty Listing Faculty By Rank Alphabetical Student Listing Students by Year Staff Directory Who Does What Office Hours Visitors Home &raquo; People &raquo; Duong Hong Phong &raquo; Faculty By Rank Duong Hong Phong &raquo; Faculty By Rank Senior Faculty Go back to directory.",
+          "retrievedAt": "2026-09-07T03:40:38.018Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0057-2",
+          "url": "https://www.math.columbia.edu/people/faculty-by-rank/name/duong-phong/",
+          "excerpt": "Duong Hong Phong Davies Professor of Mathematics Columbia University Mathematics Department Address Rm 604 Math, MC 4413 2990 Broadway New York NY 10027 home Office Phone : 212-854-8799 home Fax : 212-854-8962 work fax Email : phong@math.",
+          "retrievedAt": "2026-09-07T03:40:38.018Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0057-3",
+          "url": "https://www.math.columbia.edu/~phong/",
+          "excerpt": "Phong Professor of Mathematics, Columbia University Contact information Recent Papers Recent papers at the arXiv arxiv ) Degeneration of Kahler-Ricci solitons on Fano manifolds (with J.",
+          "retrievedAt": "2026-09-07T03:40:38.062Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0057-4",
+          "url": "https://www.math.columbia.edu/~phong/",
+          "excerpt": "17, 327-411 (2012) ( arxiv ) Hardy Spaces and boundary conditions from the Ising model (with C.",
+          "retrievedAt": "2026-09-07T03:40:38.062Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0057-5",
+          "url": "https://www.math.columbia.edu/~phong/",
+          "excerpt": "Zeitschrift, (July 2012) ( arxiv ) On the singularities of the pluricomplex Green's function (with J.",
+          "retrievedAt": "2026-09-07T03:40:38.062Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0057-6",
+          "url": "https://www.math.columbia.edu/~phong/",
+          "excerpt": "590-606i Lecture Notes Complex Analysis and Riemann Surfaces I (notes taken by You Qi) Editorial Activities Editor-in-chief, Mathematics Research Letters Editorial boards: Annals of PDE , Asian Journal of Mathematics , Complex Analysis and its Synergies , New York Journal of Mathematics Teaching Complex Analysis and Riemann surfaces I and II Conferences May 2011: Analysis and Applications May 2013: Analysis, Complex Geometry and Mathematical Physics Seminars Informal Complex Geometry and PDEs seminar Geometry and Analysis The Mathematical Genealogy Project Mathematical Genealogy of D.",
+          "retrievedAt": "2026-09-07T03:40:38.062Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T23:50:00.000Z",
+      "nextAction": "Batch 3 verification complete."
     },
     "vp-0058": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://math.wisc.edu/staff/tran-hung/",
         "https://people.math.wisc.edu/~htran24/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0058-1",
+          "url": "https://math.wisc.edu/staff/tran-hung/",
+          "excerpt": "Research Research Areas Research for Students Conducting Mathematical Research Research Training Groups Seminars Special Lectures Madison Experimental Mathematics Lab (MXM) Math Learning Center Resources LaTeX Find an old syllabus Private Tutors Outreach Directed Reading Program Math Club Mega Math Meet Talent Search Gloria&#8217;s Math Night Putnam Club GMMAW Alumni Resources Alumni Create your Math Alumni Record Update your Alumni Record Newsletters Summer Term GIVE NOW Alumni Directory Wiscmail My Wisc Edu Library Useful Links Home specializations pde Hung Tran Hung Tran Professor hung@math.",
+          "retrievedAt": "2026-09-07T03:40:39.249Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0058-2",
+          "url": "https://math.wisc.edu/staff/tran-hung/",
+          "excerpt": "edu/~hung/ Site footer content Part of the Universities of Wisconsin Contact Us Department of Mathematics 480 Lincoln Drive Van Vleck Hall, Room 213 Madison, WI 53706 Email us Phone: 608-263-3054 Website feedback, questions or accessibility issues: webmaster@math.",
+          "retrievedAt": "2026-09-07T03:40:39.249Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0058-3",
+          "url": "https://math.wisc.edu/staff/tran-hung/",
+          "excerpt": "0 | Privacy Notice | &copy; 2026 Board of Regents of the University of Wisconsin System .",
+          "retrievedAt": "2026-09-07T03:40:39.249Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0058-4",
+          "url": "https://people.math.wisc.edu/~htran24/",
+          "excerpt": "Hung Tran Hung Vinh Tran (In Vietnamese: Trần Vĩnh Hưng ) Professor Department of Mathematics University of Wisconsin Madison Van Vleck Hall, 480 Lincoln Drive Madison, WI 53706 Office: 715 Van Vleck Email: hung at math.",
+          "retrievedAt": "2026-09-07T03:40:39.776Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T23:50:00.000Z",
+      "nextAction": "Batch 3 verification complete."
     },
     "vp-0059": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://science.psu.edu/math/people/ttn12",
         "https://sites.psu.edu/nguyen/homepage/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0059-1",
+          "url": "https://science.psu.edu/math/people/ttn12",
+          "excerpt": "Nguyen | Eberly College of Science Skip to main content Utility Menu News Events Development and Alumni Relations Faculty and Staff Directory Utility Menu News Events Development and Alumni Relations Faculty and Staff Directory About Department Administration Contact Us Giving Hiring Miscellaneous Resources McAllister Building Graduate Admissions PHD Program Other degrees Courses Teaching in Math Mathematics at Penn State Ph.",
+          "retrievedAt": "2026-09-07T03:40:40.121Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0059-2",
+          "url": "https://science.psu.edu/math/people/ttn12",
+          "excerpt": "s Math Mathematics Advising Penn State Math Club Learning Assistants Graders and Proctors Research Opportunities People Faculty Graduate Faculty Graduate Students Postdoctoral Researcher Staff News Events Research Research Areas Research Centers and Groups Seminar Listing Physical and Mathematical Sciences Library MathWeb Internal Math Calendar Reserve a Room (McAllister) Room Reservation Request (Outside McAllister) My Teaching Travel Reimbursement Forms Copy Request Form for Teaching Purposes Undergrad Resources Hosting a Visitor Committees Department Policies Network Documentation Give Dept.",
+          "retrievedAt": "2026-09-07T03:40:40.121Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0059-3",
+          "url": "https://science.psu.edu/math/people/ttn12",
+          "excerpt": "of Department of Mathematics About Department Administration Contact Us Giving Hiring Miscellaneous Resources McAllister Building Graduate Admissions PHD Program Other degrees Courses Teaching in Math Mathematics at Penn State Ph.",
+          "retrievedAt": "2026-09-07T03:40:40.121Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0059-4",
+          "url": "https://science.psu.edu/math/people/ttn12",
+          "excerpt": "nors Math Mathematics Advising Penn State Math Club Learning Assistants Graders and Proctors Research Opportunities People Faculty Graduate Faculty Graduate Students Postdoctoral Researcher Staff News Events Research Research Areas Research Centers and Groups Seminar Listing Physical and Mathematical Sciences Library MathWeb Internal Math Calendar Reserve a Room (McAllister) Room Reservation Request (Outside McAllister) My Teaching Travel Reimbursement Forms Copy Request Form for Teaching Purposes Undergrad Resources Hosting a Visitor Committees Department Policies Network Documentation Toan T.",
+          "retrievedAt": "2026-09-07T03:40:40.121Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0059-5",
+          "url": "https://science.psu.edu/math/people/ttn12",
+          "excerpt": "Nguyen Professor Department Affiliations Department of Mathematics Interests Partial Differential Equations Mathematical Physics Address 238 McAllister Building Email ttn12@psu.",
+          "retrievedAt": "2026-09-07T03:40:40.121Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0059-6",
+          "url": "https://science.psu.edu/math/people/ttn12",
+          "excerpt": "ministrative Offices Communications Data Services Employment Opportunities Facilities College Resources 2 Finance Human Resources Information Technology Instruction and Curricula Research Administration Resources Offices and Centers Grove Center for Excellence in Science Education Office for Undergraduate Students Office of Development and Alumni Relations Office of Diversity and Inclusion Office of Science Engagement Office of Science Outreach Student Programs Academic Advising Co-op Education Abroad Internship Undergraduate Research PennState-Eberly College of Science Footer Menu College Org.",
+          "retrievedAt": "2026-09-07T03:40:40.121Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0059-7",
+          "url": "https://sites.psu.edu/nguyen/homepage/",
+          "excerpt": "Nguyen&#039;s blog Menu Home Activities Homepage Media Publications SiMP Teaching Home Homepage Homepage By Michelle Bixby, Penn State 2025 Toan T.",
+          "retrievedAt": "2026-09-07T03:40:40.755Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0059-8",
+          "url": "https://sites.psu.edu/nguyen/homepage/",
+          "excerpt": "Nguyen Professor Mathematics Department Penn State University McAllister Building State College, PA 16802 Office: 238 McAllister Telephone: (814) 863-4123 E-mail: nguyen@math.",
+          "retrievedAt": "2026-09-07T03:40:40.755Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0059-9",
+          "url": "https://sites.psu.edu/nguyen/homepage/",
+          "excerpt": "PDE Seminar Computational and Applied Math colloquium Math Colloquium SiMP Penn State Math Calendar Physics events Activities Media Phd Students: Chanjin You (2026), Trinh Nguyen (2020).",
+          "retrievedAt": "2026-09-07T03:40:40.755Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0059-10",
+          "url": "https://sites.psu.edu/nguyen/homepage/",
+          "excerpt": "Brooke Benjamin Prize in Nonlinear Waves, SIAM, 2022 ( SIAM news , AMS news ) Simons Fellowship in Mathematics, 2019.",
+          "retrievedAt": "2026-09-07T03:40:40.755Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0059-11",
+          "url": "https://sites.psu.edu/nguyen/homepage/",
+          "excerpt": "Centennial Fellowship, American Mathematical Society, 2018 ( AMS news ) Editorial Board: Kinetic & Related Models SIAM Journal on Mathematical Analysis Communications in Mathematical Analysis and Applications Acknowledgement: My research has been supported by Print Search for: Toan T.",
+          "retrievedAt": "2026-09-07T03:40:40.755Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0059-12",
+          "url": "https://sites.psu.edu/nguyen/homepage/",
+          "excerpt": "Dirac-Benney Vlasov-Maxwell Vlasov-Poisson Yu Deng Archives July 2026 October 2025 June 2025 May 2025 April 2025 January 2025 May 2024 February 2024 August 2022 July 2022 January 2022 June 2021 May 2021 June 2020 February 2020 September 2019 November 2018 September 2018 March 2018 February 2018 January 2018 December 2017 October 2017 September 2017 August 2017 June 2017 May 2017 March 2017 February 2017 January 2017 June 2016 May 2016 January 2016 November 2015 September 2015 August 2015 July 2015 April 2015 February 2015 January 2015 March 2008 Meta Log in Entries feed Comments feed WordPress.",
+          "retrievedAt": "2026-09-07T03:40:40.755Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T23:50:00.000Z",
+      "nextAction": "Batch 3 verification complete."
     },
     "vp-0060": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://math.sciences.ncsu.edu/people/tnguye13/",
         "https://tnguye13.math.ncsu.edu/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0060-1",
+          "url": "https://math.sciences.ncsu.edu/people/tnguye13/",
+          "excerpt": "ent 130th Anniversary History History of the Math Department Video Archive Giving Undergraduate Undergraduate Programs Undergraduate Resources New Math Majors Special Topics Courses Math Placement Internship & Career Info Course Catalog Math Honors Program Research Opportunities Study Abroad SUM Series Summer 2026 DRUMS Directed Research for Undergraduates in Math and Statistics Undergraduate Newsletters Department Contacts NC State Enrollment Contacts FAQ Graduate How to Apply Virtual Open House Graduate Student Guide Courses: Catalog and Schedules Graduate Resources Special Topics Courses Ph.",
+          "retrievedAt": "2026-09-07T03:40:41.672Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0060-2",
+          "url": "https://math.sciences.ncsu.edu/people/tnguye13/",
+          "excerpt": "istory History of the Math Department Video Archive Giving Undergraduate Undergraduate Undergraduate Programs Undergraduate Resources New Math Majors Special Topics Courses Math Placement Internship & Career Info Course Catalog Math Honors Program Research Opportunities Study Abroad SUM Series Summer 2026 DRUMS Directed Research for Undergraduates in Math and Statistics Undergraduate Newsletters Department Contacts NC State Enrollment Contacts FAQ Graduate Graduate How to Apply Virtual Open House Graduate Student Guide Courses: Catalog and Schedules Graduate Resources Special Topics Courses Ph.",
+          "retrievedAt": "2026-09-07T03:40:41.672Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0060-3",
+          "url": "https://math.sciences.ncsu.edu/people/tnguye13/",
+          "excerpt": "Programs Road to Graduation Concentrations PhD Qualifying Examination and Required Courses M.",
+          "retrievedAt": "2026-09-07T03:40:41.672Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0060-4",
+          "url": "https://math.sciences.ncsu.edu/people/tnguye13/",
+          "excerpt": "Emeritus Faculty Faculty Graduate Students Postdocs Staff Outreach Outreach Outreach Programs Clubs and Organizations Tutors for Hire Events Events Calendar Seminar Groups Colloquium Koh Lecture Series Give Now Filter By Emeritus Faculty Faculty Graduate Students Postdocs Staff Tien Khai Nguyen TN Professor SAS Hall 3144 919-513-2287 [email&#160;protected] Website View CV Education PhD Mathematics University of Padova 2011 Area(s) of Expertise - Nonlinear Partial Differential Equations - Optimal Control, Differential Games, and Mean Field Games - Nonsmooth Analysis and Geometric Measure Theory.",
+          "retrievedAt": "2026-09-07T03:40:41.672Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0060-5",
+          "url": "https://math.sciences.ncsu.edu/people/tnguye13/",
+          "excerpt": "Publications Generic Uniqueness and Conjugate Points for Optimal Control Problems , SIAM Journal on Control and Optimization (2026) Generic solutions to controlled balance laws , Journal of Hyperbolic Differential Equations (2026) Characterizing the influence of skin pigmentation on pulse oximetry , Biophotonics discovery.",
+          "retrievedAt": "2026-09-07T03:40:41.672Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0060-6",
+          "url": "https://math.sciences.ncsu.edu/people/tnguye13/",
+          "excerpt": "Research Groups: Ordinary Differential Equations, Partial Differential Equations and Analysis Honors and Awards NCSU Faculty Scholar Italian National Scientific Habilitations for Full Professorship Editor’s Choice Article, Mathematical Control and Related Fields (2024) John Franke Faculty Award for Teaching (2021) Department of Mathematics Home 2108 SAS Hall Box 8205 Raleigh, North Carolina 27695 Campus Map Contact Us Visit the Math Department Employment News Accessibility Events Give Faculty and Staff Resources Video Archive Connect With Us X Instagram YouTube &#169; 2026 NC State University.",
+          "retrievedAt": "2026-09-07T03:40:41.672Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0060-7",
+          "url": "https://math.sciences.ncsu.edu/people/tnguye13/",
+          "excerpt": "Accessibility Privacy Resources Close smart search Find NC State websites, locations and people Search this site TOP LINKS MyPack Portal Access vital records, resources and information for students, families, faculty and staff.",
+          "retrievedAt": "2026-09-07T03:40:41.672Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0060-8",
+          "url": "https://math.sciences.ncsu.edu/people/tnguye13/",
+          "excerpt": "University Libraries Our campus libraries are your destinations for studying, research and expanding your mind.",
+          "retrievedAt": "2026-09-07T03:40:41.672Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0060-9",
+          "url": "https://tnguye13.math.ncsu.edu/",
+          "excerpt": "Nguyen Professor Department of Mathematics, NC State University NCSU Faculty Scholar , since 2023 Office: 3144, SAS Hall Phone Number: (919) 513-2287 Email: khai@math.",
+          "retrievedAt": "2026-09-07T03:40:42.127Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0060-10",
+          "url": "https://tnguye13.math.ncsu.edu/",
+          "excerpt": "edu I am a professor in the Department of Mathematics at North Carolina State University, Raleigh.",
+          "retrievedAt": "2026-09-07T03:40:42.127Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0060-11",
+          "url": "https://tnguye13.math.ncsu.edu/",
+          "excerpt": "I received my PhD in Mathematics from the Department of Mathematics at the University of Padova in Italy.",
+          "retrievedAt": "2026-09-07T03:40:42.127Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0060-12",
+          "url": "https://tnguye13.math.ncsu.edu/",
+          "excerpt": "After that I was a Postdoctoral Fellow (ERC grant) from SISSA-ISAS in Trieste, Italy.",
+          "retrievedAt": "2026-09-07T03:40:42.127Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-06T23:50:00.000Z",
+      "nextAction": "Batch 3 verification complete."
     },
     "vp-0061": {
       "overview": "pending",
