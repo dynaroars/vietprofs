@@ -1986,7 +1986,9 @@
         "vp-0359",
         "vp-0360"
       ],
-      "status": "pending"
+      "status": "complete",
+      "startedAt": "2026-09-07T04:47:20.264Z",
+      "publishedAt": "2026-09-07T04:49:09.168Z"
     },
     {
       "number": 19,
@@ -26398,206 +26400,1217 @@
       "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0341": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.depts.ttu.edu/honors/about/facultystaff/bios/Linh_Huynh.php"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0341-1",
+          "url": "https://www.depts.ttu.edu/honors/about/facultystaff/bios/Linh_Huynh.php",
+          "excerpt": "Bios - Linh Huynh | Bios | Faculty & Staff | About | Honors College | Texas Tech For Android.",
+          "retrievedAt": "2026-09-07T04:47:21.039Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0341-2",
+          "url": "https://www.depts.ttu.edu/honors/about/facultystaff/bios/Linh_Huynh.php",
+          "excerpt": "--> Texas Tech University Directory Raiderlink A-Z Index Menu --> Honors College Menu Search Texas Tech Honors College About Faculty & Staff Bios Linh Huynh, Ph.",
+          "retrievedAt": "2026-09-07T04:47:21.039Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0341-3",
+          "url": "https://www.depts.ttu.edu/honors/about/facultystaff/bios/Linh_Huynh.php",
+          "excerpt": "D Assistant Professor of Applied Mathematics Contact Phone Number P Phone Number (740) 427-5997 --> E mail Address Linh.",
+          "retrievedAt": "2026-09-07T04:47:21.039Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0341-4",
+          "url": "https://www.depts.ttu.edu/honors/about/facultystaff/bios/Linh_Huynh.php",
+          "excerpt": "edu Location McClellan Hall 203 Details Scholarship Details Website Scholarship --> Affiliated Departments & Programs Honors College Professor Linh Huynh received a PhD in Applied Mathematics in August 2022 from Case Western Reserve University, where she was also affiliated with the Cleveland Clinic.",
+          "retrievedAt": "2026-09-07T04:47:21.039Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0341-5",
+          "url": "https://www.depts.ttu.edu/honors/about/facultystaff/bios/Linh_Huynh.php",
+          "excerpt": "Before joining Texas Tech University as a tenure-track Assistant Professor of Applied Mathematics in Fall 2026, she was a postdoc at Dartmouth College, where she appreciated its globally minded liberal arts education.",
+          "retrievedAt": "2026-09-07T04:47:21.039Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0341-6",
+          "url": "https://www.depts.ttu.edu/honors/about/facultystaff/bios/Linh_Huynh.php",
+          "excerpt": "She does research in Applied Probability & Stochastic Processes and its intersections with Mathematical Biology, Operations Research, and Uncertainty Quantification.",
+          "retrievedAt": "2026-09-07T04:47:21.039Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0341-7",
+          "url": "https://www.depts.ttu.edu/honors/about/facultystaff/bios/Linh_Huynh.php",
+          "excerpt": "Her research program focuses particularly on developing mathematical, statistical, and computational methods for applications in Eco-Evolutionary Medicine and Human-AI Interaction.",
+          "retrievedAt": "2026-09-07T04:47:21.039Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0341-8",
+          "url": "https://www.depts.ttu.edu/honors/about/facultystaff/bios/Linh_Huynh.php",
+          "excerpt": "She served as an Elected Co-Chair of the Mathematical Oncology Subgroup of the Society for Mathematical Biology from 2023 to 2025.",
+          "retrievedAt": "2026-09-07T04:47:21.039Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:49:09.168Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0342": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://scholars.duke.edu/person/hy.huynh/academic-experience"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0342-1",
+          "url": "https://scholars.duke.edu/person/hy.huynh/academic-experience",
+          "excerpt": "Hy Huynh | Scholars@Duke profile: Academic Experience Skip to main content Scholars@Duke Menu About Schools / Institutes Browse 0 && q !",
+          "retrievedAt": "2026-09-07T04:47:21.358Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0342-2",
+          "url": "https://scholars.duke.edu/person/hy.huynh/academic-experience",
+          "excerpt": "value = q } \"> construction release_alert Profile editing is temporarily unavailable from June 11-24, 2026 while manual profile data entry transitions to Elements.",
+          "retrievedAt": "2026-09-07T04:47:21.358Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0342-3",
+          "url": "https://scholars.duke.edu/person/hy.huynh/academic-experience",
+          "excerpt": "cancel --> Hy Huynh Assistant Professor of the Practice of Global Health Duke Global Health Institute 310 Trent Drive, Box 90519, Durham, NC 27710 https://orcid.",
+          "retrievedAt": "2026-09-07T04:47:21.358Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0342-4",
+          "url": "https://scholars.duke.edu/person/hy.huynh/academic-experience",
+          "excerpt": "org/0000-0002-7624-8091 310 Trent Drive, Box 90519, Durham, NC 27710 Academic Experience 0) ?",
+          "retrievedAt": "2026-09-07T04:47:21.358Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0342-5",
+          "url": "https://scholars.duke.edu/person/hy.huynh/academic-experience",
+          "excerpt": "and Centers Assistant Professor of the Practice in the Sanford School of Public Policy &#183; 2026 - Present Sanford School of Public Policy Previous Duke Appointments & Affiliations Instructor of Global Health &#183; 2024 - 2024 Duke Global Health Institute , University Institutes and Centers &copy;2026 Duke University | Terms of Use Project About Data Consumers Manage Scholars Data Contact Us Support FAQ Report a Bug Users' Guides Get Help Stay Connected Get news directly from the Scholars Team, and stay up-to-date on the most recent Tips of the Month, announcements, features, and beta tests.",
+          "retrievedAt": "2026-09-07T04:47:21.358Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:49:09.168Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0343": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://umc.edu/Faculty/Huynh_Thy_N/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0343-1",
+          "url": "https://umc.edu/Faculty/Huynh_Thy_N/",
+          "excerpt": "Dentistry School of Graduate Studies School of Health Related Professions School of Medicine School of Nursing School of Population Health UMMC Online Faculty Directory Health Care Health Care Home All UMMC Services Children's of Mississippi Find a Doctor Find a Location Pay a Bill UMMC Pricing Patient and Visitor Information Referring Physicians Research Research Home Centers and Institutes Offices Resources Participate in Clinical Trials About A-Z Site Index About Us Accreditations History Jobs at UMMC Leadership Mission and Vision Give MyChart Appointments View Full Faculty Directory Thy N.",
+          "retrievedAt": "2026-09-07T04:47:21.997Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0343-2",
+          "url": "https://umc.edu/Faculty/Huynh_Thy_N/",
+          "excerpt": "edu Work Phone: (601) 815-8000 General Info Scholarly Activity Recognition Service Teaching Profile Biography Dr.",
+          "retrievedAt": "2026-09-07T04:47:21.997Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0343-3",
+          "url": "https://umc.edu/Faculty/Huynh_Thy_N/",
+          "excerpt": "She graduated from the University of Alabama School of Medicine and completed her dermatology residency at the University of Mississippi Medical Center (UMMC), pediatric dermatology fellowship at Harvard Medical / Boston Children’s Hospital and a clinical research fellowship at Northwestern University.",
+          "retrievedAt": "2026-09-07T04:47:21.997Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0343-4",
+          "url": "https://umc.edu/Faculty/Huynh_Thy_N/",
+          "excerpt": "She is currently an assistant professor in both Dermatology and Pediatrics at UMMC.",
+          "retrievedAt": "2026-09-07T04:47:21.997Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0343-5",
+          "url": "https://umc.edu/Faculty/Huynh_Thy_N/",
+          "excerpt": "She serves as lead physician in Pediatric Dermatology and the Director of Clinical Trials in Dermatology.",
+          "retrievedAt": "2026-09-07T04:47:21.997Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0343-6",
+          "url": "https://umc.edu/Faculty/Huynh_Thy_N/",
+          "excerpt": "Her research interests include atopic dermatitis, teledermatology, acne, hidradenitis, Covid skin lesions, genetic skin disorders, and skin trends.",
+          "retrievedAt": "2026-09-07T04:47:21.997Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0343-7",
+          "url": "https://umc.edu/Faculty/Huynh_Thy_N/",
+          "excerpt": "munities, Pfizer’s Global Medical Grants Program 06/2022 - 11/2024 Extramural, Development, Implementation, and Evaluation of an Educational Intervention for Health Care Professionals to Improve Management of Moderate to Severe Atopic Dermatitis in Children, Pfizer’s Global Medical Grants Program 01/2022 - 02/2024 Extramural, NIH TL1 Training Grant for Clinical & Translational Science Research ($27,000 + UAB Genetics Seminar Training), NIH 07/2012 - 06/2013 Publications Case Reports Shea J, Huynh T, Milner J, Chamlin S, PLAID syndrome: Characteristic presentation and a novel therapeutic option.",
+          "retrievedAt": "2026-09-07T04:47:21.997Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0343-8",
+          "url": "https://umc.edu/Faculty/Huynh_Thy_N/",
+          "excerpt": "Pediatric dermatology, 2020 Jan;37(1):147-149 2020 Hodge BD, Huynh TN, Brodell RT, \"Folly\" à deux: Topical corticosteroid addiction in mother and son.",
+          "retrievedAt": "2026-09-07T04:47:21.997Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:49:09.168Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0344": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.uab.edu/medicine/pathology/faculty"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0344-1",
+          "url": "https://www.uab.edu/medicine/pathology/faculty",
+          "excerpt": "All Sites Search Search Faculty Divisions Research Education Clinical About Department of Pathology Close News Events Contact Resources Administration Communication Resources Information Services Policies Faculty Advisory Council On-Call Schedules Visit Inquiry Faculty Divisions Research Education Clinical About Pathology Home Faculty Pathology Home Faculty Faculty Faculty All Anatomic Pathology Community Practice Pathology Program Forensics Genomic Diagnostics & Bioinformatics Laboratory Medicine Molecular & Cellular Pathology Neuropathology Professor Emeritus Women's Health Abdalhai, Awab, M.",
+          "retrievedAt": "2026-09-07T04:47:24.998Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0344-2",
+          "url": "https://www.uab.edu/medicine/pathology/faculty",
+          "excerpt": "Bruce Alexander Endowed Professor Anatomic Pathology Division Director, Anatomic Pathology Gastrointestinal Section Head Ahn, Erin Eun-Young, Ph.",
+          "retrievedAt": "2026-09-07T04:47:24.998Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0344-3",
+          "url": "https://www.uab.edu/medicine/pathology/faculty",
+          "excerpt": "Professor Molecular & Cellular Pathology Vice Chair for Faculty Affairs Chair, UAB IACUC Read more Ballinger, Scott, Ph.",
+          "retrievedAt": "2026-09-07T04:47:24.998Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0344-4",
+          "url": "https://www.uab.edu/medicine/pathology/faculty",
+          "excerpt": "Professor Molecular & Cellular Pathology Cancer Associate Dean, Faculty Affairs Read more Bell, Camilla, M.",
+          "retrievedAt": "2026-09-07T04:47:24.998Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0344-5",
+          "url": "https://www.uab.edu/medicine/pathology/faculty",
+          "excerpt": "Professor Division Director, Community Practice Pathology Program Benson, Paul, M.",
+          "retrievedAt": "2026-09-07T04:47:24.998Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0344-6",
+          "url": "https://www.uab.edu/medicine/pathology/faculty",
+          "excerpt": "Endowed Professor of Cancer Pathobiology Associate Director for Population Science, O'Neal Comprehensive Cancer Center Molecular & Cellular Pathology Bui‑Bullock, Tina I.",
+          "retrievedAt": "2026-09-07T04:47:24.998Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0344-7",
+          "url": "https://www.uab.edu/medicine/pathology/faculty",
+          "excerpt": "Associate Professor Laboratory Medicine Clinical Chemistry Section Head Director, Core Lab, RNICU Cerqueira, Filipe, Ph.",
+          "retrievedAt": "2026-09-07T04:47:24.998Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0344-8",
+          "url": "https://www.uab.edu/medicine/pathology/faculty",
+          "excerpt": "Assistant Professor Genomic Diagnostics and Bioinformatics Informatics Section Head Chen, Shu, Ph.",
+          "retrievedAt": "2026-09-07T04:47:24.998Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:49:09.168Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0345": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.nccu.edu/employee/chuynh"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0345-1",
+          "url": "https://www.nccu.edu/employee/chuynh",
+          "excerpt": "s Research Administration Office of the Chancellor Institutional Advancement Open Search Search for: Search the Directory We Are NCCU Life at NCCU Support & Services Virtual Tour Academics Program Finder Admissions Undergraduate Admissions Scholarships and Student Aid Readmission Graduate Admissions Registrar Veterans Affairs Transfer Services Law School Admissions Research Administration Office of the Chancellor Institutional Advancement Information Alumni & Friends NCCU Foundation Quick Facts Athletics News Events Giving Directory myEOL Apply Now Give Now Visit Campus Breadcrumb Home Carol M.",
+          "retrievedAt": "2026-09-07T04:47:25.688Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0345-2",
+          "url": "https://www.nccu.edu/employee/chuynh",
+          "excerpt": "Huynh Apply Now Give Now Visit Campus Carol Huynh Assistant Professor and Director, Juvenile Justice Institute, Criminal Justice Email [email&#160;protected] Phone 919-530-7092 Office Albert N.",
+          "retrievedAt": "2026-09-07T04:47:25.688Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0345-3",
+          "url": "https://www.nccu.edu/employee/chuynh",
+          "excerpt": "Huynh is an assistant professor in the Department of Criminal Justice at North Carolina Central University.",
+          "retrievedAt": "2026-09-07T04:47:25.688Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0345-4",
+          "url": "https://www.nccu.edu/employee/chuynh",
+          "excerpt": "Her research interests include citizens’ perceptions of the police and police services, police and race, and women in policing.",
+          "retrievedAt": "2026-09-07T04:47:25.688Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0345-5",
+          "url": "https://www.nccu.edu/employee/chuynh",
+          "excerpt": "\" She has also published articles in the Social Science Journal, the Journal of Crime and Criminal Justice, and Deviant Behavior.",
+          "retrievedAt": "2026-09-07T04:47:25.688Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0345-6",
+          "url": "https://www.nccu.edu/employee/chuynh",
+          "excerpt": "in Psychology North Dakota State University 2015 Courses CRJU 3000 - Criminology CRJU 3050 - Policy Community Relations CRJU 4050 - Research Methods CRIM 5650 - Research Methods Publications Archbold, C.",
+          "retrievedAt": "2026-09-07T04:47:25.688Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0345-7",
+          "url": "https://www.nccu.edu/employee/chuynh",
+          "excerpt": "\" An examination of increased workload on police officer stress and job satisfactions in western North Dakota.",
+          "retrievedAt": "2026-09-07T04:47:25.688Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0345-8",
+          "url": "https://www.nccu.edu/employee/chuynh",
+          "excerpt": "**SPECIAL EDITION: “Resource-Based Boomtowns: Crime, Fear, and Rural Justice Systems.",
+          "retrievedAt": "2026-09-07T04:47:25.688Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:49:09.168Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0346": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.uab.edu/medicine/surgery/breast-endocrine/faculty/huynh-victoria-m-d"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0346-1",
+          "url": "https://www.uab.edu/medicine/surgery/breast-endocrine/faculty/huynh-victoria-m-d",
+          "excerpt": "Arts & Sciences Collat School of Business Dentistry Education Engineering Graduate School Health Professions Honors College Medicine Nursing Optometry Public Health Blaze a Brighter Future Blaze a Brighter Future Explore UAB Department of Surgery Heersink School of Medicine News Events Contact Directory Faculty Leadership Residents Search This Site All Sites Search Search Faculty Divisions Research Education About Department of Surgery Close News Events Contact Directory Faculty Leadership Residents Faculty Divisions Research Education About Breast & Endocrine Surgery Faculty Abraham, Peter, M.",
+          "retrievedAt": "2026-09-07T04:47:27.715Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0346-2",
+          "url": "https://www.uab.edu/medicine/surgery/breast-endocrine/faculty/huynh-victoria-m-d",
+          "excerpt": "Patient Care Education Research Less More in this section Breast & Endocrine Surgery Faculty Abraham, Peter, M.",
+          "retrievedAt": "2026-09-07T04:47:27.715Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0346-3",
+          "url": "https://www.uab.edu/medicine/surgery/breast-endocrine/faculty/huynh-victoria-m-d",
+          "excerpt": "Patient Care Education Research Surgery Home Breast & Endocrine Surgery Faculty Huynh, Victoria, M.",
+          "retrievedAt": "2026-09-07T04:47:27.715Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0346-4",
+          "url": "https://www.uab.edu/medicine/surgery/breast-endocrine/faculty/huynh-victoria-m-d",
+          "excerpt": "Assistant Professor Associate Scientist, Center for Clinical and Translational Science at UAB Areas of Interest breast cancer, patient reported outcomes, quality improvement, improving access to breast cancer care CLINICAL PROFILE PUBMED Biography Dr.",
+          "retrievedAt": "2026-09-07T04:47:27.715Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0346-5",
+          "url": "https://www.uab.edu/medicine/surgery/breast-endocrine/faculty/huynh-victoria-m-d",
+          "excerpt": "Victoria Huynh is an assistant professor in the UAB Division of Breast and Endocrine Surgery and an associate scientist at the Center for Clinical and Translational Science.",
+          "retrievedAt": "2026-09-07T04:47:27.715Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0346-6",
+          "url": "https://www.uab.edu/medicine/surgery/breast-endocrine/faculty/huynh-victoria-m-d",
+          "excerpt": "After attending medical school at Texas A&M Health Science Center College of Medicine, she completed her general surgery residency at the University of Colorado and was a breast surgical oncology clinical research and quality improvement resident.",
+          "retrievedAt": "2026-09-07T04:47:27.715Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0346-7",
+          "url": "https://www.uab.edu/medicine/surgery/breast-endocrine/faculty/huynh-victoria-m-d",
+          "excerpt": "She then completed a fellowship in breast surgical oncology at the University of Texas MD Anderson Cancer Center.",
+          "retrievedAt": "2026-09-07T04:47:27.715Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0346-8",
+          "url": "https://www.uab.edu/medicine/surgery/breast-endocrine/faculty/huynh-victoria-m-d",
+          "excerpt": "Huynh’s research interests include improving access to breast cancer care across all patient populations.",
+          "retrievedAt": "2026-09-07T04:47:27.715Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:49:09.168Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0347": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://desales.edu/profiles/alex-van-huynh"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0347-1",
+          "url": "https://desales.edu/profiles/alex-van-huynh",
+          "excerpt": "ndergraduate Tuition & Fees Graduate Tuition & Fees Adult Studies Tuition & Fees Financial Aid Scholarship Opportunities Student Life Toggle About Sub Menu Housing Dining Athletics & Fitness Student Activities & Involvement Service & Volunteer Work Health & Wellness Campus Ministry Career Success News, Events, Arts Toggle About Sub Menu News Events Act 1 Productions Youth Programs Find Information For Current Students Future Students Accepted Students Alumni Faculty and Staff Community QuickLinks Apply Request Info Visit Give Directory MyDSU Bulldog Athletics Trexler Library Alex Van Huynh, Ph.",
+          "retrievedAt": "2026-09-07T04:47:28.026Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0347-2",
+          "url": "https://desales.edu/profiles/alex-van-huynh",
+          "excerpt": "Explore This Section Alex Van Huynh Position: Associate Professor Department: College of Sciences Phone: 610-282-1100, x2097 Office: 103 Campbell Hall Biography Dr.",
+          "retrievedAt": "2026-09-07T04:47:28.026Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0347-3",
+          "url": "https://desales.edu/profiles/alex-van-huynh",
+          "excerpt": "in Biology from Lehigh University before joining the DeSales Department of Biology in 2020.",
+          "retrievedAt": "2026-09-07T04:47:28.026Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0347-4",
+          "url": "https://desales.edu/profiles/alex-van-huynh",
+          "excerpt": "Huynh&#8217;s research interests involve understanding how various compounds that organisms secrete into the environment influence their ecological interactions and ultimately their evolution.",
+          "retrievedAt": "2026-09-07T04:47:28.026Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0347-5",
+          "url": "https://desales.edu/profiles/alex-van-huynh",
+          "excerpt": "He has investigated these questions in a variety of systems in South America, Europe, and the United States.",
+          "retrievedAt": "2026-09-07T04:47:28.026Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0347-6",
+          "url": "https://desales.edu/profiles/alex-van-huynh",
+          "excerpt": "He is currently studying the chemistry of preen oils in songbirds, how these oils may be used in communication, and how songbirds may incorporate olfactory information into different behaviors.",
+          "retrievedAt": "2026-09-07T04:47:28.026Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0347-7",
+          "url": "https://desales.edu/profiles/alex-van-huynh",
+          "excerpt": "This work utilizes a highly multidisciplinary and integrative approach in both the field and the laboratory.",
+          "retrievedAt": "2026-09-07T04:47:28.026Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0347-8",
+          "url": "https://desales.edu/profiles/alex-van-huynh",
+          "excerpt": "Outside of the university, he spends most of his time cooking, reading, and running.",
+          "retrievedAt": "2026-09-07T04:47:28.026Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:49:09.168Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0348": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://ulmwebservices.ulm.edu/facultyactivities/profile/dao"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0348-1",
+          "url": "https://ulmwebservices.ulm.edu/facultyactivities/profile/dao",
+          "excerpt": "Faculty Activities Huy Dao Assistant Professor School Basic Pharm & Toxicol Sci PHAR 378 318-342-1615 dao@ulm.",
+          "retrievedAt": "2026-09-07T04:47:28.362Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0348-2",
+          "url": "https://ulmwebservices.ulm.edu/facultyactivities/profile/dao",
+          "excerpt": "edu --> Huy M Dao, PhD Assistant Professor, Pharmaceutical Sciences Education Ph D 2021, University of Mississippi BS 2010, Hanoi University of Pharmacy, Vietnam Biographical Sketch 2024-Present: Assistant Professor (Tenure-track) University of Louisiana Monroe 2021-2024: Post-Doctoral Associate University of Texas at Austin 2016-2021: Graduate student University of Mississippi Research Interests Our lab is dedicated to advancing the science behind freeze-drying and cryogenic preservation of biologics and cells.",
+          "retrievedAt": "2026-09-07T04:47:28.362Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0348-3",
+          "url": "https://ulmwebservices.ulm.edu/facultyactivities/profile/dao",
+          "excerpt": "We also aim to utilize freeze-drying as a powder engineering technology to create inhalable powders for lung delivery.",
+          "retrievedAt": "2026-09-07T04:47:28.362Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0348-4",
+          "url": "https://ulmwebservices.ulm.edu/facultyactivities/profile/dao",
+          "excerpt": "com/view/cslt-lab/home Recent Publications --> Recent Publications https://scholar.",
+          "retrievedAt": "2026-09-07T04:47:28.362Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0348-5",
+          "url": "https://ulmwebservices.ulm.edu/facultyactivities/profile/dao",
+          "excerpt": "(Principal), \"Freeze Induced Protein Instability Driven by Air Water Interfacial Stress\" (Funded), Sponsored By NSF ENG/CBET, $380,000.",
+          "retrievedAt": "2026-09-07T04:47:28.362Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0348-6",
+          "url": "https://ulmwebservices.ulm.edu/facultyactivities/profile/dao",
+          "excerpt": "(Principal), \"\" (Funded), Sponsored By NIH LBRN, External to The University of Louisiana at Monroe, $27,250.",
+          "retrievedAt": "2026-09-07T04:47:28.362Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0348-7",
+          "url": "https://ulmwebservices.ulm.edu/facultyactivities/profile/dao",
+          "excerpt": "(Principal), \"\" (Funded), Sponsored By Louisiana Board of Regent - RCS, External to The University of Louisiana at Monroe, $20,000.",
+          "retrievedAt": "2026-09-07T04:47:28.362Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0348-8",
+          "url": "https://ulmwebservices.ulm.edu/facultyactivities/profile/dao",
+          "excerpt": "(Principal), \"Hollow Fiber Membrane-based Deaeration to Improve Protein Stability during Freeze-Thaw\" (Funded), Sponsored By NSF IGNITE, $10,000.",
+          "retrievedAt": "2026-09-07T04:47:28.362Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:49:09.168Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0349": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.bard.edu/faculty/phuong-ngo"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0349-1",
+          "url": "https://www.bard.edu/faculty/phuong-ngo",
+          "excerpt": "gue Faculty Bard Abroad Libraries Dual-Degree Programs Bard Conservatory of Music Other Study Opportunities Graduate Programs Early Colleges Admission sub-menu Admission Applying Financial Aid Tuition + Payment Campus Tours Meet Our Students + Alumni/ae For Families / Familias Join Our Mailing List Contact Us Campus Life sub-menu Campus Life Living on Campus: Housing + Dining Campus Services + Resources Campus Activities New Students Visiting + Transportation Athletics + Recreation Montgomery Place Campus Civic Engagement sub-menu Civic Engagement Bard CCE Campus + Community In the Classroom U.",
+          "retrievedAt": "2026-09-07T04:47:28.855Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0349-2",
+          "url": "https://www.bard.edu/faculty/phuong-ngo",
+          "excerpt": "ces Academic Calendar College Catalogue Libraries Dean of the College Additional menu Additional Study Opportunities Dual-Degree Programs Bard Abroad Graduate Programs Early Colleges Academics Home Bard Faculty News View All Faculty News &rarr; Phuong Ngo Assistant Professor of Japanese Primary Academic Program: Asian Studies About Phuong Ngo -->Phuong Ngo&rsquo;s primary area of interest is premodern Japanese literature, with a special focus on classical Japanese poetry ( waka ), the portrayal of the poetic persona, waka as performance, and multiple authorship in classical Japanese literature.",
+          "retrievedAt": "2026-09-07T04:47:28.855Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0349-3",
+          "url": "https://www.bard.edu/faculty/phuong-ngo",
+          "excerpt": "Additional research and teaching interests include the development of genres during the period from the 9th century through the 12th, women&rsquo;s writing, modern poetry, and the adaptation of classical Japanese literature in contemporary popular culture, particularly manga and anime.",
+          "retrievedAt": "2026-09-07T04:47:28.855Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0349-4",
+          "url": "https://www.bard.edu/faculty/phuong-ngo",
+          "excerpt": "She is currently revising her dissertation, &ldquo;Envisioning Lady Use: Poetic Persona, Performance, and Multiple Authorship in Classical Japanese Poetry,&rdquo; into book format.",
+          "retrievedAt": "2026-09-07T04:47:28.855Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0349-5",
+          "url": "https://www.bard.edu/faculty/phuong-ngo",
+          "excerpt": "She is the recipient of a Japan Foundation Japanese Studies Fellowship as well as numerous fellowships and awards from Columbia and Wellesley, including the Ito Shinso Award for Japanese Literary and Cultural Studies; Shincho Graduate Fellowship for Study in Japan; Postdoctoral Fellowship, Heyman Center for the Humanities; and Columbia University Multiyear Faculty Fellow.",
+          "retrievedAt": "2026-09-07T04:47:28.855Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0349-6",
+          "url": "https://www.bard.edu/faculty/phuong-ngo",
+          "excerpt": "Professor Ngo has also served as English-Vietnamese translator and copy editor at Long Minh Cultural and Educational Company in Hanoi and head coach for Vietnam&rsquo;s 2023 and 2012 International Science and Engineering Fair team.",
+          "retrievedAt": "2026-09-07T04:47:28.855Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0349-7",
+          "url": "https://www.bard.edu/faculty/phuong-ngo",
+          "excerpt": "BA, Wellesley College; MA, MPhil, PhD, Columbia University; also studied at Chuo University, Japan.",
+          "retrievedAt": "2026-09-07T04:47:28.855Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0349-8",
+          "url": "https://www.bard.edu/faculty/phuong-ngo",
+          "excerpt": "Contact: Phone: 845-758-6822 x6265 Email: Office: Seymour, 105 30 Campus Road, PO Box 5000 Annandale-on-Hudson, New York 12504-5000 Phone: 845-758-6822 Admission Email: [email&#160;protected] Information For Prospective Students Current Employees Alumni/ae Families &copy;2026 Bard College Quick Links Employment Travel to Bard Search Support Bard Bard IT Policies + Security Bard Privacy Notice Bard has a long history of creating inclusive environments for all races, creeds, ethnicities, and genders.",
+          "retrievedAt": "2026-09-07T04:47:28.855Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:49:09.168Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0350": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://asa.ucdavis.edu/people/natalia-duong"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://asa.ucdavis.edu/people/natalia-duong: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T04:49:09.168Z",
+      "nextAction": "Retry fetching UC Davis Asian American Studies profile or discover alternate official faculty page."
     },
     "vp-0351": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://vaolab.sdsu.edu/about/",
         "https://vaolab.sdsu.edu/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0351-1",
+          "url": "https://vaolab.sdsu.edu/about/",
+          "excerpt": "About &#8211; Variational Analysis and Optimization Lab Skip to content Variational Analysis and Optimization Lab Nguyen-Truc-Dao Nguyen, Ph.",
+          "retrievedAt": "2026-09-07T04:47:30.252Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0351-2",
+          "url": "https://vaolab.sdsu.edu/about/",
+          "excerpt": "| San Diego State University About Research Honors & Awards Conferences Teaching Services & Outreach Mentoring Others Facebook Linkedln ResearchGate Google Scholar Instagram Variational Analysis and Optimization Lab Nguyen-Truc-Dao Nguyen, Ph.",
+          "retrievedAt": "2026-09-07T04:47:30.252Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0351-3",
+          "url": "https://vaolab.sdsu.edu/about/",
+          "excerpt": "| San Diego State University About Conferences Honors & Awards Mentoring Opening Ph.",
+          "retrievedAt": "2026-09-07T04:47:30.252Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0351-4",
+          "url": "https://vaolab.sdsu.edu/about/",
+          "excerpt": "Positions Others Posts Research Sample Page Services & Outreach Syllabus Teaching MATH 471 MATH 524 Facebook Linkedln ResearchGate Google Scholar Instagram About Nguyen-Truc-Dao Nguyen Assistant Professor Department of Mathematics and Statistics San Diego State University My research focuses on optimization, control theory, data science, numerical analysis, variational analysis, dynamical systems, machine learning, artificial intelligence, and computational mathematics.",
+          "retrievedAt": "2026-09-07T04:47:30.252Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0351-5",
+          "url": "https://vaolab.sdsu.edu/about/",
+          "excerpt": "Download CV Background Full name in Vietnamese: Nguyễn Nguyễn Trúc Đào Bio: Nguyen-Truc-Dao Nguyen currently holds the position of tenure-track Assistant Professor in the Department of Mathematics and Statistics at San Diego State University.",
+          "retrievedAt": "2026-09-07T04:47:30.252Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0351-6",
+          "url": "https://vaolab.sdsu.edu/about/",
+          "excerpt": "Nguyen was an Assistant Professor at the University of Michigan, Ann Arbor, and continues to maintain a significant collaboration with Professor Anthony Bloch.",
+          "retrievedAt": "2026-09-07T04:47:30.252Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0351-7",
+          "url": "https://vaolab.sdsu.edu/about/",
+          "excerpt": "degree took place at Wayne State University, under the esteemed guidance of Professor Boris Mordukhovich.",
+          "retrievedAt": "2026-09-07T04:47:30.252Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0351-8",
+          "url": "https://vaolab.sdsu.edu/about/",
+          "excerpt": "Research Areas Optimization Optimization, variational analysis, finite difference approximations, and optimality conditions.",
+          "retrievedAt": "2026-09-07T04:47:30.252Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0351-9",
+          "url": "https://vaolab.sdsu.edu/",
+          "excerpt": "| San Diego State University Skip to content Variational Analysis and Optimization Lab Nguyen-Truc-Dao Nguyen, Ph.",
+          "retrievedAt": "2026-09-07T04:47:30.864Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0351-10",
+          "url": "https://vaolab.sdsu.edu/",
+          "excerpt": "| San Diego State University About Research Honors & Awards Conferences Teaching Services & Outreach Mentoring Others Facebook Linkedln ResearchGate Google Scholar Instagram Variational Analysis and Optimization Lab Nguyen-Truc-Dao Nguyen, Ph.",
+          "retrievedAt": "2026-09-07T04:47:30.864Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0351-11",
+          "url": "https://vaolab.sdsu.edu/",
+          "excerpt": "| San Diego State University About Conferences Honors & Awards Mentoring Opening Ph.",
+          "retrievedAt": "2026-09-07T04:47:30.864Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0351-12",
+          "url": "https://vaolab.sdsu.edu/",
+          "excerpt": "Positions Others Posts Research Sample Page Services & Outreach Syllabus Teaching MATH 471 MATH 524 Facebook Linkedln ResearchGate Google Scholar Instagram Posts CV: Available here .",
+          "retrievedAt": "2026-09-07T04:47:30.864Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0351-13",
+          "url": "https://vaolab.sdsu.edu/",
+          "excerpt": "Founder and Director, Variational Analysis and Optimization Laboratory (VAO Lab) Founder and Director, AI & Mathematical Research Program : Founded an outreach program promoting research in mathematics, optimization, artificial intelligence, and data science.",
+          "retrievedAt": "2026-09-07T04:47:30.864Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0351-14",
+          "url": "https://vaolab.sdsu.edu/",
+          "excerpt": "Organized research seminars, workshops, and computational training in Python, machine learning, optimization, and scientific computing.",
+          "retrievedAt": "2026-09-07T04:47:30.864Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0351-15",
+          "url": "https://vaolab.sdsu.edu/",
+          "excerpt": "Guided students toward graduate school, research careers, publications, and conference presentations.",
+          "retrievedAt": "2026-09-07T04:47:30.864Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0351-16",
+          "url": "https://vaolab.sdsu.edu/",
+          "excerpt": "Founder and Director, VietGrowth : Educational mentoring initiative supporting students and early-career researchers through: research training; academic writing; graduate school preparation; scholarship applications; internship and career advising; professional development.",
+          "retrievedAt": "2026-09-07T04:47:30.864Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:49:09.168Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0352": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://phamlab.io/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0352-1",
+          "url": "https://phamlab.io/",
+          "excerpt": "Thai-Hoang Pham About Openings News Research Publications Awards Services About Openings News Research Publications Awards Services T hai- H oang P ham I am a Tenure-Track Assistant Professor in the Department of Computer Science at Texas State University , where I direct the Probabilistic and Human-Aligned Modeling (PHAM) Lab .",
+          "retrievedAt": "2026-09-07T04:47:31.173Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0352-2",
+          "url": "https://phamlab.io/",
+          "excerpt": "in Computer Science and Engineering from The Ohio State University (OSU) in 2025.",
+          "retrievedAt": "2026-09-07T04:47:31.173Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0352-3",
+          "url": "https://phamlab.io/",
+          "excerpt": "Before OSU, I received my bachelor's degree (Valedictorian) from FPT University.",
+          "retrievedAt": "2026-09-07T04:47:31.173Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0352-4",
+          "url": "https://phamlab.io/",
+          "excerpt": "My research lies at the intersection of machine learning and its applications to healthcare and biomedicine , with a focus on trustworthy AI (fairness, robustness, explainability), multimodal medical imaging , and biomedical foundation & multimodal language models .",
+          "retrievedAt": "2026-09-07T04:47:31.173Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0352-5",
+          "url": "https://phamlab.io/",
+          "excerpt": "Email: hoangpham at txstate dot edu / osg47 at txstate dot edu &middot; Office: Comal 210C &middot; Google Scholar &middot; GitHub Openings [Recruiting] My PHAM Lab at Texas State University is recruiting multiple fully-funded Ph.",
+          "retrievedAt": "2026-09-07T04:47:31.173Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0352-6",
+          "url": "https://phamlab.io/",
+          "excerpt": "I am looking for students interested in: Trustworthy AI, machine learning, and large language models Multimodal large language models for medical image analysis -&gt; Ideal candidates are self-motivated and passionate about original research, have strong programming experience, and a background in machine learning, natural language processing, or biomedical informatics.",
+          "retrievedAt": "2026-09-07T04:47:31.173Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0352-7",
+          "url": "https://phamlab.io/",
+          "excerpt": "-&gt; How to apply: email me at hoangpham at txstate dot edu with the subject line &ldquo;Ph.",
+          "retrievedAt": "2026-09-07T04:47:31.173Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0352-8",
+          "url": "https://phamlab.io/",
+          "excerpt": "Candidates whose background aligns with the lab&rsquo;s directions will be contacted for a Zoom meeting.",
+          "retrievedAt": "2026-09-07T04:47:31.173Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:49:09.168Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0353": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.gc.cuny.edu/people/van-c-tran"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.gc.cuny.edu/people/van-c-tran: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T04:49:09.168Z",
+      "nextAction": "Retry fetching CUNY Graduate Center profile or discover alternate official faculty page."
     },
     "vp-0354": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://seaver.pepperdine.edu/academics/faculty/tuan-hoang/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0354-1",
+          "url": "https://seaver.pepperdine.edu/academics/faculty/tuan-hoang/",
+          "excerpt": "l Aid Graduate Financial Aid Faculty and Staff Benefits Back Student Life Spiritual Life Service and Leadership Career Development Wellness Events Campus Life Student Activities Intercultural Affairs Back Alumni Engage Fellow Waves Serve with Alumni Meet the Alumni Department Alumni Stories Get Involved Benefits & Services Pepperdine Alumni Affairs Back About Our Story History Seaver Mission Affirmation Statement Strategic Plan Administration Dean's Office Seaver Board of Advisors Meet the Faculty Seaver at a Glance Campus Tours Seaver Blog Faculty Tuan Hoang Professor of Great Books Blanche E.",
+          "retrievedAt": "2026-09-07T04:47:32.020Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0354-2",
+          "url": "https://seaver.pepperdine.edu/academics/faculty/tuan-hoang/",
+          "excerpt": "Seaver Professor of Humanities and Teacher Education Humanities/Teacher Education Division , Seaver College CAC 100A tuan.",
+          "retrievedAt": "2026-09-07T04:47:32.020Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0354-3",
+          "url": "https://seaver.pepperdine.edu/academics/faculty/tuan-hoang/",
+          "excerpt": "4225 Education PhD, History, University of Notre Dame, 2013 MA, History, University of Notre Dame, 2006 BA, Philosophy, summa cum laude, Saint Mary's University of Minnesota, 1991 Research Presentations Media See https://tuannyriver.",
+          "retrievedAt": "2026-09-07T04:47:32.020Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0354-4",
+          "url": "https://seaver.pepperdine.edu/academics/faculty/tuan-hoang/",
+          "excerpt": "com/scholarship/presentations/ In the Media “Giới thiệu bộ sách của tác giả Nguyễn Mạnh Hùng và nhóm tác giả Vũ Tường & Sean Fear” [Introducing new collections edited by Nguyen Manh Hung and Tuong Vu & Sean Fear], Little Saigon TV (LSTV), May 14, 2022.",
+          "retrievedAt": "2026-09-07T04:47:32.020Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0354-5",
+          "url": "https://seaver.pepperdine.edu/academics/faculty/tuan-hoang/",
+          "excerpt": "“Why Vietnamese Love to Put Baby Jesus in a Cave at Christmas,” Vietcetera (international edition), December 22, 2021.",
+          "retrievedAt": "2026-09-07T04:47:32.020Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0354-6",
+          "url": "https://seaver.pepperdine.edu/academics/faculty/tuan-hoang/",
+          "excerpt": "“Looking to Past Military Withdrawal on the Future of Afghanistan,” KQED (NPR), August 31, 2021.",
+          "retrievedAt": "2026-09-07T04:47:32.020Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0354-7",
+          "url": "https://seaver.pepperdine.edu/academics/faculty/tuan-hoang/",
+          "excerpt": "Evacuation in Afghanistan Evoke Memories of Saigon’s Fall,” National Public Radio, August 20, 2021.",
+          "retrievedAt": "2026-09-07T04:47:32.020Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0354-8",
+          "url": "https://seaver.pepperdine.edu/academics/faculty/tuan-hoang/",
+          "excerpt": "“Lá cờ VNCH & Cuộc bạo động tại tòa nhà quốc hội Hoa Kỳ” [The flag of the Republic of Vietnam and the riot at the United States Capitol], roundtable, SBTN-TV, January 31, 2021.",
+          "retrievedAt": "2026-09-07T04:47:32.020Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:49:09.168Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0355": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.haverford.edu/users/ptranhoang",
         "https://paultranhoang.github.io/"
       ],
-      "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "evidence": [
+        {
+          "id": "vp-0355-1",
+          "url": "https://paultranhoang.github.io/",
+          "excerpt": "Homepage: Paul Anh Tran-Hoang The Homepage of Paul Anh Tran-Hoang (last name formerly \"McEldowney\") About Me Staring fall 2025, I will be an assistant professor at the University of Illinois Urbana-Champaign.",
+          "retrievedAt": "2026-09-07T04:47:32.446Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0355-2",
+          "url": "https://paultranhoang.github.io/",
+          "excerpt": "My research focuses on logic, philosophy of logic, and philosophy of mathematics.",
+          "retrievedAt": "2026-09-07T04:47:32.446Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0355-3",
+          "url": "https://paultranhoang.github.io/",
+          "excerpt": "Much of my current work examines the nature of translation, equivalence, and reduction using tools from formal logic (especially contemporary model theory).",
+          "retrievedAt": "2026-09-07T04:47:32.446Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0355-4",
+          "url": "https://paultranhoang.github.io/",
+          "excerpt": "I also have serious research interests in the philosophy of science and the history of 19th and 20th century philosophy (both Continental and Analytic traditions).",
+          "retrievedAt": "2026-09-07T04:47:32.446Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0355-5",
+          "url": "https://paultranhoang.github.io/",
+          "excerpt": "Outside of philosophy, I'm passionate about prison education and translating Vietnamese poetry.",
+          "retrievedAt": "2026-09-07T04:47:32.446Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0355-6",
+          "url": "https://paultranhoang.github.io/",
+          "excerpt": "My current projects include papers on: A model-theoretic approach to logicism: a case study on Zilber's conjecture.",
+          "retrievedAt": "2026-09-07T04:47:32.446Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0355-7",
+          "url": "https://paultranhoang.github.io/",
+          "excerpt": "Publications On the Virtue of Categoricity , Notre Dame Journal of Formal Logic 62(1): 107-146, 2021.",
+          "retrievedAt": "2026-09-07T04:47:32.446Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0355-8",
+          "url": "https://paultranhoang.github.io/",
+          "excerpt": "On Morita Equivalence and Interpretability , The Review of Symbolic Logic 13(2): 388-415, 2020.",
+          "retrievedAt": "2026-09-07T04:47:32.446Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
+      "errors": [
+        "https://www.haverford.edu/users/ptranhoang: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T04:49:09.168Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0356": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://business.gmu.edu/profiles/le-cao"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://business.gmu.edu/profiles/le-cao: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T04:49:09.168Z",
+      "nextAction": "Retry fetching George Mason University business profile or discover alternate official faculty page."
     },
     "vp-0357": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://schreiner.edu/wp-content/uploads/2026/05/May-2026-Graduation-Program-05112026-FINAL.pdf"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0357-1",
+          "url": "https://schreiner.edu/wp-content/uploads/2026/05/May-2026-Graduation-Program-05112026-FINAL.pdf",
+          "excerpt": "7 %���� 1 0 obj >/Metadata 2965 0 R/ViewerPreferences 2966 0 R>> endobj 2 0 obj > endobj 3 0 obj >/ExtGState >/Font >/ProcSet[/PDF/Text/ImageB/ImageC/ImageI] >>/MediaBox[ 0 0 612 792] /Contents 4 0 R/Group >/Tabs/S/StructParents 0>> endobj 4 0 obj > stream x���[o�F\u0014�ߑ�\u000e�\b�2��9s�V+5���*�톪\u000fQ\u001fPn\u001biC�l��R?",
+          "retrievedAt": "2026-09-07T04:47:35.084Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0357-2",
+          "url": "https://schreiner.edu/wp-content/uploads/2026/05/May-2026-Graduation-Program-05112026-FINAL.pdf",
+          "excerpt": "|�cC�1C� M$0���w�\u001c��\u0016�O������É�w���ɱ\u0018��;q������\u001b�$�\u0019�,t�Jy�\u0016�i\u0019�x���~}#���R\u001cd\u0014��$\u0016#MF:��\" ���\u001b���^[q� ~�����X���Z�d�\"cE���\u0015��QW�I��p\b\u0000�+�\u001foq��V2�\u0015��\u0006�\b\u0000�ŉ7o�������3�\u001e�8�ߊ��|���p�S�P� ��J��l�>�\u0002xi�@Ƹ\u0002 zI> \u001f$\u001cb1?",
+          "retrievedAt": "2026-09-07T04:47:35.084Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0357-3",
+          "url": "https://schreiner.edu/wp-content/uploads/2026/05/May-2026-Graduation-Program-05112026-FINAL.pdf",
+          "excerpt": "8�� ��6'�}�+B;\u0001,=¡�\u000ed{�H���Z6NCH����@Q#�wQU\u0006Ua���� ]������\u000fGz�TF��� rp�9��>��\u001c��)�����(Ǥ%�\u001a]�\\ \u0002�L���\u001bc��b���� �z\"̍p� ����o�`��O�3�� &\u0019�t|-�4��\u001ay����x\u0003���sa�n�w\u000fP&�N�=�;\u0004��h2�3��� \u0011������t\u0007Ơ�A_^��0ɍ���%��\u00104��-H�$��%� 0rm��kS}\u0016����ʐx�ҭ�\u0014F>��Ϗ2����ٰ|���B�.",
+          "retrievedAt": "2026-09-07T04:47:35.084Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0357-4",
+          "url": "https://schreiner.edu/wp-content/uploads/2026/05/May-2026-Graduation-Program-05112026-FINAL.pdf",
+          "excerpt": "���hL�\u0000m�X����^��\u001c��;s�*���J\u0016\u001d �����ʥʶ�\u001bj > stream ����\u0000\u0010JFIF\u0000\u0001\u0001\u0001\u0000`\u0000`\u0000\u0000��\u0000ZExif\u0000\u0000MM\u0000*\u0000\u0000\u0000\b\u0000\u0005\u0003\u0001\u0000\u0005\u0000\u0000\u0000\u0001\u0000\u0000\u0000J\u0003\u0003\u0000\u0001\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0000Q\u0010\u0000\u0001\u0000\u0000\u0000\u0001\u0001\u0000\u0000\u0000Q\u0011\u0000\u0004\u0000\u0000\u0000\u0001\u0000\u0000\u000e�Q\u0012\u0000\u0004\u0000\u0000\u0000\u0001\u0000\u0000\u000e�\u0000\u0000\u0000\u0000\u0000\u0001��\u0000\u0000����\u0000C\u0000\b\u0006\u0006\u0007\u0006\u0005\b\u0007\u0007\u0007 \b \u0014 \u0019\u0012\u0013\u000f\u0014\u001d\u001a\u001f\u001e\u001d\u001a\u001c\u001c $.",
+          "retrievedAt": "2026-09-07T04:47:35.084Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0357-5",
+          "url": "https://schreiner.edu/wp-content/uploads/2026/05/May-2026-Graduation-Program-05112026-FINAL.pdf",
+          "excerpt": "\u0016*\"�5u��j�d�\u0000�\u0014�J\u0005\u00008(5 \u001cS\u0005; ���� )h�\u0002��Z\u0000)h�� Z)h\u0000��Z\u0000(��� (��\u0002�)h\u0000��(\u0000����\u0016�(�\u0002�)h\u0001)h�� ZJZ\u0000JZZ(\u0001)i1K@\u0005\u0014Q@\u0005\u0014Q@\u0005-\u0014P\u0001E\u0014P\u0001E\u0014P\u0001E\u0014�\u0000QE\u0014\u0000QE\u0014\u0000QE\u0014\u0000QKI@\u0005\u0014�P\u0002R�E\u0000\u0014QE\u0000\u0014QE\u0000\u0014QK@ E-\u0002� (��\u0004�KE\u0014\u0000QE\u0014\u0000RR�@\u0005\u0014Q@\u0005\u001cR�P\u0001KE\u0014\u0000QE\u0014\u0000R�E\u0000\u0014QE\u0000\u0014QE\u0000\u0014R�@ E-\u0014\u0000QE\u0014\u0000QE(\u0014\u0000��(�8 \u0000\u0005J���-\u0000N L��WSR\u0003@\u0013\u0007��P� \u0000N���� K�\u0000�u i�� ��ғ�Lg�\u0000qja���\u000eEE#\u00058�\u0001� ��㚙�\u0015\u001e��b�#\u0014�Ԥ\u0001M'4\u0000�RR�@\u0000��R�\u00134��qF(\u0001\u0005-%-\u0000\u0014QE\u0000--%-\u0000--%\u0014\u0000��Q@ KE\u0014\u0000�RR�\u0001E\u0014P\u0001E\u0014P\u0001E\u0014P\u0001E\u0014P\u0001E\u0014P\u0001E\u0014P\u0001E\u0014P\u0002撊Z\u0000J3E(\u0014\u0000m&�HKw\u0002�sV\u0013\u0000P\u0003\u0005�=\u0018Pl�\u0015:��ԫ j\u0000�zQE-\u0000\u0014�R�\u0001E\u0014�\u0000QE-\u0000\u0014� Z\u0000)i)h\u0000��Z\u0000(���\u0012�Z(\u0000��Z\u0000J){�@\u0005\u0014R�\u0001E\u0014P\u0002�E\u0014\u0000QKE\u0000\u0014QE\u0000\u0014R�@ KE\u0014\u0000��Q@\u0005\u0014�P\u0002QKK�\u0000m\u0014��\u0014\u0000��b�\u0000(\u0014R�\u0002QKE\u0000\u0014��P\u0001E\u0014b� (�� (�� (��\u0004���\u0000(��\u0000(��\u0014\u0000�R�@ E.",
+          "retrievedAt": "2026-09-07T04:47:35.084Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0357-6",
+          "url": "https://schreiner.edu/wp-content/uploads/2026/05/May-2026-Graduation-Program-05112026-FINAL.pdf",
+          "excerpt": "(�\u0004���\u0000(���\u0012�\\Q@\u0005\u0014�P\u0002QKK@ �1KE\u0000&(��� LR�@\u0005\u0014Q@\u0005\u0014Q@\u0005\u0014Q@\u0005\u0014Q@\u0005\u0014R�\u0002�x�*U\u0014\u0000�i��:R�\u0000)�p�\u0007 u � \u0000\u00058 \u0000�\u0001@\b\u00058 \u0000��@\b\u00058 \u0000�b�\u0013\u0014��\u0002�\u0005\u0000 \u0014�Q�Z\u0000\u0000�\u0001H\u00058P\u0002\u0011J\u0005-(�\u0004�4�y\u001cSq@ \"�Fi�S \u0000&(�-\u0014\u0000��R�P\u0002�\\R\u0003N\u0014\u0000 p� v(\u0000\u0014�H\u0005.",
+          "retrievedAt": "2026-09-07T04:47:35.084Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0357-7",
+          "url": "https://schreiner.edu/wp-content/uploads/2026/05/May-2026-Graduation-Program-05112026-FINAL.pdf",
+          "excerpt": "\u0018�L-��\u0000��\u0000`u��g�G�\u0005�\u0001\u001b9�c�u%\u0000\u0004�ih�\u00034Q�(\u0001E8\u001cSE\u0014\u0000�撊(\u0000��(\u0000����\u0002�(�\u0005\u0014��u\u0000\u0014QE\u0000\u0014QK@\u0005\u0014Q@\u0005\u0014Q@\u0005\u0014Q@\u0005/j(�\u0004���\u0000(���\u0012�Z(\u0001(���\u0012�Z(\u0001)h�\u0002�\u001c�S����P\u0005�}�\u0006��\u001e W\u0006���\u0007 E\u0014�\u0000R�E\u0000-\u0014R�\u0001E(�\u001c�\u0002�(\u0014�\u0000QE\u0014\u0000�QE\u0000\u0014�Q@\u0005\u0014�P\u0001@��� (��\u0004����\u0000QKE\u0000%(��\u0000(��� (�� Z(�\u0002�Z(\u0001(�-\u0014\u0000Q�Z(\u0000�%-\u0014\u0000�R�@ E-\u0014\u0000�R�@ E\u0014�\u0000�R�@\u0005\u0014Q@\u0005\u0014Q@\u0005\u0014R�\u0002QKE\u0000\u0014QE\u0000\u0014QE\u0000\u0014R�@ KE\u0014\u0000Q�)q@ F)ih\u00011K�(�\u0003\u0014b�4�\u0000Q�)h\u0000�\u0014Q@\u0005\u0014��\u0000QE\u0014\u0000QE\u0014\u0000QE\u0014\u0000QKE\u0000%\u0014�P\u0002b�R�@\u0005%-.",
+          "retrievedAt": "2026-09-07T04:47:35.084Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0357-8",
+          "url": "https://schreiner.edu/wp-content/uploads/2026/05/May-2026-Graduation-Program-05112026-FINAL.pdf",
+          "excerpt": "(\u0000\u00152 b��t�\u0005�8 @)\u0000)h捤�\u0000)� z�\u0000p\u0014��\u0002�\u0005\u0000 \u0014�)\u0000� \u0000\u0000�\u0001@\u0014�� S�%\u0019�\u0007b�Lњ\u0000\\�曚3@\u000f�\u0000�3J\u000f4\u0001 4\u001aAN�\u0004�i�*P)\b\u0014\u0001]�* �T�2R\u0011�?",
+          "retrievedAt": "2026-09-07T04:47:35.084Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:49:09.168Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0358": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://search.asu.edu/profile/3714024"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0358-1",
+          "url": "https://search.asu.edu/profile/3714024",
+          "excerpt": "Duong Nguyen | ASU Search Duong Nguyen Assistant Professor , School of Electrical, Computer and Energy Engineering [email&#160;protected] Phone: 602-496-6771 &zwnj; Tempe Campus, GWC 438 Goldwater Center, 650 E.",
+          "retrievedAt": "2026-09-07T04:47:35.693Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0358-2",
+          "url": "https://search.asu.edu/profile/3714024",
+          "excerpt": "Tyler Mall Tempe, AZ 85281 Mail code: 5706 Campus: Tempe &zwnj; Biography Research Teaching Previous Next Long Bio Duong Nguyen is an Assistant Professor in the School of Electrical, Computer, and Energy Engineering at Arizona State University.",
+          "retrievedAt": "2026-09-07T04:47:35.693Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0358-3",
+          "url": "https://search.asu.edu/profile/3714024",
+          "excerpt": "He received his doctorate in electrical and computer engineering from the University of British Columbia in 2020, under the supervision of Professor Vijay Bhargava.",
+          "retrievedAt": "2026-09-07T04:47:35.693Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0358-4",
+          "url": "https://search.asu.edu/profile/3714024",
+          "excerpt": "His research lies at the intersection of operations research, artificial intelligence, economics, and engineering, with a focus on developing new mathematical models and techniques for decision-making and economic analysis of large-scale networked systems such as cloud/edge computing, smart grids, and crowdsourcing.",
+          "retrievedAt": "2026-09-07T04:47:35.693Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0358-5",
+          "url": "https://search.asu.edu/profile/3714024",
+          "excerpt": "His goals are (1) to design optimal operation and planning algorithms for complex systems under uncertainty, and (2) to build intelligent, secure, fair, and efficient multi-agent platforms and marketplaces.",
+          "retrievedAt": "2026-09-07T04:47:35.693Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:49:09.168Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0359": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://search.asu.edu/profile/43716"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0359-1",
+          "url": "https://search.asu.edu/profile/43716",
+          "excerpt": "Thuy-Kim Le | ASU Search Thuy-Kim Le Emeritus , School of International Letters and Cultures Other ASU affiliations Center For Asian Research [email&#160;protected] Biography Research Teaching Public Work Previous Next Long Bio Lê Phạm Thuý-Kim has taught Vietnamese language at Arizona State University since 1991 and served as examiner and consultant for the Vietnamese language courses offered by the Critical Languages Program at University of Arizona from 1995-2013.",
+          "retrievedAt": "2026-09-07T04:47:37.199Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0359-2",
+          "url": "https://search.asu.edu/profile/43716",
+          "excerpt": "She has been active in Group of Universities for the Advancement of Vietnamese in America (GUAVA) since 1991 and served as chair of Academic Affairs, vice president, and chair of Proficiency Guidelines Committee.",
+          "retrievedAt": "2026-09-07T04:47:37.199Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0359-3",
+          "url": "https://search.asu.edu/profile/43716",
+          "excerpt": "In September 2002, Lê Phạm Thúy-Kim received Outstanding Post-Secondary Educator of the Year Award at the Arizona Language Association annual conference in Glendale, Arizona.",
+          "retrievedAt": "2026-09-07T04:47:37.199Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0359-4",
+          "url": "https://search.asu.edu/profile/43716",
+          "excerpt": "She also received an award from the Vietnamese Community in Arizona for her contribution to the community in February, 2006.",
+          "retrievedAt": "2026-09-07T04:47:37.199Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0359-5",
+          "url": "https://search.asu.edu/profile/43716",
+          "excerpt": "Her two textbooks \" Chúng ta nói \" and \" Let's Speak Vietnamese \" received awards from Charles E.",
+          "retrievedAt": "2026-09-07T04:47:37.199Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0359-6",
+          "url": "https://search.asu.edu/profile/43716",
+          "excerpt": "She also published \" Let's Practice Vietnamese \" for the second-year courses and several workbooks to accompany those textbooks.",
+          "retrievedAt": "2026-09-07T04:47:37.199Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0359-7",
+          "url": "https://search.asu.edu/profile/43716",
+          "excerpt": "Le enjoyed developing web-based learning and teaching materials for Vietnamese language learners and instructors.",
+          "retrievedAt": "2026-09-07T04:47:37.199Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0359-8",
+          "url": "https://search.asu.edu/profile/43716",
+          "excerpt": "Family Resources and Human Development, Arizona State University 1984 Completed 24 credits.",
+          "retrievedAt": "2026-09-07T04:47:37.199Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:49:09.168Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0360": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://search.asu.edu/profile/3154816"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0360-1",
+          "url": "https://search.asu.edu/profile/3154816",
+          "excerpt": "Linh Vu | ASU Search Linh Vu Associate Professor , School of Historical, Philosophical and Religious Studies Other ASU affiliations Center For Asian Research [email&#160;protected] Phone: 480-965-5778 &zwnj; Coor 4532 School of Historical, Philosophical & Religious Studies Tempe, AZ 85287-4302 Mail code: 4302 Campus: Tempe &zwnj; Biography Research Teaching Previous Next Long Bio Linh Vu is a historian of modern China.",
+          "retrievedAt": "2026-09-07T04:47:38.534Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0360-2",
+          "url": "https://search.asu.edu/profile/3154816",
+          "excerpt": "Her first monograph, Governing the Dead: Martyrs, Memorials, and Necrocitizenship in Modern China , examines the efforts of the Chinese nation-state to record, commemorate, and compensate for military and civilian deaths and how these efforts transformed social and cultural institutions.",
+          "retrievedAt": "2026-09-07T04:47:38.534Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0360-3",
+          "url": "https://search.asu.edu/profile/3154816",
+          "excerpt": "She is researching and writing a book on virtues and citizenship in modern and contemporary China and Taiwan.",
+          "retrievedAt": "2026-09-07T04:47:38.534Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0360-4",
+          "url": "https://search.asu.edu/profile/3154816",
+          "excerpt": "Her other ongoing projects include war commemoration, citizenship, terrorism, and sovereignty.",
+          "retrievedAt": "2026-09-07T04:47:38.534Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0360-5",
+          "url": "https://search.asu.edu/profile/3154816",
+          "excerpt": "She teaches courses on violence in Chinese history, memories of wars, and global history.",
+          "retrievedAt": "2026-09-07T04:47:38.534Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0360-6",
+          "url": "https://search.asu.edu/profile/3154816",
+          "excerpt": "user=RKd3wwwAAAAJ Research Interests War, Commemoration, Martyrdom, Memories, China Publications Books : Governing the Dead: Martyrs, Memorials and Necrocitizenship in Modern China (Ithaca: Cornell University Press, 2021) Interview Read the Introduction Peer-Reviewed Articles: \" Building a Cultural Alliance: Academic and Cinematic Exchanges between the Republic of China and the Republic of Vietnam in the 1960s .",
+          "retrievedAt": "2026-09-07T04:47:38.534Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0360-7",
+          "url": "https://search.asu.edu/profile/3154816",
+          "excerpt": "\" Archives of the Afterlife: The Disappearance of the British Empire’s Dead in Twentieth-Century China .",
+          "retrievedAt": "2026-09-07T04:47:38.534Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0360-8",
+          "url": "https://search.asu.edu/profile/3154816",
+          "excerpt": "“ (Un)rest in Revolution: Beijing’s Eight Treasures Mountain (Babaoshan) Revolutionary Cemetery and the Making of China’s National Memory .",
+          "retrievedAt": "2026-09-07T04:47:38.534Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:49:09.168Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0361": {
       "overview": "pending",
