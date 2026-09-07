@@ -2427,7 +2427,9 @@
         "vp-0680",
         "vp-0681"
       ],
-      "status": "pending"
+      "status": "completed",
+      "startedAt": "2026-09-07T05:20:10.714Z",
+      "completedAt": "2026-09-07T05:35:00.000Z"
     },
     {
       "number": 35,
@@ -44381,206 +44383,804 @@
       "nextAction": "None; overview verified, work omitted until authoritative list available."
     },
     "vp-0662": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://pathologie.umontreal.ca/recherche/laboratoires-de-recherche/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0662-1",
+          "url": "https://pathologie.umontreal.ca/recherche/laboratoires-de-recherche/",
+          "excerpt": "ogie Galerie photo Ressources Bourses d’études au 1er cycle Bourses d’études aux cycles supérieurs Bourse d’exemption UdeM pour étudiants internationaux Emplois Services à la vie étudiante Liens utiles Nous joindre Accueil / Recherche / Laboratoires de recherche Laboratoires de recherche Centres affiliés Laboratoires de recherche DOROTHÉE DAL SOGLIO Professeure titulaire, temps plein géographique sous contrat Pathologie hépatique et digestive pédiatrique Centre de recherche du CHU Ste-Justine ALEXANDRE DUBRAC Professeur sous octroi agrégé Développement neuro-vasculaire et malformations JANOS G.",
+          "retrievedAt": "2026-09-07T05:20:11.881Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:35:00.000Z",
+      "nextAction": "None; profile lacks narrative overview and publication list."
     },
     "vp-0663": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://medecinedentaire.umontreal.ca/notre-faculte/lequipe/corps-professoral/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0663-1",
+          "url": "https://medecinedentaire.umontreal.ca/notre-faculte/lequipe/corps-professoral/",
+          "excerpt": "tion principale Accueil Accueil Notre Faculté Portrait de la faculté L'équipe Offres d'emploi Nous joindre Études Premier cycle Cycles supérieurs Étudiants internationaux Vie à la Faculté (Centre étudiant) Bourses Stages cliniques Recherche Activités et projets de recherche Dentabanque Thèses et mémoires Publications Boîte à outils Donateurs et diplômés Dons Diplômés Formation continue Clinique dentaire Soins et services Orthodontie Nous joindre Navigation secondaire Accueil Notre Faculté L'équipe Corps professoral Directions des départements Département de dentisterie de restauration Daniel P.",
+          "retrievedAt": "2026-09-07T05:20:14.311Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0663-2",
+          "url": "https://medecinedentaire.umontreal.ca/notre-faculte/lequipe/corps-professoral/",
+          "excerpt": "Turgeon (par intérim) Département de santé buccale Normand Bach Département de stomatologie Daniel P.",
+          "retrievedAt": "2026-09-07T05:20:14.311Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0663-3",
+          "url": "https://medecinedentaire.umontreal.ca/notre-faculte/lequipe/corps-professoral/",
+          "excerpt": "Turgeon Notre corps professoral Filtrer par fonction(s) : Rechercher par mots-clés (3 caractères minimum) dans la liste ci-dessous : Se rendre aux experts dont le nom débute par : A B C D E F G H I J K L M N O P Q R S T U V W X Y Z A Amzica Florin florin.",
+          "retrievedAt": "2026-09-07T05:20:14.311Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0663-4",
+          "url": "https://medecinedentaire.umontreal.ca/notre-faculte/lequipe/corps-professoral/",
+          "excerpt": "ca Professeur agrégé Faculté de médecine dentaire - Département de stomatologie B Bach Normand n.",
+          "retrievedAt": "2026-09-07T05:20:14.311Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0663-5",
+          "url": "https://medecinedentaire.umontreal.ca/notre-faculte/lequipe/corps-professoral/",
+          "excerpt": "ca Directeur de département Faculté de médecine dentaire - Département de santé buccale n.",
+          "retrievedAt": "2026-09-07T05:20:14.311Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0663-6",
+          "url": "https://medecinedentaire.umontreal.ca/notre-faculte/lequipe/corps-professoral/",
+          "excerpt": "ca Professeur agrégé Faculté de médecine dentaire - Département de santé buccale Barbeau Jean jean.",
+          "retrievedAt": "2026-09-07T05:20:14.311Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0663-7",
+          "url": "https://medecinedentaire.umontreal.ca/notre-faculte/lequipe/corps-professoral/",
+          "excerpt": "ca Professeur honoraire Faculté de médecine dentaire - Département de stomatologie Ben Lagha Amel amel.",
+          "retrievedAt": "2026-09-07T05:20:14.311Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0663-8",
+          "url": "https://medecinedentaire.umontreal.ca/notre-faculte/lequipe/corps-professoral/",
+          "excerpt": "ca Professeure adjointe Faculté de médecine dentaire - Département de stomatologie Bissonnette Caroline caroline.",
+          "retrievedAt": "2026-09-07T05:20:14.311Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:35:00.000Z",
+      "nextAction": "None; profile lacks narrative overview and publication list."
     },
     "vp-0664": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://umanitoba.ca/medicine/faculty-staff/chau-pham"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0664-1",
+          "url": "https://umanitoba.ca/medicine/faculty-staff/chau-pham",
+          "excerpt": "profile - Chau Pham | Max Rady College of Medicine | University of Manitoba Skip to main content The University of Manitoba campuses and research spaces are located on original lands of Anishinaabeg, Ininiwak, Anisininewuk, Dakota Oyate, Dene and Inuit, and on the National Homeland of the Red River Métis.",
+          "retrievedAt": "2026-09-07T05:20:14.694Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0664-2",
+          "url": "https://umanitoba.ca/medicine/faculty-staff/chau-pham",
+          "excerpt": "More Territory acknowledgement Functional Menu Current students Faculty and staff Alumni Email News and stories Call To Action Menu Visit Apply Donate Max Rady College of Medicine Main Menu Programs of study Student experience Research Community and partners What are you looking for?",
+          "retrievedAt": "2026-09-07T05:20:14.694Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0664-3",
+          "url": "https://umanitoba.ca/medicine/faculty-staff/chau-pham",
+          "excerpt": "h and wellness Military Support Office Respectful conduct Student services at Bannatyne campus Accessibility for students Community Indigenous community Alumni Arts and Culture Sport and Recreation Giving About UM Governance Strategic Plan Our campuses The UM brand Facts and figures Max Rady College of Medicine Main Menu Programs of study Student experience Research Community and partners The University of Manitoba campuses and research spaces are located on original lands of Anishinaabeg, Ininiwak, Anisininewuk, Dakota Oyate, Dene and Inuit, and on the National Homeland of the Red River Métis.",
+          "retrievedAt": "2026-09-07T05:20:14.694Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0664-4",
+          "url": "https://umanitoba.ca/medicine/faculty-staff/chau-pham",
+          "excerpt": "People search Research experts Privacy policy Accessibility Terms of use Website feedback All social Back to top Max Rady College of Medicine Breadcrumb Home Rady Faculty of Health Sciences Max Rady College of Medicine Department of Emergency Medicine Faculty and staff Chau Pham Department of Emergency Medicine AFC Acute Care Point of Care Ultrasonography (POCUS) Fellowship Chau Pham, MD, FRCPC, MBA Associate professor Max Rady College of Medicine Emergency Medicine S203 Medical Services Building - 750 Bannatyne Avenue University of Manitoba Winnipeg, Manitoba R3E OW2 Phone: 204-955-4245 chau.",
+          "retrievedAt": "2026-09-07T05:20:14.694Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0664-5",
+          "url": "https://umanitoba.ca/medicine/faculty-staff/chau-pham",
+          "excerpt": "Chau Pham has dedicated her career to advancing the use of point-of-care ultrasound and promoting physician sustainability and wellness.",
+          "retrievedAt": "2026-09-07T05:20:14.694Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0664-6",
+          "url": "https://umanitoba.ca/medicine/faculty-staff/chau-pham",
+          "excerpt": "Pham's research aims to improve patient outcomes and enhance the overall quality of care in emergency settings.",
+          "retrievedAt": "2026-09-07T05:20:14.694Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0664-7",
+          "url": "https://umanitoba.ca/medicine/faculty-staff/chau-pham",
+          "excerpt": "Her work on the ULTRA4 (Ultrasound Localization to Resuscitate in Arrest – Part 4) study, part of a multi-center effort to guide compression with sonography, has received widespread attention.",
+          "retrievedAt": "2026-09-07T05:20:14.694Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0664-8",
+          "url": "https://umanitoba.ca/medicine/faculty-staff/chau-pham",
+          "excerpt": "As the primary site for the study, the University of Saskatchewan became the leader of this innovative approach to cardiac arrest resuscitation.",
+          "retrievedAt": "2026-09-07T05:20:14.694Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:35:00.000Z",
+      "nextAction": "None; overview verified, work omitted until authoritative list available."
     },
     "vp-0665": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://medicine.nus.edu.sg/bch/faculty/nam-long-nguyen/"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:35:00.000Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-0666": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://nusgs.nus.edu.sg/thesis-advisors/phcltnm"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:35:00.000Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-0667": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://ntufusion.github.io/",
         "https://personal.ntu.edu.sg/phantuan/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0667-1",
+          "url": "https://ntufusion.github.io/",
+          "excerpt": "NTU Plasma Theory Toggle navigation About (current) Publications People Projects Join us More Teaching Repositories Local tips NTU Theoretical and Computational Plasma Physics Group NTU Plasma Theory Contact: Prof.",
+          "retrievedAt": "2026-09-07T05:20:15.654Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0667-2",
+          "url": "https://ntufusion.github.io/",
+          "excerpt": "sg Climate change has become a main global challenge with countries committed to achieving carbon-neutrality by 2050.",
+          "retrievedAt": "2026-09-07T05:20:15.654Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0667-3",
+          "url": "https://ntufusion.github.io/",
+          "excerpt": "Nuclear fusion, a safe and potentially unlimited energy source, could provide the ultimate energy solution to our kind.",
+          "retrievedAt": "2026-09-07T05:20:15.654Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0667-4",
+          "url": "https://ntufusion.github.io/",
+          "excerpt": "NTU has opened a new research area in theoretical and computational fusion plasma physics.",
+          "retrievedAt": "2026-09-07T05:20:15.654Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0667-5",
+          "url": "https://ntufusion.github.io/",
+          "excerpt": "At NTU, we endeavour to combine the power of traditional physics-based models, high-performance computer simulations and modern machine learning technologies to accelerate the realisation of fusion energy.",
+          "retrievedAt": "2026-09-07T05:20:15.654Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0667-6",
+          "url": "https://ntufusion.github.io/",
+          "excerpt": "The group is located in Division of Physics and Applied Physics, School of Physical and Mathematical Sciences, Nanyang Technological University.",
+          "retrievedAt": "2026-09-07T05:20:15.654Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0667-7",
+          "url": "https://ntufusion.github.io/",
+          "excerpt": "--> Selected publications TPS Plasma GraphRAG: Physics-Grounded Parameter Selection for Gyrokinetic Simulations R.",
+          "retrievedAt": "2026-09-07T05:20:15.654Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0667-8",
+          "url": "https://ntufusion.github.io/",
+          "excerpt": "Wan , and 6 more authors IEEE Transactions on Plasma Science , 2026 Bib HTML @article { Zhang2026 , doi = {10.",
+          "retrievedAt": "2026-09-07T05:20:15.654Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0667-9",
+          "url": "https://personal.ntu.edu.sg/phantuan/",
+          "excerpt": "Professor PHAN Anh Tu&acirc;n Professor PHAN Anh Tuan | Home | Research | Publications | Invited Talks | Teaching | Professor PHAN Anh Tuan Chair, School of Physical & Mathematical Sciences Nanyang Technological University 21 Nanyang Link, SPMS PAP 05-04 Singapore 637371 E-mail: phantuan@ntu.",
+          "retrievedAt": "2026-09-07T05:20:17.872Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0667-10",
+          "url": "https://personal.ntu.edu.sg/phantuan/",
+          "excerpt": "sg Tel: (+65) 6514 1915 Fax: (+65) 6795 7981 Educational and Professional Qualifications 1999 Ph.",
+          "retrievedAt": "2026-09-07T05:20:17.872Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0667-11",
+          "url": "https://personal.ntu.edu.sg/phantuan/",
+          "excerpt": "sics Program, Memorial Sloan-Kettering Cancer Center, New York, USA 5/2001-10/2002 Research Fellow, Cellular Biochemistry & Biophysics Program, Memorial Sloan-Kettering Cancer Center, New York, USA 11/2000-4/2001 Visiting Scholar, Department of Biophysics, Hanoi National University, Vietnam 12/1999-11/2000 Postdoctoral Research Associate, Laboratory of Biophysics, Ecole Polytechnique, France Honors and Awards 2017 NRF Investigator, Singapore National Research Foundation 2014 Fellow, American Physical Society 2010 Young Researcher Award, SPMS, Nanyang Technological University, Singapore 2000 Ph.",
+          "retrievedAt": "2026-09-07T05:20:17.872Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:35:00.000Z",
+      "nextAction": "None; overview and selected work verified."
     },
     "vp-0668": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://personal.ntu.edu.sg/hcdang/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0668-1",
+          "url": "https://personal.ntu.edu.sg/hcdang/",
+          "excerpt": "Dang Group Cuong Dang Group Games of Photons & Waves --> HOME Research Members Publications News Join Us Welcome to the Cuong Dang Group at NTU, Singapore.",
+          "retrievedAt": "2026-09-07T05:20:18.182Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0668-2",
+          "url": "https://personal.ntu.edu.sg/hcdang/",
+          "excerpt": "We are creating more photons with nanotechnology and we trace them even through scattering media.",
+          "retrievedAt": "2026-09-07T05:20:18.182Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0668-3",
+          "url": "https://personal.ntu.edu.sg/hcdang/",
+          "excerpt": "*** Opening Positions *** See research details Opening Positions Single shot multispectral imaging with strongly scattering media Ground glass diffusers are utilized not only as lens for imaging but also as multiple optical filters in the simplest single shot multispectral imaging technology.",
+          "retrievedAt": "2026-09-07T05:20:18.182Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0668-4",
+          "url": "https://personal.ntu.edu.sg/hcdang/",
+          "excerpt": "See details Electric field helps collolidal quantum dots emit laser light We reduce the gain threshold of a CQD film by charging it in a capacitor device.",
+          "retrievedAt": "2026-09-07T05:20:18.182Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0668-5",
+          "url": "https://personal.ntu.edu.sg/hcdang/",
+          "excerpt": "See details Strong Coupling Metal-NanoCubes with Nanoplatelets Utilizing high aspect ratio colloidal quantum wells with silver nanocubes, plasmon-polariton is demonstrated with unprecedented giant Rabi splitting energy up to 400 meV and high cooperativity.",
+          "retrievedAt": "2026-09-07T05:20:18.182Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0668-6",
+          "url": "https://personal.ntu.edu.sg/hcdang/",
+          "excerpt": "See details Full color single material lasers Strong quantum confinement effect makes full color colloidal quantum dot lasers possible just by controling the nanoparticle size.",
+          "retrievedAt": "2026-09-07T05:20:18.182Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0668-7",
+          "url": "https://personal.ntu.edu.sg/hcdang/",
+          "excerpt": "See details Mutual Energy Transfer between Colloidal Nanoplatelets By utilizing the d orbital electrons in copper dopants, we have proposed and demonstrated that the two components in a binary complex made of colloidal quantum wells (CQWs) can served as both donor and acceptor simultaneously.",
+          "retrievedAt": "2026-09-07T05:20:18.182Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0668-8",
+          "url": "https://personal.ntu.edu.sg/hcdang/",
+          "excerpt": "See details EyeFyx: Vision Correction for Digital Displays Presbyopia: reading on screen without glasses.",
+          "retrievedAt": "2026-09-07T05:20:18.182Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:35:00.000Z",
+      "nextAction": "None; overview verified, work omitted until authoritative list available."
     },
     "vp-0669": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.ntu.edu.sg/soh/admissions/pgc/mling/faculty"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0669-1",
+          "url": "https://www.ntu.edu.sg/soh/admissions/pgc/mling/faculty",
+          "excerpt": "EAN Visiting Graduate Research Student Scheme Alumni Back Back Alumni SoH Alumni Say SoHAA Exco Student Life Back Back Student Life Resources Student Club Testimonials News & Events Back Back News & Events News Events at NTU Humanities NTU Distinguished Lectures in the Humanities Series&#160; Conferences Career Search Corporate NTU College of Humanities, Arts and Social Sciences School of Humanities Admissions Admissions About Us Research Alumni Student Life News & Events Career Postgraduate (by Coursework) Postgraduate (by Coursework) Undergraduate Graduate (by Research) Admissions Contacts M.",
+          "retrievedAt": "2026-09-07T05:20:18.322Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0669-2",
+          "url": "https://www.ntu.edu.sg/soh/admissions/pgc/mling/faculty",
+          "excerpt": "in Translation and Interpretation Faculty About the Programme Programme Structure Courses Admission Tuition Fees Faculty FAQs Contact Us Testimonials Faculty Instructors Teaching the Programme Assoc Prof Tan Ying Ying (Director, MA Linguistics Programme) (Head, Linguistics and Multilingual Studies) Tan Ying Ying is an Associate Professor of Linguistics and Multilingual Studies at the Nanyang Technological University in Singapore.",
+          "retrievedAt": "2026-09-07T05:20:18.322Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0669-3",
+          "url": "https://www.ntu.edu.sg/soh/admissions/pgc/mling/faculty",
+          "excerpt": "Working from approaches and methodologies in the fields of sociophonetics and sociolinguistics, her research primarily focuses on the languages of Singapore, especially Singlish, Singapore English, Mandarin Chinese, Malay, and Min languages like Teochew and Hokkien.",
+          "retrievedAt": "2026-09-07T05:20:18.322Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0669-4",
+          "url": "https://www.ntu.edu.sg/soh/admissions/pgc/mling/faculty",
+          "excerpt": "Asst Prof Li Haoze (Deputy Director, MA Linguistics Programme) Li Haoze's research interest lies primarily in semantics and pragmatics, as well as their interactions with syntax.",
+          "retrievedAt": "2026-09-07T05:20:18.322Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0669-5",
+          "url": "https://www.ntu.edu.sg/soh/admissions/pgc/mling/faculty",
+          "excerpt": "More specifically, he has worked on Mandarin (and its dialects), Cantonese, English, and Japanese in the following areas: meaning of questions, form--meaning mismatches, focus--interrogative interaction, quantification and measurement, sentence-final particles and speech acts, and ellipsis.",
+          "retrievedAt": "2026-09-07T05:20:18.322Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0669-6",
+          "url": "https://www.ntu.edu.sg/soh/admissions/pgc/mling/faculty",
+          "excerpt": "Although the majority of his work is done with tools in theoretical semantics and syntax, he has started recent collaborative projects incorporating other methods in contemporary linguistics, including experimental linguistics and corpus study.",
+          "retrievedAt": "2026-09-07T05:20:18.322Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0669-7",
+          "url": "https://www.ntu.edu.sg/soh/admissions/pgc/mling/faculty",
+          "excerpt": "Asst Prof Luke Lu Luke Lu is an Assistant Professor of Linguistics and Multilingual Studies, Nanyang Technological University, Singapore.",
+          "retrievedAt": "2026-09-07T05:20:18.322Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0669-8",
+          "url": "https://www.ntu.edu.sg/soh/admissions/pgc/mling/faculty",
+          "excerpt": "He is primarily interested in approaches to interactional sociolinguistics and ethnography, pertaining to issues such as transnational mobility, education, language rights, language planning and policy, and ethnicity.",
+          "retrievedAt": "2026-09-07T05:20:18.322Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:35:00.000Z",
+      "nextAction": "None; profile lacks narrative overview and publication list."
     },
     "vp-0670": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.singaporetech.edu.sg/directory/faculty/thi-qui-nguyen"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:35:00.000Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-0671": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://sites.google.com/view/vinhnguyenresearch"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0671-1",
+          "url": "https://sites.google.com/view/vinhnguyenresearch",
+          "excerpt": "Vinh Nguyen Search this site Embedded Files Skip to main content Skip to navigation Vinh Nguyen Home CV Research Teaching Vinh Nguyen Home CV Research Teaching More Home CV Research Teaching Vinh Q.",
+          "retrievedAt": "2026-09-07T05:20:18.907Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0671-2",
+          "url": "https://sites.google.com/view/vinhnguyenresearch",
+          "excerpt": "Nguyen Financial Economist & Educator | PhD in Finance Washington DC-Baltimore Area Email: vinhquangnguyen@gmail.",
+          "retrievedAt": "2026-09-07T05:20:18.907Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:35:00.000Z",
+      "nextAction": "None; profile lacks narrative overview and publication list."
     },
     "vp-0672": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://research.monash.edu/en/persons/quoc-anh-do/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0672-1",
+          "url": "https://research.monash.edu/en/persons/quoc-anh-do/",
+          "excerpt": "Quoc-Anh Do - Monash University Skip to main navigation Skip to search Skip to main content Monash University Home Search content at Monash University Home Profiles Research units Research Infrastructure Projects Outputs Prizes Activities Press/Media View Scopus Profile Quoc-Anh Do Professor Professor , Department of Economics https://orcid.",
+          "retrievedAt": "2026-09-07T05:20:19.954Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0672-2",
+          "url": "https://research.monash.edu/en/persons/quoc-anh-do/",
+          "excerpt": "Do monash edu 2009 2026 Research activity per year Overview Network Outputs (8) Personal profile Expertise related to UN Sustainable Development Goals In 2015, UN member states agreed to 17 global Sustainable Development Goals (SDGs) to end poverty, protect the planet and ensure prosperity for all.",
+          "retrievedAt": "2026-09-07T05:20:19.954Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0672-3",
+          "url": "https://research.monash.edu/en/persons/quoc-anh-do/",
+          "excerpt": "This person’s work contributes towards the following SDG(s): SDG 11 Sustainable Cities and Communities Collaborations and top research areas from the last five years Recent external collaboration on country/territory level.",
+          "retrievedAt": "2026-09-07T05:20:19.954Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0672-4",
+          "url": "https://research.monash.edu/en/persons/quoc-anh-do/",
+          "excerpt": "Dive into details by clicking on the dots or Select a country/territory from the list Dive into details Select a country/territory to view shared publications and projects Close Select a country/territory from the list Explore network further Research output Research output per year 2009 2009 2010 2014 2017 2019 2024 2026 2026 8 Article Research output per year Research output per year Friendship networks and political opinions Algan, Y.",
+          "retrievedAt": "2026-09-07T05:20:19.954Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0672-5",
+          "url": "https://research.monash.edu/en/persons/quoc-anh-do/",
+          "excerpt": "Research output : Contribution to journal › Article › Research › peer-review J'Accuse!",
+          "retrievedAt": "2026-09-07T05:20:19.954Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0672-6",
+          "url": "https://research.monash.edu/en/persons/quoc-anh-do/",
+          "excerpt": "Research output : Contribution to journal › Article › Research › peer-review Open Access File 3 Link opens in a new tab Citations (Scopus) Capital cities, conflict, and misgovernance Campante, F.",
+          "retrievedAt": "2026-09-07T05:20:19.954Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0672-7",
+          "url": "https://research.monash.edu/en/persons/quoc-anh-do/",
+          "excerpt": "Research output : Contribution to journal › Article › Research › peer-review 20 Link opens in a new tab Citations (Scopus) One mandarin benefits the whole clan: hometown favoritism in an authoritarian regime Do, Q.",
+          "retrievedAt": "2026-09-07T05:20:19.954Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0672-8",
+          "url": "https://research.monash.edu/en/persons/quoc-anh-do/",
+          "excerpt": "Research output : Contribution to journal › Article › Research › peer-review 106 Link opens in a new tab Citations (Scopus) Isolated capital cities, accountability, and corruption: evidence from US States Campante, F.",
+          "retrievedAt": "2026-09-07T05:20:19.954Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:35:00.000Z",
+      "nextAction": "None; profile lacks narrative overview and publication list."
     },
     "vp-0673": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://research.monash.edu/en/persons/lan-nguyen/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0673-1",
+          "url": "https://research.monash.edu/en/persons/lan-nguyen/",
+          "excerpt": "Lan Nguyen - Monash University Skip to main navigation Skip to search Skip to main content Monash University Home Search content at Monash University Home Profiles Research units Research Infrastructure Projects Outputs Prizes Activities Press/Media View Scopus Profile Lan Nguyen Assoc Professor Associate Professor (Research) , Biochemistry & Molecular Biology Monash Biomedicine Discovery Institute https://orcid.",
+          "retrievedAt": "2026-09-07T05:20:20.780Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0673-2",
+          "url": "https://research.monash.edu/en/persons/lan-nguyen/",
+          "excerpt": "Nguyen monash edu 2007 2026 Research activity per year Overview Network Projects (10) Outputs (70) Prizes (1) Press/Media (2) Personal profile Biography Dr Lan Nguyen studied Applied Mathematics and Computing at Lincoln University (New Zealand) funded by the New Zealand Study Award.",
+          "retrievedAt": "2026-09-07T05:20:20.780Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0673-3",
+          "url": "https://research.monash.edu/en/persons/lan-nguyen/",
+          "excerpt": "He was soon after introduced to the mysteriously wonderful world of cell biology and became deeply interested in interdisciplinary research that integrates cell biology and mathematical modelling.",
+          "retrievedAt": "2026-09-07T05:20:20.780Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0673-4",
+          "url": "https://research.monash.edu/en/persons/lan-nguyen/",
+          "excerpt": "D in Computational Systems Biology early 2010, funded by the NZ TEC's Top Doctoral Achiever scheme, under Prof.",
+          "retrievedAt": "2026-09-07T05:20:20.780Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0673-5",
+          "url": "https://research.monash.edu/en/persons/lan-nguyen/",
+          "excerpt": "He then joined Systems Biology Ireland (SBI), a leading systems biology institute in Europe, to carry out postdoc under the mentorship of Prof.",
+          "retrievedAt": "2026-09-07T05:20:20.780Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0673-6",
+          "url": "https://research.monash.edu/en/persons/lan-nguyen/",
+          "excerpt": "Boris Kholodenko and Walter Kolch, world experts in modelling and signal transduction.",
+          "retrievedAt": "2026-09-07T05:20:20.780Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0673-7",
+          "url": "https://research.monash.edu/en/persons/lan-nguyen/",
+          "excerpt": "He joined Monash University in September 2015 as a Senior Research Fellow and Head of the Computational Network Modelling Lab in the Dept.",
+          "retrievedAt": "2026-09-07T05:20:20.780Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0673-8",
+          "url": "https://research.monash.edu/en/persons/lan-nguyen/",
+          "excerpt": "Research Interest Cells in our bodies respond to extracellular cues utilizing not just isolated proteins, but their highly ordered responses result from coordinated actions of networks of proteins.",
+          "retrievedAt": "2026-09-07T05:20:20.780Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:35:00.000Z",
+      "nextAction": "None; overview verified, work omitted until authoritative list available."
     },
     "vp-0674": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://research.monash.edu/en/persons/van-nguyen/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0674-1",
+          "url": "https://research.monash.edu/en/persons/van-nguyen/",
+          "excerpt": "Van Nguyen - Monash University Skip to main navigation Skip to search Skip to main content Monash University Home Search content at Monash University Home Profiles Research units Research Infrastructure Projects Outputs Prizes Activities Press/Media View Scopus Profile Van Nguyen Dr Lecturer , School of Nursing and Midwifery https://orcid.",
+          "retrievedAt": "2026-09-07T05:20:22.333Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0674-2",
+          "url": "https://research.monash.edu/en/persons/van-nguyen/",
+          "excerpt": "edu/medicine/research/supervisorconnect\" onclick=\"target='_blank';\"&gt;https://www.",
+          "retrievedAt": "2026-09-07T05:20:22.333Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0674-3",
+          "url": "https://research.monash.edu/en/persons/van-nguyen/",
+          "excerpt": "edu/medicine/research/supervisorconnect&lt;/a&gt; 2014 2026 Research activity per year Overview Network Projects (3) Outputs (45) Prizes (6) Activities (21) Personal profile Research area keywords Clinical Education Health Education Professional Identity Instrument Development research methods Nursing Health workforce Expertise related to UN Sustainable Development Goals In 2015, UN member states agreed to 17 global Sustainable Development Goals (SDGs) to end poverty, protect the planet and ensure prosperity for all.",
+          "retrievedAt": "2026-09-07T05:20:22.333Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0674-4",
+          "url": "https://research.monash.edu/en/persons/van-nguyen/",
+          "excerpt": "This person’s work contributes towards the following SDG(s): SDG 3 Good Health and Well-being Collaborations and top research areas from the last five years Recent external collaboration on country/territory level.",
+          "retrievedAt": "2026-09-07T05:20:22.333Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0674-5",
+          "url": "https://research.monash.edu/en/persons/van-nguyen/",
+          "excerpt": "Dive into details by clicking on the dots or Select a country/territory from the list Dive into details Select a country/territory to view shared publications and projects Close Select a country/territory from the list Explore network further Projects Projects per year 2025 2025 2026 2027 3 Active Projects per year Measuring women’s perception of feeling safe during labour and birth and evaluating clinical and emotional outcomes.",
+          "retrievedAt": "2026-09-07T05:20:22.333Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0674-6",
+          "url": "https://research.monash.edu/en/persons/van-nguyen/",
+          "excerpt": "(Chief Investigator (CI)) 5/08/26 → 4/08/27 Project : Research Evaluating community-based mental health placements in urban and rural settings: A realist economic evaluation Nguyen, V.",
+          "retrievedAt": "2026-09-07T05:20:22.333Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0674-7",
+          "url": "https://research.monash.edu/en/persons/van-nguyen/",
+          "excerpt": "(Chief Investigator (CI)) 1/08/26 → 31/07/27 Project : Research Preparation/training needs of new nurse/midwife academics (NNMAs) in the transition to academia and academic educational roles: A scoping review Nguyen, V.",
+          "retrievedAt": "2026-09-07T05:20:22.333Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0674-8",
+          "url": "https://research.monash.edu/en/persons/van-nguyen/",
+          "excerpt": "(Chief Investigator (CI)) 1/01/25 → 31/12/26 Project : Research Research output Research output per year 2014 2018 2022 2023 2025 2026 2026 16 Article 12 Abstract 5 Other Report 5 Review Article 7 More 2 Chapter (Book) 2 Poster 2 Meeting Abstract 1 Foreword / Postscript Research output per year Research output per year Cultural influences on Asian health profession trainees seeking and receiving feedback: a scoping review Fullerton, P.",
+          "retrievedAt": "2026-09-07T05:20:22.333Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:35:00.000Z",
+      "nextAction": "None; overview verified, work omitted until authoritative list available."
     },
     "vp-0675": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://melbourneinstitute.unimelb.edu.au/staff/research/staff-listings/viet-hoang-nguyen"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://melbourneinstitute.unimelb.edu.au/staff/research/staff-listings/viet-hoang-nguyen: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T05:35:00.000Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-0676": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://fbe.unimelb.edu.au/our-people/staff/economics/kieu-trang-nguyen",
         "https://sites.google.com/view/kieutrangnguyen/home"
       ],
-      "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "evidence": [
+        {
+          "id": "vp-0676-1",
+          "url": "https://sites.google.com/view/kieutrangnguyen/home",
+          "excerpt": "Kieu-Trang Nguyen Search this site Embedded Files Skip to main content Skip to navigation Kieu-Trang Nguyen Home Research Kieu-Trang Nguyen Home Research More Home Research Home I am an Assistant Professor at the University of Melbourne.",
+          "retrievedAt": "2026-09-07T05:20:23.692Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0676-2",
+          "url": "https://sites.google.com/view/kieutrangnguyen/home",
+          "excerpt": "I received my PhD in Economics from the London School of Economics and Political Science.",
+          "retrievedAt": "2026-09-07T05:20:23.692Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
+      "errors": [
+        "https://fbe.unimelb.edu.au/our-people/staff/economics/kieu-trang-nguyen: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T05:35:00.000Z",
+      "nextAction": "None; profile lacks narrative overview and publication list."
     },
     "vp-0677": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://fbe.unimelb.edu.au/about/academic-staff"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://fbe.unimelb.edu.au/about/academic-staff: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T05:35:00.000Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-0678": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://findanexpert.unimelb.edu.au/profile/25627-christine-nguyen"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:35:00.000Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-0679": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://findanexpert.unimelb.edu.au/profile/767988-bao-nguyen"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:35:00.000Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-0680": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.sydney.edu.au/business/study/study-areas/human-resource-management-industrial-relations/academics.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0680-1",
+          "url": "https://www.sydney.edu.au/business/study/study-areas/human-resource-management-industrial-relations/academics.html",
+          "excerpt": "Academics - The University of Sydney The University of Sydney Business School Study business Schools Our research Industry and community News and events About false Study business false false Study areas false false Human resources false false Academics true true /content/dam/campus-facilities-and-amenities/buildings/quadrangle/University of Sydney Jacaranda Flame Tree render small.",
+          "retrievedAt": "2026-09-07T05:20:24.952Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0680-2",
+          "url": "https://www.sydney.edu.au/business/study/study-areas/human-resource-management-industrial-relations/academics.html",
+          "excerpt": "jpg 50% Meet our academics Learn from leading industry professionals https://www.",
+          "retrievedAt": "2026-09-07T05:20:24.952Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0680-3",
+          "url": "https://www.sydney.edu.au/business/study/study-areas/human-resource-management-industrial-relations/academics.html",
+          "excerpt": "au/business/archive-pages/old-study-areas/human-resource-management-industrial-relations.",
+          "retrievedAt": "2026-09-07T05:20:24.952Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0680-4",
+          "url": "https://www.sydney.edu.au/business/study/study-areas/human-resource-management-industrial-relations/academics.html",
+          "excerpt": "jpeg 2880w false The strength of our human resource management and industrial relations degree is due to the quality of our teaching staff.",
+          "retrievedAt": "2026-09-07T05:20:24.952Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0680-5",
+          "url": "https://www.sydney.edu.au/business/study/study-areas/human-resource-management-industrial-relations/academics.html",
+          "excerpt": "&lt;/p>\\r\\n&#34;}}\" id=\"text-d2e66557b7\" class=\"cmp-text\"> The strength of our human resource management and industrial relations degree is due to the quality of our teaching staff.",
+          "retrievedAt": "2026-09-07T05:20:24.952Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0680-6",
+          "url": "https://www.sydney.edu.au/business/study/study-areas/human-resource-management-industrial-relations/academics.html",
+          "excerpt": "nguyen\\&#34;>Helena Nguyen&lt;/a>&nbsp;is an expert in employee health and wellbeing at work.",
+          "retrievedAt": "2026-09-07T05:20:24.952Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0680-7",
+          "url": "https://www.sydney.edu.au/business/study/study-areas/human-resource-management-industrial-relations/academics.html",
+          "excerpt": "Helena currently leads several high-impact, engaged industry projects with more than 19 organisations in Australia, and has successfully attracted over $1.",
+          "retrievedAt": "2026-09-07T05:20:24.952Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0680-8",
+          "url": "https://www.sydney.edu.au/business/study/study-areas/human-resource-management-industrial-relations/academics.html",
+          "excerpt": "Her research has a direct and measurable impact on organisational policies and practices and has widespread national impact.",
+          "retrievedAt": "2026-09-07T05:20:24.952Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:35:00.000Z",
+      "nextAction": "None; overview verified, work omitted until authoritative list available."
     },
     "vp-0681": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://profiles.sydney.edu.au/nam.ho-nguyen"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:35:00.000Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-0682": {
       "overview": "pending",
@@ -52653,5 +53253,5 @@
       "work": "pending"
     }
   },
-  "generatedAt": "2026-09-07T05:30:00.000Z"
+  "generatedAt": "2026-09-07T05:35:00.000Z"
 }

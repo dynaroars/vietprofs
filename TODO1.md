@@ -161,10 +161,11 @@ completion while temporary failures or unresolved verification remain.
 - [ ] Batch 30 — `vp-0581`–`vp-0600`; 20 people; 17 complete outcomes — published in `82b06c6`; counts: 13 verified overviews, 4 no-suitable-evidence overviews, 4 verified work sections (1 selected, 3 recent), 13 no-suitable-evidence work searches; 3 retries in queue (`vp-0587`, `vp-0589`, `vp-0591`).
 - [ ] Batch 31 — `vp-0601`–`vp-0620`; 20 people; 15 complete outcomes — published in `21b2ed1`; counts: 11 verified overviews, 4 no-suitable-evidence overviews, 2 verified work sections (2 recent), 13 no-suitable-evidence work searches; 5 retries in queue (`vp-0602`, `vp-0610`, `vp-0611`, `vp-0612`, `vp-0613`).
 - [ ] Batch 32 — `vp-0621`–`vp-0640`; 20 people; 14 complete outcomes — published in `e1743b8`; counts: 10 verified overviews, 4 no-suitable-evidence overviews, 0 verified work sections, 14 no-suitable-evidence work searches; 6 retries in queue (`vp-0622`, `vp-0626`, `vp-0630`, `vp-0633`, `vp-0634`, `vp-0640`).
-- [x] ~~Batch 33 — `vp-0641`–`vp-0661`; 20 people; all outcomes complete~~ — published in this commit; counts: 16 verified overviews, 4 no-suitable-evidence overviews, 1 verified work section (1 selected), 19 no-suitable-evidence work searches; 0 unresolved retries.
-- [ ] Batch 34 — `vp-0662`–`vp-0681`; 20 people; pending.
+- [x] ~~Batch 33 — `vp-0641`–`vp-0661`; 20 people; all outcomes complete~~ — published in `3b5dedf`; counts: 16 verified overviews, 4 no-suitable-evidence overviews, 1 verified work section (1 selected), 19 no-suitable-evidence work searches; 0 unresolved retries.
+- [ ] Batch 34 — `vp-0662`–`vp-0681`; 20 people; 12 complete outcomes; counts: 6 verified overviews, 6 no-suitable-evidence overviews, 1 verified work section (1 selected), 11 no-suitable-evidence work searches; 8 retries in queue (`vp-0665`, `vp-0666`, `vp-0670`, `vp-0675`, `vp-0677`, `vp-0678`, `vp-0679`, `vp-0681`).
+- [ ] Batch 35 — `vp-0682`–`vp-0701`; 20 people; pending.
 
-Progress note: batches 1 through 33 processed (455 verified overviews, 124 no-suitable-evidence overviews, 267 verified work sections [87 selected, 180 recent], 312 no-suitable-evidence work results, 81 retries in queue). Batch 33 will be published now; Batch 34 will be processed next.
+Progress note: batches 1 through 34 processed (461 verified overviews, 130 no-suitable-evidence overviews, 268 verified work sections [88 selected, 180 recent], 323 no-suitable-evidence work results, 89 retries in queue). Batch 34 will be published now; Batch 35 will be processed next.
 
 Populate at execution time from the saved ID snapshot. Each entry must include batch number,
 ledger reference or exact IDs, outcome counts, remaining retries, and publication status.
