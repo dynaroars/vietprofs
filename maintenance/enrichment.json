@@ -3505,7 +3505,8 @@
         "vp-1488",
         "vp-1489"
       ],
-      "status": "pending"
+      "status": "in_progress",
+      "startedAt": "2026-09-07T19:57:54.352Z"
     },
     {
       "number": 75,
@@ -84674,164 +84675,766 @@
       "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1474": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.espace-sciences.org/sciences-ouest/299/actualite/hommage-a-bach-lien-hua"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.espace-sciences.org/sciences-ouest/299/actualite/hommage-a-bach-lien-hua: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:58:50.313Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1475": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://profiles.sydney.edu.au/kim-yen.phan-thien"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:58:50.313Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1476": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.nmbu.no/ansatte/thu-hien-to"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.nmbu.no/ansatte/thu-hien-to: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:58:50.313Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1477": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.univ-gustave-eiffel.fr/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.univ-gustave-eiffel.fr/: fetch failed"
+      ],
+      "updatedAt": "2026-09-07T19:58:50.313Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1478": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://lmc2.univ-lyon1.fr/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1478-1",
+          "url": "https://lmc2.univ-lyon1.fr/",
+          "excerpt": "Laboratoire des Matériaux Composites pour la Construction Skip to content Laboratoire des Matériaux Composites pour la Construction 82, boulevard Niels Bohr 69100, Villeurbanne +33 4 72 69 21 30 lmc2@univ-lyon1.",
+          "retrievedAt": "2026-09-07T19:57:59.203Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1478-2",
+          "url": "https://lmc2.univ-lyon1.fr/",
+          "excerpt": "il LMC2 Equipe Enseignants chercheurs Personnel technique et administratif Les doctorants 2019-2025 Anciens doctorants Activités Politique de recherche Projets Equipements Publications Actualités Localisation Connexion Français Français English Test en flexion jusqu’à la ruine d’un module hybride acier – CLT - ANR MixAB Projet VIVALDI - Étude de la variation dimensionnelle de murs en béton de bois (TIMBERROC) sous conditions environnementales accélérées dans une enceinte climatique de 10m 3 Installation des planchers Hybridal lors d'un chantier de construction d'un bâtiment à plusieurs niveaux.",
+          "retrievedAt": "2026-09-07T19:57:59.203Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1478-3",
+          "url": "https://lmc2.univ-lyon1.fr/",
+          "excerpt": "Résultats présentés lors de la conférence CICE 2025 Essais sur tirants en béton armé dans le cadre du projet RAFAL .",
+          "retrievedAt": "2026-09-07T19:57:59.203Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1478-4",
+          "url": "https://lmc2.univ-lyon1.fr/",
+          "excerpt": "Ben-Dahou Essais quasi-statique cyclique des voiles BA dans le cadre du projet RAFAL.",
+          "retrievedAt": "2026-09-07T19:57:59.203Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1478-5",
+          "url": "https://lmc2.univ-lyon1.fr/",
+          "excerpt": "Nasser Bienvenue sur le site du Laboratoire des Matériaux Composites pour la Construction (LMC2).",
+          "retrievedAt": "2026-09-07T19:57:59.203Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1478-6",
+          "url": "https://lmc2.univ-lyon1.fr/",
+          "excerpt": "Le LMC2 est un laboratoire de recherche de l&rsquo;Université Claude Bernard Lyon I (UCBL).",
+          "retrievedAt": "2026-09-07T19:57:59.203Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1478-7",
+          "url": "https://lmc2.univ-lyon1.fr/",
+          "excerpt": "Il s&rsquo; entend se positionner comme un acteur majeur dans la recherche sur les matériaux et des structures composites appliqués aux constructions et aux ouvrages de génie civil, avec un accent particulier sur l’analyse expérimentale et la modélisation du comportement d’ouvrages ou de composants d’ouvrages de génie civil – tels que le béton armé, le béton précontraint, le bois ou le métal.",
+          "retrievedAt": "2026-09-07T19:57:59.203Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1478-8",
+          "url": "https://lmc2.univ-lyon1.fr/",
+          "excerpt": "Ses orientations scientifiques s’inscrivent pleinement dans les enjeux de la transition écologique, en visant notamment la mise au point de matériaux et de technologies de construction plus respectueux de l’environnement, afin de maîtriser la durabilité des ouvrages et de prévenir les risques liés à leur vieillissement ou à l’évolution des sollicitations.",
+          "retrievedAt": "2026-09-07T19:57:59.203Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:58:50.313Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1479": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www-irisa.univ-ubs.fr/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1479-1",
+          "url": "https://www-irisa.univ-ubs.fr/",
+          "excerpt": "tacts + d'infos UMR IRISA Directeur de l&#39;UMR : Guillaume Gravier Directrices-adjointes : Sandrine Blazy, Pascale S&eacute;billot Site de l&#39;Universit&eacute; Bretagne Sud Responsable : Fr&eacute;d&eacute;ric Guidec Bienvenue � l'IRISA, site de l'Universit� Bretagne Sud L&#39;IRISA (Institut de Recherche en Informatique et Syst&egrave;mes Al&eacute;atoires) est une unit&eacute; mixte de recherche CNRS n&deg; 6074 regroupant des &eacute;quipes de recherche de l&#39;universit&eacute; de Rennes I, l&#39;Universit&eacute; Bretagne Sud, l&#39;INSA de Rennes, l&#39;ENS Cachan et Sup&eacute;lec.",
+          "retrievedAt": "2026-09-07T19:57:59.982Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:58:50.313Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1480": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://researchmap.jp/buitam/?lang=en"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://researchmap.jp/buitam/?lang=en: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T19:58:50.313Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1481": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.etsmtl.ca/en/research/professors-researchers/tdao"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1481-1",
+          "url": "https://www.etsmtl.ca/en/research/professors-researchers/tdao",
+          "excerpt": "vertes Horaire ChemiNot Programmes Bibliothèque Centre sportif 51 Résultats pour : « Portes ouvertes » Programmes 5 Départements 5 Cours 12 Bottin 8 Pages 22 Articles 17 Clubs étudiants 2 Événements 8 Activités 3 Portes ouvertes Page L'ÉTS vous donne rendez-vous à sa journée portes ouvertes qui aura lieu sur son campus à l'automne et à l'hiver : Samedi 18 novembre 2023 Samedi 17 février 2024 Le dépôt de votre demande d'admission à un programme de baccalauréat ou au cheminement universitaire en technologie sera gratuit si vous étudiez ou détenez un diplôme collégial d'un établissement québécois.",
+          "retrievedAt": "2026-09-07T19:58:03.732Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1481-2",
+          "url": "https://www.etsmtl.ca/en/research/professors-researchers/tdao",
+          "excerpt": "S in numbers Armoiries Retour Governance Office of the Chief Executive Officer General Secretariat Retour Sustainable Development Teaching Research Communities Operations BIXI Retour Equity, Diversity and Inclusion EDI in Research Women and Engineering Retour Graduates Services and discounts After graduation: employment and professional development An engineering network: statistical profile ÉTS Ambassadors Keep in touch with ÉTS Réseau ÉTS (in French) Admission Submit an application for admission Info-ÉTS Learn about ÉTS and its study programs Current students Everything you need in one place!",
+          "retrievedAt": "2026-09-07T19:58:03.732Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1481-3",
+          "url": "https://www.etsmtl.ca/en/research/professors-researchers/tdao",
+          "excerpt": "Admission Submit an application for admission Info-ÉTS Learn about ÉTS and its study programs Admission Submit an application for admission Info-ÉTS Learn about ÉTS and its study programs Current students Everything you need in one place!",
+          "retrievedAt": "2026-09-07T19:58:03.732Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1481-4",
+          "url": "https://www.etsmtl.ca/en/research/professors-researchers/tdao",
+          "excerpt": "tes Keep in touch with ÉTS Bureau du respect de la personne (Respectful Campus Office) Consult the available resources Careers Check the job offers at ÉTS Graduates Keep in touch with ÉTS Upcoming events Sep 16, 2026 at 11:00 Student Clubs Festival and Corn Roast Oct 7, 2026 at 08:00 10th International Colloquium on Scientific and Fundamental Aspects of GNSS Home Study at ÉTS Faculty Dao, Thien-My 01 Overview 02 Courses and supervision 03 Publications Overview Dao, Thien-My Overview Courses and supervision Publications Thien-My Dao Professeur Department Département de génie mécanique Degrees B.",
+          "retrievedAt": "2026-09-07T19:58:03.732Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1481-5",
+          "url": "https://www.etsmtl.ca/en/research/professors-researchers/tdao",
+          "excerpt": "ca Overview Research Area Intelligent and Autonomous Systems Expertise Système manufacturier Conception de systèmes Gestion manufacturière Modélisation Simulation Optimisation de systèmes Réseau de neuronnes Recherche tabou Méthodes méta-heuristiques Ordonnancement des opérations Awards and honors 2015 : Prix d'excellence du c.",
+          "retrievedAt": "2026-09-07T19:58:03.732Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1481-6",
+          "url": "https://www.etsmtl.ca/en/research/professors-researchers/tdao",
+          "excerpt": "pour les services à la communauté 2015 | École de technologie supérieure Courses and supervision Supervision Thèse de doctorat Conception optimale des cellules de fabrication flexibles basée sur l'approche des réseaux de neurones, par Barthélémy Hugues Ateme-Nguema Hiver 2007 Thèse de doctorat (recherche appliquée) En codirection avec : Hakim A.",
+          "retrievedAt": "2026-09-07T19:58:03.732Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1481-7",
+          "url": "https://www.etsmtl.ca/en/research/professors-researchers/tdao",
+          "excerpt": "r Sonia Bourachdi Automne 2003 Étude de réduction des coûts de production du caisson d'échappement des turbines SGT-A65 de Siemens, par Jean de Laure Sonkin Tenessong Été 2018 Projet d'intervention en entreprise à 15 crédits En codirection avec : Alain Bouchard Optimisation du procédé de fabrication; la stabilité dimensionnelle en production de boulangerie artisanale, par Myriam Larouche-Tremblay Hiver 2015 Rapport technique à 6 crédits Optimisation de l'agencement des unités de transformation chez Moulure Algonquin, par Jean Sébastien Vaillancourt Été 2012 Publications Publications Poster 1 H.",
+          "retrievedAt": "2026-09-07T19:58:03.732Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1481-8",
+          "url": "https://www.etsmtl.ca/en/research/professors-researchers/tdao",
+          "excerpt": "2015 « Dynamic forecasting of avionics obsolescence to enhance sustainability ».",
+          "retrievedAt": "2026-09-07T19:58:03.732Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:58:50.313Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1482": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://et.charlotte.edu/directory/chau-le-ph-d/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1482-1",
+          "url": "https://et.charlotte.edu/directory/chau-le-ph-d/",
+          "excerpt": "School of Energy - William States Lee College of Engineering Skip to main content Visit the University of North Carolina at Charlotte homepage Explore Visit the University of North Carolina at Charlotte homepage Close What can we help you find?",
+          "retrievedAt": "2026-09-07T19:58:04.172Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1482-2",
+          "url": "https://et.charlotte.edu/directory/chau-le-ph-d/",
+          "excerpt": "raduate Students Graduate Students News & Events Let’s Connect Let’s Connect Alumni Giving Industry Engagement Community Involvement Contact Us Home Overview Departments School of Energy School of Energy School of Energy Toggle Child Menu Undergraduate Programs Toggle Submenu Departmental Advising Graduate Programs Toggle Submenu Departmental Advising Culminating Experience Graduate Assistantships Research Toggle Submenu Individual Research Groups Industry Advisory Board Faculty & Staff Explore Your Options Welcome to the School of Energy, situated at the heart of a premier energy hub in the U.",
+          "retrievedAt": "2026-09-07T19:58:04.172Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1482-3",
+          "url": "https://et.charlotte.edu/directory/chau-le-ph-d/",
+          "excerpt": "Our interdisciplinary curriculum prepares graduates to design, build and operate next-generation power systems.",
+          "retrievedAt": "2026-09-07T19:58:04.172Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1482-4",
+          "url": "https://et.charlotte.edu/directory/chau-le-ph-d/",
+          "excerpt": "By partnering deeply with industry leaders, we ensure our graduates hit the ground running with the cutting-edge skills required to navigate and transform the modern energy landscape.",
+          "retrievedAt": "2026-09-07T19:58:04.172Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1482-5",
+          "url": "https://et.charlotte.edu/directory/chau-le-ph-d/",
+          "excerpt": "Why UNC Charlotte At UNC Charlotte, the School of Energy is designed for students who learn by doing.",
+          "retrievedAt": "2026-09-07T19:58:04.172Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1482-6",
+          "url": "https://et.charlotte.edu/directory/chau-le-ph-d/",
+          "excerpt": "Work with modern equipment, learn from industry-experienced faculty and gain real-world experience through internships and applied projects.",
+          "retrievedAt": "2026-09-07T19:58:04.172Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1482-7",
+          "url": "https://et.charlotte.edu/directory/chau-le-ph-d/",
+          "excerpt": "With a strong focus on practical skills and industry connections, you’ll graduate ready to step in and make an immediate impact.",
+          "retrievedAt": "2026-09-07T19:58:04.172Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1482-8",
+          "url": "https://et.charlotte.edu/directory/chau-le-ph-d/",
+          "excerpt": "See Energy Training in Action Get a closer look at the School of Energy at UNC Charlotte, where hands-on learning meets real-world impact.",
+          "retrievedAt": "2026-09-07T19:58:04.172Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:58:50.313Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1483": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.laplace.univ-tlse.fr/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1483-1",
+          "url": "https://www.laplace.univ-tlse.fr/",
+          "excerpt": "LAPLACE LABORATOIRE PLASMA ET CONVERSION D’ÉNERGIE LE LABORATOIRE Le Laboratoire Plasma et Conversion d’Energie est une Unité Mixte de Recherche du Centre National de la Recherche Scientifique (CNRS), de l’Institut National Polytechnique de Toulouse (INPT) et de l’Université de Toulouse (UT).",
+          "retrievedAt": "2026-09-07T19:58:05.766Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1483-2",
+          "url": "https://www.laplace.univ-tlse.fr/",
+          "excerpt": "L’Université de Toulouse (et le LAPLACE) décroche un programme européen hypercompétitif, le CBHE « MELINA » !",
+          "retrievedAt": "2026-09-07T19:58:05.766Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1483-3",
+          "url": "https://www.laplace.univ-tlse.fr/",
+          "excerpt": "Avec 974 dossiers déposés à travers toute l’Europe dont 78 projets retenus et financés, Le LAPLACE (et l’Université de Toulouse) se distingue parmi l’un des En savoir plus » 26 novembre 2025 Highlights 2025 du LAPLACE Ce fascicule présente les faits marquants scientifiques et évènementiels 2025 du LAboratoire PLAsma et Conversion d’Energie.",
+          "retrievedAt": "2026-09-07T19:58:05.766Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1483-4",
+          "url": "https://www.laplace.univ-tlse.fr/",
+          "excerpt": "Télécharger la plaquette En savoir plus » 26 novembre 2025 Retour sur le 6ème symposium de Génie Electrique, SGE2025, co-organisé par le laboratoire Laplace et le LAAS Le 6ème symposium de génie électrique, SGE2025, a eu lieu à Toulouse du 1er au 3 Juillet, au centre de congrès Pierre Baudis.",
+          "retrievedAt": "2026-09-07T19:58:05.766Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1483-5",
+          "url": "https://www.laplace.univ-tlse.fr/",
+          "excerpt": "Ce symposium, En savoir plus » 1 août 2025 Charger plus ACTUALITÉS Voir toutes les actualités Soutenance de thèse &#8211; Marie-Pia MARCHANT &#8211; Jeudi 24 septembre 2026 à 14 h 00 &#8211; Salle de conférence du CRBE, site Rangueil &#8211; bât 4R1 Marie-Pia Marchant soutiendra sa thèse le jeudi 24 septembre à 14 h 00 – salle de conférence du CRBE, site Rangueil (bâtiment 4R1), sur le En savoir plus » 1 septembre 2026 The Eric O.",
+          "retrievedAt": "2026-09-07T19:58:05.766Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1483-6",
+          "url": "https://www.laplace.univ-tlse.fr/",
+          "excerpt": "Forster Memorial Lecture décerné à Gilbert Teyssèdre, Groupe DSF Le prix a été décerné à Gilbert Teyssèdre à l&rsquo;occasion de IEEE International Conference on Dielectrics, à Southampton, UK, 21-25 Juin 2026.",
+          "retrievedAt": "2026-09-07T19:58:05.766Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1483-7",
+          "url": "https://www.laplace.univ-tlse.fr/",
+          "excerpt": "La présentation a En savoir plus » 25 août 2026 Interventions dans des lycées et collèges d’Occitanie dans le cadre de l’année de l’Ingénierie Expliquer la recherche en ingénierie et pourquoi pas susciter des vocations auprès de collégiens et lycéens.",
+          "retrievedAt": "2026-09-07T19:58:05.766Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1483-8",
+          "url": "https://www.laplace.univ-tlse.fr/",
+          "excerpt": "ge, la conversion et la gestion de l’énergie avec le LAPLACE Découvrir les défis énergétiques de demain Dans le cadre de l’Année de l’Ingénierie, des membres du laboratoire LAPLACE (Pauline Kergus, Maelie Heuls, Eric Bru, Fabien En savoir plus » 7 juillet 2026 Soutenance de thèse &#8211; Gautier CAPDEVILLE &#8211; Mercredi 22 juillet 2026 à 14h00 &#8211; Salle des thèses de l&rsquo;ENSEEIHT Gautier CAPDEVILLE soutiendra sa thèse le mercredi 22 juillet 2026 à 14 h 00 – Salle des thèses de l&rsquo;ENSEEIHT , sur le sujet : Etude En savoir plus » 29 juin 2026 Charger plus LE LABORATOIRE EN IMAGE !",
+          "retrievedAt": "2026-09-07T19:58:05.766Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:58:50.313Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1484": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://profiles.ucsf.edu/ngoc.ly"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1484-1",
+          "url": "https://profiles.ucsf.edu/ngoc.ly",
+          "excerpt": "Ngoc Ly | UCSF Profiles University of California, San Francisco About UCSF Search UCSF UCSF Medical Center Home About Help/FAQs Search Options UC Davis UCI UCLA UCSD UCSF All UC Health USC All Everything Research Concepts Awards People &#160;&#160;&#160;UC Health People &#160;&#160;&#160;UC Davis People &#160;&#160;&#160;UCI People &#160;&#160;&#160;UCLA People &#160;&#160;&#160;UCSD People &#160;&#160;&#160;UCSF People &#160;&#160;&#160;USC People on next line to remove space between --> Find People Find Everything Login to edit your profile (add a photo, awards, links to other websites, etc.",
+          "retrievedAt": "2026-09-07T19:58:06.345Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1484-2",
+          "url": "https://profiles.ucsf.edu/ngoc.ly",
+          "excerpt": ") Edit My Profile My Person List ( 0 ) Return to Top Ngoc Ly, MD, MPH Title(s) Professor, Pediatrics School School of Medicine Address 550 16th Street, #4705 San Francisco CA 94158 Pronouns She/Her/Hers ORCID 759983@ucsf.",
+          "retrievedAt": "2026-09-07T19:58:06.345Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1484-3",
+          "url": "https://profiles.ucsf.edu/ngoc.ly",
+          "excerpt": "Ly, MD, MPH is Professor of Pediatrics, Division Chief of Pediatric Pulmonology, Director of the Cystic Fibrosis Therapeutic Development Network (TDN) Research Center, co-Director of the Cystic Fibrosis Center, and Director of the Asthma Program at the University of California, San Francisco.",
+          "retrievedAt": "2026-09-07T19:58:06.345Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1484-4",
+          "url": "https://profiles.ucsf.edu/ngoc.ly",
+          "excerpt": "Ly is a pediatric pulmonologist with clinical and research interests in asthma, cystic fibrosis (CF), exercise testing and bronchopulmonary dysplasia (BDP).",
+          "retrievedAt": "2026-09-07T19:58:06.345Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1484-5",
+          "url": "https://profiles.ucsf.edu/ngoc.ly",
+          "excerpt": "She is a lead investigator on several cystic fibrosis and asthma clinical research projects and trials, including those funded by Cystic Fibrosis Foundation (CFF) and TDN, National Science Foundation (NSF) and National Institute of Health (NIH).",
+          "retrievedAt": "2026-09-07T19:58:06.345Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1484-6",
+          "url": "https://profiles.ucsf.edu/ngoc.ly",
+          "excerpt": "Ly is the program director of the HRSA Maternal and Child Health Pediatric Pulmonary Center (PPC) at UCSF.",
+          "retrievedAt": "2026-09-07T19:58:06.345Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1484-7",
+          "url": "https://profiles.ucsf.edu/ngoc.ly",
+          "excerpt": "The purpose of the PPC is to improve the health status of infants, children, and adolescents with chronic respiratory conditions, sleep issues, and other related special health care needs through graduate and post-graduate level interdisciplinary training of health professionals and through working within collaborative systems that promote family-centered care, public health practices, and cultural competence to address health disparities and expand access to care.",
+          "retrievedAt": "2026-09-07T19:58:06.345Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1484-8",
+          "url": "https://profiles.ucsf.edu/ngoc.ly",
+          "excerpt": "p Advocacy Group (FLAG) UCSF 2017 Exceptional Physician Award Research keywords Asthma , Cystic Fibrosis , Bronchopulmonary Dysplasia , Exercise Induced Bronchoconstriction , Exericse testing , Digital Health Featured Publications research activities and funding Maternal and Child Health Interdisciplinary Education in Pediatric Pulmonary Centers Program HRSA HRSA-20-040-172184 Jul 1, 2020 - Jun 30, 2025 Role: Principal Investigator Description: The goal is to train multidisciplinary care in pediatric pulmonology in 5-core disciplines (pulmonary, nursing, pharmacy, social worker, and nutrition).",
+          "retrievedAt": "2026-09-07T19:58:06.345Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:58:50.313Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1485": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.graduateinstitute.ch/academic-departments/faculty/vinh-kim-nguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1485-1",
+          "url": "https://www.graduateinstitute.ch/academic-departments/faculty/vinh-kim-nguyen",
+          "excerpt": "Vinh-Kim Nguyen Skip to main content Contact us GENEVA GRADUATE INSTITUTE Chemin Eugène-Rigot 2A Case postale 1672 CH - 1211 Geneva 1, Switzerland +41 22 908 57 00 ADMISSIONS prospective@graduateinstitute.",
+          "retrievedAt": "2026-09-07T19:58:08.133Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1485-2",
+          "url": "https://www.graduateinstitute.ch/academic-departments/faculty/vinh-kim-nguyen",
+          "excerpt": "AL PROGRAMMES Summer school Exchange programmes Partner programme Undergraduate semester programme PROGRAMMES ACADEMIC DEPARTMENTS Anthropology and Sociology International Economics International History and Politics International Law International Relations & Political Science PROGRAMMES COURSE CATALOGUES PROGRAMMES EXECUTIVE PROGRAMME Master & PhD PROGRAMMES Through a disciplinary or interdisciplinary lens, our master and PhD programmes will provide you with a sound understanding of the local and global processes that define the politics and practices of international affairs and development.",
+          "retrievedAt": "2026-09-07T19:58:08.133Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1485-3",
+          "url": "https://www.graduateinstitute.ch/academic-departments/faculty/vinh-kim-nguyen",
+          "excerpt": "The Geneva Graduate Institute offers a interdisciplinary master programme and five disciplinary master and PhD programmes: INTERDISCIPLINARY MASTER ANTHROPOLOGY & SOCIOLOGY INTERNATIONAL ECONOMICS INTERNATIONAL HISTORY & POLITICS INTERNATIONAL LAW INT.",
+          "retrievedAt": "2026-09-07T19:58:08.133Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1485-4",
+          "url": "https://www.graduateinstitute.ch/academic-departments/faculty/vinh-kim-nguyen",
+          "excerpt": "ment Wellbeing and support Admitted student portal STUDENT LIFE ALUMNI Alumni Portal Alumni Reunion Associations Awards Chapters | Ambassadors Class Leaders Committee Scholarships and Prizes Meet our Alumni STUDENT LIFE CAREER SERVICES Internships and Jobs Career workshops Individual meetings Work authorisation and administrative support Innovative Student Projects Employers After Graduation Work regulation support & FAQs STUDENT LIFE HOUSING Accommodations options Short-term stay Our residences Our rooms Apply for a room Housing FAQ #WE ARE THE INSTITUTE ADMITTED PORTAL Welcome on your Campus!",
+          "retrievedAt": "2026-09-07T19:58:08.133Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1485-5",
+          "url": "https://www.graduateinstitute.ch/academic-departments/faculty/vinh-kim-nguyen",
+          "excerpt": "Sustainability Centre for Trade and Economic Integration Centre on Conflict, Development and Peacebuilding Gender Centre Global Governance Centre Global Health Centre Global Migration Centre NORRAG Global Education Centre Joint Centres Associated Programmes RESEARCH PUBLICATIONS GATEWAY RESEARCH RESEARCH SUPPORT Research funding Visiting Research Fellows PhD support Research ethics Academic publications Research toolbox RESEARCH LIBRARY Find resources Use the Library Get help Opening hours About the Library Contact Publications by the Institute PUBLICATIONS GATEWAY Explore Global Challenges no.",
+          "retrievedAt": "2026-09-07T19:58:08.133Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1485-6",
+          "url": "https://www.graduateinstitute.ch/academic-departments/faculty/vinh-kim-nguyen",
+          "excerpt": "S Upcoming Events NEWS & EVENTS Podcast Series Header menu Internet PROGRAMMES STUDENT LIFE RESEARCH ABOUT US | EXECUTIVE EDUCATION ADMISSION PEOPLE ALUMNI | NEWS EVENTS Search Home Faculty Vinh-Kim Nguyen Profile Share Vinh-Kim Nguyen Co-Director, Global Health Centre PROFESSOR, ANTHROPOLOGY AND SOCIOLOGY email Spoken languages English , French Theme Global Health Diplomacy Geographical Area Africa, Eastern Africa, Middle Africa, Western Middle East Oceania PROFILE Vinh-Kim Nguyen is a medical anthropologist and family physician from Montréal, Canada, who also practises in the Canadian Arctic.",
+          "retrievedAt": "2026-09-07T19:58:08.133Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1485-7",
+          "url": "https://www.graduateinstitute.ch/academic-departments/faculty/vinh-kim-nguyen",
+          "excerpt": "He has worked in acute care settings in hospitals in Geneva, Switzerland, and Paris, France, and during humanitarian crises in the Democratic Republic of the Congo and Guinea (during Ebola outbreaks) and in Yemen (during the ongoing conflict).",
+          "retrievedAt": "2026-09-07T19:58:08.133Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1485-8",
+          "url": "https://www.graduateinstitute.ch/academic-departments/faculty/vinh-kim-nguyen",
+          "excerpt": "He led the development and opening of COVID-19 treatment units in hospitals in Geneva, Switzerland, and Montréal, Canada, in 2020.",
+          "retrievedAt": "2026-09-07T19:58:08.133Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:58:50.313Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1486": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://med.emory.edu/departments/medicine/divisions/infectious-diseases/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1486-1",
+          "url": "https://med.emory.edu/departments/medicine/divisions/infectious-diseases/",
+          "excerpt": "arch Innovation Sub link Conducting Research Sub link Research Centers Sub link Training Sub link Academic Departments Sub link Core Facilities Giving Directory Search Search Search Close Close Menu Department of Medicine Home School of Medicine Home Departments Department of Medicine Divisions Division of Infectious Diseases Division of Infectious Diseases Emory's Division of Infectious Diseases is nationally-known for its leading advances in clinical infectious diseases and HIV care, as well as research pathogenesis, virology and immunology, epidemiology, diagnostics, and vaccine development.",
+          "retrievedAt": "2026-09-07T19:58:08.434Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1486-2",
+          "url": "https://med.emory.edu/departments/medicine/divisions/infectious-diseases/",
+          "excerpt": "Research Programs Division&#160; researchers &#160;amass more than $65 million in research funding per year, leading all the&#160; divisions &#160;in the Emory University Department of Medicine.",
+          "retrievedAt": "2026-09-07T19:58:08.434Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1486-3",
+          "url": "https://med.emory.edu/departments/medicine/divisions/infectious-diseases/",
+          "excerpt": "Infectious Diseases Research Fellowship Program We are proud to boast a strong educational program to train the future leaders in Infectious Diseases, graduating more than 125 physicians.",
+          "retrievedAt": "2026-09-07T19:58:08.434Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1486-4",
+          "url": "https://med.emory.edu/departments/medicine/divisions/infectious-diseases/",
+          "excerpt": "Infectious Diseases Fellowship Where We Work Our&#160;faculty&#160;care for clinical patients at numerous inpatient and outpatient locations within the&#160;Emory Healthcare,&#160;Grady&#160;Health System, and the&#160;Atlanta Veterans Affairs Medical Center.",
+          "retrievedAt": "2026-09-07T19:58:08.434Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1486-5",
+          "url": "https://med.emory.edu/departments/medicine/divisions/infectious-diseases/",
+          "excerpt": "on, and Healthcare Epidemiology RECOVER Atlanta Where We Work Infectious Diseases Faculty Calendar of Events Give to Us Division Contacts Division Director&#160; Anandi Sheth Division Administrator Jodi Salim Administrative Assistant Brianne Bower 404-712-2279 instagram Division of Infectious Diseases instagram Emory SOM and DOM Honors and Awards Outstanding job to our Infectious Diseases faculty members who were recognized for receiving&#160; clinical distinctions &#160; and &#160; promotions &#160;at this year's&#160; 2025 Department of Medicine Kathy Griendling Honors and Awards Celebration.",
+          "retrievedAt": "2026-09-07T19:58:08.434Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1486-6",
+          "url": "https://med.emory.edu/departments/medicine/divisions/infectious-diseases/",
+          "excerpt": "Congratulations to the following DOM members who received honors and recognitions at this year's 2025 SOM Faculty Eminence Ceremony.",
+          "retrievedAt": "2026-09-07T19:58:08.434Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1486-7",
+          "url": "https://med.emory.edu/departments/medicine/divisions/infectious-diseases/",
+          "excerpt": "Jeffrey Collins, MD, MPH Emory 1% Award Carlos del Rio, MD, MACP, FIDSA 2024 James Shepherd Lifetime Achievement Award, Georgia Hospital Association Clifford Gunthel, MD Division Gem Jessica Howard-Anderson, MD, MSc Early Career Award: Research Investigator, Southern Society for Clinical Investigation Colleen Kelley, MD, MPH Emory 1% Award G.",
+          "retrievedAt": "2026-09-07T19:58:08.434Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1486-8",
+          "url": "https://med.emory.edu/departments/medicine/divisions/infectious-diseases/",
+          "excerpt": "Marshall Lyon, MD Emory MilliPub Club Vince Marconi, MD Excellence in Research at the Atlanta VA Medical Center | John Blair Barnwell Award, Veteran’s Health Administration Office of Research & Development Caitlin Moran, MD, MSc Clinical Service Honoree, Grady Memorial Hospital Susan Ray, MD Dean’s Teaching Awards Kimberly Workowski, MD Emory MilliPub Club Division of Infectious Disease Events View All Infectious Disease Events Loading Events.",
+          "retrievedAt": "2026-09-07T19:58:08.434Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:58:50.313Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1487": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://sante.sorbonne-universite.fr/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1487-1",
+          "url": "https://sante.sorbonne-universite.fr/",
+          "excerpt": "on Direction technique et d’exploitation Services d&#039;enseignement Service informatique Service pédagogique numérique Direction des formations en santé Intégrité Scientifique Intégrité Scientifique Traitement des signalements relatifs à l’intégrité scientifique Location des salles Recrutement Recrutement Offre d&#039;emploi - laboratoire de recherche Taxe d&#039;apprentissage Accès handicapés FORMATIONS FORMATIONS Votre rentrée universitaire 2026-2027 à la Faculté de Santé Journée portes ouvertes (JPO) Inscriptions Inscriptions Informations générales d’inscription (calendriers, identifiants.",
+          "retrievedAt": "2026-09-07T19:58:08.845Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1487-2",
+          "url": "https://sante.sorbonne-universite.fr/",
+          "excerpt": ") Inscriptions PASS Inscriptions de DFGSM2 à DFASM3 Inscriptions 3e cycle de médecine Inscriptions Maïeutique Inscriptions aux études paramédicales Inscriptions Master des formations en santé Inscriptions DIPA Études médicales Études médicales PASS et L.",
+          "retrievedAt": "2026-09-07T19:58:08.845Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1487-3",
+          "url": "https://sante.sorbonne-universite.fr/",
+          "excerpt": "AS Le 2e cycle Le 3e cycle Le Cursus Médecine Sciences (CMS) Les études de maïeutique Les études de maïeutique “Mon métier ?",
+          "retrievedAt": "2026-09-07T19:58:08.845Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1487-4",
+          "url": "https://sante.sorbonne-universite.fr/",
+          "excerpt": "Les unités mixtes de service Les unités mixtes de service UMS 028 US PASS France Cohortes CATI UMS-Autonomie Les groupes de recherche clinique Les groupes de recherche clinique GRC 1 : GREEN GRC 4 : THERANOSCAN GRC 5 : Onco-Urologie Prédictive GRC 6 : C3E GRC 14 : BIOSFAST GRC 16 : GRC-TT GRC 20 : ARDELURO GRC 22 : C²MV GRC 23 : NeurON GRC 24 : HaMCRe GRC 25 : DREPS GRC 26 : IMAGES GRC 29 : ARPE GRC 30 : RESPIRE GRC 31 : EHTIC GRC 32 : TTIC GRC 33 : RIC GRC 34 : AC Echo GRC 35 : GR-Trans GRC 36 : HTAM² GRC 37 : Neurodev GRC 38 : Nova GRC 39 : Santé de l&#039;homme GRC 40 : Solid GRC 41 : SURDI.",
+          "retrievedAt": "2026-09-07T19:58:08.845Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1487-5",
+          "url": "https://sante.sorbonne-universite.fr/",
+          "excerpt": "e de l’Alliance Sorbonne Université SHIELD Règles de signature des publications scientifiques VIE DE CAMPUS VIE DE CAMPUS Vie étudiante Vie étudiante Connectez-vous facilement au Wi-Fi Les associations étudiantes Les activités sportives Se repérer sur les campus Les élections étudiantes BIPE Santé et bourses Culture Le forum d&#039;aide au choix des métiers Bibliothèques Bibliothèques La bibliothèque de la Pitié-Salpêtrière La bibliothèque Saint-Antoine La bibliothèque Charcot La bibliothèque Axial-Caroli Trouver un document Accueil et handicap Accueil et handicap À qui s&#039;adresse le SHSE ?",
+          "retrievedAt": "2026-09-07T19:58:08.845Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1487-6",
+          "url": "https://sante.sorbonne-universite.fr/",
+          "excerpt": "rnational International Étudiants Étudiants Venir Partir Enseignants, chercheurs Enseignants, chercheurs Programme professeurs invités Partir Échanges de bonne pratiques - enseignement de médecine générale Personnels administratifs Personnels administratifs Témoignages Alliance 4EU+ Alliance 4EU+ EU+PharmacoEpi : un parcours pédagogique intégré 4EU+ Pharmacoépidémiologie FAQ Presse fr en rss instagram linkedin bluesky youtube facebook Vous êtes Futur étudiant Étudiant international étudiantes et étudiants Personnel, futur collaborateur fermer Rechercher Sorbonnales 2026 : célébrons la rentrée !",
+          "retrievedAt": "2026-09-07T19:58:08.845Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1487-7",
+          "url": "https://sante.sorbonne-universite.fr/",
+          "excerpt": "nte années d’une aventure hospitalo-universitaire exceptionnelle, traversée par des générations Une nouvelle alliance hospitalo-universitaire au service des patients Le lundi 6 juillet 2026, le Grand Hôpital de l'Est Francilien (GHEF), le Groupe Hospitalo-Universitaire AP-HP – Sorbonne Université et la Faculté de Santé de Chirurgie, robotique, simulation : un institut universitaire pour former les médecins de demain La création de l’Institut universitaire de chirurgie et de médecine interventionnelle Francine Leca marque une étape importante pour accompagner les transformations de la chirurgie.",
+          "retrievedAt": "2026-09-07T19:58:08.845Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1487-8",
+          "url": "https://sante.sorbonne-universite.fr/",
+          "excerpt": "La Combattre la désinformation en santé : les recommandations de Dominique Costagliola À l’occasion de la remise au gouvernement du rapport \"Information en santé : bilan des forces et des faiblesses, recommandations pour une stratégie nationale d’information Santé mentale et addictions : une approche populationnelle au Collège de France rss instagram linkedin bluesky youtube facebook Accès directs DU et DIU Inscriptions Erasmus+ Location de salles Bibliothèques Explorer Offre de formation Nos actualités Retour sur la deuxième journée scientifique consacrée à la phagothérapie 10.",
+          "retrievedAt": "2026-09-07T19:58:08.845Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:58:50.313Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1488": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.chu-amiens.fr/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1488-1",
+          "url": "https://www.chu-amiens.fr/",
+          "excerpt": "Accueil - CHU Amiens-Picardie --> Menu Découvrez l’Hôpital ZOOM SUR : Le CHUAP investi dans 19 filières Maladies Rares &gt; Accédez à notre page Organisation du CHU Amiens-Picardie Règlement Intérieur Instances Chiffres clés et rapport d’activité Le GHT « Somme Littoral Sud » Qui sommes-nous ?",
+          "retrievedAt": "2026-09-07T19:58:09.678Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1488-2",
+          "url": "https://www.chu-amiens.fr/",
+          "excerpt": "spécialités du CHUAP Résidents EHPAD et USLD (maison de retraite) Votre consultation Préadmission en ligne DigiHosp Handiconsult Le dépistage et le traitement des allergies au CHU d'amiens Votre Hospitalisation Formalités d’admission Frais de séjour Le service social des patients L’accueil des personnes handicapées et des personnes étrangères Téléphone, télévision, cafétarias HAD – Hospitalisation à domicile Automédication paiements en ligne Remboursement de votre transport Maison des Usagers Nos engagements Notre démarche qualité Politique de sécurité et gestion des risques NON à la douleur !",
+          "retrievedAt": "2026-09-07T19:58:09.678Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1488-3",
+          "url": "https://www.chu-amiens.fr/",
+          "excerpt": "contact Étudiants Plans d'accès &gt; Accédez à notre page Trouver un service &gt; Accédez à notre page Sans condition de diplôme IFA – Institut de Formation d’Ambulanciers IFAP – Institut de Formation d’Auxiliaires de Puériculture IFAS – Institut de Formation d’Aides-Soignants Après le BAC CFARM – Centre de Formation d'Assistants de régulation médicale IFE - Institut de Formation en Ergothérapie IFMEM – Institut de Formation de Manipulateurs d’Électroradiologie Médicale IFSI – Institut de Formation en Soins Infirmiers IFTLM – Institut de Formation de Techniciens de Laboratoire Médical Après L.",
+          "retrievedAt": "2026-09-07T19:58:09.678Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1488-4",
+          "url": "https://www.chu-amiens.fr/",
+          "excerpt": "urnée Régionale de Pharmacovigilance Amiens Formulaire de contact Chercheurs Actualités Recherche &gt; Accédez à notre page ZOOM SUR : Utiliser les données du Registre du Cancer de la Somme &gt; Accédez à notre page La Direction de la Recherche Clinique et de l’Innovation Actualités Recherche Cohorte CHIEF REVERT GIRCI – Groupement Interrégional pour la Recherche Clinique et l’Innovation Nord Ouest Les Manifestations de la Recherche La recherche – Liens utiles Le Centre de Recherche Clinique Formation en recherche clinique Industriels, vous souhaitez faire appel au CRC pour une étude clinique ?",
+          "retrievedAt": "2026-09-07T19:58:09.678Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1488-5",
+          "url": "https://www.chu-amiens.fr/",
+          "excerpt": "ie Le CPP Nord-Ouest II Formulaire de contact Faire un don La recherche et l’innovation au SimUSanté® Fédération Hospitalo Universitaire FHU SURFACE Le Registre du Cancer de la Somme Missions et fonctionnement Legislation et sécurité des données Chiffres nationaux et départementaux du cancer Publications et rapport Utiliser les données du Registre du Cancer de la Somme Découvrez l’Hôpital ZOOM SUR : Le CHUAP investi dans 19 filières Maladies Rares Organisation du CHU Amiens-Picardie Règlement Intérieur Instances Chiffres clés et rapport d’activité Le GHT « Somme Littoral Sud » Qui sommes-nous ?",
+          "retrievedAt": "2026-09-07T19:58:09.678Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1488-6",
+          "url": "https://www.chu-amiens.fr/",
+          "excerpt": "AD et USLD (maison de retraite) Votre consultation Préadmission en ligne DigiHosp Handiconsult Le dépistage et le traitement des allergies au CHU d&rsquo;amiens Votre Hospitalisation Menus du CHU Amiens-Picardie Formalités d’admission Frais de séjour Le service social des patients L’accueil des personnes handicapées et des personnes étrangères Téléphone, télévision, cafétarias HAD – Hospitalisation à domicile Automédication paiements en ligne Remboursement de votre transport Maison des Usagers Nos engagements Notre démarche qualité Politique de sécurité et gestion des risques NON à la douleur !",
+          "retrievedAt": "2026-09-07T19:58:09.678Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1488-7",
+          "url": "https://www.chu-amiens.fr/",
+          "excerpt": "organes et de tissus Formulaire de contact Étudiants Plans d&rsquo;accès Trouver un service Sans condition de diplôme IFA – Institut de Formation d’Ambulanciers IFAP – Institut de Formation d’Auxiliaires de Puériculture IFAS – Institut de Formation d’Aides-Soignants Après le BAC CFARM – Centre de Formation d&rsquo;Assistants de régulation médicale IFE &#8211; Institut de Formation en Ergothérapie IFMEM – Institut de Formation de Manipulateurs d’Électroradiologie Médicale IFSI – Institut de Formation en Soins Infirmiers IFTLM – Institut de Formation de Techniciens de Laboratoire Médical Après L.",
+          "retrievedAt": "2026-09-07T19:58:09.678Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1488-8",
+          "url": "https://www.chu-amiens.fr/",
+          "excerpt": "lance et d’Information sur le Médicament d’Amiens Journée Régionale de Pharmacovigilance Amiens Formulaire de contact Chercheurs Actualités Recherche ZOOM SUR : Utiliser les données du Registre du Cancer de la Somme La Direction de la Recherche Clinique et de l’Innovation Actualités Recherche Cohorte CHIEF REVERT GIRCI – Groupement Interrégional pour la Recherche Clinique et l’Innovation Nord Ouest Les Manifestations de la Recherche La recherche – Liens utiles Le Centre de Recherche Clinique Formation en recherche clinique Industriels, vous souhaitez faire appel au CRC pour une étude clinique ?",
+          "retrievedAt": "2026-09-07T19:58:09.678Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:58:50.313Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1489": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://aip.riken.jp/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1489-1",
+          "url": "https://aip.riken.jp/",
+          "excerpt": "Top Page | Center for Advanced Intelligence Project --> メインコンテンツへ移動 Center for Advanced Intelligence Project Access Japanese Main menu About AIP Laboratories Videos Program Codes Events News Opportunities Access 日本語 RIKEN AIP Distinguished Lecture Series We are recruiting colleagues to work together with us Read More RAIDEN Riken AIp Deep learning ENvironment 人工知能（AI）研究用計算機システム page-toppage.",
+          "retrievedAt": "2026-09-07T19:58:11.226Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1489-2",
+          "url": "https://aip.riken.jp/",
+          "excerpt": "php News RSS posted on September 7, 2026 11:55 NEW Information COLT2027 to Be Held in Tokyo The 40th Annual Conference on Learning Theory (COLT2027), an international conference that brings together researchers to share the latest advances in the theoretical foundations of machine learning and to foster the .",
+          "retrievedAt": "2026-09-07T19:58:11.226Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1489-3",
+          "url": "https://aip.riken.jp/",
+          "excerpt": "posted on September 7, 2026 11:42 NEW Information Award Music Information Intelligence Team Researchers Receive Best Presentation Award Researchers from Music Information Intelligence Team, Masatoshi Hamanaka (Team Director), Hiroya Miura (Research Scientist), Tetsuya Komuro (Senior Visiting Scientist), and Shintaro Seki (JSPS PD Researcher), have rec.",
+          "retrievedAt": "2026-09-07T19:58:11.226Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1489-4",
+          "url": "https://aip.riken.jp/",
+          "excerpt": "posted on August 25, 2026 17:48 Information Director Masashi Sugiyama Delivers Lecture at Public Event on AI, Semiconductors, and Quantum Technologies Director Masashi Sugiyama delivered a lecture at the public event \"Talking About AI, Semiconductors, and Quantum Technologies,\" organized by the Science Council of Japan.",
+          "retrievedAt": "2026-09-07T19:58:11.226Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1489-5",
+          "url": "https://aip.riken.jp/",
+          "excerpt": "ed on August 19, 2026 17:52 Information [Media Coverage] “Genome Analysis Advances Through Language AI: From Word Translation to Understanding Grammar and Full Text” (Yomiuri Shimbun Online, August 6, 2026) posted on August 14, 2026 09:39 Interview Information [Media Coverage] Interview with Deputy Director Naonori Ueda (NTT Facilities Journal, August 3, 2026) posted on August 12, 2026 11:23 Information Award Deputy Team Director Masaaki Komatsu of the AI Medical Engineering Team Receives Outstanding General Presentation Award at the JMAI 8th Annual Meeting News List Events RSS No events found.",
+          "retrievedAt": "2026-09-07T19:58:11.226Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1489-6",
+          "url": "https://aip.riken.jp/",
+          "excerpt": "Calendar Sep 2026 S unday M onday T uesday W ednesday T hursday F riday S aturday 1 st 2 nd 3 rd 4 th 5 th 6 th 7 th 8 th 9 th 10 th 11 th 12 th 13 th 14 th 15 th 16 th 17 th 18 th 19 th 20 th 21 th 22 th 23 th 24 th 25 th 26 th 27 th 28 th 29 th 30 th Events Calender Request for Donations: Support for Future AI Talent Request for Donations: Support for Gender Diversity and Development of Female AI Researchers Sub menu Contact us Sitemap For AIP Internal Use Only External Links RIKEN Center for Advanced Intelligence Project (RIKEN) MEXT NICT AIST AIP Network Lab.",
+          "retrievedAt": "2026-09-07T19:58:11.226Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1489-7",
+          "url": "https://aip.riken.jp/",
+          "excerpt": "AI Japan R&D Network YouTube AIP RIKEN RIKEN Center for Advanced Intelligence Project Nihonbashi 1-chome Mitsui Building, 15th floor, 1-4-1 Nihonbashi,Chuo-ku, Tokyo 103-0027, Japan e-mail: aip-koho [at]riken.",
+          "retrievedAt": "2026-09-07T19:58:11.226Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1489-8",
+          "url": "https://aip.riken.jp/",
+          "excerpt": "About AIP Laboratories News Events Opportunities Access Contact us Sitemap Copyright © RIKEN, Japan.",
+          "retrievedAt": "2026-09-07T19:58:11.226Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:58:50.313Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1490": {
       "overview": "pending",
