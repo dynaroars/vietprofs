@@ -164,9 +164,9 @@ completion while temporary failures or unresolved verification remain.
 - [x] ~~Batch 33 — `vp-0641`–`vp-0661`; 20 people; all outcomes complete~~ — published in `3b5dedf`; counts: 16 verified overviews, 4 no-suitable-evidence overviews, 1 verified work section (1 selected), 19 no-suitable-evidence work searches; 0 unresolved retries.
 - [ ] Batch 34 — `vp-0662`–`vp-0681`; 20 people; 12 complete outcomes — published in `4f00d3f`; counts: 6 verified overviews, 6 no-suitable-evidence overviews, 1 verified work section (1 selected), 11 no-suitable-evidence work searches; 8 retries in queue (`vp-0665`, `vp-0666`, `vp-0670`, `vp-0675`, `vp-0677`, `vp-0678`, `vp-0679`, `vp-0681`).
 - [ ] Batch 35 — `vp-0682`–`vp-0702`; 20 people; 18 complete outcomes; counts: 15 verified overviews, 3 no-suitable-evidence overviews, 3 verified work sections (3 recent), 15 no-suitable-evidence work searches; 2 retries in queue (`vp-0690`, `vp-0699`).
-- [ ] Batch 36 — `vp-0703`–`vp-0722`; 20 people; pending.
+- [ ] Batch 36 — `vp-0703`–`vp-0722`; 20 people; 19 complete outcomes — partial publication pending; counts: 9 verified overviews, 10 no-suitable-evidence overviews, 0 verified work sections, 19 no-suitable-evidence work searches; 1 retry in queue (`vp-0718`: stored Point Park profile is a 404 and may duplicate current `vp-0719` at Embry–Riddle; requires a separate full roster review before any merge/removal).
 
-Progress note: batches 1 through 35 processed (476 verified overviews, 133 no-suitable-evidence overviews, 271 verified work sections [88 selected, 183 recent], 338 no-suitable-evidence work results, 91 retries in queue). Batch 35 will be published now; Batch 36 will be processed next.
+Progress note: batches 1 through 36 processed (485 verified overviews, 143 no-suitable-evidence overviews, 271 verified work sections [88 selected, 183 recent], 357 no-suitable-evidence work results, 92 retries in queue). Batch 36 has a partial publication pending; Batch 37 will be processed next.
 
 Populate at execution time from the saved ID snapshot. Each entry must include batch number,
 ledger reference or exact IDs, outcome counts, remaining retries, and publication status.

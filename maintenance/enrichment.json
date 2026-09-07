@@ -2483,7 +2483,8 @@
         "vp-0721",
         "vp-0722"
       ],
-      "status": "pending"
+      "status": "in_progress",
+      "startedAt": "2026-09-07T16:28:41.322Z"
     },
     {
       "number": 37,
@@ -46384,206 +46385,1233 @@
       "nextAction": "None; overview verified, work omitted until authoritative list available."
     },
     "vp-0703": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://people.njit.edu/profile/tn294",
         "https://thanhnguyentang.github.io/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0703-1",
+          "url": "https://people.njit.edu/profile/tn294",
+          "excerpt": "ps Maps & Directions Virtual Tour Public Transportation to Campus Local Accommodations About Newark and New York City News Contact Us Life at NJIT Activities & Organizations Hispanic and Latinx Leadership Council Inclusive Excellence Career Center Campus Center Housing & Dining On-Campus Housing On-Campus Dining Off-Campus Housing Off-Campus Dining Office of Student Life Health & Safety Student Health Services Counseling and Psychological Services Public Safety Recreation & Fitness Gyms & Facilities Intramural Sports Transportation & Parking On & Around Campus Athletics NJIT Highlanders I am a.",
+          "retrievedAt": "2026-09-07T16:28:41.730Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0703-2",
+          "url": "https://people.njit.edu/profile/tn294",
+          "excerpt": "Student Media/Press Person Job Seeker --> Apply now Undergraduate Students Transfer Students Graduate Students Continuing Education Alumni Giving MyNJIT Login Tools Calendars Campus Directory A-Z Site Index Webmail Canvas Jobs @ NJIT Menu Search Alumni Giving MyNJIT Login Tools Calendars Campus Directory A-Z Site Index Webmail Canvas Jobs @ NJIT Search Admissions Academics Research About Life at NJIT Athletics I am a.",
+          "retrievedAt": "2026-09-07T16:28:41.730Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0703-3",
+          "url": "https://people.njit.edu/profile/tn294",
+          "excerpt": "$esData->Titles->HOMEDEPT; unset($esData->Titles->HOMEDEPT);} if(isset($esData->Prefix)){echo $esData->Prefix.",
+          "retrievedAt": "2026-09-07T16:28:41.730Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0703-4",
+          "url": "https://people.njit.edu/profile/tn294",
+          "excerpt": "--> Thanh Nguyen (Thanh Nguyen-Tang) Assistant Professor - Educational Data Mining/(Health Informatics, Data Science thanh.",
+          "retrievedAt": "2026-09-07T16:28:41.730Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0703-5",
+          "url": "https://people.njit.edu/profile/tn294",
+          "excerpt": "edu 973-642-4238 2110 Guttenberg Information Technologies Center (GITC) About Teaching Research Service About Me I am an assistant professor in the Department of Data Science, Ying Wu College of Computing at New Jersey Institute of Technology (NJIT).",
+          "retrievedAt": "2026-09-07T16:28:41.730Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0703-6",
+          "url": "https://people.njit.edu/profile/tn294",
+          "excerpt": "Prior to that, I was a postdoc at Johns Hopkins University (with Raman Arora), did my PhD in Computer Science at Deakin University, Australia, my M.",
+          "retrievedAt": "2026-09-07T16:28:41.730Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0703-7",
+          "url": "https://people.njit.edu/profile/tn294",
+          "excerpt": "in Computer Science and Engineering at Ulsan National Institute of Science and Technology, South Korea, my B.",
+          "retrievedAt": "2026-09-07T16:28:41.730Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0703-8",
+          "url": "https://people.njit.edu/profile/tn294",
+          "excerpt": "in Electronic and Communication Engineering (Talented Engineering Program) at Danang University of Science and Technology, Vietnam.",
+          "retrievedAt": "2026-09-07T16:28:41.730Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0703-9",
+          "url": "https://thanhnguyentang.github.io/",
+          "excerpt": "of Data Science, Ying Wu College of Computing New Jersey Institute of Technology, Newark, NJ 07102 thanh.",
+          "retrievedAt": "2026-09-07T16:28:42.099Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0703-10",
+          "url": "https://thanhnguyentang.github.io/",
+          "excerpt": "io Google Scholar Research Interests Theory of machine learning, reinforcement learning, and responsible AI.",
+          "retrievedAt": "2026-09-07T16:28:42.099Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0703-11",
+          "url": "https://thanhnguyentang.github.io/",
+          "excerpt": "About Me I am an Assistant Professor in the Department of Data Science at New Jersey Institute of Technology.",
+          "retrievedAt": "2026-09-07T16:28:42.099Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0703-12",
+          "url": "https://thanhnguyentang.github.io/",
+          "excerpt": "Before joining NJIT, I was a Postdoctoral Research Fellow in Computer Science at Johns Hopkins University.",
+          "retrievedAt": "2026-09-07T16:28:42.099Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0703-13",
+          "url": "https://thanhnguyentang.github.io/",
+          "excerpt": "in Computer Science from Deakin University (w/ Alfred Deakin Medal for Doctoral Theses), my M.",
+          "retrievedAt": "2026-09-07T16:28:42.099Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0703-14",
+          "url": "https://thanhnguyentang.github.io/",
+          "excerpt": "in Computer Science and Engineering from Ulsan National Institute of Science and Technology (UNIST), and my B.",
+          "retrievedAt": "2026-09-07T16:28:42.099Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0703-15",
+          "url": "https://thanhnguyentang.github.io/",
+          "excerpt": "in Electronic and Communication Engineering from Danang University of Science and Technology.",
+          "retrievedAt": "2026-09-07T16:28:42.099Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0703-16",
+          "url": "https://thanhnguyentang.github.io/",
+          "excerpt": "Students Le Bang Giang , DS PhD student, NJIT Quoc Khanh Tran , DS PhD student, NJIT Lan Sang , student researcher, Applied Math & Stats MS, JHU Huy Phan , summer intern (Battelle Award), Applied Math & CS undergrad, Denison University Tang Hung , student researcher, CS undergrad, Hanoi University of Science and Technology Note for Prospective Students I am always looking for highly motivated and self-driven Ph.",
+          "retrievedAt": "2026-09-07T16:28:42.099Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T16:30:21.449Z",
+      "nextAction": "No explicit selected-publication section or identity-verified dated work list with canonical work links was found."
     },
     "vp-0704": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://people.njit.edu/profile/phan"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0704-1",
+          "url": "https://people.njit.edu/profile/phan",
+          "excerpt": "ps Maps & Directions Virtual Tour Public Transportation to Campus Local Accommodations About Newark and New York City News Contact Us Life at NJIT Activities & Organizations Hispanic and Latinx Leadership Council Inclusive Excellence Career Center Campus Center Housing & Dining On-Campus Housing On-Campus Dining Off-Campus Housing Off-Campus Dining Office of Student Life Health & Safety Student Health Services Counseling and Psychological Services Public Safety Recreation & Fitness Gyms & Facilities Intramural Sports Transportation & Parking On & Around Campus Athletics NJIT Highlanders I am a.",
+          "retrievedAt": "2026-09-07T16:28:43.202Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0704-2",
+          "url": "https://people.njit.edu/profile/phan",
+          "excerpt": "Student Media/Press Person Job Seeker --> Apply now Undergraduate Students Transfer Students Graduate Students Continuing Education Alumni Giving MyNJIT Login Tools Calendars Campus Directory A-Z Site Index Webmail Canvas Jobs @ NJIT Menu Search Alumni Giving MyNJIT Login Tools Calendars Campus Directory A-Z Site Index Webmail Canvas Jobs @ NJIT Search Admissions Academics Research About Life at NJIT Athletics I am a.",
+          "retrievedAt": "2026-09-07T16:28:43.202Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0704-3",
+          "url": "https://people.njit.edu/profile/phan",
+          "excerpt": "$esData->Titles->HOMEDEPT; unset($esData->Titles->HOMEDEPT);} if(isset($esData->Prefix)){echo $esData->Prefix.",
+          "retrievedAt": "2026-09-07T16:28:43.202Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0704-4",
+          "url": "https://people.njit.edu/profile/phan",
+          "excerpt": "INDEPENDENT STUDY II DS 792B - PRE-DOCTORAL RESEARCH IS 790A - DOCT DISSERTATION & RES CS 700B - MASTER&#039;S PROJECT IS 725 - INDEPENDENT STUDY I CS 790A - DOCT DISSERTATION & RES Past Courses DS 110: BASIC FOUNDATIONS OF ARTIFICIAL INTELLIGENCE DS 677: DEEP LEARNING DS 789: TRUSTWORTHY ARTIFICIAL INTELLIGENCE DS 791: GRADUATE SEMINAR IS 333: SOCIAL NETWORK ANALYSIS IS 665: DATA ANALYTICS FOR INFO SYSTEM IS 688: WEB MINING IS 698: EMERGING TOPICS IN DEEP LEARNING - ARTIFICIAL INTELLIGENCE Conference Proceeding \"FedChip: Federated LLM for Artificial Intelligence Accelerator Chip Design\" 2025.",
+          "retrievedAt": "2026-09-07T16:28:43.202Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0704-5",
+          "url": "https://people.njit.edu/profile/phan",
+          "excerpt": "\"FlipStress: Noise Injection Defenses Against CPU-cache-based Web Attacks\" Proc.",
+          "retrievedAt": "2026-09-07T16:28:43.202Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0704-6",
+          "url": "https://people.njit.edu/profile/phan",
+          "excerpt": "of The 21st EAI International Conference on Security and Privacy in Communication Networks (SecureComm &#039;25), July (3rd Quarter/Summer), 2025.",
+          "retrievedAt": "2026-09-07T16:28:43.202Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0704-7",
+          "url": "https://people.njit.edu/profile/phan",
+          "excerpt": "\"Zone-based Federated Learning for Mobile Sensing Data\" The 21st IEEE International Conference on Pervasive Computing and Communications (PerCom 2023), March, 2023.",
+          "retrievedAt": "2026-09-07T16:28:43.202Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0704-8",
+          "url": "https://people.njit.edu/profile/phan",
+          "excerpt": "\"An ensemble deep learning model for drug abuse detection in sparse twitter-sphere\" MEDINFO, August, 2019.",
+          "retrievedAt": "2026-09-07T16:28:43.202Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T16:28:43.202Z",
+      "nextAction": "The collected profile did not provide a research description or sufficiently linked work records."
     },
     "vp-0705": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://sites.google.com/view/iphunglai/home"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0705-1",
+          "url": "https://sites.google.com/view/iphunglai/home",
+          "excerpt": "iphunglai Search this site Embedded Files Skip to main content Skip to navigation iphunglai Home Recent news Publications Experiences Teaching Students Contact iphunglai Home Recent news Publications Experiences Teaching Students Contact More Home Recent news Publications Experiences Teaching Students Contact Phụng Lại I am a Tenure-track Assistant Professor in the Department of Cybersecurity, the College of Emergency Preparedness, Homeland Security, and Cybersecurity (CEHC), SUNY-Albany.",
+          "retrievedAt": "2026-09-07T16:28:43.517Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0705-2",
+          "url": "https://sites.google.com/view/iphunglai/home",
+          "excerpt": "Importantly, I am one of the AI experts in the Institute of AI (AI plus) at SUNY-Albany ( https://www.",
+          "retrievedAt": "2026-09-07T16:28:43.517Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0705-3",
+          "url": "https://sites.google.com/view/iphunglai/home",
+          "excerpt": "In light of a $200M allocation for AI Plus, this institute brings together asse ts and expertise from educational, industrial, and public health partners.",
+          "retrievedAt": "2026-09-07T16:28:43.517Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0705-4",
+          "url": "https://sites.google.com/view/iphunglai/home",
+          "excerpt": "It educates the next generation of diverse, well-trained AI researchers and practitioners in AI computing, educational research, and ethical considerations.",
+          "retrievedAt": "2026-09-07T16:28:43.517Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0705-5",
+          "url": "https://sites.google.com/view/iphunglai/home",
+          "excerpt": "The main research focuses on machine learning (ML), artificial intelligence ( AI ), and trustworthiness in ML and AI , including privacy and security, explainability, and robustness, with manifold applications including Large language models (LLMs), Intellectual Property (IP) protection , weather climate forecasting, computer vision, social network, finance, healthcare, and malware system analysis.",
+          "retrievedAt": "2026-09-07T16:28:43.517Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0705-6",
+          "url": "https://sites.google.com/view/iphunglai/home",
+          "excerpt": "My work has been published at leading venues, such as IEEE T ransactions, AAAI (Distinguished Paper Award 12 selected/8,777) , ACML, AISTATS, and IEEE BigData.",
+          "retrievedAt": "2026-09-07T16:28:43.517Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0705-7",
+          "url": "https://sites.google.com/view/iphunglai/home",
+          "excerpt": "In addition, I am the holder of several patents in privacy preservation in Natural language processing and IP protection .",
+          "retrievedAt": "2026-09-07T16:28:43.517Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0705-8",
+          "url": "https://sites.google.com/view/iphunglai/home",
+          "excerpt": "Interests Trustworthy Machine Learning Large Language Models Model Copyright Weather and Climate Change Privacy and Security Explainability Robustness Education Ph.",
+          "retrievedAt": "2026-09-07T16:28:43.517Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T16:30:21.449Z",
+      "nextAction": "No explicit selected-publication section or identity-verified dated work list with canonical work links was found."
     },
     "vp-0706": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.depts.ttu.edu/ece/faculty/hieu_nguyen/index.php"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0706-1",
+          "url": "https://www.depts.ttu.edu/ece/faculty/hieu_nguyen/index.php",
+          "excerpt": "Nguyen, PhD | Faculty | Electrical & Computer Engineering | Texas Tech For Android.",
+          "retrievedAt": "2026-09-07T16:28:43.908Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0706-2",
+          "url": "https://www.depts.ttu.edu/ece/faculty/hieu_nguyen/index.php",
+          "excerpt": "--> Texas Tech University Directory Raiderlink A-Z Index Menu --> Electrical & Computer Engineering Menu Search Texas Tech Whitacre College of Engineering Electrical & Computer Engineering Faculty Hieu P.",
+          "retrievedAt": "2026-09-07T16:28:43.908Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0706-3",
+          "url": "https://www.depts.ttu.edu/ece/faculty/hieu_nguyen/index.php",
+          "excerpt": "ield-effect transistors (FETs), and high-electron-mobility transistors (HEMTs) Personal Information Curriculum Vitae Education PhD, Electrical Engineering, McGill University (2012) MS, Electrical Engineering, Ajou University (2009) BS, Physics, Vietnam National University (2005) Electrical & Computer Engineering Follow Electrical & Computer Engineering on X (twitter) Follow Electrical & Computer Engineering on X (twitter) Connect with Electrical & Computer Engineering on LinkedIn Connect with Electrical & Computer Engineering on LinkedIn Address Texas Tech University, Box 43102, 910 Boston Ave.",
+          "retrievedAt": "2026-09-07T16:28:43.908Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0706-4",
+          "url": "https://www.depts.ttu.edu/ece/faculty/hieu_nguyen/index.php",
+          "excerpt": "ng Open Records Requests © 2026 Texas Tech University Mar 18, 2026 3:51 PM Electrical & Computer Engineering About ECE Electrical & Computer Engineering Back Department Electrical & Computer Engineering Back Overview Chair's Welcome Strategic Objectives Department Flyer Open Positions Department History Resources Electrical & Computer Engineering Back Safety Plan Student Organizations Campus Resources Faculty & Staff Electrical & Computer Engineering Back Faculty Directory Staff Directory News Electrical & Computer Engineering Back Newsletter News Defense Notifications Seminar Series Apply Now!",
+          "retrievedAt": "2026-09-07T16:28:43.908Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0706-5",
+          "url": "https://www.depts.ttu.edu/ece/faculty/hieu_nguyen/index.php",
+          "excerpt": "ow Undergraduate Scholarships Tuition Estimator Programs Electrical & Computer Engineering Back Undergraduate Electrical & Computer Engineering Back Overview Financial Aid & Scholarships Advising Flowcharts Electrical Engineering BS Computer Engineering BS Minors Accelerated Bachelor's to Master's Program Graduate Electrical & Computer Engineering Back Overview Financial Aid & Scholarship Advising Computer Engineering MS Electrical Engineering MS Electrical Engineering PhD Research Electrical & Computer Engineering Back Overview Electrical & Computer Engineering Back Research Focus of Edward E.",
+          "retrievedAt": "2026-09-07T16:28:43.908Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0706-6",
+          "url": "https://www.depts.ttu.edu/ece/faculty/hieu_nguyen/index.php",
+          "excerpt": "E) RF/Analog System and Microwave Engineering Advanced Semiconductors Cyber-Physical Systems Research Group Three-Dimensional Heterogeneous Integration (3DHI) Alumni Electrical & Computer Engineering Back Overview Electrical & Computer Engineering Overview Back Alumni Overview Alumni News Industrial Advisory Board Electrical & Computer Engineering Industrial Advisory Board Back Objective Members Faculty Academy Electrical & Computer Engineering Academy Back Overview Members Faculty Accomplishments Electrical & Computer Engineering Back NSF CAREER Award Electrical & Computer Engineering Back Dr.",
+          "retrievedAt": "2026-09-07T16:28:43.908Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0706-7",
+          "url": "https://www.depts.ttu.edu/ece/faculty/hieu_nguyen/index.php",
+          "excerpt": "Hieu Nguyen • NSF Career Award Fellows Electrical & Computer Engineering Back Dr.",
+          "retrievedAt": "2026-09-07T16:28:43.908Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T16:28:43.908Z",
+      "nextAction": "The collected profile did not provide a sufficiently specific research description or linked work records."
     },
     "vp-0707": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://nguyen.sdsu.edu/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0707-1",
+          "url": "https://nguyen.sdsu.edu/",
+          "excerpt": "Nguyen Home Biography Awards Research WiiLAB Interests Publications Teaching EE 200 EE 300 EE 410 EE 558 EE 653 EE 655 Services Activities Opening Positions Ph.",
+          "retrievedAt": "2026-09-07T16:28:44.464Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0707-2",
+          "url": "https://nguyen.sdsu.edu/",
+          "excerpt": "Professor Department of Electrical and Computer Engineering San Diego State University Brief biography Student recruitment I am actively looking for 2 Ph.",
+          "retrievedAt": "2026-09-07T16:28:44.464Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0707-3",
+          "url": "https://nguyen.sdsu.edu/",
+          "excerpt": "8/2022), Department of Electrical and Computer Engineering , San Diego State University NSERC Postdoctoral Research Fellow (12/2015 &ndash; 08/2016), Wireless Networking and Communications Group , University of Texas, Austin Research Assistant (09/2015 &ndash; 11/2015), Department of Electrical and Computer Engineering , University of Houston FRQNT Postdoctoral Research Fellow (09/2013 &ndash; 08/2015), INRS-EMT , Universit&#233; du Qu&#233;bec Research Associate (09/2013 &ndash; 08/2015), Department of Electrical & Computer Engineering , McGill University Education 09/2009 &ndash; 08/2013: Ph.",
+          "retrievedAt": "2026-09-07T16:28:44.464Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0707-4",
+          "url": "https://nguyen.sdsu.edu/",
+          "excerpt": "(with First Class Honours), Telecommunications and Internet Technologies , Swinburne University of Technology Contact information Room E-408, Engineering Building San Diego State University 5500 Campanile Dr San Diego, CA 92182-1309, USA Phone: (619) 594 2430 Email: duy.",
+          "retrievedAt": "2026-09-07T16:28:44.464Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0707-5",
+          "url": "https://nguyen.sdsu.edu/",
+          "excerpt": "Please see my publication and Google scholar pages for my latest publication updates!",
+          "retrievedAt": "2026-09-07T16:28:44.464Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0707-6",
+          "url": "https://nguyen.sdsu.edu/",
+          "excerpt": "03/2025: WiiLab's alumnus Van Ly Nguyen will join the University of Kansas as an Assistant Professor in Fall 2025.",
+          "retrievedAt": "2026-09-07T16:28:44.464Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0707-7",
+          "url": "https://nguyen.sdsu.edu/",
+          "excerpt": "09/2023: Awarded NSF grant on Enabling Beyond-5G Wireless Access Networks with Robust and Scalable Cell-Free Massive MIMO (as lead-PI, with A.",
+          "retrievedAt": "2026-09-07T16:28:44.464Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0707-8",
+          "url": "https://nguyen.sdsu.edu/",
+          "excerpt": "05/2023: Awarded ARO grant on Enabling High-Mobility UAV Communications with Adaptive Signal Processing (as sole-PI).",
+          "retrievedAt": "2026-09-07T16:28:44.464Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T16:28:44.464Z",
+      "nextAction": "The collected profile did not provide a sufficiently specific research description or linked work records."
     },
     "vp-0708": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://profiles.stanford.edu/quynh-thu-le"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0708-1",
+          "url": "https://profiles.stanford.edu/quynh-thu-le",
+          "excerpt": "Quynh-Thu Le, MD, FACR, FASTRO, FARS Katharine Dexter McCormick and Stanley McCormick Memorial Professor and Professor, by courtesy, of Otolaryngology - Head & Neck Surgery (OHNS) Radiation Oncology - Radiation Therapy Practices at Stanford Health Care Stanford Medicine Children&#39;s Health Stanford Medicine Partners Print Profile Email Profile View Stanford-only Profile Tab Menu Bio Research & Scholarship Teaching Publications Bio Quynh-Thu Le, MD is the Katharine Dexter McCormick & Stanley McCormick Memorial Professor and Chair of the Department of Radiation Oncology at Stanford University.",
+          "retrievedAt": "2026-09-07T16:28:46.986Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0708-2",
+          "url": "https://profiles.stanford.edu/quynh-thu-le",
+          "excerpt": "She has led multicenter phase II and III clinical trials, testing the addition of novel drugs as well as radiosensitizer or radioprotector with chemoradiotherapy in HNC.",
+          "retrievedAt": "2026-09-07T16:28:46.986Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0708-3",
+          "url": "https://profiles.stanford.edu/quynh-thu-le",
+          "excerpt": "Her lab works on approaches to regenerate salivary glands after radiation damage, identification of biomarkers of prognosis and treatment resistance in HNC, and development of novel treatment strategies for HNC with a focus on the tumor microenvironment and Galectin-1.",
+          "retrievedAt": "2026-09-07T16:28:46.986Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0708-4",
+          "url": "https://profiles.stanford.edu/quynh-thu-le",
+          "excerpt": "She currently co-chairs the NRG Oncology Group of the NCI-sponsored National Clinical Trial Network (NCTN), which conducts practice-changing phase II-III trials in many cancers.",
+          "retrievedAt": "2026-09-07T16:28:46.986Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0708-5",
+          "url": "https://profiles.stanford.edu/quynh-thu-le",
+          "excerpt": "She has received grant support from ASCO, ASTRO as well as P01, R01 and R21 grants from the NIH.",
+          "retrievedAt": "2026-09-07T16:28:46.986Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0708-6",
+          "url": "https://profiles.stanford.edu/quynh-thu-le",
+          "excerpt": "She has been actively involved in many national and international organizations such as ASTRO, ASCO and AARC and ARS.",
+          "retrievedAt": "2026-09-07T16:28:46.986Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0708-7",
+          "url": "https://profiles.stanford.edu/quynh-thu-le",
+          "excerpt": "She was inducted into the Fellowship of the American College of Radiology (FACR), the American Society of Therapeutic Radiology and Oncology (FASTRO) and the Institute of Medicine / National Academy of Medicine (IOM/NAM).",
+          "retrievedAt": "2026-09-07T16:28:46.986Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0708-8",
+          "url": "https://profiles.stanford.edu/quynh-thu-le",
+          "excerpt": "She was also honored with the Caltech Distinguished Alumni Award and the ASTRO Gold Medal.",
+          "retrievedAt": "2026-09-07T16:28:46.986Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T16:30:21.449Z",
+      "nextAction": "No explicit selected-publication section or identity-verified dated work list with canonical work links was found."
     },
     "vp-0709": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://engineering.catholic.edu/research-and-faculty/faculty-profiles/eecs/nguyen-charles/index.html"
       ],
-      "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "evidence": [
+        {
+          "id": "vp-0709-1",
+          "url": "https://engineering.catholic.edu/research-and-faculty/faculty-profiles/eecs/nguyen-charles/index.html",
+          "excerpt": "Charles Nguyen's research interests include time-varying control systems, control of large space structures, decentralized control, control of robot manipulators, closed-kinematic chain manipulators, robot vision, intelligent control, fuzzy logic control and medical robotics.",
+          "retrievedAt": "2026-09-07T16:35:00.000Z",
+          "details": "Official Catholic University profile retrieved via public search after direct fetch returned HTTP 403."
+        }
+      ],
+      "errors": [
+        "https://engineering.catholic.edu/research-and-faculty/faculty-profiles/eecs/nguyen-charles/index.html: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T16:34:39.676Z",
+      "nextAction": "No explicit selected-publication section or identity-verified dated work list with canonical work links was found."
     },
     "vp-0710": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://medicine.illinois.edu/news/ci-med-professor-elected-to-aimbe-college-of-fellows"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0710-1",
+          "url": "https://medicine.illinois.edu/news/ci-med-professor-elected-to-aimbe-college-of-fellows",
+          "excerpt": "CI MED Professor Elected to AIMBE College of Fellows | Carle Illinois College of Medicine | Illinois --> Block I logo University of Illinois Urbana-Champaign My.",
+          "retrievedAt": "2026-09-07T16:28:47.885Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0710-2",
+          "url": "https://medicine.illinois.edu/news/ci-med-professor-elected-to-aimbe-college-of-fellows",
+          "excerpt": "rdiovascular Medicine and Surgery Clinical Sciences Neurology and Neurosurgery Oncology Surgery and Digestive Health Threads Bioethics and Medical Humanities Engineering + Innovation Health Systems Lifespan Health Social and Structural Determinants of Health Learning Environment Faculty Course and Clerkship Directors Faculty Health Innovation Professors Research & Innovation Research & Innovation Research & Innovation Facilities Clinical Research Mentors Opportunities to Innovate Partnerships and Affiliations Jump Simulation Center Simulation Equipment Simulation Spaces & Suites Why Simulation?",
+          "retrievedAt": "2026-09-07T16:28:47.885Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0710-3",
+          "url": "https://medicine.illinois.edu/news/ci-med-professor-elected-to-aimbe-college-of-fellows",
+          "excerpt": "g How to Give Butkus Foundation Partnership Professorships, Awards, and Endowments Giving Stories Alumni Stories Contact Us Impact Reports Summer '22 Newsletter Fall '22 Newsletter Spring '23 Newsletter News News CI MED In the Media Home News CI MED Professor Elected to AIMBE College of Fellows CI MED Professor Elected to AIMBE College of Fellows 4/1/2025 Written by [figure=\"\" width=\"800\"] Caroline Cao Carle Illinois College of Medicine Health Innovation Professor Caroline Cao has been inducted into the College of Fellows of The American Institute for Medical and Biological Engineering (AIMBE).",
+          "retrievedAt": "2026-09-07T16:28:47.885Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0710-4",
+          "url": "https://medicine.illinois.edu/news/ci-med-professor-elected-to-aimbe-college-of-fellows",
+          "excerpt": "This prestigious honor is bestowed upon the top two percent of engineers in the medical and biological engineering fields and recognizes individuals who have made significant contributions to research, practice, or education within these domains.",
+          "retrievedAt": "2026-09-07T16:28:47.885Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0710-5",
+          "url": "https://medicine.illinois.edu/news/ci-med-professor-elected-to-aimbe-college-of-fellows",
+          "excerpt": "Professor Cao&rsquo;s election to the AIMBE College of Fellows is a testament to her pioneering contributions to medical technology, particularly in the area of minimally invasive surgery.",
+          "retrievedAt": "2026-09-07T16:28:47.885Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0710-6",
+          "url": "https://medicine.illinois.edu/news/ci-med-professor-elected-to-aimbe-college-of-fellows",
+          "excerpt": "Her international leadership in translational research and commitment to patient safety have significantly advanced the field, making her a standout figure among her peers.",
+          "retrievedAt": "2026-09-07T16:28:47.885Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0710-7",
+          "url": "https://medicine.illinois.edu/news/ci-med-professor-elected-to-aimbe-college-of-fellows",
+          "excerpt": "&ldquo;It is a tremendous honor to be recognized by AIMBE alongside such esteemed colleagues.",
+          "retrievedAt": "2026-09-07T16:28:47.885Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0710-8",
+          "url": "https://medicine.illinois.edu/news/ci-med-professor-elected-to-aimbe-college-of-fellows",
+          "excerpt": "I am grateful for the opportunity to contribute to the advancement of medical and biological engineering and to improve patient outcomes through innovative technologies.",
+          "retrievedAt": "2026-09-07T16:28:47.885Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T16:28:47.886Z",
+      "nextAction": "The collected news item did not provide a sufficiently specific research description or linked work records."
     },
     "vp-0711": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.scifac.hku.hk/people/vu-van-ha"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0711-1",
+          "url": "https://www.scifac.hku.hk/people/vu-van-ha",
+          "excerpt": "ter Instagram Youtube Xiaohongshu Search search Staff Intranet About Us Dean's Message Welcoming Message Dean's Notes Faculty Vision Meet Our Mascot HKU Statistics Departments Faculty Members Faculty Management Team Teaching Staff Teaching Staff Profile Looking for Thesis Supervisor Faculty Office Staff Science Distinguished Visiting Scholars Scheme Facilities & Infrastructure Strategic Moves, Quick Facts and Achievements Quick Facts & Figures Awards and Achievements Emeritus Professors Souvenirs Photo Gallery Prospective Students Undergraduate Programme Science Core Programmes Why HKU Science?",
+          "retrievedAt": "2026-09-07T16:28:50.188Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0711-2",
+          "url": "https://www.scifac.hku.hk/people/vu-van-ha",
+          "excerpt": "Rankings and Achievements Science Education Nowadays Special Features for Science curricula Excellence in Research Unique Facilities 6901 BSc Programme Features Intensive Majors Accreditations Articulation Pathways Young Scientist Scheme (YSS) What is YSS?",
+          "retrievedAt": "2026-09-07T16:28:50.188Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0711-3",
+          "url": "https://www.scifac.hku.hk/people/vu-van-ha",
+          "excerpt": "Schools School of Biomedical Engineering 6925 BEng(BME) School of Computing and Data Science 6224 BASc(AppliedAI) 6248 BASc(FinTech) 6729 BSc(ActuarSc) 6779 Statistical Decision Sciences 6999 Computing and Data Science School of Innovation 6602 BSc(I&T) Young Scientist Scheme (YSS) Students' Life & Experience Diverse Learning Experiences Minor in Science Entrepreneurship Admissions One-stop Platform for Science Undergraduate Admissions Admissions Requirements and Application Direct Admissions Scheme for Associate Degree and Higher Diploma Graduates Taught Postgraduate Programme Why HKU Science?",
+          "retrievedAt": "2026-09-07T16:28:50.188Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0711-4",
+          "url": "https://www.scifac.hku.hk/people/vu-van-ha",
+          "excerpt": "ld of Food Safety and Toxicology MSc in the field of Food Industry: Management and Marketing MSc in the field of Physics MSc in the field of Space Science MSc in Artificial Intelligence MSc in Integrative Marine Ecology and Conservation Programme offered by Affiliated Schools School of Computing and Data Science MSc in Computer Science Master of Data Science MSc in Electronic Commerce and Internet Computing MSc in Financial Technology and Data Analytics Master of Statistics School of Innovation MSc in Innovation and Technology Tips for new comers Research Postgraduate Programme Why HKU Science?",
+          "retrievedAt": "2026-09-07T16:28:50.188Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0711-5",
+          "url": "https://www.scifac.hku.hk/people/vu-van-ha",
+          "excerpt": "Studying RPg at HKU Science Programme Information Master of Philosophy (MPhil) Doctor of Philosophy (PhD) Joint PhD Degree Programme with other University Joint Educational Placement for PhD between other Universities Stipend and Support Research Postgraduate Fellowship / Scholarship How to Apply?",
+          "retrievedAt": "2026-09-07T16:28:50.188Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0711-6",
+          "url": "https://www.scifac.hku.hk/people/vu-van-ha",
+          "excerpt": "cation Details Application Form (URFP) Application Form (University Research Internship Awards) List of Participants Summer Research Fellowship (SRF) & Overseas Research Fellowship (ORF) Schemes for Science Students Research Colloquium for Science Undergraduate Students Other Opportunities List of Experiential Learning Ambassadors and Student Sharing Young Scientist Scheme Useful Resources Handbooks Calendar & Timetables SLEQ-UG and SFTL Student Wellness Support On-campus Resources (in counselling, financial assistance, personal enrichment, career advising, health service, and SEN support, etc.",
+          "retrievedAt": "2026-09-07T16:28:50.188Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0711-7",
+          "url": "https://www.scifac.hku.hk/people/vu-van-ha",
+          "excerpt": "aching Staff Home About Us Faculty Members Teaching Staff Teaching Staff Profile Looking for Thesis Supervisor Professor VU, Van Ha Professor, Chair of Mathematics, Department of Mathematics, Faculty of Science, HKU [javascript protected email address] 39172115 Room 405, Run Run Shaw Building, University of Hong Kong, Pokfulam Road, Hong Kong Research Interest Combinatorics Probability Random matrix theory Matrix perturbation theory and Spectral algorithms Back Top Sitemap Should you have any enquiries/comments on the accessibility of this website, please contact us at 3917 2683 or science@hku.",
+          "retrievedAt": "2026-09-07T16:28:50.188Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T16:28:50.188Z",
+      "nextAction": "The collected page did not identify this person’s research or work records."
     },
     "vp-0712": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://as.tufts.edu/faculty-research/faculty-news/faculty-news-2022-2023"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0712-1",
+          "url": "https://as.tufts.edu/faculty-research/faculty-news/faculty-news-2022-2023",
+          "excerpt": "lty & Research Faculty Highlights Faculty in the News Named Professorships Endowed Faculty Fellows Grants & Fellowships Faculty Resources Student Experience Student Life Career Center Study Abroad & Global Education Athletics Commencement News & Events Events News Information for Current Students Prospective Undergraduate Students Prospective Graduate Students Faculty Staff Alumni Find Faculty Apply Give Breadcrumb Home Faculty & Research Faculty In The News Faculty In The News - 2022-2023 Faculty in the News - 2022-2023 Summer 2023 10 million enslaved Americans' names are missing from history.",
+          "retrievedAt": "2026-09-07T16:28:50.451Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0712-2",
+          "url": "https://as.tufts.edu/faculty-research/faculty-news/faculty-news-2022-2023",
+          "excerpt": "August 31, 2023 National Geographic Associate Professor of History Kendra Field is quoted throughout this article on the newly launched 10 Million Names Project, of which she is chief historian.",
+          "retrievedAt": "2026-09-07T16:28:50.451Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0712-3",
+          "url": "https://as.tufts.edu/faculty-research/faculty-news/faculty-news-2022-2023",
+          "excerpt": "August 31, 2023 The New York Times Associate Professor of Political Science Michael Beckley is quoted from his August 22 Foreign Affairs article examining the historic ebb and flow of U.",
+          "retrievedAt": "2026-09-07T16:28:50.451Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0712-4",
+          "url": "https://as.tufts.edu/faculty-research/faculty-news/faculty-news-2022-2023",
+          "excerpt": "Community Organizations Are Taking Ownership Of Boston’s Local Food Systems August 31, 2023 Next City Senior Lecturer in Urban & Environmental Policy & Planning Penn Loh discusses how local grassroots organizations are working with city-owned and corporate services to foster a system of community-led initiatives in Dorchester and Roxbury.",
+          "retrievedAt": "2026-09-07T16:28:50.451Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0712-5",
+          "url": "https://as.tufts.edu/faculty-research/faculty-news/faculty-news-2022-2023",
+          "excerpt": "Jazz Album Reviews: Three from the Golden Age of Jazz Recording August 30, 2023 artsfuse.",
+          "retrievedAt": "2026-09-07T16:28:50.451Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0712-6",
+          "url": "https://as.tufts.edu/faculty-research/faculty-news/faculty-news-2022-2023",
+          "excerpt": "org Senior Lecturer in Music Michael Ullman reviews three albums that have been re-issued from 1956 to 1964, “the golden age of jazz recording.",
+          "retrievedAt": "2026-09-07T16:28:50.451Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0712-7",
+          "url": "https://as.tufts.edu/faculty-research/faculty-news/faculty-news-2022-2023",
+          "excerpt": "” Threats and Allies in the Indo-Pacific August 28, 2023 The Dispatch Associate Professor of Political Science Michael Beckley joins “The Dispatch” podcast to discuss the importance of the new trilateral agreement between South Korea, Japan, and the U.",
+          "retrievedAt": "2026-09-07T16:28:50.451Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0712-8",
+          "url": "https://as.tufts.edu/faculty-research/faculty-news/faculty-news-2022-2023",
+          "excerpt": "born out of growing hostilities in the Indo-Pacific region Biohacking our way to health August 25, 2023 Big Think Professor of Biology Michael Levin appears in this video to discuss how xenobots are key to the future of regenerative medicine.",
+          "retrievedAt": "2026-09-07T16:28:50.451Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T16:28:50.451Z",
+      "nextAction": "The collected news index did not identify this person’s research or work records."
     },
     "vp-0713": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://astronomy.as.virginia.edu/trinh-thuan"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0713-1",
+          "url": "https://astronomy.as.virginia.edu/trinh-thuan",
+          "excerpt": "Trinh Thuan | Department of Astronomy Skip to main content Department of Astronomy I want to .",
+          "retrievedAt": "2026-09-07T16:28:50.981Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0713-2",
+          "url": "https://astronomy.as.virginia.edu/trinh-thuan",
+          "excerpt": "Support Astronomy Visit an Observatory Update Alumni Contact Info Department of Astronomy Academics Undergraduate Studies Why Study Astronomy?",
+          "retrievedAt": "2026-09-07T16:28:50.981Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0713-3",
+          "url": "https://astronomy.as.virginia.edu/trinh-thuan",
+          "excerpt": "ormick Observatory The Washington & Lee and University of Virginia Telescope Debate The Building of the McCormick Observatory The McCormick Family Observatory Directors 1882-1979 Weather Observations at the Observatory Notable Astronomers & Staff Dark Skies, Bright Kids Ask an Astronomer Department Clubs Go Explore the Universe Weather Observations at the Observatory People Faculty & Senior Research Staff Visiting Faculty Emeritus & Retired Faculty Staff Research Associates Graduate Students Undergraduate Students Pets of Astronomy In Memoriam Trinh Thuan Professor Emeritus Email: txt@virginia.",
+          "retrievedAt": "2026-09-07T16:28:50.981Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0713-4",
+          "url": "https://astronomy.as.virginia.edu/trinh-thuan",
+          "excerpt": "nitiative (GECO) Interconnected Cosmos Initiative (ICI) Virginia Initiatives on Cosmic Origins Outreach Visit Our Observatories Friends of the McCormick Observatory Leander McCormick Observatory Museum History of the Leander McCormick Observatory Dark Skies, Bright Kids Ask an Astronomer Department Clubs Go Explore the Universe Weather Observations at the Observatory People Faculty & Senior Research Staff Visiting Faculty Emeritus & Retired Faculty Staff Research Associates Graduate Students Undergraduate Students Pets of Astronomy In Memoriam Contact Us Astronomy Building 530 McCormick Road P.",
+          "retrievedAt": "2026-09-07T16:28:50.981Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0713-5",
+          "url": "https://astronomy.as.virginia.edu/trinh-thuan",
+          "excerpt": "Box 400325 Charlottesville, VA 22904 (434) 924-7494 General inquiries: astro_admin@virginia.",
+          "retrievedAt": "2026-09-07T16:28:50.981Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T16:28:50.981Z",
+      "nextAction": "The collected emeritus directory page did not provide a research description or work records."
     },
     "vp-0714": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://chem.uic.edu/profiles/nguyen-andy/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0714-1",
+          "url": "https://chem.uic.edu/profiles/nguyen-andy/",
+          "excerpt": "| Chemistry | University of Illinois Chicago University of Illinois Chicago Search the site Toggle Menu Search University of Illinois Chicago Chemistry UIC.",
+          "retrievedAt": "2026-09-07T16:28:51.207Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0714-2",
+          "url": "https://chem.uic.edu/profiles/nguyen-andy/",
+          "excerpt": "uate Studies Undergraduate Studies People Expand People menu Research Faculty Teaching Faculty Faculty Affilitates Emeritus Faculty Staff Research Expand Research menu Research Highlights Bioanalytical & Biophysical Chemical Biology & Drug Discovery Chemical Education Research Catalysis, Synthesis & Drug Development Energy & Sustainability Materials & Nanoscience Physical & Theoretical News Events Resources Expand Resources menu Purchasing Research Facilities Resources for instructors Lab Safety & Emergency Procedures Resources for Students Chemistry College of Liberal Arts and Sciences Andy I.",
+          "retrievedAt": "2026-09-07T16:28:51.207Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0714-3",
+          "url": "https://chem.uic.edu/profiles/nguyen-andy/",
+          "excerpt": "Nguyen Assistant Professor Contact Address: 4246 SES Office Phone: (312) 413-2375 Email: andyn@uic.",
+          "retrievedAt": "2026-09-07T16:28:51.207Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0714-4",
+          "url": "https://chem.uic.edu/profiles/nguyen-andy/",
+          "excerpt": "edu Related Sites: Nguyen Group Website About Many of the current and future challenges that chemistry hopes to address require molecules of ever-increasing complexity.",
+          "retrievedAt": "2026-09-07T16:28:51.207Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0714-5",
+          "url": "https://chem.uic.edu/profiles/nguyen-andy/",
+          "excerpt": "Our lab is guided not only by the structural and functional sophistication of biomolecules, but also by the way Nature uses the process of evolution to arrive at these molecules.",
+          "retrievedAt": "2026-09-07T16:28:51.207Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0714-6",
+          "url": "https://chem.uic.edu/profiles/nguyen-andy/",
+          "excerpt": "We leverage the versatility of sequence-defined oligomers to build and evolve macromolecular inorganic complexes that function as efficient catalysts and molecular machines for energy conversion and drug delivery.",
+          "retrievedAt": "2026-09-07T16:28:51.207Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0714-7",
+          "url": "https://chem.uic.edu/profiles/nguyen-andy/",
+          "excerpt": "Multimetallic Chemistry Multimetallic clusters are present in enzymes that perform remarkable small-molecule transformations, including carbon dioxide reduction, methane oxidation, and water oxidation.",
+          "retrievedAt": "2026-09-07T16:28:51.207Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0714-8",
+          "url": "https://chem.uic.edu/profiles/nguyen-andy/",
+          "excerpt": "We are targeting macromolecular ligands to assemble cluster complexes that represent simplified yet accurate models of multimetallic enzyme active sites.",
+          "retrievedAt": "2026-09-07T16:28:51.207Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T16:30:21.449Z",
+      "nextAction": "No explicit selected-publication section or identity-verified dated work list with canonical work links was found."
     },
     "vp-0715": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://tranducle.github.io/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0715-1",
+          "url": "https://tranducle.github.io/",
+          "excerpt": "TDL's Homepage Research Publications Teaching Blog Posts Qualification Service Tran Duc Le On the journey to getting better at cybersecurity Follow Menomonie, WI, US UW-Stout Email ResearchGate LinkedIn Google Scholar ORCID Tran Duc Le I am working as an Assistant Professor at the Mathematics, Statistics & Computer Science Department , College of Science, Technology, Engineering, Mathematics & Management , University of Wisconsin-Stout .",
+          "retrievedAt": "2026-09-07T16:28:51.437Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0715-2",
+          "url": "https://tranducle.github.io/",
+          "excerpt": "in Systems, Networks, and Telecommunication Devices from the Bonch-Bruevich Saint Petersburg State University of Telecommunications in Russia in 2018 with my supervisor - Assos.",
+          "retrievedAt": "2026-09-07T16:28:51.437Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0715-3",
+          "url": "https://tranducle.github.io/",
+          "excerpt": "Ol’ga Simonina (She has been a monumental influence in my life, serving as a close friend, an exceptional mentor, and a steadfast support throughout the challenging years of my PhD journey).",
+          "retrievedAt": "2026-09-07T16:28:51.437Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0715-4",
+          "url": "https://tranducle.github.io/",
+          "excerpt": "From 01/2023 to 07/2024, I had been working as a postdoctoral researcher at the Université du Québec à Trois-Rivières, Québec, Canada , under the supervision of Prof.",
+          "retrievedAt": "2026-09-07T16:28:51.437Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0715-5",
+          "url": "https://tranducle.github.io/",
+          "excerpt": "My research interests include network security, malware analysis, cybersecurity analytics, and applying AI/ML for cybersecurity.",
+          "retrievedAt": "2026-09-07T16:28:51.437Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0715-6",
+          "url": "https://tranducle.github.io/",
+          "excerpt": "I have received awards for my research, including an Outstanding Paper Award at ICACT2020 and ICACNGC2022.",
+          "retrievedAt": "2026-09-07T16:28:51.437Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0715-7",
+          "url": "https://tranducle.github.io/",
+          "excerpt": "I teach computer networks, network administration, malware analysis, network security, and network penetration testing courses.",
+          "retrievedAt": "2026-09-07T16:28:51.437Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0715-8",
+          "url": "https://tranducle.github.io/",
+          "excerpt": "I aim to conduct impactful research on pressing cybersecurity issues and prepare the next generation of computer networking and security professionals.",
+          "retrievedAt": "2026-09-07T16:28:51.437Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T16:30:21.449Z",
+      "nextAction": "No explicit selected-publication section or identity-verified dated work list with canonical work links was found."
     },
     "vp-0716": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.ndsu.edu/ccee/faculty_and_staff/faculty/le/",
-        "https://sites.google.com/view/complexfluidlab/"
+        "https://sites.google.com/view/complexfluidlab/",
+        "https://kb.ndsu.edu/it/109479"
       ],
-      "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "evidence": [
+        {
+          "id": "vp-0716-1",
+          "url": "https://kb.ndsu.edu/it/109479",
+          "excerpt": "Dr. Le's research involves computational method and code development to solve fluid flow problems in environmental applications, with scalable flow solvers for studying flows over complex geometries and moving boundaries under turbulent condition.",
+          "retrievedAt": "2026-09-07T16:35:00.000Z",
+          "details": "Official North Dakota State University research highlight retrieved via public search after the stored sources returned HTTP 403."
+        }
+      ],
+      "errors": [
+        "https://www.ndsu.edu/ccee/faculty_and_staff/faculty/le/: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T16:34:39.676Z",
+      "nextAction": "No explicit selected-publication section or identity-verified dated work list with canonical work links was found."
     },
     "vp-0717": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.fit.edu/faculty-profiles/n/nguyen-kim-doang/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0717-1",
+          "url": "https://www.fit.edu/faculty-profiles/n/nguyen-kim-doang/",
+          "excerpt": "Nguyen, Kim-Doang | Florida Tech --> --> --> Skip to main content LINKS FOR Students Faculty & Staff Parents & Families Alumni & Friends | Apply Visit Get Info | Give Give --> Academics Academics Florida Tech’s approach to academics is research-driven, high-tech and hands-on, allowing our students to both gain knowledge and get real experience applying it.",
+          "retrievedAt": "2026-09-07T16:28:52.454Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0717-2",
+          "url": "https://www.fit.edu/faculty-profiles/n/nguyen-kim-doang/",
+          "excerpt": "Services & Resources Learning Experiences Florida Tech Online ABA Online Florida Tech at Orlando Florida Tech at Patrick SFB Florida Tech at Spaceport Corporate Level Up Program Continuing Education Burrell College of Health Sciences Research Research It is through research that faculty members advance their fields, students enhance their learning, and the university creates change for the benefit of our planet and all of its inhabitants.",
+          "retrievedAt": "2026-09-07T16:28:52.454Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0717-3",
+          "url": "https://www.fit.edu/faculty-profiles/n/nguyen-kim-doang/",
+          "excerpt": "Student Design & Research Centers, Institutes & Labs News & Stories Vertex Applied Innovation Hub Library Faculty Profiles Office of Research Expert Directory Admission & Aid Admission & Aid Ready for the future?",
+          "retrievedAt": "2026-09-07T16:28:52.454Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0717-4",
+          "url": "https://www.fit.edu/faculty-profiles/n/nguyen-kim-doang/",
+          "excerpt": "Whether you hope to join the Florida Tech family as a freshman, transfer student or graduate student, your journey to Panther-hood starts here.",
+          "retrievedAt": "2026-09-07T16:28:52.454Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0717-5",
+          "url": "https://www.fit.edu/faculty-profiles/n/nguyen-kim-doang/",
+          "excerpt": "Apply Get Info Visit --> Why Florida Tech First Year Admission Transfer Admission Graduate Admission International Admission Visiting Florida Tech Scholarships & Aid Admitted Students Dual Enrollment Non-Degree Seeking Connect With Us Office of Financial Aid Life at Florida Tech Life at Florida Tech What's it like to live and learn at Florida Tech?",
+          "retrievedAt": "2026-09-07T16:28:52.454Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0717-6",
+          "url": "https://www.fit.edu/faculty-profiles/n/nguyen-kim-doang/",
+          "excerpt": "The answer differs for every student, but you can count on one thing: The people here are friendly, open-minded and passionate about their work.",
+          "retrievedAt": "2026-09-07T16:28:52.454Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0717-7",
+          "url": "https://www.fit.edu/faculty-profiles/n/nguyen-kim-doang/",
+          "excerpt": "About Florida Tech --> Clubs & Organizations Residence Life & Housing Campus Dining Health & Wellness Fitness & Recreation Civic Engagement Greek Life Arts & Culture Athletics & Esports About Florida Tech Select spacebar or enter to search Florida Tech website Search Search: When autocomplete results are available use up and down arrows to review and enter to select.",
+          "retrievedAt": "2026-09-07T16:28:52.454Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0717-8",
+          "url": "https://www.fit.edu/faculty-profiles/n/nguyen-kim-doang/",
+          "excerpt": "Apply Get Info Visit Give to Florida Tech MENU Florida Tech Faculty Profiles N Nguyen, Kim-Doang Nguyen, Kim-Doang Editing Help Please reference the Faculty Profile Editing Guide if you have any questions or issues updating your profile.",
+          "retrievedAt": "2026-09-07T16:28:52.454Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T16:28:52.454Z",
+      "nextAction": "The collected profile did not provide a research description or work records."
     },
     "vp-0718": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.pointpark.edu/academics/schools/schoolofartsandsciences/departments/naturalsciencesandengineeringtechnology/faculty/hai-tran"
       ],
-      "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "evidence": [
+        {
+          "id": "vp-0718-1",
+          "url": "https://www.pointpark.edu/academics/schools/schoolofartsandsciences/departments/naturalsciencesandengineeringtechnology/faculty/hai-tran",
+          "excerpt": "404 Page Not Found | Point Park University | Pittsburgh, PA Skip to main content Menu Menu In this section In this section Apply Request Info About Us Academics Admissions & Financial Aid Career-ready Student Life Give Now Search Search Apply Request Info Events Calendar A-Z Quicklinks My Point Park Contact Us 404 Page Not Found 404 Page Not Found &#160; We're sorry!",
+          "retrievedAt": "2026-09-07T16:28:52.778Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0718-2",
+          "url": "https://www.pointpark.edu/academics/schools/schoolofartsandsciences/departments/naturalsciencesandengineeringtechnology/faculty/hai-tran",
+          "excerpt": "&#160;&#160; check the address for typos use the search bar start over on our home page Point Park University 201 Wood Street Pittsburgh, PA 15222-1984 Careers at Point Park Location & Directions Non-discrimination Policy Privacy Policy Ready to learn more?",
+          "retrievedAt": "2026-09-07T16:28:52.778Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
+      "errors": [
+        "https://www.pointpark.edu/academics/schools/schoolofartsandsciences/departments/naturalsciencesandengineeringtechnology/faculty/hai-tran: Source returns a 404 page despite a successful HTTP response."
+      ],
+      "updatedAt": "2026-09-07T16:28:52.778Z",
+      "nextAction": "Find and retry a current institutional or maintained academic source."
     },
     "vp-0719": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://erau.edu/faculty/Hai.Tran"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0719-1",
+          "url": "https://erau.edu/faculty/Hai.Tran",
+          "excerpt": "cation Department of Mathematics Department of Physical Sciences Department of Security Studies and International Affairs Daytona Beach College of Aviation Department of Aeronautical Science Department of Applied Aviation Sciences Department of Aviation Maintenance Science Aviation Safety Department Aviation Sustainability Initiative Eagles Flight Team Aviation Week Department of Flight Aviation Medical Information Flight Course Costs and Payment Flight Courses and Ratings International Students Information Pre-Flight Checklist R-ATP Information School of Graduate Studies Daytona Beach David B.",
+          "retrievedAt": "2026-09-07T16:28:53.210Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0719-2",
+          "url": "https://erau.edu/faculty/Hai.Tran",
+          "excerpt": "Mathematics, Science and Technology PATHWAYS Worldwide College of Aviation Department of Aeronautics Department of Applied Aerospace Science Department of Aviation English Department of Flight School of Engineering Worldwide College of Business Department of Business Administration Department of Decision Science and Analytics Department of Management Faculty Faculty Directory Fulbright Scholar and Specialist Programs Academic Experience Aircraft Fleet and Flight Simulators Industry Advisory Boards Daytona Beach College of Arts & Sciences Daytona Beach College of Aviation Daytona Beach David B.",
+          "retrievedAt": "2026-09-07T16:28:53.210Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0719-3",
+          "url": "https://erau.edu/faculty/Hai.Tran",
+          "excerpt": "demic Support Student Financial Services Student Accessibility Services Documentation and Disclosure Accessible Housing Requests Bookstore Safety and Policies Safety and Security Daytona Beach Prescott Asia Campus Hazing Transparency Report Student Code of Conduct Student Grievances, Feedback and Reporting Title IX Non-Discrimination Policy Sexual Harassment Policy Sexual Misconduct Policy Military and Veterans ROTC Daytona Beach Air Force Army Naval Prescott Air Force Army Marine Corps Platoon Leaders Program Military and Veteran Students Residential Request Information Worldwide and Online U.",
+          "retrievedAt": "2026-09-07T16:28:53.210Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0719-4",
+          "url": "https://erau.edu/faculty/Hai.Tran",
+          "excerpt": "and Technology Center Robertson Safety Institute Jim and Linda Lee Planetarium Fulldome Productions STEM Education Center Undergraduate Multiphysics Computation Group Research Labs Directory Research Groups Directory AAMRIL Research Group Research Projects Directory Undergraduate Research Daytona Beach Prescott Undergraduate Research Scholars Program Research Park MicaPlex Launch Your Venture Service Centers Technology Transfer and Commercialization Patents Institutional Review Board About Who We Are Leadership President Presidential Speaker Series State of the University Thought Leadership Dr.",
+          "retrievedAt": "2026-09-07T16:28:53.210Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0719-5",
+          "url": "https://erau.edu/faculty/Hai.Tran",
+          "excerpt": "king Down Barriers Embry‑Riddle and Panhandle Helicopter Academy Lunken Flight Training Center Women and Drones Conference Services News and Stories News Stories Podcasts Media Experts Media Resources Locations Daytona Beach Campus Daytona Beach Campus Map Conference Services Prescott Campus Prescott Campus Map Conference Services Worldwide & Online Campus Asia Campus Europe Campus Central and South America Contact Us Get Info Visit Apply Online On-Campus Discover More Newsroom Give to Embry-Riddle Alumni Engagement Industry Partners Athletics Faculty Directory Hai Tran Associate Professor Hai.",
+          "retrievedAt": "2026-09-07T16:28:53.210Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0719-6",
+          "url": "https://erau.edu/faculty/Hai.Tran",
+          "excerpt": "edu Department of Mechanical Engineering Daytona Beach College of Engineering Explore This Page Overview Research Overview Biography Dr.",
+          "retrievedAt": "2026-09-07T16:28:53.210Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0719-7",
+          "url": "https://erau.edu/faculty/Hai.Tran",
+          "excerpt": "Hai Tran is an Associate Professor in the Department of Mechanical Engineering at Embry-Riddle Aeronautical University.",
+          "retrievedAt": "2026-09-07T16:28:53.210Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0719-8",
+          "url": "https://erau.edu/faculty/Hai.Tran",
+          "excerpt": "Tran worked in the Department of Mechanical Engineering at Texas A&M University (College Station, TX), and in the Department of Natural Sciences and Engineering at Point Park University (Pittsburgh, PA).",
+          "retrievedAt": "2026-09-07T16:28:53.210Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T16:28:53.210Z",
+      "nextAction": "The collected profile did not provide a research description or linked work records."
     },
     "vp-0720": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.washburn.edu/our-faculty/hoang-nguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0720-1",
+          "url": "https://www.washburn.edu/our-faculty/hoang-nguyen",
+          "excerpt": "Bookstore Campus Map Admission Requirements Application Information Transcripts Financial Aid A-Z Index Tuition Refunds Degrees List A-Z My Washburn Move in information When do classes start?",
+          "retrievedAt": "2026-09-07T16:28:54.589Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0720-2",
+          "url": "https://www.washburn.edu/our-faculty/hoang-nguyen",
+          "excerpt": "ement Athletics Men's Sports Baseball Basketball (M) Basketball (MJV) Cross Country (M) Football Tennis (M) Golf Track & Field (M) Women's Sports Basketball (W) Basketball (WJV) Cross Country (W) Soccer Softball Tennis (W) Track & Field (W) Volleyball Tickets Camps Areas of Study Schedule A Visit Virtual Tour Request Info Apply Now Faculty Profile Home » Our Faculty » Faculty Profile ‎ All Departments Faculty or Instructor Adjunct Faculty Staff Hoang Nguyen Assistant Professor Chemistry College of Arts and Sciences Contact Stoffer Science Hall Room 312B 1700 SW College Ave Topeka, KS 66621 785.",
+          "retrievedAt": "2026-09-07T16:28:54.589Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0720-3",
+          "url": "https://www.washburn.edu/our-faculty/hoang-nguyen",
+          "excerpt": "living cell - Magnetic resonance imaging - Spectroscopic identification and characterization of nanoparticles and quantum dots Career Accomplishments Certificate of Teaching and Learning 2020-2021 Certificate of Teaching and Learning 2021-2022 Certificate of Teaching and Learning 2022-2023 Certificate of Inclusive Teaching and Learning 2022-2023 Certificate of Teaching and Learning 2023-2024 Certificate of Inclusive Teaching and Learning 2023-2024 Certificate of Teaching and Learning 2024-2025 Certificate of Inclusive Teaching and Learning 2024-2025 1700 SW COLLEGE AVE TOPEKA, KANSAS 66621 785.",
+          "retrievedAt": "2026-09-07T16:28:54.589Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0720-4",
+          "url": "https://www.washburn.edu/our-faculty/hoang-nguyen",
+          "excerpt": "1010 Memorial Union Mulvane Art Museum Disability Services Statements & Disclosures My Washburn Jobs Site Map Washburn University prohibits discrimination on the basis of race, color, religion, age, national origin, ancestry, disability, sex, sexual orientation, gender identity, genetic information, veteran status, or marital or parental status.",
+          "retrievedAt": "2026-09-07T16:28:54.589Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0720-5",
+          "url": "https://www.washburn.edu/our-faculty/hoang-nguyen",
+          "excerpt": "The following person has been designated to handle inquiries regarding the non-discrimination policies: Michelle White-Godinet, Title IX Equal Opportunity Director, &#160;Washburn University, 1700 SW College Ave, Topeka, Kansas 66621, 785.",
+          "retrievedAt": "2026-09-07T16:28:54.589Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T16:28:54.589Z",
+      "nextAction": "The collected profile did not provide a sufficiently specific research description or linked work records."
     },
     "vp-0721": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.unomaha.edu/college-of-arts-and-sciences/psychology/about-us/directory/nguyen-tin.php"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0721-1",
+          "url": "https://www.unomaha.edu/college-of-arts-and-sciences/psychology/about-us/directory/nguyen-tin.php",
+          "excerpt": "ngaged Scholars Family Engaged Educational Training Research Back back to Main menu Research in Psychology Adolescent Peer Relationships and Identity Lab Creativity, Innovation and Leadership Assessment Decent Work & Well-being Lab Leadership and Innovation Lab NEW IDEAS Lab Positive Psychology Labs Sensory System Development Lab Social Cognition (SCOPE) Lab SONA Research Participation Psychology in Action Support Us Tin Nguyen UNO College of Arts and Sciences Department of Psychology About Us Faculty Directory Tin Nguyen Tin Nguyen, PhD Assistant Professor Psychology email: tnguyen178@unomaha.",
+          "retrievedAt": "2026-09-07T16:28:54.965Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0721-2",
+          "url": "https://www.unomaha.edu/college-of-arts-and-sciences/psychology/about-us/directory/nguyen-tin.php",
+          "excerpt": "is an Assistant Professor of Industrial and Organizational (I/O) Psychology at the University of Nebraska at Omaha (UNO) and the Research and Technology Transition Lead for the National Counterterrorism Innovation, Technology, and Education (NCITE) Center.",
+          "retrievedAt": "2026-09-07T16:28:54.965Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0721-3",
+          "url": "https://www.unomaha.edu/college-of-arts-and-sciences/psychology/about-us/directory/nguyen-tin.php",
+          "excerpt": "He received his doctorate from The Pennsylvania State University and has a decade of research and consulting experience working with federal entities, non-profit organizations, and corporations on issues of employee innovation, teamwork, engagement, and retention.",
+          "retrievedAt": "2026-09-07T16:28:54.965Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0721-4",
+          "url": "https://www.unomaha.edu/college-of-arts-and-sciences/psychology/about-us/directory/nguyen-tin.php",
+          "excerpt": "Nguyen&#8217;s expertise lies in the psychology and management of norm-violating behaviors, such as creativity, work-related deviance, and violence.",
+          "retrievedAt": "2026-09-07T16:28:54.965Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0721-5",
+          "url": "https://www.unomaha.edu/college-of-arts-and-sciences/psychology/about-us/directory/nguyen-tin.php",
+          "excerpt": "His work spans basic and applied research, and he serves on the editorial review boards for the Journal of Business and Psychology , Creativity Research Journal ,&#160;and&#160; The Journal of Creative Behavior .",
+          "retrievedAt": "2026-09-07T16:28:54.965Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0721-6",
+          "url": "https://www.unomaha.edu/college-of-arts-and-sciences/psychology/about-us/directory/nguyen-tin.php",
+          "excerpt": "5 million in external funding in collaboration with federal partners and non-profit research institutes.",
+          "retrievedAt": "2026-09-07T16:28:54.965Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0721-7",
+          "url": "https://www.unomaha.edu/college-of-arts-and-sciences/psychology/about-us/directory/nguyen-tin.php",
+          "excerpt": "Research Interests Idea implementation, creative self-regulation, emotions in creative work, work deviance, violence prevention and mitigation, workforce training, teamwork, event security, behavioral threat assessment and management Education B.",
+          "retrievedAt": "2026-09-07T16:28:54.965Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0721-8",
+          "url": "https://www.unomaha.edu/college-of-arts-and-sciences/psychology/about-us/directory/nguyen-tin.php",
+          "excerpt": "Psychology, The Pennsylvania State University Teaching PSYC 9650 &#8211; Research Methods in Psychology PSYC 9630 &#8211; Leadership Theories and Research Selected Publications Peer-Reviewed Publications Nguyen, T.",
+          "retrievedAt": "2026-09-07T16:28:54.965Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T16:30:21.449Z",
+      "nextAction": "No explicit selected-publication section or identity-verified dated work list with canonical work links was found."
     },
     "vp-0722": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://sites.google.com/view/dduongtr/home"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0722-1",
+          "url": "https://sites.google.com/view/dduongtr/home",
+          "excerpt": "Search this site Embedded Files Skip to main content Skip to navigation Duy Duong-Tran, Ph.",
+          "retrievedAt": "2026-09-07T16:28:55.133Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0722-2",
+          "url": "https://sites.google.com/view/dduongtr/home",
+          "excerpt": "Home About Research Publications Extended Abstracts Teaching Duy Duong-Tran, Ph.",
+          "retrievedAt": "2026-09-07T16:28:55.133Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0722-3",
+          "url": "https://sites.google.com/view/dduongtr/home",
+          "excerpt": "Home About Research Publications Extended Abstracts Teaching More Home About Research Publications Extended Abstracts Teaching Welcome to Dr.",
+          "retrievedAt": "2026-09-07T16:28:55.133Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0722-4",
+          "url": "https://sites.google.com/view/dduongtr/home",
+          "excerpt": "Duy Duong-Tran&#39;s personal webpage I am a tenure-track Assistant Professor in the Department of Mathematics at the United States Naval Academy (USNA) .",
+          "retrievedAt": "2026-09-07T16:28:55.133Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0722-5",
+          "url": "https://sites.google.com/view/dduongtr/home",
+          "excerpt": "Previously, I served as a Postdoctoral Research Fellow in the Perelman School of Medicine at the University of Pennsylvania , following my Ph.",
+          "retrievedAt": "2026-09-07T16:28:55.133Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0722-6",
+          "url": "https://sites.google.com/view/dduongtr/home",
+          "excerpt": "My research resides at the intersection of network neuroscience, biomedical Natural Language Model (NLP), mathematical modeling, and Neuro-AI.",
+          "retrievedAt": "2026-09-07T16:28:55.133Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0722-7",
+          "url": "https://sites.google.com/view/dduongtr/home",
+          "excerpt": "Below is my Research Dashboard: Highlighted Work and NEWS Latest News 👉 Jan 2026 | &quot;FACET&quot; - a transformer-based framework for small molecule conformer accepted, in press in ICLR (Rank A+) Oct 2025 | Received the Best Paper Award for Significant Bioinformatics (SigBio) Category in ACM-BCB’25, Philadelphia, US.",
+          "retrievedAt": "2026-09-07T16:28:55.133Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0722-8",
+          "url": "https://sites.google.com/view/dduongtr/home",
+          "excerpt": "Mar 2025 | Received the Marco Ramoni Distinguished Paper Award for Translational Bioinformatics at AMIA-IS.",
+          "retrievedAt": "2026-09-07T16:28:55.133Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T16:30:21.449Z",
+      "nextAction": "No explicit selected-publication section or identity-verified dated work list with canonical work links was found."
     },
     "vp-0723": {
       "overview": "pending",
