@@ -153,10 +153,11 @@ completion while temporary failures or unresolved verification remain.
 - [ ] Batch 22 — `vp-0421`–`vp-0440`; 20 people; 19 complete outcomes — published in `93d6079`; counts: 6 verified overviews, 13 no-suitable-evidence overviews, 5 verified work sections (4 selected, 1 recent), 14 no-suitable-evidence work searches; 1 retry in queue (`vp-0426`).
 - [ ] Batch 23 — `vp-0441`–`vp-0460`; 20 people; 19 complete outcomes — published in `e03a991`; counts: 13 verified overviews, 6 no-suitable-evidence overviews, 8 verified work sections (1 selected, 7 recent), 11 no-suitable-evidence work searches; 1 retry in queue (`vp-0450`).
 - [ ] Batch 24 — `vp-0461`–`vp-0480`; 20 people; 18 complete outcomes — published in `39e3101`; counts: 8 verified overviews, 10 no-suitable-evidence overviews, 8 verified work sections (5 selected, 3 recent), 10 no-suitable-evidence work searches; 2 retries in queue (`vp-0461`, `vp-0473`).
-- [ ] Batch 25 — `vp-0481`–`vp-0500`; 20 people; 12 complete outcomes; counts: 8 verified overviews, 4 no-suitable-evidence overviews, 4 verified work sections (2 selected, 2 recent), 8 no-suitable-evidence work searches; 8 retries in queue (`vp-0485`, `vp-0487`, `vp-0488`, `vp-0489`, `vp-0490`, `vp-0491`, `vp-0492`, `vp-0496`).
-- [ ] Batch 26 — `vp-0501`–`vp-0520`; 20 people; pending.
+- [ ] Batch 25 — `vp-0481`–`vp-0500`; 20 people; 12 complete outcomes — published in `2e81def`; counts: 8 verified overviews, 4 no-suitable-evidence overviews, 4 verified work sections (2 selected, 2 recent), 8 no-suitable-evidence work searches; 8 retries in queue (`vp-0485`, `vp-0487`, `vp-0488`, `vp-0489`, `vp-0490`, `vp-0491`, `vp-0492`, `vp-0496`).
+- [ ] Batch 26 — `vp-0501`–`vp-0520`; 20 people; 12 complete outcomes; counts: 8 verified overviews, 4 no-suitable-evidence overviews, 3 verified work sections (1 selected, 2 recent), 9 no-suitable-evidence work searches; 8 retries in queue (`vp-0501`, `vp-0502`, `vp-0503`, `vp-0504`, `vp-0505`, `vp-0508`, `vp-0515`, `vp-0519`).
+- [ ] Batch 27 — `vp-0521`–`vp-0540`; 20 people; pending.
 
-Progress note: batches 1 through 25 processed (365 verified overviews, 92 no-suitable-evidence overviews, 246 verified work sections [82 selected, 164 recent], 211 no-suitable-evidence work results, 43 retries in queue). Batch 25 will be published now; Batch 26 will be processed next.
+Progress note: batches 1 through 26 processed (373 verified overviews, 96 no-suitable-evidence overviews, 249 verified work sections [83 selected, 166 recent], 220 no-suitable-evidence work results, 51 retries in queue). Batch 26 will be published now; Batch 27 will be processed next.
 
 Populate at execution time from the saved ID snapshot. Each entry must include batch number,
 ledger reference or exact IDs, outcome counts, remaining retries, and publication status.
