@@ -2618,7 +2618,8 @@
         "vp-0826",
         "vp-0827"
       ],
-      "status": "pending"
+      "status": "in_progress",
+      "startedAt": "2026-09-07T18:53:47.038Z"
     },
     {
       "number": 42,
@@ -52741,205 +52742,1149 @@
       "nextAction": "Retry inaccessible source fetch."
     },
     "vp-0804": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.ntu.edu.sg/research/faculty-directory/detail/rp00758"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:55:15.265Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-0805": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://life-sci.hkust.edu.hk/team/tuan-anh-nguyen/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0805-1",
+          "url": "https://life-sci.hkust.edu.hk/team/tuan-anh-nguyen/",
+          "excerpt": "Tuan Anh NGUYEN &#8211; The Division of Life Science at HKUST MORE ABOUT HKUST University News Academic Departments A-Z Life@HKUST Library Map & Directions Jobs@HKUST Faculty Profiles About HKUST Search Home Why LIFS?",
+          "retrievedAt": "2026-09-07T18:53:51.708Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0805-2",
+          "url": "https://life-sci.hkust.edu.hk/team/tuan-anh-nguyen/",
+          "excerpt": "h Faculty Research Areas Facilities Education Undergraduate Programs Scholarships Curriculum Admission Courses Research Projects Internships Undergraduate Advising Team Articulation Pathways Postgraduate MPhil/PhD in Life Science PhD Dual-degree Programme MSc in Biotechnology MSc in Drug Regulatory Affairs and Policy (DRAP) MSc in Entrepreneurial Leadership in Biotechnology (ELBT) Admission Courses Integrated BSc-MSc Pathway QA at HKUST News & Events News Events Home Tuan Anh NGUYEN APPOINTMENT Associate Professor TITLE PhD Korea Advanced Institute of Science and Technology CONTACT tuananh@ust.",
+          "retrievedAt": "2026-09-07T18:53:51.708Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0805-3",
+          "url": "https://life-sci.hkust.edu.hk/team/tuan-anh-nguyen/",
+          "excerpt": "in Biochemistry from Korea Advanced Institute of Science and Technology (KAIST) where he studied DNA replication, recombination, and repair.",
+          "retrievedAt": "2026-09-07T18:53:51.708Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0805-4",
+          "url": "https://life-sci.hkust.edu.hk/team/tuan-anh-nguyen/",
+          "excerpt": "He subsequently moved to Seoul National University as a postdoc and worked on microRNA biogenesis.",
+          "retrievedAt": "2026-09-07T18:53:51.708Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0805-5",
+          "url": "https://life-sci.hkust.edu.hk/team/tuan-anh-nguyen/",
+          "excerpt": "During postdoc training, he extensively studied and made a contribution to understanding the molecular mechanism of human Microprocessor that is involved in microRNA biogenesis.",
+          "retrievedAt": "2026-09-07T18:53:51.708Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0805-6",
+          "url": "https://life-sci.hkust.edu.hk/team/tuan-anh-nguyen/",
+          "excerpt": "In 2017, he joined the Division of Life Science at HKUST as an Assistant professor.",
+          "retrievedAt": "2026-09-07T18:53:51.708Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0805-7",
+          "url": "https://life-sci.hkust.edu.hk/team/tuan-anh-nguyen/",
+          "excerpt": "His lab mainly focuses using biochemistry and bioinformatics approaches to address the molecular mechanism of RNA-interacting proteins.",
+          "retrievedAt": "2026-09-07T18:53:51.708Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0805-8",
+          "url": "https://life-sci.hkust.edu.hk/team/tuan-anh-nguyen/",
+          "excerpt": "Research Question RNA Biochematics Lab MicroRNAs (miRNAs) are small RNAs of ~22 nucleotides in length which do not encode any proteins but play critical roles in the posttranscriptional regulation of gene expression.",
+          "retrievedAt": "2026-09-07T18:53:51.708Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:55:15.265Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0806": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://researchmap.jp/thanh_phuc?lang=en"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0806-1",
+          "url": "https://researchmap.jp/thanh_phuc?lang=en",
+          "excerpt": "message}} Toggle navigation Toggle navigation 日本語 | English Sign up Login Nguyen Thanh Phuc (グェン フク タン) Modified on: 06/25 Home Research Interests Research Areas Research History Education Awards Papers Research Projects Profile Information Affiliation Lecturer, Kyoto University Degree Ph.",
+          "retrievedAt": "2026-09-07T18:53:54.333Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0806-2",
+          "url": "https://researchmap.jp/thanh_phuc?lang=en",
+          "excerpt": "org/0000-0002-8636-474X J-GLOBAL ID 201801011438826360 researchmap Member ID B000307549 Registration by self Registration by coauthor Registration by institution staff Registration by proxy user Registration by AI Registration by system Background color Public Disclosed to researchers only Private \" onclick=\"$('#popover-help-1').",
+          "retrievedAt": "2026-09-07T18:53:54.333Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0806-3",
+          "url": "https://researchmap.jp/thanh_phuc?lang=en",
+          "excerpt": "s / Semiconductors, optical and atomic physics / Ultracold atoms Research History 5 Sep, 2020 - Present Lecturer, Graduate School of Engineering Department of Molecular Engineering, Kyoto University Dec, 2024 - Mar, 2028 PRESTO, Japan Science and Technology Agency (JST) Apr, 2017 - Aug, 2020 Assistant Professor, Theoretical and Computational Molecular Science, Institute for Molecular Science (IMS) Apr, 2016 - Mar, 2017 Special Postdoctoral Researcher, Center for Emergent Matter Science (CEMS), RIKEN Apr, 2014 - Mar, 2016 Postdoctoral Researcher, CEMS, RIKEN Education 3 Apr, 2011 - Mar, 2014 Ph.",
+          "retrievedAt": "2026-09-07T18:53:54.333Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0806-4",
+          "url": "https://researchmap.jp/thanh_phuc?lang=en",
+          "excerpt": ", Department of Physics, The University of Tokyo Apr, 2009 - Mar, 2011 Master, Department of Physics, The University of Tokyo Apr, 2005 - Mar, 2009 Bachelor, Department of Physics, The University of Tokyo Awards 6 Jun, 2020 The 9th Young Scientist Award of National Institute of Natural Sciences Nguyen Thanh Phuc Apr, 2016 Special Postdoctoral Fellowship, RIKEN Nguyen Thanh Phuc Mar, 2014 Research Award for Ph.",
+          "retrievedAt": "2026-09-07T18:53:54.333Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0806-5",
+          "url": "https://researchmap.jp/thanh_phuc?lang=en",
+          "excerpt": "responding author Chiral-Induced Spin Selectivity in Photon-Coupled Achiral Matters Nguyen Thanh Phuc The Journal of Physical Chemistry Letters, 14 1626-1632, Feb, 2023 Peer-reviewed Lead author Corresponding author Bose enhancement of excitation-energy transfer with molecular-exciton-polariton condensates Nguyen Thanh Phuc The Journal of Chemical Physics, 156(23) 234301-1-9, Jun, 2022 Peer-reviewed Lead author Corresponding author Symmetry-dependent exciton-exciton interaction and intervalley biexciton in monolayer transition metal dichalcogenides Hoang Ngoc Cam, Nguyen Thanh Phuc, Vladimir A.",
+          "retrievedAt": "2026-09-07T18:53:54.333Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0806-6",
+          "url": "https://researchmap.jp/thanh_phuc?lang=en",
+          "excerpt": "r Bose-Einstein condensates Nguyen Thanh Phuc, Yuki Kawaguchi, Masahito Ueda Annals of Physics, 328 158-219, Jan, 2013 Peer-reviewed Lead author Corresponding author More Research Projects 1 Theoretical study of nonlinear optical responses of ultracold atomic systems: towards a high-resolution coherent multidimensional spectroscopy investigation of quantum many-body effects Grants-in-Aid for Scientific Research, Grant-in-Aid for Early-Career Scientists, Japan Society for the Promotion of Science, Apr, 2019 - Mar, 2022 Nguyen Thanh Phuc Menu My portal Coauthors There are no coauthors to display.",
+          "retrievedAt": "2026-09-07T18:53:54.333Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:55:15.265Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0807": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.otago.ac.nz/english-linguistics/staff/minh-nguyen"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.otago.ac.nz/english-linguistics/staff/minh-nguyen: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T18:55:15.265Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-0808": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.tcd.ie/scss/people/academic-staff/phamq/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0808-1",
+          "url": "https://www.tcd.ie/scss/people/academic-staff/phamq/",
+          "excerpt": "y Management Science and Informations Systems Studies Course Structure MSISS Projects FAQ Course Details Computer Engineering Course Structure FAQ Course Details Minor in Statistics Module Directory How to Apply Internships for Students Postgraduate Computer Science Data Science Intelligent Systems (AI) Augmented & Virtual Reality Future Networked Systems Application Requirements FAQ Contact Info for Current Students Interactive Digital Media Course Structure Application Requirements Contact FAQ Statistics and Sustainability Course Structure Application Requirements Contact Us PG Cert, Dip & M.",
+          "retrievedAt": "2026-09-07T18:53:56.060Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0808-2",
+          "url": "https://www.tcd.ie/scss/people/academic-staff/phamq/",
+          "excerpt": "2022 Events People Directorate Academic Staff NUSEIBEB Systems Support Staff Technical Staff Administrative Staff MOLLOYK5 Research Staff Visiting Staff Vacancies Alumni and Friends JGB Tribute Page Second Level Students Equity, Equality, Diversity and Inclusion (EEDI) EEDI Committee EEDI Working Groups Athena Swan SCSS Policies and Procedures Newsletters Publications Seminars Contact Local Access Contact Us School of Computer Science and Statistics O’Reilly Institute Trinity College Dublin Dublin 2 Ireland D02 N8P5 View the contact page for more contact and location information Email scss@tcd.",
+          "retrievedAt": "2026-09-07T18:53:56.060Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0808-3",
+          "url": "https://www.tcd.ie/scss/people/academic-staff/phamq/",
+          "excerpt": "Viet Quoc PHAM is currently an Assistant Professor in Networks and Distributed Systems with the School of Computer Science and Statistics, Trinity College Dublin, Ireland.",
+          "retrievedAt": "2026-09-07T18:53:56.060Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0808-4",
+          "url": "https://www.tcd.ie/scss/people/academic-staff/phamq/",
+          "excerpt": "He is also affiliated with Research Ireland ADAPT Centre as an Academic Collaborator, with ADVANCE CRT centre as an Academic Supervisor, and with Research Ireland CONNECT Centre as an Associate Investigator.",
+          "retrievedAt": "2026-09-07T18:53:56.060Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0808-5",
+          "url": "https://www.tcd.ie/scss/people/academic-staff/phamq/",
+          "excerpt": "Prior to joining TCD, he was in various academic positions with Kyung Hee University, Changwon National University, and Pusan National University.",
+          "retrievedAt": "2026-09-07T18:53:56.060Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0808-6",
+          "url": "https://www.tcd.ie/scss/people/academic-staff/phamq/",
+          "excerpt": "His research belongs to the areas of mobile edge networks and AI, the fields that are changing very dramatically and need a great effort from the research communities to realize a future 6G ecosystem in the 2030s.",
+          "retrievedAt": "2026-09-07T18:53:56.060Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0808-7",
+          "url": "https://www.tcd.ie/scss/people/academic-staff/phamq/",
+          "excerpt": "His research interest is based on multidisciplinary approaches of computer science, telecommunications, and engineering mathematics for the practical design of complex and communication networks.",
+          "retrievedAt": "2026-09-07T18:53:56.060Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0808-8",
+          "url": "https://www.tcd.ie/scss/people/academic-staff/phamq/",
+          "excerpt": "Based on that vision, he has led the Collective Intelligence and Network AI Lab (COINLab) and focused on three main thrusts, including COmputing (e.",
+          "retrievedAt": "2026-09-07T18:53:56.060Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:55:15.265Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0809": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://orbit.dtu.dk/en/persons/tran-nguyen-le/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0809-1",
+          "url": "https://orbit.dtu.dk/en/persons/tran-nguyen-le/",
+          "excerpt": "Tran Nguyen Le - Welcome to DTU Research Database Skip to main navigation Skip to search Skip to main content Welcome to DTU Research Database Home About DTU Orbit Link opens in a new tab Search content at Welcome to DTU Research Database Home Profiles Research units Publications Activities Projects Prizes Press/Media Datasets View Scopus Profile Tran Nguyen Le Ph.",
+          "retrievedAt": "2026-09-07T18:53:57.004Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0809-2",
+          "url": "https://orbit.dtu.dk/en/persons/tran-nguyen-le/",
+          "excerpt": "D Assistant Professor , Department of Engineering Technology and Didactics https://orcid.",
+          "retrievedAt": "2026-09-07T18:53:57.004Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0809-3",
+          "url": "https://orbit.dtu.dk/en/persons/tran-nguyen-le/",
+          "excerpt": "org/0000-0003-1139-1943 Phone 93511456 Email tngle dtu dk Website https://engtech.",
+          "retrievedAt": "2026-09-07T18:53:57.004Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0809-4",
+          "url": "https://orbit.dtu.dk/en/persons/tran-nguyen-le/",
+          "excerpt": "dk/english/research-and-development/sections/mechanical-technology Lautrupvang 15 , Ballerup, N2.",
+          "retrievedAt": "2026-09-07T18:53:57.004Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0809-5",
+          "url": "https://orbit.dtu.dk/en/persons/tran-nguyen-le/",
+          "excerpt": "13 2750 Ballerup Denmark Overview Fingerprint Network Publications (5) Similar Profiles (6) Personal profile Profile Accepting B.",
+          "retrievedAt": "2026-09-07T18:53:57.004Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0809-6",
+          "url": "https://orbit.dtu.dk/en/persons/tran-nguyen-le/",
+          "excerpt": "Sc Students Tran is Assistant Professor of Robotics and Mechatronics in the Department of Engineering Technology and Didactics, Technical University of Denmark (DTU), Denmark.",
+          "retrievedAt": "2026-09-07T18:53:57.004Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0809-7",
+          "url": "https://orbit.dtu.dk/en/persons/tran-nguyen-le/",
+          "excerpt": "Currently he is serving as an Associate Editor for IEEE Robotics and Automation Letters (RA-L) and an Associate Editor for IROS 2024 & 2025.",
+          "retrievedAt": "2026-09-07T18:53:57.004Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0809-8",
+          "url": "https://orbit.dtu.dk/en/persons/tran-nguyen-le/",
+          "excerpt": "Before joining DTU, he was a Postdoctoral Researcher at Intelligent Robotics Group at Aalto University, Finland with Prof.",
+          "retrievedAt": "2026-09-07T18:53:57.004Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:55:15.265Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0810": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://portal.findresearcher.sdu.dk/en/persons/ninh-dang-pham/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0810-1",
+          "url": "https://portal.findresearcher.sdu.dk/en/persons/ninh-dang-pham/",
+          "excerpt": "Ninh Dang Pham - University of Southern Denmark Skip to main navigation Skip to search Skip to main content University of Southern Denmark Home Help & FAQ Link opens in a new tab Dansk English Search content at University of Southern Denmark Home Researchers Research units Research output Activities Projects Datasets Impacts Press/Media Prizes Teaching View Scopus Profile Ninh Dang Pham Department of Mathematics and Computer Science Associate Professor , Data Science https://orcid.",
+          "retrievedAt": "2026-09-07T18:53:58.047Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0810-2",
+          "url": "https://portal.findresearcher.sdu.dk/en/persons/ninh-dang-pham/",
+          "excerpt": "sdu dk Overview Fingerprint Network Research output (21) Prizes (2) Personal profile Research areas My main research interests are in designing and analyzing practical and computation-efficient algorithms for big data analytics.",
+          "retrievedAt": "2026-09-07T18:53:58.047Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0810-3",
+          "url": "https://portal.findresearcher.sdu.dk/en/persons/ninh-dang-pham/",
+          "excerpt": "Big Data Analytics Computer Science 100% Efficient Algorithm Computer Science 100% Random Projection Computer Science 100% Angular Separation Computer Science 100% Neighbour Search Computer Science 100% Mobile Deep Learning Computer Science 100% High-Dimensional Data Analysis Computer Science 100% Inner Product Mathematics 100% View full fingerprint Collaborations and top research areas from the last five years Recent external collaboration on country/territory level.",
+          "retrievedAt": "2026-09-07T18:53:58.047Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0810-4",
+          "url": "https://portal.findresearcher.sdu.dk/en/persons/ninh-dang-pham/",
+          "excerpt": "Dive into details by clicking on the dots or select a country/territory from the list Dive into details Select a country/territory to view shared publications and projects Close Select a country/territory from the list Explore network further Research output 16 Article in proceedings 3 Monograph 2 Journal article Research output per year Research output per year Scalable DBSCAN with random projections Xu, H.",
+          "retrievedAt": "2026-09-07T18:53:58.047Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0810-5",
+          "url": "https://portal.findresearcher.sdu.dk/en/persons/ninh-dang-pham/",
+          "excerpt": ", 2024 , Proceedings of the 38th International Conference on Neural Information Processing Systems.",
+          "retrievedAt": "2026-09-07T18:53:58.047Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0810-6",
+          "url": "https://portal.findresearcher.sdu.dk/en/persons/ninh-dang-pham/",
+          "excerpt": "Research output : Chapter in Book/Report/Conference proceeding › Article in proceedings › Research › peer-review Open Access Random Projection 100% Clustering Algorithm 50% Clustering Structure 50% Falconn++: A Locality-sensitive Filtering Approach for Approximate Nearest Neighbor Search Pham, N.",
+          "retrievedAt": "2026-09-07T18:53:58.047Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0810-7",
+          "url": "https://portal.findresearcher.sdu.dk/en/persons/ninh-dang-pham/",
+          "excerpt": ", 2022 , Advances in Neural Information Processing Systems 35 - 36th Conference on Neural Information Processing Systems, NeurIPS 2022.",
+          "retrievedAt": "2026-09-07T18:53:58.047Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0810-8",
+          "url": "https://portal.findresearcher.sdu.dk/en/persons/ninh-dang-pham/",
+          "excerpt": "Neural information processing systems foundation , (Advances in Neural Information Processing Systems, Vol.",
+          "retrievedAt": "2026-09-07T18:53:58.047Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:55:15.265Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0811": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.federation.edu.au/research/find-an-expert/Dung-Tran"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0811-1",
+          "url": "https://www.federation.edu.au/research/find-an-expert/Dung-Tran",
+          "excerpt": "Dung Tran | Federation University Skip to main Home Current students Staff Library Contact us Study Apply Research Engage About Open Day Home Research Find an expert Dung Tran Associate Professor Dung Tran Associate Professor, Education Contact dung.",
+          "retrievedAt": "2026-09-07T18:53:59.381Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0811-2",
+          "url": "https://www.federation.edu.au/research/find-an-expert/Dung-Tran",
+          "excerpt": "au +61 (3) 53276190 Campus Mt Helen Campus Biography Dr Dũng Trần is an Associate Professor in Mathematics and STEM Education.",
+          "retrievedAt": "2026-09-07T18:53:59.382Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0811-3",
+          "url": "https://www.federation.edu.au/research/find-an-expert/Dung-Tran",
+          "excerpt": "His research is centred on two primary areas: Curriculum analysis, design, and implementation: enhancing diverse students&rsquo; mathematical literacy and enabling them to effectively use mathematics and statistics in various aspects of life, including home, civic and professional environments.",
+          "retrievedAt": "2026-09-07T18:53:59.382Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0811-4",
+          "url": "https://www.federation.edu.au/research/find-an-expert/Dung-Tran",
+          "excerpt": "Teacher competence development: advancing teachers&rsquo; knowledge and beliefs to facilitate effective mathematics instruction through holistic approaches.",
+          "retrievedAt": "2026-09-07T18:53:59.382Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0811-5",
+          "url": "https://www.federation.edu.au/research/find-an-expert/Dung-Tran",
+          "excerpt": "Dũng has led numerous nationally funded projects aimed at bolstering both preservice and inservice teachers&rsquo; abilities to integrate contextual mathematics and statistical literacy into their curricula and teaching practices.",
+          "retrievedAt": "2026-09-07T18:53:59.382Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0811-6",
+          "url": "https://www.federation.edu.au/research/find-an-expert/Dung-Tran",
+          "excerpt": "His methodological expertise encompasses both quantitative and qualitative research methods, especially content analysis, design-based research, clinical (task-based) interviews and instrument design and validation.",
+          "retrievedAt": "2026-09-07T18:53:59.382Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0811-7",
+          "url": "https://www.federation.edu.au/research/find-an-expert/Dung-Tran",
+          "excerpt": "Dũng collaborates with global educators, focusing on empowering students to engage with and apply mathematics and statistics.",
+          "retrievedAt": "2026-09-07T18:53:59.382Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0811-8",
+          "url": "https://www.federation.edu.au/research/find-an-expert/Dung-Tran",
+          "excerpt": "He asserts that teachers are pivotal in significantly enhancing student learning outcomes and that robust pedagogical content knowledge is essential for these improvements.",
+          "retrievedAt": "2026-09-07T18:53:59.382Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:55:15.265Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0812": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://rsm.anu.edu.au/people/nghia-tran"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0812-1",
+          "url": "https://rsm.anu.edu.au/people/nghia-tran",
+          "excerpt": "stry partner Collaborative opportunities Alumni & philanthropy Seminars & events Contact us Breadcrumb Home People Nghia Tran Dr Nghia Tran Lecturer Area of expertise: Business & business administration Career transitions Employability & career development Entrepreneurship Higher education policy implementation Human resource management Management Management education Organisational behaviour Student global mobility Research areas Higher education; graduate employability; work-integrated learning; international education; career development; professional development; human resource development.",
+          "retrievedAt": "2026-09-07T18:54:01.206Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0812-2",
+          "url": "https://rsm.anu.edu.au/people/nghia-tran",
+          "excerpt": "He has co-authored more than 50 academic publications in the areas of graduate employability, work-integrated learning, skills gaps, teacher education, and international education.",
+          "retrievedAt": "2026-09-07T18:54:01.206Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0812-3",
+          "url": "https://rsm.anu.edu.au/people/nghia-tran",
+          "excerpt": "Nghia is particularly interested in where research and student experience intersect, dominantly focusing on how to improve students’ learning experience and enhance graduates’ employability.",
+          "retrievedAt": "2026-09-07T18:54:01.206Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0812-4",
+          "url": "https://rsm.anu.edu.au/people/nghia-tran",
+          "excerpt": "He has published articles in prestigious journals such as Higher Education , Teaching and Teacher Education , Teaching in Higher Education , and Education + Training .",
+          "retrievedAt": "2026-09-07T18:54:01.206Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0812-5",
+          "url": "https://rsm.anu.edu.au/people/nghia-tran",
+          "excerpt": "Nghia’s research has been supported by a number of research grants and scholarships including the European Commission’s Erasmus Mundus scholarship, the Australian Government’s Endeavour Postgraduate Award, the Australian Research Council, Vietnam’s National Foundation for Science & Technology Development, and Australian Strategic Teaching and Learning Grant.",
+          "retrievedAt": "2026-09-07T18:54:01.206Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0812-6",
+          "url": "https://rsm.anu.edu.au/people/nghia-tran",
+          "excerpt": "View ORCID profile LinkedIn Grants Grants 2022 - 2026: Australian Research Council | (ARC Discovery: DP220100552) | Australia.",
+          "retrievedAt": "2026-09-07T18:54:01.206Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0812-7",
+          "url": "https://rsm.anu.edu.au/people/nghia-tran",
+          "excerpt": "Project: Student mobility, risk and changing geopolitics of international education.",
+          "retrievedAt": "2026-09-07T18:54:01.206Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0812-8",
+          "url": "https://rsm.anu.edu.au/people/nghia-tran",
+          "excerpt": "Value: AUD 355,580 2025 - 2026: ANU Strategic Learning and Teaching Grant | Australian National University | Australia.",
+          "retrievedAt": "2026-09-07T18:54:01.206Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:55:15.265Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0813": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://medschool.umich.edu/profile/11609/andrew-m-nguyen"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://medschool.umich.edu/profile/11609/andrew-m-nguyen: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T18:55:15.265Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-0814": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://medschool.cuanschutz.edu/surgery/divisions-centers-affiliates/plastic-and-reconstructive/our-team/phuong-nguyen-md"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0814-1",
+          "url": "https://medschool.cuanschutz.edu/surgery/divisions-centers-affiliates/plastic-and-reconstructive/our-team/phuong-nguyen-md",
+          "excerpt": "Phuong Nguyen, MD Skip to content Webmail CU Access Canvas Quick Links Search School of Medicine All University Sites Submit Tools & Resources Events Calendar Newsroom A Place To Strauss Health Sciences Library Department A-Z Directory Campus Directory Leadership Faculty & Staff Resources Supporter & Alumni Resources Student Resources Mental Health Resources Campus Map University Policies Give Now Who Speaks for CU?",
+          "retrievedAt": "2026-09-07T18:54:01.808Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0814-2",
+          "url": "https://medschool.cuanschutz.edu/surgery/divisions-centers-affiliates/plastic-and-reconstructive/our-team/phuong-nguyen-md",
+          "excerpt": "CU Campuses CU Anschutz CU Boulder CU Colorado Springs CU Denver CU System CU Online CU Anschutz School of Dental Medicine Graduate School School of Medicine College of Nursing Skaggs School of Pharmacy and Pharmaceutical Sciences Colorado School of Public Health Department of Surgery School of Medicine Make a Gift Toggle navigation About Us Patient Care Education Research Divisions | Centers | Affiliates | Programs News Contact Resources for Faculty and Staff University Quick Links More Phuong Nguyen, MD Loading items.",
+          "retrievedAt": "2026-09-07T18:54:01.808Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0814-3",
+          "url": "https://medschool.cuanschutz.edu/surgery/divisions-centers-affiliates/plastic-and-reconstructive/our-team/phuong-nguyen-md",
+          "excerpt": "ora, CO 80045 Administration: 303-724-2750 Appointments: 720-848-2700 Facebook Twitter Instagram LinkedIn Bluesky General Information Contact Us Find a Doctor Find a Researcher Make a Gift Resident/Fellow Resources Graduate Medical Education Center for Surgical Innovation Health Sciences Library Alumni CU Anschutz Campus Resources School of Medicine CU Department Websites CU Anschutz Directory Parking and Maps Contact Us Website Feedback CU System Privacy Policy Terms of Use Accessibility Accreditation Employment Give Now &copy; 2026 The Regents of the University of Colorado , a body corporate.",
+          "retrievedAt": "2026-09-07T18:54:01.808Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:55:15.265Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0815": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://med.miami.edu/faculty/dao-m-nguyen-md"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0815-1",
+          "url": "https://med.miami.edu/faculty/dao-m-nguyen-md",
+          "excerpt": "ative Offices Basic Science Research Centers & Institutes Clinical & Translational Research Data Science & IT Departments Research Laboratories Funding Opportunities Research Resources Find a Core Facility Find Clinical Trials Close Drawer Departments Page 1 Departments arrow--button Clinical Departments Basic Science Departments Administrative Departments Centers & Institutes Administrative Offices Library Student Life Close Drawer About Us Page 1 About Us arrow--button Leadership Faculty Culture Change History Administrative Offices Community Outreach Close Drawer Search Seeking Patient Care?",
+          "retrievedAt": "2026-09-07T18:54:02.158Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0815-2",
+          "url": "https://med.miami.edu/faculty/dao-m-nguyen-md",
+          "excerpt": "Department: DeWitt Daughtry Family Department of Surgery Division: Cardiothoracic Surgery Seeking Patient Care?",
+          "retrievedAt": "2026-09-07T18:54:02.158Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0815-3",
+          "url": "https://med.miami.edu/faculty/dao-m-nguyen-md",
+          "excerpt": "Clinical Profile Roles Professor of Surgery and Section Chief Thoracic Surgery Member, Thoracic Surgical Oncology, Sylvester Comprehensive Cancer Center Co-Chair, Disease Specific Group (DSG) – Lung – SCCC The B.",
+          "retrievedAt": "2026-09-07T18:54:02.158Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0815-4",
+          "url": "https://med.miami.edu/faculty/dao-m-nguyen-md",
+          "excerpt": "and Donald Carlin Endowed Chair for Thoracic Surgical Oncology Education & Training + – Education 1993: McGill University Faculty of Medicine MSN 1986: McGill University Faculty of Medicine MD Publications + – Disclaimer: The information presented in this section has been consolidated using AI and machine learning technologies.",
+          "retrievedAt": "2026-09-07T18:54:02.158Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0815-5",
+          "url": "https://med.miami.edu/faculty/dao-m-nguyen-md",
+          "excerpt": "Your feedback is greatly appreciated and helps us improve the quality of our content.",
+          "retrievedAt": "2026-09-07T18:54:02.158Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0815-6",
+          "url": "https://med.miami.edu/faculty/dao-m-nguyen-md",
+          "excerpt": "Instagram Twitter facebook Research Gate LinkedIn TikTok Threads - UMiami Medicine You tube Resources Careers News For Media Research MyUM UM Network Alumni Association Giving Wellness Center University of Miami Visit Campus Highlights Life in Miami Transportation & Parking UHealth Bascom Palmer Eye Institute Sylvester Comprehensive Cancer Center Emergency Information | Privacy Statement & Legal Notices &copy; 2025 University of Miami.",
+          "retrievedAt": "2026-09-07T18:54:02.158Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0815-7",
+          "url": "https://med.miami.edu/faculty/dao-m-nguyen-md",
+          "excerpt": "org Individuals with disabilities who experience any technology-based barriers in accessing our website or accessing services through our website may contact our team at 305-284-3781 or via email at wei@miami.",
+          "retrievedAt": "2026-09-07T18:54:02.158Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:55:15.265Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0816": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://case.edu/medicine/microbio/our-people/liem-nguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0816-1",
+          "url": "https://case.edu/medicine/microbio/our-people/liem-nguyen",
+          "excerpt": "Liem Nguyen | Molecular Biology and Microbiology | School of Medicine | Case Western Reserve University Skip to main content Go to case.",
+          "retrievedAt": "2026-09-07T18:54:02.340Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0816-2",
+          "url": "https://case.edu/medicine/microbio/our-people/liem-nguyen",
+          "excerpt": "earch About Contact Us Affiliated Programs Our People Faculty Researchers Administrative Staff Students Academic Programs Cell Biology Molecular Biology and Microbiology Molecular Virology Seminars and Events Resources Toggle navigation Navigation + Search Submit Search About Contact Us Affiliated Programs Our People Faculty Researchers Administrative Staff Students Academic Programs Cell Biology Molecular Biology and Microbiology Molecular Virology Seminars and Events Resources Home Our People Liem Nguyen Our People Faculty Researchers Administrative Staff Students Liem Nguyen, PhD Email liem.",
+          "retrievedAt": "2026-09-07T18:54:02.340Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0816-3",
+          "url": "https://case.edu/medicine/microbio/our-people/liem-nguyen",
+          "excerpt": "3055 Associate Professor, Department of Molecular Biology and Microbiology, School of Medicine I investigate the interactions of pathogenic mycobacteria with host immune systems.",
+          "retrievedAt": "2026-09-07T18:54:02.340Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0816-4",
+          "url": "https://case.edu/medicine/microbio/our-people/liem-nguyen",
+          "excerpt": "Specifically, I research antibiotic resistance, pathogenesis, cell wall assembly and cell division control in Mycobacterium tuberculosis.",
+          "retrievedAt": "2026-09-07T18:54:02.340Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0816-5",
+          "url": "https://case.edu/medicine/microbio/our-people/liem-nguyen",
+          "excerpt": "Liem Nguyen's Biography Research Information Research Projects Pathogenic mycobacteria are among the most devastating infectious agents of mortality worldwide causing tuberculosis, opportunistic infections of AIDS patients, and leprosy.",
+          "retrievedAt": "2026-09-07T18:54:02.340Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0816-6",
+          "url": "https://case.edu/medicine/microbio/our-people/liem-nguyen",
+          "excerpt": "A major problem in controlling mycobacterial infections is their remarkable antibiotic tolerance that limits chemotherapeutic options and is the root cause of treatment failure.",
+          "retrievedAt": "2026-09-07T18:54:02.340Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0816-7",
+          "url": "https://case.edu/medicine/microbio/our-people/liem-nguyen",
+          "excerpt": "In addition, pathogenic mycobacteria are able to persist for a long period of time inside the host cells circumventing host destruction.",
+          "retrievedAt": "2026-09-07T18:54:02.340Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0816-8",
+          "url": "https://case.edu/medicine/microbio/our-people/liem-nguyen",
+          "excerpt": "Persistence and antibiotic resistance are phenotypically associated and are supported by related genetic or physiological determinants.",
+          "retrievedAt": "2026-09-07T18:54:02.340Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:55:15.265Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0819": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://profiles.ucsd.edu/mylinh.nguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0819-1",
+          "url": "https://profiles.ucsd.edu/mylinh.nguyen",
+          "excerpt": "Mylinh Nguyen | UCSD Profiles Powered by Altman Clinical and Translational Research Institute UCSD Profiles Home About Help/FAQs Search Options UC Davis UCI UCLA UCSD UCSF All UC Health USC All Everything Research Concepts Awards People &#160;&#160;&#160;UC Health People &#160;&#160;&#160;UC Davis People &#160;&#160;&#160;UCI People &#160;&#160;&#160;UCLA People &#160;&#160;&#160;UCSD People &#160;&#160;&#160;UCSF People &#160;&#160;&#160;USC People on next line to remove space between --> Find People Find Everything Login to edit your profile (add a photo, awards, links to other websites, etc.",
+          "retrievedAt": "2026-09-07T18:54:03.178Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0819-2",
+          "url": "https://profiles.ucsd.edu/mylinh.nguyen",
+          "excerpt": ") Edit My Profile My Person List ( 0 ) Return to Top Mylinh Nguyen Title(s) Associate Clinical Professor, Pediatrics School Vc-health Sciences-schools Address 9500 Gilman Drive # La Jolla CA 92093 Email mtn003@ucsd.",
+          "retrievedAt": "2026-09-07T18:54:03.178Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0819-3",
+          "url": "https://profiles.ucsd.edu/mylinh.nguyen",
+          "excerpt": "edu vCard Download vCard Bibliographic publications Publications listed below are automatically derived from MEDLINE/PubMed and other sources, which might result in incorrect or missing publications.",
+          "retrievedAt": "2026-09-07T18:54:03.178Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0819-4",
+          "url": "https://profiles.ucsd.edu/mylinh.nguyen",
+          "excerpt": "Researchers can login to make corrections and additions, or contact us for help .",
+          "retrievedAt": "2026-09-07T18:54:03.178Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0819-5",
+          "url": "https://profiles.ucsd.edu/mylinh.nguyen",
+          "excerpt": "Newest | Oldest | Most Cited | Most Discussed | Timeline | Field Summary | Plain Text Altmetrics Details PMC Citations indicate the number of times the publication was cited by articles in PubMed Central, and the Altmetric score represents citations in news articles and social media.",
+          "retrievedAt": "2026-09-07T18:54:03.178Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0819-6",
+          "url": "https://profiles.ucsd.edu/mylinh.nguyen",
+          "excerpt": "(Note that publications are often cited in additional ways that are not shown here.",
+          "retrievedAt": "2026-09-07T18:54:03.178Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0819-7",
+          "url": "https://profiles.ucsd.edu/mylinh.nguyen",
+          "excerpt": ") Fields are based on how the National Library of Medicine (NLM) classifies the publication's journal and might not represent the specific topic of the publication.",
+          "retrievedAt": "2026-09-07T18:54:03.178Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0819-8",
+          "url": "https://profiles.ucsd.edu/mylinh.nguyen",
+          "excerpt": "Translation tags are based on the publication type and the MeSH terms NLM assigns to the publication.",
+          "retrievedAt": "2026-09-07T18:54:03.178Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:55:15.265Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0820": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://profiles.ucsd.edu/margaret.nguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0820-1",
+          "url": "https://profiles.ucsd.edu/margaret.nguyen",
+          "excerpt": "rgaret Nguyen | UCSD Profiles Powered by Altman Clinical and Translational Research Institute UCSD Profiles Home About Help/FAQs Search Options UC Davis UCI UCLA UCSD UCSF All UC Health USC All Everything Research Concepts Awards People &#160;&#160;&#160;UC Health People &#160;&#160;&#160;UC Davis People &#160;&#160;&#160;UCI People &#160;&#160;&#160;UCLA People &#160;&#160;&#160;UCSD People &#160;&#160;&#160;UCSF People &#160;&#160;&#160;USC People on next line to remove space between --> Find People Find Everything Login to edit your profile (add a photo, awards, links to other websites, etc.",
+          "retrievedAt": "2026-09-07T18:54:03.293Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0820-2",
+          "url": "https://profiles.ucsd.edu/margaret.nguyen",
+          "excerpt": ") Edit My Profile My Person List ( 0 ) Return to Top Margaret Nguyen Title(s) Clinical Professor, Pediatrics School Vc-health Sciences-schools Address 9500 Gilman Drive # La Jolla CA 92093 Email mbn006@ucsd.",
+          "retrievedAt": "2026-09-07T18:54:03.293Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0820-3",
+          "url": "https://profiles.ucsd.edu/margaret.nguyen",
+          "excerpt": "s, Community Track National Institute of Mental Health, National Institutes of Health, Bethesda, MD NIMH Pre-Irta Award Research keywords Geospatial medicine , Pediatric Emergency Medicine (PEM) , health disparity , spatial analytics , pediatric intubation , pediatric mental health , qualitative research , implicit bias , GIS , geographical information systems , transcranial magnetic stimulation (TMS) Featured Publications Bibliographic publications Publications listed below are automatically derived from MEDLINE/PubMed and other sources, which might result in incorrect or missing publications.",
+          "retrievedAt": "2026-09-07T18:54:03.293Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0820-4",
+          "url": "https://profiles.ucsd.edu/margaret.nguyen",
+          "excerpt": "Researchers can login to make corrections and additions, or contact us for help .",
+          "retrievedAt": "2026-09-07T18:54:03.293Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0820-5",
+          "url": "https://profiles.ucsd.edu/margaret.nguyen",
+          "excerpt": "Newest | Oldest | Most Cited | Most Discussed | Timeline | Field Summary | Plain Text Altmetrics Details PMC Citations indicate the number of times the publication was cited by articles in PubMed Central, and the Altmetric score represents citations in news articles and social media.",
+          "retrievedAt": "2026-09-07T18:54:03.293Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0820-6",
+          "url": "https://profiles.ucsd.edu/margaret.nguyen",
+          "excerpt": "(Note that publications are often cited in additional ways that are not shown here.",
+          "retrievedAt": "2026-09-07T18:54:03.293Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0820-7",
+          "url": "https://profiles.ucsd.edu/margaret.nguyen",
+          "excerpt": ") Fields are based on how the National Library of Medicine (NLM) classifies the publication's journal and might not represent the specific topic of the publication.",
+          "retrievedAt": "2026-09-07T18:54:03.293Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0820-8",
+          "url": "https://profiles.ucsd.edu/margaret.nguyen",
+          "excerpt": "Translation tags are based on the publication type and the MeSH terms NLM assigns to the publication.",
+          "retrievedAt": "2026-09-07T18:54:03.293Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:55:15.265Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0821": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.faculty.uci.edu/profile/?facultyId=5807"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0821-1",
+          "url": "https://www.faculty.uci.edu/profile/?facultyId=5807",
+          "excerpt": "UC Irvine - Faculty Profile System For Faculty Search Tips About Minh-Ha Tran Clinical Professor, Pathology School of Medicine Doctor of Osteopathy, Western University of Health Sciences Phone: (714) 456-8925 Email: minhhat1@uci.",
+          "retrievedAt": "2026-09-07T18:54:04.061Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0821-2",
+          "url": "https://www.faculty.uci.edu/profile/?facultyId=5807",
+          "excerpt": "3003 Mail Code: 4805 Irvine, CA 92697 Websites This YouTube video chronicles the construction of the Campus Blood Donor Center, a project I wrote the original business plan for and for which the Medical Center supported.",
+          "retrievedAt": "2026-09-07T18:54:04.061Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0821-3",
+          "url": "https://www.faculty.uci.edu/profile/?facultyId=5807",
+          "excerpt": "ointment) Medical Director, UCI Transfusion Medicine Service, UC Irvine Medical Center Awards and Honors 2019 Exceptional Faculty Service Award - Department of Pathology and Laboratory Medicine 2019 Orange County Medical Association Physicians of Excellence Recognition 2018 Orange County Medical Association Physicians of Excellence Recognition 2017 Orange County Medical Association Physicians of Excellence Recognition 2013 AABB Top Poster Award 2012 AABB Top Poster Award 2012 UCI ARISE Award for Innovation 2006 AABB-Baxter Fellowship Award 2003 Mercy Hospital “Putting People First” Award (Sept.",
+          "retrievedAt": "2026-09-07T18:54:04.061Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0821-4",
+          "url": "https://www.faculty.uci.edu/profile/?facultyId=5807",
+          "excerpt": "Vowels, MD Award for Excellence in Clinical Teaching Publications Tang TTM, Tran MH.",
+          "retrievedAt": "2026-09-07T18:54:04.061Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0821-5",
+          "url": "https://www.faculty.uci.edu/profile/?facultyId=5807",
+          "excerpt": "Manuscript # TRASCI-D-20-00070R1 Accepted for Publication May 31, 2020 Tran MH, Brown D, Woo JS, Perez-Alvarez I, Chavan R.",
+          "retrievedAt": "2026-09-07T18:54:04.061Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0821-6",
+          "url": "https://www.faculty.uci.edu/profile/?facultyId=5807",
+          "excerpt": "Diversion of Prime to Ameliorate Citrate Toxicity in Pediatric Extracorporeal Photopheresis.",
+          "retrievedAt": "2026-09-07T18:54:04.061Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0821-7",
+          "url": "https://www.faculty.uci.edu/profile/?facultyId=5807",
+          "excerpt": "Direct Oral Anticoagulant (DOAC) Reversal: Andexxa versus 4 Factor Prothrombin Concentrates.",
+          "retrievedAt": "2026-09-07T18:54:04.061Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0821-8",
+          "url": "https://www.faculty.uci.edu/profile/?facultyId=5807",
+          "excerpt": "Transcending Gender: Recognizing the Impact of Gender Identity on Blood Collection.",
+          "retrievedAt": "2026-09-07T18:54:04.061Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:55:15.265Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0823": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://en.wikipedia.org/wiki/Nguy%E1%BB%85n_Ti%E1%BA%BFn_H%C6%B0ng"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0823-1",
+          "url": "https://en.wikipedia.org/wiki/Nguy%E1%BB%85n_Ti%E1%BA%BFn_H%C6%B0ng",
+          "excerpt": "nts Nguyễn Tiến Hưng 2 languages مصرى Tiếng Việt Edit links Article Talk English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Upload file Permanent link Page information Cite this page Get shortened URL Switch to legacy parser Print/export Download as PDF Printable version In other projects Wikidata item Appearance move to sidebar hide From Wikipedia, the free encyclopedia Vietnamese politician (born 1935) In this Vietnamese name , the surname is Nguyễn , but is often simplified to Nguyen in English-language text.",
+          "retrievedAt": "2026-09-07T18:54:04.388Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0823-2",
+          "url": "https://en.wikipedia.org/wiki/Nguy%E1%BB%85n_Ti%E1%BA%BFn_H%C6%B0ng",
+          "excerpt": "In accordance with Vietnamese custom, this person should be referred to by the given name , Hưng .",
+          "retrievedAt": "2026-09-07T18:54:04.388Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0823-3",
+          "url": "https://en.wikipedia.org/wiki/Nguy%E1%BB%85n_Ti%E1%BA%BFn_H%C6%B0ng",
+          "excerpt": "Nguyễn Tiến Hưng Born ( 1935-11-01 ) November 1, 1935 (age 90) Thanh Hóa , Vietnam Occupations Economist; Academic; Civil servant Nguyễn Tiến Hưng (also known as Gregory Tien Hung Nguyen ) (born November 1, 1935) [ 1 ] was Minister of Economic Development and Planning in the Republic of Vietnam and one of President Nguyễn Văn Thiệu 's closest advisers.",
+          "retrievedAt": "2026-09-07T18:54:04.388Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0823-4",
+          "url": "https://en.wikipedia.org/wiki/Nguy%E1%BB%85n_Ti%E1%BA%BFn_H%C6%B0ng",
+          "excerpt": "[ 1 ] [ 2 ] As of 2010, he is Professor Emeritus of Economics at Howard University in Washington, D.",
+          "retrievedAt": "2026-09-07T18:54:04.388Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0823-5",
+          "url": "https://en.wikipedia.org/wiki/Nguy%E1%BB%85n_Ti%E1%BA%BFn_H%C6%B0ng",
+          "excerpt": "[ 1 ] He received his bachelor's degree in mathematics and law from University of Saigon , his master's degree (1960) and PhD (1965) in economics from the University of Virginia .",
+          "retrievedAt": "2026-09-07T18:54:04.388Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0823-6",
+          "url": "https://en.wikipedia.org/wiki/Nguy%E1%BB%85n_Ti%E1%BA%BFn_H%C6%B0ng",
+          "excerpt": "[ 1 ] He worked briefly for the Commonwealth of Virginia before becoming assistant professor of economics at North Carolina Wesleyan College in 1963 and then assistant professor of economics at Howard University in 1965.",
+          "retrievedAt": "2026-09-07T18:54:04.388Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0823-7",
+          "url": "https://en.wikipedia.org/wiki/Nguy%E1%BB%85n_Ti%E1%BA%BFn_H%C6%B0ng",
+          "excerpt": "[ 1 ] He worked as an economist in Africa with the International Monetary Fund from 1966 to 1969, [ 1 ] [ 2 ] [ 3 ] before being appointed \"special assistant\" to President Thiệu and Commissioner of Planning in 1973.",
+          "retrievedAt": "2026-09-07T18:54:04.388Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0823-8",
+          "url": "https://en.wikipedia.org/wiki/Nguy%E1%BB%85n_Ti%E1%BA%BFn_H%C6%B0ng",
+          "excerpt": "[ 1 ] [ 2 ] He was named Minister of Economic Development and Planning on November 28, 1974.",
+          "retrievedAt": "2026-09-07T18:54:04.388Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:55:15.265Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0824": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.oberlin.edu/pipo-nguyen-duy"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0824-1",
+          "url": "https://www.oberlin.edu/pipo-nguyen-duy",
+          "excerpt": "Pipo Nguyen-Duy | Oberlin College and Conservatory Skip to main content Skip to main navigation Request Info Visit & Connect Apply Give Search Search Oberlin: Search Menu Main Menu Press Enter to activate a submenu, down arrow to access the items and Escape to close the submenu.",
+          "retrievedAt": "2026-09-07T18:54:08.484Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0824-2",
+          "url": "https://www.oberlin.edu/pipo-nguyen-duy",
+          "excerpt": "nce Libraries & Collections Carbon Neutral 2025 Visiting Oberlin News & Events News Events Special Events Faculty and Staff Notes Oberlin Research Review Running to the Noise Podcast Campus Resources Offices Locations & Facilities Campus Bulletins Campus Support Resources Transportation for Students Bookstore Contact Oberlin Resources For: Current Students Alumni Faculty & Staff Parents Local Community Job Seekers College of Arts and Sciences Faculty and Staff Pipo Nguyen-Duy Pipo Nguyen-Duy Professor of Studio Art and Photography Studio Art Chair Contact Venturi Art Building 162A Pipo@oberlin.",
+          "retrievedAt": "2026-09-07T18:54:08.485Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0824-3",
+          "url": "https://www.oberlin.edu/pipo-nguyen-duy",
+          "excerpt": "edu 440-775-8195 Monday and Wednesday 4:30–5:30 pm Websites: Personal Website Artwork Areas of Study Studio Art Education BA, Carleton College, 1974 MA, University of New Mexico, 1996 Biography Pipo Nguyen-duy was born in Hue, Vietnam.",
+          "retrievedAt": "2026-09-07T18:54:08.485Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0824-4",
+          "url": "https://www.oberlin.edu/pipo-nguyen-duy",
+          "excerpt": "Growing up within thirty kilometers of the demilitarized zone of the 18th Parallel, he describes hearing gunfire every day of his early life.",
+          "retrievedAt": "2026-09-07T18:54:08.485Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0824-5",
+          "url": "https://www.oberlin.edu/pipo-nguyen-duy",
+          "excerpt": "He also spent some time during the mid 80’s living as a Buddhist monk in Northern India.",
+          "retrievedAt": "2026-09-07T18:54:08.485Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0824-6",
+          "url": "https://www.oberlin.edu/pipo-nguyen-duy",
+          "excerpt": "He then moved to New York City, where he worked as a bartender and later as a nightclub manager.",
+          "retrievedAt": "2026-09-07T18:54:08.485Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0824-7",
+          "url": "https://www.oberlin.edu/pipo-nguyen-duy",
+          "excerpt": "While living in the East Village in the 80’s, or as Pipo describes, “the crux of creativity in New York,” and meeting people such as musician Don Cherry and artist Keith Haring, Pipo’s interests turned to art.",
+          "retrievedAt": "2026-09-07T18:54:08.485Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0824-8",
+          "url": "https://www.oberlin.edu/pipo-nguyen-duy",
+          "excerpt": "In 1992 he earned a Master of Arts in Photography, followed by a Master of Fine Arts in Photography in 1996, both from the University of New Mexico at Albuquerque.",
+          "retrievedAt": "2026-09-07T18:54:08.485Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:55:15.265Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0826": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://w-rdb.waseda.jp/html/100002623_en.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0826-1",
+          "url": "https://w-rdb.waseda.jp/html/100002623_en.html",
+          "excerpt": "Details of a Researcher - TRAN, Van Tho 早稲田大学研究者データベース Waseda University Researchers Database Details of a Researcher Home 日本語 English 早稲田大学研究者データベース Waseda University Researchers Database Menu Japanese Page Back to Waseda Univ.",
+          "retrievedAt": "2026-09-07T18:54:10.374Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0826-2",
+          "url": "https://w-rdb.waseda.jp/html/100002623_en.html",
+          "excerpt": "l Research Projects &times; Updated on 2026/09/07 Personnel Information ◆ Profile Information ◆ Research Experience ◆ Education Background ◆ Committee Memberships ◆ Professional Memberships ◆ Research Areas ◆ Research Interests ◆ Awards Research Activity ◆ Papers ◆ Books and Other Publications ◆ Presentations ◆ Research Projects ◆ Misc Contribution to Society ◆ Overseas Activities ◆ Internal Special Research Projects Updated on 2026/09/07 TRAN, Van Tho Affiliation Faculty of Social Sciences Job title Professor Emeritus Degree PhD in economics ( Hitotsubashi University ) Homepage URL http://www.",
+          "retrievedAt": "2026-09-07T18:54:10.374Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0826-3",
+          "url": "https://w-rdb.waseda.jp/html/100002623_en.html",
+          "excerpt": "he Japan Society of International economics Board member Professional Memberships Professional Memberships The Japan Association for Comparative Economic Studies East Asian Economic Association Japan Association for Asian Studies The Japan Society of International economics Research Areas Research Areas Economic policy Research Interests Research Interests Development Economics, International Economics, Asian Economy Awards Awards Asia-Pacific Prize 1992 Papers Papers Chon Formosa, mot bai hoc khac ve chinh sach FDI （Ｆｏｅｍｏｓａプロジェクト：ベトナムのＦＤＩ政策の教訓） Tran Van Tho Saigontime online 2016年7月27日配信 2016.",
+          "retrievedAt": "2026-09-07T18:54:10.374Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0826-4",
+          "url": "https://w-rdb.waseda.jp/html/100002623_en.html",
+          "excerpt": "07 [Refereed] アジアの雁行型発展と貿易構造の変化 トラン・ヴァン・トゥ, 苅込俊二 季刊国際貿易と投資 102 ( 2015年冬 ) 60 - 74 2015.",
+          "retrievedAt": "2026-09-07T18:54:10.374Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0826-5",
+          "url": "https://w-rdb.waseda.jp/html/100002623_en.html",
+          "excerpt": "12 [Refereed] Vietnamese Economy at the Crossroads: New Doi Moi for Sustained Growth Tran Van Tho Asian Economic Policy Review 8 122 - 143 2013.",
+          "retrievedAt": "2026-09-07T18:54:10.374Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0826-6",
+          "url": "https://w-rdb.waseda.jp/html/100002623_en.html",
+          "excerpt": "06 [Refereed] The Middle-Income Trap: Issues for Members of the Association of Southeast Asian Nations Tran Van Tho ADBI Working Paper No.",
+          "retrievedAt": "2026-09-07T18:54:10.374Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0826-7",
+          "url": "https://w-rdb.waseda.jp/html/100002623_en.html",
+          "excerpt": "06 [Refereed] Foreign Direct Investment and Development of Supporting Industries in Vietnam 桜美林大学産業研究所年報 ( 22 ) 173 - 205 2004.",
+          "retrievedAt": "2026-09-07T18:54:10.374Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0826-8",
+          "url": "https://w-rdb.waseda.jp/html/100002623_en.html",
+          "excerpt": "03 AFTA in the dynamic perspective of Asian trade : towards a closer cooperation among ASEAN+3 countries The Journal of the Korean Economy 3;1pp.",
+          "retrievedAt": "2026-09-07T18:54:10.374Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:55:15.265Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0827": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://sdg.cs.virginia.edu/author/anh-nguyen-tuong/",
         "https://sdg.cs.virginia.edu/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0827-1",
+          "url": "https://sdg.cs.virginia.edu/author/anh-nguyen-tuong/",
+          "excerpt": "ly Fuzzing Same Coverage, Less Bloat: Accelerating Binary-Only Fuzzing with Coverage-Preserving Coverage-Guided Tracing Cubismo: Decloaking Server-side Malware via Cubist Program Analysis MalMax: Multi-Aspect Execution for Automated Dynamic Web Server Malware Analysis Xandra: An autonomous cyber battle system for the Cyber Grand Challenge Securing Binary Code Zipr: Efficient static binary rewriting for security Diversity in Cybersecurity Double Helix and RAVEN: A system for cyber fault tolerance and recovery Published with Wowchemy — the free, open source website builder that empowers creators.",
+          "retrievedAt": "2026-09-07T18:54:10.707Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0827-2",
+          "url": "https://sdg.cs.virginia.edu/",
+          "excerpt": "Security Dependability Group Search Security Dependability Group Security Dependability Group People Projects Publications About Us Cyber technology has become pervasive and indispensable.",
+          "retrievedAt": "2026-09-07T18:54:10.762Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0827-3",
+          "url": "https://sdg.cs.virginia.edu/",
+          "excerpt": "As cyber technology advances and the Internet of Everything becomes reality, it is critical that these systems are secure and that they operate for the benefit of humankind.",
+          "retrievedAt": "2026-09-07T18:54:10.762Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0827-4",
+          "url": "https://sdg.cs.virginia.edu/",
+          "excerpt": "Research Areas Binary Analysis and Rewriting Automatically reverse engineer and transform binaries Binary Hardening Retrofit legacy binaries with security Binary Diversification Break the software monoculture Binary Fuzzing Automatically find weakness in real-world binaries Malware Analysis Malware analysis at scale Projects * All Zipr Fuzzing Other Jack W.",
+          "retrievedAt": "2026-09-07T18:54:10.762Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0827-5",
+          "url": "https://sdg.cs.virginia.edu/",
+          "excerpt": "Davidson Feb 1, 2020 Helix: a Platform for Efficiently Transforming Binaries Binary diversification, hardening, fuzzing Jack W.",
+          "retrievedAt": "2026-09-07T18:54:10.762Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0827-6",
+          "url": "https://sdg.cs.virginia.edu/",
+          "excerpt": "Davidson Aug 5, 2016 Cyber Grand Challenge TECHx - Xandra Cyber Reasoning System Meet the Team Principal Investigators Anh Nguyen-Tuong Principal Scientist Fuzzing, Automated Critical Systems Jack W.",
+          "retrievedAt": "2026-09-07T18:54:10.762Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0827-7",
+          "url": "https://sdg.cs.virginia.edu/",
+          "excerpt": "Davidson Professor of Computer Science Compilers, Embedded Systems, Security Jason D.",
+          "retrievedAt": "2026-09-07T18:54:10.762Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0827-8",
+          "url": "https://sdg.cs.virginia.edu/",
+          "excerpt": "Hiser Principal Scientist Binary Analysis, Binary Rewriting, Biking Grad Students Abbas Naderi Afooshteh Graduate Student Information Security, Cryptography, Philosophy Omkar Bhat Graduate Student IOT, Cyber Security, Cryptography Featured Publications Stefan Nagy , Anh Nguyen-Tuong , Jason D.",
+          "retrievedAt": "2026-09-07T18:54:10.762Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0827-9",
+          "url": "https://sdg.cs.virginia.edu/",
+          "excerpt": "Davidson , Matthew Hicks August 2021 In Usenix Security, 2021 Breaking Through Binaries: Compiler-quality Instrumentation for Better Binary-only Fuzzing We demonstrate how to achieve fuzzing performance for binary programs that is on par with compiler-based fuzzing approaches.",
+          "retrievedAt": "2026-09-07T18:54:10.762Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:55:15.265Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0828": {
       "overview": "pending",
