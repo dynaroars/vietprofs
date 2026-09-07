@@ -1568,7 +1568,8 @@
       ],
       "status": "complete",
       "startedAt": "2026-09-07T03:40:18.381Z",
-      "publishedAt": "2026-09-06T23:50:00.000Z"
+      "publishedAt": "2026-09-06T23:50:00.000Z",
+      "commit": "94c1bb2"
     },
     {
       "number": 4,
@@ -1594,7 +1595,9 @@
         "vp-0079",
         "vp-0080"
       ],
-      "status": "pending"
+      "status": "complete",
+      "startedAt": "2026-09-07T03:45:29.559Z",
+      "publishedAt": "2026-09-07T00:00:00.000Z"
     },
     {
       "number": 5,
@@ -9134,217 +9137,1598 @@
       "nextAction": "Batch 3 verification complete."
     },
     "vp-0061": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://math.indiana.edu/about/faculty/le-nam.html",
         "https://nqle.pages.iu.edu/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0061-1",
+          "url": "https://math.indiana.edu/about/faculty/le-nam.html",
+          "excerpt": "Nam Le:&#160;Faculty:&#160;About:&#160;Department of Mathematics:&#160;Indiana University Bloomington --> Skip to Content Skip to Main Navigation Skip to Search The College of Arts & Sciences Department of Mathematics Home About Faculty Former Graduate Students Graduate Students Staff Outreach History Zorn Postdoctoral Archive Employment About Bloomington Alumni & Giving In Memoriam Undergraduate LEMMA Math B.",
+          "retrievedAt": "2026-09-07T03:45:30.491Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0061-2",
+          "url": "https://math.indiana.edu/about/faculty/le-nam.html",
+          "excerpt": "Degree Math Minor Actuarial Studies Courses General Education Courses Academic Support & Tutoring Advising Course Credit Transfers Placement Exams Honors Scholarships & Awards Research Experience for Undergraduates (REU) Directed Reading Program (DRP) Student Experience Graduate M800 Enrollment M.",
+          "retrievedAt": "2026-09-07T03:45:30.492Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0061-3",
+          "url": "https://math.indiana.edu/about/faculty/le-nam.html",
+          "excerpt": "+ Workshops Search Contact Student Portal Faculty Postdoctoral Fellows Retired and Emeriti Faculty Lecturer Faculty and Teaching Professors Tenured and Tenure-Track Faculty Adjunct and Affiliate Faculty Former Graduate Students Graduate Students Staff Outreach History Zorn Postdoctoral Archive Employment About Bloomington Alumni & Giving In Memoriam Home About Faculty Nam Le Nam Le Professor, Mathematics Director of Undergraduate Studies, Mathematics &#110;&#113;&#108;&#101;&#64;&#105;&#117;&#46;&#101;&#100;&#117; (812) 855-8538 Rawles Hall 432 Office Hours M-F By Appointment Only Education Ph.",
+          "retrievedAt": "2026-09-07T03:45:30.492Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0061-4",
+          "url": "https://math.indiana.edu/about/faculty/le-nam.html",
+          "excerpt": "tions MathSciNet Math Genealogy Faculty + Staff Intranet Department of Mathematics social media channels College of Arts & Sciences Department of Mathematics The College of Arts & Sciences The College of Arts & Sciences About Faculty Postdoctoral Fellows Retired and Emeriti Faculty Lecturer Faculty and Teaching Professors Tenured and Tenure-Track Faculty Adjunct and Affiliate Faculty Former Graduate Students Graduate Students Staff Outreach History Zorn Postdoctoral Archive Employment About Bloomington Visitor Information Alumni & Giving Alumni Newsletter In Memoriam Undergraduate LEMMA Math B.",
+          "retrievedAt": "2026-09-07T03:45:30.492Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0061-5",
+          "url": "https://math.indiana.edu/about/faculty/le-nam.html",
+          "excerpt": "Degree Math Minor Actuarial Studies Courses General Education Courses Academic Support & Tutoring Advising Course Credit Transfers Placement Exams Honors Scholarships & Awards Research Experience for Undergraduates (REU) Our REU Program Past REU Research REU FAQs Directed Reading Program (DRP) Student Experience Graduate M800 Enrollment M.",
+          "retrievedAt": "2026-09-07T03:45:30.492Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0061-6",
+          "url": "https://math.indiana.edu/about/faculty/le-nam.html",
+          "excerpt": "Minor Courses Financial Support Scholarships & Awards Graduate Student Career Placement Course Credit Transfers Student Experience How to Apply FAQs Research Research Areas IU Math Journal Institute for Scientific Computing and Applied Mathematics Student Research Opportunities Math Gallery Career Preparation Career Advising Marketable Skills Education Internships Resources Graduate Student Career Placement Seminars News & Events Conferences + Workshops Midwestern Workshop on Asymptotic Analysis Graduate Student Topology and Geometry Conference Contact Student Portal Undergraduate Math B.",
+          "retrievedAt": "2026-09-07T03:45:30.492Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0061-7",
+          "url": "https://math.indiana.edu/about/faculty/le-nam.html",
+          "excerpt": "Major Guide Math Minor Actuarial Studies Courses Permission to Add a Math Course Pre-Calculus & Trigonometry Course Resources Academic Support & tutoring Help Sessions Academic Support & Tutoring Math Learning Center Honors Tutor & Grader Job Positions LEMMA Graduate M.",
+          "retrievedAt": "2026-09-07T03:45:30.492Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0061-8",
+          "url": "https://nqle.pages.iu.edu/",
+          "excerpt": "Le (L&ecirc Quang N&#7851m) Professor and Director of Undergraduate Studies Department of Mathematics Indiana University 831 E 3rd St, Bloomington, IN 47405 Office: Rawles Hall 432 Email: nqle at iu dot edu Research interests: Partial Differential Equations, Geometric Analysis and the Calculus of Variations.",
+          "retrievedAt": "2026-09-07T03:45:30.867Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0061-9",
+          "url": "https://nqle.pages.iu.edu/",
+          "excerpt": "Research themes: Global regularity theory of Monge-Amp&egravere type equations and their applications in nonlinear PDE, geometry, fluid mechanics, and economics; singularity behavior of the mean curvature flow; Gamma-convergence, sharp-interface limits in phase transitions and minimal surfaces.",
+          "retrievedAt": "2026-09-07T03:45:30.867Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0061-10",
+          "url": "https://nqle.pages.iu.edu/",
+          "excerpt": "Geometric Analysis seminar, Peking University, 2019, pdf file \\(\\bullet\\) Singular Abreu equations and minimizers of convex functionals with a convexity constraint--CAMP/Nonlinear PDE seminar, the University of Chicago, 2019, pdf file \\(\\bullet\\) H\\(\\ddot{o}\\)lder regularity of the 2D dual semigeostrophic equations--Plenary talk at the 82th Midwest PDE seminar held at Purdue University, 2018, pdf file \\(\\bullet\\) The Monge-Amp&egravere eigenvalue problem and global smoothness of the eigenfunctions--Analysis seminar, Courant Institute, NYU, 2017, pdf file --> Selected Publications \\(\\bullet\\) N.",
+          "retrievedAt": "2026-09-07T03:45:30.867Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0061-11",
+          "url": "https://nqle.pages.iu.edu/",
+          "excerpt": "Le, A Variational Approach to Degenerate Monge-Amp&egravere Equations with Mixed Measures and Monotonicity, preprint.",
+          "retrievedAt": "2026-09-07T03:45:30.867Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0061-12",
+          "url": "https://nqle.pages.iu.edu/",
+          "excerpt": "Zhou, Singular Abreu equations and linearized Monge-Amp&egravere equations with drifts, J.",
+          "retrievedAt": "2026-09-07T03:45:30.867Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0061-13",
+          "url": "https://nqle.pages.iu.edu/",
+          "excerpt": "Savin, Global \\(C^{2,\\alpha}\\) estimates for the Monge-Amp&egravere equation on polygonal domains in the plane, Amer.",
+          "retrievedAt": "2026-09-07T03:45:30.867Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0061-14",
+          "url": "https://nqle.pages.iu.edu/",
+          "excerpt": "Le, Singular Abreu equations and minimizers of convex functionals with a convexity constraint, Comm.",
+          "retrievedAt": "2026-09-07T03:45:30.867Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0061-15",
+          "url": "https://nqle.pages.iu.edu/",
+          "excerpt": "Savin, Schauder estimates for degenerate Monge-Amp&egravere equations and smoothness of the eigenfunctions, Invent.",
+          "retrievedAt": "2026-09-07T03:45:30.867Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T00:00:00.000Z",
+      "nextAction": "Batch 4 verification complete."
     },
     "vp-0062": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://math.osu.edu/people/nguyen.1261",
         "https://people.math.osu.edu/nguyen.1261/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0062-1",
+          "url": "https://math.osu.edu/people/nguyen.1261",
+          "excerpt": "Hoi Nguyen | Department of Mathematics Skip to main content Skip to main content The Ohio State University Department of Mathematics Show Links Map Buckeye Link Webmail Search Ohio State College of Arts and Sciences Department of Mathematics About Contact Us Newsletter History Grace Marie Bareis Rosser Bohannan George Comstock Harry Waldo Kuhn Henry Mann Robert McFarland Tibor Radó Samuel Rasor Paul Reichelderfer Arnold Ephraim Ross Hans Zassenhaus The Tessellation Project Governance Employment Opportunities Mathematics Advisory Board Mathematics Advisory Board Members Dennis R.",
+          "retrievedAt": "2026-09-07T03:45:31.171Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0062-2",
+          "url": "https://math.osu.edu/people/nguyen.1261",
+          "excerpt": "d Topology Harmonic Analysis and Several Complex Variables Seminar Homotopy Theory Seminar Logic Seminar Math Biology/Applied Dynamical Systems Mathematics of Data Science Math Grad Student Seminars Past Math Grad Student Seminars Number Theory Seminar Partial Differential Equations Seminar Quantum Symmetry Representations and Lie Theory Seminar Topology, Geometry, and Data Analysis Seminar Giving Giving to the Department Student Scholarship Impact Stories Search Submit search Toggle search dialog Home People Hoi Nguyen Hoi Nguyen Hoi Nguyen Contact Information Job Title Professor Email nguyen.",
+          "retrievedAt": "2026-09-07T03:45:31.171Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0062-3",
+          "url": "https://math.osu.edu/people/nguyen.1261",
+          "excerpt": "edu Phone (614) 292-2789 Office MW 446, 231 W 18th Ave Columbus, OH 43210 Google Map Professional Website Areas of Expertise Combinatorics Probability Random Matrices Education PhD: Rutgers University (2010) Filed In: Combinatorics Probability & Stochastic Processes Columbus Department of Mathematics 100 Math Tower 231 West 18th Avenue Columbus, OH 43210-1174 E-Mail: math@osu.",
+          "retrievedAt": "2026-09-07T03:45:31.171Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0062-4",
+          "url": "https://math.osu.edu/people/nguyen.1261",
+          "excerpt": "edu Faculty and Staff Resources RSS Website X Youtube If you have a disability and experience difficulty accessing this site, please contact us for assistance via email at asc-accessibility@osu.",
+          "retrievedAt": "2026-09-07T03:45:31.171Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0062-5",
+          "url": "https://people.math.osu.edu/nguyen.1261/",
+          "excerpt": "Nguyen Professional information I am a professor of Mathematics at The Ohio State University .",
+          "retrievedAt": "2026-09-07T03:45:31.651Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0062-6",
+          "url": "https://people.math.osu.edu/nguyen.1261/",
+          "excerpt": "Past: Graduate Probability (6521-6522, Sp '25, F '22, F '21); Graduate Combinatorics (6501-6502, Sp '26, Sp '21, Sp '19, F '17, '16, '13); Markov chain and mixing times (8520, F '17); Undergraduate Probability (4530, F '25, Sp '22, F '20, '19, Sp '18, '17); Foundation in Higher Mathematics (3345, Sp '26, F '24, '22, '19, '18, Sp '17); Undergraduate Combinatorics (4575, Sp '15); Engineering Calculus (2173, F '14).",
+          "retrievedAt": "2026-09-07T03:45:31.651Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0062-7",
+          "url": "https://people.math.osu.edu/nguyen.1261/",
+          "excerpt": "ls and Applications (ICERM, August 4 - 8, 2025), Application Driven Mathematics (Vin-BigData, Vietnam, July 1 - 30, 2025), Random Matrices and Applications (ICERM, May 20 - 22, 2024), Application Driven Mathematics (Vin-BigData, Vietnam, July 1 - 30, 2024), Summer school in High Dimensional Probability and applications (Ha Noi, June 19-23, 2023), Summer school in random matrix theory and applications (Columbus, May 22-26, 2023), Random structures and related topics (Ha Noi, July 6-7, 2022), Random Functions (April 17-18, 2021, virtual), Random Integral Matrices (Columbus, November 14-15, 2020).",
+          "retrievedAt": "2026-09-07T03:45:31.651Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0062-8",
+          "url": "https://people.math.osu.edu/nguyen.1261/",
+          "excerpt": "Mathematics Department Colloquium , Combinatorics seminar , Probability seminar , Arxiv , Mathscinet , some publications .",
+          "retrievedAt": "2026-09-07T03:45:31.651Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T00:00:00.000Z",
+      "nextAction": "Batch 4 verification complete."
     },
     "vp-0063": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://profiles.utdallas.edu/anh.tran3",
         "https://personal.utdallas.edu/~anh.tran3/research.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0063-1",
+          "url": "https://profiles.utdallas.edu/anh.tran3",
+          "excerpt": "School of Arts, Humanities, and Technology School of Behavioral and Brain Sciences Erik Jonsson School of Engineering and Computer Science School of Economic, Political and Policy Sciences School of Interdisciplinary Studies Naveen Jindal School of Management School of Natural Sciences and Mathematics Browse All Students Get Started with Research Login Home School of Natural Sciences and Mathematics Anh Tran Skip to main content Anh Tran Associate Professor - Mathematical Sciences 972-883-6587 FO 3.",
+          "retrievedAt": "2026-09-07T03:45:32.265Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0063-2",
+          "url": "https://profiles.utdallas.edu/anh.tran3",
+          "excerpt": "704F Personal webpage ORCID Tags: quantum topology knot theory Jones polynomial skein modules character varieties A-polynomial Alexander polynomial left-orderability of fundamental groups Please type your desired tags, e.",
+          "retrievedAt": "2026-09-07T03:45:32.265Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0063-3",
+          "url": "https://profiles.utdallas.edu/anh.tran3",
+          "excerpt": "Massive data analysis, Petroleum systems, SPAN, Qualitative Analysis, Art and Performance, wind energy, Indigenous Performance, political science, upper mantle and lower crustal studies of the Earth, Graphical Models , and etc.",
+          "retrievedAt": "2026-09-07T03:45:32.265Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0063-4",
+          "url": "https://profiles.utdallas.edu/anh.tran3",
+          "excerpt": "-orderable surgeries of (−2,3,2n + 1)-pretzel knots 2026 - Journal Article Exact Integral Formulas for Volumes of Two-Bridge Knot Cone-Manifolds 2026 - Journal Article On the braid index of a two-bridge knot 2024 - Journal Article Minimality of Rational Knots C(2n + 1,2m,2) 2024 - Journal Article Minimality of rational knots C(2n + 1,2m,2) 2024 - Journal Article Left orderability and cyclic branched coverings of rational knots C(2p,2m,2n + 1) 2023 - Journal Article Left orderable surgeries of double twist knots II 2021 - Journal Article &lsaquo; 1 2 3 4 5 6 &rsaquo; Check our FAQ or contact us.",
+          "retrievedAt": "2026-09-07T03:45:32.265Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0063-5",
+          "url": "https://personal.utdallas.edu/~anh.tran3/research.html",
+          "excerpt": "QUICK LINKS Chat with OIT OIT Homepage ATEC Homepage Research Homepage Galaxy eLearning Directory Maps Technician Login • SITE MAP Skip to main content (opens in a new tab) Filter your search by category.",
+          "retrievedAt": "2026-09-07T03:45:33.160Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0063-6",
+          "url": "https://personal.utdallas.edu/~anh.tran3/research.html",
+          "excerpt": "cations Skip to Knowledge Base content Search Articles Blank Knowledge Base Communication and Collaboration Web Services UTD Hosted Personal Webpages UTD Hosted Personal Webpage Configuration Personal Webpage Responsibility Acknowledgement Personal Webpage Responsibility Acknowledgement Tags personal-webpage Context In order to publish or maintain a personal webpage, and in addition to the technical requirements described in Article - How to Setup Your Home Page (Personal Webpage) , each user must acknowledge their personal responsibility for the compliance and upkeep of their personal webpage.",
+          "retrievedAt": "2026-09-07T03:45:33.160Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0063-7",
+          "url": "https://personal.utdallas.edu/~anh.tran3/research.html",
+          "excerpt": "Users must provide this acknowledgement by completing the designated Microsoft Forms process .",
+          "retrievedAt": "2026-09-07T03:45:33.160Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0063-8",
+          "url": "https://personal.utdallas.edu/~anh.tran3/research.html",
+          "excerpt": "Scope This acknowledgement applies to all faculty, staff, and students who create and manage personal webpages on the University of Texas at Dallas network or using its resources.",
+          "retrievedAt": "2026-09-07T03:45:33.160Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0063-9",
+          "url": "https://personal.utdallas.edu/~anh.tran3/research.html",
+          "excerpt": "Content Responsibility By publishing or maintaining a personal webpage, users acknowledge that they are solely responsible for all content they post.",
+          "retrievedAt": "2026-09-07T03:45:33.160Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0063-10",
+          "url": "https://personal.utdallas.edu/~anh.tran3/research.html",
+          "excerpt": "Users further acknowledge that they must not publish content that is illegal, offensive, or in violation of University of Texas at Dallas policies, including but not limited to those concerning harassment, discrimination, and intellectual property.",
+          "retrievedAt": "2026-09-07T03:45:33.160Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0063-11",
+          "url": "https://personal.utdallas.edu/~anh.tran3/research.html",
+          "excerpt": "Accessibility Users must ensure that their personal webpages are accessible to all individuals, including those with disabilities.",
+          "retrievedAt": "2026-09-07T03:45:33.160Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0063-12",
+          "url": "https://personal.utdallas.edu/~anh.tran3/research.html",
+          "excerpt": "This includes adhering to web accessibility standards such as the Web Content Accessibility Guidelines (WCAG).",
+          "retrievedAt": "2026-09-07T03:45:33.160Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T00:00:00.000Z",
+      "nextAction": "Batch 4 verification complete."
     },
     "vp-0064": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://artsci.tamu.edu/mathematics/contact/profiles/minh-binh-tran.html",
         "https://minhbinhtran.org/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0064-1",
+          "url": "https://artsci.tamu.edu/mathematics/contact/profiles/minh-binh-tran.html",
+          "excerpt": "Close the About menu Faculty Staff Visiting Faculty Graduate Students Retired Faculty Mathematics Directory Close the People menu Research Areas Seminars Lecture Series Close the Research menu Courses and General Academic Information Undergraduate Graduate Math Placement Exam Close the Academics menu Administration Computing Resources Resources Close the Services menu Programs Friends & Alumni Close the Outreach menu News Calendar Conferences Newsletter Close the News & Events menu College Home Mathematics Contact Profiles Minh-Binh Tran Minh-Binh Tran Associate Professor Email: minhbinh@tamu.",
+          "retrievedAt": "2026-09-07T03:45:33.901Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0064-2",
+          "url": "https://minhbinhtran.org/",
+          "excerpt": "Welcome to my Website &#8211; Minh-Binh Tran Trending Skip to content September 7, 2026 Welcome to my Website Minh-Binh Tran Skip to content About Me Editorial Boards Honors/Awards/Grants Papers/Books Postdocs/Students Some Activities Search for: Search About Me Associate Professor Department of Mathematics & Texas A&M Institute of Data Science TAMIDS Texas A&M University Office 505C, Blocker Building, 3368 TAMU, 155 Ireland Street College Station, TX 77843 Email: minhbinh at tamu dot edu CV/RESUME BOOKS ( Amazon Author Page ): [1] Yves Pomeau, Minh-Binh Tran.",
+          "retrievedAt": "2026-09-07T03:45:35.652Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0064-3",
+          "url": "https://minhbinhtran.org/",
+          "excerpt": "Statistical Physics of Non Equilibrium Quantum Phenomena (242 pages) , Lecture Notes in Physics Volume 967, Springer Nature Switzerland AG, 2019.",
+          "retrievedAt": "2026-09-07T03:45:35.652Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0064-4",
+          "url": "https://minhbinhtran.org/",
+          "excerpt": "Time Dependent Phase Space Filters: A Stable Absorbing Boundary Condition (152 pages) Springer Nature Singapore 2023 , Python Codes of the Book are available for download here [3] Alain Bensoussan, Minh-Binh Tran.",
+          "retrievedAt": "2026-09-07T03:45:35.652Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0064-5",
+          "url": "https://minhbinhtran.org/",
+          "excerpt": "Machine Learning, Dynamic Optimization, and Control (316 pages) , Accepted for publicatioin in Springer Series Progress in Nonlinear Differential Equations and Their Applications, Subseries in Control, Foreword by Philippe G.",
+          "retrievedAt": "2026-09-07T03:45:35.652Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T00:00:00.000Z",
+      "nextAction": "Batch 4 verification complete."
     },
     "vp-0065": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.depts.ttu.edu/math/about/directory/bio/index.php?id=1802",
         "https://sites.google.com/site/khoavo92math/home"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0065-1",
+          "url": "https://www.depts.ttu.edu/math/about/directory/bio/index.php?id=1802",
+          "excerpt": "Faculty Biography | Faculty & Staff | About the Department | Mathematics & Statistics | Texas Tech For Android.",
+          "retrievedAt": "2026-09-07T03:45:36.219Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0065-2",
+          "url": "https://www.depts.ttu.edu/math/about/directory/bio/index.php?id=1802",
+          "excerpt": "--> Texas Tech University Directory Raiderlink A-Z Index Menu --> Department of Mathematics & Statistics Menu Search Texas Tech Mathematics & Statistics About the Department Faculty & Staff Anh-Khoa Vo, Ph.",
+          "retrievedAt": "2026-09-07T03:45:36.219Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0065-3",
+          "url": "https://www.depts.ttu.edu/math/about/directory/bio/index.php?id=1802",
+          "excerpt": "edu Phone: 806 742-2566 Office: MA 234 Office Hours: WF 10:30 AM - 11:30 AM Website: Personal Website (opens in a new tab) Anh-Khoa Vo, Ph.",
+          "retrievedAt": "2026-09-07T03:45:36.219Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0065-4",
+          "url": "https://www.depts.ttu.edu/math/about/directory/bio/index.php?id=1802",
+          "excerpt": "in Applied Mathematics in 2019 from International School for Advanced Studies (SISSA), Italy, with his studies mainly conducted at Gran Sasso Science Institute.",
+          "retrievedAt": "2026-09-07T03:45:36.219Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0065-5",
+          "url": "https://www.depts.ttu.edu/math/about/directory/bio/index.php?id=1802",
+          "excerpt": "Before joining Texas Tech University, he served as a tenure-earning Assistant Professor of Mathematics at Florida A&M University from 2021 to 2024.",
+          "retrievedAt": "2026-09-07T03:45:36.219Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0065-6",
+          "url": "https://www.depts.ttu.edu/math/about/directory/bio/index.php?id=1802",
+          "excerpt": "In 2019-2021, he was a postdoctoral researcher at University of North Carolina at Charlotte.",
+          "retrievedAt": "2026-09-07T03:45:36.219Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0065-7",
+          "url": "https://www.depts.ttu.edu/math/about/directory/bio/index.php?id=1802",
+          "excerpt": "Earlier, in 2018, he was awarded an FWO postdoctoral fellowship by the Research Foundation - Flanders, Belgium, with his research hosted at Hasselt University.",
+          "retrievedAt": "2026-09-07T03:45:36.219Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0065-8",
+          "url": "https://www.depts.ttu.edu/math/about/directory/bio/index.php?id=1802",
+          "excerpt": "In the same year, he also held a short-term research associate position at University of Goettingen, Germany.",
+          "retrievedAt": "2026-09-07T03:45:36.219Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0065-9",
+          "url": "https://sites.google.com/site/khoavo92math/home",
+          "excerpt": "About Search this site Embedded Files Skip to main content Skip to navigation About TTU Inverse Problems Research Publications Teaching Grants Awards Mobility Services About TTU Inverse Problems Research Publications Teaching Grants Awards Mobility Services More About TTU Inverse Problems Research Publications Teaching Grants Awards Mobility Services Vo Anh Khoa Assistant Professor of Mathematics Starting Fall 2024, I am a tenure-track Assistant Professor of Mathematics at Texas Tech University (TTU).",
+          "retrievedAt": "2026-09-07T03:45:36.540Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0065-10",
+          "url": "https://sites.google.com/site/khoavo92math/home",
+          "excerpt": "My research is currently supported by the National Science Foundation grant number DMS-2451193 .",
+          "retrievedAt": "2026-09-07T03:45:36.541Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0065-11",
+          "url": "https://sites.google.com/site/khoavo92math/home",
+          "excerpt": "At the previous university, Florida A&M University (FAMU), I was supported by the NSF grants DMS-2316603 and DMS-2324359 .",
+          "retrievedAt": "2026-09-07T03:45:36.541Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0065-12",
+          "url": "https://sites.google.com/site/khoavo92math/home",
+          "excerpt": "Office: Mathematics & Statistics - Room 2 34 Email: anhkhoa(dot)vo(at)ttu(dot)edu Office hours: Online via ZOOM (preferred) or In-Person by appointment My teaching assignment in Fall 2026 is Calculus II - MATH 1452 All information regarding these courses can be found on Canvas if enrolled in my classes.",
+          "retrievedAt": "2026-09-07T03:45:36.541Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0065-13",
+          "url": "https://sites.google.com/site/khoavo92math/home",
+          "excerpt": "Prospective students who would like to join my research projects are welcome to apply to the graduate program at TTU.",
+          "retrievedAt": "2026-09-07T03:45:36.541Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0065-14",
+          "url": "https://sites.google.com/site/khoavo92math/home",
+          "excerpt": "A schematic diagram illustrating an experimentally backscattering data collection n.",
+          "retrievedAt": "2026-09-07T03:45:36.541Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0065-15",
+          "url": "https://sites.google.com/site/khoavo92math/home",
+          "excerpt": "Image of computed dielectric constant of a target mimicking the Glassmine 43 of the Germans Reconstruction of heat distribution in a two-slab composite system Simulation of heat distribution in a perforated domain Recent activities.",
+          "retrievedAt": "2026-09-07T03:45:36.541Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0065-16",
+          "url": "https://sites.google.com/site/khoavo92math/home",
+          "excerpt": "The mini-symposium submitted to the SIAM TX&LA 2026 Meeting has been accepted Mentee Mr.",
+          "retrievedAt": "2026-09-07T03:45:36.541Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T00:00:00.000Z",
+      "nextAction": "Batch 4 verification complete."
     },
     "vp-0066": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.math.northwestern.edu/people/faculty/bao-le-hung1.html",
         "https://sites.math.northwestern.edu/~lhvietbao/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0066-1",
+          "url": "https://www.math.northwestern.edu/people/faculty/bao-le-hung1.html",
+          "excerpt": "Bao Le Hung: Department of Mathematics - Northwestern University Skip to main content Your browser is out-of-date and has known security flaws .",
+          "retrievedAt": "2026-09-07T03:45:37.015Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0066-2",
+          "url": "https://www.math.northwestern.edu/people/faculty/bao-le-hung1.html",
+          "excerpt": "We recommend you update your browser: Chrome - Firefox - Internet Explorer - Safari .",
+          "retrievedAt": "2026-09-07T03:45:37.015Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0066-3",
+          "url": "https://www.math.northwestern.edu/people/faculty/bao-le-hung1.html",
+          "excerpt": "l Studies Expand School of Professional Studies Submenu SPS Mathematics Major Requirements SPS and Summer Session Mathematics Course Offerings Annual Undergraduate Awards Expand Annual Undergraduate Awards Submenu 2003-2024 Graduate Expand Graduate Submenu Courses Expand Courses Submenu Topics courses – syllabi Current Year's Course Schedule Expand Current Year's Course Schedule Submenu Fall Quarter Winter Quarter Spring Quarter All Courses Application Thesis Preliminary Exams Expand Preliminary Exams Submenu Rules for Preliminary Exam Causeway Program Awards Handbook Expand Handbook Submenu 1.",
+          "retrievedAt": "2026-09-07T03:45:37.015Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0066-4",
+          "url": "https://www.math.northwestern.edu/people/faculty/bao-le-hung1.html",
+          "excerpt": "Experience for Northwestern Undergraduates (MENU) NU Math Lean Lab Undergraduate Colloquium Math Student Groups Putnam Competition Directed Reading Program School of Professional Studies Annual Undergraduate Awards Graduate Courses Application Thesis Preliminary Exams Causeway Program Awards Handbook Alumni People Administrative Staff Faculty Emeriti Faculty Graduate Students Make a Gift Home People Faculty Bao Le Hung People Administrative Staff Faculty Tenure-Line Faculty Teaching Track Faculty Other Faculty Emeriti Faculty Graduate Students Bao Le Hung PhD, Harvard University lhvietbao@math.",
+          "retrievedAt": "2026-09-07T03:45:37.015Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0066-5",
+          "url": "https://www.math.northwestern.edu/people/faculty/bao-le-hung1.html",
+          "excerpt": "edu Website 847-491-5563 Lunt 210 Biography Bao Le Hung received his PhD from Harvard University in 2014.",
+          "retrievedAt": "2026-09-07T03:45:37.015Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0066-6",
+          "url": "https://www.math.northwestern.edu/people/faculty/bao-le-hung1.html",
+          "excerpt": "He then held postdoctoral positions at the Mathematical Sciences Research Institute in Berkeley, the University of Chicago and the Institute for Advanced Study in Princeton.",
+          "retrievedAt": "2026-09-07T03:45:37.015Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0066-7",
+          "url": "https://www.math.northwestern.edu/people/faculty/bao-le-hung1.html",
+          "excerpt": "Le Hung works in algebraic number theory, particularly on aspects of the Langlands correspondence, modular representation theory and geometric representation theory.",
+          "retrievedAt": "2026-09-07T03:45:37.015Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0066-8",
+          "url": "https://www.math.northwestern.edu/people/faculty/bao-le-hung1.html",
+          "excerpt": "His research especially focuses on the moduli space of p-adic local Galois representations.",
+          "retrievedAt": "2026-09-07T03:45:37.015Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0066-9",
+          "url": "https://sites.math.northwestern.edu/~lhvietbao/",
+          "excerpt": "Bao Le Hung's Homepage Bao Le Hung's Homepage Office: Lunt 210 Department of Mathematics, Northwestern University 2033 Sheridan Road, Evanston, IL 60208 E-mail: lhvietbao AT gmail DOT com words --> I am an Associate Professor at Northwestern University .",
+          "retrievedAt": "2026-09-07T03:45:37.469Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0066-10",
+          "url": "https://sites.math.northwestern.edu/~lhvietbao/",
+          "excerpt": "I am interested in Algebraic Number Theory, especially on various aspects of the Langlands Correspondence (global, mod p, p-adic,.",
+          "retrievedAt": "2026-09-07T03:45:37.469Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0066-11",
+          "url": "https://sites.math.northwestern.edu/~lhvietbao/",
+          "excerpt": ") and related aspects in Modular Representation Theory and Geometric Representation Theory.",
+          "retrievedAt": "2026-09-07T03:45:37.469Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0066-12",
+          "url": "https://sites.math.northwestern.edu/~lhvietbao/",
+          "excerpt": "I am especially interested in studying the moduli space of p-adic local Galois representation, with its links to various flavors of geometric representation theory and the categorical form of the mod p local Langlands correspondence.",
+          "retrievedAt": "2026-09-07T03:45:37.469Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0066-13",
+          "url": "https://sites.math.northwestern.edu/~lhvietbao/",
+          "excerpt": "Papers and Preprints - Local model theory for non-generic tame potentially Barsotti-Tate deformation rings , arXiv:2311.",
+          "retrievedAt": "2026-09-07T03:45:37.469Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0066-14",
+          "url": "https://sites.math.northwestern.edu/~lhvietbao/",
+          "excerpt": "- Extremal weights and a tameness criterion for mod p Galois representations , arXiv:2206.",
+          "retrievedAt": "2026-09-07T03:45:37.469Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0066-15",
+          "url": "https://sites.math.northwestern.edu/~lhvietbao/",
+          "excerpt": "- Serre weights for three-dimensional wildly ramified Galois representations , Algebra and Number Theory (to appear) (with D.",
+          "retrievedAt": "2026-09-07T03:45:37.469Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0066-16",
+          "url": "https://sites.math.northwestern.edu/~lhvietbao/",
+          "excerpt": "- Serre weights, Galois deformation rings, and local models , Proceedings of the International Colloquium on Arithmetic Geometry, TIFR (to appear), 24 pages (with D.",
+          "retrievedAt": "2026-09-07T03:45:37.469Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T00:00:00.000Z",
+      "nextAction": "Batch 4 verification complete."
     },
     "vp-0067": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://math.ua.edu/people/nguyen-hai-dang/",
         "https://sites.ua.edu/hnguyen/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0067-1",
+          "url": "https://math.ua.edu/people/nguyen-hai-dang/",
+          "excerpt": "Hai Dang Nguyen &#8211; Department of Mathematics Skip to content myBama Department of Mathematics Barefield College of Arts & Sciences Search This Site Submit Expand Main Navigation Menu Search This Site Submit About Department Overview News Events Jobs Contact Research Research Overview Seminars and Events Graduate Graduate Programs Prospective Graduate Info How to Apply Accelerated Master’s Program Financial Support For International Students Graduate Student Toolkit Resources Undergraduate Undergraduate Programs Why Study Math?",
+          "retrievedAt": "2026-09-07T03:45:39.084Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0067-2",
+          "url": "https://math.ua.edu/people/nguyen-hai-dang/",
+          "excerpt": "hool Math Tournament Alumni &#038; Giving Recent Graduates Alumni Updates Giving Newsletter Directory Department of Mathematics Faculty &#038; Staff Hai Dang Nguyen Filter View All Faculty & Staff Faculty (82) Staff (6) Faculty All Faculty Professors (34) Renewable Contract Professors (5) Instructors (18) Retired & Emeritus Faculty (24) Specialties Specialties All Specialties Algebra (4) Analysis (9) Math Education (4) Applied &#038; Computational Math (11) Geometry &#038; Topology (5) Combinatorics (2) Search Search Clear Filters Dang Nguyen Pronunciation Guide Associate Professor hnguyen4@ua.",
+          "retrievedAt": "2026-09-07T03:45:39.084Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0067-3",
+          "url": "https://math.ua.edu/people/nguyen-hai-dang/",
+          "excerpt": "edu (205) 348-5072 148 Gordon Palmer Hall Curriculum Vitae Website Office Hours TBA Research Areas Applied & Computational Math Department Home About the Department Department News Major &#038; Minors Graduate Program Overview Contact Us A&#038;S Resources College of Arts &#038; Sciences A&#038;S Advising (Undergrad) Experiential Learning Scholarships Undergraduate Research A&#038;S Webmaster Contact Us Department of Mathematics The University of Alabama Box 870350 Tuscaloosa, AL 35487-0350 (205) 348-5090 math@ua.",
+          "retrievedAt": "2026-09-07T03:45:39.084Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0067-4",
+          "url": "https://math.ua.edu/people/nguyen-hai-dang/",
+          "excerpt": "edu Part of the University of Alabama System Copyright © 2026 The University of Alabama (205) 348-6010 Contact UA Accessibility SACSCOC Taskstream Equal Opportunity Data Access Request Disclaimer Privacy This website uses cookies to collect information to improve your browsing experience.",
+          "retrievedAt": "2026-09-07T03:45:39.084Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0067-5",
+          "url": "https://sites.ua.edu/hnguyen/",
+          "excerpt": "Hai-Dang Nguyen Skip to content Hai-Dang Nguyen HOME RESEARCH TEACHING NEWS Search Toggle search interface Menu Toggle extended navigation ​Contact information: Name: DANG H.",
+          "retrievedAt": "2026-09-07T03:45:40.402Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0067-6",
+          "url": "https://sites.ua.edu/hnguyen/",
+          "excerpt": "NGUYEN (or HAI-DANG NGUYEN)(Nguyễn Hải Đăng in Vietnamese) Department of Mathematics University of Alabama 148 Gordon Palmer Hall Box 870350 Tuscaloosa, Alabama 35487-0350Email: dangnh(dot)maths(at)gmail.",
+          "retrievedAt": "2026-09-07T03:45:40.402Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0067-7",
+          "url": "https://sites.ua.edu/hnguyen/",
+          "excerpt": "in Applied Mathematics, Department of Mathematics, Wayne State University, USA, May 2018.",
+          "retrievedAt": "2026-09-07T03:45:40.402Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0067-8",
+          "url": "https://sites.ua.edu/hnguyen/",
+          "excerpt": "in Mathematical Statistics, Department of Mathematics, Wayne State University, USA, December 2017.",
+          "retrievedAt": "2026-09-07T03:45:40.402Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0067-9",
+          "url": "https://sites.ua.edu/hnguyen/",
+          "excerpt": "Employment &#8211; Associate Professor, Department of Mathematics, University of Alabama, Tuscaloosa , AL, 2022-present.",
+          "retrievedAt": "2026-09-07T03:45:40.402Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0067-10",
+          "url": "https://sites.ua.edu/hnguyen/",
+          "excerpt": "&#8211; Assistant Professor, Department of Mathematics, University of Alabama, Tuscaloosa , AL, 2018-2022.",
+          "retrievedAt": "2026-09-07T03:45:40.402Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0067-11",
+          "url": "https://sites.ua.edu/hnguyen/",
+          "excerpt": "&#8211; Graduate Assistant, Department of Mathematics, Wayne State University, Detroit, MI, 2014-2018.",
+          "retrievedAt": "2026-09-07T03:45:40.402Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0067-12",
+          "url": "https://sites.ua.edu/hnguyen/",
+          "excerpt": "00) 2024-2027 NSF Grant DMS #1853467 ($105047) 2019-2023 SIAM Activity Group on Control and Systems Theory Prize AMS-Simons Travel Grant, 2018 ($4800) SIAM Travel Award, 2017.",
+          "retrievedAt": "2026-09-07T03:45:40.402Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T00:00:00.000Z",
+      "nextAction": "Batch 4 verification complete."
     },
     "vp-0068": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.math.umd.edu/~hnguye90/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0068-1",
+          "url": "https://www.math.umd.edu/~hnguye90/",
+          "excerpt": "index Huy Nguyen Associate Professor Department of Mathematics University of Maryland, College Park Research Teaching Seminars and Meetings I am an Associate Professor at The University of Maryland, College Park.",
+          "retrievedAt": "2026-09-07T03:45:41.735Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0068-2",
+          "url": "https://www.math.umd.edu/~hnguye90/",
+          "excerpt": "Before joining UMD, I was a postdoc at Princeton University (2016-2018) and a Tamarkin Assistant Professor at Brown University (2018-2021).",
+          "retrievedAt": "2026-09-07T03:45:41.735Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0068-3",
+          "url": "https://www.math.umd.edu/~hnguye90/",
+          "excerpt": "RESEARCH INTERESTS: Partial Differential Equations, Fluid Dynamics, Harmonic Analysis.",
+          "retrievedAt": "2026-09-07T03:45:41.735Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T00:00:00.000Z",
+      "nextAction": "Batch 4 verification complete."
     },
     "vp-0069": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://math.utk.edu/people/duc-nguyen/",
         "https://nguyenlab.ai/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0069-1",
+          "url": "https://math.utk.edu/people/duc-nguyen/",
+          "excerpt": "ion Faculty Visiting Scholars Graduate Students Staff In Memoriam Undergraduate Major/Minor/Honors Scholarships Careers Math Placement Testing Support Center The Math Place Graduate Degree Programs Funding &#038; Assistantships Request Information Application Checklist Apply Now Handbook MGSC Research Faculty in Research Areas Grants Journal Labs Alumni and Friends Connect with Us Recent PhDs Board of Visitors Events and Visitors Calendar SIAM SEAS 2025 Barrett Memorial Lectures Honors Day 2026 Home » Duc Nguyen Duc Nguyen Duc Nguyen August 1, 2024 by ADDRESS Ayres Hall 203 Email ducnguyen@utk.",
+          "retrievedAt": "2026-09-07T03:45:42.494Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0069-2",
+          "url": "https://math.utk.edu/people/duc-nguyen/",
+          "excerpt": "Nguyen is an expert at the intersection of mathematics, molecular bioscience, and data science.",
+          "retrievedAt": "2026-09-07T03:45:42.494Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0069-3",
+          "url": "https://math.utk.edu/people/duc-nguyen/",
+          "excerpt": "His research focuses on three areas: developing mathematical models for molecular bioscience and biophysics, designing machine learning architectures to enhance learning accuracy, and constructing high-order methods for scientific computing.",
+          "retrievedAt": "2026-09-07T03:45:42.494Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0069-4",
+          "url": "https://math.utk.edu/people/duc-nguyen/",
+          "excerpt": "His work has been supported by three NSF grants, Pfizer, and Bristol-Myers Squibb.",
+          "retrievedAt": "2026-09-07T03:45:42.494Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0069-5",
+          "url": "https://math.utk.edu/people/duc-nguyen/",
+          "excerpt": "Nguyen&#8217;s significant impact is demonstrated through his success in the D3R Grand Challenges, a prestigious competition in computer-aided drug design (CADD), where his models ranked first in several categories.",
+          "retrievedAt": "2026-09-07T03:45:42.494Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0069-6",
+          "url": "https://math.utk.edu/people/duc-nguyen/",
+          "excerpt": "This notable success led to collaborations with Pfizer for drug hit identification and Bristol-Myers Squibb for developing pharmacological models.",
+          "retrievedAt": "2026-09-07T03:45:42.494Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0069-7",
+          "url": "https://math.utk.edu/people/duc-nguyen/",
+          "excerpt": "Nguyen has advised nine undergraduate students, two visiting professors, five Ph.",
+          "retrievedAt": "2026-09-07T03:45:42.494Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0069-8",
+          "url": "https://math.utk.edu/people/duc-nguyen/",
+          "excerpt": "Recognized among the top 2% of the world’s most-cited researchers, his contributions advance scientific understanding and innovation, specializing in Math and AI-driven drug discovery.",
+          "retrievedAt": "2026-09-07T03:45:42.494Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0069-9",
+          "url": "https://nguyenlab.ai/",
+          "excerpt": "NguyenLab Search Home Meet the Team Funding News Software AIcES Seminar Math Colloquium Publications NguyenLab for Math & AI University of Tennessee, Knoxville The Nguyen Lab is housed in the Department of Mathematics at the University of Tennessee, Knoxville .",
+          "retrievedAt": "2026-09-07T03:45:42.895Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0069-10",
+          "url": "https://nguyenlab.ai/",
+          "excerpt": "We work at the interface of: Mathematics (topology, geometry, numerical analysis) Artificial Intelligence & Machine Learning Computational Chemistry, Biophysics, and Materials Science Our long-term vision is to develop science-informed AI that enables complex-free virtual screening , efficient protein–ligand scoring , and predictive modeling across scales, from small molecules to biomolecular assemblies.",
+          "retrievedAt": "2026-09-07T03:45:42.895Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0069-11",
+          "url": "https://nguyenlab.ai/",
+          "excerpt": "We collaborate closely with partners in academia, industry, and national laboratories, including Oak Ridge National Laboratory (ORNL) and pharmaceutical companies, including BMS and Pfizer .",
+          "retrievedAt": "2026-09-07T03:45:42.895Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0069-12",
+          "url": "https://nguyenlab.ai/",
+          "excerpt": "Our lab's research is recognized in the top 2% of the world's most cited researchers since 2021 .",
+          "retrievedAt": "2026-09-07T03:45:42.895Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0069-13",
+          "url": "https://nguyenlab.ai/",
+          "excerpt": "f Mathematics, Kennesaw State University (Former Nguyen Lab PhD Student) Graph Neural Networks, Binding Affinity Prediction, Mathematical Graph Theory, Deep Learning Benjamin Philpot Undergradaute Student (22-23) Masud Rana Assistant Professor of Mathematics, Kennesaw State University (former Nguyen Lab postdoc) Graph Theory, Differential Geometry, Drug Design, Scientific Machine Learning Tian Xao Undergraduate Student (18) Funding Support NSF NSF–2053284 , NSF–2516126 NSF–2151802 NSF–2245903, NSF–2534947 Bristol-Myers Squibb Industry collaboration supporting computational drug design research.",
+          "retrievedAt": "2026-09-07T03:45:42.895Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0069-14",
+          "url": "https://nguyenlab.ai/",
+          "excerpt": "News & Highlights See all &#8599; Conference Duc Nguyen Co-chairs the 54th John H.",
+          "retrievedAt": "2026-09-07T03:45:42.895Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0069-15",
+          "url": "https://nguyenlab.ai/",
+          "excerpt": "Barrett Memorial Lectures Duc Nguyen served as a co-chair of the organizing committee for the 54th John H.",
+          "retrievedAt": "2026-09-07T03:45:42.895Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0069-16",
+          "url": "https://nguyenlab.ai/",
+          "excerpt": "Barrett Lectures Conference Service UTK May 18, 2026 · UTK Math Read more → Recognition Duc Nguyen Among World's Top 2% Most Cited Researchers (2024) Prof.",
+          "retrievedAt": "2026-09-07T03:45:42.895Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T00:00:00.000Z",
+      "nextAction": "Batch 4 verification complete."
     },
     "vp-0070": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://faculty.sites.iastate.edu/xhnguyen/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0070-1",
+          "url": "https://faculty.sites.iastate.edu/xhnguyen/",
+          "excerpt": "ent Students Faculty and Staff Sign Ons Xuan Hien Nguyen Faculty Xuan Hien Nguyen Main Research Knitted Scherk Surface Projects Quick Links Info For… Current Students Faculty and Staff Sign Ons Xuan Hien Nguyen Position Associate Professor Dio Lewis Holl Chair for Applied Mathematics Coordinator for Actuarial Science Director of the Math Circles of Ames program My mathematical interests lie in geometrical analysis; more specifically, I study the mean curvature flow and gluing problems involving elliptic and parabolic pdes (I use pdes to construct surfaces with interesting geometric properties).",
+          "retrievedAt": "2026-09-07T03:45:43.494Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0070-2",
+          "url": "https://faculty.sites.iastate.edu/xhnguyen/",
+          "excerpt": "Recently, I also have become interested in free boundary problems and fundamental gap problems.",
+          "retrievedAt": "2026-09-07T03:45:43.494Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0070-3",
+          "url": "https://faculty.sites.iastate.edu/xhnguyen/",
+          "excerpt": "For this reason, I started the Math Circles of Ames so to help K-12 students develop their reasoning and problem solving skills on more open-ended problems.",
+          "retrievedAt": "2026-09-07T03:45:43.494Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0070-4",
+          "url": "https://faculty.sites.iastate.edu/xhnguyen/",
+          "excerpt": "Ames , IA 50011-2104 Download CV Social Media and Websites My papers on MathSciNet My papers on ArXiV Education Ph.",
+          "retrievedAt": "2026-09-07T03:45:43.494Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0070-5",
+          "url": "https://faculty.sites.iastate.edu/xhnguyen/",
+          "excerpt": ", Mathematics, Free University of Brussels, 2000 Affiliations American Mathematical Society Mathematical Association of America Association for Women in Mathematics My name is Vietnamese and I usually go by 'Hien'.",
+          "retrievedAt": "2026-09-07T03:45:43.494Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0070-6",
+          "url": "https://faculty.sites.iastate.edu/xhnguyen/",
+          "excerpt": "It is pronounced 'Hain' or 'Hein' (think of saying it with a southern accent and you'll be pretty close!",
+          "retrievedAt": "2026-09-07T03:45:43.494Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0070-7",
+          "url": "https://faculty.sites.iastate.edu/xhnguyen/",
+          "excerpt": "Traditionally, Vietnamese people say their last name first, middle name then first name: Nguyen Xuan Hien.",
+          "retrievedAt": "2026-09-07T03:45:43.494Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0070-8",
+          "url": "https://faculty.sites.iastate.edu/xhnguyen/",
+          "excerpt": "Filling in all the paperwork here, I had to switch the order around, but could not make myself write my name completely backwards.",
+          "retrievedAt": "2026-09-07T03:45:43.494Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T00:00:00.000Z",
+      "nextAction": "Batch 4 verification complete."
     },
     "vp-0071": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://artsci.usu.edu/math-stats/directory/faculty/nguyen-nghiem"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0071-1",
+          "url": "https://artsci.usu.edu/math-stats/directory/faculty/nguyen-nghiem",
+          "excerpt": "Nghiem Nguyen | Mathematics & Statistics - College of Arts & Sciences | USU Utah State University sites use cookies.",
+          "retrievedAt": "2026-09-07T03:45:45.180Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0071-2",
+          "url": "https://artsci.usu.edu/math-stats/directory/faculty/nguyen-nghiem",
+          "excerpt": "I agree Skip to content Apply Visit Give Calendar A-Z Index Directory Libraries QUICK LINKS MyUSU SEARCH Mathematics & Statistics College of Arts & Sciences Close search Search Utah State University: I want to search All USU sites People Search terms Submit search Mathematics & Statistics Open main menu Close Open search About Close About Our Department Why Math & Stats?",
+          "retrievedAt": "2026-09-07T03:45:45.180Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0071-3",
+          "url": "https://artsci.usu.edu/math-stats/directory/faculty/nguyen-nghiem",
+          "excerpt": "inators --> About Close About Our Department Welcome At a Glance Mission and Vision NASM Ensembles Facilities People Faculty & Staff Academic Studies Undergraduate Advising Bands Choirs Departmental Staff Guitar Jazz Studies Keyboard Music Therapy Strings Voice Woodwinds, Brass, and Percussion --> Degrees Degrees Close Degrees Majors Music Music Therapy Minors Basic Music Elementary School Music Teaching Music Studies Piano Pedagogy Graduate Music --> Centers, Institutes & Affiliates Close Centers, Institutes & Affiliates --> Students Close Students Future Students Apply to USU You Belong Here!",
+          "retrievedAt": "2026-09-07T03:45:45.180Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0071-4",
+          "url": "https://artsci.usu.edu/math-stats/directory/faculty/nguyen-nghiem",
+          "excerpt": "iew Research Interests Mathematics News --> College Events Events & Programs Close Events & Programs Upcoming Events CCA Presents Bass Festival Jazz Night at Elite Hall Piano Fest Wassermann Piano Series Fry Street Quartet Music Box Concert Series Clinic Inquiry Form Alumni Band Cache Children's Choir Summer Music Camps Community Programs Fry Street Chamber Music Festival Orff-Schulwerk Summer Courses for Educators Summer Citizens Courses Summer Piano Festival --> Giving Buy Tickets --> Quick Links Close Quick Links Apply Visit Give Calendar A-Z Index Directory Libraries MyUSU Nghiem Nguyen Ph.",
+          "retrievedAt": "2026-09-07T03:45:45.180Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0071-5",
+          "url": "https://artsci.usu.edu/math-stats/directory/faculty/nguyen-nghiem",
+          "excerpt": "Mathematics and Statistics Professor Contact Information Office Location: Geology 421B Phone: (435) 797-2819 Email: nghiem.",
+          "retrievedAt": "2026-09-07T03:45:45.180Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0071-6",
+          "url": "https://artsci.usu.edu/math-stats/directory/faculty/nguyen-nghiem",
+          "excerpt": "nlinear Waves Awards Publications Abstracts Books & Chapters Fact Sheets Curriculum Journal Articles Literary Journals MultiMedia Technical Reports Translation or Transcriptions Other Teaching Graduate Students Mentored Awards Awards NSF Post-doc, 2004 NSF Best Student Paper Award, 2003 The Third IMACS International Conference on Nonlinear Evolution Equations and Wave Phenomena: Computation and Theory Students&#8217; Award for Excellence in Teaching, 2001 The Emerging Scholars Program, The University of Texas at Austin Excellent Achievement Award, 1992 The Mayor of the City of New York David N.",
+          "retrievedAt": "2026-09-07T03:45:45.180Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0071-7",
+          "url": "https://artsci.usu.edu/math-stats/directory/faculty/nguyen-nghiem",
+          "excerpt": "Dinkins Excellent Academic Award, 1991 Vietnamese American Youth Organization View All Awards and Honors Publications | Journal Articles Publications | Journal Articles Academic Journal Liu, C.",
+          "retrievedAt": "2026-09-07T03:45:45.180Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0071-8",
+          "url": "https://artsci.usu.edu/math-stats/directory/faculty/nguyen-nghiem",
+          "excerpt": "On the stability of solitary-wave and ground-state solutions for the generalized BBM equation .",
+          "retrievedAt": "2026-09-07T03:45:45.180Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T00:00:00.000Z",
+      "nextAction": "Batch 4 verification complete."
     },
     "vp-0072": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.pma.caltech.edu/people/huy-tuan-huy-pham",
         "https://huytuanpham.github.io/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0072-1",
+          "url": "https://www.pma.caltech.edu/people/huy-tuan-huy-pham",
+          "excerpt": "Astronomy on Tap Dark Sky Events Guerilla Astronomy IPAC Science Engagement Lab IQIM Outreach Diverse Minds Seminar Series Film and Media Search Search Huy Tuan (Huy) Pham ORCID Administrative Assistants Name: Antoinette Lambert Email: [email&#160;protected] Phone: 626-395-3310 Huy Tuan (Huy) Pham Profile Publications Teaching Research Interests: Probabilistic and extermal combinatorics, additive combinatorics and number theory, probability theory, theoretical computer science, statistical learning Overview Huy Tuan Pham is an Assistant Professor of Mathematics and Rosenberg Scholar at Caltech.",
+          "retrievedAt": "2026-09-07T03:45:46.221Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0072-2",
+          "url": "https://www.pma.caltech.edu/people/huy-tuan-huy-pham",
+          "excerpt": "His research focuses on combinatorics and probability, particularly the analysis of large and random networks.",
+          "retrievedAt": "2026-09-07T03:45:46.221Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0072-3",
+          "url": "https://www.pma.caltech.edu/people/huy-tuan-huy-pham",
+          "excerpt": "His work has applications in areas such as number theory, theoretical computer science, and machine learning.",
+          "retrievedAt": "2026-09-07T03:45:46.221Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0072-4",
+          "url": "https://www.pma.caltech.edu/people/huy-tuan-huy-pham",
+          "excerpt": "Among his contributions, he proved the Kahn–Kalai conjecture and Talagrand's conjectures on the suprema of selector and empirical processes.",
+          "retrievedAt": "2026-09-07T03:45:46.221Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0072-5",
+          "url": "https://www.pma.caltech.edu/people/huy-tuan-huy-pham",
+          "excerpt": "Selected Awards Dénes König Prize, 2024 ICBS Frontiers of Science Award, 2024 Clay Research Fellowship, 2023-2028 Stanford Science Fellowship, 2023-2024 Two Sigma Fellowship, 2021-2023 Related News Three Professors Named 2026 Sloan Fellows Read more news Selected Publications For a complete publications list, see feeds.",
+          "retrievedAt": "2026-09-07T03:45:46.221Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0072-6",
+          "url": "https://www.pma.caltech.edu/people/huy-tuan-huy-pham",
+          "excerpt": "A survey of modern combinatorial mathematics, starting with an introduction to graph theory and extremal problems.",
+          "retrievedAt": "2026-09-07T03:45:46.221Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0072-7",
+          "url": "https://www.pma.caltech.edu/people/huy-tuan-huy-pham",
+          "excerpt": "Each term we expect to give between 0 and 6 (most often 2-3) topics courses in advanced mathematics covering an area of current research interest.",
+          "retrievedAt": "2026-09-07T03:45:46.221Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0072-8",
+          "url": "https://www.pma.caltech.edu/people/huy-tuan-huy-pham",
+          "excerpt": "Students may register for this course multiple times even for multiple sections in a single term.",
+          "retrievedAt": "2026-09-07T03:45:46.221Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0072-9",
+          "url": "https://huytuanpham.github.io/",
+          "excerpt": "edu ) I am a Professor of Mathematics in the Department of Mathematics at Caltech.",
+          "retrievedAt": "2026-09-07T03:45:46.536Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0072-10",
+          "url": "https://huytuanpham.github.io/",
+          "excerpt": "I previously obtained my PhD from Stanford University, where I was very fortunate to be advised by Professor Jacob Fox .",
+          "retrievedAt": "2026-09-07T03:45:46.536Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0072-11",
+          "url": "https://huytuanpham.github.io/",
+          "excerpt": "I got my BS in Mathematics and MS in Statistics with Honors and Distinction from Stanford University, and a Master of Advanced Study in Mathematics with Distinction from the University of Cambridge.",
+          "retrievedAt": "2026-09-07T03:45:46.536Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0072-12",
+          "url": "https://huytuanpham.github.io/",
+          "excerpt": "Announcement The ICM 2026 Satellite conference on Synergies in Combinatorics and Theoretical Computer Science (co-organized with David Conlon, Irit Dinur, Jacob Fox, and Raghu Meka) will be held at the Merkin Center (Caltech) from August 3 to August 7, 2026 .",
+          "retrievedAt": "2026-09-07T03:45:46.536Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0072-13",
+          "url": "https://huytuanpham.github.io/",
+          "excerpt": "Links: Conference webpage | Registration form Research Interests Probabilistic and extremal combinatorics, additive combinatorics, probability theory, theoretical computer science, deep learning.",
+          "retrievedAt": "2026-09-07T03:45:46.536Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0072-14",
+          "url": "https://huytuanpham.github.io/",
+          "excerpt": "CV Publications Probabilistic and Extremal Combinatorics No-(k+1)-in-line problem for k \\ge 3, Anubhab Ghosal, Ritesh Goenka, Alexandr Grebennikov, Peter Keevash, Matthew Kwan and H.",
+          "retrievedAt": "2026-09-07T03:45:46.536Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0072-15",
+          "url": "https://huytuanpham.github.io/",
+          "excerpt": "Pham, Lisa Sauermann, ( arXiv ) Random Cayley graphs and random sumsets, Noga Alon, H.",
+          "retrievedAt": "2026-09-07T03:45:46.536Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0072-16",
+          "url": "https://huytuanpham.github.io/",
+          "excerpt": "Pham, ( arXiv ) A sharp version of Talagrand's selector process conjecture, with applications to rounding fractional covers and Bernoulli Sudakov minoration, H.",
+          "retrievedAt": "2026-09-07T03:45:46.536Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T00:00:00.000Z",
+      "nextAction": "Batch 4 verification complete."
     },
     "vp-0073": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://jfi.uchicago.edu/people/profile/dam-thanh-son/",
         "https://home.uchicago.edu/dtson/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0073-1",
+          "url": "https://jfi.uchicago.edu/people/profile/dam-thanh-son/",
+          "excerpt": "Dam Thanh Son | The James Franck Institute | The University of Chicago The University of Chicago Give to JFI Visit JFI Search Toggle navigation Enter Search Below Search The James Franck Institute Research Centers Facilities People Events News About Give to JFI Visit JFI Home / People / Dam Thanh Son Dam Thanh Son Professor of Physics Address: ACC 201 Phone: (773) 834-9032 Email: dtson@uchicago.",
+          "retrievedAt": "2026-09-07T03:45:47.671Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0073-2",
+          "url": "https://jfi.uchicago.edu/people/profile/dam-thanh-son/",
+          "excerpt": "edu/~dtson/ Research I have a broad research focus encompassing several areas of theoretical physics.",
+          "retrievedAt": "2026-09-07T03:45:47.671Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0073-3",
+          "url": "https://jfi.uchicago.edu/people/profile/dam-thanh-son/",
+          "excerpt": "The first area is string theory, to which we apply gauge-gravity duality in the physics of the quark-gluon plasma and other strongly interacting systems.",
+          "retrievedAt": "2026-09-07T03:45:47.671Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0073-4",
+          "url": "https://jfi.uchicago.edu/people/profile/dam-thanh-son/",
+          "excerpt": "Another is nuclear physics, where we research properties of the hot and dense states of matter, such as the quark gluon plasma and dense quark matter (color superconductors).",
+          "retrievedAt": "2026-09-07T03:45:47.671Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0073-5",
+          "url": "https://jfi.uchicago.edu/people/profile/dam-thanh-son/",
+          "excerpt": "We also research condensed matter physics, specifically physics of the quantum Hall system, graphene, and Weyl semimetals, and applications of quantum field theory.",
+          "retrievedAt": "2026-09-07T03:45:47.671Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0073-6",
+          "url": "https://jfi.uchicago.edu/people/profile/dam-thanh-son/",
+          "excerpt": "In the area of atomic physics, we research many-body physics with cold trapped atoms, BCS-BEC crossover, and applications of quantum field theoretical techniques.",
+          "retrievedAt": "2026-09-07T03:45:47.671Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0073-7",
+          "url": "https://home.uchicago.edu/dtson/",
+          "excerpt": "Dam Thanh Son Dam Thanh Son Kadanoff Center for Theoretical Physics University of Chicago 933 E 56th Street Chicago, IL 60637 office: MCP 465 tel: 773-834-9032 fax: 773-834-2222 dtson@uchicago.",
+          "retrievedAt": "2026-09-07T03:45:48.070Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0073-8",
+          "url": "https://home.uchicago.edu/dtson/",
+          "excerpt": "edu Research I am interested in a wide range of problems in theoretical physics, including the fractional quantum Hall effect, physics of the quark/gluon plasma, gauge/gravity duality, physics of cold atom, and other topics.",
+          "retrievedAt": "2026-09-07T03:45:48.070Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T00:00:00.000Z",
+      "nextAction": "Batch 4 verification complete."
     },
     "vp-0074": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://physics.utk.edu/people/instructional-faculty/nguyen-dien/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0074-1",
+          "url": "https://physics.utk.edu/people/instructional-faculty/nguyen-dien/",
+          "excerpt": "aculty Post Docs Graduate Students Undergraduate Why Physics What Our Grads Do Career Resources Degree Programs Research Scholarships Student Organizations Graduate Join Our Program FAQs Fellowships &#038; Assistantships Bains Fellowship Where Our Grads Go Research Resources News &#038; Events Newsletters News Colloquia Series Events In the Media Outreach Astronomy Outreach Cool Things in the Sky this Month Physics Outreach &#038; High School Lecture Series Alumni Distinguished Alumni Award Giving Opportunities Share Your News Nguyen, Dien Nguyen, Dien April 10, 2024 Faculty Email dnguye41@utk.",
+          "retrievedAt": "2026-09-07T03:45:48.842Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0074-2",
+          "url": "https://physics.utk.edu/people/instructional-faculty/nguyen-dien/",
+          "excerpt": "ts and Sciences Excellence in Research and Creative Achievement Award (Early Career) (2026) UT Society of Physics Students Research Advisor of the Year (2026) US Department of Energy Early Career Award (2025) UT Graduate Physics Society Research Advisor of the Year (2025) Nathan Isgur Fellowship for Experimental Nuclear Physics at Thomas Jefferson National Accelerator Facility Jefferson Science Associates (JSA) Graduate Fellowship Research Areas I am an experimental nuclear physicist specializing in using high-energy electron probes to explore nucleon (proton or neutron) and nuclear structures.",
+          "retrievedAt": "2026-09-07T03:45:48.842Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0074-3",
+          "url": "https://physics.utk.edu/people/instructional-faculty/nguyen-dien/",
+          "excerpt": "These structures are determined by how nucleons interact within the nucleus and the interplay between quarks and gluons within the nucleon.",
+          "retrievedAt": "2026-09-07T03:45:48.842Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0074-4",
+          "url": "https://physics.utk.edu/people/instructional-faculty/nguyen-dien/",
+          "excerpt": "These studies contribute to a comprehensive understanding of the fundamental properties of strong interactions described by QCD.",
+          "retrievedAt": "2026-09-07T03:45:48.842Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0074-5",
+          "url": "https://physics.utk.edu/people/instructional-faculty/nguyen-dien/",
+          "excerpt": "I have conducted my program at Thomas Jefferson National Accelerator Facility (JLab) , focusing on investigating A=3 nuclei, like 3He and 3H, which offer a unique opportunity for precision testing of strong interaction models.",
+          "retrievedAt": "2026-09-07T03:45:48.842Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0074-6",
+          "url": "https://physics.utk.edu/people/instructional-faculty/nguyen-dien/",
+          "excerpt": "My research interest includes the study of the origin of nucleon spin, particularly in neutron spin structures using polarized 3He.",
+          "retrievedAt": "2026-09-07T03:45:48.842Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0074-7",
+          "url": "https://physics.utk.edu/people/instructional-faculty/nguyen-dien/",
+          "excerpt": "Another crucial aspect of my research involves the study of nucleon interaction at very short distances and its implication for broader scientific fields.",
+          "retrievedAt": "2026-09-07T03:45:48.842Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0074-8",
+          "url": "https://physics.utk.edu/people/instructional-faculty/nguyen-dien/",
+          "excerpt": "In parallel with the physics program, I am actively engaged in the research and development of a new polarized 3He target that can operate high magnetic fields.",
+          "retrievedAt": "2026-09-07T03:45:48.842Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T00:00:00.000Z",
+      "nextAction": "Batch 4 verification complete."
     },
     "vp-0075": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://sciences.ucf.edu/physics/duyle/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0075-1",
+          "url": "https://sciences.ucf.edu/physics/duyle/",
+          "excerpt": "nal Materials for Energy Technologies - CoMET Skip to content CoMET Computational Materials for Energy Technologies Menu Home Teaching Publications Google Scholar Team Opening Positions Software TPOT package GitHub The CoMET research group&#8217;s interests focus on the understanding of the fundamental aspects, at the atomistic scale level, that affect and control the behavior of novel energy materials for electronic- and energy-related applications and on the development, implementation, and application of computational methods that are capable of accurately predicting properties of materials.",
+          "retrievedAt": "2026-09-07T03:45:49.111Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0075-2",
+          "url": "https://sciences.ucf.edu/physics/duyle/",
+          "excerpt": "We employ atomistic simulation techniques such as ab initio and classical molecular dynamics, density functional theory (DFT)-based methods, machine learning, and multiscale approaches like kinetic Monte Carlo and microkinetic modeling to bridge atomistic simulations with realistic conditions.",
+          "retrievedAt": "2026-09-07T03:45:49.111Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0075-3",
+          "url": "https://sciences.ucf.edu/physics/duyle/",
+          "excerpt": "Energy materials are at the heart of technologies that power our future—from clean energy generation to advanced electronics.",
+          "retrievedAt": "2026-09-07T03:45:49.111Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0075-4",
+          "url": "https://sciences.ucf.edu/physics/duyle/",
+          "excerpt": "The CoMET group is dedicated to uncovering the fundamental behaviors of energy materials to inform the design of innovative materials for next-generation applications.",
+          "retrievedAt": "2026-09-07T03:45:49.111Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0075-5",
+          "url": "https://sciences.ucf.edu/physics/duyle/",
+          "excerpt": "We explore a wide range of research areas, including: Electrocatalysis – materials that drive efficient electrochemical reactions.",
+          "retrievedAt": "2026-09-07T03:45:49.111Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0075-6",
+          "url": "https://sciences.ucf.edu/physics/duyle/",
+          "excerpt": "Energy storage – materials for high performance, sustainable, and affordable energy storage.",
+          "retrievedAt": "2026-09-07T03:45:49.111Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0075-7",
+          "url": "https://sciences.ucf.edu/physics/duyle/",
+          "excerpt": "We are currently looking for Students (Graduate and Undergraduate) to join our team.",
+          "retrievedAt": "2026-09-07T03:45:49.111Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0075-8",
+          "url": "https://sciences.ucf.edu/physics/duyle/",
+          "excerpt": "RECENT POSTS Outreach at ACS Kids Zone Promoting CO2RR on Au with ammonium cation Electrocatalysis for Sustainable Energy Symposium Controlling CO2RR on Bismuth electrode with cations TPOT package KEYWORDS ACS cations CO2RR Conferences Electrocatalysis GC-DFT Github Highlights Molecular Dynamics Simulations New Publications News outreach Package Software &copy; 2026 CoMET &bull; Built with GeneratePress We use cookies to enhance your browsing experience and analyze our traffic.",
+          "retrievedAt": "2026-09-07T03:45:49.111Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T00:00:00.000Z",
+      "nextAction": "Batch 4 verification complete."
     },
     "vp-0076": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.phys.vt.edu/About/people/Faculty/vinh-nguyen.html",
         "https://www1.phys.vt.edu/~vinhnq/"
       ],
-      "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "evidence": [
+        {
+          "id": "vp-0076-1",
+          "url": "https://www.phys.vt.edu/About/people/Faculty/vinh-nguyen.html",
+          "excerpt": "Hokie Gear Everything you need to know about Hokie gear Hokie License Plates Part of every Virginia Tech plate purchase funds scholarships Resources for Future Students Current Students Parents and Families Faculty and Staff Alumni Industry and Partners Department of Physics Menu College of Science / Department of Physics About About Submenu Toggle People For Faculty and Staff For Visitors Alumni Scholarships & Awards History Safety Undergraduate Undergraduate Submenu Toggle Prospective Undergraduates Undergraduate Program REU Scholarships & Awards Join us for videos from a VT Physics Lecture!",
+          "retrievedAt": "2026-09-07T03:45:49.508Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0076-2",
+          "url": "https://www.phys.vt.edu/About/people/Faculty/vinh-nguyen.html",
+          "excerpt": "reach Projects and Demonstrations About Us Resources Employment Opportunities Employment Opportunities Submenu Toggle Undergraduate Program Coordinator Apply Visit Give Shop Hokie Sports Shop Apparel, clothing, gear and merchandise Hokie Shop University Bookstore, merchandise and gifts Hokie Gear Everything you need to know about Hokie gear Hokie License Plates Part of every Virginia Tech plate purchase funds scholarships Resources for Future Students Current Students Parents and Families Faculty and Staff Alumni Industry and Partners Search Search query × search Search this site Search all vt.",
+          "retrievedAt": "2026-09-07T03:45:49.508Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0076-3",
+          "url": "https://www.phys.vt.edu/About/people/Faculty/vinh-nguyen.html",
+          "excerpt": "ters Video results for Sort by relevance Sort by date People results for People Results See more VT News Results See more College of Science / Department of Physics / About / People / Faculty / Vinh Nguyen / Explore Faculty Current page: Vinh Nguyen Arpit Dua Linbo Shao Hiro Munekata Jens Dilling Research Faculty and Instructors Staff Graduate Students Vinh Nguyen Associate Professor Center for Soft Matter and Biological Physics Center for Neutrino Physics Facebook X Copy page address to clipboard Location: 223 Robeson Hall (MC 0435) 850 West Campus Drive, Blacksburg, VA 24061 Contact: vinh@vt.",
+          "retrievedAt": "2026-09-07T03:45:49.508Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0076-4",
+          "url": "https://www.phys.vt.edu/About/people/Faculty/vinh-nguyen.html",
+          "excerpt": ": University of Amsterdam Field of Research : Nanoscience Address Department of Physics MC 0435 850 West Campus Drive Blacksburg, VA 24061 Contact Us (p) (540) 231-6544 (f) (540) 231-7511 Follow Physics Twitter YouTube Support Physics Get Directions See All Locations Contact Virginia Tech University Status Principles of Community Privacy Statement Acceptable Use We Remember University Libraries Accessibility Consumer Information Cost & Aid SAFE at VT Policies Equal Opportunity WVTF University Bookstore Jobs at Virginia Tech &copy; 2026 Virginia Polytechnic Institute and State University.",
+          "retrievedAt": "2026-09-07T03:45:49.508Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
+      "errors": [
+        "https://www1.phys.vt.edu/~vinhnq/: fetch failed"
+      ],
+      "updatedAt": "2026-09-07T00:00:00.000Z",
+      "nextAction": "Batch 4 verification complete."
     },
     "vp-0077": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.physast.uga.edu/directory/people/tho-nguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0077-1",
+          "url": "https://www.physast.uga.edu/directory/people/tho-nguyen",
+          "excerpt": "Skip to spotlight region Skip to secondary region Skip to UGA region Skip to Tertiary region Skip to Quaternary region Skip to unit footer Header Department of Physics and Astronomy Menu Mini menu Give Now Search Search this site Submit Search Close Department of Physics and Astronomy --> University of Georgia Main menu Undergraduate Majors Minors Transfer Students >> Transfer Policy Prospective Student Information Experiential Learning Information Advising Undergraduate Resources >> Undergraduate FAQs Awards Graduate Graduate Degree Programs >> MS In Physics MS in Physics (without Thesis) Ph.",
+          "retrievedAt": "2026-09-07T03:45:50.621Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0077-2",
+          "url": "https://www.physast.uga.edu/directory/people/tho-nguyen",
+          "excerpt": "Degree Prospective Applicants >> How to Apply Admission FAQ Admissions Requirements Degree Requirements >> What to expect at the Department Graduate Course Sequence PHYS 8990 Research Topics Selecting a Research Advisor Written Prelim Exam Oral Exam Thesis Submission Graduate Student Forms Graduate Student Handbook Graduate Advising Graduate Awards Careers Graduate Alumni Financial Aid Related Departmental Policies >> Departmental Policy for the Distribution of Graduate Laboratory Assistantship (GLA) Support Grievance Grievances and Appeals M.",
+          "retrievedAt": "2026-09-07T03:45:50.621Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0077-3",
+          "url": "https://www.physast.uga.edu/directory/people/tho-nguyen",
+          "excerpt": "Employment Opportunities Observatory Schedule Policies Research Research Groups Research Centers Courses Undergraduate Graduate Academic Calendar Daily Class Times UGA Course Schedules Course Evaluations Tutors Contact Us Directory Department Leadership Faculty Adjunct Faculty Emeritus Faculty Postdocs Staff Visiting Scholars Graduate Students Slideshow --> Tho Nguyen Associate Professor Director of Graduate Studies Research Research Areas: Nanoscience & Nanotechnology Modern Optics Condensed Matter Physics Research Interests: My group is about Spintronics in π-conjugated organic semiconductor.",
+          "retrievedAt": "2026-09-07T03:45:50.621Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0077-4",
+          "url": "https://www.physast.uga.edu/directory/people/tho-nguyen",
+          "excerpt": "We fabricate various organic spintronics devices such as organic spin valves, organic light emitting diodes (OLEDs), organic solar cells, spin-OLEDs and perform optical and magneto-electrical characterization of those devices.",
+          "retrievedAt": "2026-09-07T03:45:50.621Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0077-5",
+          "url": "https://www.physast.uga.edu/directory/people/tho-nguyen",
+          "excerpt": "We optimize the device performance by investigating carrier-spin related interaction such as hyperfine interaction and spin-orbit interaction in the organic semiconductor.",
+          "retrievedAt": "2026-09-07T03:45:50.621Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0077-6",
+          "url": "https://www.physast.uga.edu/directory/people/tho-nguyen",
+          "excerpt": "We possess various optical experiments to characterize the π-conjugated semiconductor thin films and devices such as photocurrent, photo- and electro-luminescence, photo- and charge-induced absorption.",
+          "retrievedAt": "2026-09-07T03:45:50.621Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0077-7",
+          "url": "https://www.physast.uga.edu/directory/people/tho-nguyen",
+          "excerpt": "\"Bilayer Plasmonic Nano-lattices for Tunable Hydrogen Sensing Platform\", Nano Energy , 104558 (2020) Geng, R.",
+          "retrievedAt": "2026-09-07T03:45:50.621Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0077-8",
+          "url": "https://www.physast.uga.edu/directory/people/tho-nguyen",
+          "excerpt": ", Magnetically Tunable Organic Semiconductors with Superparamagnetic Nanoparticles, Materials Horizons (2019) Hoang Mai Luong, Pham Thien Minh, Tho Duc Nguyen, and Yiping Zhao \"Enhanced Resonant Faraday Rotation in Multilayer Magneto-Plasmonic Nano-Hole Arrays and Their Sensing Application\", The Journal of Physical Chemistry C 123(46), 28377-28384 (2019) R.",
+          "retrievedAt": "2026-09-07T03:45:50.621Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T00:00:00.000Z",
+      "nextAction": "Batch 4 verification complete."
     },
     "vp-0078": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://faculty.mdanderson.org/profiles/kim-anh_do.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0078-1",
+          "url": "https://faculty.mdanderson.org/profiles/kim-anh_do.html",
+          "excerpt": "Kim-Anh Do | UT MD Anderson Skip to Content My Chart Log in to our secure, personalized website to manage your care (formerly myMDAnderson).",
+          "retrievedAt": "2026-09-07T03:45:51.526Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0078-2",
+          "url": "https://faculty.mdanderson.org/profiles/kim-anh_do.html",
+          "excerpt": "Request an Appointment Request an Appointment If you are ready to make an appointment, select a button on the right.",
+          "retrievedAt": "2026-09-07T03:45:51.526Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0078-3",
+          "url": "https://faculty.mdanderson.org/profiles/kim-anh_do.html",
+          "excerpt": "If you have questions about UT MD Anderson’s appointment process, our information page may be the best place to start.",
+          "retrievedAt": "2026-09-07T03:45:51.526Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0078-4",
+          "url": "https://faculty.mdanderson.org/profiles/kim-anh_do.html",
+          "excerpt": "re Centers & Clinics Emotional & Physical Effects Patient Support Clinical Trials Supporting a Loved One Supporting a Loved One Supporting a Loved One Home Caregiver Roles & Challenges Children and Teens Taking Care of Yourself Helping a UT MD Anderson Patient Dealing with Loss Life After Cancer Life After Cancer Life After Cancer Home Follow-up Care After Cancer Treatment Long-Term Effects of Cancer Social & Emotional Impacts of Cancer Legal & Financial Impacts of Cancer Survivorship Week Request an Appointment Current Patients Find information and resources for current and returning patients.",
+          "retrievedAt": "2026-09-07T03:45:51.526Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0078-5",
+          "url": "https://faculty.mdanderson.org/profiles/kim-anh_do.html",
+          "excerpt": "Clinical Trials Learn about clinical trials at UT MD Anderson and search our database for open studies.",
+          "retrievedAt": "2026-09-07T03:45:51.526Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0078-6",
+          "url": "https://faculty.mdanderson.org/profiles/kim-anh_do.html",
+          "excerpt": "mily History Home Genetic Testing Hereditary Cancer Syndromes Genetic Counseling and Testing FAQs Cancer Screenings Cancer Screenings Cancer Screenings Home Mammograms & Breast Cancer Screening Cervical Cancer Screening Colorectal Cancer Screening Endometrial Cancer Screening Liver Cancer Screening Lung Cancer Screening Mobile Mammography Ovarian Cancer Screening Prostate Cancer Screening Skin Cancer Screening Women&#39;s Cancer Screening Men&#39;s Cancer Screening Cancer Prevention Center The Lyda Hill Cancer Prevention Center provides cancer risk assessment, screening and diagnostic services.",
+          "retrievedAt": "2026-09-07T03:45:51.526Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0078-7",
+          "url": "https://faculty.mdanderson.org/profiles/kim-anh_do.html",
+          "excerpt": "on Relations Volunteer Volunteer Volunteer Home Why Volunteer On-Site Volunteers Volunteer Endowment Patient Experience Teen Volunteer Leadership Program Children&#39;s Cancer Hospital Councils Other Ways to Help Other Ways to Help Other Ways to Help Home Give Blood Shop UT MD Anderson Children&#39;s Art Project Donate Goods or Services Attend Events Cord Blood Bank Corporate Alliances Corporate Alliances Corporate Alliances Home Current Alliances Join the Campaign to End Cancer Help us celebrate and fuel the groundbreaking innovations and transformative advancements that define UT MD Anderson.",
+          "retrievedAt": "2026-09-07T03:45:51.526Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0078-8",
+          "url": "https://faculty.mdanderson.org/profiles/kim-anh_do.html",
+          "excerpt": "For Physicians Refer a Patient Refer a Patient Refer a Patient Home Health Care Provider Resource Center Referring Provider Team Insurance Information International Referrals myMDAnderson for Physicians Second Opinion Pathology Clinical Trials Clinical Trials Clinical Trials Home Clinical Tools & Resources Clinical Tools & Resources Clinical Tools & Resources Home Clinical Calculators Clinical Practice Algorithms myMDAnderson for Physicians Our personalized portal helps you refer your patients and communicate with their UT MD Anderson care team.",
+          "retrievedAt": "2026-09-07T03:45:51.526Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T00:00:00.000Z",
+      "nextAction": "Batch 4 verification complete."
     },
     "vp-0079": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://profiles.ucsd.edu/truong.nguyen",
         "https://sites.google.com/view/ucsdvpl/home"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0079-1",
+          "url": "https://profiles.ucsd.edu/truong.nguyen",
+          "excerpt": "Truong Nguyen | UCSD Profiles Powered by Altman Clinical and Translational Research Institute UCSD Profiles Home About Help/FAQs Search Options UC Davis UCI UCLA UCSD UCSF All UC Health USC All Everything Research Concepts Awards People &#160;&#160;&#160;UC Health People &#160;&#160;&#160;UC Davis People &#160;&#160;&#160;UCI People &#160;&#160;&#160;UCLA People &#160;&#160;&#160;UCSD People &#160;&#160;&#160;UCSF People &#160;&#160;&#160;USC People on next line to remove space between --> Find People Find Everything Login to edit your profile (add a photo, awards, links to other websites, etc.",
+          "retrievedAt": "2026-09-07T03:45:52.371Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0079-2",
+          "url": "https://profiles.ucsd.edu/truong.nguyen",
+          "excerpt": ") Edit My Profile My Person List ( 0 ) Return to Top Truong Nguyen Title(s) Professor, Electrical and Computer Engineering School Vc-academic Affairs Address 9500 Gilman Drive # La Jolla CA 92093 Email tqn001@ucsd.",
+          "retrievedAt": "2026-09-07T03:45:52.371Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0079-3",
+          "url": "https://profiles.ucsd.edu/truong.nguyen",
+          "excerpt": "edu vCard Download vCard Research research activities and funding SCH: Multimodal Retina Image Alignment and Applications NIH R01EY033847 Sep 30, 2021 - Aug 31, 2025 Role: Principal Investigator Bibliographic publications Publications listed below are automatically derived from MEDLINE/PubMed and other sources, which might result in incorrect or missing publications.",
+          "retrievedAt": "2026-09-07T03:45:52.371Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0079-4",
+          "url": "https://profiles.ucsd.edu/truong.nguyen",
+          "excerpt": "Researchers can login to make corrections and additions, or contact us for help .",
+          "retrievedAt": "2026-09-07T03:45:52.371Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0079-5",
+          "url": "https://profiles.ucsd.edu/truong.nguyen",
+          "excerpt": "Newest | Oldest | Most Cited | Most Discussed | Timeline | Field Summary | Plain Text Altmetrics Details PMC Citations indicate the number of times the publication was cited by articles in PubMed Central, and the Altmetric score represents citations in news articles and social media.",
+          "retrievedAt": "2026-09-07T03:45:52.371Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0079-6",
+          "url": "https://profiles.ucsd.edu/truong.nguyen",
+          "excerpt": "(Note that publications are often cited in additional ways that are not shown here.",
+          "retrievedAt": "2026-09-07T03:45:52.371Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0079-7",
+          "url": "https://profiles.ucsd.edu/truong.nguyen",
+          "excerpt": ") Fields are based on how the National Library of Medicine (NLM) classifies the publication's journal and might not represent the specific topic of the publication.",
+          "retrievedAt": "2026-09-07T03:45:52.371Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0079-8",
+          "url": "https://profiles.ucsd.edu/truong.nguyen",
+          "excerpt": "Translation tags are based on the publication type and the MeSH terms NLM assigns to the publication.",
+          "retrievedAt": "2026-09-07T03:45:52.371Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0079-9",
+          "url": "https://sites.google.com/view/ucsdvpl/home",
+          "excerpt": "VPL@UCSD Search this site Embedded Files Skip to main content Skip to navigation VPL@UCSD Home Seminar Member Publication 2026 2025 2024 2023 2022 2021 2020 2019 2018 2017 2016 2015 2014 2013 2012 2011 2010 2009 Photo VPL@UCSD Home Seminar Member Publication 2026 2025 2024 2023 2022 2021 2020 2019 2018 2017 2016 2015 2014 2013 2012 2011 2010 2009 Photo More Home Seminar Member Publication 2026 2025 2024 2023 2022 2021 2020 2019 2018 2017 2016 2015 2014 2013 2012 2011 2010 2009 Photo Video Processing Lab @UC San Diego UCSD Video Processing Lab is directed by Prof.",
+          "retrievedAt": "2026-09-07T03:45:52.630Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T00:00:00.000Z",
+      "nextAction": "Batch 4 verification complete."
     },
     "vp-0080": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://faculty.engineering.ucdavis.edu/pham/",
         "https://mml.ece.ucdavis.edu/people/anh-vu-pham"
       ],
-      "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "evidence": [
+        {
+          "id": "vp-0080-1",
+          "url": "https://faculty.engineering.ucdavis.edu/pham/",
+          "excerpt": "Pham, Anh-Vu Skip to main content Pham, Anh-Vu Menu Home Distinctions Biography Publications Teaching Interests Research Interests Education Ph.",
+          "retrievedAt": "2026-09-07T03:45:53.941Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0080-2",
+          "url": "https://faculty.engineering.ucdavis.edu/pham/",
+          "excerpt": "in Electrical Engineering, Georgia Institute of Technology, Atlanta, GA 1997 Bachelor in Electrical Engineer (Highest Honor), Georgia Institute of Technology, Atlanta, GA 1995 Professional Experience Professor, Electrical and Computer Engineering, University of California, Davis, 2008-present Co-Director, Davis Millimeter Wave Research Center, University of California, Davis, 2008-present Chief Technology Officer, Planarmag, Inc.",
+          "retrievedAt": "2026-09-07T03:45:53.941Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0080-3",
+          "url": "https://faculty.engineering.ucdavis.edu/pham/",
+          "excerpt": ", 2008-2010 Associate Professor, Electrical and Computer Engineering, University of California, Davis, 2004-2008 Assistant Professor, Electrical and Computer Engineering, University of California, Davis, 2002-2004 Assistant Professor, Electrical and Computer Engineering, Clemson University, 1999-2002 Co-founder/Senior Member of Technical Staff, RF Solutions, LLC, 1997-1999 Summer Intern, Hewlett-Packard Colorado Spring Technology Center, 06/96-10/96 Professor Anh-Vu Pham Electrical and Computer Engineering University of California, Davis Davis, CA 95616 ahpham@ucdavis.",
+          "retrievedAt": "2026-09-07T03:45:53.941Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
+      "errors": [
+        "https://mml.ece.ucdavis.edu/people/anh-vu-pham: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T00:00:00.000Z",
+      "nextAction": "Batch 4 verification complete."
     },
     "vp-0081": {
       "overview": "pending",
