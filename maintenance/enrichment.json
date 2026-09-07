@@ -2996,7 +2996,8 @@
         "vp-1107",
         "vp-1108"
       ],
-      "status": "pending"
+      "status": "in_progress",
+      "startedAt": "2026-09-07T19:18:24.604Z"
     },
     {
       "number": 56,
@@ -69219,210 +69220,1165 @@
       "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1089": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://scholars.uow.edu.au/kiet-tieu"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1089-1",
+          "url": "https://scholars.uow.edu.au/kiet-tieu",
+          "excerpt": "Discovery Browser Not Supported Your browser (Internet Explorer or other legacy browser) is not supported by this application.",
+          "retrievedAt": "2026-09-07T19:18:25.789Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:22:11.386Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1090": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.wgtn.ac.nz/sms/about/staff/thuong-nguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1090-1",
+          "url": "https://www.wgtn.ac.nz/sms/about/staff/thuong-nguyen",
+          "excerpt": "Discovery Browser Not Supported Your browser (Internet Explorer or other legacy browser) is not supported by this application.",
+          "retrievedAt": "2026-09-07T19:18:26.857Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:22:11.386Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1091": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.utrgv.edu/cos/schools-and-departments/mathematical-and-statistical-sciences/math-faculty/index.htm",
         "https://sites.google.com/view/liet-vo/home"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1091-1",
+          "url": "https://www.utrgv.edu/cos/schools-and-departments/mathematical-and-statistical-sciences/math-faculty/index.htm",
+          "excerpt": "tical and Statistical Sciences Department of Human Genetics Research and Centers Resources Faculty Resources Student Resources DIRECTORY MAPS MYUTRGV NEWS GIVE --> Menu --> The University of Texas Rio Grande Valley DIRECTORY MAPS MYUTRGV News GIVE Search UTRGV --> Open Search Menu Menu Search Clear Search Search Search --> --> College of Sciences Division of Academic Affairs Close X --> About ▼ The faculty and staff of UTRGV's College of Sciences are committed to student success and research excellence, offering unique opportunities for students at the undergraduate, Masters and Doctoral level.",
+          "retrievedAt": "2026-09-07T19:18:27.429Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1091-2",
+          "url": "https://www.utrgv.edu/cos/schools-and-departments/mathematical-and-statistical-sciences/math-faculty/index.htm",
+          "excerpt": "About Dean's Welcome Dean's Team Maps & Directions Give College Initiatives ▼ College Initiatives highlight the College of Sciences’ ongoing efforts to enhance academic excellence, student success, research engagement, and community impact.",
+          "retrievedAt": "2026-09-07T19:18:27.429Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1091-3",
+          "url": "https://www.utrgv.edu/cos/schools-and-departments/mathematical-and-statistical-sciences/math-faculty/index.htm",
+          "excerpt": "Through a range of strategic programs, collaborations, and projects, the College supports innovation, interdisciplinary learning, and meaningful opportunities that advance its mission and strengthen the broader university community.",
+          "retrievedAt": "2026-09-07T19:18:27.429Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1091-4",
+          "url": "https://www.utrgv.edu/cos/schools-and-departments/mathematical-and-statistical-sciences/math-faculty/index.htm",
+          "excerpt": "College Initiatives STEM Research Conference Dean's Excellence Fellowship Academic Programs Schools and Departments ▼ The College of Sciences combines a strong commitment to high-quality undergraduate education with the very best of a top-tier research university.",
+          "retrievedAt": "2026-09-07T19:18:27.429Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1091-5",
+          "url": "https://www.utrgv.edu/cos/schools-and-departments/mathematical-and-statistical-sciences/math-faculty/index.htm",
+          "excerpt": "Our focus is undergraduate and graduate education, and we provide you with opportunities to achieve your educational goals, whatever they are, from a bachelor's degree to a Ph.",
+          "retrievedAt": "2026-09-07T19:18:27.429Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1091-6",
+          "url": "https://www.utrgv.edu/cos/schools-and-departments/mathematical-and-statistical-sciences/math-faculty/index.htm",
+          "excerpt": "Schools and Departments Department of Physics and Astronomy School of Earth, Environmental, and Marine Sciences School of Integrative Biological and Chemical Sciences School of Mathematical and Statistical Sciences Department of Human Genetics Research and Centers Resources ▼ Discover comprehensive faculty and student resources at UTRGV's College of Sciences.",
+          "retrievedAt": "2026-09-07T19:18:27.429Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1091-7",
+          "url": "https://www.utrgv.edu/cos/schools-and-departments/mathematical-and-statistical-sciences/math-faculty/index.htm",
+          "excerpt": "Access guidelines, development tools, and recognition programs like the Dean’s List.",
+          "retrievedAt": "2026-09-07T19:18:27.429Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1091-8",
+          "url": "https://www.utrgv.edu/cos/schools-and-departments/mathematical-and-statistical-sciences/math-faculty/index.htm",
+          "excerpt": "Empower academic and professional excellence with tailored support for faculty and students.",
+          "retrievedAt": "2026-09-07T19:18:27.429Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1091-9",
+          "url": "https://sites.google.com/view/liet-vo/home",
+          "excerpt": "Liet Vo Search this site Embedded Files Skip to main content Skip to navigation Liet Vo Home Research Teaching Mentoring CV Talks/Conferences Service Contact Links Liet Vo Home Research Teaching Mentoring CV Talks/Conferences Service Contact Links More Home Research Teaching Mentoring CV Talks/Conferences Service Contact Links Welcome to My Website!",
+          "retrievedAt": "2026-09-07T19:18:27.662Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1091-10",
+          "url": "https://sites.google.com/view/liet-vo/home",
+          "excerpt": "I am an Assistant Professor in the School of Mathematical and Statistical Sciences at the University of Texas Rio Grande Valley (UTRGV).",
+          "retrievedAt": "2026-09-07T19:18:27.662Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1091-11",
+          "url": "https://sites.google.com/view/liet-vo/home",
+          "excerpt": "My research interests include numerical analysis for deterministic and stochastic partial differential equations, computational electromagnetics, fast solvers, iterative methods, and probability.",
+          "retrievedAt": "2026-09-07T19:18:27.662Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1091-12",
+          "url": "https://sites.google.com/view/liet-vo/home",
+          "excerpt": "Before joining UTRGV, I was a Research Assistant Professor (postdoc) at the University of Illinois at Chicago from 2022 to 2024, where I worked with Prof.",
+          "retrievedAt": "2026-09-07T19:18:27.662Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1091-13",
+          "url": "https://sites.google.com/view/liet-vo/home",
+          "excerpt": "in Mathematics from the University of Tennessee, Knoxville, under the supervision of Prof.",
+          "retrievedAt": "2026-09-07T19:18:27.662Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:22:11.386Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1092": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.vu.edu.au/research/jo-chau-vu"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.vu.edu.au/research/jo-chau-vu: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:22:11.386Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1093": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.kuas.ac.jp/en-jp/faculty-members/faculty/cao-thi-khanh-nguyet"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1093-1",
+          "url": "https://www.kuas.ac.jp/en-jp/faculty-members/faculty/cao-thi-khanh-nguyet",
+          "excerpt": "CAO Thi Khanh Nguyet | Kyoto University of Advanced Science (KUAS) Kyoto University of Advanced Science (KUAS) JP EN Search this site About the University Student Support Campus &#038; Facilities Career International Exchange Access Top Student Support Campus &#038; Facilities Career Campus Life International Exchange Tuition and Scholarship About the University TOP Campus &#038; Facilities Campus Life Tuition and Scholarship Student Support Career International Exchange About the University PICKUP!",
+          "retrievedAt": "2026-09-07T19:18:31.240Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1093-2",
+          "url": "https://www.kuas.ac.jp/en-jp/faculty-members/faculty/cao-thi-khanh-nguyet",
+          "excerpt": "Faculty introduction CAO Thi Khanh Nguyet Cao Thi Khanh Nguyet (カオ ティ キャン グェット) Professor Department of Economics, Faculty of Economics and Business Administration Faculty Profile Research Field 開発金融、国際経済、応用計量経済 Affiliated Academic Societies Japan Society of Monetary Economics, East Asia Economic Association (EAEA) Academic Degrees Ph.",
+          "retrievedAt": "2026-09-07T19:18:31.240Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1093-3",
+          "url": "https://www.kuas.ac.jp/en-jp/faculty-members/faculty/cao-thi-khanh-nguyet",
+          "excerpt": "(Economics), Kobe University Brief Biography She completed his doctoral studies at the Graduate School of Economics at Kobe University in 2015.",
+          "retrievedAt": "2026-09-07T19:18:31.240Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1093-4",
+          "url": "https://www.kuas.ac.jp/en-jp/faculty-members/faculty/cao-thi-khanh-nguyet",
+          "excerpt": "She has worked as a part-time lecturer at the Graduate School of Economics at Kobe University, Kansai University, a full-time researcher at the Institute of Asia-Pacific Studies, and a full-time lecturer at Kwansei Gakuin University, before assuming this current position in April 2021.",
+          "retrievedAt": "2026-09-07T19:18:31.240Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1093-5",
+          "url": "https://www.kuas.ac.jp/en-jp/faculty-members/faculty/cao-thi-khanh-nguyet",
+          "excerpt": "Achievements and Awards February 2007: Citizen Award, Saitama City Japanese Speech Contest March 2007: Saitama City International Friendship Honorary Citizen Medal September 2010: Student Science Research Guidance Award, Ministry of Education and Training, Government of Vietnam April 2011-March 2015: Scholarship for Japanese Government Scholarship Students September 2014: Best Presentation Award, 7th Vietnam-Japan Academic Exchange Conference (VJSE) January 2015: Rokkodai Research Encouragement Award (Kishimoto Award), Graduate School of Economics, Kobe University Media Coverage 1.",
+          "retrievedAt": "2026-09-07T19:18:31.240Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1093-6",
+          "url": "https://www.kuas.ac.jp/en-jp/faculty-members/faculty/cao-thi-khanh-nguyet",
+          "excerpt": "「女性活躍500兆円の潜在力」（日本経済新聞朝刊1面）インタビュー記事が掲載（2019年6月13日） Interview article published in the article \"500 trillion yen potential for women's participation in society\" (Nikkei Shimbun morning edition, front page) (June 13, 2019) 2.",
+          "retrievedAt": "2026-09-07T19:18:31.240Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1093-7",
+          "url": "https://www.kuas.ac.jp/en-jp/faculty-members/faculty/cao-thi-khanh-nguyet",
+          "excerpt": "\"From bikes to phones, 'Made in Vietnam' grows with foreign help\"（Nikkei Asian Review, Business Trend）（2019年1月13日） 3.",
+          "retrievedAt": "2026-09-07T19:18:31.240Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1093-8",
+          "url": "https://www.kuas.ac.jp/en-jp/faculty-members/faculty/cao-thi-khanh-nguyet",
+          "excerpt": "「ベトナム国産品 外資頼み」（日系産業新聞9面）インタビュー記事が掲載（2019年1月4日） Interview article on \"Vietnamese domestic products rely on foreign capital\" (Japanese Industrial Newspaper, page 9) (January 4, 2019) Research Overview In the field of development finance, I have been conducting research on the issues surrounding financing for small and medium-sized enterprises in Vietnam and the impact of foreign banks entering the country.",
+          "retrievedAt": "2026-09-07T19:18:31.240Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:22:11.386Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1094": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://scholars.hkbu.edu.hk/en/persons/VDDOAN/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1094-1",
+          "url": "https://scholars.hkbu.edu.hk/en/persons/VDDOAN/",
+          "excerpt": "Viet Dung DOAN - Hong Kong Baptist University Skip to main navigation Skip to search Skip to main content Hong Kong Baptist University Home Help & FAQ Link opens in a new tab Search content at Hong Kong Baptist University Home Scholars Departments / Units Research Output Projects / Grants Prizes / Awards Activities Press/Media Student theses Datasets Viet Dung DOAN public CV Link opens in a new tab Viet Dung DOAN, Prof Assistant Professor , Department of Accountancy, Economics and Finance https://orcid.",
+          "retrievedAt": "2026-09-07T19:18:33.270Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1094-2",
+          "url": "https://scholars.hkbu.edu.hk/en/persons/VDDOAN/",
+          "excerpt": "edu hk 2020 2026 Research activity per year Overview Fingerprint Network Projects / Grants (1) Research Output (6) Personal profile Research Interests Mutual Funds, Exchange-Traded Funds, Over-the-Counter Markets, Municipal Bonds, Information Asymmetry Chinese Name ****** Education/Academic qualification PhD, Finance, Purdue University Award Date: 1 Aug 2023 Fingerprint Dive into the research topics where Viet Dung DOAN is active.",
+          "retrievedAt": "2026-09-07T19:18:33.270Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1094-3",
+          "url": "https://scholars.hkbu.edu.hk/en/persons/VDDOAN/",
+          "excerpt": "Municipal Bond Economics, Econometrics and Finance 100% Municipal Bonds Keyphrases 49% Investors Economics, Econometrics and Finance 48% Mutual Funds Keyphrases 36% Over-the-counter Markets Keyphrases 36% Exchange-traded Funds Keyphrases 36% Yield Curve Economics, Econometrics and Finance 36% Index Derivative Economics, Econometrics and Finance 36% View full fingerprint Collaborations and top research areas from the last five years Recent external collaboration on country/territory level.",
+          "retrievedAt": "2026-09-07T19:18:33.270Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1094-4",
+          "url": "https://scholars.hkbu.edu.hk/en/persons/VDDOAN/",
+          "excerpt": "Dive into details by clicking on the dots or Select a country/territory from the list Dive into details Select a country/territory to view shared publications and projects Close Select a country/territory from the list Explore network further Projects Projects per year 2025 2025 2027 1 Active Projects per year Liquidity Creation by Exchanged-Traded Funds DOAN, V.",
+          "retrievedAt": "2026-09-07T19:18:33.270Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1094-5",
+          "url": "https://scholars.hkbu.edu.hk/en/persons/VDDOAN/",
+          "excerpt": "(PI) 1/01/25 → 31/12/27 Project : Research project Liquidity Creation 100% Exchange-traded Funds 100% Index Derivative 100% Retail Investors 83% Financial Market 33% Research Output Research output per year 2020 2020 2022 2024 2025 2026 2026 4 Working paper 2 Journal article Research output per year Research output per year Flow-Induced Trading: Evidence from the Daily Trading of Municipal Bond Mutual Funds Chernenko, S.",
+          "retrievedAt": "2026-09-07T19:18:33.270Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1094-6",
+          "url": "https://scholars.hkbu.edu.hk/en/persons/VDDOAN/",
+          "excerpt": "Research output : Working paper Municipal Bonds 100% Flow Effect 100% Equity mutual Funds 100% Municipal Bond 100% Trading Activity 50% Mutual Fund Liquidity Creation Chernenko, S.",
+          "retrievedAt": "2026-09-07T19:18:33.270Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1094-7",
+          "url": "https://scholars.hkbu.edu.hk/en/persons/VDDOAN/",
+          "excerpt": "Research output : Working paper Liquidity 100% Mutual Funds 100% Liquidity Creation 100% Open-end Fund 66% Investors 66% Forced Sales and Dealer Choice in OTC Markets Chernenko, S.",
+          "retrievedAt": "2026-09-07T19:18:33.270Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1094-8",
+          "url": "https://scholars.hkbu.edu.hk/en/persons/VDDOAN/",
+          "excerpt": "Research output : Working paper Dealers 100% Forced Sales 100% OTC Markets 100% Sales 100% Municipal Bond 100% Exchange-Traded Funds and Transparency in Over-the-Counter Markets Doan, V.",
+          "retrievedAt": "2026-09-07T19:18:33.270Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:22:11.386Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1095": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://biologicalsciences.uchicago.edu/faculty/mai-tuyet-pho-md"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1095-1",
+          "url": "https://biologicalsciences.uchicago.edu/faculty/mai-tuyet-pho-md",
+          "excerpt": "| Biological Sciences Division | The University of Chicago Our Faculty Mai Tuyet Pho, MD Associate Professor of Medicine Clinical Interests: Hepatitis C, HIV AIDS Care Websites: Research Network Profile Contact: mpho1@uchicago.",
+          "retrievedAt": "2026-09-07T19:18:36.469Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1095-2",
+          "url": "https://biologicalsciences.uchicago.edu/faculty/mai-tuyet-pho-md",
+          "excerpt": "Mai Tuyet Pho is an infectious diseases physician and Associate Professor in the Section of Infectious Diseases and Global Health.",
+          "retrievedAt": "2026-09-07T19:18:36.469Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1095-3",
+          "url": "https://biologicalsciences.uchicago.edu/faculty/mai-tuyet-pho-md",
+          "excerpt": "She serves as the Director of Health Policy Research at the Chicago Center for HIV Elimination.",
+          "retrievedAt": "2026-09-07T19:18:36.469Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1095-4",
+          "url": "https://biologicalsciences.uchicago.edu/faculty/mai-tuyet-pho-md",
+          "excerpt": "Her work seeks to improve health outcomes and public policy at the intersection of HIV, HCV, and substance use.",
+          "retrievedAt": "2026-09-07T19:18:36.469Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1095-5",
+          "url": "https://biologicalsciences.uchicago.edu/faculty/mai-tuyet-pho-md",
+          "excerpt": "Current research leverages implementation science and intervention testing to expand public health interventions that support the health of people who use drugs, with a special focus in rural communities and criminal legal involvement.",
+          "retrievedAt": "2026-09-07T19:18:36.469Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1095-6",
+          "url": "https://biologicalsciences.uchicago.edu/faculty/mai-tuyet-pho-md",
+          "excerpt": "Her work has been supported by the Agency for Healthcare Research and Quality, the National Institutes on Drug Abuse, the National Institute of Allergy and Infectious Diseases, the Centers for Disease Control and Prevention, the Third Coast Center for AIDS Research and Grand Challenges Canada.",
+          "retrievedAt": "2026-09-07T19:18:36.469Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1095-7",
+          "url": "https://biologicalsciences.uchicago.edu/faculty/mai-tuyet-pho-md",
+          "excerpt": "Pho served as the interim Chief Medical Officer at the Illinois Department of Public Health and a Medical Advisor for Healthcare Policy and Research.",
+          "retrievedAt": "2026-09-07T19:18:36.469Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1095-8",
+          "url": "https://biologicalsciences.uchicago.edu/faculty/mai-tuyet-pho-md",
+          "excerpt": "During her tenure she led multiple efforts around the opioid epidemic and HCV, including analysis on fatal and nonfatal overdose, HCV surveillance, naloxone overdose prevention and education around safe opioid prescribing.",
+          "retrievedAt": "2026-09-07T19:18:36.469Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:22:11.386Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1096": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.utpb.edu/directory/faculty-staff/luong_p"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1096-1",
+          "url": "https://www.utpb.edu/directory/faculty-staff/luong_p",
+          "excerpt": "s Development Nancy Fyfe Cardozier Gallery Texas Water Energy Institute Shepperd Leadership Institute Wagner Noël Athletics About Us About Us Administration President's Welcome Mission & History Quick Facts About UTPB About the Permian Basin Accreditations and Rankings Strategic Plan Contact Us Give Shop myUTPB Library Success Stories Calendar Directory En Español Info For: Future Students Current Students Faculty & Staff Alumni Parents Home Directory Phat Luong Back to Directory Phat Luong Assistant Professor College of Business Department of Management Phone (432) 552-2192 Email luong_p@utpb.",
+          "retrievedAt": "2026-09-07T19:18:37.112Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:22:11.386Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1097": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://library.kutztown.edu/prf.php?account_id=1704"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1097-1",
+          "url": "https://library.kutztown.edu/prf.php?account_id=1704",
+          "excerpt": "Catalog Databases A-Z Journals Special Collections New Materials Services Library Instruction Request Citing Sources Borrow and Renew Study Rooms Equipment Reserves and E-Reserves Interlibrary Loan Services Students Faculty Staff Community Patrons About Hours Library Directory Directions and Parking Policies Documents Employment Floor Plans Help Chat Meet with a Librarian Research Help Research Guides FAQs Accounts Library Account Interlibrary Loan KU Email D2L KU Home Rohrbach Library Home Profiles Sylvia Pham Sylvia Pham Sylvia Pham Email Me Contact: Rorhbach Library, 103B 15200 Kutztown Rd.",
+          "retrievedAt": "2026-09-07T19:18:37.506Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1097-2",
+          "url": "https://library.kutztown.edu/prf.php?account_id=1704",
+          "excerpt": "pdate: Apr 29, 2026 106 106 views Maps on the Web View Guide Info May 4, 2026 Last update: May 4, 2026 78 78 views Military Veterans View Guide Info Mar 30, 2026 Last update: Mar 30, 2026 102 102 views Rohrbach Library Open House View Guide Info Aug 19, 2026 Last update: Aug 19, 2026 242 242 views Social Work - Library Resources for Social Work Students View Guide Info Sep 3, 2026 Last update: Sep 3, 2026 65 65 views Student Affairs in Higher Education View Guide Info Sep 3, 2026 Last update: Sep 3, 2026 40 40 views My Subject Specialties Counseling Geography Social Work Powered by Springshare.",
+          "retrievedAt": "2026-09-07T19:18:37.506Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:22:11.386Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1098": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.henley.ac.uk/people/dr-ha-phuong-luong"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1098-1",
+          "url": "https://www.henley.ac.uk/people/dr-ha-phuong-luong",
+          "excerpt": "Dr Ha-Phuong Luong | Henley Business School Skip to main content Breadcrumb navigation Research & faculty People Dr Ha-Phuong Luong Lecturer in International Business and Strategy h.",
+          "retrievedAt": "2026-09-07T19:18:39.327Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1098-2",
+          "url": "https://www.henley.ac.uk/people/dr-ha-phuong-luong",
+          "excerpt": "uk 0118 378 6981 Specialisms Firm internationalization, Business clusters, Institutional dynamics (i.",
+          "retrievedAt": "2026-09-07T19:18:39.327Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1098-3",
+          "url": "https://www.henley.ac.uk/people/dr-ha-phuong-luong",
+          "excerpt": ", institutional escapism), FDI, The use of tax havens Location Room 143, Henley Business School, Whiteknights Campus Dr Ha-Phuong Luong is a Lecturer in International Business and Strategy at Henley Business School, developing a strong research profile in International Business and Strategy.",
+          "retrievedAt": "2026-09-07T19:18:39.327Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1098-4",
+          "url": "https://www.henley.ac.uk/people/dr-ha-phuong-luong",
+          "excerpt": "She is a Fellow of the UK Higher Education Academy (HEA) and a Visting Fellow at Aston University.",
+          "retrievedAt": "2026-09-07T19:18:39.327Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1098-5",
+          "url": "https://www.henley.ac.uk/people/dr-ha-phuong-luong",
+          "excerpt": "Research focus Ha-Phuong's research pipeline covers inter-disciplinary and innovative topics related to firm internationalisation, business clusters, economic geography, MNEs, FDI, and taxation.",
+          "retrievedAt": "2026-09-07T19:18:39.327Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1098-6",
+          "url": "https://www.henley.ac.uk/people/dr-ha-phuong-luong",
+          "excerpt": "Recently, Ha-Phuong has diversified her research interests to some other topics such as political economy of globalisation, innovation, knowledge transfer, environmental development and industrial concentration.",
+          "retrievedAt": "2026-09-07T19:18:39.327Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1098-7",
+          "url": "https://www.henley.ac.uk/people/dr-ha-phuong-luong",
+          "excerpt": "Ha-Phuong's publications have appeared in leading journals such as: • Journal of World Business • Journal of Business Strategy and the Environment • Journal of Intellectual Capital Ha-Phuong possesses specialist knowledge in the discipline of econometrics and statistics to work with massive datasets that include over millions of observations.",
+          "retrievedAt": "2026-09-07T19:18:39.327Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1098-8",
+          "url": "https://www.henley.ac.uk/people/dr-ha-phuong-luong",
+          "excerpt": "She has a strong background in using panel data and advanced skills in data management.",
+          "retrievedAt": "2026-09-07T19:18:39.327Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:22:11.386Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1099": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.ai.uni-bayreuth.de/en/professors/index.html",
         "https://thomyphan.github.io/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1099-1",
+          "url": "https://www.ai.uni-bayreuth.de/en/professors/index.html",
+          "excerpt": "The Chairs Druckansicht der Internetadresse: Sie benutzen einen veralteten Browser.",
+          "retrievedAt": "2026-09-07T19:18:41.756Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1099-2",
+          "url": "https://www.ai.uni-bayreuth.de/en/professors/index.html",
+          "excerpt": "Bitte aktualisieren Sie Ihren Browser oder aktivieren Sie Google Chrome Frame , um Ihr Surf-Erlebnis zu verbessern.",
+          "retrievedAt": "2026-09-07T19:18:41.756Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1099-3",
+          "url": "https://www.ai.uni-bayreuth.de/en/professors/index.html",
+          "excerpt": "pment Chairs/ Working groups Dates / Events Uni / School News Job offers Contact / Directions quick links Mobile Menu quick links Close Privacy policy / Disclaimer Legal Notice University Rules Sitemap Search Contact Declaration on accessibility Search Home &gt; Chairs/ Working groups Print page Home Study / Teaching Research / Development Chairs/ Working groups Dates / Events Uni / School News Job offers Contact / Directions The Chairs In total, the Department of Computer Science includes eight chairs and one junior research group with the following main topics: Applied Computer Science I - N.",
+          "retrievedAt": "2026-09-07T19:18:41.756Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1099-4",
+          "url": "https://www.ai.uni-bayreuth.de/en/professors/index.html",
+          "excerpt": "- Software Engineering Hide Our research is centered around empirical software engineering, and in particular software analytics.",
+          "retrievedAt": "2026-09-07T19:18:41.756Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1099-5",
+          "url": "https://www.ai.uni-bayreuth.de/en/professors/index.html",
+          "excerpt": "We process, analyze, and visualize software engineering data to monitor, govern, and improve software development processes and tools.",
+          "retrievedAt": "2026-09-07T19:18:41.756Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1099-6",
+          "url": "https://www.ai.uni-bayreuth.de/en/professors/index.html",
+          "excerpt": "We are further interested in interdisciplinary research and methodological aspects of empirical software engineering.",
+          "retrievedAt": "2026-09-07T19:18:41.756Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1099-7",
+          "url": "https://www.ai.uni-bayreuth.de/en/professors/index.html",
+          "excerpt": "For us, thoroughly analyzing and understanding the state-of-practice is an essential first step towards improving how software is being developed.",
+          "retrievedAt": "2026-09-07T19:18:41.756Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1099-8",
+          "url": "https://www.ai.uni-bayreuth.de/en/professors/index.html",
+          "excerpt": "Our vision is that software engineering becomes more evidence-based, which is only possible if academic researchers provide actionable insights on topics that are relevant to practitioners.",
+          "retrievedAt": "2026-09-07T19:18:41.756Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1099-9",
+          "url": "https://thomyphan.github.io/",
+          "excerpt": "Thomy Phan Research Publications Teaching CV Thomy Phan Junior Professor @ University of Bayreuth Follow Website Email ResearchGate LinkedIn Github Google Scholar ORCID Thomy Phan I am a Junior Professor at the University of Bayreuth heading the Chair of Artificial Intelligence and Machine Learning (UBT AI/ML) .",
+          "retrievedAt": "2026-09-07T19:18:41.900Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1099-10",
+          "url": "https://thomyphan.github.io/",
+          "excerpt": "Before, I was a Postdoctoral Scholar at UC Irvine and the University of Southern California , advised by Professor Sven Koenig .",
+          "retrievedAt": "2026-09-07T19:18:41.900Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1099-11",
+          "url": "https://thomyphan.github.io/",
+          "excerpt": "I earned my PhD in Computer Science at LMU Munich , advised by Professor Claudia Linnhoff-Popien .",
+          "retrievedAt": "2026-09-07T19:18:41.900Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1099-12",
+          "url": "https://thomyphan.github.io/",
+          "excerpt": "My research focuses on multi-agent algorithms for scalable optimization using learning and search techniques.",
+          "retrievedAt": "2026-09-07T19:18:41.900Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1099-13",
+          "url": "https://thomyphan.github.io/",
+          "excerpt": "Applications of my research are large-scale distributed and intelligent systems, such as warehouse automation, smart manufacturing, and traffic management.",
+          "retrievedAt": "2026-09-07T19:18:41.900Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1099-14",
+          "url": "https://thomyphan.github.io/",
+          "excerpt": "Please, check out the latest info about my Research Publications Teaching &copy; 2026 Thomy Phan.",
+          "retrievedAt": "2026-09-07T19:18:41.900Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:22:11.386Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1100": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.nsu.edu/Academics/Faculty-and-Academic-Divisions/Schools-and-Colleges/School-of-Business/Faculty-Staff/files/Dr-Ngo-Anh-CV.aspx",
         "https://nsu.academia.edu/AnhNgo"
       ],
-      "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "evidence": [
+        {
+          "id": "vp-1100-1",
+          "url": "https://www.nsu.edu/Academics/Faculty-and-Academic-Divisions/Schools-and-Colleges/School-of-Business/Faculty-Staff/files/Dr-Ngo-Anh-CV.aspx",
+          "excerpt": "7 %���� 1 0 obj >/Metadata 694 0 R/ViewerPreferences 695 0 R>> endobj 2 0 obj > endobj 3 0 obj >/Font >/ProcSet[/PDF/Text/ImageB/ImageC/ImageI] >>/Annots[ 13 0 R] /MediaBox[ 0 0 612 792] /Contents 4 0 R/Group >/Tabs/S/StructParents 0>> endobj 4 0 obj > stream x��]�r�F\u0012}w��\u0001U�B�\"\bs\u0007R)�J��d+�Ē��(\u000f�DI�H��K�ٯ��\u0006)[�4�\u0005z�lDi\u0019J�\u000f��s��g�0_N/�������\u000f������\"�u��y������'���W��x9mf�'�ߗ��\u000f���d��Iv��(ۿ� �/��=?",
+          "retrievedAt": "2026-09-07T19:18:42.657Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1100-2",
+          "url": "https://www.nsu.edu/Academics/Faculty-and-Academic-Divisions/Schools-and-Colleges/School-of-Business/Faculty-Staff/files/Dr-Ngo-Anh-CV.aspx",
+          "excerpt": "q����#�]=~�]Q�,ز�Y� �2� ��'�\u001f]~����> Ւ�\u000f�jpU\u001f2\u0007#�w���h5\u0006o�B���۝qMg��\u0015\u0006m\u0006WI\")�\u0005i\u0000�ε4�*J�Z6��P\u001a�L\u0002R��g�\u0016�J\u0014��ݍ���� �O�\u0016%�S�Ae��5���HguQ�{\u0016;[�\u0010Q\u0002~�>g�\\�\u0018n1\\�P}�\u001a������� �}q��Ӭ��i ����>\u000f�9�\u001d�f4��!",
+          "retrievedAt": "2026-09-07T19:18:42.657Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1100-3",
+          "url": "https://www.nsu.edu/Academics/Faculty-and-Academic-Divisions/Schools-and-Colleges/School-of-Business/Faculty-Staff/files/Dr-Ngo-Anh-CV.aspx",
+          "excerpt": "��\u000e�\u0005Y��@>��m���j��\u001b�\u0012������l�*�v�������6�Mf����5\u001f,�~��;�\u001a=\u0005���2�\u0013�8u�\u0006\u0016cV'q\u0010\u0010�UWۼ�D-1=�W��� �9P��\\�(��rϛ\u000f@m&5����>-+k ��8ʋ ��&�Sj4����T\u0012l���-%� �q ?",
+          "retrievedAt": "2026-09-07T19:18:42.657Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1100-4",
+          "url": "https://www.nsu.edu/Academics/Faculty-and-Academic-Divisions/Schools-and-Colleges/School-of-Business/Faculty-Staff/files/Dr-Ngo-Anh-CV.aspx",
+          "excerpt": "��h%�#k�7:V�:\u0001 oҠ$�u�5T\u0011X���K�k⦰�I}��ŷ�[t��_\u0013��\u0017�e�gGbUY� Ǚ ��\u001asM\u0006%���\u0013���ߓ� �6e8�� ܣ��{5�\u0014���.",
+          "retrievedAt": "2026-09-07T19:18:42.657Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1100-5",
+          "url": "https://www.nsu.edu/Academics/Faculty-and-Academic-Divisions/Schools-and-Colleges/School-of-Business/Faculty-Staff/files/Dr-Ngo-Anh-CV.aspx",
+          "excerpt": "{)�h�\u00123�B���@�XJ i��&���-(wu�E#U��\u0010�9�\u0010���\u0016\u0014�Ʃ�G�:�\u0017��6��E]��{n�\u001aT9c�M��Ε�u�\u001cTP`�ͨI��&�몫�^\u001c��\u001f�շ5� ���E`)%Y�uԩ��\u0017.",
+          "retrievedAt": "2026-09-07T19:18:42.657Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1100-6",
+          "url": "https://www.nsu.edu/Academics/Faculty-and-Academic-Divisions/Schools-and-Colleges/School-of-Business/Faculty-Staff/files/Dr-Ngo-Anh-CV.aspx",
+          "excerpt": "��\u0000�, *\u0017�\u0015603(/q@/�G������ �X�JM��SaP����̚ۻ=\bb�\u001cXh�S��p�B�P�M�rz�\u0015V%'�* �Q\u0014�^� ߪ�{��EİB�-\u0015F��'�R�.",
+          "retrievedAt": "2026-09-07T19:18:42.657Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1100-7",
+          "url": "https://www.nsu.edu/Academics/Faculty-and-Academic-Divisions/Schools-and-Colleges/School-of-Business/Faculty-Staff/files/Dr-Ngo-Anh-CV.aspx",
+          "excerpt": "�� e�� �´��A�$I}�\u0012W���k��p�H�Jq(I�EHN\u000e��g��RՂ��\u0007��\u0017\u0010�8:TԥW� O��\u0012�\u001bF\u0005l��\u001a�\\\u0014\u0019T��� d�W�\u001b ���`P\u000e@k�cW�J�`\u0018H�:9��\u0017�co���Ґ�;�����P�C��R0�\u00012�*�\u0012�R�2 ��:a4� ZΉ�(�a�c�E'b�*�\u0006UYc2ʲ&Iʨ���y��Qb[�\u0015��2pr\u001b�� ȡ�J�\u0002\u0005��$ۂ\u0013������ܺ�Ġ� \u0014.",
+          "retrievedAt": "2026-09-07T19:18:42.657Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1100-8",
+          "url": "https://www.nsu.edu/Academics/Faculty-and-Academic-Divisions/Schools-and-Colleges/School-of-Business/Faculty-Staff/files/Dr-Ngo-Anh-CV.aspx",
+          "excerpt": "@X���5d��\u001c��� Ł��bƺX�g=\u0013��\u0018#�Դ ��3�N\\�Q�LbN(,\u0003{�\u0004%��>��d��r��Ꙓ�}\u0016��ٍh4� Z1du��Pr��}fЊ!",
+          "retrievedAt": "2026-09-07T19:18:42.657Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
+      "errors": [
+        "https://nsu.academia.edu/AnhNgo: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T19:22:11.386Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1101": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.sru.edu/academics/colleges-and-departments/cob/school-of-business/meet-the-faculty"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1101-1",
+          "url": "https://www.sru.edu/academics/colleges-and-departments/cob/school-of-business/meet-the-faculty",
+          "excerpt": "School of Business Faculty | Slippery Rock University Skip to main content Skip to primary navigation Skip to search Skip to footer We use cookies on this site to enhance your user experience.",
+          "retrievedAt": "2026-09-07T19:18:43.747Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1101-2",
+          "url": "https://www.sru.edu/academics/colleges-and-departments/cob/school-of-business/meet-the-faculty",
+          "excerpt": "ew tab) Support Services Accessibility Services Counseling Center Career and Academic Progress Dean of Students Health Center Safety Campus Events Athletics Calendar (opens in a new tab) Student Event Calendar (opens in a new tab) University Event Calendar About Overview Awards & Rankings Fast Facts History & Traditions Mission, Vision, and Values Safety Information Administration Leadership & Governance Office of the President Strategic Plan Community and Contact Info Find People Campus Map Experience Butler County (opens in a new tab) Athletics (opens in a new tab) x What are you looking for?",
+          "retrievedAt": "2026-09-07T19:18:43.747Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1101-3",
+          "url": "https://www.sru.edu/academics/colleges-and-departments/cob/school-of-business/meet-the-faculty",
+          "excerpt": "Home Academics Colleges & Departments Haverlack College of Business School of Business Meet the Faculty Home School of Business Meet the Faculty School of Business AACSB Accreditation About the School Meet the Faculty Student Experiences Follow Us On Social Media Contact Information School of Business 724.",
+          "retrievedAt": "2026-09-07T19:18:43.747Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1101-4",
+          "url": "https://www.sru.edu/academics/colleges-and-departments/cob/school-of-business/meet-the-faculty",
+          "excerpt": "edu Explore More School of Business AACSB Accreditation About the School Meet the Faculty Student Experiences Follow Us On Social Media Contact Information School of Business 724.",
+          "retrievedAt": "2026-09-07T19:18:43.747Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1101-5",
+          "url": "https://www.sru.edu/academics/colleges-and-departments/cob/school-of-business/meet-the-faculty",
+          "excerpt": "edu Meet the Faculty and Staff Meet our faculty and staff within the School of Business at SRU.",
+          "retrievedAt": "2026-09-07T19:18:43.747Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1101-6",
+          "url": "https://www.sru.edu/academics/colleges-and-departments/cob/school-of-business/meet-the-faculty",
+          "excerpt": "Accounting Faculty Business Law Faculty Economics Faculty Finance Faculty Hospitality & Tourism Faculty Management Faculty Information Systems Faculty Marketing Faculty Thuy Bui School of Business Department Chair thuy.",
+          "retrievedAt": "2026-09-07T19:18:43.747Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1101-7",
+          "url": "https://www.sru.edu/academics/colleges-and-departments/cob/school-of-business/meet-the-faculty",
+          "excerpt": "in Finance from University of Pittsburgh, an MBA and a BBA in Finance and Strategic Management from Ohio University.",
+          "retrievedAt": "2026-09-07T19:18:43.747Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1101-8",
+          "url": "https://www.sru.edu/academics/colleges-and-departments/cob/school-of-business/meet-the-faculty",
+          "excerpt": "She has taught many undergraduate and graduate courses in finance including Managerial Finance, Financial Markets and Institutions, International Financial Management, Portfolio Theory, Issues in Global Business, and Global Dynamics of Business.",
+          "retrievedAt": "2026-09-07T19:18:43.747Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:22:11.386Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1102": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://education.indianapolis.iu.edu/faculty-research/faculty-directory/nguyen-david.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1102-1",
+          "url": "https://education.indianapolis.iu.edu/faculty-research/faculty-directory/nguyen-david.html",
+          "excerpt": "Degrees & Programs ADAPT Indy ASTUTE Program Bachelor's Degree Principles Secondary Education World Languages Elementary Education Early Childhood Education Urban Education Studies Minor Master's Degrees School Counseling Urban Education Leadership Special Education (Exceptional Needs) Specializations in Technology Elementary & Secondary Education (Urban Education) Urban Principalship Track Mental Health Counseling Certificate Doctoral Degrees Urban Education Studies Alternative Certification/T2T Programs Education Non-Degree Graduate Hoosier STEM Academy License Addition License Renewal Non-U.",
+          "retrievedAt": "2026-09-07T19:18:44.075Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1102-2",
+          "url": "https://education.indianapolis.iu.edu/faculty-research/faculty-directory/nguyen-david.html",
+          "excerpt": "s & Fellowships Update Your Program Professional Development & Licensing Professional Development Licensing Student Experiences Future Educators Fund Student Video Testimonies Student Teaching Faculty & Research Faculty Directory SOE Research Office Alumni & Giving Alumni News Alumni & Friends Notable Alumni and Spotlights Support the School of Education Community Engagement Cohen Lecture Series Freedom School IU School of Education in Indianapolis Summer Impact Programs Spelling Bee Contact News, Events & Programs Home Faculty & Research Faculty Directory David Nguyen David Hòa Khoa Nguyen, J.",
+          "retrievedAt": "2026-09-07T19:18:44.075Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1102-3",
+          "url": "https://education.indianapolis.iu.edu/faculty-research/faculty-directory/nguyen-david.html",
+          "excerpt": "Associate Professor, Program Coordinator Phone: 317-274-8213 Email: &#104;&#107;&#110;&#103;&#117;&#121;&#101;&#110;&#64;&#105;&#117;&#46;&#101;&#100;&#117; Department: Urban Education Counseling, Leadership and Policy Studies Program: Urban Education Leadership and Policy, Urban Education Studies Campus: IU Indianapolis ES 3151 Résumé/CV Biography David teaches and researches in areas of education law and policy and is an associate professor of Urban Education Leadership and Policy and adjunct professor of law at IU Indianapolis.",
+          "retrievedAt": "2026-09-07T19:18:44.075Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1102-4",
+          "url": "https://education.indianapolis.iu.edu/faculty-research/faculty-directory/nguyen-david.html",
+          "excerpt": "He earned his Bachelor of Science (BS) in secondary education, a Doctor of Jurisprudence (JD), Master of Business Administration (MBA), Master of Advanced Legal Studies (LL.",
+          "retrievedAt": "2026-09-07T19:18:44.075Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1102-5",
+          "url": "https://education.indianapolis.iu.edu/faculty-research/faculty-directory/nguyen-david.html",
+          "excerpt": "&#8239;Prior to academia, David worked in law firms, the federal courts, and state government.",
+          "retrievedAt": "2026-09-07T19:18:44.075Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1102-6",
+          "url": "https://education.indianapolis.iu.edu/faculty-research/faculty-directory/nguyen-david.html",
+          "excerpt": "David is admitted to practice law in the states of Indiana, North Dakota, and Texas.",
+          "retrievedAt": "2026-09-07T19:18:44.075Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:22:11.386Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1103": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://experts.deakin.edu.au/37675-van-thanh-huynh/about",
         "https://sites.google.com/view/vthuynh"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1103-1",
+          "url": "https://experts.deakin.edu.au/37675-van-thanh-huynh/about",
+          "excerpt": "Van Thanh Huynh | About me | Deakin University Skip to main content All experts Dr Van Thanh Huynh Senior Lecturer Faculty of Science Engineering and Built Environment/School of Engineering Contact External links View collaborators Orcid identifier 0000-0001-8668-3145 (opens in a new tab) ⁠ Senior Lecturer Faculty of Science Engineering and Built Environment/School of Engineering +61 3 524 79497 (Work) v.",
+          "retrievedAt": "2026-09-07T19:18:45.078Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1103-2",
+          "url": "https://experts.deakin.edu.au/37675-van-thanh-huynh/about",
+          "excerpt": "au (opens in a new tab) Geelong Waurn Ponds Campus, 75 Pigdons Road, Waurn Ponds, Victoria 3216 Collaboration Network https://sites.",
+          "retrievedAt": "2026-09-07T19:18:45.078Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1103-3",
+          "url": "https://experts.deakin.edu.au/37675-van-thanh-huynh/about",
+          "excerpt": "Edit your profile ABOUT ME MY RESEARCH OUTPUTS MY RESEARCH TEACHING & SUPERVISION MORE DEAKIN UNIVERSITY CURRENT APPOINTMENT Senior Lecturer Deakin University, School of Engineering DEGREES Doctor of Philosophy Deakin University Master of Engineering University of New South Wales Graduate Certificate of Higher Ed.",
+          "retrievedAt": "2026-09-07T19:18:45.078Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1103-4",
+          "url": "https://experts.deakin.edu.au/37675-van-thanh-huynh/about",
+          "excerpt": "Learning & Teaching Deakin University FIELDS OF RESEARCH Applied mathematics Electronics, sensors and digital hardware Communications engineering Control engineering, mechatronics and robotics Engineering practice and education AVAILABILITY FOR SUPERVISION Masters by Research and PhD supervision AREA/FACULTY Faculty of Science Engineering and Built Environment DEPARTMENT/SCHOOL/INSTITUTE/DISCIPLINE School of Engineering CONTACT DEAKIN Contact Deakin CRICOS Provider Code 00113B 1800 693 888 enquire@deakin.",
+          "retrievedAt": "2026-09-07T19:18:45.078Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1103-5",
+          "url": "https://sites.google.com/view/vthuynh",
+          "excerpt": "Huynh Profile Search this site Embedded Files Skip to main content Skip to navigation Van T.",
+          "retrievedAt": "2026-09-07T19:18:45.235Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1103-6",
+          "url": "https://sites.google.com/view/vthuynh",
+          "excerpt": "Huynh Profile About Publications Contact More About Publications Contact About me I received a B.",
+          "retrievedAt": "2026-09-07T19:18:45.235Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1103-7",
+          "url": "https://sites.google.com/view/vthuynh",
+          "excerpt": ") degree in Mechatronics Engineering from Vietnam National University (Ho Chi Minh City), a M.",
+          "retrievedAt": "2026-09-07T19:18:45.235Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1103-8",
+          "url": "https://sites.google.com/view/vthuynh",
+          "excerpt": "degree in Mechatronics Engineering from the University of New South Wales, followed by a Ph.",
+          "retrievedAt": "2026-09-07T19:18:45.235Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1103-9",
+          "url": "https://sites.google.com/view/vthuynh",
+          "excerpt": "I joined Deakin University in 2016 where I am currently a Lecturer with the School of Engineering.",
+          "retrievedAt": "2026-09-07T19:18:45.235Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1103-10",
+          "url": "https://sites.google.com/view/vthuynh",
+          "excerpt": "With the support of mathematics, I am inspired to develop enabling technologies and engineering methodologies that assist in efficiently and effectively solving robotic and science-driven problems.",
+          "retrievedAt": "2026-09-07T19:18:45.235Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1103-11",
+          "url": "https://sites.google.com/view/vthuynh",
+          "excerpt": "My current research interests include control and estimation for time-delay systems, positive systems, and application of control theory to robotic manipulators and mobile robots.",
+          "retrievedAt": "2026-09-07T19:18:45.235Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1103-12",
+          "url": "https://sites.google.com/view/vthuynh",
+          "excerpt": "If you are residing in Australia, with good undergraduate GPA/WAM, and interested in my research, you can contact me to discuss further about the opportunities.",
+          "retrievedAt": "2026-09-07T19:18:45.235Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:22:11.386Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1104": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://experts.deakin.edu.au/70417-trang-tk-tran"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1104-1",
+          "url": "https://experts.deakin.edu.au/70417-trang-tk-tran",
+          "excerpt": "Trang Tk Tran | About me | Deakin University Skip to main content All experts Dr Trang Tk Tran Lecturer, Law Faculty of Business and Law/Deakin Law School Contact External links Orcid identifier 0009-0006-7958-0563 (opens in a new tab) ⁠ Lecturer, Law Faculty of Business and Law/Deakin Law School trang.",
+          "retrievedAt": "2026-09-07T19:18:45.733Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1104-2",
+          "url": "https://experts.deakin.edu.au/70417-trang-tk-tran",
+          "excerpt": "au (opens in a new tab) Geelong Waterfront Campus, 1 Gheringhap Street Geelong, Victoria 3220 Are you Trang Tk Tran?",
+          "retrievedAt": "2026-09-07T19:18:45.733Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1104-3",
+          "url": "https://experts.deakin.edu.au/70417-trang-tk-tran",
+          "excerpt": "Edit your profile ABOUT ME MY RESEARCH OUTPUTS MY RESEARCH TEACHING & SUPERVISION MORE BIO Trang Thi Kieu Tran is a Lecturer in Law at Deakin Law School, Australia and was a Postdoctoral Research Fellow under the European Research Council’s Labour Law for a Global Value Chain Economy ( ChainGe Lab ) project.",
+          "retrievedAt": "2026-09-07T19:18:45.733Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1104-4",
+          "url": "https://experts.deakin.edu.au/70417-trang-tk-tran",
+          "excerpt": "She has also undertaken several consultancy projects for the International Labour Organisation (Hanoi and Geneva offices).",
+          "retrievedAt": "2026-09-07T19:18:45.733Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1104-5",
+          "url": "https://experts.deakin.edu.au/70417-trang-tk-tran",
+          "excerpt": "ial Academy, Hanoi, Vietnam 1 Nov 2011 - 15 Jun 2012 LANGUAGES English Can read, write, speak, understand and peer review Vietnamese Can read, write, speak, understand and peer review Chinese (Mandarin) Can read, write, speak and understand FIELDS OF RESEARCH Labour law International and comparative law Law and society and socio-legal research Asian and Pacific law AREA/FACULTY Faculty of Business and Law DEPARTMENT/SCHOOL/INSTITUTE/DISCIPLINE Deakin Law School AREAS OF EXPERTISE Law and regulation Law reform CONTACT DEAKIN Contact Deakin CRICOS Provider Code 00113B 1800 693 888 enquire@deakin.",
+          "retrievedAt": "2026-09-07T19:18:45.733Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:22:11.386Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1105": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://research.lancaster-university.uk/en/persons/quynh-do/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1105-1",
+          "url": "https://research.lancaster-university.uk/en/persons/quynh-do/",
+          "excerpt": "kip to search Skip to main content Lancaster University research directory Home Help & FAQ Link opens in a new tab Search content at Lancaster University research directory Home Profiles Research units Research output Projects Datasets Equipment Activities Press/Media Prizes Impacts View Scopus Profile Quynh Do Dr International Lecturer (Assistant Professor) in Logistics and Supply Chain Management , Management Science Centre for Transport & Logistics (CENTRAL) Pentland Centre for Sustainability in Business Centre for Productivity and Efficiency Academic , Supply Chain Management https://orcid.",
+          "retrievedAt": "2026-09-07T19:18:47.048Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1105-2",
+          "url": "https://research.lancaster-university.uk/en/persons/quynh-do/",
+          "excerpt": "ac uk The Management School LA1 4YX Lancaster Department of Management Science , Lancaster University Management School LA1 4YX Lancaster United Kingdom Bailrigg , Lancaster University Management School LA1 4YX Lancaster United Kingdom Accepting PhD Students PhD projects I am seeking highly motivated PhD students passionate about creating ethical and inclusive supply chains within the context of circular economy and sustainability.",
+          "retrievedAt": "2026-09-07T19:18:47.048Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1105-3",
+          "url": "https://research.lancaster-university.uk/en/persons/quynh-do/",
+          "excerpt": "Existing research opportunities include: social inclusion in the circular economy, platform economy for supply chain transparency and accountability, just supply chain, and multi-stakeholder collaborations to tackle sustainability challenges (such as waste reduction, decarbonisation, and forced labor).",
+          "retrievedAt": "2026-09-07T19:18:47.048Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1105-4",
+          "url": "https://research.lancaster-university.uk/en/persons/quynh-do/",
+          "excerpt": "Students will have opportunities to collaborate with firms, NGOs, and technology providers to make a real-world impact.",
+          "retrievedAt": "2026-09-07T19:18:47.048Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1105-5",
+          "url": "https://research.lancaster-university.uk/en/persons/quynh-do/",
+          "excerpt": "2019 2026 Research activity per year Overview Network Projects (1) Research output (23) Activities (7) Supervised Work (1) Personal profile SUMMARY of research interests (100 words) Quynh Do is an expert in supply chain digitalisation and sustainable governance.",
+          "retrievedAt": "2026-09-07T19:18:47.048Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1105-6",
+          "url": "https://research.lancaster-university.uk/en/persons/quynh-do/",
+          "excerpt": "in Operations and Supply Chain Management from the University of Hull (2021), where she investigated innovative pathways for circular supply chains.",
+          "retrievedAt": "2026-09-07T19:18:47.048Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1105-7",
+          "url": "https://research.lancaster-university.uk/en/persons/quynh-do/",
+          "excerpt": "Her research specialises in how digital product passports (DPPs), platform ecosystems, and multi-stakeholder governance can drive systemic change in high-compliance sectors—ranging from manufacturing and critical materials to agri-food systems.",
+          "retrievedAt": "2026-09-07T19:18:47.048Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1105-8",
+          "url": "https://research.lancaster-university.uk/en/persons/quynh-do/",
+          "excerpt": "Her work challenges conventional compliance methods (such as social audits) by proposing digitally enabled pathways for decarbonisation, waste reduction, and social value creation.",
+          "retrievedAt": "2026-09-07T19:18:47.048Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:22:11.386Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1106": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.boisestate.edu/art/faculty/hien-phan/",
         "https://pldh.page/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1106-1",
+          "url": "https://www.boisestate.edu/art/faculty/hien-phan/",
+          "excerpt": "Hien Phan - Department of Art, Design and Visual Studies Skip to main content Department of Art, Design and Visual Studies Home Search Menu Boise Global Navigation Apply Visit Give Menu Ready to take the next step?",
+          "retrievedAt": "2026-09-07T19:18:47.811Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1106-2",
+          "url": "https://www.boisestate.edu/art/faculty/hien-phan/",
+          "excerpt": "epartment of Art, Design and Visual Studies Only Department of Art, Design and Visual Studies About Us Academics Blue Galleries MFA, Visual Arts Student Resources Our Faculty Contact Us More section menu items Department of Art, Design and Visual Studies Art, Design and Visual Studies Faculty Hien Phan Hien Phan Assistant Teaching Professor, Graphic Design BFA, Middle Tennessee University MFA/MXD, University of Florida Hien Phan ( she/her/hers ) engages in design research on diversity through a wide range of design materials, transdisciplinary practices, and meaningful graphic design practices.",
+          "retrievedAt": "2026-09-07T19:18:47.811Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1106-3",
+          "url": "https://www.boisestate.edu/art/faculty/hien-phan/",
+          "excerpt": "Her research has been recognized by international design networks like AIGA, SECAC, UCDA, and HASTAC.",
+          "retrievedAt": "2026-09-07T19:18:47.811Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1106-4",
+          "url": "https://www.boisestate.edu/art/faculty/hien-phan/",
+          "excerpt": "This pursuit in design research stems from her design positionality as an international designer and researcher in multicultural institutions in the USA, including Marigold and the University of Florida, which aim for inclusivity and accessibility through brand identity and service design.",
+          "retrievedAt": "2026-09-07T19:18:47.811Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1106-5",
+          "url": "https://www.boisestate.edu/art/faculty/hien-phan/",
+          "excerpt": "Her teaching pedagogy thus also encourages students to reflect on their unique design positionalities and to creatively communicate their worldviews through their design work.",
+          "retrievedAt": "2026-09-07T19:18:47.811Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1106-6",
+          "url": "https://www.boisestate.edu/art/faculty/hien-phan/",
+          "excerpt": "This includes interaction design with low-tech approaches, citizenship design in local spaces, package design that questions sustainability, and service design with GenAI efficiency and biases.",
+          "retrievedAt": "2026-09-07T19:18:47.811Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1106-7",
+          "url": "https://www.boisestate.edu/art/faculty/hien-phan/",
+          "excerpt": "for the Visual Arts Follow Us Follow us on Facebook Follow us on Instagram Secondary Navigation myBoiseState Safety, Security and Support Career Opportunities Boise State Public Radio Albertsons Library Transportation and Parking Partner with Us Morrison Center Alumni Bronco Shop and Bookstore University Administration ExtraMile Arena Broncos Logo Athletics Follow us on Facebook Follow us on Instagram Follow us on X Follow us on Youtube Follow us on LinkedIn Terms of Use Accessibility Privacy Classroom Concerns Policies Contact Boise State &copy; 2026 All Rights Reserved Boise State University.",
+          "retrievedAt": "2026-09-07T19:18:47.811Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1106-8",
+          "url": "https://pldh.page/",
+          "excerpt": "Hien Phan &#8211; Home / about Skip to content Hien Phan — a design researcher and teacher in Idaho.",
+          "retrievedAt": "2026-09-07T19:18:47.971Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1106-9",
+          "url": "https://pldh.page/",
+          "excerpt": "She is currently studying the contradictions of institutional diversity in design education through autoethnography, codesign, and critical design.",
+          "retrievedAt": "2026-09-07T19:18:47.971Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1106-10",
+          "url": "https://pldh.page/",
+          "excerpt": "utional diversity manifested through oriental(ist) objects blog · design research Designing the world precedes designing the word: Critical pedagogy in typography education conference proceedings · other paper · publication Mapping migration paths through the dwindling institutional diversity of Florida conference proceedings · other paper · publication The Contradiction of Institutional Diversity in the Design Student Body journal · publication Hien Phan Behance / Instagram / LinkedIn © 2026 Research Teaching Publication About Subscribe Subscribed Hien Phan Sign me up Already have a WordPress.",
+          "retrievedAt": "2026-09-07T19:18:47.971Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:22:11.386Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1107": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.bcm.edu/people-search/diane-nguyen-27563"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1107-1",
+          "url": "https://www.bcm.edu/people-search/diane-nguyen-27563",
+          "excerpt": "Diane Nguyen | BCM Skip to main content Open Menu Menu Healthcare Specialties Cardiovascular Care Oncology Neurosurgery Primary Care View All Specialties &gt; For Health Professionals Refer a Patient Professional Development View All &gt; For Patients & Visitors MyChart Login Accepted Insurance Pay My Bill Patient Information View All &gt; Find a Doctor Make an Appointment General Inquiries Call today to schedule an appointment or fill out an online request form.",
+          "retrievedAt": "2026-09-07T19:18:49.056Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1107-2",
+          "url": "https://www.bcm.edu/people-search/diane-nguyen-27563",
+          "excerpt": "ONLINE Request Now Request non-urgent appointments As Houston's premier academic medical practice, Baylor Medicine delivers compassionate, innovative, evidence-based care.",
+          "retrievedAt": "2026-09-07T19:18:49.056Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1107-3",
+          "url": "https://www.bcm.edu/people-search/diane-nguyen-27563",
+          "excerpt": "Programs Dual Degree Programs View All Programs &gt; Financing Your Education Tuition & Fees Financial Aid CARES ACT Schools School of Medicine Graduate School of Biomedical Sciences National School of Tropical Medicine School of Health Professions Advanced Training Programs Residency Programs Clinical Fellowships Postdoctoral Research Positions Continuing Professional Development Diploma in Tropical Medicine View All &gt; Resources Departments Academic Centers Academic Calendars Education Cores View All &gt; Information For.",
+          "retrievedAt": "2026-09-07T19:18:49.056Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1107-4",
+          "url": "https://www.bcm.edu/people-search/diane-nguyen-27563",
+          "excerpt": "Students Postdoctoral Researchers Faculty Alumni America's fourth-largest city is a great place to live, work, and play.",
+          "retrievedAt": "2026-09-07T19:18:49.056Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1107-5",
+          "url": "https://www.bcm.edu/people-search/diane-nguyen-27563",
+          "excerpt": "Get to Know Houston Research Research Offices Advanced Technology Cores Clinical Research Institute for Clinical & Translational Research Office of Research Leadership Research IT Sponsored Programs Research at Baylor Academic Centers Departments Faculty Labs From the Labs News Our Research Research Centers Strategic Research Center Additional Research Services BCM Innovation Institute Service Labs VIICTR Clinical Trials Autism Cancer Obesity Substance Abuse View All Clinical Trials &gt; America's fourth-largest city is a great place to live, work, and play.",
+          "retrievedAt": "2026-09-07T19:18:49.056Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1107-6",
+          "url": "https://www.bcm.edu/people-search/diane-nguyen-27563",
+          "excerpt": "Get to Know Houston Community Healthcare Outreach Community Programs More &gt; Global Outreach Global Health Global Programs &gt; Educational Outreach SMART Program BioEd Online More &gt; General Resources Community Events News Blogs Baylor in the Community America's fourth-largest city is a great place to live, work, and play.",
+          "retrievedAt": "2026-09-07T19:18:49.056Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1107-7",
+          "url": "https://www.bcm.edu/people-search/diane-nguyen-27563",
+          "excerpt": "Get to Know Houston About About Us Academic Centers Alumni Careers Departments Giving Leadership Mission, Vision, Values News Our Affiliates Fast Facts Accreditation Offices President&#039;s Office Office of Research Ombuds Office BCM Innovation Institute View All &gt; Our Campus Compliance Safety and Security Resource Stewardship & Sustainability Team Shop Find a Person America's fourth-largest city is a great place to live, work, and play.",
+          "retrievedAt": "2026-09-07T19:18:49.056Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1107-8",
+          "url": "https://www.bcm.edu/people-search/diane-nguyen-27563",
+          "excerpt": "Get to Know Houston GIVE CAREERS INTRANET Careers Contact Us News Open Search Baylor College of Medicine Baylor College of Medicine Diane Nguyen Diane Nguyen Diane Nguyen Assistant Professor Email diane.",
+          "retrievedAt": "2026-09-07T19:18:49.056Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:22:11.386Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1108": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://pureportal.strath.ac.uk/en/persons/ellie-luu/",
         "https://sites.google.com/view/ellieluu"
       ],
-      "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "evidence": [
+        {
+          "id": "vp-1108-1",
+          "url": "https://sites.google.com/view/ellieluu",
+          "excerpt": "Google Drive: Sign-in Sign in to continue to Google Drive Email or phone Forgot email?",
+          "retrievedAt": "2026-09-07T19:18:50.005Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
+      "errors": [
+        "https://pureportal.strath.ac.uk/en/persons/ellie-luu/: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:22:11.386Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1109": {
       "overview": "pending",
