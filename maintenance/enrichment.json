@@ -1904,7 +1904,8 @@
         "vp-0299",
         "vp-0300"
       ],
-      "status": "pending"
+      "status": "in_progress",
+      "startedAt": "2026-09-07T04:35:45.704Z"
     },
     {
       "number": 16,
@@ -22618,204 +22619,1202 @@
       "nextAction": "Retry in follow-up pass with alternative SPU endpoint."
     },
     "vp-0281": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://spu.edu/academics/college-business-technology/faculty-staff/dung-nguyen-profile"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://spu.edu/academics/college-business-technology/faculty-staff/dung-nguyen-profile: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T04:40:48.703Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-0282": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.sdstate.edu/directory/phuong-nguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0282-1",
+          "url": "https://www.sdstate.edu/directory/phuong-nguyen",
+          "excerpt": "hools General Education Academic Calendar Academic Catalog Graduate School Honors College Library Admissions Undergraduate Transfer Graduate Online Dual Credit International Paying for College Student Life Housing Campus Dining Student Success Student Experience University Wellbeing Student Resources Parents and Families Research Events and Trainings Find Funding Research Impact Proposal Development Research Support Student Research Opportunities Community Attractions Camps and Conferences Family Weekend SDState Experience SDSU Metro Center Event Calendar Search Apply Today SDSTATE Breadcrumb .",
+          "retrievedAt": "2026-09-07T04:35:49.350Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0282-2",
+          "url": "https://www.sdstate.edu/directory/phuong-nguyen",
+          "excerpt": "Home Faculty and Staff Directory Phuong Nguyen Assistant Professor Follow Linkedin Email 605-688-4926 Biography Phuong Nguyen, an assistant professor in the Department of Construction and Concrete Industry Management, began teaching at South Dakota State University in fall 2023 after his postdoctoral fellowship at the University of Alberta, Canada.",
+          "retrievedAt": "2026-09-07T04:35:49.350Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0282-3",
+          "url": "https://www.sdstate.edu/directory/phuong-nguyen",
+          "excerpt": ", machine learning, reinforcement learning and fuzzy logic) and automation in construction; innovative project delivery and procurement methods; and improving construction productivity and safety using wearable sensors and computer visions.",
+          "retrievedAt": "2026-09-07T04:35:49.350Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0282-4",
+          "url": "https://www.sdstate.edu/directory/phuong-nguyen",
+          "excerpt": "Nguyen’s research has been supported by state Departments of Transportation in South Dakota, Kansas, South Carolina and Wisconsin, the Society for Simulation in Healthcare and the National Institute for Occupational Safety and Health.",
+          "retrievedAt": "2026-09-07T04:35:49.350Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0282-5",
+          "url": "https://www.sdstate.edu/directory/phuong-nguyen",
+          "excerpt": "Nguyen is an appointed member of the Transportation Research Board Standing Committee on Construction Delivery Methods and Processes (AKJ12).",
+          "retrievedAt": "2026-09-07T04:35:49.350Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0282-6",
+          "url": "https://www.sdstate.edu/directory/phuong-nguyen",
+          "excerpt": "He is an assistant specialty editor (information technologies) at ASCE Journal of Construction Engineering and Management.",
+          "retrievedAt": "2026-09-07T04:35:49.350Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0282-7",
+          "url": "https://www.sdstate.edu/directory/phuong-nguyen",
+          "excerpt": "He also serves as the associate editor of the Journal of Engineering, Project and Production Management.",
+          "retrievedAt": "2026-09-07T04:35:49.350Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0282-8",
+          "url": "https://www.sdstate.edu/directory/phuong-nguyen",
+          "excerpt": "He is an affiliated researcher at the Craig and Diane Martin National Center for Construction Safety and serves as the scientific co-chair for the 2025 Construction Safety Conference at the University of Kansas.",
+          "retrievedAt": "2026-09-07T04:35:49.350Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:40:48.703Z"
     },
     "vp-0283": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.depts.ttu.edu/pss/people/faculty/tran-son/tran-son.php"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0283-1",
+          "url": "https://www.depts.ttu.edu/pss/people/faculty/tran-son/tran-son.php",
+          "excerpt": "--> Texas Tech University Directory Raiderlink A-Z Index Menu --> Department of Plant and Soil Science Menu Search Texas Tech Davis College Plant and Soil Science Contact Faculty Son Phan Lam Tran, Ph.",
+          "retrievedAt": "2026-09-07T04:35:49.727Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0283-2",
+          "url": "https://www.depts.ttu.edu/pss/people/faculty/tran-son/tran-son.php",
+          "excerpt": "edu Phone: (806) 834-7829 Address: Texas Tech University Experimental Sciences Building II Room 201A 1006 Canton Avenue Lubbock, TX 79409 Off Campus Mailing: Box 43135 On Campus Mailing: MS 3135 IGCAST Tran Lab ResearchID Background Lam-Son Phan Tran is an expert in Biological Sciences and Biotechnology.",
+          "retrievedAt": "2026-09-07T04:35:49.727Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0283-3",
+          "url": "https://www.depts.ttu.edu/pss/people/faculty/tran-son/tran-son.php",
+          "excerpt": "D in Biological Sciences in 1997, from Szent Istvan University (formerly Godollo University of Agricultural Sciences), Hungary.",
+          "retrievedAt": "2026-09-07T04:35:49.727Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0283-4",
+          "url": "https://www.depts.ttu.edu/pss/people/faculty/tran-son/tran-son.php",
+          "excerpt": "After doing his postdoctoral research on Bacillus subtilis at the National Food Research Institute (1999-2000) and the Nara Institute of Science and Technology of Japan (2001), in October 2001, he joined the Japan International Research Center for Agricultural Sciences (JIRCAS) as a JIRCAS fellow to work on the functional analyses of transcription factors and osmosensors in Arabidopsis plants under environmental stresses.",
+          "retrievedAt": "2026-09-07T04:35:49.727Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0283-5",
+          "url": "https://www.depts.ttu.edu/pss/people/faculty/tran-son/tran-son.php",
+          "excerpt": "In August 2007, he moved to the University of Missouri-Columbia, USA as a Senior Research Scientist working on gene discovery for development of drought-tolerant soybean plants.",
+          "retrievedAt": "2026-09-07T04:35:49.727Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0283-6",
+          "url": "https://www.depts.ttu.edu/pss/people/faculty/tran-son/tran-son.php",
+          "excerpt": "In January 2009, he joined RIKEN Plant Science Center (currently RIKEN Center for Sustainable Resource Science), Japan as Unit Leader of the Signaling Pathway Research Unit (currently Stress Adaptation Research Unit) studying (i) roles of plant growth regulators and their interactions in environmental stress responses, and (ii) translational genomics of legume crops aiming to enhance their performance under normal growth and environmental stress conditions.",
+          "retrievedAt": "2026-09-07T04:35:49.727Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0283-7",
+          "url": "https://www.depts.ttu.edu/pss/people/faculty/tran-son/tran-son.php",
+          "excerpt": "From September 2020, he joined Texas Tech&#x92;s College of Agricultural Sciences and Natural Resources newest scientific team - the Institute of Genomics for Crop Abiotic Stress Tolerance, as a Professor with Texas Tech&#x92;s Department of Plant and Soil Science.",
+          "retrievedAt": "2026-09-07T04:35:49.727Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0283-8",
+          "url": "https://www.depts.ttu.edu/pss/people/faculty/tran-son/tran-son.php",
+          "excerpt": "Tran&#x92;s research programs broadly focus on regulatory networks and crosstalk among signaling molecules in plant responses to environmental stresses, as well as translational genomics for improvement of crop productivity in the era of global climate change.",
+          "retrievedAt": "2026-09-07T04:35:49.727Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:40:48.703Z"
     },
     "vp-0284": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "verified",
       "sourcesChecked": [
         "https://profiles.ucsd.edu/xuong.nguyen-huu"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0284-1",
+          "url": "https://profiles.ucsd.edu/xuong.nguyen-huu",
+          "excerpt": "ng Nguyen-huu | UCSD Profiles Powered by Altman Clinical and Translational Research Institute UCSD Profiles Home About Help/FAQs Search Options UC Davis UCI UCLA UCSD UCSF All UC Health USC All Everything Research Concepts Awards People &#160;&#160;&#160;UC Health People &#160;&#160;&#160;UC Davis People &#160;&#160;&#160;UCI People &#160;&#160;&#160;UCLA People &#160;&#160;&#160;UCSD People &#160;&#160;&#160;UCSF People &#160;&#160;&#160;USC People on next line to remove space between --> Find People Find Everything Login to edit your profile (add a photo, awards, links to other websites, etc.",
+          "retrievedAt": "2026-09-07T04:35:50.639Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0284-2",
+          "url": "https://profiles.ucsd.edu/xuong.nguyen-huu",
+          "excerpt": ") Edit My Profile My Person List ( 0 ) Return to Top Xuong Nguyen-huu Title(s) Emeritus Professor, Chemistry and Biochemistry School Vc-academic Affairs Address 9500 Gilman Drive # La Jolla CA 92093 Email nxuong@ucsd.",
+          "retrievedAt": "2026-09-07T04:35:50.639Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0284-3",
+          "url": "https://profiles.ucsd.edu/xuong.nguyen-huu",
+          "excerpt": "edu vCard Download vCard Bibliographic publications Publications listed below are automatically derived from MEDLINE/PubMed and other sources, which might result in incorrect or missing publications.",
+          "retrievedAt": "2026-09-07T04:35:50.639Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0284-4",
+          "url": "https://profiles.ucsd.edu/xuong.nguyen-huu",
+          "excerpt": "Researchers can login to make corrections and additions, or contact us for help .",
+          "retrievedAt": "2026-09-07T04:35:50.639Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0284-5",
+          "url": "https://profiles.ucsd.edu/xuong.nguyen-huu",
+          "excerpt": "Newest | Oldest | Most Cited | Most Discussed | Timeline | Field Summary | Plain Text Altmetrics Details PMC Citations indicate the number of times the publication was cited by articles in PubMed Central, and the Altmetric score represents citations in news articles and social media.",
+          "retrievedAt": "2026-09-07T04:35:50.639Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0284-6",
+          "url": "https://profiles.ucsd.edu/xuong.nguyen-huu",
+          "excerpt": "(Note that publications are often cited in additional ways that are not shown here.",
+          "retrievedAt": "2026-09-07T04:35:50.639Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0284-7",
+          "url": "https://profiles.ucsd.edu/xuong.nguyen-huu",
+          "excerpt": ") Fields are based on how the National Library of Medicine (NLM) classifies the publication's journal and might not represent the specific topic of the publication.",
+          "retrievedAt": "2026-09-07T04:35:50.639Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0284-8",
+          "url": "https://profiles.ucsd.edu/xuong.nguyen-huu",
+          "excerpt": "Translation tags are based on the publication type and the MeSH terms NLM assigns to the publication.",
+          "retrievedAt": "2026-09-07T04:35:50.639Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:40:48.703Z",
+      "nextAction": "Profile contains automated publication list without research overview narrative."
     },
     "vp-0285": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.uml.edu/engineering/electrical-computer/faculty/tran-anh.aspx"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0285-1",
+          "url": "https://www.uml.edu/engineering/electrical-computer/faculty/tran-anh.aspx",
+          "excerpt": "Anh Tran | Faculty and Staff | Electrical and Computer Engineering | Francis College of Engineering | UMass Lowell Skip to Main Content UMass Lowell is #1 in What Matters Most!",
+          "retrievedAt": "2026-09-07T04:35:50.892Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0285-2",
+          "url": "https://www.uml.edu/engineering/electrical-computer/faculty/tran-anh.aspx",
+          "excerpt": "e of Engineering Electrical and Computer Engineering Faculty and Staff Anh Tran Electrical and Computer Engineering Francis College of Engineering About Electrical and Computer Engineering Programs of Study Current Students Experiential Learning Prospective Students Electrical and Computer Engineering (ECE) Makerspace Faculty and Staff Faculty Staff Adjunct Faculty Emeritus Faculty Community Electrical & Computer Engineering News Research Contact Anh Tran Professor Emeritus College Francis College of Engineering Department Electrical & Computer Engineering Phone 978-934-3322 Email anh_tran@uml.",
+          "retrievedAt": "2026-09-07T04:35:50.892Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0285-3",
+          "url": "https://www.uml.edu/engineering/electrical-computer/faculty/tran-anh.aspx",
+          "excerpt": "edu Expertise Logic Design & Switching Theory Research Interests Logic Design & Switching Theory Current research interest is in the studies of exclusive-OR switching circuits (also known as Reed-Muller polynomial or expansion), which include minimization, analysis of transient behavior, hazard-free design, and applications to universal logic modules and programmable devices.",
+          "retrievedAt": "2026-09-07T04:35:50.892Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0285-4",
+          "url": "https://www.uml.edu/engineering/electrical-computer/faculty/tran-anh.aspx",
+          "excerpt": "Education Ph D: Electrical Engineering , (1973), University of Rhode Island - Rhode Island MS: Electrical Engineering , (1970), University of Rhode Island - Rhode Island MS: Geophysics , (1967), National Central University - Taiwan BS: Electrical Engineering , (1966), National Taiwan University - Taiwan Selected Awards and Honors difference maker.",
+          "retrievedAt": "2026-09-07T04:35:50.892Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0285-5",
+          "url": "https://www.uml.edu/engineering/electrical-computer/faculty/tran-anh.aspx",
+          "excerpt": "(2012) - he University's Honors Program Best Teacher of College of Engineering 2010 (2010) - Student government Association, University of Massachusetts Lowel Selected Publications Tran, A.",
+          "retrievedAt": "2026-09-07T04:35:50.892Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0285-6",
+          "url": "https://www.uml.edu/engineering/electrical-computer/faculty/tran-anh.aspx",
+          "excerpt": "0 full-body computational phantom and its performance metrics using FEM simulator ANSYS HFSS (pp.",
+          "retrievedAt": "2026-09-07T04:35:50.892Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0285-7",
+          "url": "https://www.uml.edu/engineering/electrical-computer/faculty/tran-anh.aspx",
+          "excerpt": "An optimization procedure for enhancing network robustness against cascading failures (pp.",
+          "retrievedAt": "2026-09-07T04:35:50.892Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0285-8",
+          "url": "https://www.uml.edu/engineering/electrical-computer/faculty/tran-anh.aspx",
+          "excerpt": "Decomposition method for minimisation of Reed-Muller polynomials in mixed polarity.",
+          "retrievedAt": "2026-09-07T04:35:50.892Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:40:48.703Z"
     },
     "vp-0286": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://directory.sph.umn.edu/bio/sph-a-z/ruby-nguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0286-1",
+          "url": "https://directory.sph.umn.edu/bio/sph-a-z/ruby-nguyen",
+          "excerpt": "culty by Division Biostatistics & Health Data Science Environmental Health Sciences Epidemiology & Community Health Health Policy & Management Faculty by Specialty Aging Antiracism and Health Equity Cancer Chronic Disease Causes and Prevention Data Science and Research Methods Environment & Exposures Food & Nutrition Genomics, Proteomics, and Metabolomics Global Health Health Policy, Systems, and Management Infectious Diseases Mental Health and Cognition Mothers, Children, and Families Substance Use Office Address: Division of Epidemiology & Community Health West Bank Office Bldg (WBOB) 1300 S.",
+          "retrievedAt": "2026-09-07T04:35:51.238Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0286-2",
+          "url": "https://directory.sph.umn.edu/bio/sph-a-z/ruby-nguyen",
+          "excerpt": "Nguyen, PhD Morse-Alumni Distinguished University Teaching Professor and Professor, Division of Epidemiology & Community Health Education PhD, Epidemiology, Johns Hopkins University MHS, Epidemiology, Johns Hopkins University BA, Microbiology, University of Minnesota View Experts@Minnesota Profile View PubMed Publications 612-626-7559 [email&#160;protected] Summary My research focuses on maternal, child and family health; the effect of the environment on child development; domestic and sexual violence within families and communities; and Asian American health and wellbeing.",
+          "retrievedAt": "2026-09-07T04:35:51.238Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0286-3",
+          "url": "https://directory.sph.umn.edu/bio/sph-a-z/ruby-nguyen",
+          "excerpt": "My current work focuses on a cohort study that examines the role of endocrine disrupting chemicals, specifically phthalates, in child development.",
+          "retrievedAt": "2026-09-07T04:35:51.238Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0286-4",
+          "url": "https://directory.sph.umn.edu/bio/sph-a-z/ruby-nguyen",
+          "excerpt": "I also research vulvodynia (chronic vulvar pain) and other chronic pain issues, particularly among women.",
+          "retrievedAt": "2026-09-07T04:35:51.238Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0286-5",
+          "url": "https://directory.sph.umn.edu/bio/sph-a-z/ruby-nguyen",
+          "excerpt": "Expertise Asian American health, Maternal and Child Health (MCH) Epidemiology; Women&#039;s Health; Chronic Conditions; Environmental Exposures; Undergraduate Public Health Education.",
+          "retrievedAt": "2026-09-07T04:35:51.238Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0286-6",
+          "url": "https://directory.sph.umn.edu/bio/sph-a-z/ruby-nguyen",
+          "excerpt": "Awards and Recognition 2025 — Member, Academy for Excellence in the Scholarship of Teaching and Learning 2024 — University of Minnesota Community-Engaged Scholar Award 2022 — Horace T.",
+          "retrievedAt": "2026-09-07T04:35:51.238Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0286-7",
+          "url": "https://directory.sph.umn.edu/bio/sph-a-z/ruby-nguyen",
+          "excerpt": "alth Prenatal and Early Childhood Pathways to Health: An Integrated Model of Chemical and Social Exposures, Biological Mechanisms, and Sex-Specific Effects on Neurodevelopment and Respiratory Outcomes (PATHWAYS) NYU Pediatric Obesity, Metabolism and Kidney Cohort Center Publications See a full list of publications on PubMed Recent Publications Nguyen RHN, Knapp EA, Li X, Camargo CA, Conradt E, Cowell W, Derefinko KJ, Elliott AJ, Friedman AM, Khurana Hershey GK, Hofheimer JA, Lester BM, McEvoy CT, Neiderhiser JM, Oken E, Ondersma SJ, Sathyanarayana S, Stabler ME, Stroustrup A, Tung I, McGrath M.",
+          "retrievedAt": "2026-09-07T04:35:51.238Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0286-8",
+          "url": "https://directory.sph.umn.edu/bio/sph-a-z/ruby-nguyen",
+          "excerpt": "Characteristics of Individuals in the United States Who Used Opioids During Pregnancy.",
+          "retrievedAt": "2026-09-07T04:35:51.238Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:40:48.703Z",
+      "nextAction": "Profile links to external PubMed search without individual publication list."
     },
     "vp-0287": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://engineering.wisc.edu/directory/profile/mai-ngo/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0287-1",
+          "url": "https://engineering.wisc.edu/directory/profile/mai-ngo/",
+          "excerpt": "Mai Ngo - College of Engineering - University of Wisconsin-Madison Skip to main content University of Wisconsin-Madison People Visit Giving Alumni Search for: Search About Who we are Departments Student services Strategic priorities Degrees & Programs at the College of Engineering Undergraduate Graduate Research Admissions Undergraduate Graduate Student Life News People Visit Giving Alumni Search for: Search Homepage Who we are Faculty and staff directory Mai Ngo Mai Ngo Richard H.",
+          "retrievedAt": "2026-09-07T04:35:51.535Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0287-2",
+          "url": "https://engineering.wisc.edu/directory/profile/mai-ngo/",
+          "excerpt": "Soit Assistant Professor Mai Ngo joined UW-Madison in August 2024 as an Assistant Professor in Chemical and Biological Engineering.",
+          "retrievedAt": "2026-09-07T04:35:51.535Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0287-3",
+          "url": "https://engineering.wisc.edu/directory/profile/mai-ngo/",
+          "excerpt": "Under the mentorship of Professor Christopher Chen, she utilized tissue engineering and cell engineering tools to build vascularized tissues by controlling paracrine signaling.",
+          "retrievedAt": "2026-09-07T04:35:51.535Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0287-4",
+          "url": "https://engineering.wisc.edu/directory/profile/mai-ngo/",
+          "excerpt": "in Chemical and Biomolecular Engineering from the University of Illinois Urbana-Champaign.",
+          "retrievedAt": "2026-09-07T04:35:51.535Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0287-5",
+          "url": "https://engineering.wisc.edu/directory/profile/mai-ngo/",
+          "excerpt": "As a member of Professor Brendan Harley’s lab, she developed vascularized tissue models of brain cancer.",
+          "retrievedAt": "2026-09-07T04:35:51.535Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0287-6",
+          "url": "https://engineering.wisc.edu/directory/profile/mai-ngo/",
+          "excerpt": "During graduate school, she was an Illinois Distinguished Fellow and a NSF Graduate Research Fellow.",
+          "retrievedAt": "2026-09-07T04:35:51.535Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0287-7",
+          "url": "https://engineering.wisc.edu/directory/profile/mai-ngo/",
+          "excerpt": "Her research has been recognized by several awards, such as the BMES Career Development Award and the CMBE Graduate Student Shooting Star Award; additionally, she has been recognized as a University of Washington DYSS seminar speaker and as a MIT ChemE Rising Star.",
+          "retrievedAt": "2026-09-07T04:35:51.535Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0287-8",
+          "url": "https://engineering.wisc.edu/directory/profile/mai-ngo/",
+          "excerpt": "Department Chemical & Biological Engineering Contact Engineering Hall 1415 Engineering Dr Madison, WI e: mtngo2@wisc.",
+          "retrievedAt": "2026-09-07T04:35:51.535Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:40:48.703Z"
     },
     "vp-0288": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://creativewriting.wisc.edu/creative-writing-news/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0288-1",
+          "url": "https://creativewriting.wisc.edu/creative-writing-news/",
+          "excerpt": "te Program MFA in Creative Writing MFA Faculty & Staff Teaching & Financial Aid Apply Contests News Post-Graduate Fellowships Wisconsin Institute for Creative Writing Current & Former Fellows Apply News Book Prizes Brittingham/Pollak Poetry Prizes Submit FAQ University of Wisconsin Press Events Upcoming Events On Instagram On Twitter On Facebook Friends Our Campus & Madison Community Our Donors Our Home: the Department of English Our Friends in the Division of Arts Home Creative Writing News Creative Writing News We are thrilled to announce four new faculty members in poetry here at UW–Madison!",
+          "retrievedAt": "2026-09-07T04:35:52.170Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0288-2",
+          "url": "https://creativewriting.wisc.edu/creative-writing-news/",
+          "excerpt": "Assistant Professor Nate Marshall and Professor Erika Meitner will begin teaching in Fall 2022.",
+          "retrievedAt": "2026-09-07T04:35:52.170Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0288-3",
+          "url": "https://creativewriting.wisc.edu/creative-writing-news/",
+          "excerpt": "Rollins and Assistant Professor Paul Tran will join them and begin teaching in Fall 2023.",
+          "retrievedAt": "2026-09-07T04:35:52.170Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0288-4",
+          "url": "https://creativewriting.wisc.edu/creative-writing-news/",
+          "excerpt": "org/books/matrix/ Milk Blood Heat Cloud Cuckoo Land Wisconsin Institute Fellows and Alums in the News Murillo Honored with $100,000 Kingsley Tufts Award for Poetry https://www.",
+          "retrievedAt": "2026-09-07T04:35:52.170Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0288-5",
+          "url": "https://creativewriting.wisc.edu/creative-writing-news/",
+          "excerpt": "MONIZ is the recipient of the Alice Hoffman Prize for Fiction, the Cecelia Joyce Johnson Emerging Writer Award by the Key West Literary Seminar, and a Tin House Scholarship.",
+          "retrievedAt": "2026-09-07T04:35:52.170Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0288-6",
+          "url": "https://creativewriting.wisc.edu/creative-writing-news/",
+          "excerpt": "Her debut collection, Milk Blood Heat, is an Indie Next Pick, an Amazon “Best Book of the Month” selection, a Roxane Gay Audacious Book Club pick, and has been hailed as “must-read” by TIME, Entertainment Weekly, Buzzfeed, Elle, and O, The Oprah Magazine, among others.",
+          "retrievedAt": "2026-09-07T04:35:52.170Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0288-7",
+          "url": "https://creativewriting.wisc.edu/creative-writing-news/",
+          "excerpt": "Her work has appeared in the Paris Review, The New York Times, Harper’s Bazaar, Tin House, One Story, American Short Fiction, Ploughshares, McSweeney’s Quarterly Concern, and elsewhere.",
+          "retrievedAt": "2026-09-07T04:35:52.170Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0288-8",
+          "url": "https://creativewriting.wisc.edu/creative-writing-news/",
+          "excerpt": "MFAs and MFA Alums Getting Recognition MFA Graduates Awarded Wallace Stegner Fellowships 2021 UW MFA graduates Alison Thumel and Ajibola Tolase have both been awarded the Wallace Stegner Fellowship in Poetry at Stanford.",
+          "retrievedAt": "2026-09-07T04:35:52.170Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:40:48.703Z",
+      "nextAction": "Department news page lacks a personal research summary or publication list."
     },
     "vp-0289": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://engineering.wisc.edu/directory/profile/duc-huy-nguyen/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0289-1",
+          "url": "https://engineering.wisc.edu/directory/profile/duc-huy-nguyen/",
+          "excerpt": "ip to main content University of Wisconsin-Madison People Visit Giving Alumni Search for: Search About Who we are Departments Student services Strategic priorities Degrees & Programs at the College of Engineering Undergraduate Graduate Research Admissions Undergraduate Graduate Student Life News People Visit Giving Alumni Search for: Search Homepage Who we are Faculty and staff directory Duc-Huy Nguyen Duc-Huy Nguyen Assistant Professor Our lab operates at the intersection of tissue engineering, synthetic bioengineering, hepatology, stem cell biology, vascular biology and regenerative medicine.",
+          "retrievedAt": "2026-09-07T04:35:52.245Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0289-2",
+          "url": "https://engineering.wisc.edu/directory/profile/duc-huy-nguyen/",
+          "excerpt": "We specialize in developing next-generation 3D human organ-on-chip platforms that replicate the complexity of human tissues and their surrounding microenvironments.",
+          "retrievedAt": "2026-09-07T04:35:52.245Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0289-3",
+          "url": "https://engineering.wisc.edu/directory/profile/duc-huy-nguyen/",
+          "excerpt": "These technologies are designed to deepen our understanding of cellular communication and the role of the 3D microenvironment in regulating tissue function under both healthy and diseased conditions.",
+          "retrievedAt": "2026-09-07T04:35:52.245Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0289-4",
+          "url": "https://engineering.wisc.edu/directory/profile/duc-huy-nguyen/",
+          "excerpt": "A central pillar of our research is engineering vascular networks within these platforms, not only to support tissue survival, but also to investigate the dynamic interactions between vascular cells and tissue-resident cells.",
+          "retrievedAt": "2026-09-07T04:35:52.245Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0289-5",
+          "url": "https://engineering.wisc.edu/directory/profile/duc-huy-nguyen/",
+          "excerpt": "Although these systems are broadly applicable across various organ types, our current work centers on the liver, with a particular emphasis on modeling liver biology and diseases such as metabolic dysfunction-associated steatotic liver disease (MASLD), which impacts a significant portion of the U.",
+          "retrievedAt": "2026-09-07T04:35:52.245Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0289-6",
+          "url": "https://engineering.wisc.edu/directory/profile/duc-huy-nguyen/",
+          "excerpt": "Ultimately, our goal is to advance fundamental knowledge of human organ biology and to harness these engineered systems to uncover molecular mechanisms that lead to novel therapeutic strategies.",
+          "retrievedAt": "2026-09-07T04:35:52.245Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0289-7",
+          "url": "https://engineering.wisc.edu/directory/profile/duc-huy-nguyen/",
+          "excerpt": "Department Biomedical Engineering Contact Engineering Centers Building 1550 Engineering Dr Madison, WI e: dtnguyen35@wisc.",
+          "retrievedAt": "2026-09-07T04:35:52.245Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0289-8",
+          "url": "https://engineering.wisc.edu/directory/profile/duc-huy-nguyen/",
+          "excerpt": "ar interactions in the liver microenvironment in liver diseases Awards 2022 NIH, T32 Fellowship: Multidisciplinary Research Training in Gastroenterology and Hepatology 2011 NIH, T32 Fellowship: Interdisciplinary Cardiovascular Training Grant 2011 NSF, NSF Graduate Research Fellowship Honorable Mention 2007 Caltech, Labory Gnome Undergraduate Scholarship in Engineering 2007 Caltech, Semi-finalist, Presentation Competition, Summer Undergraduate Research Fellowship Symposium 2006 NSF, NSF REU Summer Undergraduate Research Fellowship 2005 Jet Propulsion Laboratory Undergraduate Scholarship 2005 Mt.",
+          "retrievedAt": "2026-09-07T04:35:52.245Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:40:48.703Z"
     },
     "vp-0290": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.bgsu.edu/arts-and-sciences/mathematics-and-statistics/faculty-and-staff/diem-m-nguyen.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0290-1",
+          "url": "https://www.bgsu.edu/arts-and-sciences/mathematics-and-statistics/faculty-and-staff/diem-m-nguyen.html",
+          "excerpt": "Diem M Nguyen Diem M Nguyen Skip to main content Toggle high contrast We use cookies to provide you with the best experience and to help improve our website.",
+          "retrievedAt": "2026-09-07T04:35:52.550Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0290-2",
+          "url": "https://www.bgsu.edu/arts-and-sciences/mathematics-and-statistics/faculty-and-staff/diem-m-nguyen.html",
+          "excerpt": "ing communities All learning communities Arts Village Finding Your Voice in Social Justice Global Village Faculty Resources Chairs and Directors Handbook Job openings Schedule development packet College forms Software site license agreements Arts and Sciences committees Arts and Sciences Council Council of Chairs and Directors Curriculum, Teaching and Learning committee Distinguished Teaching Award committee Promotion and tenure review committee University committees Faculty Senate representatives Undergraduate Council representatives University-level review committee Apply Visit Give Info for.",
+          "retrievedAt": "2026-09-07T04:35:52.550Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0290-3",
+          "url": "https://www.bgsu.edu/arts-and-sciences/mathematics-and-statistics/faculty-and-staff/diem-m-nguyen.html",
+          "excerpt": "Future students Current students Firelands campus Parents/families Faculty/Staff Alumni Apply Visit Give Toggle high contrast Diem M Nguyen BGSU College of Arts and Sciences About our Math and Statistics Programs Faculty and Staff Diem M Nguyen Associate Professor Phone: 419-372-4713 Email: dnguyen&#64;bgsu.",
+          "retrievedAt": "2026-09-07T04:35:52.550Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0290-4",
+          "url": "https://www.bgsu.edu/arts-and-sciences/mathematics-and-statistics/faculty-and-staff/diem-m-nguyen.html",
+          "excerpt": "McLeod Hall Department of Mathematics and Statistics Bowling Green State University Bowling Green, OH 43403-0206 Research Interests Online technology in mathematics teaching and assessment Number theory and mathematical reasoning Education Ph.",
+          "retrievedAt": "2026-09-07T04:35:52.550Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0290-5",
+          "url": "https://www.bgsu.edu/arts-and-sciences/mathematics-and-statistics/faculty-and-staff/diem-m-nguyen.html",
+          "excerpt": "A note on the maximum likelihood estimator of the skew parameter in a skew-normal distribution.",
+          "retrievedAt": "2026-09-07T04:35:52.550Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0290-6",
+          "url": "https://www.bgsu.edu/arts-and-sciences/mathematics-and-statistics/faculty-and-staff/diem-m-nguyen.html",
+          "excerpt": "Characterizations of negative multinomial distributions based on conditional distributions.",
+          "retrievedAt": "2026-09-07T04:35:52.550Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0290-7",
+          "url": "https://www.bgsu.edu/arts-and-sciences/mathematics-and-statistics/faculty-and-staff/diem-m-nguyen.html",
+          "excerpt": "The impact of web-based assessment and practice on students&#39; mathematics learning.",
+          "retrievedAt": "2026-09-07T04:35:52.550Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0290-8",
+          "url": "https://www.bgsu.edu/arts-and-sciences/mathematics-and-statistics/faculty-and-staff/diem-m-nguyen.html",
+          "excerpt": "Proceedings of the 17th International Conference on Technology in Collegiate Mathematics , p.",
+          "retrievedAt": "2026-09-07T04:35:52.550Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:40:48.703Z"
     },
     "vp-0291": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.bumc.bu.edu/surgery/files/2025/12/BMC-Surgery-Annual-Report-2025_SPR.pdf"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0291-1",
+          "url": "https://www.bumc.bu.edu/surgery/files/2025/12/BMC-Surgery-Annual-Report-2025_SPR.pdf",
+          "excerpt": "0 n 0001395930 00000 n 0001558202 00000 n 0001572487 00000 n 0000001236 00000 n trailer ]/Prev 8499846>> startxref 0 %%EOF 424 0 obj >stream hޔUKl\u0013g\u0010���ڎ�\u0000\u0003Y�*P+$�)�v��8�ݬ��$���ر\u0003�\u0010\u001b\u0012\b� {ff��1q�\u001f:\u00175I;ר\u001dT �� ���g��3g���0w�r��\u000ecV�1\u0011�`�Y�\u0019H�\u0018��t�\u0014{�^^+��j��Q��M� �{��M���P\u0011���/J�[�\u0018�^�ę�R\u001c,�f2�\u0005��)Y5f��%2�]�(7��W��l5�n�/]0��z#�a\u001bs���b�\u0001R,���L\u0000յ�7� �D�\u0004�%�\u0013m,���\u0017�T�����E*8��m���s���m|3o|\u000es \u001b��\u001c,\u0003���i2\u0006J#�8�\u0013�\u001a�+E�-�^Y\u0000\u0001d|Q�\u0000h���:A^{�v��\\� Pn\u0000�\u0000��*\u0015�p$K ��� �Hmw���j���\u0017�C�v�;���Q\u0007��k@��UJ\"֋p\u001b�Y@�w@Vē\u0015\u0002ؠ�\u0000�G�q�s�\\$_ʻ��>n�\u0005,\u0017�\u001aQ�\u001ePi\b�r �E�mX���E�\u001aj\u0004�\u0019�\\��\u0013�S�$\u0010����4s�\u0007���\u0004'/��4�\u0017ŧP�\u0001C�\u0003XV���o\u000e&�\"��\u0001�.",
+          "retrievedAt": "2026-09-07T04:35:54.913Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0291-2",
+          "url": "https://www.bumc.bu.edu/surgery/files/2025/12/BMC-Surgery-Annual-Report-2025_SPR.pdf",
+          "excerpt": ",SU���7�0\b9P���E\u0018\u0002\u0012ǿ���P1 -�h�H\u0000*Ӱ�h{\b�'p\u0011�:��o��$��\\^/���+(���\u0011�Q��K6\u000fj;P�$�\u0001�\u0003�q�[`@N {H�\u0001X*�a\u0018�\u0013�>����\u0002 \u0000���> endstream endobj 379 0 obj >>> endobj 380 0 obj >/ExtGState >/Font >/ProcSet[/PDF/Text/ImageC/ImageI]/Properties >/XObject >>>/Rotate 0/TrimBox[0.",
+          "retrievedAt": "2026-09-07T04:35:54.913Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0291-3",
+          "url": "https://www.bumc.bu.edu/surgery/files/2025/12/BMC-Surgery-Annual-Report-2025_SPR.pdf",
+          "excerpt": "0]/Type/Page/PieceInfo /LastModified /NumberofPages 1/OriginalDocumentID /PageTransformationMatrixList >/PageUIDList >/PageWidthList >>>>>>> endobj 381 0 obj > endobj 382 0 obj > endobj 383 0 obj > endobj 384 0 obj [/Indexed/DeviceCMYK 166 405 0 R] endobj 385 0 obj > endobj 386 0 obj > endobj 387 0 obj >stream H�\\��j�0\u0010��z�9&��M�\u0002�P�\u0004|�B� \u0004�\u001cKR,����%kJҔ%sI|d>\u0012��O�g�Px��\u0016E�(�_Q���\u0015�+�_Q��c)��8�Q\u0003\u001f��V���sN��}\u0018��,���T:�ϗ�\u0006\u0007��>�+�\u0000+̤� endstream endobj 388 0 obj > endobj 389 0 obj >stream H�\\��n�0 ��y \u001f�C\u0005���\u0012B�h'q؇��\u000041\u001d�\b(�\u0003o?",
+          "retrievedAt": "2026-09-07T04:35:54.913Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0291-4",
+          "url": "https://www.bumc.bu.edu/surgery/files/2025/12/BMC-Surgery-Annual-Report-2025_SPR.pdf",
+          "excerpt": "\\y�;O�s�x\u0015�0\u0002e�~\u0005\u0018\u0000�2�N endstream endobj 390 0 obj > endobj 391 0 obj >stream H�\\��j�@\u0018E�z�Y&� [�~b\u0010\u0006�N���P�\u000f KcWP�BV\u0016~��� )T �ʣ�s�0�o��}�M!",
+          "retrievedAt": "2026-09-07T04:35:54.913Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0291-5",
+          "url": "https://www.bumc.bu.edu/surgery/files/2025/12/BMC-Surgery-Annual-Report-2025_SPR.pdf",
+          "excerpt": "���i��~��eߟ�YU��G\u001a�M�= f����cן�ï��1��a�\u0013/���\"�ס���Зz�Z_b��iO�6�w��)������\u0010C1�/)�\\�x\u001b�&�u�Y�H�:To�Zg�o�\u001bw���]�YU���\"=R6fC~f~F^1����[�\u001d�\u000e���\u0015��9 T%�/�~�d^\"\u0017�\u0005r�\\\" � +�\"ӭ�[�̎L�\u0012��y�L�\u0012nB��+� �B��+� �B��+� �B��+� ��~\u0004�\b\u001d\u0004\u000e������\u0004� �dvco�ބ� zS���M��W�+��� ���_��W�+��� ���_��W�+��\\\u0003��5p�\\\u0003��5p�\\\u0003��5p�\\\u0003��5p�\\\u0003�ȵ��� �\u0019{3�f��Л�7Co�� �9{s���w�;�\u001d�N�������w�;�\u001d�N�������w�;�\u001d�+���\u0012���\u0019��3���z`�~�Fl�t��ϳ�y\u001f�t �Gϼ���>~�N�u\bi\u0016��\u0000\u0003\u0000� \u001dk endstream endobj 392 0 obj >stream H��W�n\\�\u0011��W�%g����~.",
+          "retrievedAt": "2026-09-07T04:35:54.913Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0291-6",
+          "url": "https://www.bumc.bu.edu/surgery/files/2025/12/BMC-Surgery-Annual-Report-2025_SPR.pdf",
+          "excerpt": "j\u0006�� �Tf �{���,��D-�əٽT\u00192��R5Ƒ���E�*s\u0003�˿�,�0Ҋ�t������P�9|A8 �\u001e*�\b)s�~ Bp�0��A\u000f�\u0004h�\u0016$���S���OW z�K����������F#�Ua��b�]%�Ы\u0000v/�\u0003: #6B���tؔL|jB��x���j�����%�- N��m�mhǨI~�*��w@�j$I���h �E@ˈ�@g�.",
+          "retrievedAt": "2026-09-07T04:35:54.913Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0291-7",
+          "url": "https://www.bumc.bu.edu/surgery/files/2025/12/BMC-Surgery-Annual-Report-2025_SPR.pdf",
+          "excerpt": "�;\u000e}\u0013��\u0005�\u001e\u0017 \u001f���@V���q��4 $DGb�W�X�T��_�Ს�H�HW�)�X�oqwfU�D,� k���\u0003nz|��k#\u0011F�\u0015jV�\u0002��V�$u��ǳ��lQY�L\u00144Z� �p������\u001a:�>?",
+          "retrievedAt": "2026-09-07T04:35:54.913Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0291-8",
+          "url": "https://www.bumc.bu.edu/surgery/files/2025/12/BMC-Surgery-Annual-Report-2025_SPR.pdf",
+          "excerpt": "��H\u0012\bO�A�s�c�\u0016��s1\u0019\u0002Z���_�\u001d\u00042SFE���@\u0019 �����\u0012��w5B�*�\u0015\b���$#�UU���� n�Y�#$�~��j\"a1�C����Π���ٹ0�bNeu�31*-X$��T>XPȵ�F-�\u0000h�\u0002�lB\u0010%�8�j_@� w�\u0014@�ň\u000e �y\u0014J��OϨf\u0004������L�4.",
+          "retrievedAt": "2026-09-07T04:35:54.913Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:40:48.703Z",
+      "nextAction": "Annual report PDF lists emeritus faculty name without research overview or publication list."
     },
     "vp-0292": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://directory.smeal.psu.edu/czd184"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0292-1",
+          "url": "https://directory.smeal.psu.edu/czd184",
+          "excerpt": "Dang &mdash; Smeal College of Business News Events Students Alumni Companies Donors Employee Resources Directory About Smeal Academic Programs Executive Education Academic Departments Faculty & Research Directory Research Faculty Directory Carolyn T.",
+          "retrievedAt": "2026-09-07T04:35:55.560Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0292-2",
+          "url": "https://directory.smeal.psu.edu/czd184",
+          "excerpt": "Dang Associate Professor Department Management and Organization Office Address 449 Business Building Email Address czd184@psu.",
+          "retrievedAt": "2026-09-07T04:35:55.560Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0292-3",
+          "url": "https://directory.smeal.psu.edu/czd184",
+          "excerpt": "Dang Associate Professor Department Management and Organization Office Address 449 Business Building Email Address czd184@psu.",
+          "retrievedAt": "2026-09-07T04:35:55.560Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0292-4",
+          "url": "https://directory.smeal.psu.edu/czd184",
+          "excerpt": "edu Download Photo Google Scholar Personal Website Biography Teaching Publications Carolyn Dang is an Assistant Professor in Organizational Behavior at the Smeal College of Business.",
+          "retrievedAt": "2026-09-07T04:35:55.560Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0292-5",
+          "url": "https://directory.smeal.psu.edu/czd184",
+          "excerpt": "Education Ph D, Organizational Behavior (Research Methods), The University of Washington, 2014 BA, Social Psychology, University of Chicago, 2006 Courses Taught BA 580 &ndash; DBA Culminating Res Project (6) This course provides Doctorate of Business Administration students with the opportunity to identify a practice problem or clinical question and investigate the literature related to this selected area of interest.",
+          "retrievedAt": "2026-09-07T04:35:55.560Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0292-6",
+          "url": "https://directory.smeal.psu.edu/czd184",
+          "excerpt": "Students will develop and implement a comprehensive project to address the problem.",
+          "retrievedAt": "2026-09-07T04:35:55.560Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0292-7",
+          "url": "https://directory.smeal.psu.edu/czd184",
+          "excerpt": "Students will also disseminate the results in both a scholarly presentation and manuscript for publication.",
+          "retrievedAt": "2026-09-07T04:35:55.560Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0292-8",
+          "url": "https://directory.smeal.psu.edu/czd184",
+          "excerpt": "MGMT 451W &ndash; Bus Eth and Soc (3) Advanced examination of social, ethical, legal, economic, equity, environmental, public policy, and political influences on managerial DECISIONS AND STRATEGIES.",
+          "retrievedAt": "2026-09-07T04:35:55.560Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:40:48.703Z"
     },
     "vp-0293": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.sjsu.edu/socialsciences/research/rsca-faculty-bio/nguyen-trung.php"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0293-1",
+          "url": "https://www.sjsu.edu/socialsciences/research/rsca-faculty-bio/nguyen-trung.php",
+          "excerpt": "Fees Housing Online and Professional Education International Students Parent and Family Programs Student Affairs Health and Wellness Safety SJSU Cares Events Experience Campus Traditions Student Alumni Connection Research and Innovation Office of Research Office of Innovation and Corporate Partnerships Research Foundation Student-Faculty Collaborations Become a Research Partner Centers and Institutes About Administration and Leadership Facts and Accomplishments NewsCenter Partnerships Transformation 2030 Transformation Defined SJSU Online Athletics Alumni Association Giving to SJSU Canvas one.",
+          "retrievedAt": "2026-09-07T04:35:57.556Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0293-2",
+          "url": "https://www.sjsu.edu/socialsciences/research/rsca-faculty-bio/nguyen-trung.php",
+          "excerpt": "us Traditions Student Alumni Connection Research and Innovation Office of Research Office of Innovation Research Foundation Student-Faculty Collaborations Become a Research Partner Centers and Institutes Athletics SJSU Online About Administration and Leadership Facts and Accomplishments NewsCenter Partnerships Transformation 2030 Transformation Defined Home College of Social Sciences Faculty Trung Nguyen College of Social Sciences College of Social Sciences Menu About Us About Us Dean's Message Our Mission & Vision Leadership Team Leadership Team Terri Ramirez Anne Marie Todd Lois Takahashi Dr.",
+          "retrievedAt": "2026-09-07T04:35:57.556Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0293-3",
+          "url": "https://www.sjsu.edu/socialsciences/research/rsca-faculty-bio/nguyen-trung.php",
+          "excerpt": "Departments and Programs Departments Programs Ethnic Studies Collaborative Ethnic Studies Collaborative AB 1460 Ethnic Studies at SJSU Certificates Students Students Prospective Students Prospective Students Student Admission and Payment Services Admitted Spartan Day Academic Advising Student Forms President's and Dean's Scholars Minors in CoSS Student Organizations Scholarships Scholarships Student Accomplishments Research Research New Faculty Faculty Research Biographies Faculty Research Biographies Megan Thiele Strong Abel Gomez Alberto Garcia Alessandro De Giorgi Andrew Alexander Andrew F.",
+          "retrievedAt": "2026-09-07T04:35:57.556Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0293-4",
+          "url": "https://www.sjsu.edu/socialsciences/research/rsca-faculty-bio/nguyen-trung.php",
+          "excerpt": "Wood Asha Weinstein Agrawal Ayda Kianmehr Bianca Hinojosa CJ Jones Christine Vega Claudio G.",
+          "retrievedAt": "2026-09-07T04:35:57.556Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0293-5",
+          "url": "https://www.sjsu.edu/socialsciences/research/rsca-faculty-bio/nguyen-trung.php",
+          "excerpt": "Mariana Manriquez Mark Barash Nurettin Senol Sang Kil Sergio Barrera Shawna Bolton Sophie Kelmenson Trung Nguyen Ulises Espinoza Wayne Jopanda Wilson Yuan Xintong Chen William Armaline Arlene Asuncion Tanya Bakhru Magdalena Barrera Melissa Beresford Natalie Boero Désia Bacon Gabriela Gonzalez Kerri Malloy Susana Gallardo Travis Boyce Jacquelyn Brady James Brent Glenn Callaghan Matthew Capriotti Valerie Carr Cheryl Chancellor-Freeland Kristen Cole Stephanie Coopman Mary Currin-Percival Katherine Cushing Dallas Augustine Erika Carrillo Soma de Bourbon Darwyyn Deyo Danijela Dudley Shinchieh Duh A.",
+          "retrievedAt": "2026-09-07T04:35:57.556Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0293-6",
+          "url": "https://www.sjsu.edu/socialsciences/research/rsca-faculty-bio/nguyen-trung.php",
+          "excerpt": "Faas Gregory Feist Cary Feria Ge Gao Carlos Garcia Glen Gendzel Felipe Gomez Jonathan Gomez Roberto Gonzalez Gordon Douglas Jennifer Gregg Colleen Haight Aidin Hajikhameneh Rona Halualani Tabitha Hart Oona Hatton Marie Haverfield Libra Hilde Matthew Holian Megumi Hosoda Xiaojia Hou Laree Huntsman Elena Klaw Gary Klee Paul Knepper Richard Kos Yvonne Kwan Amy Leisenring Alan Leventhal Rui Liu Paul-Vincent Lombardi Christine Ma-Kellams Shishir Mathur Marco Meniketti Dustin Mulvaney Katharine Olson Rachel O'Malley Clifton Oyamot Evan McHughes Palmer Garrick Percival Gary Pereira Mary Pickering J.",
+          "retrievedAt": "2026-09-07T04:35:57.556Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0293-7",
+          "url": "https://www.sjsu.edu/socialsciences/research/rsca-faculty-bio/nguyen-trung.php",
+          "excerpt": "ct Report Dean's Fund for Excellence Departments and Programs Departments Programs Ethnic Studies Collaborative Certificates Students Prospective Students Academic Advising Student Forms President's and Dean's Scholars Minors in CoSS Student Organizations Scholarships Research New Faculty Faculty Research Biographies Institutes, Centers, and Labs Highlights Social Sciences in a Technological World Our Newsletter Staff Awards Faculty Awards University Faculty Awardees Alumni Archives Events Giving Trung Nguyen Assistant Professor Department of Sociology & Interdisciplinary Social Sciences trung.",
+          "retrievedAt": "2026-09-07T04:35:57.556Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0293-8",
+          "url": "https://www.sjsu.edu/socialsciences/research/rsca-faculty-bio/nguyen-trung.php",
+          "excerpt": "edu Current Research Activities His research examines the historical and emergent relationships between visual culture, permanent war, labor, value, mediation, gender, and racial capitalism.",
+          "retrievedAt": "2026-09-07T04:35:57.556Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:40:48.703Z",
+      "nextAction": "Faculty bio discusses in-progress book manuscript without a dated publication list."
     },
     "vp-0294": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.math.ttu.edu/~lhoang"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.math.ttu.edu/~lhoang: fetch failed"
+      ],
+      "updatedAt": "2026-09-07T04:40:48.703Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-0295": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.depts.ttu.edu/math/about/directory/bio/index.php?id=1803"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0295-1",
+          "url": "https://www.depts.ttu.edu/math/about/directory/bio/index.php?id=1803",
+          "excerpt": "Faculty Biography | Faculty & Staff | About the Department | Mathematics & Statistics | Texas Tech For Android.",
+          "retrievedAt": "2026-09-07T04:36:08.412Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0295-2",
+          "url": "https://www.depts.ttu.edu/math/about/directory/bio/index.php?id=1803",
+          "excerpt": "--> Texas Tech University Directory Raiderlink A-Z Index Menu --> Department of Mathematics & Statistics Menu Search Texas Tech Mathematics & Statistics About the Department Faculty & Staff Vu Thai Luan, Ph.",
+          "retrievedAt": "2026-09-07T04:36:08.412Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0295-3",
+          "url": "https://www.depts.ttu.edu/math/about/directory/bio/index.php?id=1803",
+          "excerpt": "edu Office: MA 231 Office Hours: MWF 14:00- 15:00 Website: Personal Website (opens in a new tab) Vu Thai Luan, Ph.",
+          "retrievedAt": "2026-09-07T04:36:08.412Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0295-4",
+          "url": "https://www.depts.ttu.edu/math/about/directory/bio/index.php?id=1803",
+          "excerpt": "Associate Professor Vu Thai Luan joined Texas Tech University in Fall 2024 as an Associate Professor.",
+          "retrievedAt": "2026-09-07T04:36:08.412Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0295-5",
+          "url": "https://www.depts.ttu.edu/math/about/directory/bio/index.php?id=1803",
+          "excerpt": "From 2014 to 2024, he held positions as a Visiting Assistant Professor at the University of California, Merced, and Southern Methodist University in Dallas, TX, and later as an Assistant and Associate Professor at Mississippi State University.",
+          "retrievedAt": "2026-09-07T04:36:08.412Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0295-6",
+          "url": "https://www.depts.ttu.edu/math/about/directory/bio/index.php?id=1803",
+          "excerpt": "His research interests are in Computational and Applied Mathematics, primarily in Numerical Analysis and Scientific Computing.",
+          "retrievedAt": "2026-09-07T04:36:08.412Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0295-7",
+          "url": "https://www.depts.ttu.edu/math/about/directory/bio/index.php?id=1803",
+          "excerpt": "Much of his work centers on designing, analyzing, and implementing fast, robust, and accurate numerical methods for the time integration of PDEs, multiphysics and multirate problems arising in engineering and the natural sciences.",
+          "retrievedAt": "2026-09-07T04:36:08.412Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0295-8",
+          "url": "https://www.depts.ttu.edu/math/about/directory/bio/index.php?id=1803",
+          "excerpt": "Currently, he is developing advanced numerical techniques with applications in meteorology, numerical weather prediction, computational fluid dynamics, computational biology, and visual computing (real-time simulation of complex systems).",
+          "retrievedAt": "2026-09-07T04:36:08.412Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:40:48.703Z",
+      "nextAction": "Department bio does not include an individual publication list."
     },
     "vp-0296": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.myweb.ttu.edu/tra97432"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0296-1",
+          "url": "https://www.myweb.ttu.edu/tra97432",
+          "excerpt": "Curriculum Vitae (2026) Contact 228 MA, Texas Tech University Lubbock, TX 79409 Email: hung.",
+          "retrievedAt": "2026-09-07T04:36:09.159Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0296-2",
+          "url": "https://www.myweb.ttu.edu/tra97432",
+          "excerpt": "edu Research Interest Geometric Analysis, Minimal Surfaces, Ricci flow and Solitons, and Geometric Learning.",
+          "retrievedAt": "2026-09-07T04:36:09.159Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0296-3",
+          "url": "https://www.myweb.ttu.edu/tra97432",
+          "excerpt": "View Publications Grants DOE-Los Alamos National Lab: Geometric Mesh Transformations for Rank Reduction in Tensor Networks, 2026-2028 AIM SQuaRE: (with Catherine Searle, Charles Cifarelli, Maximilien Hallgren, and Xiaodong Cao)New Perspectives on Gradient Ricci Solitons, 2025-28.",
+          "retrievedAt": "2026-09-07T04:36:09.159Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0296-4",
+          "url": "https://www.myweb.ttu.edu/tra97432",
+          "excerpt": "NSF Grant DMS-2552723: (with Magdalena Toda, Alvaro Pampano, and Erhan Guler) Conference: Red Raider Mini-Symposium on Geometric Analysis and Applications, 2026-27.",
+          "retrievedAt": "2026-09-07T04:36:09.159Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0296-5",
+          "url": "https://www.myweb.ttu.edu/tra97432",
+          "excerpt": "Texas Tech Faculty Travel Grant: Ricci Solitons and Einstein Metrics, Spring 2026.",
+          "retrievedAt": "2026-09-07T04:36:09.159Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0296-6",
+          "url": "https://www.myweb.ttu.edu/tra97432",
+          "excerpt": "SL Math: Membership in the special program \"New Frontiers in Curvature\", Fall 2024 NSF Grant DMS-2104988: The Geometry of Minimal Surfaces and Four-Dimensional Manifolds, 2021-2024 NSF Grant DMS-2301994: (with Alvaro Pampano) Conference: Red Raider Mini-Symposium on Differential Geometry, 2023-24.",
+          "retrievedAt": "2026-09-07T04:36:09.159Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:40:48.703Z"
     },
     "vp-0297": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://ipower3es.eng.ucsd.edu/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0297-1",
+          "url": "https://ipower3es.eng.ucsd.edu/",
+          "excerpt": "l Skip to content integrated Power Electronics and Energy-Efficient Systems Lab Create and Supply Integrated/Miniaturized Power for All Primary Navigation Menu Menu Home Research Publications Members Opportunity Classes Contact Group Photos News iPower-Wiki UCSD-ECE ISSCC2025_iASM CICC2025_BrainStim VLSI2025_Ocean_energy_harvester 2023_ISSCC_vertpd 2023_ISSCC_SIMS 2022_CICC APEC_2020 ISSCC 2019 - Smart Cable research_picture_v1 Latest News 06/2026 – The iPower3Es has one of the best showings at the 2026 VLSI conference with two paper publications: Zhiwen and Hieu lead the first work, &#8220;C2.",
+          "retrievedAt": "2026-09-07T04:36:10.833Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0297-2",
+          "url": "https://ipower3es.eng.ucsd.edu/",
+          "excerpt": "4 &#8211; A 48V-5V Coupled-Inductor Middle-Switched-Capacitor Hybrid GaN Converter Achieving #156uH Equivalent Inductance and 30mA Ripple&#8221;, that explores the new &#8220;middle-SC&#8221; topology of our hybrid converter series, offering massive ripple reduction for noise-sensitive applications.",
+          "retrievedAt": "2026-09-07T04:36:10.833Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0297-3",
+          "url": "https://ipower3es.eng.ucsd.edu/",
+          "excerpt": "Congratulations to Zhiwen, Hieu, and the collaborators at EPC &#8211; Efficient Power Conversion and Samsung Research America (SRA) .",
+          "retrievedAt": "2026-09-07T04:36:10.833Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0297-4",
+          "url": "https://ipower3es.eng.ucsd.edu/",
+          "excerpt": "3 &#8211; A 300mm Monolithic GaN MOSHEMT and Si pMOS Technology Demonstrating Energy-Efficient Multi-Thousand-Gate Digital Logic for Power Management,&#8221; Po-Han and Saket led us to a huge privilege of collaborating with (and learning from) the incredible teams at Intel , the Intel Foundry , demonstrating a first-of-its-kind, record-setting monolithic integration of standard-cell-based digital control logic combining GaN nMOS and Silicon (Si) pMOS technologies on a single 300mm wafer.",
+          "retrievedAt": "2026-09-07T04:36:10.833Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0297-5",
+          "url": "https://ipower3es.eng.ucsd.edu/",
+          "excerpt": "work with his super comprehensive work to improve 5G/6G transmitters&#8217; efficiencies with digital envelop tracking (DET) supply modulators and the moto &#8220;We are proud to take the RISK&#8221;.",
+          "retrievedAt": "2026-09-07T04:36:10.833Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0297-6",
+          "url": "https://ipower3es.eng.ucsd.edu/",
+          "excerpt": "06/2026 – Prithvi successfully passed the prelim exam and will officially start her Ph.",
+          "retrievedAt": "2026-09-07T04:36:10.833Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0297-7",
+          "url": "https://ipower3es.eng.ucsd.edu/",
+          "excerpt": "05/2026 – Angie David joins the iPower3Es group with as a UCSD STARS program fellow.",
+          "retrievedAt": "2026-09-07T04:36:10.833Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0297-8",
+          "url": "https://ipower3es.eng.ucsd.edu/",
+          "excerpt": "More News in History Welcome to iPower3Es Research Mission Our research mission is to address challenges in co-optimizing efficiency and size with performance in different electronic systems and applications, including: High-performance computing and data centers Mobile and automotive devices Robots: futuristic ones Communication systems DC-houses and DC-buildings Low-power biomedical implants Internet of Things (IoTs) More Research Team We are always looking for good team members.",
+          "retrievedAt": "2026-09-07T04:36:10.833Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:40:48.703Z"
     },
     "vp-0298": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://profiles.ucsd.edu/hoang.t.nguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0298-1",
+          "url": "https://profiles.ucsd.edu/hoang.t.nguyen",
+          "excerpt": "Hoang Nguyen | UCSD Profiles Powered by Altman Clinical and Translational Research Institute UCSD Profiles Home About Help/FAQs Search Options UC Davis UCI UCLA UCSD UCSF All UC Health USC All Everything Research Concepts Awards People &#160;&#160;&#160;UC Health People &#160;&#160;&#160;UC Davis People &#160;&#160;&#160;UCI People &#160;&#160;&#160;UCLA People &#160;&#160;&#160;UCSD People &#160;&#160;&#160;UCSF People &#160;&#160;&#160;USC People on next line to remove space between --> Find People Find Everything Login to edit your profile (add a photo, awards, links to other websites, etc.",
+          "retrievedAt": "2026-09-07T04:36:11.155Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0298-2",
+          "url": "https://profiles.ucsd.edu/hoang.t.nguyen",
+          "excerpt": ") Edit My Profile My Person List ( 0 ) Return to Top Hoang Nguyen Title(s) Associate Professor, Literature School Vc-academic Affairs Address 9500 Gilman Drive # La Jolla CA 92093 Email htn057@ucsd.",
+          "retrievedAt": "2026-09-07T04:36:11.155Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0298-3",
+          "url": "https://profiles.ucsd.edu/hoang.t.nguyen",
+          "excerpt": "edu vCard Download vCard Same Department People who are also in this person's primary department.",
+          "retrievedAt": "2026-09-07T04:36:11.155Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0298-4",
+          "url": "https://profiles.ucsd.edu/hoang.t.nguyen",
+          "excerpt": "--> Concha, Jaime Frenk, Margit Johnson, Sara Rahimi, Babak Wesling, Megan Search Department _ UCSD Profiles is managed by the UC San Diego Altman Clinical and Translational Research Institute (ACTRI) .",
+          "retrievedAt": "2026-09-07T04:36:11.155Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0298-5",
+          "url": "https://profiles.ucsd.edu/hoang.t.nguyen",
+          "excerpt": "We also use cookies to analyze our site’s performance and improve your experience on our site.",
+          "retrievedAt": "2026-09-07T04:36:11.155Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0298-6",
+          "url": "https://profiles.ucsd.edu/hoang.t.nguyen",
+          "excerpt": "For more information about how we use cookies, please see our Website Terms of Use .",
+          "retrievedAt": "2026-09-07T04:36:11.155Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:40:48.703Z",
+      "nextAction": "UCSD directory profile lacks a research overview and publication list."
     },
     "vp-0299": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://literature.ucsd.edu/people/faculty/lhoang.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0299-1",
+          "url": "https://literature.ucsd.edu/people/faculty/lhoang.html",
+          "excerpt": "PhD Admissions PhD Students Program Handbook Forms Campus Resources Department Resources Events PhD Alumni MFA Admissions MFA Faculty MFA Students Program Handbook Forms Campus Resources Department Resources New Writing Series MFA Alumni Undergraduate Majors Minors Honors Program Study Abroad Careers in Literature Awards & Writing Contests Prospective Students Languages French German Greek Italian Korean Latin Russian Spanish Courses Course Offerings UCSD Course Catalog Schedule of Classes UCSD Course Websites Final Exam Schedule News Alumni Lecture Series Arts & Humanities Events The James K.",
+          "retrievedAt": "2026-09-07T04:36:11.974Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0299-2",
+          "url": "https://literature.ucsd.edu/people/faculty/lhoang.html",
+          "excerpt": "PhD Admissions PhD Students Program Handbook Forms Campus Resources Department Resources Events PhD Alumni MFA Admissions MFA Faculty MFA Students Program Handbook Forms Campus Resources Department Resources New Writing Series MFA Alumni Undergraduate Majors Minors Honors Program Study Abroad Careers in Literature Awards & Writing Contests Prospective Students Languages French German Greek Italian Korean Latin Russian Spanish Courses Course Offerings UCSD Course Catalog Schedule of Classes UCSD Course Websites Final Exam Schedule News Alumni Lecture Series Arts & Humanities Events The James K.",
+          "retrievedAt": "2026-09-07T04:36:11.975Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0299-3",
+          "url": "https://literature.ucsd.edu/people/faculty/lhoang.html",
+          "excerpt": "ional Studies German Studies Center for Hellenic Studies Italian Studies Japanese Studies Jewish Studies Program in Transnational Korean Studies Linguistics Language Program Middle East Studies National Women's Studies Assocation Program for the Study of Religion Russian, East European, and Eurasian Studies Summer Session Visitor Guide to UCSD Faculty Resources Forms for Faculty Facilities & Offices Security & Safety Funding Opportunities Computer Services Search Scope This Site All UCSD Sites Faculty/Staff Search Term HOME People Literature Faculty Lily Hoàng Lily Hoàng Professor lkhoang@ucsd.",
+          "retrievedAt": "2026-09-07T04:36:11.975Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0299-4",
+          "url": "https://literature.ucsd.edu/people/faculty/lhoang.html",
+          "excerpt": "edu Arts & Humanities Bldg (RWAC) Room 346 Mail Code: 0410 Profile Publications Education Profile Office Hours Coming soon.",
+          "retrievedAt": "2026-09-07T04:36:11.975Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0299-5",
+          "url": "https://literature.ucsd.edu/people/faculty/lhoang.html",
+          "excerpt": "All Faculty: By Name By Areas of Specialization About Contact Us Faculty Office Hours New Writing Series Ridge Walk Academic Complex 9625 Scholars Drive North La Jolla, California, 92093-0410 UC San Diego 9500 Gilman Dr.",
+          "retrievedAt": "2026-09-07T04:36:11.975Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0299-6",
+          "url": "https://literature.ucsd.edu/people/faculty/lhoang.html",
+          "excerpt": "La Jolla, CA 92093 (858) 534-2230 Copyright © 2026 Regents of the University of California.",
+          "retrievedAt": "2026-09-07T04:36:11.975Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:40:48.703Z",
+      "nextAction": "Faculty page displays coming soon placeholders for profile and publications."
     },
     "vp-0300": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.alc.ucla.edu/person/thu-huong-nguyen-vo/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0300-1",
+          "url": "https://www.alc.ucla.edu/person/thu-huong-nguyen-vo/",
+          "excerpt": "Thu-Huong Nguyen-Vo - Asian Languages & Cultures Department - UCLA Skip to main content Give Every donation matters.",
+          "retrievedAt": "2026-09-07T04:36:13.149Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0300-2",
+          "url": "https://www.alc.ucla.edu/person/thu-huong-nguyen-vo/",
+          "excerpt": "About About Us Welcome Mission Statement History of ALC Support ALC Contact Us Useful Links People Faculty Staff Graduate Students Ph.",
+          "retrievedAt": "2026-09-07T04:36:13.149Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0300-3",
+          "url": "https://www.alc.ucla.edu/person/thu-huong-nguyen-vo/",
+          "excerpt": "ent Visitors Yanai Visitors Emeriti Alumni Profiles Summer UCLA Summer Sessions Undergraduate Undergraduate Welcome Incoming Students Placement Exams Majors &#038; Minors Study Abroad Languages Honors Program Contract Courses Get a Mentor Graduate Graduate PhD Program MA in Teaching Asian Languages Teaching Assistantships PhD Recipients Job Placement Placement Events Past Events Photo Gallery Support ALC ALC Friends Photo Gallery Alumni Profiles Search Home » Faculty » Thu-Huong Nguyen-Vo Thu-Huong Nguyen-Vo E-mail: n&#103;&#117;y&#101;&#110;&#118;o&#64;&#104;&#117;mn&#101;t&#46;&#117;c&#108;a.",
+          "retrievedAt": "2026-09-07T04:36:13.149Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0300-4",
+          "url": "https://www.alc.ucla.edu/person/thu-huong-nguyen-vo/",
+          "excerpt": "&#101;du Phone: 310-267-4587 Office: Royce Hall 248-B Nguyễn-võ Thu-hương holds a split appointment in Asian Languages and Cultures, and Asian American Studies.",
+          "retrievedAt": "2026-09-07T04:36:13.149Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0300-5",
+          "url": "https://www.alc.ucla.edu/person/thu-huong-nguyen-vo/",
+          "excerpt": "She is working on a book project on ways to understand the responses of people who must live with violence or the memory thereof caused by economic and political practices.",
+          "retrievedAt": "2026-09-07T04:36:13.149Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0300-6",
+          "url": "https://www.alc.ucla.edu/person/thu-huong-nguyen-vo/",
+          "excerpt": "Her other research projects explore the politics of time in futurist visions from the (inter)colonial moment to the present in cultural works by Indochinese, Vietnamese, African American, and other artists, writers, and activists.",
+          "retrievedAt": "2026-09-07T04:36:13.149Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0300-7",
+          "url": "https://www.alc.ucla.edu/person/thu-huong-nguyen-vo/",
+          "excerpt": "She teaches graduate seminars in critical theory and undergraduate courses in Vietnamese and Vietnamese American politics and culture.",
+          "retrievedAt": "2026-09-07T04:36:13.149Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0300-8",
+          "url": "https://www.alc.ucla.edu/person/thu-huong-nguyen-vo/",
+          "excerpt": ", California State University, Long Beach Research Alternative epistemologies, time, and the human in relation to necroeconomics and necropolitics.",
+          "retrievedAt": "2026-09-07T04:36:13.149Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:40:48.703Z"
     },
     "vp-0301": {
       "overview": "pending",
