@@ -3104,7 +3104,8 @@
         "vp-1192",
         "vp-1193"
       ],
-      "status": "pending"
+      "status": "in_progress",
+      "startedAt": "2026-09-07T19:28:21.426Z"
     },
     {
       "number": 60,
@@ -73195,209 +73196,1201 @@
       "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1174": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://researchers.mq.edu.au/en/persons/xuan-duong/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1174-1",
+          "url": "https://researchers.mq.edu.au/en/persons/xuan-duong/",
+          "excerpt": "Xuan Duong - Macquarie University Skip to main navigation Skip to search Skip to main content Macquarie University Home Help & FAQ Link opens in a new tab Search content at Macquarie University Home Profiles Research units Equipment Projects Research Outputs Datasets Prizes Activities Press/Media Impacts View Scopus Profile Xuan Duong Professor Professor , School of Mathematical and Physical Sciences https://orcid.",
+          "retrievedAt": "2026-09-07T19:28:22.980Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1174-2",
+          "url": "https://researchers.mq.edu.au/en/persons/xuan-duong/",
+          "excerpt": "edu au h-index 3589 Citations 32 h-index Calculated based on number of publications stored in Pure and citations from Scopus 1990 &hellip; 2026 Research activity per year Overview Fingerprint Network Projects (15) Research Outputs (127) Similar Profiles (4) Fingerprint Dive into the research topics where Xuan Duong is active.",
+          "retrievedAt": "2026-09-07T19:28:22.980Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1174-3",
+          "url": "https://researchers.mq.edu.au/en/persons/xuan-duong/",
+          "excerpt": "4 Similar Profiles Hardy Space Mathematics 100% Commutator Mathematics 70% Boundedness Mathematics 50% Heat Kernel Mathematics 49% Semigroup Mathematics 47% Gaussian Distribution Mathematics 45% Laplace Operator Mathematics 44% Upper Bound Mathematics 42% View full fingerprint Collaborations and top research areas from the last five years Recent external collaboration on country/territory level.",
+          "retrievedAt": "2026-09-07T19:28:22.980Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1174-4",
+          "url": "https://researchers.mq.edu.au/en/persons/xuan-duong/",
+          "excerpt": "Dive into details by clicking on the dots or Select a country/territory from the list Dive into details Select a country/territory to view shared publications and projects Close Select a country/territory from the list Explore network further Projects Projects per year 2006 2006 2009 2010 2011 2012 2014 2016 2018 2019 2020 2021 2022 2026 2 Active 13 Finished Projects per year Harmonic analysis: singular integrals, function spaces and related topics Duong, X.",
+          "retrievedAt": "2026-09-07T19:28:22.980Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1174-5",
+          "url": "https://researchers.mq.edu.au/en/persons/xuan-duong/",
+          "excerpt": "(Primary Chief Investigator) 31/10/21 → 30/10/26 Project : Research Harmonic Analysis and Partial Differential Operators Duong, X.",
+          "retrievedAt": "2026-09-07T19:28:22.980Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1174-6",
+          "url": "https://researchers.mq.edu.au/en/persons/xuan-duong/",
+          "excerpt": "(Student) 1/01/14 → … Project : Research DP22: Harmonic analysis of Laplacians in curved spaces Li, J.",
+          "retrievedAt": "2026-09-07T19:28:22.980Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1174-7",
+          "url": "https://researchers.mq.edu.au/en/persons/xuan-duong/",
+          "excerpt": "(Partner Investigator) 26/04/22 → 25/04/25 Project : Research Harmonic analysis, complex analysis and differential operators Duong, X.",
+          "retrievedAt": "2026-09-07T19:28:22.980Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1174-8",
+          "url": "https://researchers.mq.edu.au/en/persons/xuan-duong/",
+          "excerpt": "(Partner Investigator) 1/01/20 → 31/12/22 Project : Research Harmonic analysis: function spaces and partial differential equations Duong, X.",
+          "retrievedAt": "2026-09-07T19:28:22.980Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:29:51.120Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1175": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://researchers.adelaide.edu.au/profile/thong.pham"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://researchers.adelaide.edu.au/profile/thong.pham: fetch failed"
+      ],
+      "updatedAt": "2026-09-07T19:29:51.120Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1176": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.swinburne.edu.au/research/institutes/iverson-health-innovation/team/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1176-1",
+          "url": "https://www.swinburne.edu.au/research/institutes/iverson-health-innovation/team/",
+          "excerpt": "w to apply as an international student How to apply as a local vocational education student How to apply as a local undergraduate student How to apply as a local postgraduate student How to apply for a research degree How to apply as an asylum seeker or refugee visit Enrolling toggle Enrolling menu Enrolling How to enrol Understanding your university offer Course planner Setting up your class timetable Enrol as a PhD or master degree student visit Life at Swinburne toggle Life at Swinburne menu Life at Swinburne visit Why Swinburne toggle Why Swinburne menu Why Swinburne Why study in Australia?",
+          "retrievedAt": "2026-09-07T19:28:25.836Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1176-2",
+          "url": "https://www.swinburne.edu.au/research/institutes/iverson-health-innovation/team/",
+          "excerpt": "menu Collaboration and partnerships visit Placements and internships toggle Placements and internships menu Placements and internships Partner stories Hosting students with disabilities Work with our accreditation placement students Benefits of working with our students visit Employ a student toggle Employ a student menu Employ a student Apprenticeships and traineeships visit School programs toggle School programs menu School programs Workshops, events and outreach programs Work experience Knox Innovation, Opportunity and Sustainability Centre Australian Synchrotron Science Education PrimeSCI!",
+          "retrievedAt": "2026-09-07T19:28:25.836Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1176-3",
+          "url": "https://www.swinburne.edu.au/research/institutes/iverson-health-innovation/team/",
+          "excerpt": "toggle Indigenous research menu Indigenous research Indigenous research projects visit Research ethics and integrity toggle Research ethics and integrity menu Research ethics and integrity Animal research Biosafety compliance Data management Funding from tobacco companies Human research Intellectual property Find an expert visit International students toggle International students menu International students Scholarships Fees Visas ELICOS and Preparation courses Studying abroad in Melbourne Find an agent Apply now Our team Meet the people behind the Iverson Health Innovation Research Institute.",
+          "retrievedAt": "2026-09-07T19:28:25.836Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1176-4",
+          "url": "https://www.swinburne.edu.au/research/institutes/iverson-health-innovation/team/",
+          "excerpt": "Home Research Research institutes Iverson Health Innovation Research Institute Our team Back to Iverson Health Innovation Research Institute The Iverson Health Innovation Research Institute team brings together expertise in neurobiology, heart health, cancer, chronic illness, disability, psychology and behavioural science, bioengineering and medical technologies.",
+          "retrievedAt": "2026-09-07T19:28:25.836Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1176-5",
+          "url": "https://www.swinburne.edu.au/research/institutes/iverson-health-innovation/team/",
+          "excerpt": "Leadership team Professor Gavin Lambert Foundation Director +61392148180 glambert@swinburne.",
+          "retrievedAt": "2026-09-07T19:28:25.836Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1176-6",
+          "url": "https://www.swinburne.edu.au/research/institutes/iverson-health-innovation/team/",
+          "excerpt": "au View Gavin&#39;s profile (Professor Gavin Lambert) Professor Rachael McDonald Director, MedTechVic; Program Lead - Chronic disease and disability MedTechVic +61392145199 rachaelmcdonald@swinburne.",
+          "retrievedAt": "2026-09-07T19:28:25.836Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1176-7",
+          "url": "https://www.swinburne.edu.au/research/institutes/iverson-health-innovation/team/",
+          "excerpt": "au View Rachael&#39;s profile (Professor Rachael McDonald) Professor Simon Moulton Program Lead Bioengineering Solutions +61392148180 smoulton@swinburne.",
+          "retrievedAt": "2026-09-07T19:28:25.836Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1176-8",
+          "url": "https://www.swinburne.edu.au/research/institutes/iverson-health-innovation/team/",
+          "excerpt": "au View Simon’s profile (Professor Simon Moulton) Dr Tatiana Kameneva Senior Lecturer; Vice-Chancellor&#39;s Women in STEM Fellow; Program Lead Computational biology and biophysics +61392144697 tkameneva@swinburne.",
+          "retrievedAt": "2026-09-07T19:28:25.836Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:29:51.120Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1177": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://experts.deakin.edu.au/9318-ly-tran"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1177-1",
+          "url": "https://experts.deakin.edu.au/9318-ly-tran",
+          "excerpt": "Ly Tran | About me | Deakin University Skip to main content All experts Professor Ly Tran Professor in Education Faculty of Arts and Education/School of Education/Research for Educational Impact Contact External links View collaborators Orcid identifier 0000-0001-6543-6559 (opens in a new tab) ⁠ Professor in Education Faculty of Arts and Education/School of Education/Research for Educational Impact +61 3 924 46026 (Work) ly.",
+          "retrievedAt": "2026-09-07T19:28:27.100Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1177-2",
+          "url": "https://experts.deakin.edu.au/9318-ly-tran",
+          "excerpt": "au (opens in a new tab) Melbourne Burwood Campus, 221 Burwood Highway, Burwood, Victoria 3125 Collaboration Network LinkedIn (opens in a new tab) ⁠ https://bsky.",
+          "retrievedAt": "2026-09-07T19:28:27.100Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1177-3",
+          "url": "https://experts.deakin.edu.au/9318-ly-tran",
+          "excerpt": "social (opens in a new tab) ⁠ ResearchGate (opens in a new tab) ⁠ Google Scholar (opens in a new tab) ⁠ https://www.",
+          "retrievedAt": "2026-09-07T19:28:27.100Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1177-4",
+          "url": "https://experts.deakin.edu.au/9318-ly-tran",
+          "excerpt": "Edit your profile ABOUT ME MY RESEARCH OUTPUTS MY RESEARCH PROFESSIONAL ACTIVITIES TEACHING & SUPERVISION MORE BIO Ly Tran is a Professor in the School of Education, Deakin University.",
+          "retrievedAt": "2026-09-07T19:28:27.100Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1177-5",
+          "url": "https://experts.deakin.edu.au/9318-ly-tran",
+          "excerpt": "She is an internationally recognised academic in international education, with influential research spanning student mobilities, public diplomacy, geopolitics of international education, international graduate employability, education-work-migration nexus and the internationalisation of teaching and learning.",
+          "retrievedAt": "2026-09-07T19:28:27.100Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1177-6",
+          "url": "https://experts.deakin.edu.au/9318-ly-tran",
+          "excerpt": "Ly is also widely recognised for her expertise in internationalisation of higher education in Southeast Asia, particularly in Vietnam.",
+          "retrievedAt": "2026-09-07T19:28:27.100Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1177-7",
+          "url": "https://experts.deakin.edu.au/9318-ly-tran",
+          "excerpt": "She leads the Australia-Vietnam Enhanced Economic Engagement Strategy (EEES) - Internationalisation of Higher Education project , funded by the Australian Government Department of Education and co-hosted with Vietnam's Ministry of Education and Training.",
+          "retrievedAt": "2026-09-07T19:28:27.100Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1177-8",
+          "url": "https://experts.deakin.edu.au/9318-ly-tran",
+          "excerpt": "She is project lead for the&#160; Best Practice in International Student&#160;Engagement project, funded by the Australian Government under the International Education Innovation Fund, producing a Virtual Map and series of Good Practice Guides to support international students in Australia .",
+          "retrievedAt": "2026-09-07T19:28:27.100Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:29:51.120Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1178": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://eecs.ku.edu/people/van-ly-nguyen",
         "https://people.eecs.ku.edu/~v532n390/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1178-1",
+          "url": "https://eecs.ku.edu/people/van-ly-nguyen",
+          "excerpt": "ng Electrical Engineering and Computer Science myKU Email Canvas Enroll & Pay Jayhawk GPS Close Search this unit Start search Submit Search Main navigation Home About Select to follow link Disciplines Prospective Students Academic Experience Chairs Message Vision and Mission KU EECS Distinguished Service Award Admissions Select to follow link Undergraduate Programs Select to follow link Academic Experience Admissions Requirements - Undergraduate Degree Accreditation Scholarship & Tuition Undergraduate Certificate in Cybersecurity Graduate Programs Select to follow link Master&#039;s Program Ph.",
+          "retrievedAt": "2026-09-07T19:28:28.416Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1178-2",
+          "url": "https://eecs.ku.edu/people/van-ly-nguyen",
+          "excerpt": "Programs Graduate Funding Data Science Graduate Certificate RF Systems Engineering Graduate Certificate Electrical Engineering & Computer Science Graduate Brochure Academics Select to follow link New Students Select to follow link New Graduate New Undergraduate Undergraduate Students Graduate Students Select to follow link Research Master&#039;s Programs Ph.",
+          "retrievedAt": "2026-09-07T19:28:28.416Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1178-3",
+          "url": "https://eecs.ku.edu/people/van-ly-nguyen",
+          "excerpt": "ities Research Select to follow link Research Clusters Research Facilities Defense Notices People Select to follow link Faculty Affiliate and Courtesy Faculty Emeritus Faculty Staff Alumni & Friends Select to follow link Advisory Board Giving Tech Help KU General Info for Prospective Students Current Students Alumni Degree Programs myKU Email Canvas Enroll & Pay Jayhawk GPS THE UNIVERSITY of KANSAS University of Kansas logo School of Engineering Electrical Engineering and Computer Science Menu Search this unit Start search Submit Search Home Van Ly Nguyen Assistant Professor Contact Info vanly.",
+          "retrievedAt": "2026-09-07T19:28:28.416Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1178-4",
+          "url": "https://eecs.ku.edu/people/van-ly-nguyen",
+          "excerpt": "edu Eaton 2022 Personal Links Van Ly Nguyen&#039;s Website Van Ly Nguyen&#039;s Website Research &mdash; Wireless Communications Systems Signal Processing and Machine Learning for Wireless Communications Multiple-Input Multiple-Output (MIMO) Communications Integrated Sensing and Communications Millimeter wave and Terahertz communications Show More about Research 2001 Eaton Hall 1520 West 15th Street Lawrence, KS 66045-7608 eecs-info@ku.",
+          "retrievedAt": "2026-09-07T19:28:28.416Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1178-5",
+          "url": "https://eecs.ku.edu/people/van-ly-nguyen",
+          "excerpt": "e Accreditation EECS Application Login EECS GradPlanner Login EECS Shop EECS Publications Visit KU KU Admissions KU Endowment KU News KU Events KU Careers KU Alumni Nondiscrimination statement Accessibility | Website support | CMS login &copy; 2026 The University of Kansas The University of Kansas prohibits discrimination on the basis of race, color, ethnicity, religion, sex, national origin, age, ancestry, disability, status as a veteran, sexual orientation, marital status, parental status, gender identity, gender expression, and genetic information in the university's programs and activities.",
+          "retrievedAt": "2026-09-07T19:28:28.416Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1178-6",
+          "url": "https://eecs.ku.edu/people/van-ly-nguyen",
+          "excerpt": "The following person has been designated to handle inquiries regarding the nondiscrimination policies and procedures and is the Title IX Coordinator for all KU and KUMC campuses: Associate Vice Chancellor for the Office of Civil Rights and Title IX, civilrights@ku.",
+          "retrievedAt": "2026-09-07T19:28:28.416Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1178-7",
+          "url": "https://eecs.ku.edu/people/van-ly-nguyen",
+          "excerpt": "edu , Room 1082, Dole Human Development Center, 1000 Sunnyside Avenue, Lawrence, KS 66045, 785-864-6414 , 711 TTY.",
+          "retrievedAt": "2026-09-07T19:28:28.416Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1178-8",
+          "url": "https://eecs.ku.edu/people/van-ly-nguyen",
+          "excerpt": "Reports can be submitted by contacting the Title IX Coordinator as provided herein or using the Title IX online report form and complaints can be submitted with the Title IX Coordinator or using the Title IX online complaint form .",
+          "retrievedAt": "2026-09-07T19:28:28.416Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1178-9",
+          "url": "https://people.eecs.ku.edu/~v532n390/",
+          "excerpt": "Van Ly Nguyen Back to top Van Ly Nguyen --> Home Research --> Group Publications Wi 2 Com X Lab Team Members Research Publications Openings!",
+          "retrievedAt": "2026-09-07T19:28:28.862Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1178-10",
+          "url": "https://people.eecs.ku.edu/~v532n390/",
+          "excerpt": "Assistant Professor Department of Electrical Engineering and Computer Science (EECS) Institute for Information Sciences (I2S) University of Kansas (KU) Office: 2022 Eaton Hall and 225 Nichols Hall vanly.",
+          "retrievedAt": "2026-09-07T19:28:28.862Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1178-11",
+          "url": "https://people.eecs.ku.edu/~v532n390/",
+          "excerpt": "edu LinkedIn --> G o o g l e scholar profile --> +1 (234) 567-8910--> Google Scholar &emsp; LinkedIn &emsp; ResearchGate --> Biography --> Biography Van Ly Nguyen received the Ph.",
+          "retrievedAt": "2026-09-07T19:28:28.862Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1178-12",
+          "url": "https://people.eecs.ku.edu/~v532n390/",
+          "excerpt": "degree in Computational Science from the University of California, Irvine (UCI) and San Diego State University (SDSU), CA, USA, in 2022; the M.",
+          "retrievedAt": "2026-09-07T19:28:28.862Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1178-13",
+          "url": "https://people.eecs.ku.edu/~v532n390/",
+          "excerpt": "degree in Wireless Communications Systems from CentraleSup&eacute;lec, Paris-Saclay University, France in 2016; and the B.",
+          "retrievedAt": "2026-09-07T19:28:28.862Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1178-14",
+          "url": "https://people.eecs.ku.edu/~v532n390/",
+          "excerpt": "degree in Electronics and Telecommunications from Vietnam National University, Hanoi, in 2014.",
+          "retrievedAt": "2026-09-07T19:28:28.862Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1178-15",
+          "url": "https://people.eecs.ku.edu/~v532n390/",
+          "excerpt": "He worked as a postdoctoral researcher at the Department of Electrical Engineering and Computer Science (EECS), UCI from 8/2022 to 1/2025 and at the Elmore Family School of Electrical and Computer Engineering (ECE), Purdue University from 2/2025 to 8/2025.",
+          "retrievedAt": "2026-09-07T19:28:28.862Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1178-16",
+          "url": "https://people.eecs.ku.edu/~v532n390/",
+          "excerpt": "He is currently an Assistant Professor in the EECS department and the Institute of Information Sciences (I2S) at the University of Kansas (KU), USA.",
+          "retrievedAt": "2026-09-07T19:28:28.862Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:29:51.120Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1179": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://inrs.ca/la-recherche/professeurs/long-le/",
         "https://longbaole.github.io/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1179-1",
+          "url": "https://inrs.ca/la-recherche/professeurs/long-le/",
+          "excerpt": "vec les médias Logo et identité visuelle Retraité de l’INRS Retraité de l’INRS Nous joindre Centres de recherche Centre Armand-Frappier Santé Biotechnologie Centre Eau Terre Environnement Centre Énergie Matériaux Télécommunications Centre Ruralités durables Centre Urbanisation Culture Société Directions et services administratifs Bottin du personnel et des étudiants Nouvelles Emplois Faire carrière à l’INRS Voir les offres d'emploi Équité et diversité en emploi Conventions collectives EN Les Études Nous formons la relève en recherche, capable d'innovation scientifique, sociale et technologique.",
+          "retrievedAt": "2026-09-07T19:28:29.148Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1179-2",
+          "url": "https://inrs.ca/la-recherche/professeurs/long-le/",
+          "excerpt": "Étudier à l'INRS VOUS ÊTES Futurs étudiants Étudiants internationaux Étudiants admis Diplômés EXPLORER Vie universitaire Eau, terre et environnement Énergie, matériaux et télécommunications Santé et biotechnologie Urbanisation, culture et société Ruralités durables Équipes et laboratoires de recherche ÉTUDIER Admission Programmes d’études Projets de maîtrise et de doctorat Direction de recherche Bourses d'études et aide financière Stages et postdoctorats Bureau du registraire La recherche Nous trouvons des solutions par la recherche interdisciplinaire, en collaboration avec nos partenaires.",
+          "retrievedAt": "2026-09-07T19:28:29.148Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1179-3",
+          "url": "https://inrs.ca/la-recherche/professeurs/long-le/",
+          "excerpt": "che Partenariats et innovation Développement et valorisation EXPERTISES EN RECHERCHE Programmes scientifiques Thématiques de recherche Infrastructures de recherche Unités mixtes de recherche (UMR) Chaires, groupes et réseaux de recherche Stages postdoctoraux Dépôt numérique SOUTIEN À LA RECHERCHE Service à la recherche Partenariats de recherche Chaires de recherche du Canada Chaires d’excellence en recherche du Canada Chaires de recherche Impact+ Canada Éthique de la recherche Fonds de soutien à la recherche L&#039;INRS Nous contribuons au développement économique, social et culturel du Québec.",
+          "retrievedAt": "2026-09-07T19:28:29.148Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1179-4",
+          "url": "https://inrs.ca/la-recherche/professeurs/long-le/",
+          "excerpt": "pement durable Premiers Peuples Fondation de l'INRS Plan directeur immobilier Déménagement du Centre EMT Prix et distinctions International Historique de l’INRS COMMUNAUTÉ Milieux inclusifs Équité, diversité et inclusion Harcèlement et VACS Programme d’aide aux employé·es et aux étudiant·es (PAEE) Bibliothèques Donner à l'INRS Retour en haut Accueil La recherche Professeures et professeurs Long Le Long Le Expertises Communications sans fil Professeur Responsable scientifique du Laboratoire des réseaux et des systèmes cyber-physiques Téléphone 514 228-7015 Télécopieur 450 929-8102 Courriel long.",
+          "retrievedAt": "2026-09-07T19:28:29.148Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1179-5",
+          "url": "https://inrs.ca/la-recherche/professeurs/long-le/",
+          "excerpt": "ca Centre Énergie Matériaux Télécommunications 800, De La Gauchetière Ouest Bureau 6900 Montréal (Québec) H5A 1K6 CANADA Voir le centre Intérêts de recherche Technologies avancées pour le système sans fil 5G et au-delà, cloud computing, blockchain, smartgrid Fonctions et biographie Projets de recherche Chaires, groupes et réseaux Activités scientifiques Formation universitaire Ph.",
+          "retrievedAt": "2026-09-07T19:28:29.148Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1179-6",
+          "url": "https://inrs.ca/la-recherche/professeurs/long-le/",
+          "excerpt": "systèmes sans fil 5G Internet des objets IA appliquée aux soins de santé et smart city Collaborateurs de recherche Professeur Ekram Hossain (University of Manitoba) Professeur Dong In Kim (Sungkyunkwan University) Professeur Ravi Mazumdar (Waterloo) Professeur Eytan Modiano (MIT) Professeur Tho Le-Ngoc (McGill) Professeure Catherine Rosenberg (Waterloo) Professeur Ness Shroff (Ohio State University) Activités scientifiques IEEE Senior Member Éditeur : IEEE Transactions on Wireless Communications, IEEE Communications Surveys and Tutorials and IEEE Wireless Communications Letters Publications A.",
+          "retrievedAt": "2026-09-07T19:28:29.148Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1179-7",
+          "url": "https://inrs.ca/la-recherche/professeurs/long-le/",
+          "excerpt": "Le, Radio resource management in wireless networks: An Engineering Approach, Cambridge University Press, 2017 [L1] Ekram Hossain, Long B.",
+          "retrievedAt": "2026-09-07T19:28:29.148Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1179-8",
+          "url": "https://inrs.ca/la-recherche/professeurs/long-le/",
+          "excerpt": "Le et Dusit Niyato, Radio resource management in multi-tier cellular wireless networks, Wiley, 2013 [CL3] Tadilo Bogale, Xianbin Wang, and Long B.",
+          "retrievedAt": "2026-09-07T19:28:29.148Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1179-9",
+          "url": "https://longbaole.github.io/",
+          "excerpt": "Long Bao Le or Long Le Toggle navigation Home Team Publications CV Long Bao Le (Long Le) Institut National De La Recherche Scientifique (INRS) Énergie Matériaux Télécommunications Research Centre University of Quebec 800 de la Gauchetière West, Suite 6900 Montreal, Canada H5A 1K6 Email: long.",
+          "retrievedAt": "2026-09-07T19:28:29.311Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1179-10",
+          "url": "https://longbaole.github.io/",
+          "excerpt": "Long Bao Le (Long Le) is currently a full professor at INRS, University of Quebec.",
+          "retrievedAt": "2026-09-07T19:28:29.311Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1179-11",
+          "url": "https://longbaole.github.io/",
+          "excerpt": "Prior to joining INRS, he was a postdoctoral researcher at Massachusetts Institute of Technology in 2008-2010 and University of Waterloo in 2007-2008.",
+          "retrievedAt": "2026-09-07T19:28:29.311Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1179-12",
+          "url": "https://longbaole.github.io/",
+          "excerpt": "Le leads the NECPHY-Lab performing research and training in the broad areas of wireless communications and networking, AI/ML, cyber-security, cloud/edge computing, and smart grids.",
+          "retrievedAt": "2026-09-07T19:28:29.311Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1179-13",
+          "url": "https://longbaole.github.io/",
+          "excerpt": "He has served as an editor for different journals including IEEE Transactions on Communications (2022-present), IEEE Transactions on Cognitive Communications and Networking (2021-present), IEEE Transactions on Wireless Communications, IEEE Wireless Communications Letters, and IEEE Communications Surveys & Tutorials.",
+          "retrievedAt": "2026-09-07T19:28:29.311Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1179-14",
+          "url": "https://longbaole.github.io/",
+          "excerpt": "He has served in the organization committees for different conferences including IEEE WCNC, IEEE VTC, and IEEE PIMRC.",
+          "retrievedAt": "2026-09-07T19:28:29.311Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1179-15",
+          "url": "https://longbaole.github.io/",
+          "excerpt": "Le, Radio Resource Management in Wireless Networks: An Engineering Approach, Cambridge University Press, 2017.",
+          "retrievedAt": "2026-09-07T19:28:29.311Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1179-16",
+          "url": "https://longbaole.github.io/",
+          "excerpt": "Le, and Dusit Niyato, Radio Resource Management in Multi-Tier Cellular Wireless Networks, Wiley, 2013.",
+          "retrievedAt": "2026-09-07T19:28:29.311Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:29:51.120Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1180": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://optnetsci.cise.ufl.edu/people/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1180-1",
+          "url": "https://optnetsci.cise.ufl.edu/people/",
+          "excerpt": "People - Adaptive Learning and Optimization Lab Skip to main content Adaptive Learning and Optimization Lab MENU My Department MENU People Research Machine Learning Blockchain Big Data Analysis Interdependent Networks Social Networks Cybersecurity Previous Topics Awards Seminar Projects Publications Home People People Principal Investigator My T.",
+          "retrievedAt": "2026-09-07T19:28:32.019Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1180-2",
+          "url": "https://optnetsci.cise.ufl.edu/people/",
+          "excerpt": "Thai is a UF Research Foundation Professor of Computer & Information Sciences & Engineering and Associate Director of Nelms Institute for the Connected World at the University of Florida.",
+          "retrievedAt": "2026-09-07T19:28:32.019Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1180-3",
+          "url": "https://optnetsci.cise.ufl.edu/people/",
+          "excerpt": "Thai has extensive expertise in trustworthy AI, billion-scale data mining, and optimization, especially for complex graph data with applications to blockchain, social media, critical networking infrastructure, cybersecurity, and healthcare.",
+          "retrievedAt": "2026-09-07T19:28:32.019Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1180-4",
+          "url": "https://optnetsci.cise.ufl.edu/people/",
+          "excerpt": "The results of her work have led to 7 books and 300+ publications in leading academic journals and conferences, including the 2014 IEEE MSN Best Paper Award, the 2017 IEEE ICDM Best Papers Award, the 2018 IEEE/ACM ASONAM Best Paper Runner Up, and the 2023 AAAI Distinguished Paper Award.",
+          "retrievedAt": "2026-09-07T19:28:32.019Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1180-5",
+          "url": "https://optnetsci.cise.ufl.edu/people/",
+          "excerpt": "Thai was awarded the Young Investigator (YIP) from the Defense Threat Reduction Agency (DTRA) and in 2010, she won the NSF CAREER Award.",
+          "retrievedAt": "2026-09-07T19:28:32.019Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1180-6",
+          "url": "https://optnetsci.cise.ufl.edu/people/",
+          "excerpt": "Thai has engaged in many professional activities, including being TPC-chairs of many IEEE international conferences and on the editorial board of several journals.",
+          "retrievedAt": "2026-09-07T19:28:32.019Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1180-7",
+          "url": "https://optnetsci.cise.ufl.edu/people/",
+          "excerpt": "She is presently the Editor-in-Chief of the Journal of Combinatorial Optimization (JOCO).",
+          "retrievedAt": "2026-09-07T19:28:32.019Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1180-8",
+          "url": "https://optnetsci.cise.ufl.edu/people/",
+          "excerpt": "Student Quan Nguyen received his Bachelor’s degree in Biomedical Engineering from Hanoi University of Science and Technology, Vietnam, in September 2021 and his Master’s degree in Biomedical Computing at the Technical University of Munich, Germany, in 2024.",
+          "retrievedAt": "2026-09-07T19:28:32.019Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:29:51.120Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1181": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.csulb.edu/mathematics-statistics/department-directory",
         "https://www.btran.science/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1181-1",
+          "url": "https://www.csulb.edu/mathematics-statistics/department-directory",
+          "excerpt": "king & Maps Careers with CSULB Alumni Alumni Home Alumni Volunteering Alumni Giving Campus Life Athletics Commencement Events Housing Divisions Office of the President Academic Affairs Administration & Finance Student Affairs University Relations & Development Information Technology Resources MyCSULB Canvas Beach Shops Campus Directory Email Admissions Enrollment Services Financial Aid Schedule of Classes Student Records Long Beach State Foundation Research Foundation Help University Policies Facebook Twitter Instagram Youtube Linkedin 1250 BELLFLOWER BOULEVARD LONG BEACH, CALIFORNIA 90840 562.",
+          "retrievedAt": "2026-09-07T19:28:32.554Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1181-2",
+          "url": "https://www.csulb.edu/mathematics-statistics/department-directory",
+          "excerpt": "ext-Driven Tasks for Calculus Data Science Learning Community Math Day at the Beach Southern California ARML Connect Contact Mathematics and Statistics Department Directory Jobs Giving Contact Mathematics and Statistics Department Directory Jobs Giving September Sep 9 Meet Your Alumni: Data Science and Analytics October Oct 16 CNSM Student Research Symposium 2026 CSULB Mathematics & Statistics Department Directory Advisors vary by major: Find My Advisor Tenured and Tenure-Track Faculty Tenured and Tenure-Track Faculty Name Position Contact Details Gao, Tangan Department Chair; Professor Tangan.",
+          "retrievedAt": "2026-09-07T19:28:32.554Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1181-3",
+          "url": "https://www.csulb.edu/mathematics-statistics/department-directory",
+          "excerpt": "4338 FO3-116 Newberger, Florence Undergraduate Associate Chair ; Professor Florence.",
+          "retrievedAt": "2026-09-07T19:28:32.554Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1181-4",
+          "url": "https://www.csulb.edu/mathematics-statistics/department-directory",
+          "excerpt": "4758 FO3-232 Scott Crass faculty website de Santiago, Rolando Assistant Professor Rolando.",
+          "retrievedAt": "2026-09-07T19:28:32.554Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1181-5",
+          "url": "https://www.csulb.edu/mathematics-statistics/department-directory",
+          "excerpt": "2055 FO3-107 For questions regarding the math credential, please use the following form: Contact Math SCCP .",
+          "retrievedAt": "2026-09-07T19:28:32.554Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1181-6",
+          "url": "https://www.csulb.edu/mathematics-statistics/department-directory",
+          "excerpt": "2807 FO3-224 Thuy Le profile Lee, Chung-Min Undergraduate Advisor Applied Math; Professor Chung-Min.",
+          "retrievedAt": "2026-09-07T19:28:32.554Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1181-7",
+          "url": "https://www.csulb.edu/mathematics-statistics/department-directory",
+          "excerpt": "5625 FO3-106 Li, Xuhui Graduate Advisor Math Education; Associate Professor Xuhui.",
+          "retrievedAt": "2026-09-07T19:28:32.554Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1181-8",
+          "url": "https://www.csulb.edu/mathematics-statistics/department-directory",
+          "excerpt": "8008 FO3-222 Will Murray profile Pair, Jeffrey Undergraduate Advisor Math and Math Education; Associate Professor Jeffrey.",
+          "retrievedAt": "2026-09-07T19:28:32.554Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1181-9",
+          "url": "https://www.btran.science/",
+          "excerpt": "Brian Tran&#39;s Homepage Search this site Embedded Files Skip to main content Skip to navigation Brian Tran&#39;s Homepage Home Research Teaching Brian Tran&#39;s Homepage Home Research Teaching More Home Research Teaching Dr.",
+          "retrievedAt": "2026-09-07T19:28:32.896Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1181-10",
+          "url": "https://www.btran.science/",
+          "excerpt": "Brian Kha Tran Assistant Professor Department of Mathematics and Statistics, California State University Long Beach E-mail: brian.",
+          "retrievedAt": "2026-09-07T19:28:32.896Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1181-11",
+          "url": "https://www.btran.science/",
+          "excerpt": "edu Photo of the Rosette Nebula by Steven Tran, used with permission As of Fall 2026, I am an Assistant Professor of Applied Mathematics in the Department of Mathematics and Statistics at California State University Long Beach.",
+          "retrievedAt": "2026-09-07T19:28:32.896Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1181-12",
+          "url": "https://www.btran.science/",
+          "excerpt": "Prior to my current position, I was a Visiting Assistant Professor in the Department of Applied Mathematics at the University of Colorado Boulder.",
+          "retrievedAt": "2026-09-07T19:28:32.896Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1181-13",
+          "url": "https://www.btran.science/",
+          "excerpt": "Before then, I was a Marc Kac Postdoctoral Fellow in Applied Mathematics at Los Alamos National Laboratory (LANL) in the Applied Mathematics and Plasma Physics Group (T-5) and the Center for Nonlinear Studies, mentored by Dr.",
+          "retrievedAt": "2026-09-07T19:28:32.896Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1181-14",
+          "url": "https://www.btran.science/",
+          "excerpt": "in Mathematics at the University of California San Diego in 2023, advised by Prof.",
+          "retrievedAt": "2026-09-07T19:28:32.896Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1181-15",
+          "url": "https://www.btran.science/",
+          "excerpt": "Melvin Leok , and received a Chancellor&#39;s Dissertation Medal and a Powell Dissertation Award for my dissertation.",
+          "retrievedAt": "2026-09-07T19:28:32.896Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1181-16",
+          "url": "https://www.btran.science/",
+          "excerpt": "I am broadly interested in numerical and geometric methods for ODEs and PDEs, and mathematical physics; particular areas of interest include PDE-constrained optimization, geometric mechanics, time integration, scientific computing applications such as computational radiation hydrodynamics, and structure-preserving numerical methods.",
+          "retrievedAt": "2026-09-07T19:28:32.896Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:29:51.120Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1182": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://ait.ac.th/2026/01/ait-ranked-5-in-thailand-by-scholargps-five-faculty-named-top-scholars/",
         "https://www.cs.ait.ac.th/~dung/"
       ],
-      "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "evidence": [
+        {
+          "id": "vp-1182-1",
+          "url": "https://ait.ac.th/2026/01/ait-ranked-5-in-thailand-by-scholargps-five-faculty-named-top-scholars/",
+          "excerpt": "ciety Sustainability Partners News Events Work at AIT BOI Science & Technology Park Intranet Students Contact Giving Alumni Emergency contacts & Covid-19 management Home &gt; News &gt; AIT Ranked #5 in Thailand by ScholarGPS; Six Faculty Named Top Scholars News AIT Ranked #5 in Thailand by ScholarGPS; Six Faculty Named Top Scholars 07 Jan 2026 AIT By Office of Communications and Public Affairs 7 January 2026 – The Asian Institute of Technology (AIT) has been ranked #5 in Thailand in the ScholarGPS Academic Institutional Ranking – National Overall (all fields) under the Lifetime Impact category.",
+          "retrievedAt": "2026-09-07T19:28:33.905Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1182-2",
+          "url": "https://ait.ac.th/2026/01/ait-ranked-5-in-thailand-by-scholargps-five-faculty-named-top-scholars/",
+          "excerpt": "-based scholarly analytics platform, also recognised six AIT faculty members among its top-ranked scholars in their respective specialities, based on indicators including publications, citations, and h-index.",
+          "retrievedAt": "2026-09-07T19:28:33.905Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1182-3",
+          "url": "https://ait.ac.th/2026/01/ait-ranked-5-in-thailand-by-scholargps-five-faculty-named-top-scholars/",
+          "excerpt": "The ranking places AIT among Thailand’s leading academic institutions for lifetime scholarly impact.",
+          "retrievedAt": "2026-09-07T19:28:33.905Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1182-4",
+          "url": "https://ait.ac.th/2026/01/ait-ranked-5-in-thailand-by-scholargps-five-faculty-named-top-scholars/",
+          "excerpt": "The following AIT faculty members are listed in the ScholarGPS 2025 Ranking under the Top Scholars by Institution category (Top 0.",
+          "retrievedAt": "2026-09-07T19:28:33.905Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1182-5",
+          "url": "https://ait.ac.th/2026/01/ait-ranked-5-in-thailand-by-scholargps-five-faculty-named-top-scholars/",
+          "excerpt": "Nguyen Thi Kim Oanh – #116 in Environment (systems) All Fields (Prior 5 Years) Assoc.",
+          "retrievedAt": "2026-09-07T19:28:33.905Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1182-6",
+          "url": "https://ait.ac.th/2026/01/ait-ranked-5-in-thailand-by-scholargps-five-faculty-named-top-scholars/",
+          "excerpt": "Sangam Shrestha – #30 in Climate change and #30 in River In addition to the faculty listed above, several other AIT faculty members are also ranked among the top 0.",
+          "retrievedAt": "2026-09-07T19:28:33.905Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1182-7",
+          "url": "https://ait.ac.th/2026/01/ait-ranked-5-in-thailand-by-scholargps-five-faculty-named-top-scholars/",
+          "excerpt": "Avishek Datta &#8211; (Lifetime Impact) Weed control; Crop protection / (Prior 5 Years) Drought tolerance; Adaptation Prof.",
+          "retrievedAt": "2026-09-07T19:28:33.905Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1182-8",
+          "url": "https://ait.ac.th/2026/01/ait-ranked-5-in-thailand-by-scholargps-five-faculty-named-top-scholars/",
+          "excerpt": "Jai Govind Singh &#8211; (Lifetime Impact) Energy / (Prior 5 Years) Energy Prof.",
+          "retrievedAt": "2026-09-07T19:28:33.905Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
+      "errors": [
+        "https://www.cs.ait.ac.th/~dung/: fetch failed"
+      ],
+      "updatedAt": "2026-09-07T19:29:51.120Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1183": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://users.aalto.fi/~truongh4/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1183-1",
+          "url": "https://users.aalto.fi/~truongh4/",
+          "excerpt": "Hong-Linh Truong Hong-Linh Truong (Tr&#432;&#417;ng H&#7891;ng L&#297;nh) Toggle navigation Home Research Teaching Services Consulting Welcome I am an associate professor (tenured) at Department of Computer Science at School of Science , Aalto University , Finland.",
+          "retrievedAt": "2026-09-07T19:28:36.851Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1183-2",
+          "url": "https://users.aalto.fi/~truongh4/",
+          "excerpt": "I am also a co-founder of Solint Oy, Finland, which develops and deployes EpesiPay platform in Kenya See my Short CV and Full CV .",
+          "retrievedAt": "2026-09-07T19:28:36.851Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1183-3",
+          "url": "https://users.aalto.fi/~truongh4/",
+          "excerpt": "Awards and Publications: Awards , Publications as well as Projects and Software Contact Visiting address Department of Computer Science Room A231, Konemiehentie 2, 02150 Espoo, Finland E-mail: linh.",
+          "retrievedAt": "2026-09-07T19:28:36.851Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1183-4",
+          "url": "https://users.aalto.fi/~truongh4/",
+          "excerpt": "fi Schedule: My travel plan Mailing address PO Box 15400, FI-00076 Aalto, Finland Social Links Linkedin | Twitter | Google Scholar | Research Gate | ORCID | Slideshare Photo: Aalto University/Jaakko Kahilaniemi Research I am currently leading the AaltoSEA Group on Systems and Services Engineering Analytics .",
+          "retrievedAt": "2026-09-07T19:28:36.851Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1183-5",
+          "url": "https://users.aalto.fi/~truongh4/",
+          "excerpt": "My research is in the field of distributed systems and large-scale software systems.",
+          "retrievedAt": "2026-09-07T19:28:36.851Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1183-6",
+          "url": "https://users.aalto.fi/~truongh4/",
+          "excerpt": "My main research interest focuses novel techniques and methods for Software, Data and Services Systems .",
+          "retrievedAt": "2026-09-07T19:28:36.851Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1183-7",
+          "url": "https://users.aalto.fi/~truongh4/",
+          "excerpt": "Furthermore, i am interested in (free) ICT solutions for (under) developing countries.",
+          "retrievedAt": "2026-09-07T19:28:36.851Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1183-8",
+          "url": "https://users.aalto.fi/~truongh4/",
+          "excerpt": "See my Research Awards , Team , Publications , Invited Talks and Tutorials , Research Projects and Software Prototypes Current and recent activities/projects Current research directions Supervision and Teaching My teaching is focused on advanced research-oriented topics with a strong emphasis on learning through the development and implementation of projects and new ideas.",
+          "retrievedAt": "2026-09-07T19:28:36.851Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:29:51.120Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1184": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://jit.ndhu.edu.tw/article/download/3203/3229"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1184-1",
+          "url": "https://jit.ndhu.edu.tw/article/download/3203/3229",
+          "excerpt": "000 n 0000008567 00000 n 0000009138 00000 n 0000010016 00000 n 0000010838 00000 n 0000011485 00000 n 0000012281 00000 n 0000013093 00000 n 0000013826 00000 n 0000014485 00000 n 0000014556 00000 n 0000014663 00000 n 0000055988 00000 n 0000056274 00000 n 0000056753 00000 n 0000111649 00000 n 0000147531 00000 n 0000185258 00000 n 0000185751 00000 n 0000186195 00000 n 0000001036 00000 n trailer ]/Prev 1114917>> startxref 0 %%EOF 2710 0 obj >stream h�b```b``����� �� \u0000\" l@�������=�e�\u0007�D\u0002��+\u0006�,\u0001a��93�\u0013�g0p$0L\u0005Jp�䛐��\u0014iq;7u�gp\u0017\u0003\u001a`d���&��ɦz#uٝ\u0012�V\u001d�5\u0013\u001e����%�VWVl[T�u���\u0002��J\u0014t�Hi�RL�� R\\V�FH1�ⳇ�`;�g\u001aD宍JP\u0003!",
+          "retrievedAt": "2026-09-07T19:28:42.725Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1184-2",
+          "url": "https://jit.ndhu.edu.tw/article/download/3203/3229",
+          "excerpt": "z�� 49J\u0014�X��� d�ݢB>���\u001cM��f-�(\u0010R�dI 3��\u0010�\u0017�_� Ȑ �0\u0010o\u0003\b0\u0000�G�� endstream endobj 2675 0 obj >>> endobj 2676 0 obj >/Font >/ProcSet[/PDF/Text]/XObject >>>/Rotate 0/TrimBox[0.",
+          "retrievedAt": "2026-09-07T19:28:42.725Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1184-3",
+          "url": "https://jit.ndhu.edu.tw/article/download/3203/3229",
+          "excerpt": "89]/Type/Page/PieceInfo /LastModified /NumberOfPageItemsInPage 2/NumberofPages 1/OriginalDocumentID /PageItemUIDToLocationDataMap >/PageTransformationMatrixList >/PageUIDList >/PageWidthList >>>>>>> endobj 2677 0 obj > endobj 2678 0 obj > endobj 2679 0 obj > endobj 2680 0 obj > endobj 2681 0 obj > endobj 2682 0 obj > endobj 2683 0 obj >stream H�\\�͎�@\u0014\u0005�=OQ��E\u0007���$��V;q1?",
+          "retrievedAt": "2026-09-07T19:28:42.725Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1184-4",
+          "url": "https://jit.ndhu.edu.tw/article/download/3203/3229",
+          "excerpt": "�=�G\u0016fAVfE����\u0003s@�������{�=��f\u000f����,�\b �}*�T�\u0015~�_�W�\u0015~�_�W�\u0015~�_�W�\u0015~�_�W�\u0015~�_�W�\u0015~�Ya6z \u001e���1z \u001e���1z \u001e���1z \u001e���1z \u001e���1z \u001ec��>�6�m��Ч�OC��}\u0006�\u0019�\u000f�\u0007�\u0003���\u0000�?",
+          "retrievedAt": "2026-09-07T19:28:42.725Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1184-5",
+          "url": "https://jit.ndhu.edu.tw/article/download/3203/3229",
+          "excerpt": "�\u001f�\u000f�\u0007�\u0003�%�[,�XS\u0016�XS� \u0018J��0�������t�\u0010���c\u001c���>gM}\u001f�4f��6�\u0017L�����o�\u0007�v��\u0015`\u0000~30` endstream endobj 2684 0 obj > endobj 2685 0 obj >stream H�\\��n�0\u0010E��\u0015~l\u001f�@�g�\u0014!",
+          "retrievedAt": "2026-09-07T19:28:42.725Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1184-6",
+          "url": "https://jit.ndhu.edu.tw/article/download/3203/3229",
+          "excerpt": "Qh%\u001eڮ��\u000f\b���J\u0012����wnnՕ6\u0012�D�\\\u001f��|���vt�����8�c�5)^�k��;�S�e��5m=~�M���\u001a�܊���\u0018ϻ��ge���6y\u0019��ݭ��\u0010��=51��������]��\u000e�g ���ܗǾ\u0002\u001d\u0002\u001c\u0002\u001d\u0002\u001c\u0002\u001d\u0002\u001c\u0002� XK�/�\u0017� j���Za��V�/�\u0017� ���2e�_�/�\u0017� �\u0005β!",
+          "retrievedAt": "2026-09-07T19:28:42.725Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1184-7",
+          "url": "https://jit.ndhu.edu.tw/article/download/3203/3229",
+          "excerpt": "o� > endobj 2687 0 obj >stream H�\\��j�@\u0010��z�9&� ��ӝ�08v\u0002>�\u000f��\u0007���W���X>��wJ\u0015��\u0002Y%FS��p���w���\\�= �!",
+          "retrievedAt": "2026-09-07T19:28:42.725Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1184-8",
+          "url": "https://jit.ndhu.edu.tw/article/download/3203/3229",
+          "excerpt": "��uJw��i�c|,�o�������������m\u001c��K�'�p�k�)\u001b}�ǯ�%�r���o�z7ݟ�O���ѭ��%a���ױnb��s,�E>֮z�Ǻ�}�ߺ\u0006n;���u*�\u0015\u001e^,�%k�V�g�g�\u0017�\u0017� �\u0006zK���Q�ߨ߲�����K�%�z\u0005��=�P t�\u000e�d�`�Fm������������\u00142\b\u0018� \u0002\u0006a� W�+�\u0015� r���\\a� W�+�\u0015� r��2�R�B�+AW®\u0004] �\u0012t\u0015�\u0019�\u0019�O@?",
+          "retrievedAt": "2026-09-07T19:28:42.725Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:29:51.120Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1185": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.uni.lu/snt-en/people/thang-xuan-vu/",
         "https://thangxvu.wordpress.com/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1185-1",
+          "url": "https://thangxvu.wordpress.com/",
+          "excerpt": ", IEEE Senior Member Associate Editor, EEE Communications Surveys & Tutorials Research Scientist, Interdisciplinary C entre for Security, Reliability and Trust (SnT), University of Luxembourg , 29 avenue J.",
+          "retrievedAt": "2026-09-07T19:28:43.395Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1185-2",
+          "url": "https://thangxvu.wordpress.com/",
+          "excerpt": "Sc in Electronics and Telecommunications Engineering from VNU University of Engineering and Technology ( UET ), Hanoi, Vietnam, in 2007 and 2009, respectively, and the PhD in Telecommunications Engineering from Supelec , University Paris XI , France in 2014 under the supervision of Prof.",
+          "retrievedAt": "2026-09-07T19:28:43.395Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1185-3",
+          "url": "https://thangxvu.wordpress.com/",
+          "excerpt": "Research interests: Wireless Communications and Networking: Multiuser MIMO, full-duplex, cloud-RAN, Open RAN, network slicing, routing Multilayer Ground-Air-Space 6G Networks Robust Machine learning for Communications Systems Optimization and resource allocation Website Built with WordPress.",
+          "retrievedAt": "2026-09-07T19:28:43.395Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1185-4",
+          "url": "https://thangxvu.wordpress.com/",
+          "excerpt": "To find out more, including how to control cookies, see here: Cookie Policy thangxvu.",
+          "retrievedAt": "2026-09-07T19:28:43.395Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1185-5",
+          "url": "https://thangxvu.wordpress.com/",
+          "excerpt": "com Sign up Log in Copy shortlink Report this content Manage subscriptions Loading Comments.",
+          "retrievedAt": "2026-09-07T19:28:43.395Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1185-6",
+          "url": "https://thangxvu.wordpress.com/",
+          "excerpt": "Email (Required) Name (Required) Website Design a site like this with WordPress.",
+          "retrievedAt": "2026-09-07T19:28:43.395Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:29:51.120Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1186": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://es.ncku.edu.tw/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://es.ncku.edu.tw/: fetch failed"
+      ],
+      "updatedAt": "2026-09-07T19:29:51.120Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1187": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://nmu.edu/mathandcomputerscience/faculty"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1187-1",
+          "url": "https://nmu.edu/mathandcomputerscience/faculty",
+          "excerpt": "s Events GRE Prep Internships Math Placement Schedules and Syllabi Scholarships Student Organizations Tutor Labs Alumni & Friends Dept - 04 NMU Alumni Home NMU Foundation Online Giving Form Update Alumni Record Apply NMU Torch Logo Northern Michigan University Future Students Admissions - Undergraduate Academic Programs Tuition and Fees Housing Financial Aid Military and Veterans Graduate Admissions Online Programs International Programs Orientation Visit Campus Wellbeing Request Information Image At Northern Michigan University, students find more than a new school–they find a place to belong.",
+          "retrievedAt": "2026-09-07T19:28:44.429Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1187-2",
+          "url": "https://nmu.edu/mathandcomputerscience/faculty",
+          "excerpt": "Our transfer-friendly policies make it easy to apply credits and stay on track toward graduation.",
+          "retrievedAt": "2026-09-07T19:28:44.429Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1187-3",
+          "url": "https://nmu.edu/mathandcomputerscience/faculty",
+          "excerpt": "You’ll join a close-knit academic community that values your experience and supports your next step.",
+          "retrievedAt": "2026-09-07T19:28:44.429Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1187-4",
+          "url": "https://nmu.edu/mathandcomputerscience/faculty",
+          "excerpt": "Current Students Undergraduate Catalog Graduate Catalog Student Success Dean of Students Center for Student Enrichment Counseling and Consultation Services Health Center Sports and Recreation Registrar University Calendars MyNMU EduCat Wellbeing All Student Resources Image Northern prioritizes student wellbeing through comprehensive support and modern campus facilities.",
+          "retrievedAt": "2026-09-07T19:28:44.429Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1187-5",
+          "url": "https://nmu.edu/mathandcomputerscience/faculty",
+          "excerpt": "New residence halls and apartments, the FitZone, PEIF, and robust outdoor recreation programs promote physical, mental, and social health.",
+          "retrievedAt": "2026-09-07T19:28:44.429Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1187-6",
+          "url": "https://nmu.edu/mathandcomputerscience/faculty",
+          "excerpt": "Students benefit from a campus environment built to support success inside and outside the classroom.",
+          "retrievedAt": "2026-09-07T19:28:44.429Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1187-7",
+          "url": "https://nmu.edu/mathandcomputerscience/faculty",
+          "excerpt": "Community Athletics Alumni Association NMU Foundation Northern Center Continuing Education Educational Access Network (EAN) Parents Youth Programs Northern Today Events Calendar Tickets Image Northern Michigan University fosters engagement through athletics, student organizations, and a vibrant alumni network.",
+          "retrievedAt": "2026-09-07T19:28:44.429Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1187-8",
+          "url": "https://nmu.edu/mathandcomputerscience/faculty",
+          "excerpt": "Continuing education programs provide flexible opportunities for lifelong learning and career advancement.",
+          "retrievedAt": "2026-09-07T19:28:44.429Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:29:51.120Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1188": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.swinburne.edu.au/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1188-1",
+          "url": "https://www.swinburne.edu.au/",
+          "excerpt": "w to apply as an international student How to apply as a local vocational education student How to apply as a local undergraduate student How to apply as a local postgraduate student How to apply for a research degree How to apply as an asylum seeker or refugee visit Enrolling toggle Enrolling menu Enrolling How to enrol Understanding your university offer Course planner Setting up your class timetable Enrol as a PhD or master degree student visit Life at Swinburne toggle Life at Swinburne menu Life at Swinburne visit Why Swinburne toggle Why Swinburne menu Why Swinburne Why study in Australia?",
+          "retrievedAt": "2026-09-07T19:28:44.585Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1188-2",
+          "url": "https://www.swinburne.edu.au/",
+          "excerpt": "menu Collaboration and partnerships visit Placements and internships toggle Placements and internships menu Placements and internships Partner stories Hosting students with disabilities Work with our accreditation placement students Benefits of working with our students visit Employ a student toggle Employ a student menu Employ a student Apprenticeships and traineeships visit School programs toggle School programs menu School programs Workshops, events and outreach programs Work experience Knox Innovation, Opportunity and Sustainability Centre Australian Synchrotron Science Education PrimeSCI!",
+          "retrievedAt": "2026-09-07T19:28:44.585Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1188-3",
+          "url": "https://www.swinburne.edu.au/",
+          "excerpt": "arch Indigenous research projects visit Research ethics and integrity toggle Research ethics and integrity menu Research ethics and integrity Animal research Biosafety compliance Data management Funding from tobacco companies Human research Intellectual property Find an expert visit International students toggle International students menu International students Scholarships Fees Visas ELICOS and Preparation courses Studying abroad in Melbourne Find an agent Apply now Timely applications now open Explore everything you need to make Swinburne your #1 VTAC preference and get where you want to go.",
+          "retrievedAt": "2026-09-07T19:28:44.585Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1188-4",
+          "url": "https://www.swinburne.edu.au/",
+          "excerpt": "Information Technology Law Media and Communication Nursing Psychology Science Trades and Apprenticeships Bachelor of Applied Innovation Arts, Humanities and Social Sciences Aviation Built Environment and Architecture Business Design Education Engineering Film and Television Games and Animation Health Information Technology Law Media and Communication Nursing Psychology Science Trades and Apprenticeships Introducing Ad Astra_2030: to the stars Building on the momentum of Horizon 2025, we are delivering an even more ambitious agenda to bring people and technology together to build a better world.",
+          "retrievedAt": "2026-09-07T19:28:44.585Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1188-5",
+          "url": "https://www.swinburne.edu.au/",
+          "excerpt": "Discover more (Introducing Ad Astra_2030: to the stars) Online study options Interested in online study?",
+          "retrievedAt": "2026-09-07T19:28:44.585Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1188-6",
+          "url": "https://www.swinburne.edu.au/",
+          "excerpt": "In addition to Swinburne&#39;s world-class on-campus courses, Swinburne Online uses innovative technologies to deliver online study options – from vocational education to undergraduate and postgraduate courses.",
+          "retrievedAt": "2026-09-07T19:28:44.585Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1188-7",
+          "url": "https://www.swinburne.edu.au/",
+          "excerpt": "Explore Apply ATAR-free and secure your future The best move you’ll make in Year 12 Apply for Swinburne’s Early Entry Program now and you could secure an offer before exams – no ATAR required.",
+          "retrievedAt": "2026-09-07T19:28:44.585Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1188-8",
+          "url": "https://www.swinburne.edu.au/",
+          "excerpt": "Learn more (Apply ATAR-free and secure your future) Guaranteed Work Integrated Learning At Swinburne, we’re kicking Work Integrated Learning up a notch with real industry experience guaranteed in all our bachelor degrees, and industry immersion guaranteed for all our vocational students.",
+          "retrievedAt": "2026-09-07T19:28:44.585Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:29:51.120Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1189": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://scholars.uow.edu.au/hoang-dung-duong/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1189-1",
+          "url": "https://scholars.uow.edu.au/hoang-dung-duong/",
+          "excerpt": "Discovery Browser Not Supported Your browser (Internet Explorer or other legacy browser) is not supported by this application.",
+          "retrievedAt": "2026-09-07T19:28:45.570Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:29:51.120Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1190": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.bc.edu/bc-web/schools/ssw/faculty-research/faculty-directory/thanh-tran.html"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.bc.edu/bc-web/schools/ssw/faculty-research/faculty-directory/thanh-tran.html: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:29:51.120Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1191": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.cla.csulb.edu/departments/psychology/faculty/kim-phuong-vu/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1191-1",
+          "url": "https://www.cla.csulb.edu/departments/psychology/faculty/kim-phuong-vu/",
+          "excerpt": "king & Maps Careers with CSULB Alumni Alumni Home Alumni Volunteering Alumni Giving Campus Life Athletics Commencement Events Housing Divisions Office of the President Academic Affairs Administration & Finance Student Affairs University Relations & Development Information Technology Resources MyCSULB Canvas Beach Shops Campus Directory Email Admissions Enrollment Services Financial Aid Schedule of Classes Student Records Long Beach State Foundation Research Foundation Help University Policies Facebook Twitter Instagram Youtube Linkedin 1250 BELLFLOWER BOULEVARD LONG BEACH, CALIFORNIA 90840 562.",
+          "retrievedAt": "2026-09-07T19:28:48.511Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1191-2",
+          "url": "https://www.cla.csulb.edu/departments/psychology/faculty/kim-phuong-vu/",
+          "excerpt": "riting Center Calendar Contact Image CLA Home About the College Dean&#039;s Message Administration and Staff CLA Annual Budget Reports ASPIRE Magazine Departments and Centers Departments and Programs Centers and Institutes Employment Opportunities Open Faculty Positions Open Staff Positions Open Student Positions Graduate Studies CLA Alumni Giving to CLA CLA Faculty Council My CLA September Sep 8 Kusanyiko - Welcome Back September Sep 10 The Secret War Against Hate: American Resistance to Antisemitism and White Supremacy October Oct 15 Surprises In The Disney Studios Library This is a carousel.",
+          "retrievedAt": "2026-09-07T19:28:48.511Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1191-3",
+          "url": "https://www.cla.csulb.edu/departments/psychology/faculty/kim-phuong-vu/",
+          "excerpt": "Use next and previous buttons to navigate or jump to specific slides with the numbered \"go to slide\" buttons.",
+          "retrievedAt": "2026-09-07T19:28:48.511Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1191-4",
+          "url": "https://www.cla.csulb.edu/departments/psychology/faculty/kim-phuong-vu/",
+          "excerpt": "Beach students show up for children with autism Beach alumni leave gift to inspire the next generation of journalists Immersive mediation program trains tomorrow&#039;s peacemakers Alumni coaching part of Moot Court&#039;s winning &#039;secret sauce&#039; CSULB Pow Wow 2026 Photo Recap Image The College of Liberal Arts is proud… CLA Student Spotlight: Esteban Zeferino Charco Image Esteban Zeferino Charco came to CSULB… Dr.",
+          "retrievedAt": "2026-09-07T19:28:48.511Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1191-5",
+          "url": "https://www.cla.csulb.edu/departments/psychology/faculty/kim-phuong-vu/",
+          "excerpt": "Maulana Karenga, professor and chair of the Department of Africana Studies at CSULB, will… More News Discover the College of Liberal Arts The College of Liberal Arts at CSULB is the largest college on campus, with thirty-one excellent departments and programs, several innovative centers and projects, over 685 outstanding faculty members, and over 74 individual staff members.",
+          "retrievedAt": "2026-09-07T19:28:48.511Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1191-6",
+          "url": "https://www.cla.csulb.edu/departments/psychology/faculty/kim-phuong-vu/",
+          "excerpt": "The college faculty are among the best in the nation and have received a variety of national and international awards.",
+          "retrievedAt": "2026-09-07T19:28:48.511Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1191-7",
+          "url": "https://www.cla.csulb.edu/departments/psychology/faculty/kim-phuong-vu/",
+          "excerpt": "CLA has 9300 undergraduate students pursuing a variety of highly valued degrees through the college’s 99 unique majors and minors.",
+          "retrievedAt": "2026-09-07T19:28:48.511Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1191-8",
+          "url": "https://www.cla.csulb.edu/departments/psychology/faculty/kim-phuong-vu/",
+          "excerpt": "Additionally, 575 graduate students are also obtaining advanced degrees and special certificates in the college.",
+          "retrievedAt": "2026-09-07T19:28:48.511Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:29:51.120Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1192": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://research.monash.edu/en/persons/hai-vu"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://research.monash.edu/en/persons/hai-vu: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:29:51.120Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1193": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.une.edu.au/staff-profiles/education/hphan2"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.une.edu.au/staff-profiles/education/hphan2: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T19:29:51.120Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1194": {
       "overview": "pending",
