@@ -1931,7 +1931,8 @@
         "vp-0319",
         "vp-0320"
       ],
-      "status": "pending"
+      "status": "in_progress",
+      "startedAt": "2026-09-07T04:41:32.751Z"
     },
     {
       "number": 17,
@@ -23817,206 +23818,1336 @@
       "updatedAt": "2026-09-07T04:40:48.703Z"
     },
     "vp-0301": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://udayton.edu/directory/engineering/computerscience/nguyen-ngoc.php",
         "https://ngocntkt.github.io/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0301-1",
+          "url": "https://udayton.edu/directory/engineering/computerscience/nguyen-ngoc.php",
+          "excerpt": "Ngoc Nguyen : University of Dayton, Ohio Skip to content /////// Ngoc Nguyen Home Directory Ngoc Nguyen Ngoc Nguyen Assistant Professor Full-Time Faculty School of Engineering: Department of Computer Science Contact Email Ngoc Nguyen Website Curriculum Vitae Ngoc Nguyen Assistant Professor Full-Time Faculty School of Engineering: Department of Computer Science Degrees Ph.",
+          "retrievedAt": "2026-09-07T04:41:33.584Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0301-2",
+          "url": "https://udayton.edu/directory/engineering/computerscience/nguyen-ngoc.php",
+          "excerpt": "Ngoc Nguyen is an Assistant Professor in the Department of Computer Science at the University of Dayton, where she leads the Computation and Decision-Making Lab.",
+          "retrievedAt": "2026-09-07T04:41:33.584Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0301-3",
+          "url": "https://udayton.edu/directory/engineering/computerscience/nguyen-ngoc.php",
+          "excerpt": "Her research lies at the intersection of human-AI interaction, machine learning, and cognitive science, with a focus on developing intelligent systems that support collaborative and data-driven decisions.",
+          "retrievedAt": "2026-09-07T04:41:33.584Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0301-4",
+          "url": "https://udayton.edu/directory/engineering/computerscience/nguyen-ngoc.php",
+          "excerpt": "Nguyen was a postdoctoral fellow at the Dynamic Decision-Making Lab at Carnegie Mellon University.",
+          "retrievedAt": "2026-09-07T04:41:33.584Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0301-5",
+          "url": "https://udayton.edu/directory/engineering/computerscience/nguyen-ngoc.php",
+          "excerpt": "in Computer Science from the Free University of Bozen-Bolzano in Italy, where her research explored AI-driven support for group decision-making through interactive recommendation techniques.",
+          "retrievedAt": "2026-09-07T04:41:33.584Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0301-6",
+          "url": "https://udayton.edu/directory/engineering/computerscience/nguyen-ngoc.php",
+          "excerpt": "Her work has been supported by the National Science Foundation (NSF-IIS) and the NSF SBIR/STTR programs for advancing fundamental research and its applications in real-world decision-making contexts.",
+          "retrievedAt": "2026-09-07T04:41:33.584Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0301-7",
+          "url": "https://udayton.edu/directory/engineering/computerscience/nguyen-ngoc.php",
+          "excerpt": "Nguyen&#8217;s research focuses on understanding how people make decisions under uncertainty and how to design artificial intelligence systems that effectively support and collaborate with humans in individual and group decision-making.",
+          "retrievedAt": "2026-09-07T04:41:33.584Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0301-8",
+          "url": "https://udayton.edu/directory/engineering/computerscience/nguyen-ngoc.php",
+          "excerpt": "Her work combines experimental and computational approaches and draws from the interdisciplinary intersection of cognitive science, social psychology, and computer science to model human behavior, improve machine learning systems, and identify design principles for developing intelligent systems that interact with humans.",
+          "retrievedAt": "2026-09-07T04:41:33.584Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0301-9",
+          "url": "https://ngocntkt.github.io/",
+          "excerpt": "I am an Assistant Professor at the Department of Computer Science at University of Dayton (UD), OH.",
+          "retrievedAt": "2026-09-07T04:41:33.838Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0301-10",
+          "url": "https://ngocntkt.github.io/",
+          "excerpt": "My research is broadly connected to the fields of artificial intelligence (AI) and machine learning, human-computer interaction, cognitive science, and computational social sciences.",
+          "retrievedAt": "2026-09-07T04:41:33.838Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0301-11",
+          "url": "https://ngocntkt.github.io/",
+          "excerpt": "I use both experimental and computational approaches to understand how people learn to make decisions under uncertainty and how to design AI-powered systems that effectively support human decision-making processes and are helpful for humans to collaborate with when making joint decisions.",
+          "retrievedAt": "2026-09-07T04:41:33.838Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0301-12",
+          "url": "https://ngocntkt.github.io/",
+          "excerpt": "Prior to UD, I spent three years as a Postdoctoral Fellow at Carnegie Mellon University&rsquo;s Dynamic Decision Making Lab (DDMLab) and six months as a Visiting Faculty Lecturer at the Miner School of Computer & Information Sciences, University of Massachusetts Lowell.",
+          "retrievedAt": "2026-09-07T04:41:33.838Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0301-13",
+          "url": "https://ngocntkt.github.io/",
+          "excerpt": "in Computer Science from the Faculty of Computer Science at the Free University of Bozen-Bolzano, Italy, where my research focused on supporting group decision-making processes with conversational recommendation techniques.",
+          "retrievedAt": "2026-09-07T04:41:33.838Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0301-14",
+          "url": "https://ngocntkt.github.io/",
+          "excerpt": "Research Interests: My research interests include personalized, adaptive systems; computational modeling of human behavior; artificial intelligence; human-AI interaction; and machine learning.",
+          "retrievedAt": "2026-09-07T04:41:33.838Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0301-15",
+          "url": "https://ngocntkt.github.io/",
+          "excerpt": "News 05/2026: Awarded the 2026 NSF CISE REU Supplemental Funding (Sole PI) from the Computing Research Association (CRA).",
+          "retrievedAt": "2026-09-07T04:41:33.838Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0301-16",
+          "url": "https://ngocntkt.github.io/",
+          "excerpt": "11/2025: Full paper titled 'How Does LLM-powered Coding Assistance Shape Incidental Learning?",
+          "retrievedAt": "2026-09-07T04:41:33.838Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:44:09.563Z"
     },
     "vp-0302": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://sites.google.com/view/thainguyenmath/home"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0302-1",
+          "url": "https://sites.google.com/view/thainguyenmath/home",
+          "excerpt": "Thanh Thai Nguyen Home Research Teaching Current courses MTH 218 S26 MTH 361 S26 Old teaching Math1B03 F23 Math1ZB3 W23 Math1MM3 W23 Calculus III S22 Math2LA3 W24 MTH 168 S25 MTH 361 S25 MTH 168 F25 MTH 148 F25 CV Events Conferences & Workshops Talks Posters Outreach & Service More Home Research Teaching Current courses MTH 218 S26 MTH 361 S26 Old teaching Math1B03 F23 Math1ZB3 W23 Math1MM3 W23 Calculus III S22 Math2LA3 W24 MTH 168 S25 MTH 361 S25 MTH 168 F25 MTH 148 F25 CV Events Conferences & Workshops Talks Posters Outreach & Service THÁI THÀNH NGUYỄN Photo by Anh Ngo Welcome to my website.",
+          "retrievedAt": "2026-09-07T04:41:34.165Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0302-2",
+          "url": "https://sites.google.com/view/thainguyenmath/home",
+          "excerpt": "My name is Thai Nguyen (Nguyễn Thành Thái in Vietnamese, Thái Thành Nguyễn in publication, and Thanh Thai Nguyen in legal documents).",
+          "retrievedAt": "2026-09-07T04:41:34.165Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0302-3",
+          "url": "https://sites.google.com/view/thainguyenmath/home",
+          "excerpt": "Previously, I was a Britton postdoctoral fellow at McMaster University , working in Combinatorial Algebraic Geometry group with Dr.",
+          "retrievedAt": "2026-09-07T04:41:34.165Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0302-4",
+          "url": "https://sites.google.com/view/thainguyenmath/home",
+          "excerpt": "I am interested in combinatorial and computational aspects of commutative algebra and its interactions with combinatorics and geometry.",
+          "retrievedAt": "2026-09-07T04:41:34.165Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0302-5",
+          "url": "https://sites.google.com/view/thainguyenmath/home",
+          "excerpt": "My current research topics include asymptotic behaviors of families of ideals, polynomial interpolation questions involving symbolic powers of ideals of points, as well as algebra and combinatorics of monomial ideals and binomial ideals.",
+          "retrievedAt": "2026-09-07T04:41:34.165Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0302-6",
+          "url": "https://sites.google.com/view/thainguyenmath/home",
+          "excerpt": "I am also interested in applications including spline interpolation and coding theory.",
+          "retrievedAt": "2026-09-07T04:41:34.165Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0302-7",
+          "url": "https://sites.google.com/view/thainguyenmath/home",
+          "excerpt": "I am teaching MTH 218 (Calculus III) and MTH 361 (Abstract Algebra) in Spring 2026.",
+          "retrievedAt": "2026-09-07T04:41:34.165Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0302-8",
+          "url": "https://sites.google.com/view/thainguyenmath/home",
+          "excerpt": "If you have any questions or comments, please feel free to contact me at tnguyen5(at)udayton(dot)edu or tnguyen11(at)tulane(dot)edu .",
+          "retrievedAt": "2026-09-07T04:41:34.165Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:44:09.563Z"
     },
     "vp-0303": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://shidler.hawaii.edu/itm/directory/tung-x-bui"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0303-1",
+          "url": "https://shidler.hawaii.edu/itm/directory/tung-x-bui",
+          "excerpt": "Bui | The Shidler College of Business Skip to main content The Shidler College of Business Menu Close ITM: Menu: Mobile (Types) About Message From The Chair News Academics BBA in Management Information Systems ITM PhD Program Communication & Information Sciences PhD Program Course Catalog People Sal Aurigemma Tung X.",
+          "retrievedAt": "2026-09-07T04:41:37.489Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0303-2",
+          "url": "https://shidler.hawaii.edu/itm/directory/tung-x-bui",
+          "excerpt": "Panko Thayanan Phuaphanthong Daniel Port William Edward Remus Andrea Rivera Kristine Stenstrom Natacha Thepsouvan Reginald G.",
+          "retrievedAt": "2026-09-07T04:41:37.489Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0303-3",
+          "url": "https://shidler.hawaii.edu/itm/directory/tung-x-bui",
+          "excerpt": "Worthley Bo Sophia Xiao HICSS Resources Contact University of Hawaiʻi at Mānoa News & Events Giving Contact [search] --> [search] University of Hawaiʻi at Mānoa Shidler College of Business ITM: Menu (Types) About Academics People HICSS Resources Contact Information Technology Management Tung X.",
+          "retrievedAt": "2026-09-07T04:41:37.489Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0303-4",
+          "url": "https://shidler.hawaii.edu/itm/directory/tung-x-bui",
+          "excerpt": "Bui Breadcrumb The Shidler College of Business Information Technology Management People Tung X.",
+          "retrievedAt": "2026-09-07T04:41:37.489Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0303-5",
+          "url": "https://shidler.hawaii.edu/itm/directory/tung-x-bui",
+          "excerpt": "Bui Professor, Information Technology Management Faculty Director of the Vietnam Executive MBA Program Matson Navigation Company Chair of Global Business Chair of the Hawai&#039;i International Conference on System Sciences Director of the APEC-Study Center Director of the Pacific Research Institute for Information Systems and Management (PRIISM) Senior Research Affiliate, APEC Study Center, UC Berkeley Room BusAd E-303a Email tungb@hawaii.",
+          "retrievedAt": "2026-09-07T04:41:37.489Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0303-6",
+          "url": "https://shidler.hawaii.edu/itm/directory/tung-x-bui",
+          "excerpt": "Economics and Social Sciences, University of Fribourg, Switzerland Courses Taught BUS 625 Digital Transformation with Information Systems and Technology (3) BUS 696 MBA Consulting Practicum (3) ITM 704 Doctoral Seminar in Information Systems (3) Research Interests Digital Transformation Computer-supported group decision and negotiation Economic evaluation of information technology Emergency Response Systems Geoeconomics and international business Selected Publications B Bui (2017-2026), Annual Proceedings of the Hawaii International Conference on System Sciences (ed), ScholarSpace; https://hdl.",
+          "retrievedAt": "2026-09-07T04:41:37.489Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0303-7",
+          "url": "https://shidler.hawaii.edu/itm/directory/tung-x-bui",
+          "excerpt": "(2026), When Digital Government Is Not Enough: Public Value Creation and Governance in AI-Enabled Public Institutions, AIS Pre-ECIS workshop on Digital Government , Milan, June.",
+          "retrievedAt": "2026-09-07T04:41:37.489Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0303-8",
+          "url": "https://shidler.hawaii.edu/itm/directory/tung-x-bui",
+          "excerpt": "Thriving Amid Shifting Sands: How Structured Resilience Keeps Vietnam Moving despite Turbulence , Global Asia , June.",
+          "retrievedAt": "2026-09-07T04:41:37.489Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:44:09.563Z"
     },
     "vp-0304": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://mhieutran.com/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0304-1",
+          "url": "https://mhieutran.com/",
+          "excerpt": "Hieu Tran Hieu Tran I am an Assistant Professor of Finance at the University of Massachusetts Boston.",
+          "retrievedAt": "2026-09-07T04:41:37.736Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0304-2",
+          "url": "https://mhieutran.com/",
+          "excerpt": "I also completed my master&#8217;s degree at Vanderbilt University and bachelor&#8217;s degree at Singapore Management University.",
+          "retrievedAt": "2026-09-07T04:41:37.736Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0304-3",
+          "url": "https://mhieutran.com/",
+          "excerpt": "CV Working papers: Banks, Fintech Disruptions, and Labor Consequences Presentation (including scheduled): AEA 2024, AFA 2023 (poster), NFA 2023, MFA 2023, FMA 2023, Asian FA 2023, AFBC 2022 Payment Technology, Entrepreneurship, and Racial Disparities FMA 2023 Semifinalist for best paper awards Presentation (including scheduled): AEA 2024 (poster), FMA 2023, SFA 2023, 4th DIFE 2023 SRI Funds and Corporate Governance, with Ugur Le l Teaching: Terry College of Business, University of Georgia Instructor of Record: FINA 4320 &#8211; Derivative Security Markets, Spring 2023 Evaluation: 4.",
+          "retrievedAt": "2026-09-07T04:41:37.736Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:44:09.563Z"
     },
     "vp-0305": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.si.umich.edu/people/matthew-bui"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.si.umich.edu/people/matthew-bui: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T04:44:09.563Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-0306": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://directory.sph.umn.edu/bio/sph-a-z/tran-huynh"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0306-1",
+          "url": "https://directory.sph.umn.edu/bio/sph-a-z/tran-huynh",
+          "excerpt": "r, Division of Environmental Health Sciences Titles Outreach Director, Midwest Center for Occupational Health and Safety (MCOHS) Education PhD, Environmental Health Sciences, University of Minnesota, 2014 MPH, Environmental Health Sciences, University of Minnesota, 2009 BS, Microbiology, University of Minnesota, 2006 View CV/Resume View Experts@Minnesota Profile View PubMed Publications View ORCID Profile 612-626-2468 [email&#160;protected] Summary My work centers around community-based participatory research and environmental and occupational health with the aim of reducing health disparities.",
+          "retrievedAt": "2026-09-07T04:41:39.798Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0306-2",
+          "url": "https://directory.sph.umn.edu/bio/sph-a-z/tran-huynh",
+          "excerpt": "I am a certified industrial hygienist (CIH) with experience helping immigrant-owned, under-resourced small businesses maintain safe work environments.",
+          "retrievedAt": "2026-09-07T04:41:39.798Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0306-3",
+          "url": "https://directory.sph.umn.edu/bio/sph-a-z/tran-huynh",
+          "excerpt": "I use both qualitative and quantitative research methods to document health disparities among vulnerable populations and enjoy working collaboratively with academics, nonprofit organizations, and governmental agencies on public policy and programs to remove structural barriers for immigrants to achieve their optimal health and well-being.",
+          "retrievedAt": "2026-09-07T04:41:39.798Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0306-4",
+          "url": "https://directory.sph.umn.edu/bio/sph-a-z/tran-huynh",
+          "excerpt": "Expertise Occupational hygiene, community-based participatory research, exposure science, qualitative research methods, health disparities, public policy, immigrant health, precarious employment, vulnerable worker populations.",
+          "retrievedAt": "2026-09-07T04:41:39.798Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0306-5",
+          "url": "https://directory.sph.umn.edu/bio/sph-a-z/tran-huynh",
+          "excerpt": "Awards and Recognition Mentor Recognition Award, 2018 Delta Omega Society, Pi Chapter, 2014 Professional Associations American Industrial Hygiene Association International Society of Exposure Science More Information Expand all Accordions + Research and Publications Publications See a full list of publications on PubMed Selected Publications Huỳnh TB , Nguyễn DT, Vũ N, Robinson L, Trần E, Nguyễn N, Carroll-Scott A, Burstyn I.",
+          "retrievedAt": "2026-09-07T04:41:39.798Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0306-6",
+          "url": "https://directory.sph.umn.edu/bio/sph-a-z/tran-huynh",
+          "excerpt": "A participatory approach to designing and implementing an occupational health intervention for the nail salon community in the Greater Philadelphia region .",
+          "retrievedAt": "2026-09-07T04:41:39.798Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0306-7",
+          "url": "https://directory.sph.umn.edu/bio/sph-a-z/tran-huynh",
+          "excerpt": "The need for a multi-level approach to occupational safety and health among Asian American Beauty Service Workers .",
+          "retrievedAt": "2026-09-07T04:41:39.798Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0306-8",
+          "url": "https://directory.sph.umn.edu/bio/sph-a-z/tran-huynh",
+          "excerpt": "Stakeholders' Perspectives on the Feasibility of Adopting a Healthy Nail Salon Recognition Program in Philadelphia: A Qualitative Study.",
+          "retrievedAt": "2026-09-07T04:41:39.798Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:44:09.563Z",
+      "nextAction": "Directory profile links to PubMed search without an individual publication list."
     },
     "vp-0307": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://med.umn.edu/bio/hai-dang-nguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0307-1",
+          "url": "https://med.umn.edu/bio/hai-dang-nguyen",
+          "excerpt": "(MPaT) Faculty, Bioinformatics and Computational Biology Graduate Program (BICB) Preceptor, Bio-LEAP Program Email [email&#160;protected] Office Phone (612) 625-7698 Copy URL QR code Scan with smart phone camera Assistant Professor Faculty, MS and PhD Programs in Molecular Pharmacology and Therapeutics (MPaT) Faculty, Bioinformatics and Computational Biology Graduate Program (BICB) Preceptor, Bio-LEAP Program Address 3-122 Nils Hasselmo Hall 312 Church St SE Minneapolis, MN 55455-0357 Additional Links Department of Pharmacology Dang Lab Publications Bio-LEAP Program Application + Biography Dr.",
+          "retrievedAt": "2026-09-07T04:41:40.086Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0307-2",
+          "url": "https://med.umn.edu/bio/hai-dang-nguyen",
+          "excerpt": "Nguyen is an Assistant Professor in the Department of Pharmacology and an EvansMDS Young Investigator, determining mechanisms and therapeutic strategies for Myelodysplastic syndrome patients harboring RNA splicing gene mutations.",
+          "retrievedAt": "2026-09-07T04:41:40.086Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0307-3",
+          "url": "https://med.umn.edu/bio/hai-dang-nguyen",
+          "excerpt": "He is also a part of a multidisciplinary team in the functional genomics of solid tumors, launched by the Medical School and the Masonic Cancer Center to develop new technologies and models for understanding cancer heterogeneity.",
+          "retrievedAt": "2026-09-07T04:41:40.086Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0307-4",
+          "url": "https://med.umn.edu/bio/hai-dang-nguyen",
+          "excerpt": "Lee Zou's laboratory at Harvard Medical School and Massachusetts General Hospital Cancer Center.",
+          "retrievedAt": "2026-09-07T04:41:40.086Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0307-5",
+          "url": "https://med.umn.edu/bio/hai-dang-nguyen",
+          "excerpt": "Specialty Graduate Faculty - Molecular Pharmacology and Therapeutics (MPaT) + Research In response to DNA damage from environmental and endogenous sources, cells activate an elaborate signaling network called DNA damage response (DDR).",
+          "retrievedAt": "2026-09-07T04:41:40.086Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0307-6",
+          "url": "https://med.umn.edu/bio/hai-dang-nguyen",
+          "excerpt": "This response functions to preserve genomic integrity, which is critical for normal development and cancer prevention.",
+          "retrievedAt": "2026-09-07T04:41:40.086Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0307-7",
+          "url": "https://med.umn.edu/bio/hai-dang-nguyen",
+          "excerpt": "The ATR kinase is a master regulator of a broad spectrum of DNA damage and replication problems.",
+          "retrievedAt": "2026-09-07T04:41:40.086Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0307-8",
+          "url": "https://med.umn.edu/bio/hai-dang-nguyen",
+          "excerpt": "Sensors of DNA Damage, Replication and Transcription Problems: Our recent studies revealed that ATR is not only important for sensing DNA damage and replication stress, but also to problems associated with transcription.",
+          "retrievedAt": "2026-09-07T04:41:40.086Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:44:09.563Z",
+      "nextAction": "Medical school profile lacks an individual publication list."
     },
     "vp-0308": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://cehd.missouri.edu/person/tuan-nguyen/",
         "https://tuan-d-nguyen.github.io/home"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0308-1",
+          "url": "https://cehd.missouri.edu/person/tuan-nguyen/",
+          "excerpt": "Tuan Nguyen &#8211; College of Education & Human Development You are using an outdated browser.",
+          "retrievedAt": "2026-09-07T04:41:40.691Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0308-2",
+          "url": "https://cehd.missouri.edu/person/tuan-nguyen/",
+          "excerpt": "Student Services Faculty &#038; Staff News &#038; Events Contact Virtual Tour Virtual Tour Virtual Tour --> Mizzou Logo College of Education & Human Development University of Missouri Menu Search Search About + Dean’s Office + Leadership Team + Departments + Mission + History + Awards & Honors + Global Engagement + Accreditations + Harold S.",
+          "retrievedAt": "2026-09-07T04:41:40.691Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0308-3",
+          "url": "https://cehd.missouri.edu/person/tuan-nguyen/",
+          "excerpt": "Center (ARC) + Center for Family Policy and Research + Child Development Lab + eMINTS National Center + Heart of Missouri Regional Professional Development Center (RPDC) + Hook Center for Educational Leadership and District Renewal + K-20 Access & Outreach Initiatives + Missouri Prevention Science Institute (MPSI) + Missouri Schoolwide Positive Behavior Support (MO SW-PBS) + Mizzou Academy + MU Partnership for Educational Renewal (MPER) + Network for Educator Effectiveness + ParentLink + Pre-Employment Transition Services + Alumni & Giving + Events + 303Q Townsend Hall Columbia, MO 65211 tuan.",
+          "retrievedAt": "2026-09-07T04:41:40.691Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0308-4",
+          "url": "https://cehd.missouri.edu/person/tuan-nguyen/",
+          "excerpt": "edu Personal Website Curriculum Vitae Tuan Nguyen Associate Professor Educational Leadership &#038; Policy Analysis Bio --> Tuan D.",
+          "retrievedAt": "2026-09-07T04:41:40.691Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0308-5",
+          "url": "https://cehd.missouri.edu/person/tuan-nguyen/",
+          "excerpt": "Nguyen is an associate professor in the Department of Educational Leadership and Policy Analysis at the University of Missouri.",
+          "retrievedAt": "2026-09-07T04:41:40.691Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0308-6",
+          "url": "https://cehd.missouri.edu/person/tuan-nguyen/",
+          "excerpt": "He applies rigorous quantitative methods (quasi-experimental designs and meta-analysis) to examine 1) the teacher labor markets, particularly looking at the factors that drive teacher attrition and retention, and 2) the effects and implications of teacher policies and education policies intended for social equity and school improvement.",
+          "retrievedAt": "2026-09-07T04:41:40.691Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0308-7",
+          "url": "https://cehd.missouri.edu/person/tuan-nguyen/",
+          "excerpt": "Areas of Expertise Teacher policy Teacher labor market Rurality and rural education Causal inference and meta-analyses Faculty Faculty Emeriti Staff By Department About Dean’s Office Leadership Team Departments Mission History Awards & Honors Global Engagement Accreditations Harold S.",
+          "retrievedAt": "2026-09-07T04:41:40.691Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0308-8",
+          "url": "https://cehd.missouri.edu/person/tuan-nguyen/",
+          "excerpt": "fessional Development Center (RPDC) Hook Center for Educational Leadership and District Renewal K-20 Access & Outreach Initiatives Missouri Prevention Science Institute (MPSI) Missouri Schoolwide Positive Behavior Support (MO SW-PBS) Mizzou Academy MU Partnership for Educational Renewal (MPER) Network for Educator Effectiveness ParentLink Pre-Employment Transition Services Alumni & Giving Events Student Services Faculty &#038; Staff News &#038; Events Contact Virtual Tour Mizzou Logo College of Education & Human Development University of Missouri © 2026 — Curators of the University of Missouri.",
+          "retrievedAt": "2026-09-07T04:41:40.691Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0308-9",
+          "url": "https://tuan-d-nguyen.github.io/home",
+          "excerpt": "Tuan Nguyen Tuan Nguyen Menu Home Diversity Media Mentions Policy briefs and other products Research Teaching CV Tuan Nguyen About Me I am a Mizzou Forward Associate Professor in the College of Education and Human Development at the University of Missouri.",
+          "retrievedAt": "2026-09-07T04:41:40.905Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0308-10",
+          "url": "https://tuan-d-nguyen.github.io/home",
+          "excerpt": "My PhD is in Leadership and Policy Studies from the Department of Leadership, Policy, and Organizations at Vanderbilt University.",
+          "retrievedAt": "2026-09-07T04:41:40.905Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0308-11",
+          "url": "https://tuan-d-nguyen.github.io/home",
+          "excerpt": "I apply rigorous quantitative methods (quasi-experimental designs and meta-analysis) to examine 1) the teacher labor markets, particularly looking at the factors that drive teacher attrition and retention, and 2) the effects and implications of teacher policies and education policies intended for social equity and school improvement.",
+          "retrievedAt": "2026-09-07T04:41:40.905Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0308-12",
+          "url": "https://tuan-d-nguyen.github.io/home",
+          "excerpt": "I hold a dual-degree in Math and Physics from the University of Oklahoma and a Master of Arts in Teaching from Washington University in St.",
+          "retrievedAt": "2026-09-07T04:41:40.905Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0308-13",
+          "url": "https://tuan-d-nguyen.github.io/home",
+          "excerpt": "As an instructor I am attentive to the ways in which students’ current knowledge can be built upon to help master the course content.",
+          "retrievedAt": "2026-09-07T04:41:40.905Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0308-14",
+          "url": "https://tuan-d-nguyen.github.io/home",
+          "excerpt": "By adopting a variety of instructional techniques and student supports, I strive to impart my love of learning to students and to leave students with a strong knowledge base that they can apply to real world problems.",
+          "retrievedAt": "2026-09-07T04:41:40.905Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0308-15",
+          "url": "https://tuan-d-nguyen.github.io/home",
+          "excerpt": "My previous experiences, including seven years of experience teaching mathematics at the secondary level, have prepared me to teach and work with students from diverse backgrounds and in a variety of settings.",
+          "retrievedAt": "2026-09-07T04:41:40.905Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0308-16",
+          "url": "https://tuan-d-nguyen.github.io/home",
+          "excerpt": "For more than the decade that I have been involved in education as a secondary teacher and as a graduate student in education policy and leadership, I have had had strong interests in issues of diversity and equity.",
+          "retrievedAt": "2026-09-07T04:41:40.905Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:44:09.563Z"
     },
     "vp-0309": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.ou.edu/cas/economics/people/faculty"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0309-1",
+          "url": "https://www.ou.edu/cas/economics/people/faculty",
+          "excerpt": "Faculty OU Homepage Search OU The University of Oklahoma Skip Navigation Faculty Meet Our Faculty Greg Burge, Ph.",
+          "retrievedAt": "2026-09-07T04:41:41.350Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0309-2",
+          "url": "https://www.ou.edu/cas/economics/people/faculty",
+          "excerpt": "edu Office: CC1 Room 435 Field: Urban and Public Economics Education: Florida State University, 2005 Burge Page Burge CV (PDF) Firat Demir, Ph.",
+          "retrievedAt": "2026-09-07T04:41:41.350Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0309-3",
+          "url": "https://www.ou.edu/cas/economics/people/faculty",
+          "excerpt": "edu Office: CC1 Room 170 Field: International Finance & Development Education: University of Notre Dame, 2006 Demir Page Demir CV (PDF) Ely Fair, Ph.",
+          "retrievedAt": "2026-09-07T04:41:41.350Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0309-4",
+          "url": "https://www.ou.edu/cas/economics/people/faculty",
+          "excerpt": "edu Office: CC1 Room 321 Fields: Macroeconomics, Policy, & Poverty Education: University of Missouri, 2024 Fair Page Fair CV (PDF) Pallab Ghosh, Ph.",
+          "retrievedAt": "2026-09-07T04:41:41.350Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0309-5",
+          "url": "https://www.ou.edu/cas/economics/people/faculty",
+          "excerpt": "edu Office: CC1 Room 323 Fields: Labor & Econometrics Education: Syracuse University, 2014 Ghosh Page Ghosh CV (PDF) Joan Hamory, Ph.",
+          "retrievedAt": "2026-09-07T04:41:41.350Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0309-6",
+          "url": "https://www.ou.edu/cas/economics/people/faculty",
+          "excerpt": "edu Office: CC1 Room 439 Fields: Development Education: University of California, Berkeley, 2009 Hamory Page Hamory CV (PDF) Nghiem Q.",
+          "retrievedAt": "2026-09-07T04:41:41.350Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0309-7",
+          "url": "https://www.ou.edu/cas/economics/people/faculty",
+          "excerpt": "edu Office: CC1 Room 440 Fields: Development & International Education: Yale, 2024 Huynh Page Huynh CV (PDF) Minwoo Hyun, Ph.",
+          "retrievedAt": "2026-09-07T04:41:41.350Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0309-8",
+          "url": "https://www.ou.edu/cas/economics/people/faculty",
+          "excerpt": "edu Office: CC1 Room 438 Fields: Energy & Environmental Education: University of California, Santa Barbara, 2026 Hyun Page Hyun CV (PDF) Samantha R.",
+          "retrievedAt": "2026-09-07T04:41:41.350Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:44:09.563Z",
+      "nextAction": "Department faculty table lists field keywords without research narrative or publication list."
     },
     "vp-0310": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://facultyinfo.unt.edu/faculty-profile?profile=htl0039"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0310-1",
+          "url": "https://facultyinfo.unt.edu/faculty-profile?profile=htl0039",
+          "excerpt": "Faculty Profile | Faculty Information System Skip to main content MyUNT Canvas Student Email UNT Directory Search Apply Now Office of the Provost Faculty Information System Faculty Name Search By: Faculty Name Courses Search Hung T.",
+          "retrievedAt": "2026-09-07T04:41:41.852Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0310-2",
+          "url": "https://facultyinfo.unt.edu/faculty-profile?profile=htl0039",
+          "excerpt": "Luyen Title: Assistant Professor Department: Electrical Engineering College: College of Engineering Hung.",
+          "retrievedAt": "2026-09-07T04:41:41.852Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0310-3",
+          "url": "https://facultyinfo.unt.edu/faculty-profile?profile=htl0039",
+          "excerpt": "r: Electrical Engineering Specialization: Applied electromagnetic Dissertation: Miniaturization of microwave ablation antennas MS, University of Wisconsin-Madison, 2014 Major: Electrical Engineering Specialization: Applied electromagnetics Dissertation: The application of high-frequency microwaves in tissue ablation for cancer treatment BE, Hanoi University of Science and Technology, 2010 Major: Electrical Engineering Specialization: Electronics and Telecommunications Dissertation: Designing and fabricating UWB antenna using EBG structures as a ground plane Current Scheduled Teaching EENG 2610.",
+          "retrievedAt": "2026-09-07T04:41:41.852Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0310-4",
+          "url": "https://facultyinfo.unt.edu/faculty-profile?profile=htl0039",
+          "excerpt": "974 (HB 2504) requires each institution of higher education to make available to the public, a syllabus for undergraduate lecture courses offered for credit by the institution.",
+          "retrievedAt": "2026-09-07T04:41:41.852Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0310-5",
+          "url": "https://facultyinfo.unt.edu/faculty-profile?profile=htl0039",
+          "excerpt": "974 (HB 2504) requires each institution of higher education to make available to the public, a syllabus for undergraduate lecture courses offered for credit by the institution.",
+          "retrievedAt": "2026-09-07T04:41:41.852Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0310-6",
+          "url": "https://facultyinfo.unt.edu/faculty-profile?profile=htl0039",
+          "excerpt": "Broadband, reconfigurable transmit-reflect-array (TRA) with 1-bit phase shift and bidirectional beam steering.",
+          "retrievedAt": "2026-09-07T04:41:41.852Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0310-7",
+          "url": "https://facultyinfo.unt.edu/faculty-profile?profile=htl0039",
+          "excerpt": "A V-band phased-array antenna for millimeter-wave-based 3D beam steering applications.",
+          "retrievedAt": "2026-09-07T04:41:41.852Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0310-8",
+          "url": "https://facultyinfo.unt.edu/faculty-profile?profile=htl0039",
+          "excerpt": "Denver, Colorado, 2022 IEEE International Symposium on Antennas and Propagation and USNC-URSI Radio Science Meeting (AP-S/URSI).",
+          "retrievedAt": "2026-09-07T04:41:41.852Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:44:09.563Z"
     },
     "vp-0311": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "verified",
       "sourcesChecked": [
         "https://facultyinfo.unt.edu/faculty-profile?profile=tdn0003"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0311-1",
+          "url": "https://facultyinfo.unt.edu/faculty-profile?profile=tdn0003",
+          "excerpt": "Faculty Profile | Faculty Information System Skip to main content MyUNT Canvas Student Email UNT Directory Search Apply Now Office of the Provost Faculty Information System Faculty Name Search By: Faculty Name Courses Search Thuy D.",
+          "retrievedAt": "2026-09-07T04:41:41.958Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0311-2",
+          "url": "https://facultyinfo.unt.edu/faculty-profile?profile=tdn0003",
+          "excerpt": "Nguyen Title: Clinical Associate Professor Department: Marketing College: College of Business Business Leadership Building 304J Thuy.",
+          "retrievedAt": "2026-09-07T04:41:41.958Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0311-3",
+          "url": "https://facultyinfo.unt.edu/faculty-profile?profile=tdn0003",
+          "excerpt": "edu General Information Previous Courses Publications Research Curriculum Vitae Curriculum Vitae Link Education PhD, University of North Texas, 2014 Major: Marketing MBA, Southern Methodist University, 2005 Major: Strategy and Entrepreneurship Specialization: Entrepreneurial Strategy BBA, University of North Texas, 1998 Major: Marketing Current Scheduled Teaching MKTG 5250.",
+          "retrievedAt": "2026-09-07T04:41:41.958Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0311-4",
+          "url": "https://facultyinfo.unt.edu/faculty-profile?profile=tdn0003",
+          "excerpt": "407 Marketing Research and Analytics Summer 5W1 2026 Syllabus SPOT Texas Education Code 51.",
+          "retrievedAt": "2026-09-07T04:41:41.958Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0311-5",
+          "url": "https://facultyinfo.unt.edu/faculty-profile?profile=tdn0003",
+          "excerpt": "974 (HB 2504) requires each institution of higher education to make available to the public, a syllabus for undergraduate lecture courses offered for credit by the institution.",
+          "retrievedAt": "2026-09-07T04:41:41.958Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0311-6",
+          "url": "https://facultyinfo.unt.edu/faculty-profile?profile=tdn0003",
+          "excerpt": "001 Foundations of Marketing Practice for Non Business Majors Fall 2022 Syllabus SPOT MKTG 3700.",
+          "retrievedAt": "2026-09-07T04:41:41.958Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0311-7",
+          "url": "https://facultyinfo.unt.edu/faculty-profile?profile=tdn0003",
+          "excerpt": "003 Marketing Channels and Strategic Partnerships Fall 2011 Texas Education Code 51.",
+          "retrievedAt": "2026-09-07T04:41:41.958Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0311-8",
+          "url": "https://facultyinfo.unt.edu/faculty-profile?profile=tdn0003",
+          "excerpt": "974 (HB 2504) requires each institution of higher education to make available to the public, a syllabus for undergraduate lecture courses offered for credit by the institution.",
+          "retrievedAt": "2026-09-07T04:41:41.958Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:44:09.563Z",
+      "nextAction": "Profile contains course schedules and publication records without a research overview narrative."
     },
     "vp-0312": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.southalabama.edu/colleges/artsandsci/communication/facultystaff/nguyen-bio.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0312-1",
+          "url": "https://www.southalabama.edu/colleges/artsandsci/communication/facultystaff/nguyen-bio.html",
+          "excerpt": "--> Nhung Nguyen You have returned to the top of the page and may restart browsing.",
+          "retrievedAt": "2026-09-07T04:41:42.363Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0312-2",
+          "url": "https://www.southalabama.edu/colleges/artsandsci/communication/facultystaff/nguyen-bio.html",
+          "excerpt": "Skip Main Navigation Logins Students Faculty & Staff PAWS USAonline A-Z Open Main Navigation Menu Search: Submit --> Full Menu Programs Admission Donate × Close You’ve opened the full navigation menu.",
+          "retrievedAt": "2026-09-07T04:41:42.363Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0312-3",
+          "url": "https://www.southalabama.edu/colleges/artsandsci/communication/facultystaff/nguyen-bio.html",
+          "excerpt": "You can press Enter on it or press the Escape key at any time to close the menu.",
+          "retrievedAt": "2026-09-07T04:41:42.363Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0312-4",
+          "url": "https://www.southalabama.edu/colleges/artsandsci/communication/facultystaff/nguyen-bio.html",
+          "excerpt": "Life Housing Dining Organizations Counseling and Wellness Student Health USA Police Campus Recreation and Wellness USA Bookstore Community Engagement Sustainability About About President EVP Provost University Administration Board of Trustees Faculty Resources USA History Strategic Plan Baldwin County Campus USA Health Maps Alumni Alumni Alumni Relations NAA Board of Directors MacQueen Alumni Center Sports Sports Jaguar Athletics Purchase Tickets Athletics Calendar Logins Students Faculty & Staff PAWS USAonline A-Z You have skipped the global top navigation and may now begin browsing the page.",
+          "retrievedAt": "2026-09-07T04:41:42.363Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0312-5",
+          "url": "https://www.southalabama.edu/colleges/artsandsci/communication/facultystaff/nguyen-bio.html",
+          "excerpt": "d Sciences Department of Communication Faculty Bio Skip Left Navigation Toggle navigation Menu Communication Home About Message from Chair Faculty & Staff Undergraduate Advertising and Public Relations Communication Studies Digital Film and Television Production Journalism Communication Minors Graduate Master of Arts Accelerated Bachelor's to Master's Students Internships Scholarships Student Involvement Alumni JagMedia News Giving Stay Connected Department of Communication University of South Alabama 6021 USA Drive South Mobile, AL 36688 Ph: (251) 380-2800 Email Address: ntnguyen@southalabama.",
+          "retrievedAt": "2026-09-07T04:41:42.363Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0312-6",
+          "url": "https://www.southalabama.edu/colleges/artsandsci/communication/facultystaff/nguyen-bio.html",
+          "excerpt": "| Multimedia Journalism Education University of Kansas, Lawrence, Kansas Doctor of Philosophy, Journalism and Mass Communications, August 2024 University for Peace, San Jose, Costa Rica Master of Arts, Responsible Management and Sustainable Economic Development, December 2016 University of Social Sciences and Humanities, Hanoi, Vietnam Master of Arts, Journalism, December 2011 Academy of Journalism and Communication, Hanoi, Vietnam Bachelor of Arts, Broadcasting Journalism, August 2007 Bio Nhung Nguyen is an Assistant Professor of Multimedia Journalism at the University of South Alabama (USA).",
+          "retrievedAt": "2026-09-07T04:41:42.363Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0312-7",
+          "url": "https://www.southalabama.edu/colleges/artsandsci/communication/facultystaff/nguyen-bio.html",
+          "excerpt": "She teaches courses across journalism, international media, and data storytelling.",
+          "retrievedAt": "2026-09-07T04:41:42.363Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0312-8",
+          "url": "https://www.southalabama.edu/colleges/artsandsci/communication/facultystaff/nguyen-bio.html",
+          "excerpt": "She holds a PhD in Journalism and Mass Communication from the University of Kansas, an MA in Responsible Management and Economic Development from the University for Peace (Costa Rica), an MA in Journalism from the University of Social Sciences and Humanities (Vietnam), and a BA in Broadcasting from the Academy of Journalism and Communication (Vietnam).",
+          "retrievedAt": "2026-09-07T04:41:42.363Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:44:09.563Z"
     },
     "vp-0313": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://usp.ucsd.edu/about/faculty/profiles/nguyen.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0313-1",
+          "url": "https://usp.ucsd.edu/about/faculty/profiles/nguyen.html",
+          "excerpt": "Professor, Urban Studies and Planning Skip to main content Urban Studies and Planning Urban Studies and Planning UC San Diego Search This Site All UCSD Sites Faculty/Staff Search Term Close Nav About Faculty Staff Researchers Contact Open Positions News + Events News + Events Archive What We Do Publications Research Centers + Hubs Community Engagement Media Practica Student Research Justice + Equity Space + Society Climate + Sustainability Bridging Borders Undergraduate Urban Studies + Planning B.",
+          "retrievedAt": "2026-09-07T04:41:43.263Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0313-2",
+          "url": "https://usp.ucsd.edu/about/faculty/profiles/nguyen.html",
+          "excerpt": "tica Study Abroad Careers & Internships Undergraduate Resources Graduate Master of Urban + Regional Planning Urban Planning, PhD Resources GIS Visualization Lab USP-Net Room Reservations Support Us Donate Partner with Us Hire a Triton Share Opportunities Stay Connected Toggle navigation MENU About Faculty Staff Researchers Contact Open Positions News + Events News + Events Archive What We Do Publications Research Centers + Hubs Community Engagement Media Practica Student Research Justice + Equity Space + Society Climate + Sustainability Bridging Borders Undergraduate Urban Studies + Planning B.",
+          "retrievedAt": "2026-09-07T04:41:43.263Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0313-3",
+          "url": "https://usp.ucsd.edu/about/faculty/profiles/nguyen.html",
+          "excerpt": "Minors Academic Advising Course Offerings Urban Expo Practica Study Abroad Careers & Internships Undergraduate Resources Graduate Master of Urban + Regional Planning Urban Planning, PhD Resources GIS Visualization Lab USP-Net Room Reservations Support Us Donate Partner with Us Hire a Triton Share Opportunities Stay Connected Search Scope This Site All UCSD Sites Faculty/Staff Search Term HOME About Faculty profiles Professor, Urban Studies and Planning Mai Thi Nguyen Professor, Urban Studies and Planning mainguyen@ucsd.",
+          "retrievedAt": "2026-09-07T04:41:43.263Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0313-4",
+          "url": "https://usp.ucsd.edu/about/faculty/profiles/nguyen.html",
+          "excerpt": "Mail Code: 0436 La Jolla , California 92093 Profile Education Profile Mai Thi Nguyen is a Professor of Urban Studies and Planning and the&#160;Director of the Design Lab at the University of California, San Diego.",
+          "retrievedAt": "2026-09-07T04:41:43.263Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0313-5",
+          "url": "https://usp.ucsd.edu/about/faculty/profiles/nguyen.html",
+          "excerpt": "&#160;Before arriving at UCSD in 2021, she held academic appointments at&#160;the University of North Carolina at Chapel Hill and San Francisco State&#160;University.",
+          "retrievedAt": "2026-09-07T04:41:43.263Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0313-6",
+          "url": "https://usp.ucsd.edu/about/faculty/profiles/nguyen.html",
+          "excerpt": "She received her PhD in Urban Planning from the&#160;University of California, Irvine in 2004 and her Master&#8217;s in Sociology&#160;from the Pennsylvania State University in 1998.",
+          "retrievedAt": "2026-09-07T04:41:43.263Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0313-7",
+          "url": "https://usp.ucsd.edu/about/faculty/profiles/nguyen.html",
+          "excerpt": "She received a&#160;prestigious dissertation fellowship from the Public Policy Institute of&#160;California.",
+          "retrievedAt": "2026-09-07T04:41:43.263Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0313-8",
+          "url": "https://usp.ucsd.edu/about/faculty/profiles/nguyen.html",
+          "excerpt": "She is an award-winning public scholar, researcher, and&#160;teacher, garnering teaching excellence awards for undergraduate and&#160;doctoral education.",
+          "retrievedAt": "2026-09-07T04:41:43.263Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:44:09.563Z",
+      "nextAction": "Faculty bio discusses research areas without an individual publication list."
     },
     "vp-0314": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://profiles.utsouthwestern.edu/profile/177087/dan-nguyen.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0314-1",
+          "url": "https://profiles.utsouthwestern.edu/profile/177087/dan-nguyen.html",
+          "excerpt": "- Faculty Profile - UT Southwestern Skip to Main Content Back to UT Southwestern Home Faculty Directory Back to Faculty Directory UT Southwestern Sites UT Southwestern Home Home - EDU Research Education & Training Patient Care Faculty Departments & Centers Media Hub Careers About Us Employee Resources Faculty Resources Search Search All Faculty A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Dan Nguyen , Ph.",
+          "retrievedAt": "2026-09-07T04:41:43.761Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0314-2",
+          "url": "https://profiles.utsouthwestern.edu/profile/177087/dan-nguyen.html",
+          "excerpt": "Titles and Appointments Associate Professor Schools Medical School&nbsp|&nbspGraduate School Departments Radiation Oncology Graduate Programs Biomedical Engineering Biography Download Curriculum Vitae Dan Nguyen, Ph.",
+          "retrievedAt": "2026-09-07T04:41:43.761Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0314-3",
+          "url": "https://profiles.utsouthwestern.edu/profile/177087/dan-nguyen.html",
+          "excerpt": ", is a scientist with expertise in radiation therapy treatment planning, deep learning, and optimization techniques and algorithms.",
+          "retrievedAt": "2026-09-07T04:41:43.761Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0314-4",
+          "url": "https://profiles.utsouthwestern.edu/profile/177087/dan-nguyen.html",
+          "excerpt": "in Biomedical Physics in 2017 at the University of California Los Angeles (UCLA), where he worked extensively on 4&pi; Radiotherapy, Fluence Map Optimization, and Direct Aperture Optimization techniques under the guidance and mentorship of Dr.",
+          "retrievedAt": "2026-09-07T04:41:43.761Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0314-5",
+          "url": "https://profiles.utsouthwestern.edu/profile/177087/dan-nguyen.html",
+          "excerpt": "Nguyen was recruited to the Division of Medical Physics and Engineering, Department of Radiation Oncology at UT Southwestern in 2017 as a faculty member.",
+          "retrievedAt": "2026-09-07T04:41:43.761Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0314-6",
+          "url": "https://profiles.utsouthwestern.edu/profile/177087/dan-nguyen.html",
+          "excerpt": "He was a founding member of the multiple-investigator lab called the Medical Artificial Intelligence and Automation (MAIA) Laboratory, which was focused to innovate, develop, and apply artificial intelligence technologies to empower clinicians&mdash;especially those with less experience or limited resources&mdash;for improved patient care.",
+          "retrievedAt": "2026-09-07T04:41:43.761Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0314-7",
+          "url": "https://profiles.utsouthwestern.edu/profile/177087/dan-nguyen.html",
+          "excerpt": "Steve Jiang in researching and applying deep learning technologies to various facets of radiotherapy, including treatment planning, medical imaging, and outcome prediction.",
+          "retrievedAt": "2026-09-07T04:41:43.761Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0314-8",
+          "url": "https://profiles.utsouthwestern.edu/profile/177087/dan-nguyen.html",
+          "excerpt": "py Publications Toward universal dose prediction: A multi-scale, multi-objective framework for sequential boost radiotherapy Maniscalco AM, Zhong X, Domal S, Lin YC, Sher D, Lin MH, Jiang S, Nguyen D Medical physics 2026 Jun 53 Performance of an Artificial Intelligence Foundation Model for Prostate Radiotherapy Segmentation Doucette M, Liao CY, Lin MH, Jiang S, Nguyen D, Yang DX JCO Clinical Cancer Informatics 2026 Apr 10 Artificial Intelligence in Clinical Radiation Oncology Nguyen D, Yang D, Shen C, Wang J, Chen L, Zhang Y, Deng J, Chen M, Lu W, Dohopolski M, Sher D, Jiang S 2026 Jan 168-182.",
+          "retrievedAt": "2026-09-07T04:41:43.761Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:44:09.563Z"
     },
     "vp-0315": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://profiles.utsouthwestern.edu/profile/200971/an-binh-nguyen.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0315-1",
+          "url": "https://profiles.utsouthwestern.edu/profile/200971/an-binh-nguyen.html",
+          "excerpt": "- Faculty Profile - UT Southwestern Skip to Main Content Back to UT Southwestern Home Faculty Directory Back to Faculty Directory UT Southwestern Sites UT Southwestern Home Home - EDU Research Education & Training Patient Care Faculty Departments & Centers Media Hub Careers About Us Employee Resources Faculty Resources Search Search All Faculty A B C D E F G H I J K L M N O P Q R S T U V W X Y Z An Binh Nguyen , Ph.",
+          "retrievedAt": "2026-09-07T04:41:43.919Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0315-2",
+          "url": "https://profiles.utsouthwestern.edu/profile/200971/an-binh-nguyen.html",
+          "excerpt": "Titles and Appointments Assistant Professor Schools Medical School Departments Center for Alzheimer's and Neurodegenerative Diseases | Biophysics Quick Links Administrative Offices UTSW Leadership Institution Careers Comments & Questions Contact Us Maps Phone Directory Sitemap Legal HEERF Reporting Non-Discrimination Policy Patient Rights Open Records Privacy Policy Protected Expression Site Policies State State of Texas Texas Veterans Portal TRAIL Search UT System Social Facebook Twitter Instagram Youtube Pinterest LinkedIn Copyright 2024.",
+          "retrievedAt": "2026-09-07T04:41:43.919Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:44:09.563Z",
+      "nextAction": "UT Southwestern profile contains administrative office info only."
     },
     "vp-0316": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://dentistry.uth.edu/directory/profile/vuvi-h-nguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0316-1",
+          "url": "https://dentistry.uth.edu/directory/profile/vuvi-h-nguyen",
+          "excerpt": "l Hub A-Z Webmail Inside the University Quicklinks Alumni Giving About Academic Departments Administration History of the School Meet the Dean Student Life Accreditation Education Doctor of Dental Surgery Dental Hygiene Advanced Education IDEP Continuing Education Preceptors Patient Care Student Clinics Resident Clinics Faculty Practice (UT Dentists) Office of Patient Care Patient Resources Research Research Centers Research Groups Student Research PACE Alumni Communications Continuing Education Job Postings Practice Consulting Search Search UTHealth Houston Home icon Directory Current: Vuvi H.",
+          "retrievedAt": "2026-09-07T04:41:44.337Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0316-2",
+          "url": "https://dentistry.uth.edu/directory/profile/vuvi-h-nguyen",
+          "excerpt": "Nguyen MS, PhD Associate Professor SOD 5356 713-486-4554 [email&#160;protected] Dr.",
+          "retrievedAt": "2026-09-07T04:41:44.337Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0316-3",
+          "url": "https://dentistry.uth.edu/directory/profile/vuvi-h-nguyen",
+          "excerpt": "Nguyen is an associate professor in the Department of Diagnostic and Biomedical Sciences at The University of Texas School of Dentistry at Houston.",
+          "retrievedAt": "2026-09-07T04:41:44.337Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0316-4",
+          "url": "https://dentistry.uth.edu/directory/profile/vuvi-h-nguyen",
+          "excerpt": "Prior to joining the department in January 2017, she received her doctoral degree in biomedical sciences from the University of North Texas Health Science Center in Fort Worth, with a concentration in structural anatomy and rehabilitation sciences.",
+          "retrievedAt": "2026-09-07T04:41:44.337Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0316-5",
+          "url": "https://dentistry.uth.edu/directory/profile/vuvi-h-nguyen",
+          "excerpt": "She is an active member in the American Dental Education Association, the American Association of Anatomists, the Human Anatomy and Physiology Society, and the Texas Physical Therapy Association.",
+          "retrievedAt": "2026-09-07T04:41:44.337Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0316-6",
+          "url": "https://dentistry.uth.edu/directory/profile/vuvi-h-nguyen",
+          "excerpt": "Nguyen serves as the course director for the Dental Hygiene Oral Histology and Embryology course.",
+          "retrievedAt": "2026-09-07T04:41:44.337Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0316-7",
+          "url": "https://dentistry.uth.edu/directory/profile/vuvi-h-nguyen",
+          "excerpt": "She is also a professor in the Head and Neck Anatomy course for first-year dental and dental hygiene students.",
+          "retrievedAt": "2026-09-07T04:41:44.337Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0316-8",
+          "url": "https://dentistry.uth.edu/directory/profile/vuvi-h-nguyen",
+          "excerpt": "Her current research interests involve developing innovative educational resources in the anatomical sciences for health professionals and students.",
+          "retrievedAt": "2026-09-07T04:41:44.337Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:44:09.563Z",
+      "nextAction": "Dental school profile does not list individual publications."
     },
     "vp-0317": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://dentistry.uth.edu/directory/profile.htm?id=a7a2e899-5d01-41e1-bd61-0cbf5f333e58"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0317-1",
+          "url": "https://dentistry.uth.edu/directory/profile.htm?id=a7a2e899-5d01-41e1-bd61-0cbf5f333e58",
+          "excerpt": "nuing Education Preceptors Patient Care Student Clinics Resident Clinics Faculty Practice (UT Dentists) Office of Patient Care Patient Resources Research Research Centers Research Groups Student Research PACE Alumni Communications Continuing Education Job Postings Practice Consulting Search Search UTHealth Houston Home icon Directory Current: Leanna Rubio RDH, BSDH, MS Leanna Rubio RDH, BSDH, MS Assistant Professor SOD 6483 713-486-4084 [email&#160;protected] Assistant Professor Rubio joined the Department of Periodontics and Dental Hygiene at UTHealth Houston School of Dentistry (SOD) in 2023.",
+          "retrievedAt": "2026-09-07T04:41:44.879Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0317-2",
+          "url": "https://dentistry.uth.edu/directory/profile.htm?id=a7a2e899-5d01-41e1-bd61-0cbf5f333e58",
+          "excerpt": "Prior to joining UTHealth Houston SOD faculty, she practiced clinical dental hygiene since 2017 and taught as a Dental Hygiene Clinical Instructor at Lone Star College.",
+          "retrievedAt": "2026-09-07T04:41:44.879Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0317-3",
+          "url": "https://dentistry.uth.edu/directory/profile.htm?id=a7a2e899-5d01-41e1-bd61-0cbf5f333e58",
+          "excerpt": "She has earned an Associate of Arts, Associate of Science, and Associate of Applied Science in Dental Hygiene from Lone Star College.",
+          "retrievedAt": "2026-09-07T04:41:44.879Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0317-4",
+          "url": "https://dentistry.uth.edu/directory/profile.htm?id=a7a2e899-5d01-41e1-bd61-0cbf5f333e58",
+          "excerpt": "In addition, she has earned a Bachelor of Science in Dental Hygiene and Master of Science in Health Studies from Texas Woman&rsquo;s University.",
+          "retrievedAt": "2026-09-07T04:41:44.879Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0317-5",
+          "url": "https://dentistry.uth.edu/directory/profile.htm?id=a7a2e899-5d01-41e1-bd61-0cbf5f333e58",
+          "excerpt": "Her commitment to community service has led her to volunteer her services at San Jose Clinic, as well as various dental events that serve our veterans and underserved community.",
+          "retrievedAt": "2026-09-07T04:41:44.879Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0317-6",
+          "url": "https://dentistry.uth.edu/directory/profile.htm?id=a7a2e899-5d01-41e1-bd61-0cbf5f333e58",
+          "excerpt": "Professor Rubio is a member of the American Dental Education Association (ADEA), American Dental Hygienists&rsquo; Association (ADHA), Dental Hygiene Educators of Texas (DHET), and Texas Dental Hygienists&rsquo; Association (TDHA).",
+          "retrievedAt": "2026-09-07T04:41:44.879Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0317-7",
+          "url": "https://dentistry.uth.edu/directory/profile.htm?id=a7a2e899-5d01-41e1-bd61-0cbf5f333e58",
+          "excerpt": "She has previously served as a co-advisor for the Student Chapter American Dental Hygienists&rsquo; Association (SCADHA).",
+          "retrievedAt": "2026-09-07T04:41:44.879Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0317-8",
+          "url": "https://dentistry.uth.edu/directory/profile.htm?id=a7a2e899-5d01-41e1-bd61-0cbf5f333e58",
+          "excerpt": "Bruning Award for Outstanding Teaching, which recognizes a faculty member who demonstrates exceptional knowledge and competence towards effective learning.",
+          "retrievedAt": "2026-09-07T04:41:44.879Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:44:09.563Z",
+      "nextAction": "Profile contains teaching and clinical credentials without research narrative or publications."
     },
     "vp-0318": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://scholars.utoledo.edu/display/person-mai-dao"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0318-1",
+          "url": "https://scholars.utoledo.edu/display/person-mai-dao",
+          "excerpt": "Dao, Mai T --> Toggle navigation Browse Home People Departments & Colleges Research Research Area Overlaps Mai T Dao Close Positions Professor , Accounting , College of Business and Innovation Contact Info Mai.",
+          "retrievedAt": "2026-09-07T04:41:45.698Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0318-2",
+          "url": "https://scholars.utoledo.edu/display/person-mai-dao",
+          "excerpt": "edu Overview Publications Contact View All Overview overview Mai Dao is a Professor of Accounting at the University of Toledo.",
+          "retrievedAt": "2026-09-07T04:41:45.698Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0318-3",
+          "url": "https://scholars.utoledo.edu/display/person-mai-dao",
+          "excerpt": "She holds a Master of Science in Accounting from Maastricht University, the Netherlands.",
+          "retrievedAt": "2026-09-07T04:41:45.698Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0318-4",
+          "url": "https://scholars.utoledo.edu/display/person-mai-dao",
+          "excerpt": "She got a Bachelor of Commerce degree in Accounting from Flinders University, Australia.",
+          "retrievedAt": "2026-09-07T04:41:45.698Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0318-5",
+          "url": "https://scholars.utoledo.edu/display/person-mai-dao",
+          "excerpt": "She has publications in following journals: The Accounting Review, Accounting and Business Research, Advances in Accounting, Accounting Horizons , American Journal of Business Research, Asia-Pacific Journal of Accounting and Economics , European Accounting Review , European Journal of Finance, International Journal of Auditing, Journal of Business Finance and Accounting, Journal of Accounting Literature, Managerial Auditing Journal, Review of Accounting and Finance , and Review of Quantitative Finance and Accounting .",
+          "retrievedAt": "2026-09-07T04:41:45.698Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0318-6",
+          "url": "https://scholars.utoledo.edu/display/person-mai-dao",
+          "excerpt": "Her research interests are in earnings quality, audit quality, auditor ratification, trade credit, audit fees, and corporate governance.",
+          "retrievedAt": "2026-09-07T04:41:45.698Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0318-7",
+          "url": "https://scholars.utoledo.edu/display/person-mai-dao",
+          "excerpt": "Publications selected publications Article (Faculty180) 2024 Internal governance and internal control material weaknesses .",
+          "retrievedAt": "2026-09-07T04:41:45.698Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0318-8",
+          "url": "https://scholars.utoledo.edu/display/person-mai-dao",
+          "excerpt": "2023 Global-level auditor industry specialization and the cost of equity capital .",
+          "retrievedAt": "2026-09-07T04:41:45.698Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:44:09.563Z"
     },
     "vp-0319": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.utoledo.edu/hhs/facultystaff/an-dinh.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0319-1",
+          "url": "https://www.utoledo.edu/hhs/facultystaff/an-dinh.html",
+          "excerpt": "ent Students Experiential Learning Clinics, Centers, and Institutes About College Menu College Home Future Students Current Students Experiential Learning Clinics, Centers, and Institutes About About College of Health and Human Services Office of the Dean Accreditations Mission and Vision Departments and Programs Faculty/Staff Toledo Transition (T2) Program College Scholarships University-wide Scholarships Student Computing Student Organizations Graduate Student Resources Alumni Give to College of Health and Human Services Contact Us Dean's Office Room HH 3302 Toledo, OH 43606 CHHSdean@utoledo.",
+          "retrievedAt": "2026-09-07T04:41:46.228Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0319-2",
+          "url": "https://www.utoledo.edu/hhs/facultystaff/an-dinh.html",
+          "excerpt": "edu About College of Health and Human Services Office of the Dean Accreditations Mission and Vision Departments and Programs Faculty/Staff Toledo Transition (T2) Program College Scholarships University-wide Scholarships Student Computing Student Organizations Graduate Student Resources Alumni Give to College of Health and Human Services Contact Us Dean's Office Room HH 3302 Toledo, OH 43606 CHHSdean@utoledo.",
+          "retrievedAt": "2026-09-07T04:41:46.228Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0319-3",
+          "url": "https://www.utoledo.edu/hhs/facultystaff/an-dinh.html",
+          "excerpt": "Associate Professor Department of Exercise and Rehabilitation Sciences HH 2020 Mail Stop 119 419.",
+          "retrievedAt": "2026-09-07T04:41:46.228Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0319-4",
+          "url": "https://www.utoledo.edu/hhs/facultystaff/an-dinh.html",
+          "excerpt": "Dinh is an Assistant Professor in the Speech-Language Pathology program at the University of Toledo.",
+          "retrievedAt": "2026-09-07T04:41:46.228Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0319-5",
+          "url": "https://www.utoledo.edu/hhs/facultystaff/an-dinh.html",
+          "excerpt": "She received her BA and MA in Speech-Language Pathology from Calvin College and Ph.",
+          "retrievedAt": "2026-09-07T04:41:46.228Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0319-6",
+          "url": "https://www.utoledo.edu/hhs/facultystaff/an-dinh.html",
+          "excerpt": "Dinh aims to integrate the tenets of Socioemotional Selectivity Theory (SST), a prominent gerontology theory, into aphasia research and clinical practice, hoping to equip clinicians to provide meaningful, holistic aphasia intervention.",
+          "retrievedAt": "2026-09-07T04:41:46.228Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0319-7",
+          "url": "https://www.utoledo.edu/hhs/facultystaff/an-dinh.html",
+          "excerpt": "Specifically, she studies the shift in social needs and relationship priorities in older adults with stroke and aphasia.",
+          "retrievedAt": "2026-09-07T04:41:46.228Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0319-8",
+          "url": "https://www.utoledo.edu/hhs/facultystaff/an-dinh.html",
+          "excerpt": "She also seeks to apply SST in the assessment and treatment of other communication disorders.",
+          "retrievedAt": "2026-09-07T04:41:46.228Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:44:09.563Z",
+      "nextAction": "Faculty bio does not list individual publications."
     },
     "vp-0320": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://arc.vcu.edu/researchers/t-hoang-nguyen-phd/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0320-1",
+          "url": "https://arc.vcu.edu/researchers/t-hoang-nguyen-phd/",
+          "excerpt": "| Alcohol Research Center | Virginia Commonwealth University Skip to content Skip to navigation Skip to main content Skip to footer Alcohol Research Center Make A Gift Overview News Publications Center Research Project 1 Project 2 Project 3 Project 4 Project 5 Administrative Core Animal Behavior Core Pilot Core Researchers Michael F.",
+          "retrievedAt": "2026-09-07T04:41:48.150Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0320-2",
+          "url": "https://arc.vcu.edu/researchers/t-hoang-nguyen-phd/",
+          "excerpt": "Toggle navigation Search Overview News Publications Center Research Project 1 Project 2 Project 3 Project 4 Project 5 Administrative Core Animal Behavior Core Pilot Core Researchers Michael F.",
+          "retrievedAt": "2026-09-07T04:41:48.150Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0320-3",
+          "url": "https://arc.vcu.edu/researchers/t-hoang-nguyen-phd/",
+          "excerpt": "Co-Lead, Project 5 Assistant Professor, Department of Psychiatry Virginia Commonwealth University E-mail: tanhoang.",
+          "retrievedAt": "2026-09-07T04:41:48.150Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0320-4",
+          "url": "https://arc.vcu.edu/researchers/t-hoang-nguyen-phd/",
+          "excerpt": "org Research Interests Representative Publications Statistics, Bioinformatics, Integrative analysis, Neurodevelopmental and psychiatric disorders, Substance use disorders, Structural variation, Systems biology Han S, Sun X, Sloofman L, Satterstrom FK, Xu X, Liang L, Knoblauch N, Sheng W, Zhao S, Nguyen TH, Wang G, Buxbaum J, He X.",
+          "retrievedAt": "2026-09-07T04:41:48.150Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0320-5",
+          "url": "https://arc.vcu.edu/researchers/t-hoang-nguyen-phd/",
+          "excerpt": "MIRAGE: A Bayesian statistical method for gene-level rare-variant analysis incorporating functional annotations.",
+          "retrievedAt": "2026-09-07T04:41:48.150Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0320-6",
+          "url": "https://arc.vcu.edu/researchers/t-hoang-nguyen-phd/",
+          "excerpt": "Joint analysis of de novo mutations from autism spectrum disorder, schizophrenia, congenital heart disease, and other developmental disorders improves detection power and implicates shared molecular pathways and CNS processes.",
+          "retrievedAt": "2026-09-07T04:41:48.150Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0320-7",
+          "url": "https://arc.vcu.edu/researchers/t-hoang-nguyen-phd/",
+          "excerpt": "Nguyen T, Coleman J, Gentry A, Webb B, Peterson R, Kendler K, Riley B, Amstadter A, Sheerin C.",
+          "retrievedAt": "2026-09-07T04:41:48.150Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0320-8",
+          "url": "https://arc.vcu.edu/researchers/t-hoang-nguyen-phd/",
+          "excerpt": "RARE VARIANT ANALYSIS FOR POST- TRAUMATIC STRESS DISORDER USING WHOLE-EXOME-SEQUENCING DATA.",
+          "retrievedAt": "2026-09-07T04:41:48.150Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:44:09.563Z"
     },
     "vp-0321": {
       "overview": "pending",
