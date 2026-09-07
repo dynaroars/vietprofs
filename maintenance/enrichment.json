@@ -3514,7 +3514,8 @@
         "vp-1490",
         "vp-1491"
       ],
-      "status": "pending"
+      "status": "in_progress",
+      "startedAt": "2026-09-07T20:00:09.885Z"
     },
     {
       "number": 76,
@@ -85437,12 +85438,48 @@
       "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1490": {
-      "overview": "pending",
-      "work": "pending"
+      "overview": "retry needed",
+      "work": "retry needed",
+      "sourcesChecked": [
+        "https://www.mdpi.com/2077-0472/16/6/661"
+      ],
+      "evidence": [],
+      "errors": [],
+      "nextAction": "Retry inaccessible source fetch.",
+      "updatedAt": "2026-09-07T22:14:43.806Z"
     },
     "vp-1491": {
-      "overview": "pending",
-      "work": "pending"
+      "overview": "verified",
+      "work": "no suitable evidence",
+      "sourcesChecked": [
+        "https://www.math.ubc.ca/~bui/"
+      ],
+      "evidence": [
+        {
+          "id": "vp-1491-1",
+          "url": "https://www.math.ubc.ca/~bui/",
+          "excerpt": "UBC Department of Mathematics: Anton Bui Anton Bui Professor Phone: (604) 822-5004 E-mail: bui(at)math.",
+          "retrievedAt": "2026-09-07T20:00:12.445Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1491-2",
+          "url": "https://www.math.ubc.ca/~bui/",
+          "excerpt": "ca Math 257 Click here Teaching: Math 400 (Applied Partial Differential Equations) '97-'98 Current research interests: Differential inclusions N-person differential games with applications to management problems Selected publications: On some differential inclusions in Hilbert spaces.",
+          "retrievedAt": "2026-09-07T20:00:12.445Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1491-3",
+          "url": "https://www.math.ubc.ca/~bui/",
+          "excerpt": "Open loop equilibrium strategy for quasi-variational inequalities and for constrained non-cooperative games.",
+          "retrievedAt": "2026-09-07T20:00:12.445Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
+      "errors": [],
+      "nextAction": "Generate and independently verify overview/work proposal.",
+      "updatedAt": "2026-09-07T22:14:43.806Z"
     },
     "vp-1492": {
       "overview": "pending",

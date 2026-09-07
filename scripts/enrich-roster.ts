@@ -24,6 +24,7 @@ interface Ledger { version: 1; snapshotAt: string; ids: string[]; batches: Batch
   work: 'pending' | 'verified' | 'no suitable evidence' | 'retry needed';
   sourcesChecked: string[]; evidence: unknown[]; errors: string[]; nextAction?: string; updatedAt: string;
 }>; }
+type LedgerEntry = Ledger['entries'][string];
 
 async function load(): Promise<{ roster: Roster; ledger: Ledger | null }> {
   const roster = JSON.parse(await readFile(rosterPath, 'utf8')) as Roster;
@@ -40,6 +41,18 @@ function makeLedger(roster: Roster): Ledger {
   return { version: 1, snapshotAt: now, ids, batches, entries: Object.fromEntries(roster.map((person) => [person.id, {
     overview: 'pending', work: 'pending', sourcesChecked: [person.profileUrl, ...(person.websiteUrl ? [person.websiteUrl] : [])], evidence: [] as unknown[], errors: [] as string[], updatedAt: now,
   }])) };
+}
+
+function makeEntry(person: RosterEntry): LedgerEntry {
+  const now = new Date().toISOString();
+  return {
+    overview: 'pending' as const,
+    work: 'pending' as const,
+    sourcesChecked: [person.profileUrl, ...(person.websiteUrl ? [person.websiteUrl] : [])],
+    evidence: [] as unknown[],
+    errors: [] as string[],
+    updatedAt: now,
+  };
 }
 
 async function save(ledger: Ledger) { await writeFile(ledgerPath, `${JSON.stringify(ledger, null, 2)}\n`); }
@@ -89,8 +102,11 @@ async function collectBatch(number: number) {
   batch.startedAt ??= new Date().toISOString();
   for (const id of batch.ids) {
     const person = roster.find((candidate) => candidate.id === id);
-    const entry = ledger.entries[id];
-    if (!person || !entry) continue;
+    if (!person) continue;
+    const entry = ledger.entries[id] ??= makeEntry(person);
+    entry.sourcesChecked ??= [person.profileUrl, ...(person.websiteUrl ? [person.websiteUrl] : [])];
+    entry.evidence ??= [];
+    entry.errors ??= [];
     if (entry.evidence.length || entry.errors.length) continue;
     entry.errors = [];
     entry.evidence = [];
