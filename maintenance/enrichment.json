@@ -2182,7 +2182,9 @@
         "vp-0499",
         "vp-0500"
       ],
-      "status": "pending"
+      "status": "complete",
+      "startedAt": "2026-09-07T05:03:23.318Z",
+      "publishedAt": "2026-09-07T05:05:21.715Z"
     },
     {
       "number": 26,
@@ -34775,204 +34777,826 @@
       "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0481": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://integrativebio.utexas.edu/directory/phuong-dao"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0481-1",
+          "url": "https://integrativebio.utexas.edu/directory/phuong-dao",
+          "excerpt": "Current Students Faculty & Staff Prospective Students Give About About Overview Departmental Leadership History Get Involved Job Opportunities Contact Academics Academics Overview Graduate Study Undergraduate Study Research Research Overview Research Interests Facilities & Resources News Events People Info for .",
+          "retrievedAt": "2026-09-07T05:03:24.282Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0481-2",
+          "url": "https://integrativebio.utexas.edu/directory/phuong-dao",
+          "excerpt": "Current Students Faculty & Staff Prospective Students Give Search the site Toggle the main menu Home / Directory Phuong Dao Assisant Professor Integrative Biology Contact Information Email Address: phuong.",
+          "retrievedAt": "2026-09-07T05:03:24.282Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0481-3",
+          "url": "https://integrativebio.utexas.edu/directory/phuong-dao",
+          "excerpt": "Phuong Dao, an Assistant Professor and the principal investigator of the Remote Sensing and Environmental Intelligence Lab (ReSEIL) in the Department of Integrative Biology, College of Natural Sciences, The University of Texas at Austin.",
+          "retrievedAt": "2026-09-07T05:03:24.282Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0481-4",
+          "url": "https://integrativebio.utexas.edu/directory/phuong-dao",
+          "excerpt": "Before joining UT Austin, I was an Assistant Professor in the Department of Agricultural Biology, Colorado State University.",
+          "retrievedAt": "2026-09-07T05:03:24.282Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0481-5",
+          "url": "https://integrativebio.utexas.edu/directory/phuong-dao",
+          "excerpt": "At CSU, I was also a Faculty in the School of Global Environmental Sustainability and the campus-wide Graduate Degree Program in Ecology.",
+          "retrievedAt": "2026-09-07T05:03:24.282Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0481-6",
+          "url": "https://integrativebio.utexas.edu/directory/phuong-dao",
+          "excerpt": "I also developed and advised the Agricultural Data Science undergraduate minor program at CSU.",
+          "retrievedAt": "2026-09-07T05:03:24.282Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0481-7",
+          "url": "https://integrativebio.utexas.edu/directory/phuong-dao",
+          "excerpt": "Before joining CSU, I was a Postdoc at the University of Wisconsin-Madison (with Prof.",
+          "retrievedAt": "2026-09-07T05:03:24.282Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0481-8",
+          "url": "https://integrativebio.utexas.edu/directory/phuong-dao",
+          "excerpt": "Philip Townsend) and NSF-ASCEND Biology Integration Institute (currently a partner) that is directed by Prof.",
+          "retrievedAt": "2026-09-07T05:03:24.282Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:05:16.647Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0482": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.scifac.hku.hk/people/ngo-bao-chau"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0482-1",
+          "url": "https://www.scifac.hku.hk/people/ngo-bao-chau",
+          "excerpt": "ter Instagram Youtube Xiaohongshu Search search Staff Intranet About Us Dean's Message Welcoming Message Dean's Notes Faculty Vision Meet Our Mascot HKU Statistics Departments Faculty Members Faculty Management Team Teaching Staff Teaching Staff Profile Looking for Thesis Supervisor Faculty Office Staff Science Distinguished Visiting Scholars Scheme Facilities & Infrastructure Strategic Moves, Quick Facts and Achievements Quick Facts & Figures Awards and Achievements Emeritus Professors Souvenirs Photo Gallery Prospective Students Undergraduate Programme Science Core Programmes Why HKU Science?",
+          "retrievedAt": "2026-09-07T05:03:26.720Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0482-2",
+          "url": "https://www.scifac.hku.hk/people/ngo-bao-chau",
+          "excerpt": "Rankings and Achievements Science Education Nowadays Special Features for Science curricula Excellence in Research Unique Facilities 6901 BSc Programme Features Intensive Majors Accreditations Articulation Pathways Young Scientist Scheme (YSS) What is YSS?",
+          "retrievedAt": "2026-09-07T05:03:26.720Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0482-3",
+          "url": "https://www.scifac.hku.hk/people/ngo-bao-chau",
+          "excerpt": "Schools School of Biomedical Engineering 6925 BEng(BME) School of Computing and Data Science 6224 BASc(AppliedAI) 6248 BASc(FinTech) 6729 BSc(ActuarSc) 6779 Statistical Decision Sciences 6999 Computing and Data Science School of Innovation 6602 BSc(I&T) Young Scientist Scheme (YSS) Students' Life & Experience Diverse Learning Experiences Minor in Science Entrepreneurship Admissions One-stop Platform for Science Undergraduate Admissions Admissions Requirements and Application Direct Admissions Scheme for Associate Degree and Higher Diploma Graduates Taught Postgraduate Programme Why HKU Science?",
+          "retrievedAt": "2026-09-07T05:03:26.720Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0482-4",
+          "url": "https://www.scifac.hku.hk/people/ngo-bao-chau",
+          "excerpt": "ld of Food Safety and Toxicology MSc in the field of Food Industry: Management and Marketing MSc in the field of Physics MSc in the field of Space Science MSc in Artificial Intelligence MSc in Integrative Marine Ecology and Conservation Programme offered by Affiliated Schools School of Computing and Data Science MSc in Computer Science Master of Data Science MSc in Electronic Commerce and Internet Computing MSc in Financial Technology and Data Analytics Master of Statistics School of Innovation MSc in Innovation and Technology Tips for new comers Research Postgraduate Programme Why HKU Science?",
+          "retrievedAt": "2026-09-07T05:03:26.720Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0482-5",
+          "url": "https://www.scifac.hku.hk/people/ngo-bao-chau",
+          "excerpt": "Studying RPg at HKU Science Programme Information Master of Philosophy (MPhil) Doctor of Philosophy (PhD) Joint PhD Degree Programme with other University Joint Educational Placement for PhD between other Universities Stipend and Support Research Postgraduate Fellowship / Scholarship How to Apply?",
+          "retrievedAt": "2026-09-07T05:03:26.720Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0482-6",
+          "url": "https://www.scifac.hku.hk/people/ngo-bao-chau",
+          "excerpt": "cation Details Application Form (URFP) Application Form (University Research Internship Awards) List of Participants Summer Research Fellowship (SRF) & Overseas Research Fellowship (ORF) Schemes for Science Students Research Colloquium for Science Undergraduate Students Other Opportunities List of Experiential Learning Ambassadors and Student Sharing Young Scientist Scheme Useful Resources Handbooks Calendar & Timetables SLEQ-UG and SFTL Student Wellness Support On-campus Resources (in counselling, financial assistance, personal enrichment, career advising, health service, and SEN support, etc.",
+          "retrievedAt": "2026-09-07T05:03:26.720Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0482-7",
+          "url": "https://www.scifac.hku.hk/people/ngo-bao-chau",
+          "excerpt": "culty Members Teaching Staff Teaching Staff Profile Looking for Thesis Supervisor Professor NGO, Bao Chau Professor, Chair of Mathematics, Department of Mathematics, Faculty of Science, HKU BSc ENS Paris, PhD Université Paris-Orsay WEBSITE [javascript protected email address] 3917 5197 Room 404, Run Run Shaw Building, University of Hong Kong, Pokfulam Road, Hong Kong Research Interest Representation Theory Algebraic Geometry Number Theory Automorphic Forms Back Top Sitemap Should you have any enquiries/comments on the accessibility of this website, please contact us at 3917 2683 or science@hku.",
+          "retrievedAt": "2026-09-07T05:03:26.720Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:05:21.715Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0483": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://sociology.uchicago.edu/directory/kimberly-kay-hoang"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0483-1",
+          "url": "https://sociology.uchicago.edu/directory/kimberly-kay-hoang",
+          "excerpt": "d Resources Graduate Student News and Awards PhD Student Trajectories Society for Social Research Workshops Undergraduate Curriculum BA Thesis Past BA Theses Undergraduate Advisory Board Chicago Journal of Sociology Contact Research Initiatives Center for International Social Science Research (CISSR) Center for Spatial Data Science Chicago Ethnography Incubator Committee on Education Critical Social Sciences Initiative (CSSI) Knowledge Lab National Social Life, Health, and Aging Project (NSHAP) UChicago Justice Project Apply Give Home &gt; directory &gt; kimberly kay hoang Kimberly Kay Hoang B.",
+          "retrievedAt": "2026-09-07T05:03:26.986Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0483-2",
+          "url": "https://sociology.uchicago.edu/directory/kimberly-kay-hoang",
+          "excerpt": "University of California-Berkeley, 2011 Office: Social Sciences 413 Office hours: Email for appointment Phone: 773-834-0579 Email Interests: Economic sociology, law, global sociology, gender, qualitative research methods, theory Professor Kimberly Kay Hoang is Professor of Sociology and the College at the University of Chicago.",
+          "retrievedAt": "2026-09-07T05:03:26.986Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0483-3",
+          "url": "https://sociology.uchicago.edu/directory/kimberly-kay-hoang",
+          "excerpt": "Spiderweb Capitalism: How Global Elites Exploit Frontier Markets (Princeton University Press 2022).",
+          "retrievedAt": "2026-09-07T05:03:26.986Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0483-4",
+          "url": "https://sociology.uchicago.edu/directory/kimberly-kay-hoang",
+          "excerpt": "This book provides a behind-the-scenes look at how the rich and powerful use offshore shell corporations to conceal their wealth and make themselves richer.",
+          "retrievedAt": "2026-09-07T05:03:26.986Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0483-5",
+          "url": "https://sociology.uchicago.edu/directory/kimberly-kay-hoang",
+          "excerpt": "Drawing on rich interview data this book uncovers the mechanics behind the invisible, mundane networks of lawyers, accountants, company secretaries, and fixers who facilitate the illicit movement of wealth across borders and around the globe.",
+          "retrievedAt": "2026-09-07T05:03:26.986Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0483-6",
+          "url": "https://sociology.uchicago.edu/directory/kimberly-kay-hoang",
+          "excerpt": "Spiderweb Capitalism is the winner of five distinguished book awards from the Association of American Publishers and the American Sociological Association.",
+          "retrievedAt": "2026-09-07T05:03:26.986Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0483-7",
+          "url": "https://sociology.uchicago.edu/directory/kimberly-kay-hoang",
+          "excerpt": "Dealing in Desire: Asian Ascendancy, Western Decline, and the Hidden Currencies of Global Sex Work (University of California Press 2015).",
+          "retrievedAt": "2026-09-07T05:03:26.986Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0483-8",
+          "url": "https://sociology.uchicago.edu/directory/kimberly-kay-hoang",
+          "excerpt": "This monograph examines the mutual construction of masculinities, financial deal-making, and transnational political-economic identities.",
+          "retrievedAt": "2026-09-07T05:03:26.986Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:05:16.648Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0484": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://gws.berkeley.edu/people/trinh-t-minh-ha/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0484-1",
+          "url": "https://gws.berkeley.edu/people/trinh-t-minh-ha/",
+          "excerpt": "id Safety Undergraduate Programs GWS Major GWS Minor QTP Minor Undergraduate Advising Undergraduate Learning Initiative GWS Courses Student Resources Graduate Programs Designated Emphasis GWS Courses DE Student Directory DE Alumni PhD Program Status Research Institute for Gender & Sexuality Research Visiting Scholar Programs Faculty Publications GWS Library Resources GWS Resources List Visiting Scholar Alumni Events Calendar Past Events Decolonizing Gender & Sexualities Conference News Give to GWS Secondary navigation Donate to GWS Mailing List Sign-up Home About GWS Department Faculty Trinh T.",
+          "retrievedAt": "2026-09-07T05:03:27.663Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0484-2",
+          "url": "https://gws.berkeley.edu/people/trinh-t-minh-ha/",
+          "excerpt": "Minh-ha Title: Distinguished Professor of the Graduate School in the departments of Gender & Women&#039;s Studies and Rhetoric Bio: Originally trained as a musical composer, who received her two masters and Ph.",
+          "retrievedAt": "2026-09-07T05:03:27.663Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0484-3",
+          "url": "https://gws.berkeley.edu/people/trinh-t-minh-ha/",
+          "excerpt": "Minh-ha is a world-renowned independent filmmaker and feminist, post-colonial theorist.",
+          "retrievedAt": "2026-09-07T05:03:27.663Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0484-4",
+          "url": "https://gws.berkeley.edu/people/trinh-t-minh-ha/",
+          "excerpt": "She teaches courses that focus on women’s work as related to cultural politics, post-coloniality, contemporary critical theory and the arts.",
+          "retrievedAt": "2026-09-07T05:03:27.663Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0484-5",
+          "url": "https://gws.berkeley.edu/people/trinh-t-minh-ha/",
+          "excerpt": "She has also taught at Harvard, Smith, Cornell, San Francisco State University, the University of Illinois, Ochanomizu University in Japan, and the National Conservatory of Music in Senegal.",
+          "retrievedAt": "2026-09-07T05:03:27.663Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0484-6",
+          "url": "https://gws.berkeley.edu/people/trinh-t-minh-ha/",
+          "excerpt": "Aside from the eight books she has published, her work also includes two large-scale multimedia installations and six feature-length films that have been honored in twenty seven retrospectives around the world: Reassemblage (1982), Naked Spaces (1985), Surname Viet Given Name Nam (1989), Shoot for the Contents (1991), A Tale of Love (1996), The Fourth Dimension (2001), and Night Passage (2004) .",
+          "retrievedAt": "2026-09-07T05:03:27.663Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0484-7",
+          "url": "https://gws.berkeley.edu/people/trinh-t-minh-ha/",
+          "excerpt": "Research interests: Feminist theory Film theory and production Comparative literary and art theory Cultural politics Third world arts and politics Postcolonial theory and transnational studies Role: Emeriti Contact trinh@berkeley.",
+          "retrievedAt": "2026-09-07T05:03:27.663Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0484-8",
+          "url": "https://gws.berkeley.edu/people/trinh-t-minh-ha/",
+          "excerpt": "Nelson Ianna Hawkins Owen Leslie Salzinger Dora Santana Elora Shehabuddin Eric Stanley Barbara Barnes Wendy DeSouza Anna Eng Brooke Lober Sandra Pacheco Arunima Paul Gloria Bowles Evelyn Glenn Barrie Thorne Irene Tinker Trinh Minh-ha Affiliated Faculty Visiting Scholars General FAQ History Newsletter Archive Covid Safety Address Gender and Women's Studies 608 Social Sciences Building Mail code 1070 Berkeley, CA 94720 Phone / Email gwsa@berkeley.",
+          "retrievedAt": "2026-09-07T05:03:27.663Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:05:16.648Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0485": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://history.fas.harvard.edu/people/hue-tam-ho-tai"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://history.fas.harvard.edu/people/hue-tam-ho-tai: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T05:05:21.715Z",
+      "nextAction": "Retry with anti-bot headers or alternative profile URL"
     },
     "vp-0486": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://asian.washington.edu/people/bich-ngoc-turner"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0486-1",
+          "url": "https://asian.washington.edu/people/bich-ngoc-turner",
+          "excerpt": "sity of Washington Skip to main content Washington University of Washington College of Arts & Sciences Quick links Quick Links Directories Maps MyUW User account menu Search Search Give now Main menu Asian Languages & Literature Menu People Faculty Staff Teaching Assistants Graduate Students Current Grad Students GSA Officers Department Service Assignments Alumni Alumni News Submit an Update Programs & Courses Undergraduate Majors & Minors Incoming Freshmen & Current Students Transfer Students Scholarships Careers Resources & Opportunities Graduate Programs Admissions Policies and Procedures M.",
+          "retrievedAt": "2026-09-07T05:03:32.395Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0486-2",
+          "url": "https://asian.washington.edu/people/bich-ngoc-turner",
+          "excerpt": "eracy Research Lab Welcome People Publications Dissertations Fields of Interest News & Events Recent News Email List Asia Notes Newsletter Markus Memorial Lecture Washin Kai Calendar Resources Advising Voicing Concerns Health & Wellness Financial Support Careers For Graduate Students For Teaching Assistants For Faculty and Staff About History Equity, Justice, & Inclusion Mission & Vision Awards & Honors Stay Connected Support Us Contact Us Directories Maps MyUW You are here Home People - Full Directory Bich-Ngoc Turner (She/her/hers) Associate Teaching Professor Contact Information turnerbn@uw.",
+          "retrievedAt": "2026-09-07T05:03:32.396Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0486-3",
+          "url": "https://asian.washington.edu/people/bich-ngoc-turner",
+          "excerpt": "edu GWN 235 Office Hours On Leave Fields of Interest Autobiography, Biography, and Life Writing Contemporary Vietnamese Literature Language Pedagogy Postwar Vietnam Southeast Asian Vietnamese Biography ACTFL-certified OPI tester of Vietnamese, full certification Ph.",
+          "retrievedAt": "2026-09-07T05:03:32.396Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0486-4",
+          "url": "https://asian.washington.edu/people/bich-ngoc-turner",
+          "excerpt": ", American Studies (US-Vietnam relations, postwar literature), University of Hawai&#039;i at Manoa M.",
+          "retrievedAt": "2026-09-07T05:03:32.396Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0486-5",
+          "url": "https://asian.washington.edu/people/bich-ngoc-turner",
+          "excerpt": ", American Studies (US-Vietnam relations, educational policy studies), University of Hawai&#039;i at Manoa Graduate Certificate of International Cultural Studies, East West Center, University of Hawai&#039;i at Manoa B.",
+          "retrievedAt": "2026-09-07T05:03:32.396Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0486-6",
+          "url": "https://asian.washington.edu/people/bich-ngoc-turner",
+          "excerpt": "She went to the University of Hawaii at Manoa in 2000 to pursue her graduate study and earned her PhD in American Studies in 2011.",
+          "retrievedAt": "2026-09-07T05:03:32.396Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0486-7",
+          "url": "https://asian.washington.edu/people/bich-ngoc-turner",
+          "excerpt": "Her academic interests are US-Vietnam's postwar relations, modern Vietnamese literature and culture.",
+          "retrievedAt": "2026-09-07T05:03:32.396Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0486-8",
+          "url": "https://asian.washington.edu/people/bich-ngoc-turner",
+          "excerpt": "Before joining the Asian Languages and Literature program at the University of Washington, she worked as a lecturer of Vietnamese at Yale University, and later, as an instructor of Vietnamese language and culture at the U.",
+          "retrievedAt": "2026-09-07T05:03:32.396Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:05:21.715Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0487": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://cde.nus.edu.sg/me/staff/phan-thien-nhan/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://cde.nus.edu.sg/me/staff/phan-thien-nhan/: Imperva/Incapsula bot protection"
+      ],
+      "updatedAt": "2026-09-07T05:05:21.715Z",
+      "nextAction": "Retry via headless browser or proxy"
     },
     "vp-0488": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://cde.nus.edu.sg/me/staff/duong-hai-minh/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://cde.nus.edu.sg/me/staff/duong-hai-minh/: Imperva/Incapsula bot protection"
+      ],
+      "updatedAt": "2026-09-07T05:05:21.715Z",
+      "nextAction": "Retry via headless browser or proxy"
     },
     "vp-0489": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://chemistry.nus.edu.sg/people/huynh-han-vinh/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://chemistry.nus.edu.sg/people/huynh-han-vinh/: Imperva/Incapsula bot protection"
+      ],
+      "updatedAt": "2026-09-07T05:05:21.715Z",
+      "nextAction": "Retry via headless browser or proxy"
     },
     "vp-0490": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://medicine.nus.edu.sg/phys/faculty/thai-tran/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://medicine.nus.edu.sg/phys/faculty/thai-tran/: Imperva/Incapsula bot protection"
+      ],
+      "updatedAt": "2026-09-07T05:05:21.715Z",
+      "nextAction": "Retry via headless browser or proxy"
     },
     "vp-0491": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://medicine.nus.edu.sg/sur/faculty/toan-thang-phan/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://medicine.nus.edu.sg/sur/faculty/toan-thang-phan/: Imperva/Incapsula bot protection"
+      ],
+      "updatedAt": "2026-09-07T05:05:21.715Z",
+      "nextAction": "Retry via headless browser or proxy"
     },
     "vp-0492": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://lkyspp.nus.edu.sg/our-people/faculty/vu-minh-khuong"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://lkyspp.nus.edu.sg/our-people/faculty/vu-minh-khuong: Imperva/Incapsula bot protection"
+      ],
+      "updatedAt": "2026-09-07T05:05:21.715Z",
+      "nextAction": "Retry via headless browser or proxy"
     },
     "vp-0493": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.ieee-ras.org/ras_member/quang-cuong-pham/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0493-1",
+          "url": "https://www.ieee-ras.org/ras_member/quang-cuong-pham/",
+          "excerpt": "Quang-Cuong Pham - IEEE Robotics and Automation Society Website Skip to content IEEE.",
+          "retrievedAt": "2026-09-07T05:03:36.907Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0493-2",
+          "url": "https://www.ieee-ras.org/ras_member/quang-cuong-pham/",
+          "excerpt": "org IEEE Xplore ® IEEE Standards IEEE Spectrum More Sites Join IEEE Donate Login Sign In IEEE.",
+          "retrievedAt": "2026-09-07T05:03:36.907Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0493-3",
+          "url": "https://www.ieee-ras.org/ras_member/quang-cuong-pham/",
+          "excerpt": "Approved Standards Active Projects International Robotics Standards Coordination Effort Students Participating in IEEE Robotic Standardization Efforts (SPIRSE) Industry Programs Entrepreneurship Education Industry@Conferences Industry Rewards Program Academic-Industrial Partnership Grants Careers/Jobs Young Professionals Group Industrial Activities Board Home » Quang-Cuong Pham Quang-Cuong Pham Current Distinguished Lecturer , Distinguished Lecturer , Optimization for Robotics Nanyang Technological University Singapore Singapore Youtube X-twitter Linkedin About Cường was born in Hanoi, Vietnam.",
+          "retrievedAt": "2026-09-07T05:03:36.907Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0493-4",
+          "url": "https://www.ieee-ras.org/ras_member/quang-cuong-pham/",
+          "excerpt": "He is an alumnus of École Normale Supérieure, rue d’Ulm (France) and holds a Ph.",
+          "retrievedAt": "2026-09-07T05:03:36.907Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0493-5",
+          "url": "https://www.ieee-ras.org/ras_member/quang-cuong-pham/",
+          "excerpt": "He was a visiting researcher at the University of São Paulo (Brazil) in 2010, and a JSPS Fellow at the University of Tokyo (Japan) in 2011-2013.",
+          "retrievedAt": "2026-09-07T05:03:36.907Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0493-6",
+          "url": "https://www.ieee-ras.org/ras_member/quang-cuong-pham/",
+          "excerpt": "He joined NTU (Singapore) in 2013 and is currently an Associate Professor in the School of Mechanical and Aerospace Engineering.",
+          "retrievedAt": "2026-09-07T05:03:36.907Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0493-7",
+          "url": "https://www.ieee-ras.org/ras_member/quang-cuong-pham/",
+          "excerpt": "He was a recipient of the Best Paper Award at the conference Robotics: Science and Systems, 2012.",
+          "retrievedAt": "2026-09-07T05:03:36.907Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0493-8",
+          "url": "https://www.ieee-ras.org/ras_member/quang-cuong-pham/",
+          "excerpt": "His research has featured in major international media, including The New York Times, The Guardian, The Economist, CNN, Science, Nature, etc.",
+          "retrievedAt": "2026-09-07T05:03:36.907Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:05:21.715Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0494": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.ntu.edu.sg/sc3dp/about-us/our-people/faculty-directory"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0494-1",
+          "url": "https://www.ntu.edu.sg/sc3dp/about-us/our-people/faculty-directory",
+          "excerpt": "ch Collaboration&#160; News & Events About Us About Us Home Research Focus Research Capabilities Programmes Research Collaboration&#160; News & Events Our People Our People Contact Us Faculty Directory Faculty Directory Management Team Directorate Office Visiting Professors Research Staff Research Students International Collaborators Management Team Directorate Office Faculty Directory Visiting Professors Research Staff Research Students International Collaborators Faculty Directory Executive Director Prof Paulo Jorge Da Silva Bartolo School of Mechanical and Aerospace Engineering pbartolo@ntu.",
+          "retrievedAt": "2026-09-07T05:03:37.438Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0494-2",
+          "url": "https://www.ntu.edu.sg/sc3dp/about-us/our-people/faculty-directory",
+          "excerpt": "sg Since August 2021, Paulo Bartolo is Professor at the School of Mechanical and Aerospace Engineering at Nanyang Technological University and Executive Director of the Singapore Centre for 3D Printing.",
+          "retrievedAt": "2026-09-07T05:03:37.438Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0494-3",
+          "url": "https://www.ntu.edu.sg/sc3dp/about-us/our-people/faculty-directory",
+          "excerpt": "Appointments: Executive Director, Singapore Centre for 3D Printing (SC3DP) President's Chair in Additive Manufacturing Professor, School of Mechanical & Aerospace Engineering Keywords: Additive and Advanced Manufacturing | Materials Science & Engineering | Mechanical & Manufacturing Engineering Programme Directors Assoc Prof Leong Kah Fai School of Mechanical & Aerospace Engineering mkfleong@ntu.",
+          "retrievedAt": "2026-09-07T05:03:37.438Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0494-4",
+          "url": "https://www.ntu.edu.sg/sc3dp/about-us/our-people/faculty-directory",
+          "excerpt": "sg Leong Kah Fai is an associate professor in the School of Mechanical and Aerospace Engineering, Nanyang Technological University.",
+          "retrievedAt": "2026-09-07T05:03:37.438Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0494-5",
+          "url": "https://www.ntu.edu.sg/sc3dp/about-us/our-people/faculty-directory",
+          "excerpt": "Appointments: Emeritus Associate Professor, School of Mechanical & Aerospace Engineering Emeritus Associate Professor Keywords: Art, Design and Media | Biomedical Sciences & Life Sciences | Materials Science & Engineering | Mechanical & Manufacturing Engineering | Systems and Engineering Management Assoc Prof Ng Teng Yong School of Mechanical and Aerospace Engineering mtyng@ntu.",
+          "retrievedAt": "2026-09-07T05:03:37.438Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0494-6",
+          "url": "https://www.ntu.edu.sg/sc3dp/about-us/our-people/faculty-directory",
+          "excerpt": "Prior to that, he was Research Manager at the A*STAR Institute of High Performance Computing (IHPC).",
+          "retrievedAt": "2026-09-07T05:03:37.438Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0494-7",
+          "url": "https://www.ntu.edu.sg/sc3dp/about-us/our-people/faculty-directory",
+          "excerpt": "Appointments: Associate Professor, School of Mechanical & Aerospace Engineering Keywords: Materials Science & Engineering | Mechanical & Manufacturing Engineering | Nanotechnology & Nano-Science Assoc Prof Wong Teck Neng School of Mechanical and Aerospace Engineering mtnwong@ntu.",
+          "retrievedAt": "2026-09-07T05:03:37.438Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0494-8",
+          "url": "https://www.ntu.edu.sg/sc3dp/about-us/our-people/faculty-directory",
+          "excerpt": "He is currently an Associate Professor in the School of Mechanical and Aerospace Engineering.",
+          "retrievedAt": "2026-09-07T05:03:37.438Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:05:21.715Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0495": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.ntu.edu.sg/erian/about-us/our-people/cluster-directors/hung-dinh-nguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0495-1",
+          "url": "https://www.ntu.edu.sg/erian/about-us/our-people/cluster-directors/hung-dinh-nguyen",
+          "excerpt": "ur People Our People Director&#39;s Welcome Corporate Information Vision and Mission Contact Us Join Us ERI@N Safety Hung Dinh Nguyen Executive Committee Programme Directors Cluster Directors Cluster Directors Alessandro Romagnoli Alex Yan Ali Miserez Amer Mohammad Yusuf Mohammad Ghias Annalisa Bruno Christopher Lee Dalton Tay Dusit Niyato Eason Chen Fan Hong Jin Fei Duan Fu Yuguang Guan Yong Liang Hung Dinh Nguyen Jason Xu Zhichuan Leonard Ng Li Hong Liu Yang Lydia Helena Wong Lyu Chen Marcos Ng Bing Feng Ng Geok Ing Nripan Mathews Paul Liu Wen Qian Shunzhi Raymond Lau S Viswanathan Shirley S.",
+          "retrievedAt": "2026-09-07T05:03:37.857Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0495-2",
+          "url": "https://www.ntu.edu.sg/erian/about-us/our-people/cluster-directors/hung-dinh-nguyen",
+          "excerpt": "Ho Su Pei-Chen Sum Tze Chien Tay Wee Peng Tang Yi Wan Man Pun Wen Yonggang Wu Wei Xu Rong Xu Yan Yang En-Hua Yuen Chau Hung Dinh Nguyen Assoc Prof Hung Dinh Nguyen School of Electrical & Electronic Engineering Cluster Director Renewables’ Integration & Microgrids Energy Research Institute @ NTU (ERI@N) Email: hunghtd@ntu.",
+          "retrievedAt": "2026-09-07T05:03:37.857Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0495-3",
+          "url": "https://www.ntu.edu.sg/erian/about-us/our-people/cluster-directors/hung-dinh-nguyen",
+          "excerpt": "degree in the Department of Mechanical Engineering at Massachusetts Institute of Technology (MIT) in 2017.",
+          "retrievedAt": "2026-09-07T05:03:37.857Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0495-4",
+          "url": "https://www.ntu.edu.sg/erian/about-us/our-people/cluster-directors/hung-dinh-nguyen",
+          "excerpt": "He joined Nanyang Technological University, Singapore, as an assistant professor of Electrical and Electronic Engineering in 2018.",
+          "retrievedAt": "2026-09-07T05:03:37.857Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0495-5",
+          "url": "https://www.ntu.edu.sg/erian/about-us/our-people/cluster-directors/hung-dinh-nguyen",
+          "excerpt": "He worked on a number of joint projects supported by NSF and DOE and in collaboration with ISO New England, LANL, and PNNL.",
+          "retrievedAt": "2026-09-07T05:03:37.857Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0495-6",
+          "url": "https://www.ntu.edu.sg/erian/about-us/our-people/cluster-directors/hung-dinh-nguyen",
+          "excerpt": "His current research interests lie in complex systems; nonlinear dynamics and stability; power system operation, control, and optimization; Dynamic Security Assessment/Energy Management System; and smart grids.",
+          "retrievedAt": "2026-09-07T05:03:37.857Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:05:21.715Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0496": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://dr.ntu.edu.sg/entities/person/Viet-Ha-Hoang"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://dr.ntu.edu.sg/entities/person/Viet-Ha-Hoang: HTTP 405"
+      ],
+      "updatedAt": "2026-09-07T05:05:21.715Z",
+      "nextAction": "Retry with alternative HTTP method or find updated NTU profile"
     },
     "vp-0497": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://sites.google.com/view/tien-mai/home"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0497-1",
+          "url": "https://sites.google.com/view/tien-mai/home",
+          "excerpt": "Tien Mai Search this site Embedded Files Skip to main content Skip to navigation Tien Mai Home History Awards Research/Publications Group News Tien Mai Home History Awards Research/Publications Group News More Home History Awards Research/Publications Group News About me Tien Mai, Ph.",
+          "retrievedAt": "2026-09-07T05:03:38.477Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0497-2",
+          "url": "https://sites.google.com/view/tien-mai/home",
+          "excerpt": "Assistant Professor of Information Systems (tenure track), Lee Kong Chian Fellow School of Computing and Information Systems, Singapore Management University 80 Stamford Road, Singapore 178902 Email: atmai@smu.",
+          "retrievedAt": "2026-09-07T05:03:38.477Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:05:16.648Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0498": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://faculty.smu.edu.sg/profile/don-ta-326"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0498-1",
+          "url": "https://faculty.smu.edu.sg/profile/don-ta-326",
+          "excerpt": "value == Faculty Menu Main navigation Home Profile Type Full-time Faculty Visiting Faculty Adjunct Faculty Professor Emeritus By Schools College of Integrative Studies Lee Kong Chian School of Business School of Accountancy School of Computing and Information Systems School of Economics School of Social Sciences Yong Pung How School of Law Contact Breadcrumb Home Faculty Directory Don TA Faculty Profile Don TA Associate Professor of Computer Science (Education); Faculty Manager, B.",
+          "retrievedAt": "2026-09-07T05:03:39.313Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0498-2",
+          "url": "https://faculty.smu.edu.sg/profile/don-ta-326",
+          "excerpt": "Data Science Machine Learning & Intelligence Information Systems & Technology Software Engineering Learning & Work Technology-Enhanced Learning & Pedagogy Strategic Priorities Digital Transformation Research Statement Qualification PhD, Nanyang Technological University, 2006 Teaching Topics Introduction to Programming Cloud Computing Research Advisor/Co-Research Advisor to EE Fook Ming THIA Boon Sing Lakshminarayanan ANANTHARAMAN Where to Find Us Office of Human Resources Singapore Management University Administration Building 81 Victoria Street Singapore 188065 Get in Touch Email: enquiry@smu.",
+          "retrievedAt": "2026-09-07T05:03:39.313Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0498-3",
+          "url": "https://faculty.smu.edu.sg/profile/don-ta-326",
+          "excerpt": "sg Tel: +65 6828 0100 Offices & Staff Directory Faculty Directory Library Faculty by School Lee Kong Chian School of Business School of Accountancy School of Computing and Information Systems School of Economics School of Social Sciences Yong Pung How School of Law College of Integrative Studies Terms of Use Website Feedback Report Whistleblowing Personal Data Protection Facebook Instagram Twitter LinkedIn YouTube SoundCloud TikTok &copy; 2026 Singapore Management University.",
+          "retrievedAt": "2026-09-07T05:03:39.313Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:05:21.715Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0499": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://research.monash.edu/en/persons/san-hoa-thang"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0499-1",
+          "url": "https://research.monash.edu/en/persons/san-hoa-thang",
+          "excerpt": "San Hoa Thang - Monash University Skip to main navigation Skip to search Skip to main content Monash University Home Search content at Monash University Home Profiles Research units Research Infrastructure Projects Outputs Prizes Activities Press/Media View Scopus Profile San Hoa Thang Professor Professor (Research) , School of Chemistry https://orcid.",
+          "retrievedAt": "2026-09-07T05:03:42.282Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0499-2",
+          "url": "https://research.monash.edu/en/persons/san-hoa-thang",
+          "excerpt": "ts 1982 &hellip; 2026 Research activity per year Overview Network Projects (28) Outputs (205) Prizes (1) Activities (1) Personal profile Research area keywords Polymer Chemistry macromolecular materials and chemistry free radical polymerization polymerisation mechanisms RAFT polymerization nitroxide-mediated polymerization drug delivery systems Gene delivery Emulsion polymerization Self-assembly Expertise related to UN Sustainable Development Goals In 2015, UN member states agreed to 17 global Sustainable Development Goals (SDGs) to end poverty, protect the planet and ensure prosperity for all.",
+          "retrievedAt": "2026-09-07T05:03:42.282Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0499-3",
+          "url": "https://research.monash.edu/en/persons/san-hoa-thang",
+          "excerpt": "This person’s work contributes towards the following SDG(s): SDG 3 Good Health and Well-being SDG 7 Affordable and Clean Energy SDG 8 Decent Work and Economic Growth SDG 12 Responsible Consumption and Production SDG 13 Climate Action SDG 14 Life Below Water Collaborations and top research areas from the last five years Recent external collaboration on country/territory level.",
+          "retrievedAt": "2026-09-07T05:03:42.282Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0499-4",
+          "url": "https://research.monash.edu/en/persons/san-hoa-thang",
+          "excerpt": "Dive into details by clicking on the dots or Select a country/territory from the list Dive into details Select a country/territory to view shared publications and projects Close Select a country/territory from the list Explore network further Projects Projects per year 2013 2021 2024 2028 10 Finished 18 Active Projects per year Application of oils to enhance adhesion contact with coarse particles exhibiting low surface liberation Beattie, D.",
+          "retrievedAt": "2026-09-07T05:03:42.282Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0499-5",
+          "url": "https://research.monash.edu/en/persons/san-hoa-thang",
+          "excerpt": "(Chief Investigator (CI)) 1/01/26 → 31/12/26 Project : Research Upgrading rare earth minerals and elements using computer-aided collector design Page, A.",
+          "retrievedAt": "2026-09-07T05:03:42.282Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0499-6",
+          "url": "https://research.monash.edu/en/persons/san-hoa-thang",
+          "excerpt": "(Chief Investigator (CI)) 4/12/24 → 31/12/28 Project : Research Development of stimuli responsive Bio and RAFT polymers Ritchie, C.",
+          "retrievedAt": "2026-09-07T05:03:42.282Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0499-7",
+          "url": "https://research.monash.edu/en/persons/san-hoa-thang",
+          "excerpt": "(Chief Investigator (CI)) 4/12/24 → 31/12/26 Project : Research Process systems for recycling novel and selective reagents Firouzi, M.",
+          "retrievedAt": "2026-09-07T05:03:42.282Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0499-8",
+          "url": "https://research.monash.edu/en/persons/san-hoa-thang",
+          "excerpt": "(Chief Investigator (CI)) 15/11/24 → 29/07/27 Project : Research Development of bio-polymer and RAFT reagents for selective separation of specific minerals Zhao , C.",
+          "retrievedAt": "2026-09-07T05:03:42.282Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:05:21.715Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0500": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://research.monash.edu/en/persons/dinh-phung"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0500-1",
+          "url": "https://research.monash.edu/en/persons/dinh-phung",
+          "excerpt": "Dinh Phung - Monash University Skip to main navigation Skip to search Skip to main content Monash University Home Search content at Monash University Home Profiles Research units Research Infrastructure Projects Outputs Prizes Activities Press/Media View Scopus Profile Dinh Phung Professor Professor , Department of Data Science & AI https://orcid.",
+          "retrievedAt": "2026-09-07T05:03:43.886Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0500-2",
+          "url": "https://research.monash.edu/en/persons/dinh-phung",
+          "excerpt": "Phung monash edu 2002 2026 Research activity per year Overview Network Projects (22) Outputs (326) Activities (1) Personal profile Biography Professor Dinh Phung is Head of of the Machine Learning Group and the former Head of the Department of Data Science and AI at Monash University.",
+          "retrievedAt": "2026-09-07T05:03:43.886Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0500-3",
+          "url": "https://research.monash.edu/en/persons/dinh-phung",
+          "excerpt": "His research interest includes machine learning, deep learning, generative AI, robust and trustworthy AI, optimal transport, Bayesian and graphical models.",
+          "retrievedAt": "2026-09-07T05:03:43.886Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0500-4",
+          "url": "https://research.monash.edu/en/persons/dinh-phung",
+          "excerpt": "He has published 250+ papers in these areas and application domains such as natural language processing (NLP), computer vision, digital health, cybersecurity and autism.",
+          "retrievedAt": "2026-09-07T05:03:43.886Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0500-5",
+          "url": "https://research.monash.edu/en/persons/dinh-phung",
+          "excerpt": "Prospective PhD students, Postdocs and Tutors : Thank you for your interest and for reaching out to me.",
+          "retrievedAt": "2026-09-07T05:03:43.886Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0500-6",
+          "url": "https://research.monash.edu/en/persons/dinh-phung",
+          "excerpt": "While I'm keen on receiving strong applications and your EoI, due to the large volume of such emails, please accept my apology in advance if you do not receive a response from me individually as I might only be able to respond to short-listed or selected EoI.",
+          "retrievedAt": "2026-09-07T05:03:43.886Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0500-7",
+          "url": "https://research.monash.edu/en/persons/dinh-phung",
+          "excerpt": "Please see this link for further information regarding PhD scholarship and admission at Monash.",
+          "retrievedAt": "2026-09-07T05:03:43.886Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0500-8",
+          "url": "https://research.monash.edu/en/persons/dinh-phung",
+          "excerpt": "y Award Date: 17 Jun 2005 Computer Science, Bachelor of Science (Honours), Curtin University Award Date: 3 Sept 2001 Research area keywords Machine Learning artificial intelligence deep learning representation learning Bayesian statistics graphical models generative AI optimal transport robust and adversarial machine learning NLP and computer vision digital health cybersecurity medical AI autism Expertise related to UN Sustainable Development Goals In 2015, UN member states agreed to 17 global Sustainable Development Goals (SDGs) to end poverty, protect the planet and ensure prosperity for all.",
+          "retrievedAt": "2026-09-07T05:03:43.886Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:05:21.715Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0501": {
       "overview": "pending",
