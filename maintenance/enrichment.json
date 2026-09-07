@@ -3455,7 +3455,8 @@
         "vp-1452",
         "vp-1453"
       ],
-      "status": "pending"
+      "status": "in_progress",
+      "startedAt": "2026-09-07T19:54:06.093Z"
     },
     {
       "number": 73,
@@ -83225,204 +83226,837 @@
       "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1434": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.nrel.gov"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.nrel.gov: fetch failed"
+      ],
+      "updatedAt": "2026-09-07T19:55:07.966Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1435": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://pharmacologie-physiologie.umontreal.ca/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1435-1",
+          "url": "https://pharmacologie-physiologie.umontreal.ca/",
+          "excerpt": "039;Université de Montréal Répertoires Facultés Bibliothèques Plan campus Sites A-Z Mon portail UdeM English Faculté de médecine Département de pharmacologie et physiologie Accueil Études Baccalauréat en sciences biomédicales Structure du programme Des diplômés se racontent Carrières et perspectives d&#8217;emploi Stage obligatoire Bourses Calendrier des stages Choix d&rsquo;un stage Rapport de stage et évaluation Responsabilités de l&rsquo;étudiant Responsabilités du superviseur de stage Responsables du programme Futurs étudiants Association étudiante – AÉSBUM Programmes de génie biomédical D.",
+          "retrievedAt": "2026-09-07T19:54:06.885Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1435-2",
+          "url": "https://pharmacologie-physiologie.umontreal.ca/",
+          "excerpt": "en génie biomédical Maîtrise en génie biomédical Doctorat en génie biomédical Programmes de pharmacologie Microprogrammes en pharmacologie D.",
+          "retrievedAt": "2026-09-07T19:54:06.885Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1435-3",
+          "url": "https://pharmacologie-physiologie.umontreal.ca/",
+          "excerpt": "dirigé) Maîtrise en pharmacologie (recherche) Admission Formulaires Doctorat en pharmacologie Liste des cours en pharmacologie Foire aux questions (FAQ) Programmes de physiologie Microprogramme de physiologie Maîtrise en physiologie Doctorat en physiologie Formulaires Listes des cours en physiologie Foire aux questions (FAQ) Bourses Offres d’emploi / Stages Incivilité, Harcèlement, Inconduite, et Violence à caractère sexuel Recherche Chercheurs Publications récentes Recrutement de professeurs-chercheurs Axes de recherche Département À propos Mot du directeur Journées de la recherche Gabriel L.",
+          "retrievedAt": "2026-09-07T19:54:06.885Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1435-4",
+          "url": "https://pharmacologie-physiologie.umontreal.ca/",
+          "excerpt": "taires 2017 (autres à venir…) Conférences Hommage à Dre Audrey Claing Vie étudiante Organigramme Centres affiliés Offres d’emplois Ressources Foire aux questions (FAQ) Inventaire d’équipement Plateforme de microscopie Nous joindre ● ● Liens rapides Baccalauréat en sciences biomédicales Offres d’emploi / Stages Journée de la recherche Conférences Hommage à Dre Audrey Claing Chercheurs (ANCIENNE PAGE) Plateforme de microscopie Signalement de VACS Facebook Linked In Rss Nouvelles > Événement du prix de la meilleure publication Un don majeur pour faire avancer la recherche sur la maladie de Parkin.",
+          "retrievedAt": "2026-09-07T19:54:06.885Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1435-5",
+          "url": "https://pharmacologie-physiologie.umontreal.ca/",
+          "excerpt": "ité physique Orthophonie et audiologie Réadaptation Directions DPC CPASS Éthique clinique Facebook Linked In Rss Confidentialité Conditions d&rsquo;utilisation test Accueil Études ▼ Baccalauréat en sciences biomédicales ▼ Structure du programme Des diplômés se racontent Carrières et perspectives d&#8217;emploi Stage obligatoire ▼ Bourses Calendrier des stages Choix d&rsquo;un stage Rapport de stage et évaluation Responsabilités de l&rsquo;étudiant Responsabilités du superviseur de stage Responsables du programme Futurs étudiants Association étudiante – AÉSBUM Programmes de génie biomédical ▼ D.",
+          "retrievedAt": "2026-09-07T19:54:06.885Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1435-6",
+          "url": "https://pharmacologie-physiologie.umontreal.ca/",
+          "excerpt": "en génie biomédical Maîtrise en génie biomédical Doctorat en génie biomédical Programmes de pharmacologie ▼ Microprogrammes en pharmacologie D.",
+          "retrievedAt": "2026-09-07T19:54:06.885Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1435-7",
+          "url": "https://pharmacologie-physiologie.umontreal.ca/",
+          "excerpt": "aîtrise en pharmacologie (recherche) ▼ Admission ▼ Formulaires Doctorat en pharmacologie Liste des cours en pharmacologie Foire aux questions (FAQ) Programmes de physiologie ▼ Microprogramme de physiologie Maîtrise en physiologie Doctorat en physiologie Formulaires Listes des cours en physiologie Foire aux questions (FAQ) Bourses Offres d’emploi / Stages Incivilité, Harcèlement, Inconduite, et Violence à caractère sexuel Recherche ▼ Chercheurs Publications récentes Recrutement de professeurs-chercheurs Axes de recherche Département ▼ À propos Mot du directeur Journées de la recherche Gabriel L.",
+          "retrievedAt": "2026-09-07T19:54:06.885Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:55:07.966Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1436": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.massgeneral.org/doctors/20888/thuan-ly"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1436-1",
+          "url": "https://www.massgeneral.org/doctors/20888/thuan-ly",
+          "excerpt": "About Massachusetts General Hospital | Mass General Brigham false About Massachusetts General Hospital Massachusetts General Hospital, a founding member of Mass General Brigham, is a teaching hospital of Harvard Medical School.",
+          "retrievedAt": "2026-09-07T19:54:07.565Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1436-2",
+          "url": "https://www.massgeneral.org/doctors/20888/thuan-ly",
+          "excerpt": "As a leading world-class academic medical center, we provide advanced medical care based on innovative research and clinical trials.",
+          "retrievedAt": "2026-09-07T19:54:07.565Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1436-3",
+          "url": "https://www.massgeneral.org/doctors/20888/thuan-ly",
+          "excerpt": "The image shows the exterior of a large, modern hospital complex with multiple high-rise buildings.",
+          "retrievedAt": "2026-09-07T19:54:07.565Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1436-4",
+          "url": "https://www.massgeneral.org/doctors/20888/thuan-ly",
+          "excerpt": "The main entrance is clearly marked, and several people and vehicles are visible in front of the entrance area.",
+          "retrievedAt": "2026-09-07T19:54:07.565Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1436-5",
+          "url": "https://www.massgeneral.org/doctors/20888/thuan-ly",
+          "excerpt": "full-fill primary internal Visit the hospital /content/unified-xwalk/en/locations/boston-ma/massachusetts-general-hospital-loc0000246778 secondary internal Find a doctor /content/unified-xwalk/en/search/doctors style palette-deep-blue showJumplinks true Dedicated to innovation and clinical excellence At Massachusetts General Hospital, a founding member of Mass General Brigham, we are committed to providing the highest quality and safest care possible for every patient—near and far.",
+          "retrievedAt": "2026-09-07T19:54:07.565Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1436-6",
+          "url": "https://www.massgeneral.org/doctors/20888/thuan-ly",
+          "excerpt": ", we foster a culture of collaboration and education, pushing the boundaries of medical research and maintaining an unwavering commitment to the diverse communities we serve.",
+          "retrievedAt": "2026-09-07T19:54:07.565Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1436-7",
+          "url": "https://www.massgeneral.org/doctors/20888/thuan-ly",
+          "excerpt": "Our expert clinicians are leaders in their medical fields and handle the most complex cases.",
+          "retrievedAt": "2026-09-07T19:54:07.565Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1436-8",
+          "url": "https://www.massgeneral.org/doctors/20888/thuan-ly",
+          "excerpt": "Today, patients from around New England—and across the globe—trust us for their medical care.",
+          "retrievedAt": "2026-09-07T19:54:07.565Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:55:07.966Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1437": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://medicine.iu.edu/faculty/16281/hoang-quyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1437-1",
+          "url": "https://medicine.iu.edu/faculty/16281/hoang-quyen",
+          "excerpt": "ing Sciences Surgery Urology News & Stories Toggle Sub-navigation Newsroom Blog Magazine Events Office of Strategic Communications More More More About Leadership Faculty Staff Give Wellness Careers Toggle Search Box Search Search Faculty Affairs and Professional Development Home Faculty Affairs and Professional Development Could not find faculty member Additional resources Popular Topics MD Admissions Residency Programs PhD Fact Sheet Alumni MedNet Contact Indiana University School of Medicine 340 West 10th Street Fairbanks Hall, Suite 6200 Indianapolis, IN 46202-3082 317-274-8157 medicine@iu.",
+          "retrievedAt": "2026-09-07T19:54:08.099Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:55:07.966Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1438": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.bcm.edu/departments/surgery"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1438-1",
+          "url": "https://www.bcm.edu/departments/surgery",
+          "excerpt": "Department of Surgery | BCM Skip to main content Open Menu Menu Healthcare Specialties Cardiovascular Care Oncology Neurosurgery Primary Care View All Specialties &gt; For Health Professionals Refer a Patient Professional Development View All &gt; For Patients & Visitors MyChart Login Accepted Insurance Pay My Bill Patient Information View All &gt; Find a Doctor Make an Appointment General Inquiries Call today to schedule an appointment or fill out an online request form.",
+          "retrievedAt": "2026-09-07T19:54:08.624Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1438-2",
+          "url": "https://www.bcm.edu/departments/surgery",
+          "excerpt": "ONLINE Request Now Request non-urgent appointments As Houston's premier academic medical practice, Baylor Medicine delivers compassionate, innovative, evidence-based care.",
+          "retrievedAt": "2026-09-07T19:54:08.624Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1438-3",
+          "url": "https://www.bcm.edu/departments/surgery",
+          "excerpt": "Programs Dual Degree Programs View All Programs &gt; Financing Your Education Tuition & Fees Financial Aid CARES ACT Schools School of Medicine Graduate School of Biomedical Sciences National School of Tropical Medicine School of Health Professions Advanced Training Programs Residency Programs Clinical Fellowships Postdoctoral Research Positions Continuing Professional Development Diploma in Tropical Medicine View All &gt; Resources Departments Academic Centers Academic Calendars Education Cores View All &gt; Information For.",
+          "retrievedAt": "2026-09-07T19:54:08.624Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1438-4",
+          "url": "https://www.bcm.edu/departments/surgery",
+          "excerpt": "Students Postdoctoral Researchers Faculty Alumni America's fourth-largest city is a great place to live, work, and play.",
+          "retrievedAt": "2026-09-07T19:54:08.624Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1438-5",
+          "url": "https://www.bcm.edu/departments/surgery",
+          "excerpt": "Get to Know Houston Research Research Offices Advanced Technology Cores Clinical Research Institute for Clinical & Translational Research Office of Research Leadership Research IT Sponsored Programs Research at Baylor Academic Centers Departments Faculty Labs From the Labs News Our Research Research Centers Strategic Research Center Additional Research Services BCM Innovation Institute Service Labs VIICTR Clinical Trials Autism Cancer Obesity Substance Abuse View All Clinical Trials &gt; America's fourth-largest city is a great place to live, work, and play.",
+          "retrievedAt": "2026-09-07T19:54:08.624Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1438-6",
+          "url": "https://www.bcm.edu/departments/surgery",
+          "excerpt": "Get to Know Houston Community Healthcare Outreach Community Programs More &gt; Global Outreach Global Health Global Programs &gt; Educational Outreach SMART Program BioEd Online More &gt; General Resources Community Events News Blogs Baylor in the Community America's fourth-largest city is a great place to live, work, and play.",
+          "retrievedAt": "2026-09-07T19:54:08.624Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1438-7",
+          "url": "https://www.bcm.edu/departments/surgery",
+          "excerpt": "Get to Know Houston About About Us Academic Centers Alumni Careers Departments Giving Leadership Mission, Vision, Values News Our Affiliates Fast Facts Accreditation Offices President&#039;s Office Office of Research Ombuds Office BCM Innovation Institute View All &gt; Our Campus Compliance Safety and Security Resource Stewardship & Sustainability Team Shop Find a Person America's fourth-largest city is a great place to live, work, and play.",
+          "retrievedAt": "2026-09-07T19:54:08.624Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1438-8",
+          "url": "https://www.bcm.edu/departments/surgery",
+          "excerpt": "Get to Know Houston GIVE CAREERS INTRANET Careers Contact Us News Open Search Department of Surgery Open Navigation Navigation svg]:w-20 [&>svg]:h-20\"> Meet our Team Divisions and Centers News Education Research Healthcare Events Meet our Team Divisions and Centers News Education Research Healthcare Events Baylor College of Medicine Departments Surgery Department of Surgery About Us The Michael E.",
+          "retrievedAt": "2026-09-07T19:54:08.624Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:55:07.966Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1439": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.nemours.org/find-a-doctor/2311-thao-ly-phan-pediatrics-wilmington"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1439-1",
+          "url": "https://www.nemours.org/find-a-doctor/2311-thao-ly-phan-pediatrics-wilmington",
+          "excerpt": "org Please Note: September 7 — Labor Day Holiday: All Nemours Children&#39;s primary care locations in Delaware and Florida will be closed on Monday, September 7.",
+          "retrievedAt": "2026-09-07T19:54:09.418Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1439-2",
+          "url": "https://www.nemours.org/find-a-doctor/2311-thao-ly-phan-pediatrics-wilmington",
+          "excerpt": "Our on-call nurses and providers are available 24/7 to support your healthcare needs.",
+          "retrievedAt": "2026-09-07T19:54:09.418Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1439-3",
+          "url": "https://www.nemours.org/find-a-doctor/2311-thao-ly-phan-pediatrics-wilmington",
+          "excerpt": "Selecting your region will help us show you the right contact information and the most relevant content for you.",
+          "retrievedAt": "2026-09-07T19:54:09.418Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1439-4",
+          "url": "https://www.nemours.org/find-a-doctor/2311-thao-ly-phan-pediatrics-wilmington",
+          "excerpt": "Delaware Valley/Philadelphia Florida All Regions Apply Region Our Vision Refer a Patient International Pay My Bill Careers Donate MyChart Access your child&#39;s health history, test results, appointments, and more.",
+          "retrievedAt": "2026-09-07T19:54:09.418Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1439-5",
+          "url": "https://www.nemours.org/find-a-doctor/2311-thao-ly-phan-pediatrics-wilmington",
+          "excerpt": "Log In Find a Doctor Locations FEATURED LOCATIONS \\r\\n&lt;li>&lt;a href=\\&#34;/content/nemours/us/en/locations/wilmington-ai-dupont-childrens-hospital.",
+          "retrievedAt": "2026-09-07T19:54:09.418Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1439-6",
+          "url": "https://www.nemours.org/find-a-doctor/2311-thao-ly-phan-pediatrics-wilmington",
+          "excerpt": "html\\&#34;>Delaware Hospital&lt;/a>&lt;/li>\\r\\n&lt;li>&lt;a href=\\&#34;/content/nemours/us/en/locations/orlando-nemours-childrens-hospital.",
+          "retrievedAt": "2026-09-07T19:54:09.418Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1439-7",
+          "url": "https://www.nemours.org/find-a-doctor/2311-thao-ly-phan-pediatrics-wilmington",
+          "excerpt": "html\\&#34;>Orlando Hospital&lt;/a>&lt;/li>\\r\\n&lt;li>&lt;a href=\\&#34;/content/nemours/us/en/locations/primary-care.",
+          "retrievedAt": "2026-09-07T19:54:09.418Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1439-8",
+          "url": "https://www.nemours.org/find-a-doctor/2311-thao-ly-phan-pediatrics-wilmington",
+          "excerpt": "html\\&#34;>Primary Care Locations&lt;/a>&lt;/li>\\r\\n&lt;/ul>\\r\\n&#34;}}\" id=\"text-aa6859071a\" class=\"cmp-text\"> Delaware Hospital Orlando Hospital Primary Care Locations \\r\\n&lt;li>&lt;a href=\\&#34;/content/nemours/us/en/locations/urgent-care.",
+          "retrievedAt": "2026-09-07T19:54:09.418Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:55:07.966Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1440": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://health.usf.edu/medicine/pediatrics/neonatology/faculty"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1440-1",
+          "url": "https://health.usf.edu/medicine/pediatrics/neonatology/faculty",
+          "excerpt": "Clinical Research Basic Science & Translational Research Health Informatics Institute Resources Valenti Research Program News & Events Happening In Pediatrics Lectures & Lectureships Patient Care Giving Submit Search Quick Links Education Research Patient Care News USF Contribute Neonatology USF Health Morsani College of Medicine Pediatrics Neonatology Faculty & Staff Secondary Navigation Overview Faculty & Staff Neonatal-Perinatal Medicine Fellowship Neonatology Patient Care Faculty & Staff Faculty Chantal Angueyra Aristizabal, MD Chantal Angueyra Aristizabal, MD Assistant Professor caa60@usf.",
+          "retrievedAt": "2026-09-07T19:54:09.746Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1440-2",
+          "url": "https://health.usf.edu/medicine/pediatrics/neonatology/faculty",
+          "excerpt": "edu Maya Balakrishnan, MD, CSSBB Maya Balakrishnan, MD, CSSBB Director of Quality and Safety GME Associate, Director of Quality, Florida Perinatal Quality Collaborative Joint Associate Professor USF College of Public Health Associate Professor mbalakri@usf.",
+          "retrievedAt": "2026-09-07T19:54:09.746Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1440-3",
+          "url": "https://health.usf.edu/medicine/pediatrics/neonatology/faculty",
+          "excerpt": "edu Jaime Flores-Torres, MD Jaime Flores-Torres, MD Medical Director of TGH Neonatal Intensive Care Unit Neonatology Fetal Care Center, Director, PICC Team Assistant Professor jflorest@usf.",
+          "retrievedAt": "2026-09-07T19:54:09.746Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1440-4",
+          "url": "https://health.usf.edu/medicine/pediatrics/neonatology/faculty",
+          "excerpt": "edu Steven Ford, MD Steven Ford, MD Program Director of Neonatal-Perinatal Medicine Fellowship Director of Neonatal Nutrition Associate Professor slford2@usf.",
+          "retrievedAt": "2026-09-07T19:54:09.746Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1440-5",
+          "url": "https://health.usf.edu/medicine/pediatrics/neonatology/faculty",
+          "excerpt": "edu Jessica Greenwood, MD Jessica Greenwood, MD Assistant Professor jessicagreenwood@usf.",
+          "retrievedAt": "2026-09-07T19:54:09.746Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1440-6",
+          "url": "https://health.usf.edu/medicine/pediatrics/neonatology/faculty",
+          "excerpt": "edu Thao Ho, DO Thao Ho, DO Chief of Neonatology Neonatal Researcher- Gut Microbiome of Preterm Infant Associate Professor tho1@usf.",
+          "retrievedAt": "2026-09-07T19:54:09.746Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1440-7",
+          "url": "https://health.usf.edu/medicine/pediatrics/neonatology/faculty",
+          "excerpt": "edu (813) 844-3437 Patoula Panagos-Billiris, MD Patoula Panagos-Billiris, MD Associate Professor ppanagos@usf.",
+          "retrievedAt": "2026-09-07T19:54:09.746Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1440-8",
+          "url": "https://health.usf.edu/medicine/pediatrics/neonatology/faculty",
+          "excerpt": "edu Erica Peterson, MD Erica Peterson, MD Assistant Program Director of Neonatal-Perinatal Medicine Fellowship Assistant Professor eelseed@usf.",
+          "retrievedAt": "2026-09-07T19:54:09.746Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:55:07.966Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1441": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.usz.ch/team/thi-dan-linh-nguyen-kim/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1441-1",
+          "url": "https://www.usz.ch/team/thi-dan-linh-nguyen-kim/",
+          "excerpt": "Team &#8211; USZ Startseite Navigation Inhalt Kontakt Suche +41 44 255 11 11 De Deutsch English Notfall 24h Krankheiten &#038; Therapien Fachbereiche Aufenthalt Team (active) Krankheiten &#038; Therapien Fachbereiche Aufenthalt Team (active) De En +41 44 255 11 11 Häufig gesucht Offene Stellen Neurologie Herzzentrum Onkologie Notfall Babygalerie Team Menschlich, verbindlich und ambitioniert - unsere Ärztinnen und Ärzte, die Pflegenden und weitere Fachpersonen setzen jeden Tag gemeinsam ihr Wissen für Sie in Spitzenmedizin um.",
+          "retrievedAt": "2026-09-07T19:54:11.331Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1441-2",
+          "url": "https://www.usz.ch/team/thi-dan-linh-nguyen-kim/",
+          "excerpt": ", Hals- und Gesichtschirurgie (ORL) Onkologie und Hämatologie Pathologie und Molekularpathologie Pharmakologie und Toxikologie Physiotherapie Ergotherapie Plastische Chirurgie und Handchirurgie Pneumologie Radio-Onkologie Radiologie Reproduktions-Endokrinologie Rheumatologie Simulationszentrum Thoraxchirurgie Transplantationszentrum Traumatologie Urologie Viszeral- und Transplantationschirurgie Zentrum Klinische Pflegewissenschaft Zentrum seltene Krankheiten Alle A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Irina Abakumova Teamleiterin Histolabor, Institut für Neuropathologie Mail irina.",
+          "retrievedAt": "2026-09-07T19:54:11.331Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1441-3",
+          "url": "https://www.usz.ch/team/thi-dan-linh-nguyen-kim/",
+          "excerpt": "c&#104; Sara Abdollahi Medizinphysikerin in Ausbildung, Klinik für Radio-Onkologie Tel.",
+          "retrievedAt": "2026-09-07T19:54:11.331Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1441-4",
+          "url": "https://www.usz.ch/team/thi-dan-linh-nguyen-kim/",
+          "excerpt": "&#097;bd&#111;llah&#105;&#064;&#117;s&#122;&#046;&#099;h Spezialgebiete: Qualitätsmanagement, Bewegungsmanagement in der Strahlentherapie, Brachytherapie Israa Abdullah Studienkoordinatorin, Klinik für Endokrinologie, Diabetologie und Klinische Ernährung Mail i&#115;&#114;&#097;&#097;&#046;a&#098;&#100;u&#108;la&#104;&#064;usz&#046;ch Sandra Abeijón Martínez Schlaflaborantin mbA, Klinik für Neurologie MT-Assistentin mbA, Klinik für Neurologie Tel.",
+          "retrievedAt": "2026-09-07T19:54:11.331Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1441-5",
+          "url": "https://www.usz.ch/team/thi-dan-linh-nguyen-kim/",
+          "excerpt": "&#099;&#104; Spezialgebiete: Leiterin Impfsprechstunde für Patientinnen und Patienten mit erhöhtem Komplikationsrisiko (z.",
+          "retrievedAt": "2026-09-07T19:54:11.331Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1441-6",
+          "url": "https://www.usz.ch/team/thi-dan-linh-nguyen-kim/",
+          "excerpt": "immunsupprimierte Personen) , Virale Infektionen (insbesondere HIV, CMV, SARS-CoV-2) und experimentelle Virologie, Infektiologische Behandlung von Patientinnen und Patienten vor und nach Transplantation Maya Abrishami Kashani, Dr.",
+          "retrievedAt": "2026-09-07T19:54:11.331Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1441-7",
+          "url": "https://www.usz.ch/team/thi-dan-linh-nguyen-kim/",
+          "excerpt": "+41 44 255 11 12 Mail &#105;&#109;m&#117;&#110;o&#108;&#111;&#103;i&#101;&#064;u&#115;z.",
+          "retrievedAt": "2026-09-07T19:54:11.331Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1441-8",
+          "url": "https://www.usz.ch/team/thi-dan-linh-nguyen-kim/",
+          "excerpt": "&#099;&#104; Maher Abubaker MT-Assistent, Klinik für Neurologie Mail &#109;ahe&#114;.",
+          "retrievedAt": "2026-09-07T19:54:11.331Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:55:07.966Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1442": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://medecine.umontreal.ca/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1442-1",
+          "url": "https://medecine.umontreal.ca/",
+          "excerpt": "urentides prend son envol Lire l'article Collation des grades 2026 La Faculté de médecine célèbre sa relève Lire l'article Sylvain Baillet entre à l’Académie canadienne des sciences de la santé Lire l'article La Faculté obtient près de 27 M$ de la part des IRSC Lire l'article Nouveau programme axé sur la médecine familiale en région Lire l'article Depuis 1843, la Faculté de médecine de l’Université de Montréal fait jaillir l’étincelle d’un avenir en santé à travers une longue tradition d’innovation, de percées scientifiques majeures et d’enseignement selon les plus hauts standards de qualité.",
+          "retrievedAt": "2026-09-07T19:54:13.782Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:55:07.966Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1443": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.unsw.edu.au/staff/minh-cuong-duong"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1443-1",
+          "url": "https://www.unsw.edu.au/staff/minh-cuong-duong",
+          "excerpt": "Dr Minh Cuong Duong Study Study options Explore degrees Help me choose Professional development Short courses Online Discover UNSW Undergraduate study Postgraduate study International students Higher Degree Research Our campus Accommodation Support for students How to apply Domestic undergraduate Domestic postgraduate International Higher Degree Research Fees Scholarships Help centre Ask a question Speak to a student Received an offer?",
+          "retrievedAt": "2026-09-07T19:54:14.990Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1443-2",
+          "url": "https://www.unsw.edu.au/staff/minh-cuong-duong",
+          "excerpt": "cine and Pharmacy at Ho Chi Minh City - Vietnam) Resident Physician of Infectious Disease Degree (National Residency Program, University of Medicine and Pharmacy at Ho Chi Minh City - Vietnam) Master of Medicine (Infection and Immunity, University of Sydney, Australia) PhD (Epidemiology, UNSW Australia) Medicine & Health School of Population Health Follow me Follow me Research Gate Academia Google Scholar Linked in I have been a Specialist in Infectious Diseases and an epidemiologist in Vietnam after completing the National Postgraduate Specialty Training Program in Infectious Diseases in 2011.",
+          "retrievedAt": "2026-09-07T19:54:14.990Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1443-3",
+          "url": "https://www.unsw.edu.au/staff/minh-cuong-duong",
+          "excerpt": "I was one of the 12 doctors selected in 2009 by the Vietnam Ministry of Health to be trained in Global influenza prevention and pandemic preparedness project in Hong Kong.",
+          "retrievedAt": "2026-09-07T19:54:14.990Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1443-4",
+          "url": "https://www.unsw.edu.au/staff/minh-cuong-duong",
+          "excerpt": "I was also deployed in response to the H1N1 influenza pandemic and other infectious disease outbreaks in Vietnam.",
+          "retrievedAt": "2026-09-07T19:54:14.990Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1443-5",
+          "url": "https://www.unsw.edu.au/staff/minh-cuong-duong",
+          "excerpt": "I undertook my Masters in Medicine (Infection and Immunity) at the University of Sydney in 2008 under the Endeavour Scholarship.",
+          "retrievedAt": "2026-09-07T19:54:14.990Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1443-6",
+          "url": "https://www.unsw.edu.au/staff/minh-cuong-duong",
+          "excerpt": "In 2012, I was awarded the Prime Minister’s Australia Asia Incoming Postgraduate Award for a PhD at School of Population Health (SPH) - UNSW.",
+          "retrievedAt": "2026-09-07T19:54:14.990Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1443-7",
+          "url": "https://www.unsw.edu.au/staff/minh-cuong-duong",
+          "excerpt": "My PhD was titled “ The magnitude of hepatitis C and hepatitis B virus infections in chronic haemodialysis patients with end stage renal disease in a low-resource healthcare setting in Vietnam: implications for infection control ” .",
+          "retrievedAt": "2026-09-07T19:54:14.990Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1443-8",
+          "url": "https://www.unsw.edu.au/staff/minh-cuong-duong",
+          "excerpt": "And my thesis was submitted to Vietnam Ministry of Health as requested to enable the infection control policy.",
+          "retrievedAt": "2026-09-07T19:54:14.990Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:55:07.966Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1444": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.lethihoaian.fr/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.lethihoaian.fr/: fetch failed"
+      ],
+      "updatedAt": "2026-09-07T19:55:07.966Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1445": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://w-rdb.waseda.jp/html/100001825_en.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1445-1",
+          "url": "https://w-rdb.waseda.jp/html/100001825_en.html",
+          "excerpt": "Details of a Researcher - TRINH, Khanh Duy 早稲田大学研究者データベース Waseda University Researchers Database Details of a Researcher Home 日本語 English 早稲田大学研究者データベース Waseda University Researchers Database Menu Japanese Page Back to Waseda Univ.",
+          "retrievedAt": "2026-09-07T19:54:17.687Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1445-2",
+          "url": "https://w-rdb.waseda.jp/html/100001825_en.html",
+          "excerpt": "ase Personnel Information ▼ ◆ Profile Information ◆ Research Experience ◆ Research Areas Research Activity ▼ ◆ Papers ◆ Research Projects ◆ Misc Education Activity ▼ ◆ Syllabus Contribution to Society ▼ ◆ Research Institute &times; Updated on 2026/09/07 Personnel Information ◆ Profile Information ◆ Research Experience ◆ Research Areas Research Activity ◆ Papers ◆ Research Projects ◆ Misc Education Activity ◆ Syllabus Contribution to Society ◆ Research Institute Updated on 2026/09/07 TRINH, Khanh Duy Scopus Paper Info Paper Count: 23 Citation Count: 258 h-index: 10 Click to view the Scopus page.",
+          "retrievedAt": "2026-09-07T19:54:17.687Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1445-3",
+          "url": "https://w-rdb.waseda.jp/html/100001825_en.html",
+          "excerpt": "Affiliation Faculty of Science and Engineering, Global Center for Science and Engineering Job title Professor(non-tenure-track) Homepage URL https://sites.",
+          "retrievedAt": "2026-09-07T19:54:17.687Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1445-4",
+          "url": "https://w-rdb.waseda.jp/html/100001825_en.html",
+          "excerpt": "04 - Now Waseda University Global Center for Science and Engineering Professor (without tenure) 2019.",
+          "retrievedAt": "2026-09-07T19:54:17.687Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1445-5",
+          "url": "https://w-rdb.waseda.jp/html/100001825_en.html",
+          "excerpt": "03 Waseda University Global Center for Science and Engineering Associate Professor (without tenure) 2017.",
+          "retrievedAt": "2026-09-07T19:54:17.687Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1445-6",
+          "url": "https://w-rdb.waseda.jp/html/100001825_en.html",
+          "excerpt": "03 Research Alliance Center for Mathematical Sciences, Tohoku University, Japan Associate Professor 2013.",
+          "retrievedAt": "2026-09-07T19:54:17.687Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1445-7",
+          "url": "https://w-rdb.waseda.jp/html/100001825_en.html",
+          "excerpt": "11 Institute of Mathematics for Industry, Kyushu University, Japan Assistant Professor 2012.",
+          "retrievedAt": "2026-09-07T19:54:17.687Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1445-8",
+          "url": "https://w-rdb.waseda.jp/html/100001825_en.html",
+          "excerpt": "09 Department of Mathematics, Graduate School of Science, Osaka University, Japan Research Fellow of the Japan Society for the Promotion of Science Research Areas Research Areas Basic analysis Probability theory and applied probability Papers Papers Classical beta ensembles and related eigenvalues processes at high temperature and the Markov–Krein transform F.",
+          "retrievedAt": "2026-09-07T19:54:17.687Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:55:07.966Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1446": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://cfdlabsnu.com"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1446-1",
+          "url": "https://cfdlabsnu.com",
+          "excerpt": "Environmental Fluid Dynamics Laboratory Skip to content Environmental Fluid Dynamics Laboratory Menu Home About Members Research Publications Courses Collaborations Contact Welcome to the Environmental Fluid Dynamics Laboratory at Seoul National University!",
+          "retrievedAt": "2026-09-07T19:54:17.959Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1446-2",
+          "url": "https://cfdlabsnu.com",
+          "excerpt": "Search for: Our Location Seoul National University Department of Civil & Environmental Engineering Bldg.",
+          "retrievedAt": "2026-09-07T19:54:17.959Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1446-3",
+          "url": "https://cfdlabsnu.com",
+          "excerpt": "35 Room 515 1 Gwanak-ro, Gwanak-gu, Seoul, Korea 151-744 Tel: 02-880-1607 Seoul National University September 2026 M T W T F S S 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 &laquo; Dec Website Powered by WordPress.",
+          "retrievedAt": "2026-09-07T19:54:17.959Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1446-4",
+          "url": "https://cfdlabsnu.com",
+          "excerpt": "To find out more, including how to control cookies, see here: Cookie Policy Subscribe Subscribed Environmental Fluid Dynamics Laboratory Sign me up Already have a WordPress.",
+          "retrievedAt": "2026-09-07T19:54:17.959Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1446-5",
+          "url": "https://cfdlabsnu.com",
+          "excerpt": "Environmental Fluid Dynamics Laboratory Subscribe Subscribed Sign up Log in Copy shortlink Report this content View post in Reader Manage subscriptions Collapse this bar Loading Comments.",
+          "retrievedAt": "2026-09-07T19:54:17.959Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:55:07.966Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1447": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://med.unr.edu/directory/cam-ha-tran"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1447-1",
+          "url": "https://med.unr.edu/directory/cam-ha-tran",
+          "excerpt": "Cam Ha Tran | School of Medicine skip to main content News & Events Quicklinks Search Give People Departments & Centers Alumni &times; Quicklinks Student Resources Student Health Center Student success & support General student resources Employee resources Workday Interfolio HubMed Resource center Campus resources UNR Med directory Parking services Police services Campus map Savitt Medical Library University tools MyNevada WebCampus NevadaBox Zoom Login &times; Search Search med.",
+          "retrievedAt": "2026-09-07T19:54:19.063Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1447-2",
+          "url": "https://med.unr.edu/directory/cam-ha-tran",
+          "excerpt": "rthern Nevada Standardized Patient Education Mission, Vision, and Values Strategic Plan History Healthy Nevada Pillars Community Education Innovation Integrated Health Inclusive Excellence Leadership Policies Fragrance Policy for Biomedical Laboratories Limitation of Alcohol Policy for Events Faculty Professional Leave Policy UNR Med Human Biospecimen Transportation Policy Policy on Policies Health Care Records Requests Policy Use of Artificial Intelligence Policy Academic Clinical Faculty Tracks Policy Narrative Assessment Policy Clinical Site Review Policy Other Medical Student Information M.",
+          "retrievedAt": "2026-09-07T19:54:19.063Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1447-3",
+          "url": "https://med.unr.edu/directory/cam-ha-tran",
+          "excerpt": "Student Progress and Performance Computer Use Video Recording Media Exposure to Infectious and Environmental Hazards Preceptor Conflict of Interest M.",
+          "retrievedAt": "2026-09-07T19:54:19.063Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1447-4",
+          "url": "https://med.unr.edu/directory/cam-ha-tran",
+          "excerpt": "Student Policies Medical Student Discipline, Dismissal, and Due Process Policy Faculty Expectations for Student Feedback Policy Leave of Absence Policy Medical Student Performance Evaluation Policy Academic Progress and Promotion Policy Absence and Attendance Policy Conflict of Interest Policy Emergency information Essential Functions Requirements Final Grade Assignment Policy Immunization Requirement Policy Maximum Number of Years to Complete the M.",
+          "retrievedAt": "2026-09-07T19:54:19.063Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1447-5",
+          "url": "https://med.unr.edu/directory/cam-ha-tran",
+          "excerpt": "Degree Medical Student Clinical and Educational Work Hours Policy Medical Student Record Review Policy Medical Student Educational Space Policy M.",
+          "retrievedAt": "2026-09-07T19:54:19.063Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1447-6",
+          "url": "https://med.unr.edu/directory/cam-ha-tran",
+          "excerpt": "Resolution Microscope 3i Lattice LightSheet Microscope 3i Lattice LightSheet Microscope Olympus-based full-color imaging system Olympus-based full-color imaging system Imaris Software Imaris Software Consumables Sample Preparation Transgenic Genotyping Cell Analysis Research Training Graduate Research Undergraduate Research International Undergraduate Research Program Medical Student Research Opportunities Translational Research Center Clinical Data Science Faculty Resources Faculty Affairs Frequently Asked Questions Promotion and Tenure Faculty Council Faculty Development Why teach at UNR Med?",
+          "retrievedAt": "2026-09-07T19:54:19.063Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:55:07.966Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1448": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.med.uni-wuerzburg.de/hygiene/startseite/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.med.uni-wuerzburg.de/hygiene/startseite/: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:55:07.966Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1449": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.sickkids.ca/en/staff/k/vy-kim/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1449-1",
+          "url": "https://www.sickkids.ca/en/staff/k/vy-kim/",
+          "excerpt": "Vy Kim | SickKids Directory Skip to Main Content Search Submit Emergency Emergency Our Emergency Department is here to serve children whose lives may be in danger.",
+          "retrievedAt": "2026-09-07T19:54:20.513Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1449-2",
+          "url": "https://www.sickkids.ca/en/staff/k/vy-kim/",
+          "excerpt": "Coming to Emergency Department Learn what to expect in the SickKids Emergency Department, from arrival to being seen.",
+          "retrievedAt": "2026-09-07T19:54:20.513Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1449-3",
+          "url": "https://www.sickkids.ca/en/staff/k/vy-kim/",
+          "excerpt": "Virtual Urgent Care Find out if your concern needs an emergency department or primary care visit or if you are eligible for a virtual urgent care visit.",
+          "retrievedAt": "2026-09-07T19:54:20.513Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1449-4",
+          "url": "https://www.sickkids.ca/en/staff/k/vy-kim/",
+          "excerpt": "Quick Links Ontario Poison Centre Call the OPC at 1-800-268-9017 or 416-813-5900 for poison emergencies or questions about poisoning.",
+          "retrievedAt": "2026-09-07T19:54:20.513Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1449-5",
+          "url": "https://www.sickkids.ca/en/staff/k/vy-kim/",
+          "excerpt": "Health Connect Ontario Connect with a registered nurse day or night for free, secure and confidential health advice.",
+          "retrievedAt": "2026-09-07T19:54:20.513Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1449-6",
+          "url": "https://www.sickkids.ca/en/staff/k/vy-kim/",
+          "excerpt": "Patients & Visitors Patients & Visitors See essential information for patients and visitors, including appointment protocols, directions, where to eat and shop, plus much more.",
+          "retrievedAt": "2026-09-07T19:54:20.513Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1449-7",
+          "url": "https://www.sickkids.ca/en/staff/k/vy-kim/",
+          "excerpt": "Coming for Appointments Before an appointment, familiarize yourself with our general guidelines for all clinical appointments.",
+          "retrievedAt": "2026-09-07T19:54:20.513Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1449-8",
+          "url": "https://www.sickkids.ca/en/staff/k/vy-kim/",
+          "excerpt": "Coming for Surgery Review this important information to help prepare for surgery.",
+          "retrievedAt": "2026-09-07T19:54:20.513Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:55:07.966Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1450": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.rosalindfranklin.edu/academics/chicago-medical-school/departments/obstetrics-and-gynecology/faculty/thanh-luu-do/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.rosalindfranklin.edu/academics/chicago-medical-school/departments/obstetrics-and-gynecology/faculty/thanh-luu-do/: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:55:07.966Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1451": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://socialwork.ucalgary.ca/hieu-van-ngo"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://socialwork.ucalgary.ca/hieu-van-ngo: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:55:07.966Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1452": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.calstatela.edu/hhs/sw/anh-luu-t-huynh-hohnbaum"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.calstatela.edu/hhs/sw/anh-luu-t-huynh-hohnbaum: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:55:07.966Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1453": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://discover.utas.edu.au/Vinh.To"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:55:07.966Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1454": {
       "overview": "pending",
