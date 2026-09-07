@@ -3131,7 +3131,8 @@
         "vp-1212",
         "vp-1213"
       ],
-      "status": "pending"
+      "status": "in_progress",
+      "startedAt": "2026-09-07T19:32:03.304Z"
     },
     {
       "number": 61,
@@ -74393,204 +74394,359 @@
       "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1194": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.colorado.edu/cmci/people/journalism/hong-tien-vu"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.colorado.edu/cmci/people/journalism/hong-tien-vu: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:35:02.137Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1195": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.psi.ch/en/lea/people/vinh-dang"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.psi.ch/en/lea/people/vinh-dang: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:35:02.137Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1196": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://scholars.latrobe.edu.au/ltruong"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1196-1",
+          "url": "https://scholars.latrobe.edu.au/ltruong",
+          "excerpt": "Discovery Browser Not Supported Your browser (Internet Explorer or other legacy browser) is not supported by this application.",
+          "retrievedAt": "2026-09-07T19:32:05.660Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:35:02.137Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1197": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.massey.ac.nz/massey/expertise/profile.cfm?stref=118940"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.massey.ac.nz/massey/expertise/profile.cfm?stref=118940: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:35:02.137Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1198": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://trios.tsukuba.ac.jp/en/researcher/0000004944"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1198-1",
+          "url": "https://trios.tsukuba.ac.jp/en/researcher/0000004944",
+          "excerpt": "TRIOS Researchers Information 研究者総覧 Researchers Information Search 日本語 Researchers list List by affiliations List by research fields Advanced search Manual Contact us SHIGENOBU Shuji Affiliation Life Science Center for Survival Dynamics, Tsukuba Advanced Research Alliance (TARA) Official title Professor ORCID 0000-0003-4640-2323 Sex Male URL https://www.",
+          "retrievedAt": "2026-09-07T19:32:08.094Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1198-2",
+          "url": "https://trios.tsukuba.ac.jp/en/researcher/0000004944",
+          "excerpt": "The University of Tokyo Articles The inbred newt genome unveils molecular mechanisms of behavior, development, and regeneration in urodele amphibians Kimura Yuki; Suzuki Miyuki; Okumura Akinori; Matsunami.",
+          "retrievedAt": "2026-09-07T19:32:08.094Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1198-3",
+          "url": "https://trios.tsukuba.ac.jp/en/researcher/0000004944",
+          "excerpt": "iScience/28(10), 2025-10-17 PubMed Multiple gene knockouts in newts reveal novel functions of 5' Hox genes in limb development along the anterior-posterior and proximal-distal axes Urakawa Kohei; Ito Yu; Matsubara Haruka; Suzuki Ken-I.",
+          "retrievedAt": "2026-09-07T19:32:08.094Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1198-4",
+          "url": "https://trios.tsukuba.ac.jp/en/researcher/0000004944",
+          "excerpt": "Developmental dynamics : an official publication of the American Association of Anatomists/255(8)/pp.",
+          "retrievedAt": "2026-09-07T19:32:08.094Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1198-5",
+          "url": "https://trios.tsukuba.ac.jp/en/researcher/0000004944",
+          "excerpt": "761-781, 2026-08-01 PubMed MedakaBase as a unified genomic resource platform for medaka fish biology Morikami Kenji; Tanizawa Yasuhiro; Yagura Masaru; Saka.",
+          "retrievedAt": "2026-09-07T19:32:08.094Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1198-6",
+          "url": "https://trios.tsukuba.ac.jp/en/researcher/0000004944",
+          "excerpt": "DNA research : an international journal for rapid publication of reports on genes and genomes/32(6), 2025-12-01 PubMed Electroporation-mediated functional analysis method of genes in the giant insect Trypoxylus dichotomus Sakura Kazuki; Morita Shinichi; Ando Toshiya; Yuzaki .",
+          "retrievedAt": "2026-09-07T19:32:08.094Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1198-7",
+          "url": "https://trios.tsukuba.ac.jp/en/researcher/0000004944",
+          "excerpt": "Scientific reports/15(1), 2025-07-17 PubMed Draft genome sequences of Buchnera aphidicola from three aphid species (Hemiptera: Aphididae: Eriosomatinae) associated with gall formation on elm trees Tong Xin; Kobayashi Yuuki; Ikeda Mika; Wen Hsin-I; Ak.",
+          "retrievedAt": "2026-09-07T19:32:08.094Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1198-8",
+          "url": "https://trios.tsukuba.ac.jp/en/researcher/0000004944",
+          "excerpt": "Microbiology resource announcements/14(7), 2025-07-10 PubMed Symbiont replacement and subsequent genome erosion reshape a dual obligate aphid symbiosis Nozaki Tomonari; Kobayashi Yuuki; Ikeda Mika; Shigenob.",
+          "retrievedAt": "2026-09-07T19:32:08.094Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:35:02.137Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1199": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.dal.ca/faculty/health/health-and-human-performance/faculty-staff/our-faculty/recreation-faculty/son-truong.html"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.dal.ca/faculty/health/health-and-human-performance/faculty-staff/our-faculty/recreation-faculty/son-truong.html: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:35:02.137Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1200": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.birmingham.ac.uk/staff/profiles/maths/duong-manh.aspx"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.birmingham.ac.uk/staff/profiles/maths/duong-manh.aspx: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:35:02.137Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1201": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://researchmap.jp/read0154388?lang=en"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1201-1",
+          "url": "https://researchmap.jp/read0154388?lang=en",
+          "excerpt": "message}} Toggle navigation Toggle navigation 日本語 | English Sign up Login Minoru Kaneko (金子 稔) Modified on: 2022/09/12 Home Research Areas Research History Education Papers Presentations Professional Memberships Research Projects Profile Information Degree Doctor of Medicine J-GLOBAL ID 201101029489550878 researchmap Member ID 6000027493 External link http://jimuwww.",
+          "retrievedAt": "2026-09-07T19:32:10.271Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1201-2",
+          "url": "https://researchmap.jp/read0154388?lang=en",
+          "excerpt": "jp/swd/health/ Registration by self Registration by coauthor Registration by institution staff Registration by proxy user Registration by AI Registration by system Background color Public Disclosed to researchers only Private \" onclick=\"$('#popover-help-1').",
+          "retrievedAt": "2026-09-07T19:32:10.271Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1201-3",
+          "url": "https://researchmap.jp/read0154388?lang=en",
+          "excerpt": "学生生活困り感質問紙の3年間のデータからみた本学工学部学生の特徴についての検討 山崎 勇, 高橋 知音, 小田 佳代子, 榛葉 清香, 金子 稔 CAMPUS HEALTH, 52(1) 383-385, Mar, 2015 Evaluation of the spread of pandemic influenza A/H1N1 2009 among Japanese university students Mitsuo Uchida, Minoru Kaneko, Teruomi Tsukahara, Shinsuke Washizuka, Shigeyuki Kawa ENVIRONMENTAL HEALTH AND PREVENTIVE MEDICINE, 19(5) 315-321, Sep, 2014 Effects of personality on overtime work: A cross-sectional pilot study among Japanese white-collar workers Mitsuo Uchida, Minoru Kaneko, Shigeyuki Kawa BMC Research Notes, 7(1) 180, Mar 27, 2014 Does change of residence affect pollinosis?",
+          "retrievedAt": "2026-09-07T19:32:10.272Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1201-4",
+          "url": "https://researchmap.jp/read0154388?lang=en",
+          "excerpt": "anese university students Mitsuo Uchida, Minoru Kaneko, Shigeyuki Kawa INTERNATIONAL JOURNAL OF ENVIRONMENTAL HEALTH RESEARCH, 23(5) 380-391, Oct, 2013 Evaluation of factors affecting variations in influenza A/H1N1 history in university students, Japan Mitsuo Uchida, Teruomi Tsukahara, Minoru Kaneko, Shinsuke Washizuka, Shigeyuki Kawa JOURNAL OF INFECTION AND CHEMOTHERAPY, 19(4) 665-672, Aug, 2013 わが国におけるインフルエンザ（H1N1）2009に対する学校閉鎖の効果 内田, 満夫, 金子, 稔, 山本, 洋, 本田, 孝行, 川, 茂幸 日本衛生学雑誌, 68(2) 103-117-117, 2013 Effect of short-term school closures on the H1N1 pandemic in Japan: a comparative case study M.",
+          "retrievedAt": "2026-09-07T19:32:10.272Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1201-5",
+          "url": "https://researchmap.jp/read0154388?lang=en",
+          "excerpt": "検討 小田佳代子, 高橋知音, 山﨑勇, 森光晃子, 金子稔, 鷲塚伸介, 上村惠津子, 山口恒夫 CAMPUS HEALTH, 48(2) 210-215, Mar, 2011 Swine-Origin Influenza A Outbreak 2009 at Shinshu University, Japan Mitsuo Uchida, Teruomi Tsukahara, Minoru Kaneko, Shinsuke Washizuka, Shigeyuki Kawa BMC PUBLIC HEALTH, 11 79, Feb, 2011 Nasu-Hakola disease: The first case reported by Nasu and review Minoru Kaneko, Kenji Sano, Jun Nakayama, Naoji Amano NEUROPATHOLOGY, 30(5) 463-470, Oct, 2010 臨床医のための神経病理 Nasu-Hakola病 金子稔, 天野直二 Clinical Neuroscience, 28(2) 130-131, 2010 Prion disease causes less severe lesions in human hippocampus thanother parts of brain.",
+          "retrievedAt": "2026-09-07T19:32:10.272Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:35:02.137Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1202": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://research.qut.edu.au/datascience/people/anh-vo/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://research.qut.edu.au/datascience/people/anh-vo/: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:35:02.137Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1203": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.skoltech.ru/en/faculty-research/faculty/anh-huy-phan/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.skoltech.ru/en/faculty-research/faculty/anh-huy-phan/: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:35:02.137Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1204": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://researchers.mq.edu.au/en/persons/xuan-thinh-duong"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://researchers.mq.edu.au/en/persons/xuan-thinh-duong: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:35:02.137Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1205": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://lmi.insa-rouen.fr/users/pdinh"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://lmi.insa-rouen.fr/users/pdinh: fetch failed"
+      ],
+      "updatedAt": "2026-09-07T19:35:02.137Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1206": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.westga.edu/profile.php?emp_id=0865710"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.westga.edu/profile.php?emp_id=0865710: HTTP 406"
+      ],
+      "updatedAt": "2026-09-07T19:35:02.137Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1207": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://researchers.mq.edu.au/en/persons/the-anh-bui"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://researchers.mq.edu.au/en/persons/the-anh-bui: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:35:02.137Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1208": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.ruhr-uni-bochum.de/humangenetik/team_en.html"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.ruhr-uni-bochum.de/humangenetik/team_en.html: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:35:02.137Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1209": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.garvan.org.au/research/faculty/tri-phan"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.garvan.org.au/research/faculty/tri-phan: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:35:02.137Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1210": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.concordia.ca/faculty/thien-thanh-dang-vu.html"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.concordia.ca/faculty/thien-thanh-dang-vu.html: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:35:02.137Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1211": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://cri1149.fr/team/pharmacology-and-pathophysiology-of-inflammatory-processes/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://cri1149.fr/team/pharmacology-and-pathophysiology-of-inflammatory-processes/: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:35:02.137Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1212": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.academie-medecine.fr/membres/patrice-tran-ba-huy/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.academie-medecine.fr/membres/patrice-tran-ba-huy/: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:35:02.137Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1213": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://biam.cea.fr/drf/biam/Pages/laboratoires/lb3m/immunogenomics.aspx"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://biam.cea.fr/drf/biam/Pages/laboratoires/lb3m/immunogenomics.aspx: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:35:02.137Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1214": {
       "overview": "pending",
