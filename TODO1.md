@@ -134,9 +134,10 @@ completion while temporary failures or unresolved verification remain.
 - [x] ~~Batch 3 — `vp-0041`–`vp-0060`; 20 people; all outcomes complete~~ — published in `94c1bb2`; counts: 20 verified overviews, 17 verified work sections (5 selected, 12 recent), 3 no-suitable-evidence work searches; 0 unresolved retries.
 - [x] ~~Batch 4 — `vp-0061`–`vp-0080`; 20 people; all outcomes complete~~ — published in `d1e3f2e`; counts: 20 verified overviews, 14 verified work sections (6 selected, 8 recent), 6 no-suitable-evidence work searches; 0 unresolved retries.
 - [ ] Batch 5 — `vp-0081`–`vp-0100`; 20 people; 18 complete outcomes — published in `aff3add`; counts: 18 verified overviews, 11 verified work sections (2 selected, 9 recent), 7 no-suitable-evidence work searches; 2 retries in queue (`vp-0083`, `vp-0099` due to JHU endpoint Cloudflare block).
-- [ ] Batch 6 — `vp-0101`–`vp-0120`; 20 people; 17 complete outcomes; counts: 17 verified overviews, 9 verified work sections (2 selected, 7 recent), 8 no-suitable-evidence work searches; 3 retries in queue (`vp-0102`, `vp-0104`, `vp-0105`).
+- [ ] Batch 6 — `vp-0101`–`vp-0120`; 20 people; 17 complete outcomes — published in `4342b6d`; counts: 17 verified overviews, 9 verified work sections (2 selected, 7 recent), 8 no-suitable-evidence work searches; 3 retries in queue (`vp-0102`, `vp-0104`, `vp-0105`).
+- [ ] Batch 7 — `vp-0121`–`vp-0140`; 20 people; 19 complete outcomes; counts: 18 verified overviews, 1 no-suitable-evidence overview, 16 verified work sections (3 selected, 13 recent), 2 no-suitable-evidence work searches; 1 retry in queue (`vp-0132` due to JHU endpoint Cloudflare block).
 
-Progress note: batches 1 through 6 processed (115 verified overviews, 87 verified work sections, 28 no-suitable-evidence results, 5 retries in queue). Batch 6 is ready for publication. Batch 7 will be processed next.
+Progress note: batches 1 through 7 processed (133 verified overviews, 1 no-suitable-evidence overview, 103 verified work sections, 30 no-suitable-evidence work results, 6 retries in queue). Batch 7 is ready for publication. Batch 8 will be processed next.
 
 Populate at execution time from the saved ID snapshot. Each entry must include batch number,
 ledger reference or exact IDs, outcome counts, remaining retries, and publication status.
