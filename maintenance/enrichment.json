@@ -1708,7 +1708,9 @@
         "vp-0159",
         "vp-0160"
       ],
-      "status": "pending"
+      "status": "complete",
+      "startedAt": "2026-09-07T04:17:25.543Z",
+      "publishedAt": "2026-09-07T04:20:33.026Z"
     },
     {
       "number": 9,
@@ -13237,210 +13239,1283 @@
       "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0141": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.unco.edu/employee-directory/thanh-dat-le/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0141-1",
+          "url": "https://www.unco.edu/employee-directory/thanh-dat-le/",
+          "excerpt": "& Tour Request Information Admitted Students Tuition & Fees Affordability & Financial Aid Applying for Aid Scholarships Campus Life Belonging & Community Our Campus Housing Dining Services Clubs, Organizations & Activities Campus Recreation Center Arts & Culture Health & Well-Being Campus Safety Research & Impact Undergraduate Research & Creative Endeavors Graduate Research Faculty Research Centers & Institutes About Mission & Values University Leadership Accreditation Campus Map Faculty & Staff Thanh Dat Le Thanh Dat Le Faculty Assistant Professor Monfort College of Business Finance Email dat.",
+          "retrievedAt": "2026-09-07T04:17:26.200Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0141-2",
+          "url": "https://www.unco.edu/employee-directory/thanh-dat-le/",
+          "excerpt": "edu Location Kepner Hall 1055A Address 800 17th Street, Campus Box 128, Greeley, CO 80639 Education PhD, Auburn University.",
+          "retrievedAt": "2026-09-07T04:17:26.201Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0141-3",
+          "url": "https://www.unco.edu/employee-directory/thanh-dat-le/",
+          "excerpt": "Area of Study: Financial Markets BS, University of Economics and Finance, Vietnam.",
+          "retrievedAt": "2026-09-07T04:17:26.201Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0141-4",
+          "url": "https://www.unco.edu/employee-directory/thanh-dat-le/",
+          "excerpt": "Area of Study: Finance and Banking Research Expertise & Interests Corporate Finance Investments Publications Publications: Peer Reviewed Le, T.",
+          "retrievedAt": "2026-09-07T04:17:26.201Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0141-5",
+          "url": "https://www.unco.edu/employee-directory/thanh-dat-le/",
+          "excerpt": "Local newspaper closures and suppliers&#8217; investment efficiency, The European Journal of Finance, 31(12), (ABDC: A).",
+          "retrievedAt": "2026-09-07T04:17:26.201Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0141-6",
+          "url": "https://www.unco.edu/employee-directory/thanh-dat-le/",
+          "excerpt": "Diversity and inclusion in the workplace and corporate innovation, Finance Research Letters, 76, (ABDC: A).",
+          "retrievedAt": "2026-09-07T04:17:26.201Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0141-7",
+          "url": "https://www.unco.edu/employee-directory/thanh-dat-le/",
+          "excerpt": "Technology and happiness: the association between online budget planner and financial satisfaction, Review of Behavioral Finance, 17(1), (ABDC: B).",
+          "retrievedAt": "2026-09-07T04:17:26.201Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0141-8",
+          "url": "https://www.unco.edu/employee-directory/thanh-dat-le/",
+          "excerpt": "Linking executive pay to ESG goals: The role of board gender diversity, International Journal of Managerial Finance, 20(5).",
+          "retrievedAt": "2026-09-07T04:17:26.201Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:20:33.026Z",
+      "nextAction": "Batch 8 complete."
     },
     "vp-0142": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://scholars.lmu.edu/en/persons/hai-tran/",
         "https://www.haitranv.com/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0142-1",
+          "url": "https://scholars.lmu.edu/en/persons/hai-tran/",
+          "excerpt": "Hai Tran - Loyola Marymount University Skip to main navigation Skip to search Skip to main content Loyola Marymount University Home Learn more about Scholars &#64; LMU Link opens in a new tab Search content at Loyola Marymount University Home Profiles Departments Research Outputs Projects Activities Prizes Courses View Scopus Profile Hai Tran Associate Professor , Finance Overview Research Outputs (8) Supervised Work (2) Personal profile About You can contact Hai Tran at [email&#160;protected] .",
+          "retrievedAt": "2026-09-07T04:17:26.553Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0142-2",
+          "url": "https://scholars.lmu.edu/en/persons/hai-tran/",
+          "excerpt": "Hai Tran joined LMU's College of Business Administration in the fall of 2015 and is an associate professor of finance.",
+          "retrievedAt": "2026-09-07T04:17:26.553Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0142-3",
+          "url": "https://scholars.lmu.edu/en/persons/hai-tran/",
+          "excerpt": "His research interests include corporate finance, corporate governance and mutual funds.",
+          "retrievedAt": "2026-09-07T04:17:26.553Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0142-4",
+          "url": "https://scholars.lmu.edu/en/persons/hai-tran/",
+          "excerpt": "Prior to joining LMU, Tran taught several finance courses at the University of Oregon.",
+          "retrievedAt": "2026-09-07T04:17:26.553Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0142-5",
+          "url": "https://scholars.lmu.edu/en/persons/hai-tran/",
+          "excerpt": "Research output 8 Article Research output per year Research output per year Nonstandard Errors Nonstandard Errors , Moore, D.",
+          "retrievedAt": "2026-09-07T04:17:26.553Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0142-6",
+          "url": "https://scholars.lmu.edu/en/persons/hai-tran/",
+          "excerpt": "Research output : Contribution to journal › Article › peer-review Extremists Not on Board: Labor Market Costs to Radical Behavior in Elected Office Egerod, B.",
+          "retrievedAt": "2026-09-07T04:17:26.553Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0142-7",
+          "url": "https://scholars.lmu.edu/en/persons/hai-tran/",
+          "excerpt": "Research output : Contribution to journal › Article › peer-review Finding information in obvious places: Work connections and mutual fund investment ideas Genc, E.",
+          "retrievedAt": "2026-09-07T04:17:26.553Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0142-8",
+          "url": "https://scholars.lmu.edu/en/persons/hai-tran/",
+          "excerpt": "Research output : Contribution to journal › Article › peer-review Are Directors Rewarded for Excellence?",
+          "retrievedAt": "2026-09-07T04:17:26.553Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0142-9",
+          "url": "https://www.haitranv.com/",
+          "excerpt": "Hai Tran - Hai Tran | Finance Skip to content Hai Tran | Finance About Me Research Teaching CV Resources for Students Contact Hai Tran Associate Professor of Finance & Associate Chair Department of Finance Loyola Marymount University I am an Associate Professor of Finance and Associate Chair in the Department of Finance at Loyola Marymount University&#8217;s College of Business Administration.",
+          "retrievedAt": "2026-09-07T04:17:36.096Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0142-10",
+          "url": "https://www.haitranv.com/",
+          "excerpt": "I hold a PhD in Finance from the University of Oregon, an MBA from Washington State University, and a BA in Business Administration from Washington State University, with majors in Finance and Accounting and a minor in Professional Writing.",
+          "retrievedAt": "2026-09-07T04:17:36.096Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0142-11",
+          "url": "https://www.haitranv.com/",
+          "excerpt": "My research examines how incentives, information, and institutional rules affect the decisions of financial professionals and firms.",
+          "retrievedAt": "2026-09-07T04:17:36.096Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0142-12",
+          "url": "https://www.haitranv.com/",
+          "excerpt": "Most of my work falls into three connected areas: asset management, corporate governance and director labor markets, and tax policy.",
+          "retrievedAt": "2026-09-07T04:17:36.096Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0142-13",
+          "url": "https://www.haitranv.com/",
+          "excerpt": "Several of my papers use hand-collected or newly linked data to study questions that are difficult to examine with standard datasets.",
+          "retrievedAt": "2026-09-07T04:17:36.096Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0142-14",
+          "url": "https://www.haitranv.com/",
+          "excerpt": "My work has been published in the Journal of Financial Economics, Journal of Politics, Journal of Financial Markets, Journal of Banking and Finance, Journal of Corporate Finance, and Review of Corporate Finance Studies, among others.",
+          "retrievedAt": "2026-09-07T04:17:36.096Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0142-15",
+          "url": "https://www.haitranv.com/",
+          "excerpt": "Prior to academia, I worked as a Planning Analyst at PepsiCo in Ho Chi Minh City, Vietnam.",
+          "retrievedAt": "2026-09-07T04:17:36.096Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:20:33.026Z",
+      "nextAction": "Batch 8 complete."
     },
     "vp-0143": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://directory.smeal.psu.edu/gxn13",
         "http://sites.google.com/site/ghn8888"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0143-1",
+          "url": "https://directory.smeal.psu.edu/gxn13",
+          "excerpt": "Giang Nguyen &mdash; Smeal College of Business News Events Students Alumni Companies Donors Employee Resources Directory About Smeal Academic Programs Executive Education Academic Departments Faculty & Research Directory Research Faculty Directory Giang Nguyen Update Profile Giang Nguyen Associate Professor of Finance Department Finance Office Address 344 Business Building Phone Number 814-865-2185 Email Address gxn13@psu.",
+          "retrievedAt": "2026-09-07T04:17:36.852Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0143-2",
+          "url": "https://directory.smeal.psu.edu/gxn13",
+          "excerpt": "edu Download Vita Google Scholar Personal Website Giang Nguyen Associate Professor of Finance Department Finance Office Address 344 Business Building Phone Number 814-865-2185 Email Address gxn13@psu.",
+          "retrievedAt": "2026-09-07T04:17:36.852Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0143-3",
+          "url": "https://directory.smeal.psu.edu/gxn13",
+          "excerpt": "edu Download Photo Download Vita Google Scholar Personal Website Biography Teaching Publications Giang Nguyen is an Associate Professor of Finance at the Smeal College of Business.",
+          "retrievedAt": "2026-09-07T04:17:36.852Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0143-4",
+          "url": "https://directory.smeal.psu.edu/gxn13",
+          "excerpt": "Prior to her academic career, she held professional positions at NERA Economic Consulting and PricewaterhouseCoopers.",
+          "retrievedAt": "2026-09-07T04:17:36.852Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0143-5",
+          "url": "https://directory.smeal.psu.edu/gxn13",
+          "excerpt": "Expertise Market Microstructure (Liquidity, Price Discovery, Market Efficiency, Fixed Income Markets) Financial Econometrics (Liquidity and Volatility Modeling) Education Ph D, Economics, The University of North Carolina, 2015 MBA, Finance and Investments, George Washington University, 2006 Bachelor of Commerce with Honors, Accounting and Finance, Monash University and University of Queensland, 2001 Courses Taught FIN 406 &ndash; Sec Anly &Prt Mgmt (3) Advanced valuation theory; fundamentals of security analysis; portfolio construction and management.",
+          "retrievedAt": "2026-09-07T04:17:36.852Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0143-6",
+          "url": "https://directory.smeal.psu.edu/gxn13",
+          "excerpt": ", \"Tick Size, Competition for Liquidity Provision, and Price Discovery: Evidence from the U.",
+          "retrievedAt": "2026-09-07T04:17:36.852Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0143-7",
+          "url": "https://directory.smeal.psu.edu/gxn13",
+          "excerpt": ", \"House price dynamics, unemployment, and the mobility decisions of low-income homeowners.",
+          "retrievedAt": "2026-09-07T04:17:36.852Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0143-8",
+          "url": "https://directory.smeal.psu.edu/gxn13",
+          "excerpt": "141–156 Research Impact and Media Mentions \"891 Google Scholar citations\", Google Scholar, Internet \"Citigroup, UBS Exit Munis After Market’s Profits Plummet by 50%\", Bloomberg News, Newspaper, www.",
+          "retrievedAt": "2026-09-07T04:17:36.852Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0143-9",
+          "url": "http://sites.google.com/site/ghn8888",
+          "excerpt": "Giang Nguyen Search this site Embedded Files Skip to main content Skip to navigation Giang Nguyen Giang Nguyen Address: 344 Business Building, University Park, PA 16802 Email: giang.",
+          "retrievedAt": "2026-09-07T04:17:37.316Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0143-10",
+          "url": "http://sites.google.com/site/ghn8888",
+          "excerpt": "edu My SSRN Page My Google Scholar ACADEMIC EXPERIENCE Associate Professor of Finance, Smeal College of Business, Penn State University (2023-present) Assistant Professor of Finance (2015-2023) EDITORIAL SERVICE Associate Editor , Journal of Applied Econometrics ( 2024 -present) OTHER EXPERIENCE Visiting Economist, the Federal Reserve Bank of New York (short-term visits since 2015) Visiting Financial Economist (IPA), the U.",
+          "retrievedAt": "2026-09-07T04:17:37.317Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0143-11",
+          "url": "http://sites.google.com/site/ghn8888",
+          "excerpt": "Securities and Exchange Commission (2019-2020) RESEARCH INTERESTS Market microstructure Fixed income markets Financial econometrics EDUCATION PhD Economics, University of North Carolina at Chapel Hill PROFESSIONAL EXPERIENCE NERA Economic Consulting PricewaterhouseCoopers Vietnam Curriculum Vitae P UBLICATIONS &quot;How Do Treasury Dealers Manage Their Positions?",
+          "retrievedAt": "2026-09-07T04:17:37.317Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0143-12",
+          "url": "http://sites.google.com/site/ghn8888",
+          "excerpt": "&quot;The Price of Safety: T he Evolution of Municipal Bond Insurance Value,&#39;&#39; 2022 , with Kimberly Cornaggia and John Hund.",
+          "retrievedAt": "2026-09-07T04:17:37.317Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0143-13",
+          "url": "http://sites.google.com/site/ghn8888",
+          "excerpt": "&quot;Tick Size, Competition for Liquidity Provision, and Price Discovery: Evidence from the U.",
+          "retrievedAt": "2026-09-07T04:17:37.317Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0143-14",
+          "url": "http://sites.google.com/site/ghn8888",
+          "excerpt": "&quot;Investor Attention and Municipal Bond Returns, &quot; 2022, with Kimberly Cornaggia and John Hund.",
+          "retrievedAt": "2026-09-07T04:17:37.317Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0143-15",
+          "url": "http://sites.google.com/site/ghn8888",
+          "excerpt": "Lead article &quot;Opioid Crisis Effects on Municipal Finance,&quot; 2022, with Kimberly Cornaggia, John Hund, and Zihan Ye.",
+          "retrievedAt": "2026-09-07T04:17:37.317Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0143-16",
+          "url": "http://sites.google.com/site/ghn8888",
+          "excerpt": "Treasury Market, &quot; 2020, with Robert Engle, Michael Fleming, and Eric Ghysels.",
+          "retrievedAt": "2026-09-07T04:17:37.317Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:20:33.026Z",
+      "nextAction": "Batch 8 complete."
     },
     "vp-0144": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.depaul.edu/faculty/quoc-nguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0144-1",
+          "url": "https://www.depaul.edu/faculty/quoc-nguyen",
+          "excerpt": "Quoc Nguyen | DePaul University - Chicago, IL Skip to main content Request Info Apply Search Menu DePaul University Faculty And Staff Di… Quoc Nguyen Quoc Nguyen Driehaus College of Business Finance and Real Estate Associate Professor Contact QNGUYE14@depaul.",
+          "retrievedAt": "2026-09-07T04:17:37.811Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0144-2",
+          "url": "https://www.depaul.edu/faculty/quoc-nguyen",
+          "excerpt": ", DePaul Center 5513, Chicago, IL 60604 BIO Academic Degrees PhD, Finance, University of Illinois Urbana-Champaign, 2013 BA, Computational Mathematics and Statistics, University of Waterloo, 2007 Biography Dr.",
+          "retrievedAt": "2026-09-07T04:17:37.811Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0144-3",
+          "url": "https://www.depaul.edu/faculty/quoc-nguyen",
+          "excerpt": "Nguyen is currently an Associate Professor of Finance at DePaul University's Driehaus College of Business and Kellstadt Graduate School of Business.",
+          "retrievedAt": "2026-09-07T04:17:37.811Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0144-4",
+          "url": "https://www.depaul.edu/faculty/quoc-nguyen",
+          "excerpt": "Prior to joining DePaul, he served as an Assistant Professor of Finance at the University of Illinois at Chicago.",
+          "retrievedAt": "2026-09-07T04:17:37.811Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0144-5",
+          "url": "https://www.depaul.edu/faculty/quoc-nguyen",
+          "excerpt": "Math in Computational Mathematics and Statistics from the University of Waterloo and a Ph.",
+          "retrievedAt": "2026-09-07T04:17:37.811Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0144-6",
+          "url": "https://www.depaul.edu/faculty/quoc-nguyen",
+          "excerpt": "Nguyen's research focuses on asset pricing and behavioral finance, with particular emphasis on textual analysis, ESG investing, and the application of technology such as Machine Learning and AI to financial markets.",
+          "retrievedAt": "2026-09-07T04:17:37.811Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0144-7",
+          "url": "https://www.depaul.edu/faculty/quoc-nguyen",
+          "excerpt": "His work on investor attention and corporate disclosure practices has been recognized with numerous awards and has been widely implemented in industry settings.",
+          "retrievedAt": "2026-09-07T04:17:37.811Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0144-8",
+          "url": "https://www.depaul.edu/faculty/quoc-nguyen",
+          "excerpt": "His academic research has been published in leading journals including the Journal of Finance, Management Science, the Review of Finance, and has received awards including the Q-Group Jack Treynor Prize, First Prize at the CQA Finance Competition, the Hillcrest Behavioral Finance Competition award, the Fordham University–PVH Corp.",
+          "retrievedAt": "2026-09-07T04:17:37.811Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:20:33.026Z",
+      "nextAction": "No publication list available on DePaul profile."
     },
     "vp-0145": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://spu.edu/academics/college-business-technology/faculty-staff/nguyen-diep"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://spu.edu/academics/college-business-technology/faculty-staff/nguyen-diep: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T04:20:33.026Z",
+      "nextAction": "Retry endpoint when available."
     },
     "vp-0146": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.westfield.ma.edu/people/liem-nguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0146-1",
+          "url": "https://www.westfield.ma.edu/people/liem-nguyen",
+          "excerpt": "Liem Nguyen | Westfield State University Skip to main content Menu Close Main Menu In This Section Main Menu Within this navigation, the up and down arrows jump to the adjacent top-level item.",
+          "retrievedAt": "2026-09-07T04:17:39.782Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0146-2",
+          "url": "https://www.westfield.ma.edu/people/liem-nguyen",
+          "excerpt": "Academics Academics at a Glance Learn about rankings, most popular programs, and more.",
+          "retrievedAt": "2026-09-07T04:17:39.782Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0146-3",
+          "url": "https://www.westfield.ma.edu/people/liem-nguyen",
+          "excerpt": "Degree Programs Majors & Minors Graduate Degrees Part-time & Second Bachelor&#039;s Online Degree Completion Accelerated Programs Course Catalog Colleges and Departments General Education Non-Degree Programs Certificates (Undergrad & Graduate) H.",
+          "retrievedAt": "2026-09-07T04:17:39.782Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0146-4",
+          "url": "https://www.westfield.ma.edu/people/liem-nguyen",
+          "excerpt": "Westfield is one of a kind, combining big school features with small school advantages Undergraduate First-Year Transfers International Students First Generation College Students Students with Learning Disabilities Campus Tours Graduate Graduate Admissions Teaching Licensure Open House Events Lifelong Learning & Special Programs Certificates (Undergrad & Graduate) Online Degree Completion Early College Programs Veterans Army ROTC Center for Teacher Education and Research Western Massachusetts Writing Project Cost & Aid Cost & Aid at a Glance Explore options for tuition and financial assistance.",
+          "retrievedAt": "2026-09-07T04:17:39.782Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0146-5",
+          "url": "https://www.westfield.ma.edu/people/liem-nguyen",
+          "excerpt": "ial Life New Student Orientation Office of the Dean of Students STAT: Student Threat Assessment Team Safety & Security Health & Wellness Athletics Counseling Center Health Services Fitness Centers Wellness Support Get Involved Student Activities, Involvement, and Leadership (SAIL) Clubs & Organizations Tickets for Upcoming Events Student Government Association Student Activities Calendar About About Westfield University Westfield State University’s 256 acre campus lies just west of Springfield in the beautiful Pioneer Valley of Massachusetts, surrounded by mountain views and tree-lined streets.",
+          "retrievedAt": "2026-09-07T04:17:39.782Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0146-6",
+          "url": "https://www.westfield.ma.edu/people/liem-nguyen",
+          "excerpt": "Basics Bookstore Location Campus Map & Directions NECHE Accreditation Sustainability Who We Are Mission, Vision, and Values President & Leadership Strategic Plan Civic Engagement History News & Notable Why Westfield State?",
+          "retrievedAt": "2026-09-07T04:17:39.782Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0146-7",
+          "url": "https://www.westfield.ma.edu/people/liem-nguyen",
+          "excerpt": "Rankings, Awards & Distinctions News Events Info For: Prospective Students We have high-quality academics and a gorgeous campus—and we have accessible faculty, providing personal attention.",
+          "retrievedAt": "2026-09-07T04:17:39.782Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0146-8",
+          "url": "https://www.westfield.ma.edu/people/liem-nguyen",
+          "excerpt": "nt Library Registrar Request Space Technology Support Athletics Apply Give In This Section Close Logins myWestfield Email PLATO/Online Learning Employee Self-Service Calendars & News Academic Calendar Class Cancellations Events News Campus Resources Bookstore Copy Center Storefront Library Registrar Request Space Technology Support Search Search Faculty & Staff Directory Offices & Services A-Z University Catalog Trending now Welcome OWLS Week Family & Champions Weekend Athletics Apply Give Quicklinks / Search Within this navigation, the left and right arrows jump to the adjacent top-level item.",
+          "retrievedAt": "2026-09-07T04:17:39.782Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:20:33.026Z",
+      "nextAction": "No publication list available on Westfield State profile."
     },
     "vp-0147": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://directory.smeal.psu.edu/aul26",
         "https://sites.google.com/site/anhlefinance/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0147-1",
+          "url": "https://directory.smeal.psu.edu/aul26",
+          "excerpt": "Anh Le &mdash; Smeal College of Business News Events Students Alumni Companies Donors Employee Resources Directory About Smeal Academic Programs Executive Education Academic Departments Faculty & Research Directory Research Faculty Directory Anh Le Update Profile Anh Le Associate Professor of Finance Department Finance Office Address 348 Business Building Phone Number 814-867-0068 Email Address anh.",
+          "retrievedAt": "2026-09-07T04:17:40.464Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0147-2",
+          "url": "https://directory.smeal.psu.edu/aul26",
+          "excerpt": "edu Personal Website Anh Le Associate Professor of Finance Department Finance Office Address 348 Business Building Phone Number 814-867-0068 Email Address anh.",
+          "retrievedAt": "2026-09-07T04:17:40.464Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0147-3",
+          "url": "https://directory.smeal.psu.edu/aul26",
+          "excerpt": "Anh Le received his PhD from New York University's Stern School of Business, and his bachelor of commerce degree with first-class honors from Monash University and the University of Queensland in Australia.",
+          "retrievedAt": "2026-09-07T04:17:40.464Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0147-4",
+          "url": "https://directory.smeal.psu.edu/aul26",
+          "excerpt": "Expertise Fixed Income Education Ph D, Finance (Fixed Income), New York University, 2008 Bachelor of Commerce (Honors), Finance, The University of Queensland, 2001 Bachelor of Commerce, Accounting and Finance, Monash University, 2000 Courses Taught FIN 426 &ndash; Interest Rates and Debt Mrkts (3) The course starts off with a review of the time value of money concepts and the pricing of standard cash flows such as annuities, perpetuities.",
+          "retrievedAt": "2026-09-07T04:17:40.464Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0147-5",
+          "url": "https://directory.smeal.psu.edu/aul26",
+          "excerpt": "Next, an overview of the Treasury markets is provided with emphasis on both the primary and the secondary markets.",
+          "retrievedAt": "2026-09-07T04:17:40.464Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0147-6",
+          "url": "https://directory.smeal.psu.edu/aul26",
+          "excerpt": "In particular, the economics of the Treasury auctions, on-the-run/off-the-run liquidity issues, the presence of the zero lower bound, the economics of inflation-protected bonds, and other topics will be discussed at length.",
+          "retrievedAt": "2026-09-07T04:17:40.464Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0147-7",
+          "url": "https://directory.smeal.psu.edu/aul26",
+          "excerpt": "Students will also learn how to interpret the shapes of the nominal and the real yield curves, how to forecast short/long term future directions of rates as well as how to forecast future inflations based on nominal-real rate differentials.",
+          "retrievedAt": "2026-09-07T04:17:40.464Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0147-8",
+          "url": "https://directory.smeal.psu.edu/aul26",
+          "excerpt": "FIN 577 &ndash; FIN ENG CORP STRAT (2) Study and application of derivative strategies, financial innovation, and modern financial techniques to re-engineer risk exposure and enhance strategic opportunities.",
+          "retrievedAt": "2026-09-07T04:17:40.464Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0147-9",
+          "url": "https://sites.google.com/site/anhlefinance/",
+          "excerpt": "Anh Le Search this site Embedded Files Skip to main content Skip to navigation Anh Le Research Teaching Anh Le Research Teaching More Research Teaching Research Publications: &quot;Tractable Term Structure Models,&quot; (with Bruno Feunou, Jean-Sebastian Fontaine, and Chris Lundblad), Management Science , 2022, 68(11), 8411-8429.",
+          "retrievedAt": "2026-09-07T04:17:40.651Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0147-10",
+          "url": "https://sites.google.com/site/anhlefinance/",
+          "excerpt": "We propose a class of no-dominance term structure models that allow for flexible time series dynamics, stochastic volatility, and the zero low bound behavior of interest rates.",
+          "retrievedAt": "2026-09-07T04:17:40.651Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0147-11",
+          "url": "https://sites.google.com/site/anhlefinance/",
+          "excerpt": "&quot;Interest Rate Volatility and No Arbitrage Affine Term Structure Models,&quot; (with Scott Joslin), Management Science , 2021, 67(12), 7391-7416 .",
+          "retrievedAt": "2026-09-07T04:17:40.651Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0147-12",
+          "url": "https://sites.google.com/site/anhlefinance/",
+          "excerpt": "The affine model structure, and the constraints typically imposed by structural models that risk premia be driven exclusively by volatility are enough to very precisely extract volatility factors from the cross-section.",
+          "retrievedAt": "2026-09-07T04:17:40.651Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0147-13",
+          "url": "https://sites.google.com/site/anhlefinance/",
+          "excerpt": "&quot;The Price of Variance Risk,&quot; (with Ian Dew-Becker, Stefano Giglio, and Marius Rodriguez), Journal of Financial Economics , 2017, 123(2), 225-250, Lead Article.",
+          "retrievedAt": "2026-09-07T04:17:40.651Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0147-14",
+          "url": "https://sites.google.com/site/anhlefinance/",
+          "excerpt": "We find that the average investor in the variance swap market is indifferent to news about future variance at horizons ranging from 1 quarter to 14 years.",
+          "retrievedAt": "2026-09-07T04:17:40.651Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0147-15",
+          "url": "https://sites.google.com/site/anhlefinance/",
+          "excerpt": "&quot;Separating the Components of Default Risk: A Derivative-Based Approach,&quot; Quarterly Journal of Finance , 2015, 5(1), 1550005-1:48.",
+          "retrievedAt": "2026-09-07T04:17:40.651Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0147-16",
+          "url": "https://sites.google.com/site/anhlefinance/",
+          "excerpt": "I propose a general pricing framework that extracts risk-neutral loss given default from CDS and options data.",
+          "retrievedAt": "2026-09-07T04:17:40.651Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:20:33.026Z",
+      "nextAction": "Batch 8 complete."
     },
     "vp-0148": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.se.edu/business/directory/tran-arthur/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0148-1",
+          "url": "https://www.se.edu/business/directory/tran-arthur/",
+          "excerpt": "Arthur - John Massey School of Business --> Skip to content Menu Search Search the site.",
+          "retrievedAt": "2026-09-07T04:17:41.501Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0148-2",
+          "url": "https://www.se.edu/business/directory/tran-arthur/",
+          "excerpt": "Toggle Toggle Apply Now Admission Toggle Toggle Close Apply Meet Our Team Admission Requirements Visit Academics Toggle Toggle Close Registrar&#8217;s Office Financial Aid &#038; Costs Toggle Toggle Close Tuition &#038; Fees Online Toggle Toggle Apply Now Admission Academics Tuition &#038; Costs Student Resources About Toggle Toggle About Mission &#038; History About Durant, Oklahoma Office of the President Locations Campus Map Guide For Campus Guests Special Events Parent FAQ SE Governance Out of State Authorization Open Search Home Directory Academics John Massey School of Business Tran, Dr.",
+          "retrievedAt": "2026-09-07T04:17:41.501Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0148-3",
+          "url": "https://www.se.edu/business/directory/tran-arthur/",
+          "excerpt": ", Texas Tech University Courses Taught FIN 4523, FIN 3523, FIN 4443, FIN 2633, FIN 3633, FIN 3253, FIN 5523, FIN 5543, FIN 4533, FIN 5433 425 W.",
+          "retrievedAt": "2026-09-07T04:17:41.501Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:20:33.026Z",
+      "nextAction": "No research overview or publications on SE Oklahoma State directory."
     },
     "vp-0149": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://business.ecu.edu/faculty/trantra/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0149-1",
+          "url": "https://business.ecu.edu/faculty/trantra/",
+          "excerpt": "tudent Computer Requirements Study Abroad Expert Services Office of Expert Services Contact Us Cunanan Center Center for AI in Business Twilley Academy of Sales Leadership Bureau of Business Research Crisp Small Business Resource Center Professional Services and Executive Education Alumni Alumni & Donors Business Advisory Council Young Alumni Council Ways to Give Stocknotes Faculty Research Trang Tran Trang Tran, Associate Professor Department of Marketing and Supply Chain Management College of Business East Carolina University 114 Slay Hall Greenville, NC 27858-4353 252-737-5421 trantra17@ecu.",
+          "retrievedAt": "2026-09-07T04:17:41.784Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0149-2",
+          "url": "https://business.ecu.edu/faculty/trantra/",
+          "excerpt": "His papers have been accepted or published in a number of journals including the Journal of Macromarketing, Services Marketing Quarterly, Computers in Human Behavior, International Journal of Nonprofit and Voluntary Sector Marketing, International Journal of Bank Marketing and conferences like the American Marketing Association, Academy of Marketing Science, and the Society of Marketing Advances.",
+          "retrievedAt": "2026-09-07T04:17:41.784Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0149-3",
+          "url": "https://business.ecu.edu/faculty/trantra/",
+          "excerpt": ", Mercedes-Benz Vietnam and Samsung Engineering for more than ten years before returning to academia.",
+          "retrievedAt": "2026-09-07T04:17:41.784Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:20:33.026Z",
+      "nextAction": "No individual publication titles listed on ECU directory."
     },
     "vp-0150": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.monmouth.edu/directory/profiles/npham/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0150-1",
+          "url": "https://www.monmouth.edu/directory/profiles/npham/",
+          "excerpt": "| Directory | Monmouth University --> --> Skip to content Close Close Directory List By Last Name Academic Departments Administrative Departments Skip navigation COVID-19 --> Visit Apply Give Directory Resources Close Resources Menu Main Menu Resources Academic Calendar Campus Map myMU Pay My Bill Library Open Today: 8 a.",
+          "retrievedAt": "2026-09-07T04:17:44.889Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0150-2",
+          "url": "https://www.monmouth.edu/directory/profiles/npham/",
+          "excerpt": "enter for Student Success Disability Services Experiential Education International Student Services Admission &#038; Aid Admission Undergraduate Transfer Admission Graduate International Students Summer Military Financial Aid Apply Now Campus Life Campus Life Office of Student Engagement New Student Orientation Housing Dining Activities &#038; Clubs Campus Safety Events Health Services Division of Student Life About About Why Choose Monmouth Campus &#038; Location Centers & Institutes Diversity and Inclusion News University Leadership Our History Arts Athletics Open Site Search Search Monmouth.",
+          "retrievedAt": "2026-09-07T04:17:44.889Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0150-3",
+          "url": "https://www.monmouth.edu/directory/profiles/npham/",
+          "excerpt": "edu Search Close Site Search Menu Directory Home Directory Directory List By Last Name Academic Departments Administrative Departments Nguyen Pham, Ph.",
+          "retrievedAt": "2026-09-07T04:17:44.889Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0150-4",
+          "url": "https://www.monmouth.edu/directory/profiles/npham/",
+          "excerpt": "Associate Professor Department: Marketing and International Business Office: Samuel E.",
+          "retrievedAt": "2026-09-07T04:17:44.889Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0150-5",
+          "url": "https://www.monmouth.edu/directory/profiles/npham/",
+          "excerpt": "Nguyen (Win) Pham is Associate Professor of Marketing and International Business at Monmouth University.",
+          "retrievedAt": "2026-09-07T04:17:44.889Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0150-6",
+          "url": "https://www.monmouth.edu/directory/profiles/npham/",
+          "excerpt": "Carey School of Business (Arizona State University), her MBA from Rutgers University, and her bachelor’s degree from Vietnam National University.",
+          "retrievedAt": "2026-09-07T04:17:44.889Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0150-7",
+          "url": "https://www.monmouth.edu/directory/profiles/npham/",
+          "excerpt": "Her research is in marketing focusing on consumer behavior, which involves studying different psychological processes underlying consumers’ judgment and decision making.",
+          "retrievedAt": "2026-09-07T04:17:44.889Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0150-8",
+          "url": "https://www.monmouth.edu/directory/profiles/npham/",
+          "excerpt": "She has two primary streams of research: Food decision making & consumer well-being and Emotions and consumer-brand relationship.",
+          "retrievedAt": "2026-09-07T04:17:44.889Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:20:33.026Z",
+      "nextAction": "Batch 8 complete."
     },
     "vp-0151": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://cob.sfsu.edu/marketing/directory/nga-ho-dac"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0151-1",
+          "url": "https://cob.sfsu.edu/marketing/directory/nga-ho-dac",
+          "excerpt": "| Marketing Department Skip to main content SAN FRANCISCO STATE UNIVERSITY | Marketing Department A–Z Calendar Login Search SF State Search SF State Button SF State This Site Toggle navigation Menu Main navigation Undergraduate Program Graduate Program Graduate Certificates Expand Graduate Certificate in Marketing in the Digital Economy Graduate Certificate in Sustainable Business Graduate Certificate in Business Principles Internship Program Courses Student Resources Lam-Larsen Initiatives & Centers Contact Us RETURN TO LFCoB HOMEPAGE ➝ Nga Ho-Dac, Ph.",
+          "retrievedAt": "2026-09-07T04:17:45.580Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0151-2",
+          "url": "https://cob.sfsu.edu/marketing/directory/nga-ho-dac",
+          "excerpt": "Associate Professor Fall 2026 Office Hours: M/W 6:15pm-7:45pm Phone: (415) 405-2183 Email: ngahodac@sfsu.",
+          "retrievedAt": "2026-09-07T04:17:45.580Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0151-3",
+          "url": "https://cob.sfsu.edu/marketing/directory/nga-ho-dac",
+          "excerpt": "edu Location: BUS 206E Role Faculty Department Marketing Contact Email: mktgdept@sfsu.",
+          "retrievedAt": "2026-09-07T04:17:45.580Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0151-4",
+          "url": "https://cob.sfsu.edu/marketing/directory/nga-ho-dac",
+          "excerpt": "edu Telephone: (415) 338-1147 Location Creative Arts 251, 1600 Holloway Avenue San Francisco CA 94132 Office Hours Monday – Friday, 8 am to 5 pm Closed from noon to 1 pm Quick Links Alumni, Discover Your Connection!",
+          "retrievedAt": "2026-09-07T04:17:45.580Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:20:33.026Z",
+      "nextAction": "SFSU faculty page contains only contact info and office hours."
     },
     "vp-0152": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.siena.edu/faculty-and-staff/person/adam-nguyen/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0152-1",
+          "url": "https://www.siena.edu/faculty-and-staff/person/adam-nguyen/",
+          "excerpt": "er Siena Visit Expand Navigation About Campus Map and Directions Schedule a Tour New York&#039;s Capital Region Local Lodging Local Restaurants Apply Expand Navigation Application Process Deadlines Admissions Information Contact Admissions The Siena Guarantee Afford Expand Navigation Financial Aid Office Siena Value Scholarships Audience Navigation Prospective Students New Incoming Students Current Students Faculty & Staff Alumni & Giving Parents & Families Back to Faculty Directory Marketing Graduate Programs Adam Nguyen Department Chair and Professor of Marketing (518) 782-6806 anguyen@siena.",
+          "retrievedAt": "2026-09-07T04:17:45.943Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0152-2",
+          "url": "https://www.siena.edu/faculty-and-staff/person/adam-nguyen/",
+          "excerpt": "tant Professor of Marketing and Management Siena University (formerly Siena College) 2004 - 2004 Instructor in Marketing University of Toronto 2003 - 2004 Instructor in Marketing York University 1999 - 1999 Financial Planner United Parcel Services 1999 - 2003 Teaching Assistant in Marketing York University 1991 - 1994 Marketing Manager Jardine Pacific Articles & Book Reviews Capacity-Based Consumption and Elevation: A Research Agenda Advances In Consumer Research 2026 Viewpoint: Designing transformative service to overcome eudaimonic- hedonic outcome conflict Journal Of Services Marketing, vol.",
+          "retrievedAt": "2026-09-07T04:17:45.943Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0152-3",
+          "url": "https://www.siena.edu/faculty-and-staff/person/adam-nguyen/",
+          "excerpt": "37 2023 Overcoming the potential conflict between eudaimonic versus hedonic outcomes of transformative service Advances In Consumer Research, vol.",
+          "retrievedAt": "2026-09-07T04:17:45.943Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0152-4",
+          "url": "https://www.siena.edu/faculty-and-staff/person/adam-nguyen/",
+          "excerpt": "49 2021 How Commercial Friendship Affects Performance: Interorganizational Favor Exchange American Marketing Association Educator's Summer Conference 2020 How Purchase Goal (Gift- versus Self-Purchase) Affects Buyers' Price Fairness Judgments and Satisfaction American Marketing Association Educator's Summer Conference, vol.",
+          "retrievedAt": "2026-09-07T04:17:45.943Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0152-5",
+          "url": "https://www.siena.edu/faculty-and-staff/person/adam-nguyen/",
+          "excerpt": "31 2020 The Individual Aspect of Interorganizational Cooperation: Favor-Based Cooperation Journal Of Business-To-Business Marketing, vol.",
+          "retrievedAt": "2026-09-07T04:17:45.943Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0152-6",
+          "url": "https://www.siena.edu/faculty-and-staff/person/adam-nguyen/",
+          "excerpt": "27 2020 Consumer Expectations of Preferential Pricing in The US versus China Journal of Marketing Development and Competitiveness, vol.",
+          "retrievedAt": "2026-09-07T04:17:45.943Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0152-7",
+          "url": "https://www.siena.edu/faculty-and-staff/person/adam-nguyen/",
+          "excerpt": "12 2018 How National Culture Affect Students' Preference of Different Educational Models International Vincentian Business Ethics Conference (IVBEC) 2018 Price Fairness Judgments in Gift Giving Contexts International Vincentian Business Ethics Conference (IVBEC) 2018 How source of funds affects buyer's judgments of price fairness and subsequent response Journal Of Product & Brand Management, vol.",
+          "retrievedAt": "2026-09-07T04:17:45.943Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0152-8",
+          "url": "https://www.siena.edu/faculty-and-staff/person/adam-nguyen/",
+          "excerpt": "25 2016 Overcoming Potential Negative Consequences of Customer Orientation in Marketing Education: Closing the Ideological Gap Journal Of Marketing For Higher Education, vol.",
+          "retrievedAt": "2026-09-07T04:17:45.943Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:20:33.026Z",
+      "nextAction": "Batch 8 complete."
     },
     "vp-0153": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://business.columbia.edu/faculty/people/michel-tuan-pham"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://business.columbia.edu/faculty/people/michel-tuan-pham: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T04:20:33.026Z",
+      "nextAction": "Retry endpoint when available."
     },
     "vp-0154": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.qu.edu/faculty-and-staff/hans-nguyen/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0154-1",
+          "url": "https://www.qu.edu/faculty-and-staff/hans-nguyen/",
+          "excerpt": "Hans Nguyen | Quinnipiac University Skip to main content Academics Back to main menu Your Tools for Success At Quinnipiac, we provide the knowledge and resources you need to make a tangible impact on your chosen field.",
+          "retrievedAt": "2026-09-07T04:17:48.161Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0154-2",
+          "url": "https://www.qu.edu/faculty-and-staff/hans-nguyen/",
+          "excerpt": "Through a combination of classroom theory and practical experience designed for you to succeed, you&#x27;ll experience the life-changing opportunity of working and learning in the community and around the globe.",
+          "retrievedAt": "2026-09-07T04:17:48.161Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0154-3",
+          "url": "https://www.qu.edu/faculty-and-staff/hans-nguyen/",
+          "excerpt": "Rankings and Distinctions Academics Find Your Program Explore Areas of Interest Undergraduate Programs Bachelor&#x27;s Degree Completion Programs Accelerated Dual-Degree Programs Dual-Degree Programs Graduate and Undergraduate Certificates Micro-Credentials Online and Hybrid Programs Graduate Programs Opens in a new tab or window.",
+          "retrievedAt": "2026-09-07T04:17:48.161Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0154-4",
+          "url": "https://www.qu.edu/faculty-and-staff/hans-nguyen/",
+          "excerpt": "About Our Programs University Curriculum Pre-Professional Programs Honors Program Continuing Education Opens in a new tab or window.",
+          "retrievedAt": "2026-09-07T04:17:48.161Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0154-5",
+          "url": "https://www.qu.edu/faculty-and-staff/hans-nguyen/",
+          "excerpt": "Summer Camps and Workshops Summer Courses Schools and College College of Arts & Sciences School of Business School of Communications School of Computing & Engineering School of Education School of Health Sciences School of Law Opens in a new tab or window.",
+          "retrievedAt": "2026-09-07T04:17:48.161Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0154-6",
+          "url": "https://www.qu.edu/faculty-and-staff/hans-nguyen/",
+          "excerpt": "School of Nursing Experiential Learning Career and Experiential Learning Lab Opens in a new tab or window.",
+          "retrievedAt": "2026-09-07T04:17:48.161Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0154-7",
+          "url": "https://www.qu.edu/faculty-and-staff/hans-nguyen/",
+          "excerpt": "Global Education Study Abroad Quinnipiac University in Los Angeles Quinnipiac University in New York City Quinnipiac University in Washington, D.",
+          "retrievedAt": "2026-09-07T04:17:48.161Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0154-8",
+          "url": "https://www.qu.edu/faculty-and-staff/hans-nguyen/",
+          "excerpt": "Rankings and Distinctions Centers and Institutes Areas of Interest Business and Finance Computing and Technology Data and Analytics Education Engineering Environment and Sustainability Health and Medicine Humanities and Culture Law and Public Policy Marketing and Communications Nursing Physical and Life Sciences Social Sciences STEM Programs Theater and Fine Arts Visual Arts and Design Writing and Journalism Related Resources Academic Calendar Academic Support Bookstores Course Catalog Opens in a new tab or window.",
+          "retrievedAt": "2026-09-07T04:17:48.161Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:20:33.026Z",
+      "nextAction": "Batch 8 complete."
     },
     "vp-0155": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.tcu.edu/directory/profile/tran-chi.php"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0155-1",
+          "url": "https://www.tcu.edu/directory/profile/tran-chi.php",
+          "excerpt": "Chi Tran Skip to main content Texas Christian University Search Expand TCU Navigation Menu Menu Texas Christian University Faculty & Staff Directory Home Directory Chi Tran Main Content Chi Tran Assistant Professor p.",
+          "retrievedAt": "2026-09-07T04:17:48.630Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0155-2",
+          "url": "https://www.tcu.edu/directory/profile/tran-chi.php",
+          "excerpt": "edu 817-257-4980 Neeley 3346 Program Affiliations Neeley School of Business Marketing Download CV Education PhD, University of Oregon MS, Texas A&M University BC, RMIT University Areas of Expertise/Research Consumer-based Marketing Strategy Privacy Entertainment Methods in Text Analyses Last Updated: June 11, 2026 Edit Profile Up Arrow Back to Top Up Arrow Quick Links Calendar of Events Campus Map Texas Christian University Work at TCU Accessibility Notice of Nondiscrimination Title IX Legal Disclosures Privacy Accreditation All content &copy; 2026 Texas Christian University .",
+          "retrievedAt": "2026-09-07T04:17:48.630Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:20:33.026Z",
+      "nextAction": "No publication list on TCU profile."
     },
     "vp-0156": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://neeley.tcu.edu/view/ton-lan-anh",
         "https://www.lananhnton.com/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0156-1",
+          "url": "https://neeley.tcu.edu/view/ton-lan-anh",
+          "excerpt": "ntract Initiatives Menu AI Forward Initiative Endowed Faculty Executive-in-Residence Faculty Directory Partner With Neeley Contract Partner With Neeley Menu Hire Our Talent Mentor Future Leaders Share Your Expertise Invest in Next Generation Community Partners Program About Neeley Contract About Neeley Menu Facts & Figures Dean's Office Board of Advisors Values, Mission & Promise Strategic Plan News & Events Tandy Executive Speaker Series Faculty & Staff Directory Information For Alumni Current Students Media Inquiries Recruiters Neeley School of Business Inquire Visit Apply TCU Logo Visit TCU.",
+          "retrievedAt": "2026-09-07T04:17:48.966Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0156-2",
+          "url": "https://neeley.tcu.edu/view/ton-lan-anh",
+          "excerpt": "edu Neeley School of Business Neeley School of Business About Neeley Faculty & Staff Directory Faculty & Staff Directory Main Content Up Arrow Back to Top Up Arrow Neeley School of Business 2900 Lubbock Fort Worth, TX 76109 Mailing Address: TCU Box 298530 Fort Worth, TX 76129 Follow Us Facebook Instagram YouTube LinkedIn Flickr Dean’s Office: 817-257-7225 Undergraduate Advising: 817-257-6772 NeeleyAcademicAdvisingCenter@tcu.",
+          "retrievedAt": "2026-09-07T04:17:48.966Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0156-3",
+          "url": "https://neeley.tcu.edu/view/ton-lan-anh",
+          "excerpt": "edu Information For Alumni Current Students Media Inquiries Recruiters Work at TCU Accessibility Notice of Nondiscrimination Title IX Legal Disclosures Privacy Accreditation All content &copy; 2026 Texas Christian University .",
+          "retrievedAt": "2026-09-07T04:17:48.966Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0156-4",
+          "url": "https://www.lananhnton.com/",
+          "excerpt": "Ton Open Menu Close Menu CV RESEARCH TEACHING GALLERY I am an Assistant Professor of Marketing at Texas Christian University .",
+          "retrievedAt": "2026-09-07T04:17:49.389Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0156-5",
+          "url": "https://www.lananhnton.com/",
+          "excerpt": "My research focuses on understanding the role of purity and aesthetics in the marketing and consumer contexts.",
+          "retrievedAt": "2026-09-07T04:17:49.389Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0156-6",
+          "url": "https://www.lananhnton.com/",
+          "excerpt": "I am interested in exploring different ways consumers perceive the construct of purity.",
+          "retrievedAt": "2026-09-07T04:17:49.389Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0156-7",
+          "url": "https://www.lananhnton.com/",
+          "excerpt": "Specifically, at the intersection between aesthetics and purity, I examine how consumers derive purity from aesthetic properties such as the simplicity of the product packaging design.",
+          "retrievedAt": "2026-09-07T04:17:49.389Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0156-8",
+          "url": "https://www.lananhnton.com/",
+          "excerpt": "Moreover, I also explore how purity is used as a moral purification tactic when a brand engages in ethical misconduct and its influence on consumers' interaction with the brand.",
+          "retrievedAt": "2026-09-07T04:17:49.389Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0156-9",
+          "url": "https://www.lananhnton.com/",
+          "excerpt": "My work has been published in the Journal of Marketing , the Journal of Consumer Research , the Journal of the Academy of Marketing Science , the Journal of Experimental Social Psychology , and the Journal of the Association for Consumer Research .",
+          "retrievedAt": "2026-09-07T04:17:49.389Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:20:33.026Z",
+      "nextAction": "Batch 8 complete."
     },
     "vp-0157": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://search.asu.edu/profile/764174",
         "https://uyenbtran.com/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0157-1",
+          "url": "https://search.asu.edu/profile/764174",
+          "excerpt": "Uyen Tran | ASU Search Uyen Tran Assistant Professor , Thunderbird School of Global Management [email&#160;protected] Mail code: 1221 Campus: Dtphx &zwnj; Biography Teaching Previous Next Long Bio Uyen Tran is an assistant professor of marketing at ASU Thunderbird School of Global Management.",
+          "retrievedAt": "2026-09-07T04:17:50.978Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0157-2",
+          "url": "https://search.asu.edu/profile/764174",
+          "excerpt": "Her research agenda examines how information affects consumer behavior, combining insights from empirical industrial organization, information economics and the economics of education.",
+          "retrievedAt": "2026-09-07T04:17:50.978Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0157-3",
+          "url": "https://search.asu.edu/profile/764174",
+          "excerpt": "She lived in Vietnam as a Fulbright teaching fellow and worked as a transfer pricing associate at PwC before completing her master's degree in economics at University of North Carolina at Chapel Hill.",
+          "retrievedAt": "2026-09-07T04:17:50.978Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0157-4",
+          "url": "https://search.asu.edu/profile/764174",
+          "excerpt": "She received a master's degree in business administration and doctorate in quantitative marketing from The University of Chicago’s Booth School of Business.",
+          "retrievedAt": "2026-09-07T04:17:50.978Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0157-5",
+          "url": "https://uyenbtran.com/",
+          "excerpt": "Uyen Tran | Assistant Professor at Thunderbird-ASU Uyen Tran Assistant Professor at Thunderbird-ASU Search Main menu Skip to primary content Home Research Teaching Curriculum Vitae About Me I’m an Assistant Professor of Marketing at Thunderbird-Arizona State University.",
+          "retrievedAt": "2026-09-07T04:17:51.523Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0157-6",
+          "url": "https://uyenbtran.com/",
+          "excerpt": "My research agenda examines how information affects consumer behavior, combining insights from empirical industrial organization, information economics, and the economics of education.",
+          "retrievedAt": "2026-09-07T04:17:51.523Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0157-7",
+          "url": "https://uyenbtran.com/",
+          "excerpt": "I lived in Vietnam as a Fulbright Teaching Fellow and worked as a Transfer Pricing Associate at PwC before completing my MS in Economics at UNC-Chapel Hill.",
+          "retrievedAt": "2026-09-07T04:17:51.523Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0157-8",
+          "url": "https://uyenbtran.com/",
+          "excerpt": "I received my MBA and PhD in Quantitative Marketing from the University of Chicago&#8217;s Booth School of Business last summer in 2022.",
+          "retrievedAt": "2026-09-07T04:17:51.523Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:20:33.026Z",
+      "nextAction": "Batch 8 complete."
     },
     "vp-0158": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.fsb.miamioh.edu/directory/nguyen49"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0158-1",
+          "url": "https://www.fsb.miamioh.edu/directory/nguyen49",
+          "excerpt": "Policies Helpful Links myMiami Workday News and Events Pay My Bill One Stop Libraries Connect Academics Admission and Aid Athletics Life at Miami Apply Now Helpful Links myMiami Workday News and Events Pay My Bill One Stop Libraries Farmer School of Business Academics Admission Centers, Programs, and Initiatives Student Resources About Faculty and Staff Info/Toolbox Information Technology Strategic Partners FSB Directory MiamiOH Farmer School of Business FSB Directory Skip to Main Content Menu Peter Nguyen Assistant Professor Marketing Contact Information Campus: Oxford Office: 3053 Phone: 513.",
+          "retrievedAt": "2026-09-07T04:17:52.700Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0158-2",
+          "url": "https://www.fsb.miamioh.edu/directory/nguyen49",
+          "excerpt": "edu postal address --> Office Hours Tues 11:30am-1:00pm, or by appointment Links Curriculum Vitae vitadocend--> Curriculum Vitae [PDF]* Curriculum Vitae vitahtmend--> Personal Website webend--> * Accessible version of PDF available upon request.",
+          "retrievedAt": "2026-09-07T04:17:52.700Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0158-3",
+          "url": "https://www.fsb.miamioh.edu/directory/nguyen49",
+          "excerpt": ", Psychology & Medical Sciences, Western University, 2011 Academic & Professional Experience Assistant Professor, Miami University, 2019-Present Instructor, Western University, 2018-2019 Recent Publications Nguyen, Peter, Scott B.",
+          "retrievedAt": "2026-09-07T04:17:52.700Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0158-4",
+          "url": "https://www.fsb.miamioh.edu/directory/nguyen49",
+          "excerpt": "\"The Language of Leaving: Decoding Defection via B2B Customer Language Features\", Journal of the Academy of Marketing Science .",
+          "retrievedAt": "2026-09-07T04:17:52.700Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0158-5",
+          "url": "https://www.fsb.miamioh.edu/directory/nguyen49",
+          "excerpt": "\"When Strong Social Norms Divide: The Paradoxical Role of Cultural Tightness-Looseness in the Polarity of Online Discourse\", Journal of Cross-Cultural Psychology .",
+          "retrievedAt": "2026-09-07T04:17:52.700Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0158-6",
+          "url": "https://www.fsb.miamioh.edu/directory/nguyen49",
+          "excerpt": "Nguyen, Peter and Xin (Shane) Wang (2024), \"The Influence of Non-Physicality of Goods on Disparities in Seller-Buyer Valuations: A Meta-Analysis\", Journal of Consumer Psychology , 34(3), 445-65.",
+          "retrievedAt": "2026-09-07T04:17:52.700Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0158-7",
+          "url": "https://www.fsb.miamioh.edu/directory/nguyen49",
+          "excerpt": "Nguyen, Peter, Xin (Shane) Wang, Xi Li, and June Cotte (2021), \"Reviewing Experts' Restraint from Extremes and its Impact on Service Providers\", Journal of Consumer Research , 47(5), 654-74.",
+          "retrievedAt": "2026-09-07T04:17:52.700Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0158-8",
+          "url": "https://www.fsb.miamioh.edu/directory/nguyen49",
+          "excerpt": "versity Sales Center Alliance (USCA) Research Grant, USA, 2021, $2000 American Marketing Association (AMA) Relationship-Marketing Special Interest Group (RM-SIG), Research Grant Winner, USA, 2021, $1500 Nominated Best Paper Award at the 11th European ACR 2018 in Ghent, Belgium AMA-Sheth Foundation Doctoral Consortium 2018 in Leeds, UK Joseph-Armand Bombardier Canada Graduate Scholarship 2014-2017, $105,000 Teaching Awards: Named Top 15 Outstanding Professors by the Associated Student Government, Miami University, 2026 Poets&Quants 50 Best Undergraduate Business School Professor of 2025 David W.",
+          "retrievedAt": "2026-09-07T04:17:52.700Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:20:33.026Z",
+      "nextAction": "Batch 8 complete."
     },
     "vp-0159": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.laverne.edu/directory/person/an-tran/",
         "https://www.drantran.com"
       ],
-      "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "evidence": [
+        {
+          "id": "vp-0159-1",
+          "url": "https://www.drantran.com",
+          "excerpt": "--> An Tran PhD | Researching, Consulting, Teaching top of page HOME ABOUT RESEARCH CONSULTING TEACHING CONTACT More Use tab to navigate through the menu items.",
+          "retrievedAt": "2026-09-07T04:17:54.418Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0159-2",
+          "url": "https://www.drantran.com",
+          "excerpt": "An Tran CONSUMER RESEARCHER | PROFESSOR | CONSULTANT An Tran is a consumer psychologist who studies people&rsquo;s judgments, decisions, and behaviors, with the aim of improving consumer welfare.",
+          "retrievedAt": "2026-09-07T04:17:54.418Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0159-3",
+          "url": "https://www.drantran.com",
+          "excerpt": "Her expertise lies at the intersection of psychology, marketing, and finance, and often applies to people&rsquo;s consumption, financial, and planning decisions.",
+          "retrievedAt": "2026-09-07T04:17:54.418Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0159-4",
+          "url": "https://www.drantran.com",
+          "excerpt": "in marketing from the University of Colorado at Boulder, and is currently at the University of La Verne.",
+          "retrievedAt": "2026-09-07T04:17:54.418Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0159-5",
+          "url": "https://www.drantran.com",
+          "excerpt": "Her consulting focuses on consumer insights, digital marketing strategy and marketing research.",
+          "retrievedAt": "2026-09-07T04:17:54.418Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0159-6",
+          "url": "https://www.drantran.com",
+          "excerpt": "Her research has been published in top-tier academic journals and featured in the Wall Street Journal.",
+          "retrievedAt": "2026-09-07T04:17:54.418Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0159-7",
+          "url": "https://www.drantran.com",
+          "excerpt": "BIO CONSULTING LEARN MORE RESEARCH LEARN MORE TEACHING LEARN MORE CONTACT SEND Thanks for getting in touch!",
+          "retrievedAt": "2026-09-07T04:17:54.418Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
+      "errors": [
+        "https://www.laverne.edu/directory/person/an-tran/: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T04:20:33.026Z",
+      "nextAction": "Batch 8 complete."
     },
     "vp-0160": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://business.fiu.edu/about/directory/profile/tah"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0160-1",
+          "url": "https://business.fiu.edu/about/directory/profile/tah",
+          "excerpt": "/Internet Access University Calendar Dining & Shopping Course Catalog FIU Police Bookstore A to Z Index Resources Future Students & Parents Current Students Faculty & Staff In this Section About FIU Business Overview Office of the Dean Overview Dean&#8217;s 2024 &#8211; 2025 Annual Report Dean's Council Student Advisory Board Dean's Destination Fund Leadership Advisory Boards Directory Locations Centers and Institutes Student Diversity Rankings & Accreditation Mission & Vision Our Benefactors Community Outreach Assurance of Learning Overview Skills and Knowledge Meet the Team Why Study With Us?",
+          "retrievedAt": "2026-09-07T04:18:01.050Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0160-2",
+          "url": "https://business.fiu.edu/about/directory/profile/tah",
+          "excerpt": "edu &#160; Curriculum Vitae Faculty Ha Ta Associate Professor, Department of Marketing & Logistics College of Business Florida International University Modesto A.",
+          "retrievedAt": "2026-09-07T04:18:01.050Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0160-3",
+          "url": "https://business.fiu.edu/about/directory/profile/tah",
+          "excerpt": "in Supply Chain Management University of Arkansas, Fayetteville, Arkansas Areas of Expertise AI, blockchain, crowdsourcing buyer-supplier relationships Supply chain design, logistics Professional Activities Dr.",
+          "retrievedAt": "2026-09-07T04:18:01.050Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0160-4",
+          "url": "https://business.fiu.edu/about/directory/profile/tah",
+          "excerpt": "Previously, she earned a Bachelor of Science degree in International Economics from the Foreign Trade University in Vietnam and an MBA from Clark University.",
+          "retrievedAt": "2026-09-07T04:18:01.050Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0160-5",
+          "url": "https://business.fiu.edu/about/directory/profile/tah",
+          "excerpt": "Ta gained valuable industry experience working in various positions in international trade and inventory service management in both Vietnam and the United States.",
+          "retrievedAt": "2026-09-07T04:18:01.050Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0160-6",
+          "url": "https://business.fiu.edu/about/directory/profile/tah",
+          "excerpt": "Ta's research expertise lies at the intersection of service design, technology management, omni-channel retail, and behavioral and relational issues.",
+          "retrievedAt": "2026-09-07T04:18:01.050Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0160-7",
+          "url": "https://business.fiu.edu/about/directory/profile/tah",
+          "excerpt": "Her research examines the interplay between these domains, with a particular focus on the impact of emerging technologies on business operations.",
+          "retrievedAt": "2026-09-07T04:18:01.050Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0160-8",
+          "url": "https://business.fiu.edu/about/directory/profile/tah",
+          "excerpt": "Ta's recent research has investigated the implications of technology-driven phenomena such as crowdsourcing models, block chain, and AI technology on various aspects of supply chain management and service design.",
+          "retrievedAt": "2026-09-07T04:18:01.050Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T04:20:33.026Z",
+      "nextAction": "Batch 8 complete."
     },
     "vp-0161": {
       "overview": "pending",
