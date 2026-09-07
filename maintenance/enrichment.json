@@ -2537,7 +2537,8 @@
         "vp-0761",
         "vp-0762"
       ],
-      "status": "pending"
+      "status": "in_progress",
+      "startedAt": "2026-09-07T18:41:44.279Z"
     },
     {
       "number": 39,
@@ -48843,213 +48844,1563 @@
       "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0743": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://blog.nus.edu.sg/dinh/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0743-1",
+          "url": "https://blog.nus.edu.sg/dinh/",
+          "excerpt": "Department of Mathematics National University of Singapore Block S17, 10 Lower Kent Ridge Road Singapore 119076.",
+          "retrievedAt": "2026-09-07T18:41:44.840Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:46:20.845Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0744": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://sites.google.com/view/trilai"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0744-1",
+          "url": "https://sites.google.com/view/trilai",
+          "excerpt": "Tri Lai&#39;s Webpage Search this site Embedded Files Skip to main content Skip to navigation Tri Lai&#39;s Webpage Bio Research Teaching Talks Others Tri Lai&#39;s Webpage Bio Research Teaching Talks Others More Bio Research Teaching Talks Others Tri Lai Associate Professor Mathematics University of Nebraska - Lincoln Welcome to my homepage.",
+          "retrievedAt": "2026-09-07T18:41:45.127Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0744-2",
+          "url": "https://sites.google.com/view/trilai",
+          "excerpt": "I am currently an Associate Professor at the Department of Mathematics, University of Nebraska - Lincoln (UNL).",
+          "retrievedAt": "2026-09-07T18:41:45.127Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0744-3",
+          "url": "https://sites.google.com/view/trilai",
+          "excerpt": "Before moving to UNL, I was a Postdoctoral Associate at the Institute for Mathematics and its Applications (IMA), University of Minnesota.",
+          "retrievedAt": "2026-09-07T18:41:45.127Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0744-4",
+          "url": "https://sites.google.com/view/trilai",
+          "excerpt": "I am interested in various aspects of combinatorics, including Algebraic and Enumerative Combinatorics, Bijective Combinatorics, Partition Theory, and Cluster Algebra.",
+          "retrievedAt": "2026-09-07T18:41:45.127Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0744-5",
+          "url": "https://sites.google.com/view/trilai",
+          "excerpt": "pdf Office Address: 219 Avery Hall, 1144 T St, Lincoln NE, 68588-0130 Email: tlai3 @ unl.",
+          "retrievedAt": "2026-09-07T18:41:45.127Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:46:20.845Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0745": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.sutd.edu.sg/profile/thanh-le-cong/",
         "https://thanhlc.net/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0745-1",
+          "url": "https://www.sutd.edu.sg/profile/thanh-le-cong/",
+          "excerpt": "life STUDENT EXPERIENCE Students Opportunities Programme Student life Global experience and exchange Career development Student well-being CAMPUS Academic facilities Housing Sports and recreation centre F&B and services Library About About OVERVIEW Design·AI At a glance Diversity and inclusion Sustainability PEOPLE Leadership Board of Trustees President Emeritus Professorships Faculty MORE Thought leadership News and happenings Pressroom and publications Careers at SUTD Partnering with SUTD On this page Popular searches quick links LE-CONG Thanh Assistant Professor ISTD EMAIL congthanh_le sutd.",
+          "retrievedAt": "2026-09-07T18:41:46.384Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0745-2",
+          "url": "https://www.sutd.edu.sg/profile/thanh-le-cong/",
+          "excerpt": "sg RESEARCH AREAS Artificial and Augmented Intelligence Secure Computing Software Design Biography Thanh Le-Cong is an Assistant Professor at the ISTD Pillar, Singapore University of Technology and Design (SUTD).",
+          "retrievedAt": "2026-09-07T18:41:46.384Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0745-3",
+          "url": "https://www.sutd.edu.sg/profile/thanh-le-cong/",
+          "excerpt": "He received his PhD from the University of Melbourne in 2026 under the supervision of Dr Bach Le and Prof Toby Murray.",
+          "retrievedAt": "2026-09-07T18:41:46.384Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0745-4",
+          "url": "https://www.sutd.edu.sg/profile/thanh-le-cong/",
+          "excerpt": "His research focuses on Software Engineering, especially AI-based Software Engineering and Software Security.",
+          "retrievedAt": "2026-09-07T18:41:46.384Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0745-5",
+          "url": "https://www.sutd.edu.sg/profile/thanh-le-cong/",
+          "excerpt": "He particularly focuses on the development of trustworthy and reliable AI systems for software engineering.",
+          "retrievedAt": "2026-09-07T18:41:46.384Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0745-6",
+          "url": "https://www.sutd.edu.sg/profile/thanh-le-cong/",
+          "excerpt": "His research has been published in leading AI and SE venues, such as ICSE, FSE, ASE, TSE, and ACL, and was recognised with the Google PhD Fellowship in 2023.",
+          "retrievedAt": "2026-09-07T18:41:46.384Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0745-7",
+          "url": "https://www.sutd.edu.sg/profile/thanh-le-cong/",
+          "excerpt": "Useful information Careers at SUTD Connect with us Take a virtual campus tour 8 Somapah Rd, Singapore 487372 +65 6303 6600 +65 6303 6600 Email us Directory Social Media Facebook X YouTube LinkedIn TikTok Instagram Contact Us Whistleblowing Policy Terms & Conditions Privacy Statement Copyright © 2011 &#8211; 2026 We use cookies to ensure you get the best experience on our website.",
+          "retrievedAt": "2026-09-07T18:41:46.384Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0745-8",
+          "url": "https://thanhlc.net/",
+          "excerpt": "Thanh Le-Cong Skip to content Thanh Le-Cong About Publications Research Experience Openings Travel Email Google Scholar GitHub LinkedIn Information Systems Technology and Design (ISTD) · Singapore University of Technology and Design (SUTD) Thanh Le-Cong Assistant Professor I am a tenure-track Assistant Professor at the Singapore University of Technology and Design (SUTD) and an Honorary Fellow at the University of Melbourne.",
+          "retrievedAt": "2026-09-07T18:41:46.649Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0745-9",
+          "url": "https://thanhlc.net/",
+          "excerpt": "My research lies at the intersection of software engineering, artificial intelligence, and cybersecurity.",
+          "retrievedAt": "2026-09-07T18:41:46.649Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0745-10",
+          "url": "https://thanhlc.net/",
+          "excerpt": "The overarching goal of my research is to improve the reliability and security of software and AI systems, enabling their trustworthy and safe deployment in real-world applications.",
+          "retrievedAt": "2026-09-07T18:41:46.649Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0745-11",
+          "url": "https://thanhlc.net/",
+          "excerpt": "Toward this goal, I develop automated techniques for auditing and debugging both traditional software and AI-powered systems.",
+          "retrievedAt": "2026-09-07T18:41:46.649Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0745-12",
+          "url": "https://thanhlc.net/",
+          "excerpt": "Join my group at SUTD I am actively recruiting fully-funded PhD students , to work on trustworthy AI for software engineering.",
+          "retrievedAt": "2026-09-07T18:41:46.649Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0745-13",
+          "url": "https://thanhlc.net/",
+          "excerpt": "Please feel free to reach out to me via email if you are interested in joining my group.",
+          "retrievedAt": "2026-09-07T18:41:46.649Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0745-14",
+          "url": "https://thanhlc.net/",
+          "excerpt": "News Show all (7) Sep 2026 Honoured to be appointed an Honorary Fellow at the University of Melbourne, my PhD alma mater.",
+          "retrievedAt": "2026-09-07T18:41:46.649Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0745-15",
+          "url": "https://thanhlc.net/",
+          "excerpt": "Aug 2026 Glad to share that our two papers, led by my undergraduate interns, on vulnerability-affected library identification and LLMs for functional programming are accepted at EMNLP 2026.",
+          "retrievedAt": "2026-09-07T18:41:46.649Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:46:20.845Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0746": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://grad.usask.ca/programs/statistics.php",
         "https://tqtbui.github.io/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0746-1",
+          "url": "https://grad.usask.ca/programs/statistics.php",
+          "excerpt": "Statistics - Future graduate students | University of Saskatchewan Skip to main content Skip to navigation Future graduate students Menu P A WS Search the USask Search Programs Find a program Find a supervisor Admissions How to apply Admission requirements After you've applied Alternate applicants Joint student / sandwich program Non-degree student Visiting Research Student Cotutelle Program Funding Scholarships Tuition Our campus Unique facilities Housing Student services Events Contact Statistics Master of Science (M.",
+          "retrievedAt": "2026-09-07T18:41:47.215Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0746-2",
+          "url": "https://grad.usask.ca/programs/statistics.php",
+          "excerpt": ") On this page Program Research supervisors Tuition and funding Admission requirements Application process and deadlines Contact Top Contents Program Research supervisors Tuition and funding Admission requirements Application process and deadlines Contact Top Program The Statistics graduate programs at the University of Saskatchewan prepare students to become skilled statisticians ready to make meaningful contributions across research, industry, and society.",
+          "retrievedAt": "2026-09-07T18:41:47.215Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0746-3",
+          "url": "https://grad.usask.ca/programs/statistics.php",
+          "excerpt": "Designed for those seeking strong theoretical and applied training, these thesis-based M.",
+          "retrievedAt": "2026-09-07T18:41:47.215Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0746-4",
+          "url": "https://grad.usask.ca/programs/statistics.php",
+          "excerpt": "programs build expertise for careers in data-driven fields or further academic research.",
+          "retrievedAt": "2026-09-07T18:41:47.215Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0746-5",
+          "url": "https://grad.usask.ca/programs/statistics.php",
+          "excerpt": "Learn within a research-intensive environment with internationally-renowned faculty.",
+          "retrievedAt": "2026-09-07T18:41:47.215Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0746-6",
+          "url": "https://grad.usask.ca/programs/statistics.php",
+          "excerpt": "Explore thesis topics spanning statistical theory, applied methods, machine learning, biostatistics, and more.",
+          "retrievedAt": "2026-09-07T18:41:47.215Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0746-7",
+          "url": "https://grad.usask.ca/programs/statistics.php",
+          "excerpt": "Benefit from strong supervisor mentorship and high-quality graduate courses that support specialized research.",
+          "retrievedAt": "2026-09-07T18:41:47.215Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0746-8",
+          "url": "https://grad.usask.ca/programs/statistics.php",
+          "excerpt": "4 years Degree requirements Class delivery in-person Supervisor approval not required to apply Deadlines and admission details below Groundbreakers in statistical discovery Unlock the power of data through rigorous training and innovative research that prepares you to solve complex problems across disciplines.",
+          "retrievedAt": "2026-09-07T18:41:47.215Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0746-9",
+          "url": "https://tqtbui.github.io/",
+          "excerpt": "Trang Bui Trang Bui Home Research Teaching Books Software Miscs Trang Bui I am an Assistant Professor at Department of Mathematics and Statistics, University of Saskatchewan.",
+          "retrievedAt": "2026-09-07T18:41:47.417Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0746-10",
+          "url": "https://tqtbui.github.io/",
+          "excerpt": "Previously, I was a postdoctoral fellow at University of Rochester under the supervision of Professors Ashkan Ertefaie and Robert Strawderman .",
+          "retrievedAt": "2026-09-07T18:41:47.417Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0746-11",
+          "url": "https://tqtbui.github.io/",
+          "excerpt": "at University of Waterloo under the supervision of Professors Stefan Steiner and Nathaniel Stevens .",
+          "retrievedAt": "2026-09-07T18:41:47.417Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0746-12",
+          "url": "https://tqtbui.github.io/",
+          "excerpt": ", I also worked as a consultant at the Statistical Consulting and Survey Research Unit (SCSRU) , where I provided statistical consultation for 80+ scientific projects.",
+          "retrievedAt": "2026-09-07T18:41:47.417Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0746-13",
+          "url": "https://tqtbui.github.io/",
+          "excerpt": "For prospective collaboration and supervision inquiries, please contact me via email .",
+          "retrievedAt": "2026-09-07T18:41:47.417Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0746-14",
+          "url": "https://tqtbui.github.io/",
+          "excerpt": "Education Postdoc in Biostatistics, 2025 University of Rochester PhD in Statistics, 2024 University of Waterloo Master in Statistics, 2018 University of Waterloo BSc in Mathematics and Business, 2017 Korean Advanced Institute of Science and Technology Research interests Trustworthy AI Statistical Geometry Experimental Design Causal Inference Social Networks Skills Python, R, MATLAB Excel VBA, Tableau, STATA Vietnamese, English, Korean, Mandarin, and French © 2026 Trang Bui &middot; Powered by Academic theme designed for Hugo .",
+          "retrievedAt": "2026-09-07T18:41:47.417Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:46:20.845Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0747": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.york.ac.uk/economics/people/tho-pham/",
         "https://www.thopham.com/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0747-1",
+          "url": "https://www.york.ac.uk/economics/people/tho-pham/",
+          "excerpt": "ent Search Department of Economics and Related Studies University | A to Z | Departments Department of Economics and Related Studies People Pham, Tho Study People Research Events About us Contact us Current staff and students Dr Tho Pham Senior Lecturer Full research profile --> Visit Dr Tho Pham's profile on the York Research Database to: See a full list of publications Browse activities and projects Explore connections, collaborators, related work and more Profile Biography Tho Pham (MSc Coventry, PhD Swansea) is a Senior Lecturer in Finance at the Department of Economics and Related Studies.",
+          "retrievedAt": "2026-09-07T18:41:48.181Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0747-2",
+          "url": "https://www.york.ac.uk/economics/people/tho-pham/",
+          "excerpt": "Her main research interests are the intersection between applied economics and data science with a special interest in gender economics and financial economics.",
+          "retrievedAt": "2026-09-07T18:41:48.181Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0747-3",
+          "url": "https://www.york.ac.uk/economics/people/tho-pham/",
+          "excerpt": "Her work has been published in leading peer reviewed international journals, including American Economic Review, Journal of Comparative Economics, European Economic Review and Journal of Corporate Finance among others.",
+          "retrievedAt": "2026-09-07T18:41:48.181Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0747-4",
+          "url": "https://www.york.ac.uk/economics/people/tho-pham/",
+          "excerpt": "Research Overview While I view myself as an applied microeconomist, I have worked on a broad array of topics which overlap with financial economics, development and gender economics.",
+          "retrievedAt": "2026-09-07T18:41:48.181Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0747-5",
+          "url": "https://www.york.ac.uk/economics/people/tho-pham/",
+          "excerpt": "In most of my work, I combine rigorous statistical analyses and advanced machine learning techniques with new data sources including social media data and web-scraped data.",
+          "retrievedAt": "2026-09-07T18:41:48.181Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0747-6",
+          "url": "https://www.york.ac.uk/economics/people/tho-pham/",
+          "excerpt": "Projects \"Blue is for Girls, Pink is for Boys: Measuring Gender-Stereotyping in Children's Literature and Folktales\", British Academy/Leverhulme Small Research Grants, January 2023 - April 2024 Publications Full publications list The Voice of Monetary Policy.",
+          "retrievedAt": "2026-09-07T18:41:48.181Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0747-7",
+          "url": "https://www.york.ac.uk/economics/people/tho-pham/",
+          "excerpt": "Accepted in American Economic Review Wage and Unemployment: Evidence from Online Job Vacancy Data.",
+          "retrievedAt": "2026-09-07T18:41:48.181Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0747-8",
+          "url": "https://www.york.ac.uk/economics/people/tho-pham/",
+          "excerpt": "102449 Social media, sentiment and public opinions: Evidence from #Brexit and #USElection.",
+          "retrievedAt": "2026-09-07T18:41:48.181Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0747-9",
+          "url": "https://www.thopham.com/",
+          "excerpt": "--> Home | Tho Pham top of page Home Research Media Coverage More Use tab to navigate through the menu items.",
+          "retrievedAt": "2026-09-07T18:41:48.550Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0747-10",
+          "url": "https://www.thopham.com/",
+          "excerpt": "Tho Pham I am a Senior Lecturer at the Department of Economics and Related Studies - University of York.",
+          "retrievedAt": "2026-09-07T18:41:48.550Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0747-11",
+          "url": "https://www.thopham.com/",
+          "excerpt": "My research interests include applied economics with a special interest in gender economics and financial economics, and data science.",
+          "retrievedAt": "2026-09-07T18:41:48.550Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:46:20.845Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0748": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://warwick.ac.uk/fac/sci/dcs/people/long_tran-thanh/",
         "https://human-agentlearning.github.io/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0748-1",
+          "url": "https://warwick.ac.uk/fac/sci/dcs/people/long_tran-thanh/",
+          "excerpt": "n-Thanh Research Students News Events AI/ML Seminar Computer Science Colloquium TIA Centre Seminars Alumni Outreach Levelling Up: Computer Science Menu of Activities News Upcoming Events Past Events Projects Staff Resources (Restricted permissions) Report (Restricted permissions) Admin (Restricted permissions) Welfare Athena SWAN Budget Banquet (Restricted permissions) Dignity at Warwick Equality, Diversity and Inclusion News Period Poverty Support for Parents Wudu Facilities Vacancies Intranet (Restricted permissions) People Long Tran-Thanh online lectures Long Tran-Thanh Professor Room : CS3.",
+          "retrievedAt": "2026-09-07T18:41:49.108Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0748-2",
+          "url": "https://warwick.ac.uk/fac/sci/dcs/people/long_tran-thanh/",
+          "excerpt": "17 Email : &#x6c;&#111;&#110;&#x67;&#32;&#x64;&#x6f;&#116;&#32;&#x74;&#x72;&#97;&#x6e;&#45;&#x74;&#x68;&#97;&#x6e;&#x68;&#x20;&#97;&#116;&#32;&#119;&#x61;&#x72;&#119;&#105;&#x63;&#107;&#x20;&#100;&#x6f;&#116;&#32;&#97;&#99;&#x20;&#x64;&#x6f;&#x74;&#32;&#x75;&#107; Office hours (2026/27 Term 1): Please contact me to set up a meeting.",
+          "retrievedAt": "2026-09-07T18:41:49.108Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0748-3",
+          "url": "https://warwick.ac.uk/fac/sci/dcs/people/long_tran-thanh/",
+          "excerpt": "Short bio : I am a Full Professor at the Department of Computer Science, University of Warwick.",
+          "retrievedAt": "2026-09-07T18:41:49.108Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0748-4",
+          "url": "https://warwick.ac.uk/fac/sci/dcs/people/long_tran-thanh/",
+          "excerpt": "I did my PhD in AI at the University of Southampton under the supervision of Nick Jennings Link opens in a new window and Alex Rogers Link opens in a new window .",
+          "retrievedAt": "2026-09-07T18:41:49.108Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0748-5",
+          "url": "https://warwick.ac.uk/fac/sci/dcs/people/long_tran-thanh/",
+          "excerpt": "Before that I did my studies at the Faculty of Electrical Engineering and Informatics Link opens in a new window , Budapest University of Technology and Economics.",
+          "retrievedAt": "2026-09-07T18:41:49.108Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0748-6",
+          "url": "https://warwick.ac.uk/fac/sci/dcs/people/long_tran-thanh/",
+          "excerpt": "Online lectures : (incomplete) list of my online lectures/mini-courses (on selected topics related to my research, including reinforcement learning, multi-agent systems, game theory etc) can be found here.",
+          "retrievedAt": "2026-09-07T18:41:49.108Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0748-7",
+          "url": "https://warwick.ac.uk/fac/sci/dcs/people/long_tran-thanh/",
+          "excerpt": "Link opens in a new window Research interests : My main research area is Artificial Intelligence.",
+          "retrievedAt": "2026-09-07T18:41:49.108Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0748-8",
+          "url": "https://warwick.ac.uk/fac/sci/dcs/people/long_tran-thanh/",
+          "excerpt": "I am interested in developing mathematical foundations for large systems of autonomous and complex agents (either AI or human users) that have to: (i) collaborate with each other to deal with complex real-world problems; or (ii) strategically act against each other in order to achieve their own goals.",
+          "retrievedAt": "2026-09-07T18:41:49.108Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0748-9",
+          "url": "https://human-agentlearning.github.io/",
+          "excerpt": "uk Home Research HAL lab Publications Teaching Misc Contact Information Department of Computer Science, University of Warwick, UK CV4 7AL --> Research Human-Agent Learning (HAL) lab Personal Info Awards Media Academic CV Latest News and Announcements *************************************************************************************************************** I am the Local Co-Chair of AAMAS 2021 in London, a top-tier international conference in AI (autonomous agents & multiagent systems) - Call for Paper .",
+          "retrievedAt": "2026-09-07T18:41:49.256Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0748-10",
+          "url": "https://human-agentlearning.github.io/",
+          "excerpt": "*************************************************************************************************************** Sept 2020: 2 accepted papers at NeurIPS 2020 Links to manuscripts available soon!",
+          "retrievedAt": "2026-09-07T18:41:49.256Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0748-11",
+          "url": "https://human-agentlearning.github.io/",
+          "excerpt": "June 2020: Edoardo Manino has successfully passed his PhD viva with no corrections !",
+          "retrievedAt": "2026-09-07T18:41:49.256Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0748-12",
+          "url": "https://human-agentlearning.github.io/",
+          "excerpt": "March 2020: Nhat Truong has successfully passed his PhD viva with minor corrections !",
+          "retrievedAt": "2026-09-07T18:41:49.256Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0748-13",
+          "url": "https://human-agentlearning.github.io/",
+          "excerpt": "Oct 2019: 2 journal papers accepted for publication: one in Artificial Intelligence (with Edoardo Manino and Nick Jennings ), and one in Nature's Scientific Reports (with The Anh Han ).",
+          "retrievedAt": "2026-09-07T18:41:49.256Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0748-14",
+          "url": "https://human-agentlearning.github.io/",
+          "excerpt": "Aug 2019: Son Tran and I will be Local Co-Chairs for KR 2021 (18th International Conference on Principles of Knowledge Representation and Reasoning) , a flagship international conference on knowledge representation (will be held in Hanoi, Vietnam ).",
+          "retrievedAt": "2026-09-07T18:41:49.256Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0748-15",
+          "url": "https://human-agentlearning.github.io/",
+          "excerpt": "Aug 2019: I gave a talk on “Budgeted Decision Making Problems in Human-Aware AI Systems” at the IJCAI-19 Early Career Spotlight Track .",
+          "retrievedAt": "2026-09-07T18:41:49.256Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0748-16",
+          "url": "https://human-agentlearning.github.io/",
+          "excerpt": "Older news About Me I am currently an Associate Professor at the Department of Computer Science , University of Warwick , UK.",
+          "retrievedAt": "2026-09-07T18:41:49.256Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:46:20.845Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0749": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.loyola.edu/academics/computer-science/faculty/directory-faculty/Ho-Nguyen.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0749-1",
+          "url": "https://www.loyola.edu/academics/computer-science/faculty/directory-faculty/Ho-Nguyen.html",
+          "excerpt": "dent Services Life After Loyola Expand Life After Loyola Career Preparation Outcomes of a Loyola Education Visit Request Info Apply Greyhounds Athletics Contact the University Directions and Parking Calendars Make a Gift Work at Loyola Current Students Faculty and Staff Alumni Parents Search Search Go Common Search Terms Calendars Undergraduate Tuition Bookstore Study Abroad Jobs at Loyola Tools & Resources A-Z Index Filter A-Z index Explore Greyhound Nation All News All Events Loyola Today Stories Department of Computer Science Site Navigation Degrees and Curriculum Major/Minor Requirements B.",
+          "retrievedAt": "2026-09-07T18:41:49.481Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0749-2",
+          "url": "https://www.loyola.edu/academics/computer-science/faculty/directory-faculty/Ho-Nguyen.html",
+          "excerpt": "Degree Requirements Interdisciplinary Requirements CS Minor Requirements Learning Aims and Objectives First and Second Year Courses Study Abroad CS Electives Courses for Non-Majors Faculty Staff Prospective Students Why Computer Science?",
+          "retrievedAt": "2026-09-07T18:41:49.481Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0749-3",
+          "url": "https://www.loyola.edu/academics/computer-science/faculty/directory-faculty/Ho-Nguyen.html",
+          "excerpt": "Opportunities at Loyola A Future in Computing Frequently Asked Questions Current Students What Courses to Take Scholarships Tutoring Schedule Honor Code Student Groups Facilities Senior Projects Senior Projects 2026 Jobs and Internships Career Resources Research Undergraduate Research Computing Cluster Contact Nguyen Ho, Ph.",
+          "retrievedAt": "2026-09-07T18:41:49.481Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0749-4",
+          "url": "https://www.loyola.edu/academics/computer-science/faculty/directory-faculty/Ho-Nguyen.html",
+          "excerpt": "edu 410-617-5866 Home Faculty Nguyen Ho Instagram Facebook Twitter LinkedIn Areas of interest: Big Data Analytics, Machine Learning Education: Ph.",
+          "retrievedAt": "2026-09-07T18:41:49.481Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0749-5",
+          "url": "https://www.loyola.edu/academics/computer-science/faculty/directory-faculty/Ho-Nguyen.html",
+          "excerpt": ": Information Technology and Computer Engineering, Politecnico di Milano, Italy M.",
+          "retrievedAt": "2026-09-07T18:41:49.481Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0749-6",
+          "url": "https://www.loyola.edu/academics/computer-science/faculty/directory-faculty/Ho-Nguyen.html",
+          "excerpt": ": Computer Science, Ho Chi Minh University of Technology, Vietnam Courses Taught: CS 312: Object-Oriented Software Design Publications: H.",
+          "retrievedAt": "2026-09-07T18:41:49.481Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0749-7",
+          "url": "https://www.loyola.edu/academics/computer-science/faculty/directory-faculty/Ho-Nguyen.html",
+          "excerpt": "“Exploring ChatGPT’s ability to solve programming problems with complex context”.",
+          "retrievedAt": "2026-09-07T18:41:49.481Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0749-8",
+          "url": "https://www.loyola.edu/academics/computer-science/faculty/directory-faculty/Ho-Nguyen.html",
+          "excerpt": "\"FDA-HeatFlex: Scalable Privacy-Preserving Temperature and Flexibility Prediction for Heat Pumps using Federated Domain Adaptation\".",
+          "retrievedAt": "2026-09-07T18:41:49.481Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:46:20.845Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0750": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.loyola.edu/academics/visual-performing-arts/about/faculty-staff/nguyen-nguyen.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0750-1",
+          "url": "https://www.loyola.edu/academics/visual-performing-arts/about/faculty-staff/nguyen-nguyen.html",
+          "excerpt": "ion About Faculty & Staff News & Events Arts in Baltimore & Beyond Contact Art History Degree Information Learning Aims Course Listings Photography Degree Information Learning Aims Course Listings Studio Arts Degree Information Learning Aims Course Listings Music Degree Information Learning Aims Course Listings Ensembles & Applied Lessons Concerts & Performances Theatre Degree Information Learning Aims Course Listings Productions Arts Management Degree Information Learning Aims Julio Fine Arts Gallery Nguyên Khôi Nguyễn (he/him/his) Assistant Teaching Professor of Digital Media nknguyen@loyola.",
+          "retrievedAt": "2026-09-07T18:41:49.571Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0750-2",
+          "url": "https://www.loyola.edu/academics/visual-performing-arts/about/faculty-staff/nguyen-nguyen.html",
+          "excerpt": "edu College Center M012B Home About Faculty & Staff Nguyên Khôi Nguyễn Instagram Facebook Biography Professor Nguyên Khôi Nguyễn is an interdisciplinary artist and educator.",
+          "retrievedAt": "2026-09-07T18:41:49.571Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0750-3",
+          "url": "https://www.loyola.edu/academics/visual-performing-arts/about/faculty-staff/nguyen-nguyen.html",
+          "excerpt": "Professor Nguyễn is the vocalist/pianist of the jazz trio, Superior Cling, and creator of Mom’s Viet Kitchen, a cooking website that shares family recipes and the stories behind them.",
+          "retrievedAt": "2026-09-07T18:41:49.571Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0750-4",
+          "url": "https://www.loyola.edu/academics/visual-performing-arts/about/faculty-staff/nguyen-nguyen.html",
+          "excerpt": "The Baker Prize, a Rubys Artist Grant, and an Independent Artist Award are among Professor Nguyễn’s accolades.",
+          "retrievedAt": "2026-09-07T18:41:49.571Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0750-5",
+          "url": "https://www.loyola.edu/academics/visual-performing-arts/about/faculty-staff/nguyen-nguyen.html",
+          "excerpt": "Previously, Professor Nguyễn served as the senior video producer/editor at Science Magazine.",
+          "retrievedAt": "2026-09-07T18:41:49.571Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0750-6",
+          "url": "https://www.loyola.edu/academics/visual-performing-arts/about/faculty-staff/nguyen-nguyen.html",
+          "excerpt": "As a digital media professor at Loyola University Maryland, he teaches video, graphics, animation, comics, and more.",
+          "retrievedAt": "2026-09-07T18:41:49.571Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0750-7",
+          "url": "https://www.loyola.edu/academics/visual-performing-arts/about/faculty-staff/nguyen-nguyen.html",
+          "excerpt": ", Bard College Teaching Areas Video Animation and motion graphics Multimedia storytelling Graphics Connect Website: ngknguyen.",
+          "retrievedAt": "2026-09-07T18:41:49.571Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0750-8",
+          "url": "https://www.loyola.edu/academics/visual-performing-arts/about/faculty-staff/nguyen-nguyen.html",
+          "excerpt": "Join our mailing list to learn more about Loyola Request information Connect with an admission counselor Loyola on Facebook Loyola on Instagram Loyola on YouTube Loyola on LinkedIn Loyola Homepage 4501 N.",
+          "retrievedAt": "2026-09-07T18:41:49.571Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:46:20.845Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0751": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://researchportal.bath.ac.uk/en/persons/thieu-vo/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0751-1",
+          "url": "https://researchportal.bath.ac.uk/en/persons/thieu-vo/",
+          "excerpt": "Thieu Vo - the University of Bath&#39;s research portal Skip to main navigation Skip to search Skip to main content the University of Bath's research portal Home Help & FAQ Link opens in a new tab Search content at the University of Bath&#39;s research portal Home Profiles Research output Projects Datasets Student theses Equipment Research units Activities Prizes Press/Media View Scopus Profile Thieu Vo Dr Lecturer , Department of Computer Science Centre for Artificial Intelligence https://orcid.",
+          "retrievedAt": "2026-09-07T18:41:50.340Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0751-2",
+          "url": "https://researchportal.bath.ac.uk/en/persons/thieu-vo/",
+          "excerpt": "ac uk Accepting Doctoral Students Overview Fingerprint Network Research output (42) Similar Profiles (1) Personal profile Fingerprint Dive into the research topics where Thieu Vo is active.",
+          "retrievedAt": "2026-09-07T18:41:50.340Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0751-3",
+          "url": "https://researchportal.bath.ac.uk/en/persons/thieu-vo/",
+          "excerpt": "1 Similar Profiles Wavelet Mathematics 100% Fractional Order Mathematics 63% Ordinary Differential Equation Mathematics 52% Point Cloud Computer Science 43% Polynomial Mathematics 36% Mathematical Method Mathematics 36% Power Series Mathematics 34% Rational Solution Mathematics 32% View full fingerprint Collaborations and top research areas from the last five years Recent external collaboration on country/territory level.",
+          "retrievedAt": "2026-09-07T18:41:50.340Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0751-4",
+          "url": "https://researchportal.bath.ac.uk/en/persons/thieu-vo/",
+          "excerpt": "Dive into details by clicking on the dots or Select a country/territory from the list Dive into details Select a country/territory to view shared publications and projects Close Select a country/territory from the list Explore network further Research output 31 Article 10 Chapter in a published conference proceeding 1 Conference article Research output per year Research output per year A new family of AMDS symbol-pair constacyclic codes of length 4p and symbol-pair distance 9 Dinh, H.",
+          "retrievedAt": "2026-09-07T18:41:50.340Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0751-5",
+          "url": "https://researchportal.bath.ac.uk/en/persons/thieu-vo/",
+          "excerpt": "Research output : Contribution to journal › Article › peer-review Constacyclic Code 100% Generator Polynomial 100% Prime Number 50% Finite Field 50% Cyclic Code 50% 3 Link opens in a new tab Citations (SciVal) Noether's normalization in skew polynomial rings Paran, E.",
+          "retrievedAt": "2026-09-07T18:41:50.340Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0751-6",
+          "url": "https://researchportal.bath.ac.uk/en/persons/thieu-vo/",
+          "excerpt": "Research output : Contribution to journal › Article › peer-review Open Access Polynomial 100% Skew Polynomial Ring 100% Sufficient Condition 66% Division Algebra 66% Automorphism 33% N-prime elements and the primality of x − α in D⟦x⟧ Giau, L.",
+          "retrievedAt": "2026-09-07T18:41:50.340Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0751-7",
+          "url": "https://researchportal.bath.ac.uk/en/persons/thieu-vo/",
+          "excerpt": "Research output : Contribution to journal › Article › peer-review Prime Element 100% Integral Domain 50% Dedekind Domain 25% Power Series 12% Necessary and Sufficient Condition 12% Testing isomorphism of complex Lie algebras Nguyen, T.",
+          "retrievedAt": "2026-09-07T18:41:50.340Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0751-8",
+          "url": "https://researchportal.bath.ac.uk/en/persons/thieu-vo/",
+          "excerpt": "Research output : Contribution to journal › Article › peer-review Complex Lie Algebra 100% Complex Number 50% Triangular Decomposition 50% Lie Algebra 50% Nullstellensatz 50% An efficient wavelet method for the time-fractional Black–Scholes equations Yuttanan, B.",
+          "retrievedAt": "2026-09-07T18:41:50.340Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:46:20.845Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0752": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://tamle-ml.github.io/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0752-1",
+          "url": "https://tamle-ml.github.io/",
+          "excerpt": "2016] Tam Le Assistant Professor Department of Advanced Data Science Institute of Statistical Mathematics (ISM) Email: tam[ at ]ism.",
+          "retrievedAt": "2026-09-07T18:41:50.551Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0752-2",
+          "url": "https://tamle-ml.github.io/",
+          "excerpt": "jp Google Scholar - LinkedIn - GitHub - Research Map Research Interests: machine learning, optimal transport, geometric methods, kernels In 2026, I have been awarded a JST-BOOST Grant (FY2025).",
+          "retrievedAt": "2026-09-07T18:41:50.551Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0752-3",
+          "url": "https://tamle-ml.github.io/",
+          "excerpt": "Recent News 31-Aug-2026, I give an invited talk at Mathematical Foundations & Methodologies for Artificial Intelligence and Data-Driven Scientific Computing program &ndash; Workshop on Mathematical Approaches to Modern AI Challenges , IMS, NUS, Singapore.",
+          "retrievedAt": "2026-09-07T18:41:50.551Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0752-4",
+          "url": "https://tamle-ml.github.io/",
+          "excerpt": "27-Jan-2026, Our 2 papers have been accepted to ICLR&rsquo;26 , joint works with Viet-Hoang Tran, Thanh Q.",
+          "retrievedAt": "2026-09-07T18:41:50.551Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0752-5",
+          "url": "https://tamle-ml.github.io/",
+          "excerpt": "Revisiting Tree-Sliced Wasserstein Distance Through the Lens of the Fermat–Weber Problem .",
+          "retrievedAt": "2026-09-07T18:41:50.551Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0752-6",
+          "url": "https://tamle-ml.github.io/",
+          "excerpt": "[¥50M (~$315K) for 2026&ndash;2031] 20-Nov-2025, I will serve as Area Chair for ICML&rsquo;26 .",
+          "retrievedAt": "2026-09-07T18:41:50.551Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0752-7",
+          "url": "https://tamle-ml.github.io/",
+          "excerpt": "22-Oct-2025, Our paper, entitled &ldquo;Tree Structure for the Categorical Wasserstein Weisfeiler-Lehman Graph Kernel&rdquo; has been accepted to TMLR journal!",
+          "retrievedAt": "2026-09-07T18:41:50.551Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0752-8",
+          "url": "https://tamle-ml.github.io/",
+          "excerpt": "An Efficient Orlicz-Sobolev Approach for Transporting Unbalanced Measures on a Graph [ spotlight ], joint work with Truyen Nguyen, Hideitsu Hino, and Kenji Fukumizu.",
+          "retrievedAt": "2026-09-07T18:41:50.551Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:46:20.845Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0753": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://cci.charlotte.edu/people/hieu-m-le/",
         "https://hieulem.github.io/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0753-1",
+          "url": "https://cci.charlotte.edu/people/hieu-m-le/",
+          "excerpt": "Le - College of Computing and Informatics Skip to main content Visit the University of North Carolina at Charlotte homepage Explore Visit the University of North Carolina at Charlotte homepage Close What can we help you find?",
+          "retrievedAt": "2026-09-07T18:41:51.189Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0753-2",
+          "url": "https://cci.charlotte.edu/people/hieu-m-le/",
+          "excerpt": "an Incident Resources Prospective Students Alumni & Friends Faculty & Staff Current Students Parents & Family Colleges Arts + Architecture Business Computing and Informatics Education Engineering Graduate School Health and Human Services Honors College Humanities & Earth and Social Sciences Science College of Computing and Informatics Go to Search Page Search this site Search Main Menu Toggle About Us Vision and Mission Program Assessment Job Opportunities CCI Alumni Network Giving Resources & Polices for CCI Faculty Directory Office of the Dean Dean’s Advisory Board Faculty Staff Post Docs Ph.",
+          "retrievedAt": "2026-09-07T18:41:51.189Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0753-3",
+          "url": "https://cci.charlotte.edu/people/hieu-m-le/",
+          "excerpt": "reas NEW Funding Opportunities Faculty Areas of Expertise Labs CCI Innovation Fund CCI Research Seminars Undergraduate Research Research FAQ Resources to Success for Current Students CCI Student Center- Woodward Hall CCI Undergraduate Advising CCI Undergraduate Tutoring Center CCI Student Professional Development Campus Resources Student Life Prospective Students CCI Live Admitted Student Info Sessions Student Experience CCI Learning Community CCI Student Clubs & Organizations CCI Dean’s Ambassador Program Community Engagement K-12 Outreach Lowe’s Technology Days Benefits of Partnership Hieu M.",
+          "retrievedAt": "2026-09-07T18:41:51.189Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0753-4",
+          "url": "https://cci.charlotte.edu/people/hieu-m-le/",
+          "excerpt": "Le Assistant Professor Computer Science Visit the University of North Carolina at Charlotte homepage Address 9201 University City Blvd Charlotte, NC 28223 Phone 704-687-8622 Find us on Facebook Find us on Instagram Find us on LinkedIn Find us on X Find us on YouTube Resources Alumni Association Maps & Directions Parking & Transportation My UNC Charlotte Directory Library Give Partnerships Careers Contact Us Terms of Use University Policies Health & Safety Alerts Report an Incident Emergency Response Health and Safety © 2026 UNC Charlotte.",
+          "retrievedAt": "2026-09-07T18:41:51.189Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0753-5",
+          "url": "https://hieulem.github.io/",
+          "excerpt": "Hieu Le Home Publications Students Hiring Research Hieu Le (Hiếu Lê) Assistant Professor, University of North Carolina at Charlotte Charlotte Computer Vision Lab I work on controllable and reliable machine vision: models that follow constraints, explain their reasoning, and produce calibrated uncertainty.",
+          "retrievedAt": "2026-09-07T18:41:51.359Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0753-6",
+          "url": "https://hieulem.github.io/",
+          "excerpt": "Email Google Scholar CV Research Publications Charlotte Computer Vision Lab News [2026] PrIntMesh has been accepted to TMLR 2026 .",
+          "retrievedAt": "2026-09-07T18:41:51.359Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0753-7",
+          "url": "https://hieulem.github.io/",
+          "excerpt": "[2026] Three papers have been accepted to CVPR 2026 : Personalized Image Descriptions, MS-Temba, and InstAlign (Workshop) [2026] Weighted Data Attribution has been accepted to ICLR 2026 .",
+          "retrievedAt": "2026-09-07T18:41:51.359Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0753-8",
+          "url": "https://hieulem.github.io/",
+          "excerpt": "[2025] Two papers have been accepted to ICCV 2025 , both are selected for Oral presentation (64 out of 11,239 submissions).",
+          "retrievedAt": "2026-09-07T18:41:51.359Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0753-9",
+          "url": "https://hieulem.github.io/",
+          "excerpt": "[2025] A paper on identifying reliable seeds for diffusion models has been accepted to ICLR25.",
+          "retrievedAt": "2026-09-07T18:41:51.359Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0753-10",
+          "url": "https://hieulem.github.io/",
+          "excerpt": "[2024] Two papers accepted to WACV 2025 : Material-Consistent Shadow Edges , and Multi-Class Object Counting .",
+          "retrievedAt": "2026-09-07T18:41:51.359Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0753-11",
+          "url": "https://hieulem.github.io/",
+          "excerpt": "[2024] Four papers accepted to ECCV 2024 : Latent Density Score , Neural Surface Localization , Pseudo-Pixel Weighting , and Beyond Pixels .",
+          "retrievedAt": "2026-09-07T18:41:51.359Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0753-12",
+          "url": "https://hieulem.github.io/",
+          "excerpt": "Zigzag is a universal uncertainty estimation method that requires only two inference passes.",
+          "retrievedAt": "2026-09-07T18:41:51.359Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:46:20.845Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0754": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://ed.unc.edu/people/ha-nguyen/",
         "https://ha-nguyen.net"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0754-1",
+          "url": "https://ed.unc.edu/people/ha-nguyen/",
+          "excerpt": "Ha Nguyen - UNC School of Education Skip to main content School of Education Apply Request Info Give Info for.",
+          "retrievedAt": "2026-09-07T18:41:52.429Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0754-2",
+          "url": "https://ed.unc.edu/people/ha-nguyen/",
+          "excerpt": "Current Students Collaborators Alumni Faculty & Staff Search Search Go Menu Academics Admissions Research People About Academics Admissions Research People About Apply Request Info Give Current Students Collaborators Alumni Faculty & Staff Search (from mobile menu) Go Home People Ha Nguyen, Ph.",
+          "retrievedAt": "2026-09-07T18:41:52.429Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0754-3",
+          "url": "https://ed.unc.edu/people/ha-nguyen/",
+          "excerpt": "Assistant Professor Learning Sciences and Psychological Studies (LSPS) Educational Innovation, Technology, and Entrepreneurship (MEITE) Contact Information Education Ph.",
+          "retrievedAt": "2026-09-07T18:41:52.429Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0754-4",
+          "url": "https://ed.unc.edu/people/ha-nguyen/",
+          "excerpt": "2022 &#8211; University of California-Irvine, Education (Focus: STEM Teaching and Learning) M.",
+          "retrievedAt": "2026-09-07T18:41:52.429Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0754-5",
+          "url": "https://ed.unc.edu/people/ha-nguyen/",
+          "excerpt": "2020 &#8211; University of California-Irvine, Education (Focus: STEM Teaching and Learning) B.",
+          "retrievedAt": "2026-09-07T18:41:52.429Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0754-6",
+          "url": "https://ed.unc.edu/people/ha-nguyen/",
+          "excerpt": "2018 &#8211; Duke University, Public Policy & Education Areas of Expertise Learning Analytics AI in Education STEM Education Background Ha Nguyen, Ph.",
+          "retrievedAt": "2026-09-07T18:41:52.429Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0754-7",
+          "url": "https://ed.unc.edu/people/ha-nguyen/",
+          "excerpt": ", designs and researches learning technologies to promote deeper STEM knowledge and competencies for diverse learners.",
+          "retrievedAt": "2026-09-07T18:41:52.429Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0754-8",
+          "url": "https://ed.unc.edu/people/ha-nguyen/",
+          "excerpt": "Her interest in Education started in high school through volunteering with education nonprofits in Vietnam.",
+          "retrievedAt": "2026-09-07T18:41:52.429Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0754-9",
+          "url": "https://ha-nguyen.net",
+          "excerpt": "Ha Nguyen Ha Nguyen About Publications Projects Teaching Ha Nguyen, PhD Assistant Professor, School of Education, University of North Carolina at Chapel Hill Curriculum Vitae I design and research technologies to promote deeper STEM knowledge, competency, and skills for diverse learners.",
+          "retrievedAt": "2026-09-07T18:41:52.638Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0754-10",
+          "url": "https://ha-nguyen.net",
+          "excerpt": "From a Design perspective, I partner with students, teachers, and informal educators to ground the design of technologies (e.",
+          "retrievedAt": "2026-09-07T18:41:52.638Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0754-11",
+          "url": "https://ha-nguyen.net",
+          "excerpt": "I further apply learning analytics methods to investigate how people construct knowledge in informal and formal learning environments, in collaboration with others and with AI technologies.",
+          "retrievedAt": "2026-09-07T18:41:52.638Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0754-12",
+          "url": "https://ha-nguyen.net",
+          "excerpt": "This Analytics strand generates insights to inform technology design, to support human-human and human-AI exchanges towards productive learning .",
+          "retrievedAt": "2026-09-07T18:41:52.638Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0754-13",
+          "url": "https://ha-nguyen.net",
+          "excerpt": "My research has been supported by the National Science Foundation, Spencer Foundation, and several internal grants, including a Faculty AI Research Fellowship at UNC.",
+          "retrievedAt": "2026-09-07T18:41:52.638Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0754-14",
+          "url": "https://ha-nguyen.net",
+          "excerpt": "I have published in leading journals in learning analytics and science education, including Computers & Education, British Journal of Education Technology, Journal of Research in Science Teaching , and Journal of Learning Analytics .",
+          "retrievedAt": "2026-09-07T18:41:52.638Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0754-15",
+          "url": "https://ha-nguyen.net",
+          "excerpt": "Before UNC, I was an Assistant Professor in Instructional Technology & Learning Sciences at Utah State University.",
+          "retrievedAt": "2026-09-07T18:41:52.638Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0754-16",
+          "url": "https://ha-nguyen.net",
+          "excerpt": "I received a PhD in Education from University of California-Irvine, where I was mentored by Drs.",
+          "retrievedAt": "2026-09-07T18:41:52.638Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:46:20.845Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0755": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://scholar.nycu.edu.tw/en/persons/cao-minh-tu/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://scholar.nycu.edu.tw/en/persons/cao-minh-tu/: fetch failed"
+      ],
+      "updatedAt": "2026-09-07T18:46:20.845Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-0756": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://ce-r.ntust.edu.tw/p/404-1024-65379.php?Lang=en",
         "https://vdthangbk.com/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0756-1",
+          "url": "https://ce-r.ntust.edu.tw/p/404-1024-65379.php?Lang=en",
+          "excerpt": "ering Program International English taught Program People and Research College of Engineering Department of Mechanical Engineering Department of Materials Science and Engineering Department of Civil and Construction Engineering Department of Chemical Engineering Graduate Institute of Automation & Control Global Development Engineering Program News News Events Honors Outstanding Youths International Activities Conference Events and Competitions CE Subsidy Applications Home Faculty College of Engineering Assistant Professor Duc-Thang Vo Name： Duc-Thang Vo Position： Assistant Professor Degree： Ph.",
+          "retrievedAt": "2026-09-07T18:42:04.113Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0756-2",
+          "url": "https://ce-r.ntust.edu.tw/p/404-1024-65379.php?Lang=en",
+          "excerpt": ", Chemical Engineering , National Taiwan University of Science and Technology (NTUST) E-mail： dtvo@mail.",
+          "retrievedAt": "2026-09-07T18:42:04.113Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0756-3",
+          "url": "https://ce-r.ntust.edu.tw/p/404-1024-65379.php?Lang=en",
+          "excerpt": "com Office： IA-913 Tel： 02-2737-6350 Office Hour： Thursday 15:30 - 17:20 Course： Chemistry, Chemistry Lab, Physical Chemsitry, Organic Chemistry, Unit Operation and Transport Phenomena Research Interests： Preparation of Biomaterials from Chitosan, Dopamine, Antimicrobial and Environmental Applications.",
+          "retrievedAt": "2026-09-07T18:42:04.113Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0756-4",
+          "url": "https://ce-r.ntust.edu.tw/p/404-1024-65379.php?Lang=en",
+          "excerpt": "Chemical Engineering Ho Chi Minh University of Technology - Vietnam National University B.",
+          "retrievedAt": "2026-09-07T18:42:04.113Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0756-5",
+          "url": "https://ce-r.ntust.edu.tw/p/404-1024-65379.php?Lang=en",
+          "excerpt": "Chemical Engineering Ho Chi Minh University of Technology - Vietnam National University Work Experience Position Start End Department Project Assistant Professor 2018/02 ~ Present College of Engineering, NTUST Click Num: Print Share 繁體 English ::: Contact TEL:+886 2 2737-6545 FAX:+886 2 2737-6429 ADD: (T1-201) #43, Sec.",
+          "retrievedAt": "2026-09-07T18:42:04.113Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0756-6",
+          "url": "https://ce-r.ntust.edu.tw/p/404-1024-65379.php?Lang=en",
+          "excerpt": ", Taipei, 10607, Taiwan Quick Links Admission Course Catalog Campus Map Click for large version.",
+          "retrievedAt": "2026-09-07T18:42:04.113Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0756-7",
+          "url": "https://vdthangbk.com/",
+          "excerpt": "Search this site Embedded Files Skip to main content Skip to navigation Duc-Thang Vo, Ph.",
+          "retrievedAt": "2026-09-07T18:42:04.524Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0756-8",
+          "url": "https://vdthangbk.com/",
+          "excerpt": "Home Introduction Courses Publications Study in Taiwan Contact Duc-Thang Vo, Ph.",
+          "retrievedAt": "2026-09-07T18:42:04.524Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0756-9",
+          "url": "https://vdthangbk.com/",
+          "excerpt": "Home Introduction Courses Publications Study in Taiwan Contact More Home Introduction Courses Publications Study in Taiwan Contact Welcome to my page!",
+          "retrievedAt": "2026-09-07T18:42:04.524Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0756-10",
+          "url": "https://vdthangbk.com/",
+          "excerpt": "News December 22, 2025 Opening Ceremony of the INTENSE Program Office at Khon Kaen, Thailand December 19 , 2025 Taiwan INTENSE Program Session at Da Nang Uni.",
+          "retrievedAt": "2026-09-07T18:42:04.524Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0756-11",
+          "url": "https://vdthangbk.com/",
+          "excerpt": "of Science and Technology December 26 , 2025 Midterm Review Conference on Strategy 1018 and Program 1017 for Semiconductor Human Resource Development, organized by the Vietnam Ministry of Education and Training (MOET).",
+          "retrievedAt": "2026-09-07T18:42:04.524Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0756-12",
+          "url": "https://vdthangbk.com/",
+          "excerpt": "December 22, 2025 Opening Ceremony of the INTENSE Program Office at Khon Kaen, Thailand December 19, 2025 Taiwan INTENSE Program Session at Da Nang Uni.",
+          "retrievedAt": "2026-09-07T18:42:04.524Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0756-13",
+          "url": "https://vdthangbk.com/",
+          "excerpt": "from Ho Chi Minh City University of Technology and Education (HCMUTE) to Taiwan Tech August 15, 2025 Welcome the Delegation from Hanoi University of Science and Technology (HUST) to Taiwan Tech July 26 , 2025 2025 Taiwan Tech Vietnamese Alumni Reunion in Da Nang City July 26 , 2025 Education and Investment Promotion Activity in Da Nang City July 25, 2025 Working Meeting with Da Nang University of Science and Technology (DUT) July 19-21, 2025 The 6th Global Vietnamese Young Scholars Forum, Hanoi Address: National Taiwan University of Science and Technology (NTUST/Taiwan Tech) IA-913, NTUST, No.",
+          "retrievedAt": "2026-09-07T18:42:04.524Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:46:20.845Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0757": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://chem.niu.edu.tw/index.php?Plugin=o_niu&Action=o_niutchdetail&niuid=qtpham"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0757-1",
+          "url": "https://chem.niu.edu.tw/index.php?Plugin=o_niu&Action=o_niutchdetail&niuid=qtpham",
+          "excerpt": "化學工程與材料工程學系 跳到主要內容區 ::: 學校首頁 學院首頁 回首頁 English 網站導覽 在校學生 新生資訊 International students 教職員 Menu Menu 高中生專區 高中生專區-系所介紹 獎學金資訊 入學管道條件及時間 系所簡介 師資陣容 專任師資 兼任師資 退休教師 行政團隊 專業研究 研究領域 教學實驗室 研究實驗室 課程資訊 大學生專區 課程規劃 必選修課程一覽表 教師教室班級課表 系所課表 行政法規 系務相關辦法 大學部相關辦法 碩士班相關辦法 行政表單 其他檔案 系友動態 系友專區 專任教師 職稱 副教授 (Associate Professor) 姓名 范國泰 電子郵件 qtpham@niu.",
+          "retrievedAt": "2026-09-07T18:42:06.708Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0757-2",
+          "url": "https://chem.niu.edu.tw/index.php?Plugin=o_niu&Action=o_niutchdetail&niuid=qtpham",
+          "excerpt": "ment of Chemical Engineering PhD Taiwan 服務機關 服務部門 職稱 起訖年月 National Ilan University Department of Chemical and Materials Engineering Assistant Professor 2022-present National Taiwan University of Science and Technology Graduate Institute of Applied Science and Technology Project-Assistant Professor 2019-2022 National Taiwan University of Science and Technology Department of Chemical Engineering Postdoctoral Fellow 2015-2019 年度 篇名 期刊等級 期刊名稱 第一作者 共同作者 卷期 起始頁 結束頁 總頁數 語言 相關網址 2024 Concerted Effect of Ion- and Electron-Conductive Additives on the Electrochemical and Thermal Performances of the LiNi0.",
+          "retrievedAt": "2026-09-07T18:42:06.708Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0757-3",
+          "url": "https://chem.niu.edu.tw/index.php?Plugin=o_niu&Action=o_niutchdetail&niuid=qtpham",
+          "excerpt": "1O2 Cathode Material Synthesized by a Taylor-Flow Reactor for Lithium-Ion Batteries SCIE ACS Applied Materials & Interfaces Tadesu Hailu Mengesha 16 21034 21049 0 2024 Copolymers comprising poly(ethylene glycol) acrylate soft unit and sulfobetaine methacrylate zwitterionic unit and its application in solid-state lithium metal battery at ambient temperature SCIE Electrochimica Acta Badril Azhar Yi-Shiuan Wu, Chun–Chen Yang, Hung-Ta Wu, Shu-Hsien Huang, Chorng-Shyan Chern 480 143920 0 0 2024 Dual-modified LiNi0.",
+          "retrievedAt": "2026-09-07T18:42:06.708Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0757-4",
+          "url": "https://chem.niu.edu.tw/index.php?Plugin=o_niu&Action=o_niutchdetail&niuid=qtpham",
+          "excerpt": "de with trithiocyanuric acid SCIE Thermochimica Acta Quoc-Thai Pham Hung-Ta Wu, Chien-Chieh Hu, Juin-Yih Lai, Anh Ngoc Tram Mai 730 179619 0 7 2022 Applications of polymers in lithium-ion batteries with enhanced safety and cycle life SCIE Journal of Polymer Research Quoc-Thai Pham 29 1 28 0 2022 Bifunctional coating layer on Ni-rich cathode materials to enhance electrochemical performance and thermal stability in lithium-ion batteries SCIE Composites Part B: Engineering Manojkumar Seenivasan 242 110083 0 0 2022 Coating of a Novel Lithium-Containing Hybrid Oligomer Additive on Nickel-Rich LiNi0.",
+          "retrievedAt": "2026-09-07T18:42:06.708Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0757-5",
+          "url": "https://chem.niu.edu.tw/index.php?Plugin=o_niu&Action=o_niutchdetail&niuid=qtpham",
+          "excerpt": "rolyte of acrylonitrile copolymer with thiocarbonate moiety and its potential battery application SCIE Electrochimica Acta Zhi-Hong Huang 365 137357 0 0 2021 Effect of polystyrene and silica compositions on formation of raspberry-like hollow nanoparticles: synthesis strategy and morphological study SCIE Polymer Bulletin Quoc-Thai Pham 78 6631 6648 0 2021 Kinetics and mechanisms of non-isothermal polymerization of N,N′-bismaleimide-4,4′-diphenylmethane with cyanuric acid SCIE Thermochimica Acta Quoc-Thai Pham 697 178872 0 0 2021 Study of electrochemical performance and thermal property of LiNi0.",
+          "retrievedAt": "2026-09-07T18:42:06.708Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0757-6",
+          "url": "https://chem.niu.edu.tw/index.php?Plugin=o_niu&Action=o_niutchdetail&niuid=qtpham",
+          "excerpt": "ence 2016 Quoc-Thai Pham 2016 Synthesis and characterization of bismaleimide/barbituric acid polymers modified by aminopropyl phenyl siloxane oligomer 2016 Annual Meeting of the polymer society Quoc-Thai Pham 西元年度 計畫名稱 主持人 工作職稱 共同(協同)主持人 委託/補助機構 計畫開始日 計畫結束日 語言 相關網址 2026 高效能固態鋰電池用固態高分子電解質與複合電解質之開發 范國泰 主持人 國家科學及技術委員會 2026/08/01 2027/07/31 2023 具軟鏈段與單離子鏈段的共聚物在固態高分子電解質與固態電池之應用 范國泰 主持人 國家科學及技術委員會 2023/08/01 2024/07/31 ::: 單一窗口意見信箱 隱私權政策暨告知事項聲明 交通資訊 學系地圖 統一編號：02415271 校安值勤專線：(03)936-4006 警衛室：(03)931-7555 校園性別事件通報請洽 : (03)936-4006 系辦地址：260007 宜蘭縣宜蘭市神農路一段一號 電話：+886-3-935-7400 ext 7491 e-mail: chem@niu.",
+          "retrievedAt": "2026-09-07T18:42:06.708Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:46:20.845Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0758": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://scholar.lib.ntnu.edu.tw/en/persons/trong-nghia-le/",
         "https://www.tnlelab.com"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0758-1",
+          "url": "https://scholar.lib.ntnu.edu.tw/en/persons/trong-nghia-le/",
+          "excerpt": "Trong-Nghia Le - National Taiwan Normal University Skip to main navigation Skip to search Skip to main content National Taiwan Normal University Home Help & FAQ Link opens in a new tab English 中文 Search content at National Taiwan Normal University Home Profiles Research units Research output Projects Press/Media Datasets Activities Prizes Student theses View Scopus Profile Trong-Nghia Le Assistant Professor Department of Chemistry https://orcid.",
+          "retrievedAt": "2026-09-07T18:42:07.991Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0758-2",
+          "url": "https://scholar.lib.ntnu.edu.tw/en/persons/trong-nghia-le/",
+          "excerpt": "com Overview Similar Profiles (1) Personal profile Expertise related to UN Sustainable Development Goals In 2015, UN member states agreed to 17 global Sustainable Development Goals (SDGs) to end poverty, protect the planet and ensure prosperity for all.",
+          "retrievedAt": "2026-09-07T18:42:07.991Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0758-3",
+          "url": "https://scholar.lib.ntnu.edu.tw/en/persons/trong-nghia-le/",
+          "excerpt": "This person’s work contributes towards the following SDG(s): SDG 3 Good Health and Well-being Powered by Pure Link opens in a new tab , Scopus Link opens in a new tab & Elsevier Fingerprint Engine&trade; Link opens in a new tab All content on this site: Copyright &copy; 2026 National Taiwan Normal University , its licensors, and contributors.",
+          "retrievedAt": "2026-09-07T18:42:07.991Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0758-4",
+          "url": "https://scholar.lib.ntnu.edu.tw/en/persons/trong-nghia-le/",
+          "excerpt": "All rights are reserved, including those for text and data mining, AI training, and similar technologies.",
+          "retrievedAt": "2026-09-07T18:42:07.991Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0758-5",
+          "url": "https://scholar.lib.ntnu.edu.tw/en/persons/trong-nghia-le/",
+          "excerpt": "For all open access content, the relevant licensing terms apply We use cookies to help provide and enhance our service and tailor content.",
+          "retrievedAt": "2026-09-07T18:42:07.991Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0758-6",
+          "url": "https://www.tnlelab.com",
+          "excerpt": "TN Le Research Group Search this site Embedded Files Skip to main content Skip to navigation TN Le Research Group Home Research Publications Members PI Lab members Gallery Study at NTNU Contact TN Le Research Group Home Research Publications Members PI Lab members Gallery Study at NTNU Contact More Home Research Publications Members PI Lab members Gallery Study at NTNU Contact Biomedical Chemistry Lab Trong-Nghia Le, Ph.",
+          "retrievedAt": "2026-09-07T18:42:08.406Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0758-7",
+          "url": "https://www.tnlelab.com",
+          "excerpt": "Department of Chemistry, National Taiwan Normal University Students interested in Analytical Chemistry, Nanomaterials, Fluorescent Nanodiamonds, or Biosensors are welcome to contact Prof.",
+          "retrievedAt": "2026-09-07T18:42:08.406Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0758-8",
+          "url": "https://www.tnlelab.com",
+          "excerpt": "Trong-Nghia Le News 0 9 /2026: Welcome Dang Thu Thuy and Ho Thi Nhu Y to join our lab.",
+          "retrievedAt": "2026-09-07T18:42:08.406Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0758-9",
+          "url": "https://www.tnlelab.com",
+          "excerpt": "07/2026: Congratulations to Ha Do (Lani) for su ccessfully defending her thesis.",
+          "retrievedAt": "2026-09-07T18:42:08.406Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0758-10",
+          "url": "https://www.tnlelab.com",
+          "excerpt": "0 6 /2026: Congratulations to Ha Do (Lani) for wining Honorable Oral Presentation Award at 31st Biotechnology and Biochemical Engineering BEST Conference.",
+          "retrievedAt": "2026-09-07T18:42:08.406Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0758-11",
+          "url": "https://www.tnlelab.com",
+          "excerpt": "06/2026: Welcome Nguyen Thi Ngoc Tuyen and Nguyen Le Thuy Trang to join our lab as TEEP interns.",
+          "retrievedAt": "2026-09-07T18:42:08.406Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0758-12",
+          "url": "https://www.tnlelab.com",
+          "excerpt": "01/2026: Proudly share that our recent work, &quot; Quantum Spin Detection in Microfiltration Immunoassays for Ultrasensitive and High-Throughput Diagnostics &quot;, has been accepted for publication in Analytical Chemistry .",
+          "retrievedAt": "2026-09-07T18:42:08.406Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0758-13",
+          "url": "https://www.tnlelab.com",
+          "excerpt": "11/2025: Congratulations to Ha Do (Lani) for win ning Poster Award at 2025 TwIChE conference .",
+          "retrievedAt": "2026-09-07T18:42:08.406Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:46:20.845Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0759": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://phys.nsysu.edu.tw/p/405-1181-288358,c9040.php?Lang=en",
         "https://sites.google.com/view/phuonggroup/professor"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0759-1",
+          "url": "https://phys.nsysu.edu.tw/p/405-1181-288358,c9040.php?Lang=en",
+          "excerpt": "Pham Jump to the main content block Menu HOME NSYSU MAP 後台 CHINESE EN Announcement About Us Faculty & Staff Admission Curriculum Scholarship Regulations Forms Top Home Faculty & Staff Full-time Faculty Associate Prof.",
+          "retrievedAt": "2026-09-07T18:42:10.020Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0759-2",
+          "url": "https://sites.google.com/view/phuonggroup/professor",
+          "excerpt": "s Research Publications Selected Publication Full Publication Book Patent SCI Journals Facilities Booking Teaching Collaborations Conferences Life & Science Gallery Openings PHUONG GROUP Home Professor Members Research Publications Selected Publication Full Publication Book Patent SCI Journals Facilities Booking Teaching Collaborations Conferences Life & Science Gallery Openings More Home Professor Members Research Publications Selected Publication Full Publication Book Patent SCI Journals Facilities Booking Teaching Collaborations Conferences Life & Science Gallery Openings Professor Phuong V.",
+          "retrievedAt": "2026-09-07T18:42:10.305Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0759-3",
+          "url": "https://sites.google.com/view/phuonggroup/professor",
+          "excerpt": "Pham (范越芳), Associate Professor Principle Investigator (PI) (Top 2% Scientists Listed by Stanford University and Elsevier) Room: SC-2006-2, Science Building Department of Physics , College of Science , Center for Quamtum Computing & Quantum Materials , National Sun Yat-sen University (NSYSU) , Kaohsiung 80424, Taiwan Phone: (+886)-07-5252000-3726 Email: phuongham@mail.",
+          "retrievedAt": "2026-09-07T18:42:10.305Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0759-4",
+          "url": "https://sites.google.com/view/phuonggroup/professor",
+          "excerpt": "Pham is Professor at Department of Physics, and Center for Quantum Computing and Quantum Materials, National Sun Yat-sen University (NSYSU), Taiwan.",
+          "retrievedAt": "2026-09-07T18:42:10.305Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0759-5",
+          "url": "https://sites.google.com/view/phuonggroup/professor",
+          "excerpt": "from SKKU Advanced Institute of Nanotechnology (SAINT), Sungkyunkwan University (SKKU), South Korea.",
+          "retrievedAt": "2026-09-07T18:42:10.305Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0759-6",
+          "url": "https://sites.google.com/view/phuonggroup/professor",
+          "excerpt": "Currently, he leads Materials Physics and Electronic Surfaces Group at Physics-NSYSU.",
+          "retrievedAt": "2026-09-07T18:42:10.305Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0759-7",
+          "url": "https://sites.google.com/view/phuonggroup/professor",
+          "excerpt": "Professor Pham has collaborated on industrial projects with major organizations, including SAMSUNG, POSCO, and government agencies such as Korean Government, Ministry of Education and Ministry of Science and Technology of China, and NSTC Grant Program of Taiwan.",
+          "retrievedAt": "2026-09-07T18:42:10.305Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0759-8",
+          "url": "https://sites.google.com/view/phuonggroup/professor",
+          "excerpt": "He has held various research positions, including Postdoctoral Researcher, Research Fellow, and Distinguished Research Fellow, at prestigious institutions like School of Advanced Material Science and Engineering, SKKU, Center for Multidimensional Carbon Materials (Director: Prof.",
+          "retrievedAt": "2026-09-07T18:42:10.305Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0759-9",
+          "url": "https://sites.google.com/view/phuonggroup/professor",
+          "excerpt": "Rodney Ruoff) at Institute for Basic Science, South Korea, and Hangzhou Global Scientific and Technological Innovation Center, Zhejiang University, China.",
+          "retrievedAt": "2026-09-07T18:42:10.305Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:46:20.845Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0760": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://hub.tmu.edu.tw/en/persons/tuyen-van-duong/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0760-1",
+          "url": "https://hub.tmu.edu.tw/en/persons/tuyen-van-duong/",
+          "excerpt": "Tuyen Van Duong - Taipei Medical University Skip to main navigation Skip to search Skip to main content Taipei Medical University Home Help & FAQ, Link opens in a new tab English 中文 Search content at Taipei Medical University Home Profiles Research units Projects Research output Datasets Activities View Scopus Profile Tuyen Van Duong Associate Professor , School of Nutrition and Health Sciences Joint-Appointment Associate Professor , International Master Program in Medicine Joint-Appointment Associate Professor , International Ph.",
+          "retrievedAt": "2026-09-07T18:42:12.432Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0760-2",
+          "url": "https://hub.tmu.edu.tw/en/persons/tuyen-van-duong/",
+          "excerpt": "edu tw h-index 4224 Citations 27 h-index Calculated based on number of publications stored in Pure and citations from Scopus 2015 2025 Research activity per year Overview Fingerprint Network Projects (7) Research output (98) Datasets (5) Similar Profiles (6) Supervised Work (3) Personal profile Education 2016 PhD, School of Public Health, College of Public Health and Nutrition, Taipei Medical University 2013 MNSc, Graduate Institute of Nursing, Taipei Medical University 2007 BNSc, School of Nursing, Hanoi Medical University Experience 2025.",
+          "retrievedAt": "2026-09-07T18:42:12.432Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0760-3",
+          "url": "https://hub.tmu.edu.tw/en/persons/tuyen-van-duong/",
+          "excerpt": "Program in Medicine 2023-2025 Joint-Appointment Assistant Professor, International Master/Ph.",
+          "retrievedAt": "2026-09-07T18:42:12.432Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0760-4",
+          "url": "https://hub.tmu.edu.tw/en/persons/tuyen-van-duong/",
+          "excerpt": "2022-2024 Chair of the Research Standards Committee, International Health Literacy Association, Boston, USA 2019.",
+          "retrievedAt": "2026-09-07T18:42:12.432Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0760-5",
+          "url": "https://hub.tmu.edu.tw/en/persons/tuyen-van-duong/",
+          "excerpt": "02- Assistant Professor, School of Nutrition and Health Sciences, Taipei Medical University, Taipei, TW.",
+          "retrievedAt": "2026-09-07T18:42:12.432Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0760-6",
+          "url": "https://hub.tmu.edu.tw/en/persons/tuyen-van-duong/",
+          "excerpt": "12 Postdoctoral Researcher, School of Nutrition and Health Sciences, Taipei Medical University, TW.",
+          "retrievedAt": "2026-09-07T18:42:12.432Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0760-7",
+          "url": "https://hub.tmu.edu.tw/en/persons/tuyen-van-duong/",
+          "excerpt": "2013-2016 Teaching Assistant in Applied Statistics, School of Public Health, Taipei Medical University, TW.",
+          "retrievedAt": "2026-09-07T18:42:12.432Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0760-8",
+          "url": "https://hub.tmu.edu.tw/en/persons/tuyen-van-duong/",
+          "excerpt": "Awards The Award for Global Service of the International Health Literacy Association.",
+          "retrievedAt": "2026-09-07T18:42:12.432Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:46:20.845Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0761": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://hub.tmu.edu.tw/en/persons/phung-anh-nguyen/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0761-1",
+          "url": "https://hub.tmu.edu.tw/en/persons/phung-anh-nguyen/",
+          "excerpt": "Phung Anh Nguyen - Taipei Medical University Skip to main navigation Skip to search Skip to main content Taipei Medical University Home Help & FAQ, Link opens in a new tab English 中文 Search content at Taipei Medical University Home Profiles Research units Projects Research output Datasets Activities View Scopus Profile Phung Anh Nguyen Assistant Professor , Graduate Institute of Data Science Assistant Research Fellow , Clinical Data Center Member , TMU Research Center of Artificial Intelligence in Medicine and Health https://orcid.",
+          "retrievedAt": "2026-09-07T18:42:14.018Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0761-2",
+          "url": "https://hub.tmu.edu.tw/en/persons/phung-anh-nguyen/",
+          "excerpt": "edu tw h-index 2507 Citations 26 h-index Calculated based on number of publications stored in Pure and citations from Scopus 2012 2026 Research activity per year Overview Fingerprint Network Projects (5) Research output (105) Datasets (1) Similar Profiles (11) Personal profile Education 2008.",
+          "retrievedAt": "2026-09-07T18:42:14.018Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0761-3",
+          "url": "https://hub.tmu.edu.tw/en/persons/phung-anh-nguyen/",
+          "excerpt": ", Institute of Biomedical Informatics, National Yang Ming University, Taiwan 2003.",
+          "retrievedAt": "2026-09-07T18:42:14.018Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0761-4",
+          "url": "https://hub.tmu.edu.tw/en/persons/phung-anh-nguyen/",
+          "excerpt": "03- Assistant Research Fellow, Present Clinical Data Center, Office of Data Science, Taipei Medical University, Taipei, Taiwan 2020.",
+          "retrievedAt": "2026-09-07T18:42:14.018Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0761-5",
+          "url": "https://hub.tmu.edu.tw/en/persons/phung-anh-nguyen/",
+          "excerpt": "06 Adjunct Assistant Professor, Department of Health Information & Management, Ming Chuan University, Taoyuan County, Taiwan 2018.",
+          "retrievedAt": "2026-09-07T18:42:14.018Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0761-6",
+          "url": "https://hub.tmu.edu.tw/en/persons/phung-anh-nguyen/",
+          "excerpt": "06 International Center for Health Information Technology, Taipei Medical University, Taipei, Taiwan Postdoctoral Fellow 2017.",
+          "retrievedAt": "2026-09-07T18:42:14.018Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0761-7",
+          "url": "https://hub.tmu.edu.tw/en/persons/phung-anh-nguyen/",
+          "excerpt": "04 Postdoctoral Scholar, Department of Population & Quantitative Health Sciences, School of Medicine, Case Western Reserve University, Ohio, USA 2015.",
+          "retrievedAt": "2026-09-07T18:42:14.018Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0761-8",
+          "url": "https://hub.tmu.edu.tw/en/persons/phung-anh-nguyen/",
+          "excerpt": "03 Project Manager, International Center for Health Information Technology, College of Medical Science and Technology, Taipei Medical University, Taipei, Taiwan 2014.",
+          "retrievedAt": "2026-09-07T18:42:14.018Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:46:20.845Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0762": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://sealc.nccu.edu.tw/PageStaffing/Detail?fid=10230&id=3064"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0762-1",
+          "url": "https://sealc.nccu.edu.tw/PageStaffing/Detail?fid=10230&id=3064",
+          "excerpt": "ords Search News Announcement Events Introduction Introduction Development Members Location Admission & Curriculum Undergraduate Admission Curriculum Information Forms and Regulations Resources Academia Gallery SEALC Faculty Home / Introduction / Members / SEALC Faculty ::: Introduction Introduction --> Introduction Development --> Development Members --> Members SEALC Faculty --> SEALC Faculty Interdepartmental Faculty --> Interdepartmental Faculty Staff --> Staff Location --> Location ::: SEALC Faculty 日期：108-08-19 --> 教師 行政人員 --> LE Thi-Nham Associate Professor Title Associate Professor Ext.",
+          "retrievedAt": "2026-09-07T18:42:16.026Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0762-2",
+          "url": "https://sealc.nccu.edu.tw/PageStaffing/Detail?fid=10230&id=3064",
+          "excerpt": "tw Rank/Track Full-Time Research Interests Immigration, Language and Literacy Learning, Southeast Asian Studies, Economies of Southeast Asia Publications Journal Publications Thi-Nham Le (黎氏仁）*;Norbert Francis, 2027.",
+          "retrievedAt": "2026-09-07T18:42:16.026Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0762-3",
+          "url": "https://sealc.nccu.edu.tw/PageStaffing/Detail?fid=10230&id=3064",
+          "excerpt": "12, 'Immigration and Language in Taiwan: Learning Chinese and Vietnamese, ' Theory and Practice of Second Language Acquisition,.",
+          "retrievedAt": "2026-09-07T18:42:16.026Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0762-4",
+          "url": "https://sealc.nccu.edu.tw/PageStaffing/Detail?fid=10230&id=3064",
+          "excerpt": "04, 'The study of language contact and child bilingual speech in communities of northern Vietnam, ' International Journal of Bilingualism, pp.",
+          "retrievedAt": "2026-09-07T18:42:16.026Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0762-5",
+          "url": "https://sealc.nccu.edu.tw/PageStaffing/Detail?fid=10230&id=3064",
+          "excerpt": "12, 'Book Review of Population Dynamics and Livelihood Changes of Small-Scale Societies in Laos, ' The Journal of Lao Studies, Vol.",
+          "retrievedAt": "2026-09-07T18:42:16.026Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0762-6",
+          "url": "https://sealc.nccu.edu.tw/PageStaffing/Detail?fid=10230&id=3064",
+          "excerpt": "(Center for Lao Studies, USA; Book Review)(*為通訊作者) Thi-Nham Le (黎氏仁)*;Norbert Francis, 2025.",
+          "retrievedAt": "2026-09-07T18:42:16.026Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0762-7",
+          "url": "https://sealc.nccu.edu.tw/PageStaffing/Detail?fid=10230&id=3064",
+          "excerpt": "07, 'Awareness of Language and Learning: Vietnamese Immigrants Navigate Bilingualism in the New Culture, ' Journal of Cognition and Culture, Vol.",
+          "retrievedAt": "2026-09-07T18:42:16.026Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0762-8",
+          "url": "https://sealc.nccu.edu.tw/PageStaffing/Detail?fid=10230&id=3064",
+          "excerpt": "02, 'Bilingual development in the Tai-Vietnamese multicultural borderland, ' International Journal of Applied Linguistics, Vol.",
+          "retrievedAt": "2026-09-07T18:42:16.026Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T18:46:20.845Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-0763": {
       "overview": "pending",
