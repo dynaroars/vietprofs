@@ -3239,7 +3239,8 @@
         "vp-1292",
         "vp-1293"
       ],
-      "status": "pending"
+      "status": "in_progress",
+      "startedAt": "2026-09-07T19:40:00.987Z"
     },
     {
       "number": 65,
@@ -76924,204 +76925,983 @@
       "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1274": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.aphp.fr/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1274-1",
+          "url": "https://www.aphp.fr/",
+          "excerpt": "AP-HP Assistance publique - Hôpitaux de Paris - 38 hôpitaux Septembre en Or : soutenez la recherche pour offrir de nouveaux espoirs aux enfants touchés par le cancer.",
+          "retrievedAt": "2026-09-07T19:40:01.937Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1274-2",
+          "url": "https://www.aphp.fr/",
+          "excerpt": "Je fais un don Contenu principal Menu Rechercher Menu (Mini) Pied de Page mon AP-HP Faire un don Nos hôpitaux Menu Vous soigner Précédent Les hôpitaux de l&#039;AP-HP Nos 38 hôpitaux accueillent chaque année plus de 8 millions de patients : en consultation, en urgence, lors d’hospitalisations programmées ou en hospitalisation à domicile, à tous les âges de la vie.",
+          "retrievedAt": "2026-09-07T19:40:01.937Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1274-3",
+          "url": "https://www.aphp.fr/",
+          "excerpt": "e don d’organes Les maladies rares L&#039;obésité La gériatrie La Médecine physique et de réadaptation L&#039;endométriose La maison des femmes Nos maternités Les urgences Précédent Les urgences Voir la page Les services d&#039;accueil des urgences générales et spécialisées Nos SAMU et SMUR Nos CUMP Les urgences spécialisées qui nécessitent d&#039;être adressées par un médecin L&#039;hospitalisation à domicile Les téléconsultations La chirurgie ambulatoire Précédent La chirurgie ambulatoire Voir la page Les unités de chirurgie ambulatoire Comment se passe une opération chirurgicale ambulatoire?",
+          "retrievedAt": "2026-09-07T19:40:01.937Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1274-4",
+          "url": "https://www.aphp.fr/",
+          "excerpt": "Le lactarium Le centre antipoison Patients et proches Précédent Comment savoir si une personne a été accueillie aux urgences ou hospitalisée à l’AP-HP ?",
+          "retrievedAt": "2026-09-07T19:40:01.937Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1274-5",
+          "url": "https://www.aphp.fr/",
+          "excerpt": "Si vous vous inquiétez d’être anormalement sans nouvelles d&#039;une personne, et vous pensez à une éventuelle hospitalisation, 7 jours sur 7 de 8h30 à 17h30, l’AP-HP place au service des usagers, public et professionnels, une équipe à solliciter.",
+          "retrievedAt": "2026-09-07T19:40:01.937Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1274-6",
+          "url": "https://www.aphp.fr/",
+          "excerpt": "En savoir plus Nos actualités Retrouvez toutes les actualités de l&#039;AP-HP En savoir plus Précédent Patients et proches Voir la page Vous avez rendez-vous à l’hôpital pour une consultation ou une hospitalisation Précédent Vous avez rendez-vous à l’hôpital pour une consultation ou une hospitalisation Voir la page Vous venez en consultation Vos démarches Votre séjour à l&#039;hôpital Précédent Nos équipes Votre alimentation Les livres, musiques, films à votre disposition Combien ça coûte ?",
+          "retrievedAt": "2026-09-07T19:40:01.937Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1274-7",
+          "url": "https://www.aphp.fr/",
+          "excerpt": "a médiation à l&#039;hôpital La charte de la personne hospitalisée La laïcité et les cultes La protection des données personnelles Poser une question, faire une réclamation Exprimez vos choix La fin de vie Le Centre Éthique Clinique Proches, familles, visiteurs Précédent Proches, familles, visiteurs Voir la page Les visites à l&#039;hôpital La personne de confiance Le refus de soins COVID-19 : Informations à destination des patients, des familles et du public Accompagnez votre enfant hospitalisé Usagers et associations Précédent Usagers et associations Voir la page Bénévole, pourquoi pas vous ?",
+          "retrievedAt": "2026-09-07T19:40:01.937Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1274-8",
+          "url": "https://www.aphp.fr/",
+          "excerpt": "Devenez représentant des usagers Votre association souhaite agir à l’hôpital La démocratie sanitaire L&#039;annuaire des associations Vous avez une question ?",
+          "retrievedAt": "2026-09-07T19:40:01.937Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:41:22.152Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1275": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.dom.pitt.edu/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.dom.pitt.edu/: fetch failed"
+      ],
+      "updatedAt": "2026-09-07T19:41:22.152Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1276": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://researchers.mq.edu.au/en/persons/binh-bui"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1276-1",
+          "url": "https://researchers.mq.edu.au/en/persons/binh-bui",
+          "excerpt": "Binh Bui - Macquarie University Skip to main navigation Skip to search Skip to main content Macquarie University Home Help & FAQ Link opens in a new tab Search content at Macquarie University Home Profiles Research units Equipment Projects Research Outputs Datasets Prizes Activities Press/Media Impacts Binh Bui public CV Link opens in a new tab View Scopus Profile Binh Bui Associate Professor Associate Professor , Department of Accounting and Corporate Governance Transforming Energy Markets Research Centre https://orcid.",
+          "retrievedAt": "2026-09-07T19:40:04.665Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1276-2",
+          "url": "https://researchers.mq.edu.au/en/persons/binh-bui",
+          "excerpt": "edu au h-index 1405 Citations 16 h-index Calculated based on number of publications stored in Pure and citations from Scopus 2009 2025 Research activity per year Overview Fingerprint Network Research Outputs (33) Similar Profiles (6) Personal profile Biography My research interests include the interface between strategy and management control systems, climate change and emission trading, risk management, and accounting education.",
+          "retrievedAt": "2026-09-07T19:40:04.665Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1276-3",
+          "url": "https://researchers.mq.edu.au/en/persons/binh-bui",
+          "excerpt": "I have published papers in top-ranking accounting journals, including Management Accounting Research, British Accounting Review, Accounting, Auditing, and Accountability Journal, Behavioral Research in Accounting, Accounting Education: an international journal, and Accounting History.",
+          "retrievedAt": "2026-09-07T19:40:04.665Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1276-4",
+          "url": "https://researchers.mq.edu.au/en/persons/binh-bui",
+          "excerpt": "My PhD thesis investigates changes in electricity generators’ strategies and management control to manage business risks in the New Zealand Emissions Trading scheme context.",
+          "retrievedAt": "2026-09-07T19:40:04.665Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1276-5",
+          "url": "https://researchers.mq.edu.au/en/persons/binh-bui",
+          "excerpt": "My current projects examine carbon accounting and assurance, climate risk disclosures, and the role played by accounting in meeting climate change challenges.",
+          "retrievedAt": "2026-09-07T19:40:04.665Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1276-6",
+          "url": "https://researchers.mq.edu.au/en/persons/binh-bui",
+          "excerpt": "My research utilizes qualitative and quantitative methods, ranging from in-depth case studies to surveys and large database statistical analyses.",
+          "retrievedAt": "2026-09-07T19:40:04.665Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1276-7",
+          "url": "https://researchers.mq.edu.au/en/persons/binh-bui",
+          "excerpt": "I am the Associate Editor of three journals: Accounting, Auditing, and Accountability Journal, Accounting and Finance, and Accounting Research Journal.",
+          "retrievedAt": "2026-09-07T19:40:04.665Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1276-8",
+          "url": "https://researchers.mq.edu.au/en/persons/binh-bui",
+          "excerpt": "I sit on the editorial board of British Accounting Review, Accounting History, and Meditari Accountancy Research.",
+          "retrievedAt": "2026-09-07T19:40:04.665Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:41:22.152Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1277": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://u-paris.fr/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1277-1",
+          "url": "https://u-paris.fr/",
+          "excerpt": "Université Paris Cité | Bienvenue à Université Paris Cité --> Vous êtes Intranet Espace presse Boutique Soutenez-nous L&rsquo;été à UPCité UNIVERSITÉ Qui sommes-nous ?",
+          "retrievedAt": "2026-09-07T19:40:09.471Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1277-2",
+          "url": "https://u-paris.fr/",
+          "excerpt": "et Graduate Schools* Summer Schools FAQ inscriptions et démarches administratives RECHERCHE Politique de recherche Éthique de la recherche Démarche de labellisation HRS4R Unités de recherche Instituts interdisciplinaires Plateformes Doctorat et HDR Accompagnement des chercheurs Innovation et valorisation Publications et médiation Prix et distinctions VIE DE CAMPUS Sites et campus Maison étudiante Bourses, aides et jobs Santé et Handicap Se loger Se restaurer Faire du sport Se cultiver S’engager Vie associative Bibliothèques Déposer un signalement INTERNATIONAL Politique internationale Circle U.",
+          "retrievedAt": "2026-09-07T19:40:09.471Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1277-3",
+          "url": "https://u-paris.fr/",
+          "excerpt": "En Europe et dans le monde Partir à l&rsquo;étranger Nous rejoindre Sélectionner une page Les inscriptions administratives sont ouvertes du 6 juillet (14h) au 22 juillet (17h).",
+          "retrievedAt": "2026-09-07T19:40:09.471Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1277-4",
+          "url": "https://u-paris.fr/",
+          "excerpt": "Retrouvez l’ensemble des modalités d’inscriptions en cliquant ici Festival de rentrée des JAVA : la rentrée ça se fête !",
+          "retrievedAt": "2026-09-07T19:40:09.471Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1277-5",
+          "url": "https://u-paris.fr/",
+          "excerpt": "Lire la suite Semaine de la santé planétaire Lire la suite Shanghai 2026 : l’Université Paris Cité progresse à la 57e place mondiale Lire la suite Lindau Nobel Laureate Meetings : une semaine « hors du commun » au cœur de l’excellence scientifique, racontée par deux jeunes chercheuses d’UPCité Lire la suite &#x3b; Actualités Comment nos organes savent-ils distinguer leur droite de leur gauche ?",
+          "retrievedAt": "2026-09-07T19:40:09.471Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1277-6",
+          "url": "https://u-paris.fr/",
+          "excerpt": "pprendre le FLE avec « Décalages culturels », le podcast de RFI et l’Université Paris Cité | International Une étude montre qu’une formation à la communication et au travail en équipe améliore la coordination au bloc opératoire pédiatrique | Presse Une étude ouvre une nouvelle voie pour prévenir les infections graves du nourrisson | Presse Psoriasis : une découverte génétique clé ouvre la voie au premier traitement sur mesure | Presse Toute l’actualité Offre de formation La réussite de tous les étudiants, et ce dès leur entrée à l’université, est une priorité pour l&rsquo;Université Paris Cité.",
+          "retrievedAt": "2026-09-07T19:40:09.471Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1277-7",
+          "url": "https://u-paris.fr/",
+          "excerpt": "Toute l’offre de formation Offre de formation de la Faculté de Santé Offre de formation de la Faculté des Sciences Offre de formation de la Faculté Sociétés et Humanités Offre de formation de l&#039;Institut de physique du globe de Paris Agenda 8 septembre 2026 [Conférence Nature X PITOR] Un rendez-vous international exceptionnel consacré à l'IA en santé Grand Amphithéâtre de la Sorbonne 10 septembre 2026 Festival de rentrée des JAVA : la rentrée ça se fête !",
+          "retrievedAt": "2026-09-07T19:40:09.471Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1277-8",
+          "url": "https://u-paris.fr/",
+          "excerpt": "Site Lacretelle - UFR STAPS 17 septembre 2026 Welcome desk : bienvenue aux étudiantes et étudiants internationaux !",
+          "retrievedAt": "2026-09-07T19:40:09.471Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:41:22.152Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1278": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.mcgill.ca/"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:41:22.152Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1279": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.ap-hm.fr/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1279-1",
+          "url": "https://www.ap-hm.fr/",
+          "excerpt": "s Adresser un examen au Laboratoire d&#039;Infectiologie Centres de référence Maladies Rares Plateforme d&#039;Expertise Maladies Rares Presse / Multimédia Communiqués de presse Dossiers de presse Médiathèque Fournisseurs Rôles et missions Liste des marchés conclus Documents utiles Formulaire de recherche Recherche En 1 clic à la une Les filières de cancérologie à l’AP-HM : la filière d’onco-gynécologie à la une À vélo, à pied, en bus… Tous les chemins mènent à l’Hôpital Nord à la une Septembre en or illuminons l&#039;espoir Sélectionnez un service : Services NOUVEAU Prendre un RDV Un service ?",
+          "retrievedAt": "2026-09-07T19:40:16.780Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1279-2",
+          "url": "https://www.ap-hm.fr/",
+          "excerpt": "Payer en ligne Actualités Toute l'actualité Lire l'article Toute l'actualité Patrice Bourgeois éclaire les enjeux du clonage dans E=M 6² 24 Juillet 2026 Lire l'article Toute l'actualité Échos du Conseil de Surveillance du 29 Juin 2026 16 Juillet 2026 Lire l'article Toute l'actualité AP-HM – Hôtel-Dieu de France : une coopération hospitalière au service de l’innovation territoriale 9 Juillet 2026 Zoom sur Nos spécialistes répondent à des questions de santé d'actualité Zoom sur Talents AP-HM Agenda 8 Septembre 2026 64ème Congrès de l&#039;E.",
+          "retrievedAt": "2026-09-07T19:40:16.780Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:41:22.152Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1280": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.bidmc.org/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.bidmc.org/: fetch failed"
+      ],
+      "updatedAt": "2026-09-07T19:41:22.152Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1281": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://cress-umr1153.fr/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1281-1",
+          "url": "https://cress-umr1153.fr/",
+          "excerpt": "Accueil - CRESS - Centre de Recherche en Epidémiologie et Statistiques Skip to content FR Actualités Agenda FR EN Le centre Qui sommes-nous ?",
+          "retrievedAt": "2026-09-07T19:40:17.607Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1281-2",
+          "url": "https://cress-umr1153.fr/",
+          "excerpt": "Gouvernance Plateforme de support &#8211; SMART Comités de pilotage Publications Equipes OPPaLE METHODS ECAMO EpiAgeing EREN Membres Doctorat Formation Cohortes / Plateformes Offres d’emploi Centre de Recherche en Epidémiologie et Statistiques (CRESS) Un centre de renommée internationale localisé à Paris et rattaché à l’Inserm, Université Paris Cité, Université Sorbonne Paris Nord et l’INRAe.",
+          "retrievedAt": "2026-09-07T19:40:17.607Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1281-3",
+          "url": "https://cress-umr1153.fr/",
+          "excerpt": "5 Équipes de recherche 110+ Chercheurs et enseignants chercheurs titulaires 120+ Ingénieurs, Techniciens, Administratifs 95+ Doctorants et post-doctorants Le CRESS Le centre d’Epidémiologie et de Statistiques vise à comprendre les déterminants de la santé des populations aux différents âges de la vie, développer des méthodes innovantes, concevoir et évaluer des interventions pour améliorer les pratiques cliniques et les politiques de santé publique.",
+          "retrievedAt": "2026-09-07T19:40:17.607Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1281-4",
+          "url": "https://cress-umr1153.fr/",
+          "excerpt": "de Recherche à l’INRAE Publication scientifique 27 août 2026 Outil pour la mise en œuvre de l’émulation d’essais cibles (TITAN : Tool for Implementing TArget Trial emulatioN) : première version d’un assistant de conception en accès libre Publication scientifique 24 août 2026 Santé des personnes fragiles sans maladie chronique : un état de santé encore méconnu Publication scientifique 18 août 2026 Trajectoires des symptômes de stress post-traumatique après un accouchement par voie basse Appel à manifestation d'intérêt 4 août 2026 Enquête : Et si la cohorte EDEN s'appariait aux données du SNDS ?",
+          "retrievedAt": "2026-09-07T19:40:17.607Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1281-5",
+          "url": "https://cress-umr1153.fr/",
+          "excerpt": "CRESS annuel : \"De la participation à l'impact : construire la recherche avec les citoyens et les acteurs de la société\" Événement scientifique 11/12/2026 Ouvert au public : Oui Webinaire : Santé mentale et maladies métaboliques – Projet MEMORIES Publications Toutes les publications Fracture Risk Associated With Long-Term Discontinuation of Postmenopausal Osteoporosis Treatment: A French Population-Based Study Using National Claims Data (Système National des Données de Santé) 02/09/2026 Audrey Lajoinie, Meriem Benmerad, Magali Laborey, Pascale Samama, Gaëlle Désaméricq, Leila Chelbani, K et al.",
+          "retrievedAt": "2026-09-07T19:40:17.607Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1281-6",
+          "url": "https://cress-umr1153.fr/",
+          "excerpt": "ACR open rheumatology Voir sur PubMed ECAMO Eating jetlag based on meal timing discrepancies and risk of cardiovascular disease using the prospective cohort NutriNet-Santé 02/09/2026 Xuân Le Folcalvez, Elena Obeid, Anna Palomar-Cros, Léopold K Fezeu, Laurent Bourhis, Alice Bellicha, et al.",
+          "retrievedAt": "2026-09-07T19:40:17.607Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1281-7",
+          "url": "https://cress-umr1153.fr/",
+          "excerpt": "Communications medicine Voir sur PubMed EREN Response to Interpreting \"intermittent\" psychological distress in dementia research: A classification that obscures more than it reveals 02/09/2026 Jean Stafford, Serhiy Dekhtyar, Tom C Russ, Archana Singh-Manoux, Jane Maddock, Kate Walters et al.",
+          "retrievedAt": "2026-09-07T19:40:17.607Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:41:22.152Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1282": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.chusj.org/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1282-1",
+          "url": "https://www.chusj.org/",
+          "excerpt": "CHU Sainte-Justine : h&#244;pital m&#232;re enfant de Montr&#233;al (function(w,d,s,l,i){w[l]=w[l]||[];w[l].",
+          "retrievedAt": "2026-09-07T19:40:18.416Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1282-2",
+          "url": "https://www.chusj.org/",
+          "excerpt": "insertBefore(j,f); })(window,document,'script','dataLayer','GTM-M89ZMQBF'); English Santé Québec - CHU Sainte-Justine Centre hospitalier universitaire mère-enfant Hôpital & Soins Enseignement Recherche Réadaptation Promotion de la santé Fondation Santé Québec - CHU Sainte-Justine Centre hospitalier universitaire mère-enfant Rechercher: Accueil &#192; propos de nous Visite & s&#233;jour Soins & services Calendrier & Salle de presse Emplois & b&#233;n&#233;volat Professionnels de la sant&#233; Rougeole Quelles sont les précautions à prendre?",
+          "retrievedAt": "2026-09-07T19:40:18.416Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1282-3",
+          "url": "https://www.chusj.org/",
+          "excerpt": "➔ Trouvez toutes les réponses à vos questions S’ADAPTER À CHAQUE RÉALITÉ Plusieurs ressources et éléments d'accessibilité sont disponibles pour répondre à vos besoins.",
+          "retrievedAt": "2026-09-07T19:40:18.416Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1282-4",
+          "url": "https://www.chusj.org/",
+          "excerpt": "Rougeole, des réponses à vos questions Rendez-vous en clinique ambulatoire Admission et carte d'hôpital Bottin des cliniques et services Recherche par sujet médical ou de santé Heures de visite, contacter un patient Coordonnées, nous joindre Stationnement, transport public Grossesse, accouchement et postnatal Accessibilité Urgence pédiatrique Saison des virus &raquo; Avant de venir à l&#39;urgence &raquo; Alternatives à l&rsquo;urgence &raquo; Quoi apporter à l&rsquo;urgence ?",
+          "retrievedAt": "2026-09-07T19:40:18.416Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1282-5",
+          "url": "https://www.chusj.org/",
+          "excerpt": "&raquo; Saison des virus &raquo; Avant de venir à l&#39;urgence &raquo; Alternatives à l&rsquo;urgence &raquo; Salle de presse Félicitations à la cohorte 2026 des Bourses d'excellence de la Fondation CHU Sainte-Justine mercredi 2 septembre 2026 Cette année, 33 bourses d’excellence ont été décernées : huit à la maîtrise, 21 au doctorat et quatre au postdoctorat.",
+          "retrievedAt": "2026-09-07T19:40:18.416Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1282-6",
+          "url": "https://www.chusj.org/",
+          "excerpt": "Anémie falciforme : deux fois plus d’enfants suivis, mais moins d’hospitalisations mercredi 2 septembre 2026 Les résultats d'une étude dirigée par le Dr Thomas Pincez montrent que le nombre moyen d’hospitalisations par enfant a diminué de 51 %, tandis que la proportion des visites à l’urgence menant à une hospitalisation a reculé de 32 %.",
+          "retrievedAt": "2026-09-07T19:40:18.416Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1282-7",
+          "url": "https://www.chusj.org/",
+          "excerpt": "Nouvelle subvention des NIH afin de mieux comprendre les troubles psychiatriques et neurodéveloppementaux mardi 1 septembre 2026 Les National Institutes of Health (NIH) des États-Unis accordent un financement de 1,3M$ sur cinq ans à la chercheuse Clara Moreau pour un projet d’envergure du consortium international ENIGMA.",
+          "retrievedAt": "2026-09-07T19:40:18.416Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1282-8",
+          "url": "https://www.chusj.org/",
+          "excerpt": "Le jardin comme outil de soins durables vendredi 21 août 2026 Au CHU Sainte-Justine, des jardins thérapeutiques prennent racine dans le quotidien des jeunes.",
+          "retrievedAt": "2026-09-07T19:40:18.416Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:41:22.152Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1283": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://medicinehealth.leeds.ac.uk/dentistry/staff/320/professor-thuy-do"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://medicinehealth.leeds.ac.uk/dentistry/staff/320/professor-thuy-do: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:41:22.152Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1284": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://research.monash.edu/en/persons/thanh-phan"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1284-1",
+          "url": "https://research.monash.edu/en/persons/thanh-phan",
+          "excerpt": "Thanh Phan - Monash University Skip to main navigation Skip to search Skip to main content Monash University Home Search content at Monash University Home Profiles Research units Research Infrastructure Projects Outputs Prizes Activities Press/Media View Scopus Profile Thanh Phan Adj Clin Prof ADJUNCT CLINICAL PROFESSOR , Medicine Monash Health https://orcid.",
+          "retrievedAt": "2026-09-07T19:40:21.974Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1284-2",
+          "url": "https://research.monash.edu/en/persons/thanh-phan",
+          "excerpt": "edu/medicine/scs/researchers/thanh-phan 2000 2025 Research activity per year Overview Network Projects (26) Outputs (222) Personal profile Biography Adjunct Clinical Professor Thanh obtained his MBBS from University of New South Wales and has subsequently undertaken fellowships in Epilepsy, Neurology, Stroke and Neurocritical care in Cerebrovascular disease, including time at the Mayo Clinic, Rochester.",
+          "retrievedAt": "2026-09-07T19:40:21.974Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1284-3",
+          "url": "https://research.monash.edu/en/persons/thanh-phan",
+          "excerpt": "He is a Fellow of the Royal Australian College of Physicians and was an NHMRC Postgraduate Research Scholar.",
+          "retrievedAt": "2026-09-07T19:40:21.974Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1284-4",
+          "url": "https://research.monash.edu/en/persons/thanh-phan",
+          "excerpt": "In 2008 he completed his PhD (University of Melbourne) with a thesis entitled Applications of MR Imaging in acute ischaemic stroke .",
+          "retrievedAt": "2026-09-07T19:40:21.974Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1284-5",
+          "url": "https://research.monash.edu/en/persons/thanh-phan",
+          "excerpt": "Currently a full-time staff specialist Neurologist in the Department of Neurosciences at Monash Health, Prof Phan undertakes ward service at both Clayton and Dandenong campuses, consults at Monash Neurology and in addition runs comprehensive stroke, young stroke, TIA and Minor stroke outpatient clinics.",
+          "retrievedAt": "2026-09-07T19:40:21.974Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1284-6",
+          "url": "https://research.monash.edu/en/persons/thanh-phan",
+          "excerpt": "He is actively involved in the teaching of Advanced Physician Trainees in both Neurology and Stroke and provides supervision for a Doctorate student and the Monash Stroke Fellowship program.",
+          "retrievedAt": "2026-09-07T19:40:21.974Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1284-7",
+          "url": "https://research.monash.edu/en/persons/thanh-phan",
+          "excerpt": "Prof Phan is also extremely active in conducting research into several aspects of cerebrovascular disease and neurological diseases.",
+          "retrievedAt": "2026-09-07T19:40:21.974Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1284-8",
+          "url": "https://research.monash.edu/en/persons/thanh-phan",
+          "excerpt": "He leads the Acute Stroke, Data mining and Imaging Division of the Stroke and Ageing Research Group (STAR) in the Department of Medicine, School of Clinical Sciences at Monash Health.",
+          "retrievedAt": "2026-09-07T19:40:21.974Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:41:22.152Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1285": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.massgeneral.org/pathology/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1285-1",
+          "url": "https://www.massgeneral.org/pathology/",
+          "excerpt": "Pathology | Mass General Brigham false Pathology At Mass General Brigham, our highly skilled pathologists, technologists, phlebotomists, and lab assistants have deep expertise examining tissue and fluid samples, as well as caring for patients undergoing apheresis and cellular therapy collection.",
+          "retrievedAt": "2026-09-07T19:40:22.684Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1285-2",
+          "url": "https://www.massgeneral.org/pathology/",
+          "excerpt": "A pathologist in a white lab coat uses a microscope in a modern research facility.",
+          "retrievedAt": "2026-09-07T19:40:22.684Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1285-3",
+          "url": "https://www.massgeneral.org/pathology/",
+          "excerpt": "The pathologist wears regular glasses and protective gloves while analyzing samples.",
+          "retrievedAt": "2026-09-07T19:40:22.684Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1285-4",
+          "url": "https://www.massgeneral.org/pathology/",
+          "excerpt": "There is a computer monitor in front of him while the background shows an out-of-focus laboratory environment.",
+          "retrievedAt": "2026-09-07T19:40:22.684Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1285-5",
+          "url": "https://www.massgeneral.org/pathology/",
+          "excerpt": "full-fill style palette-deep-blue showJumplinks true Specialized pathology expertise for more accurate diagnoses Pathology is the study of body fluids and tissues to look for signs of disease.",
+          "retrievedAt": "2026-09-07T19:40:22.684Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1285-6",
+          "url": "https://www.massgeneral.org/pathology/",
+          "excerpt": "Our findings help your team understand your condition and choose the best treatment.",
+          "retrievedAt": "2026-09-07T19:40:22.684Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1285-7",
+          "url": "https://www.massgeneral.org/pathology/",
+          "excerpt": "Each year, our teams perform millions of tests as part of one of the nation’s largest pathology programs.",
+          "retrievedAt": "2026-09-07T19:40:22.684Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1285-8",
+          "url": "https://www.massgeneral.org/pathology/",
+          "excerpt": "Each organ system—such as the brain, heart, or lungs—has its own team of pathologists that work closely with your doctors to make accurate diagnoses, improve care, and advance treatment through research.",
+          "retrievedAt": "2026-09-07T19:40:22.684Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:41:22.152Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1286": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.mskcc.org/cancer-care/doctors/chau-dang"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1286-1",
+          "url": "https://www.mskcc.org/cancer-care/doctors/chau-dang",
+          "excerpt": "Dang, MD - MSK Breast Medical Oncologist Skip to main content Skip to footer For appointments, call: 800-525-2225 Memorial Sloan Kettering Cancer Center Sloan Kettering Institute Research Changing how the world understands and treats cancer Our scientists pursue every aspect of cancer research—from exploring the biology of genes and cells, to developing immune-based treatments, uncovering the causes of metastasis, and more.",
+          "retrievedAt": "2026-09-07T19:40:23.919Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1286-2",
+          "url": "https://www.mskcc.org/cancer-care/doctors/chau-dang",
+          "excerpt": "act Research topics Core facilities & resources Offering state-of-the-art resources for our researchers Find a researcher or lab Education & training programs MSK Innovation MSK Commercialization Ecosystem Partnering, new ventures, and business accelerators Clinical Trial Innovation Incubating and implementing better ways to run clinical trials Our Innovation Story Showcasing key developments and achievements Education & Training Training the next generation of clinicians and scientists Our highly-specialized educational programs shape leaders to be at the forefront of cancer care and research.",
+          "retrievedAt": "2026-09-07T19:40:23.919Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1286-3",
+          "url": "https://www.mskcc.org/cancer-care/doctors/chau-dang",
+          "excerpt": "For Healthcare Graduate medical education (GME) Medical student opportunities Continuing medical education (CME) Continuing nursing education (CNE) Academic departments & divisions Explore all programs For Research Postdoctoral training Gerstner Sloan Kettering Graduate School of Biomedical Sciences PhD & MD/PhD programs Explore all programs Careers MSK Direct Locations & Language In the U.",
+          "retrievedAt": "2026-09-07T19:40:23.919Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1286-4",
+          "url": "https://www.mskcc.org/cancer-care/doctors/chau-dang",
+          "excerpt": "العَرَبِيَّة Deutsch English Español 한국어 עִבְרִית Italiano Portugês Pу́сский Türkçe 中文 Search What can we help you find today?",
+          "retrievedAt": "2026-09-07T19:40:23.919Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1286-5",
+          "url": "https://www.mskcc.org/cancer-care/doctors/chau-dang",
+          "excerpt": "Make an appointment New patient Current patient Speak to a care advisor Adults: 833-251-3171 Available 24 hours a day, 7 days a week Children & Teens: 646-895-6193 Available 24 hours a day, 7 days a week Becoming A Patient Why choose MSK How to become a patient Insurance & financial assistance Preparing for your first appointment Meet our doctors Explore our locations Learn About Cancer & Treatment Back Learn About Cancer & Treatment We treat every type of cancer, including the most important one: yours.",
+          "retrievedAt": "2026-09-07T19:40:23.919Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1286-6",
+          "url": "https://www.mskcc.org/cancer-care/doctors/chau-dang",
+          "excerpt": "From diagnosis to treatment, our experts provide the care and support you need, when you need it.",
+          "retrievedAt": "2026-09-07T19:40:23.919Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1286-7",
+          "url": "https://www.mskcc.org/cancer-care/doctors/chau-dang",
+          "excerpt": "Adults Cancers & conditions Risk assessment & screening Diagnosis & treatment Clinical trials Children & Teens Cancers & conditions Diagnosis & treatment Clinical trials Support, Services & Programs For adults For children & teens For caregivers Adolescents & young adult (AYA) program Patient & caregiver education library Cancer News & Discoveries Read the latest Sign up for our newsletter For Physicians Back For Physicians Partner with us to treat your patient&rsquo;s cancer.",
+          "retrievedAt": "2026-09-07T19:40:23.919Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1286-8",
+          "url": "https://www.mskcc.org/cancer-care/doctors/chau-dang",
+          "excerpt": "Refer a patient CALL OUR DEDICATED CLINICIAN ACCESS NUMBER 646-677-7440 Monday through Friday, 8 a.",
+          "retrievedAt": "2026-09-07T19:40:23.919Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:41:22.152Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1287": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://baker.edu.au/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1287-1",
+          "url": "https://baker.edu.au/",
+          "excerpt": "xible Insulin Therapy Gestational diabetes service Insulin pump service Ophthalmology Clinic Respiratory Clinic Weight Management Clinic Attending a clinic Health Hub Allied Health and Education Services FlexIT Carbohydrate counting Health Professionals training Fact sheets All about insulin pumps Carbohydrate counting in exchanges Carbohydrates and GI Convenience meals Dietary fibre Eating for a healthy heart Eating out Exercise fact sheets Food and your immune system Gestational diabetes Healthy snacks High blood pressure and salt Hypoglycaemia Insulin pump hyperglycaemia and sick day manage.",
+          "retrievedAt": "2026-09-07T19:40:26.046Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1287-2",
+          "url": "https://baker.edu.au/",
+          "excerpt": "ns Careers About us Our vision and values Our Director Our Board Our Executive Our history A century of discovery Impact Reports Towards reconciliation GEDI commitments Gender Equity Fellowship Women in Science Support Grants Our strategy Ambassadors Gary Mehigan Matthew Keenan Research excellence Best of Baker Bright Sparks recipients Paul Korner Medal for Outstanding Achievement Sir Laurence Muir Prize Keeping hearts beating since 1926 Keeping hearts beating since 1926 Australia's only medical research institute focused on the diagnosis, prevention and treatment of diabetes and heart disease.",
+          "retrievedAt": "2026-09-07T19:40:26.046Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1287-3",
+          "url": "https://baker.edu.au/",
+          "excerpt": "Explore Honours, Master's and PhD opportunities for 2027 &mdash; meet supervisors and current students.",
+          "retrievedAt": "2026-09-07T19:40:26.046Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1287-4",
+          "url": "https://baker.edu.au/",
+          "excerpt": "Reserve your place Latest news Participate in our research 02 September 2026 Centenary Award backs bold heart research This year, we're celebrating 100 years of research impact.",
+          "retrievedAt": "2026-09-07T19:40:26.046Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1287-5",
+          "url": "https://baker.edu.au/",
+          "excerpt": "And we're just as focused on what comes next: a bold new investment in the next generation of heart treatments.",
+          "retrievedAt": "2026-09-07T19:40:26.046Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1287-6",
+          "url": "https://baker.edu.au/",
+          "excerpt": "The Baker Institute is putting $5 million behind a new Centenary Award, created to fast-track research with real potential to .",
+          "retrievedAt": "2026-09-07T19:40:26.046Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1287-7",
+          "url": "https://baker.edu.au/",
+          "excerpt": "Read more 24 August 2026 Our diet is written in the chemistry of our blood As reported in The Sydney Morning Herald, a new study of over 13,000 Australians reveals how dietary choices leave a measurable \"lipid fingerprint\" that predicts disease risk and longevity.",
+          "retrievedAt": "2026-09-07T19:40:26.046Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1287-8",
+          "url": "https://baker.edu.au/",
+          "excerpt": "Researchers from the Baker Heart and Diabetes Institute have identified distinct patterns in blood lipids t.",
+          "retrievedAt": "2026-09-07T19:40:26.046Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:41:22.152Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1288": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://surgery.ucsf.edu/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1288-1",
+          "url": "https://surgery.ucsf.edu/",
+          "excerpt": "and Outreach Department History Former Chairs Giving Website Directory Social Media Sites Faculty Programs Conditions & Procedures Patient Center Request an Appointment Refer a Patient Patient Stories Clinical Trials Education & Training Residencies & Fellowships All Training Programs General Surgery Residency Program Plastic Surgery Residency Program (Integrated) Thoracic Surgery Residency Program Vascular Surgery Residency Program (Integrated) UCSF-East Bay General Surgery Residency Program Alumni UCSF Naffziger Surgical Society Conferences & Symposiums Overview Surgery Grand Rounds Annual J.",
+          "retrievedAt": "2026-09-07T19:40:26.433Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1288-2",
+          "url": "https://surgery.ucsf.edu/",
+          "excerpt": "Engelbert Dunphy Resident Research Symposium Medical Students Medical Student Portal Visiting Students Haile T.",
+          "retrievedAt": "2026-09-07T19:40:26.433Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1288-3",
+          "url": "https://surgery.ucsf.edu/",
+          "excerpt": "rograms Conditions & Procedures Patient Center Close Patient Center Request an Appointment Refer a Patient Patient Stories Clinical Trials Education & Training Close Education & Training Residencies & Fellowships Residencies & Fellowships All Training Programs General Surgery Residency Program Plastic Surgery Residency Program (Integrated) Thoracic Surgery Residency Program Vascular Surgery Residency Program (Integrated) UCSF-East Bay General Surgery Residency Program Alumni UCSF Naffziger Surgical Society Conferences & Symposiums Conferences & Symposiums Overview Surgery Grand Rounds Annual J.",
+          "retrievedAt": "2026-09-07T19:40:26.433Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1288-4",
+          "url": "https://surgery.ucsf.edu/",
+          "excerpt": "Engelbert Dunphy Resident Research Symposium Medical Students Medical Students Medical Student Portal Visiting Students Haile T.",
+          "retrievedAt": "2026-09-07T19:40:26.433Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1288-5",
+          "url": "https://surgery.ucsf.edu/",
+          "excerpt": "sidency Program Today&#039;s Trainees, Tomorrow&#039;s Leaders in Surgical Innovation UCSF Plastic Surgery Integrated Residency Program Learn More Division of Surgical Oncology UCSF Department of Surgery Division of Surgical Oncology UCSF Department of Surgery Learn More Request an Appointment Refer a Patient Find a Surgeon Find a Clinical Trial Exceptional Patient Care, Innovative Research, Surgical Excellence Julie Ann Sosa, MD, MA, FACS, MAMSE, FSSO Chair, Department of Surgery Leon Goldman, MD Distinguished Professor of Surgery Professor, Department of Medicine Affiliated faculty, Philip R.",
+          "retrievedAt": "2026-09-07T19:40:26.433Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1288-6",
+          "url": "https://surgery.ucsf.edu/",
+          "excerpt": "Lee Institute for Health Policy Studies The Department of Surgery at the University of California, San Francisco is one of the leading surgical departments in the world.",
+          "retrievedAt": "2026-09-07T19:40:26.433Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1288-7",
+          "url": "https://surgery.ucsf.edu/",
+          "excerpt": "Our care is dedicated to the people of San Francisco and California, but our reputation draws patients nationally and internationally.",
+          "retrievedAt": "2026-09-07T19:40:26.433Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1288-8",
+          "url": "https://surgery.ucsf.edu/",
+          "excerpt": "We are one of the largest clinical services at UCSF performing a high volume of procedures.",
+          "retrievedAt": "2026-09-07T19:40:26.433Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:41:22.152Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1289": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.feinberg.northwestern.edu/faculty-profiles/az/profile.html?xid=28825"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.feinberg.northwestern.edu/faculty-profiles/az/profile.html?xid=28825: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:41:22.152Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1290": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://profiles.ucsf.edu/binhan.phan"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1290-1",
+          "url": "https://profiles.ucsf.edu/binhan.phan",
+          "excerpt": "An Phan | UCSF Profiles University of California, San Francisco About UCSF Search UCSF UCSF Medical Center Home About Help/FAQs Search Options UC Davis UCI UCLA UCSD UCSF All UC Health USC All Everything Research Concepts Awards People &#160;&#160;&#160;UC Health People &#160;&#160;&#160;UC Davis People &#160;&#160;&#160;UCI People &#160;&#160;&#160;UCLA People &#160;&#160;&#160;UCSD People &#160;&#160;&#160;UCSF People &#160;&#160;&#160;USC People on next line to remove space between --> Find People Find Everything Login to edit your profile (add a photo, awards, links to other websites, etc.",
+          "retrievedAt": "2026-09-07T19:40:28.256Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1290-2",
+          "url": "https://profiles.ucsf.edu/binhan.phan",
+          "excerpt": ") Edit My Profile My Person List ( 0 ) Return to Top Binh An Phan, MD Title(s) Professor, Medicine School School of Medicine Pronouns He/Him/His ORCID 0000-0003-1573-7286 vCard Download vCard Overview overview Binh An P.",
+          "retrievedAt": "2026-09-07T19:40:28.256Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1290-3",
+          "url": "https://profiles.ucsf.edu/binhan.phan",
+          "excerpt": "Phan, MD, is a Professor of Medicine at the University of California, San Francisco, and a cardiologist with a clinical practice at San Francisco General Hospital.",
+          "retrievedAt": "2026-09-07T19:40:28.256Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1290-4",
+          "url": "https://profiles.ucsf.edu/binhan.phan",
+          "excerpt": "He has scholarly interests in the areas of clinical skills and cardiovascular disease prevention.",
+          "retrievedAt": "2026-09-07T19:40:28.256Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1290-5",
+          "url": "https://profiles.ucsf.edu/binhan.phan",
+          "excerpt": "rnal Medicine University of Michigan Doctor of Medicine School of Medicine awards and honors UCSF School of Medicine Class of 2026 2026 Excellence in Teaching for Clinical Faculty Award American College of Cardiology 2026 Gifted Teacher Award UCSF School of Medicine 2025 Bridges Curriculum - Foundations 1 and 2 Teaching Award UCSF 2025 Sumner and Hermine Marshall Endowed Last Lecture UCSF School of Medicine 2024 Bridges Curriculum - Foundations 1 and 2 Teaching Award UCSF School of Medicine 2024 Maxine Papadakis Award for Faculty Professionalism and Respect UCSF School of Medicine 2023 Henry J.",
+          "retrievedAt": "2026-09-07T19:40:28.256Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1290-6",
+          "url": "https://profiles.ucsf.edu/binhan.phan",
+          "excerpt": "Kaiser Award for Excellence in Teaching in Classroom Setting UCSF School of Medicine Class of 2023 2023 Excellence in Teaching for Clinical Faculty Award UCSF 2021 Haile T.",
+          "retrievedAt": "2026-09-07T19:40:28.256Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1290-7",
+          "url": "https://profiles.ucsf.edu/binhan.phan",
+          "excerpt": "Debas Academy of Medical Educators UCSF Department of Medicine 2020 ZSFG Mentoring Award UCSF Academy of Medical Educators 2020 AME Excellence in Teaching Award UCSF School of Medicine 2018 Bridges Curriculum - Foundations 1 and 2 Teaching Award UCSF Department of Medicine 2018 ZSFG Distinction in Medical Education Award UCSF 2018 Academic Senate Distinction in Teaching Award UCSF Division of Cardiology 2017 Joel Karliner Faculty Teaching Award UCSF Department of Medicine 2017 Floyd C.",
+          "retrievedAt": "2026-09-07T19:40:28.256Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1290-8",
+          "url": "https://profiles.ucsf.edu/binhan.phan",
+          "excerpt": ", Housestaff Teaching Award UCSF School of Medicine Class of 2017 2017 Osler Distinguished Teacher Award UCSF Department of Medicine 2016 Henry F.",
+          "retrievedAt": "2026-09-07T19:40:28.256Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:41:22.152Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1291": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.dana-farber.org/find-a-doctor/mai-anh-huynh"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1291-1",
+          "url": "https://www.dana-farber.org/find-a-doctor/mai-anh-huynh",
+          "excerpt": "Mai Anh Huynh, MD, PhD - Dana-Farber Cancer Institute | Boston, MA Skip to main content Education and Training Careers Contact Us Donate Find a Doctor Appointments and Second Opinions Find a Location Patient Portals Cancer Types and Treatments Care and Treatment Learn about Dana-Farber’s expert cancer care and the innovative treatment options we offer for adults and children.",
+          "retrievedAt": "2026-09-07T19:40:28.521Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1291-2",
+          "url": "https://www.dana-farber.org/find-a-doctor/mai-anh-huynh",
+          "excerpt": "Cancer Types and Treatments Cancer Types and Conditions We Treat Adult Pediatric Treatment Centers and Clinical Services Centers for Early Detection and Interception Your Care Team Nursing and Patient Care Services Clinical Trials For Patients and Families Collaborating with BIDMC Dana-Farber's collaboration with Beth Israel Deaconess Medical Center (BIDMC) is an important step in shaping the future of cancer care.",
+          "retrievedAt": "2026-09-07T19:40:28.521Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1291-3",
+          "url": "https://www.dana-farber.org/find-a-doctor/mai-anh-huynh",
+          "excerpt": "nt Insurance and Financial Information Preparing for Your First Appointment Virtual Visits Practical and Legal Matters Patient Communications Planning Your In-Person Visit Prescreening and Mask Requirements Outpatient Visitor Policy Locations and Directions Places to Stay Places to Eat International Patients Resources and Support Services Patient Safety and Advocacy For Caregivers For Cancer Survivors Cancer Prevention and Risk Reduction Research Find Clinical Trials Search clinical trials for adult and pediatric cancers and blood disorders offered through Dana-Farber and our clinical partners.",
+          "retrievedAt": "2026-09-07T19:40:28.521Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1291-4",
+          "url": "https://www.dana-farber.org/find-a-doctor/mai-anh-huynh",
+          "excerpt": "tegrative Research Centers Lab Websites Core Facilities Innovations Featured Research Our Researchers For Physicians Refer a Patient For adult patients: 877-441-3324 For pediatric patients: 888-733-4662 For Physicians Refer a Patient Transfer a Patient Education and Training Continuing Medical Education Fellowships and Training Programs Faculty Development Clinical Resources For Hematologic Malignancies For Stem Cell Transplant and Cellular Therapies Clinical Advances Hub Physician Gateway How You Can Help Support the Jimmy Fund Make a donation or join an event to support Dana-Farber's mission.",
+          "retrievedAt": "2026-09-07T19:40:28.521Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1291-5",
+          "url": "https://www.dana-farber.org/find-a-doctor/mai-anh-huynh",
+          "excerpt": "nt Gifts Corporate and Employee Giving Foundation Giving Create Your Own Fundraising Page Giving Societies Giving Day Donate to Specific Cancer Area Bequests and Planned Gifts Events Participate in a Fundraising Event Support a Participant or Event Organize Your Own Fundraiser Get Involved Corporate Engagement Volunteer Friends of Dana-Farber Donate Blood and Platelets Donate Bone Marrow and Stem Cells Behind the Breakthroughs Legislative Action Network Shop Give Now About Us Why Choose Dana-Farber Each year, thousands of patients from around the world come to Dana-Farber for their cancer care.",
+          "retrievedAt": "2026-09-07T19:40:28.521Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1291-6",
+          "url": "https://www.dana-farber.org/find-a-doctor/mai-anh-huynh",
+          "excerpt": "TMENT Contact Information Appointments 617-732-7948 On This Page Locations Physician Ratings Researcher Physician Senior Physician Assistant Professor of Radiation Oncology, Harvard Medical School Centers/Programs Radiation Oncology Clinical Interests Oligometastatic Disease, Stereotactic body radiation therapy Residency Harvard Radiation Oncology Program Medical School Harvard Medical School Locations Dana-Farber Cancer Institute 450 Brookline Avenue Boston, MA 02215 Get Directions Dana-Farber Cancer Institute Dana-Farber Cancer Institute 450 Brookline Avenue Boston, MA 02215 Get Direction 42.",
+          "retrievedAt": "2026-09-07T19:40:28.521Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1291-7",
+          "url": "https://www.dana-farber.org/find-a-doctor/mai-anh-huynh",
+          "excerpt": "1083 Ratings and Comments Mai Anh Huynh, MD, PhD About Our Ratings Physician Star Rating Comment Block Discovery and Insights \",\"nextArrow\":\" \",\"appendArrows\":\".",
+          "retrievedAt": "2026-09-07T19:40:28.521Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1291-8",
+          "url": "https://www.dana-farber.org/find-a-doctor/mai-anh-huynh",
+          "excerpt": "coh-slider-nav-bottom\",\"dots\":false,\"draggable\":true,\"swipe\":true,\"fade\":false,\"vertical\":false,\"infinite\":true,\"speed\":700,\"cssEase\":\"ease\",\"pauseOnHover\":false,\"pauseOnDotsHover\":false,\"autoplay\":false,\"rows\":0},\"lg\":{\"arrows\":true,\"prevArrow\":\" \",\"nextArrow\":\" \",\"appendArrows\":\".",
+          "retrievedAt": "2026-09-07T19:40:28.521Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:41:22.152Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1292": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://profiles.ucsf.edu/hong-ha.truong"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-1292-1",
+          "url": "https://profiles.ucsf.edu/hong-ha.truong",
+          "excerpt": "a Truong | UCSF Profiles University of California, San Francisco About UCSF Search UCSF UCSF Medical Center Home About Help/FAQs Search Options UC Davis UCI UCLA UCSD UCSF All UC Health USC All Everything Research Concepts Awards People &#160;&#160;&#160;UC Health People &#160;&#160;&#160;UC Davis People &#160;&#160;&#160;UCI People &#160;&#160;&#160;UCLA People &#160;&#160;&#160;UCSD People &#160;&#160;&#160;UCSF People &#160;&#160;&#160;USC People on next line to remove space between --> Find People Find Everything Login to edit your profile (add a photo, awards, links to other websites, etc.",
+          "retrievedAt": "2026-09-07T19:40:28.716Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1292-2",
+          "url": "https://profiles.ucsf.edu/hong-ha.truong",
+          "excerpt": "Truong, PhD, MS, MPH Title(s) Professor, Medicine School School of Medicine Address 550 16th Street San Francisco CA 94158 Pronouns She/Her/Hers vCard Download vCard Biography education and training University of California, San Francisco Postdoctoral Fellowship Medicine University of California, Los Angeles Postdoctoral Fellowship Pediatrics University of Washington Ph.",
+          "retrievedAt": "2026-09-07T19:40:28.716Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1292-3",
+          "url": "https://profiles.ucsf.edu/hong-ha.truong",
+          "excerpt": "revention Strategies among Adolescents in Kenya NIH R01HD094683 Sep 12, 2017 - Jun 30, 2021 Role: Principal Investigator HIV Transmission Cluster Analysis to Inform Prevention NIH R01MH096642 Sep 1, 2012 - Jun 30, 2018 Role: Principal Investigator International Mobility of HIV NIH R01MH080657 Sep 30, 2007 - Feb 28, 2013 Role: Principal Investigator Featured Content webpage Profile at UCSF Center for AIDS Prevention Studies Bibliographic publications Publications listed below are automatically derived from MEDLINE/PubMed and other sources, which might result in incorrect or missing publications.",
+          "retrievedAt": "2026-09-07T19:40:28.716Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1292-4",
+          "url": "https://profiles.ucsf.edu/hong-ha.truong",
+          "excerpt": "Researchers can login to make corrections and additions, or contact us for help .",
+          "retrievedAt": "2026-09-07T19:40:28.716Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1292-5",
+          "url": "https://profiles.ucsf.edu/hong-ha.truong",
+          "excerpt": "Newest | Oldest | Most Cited | Most Discussed | Timeline | Field Summary | Plain Text Altmetrics Details PMC Citations indicate the number of times the publication was cited by articles in PubMed Central, and the Altmetric score represents citations in news articles and social media.",
+          "retrievedAt": "2026-09-07T19:40:28.716Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1292-6",
+          "url": "https://profiles.ucsf.edu/hong-ha.truong",
+          "excerpt": "(Note that publications are often cited in additional ways that are not shown here.",
+          "retrievedAt": "2026-09-07T19:40:28.716Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1292-7",
+          "url": "https://profiles.ucsf.edu/hong-ha.truong",
+          "excerpt": ") Fields are based on how the National Library of Medicine (NLM) classifies the publication's journal and might not represent the specific topic of the publication.",
+          "retrievedAt": "2026-09-07T19:40:28.716Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-1292-8",
+          "url": "https://profiles.ucsf.edu/hong-ha.truong",
+          "excerpt": "Translation tags are based on the publication type and the MeSH terms NLM assigns to the publication.",
+          "retrievedAt": "2026-09-07T19:40:28.716Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T19:41:22.152Z",
+      "nextAction": "Generate and independently verify overview/work proposal."
     },
     "vp-1293": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://providers.ucsd.edu/provider/quan-m-bui"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://providers.ucsd.edu/provider/quan-m-bui: HTTP 404"
+      ],
+      "updatedAt": "2026-09-07T19:41:22.152Z",
+      "nextAction": "Retry inaccessible source fetch."
     },
     "vp-1294": {
       "overview": "pending",
