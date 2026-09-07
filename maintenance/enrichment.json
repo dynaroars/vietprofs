@@ -2237,7 +2237,8 @@
         "vp-0539",
         "vp-0540"
       ],
-      "status": "pending"
+      "status": "complete",
+      "startedAt": "2026-09-07T05:08:35.545Z"
     },
     {
       "number": 28,
@@ -36559,206 +36560,993 @@
       "nextAction": "Completed: overview and work verified."
     },
     "vp-0521": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.math.univ-toulouse.fr/~nzung/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.math.univ-toulouse.fr/~nzung/: HTTP 403"
+      ],
+      "updatedAt": "2026-09-07T05:10:17.495Z",
+      "nextAction": "Retry inaccessible source fetch (HTTP 403)."
     },
     "vp-0522": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.telecom-paris.fr/phan"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0522-1",
+          "url": "https://www.telecom-paris.fr/phan",
+          "excerpt": "--> Duong Hieu Phan, Professor, T\u00e9l\u00e9com Paris, Institut Polytechnique de Paris --> --> --> une \u00e9cole de a school from Plan d\u2019acc\u00e8s Actus Faire un don English Access Map News Donate Fran\u00e7ais --> \"> --> Recherche The School Why choose us ?",
+          "retrievedAt": "2026-09-07T05:08:39.081Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0522-2",
+          "url": "https://www.telecom-paris.fr/phan",
+          "excerpt": "aining Innovation spaces Spin-offs Ideas The digital magazine for human kind and its environment The connected migrant at the French Museum of Immigration History The new frontier in quantum computing AI applied to medical imaging: the challenges of data Generative AI: environmental footprint IT researchers&rsquo; carbon footprint Regulation of AI against online manipulation during election Optical communications in free space: the security challenge Hybrid, explainable AI for medical imaging Intelligent wind turbines for optimised energy production AI applied to medical imaging: what research?",
+          "retrievedAt": "2026-09-07T05:08:39.081Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0522-3",
+          "url": "https://www.telecom-paris.fr/phan",
+          "excerpt": "Securing AI: issues, challenges, solutions Biocomputing: computer science applied to the study of viruses Human-machine interaction in the ChatGPT era Refurbished batteries, reduced environmental footprint When AI learns to listen: sound revolution and machine listening Exploring the risk of biodiversity loss Artificial intelligence for 3D mammography Research: the vital balance between targeted innovation and scientific freedom Could AI help combat tax evasion?",
+          "retrievedAt": "2026-09-07T05:08:39.081Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0522-4",
+          "url": "https://www.telecom-paris.fr/phan",
+          "excerpt": "RebrAIn: More precise neurosurgery thanks to AI Security of connected vehicles platoons International Studying at T\u00e9l\u00e9com Paris Application Our international programmes International students: testimonials MSc in Engineering Before your arrival at T\u00e9l\u00e9com Paris Partners Support for mobility Welcome to T\u00e9l\u00e9com Paris &#8211; label Campus France*** ATHENS Week at T\u00e9l\u00e9com Paris: Nearly 400 incoming and outgoing exchanges!",
+          "retrievedAt": "2026-09-07T05:08:39.081Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0522-5",
+          "url": "https://www.telecom-paris.fr/phan",
+          "excerpt": "s Actualit\u00e9s News Contact Contact Home Duong Hieu Phan Contact Contact Envoyer un e-mail Send an e-mail Site web personnel Personal Web Site \u00c9quipe de recherche : Research Team: Cybers\u00e9curit\u00e9 et Cryptographie (C\u00b2) Cybersecurity and Cryptography (C\u00b2) Laboratoire : Laboratory: Laboratoire Traitement et Communication de l'Information (LTCI) Information Processing and Communication Laboratory (LTCI) D\u00e9partement : Department: Informatique et R\u00e9seaux (Infres) Computer Sciences and Networks (Infres) Rep\u00e8res biographiques Short Biography Phan D\u01b0\u01a1ng Hi\u1ec7u has been a professor at T\u00e9l\u00e9com Paris since 2020.",
+          "retrievedAt": "2026-09-07T05:08:39.081Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0522-6",
+          "url": "https://www.telecom-paris.fr/phan",
+          "excerpt": "D degree at Ecole Normale Sup\u00e9rieure , under the supervision of David Pointcheval , then spent 15 months as postdoctoral researcher at University College London and 9 months as a research engineer at France Telecom R&D .",
+          "retrievedAt": "2026-09-07T05:08:39.081Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0522-7",
+          "url": "https://www.telecom-paris.fr/phan",
+          "excerpt": "From 2007 to 2015, he was an assistant/associate professor at LAGA , University of Paris 8-13 and from 2015 to 2020, he was a professor at XLIM , University of Limoges and the director of the Master 2 Maths CRYPTIS .",
+          "retrievedAt": "2026-09-07T05:08:39.081Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0522-8",
+          "url": "https://www.telecom-paris.fr/phan",
+          "excerpt": "Activit\u00e9s : enseignement, recherche, projets Activities : Teaching, Research, Projects List of publications.",
+          "retrievedAt": "2026-09-07T05:08:39.081Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:10:17.495Z",
+      "nextAction": "Completed: overview verified, no suitable evidence for work section."
     },
     "vp-0523": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://economix.fr/membres/phu-nguyen-van/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0523-1",
+          "url": "https://economix.fr/membres/phu-nguyen-van/",
+          "excerpt": "Phu Nguyen-Van - EconomiX - UMR 7235 search PR\u00c9SENTATION diversity_2 Qui sommes-nous ?",
+          "retrievedAt": "2026-09-07T05:08:40.552Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0523-2",
+          "url": "https://economix.fr/membres/phu-nguyen-van/",
+          "excerpt": "group Membres RECHERCHE hub AXES DE RECHERCHE Transitions, Environnement, \u00c9nergie, Institutions, Territoires Comportements, Droits et Bien-\u00eatre Macro\u00e9conomie internationale, finance, mati\u00e8res premi\u00e8res et \u00e9conom\u00e9trie financi\u00e8re library_books PUBLICATIONS ACAD\u00c9MIQUES Publications dans HAL Documents de travail sur RePec Ouvrages news Le bulletin d&#039;EconomiX \u00c9V\u00c9NEMENTS record_voice_over S\u00e9minaires co_present Colloques et Workshops person Professeur.",
+          "retrievedAt": "2026-09-07T05:08:40.552Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0523-3",
+          "url": "https://economix.fr/membres/phu-nguyen-van/",
+          "excerpt": "s school Soutenances PARTENARIATS & M\u00c9DIAS handshake Partenariats newspaper M\u00e9dias RECRUTEMENT FORMATIONS CANDIDATS AU JOB MARKET search lock FR check Fran\u00e7ais check English search RECHERCHE home ACCUEIL PR\u00c9SENTATION + diversity_2 Qui sommes-nous ?",
+          "retrievedAt": "2026-09-07T05:08:40.552Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0523-4",
+          "url": "https://economix.fr/membres/phu-nguyen-van/",
+          "excerpt": "group Membres RECHERCHE + hub Axes de recherche library_books Publications acad\u00e9miques news Le bulletin d&#039;EconomiX \u00c9V\u00c9NEMENTS + record_voice_over S\u00e9minaires co_present Colloques et Workshops person Professeur.",
+          "retrievedAt": "2026-09-07T05:08:40.552Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0523-5",
+          "url": "https://economix.fr/membres/phu-nguyen-van/",
+          "excerpt": "s school Soutenances PARTENARIATS & M\u00c9DIAS + handshake Partenariats newspaper M\u00e9dias RECRUTEMENT FORMATIONS CANDIDATS AU JOB MARKET lock INTRANET FR + check Fran\u00e7ais English home .",
+          "retrievedAt": "2026-09-07T05:08:40.552Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0523-6",
+          "url": "https://economix.fr/membres/phu-nguyen-van/",
+          "excerpt": "Membres PHU NGUYEN-VAN PHU NGUYEN-VAN DIRECTEUR(TRICE) DE RECHERCHE PHU NGUYEN-VAN Th\u00e8mes de recherche ECONOMIE DE L&#039;ENVIRONNEMENT, DE L&#039;\u00c9NERGIE ET DES RESSOURCES NATURELLES ECONOMIE DE L&#039;AGRICULTURE ECONOMIE DU D\u00c9VELOPPEMENT Axe de recherche explore Transitions, Environnement, \u00c9nergie, Institutions, Territoires Coordonn\u00e9es PHU NGUYEN-VAN mail Email Email call T\u00e9l\u00e9phone 0140977124 location_on Bureau G315 badge ORCID 0000-0003-1330-9851 library_books HAL Voir les publications PR\u00c9SENTATION Je suis Directeur de Recherche au Centre National de la Recherche Scientifique (CNRS).",
+          "retrievedAt": "2026-09-07T05:08:40.552Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0523-7",
+          "url": "https://economix.fr/membres/phu-nguyen-van/",
+          "excerpt": "Je suis actuellement affili&eacute; &agrave; EconomiX (unit&eacute; mixte de recherche du CNRS et de l'Universit&eacute; Paris Nanterre).",
+          "retrievedAt": "2026-09-07T05:08:40.552Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0523-8",
+          "url": "https://economix.fr/membres/phu-nguyen-van/",
+          "excerpt": "Je suis &eacute;galement membre du programme IDGM+ du Labex (Clermont-Ferrand, France) et du r&eacute;seau mondial \"Environment for Development\" (EfD Vietnam ).",
+          "retrievedAt": "2026-09-07T05:08:40.552Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:10:17.495Z",
+      "nextAction": "Completed: overview verified, no suitable evidence for work section."
     },
     "vp-0524": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://limos.fr/detailperson/353",
         "https://limos.fr/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0524-1",
+          "url": "https://limos.fr/detailperson/353",
+          "excerpt": "--> LIMOS - Annuaire --> --> Laboratoire d'Informatique, de Mod\u00e9lisation et d'Optimisation des Syst\u00e8mes --> --> Annuaire Contact Se connecter fr en fr en --> --> Labo Pr\u00e9sentation Annuaire Organisation International RSE Campus Services Logos et charte Axes Axe MAAD Axe SIC Axe ODPS Recherche Publications Projets Outils, Logiciels R\u00e9ussites Groupes de travail Valorisation M\u00e9diation Actualit\u00e9s Toutes les actus Offres d'emplois / de th\u00e8se Talks Keynotes S\u00e9minaires S\u00e9minaires des doctorants Animations scientifiques Partenaires Ens.",
+          "retrievedAt": "2026-09-07T05:08:42.832Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0524-2",
+          "url": "https://limos.fr/",
+          "excerpt": "--> LIMOS - Accueil --> --> Laboratoire d'Informatique, de Mod\u00e9lisation et d'Optimisation des Syst\u00e8mes --> --> Annuaire Contact Se connecter fr en fr en --> Labo Pr\u00e9sentation Annuaire Organisation International RSE Campus Services Logos et charte Axes Axe MAAD Axe SIC Axe ODPS Recherche Publications Projets Outils, Logiciels R\u00e9ussites Groupes de travail Valorisation M\u00e9diation Actualit\u00e9s Toutes les actus Offres d'emplois / de th\u00e8se Talks Keynotes S\u00e9minaires S\u00e9minaires des doctorants Animations scientifiques Partenaires Ens.",
+          "retrievedAt": "2026-09-07T05:08:43.351Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0524-3",
+          "url": "https://limos.fr/",
+          "excerpt": "t&egrave;mes B\u00e2timent partag\u00e9 avec l'ISIMA --> Axe MAAD Graphes, optimisation, simulation, apprentissage Axe SIC Donn&eacute;es, services, interop&eacute;rabilit&eacute;, r&eacute;seaux de capteurs sans fil Axe ODPS Optimisation Combinatoire et Simulation &agrave; Ev&egrave;nements Discrets Previous Next Pr\u00e9sentation --> Le Laboratoire d'Informatique, de Mod&eacute;lisation et d'Optimisation des Syst&egrave;mes (LIMOS) est une Unit&eacute; Mixte de Recherche (UMR 6158) en informatique, et plus g&eacute;n&eacute;ralement en Sciences et Technologies de l'Information et de la Communication (STIC).",
+          "retrievedAt": "2026-09-07T05:08:43.351Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:10:17.495Z",
+      "nextAction": "Completed: no suitable evidence found on official profile."
     },
     "vp-0525": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://usr.lmf.cnrs.fr/~kn/index_en.html",
         "https://usr.lmf.cnrs.fr/~kn/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0525-1",
+          "url": "https://usr.lmf.cnrs.fr/~kn/index_en.html",
+          "excerpt": "Homepage Homepage Teaching Publications About Contact Recipes |English| Fran\u00e7ais | Welcome!",
+          "retrievedAt": "2026-09-07T05:08:44.163Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0525-2",
+          "url": "https://usr.lmf.cnrs.fr/~kn/index_en.html",
+          "excerpt": "My research focuses on theory and implementation of programming languages, and in particular type systems for dynamic languages.",
+          "retrievedAt": "2026-09-07T05:08:44.163Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0525-3",
+          "url": "https://usr.lmf.cnrs.fr/~kn/",
+          "excerpt": "Homepage Homepage Teaching Publications About Contact Recipes |English| Fran\u00e7ais | Welcome!",
+          "retrievedAt": "2026-09-07T05:08:44.278Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0525-4",
+          "url": "https://usr.lmf.cnrs.fr/~kn/",
+          "excerpt": "My research focuses on theory and implementation of programming languages, and in particular type systems for dynamic languages.",
+          "retrievedAt": "2026-09-07T05:08:44.279Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:10:17.495Z",
+      "nextAction": "Completed: overview verified, no suitable evidence for work section."
     },
     "vp-0526": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.di.ens.fr/~pnguyen/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0526-1",
+          "url": "https://www.di.ens.fr/~pnguyen/",
+          "excerpt": "Phong Nguyen Toggle navigation Home Research Teaching Service Supervision About Contact for slider auto play for disabled auto play --> Introduction to --> Phong Nguyen Head of the ENS Crypto Team , Inria research professor ( Directeur de recherche ), Part-time professor at DI ENS PSL .",
+          "retrievedAt": "2026-09-07T05:08:45.168Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0526-2",
+          "url": "https://www.di.ens.fr/~pnguyen/",
+          "excerpt": "Discover More --> We Are Perfect Staffs Our Team Members Donec dolor ipsum, laoreet nec metus non, tempus elementum massa.",
+          "retrievedAt": "2026-09-07T05:08:45.168Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0526-3",
+          "url": "https://www.di.ens.fr/~pnguyen/",
+          "excerpt": "Read More --> Design is a hobby Responsive Layout Integer ut dolor eget magna congue gravida ut at arcu.",
+          "retrievedAt": "2026-09-07T05:08:45.168Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0526-4",
+          "url": "https://www.di.ens.fr/~pnguyen/",
+          "excerpt": "View Details --> My Interests Cryptography Cryptanalysis, post-quantum cryptography and real-world cryptography.",
+          "retrievedAt": "2026-09-07T05:08:45.168Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0526-5",
+          "url": "https://www.di.ens.fr/~pnguyen/",
+          "excerpt": "Algorithmic Number Theory Lattices, integer factorization and algebraic number theory.",
+          "retrievedAt": "2026-09-07T05:08:45.168Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0526-6",
+          "url": "https://www.di.ens.fr/~pnguyen/",
+          "excerpt": "--> Research See my list of publications on DBLP , my IACR record and my HAL record .",
+          "retrievedAt": "2026-09-07T05:08:45.168Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0526-7",
+          "url": "https://www.di.ens.fr/~pnguyen/",
+          "excerpt": "on: Generalized Worst-Case to Average-Case Reductions and Homomorphic Cryptosystems (Eurocrypt 2016) Learning a Zonotope and More: Cryptanalysis of NTRUSign Countermeasures (Asiacrypt 2012) Lattice Enumeration Using Extreme Pruning (Eurocrypt 2010) Learning a Parallelepiped: Cryptanalysis of GGH and NTRU Signatures (Journal of Cryptology, 2009) An LLL Algorithm with Quadratic Complexity (SIAM Journal on Computing, 2009) Sieve algorithms for the shortest vector problem are practical ( Journal of Mathematical Cryptology, 2008) Finding short lattice vectors within Mordell's inequality (STOC 2008).",
+          "retrievedAt": "2026-09-07T05:08:45.168Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0526-8",
+          "url": "https://www.di.ens.fr/~pnguyen/",
+          "excerpt": "--> Distinctions ERC Advanced Grant (2020) PARQ: Lattices in a Parallel and Quantum World.",
+          "retrievedAt": "2026-09-07T05:08:45.168Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:10:17.495Z",
+      "nextAction": "Completed: overview and work verified."
     },
     "vp-0527": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://people.epfl.ch/suong.nguyen"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0527-1",
+          "url": "https://people.epfl.ch/suong.nguyen",
+          "excerpt": "EPFL - Suong Nguyen Online People Directory Afficher / masquer le formulaire de recherche Chercher une personne Masquer le formulaire de recherche Envoyer Se connecter Modifier le profil EN FR Donn\u00e9es administratives Suong Nguyen suong.",
+          "retrievedAt": "2026-09-07T05:08:47.086Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0527-2",
+          "url": "https://people.epfl.ch/suong.nguyen",
+          "excerpt": "ch/labs/lcps/ vCard Professeure assistante tenure track/Professeur assistant tenure track , Laboratoire de chimie des polym\u00e8res synth\u00e9tiques EPFL SB ISIC LCPS BCH 4312 (Batochime UNIL) Av.",
+          "retrievedAt": "2026-09-07T05:08:47.086Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0527-3",
+          "url": "https://people.epfl.ch/suong.nguyen",
+          "excerpt": "Fran\u00e7ois-Alphonse Forel 3 1015 Lausanne +41 21 693 67 75 Office : BCH 4312 EPFL \u203a SB \u203a ISIC \u203a LCPS Professeure assistante tenure track/Professeur assistant tenure track , SCGC - Enseignement EPFL SB ISIC LCPS BCH 4312 (Batochime UNIL) Av.",
+          "retrievedAt": "2026-09-07T05:08:47.086Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0527-4",
+          "url": "https://people.epfl.ch/suong.nguyen",
+          "excerpt": "Fran\u00e7ois-Alphonse Forel 3 1015 Lausanne +41 21 693 67 75 Office : BCH 4312 EPFL \u203a SB \u203a SB-SCGC \u203a SCGC-ENS Site web: https://www.",
+          "retrievedAt": "2026-09-07T05:08:47.086Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0527-5",
+          "url": "https://people.epfl.ch/suong.nguyen",
+          "excerpt": "ch/schools/sb/scgc/ PhD program committee member , Programme doctoral Chimie et g\u00e9nie chimique EPFL SB ISIC LCPS BCH 4312 (Batochime UNIL) Av.",
+          "retrievedAt": "2026-09-07T05:08:47.086Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0527-6",
+          "url": "https://people.epfl.ch/suong.nguyen",
+          "excerpt": "Fran\u00e7ois-Alphonse Forel 3 1015 Lausanne +41 21 693 67 75 Office : BCH 4312 EPFL \u203a VPA \u203a VPA-AVP-DLE \u203a AVP-DLE-EDOC \u203a EDCH-GE Site web: https://go.",
+          "retrievedAt": "2026-09-07T05:08:47.086Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0527-7",
+          "url": "https://people.epfl.ch/suong.nguyen",
+          "excerpt": "ch/phd-edch Enseignement et PhD Enseignement et PhD Doctorant\u00b7es actuel\u00b7les Shubhanga Ballal , Lo\u00efc Emile Raboud , Yuji Watanabe Cours Modern methods in polymer chemistry and sustainability ChE-431 Ce cours pr\u00e9sente une vue d&#39;ensemble sur les principes \u00e9tablis et d\u00e9veloppements r\u00e9cents en chimie des polym\u00e8res, avec un accent particulier sur les enjeux de durabilit\u00e9 li\u00e9s aux classes de polym\u00e8res abord\u00e9es.",
+          "retrievedAt": "2026-09-07T05:08:47.086Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0527-8",
+          "url": "https://people.epfl.ch/suong.nguyen",
+          "excerpt": "Organometallic chemistry CH-223 Les bases de la chmie organom\u00e9tallique seront couverts dans ce cours.",
+          "retrievedAt": "2026-09-07T05:08:47.086Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:10:17.495Z",
+      "nextAction": "Completed: no suitable evidence found on official profile."
     },
     "vp-0528": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://people.epfl.ch/minhquang.tran"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0528-1",
+          "url": "https://people.epfl.ch/minhquang.tran",
+          "excerpt": "EPFL - Minh Quang Tran Online People Directory Afficher / masquer le formulaire de recherche Chercher une personne Masquer le formulaire de recherche Envoyer Se connecter Modifier le profil EN FR Donn\u00e9es administratives Minh Quang Tran minhquang.",
+          "retrievedAt": "2026-09-07T05:08:48.088Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0528-2",
+          "url": "https://people.epfl.ch/minhquang.tran",
+          "excerpt": "ch vCard Professeur honoraire , Professeurs honoraires SB EPFL SB-DO PH A2 354 (B\u00e2timent PH) Station 3 1015 Lausanne Office : PH A2 354 EPFL \u203a SB \u203a SB-DEC \u203a PH-SB H\u00f4te , SPC - Installations internationales EPFL SB-DO PPB 011 (B\u00e2timent PPB) Station 13 1015 Lausanne Office : PPB 011 EPFL \u203a SB \u203a SPC \u203a SPC-II Site web: https://spc.",
+          "retrievedAt": "2026-09-07T05:08:48.088Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0528-3",
+          "url": "https://people.epfl.ch/minhquang.tran",
+          "excerpt": "ch/ Charg\u00e9 de cours , SPH - Gestion EPFL \u203a SB \u203a SB-SPH \u203a SPH-GE Site web: https://sph.",
+          "retrievedAt": "2026-09-07T05:08:48.088Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0528-4",
+          "url": "https://people.epfl.ch/minhquang.tran",
+          "excerpt": "ch/ Charg\u00e9 de cours , SPH - Enseignement EPFL \u203a SB \u203a SB-SPH \u203a SPH-ENS Site web: https://sph.",
+          "retrievedAt": "2026-09-07T05:08:48.088Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0528-5",
+          "url": "https://people.epfl.ch/minhquang.tran",
+          "excerpt": "ch/ Biographie Publications Recherche Enseignement et PhD Originaire de Lausanne, Minh-Quang Tran est n\u00e9 le 30 mai 1951 \u00e0 Saigon (Vi\u00eat-nam).",
+          "retrievedAt": "2026-09-07T05:08:48.088Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0528-6",
+          "url": "https://people.epfl.ch/minhquang.tran",
+          "excerpt": "Apr\u00e8s le baccalaur\u00e9at de l'enseignement secondaire, type C, il obtient le dipl\u00f4me d'ing\u00e9nieur physicien de l'Ecole polytechnique f\u00e9d\u00e9rale de Lausanne en 1973 et un doctorat \u00e8s sciences en 1977.",
+          "retrievedAt": "2026-09-07T05:08:48.088Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0528-7",
+          "url": "https://people.epfl.ch/minhquang.tran",
+          "excerpt": "Il passe ensuite deux ann\u00e9es au D\u00e9partement de physique de l'Universit\u00e9 de Californie \u00e0 Los Angeles en tant que chercheur et d'adjunct assistant professor.",
+          "retrievedAt": "2026-09-07T05:08:48.088Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0528-8",
+          "url": "https://people.epfl.ch/minhquang.tran",
+          "excerpt": "En 1979 il rejoint le Centre de recherche en physique des plasmas (CRPP) o\u00f9 il dirige les recherches en physique fondamentale des plasmas.",
+          "retrievedAt": "2026-09-07T05:08:48.088Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:10:17.495Z",
+      "nextAction": "Completed: overview verified, no suitable evidence for work section."
     },
     "vp-0529": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.kevindoanpham.com/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0529-1",
+          "url": "https://www.kevindoanpham.com/",
+          "excerpt": "Pham Search this site Embedded Files Skip to main content Skip to navigation Kevin D.",
+          "retrievedAt": "2026-09-07T05:08:48.571Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0529-2",
+          "url": "https://www.kevindoanpham.com/",
+          "excerpt": "Pham About Publications The Architects of Dignity CV Podcasts More About Publications The Architects of Dignity CV Podcasts Kevin D.",
+          "retrievedAt": "2026-09-07T05:08:48.571Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0529-3",
+          "url": "https://www.kevindoanpham.com/",
+          "excerpt": "I&#39;m an Associate Professor of Political Theory at the University of Amsterdam.",
+          "retrievedAt": "2026-09-07T05:08:48.571Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0529-4",
+          "url": "https://www.kevindoanpham.com/",
+          "excerpt": "My research explores the history of political thought, especially how political thinkers outside &quot;the West&quot; have adapted ideas from foreign traditions for their own purposes.",
+          "retrievedAt": "2026-09-07T05:08:48.571Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0529-5",
+          "url": "https://www.kevindoanpham.com/",
+          "excerpt": "Currently, I am working on a book about how socialists around the world have defended free speech.",
+          "retrievedAt": "2026-09-07T05:08:48.571Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0529-6",
+          "url": "https://www.kevindoanpham.com/",
+          "excerpt": "My book , The Architects of Dignity: Vietnamese Visions of Decolonization (Oxford University Press, 2024), is the winner of the 2025 Ralph J.",
+          "retrievedAt": "2026-09-07T05:08:48.571Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0529-7",
+          "url": "https://www.kevindoanpham.com/",
+          "excerpt": "It is the first to introduce Vietnamese political thought to the field of political theory.",
+          "retrievedAt": "2026-09-07T05:08:48.571Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0529-8",
+          "url": "https://www.kevindoanpham.com/",
+          "excerpt": "My articles appear in journals such as Political Theory, Theory & Event, Philosophy and Global Affairs, European Journal of Political Theory, The Review of Politics, Polity, New Political Science, and elsewhere.",
+          "retrievedAt": "2026-09-07T05:08:48.571Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:10:17.495Z",
+      "nextAction": "Completed: overview and work verified."
     },
     "vp-0530": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "http://www.quantchem.kuleuven.be/cmms"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0530-1",
+          "url": "http://www.quantchem.kuleuven.be/cmms",
+          "excerpt": "The Nguyen Group The Nguyen Group TCCM Lueven Quantum Chemistry Department of Chemistry Faculty of Science KU Leuven Bibliography - CV - Wie-is-Wie - \"Chu Nom\" - Photo Galery Current Research Group Members Publications Collaborators Opportunities to join Prof.",
+          "retrievedAt": "2026-09-07T05:08:50.154Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0530-2",
+          "url": "http://www.quantchem.kuleuven.be/cmms",
+          "excerpt": "Minh Tho NGUYEN University of Leuven- Department of Chemistry Celestijnenlaan 200F - Leuven 3000 - Belgium Tel: (32) &#8211; 16 &#8211; 32 73 61 ; Fax: (32) &#8211; 16 &#8211; 32 79 92 E-mail: minh.",
+          "retrievedAt": "2026-09-07T05:08:50.154Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0530-3",
+          "url": "http://www.quantchem.kuleuven.be/cmms",
+          "excerpt": "be Recent papers Replica Exchange Molecular Dynamics Study of the Truncated Amyloid Beta (11-40) Trimer in Solution .",
+          "retrievedAt": "2026-09-07T05:08:50.154Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0530-4",
+          "url": "http://www.quantchem.kuleuven.be/cmms",
+          "excerpt": "T he 4 d and 5 d Bimetal Doped Silicon Clusters Si 12 M 2 with M = Nb, Ta, Mo and W: The Bimetallic Configuration Model .",
+          "retrievedAt": "2026-09-07T05:08:50.154Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0530-5",
+          "url": "http://www.quantchem.kuleuven.be/cmms",
+          "excerpt": "Structural Evolution, Vibrational Signatures and Energetics of Niobium Clusters from Nb 2 to Nb 20 .",
+          "retrievedAt": "2026-09-07T05:08:50.154Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0530-6",
+          "url": "http://www.quantchem.kuleuven.be/cmms",
+          "excerpt": "NGUYEN In \ufffdClusters: Structure, Bonding and Reactivity\ufffd, edited by Minh Tho Nguyen and Boggavarapu Kiran, Springer, Chapter 3, pp.",
+          "retrievedAt": "2026-09-07T05:08:50.154Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0530-7",
+          "url": "http://www.quantchem.kuleuven.be/cmms",
+          "excerpt": "1007/978-3-319-48918-6 Transition Metal Doped Boron Clusters: Structure and Bonding of B n M 2 Cycles and Tubes.",
+          "retrievedAt": "2026-09-07T05:08:50.154Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0530-8",
+          "url": "http://www.quantchem.kuleuven.be/cmms",
+          "excerpt": "In \ufffdClusters: Structure, Bonding and Reactivity\ufffd, edited by Minh Tho Nguyen and Boggavarapu Kiran, Springer, Chapter 6, pp.",
+          "retrievedAt": "2026-09-07T05:08:50.154Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:10:17.495Z",
+      "nextAction": "Completed: overview and work verified."
     },
     "vp-0531": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.staff-ksi.pwr.edu.pl/nguyen/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0531-1",
+          "url": "https://www.staff-ksi.pwr.edu.pl/nguyen/",
+          "excerpt": "Professor Ngoc Thanh Nguyen - Home Page Editor-in-Chief of JIT Editor-in-Chief of VJCS Contact Professor Ngoc Thanh Nguyen Ph.",
+          "retrievedAt": "2026-09-07T05:08:52.873Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0531-2",
+          "url": "https://www.staff-ksi.pwr.edu.pl/nguyen/",
+          "excerpt": "--> Positions Full Professor of Wroclaw University of Science and Technology Head of Department of Applied Informatics Chair of IEEE SMC Technical Committee on Computational Collective Intelligence Qualifications \u00b7 Ph.",
+          "retrievedAt": "2026-09-07T05:08:52.873Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0531-3",
+          "url": "https://www.staff-ksi.pwr.edu.pl/nguyen/",
+          "excerpt": "hnical Sciences) \u00b7 Title of Professor: granted by the President of Poland \u00b7 Distinguished Scientist of ACM 2009 \u00b7 ACM Distinguished Speaker and IEEE Distinguished Visitor (2009-2013) Recent Research \u00b7 Computational Collective Intelligence \u00b7 Knowledge Integration \u00b7 Data Mining \u00b7 Social Media \u00b7 Sentiment Analysis Publications and Citations \u00b7 Selected Publications : List of my selected publications since 2000 \u00b7 All Publications : List of all my publications \u00b7 List of my publications indexed in DBLP \u00b7 Citations in ISI Web of Science \u00b7 Google Scholar \u00b7 Scopus \u00b7 ResearchGate Professional Activities .",
+          "retrievedAt": "2026-09-07T05:08:52.873Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:10:17.495Z",
+      "nextAction": "Completed: overview verified, no suitable evidence for work section."
     },
     "vp-0532": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.jaist.ac.jp/is/labs/nguyen-lab/home/"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.jaist.ac.jp/is/labs/nguyen-lab/home/: Inaccessible / empty static response"
+      ],
+      "updatedAt": "2026-09-07T05:10:17.495Z",
+      "nextAction": "Retry inaccessible source fetch (empty response)."
     },
     "vp-0533": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "no suitable evidence",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.jaist.ac.jp/~bao/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0533-1",
+          "url": "https://www.jaist.ac.jp/~bao/",
+          "excerpt": "\ufffd\ufffd \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000T\u0000u\u0000 \u0000B\u0000a\u0000o\u0000 \u0000H\u0000o\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000T\u0000u\u0000-\u0000B\u0000a\u0000o\u0000 \u0000H\u0000o\u0000 \u0000(\u0000H\u0000\ufffd\u001e \u0000T\u0000\ufffd\u0000 \u0000B\u0000\ufffd\u001eo\u0000)\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000-\u0000-\u0000>\u0000 \u0000 \u0000P\u0000r\u0000o\u0000f\u0000e\u0000s\u0000s\u0000o\u0000r\u0000 \u0000E\u0000m\u0000e\u0000r\u0000i\u0000t\u0000u\u0000s\u0000,\u0000 \u0000J\u0000a\u0000p\u0000a\u0000n\u0000 \u0000A\u0000d\u0000v\u0000a\u0000n\u0000c\u0000e\u0000d\u0000 \u0000I\u0000n\u0000s\u0000t\u0000i\u0000t\u0000u\u0000t\u0000e\u0000 \u0000o\u0000f\u0000 \u0000S\u0000c\u0000i\u0000e\u0000n\u0000c\u0000e\u0000 \u0000a\u0000n\u0000d\u0000 \u0000T\u0000e\u0000c\u0000h\u0000n\u0000o\u0000l\u0000o\u0000g\u0000y\u0000,\u0000 \u0000b\u0000a\u0000o\u0000@\u0000j\u0000a\u0000i\u0000s\u0000t\u0000.",
+          "retrievedAt": "2026-09-07T05:08:55.255Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0533-2",
+          "url": "https://www.jaist.ac.jp/~bao/",
+          "excerpt": "\u0000j\u0000p\u0000 \u0000 \u0000 \u0000 \u0000D\u0000a\u0000t\u0000a\u0000 \u0000S\u0000c\u0000i\u0000e\u0000n\u0000c\u0000e\u0000 \u0000L\u0000a\u0000b\u0000,\u0000 \u0000V\u0000i\u0000e\u0000t\u0000n\u0000a\u0000m\u0000 \u0000I\u0000n\u0000s\u0000t\u0000i\u0000t\u0000u\u0000t\u0000e\u0000 \u0000f\u0000o\u0000r\u0000 \u0000A\u0000d\u0000v\u0000a\u0000n\u0000c\u0000e\u0000d\u0000 \u0000S\u0000t\u0000u\u0000d\u0000y\u0000 \u0000i\u0000n\u0000 \u0000M\u0000a\u0000t\u0000h\u0000e\u0000m\u0000a\u0000t\u0000i\u0000c\u0000s\u0000,\u0000 \u0000b\u0000a\u0000o\u0000@\u0000v\u0000i\u0000a\u0000s\u0000m\u0000.",
+          "retrievedAt": "2026-09-07T05:08:55.255Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0533-3",
+          "url": "https://www.jaist.ac.jp/~bao/",
+          "excerpt": "\u0000v\u0000n\u0000 \u0000 \u0000 \u0000 \u0000J\u0000o\u0000h\u0000n\u0000 \u0000v\u0000o\u0000n\u0000 \u0000N\u0000e\u0000u\u0000m\u0000a\u0000n\u0000n\u0000 \u0000I\u0000n\u0000s\u0000t\u0000i\u0000t\u0000u\u0000t\u0000e\u0000,\u0000 \u0000V\u0000i\u0000e\u0000t\u0000n\u0000a\u0000m\u0000 \u0000N\u0000a\u0000t\u0000i\u0000o\u0000n\u0000a\u0000l\u0000 \u0000U\u0000n\u0000i\u0000v\u0000e\u0000r\u0000s\u0000i\u0000t\u0000y\u0000,\u0000 \u0000b\u0000a\u0000o\u0000.",
+          "retrievedAt": "2026-09-07T05:08:55.255Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0533-4",
+          "url": "https://www.jaist.ac.jp/~bao/",
+          "excerpt": "\u0000v\u0000n\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000E\u0000d\u0000u\u0000c\u0000a\u0000t\u0000i\u0000o\u0000n\u0000 \u0000a\u0000n\u0000d\u0000 \u0000C\u0000a\u0000r\u0000e\u0000e\u0000r\u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000B\u0000.",
+          "retrievedAt": "2026-09-07T05:08:55.255Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0533-5",
+          "url": "https://www.jaist.ac.jp/~bao/",
+          "excerpt": "\u0000 \u0000d\u0000e\u0000g\u0000r\u0000e\u0000e\u0000 \u0000i\u0000n\u0000 \u0000A\u0000p\u0000p\u0000l\u0000i\u0000e\u0000d\u0000 \u0000M\u0000a\u0000t\u0000h\u0000e\u0000m\u0000a\u0000t\u0000i\u0000c\u0000s\u0000 \u0000f\u0000r\u0000o\u0000m\u0000 \u0000H\u0000a\u0000n\u0000o\u0000i\u0000 \u0000U\u0000n\u0000i\u0000v\u0000e\u0000r\u0000s\u0000i\u0000t\u0000y\u0000 \u0000o\u0000f\u0000 \u0000T\u0000e\u0000c\u0000h\u0000n\u0000o\u0000l\u0000o\u0000g\u0000y\u0000 \u0000(\u00001\u00009\u00007\u00008\u0000)\u0000,\u0000 \u0000M\u0000.",
+          "retrievedAt": "2026-09-07T05:08:55.255Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0533-6",
+          "url": "https://www.jaist.ac.jp/~bao/",
+          "excerpt": "\u0000 \u0000d\u0000e\u0000g\u0000r\u0000e\u0000e\u0000s\u0000 \u0000i\u0000n\u0000 \u0000C\u0000o\u0000m\u0000p\u0000u\u0000t\u0000e\u0000r\u0000 \u0000S\u0000c\u0000i\u0000e\u0000n\u0000c\u0000e\u0000 \u0000f\u0000r\u0000o\u0000m\u0000 \u0000P\u0000i\u0000e\u0000r\u0000r\u0000e\u0000 \u0000a\u0000n\u0000d\u0000 \u0000M\u0000a\u0000r\u0000i\u0000e\u0000 \u0000C\u0000u\u0000r\u0000i\u0000e\u0000 \u0000U\u0000n\u0000i\u0000v\u0000e\u0000r\u0000s\u0000i\u0000t\u0000y\u0000,\u0000 \u0000P\u0000a\u0000r\u0000i\u0000s\u0000 \u0000(\u00001\u00009\u00008\u00004\u0000,\u0000 \u00001\u00009\u00008\u00007\u0000)\u0000,\u0000 \u0000a\u0000n\u0000d\u0000 \u0000H\u0000a\u0000b\u0000i\u0000l\u0000i\u0000t\u0000a\u0000t\u0000i\u0000o\u0000n\u0000 \u0000\ufffd\u0000 \u0000d\u0000i\u0000r\u0000i\u0000g\u0000e\u0000r\u0000 \u0000d\u0000e\u0000s\u0000 \u0000r\u0000e\u0000c\u0000h\u0000e\u0000r\u0000c\u0000h\u0000e\u0000s\u0000 \u0000f\u0000r\u0000o\u0000m\u0000 \u0000P\u0000a\u0000r\u0000i\u0000s\u0000 \u0000D\u0000a\u0000u\u0000p\u0000h\u0000i\u0000n\u0000e\u0000 \u0000U\u0000n\u0000i\u0000v\u0000e\u0000r\u0000s\u0000i\u0000t\u0000y\u0000 \u0000(\u00001\u00009\u00009\u00008\u0000)\u0000.",
+          "retrievedAt": "2026-09-07T05:08:55.255Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0533-7",
+          "url": "https://www.jaist.ac.jp/~bao/",
+          "excerpt": "\u0000 \u0000c\u0000a\u0000n\u0000d\u0000i\u0000d\u0000a\u0000t\u0000e\u0000 \u0000(\u00001\u00009\u00008\u00003\u0000-\u00001\u00009\u00008\u00007\u0000)\u0000 \u0000a\u0000t\u0000 \u0000I\u0000N\u0000R\u0000I\u0000A\u0000 \u0000(\u0000t\u0000h\u0000e\u0000 \u0000F\u0000r\u0000e\u0000n\u0000c\u0000h\u0000 \u0000N\u0000a\u0000t\u0000i\u0000o\u0000n\u0000a\u0000l\u0000 \u0000I\u0000n\u0000s\u0000t\u0000i\u0000t\u0000u\u0000t\u0000e\u0000 \u0000f\u0000o\u0000r\u0000 \u0000R\u0000e\u0000s\u0000e\u0000a\u0000r\u0000c\u0000h\u0000 \u0000i\u0000n\u0000 \u0000C\u0000o\u0000m\u0000p\u0000u\u0000t\u0000e\u0000r\u0000 \u0000S\u0000c\u0000i\u0000e\u0000n\u0000c\u0000e\u0000 \u0000a\u0000n\u0000d\u0000 \u0000C\u0000o\u0000n\u0000t\u0000r\u0000o\u0000l\u0000,\u0000 \u0000F\u0000r\u0000a\u0000n\u0000c\u0000e\u0000)\u0000,\u0000 \u0000v\u0000i\u0000s\u0000i\u0000t\u0000i\u0000n\u0000g\u0000 \u0000f\u0000e\u0000l\u0000l\u0000o\u0000w\u0000 \u0000(\u00001\u00009\u00009\u00002\u0000)\u0000 \u0000a\u0000t\u0000 \u0000W\u0000i\u0000s\u0000c\u0000o\u0000n\u0000s\u0000i\u0000n\u0000-\u0000M\u0000a\u0000d\u0000i\u0000s\u0000o\u0000n\u0000 \u0000U\u0000n\u0000i\u0000v\u0000e\u0000r\u0000s\u0000i\u0000t\u0000y\u0000 \u0000(\u0000U\u0000S\u0000A\u0000)\u0000.",
+          "retrievedAt": "2026-09-07T05:08:55.255Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0533-8",
+          "url": "https://www.jaist.ac.jp/~bao/",
+          "excerpt": "\u00001\u00009\u00007\u00009\u0000)\u0000 \u0000a\u0000n\u0000d\u0000 \u0000A\u0000s\u0000s\u0000o\u0000c\u0000i\u0000a\u0000t\u0000e\u0000 \u0000P\u0000r\u0000o\u0000f\u0000e\u0000s\u0000s\u0000o\u0000r\u0000 \u0000(\u00001\u00009\u00009\u00001\u0000)\u0000 \u0000a\u0000t\u0000 \u0000t\u0000h\u0000e\u0000 \u0000I\u0000n\u0000s\u0000t\u0000i\u0000t\u0000u\u0000t\u0000e\u0000 \u0000o\u0000f\u0000 \u0000I\u0000n\u0000f\u0000o\u0000r\u0000m\u0000a\u0000t\u0000i\u0000o\u0000n\u0000 \u0000T\u0000e\u0000c\u0000h\u0000n\u0000o\u0000l\u0000o\u0000g\u0000y\u0000,\u0000 \u0000V\u0000i\u0000e\u0000t\u0000n\u0000a\u0000m\u0000 \u0000A\u0000c\u0000a\u0000d\u0000e\u0000m\u0000y\u0000 \u0000o\u0000f\u0000 \u0000S\u0000c\u0000i\u0000e\u0000n\u0000c\u0000e\u0000 \u0000a\u0000n\u0000d\u0000 \u0000T\u0000e\u0000c\u0000h\u0000n\u0000o\u0000l\u0000o\u0000g\u0000y\u0000 \u0000(\u0000V\u0000A\u0000S\u0000T\u0000)\u0000,\u0000 \u0000V\u0000i\u0000s\u0000i\u0000t\u0000i\u0000n\u0000g\u0000 \u0000A\u0000s\u0000s\u0000o\u0000c\u0000i\u0000a\u0000t\u0000e\u0000 \u0000P\u0000r\u0000o\u0000f\u0000e\u0000s\u0000s\u0000o\u0000r\u0000 \u0000(\u00001\u00009\u00009\u00003\u0000-\u00001\u00009\u00009\u00007\u0000)\u0000 \u0000a\u0000t\u0000 \u0000t\u0000h\u0000e\u0000 \u0000S\u0000c\u0000h\u0000o\u0000o\u0000l\u0000 \u0000o\u0000f\u0000 \u0000I\u0000n\u0000f\u0000o\u0000r\u0000m\u0000a\u0000t\u0000i\u0000o\u0000n\u0000 \u0000S\u0000c\u0000i\u0000e\u0000n\u0000c\u0000e\u0000,\u0000 \u0000P\u0000r\u0000o\u0000f\u0000e\u0000s\u0000s\u0000o\u0000r\u0000 \u0000(\u00001\u00009\u00009\u00008\u0000)\u0000 \u0000a\u0000n\u0000d\u0000 \u0000P\u0000r\u0000o\u0000f\u0000e\u0000s\u0000s\u0000o\u0000r\u0000 \u0000E\u0000m\u0000e\u0000r\u0000i\u0000t\u0000u\u0000s\u0000 \u0000(\u00002\u00000\u00001\u00008\u0000)\u0000 \u0000a\u0000t\u0000 \u0000t\u0000h\u0000e\u0000 \u0000S\u0000c\u0000h\u0000o\u0000o\u0000l\u0000 \u0000o\u0000f\u0000 \u0000K\u0000n\u0000o\u0000w\u0000l\u0000e\u0000d\u0000g\u0000e\u0000 \u0000S\u0000c\u0000i\u0000e\u0000n\u0000c\u0000e\u0000 \u0000(\u0000J\u0000A\u0000I\u0000S\u0000T\u0000)\u0000.",
+          "retrievedAt": "2026-09-07T05:08:55.255Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:10:17.495Z",
+      "nextAction": "Completed: no suitable evidence found on official profile."
     },
     "vp-0534": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://research.cuhk.edu.hk/en/persons/viet-anh-nguyen/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0534-1",
+          "url": "https://research.cuhk.edu.hk/en/persons/viet-anh-nguyen/",
+          "excerpt": "Viet Anh NGUYEN - The Chinese University of Hong Kong Skip to main navigation Skip to search Skip to main content The Chinese University of Hong Kong Home IRIS System Information Link opens in a new tab Search content at The Chinese University of Hong Kong Home Scholars Research Units Projects Research Outputs Professional & Knowledge Transfer Activities Prizes/Honours Press/Media View Scopus Profile Professor NGUYEN Viet Anh Assistant Professor , Department of Systems Engineering and Engineering Management https://orcid.",
+          "retrievedAt": "2026-09-07T05:08:56.308Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0534-2",
+          "url": "https://research.cuhk.edu.hk/en/persons/viet-anh-nguyen/",
+          "excerpt": "edu hk Overview Network Projects (2) Research Outputs (23) Professional & Knowledge Transfer Activities (1) Personal Profile Personal Profile Viet Anh Nguyen received his Ph.",
+          "retrievedAt": "2026-09-07T05:08:56.308Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0534-3",
+          "url": "https://research.cuhk.edu.hk/en/persons/viet-anh-nguyen/",
+          "excerpt": "degree in Management of Technology from Ecole Polytechnique Federale de Lausanne (EPFL) in 2019.",
+          "retrievedAt": "2026-09-07T05:08:56.308Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0534-4",
+          "url": "https://research.cuhk.edu.hk/en/persons/viet-anh-nguyen/",
+          "excerpt": "Before that, he received a Bachelor of Engineering and a Master of Engineering in Industrial and Systems Engineering from the National University of Singapore in 2011 and 2013, respectively.",
+          "retrievedAt": "2026-09-07T05:08:56.308Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0534-5",
+          "url": "https://research.cuhk.edu.hk/en/persons/viet-anh-nguyen/",
+          "excerpt": "He graduated from the Swiss Program for Beginning Doctoral Students in Economics at the Study Center Gerzensee in 2014.",
+          "retrievedAt": "2026-09-07T05:08:56.308Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0534-6",
+          "url": "https://research.cuhk.edu.hk/en/persons/viet-anh-nguyen/",
+          "excerpt": "He also holds the Diplome d\u2019Ingenieur (Gustave Eiffel batch) from Ecole Centrale des Arts et Manufactures (Ecole Centrale de Paris).",
+          "retrievedAt": "2026-09-07T05:08:56.308Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0534-7",
+          "url": "https://research.cuhk.edu.hk/en/persons/viet-anh-nguyen/",
+          "excerpt": "Nicholson Best Student Paper Award, and the Best Teaching Assistant Award from EPFL in 2018.",
+          "retrievedAt": "2026-09-07T05:08:56.308Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0534-8",
+          "url": "https://research.cuhk.edu.hk/en/persons/viet-anh-nguyen/",
+          "excerpt": "He is interested in ethical decision making under uncertainty, statistical optimization and machine learning with applications in energy systems, operations management, and data/policy analytics.",
+          "retrievedAt": "2026-09-07T05:08:56.308Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:10:17.495Z",
+      "nextAction": "Completed: overview verified, no suitable evidence for work section."
     },
     "vp-0535": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://www.fris.tohoku.ac.jp/en/researcher/creative/lebinho.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0535-1",
+          "url": "https://www.fris.tohoku.ac.jp/en/researcher/creative/lebinho.html",
+          "excerpt": "nization Tenure track system in FRIS Maps & Directions Publication Annual Meeting Abstract for Annual Meeting Consultation Desk DEI Promotion Researcher Advanced Interdisciplinary Research Division Hiroshi Masumoto Takehito Shimatsu Takashi Itoh Kenji Toma Shinsuke Niwa Takaaki Tomai Creative Interdisciplinary Research Division Yuanyuan Guo Masaki Okumura TSUMURA Kohji Toshiharu Ichinose Yuta Kudo Hiroya Abe Yuta Nakayasu Naoya Kitajima Daniel Pastor-Galan Yuta Yamane Kohei Shimokawa Shinichi Sato Kotaro Yasui SUN Sai Yuji Saito Atsushi Tahara Kyoko Chiba Hakuto Suzuki Kaoru Hiramoto Hideaki T.",
+          "retrievedAt": "2026-09-07T05:08:57.795Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0535-2",
+          "url": "https://www.fris.tohoku.ac.jp/en/researcher/creative/lebinho.html",
+          "excerpt": "uate School of Engineering) researchmap \u6771\u5317\u5927\u5b66\u7814\u7a76\u8005\u7d39\u4ecb --> \u30a6\u30a7\u30d6\u30b5\u30a4\u30c8 --> Research Fields Quantum foundation, Quantum measurements, Quantum computing Research Subjects The error and disturbance in quantum measurement Quantum-enhanced metrology and tomography Quantum computing and variational algorithms Academic Society Membership The Physical Society of Japan and the American Mathematical Society Research Outline With the rapid growth of quantum computers, besides quantum algorithms, the combination with various computational tools in computer science will find it beneficial to implement numerous tasks.",
+          "retrievedAt": "2026-09-07T05:08:57.795Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0535-3",
+          "url": "https://www.fris.tohoku.ac.jp/en/researcher/creative/lebinho.html",
+          "excerpt": "This combination has opened new potential research directions and will solve many impossible problems for classical computers.",
+          "retrievedAt": "2026-09-07T05:08:57.795Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0535-4",
+          "url": "https://www.fris.tohoku.ac.jp/en/researcher/creative/lebinho.html",
+          "excerpt": "For example, numerous variational quantum algorithms combined with optimization tools of computer science have been applied for task-oriented programming, such as finding ground and excited states in many-body systems and quantum chemistry, dynamical simulation quantum systems, quantum approximate optimization algorithms, solving linear systems of equations or matrix-vector multiplication, singular value decomposition, and machine learning and data science among the others.",
+          "retrievedAt": "2026-09-07T05:08:57.795Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0535-5",
+          "url": "https://www.fris.tohoku.ac.jp/en/researcher/creative/lebinho.html",
+          "excerpt": "New frontiers that quantum computing can tackle include the relevant quantum-to-classical transition, quantum information theory, entanglement spectroscopy, and quantum metrology.",
+          "retrievedAt": "2026-09-07T05:08:57.795Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0535-6",
+          "url": "https://www.fris.tohoku.ac.jp/en/researcher/creative/lebinho.html",
+          "excerpt": "And here, my research focuses on proposing a new frontier subject for quantum-enhanced precision limits in quantum measurements and quantum estimation theories by utilizing the advantages of the interdisciplinary combination between quantum computing and tools in computer science.",
+          "retrievedAt": "2026-09-07T05:08:57.795Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0535-7",
+          "url": "https://www.fris.tohoku.ac.jp/en/researcher/creative/lebinho.html",
+          "excerpt": "The research interests also include building a large-scale quantum simulation platform, quantum algorithms for generating entangled and squeezed systems, barren plateau problems, error mitigation, and quantum compiling.",
+          "retrievedAt": "2026-09-07T05:08:57.795Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0535-8",
+          "url": "https://www.fris.tohoku.ac.jp/en/researcher/creative/lebinho.html",
+          "excerpt": "03 The strong force is one of the fundamental forces of nature, responsible for binding the building b Topics 2026.",
+          "retrievedAt": "2026-09-07T05:08:57.795Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:10:17.495Z",
+      "nextAction": "Completed: overview verified, no suitable evidence for work section."
     },
     "vp-0536": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "verified",
       "sourcesChecked": [
         "https://www.hkubs.hku.hk/people/tuan-quang-phan/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0536-1",
+          "url": "https://www.hkubs.hku.hk/people/tuan-quang-phan/",
+          "excerpt": "dministration Research Thought Leadership Latest Research Publications HKEJ Column FT Chinese Column In the Media Academic Areas Faculty Members Research Grants PhD Job Market Candidates Seminars &#038; Conferences Edward K Y Chen Distinguished Lecture Series Impact Factors Research Centres &#038; Institutes Hong Kong Macroeconomics Forecast HKU Knowledge Exchange HKU Scholars Hub Shenzhen Research Institutes Events Media School News In the Media Press Release Career Recruit our Talents Student Career Development Career Opportunities Faculty Recruitments HKU Career Site People Home People Prof.",
+          "retrievedAt": "2026-09-07T05:08:59.167Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0536-2",
+          "url": "https://www.hkubs.hku.hk/people/tuan-quang-phan/",
+          "excerpt": "Tuan Quang PHAN Innovation and Information Management Marketing Associate Professor Associate Director, Asia Case Research Centre 3917 4212 tphan@hku.",
+          "retrievedAt": "2026-09-07T05:08:59.167Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0536-3",
+          "url": "https://www.hkubs.hku.hk/people/tuan-quang-phan/",
+          "excerpt": "us Academic & Professional Qualification Doctor of Business Administration (DBA), Marketing, Harvard Business School B.",
+          "retrievedAt": "2026-09-07T05:08:59.167Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0536-4",
+          "url": "https://www.hkubs.hku.hk/people/tuan-quang-phan/",
+          "excerpt": "Phan is an Associate Professor in Marketing and Innovation & Information Management at the University of Hong Kong (HKU), Director of the Representative Office of HKU in Vietnam, Associate Director of the Asia Case Research Centre, and founding and current President of Vietnam Association for Information Systems.",
+          "retrievedAt": "2026-09-07T05:08:59.167Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0536-5",
+          "url": "https://www.hkubs.hku.hk/people/tuan-quang-phan/",
+          "excerpt": "His research interests in social networks, privacy, education, digital economies, mobility, and retailing uses large and population-size datasets to investigate consumer insights across disciplines using econometrics, social network analysis, machine learning, natural language processing, image analysis, artificial intelligence, GIS, simulations, game theory, and experimental methods.",
+          "retrievedAt": "2026-09-07T05:08:59.167Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0536-6",
+          "url": "https://www.hkubs.hku.hk/people/tuan-quang-phan/",
+          "excerpt": "He received a doctorate from the Harvard Business School and undergraduate at the Massachusetts Institute of Technology (MIT).",
+          "retrievedAt": "2026-09-07T05:08:59.167Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0536-7",
+          "url": "https://www.hkubs.hku.hk/people/tuan-quang-phan/",
+          "excerpt": "Phan has published in top academic journals such as the P roceedings of the National Academy of Sciences (PNAS) , Information Systems Research (ISR), Marketing Science, Journal of Marketing Research (JMR), IEEE Transactions on Engineering Management, Journal of the Association of Information Systems (JAIS) as well as leading cases through Harvard Business School Publishing (HBSP) and the Asia Case Research Center (ACRC) .",
+          "retrievedAt": "2026-09-07T05:08:59.167Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0536-8",
+          "url": "https://www.hkubs.hku.hk/people/tuan-quang-phan/",
+          "excerpt": "He has also published several book chapters, and edited a book on information systems in Vietnam.",
+          "retrievedAt": "2026-09-07T05:08:59.167Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:10:17.495Z",
+      "nextAction": "Completed: overview and work verified."
     },
     "vp-0537": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://findanexpert.unimelb.edu.au/profile/912173-bach-le"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://findanexpert.unimelb.edu.au/profile/912173-bach-le: Client-rendered JS / empty static response"
+      ],
+      "updatedAt": "2026-09-07T05:10:17.495Z",
+      "nextAction": "Retry client-rendered profile URL (Find an Expert)."
     },
     "vp-0538": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "verified",
+      "work": "no suitable evidence",
       "sourcesChecked": [
         "https://research.monash.edu/en/persons/ha-hong-bui"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0538-1",
+          "url": "https://research.monash.edu/en/persons/ha-hong-bui",
+          "excerpt": "Ha Hong Bui - Monash University Skip to main navigation Skip to search Skip to main content Monash University Home Search content at Monash University Home Profiles Research units Research Infrastructure Projects Outputs Prizes Activities Press/Media View Scopus Profile Ha Hong Bui Professor Professor , Civil & Environmental Engineering https://orcid.",
+          "retrievedAt": "2026-09-07T05:09:01.977Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0538-2",
+          "url": "https://research.monash.edu/en/persons/ha-hong-bui",
+          "excerpt": "Bui monash edu 2006 2026 Research activity per year Overview Network Projects (13) Outputs (176) Prizes (15) Press/Media (2) Personal profile Biography Bui is the founder of Monash Computational Geomechanics (MCG) Lab in the Department of Civil and Environmental Engineering at Monash University, Australia.",
+          "retrievedAt": "2026-09-07T05:09:01.977Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0538-3",
+          "url": "https://research.monash.edu/en/persons/ha-hong-bui",
+          "excerpt": "His research focuses on bridging scales in modelling localised failure of engineering materials, along with advancing mathematical models to solve multi-physics problems in geomechanics.",
+          "retrievedAt": "2026-09-07T05:09:01.977Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0538-4",
+          "url": "https://research.monash.edu/en/persons/ha-hong-bui",
+          "excerpt": "The key objective of his research is to develop \u201c balanced \u201d computational tools (i.",
+          "retrievedAt": "2026-09-07T05:09:01.977Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0538-5",
+          "url": "https://research.monash.edu/en/persons/ha-hong-bui",
+          "excerpt": ", between efficiency and mechanisms) for solving real-life engineering applications.",
+          "retrievedAt": "2026-09-07T05:09:01.977Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0538-6",
+          "url": "https://research.monash.edu/en/persons/ha-hong-bui",
+          "excerpt": "com), an innovative continuum particle-based computing software designed for solving geomechanics & geotechnical engineering applications involving fractures and large deformations.",
+          "retrievedAt": "2026-09-07T05:09:01.977Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0538-7",
+          "url": "https://research.monash.edu/en/persons/ha-hong-bui",
+          "excerpt": "He is the recipient of several prestigious awards and recognitions, including the 2023 Scott Sloan Best Paper Award , the 2021 ALERT Research Medal awarded by The Alliance of Laboratories in Europe for Education, Research and Technology (ALERT Geomaterials), the ARC Future Fellowship Award from the Australian Research Council (ARC) and the JSPS Fellowship Award from the Japan Society for the Promotion of Science (JSPS).",
+          "retrievedAt": "2026-09-07T05:09:01.977Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        },
+        {
+          "id": "vp-0538-8",
+          "url": "https://research.monash.edu/en/persons/ha-hong-bui",
+          "excerpt": "He is the Editor of two leading journals in computational geomechanics, Computers & Geotechnics and Int J Numerical & Analytical Methods in Geomechanics , and serves on the Editorial Board for several esteemed journals, e.",
+          "retrievedAt": "2026-09-07T05:09:01.977Z",
+          "details": "Automatically extracted paragraph candidate; requires identity and clause verification."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "updatedAt": "2026-09-07T05:10:17.495Z",
+      "nextAction": "Completed: overview verified, no suitable evidence for work section."
     },
     "vp-0539": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://findanexpert.unimelb.edu.au/profile/13898-tuan-ngo"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://findanexpert.unimelb.edu.au/profile/13898-tuan-ngo: Client-rendered JS / empty static response"
+      ],
+      "updatedAt": "2026-09-07T05:10:17.495Z",
+      "nextAction": "Retry client-rendered profile URL (Find an Expert)."
     },
     "vp-0540": {
-      "overview": "pending",
-      "work": "pending",
+      "overview": "retry needed",
+      "work": "retry needed",
       "sourcesChecked": [
         "https://www.sydney.edu.au/business/about/our-people/academic-staff/minh-ngoc-tran.html"
       ],
       "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-06T15:00:11.510Z"
+      "errors": [
+        "https://www.sydney.edu.au/business/about/our-people/academic-staff/minh-ngoc-tran.html: Blocked / empty response"
+      ],
+      "updatedAt": "2026-09-07T05:10:17.495Z",
+      "nextAction": "Retry blocked profile URL."
     },
     "vp-0541": {
       "overview": "pending",
