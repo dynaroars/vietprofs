@@ -262,7 +262,7 @@ function renderStatsContent(data: StatsResponse) {
             </div>
           </section>
 
-          <section class="man-section">
+          ${(data.topReferrers || []).length > 0 ? `<section class="man-section">
             <h2>TOP REFERRERS (TODAY)</h2>
             <div class="stats-table-wrapper">
               <table class="stats-table">
@@ -273,11 +273,7 @@ function renderStatsContent(data: StatsResponse) {
                   </tr>
                 </thead>
                 <tbody>
-                  ${(data.topReferrers || []).length === 0 ? `
-                    <tr>
-                      <td colspan="2">Referrer details are unavailable on the current analytics plan.</td>
-                    </tr>
-                  ` : (data.topReferrers || []).slice(0, 8).map(r => {
+                  ${(data.topReferrers || []).slice(0, 8).map(r => {
                     const maxCount = data.topReferrers[0]?.count || 1;
                     const pct = Math.round((r.count / maxCount) * 100);
                     return `
@@ -293,7 +289,7 @@ function renderStatsContent(data: StatsResponse) {
                 </tbody>
               </table>
             </div>
-          </section>
+          </section>` : ''}
         </div>
 
         <section class="man-section">

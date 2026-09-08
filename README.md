@@ -97,7 +97,7 @@ how to run it manually.
 
 ## Visitor Statistics (`stats.html`)
 
-The public statistics page (`/stats.html`) displays a 30-day traffic trend and today's hostname-filtered country and requested-path breakdowns without tracking individual users. Referrer details are unavailable on the zone's current Cloudflare Analytics plan.
+The public statistics page (`/stats.html`) displays a 30-day traffic trend and today's hostname-filtered country and requested-path breakdowns without tracking individual users.
 
 - **Architecture:** `stats.html` -> `/api/stats` -> Cloudflare Worker (`worker/index.ts`) -> Cloudflare GraphQL Analytics API.
 - **Privacy:** The page receives only aggregate counts by date, country, and path; it receives no visitor IP addresses, user agents, cookies, or individual request histories.
