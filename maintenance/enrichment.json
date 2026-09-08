@@ -1481,7 +1481,13 @@
     "vp-1490",
     "vp-1491",
     "vp-1492",
-    "vp-1493"
+    "vp-1493",
+    "vp-1494",
+    "vp-1495",
+    "vp-1496",
+    "vp-1497",
+    "vp-1498",
+    "vp-1499"
   ],
   "batches": [
     {
@@ -3576,7 +3582,13 @@
       "number": 76,
       "ids": [
         "vp-1492",
-        "vp-1493"
+        "vp-1493",
+        "vp-1494",
+        "vp-1495",
+        "vp-1496",
+        "vp-1497",
+        "vp-1498",
+        "vp-1499"
       ],
       "status": "complete",
       "startedAt": "2026-09-07T22:18:53.712Z",
@@ -86040,6 +86052,66 @@
       "errors": [],
       "nextAction": "Generate and independently verify overview/work proposal.",
       "updatedAt": "2026-09-07T22:19:19.859Z"
+    },
+    "vp-1494": {
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://english.duke.edu/people/marguerite-nguyen"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-07T22:40:00.000Z"
+    },
+    "vp-1495": {
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://csumb.edu/hcom/phuong-nguyen/"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-07T22:40:00.000Z"
+    },
+    "vp-1496": {
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://www.brandeis.edu/english/faculty/tam.html"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-07T22:40:00.000Z"
+    },
+    "vp-1497": {
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://findanexpert.unimelb.edu.au/profile/13813-tess-do"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-07T22:40:00.000Z"
+    },
+    "vp-1498": {
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://www.usf.edu/arts-sciences/departments/english/people/q-le.aspx"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-07T22:40:00.000Z"
+    },
+    "vp-1499": {
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://aas.sfsu.edu/people/isabelle-thuy-pelaud"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-07T22:40:00.000Z"
     }
   },
   "generatedAt": "2026-09-07T05:40:00.000Z"
