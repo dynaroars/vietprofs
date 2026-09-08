@@ -8,6 +8,15 @@
     "CLOUDFLARE_ZONE_ID": "793e25e750ab903f3e9eb8edc8ac2b2e",
     "CLOUDFLARE_HOSTNAME": "vietprofs.roars.dev"
   },
+  "kv_namespaces": [
+    {
+      "binding": "STATS_KV",
+      "id": "c511a53525e04139b8dc23a2867eb1e4"
+    }
+  ],
+  "triggers": {
+    "crons": ["15 1 * * *"]
+  },
   "routes": [
     {
       "pattern": "vietprofs.roars.dev/api/*",

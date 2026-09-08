@@ -13,6 +13,12 @@ export interface Env {
   CLOUDFLARE_API_TOKEN?: string;
   CLOUDFLARE_ZONE_ID?: string;
   CLOUDFLARE_HOSTNAME?: string;
+  STATS_KV?: KVNamespace;
+}
+
+interface KVNamespace {
+  get<T>(key: string, type: 'json'): Promise<T | null>;
+  put(key: string, value: string): Promise<void>;
 }
 
 
@@ -20,7 +26,7 @@ export interface DailyStat {
   date: string;
   requests: number;
   pageViews: number;
-  uniques: number;
+  visits: number;
 }
 
 export interface CountryStat {
@@ -47,20 +53,24 @@ export interface StatsResponse {
   dataPeriodDays: number;
   breakdownPeriodDays: number;
   metricNotice: string;
+  coverage: {
+    last7Days: number;
+    last30Days: number;
+  };
   today: {
     requests: number;
     pageViews: number;
-    uniques: number;
+    visits: number;
   };
   last7Days: {
     requests: number;
     pageViews: number;
-    uniques: number;
+    visits: number;
   };
   last30Days: {
     requests: number;
     pageViews: number;
-    uniques: number;
+    visits: number;
   };
   countriesCount: number;
   topCountries: CountryStat[];
@@ -125,50 +135,60 @@ function cleanPageLabel(path: string): string {
   return path;
 }
 
-const GRAPHQL_QUERY = `
-query GetZoneTrafficStats($zoneTag: String!, $startDate: Date!, $endDate: Date!, $breakdownDate: Date!, $hostname: String!) {
+function isPublicHtmlPage(path: string): boolean {
+  return path === '/' || path === '/index.html' || path === '/submit.html' || /^\/people\/vp-\d{4}\.html$/.test(path);
+}
+
+const DAILY_HISTORY_KEY = 'hostname-daily-v2';
+const MAX_STORED_DAYS = 30;
+const SOURCE_LOOKBACK_DAYS = 7;
+
+function dateStringsEndingOn(endDate: string, count: number): string[] {
+  const end = new Date(`${endDate}T00:00:00Z`);
+  return Array.from({ length: count }, (_, index) => {
+    const date = new Date(end);
+    date.setUTCDate(date.getUTCDate() - (count - index - 1));
+    return date.toISOString().split('T')[0];
+  });
+}
+
+function buildGraphqlQuery(dates: string[]): string {
+  const dateVariables = dates.map((_, index) => `$date${index}: Date!`).join(', ');
+  const dailyNodes = dates.map((_, index) => `
+      traffic${index}: httpRequestsAdaptiveGroups(
+        limit: 1
+        filter: { date: $date${index}, clientRequestHTTPHost: $hostname, requestSource: "eyeball" }
+      ) { count }
+      pages${index}: httpRequestsAdaptiveGroups(
+        limit: 1
+        filter: { date: $date${index}, clientRequestHTTPHost: $hostname, requestSource: "eyeball", edgeResponseContentTypeName: "html", edgeResponseStatus_geq: 200, edgeResponseStatus_lt: 400 }
+      ) { count sum { visits } }`).join('');
+
+  return `
+query GetHostnameTrafficStats($zoneTag: String!, $hostname: String!, ${dateVariables}) {
   viewer {
-    zones(filter: { zoneTag: $zoneTag }) {
-      daily: httpRequests1dGroups(
-        limit: 35
-        filter: { date_geq: $startDate, date_leq: $endDate }
-        orderBy: [date_ASC]
-      ) {
-        dimensions {
-          date
-        }
-        sum {
-          requests
-          pageViews
-        }
-        uniq {
-          uniques
-        }
-      }
+    zones(filter: { zoneTag: $zoneTag }) {${dailyNodes}
       topCountries: httpRequestsAdaptiveGroups(
-        limit: 30
-        filter: { date: $breakdownDate, clientRequestHTTPHost: $hostname }
-        orderBy: [count_DESC]
+        limit: 250
+        filter: { date: $date${dates.length - 1}, clientRequestHTTPHost: $hostname, requestSource: "eyeball", edgeResponseContentTypeName: "html", edgeResponseStatus_geq: 200, edgeResponseStatus_lt: 400 }
       ) {
         count
-        dimensions {
-          clientCountryName
-        }
+        sum { visits }
+        dimensions { clientCountryName }
       }
       topPages: httpRequestsAdaptiveGroups(
-        limit: 30
-        filter: { date: $breakdownDate, clientRequestHTTPHost: $hostname }
+        limit: 100
+        filter: { date: $date${dates.length - 1}, clientRequestHTTPHost: $hostname, requestSource: "eyeball", edgeResponseContentTypeName: "html", edgeResponseStatus_geq: 200, edgeResponseStatus_lt: 400 }
         orderBy: [count_DESC]
       ) {
         count
-        dimensions {
-          clientRequestPath
-        }
+        dimensions { clientRequestPath }
       }
     }
   }
 }
 `;
+}
 
 function buildDemoResponse(): StatsResponse {
   const today = new Date();
@@ -182,29 +202,30 @@ function buildDemoResponse(): StatsResponse {
       date: dateStr,
       requests: Math.round(base * 3.8),
       pageViews: Math.round(base * 1.6),
-      uniques: Math.round(base * 0.8),
+      visits: Math.round(base * 0.8),
     });
   }
 
-  const todayStat = daily[daily.length - 1] || { requests: 0, pageViews: 0, uniques: 0 };
+  const todayStat = daily[daily.length - 1] || { requests: 0, pageViews: 0, visits: 0 };
   const last7 = daily.slice(-7);
   const sum7 = last7.reduce((acc, curr) => ({
     requests: acc.requests + curr.requests,
     pageViews: acc.pageViews + curr.pageViews,
-    uniques: acc.uniques + curr.uniques,
-  }), { requests: 0, pageViews: 0, uniques: 0 });
+    visits: acc.visits + curr.visits,
+  }), { requests: 0, pageViews: 0, visits: 0 });
 
   const sum30 = daily.reduce((acc, curr) => ({
     requests: acc.requests + curr.requests,
     pageViews: acc.pageViews + curr.pageViews,
-    uniques: acc.uniques + curr.uniques,
-  }), { requests: 0, pageViews: 0, uniques: 0 });
+    visits: acc.visits + curr.visits,
+  }), { requests: 0, pageViews: 0, visits: 0 });
 
   return {
     generatedAt: new Date().toISOString(),
     dataPeriodDays: 30,
     breakdownPeriodDays: 1,
-    metricNotice: 'Unique-IP totals for multi-day periods sum each day\'s count, so a repeat visitor may be counted on more than one day.',
+    metricNotice: 'Cloudflare visits and successful HTML page requests are aggregate network estimates, not verified people. Automated traffic may still be included.',
+    coverage: { last7Days: 7, last30Days: 30 },
     today: todayStat,
     last7Days: sum7,
     last30Days: sum30,
@@ -240,6 +261,154 @@ function buildDemoResponse(): StatsResponse {
     ],
     daily,
     isDemo: true,
+  };
+}
+
+interface AdaptiveRow {
+  count?: number;
+  sum?: { visits?: number };
+  dimensions?: {
+    clientCountryName?: string;
+    clientRequestPath?: string;
+    clientRefererHost?: string;
+  };
+}
+
+type ZoneAnalytics = Record<string, AdaptiveRow[] | undefined>;
+
+function sumDaily(rows: DailyStat[]): Omit<DailyStat, 'date'> {
+  return rows.reduce((total, row) => ({
+    requests: total.requests + row.requests,
+    pageViews: total.pageViews + row.pageViews,
+    visits: total.visits + row.visits,
+  }), { requests: 0, pageViews: 0, visits: 0 });
+}
+
+async function fetchLiveStats(env: Env): Promise<StatsResponse> {
+  if (!env.CLOUDFLARE_API_TOKEN || !env.CLOUDFLARE_ZONE_ID) {
+    return buildDemoResponse();
+  }
+
+  const todayStr = new Date().toISOString().split('T')[0];
+  const sourceDates = dateStringsEndingOn(todayStr, SOURCE_LOOKBACK_DAYS);
+  const hostname = env.CLOUDFLARE_HOSTNAME || 'vietprofs.roars.dev';
+  const variables: Record<string, string> = {
+    zoneTag: env.CLOUDFLARE_ZONE_ID,
+    hostname,
+  };
+  sourceDates.forEach((date, index) => {
+    variables[`date${index}`] = date;
+  });
+
+  const gqlRes = await fetch('https://api.cloudflare.com/client/v4/graphql', {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${env.CLOUDFLARE_API_TOKEN}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ query: buildGraphqlQuery(sourceDates), variables }),
+  });
+
+  if (!gqlRes.ok) {
+    throw new Error(`Cloudflare GraphQL API HTTP error: ${gqlRes.status}`);
+  }
+
+  const gqlData = (await gqlRes.json()) as {
+    data?: { viewer?: { zones?: ZoneAnalytics[] } };
+    errors?: Array<{ message: string }>;
+  };
+  if (gqlData.errors?.length) {
+    throw new Error(`Cloudflare GraphQL errors: ${gqlData.errors.map(error => error.message).join('; ')}`);
+  }
+
+  const zoneData = gqlData.data?.viewer?.zones?.[0];
+  if (!zoneData) {
+    throw new Error('No zone data returned from Cloudflare GraphQL API');
+  }
+
+  const freshDaily = sourceDates.map((date, index): DailyStat => {
+    const traffic = zoneData[`traffic${index}`]?.[0];
+    const pages = zoneData[`pages${index}`]?.[0];
+    return {
+      date,
+      requests: traffic?.count || 0,
+      pageViews: pages?.count || 0,
+      visits: pages?.sum?.visits || 0,
+    };
+  });
+
+  let storedDaily: DailyStat[] = [];
+  if (env.STATS_KV) {
+    try {
+      storedDaily = (await env.STATS_KV.get<DailyStat[]>(DAILY_HISTORY_KEY, 'json')) || [];
+    } catch (error) {
+      console.error('Could not read stored analytics history', error);
+    }
+  }
+
+  const historyByDate = new Map<string, DailyStat>();
+  [...storedDaily, ...freshDaily].forEach(row => historyByDate.set(row.date, row));
+  const firstDate = dateStringsEndingOn(todayStr, MAX_STORED_DAYS)[0];
+  const daily = [...historyByDate.values()]
+    .filter(row => row.date >= firstDate && row.date <= todayStr)
+    .sort((left, right) => left.date.localeCompare(right.date));
+
+  if (env.STATS_KV) {
+    try {
+      await env.STATS_KV.put(DAILY_HISTORY_KEY, JSON.stringify(daily));
+    } catch (error) {
+      console.error('Could not store analytics history', error);
+    }
+  }
+
+  const last7Start = dateStringsEndingOn(todayStr, 7)[0];
+  const last7 = daily.filter(row => row.date >= last7Start);
+  const today = daily.find(row => row.date === todayStr) || {
+    date: todayStr,
+    requests: 0,
+    pageViews: 0,
+    visits: 0,
+  };
+
+  const topCountries = (zoneData.topCountries || [])
+    .map((item): CountryStat => {
+      const countryInput = item.dimensions?.clientCountryName || 'Unknown';
+      const code = countryInput.length === 2 ? countryInput.toUpperCase() : 'XX';
+      return {
+        code,
+        name: COUNTRY_NAMES[code] || countryInput,
+        flag: countryCodeToFlag(code),
+        count: item.sum?.visits || 0,
+      };
+    })
+    .filter(country => country.count > 0)
+    .sort((left, right) => right.count - left.count);
+
+  const topPages = (zoneData.topPages || [])
+    .filter(item => {
+      const path = item.dimensions?.clientRequestPath || '';
+      return isPublicHtmlPage(path);
+    })
+    .map((item): PageStat => {
+      const path = item.dimensions?.clientRequestPath || '/';
+      return { path, label: cleanPageLabel(path), count: item.count || 0 };
+    });
+
+  return {
+    generatedAt: new Date().toISOString(),
+    dataPeriodDays: MAX_STORED_DAYS,
+    breakdownPeriodDays: 1,
+    metricNotice: 'Cloudflare visits and successful HTML page requests are aggregate network estimates, not verified people. Automated traffic may still be included.',
+    coverage: { last7Days: last7.length, last30Days: daily.length },
+    today,
+    last7Days: sumDaily(last7),
+    last30Days: sumDaily(daily),
+    countriesCount: topCountries.length,
+    topCountries,
+    topReferrers: [],
+    topPages,
+    daily,
+    isDemo: false,
   };
 }
 
@@ -304,139 +473,8 @@ export default {
       return response;
     }
 
-    // Live Cloudflare GraphQL query
-    const today = new Date();
-    const startDateObj = new Date(today);
-    startDateObj.setUTCDate(startDateObj.getUTCDate() - 29);
-    const startDate = startDateObj.toISOString().split('T')[0];
-    const endDate = today.toISOString().split('T')[0];
-
     try {
-      const gqlRes = await fetch('https://api.cloudflare.com/client/v4/graphql', {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${env.CLOUDFLARE_API_TOKEN}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          query: GRAPHQL_QUERY,
-          variables: {
-            zoneTag: env.CLOUDFLARE_ZONE_ID,
-            startDate,
-            endDate,
-            breakdownDate: endDate,
-            hostname: env.CLOUDFLARE_HOSTNAME || 'vietprofs.roars.dev',
-          },
-        }),
-      });
-
-      if (!gqlRes.ok) {
-        throw new Error(`Cloudflare GraphQL API HTTP error: ${gqlRes.status}`);
-      }
-
-      const gqlData = (await gqlRes.json()) as {
-        data?: {
-          viewer?: {
-            zones?: Array<{
-              daily?: Array<{
-                dimensions: { date: string };
-                sum: { requests?: number; pageViews?: number };
-                uniq: { uniques?: number };
-              }>;
-              topCountries?: Array<{
-                count: number;
-                dimensions: { clientCountryName: string };
-              }>;
-              topPages?: Array<{
-                count: number;
-                dimensions: { clientRequestPath: string };
-              }>;
-            }>;
-          };
-        };
-        errors?: Array<{ message: string }>;
-      };
-
-      if (gqlData.errors?.length) {
-        throw new Error(`Cloudflare GraphQL errors: ${gqlData.errors.map(e => e.message).join('; ')}`);
-      }
-
-      const zoneData = gqlData.data?.viewer?.zones?.[0];
-      if (!zoneData) {
-        throw new Error('No zone data returned from Cloudflare GraphQL API');
-      }
-
-      const rawDaily = zoneData.daily || [];
-      const daily: DailyStat[] = rawDaily.map(item => ({
-        date: item.dimensions.date,
-        requests: item.sum.requests || 0,
-        pageViews: item.sum.pageViews || 0,
-        uniques: item.uniq.uniques || 0,
-      }));
-
-      const todayStr = endDate;
-      const todayStat = daily.find(d => d.date === todayStr) || { date: todayStr, requests: 0, pageViews: 0, uniques: 0 };
-
-      const last7DaysDateStr = new Date(today.getTime() - 6 * 86400000).toISOString().split('T')[0];
-      const last7 = daily.filter(d => d.date >= last7DaysDateStr);
-      const sum7 = last7.reduce((acc, curr) => ({
-        requests: acc.requests + curr.requests,
-        pageViews: acc.pageViews + curr.pageViews,
-        uniques: acc.uniques + curr.uniques,
-      }), { requests: 0, pageViews: 0, uniques: 0 });
-
-      const sum30 = daily.reduce((acc, curr) => ({
-        requests: acc.requests + curr.requests,
-        pageViews: acc.pageViews + curr.pageViews,
-        uniques: acc.uniques + curr.uniques,
-      }), { requests: 0, pageViews: 0, uniques: 0 });
-
-      const rawCountries = zoneData.topCountries || [];
-      const topCountries: CountryStat[] = rawCountries.map(item => {
-        const countryInput = item.dimensions.clientCountryName || 'Unknown';
-        const code = countryInput.length === 2 ? countryInput.toUpperCase() : 'XX';
-        const name = COUNTRY_NAMES[code] || countryInput;
-        const flag = countryCodeToFlag(code);
-        return {
-          code,
-          name,
-          flag,
-          count: item.count || 0,
-        };
-      });
-
-      const topReferrers: ReferrerStat[] = [];
-
-      const rawPages = zoneData.topPages || [];
-      const topPages: PageStat[] = rawPages
-        .filter(item => {
-          const path = item.dimensions.clientRequestPath || '';
-          return !path.startsWith('/api/') && path !== '/stats.html';
-        })
-        .map(item => {
-          const path = item.dimensions.clientRequestPath || '/';
-          return {
-            path,
-            label: cleanPageLabel(path),
-            count: item.count || 0,
-          };
-        });
-
-      const responsePayload: StatsResponse = {
-        generatedAt: new Date().toISOString(),
-        dataPeriodDays: 30,
-        breakdownPeriodDays: 1,
-        metricNotice: 'Unique-IP totals for multi-day periods sum each day\'s count, so a repeat visitor may be counted on more than one day.',
-        today: todayStat,
-        last7Days: sum7,
-        last30Days: sum30,
-        countriesCount: topCountries.length,
-        topCountries,
-        topReferrers,
-        topPages,
-        daily,
-        isDemo: false,
-      };
+      const responsePayload = await fetchLiveStats(env);
 
       const response = new Response(JSON.stringify(responsePayload), {
         headers: {
@@ -467,5 +505,10 @@ export default {
         },
       });
     }
+  },
+  async scheduled(_controller: unknown, env: Env, ctx: ExecutionContext): Promise<void> {
+    ctx.waitUntil(fetchLiveStats(env).then((): undefined => undefined).catch(error => {
+      console.error('Scheduled analytics refresh failed', error);
+    }));
   },
 };

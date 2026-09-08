@@ -97,15 +97,17 @@ how to run it manually.
 
 ## Visitor Statistics (`stats.html`)
 
-The public statistics page (`/stats.html`) displays a 30-day traffic trend and today's hostname-filtered country and requested-path breakdowns without tracking individual users.
+The public statistics page (`/stats.html`) displays hostname-filtered Cloudflare visit estimates, successful HTML page requests, request-origin countries, and requested HTML paths without tracking individual users.
 
 - **Architecture:** `stats.html` -> `/api/stats` -> Cloudflare Worker (`worker/index.ts`) -> Cloudflare GraphQL Analytics API.
-- **Privacy:** The page receives only aggregate counts by date, country, and path; it receives no visitor IP addresses, user agents, cookies, or individual request histories.
+- **Scope:** Every analytics query is filtered to `vietprofs.roars.dev` and to Cloudflare's `eyeball` request source; traffic for sibling `roars.dev` hostnames is excluded.
+- **Privacy:** The page receives only aggregate counts by date, country, and HTML path; it receives no visitor IP addresses, user agents, cookies, or individual request histories.
 - **Caching:** Responses are cached at the Cloudflare edge for 10 minutes (`Cache-Control: public, max-age=600`).
+- **History:** Cloudflare's hostname-capable dataset is queried for the most recent seven days. A daily scheduled Worker refresh stores snapshots in Workers KV to build an accurate rolling 30-day series; the page always states the number of collected days.
 - **Worker Configuration:** Configured via `wrangler.jsonc`.
 - **Configuration:** `CLOUDFLARE_ZONE_ID` and `CLOUDFLARE_HOSTNAME` are regular Worker variables; `CLOUDFLARE_API_TOKEN` is a secret with `Zone.Analytics:Read` scope for `roars.dev`.
 - **Deployment:** Use `npx wrangler secret put CLOUDFLARE_API_TOKEN` to create or rotate the secret, and `npx wrangler deploy` after Worker code or configuration changes.
-- **Metric Limitations:** Multi-day unique-IP totals sum Cloudflare's daily aggregates, so a repeat visitor may be counted on more than one day. When unauthenticated locally, the API returns a clearly labeled preview dataset.
+- **Metric Limitations:** A Cloudflare visit is an aggregate network estimate, not a verified person. Automated traffic may remain. Successful HTML page requests exclude error responses, images, scripts, styles, JSON, and other assets; total HTTP requests include them. When unauthenticated locally, the API returns a clearly labeled preview dataset.
 
 ## License
 

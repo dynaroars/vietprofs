@@ -5,7 +5,8 @@ export interface DailyStat {
   date: string;
   requests: number;
   pageViews: number;
-  uniques: number;
+  visits?: number;
+  uniques?: number;
 }
 
 export interface CountryStat {
@@ -32,20 +33,27 @@ export interface StatsResponse {
   dataPeriodDays: number;
   breakdownPeriodDays?: number;
   metricNotice?: string;
+  coverage?: {
+    last7Days: number;
+    last30Days: number;
+  };
   today: {
     requests: number;
     pageViews: number;
-    uniques: number;
+    visits?: number;
+    uniques?: number;
   };
   last7Days: {
     requests: number;
     pageViews: number;
-    uniques: number;
+    visits?: number;
+    uniques?: number;
   };
   last30Days: {
     requests: number;
     pageViews: number;
-    uniques: number;
+    visits?: number;
+    uniques?: number;
   };
   countriesCount: number;
   topCountries: CountryStat[];
@@ -67,6 +75,14 @@ function formatDateLabel(dateStr: string): string {
   if (parts.length < 3) return dateStr;
   const date = new Date(Number(parts[0]), Number(parts[1]) - 1, Number(parts[2]));
   return new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric' }).format(date);
+}
+
+function visitCount(stat: { visits?: number; uniques?: number; requests?: number } | undefined): number {
+  return stat?.visits ?? stat?.uniques ?? 0;
+}
+
+function coverageLabel(actual: number, requested: number): string {
+  return `${actual} of ${requested} days collected`;
 }
 
 function renderHeader() {
@@ -96,7 +112,7 @@ function renderTrafficChart(daily: DailyStat[]): string {
   const chartWidth = width - paddingLeft - paddingRight;
   const chartHeight = height - paddingTop - paddingBottom;
 
-  const maxVal = Math.max(10, ...daily.map(d => Math.max(d.pageViews || 0, d.uniques || 0, d.requests || 0)));
+  const maxVal = Math.max(10, ...daily.map(d => Math.max(d.pageViews || 0, visitCount(d))));
   const yTicks = 4;
 
   const pointsVisits: { x: number; y: number; date: string; val: number }[] = [];
@@ -104,10 +120,10 @@ function renderTrafficChart(daily: DailyStat[]): string {
 
   daily.forEach((d, i) => {
     const x = paddingLeft + (i / Math.max(1, daily.length - 1)) * chartWidth;
-    const yVisits = paddingTop + chartHeight - ((d.uniques || d.requests || 0) / maxVal) * chartHeight;
+    const yVisits = paddingTop + chartHeight - (visitCount(d) / maxVal) * chartHeight;
     const yViews = paddingTop + chartHeight - ((d.pageViews || 0) / maxVal) * chartHeight;
 
-    pointsVisits.push({ x, y: yVisits, date: d.date, val: d.uniques || d.requests || 0 });
+    pointsVisits.push({ x, y: yVisits, date: d.date, val: visitCount(d) });
     pointsViews.push({ x, y: yViews, date: d.date, val: d.pageViews || 0 });
   });
 
@@ -142,8 +158,8 @@ function renderTrafficChart(daily: DailyStat[]): string {
   return `
     <div class="stats-chart-container">
       <div class="chart-legend">
-        <span class="legend-item legend-visits"><span class="legend-swatch"></span> Daily unique IPs</span>
-        <span class="legend-item legend-views"><span class="legend-swatch"></span> Page Views</span>
+        <span class="legend-item legend-visits"><span class="legend-swatch"></span> Cloudflare visits</span>
+        <span class="legend-item legend-views"><span class="legend-swatch"></span> Successful HTML page requests</span>
       </div>
       <svg class="stats-chart-svg" viewBox="0 0 ${width} ${height}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="30-day traffic trend chart">
         ${gridLines}
@@ -153,7 +169,7 @@ function renderTrafficChart(daily: DailyStat[]): string {
         <path d="${pathVisits}" fill="none" stroke="var(--accent-color, #2563eb)" stroke-width="2.5" />
         ${pointsVisits.map(p => `
           <circle cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="3" fill="var(--accent-color, #2563eb)">
-            <title>${escapeHtml(p.date)}: ${formatNumber(p.val)} visits</title>
+            <title>${escapeHtml(p.date)}: ${formatNumber(p.val)} Cloudflare visits</title>
           </circle>
         `).join('')}
       </svg>
@@ -163,9 +179,11 @@ function renderTrafficChart(daily: DailyStat[]): string {
 
 function renderStatsContent(data: StatsResponse) {
   const topCountry = data.topCountries?.[0];
+  const coverage7 = data.coverage?.last7Days ?? Math.min(data.daily?.length || 0, 7);
+  const coverage30 = data.coverage?.last30Days ?? (data.daily?.length || 0);
   const headline = data.countriesCount > 0
-    ? `VietProfs traffic came from <strong>${data.countriesCount} countries</strong> today.`
-    : `VietProfs aggregate readership statistics across the last 30 days.`;
+    ? `Cloudflare recorded VietProfs visits from <strong>${data.countriesCount} request-origin countries</strong> today.`
+    : `Hostname-scoped aggregate network statistics for VietProfs.`;
 
   return `
     <main>
@@ -183,7 +201,7 @@ function renderStatsContent(data: StatsResponse) {
               <div class="name-heading">
                 <h1>Public Visitor Statistics</h1>
               </div>
-              <p class="synopsis">Privacy-respecting aggregate traffic and global readership metrics for VietProfs.</p>
+              <p class="synopsis">Privacy-respecting, hostname-scoped aggregate network metrics for VietProfs.</p>
             </div>
           </div>
         </section>
@@ -193,33 +211,37 @@ function renderStatsContent(data: StatsResponse) {
           ${data.isDemo ? '<span class="demo-badge">Preview Mode (Cloudflare token pending)</span>' : ''}
         </div>
 
+        ${coverage30 < 30 ? `<div class="stats-highlight-banner">
+          <p class="highlight-text"><strong>Data coverage:</strong> ${escapeHtml(coverageLabel(coverage30, 30))}. The 30-day archive is still building.</p>
+        </div>` : ''}
+
         <section class="man-section">
           <h2>OVERVIEW (30 DAYS)</h2>
           <div class="stats-grid">
             <div class="stat-card">
-              <span class="stat-label">Unique IPs Today</span>
-              <strong class="stat-value">${formatNumber(data.today?.uniques || data.today?.requests || 0)}</strong>
-              <span class="stat-sub">${formatNumber(data.today?.pageViews || 0)} page views</span>
+              <span class="stat-label">Cloudflare Visits Today</span>
+              <strong class="stat-value">${formatNumber(visitCount(data.today))}</strong>
+              <span class="stat-sub">${formatNumber(data.today?.pageViews || 0)} successful HTML page requests</span>
             </div>
             <div class="stat-card">
-              <span class="stat-label">Daily Unique IPs (7 Days)</span>
-              <strong class="stat-value">${formatNumber(data.last7Days?.uniques || data.last7Days?.requests || 0)}</strong>
-              <span class="stat-sub">${formatNumber(data.last7Days?.pageViews || 0)} page views</span>
+              <span class="stat-label">Cloudflare Visits (7 Days)</span>
+              <strong class="stat-value">${formatNumber(visitCount(data.last7Days))}</strong>
+              <span class="stat-sub">${escapeHtml(coverageLabel(coverage7, 7))}</span>
             </div>
             <div class="stat-card">
-              <span class="stat-label">Daily Unique IPs (30 Days)</span>
-              <strong class="stat-value">${formatNumber(data.last30Days?.uniques || data.last30Days?.requests || 0)}</strong>
-              <span class="stat-sub">${formatNumber(data.last30Days?.pageViews || 0)} page views</span>
+              <span class="stat-label">Cloudflare Visits (30-Day Window)</span>
+              <strong class="stat-value">${formatNumber(visitCount(data.last30Days))}</strong>
+              <span class="stat-sub">${escapeHtml(coverageLabel(coverage30, 30))}</span>
             </div>
             <div class="stat-card">
-              <span class="stat-label">Page Views (30 Days)</span>
+              <span class="stat-label">Successful HTML Requests (30-Day Window)</span>
               <strong class="stat-value">${formatNumber(data.last30Days?.pageViews || 0)}</strong>
-              <span class="stat-sub">${formatNumber(data.last30Days?.requests || 0)} total requests</span>
+              <span class="stat-sub">${formatNumber(data.last30Days?.requests || 0)} HTTP requests including assets</span>
             </div>
             <div class="stat-card">
-              <span class="stat-label">Countries Represented</span>
+              <span class="stat-label">Request-Origin Countries Today</span>
               <strong class="stat-value">${formatNumber(data.countriesCount || 0)}</strong>
-              <span class="stat-sub">${topCountry ? `Top: ${escapeHtml(topCountry.flag)} ${escapeHtml(topCountry.name)}` : 'Global readership'}</span>
+              <span class="stat-sub">${topCountry ? `Most visits: ${escapeHtml(topCountry.flag)} ${escapeHtml(topCountry.name)}` : 'No visit data'}</span>
             </div>
           </div>
         </section>
@@ -237,7 +259,7 @@ function renderStatsContent(data: StatsResponse) {
                 <thead>
                   <tr>
                     <th>Country</th>
-                    <th class="num-col">Traffic</th>
+                    <th class="num-col">Visits</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -325,7 +347,11 @@ function renderStatsContent(data: StatsResponse) {
             <ul>
               <li><strong>No individual IP data:</strong> VietProfs receives only Cloudflare's aggregate counts, not visitor IP addresses or request-level logs.</li>
               <li><strong>No cookies:</strong> No cookies, persistent identifiers, or local tracking scripts are used.</li>
-              <li><strong>Aggregate metrics:</strong> Location metrics reflect country-level aggregated traffic.</li>
+              <li><strong>Hostname scoped:</strong> Every displayed count is filtered to <code>vietprofs.roars.dev</code>; sibling <code>roars.dev</code> sites are excluded.</li>
+              <li><strong>Visits:</strong> Cloudflare's visit estimate is more audience-oriented than raw requests, but it is not a count of verified people and may include automation.</li>
+              <li><strong>Page requests:</strong> Page totals include only successful responses Cloudflare classifies as HTML. HTTP-request totals also include errors, images, scripts, styles, JSON, and other assets.</li>
+              <li><strong>Countries:</strong> Locations are request-origin network geolocations, not demographic claims about readers.</li>
+              <li><strong>Coverage:</strong> The API reports how many dated snapshots contribute to each window; a scheduled archive builds the full 30-day history.</li>
               <li><strong>Caching:</strong> Stats are cached at the edge for 10 minutes to minimize backend load.</li>
             </ul>
             ${data.metricNotice ? `<p class="stat-sub">${escapeHtml(data.metricNotice)}</p>` : ''}
