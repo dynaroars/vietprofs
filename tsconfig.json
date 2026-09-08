@@ -16,5 +16,5 @@
     "skipLibCheck": true,
     "noImplicitAny": true
   },
-  "include": ["src/**/*.ts", "scripts/**/*.ts", "test/**/*.ts", "analysis/**/*.ts", "vite.config.ts"]
+  "include": ["src/**/*.ts", "worker/**/*.ts", "scripts/**/*.ts", "test/**/*.ts", "analysis/**/*.ts", "vite.config.ts"]
 }

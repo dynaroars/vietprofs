@@ -1,0 +1,20 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "vietprofs-stats-api",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-03-01",
+  "account_id": "16b8b7083e5362d3fb5fe759d501b174",
+  "vars": {
+    "CLOUDFLARE_ZONE_ID": "793e25e750ab903f3e9eb8edc8ac2b2e",
+    "CLOUDFLARE_HOSTNAME": "vietprofs.roars.dev"
+  },
+  "routes": [
+    {
+      "pattern": "vietprofs.roars.dev/api/*",
+      "zone_name": "roars.dev"
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}

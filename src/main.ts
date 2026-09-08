@@ -200,7 +200,10 @@ function renderShell() {
     <div class="examples" id="examples"></div>
     <div class="result-row">
       <p class="result-count" id="result-count" aria-live="polite"></p>
-      <a class="submission-link" href="submit.html">Add or update info</a>
+      <div class="header-links">
+        <a class="submission-link" href="stats.html">Visitor stats</a>
+        <a class="submission-link" href="submit.html">Add or update info</a>
+      </div>
     </div>
     <div class="roster" id="roster"></div>
     <button type="button" id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top" hidden>

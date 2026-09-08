@@ -367,6 +367,9 @@ test('mobile pages avoid horizontal overflow and provide usable tap targets', as
   assert.equal(await page.locator('.info-icon').evaluate((element) => getComputedStyle(element, '::after').visibility), 'visible');
   await assertNoOverflow();
 
+  await page.goto(`${baseUrl}/stats.html`, { waitUntil: 'networkidle' });
+  await assertNoOverflow();
+
   await page.goto(`${baseUrl}/people/vp-0242.html`, { waitUntil: 'networkidle' });
   await assertNoOverflow();
   await assertTapTargets('.eyebrow, .profile-actions a, .links a');

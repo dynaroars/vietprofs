@@ -95,6 +95,18 @@ periodically re-verifies existing entries and pushes updates directly to `main`;
 [ROSTER_MAINTENANCE.md](./ROSTER_MAINTENANCE.md#periodic-full-roster-refresh) for how it works and
 how to run it manually.
 
+## Visitor Statistics (`stats.html`)
+
+The public statistics page (`/stats.html`) displays a 30-day traffic trend and today's hostname-filtered country and requested-path breakdowns without tracking individual users. Referrer details are unavailable on the zone's current Cloudflare Analytics plan.
+
+- **Architecture:** `stats.html` -> `/api/stats` -> Cloudflare Worker (`worker/index.ts`) -> Cloudflare GraphQL Analytics API.
+- **Privacy:** The page receives only aggregate counts by date, country, and path; it receives no visitor IP addresses, user agents, cookies, or individual request histories.
+- **Caching:** Responses are cached at the Cloudflare edge for 10 minutes (`Cache-Control: public, max-age=600`).
+- **Worker Configuration:** Configured via `wrangler.jsonc`.
+- **Configuration:** `CLOUDFLARE_ZONE_ID` and `CLOUDFLARE_HOSTNAME` are regular Worker variables; `CLOUDFLARE_API_TOKEN` is a secret with `Zone.Analytics:Read` scope for `roars.dev`.
+- **Deployment:** Use `npx wrangler secret put CLOUDFLARE_API_TOKEN` to create or rotate the secret, and `npx wrangler deploy` after Worker code or configuration changes.
+- **Metric Limitations:** Multi-day unique-IP totals sum Cloudflare's daily aggregates, so a repeat visitor may be counted on more than one day. When unauthenticated locally, the API returns a clearly labeled preview dataset.
+
 ## License
 
 Code and data are licensed under [Creative Commons

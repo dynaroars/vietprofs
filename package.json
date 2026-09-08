@@ -26,7 +26,7 @@
     "sync-profile-css": "tsx scripts/sync-profile-css.ts",
     "build-stats-history": "tsx scripts/build-stats-history.ts",
     "pretest": "npm run sync-profile-css && npm run build-stats-history",
-    "test": "npm run validate-data && npm run typecheck && tsx --test test/data.test.ts test/maintenance-controller.test.ts test/profile-pages.test.ts test/ui.test.ts test/favorites.test.ts",
+    "test": "npm run validate-data && npm run typecheck && tsx --test test/data.test.ts test/maintenance-controller.test.ts test/profile-pages.test.ts test/ui.test.ts test/favorites.test.ts test/stats.test.ts",
     "test:e2e": "npm run build && tsx --test test/browser-smoke.test.ts"
   },
   "devDependencies": {
