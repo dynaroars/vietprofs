@@ -359,7 +359,7 @@ function formatValue(value: unknown): string {
 }
 
 function buildNewEntryBody(entry: SubmissionDraft, notes: string): string {
-  const lines = ['Request: New entry', '', `Name: ${entry.name}`];
+  const lines = ['Request: New entry', 'Direct update: yes', '', `Name: ${entry.name}`];
   for (const key of FIELD_ORDER) {
     const value = formatValue(entry[key]);
     if (value) lines.push(`${FIELD_LABELS[key]}: ${value}`);
@@ -368,11 +368,11 @@ function buildNewEntryBody(entry: SubmissionDraft, notes: string): string {
   return lines.join('\n');
 }
 
-// The bulk path intentionally does not parse or structure the pasted text: the maintainer's
-// research workflow (see ROSTER_MAINTENANCE.md) treats a supplied name or link as a lead to
-// independently verify, not as pre-validated facts, so passing it through raw is correct.
+// The bulk path intentionally does not parse or structure the pasted text. Keeping it raw lets
+// the maintainer distinguish fields the submitter actually asserted (direct) from details found
+// later while researching the submission.
 function buildBulkSubmissionBody(bulkText: string, entry: SubmissionDraft): string {
-  const lines = ['Request: New entry submission', '', 'Submitted information:', bulkText];
+  const lines = ['Request: New entry submission', 'Direct update: yes', '', 'Submitted information:', bulkText];
   const structuredLines: string[] = [];
   if (entry.name) structuredLines.push(`Name: ${entry.name}`);
   for (const key of FIELD_ORDER) {
@@ -387,6 +387,7 @@ function buildUpdateBody(matchedEntry: RosterEntry, entry: SubmissionDraft, note
   const nameChanged = Boolean(entry.name) && entry.name !== matchedEntry.name;
   const lines = [
     'Request: Update existing entry',
+    'Direct update: yes',
     '',
     `VietProfs ID: ${matchedEntry.id}`,
     `VietProfs profile: https://vietprofs.roars.dev/${personPath(matchedEntry.id)}`,

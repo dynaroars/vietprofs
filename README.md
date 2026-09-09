@@ -1,6 +1,6 @@
 # VietProfs
 
-[VietProfs](https://vietroars.roars.dev) is a searchable, community-maintained directory of Vietnamese and Vietnamese-diaspora academics at universities and eligible public or nonprofit scholarly research institutes worldwide. Rather than being strictly confined to traditional tenure-line university classroom professors, it covers scholarly academics and faculty-equivalent permanent researchers---such as CNRS and INRIA researchers, Max Planck group leaders, RIKEN scientists, and CSIRO researchers, as well as continuing teaching and clinical faculty---because they publish, lead research groups, obtain funding, and mentor students much like university faculty. Corporate research labs, industry roles, and temporary or non-faculty positions remain outside its scope. This [paper](https://vietprofs.roars.dev/vietprofs.pdf) describes the project.
+[VietProfs](https://vietroars.roars.dev) is a searchable, community-maintained directory of Vietnamese and Vietnamese-diaspora academics at universities and eligible public or nonprofit scholarly research institutes worldwide. Rather than being strictly confined to traditional tenure-line university classroom professors, it covers scholarly academics and faculty-equivalent permanent researchers---such as CNRS and INRIA researchers, Max Planck group leaders, RIKEN scientists, and CSIRO researchers, as well as continuing teaching and clinical faculty---because they publish, lead research groups, obtain funding, and mentor students much like university faculty. Corporate research labs, industry roles, and temporary or non-faculty positions remain outside its scope. This [paper](https://arxiv.org/abs/2609.06091) ([latest](https://vietprofs.roars.dev/vietprofs.pdf)) describes the project.
 
 This site is maintained by users all around the world (e.g., [submitting new or editing existing entries](https://vietprofs.roars.dev/submit.html)) _and_ AI bots that continuously validates and updates the directory database.  
 
@@ -70,7 +70,9 @@ assign-profile-ids -- --apply` after an entry is added.
 
 To suggest an addition or correction, use [`submit.html`](./submit.html) rather than editing the
 repository directly — paste a name, a profile/homepage link, or a directory page, and it opens a
-pre-filled email or GitHub issue for maintainers to research and verify.
+pre-filled email or GitHub issue. Fields explicitly supplied by the owner or through one of these
+direct submissions are recorded in `directFields` and preserved by automated web maintenance;
+other roster details may still be researched and updated independently.
 
 Optional research overviews and selected/recent work are source-backed enrichment fields. Their
 operational evidence and resumable batch state are kept in [`maintenance/enrichment.json`](./maintenance/enrichment.json);

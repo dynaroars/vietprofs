@@ -48,7 +48,7 @@ import process from 'node:process';
 import { fileURLToPath } from 'node:url';
 import { isDeepStrictEqual } from 'node:util';
 import { FIELDS, fieldOf, type Roster, type RosterEntry } from '../src/data.ts';
-import { HONOR_CATEGORIES, HONOR_FIELDS, INSTITUTION_TYPES, OTHER_DEGREE_FIELDS, ROSTER_FIELDS, TRACKS } from '../src/roster-constants.ts';
+import { DIRECT_FIELD_EXCLUSIONS, HONOR_CATEGORIES, HONOR_FIELDS, INSTITUTION_TYPES, OTHER_DEGREE_FIELDS, ROSTER_FIELDS, TRACKS } from '../src/roster-constants.ts';
 import { validateEnrichment } from '../src/enrichment.ts';
 
 const SCRIPT_PATH = fileURLToPath(import.meta.url);
@@ -533,9 +533,9 @@ export function selectTargetEntries(roster: Roster, target: ResolvedTarget | nul
   return [];
 }
 
-function withoutUpdateTimestamp(person: JsonRecord | null | undefined): JsonRecord | null | undefined {
+function withoutUpdateMetadata(person: JsonRecord | null | undefined): JsonRecord | null | undefined {
   if (!person) return person;
-  const { lastUpdatedAt: _ignored, ...rest } = person;
+  const { directFields: _directFields, lastUpdatedAt: _lastUpdatedAt, ...rest } = person;
   return rest;
 }
 
@@ -554,7 +554,7 @@ export function describeRosterChanges(before: JsonRecord | null | undefined, aft
   if (!before) return ['entry added'];
 
   const fields = [...new Set([...Object.keys(before), ...Object.keys(after)])]
-    .filter((field) => field !== 'lastUpdatedAt')
+    .filter((field) => !DIRECT_FIELD_EXCLUSIONS.has(field))
     .sort();
   return fields
     .filter((field) => !jsonEqual(before[field], after[field]))
@@ -620,6 +620,16 @@ export function proposalValidationError(proposal: JsonRecord): string | null {
   for (const field of ['phdMajor', 'undergradMajor', 'msMajor']) {
     if (proposal[field] !== undefined && (typeof proposal[field] !== 'string' || !proposal[field].trim())) return `proposal has invalid ${field}`;
   }
+  if (proposal.directFields !== undefined) {
+    if (!Array.isArray(proposal.directFields) || proposal.directFields.length === 0) return 'proposal directFields must be a non-empty array';
+    const seen = new Set<string>();
+    for (const field of proposal.directFields) {
+      if (typeof field !== 'string' || !ALLOWED_ROSTER_FIELDS.has(field) || DIRECT_FIELD_EXCLUSIONS.has(field)) return `proposal has invalid direct field ${JSON.stringify(field)}`;
+      if (seen.has(field)) return `proposal duplicates direct field ${field}`;
+      seen.add(field);
+    }
+    if (!proposal.directFields.every((field: string, index: number, fields: string[]) => index === 0 || fields[index - 1].localeCompare(field) < 0)) return 'proposal directFields must be sorted';
+  }
   if (proposal.state !== undefined && typeof proposal.state !== 'string') return 'proposal state must be a string';
   if (proposal.country !== undefined && typeof proposal.country !== 'string') return 'proposal country must be a string';
   const enrichmentErrors = validateEnrichment(proposal);
@@ -657,13 +667,24 @@ export function analyzeRosterProposal(beforeRoster: JsonRecord[], afterRoster: J
     return { ok: false, reason: 'proposal reordered the roster or inserted another person' };
   }
   const baseline = before.get(targetName);
+  const protectedFields = Array.isArray(baseline?.directFields) ? baseline.directFields : [];
+  if (!proposal && protectedFields.length) {
+    return { ok: false, reason: `proposal removed an entry with direct fields: ${protectedFields.join(', ')}` };
+  }
+  const overwrittenFields = protectedFields.filter((field: string) => !jsonEqual(baseline[field], proposal?.[field]));
+  if (overwrittenFields.length) {
+    return { ok: false, reason: `proposal changed direct fields: ${overwrittenFields.join(', ')}` };
+  }
+  if (proposal && !jsonEqual(baseline?.directFields, proposal.directFields)) {
+    return { ok: false, reason: 'automated maintenance cannot change directFields' };
+  }
   if (proposal) proposal = { ...proposal, lastUpdatedAt: baseline.lastUpdatedAt };
   return {
     ok: true,
     baseline,
     proposal,
     finalName: proposal?.name ?? null,
-    substantiveChange: !jsonEqual(withoutUpdateTimestamp(baseline), withoutUpdateTimestamp(proposal)),
+    substantiveChange: !jsonEqual(withoutUpdateMetadata(baseline), withoutUpdateMetadata(proposal)),
   };
 }
 
@@ -959,6 +980,10 @@ postdoctoral institution and, when explicitly documented, its end/completion yea
 eligibility rules, including that each is a faculty-level distinction and not a dissertation award,
 dissertation fellowship/grant, or other student/trainee-stage award — remove any stored honor that
 fails the eligibility rules, not just proposed additions. Do not treat a reachable URL as a complete review.
+
+Fields named in directFields are ground truth supplied directly by the owner or a community
+submission. Preserve their current values exactly. If live web evidence conflicts with one, set
+status incomplete and report the conflict; do not change the protected field or remove the entry.
 
 Before returning an update, compare every supported baseline and discovered field against the
 complete proposed object. Do not omit documented majors, graduation years, postdoctoral training,

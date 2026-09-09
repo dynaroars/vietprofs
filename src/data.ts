@@ -63,6 +63,8 @@ export interface RosterEntry {
   websiteUrl?: string;
   scholarUrl?: string;
   linkedinUrl?: string;
+  /** Fields supplied through a direct owner/community update; automated scouting must preserve them. */
+  directFields?: string[];
   /** False when the appointment has reliable evidence but lacks an official current profile. */
   confirmed?: boolean;
   lastUpdatedAt?: string;

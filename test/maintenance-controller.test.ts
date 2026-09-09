@@ -130,6 +130,39 @@ test('proposal analysis accepts one targeted edit and ignores model-chosen times
   assert.equal(result.proposal.lastUpdatedAt, people[1].lastUpdatedAt);
 });
 
+test('automated maintenance preserves direct fields while allowing other fields to change', () => {
+  const protectedPeople = structuredClone(people);
+  protectedPeople[1].directFields = ['university'];
+  const allowed = structuredClone(protectedPeople);
+  allowed[1].state = 'New State';
+  assert.equal(analyzeRosterProposal(protectedPeople, allowed, 'Old Person').ok, true);
+
+  const rejected = structuredClone(protectedPeople);
+  rejected[1].university = 'Scouted University';
+  const result = analyzeRosterProposal(protectedPeople, rejected, 'Old Person');
+  assert.equal(result.ok, false);
+  assert.match(result.reason, /changed direct fields: university/);
+});
+
+test('automated maintenance cannot remove entries with direct fields', () => {
+  const protectedPeople = structuredClone(people);
+  protectedPeople[1].directFields = ['rank'];
+  const after = protectedPeople.filter((person) => person.name !== 'Old Person');
+  const result = analyzeRosterProposal(protectedPeople, after, 'Old Person');
+  assert.equal(result.ok, false);
+  assert.match(result.reason, /removed an entry with direct fields: rank/);
+});
+
+test('automated maintenance cannot alter directFields metadata', () => {
+  const protectedPeople = structuredClone(people);
+  protectedPeople[1].directFields = ['university'];
+  const after = structuredClone(protectedPeople);
+  after[1].directFields = ['rank', 'university'];
+  const result = analyzeRosterProposal(protectedPeople, after, 'Old Person');
+  assert.equal(result.ok, false);
+  assert.match(result.reason, /cannot change directFields/);
+});
+
 test('proposal validation rejects honors missing required provenance', () => {
   const error = proposalValidationError({
     name: 'Old Person', profileUrl: 'https://example.edu/old', lastUpdatedAt: '2026-01-01T00:00:00.000Z',

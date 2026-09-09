@@ -26,6 +26,7 @@ export const REQUIRED_ROSTER_STRINGS = [
 
 export const ROSTER_FIELDS = [
   ...REQUIRED_ROSTER_STRINGS,
+  'directFields',
   'institutionType',
   'websiteUrl',
   'scholarUrl',
@@ -58,6 +59,8 @@ export const ROSTER_FIELDS = [
   'selectedWork',
   'recentWork',
 ] as const;
+
+export const DIRECT_FIELD_EXCLUSIONS = new Set<string>(['id', 'lastUpdatedAt', 'directFields']);
 
 export const HONOR_FIELDS = ['name', 'organization', 'category', 'year', 'source'] as const;
 export const OTHER_DEGREE_FIELDS = ['degree', 'institution', 'year', 'major', 'source'] as const;

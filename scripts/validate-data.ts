@@ -5,6 +5,7 @@ import {
   HONOR_FIELDS,
   INSTITUTION_TYPES,
   OTHER_DEGREE_FIELDS,
+  DIRECT_FIELD_EXCLUSIONS,
   REQUIRED_ROSTER_STRINGS,
   ROSTER_FIELDS,
   TRACKS,
@@ -197,6 +198,22 @@ for (const [index, person] of roster.entries()) {
   for (const field of ['phdMajor', 'undergradMajor', 'msMajor']) {
     if (person[field] !== undefined && (typeof person[field] !== 'string' || !person[field].trim())) {
       fail(rosterFile, `${label} has invalid ${field}`);
+    }
+  }
+  if (person.directFields !== undefined) {
+    if (!Array.isArray(person.directFields) || person.directFields.length === 0) {
+      fail(rosterFile, `${label} directFields must be a non-empty array`);
+    }
+    const directFields = new Set<string>();
+    for (const field of person.directFields) {
+      if (typeof field !== 'string' || !allowedRosterFields.has(field) || DIRECT_FIELD_EXCLUSIONS.has(field)) {
+        fail(rosterFile, `${label} has invalid direct field ${JSON.stringify(field)}`);
+      }
+      if (directFields.has(field)) fail(rosterFile, `${label} duplicates direct field ${field}`);
+      directFields.add(field);
+    }
+    if (!person.directFields.every((field: string, index: number, fields: string[]) => index === 0 || fields[index - 1].localeCompare(field) < 0)) {
+      fail(rosterFile, `${label} directFields must be sorted`);
     }
   }
   if (names.has(person.name)) fail(rosterFile, `duplicate name: ${person.name}`);

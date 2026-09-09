@@ -2179,6 +2179,10 @@
         "verifiedAt": "2026-09-06T23:45:00.000Z",
         "year": 2022
       }
+    ],
+    "directFields": [
+      "name",
+      "websiteUrl"
     ]
   },
   {
@@ -8287,6 +8291,9 @@
         "selectionMode": "selected",
         "verifiedAt": "2026-09-07T04:15:00.000Z"
       }
+    ],
+    "directFields": [
+      "name"
     ]
   },
   {
@@ -8351,6 +8358,9 @@
         "selectionMode": "recent",
         "verifiedAt": "2026-09-07T04:15:00.000Z"
       }
+    ],
+    "directFields": [
+      "name"
     ]
   },
   {
@@ -8416,6 +8426,9 @@
         "selectionMode": "recent",
         "verifiedAt": "2026-09-07T04:15:00.000Z"
       }
+    ],
+    "directFields": [
+      "name"
     ]
   },
   {
@@ -8453,7 +8466,10 @@
         "https://www.calstatela.edu/faculty/trinh-pham"
       ],
       "verifiedAt": "2026-09-07T04:15:00.000Z"
-    }
+    },
+    "directFields": [
+      "name"
+    ]
   },
   {
     "id": "vp-0129",
@@ -8520,6 +8536,9 @@
         "selectionMode": "recent",
         "verifiedAt": "2026-09-07T04:15:00.000Z"
       }
+    ],
+    "directFields": [
+      "name"
     ]
   },
   {
@@ -8585,6 +8604,9 @@
         "selectionMode": "recent",
         "verifiedAt": "2026-09-07T04:15:00.000Z"
       }
+    ],
+    "directFields": [
+      "name"
     ]
   },
   {
@@ -8664,6 +8686,9 @@
         "selectionMode": "selected",
         "verifiedAt": "2026-09-07T04:15:00.000Z"
       }
+    ],
+    "directFields": [
+      "name"
     ]
   },
   {
@@ -8745,7 +8770,10 @@
     "msYear": 2000,
     "undergradInstitution": "Massachusetts Institute of Technology",
     "undergradYear": 1998,
-    "websiteUrl": "https://nguyenlab.wse.jhu.edu/people/thao-d-vicky-nguyen/"
+    "websiteUrl": "https://nguyenlab.wse.jhu.edu/people/thao-d-vicky-nguyen/",
+    "directFields": [
+      "name"
+    ]
   },
   {
     "id": "vp-0133",
@@ -8842,6 +8870,9 @@
         "selectionMode": "recent",
         "verifiedAt": "2026-09-07T04:15:00.000Z"
       }
+    ],
+    "directFields": [
+      "name"
     ]
   },
   {
@@ -8903,6 +8934,9 @@
         "selectionMode": "selected",
         "verifiedAt": "2026-09-07T04:15:00.000Z"
       }
+    ],
+    "directFields": [
+      "name"
     ]
   },
   {
@@ -13335,6 +13369,9 @@
         "selectionMode": "recent",
         "verifiedAt": "2026-09-07T04:26:20.206Z"
       }
+    ],
+    "directFields": [
+      "name"
     ]
   },
   {
@@ -26570,7 +26607,10 @@
     "undergradInstitution": "Hanoi University of Science",
     "undergradYear": 1998,
     "msInstitution": "Vietnam National University, Hanoi",
-    "msYear": 2001
+    "msYear": 2001,
+    "directFields": [
+      "scholarUrl"
+    ]
   },
   {
     "id": "vp-0533",
@@ -32024,11 +32064,9 @@
     "track": "Tenure-line",
     "profileUrl": "https://people.njit.edu/profile/tn294",
     "scholarUrl": "https://scholar.google.com/citations?user=UrTlMiwAAAAJ&hl=en",
-    "lastUpdatedAt": "2026-09-02T15:13:46.000Z",
+    "lastUpdatedAt": "2026-09-09T18:14:40.523Z",
     "researchAreas": [
-      "Machine Learning",
-      "Reinforcement Learning",
-      "Responsible AI"
+      "Machine Learning"
     ],
     "portrait": "portraits/725-thanh-nguyen-thanh-nguyen-tang-new-jersey-institute-of-technology.webp",
     "portraitSource": "https://uws.njit.edu/ldapimage.php?format=full&uid=tn294",
@@ -32044,7 +32082,11 @@
         "https://thanhnguyentang.github.io/"
       ],
       "verifiedAt": "2026-09-07T16:31:00.000Z"
-    }
+    },
+    "directFields": [
+      "researchAreas",
+      "websiteUrl"
+    ]
   },
   {
     "id": "vp-0704",
@@ -33519,7 +33561,17 @@
         "https://www.sutd.edu.sg/profile/thanh-le-cong/"
       ],
       "verifiedAt": "2026-09-07T18:45:40.000Z"
-    }
+    },
+    "directFields": [
+      "msInstitution",
+      "msYear",
+      "name",
+      "profileUrl",
+      "scholarUrl",
+      "undergradInstitution",
+      "undergradYear",
+      "websiteUrl"
+    ]
   },
   {
     "id": "vp-0746",
@@ -38011,7 +38063,28 @@
         "https://u-aizu.ac.jp/research/faculty/detail?cd=90042&lng=en"
       ],
       "verifiedAt": "2026-09-07T19:06:00.000Z"
-    }
+    },
+    "directFields": [
+      "city",
+      "country",
+      "department",
+      "msInstitution",
+      "msYear",
+      "name",
+      "phdInstitution",
+      "phdYear",
+      "portrait",
+      "portraitSource",
+      "profileUrl",
+      "rank",
+      "researchAreas",
+      "scholarUrl",
+      "track",
+      "undergradInstitution",
+      "undergradYear",
+      "university",
+      "websiteUrl"
+    ]
   },
   {
     "id": "vp-0918",
@@ -38045,7 +38118,26 @@
         "https://www.cn.chiba-u.jp/en/researcher/nguyen_kien/"
       ],
       "verifiedAt": "2026-09-07T19:06:00.000Z"
-    }
+    },
+    "directFields": [
+      "city",
+      "country",
+      "department",
+      "name",
+      "phdInstitution",
+      "phdYear",
+      "portrait",
+      "portraitSource",
+      "profileUrl",
+      "rank",
+      "researchAreas",
+      "scholarUrl",
+      "track",
+      "undergradInstitution",
+      "undergradYear",
+      "university",
+      "websiteUrl"
+    ]
   },
   {
     "id": "vp-0919",
@@ -38072,7 +38164,24 @@
     "postdocInstitution": "McMaster University",
     "postdocYear": 2022,
     "portrait": "portraits/vp-0919-thanh-v-pham.webp",
-    "portraitSource": "https://tdb.shizuoka.ac.jp/rdb/data/photo/A19054sw.jpg"
+    "portraitSource": "https://tdb.shizuoka.ac.jp/rdb/data/photo/A19054sw.jpg",
+    "directFields": [
+      "city",
+      "country",
+      "department",
+      "name",
+      "phdInstitution",
+      "phdYear",
+      "postdocInstitution",
+      "postdocYear",
+      "profileUrl",
+      "rank",
+      "researchAreas",
+      "scholarUrl",
+      "track",
+      "university",
+      "websiteUrl"
+    ]
   },
   {
     "id": "vp-0920",
@@ -38099,7 +38208,24 @@
     "msInstitution": "Hanoi University of Science and Technology",
     "undergradInstitution": "Le Quy Don Technical University",
     "portrait": "portraits/vp-0920-xuan-tan-phan.webp",
-    "portraitSource": "https://www.shibaura-it.ac.jp/faculty/laboratory/img/5e41c7eaaef53e5561a10a5f95094c93_lab_img_2.png"
+    "portraitSource": "https://www.shibaura-it.ac.jp/faculty/laboratory/img/5e41c7eaaef53e5561a10a5f95094c93_lab_img_2.png",
+    "directFields": [
+      "city",
+      "country",
+      "department",
+      "msInstitution",
+      "name",
+      "phdInstitution",
+      "phdYear",
+      "profileUrl",
+      "rank",
+      "researchAreas",
+      "scholarUrl",
+      "track",
+      "undergradInstitution",
+      "university",
+      "websiteUrl"
+    ]
   },
   {
     "id": "vp-0921",
@@ -38126,7 +38252,26 @@
     "undergradInstitution": "Hanoi University of Science and Technology",
     "undergradYear": 1997,
     "portrait": "portraits/866-truong-cong-thang-the-university-of-aizu.webp",
-    "portraitSource": "https://u-aizu.ac.jp/upload/user/90043.jpg"
+    "portraitSource": "https://u-aizu.ac.jp/upload/user/90043.jpg",
+    "directFields": [
+      "city",
+      "country",
+      "department",
+      "name",
+      "phdInstitution",
+      "phdYear",
+      "portrait",
+      "portraitSource",
+      "profileUrl",
+      "rank",
+      "researchAreas",
+      "scholarUrl",
+      "track",
+      "undergradInstitution",
+      "undergradYear",
+      "university",
+      "websiteUrl"
+    ]
   },
   {
     "id": "vp-0922",
@@ -38155,7 +38300,28 @@
     "undergradInstitution": "Vietnam National University",
     "undergradYear": 2011,
     "portrait": "portraits/867-khanh-n-dang-the-university-of-aizu.webp",
-    "portraitSource": "https://u-aizu.ac.jp/upload/user/90142.jpg"
+    "portraitSource": "https://u-aizu.ac.jp/upload/user/90142.jpg",
+    "directFields": [
+      "city",
+      "country",
+      "department",
+      "msInstitution",
+      "msYear",
+      "name",
+      "phdInstitution",
+      "phdYear",
+      "portrait",
+      "portraitSource",
+      "profileUrl",
+      "rank",
+      "researchAreas",
+      "scholarUrl",
+      "track",
+      "undergradInstitution",
+      "undergradYear",
+      "university",
+      "websiteUrl"
+    ]
   },
   {
     "id": "vp-0923",
@@ -38226,7 +38392,25 @@
         "https://sites.google.com/view/daihnguyen0909/"
       ],
       "verifiedAt": "2026-09-07T19:06:00.000Z"
-    }
+    },
+    "directFields": [
+      "city",
+      "country",
+      "department",
+      "name",
+      "phdInstitution",
+      "phdYear",
+      "postdocInstitution",
+      "postdocYear",
+      "profileUrl",
+      "rank",
+      "researchAreas",
+      "track",
+      "undergradInstitution",
+      "undergradYear",
+      "university",
+      "websiteUrl"
+    ]
   },
   {
     "id": "vp-0925",
@@ -38258,7 +38442,25 @@
         "https://thongpham.net/"
       ],
       "verifiedAt": "2026-09-07T19:06:00.000Z"
-    }
+    },
+    "directFields": [
+      "city",
+      "country",
+      "department",
+      "msInstitution",
+      "msYear",
+      "name",
+      "phdInstitution",
+      "phdYear",
+      "profileUrl",
+      "rank",
+      "researchAreas",
+      "track",
+      "undergradInstitution",
+      "undergradYear",
+      "university",
+      "websiteUrl"
+    ]
   },
   {
     "id": "vp-0926",
@@ -38290,7 +38492,24 @@
         "https://kyoiku-kenkyudb.omu.ac.jp/html/100001108_en.html"
       ],
       "verifiedAt": "2026-09-07T19:06:00.000Z"
-    }
+    },
+    "directFields": [
+      "city",
+      "country",
+      "department",
+      "msInstitution",
+      "msYear",
+      "name",
+      "phdInstitution",
+      "phdYear",
+      "profileUrl",
+      "rank",
+      "researchAreas",
+      "track",
+      "undergradInstitution",
+      "undergradYear",
+      "university"
+    ]
   },
   {
     "id": "vp-0927",
@@ -38321,7 +38540,22 @@
       "verifiedAt": "2026-09-07T19:06:00.000Z"
     },
     "portrait": "portraits/vp-0927-van-anh-ho.webp",
-    "portraitSource": "https://fp.jaist.ac.jp/data/photo/669.jpeg"
+    "portraitSource": "https://fp.jaist.ac.jp/data/photo/669.jpeg",
+    "directFields": [
+      "city",
+      "country",
+      "department",
+      "msInstitution",
+      "msYear",
+      "name",
+      "phdInstitution",
+      "phdYear",
+      "profileUrl",
+      "rank",
+      "researchAreas",
+      "track",
+      "university"
+    ]
   },
   {
     "id": "vp-0928",
@@ -38345,7 +38579,24 @@
     "msInstitution": "Japan Advanced Institute of Science and Technology",
     "msYear": 2000,
     "undergradInstitution": "The University of Tokyo",
-    "undergradYear": 1998
+    "undergradYear": 1998,
+    "directFields": [
+      "city",
+      "country",
+      "department",
+      "msInstitution",
+      "msYear",
+      "name",
+      "phdInstitution",
+      "phdYear",
+      "profileUrl",
+      "rank",
+      "researchAreas",
+      "track",
+      "undergradInstitution",
+      "undergradYear",
+      "university"
+    ]
   },
   {
     "id": "vp-0929",
@@ -38372,7 +38623,20 @@
         "https://www.jaist.ac.jp/english/laboratory/aiw/nhnhan.html"
       ],
       "verifiedAt": "2026-09-07T19:06:00.000Z"
-    }
+    },
+    "directFields": [
+      "city",
+      "country",
+      "department",
+      "name",
+      "phdInstitution",
+      "profileUrl",
+      "rank",
+      "researchAreas",
+      "track",
+      "university",
+      "websiteUrl"
+    ]
   },
   {
     "id": "vp-0930",
@@ -38403,7 +38667,21 @@
       "verifiedAt": "2026-09-07T19:08:00.000Z"
     },
     "portrait": "portraits/vp-0930-canh-minh-do.webp",
-    "portraitSource": "https://fp.jaist.ac.jp/data/photo/764.jpeg"
+    "portraitSource": "https://fp.jaist.ac.jp/data/photo/764.jpeg",
+    "directFields": [
+      "city",
+      "country",
+      "department",
+      "msInstitution",
+      "name",
+      "phdInstitution",
+      "profileUrl",
+      "rank",
+      "researchAreas",
+      "track",
+      "university",
+      "websiteUrl"
+    ]
   },
   {
     "id": "vp-0931",
@@ -38433,7 +38711,20 @@
       "verifiedAt": "2026-09-07T19:08:00.000Z"
     },
     "portrait": "portraits/vp-0931-vu-duc-tran.webp",
-    "portraitSource": "https://fp.jaist.ac.jp/data/photo/787.jpeg"
+    "portraitSource": "https://fp.jaist.ac.jp/data/photo/787.jpeg",
+    "directFields": [
+      "city",
+      "country",
+      "department",
+      "name",
+      "phdInstitution",
+      "profileUrl",
+      "rank",
+      "researchAreas",
+      "track",
+      "university",
+      "websiteUrl"
+    ]
   },
   {
     "id": "vp-0932",
@@ -38458,7 +38749,22 @@
     "msInstitution": "Nara Institute of Science and Technology",
     "undergradInstitution": "Vietnam National University Ho Chi Minh City, University of Information Technology",
     "portrait": "portraits/0998-hoai-luan-pham-nara-institute-of-science-and-technology.webp",
-    "portraitSource": "https://isw3.naist.jp/Research/img/PhamHoaiLUAN.jpg"
+    "portraitSource": "https://isw3.naist.jp/Research/img/PhamHoaiLUAN.jpg",
+    "directFields": [
+      "city",
+      "country",
+      "department",
+      "msInstitution",
+      "name",
+      "phdInstitution",
+      "profileUrl",
+      "rank",
+      "researchAreas",
+      "track",
+      "undergradInstitution",
+      "university",
+      "websiteUrl"
+    ]
   },
   {
     "id": "vp-0933",
@@ -38479,7 +38785,19 @@
     "department": "Division of Information Science",
     "rank": "Assistant Professor",
     "portrait": "portraits/0999-vu-trung-duong-le-nara-institute-of-science-and-technology.webp",
-    "portraitSource": "https://isw3.naist.jp/Research/img/VuTrungDuongLE.jpg"
+    "portraitSource": "https://isw3.naist.jp/Research/img/VuTrungDuongLE.jpg",
+    "directFields": [
+      "city",
+      "country",
+      "department",
+      "name",
+      "profileUrl",
+      "rank",
+      "researchAreas",
+      "track",
+      "university",
+      "websiteUrl"
+    ]
   },
   {
     "id": "vp-0934",
@@ -39553,7 +39871,25 @@
     "phdInstitution": "Massey University",
     "phdYear": 2022,
     "portrait": "portraits/quan-m-p-nguyen-university-of-sussex.webp",
-    "portraitSource": "https://www.sussex.ac.uk/images/people/profile/421779.jpg"
+    "portraitSource": "https://www.sussex.ac.uk/images/people/profile/421779.jpg",
+    "directFields": [
+      "city",
+      "country",
+      "department",
+      "msInstitution",
+      "msYear",
+      "name",
+      "phdInstitution",
+      "phdYear",
+      "profileUrl",
+      "rank",
+      "researchAreas",
+      "scholarUrl",
+      "state",
+      "track",
+      "university",
+      "websiteUrl"
+    ]
   },
   {
     "id": "vp-0969",
@@ -39584,7 +39920,11 @@
         "https://www.chbe.uh.edu/faculty/vu-binh"
       ],
       "verifiedAt": "2026-09-07T19:11:00.000Z"
-    }
+    },
+    "directFields": [
+      "name",
+      "profileUrl"
+    ]
   },
   {
     "id": "vp-0970",
@@ -39616,7 +39956,11 @@
         "https://idsc.miami.edu/phuong-nguyen/"
       ],
       "verifiedAt": "2026-09-07T19:14:00.000Z"
-    }
+    },
+    "directFields": [
+      "name",
+      "profileUrl"
+    ]
   },
   {
     "id": "vp-0971",
@@ -39643,7 +39987,11 @@
       }
     ],
     "portrait": "portraits/truc-tran-weill-cornell-medicine.webp",
-    "portraitSource": "https://directory.weill.cornell.edu/api/v1/person/profile/ttt4001.png?returnGenericOn404=true"
+    "portraitSource": "https://directory.weill.cornell.edu/api/v1/person/profile/ttt4001.png?returnGenericOn404=true",
+    "directFields": [
+      "name",
+      "profileUrl"
+    ]
   },
   {
     "id": "vp-0972",
@@ -39665,7 +40013,11 @@
     ],
     "mdInstitution": "University of California, San Diego",
     "portrait": "portraits/katherine-nguyen-ucsd.webp",
-    "portraitSource": "https://researcherprofiles.org/profile/Modules/CustomViewPersonGeneralInfo/PhotoHandler.ashx?NodeID=16679312&cachekey=ebaea488-eabb-40d1-99c9-64e109c8fb9e"
+    "portraitSource": "https://researcherprofiles.org/profile/Modules/CustomViewPersonGeneralInfo/PhotoHandler.ashx?NodeID=16679312&cachekey=ebaea488-eabb-40d1-99c9-64e109c8fb9e",
+    "directFields": [
+      "name",
+      "profileUrl"
+    ]
   },
   {
     "id": "vp-0973",
@@ -39688,7 +40040,11 @@
     "phdInstitution": "Loma Linda University",
     "undergradInstitution": "University of California, San Diego",
     "portrait": "portraits/katherine-nguyen-williams-ucsd.webp",
-    "portraitSource": "https://researcherprofiles.org/profile/Modules/CustomViewPersonGeneralInfo/PhotoHandler.ashx?NodeID=195064&cachekey=922f4954-07d3-46a8-9b9d-48126dc41d6a"
+    "portraitSource": "https://researcherprofiles.org/profile/Modules/CustomViewPersonGeneralInfo/PhotoHandler.ashx?NodeID=195064&cachekey=922f4954-07d3-46a8-9b9d-48126dc41d6a",
+    "directFields": [
+      "name",
+      "profileUrl"
+    ]
   },
   {
     "id": "vp-0974",
@@ -39724,7 +40080,11 @@
         "https://pharmacy.uic.edu/profiles/tran/"
       ],
       "verifiedAt": "2026-09-07T19:14:00.000Z"
-    }
+    },
+    "directFields": [
+      "name",
+      "profileUrl"
+    ]
   },
   {
     "id": "vp-0975",
@@ -39754,7 +40114,11 @@
         "https://profiles.utsouthwestern.edu/profile/81430/thanh-tran.html"
       ],
       "verifiedAt": "2026-09-07T19:14:00.000Z"
-    }
+    },
+    "directFields": [
+      "name",
+      "profileUrl"
+    ]
   },
   {
     "id": "vp-0976",
@@ -39776,7 +40140,11 @@
     "mdYear": 2018,
     "undergradInstitution": "Rutgers University-Newark",
     "portrait": "portraits/christian-nguyen-uthscsa.webp",
-    "portraitSource": "https://directory.uthscsa.edu/sites/directory/files/2026-07/NGUYEN%20Christian.jpg"
+    "portraitSource": "https://directory.uthscsa.edu/sites/directory/files/2026-07/NGUYEN%20Christian.jpg",
+    "directFields": [
+      "name",
+      "profileUrl"
+    ]
   },
   {
     "id": "vp-0977",
@@ -39812,7 +40180,11 @@
         "https://pharmacy.osu.edu/directory/susan-nguyen"
       ],
       "verifiedAt": "2026-09-07T19:14:00.000Z"
-    }
+    },
+    "directFields": [
+      "name",
+      "profileUrl"
+    ]
   },
   {
     "id": "vp-0978",
@@ -39839,6 +40211,10 @@
         "year": 2012,
         "source": "https://www.xula.edu/directory/people/knguye14.html"
       }
+    ],
+    "directFields": [
+      "name",
+      "profileUrl"
     ]
   },
   {
@@ -39865,6 +40241,10 @@
         "year": 2015,
         "source": "https://www.xula.edu/directory/people/nnguye32.html"
       }
+    ],
+    "directFields": [
+      "name",
+      "profileUrl"
     ]
   },
   {
@@ -39889,7 +40269,11 @@
     "undergradInstitution": "University of California, Irvine",
     "msInstitution": "California State University, Long Beach",
     "portrait": "portraits/h-bryant-nguyen-loma-linda-university.webp",
-    "portraitSource": "https://llu.edu/sites/llu.edu/files/styles/focal_point_portrait_300x400/public/faculty/WjPhDmEg20KBE2DGhIMY4vTmXkp9NQci8n8y3DLVP5k.jpeg?itok=zDjd5CPg"
+    "portraitSource": "https://llu.edu/sites/llu.edu/files/styles/focal_point_portrait_300x400/public/faculty/WjPhDmEg20KBE2DGhIMY4vTmXkp9NQci8n8y3DLVP5k.jpeg?itok=zDjd5CPg",
+    "directFields": [
+      "name",
+      "profileUrl"
+    ]
   },
   {
     "id": "vp-0981",
@@ -39910,7 +40294,11 @@
       "Nuclear Cardiology"
     ],
     "mdInstitution": "University Pierre & Marie Curie",
-    "mdYear": 1984
+    "mdYear": 1984,
+    "directFields": [
+      "name",
+      "profileUrl"
+    ]
   },
   {
     "id": "vp-0982",
@@ -39937,7 +40325,11 @@
         "https://www.mayo.edu/research/faculty/nguyen-cuong-c-m-d/bio-00026558"
       ],
       "verifiedAt": "2026-09-07T19:14:00.000Z"
-    }
+    },
+    "directFields": [
+      "name",
+      "profileUrl"
+    ]
   },
   {
     "id": "vp-0983",
@@ -39963,7 +40355,11 @@
         "https://www.mayo.edu/research/faculty/tran-nguyen-h-m-d/bio-20537785"
       ],
       "verifiedAt": "2026-09-07T19:14:00.000Z"
-    }
+    },
+    "directFields": [
+      "name",
+      "profileUrl"
+    ]
   },
   {
     "id": "vp-0984",
@@ -39980,6 +40376,10 @@
     "track": "Tenure-line",
     "researchAreas": [
       "Transplant Surgery"
+    ],
+    "directFields": [
+      "name",
+      "profileUrl"
     ]
   },
   {
@@ -40012,7 +40412,11 @@
         "https://www.mayo.edu/research/faculty/nguyen-aivi-t-m-d/bio-20585981"
       ],
       "verifiedAt": "2026-09-07T19:14:00.000Z"
-    }
+    },
+    "directFields": [
+      "name",
+      "profileUrl"
+    ]
   },
   {
     "id": "vp-0986",
@@ -40037,7 +40441,11 @@
     "msInstitution": "Stanford University",
     "undergradInstitution": "University of California, Los Angeles",
     "portrait": "portraits/vp-0986-long-h-nguyen.webp",
-    "portraitSource": "https://www.massgeneralbrigham.org/en/doctors/n/media_1ef7fbf43d8dab46e5a6fd3095a5e81061678643c.jpg?width=1200&#x26;format=pjpg&#x26;optimize=medium"
+    "portraitSource": "https://www.massgeneralbrigham.org/en/doctors/n/media_1ef7fbf43d8dab46e5a6fd3095a5e81061678643c.jpg?width=1200&#x26;format=pjpg&#x26;optimize=medium",
+    "directFields": [
+      "name",
+      "profileUrl"
+    ]
   },
   {
     "id": "vp-0987",
@@ -40059,7 +40467,11 @@
     "phdInstitution": "University of Tokyo",
     "phdYear": 2009,
     "portrait": "portraits/vp-0987-nam-hai-pham.webp",
-    "portraitSource": "https://researchmap.jp/magn/avatar.png"
+    "portraitSource": "https://researchmap.jp/magn/avatar.png",
+    "directFields": [
+      "name",
+      "profileUrl"
+    ]
   },
   {
     "id": "vp-0988",
@@ -40089,7 +40501,11 @@
         "https://www.eeis.t.u-tokyo.ac.jp/en/staff/le-duc-anh/"
       ],
       "verifiedAt": "2026-09-07T19:14:00.000Z"
-    }
+    },
+    "directFields": [
+      "name",
+      "profileUrl"
+    ]
   },
   {
     "id": "vp-0989",
@@ -40116,7 +40532,11 @@
         "https://profs.provost.nagoya-u.ac.jp/html/100011169_en.html"
       ],
       "verifiedAt": "2026-09-07T19:14:00.000Z"
-    }
+    },
+    "directFields": [
+      "name",
+      "profileUrl"
+    ]
   },
   {
     "id": "vp-0990",
@@ -40144,7 +40564,11 @@
         "https://ag.kyushu-u.ac.jp/english/organization/teacher/prof/ta_viet_ton/"
       ],
       "verifiedAt": "2026-09-07T19:17:00.000Z"
-    }
+    },
+    "directFields": [
+      "name",
+      "profileUrl"
+    ]
   },
   {
     "id": "vp-0991",
@@ -40164,7 +40588,11 @@
       "Renewable Energy Systems"
     ],
     "phdInstitution": "Waseda University",
-    "phdYear": 2015
+    "phdYear": 2015,
+    "directFields": [
+      "name",
+      "profileUrl"
+    ]
   },
   {
     "id": "vp-0992",
@@ -40192,7 +40620,11 @@
         "https://hiendn.github.io/"
       ],
       "verifiedAt": "2026-09-07T19:17:00.000Z"
-    }
+    },
+    "directFields": [
+      "name",
+      "profileUrl"
+    ]
   },
   {
     "id": "vp-0993",
@@ -40211,7 +40643,11 @@
       "International Economics",
       "Endogenous Growth"
     ],
-    "phdInstitution": "University of British Columbia"
+    "phdInstitution": "University of British Columbia",
+    "directFields": [
+      "name",
+      "profileUrl"
+    ]
   },
   {
     "id": "vp-0994",
@@ -42377,7 +42813,22 @@
     ],
     "phdYear": 2023,
     "phdInstitution": "University of Massachusetts Amherst",
-    "lastUpdatedAt": "2026-09-02T15:13:46.000Z"
+    "lastUpdatedAt": "2026-09-02T15:13:46.000Z",
+    "directFields": [
+      "city",
+      "country",
+      "department",
+      "name",
+      "phdInstitution",
+      "phdYear",
+      "profileUrl",
+      "rank",
+      "researchAreas",
+      "scholarUrl",
+      "state",
+      "track",
+      "university"
+    ]
   },
   {
     "id": "vp-1072",
@@ -42409,7 +42860,26 @@
         "https://trios.tsukuba.ac.jp/researcher/0000003869"
       ],
       "verifiedAt": "2026-09-07T19:29:00.000Z"
-    }
+    },
+    "directFields": [
+      "city",
+      "country",
+      "department",
+      "msInstitution",
+      "msYear",
+      "name",
+      "phdInstitution",
+      "phdYear",
+      "profileUrl",
+      "rank",
+      "researchAreas",
+      "state",
+      "track",
+      "undergradInstitution",
+      "undergradYear",
+      "university",
+      "websiteUrl"
+    ]
   },
   {
     "id": "vp-1073",
@@ -42555,7 +43025,11 @@
     "msYear": 2020,
     "undergradInstitution": "Hanoi University of Science and Technology",
     "undergradYear": 2017,
-    "lastUpdatedAt": "2026-09-02T20:32:58.000Z"
+    "lastUpdatedAt": "2026-09-02T20:32:58.000Z",
+    "directFields": [
+      "name",
+      "university"
+    ]
   },
   {
     "id": "vp-1079",
@@ -42564,10 +43038,9 @@
     "city": "Singapore",
     "country": "Singapore",
     "researchAreas": [
+      "Macroeconomics",
       "Real Business Cycles",
-      "Monetary and Fiscal Policy",
-      "Macroeconomic Theory",
-      "International Macroeconomics and Finance"
+      "Monetary Economics"
     ],
     "track": "Teaching",
     "department": "Economics",
@@ -42578,7 +43051,26 @@
     "phdYear": 2015,
     "undergradInstitution": "National University of Singapore",
     "undergradYear": 2006,
-    "lastUpdatedAt": "2026-09-03T02:32:11.000Z"
+    "lastUpdatedAt": "2026-09-09T18:14:40.523Z",
+    "directFields": [
+      "city",
+      "country",
+      "department",
+      "name",
+      "phdInstitution",
+      "phdMajor",
+      "phdYear",
+      "profileUrl",
+      "rank",
+      "researchAreas",
+      "track",
+      "undergradInstitution",
+      "undergradYear",
+      "university",
+      "websiteUrl"
+    ],
+    "websiteUrl": "https://sites.google.com/site/petebaotanhuynh/",
+    "phdMajor": "Economics"
   },
   {
     "id": "vp-1080",
@@ -42601,14 +43093,30 @@
     "portraitSource": "https://api.research.unsw.edu.au/sites/default/files/images/profile/2021-06-07-Headshots-Law-ADA-SH14-Thuy%20To-0171-crop1_0.jpg",
     "scholarUrl": "https://scholar.google.com/citations?user=41w_gsEAAAAJ&hl=en",
     "phdInstitution": "University of Technology Sydney",
-    "lastUpdatedAt": "2026-09-06T00:58:41.000Z",
+    "lastUpdatedAt": "2026-09-09T18:14:40.523Z",
     "researchOverview": {
       "text": "Her research addresses international finance, incomplete information, risk management, supply chains, and empirical corporate finance.",
       "sources": [
         "https://www.unsw.edu.au/staff/thuy-to"
       ],
       "verifiedAt": "2026-09-07T19:29:00.000Z"
-    }
+    },
+    "directFields": [
+      "city",
+      "country",
+      "department",
+      "name",
+      "phdInstitution",
+      "phdMajor",
+      "profileUrl",
+      "rank",
+      "researchAreas",
+      "scholarUrl",
+      "state",
+      "track",
+      "university"
+    ],
+    "phdMajor": "Finance and Economics"
   },
   {
     "id": "vp-1081",
@@ -42660,13 +43168,31 @@
     "msInstitution": "Boston College",
     "msYear": 2017,
     "undergradInstitution": "Bryant University",
-    "undergradYear": 2012
+    "undergradYear": 2012,
+    "directFields": [
+      "city",
+      "country",
+      "department",
+      "msInstitution",
+      "msYear",
+      "name",
+      "phdInstitution",
+      "phdYear",
+      "profileUrl",
+      "rank",
+      "researchAreas",
+      "state",
+      "track",
+      "undergradInstitution",
+      "undergradYear",
+      "university"
+    ]
   },
   {
     "id": "vp-1083",
     "name": "Linh N. Bui",
     "profileUrl": "https://www.csub.edu/publichealth/public-health-faculty.shtml",
-    "lastUpdatedAt": "2026-09-03T06:31:38.000Z",
+    "lastUpdatedAt": "2026-09-09T18:14:40.523Z",
     "university": "California State University, Bakersfield",
     "city": "Bakersfield",
     "state": "CA",
@@ -42676,9 +43202,9 @@
     "track": "Tenure-line",
     "researchAreas": [
       "Health Policy",
-      "Health Services Research",
-      "Healthcare Delivery Reform",
-      "Health Equity"
+      "Health Services",
+      "Maternal and Child Health",
+      "Behavioral Health"
     ],
     "researchOverview": {
       "text": "Her health-policy and health-services research examines healthcare-delivery reforms and innovations, especially for women, children, and people with mental illness, including maternal and child health, behavioral health, telehealth, and decision support.",
@@ -42686,7 +43212,29 @@
         "https://www.csub.edu/publichealth/public-health-faculty.shtml"
       ],
       "verifiedAt": "2026-09-07T19:29:00.000Z"
-    }
+    },
+    "directFields": [
+      "city",
+      "country",
+      "department",
+      "msInstitution",
+      "msMajor",
+      "name",
+      "phdInstitution",
+      "phdMajor",
+      "postdocInstitution",
+      "profileUrl",
+      "rank",
+      "researchAreas",
+      "state",
+      "track",
+      "university"
+    ],
+    "phdInstitution": "Oregon State University",
+    "phdMajor": "Public Health",
+    "msInstitution": "University of Sydney",
+    "msMajor": "International Public Health",
+    "postdocInstitution": "University of California, Berkeley and Sutter Health"
   },
   {
     "id": "vp-1084",
@@ -43274,7 +43822,23 @@
         "https://sites.google.com/view/vthuynh"
       ],
       "verifiedAt": "2026-09-07T19:32:00.000Z"
-    }
+    },
+    "directFields": [
+      "city",
+      "country",
+      "department",
+      "msInstitution",
+      "name",
+      "otherDegrees",
+      "phdInstitution",
+      "profileUrl",
+      "rank",
+      "researchAreas",
+      "state",
+      "track",
+      "university",
+      "websiteUrl"
+    ]
   },
   {
     "id": "vp-1104",
@@ -43300,7 +43864,20 @@
         "https://experts.deakin.edu.au/70417-trang-tk-tran"
       ],
       "verifiedAt": "2026-09-07T19:32:00.000Z"
-    }
+    },
+    "directFields": [
+      "city",
+      "country",
+      "department",
+      "name",
+      "phdInstitution",
+      "profileUrl",
+      "rank",
+      "researchAreas",
+      "state",
+      "track",
+      "university"
+    ]
   },
   {
     "id": "vp-1105",
@@ -43329,7 +43906,21 @@
         "https://research.lancaster-university.uk/en/persons/quynh-do/"
       ],
       "verifiedAt": "2026-09-07T19:32:00.000Z"
-    }
+    },
+    "directFields": [
+      "city",
+      "country",
+      "department",
+      "name",
+      "phdInstitution",
+      "phdMajor",
+      "phdYear",
+      "profileUrl",
+      "rank",
+      "researchAreas",
+      "track",
+      "university"
+    ]
   },
   {
     "id": "vp-1106",
@@ -43363,7 +43954,22 @@
         "https://pldh.page/"
       ],
       "verifiedAt": "2026-09-07T19:32:00.000Z"
-    }
+    },
+    "directFields": [
+      "city",
+      "country",
+      "department",
+      "name",
+      "otherDegrees",
+      "profileUrl",
+      "rank",
+      "researchAreas",
+      "state",
+      "track",
+      "undergradInstitution",
+      "university",
+      "websiteUrl"
+    ]
   },
   {
     "id": "vp-1107",

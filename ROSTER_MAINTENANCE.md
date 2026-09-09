@@ -331,6 +331,15 @@ Every result still requires the appointment, track, and source-quality checks ab
 
 ### Reviewing user-supplied links
 
+Information explicitly asserted by the repository owner or by a submission the owner asks to
+process is a direct update and is treated as ground truth. Add the corresponding canonical roster
+field names to the entry's sorted `directFields` array. Protect only asserted fields, not facts
+independently discovered while completing the review. Direct values may be normalized or mapped to
+the correct roster field during processing. Later web scouting and periodic maintenance may update
+other fields, but must not change a protected value or remove an entry with protected fields. A
+conflict with live web evidence must be reported for a later direct correction. `directFields` is
+provenance metadata and does not by itself advance `lastUpdatedAt`.
+
 Unless the user gives narrower instructions, treat a supplied personal profile, university
 profile, homepage, lab site, or CV as a request to identify the person, check whether they already
 exist in the canonical roster, and perform a thorough roster-relevant review. Follow useful links
