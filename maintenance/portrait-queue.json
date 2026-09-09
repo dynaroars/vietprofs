@@ -35,8 +35,8 @@
     "university": "California College of the Arts",
     "profileUrl": "https://www.cca.edu/humanities-sciences/history-of-art-and-visual-culture/",
     "batch": 1,
-    "status": "unresolved",
-    "portraitSource": "https://storage.googleapis.com/ccaedu-prod/media/images/Visual-studies-symposium_norrena_2016_024-2-H.width-1000.jpg",
+    "status": "fetched",
+    "portraitSource": "https://storage.googleapis.com/ccaedu-prod/media/images/HAVC_Kian-Talai_2021_hero_np.width-768.jpg",
     "note": "profile page exposed no image candidate",
     "recoveryBatch": 1
   },
@@ -67,9 +67,9 @@
     "university": "San Jose State University",
     "profileUrl": "https://www.sjsu.edu/kinesiology/about-us/faculty-and-staff.php",
     "batch": 1,
-    "status": "unresolved",
+    "status": "fetched",
     "portraitSource": "https://www.sjsu.edu/kinesiology/pics/TamarSemerjian2019headshot.jpg",
-    "note": "profile page had no downloadable portrait image",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 1
   },
   {
@@ -89,7 +89,7 @@
     "batch": 1,
     "status": "unresolved",
     "portraitSource": "https://www.umass.edu/sociology/sites/default/files/styles/tile_medium_x2_400px/public/2024-03/Le_2018.jpg?h=63ec7df1&itok=qBdMuagp",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 1
   },
   {
@@ -111,7 +111,7 @@
     "batch": 1,
     "status": "unresolved",
     "portraitSource": "https://www.csudh.edu/Assets/csudh-sites/social-work/images/CSUDH-Social-Work-Social-Media-stacked-Center-RGB.png",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 1
   },
   {
@@ -120,7 +120,7 @@
     "university": "California State University, Fullerton",
     "profileUrl": "https://news.fullerton.edu/spotlight/cal-state-fullerton-announces-61-faculty-tenure-and-promotions/",
     "batch": 1,
-    "status": "unresolved",
+    "status": "fetched",
     "portraitSource": "https://news.fullerton.edu/app/uploads/2025/08/3P8A4283.jpg",
     "note": "profile page exposed no image candidate",
     "recoveryBatch": 1
@@ -153,7 +153,7 @@
     "batch": 1,
     "status": "unresolved",
     "portraitSource": "https://profiles.utsouthwestern.edu/img/block-future-of-medicine.png",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 1
   },
   {
@@ -182,7 +182,7 @@
     "university": "Wilfrid Laurier University",
     "profileUrl": "https://www.wlu.ca/academics/faculties/faculty-of-science/faculty-profiles/chinh-t-hoang/index.html",
     "batch": 1,
-    "status": "unresolved",
+    "status": "fetched",
     "portraitSource": "https://www.wlu.ca/about/discover-laurier/strategic-initiatives/student-affairs/assets/images/student-councellor-spotlight.jpg",
     "note": "profile page exposed no image candidate",
     "recoveryBatch": 1
@@ -293,9 +293,10 @@
     "university": "Université Paris-Saclay",
     "profileUrl": "https://www.icmmo.universite-paris-saclay.fr/annuaire/quoc-nghi-pham/",
     "batch": 2,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "profile page exposed no image candidate",
-    "recoveryBatch": 2
+    "recoveryBatch": 2,
+    "portraitSource": "https://www.icmmo.universite-paris-saclay.fr/wp-content/uploads/2024/02/ICMMO-20ans-VertC.png"
   },
   {
     "id": "vp-0670",
@@ -323,9 +324,10 @@
     "university": "Flinders University",
     "profileUrl": "https://www.flinders.edu.au/people/quinn.nguyen",
     "batch": 2,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 2
+    "status": "fetched",
+    "note": "The operation was aborted due to timeout",
+    "recoveryBatch": 2,
+    "portraitSource": "https://www.flinders.edu.au/reference-components/social-footer/_jcr_content/content/section/par_0/section_1829014827/par_0/section/par_0/image_general.coreimg.png/1692319948673/facebook.png"
   },
   {
     "id": "vp-0692",
@@ -334,7 +336,7 @@
     "profileUrl": "https://www.salford.ac.uk/our-staff/cung-nguyen",
     "batch": 2,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 2
   },
   {
@@ -354,7 +356,7 @@
     "profileUrl": "https://researchportal.bath.ac.uk/en/persons/thieu-vo/",
     "batch": 2,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 2
   },
   {
@@ -363,9 +365,10 @@
     "university": "National Taiwan University of Science and Technology",
     "profileUrl": "https://ce-r.ntust.edu.tw/p/404-1024-65379.php?Lang=en",
     "batch": 2,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 2
+    "status": "fetched",
+    "note": "The operation was aborted due to timeout",
+    "recoveryBatch": 2,
+    "portraitSource": "https://ce-r.ntust.edu.tw/var/file/24/1024/img/2231/213426460.png"
   },
   {
     "id": "vp-0764",
@@ -374,7 +377,7 @@
     "profileUrl": "https://www.gmba.ntpu.edu.tw/web/about/about.jsp?cp_id=CP1674008146021",
     "batch": 2,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 2
   },
   {
@@ -383,9 +386,10 @@
     "university": "Feng Chia University",
     "profileUrl": "https://genedu.fcu.edu.tw/en/teachers-detail/?id=T03050&unit_id=GE00",
     "batch": 2,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 2
+    "status": "fetched",
+    "note": "The operation was aborted due to timeout",
+    "recoveryBatch": 2,
+    "portraitSource": "https://genedu.fcu.edu.tw/wp-content/themes/type-a/src/img/deco/dorball-white.png"
   },
   {
     "id": "vp-0769",
@@ -403,9 +407,10 @@
     "university": "National Yunlin University of Science and Technology",
     "profileUrl": "https://me.yuntech.edu.tw/faculty-and-staff/B-Manufacturing-and-Material-Science",
     "batch": 2,
-    "status": "unresolved",
-    "note": "profile page had no downloadable portrait image",
-    "recoveryBatch": 2
+    "status": "fetched",
+    "note": "The operation was aborted due to timeout",
+    "recoveryBatch": 2,
+    "portraitSource": "https://i.imgur.com/NBlDcBh.png"
   },
   {
     "id": "vp-0773",
@@ -413,9 +418,10 @@
     "university": "National Formosa University",
     "profileUrl": "https://mse.nfu.edu.tw/zh_tw/department/Full_time",
     "batch": 3,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 2
+    "status": "fetched",
+    "note": "The operation was aborted due to timeout",
+    "recoveryBatch": 2,
+    "portraitSource": "https://mse.nfu.edu.tw/uploads/member_profile/avatar/693f63ae085777406c360235/%E8%AC%9D%E6%B7%91%E6%83%A0.jpeg"
   },
   {
     "id": "vp-0776",
@@ -423,9 +429,10 @@
     "university": "Texas Tech University",
     "profileUrl": "https://www.depts.ttu.edu/artsandsciences/news_events/2025/ferderal_grant_to_aid_vietnam_war_accounting_efforts.php",
     "batch": 3,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "profile page exposed no image candidate",
-    "recoveryBatch": 3
+    "recoveryBatch": 3,
+    "portraitSource": "https://www.depts.ttu.edu/artsandsciences/news_events/images/vietnam_federal_grant/Steve-being-interviewed-at-this-years-ceremony.jpg"
   },
   {
     "id": "vp-0784",
@@ -442,9 +449,10 @@
     "university": "University of California, Los Angeles",
     "profileUrl": "https://profiles.ucla.edu/minhtri.nguyen",
     "batch": 3,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "profile page exposed no image candidate",
-    "recoveryBatch": 3
+    "recoveryBatch": 3,
+    "portraitSource": "https://profiles.ucla.edu/framework/images/arrowDown.png"
   },
   {
     "id": "vp-0788",
@@ -452,9 +460,10 @@
     "university": "The Ohio State University",
     "profileUrl": "https://wexnermedical.osu.edu/find-a-doctor/tran-nguyen-100001229",
     "batch": 3,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "profile page exposed no image candidate",
-    "recoveryBatch": 3
+    "recoveryBatch": 3,
+    "portraitSource": "https://healthsystem.osumc.edu/digitalservices/api/v3/ProviderPicture/100001229.jpg"
   },
   {
     "id": "vp-0789",
@@ -491,9 +500,10 @@
     "university": "Curtin University",
     "profileUrl": "https://staffportal.curtin.edu.au/staff/profile/view/hoa-nguyen-bba5fa8a/",
     "batch": 3,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "profile page exposed no image candidate",
-    "recoveryBatch": 3
+    "recoveryBatch": 3,
+    "portraitSource": "https://staffportal.curtin.edu.au/wp-content/themes/base-theme/assets/img/curtin-qr.jpg"
   },
   {
     "id": "vp-0799",
@@ -531,7 +541,7 @@
     "profileUrl": "https://www.ntu.edu.sg/research/faculty-directory/detail/rp00758",
     "batch": 3,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 3
   },
   {
@@ -551,7 +561,7 @@
     "profileUrl": "https://www.federation.edu.au/research/find-an-expert/Dung-Tran",
     "batch": 3,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 3
   },
   {
@@ -580,9 +590,10 @@
     "university": "University of California, San Diego",
     "profileUrl": "https://profiles.ucsd.edu/mylinh.nguyen",
     "batch": 3,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 3
+    "status": "fetched",
+    "note": "The operation was aborted due to timeout",
+    "recoveryBatch": 3,
+    "portraitSource": "https://profiles.ucsd.edu/framework/images/arrowDown.png"
   },
   {
     "id": "vp-0823",
@@ -601,7 +612,7 @@
     "profileUrl": "https://w-rdb.waseda.jp/html/100002623_en.html",
     "batch": 3,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 3
   },
   {
@@ -629,9 +640,10 @@
     "university": "Northwestern University",
     "profileUrl": "https://www.feinberg.northwestern.edu/sites/obgyn/faculty/profile.html?xid=46373",
     "batch": 4,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 3
+    "status": "fetched",
+    "note": "The operation was aborted due to timeout",
+    "recoveryBatch": 3,
+    "portraitSource": "https://deptcommon.fsm.northwestern.edu/images/blank-image-profile.jpg"
   },
   {
     "id": "vp-0832",
@@ -699,7 +711,7 @@
     "profileUrl": "https://www.med.upenn.edu/apps/faculty/index.php/g275/p9769423",
     "batch": 4,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 4
   },
   {
@@ -737,7 +749,7 @@
     "profileUrl": "https://llu.edu/academics/faculty/nguyen-thuy-huynh",
     "batch": 4,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 4
   },
   {
@@ -767,7 +779,7 @@
     "profileUrl": "https://orthopedics.medicine.uiowa.edu/profile/than-pham",
     "batch": 4,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 4
   },
   {
@@ -777,7 +789,7 @@
     "profileUrl": "https://profiles.utsouthwestern.edu/profile/95985/kimloan-nguyen.html",
     "batch": 4,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 4
   },
   {
@@ -787,7 +799,7 @@
     "profileUrl": "https://ufhealthjax.org/pharmacy-residency/faculty",
     "batch": 4,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 4
   },
   {
@@ -796,9 +808,10 @@
     "university": "Weill Cornell Medicine",
     "profileUrl": "https://vivo.weill.cornell.edu/display/cwid-mtn9004",
     "batch": 4,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 4
+    "status": "fetched",
+    "note": "The operation was aborted due to timeout",
+    "recoveryBatch": 4,
+    "portraitSource": "https://vivo.weill.cornell.edu/images/DirectoryGenericPhoto.png"
   },
   {
     "id": "vp-0881",
@@ -816,9 +829,10 @@
     "university": "Stanford University",
     "profileUrl": "https://medicine.stanford.edu/profiles/tridu-huynh",
     "batch": 5,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 4
+    "status": "fetched",
+    "note": "The operation was aborted due to timeout",
+    "recoveryBatch": 4,
+    "portraitSource": "https://medicine.stanford.edu/content/dam/sm-news/images/2021/09/monje-michelle.jpg/jcr:content/renditions/original"
   },
   {
     "id": "vp-0888",
@@ -827,7 +841,7 @@
     "profileUrl": "https://medschool.kp.org/faculty/members/monika-dao-nguyen",
     "batch": 5,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 4
   },
   {
@@ -837,7 +851,7 @@
     "profileUrl": "https://medschool.kp.org/faculty/members/nathan-k-nguyen",
     "batch": 5,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 4
   },
   {
@@ -847,7 +861,7 @@
     "profileUrl": "https://medschool.kp.org/faculty/members/carolyn-v-nguyen",
     "batch": 5,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 4
   },
   {
@@ -857,7 +871,7 @@
     "profileUrl": "https://medschool.kp.org/faculty/members/von-ta-nguyen",
     "batch": 5,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 4
   },
   {
@@ -876,7 +890,7 @@
     "profileUrl": "https://sc.edu/study/colleges_schools/medicine_greenville/about/faculty/",
     "batch": 5,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 4
   },
   {
@@ -945,9 +959,10 @@
     "university": "Shizuoka University",
     "profileUrl": "https://tdb.shizuoka.ac.jp/rdb/public/Default2.aspx?id=11326&l=0",
     "batch": 5,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "profile page exposed no image candidate",
-    "recoveryBatch": 5
+    "recoveryBatch": 5,
+    "portraitSource": "https://tdb.shizuoka.ac.jp/rdb/data/photo/A19054sw.jpg"
   },
   {
     "id": "vp-0920",
@@ -955,9 +970,10 @@
     "university": "Shibaura Institute of Technology",
     "profileUrl": "https://www.shibaura-it.ac.jp/en/research/laboratory/00005.html",
     "batch": 5,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "profile page exposed no image candidate",
-    "recoveryBatch": 5
+    "recoveryBatch": 5,
+    "portraitSource": "https://www.shibaura-it.ac.jp/faculty/laboratory/img/5e41c7eaaef53e5561a10a5f95094c93_lab_img_2.png"
   },
   {
     "id": "vp-0924",
@@ -985,7 +1001,7 @@
     "profileUrl": "https://kyoiku-kenkyudb.omu.ac.jp/html/100001108_en.html",
     "batch": 5,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 5
   },
   {
@@ -994,9 +1010,10 @@
     "university": "Japan Advanced Institute of Science and Technology",
     "profileUrl": "https://fp.jaist.ac.jp/public/Default2.aspx?id=669&l=1",
     "batch": 5,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "profile page exposed no image candidate",
-    "recoveryBatch": 5
+    "recoveryBatch": 5,
+    "portraitSource": "https://fp.jaist.ac.jp/data/photo/669.jpeg"
   },
   {
     "id": "vp-0928",
@@ -1005,7 +1022,7 @@
     "profileUrl": "https://www.jaist.ac.jp/profiles/info_e.php?profile_id=417",
     "batch": 6,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 5
   },
   {
@@ -1024,9 +1041,10 @@
     "university": "Japan Advanced Institute of Science and Technology",
     "profileUrl": "https://fp.jaist.ac.jp/public/Default2.aspx?id=764&l=1",
     "batch": 6,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 5
+    "status": "fetched",
+    "note": "The operation was aborted due to timeout",
+    "recoveryBatch": 5,
+    "portraitSource": "https://fp.jaist.ac.jp/data/photo/764.jpeg"
   },
   {
     "id": "vp-0931",
@@ -1034,9 +1052,10 @@
     "university": "Japan Advanced Institute of Science and Technology",
     "profileUrl": "https://fp.jaist.ac.jp/public/Default2.aspx?id=787&l=1",
     "batch": 6,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 5
+    "status": "fetched",
+    "note": "The operation was aborted due to timeout",
+    "recoveryBatch": 5,
+    "portraitSource": "https://fp.jaist.ac.jp/data/photo/787.jpeg"
   },
   {
     "id": "vp-0936",
@@ -1045,7 +1064,7 @@
     "profileUrl": "https://medicine.iu.edu/faculty/27262/dinh-paul",
     "batch": 6,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 5
   },
   {
@@ -1075,7 +1094,7 @@
     "profileUrl": "https://www.nottingham.ac.uk/business/people/lizln1.phtml",
     "batch": 6,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 5
   },
   {
@@ -1105,7 +1124,7 @@
     "profileUrl": "https://www.tc.columbia.edu/faculty/ttn2114/",
     "batch": 6,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 6
   },
   {
@@ -1202,9 +1221,10 @@
     "university": "Harvard Medical School",
     "profileUrl": "https://www.massgeneralbrigham.org/en/doctors/n/long-nguyen-3005017",
     "batch": 7,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 6
+    "status": "fetched",
+    "note": "The operation was aborted due to timeout",
+    "recoveryBatch": 6,
+    "portraitSource": "https://www.massgeneralbrigham.org/en/doctors/n/media_1ef7fbf43d8dab46e5a6fd3095a5e81061678643c.jpg?width=1200&#x26;format=pjpg&#x26;optimize=medium"
   },
   {
     "id": "vp-0987",
@@ -1212,9 +1232,10 @@
     "university": "Institute of Science Tokyo",
     "profileUrl": "https://researchmap.jp/magn?lang=en",
     "batch": 7,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 6
+    "status": "fetched",
+    "note": "The operation was aborted due to timeout",
+    "recoveryBatch": 6,
+    "portraitSource": "https://researchmap.jp/magn/avatar.png"
   },
   {
     "id": "vp-0989",
@@ -1223,7 +1244,7 @@
     "profileUrl": "https://profs.provost.nagoya-u.ac.jp/html/100011169_en.html",
     "batch": 7,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 6
   },
   {
@@ -1288,7 +1309,7 @@
     "profileUrl": "https://ideas.repec.org/e/pph135.html",
     "batch": 7,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 6
   },
   {
@@ -1327,7 +1348,7 @@
     "profileUrl": "https://www.ulethbridge.ca/directory/person/kien.tran",
     "batch": 7,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 6
   },
   {
@@ -1377,7 +1398,7 @@
     "profileUrl": "https://www.nottingham.ac.uk/business/people/lizkl1.phtml",
     "batch": 7,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 7
   },
   {
@@ -1396,9 +1417,10 @@
     "university": "Clemson University",
     "profileUrl": "https://www.clemson.edu/cbshs/about/profiles/index.html?userid=ktruong",
     "batch": 8,
-    "status": "unresolved",
-    "note": "profile page had no downloadable portrait image",
-    "recoveryBatch": 7
+    "status": "fetched",
+    "note": "The operation was aborted due to timeout",
+    "recoveryBatch": 7,
+    "portraitSource": "https://www.clemson.edu/cbshs/about/profiles/getpicture.php?id=ktruong"
   },
   {
     "id": "vp-1027",
@@ -1426,7 +1448,7 @@
     "profileUrl": "https://ysu.edu/people/nguyet-moon-nguyen",
     "batch": 8,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 7
   },
   {
@@ -1446,7 +1468,7 @@
     "profileUrl": "https://rse.anu.edu.au/people/chung-tran",
     "batch": 8,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 7
   },
   {
@@ -1485,9 +1507,10 @@
     "university": "Morgan State University",
     "profileUrl": "https://www.morgan.edu/accounting-and-finance/faculty-and-staff",
     "batch": 8,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 7
+    "status": "fetched",
+    "note": "The operation was aborted due to timeout",
+    "recoveryBatch": 7,
+    "portraitSource": "https://www.morgan.edu/Images/ACADEMIA/DEPTS/accounting-finance/profiles/Hambisa_Belina.jpg"
   },
   {
     "id": "vp-1040",
@@ -1545,9 +1568,10 @@
     "university": "ISC Paris Business School",
     "profileUrl": "https://www.iscparis.com/en/isc-paris-faculty-professors/",
     "batch": 8,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 7
+    "status": "fetched",
+    "note": "The operation was aborted due to timeout",
+    "recoveryBatch": 7,
+    "portraitSource": "https://www.iscparis.com/wp-content/uploads/2022/03/faculte%CC%81-isc.jpg"
   },
   {
     "id": "vp-1047",
@@ -1555,9 +1579,10 @@
     "university": "University of Houston-Downtown",
     "profileUrl": "https://www.uhd.edu/academics/business/fiser/finance-and-management-information-systems-faculty.aspx",
     "batch": 8,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 7
+    "status": "fetched",
+    "note": "The operation was aborted due to timeout",
+    "recoveryBatch": 7,
+    "portraitSource": "https://www.uhd.edu/images/uhd-footer-facebook.png"
   },
   {
     "id": "vp-1048",
@@ -1603,9 +1628,10 @@
     "university": "University of Arkansas",
     "profileUrl": "https://walton.uark.edu/departments/finance/directory/uid/cn061/name/Ca+Nguyen/",
     "batch": 9,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 8
+    "status": "fetched",
+    "note": "The operation was aborted due to timeout",
+    "recoveryBatch": 8,
+    "portraitSource": "https://campusdata.uark.edu/Resources/Images/SocialMedia/googleScholar.png"
   },
   {
     "id": "vp-1053",
@@ -1622,9 +1648,10 @@
     "university": "Macquarie University",
     "profileUrl": "https://researchers.mq.edu.au/en/persons/chi-truong/",
     "batch": 9,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 8
+    "status": "fetched",
+    "note": "The operation was aborted due to timeout",
+    "recoveryBatch": 8,
+    "portraitSource": "https://researchers.mq.edu.au/files-asset/98855066/2019_02_11_JesseTaylor_716.jpg/"
   },
   {
     "id": "vp-1055",
@@ -1632,9 +1659,10 @@
     "university": "Lancaster University",
     "profileUrl": "https://www.lancaster.ac.uk/lums/our-departments/accounting-and-finance/people/manh-pham",
     "batch": 9,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 8
+    "status": "fetched",
+    "note": "The operation was aborted due to timeout",
+    "recoveryBatch": 8,
+    "portraitSource": "https://www.lancaster.ac.uk/images/people/21234.jpg"
   },
   {
     "id": "vp-1056",
@@ -1642,9 +1670,10 @@
     "university": "University of Silesia in Katowice",
     "profileUrl": "https://us.edu.pl/instytut/inoz/en/osoby/pham-quoc-bao/",
     "batch": 9,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 8
+    "status": "fetched",
+    "note": "The operation was aborted due to timeout",
+    "recoveryBatch": 8,
+    "portraitSource": "https://us.edu.pl/instytut/inoz/wp-content/uploads/sites/37/Nieprzypisane/god%C5%82o-150x150.png"
   },
   {
     "id": "vp-1057",
@@ -1661,9 +1690,10 @@
     "university": "University of Manchester",
     "profileUrl": "https://research.manchester.ac.uk/en/persons/vietanh.dang",
     "batch": 9,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 8
+    "status": "fetched",
+    "note": "The operation was aborted due to timeout",
+    "recoveryBatch": 8,
+    "portraitSource": "https://research.manchester.ac.uk/files-asset/234177979/BD_2514_E_P_R.jpg/"
   },
   {
     "id": "vp-1059",
@@ -1718,7 +1748,7 @@
     "profileUrl": "https://eps.leeds.ac.uk/faculty-engineering-physical-sciences/staff/12207/khoa-le",
     "batch": 9,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 8
   },
   {
@@ -1747,7 +1777,7 @@
     "profileUrl": "https://www.inn.no/english/find-an-employee/minh-dinh.html",
     "batch": 9,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 8
   },
   {
@@ -1757,7 +1787,7 @@
     "profileUrl": "https://www.adelaide.edu.au/directory/ruby.nguyen",
     "batch": 9,
     "status": "unresolved",
-    "note": "fetch failed",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 8
   },
   {
@@ -1767,7 +1797,7 @@
     "profileUrl": "https://business.wsu.edu/directory/long.the.nguyen/",
     "batch": 9,
     "status": "unresolved",
-    "note": "fetch failed",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 8
   },
   {
@@ -1777,7 +1807,7 @@
     "profileUrl": "https://trios.tsukuba.ac.jp/researcher/0000003869",
     "batch": 9,
     "status": "unresolved",
-    "note": "fetch failed",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 8
   },
   {
@@ -1787,7 +1817,7 @@
     "profileUrl": "https://econ.swu.ac.th/faculty/faculties/",
     "batch": 10,
     "status": "unresolved",
-    "note": "fetch failed",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 8
   },
   {
@@ -1797,7 +1827,7 @@
     "profileUrl": "https://www.sandiego.edu/engineering/faculty-and-staff/biography.php?profile_id=571",
     "batch": 10,
     "status": "unresolved",
-    "note": "fetch failed",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 8
   },
   {
@@ -1816,7 +1846,7 @@
     "profileUrl": "https://www.kcl.ac.uk/people/canh-thien-dang",
     "batch": 10,
     "status": "unresolved",
-    "note": "fetch failed",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 8
   },
   {
@@ -1826,7 +1856,7 @@
     "profileUrl": "https://researchportal.murdoch.edu.au/esploro/profile/thao_duong",
     "batch": 10,
     "status": "unresolved",
-    "note": "fetch failed",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 8
   },
   {
@@ -1845,7 +1875,7 @@
     "profileUrl": "https://economics.smu.edu.sg/faculty/profile/6711/huynh-bao-tan",
     "batch": 10,
     "status": "unresolved",
-    "note": "fetch failed",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 8
   },
   {
@@ -1864,7 +1894,7 @@
     "profileUrl": "https://catalog.csun.edu/academics/blaw/faculty/nguyen-huong-hana/",
     "batch": 10,
     "status": "unresolved",
-    "note": "fetch failed",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 8
   },
   {
@@ -1891,9 +1921,10 @@
     "university": "Howard University",
     "profileUrl": "https://profiles.howard.edu/quyen-chu",
     "batch": 10,
-    "status": "unresolved",
-    "note": "fetch failed",
-    "recoveryBatch": 8
+    "status": "fetched",
+    "note": "The operation was aborted due to timeout",
+    "recoveryBatch": 8,
+    "portraitSource": "https://profiles.howard.edu/sites/profiles.howard.edu/files/2023-11/PHOTO-Updated.jpg"
   },
   {
     "id": "vp-1087",
@@ -1920,7 +1951,7 @@
     "profileUrl": "https://scholars.uow.edu.au/kiet-tieu",
     "batch": 10,
     "status": "unresolved",
-    "note": "fetch failed",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 8
   },
   {
@@ -1930,7 +1961,7 @@
     "profileUrl": "https://www.wgtn.ac.nz/sms/about/staff/thuong-nguyen",
     "batch": 10,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 9
   },
   {
@@ -1939,9 +1970,10 @@
     "university": "The University of Texas Rio Grande Valley",
     "profileUrl": "https://www.utrgv.edu/cos/schools-and-departments/mathematical-and-statistical-sciences/math-faculty/index.htm",
     "batch": 10,
-    "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 9
+    "status": "fetched",
+    "note": "profile page exposed no image candidate",
+    "recoveryBatch": 9,
+    "portraitSource": "https://www.utrgv.edu/_files/_images/10-yr-a-white.png"
   },
   {
     "id": "vp-1092",
@@ -1950,7 +1982,7 @@
     "profileUrl": "https://www.vu.edu.au/research/jo-chau-vu",
     "batch": 10,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 9
   },
   {
@@ -1968,9 +2000,10 @@
     "university": "Hong Kong Baptist University",
     "profileUrl": "https://scholars.hkbu.edu.hk/en/persons/VDDOAN/",
     "batch": 10,
-    "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 9
+    "status": "fetched",
+    "note": "profile page exposed no image candidate",
+    "recoveryBatch": 9,
+    "portraitSource": "https://scholars.hkbu.edu.hk/files-asset/100349411/EmbeddedImage.jpg/"
   },
   {
     "id": "vp-1095",
@@ -1978,9 +2011,10 @@
     "university": "University of Chicago",
     "profileUrl": "https://biologicalsciences.uchicago.edu/faculty/mai-tuyet-pho-md",
     "batch": 11,
-    "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 9
+    "status": "fetched",
+    "note": "profile page exposed no image candidate",
+    "recoveryBatch": 9,
+    "portraitSource": "https://d3cxw5fasi7rb4.cloudfront.net/sites/cdr/files/styles/faculty_image/public/faculty-images/F55435F967-qeHXBQs_CqoV.jpg?itok=57oNSKPw"
   },
   {
     "id": "vp-1096",
@@ -1997,9 +2031,10 @@
     "university": "Kutztown University of Pennsylvania",
     "profileUrl": "https://library.kutztown.edu/prf.php?account_id=1704",
     "batch": 11,
-    "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 9
+    "status": "fetched",
+    "note": "profile page exposed no image candidate",
+    "recoveryBatch": 9,
+    "portraitSource": "https://d2jv02qf7xgjwx.cloudfront.net/accounts/1704/profiles/35274/IMG_9681.jpg"
   },
   {
     "id": "vp-1098",
@@ -2007,9 +2042,10 @@
     "university": "University of Reading",
     "profileUrl": "https://www.henley.ac.uk/people/dr-ha-phuong-luong",
     "batch": 11,
-    "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 9
+    "status": "fetched",
+    "note": "profile page exposed no image candidate",
+    "recoveryBatch": 9,
+    "portraitSource": "https://henley.imgix.net/v3/peopleImages/IMG_6835.JPG?auto=compress%2Cformat&fit=max&fm=jpg&q=80&ratio=2247%2F3464&w=640"
   },
   {
     "id": "vp-1099",
@@ -2027,7 +2063,7 @@
     "profileUrl": "https://www.nsu.edu/Academics/Faculty-and-Academic-Divisions/Schools-and-Colleges/School-of-Business/Faculty-Staff/files/Dr-Ngo-Anh-CV.aspx",
     "batch": 11,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 9
   },
   {
@@ -2063,9 +2099,10 @@
     "university": "Lancaster University",
     "profileUrl": "https://research.lancaster-university.uk/en/persons/quynh-do/",
     "batch": 11,
-    "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 9
+    "status": "fetched",
+    "note": "profile page had no downloadable portrait image",
+    "recoveryBatch": 9,
+    "portraitSource": "https://research.lancaster-university.uk/files-asset/337774953/QD_ID_picture.jpg/"
   },
   {
     "id": "vp-1106",
@@ -2092,7 +2129,7 @@
     "profileUrl": "https://pureportal.strath.ac.uk/en/persons/ellie-luu/",
     "batch": 11,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 9
   },
   {
@@ -2111,7 +2148,7 @@
     "profileUrl": "https://www.nottingham.ac.uk/business/people/lizhml.phtml",
     "batch": 11,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 9
   },
   {
@@ -2121,7 +2158,7 @@
     "profileUrl": "https://www.monash.edu/science/schools/school-of-mathematics/Our-People/staff/ngan-le",
     "batch": 11,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 9
   },
   {
@@ -2131,7 +2168,7 @@
     "profileUrl": "https://history.fas.harvard.edu/people/uyen-nguyen",
     "batch": 11,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 9
   },
   {
@@ -2140,9 +2177,10 @@
     "university": "Stanford University",
     "profileUrl": "https://profiles.stanford.edu/linda-nguyen",
     "batch": 11,
-    "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 9
+    "status": "fetched",
+    "note": "profile page exposed no image candidate",
+    "recoveryBatch": 9,
+    "portraitSource": "https://profiles.stanford.edu/proxy/api/cap/profiles/10513/resources/profilephoto/350x350.1704497627245.jpg"
   },
   {
     "id": "vp-1121",
@@ -2160,7 +2198,7 @@
     "profileUrl": "https://pediatrics.med.ubc.ca/about/current-faculty/",
     "batch": 11,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 9
   },
   {
@@ -2205,9 +2243,10 @@
     "university": "Université de Moncton",
     "profileUrl": "https://www.umoncton.ca/notreumoncton/node/27",
     "batch": 12,
-    "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 9
+    "status": "fetched",
+    "note": "profile page exposed no image candidate",
+    "recoveryBatch": 9,
+    "portraitSource": "https://www.umoncton.ca/notreumoncton/themes/custom/umoncton-theme-d8/images/default@mobile3x.jpg"
   },
   {
     "id": "vp-1130",
@@ -2215,9 +2254,10 @@
     "university": "Université de Moncton",
     "profileUrl": "https://www.umoncton.ca/prof/node/811",
     "batch": 12,
-    "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 9
+    "status": "fetched",
+    "note": "profile page exposed no image candidate",
+    "recoveryBatch": 9,
+    "portraitSource": "https://www.umoncton.ca/prof/themes/custom/umoncton-theme-d8/images/default@mobile3x.jpg"
   },
   {
     "id": "vp-1131",
@@ -2226,7 +2266,7 @@
     "profileUrl": "https://www.oulu.fi/en/researchers/nhan-nguyen",
     "batch": 12,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 9
   },
   {
@@ -2235,9 +2275,10 @@
     "university": "University of South-Eastern Norway",
     "profileUrl": "https://www.usn.no/kontakt-oss/ansatte/hieu-nguyen-1",
     "batch": 12,
-    "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 9
+    "status": "fetched",
+    "note": "profile page exposed no image candidate",
+    "recoveryBatch": 9,
+    "portraitSource": "https://www.usn.no/getfile.php/13709392-1652340603/usn.no/ansatte%20%28opplastet%29/hn.jpg%20%28article_small%29.webp"
   },
   {
     "id": "vp-1133",
@@ -2246,7 +2287,7 @@
     "profileUrl": "https://www.ntnu.no/ansatte/dong.t.nguyen",
     "batch": 12,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 9
   },
   {
@@ -2255,9 +2296,10 @@
     "university": "Commissariat à l'énergie atomique et aux énergies alternatives (CEA)",
     "profileUrl": "https://iramis.cea.fr/en/spec/directory/?uidc=M7VMMTEzTjUBAA",
     "batch": 12,
-    "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 10
+    "status": "fetched",
+    "note": "profile page exposed no image candidate",
+    "recoveryBatch": 10,
+    "portraitSource": "https://iramis.cea.fr/wp-content/uploads/2023/12/CNRS_2023_300px.png"
   },
   {
     "id": "vp-1135",
@@ -2275,7 +2317,7 @@
     "profileUrl": "https://www.ornl.gov/sites/default/files/CV%20NgocNguyen-ORNL.pdf",
     "batch": 12,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 10
   },
   {
@@ -2294,7 +2336,7 @@
     "profileUrl": "https://resilience.inl.gov/about-inl-resilience-optimization-center/",
     "batch": 12,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 10
   },
   {
@@ -2304,7 +2346,7 @@
     "profileUrl": "https://www.bumc.bu.edu/camed/profile/minh-truong/",
     "batch": 12,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 10
   },
   {
@@ -2314,7 +2356,7 @@
     "profileUrl": "https://euvlitho.com/2024/P22.pdf",
     "batch": 12,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 10
   },
   {
@@ -2324,7 +2366,7 @@
     "profileUrl": "https://pubs.aip.org/aip/apl/article/105/10/100401/30349",
     "batch": 12,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 10
   },
   {
@@ -2334,7 +2376,7 @@
     "profileUrl": "https://www.niu.edu/facultydir/faculty.shtml?id=hphan",
     "batch": 12,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 10
   },
   {
@@ -2344,7 +2386,7 @@
     "profileUrl": "https://www.sandiego.edu/directory/detail.php?_profile_id=7410",
     "batch": 12,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 10
   },
   {
@@ -2354,7 +2396,7 @@
     "profileUrl": "https://www.seattleu.edu/library/faculty-and-staff/yen-tran.html",
     "batch": 12,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 10
   },
   {
@@ -2364,7 +2406,7 @@
     "profileUrl": "https://math.nmsu.edu/emeriti.html",
     "batch": 13,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 10
   },
   {
@@ -2374,7 +2416,7 @@
     "profileUrl": "https://uwaterloo.ca/economics/profile/ttnguyen",
     "batch": 13,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 10
   },
   {
@@ -2384,7 +2426,7 @@
     "profileUrl": "https://www.fondation-cnrs.org/nous-connaitre/equipe/",
     "batch": 13,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 10
   },
   {
@@ -2394,7 +2436,7 @@
     "profileUrl": "https://www.deakin.edu.au/about-deakin/people/ly-tran",
     "batch": 13,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 10
   },
   {
@@ -2404,7 +2446,7 @@
     "profileUrl": "https://science.jpl.nasa.gov/people/hien-nguyen/",
     "batch": 13,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 10
   },
   {
@@ -2414,7 +2456,7 @@
     "profileUrl": "https://math.univ-cotedazur.fr/",
     "batch": 13,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 10
   },
   {
@@ -2424,7 +2466,7 @@
     "profileUrl": "https://en.wikipedia.org/wiki/B%E1%BB%ADu_H%E1%BB%99i",
     "batch": 13,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 10
   },
   {
@@ -2434,7 +2476,7 @@
     "profileUrl": "https://en.wikipedia.org/wiki/Ng%C3%B4_%C4%90%E1%BB%93ng",
     "batch": 13,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 10
   },
   {
@@ -2470,9 +2512,10 @@
     "university": "University of Southern California",
     "profileUrl": "https://dornsife.usc.edu/profile/viet-nguyen/",
     "batch": 13,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 10
+    "recoveryBatch": 10,
+    "portraitSource": "https://dornsife.usc.edu/wp-content/uploads/2023/04/photo_1003574-1-500x700.jpg?v=1788929669"
   },
   {
     "id": "vp-1167",
@@ -2480,9 +2523,10 @@
     "university": "Duke University",
     "profileUrl": "https://medicine.duke.edu/profile/thuy-le",
     "batch": 13,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 10
+    "recoveryBatch": 10,
+    "portraitSource": "https://scholars.duke.edu/profile-images/full/0831715.jpg"
   },
   {
     "id": "vp-1171",
@@ -2491,7 +2535,7 @@
     "profileUrl": "https://scholars.latrobe.edu.au/dhphan",
     "batch": 13,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 10
   },
   {
@@ -2500,9 +2544,10 @@
     "university": "Griffith University",
     "profileUrl": "https://staffdirectory.griffith.edu.au/phone-details.php?id=24598709&string=marketing",
     "batch": 13,
-    "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 11
+    "status": "fetched",
+    "note": "profile page exposed no image candidate",
+    "recoveryBatch": 11,
+    "portraitSource": "https://staffdirectory.griffith.edu.au/images/info-2x.png"
   },
   {
     "id": "vp-1173",
@@ -2511,7 +2556,7 @@
     "profileUrl": "https://profiles.uts.edu.au/HuuHao.Ngo",
     "batch": 13,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 11
   },
   {
@@ -2521,7 +2566,7 @@
     "profileUrl": "https://researchers.adelaide.edu.au/profile/thong.pham",
     "batch": 13,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 11
   },
   {
@@ -2548,9 +2593,10 @@
     "university": "Los Alamos National Laboratory",
     "profileUrl": "https://optnetsci.cise.ufl.edu/people/",
     "batch": 13,
-    "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 11
+    "status": "fetched",
+    "note": "profile page exposed no image candidate",
+    "recoveryBatch": 11,
+    "portraitSource": "https://optnetsci.cise.ufl.edu/wp-content/uploads/sites/785/2021/05/thai.png"
   },
   {
     "id": "vp-1181",
@@ -2559,7 +2605,7 @@
     "profileUrl": "https://www.csulb.edu/mathematics-statistics/department-directory",
     "batch": 14,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 11
   },
   {
@@ -2568,9 +2614,10 @@
     "university": "Asian Institute of Technology",
     "profileUrl": "https://ait.ac.th/2026/01/ait-ranked-5-in-thailand-by-scholargps-five-faculty-named-top-scholars/",
     "batch": 14,
-    "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 11
+    "status": "fetched",
+    "note": "profile page exposed no image candidate",
+    "recoveryBatch": 11,
+    "portraitSource": "https://ait.ac.th/wp-content/uploads/2026/01/scholargps2026-1-1024x866.jpg"
   },
   {
     "id": "vp-1183",
@@ -2588,7 +2635,7 @@
     "profileUrl": "https://jit.ndhu.edu.tw/article/download/3203/3229",
     "batch": 14,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 11
   },
   {
@@ -2598,7 +2645,7 @@
     "profileUrl": "https://www.uni.lu/snt-en/people/thang-xuan-vu/",
     "batch": 14,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 11
   },
   {
@@ -2608,7 +2655,7 @@
     "profileUrl": "https://es.ncku.edu.tw/",
     "batch": 14,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 11
   },
   {
@@ -2626,9 +2673,10 @@
     "university": "Swinburne University of Technology",
     "profileUrl": "https://www.swinburne.edu.au/",
     "batch": 14,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 11
+    "recoveryBatch": 11,
+    "portraitSource": "https://www.swinburne.edu.au/content/dam/media/creative-brand-photography/INT_22_Day_3_E6A3137.jpeg/_jcr_content/renditions/cq5dam.web.256.144.jpeg"
   },
   {
     "id": "vp-1189",
@@ -2637,7 +2685,7 @@
     "profileUrl": "https://scholars.uow.edu.au/hoang-dung-duong/",
     "batch": 14,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 11
   },
   {
@@ -2647,7 +2695,7 @@
     "profileUrl": "https://www.bc.edu/bc-web/schools/ssw/faculty-research/faculty-directory/thanh-tran.html",
     "batch": 14,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 11
   },
   {
@@ -2657,7 +2705,7 @@
     "profileUrl": "https://www.cla.csulb.edu/departments/psychology/faculty/kim-phuong-vu/",
     "batch": 14,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 11
   },
   {
@@ -2676,7 +2724,7 @@
     "profileUrl": "https://www.une.edu.au/staff-profiles/education/hphan2",
     "batch": 14,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 11
   },
   {
@@ -2686,7 +2734,7 @@
     "profileUrl": "https://www.colorado.edu/cmci/people/journalism/hong-tien-vu",
     "batch": 14,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 11
   },
   {
@@ -2696,7 +2744,7 @@
     "profileUrl": "https://www.psi.ch/en/lea/people/vinh-dang",
     "batch": 14,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 11
   },
   {
@@ -2706,7 +2754,7 @@
     "profileUrl": "https://scholars.latrobe.edu.au/ltruong",
     "batch": 14,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 11
   },
   {
@@ -2716,7 +2764,7 @@
     "profileUrl": "https://www.massey.ac.nz/massey/expertise/profile.cfm?stref=118940",
     "batch": 14,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 11
   },
   {
@@ -2726,7 +2774,7 @@
     "profileUrl": "https://trios.tsukuba.ac.jp/en/researcher/0000004944",
     "batch": 14,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 11
   },
   {
@@ -2736,7 +2784,7 @@
     "profileUrl": "https://www.dal.ca/faculty/health/health-and-human-performance/faculty-staff/our-faculty/recreation-faculty/son-truong.html",
     "batch": 14,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 11
   },
   {
@@ -2746,7 +2794,7 @@
     "profileUrl": "https://www.birmingham.ac.uk/staff/profiles/maths/duong-manh.aspx",
     "batch": 14,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 12
   },
   {
@@ -2756,7 +2804,7 @@
     "profileUrl": "https://researchmap.jp/read0154388?lang=en",
     "batch": 15,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 12
   },
   {
@@ -2766,7 +2814,7 @@
     "profileUrl": "https://research.qut.edu.au/datascience/people/anh-vo/",
     "batch": 15,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 12
   },
   {
@@ -2776,7 +2824,7 @@
     "profileUrl": "https://www.skoltech.ru/en/faculty-research/faculty/anh-huy-phan/",
     "batch": 15,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 12
   },
   {
@@ -2786,7 +2834,7 @@
     "profileUrl": "https://researchers.mq.edu.au/en/persons/xuan-thinh-duong",
     "batch": 15,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 12
   },
   {
@@ -2796,7 +2844,7 @@
     "profileUrl": "https://lmi.insa-rouen.fr/users/pdinh",
     "batch": 15,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 12
   },
   {
@@ -2806,7 +2854,7 @@
     "profileUrl": "https://www.westga.edu/profile.php?emp_id=0865710",
     "batch": 15,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 12
   },
   {
@@ -2816,7 +2864,7 @@
     "profileUrl": "https://researchers.mq.edu.au/en/persons/the-anh-bui",
     "batch": 15,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 12
   },
   {
@@ -2826,7 +2874,7 @@
     "profileUrl": "https://www.ruhr-uni-bochum.de/humangenetik/team_en.html",
     "batch": 15,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 12
   },
   {
@@ -2836,7 +2884,7 @@
     "profileUrl": "https://www.garvan.org.au/research/faculty/tri-phan",
     "batch": 15,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 12
   },
   {
@@ -2846,7 +2894,7 @@
     "profileUrl": "https://www.concordia.ca/faculty/thien-thanh-dang-vu.html",
     "batch": 15,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 12
   },
   {
@@ -2856,7 +2904,7 @@
     "profileUrl": "https://cri1149.fr/team/pharmacology-and-pathophysiology-of-inflammatory-processes/",
     "batch": 15,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 12
   },
   {
@@ -2866,7 +2914,7 @@
     "profileUrl": "https://www.academie-medecine.fr/membres/patrice-tran-ba-huy/",
     "batch": 15,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 12
   },
   {
@@ -2876,7 +2924,7 @@
     "profileUrl": "https://biam.cea.fr/drf/biam/Pages/laboratoires/lb3m/immunogenomics.aspx",
     "batch": 15,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 12
   },
   {
@@ -2886,7 +2934,7 @@
     "profileUrl": "https://www.essex.ac.uk/people/ngohv57704/hong-viet-ngo",
     "batch": 15,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 12
   },
   {
@@ -2896,7 +2944,7 @@
     "profileUrl": "https://www.uah.edu/faculty-staff/hieu-pham",
     "batch": 15,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 12
   },
   {
@@ -2906,7 +2954,7 @@
     "profileUrl": "https://www.ifpri.org/expert/phuong-hong-nguyen",
     "batch": 15,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 12
   },
   {
@@ -2916,7 +2964,7 @@
     "profileUrl": "https://www6.dijon.inrae.fr/agroecologie",
     "batch": 15,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 12
   },
   {
@@ -2926,7 +2974,7 @@
     "profileUrl": "https://profiles.ucr.edu/app/home/profile/baolam.huynh",
     "batch": 15,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 12
   },
   {
@@ -2945,7 +2993,7 @@
     "profileUrl": "https://people.ucd.ie/anhvu.vo",
     "batch": 15,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 12
   },
   {
@@ -2955,7 +3003,7 @@
     "profileUrl": "https://staffprofile.unisq.edu.au/profile/duc-anh-an-vo",
     "batch": 16,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 13
   },
   {
@@ -2965,7 +3013,7 @@
     "profileUrl": "https://www.cee.ed.tum.de/wb/personen/dr-habil-minh-duc-bui/",
     "batch": 16,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 13
   },
   {
@@ -2975,7 +3023,7 @@
     "profileUrl": "https://icpees.unistra.fr/annuaire/fiche/1118-pham-huu-cuong",
     "batch": 16,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 13
   },
   {
@@ -2985,7 +3033,7 @@
     "profileUrl": "https://oraprdnt.uqtr.uquebec.ca/pls/public/gscw031?owa_no_site=1173&owa_no_fiche=1432",
     "batch": 16,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 13
   },
   {
@@ -2995,7 +3043,7 @@
     "profileUrl": "https://www.imt-mines-albi.fr/en/doan-pham-minh",
     "batch": 16,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 13
   },
   {
@@ -3005,7 +3053,7 @@
     "profileUrl": "https://profiles.uts.edu.au/ToanTrong.Tran",
     "batch": 16,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 13
   },
   {
@@ -3015,7 +3063,7 @@
     "profileUrl": "https://people.csiro.au/T/Y/Yen-Truong",
     "batch": 16,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 13
   },
   {
@@ -3024,9 +3072,10 @@
     "university": "National Energy Technology Laboratory",
     "profileUrl": "https://netl.doe.gov/",
     "batch": 16,
-    "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 13
+    "status": "fetched",
+    "note": "profile page exposed no image candidate",
+    "recoveryBatch": 13,
+    "portraitSource": "https://netl.doe.gov/sites/default/files/2024-03/business-nav-img.jpg"
   },
   {
     "id": "vp-1229",
@@ -3035,7 +3084,7 @@
     "profileUrl": "https://researchmap.jp/nongnv?lang=en",
     "batch": 16,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 13
   },
   {
@@ -3044,9 +3093,10 @@
     "university": "Tufts University",
     "profileUrl": "https://engineering.tufts.edu/bme",
     "batch": 16,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 13
+    "recoveryBatch": 13,
+    "portraitSource": "https://engineering.tufts.edu/bme/sites/g/files/lrezom551/files/styles/large/public/tufts_feeds/news/news-2609-TUCCA-animal-protein-bacteria.jpg?itok=HMPwbPPv"
   },
   {
     "id": "vp-1231",
@@ -3055,7 +3105,7 @@
     "profileUrl": "https://lppi.cyu.fr/",
     "batch": 16,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 13
   },
   {
@@ -3065,7 +3115,7 @@
     "profileUrl": "https://www.icmmo.universite-paris-saclay.fr/fr/perso/giang-vo-thanh/",
     "batch": 16,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 13
   },
   {
@@ -3075,7 +3125,7 @@
     "profileUrl": "https://www.ism.u-bordeaux.fr/",
     "batch": 16,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 13
   },
   {
@@ -3085,7 +3135,7 @@
     "profileUrl": "https://findanexpert.unimelb.edu.au/profile/773335-kim-anh-le-cao",
     "batch": 16,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 13
   },
   {
@@ -3104,7 +3154,7 @@
     "profileUrl": "https://analytics-physics.fnal.gov/people/nhan-tran/",
     "batch": 16,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 13
   },
   {
@@ -3123,7 +3173,7 @@
     "profileUrl": "https://www.fabinet.up.ac.za/index.php/people-profile?profile=79",
     "batch": 16,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 13
   },
   {
@@ -3133,7 +3183,7 @@
     "profileUrl": "https://lfic.dana-farber.org/",
     "batch": 16,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 13
   },
   {
@@ -3143,7 +3193,7 @@
     "profileUrl": "https://astronomy.fas.harvard.edu/people/kim-vy-tran",
     "batch": 16,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 13
   },
   {
@@ -3153,7 +3203,7 @@
     "profileUrl": "https://people.csiro.au/h/m/minh-huynh",
     "batch": 17,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 13
   },
   {
@@ -3163,7 +3213,7 @@
     "profileUrl": "https://www.mcgill.ca/cellbio/faculty-staff/professors/khanh-huy-bui",
     "batch": 17,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 13
   },
   {
@@ -3173,7 +3223,7 @@
     "profileUrl": "https://researchers.uq.edu.au/researcher/2568",
     "batch": 17,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 14
   },
   {
@@ -3183,7 +3233,7 @@
     "profileUrl": "https://www.i2bc.paris-saclay.fr/teams/calcium-signalling-and-microbial-infections/",
     "batch": 17,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 14
   },
   {
@@ -3193,7 +3243,7 @@
     "profileUrl": "https://www.depts.ttu.edu/ece/faculty/faculty.php?name=Hieu%20Pham%20Trung%20Nguyen",
     "batch": 17,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 14
   },
   {
@@ -3203,7 +3253,7 @@
     "profileUrl": "https://www.pa.ucla.edu/faculty/tuan-do.html",
     "batch": 17,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 14
   },
   {
@@ -3222,7 +3272,7 @@
     "profileUrl": "https://www2.mrc-lmb.cam.ac.uk/groups/knguyen/",
     "batch": 17,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 14
   },
   {
@@ -3241,7 +3291,7 @@
     "profileUrl": "https://www.swinburne.edu.au/research/our-research/access-our-research/find-a-researcher-or-supervisor/researcher-profile/?id=ldao",
     "batch": 17,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 14
   },
   {
@@ -3260,7 +3310,7 @@
     "profileUrl": "https://groups.oist.jp/light/viet-giang-truong",
     "batch": 17,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 14
   },
   {
@@ -3270,7 +3320,7 @@
     "profileUrl": "https://mechmining.uq.edu.au/profile/10292/thang-vo-doan",
     "batch": 17,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 14
   },
   {
@@ -3280,7 +3330,7 @@
     "profileUrl": "https://nanolsi.kanazawa-u.ac.jp/en/researchers/kien-xuan-ngo/",
     "batch": 17,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 14
   },
   {
@@ -3290,7 +3340,7 @@
     "profileUrl": "https://www.ornl.gov/staff-profile/van-a-ngo",
     "batch": 17,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 14
   },
   {
@@ -3299,9 +3349,10 @@
     "university": "Institut Pasteur",
     "profileUrl": "https://www.pasteur.fr/",
     "batch": 17,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 14
+    "recoveryBatch": 14,
+    "portraitSource": "https://www.pasteur.fr/sites/default/files/styles/3_4_300_400/public/medias/image/2026-08/241003_PASTEUR_Enseignement01_42.jpg.webp?h=51d853a3&itok=VsOtCAvr"
   },
   {
     "id": "vp-1257",
@@ -3310,7 +3361,7 @@
     "profileUrl": "https://www.cesbio.cnrs.fr/",
     "batch": 17,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 14
   },
   {
@@ -3320,7 +3371,7 @@
     "profileUrl": "https://sites.google.com/view/anh-tu-nguyen",
     "batch": 17,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 14
   },
   {
@@ -3330,7 +3381,7 @@
     "profileUrl": "https://www.ntnu.edu/employees/khanh-quang.tran",
     "batch": 17,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 14
   },
   {
@@ -3340,7 +3391,7 @@
     "profileUrl": "https://icr-amu.cnrs.fr/",
     "batch": 17,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 14
   },
   {
@@ -3349,9 +3400,10 @@
     "university": "University of Warwick",
     "profileUrl": "https://warwick.ac.uk/fac/sci/wmg/",
     "batch": 18,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 14
+    "recoveryBatch": 14,
+    "portraitSource": "https://warwick.ac.uk/fac/sci/wmg/dfs_image.jpg"
   },
   {
     "id": "vp-1262",
@@ -3359,9 +3411,10 @@
     "university": "Sejong University",
     "profileUrl": "https://sejong.elsevierpure.com/en/persons/nhu-ngoc-dao",
     "batch": 18,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 14
+    "recoveryBatch": 14,
+    "portraitSource": "https://sejong.elsevierpure.com/files-asset/95403534/615465.jpeg/"
   },
   {
     "id": "vp-1263",
@@ -3369,9 +3422,10 @@
     "university": "Centrale Lille Institut",
     "profileUrl": "https://centralelille.fr/",
     "batch": 18,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 14
+    "recoveryBatch": 14,
+    "portraitSource": "https://centralelille.fr/wp-content/uploads/etudiants.png"
   },
   {
     "id": "vp-1264",
@@ -3380,7 +3434,7 @@
     "profileUrl": "https://www.liverpool.ac.uk/electrical-engineering-and-electronics/staff/nguyen-huynh/",
     "batch": 18,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 14
   },
   {
@@ -3390,7 +3444,7 @@
     "profileUrl": "https://umdearborn.edu/users/vhbui",
     "batch": 18,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 14
   },
   {
@@ -3400,7 +3454,7 @@
     "profileUrl": "https://www.u-pec.fr/",
     "batch": 18,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 15
   },
   {
@@ -3410,7 +3464,7 @@
     "profileUrl": "https://www.uia.no/en/about-uia/employees/khang-huynh",
     "batch": 18,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 15
   },
   {
@@ -3420,7 +3474,7 @@
     "profileUrl": "https://www.utt.fr/",
     "batch": 18,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 15
   },
   {
@@ -3430,7 +3484,7 @@
     "profileUrl": "https://www.femto-st.fr/",
     "batch": 18,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 15
   },
   {
@@ -3448,9 +3502,10 @@
     "university": "Air Force Research Laboratory",
     "profileUrl": "https://www.afresearchlab.com/",
     "batch": 18,
-    "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 15
+    "status": "fetched",
+    "note": "profile page exposed no image candidate",
+    "recoveryBatch": 15,
+    "portraitSource": "https://www.afresearchlab.com//wp-content/uploads/2026/07/260721-D-F3963-7460.jpg"
   },
   {
     "id": "vp-1272",
@@ -3459,7 +3514,7 @@
     "profileUrl": "https://www.massgeneral.org/pathology/treatments-and-services/dermatopathology",
     "batch": 18,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 15
   },
   {
@@ -3468,9 +3523,10 @@
     "university": "University of Florida",
     "profileUrl": "https://ufhealth.org/",
     "batch": 18,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 15
+    "recoveryBatch": 15,
+    "portraitSource": "https://ufhealth.org/dist/images/homepage/phone.png"
   },
   {
     "id": "vp-1274",
@@ -3478,9 +3534,10 @@
     "university": "Université Paris-Est Créteil",
     "profileUrl": "https://www.aphp.fr/",
     "batch": 18,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 15
+    "recoveryBatch": 15,
+    "portraitSource": "https://www.aphp.fr/sites/default/files/styles/scaling_780w/public/2025-02/mobile-photo-fond-aphp.jpg.webp?itok=7La6YaTu"
   },
   {
     "id": "vp-1275",
@@ -3489,7 +3546,7 @@
     "profileUrl": "https://www.dom.pitt.edu/",
     "batch": 18,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 15
   },
   {
@@ -3498,9 +3555,10 @@
     "university": "Macquarie University",
     "profileUrl": "https://researchers.mq.edu.au/en/persons/binh-bui",
     "batch": 18,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 15
+    "recoveryBatch": 15,
+    "portraitSource": "https://researchers.mq.edu.au/files-asset/357046798/PXL_20240801_025118091.PORTRAIT_3_1_.jpg/"
   },
   {
     "id": "vp-1277",
@@ -3509,7 +3567,7 @@
     "profileUrl": "https://u-paris.fr/",
     "batch": 18,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 15
   },
   {
@@ -3518,9 +3576,10 @@
     "university": "McGill University",
     "profileUrl": "https://www.mcgill.ca/",
     "batch": 18,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 15
+    "recoveryBatch": 15,
+    "portraitSource": "https://www.mcgill.ca/root/branding-region-july-2026.jpg"
   },
   {
     "id": "vp-1279",
@@ -3528,9 +3587,10 @@
     "university": "Aix-Marseille Université",
     "profileUrl": "https://www.ap-hm.fr/",
     "batch": 18,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 15
+    "recoveryBatch": 15,
+    "portraitSource": "https://fr.ap-hm.fr/sites/default/files/styles/180x180/public/urgence_200.png?itok=4wksOnkE"
   },
   {
     "id": "vp-1280",
@@ -3539,7 +3599,7 @@
     "profileUrl": "https://www.bidmc.org/",
     "batch": 18,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 15
   },
   {
@@ -3548,9 +3608,10 @@
     "university": "Université Paris Cité",
     "profileUrl": "https://cress-umr1153.fr/",
     "batch": 19,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 15
+    "recoveryBatch": 15,
+    "portraitSource": "https://cress-umr1153.fr/wp-content/themes/cress/medias/ico-youtube.png"
   },
   {
     "id": "vp-1282",
@@ -3558,9 +3619,10 @@
     "university": "Université de Montréal",
     "profileUrl": "https://www.chusj.org/",
     "batch": 19,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 15
+    "recoveryBatch": 15,
+    "portraitSource": "https://www.chusj.org/CORPO/media/Commun/site/img/bt_donnez-FCHUSJ_FR.png"
   },
   {
     "id": "vp-1283",
@@ -3569,7 +3631,7 @@
     "profileUrl": "https://medicinehealth.leeds.ac.uk/dentistry/staff/320/professor-thuy-do",
     "batch": 19,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 15
   },
   {
@@ -3578,9 +3640,10 @@
     "university": "Monash University",
     "profileUrl": "https://research.monash.edu/en/persons/thanh-phan",
     "batch": 19,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 15
+    "recoveryBatch": 15,
+    "portraitSource": "https://research.monash.edu/files-asset/8165034/f8081.jpg/"
   },
   {
     "id": "vp-1285",
@@ -3588,9 +3651,10 @@
     "university": "Harvard University",
     "profileUrl": "https://www.massgeneral.org/pathology/",
     "batch": 19,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 15
+    "recoveryBatch": 15,
+    "portraitSource": "https://assets.massgeneralbrigham.org/adobe/assets/urn:aaid:aem:8344abc3-2a7d-4817-89fc-5cd1d4a3bad9/as/sd-pathology-bl-26-544x400-2x.avif?assetname=sd-pathology-bl-26-544x400-2x.jpg"
   },
   {
     "id": "vp-1286",
@@ -3607,9 +3671,10 @@
     "university": "Baker Heart and Diabetes Institute",
     "profileUrl": "https://baker.edu.au/",
     "batch": 19,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 15
+    "recoveryBatch": 15,
+    "portraitSource": "https://baker.edu.au/-/media/images/feature-images/our-research/students-feature-image.png"
   },
   {
     "id": "vp-1288",
@@ -3627,7 +3692,7 @@
     "profileUrl": "https://www.feinberg.northwestern.edu/faculty-profiles/az/profile.html?xid=28825",
     "batch": 19,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 16
   },
   {
@@ -3637,7 +3702,7 @@
     "profileUrl": "https://profiles.ucsf.edu/binhan.phan",
     "batch": 19,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 16
   },
   {
@@ -3646,9 +3711,10 @@
     "university": "Harvard University",
     "profileUrl": "https://www.dana-farber.org/find-a-doctor/mai-anh-huynh",
     "batch": 19,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 16
+    "recoveryBatch": 16,
+    "portraitSource": "https://www.dana-farber.org/sites/default/files/providers/30406.jpg"
   },
   {
     "id": "vp-1292",
@@ -3657,7 +3723,7 @@
     "profileUrl": "https://profiles.ucsf.edu/hong-ha.truong",
     "batch": 19,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 16
   },
   {
@@ -3667,7 +3733,7 @@
     "profileUrl": "https://providers.ucsd.edu/provider/quan-m-bui",
     "batch": 19,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 16
   },
   {
@@ -3677,7 +3743,7 @@
     "profileUrl": "https://medicine.tulane.edu/departments/neurosurgery",
     "batch": 19,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 16
   },
   {
@@ -3686,9 +3752,10 @@
     "university": "New York University",
     "profileUrl": "https://nyulangone.org/",
     "batch": 19,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 16
+    "recoveryBatch": 16,
+    "portraitSource": "https://nyulangone.org/news/sites/default/files/2026-09/HERO_Carrotta-ChildhoodCancerPatientStory-004.jpg"
   },
   {
     "id": "vp-1296",
@@ -3696,9 +3763,10 @@
     "university": "University of Geneva",
     "profileUrl": "https://www.unige.ch/medecine/",
     "batch": 19,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 16
+    "recoveryBatch": 16,
+    "portraitSource": "https://www.unige.ch/medecine/application/files/cache/thumbnails/27420febed517affec9b2284df9f29c9.jpg"
   },
   {
     "id": "vp-1297",
@@ -3706,9 +3774,10 @@
     "university": "Université Paris Cité",
     "profileUrl": "https://itodys.u-paris.fr/",
     "batch": 19,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 16
+    "recoveryBatch": 16,
+    "portraitSource": "http://itodys.u-paris.fr/wp-content/uploads/sites/74/2024/11/UniversiteParis_monogramme_couleur_RVB.png"
   },
   {
     "id": "vp-1298",
@@ -3717,7 +3786,7 @@
     "profileUrl": "https://www.orthonet.pitt.edu/",
     "batch": 19,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 16
   },
   {
@@ -3726,9 +3795,10 @@
     "university": "Institut de Recherche pour le Développement",
     "profileUrl": "https://www.ird.fr/",
     "batch": 19,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 16
+    "recoveryBatch": 16,
+    "portraitSource": "https://www.ird.fr/sites/ird_fr/files/styles/homepage_presentation/public/2024-11/EnBref_Pastille-modified%20%281%29.png?itok=Oq8TwW7z"
   },
   {
     "id": "vp-1300",
@@ -3736,9 +3806,10 @@
     "university": "University of Duisburg-Essen",
     "profileUrl": "https://www.uni-due.de/virologie/",
     "batch": 19,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 16
+    "recoveryBatch": 16,
+    "portraitSource": "https://www.uni-due.de/imperia/md/images/virologie/fittosize_246_0_9916cc3b5ce606bd2702737f45755373__mak2401_final_klein.jpg"
   },
   {
     "id": "vp-1301",
@@ -3747,7 +3818,7 @@
     "profileUrl": "https://profiles.sydney.edu.au/linh.nghiem",
     "batch": 20,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 16
   },
   {
@@ -3757,7 +3828,7 @@
     "profileUrl": "https://psychiatrie-psychotherapie-cbf.charite.de/",
     "batch": 20,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 16
   },
   {
@@ -3766,9 +3837,10 @@
     "university": "Harvard University",
     "profileUrl": "https://www.massgeneral.org/doctors/17590/nhi-ha-trinh",
     "batch": 20,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 16
+    "recoveryBatch": 16,
+    "portraitSource": "https://assets.massgeneralbrigham.org/adobe/assets/urn:aaid:aem:f8b727ea-7583-4dc6-9762-810d6e44ba62/as/bl-01-about-mgh-712x588-2x.avif?assetname=bl-01-about-mgh-712x588-2x.jpg"
   },
   {
     "id": "vp-1304",
@@ -3786,7 +3858,7 @@
     "profileUrl": "https://socy.umd.edu/facultyprofile/doan/long",
     "batch": 20,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 16
   },
   {
@@ -3795,9 +3867,10 @@
     "university": "Eötvös Loránd University",
     "profileUrl": "https://www.ppk.elte.hu/en/staff/lan-anh-nguyen-luu",
     "batch": 20,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 16
+    "recoveryBatch": 16,
+    "portraitSource": "https://sta.elte.hu/feltoltes/portre_698c517af3f9a.jpg"
   },
   {
     "id": "vp-1307",
@@ -3806,7 +3879,7 @@
     "profileUrl": "https://researchmap.jp/nghiemphubinh",
     "batch": 20,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 16
   },
   {
@@ -3816,7 +3889,7 @@
     "profileUrl": "https://mis.agri.cmu.ac.th/mis/index.php/en/personnel/academic-staff/770",
     "batch": 20,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 16
   },
   {
@@ -3826,7 +3899,7 @@
     "profileUrl": "https://www.ncl.ac.uk/psychology/people/profile/quocvuong.html",
     "batch": 20,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 16
   },
   {
@@ -3836,7 +3909,7 @@
     "profileUrl": "https://www.ccny.cuny.edu/profiles/bao-vuong",
     "batch": 20,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 17
   },
   {
@@ -3846,7 +3919,7 @@
     "profileUrl": "https://www.ntnu.edu/employees/thanh.p.doan",
     "batch": 20,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 17
   },
   {
@@ -3856,7 +3929,7 @@
     "profileUrl": "https://www.hertie.ai/people/trang-anh-nghiem",
     "batch": 20,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 17
   },
   {
@@ -3866,7 +3939,7 @@
     "profileUrl": "https://www.schulich.uwo.ca/deptmedicine/people/faculty/phung_marilyn.html",
     "batch": 20,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 17
   },
   {
@@ -3876,7 +3949,7 @@
     "profileUrl": "https://eecs.uark.edu/directory/index/uid/thnganle/name/Ngan+Le/",
     "batch": 20,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 17
   },
   {
@@ -3886,7 +3959,7 @@
     "profileUrl": "https://scholars.uow.edu.au/son-lam-phung",
     "batch": 20,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 17
   },
   {
@@ -3896,7 +3969,7 @@
     "profileUrl": "https://www.kent.edu/trumbull/profile/hai-q-dinh-phd",
     "batch": 20,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 17
   },
   {
@@ -3906,7 +3979,7 @@
     "profileUrl": "https://www.southampton.ac.uk/people/5x5mt5/doctor-phan-vuong",
     "batch": 20,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 17
   },
   {
@@ -3916,7 +3989,7 @@
     "profileUrl": "https://dr.ntu.edu.sg/cris/rp/rp01479",
     "batch": 20,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 17
   },
   {
@@ -3926,7 +3999,7 @@
     "profileUrl": "https://profiles.uts.edu.au/Doan.Hoang",
     "batch": 20,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 17
   },
   {
@@ -3936,7 +4009,7 @@
     "profileUrl": "https://www.brunel.ac.uk/people/thai-doan-chuong",
     "batch": 20,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 17
   },
   {
@@ -3946,7 +4019,7 @@
     "profileUrl": "https://www.dfki.de/en/web/about-us/employee/person/ngdu01",
     "batch": 21,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 17
   },
   {
@@ -3965,7 +4038,7 @@
     "profileUrl": "https://chemeng.queensu.ca/people/faculty/cao-thang-dinh.html",
     "batch": 21,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 17
   },
   {
@@ -3975,7 +4048,7 @@
     "profileUrl": "https://academics.rmit.edu.au/tu-le/",
     "batch": 21,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 17
   },
   {
@@ -3984,9 +4057,10 @@
     "university": "CNRS (Centre National de la Recherche Scientifique)",
     "profileUrl": "https://www.iclehs.fr/teams/seisad/",
     "batch": 21,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 17
+    "recoveryBatch": 17,
+    "portraitSource": "https://iclehs.fr/wp-content/uploads/2019/05/seisad2.jpg"
   },
   {
     "id": "vp-1326",
@@ -3995,7 +4069,7 @@
     "profileUrl": "https://www1.montpellier.inrae.fr/wp-inra/bpmp/en/research/teams/aquaporins-membrane-traffic-stress-response/",
     "batch": 21,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 17
   },
   {
@@ -4005,7 +4079,7 @@
     "profileUrl": "https://www.wur.nl/en/persons/loc-dr.-hh-ho-huu.htm",
     "batch": 21,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 17
   },
   {
@@ -4015,7 +4089,7 @@
     "profileUrl": "https://www.torontomu.ca/chemical-engineering/people/faculty/huu-doan/",
     "batch": 21,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 17
   },
   {
@@ -4025,7 +4099,7 @@
     "profileUrl": "https://www.irri.org/our-people/van-schepler-luu",
     "batch": 21,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 17
   },
   {
@@ -4035,7 +4109,7 @@
     "profileUrl": "https://trios.tsukuba.ac.jp/en/researcher/0000004183",
     "batch": 21,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 17
   },
   {
@@ -4045,7 +4119,7 @@
     "profileUrl": "https://research.monash.edu/en/persons/trong-anh-trinh",
     "batch": 21,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 18
   },
   {
@@ -4055,7 +4129,7 @@
     "profileUrl": "https://yudb.kj.yamagata-u.ac.jp/html/100000854_en.html",
     "batch": 21,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 18
   },
   {
@@ -4065,7 +4139,7 @@
     "profileUrl": "https://loa.ensta-paris.fr/",
     "batch": 21,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 18
   },
   {
@@ -4075,7 +4149,7 @@
     "profileUrl": "https://medicine.nus.edu.sg/pharmacy/staff/minh-le/",
     "batch": 21,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 18
   },
   {
@@ -4084,9 +4158,10 @@
     "university": "The University of Hong Kong",
     "profileUrl": "https://www.physics.hku.hk/people/academic/7330",
     "batch": 21,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 18
+    "recoveryBatch": 18,
+    "portraitSource": "https://www.physics.hku.hk/cache/img/0c2ff6b55271736f4885980a114cc9e9.png"
   },
   {
     "id": "vp-1336",
@@ -4094,9 +4169,10 @@
     "university": "University of Southern California",
     "profileUrl": "https://dornsife.usc.edu/profile/le-trinh/",
     "batch": 21,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 18
+    "recoveryBatch": 18,
+    "portraitSource": "https://dornsife.usc.edu/wp-content/uploads/2023/04/photo_1044584-500x700.jpg?v=1788929862"
   },
   {
     "id": "vp-1337",
@@ -4105,7 +4181,7 @@
     "profileUrl": "https://www.lpt.irsamc.ups-tlse.fr/",
     "batch": 21,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 18
   },
   {
@@ -4115,7 +4191,7 @@
     "profileUrl": "https://ki.se/en/people/trung-nghia-vu",
     "batch": 21,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 18
   },
   {
@@ -4125,7 +4201,7 @@
     "profileUrl": "https://rd.iai.osaka-u.ac.jp/en/5e9c1c5ce5dae8a7.html",
     "batch": 21,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 18
   },
   {
@@ -4135,7 +4211,7 @@
     "profileUrl": "https://tetis.teledetection.fr/index.php/fr/presentation/organigramme/personnel-permanent/18-membres-tetis/inrae/521-ho-tong-minh-dinh",
     "batch": 21,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 18
   },
   {
@@ -4145,7 +4221,7 @@
     "profileUrl": "https://lcis.grenoble-inp.fr/fr/le-laboratoire/membres-du-lcis",
     "batch": 22,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 18
   },
   {
@@ -4155,7 +4231,7 @@
     "profileUrl": "https://www.sydney.edu.au/engineering/about/our-people/academic-staff/caohung-pham.html",
     "batch": 22,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 18
   },
   {
@@ -4165,7 +4241,7 @@
     "profileUrl": "https://engineering.usask.ca/people/ece/dinh,-anh.php",
     "batch": 22,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 18
   },
   {
@@ -4175,7 +4251,7 @@
     "profileUrl": "https://www.polymtl.ca/expertises/vo-huu-duc",
     "batch": 22,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 18
   },
   {
@@ -4185,7 +4261,7 @@
     "profileUrl": "https://portail.umons.ac.be/",
     "batch": 22,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 18
   },
   {
@@ -4195,7 +4271,7 @@
     "profileUrl": "https://www.ecu.edu.au/schools/engineering/staff/profiles/lecturers/dr-quoc-viet-phung",
     "batch": 22,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 18
   },
   {
@@ -4205,7 +4281,7 @@
     "profileUrl": "https://www.idpoisson.fr/phung/",
     "batch": 22,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 18
   },
   {
@@ -4215,7 +4291,7 @@
     "profileUrl": "https://ampere-lab.fr/",
     "batch": 22,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 18
   },
   {
@@ -4225,7 +4301,7 @@
     "profileUrl": "https://peoplefinder.lsbu.ac.uk/researcher/827w4/dr-emily-ngan",
     "batch": 22,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 18
   },
   {
@@ -4235,7 +4311,7 @@
     "profileUrl": "https://institutducerveau.org/en/team/team-hoang-xuan",
     "batch": 22,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 18
   },
   {
@@ -4254,7 +4330,7 @@
     "profileUrl": "https://u-paris.fr/en/",
     "batch": 22,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 19
   },
   {
@@ -4273,7 +4349,7 @@
     "profileUrl": "https://experts.griffith.edu.au/7133-hai-phung",
     "batch": 22,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 19
   },
   {
@@ -4283,7 +4359,7 @@
     "profileUrl": "https://profiles.uts.edu.au/Quan.Vuong",
     "batch": 22,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 19
   },
   {
@@ -4292,9 +4368,10 @@
     "university": "New York University",
     "profileUrl": "https://med.nyu.edu/faculty/chau-trinh-shevrin",
     "batch": 22,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 19
+    "recoveryBatch": 19,
+    "portraitSource": "https://nyulangone.org/news/sites/default/files/styles/hero_article_900x600/public/2023-06/covid-19-contact-tracing-program-imporvements-needed-next-pandemic_0.jpg?h=29efec0e&itok=mzmvxPfK"
   },
   {
     "id": "vp-1357",
@@ -4303,7 +4380,7 @@
     "profileUrl": "https://profiles.ucsf.edu/thuy.doan",
     "batch": 22,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 19
   },
   {
@@ -4322,7 +4399,7 @@
     "profileUrl": "https://healthsci.mcmaster.ca/fammed/people/faculty-directory",
     "batch": 22,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 19
   },
   {
@@ -4332,7 +4409,7 @@
     "profileUrl": "https://directory.uthscsa.edu/academics/profile/phungt",
     "batch": 22,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 19
   },
   {
@@ -4341,9 +4418,10 @@
     "university": "Saarland University",
     "profileUrl": "https://www.uni-saarland.de",
     "batch": 23,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 19
+    "recoveryBatch": 19,
+    "portraitSource": "https://www.uni-saarland.de/fileadmin/upload/_processed_/2/7/csm_Smola_Sigrun_799f5bd989.jpg"
   },
   {
     "id": "vp-1362",
@@ -4352,7 +4430,7 @@
     "profileUrl": "https://www.usherbrooke.ca/recherche/specialistes/details/le-mai.tu",
     "batch": 23,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 19
   },
   {
@@ -4371,7 +4449,7 @@
     "profileUrl": "https://www.iric.ca/en/research/principal-investigators/vincent-trinh",
     "batch": 23,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 19
   },
   {
@@ -4380,9 +4458,10 @@
     "university": "University of Antwerp",
     "profileUrl": "https://www.uantwerpen.be/en/staff/xuanbich-trinh/",
     "batch": 23,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 19
+    "recoveryBatch": 19,
+    "portraitSource": "https://www.uantwerpen.be/thumb/8e943cfcc130927f22b44c21f79b9178/assets/img/personeel/w400-h400-cc/08280.jpg"
   },
   {
     "id": "vp-1366",
@@ -4400,7 +4479,7 @@
     "profileUrl": "https://connects.catalyst.harvard.edu/Profiles/display/Person/26859",
     "batch": 23,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 19
   },
   {
@@ -4410,7 +4489,7 @@
     "profileUrl": "https://medicine.duke.edu/news/memoriam-phuong-doan-md",
     "batch": 23,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 19
   },
   {
@@ -4420,7 +4499,7 @@
     "profileUrl": "https://www.niid.go.jp/niid/en/",
     "batch": 23,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 19
   },
   {
@@ -4430,7 +4509,7 @@
     "profileUrl": "https://medecine.umontreal.ca/communaute/les-professeurs-et-chercheurs/profil/Nguyen_Quoc_Dinh/",
     "batch": 23,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 19
   },
   {
@@ -4440,7 +4519,7 @@
     "profileUrl": "https://www.flinders.edu.au/people/minh-son.to",
     "batch": 23,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 19
   },
   {
@@ -4449,9 +4528,10 @@
     "university": "UiT The Arctic University of Norway",
     "profileUrl": "https://uit.no/ansatte/person?p_document_id=783515",
     "batch": 23,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 19
+    "recoveryBatch": 19,
+    "portraitSource": "https://uit.no/Content/558860/cache=1516630307000/Livet+som+student.jpg"
   },
   {
     "id": "vp-1373",
@@ -4459,9 +4539,10 @@
     "university": "University of California, San Francisco",
     "profileUrl": "https://profiles.ucsf.edu/nghiem.ha",
     "batch": 23,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 19
+    "recoveryBatch": 19,
+    "portraitSource": "https://profiles.ucsf.edu/framework/images/arrowDown.png"
   },
   {
     "id": "vp-1374",
@@ -4470,7 +4551,7 @@
     "profileUrl": "https://profiles.ucsf.edu/trang.trinh",
     "batch": 23,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 19
   },
   {
@@ -4480,7 +4561,7 @@
     "profileUrl": "https://www.mayoclinic.org/biographies/dinh-tri-a-m-d/bio-20054746",
     "batch": 23,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 19
   },
   {
@@ -4490,7 +4571,7 @@
     "profileUrl": "https://profiles.ucsf.edu/binh.trinh",
     "batch": 23,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 20
   },
   {
@@ -4500,7 +4581,7 @@
     "profileUrl": "https://www.bcm.edu/people-search/tam-doan-20708",
     "batch": 23,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 20
   },
   {
@@ -4519,7 +4600,7 @@
     "profileUrl": "https://trios.tsukuba.ac.jp/en/researcher/0000003734",
     "batch": 23,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 20
   },
   {
@@ -4529,7 +4610,7 @@
     "profileUrl": "https://nerps.yamanashi.ac.jp/en/",
     "batch": 23,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 20
   },
   {
@@ -4539,7 +4620,7 @@
     "profileUrl": "https://www.a-star.edu.sg/i2r",
     "batch": 24,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 20
   },
   {
@@ -4548,9 +4629,10 @@
     "university": "INRAE (Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement)",
     "profileUrl": "https://www.inrae.fr",
     "batch": 24,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 20
+    "recoveryBatch": 20,
+    "portraitSource": "https://www.inrae.fr/sites/default/files/styles/actu_une/public/jpg/lake-g5625ff11a_1280.jpg?itok=0gikYXmo"
   },
   {
     "id": "vp-1383",
@@ -4559,7 +4641,7 @@
     "profileUrl": "https://publichealth.jhu.edu/faculty/3277/trang-quynh-nguyen",
     "batch": 24,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 20
   },
   {
@@ -4569,7 +4651,7 @@
     "profileUrl": "https://mathematik.uni-graz.at",
     "batch": 24,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 20
   },
   {
@@ -4578,9 +4660,10 @@
     "university": "Ohio University",
     "profileUrl": "https://www.ohio.edu/voinovich-school/people/tuyen-pham",
     "batch": 24,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 20
+    "recoveryBatch": 20,
+    "portraitSource": "https://www.ohio.edu/directory/sites/ohio.edu.directory/files/styles/profile_portrait/public/2026-01/j-abedin.jpg?itok=eVT_BgJl"
   },
   {
     "id": "vp-1386",
@@ -4589,7 +4672,7 @@
     "profileUrl": "https://research.aston.ac.uk/en/persons/ngoc-dieu-linh-vi/",
     "batch": 24,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 20
   },
   {
@@ -4599,7 +4682,7 @@
     "profileUrl": "https://applicationspub.unil.ch/interpub/noauth/php/Un/UnPers.php?PerNum=11398&LanCode=8",
     "batch": 24,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 20
   },
   {
@@ -4609,7 +4692,7 @@
     "profileUrl": "https://www.inserm.fr",
     "batch": 24,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 20
   },
   {
@@ -4618,9 +4701,10 @@
     "university": "Asian Institute of Technology",
     "profileUrl": "https://ait.ac.th/2021/06/the-school-of-environment-resources-and-development-welcomes-dr-ha-thanh-dong/",
     "batch": 24,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 20
+    "recoveryBatch": 20,
+    "portraitSource": "https://ait.ac.th/wp-content/uploads/2021/12/welcome-Dr.Ha_-1.png"
   },
   {
     "id": "vp-1390",
@@ -4629,7 +4713,7 @@
     "profileUrl": "https://orcid.org/0000-0003-1847-7301",
     "batch": 24,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 20
   },
   {
@@ -4639,7 +4723,7 @@
     "profileUrl": "https://www.houstonmethodist.org",
     "batch": 24,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 20
   },
   {
@@ -4649,7 +4733,7 @@
     "profileUrl": "https://researchmap.jp/dinhhaduythuy",
     "batch": 24,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 20
   },
   {
@@ -4659,7 +4743,7 @@
     "profileUrl": "https://www.sydney.edu.au/business/about/our-people/academic-staff/chinh-ho.html",
     "batch": 24,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 20
   },
   {
@@ -4669,7 +4753,7 @@
     "profileUrl": "https://search.asu.edu/profile/2371900",
     "batch": 24,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 20
   },
   {
@@ -4679,7 +4763,7 @@
     "profileUrl": "https://geography.osu.edu/people/le.240",
     "batch": 24,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 20
   },
   {
@@ -4689,7 +4773,7 @@
     "profileUrl": "https://www.notredame.edu.au/about/schools/sydney/education/school-staff/thuan-thai",
     "batch": 24,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 20
   },
   {
@@ -4699,7 +4783,7 @@
     "profileUrl": "https://www.deakin.edu.au/about-deakin/people/duc-thanh-nguyen",
     "batch": 24,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 21
   },
   {
@@ -4709,7 +4793,7 @@
     "profileUrl": "https://www.usn.no/om-usn/kontakt-oss/ansatte/anh-nguyen-duc",
     "batch": 24,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 21
   },
   {
@@ -4718,9 +4802,10 @@
     "university": "Middlesex University",
     "profileUrl": "https://www.mdx.ac.uk/about-us/our-people/staff-directory/profile/vien-quoc-tuan",
     "batch": 24,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 21
+    "recoveryBatch": 21,
+    "portraitSource": "https://pxl-mdxacuk.terminalfour.net/fit-in/1200x1200/filters:quality(75)/0x167:667x834/prod01/channel_3/media/middlesex-university/about-us-images/staff-images/079---Staff-and-students.png"
   },
   {
     "id": "vp-1400",
@@ -4728,9 +4813,10 @@
     "university": "Curtin University",
     "profileUrl": "https://staffportal.curtin.edu.au/staff/profile/view/duc-son-pham-863a3d2e/",
     "batch": 24,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 21
+    "recoveryBatch": 21,
+    "portraitSource": "https://staffportal.curtin.edu.au/wp-content/themes/base-theme/assets/img/curtin-qr.jpg"
   },
   {
     "id": "vp-1401",
@@ -4739,7 +4825,7 @@
     "profileUrl": "https://www.etsmtl.ca/en/research/professors-researchers/knguyen",
     "batch": 25,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 21
   },
   {
@@ -4749,7 +4835,7 @@
     "profileUrl": "https://www.kcg.edu/en/faculty/associate-professors/dinh-duy-tai",
     "batch": 25,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 21
   },
   {
@@ -4759,7 +4845,7 @@
     "profileUrl": "https://wit.edu/directory/faculty-staff",
     "batch": 25,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 21
   },
   {
@@ -4769,7 +4855,7 @@
     "profileUrl": "https://researchers.adelaide.edu.au/profile/triet.h.le",
     "batch": 25,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 21
   },
   {
@@ -4779,7 +4865,7 @@
     "profileUrl": "https://profiles.uts.edu.au/Cuong.Ton-That",
     "batch": 25,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 21
   },
   {
@@ -4789,7 +4875,7 @@
     "profileUrl": "https://www.fris.tohoku.ac.jp/en/researcher/creative/hung.html",
     "batch": 25,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 21
   },
   {
@@ -4799,7 +4885,7 @@
     "profileUrl": "https://www.uis.no/en/profile/quoc-duy-ho",
     "batch": 25,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 21
   },
   {
@@ -4809,7 +4895,7 @@
     "profileUrl": "https://www.lichttechnik.tu-darmstadt.de/fachgebiet_lt/team_lt/mitarbeiter_details_14912.en.jsp",
     "batch": 25,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 21
   },
   {
@@ -4819,7 +4905,7 @@
     "profileUrl": "https://researchportal.helsinki.fi/en/persons/thao-ho",
     "batch": 25,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 21
   },
   {
@@ -4829,7 +4915,7 @@
     "profileUrl": "https://www.un-ihe.org/people/lap-cuong-hua",
     "batch": 25,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 21
   },
   {
@@ -4839,7 +4925,7 @@
     "profileUrl": "https://www.rmit.edu.au/contact/staff-contacts/academic-staff/p/phan-le-dr-tram",
     "batch": 25,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 21
   },
   {
@@ -4848,9 +4934,10 @@
     "university": "Taipei Medical University",
     "profileUrl": "https://hub.tmu.edu.tw/en/persons/nguyen-quoc-khanh-le/",
     "batch": 25,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 21
+    "recoveryBatch": 21,
+    "portraitSource": "https://hub.tmu.edu.tw/files-asset/42484745/108016.jpg/"
   },
   {
     "id": "vp-1413",
@@ -4859,7 +4946,7 @@
     "profileUrl": "https://bioscience.ucla.edu/people/hung-ton-that",
     "batch": 25,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 21
   },
   {
@@ -4905,7 +4992,7 @@
     "profileUrl": "https://www.trentu.ca/chemistry/faculty-research",
     "batch": 25,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 21
   },
   {
@@ -4924,7 +5011,7 @@
     "profileUrl": "https://www.nist.gov/people/huong-giang-nguyen",
     "batch": 25,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 21
   },
   {
@@ -4934,7 +5021,7 @@
     "profileUrl": "https://www.deakin.edu.au/about-deakin/people/hieu-trinh",
     "batch": 26,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 21
   },
   {
@@ -4944,7 +5031,7 @@
     "profileUrl": "https://staffprofile.unisq.edu.au/profile/toan-dinh",
     "batch": 26,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 22
   },
   {
@@ -4954,7 +5041,7 @@
     "profileUrl": "https://experts.griffith.edu.au/18881-van-thanh-dau",
     "batch": 26,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 22
   },
   {
@@ -4964,7 +5051,7 @@
     "profileUrl": "https://staffprofile.unisq.edu.au/profile/nam-mai-duy",
     "batch": 26,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 22
   },
   {
@@ -4973,9 +5060,10 @@
     "university": "Technical University of Denmark",
     "profileUrl": "https://orbit.dtu.dk/en/persons/linh-cao-hoang",
     "batch": 26,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 22
+    "recoveryBatch": 22,
+    "portraitSource": "https://orbit.dtu.dk/files-asset/398997520/905_2c599d15.jpg/"
   },
   {
     "id": "vp-1426",
@@ -4984,7 +5072,7 @@
     "profileUrl": "https://www.uliege.be/cms/c_9054334/fr/repertoire?uid=u208351",
     "batch": 26,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 22
   },
   {
@@ -4993,9 +5081,10 @@
     "university": "Sejong University",
     "profileUrl": "https://sejong.elsevierpure.com/en/persons/duc-kien-thai",
     "batch": 26,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 22
+    "recoveryBatch": 22,
+    "portraitSource": "https://sejong.elsevierpure.com/files-asset/11403468/615276.JPG/"
   },
   {
     "id": "vp-1428",
@@ -5003,9 +5092,10 @@
     "university": "National Cheng Kung University",
     "profileUrl": "https://me.ncku.edu.tw/",
     "batch": 26,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 22
+    "recoveryBatch": 22,
+    "portraitSource": "https://files.me.ncku.edu.tw/webfile/banner/blubqPGNi2u.jpg"
   },
   {
     "id": "vp-1429",
@@ -5013,9 +5103,10 @@
     "university": "Higher Colleges of Technology",
     "profileUrl": "https://hct.ac.ae/",
     "batch": 26,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 22
+    "recoveryBatch": 22,
+    "portraitSource": "https://hct.ac.ae/wp-content/themes/HCTtheme/assets/images/3star.png"
   },
   {
     "id": "vp-1430",
@@ -5023,9 +5114,10 @@
     "university": "École des Ponts ParisTech",
     "profileUrl": "https://ecoledesponts.fr/",
     "batch": 26,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 22
+    "recoveryBatch": 22,
+    "portraitSource": "https://ecoledesponts.fr/sites/default/files/styles/home_carre/public/pages/Actu-Event/imagination-urgence-ecologique.jpg?h=e4eb0cb5&itok=N3hT-crF"
   },
   {
     "id": "vp-1431",
@@ -5033,9 +5125,10 @@
     "university": "INSA Lyon",
     "profileUrl": "https://www.insa-lyon.fr/",
     "batch": 26,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 22
+    "recoveryBatch": 22,
+    "portraitSource": "https://www.insa-lyon.fr/sites/www.insa-lyon.fr/files/styles/actu_home/public/actualites/vignette_article-site-appli.jpg?itok=DmkwEtQX"
   },
   {
     "id": "vp-1432",
@@ -5043,9 +5136,10 @@
     "university": "Commissariat à l'Énergie Atomique et aux Énergies Alternatives",
     "profileUrl": "https://www.liten.cea.fr/",
     "batch": 26,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 22
+    "recoveryBatch": 22,
+    "portraitSource": "https://www.liten.cea.fr/_layouts/15/images/spcommon.png?rev=44"
   },
   {
     "id": "vp-1433",
@@ -5053,9 +5147,10 @@
     "university": "Sandia National Laboratories",
     "profileUrl": "https://www.sandia.gov",
     "batch": 26,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 22
+    "recoveryBatch": 22,
+    "portraitSource": "https://www.sandia.gov/app/uploads/2020/12/z-machine.jpg"
   },
   {
     "id": "vp-1434",
@@ -5064,7 +5159,7 @@
     "profileUrl": "https://www.nrel.gov",
     "batch": 26,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 22
   },
   {
@@ -5073,9 +5168,10 @@
     "university": "Université de Montréal",
     "profileUrl": "https://pharmacologie-physiologie.umontreal.ca/",
     "batch": 26,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 22
+    "recoveryBatch": 22,
+    "portraitSource": "https://pharmacologie-physiologie.umontreal.ca/wp-content/uploads/sites/18/2014/05/nazzareno-1.jpg"
   },
   {
     "id": "vp-1436",
@@ -5083,9 +5179,10 @@
     "university": "Harvard University",
     "profileUrl": "https://www.massgeneral.org/doctors/20888/thuan-ly",
     "batch": 26,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 22
+    "recoveryBatch": 22,
+    "portraitSource": "https://assets.massgeneralbrigham.org/adobe/assets/urn:aaid:aem:f8b727ea-7583-4dc6-9762-810d6e44ba62/as/bl-01-about-mgh-712x588-2x.avif?assetname=bl-01-about-mgh-712x588-2x.jpg"
   },
   {
     "id": "vp-1437",
@@ -5094,7 +5191,7 @@
     "profileUrl": "https://medicine.iu.edu/faculty/16281/hoang-quyen",
     "batch": 26,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 22
   },
   {
@@ -5104,7 +5201,7 @@
     "profileUrl": "https://www.bcm.edu/departments/surgery",
     "batch": 26,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 22
   },
   {
@@ -5114,7 +5211,7 @@
     "profileUrl": "https://www.nemours.org/find-a-doctor/2311-thao-ly-phan-pediatrics-wilmington",
     "batch": 26,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 22
   },
   {
@@ -5124,7 +5221,7 @@
     "profileUrl": "https://health.usf.edu/medicine/pediatrics/neonatology/faculty",
     "batch": 26,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 22
   },
   {
@@ -5134,7 +5231,7 @@
     "profileUrl": "https://www.usz.ch/team/thi-dan-linh-nguyen-kim/",
     "batch": 27,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 22
   },
   {
@@ -5143,9 +5240,10 @@
     "university": "Université de Montréal",
     "profileUrl": "https://medecine.umontreal.ca/",
     "batch": 27,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 23
+    "recoveryBatch": 23,
+    "portraitSource": "https://medecine.umontreal.ca/wp-content/uploads/sites/68/2026/09/Design-sans-titre-1536x1083.jpg"
   },
   {
     "id": "vp-1443",
@@ -5172,7 +5270,7 @@
     "profileUrl": "https://w-rdb.waseda.jp/html/100001825_en.html",
     "batch": 27,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 23
   },
   {
@@ -5182,7 +5280,7 @@
     "profileUrl": "https://cfdlabsnu.com",
     "batch": 27,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 23
   },
   {
@@ -5192,7 +5290,7 @@
     "profileUrl": "https://med.unr.edu/directory/cam-ha-tran",
     "batch": 27,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 23
   },
   {
@@ -5202,7 +5300,7 @@
     "profileUrl": "https://www.med.uni-wuerzburg.de/hygiene/startseite/",
     "batch": 27,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 23
   },
   {
@@ -5221,7 +5319,7 @@
     "profileUrl": "https://www.rosalindfranklin.edu/academics/chicago-medical-school/departments/obstetrics-and-gynecology/faculty/thanh-luu-do/",
     "batch": 27,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 23
   },
   {
@@ -5231,7 +5329,7 @@
     "profileUrl": "https://socialwork.ucalgary.ca/hieu-van-ngo",
     "batch": 27,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 23
   },
   {
@@ -5241,7 +5339,7 @@
     "profileUrl": "https://www.calstatela.edu/hhs/sw/anh-luu-t-huynh-hohnbaum",
     "batch": 27,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 23
   },
   {
@@ -5251,7 +5349,7 @@
     "profileUrl": "https://discover.utas.edu.au/Vinh.To",
     "batch": 27,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 23
   },
   {
@@ -5261,7 +5359,7 @@
     "profileUrl": "https://www.kent.ac.uk/centre-for-the-study-of-higher-education/people/4100/phan-ngoc-quynh-anh",
     "batch": 27,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 23
   },
   {
@@ -5271,7 +5369,7 @@
     "profileUrl": "https://shbie.ubd.edu.bn/academic-staff/prof-dr-phan-le-ha/",
     "batch": 27,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 23
   },
   {
@@ -5281,7 +5379,7 @@
     "profileUrl": "https://staff-profiles.cqu.edu.au/home/view/25390",
     "batch": 27,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 23
   },
   {
@@ -5291,7 +5389,7 @@
     "profileUrl": "https://profiles.auckland.ac.nz/l-kieu",
     "batch": 27,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 23
   },
   {
@@ -5301,7 +5399,7 @@
     "profileUrl": "https://asianstudies.unc.edu/person/huy-phung/",
     "batch": 27,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 23
   },
   {
@@ -5311,7 +5409,7 @@
     "profileUrl": "https://people.wgtn.ac.nz/bach.nguyen",
     "batch": 27,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 23
   },
   {
@@ -5321,7 +5419,7 @@
     "profileUrl": "https://www.edgehill.ac.uk/person/vinh-thong-ta/",
     "batch": 27,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 23
   },
   {
@@ -5340,7 +5438,7 @@
     "profileUrl": "https://etis.ensea.fr/membres/ngoc-son-vu/",
     "batch": 28,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 23
   },
   {
@@ -5350,7 +5448,7 @@
     "profileUrl": "https://www.centralesupelec.fr/fr/bich-lien-doan",
     "batch": 28,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 23
   },
   {
@@ -5360,7 +5458,7 @@
     "profileUrl": "https://pages.lip6.fr/Binh-Minh.Bui-Xuan/",
     "batch": 28,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 23
   },
   {
@@ -5370,7 +5468,7 @@
     "profileUrl": "https://ung.edu/degrees/faculty/thinh-kieu.php",
     "batch": 28,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 23
   },
   {
@@ -5380,7 +5478,7 @@
     "profileUrl": "https://engineering.wayne.edu/profile/ez5298",
     "batch": 28,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 24
   },
   {
@@ -5389,9 +5487,10 @@
     "university": "CNRS (Centre National de la Recherche Scientifique)",
     "profileUrl": "https://www.ismo.universite-paris-saclay.fr/",
     "batch": 28,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 24
+    "recoveryBatch": 24,
+    "portraitSource": "https://www.ismo.universite-paris-saclay.fr/wp-content/uploads/2026/02/PalmesAca_Severine-1000x1024.jpg"
   },
   {
     "id": "vp-1468",
@@ -5400,7 +5499,7 @@
     "profileUrl": "https://nrc.canada.ca/en/corporate/contact-us/nrc-directory-people/minh-tan-ton-that",
     "batch": 28,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 24
   },
   {
@@ -5409,9 +5508,10 @@
     "university": "Asian Institute of Technology",
     "profileUrl": "https://ait.ac.th/people/faculty/prof-nguyen-thi-kim-oanh/",
     "batch": 28,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 24
+    "recoveryBatch": 24,
+    "portraitSource": "https://ait.ac.th/wp-content/uploads/2022/05/DSC_0032-e1551323597684-683x1024-1-Edited-e1759290737534.jpg"
   },
   {
     "id": "vp-1470",
@@ -5419,9 +5519,10 @@
     "university": "Université du Québec à Montréal",
     "profileUrl": "https://professeurs.uqam.ca/professeur/pham.thi_thanh_hien/",
     "batch": 28,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 24
+    "recoveryBatch": 24,
+    "portraitSource": "https://photos-professeurs.uqam.ca/images/fiche_professeur/m2/TnbbJpvskiQ_.jpg"
   },
   {
     "id": "vp-1471",
@@ -5429,9 +5530,10 @@
     "university": "INRAE (Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement)",
     "profileUrl": "https://frise.inrae.fr/",
     "batch": 28,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 24
+    "recoveryBatch": 24,
+    "portraitSource": "https://frise.inrae.fr/var/hub_internet_c13_frise/storage/images/_aliases/card_view/zoom-sur/livre-chaine-du-froid/34620-11-fre-FR/Livre-chaine-du-froid.png"
   },
   {
     "id": "vp-1472",
@@ -5448,9 +5550,10 @@
     "university": "Université Paris-Est Créteil",
     "profileUrl": "https://lam-nguyen.de/",
     "batch": 28,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 24
+    "recoveryBatch": 24,
+    "portraitSource": "https://lam-nguyen.de/.cm4all/uproc.php/0/seitenleiste/.anfahrt.png/picture-200?_=15e70fa04b8"
   },
   {
     "id": "vp-1474",
@@ -5459,7 +5562,7 @@
     "profileUrl": "https://www.espace-sciences.org/sciences-ouest/299/actualite/hommage-a-bach-lien-hua",
     "batch": 28,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 24
   },
   {
@@ -5469,7 +5572,7 @@
     "profileUrl": "https://profiles.sydney.edu.au/kim-yen.phan-thien",
     "batch": 28,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 24
   },
   {
@@ -5479,7 +5582,7 @@
     "profileUrl": "https://www.nmbu.no/ansatte/thu-hien-to",
     "batch": 28,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 24
   },
   {
@@ -5489,7 +5592,7 @@
     "profileUrl": "https://www.univ-gustave-eiffel.fr/",
     "batch": 28,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 24
   },
   {
@@ -5498,9 +5601,10 @@
     "university": "Université Claude Bernard Lyon 1",
     "profileUrl": "https://lmc2.univ-lyon1.fr/",
     "batch": 28,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 24
+    "recoveryBatch": 24,
+    "portraitSource": "https://lmc2.univ-lyon1.fr/wp-content/uploads/2025/07/carous01-400x400.jpg"
   },
   {
     "id": "vp-1479",
@@ -5509,7 +5613,7 @@
     "profileUrl": "https://www-irisa.univ-ubs.fr/",
     "batch": 28,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 24
   },
   {
@@ -5519,7 +5623,7 @@
     "profileUrl": "https://researchmap.jp/buitam/?lang=en",
     "batch": 28,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 24
   },
   {
@@ -5529,7 +5633,7 @@
     "profileUrl": "https://www.etsmtl.ca/en/research/professors-researchers/tdao",
     "batch": 29,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 24
   },
   {
@@ -5538,9 +5642,10 @@
     "university": "University of North Carolina at Charlotte",
     "profileUrl": "https://et.charlotte.edu/directory/chau-le-ph-d/",
     "batch": 29,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 24
+    "recoveryBatch": 24,
+    "portraitSource": "https://engineering.charlotte.edu/wp-content/uploads/2026/07/kj.jpg"
   },
   {
     "id": "vp-1483",
@@ -5548,9 +5653,10 @@
     "university": "Toulouse INP",
     "profileUrl": "https://www.laplace.univ-tlse.fr/",
     "batch": 29,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 24
+    "recoveryBatch": 24,
+    "portraitSource": "https://www.laplace.univ-tlse.fr/wp-content/uploads/2025/11/Couverture_2025.png"
   },
   {
     "id": "vp-1484",
@@ -5558,9 +5664,10 @@
     "university": "University of California, San Francisco",
     "profileUrl": "https://profiles.ucsf.edu/ngoc.ly",
     "batch": 29,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 24
+    "recoveryBatch": 24,
+    "portraitSource": "https://profiles.ucsf.edu/framework/images/arrowDown.png"
   },
   {
     "id": "vp-1485",
@@ -5578,7 +5685,7 @@
     "profileUrl": "https://med.emory.edu/departments/medicine/divisions/infectious-diseases/",
     "batch": 29,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 24
   },
   {
@@ -5588,7 +5695,7 @@
     "profileUrl": "https://sante.sorbonne-universite.fr/",
     "batch": 29,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 24
   },
   {
@@ -5598,7 +5705,7 @@
     "profileUrl": "https://www.chu-amiens.fr/",
     "batch": 29,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 25
   },
   {
@@ -5607,9 +5714,10 @@
     "university": "RIKEN",
     "profileUrl": "https://aip.riken.jp/",
     "batch": 29,
-    "status": "unresolved",
+    "status": "fetched",
     "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 25
+    "recoveryBatch": 25,
+    "portraitSource": "https://aip.riken.jp/uploads/Best-Application.jpg"
   },
   {
     "id": "vp-1490",
@@ -5618,7 +5726,7 @@
     "profileUrl": "https://www.mdpi.com/2077-0472/16/6/661",
     "batch": 29,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 25
   },
   {
@@ -5628,7 +5736,7 @@
     "profileUrl": "https://www.math.ubc.ca/~bui/",
     "batch": 29,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 25
   },
   {
@@ -5647,7 +5755,67 @@
     "profileUrl": "https://www.ulethbridge.ca/directory/person/jon.doan",
     "batch": 29,
     "status": "unresolved",
-    "note": "The operation was aborted due to timeout",
+    "note": "profile page had no downloadable portrait image",
     "recoveryBatch": 25
+  },
+  {
+    "id": "vp-1494",
+    "name": "Marguerite Nguyen",
+    "university": "Duke University",
+    "profileUrl": "https://english.duke.edu/people/marguerite-nguyen",
+    "batch": 30,
+    "status": "unresolved",
+    "note": "profile page exposed no image candidate",
+    "recoveryBatch": 1
+  },
+  {
+    "id": "vp-1495",
+    "name": "Phuong Tran Nguyen",
+    "university": "California State University, Monterey Bay",
+    "profileUrl": "https://csumb.edu/hcom/phuong-nguyen/",
+    "batch": 30,
+    "status": "unresolved",
+    "note": "profile page exposed no image candidate",
+    "recoveryBatch": 1
+  },
+  {
+    "id": "vp-1496",
+    "name": "Howie Tam",
+    "university": "Brandeis University",
+    "profileUrl": "https://www.brandeis.edu/english/faculty/tam.html",
+    "batch": 30,
+    "status": "unresolved",
+    "note": "profile page exposed no image candidate",
+    "recoveryBatch": 1
+  },
+  {
+    "id": "vp-1497",
+    "name": "Tess Do",
+    "university": "University of Melbourne",
+    "profileUrl": "https://findanexpert.unimelb.edu.au/profile/13813-tess-do",
+    "batch": 30,
+    "status": "unresolved",
+    "note": "profile page exposed no image candidate",
+    "recoveryBatch": 1
+  },
+  {
+    "id": "vp-1498",
+    "name": "Quynh-Nhu Le",
+    "university": "University of South Florida",
+    "profileUrl": "https://www.usf.edu/arts-sciences/departments/english/people/q-le.aspx",
+    "batch": 30,
+    "status": "unresolved",
+    "note": "profile page exposed no image candidate",
+    "recoveryBatch": 1
+  },
+  {
+    "id": "vp-1499",
+    "name": "Isabelle Pelaud",
+    "university": "San Francisco State University",
+    "profileUrl": "https://aas.sfsu.edu/people/isabelle-thuy-pelaud",
+    "batch": 30,
+    "status": "unresolved",
+    "note": "profile page exposed no image candidate",
+    "recoveryBatch": 1
   }
 ]

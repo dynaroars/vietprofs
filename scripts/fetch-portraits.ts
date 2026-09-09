@@ -34,6 +34,14 @@ const todoPath = join(root, 'maintenance/portrait-todo.md');
 const portraitsDir = join(root, 'public/portraits');
 const userAgent = 'VietProfs portrait maintenance (https://vietroars.roars.dev)';
 
+async function curl(url: string, maxTime: number): Promise<Buffer> {
+  const { stdout } = await execFileAsync('curl', [
+    '-L', '--fail', '--silent', '--show-error', '--max-time', String(maxTime),
+    '-A', userAgent, url,
+  ], { encoding: 'buffer', maxBuffer: 20_000_000 });
+  return stdout as Buffer;
+}
+
 function absoluteUrl(value: string, base: string): string {
   try { return new URL(value, base).href; } catch { return ''; }
 }
@@ -52,6 +60,7 @@ function imageCandidates(html: string, pageUrl: string, name: string): string[] 
     if (/no[-_ ]?(portrait|photo|image)|placeholder|logo|header|favicon|icon|sprite|gravatar/.test(low)) return;
     let score = 0;
     if (/portrait|headshot|profile|photo|avatar|faculty|people|person|staff|image/.test(low)) score += 4;
+    if (/\.(?:jpe?g|png|webp)(?:[/?#]|$)/i.test(url)) score += 5;
     const nameMatched = nameTokens.some((token) => `${url} ${context}`.toLowerCase().includes(token));
     if (nameMatched) score += 5;
     if (/class=["'][^"']*\b(image|portrait|photo)[^"']*["']/.test(context)) score += 5;
@@ -60,16 +69,18 @@ function imageCandidates(html: string, pageUrl: string, name: string): string[] 
   for (const match of html.matchAll(/<meta\b[^>]+(?:property|name)=["'](?:og:image|twitter:image)["'][^>]+content=["']([^"']+)["'][^>]*>/gi)) add(match[1], match[0]);
   for (const match of html.matchAll(/<img\b[^>]*\bsrc=["']([^"']+)["'][^>]*>/gi)) add(match[1], match[0]);
   for (const match of html.matchAll(/\b(?:src|data-src|data-image|imageUrl)=["']([^"']+)["']/gi)) add(match[1], match[0]);
+  for (const match of html.matchAll(/\bsrcset=["']([^"']+)["']/gi)) {
+    for (const candidate of match[1].split(',').map((value) => value.trim().split(/\s+/)[0]).filter(Boolean)) add(candidate, match[0]);
+  }
+  for (const match of html.matchAll(/"image"\s*:\s*"([^"]+)"/gi)) add(match[1], match[0]);
   const unique = [...new Map(candidates.sort((a, b) => b.score - a.score).map((entry) => [entry.url, entry])).values()];
-  const nameMatched = unique.filter((entry) => entry.nameMatched);
-  return (nameMatched.length ? nameMatched : unique.filter((entry) => entry.score >= 5)).map((entry) => entry.url);
+  return unique.filter((entry) => entry.nameMatched || entry.score >= 5).map((entry) => entry.url);
 }
 
 async function alternatePageUrls(person: QueueItem): Promise<string[]> {
   const query = new URLSearchParams({ q: `"${person.name}" "${person.university}" faculty portrait OR photo` });
-  const response = await fetch(`https://html.duckduckgo.com/html/?${query}`, { headers: { 'user-agent': userAgent }, signal: AbortSignal.timeout(1000) });
-  if (!response.ok) return [];
-  const html = await response.text();
+  let html: string;
+  try { html = (await curl(`https://html.duckduckgo.com/html/?${query}`, 10)).toString('utf8'); } catch { return []; }
   const urls: string[] = [];
   for (const match of html.matchAll(/result__a" href="\/\/duckduckgo\.com\/l\/\?uddg=([^&"]+)/gi)) {
     try { urls.push(decodeURIComponent(match[1]).replace(/&amp;/g, '&')); } catch { /* ignore malformed result */ }
@@ -88,11 +99,8 @@ function slug(value: string): string {
 }
 
 async function fetchImage(url: string): Promise<Buffer | null> {
-  const response = await fetch(url, { headers: { 'user-agent': userAgent }, signal: AbortSignal.timeout(20000) });
-  if (!response.ok) return null;
-  const type = response.headers.get('content-type') ?? '';
-  if (!type.startsWith('image/') || type === 'image/svg+xml') return null;
-  const bytes = Buffer.from(await response.arrayBuffer());
+  let bytes: Buffer;
+  try { bytes = await curl(url, 20); } catch { return null; }
   if (bytes.length < 1000 || bytes.length > 15_000_000) return null;
   return bytes;
 }
@@ -161,9 +169,7 @@ await Promise.all(batch.map(async (item) => {
     const pageUrls = recovery ? [item.profileUrl, ...(await alternatePageUrls(item))] : [item.profileUrl];
     const candidateGroups = await Promise.all([...new Set(pageUrls)].map(async (pageUrl) => {
       try {
-        const page = await fetch(pageUrl, { headers: { 'user-agent': userAgent }, signal: AbortSignal.timeout(2000) });
-        if (!page.ok) return [];
-        return imageCandidates(await page.text(), pageUrl, item.name);
+        return imageCandidates((await curl(pageUrl, 20)).toString('utf8'), pageUrl, item.name);
       } catch { return []; /* try the next alternate page */ }
     }));
     const candidates = [...new Set(candidateGroups.flat())];
