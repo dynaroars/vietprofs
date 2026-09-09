@@ -158,7 +158,7 @@ function renderTrafficChart(daily: DailyStat[]): string {
   return `
     <div class="stats-chart-container">
       <div class="chart-legend">
-        <span class="legend-item legend-visits"><span class="legend-swatch"></span> Cloudflare visits</span>
+        <span class="legend-item legend-visits"><span class="legend-swatch"></span> Visits</span>
         <span class="legend-item legend-views"><span class="legend-swatch"></span> Successful HTML page requests</span>
       </div>
       <svg class="stats-chart-svg" viewBox="0 0 ${width} ${height}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="30-day traffic trend chart">
@@ -169,7 +169,7 @@ function renderTrafficChart(daily: DailyStat[]): string {
         <path d="${pathVisits}" fill="none" stroke="var(--accent-color, #2563eb)" stroke-width="2.5" />
         ${pointsVisits.map(p => `
           <circle cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="3" fill="var(--accent-color, #2563eb)">
-            <title>${escapeHtml(p.date)}: ${formatNumber(p.val)} Cloudflare visits</title>
+            <title>${escapeHtml(p.date)}: ${formatNumber(p.val)} visits</title>
           </circle>
         `).join('')}
       </svg>
@@ -182,7 +182,7 @@ function renderStatsContent(data: StatsResponse) {
   const coverage7 = data.coverage?.last7Days ?? Math.min(data.daily?.length || 0, 7);
   const coverage30 = data.coverage?.last30Days ?? (data.daily?.length || 0);
   const headline = data.countriesCount > 0
-    ? `Cloudflare recorded VietProfs visits from <strong>${data.countriesCount} request-origin countries</strong> today.`
+    ? `VietProfs received visits from <strong>${data.countriesCount} request-origin countries</strong> today.`
     : `Hostname-scoped aggregate network statistics for VietProfs.`;
 
   return `
@@ -208,7 +208,7 @@ function renderStatsContent(data: StatsResponse) {
 
         <div class="stats-highlight-banner">
           <p class="highlight-text">${headline}</p>
-          ${data.isDemo ? '<span class="demo-badge">Preview Mode (Cloudflare token pending)</span>' : ''}
+          ${data.isDemo ? '<span class="demo-badge">Preview Mode</span>' : ''}
         </div>
 
         ${coverage30 < 30 ? `<div class="stats-highlight-banner">
@@ -219,17 +219,17 @@ function renderStatsContent(data: StatsResponse) {
           <h2>OVERVIEW (30 DAYS)</h2>
           <div class="stats-grid">
             <div class="stat-card">
-              <span class="stat-label">Cloudflare Visits Today</span>
+              <span class="stat-label">Visits Today</span>
               <strong class="stat-value">${formatNumber(visitCount(data.today))}</strong>
               <span class="stat-sub">${formatNumber(data.today?.pageViews || 0)} successful HTML page requests</span>
             </div>
             <div class="stat-card">
-              <span class="stat-label">Cloudflare Visits (7 Days)</span>
+              <span class="stat-label">Visits (7 Days)</span>
               <strong class="stat-value">${formatNumber(visitCount(data.last7Days))}</strong>
               <span class="stat-sub">${escapeHtml(coverageLabel(coverage7, 7))}</span>
             </div>
             <div class="stat-card">
-              <span class="stat-label">Cloudflare Visits (30-Day Window)</span>
+              <span class="stat-label">Visits (30-Day Window)</span>
               <strong class="stat-value">${formatNumber(visitCount(data.last30Days))}</strong>
               <span class="stat-sub">${escapeHtml(coverageLabel(coverage30, 30))}</span>
             </div>
@@ -342,14 +342,14 @@ function renderStatsContent(data: StatsResponse) {
           <h2>PRIVACY & METHODOLOGY</h2>
           <div class="privacy-note">
             <p>
-              VietProfs respects visitor privacy. This statistics page displays only high-level, aggregate metrics processed at Cloudflare's network edge.
+              VietProfs respects visitor privacy. This page displays only high-level aggregate metrics provided by Cloudflare.
             </p>
             <ul>
-              <li><strong>No individual IP data:</strong> VietProfs receives only Cloudflare's aggregate counts, not visitor IP addresses or request-level logs.</li>
+              <li><strong>No individual IP data:</strong> VietProfs receives aggregate counts, not visitor IP addresses or request-level logs.</li>
               <li><strong>No cookies:</strong> No cookies, persistent identifiers, or local tracking scripts are used.</li>
               <li><strong>Hostname scoped:</strong> Every displayed count is filtered to <code>vietprofs.roars.dev</code>; sibling <code>roars.dev</code> sites are excluded.</li>
-              <li><strong>Visits:</strong> Cloudflare's visit estimate is more audience-oriented than raw requests, but it is not a count of verified people and may include automation.</li>
-              <li><strong>Page requests:</strong> Page totals include only successful responses Cloudflare classifies as HTML. HTTP-request totals also include errors, images, scripts, styles, JSON, and other assets.</li>
+              <li><strong>Visits:</strong> The visit estimate is more audience-oriented than raw requests, but it is not a count of verified people and may include automation.</li>
+              <li><strong>Page requests:</strong> Page totals include only successful HTML responses. HTTP-request totals also include errors, images, scripts, styles, JSON, and other assets.</li>
               <li><strong>Countries:</strong> Locations are request-origin network geolocations, not demographic claims about readers.</li>
               <li><strong>Coverage:</strong> The API reports how many dated snapshots contribute to each window; a scheduled archive builds the full 30-day history.</li>
               <li><strong>Caching:</strong> Stats are cached at the edge for 10 minutes to minimize backend load.</li>
