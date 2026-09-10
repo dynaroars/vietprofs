@@ -1484,7 +1484,8 @@
     "vp-1496",
     "vp-1497",
     "vp-1500",
-    "vp-1501"
+    "vp-1501",
+    "vp-1502"
   ],
   "batches": [
     {
@@ -3597,6 +3598,13 @@
       "number": 78,
       "ids": [
         "vp-1501"
+      ],
+      "status": "pending"
+    },
+    {
+      "number": 79,
+      "ids": [
+        "vp-1502"
       ],
       "status": "pending"
     }
@@ -86078,6 +86086,19 @@
       "evidence": [],
       "errors": [],
       "updatedAt": "2026-09-10T05:04:27.000Z"
+    },
+    "vp-1502": {
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://www.esilv.fr/en/international-workshop-on-financial-markets-and-nonlinear-dynamics-esilv-research-on-european-banking-contagion/",
+        "https://www.esilv.fr/en/quantitative-finance-at-la-defense-2026-connecting-academic-research-and-financial-market-practice/",
+        "https://macau.uni-kiel.de/servlets/MCRFileNodeServlet/dissertation_derivate_00006970/PhD_Thesis_LUU.pdf",
+        "https://www.linkedin.com/in/duc-thi-luu-90123333"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-10T16:00:00.000Z"
     }
   },
   "generatedAt": "2026-09-07T05:40:00.000Z"
