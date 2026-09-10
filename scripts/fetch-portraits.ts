@@ -1,4 +1,4 @@
-import { mkdir, readFile, unlink, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, rename, unlink, writeFile } from 'node:fs/promises';
 import { dirname, extname, join, resolve } from 'node:path';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
@@ -10,6 +10,7 @@ type Person = {
   profileUrl: string;
   portrait?: string;
   portraitSource?: string;
+  directFields?: string[];
   lastUpdatedAt: string;
 };
 
@@ -50,21 +51,33 @@ function cleanUrl(value: string): string {
   return value.replace(/&amp;/g, '&').replace(/&#x27;|&#39;/g, "'").replace(/&quot;/g, '"');
 }
 
+function normalizedWords(value: string): string[] {
+  return value.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
+    .split(/[^a-z0-9]+/).filter(Boolean);
+}
+
+function hasStrongNameEvidence(name: string, value: string): boolean {
+  const nameWords = normalizedWords(name);
+  const haystack = normalizedWords(value);
+  if (nameWords.length < 2) return false;
+  const matched = new Set(haystack.filter((word) => nameWords.includes(word)));
+  return matched.size >= Math.min(2, nameWords.length);
+}
+
 function imageCandidates(html: string, pageUrl: string, name: string): string[] {
-  const candidates: Array<{ url: string; score: number; nameMatched: boolean }> = [];
-  const nameTokens = name.toLowerCase().split(/[^a-z0-9]+/).filter((token) => token.length >= 3);
+  const candidates: Array<{ url: string; score: number }> = [];
   const add = (raw: string, context: string) => {
     const url = absoluteUrl(cleanUrl(raw), pageUrl);
     if (!url || !/^https?:\/\//i.test(url)) return;
     const low = `${url} ${context}`.toLowerCase();
-    if (/no[-_ ]?(portrait|photo|image)|placeholder|logo|header|favicon|icon|sprite|gravatar/.test(low)) return;
+    if (/no[-_ ]?(portrait|photo|image)|placeholder|logo|header|favicon|icon|sprite|gravatar|qr|wordmark|monogram|banner|hero|background|nav|menu|search|arrow/.test(low)) return;
+    if (!hasStrongNameEvidence(name, `${url} ${context}`)) return;
     let score = 0;
     if (/portrait|headshot|profile|photo|avatar|faculty|people|person|staff|image/.test(low)) score += 4;
     if (/\.(?:jpe?g|png|webp)(?:[/?#]|$)/i.test(url)) score += 5;
-    const nameMatched = nameTokens.some((token) => `${url} ${context}`.toLowerCase().includes(token));
-    if (nameMatched) score += 5;
+    score += 10;
     if (/class=["'][^"']*\b(image|portrait|photo)[^"']*["']/.test(context)) score += 5;
-    candidates.push({ url, score, nameMatched });
+    candidates.push({ url, score });
   };
   for (const match of html.matchAll(/<meta\b[^>]+(?:property|name)=["'](?:og:image|twitter:image)["'][^>]+content=["']([^"']+)["'][^>]*>/gi)) add(match[1], match[0]);
   for (const match of html.matchAll(/<img\b[^>]*\bsrc=["']([^"']+)["'][^>]*>/gi)) add(match[1], match[0]);
@@ -74,7 +87,7 @@ function imageCandidates(html: string, pageUrl: string, name: string): string[] 
   }
   for (const match of html.matchAll(/"image"\s*:\s*"([^"]+)"/gi)) add(match[1], match[0]);
   const unique = [...new Map(candidates.sort((a, b) => b.score - a.score).map((entry) => [entry.url, entry])).values()];
-  return unique.filter((entry) => entry.nameMatched || entry.score >= 5).map((entry) => entry.url);
+  return unique.map((entry) => entry.url);
 }
 
 async function alternatePageUrls(person: QueueItem): Promise<string[]> {
@@ -160,10 +173,12 @@ await mkdir(portraitsDir, { recursive: true });
 await Promise.all(batch.map(async (item) => {
   process.stdout.write(`batch ${requestedBatch}: ${item.name} ... `);
   const person = people.find((entry) => entry.id === item.id)!;
-  if (retry && person.portrait) {
-    await unlink(join(root, person.portrait)).catch((): undefined => undefined);
-    delete person.portrait;
-    delete person.portraitSource;
+  const portraitProtected = person.directFields?.includes('portrait') || person.directFields?.includes('portraitSource');
+  if (retry && portraitProtected) {
+    item.status = 'fetched';
+    item.note = 'portrait protected by direct update';
+    console.log('protected');
+    return;
   }
   try {
     const pageUrls = recovery ? [item.profileUrl, ...(await alternatePageUrls(item))] : [item.profileUrl];
@@ -180,11 +195,13 @@ await Promise.all(batch.map(async (item) => {
         if (!bytes) continue;
         const output = join('portraits', `${item.id}-${slug(item.name)}.webp`);
         const outputFile = join(root, 'public', output);
-        await archiveImage(bytes, outputFile);
-        if (!(await isPortraitLike(outputFile))) {
-          await unlink(outputFile).catch((): undefined => undefined);
+        const candidateFile = `${outputFile}.candidate.webp`;
+        await archiveImage(bytes, candidateFile);
+        if (!(await isPortraitLike(candidateFile))) {
+          await unlink(candidateFile).catch((): undefined => undefined);
           continue;
         }
+        await rename(candidateFile, outputFile);
         person.portrait = output;
         person.portraitSource = source;
         person.lastUpdatedAt = new Date().toISOString();
@@ -195,10 +212,12 @@ await Promise.all(batch.map(async (item) => {
       } catch { /* try the next candidate */ }
     }
     if (!found) {
-      item.status = 'unresolved';
-      item.note = candidates.length ? 'profile page had no downloadable portrait image' : 'profile page exposed no image candidate';
+      item.status = person.portrait ? 'fetched' : 'unresolved';
+      item.note = candidates.length
+        ? (person.portrait ? 'no verified replacement; existing portrait preserved' : 'candidates failed portrait validation')
+        : 'profile page exposed no verified person-specific portrait candidate';
     }
-    console.log(found ? 'fetched' : 'unresolved');
+    console.log(item.status === 'fetched' ? 'fetched' : 'unresolved');
   } catch (error) {
     item.status = 'unresolved';
     item.note = error instanceof Error ? error.message : String(error);
