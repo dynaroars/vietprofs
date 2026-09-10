@@ -16,7 +16,7 @@ export const SCHOLAR_ICON = '<path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3Z"/><path
 export const PROFILE_ICON = '<path d="M12 3 3 9v2h18V9L12 3Zm-7 10v6h2v-6H5Zm6 0v6h2v-6h-2Zm6 0v6h2v-6h-2ZM3 21h18v-2H3v2Z"/>';
 export const PERSONAL_SITE_ICON = '<path d="m12 3-9 8h3v10h5v-6h2v6h5V11h3l-9-8Z"/>';
 export const LINKEDIN_ICON = '<path d="M6.94 5a2 2 0 1 1-4-.02 2 2 0 0 1 4 .02ZM7 8.48H3V21h4V8.48Zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.68-2.91V8.48Z"/>';
-const STAR_ICON = '<path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>';
+export const STAR_ICON = '<path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>';
 
 export function fieldDropdownLabel(field = '') {
   return field.replace(/\bSciences\b/g, '').replace(/\s+/g, ' ').trim();
@@ -86,14 +86,19 @@ export function renderRosterEntry(person: RosterEntry, baseUrl = '/') {
   const honors = (person.honors ?? [])
     .map((honor) => `<a class="honor-link" href="${escapeHtml(honor.source)}" target="_blank" rel="noopener noreferrer">${escapeHtml(honor.name)}${honor.year ? ` (${escapeHtml(String(honor.year))})` : ''}</a>`)
     .join(' · ');
-  const updatedTime = `<time class="entry-updated" datetime="${escapeHtml(person.lastUpdatedAt)}" title="Roster information last updated ${escapeHtml(formatRosterDate(person.lastUpdatedAt))}"><span>Updated</span> <span>${escapeHtml(formatRosterShortDate(person.lastUpdatedAt))}</span></time>`;
+  const lastUpdatedAt = person.lastUpdatedAt ?? '';
+  const updatedTime = lastUpdatedAt
+    ? `<time class="entry-updated" datetime="${escapeHtml(lastUpdatedAt)}" title="Roster information last updated ${escapeHtml(formatRosterDate(lastUpdatedAt))}"><span>Updated</span> <span>${escapeHtml(formatRosterShortDate(lastUpdatedAt))}</span></time>`
+    : '';
   const portrait = person.portrait
     ? `<img class="entry-portrait" src="${escapeHtml(`${baseUrl}${person.portrait}`)}" alt="" width="64" height="64" loading="lazy" decoding="async">`
     : `<img class="entry-portrait entry-portrait-placeholder" src="${escapeHtml(`${baseUrl}default-portrait.svg`)}" alt="" width="64" height="64" loading="lazy" decoding="async">`;
   const educationDetails = formatEducationDetails(person);
   const institutionLabel = person.institutionType && person.institutionType !== 'University' ? 'institution' : 'university';
   const profileSourceLabel = person.confirmed === false ? 'Verification source' : `Official ${institutionLabel} profile`;
-  const profileIcon = entryIconLink({ className: 'profile-link', href: person.profileUrl, label: `${visibleName} ${profileSourceLabel.toLowerCase()}`, title: profileSourceLabel, icon: PROFILE_ICON });
+  const profileIcon = person.profileUrl
+    ? entryIconLink({ className: 'profile-link', href: person.profileUrl, label: `${visibleName} ${profileSourceLabel.toLowerCase()}`, title: profileSourceLabel, icon: PROFILE_ICON })
+    : '';
   const personalSiteIcon = person.websiteUrl
     ? entryIconLink({ className: 'personal-site-link', href: person.websiteUrl, label: `${visibleName} personal or lab website`, title: 'Personal or lab website', icon: PERSONAL_SITE_ICON })
     : '';

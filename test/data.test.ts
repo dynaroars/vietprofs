@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
-import { FIELDS, LOCATIONS, HEALTH_SUBFIELDS, canonicalRank, displayName, displayUniversity, fieldOf, healthSubfieldOf, continentOf, locationMatches, buildFunFacts, buildAwardsFunFacts, buildInternationalObservations, buildLocationObservations, filterRoster, looksSurnameFirst, buildFieldCounts, buildTopCountries, buildTrackCounts, buildTopUndergradInstitutions, buildPhdToFacultyPairings, type Roster } from '../src/data.ts';
+import { FIELDS, LOCATIONS, HEALTH_SUBFIELDS, canonicalRank, displayName, displayUniversity, fieldOf, healthSubfieldOf, continentOf, locationMatches, buildFunFacts, buildAwardsFunFacts, buildInternationalObservations, buildLocationObservations, filterRoster, looksSurnameFirst, buildFieldCounts, buildTopCountries, buildTrackCounts, buildTopUndergradInstitutions, buildPhdToFacultyPairings, type Roster, type RosterEntry } from '../src/data.ts';
 import { chooseWork, validateEnrichment } from '../src/enrichment.ts';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -22,7 +22,8 @@ test('recent work selection deduplicates and sorts by documented date', () => {
 });
 
 test('reviewed portraits use local WebP files with source provenance', () => {
-  const portraits = roster.filter((person) => person.portrait);
+  const portraits = roster.filter((person): person is RosterEntry & { portrait: string; portraitSource: string } =>
+    Boolean(person.portrait && person.portraitSource));
   assert.ok(portraits.length > 400, 'expected broad portrait coverage across the roster');
   for (const person of portraits) {
     assert.match(person.portrait, /^portraits\/[a-z0-9][a-z0-9.-]*\.webp$/);
@@ -250,6 +251,7 @@ test('field-balance observations name the fields computed from their input', () 
   ];
   // Equal counts are ordered alphabetically so the wording is stable across roster edits.
   const fact = buildInternationalObservations(sample).find((value) => value.includes('closely represented'));
+  assert.ok(fact, 'expected a "closely represented" observation');
   assert.match(fact, /Arts & Design \(4\).*Humanities \(4\).*Law & Public Affairs \(4\)/);
 });
 
@@ -339,7 +341,7 @@ test('scoped search restricts results to the requested roster attribute', () => 
 
   const professors = filterRoster(roster, { query: 'Professor', searchScope: 'rank', location: 'World' });
   assert.ok(professors.length > 0);
-  assert.ok(professors.every((person) => /professor/i.test(person.rank || '') || /professor/i.test(canonicalRank(person))));
+  assert.ok(professors.every((person) => /professor/i.test(person.rank || '') || /professor/i.test(canonicalRank(person) ?? '')));
 
   const engineering = filterRoster(roster, { query: 'Engineering', searchScope: 'field', location: 'World' });
   assert.ok(engineering.length > 0);
@@ -355,7 +357,7 @@ test('scoped search restricts results to the requested roster attribute', () => 
 
   const undergrads = filterRoster(roster, { query: 'Boise State University', searchScope: 'undergrad', location: 'World' });
   assert.ok(undergrads.length > 0);
-  assert.ok(undergrads.every((person) => /Boise State University/i.test(person.undergradInstitution)));
+  assert.ok(undergrads.every((person) => /Boise State University/i.test(person.undergradInstitution ?? '')));
 });
 
 test('searching an honor name lists professors who hold that honor', () => {
@@ -385,7 +387,7 @@ test('a two-word name search does not match terms scattered across unrelated fie
       person.university,
       person.department,
       ...(person.researchAreas ?? []),
-    ].filter(Boolean).map((value) => value.toLowerCase());
+    ].filter((value): value is string => Boolean(value)).map((value) => value.toLowerCase());
     assert.ok(fields.some((field) => field.includes('quan') && field.includes('nguyen')), `${person.name} matched without both terms in one field`);
   }
 });
@@ -510,14 +512,10 @@ test('unique helpers never contain undefined or null values', async () => {
   const undergrads = uniqueUndergradInstitutions(roster);
   const ranks = uniqueRanks(roster);
 
-  assert.ok(!states.includes(undefined) && !states.includes(null));
-  assert.ok(!cities.includes(undefined) && !cities.includes(null));
-  assert.ok(!depts.includes(undefined) && !depts.includes(null));
-  assert.ok(!countries.includes(undefined) && !countries.includes(null));
-  assert.ok(!areas.includes(undefined) && !areas.includes(null));
-  assert.ok(!phds.includes(undefined) && !phds.includes(null));
-  assert.ok(!undergrads.includes(undefined) && !undergrads.includes(null));
-  assert.ok(!ranks.includes(undefined) && !ranks.includes(null));
+  const allNonEmptyStrings = (values: string[]) => values.every((value) => typeof value === 'string' && value.length > 0);
+  for (const [label, values] of Object.entries({ states, cities, depts, countries, areas, phds, undergrads, ranks })) {
+    assert.ok(allNonEmptyStrings(values), `${label} contained a null, undefined, or empty entry`);
+  }
 });
 
 test('looksSurnameFirst flags names stored in Vietnamese (surname-first) order', () => {

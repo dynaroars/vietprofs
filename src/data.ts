@@ -2,7 +2,8 @@ export interface Honor {
   name: string;
   organization?: string;
   category?: string;
-  year?: number;
+  /** Present on every stored honor; null when the awarding year is unknown. */
+  year?: number | null;
   source?: string;
 }
 
@@ -139,6 +140,14 @@ function normalizeSearchText(value: unknown): string {
   return stripDiacritics(String(value).toLowerCase());
 }
 
+function searchTextFor(index: SearchIndex, person: RosterEntry): string[] {
+  const cached = index.textByPerson.get(person);
+  if (cached) return cached;
+  const text = searchableFields(person).filter(isPresent).map(normalizeSearchText);
+  index.textByPerson.set(person, text);
+  return text;
+}
+
 export function buildSearchIndex(roster: Roster): SearchIndex {
   const cachedIndex = searchIndexCache.get(roster);
   if (cachedIndex) return cachedIndex;
@@ -147,7 +156,7 @@ export function buildSearchIndex(roster: Roster): SearchIndex {
     textByPerson: new WeakMap(
       roster.map((person): [RosterEntry, string[]] => [
         person,
-        searchableFields(person).filter(Boolean).map(normalizeSearchText),
+        searchableFields(person).filter(isPresent).map(normalizeSearchText),
       ]),
     ),
   };
@@ -159,8 +168,9 @@ export async function loadRoster(): Promise<Roster> {
   if (cached) return cached;
   const res = await fetch(`${import.meta.env.BASE_URL}data.json`);
   if (!res.ok) throw new Error(`Failed to load data.json: ${res.status}`);
-  cached = await res.json();
-  return cached;
+  const roster = (await res.json()) as Roster;
+  cached = roster;
+  return roster;
 }
 
 // A build-time-generated daily time series of total roster size (see scripts/build-stats-history.ts).
@@ -176,20 +186,30 @@ export async function loadStatsHistory(): Promise<StatsHistoryPoint[]> {
   }
 }
 
+// filter(Boolean) doesn't narrow `(string | undefined)[]` to `string[]`, and every unique*()
+// helper needs exactly that, so the narrowing predicate lives here once.
+function isPresent(value: string | undefined | null): value is string {
+  return Boolean(value);
+}
+
+function sortedUnique(values: (string | undefined)[]): string[] {
+  return [...new Set(values.filter(isPresent))].sort();
+}
+
 export function uniqueStates(roster: Roster): string[] {
-  return [...new Set(roster.map((p) => p.state).filter(Boolean))].sort();
+  return sortedUnique(roster.map((p) => p.state));
 }
 
 export function uniqueDepartments(roster: Roster): string[] {
-  return [...new Set(roster.map((p) => p.department).filter(Boolean))].sort();
+  return sortedUnique(roster.map((p) => p.department));
 }
 
 export function uniqueCities(roster: Roster): string[] {
-  return [...new Set(roster.map((p) => p.city).filter(Boolean))].sort();
+  return sortedUnique(roster.map((p) => p.city));
 }
 
 export function uniqueRanks(roster: Roster): string[] {
-  return [...new Set(roster.map(canonicalRank).filter(Boolean))].sort();
+  return sortedUnique(roster.map(canonicalRank));
 }
 
 // Keep official university names in the roster and search index. Established aliases take
@@ -214,7 +234,8 @@ const UNIVERSITY_DISPLAY_NAMES = new Map([
 ]);
 
 export function displayUniversity(university?: string): string | undefined {
-  return UNIVERSITY_DISPLAY_NAMES.get(university) ?? university?.replace(/ University$/, ' Univ.');
+  if (!university) return undefined;
+  return UNIVERSITY_DISPLAY_NAMES.get(university) ?? university.replace(/ University$/, ' Univ.');
 }
 
 // Profile routes use immutable roster IDs so name corrections do not change public URLs.
@@ -253,31 +274,34 @@ const VIETNAMESE_SURNAMES = new Map([
   ['Vo', 'Võ'], ['Vu', 'Vũ'], ['Vuong', 'Vương'],
 ]);
 
+// Hoisted to module scope: this runs once per rendered entry, and rebuilding a ~100-entry Map
+// on every call showed up in profile/list rendering.
+const VIETNAMESE_GIVEN_NAME_MARKS = new Map([
+  ['Anh', 'Anh'], ['Bach', 'Bạch'], ['Bao', 'Bảo'], ['Bich', 'Bích'], ['Binh', 'Bình'],
+  ['Chinh', 'Chính'], ['Chung', 'Chung'], ['Cuong', 'Cường'], ['Dat', 'Đạt'], ['Danh', 'Danh'],
+  ['Dam', 'Đàm'], ['Dau', 'Đậu'], ['Diep', 'Diệp'], ['Diem', 'Diễm'], ['Dien', 'Điền'],
+  ['Dinh', 'Đình'], ['Doan', 'Đoàn'], ['Duc', 'Đức'], ['Duy', 'Duy'], ['Giao', 'Giao'],
+  ['Giang', 'Giang'], ['Hai', 'Hải'], ['Han', 'Hân'], ['Hanh', 'Hạnh'], ['Hang', 'Hằng'], ['Hau', 'Hậu'], ['Ha', 'Hà'],
+  ['Hieu', 'Hiếu'], ['Hiep', 'Hiệp'], ['Hien', 'Hiền'], ['Hoai', 'Hoài'], ['Hoa', 'Hoa'],
+  ['Hong', 'Hồng'], ['Hoang', 'Hoàng'], ['Hop', 'Hợp'], ['Huong', 'Hương'], ['Huyen', 'Huyền'], ['Huu', 'Hữu'],
+  ['Khai', 'Khải'], ['Khanh', 'Khánh'], ['Khang', 'Khang'], ['Khiem', 'Khiêm'], ['Khoa', 'Khoa'],
+  ['Khuong', 'Khương'], ['Kieu', 'Kiều'], ['Lan', 'Lan'], ['Lap', 'Lập'], ['Lien', 'Liên'],
+  ['Liem', 'Liêm'], ['Linh', 'Linh'], ['Loan', 'Loan'], ['Loi', 'Lợi'], ['Long', 'Long'],
+  ['Luan', 'Luân'], ['Mai', 'Mai'], ['Manh', 'Mạnh'], ['Minh', 'Minh'], ['Ngan', 'Ngân'],
+  ['Nghia', 'Nghĩa'], ['Nghiem', 'Nghiêm'], ['Ngoc', 'Ngọc'], ['Nhung', 'Nhung'], ['Nhu', 'Như'],
+  ['Nhat', 'Nhật'], ['Phat', 'Phát'], ['Phu', 'Phú'], ['Phuc', 'Phúc'],
+  ['Phuong', 'Phương'], ['Phuoc', 'Phước'], ['Phong', 'Phong'], ['Quang', 'Quang'], ['Quan', 'Quân'],
+  ['Quoc', 'Quốc'], ['Quyen', 'Quyền'], ['Quynh', 'Quỳnh'], ['Sang', 'Sáng'], ['Son', 'Sơn'],
+  ['Tai', 'Tài'], ['Tam', 'Tâm'], ['Tan', 'Tân'], ['Thang', 'Thắng'], ['Thao', 'Thảo'],
+  ['Thien', 'Thiện'], ['Thinh', 'Thịnh'], ['Tho', 'Thọ'], ['Thai', 'Thái'], ['Thuan', 'Thuận'], ['Thuc', 'Thức'],
+  ['Tien', 'Tiến'], ['Toan', 'Toàn'], ['Tram', 'Trâm'], ['Trieu', 'Triều'], ['Trong', 'Trọng'],
+  ['Trung', 'Trung'], ['Truong', 'Trường'], ['Tuan', 'Tuấn'], ['Tung', 'Tùng'], ['Tuyen', 'Tuyền'],
+  ['Uyen', 'Uyên'], ['Vi', 'Vi'], ['Viet', 'Việt'], ['Vinh', 'Vinh'], ['Vu', 'Vũ'],
+  ['Xuan', 'Xuân'], ['Yen', 'Yến'],
+]);
+
 function vietnameseGivenNames(value: string): string {
-  const marks = new Map([
-    ['Anh', 'Anh'], ['Bach', 'Bạch'], ['Bao', 'Bảo'], ['Bich', 'Bích'], ['Binh', 'Bình'],
-    ['Chinh', 'Chính'], ['Chung', 'Chung'], ['Cuong', 'Cường'], ['Dat', 'Đạt'], ['Danh', 'Danh'],
-    ['Dam', 'Đàm'], ['Dau', 'Đậu'], ['Diep', 'Diệp'], ['Diem', 'Diễm'], ['Dien', 'Điền'],
-    ['Dinh', 'Đình'], ['Doan', 'Đoàn'], ['Duc', 'Đức'], ['Duy', 'Duy'], ['Giao', 'Giao'],
-    ['Giang', 'Giang'], ['Hai', 'Hải'], ['Han', 'Hân'], ['Hanh', 'Hạnh'], ['Hang', 'Hằng'], ['Hau', 'Hậu'], ['Ha', 'Hà'],
-    ['Hieu', 'Hiếu'], ['Hiep', 'Hiệp'], ['Hien', 'Hiền'], ['Hoai', 'Hoài'], ['Hoa', 'Hoa'],
-    ['Hong', 'Hồng'], ['Hoang', 'Hoàng'], ['Hop', 'Hợp'], ['Huong', 'Hương'], ['Huyen', 'Huyền'], ['Huu', 'Hữu'],
-    ['Khai', 'Khải'], ['Khanh', 'Khánh'], ['Khang', 'Khang'], ['Khiem', 'Khiêm'], ['Khoa', 'Khoa'],
-    ['Khuong', 'Khương'], ['Kieu', 'Kiều'], ['Lan', 'Lan'], ['Lap', 'Lập'], ['Lien', 'Liên'],
-    ['Liem', 'Liêm'], ['Linh', 'Linh'], ['Loan', 'Loan'], ['Loi', 'Lợi'], ['Long', 'Long'],
-    ['Luan', 'Luân'], ['Mai', 'Mai'], ['Manh', 'Mạnh'], ['Minh', 'Minh'], ['Ngan', 'Ngân'],
-    ['Nghia', 'Nghĩa'], ['Nghiem', 'Nghiêm'], ['Ngoc', 'Ngọc'], ['Nhung', 'Nhung'], ['Nhu', 'Như'],
-    ['Nhat', 'Nhật'], ['Nghia', 'Nghĩa'], ['Phat', 'Phát'], ['Phu', 'Phú'], ['Phuc', 'Phúc'],
-    ['Phuong', 'Phương'], ['Phuoc', 'Phước'], ['Phong', 'Phong'], ['Quang', 'Quang'], ['Quan', 'Quân'],
-    ['Quoc', 'Quốc'], ['Quyen', 'Quyền'], ['Quynh', 'Quỳnh'], ['Sang', 'Sáng'], ['Son', 'Sơn'],
-    ['Tai', 'Tài'], ['Tam', 'Tâm'], ['Tan', 'Tân'], ['Thang', 'Thắng'], ['Thao', 'Thảo'],
-    ['Thien', 'Thiện'], ['Thinh', 'Thịnh'], ['Tho', 'Thọ'], ['Thai', 'Thái'], ['Thuan', 'Thuận'], ['Thuc', 'Thức'],
-    ['Tien', 'Tiến'], ['Toan', 'Toàn'], ['Tram', 'Trâm'], ['Trieu', 'Triều'], ['Trong', 'Trọng'],
-    ['Trung', 'Trung'], ['Truong', 'Trường'], ['Tuan', 'Tuấn'], ['Tung', 'Tùng'], ['Tuyen', 'Tuyền'],
-    ['Uyen', 'Uyên'], ['Vi', 'Vi'], ['Viet', 'Việt'], ['Vinh', 'Vinh'], ['Vu', 'Vũ'],
-    ['Xuan', 'Xuân'], ['Yen', 'Yến'],
-  ]);
-  return value.replace(/\b[A-Za-z]+\b/g, (token) => marks.get(token) ?? token);
+  return value.replace(/\b[A-Za-z]+\b/g, (token) => VIETNAMESE_GIVEN_NAME_MARKS.get(token) ?? token);
 }
 
 function surnameKey(token: string): string {
@@ -292,8 +316,8 @@ function surnameKey(token: string): string {
 export function looksSurnameFirst(name: string): boolean {
   const tokens = name.split(' - ')[0].split(/\s+/).filter(Boolean);
   if (tokens.length < 2) return false;
-  const firstKey = surnameKey(tokens[0]);
-  const lastKey = surnameKey(tokens.at(-1));
+  const firstKey = surnameKey(tokens[0] ?? '');
+  const lastKey = surnameKey(tokens.at(-1) ?? '');
   return VIETNAMESE_SURNAMES.has(firstKey) && !VIETNAMESE_SURNAMES.has(lastKey);
 }
 
@@ -302,8 +326,8 @@ export function vietnameseName(person: RosterEntry): string {
   const current = displayName(person.name).trim();
   const tokens = current.split(/\s+/).filter(Boolean);
   if (tokens.length < 2) return vietnameseGivenNames(current);
-  const firstKey = surnameKey(tokens[0]);
-  const lastKey = surnameKey(tokens.at(-1));
+  const firstKey = surnameKey(tokens[0] ?? '');
+  const lastKey = surnameKey(tokens.at(-1) ?? '');
   // Some Vietnamese sources publish family name first. For the roster's readable
   // parenthetical form, move an initial Nguyễn to the final family-name position.
   if (firstKey === 'Nguyen' && lastKey !== 'Nguyen') {
@@ -319,7 +343,7 @@ export function vietnameseName(person: RosterEntry): string {
 }
 
 export function uniqueResearchAreas(roster: Roster): string[] {
-  return [...new Set(roster.flatMap((p) => p.researchAreas).filter(Boolean))].sort();
+  return sortedUnique(roster.flatMap((p) => p.researchAreas ?? []));
 }
 
 // Employment tracks a roster entry can carry. Institution type is modeled separately: Research
@@ -336,12 +360,12 @@ export function uniqueResearchAreas(roster: Roster): string[] {
 // Continent/region values supported by structured location queries and the second
 // ("by continent") section of the visible location dropdown.
 
-export function countryFlag(country?: string): string {
+export function countryFlag(country?: string | null): string {
   if (!country) return '🇺🇸';
   return COUNTRY_FLAGS[country] || '🌐';
 }
 
-export function continentOf(country?: string): string {
+export function continentOf(country?: string | null): string {
   if (!country) return 'North America';
   return COUNTRY_TO_CONTINENT[country] || 'Other';
 }
@@ -681,11 +705,11 @@ export function healthSubfieldOf(person: RosterEntry): string | null {
 }
 
 export function uniquePhdInstitutions(roster: Roster): string[] {
-  return [...new Set(roster.map((p) => p.phdInstitution).filter(Boolean))].sort();
+  return sortedUnique(roster.map((p) => p.phdInstitution));
 }
 
 export function uniqueUndergradInstitutions(roster: Roster): string[] {
-  return [...new Set(roster.map((p) => p.undergradInstitution).filter(Boolean))].sort();
+  return sortedUnique(roster.map((p) => p.undergradInstitution));
 }
 
 export function buildDecadeCounts(roster: Roster): [string, number][] {
@@ -698,72 +722,44 @@ export function buildDecadeCounts(roster: Roster): [string, number][] {
   return [...counts.entries()].sort((a, b) => parseInt(a[0], 10) - parseInt(b[0], 10));
 }
 
+// Every leaderboard below routes through countBy() so ties break alphabetically. Sorting only
+// by count leaves tied entries in roster order, and main.ts shuffles the roster on load, so a
+// bare count sort makes the rendered top-N reshuffle between page loads whenever the cutoff
+// falls inside a tie (it currently does: ranks 8-12 of the university leaderboard are all tied).
 export function buildTopPhdInstitutions(roster: Roster, limit = 8): [string, number][] {
-  const counts = new Map<string, number>();
-  for (const p of roster) {
-    if (!p.phdInstitution) continue;
-    counts.set(p.phdInstitution, (counts.get(p.phdInstitution) ?? 0) + 1);
-  }
-  return [...counts.entries()].sort((a, b) => b[1] - a[1]).slice(0, limit);
+  return countBy(roster, (p) => p.phdInstitution).slice(0, limit);
 }
 
 export function buildTopUndergradInstitutions(roster: Roster, limit = 8): [string, number][] {
-  const counts = new Map<string, number>();
-  for (const p of roster) {
-    if (!p.undergradInstitution) continue;
-    counts.set(p.undergradInstitution, (counts.get(p.undergradInstitution) ?? 0) + 1);
-  }
-  return [...counts.entries()].sort((a, b) => b[1] - a[1]).slice(0, limit);
+  return countBy(roster, (p) => p.undergradInstitution).slice(0, limit);
 }
+
+const PAIRING_SEPARATOR = '\u0000';
 
 export function buildPhdToFacultyPairings(roster: Roster, limit = 6): [string, string, number][] {
-  const pairCounts = new Map<string, number>();
-  for (const p of roster) {
-    if (!p.phdInstitution) continue;
-    const country = p.country || 'United States';
-    const key = `${p.phdInstitution} → ${country}`;
-    pairCounts.set(key, (pairCounts.get(key) ?? 0) + 1);
-  }
-  const sorted = [...pairCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, limit);
-  return sorted.map(([key, count]) => {
-    const parts = key.split(' → ');
-    return [parts[0], parts[1], count];
-  });
+  return countBy(roster, (p) => (p.phdInstitution ? `${p.phdInstitution}${PAIRING_SEPARATOR}${p.country || 'United States'}` : undefined))
+    .slice(0, limit)
+    .map(([key, count]): [string, string, number] => {
+      const [phdInstitution, country] = key.split(PAIRING_SEPARATOR);
+      return [phdInstitution, country, count];
+    });
 }
 
-
 export function buildTopUniversities(roster: Roster, limit = 8): [string, number][] {
-  const counts = new Map<string, number>();
-  for (const p of roster) {
-    counts.set(p.university, (counts.get(p.university) ?? 0) + 1);
-  }
-  return [...counts.entries()].sort((a, b) => b[1] - a[1]).slice(0, limit);
+  return countBy(roster, (p) => p.university).slice(0, limit);
 }
 
 export function buildFieldCounts(roster: Roster): [string, number][] {
-  const counts = new Map<string, number>();
-  for (const p of roster) {
-    const field = fieldOf(p.department, p.university);
-    counts.set(field, (counts.get(field) ?? 0) + 1);
-  }
-  return [...counts.entries()].sort((a, b) => b[1] - a[1]);
+  return countBy(roster, (p) => fieldOf(p.department, p.university));
 }
 
 export function buildTopCountries(roster: Roster, limit = 8): [string, number][] {
-  const counts = new Map<string, number>();
-  for (const p of roster) {
-    const country = p.country || 'United States';
-    counts.set(country, (counts.get(country) ?? 0) + 1);
-  }
-  return [...counts.entries()].sort((a, b) => b[1] - a[1]).slice(0, limit);
+  return countBy(roster, (p) => p.country || 'United States').slice(0, limit);
 }
 
 export function buildTrackCounts(roster: Roster): [string, number][] {
-  const counts = new Map<string, number>();
-  for (const p of roster) {
-    counts.set(p.track, (counts.get(p.track) ?? 0) + 1);
-  }
-  return TRACKS.map((track) => [track, counts.get(track) ?? 0] as [string, number]).filter(([, count]) => count > 0);
+  const counts = new Map(countBy(roster, (p) => p.track));
+  return TRACKS.map((track): [string, number] => [track, counts.get(track) ?? 0]).filter(([, count]) => count > 0);
 }
 
 export interface StatsHistoryPoint {
@@ -806,23 +802,30 @@ interface FilterOptions {
   searchScope?: string;
 }
 
+// Resolve only the requested scope. Building a record of every scope per person and reading one
+// key made a scoped query cost more than an unscoped full-text one, because it eagerly ran
+// canonicalRank/fieldOf and two flatMaps for all 1,400+ entries on every debounced keystroke.
+function scopedValuesFor(person: RosterEntry, scope: string): (string | undefined)[] {
+  switch (scope) {
+    case 'name': return [displayName(person.name)];
+    case 'university': return [person.university];
+    case 'institution': return [person.university, institutionTypeOf(person)];
+    case 'department': return [person.department];
+    case 'field': return [fieldOf(person.department, person.university)];
+    case 'track': return [person.track];
+    case 'rank': return [person.rank, canonicalRank(person)];
+    case 'research': return person.researchAreas ?? [];
+    case 'honors': return (person.honors ?? []).flatMap((honor) => [honor.name, honor.organization]);
+    case 'phd': return [person.phdInstitution];
+    case 'undergrad': return [person.undergradInstitution];
+    case 'country': return [person.country];
+    default: return [];
+  }
+}
+
 function matchesSearchScope(person: RosterEntry, scope: string, target: string): boolean {
-  const scopedValues: Record<string, (string | undefined)[]> = {
-    name: [displayName(person.name)],
-    university: [person.university],
-    institution: [person.university, institutionTypeOf(person)],
-    department: [person.department],
-    field: [fieldOf(person.department, person.university)],
-    track: [person.track],
-    rank: [person.rank, canonicalRank(person)],
-    research: person.researchAreas ?? [],
-    honors: (person.honors || []).flatMap((honor) => [honor.name, honor.organization]),
-    phd: [person.phdInstitution],
-    undergrad: [person.undergradInstitution],
-    country: [person.country],
-  };
-  const values = scopedValues[scope];
-  return (values || []).filter(Boolean).some((value) => stripDiacritics(value.toLowerCase()).includes(target));
+  return scopedValuesFor(person, scope)
+    .some((value) => Boolean(value) && stripDiacritics(value!.toLowerCase()).includes(target));
 }
 
 export function filterRoster(roster: Roster | SearchIndex, { query = '', location, field, track, institutionType, university, phdInstitution, state, country, searchScope = 'all' }: FilterOptions = {}): Roster {
@@ -892,7 +895,7 @@ export function filterRoster(roster: Roster | SearchIndex, { query = '', locatio
   if (honorMatches.length > 0) return honorMatches;
 
   return result.filter((p) => {
-    const fieldTexts = index.textByPerson.get(p);
+    const fieldTexts = searchTextFor(index, p);
     if (fieldTexts.join(' ').includes(target)) return true;
     // Also accept multi-word searches whose terms are separated by initials or punctuation,
     // e.g. "van vu" should match the name "Van H. Vu". Require every term to appear within the
@@ -925,9 +928,9 @@ export function countBy<T>(roster: readonly T[], getKey: (item: T) => string | u
 }
 
 function honorHolderCount(roster: Roster | null | undefined, honorName: string): number {
-  return new Set((roster || [])
-    .filter((p) => (p.honors || []).some((honor) => honor.name === honorName))
-    .map((p) => p.name)).size;
+  return new Set((roster ?? [])
+    .filter((p) => (p.honors ?? []).some((honor) => honor.name === honorName))
+    .map((p) => p.id)).size;
 }
 
 const MARQUEE_HONORS = [
@@ -951,11 +954,11 @@ export function buildAwardsFunFacts(roster: Roster | null | undefined): string[]
   const honored = allRoster.filter((p) => (p.honors || []).length > 0).length;
   const usRoster = allRoster.filter((p) => (p.country || 'United States') === 'United States');
   const academyHolders = new Set(allRoster
-    .filter((p) => (p.honors || []).some((honor) => honor.category === 'academy'))
-    .map((p) => p.name)).size;
+    .filter((p) => (p.honors ?? []).some((honor) => honor.category === 'academy'))
+    .map((p) => p.id)).size;
   const fellowHolders = new Set(allRoster
-    .filter((p) => (p.honors || []).some((honor) => honor.category === 'fellow'))
-    .map((p) => p.name)).size;
+    .filter((p) => (p.honors ?? []).some((honor) => honor.category === 'fellow'))
+    .map((p) => p.id)).size;
 
   const honorCounts = countBy(allRoster.flatMap((p) => (p.honors || []).map((honor) => honor.name)), (name) => name);
   const commonHonors = honorCounts.slice(0, 5);
@@ -1015,8 +1018,9 @@ function observationDepartmentSpread(roster: Roster): [string, number][] {
   const groups = new Map<string, Set<string>>();
   for (const person of roster) {
     if (!person.university || !person.department) continue;
-    if (!groups.has(person.university)) groups.set(person.university, new Set());
-    groups.get(person.university).add(person.department);
+    const departments = groups.get(person.university) ?? new Set<string>();
+    departments.add(person.department);
+    groups.set(person.university, departments);
   }
   return [...groups.entries()]
     .map(([university, departments]): [string, number] => [university, departments.size])

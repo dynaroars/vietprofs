@@ -36,12 +36,6 @@ export interface CountryStat {
   count: number;
 }
 
-export interface ReferrerStat {
-  host: string;
-  label: string;
-  count: number;
-}
-
 export interface PageStat {
   path: string;
   label: string;
@@ -74,7 +68,6 @@ export interface StatsResponse {
   };
   countriesCount: number;
   topCountries: CountryStat[];
-  topReferrers: ReferrerStat[];
   topPages: PageStat[];
   daily: DailyStat[];
   isDemo?: boolean;
@@ -121,13 +114,13 @@ function countryCodeToFlag(code: string): string {
   return String.fromCodePoint(first, second);
 }
 
+// Only paths that can survive isPublicHtmlPage() below need a label. The analytics query filters
+// on edgeResponseContentTypeName: "html", so non-HTML assets (the PDF, data.json) can never
+// appear here regardless of the path allowlist.
 function cleanPageLabel(path: string): string {
   if (!path || path === '/' || path === '/index.html') return 'Main Directory';
   if (path === '/submit.html') return 'Submit / Update Entry';
   if (path === '/stats.html') return 'Visitor Statistics';
-  if (path === '/vietprofs.pdf') return 'VietProfs Manuscript (PDF)';
-  if (path === '/data.json') return 'Roster Dataset (data.json)';
-  if (path === '/stats-history.json') return 'Roster Growth Dataset';
   if (path.startsWith('/people/')) {
     const filename = path.replace('/people/', '').replace('.html', '');
     return `Profile ${filename}`;
@@ -135,8 +128,10 @@ function cleanPageLabel(path: string): string {
   return path;
 }
 
+const PUBLIC_HTML_PAGES = new Set(['/', '/index.html', '/submit.html', '/stats.html']);
+
 function isPublicHtmlPage(path: string): boolean {
-  return path === '/' || path === '/index.html' || path === '/submit.html' || /^\/people\/vp-\d{4}\.html$/.test(path);
+  return PUBLIC_HTML_PAGES.has(path) || /^\/people\/vp-\d{4}\.html$/.test(path);
 }
 
 const DAILY_HISTORY_KEY = 'hostname-daily-v2';
@@ -152,6 +147,11 @@ function dateStringsEndingOn(endDate: string, count: number): string[] {
   });
 }
 
+// Dimensions are limited to what this zone's plan exposes: per-day request/visit counts,
+// clientCountryName, and clientRequestPath. Referrer breakdowns (clientRefererHost) are not
+// available on the free plan, so the page has no "Top Referrers" panel — don't add one back
+// without confirming the dimension is queryable, since GraphQL rejects the entire document if
+// any single field is invalid, which would take down every metric on the page.
 function buildGraphqlQuery(dates: string[]): string {
   const dateVariables = dates.map((_, index) => `$date${index}: Date!`).join(', ');
   const dailyNodes = dates.map((_, index) => `
@@ -242,15 +242,6 @@ function buildDemoResponse(): StatsResponse {
       { code: 'SG', name: 'Singapore', flag: '🇸🇬', count: 150 },
       { code: 'KR', name: 'South Korea', flag: '🇰🇷', count: 120 },
     ],
-    topReferrers: [
-      { host: 'google.com', label: 'Google Search', count: 1850 },
-      { host: 'github.com', label: 'GitHub', count: 1240 },
-      { host: 'direct', label: 'Direct / Bookmarks', count: 980 },
-      { host: 'linkedin.com', label: 'LinkedIn', count: 620 },
-      { host: 'roars.dev', label: 'ROARS Lab', count: 340 },
-      { host: 't.co', label: 'X / Twitter', count: 210 },
-      { host: 'hieuphay.com', label: 'HieuPhay Blog', count: 140 },
-    ],
     topPages: [
       { path: '/', label: 'Main Directory', count: 4850 },
       { path: '/submit.html', label: 'Submit / Update Entry', count: 890 },
@@ -270,7 +261,6 @@ interface AdaptiveRow {
   dimensions?: {
     clientCountryName?: string;
     clientRequestPath?: string;
-    clientRefererHost?: string;
   };
 }
 
@@ -284,7 +274,11 @@ function sumDaily(rows: DailyStat[]): Omit<DailyStat, 'date'> {
   }), { requests: 0, pageViews: 0, visits: 0 });
 }
 
-async function fetchLiveStats(env: Env): Promise<StatsResponse> {
+// `persist` gates the Workers KV write. Only the daily scheduled refresh should archive a
+// snapshot: KV allows one write per second per key and bills per write, and the edge cache is
+// per-colo, so writing on every user-facing cache miss meant far more writes than the 10-minute
+// TTL suggests.
+async function fetchLiveStats(env: Env, { persist = false } = {}): Promise<StatsResponse> {
   if (!env.CLOUDFLARE_API_TOKEN || !env.CLOUDFLARE_ZONE_ID) {
     return buildDemoResponse();
   }
@@ -353,7 +347,7 @@ async function fetchLiveStats(env: Env): Promise<StatsResponse> {
     .filter(row => row.date >= firstDate && row.date <= todayStr)
     .sort((left, right) => left.date.localeCompare(right.date));
 
-  if (env.STATS_KV) {
+  if (persist && env.STATS_KV) {
     try {
       await env.STATS_KV.put(DAILY_HISTORY_KEY, JSON.stringify(daily));
     } catch (error) {
@@ -385,10 +379,7 @@ async function fetchLiveStats(env: Env): Promise<StatsResponse> {
     .sort((left, right) => right.count - left.count);
 
   const topPages = (zoneData.topPages || [])
-    .filter(item => {
-      const path = item.dimensions?.clientRequestPath || '';
-      return isPublicHtmlPage(path);
-    })
+    .filter(item => isPublicHtmlPage(item.dimensions?.clientRequestPath || ''))
     .map((item): PageStat => {
       const path = item.dimensions?.clientRequestPath || '/';
       return { path, label: cleanPageLabel(path), count: item.count || 0 };
@@ -405,7 +396,6 @@ async function fetchLiveStats(env: Env): Promise<StatsResponse> {
     last30Days: sumDaily(daily),
     countriesCount: topCountries.length,
     topCountries,
-    topReferrers: [],
     topPages,
     daily,
     isDemo: false,
@@ -507,7 +497,7 @@ export default {
     }
   },
   async scheduled(_controller: unknown, env: Env, ctx: ExecutionContext): Promise<void> {
-    ctx.waitUntil(fetchLiveStats(env).then((): undefined => undefined).catch(error => {
+    ctx.waitUntil(fetchLiveStats(env, { persist: true }).then((): undefined => undefined).catch(error => {
       console.error('Scheduled analytics refresh failed', error);
     }));
   },

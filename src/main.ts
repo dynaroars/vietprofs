@@ -246,9 +246,9 @@ const TRACK_INFO: Record<string, { label: string; tooltip: string }> = {
 };
 
 function trackQualifier(roster: Roster): string {
-  const tracks = new Set<string>(roster.map((p) => p.track).filter(Boolean));
+  const tracks = new Set(roster.map((p) => p.track).filter((track): track is string => Boolean(track)));
   if (tracks.size !== 1) return '';
-  const info = TRACK_INFO[[...tracks][0]];
+  const info = TRACK_INFO[[...tracks][0] ?? ''];
   return info ? ` <span class="term" tabindex="0" data-tooltip="${escapeHtml(info.tooltip)}">${info.label}</span>` : '';
 }
 
@@ -348,13 +348,13 @@ async function init() {
     const withoutInitials = name.replace(/\b[A-Z]\.\s*/g, '').replace(/\s+/g, ' ').trim();
     return [name, withoutInitials];
   }))].sort();
-  const suggestionSources = new Map([
+  const suggestionSources = new Map<string, string[]>([
     ['name', nameSuggestionValues],
-    ['rank', [...new Set([...uniqueRanks(roster), ...roster.map((p) => canonicalRank(p))])].sort()],
+    ['rank', [...new Set([...uniqueRanks(roster), ...roster.map((p) => canonicalRank(p) ?? '')].filter(Boolean))].sort()],
     ['field', FIELDS.filter((field) => roster.some((p) => fieldOf(p.department, p.university) === field))],
     ['track', TRACKS.filter((track) => roster.some((p) => p.track === track))],
     ['research', uniqueResearchAreas(roster)],
-    ['honors', [...new Set(roster.flatMap((p) => (p.honors || []).flatMap((honor) => [honor.name, honor.organization]).filter(Boolean)))].sort()],
+    ['honors', [...new Set(roster.flatMap((p) => (p.honors ?? []).flatMap((honor) => [honor.name, honor.organization ?? ''])).filter(Boolean))].sort()],
     ['university', [...new Set(roster.map((p) => p.university))].sort()],
     ['institution', INSTITUTION_TYPES.filter((type) => roster.some((p) => institutionTypeOf(p) === type))],
     ['department', uniqueDepartments(roster)],
@@ -604,10 +604,10 @@ async function init() {
   }
   const requestedLocation = params.get('loc') ?? params.get('location');
   filterState.state = params.get('state') ?? '';
-  const requestedField = params.get('field');
-  const requestedTrack = params.get('track');
-  const requestedInstitutionType = params.get('institutionType');
-  const requestedSort = params.get('sort');
+  const requestedField = params.get('field') ?? '';
+  const requestedTrack = params.get('track') ?? '';
+  const requestedInstitutionType = params.get('institutionType') ?? '';
+  const requestedSort = params.get('sort') ?? '';
   let initialLocation = 'World';
   if (requestedLocation && locationOptions.includes(requestedLocation) && roster.some((p) => locationMatches(p, requestedLocation))) {
     initialLocation = requestedLocation;
@@ -689,8 +689,9 @@ async function init() {
       clearButton.className = 'browser-shelf-clear';
       clearButton.dataset.clearSaved = clearAction;
       clearButton.textContent = '×';
-      clearButton.setAttribute('aria-label', clearAction === 'pinned' ? 'Clear pinned searches' : 'Clear recent profiles');
-      clearButton.title = clearButton.getAttribute('aria-label');
+      const clearLabel = clearAction === 'pinned' ? 'Clear pinned searches' : 'Clear recent profiles';
+      clearButton.setAttribute('aria-label', clearLabel);
+      clearButton.title = clearLabel;
       group.append(heading, document.createTextNode(' '), clearButton);
       entries.forEach(({ href, text }) => {
         const link = document.createElement('a');
@@ -847,7 +848,7 @@ async function init() {
     }
     const normalized = (value: string) => value.toLocaleLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
     const source = keywordValues ?? suggestionValues;
-    const sourceQuery = keywordValues ? normalized(rawQuery) : normalized(query);
+    const sourceQuery = normalized(rawQuery);
     const matches = source
       .filter((value) => normalized(value).includes(sourceQuery))
       .sort((a, b) => {
@@ -867,7 +868,7 @@ async function init() {
       // Otherwise its blur handler can hide the list before a mouse click arrives.
       option.addEventListener('mousedown', (event) => event.preventDefault());
       option.addEventListener('click', () => {
-        setSearchValue(isKeyword ? `${KEYWORD_LABELS[scope]}: ${value}` : value);
+        setSearchValue(isKeyword ? `${KEYWORD_LABELS[scope] ?? scope}: ${value}` : value);
         hideSuggestions();
         update({ fromSearch: true });
       });
@@ -1080,6 +1081,24 @@ async function init() {
     }
   });
 
+  // mousemove fires continuously while the pointer is over the insights dashboard, so the chart's
+  // serialized point list is parsed once per <svg> element and cached against it rather than on
+  // every event. The chart is re-rendered (new element) whenever the metric changes.
+  type GrowthPoint = [number, string, number, string?, string?];
+  const growthPointsCache = new WeakMap<SVGSVGElement, GrowthPoint[]>();
+  function growthPointsOf(svg: SVGSVGElement): GrowthPoint[] {
+    const cached = growthPointsCache.get(svg);
+    if (cached) return cached;
+    let parsed: GrowthPoint[] = [];
+    try {
+      parsed = JSON.parse(svg.dataset.points || '[]') as GrowthPoint[];
+    } catch {
+      parsed = [];
+    }
+    growthPointsCache.set(svg, parsed);
+    return parsed;
+  }
+
   // World map hover tooltip & highlight + Growth chart crosshairs
   document.getElementById('roster').addEventListener('mousemove', (e) => {
     const target = e.target as HTMLElement;
@@ -1151,7 +1170,7 @@ async function init() {
       }
     });
     if (!svg) return;
-    const points = JSON.parse(svg.dataset.points || '[]') as [number, string, number, string?, string?][];
+    const points = growthPointsOf(svg);
     if (!points.length) return;
     const rect = svg.getBoundingClientRect();
     const vbWidth = svg.viewBox.baseVal.width || 640;
@@ -1211,7 +1230,7 @@ async function init() {
     ...pickRandomUnique(roster.map((person) => displayName(person.name)), 2).map((value) => ({ type: 'search' as const, value })),
     ...pickRandomUnique(uniqueDepartments(roster), 1).map((value) => ({ type: 'search' as const, value })),
     ...pickRandomUnique(uniqueStates(roster), 1).map((value) => ({ type: 'search' as const, value })),
-    ...pickRandomUnique(roster.flatMap((person) => person.researchAreas), 1).map((value) => ({ type: 'search' as const, value })),
+    ...pickRandomUnique(roster.flatMap((person) => person.researchAreas ?? []), 1).map((value) => ({ type: 'search' as const, value })),
     ...pickRandomUnique(populatedFields, 2).map((value) => ({ type: 'field' as const, value, label: fieldDropdownLabel(value) })),
     ...pickRandomUnique(TRACKS.filter((track) => roster.some((person) => person.track === track)), 1).map((value) => ({ type: 'track' as const, value })),
     ...pickRandomUnique(populatedLocations, 1).map((value) => ({ type: 'loc' as const, value })),
@@ -1268,10 +1287,13 @@ async function init() {
     }
     setSearchValue(btn.textContent ?? '');
     filterState.insights = false;
-    // If the selected search term is not found within the current location filter, widen to 'World'
-    const matchesCurrent = roster.some(
-      (p) => locationMatches(p, locationSelect.value) && filterRoster([p], { query: btn.textContent }).length > 0,
-    );
+    // If the selected search term is not found within the current location filter, widen to
+    // 'World'. Query the shared index once — filtering a one-element array per person built a
+    // throwaway SearchIndex (and WeakMap) for every roster entry on each click.
+    const matchesCurrent = filterRoster(searchIndex, {
+      query: btn.textContent ?? '',
+      location: locationSelect.value,
+    }).length > 0;
     if (!matchesCurrent) {
       locationSelect.value = 'World';
     }

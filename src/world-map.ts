@@ -7,8 +7,12 @@ import {
   WORLD_MAP_VIEWBOX,
 } from './world-map-data.ts';
 
-export function heatTier(count: number, max: number): number {
-  if (count === 0 || max === 0) return 0;
+// Fixed absolute thresholds, published verbatim in the legend at the bottom of the map. Keep the
+// two in sync. Named apart from insights.ts's relativeHeatTier(), which shades against the
+// largest bucket in view; both drive the same heat-N classes, so one shared name for two
+// different scales was a trap.
+export function densityHeatTier(count: number): number {
+  if (count <= 0) return 0;
   if (count >= 100) return 4;
   if (count >= 20) return 3;
   if (count >= 5) return 2;
@@ -22,15 +26,16 @@ export function renderWorldMap(roster: Roster, selectedLocation?: string): strin
     counts.set(country, (counts.get(country) ?? 0) + 1);
   }
 
-  const sortedCountries = [...counts.entries()].sort((a, b) => b[1] - a[1]);
-  const max = sortedCountries[0] ? sortedCountries[0][1] : 1;
+  // Alphabetical tie-break so the pin and chip order stays put across reloads (main.ts shuffles
+  // the roster on load).
+  const sortedCountries = [...counts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
   const total = roster.length || 1;
 
   // Build SVG country paths
   const countryElements = Object.entries(WORLD_MAP_SVG_PATHS).map(([iso, pathData]) => {
     const countryName = ISO_TO_COUNTRY_NAME[iso] || iso.toUpperCase();
     const count = counts.get(countryName) ?? 0;
-    const tier = heatTier(count, max);
+    const tier = densityHeatTier(count);
     const flag = countryFlag(countryName);
     const isOrigin = iso === 'vn';
     const isSelected = selectedLocation && (selectedLocation === countryName || selectedLocation === iso);
@@ -59,7 +64,7 @@ export function renderWorldMap(roster: Roster, selectedLocation?: string): strin
   const pinsHtml = sortedCountries.map(([countryName, count]) => {
     const coords = COUNTRY_PIN_COORDS[countryName];
     if (!coords) return '';
-    const tier = heatTier(count, max);
+    const tier = densityHeatTier(count);
     const flag = countryFlag(countryName);
     const pct = Math.round((count / total) * 100);
     const label = `${flag} ${countryName}: ${count} ${count === 1 ? 'person' : 'people'} (${pct}%)`;
@@ -87,7 +92,7 @@ export function renderWorldMap(roster: Roster, selectedLocation?: string): strin
 
   // Host Countries Quick Chips
   const quickChips = sortedCountries.map(([countryName, count]) => {
-    const tier = heatTier(count, max);
+    const tier = densityHeatTier(count);
     const flag = countryFlag(countryName);
     const pct = total > 0 ? Math.round((count / total) * 100) : 0;
     return `

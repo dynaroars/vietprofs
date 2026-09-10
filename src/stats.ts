@@ -16,12 +16,6 @@ export interface CountryStat {
   count: number;
 }
 
-export interface ReferrerStat {
-  host: string;
-  label: string;
-  count: number;
-}
-
 export interface PageStat {
   path: string;
   label: string;
@@ -57,7 +51,6 @@ export interface StatsResponse {
   };
   countriesCount: number;
   topCountries: CountryStat[];
-  topReferrers: ReferrerStat[];
   topPages: PageStat[];
   daily: DailyStat[];
   isDemo?: boolean;
@@ -290,34 +283,6 @@ function renderStatsContent(data: StatsResponse) {
             </div>
           </section>
 
-          ${(data.topReferrers || []).length > 0 ? `<section class="man-section">
-            <h2>TOP REFERRERS (TODAY)</h2>
-            <div class="stats-table-wrapper">
-              <table class="stats-table">
-                <thead>
-                  <tr>
-                    <th>Source</th>
-                    <th class="num-col">Visits</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  ${(data.topReferrers || []).slice(0, 8).map(r => {
-                    const maxCount = data.topReferrers[0]?.count || 1;
-                    const pct = Math.round((r.count / maxCount) * 100);
-                    return `
-                      <tr>
-                        <td>
-                          <span class="referrer-name">${escapeHtml(r.label)}</span>
-                          <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: ${pct}%"></div></div>
-                        </td>
-                        <td class="num-col">${formatNumber(r.count)}</td>
-                      </tr>
-                    `;
-                  }).join('')}
-                </tbody>
-              </table>
-            </div>
-          </section>` : ''}
         </div>
 
         <section class="man-section">
@@ -433,15 +398,14 @@ function renderLoading() {
   `;
 }
 
-async function fetchStats(): Promise<StatsResponse> {
-  const endpoints = [
-    '/api/stats',
-    'https://vietprofs.roars.dev/api/stats',
-  ];
+// The same-origin endpoint first; the absolute one is the fallback for local dev and for
+// previews served off a different host, where /api/stats isn't routed to the Worker.
+const STATS_ENDPOINTS = ['/api/stats', 'https://vietprofs.roars.dev/api/stats'];
 
+async function fetchStats(): Promise<StatsResponse> {
   let lastError: Error | null = null;
 
-  for (const endpoint of endpoints) {
+  for (const endpoint of STATS_ENDPOINTS) {
     try {
       const res = await fetch(endpoint);
       if (res.ok) {
@@ -449,13 +413,30 @@ async function fetchStats(): Promise<StatsResponse> {
         if (data && (data.today || data.last30Days)) {
           return data;
         }
+        lastError = new Error('The statistics service returned an incomplete response.');
+        continue;
       }
+      // A non-ok response never reaches the catch, so record it explicitly — otherwise the
+      // Worker's own 503 body ("Visitor statistics temporarily unavailable") was discarded and
+      // every failure surfaced as the generic connection error below.
+      lastError = new Error(await statusMessage(res));
     } catch (err: unknown) {
       lastError = err instanceof Error ? err : new Error(String(err));
     }
   }
 
-  throw lastError || new Error('Unable to connect to statistics service.');
+  throw lastError ?? new Error('Unable to connect to statistics service.');
+}
+
+async function statusMessage(res: Response): Promise<string> {
+  try {
+    const body = await res.json() as { error?: string; message?: string };
+    const detail = [body?.error, body?.message].filter(Boolean).join(' — ');
+    if (detail) return detail;
+  } catch {
+    // Not a JSON error envelope; fall back to the status line.
+  }
+  return `The statistics service responded with HTTP ${res.status}.`;
 }
 
 async function initStatsPage() {

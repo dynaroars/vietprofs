@@ -26,6 +26,12 @@ interface Ledger { version: 1; snapshotAt: string; ids: string[]; batches: Batch
 }>; }
 type LedgerEntry = Ledger['entries'][string];
 
+// validate-data.ts requires profileUrl on every entry, but the RosterEntry type marks it
+// optional, so the source list is filtered rather than assumed.
+function sourceUrlsFor(person: RosterEntry): string[] {
+  return [person.profileUrl, person.websiteUrl].filter((url): url is string => Boolean(url));
+}
+
 async function load(): Promise<{ roster: Roster; ledger: Ledger | null }> {
   const roster = JSON.parse(await readFile(rosterPath, 'utf8')) as Roster;
   let ledger: Ledger | null = null;
@@ -38,17 +44,22 @@ function makeLedger(roster: Roster): Ledger {
   const now = new Date().toISOString();
   const batches: Batch[] = [];
   for (let index = 0; index < ids.length; index += BATCH_SIZE) batches.push({ number: batches.length + 1, ids: ids.slice(index, index + BATCH_SIZE), status: 'pending' });
-  return { version: 1, snapshotAt: now, ids, batches, entries: Object.fromEntries(roster.map((person) => [person.id, {
-    overview: 'pending', work: 'pending', sourcesChecked: [person.profileUrl, ...(person.websiteUrl ? [person.websiteUrl] : [])], evidence: [] as unknown[], errors: [] as string[], updatedAt: now,
-  }])) };
+  return {
+    version: 1,
+    snapshotAt: now,
+    ids,
+    batches,
+    // One shared timestamp so a snapshot's ledger entries all carry the same snapshotAt.
+    entries: Object.fromEntries(roster.map((person): [string, LedgerEntry] => [person.id, makeEntry(person, now)])),
+  };
 }
 
-function makeEntry(person: RosterEntry): LedgerEntry {
-  const now = new Date().toISOString();
+function makeEntry(person: RosterEntry, at = new Date().toISOString()): LedgerEntry {
+  const now = at;
   return {
     overview: 'pending' as const,
     work: 'pending' as const,
-    sourcesChecked: [person.profileUrl, ...(person.websiteUrl ? [person.websiteUrl] : [])],
+    sourcesChecked: sourceUrlsFor(person),
     evidence: [] as unknown[],
     errors: [] as string[],
     updatedAt: now,
@@ -104,13 +115,13 @@ async function collectBatch(number: number) {
     const person = roster.find((candidate) => candidate.id === id);
     if (!person) continue;
     const entry = ledger.entries[id] ??= makeEntry(person);
-    entry.sourcesChecked ??= [person.profileUrl, ...(person.websiteUrl ? [person.websiteUrl] : [])];
+    entry.sourcesChecked ??= sourceUrlsFor(person);
     entry.evidence ??= [];
     entry.errors ??= [];
     if (entry.evidence.length || entry.errors.length) continue;
     entry.errors = [];
     entry.evidence = [];
-    for (const url of [person.profileUrl, ...(person.websiteUrl ? [person.websiteUrl] : [])]) {
+    for (const url of sourceUrlsFor(person)) {
       try {
         const response = await fetch(url, { signal: AbortSignal.timeout(20_000) });
         if (!response.ok) throw new Error(`HTTP ${response.status}`);

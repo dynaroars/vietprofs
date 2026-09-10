@@ -30,7 +30,6 @@ test('Worker handles /api/stats endpoint in fallback/demo mode when token is abs
   assert.ok(data.last7Days);
   assert.ok(data.last30Days);
   assert.ok(data.topCountries.length > 0);
-  assert.ok(data.topReferrers.length > 0);
   assert.ok(data.topPages.length > 0);
   assert.ok(data.daily.length === 30);
   assert.ok(data.today.visits > 0);
@@ -42,7 +41,9 @@ test('Worker scopes live analytics to the hostname and reports honest coverage',
   const originalFetch = globalThis.fetch;
   let requestBody: any;
   let storedHistory = '';
+  let graphqlCalls = 0;
   globalThis.fetch = async (_input, init) => {
+    graphqlCalls += 1;
     requestBody = JSON.parse(String(init?.body));
     const zone: Record<string, unknown> = {
       topCountries: [
@@ -93,8 +94,46 @@ test('Worker scopes live analytics to the hostname and reports honest coverage',
     assert.equal(data.last7Days.requests, 91);
     assert.equal(data.countriesCount, 2);
     assert.equal(data.topCountries[0].count, 4);
-    assert.equal(data.topPages.length, 1);
-    assert.equal(data.topReferrers.length, 0);
+    // '/' and '/stats.html' are public HTML pages; '/favicon.ico' is not.
+    assert.deepEqual(data.topPages.map((page: any) => page.path), ['/', '/stats.html']);
+    assert.equal(data.topPages[1].label, 'Visitor Statistics');
+    // One analytics round trip per refresh; referrer breakdowns need a paid plan and are not
+    // requested (see the note in buildGraphqlQuery's dataset comment).
+    assert.equal(graphqlCalls, 1);
+    assert.equal(data.topReferrers, undefined);
+    // Only the scheduled refresh archives history; a user-facing request must not write to KV.
+    assert.equal(storedHistory, '');
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
+});
+
+test('the scheduled refresh is what archives daily history to KV', async () => {
+  const originalFetch = globalThis.fetch;
+  let storedHistory = '';
+  globalThis.fetch = async () => {
+    const zone: Record<string, unknown> = { topCountries: [], topPages: [] };
+    for (let index = 0; index < 7; index++) {
+      zone[`traffic${index}`] = [{ count: 1 }];
+      zone[`pages${index}`] = [{ count: 1, sum: { visits: 1 } }];
+    }
+    return new Response(JSON.stringify({ data: { viewer: { zones: [zone] } } }), {
+      headers: { 'Content-Type': 'application/json' },
+    });
+  };
+  try {
+    const pending: Promise<unknown>[] = [];
+    const env = {
+      CLOUDFLARE_API_TOKEN: 'test-token',
+      CLOUDFLARE_ZONE_ID: 'test-zone',
+      STATS_KV: {
+        get: async (): Promise<null> => null,
+        put: async (_key: string, value: string) => { storedHistory = value; },
+      },
+    };
+    const ctx = { waitUntil: (p: Promise<unknown>) => pending.push(p), passThroughOnException: () => {} };
+    await worker.scheduled(null, env, ctx as any);
+    await Promise.all(pending);
     assert.equal(JSON.parse(storedHistory).length, 7);
   } finally {
     globalThis.fetch = originalFetch;

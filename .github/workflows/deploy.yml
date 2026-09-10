@@ -27,7 +27,10 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm test
-      - run: npm run build
+      # test:e2e runs `npm run build` itself, then drives the built site through Playwright.
+      # Only Chromium is used (see test/browser-smoke.test.ts).
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:e2e
       - uses: actions/upload-pages-artifact@v5
         with:
           path: dist

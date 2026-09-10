@@ -109,7 +109,7 @@ The public statistics page (`/stats.html`) displays hostname-filtered Cloudflare
 - **Worker Configuration:** Configured via `wrangler.jsonc`.
 - **Configuration:** `CLOUDFLARE_ZONE_ID` and `CLOUDFLARE_HOSTNAME` are regular Worker variables; `CLOUDFLARE_API_TOKEN` is a secret with `Zone.Analytics:Read` scope for `roars.dev`.
 - **Deployment:** Use `npx wrangler secret put CLOUDFLARE_API_TOKEN` to create or rotate the secret, and `npx wrangler deploy` after Worker code or configuration changes.
-- **Metric Limitations:** A Cloudflare visit is an aggregate network estimate, not a verified person. Automated traffic may remain. Successful HTML page requests exclude error responses, images, scripts, styles, JSON, and other assets; total HTTP requests include them. When unauthenticated locally, the API returns a clearly labeled preview dataset.
+- **Metric Limitations:** Referrer breakdowns are not available on this zone's Cloudflare plan, so the page reports countries and paths only. A Cloudflare visit is an aggregate network estimate, not a verified person. Automated traffic may remain. Successful HTML page requests exclude error responses, images, scripts, styles, JSON, and other assets; total HTTP requests include them. When unauthenticated locally, the API returns a clearly labeled preview dataset.
 
 ## License
 

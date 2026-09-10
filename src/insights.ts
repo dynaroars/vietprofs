@@ -23,7 +23,11 @@ import { renderWorldMap } from './world-map.ts';
 
 export { renderWorldMap };
 
-export function heatTier(count: number, max: number): number {
+// Shades relative to the largest bucket in the same view, for grids whose absolute counts are
+// small (U.S. states). Distinct from world-map.ts's densityHeatTier(), which uses fixed
+// absolute thresholds and publishes them in a legend; the two used to share the name `heatTier`
+// while behaving differently on the same heat-N CSS classes.
+export function relativeHeatTier(count: number, max: number): number {
   if (count === 0 || max === 0) return 0;
   const ratio = count / max;
   if (ratio > 0.66) return 4;
@@ -37,19 +41,22 @@ export function calculationBasis(roster: Roster, scope: string): string {
   return `<details class="calculation-details"><summary>show calculation basis</summary><code>source=public/data.json · scope=${escapeHtml(scope)} · records=${roster.length} · universities=${universities} · generated in browser from explicit roster fields</code></details>`;
 }
 
-export const NGUYEN_TOOLTIP = 'Nguyễn was Vietnam’s last ruling dynasty (1802–1945); many people adopted '
-  + 'or were assigned the name under it, which is why it’s estimated to be shared by nearly 40% '
-  + 'of Vietnamese people today.';
+const STATE_NAME_BY_ABBR = new Map(Object.entries(STATE_ABBR).map(([name, abbr]) => [abbr, name]));
 
 export function renderStateGrid(roster: Roster): string {
-  const counts = new Map<string | undefined, number>();
-  for (const p of roster) counts.set(p.state, (counts.get(p.state) ?? 0) + 1);
+  const counts = new Map<string, number>();
+  // Entries with no recorded state are skipped rather than pooled under one undefined key,
+  // which would otherwise feed the max() below and wash out the whole grid's shading.
+  for (const p of roster) {
+    if (!p.state) continue;
+    counts.set(p.state, (counts.get(p.state) ?? 0) + 1);
+  }
   const max = Math.max(0, ...counts.values());
   const tiles = Object.entries(STATE_GRID)
     .map(([abbr, [row, col]]) => {
-      const fullName = Object.keys(STATE_ABBR).find((name) => STATE_ABBR[name] === abbr);
+      const fullName = STATE_NAME_BY_ABBR.get(abbr) ?? abbr;
       const count = counts.get(fullName) ?? 0;
-      const tier = heatTier(count, max);
+      const tier = relativeHeatTier(count, max);
       const label = `${fullName}: ${count} ${count === 1 ? 'person' : 'people'}`;
       return `<button type="button" class="state-tile heat-${tier}" style="grid-row:${row + 1};grid-column:${col + 1}" data-state="${escapeHtml(fullName)}" title="${escapeHtml(label)}" aria-label="${escapeHtml(label)}">${abbr}</button>`;
     })
@@ -59,41 +66,6 @@ export function renderStateGrid(roster: Roster): string {
       <h3 class="insights-heading">Geographic Distribution</h3>
       <p class="insights-caption">50 states + DC — darker means more people; click a tile to filter by state.</p>
       <div class="state-grid-wrap"><div class="state-grid">${tiles}</div></div>
-    </div>
-  `;
-}
-
-export function renderWorldCountryGrid(roster: Roster): string {
-  const counts = new Map<string, number>();
-  for (const p of roster) {
-    const country = p.country || 'United States';
-    counts.set(country, (counts.get(country) ?? 0) + 1);
-  }
-  if (counts.size === 0) return '';
-  const sorted = [...counts.entries()].sort((a, b) => b[1] - a[1]);
-  const max = sorted[0] ? sorted[0][1] : 1;
-  const total = roster.length || 1;
-
-  const tiles = sorted.map(([country, count]) => {
-    const tier = heatTier(count, max);
-    const flag = countryFlag(country);
-    const pct = Math.round((count / total) * 100);
-    const label = `${flag} ${country}: ${count} ${count === 1 ? 'person' : 'people'} (${pct}%)`;
-    return `
-      <button type="button" class="country-grid-tile heat-${tier} ranked-item" data-filter="country" data-value="${escapeHtml(country)}" title="${escapeHtml(label)}" aria-label="${escapeHtml(label)}">
-        <span class="country-flag" aria-hidden="true">${flag}</span>
-        <span class="country-name">${escapeHtml(country)}</span>
-        <span class="country-count">${count}</span>
-        <span class="country-share">${pct}%</span>
-      </button>
-    `;
-  }).join('');
-
-  return `
-    <div class="insights-section">
-      <h3 class="insights-heading">Global Diaspora Host Country Map Grid</h3>
-      <p class="insights-caption">Faculty distribution across ${counts.size} host countries worldwide — darker tiles indicate higher counts; click a tile to filter by country.</p>
-      <div class="country-grid">${tiles}</div>
     </div>
   `;
 }
@@ -358,6 +330,12 @@ export const GROWTH_METRICS: Record<GrowthMetricKey, GrowthMetricConfig> = {
   },
 };
 
+// A metric can fall (codeLines after a refactor), so the sign comes from the value rather than
+// being hardcoded — `+${-12}%` rendered as "+-12%".
+function formatChange(delta: number, suffix: string): string {
+  return `${delta >= 0 ? '+' : ''}${delta.toLocaleString()}${suffix}`;
+}
+
 export function renderGrowthChart(history: StatsHistoryPoint[], activeMetric: GrowthMetricKey = 'count'): string {
   if (history.length < 2) return '';
   const metric = GROWTH_METRICS[activeMetric] ?? GROWTH_METRICS.count;
@@ -392,7 +370,7 @@ export function renderGrowthChart(history: StatsHistoryPoint[], activeMetric: Gr
       const cfg = GROWTH_METRICS[key];
       const cur = last[key] ?? last.count;
       const init = first[key] ?? first.count;
-      const pctChange = init > 0 ? `+${Math.round(((cur - init) / init) * 100)}%` : `+${cur}`;
+      const pctChange = init > 0 ? formatChange(Math.round(((cur - init) / init) * 100), '%') : formatChange(cur - init, '');
       const isActive = key === activeMetric;
       return `
         <button type="button" class="growth-metric-btn${isActive ? ' is-active' : ''}" data-metric="${key}" aria-pressed="${isActive}">
@@ -443,7 +421,6 @@ export function renderFunFacts(
   const worldInternationalRoster = fullRoster.filter((p) => (p.country || 'United States') !== 'United States');
   const selectedIsWorld = selectedLocation === 'World';
   const selectedRoster = selectedIsWorld ? fullRoster : visibleRoster;
-  const selectedLabel = selectedLocationLabel;
   const selectedIsUs = selectedLocation === 'US';
   const selectedFacts = selectedIsUs
     ? buildUsObservations(selectedRoster)
@@ -452,20 +429,7 @@ export function renderFunFacts(
   const worldFacts = [...buildUsObservations(worldUsRoster), ...buildInternationalObservations(fullRoster), ...buildQualifiedObservations(fullRoster)];
   const worldAwardsFacts = buildAwardsFunFacts(fullRoster);
 
-  const formatList = (facts: string[]) =>
-    facts
-      .map((f) => {
-        const escaped = escapeHtml(f);
-        if (f.startsWith('Most common surnames')) {
-          // Wrap just the first "Nguyen" occurrence with the existing .term tooltip mechanic.
-          return `<li>${escaped.replace(
-            'Nguyen (',
-            `<span class="term" tabindex="0" data-tooltip="${escapeHtml(NGUYEN_TOOLTIP)}">Nguyen</span> (`,
-          )}</li>`;
-        }
-        return `<li>${escaped}</li>`;
-      })
-      .join('');
+  const formatList = (facts: string[]) => facts.map((f) => `<li>${escapeHtml(f)}</li>`).join('');
 
   const selectedUniversities = new Set(selectedRoster.map((p) => p.university)).size;
   const worldUniversities = new Set(fullRoster.map((p) => p.university)).size;
@@ -474,7 +438,7 @@ export function renderFunFacts(
       <!-- SECTION 1: SELECTED LOCATION -->
       <section class="insights-section-block">
         <div class="insights-section-header">
-          <span class="insights-badge">${escapeHtml(selectedLabel)}</span>
+          <span class="insights-badge">${escapeHtml(selectedLocationLabel)}</span>
           <h2 class="insights-main-heading">${escapeHtml(selectedIsUs ? 'United States Academic Landscape' : `${selectedLocationLabel} Academic Landscape`)}</h2>
           <p class="insights-main-desc">${selectedRoster.length} ${selectedRoster.length === 1 ? 'person' : 'people'} across ${selectedUniversities} institution${selectedUniversities === 1 ? '' : 's'} in ${escapeHtml(selectedIsUs ? 'the United States' : selectedLocationLabel.replace(/^\S+\s+/, ''))}.</p>
         </div>
@@ -486,9 +450,9 @@ export function renderFunFacts(
         ${selectedRoster.length ? renderAcademicFlowSummary(selectedRoster) : ''}
         ${selectedRoster.length ? renderDecadesChart(selectedRoster) : ''}
         <div class="insights-section">
-          <h3 class="insights-heading">${escapeHtml(selectedLabel)} Highlights</h3>
+          <h3 class="insights-heading">${escapeHtml(selectedLocationLabel)} Highlights</h3>
           <ul class="fun-facts">${formatList([...selectedFacts, ...selectedAwardsFacts])}</ul>
-          ${calculationBasis(selectedRoster, selectedLabel)}
+          ${calculationBasis(selectedRoster, selectedLocationLabel)}
         </div>
       </section>
   `;

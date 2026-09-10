@@ -46,6 +46,8 @@ const surnameFirstAllowlist = new Set<string>([
   'Ha Thanh Dong', // published as "Ha Thanh Dong" / "Dr. Ha Thanh Dong" on AIT faculty directory; Dong is his surname and Ha is his given name.
 ]);
 
+const CURRENT_YEAR = new Date().getFullYear();
+
 function fail(file: string, message: string): never {
   throw new Error(`${file}: ${message}`);
 }
@@ -147,8 +149,11 @@ for (const [index, person] of roster.entries()) {
         if (typeof honor[field] !== 'string' || !honor[field].trim()) fail(rosterFile, `${honorLabel} has invalid ${field}`);
       }
       if (!allowedHonorCategories.has(honor.category)) fail(rosterFile, `${honorLabel} has unsupported category ${honor.category}`);
-      if (honor.year !== null && (!Number.isInteger(honor.year) || honor.year < 1900 || honor.year > new Date().getFullYear())) {
-        fail(rosterFile, `${honorLabel} has invalid year`);
+      // Honors always carry a `year` key; `null` records an award whose year is unknown. That is
+      // deliberately stricter than `otherDegrees` below, where the key may be omitted entirely.
+      if (!Object.hasOwn(honor, 'year')) fail(rosterFile, `${honorLabel} must set year (use null when unknown)`);
+      if (honor.year !== null && (!Number.isInteger(honor.year) || honor.year < 1900 || honor.year > CURRENT_YEAR)) {
+        fail(rosterFile, `${honorLabel} has invalid year (expected an integer 1900-${CURRENT_YEAR}, or null when unknown)`);
       }
       if (!/^https:\/\//.test(honor.source)) fail(rosterFile, `${honorLabel} source must use HTTPS`);
       const honorKey = `${honor.name}|${honor.year ?? 'unknown'}|${honor.organization}`;
@@ -166,7 +171,7 @@ for (const [index, person] of roster.entries()) {
       }
       if (typeof degree.degree !== 'string' || !degree.degree.trim()) fail(rosterFile, `${degreeLabel} has invalid degree`);
       if (typeof degree.institution !== 'string' || !degree.institution.trim()) fail(rosterFile, `${degreeLabel} has invalid institution`);
-      if (degree.year !== undefined && (!Number.isInteger(degree.year) || degree.year < 1900 || degree.year > new Date().getFullYear())) fail(rosterFile, `${degreeLabel} has invalid year`);
+      if (degree.year !== undefined && (!Number.isInteger(degree.year) || degree.year < 1900 || degree.year > CURRENT_YEAR)) fail(rosterFile, `${degreeLabel} has invalid year`);
       if (degree.major !== undefined && (typeof degree.major !== 'string' || !degree.major.trim())) fail(rosterFile, `${degreeLabel} has invalid major`);
       if (degree.source !== undefined && !/^https?:\/\//.test(degree.source)) fail(rosterFile, `${degreeLabel} source must use HTTP(S)`);
     }
@@ -191,7 +196,7 @@ for (const [index, person] of roster.entries()) {
   }
   const yearFields = ['phdYear', 'undergradYear', 'msYear', 'mdYear', 'postdocYear'];
   for (const field of yearFields) {
-    if (person[field] !== undefined && (!Number.isInteger(person[field]) || person[field] < 1900 || person[field] > new Date().getFullYear())) {
+    if (person[field] !== undefined && (!Number.isInteger(person[field]) || person[field] < 1900 || person[field] > CURRENT_YEAR)) {
       fail(rosterFile, `${label} has invalid ${field}`);
     }
   }

@@ -47,7 +47,7 @@ test('all countries in roster map to recognized continents', () => {
 test('honors have escaped names and source links available to the roster renderer', () => {
   const honored = roster.find((person) => person.honors?.length);
   assert.ok(honored, 'fixture roster should contain an honored professor');
-  for (const honor of honored.honors) {
+  for (const honor of honored.honors ?? []) {
     const html = `<a class="honor-link" href="${escapeHtml(honor.source)}">${escapeHtml(honor.name)}</a>`;
     assert.match(html, /class="honor-link"/);
     assert.match(html, new RegExp(escapeHtml(honor.name)));
@@ -231,21 +231,26 @@ test('unconfirmed records are visibly labeled and use a verification-source link
 });
 
 test('authoritative full Vietnamese names preserve accent marks and Vietnamese order', () => {
-  const thanhVu = roster.find((p) => p.name === 'ThanhVu H. Nguyen');
-  assert.equal(vietnameseName(thanhVu), 'Nguyễn Huy Thanh Vũ');
-  assert.equal(vietnameseName(roster.find((p) => p.name === 'Nghiem V. Nguyen')), 'Nguyễn V. Nghiêm');
-  assert.equal(vietnameseName(roster.find((p) => p.name === 'Bao Chau Ngo')), 'Ngô Bảo Châu');
-  assert.equal(vietnameseName(roster.find((p) => p.name === 'Cac Nguyen')), 'Nguyễn Cac');
-  assert.equal(vietnameseName(roster.find((p) => p.name === 'Tien Zung Nguyen')), 'Nguyễn Tiến Zung');
-  assert.equal(vietnameseName(roster.find((p) => p.name === 'Tan Minh Nguyen')), 'Nguyễn Minh Tân');
-  assert.equal(vietnameseName(roster.find((p) => p.name === 'Ha Ta')), 'Tạ Hà');
-  assert.equal(vietnameseName(roster.find((p) => p.name === 'Hai-Dang Nguyen')), 'Nguyễn Hải-Đăng');
-  assert.equal(vietnameseName(roster.find((p) => p.name === 'Lien-Hang T. Nguyen')), 'Nguyễn T. Liên-Hằng');
-  assert.equal(vietnameseName(roster.find((p) => p.name === 'Thanh Thai Nguyen')), 'Nguyễn Thái Thanh');
-  assert.equal(vietnameseName(roster.find((p) => p.name === 'Son Thanh Dam')), 'Đàm Thanh Sơn');
-  assert.equal(vietnameseName(roster.find((p) => p.name === 'Thai Luan Vu')), 'Vũ Thái Luân');
-  assert.equal(vietnameseName(roster.find((p) => p.name === 'Hoang Long Nguyen')), 'Nguyễn Long Hoàng');
-  const daoNguyen = roster.find((p) => p.name === 'Nguyen-Truc-Dao Nguyen');
+  // Fails with the missing name rather than a confusing "cannot read property of undefined".
+  const byName = (name: string) => {
+    const person = roster.find((p) => p.name === name);
+    assert.ok(person, `fixture roster is missing ${name}`);
+    return person;
+  };
+  assert.equal(vietnameseName(byName('ThanhVu H. Nguyen')), 'Nguyễn Huy Thanh Vũ');
+  assert.equal(vietnameseName(byName('Nghiem V. Nguyen')), 'Nguyễn V. Nghiêm');
+  assert.equal(vietnameseName(byName('Bao Chau Ngo')), 'Ngô Bảo Châu');
+  assert.equal(vietnameseName(byName('Cac Nguyen')), 'Nguyễn Cac');
+  assert.equal(vietnameseName(byName('Tien Zung Nguyen')), 'Nguyễn Tiến Zung');
+  assert.equal(vietnameseName(byName('Tan Minh Nguyen')), 'Nguyễn Minh Tân');
+  assert.equal(vietnameseName(byName('Ha Ta')), 'Tạ Hà');
+  assert.equal(vietnameseName(byName('Hai-Dang Nguyen')), 'Nguyễn Hải-Đăng');
+  assert.equal(vietnameseName(byName('Lien-Hang T. Nguyen')), 'Nguyễn T. Liên-Hằng');
+  assert.equal(vietnameseName(byName('Thanh Thai Nguyen')), 'Nguyễn Thái Thanh');
+  assert.equal(vietnameseName(byName('Son Thanh Dam')), 'Đàm Thanh Sơn');
+  assert.equal(vietnameseName(byName('Thai Luan Vu')), 'Vũ Thái Luân');
+  assert.equal(vietnameseName(byName('Hoang Long Nguyen')), 'Nguyễn Long Hoàng');
+  const daoNguyen = byName('Nguyen-Truc-Dao Nguyen');
   assert.equal(vietnameseName(daoNguyen), 'Nguyễn Nguyễn Trúc Đào');
   assert.equal(daoNguyen.university, 'San Diego State University');
   assert.equal(daoNguyen.state, 'California');

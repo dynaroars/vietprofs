@@ -90,6 +90,15 @@ const DEFAULT_CODEX_REASONING_EFFORT = 'low';
 type JsonRecord = Record<string, any>;
 
 let state: JsonRecord | null = null;
+
+// `state` is null only before startRun()/loadState() populates it. Everything that runs inside a
+// batch reads it through this accessor, so the invariant is stated once and a violation names
+// itself instead of surfacing as a "cannot read property of null" deep in a git or agent call.
+// Sites that legitimately run before a run exists keep their `state?.` / `if (state)` guards.
+function activeState(): JsonRecord {
+  if (!state) throw new Error('maintenance state was accessed before the run was initialized');
+  return state;
+}
 let activeChild: { pid: number | undefined; label: string } | null = null;
 let stopRequested = false;
 let lockOwned = false;
@@ -143,7 +152,15 @@ async function exists(path: string): Promise<boolean> {
   }
 }
 
-async function readJson<T = any>(path: string, fallback: T | null = null): Promise<T | null> {
+async function readJsonRequired<T = JsonRecord>(path: string): Promise<T> {
+  const value = await readJson<T>(path);
+  if (value === null || value === undefined) throw new Error(`required file is missing or empty: ${path}`);
+  return value;
+}
+
+// NoInfer keeps `fallback` out of inference: `readJson(path, null)` would otherwise infer
+// T = null and type every property read on the result as `never`.
+async function readJson<T = JsonRecord>(path: string, fallback: NoInfer<T> | null = null): Promise<T | null> {
   try {
     return JSON.parse(await readFile(path, 'utf8'));
   } catch (error) {
@@ -168,7 +185,7 @@ async function log(message: string): Promise<void> {
 
 async function saveState() {
   if (!state) return;
-  state.updatedAt = nowIso();
+  activeState().updatedAt = nowIso();
   await writeAtomic(STATE_FILE, state);
 }
 
@@ -192,7 +209,7 @@ async function processIsAgent(pid: number): Promise<boolean> {
   }
 }
 
-function terminateGroup(pid: number, signal: NodeJS.Signals = 'SIGTERM'): void {
+function terminateGroup(pid: number | undefined, signal: NodeJS.Signals = 'SIGTERM'): void {
   if (!pid) return;
   try {
     process.kill(-pid, signal);
@@ -213,7 +230,7 @@ function requestStop(signal: NodeJS.Signals): void {
   stopRequested = true;
   void writeFile(STOP_FILE, `${signal}\n`, 'utf8').catch(() => {});
   if (state) {
-    state.status = 'pausing';
+    activeState().status = 'pausing';
     void saveState().catch(() => {});
   }
   if (activeChild?.pid) terminateGroup(activeChild.pid, 'SIGTERM');
@@ -227,8 +244,9 @@ async function acquireLock() {
   }
   if (prior) {
     const priorState = await readJson(STATE_FILE, null);
-    if (prior.host === hostname() && await processIsAgent(priorState?.activeChild?.pid)) {
-      terminateGroup(priorState.activeChild.pid);
+    const priorAgentPid = priorState?.activeChild?.pid;
+    if (prior.host === hostname() && await processIsAgent(priorAgentPid)) {
+      terminateGroup(priorAgentPid);
     }
     await unlink(LOCK_FILE).catch(() => {});
   }
@@ -322,7 +340,7 @@ async function runProcess(command: string, args: string[], {
   });
 
   if (state) {
-    state.activeChild = activeChild;
+    activeState().activeChild = activeChild;
     await saveState();
   }
 
@@ -342,7 +360,7 @@ async function runProcess(command: string, args: string[], {
   outputStream?.end();
   activeChild = null;
   if (state) {
-    state.activeChild = null;
+    activeState().activeChild = null;
     await saveState();
   }
   if (stopRequested) throw new StopRequestedError('stop requested');
@@ -393,8 +411,8 @@ export function parseOptions(argv: string[]): RunOptions {
     if (value === '--all') { options.all = true; options.provided.add('all'); }
     else if (value === '--dry-run') { options.dryRun = true; options.provided.add('dryRun'); }
     else if (value === '--codex-review') { options.codexReview = true; options.provided.add('codexReview'); }
-    else if (value === '--agent') { options.agent = values.shift(); options.provided.add('agent'); }
-    else if (value === '--name') { options.name = values.shift(); options.provided.add('name'); }
+    else if (value === '--agent') { options.agent = values.shift() ?? null; options.provided.add('agent'); }
+    else if (value === '--name') { options.name = values.shift() ?? null; options.provided.add('name'); }
     else if (value === '--limit') { options.limit = Number(values.shift()); options.provided.add('limit'); }
     else if (value === '--total') { options.total = Number(values.shift()); options.provided.add('total'); }
     else if (value === '--stale-days') { options.staleDays = Number(values.shift()); options.provided.add('staleDays'); }
@@ -656,7 +674,7 @@ export function analyzeRosterProposal(beforeRoster: JsonRecord[], afterRoster: J
     return { ok: false, reason: `proposal changed entries outside ${targetName}` };
   }
   let proposal = after.get(targetName) ?? null;
-  if (removed.includes(targetName) && added.length === 1) proposal = after.get(added[0]);
+  if (removed.includes(targetName) && added.length === 1) proposal = after.get(added[0] ?? '') ?? null;
   const expectedNames = beforeRoster.map((person) => person.name);
   const index = expectedNames.indexOf(targetName);
   if (proposal?.name !== targetName) {
@@ -671,14 +689,14 @@ export function analyzeRosterProposal(beforeRoster: JsonRecord[], afterRoster: J
   if (!proposal && protectedFields.length) {
     return { ok: false, reason: `proposal removed an entry with direct fields: ${protectedFields.join(', ')}` };
   }
-  const overwrittenFields = protectedFields.filter((field: string) => !jsonEqual(baseline[field], proposal?.[field]));
+  const overwrittenFields = protectedFields.filter((field: string) => !jsonEqual(baseline?.[field], proposal?.[field]));
   if (overwrittenFields.length) {
     return { ok: false, reason: `proposal changed direct fields: ${overwrittenFields.join(', ')}` };
   }
   if (proposal && !jsonEqual(baseline?.directFields, proposal.directFields)) {
     return { ok: false, reason: 'automated maintenance cannot change directFields' };
   }
-  if (proposal) proposal = { ...proposal, lastUpdatedAt: baseline.lastUpdatedAt };
+  if (proposal) proposal = { ...proposal, lastUpdatedAt: baseline?.lastUpdatedAt };
   return {
     ok: true,
     baseline,
@@ -863,10 +881,10 @@ async function assertPreflight({ codexReview = false, agent = 'claude' } = {}) {
   if (await gitText(['branch', '--show-current']) !== 'main') throw new BlockedError('maintenance must run on the main branch');
 }
 
-export function parseChangedPaths(output: unknown): (string | undefined)[] {
+export function parseChangedPaths(output: unknown): string[] {
   return String(output).split('\n').filter(Boolean).map((line) => {
     const path = line.slice(3).trim();
-    return path.includes(' -> ') ? path.split(' -> ').at(-1) : path;
+    return path.includes(' -> ') ? (path.split(' -> ').at(-1) ?? path) : path;
   });
 }
 
@@ -925,7 +943,7 @@ async function resolveTargetWithAgent(query: string, roster: Roster, schema: Jso
     const structured = agent === 'codex'
       ? outer
       : outer?.structured_output || (typeof outer?.result === 'string' ? parseJsonOutput(outer.result) : outer?.result);
-    return { ok: result.code === 0 && structured, value: structured, process: result };
+    return { ok: result.code === 0 && Boolean(structured), value: structured, process: result };
   });
   const validPerson = target.kind === 'person' && roster.some((person) => person.name === target.canonicalValue);
   const validField = target.kind === 'field' && FIELDS.includes(target.canonicalValue);
@@ -1032,7 +1050,7 @@ Do not edit files. Return only the required structured verdict.`;
 
 async function runResearch(current: JsonRecord, schemas: JsonRecord) {
   const timeout = Number(process.env.VIETPROFS_AGENT_TIMEOUT_MINUTES || DEFAULT_AGENT_TIMEOUT_MINUTES);
-  const agent = current.agent || state.options?.agent || 'claude';
+  const agent = current.agent || activeState().options?.agent || 'claude';
   return runAgentWithRetries(agent, async () => {
     const revision = current.revisionHistory?.at(-1) ?? null;
     const suffix = current.revisionCount ? `-revision-${current.revisionCount}` : '';
@@ -1053,7 +1071,7 @@ async function runResearch(current: JsonRecord, schemas: JsonRecord) {
     const structured = agent === 'codex'
       ? outer
       : outer?.structured_output || (typeof outer?.result === 'string' ? parseJsonOutput(outer.result) : outer?.result);
-    return { ok: result.code === 0 && structured, value: structured, process: result };
+    return { ok: result.code === 0 && Boolean(structured), value: structured, process: result };
   });
 }
 
@@ -1081,7 +1099,7 @@ async function runReview(current: JsonRecord) {
     });
     const review = await readJson(output, null);
     return {
-      ok: result.code === 0 && review && ['approve', 'reject', 'uncertain'].includes(review.verdict),
+      ok: result.code === 0 && Boolean(review) && ['approve', 'reject', 'uncertain'].includes(review?.verdict),
       value: review,
       process: result,
     };
@@ -1112,10 +1130,10 @@ function normalizeResearchProposal(roster: JsonRecord[], current: JsonRecord, re
 async function startPerson(name: string): Promise<void> {
   // Earlier approved people in the same batch intentionally leave only these two files dirty.
   await requireOnlyMaintainedChanges();
-  const roster = await readJson<JsonRecord[]>(join(REPO_ROOT, 'public/data.json'));
+  const roster = await readJsonRequired<JsonRecord[]>(join(REPO_ROOT, 'public/data.json'));
   const baseline = roster.find((person) => person.name === name);
   if (!baseline) throw new Error(`queued entry no longer exists: ${name}`);
-  state.current = {
+  activeState().current = {
     jobId: randomUUID(),
     name,
     stage: 'researching',
@@ -1133,18 +1151,18 @@ async function startPerson(name: string): Promise<void> {
 
 async function skipPerson(reason: string, details: unknown = null): Promise<void> {
   await requireOnlyMaintainedChanges();
-  state.skipped.push({ name: state.current.name, reason, details: compact(JSON.stringify(details), 5_000), at: nowIso() });
-  state.deferredUntil[state.current.name] = new Date(Date.now() + DEFAULT_DEFER_DAYS * 86_400_000).toISOString();
-  state.index += 1;
-  state.current = null;
+  activeState().skipped.push({ name: activeState().current.name, reason, details: compact(JSON.stringify(details), 5_000), at: nowIso() });
+  activeState().deferredUntil[activeState().current.name] = new Date(Date.now() + DEFAULT_DEFER_DAYS * 86_400_000).toISOString();
+  activeState().index += 1;
+  activeState().current = null;
   await saveState();
 }
 
 async function applyProposal(current: JsonRecord): Promise<void> {
   const rosterPath = join(REPO_ROOT, 'public/data.json');
   const verificationPath = join(REPO_ROOT, 'maintenance/verification.json');
-  const roster = await readJson<JsonRecord[]>(rosterPath);
-  const verification = await readJson<JsonRecord>(verificationPath);
+  const roster = await readJsonRequired<JsonRecord[]>(rosterPath);
+  const verification = await readJsonRequired<JsonRecord>(verificationPath);
   const finalName = current.proposal?.name ?? null;
   const validationError = current.proposal && proposalValidationError(current.proposal);
   if (validationError) throw new InvalidProposalError(`refusing invalid proposal: ${validationError}`);
@@ -1209,27 +1227,27 @@ async function commitBatch() {
   const lastMessage = await gitText(['log', '-1', '--format=%B']);
   await requireOnlyMaintainedChanges();
   const hasChanges = (await changedPaths()).length > 0;
-  const status = batchCommitStatus(lastMessage, state.runId, hasChanges);
+  const status = batchCommitStatus(lastMessage, activeState().runId, hasChanges);
   if (status === 'existing') {
     const commit = await gitText(['rev-parse', 'HEAD']);
-    for (const entry of state.completed) entry.commit = commit;
+    for (const entry of activeState().completed) entry.commit = commit;
     return 'existing';
   }
   if (status === 'none') return 'none';
   await git(['add', 'public/data.json', 'maintenance/verification.json', 'maintenance/enrichment.json']);
   await git([
     'commit',
-    '-m', `Automated roster maintenance: batch ${state.runId}`,
-    '-m', `Maintenance-Batch: ${state.runId}`,
-    '-m', `Approved: ${state.completed.map((entry: JsonRecord) => entry.name).join(', ')}`,
-  ], { label: `commit maintenance batch ${state.runId}` });
+    '-m', `Automated roster maintenance: batch ${activeState().runId}`,
+    '-m', `Maintenance-Batch: ${activeState().runId}`,
+    '-m', `Approved: ${activeState().completed.map((entry: JsonRecord) => entry.name).join(', ')}`,
+  ], { label: `commit maintenance batch ${activeState().runId}` });
   const commit = await gitText(['rev-parse', 'HEAD']);
-  for (const entry of state.completed) entry.commit = commit;
+  for (const entry of activeState().completed) entry.commit = commit;
   return 'created';
 }
 
 async function logBatchSummary(): Promise<void> {
-  const changed = state.completed.filter((entry: JsonRecord) => entry.changed);
+  const changed = activeState().completed.filter((entry: JsonRecord) => entry.changed);
   await log(`Modified entries: ${changed.length}.`);
   for (const entry of changed) {
     const changes = entry.changes?.length ? entry.changes.join('; ') : 'change details unavailable';
@@ -1247,7 +1265,7 @@ async function pushBatch() {
     throw new BlockedError('could not rebase maintenance batch onto origin/main');
   }
   await runFullChecks();
-  await git(['push', 'origin', 'main'], { label: `push maintenance batch ${state.runId}` });
+  await git(['push', 'origin', 'main'], { label: `push maintenance batch ${activeState().runId}` });
 }
 
 export function canReviseProposal(review: JsonRecord | null | undefined, revisionCount: number, maxRevisions = MAX_PROPOSAL_REVISIONS): boolean {
@@ -1257,7 +1275,7 @@ export function canReviseProposal(review: JsonRecord | null | undefined, revisio
 }
 
 async function processCurrent(schemas: JsonRecord): Promise<void> {
-  const current = state.current;
+  const current = activeState().current;
   if (current.stage === 'researching' || current.stage === 'reviewing') {
     await requireOnlyMaintainedChanges();
     if (await gitText(['rev-parse', 'HEAD']) !== current.baseCommit) {
@@ -1270,13 +1288,13 @@ async function processCurrent(schemas: JsonRecord): Promise<void> {
       if (!researchIsComplete(current.research)) {
         return skipPerson('incomplete research', current.research);
       }
-      const roster = await readJson(join(REPO_ROOT, 'public/data.json'));
+      const roster = await readJsonRequired<JsonRecord[]>(join(REPO_ROOT, 'public/data.json'));
       const analysis = normalizeResearchProposal(roster, current, current.research);
       if (!analysis.ok) return skipPerson('unsafe research proposal', analysis.reason);
       current.proposal = analysis.proposal;
       current.substantiveChange = analysis.substantiveChange;
-      if (!state.options?.codexReview) current.approvedAt = nowIso();
-      current.stage = state.options?.codexReview ? 'reviewing' : 'applying';
+      if (!activeState().options?.codexReview) current.approvedAt = nowIso();
+      current.stage = activeState().options?.codexReview ? 'reviewing' : 'applying';
       await saveState();
     } catch (error) {
       if (error instanceof StopRequestedError || error instanceof BlockedError) throw error;
@@ -1327,7 +1345,7 @@ async function processCurrent(schemas: JsonRecord): Promise<void> {
       if (error instanceof InvalidProposalError) return skipPerson('invalid proposal', error.message);
       throw error;
     }
-    state.completed.push({
+    activeState().completed.push({
       name: current.name,
       finalName: current.proposal?.name ?? null,
       changed: current.substantiveChange,
@@ -1335,9 +1353,9 @@ async function processCurrent(schemas: JsonRecord): Promise<void> {
       verifiedAt: current.approvedAt,
       commit: null,
     });
-    delete state.deferredUntil[current.name];
-    state.index += 1;
-    state.current = null;
+    delete activeState().deferredUntil[current.name];
+    activeState().index += 1;
+    activeState().current = null;
     await saveState();
   }
 }
@@ -1351,8 +1369,8 @@ interface BatchProgress {
 async function createRun(options: RunOptions, schemas: JsonRecord, progress: BatchProgress = {}) {
   await requireCleanCheckout();
   await git(['pull', '--ff-only', 'origin', 'main'], { label: 'update origin/main' });
-  const roster = await readJson<Roster>(join(REPO_ROOT, 'public/data.json')) as Roster;
-  const verification = await readJson<Record<string, string>>(join(REPO_ROOT, 'maintenance/verification.json')) as Record<string, string>;
+  const roster = await readJsonRequired<Roster>(join(REPO_ROOT, 'public/data.json'));
+  const verification = await readJsonRequired<Record<string, string>>(join(REPO_ROOT, 'maintenance/verification.json'));
   const deferredUntil = state?.deferredUntil || {};
   const continuingRun = Object.keys(progress).length > 0;
   const previousProgress = continuingRun
@@ -1407,14 +1425,14 @@ async function createRun(options: RunOptions, schemas: JsonRecord, progress: Bat
     deferredUntil,
     activeChild: null,
   };
-  runLogFile = join(STATE_DIR, 'logs', `${state.runId}-controller.log`);
+  runLogFile = join(STATE_DIR, 'logs', `${activeState().runId}-controller.log`);
   await mkdir(dirname(runLogFile), { recursive: true });
   await saveState();
 }
 
 async function dryRun(options: RunOptions): Promise<void> {
-  const roster = await readJson<Roster>(join(REPO_ROOT, 'public/data.json')) as Roster;
-  const verification = await readJson<Record<string, string>>(join(REPO_ROOT, 'maintenance/verification.json')) as Record<string, string>;
+  const roster = await readJsonRequired<Roster>(join(REPO_ROOT, 'public/data.json'));
+  const verification = await readJsonRequired<Record<string, string>>(join(REPO_ROOT, 'maintenance/verification.json'));
   const previous = await readJson<JsonRecord>(STATE_FILE, null);
   const target = options.name ? resolveTargetLocally(options.name, roster) : null;
   if (target?.kind === 'unresolved') {
@@ -1438,36 +1456,36 @@ async function runController(options: RunOptions): Promise<void> {
   state = await readJson(STATE_FILE, null);
   // An exhausted/empty checkpoint cannot resume useful work. Start a fresh selection from the
   // requested CLI options instead; non-empty queues and active in-progress people still resume.
-  const resumable = state?.progress && state?.options && state.status !== 'complete' && Array.isArray(state.queue)
-    && (state.queue.length > 0 || state.current);
+  const resumable = state?.progress && state?.options && activeState().status !== 'complete' && Array.isArray(activeState().queue)
+    && (activeState().queue.length > 0 || activeState().current);
   if (resumable) {
     for (const field of ['limit', 'total', 'staleDays', 'all', 'name', 'codexReview']) {
-      if (options.provided?.has(field)) state.options[field] = (options as unknown as Record<string, unknown>)[field];
+      if (options.provided?.has(field)) activeState().options[field] = (options as unknown as Record<string, unknown>)[field];
     }
-    if (options.agent) state.options.agent = options.agent;
-    runLogFile = join(STATE_DIR, 'logs', `${state.runId}-controller.log`);
-    state.status = 'running';
+    if (options.agent) activeState().options.agent = options.agent;
+    runLogFile = join(STATE_DIR, 'logs', `${activeState().runId}-controller.log`);
+    activeState().status = 'running';
     await saveState();
-    await log(`Resuming ${state.runId} at ${state.index + 1}/${state.queue.length}.`);
+    await log(`Resuming ${activeState().runId} at ${activeState().index + 1}/${activeState().queue.length}.`);
   }
 
-  await assertPreflight(resumable ? state.options : { ...options, agent: options.agent || 'claude' });
+  await assertPreflight(resumable ? activeState().options : { ...options, agent: options.agent || 'claude' });
   const schemas = await ensureSchemas();
   if (!resumable) await createRun(options, schemas);
 
   while (true) {
-    if (state.queue.length === 0) {
-      state.status = 'complete';
-      state.completedAt = nowIso();
+    if (activeState().queue.length === 0) {
+      activeState().status = 'complete';
+      activeState().completedAt = nowIso();
       await saveState();
       await log('No entries are due for verification.');
       return;
     }
 
-    while (state.index < state.queue.length) {
+    while (activeState().index < activeState().queue.length) {
       if (stopRequested || await exists(STOP_FILE)) throw new StopRequestedError('stop requested');
-      if (!state.current) await startPerson(state.queue[state.index]);
-      await log(`Processing ${state.current.name} (${state.index + 1}/${state.queue.length}), stage ${state.current.stage}.`);
+      if (!activeState().current) await startPerson(activeState().queue[activeState().index]);
+      await log(`Processing ${activeState().current.name} (${activeState().index + 1}/${activeState().queue.length}), stage ${activeState().current.stage}.`);
       await processCurrent(schemas);
     }
     await runFullChecks();
@@ -1477,31 +1495,31 @@ async function runController(options: RunOptions): Promise<void> {
     if (commitStatus !== 'none') await pushBatch();
     await logBatchSummary();
 
-    const processedCount = (state.progress?.processedCount || 0) + state.queue.length;
-    const total = state.options.total ?? null;
-    if (!needsAnotherBatch(state.options) || (total !== null && processedCount >= total)) {
-      state.status = 'complete';
-      state.completedAt = nowIso();
+    const processedCount = (activeState().progress?.processedCount || 0) + activeState().queue.length;
+    const total = activeState().options.total ?? null;
+    if (!needsAnotherBatch(activeState().options) || (total !== null && processedCount >= total)) {
+      activeState().status = 'complete';
+      activeState().completedAt = nowIso();
       await saveState();
       await log(`Run complete: ${processedCount} entries processed.`);
       return;
     }
 
     const nextBatchSize = total === null
-      ? state.options.limit
-      : Math.min(state.options.limit, total - processedCount);
-    await log(`Starting batch ${(state.progress?.batchNumber || 1) + 1} (up to ${nextBatchSize} entries remaining in this run).`);
+      ? activeState().options.limit
+      : Math.min(activeState().options.limit, total - processedCount);
+    await log(`Starting batch ${(activeState().progress?.batchNumber || 1) + 1} (up to ${nextBatchSize} entries remaining in this run).`);
     await createRun({
-      ...state.options,
-      agent: state.options.agent,
+      ...activeState().options,
+      agent: activeState().options.agent,
     }, schemas, {
       processedCount,
       processedNames: [
-        ...(state.progress?.processedNames || []),
-        ...state.completed.map((entry: JsonRecord) => entry.finalName || entry.name),
-        ...state.skipped.map((entry: JsonRecord) => entry.name),
+        ...(activeState().progress?.processedNames || []),
+        ...activeState().completed.map((entry: JsonRecord) => entry.finalName || entry.name),
+        ...activeState().skipped.map((entry: JsonRecord) => entry.name),
       ],
-      batchNumber: (state.progress?.batchNumber || 1) + 1,
+      batchNumber: (activeState().progress?.batchNumber || 1) + 1,
     });
   }
 }
@@ -1572,7 +1590,7 @@ async function main() {
   } catch (error) {
     if (error instanceof StopRequestedError) {
       if (state) {
-        state.status = 'paused';
+        activeState().status = 'paused';
         await saveState();
       }
       await log('Paused. Run the script again to resume automatically.');
@@ -1580,8 +1598,8 @@ async function main() {
       return;
     }
     if (state) {
-      state.status = error instanceof BlockedError ? 'blocked' : 'failed';
-      state.error = compact(errorDetails(error), 10_000);
+      activeState().status = error instanceof BlockedError ? 'blocked' : 'failed';
+      activeState().error = compact(errorDetails(error), 10_000);
       await saveState();
     }
     throw error;

@@ -568,16 +568,24 @@ function onSubmit(e: SubmitEvent, entriesById: Map<string, RosterEntry> | null, 
   }
 }
 
+// Every id below is rendered unconditionally by this module's own shell, so a miss is a
+// programming error. Throwing names the offending id instead of failing later on `null.hidden`.
+function byId<T extends HTMLElement = HTMLElement>(id: string): T {
+  const element = document.getElementById(id);
+  if (!element) throw new Error(`submit.html is missing #${id}`);
+  return element as T;
+}
+
 function applyPurpose(purpose: string): void {
-  const requiredSection = document.getElementById('required-section');
-  const requiredHeading = document.getElementById('required-heading');
-  const requiredDescription = document.getElementById('required-description');
-  const bulkCriteria = document.getElementById('bulk-criteria');
-  const bulkLabel = document.getElementById('bulkInput-label');
-  const bulkInput = document.getElementById('bulkInput') as HTMLTextAreaElement;
-  const bulkHelp = document.getElementById('add-mode-details-help');
-  const nameInput = document.getElementById('name') as HTMLInputElement;
-  const profileUrlInput = document.getElementById('profileUrl') as HTMLInputElement;
+  const requiredSection = byId('required-section');
+  const requiredHeading = byId('required-heading');
+  const requiredDescription = byId('required-description');
+  const bulkCriteria = byId('bulk-criteria');
+  const bulkLabel = byId('bulkInput-label');
+  const bulkInput = byId<HTMLTextAreaElement>('bulkInput');
+  const bulkHelp = byId('add-mode-details-help');
+  const nameInput = byId<HTMLInputElement>('name');
+  const profileUrlInput = byId<HTMLInputElement>('profileUrl');
   const isAdd = purpose === 'add';
   requiredSection.classList.toggle('single-entry-details', isAdd);
   requiredSection.hidden = isAdd && !requiredSection.classList.contains('expanded');
@@ -598,9 +606,9 @@ function applyPurpose(purpose: string): void {
 }
 
 function initPurposeToggle() {
-  const toggle = document.getElementById('purpose-toggle');
-  const requiredSection = document.getElementById('required-section');
-  const detailsButton = document.getElementById('add-mode-details-toggle');
+  const toggle = byId('purpose-toggle');
+  const requiredSection = byId('required-section');
+  const detailsButton = byId('add-mode-details-toggle');
   toggle.addEventListener('change', (e) => {
     const target = e.target as HTMLInputElement;
     if (target.name === 'purpose') applyPurpose(target.value);
@@ -608,7 +616,7 @@ function initPurposeToggle() {
   detailsButton.addEventListener('click', () => {
     requiredSection.classList.add('expanded');
     requiredSection.hidden = false;
-    (document.getElementById('name') as HTMLInputElement).focus();
+    byId<HTMLInputElement>('name').focus();
   });
   applyPurpose(getPurpose());
 }

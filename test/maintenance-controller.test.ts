@@ -163,12 +163,20 @@ test('automated maintenance cannot alter directFields metadata', () => {
   assert.match(result.reason, /cannot change directFields/);
 });
 
+// proposalValidationError() returns null when a proposal is accepted; these tests all expect a
+// rejection, so surface "unexpectedly accepted" instead of a type error on assert.match.
+function rejection(error: string | null): string {
+  assert.ok(error, 'expected the proposal to be rejected, but it was accepted');
+  return error;
+}
+
 test('proposal validation rejects honors missing required provenance', () => {
   const error = proposalValidationError({
     name: 'Old Person', profileUrl: 'https://example.edu/old', lastUpdatedAt: '2026-01-01T00:00:00.000Z',
     university: 'Old University', city: 'Old City', department: 'History', track: 'Tenure-line', researchAreas: ['History'],
     honors: [{ name: 'Incomplete award', year: 2025, category: 'career_award' }],
   });
+  assert.ok(error, 'expected the proposal to be rejected');
   assert.match(error, /honor has invalid organization/);
 });
 
@@ -178,6 +186,7 @@ test('proposal validation rejects a website duplicated from the profile', () => 
     university: 'Old University', city: 'Old City', department: 'History', track: 'Tenure-line', researchAreas: ['History'],
     websiteUrl: 'https://example.edu/old',
   });
+  assert.ok(error, 'expected the proposal to be rejected');
   assert.match(error, /websiteUrl must differ/);
 });
 
@@ -186,10 +195,10 @@ test('proposal validation rejects unsupported tracks and malformed research area
     name: 'Old Person', profileUrl: 'https://example.edu/old', lastUpdatedAt: '2026-01-01T00:00:00.000Z',
     university: 'Old University', city: 'Old City', department: 'History', track: 'Visiting', researchAreas: ['History'],
   };
-  assert.match(proposalValidationError(proposal), /unsupported track/);
+  assert.match(rejection(proposalValidationError(proposal)), /unsupported track/);
   proposal.track = 'Tenure-line';
   proposal.researchAreas = [''];
-  assert.match(proposalValidationError(proposal), /valid researchAreas/);
+  assert.match(rejection(proposalValidationError(proposal)), /valid researchAreas/);
 });
 
 test('proposal validation rejects unknown roster and nested fields', () => {
@@ -198,10 +207,10 @@ test('proposal validation rejects unknown roster and nested fields', () => {
     university: 'Old University', city: 'Old City', department: 'History', track: 'Tenure-line', researchAreas: ['History'],
     unsupportedInstitution: 'Example University',
   };
-  assert.match(proposalValidationError(proposal), /unsupported field unsupportedInstitution/);
+  assert.match(rejection(proposalValidationError(proposal)), /unsupported field unsupportedInstitution/);
   delete proposal.unsupportedInstitution;
   proposal.otherDegrees = [{ degree: 'MA', institution: 'Example University', unsupportedMajor: 'History' }];
-  assert.match(proposalValidationError(proposal), /other degree has unsupported field unsupportedMajor/);
+  assert.match(rejection(proposalValidationError(proposal)), /other degree has unsupported field unsupportedMajor/);
 });
 
 test('proposal analysis preserves completed postdoctoral training fields', () => {
@@ -256,6 +265,7 @@ test('a rate-limit message wins over an incidental auth keyword elsewhere in the
 test('maintenance parses a future provider reset time', () => {
   const now = Date.parse('2026-08-28T20:00:00.000Z');
   const reset = parseRateLimitReset("You've hit your session limit · resets 6:10pm (America/New_York)", now);
+  assert.ok(reset, 'expected a parsed reset timestamp');
   assert.equal(new Date(reset).toISOString(), '2026-08-28T22:10:00.000Z');
 });
 

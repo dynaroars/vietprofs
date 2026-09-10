@@ -16,8 +16,17 @@ function nextId(): string {
   return id;
 }
 
-const updated: RosterEntry[] = roster.map((person) => person.id ? person : { id: nextId(), ...person });
-const added = updated.filter((_, index: number) => !roster[index].id).length;
+// New records lead with `id`, matching the rest of public/data.json. Written as an explicit
+// destructure rather than `{ id: nextId(), ...person }`, which relied on the spread *not*
+// overwriting the id it had just set. Entries that already have an id are passed through
+// untouched so their existing key order is preserved byte for byte.
+function withAssignedId(person: RosterEntry): RosterEntry {
+  const { id: _unset, ...rest } = person;
+  return { id: nextId(), ...rest };
+}
+
+const updated: RosterEntry[] = roster.map((person) => (person.id ? person : withAssignedId(person)));
+const added = updated.filter((_, index: number) => !roster[index]?.id).length;
 if (!apply) {
   if (added > 0) {
     throw new Error(`${added} roster entries need profile IDs. Run npm run assign-profile-ids -- --apply, then commit the assigned IDs.`);

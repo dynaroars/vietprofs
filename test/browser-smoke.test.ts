@@ -15,6 +15,20 @@ let browser: Browser;
 let context: BrowserContext;
 let baseUrl: string;
 
+type TextSource = { textContent(): Promise<string | null>; getAttribute(name: string): Promise<string | null> };
+
+async function textOf(locator: TextSource): Promise<string> {
+  const value = await locator.textContent();
+  assert.notEqual(value, null, 'expected the locator to match an element with text');
+  return value ?? '';
+}
+
+async function attrOf(locator: TextSource, name: string): Promise<string> {
+  const value = await locator.getAttribute(name);
+  assert.notEqual(value, null, `expected the matched element to have a ${name} attribute`);
+  return value ?? '';
+}
+
 async function waitForServer(url: string) {
   for (let attempt = 0; attempt < 40; attempt += 1) {
     try {
@@ -60,11 +74,11 @@ test('directory loads and searching changes the roster', async () => {
   assert.equal(await page.locator('.entry-name-row > .entry-updated').count(), initial);
   const personalSiteLinks = page.locator('.personal-site-link');
   assert.ok(await personalSiteLinks.count() > 0);
-  assert.match(await personalSiteLinks.first().getAttribute('href'), /^https?:\/\//);
+  assert.match(await attrOf(personalSiteLinks.first(), 'href'), /^https?:\/\//);
   assert.equal(await personalSiteLinks.first().getAttribute('title'), 'Personal or lab website');
   const updated = page.locator('.entry-updated').first();
-  assert.match(await updated.textContent(), /^Updated \d{1,2}\/\d{1,2}\/\d{2}$/);
-  assert.match(await updated.getAttribute('datetime'), /^\d{4}-\d{2}-\d{2}T.*Z$/);
+  assert.match(await textOf(updated), /^Updated \d{1,2}\/\d{1,2}\/\d{2}$/);
+  assert.match(await attrOf(updated, 'datetime'), /^\d{4}-\d{2}-\d{2}T.*Z$/);
   const multiCredentialRow = page.locator('.entry-details').filter({ hasText: ';' }).first();
   await multiCredentialRow.waitFor();
   assert.equal(await multiCredentialRow.locator('xpath=..').locator('.entry-details').count(), 1);
@@ -84,20 +98,20 @@ test('directory loads and searching changes the roster', async () => {
   await page.locator('#search').fill('ThanhVu');
   await page.waitForTimeout(250);
   assert.equal(await page.locator('.entry').count(), 1);
-  assert.match(await page.locator('.entry-meta').textContent(), /George Mason Univ\./);
-  assert.doesNotMatch(await page.locator('.entry-meta').textContent(), /George Mason University/);
-  assert.match(await page.locator('.entry-details').textContent(), /MS: Penn State, 2006; Undergrad: Penn State, 2003/);
+  assert.match(await textOf(page.locator('.entry-meta')), /George Mason Univ\./);
+  assert.doesNotMatch(await textOf(page.locator('.entry-meta')), /George Mason University/);
+  assert.match(await textOf(page.locator('.entry-details')), /MS: Penn State, 2006; Undergrad: Penn State, 2003/);
   await page.locator('#search').fill('Nguyen');
   await page.waitForTimeout(250);
   assert.ok((await page.locator('.entry').count()) > 0);
-  const resultCount = await page.locator('#result-count').textContent();
+  const resultCount = await textOf(page.locator('#result-count'));
   assert.match(resultCount, /people/);
   assert.match(resultCount, /in the World\.$/);
   assert.doesNotMatch(resultCount, /countr(?:y|ies)/);
   await page.locator('#search').fill('query plan');
   await page.locator('#search').press('Enter');
-  assert.match(await page.locator('#command-output').textContent(), /query plan: mode=roster/);
-  assert.match(await page.locator('#command-output').textContent(), /matches=\d+/);
+  assert.match(await textOf(page.locator('#command-output')), /query plan: mode=roster/);
+  assert.match(await textOf(page.locator('#command-output')), /matches=\d+/);
   await page.close();
 });
 
@@ -208,7 +222,7 @@ test('pinned searches and recently viewed profiles stay in browser storage', asy
   const shelf = page.locator('#browser-shelf');
   const pinned = shelf.locator('.browser-shelf-group').filter({ hasText: 'Pinned' }).locator('a');
   assert.equal(await pinned.count(), 1);
-  assert.match(await pinned.getAttribute('href'), /q=ThanhVu/);
+  assert.match(await attrOf(pinned, 'href'), /q=ThanhVu/);
   const clearPinned = shelf.locator('button[aria-label="Clear pinned searches"]');
   assert.equal(await clearPinned.count(), 1);
 
@@ -244,11 +258,11 @@ test('keyboard navigation, query plan, and terminal commands work without leavin
   assert.equal(await page.locator('#search').evaluate((element) => element === document.activeElement), true);
   await page.locator('#search').fill('whoami');
   await page.locator('#search').press('Enter');
-  assert.match(await page.locator('#command-output').textContent(), /community-maintained index/);
+  assert.match(await textOf(page.locator('#command-output')), /community-maintained index/);
   assert.equal(await page.locator('#search').inputValue(), '');
   await page.locator('#search').fill('query plan');
   await page.locator('#search').press('Enter');
-  assert.match(await page.locator('#command-output').textContent(), /query plan: .*matches=\d+/);
+  assert.match(await textOf(page.locator('#command-output')), /query plan: .*matches=\d+/);
 
   await page.locator('#search').fill('theme crt');
   await page.locator('#search').press('Enter');
@@ -406,7 +420,7 @@ test('every roster card exposes its official profile link', async () => {
   ))));
   const [actualUrls, expectedUrls] = await Promise.all([
     profileLinks.evaluateAll((links: HTMLAnchorElement[]) => links.map((link) => link.href).sort()),
-    page.evaluate(async () => (await (await fetch('/data.json')).json()).map((person: RosterEntry) => new URL(person.profileUrl).href).sort()),
+    page.evaluate(async () => (await (await fetch('/data.json')).json()).map((person: RosterEntry) => new URL(person.profileUrl ?? '').href).sort()),
   ]);
   assert.deepEqual(actualUrls, expectedUrls);
   await page.close();
@@ -440,7 +454,7 @@ test('local faculty portraits render and load', async () => {
   await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
   const portrait = page.locator('.entry-portrait:not(.entry-portrait-placeholder)').first();
   await portrait.waitFor();
-  assert.match(await portrait.getAttribute('src'), /\/portraits\/.*\.webp$/);
+  assert.match(await attrOf(portrait, 'src'), /\/portraits\/.*\.webp$/);
   assert.ok(await portrait.evaluate((image: HTMLImageElement) => image.complete && image.naturalWidth > 0));
   await page.close();
 });
@@ -450,7 +464,7 @@ test('entries without a portrait fall back to the graduation-cap placeholder', a
   await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
   const placeholder = page.locator('.entry-portrait-placeholder').first();
   await placeholder.waitFor();
-  assert.match(await placeholder.getAttribute('src'), /\/default-portrait\.svg$/);
+  assert.match(await attrOf(placeholder, 'src'), /\/default-portrait\.svg$/);
   assert.equal(await page.locator('.entry-portrait').count(), await page.locator('.entry').count());
   await page.close();
 });
@@ -472,7 +486,7 @@ test('filters and submit-form suggestions work', async () => {
   assert.equal(await page.locator('#name').inputValue(), 'Tan Minh Nguyen');
   assert.equal(await page.locator('#university').inputValue(), 'National University of Singapore');
   assert.equal(await page.locator('#submit-form').getAttribute('data-editing-id'), tan.id);
-  assert.match(await page.locator('#name-match-notice').textContent(), new RegExp(`Editing existing entry\\s+${tan.id}`));
+  assert.match(await textOf(page.locator('#name-match-notice')), new RegExp(`Editing existing entry\\s+${tan.id}`));
   assert.equal(await page.locator('#name-match-notice a').getAttribute('href'), `./people/${tan.id}.html`);
   await page.locator('#name').fill('Corrected Tan Minh Nguyen');
   assert.equal(await page.locator('#submit-form').getAttribute('data-editing-id'), tan.id);
@@ -604,7 +618,7 @@ test('profile pages honor dark mode through the shared stylesheet', async () => 
   assert.equal(await page.evaluate(() => getComputedStyle(document.body).backgroundColor), 'rgb(21, 24, 28)');
   assert.equal(await page.locator('.man-page').count(), 1);
   assert.equal(await page.locator('.man-section').filter({ hasText: 'SYNOPSIS' }).count(), 1);
-  assert.match(await page.locator('.record-id').textContent(), /^vp-\d+$/);
+  assert.match(await textOf(page.locator('.record-id')), /^vp-\d+$/);
   assert.equal(await page.locator('.raw-record').count(), 1);
   assert.equal(await page.locator('.profile-actions .submission-link').count(), 1);
   assert.equal(await page.locator('.name-heading .profile-actions').count(), 1);
