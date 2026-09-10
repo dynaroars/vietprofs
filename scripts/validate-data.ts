@@ -102,6 +102,10 @@ for (const [index, person] of roster.entries()) {
     if (typeof person[field] !== 'string' || !person[field].trim()) fail(rosterFile, `${label} has invalid ${field}`);
   }
   if (!/^vp-\d{4,}$/.test(person.id)) fail(rosterFile, `${label} has invalid id ${person.id}`);
+  // `id` leads every record so the raw view on a profile page and roster diffs stay consistent.
+  // Cheap to satisfy: JSON.stringify preserves insertion order, so anything that parses the
+  // roster and writes it back keeps this automatically.
+  if (Object.keys(person)[0] !== 'id') fail(rosterFile, `${label} (${person.id}) must list id as its first field`);
   validateTimestamp(rosterFile, person.lastUpdatedAt, label, 'lastUpdatedAt');
   if (!/^https?:\/\//.test(person.profileUrl)) fail(rosterFile, `${label} profileUrl must use HTTP(S)`);
   if (person.confirmed !== undefined && typeof person.confirmed !== 'boolean') fail(rosterFile, `${label} confirmed must be a boolean`);

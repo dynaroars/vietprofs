@@ -250,40 +250,38 @@ function renderStatsContent(data: StatsResponse) {
           ${renderTrafficChart(data.daily)}
         </section>
 
-        <div class="stats-columns-grid">
-          <section class="man-section">
-            <h2>TOP COUNTRIES (TODAY)</h2>
-            <div class="stats-table-wrapper">
-              <table class="stats-table">
-                <thead>
-                  <tr>
-                    <th>Country</th>
-                    <th class="num-col">Visits</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  ${(data.topCountries || []).slice(0, 10).map(c => {
-                    const maxCount = data.topCountries[0]?.count || 1;
-                    const pct = Math.round((c.count / maxCount) * 100);
-                    return `
-                      <tr>
-                        <td>
-                          <span class="country-cell">
-                            <span class="flag-icon" aria-hidden="true">${escapeHtml(c.flag)}</span>
-                            <span class="country-name">${escapeHtml(c.name)}</span>
-                          </span>
-                          <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: ${pct}%"></div></div>
-                        </td>
-                        <td class="num-col">${formatNumber(c.count)}</td>
-                      </tr>
-                    `;
-                  }).join('')}
-                </tbody>
-              </table>
-            </div>
-          </section>
+        <section class="man-section">
+          <h2>TOP COUNTRIES (TODAY)</h2>
+          <div class="stats-table-wrapper">
+            <table class="stats-table">
+              <thead>
+                <tr>
+                  <th>Country</th>
+                  <th class="num-col">Visits</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${(data.topCountries || []).slice(0, 10).map(c => {
+                  const maxCount = data.topCountries[0]?.count || 1;
+                  const pct = Math.round((c.count / maxCount) * 100);
+                  return `
+                    <tr>
+                      <td>
+                        <span class="country-cell">
+                          <span class="flag-icon" aria-hidden="true">${escapeHtml(c.flag)}</span>
+                          <span class="country-name">${escapeHtml(c.name)}</span>
+                        </span>
+                        <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: ${pct}%"></div></div>
+                      </td>
+                      <td class="num-col">${formatNumber(c.count)}</td>
+                    </tr>
+                  `;
+                }).join('')}
+              </tbody>
+            </table>
+          </div>
+        </section>
 
-        </div>
 
         <section class="man-section">
           <h2>MOST REQUESTED PAGES (TODAY)</h2>

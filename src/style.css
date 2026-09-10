@@ -3007,13 +3007,6 @@ a.entry-name:focus-visible {
   overflow: visible;
 }
 
-.stats-columns-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-
 .stats-table-wrapper {
   margin-top: 0.5rem;
   overflow-x: auto;
