@@ -3072,6 +3072,14 @@ a.entry-name:focus-visible {
   border-radius: 3px;
 }
 
+.stats-page-link {
+  color: inherit;
+}
+
+.stats-page-link:hover {
+  color: var(--accent-color, #2563eb);
+}
+
 .progress-bar-bg {
   width: 100%;
   height: 4px;

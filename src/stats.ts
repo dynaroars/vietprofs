@@ -85,6 +85,12 @@ function coverageLabel(actual: number, requested: number): string {
   return `${actual} of ${requested} days collected`;
 }
 
+function pageHref(path: string): string | null {
+  if (!path.startsWith('/') || path.startsWith('//')) return null;
+  const baseUrl = import.meta.env.BASE_URL;
+  return `${baseUrl}${path === '/' ? '' : path.slice(1)}`;
+}
+
 function renderHeader() {
   return `
     <header>
@@ -326,13 +332,22 @@ function renderStatsContent(data: StatsResponse) {
                 </tr>
               </thead>
               <tbody>
-                ${(data.topPages || []).slice(0, 8).map(p => `
+                ${(data.topPages || []).slice(0, 8).map(p => {
+                  const href = pageHref(p.path);
+                  const pageLabel = href
+                    ? `<a class="stats-page-link" href="${escapeHtml(href)}"><strong>${escapeHtml(p.label)}</strong></a>`
+                    : `<strong>${escapeHtml(p.label)}</strong>`;
+                  const pagePath = href
+                    ? `<a class="stats-page-link" href="${escapeHtml(href)}"><code class="path-code">${escapeHtml(p.path)}</code></a>`
+                    : `<code class="path-code">${escapeHtml(p.path)}</code>`;
+                  return `
                   <tr>
-                    <td><strong>${escapeHtml(p.label)}</strong></td>
-                    <td><code class="path-code">${escapeHtml(p.path)}</code></td>
+                    <td>${pageLabel}</td>
+                    <td>${pagePath}</td>
                     <td class="num-col">${formatNumber(p.count)}</td>
                   </tr>
-                `).join('')}
+                `;
+                }).join('')}
               </tbody>
             </table>
           </div>

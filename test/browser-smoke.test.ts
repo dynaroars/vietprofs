@@ -369,6 +369,10 @@ test('mobile pages avoid horizontal overflow and provide usable tap targets', as
 
   await page.goto(`${baseUrl}/stats.html`, { waitUntil: 'networkidle' });
   await assertNoOverflow();
+  const requestedPageLinks = page.locator('.stats-page-link');
+  if (await requestedPageLinks.count() > 0) {
+    assert.ok((await requestedPageLinks.first().getAttribute('href'))?.startsWith('/'));
+  }
 
   await page.goto(`${baseUrl}/people/vp-0242.html`, { waitUntil: 'networkidle' });
   await assertNoOverflow();
