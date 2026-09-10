@@ -45986,7 +45986,7 @@
     "id": "vp-1183",
     "name": "Hong-Linh Truong",
     "profileUrl": "https://users.aalto.fi/~truongh4/",
-    "lastUpdatedAt": "2026-09-05T23:59:00.000Z",
+    "lastUpdatedAt": "2026-09-09T18:37:36.000Z",
     "university": "Aalto University",
     "city": "Espoo",
     "country": "Finland",
@@ -46002,13 +46002,19 @@
     "phdYear": 2005,
     "phdInstitution": "TU Wien",
     "phdMajor": "Computer Science",
+    "portrait": "portraits/vp-1183-hong-linh-truong.webp",
+    "portraitSource": "https://users.aalto.fi/~truongh4/images/linh.jpg",
     "researchOverview": {
       "text": "Research develops techniques for distributed and large-scale software, data, and services systems, including ICT solutions for developing countries.",
       "sources": [
         "https://users.aalto.fi/~truongh4/"
       ],
       "verifiedAt": "2026-09-07T20:45:00.000Z"
-    }
+    },
+    "directFields": [
+      "portrait",
+      "portraitSource"
+    ]
   },
   {
     "id": "vp-1184",
@@ -54216,6 +54222,70 @@
       "Vietnamese American Literature",
       "Asian American Studies",
       "Southeast Asian Diasporic Art and Literature"
+    ]
+  },
+  {
+    "id": "vp-1500",
+    "name": "Khac-Hoang Ngo",
+    "vietnameseName": "Ngô Khắc Hoàng",
+    "profileUrl": "https://liu.se/en/employee/khang43",
+    "websiteUrl": "https://khachoang1412.github.io/",
+    "scholarUrl": "https://scholar.google.fr/citations?hl=en&user=RjcW6WwAAAAJ",
+    "lastUpdatedAt": "2026-09-09T18:40:07.000Z",
+    "university": "Linköping University",
+    "city": "Linköping",
+    "country": "Sweden",
+    "department": "Department of Electrical Engineering (Division of Communication Systems)",
+    "rank": "Assistant Professor",
+    "track": "Tenure-line",
+    "undergradInstitution": "University of Engineering and Technology, Vietnam National University, Hanoi",
+    "undergradYear": 2014,
+    "undergradMajor": "Electronics and Telecommunications",
+    "msInstitution": "CentraleSupélec, Paris-Saclay University",
+    "msYear": 2016,
+    "msMajor": "Wireless Communications",
+    "phdInstitution": "CentraleSupélec, Paris-Saclay University",
+    "phdYear": 2020,
+    "phdMajor": "Wireless Communications",
+    "postdocInstitution": "Chalmers University of Technology",
+    "postdocYear": 2024,
+    "researchAreas": [
+      "Wireless Communications",
+      "Information Theory",
+      "Machine Learning",
+      "Massive Random Access",
+      "MIMO"
+    ],
+    "honors": [
+      {
+        "name": "Golden Globe Award in Science and Technology for under-35 Vietnamese researchers",
+        "organization": "Vietnam Ministry of Science and Technology and Vietnam Youth Union",
+        "category": "major_award",
+        "year": 2024,
+        "source": "https://liu.se/en/employee/khang43"
+      }
+    ],
+    "portrait": "portraits/vp-1500-khac-hoang-ngo.webp",
+    "portraitSource": "https://khachoang1412.github.io/images/profile.jpg",
+    "directFields": [
+      "city",
+      "country",
+      "department",
+      "msInstitution",
+      "msYear",
+      "name",
+      "phdInstitution",
+      "phdYear",
+      "postdocInstitution",
+      "postdocYear",
+      "profileUrl",
+      "rank",
+      "researchAreas",
+      "track",
+      "undergradInstitution",
+      "undergradYear",
+      "university",
+      "websiteUrl"
     ]
   }
 ]

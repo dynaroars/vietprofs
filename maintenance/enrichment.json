@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "snapshotAt": "2026-09-06T15:00:11.510Z",
+  "snapshotAt": "2026-09-09T18:40:07.000Z",
   "ids": [
     "vp-0001",
     "vp-0002",
@@ -1487,7 +1487,8 @@
     "vp-1496",
     "vp-1497",
     "vp-1498",
-    "vp-1499"
+    "vp-1499",
+    "vp-1500"
   ],
   "batches": [
     {
@@ -3593,6 +3594,13 @@
       "status": "complete",
       "startedAt": "2026-09-07T22:18:53.712Z",
       "publishedAt": "2026-09-07T22:19:19.859Z"
+    },
+    {
+      "number": 77,
+      "ids": [
+        "vp-1500"
+      ],
+      "status": "pending"
     }
   ],
   "entries": {
@@ -86112,6 +86120,17 @@
       "evidence": [],
       "errors": [],
       "updatedAt": "2026-09-07T22:40:00.000Z"
+    },
+    "vp-1500": {
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://liu.se/en/employee/khang43",
+        "https://khachoang1412.github.io/"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-09T18:40:07.000Z"
     }
   },
   "generatedAt": "2026-09-07T05:40:00.000Z"

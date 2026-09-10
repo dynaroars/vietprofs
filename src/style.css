@@ -711,6 +711,23 @@ h1 {
   margin-left: 0;
 }
 
+.paper-reference {
+  align-self: center;
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+  white-space: nowrap;
+}
+
+.paper-reference .paper-link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.paper-reference .paper-link:hover {
+  color: var(--text-color);
+}
+
 .result-count {
   color: var(--text-muted);
   font-size: var(--text-sm);
@@ -750,7 +767,6 @@ h1 {
     gap: 0.35rem;
   }
 
-  .paper-link,
   .submission-link {
     padding: 0.35rem 0.7rem;
   }
@@ -2739,7 +2755,6 @@ a.entry-name:focus-visible {
     line-height: 1.35;
   }
 
-  .paper-link,
   .submission-link,
   .example-chip,
   .ranked-item,

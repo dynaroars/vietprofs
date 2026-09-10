@@ -141,13 +141,10 @@ function renderShell() {
           <a class="icon-link github-link" href="https://github.com/dynaroars/vietprofs" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository" title="GitHub repository and source code">
             <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
           </a>
-          <a class="icon-link paper-link" href="${import.meta.env.BASE_URL}vietprofs.pdf" target="_blank" rel="noopener noreferrer" aria-label="Read the paper" title="Read the paper (PDF)">
-            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 1.75C4 .783 4.783 0 5.75 0h4.5c.464 0 .91.184 1.237.513l2.5 2.5c.329.328.513.774.513 1.237v9.999c0 .967-.783 1.75-1.75 1.75H5.75A1.75 1.75 0 0 1 4 14.249V1.75Zm1.75-.25a.25.25 0 0 0-.25.25v12.499c0 .138.112.25.25.25h8.499a.25.25 0 0 0 .25-.25V4.5H11.75A1.75 1.75 0 0 1 10 2.75V1.5H5.75Zm5.75 0v1.25c0 .138.112.25.25.25h1.25L11.5 1.5ZM7 7a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5H7Zm0 3a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5H7Z"/></svg>
-          </a>
         </div>
       </div>
       <div class="subtitle-row">
-        <p class="site-subtitle"><span>vietprofs@world</span>:~$ An open directory of Vietnamese scholars at universities and research institutes worldwide</p>
+        <p class="site-subtitle"><span>vietprofs@world</span>:~$ A Public Directory of the Vietnamese Academic and Research Diaspora</p>
       </div>
     </header>
     <div class="controls">
@@ -173,7 +170,7 @@ function renderShell() {
           <p><strong>KEYBOARD</strong></p>
           <p><code>/</code> search · <code>j</code>/<code>k</code> move · <code>Enter</code> open · <code>f</code> favorite · <code>r</code> random · <code>Esc</code> clear</p>
           <p><strong>COMMANDS</strong></p>
-          <p><code>help</code> · <code>query plan</code> · <code>whoami</code> · <code>uname -a</code> · <code>fortune</code> · <code>/dev/random</code> · <code>theme crt</code></p>
+          <p><code>help</code> · <code>visitor stats</code> · <code>query plan</code> · <code>whoami</code> · <code>uname -a</code> · <code>fortune</code> · <code>/dev/random</code> · <code>theme crt</code></p>
         </div>
       </div>
       <select id="location-filter" class="field-select location-select" aria-label="Filter by location">
@@ -201,7 +198,7 @@ function renderShell() {
     <div class="result-row">
       <p class="result-count" id="result-count" aria-live="polite"></p>
       <div class="header-links">
-        <a class="submission-link" href="stats.html">Visitor stats</a>
+        <span class="paper-reference"><a class="paper-link" href="${import.meta.env.BASE_URL}vietprofs.pdf" target="_blank" rel="noopener noreferrer">Read the paper</a> (<a class="paper-link" href="https://arxiv.org/abs/2609.06091" target="_blank" rel="noopener noreferrer">arXiv</a>)</span>
         <a class="submission-link" href="submit.html">Add or update info</a>
       </div>
     </div>
@@ -782,6 +779,10 @@ async function init() {
       searchHelpPanel.hidden = false;
       searchHelpBtn.setAttribute('aria-expanded', 'true');
       completeCommand('help: query prefixes, shortcuts, and commands are listed above');
+      return true;
+    }
+    if (command === 'visitor stats') {
+      window.location.href = `${import.meta.env.BASE_URL}stats.html`;
       return true;
     }
     if (command === 'query plan') {
