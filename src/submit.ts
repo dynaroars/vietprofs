@@ -54,14 +54,10 @@ interface SubmissionDraft {
 
 function renderShell() {
   app.innerHTML = `
-    <header>
-      <a class="eyebrow" href="${import.meta.env.BASE_URL}"><img class="brand-logo" src="${import.meta.env.BASE_URL}vietprofs-bamboo-v.svg" alt="" width="32" height="32">VietProfs</a>
-      <span class="man-page-title">SUBMIT(1)</span>
-    </header>
 
     <main>
       <article class="man-page">
-        <p class="man-running-head"><span>SUBMIT(1)</span><span>VietProfs Submission Manual</span><span>SUBMIT(1)</span></p>
+        <p class="man-running-head"><span>SUBMIT(1)</span><span class="man-running-title"><a class="man-running-brand" href="${import.meta.env.BASE_URL}" aria-label="VietProfs directory"><img class="brand-logo" src="${import.meta.env.BASE_URL}vietprofs-bamboo-v.svg" alt="" width="20" height="20"></a><span class="man-running-label">VietProfs Submission Manual</span></span><span>SUBMIT(1)</span></p>
 
         <section class="man-section name-section">
           <h2>NAME</h2>

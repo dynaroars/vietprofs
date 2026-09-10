@@ -84,16 +84,16 @@ function pageHref(path: string): string | null {
   return `${baseUrl}${path === '/' ? '' : path.slice(1)}`;
 }
 
-function renderHeader() {
-  return `
-    <header>
-      <a class="eyebrow" href="${import.meta.env.BASE_URL}">
-        <img class="brand-logo" src="${import.meta.env.BASE_URL}vietprofs-bamboo-v.svg" alt="" width="32" height="32" />
-        VietProfs
-      </a>
-      <span class="man-page-title">STATS(1)</span>
-    </header>
-  `;
+// The brand mark lives in the running head rather than a separate page header, matching the
+// generated profile pages. Shared by the loading, error, and loaded states, which previously
+// repeated the same three-cell markup.
+function renderRunningHead() {
+  const base = import.meta.env.BASE_URL;
+  return `<p class="man-running-head">
+          <span>STATS(1)</span>
+          <span class="man-running-title"><a class="man-running-brand" href="${base}" aria-label="VietProfs directory"><img class="brand-logo" src="${base}vietprofs-bamboo-v.svg" alt="" width="20" height="20"></a><span class="man-running-label">VietProfs Visitor Statistics</span></span>
+          <span>STATS(1)</span>
+        </p>`;
 }
 
 function renderTrafficChart(daily: DailyStat[]): string {
@@ -187,11 +187,7 @@ function renderStatsContent(data: StatsResponse) {
   return `
     <main>
       <article class="man-page stats-man-page">
-        <p class="man-running-head">
-          <span>STATS(1)</span>
-          <span>VietProfs Visitor Statistics</span>
-          <span>STATS(1)</span>
-        </p>
+        ${renderRunningHead()}
 
         <section class="man-section name-section">
           <h2>NAME</h2>
@@ -352,11 +348,7 @@ function renderError(message: string) {
   return `
     <main>
       <article class="man-page">
-        <p class="man-running-head">
-          <span>STATS(1)</span>
-          <span>VietProfs Visitor Statistics</span>
-          <span>STATS(1)</span>
-        </p>
+        ${renderRunningHead()}
 
         <section class="man-section">
           <h2>VISITOR STATISTICS</h2>
@@ -379,11 +371,7 @@ function renderLoading() {
   return `
     <main>
       <article class="man-page">
-        <p class="man-running-head">
-          <span>STATS(1)</span>
-          <span>VietProfs Visitor Statistics</span>
-          <span>STATS(1)</span>
-        </p>
+        ${renderRunningHead()}
 
         <section class="man-section">
           <h2>VISITOR STATISTICS</h2>
@@ -438,14 +426,14 @@ async function statusMessage(res: Response): Promise<string> {
 }
 
 async function initStatsPage() {
-  app.innerHTML = renderHeader() + renderLoading();
+  app.innerHTML = renderLoading();
 
   try {
     const data = await fetchStats();
-    app.innerHTML = renderHeader() + renderStatsContent(data);
+    app.innerHTML = renderStatsContent(data);
   } catch (err: unknown) {
     const msg = err instanceof Error ? err.message : 'Temporarily unavailable';
-    app.innerHTML = renderHeader() + renderError(msg);
+    app.innerHTML = renderError(msg);
     document.getElementById('retry-btn')?.addEventListener('click', () => initStatsPage());
   }
 }

@@ -44,8 +44,8 @@ test('generated profile pages use the same stylesheet source as the directory', 
   assert.match(generator, /<a href="\$\{escapeHtml\(person\.researchOverview\.sources\[0\]\)\}"[^>]*>Automatically summarized<\/a>/);
   assert.doesNotMatch(generator, /Automatically summarized from/);
   assert.doesNotMatch(generator, /Report stale record/);
-  assert.match(sourceStylesheet, /\.profile-page \.man-section/);
-  assert.match(sourceStylesheet, /\.profile-page \.links a svg/);
+  assert.match(sourceStylesheet, /\.subpage \.man-section/);
+  assert.match(sourceStylesheet, /\.subpage \.links a svg/);
   assert.ok(
     generator.indexOf('class="profile-actions"') < generator.indexOf('class="native"'),
     'profile actions should appear alongside the person\'s name',

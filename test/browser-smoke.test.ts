@@ -390,7 +390,7 @@ test('mobile pages avoid horizontal overflow and provide usable tap targets', as
 
   await page.goto(`${baseUrl}/people/vp-0242.html`, { waitUntil: 'networkidle' });
   await assertNoOverflow();
-  await assertTapTargets('.eyebrow, .profile-actions a, .links a');
+  await assertTapTargets('.man-running-brand, .profile-actions a, .links a');
   await page.close();
 });
 
