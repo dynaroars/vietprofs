@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "snapshotAt": "2026-09-09T18:40:07.000Z",
+  "snapshotAt": "2026-09-10T05:04:27.000Z",
   "ids": [
     "vp-0001",
     "vp-0002",
@@ -1488,7 +1488,8 @@
     "vp-1497",
     "vp-1498",
     "vp-1499",
-    "vp-1500"
+    "vp-1500",
+    "vp-1501"
   ],
   "batches": [
     {
@@ -3599,6 +3600,13 @@
       "number": 77,
       "ids": [
         "vp-1500"
+      ],
+      "status": "pending"
+    },
+    {
+      "number": 78,
+      "ids": [
+        "vp-1501"
       ],
       "status": "pending"
     }
@@ -86131,6 +86139,17 @@
       "evidence": [],
       "errors": [],
       "updatedAt": "2026-09-09T18:40:07.000Z"
+    },
+    "vp-1501": {
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://www.ecu.edu.au/schools/science/staff/profiles/lecturers/dr-viet-huynh",
+        "https://scholar.google.com/citations?hl=en&user=5Jz6f6IAAAAJ"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-10T05:04:27.000Z"
     }
   },
   "generatedAt": "2026-09-07T05:40:00.000Z"
