@@ -1140,7 +1140,6 @@
     "vp-1147",
     "vp-1148",
     "vp-1149",
-    "vp-1150",
     "vp-1151",
     "vp-1152",
     "vp-1153",
@@ -1192,7 +1191,6 @@
     "vp-1201",
     "vp-1202",
     "vp-1203",
-    "vp-1204",
     "vp-1205",
     "vp-1206",
     "vp-1207",
@@ -1233,7 +1231,6 @@
     "vp-1242",
     "vp-1243",
     "vp-1244",
-    "vp-1245",
     "vp-1246",
     "vp-1247",
     "vp-1248",
@@ -1486,8 +1483,6 @@
     "vp-1495",
     "vp-1496",
     "vp-1497",
-    "vp-1498",
-    "vp-1499",
     "vp-1500",
     "vp-1501"
   ],
@@ -3091,7 +3086,6 @@
         "vp-1147",
         "vp-1148",
         "vp-1149",
-        "vp-1150",
         "vp-1151"
       ],
       "status": "complete",
@@ -3167,7 +3161,6 @@
         "vp-1201",
         "vp-1202",
         "vp-1203",
-        "vp-1204",
         "vp-1205",
         "vp-1206",
         "vp-1207",
@@ -3224,7 +3217,6 @@
         "vp-1242",
         "vp-1243",
         "vp-1244",
-        "vp-1245",
         "vp-1246",
         "vp-1247",
         "vp-1248",
@@ -3588,9 +3580,7 @@
         "vp-1494",
         "vp-1495",
         "vp-1496",
-        "vp-1497",
-        "vp-1498",
-        "vp-1499"
+        "vp-1497"
       ],
       "status": "complete",
       "startedAt": "2026-09-07T22:18:53.712Z",
@@ -72509,20 +72499,6 @@
       "updatedAt": "2026-09-07T22:21:28.482Z",
       "nextAction": "Second bounded retrieval attempt completed; no independently verified enrichment was added."
     },
-    "vp-1150": {
-      "overview": "no suitable evidence",
-      "work": "no suitable evidence",
-      "sourcesChecked": [
-        "https://www.seattleu.edu/library/faculty-and-staff/yen-tran.html"
-      ],
-      "evidence": [],
-      "errors": [
-        "https://www.seattleu.edu/library/faculty-and-staff/yen-tran.html: HTTP 404",
-        "Retry resolution 2026-09-07T22:21:28.483Z: https://www.seattleu.edu/library/faculty-and-staff/yen-tran.html: The operation was aborted due to timeout"
-      ],
-      "updatedAt": "2026-09-07T22:21:28.483Z",
-      "nextAction": "Second bounded retrieval attempt completed; no independently verified enrichment was added."
-    },
     "vp-1151": {
       "overview": "no suitable evidence",
       "work": "no suitable evidence",
@@ -74907,20 +74883,6 @@
       "updatedAt": "2026-09-07T22:21:33.537Z",
       "nextAction": "Second bounded retrieval attempt completed; no independently verified enrichment was added."
     },
-    "vp-1204": {
-      "overview": "no suitable evidence",
-      "work": "no suitable evidence",
-      "sourcesChecked": [
-        "https://researchers.mq.edu.au/en/persons/xuan-thinh-duong"
-      ],
-      "evidence": [],
-      "errors": [
-        "https://researchers.mq.edu.au/en/persons/xuan-thinh-duong: HTTP 404",
-        "Retry resolution 2026-09-07T22:21:33.537Z: https://researchers.mq.edu.au/en/persons/xuan-thinh-duong: The operation was aborted due to timeout"
-      ],
-      "updatedAt": "2026-09-07T22:21:33.537Z",
-      "nextAction": "Second bounded retrieval attempt completed; no independently verified enrichment was added."
-    },
     "vp-1205": {
       "overview": "no suitable evidence",
       "work": "no suitable evidence",
@@ -75868,20 +75830,6 @@
       "errors": [
         "https://www.i2bc.paris-saclay.fr/teams/calcium-signalling-and-microbial-infections/: HTTP 404",
         "Retry resolution 2026-09-07T22:21:38.607Z: https://www.i2bc.paris-saclay.fr/teams/calcium-signalling-and-microbial-infections/: The operation was aborted due to timeout"
-      ],
-      "updatedAt": "2026-09-07T22:21:38.607Z",
-      "nextAction": "Second bounded retrieval attempt completed; no independently verified enrichment was added."
-    },
-    "vp-1245": {
-      "overview": "no suitable evidence",
-      "work": "no suitable evidence",
-      "sourcesChecked": [
-        "https://www.depts.ttu.edu/ece/faculty/faculty.php?name=Hieu%20Pham%20Trung%20Nguyen"
-      ],
-      "evidence": [],
-      "errors": [
-        "https://www.depts.ttu.edu/ece/faculty/faculty.php?name=Hieu%20Pham%20Trung%20Nguyen: HTTP 404",
-        "Retry resolution 2026-09-07T22:21:38.607Z: https://www.depts.ttu.edu/ece/faculty/faculty.php?name=Hieu%20Pham%20Trung%20Nguyen: The operation was aborted due to timeout"
       ],
       "updatedAt": "2026-09-07T22:21:38.607Z",
       "nextAction": "Second bounded retrieval attempt completed; no independently verified enrichment was added."
@@ -86104,26 +86052,6 @@
       "work": "pending",
       "sourcesChecked": [
         "https://findanexpert.unimelb.edu.au/profile/13813-tess-do"
-      ],
-      "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-07T22:40:00.000Z"
-    },
-    "vp-1498": {
-      "overview": "pending",
-      "work": "pending",
-      "sourcesChecked": [
-        "https://www.usf.edu/arts-sciences/departments/english/people/q-le.aspx"
-      ],
-      "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-07T22:40:00.000Z"
-    },
-    "vp-1499": {
-      "overview": "pending",
-      "work": "pending",
-      "sourcesChecked": [
-        "https://aas.sfsu.edu/people/isabelle-thuy-pelaud"
       ],
       "evidence": [],
       "errors": [],

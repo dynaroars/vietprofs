@@ -12512,7 +12512,7 @@
     "name": "Quynh Nhu Le",
     "vietnameseName": "Lê Như Quỳnh",
     "profileUrl": "https://www.usf.edu/arts-sciences/departments/english/people/bios/quynh-nhu-le.aspx",
-    "lastUpdatedAt": "2026-08-29T14:35:00.370Z",
+    "lastUpdatedAt": "2026-09-11T11:49:28.051Z",
     "university": "University of South Florida",
     "city": "Tampa",
     "state": "Florida",
@@ -14007,7 +14007,7 @@
     "vietnameseName": "Isabelle Thuy Pelaud",
     "profileUrl": "https://aas.sfsu.edu/pelaud-isabelle-thuy",
     "linkedinUrl": "https://www.linkedin.com/in/pelaud-isabelle-43581a4/",
-    "lastUpdatedAt": "2026-09-07T20:43:10.000Z",
+    "lastUpdatedAt": "2026-09-11T11:49:28.051Z",
     "university": "San Francisco State University",
     "city": "San Francisco",
     "state": "California",
@@ -14060,7 +14060,8 @@
         "selectionMode": "recent",
         "verifiedAt": "2026-09-07T04:31:42.912Z"
       }
-    ]
+    ],
+    "phdMajor": "Ethnic Studies"
   },
   {
     "id": "vp-0222",
@@ -32288,8 +32289,8 @@
   },
   {
     "id": "vp-0706",
-    "name": "Hieu P. Nguyen",
-    "vietnameseName": "Nguyễn P. Hiếu",
+    "name": "Hieu Pham Trung Nguyen",
+    "vietnameseName": "Nguyễn Phạm Trung Hiếu",
     "university": "Texas Tech University",
     "city": "Lubbock",
     "state": "Texas",
@@ -32298,7 +32299,7 @@
     "rank": "Professor",
     "track": "Tenure-line",
     "profileUrl": "https://www.depts.ttu.edu/ece/faculty/hieu_nguyen/index.php",
-    "lastUpdatedAt": "2026-08-23T14:07:28.000Z",
+    "lastUpdatedAt": "2026-09-11T11:49:28.051Z",
     "researchAreas": [
       "Wide/Ultrawide Bandgap Semiconductors",
       "Nanostructured Photonics",
@@ -32308,7 +32309,19 @@
     "phdYear": 2012,
     "phdInstitution": "McGill University",
     "portrait": "portraits/728-hieu-p-nguyen-texas-tech-university.webp",
-    "portraitSource": "https://www.depts.ttu.edu/ece/faculty/hieu_nguyen/HieuPhoto.JPG"
+    "portraitSource": "https://www.depts.ttu.edu/ece/faculty/hieu_nguyen/HieuPhoto.JPG",
+    "scholarUrl": "https://scholar.google.com/citations?user=tQH_vQsAAAAJ&hl=en",
+    "undergradInstitution": "Ho Chi Minh City University of Technology",
+    "undergradYear": 2005,
+    "honors": [
+      {
+        "name": "NSF CAREER Award",
+        "year": 2020,
+        "category": "career_award",
+        "source": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1943896",
+        "organization": "National Science Foundation"
+      }
+    ]
   },
   {
     "id": "vp-0707",
@@ -44245,22 +44258,31 @@
   },
   {
     "id": "vp-1112",
-    "name": "Yen Tran",
+    "name": "Ngoc-Yen Tran",
     "profileUrl": "https://www.seattleu.edu/directory/profiles/yen-tran.php",
-    "lastUpdatedAt": "2026-09-04T23:32:49.000Z",
+    "lastUpdatedAt": "2026-09-11T11:49:28.051Z",
     "university": "Seattle University",
     "city": "Seattle",
     "state": "Washington",
     "country": "United States",
     "researchAreas": [
-      "Education",
-      "Social Work"
+      "Scholarly Communications",
+      "Information Literacy",
+      "Research Impact",
+      "Academic Librarianship"
     ],
     "track": "Academic staff",
-    "department": "Lemieux Library",
+    "department": "Lemieux Library and McGoldrick Learning Commons",
     "rank": "Associate Librarian",
     "portrait": "portraits/yen-tran-seattle-university.webp",
-    "portraitSource": "https://pxl-seattleuedu.terminalfour.net/prod01/channel_34/media/seattle-university/directory/faculty-amp-staff-directory/images/Yen-Tran.png"
+    "portraitSource": "https://pxl-seattleuedu.terminalfour.net/prod01/channel_34/media/seattle-university/directory/faculty-amp-staff-directory/images/Yen-Tran.png",
+    "vietnameseName": "Trần Ngọc Yến",
+    "otherDegrees": [
+      {
+        "degree": "MLIS",
+        "institution": "University of Washington"
+      }
+    ]
   },
   {
     "id": "vp-1113",
@@ -45161,32 +45183,6 @@
     "lastUpdatedAt": "2026-09-11T04:53:54.665Z"
   },
   {
-    "id": "vp-1150",
-    "name": "Ngoc-Yen Tran",
-    "vietnameseName": "Trần Ngọc Yến",
-    "university": "Seattle University",
-    "department": "Lemieux Library and McGoldrick Learning Commons",
-    "rank": "Associate Librarian",
-    "track": "Academic staff",
-    "city": "Seattle",
-    "state": "Washington",
-    "country": "United States",
-    "profileUrl": "https://www.seattleu.edu/library/faculty-and-staff/yen-tran.html",
-    "otherDegrees": [
-      {
-        "degree": "MLIS",
-        "institution": "University of Washington"
-      }
-    ],
-    "researchAreas": [
-      "Scholarly Communications",
-      "Information Literacy",
-      "Research Impact",
-      "Academic Librarianship"
-    ],
-    "lastUpdatedAt": "2026-09-11T04:53:54.665Z"
-  },
-  {
     "id": "vp-1151",
     "name": "Ann Hoang",
     "vietnameseName": "Hoàng Ann",
@@ -45862,18 +45858,19 @@
   },
   {
     "id": "vp-1174",
-    "name": "Xuan Duong",
+    "name": "Xuan Thinh Duong",
     "profileUrl": "https://researchers.mq.edu.au/en/persons/xuan-duong/",
     "portrait": "portraits/1174-xuan-duong-macquarie-university.webp",
     "portraitSource": "https://researchers.mq.edu.au/files-asset/131723450/Duong.jpg/",
-    "lastUpdatedAt": "2026-09-06T00:58:41.000Z",
+    "lastUpdatedAt": "2026-09-11T11:49:28.051Z",
     "university": "Macquarie University",
     "city": "Sydney",
     "country": "Australia",
     "researchAreas": [
       "Harmonic Analysis",
-      "Partial Differential Equations",
-      "Functional Analysis"
+      "Singular Integrals",
+      "Functional Calculus",
+      "Partial Differential Equations"
     ],
     "track": "Tenure-line",
     "department": "School of Mathematical and Physical Sciences",
@@ -45884,7 +45881,12 @@
         "https://researchers.mq.edu.au/en/persons/xuan-duong/"
       ],
       "verifiedAt": "2026-09-07T20:45:00.000Z"
-    }
+    },
+    "vietnameseName": "Dương Xuân Thịnh",
+    "state": "New South Wales",
+    "phdInstitution": "Macquarie University",
+    "phdYear": 1990,
+    "phdMajor": "Mathematics"
   },
   {
     "id": "vp-1175",
@@ -46697,29 +46699,6 @@
     "phdInstitution": "Tokyo University of Agriculture and Technology",
     "phdYear": 2011,
     "phdMajor": "Information Technology"
-  },
-  {
-    "id": "vp-1204",
-    "name": "Xuan Thinh Duong",
-    "vietnameseName": "Dương Xuân Thịnh",
-    "profileUrl": "https://researchers.mq.edu.au/en/persons/xuan-thinh-duong",
-    "lastUpdatedAt": "2026-09-11T04:58:07.179Z",
-    "university": "Macquarie University",
-    "city": "Sydney",
-    "state": "New South Wales",
-    "country": "Australia",
-    "department": "School of Mathematical and Physical Sciences",
-    "rank": "Professor",
-    "track": "Tenure-line",
-    "researchAreas": [
-      "Harmonic Analysis",
-      "Singular Integrals",
-      "Functional Calculus",
-      "Partial Differential Equations"
-    ],
-    "phdInstitution": "Macquarie University",
-    "phdYear": 1990,
-    "phdMajor": "Mathematics"
   },
   {
     "id": "vp-1205",
@@ -47764,42 +47743,6 @@
     "phdInstitution": "Université Pierre et Marie Curie",
     "phdYear": 1989,
     "phdMajor": "Microbiology",
-    "lastUpdatedAt": "2026-09-11T04:58:07.179Z"
-  },
-  {
-    "id": "vp-1245",
-    "name": "Hieu Pham Trung Nguyen",
-    "vietnameseName": "Nguyễn Phạm Trung Hiếu",
-    "university": "Texas Tech University",
-    "city": "Lubbock",
-    "state": "Texas",
-    "country": "United States",
-    "department": "Department of Electrical and Computer Engineering",
-    "rank": "Associate Professor",
-    "track": "Tenure-line",
-    "profileUrl": "https://www.depts.ttu.edu/ece/faculty/faculty.php?name=Hieu%20Pham%20Trung%20Nguyen",
-    "scholarUrl": "https://scholar.google.com/citations?user=Y4hJ6d0AAAAJ&hl=en",
-    "researchAreas": [
-      "Wide Bandgap Semiconductors",
-      "Optoelectronics",
-      "Nanowire LEDs",
-      "Neuromorphic Computing",
-      "Power Electronics"
-    ],
-    "undergradInstitution": "Ho Chi Minh City University of Technology",
-    "undergradYear": 2005,
-    "phdInstitution": "McGill University",
-    "phdYear": 2012,
-    "phdMajor": "Electrical and Computer Engineering",
-    "honors": [
-      {
-        "name": "NSF CAREER Award",
-        "year": 2020,
-        "category": "career_award",
-        "source": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1943896",
-        "organization": "National Science Foundation"
-      }
-    ],
     "lastUpdatedAt": "2026-09-11T04:58:07.179Z"
   },
   {
@@ -54300,50 +54243,6 @@
       "Vietnamese Diasporic Writing",
       "Indochina Colonial History",
       "Cultural Memory"
-    ]
-  },
-  {
-    "id": "vp-1498",
-    "name": "Quynh-Nhu Le",
-    "vietnameseName": "Quỳnh-Như Lê",
-    "profileUrl": "https://www.usf.edu/arts-sciences/departments/english/people/q-le.aspx",
-    "lastUpdatedAt": "2026-09-11T04:58:07.179Z",
-    "university": "University of South Florida",
-    "city": "Tampa",
-    "state": "FL",
-    "country": "United States",
-    "department": "Department of English",
-    "rank": "Associate Professor",
-    "track": "Tenure-line",
-    "phdInstitution": "University of California, Santa Barbara",
-    "phdMajor": "English Literature",
-    "undergradInstitution": "University of Colorado Boulder",
-    "researchAreas": [
-      "Critical Ethnic Studies",
-      "Critical Refugee Studies",
-      "Asian American Literature",
-      "Settler Colonial Studies"
-    ]
-  },
-  {
-    "id": "vp-1499",
-    "name": "Isabelle Pelaud",
-    "vietnameseName": "Isabelle Thụy Pelaud",
-    "profileUrl": "https://aas.sfsu.edu/people/isabelle-thuy-pelaud",
-    "lastUpdatedAt": "2026-09-11T04:58:07.179Z",
-    "university": "San Francisco State University",
-    "city": "San Francisco",
-    "state": "CA",
-    "country": "United States",
-    "department": "Department of Asian American Studies",
-    "rank": "Professor",
-    "track": "Tenure-line",
-    "phdInstitution": "University of California, Berkeley",
-    "phdMajor": "Ethnic Studies",
-    "researchAreas": [
-      "Vietnamese American Literature",
-      "Asian American Studies",
-      "Southeast Asian Diasporic Art and Literature"
     ]
   },
   {
