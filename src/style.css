@@ -759,37 +759,10 @@ h1 {
   padding-right: 1.75rem;
 }
 
-/* Inline icon group inside .entry-name-row (profile links, edit, etc.) */
-.entry-icons {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.15rem;
-}
-
-.entry-icons .icon-link {
-  width: 1.6rem;
-  height: 1.6rem;
-}
-
-.entry-icons .icon-link svg {
-  width: 0.95rem;
-  height: 0.95rem;
-}
-
 .entry-name {
   color: var(--text-primary);
   font-weight: 600;
   text-decoration: none;
-}
-
-/* Topic/interest tags — interactive variant of .tag */
-.tag-topic {
-  cursor: pointer;
-}
-
-.tag-topic:hover {
-  background: var(--tag-text);
-  color: var(--bg-color);
 }
 
 .entry-vietnamese-name {
