@@ -37,6 +37,7 @@ import { clearPinnedSearches, clearRecentProfiles, loadFavorites, loadPinnedSear
 import { openRosterShell } from './roster-shell.ts';
 import { locationForQuery } from './filter-state.ts';
 import { renderFunFacts, renderGrowthChart, type GrowthMetricKey } from './insights.ts';
+import { normalizeText, parseKeywordQuery as parseKeywordQueryShared } from './search-kit.ts';
 
 const app = document.getElementById('app');
 
@@ -123,12 +124,8 @@ const KEYWORD_ALIASES: Record<string, string> = {
 };
 
 function parseKeywordQuery(raw: string): { scope: string; query: string } | null {
-  const match = raw.match(/^\s*([^:]{1,24}?)\s*:\s*(.*)$/s);
-  if (!match) return null;
-  const key = match[1].toLowerCase().replace(/[^a-z0-9]/g, '');
-  const scope = KEYWORD_ALIASES[key];
-  if (!scope) return null;
-  return { scope, query: match[2] };
+  const parsed = parseKeywordQueryShared(raw, (key) => KEYWORD_ALIASES[key]);
+  return parsed ? { scope: parsed.key, query: parsed.query } : null;
 }
 
 function renderShell() {
@@ -846,14 +843,13 @@ async function init() {
       hideSuggestions();
       return;
     }
-    const normalized = (value: string) => value.toLocaleLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
     const source = keywordValues ?? suggestionValues;
-    const sourceQuery = normalized(rawQuery);
+    const sourceQuery = normalizeText(rawQuery);
     const matches = source
-      .filter((value) => normalized(value).includes(sourceQuery))
+      .filter((value) => normalizeText(value).includes(sourceQuery))
       .sort((a, b) => {
-        const aStarts = normalized(a).startsWith(sourceQuery);
-        const bStarts = normalized(b).startsWith(sourceQuery);
+        const aStarts = normalizeText(a).startsWith(sourceQuery);
+        const bStarts = normalizeText(b).startsWith(sourceQuery);
         return Number(bStarts) - Number(aStarts) || a.localeCompare(b);
       })
       .slice(0, 8);
