@@ -584,6 +584,7 @@ const FIELD_OVERRIDES = new Map([
   ['Département de chirurgie, Faculté de médecine et des sciences de la santé|Université de Sherbrooke', 'Health Sciences'],
   ['Center for Oncological Research (CORE) & Antwerp University Hospital (UZA)|University of Antwerp', 'Health Sciences'],
   ['Department of Virology II|National Institute of Infectious Diseases', 'Health Sciences'],
+  ['Department of Virology II|Japan Institute for Health Security (JIHS)', 'Health Sciences'],
   ['Department of Medical and Surgical Gynecology, Mayo Clinic Florida|Mayo Clinic Alix School of Medicine', 'Health Sciences'],
   ['Institute for Infocomm Research (I2R)|Agency for Science, Technology and Research', 'Computer & Information Sciences'],
   ['Department of Physiology, Cochin Hospital|Université Paris Cité', 'Health Sciences'],
