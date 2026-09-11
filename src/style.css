@@ -17,6 +17,8 @@
   --danger-hover: #8f1d14;
   --bamboo-green: #2e9e64;
   --bamboo-green-hover: #1d7a4c;
+  --accent-color: var(--bamboo-green);
+  --accent-dim: color-mix(in srgb, var(--bamboo-green) 55%, var(--card-bg));
 
   --font-heading: 'Outfit', sans-serif;
   --font-body: 'Inter', sans-serif;
@@ -272,9 +274,8 @@ h1 {
   width: 100%;
   overflow: hidden;
   border: 1px solid var(--border-color);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   background: var(--card-bg);
-  box-shadow: 0 6px 18px rgb(0 0 0 / 12%);
 }
 
 .search-suggestion-panel[hidden] {
@@ -316,7 +317,7 @@ h1 {
   min-height: 38px;
   padding: 0.35rem 0.65rem;
   border: 1px solid var(--border-color);
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   background: var(--tag-bg);
   color: var(--text-secondary);
   font: 600 var(--text-xs) var(--font-body);
@@ -368,7 +369,7 @@ h1 {
 
 .browser-shelf-chip {
   border: 1px solid var(--border-color);
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   color: var(--text-secondary);
   font-size: var(--text-xs);
   padding: 0.15rem 0.55rem;
@@ -391,7 +392,7 @@ h1 {
   color: var(--tag-text);
   border: none;
   padding: 0.2rem 0.65rem;
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   font-family: var(--font-body);
   font-size: var(--text-xs);
   cursor: pointer;
@@ -415,7 +416,7 @@ h1 {
   min-width: 0;
   padding: 0.6rem 12.5rem 0.6rem 0.9rem;
   border: 0;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   background: transparent;
   color: var(--text-primary);
   font-family: var(--font-mono);
@@ -429,7 +430,7 @@ h1 {
   width: 100%;
   min-width: 0;
   border: 1px solid var(--border-color);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   background: var(--card-bg);
 }
 
@@ -446,7 +447,7 @@ h1 {
   margin-left: 0.45rem;
   padding: 0.28rem 0.55rem;
   border: 0;
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   background: var(--tag-bg);
   color: var(--tag-text);
   font-family: var(--font-body);
@@ -523,11 +524,10 @@ h1 {
   width: min(22rem, 90vw);
   padding: 0.9rem 1rem;
   border: 1px solid var(--border-color);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   background: var(--card-bg);
   color: var(--text-secondary);
   font-size: var(--text-sm);
-  box-shadow: 0 6px 18px rgb(0 0 0 / 12%);
 }
 
 .search-help-panel[hidden] {
@@ -550,7 +550,7 @@ h1 {
   background: var(--tag-bg);
   color: var(--text-primary);
   padding: 0.05rem 0.3rem;
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
   font-size: 0.85em;
 }
 
@@ -580,7 +580,7 @@ h1 {
   min-width: 0;
   padding: 0.55rem 0.65rem;
   border: 1px solid var(--border-color);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   background: var(--card-bg);
   color: var(--text-primary);
   font-family: var(--font-body);
@@ -701,7 +701,7 @@ h1 {
   display: inline-flex;
   align-items: center;
   padding: 0.25rem 0.65rem;
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   font-size: var(--text-xs);
   font-weight: 600;
   text-decoration: none;
@@ -733,7 +733,7 @@ h1 {
   position: relative;
   padding: 0.9rem 0.75rem;
   box-shadow: 0 0 0 0.5px var(--border-color);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
 }
 
 .entry-with-portrait {
@@ -745,7 +745,7 @@ h1 {
 .entry-portrait {
   width: 64px;
   height: 64px;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   object-fit: cover;
   object-position: center top;
 }
@@ -926,7 +926,7 @@ a.entry-name:focus-visible {
   color: var(--tag-text);
   font-size: var(--text-xs);
   padding: 0.15rem 0.55rem;
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   white-space: nowrap;
   border: 1px solid transparent;
   font-family: var(--font-body);
@@ -1302,7 +1302,6 @@ a.entry-name:focus-visible {
   background-color: var(--bg-surface);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
 .insights-section-header {
@@ -1321,9 +1320,9 @@ a.entry-name:focus-visible {
   font-weight: 600;
   padding: 0.2rem 0.6rem;
   border-radius: var(--radius-full);
-  background-color: color-mix(in srgb, var(--focus-ring) 12%, transparent);
-  color: var(--focus-ring);
-  border: 1px solid color-mix(in srgb, var(--focus-ring) 28%, transparent);
+  background-color: color-mix(in srgb, var(--accent-color) 12%, transparent);
+  color: var(--accent-color);
+  border: 1px solid color-mix(in srgb, var(--accent-color) 28%, transparent);
 }
 
 .insights-main-heading {
@@ -1377,7 +1376,7 @@ a.entry-name:focus-visible {
   align-items: center;
   justify-content: center;
   border: 1px solid var(--border-color);
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
   background: var(--card-bg);
   color: var(--text-primary);
   font-family: var(--font-body);
@@ -1387,7 +1386,7 @@ a.entry-name:focus-visible {
 }
 
 .state-tile:hover {
-  border-color: var(--focus-ring);
+  border-color: var(--accent-color);
 }
 
 .state-tile.heat-0 {
@@ -1395,20 +1394,20 @@ a.entry-name:focus-visible {
 }
 
 .state-tile.heat-1 {
-  background: color-mix(in srgb, var(--focus-ring) 15%, var(--card-bg));
+  background: color-mix(in srgb, var(--accent-color) 15%, var(--card-bg));
 }
 
 .state-tile.heat-2 {
-  background: color-mix(in srgb, var(--focus-ring) 35%, var(--card-bg));
+  background: color-mix(in srgb, var(--accent-color) 35%, var(--card-bg));
 }
 
 .state-tile.heat-3 {
-  background: color-mix(in srgb, var(--focus-ring) 60%, var(--card-bg));
+  background: color-mix(in srgb, var(--accent-color) 60%, var(--card-bg));
   color: #fff;
 }
 
 .state-tile.heat-4 {
-  background: var(--focus-ring);
+  background: var(--accent-color);
   color: #fff;
 }
 
@@ -1451,7 +1450,7 @@ a.entry-name:focus-visible {
   padding: 0.25rem 0.65rem;
   background: var(--bg-hover);
   border: 1px solid var(--border-color);
-  border-radius: 9999px;
+  border-radius: var(--radius-full);
   font-size: var(--text-xs);
   font-weight: 600;
   color: var(--text-secondary);
@@ -1462,9 +1461,8 @@ a.entry-name:focus-visible {
   width: 100%;
   background: var(--card-bg);
   border: 1px solid var(--border-color);
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   padding: 0.75rem;
-  box-shadow: var(--shadow-sm);
   overflow: hidden;
 }
 
@@ -1563,9 +1561,9 @@ a.entry-name:focus-visible {
 .world-map-country:hover,
 .world-map-country:focus-visible,
 .world-map-country.is-hovered {
-  stroke: var(--focus-ring, #3b82f6);
+  stroke: var(--accent-color);
   stroke-width: 1.5;
-  filter: brightness(1.25) drop-shadow(0 0 6px rgba(59, 130, 246, 0.5));
+  filter: brightness(1.25);
 }
 
 .world-map-country.heat-0:hover,
@@ -1586,7 +1584,6 @@ a.entry-name:focus-visible {
   fill: #1e293b;
   stroke: #475569;
   stroke-width: 1.2;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
 }
 
 .world-map-pin.heat-1 .pin-badge-bg {
@@ -1662,7 +1659,6 @@ a.entry-name:focus-visible {
 .world-map-pin:focus-visible,
 .world-map-pin.is-hovered {
   transform: scale(1.22);
-  filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.8));
 }
 
 .world-map-pin.is-origin-pin .origin-pin-halo {
@@ -1689,15 +1685,13 @@ a.entry-name:focus-visible {
   z-index: 50;
   background: var(--card-bg);
   border: 1px solid var(--border-color);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   padding: 0.6rem 0.85rem;
-  box-shadow: var(--shadow-lg, 0 10px 25px -5px rgba(0, 0, 0, 0.3));
   font-family: var(--font-body);
   font-size: var(--text-xs);
   color: var(--text-primary);
   max-width: 260px;
   transition: opacity 0.15s ease, transform 0.1s ease;
-  backdrop-filter: blur(8px);
 }
 
 .tooltip-header {
@@ -1734,7 +1728,7 @@ a.entry-name:focus-visible {
 .tooltip-action {
   margin-top: 0.4rem;
   font-size: 0.72rem;
-  color: var(--link-color, #3b82f6);
+  color: var(--accent-color);
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -1775,7 +1769,7 @@ a.entry-name:focus-visible {
   padding: 0.2rem 0.45rem;
   background: var(--card-bg);
   border: 1px solid var(--border-color);
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
   font-size: var(--text-xs);
 }
 
@@ -1839,7 +1833,7 @@ a.entry-name:focus-visible {
   padding: 0.35rem 0.65rem;
   background: var(--card-bg);
   border: 1px solid var(--border-color);
-  border-radius: 9999px;
+  border-radius: var(--radius-full);
   color: var(--text-primary);
   font-family: var(--font-body);
   font-size: var(--text-xs);
@@ -1850,9 +1844,7 @@ a.entry-name:focus-visible {
 
 .world-map-chip:hover,
 .world-map-chip.is-hovered {
-  border-color: var(--focus-ring);
-  transform: translateY(-1px);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  border-color: var(--accent-color);
 }
 
 .world-map-chip .chip-flag {
@@ -1866,7 +1858,7 @@ a.entry-name:focus-visible {
 
 .world-map-chip .chip-count {
   font-weight: 700;
-  color: var(--focus-ring);
+  color: var(--accent-color);
 }
 
 .world-map-chip .chip-share {
@@ -1881,7 +1873,7 @@ a.entry-name:focus-visible {
   gap: 0.5rem;
   background: var(--card-bg);
   border: 1px solid var(--border-color);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   padding: 1rem;
 }
 
@@ -1900,7 +1892,7 @@ a.entry-name:focus-visible {
 
 .flow-dest {
   font-weight: 600;
-  color: var(--focus-ring);
+  color: var(--accent-color);
 }
 
 /* Timeline / Decades Bar Chart */
@@ -1910,7 +1902,7 @@ a.entry-name:focus-visible {
   gap: 0.5rem;
   background: var(--card-bg);
   border: 1px solid var(--border-color);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   padding: 1rem;
 }
 
@@ -1933,14 +1925,14 @@ a.entry-name:focus-visible {
   flex: 1;
   height: 1.1rem;
   background: var(--tag-bg);
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
   overflow: hidden;
 }
 
 .chart-bar {
   height: 100%;
-  background: color-mix(in srgb, var(--focus-ring) 75%, var(--card-bg));
-  border-radius: 4px;
+  background: color-mix(in srgb, var(--accent-color) 75%, var(--card-bg));
+  border-radius: var(--radius-sm);
   min-width: 3px;
   transition: width 0.3s ease;
 }
@@ -1968,7 +1960,7 @@ a.entry-name:focus-visible {
 .insights-card {
   background: var(--card-bg);
   border: 1px solid var(--border-color);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -1987,7 +1979,7 @@ a.entry-name:focus-visible {
   width: 100%;
   background: none;
   border: 1px solid transparent;
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   padding: 0.35rem 0.45rem;
   text-align: left;
   cursor: pointer;
@@ -2035,14 +2027,14 @@ a.entry-name:focus-visible {
   height: 4px;
   width: 100%;
   background: var(--tag-bg);
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   overflow: hidden;
 }
 
 .ranked-bar {
   height: 100%;
-  background: var(--focus-ring);
-  border-radius: 999px;
+  background: var(--accent-color);
+  border-radius: var(--radius-full);
   transition: width 0.3s ease;
 }
 
@@ -2060,7 +2052,7 @@ a.entry-name:focus-visible {
   gap: 0.45rem;
   padding: 0.4rem 0.75rem;
   border: 1px solid var(--border-color);
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   background: var(--card-bg);
   color: var(--text-secondary);
   font-family: var(--font-body);
@@ -2091,7 +2083,7 @@ a.entry-name:focus-visible {
   display: inline-block;
   font-size: 0.7rem;
   padding: 0.05rem 0.35rem;
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   background: var(--tag-bg);
   color: var(--bamboo-green);
   font-weight: 700;
@@ -2101,7 +2093,7 @@ a.entry-name:focus-visible {
   position: relative;
   background: var(--card-bg);
   border: 1px solid var(--border-color);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   padding: 0.75rem 1rem;
 }
 
@@ -2112,13 +2104,13 @@ a.entry-name:focus-visible {
 }
 
 .growth-area {
-  fill: color-mix(in srgb, var(--focus-ring) 12%, transparent);
+  fill: color-mix(in srgb, var(--accent-color) 12%, transparent);
   stroke: none;
 }
 
 .growth-line {
   fill: none;
-  stroke: var(--focus-ring);
+  stroke: var(--accent-color);
   stroke-width: 2;
   stroke-linejoin: round;
   stroke-linecap: round;
@@ -2126,7 +2118,7 @@ a.entry-name:focus-visible {
 
 .growth-dot {
   fill: var(--card-bg);
-  stroke: var(--focus-ring);
+  stroke: var(--accent-color);
   stroke-width: 1.5;
 }
 
@@ -2145,7 +2137,7 @@ a.entry-name:focus-visible {
   font-size: var(--text-xs);
   font-weight: 600;
   padding: 0.25rem 0.55rem;
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   white-space: nowrap;
   pointer-events: none;
   z-index: 1;
@@ -2174,13 +2166,12 @@ a.entry-name:focus-visible {
   background: var(--card-bg);
   color: var(--text-primary);
   border: 1px solid var(--border-color);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   z-index: 100;
-  transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
 }
 
 .back-to-top[hidden] {
@@ -2189,10 +2180,8 @@ a.entry-name:focus-visible {
 
 .back-to-top:hover {
   background: var(--hover-bg);
-  transform: translateY(-2px);
-  border-color: var(--focus-ring);
-  color: var(--focus-ring);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  border-color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .back-to-top svg {
@@ -2246,7 +2235,7 @@ a.entry-name:focus-visible {
   gap: 1rem;
   padding: 1.1rem 1.15rem 1.2rem;
   border: 1.5px solid var(--border-color);
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   background: var(--card-bg);
 }
 
@@ -2397,7 +2386,7 @@ a.entry-name:focus-visible {
 }
 
 .form-help.notice {
-  color: var(--focus-ring);
+  color: var(--accent-color);
   font-weight: 500;
 }
 
@@ -2417,14 +2406,14 @@ a.entry-name:focus-visible {
   width: 96px;
   height: 96px;
   border: 1px solid var(--border-color);
-  border-radius: 10px;
+  border-radius: var(--radius-md);
   object-fit: cover;
 }
 
 .correction-suggestions {
   overflow: hidden;
   border: 1px solid var(--border-color);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   background: var(--card-bg);
 }
 
@@ -2482,7 +2471,7 @@ a.entry-name:focus-visible {
 .form-section textarea {
   padding: 0.6rem 0.9rem;
   border: 1px solid var(--border-color);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   background: var(--card-bg);
   color: var(--text-primary);
   font-family: var(--font-body);
@@ -2534,7 +2523,7 @@ a.entry-name:focus-visible {
   align-self: flex-start;
   padding: 0.7rem 1.4rem;
   border: none;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   background: var(--bamboo-green);
   color: #ffffff;
   font-family: var(--font-body);
@@ -2732,7 +2721,7 @@ a.entry-name:focus-visible {
   font-family: var(--font-mono);
   font-size: var(--text-xs, 0.75rem);
   padding: 0.2rem 0.5rem;
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
   background: #f59e0b;
   color: #000;
   font-weight: 600;
