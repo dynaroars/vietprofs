@@ -737,7 +737,6 @@ h1 {
   display: grid;
   grid-template-columns: 64px minmax(0, 1fr);
   gap: 0.75rem;
-  align-items: center;
 }
 
 .entry-portrait {
@@ -757,7 +756,6 @@ h1 {
   flex-wrap: wrap;
   align-items: baseline;
   gap: 0.25rem 0.6rem;
-  padding-right: 1.75rem;
 }
 
 .entry-name {
@@ -857,6 +855,7 @@ a.entry-name:focus-visible {
   flex-wrap: wrap;
   gap: 0.35rem;
   margin-top: 0.4rem;
+  padding-right: 1.75rem;
 }
 
 .entry-updated {
@@ -879,7 +878,7 @@ a.entry-name:focus-visible {
 
 .favorite-toggle {
   position: absolute;
-  top: 0.65rem;
+  bottom: 0.65rem;
   right: 0.65rem;
   display: inline-flex;
   align-items: center;
