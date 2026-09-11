@@ -737,6 +737,7 @@ h1 {
   display: grid;
   grid-template-columns: 64px minmax(0, 1fr);
   gap: 0.75rem;
+  align-items: center;
 }
 
 .entry-portrait {
