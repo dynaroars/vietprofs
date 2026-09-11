@@ -34,6 +34,9 @@
   --text-base: 1rem;
   --text-lg: 1.25rem;
   --text-3xl: 2.25rem;
+
+  --star-inset: 0.65rem;
+  --star-gutter: 1.75rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -856,7 +859,7 @@ a.entry-name:focus-visible {
   flex-wrap: wrap;
   gap: 0.35rem;
   margin-top: 0.4rem;
-  padding-right: 1.75rem;
+  padding-right: var(--star-gutter);
 }
 
 .entry-updated {
@@ -879,8 +882,8 @@ a.entry-name:focus-visible {
 
 .favorite-toggle {
   position: absolute;
-  bottom: 0.65rem;
-  right: 0.65rem;
+  bottom: var(--star-inset);
+  right: var(--star-inset);
   display: inline-flex;
   align-items: center;
   justify-content: center;
