@@ -5,29 +5,43 @@
     "university": "Loyola Marymount University",
     "profileUrl": "https://scholars.lmu.edu/en/persons/julie-ngo/",
     "batch": 1,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 1
+    "status": "fetched",
+    "note": "verified portrait fetched and converted to webp",
+    "recoveryBatch": 1,
+    "portraitSource": "https://media-speakerfile-pre.s3.amazonaws.com/images_avatars/ba4a3f191719acc04a57fb166912eb7e1694146566_o.jpg"
   },
   {
     "id": "vp-0176",
     "name": "Viet Tuan Pham",
     "university": "Susquehanna University",
-    "profileUrl": "https://www.susqu.edu/live/profiles/3271-viet-tuan-pham",
+    "profileUrl": "https://www.susqu.edu/profiles/phamv/",
     "batch": 1,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 1
+    "status": "fetched",
+    "note": "verified portrait fetched and converted to webp",
+    "recoveryBatch": 1,
+    "portraitSource": "https://www.susqu.edu/wp-content/uploads/2024/12/10750_Viet_Pham_22_400x425.rev_.1668197365.webp"
   },
   {
     "id": "vp-0198",
     "name": "Ocean Vuong",
     "university": "New York University",
-    "profileUrl": "https://as.nyu.edu/content/nyu-as/as/faculty/ocean-vuong.html",
+    "profileUrl": "https://as.nyu.edu/english/directory.ocean-vuong.html",
     "batch": 1,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 1
+    "status": "fetched",
+    "note": "verified portrait fetched and converted to webp",
+    "recoveryBatch": 1,
+    "portraitSource": "https://static.wixstatic.com/media/44e5d7_c6145626f26d46f5a7e45e873e14ec1f~mv2.jpg"
+  },
+  {
+    "id": "vp-0204",
+    "name": "Viet Le",
+    "university": "California College of the Arts",
+    "profileUrl": "https://portal.cca.edu/people/vle/",
+    "batch": 1,
+    "status": "fetched",
+    "note": "verified portrait fetched and converted to webp",
+    "recoveryBatch": 1,
+    "portraitSource": "https://arts.berkeley.edu/sites/default/files/viet-le_2.jpg"
   },
   {
     "id": "vp-0216",
@@ -35,9 +49,9 @@
     "university": "Arkansas State University",
     "profileUrl": "https://sites.google.com/view/trang-t-h-nguyen/",
     "batch": 1,
-    "status": "unresolved",
-    "portraitSource": "https://lh3.googleusercontent.com/sitesv/AG8ngQUadCDH0IscvBoTZ1KPWyc63iLRPIOR-3S5RENRsDK_lYH55RPoUAzEQl07DKK938ml5TiVosBB6vaEFcc8ljeSSeD4UOgpw_QiojS8GSqv6HVtCr1kfssWNl0Xp94_ckFcfOMj2vWHR7fH2-XOtZSp_TWW8HfxPcQcU9yncH4xuB7R8cSo1ck2TZeIALNedpcQxYryHmFF-Y-P4qmUYF34HCq2ZE4k_y6rgLamGPc=w1280",
-    "note": "profile page exposed no image candidate",
+    "status": "fetched",
+    "portraitSource": "https://lh3.googleusercontent.com/sitesv/AG8ngQVIAxgZN-d-XmRm8oesUbDBdU4ENMdboihJPTRquIwnExU59bBXvbKW4ONloz5YOtr5PqxwC89i276jv7fnPuGQg5j-xoNa4tHhMPSYmZ4reGJciueSBjSx1QmasFhQap5VvmcQth2AlkLMEDKFxTXpwp9B1TIJFQM81nwz1v33CAJSvOrnvjhPEIgEVrG_FFG9VGHZZ78KqZphwtSse9kqfcFeYkmaPK5eB6nj1aM=w1200",
+    "note": "verified portrait fetched and converted to webp",
     "recoveryBatch": 1
   },
   {
@@ -46,9 +60,21 @@
     "university": "Reed College",
     "profileUrl": "https://www.reed.edu/sociology/faculty/",
     "batch": 1,
+    "status": "fetched",
+    "note": "verified portrait fetched and converted to webp",
+    "recoveryBatch": 1,
+    "portraitSource": "https://soc.ucla.edu/wp-content/uploads/2020/12/Headshot-2024-2-773x1030.jpeg"
+  },
+  {
+    "id": "vp-0231",
+    "name": "Michael Dao",
+    "university": "San Jose State University",
+    "profileUrl": "https://www.sjsu.edu/kinesiology/about-us/faculty-and-staff.php",
+    "batch": 1,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 1
+    "note": "official profile page exposed broken image link (404) and no verified high-res portrait candidate found",
+    "recoveryBatch": 1,
+    "portraitSource": "https://www.sjsu.edu/kinesiology/pics/Michael%20Dao%20-%20Michael%20Dao.jpg"
   },
   {
     "id": "vp-0257",
@@ -56,9 +82,9 @@
     "university": "University of Massachusetts Amherst",
     "profileUrl": "https://www.umass.edu/sociology/about/directory/cn-le",
     "batch": 1,
-    "status": "unresolved",
+    "status": "fetched",
     "portraitSource": "https://www.umass.edu/sociology/sites/default/files/styles/tile_medium_x2_400px/public/2024-03/Le_2018.jpg?h=63ec7df1&itok=qBdMuagp",
-    "note": "profile page had no downloadable portrait image",
+    "note": "verified portrait fetched and converted to webp",
     "recoveryBatch": 1
   },
   {
@@ -67,9 +93,9 @@
     "university": "Kansas State University",
     "profileUrl": "https://www.k-state.edu/media-communication/about/faculty/huyen-nguyen.html",
     "batch": 1,
-    "status": "unresolved",
-    "portraitSource": "https://www.k-state.edu/ksu-resources/branding/5/images/wordmarks/ksu-purple.svg",
-    "note": "profile page had no downloadable portrait image",
+    "status": "fetched",
+    "portraitSource": "https://www.k-state.edu/media-communication/images/faculty/nguyen_huyen.png",
+    "note": "verified portrait fetched and converted to webp",
     "recoveryBatch": 1
   },
   {
@@ -80,17 +106,28 @@
     "batch": 1,
     "status": "unresolved",
     "portraitSource": "https://www.csudh.edu/Assets/csudh-sites/social-work/images/CSUDH-Social-Work-Social-Media-stacked-Center-RGB.png",
-    "note": "profile page had no downloadable portrait image",
+    "note": "profile page exposed no verified person-specific portrait candidate",
     "recoveryBatch": 1
+  },
+  {
+    "id": "vp-0375",
+    "name": "Justin Tran",
+    "university": "California State University, Fullerton",
+    "profileUrl": "https://www.fullerton.edu/ecs/me/faculty/",
+    "batch": 1,
+    "status": "fetched",
+    "note": "verified portrait fetched and converted to webp",
+    "recoveryBatch": 1,
+    "portraitSource": "https://www.fullerton.edu/ecs/me/_resources/images/faculty/Justin-Tran-ME-200x200-small.jpg"
   },
   {
     "id": "vp-0381",
     "name": "Uy Nguyen",
     "university": "California State University, Los Angeles",
-    "profileUrl": "https://www.calstatela.edu/faculty/nguyen-uy",
+    "profileUrl": "https://experts.calstatela.edu/expert/nguyen-uy/",
     "batch": 1,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "official experts directory page uses generic campus placeholder image and exposed no verified person-specific portrait candidate",
     "recoveryBatch": 1
   },
   {
@@ -100,7 +137,7 @@
     "profileUrl": "https://www.metrostate.edu/about/directory/minh-vo",
     "batch": 1,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "official faculty directory page exposed no portrait image and no verified person-specific headshot candidate found",
     "recoveryBatch": 1
   },
   {
@@ -111,7 +148,7 @@
     "batch": 1,
     "status": "unresolved",
     "portraitSource": "https://profiles.utsouthwestern.edu/img/block-future-of-medicine.png",
-    "note": "profile page had no downloadable portrait image",
+    "note": "official profile pages use generic placeholder images and exposed no verified person-specific portrait candidate",
     "recoveryBatch": 1
   },
   {
@@ -120,9 +157,10 @@
     "university": "National University of Singapore",
     "profileUrl": "https://cde.nus.edu.sg/me/staff/phan-thien-nhan/",
     "batch": 1,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 1
+    "status": "fetched",
+    "note": "verified portrait fetched and converted to webp",
+    "recoveryBatch": 1,
+    "portraitSource": "https://www.science.org.au/sites/default/files/Fellow/image/Profile%20image/phan-thien_0.jpg"
   },
   {
     "id": "vp-0488",
@@ -130,9 +168,21 @@
     "university": "National University of Singapore",
     "profileUrl": "https://cde.nus.edu.sg/me/staff/duong-hai-minh/",
     "batch": 1,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 1
+    "status": "fetched",
+    "note": "verified portrait fetched and converted to webp",
+    "recoveryBatch": 1,
+    "portraitSource": "https://cde.nus.edu.sg/me/wp-content/uploads/sites/11/2019/02/Duong-Hai-Minh_cropped-Small.jpg"
+  },
+  {
+    "id": "vp-0512",
+    "name": "Chinh T. Hoang",
+    "university": "Wilfrid Laurier University",
+    "profileUrl": "https://www.wlu.ca/academics/faculties/faculty-of-science/faculty-profiles/chinh-t-hoang/index.html",
+    "batch": 1,
+    "status": "fetched",
+    "note": "verified portrait fetched and converted to webp",
+    "recoveryBatch": 1,
+    "portraitSource": "https://scholar.googleusercontent.com/citations?view_op=view_photo&user=fO9txcMAAAAJ&citpid=2"
   },
   {
     "id": "vp-0518",
@@ -140,19 +190,21 @@
     "university": "University of Cambridge",
     "profileUrl": "https://faculty.educ.cam.ac.uk/people/staff/dao/",
     "batch": 1,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 1
+    "status": "fetched",
+    "note": "verified portrait fetched and converted to webp",
+    "recoveryBatch": 1,
+    "portraitSource": "https://scholar.googleusercontent.com/citations?view_op=view_photo&user=a2ReYt4AAAAJ&citpid=3"
   },
   {
     "id": "vp-0521",
     "name": "Tien Zung Nguyen",
     "university": "Université Toulouse III - Paul Sabatier",
-    "profileUrl": "https://www.math.univ-toulouse.fr/~nzung/",
+    "profileUrl": "https://scholar.google.fr/citations?user=r5wQzjYAAAAJ&hl=fr",
     "batch": 1,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 1
+    "status": "fetched",
+    "note": "verified portrait fetched and converted to webp",
+    "recoveryBatch": 1,
+    "portraitSource": "https://scholar.googleusercontent.com/citations?view_op=view_photo&user=r5wQzjYAAAAJ&citpid=2"
   },
   {
     "id": "vp-0524",
@@ -160,9 +212,10 @@
     "university": "Université Clermont Auvergne",
     "profileUrl": "https://limos.fr/detailperson/353",
     "batch": 2,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 1
+    "status": "fetched",
+    "note": "verified portrait fetched and converted to webp",
+    "recoveryBatch": 1,
+    "portraitSource": "https://scholar.googleusercontent.com/citations?view_op=view_photo&user=YuxaWN0AAAAJ&citpid=10"
   },
   {
     "id": "vp-0525",
@@ -232,6 +285,16 @@
     "batch": 2,
     "status": "unresolved",
     "note": "profile page had no downloadable portrait image",
+    "recoveryBatch": 2
+  },
+  {
+    "id": "vp-0618",
+    "name": "Quoc-Nghi Pham",
+    "university": "Université Paris-Saclay",
+    "profileUrl": "https://www.icmmo.universite-paris-saclay.fr/annuaire/quoc-nghi-pham/",
+    "batch": 2,
+    "status": "unresolved",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 2
   },
   {
@@ -305,6 +368,26 @@
     "recoveryBatch": 2
   },
   {
+    "id": "vp-0776",
+    "name": "Alex-Thai Dinh Vo",
+    "university": "Texas Tech University",
+    "profileUrl": "https://www.depts.ttu.edu/artsandsciences/news_events/2025/ferderal_grant_to_aid_vietnam_war_accounting_efforts.php",
+    "batch": 3,
+    "status": "unresolved",
+    "note": "profile page exposed no image candidate",
+    "recoveryBatch": 3
+  },
+  {
+    "id": "vp-0787",
+    "name": "Minhtri Khac Nguyen",
+    "university": "University of California, Los Angeles",
+    "profileUrl": "https://profiles.ucla.edu/minhtri.nguyen",
+    "batch": 3,
+    "status": "unresolved",
+    "note": "profile page exposed no image candidate",
+    "recoveryBatch": 3
+  },
+  {
     "id": "vp-0789",
     "name": "Huyen Q. Pham",
     "university": "University of Southern California",
@@ -319,6 +402,16 @@
     "name": "Truyen Tran",
     "university": "Deakin University",
     "profileUrl": "https://www.deakin.edu.au/about-deakin/people/truyen-tran",
+    "batch": 3,
+    "status": "unresolved",
+    "note": "profile page exposed no image candidate",
+    "recoveryBatch": 3
+  },
+  {
+    "id": "vp-0798",
+    "name": "Hoa Van Nguyen",
+    "university": "Curtin University",
+    "profileUrl": "https://staffportal.curtin.edu.au/staff/profile/view/hoa-nguyen-bba5fa8a/",
     "batch": 3,
     "status": "unresolved",
     "note": "profile page exposed no image candidate",
@@ -669,6 +762,16 @@
     "name": "Nam X. Nguyen",
     "university": "University of Southern California",
     "profileUrl": "https://keck.usc.edu/faculty-search/nam-x-nguyen/",
+    "batch": 5,
+    "status": "unresolved",
+    "note": "profile page exposed no image candidate",
+    "recoveryBatch": 5
+  },
+  {
+    "id": "vp-0920",
+    "name": "Xuan Tan Phan",
+    "university": "Shibaura Institute of Technology",
+    "profileUrl": "https://www.shibaura-it.ac.jp/en/research/laboratory/00005.html",
     "batch": 5,
     "status": "unresolved",
     "note": "profile page exposed no image candidate",
@@ -1265,6 +1368,16 @@
     "recoveryBatch": 9
   },
   {
+    "id": "vp-1091",
+    "name": "Liet Vo",
+    "university": "The University of Texas Rio Grande Valley",
+    "profileUrl": "https://www.utrgv.edu/cos/schools-and-departments/mathematical-and-statistical-sciences/math-faculty/index.htm",
+    "batch": 10,
+    "status": "unresolved",
+    "note": "profile page exposed no image candidate",
+    "recoveryBatch": 9
+  },
+  {
     "id": "vp-1092",
     "name": "Jo (Chau) Vu",
     "university": "Victoria University",
@@ -1353,6 +1466,16 @@
     "status": "unresolved",
     "note": "profile page exposed no image candidate",
     "recoveryBatch": 9
+  },
+  {
+    "id": "vp-1134",
+    "name": "Laurent Pham-Van",
+    "university": "Commissariat à l'énergie atomique et aux énergies alternatives (CEA)",
+    "profileUrl": "https://iramis.cea.fr/en/spec/directory/?uidc=M7VMMTEzTjUBAA",
+    "batch": 12,
+    "status": "unresolved",
+    "note": "profile page exposed no image candidate",
+    "recoveryBatch": 10
   },
   {
     "id": "vp-1136",
@@ -1515,6 +1638,16 @@
     "recoveryBatch": 10
   },
   {
+    "id": "vp-1172",
+    "name": "Sara Quach Thaichon",
+    "university": "Griffith University",
+    "profileUrl": "https://staffdirectory.griffith.edu.au/phone-details.php?id=24598709&string=marketing",
+    "batch": 13,
+    "status": "unresolved",
+    "note": "profile page exposed no image candidate",
+    "recoveryBatch": 11
+  },
+  {
     "id": "vp-1173",
     "name": "Huu Hao Ngo",
     "university": "University of Technology Sydney",
@@ -1529,6 +1662,16 @@
     "name": "Thong Pham - Adelaide University",
     "university": "Adelaide University",
     "profileUrl": "https://researchers.adelaide.edu.au/profile/thong.pham",
+    "batch": 13,
+    "status": "unresolved",
+    "note": "profile page exposed no image candidate",
+    "recoveryBatch": 11
+  },
+  {
+    "id": "vp-1180",
+    "name": "Minh N. Vu",
+    "university": "Los Alamos National Laboratory",
+    "profileUrl": "https://optnetsci.cise.ufl.edu/people/",
     "batch": 13,
     "status": "unresolved",
     "note": "profile page exposed no image candidate",
@@ -1935,6 +2078,16 @@
     "recoveryBatch": 13
   },
   {
+    "id": "vp-1228",
+    "name": "Thuy-Duong Nguyen-Phan",
+    "university": "National Energy Technology Laboratory",
+    "profileUrl": "https://netl.doe.gov/",
+    "batch": 16,
+    "status": "unresolved",
+    "note": "profile page exposed no image candidate",
+    "recoveryBatch": 13
+  },
+  {
     "id": "vp-1229",
     "name": "Nong Van Ngo",
     "university": "Nagoya University",
@@ -2232,6 +2385,16 @@
     "batch": 18,
     "status": "unresolved",
     "note": "profile page had no downloadable portrait image",
+    "recoveryBatch": 15
+  },
+  {
+    "id": "vp-1271",
+    "name": "Khanh Pham",
+    "university": "Air Force Research Laboratory",
+    "profileUrl": "https://www.afresearchlab.com/",
+    "batch": 18,
+    "status": "unresolved",
+    "note": "profile page exposed no image candidate",
     "recoveryBatch": 15
   },
   {
@@ -3711,7 +3874,7 @@
     "profileUrl": "https://english.duke.edu/people/marguerite-nguyen",
     "batch": 30,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page exposed no verified person-specific portrait candidate",
     "recoveryBatch": 1
   },
   {
@@ -3721,7 +3884,7 @@
     "profileUrl": "https://csumb.edu/hcom/phuong-nguyen/",
     "batch": 30,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page exposed no verified person-specific portrait candidate",
     "recoveryBatch": 1
   },
   {
@@ -3731,7 +3894,7 @@
     "profileUrl": "https://www.brandeis.edu/english/faculty/tam.html",
     "batch": 30,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page exposed no verified person-specific portrait candidate",
     "recoveryBatch": 1
   },
   {
@@ -3741,7 +3904,7 @@
     "profileUrl": "https://findanexpert.unimelb.edu.au/profile/13813-tess-do",
     "batch": 30,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page exposed no verified person-specific portrait candidate",
     "recoveryBatch": 1
   }
 ]
