@@ -50,6 +50,12 @@ import { isDeepStrictEqual } from 'node:util';
 import { FIELDS, fieldOf, type Roster, type RosterEntry } from '../src/data.ts';
 import { DIRECT_FIELD_EXCLUSIONS, HONOR_CATEGORIES, HONOR_FIELDS, INSTITUTION_TYPES, OTHER_DEGREE_FIELDS, ROSTER_FIELDS, TRACKS } from '../src/roster-constants.ts';
 import { validateEnrichment } from '../src/enrichment.ts';
+import { loadEvidenceLedger, recordFieldEvidence, saveEvidenceLedger } from '../src/evidence.ts';
+import {
+  validateEducationChronology,
+  validateExternalUrl,
+  validateInstitutionFormat,
+} from '../src/validation-rules.ts';
 
 const SCRIPT_PATH = fileURLToPath(import.meta.url);
 const REPO_ROOT = resolve(dirname(SCRIPT_PATH), '..');
@@ -69,7 +75,7 @@ const MAX_PROPOSAL_REVISIONS = 2;
 const DEFAULT_AGENT_TIMEOUT_MINUTES = 90;
 const DEFAULT_RATE_LIMIT_WAIT_MINUTES = 30;
 const MAX_CAPTURE_CHARS = 2_000_000;
-const MAINTAINED_PATHS = new Set(['public/data.json', 'maintenance/verification.json', 'maintenance/enrichment.json']);
+const MAINTAINED_PATHS = new Set(['public/data.json', 'maintenance/verification.json', 'maintenance/enrichment.json', 'maintenance/evidence.json']);
 const ALLOWED_ROSTER_FIELDS = new Set<string>(ROSTER_FIELDS);
 const ALLOWED_HONOR_FIELDS = new Set<string>(HONOR_FIELDS);
 const ALLOWED_OTHER_DEGREE_FIELDS = new Set<string>(OTHER_DEGREE_FIELDS);
@@ -594,7 +600,14 @@ export function proposalValidationError(proposal: JsonRecord): string | null {
   if (proposal.institutionType !== undefined && proposal.institutionType !== 'University' && !['Research', 'Emeritus', 'Deceased'].includes(proposal.track)) return 'proposal non-university institutionType requires the Research, Emeritus, or Deceased track';
   if (proposal.websiteUrl !== undefined && proposal.websiteUrl === proposal.profileUrl) return 'proposal websiteUrl must differ from profileUrl';
   if (proposal.websiteUrl !== undefined && !/^https?:\/\//.test(proposal.websiteUrl)) return 'proposal websiteUrl must use HTTP(S)';
-  if (proposal.scholarUrl !== undefined && !/^https:\/\//.test(proposal.scholarUrl)) return 'proposal scholarUrl must use HTTPS';
+  if (proposal.scholarUrl !== undefined) {
+    const scholarErr = validateExternalUrl(proposal.scholarUrl, 'scholarUrl');
+    if (scholarErr) return `proposal ${scholarErr}`;
+  }
+  if (proposal.linkedinUrl !== undefined) {
+    const linkedinErr = validateExternalUrl(proposal.linkedinUrl, 'linkedinUrl');
+    if (linkedinErr) return `proposal ${linkedinErr}`;
+  }
   if ((proposal.portrait === undefined) !== (proposal.portraitSource === undefined)) return 'proposal portrait and portraitSource must be provided together';
   if (proposal.portrait !== undefined && !/^portraits\/[a-z0-9][a-z0-9.-]*\.webp$/.test(proposal.portrait)) return 'proposal has invalid portrait path';
   if (proposal.portraitSource !== undefined && !/^https?:\/\//.test(proposal.portraitSource)) return 'proposal portraitSource must use HTTP(S)';
@@ -630,11 +643,17 @@ export function proposalValidationError(proposal: JsonRecord): string | null {
     }
   }
   for (const field of ['phdInstitution', 'undergradInstitution', 'msInstitution', 'mdInstitution', 'postdocInstitution']) {
-    if (proposal[field] !== undefined && (typeof proposal[field] !== 'string' || !proposal[field].trim())) return `proposal has invalid ${field}`;
+    if (proposal[field] !== undefined) {
+      if (typeof proposal[field] !== 'string' || !proposal[field].trim()) return `proposal has invalid ${field}`;
+      const formatErr = validateInstitutionFormat(proposal[field], field);
+      if (formatErr) return `proposal ${formatErr}`;
+    }
   }
   for (const field of ['phdYear', 'undergradYear', 'msYear', 'mdYear', 'postdocYear']) {
     if (proposal[field] !== undefined && (!Number.isInteger(proposal[field]) || proposal[field] < 1900 || proposal[field] > new Date().getFullYear())) return `proposal has invalid ${field}`;
   }
+  const chronologyErrors = validateEducationChronology(proposal);
+  if (chronologyErrors.length) return `proposal education chronology: ${chronologyErrors.join('; ')}`;
   for (const field of ['phdMajor', 'undergradMajor', 'msMajor']) {
     if (proposal[field] !== undefined && (typeof proposal[field] !== 'string' || !proposal[field].trim())) return `proposal has invalid ${field}`;
   }
@@ -991,10 +1010,16 @@ present, identify which live page is the official institutional profile and whic
 maintained personal or lab homepage, and correct swapped values. If only one usable page exists,
 place it in the appropriate field and omit the other. A reachable URL is not enough; verify its
 role and that it identifies this person. Search for a Google Scholar profile even if scholarUrl is missing, verify identity
-from affiliation/research/publications rather than name alone, and add or correct scholarUrl when
-supported. Check all explicitly documented education: PhD, master's,
+from affiliation and publication titles rather than name alone, and cite the matching paper/affiliation in your report;
+if ambiguous or if multiple scholars share the name, omit scholarUrl. Only add or keep linkedinUrl if it is linked
+directly from the person's official profile/personal website or if both their current university and degree/field
+match unambiguously; never guess from name alone. Check all explicitly documented education: PhD, master's,
 undergraduate, professional or equivalent degrees, majors and graduation years, plus completed
-postdoctoral institution and, when explicitly documented, its end/completion year. Check every honor under the documented honors
+postdoctoral institution and, when explicitly documented, its end/completion year. NEVER infer graduation years,
+completion years, or alma maters from CV chronology, publication history, or career start dates. In your report,
+quote the exact verbatim sentence from the source verifying any added or changed degree credential. Ensure chronological
+sanity (undergradYear <= msYear <= phdYear <= postdocYear, with at least 2 years between undergrad and PhD).
+Check every honor under the documented honors
 eligibility rules, including that each is a faculty-level distinction and not a dissertation award,
 dissertation fellowship/grant, or other student/trainee-stage award — remove any stored honor that
 fails the eligibility rules, not just proposed additions. Do not treat a reachable URL as a complete review.
@@ -1043,7 +1068,9 @@ institutional profile when one is available; otherwise, it must be the strongest
 source and the record must set confirmed to false. websiteUrl, when present, is a maintained personal or lab site;
 if only one exists, ensure it is stored in the correct field rather than copying it into both.
 Independently search for and identity-check Google Scholar when missing or changed; confirm that a
-verified Scholar URL is stored only in scholarUrl.
+verified Scholar URL is stored only in scholarUrl and is supported by publication/affiliation overlap rather than name alone.
+Independently verify that any linkedinUrl is legitimately linked or verified.
+Strictly reject any inferred graduation dates, ungrounded degrees, or chronological violations (such as PhD preceding undergrad).
 Return uncertain for incomplete/inaccessible evidence and reject demonstrably incorrect work.
 Do not edit files. Return only the required structured verdict.`;
 }
@@ -1213,6 +1240,48 @@ async function applyProposal(current: JsonRecord): Promise<void> {
   }
   await writeAtomic(rosterPath, roster);
   await writeAtomic(verificationPath, verification);
+
+  const evidencePath = join(REPO_ROOT, 'maintenance/evidence.json');
+  const evidenceLedger = await loadEvidenceLedger(evidencePath);
+  const personId = current.proposal ? current.proposal.id : current.baseline?.id;
+  if (personId) {
+    if (current.proposal === null) {
+      delete evidenceLedger.entries[personId];
+    } else {
+      const sources: string[] = current.research?.sources || [current.proposal.profileUrl].filter(Boolean);
+      const report: string | undefined = current.research?.report;
+      const personEntry = (evidenceLedger.entries[personId] ??= {
+        id: personId,
+        name: finalName || current.name,
+        lastAuditedAt: approvalTime,
+        sources: [],
+        fields: {},
+      });
+      personEntry.name = finalName || current.name;
+      personEntry.lastAuditedAt = approvalTime;
+      personEntry.sources = Array.from(new Set([...personEntry.sources, ...sources]));
+      if (report) personEntry.report = report;
+
+      for (const field of Object.keys(current.proposal)) {
+        if (['id', 'name', 'lastUpdatedAt', 'directFields'].includes(field)) continue;
+        const val = current.proposal[field];
+        if (val !== undefined) {
+          recordFieldEvidence(
+            evidenceLedger,
+            personId,
+            finalName || current.name,
+            field,
+            val,
+            current.proposal.profileUrl || sources[0] || '',
+            undefined,
+            approvalTime,
+          );
+        }
+      }
+    }
+    await saveEvidenceLedger(evidenceLedger, evidencePath);
+  }
+
   await runProcess('npm', ['run', 'validate-data'], { label: `validate ${current.name}` });
 }
 
@@ -1234,7 +1303,7 @@ async function commitBatch() {
     return 'existing';
   }
   if (status === 'none') return 'none';
-  await git(['add', 'public/data.json', 'maintenance/verification.json', 'maintenance/enrichment.json']);
+  await git(['add', 'public/data.json', 'maintenance/verification.json', 'maintenance/enrichment.json', 'maintenance/evidence.json']);
   await git([
     'commit',
     '-m', `Automated roster maintenance: batch ${activeState().runId}`,

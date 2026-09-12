@@ -18,6 +18,7 @@
     "analyze": "tsx analysis/analyze-roster.ts",
     "figures": "npm run build && tsx scripts/capture-figures.ts",
     "validate-data": "tsx scripts/validate-data.ts",
+    "audit-evidence": "tsx scripts/audit-roster-evidence.ts",
     "check-links": "tsx scripts/check-links.ts",
     "prevalidate-data": "npm run assign-profile-ids",
     "assign-profile-ids": "tsx scripts/assign-profile-ids.ts",
@@ -27,7 +28,7 @@
     "build-search-kit": "tsx scripts/build-search-kit.ts",
     "build-stats-history": "tsx scripts/build-stats-history.ts",
     "pretest": "npm run sync-profile-css && npm run build-search-kit && npm run build-stats-history",
-    "test": "npm run validate-data && npm run typecheck && tsx --test test/data.test.ts test/maintenance-controller.test.ts test/profile-pages.test.ts test/ui.test.ts test/favorites.test.ts test/stats.test.ts",
+    "test": "npm run validate-data && npm run typecheck && tsx --test test/data.test.ts test/maintenance-controller.test.ts test/validation-rules.test.ts test/profile-pages.test.ts test/ui.test.ts test/favorites.test.ts test/stats.test.ts",
     "test:e2e": "npm run build && tsx --test test/browser-smoke.test.ts"
   },
   "devDependencies": {

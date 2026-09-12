@@ -13,10 +13,16 @@ import {
 } from '../src/roster-constants.ts';
 import { looksSurnameFirst } from '../src/data.ts';
 import { validateEnrichment } from '../src/enrichment.ts';
+import {
+  validateEducationChronology,
+  validateExternalUrl,
+  validateInstitutionFormat,
+} from '../src/validation-rules.ts';
 
 const rosterFile = resolve('public/data.json');
 const verificationFile = resolve('maintenance/verification.json');
 const enrichmentFile = resolve('maintenance/enrichment.json');
+const evidenceFile = resolve('maintenance/evidence.json');
 const allowedTracks = new Set<string>(TRACKS);
 const allowedInstitutionTypes = new Set<string>(INSTITUTION_TYPES);
 const allowedHonorCategories = new Set<string>(HONOR_CATEGORIES);
@@ -60,10 +66,11 @@ function validateTimestamp(file: string, value: string, label: string, field: st
   if (timestamp.valueOf() > Date.now()) fail(file, `${label} ${field} must not be in the future`);
 }
 
-const [roster, verification, enrichment] = await Promise.all([
+const [roster, verification, enrichment, evidence] = await Promise.all([
   readFile(rosterFile, 'utf8').then(JSON.parse),
   readFile(verificationFile, 'utf8').then(JSON.parse),
   readFile(enrichmentFile, 'utf8').then(JSON.parse),
+  readFile(evidenceFile, 'utf8').then(JSON.parse),
 ]);
 if (!Array.isArray(roster) || roster.length === 0) fail(rosterFile, 'must contain a non-empty array');
 if (!verification || typeof verification !== 'object' || Array.isArray(verification)) {
@@ -71,6 +78,9 @@ if (!verification || typeof verification !== 'object' || Array.isArray(verificat
 }
 if (!enrichment || enrichment.version !== 1 || !Array.isArray(enrichment.ids) || !Array.isArray(enrichment.batches) || !enrichment.entries || typeof enrichment.entries !== 'object') {
   fail(enrichmentFile, 'must contain a versioned ID-keyed enrichment ledger');
+}
+if (!evidence || evidence.version !== 1 || typeof evidence.entries !== 'object') {
+  fail(evidenceFile, 'must contain a versioned evidence ledger');
 }
 const rosterIds = new Set((roster as Array<{ id: string }>).map((person) => person.id));
 if (enrichment.ids.length !== rosterIds.size || enrichment.ids.some((id: unknown) => typeof id !== 'string' || !rosterIds.has(id as string))) {
@@ -111,15 +121,15 @@ for (const [index, person] of roster.entries()) {
   if (person.confirmed !== undefined && typeof person.confirmed !== 'boolean') fail(rosterFile, `${label} confirmed must be a boolean`);
   if (person.websiteUrl !== undefined && !/^https?:\/\//.test(person.websiteUrl)) fail(rosterFile, `${label} websiteUrl must use HTTP(S)`);
   if (person.websiteUrl !== undefined && person.websiteUrl === person.profileUrl) fail(rosterFile, `${label} websiteUrl must differ from profileUrl`);
-  if (person.scholarUrl !== undefined && !/^https:\/\//.test(person.scholarUrl)) fail(rosterFile, `${label} scholarUrl must use HTTPS`);
   if (person.scholarUrl !== undefined) {
+    const scholarErr = validateExternalUrl(person.scholarUrl, 'scholarUrl');
+    if (scholarErr) fail(rosterFile, `${label} ${scholarErr}`);
     if (scholarUrls.has(person.scholarUrl)) fail(rosterFile, `${label} duplicates scholarUrl ${person.scholarUrl} — a Google Scholar profile belongs to one person; this usually means a placeholder/wrong ID got copied across a batch`);
     scholarUrls.add(person.scholarUrl);
   }
-  if (person.linkedinUrl !== undefined && !/^https:\/\/(www\.)?linkedin\.com\//.test(person.linkedinUrl)) {
-    fail(rosterFile, `${label} linkedinUrl must be an https://linkedin.com/ URL`);
-  }
   if (person.linkedinUrl !== undefined) {
+    const linkedinErr = validateExternalUrl(person.linkedinUrl, 'linkedinUrl');
+    if (linkedinErr) fail(rosterFile, `${label} ${linkedinErr}`);
     if (linkedinUrls.has(person.linkedinUrl)) fail(rosterFile, `${label} duplicates linkedinUrl ${person.linkedinUrl} — a LinkedIn profile belongs to one person; this usually means a placeholder/wrong ID got copied across a batch`);
     linkedinUrls.add(person.linkedinUrl);
   }
@@ -194,8 +204,12 @@ for (const [index, person] of roster.entries()) {
   if (person.country !== undefined && typeof person.country !== 'string') fail(rosterFile, `${label} country must be a string`);
   const institutionFields = ['phdInstitution', 'undergradInstitution', 'msInstitution', 'mdInstitution', 'postdocInstitution'];
   for (const field of institutionFields) {
-    if (person[field] !== undefined && (typeof person[field] !== 'string' || !person[field].trim())) {
-      fail(rosterFile, `${label} has invalid ${field}`);
+    if (person[field] !== undefined) {
+      if (typeof person[field] !== 'string' || !person[field].trim()) {
+        fail(rosterFile, `${label} has invalid ${field}`);
+      }
+      const formatErr = validateInstitutionFormat(person[field], field);
+      if (formatErr) fail(rosterFile, `${label} ${formatErr}`);
     }
   }
   const yearFields = ['phdYear', 'undergradYear', 'msYear', 'mdYear', 'postdocYear'];
@@ -203,6 +217,10 @@ for (const [index, person] of roster.entries()) {
     if (person[field] !== undefined && (!Number.isInteger(person[field]) || person[field] < 1900 || person[field] > CURRENT_YEAR)) {
       fail(rosterFile, `${label} has invalid ${field}`);
     }
+  }
+  const chronologyErrors = validateEducationChronology(person);
+  if (chronologyErrors.length) {
+    fail(rosterFile, `${label} education chronology: ${chronologyErrors.join('; ')}`);
   }
   for (const field of ['phdMajor', 'undergradMajor', 'msMajor']) {
     if (person[field] !== undefined && (typeof person[field] !== 'string' || !person[field].trim())) {

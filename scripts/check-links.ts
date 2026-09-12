@@ -29,13 +29,16 @@ const USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
 const TIMEOUT_MS = 15000;
 const CONCURRENCY = 12;
 
-async function checkOne(entry: UrlEntry): Promise<UrlEntry & { status: number | 'ERROR'; ok: boolean }> {
+const args = process.argv.slice(2);
+const verifyContent = args.includes('--verify-content') || args.includes('--verify-identity');
+
+async function checkOne(entry: UrlEntry): Promise<UrlEntry & { status: number | 'ERROR'; ok: boolean; warning?: string }> {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), TIMEOUT_MS);
   try {
     let res: Response;
     try {
-      res = await fetch(entry.url, { method: 'HEAD', redirect: 'follow', signal: controller.signal, headers: { 'User-Agent': USER_AGENT } });
+      res = await fetch(entry.url, { method: verifyContent && entry.field === 'profileUrl' ? 'GET' : 'HEAD', redirect: 'follow', signal: controller.signal, headers: { 'User-Agent': USER_AGENT } });
       // Some servers reject HEAD (405) or bot-check it differently (403); retry with GET.
       if (res.status === 405 || res.status === 403) {
         res = await fetch(entry.url, { method: 'GET', redirect: 'follow', signal: controller.signal, headers: { 'User-Agent': USER_AGENT } });
@@ -43,7 +46,22 @@ async function checkOne(entry: UrlEntry): Promise<UrlEntry & { status: number | 
     } catch {
       res = await fetch(entry.url, { method: 'GET', redirect: 'follow', signal: controller.signal, headers: { 'User-Agent': USER_AGENT } });
     }
-    return { ...entry, status: res.status, ok: res.ok };
+
+    let warning: string | undefined;
+    if (verifyContent && entry.field === 'profileUrl' && res.ok) {
+      try {
+        const text = await res.text();
+        const tokens = entry.name.trim().split(/\s+/);
+        const lastName = tokens[tokens.length - 1];
+        if (lastName && !text.toLowerCase().includes(lastName.toLowerCase())) {
+          warning = `Profile page does not mention last name "${lastName}" (possible redirect to department/faculty directory)`;
+        }
+      } catch {
+        // text parsing error ignored
+      }
+    }
+
+    return { ...entry, status: res.status, ok: res.ok, warning };
   } catch (err) {
     return { ...entry, status: 'ERROR', ok: false };
   } finally {
@@ -79,4 +97,12 @@ if (broken.length === 0) {
     console.log(`  ${r.id}\t${r.name}\t${r.field}\t${r.status}\t${r.url}`);
   }
   process.exitCode = 1;
+}
+
+const warnings = results.filter((r) => r.warning);
+if (warnings.length > 0) {
+  console.log(`\n${warnings.length} content/identity warning(s):\n`);
+  for (const w of warnings) {
+    console.log(`  ${w.id}\t${w.name}\t${w.field}\t${w.warning}\t${w.url}`);
+  }
 }

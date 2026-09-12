@@ -531,7 +531,7 @@ To prevent desynchronization between data files and ensure interrupted runs are 
 - `institutionType`, when present, must be `University`, `Public research institute`, or
   `Independent nonprofit research institute`. Omit it for ordinary university records; it is
   required for eligible non-university institutes, which must use the `Research` track.
-- `profileUrl` must be a current, working academic or official institutional profile and must not be a Google Scholar URL. Store Scholar separately in `scholarUrl`; store a maintained personal or lab homepage in `websiteUrl`; store a verified LinkedIn profile in `linkedinUrl` (must be an `https://linkedin.com/` or `https://www.linkedin.com/` URL). Verify a LinkedIn match the same way as Scholar: confirm name, institution, and field before attaching it — never guess from name alone.
+- `profileUrl` must be a current, working academic or official institutional profile and must not be a Google Scholar URL. Store Scholar separately in `scholarUrl` (must be a canonical citations profile URL `https://scholar.google.com/citations?user=...`, never a search query). Store a maintained personal or lab homepage in `websiteUrl`; store a verified LinkedIn profile in `linkedinUrl` (must be a direct personal profile URL `https://linkedin.com/in/...` or `https://www.linkedin.com/in/...`, never search or company pages). Verify Scholar and LinkedIn matches strictly: confirm name, institution, and publication/field overlap before attaching them — never guess from name alone. Prefer LinkedIn profiles directly linked from the faculty member's institutional bio or homepage.
 - `lastUpdatedAt` is required and must be a canonical UTC ISO timestamp in
   `YYYY-MM-DDTHH:mm:ss.sssZ` form. It records when roster content for
   the person last materially changed, whether by adding the person or changing a profile,
@@ -539,7 +539,8 @@ To prevent desynchronization between data files and ensure interrupted runs are 
   no data change must not advance it.
 - Preserve an existing Scholar URL by moving it to `scholarUrl` before replacing `profileUrl`. Verify replacement URLs follow redirects and do not return 404.
 - Use only `Assistant Professor`, `Associate Professor`, or `Professor` as the rank vocabulary for Tenure-line entries; use `Teaching` and `Emeritus` for those corresponding tracks. For Research, Clinical, and Academic staff entries, preserve the institution's published appointment title in `rank`. Preserve a Professor of Practice title in `rank` for Teaching entries when that is the institution's published title.
-- Add `phdYear` and `phdInstitution` only when a source explicitly states them. Never infer them from dates, CV chronology, or context.
+- Add `phdYear` and `phdInstitution` only when a source explicitly states them. Never infer them from dates, CV chronology, or context. Institution names must not contain degree prefixes (e.g., "Ph.D. in ...").
+- Education degrees must follow chronological sanity: `undergradYear <= msYear <= phdYear <= postdocYear`, with at least a 2-year interval between `undergradYear` and `phdYear`. Legitimate mid-career master's degrees earned after a doctorate must be allowlisted in `MID_CAREER_MS_ALLOWLIST`. Run `npm run audit-evidence` to audit the roster for anomalies.
 - Record completed postdoctoral training when a source explicitly identifies the institution. Add
   `postdocYear` only when the source also explicitly states an end or completion year; never infer
   it from CV chronology or context. Past postdoctoral training is an education credential; a
