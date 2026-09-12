@@ -411,15 +411,13 @@ h1 {
 }
 
 .insight-chip {
-  flex: 1 1 100%;
-  width: 100%;
   border: 1px solid rgba(245, 158, 11, 0.4);
   background: rgba(245, 158, 11, 0.12);
   color: var(--text-primary);
   text-align: left;
   white-space: normal;
   overflow-wrap: anywhere;
-  margin-top: 0.15rem;
+  max-width: 100%;
 }
 
 .health-chip {

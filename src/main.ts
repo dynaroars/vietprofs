@@ -190,7 +190,7 @@ function renderShell() {
         <option value="last-name">Last name</option>
         <option value="first-name">First name</option>
         <option value="recent">Recently modified</option>
-        <option value="vp-newest">Newest VP ID</option>
+        <option value="vp-newest">Newest Entry</option>
       </select>
     </div>
     <div class="browser-shelf" id="browser-shelf" aria-label="Saved browser data" hidden></div>
@@ -1346,7 +1346,7 @@ async function init() {
     ...pickRandomUnique(populatedLocations, 1).map((value) => ({ type: 'loc' as const, value, label: value, icon: '📍' })),
   ] as Example[]);
 
-  const examples: Example[] = [...coreExamples, ...categoryExamples];
+  const examples: Example[] = shuffle([...coreExamples, ...categoryExamples]);
   const examplesEl = document.getElementById('examples');
   examplesEl.replaceChildren();
   const label = document.createElement('span');

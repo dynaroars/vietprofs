@@ -387,7 +387,6 @@ export function renderGrowthChart(history: StatsHistoryPoint[], activeMetric: Gr
 
   return `
     <div class="insights-section" id="growth-section">
-      <h3 class="insights-heading">Project &amp; Roster Growth</h3>
       <p class="insights-caption">${escapeHtml(metric.description)}, from ${escapeHtml(first.date)} (${firstVal.toLocaleString()} ${firstVal === 1 ? metric.unit : metric.pluralUnit}) to ${escapeHtml(last.date)} (${lastVal.toLocaleString()} ${lastVal === 1 ? metric.unit : metric.pluralUnit}); click any metric to switch dimension.</p>
       <div class="growth-metrics-bar" role="group" aria-label="Growth dimensions">
         ${metricButtons}
