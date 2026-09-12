@@ -1310,7 +1310,7 @@ async function init() {
     ? funFactsList[Math.floor(Math.random() * funFactsList.length)]
     : 'Diaspora Insights';
   const cleanFact = abbreviateInsightText(randomFact.replace(/\.$/, ''));
-  const shortFact = cleanFact.length > 46 ? `${cleanFact.slice(0, 43)}…` : cleanFact;
+  const shortFact = cleanFact.length > 110 ? `${cleanFact.slice(0, 107)}…` : cleanFact;
 
   const trafficOptions = [
     statsHistory.length > 0 ? `${statsHistory.length} Daily Snapshots` : 'Live Analytics',
