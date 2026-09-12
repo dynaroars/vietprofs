@@ -70,7 +70,7 @@ function imageCandidates(html: string, pageUrl: string, name: string): string[] 
     const url = absoluteUrl(cleanUrl(raw), pageUrl);
     if (!url || !/^https?:\/\//i.test(url)) return;
     const low = `${url} ${context}`.toLowerCase();
-    if (/no[-_ ]?(portrait|photo|image)|placeholder|logo|header|favicon|icon|sprite|gravatar|qr|wordmark|monogram|banner|hero|background|nav|menu|search|arrow/.test(low)) return;
+    if (/no[-_ ]?(portrait|photo|image)|placeholder|logo|header|favicon|icon|sprite|gravatar|qr|wordmark|monogram|banner|hero|background|nav|menu|search|arrow|no_photo|nophoto|profile_no_photo|blank|blank_profile|default_profile|profile_placeholder|silhouette/i.test(low)) return;
     if (!hasStrongNameEvidence(name, `${url} ${context}`)) return;
     let score = 0;
     if (/portrait|headshot|profile|photo|avatar|faculty|people|person|staff|image/.test(low)) score += 4;
@@ -181,7 +181,7 @@ await Promise.all(batch.map(async (item) => {
     return;
   }
   try {
-    const pageUrls = recovery ? [item.profileUrl, ...(await alternatePageUrls(item))] : [item.profileUrl];
+    const pageUrls = [item.profileUrl, ...(await alternatePageUrls(item))];
     const candidateGroups = await Promise.all([...new Set(pageUrls)].map(async (pageUrl) => {
       try {
         return imageCandidates((await curl(pageUrl, 20)).toString('utf8'), pageUrl, item.name);

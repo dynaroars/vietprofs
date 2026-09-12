@@ -550,6 +550,16 @@ To prevent desynchronization between data files and ensure interrupted runs are 
 - Use the person's full published academic name only when an official profile or maintained academic homepage supplies it. Expand initials only with direct evidence.
 - Store `name` without Vietnamese diacritics and in First (Middle) Last order. This is a display normalization, not a claim about publishing name order.
 - Preserve source URLs for profiles, honors, name evidence, and portraits.
+
+### Portrait recovery and scouting standard
+
+Automated web scouting and manual portrait recovery must always perform a thorough multi-source search:
+
+- **Multi-source search:** Do not rely solely on a single `profileUrl` check. Execute web search queries (`"${name}" "${university}" faculty portrait OR photo`) and inspect alternate lab homepages, research center pages, hospital/clinical directories, and press releases.
+- **Name evidence matching:** Require explicit name evidence matching in the candidate image URL or image context.
+- **Generic placeholder rejection:** Filter out generic placeholders, theme icons, site headers/logos, and default avatars (e.g., `blank_profile`, `default_profile`, `silhouette`, `no_photo`, `default@mobile3x`).
+- **Validation & archiving:** Verify candidate dimensions (minimum 120×120px) and portrait aspect ratio (width/height ≤ 1.55) using ImageMagick (`identify`), convert approved headshots to WebP format in `public/portraits/`, and preserve the direct original image URL in `portraitSource`.
+
 - Profile URLs are generated from `id`, so a canonical-name correction does not change the public
   profile URL. Removing an entry also removes its generated profile page.
 - Store the university's full canonical name in `public/data.json`; shortening is display-only.
