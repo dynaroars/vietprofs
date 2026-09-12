@@ -48,28 +48,6 @@ export function renderHealthPanel(roster: Roster, baseUrl = '/'): string {
           <a class="recent-updates-link" href="${baseUrl}?sort=recent">Browse recently updated →</a>
         </div>
       ` : ''}
-
-      <div class="health-methodology-section">
-        <h3>Systematic Maintenance &amp; Anti-Hallucination Standards</h3>
-        <div class="health-methodology-grid">
-          <div class="methodology-card">
-            <h4>Direct Updates &amp; Ground Truth</h4>
-            <p>Direct owner updates and community-verified corrections are protected and recorded in sorted field metadata.</p>
-          </div>
-          <div class="methodology-card">
-            <h4>Evidence Ledger &amp; Quotes</h4>
-            <p>Every automated addition requires verbatim source quotes recorded in <code>maintenance/evidence.json</code> for cross-agent auditing.</p>
-          </div>
-          <div class="methodology-card">
-            <h4>Local WebP Portrait Archiving</h4>
-            <p>Portraits undergo strict aspect-ratio and person-specific validation before lossless WebP conversion in <code>public/portraits/</code>.</p>
-          </div>
-          <div class="methodology-card">
-            <h4>Continuous Verification</h4>
-            <p>Validation test suites enforce chronological degree sanity, standard career progressions, and link integrity on every build.</p>
-          </div>
-        </div>
-      </div>
     </div>
   `;
 }

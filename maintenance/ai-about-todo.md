@@ -1,0 +1,168 @@
+# AI Web-Scouting About / Bio Enrichment TODO
+
+This is the cross-outable batch checklist for AI-driven web scouting of scholarly About summaries (research highlights, key projects, and what each faculty member is known for).
+The machine-readable source of truth is [`public/data.json`](../public/data.json) and [`maintenance/missing-about.json`](./missing-about.json).
+
+## Status Summary
+- **Total Roster Profiles**: 1484
+- **Profiles with About Summary**: 738 (49.7%)
+- **Profiles Needing About Summary**: 746
+- **Batch Size**: 10 profiles per batch
+- **Total Batches**: 149
+
+## Guidelines for About Summaries
+1. **Interesting & Specific**: Highlight their main research focus, key questions, notable projects, or scholarly contributions (what they are known for).
+2. **Strictly Evidence-Backed**: Avoid generic fluff or demographic assumptions; summarize only verified claims from official faculty pages, Google Scholar, personal lab sites, or publications.
+3. **Full Citation Ledger**: Record all source URLs in `sources: [...]` (official profile, Scholar, Wikipedia, personal lab site) so every claim is directly verifiable.
+
+## Checklist
+
+- [x] **Batch 001** (Items 1–10: vp-0001 to vp-0010) — 10/10 enriched
+- [x] **Batch 002** (Items 11–20: vp-0011 to vp-0020) — 10/10 enriched
+- [x] **Batch 003** (Items 21–30: vp-0021 to vp-0030) — 10/10 enriched
+- [x] **Batch 004** (Items 31–40: vp-0031 to vp-0040) — 10/10 enriched
+- [x] **Batch 005** (Items 41–50: vp-0041 to vp-0050) — 10/10 enriched
+- [x] **Batch 006** (Items 51–60: vp-0051 to vp-0060) — 10/10 enriched
+- [x] **Batch 007** (Items 61–70: vp-0061 to vp-0070) — 10/10 enriched
+- [x] **Batch 008** (Items 71–80: vp-0071 to vp-0080) — 10/10 enriched
+- [x] **Batch 009** (Items 81–90: vp-0081 to vp-0090) — 10/10 enriched
+- [x] **Batch 010** (Items 91–100: vp-0091 to vp-0100) — 10/10 enriched
+- [x] **Batch 011** (Items 101–110: vp-0101 to vp-0110) — 10/10 enriched
+- [x] **Batch 012** (Items 111–120: vp-0111 to vp-0120) — 10/10 enriched
+- [x] **Batch 013** (Items 121–130: vp-0121 to vp-0130) — 10/10 enriched
+- [x] **Batch 014** (Items 131–140: vp-0131 to vp-0140) — 10/10 enriched
+- [x] **Batch 015** (Items 141–150: vp-0141 to vp-0150) — 10/10 enriched
+- [x] **Batch 016** (Items 151–160: vp-0151 to vp-0160) — 10/10 enriched
+- [/] **Batch 017** (Items 161–170: vp-0161 to vp-0170) — 8/10 enriched
+- [/] **Batch 018** (Items 171–180: vp-0171 to vp-0180) — 9/10 enriched
+- [/] **Batch 019** (Items 181–190: vp-0181 to vp-0190) — 8/10 enriched
+- [x] **Batch 020** (Items 191–200: vp-0191 to vp-0200) — 10/10 enriched
+- [x] **Batch 021** (Items 201–210: vp-0201 to vp-0210) — 10/10 enriched
+- [/] **Batch 022** (Items 211–220: vp-0211 to vp-0220) — 9/10 enriched
+- [/] **Batch 023** (Items 221–230: vp-0221 to vp-0230) — 9/10 enriched
+- [/] **Batch 024** (Items 231–240: vp-0231 to vp-0240) — 7/10 enriched
+- [/] **Batch 025** (Items 241–250: vp-0241 to vp-0250) — 5/10 enriched
+- [/] **Batch 026** (Items 251–260: vp-0251 to vp-0260) — 6/10 enriched
+- [/] **Batch 027** (Items 261–270: vp-0261 to vp-0270) — 8/10 enriched
+- [/] **Batch 028** (Items 271–280: vp-0271 to vp-0280) — 7/10 enriched
+- [/] **Batch 029** (Items 281–290: vp-0281 to vp-0290) — 7/10 enriched
+- [/] **Batch 030** (Items 291–300: vp-0291 to vp-0300) — 6/10 enriched
+- [/] **Batch 031** (Items 301–310: vp-0301 to vp-0310) — 8/10 enriched
+- [/] **Batch 032** (Items 311–320: vp-0311 to vp-0320) — 7/10 enriched
+- [/] **Batch 033** (Items 321–330: vp-0321 to vp-0330) — 7/10 enriched
+- [/] **Batch 034** (Items 331–340: vp-0331 to vp-0340) — 4/10 enriched
+- [/] **Batch 035** (Items 341–350: vp-0341 to vp-0350) — 7/10 enriched
+- [/] **Batch 036** (Items 351–360: vp-0351 to vp-0360) — 7/10 enriched
+- [/] **Batch 037** (Items 361–370: vp-0361 to vp-0370) — 5/10 enriched
+- [/] **Batch 038** (Items 371–380: vp-0371 to vp-0380) — 4/10 enriched
+- [/] **Batch 039** (Items 381–390: vp-0381 to vp-0390) — 8/10 enriched
+- [/] **Batch 040** (Items 391–400: vp-0391 to vp-0400) — 6/10 enriched
+- [/] **Batch 041** (Items 401–410: vp-0401 to vp-0410) — 6/10 enriched
+- [/] **Batch 042** (Items 411–420: vp-0411 to vp-0420) — 3/10 enriched
+- [/] **Batch 043** (Items 421–430: vp-0421 to vp-0430) — 3/10 enriched
+- [/] **Batch 044** (Items 431–440: vp-0431 to vp-0440) — 3/10 enriched
+- [/] **Batch 045** (Items 441–450: vp-0441 to vp-0450) — 5/10 enriched
+- [/] **Batch 046** (Items 451–460: vp-0451 to vp-0460) — 8/10 enriched
+- [/] **Batch 047** (Items 461–470: vp-0461 to vp-0470) — 4/10 enriched
+- [/] **Batch 048** (Items 471–480: vp-0471 to vp-0480) — 4/10 enriched
+- [/] **Batch 049** (Items 481–490: vp-0481 to vp-0490) — 4/10 enriched
+- [/] **Batch 050** (Items 491–500: vp-0491 to vp-0500) — 4/10 enriched
+- [/] **Batch 051** (Items 501–510: vp-0501 to vp-0510) — 3/10 enriched
+- [/] **Batch 052** (Items 511–520: vp-0511 to vp-0520) — 5/10 enriched
+- [/] **Batch 053** (Items 521–530: vp-0521 to vp-0530) — 7/10 enriched
+- [/] **Batch 054** (Items 531–540: vp-0531 to vp-0540) — 5/10 enriched
+- [/] **Batch 055** (Items 541–550: vp-0541 to vp-0550) — 4/10 enriched
+- [/] **Batch 056** (Items 551–560: vp-0551 to vp-0560) — 3/10 enriched
+- [/] **Batch 057** (Items 561–570: vp-0561 to vp-0570) — 8/10 enriched
+- [/] **Batch 058** (Items 571–580: vp-0571 to vp-0580) — 6/10 enriched
+- [/] **Batch 059** (Items 581–590: vp-0581 to vp-0590) — 7/10 enriched
+- [/] **Batch 060** (Items 591–600: vp-0591 to vp-0600) — 6/10 enriched
+- [/] **Batch 061** (Items 601–610: vp-0601 to vp-0610) — 5/10 enriched
+- [/] **Batch 062** (Items 611–620: vp-0611 to vp-0620) — 6/10 enriched
+- [/] **Batch 063** (Items 621–630: vp-0621 to vp-0630) — 4/10 enriched
+- [/] **Batch 064** (Items 631–640: vp-0631 to vp-0640) — 6/10 enriched
+- [/] **Batch 065** (Items 641–650: vp-0641 to vp-0651) — 8/10 enriched
+- [/] **Batch 066** (Items 651–660: vp-0652 to vp-0661) — 8/10 enriched
+- [/] **Batch 067** (Items 661–670: vp-0662 to vp-0671) — 3/10 enriched
+- [/] **Batch 068** (Items 671–680: vp-0672 to vp-0681) — 3/10 enriched
+- [/] **Batch 069** (Items 681–690: vp-0682 to vp-0691) — 7/10 enriched
+- [/] **Batch 070** (Items 691–700: vp-0692 to vp-0702) — 8/10 enriched
+- [/] **Batch 071** (Items 701–710: vp-0703 to vp-0712) — 4/10 enriched
+- [/] **Batch 072** (Items 711–720: vp-0713 to vp-0722) — 5/10 enriched
+- [/] **Batch 073** (Items 721–730: vp-0723 to vp-0732) — 6/10 enriched
+- [/] **Batch 074** (Items 731–740: vp-0733 to vp-0742) — 5/10 enriched
+- [/] **Batch 075** (Items 741–750: vp-0743 to vp-0752) — 7/10 enriched
+- [/] **Batch 076** (Items 751–760: vp-0753 to vp-0762) — 6/10 enriched
+- [/] **Batch 077** (Items 761–770: vp-0763 to vp-0772) — 3/10 enriched
+- [/] **Batch 078** (Items 771–780: vp-0773 to vp-0782) — 6/10 enriched
+- [/] **Batch 079** (Items 781–790: vp-0784 to vp-0793) — 5/10 enriched
+- [/] **Batch 080** (Items 791–800: vp-0794 to vp-0803) — 7/10 enriched
+- [/] **Batch 081** (Items 801–810: vp-0804 to vp-0813) — 6/10 enriched
+- [/] **Batch 082** (Items 811–820: vp-0814 to vp-0827) — 4/10 enriched
+- [/] **Batch 083** (Items 821–830: vp-0828 to vp-0837) — 6/10 enriched
+- [/] **Batch 084** (Items 831–840: vp-0838 to vp-0848) — 3/10 enriched
+- [/] **Batch 085** (Items 841–850: vp-0849 to vp-0858) — 3/10 enriched
+- [/] **Batch 086** (Items 851–860: vp-0859 to vp-0869) — 1/10 enriched
+- [/] **Batch 087** (Items 861–870: vp-0870 to vp-0879) — 1/10 enriched
+- [/] **Batch 088** (Items 871–880: vp-0880 to vp-0889) — 2/10 enriched
+- [ ] **Batch 089** (Items 881–890: vp-0890 to vp-0899) — 0/10 enriched
+- [/] **Batch 090** (Items 891–900: vp-0900 to vp-0909) — 2/10 enriched
+- [/] **Batch 091** (Items 901–910: vp-0910 to vp-0919) — 4/10 enriched
+- [/] **Batch 092** (Items 911–920: vp-0920 to vp-0929) — 6/10 enriched
+- [/] **Batch 093** (Items 921–930: vp-0930 to vp-0939) — 4/10 enriched
+- [/] **Batch 094** (Items 931–940: vp-0940 to vp-0949) — 5/10 enriched
+- [/] **Batch 095** (Items 941–950: vp-0950 to vp-0959) — 6/10 enriched
+- [/] **Batch 096** (Items 951–960: vp-0960 to vp-0969) — 7/10 enriched
+- [/] **Batch 097** (Items 961–970: vp-0970 to vp-0979) — 4/10 enriched
+- [/] **Batch 098** (Items 971–980: vp-0980 to vp-0989) — 5/10 enriched
+- [/] **Batch 099** (Items 981–990: vp-0990 to vp-0997) — 5/10 enriched
+- [/] **Batch 100** (Items 991–1000: vp-0998 to vp-1007) — 3/10 enriched
+- [/] **Batch 101** (Items 1001–1010: vp-1008 to vp-1018) — 6/10 enriched
+- [/] **Batch 102** (Items 1011–1020: vp-1019 to vp-1028) — 6/10 enriched
+- [/] **Batch 103** (Items 1021–1030: vp-1029 to vp-1038) — 6/10 enriched
+- [/] **Batch 104** (Items 1031–1040: vp-1039 to vp-1048) — 3/10 enriched
+- [/] **Batch 105** (Items 1041–1050: vp-1049 to vp-1058) — 7/10 enriched
+- [/] **Batch 106** (Items 1051–1060: vp-1059 to vp-1068) — 6/10 enriched
+- [/] **Batch 107** (Items 1061–1070: vp-1069 to vp-1078) — 3/10 enriched
+- [/] **Batch 108** (Items 1071–1080: vp-1079 to vp-1088) — 6/10 enriched
+- [/] **Batch 109** (Items 1081–1090: vp-1089 to vp-1098) — 5/10 enriched
+- [/] **Batch 110** (Items 1091–1100: vp-1099 to vp-1108) — 6/10 enriched
+- [/] **Batch 111** (Items 1101–1110: vp-1109 to vp-1118) — 2/10 enriched
+- [/] **Batch 112** (Items 1111–1120: vp-1119 to vp-1129) — 5/10 enriched
+- [/] **Batch 113** (Items 1121–1130: vp-1130 to vp-1140) — 5/10 enriched
+- [/] **Batch 114** (Items 1131–1140: vp-1141 to vp-1152) — 3/10 enriched
+- [/] **Batch 115** (Items 1141–1150: vp-1153 to vp-1162) — 2/10 enriched
+- [/] **Batch 116** (Items 1151–1160: vp-1163 to vp-1174) — 4/10 enriched
+- [/] **Batch 117** (Items 1161–1170: vp-1175 to vp-1184) — 5/10 enriched
+- [/] **Batch 118** (Items 1171–1180: vp-1185 to vp-1194) — 1/10 enriched
+- [ ] **Batch 119** (Items 1181–1190: vp-1195 to vp-1205) — 0/10 enriched
+- [ ] **Batch 120** (Items 1191–1200: vp-1206 to vp-1215) — 0/10 enriched
+- [ ] **Batch 121** (Items 1201–1210: vp-1216 to vp-1225) — 0/10 enriched
+- [/] **Batch 122** (Items 1211–1220: vp-1226 to vp-1235) — 1/10 enriched
+- [/] **Batch 123** (Items 1221–1230: vp-1236 to vp-1246) — 1/10 enriched
+- [/] **Batch 124** (Items 1231–1240: vp-1247 to vp-1256) — 1/10 enriched
+- [/] **Batch 125** (Items 1241–1250: vp-1257 to vp-1266) — 3/10 enriched
+- [/] **Batch 126** (Items 1251–1260: vp-1267 to vp-1276) — 1/10 enriched
+- [/] **Batch 127** (Items 1261–1270: vp-1277 to vp-1286) — 1/10 enriched
+- [/] **Batch 128** (Items 1271–1280: vp-1287 to vp-1296) — 2/10 enriched
+- [/] **Batch 129** (Items 1281–1290: vp-1297 to vp-1306) — 2/10 enriched
+- [/] **Batch 130** (Items 1291–1300: vp-1307 to vp-1316) — 3/10 enriched
+- [/] **Batch 131** (Items 1301–1310: vp-1317 to vp-1326) — 1/10 enriched
+- [ ] **Batch 132** (Items 1311–1320: vp-1327 to vp-1336) — 0/10 enriched
+- [ ] **Batch 133** (Items 1321–1330: vp-1337 to vp-1346) — 0/10 enriched
+- [ ] **Batch 134** (Items 1331–1340: vp-1347 to vp-1356) — 0/10 enriched
+- [/] **Batch 135** (Items 1341–1350: vp-1357 to vp-1366) — 1/10 enriched
+- [ ] **Batch 136** (Items 1351–1360: vp-1367 to vp-1376) — 0/10 enriched
+- [/] **Batch 137** (Items 1361–1370: vp-1377 to vp-1386) — 3/10 enriched
+- [ ] **Batch 138** (Items 1371–1380: vp-1387 to vp-1396) — 0/10 enriched
+- [ ] **Batch 139** (Items 1381–1390: vp-1397 to vp-1406) — 0/10 enriched
+- [/] **Batch 140** (Items 1391–1400: vp-1407 to vp-1416) — 3/10 enriched
+- [/] **Batch 141** (Items 1401–1410: vp-1417 to vp-1426) — 6/10 enriched
+- [/] **Batch 142** (Items 1411–1420: vp-1427 to vp-1436) — 1/10 enriched
+- [/] **Batch 143** (Items 1421–1430: vp-1437 to vp-1446) — 2/10 enriched
+- [ ] **Batch 144** (Items 1431–1440: vp-1447 to vp-1456) — 0/10 enriched
+- [/] **Batch 145** (Items 1441–1450: vp-1457 to vp-1466) — 1/10 enriched
+- [ ] **Batch 146** (Items 1451–1460: vp-1467 to vp-1476) — 0/10 enriched
+- [/] **Batch 147** (Items 1461–1470: vp-1477 to vp-1486) — 3/10 enriched
+- [/] **Batch 148** (Items 1471–1480: vp-1487 to vp-1496) — 2/10 enriched
+- [ ] **Batch 149** (Items 1481–1484: vp-1497 to vp-1502) — 0/4 enriched

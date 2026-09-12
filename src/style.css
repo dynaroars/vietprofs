@@ -3313,59 +3313,6 @@ a.entry-name:focus-visible {
   text-decoration: underline;
 }
 
-.health-methodology-section {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  border-top: 1px solid var(--border-subtle);
-  padding-top: 1.25rem;
-}
-
-.health-methodology-section h3 {
-  font-family: var(--font-heading);
-  font-size: var(--text-base);
-  font-weight: 700;
-  color: var(--text-primary);
-  margin: 0;
-}
-
-.health-methodology-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 0.85rem;
-}
-
-.methodology-card {
-  padding: 0.85rem;
-  background: var(--bg-primary);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
-}
-
-.methodology-card h4 {
-  font-size: var(--text-xs);
-  font-weight: 700;
-  color: var(--text-primary);
-  margin: 0 0 0.25rem 0;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-}
-
-.methodology-card p {
-  font-size: var(--text-xs);
-  color: var(--text-secondary);
-  margin: 0;
-  line-height: 1.45;
-}
-
-.methodology-card code {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  background: var(--border-subtle);
-  padding: 0.1rem 0.25rem;
-  border-radius: 3px;
-}
-
 .toast-notification {
   position: fixed;
   bottom: 1.5rem;

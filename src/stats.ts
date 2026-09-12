@@ -1,6 +1,4 @@
 import './style.css';
-import { loadRoster, type Roster } from './data.ts';
-import { deriveRosterStats, type DerivedRosterStats } from './derived-stats.ts';
 import { escapeHtml } from './utils.ts';
 
 export interface DailyStat {
@@ -170,129 +168,7 @@ function renderTrafficChart(daily: DailyStat[]): string {
   `;
 }
 
-function renderCompletenessSection(stats: DerivedRosterStats): string {
-  const base = import.meta.env.BASE_URL;
-  return `
-    <section class="man-section">
-      <h2>DATASET HEALTH & COMPLETENESS</h2>
-      <p class="stat-sub">Aggregate completeness across <strong>${formatNumber(stats.total)}</strong> faculty profiles actively maintained outside Vietnam.</p>
-      <div class="completeness-grid">
-        ${stats.completeness.map((m) => `
-          <div class="completeness-card">
-            <div class="completeness-header">
-              <span class="completeness-label">${escapeHtml(m.label)}</span>
-              <strong class="completeness-pct">${m.percentage}%</strong>
-            </div>
-            <div class="progress-bar-bg">
-              <div class="progress-bar-fill" style="width: ${m.percentage}%"></div>
-            </div>
-            <div class="completeness-meta">
-              <span>${formatNumber(m.count)} of ${formatNumber(m.total)} records</span>
-              <span class="completeness-desc">${escapeHtml(m.description)}</span>
-            </div>
-          </div>
-        `).join('')}
-      </div>
-      ${stats.recentUpdatesCount.last30Days > 0 ? `
-        <div class="recent-updates-badge">
-          <span class="pulse-dot" aria-hidden="true"></span>
-          <span><strong>${formatNumber(stats.recentUpdatesCount.last30Days)} profiles</strong> updated or verified in the past 30 days (${formatNumber(stats.recentUpdatesCount.last7Days)} this week).</span>
-          <a class="recent-updates-link" href="${base}?sort=recent">Browse recently updated →</a>
-        </div>
-      ` : ''}
-    </section>
-  `;
-}
-
-function renderPathwaysSection(stats: DerivedRosterStats): string {
-  const base = import.meta.env.BASE_URL;
-  return `
-    <section class="man-section">
-      <h2>DIASPORA PATHWAYS & MACRO INSIGHTS</h2>
-      <div class="pathways-grid">
-        <div class="pathway-block">
-          <h3>TOP DOCTORAL (PHD) ALMA MATERS</h3>
-          <p class="stat-sub">Institutions producing the most Vietnamese faculty worldwide</p>
-          <div class="stats-table-wrapper">
-            <table class="stats-table">
-              <thead>
-                <tr>
-                  <th>Doctoral Institution</th>
-                  <th class="num-col">Faculty</th>
-                  <th class="num-col">Share</th>
-                </tr>
-              </thead>
-              <tbody>
-                ${stats.topPhdInstitutions.map((inst) => `
-                  <tr>
-                    <td>
-                      <a class="stats-page-link" href="${base}?q=${encodeURIComponent(inst.queryParam)}">
-                        <strong>${escapeHtml(inst.name)}</strong>
-                      </a>
-                      <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: ${Math.min(100, inst.percentage * 8)}%"></div></div>
-                    </td>
-                    <td class="num-col">${formatNumber(inst.count)}</td>
-                    <td class="num-col">${inst.percentage}%</td>
-                  </tr>
-                `).join('')}
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <div class="pathway-block">
-          <h3>TOP UNDERGRADUATE FEEDERS</h3>
-          <p class="stat-sub">Universities educating future international faculty</p>
-          <div class="stats-table-wrapper">
-            <table class="stats-table">
-              <thead>
-                <tr>
-                  <th>Undergraduate Institution</th>
-                  <th class="num-col">Faculty</th>
-                  <th class="num-col">Share</th>
-                </tr>
-              </thead>
-              <tbody>
-                ${stats.topUndergradInstitutions.map((inst) => `
-                  <tr>
-                    <td>
-                      <a class="stats-page-link" href="${base}?q=${encodeURIComponent(inst.queryParam)}">
-                        <strong>${escapeHtml(inst.name)}</strong>
-                      </a>
-                      <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: ${Math.min(100, inst.percentage * 6)}%"></div></div>
-                    </td>
-                    <td class="num-col">${formatNumber(inst.count)}</td>
-                    <td class="num-col">${inst.percentage}%</td>
-                  </tr>
-                `).join('')}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      <div class="generations-container">
-        <h3>ACADEMIC GENERATIONS (PHD DECADE COHORTS)</h3>
-        <p class="stat-sub">Distribution of doctoral graduations across decades</p>
-        <div class="generations-grid">
-          ${stats.academicGenerations.map((gen) => `
-            <div class="generation-card">
-              <div class="generation-header">
-                <span class="generation-decade">${escapeHtml(gen.decade)}</span>
-                <strong class="generation-count">${formatNumber(gen.count)}</strong>
-              </div>
-              <span class="generation-range">${escapeHtml(gen.range)}</span>
-              <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: ${gen.percentage}%"></div></div>
-              <span class="generation-pct">${gen.percentage}% of dated degrees</span>
-            </div>
-          `).join('')}
-        </div>
-      </div>
-    </section>
-  `;
-}
-
-function renderStatsContent(data: StatsResponse, rosterStats: DerivedRosterStats) {
+function renderStatsContent(data: StatsResponse) {
   const topCountry = data.topCountries?.[0];
   const coverage7 = data.coverage?.last7Days ?? Math.min(data.daily?.length || 0, 7);
   const coverage30 = data.coverage?.last30Days ?? (data.daily?.length || 0);
@@ -306,20 +182,15 @@ function renderStatsContent(data: StatsResponse, rosterStats: DerivedRosterStats
         ${renderRunningHead()}
 
         <section class="man-section name-section">
-          <h2>NAME</h2>
           <div class="identity">
             <div class="identity-details">
               <div class="name-heading">
-                <h1>VietProfs Statistics & Insights</h1>
+                <h1>VietProfs Visitor Statistics</h1>
               </div>
-              <p class="synopsis">Dataset health, diaspora education pathways, and privacy-respecting visitor metrics.</p>
+              <p class="synopsis">Hostname-scoped, privacy-respecting visitor traffic metrics powered by Cloudflare Analytics.</p>
             </div>
           </div>
         </section>
-
-        ${renderCompletenessSection(rosterStats)}
-
-        ${renderPathwaysSection(rosterStats)}
 
         <div class="stats-highlight-banner">
           <p class="highlight-text">${headline}</p>
@@ -465,7 +336,7 @@ function renderStatsContent(data: StatsResponse, rosterStats: DerivedRosterStats
   `;
 }
 
-function renderError(message: string, rosterStats?: DerivedRosterStats) {
+function renderError(message: string) {
   const base = import.meta.env.BASE_URL;
   return `
     <main>
@@ -473,19 +344,15 @@ function renderError(message: string, rosterStats?: DerivedRosterStats) {
         ${renderRunningHead()}
 
         <section class="man-section name-section">
-          <h2>NAME</h2>
           <div class="identity">
             <div class="identity-details">
               <div class="name-heading">
-                <h1>VietProfs Statistics & Insights</h1>
+                <h1>VietProfs Visitor Statistics</h1>
               </div>
-              <p class="synopsis">Dataset health and diaspora education pathways.</p>
+              <p class="synopsis">Privacy-respecting visitor metrics.</p>
             </div>
           </div>
         </section>
-
-        ${rosterStats ? renderCompletenessSection(rosterStats) : ''}
-        ${rosterStats ? renderPathwaysSection(rosterStats) : ''}
 
         <section class="man-section">
           <h2>VISITOR TRAFFIC</h2>
@@ -497,7 +364,11 @@ function renderError(message: string, rosterStats?: DerivedRosterStats) {
         </section>
 
         <footer class="man-footer">
-          <p><a href="${base}">← Back to VietProfs Directory</a></p>
+          <p>
+            <a href="${base}">← Back to Directory</a> ·
+            <a href="${base}?view=health">Data Health &amp; Completeness</a> ·
+            <a href="${base}?view=insights">Diaspora Insights &amp; Pathways</a>
+          </p>
         </footer>
       </article>
     </main>
@@ -511,9 +382,9 @@ function renderLoading() {
         ${renderRunningHead()}
 
         <section class="man-section">
-          <h2>STATISTICS & INSIGHTS</h2>
+          <h2>VISITOR STATISTICS</h2>
           <div class="stats-loading-box">
-            <p>Loading dataset health and visitor statistics...</p>
+            <p>Loading visitor statistics...</p>
           </div>
         </section>
       </article>
@@ -560,28 +431,12 @@ async function statusMessage(res: Response): Promise<string> {
 async function initStatsPage() {
   app.innerHTML = renderLoading();
 
-  let rosterStats: DerivedRosterStats;
-  try {
-    const roster = await loadRoster();
-    rosterStats = deriveRosterStats(roster);
-  } catch {
-    rosterStats = {
-      total: 0,
-      completeness: [],
-      topPhdInstitutions: [],
-      topUndergradInstitutions: [],
-      academicGenerations: [],
-      regionFieldDistribution: [],
-      recentUpdatesCount: { last7Days: 0, last30Days: 0, last90Days: 0 },
-    };
-  }
-
   try {
     const data = await fetchStats();
-    app.innerHTML = renderStatsContent(data, rosterStats);
+    app.innerHTML = renderStatsContent(data);
   } catch (err: unknown) {
     const msg = err instanceof Error ? err.message : 'Temporarily unavailable';
-    app.innerHTML = renderError(msg, rosterStats);
+    app.innerHTML = renderError(msg);
     document.getElementById('retry-btn')?.addEventListener('click', () => initStatsPage());
   }
 }

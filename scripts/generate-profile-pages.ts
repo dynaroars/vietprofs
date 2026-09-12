@@ -74,7 +74,7 @@ function profilePage(person: RosterEntry) {
     ? `<section class="man-section"><h2>RESEARCH</h2><ul>${person.researchAreas.map((area) => `<li>${escapeHtml(area)}</li>`).join('')}</ul></section>`
     : '';
   const researchOverview = person.researchOverview
-    ? `<section class="man-section"><h2>RESEARCH OVERVIEW</h2><p>${escapeHtml(person.researchOverview.text)}</p><p class="section-note research-overview-note"><a href="${escapeHtml(person.researchOverview.sources[0])}" target="_blank" rel="noopener noreferrer">Automatically summarized</a>; checked ${escapeHtml(formatRosterDate(person.researchOverview.verifiedAt))}.</p></section>`
+    ? `<section class="man-section"><h2>ABOUT</h2><p>${escapeHtml(person.researchOverview.text)}</p><p class="section-note research-overview-note">Automatically summarized; checked ${escapeHtml(formatRosterDate(person.researchOverview.verifiedAt))} (${person.researchOverview.sources.map((s, i) => `<a href="${escapeHtml(s)}" target="_blank" rel="noopener noreferrer">${person.researchOverview?.sources.length === 1 ? 'source' : `source ${i + 1}`}</a>`).join(', ')}).</p></section>`
     : '';
   const work = person.selectedWork ?? person.recentWork;
   const workHeading = person.selectedWork ? 'SELECTED WORK' : person.recentWork ? 'RECENT WORK' : '';
