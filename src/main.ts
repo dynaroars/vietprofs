@@ -998,7 +998,22 @@ async function init() {
     }
   });
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && !searchHelpPanel.hidden) hideSearchHelp();
+    if (e.key === 'Escape') {
+      if (!searchHelpPanel.hidden) {
+        hideSearchHelp();
+      } else if (filterState.insights || filterState.health || filterState.state) {
+        filterState.insights = false;
+        filterState.health = false;
+        filterState.state = '';
+        update();
+      } else if (document.activeElement === searchInput) {
+        searchInput.blur();
+        hideSuggestions();
+      } else if (searchInput.value) {
+        clearSearch();
+        update();
+      }
+    }
     const target = e.target as HTMLElement;
     const typing = target.matches('input, textarea, select, [contenteditable="true"]');
     if (e.key === '/' && !typing) {
@@ -1014,11 +1029,11 @@ async function init() {
     }
     if (typing || e.metaKey || e.ctrlKey || e.altKey) return;
     const entries = [...document.querySelectorAll<HTMLElement>('.entry')];
-    if ((e.key === 'j' || e.key === 'k') && (currentRoster.length || document.querySelectorAll('.entry').length)) {
+    if ((e.key === 'j' || e.key === 'k' || e.key === 'ArrowDown' || e.key === 'ArrowUp') && (currentRoster.length || document.querySelectorAll('.entry').length)) {
       e.preventDefault();
       const currentEntries = document.querySelectorAll<HTMLElement>('.entry');
       currentEntries[keyboardSelectedIndex]?.classList.remove('entry-keyboard-selected');
-      if (e.key === 'j') {
+      if (e.key === 'j' || e.key === 'ArrowDown') {
         const nextIndex = keyboardSelectedIndex + 1;
         const updatedEntries = document.querySelectorAll<HTMLElement>('.entry');
         keyboardSelectedIndex = updatedEntries.length ? nextIndex % updatedEntries.length : -1;

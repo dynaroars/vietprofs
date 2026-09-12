@@ -164,20 +164,20 @@ export function renderDecadesChart(roster: Roster): string {
       const pct = Math.round((count / max) * 100);
       const share = Math.round((count / total) * 100);
       return `
-        <div class="chart-row">
+        <button type="button" class="ranked-item chart-row" data-search="${escapeHtml(decade)}" data-scope="phd" title="Search faculty with PhD in ${escapeHtml(decade)}">
           <span class="chart-label">${escapeHtml(decade)}</span>
           <div class="chart-track">
             <div class="chart-bar" style="width: ${pct}%;"></div>
           </div>
           <span class="chart-value">${count} <span class="chart-share">(${share}%)</span></span>
-        </div>
+        </button>
       `;
     })
     .join('');
   return `
     <div class="insights-section">
       <h3 class="insights-heading">PhD Graduation Cohorts</h3>
-      <p class="insights-caption">Distribution by decade of PhD completion (${total} faculty on record).</p>
+      <p class="insights-caption">Distribution by decade of PhD completion (${total} faculty on record); click a decade to search.</p>
       <div class="chart-container">${rows}</div>
     </div>
   `;
