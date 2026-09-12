@@ -1485,7 +1485,11 @@
     "vp-1497",
     "vp-1500",
     "vp-1501",
-    "vp-1502"
+    "vp-1502",
+    "vp-1503",
+    "vp-1504",
+    "vp-1505",
+    "vp-1506"
   ],
   "batches": [
     {
@@ -3604,7 +3608,11 @@
     {
       "number": 79,
       "ids": [
-        "vp-1502"
+        "vp-1502",
+        "vp-1503",
+        "vp-1504",
+        "vp-1505",
+        "vp-1506"
       ],
       "status": "pending"
     }
@@ -91247,6 +91255,22 @@
       "evidence": [],
       "errors": [],
       "updatedAt": "2026-09-10T16:00:00.000Z"
+    },
+    "vp-1503": {
+      "overview": "pending",
+      "work": "pending"
+    },
+    "vp-1504": {
+      "overview": "pending",
+      "work": "pending"
+    },
+    "vp-1505": {
+      "overview": "pending",
+      "work": "pending"
+    },
+    "vp-1506": {
+      "overview": "pending",
+      "work": "pending"
     }
   },
   "generatedAt": "2026-09-07T05:40:00.000Z"
