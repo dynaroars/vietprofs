@@ -620,6 +620,8 @@ const FIELD_OVERRIDES = new Map([
   ['Department of Animal and Aquacultural Sciences, Faculty of Biosciences|Norwegian University of Life Sciences', 'Agricultural & Natural Resource Sciences'],
   ['Laboratoire Auscultation et Modélisation des Structures (LAMES), Département Matériaux et Structures (MAST)|Université Gustave Eiffel', 'Engineering'],
   ['Laboratoire des Matériaux Composites pour la Construction (LMC2)|Université Claude Bernard Lyon 1', 'Engineering'],
+  ['Interdisciplinary Centre for Security, Reliability and Trust (SnT)|University of Luxembourg', 'Computer & Information Sciences'],
+  ['Faculty of Social Sciences|HSE University', 'Social & Behavioral Sciences'],
   ['Department of Engineering Technology and Construction Management|University of North Carolina at Charlotte', 'Engineering'],
   ['Laboratoire Plasma et Conversion d\'Énergie (LAPLACE), ENSEEIHT|Toulouse INP', 'Engineering'],
   ['Service d\'Ophtalmologie, CHU Amiens-Picardie|Université de Picardie Jules Verne', 'Health Sciences'],

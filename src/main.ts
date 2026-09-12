@@ -1066,6 +1066,8 @@ async function init() {
 
   locationSelect.addEventListener('change', () => {
     filterState.state = '';
+    filterState.insights = false;
+    filterState.health = false;
     update();
   });
   fieldSelect.addEventListener('change', () => {
@@ -1073,8 +1075,16 @@ async function init() {
     filterState.health = false;
     update();
   });
-  trackSelect.addEventListener('change', () => update({ fromSearch: false }));
-  institutionTypeSelect.addEventListener('change', () => update({ fromSearch: false }));
+  trackSelect.addEventListener('change', () => {
+    filterState.insights = false;
+    filterState.health = false;
+    update({ fromSearch: false });
+  });
+  institutionTypeSelect.addEventListener('change', () => {
+    filterState.insights = false;
+    filterState.health = false;
+    update({ fromSearch: false });
+  });
   sortSelect.addEventListener('change', () => update({ fromSearch: false }));
 
   document.getElementById('home-link').addEventListener('click', (e) => {
