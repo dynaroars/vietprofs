@@ -4,9 +4,9 @@ This is the cross-outable batch checklist for AI-driven web scouting of missing 
 The machine-readable source of truth is [`maintenance/missing-portraits.json`](./missing-portraits.json).
 
 ## Status Summary
-- **Total Tracked Entries**: 389
+- **Total Tracked Entries**: 394
 - **Batch Size**: 10 profiles per batch
-- **Total Batches**: 39
+- **Total Batches**: 40
 
 ## Checklist
 
@@ -48,4 +48,5 @@ The machine-readable source of truth is [`maintenance/missing-portraits.json`](.
 - [ ] **Batch 36** (Items 351–360: vp-1441 to vp-1454) — 0/10 fetched
 - [ ] **Batch 37** (Items 361–370: vp-1455 to vp-1465) — 0/10 fetched
 - [ ] **Batch 38** (Items 371–380: vp-1466 to vp-1486) — 0/10 fetched
-- [ ] **Batch 39** (Items 381–389: vp-1487 to vp-1497) — 0/9 fetched
+- [/] **Batch 39** (Items 381–390: vp-1487 to vp-0250) — 1/10 fetched
+- [x] **Batch 40** (Items 391–394: vp-0784 to vp-0834) — 4/4 fetched
