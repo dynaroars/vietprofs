@@ -38,8 +38,7 @@ import { applyFavoriteToggle, fieldDropdownLabel, renderRosterEntry } from './re
 import { clearPinnedSearches, clearRecentProfiles, loadFavorites, loadPinnedSearches, loadRecentProfiles, toggleFavorite, togglePinnedSearch } from './favorites-store.ts';
 import { openRosterShell } from './roster-shell.ts';
 import { locationForQuery } from './filter-state.ts';
-import { renderFunFacts, renderGrowthChart, type GrowthMetricKey } from './insights.ts';
-import { renderHealthPanel } from './health-panel.ts';
+import { renderFunFacts, renderGrowthChart, renderHealthPanel, type GrowthMetricKey } from './insights.ts';
 import { deriveRosterStats } from './derived-stats.ts';
 import { normalizeText, parseKeywordQuery as parseKeywordQueryShared } from './search-kit.ts';
 
