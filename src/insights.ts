@@ -435,24 +435,58 @@ export function renderFunFacts(
   const worldUniversities = new Set(fullRoster.map((p) => p.university)).size;
 
   const selectedSection = selectedIsWorld ? '' : `
-      <!-- SECTION 1: SELECTED LOCATION -->
+      <!-- REGIONAL SECTION -->
       <section class="insights-section-block">
         <div class="insights-section-header">
           <span class="insights-badge">${escapeHtml(selectedLocationLabel)}</span>
           <h2 class="insights-main-heading">${escapeHtml(selectedIsUs ? 'United States Academic Landscape' : `${selectedLocationLabel} Academic Landscape`)}</h2>
           <p class="insights-main-desc">${selectedRoster.length} ${selectedRoster.length === 1 ? 'person' : 'people'} across ${selectedUniversities} institution${selectedUniversities === 1 ? '' : 's'} in ${escapeHtml(selectedIsUs ? 'the United States' : selectedLocationLabel.replace(/^\S+\s+/, ''))}.</p>
         </div>
-        ${selectedIsUs && selectedRoster.length ? renderStateGrid(selectedRoster) : ''}
-        ${!selectedIsUs && selectedRoster.length ? renderWorldMap(selectedRoster, selectedLocation) : ''}
-        ${selectedRoster.length ? renderDistributionCharts(selectedRoster) : ''}
-        ${selectedRoster.length ? renderTopFacultyHubs(selectedRoster, selectedIsUs ? 'Top U.S. Faculty Hubs' : 'Top Faculty Hubs', 'Institutions with the most Vietnamese academics in the selected location; click to search.') : ''}
-        ${selectedRoster.length ? renderAlmaMaterOriginsMap(selectedRoster) : ''}
-        ${selectedRoster.length ? renderAcademicFlowSummary(selectedRoster) : ''}
-        ${selectedRoster.length ? renderDecadesChart(selectedRoster) : ''}
-        <div class="insights-section">
-          <h3 class="insights-heading">${escapeHtml(selectedLocationLabel)} Highlights</h3>
-          <ul class="fun-facts">${formatList([...selectedFacts, ...selectedAwardsFacts])}</ul>
-          ${calculationBasis(selectedRoster, selectedLocationLabel)}
+
+        <div class="insights-category">
+          <div class="insights-category-header">
+            <h3 class="insights-category-title">1. Geographic Distribution &amp; Faculty Hubs</h3>
+            <p class="insights-category-subtitle">Regional density and institutions with the highest concentration of Vietnamese faculty.</p>
+          </div>
+          ${selectedIsUs && selectedRoster.length ? renderStateGrid(selectedRoster) : ''}
+          ${!selectedIsUs && selectedRoster.length ? renderWorldMap(selectedRoster, selectedLocation) : ''}
+          ${selectedRoster.length ? renderTopFacultyHubs(selectedRoster, selectedIsUs ? 'Top U.S. Faculty Hubs' : 'Top Faculty Hubs', 'Institutions with the most Vietnamese academics in the selected location; click to search.') : ''}
+        </div>
+
+        <div class="insights-category">
+          <div class="insights-category-header">
+            <h3 class="insights-category-title">2. Academic Disciplines &amp; Career Stages</h3>
+            <p class="insights-category-subtitle">Broad disciplinary distributions and faculty appointment tracks.</p>
+          </div>
+          ${selectedRoster.length ? renderDistributionCharts(selectedRoster) : ''}
+        </div>
+
+        <div class="insights-category">
+          <div class="insights-category-header">
+            <h3 class="insights-category-title">3. Diaspora Pathways &amp; Educational Origins</h3>
+            <p class="insights-category-subtitle">Undergraduate feeder schools, doctoral alma maters, and international faculty trajectories.</p>
+          </div>
+          ${selectedRoster.length ? renderAlmaMaterOriginsMap(selectedRoster) : ''}
+          ${selectedRoster.length ? renderAcademicFlowSummary(selectedRoster) : ''}
+        </div>
+
+        <div class="insights-category">
+          <div class="insights-category-header">
+            <h3 class="insights-category-title">4. Academic Generations</h3>
+            <p class="insights-category-subtitle">Distribution by PhD graduation decade.</p>
+          </div>
+          ${selectedRoster.length ? renderDecadesChart(selectedRoster) : ''}
+        </div>
+
+        <div class="insights-category">
+          <div class="insights-category-header">
+            <h3 class="insights-category-title">5. Scholarly Highlights &amp; Honors</h3>
+            <p class="insights-category-subtitle">Roster-verified observations, prestigious recognitions, and major honors.</p>
+          </div>
+          <div class="insights-section">
+            <ul class="fun-facts">${formatList([...selectedFacts, ...selectedAwardsFacts])}</ul>
+            ${calculationBasis(selectedRoster, selectedLocationLabel)}
+          </div>
         </div>
       </section>
   `;
@@ -462,24 +496,65 @@ export function renderFunFacts(
       <div class="insights-dashboard">
         ${selectedSection}
 
-        <!-- WORLD -->
+        <!-- GLOBAL SECTION -->
         <section class="insights-section-block">
           <div class="insights-section-header">
-            <span class="insights-badge">🌐 World</span>
-            <h2 class="insights-main-heading">Global &amp; Worldwide Diaspora Landscape</h2>
-            <p class="insights-main-desc">${fullRoster.length} people across ${worldUniversities} institutions in the World.</p>
+            <span class="insights-badge">🌐 Global Panorama</span>
+            <h2 class="insights-main-heading">Worldwide Diaspora Landscape</h2>
+            <p class="insights-main-desc">${fullRoster.length} academics across ${worldUniversities} institutions worldwide.</p>
           </div>
-          ${renderWorldMap(fullRoster, selectedLocation)}
-          ${renderDistributionCharts(fullRoster)}
-          ${worldInternationalRoster.length ? renderTopFacultyHubs(worldInternationalRoster, 'Top International Faculty Hubs', 'Global institutions outside the U.S. with the most Vietnamese academics; click to search.') : ''}
-          ${renderAlmaMaterOriginsMap(fullRoster)}
-          ${renderAcademicFlowSummary(fullRoster)}
-          ${renderGrowthChart(statsHistory, activeGrowthMetric)}
-          ${renderDecadesChart(fullRoster)}
-          <div class="insights-section">
-            <h3 class="insights-heading">World Highlights</h3>
-            <ul class="fun-facts">${formatList([...worldFacts, ...worldAwardsFacts])}</ul>
-            ${calculationBasis(fullRoster, 'World')}
+
+          <div class="insights-category">
+            <div class="insights-category-header">
+              <h3 class="insights-category-title">1. Geographic Distribution &amp; Faculty Hubs</h3>
+              <p class="insights-category-subtitle">Worldwide diaspora geography and top international faculty concentrations.</p>
+            </div>
+            ${renderWorldMap(fullRoster, selectedLocation)}
+            ${worldInternationalRoster.length ? renderTopFacultyHubs(worldInternationalRoster, 'Top International Faculty Hubs', 'Global institutions outside the U.S. with the most Vietnamese academics; click to search.') : ''}
+          </div>
+
+          <div class="insights-category">
+            <div class="insights-category-header">
+              <h3 class="insights-category-title">2. Academic Disciplines &amp; Career Stages</h3>
+              <p class="insights-category-subtitle">Field distribution across STEM, medicine, humanities, and faculty tracks.</p>
+            </div>
+            ${renderDistributionCharts(fullRoster)}
+          </div>
+
+          <div class="insights-category">
+            <div class="insights-category-header">
+              <h3 class="insights-category-title">3. Diaspora Pathways &amp; Educational Origins</h3>
+              <p class="insights-category-subtitle">Top undergraduate feeders, doctoral alma maters, and international academic career pairings.</p>
+            </div>
+            ${renderAlmaMaterOriginsMap(fullRoster)}
+            ${renderAcademicFlowSummary(fullRoster)}
+          </div>
+
+          <div class="insights-category">
+            <div class="insights-category-header">
+              <h3 class="insights-category-title">4. Academic Generations</h3>
+              <p class="insights-category-subtitle">Historical cohorts grouped by PhD completion decade.</p>
+            </div>
+            ${renderDecadesChart(fullRoster)}
+          </div>
+
+          <div class="insights-category">
+            <div class="insights-category-header">
+              <h3 class="insights-category-title">5. Scholarly Highlights &amp; Honors</h3>
+              <p class="insights-category-subtitle">Curated roster observations, prestigious fellowships, and major awards.</p>
+            </div>
+            <div class="insights-section">
+              <ul class="fun-facts">${formatList([...worldFacts, ...worldAwardsFacts])}</ul>
+              ${calculationBasis(fullRoster, 'World')}
+            </div>
+          </div>
+
+          <div class="insights-category">
+            <div class="insights-category-header">
+              <h3 class="insights-category-title">6. Project &amp; Archive Growth</h3>
+              <p class="insights-category-subtitle">Evolution of the VietProfs database over time across size, institutions, and verified records.</p>
+            </div>
+            ${renderGrowthChart(statsHistory, activeGrowthMetric)}
           </div>
         </section>
       </div>

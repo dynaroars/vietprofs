@@ -453,8 +453,10 @@ function renderStatsContent(data: StatsResponse, rosterStats: DerivedRosterStats
 
         <footer class="man-footer">
           <p>
-            <a href="${import.meta.env.BASE_URL}">← Back to VietProfs Directory</a> ·
-            <a href="${import.meta.env.BASE_URL}submit.html">Submit / Update Entry</a> ·
+            <a href="${import.meta.env.BASE_URL}">← Back to Directory</a> ·
+            <a href="${import.meta.env.BASE_URL}?view=health">Data Health &amp; Completeness</a> ·
+            <a href="${import.meta.env.BASE_URL}?view=insights">Diaspora Insights &amp; Pathways</a> ·
+            <a href="${import.meta.env.BASE_URL}submit.html">Submit / Update</a> ·
             <a href="https://github.com/dynaroars/vietprofs" target="_blank" rel="noopener noreferrer">GitHub</a>
           </p>
         </footer>

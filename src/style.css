@@ -3115,55 +3115,255 @@ a.entry-name:focus-visible {
   margin-top: 0.2rem;
 }
 
-/* Share Buttons & Toast Notifications */
-.share-search-btn {
-  font-family: var(--font-mono);
-  font-size: var(--text-xs, 0.75rem);
-  padding: 0.35rem 0.65rem;
-  background: var(--tag-bg, rgba(0, 0, 0, 0.05));
-  border: 1px solid var(--border-color, #cbd5e1);
-  border-radius: var(--radius-sm, 4px);
+/* Insights Category Structure */
+.insights-category {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding-top: 1.25rem;
+  border-top: 1px dashed var(--border-subtle);
+}
+
+.insights-category:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.insights-category-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-bottom: 0.35rem;
+}
+
+.insights-category-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-base);
+  font-weight: 700;
   color: var(--text-primary);
-  cursor: pointer;
-  transition: all 0.15s ease;
+  margin: 0;
+}
+
+.insights-category-subtitle {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Health & Completeness Panel */
+.health-panel-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  padding: 1.5rem;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  margin-top: 0.5rem;
+}
+
+.health-panel-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 1rem;
+}
+
+.health-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.health-records-count {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+}
+
+.health-main-heading {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.health-main-desc {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.completeness-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.completeness-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.completeness-card:hover {
+  border-color: var(--accent-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.completeness-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.completeness-label {
+  font-weight: 600;
+  font-size: var(--text-sm);
+  color: var(--text-primary);
+}
+
+.completeness-pct {
+  font-family: var(--font-mono);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+.progress-bar-bg {
+  width: 100%;
+  height: 8px;
+  background: var(--border-subtle);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-color), color-mix(in srgb, var(--accent-color) 70%, #10b981));
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+
+.completeness-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+}
+
+.completeness-desc {
+  color: var(--text-muted);
+}
+
+.recent-updates-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1rem;
+  background: color-mix(in srgb, var(--accent-color) 8%, var(--bg-surface));
+  border: 1px solid color-mix(in srgb, var(--accent-color) 25%, transparent);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  color: var(--text-primary);
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #10b981;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  animation: pulse-ring 1.8s infinite;
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(16, 185, 129, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+.recent-updates-link {
+  margin-left: auto;
+  font-weight: 600;
+  font-size: var(--text-xs);
+  color: var(--accent-color);
+  text-decoration: none;
   white-space: nowrap;
 }
 
-.share-search-btn:hover {
-  background: var(--hover-bg, rgba(0, 0, 0, 0.1));
-  border-color: var(--accent-color, #2563eb);
+.recent-updates-link:hover {
+  text-decoration: underline;
 }
 
-.entry-share-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 1.35rem;
-  height: 1.35rem;
-  padding: 0;
-  margin-left: 0.15rem;
-  background: transparent;
-  border: none;
+.health-methodology-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 1.25rem;
+}
+
+.health-methodology-section h3 {
+  font-family: var(--font-heading);
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.health-methodology-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.85rem;
+}
+
+.methodology-card {
+  padding: 0.85rem;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+}
+
+.methodology-card h4 {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 0.25rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.methodology-card p {
+  font-size: var(--text-xs);
   color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.45;
+}
+
+.methodology-card code {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  background: var(--border-subtle);
+  padding: 0.1rem 0.25rem;
   border-radius: 3px;
-  cursor: pointer;
-  vertical-align: middle;
-  transition: color 0.15s ease, background-color 0.15s ease;
-}
-
-.entry-share-link svg {
-  width: 0.95rem;
-  height: 0.95rem;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.entry-share-link:hover {
-  color: var(--accent-color, #2563eb);
-  background: var(--hover-bg, rgba(0, 0, 0, 0.06));
 }
 
 .toast-notification {

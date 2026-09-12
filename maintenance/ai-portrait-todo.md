@@ -14,8 +14,8 @@ The machine-readable source of truth is [`maintenance/missing-portraits.json`](.
 - [/] **Batch 02** (Items 11–20: vp-0375 to vp-0524) — 7/10 fetched
 - [/] **Batch 03** (Items 21–30: vp-0525 to vp-0677) — 9/10 fetched
 - [x] **Batch 04** (Items 31–40: vp-0692 to vp-0798) — 10/10 fetched
-- [/] **Batch 05** (Items 41–50: vp-0800 to vp-0828) — 1/10 fetched
-- [ ] **Batch 06** (Items 51–60: vp-0832 to vp-0866) — 0/10 fetched
+- [/] **Batch 05** (Items 41–50: vp-0800 to vp-0828) — 5/10 fetched
+- [/] **Batch 06** (Items 51–60: vp-0832 to vp-0866) — 1/10 fetched
 - [ ] **Batch 07** (Items 61–70: vp-0871 to vp-0897) — 0/10 fetched
 - [ ] **Batch 08** (Items 71–80: vp-0901 to vp-0929) — 0/10 fetched
 - [ ] **Batch 09** (Items 81–90: vp-0936 to vp-0981) — 0/10 fetched

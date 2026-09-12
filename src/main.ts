@@ -37,6 +37,7 @@ import { clearPinnedSearches, clearRecentProfiles, loadFavorites, loadPinnedSear
 import { openRosterShell } from './roster-shell.ts';
 import { locationForQuery } from './filter-state.ts';
 import { renderFunFacts, renderGrowthChart, type GrowthMetricKey } from './insights.ts';
+import { renderHealthPanel } from './health-panel.ts';
 import { normalizeText, parseKeywordQuery as parseKeywordQueryShared } from './search-kit.ts';
 
 const app = document.getElementById('app');
@@ -138,6 +139,9 @@ function renderShell() {
           <a class="icon-link github-link" href="https://github.com/dynaroars/vietprofs" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository" title="GitHub repository and source code">
             <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
           </a>
+          <a class="icon-link health-link" href="?view=health" id="health-link" aria-label="Dataset Health &amp; Completeness" title="Dataset Health &amp; Completeness">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </a>
         </div>
       </div>
       <div class="subtitle-row">
@@ -157,7 +161,6 @@ function renderShell() {
           <div id="search-suggestion-panel" class="search-suggestion-panel" role="listbox" hidden></div>
         </div>
         <button type="button" id="pin-search-btn" class="pin-search-btn" aria-pressed="false" title="Pin current search">Pin search</button>
-        <button type="button" id="share-search-btn" class="share-search-btn" title="Copy shareable link to current search" aria-label="Copy search link">Share</button>
         <button type="button" id="search-help-btn" class="search-help-btn" aria-haspopup="dialog" aria-expanded="false" aria-controls="search-help-panel" aria-label="Search syntax and keyboard help" title="Search syntax and keyboard help">?</button>
         <div id="search-help-panel" class="search-help-panel" role="dialog" aria-label="Search syntax help" hidden>
           <p><strong>QUERY SYNTAX</strong></p>
@@ -364,14 +367,14 @@ async function init() {
   const searchScopeChipLabel = document.getElementById('search-scope-chip-label') as HTMLElement;
   const suggestionPanel = document.getElementById('search-suggestion-panel') as HTMLElement;
   const pinSearchBtn = document.getElementById('pin-search-btn') as HTMLButtonElement;
-  const shareSearchBtn = document.getElementById('share-search-btn') as HTMLButtonElement;
+  const healthLink = document.getElementById('health-link') as HTMLAnchorElement | null;
   const browserShelf = document.getElementById('browser-shelf') as HTMLElement;
   const locationSelect = document.getElementById('location-filter') as HTMLSelectElement;
   const fieldSelect = document.getElementById('field-filter') as HTMLSelectElement;
   const trackSelect = document.getElementById('track-filter') as HTMLSelectElement;
   const institutionTypeSelect = document.getElementById('institution-type-filter') as HTMLSelectElement;
   const sortSelect = document.getElementById('sort-order') as HTMLSelectElement;
-  const filterState = { state: '', insights: false };
+  const filterState = { state: '', insights: false, health: false };
   const commandOutput = document.getElementById('command-output') as HTMLOutputElement;
   let queryPlan = '';
   let keyboardSelectedIndex = -1;
@@ -618,7 +621,8 @@ async function init() {
   if (FIELDS.includes(requestedField) && roster.some((p) => fieldOf(p.department, p.university) === requestedField)) {
     initialField = requestedField;
   }
-  filterState.insights = params.get('view') === 'insights' || requestedField === 'interesting';
+  filterState.health = params.get('view') === 'health';
+  filterState.insights = !filterState.health && (params.get('view') === 'insights' || requestedField === 'interesting');
   let initialTrack = 'all';
   if (TRACKS.some((track) => track === requestedTrack) && roster.some((p) => p.track === requestedTrack)) {
     initialTrack = requestedTrack;
@@ -642,7 +646,8 @@ async function init() {
     if (trackSelect.value !== 'all') next.set('track', trackSelect.value);
     if (institutionTypeSelect.value !== 'all') next.set('institutionType', institutionTypeSelect.value);
     if (sortSelect.value !== 'random') next.set('sort', sortSelect.value);
-    if (filterState.insights) next.set('view', 'insights');
+    if (filterState.health) next.set('view', 'health');
+    else if (filterState.insights) next.set('view', 'insights');
     const query = next.toString();
     const url = `${window.location.pathname}${query ? `?${query}` : ''}`;
     window.history.replaceState(null, '', url);
@@ -709,9 +714,24 @@ async function init() {
     if (fromSearch) {
       filterState.state = '';
       filterState.insights = false;
+      filterState.health = false;
       autoSelectLocationForQuery();
     }
     updateDropdownHighlights();
+    const countEl = document.getElementById('result-count');
+    const rosterEl = document.getElementById('roster');
+    if (filterState.health) {
+      if (countEl) {
+        countEl.textContent = 'Dataset health, metadata completeness, and verification metrics:';
+      }
+      if (rosterEl) {
+        rosterEl.innerHTML = renderHealthPanel(roster, import.meta.env.BASE_URL);
+      }
+      renderQueryPlan(roster.length, 'health');
+      syncUrl();
+      renderBrowserShelf();
+      return;
+    }
     const locRoster = roster.filter((p) => locationMatches(p, locationSelect.value));
     if (filterState.insights) {
       renderFunFacts(locRoster, locationLabel(locationSelect.value), locationSelect.value, roster, statsHistory, currentGrowthMetric);
@@ -745,14 +765,13 @@ async function init() {
     renderBrowserShelf();
   });
 
-  shareSearchBtn.addEventListener('click', async () => {
-    const url = window.location.href;
-    try {
-      await navigator.clipboard.writeText(url);
-      showToast('Search link copied to clipboard!');
-    } catch {
-      showToast('Could not copy link to clipboard.');
+  healthLink?.addEventListener('click', (e) => {
+    e.preventDefault();
+    filterState.health = !filterState.health;
+    if (filterState.health) {
+      filterState.insights = false;
     }
+    update();
   });
 
   browserShelf.addEventListener('click', (event) => {
@@ -768,6 +787,7 @@ async function init() {
     hideCommandOutput();
     filterState.state = '';
     filterState.insights = false;
+    filterState.health = false;
     setFilterValues({ location: 'World' });
     sortSelect.value = 'random';
     update();
@@ -782,8 +802,20 @@ async function init() {
       completeCommand('Displaying faculty sorted by most recently updated.');
       return true;
     }
-    if (command === 'completeness' || command === 'health') {
-      window.location.href = `${import.meta.env.BASE_URL}stats.html`;
+    if (command === 'completeness' || command === 'health' || command === 'audit') {
+      clearSearch();
+      filterState.health = true;
+      filterState.insights = false;
+      update();
+      completeCommand('Displaying dataset health, metadata completeness, and verification metrics.');
+      return true;
+    }
+    if (command === 'insights' || command === 'facts' || command === 'diaspora' || command === 'pathways') {
+      clearSearch();
+      filterState.insights = true;
+      filterState.health = false;
+      update();
+      completeCommand('Displaying diaspora insights and macro statistics.');
       return true;
     }
     if (command === 'sudo vietprofs') {
@@ -801,7 +833,7 @@ async function init() {
       completeCommand('help: query prefixes, shortcuts, and commands are listed above');
       return true;
     }
-    if (command === 'visitor stats') {
+    if (command === 'visitor stats' || command === 'traffic') {
       window.location.href = `${import.meta.env.BASE_URL}stats.html`;
       return true;
     }
@@ -1023,6 +1055,7 @@ async function init() {
   });
   fieldSelect.addEventListener('change', () => {
     filterState.insights = false;
+    filterState.health = false;
     update();
   });
   trackSelect.addEventListener('change', () => update({ fromSearch: false }));
@@ -1038,20 +1071,6 @@ async function init() {
   // since renderRoster()/renderFunFacts() both replace its innerHTML wholesale on every update().
   document.getElementById('roster').addEventListener('click', (e) => {
     const target = e.target as HTMLElement;
-    const shareBtn = target.closest<HTMLButtonElement>('.entry-share-link');
-    if (shareBtn) {
-      e.preventDefault();
-      e.stopPropagation();
-      const targetPath = shareBtn.getAttribute('data-path') || '';
-      const name = shareBtn.getAttribute('data-name') || 'Profile';
-      const fullUrl = `${window.location.origin}${targetPath.startsWith('/') ? targetPath : `/${targetPath}`}`;
-      void navigator.clipboard.writeText(fullUrl).then(() => {
-        showToast(`Link to ${name} copied!`);
-      }).catch(() => {
-        showToast('Could not copy link to clipboard.');
-      });
-      return;
-    }
     const favorite = target.closest<HTMLButtonElement>('.favorite-toggle');
     if (favorite?.dataset.id) {
       applyFavoriteToggle(favorite, toggleFavorite(favorite.dataset.id));
@@ -1062,6 +1081,7 @@ async function init() {
       clearSearch();
       filterState.state = tile.dataset.state || '';
       filterState.insights = false;
+      filterState.health = false;
       setFilterValues({ location: 'US' }); // leaving the facts view to show filtered U.S. results
       update();
       return;
@@ -1070,6 +1090,7 @@ async function init() {
     if (breakdownItem?.dataset.filter && breakdownItem.dataset.value) {
       clearSearch();
       filterState.insights = false;
+      filterState.health = false;
       const { filter, value } = breakdownItem.dataset;
       if (filter === 'field') {
         setFilterValues({ location: locationSelect.value, field: value });
@@ -1086,6 +1107,7 @@ async function init() {
       const country = worldMapItem.dataset.country;
       clearSearch();
       filterState.insights = false;
+      filterState.health = false;
       setFilterValues({ location: country });
       update();
       return;
@@ -1106,6 +1128,7 @@ async function init() {
         ? `${KEYWORD_LABELS[rankedScope]}: ${rankedItem.dataset.search}`
         : rankedItem.dataset.search);
       filterState.insights = false;
+      filterState.health = false;
       fieldSelect.value = 'all';
       trackSelect.value = 'all';
       institutionTypeSelect.value = 'all';
