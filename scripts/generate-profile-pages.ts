@@ -63,6 +63,8 @@ function profilePage(person: RosterEntry) {
   const path = personPath(person.id);
   const canonicalUrl = absoluteUrl(path);
   const title = `${name} — VietProfs`;
+  const ogImage = person.portrait ? absoluteUrl(person.portrait) : absoluteUrl('vietprofs-bamboo-v-512.png');
+  const ogImageAlt = person.portrait ? `Portrait of ${name}` : 'VietProfs bamboo V logo';
   const role = [canonicalRank(person), person.department, person.university].filter(Boolean).join(', ');
   const description = `${name} is listed by VietProfs as ${role}.`;
   const portrait = person.portrait
@@ -100,23 +102,31 @@ function profilePage(person: RosterEntry) {
   const linkSection = links.length
     ? `<section class="man-section"><h2>SOURCES</h2><nav class="links" aria-label="External profiles">${links.map(({ label, href, icon }) => `<a href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true">${icon}</svg>${escapeHtml(label)}</a>`).join('')}</nav></section>`
     : '';
+  const rawRecord = escapeHtml(JSON.stringify(person, null, 2));
   const editUrl = `../submit.html?edit=${encodeURIComponent(person.id)}`;
   const favoriteLabel = 'Add to favorites';
   const favoriteToggle = `<button type="button" class="favorite-toggle profile-favorite-toggle" data-id="${escapeHtml(person.id)}" data-name="${escapeHtml(name)}" aria-pressed="false" aria-label="${favoriteLabel}" title="${favoriteLabel}"><svg viewBox="0 0 24 24" aria-hidden="true">${STAR_ICON}</svg></button>`;
   const profileScript = `<script type="module">const KEY='vietprofs:favorites',RECENT_KEY='vietprofs:recent-profiles',id=${JSON.stringify(person.id)},valid=(value)=>typeof value==='string'&&/^vp-\\d{4}$/.test(value),load=(key)=>{try{const value=JSON.parse(localStorage.getItem(key)||'[]');return Array.isArray(value)?value.filter(valid):[]}catch{return[]}};localStorage.setItem(RECENT_KEY,JSON.stringify([id,...load(RECENT_KEY).filter((value)=>value!==id)].slice(0,8)));const button=document.querySelector('.favorite-toggle[data-id]');if(button){const save=(values)=>localStorage.setItem(KEY,JSON.stringify(values));const apply=(favorited)=>{button.classList.toggle('is-favorite',favorited);button.setAttribute('aria-pressed',favorited?'true':'false');const label=favorited?'Remove from favorites':'Add to favorites';button.setAttribute('aria-label',label);button.title=label;};apply(load(KEY).includes(id));button.addEventListener('click',()=>{const current=load(KEY);const next=current.includes(id)?current.filter((value)=>value!==id):[...current,id];save(next);apply(next.includes(id));});}</script>`;
-  const rawRecord = escapeHtml(JSON.stringify(person, null, 2));
   const jsonLd = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'Person',
     name,
-    url: canonicalUrl,
     jobTitle: canonicalRank(person),
-    affiliation: { '@type': 'Organization', name: person.university },
-    ...(person.researchAreas?.length ? { knowsAbout: person.researchAreas } : {}),
-    sameAs: [person.profileUrl, person.websiteUrl, person.scholarUrl].filter(Boolean),
-  }).replace(/</g, '\\u003c');
+    affiliation: {
+      '@type': 'EducationalOrganization',
+      name: person.university,
+    },
+    url: canonicalUrl,
+  });
 
   return `<!doctype html>
+<!--
+          _/\\
+         /  \\      VietProfs
+        /_/\\_\\     ${escapeHtml(name)} (${escapeHtml(person.id)})
+          ||
+     view source encouraged · https://github.com/dynaroars/vietprofs
+-->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -131,14 +141,19 @@ function profilePage(person: RosterEntry) {
   <meta property="og:title" content="${escapeHtml(title)}">
   <meta property="og:description" content="${escapeHtml(description)}">
   <meta property="og:url" content="${canonicalUrl}">
-  <meta property="og:image" content="${absoluteUrl('vietprofs-bamboo-v-512.png')}">
-  <meta property="og:image:alt" content="VietProfs bamboo V logo">
+  <meta property="og:image" content="${escapeHtml(ogImage)}">
+  <meta property="og:image:alt" content="${escapeHtml(ogImageAlt)}">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="${escapeHtml(title)}">
+  <meta name="twitter:description" content="${escapeHtml(description)}">
+  <meta name="twitter:image" content="${escapeHtml(ogImage)}">
+  <meta name="twitter:image:alt" content="${escapeHtml(ogImageAlt)}">
   <link rel="icon" type="image/svg+xml" href="../vietprofs-bamboo-v.svg">
   <link rel="apple-touch-icon" href="../vietprofs-bamboo-v-512.png">
   <title>${escapeHtml(title)}</title>
   <script type="application/ld+json">${jsonLd}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../profile.css">
 </head>

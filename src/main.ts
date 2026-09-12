@@ -31,7 +31,7 @@ import {
   type SearchIndex,
   type StatsHistoryPoint,
 } from './data.ts';
-import { escapeHtml, formatRosterDate } from './utils.ts';
+import { escapeHtml, formatRosterDate, showToast } from './utils.ts';
 import { applyFavoriteToggle, fieldDropdownLabel, renderRosterEntry } from './render.ts';
 import { clearPinnedSearches, clearRecentProfiles, loadFavorites, loadPinnedSearches, loadRecentProfiles, toggleFavorite, togglePinnedSearch } from './favorites-store.ts';
 import { openRosterShell } from './roster-shell.ts';
@@ -157,6 +157,7 @@ function renderShell() {
           <div id="search-suggestion-panel" class="search-suggestion-panel" role="listbox" hidden></div>
         </div>
         <button type="button" id="pin-search-btn" class="pin-search-btn" aria-pressed="false" title="Pin current search">Pin search</button>
+        <button type="button" id="share-search-btn" class="share-search-btn" title="Copy shareable link to current search" aria-label="Copy search link">Share</button>
         <button type="button" id="search-help-btn" class="search-help-btn" aria-haspopup="dialog" aria-expanded="false" aria-controls="search-help-panel" aria-label="Search syntax and keyboard help" title="Search syntax and keyboard help">?</button>
         <div id="search-help-panel" class="search-help-panel" role="dialog" aria-label="Search syntax help" hidden>
           <p><strong>QUERY SYNTAX</strong></p>
@@ -167,7 +168,7 @@ function renderShell() {
           <p><strong>KEYBOARD</strong></p>
           <p><code>/</code> search · <code>j</code>/<code>k</code> move · <code>Enter</code> open · <code>f</code> favorite · <code>r</code> random · <code>Esc</code> clear</p>
           <p><strong>COMMANDS</strong></p>
-          <p><code>help</code> · <code>visitor stats</code> · <code>query plan</code> · <code>whoami</code> · <code>uname -a</code> · <code>fortune</code> · <code>/dev/random</code> · <code>theme crt</code></p>
+          <p><code>help</code> · <code>recent</code> · <code>visitor stats</code> · <code>query plan</code> · <code>whoami</code> · <code>uname -a</code> · <code>fortune</code> · <code>/dev/random</code> · <code>theme crt</code></p>
         </div>
       </div>
       <select id="location-filter" class="field-select location-select" aria-label="Filter by location">
@@ -363,6 +364,7 @@ async function init() {
   const searchScopeChipLabel = document.getElementById('search-scope-chip-label') as HTMLElement;
   const suggestionPanel = document.getElementById('search-suggestion-panel') as HTMLElement;
   const pinSearchBtn = document.getElementById('pin-search-btn') as HTMLButtonElement;
+  const shareSearchBtn = document.getElementById('share-search-btn') as HTMLButtonElement;
   const browserShelf = document.getElementById('browser-shelf') as HTMLElement;
   const locationSelect = document.getElementById('location-filter') as HTMLSelectElement;
   const fieldSelect = document.getElementById('field-filter') as HTMLSelectElement;
@@ -743,6 +745,16 @@ async function init() {
     renderBrowserShelf();
   });
 
+  shareSearchBtn.addEventListener('click', async () => {
+    const url = window.location.href;
+    try {
+      await navigator.clipboard.writeText(url);
+      showToast('Search link copied to clipboard!');
+    } catch {
+      showToast('Could not copy link to clipboard.');
+    }
+  });
+
   browserShelf.addEventListener('click', (event) => {
     const button = (event.target as HTMLElement).closest<HTMLButtonElement>('[data-clear-saved]');
     if (!button) return;
@@ -764,6 +776,16 @@ async function init() {
   function runCommand(raw: string): boolean {
     const command = raw.trim().toLocaleLowerCase().replace(/^:/, '');
     if (!command) return false;
+    if (command === 'recent' || command === 'updates' || command === 'recently updated' || command === 'whats new') {
+      sortSelect.value = 'recent';
+      update();
+      completeCommand('Displaying faculty sorted by most recently updated.');
+      return true;
+    }
+    if (command === 'completeness' || command === 'health') {
+      window.location.href = `${import.meta.env.BASE_URL}stats.html`;
+      return true;
+    }
     if (command === 'sudo vietprofs') {
       clearSearch();
       hideSuggestions();
@@ -1016,6 +1038,20 @@ async function init() {
   // since renderRoster()/renderFunFacts() both replace its innerHTML wholesale on every update().
   document.getElementById('roster').addEventListener('click', (e) => {
     const target = e.target as HTMLElement;
+    const shareBtn = target.closest<HTMLButtonElement>('.entry-share-link');
+    if (shareBtn) {
+      e.preventDefault();
+      e.stopPropagation();
+      const targetPath = shareBtn.getAttribute('data-path') || '';
+      const name = shareBtn.getAttribute('data-name') || 'Profile';
+      const fullUrl = `${window.location.origin}${targetPath.startsWith('/') ? targetPath : `/${targetPath}`}`;
+      void navigator.clipboard.writeText(fullUrl).then(() => {
+        showToast(`Link to ${name} copied!`);
+      }).catch(() => {
+        showToast('Could not copy link to clipboard.');
+      });
+      return;
+    }
     const favorite = target.closest<HTMLButtonElement>('.favorite-toggle');
     if (favorite?.dataset.id) {
       applyFavoriteToggle(favorite, toggleFavorite(favorite.dataset.id));

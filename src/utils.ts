@@ -40,3 +40,26 @@ export function formatRosterShortDate(timestamp: DateInput): string {
   const date = toDate(timestamp);
   return Number.isNaN(date.valueOf()) ? '' : rosterShortDateFormatter.format(date);
 }
+
+export function showToast(message: string, durationMs = 2500): void {
+  if (typeof document === 'undefined') return;
+  const existing = document.getElementById('vietprofs-toast');
+  if (existing) existing.remove();
+
+  const toast = document.createElement('div');
+  toast.id = 'vietprofs-toast';
+  toast.className = 'toast-notification';
+  toast.setAttribute('role', 'status');
+  toast.setAttribute('aria-live', 'polite');
+  toast.textContent = message;
+  document.body.appendChild(toast);
+
+  requestAnimationFrame(() => {
+    toast.classList.add('toast-visible');
+  });
+
+  setTimeout(() => {
+    toast.classList.remove('toast-visible');
+    setTimeout(() => toast.remove(), 300);
+  }, durationMs);
+}

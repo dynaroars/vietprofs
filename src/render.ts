@@ -17,6 +17,8 @@ export const PROFILE_ICON = '<path d="M12 3 3 9v2h18V9L12 3Zm-7 10v6h2v-6H5Zm6 0
 export const PERSONAL_SITE_ICON = '<path d="m12 3-9 8h3v10h5v-6h2v6h5V11h3l-9-8Z"/>';
 export const LINKEDIN_ICON = '<path d="M6.94 5a2 2 0 1 1-4-.02 2 2 0 0 1 4 .02ZM7 8.48H3V21h4V8.48Zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.68-2.91V8.48Z"/>';
 export const STAR_ICON = '<path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>';
+export const SHARE_ICON = '<path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/>';
+
 
 export function fieldDropdownLabel(field = '') {
   return field.replace(/\bSciences\b/g, '').replace(/\s+/g, ' ').trim();
@@ -108,6 +110,7 @@ export function renderRosterEntry(person: RosterEntry, baseUrl = '/') {
   const linkedinIcon = person.linkedinUrl
     ? entryIconLink({ className: 'linkedin-link', href: person.linkedinUrl, label: `${visibleName} on LinkedIn`, title: 'LinkedIn', icon: LINKEDIN_ICON })
     : '';
+  const shareIcon = ` <button type="button" class="entry-share-link" data-path="${escapeHtml(`${baseUrl}${personPath(person.id)}`)}" data-name="${escapeHtml(visibleName)}" aria-label="Copy link to ${escapeHtml(visibleName)}'s profile" title="Copy profile link"><svg viewBox="0 0 24 24" aria-hidden="true">${SHARE_ICON}</svg></button>`;
   const favorited = isFavorite(person.id);
   const favoriteLabel = favorited ? 'Remove from favorites' : 'Add to favorites';
   const favoriteToggle = `<button type="button" class="favorite-toggle${favorited ? ' is-favorite' : ''}" data-id="${escapeHtml(person.id)}" aria-pressed="${favorited ? 'true' : 'false'}" aria-label="${favoriteLabel}" title="${favoriteLabel}"><svg viewBox="0 0 24 24" aria-hidden="true">${STAR_ICON}</svg></button>`;
@@ -119,7 +122,7 @@ export function renderRosterEntry(person: RosterEntry, baseUrl = '/') {
       <div class="entry-content">
         <div class="entry-name-row">
           <a class="entry-name" href="${escapeHtml(`${baseUrl}${personPath(person.id)}`)}">${escapeHtml(visibleName)}</a>
-          <span class="entry-vietnamese-name">(${escapeHtml(nativeName)})</span> <span class="loc-badge" title="${escapeHtml(person.country || 'United States')}"><span class="country-flag" aria-hidden="true">${countryFlag(person.country)}</span></span>${profileIcon}${personalSiteIcon}${scholarIcon}${linkedinIcon}${updatedTime}
+          <span class="entry-vietnamese-name">(${escapeHtml(nativeName)})</span> <span class="loc-badge" title="${escapeHtml(person.country || 'United States')}"><span class="country-flag" aria-hidden="true">${countryFlag(person.country)}</span></span>${profileIcon}${personalSiteIcon}${scholarIcon}${linkedinIcon}${shareIcon}${updatedTime}
         </div>
         <div class="entry-meta">${escapeHtml(entryMeta)}</div>
         ${educationDetails.length ? `<div class="entry-details">${educationDetails.map((value) => escapeHtml(value)).join('; ')}</div>` : ''}
