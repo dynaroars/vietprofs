@@ -644,7 +644,7 @@
     "profileUrl": "https://orthopedics.medicine.uiowa.edu/profile/than-pham",
     "batch": 4,
     "status": "unresolved",
-    "note": "profile page had no downloadable portrait image",
+    "note": "profile page and alternate web search exposed no verified high-res portrait candidate",
     "recoveryBatch": 4
   },
   {
@@ -654,7 +654,7 @@
     "profileUrl": "https://profiles.utsouthwestern.edu/profile/95985/kimloan-nguyen.html",
     "batch": 4,
     "status": "unresolved",
-    "note": "profile page had no downloadable portrait image",
+    "note": "profile page and alternate web search exposed no verified high-res portrait candidate",
     "recoveryBatch": 4
   },
   {
@@ -663,9 +663,10 @@
     "university": "University of Florida",
     "profileUrl": "https://ufhealthjax.org/pharmacy-residency/faculty",
     "batch": 4,
-    "status": "unresolved",
-    "note": "profile page had no downloadable portrait image",
-    "recoveryBatch": 4
+    "status": "fetched",
+    "note": "verified portrait fetched and converted to webp",
+    "recoveryBatch": 4,
+    "portraitSource": "https://ufhealthjax.org/assets/images/pages/_1000x667_crop_center-center_line/Pharmacy-Residency-Program.jpg"
   },
   {
     "id": "vp-0881",
@@ -674,7 +675,7 @@
     "profileUrl": "https://med.stanford.edu/profiles/de-tran",
     "batch": 5,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page and alternate web search exposed no verified high-res portrait candidate",
     "recoveryBatch": 4
   },
   {
@@ -684,7 +685,7 @@
     "profileUrl": "https://medschool.kp.org/faculty/members/monika-dao-nguyen",
     "batch": 5,
     "status": "unresolved",
-    "note": "profile page had no downloadable portrait image",
+    "note": "profile page and alternate web search exposed no verified high-res portrait candidate",
     "recoveryBatch": 4
   },
   {
@@ -694,7 +695,7 @@
     "profileUrl": "https://medschool.kp.org/faculty/members/nathan-k-nguyen",
     "batch": 5,
     "status": "unresolved",
-    "note": "profile page had no downloadable portrait image",
+    "note": "profile page and alternate web search exposed no verified high-res portrait candidate",
     "recoveryBatch": 4
   },
   {
@@ -704,7 +705,7 @@
     "profileUrl": "https://medschool.kp.org/faculty/members/carolyn-v-nguyen",
     "batch": 5,
     "status": "unresolved",
-    "note": "profile page had no downloadable portrait image",
+    "note": "profile page and alternate web search exposed no verified high-res portrait candidate",
     "recoveryBatch": 4
   },
   {
@@ -714,7 +715,7 @@
     "profileUrl": "https://medschool.kp.org/faculty/members/von-ta-nguyen",
     "batch": 5,
     "status": "unresolved",
-    "note": "profile page had no downloadable portrait image",
+    "note": "profile page and alternate web search exposed no verified high-res portrait candidate",
     "recoveryBatch": 4
   },
   {
@@ -724,7 +725,7 @@
     "profileUrl": "https://sc.edu/study/colleges_schools/medicine_greenville/about/faculty/",
     "batch": 5,
     "status": "unresolved",
-    "note": "profile page had no downloadable portrait image",
+    "note": "profile page and alternate web search exposed no verified high-res portrait candidate",
     "recoveryBatch": 4
   },
   {
@@ -734,7 +735,7 @@
     "profileUrl": "https://sc.edu/study/colleges_schools/medicine_greenville/about/faculty/facultydir/pf2081fe0467b5e9717884a845c788c198",
     "batch": 5,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page and alternate web search exposed no verified high-res portrait candidate",
     "recoveryBatch": 4
   },
   {
@@ -744,7 +745,7 @@
     "profileUrl": "https://keck.usc.edu/faculty-search/tuan-mai/",
     "batch": 5,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page and alternate web search exposed no verified high-res portrait candidate",
     "recoveryBatch": 5
   },
   {
@@ -754,7 +755,7 @@
     "profileUrl": "https://profiles.stanford.edu/350256",
     "batch": 5,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page and alternate web search exposed no verified high-res portrait candidate",
     "recoveryBatch": 5
   },
   {
@@ -764,7 +765,7 @@
     "profileUrl": "https://nyulangone.org/doctors/1578523965/ngoc-m-nguyen-famulare",
     "batch": 5,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page and alternate web search exposed no verified high-res portrait candidate",
     "recoveryBatch": 5
   },
   {
@@ -774,7 +775,7 @@
     "profileUrl": "https://www.pediatrics.uci.edu/faculty-general-pediatrics.asp",
     "batch": 5,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page and alternate web search exposed no verified high-res portrait candidate",
     "recoveryBatch": 5
   },
   {
@@ -784,7 +785,7 @@
     "profileUrl": "https://keck.usc.edu/faculty-search/nam-x-nguyen/",
     "batch": 5,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page and alternate web search exposed no verified high-res portrait candidate",
     "recoveryBatch": 5
   },
   {
@@ -793,9 +794,10 @@
     "university": "Shibaura Institute of Technology",
     "profileUrl": "https://www.shibaura-it.ac.jp/en/research/laboratory/00005.html",
     "batch": 5,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 5
+    "status": "fetched",
+    "note": "verified portrait fetched and converted to webp",
+    "recoveryBatch": 5,
+    "portraitSource": "https://www.shibaura-it.ac.jp/faculty/laboratory/img/5e41c7eaaef53e5561a10a5f95094c93_lab_img_2.png"
   },
   {
     "id": "vp-0924",
@@ -804,7 +806,7 @@
     "profileUrl": "https://www.csit.ist.hokudai.ac.jp/en/news/new-faculty-associate-professor-dr-nguyen-dai-hai.html",
     "batch": 5,
     "status": "unresolved",
-    "note": "profile page had no downloadable portrait image",
+    "note": "profile page and alternate web search exposed no verified high-res portrait candidate",
     "recoveryBatch": 5
   },
   {
@@ -814,7 +816,7 @@
     "profileUrl": "https://kyoiku-kenkyudb.omu.ac.jp/html/100001108_en.html",
     "batch": 5,
     "status": "unresolved",
-    "note": "profile page had no downloadable portrait image",
+    "note": "profile page and alternate web search exposed no verified high-res portrait candidate",
     "recoveryBatch": 5
   },
   {
@@ -823,9 +825,10 @@
     "university": "Japan Advanced Institute of Science and Technology",
     "profileUrl": "https://www.jaist.ac.jp/profiles/info_e.php?profile_id=417",
     "batch": 6,
-    "status": "unresolved",
-    "note": "profile page had no downloadable portrait image",
-    "recoveryBatch": 5
+    "status": "fetched",
+    "note": "verified portrait fetched and converted to webp",
+    "recoveryBatch": 5,
+    "portraitSource": "https://fp.jaist.ac.jp/data/photo/00417.jpeg"
   },
   {
     "id": "vp-0929",
@@ -833,9 +836,10 @@
     "university": "Japan Advanced Institute of Science and Technology",
     "profileUrl": "https://fp.jaist.ac.jp/public/Default2.aspx?id=766&l=1",
     "batch": 6,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 5
+    "status": "fetched",
+    "note": "verified portrait fetched and converted to webp",
+    "recoveryBatch": 5,
+    "portraitSource": "https://fp.jaist.ac.jp/data/photo/766.jpg"
   },
   {
     "id": "vp-0936",
@@ -844,7 +848,7 @@
     "profileUrl": "https://medicine.iu.edu/faculty/27262/dinh-paul",
     "batch": 6,
     "status": "unresolved",
-    "note": "profile page had no downloadable portrait image",
+    "note": "profile page and alternate web search exposed no verified high-res portrait candidate",
     "recoveryBatch": 5
   },
   {
@@ -854,7 +858,7 @@
     "profileUrl": "https://www.hajim.rochester.edu/ece/people/faculty/dinh_van_tuan/index.html",
     "batch": 6,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page and alternate web search exposed no verified high-res portrait candidate",
     "recoveryBatch": 5
   },
   {
@@ -864,7 +868,7 @@
     "profileUrl": "https://www.regents.ac.uk/about/our-people/dr-daniel-dao",
     "batch": 6,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page and alternate web search exposed no verified high-res portrait candidate",
     "recoveryBatch": 5
   },
   {
@@ -874,7 +878,7 @@
     "profileUrl": "https://www.nottingham.ac.uk/business/people/lizln1.phtml",
     "batch": 6,
     "status": "unresolved",
-    "note": "profile page had no downloadable portrait image",
+    "note": "profile page and alternate web search exposed no verified high-res portrait candidate",
     "recoveryBatch": 5
   },
   {
@@ -884,7 +888,7 @@
     "profileUrl": "https://researchers.lincoln.ac.nz/cuong.nguyen",
     "batch": 6,
     "status": "unresolved",
-    "note": "profile page had no downloadable portrait image",
+    "note": "profile page and alternate web search exposed no verified high-res portrait candidate",
     "recoveryBatch": 5
   },
   {
@@ -894,7 +898,7 @@
     "profileUrl": "https://www.wesleyan.edu/about/directory/profile.html?id=tvnguyen",
     "batch": 6,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page and alternate web search exposed no verified high-res portrait candidate",
     "recoveryBatch": 5
   },
   {
@@ -904,7 +908,7 @@
     "profileUrl": "https://www.tc.columbia.edu/faculty/ttn2114/",
     "batch": 6,
     "status": "unresolved",
-    "note": "profile page had no downloadable portrait image",
+    "note": "profile page and alternate web search exposed no verified high-res portrait candidate",
     "recoveryBatch": 6
   },
   {
@@ -914,7 +918,7 @@
     "profileUrl": "https://www.usfca.edu/faculty/quynh-pham",
     "batch": 6,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page and alternate web search exposed no verified high-res portrait candidate",
     "recoveryBatch": 6
   },
   {
@@ -924,7 +928,7 @@
     "profileUrl": "https://le.ac.uk/people/quynh-hoang",
     "batch": 6,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page and alternate web search exposed no verified high-res portrait candidate",
     "recoveryBatch": 6
   },
   {
@@ -934,7 +938,7 @@
     "profileUrl": "https://www.mayoclinic.org/biographies/nguyen-ba-d-m-d/bio-20053834",
     "batch": 6,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page and alternate web search exposed no verified high-res portrait candidate",
     "recoveryBatch": 6
   },
   {
@@ -944,7 +948,7 @@
     "profileUrl": "https://www.mayo.edu/research/faculty/nguyen-cuong-c-m-d/bio-00026558",
     "batch": 6,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page and alternate web search exposed no verified high-res portrait candidate",
     "recoveryBatch": 6
   },
   {
@@ -954,7 +958,7 @@
     "profileUrl": "https://www.mayo.edu/research/faculty/tran-nguyen-h-m-d/bio-20537785",
     "batch": 6,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page and alternate web search exposed no verified high-res portrait candidate",
     "recoveryBatch": 6
   },
   {
@@ -964,7 +968,7 @@
     "profileUrl": "https://www.mayoclinic.org/biographies/nguyen-michelle-c-m-d/bio-20520642",
     "batch": 6,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page and alternate web search exposed no verified high-res portrait candidate",
     "recoveryBatch": 6
   },
   {
@@ -974,7 +978,7 @@
     "profileUrl": "https://www.mayo.edu/research/faculty/nguyen-aivi-t-m-d/bio-20585981",
     "batch": 6,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page and alternate web search exposed no verified high-res portrait candidate",
     "recoveryBatch": 6
   },
   {
@@ -984,7 +988,7 @@
     "profileUrl": "https://profs.provost.nagoya-u.ac.jp/html/100011169_en.html",
     "batch": 7,
     "status": "unresolved",
-    "note": "profile page had no downloadable portrait image",
+    "note": "profile page and alternate web search exposed no verified high-res portrait candidate",
     "recoveryBatch": 6
   },
   {
@@ -994,7 +998,7 @@
     "profileUrl": "https://raweb1.jm.aoyama.ac.jp/aguhp/KgApp/k03/resid/S001781?lang=en",
     "batch": 7,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page and alternate web search exposed no verified high-res portrait candidate",
     "recoveryBatch": 6
   },
   {
@@ -1004,7 +1008,7 @@
     "profileUrl": "https://ideas.repec.org/e/pph135.html",
     "batch": 7,
     "status": "unresolved",
-    "note": "profile page had no downloadable portrait image",
+    "note": "profile page and alternate web search exposed no verified high-res portrait candidate",
     "recoveryBatch": 6
   },
   {
@@ -1014,7 +1018,7 @@
     "profileUrl": "https://academics.aut.ac.nz/nhut.nguyen",
     "batch": 7,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page and alternate web search exposed no verified high-res portrait candidate",
     "recoveryBatch": 6
   },
   {
@@ -1024,7 +1028,7 @@
     "profileUrl": "https://www.qut.edu.au/about/our-people/academic-profiles/vincent.hoang",
     "batch": 7,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page and alternate web search exposed no verified high-res portrait candidate",
     "recoveryBatch": 6
   },
   {
@@ -1034,7 +1038,7 @@
     "profileUrl": "https://www.ulethbridge.ca/directory/person/kien.tran",
     "batch": 7,
     "status": "unresolved",
-    "note": "profile page had no downloadable portrait image",
+    "note": "profile page and alternate web search exposed no verified high-res portrait candidate",
     "recoveryBatch": 6
   },
   {
@@ -1043,9 +1047,10 @@
     "university": "Durham University",
     "profileUrl": "https://www.durham.ac.uk/staff/business-staff/duc-d-nguyen/",
     "batch": 7,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 6
+    "status": "fetched",
+    "note": "verified portrait fetched and converted to webp",
+    "recoveryBatch": 6,
+    "portraitSource": "https://apps.dur.ac.uk/biography/image/2112"
   },
   {
     "id": "vp-1012",
@@ -1053,9 +1058,10 @@
     "university": "Brandeis University",
     "profileUrl": "https://www.brandeis.edu/economics/women-bios/bui.html",
     "batch": 7,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 6
+    "status": "fetched",
+    "note": "verified portrait fetched and converted to webp",
+    "recoveryBatch": 6,
+    "portraitSource": "https://www.brandeis.edu/economics/_images/faculty-staff-headshots/bui-linda.jpg"
   },
   {
     "id": "vp-1015",
@@ -1064,7 +1070,7 @@
     "profileUrl": "https://researchers.lincoln.ac.nz/khanh.hoang",
     "batch": 7,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page and alternate web search exposed no verified high-res portrait candidate",
     "recoveryBatch": 6
   },
   {
@@ -1073,9 +1079,10 @@
     "university": "University of California, Berkeley",
     "profileUrl": "https://faculty.haas.berkeley.edu/hqn/",
     "batch": 7,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 6
+    "status": "fetched",
+    "note": "verified portrait fetched and converted to webp",
+    "recoveryBatch": 6,
+    "portraitSource": "https://faculty.haas.berkeley.edu/hqn/Picture_cropped.jpg"
   },
   {
     "id": "vp-1021",
@@ -1084,7 +1091,7 @@
     "profileUrl": "https://www.nottingham.ac.uk/business/people/lizkl1.phtml",
     "batch": 7,
     "status": "unresolved",
-    "note": "profile page had no downloadable portrait image",
+    "note": "profile page and alternate web search exposed no verified high-res portrait candidate",
     "recoveryBatch": 7
   },
   {
@@ -1094,7 +1101,7 @@
     "profileUrl": "https://experts.griffith.edu.au/54199-david-huynh",
     "batch": 7,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page and alternate web search exposed no verified high-res portrait candidate",
     "recoveryBatch": 7
   },
   {
@@ -1104,7 +1111,7 @@
     "profileUrl": "https://www.governanceinstitute.edu.au/centres/national-centre-for-social-and-economic-modelling-natsem/person-3485/hai-anh-la",
     "batch": 8,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page and alternate web search exposed no verified high-res portrait candidate",
     "recoveryBatch": 7
   },
   {
@@ -1114,7 +1121,7 @@
     "profileUrl": "https://ysu.edu/people/nguyet-moon-nguyen",
     "batch": 8,
     "status": "unresolved",
-    "note": "profile page had no downloadable portrait image",
+    "note": "profile page and alternate web search exposed no verified high-res portrait candidate",
     "recoveryBatch": 7
   },
   {
@@ -1124,7 +1131,7 @@
     "profileUrl": "https://research.monash.edu/en/persons/viet-do",
     "batch": 8,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "profile page and alternate web search exposed no verified high-res portrait candidate",
     "recoveryBatch": 7
   },
   {
@@ -1133,9 +1140,10 @@
     "university": "Australian National University",
     "profileUrl": "https://rse.anu.edu.au/people/chung-tran",
     "batch": 8,
-    "status": "unresolved",
-    "note": "profile page had no downloadable portrait image",
-    "recoveryBatch": 7
+    "status": "fetched",
+    "note": "verified portrait fetched and converted to webp",
+    "recoveryBatch": 7,
+    "portraitSource": "https://rse.anu.edu.au/files/styles/circular/public/profile-images/chung_tran.jpg.png?itok=5LxhszEm"
   },
   {
     "id": "vp-1033",
