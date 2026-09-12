@@ -5,8 +5,8 @@ The machine-readable source of truth is [`public/data.json`](../public/data.json
 
 ## Status Summary
 - **Total Roster Profiles**: 1484
-- **Profiles with About Summary**: 768 (51.8%)
-- **Profiles Needing About Summary**: 716
+- **Profiles with About Summary**: 778 (52.4%)
+- **Profiles Needing About Summary**: 706
 - **Batch Size**: 10 profiles per batch
 - **Total Batches**: 149
 
@@ -46,11 +46,11 @@ The machine-readable source of truth is [`public/data.json`](../public/data.json
 - [x] **Batch 027** (Items 261–270: vp-0261 to vp-0270) — 10/10 enriched
 - [x] **Batch 028** (Items 271–280: vp-0271 to vp-0280) — 10/10 enriched
 - [x] **Batch 029** (Items 281–290: vp-0281 to vp-0290) — 10/10 enriched
-- [/] **Batch 030** (Items 291–300: vp-0291 to vp-0300) — 9/10 enriched
-- [/] **Batch 031** (Items 301–310: vp-0301 to vp-0310) — 8/10 enriched
-- [/] **Batch 032** (Items 311–320: vp-0311 to vp-0320) — 7/10 enriched
-- [/] **Batch 033** (Items 321–330: vp-0321 to vp-0330) — 7/10 enriched
-- [/] **Batch 034** (Items 331–340: vp-0331 to vp-0340) — 4/10 enriched
+- [x] **Batch 030** (Items 291–300: vp-0291 to vp-0300) — 10/10 enriched
+- [x] **Batch 031** (Items 301–310: vp-0301 to vp-0310) — 10/10 enriched
+- [x] **Batch 032** (Items 311–320: vp-0311 to vp-0320) — 10/10 enriched
+- [x] **Batch 033** (Items 321–330: vp-0321 to vp-0330) — 10/10 enriched
+- [/] **Batch 034** (Items 331–340: vp-0331 to vp-0340) — 5/10 enriched
 - [/] **Batch 035** (Items 341–350: vp-0341 to vp-0350) — 7/10 enriched
 - [/] **Batch 036** (Items 351–360: vp-0351 to vp-0360) — 7/10 enriched
 - [/] **Batch 037** (Items 361–370: vp-0361 to vp-0370) — 5/10 enriched

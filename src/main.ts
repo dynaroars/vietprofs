@@ -139,9 +139,6 @@ function renderShell() {
           <a class="icon-link github-link" href="https://github.com/dynaroars/vietprofs" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository" title="GitHub repository and source code">
             <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
           </a>
-          <a class="icon-link health-link" href="?view=health" id="health-link" aria-label="Dataset Health &amp; Completeness" title="Dataset Health &amp; Completeness">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-          </a>
         </div>
       </div>
       <div class="subtitle-row">
@@ -1294,18 +1291,36 @@ async function init() {
   const populatedLocations = locationOptions.filter((location) =>
     !['US', 'World'].includes(location) && filtersHaveResults(location, 'all', 'all')
   );
-  const randomFact = allFacts[Math.floor(Math.random() * allFacts.length)];
-  type Example = { type: 'search' | 'field' | 'track' | 'loc' | 'fact'; value: string; label?: string };
-  const examples: Example[] = shuffle([
-    ...pickRandomUnique(roster.map((person) => displayName(person.name)), 2).map((value) => ({ type: 'search' as const, value })),
-    ...pickRandomUnique(uniqueDepartments(roster), 1).map((value) => ({ type: 'search' as const, value })),
-    ...pickRandomUnique(uniqueStates(roster), 1).map((value) => ({ type: 'search' as const, value })),
-    ...pickRandomUnique(roster.flatMap((person) => person.researchAreas ?? []), 1).map((value) => ({ type: 'search' as const, value })),
-    ...pickRandomUnique(populatedFields, 2).map((value) => ({ type: 'field' as const, value, label: fieldDropdownLabel(value) })),
+  const profilesWithAbout = roster.filter((p) => p.researchOverview?.text);
+  const randomAboutProfile = profilesWithAbout.length
+    ? profilesWithAbout[Math.floor(Math.random() * profilesWithAbout.length)]
+    : null;
+
+  type Example = {
+    type: 'search' | 'field' | 'track' | 'loc' | 'fact' | 'health' | 'about' | 'stats';
+    value: string;
+    label?: string;
+    icon?: string;
+    targetName?: string;
+  };
+
+  const coreExamples: Example[] = [
+    { type: 'health' as const, value: 'Dataset Health', label: 'Dataset Health', icon: '💚' },
+    { type: 'stats' as const, value: 'Visitor Traffic', label: 'Visitor Traffic', icon: '📈' },
+    ...(randomAboutProfile
+      ? [{ type: 'about' as const, value: displayName(randomAboutProfile.name), label: `About: ${displayName(randomAboutProfile.name)}`, icon: '📖', targetName: displayName(randomAboutProfile.name) }]
+      : []),
+    { type: 'fact' as const, value: 'Diaspora Insights', label: 'Diaspora Insights', icon: '💡' },
+  ];
+
+  const categoryExamples: Example[] = shuffle([
+    ...pickRandomUnique(roster.map((person) => displayName(person.name)), 1).map((value) => ({ type: 'search' as const, value })),
+    ...pickRandomUnique(populatedFields, 1).map((value) => ({ type: 'field' as const, value, label: fieldDropdownLabel(value) })),
     ...pickRandomUnique(TRACKS.filter((track) => roster.some((person) => person.track === track)), 1).map((value) => ({ type: 'track' as const, value })),
     ...pickRandomUnique(populatedLocations, 1).map((value) => ({ type: 'loc' as const, value })),
   ] as Example[]);
-  examples.push({ type: 'fact', value: randomFact });
+
+  const examples: Example[] = [...coreExamples, ...categoryExamples];
   const examplesEl = document.getElementById('examples');
   examplesEl.replaceChildren();
   const label = document.createElement('span');
@@ -1315,9 +1330,18 @@ async function init() {
   for (const ex of examples) {
     const button = document.createElement('button');
     button.type = 'button';
-    button.className = `example-chip${ex.type === 'fact' ? ' fun-chip' : ''}`;
-    button.textContent = `${ex.type === 'fact' ? '✨ ' : ''}${ex.label ?? ex.value}`;
+    const chipTypeClass = ex.type === 'fact' ? ' insight-chip'
+      : ex.type === 'health' ? ' health-chip'
+      : ex.type === 'about' ? ' about-chip'
+      : ex.type === 'stats' ? ' stats-chip'
+      : '';
+    button.className = `example-chip${chipTypeClass}`;
+    const iconPrefix = ex.icon ? `${ex.icon} ` : '';
+    button.textContent = `${iconPrefix}${ex.label ?? ex.value}`;
     if (ex.type === 'fact') button.dataset.fact = '1';
+    if (ex.type === 'health') button.dataset.health = '1';
+    if (ex.type === 'stats') button.dataset.stats = '1';
+    if (ex.type === 'about') button.dataset.about = ex.targetName ?? ex.value;
     if (ex.type === 'field') button.dataset.field = ex.value;
     if (ex.type === 'track') button.dataset.track = ex.value;
     if (ex.type === 'loc') button.dataset.loc = ex.value;
@@ -1327,10 +1351,22 @@ async function init() {
     const btn = (e.target as HTMLElement).closest<HTMLButtonElement>('.example-chip');
     if (!btn) return;
     filterState.state = '';
-    if (btn.dataset.fact) {
+    if (btn.dataset.stats) {
+      window.location.href = `${import.meta.env.BASE_URL}stats.html`;
+      return;
+    }
+    if (btn.dataset.health || btn.dataset.fact) {
       clearSearch();
       filterState.insights = true;
       setFilterValues({ location: locationSelect.value });
+      update();
+      return;
+    }
+    if (btn.dataset.about) {
+      const targetName = btn.dataset.about;
+      setSearchValue(`Name: ${targetName}`);
+      filterState.insights = false;
+      filterState.health = false;
       update();
       return;
     }
@@ -1355,7 +1391,7 @@ async function init() {
       update();
       return;
     }
-    setSearchValue(btn.textContent ?? '');
+    setSearchValue(btn.textContent?.replace(/^[\p{Emoji}\s]+/u, '').trim() ?? '');
     filterState.insights = false;
     // If the selected search term is not found within the current location filter, widen to
     // 'World'. Query the shared index once — filtering a one-element array per person built a

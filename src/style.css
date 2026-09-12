@@ -410,6 +410,30 @@ h1 {
   text-align: left;
 }
 
+.insight-chip {
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  background: rgba(245, 158, 11, 0.12);
+  color: var(--text-primary);
+}
+
+.health-chip {
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  background: rgba(16, 185, 129, 0.12);
+  color: var(--text-primary);
+}
+
+.about-chip {
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  background: rgba(139, 92, 246, 0.12);
+  color: var(--text-primary);
+}
+
+.stats-chip {
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  background: rgba(59, 130, 246, 0.12);
+  color: var(--text-primary);
+}
+
 .search-input {
   flex: 1;
   width: 100%;
@@ -1906,10 +1930,26 @@ a.entry-name:focus-visible {
   padding: 1rem;
 }
 
-.chart-row {
+.chart-row,
+button.chart-row-btn {
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 0.75rem;
+  width: 100%;
+  background: none;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  padding: 0.25rem 0.4rem;
+  text-align: left;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+button.chart-row-btn:hover {
+  background: var(--hover-bg);
+  border-color: var(--border-color);
 }
 
 .chart-label {

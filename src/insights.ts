@@ -20,6 +20,7 @@ import {
 import { STATE_GRID } from './state-grid.ts';
 import { escapeHtml } from './utils.ts';
 import { renderWorldMap } from './world-map.ts';
+import { renderHealthPanel } from './health-panel.ts';
 
 export { renderWorldMap };
 
@@ -164,7 +165,7 @@ export function renderDecadesChart(roster: Roster): string {
       const pct = Math.round((count / max) * 100);
       const share = Math.round((count / total) * 100);
       return `
-        <button type="button" class="ranked-item chart-row" data-search="${escapeHtml(decade)}" data-scope="phd" title="Search faculty with PhD in ${escapeHtml(decade)}">
+        <button type="button" class="chart-row-btn chart-row" data-search="${escapeHtml(decade)}" data-scope="phd" title="Search faculty with PhD in ${escapeHtml(decade)}">
           <span class="chart-label">${escapeHtml(decade)}</span>
           <div class="chart-track">
             <div class="chart-bar" style="width: ${pct}%;"></div>
@@ -494,15 +495,27 @@ export function renderFunFacts(
   if (rosterEl) {
     rosterEl.innerHTML = `
       <div class="insights-dashboard">
-        ${selectedSection}
-
-        <!-- GLOBAL SECTION -->
-        <section class="insights-section-block">
+        <!-- SECTION 1: DATASET HEALTH & COMPLETENESS -->
+        <section class="insights-section-block health-section-block" id="health-section">
           <div class="insights-section-header">
-            <span class="insights-badge">🌐 Global Panorama</span>
-            <h2 class="insights-main-heading">Worldwide Diaspora Landscape</h2>
-            <p class="insights-main-desc">${fullRoster.length} academics across ${worldUniversities} institutions worldwide.</p>
+            <span class="insights-badge">SECTION 1 — DATASET HEALTH</span>
+            <h2 class="insights-main-heading">Dataset Health &amp; Verification Coverage</h2>
+            <p class="insights-main-desc">Systematic aggregate completeness across all <strong>${fullRoster.length}</strong> maintained faculty profiles.</p>
           </div>
+          ${renderHealthPanel(fullRoster, import.meta.env.BASE_URL)}
+        </section>
+
+        <!-- SECTION 2: DIASPORA PATHWAYS & MACRO INSIGHTS -->
+        <section class="insights-section-block insights-main-block" id="pathways-section">
+          <div class="insights-section-header">
+            <span class="insights-badge">SECTION 2 — DIASPORA INSIGHTS</span>
+            <h2 class="insights-main-heading">Diaspora Pathways &amp; Macro Analysis</h2>
+            <p class="insights-main-desc">Geographic distributions, PhD graduation cohorts, alma mater feeder networks, and academic disciplines.</p>
+          </div>
+          ${selectedSection}
+
+          <!-- GLOBAL SECTION -->
+          <div class="insights-category">
 
           <div class="insights-category">
             <div class="insights-category-header">
