@@ -18,7 +18,7 @@ import {
   type StatsHistoryPoint,
 } from './data.ts';
 import { STATE_GRID } from './state-grid.ts';
-import { escapeHtml } from './utils.ts';
+import { abbreviateInsightText, escapeHtml } from './utils.ts';
 import { renderWorldMap } from './world-map.ts';
 import { renderHealthPanel } from './health-panel.ts';
 
@@ -430,7 +430,7 @@ export function renderFunFacts(
   const worldFacts = [...buildUsObservations(worldUsRoster), ...buildInternationalObservations(fullRoster), ...buildQualifiedObservations(fullRoster)];
   const worldAwardsFacts = buildAwardsFunFacts(fullRoster);
 
-  const formatList = (facts: string[]) => facts.map((f) => `<li>${escapeHtml(f)}</li>`).join('');
+  const formatList = (facts: string[]) => facts.map((f) => `<li>${escapeHtml(abbreviateInsightText(f))}</li>`).join('');
 
   const selectedUniversities = new Set(selectedRoster.map((p) => p.university)).size;
   const worldUniversities = new Set(fullRoster.map((p) => p.university)).size;

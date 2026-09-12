@@ -31,13 +31,14 @@ import {
   type SearchIndex,
   type StatsHistoryPoint,
 } from './data.ts';
-import { escapeHtml, formatRosterDate, showToast } from './utils.ts';
+import { abbreviateInsightText, escapeHtml, formatRosterDate, showToast } from './utils.ts';
 import { applyFavoriteToggle, fieldDropdownLabel, renderRosterEntry } from './render.ts';
 import { clearPinnedSearches, clearRecentProfiles, loadFavorites, loadPinnedSearches, loadRecentProfiles, toggleFavorite, togglePinnedSearch } from './favorites-store.ts';
 import { openRosterShell } from './roster-shell.ts';
 import { locationForQuery } from './filter-state.ts';
 import { renderFunFacts, renderGrowthChart, type GrowthMetricKey } from './insights.ts';
 import { renderHealthPanel } from './health-panel.ts';
+import { deriveRosterStats } from './derived-stats.ts';
 import { normalizeText, parseKeywordQuery as parseKeywordQueryShared } from './search-kit.ts';
 
 const app = document.getElementById('app');
@@ -1296,6 +1297,28 @@ async function init() {
     ? profilesWithAbout[Math.floor(Math.random() * profilesWithAbout.length)]
     : null;
 
+  const rosterStats = deriveRosterStats(roster);
+
+  const healthMetrics = [
+    `${rosterStats.total.toLocaleString('en-US')} Total Faculty Records`,
+    ...rosterStats.completeness.map((c) => `${c.percentage}% ${c.label} completed`),
+  ];
+  const randomHealthMetric = healthMetrics[Math.floor(Math.random() * healthMetrics.length)];
+
+  const funFactsList = buildFunFacts(roster).filter((f) => f && !f.startsWith('No faculty'));
+  const randomFact = funFactsList.length
+    ? funFactsList[Math.floor(Math.random() * funFactsList.length)]
+    : 'Diaspora Insights';
+  const cleanFact = abbreviateInsightText(randomFact.replace(/\.$/, ''));
+  const shortFact = cleanFact.length > 46 ? `${cleanFact.slice(0, 43)}…` : cleanFact;
+
+  const trafficOptions = [
+    statsHistory.length > 0 ? `${statsHistory.length} Daily Snapshots` : 'Live Analytics',
+    `${rosterStats.total} Roster Audits`,
+    'Visitor Traffic',
+  ];
+  const randomTrafficMetric = trafficOptions[Math.floor(Math.random() * trafficOptions.length)];
+
   type Example = {
     type: 'search' | 'field' | 'track' | 'loc' | 'fact' | 'health' | 'about' | 'stats';
     value: string;
@@ -1305,19 +1328,19 @@ async function init() {
   };
 
   const coreExamples: Example[] = [
-    { type: 'health' as const, value: 'Dataset Health', label: 'Dataset Health', icon: '💚' },
-    { type: 'stats' as const, value: 'Visitor Traffic', label: 'Visitor Traffic', icon: '📈' },
+    { type: 'health' as const, value: 'Dataset Health', label: `Health: ${abbreviateInsightText(randomHealthMetric)}`, icon: '💚' },
+    { type: 'stats' as const, value: 'Visitor Traffic', label: `Traffic: ${abbreviateInsightText(randomTrafficMetric)}`, icon: '📈' },
     ...(randomAboutProfile
       ? [{ type: 'about' as const, value: displayName(randomAboutProfile.name), label: `About: ${displayName(randomAboutProfile.name)}`, icon: '📖', targetName: displayName(randomAboutProfile.name) }]
       : []),
-    { type: 'fact' as const, value: 'Diaspora Insights', label: 'Diaspora Insights', icon: '💡' },
+    { type: 'fact' as const, value: 'Diaspora Insights', label: `Insight: ${shortFact}`, icon: '💡' },
   ];
 
   const categoryExamples: Example[] = shuffle([
-    ...pickRandomUnique(roster.map((person) => displayName(person.name)), 1).map((value) => ({ type: 'search' as const, value })),
-    ...pickRandomUnique(populatedFields, 1).map((value) => ({ type: 'field' as const, value, label: fieldDropdownLabel(value) })),
-    ...pickRandomUnique(TRACKS.filter((track) => roster.some((person) => person.track === track)), 1).map((value) => ({ type: 'track' as const, value })),
-    ...pickRandomUnique(populatedLocations, 1).map((value) => ({ type: 'loc' as const, value })),
+    ...pickRandomUnique(roster.map((person) => displayName(person.name)), 1).map((value) => ({ type: 'search' as const, value, label: value, icon: '👤' })),
+    ...pickRandomUnique(populatedFields, 1).map((value) => ({ type: 'field' as const, value, label: abbreviateInsightText(fieldDropdownLabel(value)), icon: '🔬' })),
+    ...pickRandomUnique(TRACKS.filter((track) => roster.some((person) => person.track === track)), 1).map((value) => ({ type: 'track' as const, value, label: value, icon: '🎓' })),
+    ...pickRandomUnique(populatedLocations, 1).map((value) => ({ type: 'loc' as const, value, label: value, icon: '📍' })),
   ] as Example[]);
 
   const examples: Example[] = [...coreExamples, ...categoryExamples];
