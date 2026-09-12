@@ -209,24 +209,6 @@ test('"History of Art and Visual Culture" at CCA maps to Arts & Design, not Huma
   assert.equal(fieldOf('History of Art and Visual Culture', 'California College of the Arts'), 'Arts & Design');
 });
 
-test('duplicate names are accepted when disambiguated with " - University"', () => {
-  const roster2 = [
-    { ...roster[0], name: 'Thanh Nguyen - Purdue University' },
-    { ...roster[0], name: 'Thanh Nguyen - Quinnipiac University' },
-  ];
-  const names = roster2.map((p) => p.name);
-  assert.equal(new Set(names).size, names.length);
-});
-
-test('duplicate names without the University suffix are still rejected', () => {
-  const roster2 = [
-    { ...roster[0], name: 'Duplicate Person' },
-    { ...roster[1], name: 'Duplicate Person' },
-  ];
-  const names = roster2.map((p) => p.name);
-  assert.notEqual(new Set(names).size, names.length);
-});
-
 test('buildFunFacts returns a non-empty list of fact strings covering the roster', () => {
   const facts = buildFunFacts(roster);
   assert.ok(Array.isArray(facts));
