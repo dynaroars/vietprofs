@@ -14,6 +14,7 @@ import {
   buildTrackCounts,
   buildUsObservations,
   countryFlag,
+  type GitInfo,
   type Roster,
   type StatsHistoryPoint,
 } from './data.ts';
@@ -411,6 +412,7 @@ export function renderFunFacts(
   fullRoster: Roster,
   statsHistory: StatsHistoryPoint[],
   activeGrowthMetric: GrowthMetricKey = 'count',
+  gitInfo: GitInfo | null = null,
 ) {
   const rosterEl = document.getElementById('roster');
   const countEl = document.getElementById('result-count');
@@ -427,13 +429,13 @@ export function renderFunFacts(
     ? buildUsObservations(selectedRoster)
     : buildLocationObservations(selectedRoster, selectedLocationLabel);
   const selectedAwardsFacts = buildAwardsFunFacts(selectedRoster);
+
   const worldFacts = [...buildUsObservations(worldUsRoster), ...buildInternationalObservations(fullRoster), ...buildQualifiedObservations(fullRoster)];
   const worldAwardsFacts = buildAwardsFunFacts(fullRoster);
 
   const formatList = (facts: string[]) => facts.map((f) => `<li>${escapeHtml(abbreviateInsightText(f))}</li>`).join('');
 
   const selectedUniversities = new Set(selectedRoster.map((p) => p.university)).size;
-  const worldUniversities = new Set(fullRoster.map((p) => p.university)).size;
 
   const selectedSection = selectedIsWorld ? '' : `
       <!-- REGIONAL SECTION -->
@@ -495,14 +497,14 @@ export function renderFunFacts(
   if (rosterEl) {
     rosterEl.innerHTML = `
       <div class="insights-dashboard">
-        <!-- SECTION 1: DATASET HEALTH & COMPLETENESS -->
+        <!-- SECTION 1: SYSTEM HEALTH & MAINTENANCE -->
         <section class="insights-section-block health-section-block" id="health-section">
           <div class="insights-section-header">
-            <span class="insights-badge">SECTION 1 — DATASET HEALTH</span>
-            <h2 class="insights-main-heading">Dataset Health &amp; Verification Coverage</h2>
-            <p class="insights-main-desc">Systematic aggregate completeness across all <strong>${fullRoster.length}</strong> maintained faculty profiles.</p>
+            <span class="insights-badge">SECTION 1 — SYSTEM HEALTH</span>
+            <h2 class="insights-main-heading">System Health, Codebase Status &amp; Project History</h2>
+            <p class="insights-main-desc">Metadata audit coverage, GitHub repository status, and database growth tracking across all <strong>${fullRoster.length}</strong> maintained profiles.</p>
           </div>
-          ${renderHealthPanel(fullRoster, import.meta.env.BASE_URL)}
+          ${renderHealthPanel(fullRoster, import.meta.env.BASE_URL, gitInfo, false, statsHistory, activeGrowthMetric)}
         </section>
 
         <!-- SECTION 2: DIASPORA PATHWAYS & MACRO INSIGHTS -->
@@ -515,8 +517,6 @@ export function renderFunFacts(
           ${selectedSection}
 
           <!-- GLOBAL SECTION -->
-          <div class="insights-category">
-
           <div class="insights-category">
             <div class="insights-category-header">
               <h3 class="insights-category-title">1. Geographic Distribution &amp; Faculty Hubs</h3>
@@ -560,14 +560,6 @@ export function renderFunFacts(
               <ul class="fun-facts">${formatList([...worldFacts, ...worldAwardsFacts])}</ul>
               ${calculationBasis(fullRoster, 'World')}
             </div>
-          </div>
-
-          <div class="insights-category">
-            <div class="insights-category-header">
-              <h3 class="insights-category-title">6. Project &amp; Archive Growth</h3>
-              <p class="insights-category-subtitle">Evolution of the VietProfs database over time across size, institutions, and verified records.</p>
-            </div>
-            ${renderGrowthChart(statsHistory, activeGrowthMetric)}
           </div>
         </section>
       </div>

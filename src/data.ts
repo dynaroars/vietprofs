@@ -186,6 +186,25 @@ export async function loadStatsHistory(): Promise<StatsHistoryPoint[]> {
   }
 }
 
+export interface GitInfo {
+  totalCommits: number;
+  latestHash: string;
+  latestDate: string;
+  latestMessage: string;
+  branch: string;
+  repoUrl: string;
+}
+
+export async function loadGitInfo(): Promise<GitInfo | null> {
+  try {
+    const res = await fetch(`${import.meta.env.BASE_URL}git-info.json`);
+    if (!res.ok) return null;
+    return await res.json();
+  } catch {
+    return null;
+  }
+}
+
 // filter(Boolean) doesn't narrow `(string | undefined)[]` to `string[]`, and every unique*()
 // helper needs exactly that, so the narrowing predicate lives here once.
 function isPresent(value: string | undefined | null): value is string {

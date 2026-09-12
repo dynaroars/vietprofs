@@ -14,6 +14,7 @@ import {
   fieldOf,
   filterRoster,
   institutionTypeOf,
+  loadGitInfo,
   loadRoster,
   loadStatsHistory,
   locationMatches,
@@ -26,6 +27,7 @@ import {
   uniqueResearchAreas,
   uniqueStates,
   uniqueUndergradInstitutions,
+  type GitInfo,
   type Roster,
   type RosterEntry,
   type SearchIndex,
@@ -320,6 +322,7 @@ async function init() {
   }
   const searchIndex = buildSearchIndex(roster);
   const statsHistory = await loadStatsHistory();
+  const gitInfo = await loadGitInfo();
   const allFacts = buildFunFacts(roster);
 
   // Matches everything filterRoster actually searches over (name, university, city, state, country,
@@ -723,7 +726,7 @@ async function init() {
         countEl.textContent = 'Dataset health, metadata completeness, and verification metrics:';
       }
       if (rosterEl) {
-        rosterEl.innerHTML = renderHealthPanel(roster, import.meta.env.BASE_URL);
+        rosterEl.innerHTML = renderHealthPanel(roster, import.meta.env.BASE_URL, gitInfo, true, statsHistory, currentGrowthMetric);
       }
       renderQueryPlan(roster.length, 'health');
       syncUrl();
@@ -732,7 +735,7 @@ async function init() {
     }
     const locRoster = roster.filter((p) => locationMatches(p, locationSelect.value));
     if (filterState.insights) {
-      renderFunFacts(locRoster, locationLabel(locationSelect.value), locationSelect.value, roster, statsHistory, currentGrowthMetric);
+      renderFunFacts(locRoster, locationLabel(locationSelect.value), locationSelect.value, roster, statsHistory, currentGrowthMetric, gitInfo);
       renderQueryPlan(locRoster.length, 'insights');
       syncUrl();
       renderBrowserShelf();
