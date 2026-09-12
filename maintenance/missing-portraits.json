@@ -3926,5 +3926,55 @@
     "status": "unresolved",
     "note": "profile page exposed no verified person-specific portrait candidate",
     "recoveryBatch": 1
+  },
+  {
+    "id": "vp-0250",
+    "name": "Lesa Tran Lu",
+    "university": "Rice University",
+    "profileUrl": "https://profiles.rice.edu/faculty/lesa-tran",
+    "batch": 1,
+    "status": "fetched",
+    "note": "verified portrait fetched and converted to webp",
+    "portraitSource": "https://profiles.rice.edu/sites/g/files/bxs3881/files/2023-06/tranweb.jpg"
+  },
+  {
+    "id": "vp-0784",
+    "name": "Hien Thi Thu Nguyen",
+    "university": "Aalborg University",
+    "profileUrl": "https://vbn.aau.dk/en/persons/httn/",
+    "batch": 3,
+    "status": "fetched",
+    "note": "verified portrait fetched and converted to webp",
+    "portraitSource": "https://vbn.aau.dk/files-asset/716574842/HienThiThuNguyen.jpg"
+  },
+  {
+    "id": "vp-0791",
+    "name": "Uyen L. Tran",
+    "university": "Vanderbilt University",
+    "profileUrl": "https://www.vumc.org/ophthalmology/person/uyen-l-tran-md",
+    "batch": 3,
+    "status": "fetched",
+    "note": "verified portrait fetched and converted to webp",
+    "portraitSource": "https://www.vumc.org/ophthalmology/sites/default/files/people/tran.jpg"
+  },
+  {
+    "id": "vp-0799",
+    "name": "Huyen Pham",
+    "university": "École Polytechnique",
+    "profileUrl": "https://www.polytechnique.edu/node/147",
+    "batch": 4,
+    "status": "fetched",
+    "note": "verified portrait fetched and converted to webp",
+    "portraitSource": "https://lh3.googleusercontent.com/sitesv/AG8ngQWoDNaTtiEGuSPLGNiGbVWC34ztynZso4moeZ9gGGS5yNPiPSKrOSxaJW0JDNEbgw8CdcOroQr889C56BEtSG4SHoOAxPs61ZLNDbEzSQCT0mc9LxYbFHTDKva42lTe8u_wFUXatOCKPsY1tYY8JAwbUfoRgAfMdFwTu5A5u4SjJzqaoIWSrHif3GBrrgyT-m849i3OzI0CHemFmBbFjP0f22AOAhT4Vgd1yfkSAAc=w1280"
+  },
+  {
+    "id": "vp-0834",
+    "name": "Anh-Dung Nguyen",
+    "university": "High Point University",
+    "profileUrl": "https://www.highpoint.edu/physician-assistant/faculty-staff/anh-dung-nguyen/",
+    "batch": 5,
+    "status": "fetched",
+    "note": "verified high-res headshot fetched from High Point University media archive; note that vp-0834 in data.json is assigned to Trung Thanh Nguyen, and Anh-Dung Nguyen has moved to West Virginia University",
+    "portraitSource": "https://www.highpoint.edu/media/home/Ahn-Dung-Yum-Nguyen.jpg"
   }
 ]
