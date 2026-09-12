@@ -555,7 +555,7 @@ To prevent desynchronization between data files and ensure interrupted runs are 
 
 Automated web scouting and manual portrait recovery must always perform a thorough multi-source search:
 
-- **Multi-source search:** Do not rely solely on a single `profileUrl` check. Execute web search queries (`"${name}" "${university}" faculty portrait OR photo`) and inspect alternate lab homepages, research center pages, hospital/clinical directories, and press releases.
+- **Multi-source search:** Do not rely solely on a single `profileUrl` check. Portraits do not have to be official institutional headshots; suitable headshots from the scholar's personal academic homepages, lab sites, or Google Sites are fully acceptable. Execute web search queries (`"${name}" "${university}" faculty portrait OR photo`) and inspect personal homepages, lab sites, alternate department/center pages, hospital/clinical directories, and press releases.
 - **Name evidence matching:** Require explicit name evidence matching in the candidate image URL or image context.
 - **Generic placeholder rejection:** Filter out generic placeholders, theme icons, site headers/logos, and default avatars (e.g., `blank_profile`, `default_profile`, `silhouette`, `no_photo`, `default@mobile3x`).
 - **Validation & archiving:** Verify candidate dimensions (minimum 120×120px) and portrait aspect ratio (width/height ≤ 1.55) using ImageMagick (`identify`), convert approved headshots to WebP format in `public/portraits/`, and preserve the direct original image URL in `portraitSource`.
