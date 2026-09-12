@@ -1295,11 +1295,6 @@ async function init() {
   const populatedLocations = locationOptions.filter((location) =>
     !['US', 'World'].includes(location) && filtersHaveResults(location, 'all', 'all')
   );
-  const profilesWithAbout = roster.filter((p) => p.researchOverview?.text);
-  const randomAboutProfile = profilesWithAbout.length
-    ? profilesWithAbout[Math.floor(Math.random() * profilesWithAbout.length)]
-    : null;
-
   const rosterStats = deriveRosterStats(roster);
 
   const healthMetrics = [
@@ -1323,7 +1318,7 @@ async function init() {
   const randomTrafficMetric = trafficOptions[Math.floor(Math.random() * trafficOptions.length)];
 
   type Example = {
-    type: 'search' | 'field' | 'track' | 'loc' | 'fact' | 'health' | 'about' | 'stats';
+    type: 'search' | 'field' | 'track' | 'loc' | 'fact' | 'health' | 'stats';
     value: string;
     label?: string;
     icon?: string;
@@ -1333,9 +1328,6 @@ async function init() {
   const coreExamples: Example[] = [
     { type: 'health' as const, value: 'Dataset Health', label: `Health: ${abbreviateInsightText(randomHealthMetric)}`, icon: '💚' },
     { type: 'stats' as const, value: 'Visitor Traffic', label: `Traffic: ${abbreviateInsightText(randomTrafficMetric)}`, icon: '📈' },
-    ...(randomAboutProfile
-      ? [{ type: 'about' as const, value: displayName(randomAboutProfile.name), label: `About: ${displayName(randomAboutProfile.name)}`, icon: '📖', targetName: displayName(randomAboutProfile.name) }]
-      : []),
     { type: 'fact' as const, value: 'Diaspora Insights', label: `Insight: ${shortFact}`, icon: '💡' },
   ];
 
@@ -1358,7 +1350,6 @@ async function init() {
     button.type = 'button';
     const chipTypeClass = ex.type === 'fact' ? ' insight-chip'
       : ex.type === 'health' ? ' health-chip'
-      : ex.type === 'about' ? ' about-chip'
       : ex.type === 'stats' ? ' stats-chip'
       : '';
     button.className = `example-chip${chipTypeClass}`;
@@ -1367,7 +1358,6 @@ async function init() {
     if (ex.type === 'fact') button.dataset.fact = '1';
     if (ex.type === 'health') button.dataset.health = '1';
     if (ex.type === 'stats') button.dataset.stats = '1';
-    if (ex.type === 'about') button.dataset.about = ex.targetName ?? ex.value;
     if (ex.type === 'field') button.dataset.field = ex.value;
     if (ex.type === 'track') button.dataset.track = ex.value;
     if (ex.type === 'loc') button.dataset.loc = ex.value;
@@ -1385,14 +1375,6 @@ async function init() {
       clearSearch();
       filterState.insights = true;
       setFilterValues({ location: locationSelect.value });
-      update();
-      return;
-    }
-    if (btn.dataset.about) {
-      const targetName = btn.dataset.about;
-      setSearchValue(`Name: ${targetName}`);
-      filterState.insights = false;
-      filterState.health = false;
       update();
       return;
     }
