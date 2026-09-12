@@ -594,13 +594,15 @@ test('filter choices stay stable and stale filters recover', async () => {
 
 test('interesting view shows World alone, or the selected region plus World', async () => {
   const page = await context.newPage();
-  await page.goto(`${baseUrl}/?loc=World`, { waitUntil: 'networkidle' });
-  await page.locator('.example-chip[data-fact]').click();
+  await page.goto(`${baseUrl}/?loc=World&view=insights`, { waitUntil: 'networkidle' });
   assert.equal(await page.locator('.insights-section-block').count(), 2);
-  await page.locator('#location-filter').selectOption('France');
+  await page.goto(`${baseUrl}/?loc=France&view=insights`, { waitUntil: 'networkidle' });
   assert.equal(await page.locator('.insights-section-block').count(), 3);
   assert.equal(await page.locator('.insights-badge').filter({ hasText: 'France' }).count(), 1);
   assert.equal(await page.locator('.insights-badge').filter({ hasText: 'SECTION 2 — DIASPORA INSIGHTS' }).count(), 1);
+  await page.locator('#location-filter').selectOption('World');
+  assert.equal(await page.locator('.insights-section-block').count(), 0);
+  assert.ok((await page.locator('.entry').count()) > 0);
   await page.close();
 });
 
