@@ -449,6 +449,7 @@ export const HEALTH_SUBFIELDS = [
 // generic keyword to FIELD_RULES below — whenever a department's correct field depends on which
 // institution it's at, not just the department string.
 const FIELD_OVERRIDES = new Map([
+  ["École d'actuariat|Université Laval", 'Mathematics'],
   ['Accelerator Directorate|SLAC National Accelerator Laboratory', 'Physics & Astronomy'],
   ['Direction Europe et International|CNRS (Centre National de la Recherche Scientifique)', 'Biological & Biomedical Sciences'],
   ['Centre de Recherche sur l\'Inflammation|CNRS (Centre National de la Recherche Scientifique)', 'Biological & Biomedical Sciences'],
