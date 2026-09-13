@@ -25,7 +25,8 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 - [x] Batch WL-17 complete
 - [x] Batch WL-18 complete
 - [x] Batch WL-19 complete
-- [ ] Batch WL-20 through WL-23 — not yet started
+- [x] Batch WL-20 complete
+- [ ] Batch WL-21 through WL-23 — not yet started
 
 ---
 
@@ -275,7 +276,6 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-0411` | [Khanh P. Nguyen](https://vietprofs.roars.dev/people/vp-0411.html) | Oregon Health & Science University | Surgery, Vascular Surgery | ⏳ | ⏳ |
 | `vp-0412` | [Khoa A. Nguyen](https://vietprofs.roars.dev/people/vp-0412.html) | Oregon Health & Science University | Medicine, Cardiovascular Medicine | ⏳ | ⏳ |
 | `vp-0413` | [Angela-Tu Nguyen](https://vietprofs.roars.dev/people/vp-0413.html) | Oregon Health & Science University | Pediatrics, General Pediatrics | ⏳ | ⏳ |
-| `vp-0414` | [Truong Tran](https://vietprofs.roars.dev/people/vp-0414.html) | Pennsylvania State University | Applied Linguistics | ⏳ | ⏳ |
 | `vp-0415` | [Elizabeth Tran](https://vietprofs.roars.dev/people/vp-0415.html) | Purdue University | Biochemistry | ⏳ | ✅ |
 | `vp-0417` | [Thanh Tran](https://vietprofs.roars.dev/people/vp-0417.html) | Rice University | Electrical and Computer Engineering | ⏳ | ⏳ |
 | `vp-0418` | [Kim-Phuong Le](https://vietprofs.roars.dev/people/vp-0418.html) | Rutgers University | Chemistry and Chemical Biology | ⏳ | ✅ |
@@ -1152,40 +1152,40 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 
 ### Batch WL-20 (vp-1306 to vp-1358, 50 people)
 
-- [ ] Batch complete
+- [x] Batch complete
 
 | ID | Name | Institution | Department | Website | Lab |
 | :--- | :--- | :--- | :--- | :---: | :---: |
 | `vp-1306` | [Lan Anh Nguyen Luu](https://vietprofs.roars.dev/people/vp-1306.html) | Eötvös Loránd University | Institute of Intercultural Psychology and Education | ⏳ | ⏳ |
 | `vp-1307` | [Binh Nghiem-Phu](https://vietprofs.roars.dev/people/vp-1307.html) | University of Hyogo | School of Economics and Management | ⏳ | ⏳ |
 | `vp-1308` | [Hien Van Doan](https://vietprofs.roars.dev/people/vp-1308.html) | Chiang Mai University | Department of Animal and Aquatic Sciences | ⏳ | ⏳ |
-| `vp-1309` | [Quoc C. Vuong](https://vietprofs.roars.dev/people/vp-1309.html) | Newcastle University | School of Psychology | ⏳ | ⏳ |
-| `vp-1310` | [Bao Q. Vuong](https://vietprofs.roars.dev/people/vp-1310.html) | City College of New York, CUNY | Department of Biology | ⏳ | ⏳ |
+| `vp-1309` | [Quoc C. Vuong](https://vietprofs.roars.dev/people/vp-1309.html) | Newcastle University | School of Psychology | ✅ | ⏳ |
+| `vp-1310` | [Bao Q. Vuong](https://vietprofs.roars.dev/people/vp-1310.html) | City College of New York, CUNY | Department of Biology | ⏳ | ✅ |
 | `vp-1311` | [Thanh Pierre Doan](https://vietprofs.roars.dev/people/vp-1311.html) | Norwegian University of Science and Technology | Department of Neuromedicine and Movement Science | ⏳ | ⏳ |
 | `vp-1312` | [Trang-Anh Estelle Nghiem](https://vietprofs.roars.dev/people/vp-1312.html) | University of Tübingen | Hertie Institute for AI in Brain Health | ⏳ | ⏳ |
 | `vp-1313` | [Marilyn Phung](https://vietprofs.roars.dev/people/vp-1313.html) | Western University | Department of Medicine, Schulich School of Medicine & Dentistry | ⏳ | ⏳ |
-| `vp-1315` | [Son Lam Phung](https://vietprofs.roars.dev/people/vp-1315.html) | University of Wollongong | School of Electrical, Computer and Telecommunications Engineering | ⏳ | ⏳ |
+| `vp-1315` | [Son Lam Phung](https://vietprofs.roars.dev/people/vp-1315.html) | University of Wollongong | School of Electrical, Computer and Telecommunications Engineering | ✅ | ⏳ |
 | `vp-1316` | [Hai Q. Dinh](https://vietprofs.roars.dev/people/vp-1316.html) | Kent State University | Department of Mathematical Sciences | ⏳ | ⏳ |
 | `vp-1317` | [Phan Tu Vuong](https://vietprofs.roars.dev/people/vp-1317.html) | University of Southampton | School of Mathematical Sciences | ⏳ | ⏳ |
-| `vp-1318` | [Anh Tuan Luu](https://vietprofs.roars.dev/people/vp-1318.html) | Nanyang Technological University | College of Computing and Data Science | ⏳ | ⏳ |
-| `vp-1319` | [Doan B. Hoang](https://vietprofs.roars.dev/people/vp-1319.html) | University of Technology Sydney | School of Electrical and Data Engineering | ⏳ | ⏳ |
-| `vp-1320` | [Thai Doan Chuong](https://vietprofs.roars.dev/people/vp-1320.html) | Brunel University London | Department of Mathematics | ⏳ | ⏳ |
-| `vp-1321` | [Nghia Duong-Trung](https://vietprofs.roars.dev/people/vp-1321.html) | German Research Center for Artificial Intelligence | Educational Technology Lab | ⏳ | ⏳ |
+| `vp-1318` | [Anh Tuan Luu](https://vietprofs.roars.dev/people/vp-1318.html) | Nanyang Technological University | College of Computing and Data Science | ✅ | ⏳ |
+| `vp-1319` | [Doan B. Hoang](https://vietprofs.roars.dev/people/vp-1319.html) | University of Technology Sydney | School of Electrical and Data Engineering | ✅ | ⏳ |
+| `vp-1320` | [Thai Doan Chuong](https://vietprofs.roars.dev/people/vp-1320.html) | Brunel University London | Department of Mathematics | ✅ | ⏳ |
+| `vp-1321` | [Nghia Duong-Trung](https://vietprofs.roars.dev/people/vp-1321.html) | German Research Center for Artificial Intelligence | Educational Technology Lab | ✅ | ⏳ |
 | `vp-1324` | [Tu C. Le](https://vietprofs.roars.dev/people/vp-1324.html) | RMIT University | School of Engineering | ⏳ | ⏳ |
 | `vp-1325` | [Bich-Thuy Doan](https://vietprofs.roars.dev/people/vp-1325.html) | CNRS (Centre National de la Recherche Scientifique) | Institute of Chemistry for Life and Health Sciences (Chimie ParisTech - PSL) | ⏳ | ⏳ |
 | `vp-1326` | [Doan-Trung Luu](https://vietprofs.roars.dev/people/vp-1326.html) | CNRS (Centre National de la Recherche Scientifique) | Biochimie et Physiologie Moléculaire des Plantes (BPMP) | ⏳ | ⏳ |
 | `vp-1327` | [Loc Huu Ho](https://vietprofs.roars.dev/people/vp-1327.html) | Wageningen University & Research | Water Resources Management Group | ⏳ | ⏳ |
 | `vp-1328` | [Huu Doan](https://vietprofs.roars.dev/people/vp-1328.html) | Toronto Metropolitan University | Department of Chemical Engineering | ⏳ | ⏳ |
-| `vp-1329` | [Van Schepler-Luu](https://vietprofs.roars.dev/people/vp-1329.html) | International Rice Research Institute | Plant Pathology and Host Plant Resistance Group | ⏳ | ⏳ |
+| `vp-1329` | [Van Schepler-Luu](https://vietprofs.roars.dev/people/vp-1329.html) | International Rice Research Institute | Plant Pathology and Host Plant Resistance Group | ✅ | ⏳ |
 | `vp-1330` | [Quang-Van Doan](https://vietprofs.roars.dev/people/vp-1330.html) | University of Tsukuba | Center for Computational Sciences | ⏳ | ⏳ |
-| `vp-1331` | [Trong-Anh Trinh](https://vietprofs.roars.dev/people/vp-1331.html) | Monash University | Centre for Health Economics | ⏳ | ⏳ |
+| `vp-1331` | [Trong-Anh Trinh](https://vietprofs.roars.dev/people/vp-1331.html) | Monash University | Centre for Health Economics | ✅ | ⏳ |
 | `vp-1332` | [Luc Duc Phung](https://vietprofs.roars.dev/people/vp-1332.html) | Yamagata University | Department of Food, Life and Environmental Sciences, Faculty of Agriculture | ⏳ | ⏳ |
 | `vp-1333` | [Kim Ta Phuoc](https://vietprofs.roars.dev/people/vp-1333.html) | CNRS (Centre National de la Recherche Scientifique) | Laboratoire d'Optique Appliquée (LOA) | ⏳ | ⏳ |
 | `vp-1334` | [Minh T. N. Le](https://vietprofs.roars.dev/people/vp-1334.html) | National University of Singapore | Department of Pharmacology | ⏳ | ⏳ |
-| `vp-1335` | [Tran Trung Luu](https://vietprofs.roars.dev/people/vp-1335.html) | The University of Hong Kong | Department of Physics | ⏳ | ⏳ |
+| `vp-1335` | [Tran Trung Luu](https://vietprofs.roars.dev/people/vp-1335.html) | The University of Hong Kong | Department of Physics | ✅ | ⏳ |
 | `vp-1336` | [Le A. Trinh](https://vietprofs.roars.dev/people/vp-1336.html) | University of Southern California | Department of Biological Sciences | ⏳ | ⏳ |
 | `vp-1337` | [Phuong Mai Dinh](https://vietprofs.roars.dev/people/vp-1337.html) | CNRS (Centre National de la Recherche Scientifique) | Laboratoire de Physique Théorique | ⏳ | ⏳ |
-| `vp-1338` | [Trung Nghia Vu](https://vietprofs.roars.dev/people/vp-1338.html) | Karolinska Institutet | Department of Medical Epidemiology and Biostatistics | ⏳ | ⏳ |
+| `vp-1338` | [Trung Nghia Vu](https://vietprofs.roars.dev/people/vp-1338.html) | Karolinska Institutet | Department of Medical Epidemiology and Biostatistics | ✅ | ⏳ |
 | `vp-1339` | [Van An Dinh](https://vietprofs.roars.dev/people/vp-1339.html) | Osaka University | Graduate School of Engineering | ⏳ | ⏳ |
 | `vp-1340` | [Dinh Ho Tong Minh](https://vietprofs.roars.dev/people/vp-1340.html) | INRAE (Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement) | UMR TETIS | ⏳ | ⏳ |
 | `vp-1341` | [Tan-Phu Vuong](https://vietprofs.roars.dev/people/vp-1341.html) | Institut polytechnique de Grenoble | Laboratoire de Conception et d'Intégration des Systèmes (LCIS) | ⏳ | ⏳ |
@@ -1204,8 +1204,8 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-1354` | [Hai Phung](https://vietprofs.roars.dev/people/vp-1354.html) | Griffith University | School of Medicine and Dentistry | ⏳ | ⏳ |
 | `vp-1355` | [Quan V. Vuong](https://vietprofs.roars.dev/people/vp-1355.html) | University of Technology Sydney | School of Life Sciences, Faculty of Science | ⏳ | ⏳ |
 | `vp-1356` | [Chau Trinh-Shevrin](https://vietprofs.roars.dev/people/vp-1356.html) | New York University | Department of Population Health, Grossman School of Medicine | ⏳ | ⏳ |
-| `vp-1357` | [Thuy Doan](https://vietprofs.roars.dev/people/vp-1357.html) | University of California, San Francisco | Department of Ophthalmology & Francis I. Proctor Foundation | ⏳ | ⏳ |
-| `vp-1358` | [Steven-Huy B. Han](https://vietprofs.roars.dev/people/vp-1358.html) | University of California, Los Angeles | Division of Digestive Diseases, David Geffen School of Medicine | ⏳ | ⏳ |
+| `vp-1357` | [Thuy Doan](https://vietprofs.roars.dev/people/vp-1357.html) | University of California, San Francisco | Department of Ophthalmology & Francis I. Proctor Foundation | ⏳ | ✅ |
+| `vp-1358` | [Steven-Huy B. Han](https://vietprofs.roars.dev/people/vp-1358.html) | University of California, Los Angeles | Division of Digestive Diseases, David Geffen School of Medicine | ⏳ | ✅ |
 
 ---
 
