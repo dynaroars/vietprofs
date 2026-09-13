@@ -21,7 +21,8 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 - [x] Batch WL-13 complete
 - [x] Batch WL-14 complete
 - [x] Batch WL-15 complete
-- [ ] Batch WL-16 through WL-23 — not yet started
+- [x] Batch WL-16 complete
+- [ ] Batch WL-17 through WL-23 — not yet started
 
 ---
 
@@ -912,7 +913,7 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 
 ### Batch WL-16 (vp-1064 to vp-1130, 50 people)
 
-- [ ] Batch complete
+- [x] Batch complete
 
 | ID | Name | Institution | Department | Website | Lab |
 | :--- | :--- | :--- | :--- | :---: | :---: |
@@ -920,8 +921,8 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-1065` | [Khoa Le](https://vietprofs.roars.dev/people/vp-1065.html) | University of Leeds | School of Mathematics | ⏳ | ⏳ |
 | `vp-1068` | [Trung Bao Hoang](https://vietprofs.roars.dev/people/vp-1068.html) | University of Greenwich | Accounting & Finance | ⏳ | ⏳ |
 | `vp-1069` | [Minh Thi Hong Dinh](https://vietprofs.roars.dev/people/vp-1069.html) | University of Inland Norway | Business Administration | ⏳ | ⏳ |
-| `vp-1070` | [Ruby (Hong Ngoc) Nguyen](https://vietprofs.roars.dev/people/vp-1070.html) | Adelaide University | School of Economics | ⏳ | ⏳ |
-| `vp-1071` | [Long The Nguyen](https://vietprofs.roars.dev/people/vp-1071.html) | Washington State University | Department of Management, Information Systems, and Entrepreneurship | ⏳ | ⏳ |
+| `vp-1070` | [Ruby (Hong Ngoc) Nguyen](https://vietprofs.roars.dev/people/vp-1070.html) | Adelaide University | School of Economics | ✅ | ⏳ |
+| `vp-1071` | [Long The Nguyen](https://vietprofs.roars.dev/people/vp-1071.html) | Washington State University | Department of Management, Information Systems, and Entrepreneurship | ✅ | ⏳ |
 | `vp-1073` | [Minh-Tam Thi Bui](https://vietprofs.roars.dev/people/vp-1073.html) | Srinakharinwirot University | Economics | ⏳ | ⏳ |
 | `vp-1074` | [Truc Thanh Ngo](https://vietprofs.roars.dev/people/vp-1074.html) | University of San Diego | Industrial and Systems Engineering | ⏳ | ⏳ |
 | `vp-1077` | [Thach-Thao Duong](https://vietprofs.roars.dev/people/vp-1077.html) | Murdoch University | Computer Science | ⏳ | ⏳ |
@@ -935,7 +936,7 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-1090` | [Thuong Nguyen](https://vietprofs.roars.dev/people/vp-1090.html) | Victoria University of Wellington | School of Mathematics and Statistics | ⏳ | ⏳ |
 | `vp-1092` | [Jo (Chau) Vu](https://vietprofs.roars.dev/people/vp-1092.html) | Victoria University | Victoria University Business School | ⏳ | ⏳ |
 | `vp-1093` | [Nguyet Thi Khanh Cao](https://vietprofs.roars.dev/people/vp-1093.html) | Kyoto University of Advanced Science | Department of Economics | ⏳ | ⏳ |
-| `vp-1094` | [Viet-Dung Doan](https://vietprofs.roars.dev/people/vp-1094.html) | Hong Kong Baptist University | Department of Accountancy, Economics and Finance | ⏳ | ⏳ |
+| `vp-1094` | [Viet-Dung Doan](https://vietprofs.roars.dev/people/vp-1094.html) | Hong Kong Baptist University | Department of Accountancy, Economics and Finance | ✅ | ⏳ |
 | `vp-1095` | [Mai Tuyet Pho](https://vietprofs.roars.dev/people/vp-1095.html) | University of Chicago | Section of Infectious Diseases and Global Health | ⏳ | ⏳ |
 | `vp-1096` | [Phat Vinh Luong](https://vietprofs.roars.dev/people/vp-1096.html) | The University of Texas Permian Basin | Department of Management, Marketing, & Industrial Technology | ⏳ | ⏳ |
 | `vp-1097` | [Sylvia Pham](https://vietprofs.roars.dev/people/vp-1097.html) | Kutztown University of Pennsylvania | Rohrbach Library | ⏳ | ⏳ |
@@ -953,17 +954,17 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-1114` | [Clara Tran](https://vietprofs.roars.dev/people/vp-1114.html) | Stony Brook University | University Libraries | ⏳ | ⏳ |
 | `vp-1115` | [Tracy T. Nguyen](https://vietprofs.roars.dev/people/vp-1115.html) | SUNY College of Optometry | Optometry | ⏳ | ⏳ |
 | `vp-1116` | [Kevin Nguyen](https://vietprofs.roars.dev/people/vp-1116.html) | Drexel University | Physician Assistant Department | ⏳ | ⏳ |
-| `vp-1117` | [Thuy Dieu Nguyen](https://vietprofs.roars.dev/people/vp-1117.html) | University of Michigan | Health Management and Policy | ⏳ | ⏳ |
-| `vp-1118` | [Thuy-Anh T. Nguyen](https://vietprofs.roars.dev/people/vp-1118.html) | University of Michigan | Asian Languages and Cultures | ⏳ | ⏳ |
+| `vp-1117` | [Thuy Dieu Nguyen](https://vietprofs.roars.dev/people/vp-1117.html) | University of Michigan | Health Management and Policy | ✅ | ⏳ |
+| `vp-1118` | [Thuy-Anh T. Nguyen](https://vietprofs.roars.dev/people/vp-1118.html) | University of Michigan | Asian Languages and Cultures | ✅ | ⏳ |
 | `vp-1119` | [Uyen T. Nguyen](https://vietprofs.roars.dev/people/vp-1119.html) | Harvard University | History and East Asian Languages and Civilizations | ⏳ | ⏳ |
-| `vp-1120` | [Linda Nguyen](https://vietprofs.roars.dev/people/vp-1120.html) | Stanford University | Medicine - Gastroenterology & Hepatology | ⏳ | ⏳ |
+| `vp-1120` | [Linda Nguyen](https://vietprofs.roars.dev/people/vp-1120.html) | Stanford University | Medicine - Gastroenterology & Hepatology | ⏳ | ✅ |
 | `vp-1121` | [Vinh Nguyen](https://vietprofs.roars.dev/people/vp-1121.html) | The University of Texas at Austin | School of Nursing | ⏳ | ⏳ |
 | `vp-1122` | [Luc Nguyen](https://vietprofs.roars.dev/people/vp-1122.html) | University of Oxford | Mathematical Institute | ⏳ | ⏳ |
 | `vp-1124` | [Quynh Doan](https://vietprofs.roars.dev/people/vp-1124.html) | University of British Columbia | Department of Pediatrics | ⏳ | ⏳ |
 | `vp-1125` | [Ngoc Cuong Nguyen](https://vietprofs.roars.dev/people/vp-1125.html) | KAIST | Department of Mathematical Sciences | ⏳ | ⏳ |
 | `vp-1126` | [Cam Nguyen](https://vietprofs.roars.dev/people/vp-1126.html) | Texas A&M University | Electrical and Computer Engineering | ⏳ | ⏳ |
-| `vp-1127` | [Phong Q. Nguyen](https://vietprofs.roars.dev/people/vp-1127.html) | Inria | Computer Science Department, ENS / CASCADE project-team, Inria Paris | ⏳ | ⏳ |
-| `vp-1128` | [Benjamin Nguyen - INSA Centre Val de Loire](https://vietprofs.roars.dev/people/vp-1128.html) | INSA Centre Val de Loire | Laboratoire d'Informatique Fondamentale d'Orléans (LIFO), Computer Science | ⏳ | ⏳ |
+| `vp-1127` | [Phong Q. Nguyen](https://vietprofs.roars.dev/people/vp-1127.html) | Inria | Computer Science Department, ENS / CASCADE project-team, Inria Paris | ✅ | ⏳ |
+| `vp-1128` | [Benjamin Nguyen - INSA Centre Val de Loire](https://vietprofs.roars.dev/people/vp-1128.html) | INSA Centre Val de Loire | Laboratoire d'Informatique Fondamentale d'Orléans (LIFO), Computer Science | ✅ | ⏳ |
 | `vp-1129` | [Nha Nguyen](https://vietprofs.roars.dev/people/vp-1129.html) | Université de Moncton | Faculty of Business Administration | ⏳ | ⏳ |
 | `vp-1130` | [Thu Pham-Gia](https://vietprofs.roars.dev/people/vp-1130.html) | Université de Moncton | Department of Mathematics and Statistics | ⏳ | ⏳ |
 
