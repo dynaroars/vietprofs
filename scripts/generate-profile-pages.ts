@@ -56,6 +56,26 @@ const TRACK_SECTION: Record<string, number> = {
   'Deceased': 7,
 };
 
+function renderMarkdownLinks(text: string): string {
+  const parts: string[] = [];
+  const regex = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g;
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(escapeHtml(text.slice(lastIndex, match.index)));
+    }
+    const label = escapeHtml(match[1]);
+    const href = escapeHtml(match[2]);
+    parts.push(`<a href="${href}" target="_blank" rel="noopener noreferrer">${label}</a>`);
+    lastIndex = regex.lastIndex;
+  }
+  if (lastIndex < text.length) {
+    parts.push(escapeHtml(text.slice(lastIndex)));
+  }
+  return parts.join('');
+}
+
 function profilePage(person: RosterEntry) {
   const sectionNum = TRACK_SECTION[person.track || ''] || 1;
   const sectionLabel = `VIETPROFS(${sectionNum})`;
@@ -75,7 +95,7 @@ function profilePage(person: RosterEntry) {
     ? `<section class="man-section"><h2>RESEARCH</h2><ul>${person.researchAreas.map((area) => `<li>${escapeHtml(area)}</li>`).join('')}</ul></section>`
     : '';
   const researchOverview = person.researchOverview
-    ? `<section class="man-section"><h2>ABOUT</h2><p>${escapeHtml(person.researchOverview.text)}</p><p class="section-note research-overview-note">Automatically summarized; checked ${escapeHtml(formatRosterDate(person.researchOverview.verifiedAt))} (${person.researchOverview.sources.map((s, i) => `<a href="${escapeHtml(s)}" target="_blank" rel="noopener noreferrer">${person.researchOverview?.sources.length === 1 ? 'source' : `source ${i + 1}`}</a>`).join(', ')}).</p></section>`
+    ? `<section class="man-section"><h2>ABOUT</h2><p>${renderMarkdownLinks(person.researchOverview.text)}</p><p class="section-note research-overview-note">Automatically summarized; checked ${escapeHtml(formatRosterDate(person.researchOverview.verifiedAt))} (${person.researchOverview.sources.map((s, i) => `<a href="${escapeHtml(s)}" target="_blank" rel="noopener noreferrer">${person.researchOverview?.sources.length === 1 ? 'source' : `source ${i + 1}`}</a>`).join(', ')}).</p></section>`
     : '';
   const education = formatEducationDetails(person, { fullLabels: true });
   const educationSection = education.length

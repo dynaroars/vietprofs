@@ -33,10 +33,19 @@ export function validateOverview(value: unknown): EnrichmentError[] {
   const overview = value as Partial<ResearchOverview>;
   if (typeof overview.text !== 'string' || !overview.text.trim()) errors.push('overview text is required');
   else {
-    const sentences = overview.text.trim().split(/[.!?]+\s*/).filter(Boolean);
+    const textWithoutLinks = overview.text.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '$1');
+    const sentences = textWithoutLinks.trim().split(/[.!?]+(?:\s+|$)/).filter(Boolean);
     if (sentences.length < 1) errors.push('overview must contain at least one sentence');
     if (sentences.length > 3) errors.push('overview may contain at most three sentences');
     if (overview.text.length > 500) errors.push('overview must be at most 500 characters');
+
+    const linkMatches = overview.text.matchAll(/\[([^\]]+)\]\(([^)]+)\)/g);
+    for (const match of linkMatches) {
+      const url = match[2];
+      if (!SAFE_WEB_URL.test(url)) {
+        errors.push(`embedded link "${url}" is unsafe`);
+      }
+    }
   }
   if (!Array.isArray(overview.sources) || overview.sources.length === 0) errors.push('overview needs source URLs');
   else overview.sources.forEach((url, i) => { if (typeof url !== 'string' || !SAFE_WEB_URL.test(url)) errors.push(`overview source ${i + 1} is unsafe`); });

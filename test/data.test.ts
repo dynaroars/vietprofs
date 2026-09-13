@@ -12,6 +12,8 @@ const roster: Roster = JSON.parse(readFileSync(join(__dirname, '../public/data.j
 
 test('enrichment validation rejects unsafe links and duplicate work', () => {
   assert.ok(validateEnrichment({ researchOverview: { text: 'Studies networks.', sources: ['javascript:alert(1)'], verifiedAt: '2026-01-01T00:00:00.000Z' } }).some((error) => /unsafe/.test(error)));
+  assert.ok(validateEnrichment({ researchOverview: { text: 'Directs [Lab](javascript:alert(1)).', sources: ['https://example.org'], verifiedAt: '2026-01-01T00:00:00.000Z' } }).some((error) => /unsafe/.test(error)));
+  assert.equal(validateEnrichment({ researchOverview: { text: 'Directs the [Lab](https://roars.dev). Built [Tool](https://vietprofs.roars.dev).', sources: ['https://example.org'], verifiedAt: '2026-01-01T00:00:00.000Z' } }).length, 0);
   const work = { title: 'A', type: 'paper', url: 'https://example.org/a', selectionSource: 'https://example.org/list', selectionMode: 'recent' as const, verifiedAt: '2026-01-01T00:00:00.000Z', year: 2025 };
   assert.ok(validateEnrichment({ recentWork: [work, work] }).some((error) => /duplicates/.test(error)));
 });

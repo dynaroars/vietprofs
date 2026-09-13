@@ -1673,7 +1673,7 @@
     "vietnameseName": "Nguyễn Huy Thanh Vũ",
     "profileUrl": "https://www.gmu.edu/profiles/tvn",
     "websiteUrl": "https://tvn.roars.dev/",
-    "lastUpdatedAt": "2026-09-13T04:27:12.442Z",
+    "lastUpdatedAt": "2026-09-13T04:33:21.864Z",
     "scholarUrl": "https://scholar.google.com/citations?user=TLcVQ-MAAAAJ",
     "university": "George Mason University",
     "city": "Fairfax",
@@ -1728,13 +1728,14 @@
     "portrait": "portraits/032-thanhvu-h-nguyen-george-mason-university.webp",
     "portraitSource": "https://tvn.roars.dev/files/dhl.jpg",
     "researchOverview": {
-      "text": "ThanhVu Nguyen arrived in the United States at age 11 as an HO program refugee and met spouse on a Southwest Airlines flight. Research focuses on automated program analysis, invariant generation, and software verification. Active in open academic community building, ThanhVu Nguyen created VietProfs (a roster of Vietnamese-diaspora faculty) and CSPicks (a computer science venue guide).",
+      "text": "ThanhVu Nguyen arrived in the United States at age 11 as an HO program refugee and met spouse on a Southwest Airlines flight. Directs the [ROARS Lab](https://roars.dev/) researching automated program analysis, invariant generation, and software verification. Active in open academic community building, created [VietProfs](https://vietprofs.roars.dev) and [CSPicks](https://cspicks.roars.dev).",
       "sources": [
         "https://cs.gmu.edu/~tvn/",
+        "https://roars.dev/",
         "https://vietprofs.roars.dev",
         "https://cspicks.roars.dev"
       ],
-      "verifiedAt": "2026-09-13T04:27:12.442Z"
+      "verifiedAt": "2026-09-13T04:33:21.864Z"
     },
     "selectedWork": [
       {
@@ -1766,10 +1767,12 @@
       }
     ],
     "directFields": [
+      "labUrl",
       "name",
       "researchOverview",
       "websiteUrl"
-    ]
+    ],
+    "labUrl": "https://roars.dev/"
   },
   {
     "id": "vp-0033",
@@ -11449,7 +11452,7 @@
     "name": "Chi Nguyen",
     "vietnameseName": "Nguyễn Chi",
     "profileUrl": "https://education.arizona.edu/person/chi-nguyen",
-    "lastUpdatedAt": "2026-09-13T04:27:12.442Z",
+    "lastUpdatedAt": "2026-09-13T04:33:21.864Z",
     "scholarUrl": "https://scholar.google.com/citations?user=TJEwAIIAAAAJ",
     "university": "University of Arizona",
     "city": "Tucson",
@@ -11472,12 +11475,12 @@
     "websiteUrl": "https://chinguyen.education/",
     "linkedinUrl": "https://www.linkedin.com/in/chinguyen23/",
     "researchOverview": {
-      "text": "Chi Nguyen examines systemic inequities affecting students, educational leaders, and communities during critical transitions such as policy reforms and international migration. Outside academia, Chi Nguyen is the creator of the blog and YouTube channel The Present Writer, producing widely followed content on personal development, minimalism, life lessons, and study advice.",
+      "text": "Chi Nguyen examines systemic inequities affecting students, educational leaders, and communities during critical transitions such as policy reforms and international migration. Outside academia, Chi Nguyen is the creator of the blog and YouTube channel [The Present Writer](https://thepresentwriter.com/), producing widely followed content on personal development, minimalism, life lessons, and study advice.",
       "sources": [
         "https://education.arizona.edu/person/chi-nguyen",
         "https://thepresentwriter.com/"
       ],
-      "verifiedAt": "2026-09-13T04:27:12.442Z"
+      "verifiedAt": "2026-09-13T04:33:21.864Z"
     },
     "directFields": [
       "researchOverview"
@@ -41327,7 +41330,7 @@
     "vietnameseName": "Bùi Tường Phong",
     "profileUrl": "https://arxiv.org/abs/2404.14376v1",
     "confirmed": false,
-    "lastUpdatedAt": "2026-09-13T04:27:12.442Z",
+    "lastUpdatedAt": "2026-09-13T04:33:21.864Z",
     "university": "Stanford University",
     "city": "Stanford",
     "state": "CA",
@@ -41367,12 +41370,12 @@
     "portrait": "portraits/phong-tuong-bui-university-of-utah.webp",
     "portraitSource": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Bui-Tuong-Phong.jpg/500px-Bui-Tuong-Phong.jpg",
     "researchOverview": {
-      "text": "Tuong-Phong Bui was a legendary computer graphics pioneer who invented the Phong reflection model and Phong shading algorithm during doctoral research at the University of Utah in 1973. The work revolutionized 3D computer graphics by rendering realistic specular highlights and smooth curved surface shading, establishing foundational terminology used universally across modern graphics engines.",
+      "text": "Tuong-Phong Bui was a legendary computer graphics pioneer who invented the [Phong reflection model](https://en.wikipedia.org/wiki/Phong_reflection_model) and [Phong shading](https://en.wikipedia.org/wiki/Phong_shading) algorithm during doctoral research at the University of Utah in 1973. The work revolutionized 3D computer graphics by rendering realistic specular highlights and smooth curved surface shading, establishing foundational terminology used universally across modern graphics engines.",
       "sources": [
         "https://dl.acm.org/doi/abs/10.1145/3641233.3664315",
         "https://en.wikipedia.org/wiki/Phong_shading"
       ],
-      "verifiedAt": "2026-09-13T04:27:12.442Z"
+      "verifiedAt": "2026-09-13T04:33:21.864Z"
     },
     "directFields": [
       "researchOverview"
