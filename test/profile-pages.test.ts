@@ -47,6 +47,8 @@ test('generated profile pages use the same stylesheet source as the directory', 
   assert.doesNotMatch(generator, /Report stale record/);
   assert.match(generator, /<span>\$\{sectionLabel\}<\/span>/);
   assert.doesNotMatch(generator, /<span><a href="\.\.\/index\.html">\$\{sectionLabel\}<\/a><\/span>/);
+  assert.doesNotMatch(generator, /SELECTED WORK/);
+  assert.doesNotMatch(generator, /RECENT WORK/);
   assert.doesNotMatch(generator, /<footer>/);
   assert.doesNotMatch(generator, /man-footer-line/);
   assert.ok(
