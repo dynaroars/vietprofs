@@ -436,53 +436,53 @@ npm test && npm run build && git diff --check
 | :--- | :--- | :--- | :--- | :---: | :---: | :---: |
 | `vp-0351` | [Nguyen-Truc-Dao Nguyen](https://vietprofs.roars.dev/people/vp-0351.html) | San Diego State University | Mathematics and Statistics | ⏳ | ✅ | ✅ |
 | `vp-0352` | [Thai-Hoang Pham](https://vietprofs.roars.dev/people/vp-0352.html) | Texas State University | Computer Science | ⏳ | ⏳ | ✅ |
-| `vp-0353` | [Van C. Tran](https://vietprofs.roars.dev/people/vp-0353.html) | CUNY Graduate Center | Sociology | ⏳ | ⏳ | ⏳ |
+| `vp-0353` | [Van C. Tran](https://vietprofs.roars.dev/people/vp-0353.html) | CUNY Graduate Center | Sociology | ⏳ | ⏳ | ✅ |
 | `vp-0354` | [Tuan Hoang](https://vietprofs.roars.dev/people/vp-0354.html) | Pepperdine University | Great Books | ⏳ | ⏳ | ✅ |
-| `vp-0355` | [Paul Anh Tran-Hoang](https://vietprofs.roars.dev/people/vp-0355.html) | Haverford College | Philosophy | ✅ | ⏳ | ✅ |
-| `vp-0356` | [Cao Le](https://vietprofs.roars.dev/people/vp-0356.html) | George Mason University | Accounting | ⏳ | ⏳ | ⏳ |
-| `vp-0357` | [Qui-Phiet Tran](https://vietprofs.roars.dev/people/vp-0357.html) | Schreiner University | English | ⏳ | ⏳ | ⏳ |
-| `vp-0358` | [Duong Nguyen - Arizona State University](https://vietprofs.roars.dev/people/vp-0358.html) | Arizona State University | Electrical, Computer and Energy Engineering | ⏳ | ⏳ | ✅ |
+| `vp-0355` | [Paul Anh Tran-Hoang](https://vietprofs.roars.dev/people/vp-0355.html) | University of Illinois Urbana-Champaign | Philosophy | ✅ | ⏳ | ✅ |
+| `vp-0356` | [Cao Le](https://vietprofs.roars.dev/people/vp-0356.html) | George Mason University | Accounting | ⏳ | ⏳ | ✅ |
+| `vp-0357` | [Qui-Phiet Tran](https://vietprofs.roars.dev/people/vp-0357.html) | Schreiner University | English | ⏳ | ⏳ | ✅ |
+| `vp-0358` | [Duong Nguyen - Arizona State University](https://vietprofs.roars.dev/people/vp-0358.html) | Arizona State University | Electrical, Computer and Energy Engineering | ✅ | ⏳ | ✅ |
 | `vp-0359` | [Thuy-Kim Le](https://vietprofs.roars.dev/people/vp-0359.html) | Arizona State University | School of International Letters and Cultures | ⏳ | ⏳ | ✅ |
 | `vp-0360` | [Linh Vu](https://vietprofs.roars.dev/people/vp-0360.html) | Arizona State University | Historical, Philosophical and Religious Studies | ⏳ | ⏳ | ✅ |
-| `vp-0361` | [Hoang Van Pham](https://vietprofs.roars.dev/people/vp-0361.html) | Baylor University | Economics | ⏳ | ⏳ | ⏳ |
+| `vp-0361` | [Hoang Van Pham](https://vietprofs.roars.dev/people/vp-0361.html) | Baylor University | Economics | ✅ | ✅ | ✅ |
 | `vp-0362` | [Phuongthao Dinh Le](https://vietprofs.roars.dev/people/vp-0362.html) | Boston University | Community Health Sciences | ⏳ | ⏳ | ✅ |
 | `vp-0363` | [Thanh N. Nguyen](https://vietprofs.roars.dev/people/vp-0363.html) | Boston University | Neurology, Neurosurgery and Radiology | ⏳ | ⏳ | ✅ |
-| `vp-0364` | [Kinh T. Vu](https://vietprofs.roars.dev/people/vp-0364.html) | Boston University | Music Education | ⏳ | ⏳ | ✅ |
+| `vp-0364` | [Kinh T. Vu](https://vietprofs.roars.dev/people/vp-0364.html) | Boston University | Music Education | ✅ | ⏳ | ✅ |
 | `vp-0365` | [Tuan Tran - California Northstate University](https://vietprofs.roars.dev/people/vp-0365.html) | California Northstate University | Clinical and Administrative Sciences, College of Pharmacy | ⏳ | ⏳ | ✅ |
-| `vp-0366` | [Ha Nguyen - California State University, Dominguez Hills](https://vietprofs.roars.dev/people/vp-0366.html) | California State University, Dominguez Hills | Mathematics | ⏳ | ⏳ | ⏳ |
-| `vp-0367` | [Hannah Nguyen](https://vietprofs.roars.dev/people/vp-0367.html) | California State University, Dominguez Hills | Human Services | ⏳ | ⏳ | ⏳ |
-| `vp-0368` | [Paul Quang Duong Tran](https://vietprofs.roars.dev/people/vp-0368.html) | California State University, Dominguez Hills | Social Work | ⏳ | ⏳ | ⏳ |
+| `vp-0366` | [Ha Nguyen - California State University, Dominguez Hills](https://vietprofs.roars.dev/people/vp-0366.html) | California State University, Dominguez Hills | Mathematics | ⏳ | ⏳ | ✅ |
+| `vp-0367` | [Hannah Nguyen](https://vietprofs.roars.dev/people/vp-0367.html) | California State University, Dominguez Hills | Human Services | ⏳ | ⏳ | ✅ |
+| `vp-0368` | [Paul Quang Duong Tran](https://vietprofs.roars.dev/people/vp-0368.html) | California State University, Dominguez Hills | Social Work | ⏳ | ⏳ | ✅ |
 | `vp-0369` | [Khang Tran](https://vietprofs.roars.dev/people/vp-0369.html) | California State University, Fresno | Mathematics | ⏳ | ⏳ | ✅ |
-| `vp-0370` | [Tu-Uyen Nguyen](https://vietprofs.roars.dev/people/vp-0370.html) | California State University, Fullerton | Asian American Studies | ⏳ | ⏳ | ⏳ |
-| `vp-0371` | [Angela-MinhTu D. Nguyen](https://vietprofs.roars.dev/people/vp-0371.html) | California State University, Fullerton | Psychology | ⏳ | ⏳ | ⏳ |
-| `vp-0372` | [Linh K. Nguyen](https://vietprofs.roars.dev/people/vp-0372.html) | California State University, Fullerton | Modern Languages and Literatures | ⏳ | ⏳ | ⏳ |
+| `vp-0370` | [Tu-Uyen Nguyen](https://vietprofs.roars.dev/people/vp-0370.html) | California State University, Fullerton | Asian American Studies | ⏳ | ✅ | ✅ |
+| `vp-0371` | [Angela-MinhTu D. Nguyen](https://vietprofs.roars.dev/people/vp-0371.html) | California State University, Fullerton | Psychology | ⏳ | ✅ | ✅ |
+| `vp-0372` | [Linh K. Nguyen](https://vietprofs.roars.dev/people/vp-0372.html) | California State University, Fullerton | Modern Languages and Literatures | ✅ | ⏳ | ✅ |
 | `vp-0373` | [Nga Nguyen - California State University, Fullerton](https://vietprofs.roars.dev/people/vp-0373.html) | California State University, Fullerton | Anthropology | ⏳ | ✅ | ✅ |
 | `vp-0374` | [Truyen D. Nguyen](https://vietprofs.roars.dev/people/vp-0374.html) | California State University, Fullerton | Human Services | ⏳ | ⏳ | ✅ |
-| `vp-0375` | [Justin Tran](https://vietprofs.roars.dev/people/vp-0375.html) | California State University, Fullerton | Mechanical Engineering | ⏳ | ⏳ | ⏳ |
+| `vp-0375` | [Justin Tran](https://vietprofs.roars.dev/people/vp-0375.html) | California State University, Fullerton | Mechanical Engineering | ⏳ | ⏳ | ✅ |
 | `vp-0376` | [Lisa Tran](https://vietprofs.roars.dev/people/vp-0376.html) | California State University, Fullerton | History | ⏳ | ⏳ | ✅ |
 | `vp-0377` | [Loan Dao](https://vietprofs.roars.dev/people/vp-0377.html) | California State University, Los Angeles | Asian and Asian American Studies | ⏳ | ⏳ | ✅ |
-| `vp-0378` | [Juily Iyn Vo Phun](https://vietprofs.roars.dev/people/vp-0378.html) | California State University, Los Angeles | Asian and Asian American Studies | ⏳ | ⏳ | ⏳ |
+| `vp-0378` | [Juily Iyn Vo Phun](https://vietprofs.roars.dev/people/vp-0378.html) | California State University, Los Angeles | Asian and Asian American Studies | ⏳ | ✅ | ✅ |
 | `vp-0379` | [Boone Nguyen](https://vietprofs.roars.dev/people/vp-0379.html) | California State University, Los Angeles | Asian and Asian American Studies | ⏳ | ⏳ | ✅ |
-| `vp-0380` | [Phung Huynh](https://vietprofs.roars.dev/people/vp-0380.html) | California State University, Los Angeles | Art | ⏳ | ⏳ | ⏳ |
-| `vp-0381` | [Uy Nguyen](https://vietprofs.roars.dev/people/vp-0381.html) | California State University, Los Angeles | Mathematics and Computer Science | ⏳ | ⏳ | ⏳ |
+| `vp-0380` | [Phung Huynh](https://vietprofs.roars.dev/people/vp-0380.html) | California State University, Los Angeles | Art | ⏳ | ⏳ | ✅ |
+| `vp-0381` | [Uy Nguyen](https://vietprofs.roars.dev/people/vp-0381.html) | California State University, Los Angeles | Mathematics and Computer Science | ⏳ | ⏳ | ✅ |
 | `vp-0382` | [Que-Lam Huynh](https://vietprofs.roars.dev/people/vp-0382.html) | California State University, Northridge | Psychology | ✅ | ⏳ | ✅ |
-| `vp-0383` | [Virginia Huynh](https://vietprofs.roars.dev/people/vp-0383.html) | California State University, Northridge | Child and Adolescent Development | ⏳ | ⏳ | ✅ |
-| `vp-0384` | [Viet-Huong Nguyen](https://vietprofs.roars.dev/people/vp-0384.html) | Chapman University | Pharmacy Practice | ⏳ | ⏳ | ⏳ |
+| `vp-0383` | [Virginia Huynh](https://vietprofs.roars.dev/people/vp-0383.html) | California State University, Northridge | Child and Adolescent Development | ⏳ | ✅ | ✅ |
+| `vp-0384` | [Viet-Huong Nguyen](https://vietprofs.roars.dev/people/vp-0384.html) | Chapman University | Pharmacy Practice | ✅ | ⏳ | ✅ |
 | `vp-0385` | [Truong-Thao Nguyen](https://vietprofs.roars.dev/people/vp-0385.html) | City College of New York (CUNY) | Electrical Engineering | ⏳ | ⏳ | ✅ |
-| `vp-0386` | [Raymond S. Tu](https://vietprofs.roars.dev/people/vp-0386.html) | City College of New York (CUNY) | Chemical Engineering | ⏳ | ⏳ | ✅ |
+| `vp-0386` | [Raymond S. Tu](https://vietprofs.roars.dev/people/vp-0386.html) | City College of New York (CUNY) | Chemical Engineering | ⏳ | ✅ | ✅ |
 | `vp-0387` | [John Phan](https://vietprofs.roars.dev/people/vp-0387.html) | Columbia University | East Asian Languages and Cultures | ⏳ | ⏳ | ✅ |
 | `vp-0388` | [Phuong Chung Nguyen](https://vietprofs.roars.dev/people/vp-0388.html) | Columbia University | East Asian Languages and Cultures | ⏳ | ⏳ | ✅ |
 | `vp-0389` | [Quynh A. Truong](https://vietprofs.roars.dev/people/vp-0389.html) | Cornell University | Radiology, Weill Cornell Medicine | ⏳ | ⏳ | ✅ |
 | `vp-0390` | [Hai Tran - DePaul University](https://vietprofs.roars.dev/people/vp-0390.html) | DePaul University | Communication | ⏳ | ⏳ | ✅ |
-| `vp-0391` | [Tuan Tran - East Carolina University](https://vietprofs.roars.dev/people/vp-0391.html) | East Carolina University | Psychology | ⏳ | ⏳ | ✅ |
-| `vp-0392` | [Long Duy Nguyen](https://vietprofs.roars.dev/people/vp-0392.html) | Florida Gulf Coast University | Construction Management | ⏳ | ⏳ | ⏳ |
+| `vp-0391` | [Tuan Tran - East Carolina University](https://vietprofs.roars.dev/people/vp-0391.html) | East Carolina University | Psychology | ⏳ | ✅ | ✅ |
+| `vp-0392` | [Long Duy Nguyen](https://vietprofs.roars.dev/people/vp-0392.html) | Florida Gulf Coast University | Construction Management | ✅ | ⏳ | ✅ |
 | `vp-0393` | [Andy V. Pham](https://vietprofs.roars.dev/people/vp-0393.html) | Florida International University | Counseling, Recreation and School Psychology | ⏳ | ⏳ | ✅ |
 | `vp-0394` | [Tuyen (Tom) Nguyen](https://vietprofs.roars.dev/people/vp-0394.html) | Florida International University | Cardiovascular Sciences | ⏳ | ⏳ | ✅ |
-| `vp-0395` | [Anh Pham](https://vietprofs.roars.dev/people/vp-0395.html) | George Mason University | Public Policy, Schar School of Policy and Government | ⏳ | ⏳ | ⏳ |
+| `vp-0395` | [Anh Pham](https://vietprofs.roars.dev/people/vp-0395.html) | George Mason University | Public Policy, Schar School of Policy and Government | ✅ | ⏳ | ✅ |
 | `vp-0396` | [Michelle Tram Nguyen](https://vietprofs.roars.dev/people/vp-0396.html) | George Mason University | English | ⏳ | ⏳ | ✅ |
 | `vp-0397` | [Anh Ngoc Tran](https://vietprofs.roars.dev/people/vp-0397.html) | Indiana University Bloomington | Public and Environmental Affairs | ⏳ | ⏳ | ✅ |
-| `vp-0398` | [Hoa Vo](https://vietprofs.roars.dev/people/vp-0398.html) | Indiana University Bloomington | Interior Design | ⏳ | ⏳ | ✅ |
-| `vp-0399` | [Truong Duong](https://vietprofs.roars.dev/people/vp-0399.html) | Iowa State University | Finance | ⏳ | ⏳ | ⏳ |
+| `vp-0398` | [Hoa Vo](https://vietprofs.roars.dev/people/vp-0398.html) | Indiana University Bloomington | Interior Design | ✅ | ⏳ | ✅ |
+| `vp-0399` | [Truong Duong](https://vietprofs.roars.dev/people/vp-0399.html) | Iowa State University | Finance | ⏳ | ⏳ | ✅ |
 | `vp-0400` | [Lan Ngo](https://vietprofs.roars.dev/people/vp-0400.html) | Loyola Marymount University | Asian and Asian American Studies | ⏳ | ⏳ | ✅ |
 
 ---
