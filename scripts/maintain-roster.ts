@@ -600,6 +600,9 @@ export function proposalValidationError(proposal: JsonRecord): string | null {
   if (proposal.institutionType !== undefined && proposal.institutionType !== 'University' && !['Research', 'Emeritus', 'Deceased'].includes(proposal.track)) return 'proposal non-university institutionType requires the Research, Emeritus, or Deceased track';
   if (proposal.websiteUrl !== undefined && proposal.websiteUrl === proposal.profileUrl) return 'proposal websiteUrl must differ from profileUrl';
   if (proposal.websiteUrl !== undefined && !/^https?:\/\//.test(proposal.websiteUrl)) return 'proposal websiteUrl must use HTTP(S)';
+  if (proposal.labUrl !== undefined && proposal.labUrl === proposal.profileUrl) return 'proposal labUrl must differ from profileUrl';
+  if (proposal.labUrl !== undefined && proposal.labUrl === proposal.websiteUrl) return 'proposal labUrl must differ from websiteUrl';
+  if (proposal.labUrl !== undefined && !/^https?:\/\//.test(proposal.labUrl)) return 'proposal labUrl must use HTTP(S)';
   if (proposal.scholarUrl !== undefined) {
     const scholarErr = validateExternalUrl(proposal.scholarUrl, 'scholarUrl');
     if (scholarErr) return `proposal ${scholarErr}`;

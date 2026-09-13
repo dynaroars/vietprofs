@@ -62,6 +62,7 @@ export interface RosterEntry {
   msMajor?: string;
   profileUrl?: string;
   websiteUrl?: string;
+  labUrl?: string;
   scholarUrl?: string;
   linkedinUrl?: string;
   /** Fields supplied through a direct owner/community update; automated scouting must preserve them. */

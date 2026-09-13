@@ -29,6 +29,7 @@ export const ROSTER_FIELDS = [
   'directFields',
   'institutionType',
   'websiteUrl',
+  'labUrl',
   'scholarUrl',
   'linkedinUrl',
   'confirmed',

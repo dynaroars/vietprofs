@@ -15,6 +15,7 @@ import { escapeHtml, formatRosterDate, formatRosterShortDate } from './utils.ts'
 export const SCHOLAR_ICON = '<path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3Z"/><path d="M5 12.18V16c0 1.66 3.13 3 7 3s7-1.34 7-3v-3.82l-7 3.82-7-3.82Z"/>';
 export const PROFILE_ICON = '<path d="M12 3 3 9v2h18V9L12 3Zm-7 10v6h2v-6H5Zm6 0v6h2v-6h-2Zm6 0v6h2v-6h-2ZM3 21h18v-2H3v2Z"/>';
 export const PERSONAL_SITE_ICON = '<path d="m12 3-9 8h3v10h5v-6h2v6h5V11h3l-9-8Z"/>';
+export const LAB_SITE_ICON = '<path d="M9 2v6.2L4.5 16.5A2 2 0 0 0 6.2 19.5h11.6a2 2 0 0 0 1.7-3L15 8.2V2H9Zm2 2h2v5l3.5 5.8H7.5l3.5-5.8V4Z"/>';
 export const LINKEDIN_ICON = '<path d="M6.94 5a2 2 0 1 1-4-.02 2 2 0 0 1 4 .02ZM7 8.48H3V21h4V8.48Zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.68-2.91V8.48Z"/>';
 export const STAR_ICON = '<path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>';
 
@@ -100,7 +101,10 @@ export function renderRosterEntry(person: RosterEntry, baseUrl = '/') {
     ? entryIconLink({ className: 'profile-link', href: person.profileUrl, label: `${visibleName} ${profileSourceLabel.toLowerCase()}`, title: profileSourceLabel, icon: PROFILE_ICON })
     : '';
   const personalSiteIcon = person.websiteUrl
-    ? entryIconLink({ className: 'personal-site-link', href: person.websiteUrl, label: `${visibleName} personal or lab website`, title: 'Personal or lab website', icon: PERSONAL_SITE_ICON })
+    ? entryIconLink({ className: 'personal-site-link', href: person.websiteUrl, label: `${visibleName} personal website`, title: 'Personal website', icon: PERSONAL_SITE_ICON })
+    : '';
+  const labSiteIcon = person.labUrl
+    ? entryIconLink({ className: 'lab-site-link', href: person.labUrl, label: `${visibleName} lab website`, title: 'Lab website', icon: LAB_SITE_ICON })
     : '';
   const scholarIcon = person.scholarUrl
     ? entryIconLink({ className: 'scholar-link', href: person.scholarUrl, label: `${visibleName} on Google Scholar`, title: 'Google Scholar', icon: SCHOLAR_ICON })
@@ -119,7 +123,7 @@ export function renderRosterEntry(person: RosterEntry, baseUrl = '/') {
       <div class="entry-content">
         <div class="entry-name-row">
           <a class="entry-name" href="${escapeHtml(`${baseUrl}${personPath(person.id)}`)}">${escapeHtml(visibleName)}</a>
-          <span class="entry-vietnamese-name">(${escapeHtml(nativeName)})</span> <span class="loc-badge" title="${escapeHtml(person.country || 'United States')}"><span class="country-flag" aria-hidden="true">${countryFlag(person.country)}</span></span>${profileIcon}${personalSiteIcon}${scholarIcon}${linkedinIcon}${updatedTime}
+          <span class="entry-vietnamese-name">(${escapeHtml(nativeName)})</span> <span class="loc-badge" title="${escapeHtml(person.country || 'United States')}"><span class="country-flag" aria-hidden="true">${countryFlag(person.country)}</span></span>${profileIcon}${personalSiteIcon}${labSiteIcon}${scholarIcon}${linkedinIcon}${updatedTime}
         </div>
         <div class="entry-meta">${escapeHtml(entryMeta)}</div>
         ${educationDetails.length ? `<div class="entry-details">${educationDetails.map((value) => escapeHtml(value)).join('; ')}</div>` : ''}

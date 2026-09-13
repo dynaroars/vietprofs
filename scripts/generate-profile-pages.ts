@@ -15,6 +15,7 @@ import {
 import { escapeHtml, formatRosterDate } from '../src/utils.ts';
 import {
   formatEducationDetails,
+  LAB_SITE_ICON,
   LINKEDIN_ICON,
   PERSONAL_SITE_ICON,
   PROFILE_ICON,
@@ -85,7 +86,8 @@ function profilePage(person: RosterEntry) {
     : '';
   const links = [
     person.profileUrl && { label: person.confirmed === false ? 'Verification source' : person.institutionType && person.institutionType !== 'University' ? 'Official institution profile' : 'Official university profile', href: person.profileUrl, icon: PROFILE_ICON },
-    person.websiteUrl && { label: 'Personal or lab website', href: person.websiteUrl, icon: PERSONAL_SITE_ICON },
+    person.websiteUrl && { label: 'Personal website', href: person.websiteUrl, icon: PERSONAL_SITE_ICON },
+    person.labUrl && { label: 'Lab website', href: person.labUrl, icon: LAB_SITE_ICON },
     person.scholarUrl && { label: 'Google Scholar', href: person.scholarUrl, icon: SCHOLAR_ICON },
     person.linkedinUrl && { label: 'LinkedIn', href: person.linkedinUrl, icon: LINKEDIN_ICON },
   ].filter(Boolean) as { label: string; href: string; icon: string }[];

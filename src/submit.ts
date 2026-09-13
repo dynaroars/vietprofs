@@ -26,6 +26,7 @@ interface SubmissionDraft {
   profileUrl: string;
   vietnameseName?: string;
   websiteUrl?: string;
+  labUrl?: string;
   universityProfileUrl?: string;
   scholarUrl?: string;
   linkedinUrl?: string;
@@ -132,8 +133,13 @@ function renderShell() {
             </div>
 
             <div class="form-section">
-              <label for="websiteUrl">Personal or lab website</label>
-              <input id="websiteUrl" name="websiteUrl" type="url" placeholder="https:// (personal homepage or lab site)" />
+              <label for="websiteUrl">Personal website</label>
+              <input id="websiteUrl" name="websiteUrl" type="url" placeholder="https:// (personal homepage)" />
+            </div>
+
+            <div class="form-section">
+              <label for="labUrl">Lab website</label>
+              <input id="labUrl" name="labUrl" type="url" placeholder="https:// (research group or lab site)" />
             </div>
 
             <div class="form-section">
@@ -319,7 +325,8 @@ function buildGithubIssueUrl(title: string, body: string): string {
 const FIELD_LABELS: Partial<Record<keyof SubmissionDraft, string>> = {
   profileUrl: 'Profile or verification link',
   vietnameseName: 'Vietnamese name',
-  websiteUrl: 'Personal/lab website',
+  websiteUrl: 'Personal website',
+  labUrl: 'Lab website',
   universityProfileUrl: 'Institutional profile website',
   scholarUrl: 'Google Scholar',
   linkedinUrl: 'LinkedIn',
@@ -423,6 +430,7 @@ function populateEntry(form: SubmitForm, entry: RosterEntry): void {
   form.profileUrl.value = entry.profileUrl ?? '';
   form.vietnameseName.value = entry.vietnameseName ?? '';
   form.websiteUrl.value = entry.websiteUrl ?? '';
+  form.labUrl.value = entry.labUrl ?? '';
   // universityProfileUrl has no canonical roster field (see SubmissionDraft above), so an
   // existing entry never has anything to pre-fill here.
   form.universityProfileUrl.value = '';
@@ -518,6 +526,7 @@ function onSubmit(e: SubmitEvent, entriesById: Map<string, RosterEntry> | null, 
     profileUrl: form.profileUrl.value.trim(),
     vietnameseName: form.vietnameseName.value.trim() || undefined,
     websiteUrl: form.websiteUrl.value.trim() || undefined,
+    labUrl: form.labUrl.value.trim() || undefined,
     universityProfileUrl: form.universityProfileUrl.value.trim() || undefined,
     scholarUrl: form.scholarUrl.value.trim() || undefined,
     linkedinUrl: form.linkedinUrl.value.trim() || undefined,

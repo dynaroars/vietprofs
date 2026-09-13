@@ -34,6 +34,7 @@ test('generated profile pages use the same stylesheet source as the directory', 
   assert.match(generator, /class="man-page"/);
   assert.match(generator, /PROFILE_ICON/);
   assert.match(generator, /PERSONAL_SITE_ICON/);
+  assert.match(generator, /LAB_SITE_ICON/);
   assert.match(generator, /SCHOLAR_ICON/);
   assert.match(generator, /LINKEDIN_ICON/);
   assert.match(generator, /<svg viewBox="0 0 24 24" aria-hidden="true">\$\{icon\}<\/svg>/);

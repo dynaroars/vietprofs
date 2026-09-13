@@ -75,7 +75,7 @@ test('directory loads and searching changes the roster', async () => {
   const personalSiteLinks = page.locator('.personal-site-link');
   assert.ok(await personalSiteLinks.count() > 0);
   assert.match(await attrOf(personalSiteLinks.first(), 'href'), /^https?:\/\//);
-  assert.equal(await personalSiteLinks.first().getAttribute('title'), 'Personal or lab website');
+  assert.equal(await personalSiteLinks.first().getAttribute('title'), 'Personal website');
   const updated = page.locator('.entry-updated').first();
   assert.match(await textOf(updated), /^Updated \d{1,2}\/\d{1,2}\/\d{2}$/);
   assert.match(await attrOf(updated, 'datetime'), /^\d{4}-\d{2}-\d{2}T.*Z$/);
@@ -365,7 +365,7 @@ test('mobile pages avoid horizontal overflow and provide usable tap targets', as
     await page.setViewportSize({ width, height: 812 });
     await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
     await assertNoOverflow();
-  await assertTapTargets('.submission-link, .example-chip, .entry-name, .personal-site-link, .scholar-link, .profile-link, .favorite-toggle, .search-input, .search-help-btn, .field-select');
+  await assertTapTargets('.submission-link, .example-chip, .entry-name, .personal-site-link, .lab-site-link, .scholar-link, .profile-link, .favorite-toggle, .search-input, .search-help-btn, .field-select');
   }
 
   await page.setViewportSize({ width: 320, height: 812 });
