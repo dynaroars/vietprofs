@@ -24,7 +24,8 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 - [x] Batch WL-16 complete
 - [x] Batch WL-17 complete
 - [x] Batch WL-18 complete
-- [ ] Batch WL-19 through WL-23 — not yet started
+- [x] Batch WL-19 complete
+- [ ] Batch WL-20 through WL-23 — not yet started
 
 ---
 
@@ -1092,7 +1093,7 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 
 ### Batch WL-19 (vp-1254 to vp-1305, 50 people)
 
-- [ ] Batch complete
+- [x] Batch complete
 
 | ID | Name | Institution | Department | Website | Lab |
 | :--- | :--- | :--- | :--- | :---: | :---: |
@@ -1100,7 +1101,7 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-1255` | [Van A. Ngo](https://vietprofs.roars.dev/people/vp-1255.html) | Oak Ridge National Laboratory | National Center for Computational Sciences | ⏳ | ⏳ |
 | `vp-1256` | [Tam Huynh-Dinh](https://vietprofs.roars.dev/people/vp-1256.html) | Institut Pasteur | Unité de Chimie Organique | ⏳ | ⏳ |
 | `vp-1257` | [Thuy Le Toan](https://vietprofs.roars.dev/people/vp-1257.html) | CNRS (Centre National de la Recherche Scientifique) | Centre d'Études Spatiales de la Biosphère | ⏳ | ⏳ |
-| `vp-1258` | [Anh-Tu Nguyen](https://vietprofs.roars.dev/people/vp-1258.html) | Université Polytechnique Hauts-de-France | Laboratoire d'Automatique, de Mécanique et d'Informatique Industrielles et Humaines | ⏳ | ⏳ |
+| `vp-1258` | [Anh-Tu Nguyen](https://vietprofs.roars.dev/people/vp-1258.html) | Université Polytechnique Hauts-de-France | Laboratoire d'Automatique, de Mécanique et d'Informatique Industrielles et Humaines | ✅ | ⏳ |
 | `vp-1259` | [Khanh-Quang Tran](https://vietprofs.roars.dev/people/vp-1259.html) | Norwegian University of Science and Technology | Department of Energy and Process Engineering | ⏳ | ⏳ |
 | `vp-1260` | [Trang N. T. Phan](https://vietprofs.roars.dev/people/vp-1260.html) | Aix-Marseille Université | Institut de Chimie Radicalaire | ⏳ | ⏳ |
 | `vp-1261` | [Dinh Quang Truong](https://vietprofs.roars.dev/people/vp-1261.html) | University of Warwick | WMG | ⏳ | ⏳ |
@@ -1110,7 +1111,7 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-1267` | [Van Khang Huynh](https://vietprofs.roars.dev/people/vp-1267.html) | University of Agder | Department of Engineering Sciences | ⏳ | ⏳ |
 | `vp-1268` | [Khac Tuan Huynh](https://vietprofs.roars.dev/people/vp-1268.html) | Université de Technologie de Troyes | LIST3N | ⏳ | ⏳ |
 | `vp-1269` | [Kien Phan Huy](https://vietprofs.roars.dev/people/vp-1269.html) | Supmicrotech-ENSMM | FEMTO-ST Institute | ⏳ | ⏳ |
-| `vp-1270` | [Tuan Anh Pham](https://vietprofs.roars.dev/people/vp-1270.html) | Lawrence Livermore National Laboratory | Materials Science Division | ⏳ | ⏳ |
+| `vp-1270` | [Tuan Anh Pham](https://vietprofs.roars.dev/people/vp-1270.html) | Lawrence Livermore National Laboratory | Materials Science Division | ✅ | ⏳ |
 | `vp-1271` | [Khanh Pham](https://vietprofs.roars.dev/people/vp-1271.html) | Air Force Research Laboratory | Space Vehicles Directorate | ⏳ | ⏳ |
 | `vp-1272` | [Mai P. Hoang](https://vietprofs.roars.dev/people/vp-1272.html) | Harvard University | Department of Pathology | ⏳ | ⏳ |
 | `vp-1273` | [Nam H. Dang](https://vietprofs.roars.dev/people/vp-1273.html) | University of Florida | Division of Hematology and Oncology | ⏳ | ⏳ |
@@ -1125,10 +1126,10 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-1282` | [Thuy Mai Luu](https://vietprofs.roars.dev/people/vp-1282.html) | Université de Montréal | Département de Pédiatrie | ⏳ | ⏳ |
 | `vp-1283` | [Thuy Do](https://vietprofs.roars.dev/people/vp-1283.html) | University of Leeds | School of Dentistry | ⏳ | ⏳ |
 | `vp-1284` | [Thanh G. Phan](https://vietprofs.roars.dev/people/vp-1284.html) | Monash University | Department of Medicine | ⏳ | ⏳ |
-| `vp-1285` | [Long P. Le](https://vietprofs.roars.dev/people/vp-1285.html) | Harvard University | Department of Pathology | ⏳ | ⏳ |
+| `vp-1285` | [Long P. Le](https://vietprofs.roars.dev/people/vp-1285.html) | Harvard University | Department of Pathology | ⏳ | ✅ |
 | `vp-1286` | [Chau T. Dang](https://vietprofs.roars.dev/people/vp-1286.html) | Cornell University | Department of Medicine | ⏳ | ⏳ |
 | `vp-1287` | [Quan Huynh](https://vietprofs.roars.dev/people/vp-1287.html) | Baker Heart and Diabetes Institute | Baker Department of Cardiometabolic Health | ⏳ | ⏳ |
-| `vp-1288` | [Lan Vu](https://vietprofs.roars.dev/people/vp-1288.html) | University of California, San Francisco | Department of Surgery | ⏳ | ⏳ |
+| `vp-1288` | [Lan Vu](https://vietprofs.roars.dev/people/vp-1288.html) | University of California, San Francisco | Department of Surgery | ⏳ | ✅ |
 | `vp-1289` | [Thanh-Huyen T. Vu](https://vietprofs.roars.dev/people/vp-1289.html) | Northwestern University | Department of Preventive Medicine | ⏳ | ⏳ |
 | `vp-1290` | [Binh An P. Phan](https://vietprofs.roars.dev/people/vp-1290.html) | University of California, San Francisco | Division of Cardiology | ⏳ | ⏳ |
 | `vp-1291` | [Mai Anh Huynh](https://vietprofs.roars.dev/people/vp-1291.html) | Harvard University | Department of Radiation Oncology | ⏳ | ⏳ |
@@ -1138,14 +1139,14 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-1295` | [Phuong-Anh T. Duong](https://vietprofs.roars.dev/people/vp-1295.html) | New York University | Department of Radiology | ⏳ | ⏳ |
 | `vp-1296` | [Nu Viet Vu](https://vietprofs.roars.dev/people/vp-1296.html) | University of Geneva | Unit of Development and Research in Medical Education | ⏳ | ⏳ |
 | `vp-1297` | [Nguyet-Thanh Ha-Duong](https://vietprofs.roars.dev/people/vp-1297.html) | Université Paris Cité | Laboratoire ITODYS | ⏳ | ⏳ |
-| `vp-1298` | [Nam Vo](https://vietprofs.roars.dev/people/vp-1298.html) | University of Pittsburgh | Department of Orthopaedic Surgery | ⏳ | ⏳ |
+| `vp-1298` | [Nam Vo](https://vietprofs.roars.dev/people/vp-1298.html) | University of Pittsburgh | Department of Orthopaedic Surgery | ⏳ | ✅ |
 | `vp-1299` | [Nicole Ngo-Giang-Huong](https://vietprofs.roars.dev/people/vp-1299.html) | Institut de Recherche pour le Développement | Laboratoire MIVEGEC | ⏳ | ⏳ |
 | `vp-1300` | [Vu Thuy Khanh Le-Trilling](https://vietprofs.roars.dev/people/vp-1300.html) | University of Duisburg-Essen | Institute for Virology | ⏳ | ⏳ |
-| `vp-1301` | [Linh H. Nghiem](https://vietprofs.roars.dev/people/vp-1301.html) | The University of Sydney | School of Mathematics and Statistics | ⏳ | ⏳ |
+| `vp-1301` | [Linh H. Nghiem](https://vietprofs.roars.dev/people/vp-1301.html) | The University of Sydney | School of Mathematics and Statistics | ✅ | ⏳ |
 | `vp-1302` | [Thi Minh Tam Ta](https://vietprofs.roars.dev/people/vp-1302.html) | Charité – Universitätsmedizin Berlin | Department of Psychiatry and Psychotherapy | ⏳ | ⏳ |
 | `vp-1303` | [Nhi-Ha T. Trinh](https://vietprofs.roars.dev/people/vp-1303.html) | Harvard University | Department of Psychiatry, Harvard Medical School | ⏳ | ⏳ |
-| `vp-1304` | [Khanh T. Dinh](https://vietprofs.roars.dev/people/vp-1304.html) | University of Massachusetts Lowell | Department of Psychology | ⏳ | ⏳ |
-| `vp-1305` | [Long Doan](https://vietprofs.roars.dev/people/vp-1305.html) | University of Maryland, College Park | Department of Sociology | ⏳ | ⏳ |
+| `vp-1304` | [Khanh T. Dinh](https://vietprofs.roars.dev/people/vp-1304.html) | University of Massachusetts Lowell | Department of Psychology | ✅ | ⏳ |
+| `vp-1305` | [Long Doan](https://vietprofs.roars.dev/people/vp-1305.html) | University of Maryland, College Park | Department of Sociology | ✅ | ⏳ |
 
 ---
 
