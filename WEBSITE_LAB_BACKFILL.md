@@ -8,7 +8,8 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 
 - [x] Batch WL-01 complete
 - [x] Batch WL-02 complete
-- [ ] Batch WL-03 through WL-23 — not yet started
+- [x] Batch WL-03 complete
+- [ ] Batch WL-04 through WL-23 — not yet started
 
 ---
 
@@ -132,7 +133,7 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 
 ### Batch WL-03 (vp-0261 to vp-0329, 50 people)
 
-- [ ] Batch complete
+- [x] Batch complete
 
 | ID | Name | Institution | Department | Website | Lab |
 | :--- | :--- | :--- | :--- | :---: | :---: |
@@ -142,34 +143,34 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-0264` | [Thinh Nguyen - University of Florida](https://vietprofs.roars.dev/people/vp-0264.html) | University of Florida | Law | ⏳ | ⏳ |
 | `vp-0265` | [Tim Nguyen](https://vietprofs.roars.dev/people/vp-0265.html) | Middlebury College | Business & Finance | ⏳ | ⏳ |
 | `vp-0266` | [Han Duc Tran](https://vietprofs.roars.dev/people/vp-0266.html) | Texas A&M University | Computer Science & Engineering | ⏳ | ⏳ |
-| `vp-0267` | [Tung Thanh Nguyen](https://vietprofs.roars.dev/people/vp-0267.html) | Texas A&M University | Computer Science & Engineering | ⏳ | ⏳ |
+| `vp-0267` | [Tung Thanh Nguyen](https://vietprofs.roars.dev/people/vp-0267.html) | Texas A&M University | Computer Science & Engineering | ✅ | ⏳ |
 | `vp-0268` | [Quyen Di Chuc Bui](https://vietprofs.roars.dev/people/vp-0268.html) | University of California, Los Angeles | Asian Languages and Cultures | ⏳ | ⏳ |
 | `vp-0269` | [Thu-Ba Nguyen Hoai](https://vietprofs.roars.dev/people/vp-0269.html) | University of California, Los Angeles | Asian Languages and Cultures | ⏳ | ⏳ |
-| `vp-0270` | [Hien Tran](https://vietprofs.roars.dev/people/vp-0270.html) | North Carolina State University | Mathematics | ⏳ | ⏳ |
+| `vp-0270` | [Hien Tran](https://vietprofs.roars.dev/people/vp-0270.html) | North Carolina State University | Mathematics | ⏳ | ✅ |
 | `vp-0273` | [Bach Mai Dolly Nguyen](https://vietprofs.roars.dev/people/vp-0273.html) | Oregon State University | Education | ⏳ | ⏳ |
 | `vp-0274` | [Hoang Pham - Oregon State University](https://vietprofs.roars.dev/people/vp-0274.html) | Oregon State University | Economics | ⏳ | ⏳ |
-| `vp-0275` | [Thang N. Bui](https://vietprofs.roars.dev/people/vp-0275.html) | Penn State Harrisburg | Computer Science | ⏳ | ⏳ |
-| `vp-0276` | [Triet Pham](https://vietprofs.roars.dev/people/vp-0276.html) | Rutgers University | Mathematics | ⏳ | ⏳ |
+| `vp-0275` | [Thang N. Bui](https://vietprofs.roars.dev/people/vp-0275.html) | Penn State Harrisburg | Computer Science | ✅ | ⏳ |
+| `vp-0276` | [Triet Pham](https://vietprofs.roars.dev/people/vp-0276.html) | Rutgers University | Mathematics | ✅ | ⏳ |
 | `vp-0277` | [Long Thai Bui](https://vietprofs.roars.dev/people/vp-0277.html) | Saint Mary's College of California | Accounting | ⏳ | ⏳ |
 | `vp-0278` | [Tan Van Nguyen](https://vietprofs.roars.dev/people/vp-0278.html) | San Jose State University | Electrical Engineering | ⏳ | ⏳ |
 | `vp-0279` | [Christopher Pham](https://vietprofs.roars.dev/people/vp-0279.html) | San Jose State University | Electrical Engineering | ⏳ | ⏳ |
 | `vp-0280` | [Hau Nguyen](https://vietprofs.roars.dev/people/vp-0280.html) | Seattle Pacific University | Economics | ⏳ | ⏳ |
 | `vp-0281` | [Dung Trung Nguyen](https://vietprofs.roars.dev/people/vp-0281.html) | Seattle Pacific University | Mechanical Engineering | ⏳ | ⏳ |
 | `vp-0282` | [Phuong Nguyen](https://vietprofs.roars.dev/people/vp-0282.html) | South Dakota State University | Construction and Concrete Industry Management | ⏳ | ⏳ |
-| `vp-0283` | [Son Phan Lam Tran](https://vietprofs.roars.dev/people/vp-0283.html) | Texas Tech University | Plant and Soil Science | ⏳ | ⏳ |
+| `vp-0283` | [Son Phan Lam Tran](https://vietprofs.roars.dev/people/vp-0283.html) | Texas Tech University | Plant and Soil Science | ⏳ | ✅ |
 | `vp-0284` | [Xuong Nguyen-Huu](https://vietprofs.roars.dev/people/vp-0284.html) | University of California, San Diego | Chemistry and Biochemistry | ⏳ | ⏳ |
-| `vp-0285` | [Anh Tran](https://vietprofs.roars.dev/people/vp-0285.html) | University of Massachusetts Lowell | Electrical and Computer Engineering | ⏳ | ⏳ |
-| `vp-0286` | [Ruby H.N. Nguyen](https://vietprofs.roars.dev/people/vp-0286.html) | University of Minnesota | Epidemiology and Community Health | ⏳ | ⏳ |
-| `vp-0288` | [Beth Nguyen](https://vietprofs.roars.dev/people/vp-0288.html) | University of Wisconsin-Madison | English | ⏳ | ⏳ |
+| `vp-0285` | [Anh Tran](https://vietprofs.roars.dev/people/vp-0285.html) | University of Massachusetts Lowell | Electrical and Computer Engineering | ✅ | ⏳ |
+| `vp-0286` | [Ruby H.N. Nguyen](https://vietprofs.roars.dev/people/vp-0286.html) | University of Minnesota | Epidemiology and Community Health | ⏳ | ✅ |
+| `vp-0288` | [Beth Nguyen](https://vietprofs.roars.dev/people/vp-0288.html) | University of Wisconsin-Madison | English | ✅ | ⏳ |
 | `vp-0289` | [Duc-Huy Nguyen](https://vietprofs.roars.dev/people/vp-0289.html) | University of Wisconsin-Madison | Biomedical Engineering | ⏳ | ⏳ |
 | `vp-0290` | [Diem M. Nguyen](https://vietprofs.roars.dev/people/vp-0290.html) | Bowling Green State University | Mathematics and Statistics | ⏳ | ⏳ |
 | `vp-0291` | [Hau Pham](https://vietprofs.roars.dev/people/vp-0291.html) | Boston University | Surgery | ⏳ | ⏳ |
-| `vp-0292` | [Carolyn T. Dang](https://vietprofs.roars.dev/people/vp-0292.html) | Pennsylvania State University | Management and Organization | ⏳ | ⏳ |
-| `vp-0293` | [Trung Nguyen](https://vietprofs.roars.dev/people/vp-0293.html) | San Jose State University | Sociology and Interdisciplinary Social Sciences | ⏳ | ⏳ |
-| `vp-0294` | [Luan Hoang](https://vietprofs.roars.dev/people/vp-0294.html) | Texas Tech University | Mathematics and Statistics | ⏳ | ⏳ |
-| `vp-0295` | [Thai Luan Vu](https://vietprofs.roars.dev/people/vp-0295.html) | Texas Tech University | Mathematics and Statistics | ⏳ | ⏳ |
+| `vp-0292` | [Carolyn T. Dang](https://vietprofs.roars.dev/people/vp-0292.html) | Pennsylvania State University | Management and Organization | ⏳ | ✅ |
+| `vp-0293` | [Trung Nguyen](https://vietprofs.roars.dev/people/vp-0293.html) | San Jose State University | Sociology and Interdisciplinary Social Sciences | ✅ | ⏳ |
+| `vp-0294` | [Luan Hoang](https://vietprofs.roars.dev/people/vp-0294.html) | Texas Tech University | Mathematics and Statistics | ✅ | ⏳ |
+| `vp-0295` | [Thai Luan Vu](https://vietprofs.roars.dev/people/vp-0295.html) | Texas Tech University | Mathematics and Statistics | ✅ | ✅ |
 | `vp-0296` | [Hung Tran - Texas Tech University](https://vietprofs.roars.dev/people/vp-0296.html) | Texas Tech University | Mathematics and Statistics | ⏳ | ⏳ |
-| `vp-0297` | [Hanh-Phuc Le](https://vietprofs.roars.dev/people/vp-0297.html) | University of California, San Diego | Electrical and Computer Engineering | ⏳ | ⏳ |
+| `vp-0297` | [Hanh-Phuc Le](https://vietprofs.roars.dev/people/vp-0297.html) | University of California, San Diego | Electrical and Computer Engineering | ⏳ | ✅ |
 | `vp-0298` | [Hoang Nguyen - University of California, San Diego](https://vietprofs.roars.dev/people/vp-0298.html) | University of California, San Diego | Literature | ⏳ | ⏳ |
 | `vp-0299` | [Lily Hoang](https://vietprofs.roars.dev/people/vp-0299.html) | University of California, San Diego | Literature | ⏳ | ⏳ |
 | `vp-0300` | [Thu-Huong Nguyen-Vo](https://vietprofs.roars.dev/people/vp-0300.html) | University of California, Los Angeles | Asian Languages and Cultures | ⏳ | ⏳ |
