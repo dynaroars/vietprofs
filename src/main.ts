@@ -734,7 +734,7 @@ async function init() {
     }
     const locRoster = roster.filter((p) => locationMatches(p, locationSelect.value));
     if (filterState.insights) {
-      renderFunFacts(locRoster, locationLabel(locationSelect.value), locationSelect.value, roster, statsHistory, currentGrowthMetric, gitInfo);
+      renderFunFacts(locRoster, locationLabel(locationSelect.value), locationSelect.value, roster);
       renderQueryPlan(locRoster.length, 'insights');
       syncUrl();
       renderBrowserShelf();

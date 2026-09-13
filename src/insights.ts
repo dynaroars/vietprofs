@@ -409,9 +409,6 @@ export function renderFunFacts(
   selectedLocationLabel: string,
   selectedLocation: string,
   fullRoster: Roster,
-  statsHistory: StatsHistoryPoint[],
-  activeGrowthMetric: GrowthMetricKey = 'count',
-  gitInfo: GitInfo | null = null,
 ) {
   const rosterEl = document.getElementById('roster');
   const countEl = document.getElementById('result-count');
@@ -496,20 +493,10 @@ export function renderFunFacts(
   if (rosterEl) {
     rosterEl.innerHTML = `
       <div class="insights-dashboard">
-        <!-- SECTION 1: SYSTEM HEALTH & MAINTENANCE -->
-        <section class="insights-section-block health-section-block" id="health-section">
-          <div class="insights-section-header">
-            <span class="insights-badge">SECTION 1 — SYSTEM HEALTH</span>
-            <h2 class="insights-main-heading">System Health, Codebase Status &amp; Project History</h2>
-            <p class="insights-main-desc">Metadata audit coverage, GitHub repository status, and database growth tracking across all <strong>${fullRoster.length}</strong> maintained profiles.</p>
-          </div>
-          ${renderHealthPanel(fullRoster, import.meta.env.BASE_URL, gitInfo, false, statsHistory, activeGrowthMetric)}
-        </section>
-
-        <!-- SECTION 2: DIASPORA PATHWAYS & MACRO INSIGHTS -->
+        <!-- SECTION 1: DIASPORA PATHWAYS & MACRO INSIGHTS -->
         <section class="insights-section-block insights-main-block" id="pathways-section">
           <div class="insights-section-header">
-            <span class="insights-badge">SECTION 2 — DIASPORA INSIGHTS</span>
+            <span class="insights-badge">SECTION 1 — DIASPORA INSIGHTS</span>
             <h2 class="insights-main-heading">Diaspora Pathways &amp; Macro Analysis</h2>
             <p class="insights-main-desc">Geographic distributions, PhD graduation cohorts, alma mater feeder networks, and academic disciplines.</p>
           </div>
