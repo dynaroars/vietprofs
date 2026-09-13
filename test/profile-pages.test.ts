@@ -56,4 +56,5 @@ test('generated profile pages use the same stylesheet source as the directory', 
     generator.indexOf('class="profile-actions"') < generator.indexOf('class="native"'),
     'profile actions should appear alongside the person\'s name',
   );
+  assert.match(generator, /class="name-title"><h1>\$\{escapeHtml\(name\)\}<\/h1>\$\{favoriteToggle\}<\/div>/);
 });

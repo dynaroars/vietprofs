@@ -1181,6 +1181,20 @@ a.entry-name:focus-visible {
   flex-wrap: wrap;
 }
 
+.subpage .name-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.subpage .name-title .favorite-toggle {
+  position: static;
+  flex: 0 0 auto;
+  width: 2rem;
+  height: 2rem;
+}
+
 .subpage h1 {
   font-family: var(--font-heading);
   font-size: clamp(1.4rem, 3.5vw, 1.85rem);
@@ -2721,6 +2735,10 @@ button.chart-row-btn:hover {
     align-items: flex-start;
     flex-direction: column;
     gap: 0.5rem;
+  }
+
+  .subpage .name-title {
+    align-items: flex-start;
   }
 
   .subpage .portrait {
