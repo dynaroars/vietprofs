@@ -17,7 +17,8 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 - [x] Batch WL-09 complete
 - [x] Batch WL-10 complete
 - [x] Batch WL-11 complete
-- [ ] Batch WL-12 through WL-23 — not yet started
+- [x] Batch WL-12 complete
+- [ ] Batch WL-13 through WL-23 — not yet started
 
 ---
 
@@ -672,7 +673,7 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 
 ### Batch WL-12 (vp-0819 to vp-0873, 50 people)
 
-- [ ] Batch complete
+- [x] Batch complete
 
 | ID | Name | Institution | Department | Website | Lab |
 | :--- | :--- | :--- | :--- | :---: | :---: |
@@ -680,27 +681,27 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-0820` | [Margaret Nguyen](https://vietprofs.roars.dev/people/vp-0820.html) | University of California, San Diego | Pediatrics | ⏳ | ⏳ |
 | `vp-0821` | [Minh-Ha Tran](https://vietprofs.roars.dev/people/vp-0821.html) | University of California, Irvine | Pathology and Laboratory Medicine | ⏳ | ⏳ |
 | `vp-0823` | [Tien Hung Nguyen](https://vietprofs.roars.dev/people/vp-0823.html) | Howard University | Economics | ⏳ | ⏳ |
-| `vp-0824` | [Pipo Nguyen-duy](https://vietprofs.roars.dev/people/vp-0824.html) | Oberlin College | Art | ⏳ | ⏳ |
-| `vp-0826` | [Van Tho Tran](https://vietprofs.roars.dev/people/vp-0826.html) | Waseda University | Social Sciences | ⏳ | ⏳ |
+| `vp-0824` | [Pipo Nguyen-duy](https://vietprofs.roars.dev/people/vp-0824.html) | Oberlin College | Art | ✅ | ⏳ |
+| `vp-0826` | [Van Tho Tran](https://vietprofs.roars.dev/people/vp-0826.html) | Waseda University | Social Sciences | ✅ | ⏳ |
 | `vp-0828` | [Dzung L. Pham](https://vietprofs.roars.dev/people/vp-0828.html) | Uniformed Services University of the Health Sciences | Radiology and Bioengineering | ⏳ | ⏳ |
-| `vp-0829` | [Phu Tran](https://vietprofs.roars.dev/people/vp-0829.html) | University of Minnesota | Pediatrics, Neonatology | ⏳ | ⏳ |
+| `vp-0829` | [Phu Tran](https://vietprofs.roars.dev/people/vp-0829.html) | University of Minnesota | Pediatrics, Neonatology | ⏳ | ✅ |
 | `vp-0830` | [Tuan M. Nguyen](https://vietprofs.roars.dev/people/vp-0830.html) | Northwestern University | Obstetrics and Gynecology | ⏳ | ⏳ |
 | `vp-0831` | [Tai Tan Mai](https://vietprofs.roars.dev/people/vp-0831.html) | Dublin City University | School of Computing | ⏳ | ⏳ |
 | `vp-0832` | [Thi Ha Nguyen](https://vietprofs.roars.dev/people/vp-0832.html) | University of Connecticut | Electrical and Computer Engineering | ⏳ | ⏳ |
 | `vp-0833` | [Duc Tung Nguyen](https://vietprofs.roars.dev/people/vp-0833.html) | Helmut Schmidt University | Civil Engineering | ⏳ | ⏳ |
-| `vp-0834` | [Trung Thanh Nguyen](https://vietprofs.roars.dev/people/vp-0834.html) | Leibniz University Hannover | Institute of Environmental Economics and World Trade | ⏳ | ⏳ |
+| `vp-0834` | [Trung Thanh Nguyen](https://vietprofs.roars.dev/people/vp-0834.html) | Leibniz University Hannover | Institute of Environmental Economics and World Trade | ✅ | ⏳ |
 | `vp-0835` | [Hieu T. Nguyen](https://vietprofs.roars.dev/people/vp-0835.html) | University of South-Eastern Norway | Department of Science and Industry Systems | ⏳ | ⏳ |
 | `vp-0836` | [Hoang Vu Nguyen](https://vietprofs.roars.dev/people/vp-0836.html) | University of South-Eastern Norway | Department of Microsystems | ⏳ | ⏳ |
-| `vp-0837` | [Minh Hao Nguyen](https://vietprofs.roars.dev/people/vp-0837.html) | University of Amsterdam | Amsterdam School of Communication Research (ASCoR) | ⏳ | ⏳ |
+| `vp-0837` | [Minh Hao Nguyen](https://vietprofs.roars.dev/people/vp-0837.html) | University of Amsterdam | Amsterdam School of Communication Research (ASCoR) | ✅ | ⏳ |
 | `vp-0838` | [Dang Xuan Tran](https://vietprofs.roars.dev/people/vp-0838.html) | Hiroshima University | Center for Planetary Health and Innovation Science (PHIS), IDEC Institute | ⏳ | ⏳ |
 | `vp-0839` | [Binh-Son Hua](https://vietprofs.roars.dev/people/vp-0839.html) | Trinity College Dublin | School of Computer Science and Statistics | ⏳ | ⏳ |
 | `vp-0840` | [Van-Dinh Nguyen](https://vietprofs.roars.dev/people/vp-0840.html) | Trinity College Dublin | School of Computer Science and Statistics | ⏳ | ⏳ |
-| `vp-0841` | [Dinh Thai Hoang](https://vietprofs.roars.dev/people/vp-0841.html) | University of Technology Sydney | School of Electrical and Data Engineering | ⏳ | ⏳ |
-| `vp-0842` | [Nhu Truong](https://vietprofs.roars.dev/people/vp-0842.html) | University of Wisconsin-Madison | Asian Languages and Cultures | ⏳ | ⏳ |
-| `vp-0843` | [Van-Nam Huynh](https://vietprofs.roars.dev/people/vp-0843.html) | Japan Advanced Institute of Science and Technology | School of Knowledge Science | ⏳ | ⏳ |
-| `vp-0845` | [Thanh Thi Nguyen](https://vietprofs.roars.dev/people/vp-0845.html) | University of the Sunshine Coast | School of Science, Technology and Engineering | ⏳ | ⏳ |
+| `vp-0841` | [Dinh Thai Hoang](https://vietprofs.roars.dev/people/vp-0841.html) | University of Technology Sydney | School of Electrical and Data Engineering | ✅ | ✅ |
+| `vp-0842` | [Nhu Truong](https://vietprofs.roars.dev/people/vp-0842.html) | University of Wisconsin-Madison | Asian Languages and Cultures | ✅ | ⏳ |
+| `vp-0843` | [Van-Nam Huynh](https://vietprofs.roars.dev/people/vp-0843.html) | Japan Advanced Institute of Science and Technology | School of Knowledge Science | ✅ | ⏳ |
+| `vp-0845` | [Thanh Thi Nguyen](https://vietprofs.roars.dev/people/vp-0845.html) | University of the Sunshine Coast | School of Science, Technology and Engineering | ✅ | ⏳ |
 | `vp-0846` | [Minh Quang Ta](https://vietprofs.roars.dev/people/vp-0846.html) | University of West Florida | Department of Electrical and Computer Engineering | ⏳ | ⏳ |
-| `vp-0847` | [Hue Duong](https://vietprofs.roars.dev/people/vp-0847.html) | Georgia State University | Department of Communication | ⏳ | ⏳ |
+| `vp-0847` | [Hue Duong](https://vietprofs.roars.dev/people/vp-0847.html) | Georgia State University | Department of Communication | ✅ | ⏳ |
 | `vp-0848` | [An Nguyen - City of Hope](https://vietprofs.roars.dev/people/vp-0848.html) | City of Hope | Diabetes, Endocrinology and Metabolism | ⏳ | ⏳ |
 | `vp-0849` | [Andrew H. Nguyen](https://vietprofs.roars.dev/people/vp-0849.html) | City of Hope | Division of Surgical Oncology | ⏳ | ⏳ |
 | `vp-0850` | [Alexander H. Nguyen](https://vietprofs.roars.dev/people/vp-0850.html) | University of California, Los Angeles | Division of Digestive Diseases | ⏳ | ⏳ |
@@ -709,14 +710,14 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-0853` | [Sen Nguyen](https://vietprofs.roars.dev/people/vp-0853.html) | University of California, San Francisco | Family and Community Medicine | ⏳ | ⏳ |
 | `vp-0854` | [Thuong Hien Vu Tran](https://vietprofs.roars.dev/people/vp-0854.html) | University of Pennsylvania | Medicine | ⏳ | ⏳ |
 | `vp-0855` | [Nam Duy Nguyen](https://vietprofs.roars.dev/people/vp-0855.html) | University of Pennsylvania | Medicine | ⏳ | ⏳ |
-| `vp-0856` | [Pearl Nguyen](https://vietprofs.roars.dev/people/vp-0856.html) | University of Washington | Pediatrics | ⏳ | ⏳ |
+| `vp-0856` | [Pearl Nguyen](https://vietprofs.roars.dev/people/vp-0856.html) | University of Washington | Pediatrics | ⏳ | ✅ |
 | `vp-0857` | [George Nguyen](https://vietprofs.roars.dev/people/vp-0857.html) | University of Arizona | Internal Medicine, College of Medicine – Phoenix | ⏳ | ⏳ |
 | `vp-0858` | [Lan Nguyen - University of Illinois Urbana-Champaign](https://vietprofs.roars.dev/people/vp-0858.html) | University of Illinois Urbana-Champaign | Clinical Sciences, Carle Illinois College of Medicine | ⏳ | ⏳ |
 | `vp-0859` | [Kim-Phung Thi Nguyen](https://vietprofs.roars.dev/people/vp-0859.html) | University of Illinois Urbana-Champaign | Clinical Sciences, Carle Illinois College of Medicine | ⏳ | ⏳ |
 | `vp-0860` | [Anh C. Tran](https://vietprofs.roars.dev/people/vp-0860.html) | Loma Linda University | Psychiatry | ⏳ | ⏳ |
 | `vp-0861` | [Thuy-Huynh Nguyen](https://vietprofs.roars.dev/people/vp-0861.html) | Loma Linda University | Psychiatry | ⏳ | ⏳ |
 | `vp-0862` | [Caroline T. Nguyen](https://vietprofs.roars.dev/people/vp-0862.html) | University of Southern California | Medicine, Division of Endocrinology, Diabetes, and Metabolism | ⏳ | ⏳ |
-| `vp-0863` | [The Anh Han](https://vietprofs.roars.dev/people/vp-0863.html) | Teesside University | Computing, Engineering and Digital Technologies | ⏳ | ⏳ |
+| `vp-0863` | [The Anh Han](https://vietprofs.roars.dev/people/vp-0863.html) | Teesside University | Computing, Engineering and Digital Technologies | ⏳ | ✅ |
 | `vp-0864` | [Duy Pham](https://vietprofs.roars.dev/people/vp-0864.html) | University of Utah | Psychiatry | ⏳ | ⏳ |
 | `vp-0865` | [Van T. Pham](https://vietprofs.roars.dev/people/vp-0865.html) | University of Cincinnati | Psychiatry and Behavioral Neuroscience | ⏳ | ⏳ |
 | `vp-0866` | [Minh Thu T. Nguyen](https://vietprofs.roars.dev/people/vp-0866.html) | New York University | Medicine | ⏳ | ⏳ |
