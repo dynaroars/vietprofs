@@ -15,8 +15,13 @@ submission that the owner asks you to process, is ground truth. Add each supplie
 the entry's sorted `directFields` array. This applies only to fields the submission actually
 asserts; facts independently found on the web while processing it are not direct.
 
+Protected direct fields mean you do not edit them directly, but this does not mean you should not
+check them — you **should** always check and verify them against live evidence. If web evidence
+shows that a protected field has changed, is outdated, or conflicts with live reality, do not edit
+it directly; instead, create a GitHub Issue for a direct correction and let the repository owner
+know as an output to the screen.
+
 Web scouting and automated maintenance may update fields not listed in `directFields`, but must
-never change or remove a protected field or delete an entry that has protected fields. If web
-evidence conflicts with a protected value, report the conflict for a later direct correction.
+never change or remove a protected field or delete an entry that has protected fields on their own.
 Only another direct update may replace a protected value or remove its protection. Canonical
 formatting and field mapping may be applied while processing the direct update.

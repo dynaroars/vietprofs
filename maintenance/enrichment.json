@@ -1503,7 +1503,8 @@
     "vp-1544",
     "vp-1545",
     "vp-1546",
-    "vp-1547"
+    "vp-1547",
+    "vp-1548"
   ],
   "batches": [
     {
@@ -3460,7 +3461,8 @@
         "vp-1544",
         "vp-1545",
         "vp-1546",
-        "vp-1547"
+        "vp-1547",
+        "vp-1548"
       ],
       "status": "pending"
     }
@@ -18720,6 +18722,16 @@
       "evidence": [],
       "errors": [],
       "updatedAt": "2026-09-13T22:11:19.277Z"
+    },
+    "vp-1548": {
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://www.cs.toronto.edu/~khai/"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-13T22:16:52.539Z"
     }
   }
 }

@@ -252,12 +252,6 @@ const updates: UrlUpdate[] = [
     profileUrl: 'https://med.umn.edu/bio/pharmacology/hai-dang-nguyen'
   },
   {
-    id: 'vp-0320',
-    name: 'Khai N. Truong',
-    websiteUrl: 'https://www.cs.toronto.edu/~khai/',
-    profileUrl: 'https://web.cs.toronto.edu/people/faculty-directory/khai-truong'
-  },
-  {
     id: 'vp-0323',
     name: 'Hanh Lam',
     labUrl: 'https://www.hanhlamlab.com/',

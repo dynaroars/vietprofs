@@ -1028,8 +1028,11 @@ dissertation fellowship/grant, or other student/trainee-stage award — remove a
 fails the eligibility rules, not just proposed additions. Do not treat a reachable URL as a complete review.
 
 Fields named in directFields are ground truth supplied directly by the owner or a community
-submission. Preserve their current values exactly. If live web evidence conflicts with one, set
-status incomplete and report the conflict; do not change the protected field or remove the entry.
+submission. You must not edit them directly, but this does not mean you should not check them — you SHOULD check
+and verify all fields (including protected ones) against live evidence. If live web evidence shows that a protected
+field has changed, is outdated, or conflicts with live reality, do not edit it directly; instead set status incomplete,
+report the update/conflict so a GitHub Issue can be created for a direct update, and alert the user on screen.
+Do not change the protected field or remove the entry.
 
 Before returning an update, compare every supported baseline and discovered field against the
 complete proposed object. Do not omit documented majors, graduation years, postdoctoral training,

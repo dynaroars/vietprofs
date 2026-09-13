@@ -330,10 +330,17 @@ Information explicitly asserted by the repository owner or by a submission the o
 process is a direct update and is treated as ground truth. Add the corresponding canonical roster
 field names to the entry's sorted `directFields` array. Protect only asserted fields, not facts
 independently discovered while completing the review. Direct values may be normalized or mapped to
-the correct roster field during processing. Later web scouting and periodic maintenance may update
-other fields, but must not change a protected value or remove an entry with protected fields. A
-conflict with live web evidence must be reported for a later direct correction. `directFields` is
-provenance metadata and does not by itself advance `lastUpdatedAt`.
+the correct roster field during processing.
+
+Protected direct fields mean you do not edit them directly, but this does not mean you should not
+check them — you **should** always check and verify all fields (including protected ones) against
+live evidence. If live web evidence shows that a protected field has changed, is outdated, or
+conflicts with live reality, do not edit it directly; instead, create a GitHub Issue for a direct
+correction and let the repository owner know as an output to the screen. Later web scouting and
+automated maintenance may update other fields, but must never change or remove a protected value
+or delete an entry with protected fields on their own. Only another direct update may replace a
+protected value or remove its protection. `directFields` is provenance metadata and does not by
+itself advance `lastUpdatedAt`.
 
 Unless the user gives narrower instructions, treat a supplied personal profile, university
 profile, homepage, lab site, or CV as a request to identify the person, check whether they already

@@ -71,8 +71,11 @@ assign-profile-ids -- --apply` after an entry is added.
 To suggest an addition or correction, use [`submit.html`](./submit.html) rather than editing the
 repository directly — paste a name, a profile/homepage link, or a directory page, and it opens a
 pre-filled email or GitHub issue. Fields explicitly supplied by the owner or through one of these
-direct submissions are recorded in `directFields` and preserved by automated web maintenance;
-other roster details may still be researched and updated independently.
+direct submissions are recorded in `directFields` and preserved by automated web maintenance.
+Protected direct fields are not edited directly, but they are still checked during audits; if an
+update or conflict is discovered on live sources, a GitHub issue is opened and reported to the
+maintainer rather than modifying the protected field directly. Other roster details may still be
+researched and updated independently.
 
 Optional research overviews are source-backed enrichment fields. Their
 operational evidence and resumable batch state are kept in [`maintenance/enrichment.json`](./maintenance/enrichment.json);
