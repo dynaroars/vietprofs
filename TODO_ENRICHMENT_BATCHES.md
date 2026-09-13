@@ -504,7 +504,6 @@ npm test && npm run build && git diff --check
 | `vp-0411` | [Khanh P. Nguyen](https://vietprofs.roars.dev/people/vp-0411.html) | Oregon Health & Science University | Surgery, Vascular Surgery | ⏳ | ⏳ | ✅ |
 | `vp-0412` | [Khoa A. Nguyen](https://vietprofs.roars.dev/people/vp-0412.html) | Oregon Health & Science University | Medicine, Cardiovascular Medicine | ⏳ | ⏳ | ⏳ |
 | `vp-0413` | [Angela-Tu Nguyen](https://vietprofs.roars.dev/people/vp-0413.html) | Oregon Health & Science University | Pediatrics, General Pediatrics | ⏳ | ⏳ | ⏳ |
-| `vp-0414` | [Truong Tran](https://vietprofs.roars.dev/people/vp-0414.html) | Pennsylvania State University | Applied Linguistics | ⏳ | ⏳ | ✅ |
 | `vp-0415` | [Elizabeth Tran](https://vietprofs.roars.dev/people/vp-0415.html) | Purdue University | Biochemistry | ⏳ | ⏳ | ⏳ |
 | `vp-0416` | [Thao Bui](https://vietprofs.roars.dev/people/vp-0416.html) | Queens College, City University of New York | Economics | ✅ | ⏳ | ✅ |
 | `vp-0417` | [Thanh Tran](https://vietprofs.roars.dev/people/vp-0417.html) | Rice University | Electrical and Computer Engineering | ⏳ | ⏳ | ⏳ |

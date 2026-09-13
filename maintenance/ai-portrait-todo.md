@@ -4,7 +4,7 @@ This is the cross-outable batch checklist for AI-driven web scouting of missing 
 The machine-readable source of truth is [`maintenance/missing-portraits.json`](./missing-portraits.json).
 
 ## Status Summary
-- **Total Tracked Entries**: 394
+- **Total Tracked Entries**: 393
 - **Batch Size**: 10 profiles per batch
 - **Total Batches**: 40
 
@@ -35,18 +35,18 @@ The machine-readable source of truth is [`maintenance/missing-portraits.json`](.
 - [/] **Batch 23** (Items 221–230: vp-1246 to vp-1259) — 1/10 fetched
 - [/] **Batch 24** (Items 231–240: vp-1260 to vp-1275) — 4/10 fetched
 - [/] **Batch 25** (Items 241–250: vp-1277 to vp-1301) — 1/10 fetched
-- [/] **Batch 26** (Items 251–260: vp-1302 to vp-1314) — 2/10 fetched
-- [ ] **Batch 27** (Items 261–270: vp-1315 to vp-1326) — 0/10 fetched
-- [/] **Batch 28** (Items 271–280: vp-1327 to vp-1338) — 1/10 fetched
-- [ ] **Batch 29** (Items 281–290: vp-1339 to vp-1348) — 0/10 fetched
-- [ ] **Batch 30** (Items 291–300: vp-1349 to vp-1364) — 0/10 fetched
-- [ ] **Batch 31** (Items 301–310: vp-1367 to vp-1379) — 0/10 fetched
-- [/] **Batch 32** (Items 311–320: vp-1380 to vp-1392) — 1/10 fetched
-- [ ] **Batch 33** (Items 321–330: vp-1393 to vp-1404) — 0/10 fetched
-- [/] **Batch 34** (Items 331–340: vp-1405 to vp-1420) — 2/10 fetched
-- [/] **Batch 35** (Items 341–350: vp-1421 to vp-1440) — 2/10 fetched
-- [/] **Batch 36** (Items 351–360: vp-1441 to vp-1454) — 1/10 fetched
-- [ ] **Batch 37** (Items 361–370: vp-1455 to vp-1465) — 0/10 fetched
-- [/] **Batch 38** (Items 371–380: vp-1466 to vp-1486) — 1/10 fetched
-- [/] **Batch 39** (Items 381–390: vp-1487 to vp-0250) — 2/10 fetched
-- [x] **Batch 40** (Items 391–394: vp-0784 to vp-0834) — 4/4 fetched
+- [/] **Batch 26** (Items 251–260: vp-1302 to vp-1315) — 1/10 fetched
+- [ ] **Batch 27** (Items 261–270: vp-1316 to vp-1327) — 0/10 fetched
+- [/] **Batch 28** (Items 271–280: vp-1328 to vp-1339) — 1/10 fetched
+- [ ] **Batch 29** (Items 281–290: vp-1340 to vp-1349) — 0/10 fetched
+- [ ] **Batch 30** (Items 291–300: vp-1350 to vp-1367) — 0/10 fetched
+- [ ] **Batch 31** (Items 301–310: vp-1368 to vp-1380) — 0/10 fetched
+- [/] **Batch 32** (Items 311–320: vp-1381 to vp-1393) — 1/10 fetched
+- [ ] **Batch 33** (Items 321–330: vp-1394 to vp-1405) — 0/10 fetched
+- [/] **Batch 34** (Items 331–340: vp-1406 to vp-1421) — 2/10 fetched
+- [/] **Batch 35** (Items 341–350: vp-1422 to vp-1441) — 3/10 fetched
+- [ ] **Batch 36** (Items 351–360: vp-1445 to vp-1455) — 0/10 fetched
+- [ ] **Batch 37** (Items 361–370: vp-1456 to vp-1466) — 0/10 fetched
+- [/] **Batch 38** (Items 371–380: vp-1468 to vp-1487) — 1/10 fetched
+- [/] **Batch 39** (Items 381–390: vp-1488 to vp-0784) — 3/10 fetched
+- [x] **Batch 40** (Items 391–393: vp-0791 to vp-0834) — 3/3 fetched

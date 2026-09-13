@@ -4,7 +4,7 @@ This is the checklist for AI-driven research overview (1-sentence summary) enric
 The machine-readable source of truth is [`maintenance/missing-about.json`](./missing-about.json).
 
 ## Status Summary
-- **Total Tracked Entries**: 706
+- **Total Tracked Entries**: 704
 - **Batch Size**: 20 profiles per batch
 - **Total Batches**: 36
 
@@ -37,12 +37,12 @@ The machine-readable source of truth is [`maintenance/missing-about.json`](./mis
 - [ ] **Batch 25** (Items 481–500: vp-1237 to vp-1261) — 0/20 fetched
 - [ ] **Batch 26** (Items 501–520: vp-1263 to vp-1283) — 0/20 fetched
 - [ ] **Batch 27** (Items 521–540: vp-1285 to vp-1308) — 0/20 fetched
-- [ ] **Batch 28** (Items 541–560: vp-1312 to vp-1332) — 0/20 fetched
-- [ ] **Batch 29** (Items 561–580: vp-1333 to vp-1352) — 0/20 fetched
-- [ ] **Batch 30** (Items 581–600: vp-1353 to vp-1373) — 0/20 fetched
-- [ ] **Batch 31** (Items 601–620: vp-1374 to vp-1396) — 0/20 fetched
-- [ ] **Batch 32** (Items 621–640: vp-1397 to vp-1423) — 0/20 fetched
-- [ ] **Batch 33** (Items 641–660: vp-1426 to vp-1448) — 0/20 fetched
-- [ ] **Batch 34** (Items 661–680: vp-1449 to vp-1469) — 0/20 fetched
-- [ ] **Batch 35** (Items 681–700: vp-1470 to vp-1494) — 0/20 fetched
-- [ ] **Batch 36** (Items 701–706: vp-1495 to vp-1502) — 0/6 fetched
+- [ ] **Batch 28** (Items 541–560: vp-1312 to vp-1333) — 0/20 fetched
+- [ ] **Batch 29** (Items 561–580: vp-1334 to vp-1353) — 0/20 fetched
+- [ ] **Batch 30** (Items 581–600: vp-1354 to vp-1374) — 0/20 fetched
+- [ ] **Batch 31** (Items 601–620: vp-1375 to vp-1397) — 0/20 fetched
+- [ ] **Batch 32** (Items 621–640: vp-1398 to vp-1428) — 0/20 fetched
+- [ ] **Batch 33** (Items 641–660: vp-1429 to vp-1450) — 0/20 fetched
+- [ ] **Batch 34** (Items 661–680: vp-1451 to vp-1471) — 0/20 fetched
+- [ ] **Batch 35** (Items 681–700: vp-1472 to vp-1496) — 0/20 fetched
+- [ ] **Batch 36** (Items 701–704: vp-1497 to vp-1502) — 0/4 fetched

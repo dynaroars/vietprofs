@@ -26,7 +26,8 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 - [x] Batch WL-18 complete
 - [x] Batch WL-19 complete
 - [x] Batch WL-20 complete
-- [ ] Batch WL-21 through WL-23 — not yet started
+- [x] Batch WL-21 complete
+- [ ] Batch WL-22 through WL-23 — not yet started
 
 ---
 
@@ -1211,7 +1212,7 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 
 ### Batch WL-21 (vp-1359 to vp-1411, 50 people)
 
-- [ ] Batch complete
+- [x] Batch complete
 
 | ID | Name | Institution | Department | Website | Lab |
 | :--- | :--- | :--- | :--- | :---: | :---: |
@@ -1219,8 +1220,8 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-1360` | [Thuy L. Phung](https://vietprofs.roars.dev/people/vp-1360.html) | University of Texas Health Science Center at San Antonio | Department of Pathology and Laboratory Medicine, Long School of Medicine | ⏳ | ⏳ |
 | `vp-1361` | [Q. Thai Dinh](https://vietprofs.roars.dev/people/vp-1361.html) | Saarland University | Department of Internal Medicine / Experimental Pneumology | ⏳ | ⏳ |
 | `vp-1362` | [Le Mai Tu](https://vietprofs.roars.dev/people/vp-1362.html) | Université de Sherbrooke | Département de chirurgie, Faculté de médecine et des sciences de la santé | ⏳ | ⏳ |
-| `vp-1363` | [Huynh-Nhu Le](https://vietprofs.roars.dev/people/vp-1363.html) | George Washington University | Department of Psychological and Brain Sciences, Columbian College of Arts and Sciences | ⏳ | ⏳ |
-| `vp-1364` | [Vincent Quoc-Huy Trinh](https://vietprofs.roars.dev/people/vp-1364.html) | Université de Montréal | Department of Pathology and Cellular Biology & Institute for Research in Immunology and Cancer (IRIC) | ⏳ | ⏳ |
+| `vp-1363` | [Huynh-Nhu Le](https://vietprofs.roars.dev/people/vp-1363.html) | George Washington University | Department of Psychological and Brain Sciences, Columbian College of Arts and Sciences | ⏳ | ✅ |
+| `vp-1364` | [Vincent Quoc-Huy Trinh](https://vietprofs.roars.dev/people/vp-1364.html) | Université de Montréal | Department of Pathology and Cellular Biology & Institute for Research in Immunology and Cancer (IRIC) | ⏳ | ✅ |
 | `vp-1365` | [Xuan Bich Trinh](https://vietprofs.roars.dev/people/vp-1365.html) | University of Antwerp | Center for Oncological Research (CORE) & Antwerp University Hospital (UZA) | ⏳ | ⏳ |
 | `vp-1366` | [Hung Q. Doan](https://vietprofs.roars.dev/people/vp-1366.html) | University of Texas MD Anderson Cancer Center | Department of Dermatology, Division of Internal Medicine | ⏳ | ⏳ |
 | `vp-1367` | [Thanh Dinh](https://vietprofs.roars.dev/people/vp-1367.html) | Harvard University | Department of Surgery, Beth Israel Deaconess Medical Center, Harvard Medical School | ⏳ | ⏳ |
@@ -1239,27 +1240,27 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-1380` | [Quoc Vuong Tran](https://vietprofs.roars.dev/people/vp-1380.html) | University of Yamanashi | Department of Immunology, Faculty of Medicine & Yamanashi GLIA Center | ⏳ | ⏳ |
 | `vp-1381` | [Nhu Khue Vuong](https://vietprofs.roars.dev/people/vp-1381.html) | Agency for Science, Technology and Research | Institute for Infocomm Research (I2R) | ⏳ | ⏳ |
 | `vp-1382` | [Kiên Kiêu](https://vietprofs.roars.dev/people/vp-1382.html) | INRAE (Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement) | MaIAGE (Mathématiques et Informatique Appliquées du Génome à l'Environnement) | ⏳ | ⏳ |
-| `vp-1383` | [Trang Quynh Nguyen](https://vietprofs.roars.dev/people/vp-1383.html) | Johns Hopkins University | Department of Mental Health | ⏳ | ⏳ |
-| `vp-1384` | [Bao Quoc Tang](https://vietprofs.roars.dev/people/vp-1384.html) | University of Graz | Department of Mathematics and Scientific Computing | ⏳ | ⏳ |
+| `vp-1383` | [Trang Quynh Nguyen](https://vietprofs.roars.dev/people/vp-1383.html) | Johns Hopkins University | Department of Mental Health | ✅ | ⏳ |
+| `vp-1384` | [Bao Quoc Tang](https://vietprofs.roars.dev/people/vp-1384.html) | University of Graz | Department of Mathematics and Scientific Computing | ✅ | ⏳ |
 | `vp-1387` | [Christel Tran](https://vietprofs.roars.dev/people/vp-1387.html) | University of Lausanne | Medical Genetics | ⏳ | ⏳ |
 | `vp-1388` | [Michel Le Van Quyen](https://vietprofs.roars.dev/people/vp-1388.html) | Inserm (Institut National de la Santé et de la Recherche Médicale) | Laboratoire d'Imagerie Biomédicale (LIB) | ⏳ | ⏳ |
 | `vp-1389` | [Ha Thanh Dong](https://vietprofs.roars.dev/people/vp-1389.html) | Asian Institute of Technology | Department of Food, Agriculture and Bioresources | ⏳ | ⏳ |
 | `vp-1390` | [Ngoc Tuan Tran](https://vietprofs.roars.dev/people/vp-1390.html) | Shantou University | Marine Biology Institute | ⏳ | ⏳ |
-| `vp-1391` | [Nhat-Tu Le](https://vietprofs.roars.dev/people/vp-1391.html) | Weill Cornell Medicine | Department of Cardiovascular Sciences, Houston Methodist Academic Institute | ⏳ | ⏳ |
+| `vp-1391` | [Nhat-Tu Le](https://vietprofs.roars.dev/people/vp-1391.html) | Weill Cornell Medicine | Department of Cardiovascular Sciences, Houston Methodist Academic Institute | ⏳ | ✅ |
 | `vp-1392` | [Dinh Ha Duy Thuy](https://vietprofs.roars.dev/people/vp-1392.html) | Kyoto University | Human Brain Research Center, Graduate School of Medicine | ⏳ | ⏳ |
 | `vp-1393` | [Chinh Ho](https://vietprofs.roars.dev/people/vp-1393.html) | The University of Sydney | Institute of Transport and Logistics Studies, University of Sydney Business School | ⏳ | ⏳ |
-| `vp-1394` | [Thao Ha](https://vietprofs.roars.dev/people/vp-1394.html) | Arizona State University | Department of Psychology | ⏳ | ⏳ |
-| `vp-1395` | [Huyen Le](https://vietprofs.roars.dev/people/vp-1395.html) | The Ohio State University | Department of Geography | ⏳ | ⏳ |
+| `vp-1394` | [Thao Ha](https://vietprofs.roars.dev/people/vp-1394.html) | Arizona State University | Department of Psychology | ⏳ | ✅ |
+| `vp-1395` | [Huyen Le](https://vietprofs.roars.dev/people/vp-1395.html) | The Ohio State University | Department of Geography | ⏳ | ✅ |
 | `vp-1396` | [Thuan Thai](https://vietprofs.roars.dev/people/vp-1396.html) | The University of Notre Dame Australia | School of Education | ⏳ | ⏳ |
 | `vp-1397` | [Duc Thanh Nguyen](https://vietprofs.roars.dev/people/vp-1397.html) | Deakin University | School of Information Technology | ⏳ | ⏳ |
 | `vp-1398` | [Anh Nguyen-Duc](https://vietprofs.roars.dev/people/vp-1398.html) | University of South-Eastern Norway | Department of Science and Industry Systems | ⏳ | ⏳ |
 | `vp-1399` | [Quoc-Tuan Vien](https://vietprofs.roars.dev/people/vp-1399.html) | Middlesex University | Faculty of Science and Technology | ⏳ | ⏳ |
-| `vp-1401` | [Kim Khoa Nguyen](https://vietprofs.roars.dev/people/vp-1401.html) | École de technologie supérieure | Department of Electrical Engineering | ⏳ | ⏳ |
+| `vp-1401` | [Kim Khoa Nguyen](https://vietprofs.roars.dev/people/vp-1401.html) | École de technologie supérieure | Department of Electrical Engineering | ⏳ | ✅ |
 | `vp-1402` | [Duy-Tai Dinh](https://vietprofs.roars.dev/people/vp-1402.html) | The Kyoto College of Graduate Studies for Informatics | Graduate School of Applied Information Technology | ⏳ | ⏳ |
 | `vp-1403` | [Cuong Pham](https://vietprofs.roars.dev/people/vp-1403.html) | Wentworth Institute of Technology | School of Computing and Data Science | ⏳ | ⏳ |
-| `vp-1404` | [Triet H. M. Le](https://vietprofs.roars.dev/people/vp-1404.html) | University of Adelaide | School of Computer Science and Information Technology | ⏳ | ⏳ |
+| `vp-1404` | [Triet H. M. Le](https://vietprofs.roars.dev/people/vp-1404.html) | University of Adelaide | School of Computer Science and Information Technology | ✅ | ⏳ |
 | `vp-1405` | [Cuong Ton-That](https://vietprofs.roars.dev/people/vp-1405.html) | University of Technology Sydney | School of Mathematical and Physical Sciences | ⏳ | ⏳ |
-| `vp-1406` | [Tuan Hung Nguyen](https://vietprofs.roars.dev/people/vp-1406.html) | Tohoku University | Frontier Research Institute for Interdisciplinary Sciences | ⏳ | ⏳ |
+| `vp-1406` | [Tuan Hung Nguyen](https://vietprofs.roars.dev/people/vp-1406.html) | Tohoku University | Frontier Research Institute for Interdisciplinary Sciences | ⏳ | ✅ |
 | `vp-1407` | [Quoc Duy Ho](https://vietprofs.roars.dev/people/vp-1407.html) | University of Stavanger | Department of Mathematics and Physics | ⏳ | ⏳ |
 | `vp-1408` | [Quoc Khanh Tran](https://vietprofs.roars.dev/people/vp-1408.html) | Technical University of Darmstadt | Department of Electrical Engineering and Information Technology | ⏳ | ⏳ |
 | `vp-1409` | [Thao M. Ho](https://vietprofs.roars.dev/people/vp-1409.html) | Häme University of Applied Sciences | HAMK Bio | ⏳ | ⏳ |
