@@ -7,7 +7,8 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 ## Status
 
 - [x] Batch WL-01 complete
-- [ ] Batch WL-02 through WL-23 — not yet started
+- [x] Batch WL-02 complete
+- [ ] Batch WL-03 through WL-23 — not yet started
 
 ---
 
@@ -72,41 +73,41 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 
 ### Batch WL-02 (vp-0173 to vp-0260, 50 people)
 
-- [ ] Batch complete
+- [x] Batch complete
 
 | ID | Name | Institution | Department | Website | Lab |
 | :--- | :--- | :--- | :--- | :---: | :---: |
 | `vp-0173` | [Dan Hieu Vo](https://vietprofs.roars.dev/people/vp-0173.html) | Florida Gulf Coast University | Daveler & Kauanui School of Entrepreneurship | ⏳ | ⏳ |
 | `vp-0174` | [Linda Nguyen - Seattle University](https://vietprofs.roars.dev/people/vp-0174.html) | Seattle University | Management | ⏳ | ⏳ |
-| `vp-0178` | [Tuong Vu](https://vietprofs.roars.dev/people/vp-0178.html) | University of Oregon | Political Science | ⏳ | ⏳ |
+| `vp-0178` | [Tuong Vu](https://vietprofs.roars.dev/people/vp-0178.html) | University of Oregon | Political Science | ⏳ | ✅ |
 | `vp-0180` | [Hien Duc Do](https://vietprofs.roars.dev/people/vp-0180.html) | San Jose State University | Sociology and Interdisciplinary Social Sciences | ⏳ | ⏳ |
 | `vp-0181` | [Y Thien Nguyen](https://vietprofs.roars.dev/people/vp-0181.html) | California State University, Dominguez Hills | Asian-Pacific Studies | ⏳ | ⏳ |
-| `vp-0183` | [Yen Le Espiritu](https://vietprofs.roars.dev/people/vp-0183.html) | University of California, San Diego | Ethnic Studies | ⏳ | ⏳ |
+| `vp-0183` | [Yen Le Espiritu](https://vietprofs.roars.dev/people/vp-0183.html) | University of California, San Diego | Ethnic Studies | ⏳ | ✅ |
 | `vp-0185` | [Son Ca Lam](https://vietprofs.roars.dev/people/vp-0185.html) | University of Massachusetts Boston | Asian American Studies | ⏳ | ⏳ |
 | `vp-0186` | [Thuy Linh Nguyen Tu](https://vietprofs.roars.dev/people/vp-0186.html) | New York University | Social and Cultural Analysis | ⏳ | ⏳ |
 | `vp-0189` | [Kevin Lam](https://vietprofs.roars.dev/people/vp-0189.html) | Drake University | Urban and Diversity Education | ⏳ | ⏳ |
-| `vp-0190` | [Natalie A. Tran](https://vietprofs.roars.dev/people/vp-0190.html) | California State University, Fullerton | Educational Leadership | ⏳ | ⏳ |
+| `vp-0190` | [Natalie A. Tran](https://vietprofs.roars.dev/people/vp-0190.html) | California State University, Fullerton | Educational Leadership | ⏳ | ✅ |
 | `vp-0195` | [Lien-Hang T. Nguyen](https://vietprofs.roars.dev/people/vp-0195.html) | Columbia University | History | ⏳ | ⏳ |
 | `vp-0196` | [Hieu Phung](https://vietprofs.roars.dev/people/vp-0196.html) | Rutgers University | Asian Languages and Cultures | ⏳ | ⏳ |
 | `vp-0197` | [Quynh Nhu Le](https://vietprofs.roars.dev/people/vp-0197.html) | University of South Florida | English | ⏳ | ⏳ |
 | `vp-0199` | [Xuan-Thao Nguyen](https://vietprofs.roars.dev/people/vp-0199.html) | University of Washington | Law | ⏳ | ⏳ |
 | `vp-0206` | [Doc Lap Tran](https://vietprofs.roars.dev/people/vp-0206.html) | Tennessee State University | Agribusiness and Education | ⏳ | ⏳ |
-| `vp-0208` | [Thanh D. Nguyen](https://vietprofs.roars.dev/people/vp-0208.html) | University of Connecticut | Mechanical, Aerospace, and Manufacturing Engineering | ⏳ | ⏳ |
+| `vp-0208` | [Thanh D. Nguyen](https://vietprofs.roars.dev/people/vp-0208.html) | University of Connecticut | Mechanical, Aerospace, and Manufacturing Engineering | ⏳ | ✅ |
 | `vp-0214` | [Chi Van Dang](https://vietprofs.roars.dev/people/vp-0214.html) | Johns Hopkins University | Biochemistry and Molecular Biology | ⏳ | ⏳ |
-| `vp-0216` | [Trang T.H. Nguyen](https://vietprofs.roars.dev/people/vp-0216.html) | Arkansas State University | Biological Sciences | ⏳ | ⏳ |
+| `vp-0216` | [Trang T.H. Nguyen](https://vietprofs.roars.dev/people/vp-0216.html) | Arkansas State University | Biological Sciences | ✅ | ⏳ |
 | `vp-0217` | [Timothea Vo](https://vietprofs.roars.dev/people/vp-0217.html) | Binghamton University | Nursing | ⏳ | ⏳ |
 | `vp-0218` | [Uyen Minh Le](https://vietprofs.roars.dev/people/vp-0218.html) | California Northstate University | Pharmaceutics and Pharmacokinetics | ⏳ | ⏳ |
 | `vp-0219` | [Hiep X. Nguyen](https://vietprofs.roars.dev/people/vp-0219.html) | California Northstate University | Pharmaceutics and Pharmacokinetics | ⏳ | ⏳ |
-| `vp-0221` | [Isabelle Thuy Pelaud](https://vietprofs.roars.dev/people/vp-0221.html) | San Francisco State University | Asian American Studies | ⏳ | ⏳ |
+| `vp-0221` | [Isabelle Thuy Pelaud](https://vietprofs.roars.dev/people/vp-0221.html) | San Francisco State University | Asian American Studies | ⏳ | ✅ |
 | `vp-0222` | [Loan K. Le](https://vietprofs.roars.dev/people/vp-0222.html) | San Francisco State University | Asian American Studies | ⏳ | ⏳ |
 | `vp-0223` | [Mai-Nhung Le](https://vietprofs.roars.dev/people/vp-0223.html) | San Francisco State University | Asian American Studies | ⏳ | ⏳ |
 | `vp-0226` | [Mariam B. Lam](https://vietprofs.roars.dev/people/vp-0226.html) | University of California, Riverside | Comparative Literature and Languages | ⏳ | ⏳ |
 | `vp-0227` | [Duy Lap Nguyen](https://vietprofs.roars.dev/people/vp-0227.html) | University of Houston | World Cultures and Literatures | ⏳ | ⏳ |
-| `vp-0228` | [Phuong Nguyen-Hoang](https://vietprofs.roars.dev/people/vp-0228.html) | University of Iowa | School of Planning and Public Affairs | ⏳ | ⏳ |
+| `vp-0228` | [Phuong Nguyen-Hoang](https://vietprofs.roars.dev/people/vp-0228.html) | University of Iowa | School of Planning and Public Affairs | ⏳ | ✅ |
 | `vp-0229` | [Huyen Pham - Texas A&M University](https://vietprofs.roars.dev/people/vp-0229.html) | Texas A&M University | Law | ⏳ | ⏳ |
-| `vp-0231` | [Michael Dao](https://vietprofs.roars.dev/people/vp-0231.html) | San Jose State University | Kinesiology | ⏳ | ⏳ |
+| `vp-0231` | [Michael Dao](https://vietprofs.roars.dev/people/vp-0231.html) | San Jose State University | Kinesiology | ⏳ | ✅ |
 | `vp-0236` | [Anh Q. Tran](https://vietprofs.roars.dev/people/vp-0236.html) | Santa Clara University | Jesuit School of Theology | ⏳ | ⏳ |
-| `vp-0237` | [Jonathan Tran](https://vietprofs.roars.dev/people/vp-0237.html) | Duke University | Theological Ethics, Divinity School | ⏳ | ⏳ |
+| `vp-0237` | [Jonathan Tran](https://vietprofs.roars.dev/people/vp-0237.html) | Duke University | Theological Ethics, Divinity School | ✅ | ⏳ |
 | `vp-0238` | [Nguyen Phan](https://vietprofs.roars.dev/people/vp-0238.html) | University of Houston | Computer Science | ⏳ | ⏳ |
 | `vp-0241` | [Vincent Nguyen](https://vietprofs.roars.dev/people/vp-0241.html) | University of Maryland | Mechanical Engineering | ⏳ | ⏳ |
 | `vp-0242` | [Win PV Nguyen](https://vietprofs.roars.dev/people/vp-0242.html) | Virginia Tech | Industrial and Systems Engineering | ⏳ | ⏳ |
@@ -123,7 +124,7 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-0254` | [Khoa Nguyen](https://vietprofs.roars.dev/people/vp-0254.html) | University of Florida | Pharmacotherapy and Translational Research | ⏳ | ⏳ |
 | `vp-0255` | [Khiem Pham-Nguyen](https://vietprofs.roars.dev/people/vp-0255.html) | Boston University | Orthodontics & Dentofacial Orthopedics | ⏳ | ⏳ |
 | `vp-0256` | [Christopher Paul Nguyen](https://vietprofs.roars.dev/people/vp-0256.html) | University of New Mexico | Management | ⏳ | ⏳ |
-| `vp-0258` | [Huyen Nguyen - Kansas State University](https://vietprofs.roars.dev/people/vp-0258.html) | Kansas State University | Media and Communication | ⏳ | ⏳ |
+| `vp-0258` | [Huyen Nguyen - Kansas State University](https://vietprofs.roars.dev/people/vp-0258.html) | Kansas State University | Media and Communication | ✅ | ⏳ |
 | `vp-0259` | [Hoa T.H. Nguyen](https://vietprofs.roars.dev/people/vp-0259.html) | Columbia University | Applied Linguistics and TESOL | ⏳ | ⏳ |
 | `vp-0260` | [Ngan Nguyen](https://vietprofs.roars.dev/people/vp-0260.html) | Texas Tech University | Curriculum & Instruction | ⏳ | ⏳ |
 
