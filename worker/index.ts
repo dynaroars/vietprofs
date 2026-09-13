@@ -21,12 +21,12 @@ interface KVNamespace {
   put(key: string, value: string): Promise<void>;
 }
 
-
 export interface DailyStat {
   date: string;
   requests: number;
   pageViews: number;
-  visits: number;
+  visits?: number;
+  uniques?: number;
 }
 
 export interface CountryStat {
@@ -34,6 +34,8 @@ export interface CountryStat {
   name: string;
   flag: string;
   count: number;
+  visits?: number;
+  pct?: number;
 }
 
 export interface PageStat {
@@ -42,33 +44,57 @@ export interface PageStat {
   count: number;
 }
 
+export interface PageBreakdown {
+  profileViews: number;
+  profilePct: number;
+  mainViews: number;
+  submitViews: number;
+  statsViews: number;
+  otherViews: number;
+  totalViews: number;
+}
+
+export interface BaselineStat {
+  avgVisitsPerDay: number;
+  medianVisitsPerDay: number;
+  avgPageViewsPerDay: number;
+}
+
 export interface StatsResponse {
   generatedAt: string;
   dataPeriodDays: number;
-  breakdownPeriodDays: number;
-  metricNotice: string;
-  coverage: {
+  breakdownPeriodDays?: number;
+  metricNotice?: string;
+  retentionNotice?: string;
+  coverage?: {
     last7Days: number;
     last30Days: number;
   };
   today: {
     requests: number;
     pageViews: number;
-    visits: number;
+    visits?: number;
+    uniques?: number;
   };
   last7Days: {
     requests: number;
     pageViews: number;
-    visits: number;
+    visits?: number;
+    uniques?: number;
   };
   last30Days: {
     requests: number;
     pageViews: number;
-    visits: number;
+    visits?: number;
+    uniques?: number;
   };
+  baseline?: BaselineStat;
   countriesCount: number;
   topCountries: CountryStat[];
+  topCountriesToday?: CountryStat[];
   topPages: PageStat[];
+  topPagesToday?: PageStat[];
+  pageBreakdown?: PageBreakdown;
   daily: DailyStat[];
   isDemo?: boolean;
 }
@@ -104,6 +130,9 @@ const COUNTRY_NAMES: Record<string, string> = {
   MX: 'Mexico',
   PL: 'Poland',
   CZ: 'Czech Republic',
+  AD: 'Andorra',
+  RU: 'Russia',
+  CN: 'China',
 };
 
 function countryCodeToFlag(code: string): string {
@@ -114,9 +143,6 @@ function countryCodeToFlag(code: string): string {
   return String.fromCodePoint(first, second);
 }
 
-// Only paths that can survive isPublicHtmlPage() below need a label. The analytics query filters
-// on edgeResponseContentTypeName: "html", so non-HTML assets (the PDF, data.json) can never
-// appear here regardless of the path allowlist.
 function cleanPageLabel(path: string): string {
   if (!path || path === '/' || path === '/index.html') return 'Main Directory';
   if (path === '/submit.html') return 'Submit / Update Entry';
@@ -147,11 +173,52 @@ function dateStringsEndingOn(endDate: string, count: number): string[] {
   });
 }
 
-// Dimensions are limited to what this zone's plan exposes: per-day request/visit counts,
-// clientCountryName, and clientRequestPath. Referrer breakdowns (clientRefererHost) are not
-// available on the free plan, so the page has no "Top Referrers" panel — don't add one back
-// without confirming the dimension is queryable, since GraphQL rejects the entire document if
-// any single field is invalid, which would take down every metric on the page.
+function calculateMedian(numbers: number[]): number {
+  if (numbers.length === 0) return 0;
+  const sorted = [...numbers].sort((a, b) => a - b);
+  const middle = Math.floor(sorted.length / 2);
+  if (sorted.length % 2 === 0) {
+    return Math.round((sorted[middle - 1] + sorted[middle]) / 2);
+  }
+  return sorted[middle];
+}
+
+function calculatePageBreakdown(pages: PageStat[]): PageBreakdown {
+  let profileViews = 0;
+  let mainViews = 0;
+  let submitViews = 0;
+  let statsViews = 0;
+  let otherViews = 0;
+  let totalViews = 0;
+
+  pages.forEach(p => {
+    totalViews += p.count;
+    if (p.path.startsWith('/people/')) {
+      profileViews += p.count;
+    } else if (p.path === '/' || p.path === '/index.html') {
+      mainViews += p.count;
+    } else if (p.path === '/submit.html') {
+      submitViews += p.count;
+    } else if (p.path === '/stats.html') {
+      statsViews += p.count;
+    } else {
+      otherViews += p.count;
+    }
+  });
+
+  const profilePct = totalViews > 0 ? Math.round((profileViews / totalViews) * 100) : 0;
+
+  return {
+    profileViews,
+    profilePct,
+    mainViews,
+    submitViews,
+    statsViews,
+    otherViews,
+    totalViews,
+  };
+}
+
 function buildGraphqlQuery(dates: string[]): string {
   const dateVariables = dates.map((_, index) => `$date${index}: Date!`).join(', ');
   const dailyNodes = dates.map((_, index) => `
@@ -162,7 +229,22 @@ function buildGraphqlQuery(dates: string[]): string {
       pages${index}: httpRequestsAdaptiveGroups(
         limit: 1
         filter: { date: $date${index}, clientRequestHTTPHost: $hostname, requestSource: "eyeball", edgeResponseContentTypeName: "html", edgeResponseStatus_geq: 200, edgeResponseStatus_lt: 400 }
-      ) { count sum { visits } }`).join('');
+      ) { count sum { visits } }
+      topCountries${index}: httpRequestsAdaptiveGroups(
+        limit: 250
+        filter: { date: $date${index}, clientRequestHTTPHost: $hostname, requestSource: "eyeball", edgeResponseContentTypeName: "html", edgeResponseStatus_geq: 200, edgeResponseStatus_lt: 400 }
+      ) {
+        count
+        sum { visits }
+        dimensions { clientCountryName }
+      }
+      topPages${index}: httpRequestsAdaptiveGroups(
+        limit: 250
+        filter: { date: $date${index}, clientRequestHTTPHost: $hostname, requestSource: "eyeball", edgeResponseContentTypeName: "html", edgeResponseStatus_geq: 200, edgeResponseStatus_lt: 400 }
+      ) {
+        count
+        dimensions { clientRequestPath }
+      }`).join('');
 
   return `
 query GetHostnameTrafficStats($zoneTag: String!, $hostname: String!, ${dateVariables}) {
@@ -211,45 +293,65 @@ function buildDemoResponse(): StatsResponse {
   const sum7 = last7.reduce((acc, curr) => ({
     requests: acc.requests + curr.requests,
     pageViews: acc.pageViews + curr.pageViews,
-    visits: acc.visits + curr.visits,
+    visits: acc.visits + (curr.visits || 0),
   }), { requests: 0, pageViews: 0, visits: 0 });
 
   const sum30 = daily.reduce((acc, curr) => ({
     requests: acc.requests + curr.requests,
     pageViews: acc.pageViews + curr.pageViews,
-    visits: acc.visits + curr.visits,
+    visits: acc.visits + (curr.visits || 0),
   }), { requests: 0, pageViews: 0, visits: 0 });
+
+  const visitsList7 = last7.map(d => d.visits || 0);
+  const avgVisitsPerDay = Math.round(sum7.visits / 7);
+  const medianVisitsPerDay = calculateMedian(visitsList7);
+
+  const topCountries7Day: CountryStat[] = [
+    { code: 'US', name: 'United States', flag: '🇺🇸', count: 2450, visits: 2450, pct: 54.4 },
+    { code: 'VN', name: 'Vietnam', flag: '🇻🇳', count: 1820, visits: 1820, pct: 40.4 },
+    { code: 'JP', name: 'Japan', flag: '🇯🇵', count: 420, visits: 420, pct: 9.3 },
+    { code: 'FR', name: 'France', flag: '🇫🇷', count: 390, visits: 390, pct: 8.7 },
+    { code: 'DE', name: 'Germany', flag: '🇩🇪', count: 310, visits: 310, pct: 6.9 },
+    { code: 'CA', name: 'Canada', flag: '🇨🇦', count: 280, visits: 280, pct: 6.2 },
+    { code: 'GB', name: 'United Kingdom', flag: '🇬🇧', count: 240, visits: 240, pct: 5.3 },
+    { code: 'AU', name: 'Australia', flag: '🇦🇺', count: 190, visits: 190, pct: 4.2 },
+    { code: 'SG', name: 'Singapore', flag: '🇸🇬', count: 150, visits: 150, pct: 3.3 },
+    { code: 'KR', name: 'South Korea', flag: '🇰🇷', count: 120, visits: 120, pct: 2.7 },
+  ];
+
+  const topPages7Day: PageStat[] = [
+    { path: '/', label: 'Main Directory', count: 4850 },
+    { path: '/submit.html', label: 'Submit / Update Entry', count: 890 },
+    { path: '/people/vp-1183.html', label: 'Profile vp-1183', count: 320 },
+    { path: '/people/vp-0064.html', label: 'Profile vp-0064', count: 280 },
+    { path: '/stats.html', label: 'Visitor Statistics', count: 210 },
+    { path: '/people/vp-0753.html', label: 'Profile vp-0753', count: 180 },
+    { path: '/people/vp-0706.html', label: 'Profile vp-0706', count: 140 },
+  ];
+
+  const pageBreakdown = calculatePageBreakdown(topPages7Day);
 
   return {
     generatedAt: new Date().toISOString(),
     dataPeriodDays: 30,
-    breakdownPeriodDays: 1,
-    metricNotice: 'Visits and successful HTML page requests are aggregate network estimates, not verified people. Automated traffic may still be included.',
+    breakdownPeriodDays: 7,
+    metricNotice: 'Visits are Cloudflare network visit estimates, not unique verified people. Eyeball traffic represents external client requests; it is not equivalent to verified human visitors and may still include automated traffic.',
+    retentionNotice: 'Cloudflare live API retention is approximately 8 days. A scheduled archive builds the longer 30-day history over time.',
     coverage: { last7Days: 7, last30Days: 30 },
     today: todayStat,
     last7Days: sum7,
     last30Days: sum30,
-    countriesCount: 18,
-    topCountries: [
-      { code: 'US', name: 'United States', flag: '🇺🇸', count: 2450 },
-      { code: 'VN', name: 'Vietnam', flag: '🇻🇳', count: 1820 },
-      { code: 'JP', name: 'Japan', flag: '🇯🇵', count: 420 },
-      { code: 'FR', name: 'France', flag: '🇫🇷', count: 390 },
-      { code: 'DE', name: 'Germany', flag: '🇩🇪', count: 310 },
-      { code: 'CA', name: 'Canada', flag: '🇨🇦', count: 280 },
-      { code: 'GB', name: 'United Kingdom', flag: '🇬🇧', count: 240 },
-      { code: 'AU', name: 'Australia', flag: '🇦🇺', count: 190 },
-      { code: 'SG', name: 'Singapore', flag: '🇸🇬', count: 150 },
-      { code: 'KR', name: 'South Korea', flag: '🇰🇷', count: 120 },
-    ],
-    topPages: [
-      { path: '/', label: 'Main Directory', count: 4850 },
-      { path: '/submit.html', label: 'Submit / Update Entry', count: 890 },
-      { path: '/vietprofs.pdf', label: 'VietProfs Manuscript (PDF)', count: 410 },
-      { path: '/data.json', label: 'Roster Dataset (data.json)', count: 320 },
-      { path: '/people/vp-0001.html', label: 'Profile vp-0001', count: 180 },
-      { path: '/people/vp-0012.html', label: 'Profile vp-0012', count: 140 },
-    ],
+    baseline: {
+      avgVisitsPerDay,
+      medianVisitsPerDay,
+      avgPageViewsPerDay: Math.round(sum7.pageViews / 7),
+    },
+    countriesCount: topCountries7Day.length,
+    topCountries: topCountries7Day,
+    topCountriesToday: topCountries7Day.slice(0, 5),
+    topPages: topPages7Day,
+    topPagesToday: topPages7Day.slice(0, 5),
+    pageBreakdown,
     daily,
     isDemo: true,
   };
@@ -270,14 +372,10 @@ function sumDaily(rows: DailyStat[]): Omit<DailyStat, 'date'> {
   return rows.reduce((total, row) => ({
     requests: total.requests + row.requests,
     pageViews: total.pageViews + row.pageViews,
-    visits: total.visits + row.visits,
+    visits: (total.visits || 0) + (row.visits || 0),
   }), { requests: 0, pageViews: 0, visits: 0 });
 }
 
-// `persist` gates the Workers KV write. Only the daily scheduled refresh should archive a
-// snapshot: KV allows one write per second per key and bills per write, and the edge cache is
-// per-colo, so writing on every user-facing cache miss meant far more writes than the 10-minute
-// TTL suggests.
 async function fetchLiveStats(env: Env, { persist = false } = {}): Promise<StatsResponse> {
   if (!env.CLOUDFLARE_API_TOKEN || !env.CLOUDFLARE_ZONE_ID) {
     return buildDemoResponse();
@@ -364,7 +462,33 @@ async function fetchLiveStats(env: Env, { persist = false } = {}): Promise<Stats
     visits: 0,
   };
 
-  const topCountries = (zoneData.topCountries || [])
+  // Aggregate Top Countries over available daily nodes (7 days)
+  const countryVisits7Day: Record<string, number> = {};
+  sourceDates.forEach((_, index) => {
+    const nodes = zoneData[`topCountries${index}`] || (index === sourceDates.length - 1 ? zoneData.topCountries : undefined) || [];
+    nodes.forEach(item => {
+      const countryInput = item.dimensions?.clientCountryName || 'Unknown';
+      const code = countryInput.length === 2 ? countryInput.toUpperCase() : 'XX';
+      countryVisits7Day[code] = (countryVisits7Day[code] || 0) + (item.sum?.visits || 0);
+    });
+  });
+
+  const total7DayVisits = Object.values(countryVisits7Day).reduce((a, b) => a + b, 0);
+
+  const topCountries = Object.entries(countryVisits7Day)
+    .map(([code, visits]): CountryStat => ({
+      code,
+      name: COUNTRY_NAMES[code] || code,
+      flag: countryCodeToFlag(code),
+      count: visits,
+      visits,
+      pct: total7DayVisits > 0 ? Math.round((visits / total7DayVisits) * 1000) / 10 : 0,
+    }))
+    .filter(c => c.count > 0)
+    .sort((a, b) => b.count - a.count);
+
+  // Today's countries view
+  const topCountriesToday = (zoneData.topCountries || [])
     .map((item): CountryStat => {
       const countryInput = item.dimensions?.clientCountryName || 'Unknown';
       const code = countryInput.length === 2 ? countryInput.toUpperCase() : 'XX';
@@ -373,30 +497,68 @@ async function fetchLiveStats(env: Env, { persist = false } = {}): Promise<Stats
         name: COUNTRY_NAMES[code] || countryInput,
         flag: countryCodeToFlag(code),
         count: item.sum?.visits || 0,
+        visits: item.sum?.visits || 0,
       };
     })
-    .filter(country => country.count > 0)
-    .sort((left, right) => right.count - left.count);
+    .filter(c => c.count > 0)
+    .sort((a, b) => b.count - a.count);
 
-  const topPages = (zoneData.topPages || [])
+  // Aggregate Top Pages over available daily nodes (7 days)
+  const pageViews7Day: Record<string, number> = {};
+  sourceDates.forEach((_, index) => {
+    const nodes = zoneData[`topPages${index}`] || (index === sourceDates.length - 1 ? zoneData.topPages : undefined) || [];
+    nodes.forEach(item => {
+      const path = item.dimensions?.clientRequestPath || '/';
+      if (isPublicHtmlPage(path)) {
+        pageViews7Day[path] = (pageViews7Day[path] || 0) + (item.count || 0);
+      }
+    });
+  });
+
+  const topPages = Object.entries(pageViews7Day)
+    .map(([path, count]): PageStat => ({
+      path,
+      label: cleanPageLabel(path),
+      count,
+    }))
+    .sort((a, b) => b.count - a.count);
+
+  // Today's pages view
+  const topPagesToday = (zoneData.topPages || [])
     .filter(item => isPublicHtmlPage(item.dimensions?.clientRequestPath || ''))
     .map((item): PageStat => {
       const path = item.dimensions?.clientRequestPath || '/';
       return { path, label: cleanPageLabel(path), count: item.count || 0 };
     });
 
+  const pageBreakdown = calculatePageBreakdown(topPages);
+
+  const visitsList7 = last7.map(d => d.visits || 0);
+  const sum7 = sumDaily(last7);
+  const avgVisitsPerDay = Math.round((sum7.visits || 0) / Math.max(1, last7.length));
+  const medianVisitsPerDay = calculateMedian(visitsList7);
+
   return {
     generatedAt: new Date().toISOString(),
     dataPeriodDays: MAX_STORED_DAYS,
-    breakdownPeriodDays: 1,
-    metricNotice: 'Visits and successful HTML page requests are aggregate network estimates, not verified people. Automated traffic may still be included.',
+    breakdownPeriodDays: 7,
+    metricNotice: 'Visits are Cloudflare network visit estimates, not unique verified people. Eyeball traffic represents external client requests; it is not equivalent to verified human visitors and may still include automated traffic.',
+    retentionNotice: 'Cloudflare live API retention is approximately 8 days. A scheduled archive builds the longer 30-day history over time.',
     coverage: { last7Days: last7.length, last30Days: daily.length },
     today,
-    last7Days: sumDaily(last7),
+    last7Days: sum7,
     last30Days: sumDaily(daily),
+    baseline: {
+      avgVisitsPerDay,
+      medianVisitsPerDay,
+      avgPageViewsPerDay: Math.round(sum7.pageViews / Math.max(1, last7.length)),
+    },
     countriesCount: topCountries.length,
     topCountries,
+    topCountriesToday,
     topPages,
+    topPagesToday,
+    pageBreakdown,
     daily,
     isDemo: false,
   };
@@ -436,7 +598,6 @@ export default {
       });
     }
 
-    // Check Cloudflare edge cache first
     const cacheKey = new Request(url.toString(), request);
     if (typeof caches !== 'undefined') {
       try {
@@ -449,8 +610,6 @@ export default {
       }
     }
 
-
-    // If Cloudflare token / Zone ID is missing, return demo/fallback structure cleanly
     if (!env.CLOUDFLARE_API_TOKEN || !env.CLOUDFLARE_ZONE_ID) {
       const demoData = buildDemoResponse();
       const response = new Response(JSON.stringify(demoData), {
@@ -480,7 +639,6 @@ export default {
       return response;
     } catch (err: unknown) {
       console.error('Cloudflare Analytics request failed', err);
-      // Fallback response with clean error notice, avoiding internal secret exposure
       const fallbackPayload = {
         error: 'Visitor statistics temporarily unavailable',
         generatedAt: new Date().toISOString(),

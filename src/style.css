@@ -2954,6 +2954,81 @@ button.chart-row-btn:hover {
   margin-bottom: 0.35rem;
 }
 
+.stats-callout-box {
+  background: var(--tag-bg, rgba(255, 255, 255, 0.03));
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: var(--radius-sm, 4px);
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.stats-callout-box h3 {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs, 0.75rem);
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.stats-callout-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.callout-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.callout-label {
+  font-size: var(--text-xs, 0.75rem);
+  color: var(--text-muted);
+  margin-bottom: 0.2rem;
+}
+
+.callout-value {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.callout-sub {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.callout-note {
+  font-size: var(--text-sm, 0.875rem);
+  color: var(--text-color);
+  border-top: 1px solid var(--border-color, #e2e8f0);
+  padding-top: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.stats-unit {
+  font-size: 0.8rem;
+  font-weight: normal;
+  color: var(--text-muted);
+}
+
+.info-banner {
+  border-left: 3px solid var(--accent-color, #2563eb);
+}
+
+.stats-secondary-details summary {
+  cursor: pointer;
+  font-size: var(--text-sm, 0.875rem);
+  color: var(--text-muted);
+  padding: 0.25rem 0;
+}
+
+.stats-secondary-details summary:hover {
+  color: var(--text-color);
+}
+
 .stats-error-box, .stats-loading-box {
   padding: 2rem;
   text-align: center;

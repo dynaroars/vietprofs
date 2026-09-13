@@ -14,6 +14,8 @@ export interface CountryStat {
   name: string;
   flag: string;
   count: number;
+  visits?: number;
+  pct?: number;
 }
 
 export interface PageStat {
@@ -22,11 +24,28 @@ export interface PageStat {
   count: number;
 }
 
+export interface PageBreakdown {
+  profileViews: number;
+  profilePct: number;
+  mainViews: number;
+  submitViews: number;
+  statsViews: number;
+  otherViews: number;
+  totalViews: number;
+}
+
+export interface BaselineStat {
+  avgVisitsPerDay: number;
+  medianVisitsPerDay: number;
+  avgPageViewsPerDay: number;
+}
+
 export interface StatsResponse {
   generatedAt: string;
   dataPeriodDays: number;
   breakdownPeriodDays?: number;
   metricNotice?: string;
+  retentionNotice?: string;
   coverage?: {
     last7Days: number;
     last30Days: number;
@@ -49,9 +68,13 @@ export interface StatsResponse {
     visits?: number;
     uniques?: number;
   };
+  baseline?: BaselineStat;
   countriesCount: number;
   topCountries: CountryStat[];
+  topCountriesToday?: CountryStat[];
   topPages: PageStat[];
+  topPagesToday?: PageStat[];
+  pageBreakdown?: PageBreakdown;
   daily: DailyStat[];
   isDemo?: boolean;
 }
@@ -68,6 +91,14 @@ function formatDateLabel(dateStr: string): string {
   if (parts.length < 3) return dateStr;
   const date = new Date(Number(parts[0]), Number(parts[1]) - 1, Number(parts[2]));
   return new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric' }).format(date);
+}
+
+function formatDateFull(dateStr: string): string {
+  if (!dateStr) return '';
+  const parts = dateStr.split('-');
+  if (parts.length < 3) return dateStr;
+  const date = new Date(Number(parts[0]), Number(parts[1]) - 1, Number(parts[2]));
+  return new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric' }).format(date);
 }
 
 function visitCount(stat: { visits?: number; uniques?: number; requests?: number } | undefined): number {
@@ -91,6 +122,16 @@ function renderRunningHead() {
           <span class="man-running-title"><a class="man-running-brand" href="${base}" aria-label="VietProfs directory"><img class="brand-logo" src="${base}vietprofs-bamboo-v.svg" alt="" width="20" height="20"></a><span class="man-running-label">VietProfs Statistics & Insights</span></span>
           <span>STATS(1)</span>
         </p>`;
+}
+
+function calculateMedian(numbers: number[]): number {
+  if (numbers.length === 0) return 0;
+  const sorted = [...numbers].sort((a, b) => a - b);
+  const middle = Math.floor(sorted.length / 2);
+  if (sorted.length % 2 === 0) {
+    return Math.round((sorted[middle - 1] + sorted[middle]) / 2);
+  }
+  return sorted[middle];
 }
 
 function renderTrafficChart(daily: DailyStat[]): string {
@@ -152,8 +193,8 @@ function renderTrafficChart(daily: DailyStat[]): string {
   return `
     <div class="stats-chart-container">
       <div class="chart-legend">
-        <span class="legend-item"><span class="legend-dot dot-visits"></span> Unique Visits</span>
-        <span class="legend-item"><span class="legend-dot dot-views"></span> HTML Page Views</span>
+        <span class="legend-item"><span class="legend-dot dot-visits"></span> Visits (Network Estimate)</span>
+        <span class="legend-item"><span class="legend-dot dot-views"></span> Successful HTML Page Views</span>
       </div>
       <div class="svg-wrap">
         <svg viewBox="0 0 ${width} ${height}" class="stats-svg" preserveAspectRatio="none">
@@ -168,13 +209,57 @@ function renderTrafficChart(daily: DailyStat[]): string {
   `;
 }
 
+function renderDailyTable(daily: DailyStat[]): string {
+  if (!daily || daily.length === 0) return '';
+  const reversed = [...daily].reverse();
+
+  return `
+    <div class="stats-table-wrapper" style="margin-top: 1.5rem;">
+      <table class="stats-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th class="num-col">Visits</th>
+            <th class="num-col">Successful HTML Page Views</th>
+            <th class="num-col">Eyeball HTTP Requests</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${reversed.map((d) => `
+            <tr>
+              <td><strong>${escapeHtml(formatDateFull(d.date))}</strong></td>
+              <td class="num-col"><strong>${formatNumber(visitCount(d))}</strong></td>
+              <td class="num-col">${formatNumber(d.pageViews || 0)}</td>
+              <td class="num-col">${formatNumber(d.requests || 0)}</td>
+            </tr>
+          `).join('')}
+        </tbody>
+      </table>
+    </div>
+  `;
+}
+
 function renderStatsContent(data: StatsResponse) {
-  const topCountry = data.topCountries?.[0];
   const coverage7 = data.coverage?.last7Days ?? Math.min(data.daily?.length || 0, 7);
   const coverage30 = data.coverage?.last30Days ?? (data.daily?.length || 0);
-  const headline = data.countriesCount > 0
-    ? `VietProfs received visits from <strong>${data.countriesCount} request-origin countries</strong> today.`
+
+  const visits7List = (data.daily || []).slice(-7).map(d => visitCount(d));
+  const avgVisits7 = data.baseline?.avgVisitsPerDay ?? Math.round(visitCount(data.last7Days) / Math.max(1, coverage7));
+  const medianVisits7 = data.baseline?.medianVisitsPerDay ?? calculateMedian(visits7List);
+
+  const headline = data.topCountries?.length > 0
+    ? `VietProfs received visits from <strong>${data.topCountries.length} request-origin countries</strong> over the recent 7-day period.`
     : `Hostname-scoped aggregate network statistics for VietProfs.`;
+
+  // Page breakdown statistics
+  const profileViews = data.pageBreakdown?.profileViews ?? 0;
+  const profilePct = data.pageBreakdown?.profilePct ?? 0;
+  const mainViews = data.pageBreakdown?.mainViews ?? 0;
+  const submitViews = data.pageBreakdown?.submitViews ?? 0;
+  const statsViews = data.pageBreakdown?.statsViews ?? 0;
+
+  // 7-day country total visits calculation for percentages
+  const total7DayCountryVisits = (data.topCountries || []).reduce((acc, c) => acc + (c.visits || c.count || 0), 0);
 
   return `
     <main>
@@ -197,17 +282,19 @@ function renderStatsContent(data: StatsResponse) {
           ${data.isDemo ? '<span class="demo-badge">Preview Mode</span>' : ''}
         </div>
 
-        ${coverage30 < 30 ? `<div class="stats-highlight-banner">
-          <p class="highlight-text"><strong>Data coverage:</strong> ${escapeHtml(coverageLabel(coverage30, 30))}. The 30-day archive is still building.</p>
-        </div>` : ''}
+        <div class="stats-highlight-banner info-banner">
+          <p class="highlight-text">
+            <strong>Data Retention &amp; Archive Status:</strong> Cloudflare live API retention is ~8 days. Local stats archive status: <strong>${escapeHtml(coverageLabel(coverage30, 30))}</strong>.
+          </p>
+        </div>
 
         <section class="man-section">
-          <h2>VISITOR TRAFFIC (30 DAYS)</h2>
+          <h2>VISITOR TRAFFIC METRICS</h2>
           <div class="stats-grid">
             <div class="stat-card">
               <span class="stat-label">Visits Today</span>
               <strong class="stat-value">${formatNumber(visitCount(data.today))}</strong>
-              <span class="stat-sub">${formatNumber(data.today?.pageViews || 0)} successful HTML page requests</span>
+              <span class="stat-sub">${formatNumber(data.today?.pageViews || 0)} successful HTML page views</span>
             </div>
             <div class="stat-card">
               <span class="stat-label">Visits (7 Days)</span>
@@ -215,42 +302,51 @@ function renderStatsContent(data: StatsResponse) {
               <span class="stat-sub">${escapeHtml(coverageLabel(coverage7, 7))}</span>
             </div>
             <div class="stat-card">
+              <span class="stat-label">Recent Daily Baseline (7 Days)</span>
+              <strong class="stat-value">${formatNumber(medianVisits7)} <span class="stat-unit">median visits/day</span></strong>
+              <span class="stat-sub">Average: ${formatNumber(avgVisits7)} visits/day over recent available days</span>
+            </div>
+            <div class="stat-card">
               <span class="stat-label">Visits (30-Day Window)</span>
               <strong class="stat-value">${formatNumber(visitCount(data.last30Days))}</strong>
               <span class="stat-sub">${escapeHtml(coverageLabel(coverage30, 30))}</span>
             </div>
             <div class="stat-card">
-              <span class="stat-label">Successful HTML Requests (30-Day Window)</span>
+              <span class="stat-label">Successful HTML Page Views (30 Days)</span>
               <strong class="stat-value">${formatNumber(data.last30Days?.pageViews || 0)}</strong>
               <span class="stat-sub">${formatNumber(data.last30Days?.requests || 0)} HTTP requests including assets</span>
             </div>
             <div class="stat-card">
-              <span class="stat-label">Request-Origin Countries Today</span>
+              <span class="stat-label">Request-Origin Countries (7 Days)</span>
               <strong class="stat-value">${formatNumber(data.countriesCount || 0)}</strong>
-              <span class="stat-sub">${topCountry ? `Most visits: ${escapeHtml(topCountry.flag)} ${escapeHtml(topCountry.name)}` : 'No visit data'}</span>
+              <span class="stat-sub">${data.topCountries?.[0] ? `Top: ${escapeHtml(data.topCountries[0].flag)} ${escapeHtml(data.topCountries[0].name)}` : 'No visit data'}</span>
             </div>
           </div>
         </section>
 
         <section class="man-section">
-          <h2>TRAFFIC TREND (LAST 30 DAYS)</h2>
+          <h2>TRAFFIC TREND &amp; DAILY HISTORY</h2>
           ${renderTrafficChart(data.daily)}
+          ${renderDailyTable(data.daily)}
         </section>
 
         <section class="man-section">
-          <h2>TOP VISITOR COUNTRIES (TODAY)</h2>
+          <h2>TOP VISITOR COUNTRIES (7 DAYS)</h2>
           <div class="stats-table-wrapper">
             <table class="stats-table">
               <thead>
                 <tr>
                   <th>Country</th>
-                  <th class="num-col">Visits</th>
+                  <th class="num-col">Visits (7 Days)</th>
+                  <th class="num-col">Share of Visits</th>
                 </tr>
               </thead>
               <tbody>
                 ${(data.topCountries || []).slice(0, 10).map((c) => {
-                  const maxCount = data.topCountries[0]?.count || 1;
-                  const pct = Math.round((c.count / maxCount) * 100);
+                  const visits = c.visits ?? c.count ?? 0;
+                  const pct = c.pct ?? (total7DayCountryVisits > 0 ? Math.round((visits / total7DayCountryVisits) * 1000) / 10 : 0);
+                  const maxVisits = data.topCountries[0]?.visits ?? data.topCountries[0]?.count ?? 1;
+                  const barPct = Math.min(100, Math.round((visits / maxVisits) * 100));
                   return `
                     <tr>
                       <td>
@@ -258,30 +354,86 @@ function renderStatsContent(data: StatsResponse) {
                           <span class="flag-icon" aria-hidden="true">${escapeHtml(c.flag)}</span>
                           <span class="country-name">${escapeHtml(c.name)}</span>
                         </span>
-                        <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: ${pct}%"></div></div>
+                        <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: ${barPct}%"></div></div>
                       </td>
-                      <td class="num-col">${formatNumber(c.count)}</td>
+                      <td class="num-col">${formatNumber(visits)}</td>
+                      <td class="num-col">${pct.toFixed(1)}%</td>
                     </tr>
                   `;
                 }).join('')}
               </tbody>
             </table>
           </div>
+          ${(data.topCountriesToday && data.topCountriesToday.length > 0) ? `
+            <details class="stats-secondary-details" style="margin-top: 1rem;">
+              <summary><strong>View Top Countries Today (Secondary View)</strong></summary>
+              <div class="stats-table-wrapper" style="margin-top: 0.5rem;">
+                <table class="stats-table">
+                  <thead>
+                    <tr>
+                      <th>Country</th>
+                      <th class="num-col">Visits Today</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    ${data.topCountriesToday.slice(0, 5).map((c) => `
+                      <tr>
+                        <td>
+                          <span class="country-cell">
+                            <span class="flag-icon" aria-hidden="true">${escapeHtml(c.flag)}</span>
+                            <span class="country-name">${escapeHtml(c.name)}</span>
+                          </span>
+                        </td>
+                        <td class="num-col">${formatNumber(c.count)}</td>
+                      </tr>
+                    `).join('')}
+                  </tbody>
+                </table>
+              </div>
+            </details>
+          ` : ''}
         </section>
 
         <section class="man-section">
-          <h2>MOST REQUESTED PAGES (TODAY)</h2>
+          <h2>MOST REQUESTED PAGES (7 DAYS)</h2>
+
+          <div class="stats-callout-box">
+            <h3>Content Category Breakdown (7 Days)</h3>
+            <div class="stats-callout-grid">
+              <div class="callout-item">
+                <span class="callout-label">Individual Professor Profiles</span>
+                <strong class="callout-value">${formatNumber(profileViews)} views</strong>
+                <span class="callout-sub">${profilePct}% of 7-day HTML views</span>
+              </div>
+              <div class="callout-item">
+                <span class="callout-label">Main Directory (Homepage)</span>
+                <strong class="callout-value">${formatNumber(mainViews)} views</strong>
+              </div>
+              <div class="callout-item">
+                <span class="callout-label">Submit / Update Entry</span>
+                <strong class="callout-value">${formatNumber(submitViews)} views</strong>
+              </div>
+              <div class="callout-item">
+                <span class="callout-label">Visitor Statistics</span>
+                <strong class="callout-value">${formatNumber(statsViews)} views</strong>
+              </div>
+            </div>
+            <p class="callout-note">
+              <em>Individual professor profiles account for approximately ${profilePct}% of recent page views.</em>
+            </p>
+          </div>
+
           <div class="stats-table-wrapper">
             <table class="stats-table">
               <thead>
                 <tr>
                   <th>Page</th>
                   <th>Path</th>
-                  <th class="num-col">Requests</th>
+                  <th class="num-col">HTML Page Views (7 Days)</th>
                 </tr>
               </thead>
               <tbody>
-                ${(data.topPages || []).slice(0, 8).map((p) => {
+                ${(data.topPages || []).slice(0, 10).map((p) => {
                   const href = pageHref(p.path);
                   const pageLabel = href
                     ? `<a class="stats-page-link" href="${escapeHtml(href)}"><strong>${escapeHtml(p.label)}</strong></a>`
@@ -303,20 +455,20 @@ function renderStatsContent(data: StatsResponse) {
         </section>
 
         <section class="man-section privacy-section">
-          <h2>PRIVACY & METHODOLOGY</h2>
+          <h2>PRIVACY &amp; METHODOLOGY</h2>
           <div class="privacy-note">
             <p>
-              VietProfs respects visitor privacy. This page displays only high-level aggregate metrics provided by Cloudflare.
+              VietProfs respects visitor privacy. This page displays high-level aggregate metrics provided by Cloudflare Analytics without tracking individual readers.
             </p>
             <ul>
-              <li><strong>No individual IP data:</strong> VietProfs receives aggregate counts, not visitor IP addresses or request-level logs.</li>
-              <li><strong>No cookies:</strong> No cookies, persistent identifiers, or local tracking scripts are used.</li>
-              <li><strong>Hostname scoped:</strong> Every displayed count is filtered to <code>vietprofs.roars.dev</code>; sibling <code>roars.dev</code> sites are excluded.</li>
-              <li><strong>Visits:</strong> The visit estimate is more audience-oriented than raw requests, but it is not a count of verified people and may include automation.</li>
-              <li><strong>Page requests:</strong> Page totals include only successful HTML responses. HTTP-request totals also include errors, images, scripts, styles, JSON, and other assets.</li>
-              <li><strong>Countries:</strong> Locations are request-origin network geolocations, not demographic claims about readers.</li>
-              <li><strong>Coverage:</strong> The API reports how many dated snapshots contribute to each window; a scheduled archive builds the full 30-day history.</li>
-              <li><strong>Caching:</strong> Stats are cached at the edge for 10 minutes to minimize backend load.</li>
+              <li><strong>Visits:</strong> Visits are Cloudflare network visit estimates, not unique verified people.</li>
+              <li><strong>Eyeball Traffic:</strong> Eyeball traffic represents external client requests. It is not equivalent to verified human visitors and may still include automated traffic.</li>
+              <li><strong>Page Requests:</strong> Page view totals include only successful HTML responses (HTTP 200–399). Total HTTP requests include non-eyeball traffic, images, scripts, styles, JSON datasets, and static asset files.</li>
+              <li><strong>Countries:</strong> Locations represent request-origin network geolocations, not demographic assertions about individual readers.</li>
+              <li><strong>Data Retention &amp; Coverage:</strong> Cloudflare live API retention is approximately 8 days. A local scheduled archive builds the 30-day history over time; currently ${escapeHtml(coverageLabel(coverage30, 30))}.</li>
+              <li><strong>Hostname Scoped:</strong> Every metric is strictly filtered to <code>vietprofs.roars.dev</code>; traffic for sibling <code>roars.dev</code> sites is excluded.</li>
+              <li><strong>Unavailable Metrics:</strong> Referrer hosts (Google, LinkedIn, Facebook), returning vs. new visitors, session duration, and verified human/bot percentages are not provided by Cloudflare on this zone plan tier and are intentionally omitted.</li>
+              <li><strong>Edge Caching:</strong> Public responses are cached at the Cloudflare edge for 10 minutes (<code>Cache-Control: public, max-age=600</code>).</li>
             </ul>
             ${data.metricNotice ? `<p class="stat-sub">${escapeHtml(data.metricNotice)}</p>` : ''}
           </div>
