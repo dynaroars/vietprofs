@@ -1380,9 +1380,18 @@ async function init() {
       window.location.href = `${import.meta.env.BASE_URL}stats.html`;
       return;
     }
-    if (btn.dataset.health || btn.dataset.fact) {
+    if (btn.dataset.health) {
+      clearSearch();
+      filterState.health = true;
+      filterState.insights = false;
+      setFilterValues({ location: locationSelect.value });
+      update();
+      return;
+    }
+    if (btn.dataset.fact) {
       clearSearch();
       filterState.insights = true;
+      filterState.health = false;
       setFilterValues({ location: locationSelect.value });
       update();
       return;
@@ -1390,6 +1399,7 @@ async function init() {
     if (btn.dataset.field) {
       clearSearch();
       filterState.insights = false;
+      filterState.health = false;
       setFilterValues({ location: 'World', field: btn.dataset.field });
       update();
       return;
@@ -1397,6 +1407,7 @@ async function init() {
     if (btn.dataset.track) {
       clearSearch();
       filterState.insights = false;
+      filterState.health = false;
       setFilterValues({ location: 'World', track: btn.dataset.track });
       update();
       return;
@@ -1404,12 +1415,14 @@ async function init() {
     if (btn.dataset.loc) {
       clearSearch();
       filterState.insights = false;
+      filterState.health = false;
       setFilterValues({ location: btn.dataset.loc });
       update();
       return;
     }
     setSearchValue(btn.textContent?.replace(/^[\p{Emoji}\s]+/u, '').trim() ?? '');
     filterState.insights = false;
+    filterState.health = false;
     // If the selected search term is not found within the current location filter, widen to
     // 'World'. Query the shared index once — filtering a one-element array per person built a
     // throwaway SearchIndex (and WeakMap) for every roster entry on each click.
