@@ -120,9 +120,9 @@ function pageHref(path: string): string | null {
 function renderRunningHead() {
   const base = import.meta.env.BASE_URL;
   return `<p class="man-running-head">
-          <span>STATS(1)</span>
-          <span class="man-running-title"><a class="man-running-brand" href="${base}" aria-label="VietProfs directory"><img class="brand-logo" src="${base}vietprofs-bamboo-v.svg" alt="" width="20" height="20"></a><span class="man-running-label">VietProfs Statistics & Insights</span></span>
-          <span>STATS(1)</span>
+          <span><a href="${base}">STATS(1)</a></span>
+          <span class="man-running-title"><a class="man-running-brand" href="${base}" aria-label="VietProfs directory"><img class="brand-logo" src="${base}vietprofs-bamboo-v.svg" alt="" width="20" height="20"><span class="man-running-label">VietProfs Statistics &amp; Insights</span></a></span>
+          <span><a href="${base}">STATS(1)</a></span>
         </p>`;
 }
 

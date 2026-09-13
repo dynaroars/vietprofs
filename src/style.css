@@ -1082,6 +1082,18 @@ a.entry-name:focus-visible {
   line-height: 1.35;
 }
 
+.subpage .man-running-head a,
+.subpage .man-footer-line a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.subpage .man-running-head a:hover,
+.subpage .man-footer-line a:hover {
+  color: var(--text-primary);
+  text-decoration: underline;
+}
+
 .subpage .man-running-head > span:nth-child(2) {
   text-align: center;
 }
@@ -1101,7 +1113,9 @@ a.entry-name:focus-visible {
 .subpage .man-running-brand {
   display: inline-flex;
   align-items: center;
+  gap: 0.4rem;
   color: inherit;
+  text-decoration: none;
 }
 
 .subpage .man-section {
