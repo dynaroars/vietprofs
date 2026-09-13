@@ -493,10 +493,10 @@ export function renderFunFacts(
   if (rosterEl) {
     rosterEl.innerHTML = `
       <div class="insights-dashboard">
-        <!-- SECTION 1: DIASPORA PATHWAYS & MACRO INSIGHTS -->
+        <!-- DIASPORA PATHWAYS & MACRO INSIGHTS -->
         <section class="insights-section-block insights-main-block" id="pathways-section">
           <div class="insights-section-header">
-            <span class="insights-badge">SECTION 1 — DIASPORA INSIGHTS</span>
+            <span class="insights-badge">DIASPORA INSIGHTS</span>
             <h2 class="insights-main-heading">Diaspora Pathways &amp; Macro Analysis</h2>
             <p class="insights-main-desc">Geographic distributions, PhD graduation cohorts, alma mater feeder networks, and academic disciplines.</p>
           </div>

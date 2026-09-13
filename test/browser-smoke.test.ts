@@ -599,7 +599,7 @@ test('interesting view shows World alone, or the selected region plus World', as
   await page.goto(`${baseUrl}/?loc=France&view=insights`, { waitUntil: 'networkidle' });
   assert.equal(await page.locator('.insights-section-block').count(), 2);
   assert.equal(await page.locator('.insights-badge').filter({ hasText: 'France' }).count(), 1);
-  assert.equal(await page.locator('.insights-badge').filter({ hasText: 'SECTION 1 — DIASPORA INSIGHTS' }).count(), 1);
+  assert.equal(await page.locator('.insights-badge').filter({ hasText: 'DIASPORA INSIGHTS' }).count(), 1);
   await page.locator('#location-filter').selectOption('World');
   assert.equal(await page.locator('.insights-section-block').count(), 0);
   assert.ok((await page.locator('.entry').count()) > 0);
