@@ -23,7 +23,8 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 - [x] Batch WL-15 complete
 - [x] Batch WL-16 complete
 - [x] Batch WL-17 complete
-- [ ] Batch WL-18 through WL-23 — not yet started
+- [x] Batch WL-18 complete
+- [ ] Batch WL-19 through WL-23 — not yet started
 
 ---
 
@@ -1032,7 +1033,7 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 
 ### Batch WL-18 (vp-1195 to vp-1252, 50 people)
 
-- [ ] Batch complete
+- [x] Batch complete
 
 | ID | Name | Institution | Department | Website | Lab |
 | :--- | :--- | :--- | :--- | :---: | :---: |
@@ -1060,13 +1061,13 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-1217` | [Hoai-Nam Truong](https://vietprofs.roars.dev/people/vp-1217.html) | INRAE (Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement) | UMR Agroécologie | ⏳ | ⏳ |
 | `vp-1218` | [Bao-Lam Huynh](https://vietprofs.roars.dev/people/vp-1218.html) | University of California, Riverside | Department of Nematology | ⏳ | ⏳ |
 | `vp-1219` | [Anh Phan - University of Surrey](https://vietprofs.roars.dev/people/vp-1219.html) | University of Surrey | School of Chemistry and Chemical Engineering | ⏳ | ⏳ |
-| `vp-1220` | [Anh-Vu Vo](https://vietprofs.roars.dev/people/vp-1220.html) | University College Dublin | School of Computer Science | ⏳ | ⏳ |
+| `vp-1220` | [Anh-Vu Vo](https://vietprofs.roars.dev/people/vp-1220.html) | University College Dublin | School of Computer Science | ✅ | ⏳ |
 | `vp-1221` | [Duc-Anh An-Vo](https://vietprofs.roars.dev/people/vp-1221.html) | University of Southern Queensland | School of Business, Law, Humanities and Pathways | ⏳ | ⏳ |
 | `vp-1222` | [Minh Duc Bui](https://vietprofs.roars.dev/people/vp-1222.html) | Technical University of Munich | Chair of Hydraulic and Water Resources Engineering | ⏳ | ⏳ |
 | `vp-1223` | [Cuong Pham-Huu](https://vietprofs.roars.dev/people/vp-1223.html) | CNRS (Centre National de la Recherche Scientifique) | Institut de Chimie et Procédés pour l'Énergie, l'Environnement et la Santé | ⏳ | ⏳ |
 | `vp-1224` | [Phuong Nguyen-Tri](https://vietprofs.roars.dev/people/vp-1224.html) | Université du Québec à Trois-Rivières | Department of Chemistry, Biochemistry and Physics | ⏳ | ⏳ |
 | `vp-1225` | [Doan Pham Minh](https://vietprofs.roars.dev/people/vp-1225.html) | IMT Mines Albi | Centre RAPSODEE | ⏳ | ⏳ |
-| `vp-1226` | [Toan Trong Tran](https://vietprofs.roars.dev/people/vp-1226.html) | University of Technology Sydney | School of Electrical and Data Engineering | ⏳ | ⏳ |
+| `vp-1226` | [Toan Trong Tran](https://vietprofs.roars.dev/people/vp-1226.html) | University of Technology Sydney | School of Electrical and Data Engineering | ⏳ | ✅ |
 | `vp-1227` | [Yen Bach Truong](https://vietprofs.roars.dev/people/vp-1227.html) | CSIRO (Commonwealth Scientific and Industrial Research Organisation) | CSIRO Manufacturing | ⏳ | ⏳ |
 | `vp-1228` | [Thuy-Duong Nguyen-Phan](https://vietprofs.roars.dev/people/vp-1228.html) | National Energy Technology Laboratory | Materials Engineering and Manufacturing | ⏳ | ⏳ |
 | `vp-1229` | [Nong Van Ngo](https://vietprofs.roars.dev/people/vp-1229.html) | Nagoya University | Center for Low-temperature Plasma Sciences | ⏳ | ⏳ |
@@ -1075,11 +1076,11 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-1232` | [Giang Vo-Thanh](https://vietprofs.roars.dev/people/vp-1232.html) | Université Paris-Saclay | Institut de Chimie Moléculaire et des Matériaux d'Orsay | ⏳ | ⏳ |
 | `vp-1233` | [Anh-Thy Bui](https://vietprofs.roars.dev/people/vp-1233.html) | CNRS (Centre National de la Recherche Scientifique) | Institut des Sciences Moléculaires | ⏳ | ⏳ |
 | `vp-1235` | [Vi Khanh Truong](https://vietprofs.roars.dev/people/vp-1235.html) | Flinders University | College of Medicine and Public Health | ⏳ | ⏳ |
-| `vp-1237` | [Vân Anh Huynh-Thu](https://vietprofs.roars.dev/people/vp-1237.html) | University of Liège | Department of Electrical Engineering and Computer Science | ⏳ | ⏳ |
-| `vp-1238` | [Tuan A. Duong](https://vietprofs.roars.dev/people/vp-1238.html) | University of Pretoria | Department of Biochemistry, Genetics and Microbiology | ⏳ | ⏳ |
+| `vp-1237` | [Vân Anh Huynh-Thu](https://vietprofs.roars.dev/people/vp-1237.html) | University of Liège | Department of Electrical Engineering and Computer Science | ✅ | ⏳ |
+| `vp-1238` | [Tuan A. Duong](https://vietprofs.roars.dev/people/vp-1238.html) | University of Pretoria | Department of Biochemistry, Genetics and Microbiology | ✅ | ⏳ |
 | `vp-1239` | [Quang-Dé Nguyen](https://vietprofs.roars.dev/people/vp-1239.html) | Dana-Farber Cancer Institute | Lurie Family Imaging Center | ⏳ | ⏳ |
 | `vp-1241` | [Minh Huynh](https://vietprofs.roars.dev/people/vp-1241.html) | CSIRO | Space and Astronomy | ⏳ | ⏳ |
-| `vp-1242` | [Khanh Huy Bui](https://vietprofs.roars.dev/people/vp-1242.html) | McGill University | Department of Anatomy and Cell Biology | ⏳ | ⏳ |
+| `vp-1242` | [Khanh Huy Bui](https://vietprofs.roars.dev/people/vp-1242.html) | McGill University | Department of Anatomy and Cell Biology | ⏳ | ✅ |
 | `vp-1243` | [Minh-Duy Phan](https://vietprofs.roars.dev/people/vp-1243.html) | The University of Queensland | School of Chemistry and Molecular Biosciences | ⏳ | ⏳ |
 | `vp-1244` | [Guy Tran Van Nhieu](https://vietprofs.roars.dev/people/vp-1244.html) | Université Paris-Saclay | Institute for Integrative Biology of the Cell | ⏳ | ⏳ |
 | `vp-1247` | [Mai-Linh Doan](https://vietprofs.roars.dev/people/vp-1247.html) | Université Grenoble Alpes | Institut des Sciences de la Terre | ⏳ | ⏳ |
