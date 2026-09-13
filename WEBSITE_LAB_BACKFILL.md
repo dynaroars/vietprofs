@@ -13,7 +13,8 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 - [x] Batch WL-05 complete
 - [x] Batch WL-06 complete
 - [x] Batch WL-07 complete
-- [ ] Batch WL-08 through WL-23 — not yet started
+- [x] Batch WL-08 complete
+- [ ] Batch WL-09 through WL-23 — not yet started (WebSearch session budget exhausted; paused for user input)
 
 ---
 
@@ -432,14 +433,14 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 
 ### Batch WL-08 (vp-0578 to vp-0629, 50 people)
 
-- [ ] Batch complete
+- [x] Batch complete
 
 | ID | Name | Institution | Department | Website | Lab |
 | :--- | :--- | :--- | :--- | :---: | :---: |
 | `vp-0578` | [Cuc Nguyen](https://vietprofs.roars.dev/people/vp-0578.html) | University of Melbourne | Melbourne Graduate School of Education | ⏳ | ⏳ |
 | `vp-0579` | [Thanh Pham](https://vietprofs.roars.dev/people/vp-0579.html) | Monash University | School of Curriculum, Student Learning and Teacher Education | ⏳ | ⏳ |
 | `vp-0580` | [Nga Pham](https://vietprofs.roars.dev/people/vp-0580.html) | Monash University | Monash Centre for Financial Studies | ⏳ | ⏳ |
-| `vp-0581` | [Alex Nguyen Ba](https://vietprofs.roars.dev/people/vp-0581.html) | University of Toronto | Department of Cell & Systems Biology | ⏳ | ⏳ |
+| `vp-0581` | [Alex Nguyen Ba](https://vietprofs.roars.dev/people/vp-0581.html) | University of Toronto | Department of Cell & Systems Biology | ⏳ | ✅ |
 | `vp-0582` | [Long Nguyen](https://vietprofs.roars.dev/people/vp-0582.html) | University of Toronto | Department of Medical Biophysics | ⏳ | ⏳ |
 | `vp-0583` | [Binh Tran-Nam](https://vietprofs.roars.dev/people/vp-0583.html) | UNSW Sydney | School of Accounting, Auditing and Taxation | ⏳ | ⏳ |
 | `vp-0584` | [Honghi Tran](https://vietprofs.roars.dev/people/vp-0584.html) | University of Toronto | Department of Chemical Engineering & Applied Chemistry | ⏳ | ⏳ |
@@ -450,12 +451,12 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-0589` | [Hung Nguyen - University of Technology Sydney](https://vietprofs.roars.dev/people/vp-0589.html) | University of Technology Sydney | School of Biomedical Engineering | ⏳ | ⏳ |
 | `vp-0590` | [Ngoc Son Bui](https://vietprofs.roars.dev/people/vp-0590.html) | University of Oxford | Faculty of Law | ⏳ | ⏳ |
 | `vp-0591` | [Bang Dang Nguyen](https://vietprofs.roars.dev/people/vp-0591.html) | University of Cambridge | Cambridge Judge Business School | ⏳ | ⏳ |
-| `vp-0592` | [Minh-Son Pham](https://vietprofs.roars.dev/people/vp-0592.html) | Imperial College London | Department of Materials | ⏳ | ⏳ |
+| `vp-0592` | [Minh-Son Pham](https://vietprofs.roars.dev/people/vp-0592.html) | Imperial College London | Department of Materials | ✅ | ⏳ |
 | `vp-0593` | [Huyen Nguyen - King's College London](https://vietprofs.roars.dev/people/vp-0593.html) | King's College London | Department of Accounting and Financial Management | ⏳ | ⏳ |
 | `vp-0594` | [Tri-Dung Nguyen](https://vietprofs.roars.dev/people/vp-0594.html) | University of Kent | Kent Business School | ⏳ | ⏳ |
-| `vp-0595` | [Khuong An Nguyen](https://vietprofs.roars.dev/people/vp-0595.html) | Royal Holloway, University of London | Department of Computer Science | ⏳ | ⏳ |
+| `vp-0595` | [Khuong An Nguyen](https://vietprofs.roars.dev/people/vp-0595.html) | Royal Holloway, University of London | Department of Computer Science | ✅ | ⏳ |
 | `vp-0596` | [Hoang Nga Nguyen](https://vietprofs.roars.dev/people/vp-0596.html) | Swansea University | Computer Science | ⏳ | ⏳ |
-| `vp-0597` | [Anh Nguyen - University of Liverpool](https://vietprofs.roars.dev/people/vp-0597.html) | University of Liverpool | School of Computer Science and Informatics | ⏳ | ⏳ |
+| `vp-0597` | [Anh Nguyen - University of Liverpool](https://vietprofs.roars.dev/people/vp-0597.html) | University of Liverpool | School of Computer Science and Informatics | ✅ | ✅ |
 | `vp-0598` | [Hoa Le Minh](https://vietprofs.roars.dev/people/vp-0598.html) | Northumbria University | School of Engineering, Physics and Mathematics | ⏳ | ⏳ |
 | `vp-0599` | [Vu Trinh](https://vietprofs.roars.dev/people/vp-0599.html) | Newcastle University | Newcastle University Business School | ⏳ | ⏳ |
 | `vp-0600` | [Dong Nguyen - University of Macau](https://vietprofs.roars.dev/people/vp-0600.html) | University of Macau | Faculty of Education | ⏳ | ⏳ |
@@ -464,7 +465,7 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-0603` | [Quyen Nguyen](https://vietprofs.roars.dev/people/vp-0603.html) | University of Reading | Henley Business School | ⏳ | ⏳ |
 | `vp-0604` | [Linh Hoai Nguyen](https://vietprofs.roars.dev/people/vp-0604.html) | University of St Andrews | University of St Andrews Business School | ⏳ | ⏳ |
 | `vp-0605` | [Hoang Nguyen - Heriot-Watt University](https://vietprofs.roars.dev/people/vp-0605.html) | Heriot-Watt University | Edinburgh Business School | ⏳ | ⏳ |
-| `vp-0606` | [Mai Nguyen - Manchester Metropolitan University](https://vietprofs.roars.dev/people/vp-0606.html) | Manchester Metropolitan University | Department of Languages, Information and Communications | ⏳ | ⏳ |
+| `vp-0606` | [Mai Nguyen - Manchester Metropolitan University](https://vietprofs.roars.dev/people/vp-0606.html) | Manchester Metropolitan University | Department of Languages, Information and Communications | ⏳ | ✅ |
 | `vp-0607` | [Chi Hieu Le](https://vietprofs.roars.dev/people/vp-0607.html) | University of Greenwich | School of Engineering | ⏳ | ⏳ |
 | `vp-0608` | [Hai Nguyen](https://vietprofs.roars.dev/people/vp-0608.html) | University of Greenwich | School of Management and Marketing | ⏳ | ⏳ |
 | `vp-0609` | [Tuan T. Nguyen](https://vietprofs.roars.dev/people/vp-0609.html) | University of Greenwich | School of Computing and Mathematical Sciences | ⏳ | ⏳ |
@@ -474,17 +475,17 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-0613` | [Hai Dang Nguyen - Nottingham Trent University](https://vietprofs.roars.dev/people/vp-0613.html) | Nottingham Trent University | Nottingham Business School | ⏳ | ⏳ |
 | `vp-0614` | [Thuy Nguyen](https://vietprofs.roars.dev/people/vp-0614.html) | University of Northampton | School of Accounting, Analytics and Finance | ⏳ | ⏳ |
 | `vp-0616` | [Nguyen Bac Dang](https://vietprofs.roars.dev/people/vp-0616.html) | Université Paris-Saclay | Laboratoire de Mathématiques d'Orsay | ⏳ | ⏳ |
-| `vp-0617` | [Ngoc Diep Lai](https://vietprofs.roars.dev/people/vp-0617.html) | École Normale Supérieure Paris-Saclay | Department of Physics | ⏳ | ⏳ |
+| `vp-0617` | [Ngoc Diep Lai](https://vietprofs.roars.dev/people/vp-0617.html) | École Normale Supérieure Paris-Saclay | Department of Physics | ⏳ | ✅ |
 | `vp-0618` | [Quoc-Nghi Pham](https://vietprofs.roars.dev/people/vp-0618.html) | Université Paris-Saclay | Institut de Chimie Moléculaire et des Matériaux d'Orsay | ⏳ | ⏳ |
-| `vp-0619` | [Thuy Tran](https://vietprofs.roars.dev/people/vp-0619.html) | Université Paris-Saclay | Institut Galien Paris-Saclay (Biopharmaceutical & Health Sciences) | ⏳ | ⏳ |
+| `vp-0619` | [Thuy Tran](https://vietprofs.roars.dev/people/vp-0619.html) | Université Paris-Saclay | Institut Galien Paris-Saclay (Biopharmaceutical & Health Sciences) | ⏳ | ✅ |
 | `vp-0620` | [Linh Tran-Dieu](https://vietprofs.roars.dev/people/vp-0620.html) | Université Paris-Saclay | RITM (Economics & Management), Faculté Jean Monnet | ⏳ | ⏳ |
-| `vp-0621` | [Quang-Trung Luu](https://vietprofs.roars.dev/people/vp-0621.html) | CentraleSupélec | Laboratoire des Signaux et Systèmes (Engineering) | ⏳ | ⏳ |
-| `vp-0622` | [Van-Tam Nguyen](https://vietprofs.roars.dev/people/vp-0622.html) | Télécom Paris | Computer Science and Networks Department | ⏳ | ⏳ |
+| `vp-0621` | [Quang-Trung Luu](https://vietprofs.roars.dev/people/vp-0621.html) | CentraleSupélec | Laboratoire des Signaux et Systèmes (Engineering) | ✅ | ⏳ |
+| `vp-0622` | [Van-Tam Nguyen](https://vietprofs.roars.dev/people/vp-0622.html) | Télécom Paris | Computer Science and Networks Department | ✅ | ⏳ |
 | `vp-0623` | [Viet Khoa Tran Nguyen](https://vietprofs.roars.dev/people/vp-0623.html) | Université Paris Cité | Unité de Biologie Fonctionnelle et Adaptative | ⏳ | ⏳ |
 | `vp-0624` | [Thi Thu Trang Do](https://vietprofs.roars.dev/people/vp-0624.html) | Université Paris Cité | Department of East Asian Languages and Civilizations | ⏳ | ⏳ |
-| `vp-0626` | [Thanh Mai Pham Ngoc](https://vietprofs.roars.dev/people/vp-0626.html) | Université Sorbonne Paris Nord | Laboratoire Analyse, Géométrie et Applications | ⏳ | ⏳ |
+| `vp-0626` | [Thanh Mai Pham Ngoc](https://vietprofs.roars.dev/people/vp-0626.html) | Université Sorbonne Paris Nord | Laboratoire Analyse, Géométrie et Applications | ✅ | ⏳ |
 | `vp-0627` | [Thanh-Phuong Nguyen](https://vietprofs.roars.dev/people/vp-0627.html) | Université Côte d'Azur | Laboratoire d'Informatique, Signaux et Systèmes de Sophia Antipolis (I3S) | ⏳ | ⏳ |
-| `vp-0628` | [Thach Ngoc Dinh](https://vietprofs.roars.dev/people/vp-0628.html) | Conservatoire National des Arts et Métiers | Computer Science and Digital Technologies | ⏳ | ⏳ |
+| `vp-0628` | [Thach Ngoc Dinh](https://vietprofs.roars.dev/people/vp-0628.html) | Conservatoire National des Arts et Métiers | Computer Science and Digital Technologies | ⏳ | ✅ |
 | `vp-0629` | [Kim Phuc Tran](https://vietprofs.roars.dev/people/vp-0629.html) | University of Lille | ENSAIT / GEMTEX Laboratory (Textile Engineering) | ⏳ | ⏳ |
 
 ---
