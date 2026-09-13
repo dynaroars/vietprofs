@@ -120,9 +120,9 @@ function pageHref(path: string): string | null {
 function renderRunningHead() {
   const base = import.meta.env.BASE_URL;
   return `<p class="man-running-head">
-          <span><a href="${base}">STATS(1)</a></span>
-          <span class="man-running-title"><a class="man-running-brand" href="${base}" aria-label="VietProfs directory"><img class="brand-logo" src="${base}vietprofs-bamboo-v.svg" alt="" width="20" height="20"><span class="man-running-label">VietProfs Statistics &amp; Insights</span></a></span>
-          <span><a href="${base}">STATS(1)</a></span>
+          <span><a href="${base}index.html">STATS(1)</a></span>
+          <span class="man-running-title"><a class="man-running-brand" href="${base}index.html" aria-label="VietProfs directory"><img class="brand-logo" src="${base}vietprofs-bamboo-v.svg" alt="" width="20" height="20"><span class="man-running-label">VietProfs Statistics &amp; Insights</span></a></span>
+          <span><a href="${base}index.html">STATS(1)</a></span>
         </p>`;
 }
 
@@ -521,9 +521,9 @@ function renderStatsContent(data: StatsResponse, rosterMap: Map<string, RosterEn
 
         <footer class="man-footer">
           <p>
-            <a href="${import.meta.env.BASE_URL}">← Back to Directory</a> ·
-            <a href="${import.meta.env.BASE_URL}?view=health">Data Health &amp; Completeness</a> ·
-            <a href="${import.meta.env.BASE_URL}?view=insights">Diaspora Insights &amp; Pathways</a> ·
+            <a href="${import.meta.env.BASE_URL}index.html">← Back to Directory</a> ·
+            <a href="${import.meta.env.BASE_URL}index.html?view=health">Data Health &amp; Completeness</a> ·
+            <a href="${import.meta.env.BASE_URL}index.html?view=insights">Diaspora Insights &amp; Pathways</a> ·
             <a href="${import.meta.env.BASE_URL}submit.html">Submit / Update</a> ·
             <a href="https://github.com/dynaroars/vietprofs" target="_blank" rel="noopener noreferrer">GitHub</a>
           </p>
@@ -562,9 +562,9 @@ function renderError(message: string) {
 
         <footer class="man-footer">
           <p>
-            <a href="${base}">← Back to Directory</a> ·
-            <a href="${base}?view=health">Data Health &amp; Completeness</a> ·
-            <a href="${base}?view=insights">Diaspora Insights &amp; Pathways</a>
+            <a href="${base}index.html">← Back to Directory</a> ·
+            <a href="${base}index.html?view=health">Data Health &amp; Completeness</a> ·
+            <a href="${base}index.html?view=insights">Diaspora Insights &amp; Pathways</a>
           </p>
         </footer>
       </article>
