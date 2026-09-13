@@ -16,7 +16,8 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 - [x] Batch WL-08 complete
 - [x] Batch WL-09 complete
 - [x] Batch WL-10 complete
-- [ ] Batch WL-11 through WL-23 — not yet started
+- [x] Batch WL-11 complete
+- [ ] Batch WL-12 through WL-23 — not yet started
 
 ---
 
@@ -612,11 +613,11 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 
 ### Batch WL-11 (vp-0750 to vp-0817, 50 people)
 
-- [ ] Batch complete
+- [x] Batch complete
 
 | ID | Name | Institution | Department | Website | Lab |
 | :--- | :--- | :--- | :--- | :---: | :---: |
-| `vp-0750` | [Nguyen Khoi Nguyen](https://vietprofs.roars.dev/people/vp-0750.html) | Loyola University Maryland | Visual & Performing Arts | ⏳ | ⏳ |
+| `vp-0750` | [Nguyen Khoi Nguyen](https://vietprofs.roars.dev/people/vp-0750.html) | Loyola University Maryland | Visual & Performing Arts | ✅ | ⏳ |
 | `vp-0751` | [Thieu Ngoc Vo](https://vietprofs.roars.dev/people/vp-0751.html) | University of Bath | Computer Science | ⏳ | ⏳ |
 | `vp-0752` | [Tam Le](https://vietprofs.roars.dev/people/vp-0752.html) | Institute of Statistical Mathematics | Department of Advanced Data Science | ⏳ | ⏳ |
 | `vp-0755` | [Minh-Tu Cao](https://vietprofs.roars.dev/people/vp-0755.html) | National Yang Ming Chiao Tung University | Civil Engineering | ⏳ | ⏳ |
@@ -639,33 +640,33 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-0779` | [Trang Nguyen - University at Albany](https://vietprofs.roars.dev/people/vp-0779.html) | University at Albany, State University of New York | Epidemiology & Biostatistics | ⏳ | ⏳ |
 | `vp-0780` | [Patrick Nguyen](https://vietprofs.roars.dev/people/vp-0780.html) | University of Texas Health Science Center at San Antonio | Surgery | ⏳ | ⏳ |
 | `vp-0781` | [Elizabeth Nguyen](https://vietprofs.roars.dev/people/vp-0781.html) | Texas A&M University | Pediatrics | ⏳ | ⏳ |
-| `vp-0782` | [Quoc-Viet Dang](https://vietprofs.roars.dev/people/vp-0782.html) | University of California, Irvine | Electrical Engineering and Computer Science | ⏳ | ⏳ |
+| `vp-0782` | [Quoc-Viet Dang](https://vietprofs.roars.dev/people/vp-0782.html) | University of California, Irvine | Electrical Engineering and Computer Science | ✅ | ⏳ |
 | `vp-0783` | [Chat Le Nguyen](https://vietprofs.roars.dev/people/vp-0783.html) | University of Canterbury | Faculty of Law | ⏳ | ⏳ |
 | `vp-0784` | [Hien Thi Thu Nguyen](https://vietprofs.roars.dev/people/vp-0784.html) | Aalborg University | Department of Molecular Diagnostics, Department of Clinical Medicine | ⏳ | ⏳ |
-| `vp-0785` | [Cuong Nguyen - Massachusetts Institute of Technology](https://vietprofs.roars.dev/people/vp-0785.html) | Massachusetts Institute of Technology | Aeronautics and Astronautics | ⏳ | ⏳ |
+| `vp-0785` | [Cuong Nguyen - Massachusetts Institute of Technology](https://vietprofs.roars.dev/people/vp-0785.html) | Massachusetts Institute of Technology | Aeronautics and Astronautics | ✅ | ⏳ |
 | `vp-0786` | [Teresa Phuongtram Nguyen](https://vietprofs.roars.dev/people/vp-0786.html) | Stanford University | Anesthesiology, Perioperative and Pain Medicine | ⏳ | ⏳ |
 | `vp-0787` | [Minhtri Khac Nguyen](https://vietprofs.roars.dev/people/vp-0787.html) | University of California, Los Angeles | Medicine, Nephrology | ⏳ | ⏳ |
 | `vp-0788` | [Tran Nguyen](https://vietprofs.roars.dev/people/vp-0788.html) | The Ohio State University | Internal Medicine | ⏳ | ⏳ |
 | `vp-0789` | [Huyen Q. Pham](https://vietprofs.roars.dev/people/vp-0789.html) | University of Southern California | Obstetrics & Gynecology | ⏳ | ⏳ |
 | `vp-0790` | [Thao T. Dang](https://vietprofs.roars.dev/people/vp-0790.html) | Indiana University | Medical & Molecular Genetics | ⏳ | ⏳ |
 | `vp-0791` | [Uyen L. Tran](https://vietprofs.roars.dev/people/vp-0791.html) | Vanderbilt University | Ophthalmology and Visual Sciences | ⏳ | ⏳ |
-| `vp-0792` | [An Nguyen](https://vietprofs.roars.dev/people/vp-0792.html) | King's College London | King's Business School | ⏳ | ⏳ |
+| `vp-0792` | [An Nguyen](https://vietprofs.roars.dev/people/vp-0792.html) | King's College London | King's Business School | ✅ | ⏳ |
 | `vp-0793` | [Hoang D. Nguyen](https://vietprofs.roars.dev/people/vp-0793.html) | University College Cork | School of Computer Science and Information Technology | ⏳ | ⏳ |
-| `vp-0794` | [Tri Nguyen-Quang](https://vietprofs.roars.dev/people/vp-0794.html) | Dalhousie University | Engineering, Faculty of Agriculture | ⏳ | ⏳ |
+| `vp-0794` | [Tri Nguyen-Quang](https://vietprofs.roars.dev/people/vp-0794.html) | Dalhousie University | Engineering, Faculty of Agriculture | ⏳ | ✅ |
 | `vp-0796` | [My Nguyen](https://vietprofs.roars.dev/people/vp-0796.html) | RMIT University | Economics, Finance and Marketing | ⏳ | ⏳ |
-| `vp-0800` | [Quy Nguyen Huy](https://vietprofs.roars.dev/people/vp-0800.html) | INSEAD | Strategy | ⏳ | ⏳ |
+| `vp-0800` | [Quy Nguyen Huy](https://vietprofs.roars.dev/people/vp-0800.html) | INSEAD | Strategy | ✅ | ⏳ |
 | `vp-0803` | [Anh Tuan Tran](https://vietprofs.roars.dev/people/vp-0803.html) | Nanyang Technological University | School of Mechanical and Aerospace Engineering | ⏳ | ⏳ |
-| `vp-0804` | [Thuy Tram Dang](https://vietprofs.roars.dev/people/vp-0804.html) | Nanyang Technological University | School of Chemistry, Chemical Engineering and Biotechnology | ⏳ | ⏳ |
+| `vp-0804` | [Thuy Tram Dang](https://vietprofs.roars.dev/people/vp-0804.html) | Nanyang Technological University | School of Chemistry, Chemical Engineering and Biotechnology | ⏳ | ✅ |
 | `vp-0806` | [Thanh Phuc Nguyen](https://vietprofs.roars.dev/people/vp-0806.html) | Kyoto University | Graduate School of Engineering, Department of Molecular Engineering | ⏳ | ⏳ |
 | `vp-0807` | [Thi Thuy Minh Nguyen](https://vietprofs.roars.dev/people/vp-0807.html) | University of Otago | English and Linguistics | ⏳ | ⏳ |
-| `vp-0809` | [Tran Nguyen Le](https://vietprofs.roars.dev/people/vp-0809.html) | Technical University of Denmark | Department of Engineering Technology and Didactics | ⏳ | ⏳ |
-| `vp-0810` | [Ninh Dang Pham](https://vietprofs.roars.dev/people/vp-0810.html) | University of Southern Denmark | Department of Mathematics and Computer Science | ⏳ | ⏳ |
+| `vp-0809` | [Tran Nguyen Le](https://vietprofs.roars.dev/people/vp-0809.html) | Technical University of Denmark | Department of Engineering Technology and Didactics | ✅ | ⏳ |
+| `vp-0810` | [Ninh Dang Pham](https://vietprofs.roars.dev/people/vp-0810.html) | University of Southern Denmark | Department of Mathematics and Computer Science | ✅ | ⏳ |
 | `vp-0811` | [Dung Tran](https://vietprofs.roars.dev/people/vp-0811.html) | Federation University Australia | Institute of Education, Arts and Community | ⏳ | ⏳ |
 | `vp-0812` | [Nghia Tran](https://vietprofs.roars.dev/people/vp-0812.html) | Australian National University | Research School of Management | ⏳ | ⏳ |
 | `vp-0813` | [Andrew Nguyen](https://vietprofs.roars.dev/people/vp-0813.html) | University of Michigan | Neurosurgery and Neurology | ⏳ | ⏳ |
 | `vp-0814` | [Phuong D. Nguyen](https://vietprofs.roars.dev/people/vp-0814.html) | University of Colorado | Surgery, Plastic Surgery | ⏳ | ⏳ |
 | `vp-0815` | [Dao M. Nguyen](https://vietprofs.roars.dev/people/vp-0815.html) | University of Miami | Surgery, Cardiothoracic Surgery | ⏳ | ⏳ |
-| `vp-0817` | [Thi Ngoc Lam Tran](https://vietprofs.roars.dev/people/vp-0817.html) | Chalmers University of Technology | Department of Microtechnology and Nanoscience (MC2) | ⏳ | ⏳ |
+| `vp-0817` | [Thi Ngoc Lam Tran](https://vietprofs.roars.dev/people/vp-0817.html) | Chalmers University of Technology | Department of Microtechnology and Nanoscience (MC2) | ⏳ | ✅ |
 
 ---
 
