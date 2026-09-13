@@ -18,7 +18,8 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 - [x] Batch WL-10 complete
 - [x] Batch WL-11 complete
 - [x] Batch WL-12 complete
-- [ ] Batch WL-13 through WL-23 — not yet started
+- [x] Batch WL-13 complete
+- [ ] Batch WL-14 through WL-23 — not yet started
 
 ---
 
@@ -732,7 +733,7 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 
 ### Batch WL-13 (vp-0874 to vp-0936, 50 people)
 
-- [ ] Batch complete
+- [x] Batch complete
 
 | ID | Name | Institution | Department | Website | Lab |
 | :--- | :--- | :--- | :--- | :---: | :---: |
@@ -779,10 +780,10 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-0914` | [Quoc-Anh Thai](https://vietprofs.roars.dev/people/vp-0914.html) | Weill Cornell Medicine | Neurosurgery | ⏳ | ⏳ |
 | `vp-0915` | [Hieu M. Doan](https://vietprofs.roars.dev/people/vp-0915.html) | University of Kansas | Internal Medicine, Hospital Medicine | ⏳ | ⏳ |
 | `vp-0916` | [Truc-Anh Nguyen](https://vietprofs.roars.dev/people/vp-0916.html) | University of Arizona | Anesthesiology | ⏳ | ⏳ |
-| `vp-0926` | [Thi Hong Tran](https://vietprofs.roars.dev/people/vp-0926.html) | Osaka Metropolitan University | Graduate School of Informatics | ⏳ | ⏳ |
-| `vp-0927` | [Van Anh Ho](https://vietprofs.roars.dev/people/vp-0927.html) | Japan Advanced Institute of Science and Technology | School of Information Science | ⏳ | ⏳ |
-| `vp-0928` | [Hieu Chi Dam](https://vietprofs.roars.dev/people/vp-0928.html) | Japan Advanced Institute of Science and Technology | School of Knowledge Science | ⏳ | ⏳ |
-| `vp-0930` | [Canh Minh Do](https://vietprofs.roars.dev/people/vp-0930.html) | Japan Advanced Institute of Science and Technology | School of Information Science | ⏳ | ⏳ |
+| `vp-0926` | [Thi Hong Tran](https://vietprofs.roars.dev/people/vp-0926.html) | Osaka Metropolitan University | Graduate School of Informatics | ✅ | ✅ |
+| `vp-0927` | [Van Anh Ho](https://vietprofs.roars.dev/people/vp-0927.html) | Japan Advanced Institute of Science and Technology | School of Information Science | ⏳ | ✅ |
+| `vp-0928` | [Hieu Chi Dam](https://vietprofs.roars.dev/people/vp-0928.html) | Japan Advanced Institute of Science and Technology | School of Knowledge Science | ⏳ | ✅ |
+| `vp-0930` | [Canh Minh Do](https://vietprofs.roars.dev/people/vp-0930.html) | Japan Advanced Institute of Science and Technology | School of Information Science | ✅ | ⏳ |
 | `vp-0934` | [Tyler Nguyen](https://vietprofs.roars.dev/people/vp-0934.html) | Indiana University School of Medicine | Anesthesia | ⏳ | ⏳ |
 | `vp-0935` | [Chi Mai Nguyen](https://vietprofs.roars.dev/people/vp-0935.html) | Indiana University School of Medicine | Biostatistics and Health Data Science | ⏳ | ⏳ |
 | `vp-0936` | [Paul C. Dinh](https://vietprofs.roars.dev/people/vp-0936.html) | Indiana University School of Medicine | Medicine | ⏳ | ⏳ |
