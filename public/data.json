@@ -52027,6 +52027,16 @@
     "phdYear": 2005,
     "phdMajor": "Computer Science",
     "portrait": "portraits/1548-khai-n-truong-university-of-toronto.webp",
-    "portraitSource": "https://www.cs.toronto.edu/~khai/images/khai.jpg"
+    "portraitSource": "https://www.cs.toronto.edu/~khai/images/khai.jpg",
+    "directFields": [
+      "name",
+      "phdInstitution",
+      "phdMajor",
+      "phdYear",
+      "profileUrl",
+      "undergradInstitution",
+      "undergradMajor",
+      "undergradYear"
+    ]
   }
 ]
