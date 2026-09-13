@@ -6,35 +6,36 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 
 ## Status
 
-- [ ] Batch WL-01 through WL-23 — not yet started
+- [x] Batch WL-01 complete
+- [ ] Batch WL-02 through WL-23 — not yet started
 
 ---
 
 ### Batch WL-01 (vp-0011 to vp-0172, 50 people)
 
-- [ ] Batch complete
+- [x] Batch complete
 
 | ID | Name | Institution | Department | Website | Lab |
 | :--- | :--- | :--- | :--- | :---: | :---: |
 | `vp-0011` | [Dung T. Huynh](https://vietprofs.roars.dev/people/vp-0011.html) | University of Texas at Dallas | Computer Science | ⏳ | ⏳ |
-| `vp-0029` | [Nam Nguyen](https://vietprofs.roars.dev/people/vp-0029.html) | Towson University | Computer and Information Sciences | ⏳ | ⏳ |
+| `vp-0029` | [Nam Nguyen](https://vietprofs.roars.dev/people/vp-0029.html) | Towson University | Computer and Information Sciences | ✅ | ✅ |
 | `vp-0038` | [Tu Nguyen - Kennesaw State University](https://vietprofs.roars.dev/people/vp-0038.html) | Kennesaw State University | Computer Science | ⏳ | ⏳ |
 | `vp-0070` | [Xuan Hien Nguyen](https://vietprofs.roars.dev/people/vp-0070.html) | Iowa State University | Mathematics | ⏳ | ⏳ |
-| `vp-0075` | [Duy Le](https://vietprofs.roars.dev/people/vp-0075.html) | University of Central Florida | Physics | ⏳ | ⏳ |
-| `vp-0078` | [Kim-Anh Do](https://vietprofs.roars.dev/people/vp-0078.html) | The University of Texas MD Anderson Cancer Center | Biostatistics | ⏳ | ⏳ |
-| `vp-0086` | [SonBinh T. Nguyen](https://vietprofs.roars.dev/people/vp-0086.html) | Northwestern University | Chemistry | ⏳ | ⏳ |
-| `vp-0089` | [M. Tuan Trinh](https://vietprofs.roars.dev/people/vp-0089.html) | Utah State University | Chemistry and Biochemistry | ⏳ | ⏳ |
-| `vp-0092` | [Tracy S. Tran](https://vietprofs.roars.dev/people/vp-0092.html) | Rutgers University-Newark | Biological Sciences | ⏳ | ⏳ |
-| `vp-0093` | [Tuan Minh Tran](https://vietprofs.roars.dev/people/vp-0093.html) | Kansas State University | Plant Pathology | ⏳ | ⏳ |
-| `vp-0095` | [Huy Q. Dinh](https://vietprofs.roars.dev/people/vp-0095.html) | University of Wisconsin-Madison | Oncology | ⏳ | ⏳ |
-| `vp-0097` | [Ngoc Bui - University of Oklahoma](https://vietprofs.roars.dev/people/vp-0097.html) | University of Oklahoma | School of Sustainable Chemical, Biological and Materials Engineering | ⏳ | ⏳ |
+| `vp-0075` | [Duy Le](https://vietprofs.roars.dev/people/vp-0075.html) | University of Central Florida | Physics | ⏳ | ✅ |
+| `vp-0078` | [Kim-Anh Do](https://vietprofs.roars.dev/people/vp-0078.html) | The University of Texas MD Anderson Cancer Center | Biostatistics | ✅ | ✅ |
+| `vp-0086` | [SonBinh T. Nguyen](https://vietprofs.roars.dev/people/vp-0086.html) | Northwestern University | Chemistry | ⏳ | ✅ |
+| `vp-0089` | [M. Tuan Trinh](https://vietprofs.roars.dev/people/vp-0089.html) | Utah State University | Chemistry and Biochemistry | ⏳ | ✅ |
+| `vp-0092` | [Tracy S. Tran](https://vietprofs.roars.dev/people/vp-0092.html) | Rutgers University-Newark | Biological Sciences | ⏳ | ✅ |
+| `vp-0093` | [Tuan Minh Tran](https://vietprofs.roars.dev/people/vp-0093.html) | Kansas State University | Plant Pathology | ⏳ | ✅ |
+| `vp-0095` | [Huy Q. Dinh](https://vietprofs.roars.dev/people/vp-0095.html) | University of Wisconsin-Madison | Oncology | ⏳ | ✅ |
+| `vp-0097` | [Ngoc Bui - University of Oklahoma](https://vietprofs.roars.dev/people/vp-0097.html) | University of Oklahoma | School of Sustainable Chemical, Biological and Materials Engineering | ⏳ | ✅ |
 | `vp-0103` | [Tru Cao](https://vietprofs.roars.dev/people/vp-0103.html) | UTHealth Houston | Biostatistics and Data Science | ⏳ | ⏳ |
 | `vp-0104` | [Phong Nguyen - University of Virginia](https://vietprofs.roars.dev/people/vp-0104.html) | University of Virginia | School of Data Science | ⏳ | ⏳ |
-| `vp-0106` | [Trieu Le](https://vietprofs.roars.dev/people/vp-0106.html) | University of Toledo | Mathematics and Statistics | ⏳ | ⏳ |
+| `vp-0106` | [Trieu Le](https://vietprofs.roars.dev/people/vp-0106.html) | University of Toledo | Mathematics and Statistics | ✅ | ⏳ |
 | `vp-0112` | [Phat Vu](https://vietprofs.roars.dev/people/vp-0112.html) | Soka University of America | Physics | ⏳ | ⏳ |
 | `vp-0113` | [Thi Hong Diep Dao](https://vietprofs.roars.dev/people/vp-0113.html) | University of Colorado Colorado Springs | Geography and Environmental Studies | ⏳ | ⏳ |
 | `vp-0116` | [Christine Nguyen - Northern Illinois University](https://vietprofs.roars.dev/people/vp-0116.html) | Northern Illinois University | Industrial and Systems Engineering | ⏳ | ⏳ |
-| `vp-0120` | [Hoang-Vu Phan](https://vietprofs.roars.dev/people/vp-0120.html) | University of Nevada, Reno | Mechanical Engineering | ⏳ | ⏳ |
+| `vp-0120` | [Hoang-Vu Phan](https://vietprofs.roars.dev/people/vp-0120.html) | University of Nevada, Reno | Mechanical Engineering | ⏳ | ✅ |
 | `vp-0121` | [Anh-Vu Phan](https://vietprofs.roars.dev/people/vp-0121.html) | University of South Alabama | Mechanical, Aerospace, and Biomedical Engineering | ⏳ | ⏳ |
 | `vp-0126` | [The Nguyen](https://vietprofs.roars.dev/people/vp-0126.html) | California State University, Fresno | Mechanical Engineering | ⏳ | ⏳ |
 | `vp-0128` | [Trinh Pham](https://vietprofs.roars.dev/people/vp-0128.html) | California State University, Los Angeles | Mechanical Engineering | ⏳ | ⏳ |
@@ -43,16 +44,16 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-0139` | [Hoang Nguyen - University of Baltimore](https://vietprofs.roars.dev/people/vp-0139.html) | University of Baltimore | Finance | ⏳ | ⏳ |
 | `vp-0140` | [Julie Ngo](https://vietprofs.roars.dev/people/vp-0140.html) | Loyola Marymount University | Finance | ⏳ | ⏳ |
 | `vp-0141` | [Thanh Dat Le](https://vietprofs.roars.dev/people/vp-0141.html) | University of Northern Colorado | Finance | ⏳ | ⏳ |
-| `vp-0144` | [Quoc H. Nguyen](https://vietprofs.roars.dev/people/vp-0144.html) | DePaul University | Finance and Real Estate | ⏳ | ⏳ |
+| `vp-0144` | [Quoc H. Nguyen](https://vietprofs.roars.dev/people/vp-0144.html) | DePaul University | Finance and Real Estate | ✅ | ⏳ |
 | `vp-0145` | [Diep Nguyen](https://vietprofs.roars.dev/people/vp-0145.html) | Seattle Pacific University | Finance and Management | ⏳ | ⏳ |
-| `vp-0146` | [Liem Nguyen - Westfield State University](https://vietprofs.roars.dev/people/vp-0146.html) | Westfield State University | Accounting and Finance | ⏳ | ⏳ |
+| `vp-0146` | [Liem Nguyen - Westfield State University](https://vietprofs.roars.dev/people/vp-0146.html) | Westfield State University | Accounting and Finance | ✅ | ⏳ |
 | `vp-0148` | [Arthur Tran](https://vietprofs.roars.dev/people/vp-0148.html) | Southeastern Oklahoma State University | Accounting and Finance | ⏳ | ⏳ |
 | `vp-0149` | [Trang P. Tran](https://vietprofs.roars.dev/people/vp-0149.html) | East Carolina University | Marketing and Supply Chain Management | ⏳ | ⏳ |
 | `vp-0150` | [Nguyen Pham](https://vietprofs.roars.dev/people/vp-0150.html) | Monmouth University | Marketing and International Business | ⏳ | ⏳ |
-| `vp-0151` | [Nga Ho-Dac](https://vietprofs.roars.dev/people/vp-0151.html) | San Francisco State University | Marketing | ⏳ | ⏳ |
+| `vp-0151` | [Nga Ho-Dac](https://vietprofs.roars.dev/people/vp-0151.html) | San Francisco State University | Marketing | ✅ | ⏳ |
 | `vp-0152` | [Adam Nguyen](https://vietprofs.roars.dev/people/vp-0152.html) | Siena University | Marketing | ⏳ | ⏳ |
-| `vp-0153` | [Michel Tuan Pham](https://vietprofs.roars.dev/people/vp-0153.html) | Columbia University | Marketing | ⏳ | ⏳ |
-| `vp-0154` | [Thanh (Hans) Nguyen](https://vietprofs.roars.dev/people/vp-0154.html) | Quinnipiac University | Marketing | ⏳ | ⏳ |
+| `vp-0153` | [Michel Tuan Pham](https://vietprofs.roars.dev/people/vp-0153.html) | Columbia University | Marketing | ✅ | ⏳ |
+| `vp-0154` | [Thanh (Hans) Nguyen](https://vietprofs.roars.dev/people/vp-0154.html) | Quinnipiac University | Marketing | ✅ | ⏳ |
 | `vp-0155` | [Chi Tran](https://vietprofs.roars.dev/people/vp-0155.html) | Texas Christian University | Marketing | ⏳ | ⏳ |
 | `vp-0158` | [Peter Nguyen](https://vietprofs.roars.dev/people/vp-0158.html) | Miami University | Marketing | ⏳ | ⏳ |
 | `vp-0160` | [Ha Ta](https://vietprofs.roars.dev/people/vp-0160.html) | Florida International University | Marketing and Logistics | ⏳ | ⏳ |
@@ -60,8 +61,8 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-0162` | [Phuoc Pham](https://vietprofs.roars.dev/people/vp-0162.html) | West Chester University of Pennsylvania | Management | ⏳ | ⏳ |
 | `vp-0164` | [Thi Tran](https://vietprofs.roars.dev/people/vp-0164.html) | Binghamton University | Management Information Systems | ⏳ | ⏳ |
 | `vp-0165` | [Phuong Anh Nguyen](https://vietprofs.roars.dev/people/vp-0165.html) | Saint Mary's College of California | Business Analytics | ⏳ | ⏳ |
-| `vp-0166` | [Thanh Nguyen](https://vietprofs.roars.dev/people/vp-0166.html) | Purdue University | Quantitative Methods, Mitch Daniels School of Business | ⏳ | ⏳ |
-| `vp-0167` | [Dat-Dao Nguyen](https://vietprofs.roars.dev/people/vp-0167.html) | California State University, Northridge | Accounting and Information Systems | ⏳ | ⏳ |
+| `vp-0166` | [Thanh Nguyen](https://vietprofs.roars.dev/people/vp-0166.html) | Purdue University | Quantitative Methods, Mitch Daniels School of Business | ✅ | ⏳ |
+| `vp-0167` | [Dat-Dao Nguyen](https://vietprofs.roars.dev/people/vp-0167.html) | California State University, Northridge | Accounting and Information Systems | ✅ | ⏳ |
 | `vp-0169` | [Emily Loan Pham](https://vietprofs.roars.dev/people/vp-0169.html) | Pennsylvania State University | Business | ⏳ | ⏳ |
 | `vp-0170` | [Loi A. Nguyen](https://vietprofs.roars.dev/people/vp-0170.html) | Metropolitan State University | Management, Entrepreneurship and Human Resource Management | ⏳ | ⏳ |
 | `vp-0171` | [Huy Nguyen - Montclair State University](https://vietprofs.roars.dev/people/vp-0171.html) | Montclair State University | Management | ⏳ | ⏳ |
