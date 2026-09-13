@@ -3680,7 +3680,12 @@
         "https://nguyenlab.ai/"
       ],
       "verifiedAt": "2026-09-07T00:00:00.000Z"
-    }
+    },
+    "directFields": [
+      "name",
+      "rank",
+      "university"
+    ]
   },
   {
     "id": "vp-0070",
@@ -15422,7 +15427,7 @@
   {
     "id": "vp-0326",
     "name": "Tu Anh Huynh",
-    "vietnameseName": "Huỳnh Anh Tu",
+    "vietnameseName": "Huỳnh Tú Anh",
     "profileUrl": "https://molpharm.wisc.edu/staff/huynh-phd-tu-anh/",
     "scholarUrl": "https://scholar.google.com/citations?user=Wrs9S0oAAAAJ&hl=en",
     "linkedinUrl": "https://www.linkedin.com/in/tu-anh-huynh-44700333",
@@ -15438,7 +15443,7 @@
     ],
     "track": "Tenure-line",
     "department": "Food Science",
-    "rank": "Assistant Professor",
+    "rank": "Associate Professor",
     "phdInstitution": "University of California, Davis",
     "country": "United States",
     "websiteUrl": "https://huynhlab.labs.wisc.edu/",
@@ -15451,7 +15456,12 @@
         "https://huynhlab.labs.wisc.edu/"
       ],
       "verifiedAt": "2026-09-07T04:46:41.034Z"
-    }
+    },
+    "directFields": [
+      "name",
+      "rank",
+      "university"
+    ]
   },
   {
     "id": "vp-0327",
@@ -24713,7 +24723,12 @@
         "https://www.st-andrews.ac.uk/business-school/people/finance/lhn2/"
       ],
       "verifiedAt": "2026-09-07T05:20:00.000Z"
-    }
+    },
+    "directFields": [
+      "name",
+      "rank",
+      "university"
+    ]
   },
   {
     "id": "vp-0605",
@@ -34929,7 +34944,12 @@
         "https://www.bristol.ac.uk/person/Quoc%20Tuan-Ho-908ea753-f956-4425-a775-c436f41007d8/"
       ],
       "verifiedAt": "2026-09-07T19:08:00.000Z"
-    }
+    },
+    "directFields": [
+      "name",
+      "rank",
+      "university"
+    ]
   },
   {
     "id": "vp-0948",
@@ -50255,5 +50275,35 @@
       ],
       "verifiedAt": "2026-09-12T19:48:00.000Z"
     }
+  },
+  {
+    "id": "vp-1536",
+    "name": "Binh Chi Bui",
+    "vietnameseName": "Bùi Chí Bình",
+    "profileUrl": "https://scholar.google.com/citations?user=TMEDVlkAAAAJ",
+    "university": "University of Texas at El Paso",
+    "city": "El Paso",
+    "state": "Texas",
+    "country": "United States",
+    "institutionType": "University",
+    "department": "College of Education",
+    "rank": "Assistant Professor of Research",
+    "track": "Research",
+    "scholarUrl": "https://scholar.google.com/citations?user=TMEDVlkAAAAJ",
+    "phdInstitution": "University of Houston",
+    "phdYear": 2023,
+    "phdMajor": "Higher Education Leadership",
+    "researchAreas": [
+      "Higher Education",
+      "College Success",
+      "Student Persistence",
+      "Graduate Employability"
+    ],
+    "lastUpdatedAt": "2026-09-12T19:59:00.000Z",
+    "directFields": [
+      "name",
+      "rank",
+      "university"
+    ]
   }
 ]
