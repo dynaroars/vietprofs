@@ -27657,21 +27657,66 @@
     "state": "Victoria",
     "country": "Australia",
     "department": "Department of Economics",
-    "rank": "Professor",
+    "rank": "Associate Professor",
     "track": "Tenure-line",
     "profileUrl": "https://research.monash.edu/en/persons/quoc-anh-do/",
-    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
+    "lastUpdatedAt": "2026-09-13T22:56:00.000Z",
     "researchAreas": [
       "Political Economy",
+      "Applied Microeconomics",
+      "Social Networks",
       "Development Economics",
-      "Economic History",
-      "Social Networks"
+      "Corporate Governance"
     ],
+    "undergradInstitution": "École Polytechnique",
+    "undergradYear": 2000,
+    "undergradMajor": "Applied Mathematics & Economics",
     "phdInstitution": "Harvard University",
+    "phdYear": 2008,
+    "phdMajor": "Economics",
+    "otherDegrees": [
+      {
+        "degree": "M.A.",
+        "institution": "Harvard University",
+        "year": 2005,
+        "major": "Economics"
+      },
+      {
+        "degree": "M.A.",
+        "institution": "ENSAE Paris",
+        "year": 2002,
+        "major": "Economics and Statistics"
+      },
+      {
+        "degree": "M.A.",
+        "institution": "Paris School of Economics",
+        "year": 2002,
+        "major": "Economics"
+      }
+    ],
     "portrait": "portraits/694-quoc-anh-do-monash-university.webp",
     "portraitSource": "https://sites.google.com/site/qaquocanhdo/",
     "scholarUrl": "https://scholar.google.com/citations?user=oa17ju8AAAAJ&hl=en",
-    "websiteUrl": "https://sites.google.com/site/qaquocanhdo/"
+    "websiteUrl": "https://sites.google.com/site/qaquocanhdo/",
+    "directFields": [
+      "city",
+      "country",
+      "department",
+      "name",
+      "otherDegrees",
+      "phdInstitution",
+      "phdMajor",
+      "phdYear",
+      "profileUrl",
+      "rank",
+      "state",
+      "track",
+      "undergradInstitution",
+      "undergradMajor",
+      "undergradYear",
+      "university",
+      "websiteUrl"
+    ]
   },
   {
     "id": "vp-0673",
