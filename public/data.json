@@ -139,7 +139,7 @@
     "name": "Tri Dao",
     "vietnameseName": "Đào Tri",
     "profileUrl": "https://www.cs.princeton.edu/people/profile/td8762",
-    "lastUpdatedAt": "2026-09-11T11:58:25.078Z",
+    "lastUpdatedAt": "2026-09-13T04:27:12.442Z",
     "websiteUrl": "https://tridao.me/",
     "scholarUrl": "https://scholar.google.com/citations?user=NQRw0bQAAAAJ",
     "linkedinUrl": "https://www.linkedin.com/in/tri-dao-71544155/",
@@ -169,11 +169,12 @@
     "msInstitution": "Stanford University",
     "undergradInstitution": "Stanford University",
     "researchOverview": {
-      "text": "Tri Dao studies sequence models with long-range memory and structured matrices for compact deep-learning models.",
+      "text": "Tri Dao conducts research at the intersection of machine learning, algorithms, and computer systems. Tri Dao co-invented FlashAttention, an IO-aware exact attention algorithm that dramatically accelerates transformer training and inference, becoming a core building block for modern Large Language Models and AI systems.",
       "sources": [
-        "https://engineering.princeton.edu/faculty/tri-dao"
+        "https://tridao.me/",
+        "https://arxiv.org/abs/2205.14135"
       ],
-      "verifiedAt": "2026-09-06T20:28:54.000Z"
+      "verifiedAt": "2026-09-13T04:27:12.442Z"
     },
     "selectedWork": [
       {
@@ -274,7 +275,7 @@
     "name": "Minh N. Do",
     "vietnameseName": "Đỗ N. Minh",
     "profileUrl": "https://ece.illinois.edu/about/directory/faculty/minhdo",
-    "lastUpdatedAt": "2026-09-06T02:15:00.000Z",
+    "lastUpdatedAt": "2026-09-13T04:27:12.442Z",
     "scholarUrl": "https://scholar.google.com/citations?user=RIeAomMAAAAJ",
     "linkedinUrl": "https://www.linkedin.com/in/minh-do-52a18037/",
     "university": "University of Illinois Urbana-Champaign",
@@ -319,11 +320,12 @@
     "undergradInstitution": "University of Canberra",
     "undergradYear": 1997,
     "researchOverview": {
-      "text": "Minh Do develops multidimensional signal-processing tools and applies geometric representations to image processing, image formation, and reconstruction from multiple sensors.",
+      "text": "Minh Do conducts research in signal processing, image analysis, and computational vision. Minh Do co-invented the Contourlet Transform, a pioneering directional multiresolution image representation framework that captures smooth contours in images far more effectively than traditional wavelets.",
       "sources": [
-        "https://compimg.ece.illinois.edu/research/"
+        "https://minhdo.ece.illinois.edu/",
+        "https://ieeexplore.ieee.org/document/1561578"
       ],
-      "verifiedAt": "2026-09-06T20:28:54.000Z"
+      "verifiedAt": "2026-09-13T04:27:12.442Z"
     }
   },
   {
@@ -396,7 +398,7 @@
     "name": "AnHai Doan",
     "vietnameseName": "Đoàn AnHai",
     "profileUrl": "https://pages.cs.wisc.edu/~anhai/",
-    "lastUpdatedAt": "2026-09-04T22:42:00.000Z",
+    "lastUpdatedAt": "2026-09-13T04:27:12.442Z",
     "scholarUrl": "https://scholar.google.com/citations?user=Qa_TAw4AAAAJ",
     "linkedinUrl": "https://www.linkedin.com/in/anhai-doan-12651b/",
     "university": "University of Wisconsin-Madison",
@@ -449,11 +451,12 @@
     "portraitSource": "https://pages.cs.wisc.edu/~anhai/pictures/AnHaiDoan.png",
     "websiteUrl": "https://pages.cs.wisc.edu/~anhai/bio/",
     "researchOverview": {
-      "text": "AnHai Doan studies data exploration, cleaning, matching, and integration as foundational steps in data-science pipelines and preparation of data for AI models.",
+      "text": "AnHai Doan conducts research in data management, entity matching, data integration, and human-in-the-loop AI systems. Recipient of the ACM SIGMOD Edgar F Codd Innovations Award and named an ACM Fellow, AnHai Doan pioneered foundational algorithms and scalable systems for data integration and entity resolution.",
       "sources": [
-        "https://pages.cs.wisc.edu/~anhai/"
+        "https://pages.cs.wisc.edu/~anhai/bio/",
+        "https://sigmod.org/sigmod-awards/citations/2023-sigmod-edgar-f-codd-innovations-award/"
       ],
-      "verifiedAt": "2026-09-06T20:28:54.000Z"
+      "verifiedAt": "2026-09-13T04:27:12.442Z"
     }
   },
   {
@@ -1659,7 +1662,7 @@
     "vietnameseName": "Nguyễn Huy Thanh Vũ",
     "profileUrl": "https://www.gmu.edu/profiles/tvn",
     "websiteUrl": "https://tvn.roars.dev/",
-    "lastUpdatedAt": "2026-08-31T15:04:06.003Z",
+    "lastUpdatedAt": "2026-09-13T04:27:12.442Z",
     "scholarUrl": "https://scholar.google.com/citations?user=TLcVQ-MAAAAJ",
     "university": "George Mason University",
     "city": "Fairfax",
@@ -1714,11 +1717,13 @@
     "portrait": "portraits/032-thanhvu-h-nguyen-george-mason-university.webp",
     "portraitSource": "https://tvn.roars.dev/files/dhl.jpg",
     "researchOverview": {
-      "text": "ThanhVu Nguyen studies software engineering and formal methods, developing automated program analysis and verification techniques to ensure the correctness of software and the safety of artificial-intelligence systems.",
+      "text": "ThanhVu Nguyen arrived in the United States at age 11 as an HO program refugee and met spouse on a Southwest Airlines flight. Research focuses on automated program analysis, invariant generation, and software verification. Active in open academic community building, ThanhVu Nguyen created VietProfs (a roster of Vietnamese-diaspora faculty) and CSPicks (a computer science venue guide).",
       "sources": [
-        "https://tvn.roars.dev/"
+        "https://cs.gmu.edu/~tvn/",
+        "https://vietprofs.roars.dev",
+        "https://cspicks.roars.dev"
       ],
-      "verifiedAt": "2026-09-06T23:45:00.000Z"
+      "verifiedAt": "2026-09-13T04:27:12.442Z"
     },
     "selectedWork": [
       {
@@ -1751,6 +1756,7 @@
     ],
     "directFields": [
       "name",
+      "researchOverview",
       "websiteUrl"
     ]
   },
@@ -11453,7 +11459,7 @@
     "name": "Chi Nguyen",
     "vietnameseName": "Nguyễn Chi",
     "profileUrl": "https://education.arizona.edu/person/chi-nguyen",
-    "lastUpdatedAt": "2026-09-07T22:42:21.000Z",
+    "lastUpdatedAt": "2026-09-13T04:27:12.442Z",
     "scholarUrl": "https://scholar.google.com/citations?user=TJEwAIIAAAAJ",
     "university": "University of Arizona",
     "city": "Tucson",
@@ -11476,12 +11482,16 @@
     "websiteUrl": "https://chinguyen.education/",
     "linkedinUrl": "https://www.linkedin.com/in/chinguyen23/",
     "researchOverview": {
-      "text": "Chi Nguyen examines systemic inequities affecting students, educational leaders, and communities during critical transitions such as policy reforms, moves into higher education, and international migration.",
+      "text": "Chi Nguyen examines systemic inequities affecting students, educational leaders, and communities during critical transitions such as policy reforms and international migration. Outside academia, Chi Nguyen is the creator of the blog and YouTube channel The Present Writer, producing widely followed content on personal development, minimalism, life lessons, and study advice.",
       "sources": [
-        "https://education.arizona.edu/person/chi-nguyen"
+        "https://education.arizona.edu/person/chi-nguyen",
+        "https://thepresentwriter.com/"
       ],
-      "verifiedAt": "2026-09-07T04:31:42.912Z"
-    }
+      "verifiedAt": "2026-09-13T04:27:12.442Z"
+    },
+    "directFields": [
+      "researchOverview"
+    ]
   },
   {
     "id": "vp-0226",
@@ -20537,7 +20547,7 @@
     "vietnameseName": "Ngô Bảo Châu",
     "profileUrl": "https://www.scifac.hku.hk/people/ngo-bao-chau",
     "scholarUrl": "https://scholar.google.com/citations?user=J5i9pecAAAAJ&hl=en",
-    "lastUpdatedAt": "2026-09-02T06:14:43.000Z",
+    "lastUpdatedAt": "2026-09-13T04:27:12.442Z",
     "university": "The University of Hong Kong",
     "city": "Hong Kong",
     "researchAreas": [
@@ -20611,7 +20621,15 @@
       }
     ],
     "portrait": "portraits/493-bao-chau-ngo-the-university-of-hong-kong.webp",
-    "portraitSource": "https://www.scifac.hku.hk/f/people/9445/204c234/Prof.%20Ngo.jpg"
+    "portraitSource": "https://www.scifac.hku.hk/f/people/9445/204c234/Prof.%20Ngo.jpg",
+    "researchOverview": {
+      "text": "Bao Chau Ngo is a mathematician awarded the Fields Medal in 2010 for proving the Fundamental Lemma of the Langlands Program. The proof resolved a decades-old conjecture in mathematics, forging fundamental bridges between number theory, representation theory, and algebraic geometry.",
+      "sources": [
+        "https://www.math.uchicago.edu/~ngo/",
+        "https://www.mathunion.org/fileadmin/IMU/Prizes/Fields/2010/ngo-doc.pdf"
+      ],
+      "verifiedAt": "2026-09-13T04:27:12.442Z"
+    }
   },
   {
     "id": "vp-0483",
@@ -20655,7 +20673,7 @@
     "name": "T. Minh-ha Trinh",
     "vietnameseName": "Trịnh Minh-ha T.",
     "profileUrl": "https://gws.berkeley.edu/people/trinh-t-minh-ha/",
-    "lastUpdatedAt": "2026-08-26T17:57:25.000Z",
+    "lastUpdatedAt": "2026-09-13T04:27:12.442Z",
     "university": "University of California, Berkeley",
     "city": "Berkeley",
     "state": "California",
@@ -20684,11 +20702,12 @@
       }
     ],
     "researchOverview": {
-      "text": "Trinh T Minh-ha works as an independent filmmaker and postcolonial theorist, investigating feminist theory, cultural politics, third world arts, and comparative literary and art theory.",
+      "text": "Trinh T Minh-ha is a world-renowned filmmaker, writer, and feminist theorist at UC Berkeley. Known for groundbreaking cinema and post-colonial scholarship, Trinh T Minh-ha authored Woman, Native, Other and directed landmark documentary and narrative films such as Reassemblage and Surname Viet Given Name Nam.",
       "sources": [
-        "https://gws.berkeley.edu/people/trinh-t-minh-ha/"
+        "https://vsimh.com/",
+        "https://filmmedia.berkeley.edu/people/trinh-t-minh-ha/"
       ],
-      "verifiedAt": "2026-09-07T05:05:14.539Z"
+      "verifiedAt": "2026-09-13T04:27:12.442Z"
     }
   },
   {
@@ -20928,7 +20947,7 @@
     "vietnameseName": "Vũ Khương Minh",
     "profileUrl": "https://lkyspp.nus.edu.sg/our-people/faculty/vu-minh-khuong",
     "scholarUrl": "https://scholar.google.com/citations?user=EJVjlo4AAAAJ&hl=en",
-    "lastUpdatedAt": "2026-09-02T06:14:43.000Z",
+    "lastUpdatedAt": "2026-09-13T04:27:12.442Z",
     "university": "National University of Singapore",
     "city": "Singapore",
     "country": "Singapore",
@@ -20944,7 +20963,15 @@
     "phdYear": 2005,
     "phdInstitution": "Harvard University",
     "portrait": "portraits/506-minh-khuong-vu-national-university-of-singapore.webp",
-    "portraitSource": "https://avseglobal.org/advisors/minh-khuong-vu/"
+    "portraitSource": "https://avseglobal.org/advisors/minh-khuong-vu/",
+    "researchOverview": {
+      "text": "Minh Khuong Vu is an economist and Associate Professor at the Lee Kuan Yew School of Public Policy, National University of Singapore. Previously serving as Vice Minister of Planning and Investment of Vietnam, Minh Khuong Vu conducts policy research on economic growth engines, competitiveness, public governance, and digital transformation in Asia.",
+      "sources": [
+        "https://lkyspp.nus.edu.tr/our-people/faculty/vu-minh-khuong",
+        "https://hieuphay.com/ban-do-kinh-te-viet-nam/"
+      ],
+      "verifiedAt": "2026-09-13T04:27:12.442Z"
+    }
   },
   {
     "id": "vp-0493",
@@ -28056,7 +28083,7 @@
     "profileUrl": "https://www.scifac.hku.hk/people/vu-van-ha",
     "scholarUrl": "https://scholar.google.com/citations?user=n3CBm7AAAAAJ&hl=en",
     "linkedinUrl": "https://www.linkedin.com/in/van-vu-6a3a12180/",
-    "lastUpdatedAt": "2026-09-11T12:20:58.019Z",
+    "lastUpdatedAt": "2026-09-13T04:27:12.442Z",
     "researchAreas": [
       "Combinatorics",
       "Probability",
@@ -28115,7 +28142,15 @@
       }
     ],
     "portrait": "portraits/734-van-h-vu-the-university-of-hong-kong.webp",
-    "portraitSource": "https://www.scifac.hku.hk/f/people/9285/204c234/DSC09345-Edit-selected_1775795611.jpg"
+    "portraitSource": "https://www.scifac.hku.hk/f/people/9285/204c234/DSC09345-Edit-selected_1775795611.jpg",
+    "researchOverview": {
+      "text": "Van Vu is a mathematician awarded the George Pólya Prize and the Fulkerson Prize for ground-breaking contributions to random matrix theory, probabilistic combinatorics, and additive number theory. Research has solved long-standing problems concerning the spectrum of random matrices and polynomial concentration of measure.",
+      "sources": [
+        "https://math.yale.edu/people/van-vu",
+        "https://en.wikipedia.org/wiki/Van_H._Vu"
+      ],
+      "verifiedAt": "2026-09-13T04:27:12.442Z"
+    }
   },
   {
     "id": "vp-0712",
@@ -41049,7 +41084,7 @@
     "vietnameseName": "Bùi Tường Phong",
     "profileUrl": "https://arxiv.org/abs/2404.14376v1",
     "confirmed": false,
-    "lastUpdatedAt": "2026-09-07T16:40:15.000Z",
+    "lastUpdatedAt": "2026-09-13T04:27:12.442Z",
     "university": "Stanford University",
     "city": "Stanford",
     "state": "CA",
@@ -41089,13 +41124,16 @@
     "portrait": "portraits/phong-tuong-bui-university-of-utah.webp",
     "portraitSource": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Bui-Tuong-Phong.jpg/500px-Bui-Tuong-Phong.jpg",
     "researchOverview": {
-      "text": "Work in computer graphics introduced influential shading and lighting models.",
+      "text": "Tuong-Phong Bui was a legendary computer graphics pioneer who invented the Phong reflection model and Phong shading algorithm during doctoral research at the University of Utah in 1973. The work revolutionized 3D computer graphics by rendering realistic specular highlights and smooth curved surface shading, establishing foundational terminology used universally across modern graphics engines.",
       "sources": [
-        "https://arxiv.org/abs/2404.14376v1",
-        "https://dl.acm.org/doi/abs/10.1145/3641233.3664315"
+        "https://dl.acm.org/doi/abs/10.1145/3641233.3664315",
+        "https://en.wikipedia.org/wiki/Phong_shading"
       ],
-      "verifiedAt": "2026-09-07T20:25:00.000Z"
-    }
+      "verifiedAt": "2026-09-13T04:27:12.442Z"
+    },
+    "directFields": [
+      "researchOverview"
+    ]
   },
   {
     "id": "vp-1160",
@@ -41341,7 +41379,7 @@
     "id": "vp-1166",
     "name": "Viet Thanh Nguyen",
     "profileUrl": "https://dornsife.usc.edu/profile/viet-nguyen/",
-    "lastUpdatedAt": "2026-09-09T04:54:30.197Z",
+    "lastUpdatedAt": "2026-09-13T04:27:12.442Z",
     "university": "University of Southern California",
     "city": "Los Angeles",
     "state": "California",
@@ -41357,7 +41395,15 @@
     "department": "English, American Studies and Ethnicity, and Comparative Literature",
     "rank": "Professor",
     "portrait": "portraits/vp-1166-viet-thanh-nguyen.webp",
-    "portraitSource": "https://dornsife.usc.edu/wp-content/uploads/2023/04/photo_1003574-1-500x700.jpg?v=1788929669"
+    "portraitSource": "https://dornsife.usc.edu/wp-content/uploads/2023/04/photo_1003574-1-500x700.jpg?v=1788929669",
+    "researchOverview": {
+      "text": "Viet Thanh Nguyen is an author and University Professor at the University of Southern California. Awarded the Pulitzer Prize for Fiction for the novel The Sympathizer and named a MacArthur Fellow, Viet Thanh Nguyen explores memory, war, diaspora, Asian American literature, and post-colonial cultural identity.",
+      "sources": [
+        "https://vietnguyen.info/",
+        "https://www.pulitzer.org/winners/viet-thanh-nguyen"
+      ],
+      "verifiedAt": "2026-09-13T04:27:12.442Z"
+    }
   },
   {
     "id": "vp-1167",
