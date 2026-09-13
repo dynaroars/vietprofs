@@ -18,6 +18,7 @@
     "analyze": "tsx analysis/analyze-roster.ts",
     "figures": "npm run build && tsx scripts/capture-figures.ts",
     "validate-data": "tsx scripts/validate-data.ts",
+    "audit": "tsx scripts/audit-roster-integrity.ts",
     "audit-evidence": "tsx scripts/audit-roster-evidence.ts",
     "check-links": "tsx scripts/check-links.ts",
     "prevalidate-data": "npm run assign-profile-ids",

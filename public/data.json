@@ -19635,7 +19635,7 @@
   {
     "id": "vp-0443",
     "name": "Hung Nguyen - University of Akron",
-    "vietnameseName": "Nguyễn Hung",
+    "vietnameseName": "Nguyễn Ngọc Hùng",
     "profileUrl": "https://www.uakron.edu/math/our-people/",
     "scholarUrl": "https://scholar.google.com/citations?hl=en&user=KLMqCH4AAAAJ",
     "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
@@ -20561,7 +20561,7 @@
     "rank": "Assistant Professor",
     "country": "United States",
     "portrait": "portraits/480-hung-tran-university-of-south-florida.webp",
-    "portraitSource": "https://health.usf.edu/medicine/neurology/faculty"
+    "portraitSource": "https://health.usf.edu/medicine/neurology/faculty#hung-tran"
   },
   {
     "id": "vp-0470",
@@ -20582,7 +20582,7 @@
     "rank": "Assistant Professor",
     "country": "United States",
     "portrait": "portraits/481-johanna-tran-university-of-south-florida.webp",
-    "portraitSource": "https://health.usf.edu/medicine/neurology/faculty"
+    "portraitSource": "https://health.usf.edu/medicine/neurology/faculty#johanna-tran"
   },
   {
     "id": "vp-0471",
@@ -20605,7 +20605,7 @@
     "rank": "Assistant Professor",
     "country": "United States",
     "portrait": "portraits/482-nam-d-tran-university-of-south-florida.webp",
-    "portraitSource": "https://health.usf.edu/medicine/neurology/faculty"
+    "portraitSource": "https://health.usf.edu/medicine/neurology/faculty#nam-tran"
   },
   {
     "id": "vp-0472",
@@ -21614,7 +21614,7 @@
     "id": "vp-0494",
     "name": "Tuan Tran - Nanyang Technological University",
     "vietnameseName": "Trần Tuấn",
-    "profileUrl": "https://www.ntu.edu.sg/sc3dp/about-us/our-people/faculty-directory",
+    "profileUrl": "https://dr.ntu.edu.sg/entities/person/Tuan-TRAN",
     "scholarUrl": "https://scholar.google.com/citations?user=sU49BQPNv30C&hl=en",
     "linkedinUrl": "https://www.linkedin.com/in/tatranvhn/",
     "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
@@ -21634,7 +21634,8 @@
     "phdInstitution": "University of Illinois at Urbana-Champaign",
     "portrait": "portraits/510-tuan-tran-nanyang-technological-university.webp",
     "portraitSource": "https://dr.ntu.edu.sg/server/api/core/bitstreams/5ad72c5b-57c2-4ec2-8c86-0f3f37f0c43b/content",
-    "undergradInstitution": "National University of Singapore"
+    "undergradInstitution": "National University of Singapore",
+    "undergradYear": 2004
   },
   {
     "id": "vp-0495",
@@ -22753,7 +22754,7 @@
     "id": "vp-0520",
     "name": "Vuong Phan",
     "vietnameseName": "Phan Vuong",
-    "profileUrl": "https://www.southampton.ac.uk/people/5y2ds9/doctor-vuong-phan",
+    "profileUrl": "https://www.southampton.ac.uk/people/5x5mt5/doctor-phan-vuong",
     "scholarUrl": "https://scholar.google.com/citations?user=drqMpZgAAAAJ&hl=en",
     "linkedinUrl": "https://www.linkedin.com/in/vuong-phan-2b017055/",
     "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
@@ -27467,7 +27468,7 @@
     "department": "Pharmacology",
     "rank": "Associate Professor",
     "track": "Tenure-line",
-    "profileUrl": "https://nusgs.nus.edu.sg/thesis-advisors/phcltnm",
+    "profileUrl": "https://medicine.nus.edu.sg/pharmacy/staff/minh-le/",
     "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "researchAreas": [
       "Extracellular Vesicles",
@@ -30222,8 +30223,6 @@
       "verifiedAt": "2026-09-13T00:00:00.000Z"
     },
     "directFields": [
-      "msInstitution",
-      "msYear",
       "name",
       "profileUrl",
       "scholarUrl",
@@ -32008,29 +32007,6 @@
       ],
       "verifiedAt": "2026-09-13T00:00:00.000Z"
     }
-  },
-  {
-    "id": "vp-0803",
-    "name": "Anh Tuan Tran",
-    "vietnameseName": "Trần Tuấn Anh",
-    "profileUrl": "https://dr.ntu.edu.sg/entities/person/Tuan-TRAN",
-    "lastUpdatedAt": "2026-09-12T13:00:00.000Z",
-    "university": "Nanyang Technological University",
-    "city": "Singapore",
-    "researchAreas": [
-      "Contact-Line Dynamics",
-      "Drop-Solid Interactions",
-      "Boiling",
-      "3D Printing"
-    ],
-    "track": "Tenure-line",
-    "department": "School of Mechanical and Aerospace Engineering",
-    "rank": "Associate Professor",
-    "undergradInstitution": "Hanoi University of Science",
-    "undergradYear": 2004,
-    "country": "Singapore",
-    "portrait": "portraits/0803-anh-tuan-tran-nanyang-technological-university.webp",
-    "portraitSource": "https://dr.ntu.edu.sg/server/api/core/bitstreams/5ad72c5b-57c2-4ec2-8c86-0f3f37f0c43b/content"
   },
   {
     "id": "vp-0804",
@@ -34876,8 +34852,7 @@
       "track",
       "undergradInstitution",
       "undergradYear",
-      "university",
-      "websiteUrl"
+      "university"
     ],
     "labUrl": "https://www.u-aizu.ac.jp/labs/ce-cc/"
   },
@@ -34929,8 +34904,7 @@
       "track",
       "undergradInstitution",
       "undergradYear",
-      "university",
-      "websiteUrl"
+      "university"
     ],
     "labUrl": "https://www.s-lab.nd.chiba-u.jp/english/"
   },
@@ -35459,8 +35433,7 @@
       "rank",
       "researchAreas",
       "track",
-      "university",
-      "websiteUrl"
+      "university"
     ],
     "portrait": "portraits/0929-nhan-huu-nguyen.webp",
     "portraitSource": "https://fp.jaist.ac.jp/data/photo/766.jpg",
@@ -35506,8 +35479,7 @@
       "rank",
       "researchAreas",
       "track",
-      "university",
-      "websiteUrl"
+      "university"
     ]
   },
   {
@@ -35548,8 +35520,7 @@
       "rank",
       "researchAreas",
       "track",
-      "university",
-      "websiteUrl"
+      "university"
     ],
     "labUrl": "https://www.jaist.ac.jp/english/laboratory/cs/vu-tran.html"
   },
@@ -35588,8 +35559,7 @@
       "researchAreas",
       "track",
       "undergradInstitution",
-      "university",
-      "websiteUrl"
+      "university"
     ],
     "labUrl": "https://isw3.naist.jp/Research/cs-arch-en.html",
     "researchOverview": {
@@ -35628,8 +35598,7 @@
       "rank",
       "researchAreas",
       "track",
-      "university",
-      "websiteUrl"
+      "university"
     ],
     "labUrl": "https://isw3.naist.jp/Research/cs-arch-en.html",
     "researchOverview": {
@@ -36762,10 +36731,8 @@
       "rank",
       "researchAreas",
       "scholarUrl",
-      "state",
       "track",
-      "university",
-      "websiteUrl"
+      "university"
     ]
   },
   {
@@ -37846,7 +37813,7 @@
     "department": "Department of Accounting, Data Analytics, Economics and Finance",
     "rank": "Associate Professor",
     "track": "Tenure-line",
-    "profileUrl": "https://ideas.repec.org/e/pph135.html",
+    "profileUrl": "https://scholars.latrobe.edu.au/dhphan",
     "scholarUrl": "https://scholar.google.com.au/citations?user=xXacoggAAAAJ&hl=en",
     "researchAreas": [
       "Asset Price Bubbles",
@@ -38448,7 +38415,8 @@
         "https://sites.google.com/view/david-huynh"
       ],
       "verifiedAt": "2026-09-13T00:00:00.000Z"
-    }
+    },
+    "vietnameseName": "Huỳnh David Nhân"
   },
   {
     "id": "vp-1025",
@@ -41570,26 +41538,6 @@
     }
   },
   {
-    "id": "vp-1132",
-    "name": "Hieu Nguyen",
-    "profileUrl": "https://www.usn.no/kontakt-oss/ansatte/hieu-nguyen-1",
-    "lastUpdatedAt": "2026-09-09T04:50:21.227Z",
-    "university": "University of South-Eastern Norway",
-    "city": "Kongsberg",
-    "country": "Norway",
-    "researchAreas": [
-      "Wireless Communications",
-      "Satellite Communications",
-      "Electrical Engineering"
-    ],
-    "track": "Tenure-line",
-    "department": "Department of Natural Science and Industrial Systems, Electrical Engineering",
-    "rank": "Associate Professor",
-    "phdInstitution": "Norwegian University of Science and Technology",
-    "portrait": "portraits/vp-1132-hieu-nguyen.webp",
-    "portraitSource": "https://www.usn.no/getfile.php/13709392-1652340603/usn.no/ansatte%20%28opplastet%29/hn.jpg%20%28article_small%29.webp"
-  },
-  {
     "id": "vp-1133",
     "name": "Dong Trong Nguyen",
     "profileUrl": "https://www.ntnu.no/ansatte/dong.t.nguyen",
@@ -42711,52 +42659,6 @@
     "portraitSource": "https://scholars.duke.edu/profile-images/full/0831715.jpg"
   },
   {
-    "id": "vp-1170",
-    "name": "Minh Bui",
-    "profileUrl": "https://comp.anu.edu.au/people/minh-bui/",
-    "portrait": "portraits/1170-minh-bui-australian-national-university.webp",
-    "portraitSource": "https://comp.anu.edu.au/assets/images/people/minh-bui.png",
-    "lastUpdatedAt": "2026-09-06T00:58:41.000Z",
-    "university": "Australian National University",
-    "city": "Canberra",
-    "country": "Australia",
-    "researchAreas": [
-      "Bioinformatics",
-      "Phylogenetics",
-      "Computational Biology",
-      "High-Performance Computing"
-    ],
-    "track": "Tenure-line",
-    "department": "School of Computing",
-    "rank": "Associate Professor",
-    "phdInstitution": "University of Vienna",
-    "phdYear": 2009,
-    "researchOverview": {
-      "text": "Research develops bioinformatic algorithms, statistical models, and high-performance computing methods for phylogenetic inference from large genomic data.",
-      "sources": [
-        "https://comp.anu.edu.au/people/minh-bui/"
-      ],
-      "verifiedAt": "2026-09-07T20:25:00.000Z"
-    }
-  },
-  {
-    "id": "vp-1171",
-    "name": "Dinh Phan",
-    "profileUrl": "https://scholars.latrobe.edu.au/dhphan",
-    "lastUpdatedAt": "2026-09-05T00:00:00.000Z",
-    "university": "La Trobe University",
-    "city": "Melbourne",
-    "country": "Australia",
-    "researchAreas": [
-      "Finance",
-      "Financial Econometrics",
-      "Corporate Finance"
-    ],
-    "track": "Tenure-line",
-    "department": "La Trobe Business School",
-    "rank": "Associate Professor"
-  },
-  {
     "id": "vp-1172",
     "name": "Sara Quach Thaichon",
     "profileUrl": "https://staffdirectory.griffith.edu.au/phone-details.php?id=24598709&string=marketing",
@@ -42859,31 +42761,6 @@
     "track": "Research",
     "department": "Iverson Health Innovation Research Institute",
     "rank": "Associate Professor"
-  },
-  {
-    "id": "vp-1177",
-    "name": "Ly Tran",
-    "profileUrl": "https://experts.deakin.edu.au/9318-ly-tran",
-    "lastUpdatedAt": "2026-09-05T00:00:00.000Z",
-    "university": "Deakin University",
-    "city": "Melbourne",
-    "country": "Australia",
-    "researchAreas": [
-      "International Education",
-      "Student Mobility",
-      "Higher Education Internationalisation",
-      "International Student Engagement"
-    ],
-    "track": "Tenure-line",
-    "department": "School of Education",
-    "rank": "Professor",
-    "researchOverview": {
-      "text": "Research examines international education, student mobility, public diplomacy, graduate employability, and the internationalization of higher education.",
-      "sources": [
-        "https://experts.deakin.edu.au/9318-ly-tran"
-      ],
-      "verifiedAt": "2026-09-07T20:45:00.000Z"
-    }
   },
   {
     "id": "vp-1178",
@@ -45609,9 +45486,7 @@
     "phdInstitution": "University of Alabama School of Medicine",
     "phdYear": 1993,
     "phdMajor": "Medicine",
-    "lastUpdatedAt": "2026-09-12T19:03:23.149Z",
-    "portrait": "portraits/1272-mai-p-hoang.webp",
-    "portraitSource": "https://assets.massgeneralbrigham.org/adobe/assets/urn:aaid:aem:f8b727ea-7583-4dc6-9762-810d6e44ba62/as/bl-01-about-mgh-712x588-2x.avif?assetname=bl-01-about-mgh-712x588-2x.jpg"
+    "lastUpdatedAt": "2026-09-12T19:03:23.149Z"
   },
   {
     "id": "vp-1273",
@@ -46445,9 +46320,7 @@
     ],
     "msInstitution": "University of California, Berkeley",
     "msMajor": "Public Health",
-    "lastUpdatedAt": "2026-09-09T04:57:02.726Z",
-    "portrait": "portraits/vp-1303-nhi-ha-t-trinh.webp",
-    "portraitSource": "https://assets.massgeneralbrigham.org/adobe/assets/urn:aaid:aem:f8b727ea-7583-4dc6-9762-810d6e44ba62/as/bl-01-about-mgh-712x588-2x.avif?assetname=bl-01-about-mgh-712x588-2x.jpg"
+    "lastUpdatedAt": "2026-09-09T04:57:02.726Z"
   },
   {
     "id": "vp-1304",
@@ -46785,29 +46658,6 @@
     "undergradYear": 1998,
     "undergradMajor": "Mathematics",
     "lastUpdatedAt": "2026-09-11T04:58:07.179Z"
-  },
-  {
-    "id": "vp-1317",
-    "name": "Phan Tu Vuong",
-    "vietnameseName": "Phan Tử Vương",
-    "university": "University of Southampton",
-    "department": "School of Mathematical Sciences",
-    "rank": "Associate Professor",
-    "track": "Tenure-line",
-    "city": "Southampton",
-    "country": "United Kingdom",
-    "institutionType": "University",
-    "profileUrl": "https://www.southampton.ac.uk/people/5x5mt5/doctor-phan-vuong",
-    "researchAreas": [
-      "Continuous Optimization",
-      "Operational Research",
-      "Variational Analysis",
-      "Dynamical Systems in Optimization",
-      "Machine Learning Optimization"
-    ],
-    "phdYear": 2014,
-    "phdMajor": "Applied Mathematics",
-    "lastUpdatedAt": "2026-09-06T04:20:00.000Z"
   },
   {
     "id": "vp-1318",
@@ -47237,29 +47087,6 @@
     "lastUpdatedAt": "2026-09-12T19:04:18.423Z",
     "portrait": "portraits/1333-kim-ta-phuoc.webp",
     "portraitSource": "https://loa.ensta-paris.fr/wp-content/uploads/2026/06/ZeitounCancer-300x200.png"
-  },
-  {
-    "id": "vp-1334",
-    "name": "Minh T. N. Le",
-    "vietnameseName": "Lê T. N. Minh",
-    "profileUrl": "https://medicine.nus.edu.sg/pharmacy/staff/minh-le/",
-    "university": "National University of Singapore",
-    "country": "Singapore",
-    "city": "Singapore",
-    "department": "Department of Pharmacology",
-    "rank": "Associate Professor",
-    "track": "Tenure-line",
-    "researchAreas": [
-      "Extracellular Vesicles",
-      "Red Blood Cell Vesicles",
-      "RNA Therapeutics",
-      "Cancer Biology",
-      "Targeted Drug Delivery"
-    ],
-    "phdInstitution": "Massachusetts Institute of Technology",
-    "phdYear": 2011,
-    "phdMajor": "Biology",
-    "lastUpdatedAt": "2026-09-06T00:31:00.000Z"
   },
   {
     "id": "vp-1335",
@@ -49733,9 +49560,7 @@
       "Orthopaedic Trauma",
       "Fracture Healing",
       "Complex Trauma Reconstruction"
-    ],
-    "portrait": "portraits/vp-1436-thuan-v-ly.webp",
-    "portraitSource": "https://assets.massgeneralbrigham.org/adobe/assets/urn:aaid:aem:f8b727ea-7583-4dc6-9762-810d6e44ba62/as/bl-01-about-mgh-712x588-2x.avif?assetname=bl-01-about-mgh-712x588-2x.jpg"
+    ]
   },
   {
     "id": "vp-1437",

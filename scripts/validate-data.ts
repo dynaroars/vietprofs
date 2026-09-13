@@ -99,6 +99,7 @@ if (Object.keys(enrichment.entries).length !== rosterIds.size) fail(enrichmentFi
 const names = new Set<string>();
 const ids = new Set<string>();
 const profileUrls = new Set();
+const websiteUrls = new Map<string, string>();
 const scholarUrls = new Set();
 const linkedinUrls = new Set();
 const portraits = new Set();
@@ -119,8 +120,14 @@ for (const [index, person] of roster.entries()) {
   validateTimestamp(rosterFile, person.lastUpdatedAt, label, 'lastUpdatedAt');
   if (!/^https?:\/\//.test(person.profileUrl)) fail(rosterFile, `${label} profileUrl must use HTTP(S)`);
   if (person.confirmed !== undefined && typeof person.confirmed !== 'boolean') fail(rosterFile, `${label} confirmed must be a boolean`);
-  if (person.websiteUrl !== undefined && !/^https?:\/\//.test(person.websiteUrl)) fail(rosterFile, `${label} websiteUrl must use HTTP(S)`);
-  if (person.websiteUrl !== undefined && person.websiteUrl === person.profileUrl) fail(rosterFile, `${label} websiteUrl must differ from profileUrl`);
+  if (person.websiteUrl !== undefined) {
+    if (!/^https?:\/\//.test(person.websiteUrl)) fail(rosterFile, `${label} websiteUrl must use HTTP(S)`);
+    if (person.websiteUrl === person.profileUrl) fail(rosterFile, `${label} websiteUrl must differ from profileUrl`);
+    if (websiteUrls.has(person.websiteUrl)) {
+      fail(rosterFile, `${label} duplicates websiteUrl ${person.websiteUrl} with ${websiteUrls.get(person.websiteUrl)}`);
+    }
+    websiteUrls.set(person.websiteUrl, person.name);
+  }
   if (person.labUrl !== undefined && !/^https?:\/\//.test(person.labUrl)) fail(rosterFile, `${label} labUrl must use HTTP(S)`);
   if (person.labUrl !== undefined && person.labUrl === person.profileUrl) fail(rosterFile, `${label} labUrl must differ from profileUrl`);
   if (person.labUrl !== undefined && person.labUrl === person.websiteUrl) fail(rosterFile, `${label} labUrl must differ from websiteUrl`);
@@ -238,6 +245,9 @@ for (const [index, person] of roster.entries()) {
     for (const field of person.directFields) {
       if (typeof field !== 'string' || !allowedRosterFields.has(field) || DIRECT_FIELD_EXCLUSIONS.has(field)) {
         fail(rosterFile, `${label} has invalid direct field ${JSON.stringify(field)}`);
+      }
+      if (person[field] === undefined || person[field] === null || (typeof person[field] === 'string' && !person[field].trim())) {
+        fail(rosterFile, `${label} (${person.id}) lists "${field}" in directFields but the field value is missing or empty`);
       }
       if (directFields.has(field)) fail(rosterFile, `${label} duplicates direct field ${field}`);
       directFields.add(field);
