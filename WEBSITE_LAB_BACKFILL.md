@@ -22,7 +22,8 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 - [x] Batch WL-14 complete
 - [x] Batch WL-15 complete
 - [x] Batch WL-16 complete
-- [ ] Batch WL-17 through WL-23 — not yet started
+- [x] Batch WL-17 complete
+- [ ] Batch WL-18 through WL-23 — not yet started
 
 ---
 
@@ -972,11 +973,11 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 
 ### Batch WL-17 (vp-1131 to vp-1194, 50 people)
 
-- [ ] Batch complete
+- [x] Batch complete
 
 | ID | Name | Institution | Department | Website | Lab |
 | :--- | :--- | :--- | :--- | :---: | :---: |
-| `vp-1131` | [Nhan Nguyen](https://vietprofs.roars.dev/people/vp-1131.html) | University of Oulu | Centre for Wireless Communications, Faculty of Information Technology and Electrical Engineering | ⏳ | ⏳ |
+| `vp-1131` | [Nhan Nguyen](https://vietprofs.roars.dev/people/vp-1131.html) | University of Oulu | Centre for Wireless Communications, Faculty of Information Technology and Electrical Engineering | ✅ | ⏳ |
 | `vp-1132` | [Hieu Nguyen](https://vietprofs.roars.dev/people/vp-1132.html) | University of South-Eastern Norway | Department of Natural Science and Industrial Systems, Electrical Engineering | ⏳ | ⏳ |
 | `vp-1133` | [Dong Trong Nguyen](https://vietprofs.roars.dev/people/vp-1133.html) | Norwegian University of Science and Technology | Department of Marine Technology, Marine Engineering | ⏳ | ⏳ |
 | `vp-1134` | [Laurent Pham-Van](https://vietprofs.roars.dev/people/vp-1134.html) | Commissariat à l'énergie atomique et aux énergies alternatives (CEA) | Laboratoire d'Électronique et Photonique Organique (LEPO), CEA-SPEC, Electrical Engineering | ⏳ | ⏳ |
@@ -988,28 +989,28 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-1141` | [Chuong Nguyen](https://vietprofs.roars.dev/people/vp-1141.html) | CSIRO | Data61, Computer Vision and Machine Learning | ⏳ | ⏳ |
 | `vp-1142` | [Anthony Nguyen](https://vietprofs.roars.dev/people/vp-1142.html) | CSIRO | Australian e-Health Research Centre, Health Data and Text Analytics | ⏳ | ⏳ |
 | `vp-1143` | [Minh Tam Truong](https://vietprofs.roars.dev/people/vp-1143.html) | Boston University | Radiation Oncology | ⏳ | ⏳ |
-| `vp-1145` | [Hoang Tran](https://vietprofs.roars.dev/people/vp-1145.html) | Oak Ridge National Laboratory | Computer Science and Mathematics Division | ⏳ | ⏳ |
+| `vp-1145` | [Hoang Tran](https://vietprofs.roars.dev/people/vp-1145.html) | Oak Ridge National Laboratory | Computer Science and Mathematics Division | ✅ | ⏳ |
 | `vp-1147` | [Nghi Q. Lam](https://vietprofs.roars.dev/people/vp-1147.html) | Argonne National Laboratory | Materials Science Division | ⏳ | ⏳ |
 | `vp-1148` | [Hao Phan](https://vietprofs.roars.dev/people/vp-1148.html) | Northern Illinois University | University Libraries | ⏳ | ⏳ |
 | `vp-1149` | [Amy Pham](https://vietprofs.roars.dev/people/vp-1149.html) | University of San Diego | Copley Library | ⏳ | ⏳ |
 | `vp-1151` | [Ann Hoang](https://vietprofs.roars.dev/people/vp-1151.html) | New Jersey Institute of Technology | Robert W. Van Houten Library | ⏳ | ⏳ |
-| `vp-1152` | [Hung Trung Nguyen](https://vietprofs.roars.dev/people/vp-1152.html) | New Mexico State University | Department of Mathematical Sciences | ⏳ | ⏳ |
+| `vp-1152` | [Hung Trung Nguyen](https://vietprofs.roars.dev/people/vp-1152.html) | New Mexico State University | Department of Mathematical Sciences | ✅ | ⏳ |
 | `vp-1153` | [Trien Nguyen](https://vietprofs.roars.dev/people/vp-1153.html) | University of Waterloo | Department of Economics | ⏳ | ⏳ |
 | `vp-1154` | [Minh-Ha Pham](https://vietprofs.roars.dev/people/vp-1154.html) | CNRS (Centre National de la Recherche Scientifique) | Direction Europe et International | ⏳ | ⏳ |
 | `vp-1155` | [My Hang Huynh](https://vietprofs.roars.dev/people/vp-1155.html) | Los Alamos National Laboratory | High Explosives Science and Technology Group, Materials Chemistry | ⏳ | ⏳ |
 | `vp-1156` | [Ly Thi Tran](https://vietprofs.roars.dev/people/vp-1156.html) | Deakin University | School of Education | ⏳ | ⏳ |
-| `vp-1157` | [Hien Trong Nguyen](https://vietprofs.roars.dev/people/vp-1157.html) | NASA Jet Propulsion Laboratory | Astrophysics and Space Sciences Section | ⏳ | ⏳ |
+| `vp-1157` | [Hien Trong Nguyen](https://vietprofs.roars.dev/people/vp-1157.html) | NASA Jet Propulsion Laboratory | Astrophysics and Space Sciences Section | ✅ | ⏳ |
 | `vp-1158` | [Frédéric Pham](https://vietprofs.roars.dev/people/vp-1158.html) | Université Côte d'Azur | Laboratoire J.A. Dieudonné, Département de Mathématiques | ⏳ | ⏳ |
 | `vp-1159` | [Tuong-Phong Bui](https://vietprofs.roars.dev/people/vp-1159.html) | Stanford University | Computer Science | ⏳ | ⏳ |
 | `vp-1160` | [Buu-Hoi Nguyen-Phuc](https://vietprofs.roars.dev/people/vp-1160.html) | CNRS (Centre National de la Recherche Scientifique) | Institut du Radium, Chimie Organique et Cancérologie, Biological & Biomedical Sciences | ⏳ | ⏳ |
 | `vp-1161` | [Trang Dung Le](https://vietprofs.roars.dev/people/vp-1161.html) | Université Paris Cité | Département de Mathématiques, Institut de Mathématiques de Jussieu | ⏳ | ⏳ |
 | `vp-1162` | [Dong Ngo](https://vietprofs.roars.dev/people/vp-1162.html) | University of Florida | Department of Entomology and Nematology | ⏳ | ⏳ |
 | `vp-1163` | [Hai Quang Tran](https://vietprofs.roars.dev/people/vp-1163.html) | CNRS (Centre National de la Recherche Scientifique) | Laboratoire d'Ethnomusicologie, Musée de l'Homme, Arts & Design | ⏳ | ⏳ |
-| `vp-1166` | [Viet Thanh Nguyen](https://vietprofs.roars.dev/people/vp-1166.html) | University of Southern California | English, American Studies and Ethnicity, and Comparative Literature | ⏳ | ⏳ |
+| `vp-1166` | [Viet Thanh Nguyen](https://vietprofs.roars.dev/people/vp-1166.html) | University of Southern California | English, American Studies and Ethnicity, and Comparative Literature | ✅ | ⏳ |
 | `vp-1167` | [Thuy Le](https://vietprofs.roars.dev/people/vp-1167.html) | Duke University | Medicine and Molecular Genetics and Microbiology | ⏳ | ⏳ |
 | `vp-1170` | [Minh Bui](https://vietprofs.roars.dev/people/vp-1170.html) | Australian National University | School of Computing | ⏳ | ⏳ |
 | `vp-1171` | [Dinh Phan](https://vietprofs.roars.dev/people/vp-1171.html) | La Trobe University | La Trobe Business School | ⏳ | ⏳ |
-| `vp-1172` | [Sara Quach Thaichon](https://vietprofs.roars.dev/people/vp-1172.html) | Griffith University | Department of Tourism and Marketing | ⏳ | ⏳ |
+| `vp-1172` | [Sara Quach Thaichon](https://vietprofs.roars.dev/people/vp-1172.html) | Griffith University | Department of Tourism and Marketing | ✅ | ⏳ |
 | `vp-1173` | [Huu Hao Ngo](https://vietprofs.roars.dev/people/vp-1173.html) | University of Technology Sydney | School of Civil, Environmental and Sociotechnical Engineering | ⏳ | ⏳ |
 | `vp-1174` | [Xuan Thinh Duong](https://vietprofs.roars.dev/people/vp-1174.html) | Macquarie University | School of Mathematical and Physical Sciences | ⏳ | ⏳ |
 | `vp-1175` | [Thong Pham - Adelaide University](https://vietprofs.roars.dev/people/vp-1175.html) | Adelaide University | School of Civil Engineering and Construction | ⏳ | ⏳ |
@@ -1020,12 +1021,12 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-1186` | [Trieu-Kien Truong](https://vietprofs.roars.dev/people/vp-1186.html) | National Cheng Kung University | Engineering Science | ⏳ | ⏳ |
 | `vp-1187` | [Bao Q. Truong](https://vietprofs.roars.dev/people/vp-1187.html) | Northern Michigan University | Mathematics and Computer Science | ⏳ | ⏳ |
 | `vp-1188` | [Quoc Bao Vo](https://vietprofs.roars.dev/people/vp-1188.html) | Swinburne University of Technology | School of Science, Computing and Emerging Technologies | ⏳ | ⏳ |
-| `vp-1189` | [Dung Hoang Duong](https://vietprofs.roars.dev/people/vp-1189.html) | University of Wollongong | School of Computing and Information Technology | ⏳ | ⏳ |
+| `vp-1189` | [Dung Hoang Duong](https://vietprofs.roars.dev/people/vp-1189.html) | University of Wollongong | School of Computing and Information Technology | ✅ | ⏳ |
 | `vp-1190` | [Thanh V. Tran](https://vietprofs.roars.dev/people/vp-1190.html) | Boston College | School of Social Work | ⏳ | ⏳ |
-| `vp-1191` | [Kim-Phuong L. Vu](https://vietprofs.roars.dev/people/vp-1191.html) | California State University, Long Beach | Department of Psychology | ⏳ | ⏳ |
-| `vp-1192` | [Hai L. Vu](https://vietprofs.roars.dev/people/vp-1192.html) | Monash University | Department of Civil Engineering | ⏳ | ⏳ |
+| `vp-1191` | [Kim-Phuong L. Vu](https://vietprofs.roars.dev/people/vp-1191.html) | California State University, Long Beach | Department of Psychology | ✅ | ⏳ |
+| `vp-1192` | [Hai L. Vu](https://vietprofs.roars.dev/people/vp-1192.html) | Monash University | Department of Civil Engineering | ✅ | ⏳ |
 | `vp-1193` | [Huy P. Phan](https://vietprofs.roars.dev/people/vp-1193.html) | University of New England | School of Education | ⏳ | ⏳ |
-| `vp-1194` | [Hong Tien Vu](https://vietprofs.roars.dev/people/vp-1194.html) | University of Colorado Boulder | Department of Journalism | ⏳ | ⏳ |
+| `vp-1194` | [Hong Tien Vu](https://vietprofs.roars.dev/people/vp-1194.html) | University of Colorado Boulder | Department of Journalism | ✅ | ⏳ |
 
 ---
 
