@@ -624,7 +624,7 @@ test('profile pages honor dark mode through the shared stylesheet', async () => 
   assert.equal(await page.locator('.raw-record').count(), 1);
   assert.equal(await page.locator('.profile-actions .submission-link').count(), 1);
   assert.equal(await page.locator('.name-heading .profile-actions').count(), 1);
-  const profileStar = page.locator('.profile-actions .favorite-toggle');
+  const profileStar = page.locator('.name-title .favorite-toggle');
   assert.equal(await profileStar.getAttribute('aria-pressed'), 'true');
   await profileStar.click();
   assert.equal(await profileStar.getAttribute('aria-pressed'), 'false');
