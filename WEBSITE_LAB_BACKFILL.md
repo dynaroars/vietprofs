@@ -20,7 +20,8 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 - [x] Batch WL-12 complete
 - [x] Batch WL-13 complete
 - [x] Batch WL-14 complete
-- [ ] Batch WL-15 through WL-23 — not yet started
+- [x] Batch WL-15 complete
+- [ ] Batch WL-16 through WL-23 — not yet started
 
 ---
 
@@ -852,7 +853,7 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 
 ### Batch WL-15 (vp-0991 to vp-1063, 50 people)
 
-- [ ] Batch complete
+- [x] Batch complete
 
 | ID | Name | Institution | Department | Website | Lab |
 | :--- | :--- | :--- | :--- | :---: | :---: |
@@ -863,13 +864,13 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-0999` | [Dan Cao](https://vietprofs.roars.dev/people/vp-0999.html) | Georgetown University | Economics | ⏳ | ⏳ |
 | `vp-1000` | [Cuong Le Van](https://vietprofs.roars.dev/people/vp-1000.html) | Paris School of Economics | Economics | ⏳ | ⏳ |
 | `vp-1001` | [Dinh Hoang Bach Phan](https://vietprofs.roars.dev/people/vp-1001.html) | La Trobe University | Department of Accounting, Data Analytics, Economics and Finance | ⏳ | ⏳ |
-| `vp-1002` | [Thanh Huynh](https://vietprofs.roars.dev/people/vp-1002.html) | Monash University | Banking and Finance | ⏳ | ⏳ |
+| `vp-1002` | [Thanh Huynh](https://vietprofs.roars.dev/people/vp-1002.html) | Monash University | Banking and Finance | ✅ | ⏳ |
 | `vp-1003` | [Nhut Hoang Nguyen](https://vietprofs.roars.dev/people/vp-1003.html) | Auckland University of Technology | Finance | ⏳ | ⏳ |
 | `vp-1006` | [Son Hong Nghiem](https://vietprofs.roars.dev/people/vp-1006.html) | The University of Queensland | Centre for Health Services Research, School of Public Health | ⏳ | ⏳ |
 | `vp-1007` | [Viet-Ngu Hoang](https://vietprofs.roars.dev/people/vp-1007.html) | Queensland University of Technology | School of Economics and Finance | ⏳ | ⏳ |
 | `vp-1008` | [Kien C. Tran](https://vietprofs.roars.dev/people/vp-1008.html) | University of Lethbridge | Economics | ⏳ | ⏳ |
 | `vp-1010` | [Kim-Huong Nguyen](https://vietprofs.roars.dev/people/vp-1010.html) | The University of Queensland | School of Public Health | ⏳ | ⏳ |
-| `vp-1012` | [Linda Bui](https://vietprofs.roars.dev/people/vp-1012.html) | Brandeis University | Economics | ⏳ | ⏳ |
+| `vp-1012` | [Linda Bui](https://vietprofs.roars.dev/people/vp-1012.html) | Brandeis University | Economics | ✅ | ⏳ |
 | `vp-1014` | [Elisabeth Huynh](https://vietprofs.roars.dev/people/vp-1014.html) | Australian National University | National Centre for Epidemiology and Population Health | ⏳ | ⏳ |
 | `vp-1015` | [Khanh Hoang](https://vietprofs.roars.dev/people/vp-1015.html) | Lincoln University | Finance | ⏳ | ⏳ |
 | `vp-1016` | [Hoai-Luu Q. Nguyen](https://vietprofs.roars.dev/people/vp-1016.html) | University of California, Berkeley | Haas School of Business | ⏳ | ⏳ |
@@ -888,7 +889,7 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-1040` | [Huong Dieu Dang](https://vietprofs.roars.dev/people/vp-1040.html) | University of Canterbury | Economics and Finance | ⏳ | ⏳ |
 | `vp-1041` | [Thach Ngoc Pham](https://vietprofs.roars.dev/people/vp-1041.html) | Edith Cowan University | Finance | ⏳ | ⏳ |
 | `vp-1042` | [Lanh Tat Tran](https://vietprofs.roars.dev/people/vp-1042.html) | Indiana University Bloomington | Statistics | ⏳ | ⏳ |
-| `vp-1043` | [Edward C. Hoang](https://vietprofs.roars.dev/people/vp-1043.html) | University of Colorado Colorado Springs | Economics | ⏳ | ⏳ |
+| `vp-1043` | [Edward C. Hoang](https://vietprofs.roars.dev/people/vp-1043.html) | University of Colorado Colorado Springs | Economics | ✅ | ⏳ |
 | `vp-1044` | [Joseph Vu](https://vietprofs.roars.dev/people/vp-1044.html) | DePaul University | Finance & Real Estate | ⏳ | ⏳ |
 | `vp-1045` | [Hao Manh Quach](https://vietprofs.roars.dev/people/vp-1045.html) | University of Lincoln | Lincoln Business School | ⏳ | ⏳ |
 | `vp-1047` | [Chu V. Nguyen](https://vietprofs.roars.dev/people/vp-1047.html) | University of Houston-Downtown | Finance, Accounting and Enterprise Information Systems | ⏳ | ⏳ |
