@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "snapshotAt": "2026-09-12T23:59:58.678Z",
+  "snapshotAt": "2026-09-13T00:00:00.000Z",
   "ids": [
     "vp-0001",
     "vp-0002",
@@ -1493,7 +1493,16 @@
     "vp-1533",
     "vp-1534",
     "vp-1535",
-    "vp-1536"
+    "vp-1536",
+    "vp-1537",
+    "vp-1538",
+    "vp-1539",
+    "vp-1540",
+    "vp-1541",
+    "vp-1542",
+    "vp-1544",
+    "vp-1545",
+    "vp-1546"
   ],
   "batches": [
     {
@@ -3435,6 +3444,21 @@
         "vp-1534",
         "vp-1535",
         "vp-1536"
+      ],
+      "status": "pending"
+    },
+    {
+      "number": 76,
+      "ids": [
+        "vp-1537",
+        "vp-1538",
+        "vp-1539",
+        "vp-1540",
+        "vp-1541",
+        "vp-1542",
+        "vp-1544",
+        "vp-1545",
+        "vp-1546"
       ],
       "status": "pending"
     }
@@ -18611,6 +18635,78 @@
       "evidence": [],
       "errors": [],
       "updatedAt": "2026-09-12T23:59:58.678Z"
+    },
+    "vp-1537": {
+      "overview": "verified",
+      "work": "pending",
+      "sourcesChecked": [],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-13T00:00:00.000Z"
+    },
+    "vp-1538": {
+      "overview": "verified",
+      "work": "pending",
+      "sourcesChecked": [],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-13T00:00:00.000Z"
+    },
+    "vp-1539": {
+      "overview": "verified",
+      "work": "pending",
+      "sourcesChecked": [],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-13T00:00:00.000Z"
+    },
+    "vp-1540": {
+      "overview": "verified",
+      "work": "pending",
+      "sourcesChecked": [],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-13T00:00:00.000Z"
+    },
+    "vp-1541": {
+      "overview": "verified",
+      "work": "pending",
+      "sourcesChecked": [],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-13T00:00:00.000Z"
+    },
+    "vp-1542": {
+      "overview": "verified",
+      "work": "pending",
+      "sourcesChecked": [],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-13T00:00:00.000Z"
+    },
+    "vp-1544": {
+      "overview": "verified",
+      "work": "pending",
+      "sourcesChecked": [],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-13T00:00:00.000Z"
+    },
+    "vp-1545": {
+      "overview": "verified",
+      "work": "pending",
+      "sourcesChecked": [],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-13T00:00:00.000Z"
+    },
+    "vp-1546": {
+      "overview": "verified",
+      "work": "pending",
+      "sourcesChecked": [],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-13T00:00:00.000Z"
     }
   }
 }

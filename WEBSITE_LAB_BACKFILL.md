@@ -10,7 +10,8 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 - [x] Batch WL-02 complete
 - [x] Batch WL-03 complete
 - [x] Batch WL-04 complete
-- [ ] Batch WL-05 through WL-23 — not yet started
+- [x] Batch WL-05 complete
+- [ ] Batch WL-06 through WL-23 — not yet started
 
 ---
 
@@ -252,7 +253,7 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 
 ### Batch WL-05 (vp-0410 to vp-0462, 50 people)
 
-- [ ] Batch complete
+- [x] Batch complete
 
 | ID | Name | Institution | Department | Website | Lab |
 | :--- | :--- | :--- | :--- | :---: | :---: |
@@ -261,17 +262,17 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-0412` | [Khoa A. Nguyen](https://vietprofs.roars.dev/people/vp-0412.html) | Oregon Health & Science University | Medicine, Cardiovascular Medicine | ⏳ | ⏳ |
 | `vp-0413` | [Angela-Tu Nguyen](https://vietprofs.roars.dev/people/vp-0413.html) | Oregon Health & Science University | Pediatrics, General Pediatrics | ⏳ | ⏳ |
 | `vp-0414` | [Truong Tran](https://vietprofs.roars.dev/people/vp-0414.html) | Pennsylvania State University | Applied Linguistics | ⏳ | ⏳ |
-| `vp-0415` | [Elizabeth Tran](https://vietprofs.roars.dev/people/vp-0415.html) | Purdue University | Biochemistry | ⏳ | ⏳ |
+| `vp-0415` | [Elizabeth Tran](https://vietprofs.roars.dev/people/vp-0415.html) | Purdue University | Biochemistry | ⏳ | ✅ |
 | `vp-0417` | [Thanh Tran](https://vietprofs.roars.dev/people/vp-0417.html) | Rice University | Electrical and Computer Engineering | ⏳ | ⏳ |
-| `vp-0418` | [Kim-Phuong Le](https://vietprofs.roars.dev/people/vp-0418.html) | Rutgers University | Chemistry and Chemical Biology | ⏳ | ⏳ |
+| `vp-0418` | [Kim-Phuong Le](https://vietprofs.roars.dev/people/vp-0418.html) | Rutgers University | Chemistry and Chemical Biology | ⏳ | ✅ |
 | `vp-0419` | [Yvonne N. Bui](https://vietprofs.roars.dev/people/vp-0419.html) | San Francisco State University | Special Education | ⏳ | ⏳ |
 | `vp-0420` | [Minh Pham](https://vietprofs.roars.dev/people/vp-0420.html) | San Francisco State University | Decision Sciences | ⏳ | ⏳ |
-| `vp-0421` | [Thuy T. Le](https://vietprofs.roars.dev/people/vp-0421.html) | San Jose State University | Electrical Engineering | ⏳ | ⏳ |
-| `vp-0422` | [Nicholas Q. Tran](https://vietprofs.roars.dev/people/vp-0422.html) | Santa Clara University | Mathematics and Computer Science | ⏳ | ⏳ |
+| `vp-0421` | [Thuy T. Le](https://vietprofs.roars.dev/people/vp-0421.html) | San Jose State University | Electrical Engineering | ⏳ | ✅ |
+| `vp-0422` | [Nicholas Q. Tran](https://vietprofs.roars.dev/people/vp-0422.html) | Santa Clara University | Mathematics and Computer Science | ✅ | ⏳ |
 | `vp-0423` | [Dat Tran, S.J.](https://vietprofs.roars.dev/people/vp-0423.html) | Santa Clara University | Electrical and Computer Engineering | ⏳ | ⏳ |
 | `vp-0424` | [Xuan Hy Le](https://vietprofs.roars.dev/people/vp-0424.html) | Seattle University | Psychology | ⏳ | ⏳ |
-| `vp-0425` | [Nguyen P. Nguyen](https://vietprofs.roars.dev/people/vp-0425.html) | Texas A&M University | Educational Psychology | ⏳ | ⏳ |
-| `vp-0426` | [Aurora Le](https://vietprofs.roars.dev/people/vp-0426.html) | Texas A&M University | Health Behavior | ⏳ | ⏳ |
+| `vp-0425` | [Nguyen P. Nguyen](https://vietprofs.roars.dev/people/vp-0425.html) | Texas A&M University | Educational Psychology | ✅ | ⏳ |
+| `vp-0426` | [Aurora Le](https://vietprofs.roars.dev/people/vp-0426.html) | Texas A&M University | Health Behavior | ⏳ | ✅ |
 | `vp-0427` | [Minhhuyen T. Nguyen](https://vietprofs.roars.dev/people/vp-0427.html) | Temple University | Medicine | ⏳ | ⏳ |
 | `vp-0429` | [Thao P. Bui](https://vietprofs.roars.dev/people/vp-0429.html) | The University of Texas MD Anderson Cancer Center | Anesthesiology and Perioperative Medicine | ⏳ | ⏳ |
 | `vp-0430` | [Hop S. Tran Cao](https://vietprofs.roars.dev/people/vp-0430.html) | The University of Texas MD Anderson Cancer Center | Surgical Oncology | ⏳ | ⏳ |
@@ -279,33 +280,33 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-0432` | [Christopher Nguyen](https://vietprofs.roars.dev/people/vp-0432.html) | The University of Texas MD Anderson Cancer Center | Plastic Surgery | ⏳ | ⏳ |
 | `vp-0433` | [Sydney Pham](https://vietprofs.roars.dev/people/vp-0433.html) | The University of Texas MD Anderson Cancer Center | Anesthesiology and Perioperative Medicine | ⏳ | ⏳ |
 | `vp-0434` | [An Ngo-Huang](https://vietprofs.roars.dev/people/vp-0434.html) | The University of Texas MD Anderson Cancer Center | Palliative, Rehabilitation, and Integrative Medicine | ⏳ | ⏳ |
-| `vp-0436` | [Khanh-Hoa Tran-Ba](https://vietprofs.roars.dev/people/vp-0436.html) | Towson University | Chemistry and Forensic Science | ⏳ | ⏳ |
-| `vp-0437` | [Khoa Tran](https://vietprofs.roars.dev/people/vp-0437.html) | Tufts University | Biology | ⏳ | ⏳ |
+| `vp-0436` | [Khanh-Hoa Tran-Ba](https://vietprofs.roars.dev/people/vp-0436.html) | Towson University | Chemistry and Forensic Science | ⏳ | ✅ |
+| `vp-0437` | [Khoa Tran](https://vietprofs.roars.dev/people/vp-0437.html) | Tufts University | Biology | ⏳ | ✅ |
 | `vp-0438` | [Mai Do](https://vietprofs.roars.dev/people/vp-0438.html) | Tulane University | International Health and Sustainable Development | ⏳ | ⏳ |
 | `vp-0439` | [Jeremy Binh Nguyen](https://vietprofs.roars.dev/people/vp-0439.html) | Tulane University | Radiology | ⏳ | ⏳ |
 | `vp-0440` | [Trung L. Nguyen](https://vietprofs.roars.dev/people/vp-0440.html) | Tulane University | PreK-12 Education | ⏳ | ⏳ |
 | `vp-0441` | [Long D. Tran](https://vietprofs.roars.dev/people/vp-0441.html) | UTHealth Houston | General Practice and Dental Public Health | ⏳ | ⏳ |
 | `vp-0442` | [Nghi H. Tran](https://vietprofs.roars.dev/people/vp-0442.html) | University of Akron | Electrical and Computer Engineering | ⏳ | ⏳ |
-| `vp-0443` | [Hung Nguyen - University of Akron](https://vietprofs.roars.dev/people/vp-0443.html) | University of Akron | Mathematics | ⏳ | ⏳ |
+| `vp-0443` | [Hung Nguyen - University of Akron](https://vietprofs.roars.dev/people/vp-0443.html) | University of Akron | Mathematics | ✅ | ⏳ |
 | `vp-0444` | [Vu Q. Nguyen - University of Alabama at Birmingham](https://vietprofs.roars.dev/people/vp-0444.html) | University of Alabama at Birmingham | Physical Medicine and Rehabilitation | ⏳ | ⏳ |
 | `vp-0445` | [Brittany Huynh](https://vietprofs.roars.dev/people/vp-0445.html) | University of Alabama at Birmingham | Pediatrics | ⏳ | ⏳ |
-| `vp-0446` | [Kelly Nguyen](https://vietprofs.roars.dev/people/vp-0446.html) | University of California, Los Angeles | Classics | ⏳ | ⏳ |
+| `vp-0446` | [Kelly Nguyen](https://vietprofs.roars.dev/people/vp-0446.html) | University of California, Los Angeles | Classics | ⏳ | ✅ |
 | `vp-0447` | [Diu-Huong Nguyen](https://vietprofs.roars.dev/people/vp-0447.html) | University of California, Irvine | History | ⏳ | ⏳ |
 | `vp-0448` | [Ninh Tuan Nguyen](https://vietprofs.roars.dev/people/vp-0448.html) | University of California, Irvine | Surgery | ⏳ | ⏳ |
-| `vp-0449` | [Danh V. Nguyen](https://vietprofs.roars.dev/people/vp-0449.html) | University of California, Irvine | Medicine | ⏳ | ⏳ |
-| `vp-0450` | [An H. Do](https://vietprofs.roars.dev/people/vp-0450.html) | University of California, Irvine | Neurology | ⏳ | ⏳ |
-| `vp-0451` | [Linda Trinh Vo](https://vietprofs.roars.dev/people/vp-0451.html) | University of California, Irvine | Asian American Studies | ⏳ | ⏳ |
+| `vp-0449` | [Danh V. Nguyen](https://vietprofs.roars.dev/people/vp-0449.html) | University of California, Irvine | Medicine | ⏳ | ✅ |
+| `vp-0450` | [An H. Do](https://vietprofs.roars.dev/people/vp-0450.html) | University of California, Irvine | Neurology | ⏳ | ✅ |
+| `vp-0451` | [Linda Trinh Vo](https://vietprofs.roars.dev/people/vp-0451.html) | University of California, Irvine | Asian American Studies | ⏳ | ✅ |
 | `vp-0452` | [Thu Elizabeth Duong](https://vietprofs.roars.dev/people/vp-0452.html) | University of California, San Diego | Pediatrics | ⏳ | ⏳ |
-| `vp-0453` | [Vu Tran](https://vietprofs.roars.dev/people/vp-0453.html) | University of Chicago | English Language and Literature | ⏳ | ⏳ |
+| `vp-0453` | [Vu Tran](https://vietprofs.roars.dev/people/vp-0453.html) | University of Chicago | English Language and Literature | ✅ | ⏳ |
 | `vp-0454` | [Giao Q. Tran](https://vietprofs.roars.dev/people/vp-0454.html) | University of Cincinnati | Psychology | ⏳ | ⏳ |
-| `vp-0455` | [Alexandra Nguyen](https://vietprofs.roars.dev/people/vp-0455.html) | University of Colorado Boulder | Music | ⏳ | ⏳ |
+| `vp-0455` | [Alexandra Nguyen](https://vietprofs.roars.dev/people/vp-0455.html) | University of Colorado Boulder | Music | ✅ | ⏳ |
 | `vp-0456` | [Cuong Nguyen](https://vietprofs.roars.dev/people/vp-0456.html) | University of Florida | Infectious Diseases and Immunology | ⏳ | ⏳ |
-| `vp-0457` | [Lien T. Nguyen](https://vietprofs.roars.dev/people/vp-0457.html) | University of Florida | Molecular Genetics and Microbiology | ⏳ | ⏳ |
+| `vp-0457` | [Lien T. Nguyen](https://vietprofs.roars.dev/people/vp-0457.html) | University of Florida | Molecular Genetics and Microbiology | ⏳ | ✅ |
 | `vp-0458` | [Minh X. Nguyen](https://vietprofs.roars.dev/people/vp-0458.html) | University of Florida | Radiology | ⏳ | ⏳ |
 | `vp-0459` | [Nhu Nguyen - University of Hawaiʻi at Mānoa](https://vietprofs.roars.dev/people/vp-0459.html) | University of Hawaiʻi at Mānoa | Tropical Plant and Soil Sciences | ⏳ | ⏳ |
 | `vp-0460` | [Lan Chi Nguyen](https://vietprofs.roars.dev/people/vp-0460.html) | University of Houston | Clinical Sciences, College of Optometry | ⏳ | ⏳ |
 | `vp-0461` | [Ngoc Bui - University of La Verne](https://vietprofs.roars.dev/people/vp-0461.html) | University of La Verne | Psychology | ⏳ | ⏳ |
-| `vp-0462` | [Thu Thi Xuan Nguyen](https://vietprofs.roars.dev/people/vp-0462.html) | University of Maryland, College Park | Epidemiology and Biostatistics | ⏳ | ⏳ |
+| `vp-0462` | [Thu Thi Xuan Nguyen](https://vietprofs.roars.dev/people/vp-0462.html) | University of Maryland, College Park | Epidemiology and Biostatistics | ⏳ | ✅ |
 
 ---
 
