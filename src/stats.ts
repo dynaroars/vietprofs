@@ -1,5 +1,6 @@
 import './style.css';
 import { escapeHtml } from './utils.ts';
+import { loadRoster, type RosterEntry } from './data.ts';
 
 export interface DailyStat {
   date: string;
@@ -51,6 +52,7 @@ export interface StatsResponse {
     last30Days: number;
   };
   today: {
+    date?: string;
     requests: number;
     pageViews: number;
     visits?: number;
@@ -134,7 +136,25 @@ function calculateMedian(numbers: number[]): number {
   return sorted[middle];
 }
 
-function renderTrafficChart(daily: DailyStat[]): string {
+function resolvePageLabel(path: string, fallbackLabel: string, rosterMap: Map<string, RosterEntry>): string {
+  if (!path || path === '/' || path === '/index.html') return 'Main Directory';
+  if (path === '/submit.html') return 'Submit / Update Entry';
+  if (path === '/stats.html') return 'Visitor Statistics';
+
+  if (path.startsWith('/people/')) {
+    const id = path.replace('/people/', '').replace('.html', '');
+    const person = rosterMap.get(id);
+    if (person) {
+      const vName = person.vietnameseName ? ` (${person.vietnameseName})` : '';
+      return `${person.name}${vName} — ${person.university}`;
+    }
+    return fallbackLabel || `Profile ${id}`;
+  }
+
+  return fallbackLabel || path;
+}
+
+function renderTrafficChart(daily: DailyStat[], todayStr: string): string {
   if (!daily || daily.length === 0) {
     return '<p class="no-data">No traffic chart data available.</p>';
   }
@@ -184,8 +204,10 @@ function renderTrafficChart(daily: DailyStat[]): string {
   daily.forEach((d, i) => {
     if (i % step === 0 || i === daily.length - 1) {
       const x = paddingLeft + (i / Math.max(1, daily.length - 1)) * chartWidth;
+      const isPartial = d.date === todayStr;
+      const label = `${formatDateLabel(d.date)}${isPartial ? '*' : ''}`;
       xAxisLabels += `
-        <text x="${x}" y="${height - 12}" font-size="11" text-anchor="middle" fill="currentColor" opacity="0.6">${formatDateLabel(d.date)}</text>
+        <text x="${x}" y="${height - 12}" font-size="11" text-anchor="middle" fill="currentColor" opacity="0.6">${escapeHtml(label)}</text>
       `;
     }
   });
@@ -209,7 +231,7 @@ function renderTrafficChart(daily: DailyStat[]): string {
   `;
 }
 
-function renderDailyTable(daily: DailyStat[]): string {
+function renderDailyTable(daily: DailyStat[], todayStr: string): string {
   if (!daily || daily.length === 0) return '';
   const reversed = [...daily].reverse();
 
@@ -225,21 +247,28 @@ function renderDailyTable(daily: DailyStat[]): string {
           </tr>
         </thead>
         <tbody>
-          ${reversed.map((d) => `
-            <tr>
-              <td><strong>${escapeHtml(formatDateFull(d.date))}</strong></td>
-              <td class="num-col"><strong>${formatNumber(visitCount(d))}</strong></td>
-              <td class="num-col">${formatNumber(d.pageViews || 0)}</td>
-              <td class="num-col">${formatNumber(d.requests || 0)}</td>
-            </tr>
-          `).join('')}
+          ${reversed.map((d) => {
+            const isPartial = d.date === todayStr;
+            const dateDisplay = isPartial
+              ? `${formatDateFull(d.date)} <span class="partial-tag">(partial day)</span>`
+              : formatDateFull(d.date);
+            return `
+              <tr ${isPartial ? 'class="partial-row"' : ''}>
+                <td><strong>${dateDisplay}</strong></td>
+                <td class="num-col"><strong>${formatNumber(visitCount(d))}</strong></td>
+                <td class="num-col">${formatNumber(d.pageViews || 0)}</td>
+                <td class="num-col">${formatNumber(d.requests || 0)}</td>
+              </tr>
+            `;
+          }).join('')}
         </tbody>
       </table>
     </div>
   `;
 }
 
-function renderStatsContent(data: StatsResponse) {
+function renderStatsContent(data: StatsResponse, rosterMap: Map<string, RosterEntry>) {
+  const todayStr = data.today?.date || new Date().toISOString().split('T')[0];
   const coverage7 = data.coverage?.last7Days ?? Math.min(data.daily?.length || 0, 7);
   const coverage30 = data.coverage?.last30Days ?? (data.daily?.length || 0);
 
@@ -247,18 +276,22 @@ function renderStatsContent(data: StatsResponse) {
   const avgVisits7 = data.baseline?.avgVisitsPerDay ?? Math.round(visitCount(data.last7Days) / Math.max(1, coverage7));
   const medianVisits7 = data.baseline?.medianVisitsPerDay ?? calculateMedian(visits7List);
 
+  // Detect spike day if visits > 2.2 * medianVisits
+  const spikeDay = (data.daily || []).find(d => visitCount(d) > 2.2 * Math.max(1, medianVisits7));
+  const averageSubtext = spikeDay
+    ? `Average: ${formatNumber(avgVisits7)}/day (affected by ${formatDateLabel(spikeDay.date)} traffic spike)`
+    : `Average: ${formatNumber(avgVisits7)}/day over recent available days`;
+
   const headline = data.topCountries?.length > 0
     ? `VietProfs received visits from <strong>${data.topCountries.length} request-origin countries</strong> over the recent 7-day period.`
     : `Hostname-scoped aggregate network statistics for VietProfs.`;
 
-  // Page breakdown statistics
   const profileViews = data.pageBreakdown?.profileViews ?? 0;
   const profilePct = data.pageBreakdown?.profilePct ?? 0;
   const mainViews = data.pageBreakdown?.mainViews ?? 0;
   const submitViews = data.pageBreakdown?.submitViews ?? 0;
   const statsViews = data.pageBreakdown?.statsViews ?? 0;
 
-  // 7-day country total visits calculation for percentages
   const total7DayCountryVisits = (data.topCountries || []).reduce((acc, c) => acc + (c.visits || c.count || 0), 0);
 
   return `
@@ -273,6 +306,14 @@ function renderStatsContent(data: StatsResponse) {
                 <h1>VietProfs Visitor Statistics</h1>
               </div>
               <p class="synopsis">Hostname-scoped, privacy-respecting visitor traffic metrics powered by Cloudflare Analytics.</p>
+
+              <div class="stats-headline-bar">
+                <span class="headline-metric"><strong>Recent baseline:</strong> ${formatNumber(medianVisits7)} visits/day</span>
+                <span class="headline-bullet">•</span>
+                <span class="headline-metric"><strong>Countries reached (7 Days):</strong> ${formatNumber(data.countriesCount || 0)}</span>
+                <span class="headline-bullet">•</span>
+                <span class="headline-metric"><strong>Profile views share:</strong> ${profilePct}%</span>
+              </div>
             </div>
           </div>
         </section>
@@ -292,19 +333,19 @@ function renderStatsContent(data: StatsResponse) {
           <h2>VISITOR TRAFFIC METRICS</h2>
           <div class="stats-grid">
             <div class="stat-card">
-              <span class="stat-label">Visits Today</span>
+              <span class="stat-label">Visits Today <span class="partial-tag">(Partial)</span></span>
               <strong class="stat-value">${formatNumber(visitCount(data.today))}</strong>
-              <span class="stat-sub">${formatNumber(data.today?.pageViews || 0)} successful HTML page views</span>
+              <span class="stat-sub">${formatNumber(data.today?.pageViews || 0)} successful HTML page views (day in progress)</span>
             </div>
             <div class="stat-card">
               <span class="stat-label">Visits (7 Days)</span>
               <strong class="stat-value">${formatNumber(visitCount(data.last7Days))}</strong>
               <span class="stat-sub">${escapeHtml(coverageLabel(coverage7, 7))}</span>
             </div>
-            <div class="stat-card">
-              <span class="stat-label">Recent Daily Baseline (7 Days)</span>
+            <div class="stat-card stat-card-primary">
+              <span class="stat-label">Recent Daily Baseline</span>
               <strong class="stat-value">${formatNumber(medianVisits7)} <span class="stat-unit">median visits/day</span></strong>
-              <span class="stat-sub">Average: ${formatNumber(avgVisits7)} visits/day over recent available days</span>
+              <span class="stat-sub">${escapeHtml(averageSubtext)}</span>
             </div>
             <div class="stat-card">
               <span class="stat-label">Visits (30-Day Window)</span>
@@ -326,8 +367,8 @@ function renderStatsContent(data: StatsResponse) {
 
         <section class="man-section">
           <h2>TRAFFIC TREND &amp; DAILY HISTORY</h2>
-          ${renderTrafficChart(data.daily)}
-          ${renderDailyTable(data.daily)}
+          ${renderTrafficChart(data.daily, todayStr)}
+          ${renderDailyTable(data.daily, todayStr)}
         </section>
 
         <section class="man-section">
@@ -364,10 +405,11 @@ function renderStatsContent(data: StatsResponse) {
               </tbody>
             </table>
           </div>
-          ${(data.topCountriesToday && data.topCountriesToday.length > 0) ? `
-            <details class="stats-secondary-details" style="margin-top: 1rem;">
-              <summary><strong>View Top Countries Today (Secondary View)</strong></summary>
-              <div class="stats-table-wrapper" style="margin-top: 0.5rem;">
+
+          <details class="stats-secondary-details" style="margin-top: 1rem;">
+            <summary><strong>View Top Countries Today (Secondary View)</strong></summary>
+            <div class="stats-table-wrapper" style="margin-top: 0.5rem;">
+              ${(data.topCountriesToday && data.topCountriesToday.length > 0) ? `
                 <table class="stats-table">
                   <thead>
                     <tr>
@@ -389,9 +431,11 @@ function renderStatsContent(data: StatsResponse) {
                     `).join('')}
                   </tbody>
                 </table>
-              </div>
-            </details>
-          ` : ''}
+              ` : `
+                <p class="stat-sub" style="padding: 0.5rem 0; font-style: italic;">No country visit data recorded yet for today (partial day in progress).</p>
+              `}
+            </div>
+          </details>
         </section>
 
         <section class="man-section">
@@ -435,9 +479,10 @@ function renderStatsContent(data: StatsResponse) {
               <tbody>
                 ${(data.topPages || []).slice(0, 10).map((p) => {
                   const href = pageHref(p.path);
+                  const labelStr = resolvePageLabel(p.path, p.label, rosterMap);
                   const pageLabel = href
-                    ? `<a class="stats-page-link" href="${escapeHtml(href)}"><strong>${escapeHtml(p.label)}</strong></a>`
-                    : `<strong>${escapeHtml(p.label)}</strong>`;
+                    ? `<a class="stats-page-link" href="${escapeHtml(href)}"><strong>${escapeHtml(labelStr)}</strong></a>`
+                    : `<strong>${escapeHtml(labelStr)}</strong>`;
                   const pagePath = href
                     ? `<a class="stats-page-link" href="${escapeHtml(href)}"><code class="path-code">${escapeHtml(p.path)}</code></a>`
                     : `<code class="path-code">${escapeHtml(p.path)}</code>`;
@@ -584,8 +629,15 @@ async function initStatsPage() {
   app.innerHTML = renderLoading();
 
   try {
-    const data = await fetchStats();
-    app.innerHTML = renderStatsContent(data);
+    const [data, roster] = await Promise.all([
+      fetchStats(),
+      loadRoster().catch(() => []),
+    ]);
+
+    const rosterMap = new Map<string, RosterEntry>();
+    (roster || []).forEach(p => rosterMap.set(p.id, p));
+
+    app.innerHTML = renderStatsContent(data, rosterMap);
   } catch (err: unknown) {
     const msg = err instanceof Error ? err.message : 'Temporarily unavailable';
     app.innerHTML = renderError(msg);

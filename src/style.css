@@ -3018,6 +3018,39 @@ button.chart-row-btn:hover {
   border-left: 3px solid var(--accent-color, #2563eb);
 }
 
+.stats-headline-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  margin-top: 0.75rem;
+  padding: 0.5rem 0.85rem;
+  background: var(--tag-bg, rgba(255, 255, 255, 0.04));
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: var(--radius-sm, 4px);
+  font-size: var(--text-sm, 0.875rem);
+}
+
+.headline-metric {
+  color: var(--text-color);
+}
+
+.headline-bullet {
+  color: var(--text-muted);
+  font-weight: bold;
+}
+
+.partial-tag {
+  font-size: 0.75rem;
+  font-weight: normal;
+  color: #d97706;
+  font-style: italic;
+}
+
+.partial-row {
+  opacity: 0.85;
+}
+
 .stats-secondary-details summary {
   cursor: pointer;
   font-size: var(--text-sm, 0.875rem);
