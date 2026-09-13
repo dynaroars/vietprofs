@@ -11,7 +11,8 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 - [x] Batch WL-03 complete
 - [x] Batch WL-04 complete
 - [x] Batch WL-05 complete
-- [ ] Batch WL-06 through WL-23 — not yet started
+- [x] Batch WL-06 complete
+- [ ] Batch WL-07 through WL-23 — not yet started
 
 ---
 
@@ -312,7 +313,7 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 
 ### Batch WL-06 (vp-0463 to vp-0520, 50 people)
 
-- [ ] Batch complete
+- [x] Batch complete
 
 | ID | Name | Institution | Department | Website | Lab |
 | :--- | :--- | :--- | :--- | :---: | :---: |
@@ -329,39 +330,39 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-0473` | [Liem Thanh Tran](https://vietprofs.roars.dev/people/vp-0473.html) | University of Tennessee, Knoxville | Geography | ⏳ | ⏳ |
 | `vp-0474` | [Bau P. Tran](https://vietprofs.roars.dev/people/vp-0474.html) | University of Texas Southwestern Medical Center | Physician Assistant Studies | ⏳ | ⏳ |
 | `vp-0475` | [Benjamin Nguyen](https://vietprofs.roars.dev/people/vp-0475.html) | University of Texas Southwestern Medical Center | Physical Medicine and Rehabilitation | ⏳ | ⏳ |
-| `vp-0477` | [Patricia Nguyen](https://vietprofs.roars.dev/people/vp-0477.html) | University of Virginia | American Studies | ⏳ | ⏳ |
-| `vp-0479` | [Linh Ngo](https://vietprofs.roars.dev/people/vp-0479.html) | West Chester University of Pennsylvania | Computer Science | ⏳ | ⏳ |
-| `vp-0480` | [Don X. Nguyen](https://vietprofs.roars.dev/people/vp-0480.html) | Yale University | Pathology and Medical Oncology | ⏳ | ⏳ |
-| `vp-0481` | [Phuong Dao](https://vietprofs.roars.dev/people/vp-0481.html) | The University of Texas at Austin | Integrative Biology | ⏳ | ⏳ |
+| `vp-0477` | [Patricia Nguyen](https://vietprofs.roars.dev/people/vp-0477.html) | University of Virginia | American Studies | ✅ | ⏳ |
+| `vp-0479` | [Linh Ngo](https://vietprofs.roars.dev/people/vp-0479.html) | West Chester University of Pennsylvania | Computer Science | ✅ | ⏳ |
+| `vp-0480` | [Don X. Nguyen](https://vietprofs.roars.dev/people/vp-0480.html) | Yale University | Pathology and Medical Oncology | ⏳ | ✅ |
+| `vp-0481` | [Phuong Dao](https://vietprofs.roars.dev/people/vp-0481.html) | The University of Texas at Austin | Integrative Biology | ⏳ | ✅ |
 | `vp-0483` | [Kimberly Kay Hoang](https://vietprofs.roars.dev/people/vp-0483.html) | University of Chicago | Sociology | ⏳ | ⏳ |
 | `vp-0484` | [T. Minh-ha Trinh](https://vietprofs.roars.dev/people/vp-0484.html) | University of California, Berkeley | Gender and Women's Studies | ⏳ | ⏳ |
 | `vp-0485` | [Hue-Tam Ho Tai](https://vietprofs.roars.dev/people/vp-0485.html) | Harvard University | History | ⏳ | ⏳ |
 | `vp-0486` | [Bich-Ngoc Turner](https://vietprofs.roars.dev/people/vp-0486.html) | University of Washington | Asian Languages and Literature | ⏳ | ⏳ |
-| `vp-0487` | [Nhan Phan-Thien](https://vietprofs.roars.dev/people/vp-0487.html) | National University of Singapore | Mechanical Engineering | ⏳ | ⏳ |
-| `vp-0488` | [Hai Minh Duong](https://vietprofs.roars.dev/people/vp-0488.html) | National University of Singapore | Mechanical Engineering | ⏳ | ⏳ |
+| `vp-0487` | [Nhan Phan-Thien](https://vietprofs.roars.dev/people/vp-0487.html) | National University of Singapore | Mechanical Engineering | ⏳ | ✅ |
+| `vp-0488` | [Hai Minh Duong](https://vietprofs.roars.dev/people/vp-0488.html) | National University of Singapore | Mechanical Engineering | ✅ | ⏳ |
 | `vp-0489` | [Han Vinh Huynh](https://vietprofs.roars.dev/people/vp-0489.html) | National University of Singapore | Chemistry | ⏳ | ⏳ |
 | `vp-0490` | [Thai Tran](https://vietprofs.roars.dev/people/vp-0490.html) | National University of Singapore | Physiology | ⏳ | ⏳ |
 | `vp-0491` | [Toan Thang Phan](https://vietprofs.roars.dev/people/vp-0491.html) | National University of Singapore | Surgery | ⏳ | ⏳ |
 | `vp-0492` | [Minh Khuong Vu](https://vietprofs.roars.dev/people/vp-0492.html) | National University of Singapore | Lee Kuan Yew School of Public Policy | ⏳ | ⏳ |
-| `vp-0493` | [Quang-Cuong Pham](https://vietprofs.roars.dev/people/vp-0493.html) | Nanyang Technological University | Mechanical and Aerospace Engineering | ⏳ | ⏳ |
+| `vp-0493` | [Quang-Cuong Pham](https://vietprofs.roars.dev/people/vp-0493.html) | Nanyang Technological University | Mechanical and Aerospace Engineering | ✅ | ⏳ |
 | `vp-0494` | [Tuan Tran - Nanyang Technological University](https://vietprofs.roars.dev/people/vp-0494.html) | Nanyang Technological University | Mechanical and Aerospace Engineering | ⏳ | ⏳ |
 | `vp-0495` | [Hung Dinh Nguyen](https://vietprofs.roars.dev/people/vp-0495.html) | Nanyang Technological University | Electrical and Electronic Engineering | ⏳ | ⏳ |
-| `vp-0496` | [Viet Ha Hoang](https://vietprofs.roars.dev/people/vp-0496.html) | Nanyang Technological University | Mathematical Sciences | ⏳ | ⏳ |
+| `vp-0496` | [Viet Ha Hoang](https://vietprofs.roars.dev/people/vp-0496.html) | Nanyang Technological University | Mathematical Sciences | ✅ | ⏳ |
 | `vp-0497` | [Tien Mai](https://vietprofs.roars.dev/people/vp-0497.html) | Singapore Management University | Computing and Information Systems | ⏳ | ⏳ |
 | `vp-0498` | [Don Ta](https://vietprofs.roars.dev/people/vp-0498.html) | Singapore Management University | Computing and Information Systems | ⏳ | ⏳ |
 | `vp-0500` | [Dinh Phung](https://vietprofs.roars.dev/people/vp-0500.html) | Monash University | Faculty of Information Technology | ⏳ | ⏳ |
-| `vp-0502` | [Tuan Van Nguyen](https://vietprofs.roars.dev/people/vp-0502.html) | University of Technology Sydney | School of Electrical, Mechanical and Biomedical Engineering | ⏳ | ⏳ |
-| `vp-0503` | [Nguyen Tran](https://vietprofs.roars.dev/people/vp-0503.html) | The University of Sydney | School of Computer Science | ⏳ | ⏳ |
+| `vp-0502` | [Tuan Van Nguyen](https://vietprofs.roars.dev/people/vp-0502.html) | University of Technology Sydney | School of Electrical, Mechanical and Biomedical Engineering | ✅ | ✅ |
+| `vp-0503` | [Nguyen Tran](https://vietprofs.roars.dev/people/vp-0503.html) | The University of Sydney | School of Computer Science | ⏳ | ✅ |
 | `vp-0505` | [Hoa Nguyen - University of New South Wales](https://vietprofs.roars.dev/people/vp-0505.html) | University of New South Wales | School of Education | ⏳ | ⏳ |
-| `vp-0506` | [Son Hoang Dau](https://vietprofs.roars.dev/people/vp-0506.html) | RMIT University | School of Computing Technologies | ⏳ | ⏳ |
+| `vp-0506` | [Son Hoang Dau](https://vietprofs.roars.dev/people/vp-0506.html) | RMIT University | School of Computing Technologies | ✅ | ⏳ |
 | `vp-0507` | [Tho Le-Ngoc](https://vietprofs.roars.dev/people/vp-0507.html) | McGill University | Department of Electrical and Computer Engineering | ⏳ | ⏳ |
-| `vp-0508` | [Helen Tran](https://vietprofs.roars.dev/people/vp-0508.html) | University of Toronto | Department of Chemistry | ⏳ | ⏳ |
-| `vp-0509` | [Nguyen Phong Hoang](https://vietprofs.roars.dev/people/vp-0509.html) | The University of British Columbia | Department of Computer Science | ⏳ | ⏳ |
-| `vp-0510` | [Ly Vu](https://vietprofs.roars.dev/people/vp-0510.html) | The University of British Columbia | Faculty of Pharmaceutical Sciences | ⏳ | ⏳ |
+| `vp-0508` | [Helen Tran](https://vietprofs.roars.dev/people/vp-0508.html) | University of Toronto | Department of Chemistry | ⏳ | ✅ |
+| `vp-0509` | [Nguyen Phong Hoang](https://vietprofs.roars.dev/people/vp-0509.html) | The University of British Columbia | Department of Computer Science | ✅ | ✅ |
+| `vp-0510` | [Ly Vu](https://vietprofs.roars.dev/people/vp-0510.html) | The University of British Columbia | Faculty of Pharmaceutical Sciences | ⏳ | ✅ |
 | `vp-0511` | [Duong Bui](https://vietprofs.roars.dev/people/vp-0511.html) | University of Waterloo | Department of Chemistry | ⏳ | ⏳ |
 | `vp-0512` | [Chinh T. Hoang](https://vietprofs.roars.dev/people/vp-0512.html) | Wilfrid Laurier University | Department of Physics and Computer Science | ⏳ | ⏳ |
-| `vp-0513` | [Vinh Nguyen - University of Waterloo](https://vietprofs.roars.dev/people/vp-0513.html) | University of Waterloo | Department of English Language and Literature | ⏳ | ⏳ |
-| `vp-0514` | [Huong Nguyen - McGill University](https://vietprofs.roars.dev/people/vp-0514.html) | McGill University | Department of Plant Science | ⏳ | ⏳ |
+| `vp-0513` | [Vinh Nguyen - University of Waterloo](https://vietprofs.roars.dev/people/vp-0513.html) | University of Waterloo | Department of English Language and Literature | ✅ | ⏳ |
+| `vp-0514` | [Huong Nguyen - McGill University](https://vietprofs.roars.dev/people/vp-0514.html) | McGill University | Department of Plant Science | ✅ | ⏳ |
 | `vp-0517` | [Xuan-Vinh Doan](https://vietprofs.roars.dev/people/vp-0517.html) | University of Warwick | Warwick Business School | ⏳ | ⏳ |
 | `vp-0518` | [Phung Dao](https://vietprofs.roars.dev/people/vp-0518.html) | University of Cambridge | Faculty of Education | ⏳ | ⏳ |
 | `vp-0519` | [Van Tan Le](https://vietprofs.roars.dev/people/vp-0519.html) | University of Oxford | Nuffield Department of Medicine | ⏳ | ⏳ |
