@@ -19,7 +19,8 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 - [x] Batch WL-11 complete
 - [x] Batch WL-12 complete
 - [x] Batch WL-13 complete
-- [ ] Batch WL-14 through WL-23 — not yet started
+- [x] Batch WL-14 complete
+- [ ] Batch WL-15 through WL-23 — not yet started
 
 ---
 
@@ -792,18 +793,18 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 
 ### Batch WL-14 (vp-0937 to vp-0990, 50 people)
 
-- [ ] Batch complete
+- [x] Batch complete
 
 | ID | Name | Institution | Department | Website | Lab |
 | :--- | :--- | :--- | :--- | :---: | :---: |
-| `vp-0937` | [Annalee Nguyen](https://vietprofs.roars.dev/people/vp-0937.html) | The University of Texas at Austin | Chemical Engineering | ⏳ | ⏳ |
-| `vp-0938` | [Van Vo](https://vietprofs.roars.dev/people/vp-0938.html) | University of Nevada, Las Vegas | Nevada Institute of Personalized Medicine | ⏳ | ⏳ |
+| `vp-0937` | [Annalee Nguyen](https://vietprofs.roars.dev/people/vp-0937.html) | The University of Texas at Austin | Chemical Engineering | ⏳ | ✅ |
+| `vp-0938` | [Van Vo](https://vietprofs.roars.dev/people/vp-0938.html) | University of Nevada, Las Vegas | Nevada Institute of Personalized Medicine | ⏳ | ✅ |
 | `vp-0939` | [Thanh Lam Nguyen](https://vietprofs.roars.dev/people/vp-0939.html) | University of Florida | Chemistry | ⏳ | ⏳ |
 | `vp-0940` | [Van Tuan Dinh](https://vietprofs.roars.dev/people/vp-0940.html) | University of Rochester | Electrical and Computer Engineering | ⏳ | ⏳ |
-| `vp-0941` | [Nam Tran](https://vietprofs.roars.dev/people/vp-0941.html) | Auburn University | National Center for Asphalt Technology | ⏳ | ⏳ |
+| `vp-0941` | [Nam Tran](https://vietprofs.roars.dev/people/vp-0941.html) | Auburn University | National Center for Asphalt Technology | ✅ | ⏳ |
 | `vp-0942` | [Huy Q. Ta](https://vietprofs.roars.dev/people/vp-0942.html) | University of Virginia | Surgery | ⏳ | ⏳ |
-| `vp-0944` | [Kiet Duong](https://vietprofs.roars.dev/people/vp-0944.html) | University of York | School for Business and Society | ⏳ | ⏳ |
-| `vp-0945` | [Daniel Dao](https://vietprofs.roars.dev/people/vp-0945.html) | Regent's University London | Business, Finance and Entrepreneurship | ⏳ | ⏳ |
+| `vp-0944` | [Kiet Duong](https://vietprofs.roars.dev/people/vp-0944.html) | University of York | School for Business and Society | ✅ | ⏳ |
+| `vp-0945` | [Daniel Dao](https://vietprofs.roars.dev/people/vp-0945.html) | Regent's University London | Business, Finance and Entrepreneurship | ✅ | ⏳ |
 | `vp-0946` | [Thuy Hang Do](https://vietprofs.roars.dev/people/vp-0946.html) | University of Southampton | Strategy, Innovation and Entrepreneurship | ⏳ | ⏳ |
 | `vp-0947` | [Quoc Tuan Ho](https://vietprofs.roars.dev/people/vp-0947.html) | University of Bristol | University of Bristol Business School | ⏳ | ⏳ |
 | `vp-0948` | [Linh H. Nguyen](https://vietprofs.roars.dev/people/vp-0948.html) | University of Nottingham | Finance, Accounting and Banking | ⏳ | ⏳ |
@@ -814,14 +815,14 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-0954` | [Tan Vo-Thanh](https://vietprofs.roars.dev/people/vp-0954.html) | EMLV Business School | Marketing | ⏳ | ⏳ |
 | `vp-0955` | [Hung Do](https://vietprofs.roars.dev/people/vp-0955.html) | Massey University | School of Accountancy, Economics and Finance | ⏳ | ⏳ |
 | `vp-0957` | [Hung T. T. Nguyen](https://vietprofs.roars.dev/people/vp-0957.html) | University of Illinois Urbana-Champaign | Earth Science & Environmental Change | ⏳ | ⏳ |
-| `vp-0958` | [Tammy Vo Nguyen](https://vietprofs.roars.dev/people/vp-0958.html) | Wesleyan University | Art and Art History | ⏳ | ⏳ |
+| `vp-0958` | [Tammy Vo Nguyen](https://vietprofs.roars.dev/people/vp-0958.html) | Wesleyan University | Art and Art History | ✅ | ⏳ |
 | `vp-0959` | [Holly Nguyen](https://vietprofs.roars.dev/people/vp-0959.html) | Pennsylvania State University | Sociology and Criminology | ⏳ | ⏳ |
 | `vp-0960` | [Hong-An Truong](https://vietprofs.roars.dev/people/vp-0960.html) | University of North Carolina at Chapel Hill | Art and Art History | ⏳ | ⏳ |
-| `vp-0961` | [Dinh Loc Duong](https://vietprofs.roars.dev/people/vp-0961.html) | University of Maine | Physics and Astronomy | ⏳ | ⏳ |
+| `vp-0961` | [Dinh Loc Duong](https://vietprofs.roars.dev/people/vp-0961.html) | University of Maine | Physics and Astronomy | ⏳ | ✅ |
 | `vp-0962` | [Tra Huynh](https://vietprofs.roars.dev/people/vp-0962.html) | Western Washington University | Physics and Astronomy | ⏳ | ⏳ |
 | `vp-0963` | [Tran Nguyen Templeton](https://vietprofs.roars.dev/people/vp-0963.html) | Teachers College, Columbia University | Curriculum and Teaching | ⏳ | ⏳ |
 | `vp-0964` | [Quynh N. Pham](https://vietprofs.roars.dev/people/vp-0964.html) | University of San Francisco | International Studies | ⏳ | ⏳ |
-| `vp-0965` | [Quynh Anh Nguyen](https://vietprofs.roars.dev/people/vp-0965.html) | Vanderbilt University | Pharmacology | ⏳ | ⏳ |
+| `vp-0965` | [Quynh Anh Nguyen](https://vietprofs.roars.dev/people/vp-0965.html) | Vanderbilt University | Pharmacology | ⏳ | ✅ |
 | `vp-0966` | [Quynh Hoang](https://vietprofs.roars.dev/people/vp-0966.html) | University of Leicester | Marketing and Strategy | ⏳ | ⏳ |
 | `vp-0968` | [Quan M. P. Nguyen](https://vietprofs.roars.dev/people/vp-0968.html) | University of Sussex | Accounting and Finance | ⏳ | ⏳ |
 | `vp-0969` | [Binh Vu](https://vietprofs.roars.dev/people/vp-0969.html) | University of Houston | William A. Brookshire Department of Chemical and Biomolecular Engineering | ⏳ | ⏳ |
@@ -841,11 +842,11 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-0983` | [Nguyen H. Tran](https://vietprofs.roars.dev/people/vp-0983.html) | Mayo Clinic College of Medicine and Science | Oncology | ⏳ | ⏳ |
 | `vp-0984` | [Michelle C. Nguyen](https://vietprofs.roars.dev/people/vp-0984.html) | Mayo Clinic College of Medicine and Science | Surgery (Division of Transplant Surgery) | ⏳ | ⏳ |
 | `vp-0985` | [Aivi T. Nguyen](https://vietprofs.roars.dev/people/vp-0985.html) | Mayo Clinic College of Medicine and Science | Laboratory Medicine and Pathology | ⏳ | ⏳ |
-| `vp-0986` | [Long H. Nguyen](https://vietprofs.roars.dev/people/vp-0986.html) | Harvard Medical School | Medicine (Massachusetts General Hospital, Gastroenterology) | ⏳ | ⏳ |
+| `vp-0986` | [Long H. Nguyen](https://vietprofs.roars.dev/people/vp-0986.html) | Harvard Medical School | Medicine (Massachusetts General Hospital, Gastroenterology) | ⏳ | ✅ |
 | `vp-0987` | [Nam Hai Pham](https://vietprofs.roars.dev/people/vp-0987.html) | Institute of Science Tokyo | Electrical and Electronic Engineering | ⏳ | ⏳ |
-| `vp-0988` | [Duc Anh Le](https://vietprofs.roars.dev/people/vp-0988.html) | University of Tokyo | Electrical Engineering and Information Systems | ⏳ | ⏳ |
+| `vp-0988` | [Duc Anh Le](https://vietprofs.roars.dev/people/vp-0988.html) | University of Tokyo | Electrical Engineering and Information Systems | ⏳ | ✅ |
 | `vp-0989` | [Quan Manh Phung](https://vietprofs.roars.dev/people/vp-0989.html) | Nagoya University | Chemistry | ⏳ | ⏳ |
-| `vp-0990` | [Viet Ton Ta](https://vietprofs.roars.dev/people/vp-0990.html) | Kyushu University | Faculty of Agriculture | ⏳ | ⏳ |
+| `vp-0990` | [Viet Ton Ta](https://vietprofs.roars.dev/people/vp-0990.html) | Kyushu University | Faculty of Agriculture | ⏳ | ✅ |
 
 ---
 
