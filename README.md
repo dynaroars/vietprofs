@@ -74,7 +74,7 @@ pre-filled email or GitHub issue. Fields explicitly supplied by the owner or thr
 direct submissions are recorded in `directFields` and preserved by automated web maintenance;
 other roster details may still be researched and updated independently.
 
-Optional research overviews and selected/recent work are source-backed enrichment fields. Their
+Optional research overviews are source-backed enrichment fields. Their
 operational evidence and resumable batch state are kept in [`maintenance/enrichment.json`](./maintenance/enrichment.json);
 run `npm run enrich -- status` to inspect coverage or `npm run enrich -- snapshot` to create a
 stable 20-person snapshot before collecting proposals. Use `collect N`, independently verify and

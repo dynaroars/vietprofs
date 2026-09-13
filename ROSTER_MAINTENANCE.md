@@ -114,14 +114,10 @@ used for corporate laboratories. Non-university entries must use the `Research` 
 
 ## Research workflow
 
-### Optional research enrichment
-
-Research overviews and work lists are optional, source-backed fields on an existing roster
-entry. The public record may contain `researchOverview`, `selectedWork`, or `recentWork`; long
+Research overviews are optional, source-backed fields on an existing roster
+entry. Individual profile pages do not render work list sections (`selectedWork` or `recentWork`); long
 excerpts, source-fetch details, outcomes, errors, and resumable batch state belong in
-`maintenance/enrichment.json`, keyed by immutable `vp-####` ID. `selectedWork` and `recentWork`
-are mutually exclusive. A generated overview must be written neutrally without gendered pronouns (do not use He, She, His, Her, Him, Hers; use the scholar's name or direct active-voice phrasing) and must be independently checked against its stored evidence; work items retain their exact title, type, documented date/year,
-canonical URL, selection source/mode, and verification timestamp. The command
+`maintenance/enrichment.json`, keyed by immutable `vp-####` ID. A generated overview must be written neutrally without gendered pronouns (do not use He, She, His, Her, Him, Hers; use the scholar's name or direct active-voice phrasing) and must be independently checked against its stored evidence. The command
 `npm run enrich -- snapshot` creates a stable 20-person batch snapshot, `status` reports coverage,
 `collect N` records bounded source retrieval, `apply proposals.json` accepts only validated
 structured proposals, and `finalize N` closes a batch's reviewed outcomes. After a run, use
