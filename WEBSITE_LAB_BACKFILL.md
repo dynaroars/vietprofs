@@ -9,7 +9,8 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 - [x] Batch WL-01 complete
 - [x] Batch WL-02 complete
 - [x] Batch WL-03 complete
-- [ ] Batch WL-04 through WL-23 — not yet started
+- [x] Batch WL-04 complete
+- [ ] Batch WL-05 through WL-23 — not yet started
 
 ---
 
@@ -192,7 +193,7 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 
 ### Batch WL-04 (vp-0330 to vp-0409, 50 people)
 
-- [ ] Batch complete
+- [x] Batch complete
 
 | ID | Name | Institution | Department | Website | Lab |
 | :--- | :--- | :--- | :--- | :---: | :---: |
@@ -209,7 +210,7 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-0349` | [Phuong Ngo](https://vietprofs.roars.dev/people/vp-0349.html) | Bard College | Asian Studies | ⏳ | ⏳ |
 | `vp-0352` | [Thai-Hoang Pham](https://vietprofs.roars.dev/people/vp-0352.html) | Texas State University | Computer Science | ⏳ | ⏳ |
 | `vp-0353` | [Van C. Tran](https://vietprofs.roars.dev/people/vp-0353.html) | CUNY Graduate Center | Sociology | ⏳ | ⏳ |
-| `vp-0354` | [Tuan Hoang](https://vietprofs.roars.dev/people/vp-0354.html) | Pepperdine University | Great Books | ⏳ | ⏳ |
+| `vp-0354` | [Tuan Hoang](https://vietprofs.roars.dev/people/vp-0354.html) | Pepperdine University | Great Books | ✅ | ⏳ |
 | `vp-0356` | [Cao Le](https://vietprofs.roars.dev/people/vp-0356.html) | George Mason University | Accounting | ⏳ | ⏳ |
 | `vp-0357` | [Qui-Phiet Tran](https://vietprofs.roars.dev/people/vp-0357.html) | Schreiner University | English | ⏳ | ⏳ |
 | `vp-0359` | [Thuy-Kim Le](https://vietprofs.roars.dev/people/vp-0359.html) | Arizona State University | School of International Letters and Cultures | ⏳ | ⏳ |
@@ -230,10 +231,10 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-0381` | [Uy Nguyen](https://vietprofs.roars.dev/people/vp-0381.html) | California State University, Los Angeles | Mathematics and Computer Science | ⏳ | ⏳ |
 | `vp-0385` | [Truong-Thao Nguyen](https://vietprofs.roars.dev/people/vp-0385.html) | City College of New York (CUNY) | Electrical Engineering | ⏳ | ⏳ |
 | `vp-0387` | [John Phan](https://vietprofs.roars.dev/people/vp-0387.html) | Columbia University | East Asian Languages and Cultures | ⏳ | ⏳ |
-| `vp-0388` | [Phuong Chung Nguyen](https://vietprofs.roars.dev/people/vp-0388.html) | Columbia University | East Asian Languages and Cultures | ⏳ | ⏳ |
+| `vp-0388` | [Phuong Chung Nguyen](https://vietprofs.roars.dev/people/vp-0388.html) | Columbia University | East Asian Languages and Cultures | ⏳ | ✅ |
 | `vp-0389` | [Quynh A. Truong](https://vietprofs.roars.dev/people/vp-0389.html) | Cornell University | Radiology, Weill Cornell Medicine | ⏳ | ⏳ |
 | `vp-0390` | [Hai Tran - DePaul University](https://vietprofs.roars.dev/people/vp-0390.html) | DePaul University | Communication | ⏳ | ⏳ |
-| `vp-0393` | [Andy V. Pham](https://vietprofs.roars.dev/people/vp-0393.html) | Florida International University | Counseling, Recreation and School Psychology | ⏳ | ⏳ |
+| `vp-0393` | [Andy V. Pham](https://vietprofs.roars.dev/people/vp-0393.html) | Florida International University | Counseling, Recreation and School Psychology | ✅ | ⏳ |
 | `vp-0394` | [Tuyen (Tom) Nguyen](https://vietprofs.roars.dev/people/vp-0394.html) | Florida International University | Cardiovascular Sciences | ⏳ | ⏳ |
 | `vp-0396` | [Michelle Tram Nguyen](https://vietprofs.roars.dev/people/vp-0396.html) | George Mason University | English | ⏳ | ⏳ |
 | `vp-0397` | [Anh Ngoc Tran](https://vietprofs.roars.dev/people/vp-0397.html) | Indiana University Bloomington | Public and Environmental Affairs | ⏳ | ⏳ |
@@ -241,10 +242,10 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-0400` | [Lan Ngo](https://vietprofs.roars.dev/people/vp-0400.html) | Loyola Marymount University | Asian and Asian American Studies | ⏳ | ⏳ |
 | `vp-0401` | [John Bui](https://vietprofs.roars.dev/people/vp-0401.html) | Maryville University | Computer Science | ⏳ | ⏳ |
 | `vp-0402` | [Minh Vo](https://vietprofs.roars.dev/people/vp-0402.html) | Metropolitan State University | Economics and Finance | ⏳ | ⏳ |
-| `vp-0403` | [Nam T. Vu](https://vietprofs.roars.dev/people/vp-0403.html) | Miami University | Economics | ⏳ | ⏳ |
-| `vp-0405` | [Lam D. Pham](https://vietprofs.roars.dev/people/vp-0405.html) | North Carolina State University | Educational Leadership, Policy, and Human Development | ⏳ | ⏳ |
+| `vp-0403` | [Nam T. Vu](https://vietprofs.roars.dev/people/vp-0403.html) | Miami University | Economics | ✅ | ⏳ |
+| `vp-0405` | [Lam D. Pham](https://vietprofs.roars.dev/people/vp-0405.html) | North Carolina State University | Educational Leadership, Policy, and Human Development | ✅ | ⏳ |
 | `vp-0406` | [Vy Nguyen - Northeastern University](https://vietprofs.roars.dev/people/vp-0406.html) | Northeastern University | Mathematics | ⏳ | ⏳ |
-| `vp-0408` | [Keva X. Bui](https://vietprofs.roars.dev/people/vp-0408.html) | Northwestern University | Asian American Studies | ⏳ | ⏳ |
+| `vp-0408` | [Keva X. Bui](https://vietprofs.roars.dev/people/vp-0408.html) | Northwestern University | Asian American Studies | ✅ | ⏳ |
 | `vp-0409` | [Thuan Nguyen](https://vietprofs.roars.dev/people/vp-0409.html) | Oregon Health & Science University | Biostatistics | ⏳ | ⏳ |
 
 ---
