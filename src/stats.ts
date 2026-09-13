@@ -250,7 +250,7 @@ function renderDailyTable(daily: DailyStat[], todayStr: string): string {
           ${reversed.map((d) => {
             const isPartial = d.date === todayStr;
             const dateDisplay = isPartial
-              ? `${formatDateFull(d.date)} <span class="partial-tag">(partial day)</span>`
+              ? `${formatDateFull(d.date)} <span class="partial-tag">(partial — UTC day in progress)</span>`
               : formatDateFull(d.date);
             return `
               <tr ${isPartial ? 'class="partial-row"' : ''}>
@@ -333,9 +333,9 @@ function renderStatsContent(data: StatsResponse, rosterMap: Map<string, RosterEn
           <h2>VISITOR TRAFFIC METRICS</h2>
           <div class="stats-grid">
             <div class="stat-card">
-              <span class="stat-label">Visits Today <span class="partial-tag">(Partial)</span></span>
+              <span class="stat-label">Visits Today <span class="partial-tag">(partial — UTC day in progress)</span></span>
               <strong class="stat-value">${formatNumber(visitCount(data.today))}</strong>
-              <span class="stat-sub">${formatNumber(data.today?.pageViews || 0)} successful HTML page views (day in progress)</span>
+              <span class="stat-sub">${formatNumber(data.today?.pageViews || 0)} successful HTML page views (UTC day in progress)</span>
             </div>
             <div class="stat-card">
               <span class="stat-label">Visits (7 Days)</span>
