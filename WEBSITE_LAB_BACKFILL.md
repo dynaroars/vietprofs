@@ -15,7 +15,8 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 - [x] Batch WL-07 complete
 - [x] Batch WL-08 complete
 - [x] Batch WL-09 complete
-- [ ] Batch WL-10 through WL-23 — not yet started
+- [x] Batch WL-10 complete
+- [ ] Batch WL-11 through WL-23 — not yet started
 
 ---
 
@@ -552,32 +553,32 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 
 ### Batch WL-10 (vp-0689 to vp-0749, 50 people)
 
-- [ ] Batch complete
+- [x] Batch complete
 
 | ID | Name | Institution | Department | Website | Lab |
 | :--- | :--- | :--- | :--- | :---: | :---: |
 | `vp-0689` | [Thao Nguyen](https://vietprofs.roars.dev/people/vp-0689.html) | Adelaide University | School of Dentistry | ⏳ | ⏳ |
-| `vp-0690` | [Natalie (Nhung) Le](https://vietprofs.roars.dev/people/vp-0690.html) | University of Melbourne | Department of Finance | ⏳ | ⏳ |
+| `vp-0690` | [Natalie (Nhung) Le](https://vietprofs.roars.dev/people/vp-0690.html) | University of Melbourne | Department of Finance | ✅ | ⏳ |
 | `vp-0691` | [Quinn Nguyen](https://vietprofs.roars.dev/people/vp-0691.html) | Flinders University | College of Business, Creative Arts, Law and Social Sciences | ⏳ | ⏳ |
 | `vp-0692` | [Cung Nguyen](https://vietprofs.roars.dev/people/vp-0692.html) | University of Salford | Civil Engineering | ⏳ | ⏳ |
-| `vp-0693` | [Emma Nguyen](https://vietprofs.roars.dev/people/vp-0693.html) | Newcastle University | English Literature, Language and Linguistics | ⏳ | ⏳ |
+| `vp-0693` | [Emma Nguyen](https://vietprofs.roars.dev/people/vp-0693.html) | Newcastle University | English Literature, Language and Linguistics | ✅ | ⏳ |
 | `vp-0694` | [Kim Nguyen - University of Sheffield](https://vietprofs.roars.dev/people/vp-0694.html) | University of Sheffield | School of Economics | ⏳ | ⏳ |
 | `vp-0695` | [Thach Nguyen](https://vietprofs.roars.dev/people/vp-0695.html) | University of Sheffield | Sheffield University Management School | ⏳ | ⏳ |
 | `vp-0696` | [Duy Tan Nguyen](https://vietprofs.roars.dev/people/vp-0696.html) | University of Greenwich | School of Business, Operations and Strategy | ⏳ | ⏳ |
 | `vp-0697` | [Maya Nguyen](https://vietprofs.roars.dev/people/vp-0697.html) | SOAS University of London | Department of Politics and International Studies | ⏳ | ⏳ |
 | `vp-0698` | [Quyen Nguyen - Brunel University London](https://vietprofs.roars.dev/people/vp-0698.html) | Brunel University London | Brunel Business School | ⏳ | ⏳ |
-| `vp-0699` | [Andy Tran](https://vietprofs.roars.dev/people/vp-0699.html) | The University of Sydney | School of Mathematics and Statistics | ⏳ | ⏳ |
+| `vp-0699` | [Andy Tran](https://vietprofs.roars.dev/people/vp-0699.html) | The University of Sydney | School of Mathematics and Statistics | ✅ | ⏳ |
 | `vp-0700` | [Linh Tran](https://vietprofs.roars.dev/people/vp-0700.html) | Monash University | School of Education and Culture | ⏳ | ⏳ |
 | `vp-0702` | [Hieu P. T. Nguyen](https://vietprofs.roars.dev/people/vp-0702.html) | New Jersey Institute of Technology | Electrical and Computer Engineering | ⏳ | ⏳ |
-| `vp-0704` | [Hai Phan](https://vietprofs.roars.dev/people/vp-0704.html) | New Jersey Institute of Technology | Data Science | ⏳ | ⏳ |
+| `vp-0704` | [Hai Phan](https://vietprofs.roars.dev/people/vp-0704.html) | New Jersey Institute of Technology | Data Science | ✅ | ⏳ |
 | `vp-0705` | [Phung Lai](https://vietprofs.roars.dev/people/vp-0705.html) | University at Albany | Cybersecurity | ⏳ | ⏳ |
 | `vp-0708` | [Quynh-Thu Le](https://vietprofs.roars.dev/people/vp-0708.html) | Stanford University | Radiation Oncology | ⏳ | ⏳ |
 | `vp-0709` | [Charles C. Nguyen](https://vietprofs.roars.dev/people/vp-0709.html) | The Catholic University of America | Electrical and Computer Engineering | ⏳ | ⏳ |
 | `vp-0710` | [Caroline Cao](https://vietprofs.roars.dev/people/vp-0710.html) | University of Illinois Urbana-Champaign | Biomedical and Translational Sciences, Carle Illinois College of Medicine | ⏳ | ⏳ |
 | `vp-0711` | [Van H. Vu](https://vietprofs.roars.dev/people/vp-0711.html) | The University of Hong Kong | Department of Mathematics | ⏳ | ⏳ |
 | `vp-0712` | [Jane X. Luu](https://vietprofs.roars.dev/people/vp-0712.html) | Tufts University | Physics and Astronomy | ⏳ | ⏳ |
-| `vp-0713` | [Xuan Thuan Trinh](https://vietprofs.roars.dev/people/vp-0713.html) | University of Virginia | Astronomy | ⏳ | ⏳ |
-| `vp-0715` | [Tran Duc Le](https://vietprofs.roars.dev/people/vp-0715.html) | University of Wisconsin-Stout | Mathematics, Statistics & Computer Science | ⏳ | ⏳ |
+| `vp-0713` | [Xuan Thuan Trinh](https://vietprofs.roars.dev/people/vp-0713.html) | University of Virginia | Astronomy | ✅ | ⏳ |
+| `vp-0715` | [Tran Duc Le](https://vietprofs.roars.dev/people/vp-0715.html) | University of Wisconsin-Stout | Mathematics, Statistics & Computer Science | ✅ | ⏳ |
 | `vp-0717` | [Kim-Doang Nguyen](https://vietprofs.roars.dev/people/vp-0717.html) | Florida Institute of Technology | Mechanical and Civil Engineering | ⏳ | ⏳ |
 | `vp-0718` | [Hai T. Tran](https://vietprofs.roars.dev/people/vp-0718.html) | Point Park University | Natural Sciences and Engineering Technology | ⏳ | ⏳ |
 | `vp-0719` | [Hai Tran - Embry-Riddle Aeronautical University](https://vietprofs.roars.dev/people/vp-0719.html) | Embry-Riddle Aeronautical University | Mechanical Engineering | ⏳ | ⏳ |
@@ -586,7 +587,7 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-0723` | [Thuy Dao](https://vietprofs.roars.dev/people/vp-0723.html) | IPAG Business School | Finance | ⏳ | ⏳ |
 | `vp-0724` | [Minh Cuong Ha](https://vietprofs.roars.dev/people/vp-0724.html) | Université Paris-Saclay | Mechanical Engineering | ⏳ | ⏳ |
 | `vp-0725` | [Phuong Tra Tran](https://vietprofs.roars.dev/people/vp-0725.html) | Audencia Business School | Organization Studies and Ethics | ⏳ | ⏳ |
-| `vp-0726` | [Quan Dong Nguyen](https://vietprofs.roars.dev/people/vp-0726.html) | Stanford University | Ophthalmology | ⏳ | ⏳ |
+| `vp-0726` | [Quan Dong Nguyen](https://vietprofs.roars.dev/people/vp-0726.html) | Stanford University | Ophthalmology | ⏳ | ✅ |
 | `vp-0727` | [Thao L. Nguyen](https://vietprofs.roars.dev/people/vp-0727.html) | UTHealth Houston | Pediatric Critical Care Medicine | ⏳ | ⏳ |
 | `vp-0728` | [Hung Luu](https://vietprofs.roars.dev/people/vp-0728.html) | University of Texas Southwestern Medical Center | Pathology | ⏳ | ⏳ |
 | `vp-0729` | [Hanh Huynh](https://vietprofs.roars.dev/people/vp-0729.html) | The University of British Columbia | Pathology and Laboratory Medicine | ⏳ | ⏳ |
@@ -598,10 +599,10 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-0735` | [Trai Le](https://vietprofs.roars.dev/people/vp-0735.html) | University of Notre Dame | Law | ⏳ | ⏳ |
 | `vp-0736` | [Thi-Mai-Trang Nguyen](https://vietprofs.roars.dev/people/vp-0736.html) | Université Sorbonne Paris Nord | Computer Engineering | ⏳ | ⏳ |
 | `vp-0737` | [Thao Nguyen - Haverford College](https://vietprofs.roars.dev/people/vp-0737.html) | Haverford College | Computer Science | ⏳ | ⏳ |
-| `vp-0738` | [Hien Nguyen](https://vietprofs.roars.dev/people/vp-0738.html) | University of Wisconsin-Whitewater | Computer Science | ⏳ | ⏳ |
-| `vp-0739` | [Trang Vu](https://vietprofs.roars.dev/people/vp-0739.html) | Monash University | Department of Data Science and Artificial Intelligence | ⏳ | ⏳ |
+| `vp-0738` | [Hien Nguyen](https://vietprofs.roars.dev/people/vp-0738.html) | University of Wisconsin-Whitewater | Computer Science | ✅ | ⏳ |
+| `vp-0739` | [Trang Vu](https://vietprofs.roars.dev/people/vp-0739.html) | Monash University | Department of Data Science and Artificial Intelligence | ✅ | ⏳ |
 | `vp-0740` | [Loan Bui](https://vietprofs.roars.dev/people/vp-0740.html) | University of Dayton | Biology | ⏳ | ⏳ |
-| `vp-0741` | [Catherine H. Nguyen](https://vietprofs.roars.dev/people/vp-0741.html) | Emerson College | Writing, Literature and Publishing | ⏳ | ⏳ |
+| `vp-0741` | [Catherine H. Nguyen](https://vietprofs.roars.dev/people/vp-0741.html) | Emerson College | Writing, Literature and Publishing | ✅ | ⏳ |
 | `vp-0742` | [Jean Tran Thanh Van](https://vietprofs.roars.dev/people/vp-0742.html) | California Institute of Technology | Physics | ⏳ | ⏳ |
 | `vp-0743` | [Tien-Cuong Dinh](https://vietprofs.roars.dev/people/vp-0743.html) | National University of Singapore | Department of Mathematics | ⏳ | ⏳ |
 | `vp-0744` | [Tri Lai](https://vietprofs.roars.dev/people/vp-0744.html) | University of Nebraska–Lincoln | Mathematics | ⏳ | ⏳ |
