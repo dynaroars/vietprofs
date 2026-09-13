@@ -27,7 +27,8 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 - [x] Batch WL-19 complete
 - [x] Batch WL-20 complete
 - [x] Batch WL-21 complete
-- [ ] Batch WL-22 through WL-23 — not yet started
+- [x] Batch WL-22 complete
+- [ ] Batch WL-23 — not yet started
 
 ---
 
@@ -1271,23 +1272,23 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 
 ### Batch WL-22 (vp-1412 to vp-1463, 50 people)
 
-- [ ] Batch complete
+- [x] Batch complete
 
 | ID | Name | Institution | Department | Website | Lab |
 | :--- | :--- | :--- | :--- | :---: | :---: |
-| `vp-1412` | [Nguyen Quoc Khanh Le](https://vietprofs.roars.dev/people/vp-1412.html) | Taipei Medical University | Professional Master Program in Artificial Intelligence in Medicine | ⏳ | ⏳ |
+| `vp-1412` | [Nguyen Quoc Khanh Le](https://vietprofs.roars.dev/people/vp-1412.html) | Taipei Medical University | Professional Master Program in Artificial Intelligence in Medicine | ✅ | ⏳ |
 | `vp-1413` | [Hung Ton-That](https://vietprofs.roars.dev/people/vp-1413.html) | University of California, Los Angeles | Division of Oral and Systemic Health Sciences | ⏳ | ⏳ |
 | `vp-1414` | [Khanh Kieu](https://vietprofs.roars.dev/people/vp-1414.html) | University of Arizona | Wyant College of Optical Sciences | ⏳ | ⏳ |
-| `vp-1415` | [Tung B. K. Le](https://vietprofs.roars.dev/people/vp-1415.html) | John Innes Centre | Department of Molecular Microbiology | ⏳ | ⏳ |
+| `vp-1415` | [Tung B. K. Le](https://vietprofs.roars.dev/people/vp-1415.html) | John Innes Centre | Department of Molecular Microbiology | ⏳ | ✅ |
 | `vp-1416` | [Cuong Cao](https://vietprofs.roars.dev/people/vp-1416.html) | Queen's University Belfast | School of Biological Sciences | ⏳ | ⏳ |
-| `vp-1417` | [Lam Si Tung Ho](https://vietprofs.roars.dev/people/vp-1417.html) | Dalhousie University | Department of Mathematics and Statistics | ⏳ | ⏳ |
-| `vp-1419` | [Trung Hieu Tran](https://vietprofs.roars.dev/people/vp-1419.html) | Loughborough University | Loughborough Business School | ⏳ | ⏳ |
+| `vp-1417` | [Lam Si Tung Ho](https://vietprofs.roars.dev/people/vp-1417.html) | Dalhousie University | Department of Mathematics and Statistics | ✅ | ⏳ |
+| `vp-1419` | [Trung Hieu Tran](https://vietprofs.roars.dev/people/vp-1419.html) | Loughborough University | Loughborough Business School | ✅ | ⏳ |
 | `vp-1420` | [Huong Giang T. Nguyen](https://vietprofs.roars.dev/people/vp-1420.html) | National Institute of Standards and Technology | Chemical Sciences Division | ⏳ | ⏳ |
 | `vp-1421` | [Hieu Trinh](https://vietprofs.roars.dev/people/vp-1421.html) | Deakin University | School of Engineering | ⏳ | ⏳ |
-| `vp-1422` | [Toan Dinh](https://vietprofs.roars.dev/people/vp-1422.html) | University of Southern Queensland | School of Engineering | ⏳ | ⏳ |
+| `vp-1422` | [Toan Dinh](https://vietprofs.roars.dev/people/vp-1422.html) | University of Southern Queensland | School of Engineering | ⏳ | ✅ |
 | `vp-1423` | [Van Thanh Dau](https://vietprofs.roars.dev/people/vp-1423.html) | Griffith University | School of Engineering and Built Environment | ⏳ | ⏳ |
 | `vp-1424` | [Nam Mai-Duy](https://vietprofs.roars.dev/people/vp-1424.html) | University of Southern Queensland | School of Engineering | ⏳ | ⏳ |
-| `vp-1425` | [Linh Cao Hoang](https://vietprofs.roars.dev/people/vp-1425.html) | Technical University of Denmark | Department of Civil and Mechanical Engineering | ⏳ | ⏳ |
+| `vp-1425` | [Linh Cao Hoang](https://vietprofs.roars.dev/people/vp-1425.html) | Technical University of Denmark | Department of Civil and Mechanical Engineering | ✅ | ⏳ |
 | `vp-1426` | [Ngoc Duy Nguyen](https://vietprofs.roars.dev/people/vp-1426.html) | University of Liège | Department of Physics | ⏳ | ⏳ |
 | `vp-1427` | [Duc-Kien Thai](https://vietprofs.roars.dev/people/vp-1427.html) | Sejong University | Department of Civil and Environmental Engineering | ⏳ | ⏳ |
 | `vp-1428` | [Quoc-Hung Phan](https://vietprofs.roars.dev/people/vp-1428.html) | National Cheng Kung University | Department of Mechanical Engineering | ⏳ | ⏳ |
@@ -1297,20 +1298,20 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-1432` | [Quoc Tuan Tran](https://vietprofs.roars.dev/people/vp-1432.html) | Commissariat à l'Énergie Atomique et aux Énergies Alternatives | CEA Tech / LITEN | ⏳ | ⏳ |
 | `vp-1433` | [Tuan A. Ho](https://vietprofs.roars.dev/people/vp-1433.html) | Sandia National Laboratories | Geochemistry Department | ⏳ | ⏳ |
 | `vp-1434` | [Huyen N. Dinh](https://vietprofs.roars.dev/people/vp-1434.html) | National Renewable Energy Laboratory | Chemistry and Nanoscience Center | ⏳ | ⏳ |
-| `vp-1435` | [Trang Hoang](https://vietprofs.roars.dev/people/vp-1435.html) | Université de Montréal | Department of Pharmacology and Physiology | ⏳ | ⏳ |
+| `vp-1435` | [Trang Hoang](https://vietprofs.roars.dev/people/vp-1435.html) | Université de Montréal | Department of Pharmacology and Physiology | ⏳ | ✅ |
 | `vp-1436` | [Thuan V. Ly](https://vietprofs.roars.dev/people/vp-1436.html) | Harvard University | Department of Orthopaedic Surgery | ⏳ | ⏳ |
 | `vp-1437` | [Quyen Q. Hoang](https://vietprofs.roars.dev/people/vp-1437.html) | Indiana University Indianapolis | Department of Biochemistry and Molecular Biology | ⏳ | ⏳ |
 | `vp-1438` | [Nhu Thao Nguyen Galván](https://vietprofs.roars.dev/people/vp-1438.html) | Baylor College of Medicine | Michael E. DeBakey Department of Surgery | ⏳ | ⏳ |
 | `vp-1439` | [Thao-Ly T. Phan](https://vietprofs.roars.dev/people/vp-1439.html) | Thomas Jefferson University | Department of Pediatrics | ⏳ | ⏳ |
-| `vp-1440` | [Thao Ho](https://vietprofs.roars.dev/people/vp-1440.html) | University of South Florida | Department of Pediatrics | ⏳ | ⏳ |
+| `vp-1440` | [Thao Ho](https://vietprofs.roars.dev/people/vp-1440.html) | University of South Florida | Department of Pediatrics | ⏳ | ✅ |
 | `vp-1441` | [Thi Dan Linh Nguyen-Kim](https://vietprofs.roars.dev/people/vp-1441.html) | University of Zurich | Institute of Radiology and Nuclear Medicine, Stadtspital Zürich (Waid/Triemli) | ⏳ | ⏳ |
 | `vp-1442` | [Hung Q. Ly](https://vietprofs.roars.dev/people/vp-1442.html) | Université de Montréal | Department of Medicine | ⏳ | ⏳ |
 | `vp-1443` | [Minh Cuong Duong](https://vietprofs.roars.dev/people/vp-1443.html) | University of New South Wales | School of Population Health | ⏳ | ⏳ |
-| `vp-1445` | [Khanh Duy Trinh](https://vietprofs.roars.dev/people/vp-1445.html) | Waseda University | Global Center for Science and Engineering | ⏳ | ⏳ |
-| `vp-1446` | [Van Thinh Nguyen](https://vietprofs.roars.dev/people/vp-1446.html) | Seoul National University | Department of Civil and Environmental Engineering | ⏳ | ⏳ |
+| `vp-1445` | [Khanh Duy Trinh](https://vietprofs.roars.dev/people/vp-1445.html) | Waseda University | Global Center for Science and Engineering | ✅ | ⏳ |
+| `vp-1446` | [Van Thinh Nguyen](https://vietprofs.roars.dev/people/vp-1446.html) | Seoul National University | Department of Civil and Environmental Engineering | ⏳ | ✅ |
 | `vp-1447` | [Cam Ha T. Tran](https://vietprofs.roars.dev/people/vp-1447.html) | University of Nevada, Reno | Department of Physiology and Cell Biology | ⏳ | ⏳ |
 | `vp-1448` | [Thien-Tri Lam](https://vietprofs.roars.dev/people/vp-1448.html) | University of Würzburg | Institute for Hygiene and Microbiology | ⏳ | ⏳ |
-| `vp-1449` | [Vy Hong-Diep Kim](https://vietprofs.roars.dev/people/vp-1449.html) | University of Toronto | Department of Paediatrics | ⏳ | ⏳ |
+| `vp-1449` | [Vy Hong-Diep Kim](https://vietprofs.roars.dev/people/vp-1449.html) | University of Toronto | Department of Paediatrics | ⏳ | ✅ |
 | `vp-1450` | [Thanh Luu](https://vietprofs.roars.dev/people/vp-1450.html) | Rosalind Franklin University of Medicine and Science | Department of Obstetrics and Gynecology | ⏳ | ⏳ |
 | `vp-1451` | [Hieu Van Ngo](https://vietprofs.roars.dev/people/vp-1451.html) | University of Calgary | Faculty of Social Work | ⏳ | ⏳ |
 | `vp-1452` | [Anh-Luu T. Huynh-Hohnbaum](https://vietprofs.roars.dev/people/vp-1452.html) | California State University, Los Angeles | School of Social Work | ⏳ | ⏳ |
@@ -1318,11 +1319,11 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-1454` | [Anh Phan - University of Kent](https://vietprofs.roars.dev/people/vp-1454.html) | University of Kent | Centre for the Study of Higher Education | ⏳ | ⏳ |
 | `vp-1455` | [Phan Le Ha](https://vietprofs.roars.dev/people/vp-1455.html) | Universiti Brunei Darussalam | Sultan Hassanal Bolkiah Institute of Education | ⏳ | ⏳ |
 | `vp-1456` | [Huong Le](https://vietprofs.roars.dev/people/vp-1456.html) | Central Queensland University | School of Business and Law | ⏳ | ⏳ |
-| `vp-1457` | [Minh Kieu](https://vietprofs.roars.dev/people/vp-1457.html) | University of Auckland | Department of Civil and Environmental Engineering | ⏳ | ⏳ |
-| `vp-1458` | [Huy Phung](https://vietprofs.roars.dev/people/vp-1458.html) | University of North Carolina at Chapel Hill | Department of Asian and Middle Eastern Studies | ⏳ | ⏳ |
-| `vp-1459` | [Bach Hoai Nguyen](https://vietprofs.roars.dev/people/vp-1459.html) | Victoria University of Wellington | School of Engineering and Computer Science | ⏳ | ⏳ |
-| `vp-1460` | [Vinh-Thong Ta](https://vietprofs.roars.dev/people/vp-1460.html) | Edge Hill University | Department of Computer Science | ⏳ | ⏳ |
-| `vp-1461` | [Thi-Bich-Hanh Dao](https://vietprofs.roars.dev/people/vp-1461.html) | Université d'Orléans | Laboratoire d'Informatique Fondamentale d'Orléans (LIFO) | ⏳ | ⏳ |
+| `vp-1457` | [Minh Kieu](https://vietprofs.roars.dev/people/vp-1457.html) | University of Auckland | Department of Civil and Environmental Engineering | ✅ | ⏳ |
+| `vp-1458` | [Huy Phung](https://vietprofs.roars.dev/people/vp-1458.html) | University of North Carolina at Chapel Hill | Department of Asian and Middle Eastern Studies | ✅ | ⏳ |
+| `vp-1459` | [Bach Hoai Nguyen](https://vietprofs.roars.dev/people/vp-1459.html) | Victoria University of Wellington | School of Engineering and Computer Science | ✅ | ⏳ |
+| `vp-1460` | [Vinh-Thong Ta](https://vietprofs.roars.dev/people/vp-1460.html) | Edge Hill University | Department of Computer Science | ✅ | ⏳ |
+| `vp-1461` | [Thi-Bich-Hanh Dao](https://vietprofs.roars.dev/people/vp-1461.html) | Université d'Orléans | Laboratoire d'Informatique Fondamentale d'Orléans (LIFO) | ✅ | ⏳ |
 | `vp-1462` | [Ngoc-Son Vu](https://vietprofs.roars.dev/people/vp-1462.html) | CY Cergy Paris Université | ETIS Laboratory | ⏳ | ⏳ |
 | `vp-1463` | [Bich-Lien Doan](https://vietprofs.roars.dev/people/vp-1463.html) | CentraleSupélec | Department of Computer Science | ⏳ | ⏳ |
 

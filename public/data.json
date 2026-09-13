@@ -26153,20 +26153,21 @@
     "profileUrl": "https://luuquangtrung.github.io/cv/",
     "scholarUrl": "https://scholar.google.com/citations?hl=en&user=GqQcLAIAAAAJ",
     "linkedinUrl": "https://www.linkedin.com/in/luuquangtrung/",
-    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
+    "lastUpdatedAt": "2026-09-13T19:40:00.000Z",
     "researchAreas": [
       "Computer Networks",
       "Cloud and Edge Computing",
       "Machine Learning for Networks",
       "5G and Beyond"
     ],
-    "phdYear": 2021,
-    "phdInstitution": "CentraleSupélec, Université Paris-Saclay",
+    "phdYear": 2020,
+    "phdInstitution": "CentraleSupélec",
     "portrait": "portraits/235-quang-trung-luu-centralesupelec.webp",
     "portraitSource": "https://luuquangtrung.github.io/assets/img/cv.jpg",
     "msInstitution": "Paris-Saclay University",
     "msYear": 2017,
-    "websiteUrl": "https://luuquangtrung.github.io/"
+    "websiteUrl": "https://luuquangtrung.github.io/",
+    "phdMajor": "Computer Science"
   },
   {
     "id": "vp-0622",
@@ -26179,7 +26180,7 @@
     "rank": "Professor",
     "track": "Tenure-line",
     "profileUrl": "https://perso.telecom-paristech.fr/vtnguyen/biography/",
-    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
+    "lastUpdatedAt": "2026-09-13T19:40:00.000Z",
     "researchAreas": [
       "Continual Learning",
       "Artificial Intelligence",
@@ -26190,7 +26191,9 @@
     "phdInstitution": "Télécom Paris",
     "portrait": "portraits/236-van-tam-nguyen-telecom-paris.webp",
     "portraitSource": "https://perso.telecom-paristech.fr/vtnguyen/biography/index.fld/image002.png",
-    "websiteUrl": "https://perso.telecom-paristech.fr/vtnguyen/"
+    "websiteUrl": "https://perso.telecom-paristech.fr/vtnguyen/",
+    "msInstitution": "Université Paris-Saclay",
+    "msMajor": "Image Processing"
   },
   {
     "id": "vp-0623",
@@ -26395,7 +26398,7 @@
     "profileUrl": "https://www.gemtex.fr/gemtex-members/phuc-tran/",
     "scholarUrl": "https://scholar.google.fr/citations?user=uGv7zzQAAAAJ&hl=vi",
     "linkedinUrl": "https://www.linkedin.com/in/kim-phuc-tran-5bb779b3",
-    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
+    "lastUpdatedAt": "2026-09-13T19:40:00.000Z",
     "researchAreas": [
       "Artificial Intelligence",
       "Explainable AI",
@@ -26403,7 +26406,7 @@
       "Industrial Analytics"
     ],
     "phdYear": 2016,
-    "phdInstitution": "University of Nantes",
+    "phdInstitution": "Nantes Université",
     "portrait": "portraits/650-kim-phuc-tran-university-of-lille.webp",
     "portraitSource": "https://iad.donga.edu.vn/portals/37/article/Cover/Phuc1_11_05_2022_09_39_19.png",
     "researchOverview": {
@@ -26414,7 +26417,17 @@
       ],
       "verifiedAt": "2026-09-13T00:00:00.000Z"
     },
-    "websiteUrl": "https://sites.google.com/view/kim-phuc-tran"
+    "websiteUrl": "https://sites.google.com/view/kim-phuc-tran",
+    "undergradInstitution": "Danang University of Science and Technology",
+    "undergradMajor": "Automated Manufacturing Engineering",
+    "phdMajor": "Automation and Applied Informatics",
+    "otherDegrees": [
+      {
+        "degree": "HDR",
+        "institution": "University of Lille",
+        "year": 2022
+      }
+    ]
   },
   {
     "id": "vp-0630",
@@ -27439,7 +27452,7 @@
     "profileUrl": "https://www.torontomu.ca/english/about-us/faculty-and-staff/faculty/nguyen-hoa/",
     "websiteUrl": "https://www.hoa-nguyen.com/",
     "linkedinUrl": "https://www.linkedin.com/in/hoa-nguyen-poet/",
-    "lastUpdatedAt": "2026-09-13T04:31:56.839Z",
+    "lastUpdatedAt": "2026-09-13T19:40:00.000Z",
     "researchAreas": [
       "Poetry",
       "Creative Writing",
@@ -27456,7 +27469,14 @@
         "https://www.hoa-nguyen.com/"
       ],
       "verifiedAt": "2026-09-13T00:00:00.000Z"
-    }
+    },
+    "undergradInstitution": "University of Maryland, College Park",
+    "otherDegrees": [
+      {
+        "degree": "MFA",
+        "institution": "New College of California"
+      }
+    ]
   },
   {
     "id": "vp-0661",
@@ -27545,7 +27565,7 @@
     "rank": "Associate Professor",
     "track": "Tenure-line",
     "profileUrl": "https://umanitoba.ca/medicine/faculty-staff/chau-pham",
-    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
+    "lastUpdatedAt": "2026-09-13T19:40:00.000Z",
     "researchAreas": [
       "Emergency Medicine",
       "Point-of-Care Ultrasound",
@@ -27562,8 +27582,7 @@
       {
         "degree": "MBA",
         "institution": "University of Manitoba",
-        "year": 2013,
-        "source": "https://umanitoba.ca/medicine/faculty-staff/chau-pham"
+        "year": 2013
       }
     ],
     "scholarUrl": "https://scholar.google.ca/citations?user=wT1vBDkAAAAJ&hl=en",
@@ -34541,7 +34560,7 @@
     "name": "Bich-May Nguyen",
     "vietnameseName": "Nguyễn Bích-May",
     "profileUrl": "https://www.uh.edu/medicine/about/faculty/nguyenbm.php",
-    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
+    "lastUpdatedAt": "2026-09-13T19:41:00.000Z",
     "university": "University of Houston",
     "city": "Houston",
     "state": "Texas",
@@ -34555,7 +34574,14 @@
     "department": "Health Systems and Population Health Sciences",
     "rank": "Clinical Associate Professor",
     "mdInstitution": "Baylor College of Medicine",
-    "undergradInstitution": "University of Houston"
+    "undergradInstitution": "University of Houston",
+    "undergradMajor": "Biology",
+    "otherDegrees": [
+      {
+        "degree": "MPH",
+        "institution": "Boston University"
+      }
+    ]
   },
   {
     "id": "vp-0896",
@@ -34692,7 +34718,7 @@
     "name": "Phuong Khuu",
     "vietnameseName": "Phương Khuu",
     "profileUrl": "https://profiles.stanford.edu/phuong-khuu",
-    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
+    "lastUpdatedAt": "2026-09-13T19:41:00.000Z",
     "university": "Stanford University",
     "city": "Stanford",
     "state": "California",
@@ -34714,7 +34740,7 @@
     "name": "Phuong Le",
     "vietnameseName": "Lê Phương",
     "profileUrl": "https://profiles.stanford.edu/350256",
-    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
+    "lastUpdatedAt": "2026-09-13T19:41:00.000Z",
     "university": "Stanford University",
     "city": "Stanford",
     "state": "California",
@@ -34725,7 +34751,7 @@
     "track": "Clinical",
     "department": "Medicine",
     "rank": "Clinical Assistant Professor",
-    "mdInstitution": "Washington University School of Medicine",
+    "mdInstitution": "Washington University School of Medicine in St. Louis",
     "mdYear": 2018
   },
   {
@@ -34733,7 +34759,7 @@
     "name": "Phuong-Chi Pham",
     "vietnameseName": "Phạm Phương-Chi",
     "profileUrl": "https://uclaoliveview.org/nephrology/our-team/faculty/phuong-chi-pham/",
-    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
+    "lastUpdatedAt": "2026-09-13T19:41:00.000Z",
     "university": "University of California, Los Angeles",
     "city": "Los Angeles",
     "state": "California",
@@ -34756,7 +34782,8 @@
         "https://uclaoliveview.org/nephrology/our-team/faculty/phuong-chi-pham/"
       ],
       "verifiedAt": "2026-09-07T19:04:00.000Z"
-    }
+    },
+    "undergradMajor": "Chemistry"
   },
   {
     "id": "vp-0905",
@@ -35630,7 +35657,7 @@
     "name": "Nhan Huu Nguyen",
     "vietnameseName": "Nguyễn Hữu Nhan",
     "profileUrl": "https://fp.jaist.ac.jp/public/Default2.aspx?id=766&l=1",
-    "lastUpdatedAt": "2026-09-13T04:28:30.655Z",
+    "lastUpdatedAt": "2026-09-13T19:41:00.000Z",
     "university": "Japan Advanced Institute of Science and Technology",
     "city": "Nomi",
     "country": "Japan",
@@ -35664,7 +35691,8 @@
     ],
     "portrait": "portraits/0929-nhan-huu-nguyen.webp",
     "portraitSource": "https://fp.jaist.ac.jp/data/photo/766.jpg",
-    "labUrl": "https://www.jaist.ac.jp/english/laboratory/aiw/nhnhan.html"
+    "labUrl": "https://www.jaist.ac.jp/english/laboratory/aiw/nhnhan.html",
+    "phdMajor": "Information Science"
   },
   {
     "id": "vp-0930",
@@ -35715,7 +35743,7 @@
     "name": "Vu Duc Tran",
     "vietnameseName": "Trần Đức Vũ",
     "profileUrl": "https://fp.jaist.ac.jp/public/Default2.aspx?id=787&l=1",
-    "lastUpdatedAt": "2026-09-13T04:28:30.655Z",
+    "lastUpdatedAt": "2026-09-13T19:41:00.000Z",
     "university": "Japan Advanced Institute of Science and Technology",
     "city": "Nomi",
     "country": "Japan",
@@ -35750,7 +35778,8 @@
       "track",
       "university"
     ],
-    "labUrl": "https://www.jaist.ac.jp/english/laboratory/cs/vu-tran.html"
+    "labUrl": "https://www.jaist.ac.jp/english/laboratory/cs/vu-tran.html",
+    "phdMajor": "Information Science"
   },
   {
     "id": "vp-0932",
@@ -43496,7 +43525,7 @@
     "name": "Hai L. Vu",
     "vietnameseName": "Vũ Long Hải",
     "profileUrl": "https://research.monash.edu/en/persons/hai-vu",
-    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
+    "lastUpdatedAt": "2026-09-13T19:42:00.000Z",
     "university": "Monash University",
     "city": "Melbourne",
     "state": "Victoria",
@@ -43510,10 +43539,10 @@
       "Connected and Autonomous Vehicles",
       "Urban Mobility"
     ],
-    "phdInstitution": "Technical University of Budapest",
+    "phdInstitution": "Budapest University of Technology and Economics",
     "phdYear": 1999,
-    "phdMajor": "Electrical and Telecommunications Engineering",
-    "msInstitution": "Technical University of Budapest",
+    "phdMajor": "Telecommunications",
+    "msInstitution": "Budapest University of Technology and Economics",
     "msYear": 1994,
     "honors": [
       {
@@ -43532,7 +43561,11 @@
       ],
       "verifiedAt": "2026-09-13T00:00:00.000Z"
     },
-    "websiteUrl": "https://sites.google.com/site/profhailvu/home"
+    "websiteUrl": "https://sites.google.com/site/profhailvu/home",
+    "undergradInstitution": "Budapest University of Technology and Economics",
+    "undergradYear": 1994,
+    "undergradMajor": "Electrical Engineering",
+    "msMajor": "Electrical Engineering"
   },
   {
     "id": "vp-1193",
@@ -45216,8 +45249,11 @@
     ],
     "phdInstitution": "Osaka University",
     "phdYear": 2012,
-    "phdMajor": "Engineering",
-    "lastUpdatedAt": "2026-09-13T00:00:00.000Z"
+    "phdMajor": "Engineering Science",
+    "lastUpdatedAt": "2026-09-13T19:42:00.000Z",
+    "undergradInstitution": "Vietnam National University of Agriculture",
+    "undergradMajor": "Biochemistry",
+    "msInstitution": "Osaka University"
   },
   {
     "id": "vp-1255",
@@ -45241,9 +45277,15 @@
       "High Performance Computing"
     ],
     "phdInstitution": "University of Southern California",
-    "phdYear": 2013,
+    "phdYear": 2014,
     "phdMajor": "Physics",
-    "lastUpdatedAt": "2026-09-13T00:00:00.000Z"
+    "lastUpdatedAt": "2026-09-13T19:42:00.000Z",
+    "undergradInstitution": "Vietnam National University, Hanoi",
+    "undergradYear": 2005,
+    "undergradMajor": "Physics",
+    "msInstitution": "University of Southern California",
+    "msYear": 2012,
+    "msMajor": "Computer Science"
   },
   {
     "id": "vp-1256",
@@ -49160,7 +49202,7 @@
     "name": "Nguyen Quoc Khanh Le",
     "vietnameseName": "Lê Nguyễn Quốc Khánh",
     "profileUrl": "https://hub.tmu.edu.tw/en/persons/nguyen-quoc-khanh-le/",
-    "lastUpdatedAt": "2026-09-09T04:59:15.433Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "scholarUrl": "https://scholar.google.com/citations?user=d2fJ3r8AAAAJ",
     "university": "Taipei Medical University",
     "city": "Taipei",
@@ -49177,14 +49219,15 @@
     "phdMajor": "Computer Science and Information Engineering",
     "country": "Taiwan",
     "portrait": "portraits/vp-1412-nguyen-quoc-khanh-le.webp",
-    "portraitSource": "https://hub.tmu.edu.tw/files-asset/42484745/108016.jpg/"
+    "portraitSource": "https://hub.tmu.edu.tw/files-asset/42484745/108016.jpg/",
+    "websiteUrl": "https://khanhlee.github.io/"
   },
   {
     "id": "vp-1413",
     "name": "Hung Ton-That",
     "vietnameseName": "Tôn Thất Hùng",
     "profileUrl": "https://bioscience.ucla.edu/people/hung-ton-that",
-    "lastUpdatedAt": "2026-09-06T12:55:00.000Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "scholarUrl": "https://scholar.google.com/citations?user=i44H9KMAAAAJ",
     "university": "University of California, Los Angeles",
     "city": "Los Angeles",
@@ -49210,7 +49253,7 @@
     "name": "Khanh Kieu",
     "vietnameseName": "Kiều Quốc Khánh",
     "profileUrl": "https://www.optics.arizona.edu/person/khanh-kieu",
-    "lastUpdatedAt": "2026-09-06T12:55:00.000Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "scholarUrl": "https://scholar.google.com/citations?user=G6eRskwAAAAJ",
     "university": "University of Arizona",
     "city": "Tucson",
@@ -49244,7 +49287,7 @@
     "name": "Tung B. K. Le",
     "vietnameseName": "Lê Bá Kim Tùng",
     "profileUrl": "https://www.jic.ac.uk/people/tung-le/",
-    "lastUpdatedAt": "2026-09-06T12:55:00.000Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "scholarUrl": "https://scholar.google.com/citations?user=tY9_QhYAAAAJ",
     "university": "John Innes Centre",
     "institutionType": "Independent nonprofit research institute",
@@ -49267,14 +49310,15 @@
         "https://www.jic.ac.uk/people/tung-le/"
       ],
       "verifiedAt": "2026-09-07T23:45:00.000Z"
-    }
+    },
+    "labUrl": "https://www.tunglelab.org/"
   },
   {
     "id": "vp-1416",
     "name": "Cuong Cao",
     "vietnameseName": "Cao Hùng Cường",
     "profileUrl": "https://pure.qub.ac.uk/en/persons/cuong-cao",
-    "lastUpdatedAt": "2026-09-06T12:55:00.000Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "scholarUrl": "https://scholar.google.com/citations?user=4_yV8V8AAAAJ",
     "university": "Queen's University Belfast",
     "city": "Belfast",
@@ -49304,7 +49348,7 @@
     "name": "Lam Si Tung Ho",
     "vietnameseName": "Hồ Sĩ Tùng Lâm",
     "profileUrl": "https://www.dal.ca/faculty/science/math-stats/faculty-staff/our-faculty/statistics/lam-ho.html",
-    "lastUpdatedAt": "2026-09-06T12:55:00.000Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "scholarUrl": "https://scholar.google.com/citations?user=m222-iQAAAAJ",
     "university": "Dalhousie University",
     "city": "Halifax",
@@ -49331,7 +49375,8 @@
         "https://www.dal.ca/faculty/science/math-stats/faculty-staff/our-faculty/statistics/lam-ho.html"
       ],
       "verifiedAt": "2026-09-07T23:45:00.000Z"
-    }
+    },
+    "websiteUrl": "https://sites.google.com/site/lamho86/"
   },
   {
     "id": "vp-1418",
@@ -49372,7 +49417,7 @@
     "name": "Trung Hieu Tran",
     "vietnameseName": "Trần Trung Hiếu",
     "profileUrl": "https://www.lboro.ac.uk/schools/business-school/our-people/trung-hieu-tran/",
-    "lastUpdatedAt": "2026-09-06T12:55:00.000Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "scholarUrl": "https://scholar.google.com/citations?user=mRzUo4gAAAAJ",
     "university": "Loughborough University",
     "city": "Loughborough",
@@ -49397,14 +49442,15 @@
         "https://www.lboro.ac.uk/schools/business-school/our-people/trung-hieu-tran/"
       ],
       "verifiedAt": "2026-09-07T23:45:00.000Z"
-    }
+    },
+    "websiteUrl": "https://trunghieu-tran.github.io/bio/"
   },
   {
     "id": "vp-1420",
     "name": "Huong Giang T. Nguyen",
     "vietnameseName": "Nguyễn Thị Hương Giang",
     "profileUrl": "https://www.nist.gov/people/huong-giang-nguyen",
-    "lastUpdatedAt": "2026-09-12T19:06:09.068Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "scholarUrl": "https://scholar.google.com/citations?user=0t8f3iEAAAAJ",
     "university": "National Institute of Standards and Technology",
     "institutionType": "Public research institute",
@@ -49439,7 +49485,7 @@
     "name": "Hieu Trinh",
     "vietnameseName": "Trịnh Hiếu",
     "profileUrl": "https://www.deakin.edu.au/about-deakin/people/hieu-trinh",
-    "lastUpdatedAt": "2026-09-06T12:55:00.000Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "scholarUrl": "https://scholar.google.com/citations?user=Y4o2kS8AAAAJ",
     "university": "Deakin University",
     "city": "Geelong",
@@ -49466,7 +49512,7 @@
     "name": "Toan Dinh",
     "vietnameseName": "Đinh Toàn",
     "profileUrl": "https://staffprofile.unisq.edu.au/profile/toan-dinh",
-    "lastUpdatedAt": "2026-09-06T12:55:00.000Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "scholarUrl": "https://scholar.google.com/citations?user=rS2vQ70AAAAJ",
     "university": "University of Southern Queensland",
     "city": "Toowoomba",
@@ -49486,14 +49532,15 @@
       "MEMS",
       "Wearable Electronics",
       "Semiconductor Technology"
-    ]
+    ],
+    "labUrl": "https://dinh-lab.com/"
   },
   {
     "id": "vp-1423",
     "name": "Van Thanh Dau",
     "vietnameseName": "Đậu Văn Thanh",
     "profileUrl": "https://experts.griffith.edu.au/18881-van-thanh-dau",
-    "lastUpdatedAt": "2026-09-06T12:55:00.000Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "scholarUrl": "https://scholar.google.com/citations?user=wU89y1wAAAAJ",
     "university": "Griffith University",
     "city": "Gold Coast",
@@ -49520,7 +49567,7 @@
     "name": "Nam Mai-Duy",
     "vietnameseName": "Mai Duy Nam",
     "profileUrl": "https://staffprofile.unisq.edu.au/profile/nam-mai-duy",
-    "lastUpdatedAt": "2026-09-12T19:06:14.490Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "scholarUrl": "https://scholar.google.com/citations?user=xN15iU4AAAAJ",
     "university": "University of Southern Queensland",
     "city": "Toowoomba",
@@ -49555,7 +49602,7 @@
     "name": "Linh Cao Hoang",
     "vietnameseName": "Hoàng Cao Linh",
     "profileUrl": "https://orbit.dtu.dk/en/persons/linh-cao-hoang",
-    "lastUpdatedAt": "2026-09-09T04:59:27.938Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "scholarUrl": "https://scholar.google.com/citations?user=7iGk5mQAAAAJ",
     "university": "Technical University of Denmark",
     "city": "Kongens Lyngby",
@@ -49582,14 +49629,15 @@
       "verifiedAt": "2026-09-07T23:45:00.000Z"
     },
     "portrait": "portraits/vp-1425-linh-cao-hoang.webp",
-    "portraitSource": "https://orbit.dtu.dk/files-asset/398997520/905_2c599d15.jpg/"
+    "portraitSource": "https://orbit.dtu.dk/files-asset/398997520/905_2c599d15.jpg/",
+    "websiteUrl": "http://www.construct.dtu.dk"
   },
   {
     "id": "vp-1426",
     "name": "Ngoc Duy Nguyen",
     "vietnameseName": "Nguyễn Ngọc Duy",
     "profileUrl": "https://www.uliege.be/cms/c_9054334/en/directory?uid=U016698",
-    "lastUpdatedAt": "2026-09-11T04:58:07.179Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "scholarUrl": "https://scholar.google.com/citations?user=c1xJmgUAAAAJ",
     "university": "University of Liège",
     "city": "Liège",
@@ -49612,7 +49660,7 @@
     "name": "Duc-Kien Thai",
     "vietnameseName": "Thái Đức Kiên",
     "profileUrl": "https://sejong.elsevierpure.com/en/persons/duc-kien-thai",
-    "lastUpdatedAt": "2026-09-09T04:59:29.451Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "scholarUrl": "https://scholar.google.com/citations?user=6U1o1gAAAAAJ",
     "university": "Sejong University",
     "city": "Seoul",
@@ -49644,7 +49692,7 @@
     "name": "Quoc-Hung Phan",
     "vietnameseName": "Phan Quốc Hùng",
     "profileUrl": "https://me.ncku.edu.tw/",
-    "lastUpdatedAt": "2026-09-09T04:59:37.711Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "scholarUrl": "https://scholar.google.com/citations?user=wXm2t6EAAAAJ",
     "university": "National Cheng Kung University",
     "city": "Tainan",
@@ -49666,7 +49714,7 @@
     "name": "Thanh Hai Nguyen",
     "vietnameseName": "Nguyễn Thanh Hải",
     "profileUrl": "https://hct.ac.ae/",
-    "lastUpdatedAt": "2026-09-09T04:59:30.791Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "scholarUrl": "https://scholar.google.com/citations?user=nZgBfq8AAAAJ",
     "university": "Higher Colleges of Technology",
     "city": "Abu Dhabi",
@@ -49689,7 +49737,7 @@
     "name": "Anh Minh Tang",
     "vietnameseName": "Tăng Anh Minh",
     "profileUrl": "https://ecoledesponts.fr/en/academics/masters/civil-engineering-program",
-    "lastUpdatedAt": "2026-09-09T04:59:31.184Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "scholarUrl": "https://scholar.google.com/citations?user=sY0F8xAAAAAJ",
     "university": "École des Ponts ParisTech",
     "city": "Champs-sur-Marne",
@@ -49717,7 +49765,7 @@
     "name": "Minh-Quyen Le",
     "vietnameseName": "Lê Minh Quyền",
     "profileUrl": "https://lgef.insa-lyon.fr/fr/page/enseignants-chercheurs",
-    "lastUpdatedAt": "2026-09-11T04:00:16.000Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "scholarUrl": "https://scholar.google.com/citations?user=1vbjljoAAAAJ",
     "university": "INSA Lyon",
     "city": "Villeurbanne",
@@ -49740,7 +49788,7 @@
     "name": "Quoc Tuan Tran",
     "vietnameseName": "Trần Quốc Tuấn",
     "profileUrl": "https://liten.cea.fr/cea-tech/liten/Pages/CEA-Liten/HDR/TRAN-Quoc-Tuan.aspx",
-    "lastUpdatedAt": "2026-09-09T04:59:38.897Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "scholarUrl": "https://scholar.google.com/citations?user=v65xWvYAAAAJ",
     "university": "Commissariat à l'Énergie Atomique et aux Énergies Alternatives",
     "institutionType": "Public research institute",
@@ -49764,7 +49812,7 @@
     "name": "Tuan A. Ho",
     "vietnameseName": "Hồ Anh Tuấn",
     "profileUrl": "https://www.sandia.gov/labnews/2024/04/04/sandia-studies-subterranean-storage-of-hydrogen/",
-    "lastUpdatedAt": "2026-09-09T04:59:34.107Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "scholarUrl": "https://scholar.google.com/citations?user=P_x6E5IAAAAJ",
     "university": "Sandia National Laboratories",
     "institutionType": "Public research institute",
@@ -49792,7 +49840,7 @@
     "name": "Huyen N. Dinh",
     "vietnameseName": "Đinh Ngọc Huyền",
     "profileUrl": "https://research-hub.nrel.gov/en/persons/huyen-dinh",
-    "lastUpdatedAt": "2026-09-06T12:55:00.000Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "scholarUrl": "https://scholar.google.com/citations?user=C1t3ZVUAAAAJ",
     "university": "National Renewable Energy Laboratory",
     "institutionType": "Public research institute",
@@ -49817,7 +49865,7 @@
     "name": "Trang Hoang",
     "vietnameseName": "Hoàng Trang",
     "profileUrl": "https://pharmacologie-physiologie.umontreal.ca/recherche/nos-chercheurs/trang-hoang/",
-    "lastUpdatedAt": "2026-09-12T18:46:49.071Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "scholarUrl": "https://scholar.google.com/citations?user=YnB1X3YAAAAJ",
     "university": "Université de Montréal",
     "city": "Montreal",
@@ -49835,14 +49883,15 @@
       "Pharmacology"
     ],
     "portrait": "portraits/vp-1435-trang-hoang.webp",
-    "portraitSource": "https://static.iric.ca/files/2025/07/HoangT_250609-iric-120_crop_vignette2800x1400-900x450.jpg"
+    "portraitSource": "https://static.iric.ca/files/2025/07/HoangT_250609-iric-120_crop_vignette2800x1400-900x450.jpg",
+    "labUrl": "https://www.hoanglab.org"
   },
   {
     "id": "vp-1436",
     "name": "Thuan V. Ly",
     "vietnameseName": "Lý Văn Thuận",
     "profileUrl": "https://www.massgeneral.org/doctors/20888/thuan-ly",
-    "lastUpdatedAt": "2026-09-09T04:59:37.567Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "scholarUrl": "https://scholar.google.com/citations?user=1r0w9z0AAAAJ",
     "university": "Harvard University",
     "city": "Boston",
@@ -49866,7 +49915,7 @@
     "name": "Quyen Q. Hoang",
     "vietnameseName": "Hoàng Quốc Quyền",
     "profileUrl": "https://medicine.iu.edu/faculty/16281/hoang-quyen",
-    "lastUpdatedAt": "2026-09-06T12:55:00.000Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "scholarUrl": "https://scholar.google.com/citations?user=aHglVfQAAAAJ",
     "university": "Indiana University Indianapolis",
     "city": "Indianapolis",
@@ -49893,7 +49942,7 @@
     "name": "Nhu Thao Nguyen Galván",
     "vietnameseName": "Nguyễn Như Thảo",
     "profileUrl": "https://www.bcm.edu/departments/surgery",
-    "lastUpdatedAt": "2026-09-12T19:06:26.704Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "scholarUrl": "https://scholar.google.com/citations?user=v8LdO_8AAAAJ",
     "university": "Baylor College of Medicine",
     "city": "Houston",
@@ -49919,7 +49968,7 @@
     "name": "Thao-Ly T. Phan",
     "vietnameseName": "Phan Thảo Ly",
     "profileUrl": "https://www.nemours.org/find-a-doctor/2311-thao-ly-phan-pediatrics-wilmington",
-    "lastUpdatedAt": "2026-09-12T19:06:27.477Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "scholarUrl": "https://scholar.google.com/citations?user=0t83z7UAAAAJ",
     "university": "Thomas Jefferson University",
     "city": "Philadelphia",
@@ -49944,7 +49993,7 @@
     "name": "Thao Ho",
     "vietnameseName": "Hồ Thảo",
     "profileUrl": "https://health.usf.edu/medicine/pediatrics/neonatology/faculty",
-    "lastUpdatedAt": "2026-09-12T19:06:29.135Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "scholarUrl": "https://scholar.google.com/citations?user=aHj-63IAAAAJ",
     "university": "University of South Florida",
     "city": "Tampa",
@@ -49972,14 +50021,15 @@
       "verifiedAt": "2026-09-08T00:05:00.000Z"
     },
     "portrait": "portraits/1440-thao-ho.webp",
-    "portraitSource": "https://cloud.usf.edu/FacultyDirectory/api/get/profile/caa60/photo/profile"
+    "portraitSource": "https://cloud.usf.edu/FacultyDirectory/api/get/profile/caa60/photo/profile",
+    "labUrl": "https://healthscholars.usf.edu/tina-ho-lab/people/Ho"
   },
   {
     "id": "vp-1441",
     "name": "Thi Dan Linh Nguyen-Kim",
     "vietnameseName": "Nguyễn Kim Thị Đan Linh",
     "profileUrl": "https://www.stadt-zuerich.ch/content/triemli/de/index/kliniken_institute/radiologie_nuklearmedizin/portraits_radiologie/chefaerztin/thi-dan-linh-nguyen-kim.html",
-    "lastUpdatedAt": "2026-09-12T19:06:31.138Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "scholarUrl": "https://scholar.google.com/citations?user=a_Qh4bYAAAAJ",
     "university": "University of Zurich",
     "city": "Zurich",
@@ -50001,7 +50051,7 @@
     "name": "Hung Q. Ly",
     "vietnameseName": "Lý Quốc Hùng",
     "profileUrl": "https://medecine.umontreal.ca/",
-    "lastUpdatedAt": "2026-09-12T18:46:49.239Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "scholarUrl": "https://scholar.google.com/citations?user=W9XWfBIAAAAJ",
     "university": "Université de Montréal",
     "city": "Montreal",
@@ -50026,7 +50076,7 @@
     "name": "Minh Cuong Duong",
     "vietnameseName": "Dương Minh Cường",
     "profileUrl": "https://www.unsw.edu.au/staff/minh-cuong-duong",
-    "lastUpdatedAt": "2026-09-10T12:23:01.000Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "scholarUrl": "https://scholar.google.com/citations?user=3GzXkKMAAAAJ",
     "university": "University of New South Wales",
     "city": "Sydney",
@@ -50110,7 +50160,7 @@
     "name": "Khanh Duy Trinh",
     "vietnameseName": "Trịnh Duy Khánh",
     "profileUrl": "https://w-rdb.waseda.jp/html/100001825_en.html",
-    "lastUpdatedAt": "2026-09-06T13:09:48.876Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "university": "Waseda University",
     "city": "Tokyo",
     "country": "Japan",
@@ -50132,14 +50182,15 @@
         "https://w-rdb.waseda.jp/html/100001825_en.html"
       ],
       "verifiedAt": "2026-09-08T00:05:00.000Z"
-    }
+    },
+    "websiteUrl": "https://sites.google.com/site/kdtrinhprob/Home"
   },
   {
     "id": "vp-1446",
     "name": "Van Thinh Nguyen",
     "vietnameseName": "Nguyễn Văn Thịnh",
     "profileUrl": "https://cee.snu.ac.kr/english/sub4_6.php",
-    "lastUpdatedAt": "2026-09-06T13:09:48.876Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "university": "Seoul National University",
     "city": "Seoul",
     "country": "South Korea",
@@ -50151,14 +50202,15 @@
       "Computational Fluid Dynamics",
       "Hydrologic Modeling",
       "Water Resources Engineering"
-    ]
+    ],
+    "labUrl": "https://cfdlabsnu.com"
   },
   {
     "id": "vp-1447",
     "name": "Cam Ha T. Tran",
     "vietnameseName": "Trần Thị Cẩm Hà",
     "profileUrl": "https://med.unr.edu/directory/cam-ha-tran",
-    "lastUpdatedAt": "2026-09-06T13:11:47.175Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "university": "University of Nevada, Reno",
     "city": "Reno",
     "state": "Nevada",
@@ -50181,7 +50233,7 @@
     "name": "Thien-Tri Lam",
     "vietnameseName": "Lâm Thiên Trí",
     "profileUrl": "https://www.hygiene.uni-wuerzburg.de/institut/mitarbeiter/curriculum-vitae-pd-dr-med-thien-tri-lam/",
-    "lastUpdatedAt": "2026-09-11T04:58:07.179Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "university": "University of Würzburg",
     "city": "Würzburg",
     "country": "Germany",
@@ -50201,7 +50253,7 @@
     "name": "Vy Hong-Diep Kim",
     "vietnameseName": "Kim Hồng Điệp Vy",
     "profileUrl": "https://www.sickkids.ca/en/staff/k/vy-kim/",
-    "lastUpdatedAt": "2026-09-06T13:11:47.175Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "university": "University of Toronto",
     "city": "Toronto",
     "state": "ON",
@@ -50215,14 +50267,15 @@
       "Primary Immunodeficiencies",
       "Food Immunotherapy",
       "Allergy"
-    ]
+    ],
+    "labUrl": "https://lab.research.sickkids.ca/kim/"
   },
   {
     "id": "vp-1450",
     "name": "Thanh Luu",
     "vietnameseName": "Lưu Thanh",
     "profileUrl": "https://www.rosalindfranklin.edu/academics/chicago-medical-school/departments/obstetrics-and-gynecology/faculty/thanh-luu-do/",
-    "lastUpdatedAt": "2026-09-06T13:11:47.175Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "university": "Rosalind Franklin University of Medicine and Science",
     "city": "North Chicago",
     "state": "Illinois",
@@ -50250,7 +50303,7 @@
     "name": "Hieu Van Ngo",
     "vietnameseName": "Ngô Văn Hiếu",
     "profileUrl": "https://profiles.ucalgary.ca/hieu-ngo",
-    "lastUpdatedAt": "2026-09-11T04:58:07.179Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "university": "University of Calgary",
     "city": "Calgary",
     "state": "AB",
@@ -50279,7 +50332,7 @@
     "name": "Anh-Luu T. Huynh-Hohnbaum",
     "vietnameseName": "Huỳnh Thị Ánh Lưu",
     "profileUrl": "https://www.calstatela.edu/hhs/sw/faculty",
-    "lastUpdatedAt": "2026-09-11T12:20:58.019Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "university": "California State University, Los Angeles",
     "city": "Los Angeles",
     "state": "California",
@@ -50303,7 +50356,7 @@
     "name": "Vinh To",
     "vietnameseName": "Tô Vinh",
     "profileUrl": "https://discover.utas.edu.au/Vinh.To",
-    "lastUpdatedAt": "2026-09-10T12:23:01.000Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "university": "University of Tasmania",
     "city": "Hobart",
     "state": "TAS",
@@ -50323,7 +50376,7 @@
     "name": "Anh Phan - University of Kent",
     "vietnameseName": "Phan Ngọc Quỳnh Anh",
     "profileUrl": "https://www.kent.ac.uk/curriculum-and-education-development/people/4947/phan-ngoc-quynh-anh",
-    "lastUpdatedAt": "2026-09-11T04:58:07.179Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "university": "University of Kent",
     "city": "Canterbury",
     "country": "United Kingdom",
@@ -50345,7 +50398,7 @@
     "name": "Phan Le Ha",
     "vietnameseName": "Phan Lê Hà",
     "profileUrl": "https://ice.ubd.edu.bn/phan-le-ha/",
-    "lastUpdatedAt": "2026-09-11T04:58:07.179Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "university": "Universiti Brunei Darussalam",
     "city": "Bandar Seri Begawan",
     "country": "Brunei",
@@ -50368,7 +50421,7 @@
     "name": "Huong Le",
     "vietnameseName": "Lê Hương",
     "profileUrl": "https://staff-profiles.cqu.edu.au/home/view/25390",
-    "lastUpdatedAt": "2026-09-06T13:13:51.572Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "university": "Central Queensland University",
     "city": "Melbourne",
     "state": "VIC",
@@ -50389,7 +50442,7 @@
     "name": "Minh Kieu",
     "vietnameseName": "Kiều Minh",
     "profileUrl": "https://profiles.auckland.ac.nz/l-kieu",
-    "lastUpdatedAt": "2026-09-10T12:23:01.000Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "university": "University of Auckland",
     "city": "Auckland",
     "country": "New Zealand",
@@ -50402,14 +50455,15 @@
       "Agent-Based Modeling",
       "Shared Autonomous Vehicles",
       "Public Transit Operations"
-    ]
+    ],
+    "websiteUrl": "https://leminhkieu.github.io/"
   },
   {
     "id": "vp-1458",
     "name": "Huy Phung",
     "vietnameseName": "Phùng Huy",
     "profileUrl": "https://asianstudies.unc.edu/faculty/phung-huy/",
-    "lastUpdatedAt": "2026-09-11T04:58:07.179Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "university": "University of North Carolina at Chapel Hill",
     "city": "Chapel Hill",
     "state": "North Carolina",
@@ -50424,14 +50478,15 @@
       "Vietnamese Language Pedagogy",
       "Heritage Language Education",
       "Task-Based Language Teaching"
-    ]
+    ],
+    "websiteUrl": "https://www.phunghuy.com/"
   },
   {
     "id": "vp-1459",
     "name": "Bach Hoai Nguyen",
     "vietnameseName": "Nguyễn Hoài Bách",
     "profileUrl": "https://people.wgtn.ac.nz/bach.nguyen",
-    "lastUpdatedAt": "2026-09-10T12:23:01.000Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "university": "Victoria University of Wellington",
     "city": "Wellington",
     "country": "New Zealand",
@@ -50448,14 +50503,15 @@
       "Feature Selection",
       "Transfer Learning",
       "Domain Adaptation"
-    ]
+    ],
+    "websiteUrl": "https://hoaibach.github.io/"
   },
   {
     "id": "vp-1460",
     "name": "Vinh-Thong Ta",
     "vietnameseName": "Tạ Vĩnh Thông",
     "profileUrl": "https://www.edgehill.ac.uk/person/vinh-thong-ta/staff/",
-    "lastUpdatedAt": "2026-09-11T04:58:07.179Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "university": "Edge Hill University",
     "city": "Ormskirk",
     "state": "England",
@@ -50470,14 +50526,15 @@
       "System Verification",
       "Blockchain",
       "Applied Artificial Intelligence"
-    ]
+    ],
+    "websiteUrl": "https://sites.google.com/site/drvinhthongta/home"
   },
   {
     "id": "vp-1461",
     "name": "Thi-Bich-Hanh Dao",
     "vietnameseName": "Đào Thị Bích Hạnh",
     "profileUrl": "https://www.univ-orleans.fr/lifo/membres/dao/",
-    "lastUpdatedAt": "2026-09-06T13:15:49.006Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "university": "Université d'Orléans",
     "city": "Orléans",
     "country": "France",
@@ -50497,14 +50554,15 @@
         "https://www.univ-orleans.fr/lifo/membres/dao/"
       ],
       "verifiedAt": "2026-09-08T00:25:00.000Z"
-    }
+    },
+    "websiteUrl": "https://www.univ-orleans.fr/lifo/Members/dao/"
   },
   {
     "id": "vp-1462",
     "name": "Ngoc-Son Vu",
     "vietnameseName": "Vũ Ngọc Sơn",
     "profileUrl": "https://etis.ensea.fr/membres/ngoc-son-vu/",
-    "lastUpdatedAt": "2026-09-06T13:15:49.006Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "university": "CY Cergy Paris Université",
     "city": "Cergy",
     "country": "France",
@@ -50524,7 +50582,7 @@
     "name": "Bich-Lien Doan",
     "vietnameseName": "Đoàn Bích Liên",
     "profileUrl": "https://chaire-lusis.centralesupelec.fr/people/bich-lien-doan/",
-    "lastUpdatedAt": "2026-09-11T12:01:18.624Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "university": "CentraleSupélec",
     "city": "Gif-sur-Yvette",
     "country": "France",
@@ -51060,7 +51118,7 @@
       "Respiratory Epidemiology"
     ],
     "profileUrl": "https://profiles.ucsf.edu/ngoc.ly",
-    "lastUpdatedAt": "2026-09-09T05:00:31.958Z",
+    "lastUpdatedAt": "2026-09-13T19:43:00.000Z",
     "researchOverview": {
       "text": "Research focuses on pediatric asthma, cystic fibrosis, exercise testing, bronchopulmonary dysplasia, and clinical trials in cystic fibrosis and asthma.",
       "sources": [
@@ -51808,7 +51866,7 @@
     "id": "vp-1537",
     "name": "Loi H. Do",
     "profileUrl": "https://www.uh.edu/nsm/chemistry/people/profiles/loi-do/index.php",
-    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
+    "lastUpdatedAt": "2026-09-13T19:43:00.000Z",
     "scholarUrl": "https://scholar.google.com/citations?user=Rc9Z5KoAAAAJ&hl=en",
     "university": "University of Houston",
     "city": "Houston",
@@ -51833,14 +51891,19 @@
         "https://sites.google.com/view/doresearch"
       ],
       "verifiedAt": "2026-09-13T00:00:00.000Z"
-    }
+    },
+    "undergradInstitution": "University of California, San Diego",
+    "undergradYear": 2006,
+    "phdMajor": "Chemistry",
+    "postdocInstitution": "California Institute of Technology",
+    "postdocYear": 2013
   },
   {
     "id": "vp-1538",
     "name": "Thanh Phat Vo",
     "vietnameseName": "Võ Thành Phát",
     "profileUrl": "https://campus.und.edu/directory/thanh.vo.1",
-    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
+    "lastUpdatedAt": "2026-09-13T19:43:00.000Z",
     "scholarUrl": "https://scholar.google.com/citations?hl=en&user=KCA07IQAAAAJ",
     "university": "University of North Dakota",
     "city": "Grand Forks",
@@ -51866,7 +51929,14 @@
         "https://sites.google.com/view/vtphat204"
       ],
       "verifiedAt": "2026-09-13T00:00:00.000Z"
-    }
+    },
+    "undergradInstitution": "Ho Chi Minh City University of Education",
+    "undergradYear": 2018,
+    "undergradMajor": "Mathematics Teacher Education",
+    "msInstitution": "Wayne State University",
+    "msYear": 2021,
+    "msMajor": "Mathematics",
+    "phdMajor": "Mathematics"
   },
   {
     "id": "vp-1539",
@@ -51935,7 +52005,7 @@
     "id": "vp-1541",
     "name": "Ha Thu Le",
     "profileUrl": "https://www.cpp.edu/faculty/hatle/",
-    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
+    "lastUpdatedAt": "2026-09-13T19:43:00.000Z",
     "university": "California State Polytechnic University, Pomona",
     "city": "Pomona",
     "state": "California",
@@ -51949,7 +52019,7 @@
       "Electric vehicle-grid management",
       "Power system stability and energy storage"
     ],
-    "phdInstitution": "University of Texas at Austin",
+    "phdInstitution": "The University of Texas at Austin",
     "phdYear": 2010,
     "researchOverview": {
       "text": "Research centers on power systems and smart grid technology, including wind and solar integration, energy storage, and electric vehicle-grid management. Work applies optimization and AI-based algorithms to demand response, distributed generation, and power quality, with over $2.5 million in secured NSF funding as PI/Co-PI.",
@@ -51957,7 +52027,11 @@
         "https://www.cpp.edu/faculty/hatle/"
       ],
       "verifiedAt": "2026-09-13T00:00:00.000Z"
-    }
+    },
+    "msInstitution": "The University of Queensland",
+    "msYear": 2003,
+    "msMajor": "Electrical Engineering",
+    "phdMajor": "Electrical and Computer Engineering"
   },
   {
     "id": "vp-1542",
@@ -52060,7 +52134,7 @@
     "id": "vp-1546",
     "name": "Tan Hoang Cao",
     "profileUrl": "https://ams.sunykorea.ac.kr/ams/html/sub02/0201.html?mode=V&mng_no=d9472a18647c613a3a298895c583f4cc",
-    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
+    "lastUpdatedAt": "2026-09-13T19:43:00.000Z",
     "scholarUrl": "https://scholar.google.com/citations?user=BJg6V1cAAAAJ",
     "university": "SUNY Korea",
     "city": "Incheon",
@@ -52084,7 +52158,14 @@
         "https://sites.google.com/site/tancaowebsite/"
       ],
       "verifiedAt": "2026-09-13T00:00:00.000Z"
-    }
+    },
+    "undergradInstitution": "Ho Chi Minh City University of Education",
+    "undergradYear": 2008,
+    "undergradMajor": "Mathematical Education",
+    "msInstitution": "University of Orléans",
+    "msYear": 2009,
+    "msMajor": "Applied Mathematics",
+    "phdMajor": "Applied Mathematics"
   },
   {
     "id": "vp-1547",
