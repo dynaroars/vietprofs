@@ -45,8 +45,10 @@ test('generated profile pages use the same stylesheet source as the directory', 
   assert.match(generator, /Automatically summarized/);
   assert.doesNotMatch(generator, /Automatically summarized from/);
   assert.doesNotMatch(generator, /Report stale record/);
-  assert.match(sourceStylesheet, /\.subpage \.man-section/);
-  assert.match(sourceStylesheet, /\.subpage \.links a svg/);
+  assert.match(generator, /<span>\$\{sectionLabel\}<\/span>/);
+  assert.doesNotMatch(generator, /<span><a href="\.\.\/index\.html">\$\{sectionLabel\}<\/a><\/span>/);
+  assert.doesNotMatch(generator, /<footer>/);
+  assert.doesNotMatch(generator, /man-footer-line/);
   assert.ok(
     generator.indexOf('class="profile-actions"') < generator.indexOf('class="native"'),
     'profile actions should appear alongside the person\'s name',
