@@ -14,7 +14,8 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 - [x] Batch WL-06 complete
 - [x] Batch WL-07 complete
 - [x] Batch WL-08 complete
-- [ ] Batch WL-09 through WL-23 — not yet started (WebSearch session budget exhausted; paused for user input)
+- [x] Batch WL-09 complete
+- [ ] Batch WL-10 through WL-23 — not yet started
 
 ---
 
@@ -492,21 +493,21 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 
 ### Batch WL-09 (vp-0630 to vp-0688, 50 people)
 
-- [ ] Batch complete
+- [x] Batch complete
 
 | ID | Name | Institution | Department | Website | Lab |
 | :--- | :--- | :--- | :--- | :---: | :---: |
 | `vp-0630` | [Liem Nguyen - ESSEC Business School](https://vietprofs.roars.dev/people/vp-0630.html) | ESSEC Business School | Management Department | ⏳ | ⏳ |
 | `vp-0631` | [Cam Thi Doan](https://vietprofs.roars.dev/people/vp-0631.html) | Institut National des Langues et Civilisations Orientales | Department of Southeast Asia and the Pacific | ⏳ | ⏳ |
-| `vp-0633` | [Giang T. Nguyen](https://vietprofs.roars.dev/people/vp-0633.html) | TU Dresden | Faculty of Electrical and Computer Engineering | ⏳ | ⏳ |
-| `vp-0634` | [Giang Nghiem](https://vietprofs.roars.dev/people/vp-0634.html) | Leibniz University Hannover | Institute of Money and International Finance | ⏳ | ⏳ |
+| `vp-0633` | [Giang T. Nguyen](https://vietprofs.roars.dev/people/vp-0633.html) | TU Dresden | Faculty of Electrical and Computer Engineering | ⏳ | ✅ |
+| `vp-0634` | [Giang Nghiem](https://vietprofs.roars.dev/people/vp-0634.html) | Leibniz University Hannover | Institute of Money and International Finance | ✅ | ⏳ |
 | `vp-0635` | [Lan Nguyen](https://vietprofs.roars.dev/people/vp-0635.html) | Utrecht University | Department of International and European Law | ⏳ | ⏳ |
 | `vp-0636` | [Dennis Nguyen](https://vietprofs.roars.dev/people/vp-0636.html) | Utrecht University | Department of Media and Culture Studies | ⏳ | ⏳ |
 | `vp-0637` | [Ngoc Hân Nguyen](https://vietprofs.roars.dev/people/vp-0637.html) | University of Groningen | Department of Human Resource Management and Organizational Behaviour | ⏳ | ⏳ |
-| `vp-0638` | [Phuong H. Nguyen](https://vietprofs.roars.dev/people/vp-0638.html) | Eindhoven University of Technology | Department of Electrical Engineering | ⏳ | ⏳ |
-| `vp-0639` | [Quynh Nguyen](https://vietprofs.roars.dev/people/vp-0639.html) | University of Bern | Institute of Political Science | ⏳ | ⏳ |
-| `vp-0640` | [James Nguyen](https://vietprofs.roars.dev/people/vp-0640.html) | Stockholm University | Department of Philosophy | ⏳ | ⏳ |
-| `vp-0641` | [Nhung Tuyet Tran](https://vietprofs.roars.dev/people/vp-0641.html) | University of Toronto | Department of History | ⏳ | ⏳ |
+| `vp-0638` | [Phuong H. Nguyen](https://vietprofs.roars.dev/people/vp-0638.html) | Eindhoven University of Technology | Department of Electrical Engineering | ⏳ | ✅ |
+| `vp-0639` | [Quynh Nguyen](https://vietprofs.roars.dev/people/vp-0639.html) | University of Bern | Institute of Political Science | ✅ | ⏳ |
+| `vp-0640` | [James Nguyen](https://vietprofs.roars.dev/people/vp-0640.html) | Stockholm University | Department of Philosophy | ✅ | ⏳ |
+| `vp-0641` | [Nhung Tuyet Tran](https://vietprofs.roars.dev/people/vp-0641.html) | University of Toronto | Department of History | ✅ | ⏳ |
 | `vp-0642` | [Thy Phu](https://vietprofs.roars.dev/people/vp-0642.html) | University of Toronto | Department of Arts, Culture and Media | ⏳ | ⏳ |
 | `vp-0643` | [John Tran](https://vietprofs.roars.dev/people/vp-0643.html) | University of Toronto | Division of Anatomy, Department of Surgery | ⏳ | ⏳ |
 | `vp-0644` | [Jason Nguyen](https://vietprofs.roars.dev/people/vp-0644.html) | University of Toronto | John H. Daniels Faculty of Architecture, Landscape, and Design | ⏳ | ⏳ |
@@ -517,29 +518,29 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-0653` | [Peter V. Nguyen](https://vietprofs.roars.dev/people/vp-0653.html) | University of Alberta | Department of Physiology | ⏳ | ⏳ |
 | `vp-0654` | [Thanh Binh Nguyen](https://vietprofs.roars.dev/people/vp-0654.html) | University of Ottawa | Department of Radiology | ⏳ | ⏳ |
 | `vp-0655` | [Minh Dang Nguyen](https://vietprofs.roars.dev/people/vp-0655.html) | University of Calgary | Department of Clinical Neurosciences | ⏳ | ⏳ |
-| `vp-0656` | [Tuan Trang](https://vietprofs.roars.dev/people/vp-0656.html) | University of Calgary | Faculty of Veterinary Medicine | ⏳ | ⏳ |
-| `vp-0657` | [Vivian Nguyen](https://vietprofs.roars.dev/people/vp-0657.html) | Carleton University | Department of Biology | ⏳ | ⏳ |
+| `vp-0656` | [Tuan Trang](https://vietprofs.roars.dev/people/vp-0656.html) | University of Calgary | Faculty of Veterinary Medicine | ⏳ | ✅ |
+| `vp-0657` | [Vivian Nguyen](https://vietprofs.roars.dev/people/vp-0657.html) | Carleton University | Department of Biology | ⏳ | ✅ |
 | `vp-0658` | [Xuan Thuy Nguyen](https://vietprofs.roars.dev/people/vp-0658.html) | Carleton University | Institute of Interdisciplinary Studies (Disability & Inclusive Education) | ⏳ | ⏳ |
-| `vp-0659` | [Nhat Truong Nguyen](https://vietprofs.roars.dev/people/vp-0659.html) | Concordia University | Department of Chemical and Materials Engineering | ⏳ | ⏳ |
+| `vp-0659` | [Nhat Truong Nguyen](https://vietprofs.roars.dev/people/vp-0659.html) | Concordia University | Department of Chemical and Materials Engineering | ⏳ | ✅ |
 | `vp-0661` | [Dang Khoa Nguyen](https://vietprofs.roars.dev/people/vp-0661.html) | Université de Montréal | Département de neurosciences | ⏳ | ⏳ |
 | `vp-0662` | [Bich Ngoc Nguyen](https://vietprofs.roars.dev/people/vp-0662.html) | Université de Montréal | Département de pathologie et biologie cellulaire | ⏳ | ⏳ |
 | `vp-0663` | [Caroline Nguyen Ngoc](https://vietprofs.roars.dev/people/vp-0663.html) | Université de Montréal | Département de dentisterie de restauration | ⏳ | ⏳ |
 | `vp-0664` | [Chau Pham](https://vietprofs.roars.dev/people/vp-0664.html) | University of Manitoba | Department of Emergency Medicine | ⏳ | ⏳ |
-| `vp-0665` | [Nam Long Nguyen](https://vietprofs.roars.dev/people/vp-0665.html) | National University of Singapore | Department of Biochemistry, Yong Loo Lin School of Medicine | ⏳ | ⏳ |
-| `vp-0666` | [Thi Nguyet Minh Le](https://vietprofs.roars.dev/people/vp-0666.html) | National University of Singapore | Pharmacology | ⏳ | ⏳ |
-| `vp-0668` | [Cuong Dang](https://vietprofs.roars.dev/people/vp-0668.html) | Nanyang Technological University | School of Electrical and Electronic Engineering | ⏳ | ⏳ |
-| `vp-0669` | [Li Nguyen](https://vietprofs.roars.dev/people/vp-0669.html) | Nanyang Technological University | Linguistics and Multilingual Studies, School of Humanities | ⏳ | ⏳ |
+| `vp-0665` | [Nam Long Nguyen](https://vietprofs.roars.dev/people/vp-0665.html) | National University of Singapore | Department of Biochemistry, Yong Loo Lin School of Medicine | ⏳ | ✅ |
+| `vp-0666` | [Thi Nguyet Minh Le](https://vietprofs.roars.dev/people/vp-0666.html) | National University of Singapore | Pharmacology | ⏳ | ✅ |
+| `vp-0668` | [Cuong Dang](https://vietprofs.roars.dev/people/vp-0668.html) | Nanyang Technological University | School of Electrical and Electronic Engineering | ⏳ | ✅ |
+| `vp-0669` | [Li Nguyen](https://vietprofs.roars.dev/people/vp-0669.html) | Nanyang Technological University | Linguistics and Multilingual Studies, School of Humanities | ✅ | ⏳ |
 | `vp-0670` | [Thi Qui Nguyen](https://vietprofs.roars.dev/people/vp-0670.html) | Singapore Institute of Technology | Engineering Cluster | ⏳ | ⏳ |
 | `vp-0671` | [Vinh Q. Nguyen - The University of Hong Kong](https://vietprofs.roars.dev/people/vp-0671.html) | The University of Hong Kong | HKU Business School | ⏳ | ⏳ |
-| `vp-0672` | [Quoc-Anh Do](https://vietprofs.roars.dev/people/vp-0672.html) | Monash University | Department of Economics | ⏳ | ⏳ |
-| `vp-0673` | [Lan K. Nguyen](https://vietprofs.roars.dev/people/vp-0673.html) | Monash University | Department of Biochemistry and Molecular Biology | ⏳ | ⏳ |
+| `vp-0672` | [Quoc-Anh Do](https://vietprofs.roars.dev/people/vp-0672.html) | Monash University | Department of Economics | ✅ | ⏳ |
+| `vp-0673` | [Lan K. Nguyen](https://vietprofs.roars.dev/people/vp-0673.html) | Monash University | Department of Biochemistry and Molecular Biology | ⏳ | ✅ |
 | `vp-0674` | [Van Nguyen](https://vietprofs.roars.dev/people/vp-0674.html) | Monash University | School of Nursing and Midwifery | ⏳ | ⏳ |
-| `vp-0675` | [Viet Hoang Nguyen](https://vietprofs.roars.dev/people/vp-0675.html) | University of Melbourne | Melbourne Institute: Applied Economic & Social Research | ⏳ | ⏳ |
+| `vp-0675` | [Viet Hoang Nguyen](https://vietprofs.roars.dev/people/vp-0675.html) | University of Melbourne | Melbourne Institute: Applied Economic & Social Research | ✅ | ⏳ |
 | `vp-0677` | [Linh Nguyen](https://vietprofs.roars.dev/people/vp-0677.html) | University of Melbourne | Department of Finance | ⏳ | ⏳ |
 | `vp-0678` | [Christine Nguyen - University of Melbourne](https://vietprofs.roars.dev/people/vp-0678.html) | University of Melbourne | Department of Optometry and Vision Sciences | ⏳ | ⏳ |
 | `vp-0679` | [Bao Nguyen](https://vietprofs.roars.dev/people/vp-0679.html) | University of Melbourne | Department of Optometry and Vision Sciences | ⏳ | ⏳ |
 | `vp-0680` | [Helena Nguyen](https://vietprofs.roars.dev/people/vp-0680.html) | The University of Sydney | Discipline of Work and Organisational Studies | ⏳ | ⏳ |
-| `vp-0682` | [Vinh Nguyen - UNSW Sydney](https://vietprofs.roars.dev/people/vp-0682.html) | UNSW Sydney | School of Chemistry | ⏳ | ⏳ |
+| `vp-0682` | [Vinh Nguyen - UNSW Sydney](https://vietprofs.roars.dev/people/vp-0682.html) | UNSW Sydney | School of Chemistry | ⏳ | ✅ |
 | `vp-0683` | [Hoa Nguyen - Australian National University](https://vietprofs.roars.dev/people/vp-0683.html) | Australian National University | Arndt-Corden Department of Economics, Crawford School of Public Policy | ⏳ | ⏳ |
 | `vp-0684` | [Anh Nguyen - The University of Queensland](https://vietprofs.roars.dev/people/vp-0684.html) | The University of Queensland | School of Chemical Engineering | ⏳ | ⏳ |
 | `vp-0685` | [Vinh Dao](https://vietprofs.roars.dev/people/vp-0685.html) | The University of Queensland | School of Civil Engineering | ⏳ | ⏳ |
