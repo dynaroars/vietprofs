@@ -29,7 +29,7 @@ type LedgerEntry = Ledger['entries'][string];
 // validate-data.ts requires profileUrl on every entry, but the RosterEntry type marks it
 // optional, so the source list is filtered rather than assumed.
 function sourceUrlsFor(person: RosterEntry): string[] {
-  return [person.profileUrl, person.websiteUrl].filter((url): url is string => Boolean(url));
+  return [person.profileUrl, person.websiteUrl, person.labUrl].filter((url): url is string => Boolean(url));
 }
 
 async function load(): Promise<{ roster: Roster; ledger: Ledger | null }> {
