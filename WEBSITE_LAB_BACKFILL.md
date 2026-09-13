@@ -12,7 +12,8 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 - [x] Batch WL-04 complete
 - [x] Batch WL-05 complete
 - [x] Batch WL-06 complete
-- [ ] Batch WL-07 through WL-23 — not yet started
+- [x] Batch WL-07 complete
+- [ ] Batch WL-08 through WL-23 — not yet started
 
 ---
 
@@ -372,22 +373,22 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 
 ### Batch WL-07 (vp-0521 to vp-0577, 50 people)
 
-- [ ] Batch complete
+- [x] Batch complete
 
 | ID | Name | Institution | Department | Website | Lab |
 | :--- | :--- | :--- | :--- | :---: | :---: |
 | `vp-0521` | [Tien Zung Nguyen](https://vietprofs.roars.dev/people/vp-0521.html) | Université Toulouse III - Paul Sabatier | Institut de Mathématiques de Toulouse | ⏳ | ⏳ |
-| `vp-0522` | [Duong Hieu Phan](https://vietprofs.roars.dev/people/vp-0522.html) | Télécom Paris | Computer Science and Networks | ⏳ | ⏳ |
-| `vp-0523` | [Phu Nguyen-Van](https://vietprofs.roars.dev/people/vp-0523.html) | Université Paris Nanterre | EconomiX (Department of Economics) | ⏳ | ⏳ |
+| `vp-0522` | [Duong Hieu Phan](https://vietprofs.roars.dev/people/vp-0522.html) | Télécom Paris | Computer Science and Networks | ✅ | ⏳ |
+| `vp-0523` | [Phu Nguyen-Van](https://vietprofs.roars.dev/people/vp-0523.html) | Université Paris Nanterre | EconomiX (Department of Economics) | ✅ | ⏳ |
 | `vp-0526` | [Phong Nguyen - École Normale Supérieure PSL](https://vietprofs.roars.dev/people/vp-0526.html) | École Normale Supérieure PSL | Département d'Informatique | ⏳ | ⏳ |
-| `vp-0527` | [Suong Nguyen](https://vietprofs.roars.dev/people/vp-0527.html) | École Polytechnique Fédérale de Lausanne | Institute of Chemical Sciences and Engineering | ⏳ | ⏳ |
-| `vp-0528` | [Minh Quang Tran](https://vietprofs.roars.dev/people/vp-0528.html) | École Polytechnique Fédérale de Lausanne | Institute of Physics | ⏳ | ⏳ |
-| `vp-0529` | [Kevin Pham](https://vietprofs.roars.dev/people/vp-0529.html) | University of Amsterdam | Department of Political Science | ⏳ | ⏳ |
+| `vp-0527` | [Suong Nguyen](https://vietprofs.roars.dev/people/vp-0527.html) | École Polytechnique Fédérale de Lausanne | Institute of Chemical Sciences and Engineering | ⏳ | ✅ |
+| `vp-0528` | [Minh Quang Tran](https://vietprofs.roars.dev/people/vp-0528.html) | École Polytechnique Fédérale de Lausanne | Institute of Physics | ⏳ | ✅ |
+| `vp-0529` | [Kevin Pham](https://vietprofs.roars.dev/people/vp-0529.html) | University of Amsterdam | Department of Political Science | ✅ | ⏳ |
 | `vp-0530` | [Minh Tho Nguyen](https://vietprofs.roars.dev/people/vp-0530.html) | KU Leuven | Department of Chemistry | ⏳ | ⏳ |
 | `vp-0531` | [Ngoc Thanh Nguyen](https://vietprofs.roars.dev/people/vp-0531.html) | Wrocław University of Science and Technology | Department of Applied Informatics | ⏳ | ⏳ |
 | `vp-0532` | [Le Minh Nguyen](https://vietprofs.roars.dev/people/vp-0532.html) | Japan Advanced Institute of Science and Technology | School of Information Science | ⏳ | ⏳ |
-| `vp-0533` | [Tu Bao Ho](https://vietprofs.roars.dev/people/vp-0533.html) | Japan Advanced Institute of Science and Technology | School of Information Science | ⏳ | ⏳ |
-| `vp-0534` | [Viet Anh Nguyen](https://vietprofs.roars.dev/people/vp-0534.html) | The Chinese University of Hong Kong | Department of Systems Engineering and Engineering Management | ⏳ | ⏳ |
+| `vp-0533` | [Tu Bao Ho](https://vietprofs.roars.dev/people/vp-0533.html) | Japan Advanced Institute of Science and Technology | School of Information Science | ⏳ | ✅ |
+| `vp-0534` | [Viet Anh Nguyen](https://vietprofs.roars.dev/people/vp-0534.html) | The Chinese University of Hong Kong | Department of Systems Engineering and Engineering Management | ✅ | ⏳ |
 | `vp-0535` | [Le Bin Ho](https://vietprofs.roars.dev/people/vp-0535.html) | Tohoku University | Frontier Research Institute for Interdisciplinary Sciences | ⏳ | ⏳ |
 | `vp-0536` | [Tuan Q. Phan](https://vietprofs.roars.dev/people/vp-0536.html) | The University of Hong Kong | HKU Business School | ⏳ | ⏳ |
 | `vp-0538` | [Ha Hong Bui](https://vietprofs.roars.dev/people/vp-0538.html) | Monash University | Department of Civil and Environmental Engineering | ⏳ | ⏳ |
@@ -403,28 +404,28 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-0550` | [Sonny Pham](https://vietprofs.roars.dev/people/vp-0550.html) | Curtin University | School of Electrical Engineering, Computing and Mathematical Sciences | ⏳ | ⏳ |
 | `vp-0551` | [Minh Nguyen - Auckland University of Technology](https://vietprofs.roars.dev/people/vp-0551.html) | Auckland University of Technology | Department of Computer and Information Sciences | ⏳ | ⏳ |
 | `vp-0552` | [Kenneth Tran](https://vietprofs.roars.dev/people/vp-0552.html) | The University of Auckland | Auckland Bioengineering Institute | ⏳ | ⏳ |
-| `vp-0553` | [Gia Khanh Tran](https://vietprofs.roars.dev/people/vp-0553.html) | Tokyo Institute of Technology | Department of Electrical and Electronic Engineering | ⏳ | ⏳ |
-| `vp-0554` | [Duc-Manh Nguyen](https://vietprofs.roars.dev/people/vp-0554.html) | Université de Tours | Département de Mathématiques | ⏳ | ⏳ |
+| `vp-0553` | [Gia Khanh Tran](https://vietprofs.roars.dev/people/vp-0553.html) | Tokyo Institute of Technology | Department of Electrical and Electronic Engineering | ⏳ | ✅ |
+| `vp-0554` | [Duc-Manh Nguyen](https://vietprofs.roars.dev/people/vp-0554.html) | Université de Tours | Département de Mathématiques | ✅ | ⏳ |
 | `vp-0555` | [Viet-Chi Tran](https://vietprofs.roars.dev/people/vp-0555.html) | Université Gustave Eiffel | Laboratoire d’Analyse et de Mathématiques Appliquées | ⏳ | ⏳ |
 | `vp-0556` | [Dinh-Tuan Pham](https://vietprofs.roars.dev/people/vp-0556.html) | Université Grenoble Alpes | Laboratoire Jean Kuntzmann (Applied Mathematics) | ⏳ | ⏳ |
 | `vp-0557` | [Quang Minh Bui](https://vietprofs.roars.dev/people/vp-0557.html) | Australian National University | School of Computing | ⏳ | ⏳ |
-| `vp-0558` | [Minh Hoai Nguyen](https://vietprofs.roars.dev/people/vp-0558.html) | Adelaide University | Australian Institute for Machine Learning | ⏳ | ⏳ |
-| `vp-0559` | [Thanh-Toan Do](https://vietprofs.roars.dev/people/vp-0559.html) | Monash University | Department of Data Science and AI | ⏳ | ⏳ |
+| `vp-0558` | [Minh Hoai Nguyen](https://vietprofs.roars.dev/people/vp-0558.html) | Adelaide University | Australian Institute for Machine Learning | ✅ | ⏳ |
+| `vp-0559` | [Thanh-Toan Do](https://vietprofs.roars.dev/people/vp-0559.html) | Monash University | Department of Data Science and AI | ✅ | ⏳ |
 | `vp-0560` | [Trung Le](https://vietprofs.roars.dev/people/vp-0560.html) | Monash University | Department of Data Science and AI | ⏳ | ⏳ |
-| `vp-0561` | [Van-Thuan Pham](https://vietprofs.roars.dev/people/vp-0561.html) | University of Melbourne | School of Computing and Information Systems | ⏳ | ⏳ |
+| `vp-0561` | [Van-Thuan Pham](https://vietprofs.roars.dev/people/vp-0561.html) | University of Melbourne | School of Computing and Information Systems | ✅ | ⏳ |
 | `vp-0562` | [Quang Vinh Nguyen](https://vietprofs.roars.dev/people/vp-0562.html) | Western Sydney University | School of Computer, Data and Mathematical Sciences | ⏳ | ⏳ |
-| `vp-0563` | [Dong Nguyen - Utrecht University](https://vietprofs.roars.dev/people/vp-0563.html) | Utrecht University | Department of Information and Computing Sciences | ⏳ | ⏳ |
+| `vp-0563` | [Dong Nguyen - Utrecht University](https://vietprofs.roars.dev/people/vp-0563.html) | Utrecht University | Department of Information and Computing Sciences | ✅ | ✅ |
 | `vp-0564` | [Duc Viet Le](https://vietprofs.roars.dev/people/vp-0564.html) | University of Twente | Department of Computer Science | ⏳ | ⏳ |
-| `vp-0565` | [Duc-Tien Dang-Nguyen](https://vietprofs.roars.dev/people/vp-0565.html) | University of Bergen | Department of Information Science and Media Studies | ⏳ | ⏳ |
-| `vp-0566` | [Hoai Phuong Ha](https://vietprofs.roars.dev/people/vp-0566.html) | UiT The Arctic University of Norway | Department of Computer Science | ⏳ | ⏳ |
-| `vp-0567` | [Hien Quoc Ngo](https://vietprofs.roars.dev/people/vp-0567.html) | Queen's University Belfast | School of Electronics, Electrical Engineering and Computer Science | ⏳ | ⏳ |
-| `vp-0568` | [Ngoc Khanh Nguyen](https://vietprofs.roars.dev/people/vp-0568.html) | King's College London | Department of Informatics | ⏳ | ⏳ |
+| `vp-0565` | [Duc-Tien Dang-Nguyen](https://vietprofs.roars.dev/people/vp-0565.html) | University of Bergen | Department of Information Science and Media Studies | ✅ | ⏳ |
+| `vp-0566` | [Hoai Phuong Ha](https://vietprofs.roars.dev/people/vp-0566.html) | UiT The Arctic University of Norway | Department of Computer Science | ⏳ | ✅ |
+| `vp-0567` | [Hien Quoc Ngo](https://vietprofs.roars.dev/people/vp-0567.html) | Queen's University Belfast | School of Electronics, Electrical Engineering and Computer Science | ✅ | ⏳ |
+| `vp-0568` | [Ngoc Khanh Nguyen](https://vietprofs.roars.dev/people/vp-0568.html) | King's College London | Department of Informatics | ✅ | ⏳ |
 | `vp-0569` | [Thai Son Hoang](https://vietprofs.roars.dev/people/vp-0569.html) | University of Southampton | School of Electronics and Computer Science | ⏳ | ⏳ |
-| `vp-0570` | [Ngoc Thang Vu](https://vietprofs.roars.dev/people/vp-0570.html) | University of Stuttgart | Institute for Natural Language Processing | ⏳ | ⏳ |
+| `vp-0570` | [Ngoc Thang Vu](https://vietprofs.roars.dev/people/vp-0570.html) | University of Stuttgart | Institute for Natural Language Processing | ⏳ | ✅ |
 | `vp-0571` | [Van Bang Le](https://vietprofs.roars.dev/people/vp-0571.html) | University of Rostock | Institute of Computer Science | ⏳ | ⏳ |
 | `vp-0572` | [Hung Son Nguyen](https://vietprofs.roars.dev/people/vp-0572.html) | University of Warsaw | Faculty of Mathematics, Informatics, and Mechanics | ⏳ | ⏳ |
 | `vp-0573` | [Linh Anh Nguyen](https://vietprofs.roars.dev/people/vp-0573.html) | University of Warsaw | Faculty of Mathematics, Informatics, and Mechanics | ⏳ | ⏳ |
-| `vp-0575` | [Tien D. Bui](https://vietprofs.roars.dev/people/vp-0575.html) | Concordia University | Department of Computer Science and Software Engineering | ⏳ | ⏳ |
+| `vp-0575` | [Tien D. Bui](https://vietprofs.roars.dev/people/vp-0575.html) | Concordia University | Department of Computer Science and Software Engineering | ✅ | ⏳ |
 | `vp-0577` | [Nathalie Nguyen](https://vietprofs.roars.dev/people/vp-0577.html) | Monash University | School of Languages, Literatures, Cultures and Linguistics | ⏳ | ⏳ |
 
 ---
