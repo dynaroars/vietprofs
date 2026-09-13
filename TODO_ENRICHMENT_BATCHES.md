@@ -380,53 +380,53 @@ npm test && npm run build && git diff --check
 | `vp-0301` | [Thuy-Ngoc Nguyen](https://vietprofs.roars.dev/people/vp-0301.html) | University of Dayton | Computer Science | ✅ | ⏳ | ✅ |
 | `vp-0302` | [Thanh Thai Nguyen](https://vietprofs.roars.dev/people/vp-0302.html) | University of Dayton | Mathematics | ⏳ | ⏳ | ✅ |
 | `vp-0303` | [Tung X. Bui](https://vietprofs.roars.dev/people/vp-0303.html) | University of Hawaiʻi at Mānoa | Information Technology Management | ⏳ | ⏳ | ✅ |
-| `vp-0304` | [Hieu Tran](https://vietprofs.roars.dev/people/vp-0304.html) | University of Massachusetts Boston | Accounting and Finance | ⏳ | ⏳ | ✅ |
-| `vp-0305` | [Matthew Bui](https://vietprofs.roars.dev/people/vp-0305.html) | University of Michigan | Information Science | ⏳ | ⏳ | ✅ |
+| `vp-0304` | [Hieu Tran](https://vietprofs.roars.dev/people/vp-0304.html) | University of Massachusetts Boston | Accounting and Finance | ✅ | ⏳ | ✅ |
+| `vp-0305` | [Matthew Bui](https://vietprofs.roars.dev/people/vp-0305.html) | University of Michigan | Information Science | ✅ | ✅ | ✅ |
 | `vp-0306` | [Trân Huỳnh](https://vietprofs.roars.dev/people/vp-0306.html) | University of Minnesota | Environmental Health Sciences | ⏳ | ⏳ | ✅ |
 | `vp-0307` | [Hai Dang Nguyen - University of Minnesota](https://vietprofs.roars.dev/people/vp-0307.html) | University of Minnesota | Pharmacology | ⏳ | ✅ | ✅ |
 | `vp-0308` | [Tuan D. Nguyen](https://vietprofs.roars.dev/people/vp-0308.html) | University of Missouri | Educational Leadership and Policy Analysis | ✅ | ⏳ | ✅ |
-| `vp-0309` | [Nghiem Q. Huynh](https://vietprofs.roars.dev/people/vp-0309.html) | University of Oklahoma | Economics | ⏳ | ⏳ | ✅ |
-| `vp-0310` | [Hung T. Luyen](https://vietprofs.roars.dev/people/vp-0310.html) | University of North Texas | Electrical Engineering | ⏳ | ⏳ | ✅ |
+| `vp-0309` | [Nghiem Q. Huynh](https://vietprofs.roars.dev/people/vp-0309.html) | University of Oklahoma | Economics | ✅ | ⏳ | ✅ |
+| `vp-0310` | [Hung T. Luyen](https://vietprofs.roars.dev/people/vp-0310.html) | University of North Texas | Electrical Engineering | ⏳ | ✅ | ✅ |
 | `vp-0311` | [Thuy D. Nguyen](https://vietprofs.roars.dev/people/vp-0311.html) | University of North Texas | Marketing | ⏳ | ⏳ | ✅ |
 | `vp-0312` | [Nhung Nguyen](https://vietprofs.roars.dev/people/vp-0312.html) | University of South Alabama | Communication | ⏳ | ⏳ | ✅ |
-| `vp-0313` | [Mai Thi Nguyen](https://vietprofs.roars.dev/people/vp-0313.html) | University of California, San Diego | Urban Studies and Planning | ⏳ | ⏳ | ✅ |
-| `vp-0314` | [Dan Nguyen](https://vietprofs.roars.dev/people/vp-0314.html) | University of Texas Southwestern Medical Center | Radiation Oncology | ⏳ | ⏳ | ✅ |
-| `vp-0315` | [An Binh Nguyen](https://vietprofs.roars.dev/people/vp-0315.html) | University of Texas Southwestern Medical Center | Biophysics | ⏳ | ⏳ | ✅ |
+| `vp-0313` | [Mai Thi Nguyen](https://vietprofs.roars.dev/people/vp-0313.html) | University of California, San Diego | Urban Studies and Planning | ✅ | ✅ | ✅ |
+| `vp-0314` | [Dan Nguyen](https://vietprofs.roars.dev/people/vp-0314.html) | University of Texas Southwestern Medical Center | Radiation Oncology | ⏳ | ✅ | ✅ |
+| `vp-0315` | [An Binh Nguyen](https://vietprofs.roars.dev/people/vp-0315.html) | University of Texas Southwestern Medical Center | Biophysics | ⏳ | ✅ | ✅ |
 | `vp-0316` | [Vuvi H. Nguyen](https://vietprofs.roars.dev/people/vp-0316.html) | UTHealth Houston | Diagnostic and Biomedical Sciences | ⏳ | ⏳ | ✅ |
 | `vp-0317` | [Leanna Rubio](https://vietprofs.roars.dev/people/vp-0317.html) | UTHealth Houston | Periodontics and Dental Hygiene | ⏳ | ⏳ | ✅ |
 | `vp-0318` | [Mai Dao](https://vietprofs.roars.dev/people/vp-0318.html) | University of Toledo | Accounting | ⏳ | ⏳ | ✅ |
 | `vp-0319` | [An Dinh](https://vietprofs.roars.dev/people/vp-0319.html) | University of Toledo | Speech-Language Pathology | ⏳ | ⏳ | ✅ |
-| `vp-0320` | [T. Hoang Nguyen](https://vietprofs.roars.dev/people/vp-0320.html) | Virginia Commonwealth University | Psychiatry | ✅ | ⏳ | ✅ |
-| `vp-0321` | [Kevin Duong](https://vietprofs.roars.dev/people/vp-0321.html) | University of Virginia | Politics | ⏳ | ⏳ | ✅ |
+| `vp-0320` | [T. Hoang Nguyen](https://vietprofs.roars.dev/people/vp-0320.html) | Virginia Commonwealth University | Psychiatry | ✅ | ✅ | ✅ |
+| `vp-0321` | [Kevin Duong](https://vietprofs.roars.dev/people/vp-0321.html) | University of Virginia | Politics | ✅ | ⏳ | ✅ |
 | `vp-0322` | [Ha Nguyen - University of Washington](https://vietprofs.roars.dev/people/vp-0322.html) | University of Washington | Asian Languages and Literature | ⏳ | ⏳ | ✅ |
 | `vp-0323` | [Hanh Lam](https://vietprofs.roars.dev/people/vp-0323.html) | Virginia Tech | Biological Sciences | ⏳ | ✅ | ✅ |
 | `vp-0324` | [Nga Nguyen - University of Wyoming](https://vietprofs.roars.dev/people/vp-0324.html) | University of Wyoming | Electrical Engineering and Computer Science | ⏳ | ⏳ | ✅ |
 | `vp-0325` | [Quan Tran](https://vietprofs.roars.dev/people/vp-0325.html) | Yale University | Ethnicity, Race, and Migration and American Studies | ⏳ | ⏳ | ✅ |
 | `vp-0326` | [Tu Anh Huynh](https://vietprofs.roars.dev/people/vp-0326.html) | University of Wisconsin-Madison | Food Science | ⏳ | ✅ | ✅ |
-| `vp-0327` | [Juliet Huynh](https://vietprofs.roars.dev/people/vp-0327.html) | University of Wisconsin-Madison | English | ⏳ | ⏳ | ✅ |
-| `vp-0328` | [Athena Nghiem](https://vietprofs.roars.dev/people/vp-0328.html) | University of Wisconsin-Madison | Geoscience | ⏳ | ⏳ | ✅ |
+| `vp-0327` | [Juliet Huynh](https://vietprofs.roars.dev/people/vp-0327.html) | University of Wisconsin-Madison | English | ⏳ | ✅ | ✅ |
+| `vp-0328` | [Athena Nghiem](https://vietprofs.roars.dev/people/vp-0328.html) | University of Wisconsin-Madison | Geoscience | ✅ | ✅ | ✅ |
 | `vp-0329` | [Cac Nguyen](https://vietprofs.roars.dev/people/vp-0329.html) | University of Iowa | Mathematics | ⏳ | ⏳ | ✅ |
 | `vp-0330` | [Dinh Van Huynh](https://vietprofs.roars.dev/people/vp-0330.html) | Ohio University | Mathematics | ⏳ | ⏳ | ✅ |
 | `vp-0331` | [Taihung Duong](https://vietprofs.roars.dev/people/vp-0331.html) | Indiana University School of Medicine | Anatomy, Cell Biology and Physiology | ✅ | ⏳ | ✅ |
 | `vp-0332` | [Thanh N. Truong](https://vietprofs.roars.dev/people/vp-0332.html) | University of Utah | Chemistry | ⏳ | ⏳ | ✅ |
-| `vp-0333` | [Thuy Linh Nguyen](https://vietprofs.roars.dev/people/vp-0333.html) | Mount Saint Mary College | History | ⏳ | ⏳ | ⏳ |
-| `vp-0334` | [Hung M. Nguyen](https://vietprofs.roars.dev/people/vp-0334.html) | George Mason University | Government and Politics | ⏳ | ⏳ | ⏳ |
-| `vp-0335` | [Tuan A. Le](https://vietprofs.roars.dev/people/vp-0335.html) | Nicholls State University | Accounting and Finance | ⏳ | ⏳ | ⏳ |
-| `vp-0336` | [Trong Nguyen](https://vietprofs.roars.dev/people/vp-0336.html) | Middle Georgia State University | Aviation Science and Management | ⏳ | ⏳ | ⏳ |
+| `vp-0333` | [Thuy Linh Nguyen](https://vietprofs.roars.dev/people/vp-0333.html) | Mount Saint Mary College | History | ⏳ | ⏳ | ✅ |
+| `vp-0334` | [Hung M. Nguyen](https://vietprofs.roars.dev/people/vp-0334.html) | George Mason University | Government and Politics | ⏳ | ⏳ | ✅ |
+| `vp-0335` | [Tuan A. Le](https://vietprofs.roars.dev/people/vp-0335.html) | Nicholls State University | Accounting and Finance | ⏳ | ⏳ | ✅ |
+| `vp-0336` | [Trong Nguyen](https://vietprofs.roars.dev/people/vp-0336.html) | Middle Georgia State University | Aviation Science and Management | ⏳ | ⏳ | ✅ |
 | `vp-0337` | [Vy Nguyen - Augusta University](https://vietprofs.roars.dev/people/vp-0337.html) | Augusta University | Psychological Sciences | ⏳ | ✅ | ✅ |
-| `vp-0338` | [Nhu Nguyen - University of Rhode Island](https://vietprofs.roars.dev/people/vp-0338.html) | University of Rhode Island | Mathematics and Applied Mathematical Sciences | ⏳ | ⏳ | ✅ |
-| `vp-0339` | [Tam Nguyen - University of Maryland, College Park](https://vietprofs.roars.dev/people/vp-0339.html) | University of Maryland, College Park | Aerospace Engineering | ⏳ | ⏳ | ✅ |
+| `vp-0338` | [Nhu Nguyen - University of Rhode Island](https://vietprofs.roars.dev/people/vp-0338.html) | University of Rhode Island | Mathematics and Applied Mathematical Sciences | ✅ | ⏳ | ✅ |
+| `vp-0339` | [Tam Nguyen - University of Maryland, College Park](https://vietprofs.roars.dev/people/vp-0339.html) | University of Maryland, College Park | Aerospace Engineering | ⏳ | ✅ | ✅ |
 | `vp-0340` | [Josef Nguyen](https://vietprofs.roars.dev/people/vp-0340.html) | University of Michigan | Film, Television, and Media | ✅ | ⏳ | ✅ |
-| `vp-0341` | [Linh Huynh](https://vietprofs.roars.dev/people/vp-0341.html) | Texas Tech University | Applied Mathematics | ⏳ | ⏳ | ✅ |
-| `vp-0342` | [Hy Huynh](https://vietprofs.roars.dev/people/vp-0342.html) | Duke University | Global Health | ⏳ | ⏳ | ⏳ |
+| `vp-0341` | [Linh Huynh](https://vietprofs.roars.dev/people/vp-0341.html) | Texas Tech University | Applied Mathematics | ✅ | ⏳ | ✅ |
+| `vp-0342` | [Hy Huynh](https://vietprofs.roars.dev/people/vp-0342.html) | Duke University | Global Health | ✅ | ⏳ | ✅ |
 | `vp-0343` | [Thy N. Huynh](https://vietprofs.roars.dev/people/vp-0343.html) | University of Mississippi Medical Center | Dermatology | ⏳ | ⏳ | ✅ |
-| `vp-0344` | [Tina I. Bui-Bullock](https://vietprofs.roars.dev/people/vp-0344.html) | University of Alabama at Birmingham | Pathology | ⏳ | ⏳ | ⏳ |
+| `vp-0344` | [Tina I. Bui-Bullock](https://vietprofs.roars.dev/people/vp-0344.html) | University of Alabama at Birmingham | Pathology | ⏳ | ⏳ | ✅ |
 | `vp-0345` | [Carol M. Huynh](https://vietprofs.roars.dev/people/vp-0345.html) | North Carolina Central University | Criminal Justice | ⏳ | ⏳ | ✅ |
 | `vp-0346` | [Victoria Huynh](https://vietprofs.roars.dev/people/vp-0346.html) | University of Alabama at Birmingham | Surgery | ⏳ | ⏳ | ✅ |
-| `vp-0347` | [Alex Van Huynh](https://vietprofs.roars.dev/people/vp-0347.html) | DeSales University | Biology | ⏳ | ⏳ | ✅ |
-| `vp-0348` | [Huy M. Dao](https://vietprofs.roars.dev/people/vp-0348.html) | University of Louisiana Monroe | Pharmaceutical Sciences | ⏳ | ⏳ | ✅ |
+| `vp-0347` | [Alex Van Huynh](https://vietprofs.roars.dev/people/vp-0347.html) | DeSales University | Biology | ⏳ | ✅ | ✅ |
+| `vp-0348` | [Huy M. Dao](https://vietprofs.roars.dev/people/vp-0348.html) | University of Louisiana Monroe | Pharmaceutical Sciences | ⏳ | ✅ | ✅ |
 | `vp-0349` | [Phuong Ngo](https://vietprofs.roars.dev/people/vp-0349.html) | Bard College | Asian Studies | ⏳ | ⏳ | ✅ |
-| `vp-0350` | [Natalia Duong](https://vietprofs.roars.dev/people/vp-0350.html) | University of California, Davis | Asian American Studies and Science and Technology Studies | ⏳ | ⏳ | ⏳ |
+| `vp-0350` | [Natalia Duong](https://vietprofs.roars.dev/people/vp-0350.html) | University of California, Davis | Asian American Studies and Science and Technology Studies | ✅ | ⏳ | ✅ |
 
 ---
 
