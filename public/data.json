@@ -36318,7 +36318,7 @@
     "id": "vp-0943",
     "portrait": "portraits/0943-luu-duc-toan-huynh-queen-mary-university-of-london.webp",
     "name": "Luu Duc Toan Huynh",
-    "vietnameseName": "Huỳnh Toàn Đức Luu",
+    "vietnameseName": "Huỳnh Lưu Đức Toàn",
     "profileUrl": "https://www.qmul.ac.uk/sbm/staff/academic/profiles/huynht.html",
     "websiteUrl": "https://sites.google.com/view/toanluu",
     "lastUpdatedAt": "2026-09-13T04:29:39.508Z",
@@ -53238,6 +53238,41 @@
     "directFields": [
       "name",
       "profileUrl",
+      "rank",
+      "university"
+    ]
+  },
+  {
+    "id": "vp-1566",
+    "name": "Thang Nguyen",
+    "vietnameseName": "Nguyễn Tất Thắng",
+    "profileUrl": "https://pureportal.coventry.ac.uk/en/persons/thang-nguyen/",
+    "lastUpdatedAt": "2026-09-14T08:35:00.000Z",
+    "university": "Coventry University",
+    "city": "Coventry",
+    "country": "United Kingdom",
+    "department": "School of Economics, Finance and Accounting",
+    "rank": "Associate Professor",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Fintech",
+      "Crowdfunding",
+      "Financial Innovation",
+      "Entrepreneurial Finance",
+      "Corporate Finance"
+    ],
+    "phdInstitution": "University of Leeds",
+    "phdYear": 2013,
+    "phdMajor": "Finance",
+    "researchOverview": {
+      "text": "Nguyen's research focuses on fintech, crowdfunding, financial innovation, and entrepreneurial finance.",
+      "sources": [
+        "https://pureportal.coventry.ac.uk/en/persons/thang-nguyen/"
+      ],
+      "verifiedAt": "2026-09-14T08:35:00.000Z"
+    },
+    "directFields": [
+      "name",
       "rank",
       "university"
     ]
