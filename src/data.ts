@@ -631,6 +631,7 @@ const FIELD_OVERRIDES = new Map([
   ['Laboratoire Plasma et Conversion d\'Énergie (LAPLACE), ENSEEIHT|Toulouse INP', 'Engineering'],
   ['Service d\'Ophtalmologie, CHU Amiens-Picardie|Université de Picardie Jules Verne', 'Health Sciences'],
   ['Center for Advanced Intelligence Project (AIP)|RIKEN', 'Computer & Information Sciences'],
+  ['Research Centre for Global Learning|Coventry University', 'Education'],
 ]);
 
 // Buckets granular `department` values into the broad fields above. Order matters, and is not

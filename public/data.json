@@ -2390,7 +2390,7 @@
     "name": "Phu Phung",
     "vietnameseName": "Phú Phung",
     "profileUrl": "https://udayton.edu/directory/artssciences/computerscience/phung-phu.php",
-    "lastUpdatedAt": "2026-09-13T04:38:58.980Z",
+    "lastUpdatedAt": "2026-09-14T03:11:44.864Z",
     "scholarUrl": "https://scholar.google.com/citations?user=3VspJzMAAAAJ",
     "linkedinUrl": "https://www.linkedin.com/in/phungphu/",
     "university": "University of Dayton",
@@ -2401,7 +2401,7 @@
     ],
     "track": "Tenure-line",
     "department": "Computer Science",
-    "rank": "Associate Professor",
+    "rank": "Professor",
     "phdYear": 2011,
     "phdInstitution": "Chalmers University of Technology",
     "postdocInstitution": "University of Illinois at Chicago",
@@ -2421,7 +2421,10 @@
       "verifiedAt": "2026-09-06T23:50:00.000Z"
     },
     "websiteUrl": "https://academic.udayton.edu/PhuPhung/",
-    "labUrl": "https://udayton.edu/artssciences/academics/computerscience/research/insclab.php"
+    "labUrl": "https://udayton.edu/artssciences/academics/computerscience/research/insclab.php",
+    "directFields": [
+      "rank"
+    ]
   },
   {
     "id": "vp-0044",
@@ -6392,7 +6395,7 @@
     "name": "Quan Nguyen",
     "vietnameseName": "Nguyễn Quân",
     "profileUrl": "https://viterbi.usc.edu/directory/faculty/Nguyen/Quan",
-    "lastUpdatedAt": "2026-09-13T04:29:39.508Z",
+    "lastUpdatedAt": "2026-09-14T03:11:44.864Z",
     "university": "University of Southern California",
     "city": "Los Angeles",
     "state": "California",
@@ -6404,7 +6407,7 @@
     ],
     "track": "Tenure-line",
     "department": "Aerospace and Mechanical Engineering",
-    "rank": "Assistant Professor",
+    "rank": "Associate Professor",
     "phdYear": 2017,
     "phdInstitution": "Carnegie Mellon University",
     "country": "United States",
@@ -6423,7 +6426,10 @@
         "https://sites.google.com/view/thangpham/"
       ],
       "verifiedAt": "2026-09-13T04:29:39.508Z"
-    }
+    },
+    "directFields": [
+      "rank"
+    ]
   },
   {
     "id": "vp-0120",
@@ -24564,7 +24570,7 @@
     "name": "Hien Quoc Ngo",
     "vietnameseName": "Ngô Quốc Hiền",
     "profileUrl": "https://pure.qub.ac.uk/en/persons/hien-quoc-ngo",
-    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
+    "lastUpdatedAt": "2026-09-14T03:12:16.035Z",
     "scholarUrl": "https://scholar.google.com/citations?user=DbMdragAAAAJ",
     "linkedinUrl": "https://www.linkedin.com/in/ngo-quoc-hien-1a48a476/",
     "university": "Queen's University Belfast",
@@ -24591,8 +24597,8 @@
       "verifiedAt": "2026-09-07T05:13:19.683Z"
     },
     "websiteUrl": "https://sites.google.com/site/nqhienqn/home",
-    "msInstitution": "Ho Chi Minh City University of Technology",
-    "msYear": 2007,
+    "msInstitution": "Kyung Hee University",
+    "msYear": 2010,
     "honors": [
       {
         "category": "fellow",
@@ -24601,6 +24607,16 @@
         "name": "IEEE Fellow",
         "organization": "IEEE"
       }
+    ],
+    "undergradInstitution": "Ho Chi Minh City University of Technology",
+    "undergradYear": 2007,
+    "undergradMajor": "Electrical & Electronics Engineering",
+    "msMajor": "Electronics and Radio Engineering",
+    "phdMajor": "Electrical Engineering",
+    "directFields": [
+      "name",
+      "rank",
+      "university"
     ]
   },
   {
@@ -52676,5 +52692,183 @@
     "portrait": "portraits/uyen-diep-virginia-tech.webp",
     "portraitSource": "https://liberalarts.vt.edu/content/liberalarts_vt_edu/en/departments-and-schools/school-of-communication/faculty/Uyen-Diep-Faculty-Profile/_jcr_content/bio-image.transform/m-medium/image.jpg",
     "lastUpdatedAt": "2026-09-13T23:38:10.894Z"
+  },
+  {
+    "id": "vp-1551",
+    "name": "Dinh C. Nguyen - University of Alabama in Huntsville",
+    "university": "The University of Alabama in Huntsville",
+    "city": "Huntsville",
+    "state": "Alabama",
+    "country": "United States",
+    "department": "Department of Electrical and Computer Engineering",
+    "rank": "Assistant Professor",
+    "track": "Tenure-line",
+    "profileUrl": "https://www.uah.edu/eng/departments/ece/faculty-staff/dinh-nguyen",
+    "researchAreas": [
+      "Federated Learning",
+      "Internet of Things",
+      "Cybersecurity",
+      "Wireless Networking"
+    ],
+    "undergradInstitution": "Ho Chi Minh City University of Technology",
+    "undergradYear": 2015,
+    "undergradMajor": "Electrical Engineering",
+    "phdInstitution": "Deakin University",
+    "phdYear": 2021,
+    "phdMajor": "Computer Science",
+    "postdocInstitution": "Purdue University",
+    "postdocYear": 2023,
+    "lastUpdatedAt": "2026-09-14T03:11:44.864Z",
+    "directFields": [
+      "name",
+      "rank",
+      "university"
+    ]
+  },
+  {
+    "id": "vp-1552",
+    "name": "Trung Le - University of South Florida",
+    "university": "University of South Florida",
+    "city": "Tampa",
+    "state": "Florida",
+    "country": "United States",
+    "department": "Industrial and Management Systems Engineering",
+    "rank": "Assistant Professor",
+    "track": "Tenure-line",
+    "profileUrl": "https://www.usf.edu/engineering/imse/people/index.aspx",
+    "websiteUrl": "http://www.spaches.org",
+    "researchAreas": [
+      "Data-Driven Modeling",
+      "Sensor Systems",
+      "Bio-Signal Processing",
+      "Predictive Analytics"
+    ],
+    "phdInstitution": "Oklahoma State University",
+    "phdYear": 2013,
+    "phdMajor": "Industrial Engineering and Management",
+    "lastUpdatedAt": "2026-09-14T03:11:44.864Z",
+    "directFields": [
+      "name",
+      "rank",
+      "university"
+    ]
+  },
+  {
+    "id": "vp-1553",
+    "name": "Tuan Le - Nicholls State University",
+    "university": "Nicholls State University",
+    "city": "Thibodaux",
+    "state": "Louisiana",
+    "country": "United States",
+    "department": "Accounting, Finance and Information Systems",
+    "rank": "Assistant Professor",
+    "track": "Tenure-line",
+    "profileUrl": "https://www.nicholls.edu/directory/tuan-le/",
+    "researchAreas": [
+      "Corporate Finance",
+      "Financial Institutions",
+      "Banking"
+    ],
+    "lastUpdatedAt": "2026-09-14T03:11:44.864Z",
+    "directFields": [
+      "name",
+      "rank",
+      "university"
+    ]
+  },
+  {
+    "id": "vp-1554",
+    "name": "Que Anh Dang",
+    "vietnameseName": "Đặng Quế Anh",
+    "university": "Coventry University",
+    "city": "Coventry",
+    "country": "United Kingdom",
+    "department": "Research Centre for Global Learning",
+    "rank": "Assistant Professor",
+    "track": "Tenure-line",
+    "profileUrl": "https://pureportal.coventry.ac.uk/en/persons/queanh-dang",
+    "researchAreas": [
+      "Higher Education Policy",
+      "Sociology of Education",
+      "International Higher Education"
+    ],
+    "lastUpdatedAt": "2026-09-14T03:11:44.864Z",
+    "directFields": [
+      "name",
+      "university"
+    ]
+  },
+  {
+    "id": "vp-1555",
+    "name": "Mai Tran",
+    "vietnameseName": "Trần Mai",
+    "university": "Griffith University",
+    "city": "Gold Coast",
+    "state": "Queensland",
+    "country": "Australia",
+    "department": "School of Medicine and Dentistry",
+    "rank": "Lecturer",
+    "track": "Tenure-line",
+    "profileUrl": "https://experts.griffith.edu.au/10892-mai-tran",
+    "researchAreas": [
+      "Epidemiology",
+      "Biostatistics",
+      "Public Health",
+      "Substance Misuse"
+    ],
+    "lastUpdatedAt": "2026-09-14T03:11:44.864Z",
+    "directFields": [
+      "name",
+      "rank",
+      "university"
+    ]
+  },
+  {
+    "id": "vp-1556",
+    "name": "Trang Dang",
+    "vietnameseName": "Đặng Thị Hà Trang",
+    "university": "National Chung Cheng University",
+    "city": "Chiayi",
+    "country": "Taiwan",
+    "department": "Department of Finance",
+    "rank": "Assistant Professor",
+    "track": "Tenure-line",
+    "profileUrl": "https://fin.ccu.edu.tw/",
+    "researchAreas": [
+      "Corporate Finance",
+      "Corporate Governance",
+      "Banking",
+      "Organizational Behavior"
+    ],
+    "phdInstitution": "National Cheng Kung University",
+    "lastUpdatedAt": "2026-09-14T03:15:22.688Z",
+    "directFields": [
+      "name",
+      "rank",
+      "university"
+    ]
+  },
+  {
+    "id": "vp-1557",
+    "name": "Tuong Vy Nguyen",
+    "vietnameseName": "Nguyễn Tường Vy",
+    "university": "National Taiwan University of Science and Technology",
+    "city": "Taipei",
+    "country": "Taiwan",
+    "department": "Department of Business Administration",
+    "rank": "Assistant Professor",
+    "track": "Tenure-line",
+    "profileUrl": "https://ba.ntust.edu.tw/",
+    "researchAreas": [
+      "Business Administration",
+      "Organizational Behavior",
+      "Strategic Management"
+    ],
+    "lastUpdatedAt": "2026-09-14T03:15:22.688Z",
+    "directFields": [
+      "name",
+      "rank",
+      "university"
+    ]
   }
 ]
