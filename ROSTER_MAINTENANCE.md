@@ -442,7 +442,7 @@ Resuming across sessions (including on a different machine):
    `duplicate` (with a `note` pointing at the existing roster entry). Then add every `included`
    candidate to `public/data.json` and `maintenance/verification.json` following the "Data-entry
    rules" and inclusion standard exactly as for any other addition.
-5. Run the "Validation checklist" (`npm test`, `npm run build`, `git diff --check`), then commit
+5. Run the "Validation checklist" (`npm test`, `npm run test:e2e`, `npm run build`, `git diff --check`), then commit
    and push. Commit after every batch (roughly every 10-20 resolved candidates) rather than
    accumulating one giant diff — this is what makes the queue resumable if a session ends
    mid-batch: the last pushed commit plus `maintenance/hieuphay-leads.json`'s recorded statuses are
@@ -511,7 +511,7 @@ To prevent desynchronization between data files and ensure interrupted runs are 
    ```
 5. Run the strict verification suite:
    ```bash
-   npm test && npm run build && git diff --check
+   npm test && npm run test:e2e && npm run build && git diff --check
    ```
 6. Commit and push each batch immediately after validation:
    ```bash
@@ -681,7 +681,7 @@ external evidence, document and source it separately instead of presenting it as
 canonical-roster fact.
 
 When changing the observation logic, add tests for the underlying calculation and for empty or
-small filtered rosters. Run `npm test`, `npm run build`, and `git diff --check` before submitting
+small filtered rosters. Run `npm test`, `npm run test:e2e`, `npm run build`, and `git diff --check` before submitting
 the change.
 
 ### Roster growth chart
