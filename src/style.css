@@ -651,11 +651,21 @@ h1 {
   }
 
   .controls {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+
+  .controls .sort-select {
+    grid-column: span 2;
+  }
+
+  .track-select,
+  .location-select {
+    min-width: 0;
   }
 
   .search-box {
-    grid-column: auto;
+    grid-column: 1 / -1;
     flex-direction: column;
     align-items: stretch;
     gap: 0.5rem;
@@ -2170,10 +2180,9 @@ button.chart-row-btn:hover {
 
 .growth-chart-wrap {
   position: relative;
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-md);
-  padding: 0.75rem 1rem;
+  background: transparent;
+  border: none;
+  padding: 0.5rem 0;
 }
 
 .growth-chart {

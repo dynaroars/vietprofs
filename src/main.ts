@@ -155,6 +155,10 @@ function renderShell() {
               <span id="search-scope-chip-label"></span>
               <span class="search-scope-chip-remove" aria-hidden="true">×</span>
             </button>
+            <button id="search-state-chip" class="search-scope-chip" type="button" aria-label="Remove state filter" hidden>
+              <span id="search-state-chip-label"></span>
+              <span class="search-scope-chip-remove" aria-hidden="true">×</span>
+            </button>
             <input id="search" class="search-input" type="search" autocomplete="off" placeholder="Roster last updated ${escapeHtml(__BUILD_LABEL__)}" aria-label="Search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-suggestion-panel" />
           </div>
           <div id="search-suggestion-panel" class="search-suggestion-panel" role="listbox" hidden></div>
@@ -176,13 +180,13 @@ function renderShell() {
       <select id="location-filter" class="field-select location-select" aria-label="Filter by location">
       </select>
       <select id="field-filter" class="field-select" aria-label="Filter by field">
-        <option value="all">All fields</option>
+        <option value="all">All Fields</option>
       </select>
-      <select id="track-filter" class="field-select track-select" aria-label="Filter by faculty type">
-        <option value="all">All Faculty</option>
+      <select id="track-filter" class="field-select track-select" aria-label="Filter by faculty track">
+        <option value="all">All Tracks</option>
       </select>
       <select id="institution-type-filter" class="field-select" aria-label="Filter by institution type">
-        <option value="all">All institution</option>
+        <option value="all">All Institutions</option>
       </select>
       <select id="sort-order" class="field-select sort-select" aria-label="Sort academics">
         <option value="random">Random order</option>
@@ -365,6 +369,8 @@ async function init() {
   const searchInput = document.getElementById('search') as HTMLInputElement;
   const searchScopeChip = document.getElementById('search-scope-chip') as HTMLButtonElement;
   const searchScopeChipLabel = document.getElementById('search-scope-chip-label') as HTMLElement;
+  const searchStateChip = document.getElementById('search-state-chip') as HTMLButtonElement;
+  const searchStateChipLabel = document.getElementById('search-state-chip-label') as HTMLElement;
   const suggestionPanel = document.getElementById('search-suggestion-panel') as HTMLElement;
   const pinSearchBtn = document.getElementById('pin-search-btn') as HTMLButtonElement;
   const healthLink = document.getElementById('health-link') as HTMLAnchorElement | null;
@@ -455,6 +461,13 @@ async function init() {
   );
   countryOptions.sort((a, b) => (countryCounts.get(b) ?? 0) - (countryCounts.get(a) ?? 0) || a.localeCompare(b));
   const continentOptions = LOCATIONS.filter((loc) => loc !== 'US' && (loc === 'World' || roster.some((person) => locationMatches(person, loc))));
+  const continentCounts = new Map(
+    continentOptions.map((continent) => [
+      continent,
+      continent === 'World' ? roster.length : roster.filter((person) => locationMatches(person, continent)).length,
+    ]),
+  );
+  continentOptions.sort((a, b) => (continentCounts.get(b) ?? 0) - (continentCounts.get(a) ?? 0) || a.localeCompare(b));
   const locationOptions = [...countryOptions, ...continentOptions];
   const locationLabel = (loc: string): string => LOCATION_LABELS[loc] || `${countryFlag(loc)} ${loc}`;
 
@@ -467,36 +480,39 @@ async function init() {
     );
   }
 
-  function countedOptions<T>(values: readonly T[], subset: Roster, matches: (person: RosterEntry, value: T) => boolean, labelFor: (value: T) => string): OptionEntry[] {
-    return values.flatMap((value) => {
-      const count = subset.filter((person) => matches(person, value)).length;
-      return count > 0 ? [{ value: String(value), label: `${labelFor(value)} (${count})` }] : [];
-    });
-  }
+  const fieldCounts = new Map(
+    FIELDS.map((field) => [field, roster.filter((person) => fieldOf(person.department, person.university) === field).length]),
+  );
+  const sortedFields = [...FIELDS].sort((a, b) => (fieldCounts.get(b) ?? 0) - (fieldCounts.get(a) ?? 0) || a.localeCompare(b));
+
+  const trackCounts = new Map(
+    TRACKS.map((track) => [track, roster.filter((person) => person.track === track).length]),
+  );
+  const sortedTracks = [...TRACKS].sort((a, b) => (trackCounts.get(b) ?? 0) - (trackCounts.get(a) ?? 0) || a.localeCompare(b));
+
+  const instTypeCounts = new Map(
+    INSTITUTION_TYPES.map((type) => [type, roster.filter((person) => institutionTypeOf(person) === type).length]),
+  );
+  const sortedInstTypes = [...INSTITUTION_TYPES].sort((a, b) => (instTypeCounts.get(b) ?? 0) - (instTypeCounts.get(a) ?? 0) || a.localeCompare(b));
 
   function initializeDropdowns() {
     const countryEntries = countryOptions.map((country) => ({
       value: country,
-      label: `${locationLabel(country)} (${countryCounts.get(country) ?? 0})`,
+      label: `${locationLabel(country)} (0)`,
     }));
-    const continentEntries = continentOptions.map((continent) => {
-      const count = continent === 'World' ? roster.length : roster.filter((person) => locationMatches(person, continent)).length;
-      return {
-        value: continent,
-        label: `${locationLabel(continent)} (${count})`,
-      };
-    });
+    const continentEntries = continentOptions.map((continent) => ({
+      value: continent,
+      label: `${locationLabel(continent)} (0)`,
+    }));
     setLocationOptions(countryEntries, continentEntries, 'World');
-    const fieldEntries = countedOptions(
-      FIELDS,
-      roster,
-      (person, value) => fieldOf(person.department, person.university) === value,
-      (value) => fieldDropdownLabel(value),
-    );
+    const fieldEntries = sortedFields.map((value) => ({
+      value,
+      label: `${fieldDropdownLabel(value)} (0)`,
+    }));
     setOptions(
       fieldSelect,
       [
-        { value: 'all', label: `All fields (${roster.length})` },
+        { value: 'all', label: 'All Fields (0)' },
         ...fieldEntries,
       ],
       'all',
@@ -504,19 +520,98 @@ async function init() {
     setOptions(
       trackSelect,
       [
-        { value: 'all', label: `All Faculty (${roster.length})` },
-        ...countedOptions(TRACKS, roster, (person, value) => person.track === value, (value) => value),
+        { value: 'all', label: 'All Tracks (0)' },
+        ...sortedTracks.map((value) => ({ value, label: `${value} (0)` })),
       ],
       'all',
     );
     setOptions(
       institutionTypeSelect,
       [
-        { value: 'all', label: `All institution (${roster.length})` },
-        ...countedOptions(INSTITUTION_TYPES, roster, (person, value) => institutionTypeOf(person) === value, (value) => value),
+        { value: 'all', label: 'All Institutions (0)' },
+        ...sortedInstTypes.map((value) => ({ value, label: `${value} (0)` })),
       ],
       'all',
     );
+  }
+
+  function updateDropdownCounts() {
+    const { scope, query } = effectiveSearch();
+
+    const locationContext = filterRoster(searchIndex, {
+      query,
+      searchScope: scope,
+      state: filterState.state,
+      location: 'World',
+      field: fieldSelect.value,
+      track: trackSelect.value,
+      institutionType: institutionTypeSelect.value,
+    });
+    for (const option of locationSelect.querySelectorAll<HTMLOptionElement>('option')) {
+      const val = option.value;
+      const labelBase = locationLabel(val);
+      const count = val === 'World'
+        ? locationContext.length
+        : locationContext.filter((p) => locationMatches(p, val)).length;
+      option.textContent = `${labelBase} (${count})`;
+    }
+
+    const fieldContext = filterRoster(searchIndex, {
+      query,
+      searchScope: scope,
+      state: filterState.state,
+      location: locationSelect.value,
+      field: 'all',
+      track: trackSelect.value,
+      institutionType: institutionTypeSelect.value,
+    });
+    for (const option of fieldSelect.options) {
+      const val = option.value;
+      if (val === 'all') {
+        option.textContent = `All Fields (${fieldContext.length})`;
+      } else {
+        const count = fieldContext.filter((p) => fieldOf(p.department, p.university) === val).length;
+        option.textContent = `${fieldDropdownLabel(val)} (${count})`;
+      }
+    }
+
+    const trackContext = filterRoster(searchIndex, {
+      query,
+      searchScope: scope,
+      state: filterState.state,
+      location: locationSelect.value,
+      field: fieldSelect.value,
+      track: 'all',
+      institutionType: institutionTypeSelect.value,
+    });
+    for (const option of trackSelect.options) {
+      const val = option.value;
+      if (val === 'all') {
+        option.textContent = `All Tracks (${trackContext.length})`;
+      } else {
+        const count = trackContext.filter((p) => p.track === val).length;
+        option.textContent = `${val} (${count})`;
+      }
+    }
+
+    const instContext = filterRoster(searchIndex, {
+      query,
+      searchScope: scope,
+      state: filterState.state,
+      location: locationSelect.value,
+      field: fieldSelect.value,
+      track: trackSelect.value,
+      institutionType: 'all',
+    });
+    for (const option of institutionTypeSelect.options) {
+      const val = option.value;
+      if (val === 'all') {
+        option.textContent = `All Institutions (${instContext.length})`;
+      } else {
+        const count = instContext.filter((p) => institutionTypeOf(p) === val).length;
+        option.textContent = `${val} (${count})`;
+      }
+    }
   }
 
   function updateDropdownHighlights() {
@@ -555,6 +650,16 @@ async function init() {
     const label = KEYWORD_LABELS[activeSearchScope];
     searchScopeChipLabel.textContent = `${KEYWORD_ICONS[activeSearchScope]} ${label}`;
     searchScopeChip.setAttribute('aria-label', `Remove ${label} search scope`);
+  }
+
+  function renderStateFilterChip() {
+    searchStateChip.hidden = !filterState.state;
+    if (!filterState.state) {
+      searchStateChipLabel.textContent = '';
+      return;
+    }
+    searchStateChipLabel.textContent = `📍 ${filterState.state}`;
+    searchStateChip.setAttribute('aria-label', `Remove ${filterState.state} state filter`);
   }
 
   function setSearchValue(raw: string) {
@@ -718,6 +823,8 @@ async function init() {
       autoSelectLocationForQuery();
     }
     updateDropdownHighlights();
+    updateDropdownCounts();
+    renderStateFilterChip();
     const countEl = document.getElementById('result-count');
     const rosterEl = document.getElementById('roster');
     if (filterState.health) {
@@ -977,6 +1084,12 @@ async function init() {
     hideSuggestions();
     searchInput.focus();
     update({ fromSearch: true });
+  });
+
+  searchStateChip.addEventListener('click', () => {
+    filterState.state = '';
+    renderStateFilterChip();
+    update();
   });
 
   const searchHelpBtn = document.getElementById('search-help-btn') as HTMLButtonElement;
@@ -1319,12 +1432,19 @@ async function init() {
   const cleanFact = abbreviateInsightText(randomFact.replace(/\.$/, ''));
   const shortFact = cleanFact.length > 110 ? `${cleanFact.slice(0, 107)}…` : cleanFact;
 
+  const totalInstitutions = new Set(roster.map((person) => person.university)).size;
   const trafficOptions = [
-    statsHistory.length > 0 ? `${statsHistory.length} Daily Snapshots` : 'Live Analytics',
-    `${rosterStats.total} Roster Audits`,
-    'Visitor Traffic',
+    ...(statsHistory.length > 0 ? [`${statsHistory.length} Daily Snapshots`] : []),
+    ...(gitInfo?.totalCommits ? [`${gitInfo.totalCommits.toLocaleString('en-US')} Git Commits`] : []),
+    `${rosterStats.total.toLocaleString('en-US')} Tracked Profiles`,
+    `${totalInstitutions.toLocaleString('en-US')} Host Institutions`,
+    ...(rosterStats.recentUpdatesCount.last30Days > 0
+      ? [`${rosterStats.recentUpdatesCount.last30Days} Updates in 30d`]
+      : [`${rosterStats.recentUpdatesCount.last90Days} Updates in 90d`]),
   ];
-  const randomTrafficMetric = trafficOptions[Math.floor(Math.random() * trafficOptions.length)];
+  const randomTrafficMetric = trafficOptions.length
+    ? trafficOptions[Math.floor(Math.random() * trafficOptions.length)]
+    : `${rosterStats.total.toLocaleString('en-US')} Tracked Profiles`;
 
   type Example = {
     type: 'search' | 'field' | 'track' | 'loc' | 'fact' | 'health' | 'stats';
