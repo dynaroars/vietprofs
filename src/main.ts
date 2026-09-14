@@ -496,122 +496,102 @@ async function init() {
   const sortedInstTypes = [...INSTITUTION_TYPES].sort((a, b) => (instTypeCounts.get(b) ?? 0) - (instTypeCounts.get(a) ?? 0) || a.localeCompare(b));
 
   function initializeDropdowns() {
-    const countryEntries = countryOptions.map((country) => ({
-      value: country,
-      label: `${locationLabel(country)} (0)`,
-    }));
-    const continentEntries = continentOptions.map((continent) => ({
-      value: continent,
-      label: `${locationLabel(continent)} (0)`,
-    }));
-    setLocationOptions(countryEntries, continentEntries, 'World');
-    const fieldEntries = sortedFields.map((value) => ({
-      value,
-      label: `${fieldDropdownLabel(value)} (0)`,
-    }));
-    setOptions(
-      fieldSelect,
-      [
-        { value: 'all', label: 'All Fields (0)' },
-        ...fieldEntries,
-      ],
-      'all',
-    );
-    setOptions(
-      trackSelect,
-      [
-        { value: 'all', label: 'All Tracks (0)' },
-        ...sortedTracks.map((value) => ({ value, label: `${value} (0)` })),
-      ],
-      'all',
-    );
-    setOptions(
-      institutionTypeSelect,
-      [
-        { value: 'all', label: 'All Institutions (0)' },
-        ...sortedInstTypes.map((value) => ({ value, label: `${value} (0)` })),
-      ],
-      'all',
-    );
+    updateDropdownCounts();
   }
 
   function updateDropdownCounts() {
     const { scope, query } = effectiveSearch();
+    const currentLoc = locationSelect.value || 'World';
+    const currentField = fieldSelect.value || 'all';
+    const currentTrack = trackSelect.value || 'all';
+    const currentInstType = institutionTypeSelect.value || 'all';
 
     const locationContext = filterRoster(searchIndex, {
       query,
       searchScope: scope,
       state: filterState.state,
       location: 'World',
-      field: fieldSelect.value,
-      track: trackSelect.value,
-      institutionType: institutionTypeSelect.value,
+      field: currentField,
+      track: currentTrack,
+      institutionType: currentInstType,
     });
-    for (const option of locationSelect.querySelectorAll<HTMLOptionElement>('option')) {
-      const val = option.value;
-      const labelBase = locationLabel(val);
-      const count = val === 'World'
-        ? locationContext.length
-        : locationContext.filter((p) => locationMatches(p, val)).length;
-      option.textContent = `${labelBase} (${count})`;
+    const countryEntries: OptionEntry[] = [];
+    for (const country of countryOptions) {
+      const count = locationContext.filter((p) => locationMatches(p, country)).length;
+      if (count > 0) {
+        countryEntries.push({ value: country, label: `${locationLabel(country)} (${count})` });
+      }
     }
+    const continentEntries: OptionEntry[] = [];
+    for (const continent of continentOptions) {
+      const count = continent === 'World'
+        ? locationContext.length
+        : locationContext.filter((p) => locationMatches(p, continent)).length;
+      if (continent === 'World' || count > 0) {
+        continentEntries.push({ value: continent, label: `${locationLabel(continent)} (${count})` });
+      }
+    }
+    setLocationOptions(countryEntries, continentEntries, currentLoc);
 
     const fieldContext = filterRoster(searchIndex, {
       query,
       searchScope: scope,
       state: filterState.state,
-      location: locationSelect.value,
+      location: locationSelect.value || 'World',
       field: 'all',
-      track: trackSelect.value,
-      institutionType: institutionTypeSelect.value,
+      track: currentTrack,
+      institutionType: currentInstType,
     });
-    for (const option of fieldSelect.options) {
-      const val = option.value;
-      if (val === 'all') {
-        option.textContent = `All Fields (${fieldContext.length})`;
-      } else {
-        const count = fieldContext.filter((p) => fieldOf(p.department, p.university) === val).length;
-        option.textContent = `${fieldDropdownLabel(val)} (${count})`;
+    const fieldEntries: OptionEntry[] = [
+      { value: 'all', label: `All Fields (${fieldContext.length})` },
+    ];
+    for (const field of sortedFields) {
+      const count = fieldContext.filter((p) => fieldOf(p.department, p.university) === field).length;
+      if (count > 0) {
+        fieldEntries.push({ value: field, label: `${fieldDropdownLabel(field)} (${count})` });
       }
     }
+    setOptions(fieldSelect, fieldEntries, currentField);
 
     const trackContext = filterRoster(searchIndex, {
       query,
       searchScope: scope,
       state: filterState.state,
-      location: locationSelect.value,
-      field: fieldSelect.value,
+      location: locationSelect.value || 'World',
+      field: fieldSelect.value || 'all',
       track: 'all',
-      institutionType: institutionTypeSelect.value,
+      institutionType: currentInstType,
     });
-    for (const option of trackSelect.options) {
-      const val = option.value;
-      if (val === 'all') {
-        option.textContent = `All Tracks (${trackContext.length})`;
-      } else {
-        const count = trackContext.filter((p) => p.track === val).length;
-        option.textContent = `${val} (${count})`;
+    const trackEntries: OptionEntry[] = [
+      { value: 'all', label: `All Tracks (${trackContext.length})` },
+    ];
+    for (const track of sortedTracks) {
+      const count = trackContext.filter((p) => p.track === track).length;
+      if (count > 0) {
+        trackEntries.push({ value: track, label: `${track} (${count})` });
       }
     }
+    setOptions(trackSelect, trackEntries, currentTrack);
 
     const instContext = filterRoster(searchIndex, {
       query,
       searchScope: scope,
       state: filterState.state,
-      location: locationSelect.value,
-      field: fieldSelect.value,
-      track: trackSelect.value,
+      location: locationSelect.value || 'World',
+      field: fieldSelect.value || 'all',
+      track: trackSelect.value || 'all',
       institutionType: 'all',
     });
-    for (const option of institutionTypeSelect.options) {
-      const val = option.value;
-      if (val === 'all') {
-        option.textContent = `All Institutions (${instContext.length})`;
-      } else {
-        const count = instContext.filter((p) => institutionTypeOf(p) === val).length;
-        option.textContent = `${val} (${count})`;
+    const instEntries: OptionEntry[] = [
+      { value: 'all', label: `All Institutions (${instContext.length})` },
+    ];
+    for (const type of sortedInstTypes) {
+      const count = instContext.filter((p) => institutionTypeOf(p) === type).length;
+      if (count > 0) {
+        instEntries.push({ value: type, label: `${type} (${count})` });
       }
     }
+    setOptions(institutionTypeSelect, instEntries, currentInstType);
   }
 
   function updateDropdownHighlights() {
