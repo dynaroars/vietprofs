@@ -167,7 +167,8 @@ export function buildSearchIndex(roster: Roster): SearchIndex {
 
 export async function loadRoster(): Promise<Roster> {
   if (cached) return cached;
-  const res = await fetch(`${import.meta.env.BASE_URL}data.json`);
+  const cacheBuster = typeof __BUILD_COMMIT__ !== 'undefined' && __BUILD_COMMIT__ ? `?v=${__BUILD_COMMIT__}` : '';
+  const res = await fetch(`${import.meta.env.BASE_URL}data.json${cacheBuster}`);
   if (!res.ok) throw new Error(`Failed to load data.json: ${res.status}`);
   const roster = (await res.json()) as Roster;
   cached = roster;
@@ -179,7 +180,8 @@ export async function loadRoster(): Promise<Roster> {
 // series rather than breaking the page.
 export async function loadStatsHistory(): Promise<StatsHistoryPoint[]> {
   try {
-    const res = await fetch(`${import.meta.env.BASE_URL}stats-history.json`);
+    const cacheBuster = typeof __BUILD_COMMIT__ !== 'undefined' && __BUILD_COMMIT__ ? `?v=${__BUILD_COMMIT__}` : '';
+    const res = await fetch(`${import.meta.env.BASE_URL}stats-history.json${cacheBuster}`);
     if (!res.ok) return [];
     return await res.json();
   } catch {
@@ -198,7 +200,8 @@ export interface GitInfo {
 
 export async function loadGitInfo(): Promise<GitInfo | null> {
   try {
-    const res = await fetch(`${import.meta.env.BASE_URL}git-info.json`);
+    const cacheBuster = typeof __BUILD_COMMIT__ !== 'undefined' && __BUILD_COMMIT__ ? `?v=${__BUILD_COMMIT__}` : '';
+    const res = await fetch(`${import.meta.env.BASE_URL}git-info.json${cacheBuster}`);
     if (!res.ok) return null;
     return await res.json();
   } catch {

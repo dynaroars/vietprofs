@@ -279,7 +279,7 @@ function sortRoster(roster: Roster, order: string): Roster {
       : order === 'recent'
         ? (a: RosterEntry, b: RosterEntry) => (b.lastUpdatedAt ?? '').localeCompare(a.lastUpdatedAt ?? '')
         : order === 'vp-newest'
-          ? (a: RosterEntry, b: RosterEntry) => Number.parseInt(b.id.slice(3), 10) - Number.parseInt(a.id.slice(3), 10)
+          ? (a: RosterEntry, b: RosterEntry) => (Number.parseInt(b.id.replace(/\D/g, ''), 10) || 0) - (Number.parseInt(a.id.replace(/\D/g, ''), 10) || 0)
         : () => 0;
 
   return [...roster].sort((a, b) => Number(favorites.has(b.id)) - Number(favorites.has(a.id)) || bySelectedOrder(a, b));
