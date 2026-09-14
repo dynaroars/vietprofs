@@ -740,7 +740,9 @@
       ],
       "verifiedAt": "2026-09-13T00:00:00.000Z"
     },
-    "labUrl": "https://ara.cse.unr.edu/"
+    "labUrl": "https://ara.cse.unr.edu/",
+    "msInstitution": "Thai Nguyen University of Technology",
+    "msYear": 2003
   },
   {
     "id": "vp-0014",
@@ -2858,7 +2860,8 @@
         "https://humanx.dartmouth.edu/tamvu/"
       ],
       "verifiedAt": "2026-09-13T00:00:00.000Z"
-    }
+    },
+    "undergradInstitution": "Hanoi University of Science and Technology"
   },
   {
     "id": "vp-0053",
@@ -2988,13 +2991,6 @@
       {
         "name": "Simons Fellow in Mathematics",
         "year": 2015,
-        "category": "career_award",
-        "organization": "Simons Foundation",
-        "source": "https://sites.math.rutgers.edu/~pht19/vitae.pdf"
-      },
-      {
-        "name": "Simons Fellow in Mathematics",
-        "year": 2023,
         "category": "career_award",
         "organization": "Simons Foundation",
         "source": "https://sites.math.rutgers.edu/~pht19/vitae.pdf"
@@ -3240,6 +3236,13 @@
         "category": "fellow",
         "organization": "Simons Foundation",
         "source": "https://people.math.wisc.edu/~hung/cv_hungtran.pdf"
+      },
+      {
+        "category": "career_award",
+        "year": 2019,
+        "source": "https://people.math.wisc.edu/~htran24/",
+        "name": "NSF CAREER Award",
+        "organization": "National Science Foundation"
       }
     ]
   },
@@ -3286,13 +3289,6 @@
         "category": "fellow",
         "organization": "Simons Foundation",
         "source": "https://science.psu.edu/news/nguyen-named-simons-fellow-in-mathematics"
-      },
-      {
-        "name": "Simons Fellowship in Mathematics",
-        "year": 2026,
-        "category": "fellow",
-        "organization": "Simons Foundation",
-        "source": "https://www.simonsfoundation.org/2026/04/10/2026-simons-fellows-in-mathematics-announced/"
       }
     ],
     "country": "United States",
@@ -3598,7 +3594,8 @@
         "verifiedAt": "2026-09-07T00:00:00.000Z",
         "year": 2026
       }
-    ]
+    ],
+    "msInstitution": "Texas A&M University"
   },
   {
     "id": "vp-0065",
@@ -3770,7 +3767,9 @@
       "verifiedAt": "2026-09-07T00:00:00.000Z"
     },
     "websiteUrl": "https://www.math.umd.edu/~hnguye90/",
-    "phdMajor": "Mathematics"
+    "phdMajor": "Mathematics",
+    "msInstitution": "University Paris-Sud XI",
+    "msYear": 2013
   },
   {
     "id": "vp-0069",
@@ -3851,7 +3850,9 @@
         "https://faculty.sites.iastate.edu/xhnguyen/"
       ],
       "verifiedAt": "2026-09-07T00:00:00.000Z"
-    }
+    },
+    "msInstitution": "University of Wisconsin, Madison",
+    "msYear": 2002
   },
   {
     "id": "vp-0071",
@@ -3925,6 +3926,13 @@
         "category": "fellow",
         "organization": "Clay Mathematics Institute",
         "source": "https://www.claymath.org/people/huy-tuan-pham/"
+      },
+      {
+        "category": "career_award",
+        "year": 2026,
+        "source": "https://huytuanpham.github.io/",
+        "name": "NSF CAREER Award",
+        "organization": "National Science Foundation"
       }
     ],
     "portrait": "portraits/072-huy-tuan-pham-california-institute-of-technology.webp",
@@ -4321,7 +4329,8 @@
       "verifiedAt": "2026-09-13T04:28:30.655Z"
     },
     "websiteUrl": "https://odin.mdacc.tmc.edu/~kim/",
-    "labUrl": "https://kimanhdomda.github.io/COSMIC/"
+    "labUrl": "https://kimanhdomda.github.io/COSMIC/",
+    "msInstitution": "Stanford University"
   },
   {
     "id": "vp-0079",
@@ -4498,7 +4507,16 @@
     ],
     "undergradInstitution": "National University of Singapore",
     "undergradYear": 2007,
-    "phdMajor": "Electrical and Computer Engineering"
+    "phdMajor": "Electrical and Computer Engineering",
+    "honors": [
+      {
+        "category": "career_award",
+        "year": null,
+        "source": "https://www.hvnguyen.com/",
+        "name": "NSF CAREER Award",
+        "organization": "National Science Foundation"
+      }
+    ]
   },
   {
     "id": "vp-0082",
@@ -4983,7 +5001,9 @@
       ],
       "verifiedAt": "2026-09-13T04:28:30.655Z"
     },
-    "labUrl": "https://biosimlabub.github.io/"
+    "labUrl": "https://biosimlabub.github.io/",
+    "undergradInstitution": "Vietnam National University Ho Chi Minh City",
+    "undergradYear": 2004
   },
   {
     "id": "vp-0089",
@@ -5676,7 +5696,8 @@
         "https://sph.uth.edu/faculty/index.htm?fac=KAxVpHwjEQAbZXgfZvxCQA%3D%3D"
       ],
       "verifiedAt": "2026-09-07T04:00:00.000Z"
-    }
+    },
+    "msInstitution": "Ho Chi Minh City University of Technology"
   },
   {
     "id": "vp-0104",
@@ -5996,7 +6017,8 @@
         "https://www.math.ksu.edu/~dlnguyen/"
       ],
       "verifiedAt": "2026-09-13T04:29:39.508Z"
-    }
+    },
+    "phdYear": 2011
   },
   {
     "id": "vp-0112",
@@ -6092,7 +6114,11 @@
         "selectionMode": "selected",
         "verifiedAt": "2026-09-07T04:00:00.000Z"
       }
-    ]
+    ],
+    "undergradInstitution": "University of New South Wales",
+    "msInstitution": "University of Calgary",
+    "undergradYear": 2002,
+    "msYear": 2005
   },
   {
     "id": "vp-0114",
@@ -6430,7 +6456,11 @@
       ],
       "verifiedAt": "2026-09-07T04:00:00.000Z"
     },
-    "labUrl": "https://www.airmotionlab.com/"
+    "labUrl": "https://www.airmotionlab.com/",
+    "undergradInstitution": "Ho Chi Minh City University of Technology",
+    "msInstitution": "Konkuk University",
+    "undergradYear": 2010,
+    "msYear": 2012
   },
   {
     "id": "vp-0121",
@@ -6939,7 +6969,8 @@
     "directFields": [
       "name"
     ],
-    "labUrl": "https://www.trannguyenlab.com/"
+    "labUrl": "https://www.trannguyenlab.com/",
+    "msInstitution": "Columbia University"
   },
   {
     "id": "vp-0130",
@@ -7060,7 +7091,9 @@
     ],
     "directFields": [
       "name"
-    ]
+    ],
+    "msInstitution": "Georgia Institute of Technology",
+    "msYear": 2014
   },
   {
     "id": "vp-0132",
@@ -7287,7 +7320,8 @@
     ],
     "directFields": [
       "name"
-    ]
+    ],
+    "phdYear": 2020
   },
   {
     "id": "vp-0135",
@@ -7673,7 +7707,9 @@
         "selectionMode": "selected",
         "verifiedAt": "2026-09-07T04:20:33.026Z"
       }
-    ]
+    ],
+    "undergradInstitution": "University of Queensland",
+    "undergradYear": 2001
   },
   {
     "id": "vp-0144",
@@ -8491,11 +8527,11 @@
     "department": "Information Technology and Operations Management",
     "rank": "Assistant Professor",
     "phdYear": 2023,
-    "phdInstitution": "University of Hawaiʻi at Mānoa",
+    "phdInstitution": "University of Hawaii",
     "country": "United States",
     "portrait": "portraits/164-minh-nguyen-florida-atlantic-university-florida-atlantic-university.webp",
     "portraitSource": "https://business.fau.edu/images/faculty-profiles/Nguyen.Minh.jpg",
-    "msInstitution": "University of Hawaiʻi at Mānoa",
+    "msInstitution": "University of Hawaii",
     "msYear": 2023,
     "undergradInstitution": "Vietnam National University, Ho Chi Minh City",
     "undergradYear": 2017,
@@ -8646,7 +8682,8 @@
       ],
       "verifiedAt": "2026-09-13T00:00:00.000Z"
     },
-    "websiteUrl": "https://sites.google.com/view/thanh-n/bio"
+    "websiteUrl": "https://sites.google.com/view/thanh-n/bio",
+    "phdYear": 2014
   },
   {
     "id": "vp-0167",
@@ -9627,7 +9664,9 @@
         "selectionMode": "selected",
         "verifiedAt": "2026-09-07T04:24:13.978Z"
       }
-    ]
+    ],
+    "msInstitution": "University of Science",
+    "msYear": 2025
   },
   {
     "id": "vp-0188",
@@ -9828,7 +9867,9 @@
         "https://mykle85.com/"
       ],
       "verifiedAt": "2026-09-13T04:29:39.508Z"
-    }
+    },
+    "undergradInstitution": "University of Rochester",
+    "undergradYear": 1966
   },
   {
     "id": "vp-0192",
@@ -10155,7 +10196,7 @@
     "track": "Tenure-line",
     "department": "Asian Languages and Cultures",
     "rank": "Assistant Professor",
-    "phdInstitution": "University of Hawaiʻi at Mānoa",
+    "phdInstitution": "University of Hawaii",
     "country": "United States",
     "portrait": "portraits/197-hieu-phung-rutgers-university.webp",
     "portraitSource": "https://alc.rutgers.edu/images/Phung_headshot.png",
@@ -11462,7 +11503,8 @@
         "https://www.nktran.com/"
       ],
       "verifiedAt": "2026-09-13T00:00:00.000Z"
-    }
+    },
+    "undergradInstitution": "Gdansk University"
   },
   {
     "id": "vp-0221",
@@ -12855,7 +12897,9 @@
         "https://hhp.ufl.edu/linda-nguyen"
       ],
       "verifiedAt": "2026-09-12T14:13:00.000Z"
-    }
+    },
+    "undergradInstitution": "University of Waterloo",
+    "undergradYear": 2007
   },
   {
     "id": "vp-0254",
@@ -13037,7 +13081,8 @@
       }
     ],
     "portrait": "portraits/0257-cuong-nguyen-le-university-of-massachusetts-amherst.webp",
-    "portraitSource": "https://www.umass.edu/sociology/sites/default/files/styles/tile_medium_x2_400px/public/2024-03/Le_2018.jpg?h=63ec7df1&itok=qBdMuagp"
+    "portraitSource": "https://www.umass.edu/sociology/sites/default/files/styles/tile_medium_x2_400px/public/2024-03/Le_2018.jpg?h=63ec7df1&itok=qBdMuagp",
+    "undergradInstitution": "the University of Massachusetts, Amherst"
   },
   {
     "id": "vp-0258",
@@ -13379,7 +13424,11 @@
         "selectionMode": "selected",
         "verifiedAt": "2026-09-07T04:35:27.263Z"
       }
-    ]
+    ],
+    "undergradInstitution": "University of Architecture, Ho Chi Minh City",
+    "msInstitution": "University of Liege",
+    "undergradYear": 1997,
+    "msYear": 2003
   },
   {
     "id": "vp-0267",
@@ -13661,7 +13710,9 @@
         "https://education.oregonstate.edu/directory/bach-mai-dolly-nguyen"
       ],
       "verifiedAt": "2026-09-07T04:35:27.263Z"
-    }
+    },
+    "msInstitution": "University of California, Los Angeles",
+    "msYear": 2013
   },
   {
     "id": "vp-0274",
@@ -14335,7 +14386,9 @@
         "https://www.bgsu.edu/arts-and-sciences/mathematics-and-statistics/faculty-and-staff/diem-m-nguyen.html"
       ],
       "verifiedAt": "2026-09-07T04:40:40.082Z"
-    }
+    },
+    "msInstitution": "Texas A&M University",
+    "msYear": 1999
   },
   {
     "id": "vp-0291",
@@ -14737,7 +14790,8 @@
         "https://udayton.edu/directory/artssciences/mathematics/nguyen-thanh-thai.php"
       ],
       "verifiedAt": "2026-09-13T00:00:00.000Z"
-    }
+    },
+    "msInstitution": "McMaster University"
   },
   {
     "id": "vp-0303",
@@ -14816,7 +14870,8 @@
         "selectionMode": "selected",
         "verifiedAt": "2026-09-07T04:44:02.735Z"
       }
-    ]
+    ],
+    "phdYear": 2006
   },
   {
     "id": "vp-0304",
@@ -15252,7 +15307,8 @@
       "verifiedAt": "2026-09-13T00:00:00.000Z"
     },
     "websiteUrl": "https://mnguyen.ucsd.edu/",
-    "labUrl": "https://chpd.ucsd.edu/"
+    "labUrl": "https://chpd.ucsd.edu/",
+    "msInstitution": "Pennsylvania State University"
   },
   {
     "id": "vp-0314",
@@ -15621,7 +15677,7 @@
     "portraitSource": "https://asian.washington.edu/sites/asian/files/profile-images/IMG_2097.jpeg",
     "undergradInstitution": "Hanoi National University of Education",
     "msInstitution": "Vietnam National University, Hanoi",
-    "phdInstitution": "University of Hawaiʻi at Mānoa",
+    "phdInstitution": "University of Hawaii",
     "researchOverview": {
       "text": "Ha Nguyen is an [Assistant Teaching Professor](https://asian.washington.edu/people/ha-nguyen) in the Department of Asian Languages and Literature at the University of Washington, holding a PhD in Second Language Studies from the University of Hawaiʻi at Mānoa. Work centers on Vietnamese language pedagogy, applied linguistics, critical and decolonizing approaches to language teaching, and discourse analysis, teaching heritage and advanced Vietnamese courses.",
       "sources": [
@@ -15898,7 +15954,9 @@
       "verifiedAt": "2026-09-13T00:00:00.000Z"
     },
     "websiteUrl": "https://athenan.github.io/",
-    "labUrl": "https://nghiem.geoscience.wisc.edu/"
+    "labUrl": "https://nghiem.geoscience.wisc.edu/",
+    "undergradInstitution": "Austin College",
+    "undergradYear": 2019
   },
   {
     "id": "vp-0329",
@@ -16146,7 +16204,8 @@
         "https://www.mdpi.com/journal/drones"
       ],
       "verifiedAt": "2026-09-13T00:00:00.000Z"
-    }
+    },
+    "phdYear": 2019
   },
   {
     "id": "vp-0337",
@@ -16867,7 +16926,11 @@
         "https://paultranhoang.github.io/"
       ],
       "verifiedAt": "2026-09-13T00:00:00.000Z"
-    }
+    },
+    "undergradInstitution": "University of California, Irvine",
+    "msInstitution": "University of Notre Dame",
+    "undergradYear": 2012,
+    "msYear": 2017
   },
   {
     "id": "vp-0356",
@@ -17024,7 +17087,9 @@
         "https://scholar.google.com/citations?user=RKd3wwwAAAAJ&hl=en"
       ],
       "verifiedAt": "2026-09-13T00:00:00.000Z"
-    }
+    },
+    "msInstitution": "University of Hawaii",
+    "phdYear": 2017
   },
   {
     "id": "vp-0361",
@@ -17857,7 +17922,9 @@
         "https://www.chapman.edu/our-faculty/viet-huong-nguyen.aspx"
       ],
       "verifiedAt": "2026-09-13T00:00:00.000Z"
-    }
+    },
+    "msInstitution": "University of California, Los Angeles",
+    "phdInstitution": "University of California, Irvine"
   },
   {
     "id": "vp-0385",
@@ -17889,7 +17956,9 @@
         "https://www.ccny.cuny.edu/profiles/truong-thao-nguyen"
       ],
       "verifiedAt": "2026-09-13T00:00:00.000Z"
-    }
+    },
+    "msInstitution": "Princeton University",
+    "msYear": 1986
   },
   {
     "id": "vp-0386",
@@ -18232,7 +18301,8 @@
       ],
       "verifiedAt": "2026-09-13T00:00:00.000Z"
     },
-    "websiteUrl": "https://myweb.fiu.edu/avpham/"
+    "websiteUrl": "https://myweb.fiu.edu/avpham/",
+    "msInstitution": "Tufts University"
   },
   {
     "id": "vp-0394",
@@ -18650,7 +18720,16 @@
       ],
       "verifiedAt": "2026-09-07T04:54:05.946Z"
     },
-    "websiteUrl": "https://my.vanderbilt.edu/lampham/"
+    "websiteUrl": "https://my.vanderbilt.edu/lampham/",
+    "honors": [
+      {
+        "category": "career_award",
+        "year": null,
+        "source": "https://my.vanderbilt.edu/lampham/",
+        "name": "NSF CAREER Award",
+        "organization": "National Science Foundation"
+      }
+    ]
   },
   {
     "id": "vp-0406",
@@ -18952,7 +19031,9 @@
         "https://sites.google.com/view/thaobui/home"
       ],
       "verifiedAt": "2026-09-13T00:00:00.000Z"
-    }
+    },
+    "undergradInstitution": "University of Chicago",
+    "msInstitution": "University of Kansas"
   },
   {
     "id": "vp-0417",
@@ -19061,7 +19142,8 @@
     "phdInstitution": "Rutgers University",
     "country": "United States",
     "portrait": "portraits/427-minh-pham-san-francisco-state-university.webp",
-    "portraitSource": "https://cob.sfsu.edu/sites/default/files/styles/sf_state_250x250/public/images/minh%20head%20shot_0.jpg"
+    "portraitSource": "https://cob.sfsu.edu/sites/default/files/styles/sf_state_250x250/public/images/minh%20head%20shot_0.jpg",
+    "undergradInstitution": "San Francisco State University"
   },
   {
     "id": "vp-0421",
@@ -19317,7 +19399,8 @@
         "https://scholar.google.com/citations?user=Y702s68AAAAJ"
       ],
       "verifiedAt": "2026-09-13T00:00:00.000Z"
-    }
+    },
+    "undergradInstitution": "University of California, San Diego"
   },
   {
     "id": "vp-0429",
@@ -19430,7 +19513,8 @@
         "https://scholar.google.com/citations?user=dt42krUAAAAJ"
       ],
       "verifiedAt": "2026-09-13T00:00:00.000Z"
-    }
+    },
+    "msInstitution": "Harvard University"
   },
   {
     "id": "vp-0432",
@@ -19479,7 +19563,8 @@
     "portrait": "portraits/441-sydney-pham-the-university-of-texas-md-anderson-cancer-center.webp",
     "portraitSource": "https://faculty.mdanderson.org/content/dam/mdanderson/images/fis/sydney_pham.jpg",
     "mdInstitution": "The University of Texas Medical Branch",
-    "mdYear": 2016
+    "mdYear": 2016,
+    "undergradInstitution": "University of Texas at Austin"
   },
   {
     "id": "vp-0434",
@@ -19560,7 +19645,9 @@
         "https://princengoc.github.io/about.html"
       ],
       "verifiedAt": "2026-09-13T00:00:00.000Z"
-    }
+    },
+    "undergradInstitution": "University of Melbourne",
+    "undergradYear": 2007
   },
   {
     "id": "vp-0436",
@@ -19944,7 +20031,9 @@
         "https://scholar.google.com/citations?user=xU5vTt4AAAAJ"
       ],
       "verifiedAt": "2026-09-13T00:00:00.000Z"
-    }
+    },
+    "msInstitution": "University of Washington",
+    "msYear": 2011
   },
   {
     "id": "vp-0448",
@@ -20066,7 +20155,8 @@
     "portrait": "portraits/458-an-h-do-university-of-california-irvine.webp",
     "portraitSource": "https://medschool.uci.edu/about/faculty/and",
     "msInstitution": "San Diego State University",
-    "labUrl": "https://faculty.sites.uci.edu/ucibci/"
+    "labUrl": "https://faculty.sites.uci.edu/ucibci/",
+    "phdYear": 1997
   },
   {
     "id": "vp-0451",
@@ -20097,7 +20187,8 @@
       ],
       "verifiedAt": "2026-09-07T04:59:42.768Z"
     },
-    "labUrl": "https://sites.uci.edu/vaohp/about/about-people/director"
+    "labUrl": "https://sites.uci.edu/vaohp/about/about-people/director",
+    "phdYear": 1995
   },
   {
     "id": "vp-0452",
@@ -21044,7 +21135,8 @@
     "country": "United States",
     "portrait": "portraits/487-patricia-nguyen-university-of-virginia.webp",
     "portraitSource": "https://americanstudies.as.virginia.edu/people/patricia-nguyen",
-    "websiteUrl": "https://www.patricianguyen.info"
+    "websiteUrl": "https://www.patricianguyen.info",
+    "phdInstitution": "Northwestern University"
   },
   {
     "id": "vp-0478",
@@ -21078,7 +21170,9 @@
         "https://sites.google.com/vcu.edu/anhbui/home"
       ],
       "verifiedAt": "2026-09-13T00:00:00.000Z"
-    }
+    },
+    "undergradInstitution": "Hanoi University of Science and Technology",
+    "msInstitution": "Pohang University of Science and Technology"
   },
   {
     "id": "vp-0479",
@@ -21140,7 +21234,7 @@
     "phdYear": 2004,
     "phdInstitution": "University of Rochester",
     "country": "United States",
-    "undergradInstitution": "McGill University in",
+    "undergradInstitution": "McGill University",
     "undergradYear": 1998,
     "portrait": "portraits/491-don-x-nguyen-yale-university.webp",
     "portraitSource": "https://ysm-res.cloudinary.com/image/upload/c_limit,f_jpg,h_630,q_auto,w_1200/v1/yms/prod/66c93127-69df-4b88-92ac-aa8335ae9529",
@@ -21487,12 +21581,12 @@
     "department": "Asian Languages and Literature",
     "rank": "Teaching",
     "phdYear": 2011,
-    "phdInstitution": "University of Hawaiʻi at Mānoa",
+    "phdInstitution": "University of Hawaii",
     "country": "United States",
     "undergradInstitution": "Hanoi University",
     "portrait": "portraits/497-bich-ngoc-turner-university-of-washington.webp",
     "portraitSource": "https://asian.washington.edu/sites/asian/files/styles/portrait/public/photos/screen_shot_2019-02-26_at_5.28.57_pm.png?h=e0b7679d&itok=DBwHuIfV",
-    "msInstitution": "University of Hawaiʻi at Mānoa",
+    "msInstitution": "University of Hawaii",
     "researchOverview": {
       "text": "Bich-Ngoc Turner investigates modern and contemporary Vietnamese literature, postwar United States-Vietnam relations, life writing, and Vietnamese language pedagogy.",
       "sources": [
@@ -21747,7 +21841,16 @@
     },
     "websiteUrl": "https://personal.ntu.edu.sg/cuong/",
     "undergradInstitution": "École Normale Supérieure",
-    "phdMajor": "Neuroscience"
+    "phdMajor": "Neuroscience",
+    "honors": [
+      {
+        "category": "fellow",
+        "year": null,
+        "source": "https://personal.ntu.edu.sg/cuong/",
+        "name": "IEEE Fellow",
+        "organization": "IEEE"
+      }
+    ]
   },
   {
     "id": "vp-0494",
@@ -22303,7 +22406,8 @@
       ],
       "verifiedAt": "2026-09-13T00:00:00.000Z"
     },
-    "websiteUrl": "https://sites.google.com/view/dausonhoang/home"
+    "websiteUrl": "https://sites.google.com/view/dausonhoang/home",
+    "msInstitution": "RMIT University"
   },
   {
     "id": "vp-0507",
@@ -22489,7 +22593,11 @@
         "https://uwaterloo.ca/chemistry/profile/d6bui"
       ],
       "verifiedAt": "2026-09-07T05:07:49.496Z"
-    }
+    },
+    "undergradInstitution": "Belgorod State National Research University",
+    "msInstitution": "Uppsala University",
+    "undergradYear": 2016,
+    "msYear": 2018
   },
   {
     "id": "vp-0512",
@@ -23377,7 +23485,8 @@
     "phdInstitution": "Université Pierre et Marie Curie",
     "portrait": "portraits/183-tu-bao-ho-japan-advanced-institute-of-science-and-technology.webp",
     "portraitSource": "https://www.jaist.ac.jp/~bao/HBao2.jpg",
-    "labUrl": "https://www.jaist.ac.jp/ks/labs/ho/"
+    "labUrl": "https://www.jaist.ac.jp/ks/labs/ho/",
+    "undergradInstitution": "Hanoi University of Science and Technology"
   },
   {
     "id": "vp-0534",
@@ -23411,7 +23520,9 @@
       ],
       "verifiedAt": "2026-09-07T05:10:09.774Z"
     },
-    "websiteUrl": "https://www.vietanhnguyen.net/"
+    "websiteUrl": "https://www.vietanhnguyen.net/",
+    "msInstitution": "National University of Singapore",
+    "msYear": 2012
   },
   {
     "id": "vp-0535",
@@ -24469,7 +24580,18 @@
       ],
       "verifiedAt": "2026-09-07T05:13:19.683Z"
     },
-    "websiteUrl": "https://sites.google.com/site/nqhienqn/home"
+    "websiteUrl": "https://sites.google.com/site/nqhienqn/home",
+    "msInstitution": "Ho Chi Minh City University of Technology",
+    "msYear": 2007,
+    "honors": [
+      {
+        "category": "fellow",
+        "year": null,
+        "source": "https://sites.google.com/site/nqhienqn/home",
+        "name": "IEEE Fellow",
+        "organization": "IEEE"
+      }
+    ]
   },
   {
     "id": "vp-0568",
@@ -25821,7 +25943,8 @@
     ],
     "phdInstitution": "University of Nottingham",
     "portrait": "portraits/630-tuan-t-nguyen-university-of-greenwich.webp",
-    "portraitSource": "https://www.gre.ac.uk/__data/assets/image/0030/255396/tuan-nguyen-500x500.jpg"
+    "portraitSource": "https://www.gre.ac.uk/__data/assets/image/0030/255396/tuan-nguyen-500x500.jpg",
+    "phdYear": 2010
   },
   {
     "id": "vp-0610",
@@ -26300,7 +26423,8 @@
       ],
       "verifiedAt": "2026-09-13T00:00:00.000Z"
     },
-    "websiteUrl": "https://www.normalesup.org/~haison/"
+    "websiteUrl": "https://www.normalesup.org/~haison/",
+    "undergradInstitution": "École Normale Supérieure"
   },
   {
     "id": "vp-0626",
@@ -26383,7 +26507,8 @@
     "phdInstitution": "Université Paris-Saclay",
     "portrait": "portraits/649-thach-ngoc-dinh-conservatoire-national-des-arts-et-metiers.webp",
     "portraitSource": "https://lh3.googleusercontent.com/sitesv/AG8ngQV3zwnZ-fEUFCOlgnQBm7M8X3eLyz3iuT1RoZ3jFUwt_7NuD5BGEpnzocPlZihgDpMFOiar8tEBhvbYrQrQtvV87VQHbVXu7TJ0CCm93So9gO3WFZ1970sa16wgM35m5It1x-hvMieb_rL5MDQFD5AKuPXUwV8-44Apv5l-vf1U_60RLM3h3624a-Rzav2qj7gb5CkSOGuRVH3B9dywdRycSOsZFbS998WVjkl8=w1280",
-    "labUrl": "https://cedric.cnam.fr/"
+    "labUrl": "https://cedric.cnam.fr/",
+    "msYear": 2011
   },
   {
     "id": "vp-0629",
@@ -26427,7 +26552,8 @@
         "institution": "University of Lille",
         "year": 2022
       }
-    ]
+    ],
+    "msInstitution": "McMaster University"
   },
   {
     "id": "vp-0630",
@@ -26451,7 +26577,8 @@
     "phdYear": 2021,
     "phdInstitution": "Paris Dauphine-PSL University",
     "portrait": "portraits/651-liem-nguyen-essec-business-school.webp",
-    "portraitSource": "https://faculty.essec.edu/wp-content/uploads/avatars/B00815994.jpg"
+    "portraitSource": "https://faculty.essec.edu/wp-content/uploads/avatars/B00815994.jpg",
+    "msYear": 2006
   },
   {
     "id": "vp-0631",
@@ -26787,7 +26914,8 @@
       ],
       "verifiedAt": "2026-09-13T00:00:00.000Z"
     },
-    "websiteUrl": "https://www2.philosophy.su.se/nguyen/"
+    "websiteUrl": "https://www2.philosophy.su.se/nguyen/",
+    "msInstitution": "Stockholm University"
   },
   {
     "id": "vp-0641",
@@ -26927,7 +27055,8 @@
       "Built Environment"
     ],
     "portrait": "portraits/665-jason-nguyen-university-of-toronto.webp",
-    "portraitSource": "https://www.daniels.utoronto.ca/sites/default/files/2024-06/jason-nguyen-2-small.jpg"
+    "portraitSource": "https://www.daniels.utoronto.ca/sites/default/files/2024-06/jason-nguyen-2-small.jpg",
+    "phdInstitution": "Harvard University"
   },
   {
     "id": "vp-0645",
@@ -27375,7 +27504,9 @@
         "https://carleton.ca/iis/people/xuan-thuy-nguyen/"
       ],
       "verifiedAt": "2026-09-07T05:30:00.000Z"
-    }
+    },
+    "undergradInstitution": "Carleton University",
+    "undergradYear": 2022
   },
   {
     "id": "vp-0659",
@@ -28671,7 +28802,8 @@
         "https://www.soas.ac.uk/about/maya-nguyen"
       ],
       "verifiedAt": "2026-09-07T05:40:00.000Z"
-    }
+    },
+    "phdInstitution": "London South Bank University"
   },
   {
     "id": "vp-0698",
@@ -31439,7 +31571,8 @@
         "https://sites.temple.edu/vietcapacity/"
       ],
       "verifiedAt": "2026-09-13T04:29:39.508Z"
-    }
+    },
+    "phdInstitution": "Temple University"
   },
   {
     "id": "vp-0778",
@@ -31860,7 +31993,8 @@
     "country": "United Kingdom",
     "portrait": "portraits/0792-an-nguyen-king-s-college-london.webp",
     "portraitSource": "https://www.kcl.ac.uk/newimages/person-profile/2022a/an-nguyen.xf9a9ba9b.jpg?w=922&h=1381&crop=540,540,209,201",
-    "websiteUrl": "https://sites.google.com/view/annguyenedu/home"
+    "websiteUrl": "https://sites.google.com/view/annguyenedu/home",
+    "phdYear": 2025
   },
   {
     "id": "vp-0793",
@@ -31952,7 +32086,8 @@
         "https://sites.google.com/site/backyvn/"
       ],
       "verifiedAt": "2026-09-13T00:00:00.000Z"
-    }
+    },
+    "undergradInstitution": "York University"
   },
   {
     "id": "vp-0796",
@@ -33122,7 +33257,8 @@
       ],
       "verifiedAt": "2026-09-07T18:57:30.000Z"
     },
-    "websiteUrl": "https://sites.google.com/site/thanhfuv/"
+    "websiteUrl": "https://sites.google.com/site/thanhfuv/",
+    "undergradInstitution": "Vietnam National University, Hanoi"
   },
   {
     "id": "vp-0835",
@@ -33549,7 +33685,8 @@
         "https://scholar.google.com/citations?user=dt42krUAAAAJ"
       ],
       "verifiedAt": "2026-09-13T00:00:00.000Z"
-    }
+    },
+    "phdInstitution": "University of California, Los Angeles"
   },
   {
     "id": "vp-0851",
@@ -33911,7 +34048,8 @@
       }
     ],
     "portrait": "portraits/0865-van-t-pham-university-of-cincinnati.webp",
-    "portraitSource": "https://webcentral.uc.edu/eprof/media/repository/0435PhamVan9934.jpeg"
+    "portraitSource": "https://webcentral.uc.edu/eprof/media/repository/0435PhamVan9934.jpeg",
+    "phdYear": 2002
   },
   {
     "id": "vp-0866",
@@ -34121,7 +34259,8 @@
       }
     ],
     "portrait": "portraits/0875-cam-tu-nguyen.webp",
-    "portraitSource": "https://ufhealthjax.org/assets/images/pages/_1000x667_crop_center-center_line/Pharmacy-Residency-Program.jpg"
+    "portraitSource": "https://ufhealthjax.org/assets/images/pages/_1000x667_crop_center-center_line/Pharmacy-Residency-Program.jpg",
+    "msInstitution": "University of British Columbia"
   },
   {
     "id": "vp-0876",
@@ -34581,7 +34720,8 @@
         "degree": "MPH",
         "institution": "Boston University"
       }
-    ]
+    ],
+    "msInstitution": "Boston University"
   },
   {
     "id": "vp-0896",
@@ -35207,7 +35347,8 @@
         "https://lete143.wixsite.com/home"
       ],
       "verifiedAt": "2026-09-13T04:29:39.508Z"
-    }
+    },
+    "msInstitution": "McMaster University"
   },
   {
     "id": "vp-0920",
@@ -36469,7 +36610,9 @@
         "https://loc.bitbucket.io/"
       ],
       "verifiedAt": "2026-09-13T04:29:39.508Z"
-    }
+    },
+    "undergradInstitution": "Ho Chi Minh City University of Technology",
+    "undergradYear": 2005
   },
   {
     "id": "vp-0954",
@@ -36695,7 +36838,10 @@
         "https://scholar.google.com/citations?user=dt42krUAAAAJ"
       ],
       "verifiedAt": "2026-09-13T00:00:00.000Z"
-    }
+    },
+    "undergradInstitution": "Pennsylvania State University",
+    "msInstitution": "Simon Fraser University",
+    "msYear": 2006
   },
   {
     "id": "vp-0960",
@@ -36774,7 +36920,9 @@
       ],
       "verifiedAt": "2026-09-07T19:11:00.000Z"
     },
-    "labUrl": "https://sites.google.com/view/locduong/"
+    "labUrl": "https://sites.google.com/view/locduong/",
+    "undergradInstitution": "Ho Chi Minh City University of Technology",
+    "undergradYear": 2007
   },
   {
     "id": "vp-0962",
@@ -36842,7 +36990,10 @@
         "https://www.tc.columbia.edu/faculty/ttn2114/"
       ],
       "verifiedAt": "2026-09-07T19:11:00.000Z"
-    }
+    },
+    "undergradInstitution": "University of North Texas",
+    "phdInstitution": "University of Washington",
+    "phdYear": 2005
   },
   {
     "id": "vp-0964",
@@ -36903,7 +37054,13 @@
       ],
       "verifiedAt": "2026-09-13T00:00:00.000Z"
     },
-    "labUrl": "https://www.qanguyenlab.com"
+    "labUrl": "https://www.qanguyenlab.com",
+    "undergradInstitution": "Stanford University",
+    "msInstitution": "Stanford University",
+    "phdInstitution": "University of California, San Francisco",
+    "undergradYear": 2010,
+    "msYear": 2010,
+    "phdYear": 2017
   },
   {
     "id": "vp-0966",
@@ -37755,7 +37912,9 @@
     "directFields": [
       "name",
       "profileUrl"
-    ]
+    ],
+    "undergradInstitution": "University of Hyogo",
+    "msInstitution": "The University of Tokyo"
   },
   {
     "id": "vp-0994",
@@ -38491,7 +38650,8 @@
     ],
     "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "portrait": "portraits/1016-hoai-luu-q-nguyen.webp",
-    "portraitSource": "https://faculty.haas.berkeley.edu/hqn/Picture_cropped.jpg"
+    "portraitSource": "https://faculty.haas.berkeley.edu/hqn/Picture_cropped.jpg",
+    "phdYear": 2016
   },
   {
     "id": "vp-1018",
@@ -38932,7 +39092,8 @@
       "verifiedAt": "2026-09-13T00:00:00.000Z"
     },
     "portrait": "portraits/1032-chung-tran.webp",
-    "portraitSource": "https://rse.anu.edu.au/files/styles/circular/public/profile-images/chung_tran.jpg.png?itok=5LxhszEm"
+    "portraitSource": "https://rse.anu.edu.au/files/styles/circular/public/profile-images/chung_tran.jpg.png?itok=5LxhszEm",
+    "phdYear": 2014
   },
   {
     "id": "vp-1033",
@@ -39300,7 +39461,9 @@
       "verifiedAt": "2026-09-13T00:00:00.000Z"
     },
     "portrait": "portraits/vp-1046-giang-phung.webp",
-    "portraitSource": "https://www.iscparis.com/wp-content/uploads/2022/03/faculte%CC%81-isc.jpg"
+    "portraitSource": "https://www.iscparis.com/wp-content/uploads/2022/03/faculte%CC%81-isc.jpg",
+    "undergradInstitution": "National Economics University",
+    "undergradYear": 2005
   },
   {
     "id": "vp-1047",
@@ -39617,7 +39780,8 @@
       "verifiedAt": "2026-09-07T19:26:00.000Z"
     },
     "portrait": "portraits/vp-1058-viet-anh-dang.webp",
-    "portraitSource": "https://research.manchester.ac.uk/files-asset/234177979/BD_2514_E_P_R.jpg/"
+    "portraitSource": "https://research.manchester.ac.uk/files-asset/234177979/BD_2514_E_P_R.jpg/",
+    "phdYear": 2007
   },
   {
     "id": "vp-1059",
@@ -39754,7 +39918,8 @@
     ],
     "phdInstitution": "Binghamton University",
     "undergradInstitution": "Binghamton University",
-    "undergradMajor": "Accounting and Finance"
+    "undergradMajor": "Accounting and Finance",
+    "phdYear": 2022
   },
   {
     "id": "vp-1064",
@@ -40161,7 +40326,8 @@
         "https://wphan.wordpress.ncsu.edu"
       ],
       "verifiedAt": "2026-09-13T00:00:00.000Z"
-    }
+    },
+    "phdYear": 2015
   },
   {
     "id": "vp-1076",
@@ -40365,7 +40531,9 @@
         "https://people.dom.pitt.edu/people/thuy-d-bui-md"
       ],
       "verifiedAt": "2026-09-07T19:29:00.000Z"
-    }
+    },
+    "msInstitution": "University of Pittsburgh",
+    "msYear": 2017
   },
   {
     "id": "vp-1082",
@@ -41086,7 +41254,8 @@
       "track",
       "university",
       "websiteUrl"
-    ]
+    ],
+    "phdYear": 2020
   },
   {
     "id": "vp-1104",
@@ -42129,7 +42298,9 @@
       ],
       "verifiedAt": "2026-09-07T20:05:00.000Z"
     },
-    "websiteUrl": "https://sites.google.com/view/hoang-a-tran/home"
+    "websiteUrl": "https://sites.google.com/view/hoang-a-tran/home",
+    "undergradInstitution": "University of Science, Ho Chi Minh City",
+    "undergradYear": 2006
   },
   {
     "id": "vp-1146",
@@ -43123,7 +43294,16 @@
         "https://longbaole.github.io/"
       ],
       "verifiedAt": "2026-09-13T00:00:00.000Z"
-    }
+    },
+    "honors": [
+      {
+        "category": "fellow",
+        "year": null,
+        "source": "https://longbaole.github.io/",
+        "name": "IEEE Fellow",
+        "organization": "IEEE"
+      }
+    ]
   },
   {
     "id": "vp-1180",
@@ -43146,7 +43326,16 @@
     "rank": "Staff Scientist",
     "phdInstitution": "University of Florida",
     "portrait": "portraits/1180-minh-n-vu.webp",
-    "portraitSource": "https://faculty.eng.ufl.edu/active-learning-optimization/wp-content/uploads/sites/785/2021/05/thai.png"
+    "portraitSource": "https://faculty.eng.ufl.edu/active-learning-optimization/wp-content/uploads/sites/785/2021/05/thai.png",
+    "honors": [
+      {
+        "category": "career_award",
+        "year": 2009,
+        "source": "https://optnetsci.cise.ufl.edu/people/",
+        "name": "NSF CAREER Award",
+        "organization": "National Science Foundation"
+      }
+    ]
   },
   {
     "id": "vp-1181",
@@ -43493,20 +43682,6 @@
         "category": "fellow",
         "year": 2019,
         "organization": "Human Factors and Ergonomics Society",
-        "source": "https://www.cla.csulb.edu/departments/psychology/faculty/kim-phuong-vu/"
-      },
-      {
-        "name": "Fellow",
-        "category": "fellow",
-        "year": 2018,
-        "organization": "Association for Psychological Science",
-        "source": "https://www.cla.csulb.edu/departments/psychology/faculty/kim-phuong-vu/"
-      },
-      {
-        "name": "Fellow",
-        "category": "fellow",
-        "year": 2017,
-        "organization": "American Psychological Association",
         "source": "https://www.cla.csulb.edu/departments/psychology/faculty/kim-phuong-vu/"
       }
     ],
@@ -46898,7 +47073,8 @@
     "undergradMajor": "Physics",
     "msInstitution": "École Normale Supérieure",
     "msMajor": "Cognitive Science",
-    "lastUpdatedAt": "2026-09-13T00:00:00.000Z"
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
+    "phdInstitution": "Paris-Saclay Institute"
   },
   {
     "id": "vp-1313",
@@ -47513,7 +47689,8 @@
     "phdYear": 2014,
     "phdMajor": "Computer Science / Bioinformatics",
     "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
-    "websiteUrl": "https://www.meb.ki.se/sites/truvu/"
+    "websiteUrl": "https://www.meb.ki.se/sites/truvu/",
+    "msInstitution": "Tel-Aviv University"
   },
   {
     "id": "vp-1339",
@@ -47932,7 +48109,8 @@
       "Community-Based Participatory Research",
       "Chronic Disease Prevention"
     ],
-    "lastUpdatedAt": "2026-09-13T00:00:00.000Z"
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
+    "phdInstitution": "State University of New York"
   },
   {
     "id": "vp-1357",
@@ -48567,7 +48745,11 @@
     "phdYear": 2015,
     "phdMajor": "Mathematics",
     "confirmed": true,
-    "websiteUrl": "https://imsc.uni-graz.at/btang/"
+    "websiteUrl": "https://imsc.uni-graz.at/btang/",
+    "undergradInstitution": "Hanoi National University of Education",
+    "msInstitution": "University of Science",
+    "undergradYear": 2006,
+    "msYear": 2010
   },
   {
     "id": "vp-1385",
@@ -50153,7 +50335,8 @@
       ],
       "verifiedAt": "2026-09-13T00:00:00.000Z"
     },
-    "websiteUrl": "https://lita.univ-lorraine.fr/~lethi/"
+    "websiteUrl": "https://lita.univ-lorraine.fr/~lethi/",
+    "msInstitution": "University of Metz"
   },
   {
     "id": "vp-1445",
@@ -50471,7 +50654,7 @@
     "department": "Department of Asian and Middle Eastern Studies",
     "rank": "Teaching Assistant Professor",
     "track": "Teaching",
-    "phdInstitution": "University of Hawaiʻi at Mānoa",
+    "phdInstitution": "University of Hawaii",
     "phdMajor": "Second Language Studies",
     "researchAreas": [
       "Second Language Acquisition",
@@ -50527,7 +50710,8 @@
       "Blockchain",
       "Applied Artificial Intelligence"
     ],
-    "websiteUrl": "https://sites.google.com/site/drvinhthongta/home"
+    "websiteUrl": "https://sites.google.com/site/drvinhthongta/home",
+    "phdYear": 2023
   },
   {
     "id": "vp-1461",
@@ -50602,7 +50786,7 @@
     "name": "Binh-Minh Bui-Xuan",
     "vietnameseName": "Bùi Xuân Bình Minh",
     "profileUrl": "https://pages.lip6.fr/Binh-Minh.Bui-Xuan/",
-    "lastUpdatedAt": "2026-09-06T13:15:49.006Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "university": "CNRS (Centre National de la Recherche Scientifique)",
     "city": "Paris",
     "country": "France",
@@ -50616,14 +50800,15 @@
       "Temporal Graphs",
       "Distributed Algorithms",
       "Fault-Tolerant Computing"
-    ]
+    ],
+    "websiteUrl": "https://perso.lip6.fr/Binh-Minh.Bui-Xuan/"
   },
   {
     "id": "vp-1465",
     "name": "Thinh Kieu",
     "vietnameseName": "Kiều Thịnh",
     "profileUrl": "https://ung.edu/mathematics/faculty-staff-bio/thinh-kieu.php",
-    "lastUpdatedAt": "2026-09-11T04:58:07.179Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "university": "University of North Georgia",
     "city": "Oakwood",
     "state": "Georgia",
@@ -50646,7 +50831,7 @@
     "name": "Mai T. Lam",
     "vietnameseName": "Lâm Thị Mai",
     "profileUrl": "https://engineering.wayne.edu/profile/fl8539",
-    "lastUpdatedAt": "2026-09-11T04:58:07.179Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "university": "Wayne State University",
     "city": "Detroit",
     "state": "Michigan",
@@ -50660,14 +50845,15 @@
       "Stem Cells",
       "Vascular Mechanics",
       "Biomaterials"
-    ]
+    ],
+    "labUrl": "http://www.regenerativemechanics.com/team.html"
   },
   {
     "id": "vp-1467",
     "name": "Minh-Huong Ha-Thi",
     "vietnameseName": "Hà Thị Minh Hương",
     "profileUrl": "https://www.ismo.universite-paris-saclay.fr/",
-    "lastUpdatedAt": "2026-09-09T05:00:27.100Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "university": "CNRS (Centre National de la Recherche Scientifique)",
     "city": "Orsay",
     "country": "France",
@@ -50688,7 +50874,7 @@
     "name": "Minh-Tan Ton-That",
     "vietnameseName": "Tôn Thất Minh Tân",
     "profileUrl": "https://nrc.canada.ca/en/corporate/contact-us/nrc-directory-science-professionals",
-    "lastUpdatedAt": "2026-09-11T12:20:58.019Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "university": "National Research Council Canada",
     "city": "Boucherville",
     "state": "QC",
@@ -50733,7 +50919,7 @@
       "Environmental Engineering"
     ],
     "profileUrl": "https://ait.ac.th/people/faculty/prof-nguyen-thi-kim-oanh/",
-    "lastUpdatedAt": "2026-09-09T05:00:23.324Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "portrait": "portraits/vp-1469-kim-oanh-thi-nguyen.webp",
     "portraitSource": "https://ait.ac.th/wp-content/uploads/2022/05/DSC_0032-e1551323597684-683x1024-1-Edited-e1759290737534.jpg"
   },
@@ -50767,7 +50953,7 @@
       "Remote Sensing"
     ],
     "profileUrl": "https://professeurs.uqam.ca/professeur/pham.thi_thanh_hien/",
-    "lastUpdatedAt": "2026-09-09T05:00:23.066Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "portrait": "portraits/vp-1470-thi-thanh-hien-pham.webp",
     "portraitSource": "https://photos-professeurs.uqam.ca/images/fiche_professeur/m2/TnbbJpvskiQ_.jpg"
   },
@@ -50793,7 +50979,7 @@
       "Energy Efficiency"
     ],
     "profileUrl": "https://frise.inrae.fr/l-unite/organigramme",
-    "lastUpdatedAt": "2026-09-09T05:00:25.193Z"
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z"
   },
   {
     "id": "vp-1472",
@@ -50823,7 +51009,7 @@
       "Cross-Cultural Research"
     ],
     "profileUrl": "https://www.chapman.edu/our-faculty/uyen-phan.aspx",
-    "lastUpdatedAt": "2026-09-06T13:22:27.048Z"
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z"
   },
   {
     "id": "vp-1473",
@@ -50846,7 +51032,8 @@
       "Astrochemistry"
     ],
     "profileUrl": "https://lam-nguyen.de/",
-    "lastUpdatedAt": "2026-09-10T12:23:01.000Z"
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
+    "websiteUrl": "https://www.lam-nguyen.de/"
   },
   {
     "id": "vp-1474",
@@ -50867,7 +51054,7 @@
       "Submesoscale Ocean Processes"
     ],
     "profileUrl": "https://www.espace-sciences.org/sciences-ouest/299/actualite/hommage-a-bach-lien-hua",
-    "lastUpdatedAt": "2026-09-06T13:27:47.796Z"
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z"
   },
   {
     "id": "vp-1475",
@@ -50894,7 +51081,7 @@
       "Agricultural Science"
     ],
     "profileUrl": "https://profiles.sydney.edu.au/kim-yen.phan-thien",
-    "lastUpdatedAt": "2026-09-10T12:12:56.000Z"
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z"
   },
   {
     "id": "vp-1476",
@@ -50917,7 +51104,7 @@
       "Evolutionary Biology"
     ],
     "profileUrl": "https://www.nmbu.no/en/about/employees/thu-hien",
-    "lastUpdatedAt": "2026-09-11T04:58:07.179Z"
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z"
   },
   {
     "id": "vp-1477",
@@ -50940,7 +51127,7 @@
       "Infrastructure Mechanics"
     ],
     "profileUrl": "https://pagespro.univ-gustave-eiffel.fr/mai-lan-nguyen",
-    "lastUpdatedAt": "2026-09-06T13:31:36.068Z"
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z"
   },
   {
     "id": "vp-1478",
@@ -50960,7 +51147,7 @@
       "Structural Mechanics"
     ],
     "profileUrl": "https://lmc2.univ-lyon1.fr/?page_id=1105",
-    "lastUpdatedAt": "2026-09-10T12:23:01.000Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "portrait": "portraits/vp-1478-xuan-hong-vu.webp",
     "portraitSource": "https://lmc2.univ-lyon1.fr/wp-content/uploads/2025/07/carous01-400x400.jpg"
   },
@@ -50986,7 +51173,8 @@
       "Image Processing"
     ],
     "profileUrl": "https://www-irisa.univ-ubs.fr/",
-    "lastUpdatedAt": "2026-09-10T12:23:01.000Z"
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
+    "websiteUrl": "https://sites.google.com/site/mtanpham89/"
   },
   {
     "id": "vp-1480",
@@ -51012,7 +51200,7 @@
       "Manufacturing Automation"
     ],
     "profileUrl": "https://researchmap.jp/buitam/?lang=en",
-    "lastUpdatedAt": "2026-09-06T13:31:36.068Z"
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z"
   },
   {
     "id": "vp-1481",
@@ -51035,7 +51223,7 @@
       "Aerospace Structures"
     ],
     "profileUrl": "https://www.etsmtl.ca/en/research/professors-researchers/tdao",
-    "lastUpdatedAt": "2026-09-06T13:31:36.068Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "researchOverview": {
       "text": "Research in intelligent and autonomous systems covers manufacturing systems, system design and management, modeling, simulation, optimization, neural networks, and operations scheduling.",
       "sources": [
@@ -51065,7 +51253,7 @@
       "Data Analytics"
     ],
     "profileUrl": "https://sds.charlotte.edu/people/chau-le/",
-    "lastUpdatedAt": "2026-09-10T03:58:47.000Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "portrait": "portraits/vp-1482-chau-le.webp",
     "portraitSource": "https://sds.charlotte.edu/wp-content/uploads/sites/839/2025/04/le_chau_8721c-300x450.jpg",
     "directFields": [
@@ -51095,7 +51283,7 @@
       "Wireless Monitoring"
     ],
     "profileUrl": "https://www.laplace.univ-tlse.fr/",
-    "lastUpdatedAt": "2026-09-10T12:23:01.000Z"
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z"
   },
   {
     "id": "vp-1484",
@@ -51118,7 +51306,7 @@
       "Respiratory Epidemiology"
     ],
     "profileUrl": "https://profiles.ucsf.edu/ngoc.ly",
-    "lastUpdatedAt": "2026-09-13T19:43:00.000Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "researchOverview": {
       "text": "Research focuses on pediatric asthma, cystic fibrosis, exercise testing, bronchopulmonary dysplasia, and clinical trials in cystic fibrosis and asthma.",
       "sources": [
@@ -51148,7 +51336,7 @@
       "Pandemic Preparedness"
     ],
     "profileUrl": "https://www.graduateinstitute.ch/academic-departments/faculty/vinh-kim-nguyen",
-    "lastUpdatedAt": "2026-09-06T13:34:29.758Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "researchOverview": {
       "text": "Work in medical anthropology and global health draws on clinical practice and humanitarian health-care experience, including Ebola and COVID-19 responses.",
       "sources": [
@@ -51176,7 +51364,7 @@
       "Malignancies in HIV"
     ],
     "profileUrl": "https://med.emory.edu/departments/medicine/divisions/infectious-diseases/",
-    "lastUpdatedAt": "2026-09-12T19:08:01.439Z"
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z"
   },
   {
     "id": "vp-1487",
@@ -51196,7 +51384,7 @@
       "Limb Preservation"
     ],
     "profileUrl": "https://sante.sorbonne-universite.fr/",
-    "lastUpdatedAt": "2026-09-12T19:08:05.090Z"
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z"
   },
   {
     "id": "vp-1488",
@@ -51216,7 +51404,7 @@
       "OCT-Angiography"
     ],
     "profileUrl": "https://www.chu-amiens.fr/",
-    "lastUpdatedAt": "2026-09-06T13:34:29.758Z"
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z"
   },
   {
     "id": "vp-1489",
@@ -51240,15 +51428,16 @@
       "Functional Analysis"
     ],
     "profileUrl": "https://aip.riken.jp/",
-    "lastUpdatedAt": "2026-09-09T05:00:48.318Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "portrait": "portraits/vp-1489-minh-ha-quang.webp",
-    "portraitSource": "https://aip.riken.jp/uploads/Best-Application.jpg"
+    "portraitSource": "https://aip.riken.jp/uploads/Best-Application.jpg",
+    "labUrl": "https://aip.riken.jp/labs/generic_tech/funct_anl_learn/"
   },
   {
     "id": "vp-1490",
     "name": "Ly Nguyen",
     "profileUrl": "https://www.mdpi.com/2077-0472/16/6/661",
-    "lastUpdatedAt": "2026-09-06T18:35:34.677Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "scholarUrl": "https://scholar.google.com/citations?hl=en&user=RnH55PsAAAAJ",
     "confirmed": false,
     "university": "Florida Agricultural and Mechanical University",
@@ -51276,7 +51465,7 @@
     "name": "Ton An Bui",
     "vietnameseName": "Bùi An Tôn",
     "profileUrl": "https://www.math.ubc.ca/~bui/",
-    "lastUpdatedAt": "2026-09-13T04:38:58.980Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "confirmed": false,
     "university": "University of British Columbia",
     "city": "Vancouver",
@@ -51355,13 +51544,13 @@
     "msMajor": "Biomechanics",
     "undergradInstitution": "University of Guelph",
     "undergradMajor": "Biological Engineering",
-    "lastUpdatedAt": "2026-09-07T00:31:06.000Z"
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z"
   },
   {
     "id": "vp-1494",
     "name": "Marguerite Nguyen",
     "profileUrl": "https://scholars.duke.edu/person/marguerite.nguyen",
-    "lastUpdatedAt": "2026-09-11T04:58:07.179Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "university": "Duke University",
     "city": "Durham",
     "state": "NC",
@@ -51383,7 +51572,7 @@
     "id": "vp-1495",
     "name": "Phuong Tran Nguyen",
     "profileUrl": "https://csumb.edu/hcom/faculty-staff/",
-    "lastUpdatedAt": "2026-09-11T12:20:58.019Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "university": "California State University, Monterey Bay",
     "city": "Seaside",
     "state": "CA",
@@ -51407,7 +51596,7 @@
     "id": "vp-1496",
     "name": "Howie Tam",
     "profileUrl": "https://www.brandeis.edu/english/faculty/tam.html",
-    "lastUpdatedAt": "2026-09-12T19:08:16.193Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "university": "Brandeis University",
     "city": "Waltham",
     "state": "MA",
@@ -51432,7 +51621,7 @@
     "id": "vp-1497",
     "name": "Tess Do",
     "profileUrl": "https://findanexpert.unimelb.edu.au/profile/13813-tess-do",
-    "lastUpdatedAt": "2026-09-10T12:23:01.000Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "university": "University of Melbourne",
     "city": "Melbourne",
     "state": "VIC",
@@ -51546,13 +51735,15 @@
       "university"
     ],
     "confirmed": true,
-    "lastUpdatedAt": "2026-09-10T12:10:54.000Z"
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
+    "websiteUrl": "https://viethh.github.io/",
+    "phdYear": 2013
   },
   {
     "id": "vp-1502",
     "name": "Duc Thi Luu",
     "profileUrl": "https://www.esilv.fr/en/international-workshop-on-financial-markets-and-nonlinear-dynamics-esilv-research-on-european-banking-contagion/",
-    "lastUpdatedAt": "2026-09-10T16:00:00.000Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "university": "École Supérieure d'Ingénieurs Léonard de Vinci",
     "city": "Paris",
     "country": "France",
@@ -51581,7 +51772,7 @@
     "vietnameseName": "Trang Nam",
     "profileUrl": "https://math.unt.edu/people/nam-trang",
     "confirmed": true,
-    "lastUpdatedAt": "2026-09-12T20:50:00.000Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "university": "University of North Texas",
     "city": "Denton",
     "state": "Texas",
@@ -51602,7 +51793,17 @@
         "https://math.unt.edu/people/nam-trang"
       ],
       "verifiedAt": "2026-09-12T20:50:00.000Z"
-    }
+    },
+    "websiteUrl": "https://sites.cos.unt.edu/~ntrang/",
+    "honors": [
+      {
+        "category": "career_award",
+        "year": 2020,
+        "source": "https://sites.cos.unt.edu/~ntrang/",
+        "name": "NSF CAREER Award",
+        "organization": "National Science Foundation"
+      }
+    ]
   },
   {
     "id": "vp-1528",
@@ -51610,7 +51811,7 @@
     "vietnameseName": "Nguyễn Phú Bình",
     "profileUrl": "https://people.wgtn.ac.nz/binh.nguyen",
     "confirmed": true,
-    "lastUpdatedAt": "2026-09-12T20:50:00.000Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "university": "Victoria University of Wellington",
     "city": "Wellington",
     "country": "New Zealand",
@@ -51631,7 +51832,8 @@
         "https://people.wgtn.ac.nz/binh.nguyen"
       ],
       "verifiedAt": "2026-09-12T20:50:00.000Z"
-    }
+    },
+    "websiteUrl": "https://homepages.ecs.vuw.ac.nz/~nguyenb5/"
   },
   {
     "id": "vp-1529",
@@ -51639,7 +51841,7 @@
     "vietnameseName": "Trịnh Trọng Bốn",
     "profileUrl": "https://orcid.org/0000-0002-0956-8941",
     "confirmed": false,
-    "lastUpdatedAt": "2026-09-12T20:50:00.000Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "university": "University of Virginia",
     "city": "Charlottesville",
     "state": "Virginia",
@@ -51660,7 +51862,8 @@
         "https://orcid.org/0000-0002-0956-8941"
       ],
       "verifiedAt": "2026-09-12T20:50:00.000Z"
-    }
+    },
+    "labUrl": "https://sites.google.com/view/trinhlab/home"
   },
   {
     "id": "vp-1530",
@@ -51668,7 +51871,7 @@
     "vietnameseName": "Nguyễn Trung Hiếu",
     "profileUrl": "https://orcid.org/0000-0001-6547-7932",
     "confirmed": false,
-    "lastUpdatedAt": "2026-09-12T20:50:00.000Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "university": "North Carolina Agricultural and Technical State University",
     "city": "Greensboro",
     "state": "North Carolina",
@@ -51688,7 +51891,8 @@
         "https://orcid.org/0000-0001-6547-7932"
       ],
       "verifiedAt": "2026-09-12T20:50:00.000Z"
-    }
+    },
+    "websiteUrl": "https://sites.google.com/view/htn-ncat/"
   },
   {
     "id": "vp-1531",
@@ -51696,7 +51900,7 @@
     "vietnameseName": "Phạm Thịnh",
     "profileUrl": "https://www.gla.ac.uk/schools/psychologyneuroscience/staff/thinhpham/",
     "confirmed": true,
-    "lastUpdatedAt": "2026-09-12T20:50:00.000Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "university": "University of Glasgow",
     "city": "Glasgow",
     "country": "United Kingdom",
@@ -51714,7 +51918,9 @@
         "https://www.gla.ac.uk/schools/psychologyneuroscience/staff/thinhpham/"
       ],
       "verifiedAt": "2026-09-12T20:50:00.000Z"
-    }
+    },
+    "undergradInstitution": "University of Glasgow",
+    "undergradYear": 2023
   },
   {
     "id": "vp-1532",
@@ -51722,7 +51928,7 @@
     "vietnameseName": "Trần Đạt",
     "profileUrl": "https://orcid.org/0000-0001-6711-7471",
     "confirmed": false,
-    "lastUpdatedAt": "2026-09-12T21:48:59.223Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "university": "Rowan University",
     "city": "Glassboro",
     "state": "New Jersey",
@@ -51747,7 +51953,8 @@
       "verifiedAt": "2026-09-12T20:50:00.000Z"
     },
     "portrait": "portraits/1532-dat-tran.webp",
-    "portraitSource": "https://sites.google.com/view/tranbadat/"
+    "portraitSource": "https://sites.google.com/view/tranbadat/",
+    "websiteUrl": "https://dattran24.github.io/"
   },
   {
     "id": "vp-1533",
@@ -51755,7 +51962,7 @@
     "vietnameseName": "Nguyễn Minh Hiếu",
     "profileUrl": "https://orcid.org/0009-0001-6656-8235",
     "confirmed": false,
-    "lastUpdatedAt": "2026-09-12T20:50:00.000Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "university": "Université de Lorraine",
     "city": "Nancy",
     "country": "France",
@@ -51783,7 +51990,7 @@
     "vietnameseName": "Vũ Tường Thụy",
     "profileUrl": "https://orcid.org/0009-0002-7483-7850",
     "confirmed": false,
-    "lastUpdatedAt": "2026-09-12T20:50:00.000Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "university": "Curtin University",
     "city": "Miri",
     "country": "Malaysia",
@@ -51810,7 +52017,7 @@
     "vietnameseName": "Nguyễn Thái",
     "profileUrl": "https://orcid.org/0000-0002-0912-2392",
     "confirmed": false,
-    "lastUpdatedAt": "2026-09-12T19:48:00.000Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "university": "Université Laval",
     "city": "Québec",
     "state": "Québec",
@@ -51830,7 +52037,12 @@
         "https://orcid.org/0000-0002-0912-2392"
       ],
       "verifiedAt": "2026-09-12T19:48:00.000Z"
-    }
+    },
+    "websiteUrl": "https://sites.google.com/view/htnguyen/home",
+    "undergradInstitution": "University of Pedagogy HCM City",
+    "phdInstitution": "University of Rouen",
+    "undergradYear": 2003,
+    "phdYear": 2014
   },
   {
     "id": "vp-1536",
@@ -51855,7 +52067,7 @@
       "Student Persistence",
       "Graduate Employability"
     ],
-    "lastUpdatedAt": "2026-09-12T19:59:00.000Z",
+    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
     "directFields": [
       "name",
       "rank",
@@ -51967,7 +52179,10 @@
         "https://scholar.google.com/citations?user=XCbOvfsAAAAJ&hl=en"
       ],
       "verifiedAt": "2026-09-13T00:00:00.000Z"
-    }
+    },
+    "msInstitution": "University of Orleans",
+    "msYear": 2015,
+    "phdYear": 2016
   },
   {
     "id": "vp-1540",
@@ -52061,7 +52276,16 @@
         "https://scholar.google.com/citations?user=F10hThAAAAAJ&hl=en"
       ],
       "verifiedAt": "2026-09-13T00:00:00.000Z"
-    }
+    },
+    "honors": [
+      {
+        "category": "fellow",
+        "year": null,
+        "source": "https://www.unlv.edu/ece/faculty-directory",
+        "name": "IEEE Fellow",
+        "organization": "IEEE"
+      }
+    ]
   },
   {
     "id": "vp-1544",
