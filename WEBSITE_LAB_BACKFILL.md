@@ -29,6 +29,7 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 - [x] Batch WL-21 complete
 - [x] Batch WL-22 complete
 - [x] Batch WL-23 complete — **all 23 batches complete (1145/1145 people researched)**
+- [x] Batch WL-24 complete — 11 people added to the roster after the 2026-09-13 snapshot (missing both websiteUrl and labUrl at time of research)
 
 ---
 
@@ -1380,6 +1381,28 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-1534` | [TuongThuy Vu](https://vietprofs.roars.dev/people/vp-1534.html) | Curtin University | Civil and Construction Engineering | ✅ | ⏳ |
 | `vp-1535` | [Thai Nguyen](https://vietprofs.roars.dev/people/vp-1535.html) | Université Laval | École d'actuariat | ✅ | ⏳ |
 | `vp-1536` | [Binh Chi Bui](https://vietprofs.roars.dev/people/vp-1536.html) | University of Texas at El Paso | College of Education | ✅ | ✅ |
+
+---
+
+### Batch WL-24 (11 people newly added to the roster after the 2026-09-13 snapshot, missing both website and lab)
+
+- [x] Batch complete
+
+| ID | Name | Institution | Department | Website | Lab |
+| :--- | :--- | :--- | :--- | :---: | :---: |
+| `vp-1541` | [Ha Thu Le](https://vietprofs.roars.dev/people/vp-1541.html) | California State Polytechnic University, Pomona | Electrical and Computer Engineering | ⏳ | ⏳ |
+| `vp-1542` | [Mai-Khanh Nguyen](https://vietprofs.roars.dev/people/vp-1542.html) | University of Nevada, Las Vegas | Electrical and Computer Engineering | ⏳ | ⏳ |
+| `vp-1544` | [Tuan Anh Le](https://vietprofs.roars.dev/people/vp-1544.html) | Middlesex University | Design Engineering and Mathematics | ⏳ | ⏳ |
+| `vp-1548` | [Khai N. Truong](https://vietprofs.roars.dev/people/vp-1548.html) | University of Toronto | Computer Science | ⏳ | ⏳ |
+| `vp-1554` | [Que Anh Dang](https://vietprofs.roars.dev/people/vp-1554.html) | Coventry University | Research Centre for Global Learning | ⏳ | ✅ |
+| `vp-1555` | [Mai Tran](https://vietprofs.roars.dev/people/vp-1555.html) | Griffith University | School of Medicine and Dentistry | ⏳ | ⏳ |
+| `vp-1556` | [Trang Dang](https://vietprofs.roars.dev/people/vp-1556.html) | National Chung Cheng University | Department of Finance | ⏳ | ⏳ |
+| `vp-1557` | [Tuong Vy Nguyen](https://vietprofs.roars.dev/people/vp-1557.html) | National Taiwan University of Science and Technology | Department of Business Administration | ⏳ | ⏳ |
+| `vp-1558` | [Bich Thuy Nguyen](https://vietprofs.roars.dev/people/vp-1558.html) | São Paulo State University | Department of Mathematics | ✅ | ⏳ |
+| `vp-1559` | [Huyen Trang Phan](https://vietprofs.roars.dev/people/vp-1559.html) | Ca' Foscari University of Venice | Department of Asian and North African Studies | ✅ | ⏳ |
+| `vp-1560` | [Phuong Thanh Nguyen](https://vietprofs.roars.dev/people/vp-1560.html) | University of L'Aquila | Department of Information Engineering, Computer Science and Mathematics | ⏳ | ⏳ |
+
+Note: several candidate URLs found during research (e.g. an alternate-domain mirror of Khai N. Truong's existing profile, an alternate slug of Que Anh Dang's existing profile, an older Griffith Experts ID for Mai Tran, a duplicate of Ha Thu Le's and Tuan Anh Le's existing profileUrl) were intentionally not added since they were the same institutional page as `profileUrl`, not a genuinely distinct personal site or lab page.
 
 ---
 
