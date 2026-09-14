@@ -196,7 +196,7 @@ function renderShell() {
         <option value="vp-newest">Newest Entry</option>
       </select>
     </div>
-    <div class="browser-shelf" id="browser-shelf" aria-label="Saved browser data" hidden></div>
+    <nav class="browser-shelf" id="browser-shelf" aria-label="Saved browser data" hidden></nav>
     <output class="command-output" id="command-output" aria-live="polite" hidden></output>
     <div class="examples" id="examples"></div>
     <div class="result-row">
@@ -385,6 +385,71 @@ async function init() {
   let queryPlan = '';
   let keyboardSelectedIndex = -1;
   let currentGrowthMetric: GrowthMetricKey = 'count';
+  let activeSearchScope: string | null = null;
+
+  function renderSearchScopeChip() {
+    searchScopeChip.hidden = !activeSearchScope;
+    if (!activeSearchScope) {
+      searchScopeChipLabel.textContent = '';
+      return;
+    }
+    const label = KEYWORD_LABELS[activeSearchScope];
+    searchScopeChipLabel.textContent = `${KEYWORD_ICONS[activeSearchScope]} ${label}`;
+    searchScopeChip.setAttribute('aria-label', `Remove ${label} search scope`);
+  }
+
+  function renderStateFilterChip() {
+    searchStateChip.hidden = !filterState.state;
+    if (!filterState.state) {
+      searchStateChipLabel.textContent = '';
+      return;
+    }
+    searchStateChipLabel.textContent = `📍 ${filterState.state}`;
+    searchStateChip.setAttribute('aria-label', `Remove ${filterState.state} state filter`);
+  }
+
+  function setSearchValue(raw: string) {
+    const parsed = parseKeywordQuery(raw);
+    activeSearchScope = parsed?.scope ?? null;
+    searchInput.value = parsed?.query ?? raw;
+    renderSearchScopeChip();
+  }
+
+  function clearSearch() {
+    setSearchValue('');
+  }
+
+  function searchQueryValue() {
+    const query = searchInput.value.trim();
+    return activeSearchScope
+      ? `${KEYWORD_LABELS[activeSearchScope]}:${query ? ` ${query}` : ''}`
+      : query;
+  }
+
+  // A "Keyword: value" prefix typed or pasted into the free-text box becomes a visible scope
+  // chip. The chip remains the source of truth until the user removes it.
+  function effectiveSearch() {
+    if (activeSearchScope) {
+      return { scope: activeSearchScope, query: searchInput.value, isKeyword: true };
+    }
+    const parsed = parseKeywordQuery(searchInput.value);
+    return parsed
+      ? { scope: parsed.scope, query: parsed.query, isKeyword: true }
+      : { scope: 'all', query: searchInput.value, isKeyword: false };
+  }
+
+  function autoSelectLocationForQuery() {
+    const { scope, query } = effectiveSearch();
+    locationSelect.value = locationForQuery(roster, searchIndex, {
+      query,
+      searchScope: scope,
+      state: filterState.state,
+      currentLocation: locationSelect.value,
+      field: fieldSelect.value,
+      track: trackSelect.value,
+      institutionType: institutionTypeSelect.value,
+    });
+  }
 
   function showCommandOutput(message: string) {
     commandOutput.textContent = message;
@@ -446,7 +511,14 @@ async function init() {
       });
     locationSelect.replaceChildren(...groupElements);
     locationSelect.value = selectedValue;
-    if (locationSelect.selectedIndex < 0) locationSelect.selectedIndex = 0;
+    if (locationSelect.selectedIndex < 0) {
+      const worldOption = locationSelect.querySelector('option[value="World"]') as HTMLOptionElement | null;
+      if (worldOption) {
+        locationSelect.value = 'World';
+      } else {
+        locationSelect.selectedIndex = 0;
+      }
+    }
   }
 
   // Mirror CSRankings' two location sections: countries/regions represented in the
@@ -494,10 +566,6 @@ async function init() {
     INSTITUTION_TYPES.map((type) => [type, roster.filter((person) => institutionTypeOf(person) === type).length]),
   );
   const sortedInstTypes = [...INSTITUTION_TYPES].sort((a, b) => (instTypeCounts.get(b) ?? 0) - (instTypeCounts.get(a) ?? 0) || a.localeCompare(b));
-
-  function initializeDropdowns() {
-    updateDropdownCounts();
-  }
 
   function updateDropdownCounts() {
     const { scope, query } = effectiveSearch();
@@ -594,6 +662,10 @@ async function init() {
     setOptions(institutionTypeSelect, instEntries, currentInstType);
   }
 
+  function initializeDropdowns() {
+    updateDropdownCounts();
+  }
+
   function updateDropdownHighlights() {
     locationSelect.classList.toggle('is-active', locationSelect.value !== 'World');
     fieldSelect.classList.toggle('is-active', fieldSelect.value !== 'all');
@@ -614,75 +686,6 @@ async function init() {
     trackSelect.value = safeFilters.track;
     institutionTypeSelect.value = safeFilters.institutionType;
     updateDropdownHighlights();
-  }
-
-  initializeDropdowns();
-  setFilterValues({ location: 'World' });
-
-  let activeSearchScope: string | null = null;
-
-  function renderSearchScopeChip() {
-    searchScopeChip.hidden = !activeSearchScope;
-    if (!activeSearchScope) {
-      searchScopeChipLabel.textContent = '';
-      return;
-    }
-    const label = KEYWORD_LABELS[activeSearchScope];
-    searchScopeChipLabel.textContent = `${KEYWORD_ICONS[activeSearchScope]} ${label}`;
-    searchScopeChip.setAttribute('aria-label', `Remove ${label} search scope`);
-  }
-
-  function renderStateFilterChip() {
-    searchStateChip.hidden = !filterState.state;
-    if (!filterState.state) {
-      searchStateChipLabel.textContent = '';
-      return;
-    }
-    searchStateChipLabel.textContent = `📍 ${filterState.state}`;
-    searchStateChip.setAttribute('aria-label', `Remove ${filterState.state} state filter`);
-  }
-
-  function setSearchValue(raw: string) {
-    const parsed = parseKeywordQuery(raw);
-    activeSearchScope = parsed?.scope ?? null;
-    searchInput.value = parsed?.query ?? raw;
-    renderSearchScopeChip();
-  }
-
-  function clearSearch() {
-    setSearchValue('');
-  }
-
-  function searchQueryValue() {
-    const query = searchInput.value.trim();
-    return activeSearchScope
-      ? `${KEYWORD_LABELS[activeSearchScope]}:${query ? ` ${query}` : ''}`
-      : query;
-  }
-
-  // A "Keyword: value" prefix typed or pasted into the free-text box becomes a visible scope
-  // chip. The chip remains the source of truth until the user removes it.
-  function effectiveSearch() {
-    if (activeSearchScope) {
-      return { scope: activeSearchScope, query: searchInput.value, isKeyword: true };
-    }
-    const parsed = parseKeywordQuery(searchInput.value);
-    return parsed
-      ? { scope: parsed.scope, query: parsed.query, isKeyword: true }
-      : { scope: 'all', query: searchInput.value, isKeyword: false };
-  }
-
-  function autoSelectLocationForQuery() {
-    const { scope, query } = effectiveSearch();
-    locationSelect.value = locationForQuery(roster, searchIndex, {
-      query,
-      searchScope: scope,
-      state: filterState.state,
-      currentLocation: locationSelect.value,
-      field: fieldSelect.value,
-      track: trackSelect.value,
-      institutionType: institutionTypeSelect.value,
-    });
   }
 
   const params = new URLSearchParams(window.location.search);
@@ -716,6 +719,7 @@ async function init() {
   if (INSTITUTION_TYPES.some((type) => type === requestedInstitutionType)) {
     initialInstitutionType = requestedInstitutionType;
   }
+  initializeDropdowns();
   setFilterValues({ location: initialLocation, field: initialField, track: initialTrack, institutionType: initialInstitutionType });
   if (['random', 'last-name', 'first-name', 'recent', 'vp-newest'].includes(requestedSort)) {
     sortSelect.value = requestedSort;
