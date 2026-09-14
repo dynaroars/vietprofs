@@ -28,7 +28,7 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 - [x] Batch WL-20 complete
 - [x] Batch WL-21 complete
 - [x] Batch WL-22 complete
-- [ ] Batch WL-23 — not yet started
+- [x] Batch WL-23 complete — **all 23 batches complete (1145/1145 people researched)**
 
 ---
 
@@ -1336,38 +1336,38 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | ID | Name | Institution | Department | Website | Lab |
 | :--- | :--- | :--- | :--- | :---: | :---: |
 | `vp-1464` | [Binh-Minh Bui-Xuan](https://vietprofs.roars.dev/people/vp-1464.html) | CNRS (Centre National de la Recherche Scientifique) | Laboratoire d'Informatique de Paris 6 (LIP6) / Sorbonne Université | ✅ | ⏳ |
-| `vp-1465` | [Thinh Kieu](https://vietprofs.roars.dev/people/vp-1465.html) | University of North Georgia | Department of Mathematics | ⏳ | ⏳ |
+| `vp-1465` | [Thinh Kieu](https://vietprofs.roars.dev/people/vp-1465.html) | University of North Georgia | Department of Mathematics | ✅ | ⏳ |
 | `vp-1466` | [Mai T. Lam](https://vietprofs.roars.dev/people/vp-1466.html) | Wayne State University | Department of Biomedical Engineering | ⏳ | ✅ |
-| `vp-1467` | [Minh-Huong Ha-Thi](https://vietprofs.roars.dev/people/vp-1467.html) | CNRS (Centre National de la Recherche Scientifique) | Institut des Sciences Moléculaires d'Orsay (ISMO) / Université Paris-Saclay | ⏳ | ⏳ |
+| `vp-1467` | [Minh-Huong Ha-Thi](https://vietprofs.roars.dev/people/vp-1467.html) | CNRS (Centre National de la Recherche Scientifique) | Institut des Sciences Moléculaires d'Orsay (ISMO) / Université Paris-Saclay | ⏳ | ✅ |
 | `vp-1468` | [Minh-Tan Ton-That](https://vietprofs.roars.dev/people/vp-1468.html) | National Research Council Canada | Automotive and Surface Transportation Research Centre | ⏳ | ⏳ |
-| `vp-1469` | [Kim-Oanh Thi Nguyen](https://vietprofs.roars.dev/people/vp-1469.html) | Asian Institute of Technology | Environmental Engineering and Management, Department of Water Resources and Environmental Engineering | ⏳ | ⏳ |
-| `vp-1470` | [Thi-Thanh-Hien Pham](https://vietprofs.roars.dev/people/vp-1470.html) | Université du Québec à Montréal | Département d'études urbaines et touristiques | ⏳ | ⏳ |
-| `vp-1471` | [Hong-Minh Hoang](https://vietprofs.roars.dev/people/vp-1471.html) | INRAE (Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement) | Unité FRISE (Génie des Procédés Frigorifiques pour la Sécurité Alimentaire et l'Environnement) / Université Paris-Saclay | ⏳ | ⏳ |
-| `vp-1472` | [Uyen Thuy Xuan Phan](https://vietprofs.roars.dev/people/vp-1472.html) | Chapman University | Food Science, Schmid College of Science and Technology | ⏳ | ⏳ |
+| `vp-1469` | [Kim-Oanh Thi Nguyen](https://vietprofs.roars.dev/people/vp-1469.html) | Asian Institute of Technology | Environmental Engineering and Management, Department of Water Resources and Environmental Engineering | ✅ | ✅ |
+| `vp-1470` | [Thi-Thanh-Hien Pham](https://vietprofs.roars.dev/people/vp-1470.html) | Université du Québec à Montréal | Département d'études urbaines et touristiques | ⏳ | ✅ |
+| `vp-1471` | [Hong-Minh Hoang](https://vietprofs.roars.dev/people/vp-1471.html) | INRAE (Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement) | Unité FRISE (Génie des Procédés Frigorifiques pour la Sécurité Alimentaire et l'Environnement) / Université Paris-Saclay | ⏳ | ✅ |
+| `vp-1472` | [Uyen Thuy Xuan Phan](https://vietprofs.roars.dev/people/vp-1472.html) | Chapman University | Food Science, Schmid College of Science and Technology | ⏳ | ✅ |
 | `vp-1473` | [Ha Vinh Lam Nguyen](https://vietprofs.roars.dev/people/vp-1473.html) | Université Paris-Est Créteil | Laboratoire Interuniversitaire des Systèmes Atmosphériques (LISA) | ✅ | ⏳ |
 | `vp-1474` | [Bach-Lien Hua](https://vietprofs.roars.dev/people/vp-1474.html) | CNRS (Centre National de la Recherche Scientifique) | Laboratoire de Physique des Océans (LPO) | ⏳ | ⏳ |
 | `vp-1475` | [Kim-Yen Phan-Thien](https://vietprofs.roars.dev/people/vp-1475.html) | The University of Sydney | School of Life and Environmental Sciences | ⏳ | ⏳ |
-| `vp-1476` | [Thu-Hien To](https://vietprofs.roars.dev/people/vp-1476.html) | Norwegian University of Life Sciences | Department of Animal and Aquacultural Sciences, Faculty of Biosciences | ⏳ | ⏳ |
-| `vp-1477` | [Mai Lan Nguyen](https://vietprofs.roars.dev/people/vp-1477.html) | Université Gustave Eiffel | Laboratoire Auscultation et Modélisation des Structures (LAMES), Département Matériaux et Structures (MAST) | ⏳ | ⏳ |
-| `vp-1478` | [Xuan Hong Vu](https://vietprofs.roars.dev/people/vp-1478.html) | Université Claude Bernard Lyon 1 | Laboratoire des Matériaux Composites pour la Construction (LMC2) | ⏳ | ⏳ |
+| `vp-1476` | [Thu-Hien To](https://vietprofs.roars.dev/people/vp-1476.html) | Norwegian University of Life Sciences | Department of Animal and Aquacultural Sciences, Faculty of Biosciences | ⏳ | ✅ |
+| `vp-1477` | [Mai Lan Nguyen](https://vietprofs.roars.dev/people/vp-1477.html) | Université Gustave Eiffel | Laboratoire Auscultation et Modélisation des Structures (LAMES), Département Matériaux et Structures (MAST) | ⏳ | ✅ |
+| `vp-1478` | [Xuan Hong Vu](https://vietprofs.roars.dev/people/vp-1478.html) | Université Claude Bernard Lyon 1 | Laboratoire des Matériaux Composites pour la Construction (LMC2) | ✅ | ✅ |
 | `vp-1479` | [Minh-Tan Pham](https://vietprofs.roars.dev/people/vp-1479.html) | Université Bretagne Sud | IRISA (Institut de Recherche en Informatique et Systèmes Aléatoires) | ✅ | ⏳ |
-| `vp-1480` | [Ngoc-Tam Bui](https://vietprofs.roars.dev/people/vp-1480.html) | Shibaura Institute of Technology | Innovative Global Program, College of Engineering | ⏳ | ⏳ |
-| `vp-1481` | [Thiên-My Dao](https://vietprofs.roars.dev/people/vp-1481.html) | École de Technologie Supérieure | Department of Mechanical Engineering | ⏳ | ⏳ |
+| `vp-1480` | [Ngoc-Tam Bui](https://vietprofs.roars.dev/people/vp-1480.html) | Shibaura Institute of Technology | Innovative Global Program, College of Engineering | ✅ | ✅ |
+| `vp-1481` | [Thiên-My Dao](https://vietprofs.roars.dev/people/vp-1481.html) | École de Technologie Supérieure | Department of Mechanical Engineering | ✅ | ✅ |
 | `vp-1482` | [Chau Le](https://vietprofs.roars.dev/people/vp-1482.html) | University of North Carolina at Charlotte | Department of Engineering Technology and Construction Management | ⏳ | ⏳ |
-| `vp-1483` | [Tan-Hoa Vuong](https://vietprofs.roars.dev/people/vp-1483.html) | Toulouse INP | Laboratoire Plasma et Conversion d'Énergie (LAPLACE), ENSEEIHT | ⏳ | ⏳ |
+| `vp-1483` | [Tan-Hoa Vuong](https://vietprofs.roars.dev/people/vp-1483.html) | Toulouse INP | Laboratoire Plasma et Conversion d'Énergie (LAPLACE), ENSEEIHT | ⏳ | ✅ |
 | `vp-1484` | [Ngoc P. Ly](https://vietprofs.roars.dev/people/vp-1484.html) | University of California, San Francisco | Department of Pediatrics, Division of Pediatric Pulmonology | ⏳ | ⏳ |
-| `vp-1485` | [Vinh-Kim Nguyen](https://vietprofs.roars.dev/people/vp-1485.html) | Geneva Graduate Institute | Department of Anthropology and Sociology & Global Health Centre | ⏳ | ⏳ |
-| `vp-1486` | [Minh Ly Nguyen](https://vietprofs.roars.dev/people/vp-1486.html) | Emory University | Division of Infectious Diseases, Department of Medicine | ⏳ | ⏳ |
+| `vp-1485` | [Vinh-Kim Nguyen](https://vietprofs.roars.dev/people/vp-1485.html) | Geneva Graduate Institute | Department of Anthropology and Sociology & Global Health Centre | ✅ | ✅ |
+| `vp-1486` | [Minh Ly Nguyen](https://vietprofs.roars.dev/people/vp-1486.html) | Emory University | Division of Infectious Diseases, Department of Medicine | ✅ | ⏳ |
 | `vp-1487` | [Georges Ha Van](https://vietprofs.roars.dev/people/vp-1487.html) | Sorbonne Université | Service de Diabétologie, Métabolisme et Endocrinologie, Hôpital Pitié-Salpêtrière | ⏳ | ⏳ |
 | `vp-1488` | [Thi Hà Châu Tran](https://vietprofs.roars.dev/people/vp-1488.html) | Université de Picardie Jules Verne | Service d'Ophtalmologie, CHU Amiens-Picardie | ⏳ | ⏳ |
 | `vp-1489` | [Minh Ha Quang](https://vietprofs.roars.dev/people/vp-1489.html) | RIKEN | Center for Advanced Intelligence Project (AIP) | ⏳ | ✅ |
 | `vp-1490` | [Ly Nguyen](https://vietprofs.roars.dev/people/vp-1490.html) | Florida Agricultural and Mechanical University | Agribusiness Program, College of Agriculture and Food Sciences | ⏳ | ⏳ |
-| `vp-1491` | [Ton An Bui](https://vietprofs.roars.dev/people/vp-1491.html) | University of British Columbia | Mathematics | ⏳ | ⏳ |
+| `vp-1491` | [Ton An Bui](https://vietprofs.roars.dev/people/vp-1491.html) | University of British Columbia | Mathematics | ✅ | ⏳ |
 | `vp-1493` | [Jon Doan](https://vietprofs.roars.dev/people/vp-1493.html) | University of Lethbridge | Kinesiology & Physical Education | ⏳ | ⏳ |
 | `vp-1494` | [Marguerite Nguyen](https://vietprofs.roars.dev/people/vp-1494.html) | Duke University | Department of English | ⏳ | ⏳ |
-| `vp-1495` | [Phuong Tran Nguyen](https://vietprofs.roars.dev/people/vp-1495.html) | California State University, Monterey Bay | Department of Humanities and Communication | ⏳ | ⏳ |
+| `vp-1495` | [Phuong Tran Nguyen](https://vietprofs.roars.dev/people/vp-1495.html) | California State University, Monterey Bay | Department of Humanities and Communication | ✅ | ⏳ |
 | `vp-1496` | [Howie Tam](https://vietprofs.roars.dev/people/vp-1496.html) | Brandeis University | Department of English | ⏳ | ⏳ |
-| `vp-1497` | [Tess Do](https://vietprofs.roars.dev/people/vp-1497.html) | University of Melbourne | School of Languages and Linguistics | ⏳ | ⏳ |
+| `vp-1497` | [Tess Do](https://vietprofs.roars.dev/people/vp-1497.html) | University of Melbourne | School of Languages and Linguistics | ✅ | ⏳ |
 | `vp-1501` | [Viet Huynh](https://vietprofs.roars.dev/people/vp-1501.html) | Edith Cowan University | Computer Science | ✅ | ⏳ |
 | `vp-1502` | [Duc Thi Luu](https://vietprofs.roars.dev/people/vp-1502.html) | École Supérieure d'Ingénieurs Léonard de Vinci | Finance | ⏳ | ⏳ |
 | `vp-1527` | [Nam Trang](https://vietprofs.roars.dev/people/vp-1527.html) | University of North Texas | Mathematics | ✅ | ⏳ |
@@ -1376,10 +1376,10 @@ Rules: only add a distinct HTTPS URL if one genuinely exists (do not fabricate).
 | `vp-1530` | [Hieu Trung Nguyen](https://vietprofs.roars.dev/people/vp-1530.html) | North Carolina Agricultural and Technical State University | Electrical and Computer Engineering | ✅ | ⏳ |
 | `vp-1531` | [Thinh Pham](https://vietprofs.roars.dev/people/vp-1531.html) | University of Glasgow | School of Psychology and Neuroscience | ⏳ | ⏳ |
 | `vp-1532` | [Dat Tran](https://vietprofs.roars.dev/people/vp-1532.html) | Rowan University | Mathematics | ✅ | ⏳ |
-| `vp-1533` | [Minh Hieu Nguyen](https://vietprofs.roars.dev/people/vp-1533.html) | Université de Lorraine | Operations Research & Optimization | ⏳ | ⏳ |
-| `vp-1534` | [TuongThuy Vu](https://vietprofs.roars.dev/people/vp-1534.html) | Curtin University | Civil and Construction Engineering | ⏳ | ⏳ |
+| `vp-1533` | [Minh Hieu Nguyen](https://vietprofs.roars.dev/people/vp-1533.html) | Université de Lorraine | Operations Research & Optimization | ⏳ | ✅ |
+| `vp-1534` | [TuongThuy Vu](https://vietprofs.roars.dev/people/vp-1534.html) | Curtin University | Civil and Construction Engineering | ✅ | ⏳ |
 | `vp-1535` | [Thai Nguyen](https://vietprofs.roars.dev/people/vp-1535.html) | Université Laval | École d'actuariat | ✅ | ⏳ |
-| `vp-1536` | [Binh Chi Bui](https://vietprofs.roars.dev/people/vp-1536.html) | University of Texas at El Paso | College of Education | ⏳ | ⏳ |
+| `vp-1536` | [Binh Chi Bui](https://vietprofs.roars.dev/people/vp-1536.html) | University of Texas at El Paso | College of Education | ✅ | ✅ |
 
 ---
 
