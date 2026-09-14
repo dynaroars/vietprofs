@@ -577,7 +577,7 @@ async function init() {
     const locationContext = filterRoster(searchIndex, {
       query,
       searchScope: scope,
-      state: filterState.state,
+      state: undefined,
       location: 'World',
       field: currentField,
       track: currentTrack,

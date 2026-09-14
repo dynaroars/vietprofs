@@ -551,8 +551,8 @@ test('filter choices stay stable and stale filters recover', async () => {
   assert.equal(await page.locator('#field-filter option[value="Earth & Environmental Sciences"]').count(), 1);
   await page.locator('#field-filter').selectOption('Biological & Biomedical Sciences');
   assert.ok((await page.locator('.entry').count()) > 0);
-  assert.equal(await page.locator('#track-filter option[value="Teaching"]').count(), 1);
-  assert.equal(await page.locator('#track-filter option[value="Emeritus"]').count(), 1);
+  assert.equal(await page.locator('#track-filter option[value="Tenure-line"]').count(), 1);
+  assert.equal(await page.locator('#track-filter option[value="Teaching"]').count(), 0);
   assert.equal(await page.locator('#field-filter option[value="Earth & Environmental Sciences"]').count(), 1);
   const locationLabels = await page.locator('#location-filter option').allTextContents();
   assert.ok(locationLabels.every((label) => label.trim().length > 0));
