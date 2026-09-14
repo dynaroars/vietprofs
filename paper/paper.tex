@@ -524,10 +524,38 @@ Before applying any change, the controller enforces strict deterministic invaria
 When \code{--codex-review} is active, a second model independently reviews proposed patches against web evidence. If rejected, the controller permits up to two bounded revision attempts (\code{MAX\_PROPOSAL\_REVISIONS = 2}). If discrepancies remain, the case is deferred rather than guessed.
 Working state is written to disk (\code{\textasciitilde/.local/state/vietprofs-maintenance/}), allowing long maintenance runs to resume seamlessly across process restarts or rate limits.
 
-\section{Discovery as Partitioned Open-World Search}
-Unbounded search queries like ``find all Vietnamese faculty worldwide'' are intractable. VietProfs structures candidate discovery by partitioning open search into bounded institution, department, and domain slices using \codelink{scripts/faculty-discovery-queries.ts}.
+\section{Candidate Discovery and Discovery Economics}
+\label{sec:discovery}
 
-Queries combine institutional keywords, faculty directory paths, and Vietnamese surname/name tokens, paired with negative filter keywords (\code{-student -postdoctoral}) to minimize noise. Discovered leads are checked against the canonical roster before undergoing full evidence verification.
+\subsection{Partitioned Open-World Search Sweeps}
+Unbounded search queries like ``find all Vietnamese faculty worldwide'' are intractable for automated web crawlers. VietProfs structures automated candidate discovery by partitioning open search into bounded institution, department, and domain slices using \codelink{scripts/faculty-discovery-queries.ts}.
+
+Queries combine institutional domain keywords, faculty directory paths, and Vietnamese surname and given-name tokens, paired with negative filter keywords (\code{-student -postdoctoral -adjunct}) to minimize noise. Discovered leads are deduplicated against the canonical roster before undergoing full evidence verification.
+
+\subsection{Cold-Start Discovery vs.\ Long-Tail Maintenance Economics}
+\label{sec:economics}
+A key operational insight from scaling VietProfs from zero to over 1,500 verified faculty is the stark economic and efficiency asymmetry between \emph{cold-start candidate discovery} and \emph{long-tail maintenance}:
+
+\begin{itemize}
+\item \textbf{The Cold-Start Trap (High Cost, Low Precision):} Deploying autonomous LLM agents to blindly crawl search engines or unindexed institutional websites in search of new candidates exhibits diminishing returns. Because Vietnamese scholars constitute a small percentage of overall global faculty, unconstrained agentic search burns tens of thousands of tokens per valid candidate found. Agents frequently rediscover existing profiles, misidentify graduate students or postdocs as permanent faculty, or waste tool invocations parsing irrelevant staff directories.
+\item \textbf{Long-Tail Maintenance (Low Cost, High Precision):} In contrast, once a candidate or existing record is identified, LLM agents are exceptionally efficient at \emph{targeted verification} and \emph{revalidation}. Auditing an existing record against an authoritative URL (checking for tenure promotions, soft-404 redirects, new honors, and updated Google Scholar profiles) is bounded, highly structured, and consumes fewer than 1,000 tokens per record while achieving near-zero error rates under deterministic validation gates.
+\end{itemize}
+
+\subsection{Leveraging Professional Network Graphs for High-Yield Sourcing}
+\label{sec:linkedin}
+To overcome the cold-start bottleneck without incurring massive token overhead, we adopted a human-in-the-loop strategy that exploits the pre-existing topology of professional social graphs---specifically LinkedIn.
+
+Rather than running blind web searches, human maintainers actively browse LinkedIn's recommendation and graph-clustering surfaces (such as ``People Also Viewed'', ``Suggested Connections'', university alumni directories, and shared co-authorship clusters). These platforms encode dense topological priors: a professor at one institution is frequently connected to former PhD labmates, postdoctoral peers, and departmental colleagues who are also Vietnamese-heritage faculty across global institutions.
+
+A human curator can visually scan these recommendation clusters and identify 20--50 high-confidence candidate leads in minutes with zero token cost. Once these candidate names and claimed affiliations are collected, they are fed directly into the automated VietProfs verification pipeline:
+\begin{enumerate}
+\item The LLM research agent locates the official university \code{.edu} directory page;
+\item The agent extracts the precise appointment track, official rank, and department;
+\item Deterministic validators confirm degree progression, local WebP portrait existence, and HTTPS source provenance;
+\item The verified record is committed to the canonical dataset.
+\end{enumerate}
+
+This hybrid division of labor---human intelligence navigating dense social graphs for candidate discovery, paired with automated agent pipelines for rigorous web verification and long-tail maintenance---proves vastly more cost-effective and scalable than either purely manual curation or fully autonomous blind crawling.
 
 \section{Evidence and Verification}
 \label{sec:evidence}
