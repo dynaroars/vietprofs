@@ -1,6 +1,6 @@
 # VietProfs
 
-[VietProfs](https://vietroars.roars.dev) is a searchable, community-maintained directory of Vietnamese and Vietnamese-diaspora academics at universities and eligible public or nonprofit scholarly research institutes worldwide. Rather than being strictly confined to traditional tenure-line university classroom professors, it covers scholarly academics and faculty-equivalent permanent researchers---such as CNRS and INRIA researchers, Max Planck group leaders, RIKEN scientists, and CSIRO researchers, as well as continuing teaching and clinical faculty---because they publish, lead research groups, obtain funding, and mentor students much like university faculty. Corporate research labs, industry roles, and temporary or non-faculty positions remain outside its scope. This [paper](https://arxiv.org/abs/2609.06091) ([latest](https://vietprofs.roars.dev/vietprofs.pdf)) describes the project.
+[VietProfs](https://vietroars.roars.dev) is a searchable, community-maintained directory of Vietnamese and Vietnamese-diaspora academics at universities and eligible public or nonprofit scholarly research institutes worldwide. Rather than being strictly confined to traditional tenure-line university classroom professors, it covers scholarly academics and faculty-equivalent permanent researchers---such as CNRS and INRIA researchers, Max Planck group leaders, RIKEN scientists, and CSIRO researchers, as well as continuing teaching and clinical faculty---because they publish, lead research groups, obtain funding, and mentor students much like university faculty. Corporate research labs, industry roles, and temporary or non-faculty positions remain outside its scope. This [paper](https://arxiv.org/abs/2609.06091) ([latest](https://vietprofs.roars.dev/vietprofs.pdf)) describes the project. The dataset is available in [`public/data.json`](./public/data.json) and hosted on [Hugging Face](https://huggingface.co/datasets/dynaroars/vietprofs).
 
 This site is maintained by users all around the world (e.g., [submitting new or editing existing entries](https://vietprofs.roars.dev/submit.html)) _and_ AI bots that continuously validates and updates the directory database.  
 
@@ -64,7 +64,7 @@ This binds to all network interfaces. Other machines can then browse to
 
 ## Data and contributions
 
-The roster lives in [`public/data.json`](./public/data.json). Each active record gets a static
+The roster lives in [`public/data.json`](./public/data.json) and is also published on [Hugging Face Datasets](https://huggingface.co/datasets/dynaroars/vietprofs). Each active record gets a static
 public profile at `people/vp-####.html`, and its immutable `vp-####` `id` is assigned by `npm run
 assign-profile-ids -- --apply` after an entry is added.
 
