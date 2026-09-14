@@ -70,7 +70,7 @@ Keeping over a thousand records accurate against a constantly shifting web is no
 We describe an LLM-assisted maintenance system that combines automated search and periodic revalidation with deterministic validation gates.
 Our core operating rule is simple: \emph{AI proposes, evidence decides}.
 
-As of September 2026, the directory includes 1,152 verified records across 492 institutions in 23 countries, covering doctoral cohorts from 1939 to 2026.
+As of September 2026, the directory includes 1,507 verified records across 640 institutions in 34 countries, covering doctoral cohorts from 1939 to 2026.
 Aggregate statistics are computed dynamically at runtime rather than stored statically, and all changes are audited through public Git history.
 VietProfs provides a practical, long-overdue community resource while serving as a concrete case study in building reliable, agent-maintained public datasets.
 \end{abstract}
@@ -106,7 +106,7 @@ Temporary, visiting, postdoctoral, and adjunct roles are excluded to keep the di
 Each scholar is mapped to one of 17 broad fields of study (Section~\ref{sec:fields}), adapted from classifications used by the U.S. National Center for Education Statistics (NCES), National Science Foundation (NSF), and National Institutes of Health (NIH).
 This ensures our field distribution corresponds to familiar national categories rather than an arbitrary schema.
 
-As of September 2026, the directory contains 1,152 verified records across 492 institutions in 23 countries (Section~\ref{sec:results}).
+As of September 2026, the directory contains 1,507 verified records across 640 institutions in 34 countries (Section~\ref{sec:results}).
 Each profile card is designed around what visitors actually need: a portrait, authoritative Vietnamese-diacritic name, current university, department, rank, location, educational background, curated honors, and research tags (Section~\ref{sec:whatshown}).
 The web interface supports instant text search with optional single-field scoping, combinable filters, shareable URLs, dynamic leaderboards, a U.S. state map, and a public submission form for proposed additions and corrections (Section~\ref{sec:ui}).
 
@@ -283,7 +283,7 @@ Medical Education & CIP 51.12 (Medicine) \\
 \end{tabularx}
 \end{table}
 
-Health Sciences accounts for roughly 20\% of the entire roster (228 records, 104 Clinical appointments, and multiple endowed chairs in medicine). To make this large group navigable, VietProfs further breaks it into seven subfields (Table~\ref{tab:healthnih}), aligned with the National Institutes of Health's institute structure \cite{nih_ics}.
+Health Sciences accounts for roughly 21\% of the entire roster (321 records, 125 Clinical appointments, 162 Tenure-line appointments, and multiple endowed chairs in medicine). To make this large group navigable, VietProfs further breaks it into seven subfields (Table~\ref{tab:healthnih}), aligned with the National Institutes of Health's institute structure \cite{nih_ics}.
 
 \section{What Information Is Shown, and Why}
 \label{sec:whatshown}
@@ -406,8 +406,8 @@ Beyond serving as a practical lookup tool, VietProfs provides interesting empiri
 \subsection{Runtime Aggregation and Current Distribution}
 The ``Show me something interesting'' view is computed dynamically at runtime by \code{buildFunFacts} in \codelink{src/data.ts}. Rather than hardcoding static statistics that easily become outdated, all aggregate metrics are recomputed directly from the live dataset whenever a page is rendered.
 
-Table~\ref{tab:snapshot} summarizes the directory snapshot as of September 2026. The roster includes 1,152 verified scholars across 492 institutions in 23 countries. In the United States (729 records), California (148) and Texas (98) host the largest concentrations. The international subset (423 records) is led by Australia (95), Canada (58), the United Kingdom (57), France (46), Japan (40), and Singapore (27).
-The four largest broad fields are Health Sciences (228), Business \& Economics (220), Computer \& Information Sciences (163), and Engineering (152).
+Table~\ref{tab:snapshot} summarizes the directory snapshot as of September 2026. The roster includes 1,507 verified scholars across 640 institutions in 34 countries. In the United States (835 records), California (161), Texas (86), New York (46), Massachusetts (39), and Florida (36) host the largest concentrations. The international subset (672 records) is led by Australia (154), France (104), the United Kingdom (94), Canada (85), Japan (54), Singapore (27), Taiwan (27), and Germany (17).
+The five largest broad fields are Health Sciences (321), Business \& Economics (239), Engineering (222), Computer \& Information Sciences (199), and Mathematics (111).
 
 \begin{table}[t]
 \centering
@@ -418,12 +418,12 @@ The four largest broad fields are Health Sciences (228), Business \& Economics (
 \toprule
 Metric & Count & Metric & Count \\
 \midrule
-Total Records & 1,152 & Universities \& Institutes & 492 \\
-Countries & 23 & U.S. / International & 729 / 423 \\
+Total Records & 1,507 & Universities \& Institutes & 640 \\
+Countries & 34 & U.S. / International & 835 / 672 \\
 Broad Fields & 17 & Accepted Tracks & 7 \\
-Profile URLs & 1,152 & Google Scholar URLs & 662 \\
-Personal / Lab URLs & 211 & PhD Institutions & 868 \\
-Honors-Bearing Records & 208 & PhD Graduation Years & 613 \\
+Profile URLs & 1,507 & Google Scholar URLs & 748 \\
+Personal / Lab URLs & 439 & PhD Institutions & 1,161 \\
+Honors-Bearing Records & 235 & PhD Graduation Years & 890 \\
 Earliest Doctoral Year & 1939 & Latest Doctoral Year & 2026 \\
 \bottomrule
 \end{tabular}
@@ -589,12 +589,14 @@ Negative sweep & \commitlink{9b31b95} & Recorded completed regional audit with z
 
 \section{What Does Not Work}
 \label{sec:whatdoesnotwork}
-Several intuitive automation shortcuts failed in practice and had to be abandoned:
+Several intuitive automation shortcuts failed in practice and had to be abandoned based on operational lessons in our Git history:
 \begin{itemize}
 \item \textbf{Unconstrained LLM Querying:} Asking models to list faculty from memory without external search tools produces convincing hallucinations: non-existent appointments, fabricated departments, and wrong institutions \cite{ji2023survey}.
 \item \textbf{Surname-Only Filtering:} Inferring diaspora status purely from common surnames creates high false-positive rates (e.g., non-Vietnamese scholars sharing similar romanized names) while missing Vietnamese scholars with non-Vietnamese surnames \cite{mateos2007name}.
-\item \textbf{Treating 404s as Departures:} Campus websites break links constantly during CMS overhauls. Deleting a profile solely because a link returned a 404 resulted in erroneously removing active faculty.
-\item \textbf{Direct Model Writes to the Database:} Allowing an LLM to directly write or format JSON records frequently corrupted schema structures, reordered entries, or stripped existing fields.
+\item \textbf{HTTP Status-Code Liveness (The Soft-404 Fallacy):} Relying purely on HTTP 200 vs.\ 404 status codes to audit profile links fails because modern university content management systems (e.g., Drupal, WordPress) frequently catch deleted or moved faculty URLs and silently redirect them (HTTP 301/302) to generic departmental homepages, admissions portals, or college search directories with a 200 OK status. Automated liveness auditing requires semantic verification---fetching and confirming that the scholar's actual name and affiliation appear on the destination page.
+\item \textbf{Unconstrained Image Scraping for Portraits:} Naive automated image extraction on faculty pages frequently extracts campus building photos, school crests, stock student banners, or headshots of neighboring colleagues in faculty grid layouts. Safe portrait ingestion requires strict aspect-ratio bounding, face detection, and entity caption matching before committing local WebP assets.
+\item \textbf{Overwriting Human Ground-Truth During Automated Sweeps:} When community members or scholars themselves submit verified corrections (e.g., diacritic names, mid-career master's degrees, specialized joint appointments), unattended automated scrapers often subsequently attempt to overwrite these verified facts with stale or stripped web data. Without an explicit, immutable \code{directFields} ledger that permanently shields human-verified attributes from automated mutation, batch revalidation degrades ground-truth data.
+\item \textbf{Honors Inflation from Unfiltered CV Scraping:} Prompting LLMs to extract ``honors and awards'' from personal websites leads to rampant CV inflation: internal departmental travel grants, poster prizes, student mentoring certificates, and routine conference travel stipends. Reliable curation requires restricting honors to a strict, schema-enforced 5-category taxonomy backed by mandatory HTTPS provenance URLs.
 \end{itemize}
 
 \section{Practical Engineering Lessons}
@@ -602,13 +604,13 @@ Our experience maintaining VietProfs yields ten practical takeaways for agent-ma
 \begin{enumerate}
 \item \textbf{AI Proposes, Determinism Decides:} Restrict LLMs to information retrieval and proposal generation; enforce schema and business invariants using deterministic code.
 \item \textbf{Decouple Candidate Leads from Canonical State:} Route external suggestions and unverified leads into a staging pipeline rather than directly mutating production data.
-\item \textbf{Target-Scoped Edits:} Force agent proposals to touch only the targeted record, preventing batch-wide corruption.
+\item \textbf{Protect Ground-Truth with Direct-Field Ledgers:} Maintain a dedicated \code{directFields} property on human-submitted records so automated revalidation loops never overwrite manually confirmed facts.
+\item \textbf{Perform Semantic Liveness Verification:} Detect soft-404s and generic CMS redirects by asserting that the scholar's name and department still exist on the destination webpage.
 \item \textbf{Compute Aggregate Facts at Runtime:} Never store precomputed summary statistics that can silently become stale when underlying records change.
 \item \textbf{Require Corroboration for Removals:} Never remove an entry based on a broken link alone; demand secondary evidence of departure or retirement.
 \item \textbf{Track a Two-Tiered Verification Ledger:} Distinguish between the date a record was modified and the date it was audited and confirmed unchanged.
 \item \textbf{Curate Domain Honors Strictly:} Avoid uncurated CV scraping; restrict honors to standardized, comparable award tiers.
 \item \textbf{Partition Open-World Search:} Structure broad searches into narrow, repeatable institution-by-field search slices.
-\item \textbf{Use Multi-Agent Cross-Checking:} Require secondary model review and bounded retry cycles for ambiguous claims.
 \item \textbf{Guard Production with End-to-End Tests:} Protect deployment with automated linting, schema validation, and headless browser tests.
 \end{enumerate}
 
