@@ -224,6 +224,32 @@ test('proposal analysis preserves completed postdoctoral training fields', () =>
   assert.equal(result.proposal.postdocYear, 2022);
 });
 
+test('proposal analysis rejects proposals that drop verified baseline honors', () => {
+  const honoredPeople = structuredClone(people);
+  honoredPeople[1].honors = [
+    {
+      name: 'Pulitzer Prize for Fiction',
+      category: 'major_award',
+      organization: 'The Pulitzer Prizes',
+      source: 'https://www.pulitzer.org/winners/example',
+      year: 2016,
+    },
+    {
+      name: 'MacArthur Fellow',
+      category: 'fellow',
+      organization: 'MacArthur Foundation',
+      source: 'https://www.macfound.org/fellows/example',
+      year: 2017,
+    },
+  ];
+  const after = structuredClone(honoredPeople);
+  // Proposal dropped honors entirely
+  delete after[1].honors;
+  const result = analyzeRosterProposal(honoredPeople, after, 'Old Person');
+  assert.equal(result.ok, false);
+  assert.match(result.reason, /proposal dropped verified baseline honor/);
+});
+
 test('proposal analysis allows a completed postdoc institution without a completion year', () => {
   const after = structuredClone(people);
   after[1].postdocInstitution = 'Carnegie Mellon University';

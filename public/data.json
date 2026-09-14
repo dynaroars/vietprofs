@@ -36387,10 +36387,14 @@
   },
   {
     "id": "vp-0945",
+    "portrait": "portraits/0945-daniel-dao-regents-university-london.webp",
+    "portraitSource": "https://danieldao.co.uk/wp-content/uploads/2025/07/PT-e1753310187899.jpg",
     "name": "Daniel Dao",
-    "vietnameseName": "Đào Daniel",
+    "vietnameseName": "Đào Đông",
     "profileUrl": "https://www.regents.ac.uk/about/our-people/dr-daniel-dao",
-    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
+    "scholarUrl": "https://scholar.google.com/citations?user=4zgPROsAAAAJ",
+    "linkedinUrl": "https://www.linkedin.com/in/dong-dao/",
+    "lastUpdatedAt": "2026-09-14T08:30:00.000Z",
     "university": "Regent's University London",
     "city": "London",
     "country": "United Kingdom",
@@ -36403,6 +36407,9 @@
     "track": "Tenure-line",
     "department": "Business, Finance and Entrepreneurship",
     "rank": "Assistant Professor",
+    "phdInstitution": "Coventry University",
+    "phdYear": 2024,
+    "phdMajor": "Finance",
     "websiteUrl": "https://danieldao.co.uk/"
   },
   {
@@ -53135,6 +53142,104 @@
     "directFields": [
       "name",
       "profileUrl"
+    ]
+  },
+  {
+    "id": "vp-1563",
+    "name": "Hoa Nguyen - CSIRO",
+    "profileUrl": "https://people.csiro.au/n/h/hoa-nguyen",
+    "portrait": "portraits/1563-hoa-nguyen-csiro.webp",
+    "portraitSource": "https://people.csiro.au:443/-/media/People-Finder/N/H/hoa-nguyen/HoaNguyen_2025_small.jpg",
+    "lastUpdatedAt": "2026-09-14T01:46:26.000Z",
+    "university": "CSIRO",
+    "institutionType": "Public research institute",
+    "city": "Melbourne",
+    "state": "Victoria",
+    "country": "Australia",
+    "department": "Data61, Quantum Systems Team",
+    "rank": "Research Scientist",
+    "track": "Research",
+    "scholarUrl": "https://scholar.google.com/citations?user=BzBt4MUAAAAJ",
+    "researchAreas": [
+      "Quantum Software Engineering",
+      "Quantum Cloud Computing",
+      "Quantum Machine Learning",
+      "Distributed Systems"
+    ],
+    "undergradInstitution": "Vietnam National University, Ho Chi Minh City",
+    "undergradYear": 2016,
+    "msInstitution": "Vietnam National University, Ho Chi Minh City",
+    "msYear": 2019,
+    "phdInstitution": "University of Melbourne",
+    "phdYear": 2025,
+    "phdMajor": "Engineering and IT",
+    "directFields": [
+      "name",
+      "profileUrl",
+      "rank",
+      "university"
+    ]
+  },
+  {
+    "id": "vp-1564",
+    "name": "The Anh Ta",
+    "vietnameseName": "Tạ Thế Anh",
+    "profileUrl": "https://people.csiro.au/t/t/theanh-ta",
+    "portrait": "portraits/1564-the-anh-ta-csiro.webp",
+    "portraitSource": "https://people.csiro.au:443/-/media/People-Finder/T/T/theanh-ta/thumbnail_Photo-TheAnh-TA.jpg",
+    "lastUpdatedAt": "2026-09-14T08:10:00.000Z",
+    "university": "CSIRO",
+    "institutionType": "Public research institute",
+    "city": "Sydney",
+    "state": "New South Wales",
+    "country": "Australia",
+    "department": "Data61, Cyber Security and Privacy",
+    "rank": "Research Scientist",
+    "track": "Research",
+    "scholarUrl": "https://scholar.google.com/citations?user=1y0vv1wAAAAJ",
+    "researchAreas": [
+      "Applied Cryptography",
+      "Post-Quantum Cryptography",
+      "Cybersecurity",
+      "Machine Learning"
+    ],
+    "phdInstitution": "University of Paris-Saclay",
+    "phdYear": 2021,
+    "phdMajor": "Mathematics",
+    "directFields": [
+      "name",
+      "profileUrl",
+      "rank",
+      "university"
+    ]
+  },
+  {
+    "id": "vp-1565",
+    "name": "Yen Tran",
+    "profileUrl": "https://people.csiro.au/t/y/yen-tran",
+    "lastUpdatedAt": "2026-09-14T08:10:00.000Z",
+    "university": "CSIRO",
+    "institutionType": "Public research institute",
+    "city": "Canberra",
+    "state": "Australian Capital Territory",
+    "country": "Australia",
+    "department": "Data61, Privacy Technology Group",
+    "rank": "Research Scientist",
+    "track": "Research",
+    "researchAreas": [
+      "Data Privacy and Security",
+      "Trustworthy AI",
+      "Biometrics Security",
+      "Distributed Systems Security"
+    ],
+    "phdInstitution": "University of New South Wales",
+    "phdYear": 2023,
+    "phdMajor": "Computer Science",
+    "directFields": [
+      "name",
+      "profileUrl",
+      "rank",
+      "university"
     ]
   }
 ]

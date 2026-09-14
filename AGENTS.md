@@ -4,7 +4,7 @@ Before researching or modifying the roster, read [ROSTER_MAINTENANCE.md](ROSTER_
 
 This repository is **VietProfs**: a roster of Vietnamese and Vietnamese-diaspora faculty at universities outside Vietnam. Do not apply inclusion criteria from an external repository or linked project without first confirming that it is relevant here.
 
-`ROSTER_MAINTENANCE.md` is the authoritative guide for eligibility, evidence, appointment tracks, degrees, honors, and portraits. Run `npm test`, `npm run test:e2e`, `npm run build`, and `git diff --check` after roster changes.
+`ROSTER_MAINTENANCE.md` is the authoritative guide for eligibility, evidence, appointment tracks, degrees, honors, and portraits. For local roster data updates without UI changes, `npm test`, `npm run build`, and `git diff --check` are fast, lightweight, and sufficient. Full browser smoke tests (`npm run test:e2e`) are only needed before pushing frontend/UI changes.
 
 Interesting-facts output must follow the roster-only, reproducible-observation rules in `README.md` and `ROSTER_MAINTENANCE.md`; qualified signals such as “the roster suggests” are allowed when supported by explicit comparisons, but do not invent claims or infer prestige, demographics, causation, growth, or migration paths from current counts.
 

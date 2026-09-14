@@ -171,6 +171,9 @@ test('rank labels use the simplified public vocabulary', () => {
   assert.equal(canonicalRank({ track: 'Tenure-line', rank: 'Distinguished Professor' }), 'Professor');
   assert.equal(canonicalRank({ track: 'Tenure-line', rank: 'Associate Professor of Finance' }), 'Associate Professor');
   assert.equal(canonicalRank({ track: 'Tenure-line', rank: 'Assistant Professor of Practice' }), 'Assistant Professor');
+  assert.equal(canonicalRank({ track: 'Tenure-line', rank: 'Lecturer' }), 'Assistant Professor');
+  assert.equal(canonicalRank({ track: 'Tenure-line', rank: 'Senior Lecturer' }), 'Associate Professor');
+  assert.equal(canonicalRank({ track: 'Tenure-line', rank: 'Reader' }), 'Associate Professor');
   assert.equal(canonicalRank({ track: 'Teaching', rank: 'Senior Lecturer II' }), 'Teaching');
   assert.equal(canonicalRank({ track: 'Research', rank: 'Assistant Research Professor' }), 'Research Scientist');
   assert.equal(canonicalRank({ track: 'Clinical', rank: 'Clinical Professor' }), 'Clinical Professor');
@@ -535,11 +538,52 @@ test('roster data strictly satisfies roster.schema.json', async () => {
   assert.ok(schema.items.properties.university);
 
   for (const person of roster) {
-    assert.match(person.id, /^vp-\d{4}$/, `Invalid ID format for ${person.name}`);
+    assert.match(person.id, /^vp-\d{4,}$/, `Invalid ID format for ${person.name}`);
     assert.ok(person.name && typeof person.name === 'string');
     assert.ok(person.university && typeof person.university === 'string');
     if (person.track) {
       assert.ok(schema.items.properties.track.enum.includes(person.track), `Unknown track ${person.track} for ${person.name}`);
+    }
+  }
+});
+
+test('landmark and marquee faculty maintain their verified major honors', () => {
+  const expectedMarqueeHonors: Array<{ name: string; requiredHonors: string[] }> = [
+    {
+      name: 'Viet Thanh Nguyen',
+      requiredHonors: ['Pulitzer Prize for Fiction', 'MacArthur Fellow'],
+    },
+    {
+      name: 'Bao Chau Ngo',
+      requiredHonors: ['Fields Medal', 'Clay Research Award'],
+    },
+    {
+      name: 'Son Thanh Dam',
+      requiredHonors: ['ICTP Dirac Medal', 'National Academy of Sciences Member'],
+    },
+    {
+      name: 'Jane X. Luu',
+      requiredHonors: ['Kavli Prize in Astrophysics', 'Shaw Prize in Astronomy'],
+    },
+    {
+      name: 'Thuc-Quyen Nguyen',
+      requiredHonors: ['National Academy of Engineering Member', 'Wilhelm Exner Medal'],
+    },
+    {
+      name: 'Chi Van Dang',
+      requiredHonors: ['National Academy of Medicine Member'],
+    },
+  ];
+
+  for (const { name, requiredHonors } of expectedMarqueeHonors) {
+    const person = roster.find((p) => p.name === name);
+    assert.ok(person, `Expected landmark faculty member "${name}" in roster`);
+    const honorNames = new Set((person.honors || []).map((h) => h.name));
+    for (const req of requiredHonors) {
+      assert.ok(
+        honorNames.has(req),
+        `Expected ${name} to have honor "${req}", but current honors are: [${Array.from(honorNames).join(', ')}]`,
+      );
     }
   }
 });

@@ -279,8 +279,8 @@ export function canonicalRank(person: Pick<RosterEntry, 'track' | 'rank'>): stri
     return label;
   }
   if (person.track !== 'Tenure-line') return person.rank;
-  if (/assistant/i.test(person.rank ?? '')) return 'Assistant Professor';
-  if (/associate/i.test(person.rank ?? '')) return 'Associate Professor';
+  if (/assistant/i.test(person.rank ?? '') || /^lecturer/i.test(person.rank ?? '')) return 'Assistant Professor';
+  if (/associate/i.test(person.rank ?? '') || /senior lecturer|reader/i.test(person.rank ?? '')) return 'Associate Professor';
   return 'Professor';
 }
 
@@ -566,6 +566,9 @@ const FIELD_OVERRIDES = new Map([
   ['Department of Nematology|University of California, Riverside', 'Agricultural & Natural Resource Sciences'],
   ['Centre RAPSODEE|IMT Mines Albi', 'Engineering'],
   ['CSIRO Manufacturing|CSIRO (Commonwealth Scientific and Industrial Research Organisation)', 'Engineering'],
+  ['Data61, Quantum Systems Team|CSIRO', 'Computer & Information Sciences'],
+  ['Data61, Cyber Security and Privacy|CSIRO', 'Computer & Information Sciences'],
+  ['Data61, Privacy Technology Group|CSIRO', 'Computer & Information Sciences'],
   ['Center for Low-temperature Plasma Sciences|Nagoya University', 'Physics & Astronomy'],
   ['Institut des Sciences Moléculaires|CNRS (Centre National de la Recherche Scientifique)', 'Chemistry'],
   ['Lurie Family Imaging Center|Dana-Farber Cancer Institute', 'Health Sciences'],

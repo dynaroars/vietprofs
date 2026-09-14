@@ -718,6 +718,21 @@ export function analyzeRosterProposal(beforeRoster: JsonRecord[], afterRoster: J
   if (proposal && !jsonEqual(baseline?.directFields, proposal.directFields)) {
     return { ok: false, reason: 'automated maintenance cannot change directFields' };
   }
+  if (proposal && Array.isArray(baseline?.honors) && baseline.honors.length > 0) {
+    const baselineHonors = baseline.honors as Array<{ name: string; category?: string }>;
+    const proposalHonors = Array.isArray(proposal.honors) ? (proposal.honors as Array<{ name: string }>) : [];
+    const proposalHonorNames = new Set(proposalHonors.map((h) => h.name));
+    const droppedHonors = baselineHonors.filter((h) => !proposalHonorNames.has(h.name));
+    if (droppedHonors.length > 0) {
+      const majorDropped = droppedHonors.filter((h) => ['academy', 'major_award', 'fellow', 'distinguished_professorship', 'career_award'].includes(h.category || ''));
+      if (majorDropped.length > 0) {
+        return {
+          ok: false,
+          reason: `proposal dropped verified baseline honor(s): ${majorDropped.map((h) => h.name).join(', ')}; existing honors must be preserved additively unless explicit disqualification is documented`,
+        };
+      }
+    }
+  }
   if (proposal) proposal = { ...proposal, lastUpdatedAt: baseline?.lastUpdatedAt };
   return {
     ok: true,
@@ -1036,7 +1051,9 @@ Do not change the protected field or remove the entry.
 
 Before returning an update, compare every supported baseline and discovered field against the
 complete proposed object. Do not omit documented majors, graduation years, postdoctoral training,
-links, portraits, or eligible honors. Use canonical full institution names from the roster guide;
+links, portraits, or eligible honors. Pre-existing verified honors on the baseline must be preserved
+additively in proposedEntryJson; never drop baseline honors merely because a specific institutional profile
+or directory page did not list them. Use canonical full institution names from the roster guide;
 display aliases such as "Penn State" or "Penn State University" must not replace
 "Pennsylvania State University" in stored data.${revisionInstructions}
 

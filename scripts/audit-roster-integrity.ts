@@ -338,17 +338,30 @@ async function runAudit(): Promise<void> {
     }
   }
 
-  // --- 4. Direct Fields Integrity ---
+  // --- 4. Direct Fields & Honors Integrity ---
   for (const p of roster) {
     if (p.directFields) {
       for (const field of p.directFields) {
-        if (p[field] === undefined || p[field] === null || (typeof p[field] === 'string' && !p[field].trim())) {
+        if (p[field] === undefined || p[field] === null || (typeof p[field] === 'string' && !p[field].trim()) || (Array.isArray(p[field]) && (p[field] as unknown[]).length === 0)) {
           issues.push({
             severity: 'ERROR',
             category: 'Direct Fields Anomaly',
             id: p.id,
             name: p.name,
             message: `Declared directField "${field}" is missing or empty on the record`,
+          });
+        }
+      }
+    }
+    if (p.honors && Array.isArray(p.honors)) {
+      for (const h of p.honors as Array<{ name?: string; organization?: string; source?: string; category?: string }>) {
+        if (!h.name || !h.organization || !h.source || !h.category) {
+          issues.push({
+            severity: 'ERROR',
+            category: 'Honors Integrity',
+            id: p.id,
+            name: p.name,
+            message: `Incomplete honor object on record: ${JSON.stringify(h)}`,
           });
         }
       }

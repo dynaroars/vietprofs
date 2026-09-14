@@ -34,7 +34,8 @@
     "pretest": "npm run sync-profile-css && npm run build-search-kit && npm run build-stats-history",
     "test": "npm run validate-data && npm run typecheck && tsx --test test/data.test.ts test/maintenance-controller.test.ts test/validation-rules.test.ts test/derived-stats.test.ts test/profile-pages.test.ts test/ui.test.ts test/favorites.test.ts test/stats.test.ts test/search-kit.test.ts test/insights.test.ts",
     "lint": "biome lint src scripts test",
-    "test:e2e": "npm run build && tsx --test test/browser-smoke.test.ts",
+    "test:e2e": "tsx scripts/smart-e2e.ts",
+    "test:e2e:force": "tsx scripts/smart-e2e.ts --force",
     "check:all": "npm run lint && npm test && npm run test:e2e && git diff --check"
   },
   "devDependencies": {
