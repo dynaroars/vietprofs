@@ -1,0 +1,25 @@
+{
+  "name": "VietProfs — Directory of Vietnamese Faculty Worldwide",
+  "short_name": "VietProfs",
+  "description": "Roster of Vietnamese and Vietnamese-diaspora faculty holding academic appointments at universities outside Vietnam.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/vietprofs-bamboo-v-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/vietprofs-bamboo-v.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

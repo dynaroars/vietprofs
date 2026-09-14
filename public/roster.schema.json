@@ -1,0 +1,236 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "VietProfs Roster Schema",
+  "description": "Schema for the Vietnamese and diaspora faculty roster (public/data.json)",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "name",
+      "university"
+    ],
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^vp-[0-9]{4}$",
+        "description": "Immutable zero-padded 4-digit unique identifier"
+      },
+      "name": {
+        "type": "string",
+        "description": "Full name in Latin/Western format (Given-name-first)"
+      },
+      "vietnameseName": {
+        "type": "string",
+        "description": "Authoritative native name with Vietnamese diacritics (Surname-first)"
+      },
+      "university": {
+        "type": "string",
+        "description": "Canonical institution name"
+      },
+      "institutionType": {
+        "type": "string",
+        "description": "Type of institution (e.g. University, Research Institute)"
+      },
+      "city": {
+        "type": "string",
+        "description": "City of primary campus / appointment"
+      },
+      "state": {
+        "type": "string",
+        "description": "US state or regional province"
+      },
+      "country": {
+        "type": "string",
+        "description": "Country of institution"
+      },
+      "department": {
+        "type": "string",
+        "description": "Academic department, school, division, or laboratory"
+      },
+      "rank": {
+        "type": "string",
+        "description": "Academic rank (e.g. Assistant Professor, Associate Professor, Professor)"
+      },
+      "track": {
+        "type": "string",
+        "enum": [
+          "Tenure-line",
+          "Teaching",
+          "Research",
+          "Clinical",
+          "Academic staff",
+          "Emeritus",
+          "Deceased"
+        ],
+        "description": "Appointment track"
+      },
+      "confirmed": {
+        "type": "boolean",
+        "description": "False when supported by secondary evidence but lacking an active official university directory page"
+      },
+      "researchAreas": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Primary scholarly fields and research topics"
+      },
+      "profileUrl": {
+        "type": "string",
+        "format": "uri",
+        "description": "Official university faculty profile or directory link"
+      },
+      "websiteUrl": {
+        "type": "string",
+        "format": "uri",
+        "description": "Personal scholarly homepage"
+      },
+      "labUrl": {
+        "type": "string",
+        "format": "uri",
+        "description": "Research group or laboratory website"
+      },
+      "scholarUrl": {
+        "type": "string",
+        "format": "uri",
+        "description": "Google Scholar citation profile URL"
+      },
+      "linkedinUrl": {
+        "type": "string",
+        "format": "uri",
+        "description": "LinkedIn personal profile URL"
+      },
+      "portrait": {
+        "type": "string",
+        "pattern": "^portraits/[0-9]{4}-.+\\.webp$",
+        "description": "Relative path to optimized WebP portrait file"
+      },
+      "portraitSource": {
+        "type": "string",
+        "format": "uri",
+        "description": "Public source URL where portrait was obtained"
+      },
+      "undergradInstitution": {
+        "type": "string",
+        "description": "Undergraduate alma mater"
+      },
+      "undergradYear": {
+        "type": "integer",
+        "description": "Undergraduate graduation year"
+      },
+      "undergradMajor": {
+        "type": "string",
+        "description": "Undergraduate major / degree field"
+      },
+      "msInstitution": {
+        "type": "string",
+        "description": "Master's degree institution"
+      },
+      "msYear": {
+        "type": "integer",
+        "description": "Master's degree graduation year"
+      },
+      "msMajor": {
+        "type": "string",
+        "description": "Master's degree major"
+      },
+      "phdInstitution": {
+        "type": "string",
+        "description": "PhD / Doctoral degree institution"
+      },
+      "phdYear": {
+        "type": "integer",
+        "description": "PhD completion year"
+      },
+      "phdMajor": {
+        "type": "string",
+        "description": "Doctoral field of study"
+      },
+      "postdocInstitution": {
+        "type": "string",
+        "description": "Postdoctoral training institution"
+      },
+      "postdocYear": {
+        "type": "integer",
+        "description": "Postdoctoral completion year"
+      },
+      "mdInstitution": {
+        "type": "string",
+        "description": "Medical degree institution"
+      },
+      "mdYear": {
+        "type": "integer",
+        "description": "Medical degree graduation year"
+      },
+      "honors": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "name"
+          ],
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "organization": {
+              "type": "string"
+            },
+            "category": {
+              "type": "string"
+            },
+            "year": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "source": {
+              "type": "string"
+            }
+          }
+        },
+        "description": "Honors, awards, academy memberships, and chair appointments"
+      },
+      "otherDegrees": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "degree",
+            "institution"
+          ],
+          "properties": {
+            "degree": {
+              "type": "string"
+            },
+            "institution": {
+              "type": "string"
+            },
+            "year": {
+              "type": "integer"
+            },
+            "major": {
+              "type": "string"
+            },
+            "source": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "directFields": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Fields directly asserted by repository owner or community submission"
+      },
+      "lastUpdatedAt": {
+        "type": "string",
+        "description": "ISO timestamp of last verification update"
+      }
+    }
+  }
+}

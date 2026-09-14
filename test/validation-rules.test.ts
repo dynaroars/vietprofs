@@ -4,7 +4,6 @@ import {
   validateEducationChronology,
   validateInstitutionFormat,
   validateExternalUrl,
-  MID_CAREER_MS_ALLOWLIST,
 } from '../src/validation-rules.ts';
 import { proposalValidationError } from '../scripts/maintain-roster.ts';
 

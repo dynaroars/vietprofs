@@ -2,7 +2,6 @@ import {
   COUNTRY_TO_CONTINENT,
   fieldOf,
   type Roster,
-  type RosterEntry,
 } from './data.ts';
 
 export interface CompletenessMetric {
@@ -176,7 +175,7 @@ export function computeAcademicGenerations(roster: Roster): GenerationStat[] {
 
   for (const person of roster) {
     const year = person.phdYear || person.mdYear;
-    if (!year || typeof year !== 'number' || isNaN(year)) continue;
+    if (!year || typeof year !== 'number' || Number.isNaN(year)) continue;
     totalWithYear += 1;
 
     if (year >= 2020) buckets.get('2020s')!.count += 1;
@@ -236,7 +235,7 @@ export function computeRecentUpdates(roster: Roster, now = new Date()) {
   for (const person of roster) {
     if (!person.lastUpdatedAt) continue;
     const updateMs = new Date(person.lastUpdatedAt).getTime();
-    if (isNaN(updateMs)) continue;
+    if (Number.isNaN(updateMs)) continue;
     const diff = nowMs - updateMs;
     if (diff <= day7Ms) last7Days += 1;
     if (diff <= day30Ms) last30Days += 1;

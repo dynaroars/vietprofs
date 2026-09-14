@@ -9,6 +9,7 @@ import type { RosterEntry } from '../src/data.ts';
 
 const require = createRequire(import.meta.url);
 const { chromium } = require('playwright');
+const AxeBuilder = require('@axe-core/playwright').default || require('@axe-core/playwright');
 const port = 4179;
 let server: ChildProcess;
 let browser: Browser;
@@ -631,5 +632,25 @@ test('profile pages honor dark mode through the shared stylesheet', async () => 
   assert.equal(await profileStar.getAttribute('aria-pressed'), 'true');
   await profileStar.click();
   assert.equal(await profileStar.getAttribute('aria-pressed'), 'false');
+  await page.close();
+});
+
+test('main directory and profile pages meet core WCAG accessibility standards', async () => {
+  const page = await context.newPage();
+  await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
+  const directoryResults = await new AxeBuilder({ page })
+    .withTags(['wcag2a', 'wcag2aa'])
+    .disableRules(['color-contrast'])
+    .analyze();
+  const severeViolations = directoryResults.violations.filter((v: any) => v.impact === 'critical' || v.impact === 'serious');
+  assert.equal(severeViolations.length, 0, `Directory has severe a11y violations: ${JSON.stringify(severeViolations, null, 2)}`);
+
+  await page.goto(`${baseUrl}/people/vp-0001.html`, { waitUntil: 'networkidle' });
+  const profileResults = await new AxeBuilder({ page })
+    .withTags(['wcag2a', 'wcag2aa'])
+    .disableRules(['color-contrast'])
+    .analyze();
+  const profileViolations = profileResults.violations.filter((v: any) => v.impact === 'critical' || v.impact === 'serious');
+  assert.equal(profileViolations.length, 0, `Profile page has severe a11y violations: ${JSON.stringify(profileViolations, null, 2)}`);
   await page.close();
 });

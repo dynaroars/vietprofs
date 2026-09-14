@@ -57,7 +57,9 @@ export function openRosterShell(index: SearchIndex) {
     });
     print(`Top ${label} by roster entries${label === 'countries' ? ' (not population estimates)' : ''}:`);
     [...counts].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
-      .slice(0, 10).forEach(([name, count]) => print(`${String(count).padStart(4)}  ${name}`));
+      .slice(0, 10).forEach(([name, count]) => {
+        print(`${String(count).padStart(4)}  ${name}`);
+      });
   }
 
   function list(label: string, values: string[]) {

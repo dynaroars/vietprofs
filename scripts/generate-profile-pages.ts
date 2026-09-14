@@ -119,15 +119,34 @@ function profilePage(person: RosterEntry) {
   const favoriteLabel = 'Add to favorites';
   const favoriteToggle = `<button type="button" class="favorite-toggle profile-favorite-toggle" data-id="${escapeHtml(person.id)}" data-name="${escapeHtml(name)}" aria-pressed="false" aria-label="${favoriteLabel}" title="${favoriteLabel}"><svg viewBox="0 0 24 24" aria-hidden="true">${STAR_ICON}</svg></button>`;
   const profileScript = `<script type="module">const KEY='vietprofs:favorites',RECENT_KEY='vietprofs:recent-profiles',id=${JSON.stringify(person.id)},valid=(value)=>typeof value==='string'&&/^vp-\\d{4}$/.test(value),load=(key)=>{try{const value=JSON.parse(localStorage.getItem(key)||'[]');return Array.isArray(value)?value.filter(valid):[]}catch{return[]}};localStorage.setItem(RECENT_KEY,JSON.stringify([id,...load(RECENT_KEY).filter((value)=>value!==id)].slice(0,8)));const button=document.querySelector('.favorite-toggle[data-id]');if(button){const save=(values)=>localStorage.setItem(KEY,JSON.stringify(values));const apply=(favorited)=>{button.classList.toggle('is-favorite',favorited);button.setAttribute('aria-pressed',favorited?'true':'false');const label=favorited?'Remove from favorites':'Add to favorites';button.setAttribute('aria-label',label);button.title=label;};apply(load(KEY).includes(id));button.addEventListener('click',()=>{const current=load(KEY);const next=current.includes(id)?current.filter((value)=>value!==id):[...current,id];save(next);apply(next.includes(id));});}</script>`;
+  const sameAs = [
+    person.profileUrl,
+    person.websiteUrl,
+    person.scholarUrl,
+    person.linkedinUrl,
+    person.labUrl,
+  ].filter(Boolean) as string[];
+
+  const alumniOf = [
+    person.phdInstitution && { '@type': 'EducationalOrganization', name: person.phdInstitution },
+    person.undergradInstitution && { '@type': 'EducationalOrganization', name: person.undergradInstitution },
+    person.msInstitution && { '@type': 'EducationalOrganization', name: person.msInstitution },
+  ].filter(Boolean);
+
   const jsonLd = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'Person',
     name,
-    jobTitle: canonicalRank(person),
+    ...(nativeName && nativeName !== name ? { alternateName: nativeName } : {}),
+    ...(person.portrait ? { image: ogImage } : {}),
+    jobTitle: canonicalRank(person) || undefined,
     affiliation: {
       '@type': 'EducationalOrganization',
       name: person.university,
+      ...(person.department ? { department: { '@type': 'Organization', name: person.department } } : {}),
     },
+    ...(alumniOf.length ? { alumniOf } : {}),
+    ...(sameAs.length ? { sameAs } : {}),
     url: canonicalUrl,
   });
 
@@ -162,6 +181,7 @@ function profilePage(person: RosterEntry) {
   <meta name="twitter:image:alt" content="${escapeHtml(ogImageAlt)}">
   <link rel="icon" type="image/svg+xml" href="../vietprofs-bamboo-v.svg">
   <link rel="apple-touch-icon" href="../vietprofs-bamboo-v-512.png">
+  <link rel="manifest" href="../manifest.webmanifest">
   <title>${escapeHtml(title)}</title>
   <script type="application/ld+json">${jsonLd}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">

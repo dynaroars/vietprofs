@@ -7,7 +7,6 @@ import {
   buildLocationObservations,
   buildPhdToFacultyPairings,
   buildQualifiedObservations,
-  buildTopCountries,
   buildTopPhdInstitutions,
   buildTopUndergradInstitutions,
   buildTopUniversities,
