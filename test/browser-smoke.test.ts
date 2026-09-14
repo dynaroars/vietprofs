@@ -580,8 +580,11 @@ test('filter choices stay stable and stale filters recover', async () => {
     await page.locator(selector).first().click();
     assert.ok((await page.locator('.entry').count()) > 0, `${selector} should always produce roster results`);
   }
-  await page.goto(`${baseUrl}/?loc=South%20America`, { waitUntil: 'networkidle' });
+  await page.goto(`${baseUrl}/?loc=Antarctica`, { waitUntil: 'networkidle' });
   assert.equal(await page.locator('#location-filter').inputValue(), 'World');
+  assert.ok((await page.locator('.entry').count()) > 0);
+  await page.goto(`${baseUrl}/?loc=South%20America`, { waitUntil: 'networkidle' });
+  assert.equal(await page.locator('#location-filter').inputValue(), 'South America');
   assert.ok((await page.locator('.entry').count()) > 0);
   await page.goto(`${baseUrl}/?loc=France&field=Law%20%26%20Public%20Affairs&track=Teaching`, { waitUntil: 'networkidle' });
   assert.equal(await page.locator('#location-filter').inputValue(), 'France');
