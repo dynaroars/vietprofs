@@ -30,7 +30,7 @@
       "outcome": "not_found",
       "identitySignals": [],
       "retrievedAt": "2026-09-15T04:05:12.800Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "note": "Existing asset was a university seal/logo, not a human portrait; removed during non-human image audit."
     },
     "vp-0120": {
       "name": "Hoang-Vu Phan",
@@ -321,7 +321,7 @@
       "outcome": "not_found",
       "identitySignals": [],
       "retrievedAt": "2026-09-15T04:08:37.889Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "note": "Existing asset was a group photo, not a reliably isolatable individual portrait; removed during non-human image audit."
     },
     "vp-1230": {
       "name": "Toi Van Vo",
@@ -339,24 +339,21 @@
     },
     "vp-1391": {
       "name": "Nhat-Tu Le",
-      "outcome": "found",
-      "pageUrl": "https://cooke.hmailabs.org/team/nhat-tu-le-phd/",
-      "imageUrl": "https://cooke.hmailabs.org/wp-content/uploads/2019/02/Nhat-Tu-Le-255x255.jpg",
-      "sourceType": "lab_site",
-      "confidence": "HIGH",
+      "outcome": "not_found",
       "identitySignals": [
         "name",
         "department",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-09-15T04:08:59.568Z"
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Existing asset was a non-human graphic, not a portrait; removed during non-human image audit."
     },
     "vp-1430": {
       "name": "Anh Minh Tang",
       "outcome": "not_found",
       "identitySignals": [],
       "retrievedAt": "2026-09-15T04:09:01.647Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "note": "Existing asset was a quote graphic, not a human portrait; removed during non-human image audit."
     },
     "vp-1482": {
       "name": "Chau Le",
@@ -370,7 +367,7 @@
       "outcome": "not_found",
       "identitySignals": [],
       "retrievedAt": "2026-09-15T04:09:16.209Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "note": "Existing asset was an award/badge graphic, not a human portrait; removed during non-human image audit."
     },
     "vp-1501": {
       "name": "Viet Huynh",
