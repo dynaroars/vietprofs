@@ -1311,6 +1311,10 @@ async function applyProposal(current: JsonRecord): Promise<void> {
 async function runFullChecks() {
   await runProcess('npm', ['test'], { label: 'npm test' });
   await runProcess('npm', ['run', 'build'], { label: 'npm run build' });
+  // The build refreshes this generated metadata file from the current Git checkout. It is
+  // intentionally not part of maintenance commits, so keep the working tree limited to the
+  // evidence-backed roster and maintenance ledgers below.
+  await git(['restore', '--', 'public/git-info.json'], { label: 'restore generated git metadata' });
   await git(['diff', '--check'], { label: 'git diff --check' });
   await git(['diff', '--cached', '--check'], { label: 'git diff --cached --check' });
 }
