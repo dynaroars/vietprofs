@@ -83,6 +83,8 @@ export function recordFieldEvidence(
 
   entry.name = personName;
   entry.lastAuditedAt = timestamp;
+  if (!Array.isArray(entry.sources)) entry.sources = [];
+  if (!entry.fields || typeof entry.fields !== 'object' || Array.isArray(entry.fields)) entry.fields = {};
   if (sourceUrl && !entry.sources.includes(sourceUrl)) {
     entry.sources.push(sourceUrl);
   }
