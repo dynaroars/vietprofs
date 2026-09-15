@@ -1282,7 +1282,8 @@ async function applyProposal(current: JsonRecord): Promise<void> {
       });
       personEntry.name = finalName || current.name;
       personEntry.lastAuditedAt = approvalTime;
-      personEntry.sources = Array.from(new Set([...personEntry.sources, ...sources]));
+      const existingSources = Array.isArray(personEntry.sources) ? personEntry.sources : [];
+      personEntry.sources = Array.from(new Set([...existingSources, ...sources]));
       if (report) personEntry.report = report;
 
       for (const field of Object.keys(current.proposal)) {
