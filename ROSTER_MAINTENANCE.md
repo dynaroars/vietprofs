@@ -569,12 +569,82 @@ To prevent desynchronization between data files and ensure interrupted runs are 
 
 ### Portrait recovery and scouting standard
 
-Automated web scouting and manual portrait recovery must always perform a thorough multi-source search:
+The objective is a high-confidence portrait of the correct scholar, not maximum automation
+speed or coverage. A missing portrait is preferable to an incorrect one. Automated web scouting
+and manual portrait recovery must perform the following identity-resolution workflow for each
+person independently; never run a generic image scraper blindly across the roster.
 
-- **Multi-source search:** Do not rely solely on a single `profileUrl` check. Portraits do not have to be official institutional headshots; suitable headshots from the scholar's personal academic homepages, lab sites, or Google Sites are fully acceptable. Execute web search queries (`"${name}" "${university}" faculty portrait OR photo`) and inspect personal homepages, lab sites, alternate department/center pages, hospital/clinical directories, and press releases.
-- **Name evidence matching:** Require explicit name evidence matching in the candidate image URL or image context.
-- **Generic placeholder rejection:** Filter out generic placeholders, theme icons, site headers/logos, and default avatars (e.g., `blank_profile`, `default_profile`, `silhouette`, `no_photo`, `default@mobile3x`).
-- **Validation & archiving:** Verify candidate dimensions (minimum 120×120px) and portrait aspect ratio (width/height ≤ 1.55) using ImageMagick (`identify`), convert approved headshots to WebP format in `public/portraits/`, and preserve the direct original image URL in `portraitSource`.
+1. **Establish the target identity.** Start with the roster's full name, university or eligible
+   research institute, department/field, rank when available, and all stored first-party URLs:
+   `profileUrl`, `websiteUrl`, and `labUrl`. Do not use facial similarity as identity evidence.
+   Take particular care with common Vietnamese names.
+2. **Inspect stored pages first.** Follow redirects and inspect the person's official profile,
+   personal academic homepage, and lab page for `<img>` elements, `og:image`, `twitter:image`,
+   JSON-LD `image`, lazy-load attributes, `srcset`, and profile/avatar CSS background images.
+   Resolve relative URLs. When a maintained personal homepage needs it, inspect obvious identity
+   pages such as `/about`, `/bio`, or `/people`. A suitable portrait need not be an institutional
+   headshot: a clearly identified portrait from a maintained personal academic homepage, lab site,
+   or Google Site is acceptable.
+3. **Use search for discovery, never as image evidence.** If the stored pages do not yield a
+   usable portrait, search the exact name with the institution, department/field, and institution
+   domain (for example, `"${name}" "${university}"`, `"${name}" "${department}" "${university}"`,
+   and `site:institution.example "${name}"`). Inspect the resulting authoritative page, rather
+   than downloading an image-result thumbnail. Prefer official faculty, department, university
+   news, research-center, hospital/clinical-directory, and institutional research-profile pages.
+   Then seek a clearly identified personal academic homepage, followed by other authoritative
+   academic sources such as lab sites, conference speaker bios, and professional-society profiles.
+   Google Scholar and ORCID are identity clues, not default portrait sources.
+4. **Treat blocks as a route change, not a failure.** Do not repeatedly request a bot-blocked
+   page. Use it or its search result only to discover alternate official institutional pages, a
+   department directory, a personal homepage, or another page that references the same image.
+   A block alone is never sufficient reason to accept an unverified search image or to give up.
+
+Before saving an image, require at least two matching identity signals and prefer three: an exact
+or near-exact full name; the same university/institute; the same department, research area, or
+rank; or a link/URL relationship to an already verified roster homepage. Explicit name evidence
+must appear in the image URL or its surrounding page context. An exact-name personal homepage
+that is linked by, or otherwise clearly matches, the rostered academic identity can satisfy this
+standard even when it does not repeat every institutional field.
+
+Reject logos, seals, buildings, publication figures, generic avatars, default silhouettes,
+theme icons/site headers, unrelated people, unverified search-result thumbnails, and group photos
+unless the scholar can be reliably isolated. Filter known placeholder patterns such as
+`blank_profile`, `default_profile`, `silhouette`, `no_photo`, and `default@mobile3x`. Prefer an
+image that visibly contains one person, is reasonably high resolution (roughly 200×200px when
+available), originates on an identity-resolved page, and has a stable direct JPEG, PNG, or WebP
+URL. Preserve the existing validation floor: use ImageMagick (`identify`) to require at least
+120×120px and a portrait aspect ratio (width/height) no greater than 1.55. Convert an approved
+headshot to WebP in `public/portraits/` and store the direct original image URL in
+`portraitSource`.
+
+Do not replace an existing portrait unless it is missing, broken, generic, demonstrably the wrong
+person, or materially worse than an identity-verified alternative. `portrait` and
+`portraitSource` are a pair. If either is protected by `directFields`, automated maintenance must
+not change or remove either value, even when live evidence conflicts; record the conflict for a
+direct correction as required by the direct-update policy.
+
+Assign an internal result confidence:
+
+- **HIGH:** direct image from an unambiguous official faculty/institutional profile or maintained
+  personal academic homepage.
+- **MEDIUM:** direct image from another authoritative institutional or academic page with strong,
+  documented identity resolution.
+- **LOW:** identity, page ownership, or image ownership remains uncertain.
+
+Automatically commit only HIGH-confidence portraits. MEDIUM-confidence portraits require recorded
+identity evidence and a deliberate review; never commit LOW-confidence portraits. For every
+attempt, retain a maintenance provenance record keyed by immutable `vp-####` ID with the name,
+direct image URL when found, page URL, source type (such as `official_faculty`,
+`personal_homepage`, or `university_news`), confidence, matching identity signals, retrieval date,
+and outcome. Record unsuccessful completed searches as `not_found` in that maintenance ledger.
+Do not add ad-hoc `portrait_status` fields to `public/data.json`: its canonical schema instead
+requires `portrait` and `portraitSource` together.
+
+Before a broad retrieval run or a substantial retriever rewrite, test a reproducible sample of at
+least 10 known-good portraits, 10 missing portraits, 10 known-bad/incorrect portraits, several
+common-name cases, and several blocked sites. Report each result as correct portrait found,
+incorrect portrait, or not found, together with source, confidence, and evidence. Do not deploy
+broadly until that sample demonstrates very high precision.
 
 - Profile URLs are generated from `id`, so a canonical-name correction does not change the public
   profile URL. Removing an entry also removes its generated profile page.

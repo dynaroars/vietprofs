@@ -1,0 +1,317 @@
+{
+  "version": 1,
+  "entries": {
+    "vp-0001": {
+      "name": "Hieu Bui",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-15T03:54:40.565Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-0002": {
+      "name": "Tommy Dang",
+      "outcome": "needs_review",
+      "pageUrl": "https://www.depts.ttu.edu/cs/faculty/tommy_dang/index.php",
+      "imageUrl": "https://www.depts.ttu.edu/cs/faculty/tommy_dang/Tommy_Dang-600x-cropped.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T03:54:41.348Z",
+      "note": "dry run; rerun with --apply after review"
+    },
+    "vp-0027": {
+      "name": "Hoang Long Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-15T04:05:12.800Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-0120": {
+      "name": "Hoang-Vu Phan",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-15T04:05:23.078Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-0235": {
+      "name": "H. Lan Thao Lam",
+      "outcome": "needs_review",
+      "pageUrl": "https://www.newschool.edu/parsons/faculty/h-lan-thao-lam/",
+      "imageUrl": "https://vcard.newschool.edu/?c=513819",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:05:34.254Z",
+      "note": "existing portrait preserved; use --replace after review"
+    },
+    "vp-0359": {
+      "name": "Thuy-Kim Le",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-15T04:05:42.035Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-0381": {
+      "name": "Uy Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-15T04:05:52.129Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-0402": {
+      "name": "Minh Vo",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-15T04:06:03.280Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-0474": {
+      "name": "Bau P. Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-15T04:06:13.378Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-0556": {
+      "name": "Dinh-Tuan Pham",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-15T04:06:23.676Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-0773": {
+      "name": "Nghi Nhan Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-15T04:06:34.690Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-0794": {
+      "name": "Tri Nguyen-Quang",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-15T04:06:48.267Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-0814": {
+      "name": "Phuong D. Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-15T04:06:59.509Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-0819": {
+      "name": "Mylinh T. Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-15T04:07:09.635Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-0823": {
+      "name": "Tien Hung Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-15T04:07:20.186Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-0826": {
+      "name": "Van Tho Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-15T04:07:30.403Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-0830": {
+      "name": "Tuan M. Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-15T04:07:41.792Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-0857": {
+      "name": "George Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-15T04:07:52.283Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-0866": {
+      "name": "Minh Thu T. Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-15T04:08:02.429Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-0871": {
+      "name": "Than Pham",
+      "outcome": "found",
+      "pageUrl": "https://orthopedics.medicine.uiowa.edu/profile/than-pham",
+      "imageUrl": "https://profiles.uiowa.edu/api/people/than-pham/image",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:08:12.789Z"
+    },
+    "vp-0881": {
+      "name": "De Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-15T04:08:13.412Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-0882": {
+      "name": "Tridu Huynh",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-15T04:08:24.258Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-0917": {
+      "name": "Anh T. Pham",
+      "outcome": "protected",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-15T04:08:35.158Z",
+      "note": "portrait or portraitSource is protected by directFields"
+    },
+    "vp-0918": {
+      "name": "Kien Nguyen",
+      "outcome": "protected",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-15T04:08:35.158Z",
+      "note": "portrait or portraitSource is protected by directFields"
+    },
+    "vp-0921": {
+      "name": "Cong Thang Truong",
+      "outcome": "protected",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-15T04:08:35.158Z",
+      "note": "portrait or portraitSource is protected by directFields"
+    },
+    "vp-0922": {
+      "name": "Khanh N. Dang",
+      "outcome": "protected",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-15T04:08:35.158Z",
+      "note": "portrait or portraitSource is protected by directFields"
+    },
+    "vp-1176": {
+      "name": "Tuan Anh Nguyen - Swinburne University of Technology",
+      "outcome": "needs_review",
+      "pageUrl": "https://www.swinburne.edu.au/research/institutes/iverson-health-innovation/team/",
+      "imageUrl": "https://www.swinburne.edu.au/content/dam/media/staff/Rachael-McDonald.jpg/_jcr_content/renditions/cq5dam.web.256.144.jpeg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:08:35.158Z",
+      "note": "existing portrait preserved; use --replace after review"
+    },
+    "vp-1183": {
+      "name": "Hong-Linh Truong",
+      "outcome": "protected",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-15T04:08:37.889Z",
+      "note": "portrait or portraitSource is protected by directFields"
+    },
+    "vp-1225": {
+      "name": "Doan Pham Minh",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-15T04:08:37.889Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1230": {
+      "name": "Toi Van Vo",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-15T04:08:49.327Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1357": {
+      "name": "Thuy Doan",
+      "outcome": "protected",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-15T04:08:59.568Z",
+      "note": "portrait or portraitSource is protected by directFields"
+    },
+    "vp-1391": {
+      "name": "Nhat-Tu Le",
+      "outcome": "found",
+      "pageUrl": "https://cooke.hmailabs.org/team/nhat-tu-le-phd/",
+      "imageUrl": "https://cooke.hmailabs.org/wp-content/uploads/2019/02/Nhat-Tu-Le-255x255.jpg",
+      "sourceType": "lab_site",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:08:59.568Z"
+    },
+    "vp-1430": {
+      "name": "Anh Minh Tang",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-15T04:09:01.647Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1482": {
+      "name": "Chau Le",
+      "outcome": "protected",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-15T04:09:16.209Z",
+      "note": "portrait or portraitSource is protected by directFields"
+    },
+    "vp-1495": {
+      "name": "Phuong Tran Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-15T04:09:16.209Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1501": {
+      "name": "Viet Huynh",
+      "outcome": "protected",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-15T04:09:26.988Z",
+      "note": "portrait or portraitSource is protected by directFields"
+    },
+    "vp-0982": {
+      "name": "Cuong C. Nguyen",
+      "outcome": "protected",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-15T04:08:35.158Z",
+      "note": "portrait or portraitSource is protected by directFields"
+    },
+    "vp-1318": {
+      "name": "Anh Tuan Luu",
+      "outcome": "protected",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-15T04:08:59.568Z",
+      "note": "portrait or portraitSource is protected by directFields"
+    }
+  }
+}

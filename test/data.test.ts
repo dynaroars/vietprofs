@@ -39,6 +39,48 @@ test('reviewed portraits use local WebP files with source provenance', () => {
   }
 });
 
+test('portrait audit fixture is reproducible and covers the required risk groups', () => {
+  const fixture = JSON.parse(readFileSync(join(__dirname, '../maintenance/portrait-audit-sample.json'), 'utf8')) as {
+    version: number;
+    knownGood: string[];
+    missing: string[];
+    knownBad: string[];
+    blocked: string[];
+    commonNames: string[];
+  };
+  const ids = new Set(roster.map((person) => person.id));
+  assert.equal(fixture.version, 1);
+  assert.ok(fixture.knownGood.length >= 10);
+  assert.ok(fixture.missing.length >= 10);
+  assert.ok(fixture.knownBad.length >= 10);
+  assert.ok(fixture.blocked.length > 0);
+  assert.ok(fixture.commonNames.length > 0);
+  for (const id of Object.values(fixture).flatMap((value) => Array.isArray(value) ? value : [])) assert.ok(ids.has(id), `fixture references unknown ID ${id}`);
+  for (const id of fixture.missing) assert.equal(roster.find((person) => person.id === id)?.portrait, undefined, `${id} is not currently missing a portrait`);
+});
+
+test('portrait provenance is ID-keyed and records reproducible identity evidence', () => {
+  const ledger = JSON.parse(readFileSync(join(__dirname, '../maintenance/portrait-provenance.json'), 'utf8')) as {
+    version: number;
+    entries: Record<string, { outcome: string; retrievedAt: string; identitySignals: string[]; pageUrl?: string; imageUrl?: string; sourceType?: string; confidence?: string }>;
+  };
+  const ids = new Set(roster.map((person) => person.id));
+  assert.equal(ledger.version, 1);
+  for (const [id, entry] of Object.entries(ledger.entries)) {
+    assert.ok(ids.has(id), `provenance references unknown ID ${id}`);
+    assert.ok(['found', 'not_found', 'protected', 'needs_review'].includes(entry.outcome));
+    assert.ok(!Number.isNaN(Date.parse(entry.retrievedAt)), `${id} has invalid retrieval date`);
+    assert.ok(Array.isArray(entry.identitySignals));
+    if (entry.outcome === 'found' || entry.outcome === 'needs_review') {
+      assert.match(entry.pageUrl ?? '', /^https?:\/\//);
+      assert.match(entry.imageUrl ?? '', /^https?:\/\//);
+      assert.ok(['official_faculty', 'personal_homepage', 'lab_site', 'authoritative_academic'].includes(entry.sourceType ?? ''));
+      assert.ok(['HIGH', 'MEDIUM', 'LOW'].includes(entry.confidence ?? ''));
+      assert.ok(entry.identitySignals.length >= 2);
+    }
+  }
+});
+
 test('roster is a non-empty array', () => {
   assert.ok(Array.isArray(roster));
   assert.ok(roster.length > 0);
