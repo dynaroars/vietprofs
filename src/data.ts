@@ -266,6 +266,30 @@ export function personPath(id: string): string {
   return `people/${id}.html`;
 }
 
+export function fieldSlug(field: string): string {
+  return field
+    .toLowerCase()
+    .replace(/&/g, 'and')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
+}
+
+export function regionSlug(region: string): string {
+  return region
+    .toLowerCase()
+    .replace(/&/g, 'and')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
+}
+
+export function fieldPath(field: string): string {
+  return `fields/${fieldSlug(field)}.html`;
+}
+
+export function regionPath(region: string): string {
+  return `regions/${regionSlug(region)}.html`;
+}
+
 // Keep the public rank vocabulary intentionally small. Institution-specific honorifics and
 // appointment wording belong on the linked profile; the directory only needs the career stage.
 export function canonicalRank(person: Pick<RosterEntry, 'track' | 'rank'>): string | undefined {
@@ -463,6 +487,7 @@ const FIELD_OVERRIDES = new Map([
   ['Faculty of Science and Technology|Middlesex University', 'Computer & Information Sciences'],
   ['HAMK Bio|Häme University of Applied Sciences', 'Agricultural & Natural Resource Sciences'],
   ['Information Studies|University of California, Los Angeles', 'Education'],
+  ['Institute of Humanities and Social Sciences|University of Tsukuba', 'Earth & Environmental Sciences'],
   // These new research appointments have department or center names whose disciplinary home
   // is clearer from their official university context than from the generic words alone.
   ['Anesthesia|Indiana University School of Medicine', 'Health Sciences'],

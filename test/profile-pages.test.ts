@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import test from 'node:test';
-import { personPath, type Roster } from '../src/data.ts';
+import { fieldPath, fieldSlug, personPath, regionPath, regionSlug, type Roster } from '../src/data.ts';
 
 const roster = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8')) as Roster;
 
@@ -12,6 +12,15 @@ test('every roster entry has a unique, immutable static profile path', () => {
     assert.match(person.id, /^vp-\d{4,}$/);
     assert.equal(personPath(person.id), `people/${person.id}.html`);
   }
+});
+
+test('discipline and region hub paths generate clean canonical filenames', () => {
+  assert.equal(fieldSlug('Computer & Information Sciences'), 'computer-and-information-sciences');
+  assert.equal(fieldPath('Computer & Information Sciences'), 'fields/computer-and-information-sciences.html');
+  assert.equal(regionSlug('North America'), 'north-america');
+  assert.equal(regionPath('North America'), 'regions/north-america.html');
+  assert.equal(regionSlug('United States'), 'united-states');
+  assert.equal(regionPath('United States'), 'regions/united-states.html');
 });
 
 test('generated profile pages use the same stylesheet source as the directory', async () => {

@@ -27,6 +27,13 @@ export interface EvidenceExcerpt {
   details?: string;
 }
 
+const SUSPICIOUS_OVERVIEW_PATTERNS: Array<{ message: string; pattern: RegExp }> = [
+  { message: 'contains raw HTML entity or tag', pattern: /&[a-z0-9#]+;|<[a-z]/i },
+  { message: 'contains template placeholder or comment', pattern: /{{|}}|<!--|-->/ },
+  { message: 'contains scraped navigation or web boilerplate', pattern: /Skip to|All rights reserved|Page not found|404|Access Denied|Cloudflare|Cookie policy|Privacy Policy|Toggle navigation|Press escape key|Researchers Information|This researcher has already left|What are you looking for|You are using an outdated browser|Download .* contact card|Please do not fill this field/i },
+  { message: 'contains raw unformatted URL outside markdown link', pattern: /(^|[^(\]])https?:\/\//i },
+];
+
 export function validateOverview(value: unknown): EnrichmentError[] {
   const errors: string[] = [];
   if (!value || typeof value !== 'object' || Array.isArray(value)) return ['overview must be an object'];
@@ -40,6 +47,12 @@ export function validateOverview(value: unknown): EnrichmentError[] {
     if (sentences.length < 1) errors.push('overview must contain at least one sentence');
     if (sentences.length > 3) errors.push('overview may contain at most three sentences');
     if (overview.text.length > 500) errors.push('overview must be at most 500 characters');
+
+    for (const { message, pattern } of SUSPICIOUS_OVERVIEW_PATTERNS) {
+      if (pattern.test(overview.text)) {
+        errors.push(`overview text ${message}`);
+      }
+    }
 
     const linkMatches = overview.text.matchAll(/\[([^\]]+)\]\(([^)]+)\)/g);
     for (const match of linkMatches) {

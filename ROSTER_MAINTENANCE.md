@@ -127,6 +127,20 @@ enrichment is added. For subsequent roster additions, rerun `snapshot` only afte
 snapshot is complete, then repeat the collect/verify/apply/finalize cycle for the new stable ID
 set. Enrichment does not alter `lastUpdatedAt` or appointment verification status.
 
+### Research overview quality and sanitization guidelines
+
+Research overviews (`researchOverview.text`) are publicly rendered on individual scholar profile pages (`/vp-####.html`). They must read as high-quality, professional, 1–3 sentence academic summaries written in standard English.
+
+**Strict Quality Rules for `researchOverview`:**
+
+- **No Raw HTML Entities or Markup:** Never include unescaped HTML entities (e.g. `&amp;`, `&nbsp;`, `&#039;`, `&times;`, `&quot;`) or HTML tags (`<p>`, `<a>`, `<span>`, `<div>`). Any scraped text containing HTML entities must be decoded into plain text or cleanly rewritten.
+- **No Scraped Web Boilerplate or UI Artifacts:** Never allow raw web-scraper output to enter overviews. Scraped artifacts such as `Toggle navigation`, `Skip to main content`, `Researchers Information`, `What are you looking for?`, `Staff Directory`, `Loading...`, `Phone:`, `Email:`, or contact card snippets (`Download contact card`) are strictly prohibited and will be rejected by validation.
+- **No Raw Citation or Publication Dumps:** An overview is a research summary, not a bibliographic record. Do not dump journal volume/issue citations (e.g., `12(4): 203-210`), PubMed/MEDLINE extracts, co-author lists, DOI links, or unformatted paper titles into the text.
+- **No Unresolved Template Tags or Placeholders:** Text containing `{{...}}`, `<!-- ... -->`, or template placeholders is invalid.
+- **No Bare Unformatted URLs:** Web links inside overviews must use standard Markdown format (`[Anchor Text](https://...)`) with safe HTTPS destinations. Never leave raw URLs (`https://...`) loose in prose.
+- **Gender-Neutral Phrasing:** Maintain the repository standard: do not use gendered pronouns (`He`, `She`, `His`, `Her`, `Him`, `Hers`). Use the scholar's surname or direct active-voice phrasing.
+- **Sentence & Length Constraints:** Maximum 3 sentences and at most 500 characters.
+
 Work on one institution or broad field at a time. Audit existing entries before adding candidates. For every candidate, verify identity, current appointment, primary department or research unit, rank/track, institution type, and profile URL individually. Deduplicate by person rather than URL and check for former affiliations or recent moves.
 
 Use all relevant candidate sources:

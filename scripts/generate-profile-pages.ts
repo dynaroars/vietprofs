@@ -3,11 +3,14 @@ import { dirname, resolve } from 'node:path';
 import { execFileSync } from 'node:child_process';
 import {
   canonicalRank,
+  continentOf,
   countryFlag,
   displayName,
-  displayUniversity,
   fieldOf,
+  fieldPath,
+  FIELDS,
   personPath,
+  regionPath,
   type Roster,
   type RosterEntry,
   vietnameseName,
@@ -28,6 +31,8 @@ const root = resolve(import.meta.dirname, '..');
 const development = process.argv.includes('--dev');
 const output = resolve(root, development ? 'public' : 'dist');
 const peopleDir = resolve(output, 'people');
+const fieldsDir = resolve(output, 'fields');
+const regionsDir = resolve(output, 'regions');
 const commit = process.env.VITE_GIT_COMMIT || (() => {
   try {
     return execFileSync('git', ['rev-parse', '--short=8', 'HEAD'], { cwd: root, encoding: 'utf8' }).trim();
@@ -91,8 +96,9 @@ function profilePage(person: RosterEntry) {
   const portrait = person.portrait
     ? `<img class="portrait" src="../${escapeHtml(person.portrait)}" alt="Portrait of ${escapeHtml(name)}" width="240" height="240">`
     : `<img class="portrait portrait-placeholder" src="../default-portrait.svg" alt="No portrait on file yet for ${escapeHtml(name)}" width="240" height="240">`;
+  const personField = fieldOf(person.department, person.university);
   const research = person.researchAreas?.length
-    ? `<section class="man-section"><h2>RESEARCH</h2><ul>${person.researchAreas.map((area) => `<li>${escapeHtml(area)}</li>`).join('')}</ul></section>`
+    ? `<section class="man-section"><h2>RESEARCH</h2><ul>${person.researchAreas.map((area) => `<li><a href="../index.html?q=${encodeURIComponent(area)}" class="research-area-link">${escapeHtml(area)}</a></li>`).join('')}</ul></section>`
     : '';
   const researchOverview = person.researchOverview
     ? `<section class="man-section"><h2>ABOUT</h2><p>${renderMarkdownLinks(person.researchOverview.text)}</p><p class="section-note research-overview-note">Automatically summarized; checked ${escapeHtml(formatRosterDate(person.researchOverview.verifiedAt))} (${person.researchOverview.sources.map((s, i) => `<a href="${escapeHtml(s)}" target="_blank" rel="noopener noreferrer">${person.researchOverview?.sources.length === 1 ? 'source' : `source ${i + 1}`}</a>`).join(', ')}).</p></section>`
@@ -135,20 +141,57 @@ function profilePage(person: RosterEntry) {
 
   const jsonLd = JSON.stringify({
     '@context': 'https://schema.org',
-    '@type': 'Person',
-    name,
-    ...(nativeName && nativeName !== name ? { alternateName: nativeName } : {}),
-    ...(person.portrait ? { image: ogImage } : {}),
-    jobTitle: canonicalRank(person) || undefined,
-    affiliation: {
-      '@type': 'EducationalOrganization',
-      name: person.university,
-      ...(person.department ? { department: { '@type': 'Organization', name: person.department } } : {}),
-    },
-    ...(alumniOf.length ? { alumniOf } : {}),
-    ...(sameAs.length ? { sameAs } : {}),
-    url: canonicalUrl,
+    '@graph': [
+      {
+        '@type': 'Person',
+        name,
+        ...(nativeName && nativeName !== name ? { alternateName: nativeName } : {}),
+        description,
+        ...(person.portrait ? { image: ogImage } : {}),
+        jobTitle: canonicalRank(person) || undefined,
+        worksFor: {
+          '@type': 'EducationalOrganization',
+          name: person.university,
+          ...(person.department ? { department: { '@type': 'Organization', name: person.department } } : {}),
+        },
+        affiliation: {
+          '@type': 'EducationalOrganization',
+          name: person.university,
+          ...(person.department ? { department: { '@type': 'Organization', name: person.department } } : {}),
+        },
+        ...(person.researchAreas?.length ? { knowsAbout: person.researchAreas } : {}),
+        ...(person.honors?.length ? { award: person.honors.map((h) => h.name) } : {}),
+        ...(alumniOf.length ? { alumniOf } : {}),
+        ...(sameAs.length ? { sameAs } : {}),
+        url: canonicalUrl,
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'VietProfs',
+            item: `${siteUrl}/`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: personField,
+            item: `${siteUrl}/${fieldPath(personField)}`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name,
+            item: canonicalUrl,
+          },
+        ],
+      },
+    ],
   });
+
+  const countryTarget = person.country && !['United States', 'US', 'USA'].includes(person.country) ? person.country : 'United States';
 
   return `<!doctype html>
 <!--
@@ -194,13 +237,177 @@ function profilePage(person: RosterEntry) {
     <main>
       <article class="man-page">
         <p class="man-running-head"><span>${sectionLabel}</span><span class="man-running-title"><a class="man-running-brand" href="../index.html" aria-label="VietProfs directory"><img class="brand-logo" src="../vietprofs-bamboo-v.svg" alt="" width="20" height="20"><span class="man-running-label">VietProfs Profile Manual</span></a></span><span>${sectionLabel}</span></p>
-        <section class="man-section name-section"><h2>NAME</h2><div class="identity">${portrait}<div class="identity-details"><div class="name-heading"><div class="name-title"><h1>${escapeHtml(name)}</h1>${favoriteToggle}</div><div class="profile-actions" aria-label="Roster actions"><a class="submission-link" href="${escapeHtml(editUrl)}">Add or update info</a></div></div><p class="native">${escapeHtml(nativeName)} <span class="loc-badge" title="${escapeHtml(person.country || 'United States')}"><span class="country-flag" aria-hidden="true">${countryFlag(person.country)}</span></span></p><p class="record-id">${escapeHtml(person.id)}</p></div></div></section>
-        <section class="man-section"><h2>SYNOPSIS</h2><p class="synopsis">${escapeHtml(role)}${locationOf(person) ? ` · ${escapeHtml(locationOf(person))}` : ''}</p><div class="tags"><span class="tag">${escapeHtml(fieldOf(person.department, person.university))}</span><span class="tag${person.track === 'Emeritus' ? ' tag-emeritus' : person.track === 'Deceased' ? ' tag-deceased' : ''}">${person.track === 'Emeritus' ? '🎓 Emeritus' : person.track === 'Deceased' ? '🏛️ Deceased' : escapeHtml(person.track || '')}</span>${person.institutionType && person.institutionType !== 'University' ? `<span class="tag">${escapeHtml(person.institutionType)}</span>` : ''}${person.confirmed === false ? '<span class="tag tag-unconfirmed">Unconfirmed</span>' : ''}</div></section>
+        <section class="man-section name-section"><h2>NAME</h2><div class="identity">${portrait}<div class="identity-details"><div class="name-heading"><div class="name-title"><h1>${escapeHtml(name)}</h1>${favoriteToggle}</div><div class="profile-actions" aria-label="Roster actions"><a class="submission-link" href="${escapeHtml(editUrl)}">Add or update info</a></div></div><p class="native">${escapeHtml(nativeName)} <a class="loc-badge-link" href="../${regionPath(countryTarget)}" title="Filter faculty in ${escapeHtml(person.country || 'United States')}"><span class="loc-badge" title="${escapeHtml(person.country || 'United States')}"><span class="country-flag" aria-hidden="true">${countryFlag(person.country)}</span></span></a></p><p class="record-id">${escapeHtml(person.id)}</p></div></div></section>
+        <section class="man-section"><h2>SYNOPSIS</h2><p class="synopsis">${escapeHtml(role)}${locationOf(person) ? ` · ${escapeHtml(locationOf(person))}` : ''}</p><div class="tags"><a href="../${fieldPath(personField)}" class="tag" title="Explore ${escapeHtml(personField)} faculty on VietProfs">${escapeHtml(personField)}</a>${person.track ? `<a href="../index.html?track=${encodeURIComponent(person.track)}" class="tag${person.track === 'Emeritus' ? ' tag-emeritus' : person.track === 'Deceased' ? ' tag-deceased' : ''}" title="Filter by ${escapeHtml(person.track)}">${person.track === 'Emeritus' ? '🎓 Emeritus' : person.track === 'Deceased' ? '🏛️ Deceased' : escapeHtml(person.track)}</a>` : ''}${person.institutionType && person.institutionType !== 'University' ? `<a href="../index.html?institutionType=${encodeURIComponent(person.institutionType)}" class="tag" title="Filter by ${escapeHtml(person.institutionType)}">${escapeHtml(person.institutionType)}</a>` : ''}${person.confirmed === false ? '<span class="tag tag-unconfirmed">Unconfirmed</span>' : ''}</div></section>
         ${research}${researchOverview}${educationSection}${honors}${linkSection}
         <section class="man-section"><h2>ROSTER METADATA</h2><dl class="roster-metadata"><div><dt>record</dt><dd>${escapeHtml(person.id)}</dd></div><div><dt>confirmation</dt><dd>${person.confirmed === false ? 'Unconfirmed — reliable non-official evidence' : 'Confirmed'}</dd></div><div><dt>last verified</dt><dd>${escapeHtml(formatRosterDate(person.lastUpdatedAt || ''))}</dd></div><div><dt>build</dt><dd><a href="https://github.com/dynaroars/vietprofs/commit/${escapeHtml(commit)}">${escapeHtml(commit)}</a></dd></div></dl><details class="raw-record"><summary>view raw record</summary><pre><code>${rawRecord}</code></pre></details></section>
       </article>
     </main>
     ${profileScript}
+  </div>
+</body>
+</html>`;
+}
+
+interface HubConfig {
+  categoryType: 'Discipline' | 'Region';
+  categoryName: string;
+  categoryTitle: string;
+  categorySubtitle: string;
+  description: string;
+  people: RosterEntry[];
+  canonicalPath: string;
+  interactiveUrl: string;
+  otherCategories: { label: string; path: string }[];
+}
+
+function categoryHubPage(config: HubConfig) {
+  const canonicalUrl = absoluteUrl(config.canonicalPath);
+  const title = `${config.categoryTitle} — VietProfs`;
+  const ogImage = absoluteUrl('vietprofs-bamboo-v-512.png');
+  const ogImageAlt = 'VietProfs bamboo V logo';
+  const sectionLabel = 'VIETPROFS(HUB)';
+
+  const sortedPeople = [...config.people].sort((a, b) => displayName(a.name).localeCompare(displayName(b.name)));
+  const uniqueUniversities = new Set(config.people.map((p) => p.university).filter(Boolean));
+
+  const jsonLd = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'CollectionPage',
+        name: title,
+        description: config.description,
+        url: canonicalUrl,
+        mainEntity: {
+          '@type': 'ItemList',
+          numberOfItems: sortedPeople.length,
+          itemListElement: sortedPeople.slice(0, 50).map((person, idx) => ({
+            '@type': 'ListItem',
+            position: idx + 1,
+            name: displayName(person.name),
+            url: absoluteUrl(personPath(person.id)),
+          })),
+        },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'VietProfs',
+            item: `${siteUrl}/`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: config.categoryType === 'Discipline' ? 'Disciplines' : 'Regions',
+            item: `${siteUrl}/`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: config.categoryName,
+            item: canonicalUrl,
+          },
+        ],
+      },
+    ],
+  });
+
+  const rosterItems = sortedPeople.map((person) => {
+    const name = displayName(person.name);
+    const native = vietnameseName(person);
+    const role = [canonicalRank(person), person.department, person.university].filter(Boolean).join(', ');
+    const flag = person.country ? `<span class="country-flag" title="${escapeHtml(person.country)}">${countryFlag(person.country)}</span>` : '';
+    return `<li class="hub-roster-item"><a class="hub-person-name" href="../${personPath(person.id)}">${escapeHtml(name)}</a>${native && native !== name ? ` <span class="hub-person-native">(${escapeHtml(native)})</span>` : ''} <span class="hub-person-role">${escapeHtml(role)}</span> ${flag}</li>`;
+  }).join('\n            ');
+
+  const crossLinks = config.otherCategories.map((c) => `<a class="hub-crosslink" href="../${c.path}">${escapeHtml(c.label)}</a>`).join('\n            ');
+
+  return `<!doctype html>
+<!--
+          _/\\
+         /  \\      VietProfs Hub
+        /_/\\_\\     ${escapeHtml(config.categoryName)}
+          ||
+     view source encouraged · https://github.com/dynaroars/vietprofs
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="${escapeHtml(config.description)}">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#15181c" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="${canonicalUrl}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="VietProfs">
+  <meta property="og:title" content="${escapeHtml(title)}">
+  <meta property="og:description" content="${escapeHtml(config.description)}">
+  <meta property="og:url" content="${canonicalUrl}">
+  <meta property="og:image" content="${escapeHtml(ogImage)}">
+  <meta property="og:image:alt" content="${escapeHtml(ogImageAlt)}">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="${escapeHtml(title)}">
+  <meta name="twitter:description" content="${escapeHtml(config.description)}">
+  <meta name="twitter:image" content="${escapeHtml(ogImage)}">
+  <meta name="twitter:image:alt" content="${escapeHtml(ogImageAlt)}">
+  <link rel="icon" type="image/svg+xml" href="../vietprofs-bamboo-v.svg">
+  <link rel="apple-touch-icon" href="../vietprofs-bamboo-v-512.png">
+  <link rel="manifest" href="../manifest.webmanifest">
+  <title>${escapeHtml(title)}</title>
+  <script type="application/ld+json">${jsonLd}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../profile.css">
+</head>
+<body class="subpage hub-page">
+  <div id="app">
+    <main>
+      <article class="man-page">
+        <p class="man-running-head"><span>${sectionLabel}</span><span class="man-running-title"><a class="man-running-brand" href="../index.html" aria-label="VietProfs directory"><img class="brand-logo" src="../vietprofs-bamboo-v.svg" alt="" width="20" height="20"><span class="man-running-label">VietProfs Directory Hub</span></a></span><span>${sectionLabel}</span></p>
+        <section class="man-section name-section">
+          <h2>CATEGORY</h2>
+          <div class="name-heading">
+            <div class="name-title"><h1>${escapeHtml(config.categoryTitle)}</h1></div>
+            <div class="profile-actions"><a class="submission-link" href="${escapeHtml(config.interactiveUrl)}">Open in Interactive Directory</a></div>
+          </div>
+          <p class="native">${escapeHtml(config.categorySubtitle)}</p>
+        </section>
+        <section class="man-section">
+          <h2>SYNOPSIS</h2>
+          <p class="synopsis">${escapeHtml(config.description)}</p>
+          <div class="tags">
+            <span class="tag">${config.people.length} Faculty Members</span>
+            <span class="tag">${uniqueUniversities.size} Institutions</span>
+          </div>
+        </section>
+        <section class="man-section">
+          <h2>ROSTER (${sortedPeople.length})</h2>
+          <ul class="hub-roster-list">
+            ${rosterItems}
+          </ul>
+        </section>
+        <section class="man-section">
+          <h2>SEE ALSO</h2>
+          <nav class="hub-crosslinks" aria-label="Other categories">
+            ${crossLinks}
+          </nav>
+        </section>
+        <section class="man-section">
+          <h2>ROSTER METADATA</h2>
+          <dl class="roster-metadata">
+            <div><dt>category</dt><dd>${escapeHtml(config.categoryType)} · ${escapeHtml(config.categoryName)}</dd></div>
+            <div><dt>faculty count</dt><dd>${sortedPeople.length}</dd></div>
+            <div><dt>build</dt><dd><a href="https://github.com/dynaroars/vietprofs/commit/${escapeHtml(commit)}">${escapeHtml(commit)}</a></dd></div>
+          </dl>
+        </section>
+      </article>
+    </main>
   </div>
 </body>
 </html>`;
@@ -214,18 +421,106 @@ async function main() {
     ids.add(person.id);
   }
 
-  await rm(peopleDir, { recursive: true, force: true });
+  await Promise.all([
+    rm(peopleDir, { recursive: true, force: true }),
+    rm(fieldsDir, { recursive: true, force: true }),
+    rm(regionsDir, { recursive: true, force: true }),
+  ]);
+
+  // 1. Generate individual profile pages
   await Promise.all(roster.map(async (person) => {
     const outputFile = resolve(output, personPath(person.id));
     await mkdir(dirname(outputFile), { recursive: true });
     await writeFile(outputFile, profilePage(person));
   }));
+
+  // 2. Generate Discipline Hub pages
+  const fieldHubs: HubConfig[] = FIELDS.map((field) => {
+    const people = roster.filter((p) => fieldOf(p.department, p.university) === field);
+    return {
+      categoryType: 'Discipline' as const,
+      categoryName: field,
+      categoryTitle: `${field} Faculty`,
+      categorySubtitle: `Vietnamese Professors & Scholars in ${field}`,
+      description: `Directory of ${people.length} Vietnamese and Vietnamese-diaspora professors in ${field} across universities worldwide.`,
+      people,
+      canonicalPath: fieldPath(field),
+      interactiveUrl: `../index.html?field=${encodeURIComponent(field)}`,
+      otherCategories: FIELDS.filter((f) => f !== field).map((f) => ({
+        label: f,
+        path: fieldPath(f),
+      })),
+    };
+  }).filter((hub) => hub.people.length > 0);
+
+  await Promise.all(fieldHubs.map(async (hub) => {
+    const outputFile = resolve(output, hub.canonicalPath);
+    await mkdir(dirname(outputFile), { recursive: true });
+    await writeFile(outputFile, categoryHubPage(hub));
+  }));
+
+  // 3. Generate Region Hub pages (Continents >= 10, Countries >= 5)
+  const continents = ['North America', 'Europe', 'Australasia', 'Asia'];
+  const continentHubs: HubConfig[] = continents.map((continent) => {
+    const people = roster.filter((p) => continentOf(p.country) === continent);
+    return {
+      categoryType: 'Region' as const,
+      categoryName: continent,
+      categoryTitle: `Faculty in ${continent}`,
+      categorySubtitle: `Vietnamese Academic Diaspora in ${continent}`,
+      description: `Directory of ${people.length} Vietnamese and Vietnamese-diaspora professors teaching and researching across ${continent}.`,
+      people,
+      canonicalPath: regionPath(continent),
+      interactiveUrl: `../index.html?loc=${encodeURIComponent(continent)}`,
+      otherCategories: continents.filter((c) => c !== continent).map((c) => ({
+        label: c,
+        path: regionPath(c),
+      })),
+    };
+  }).filter((hub) => hub.people.length >= 10);
+
+  const countryCounts: Record<string, number> = {};
+  for (const person of roster) {
+    const country = person.country || 'United States';
+    countryCounts[country] = (countryCounts[country] || 0) + 1;
+  }
+
+  const majorCountries = Object.keys(countryCounts).filter((c) => countryCounts[c] >= 5).sort((a, b) => countryCounts[b] - countryCounts[a]);
+  const countryHubs: HubConfig[] = majorCountries.map((country) => {
+    const people = roster.filter((p) => (personCountry(p) === country));
+    return {
+      categoryType: 'Region' as const,
+      categoryName: country,
+      categoryTitle: `Faculty in ${country}`,
+      categorySubtitle: `Vietnamese Academic Diaspora in ${country}`,
+      description: `Directory of ${people.length} Vietnamese and Vietnamese-diaspora professors at universities in ${country}.`,
+      people,
+      canonicalPath: regionPath(country),
+      interactiveUrl: `../index.html?loc=${encodeURIComponent(country === 'United States' ? 'US' : country)}`,
+      otherCategories: majorCountries.filter((c) => c !== country).slice(0, 10).map((c) => ({
+        label: c,
+        path: regionPath(c),
+      })),
+    };
+  });
+
+  function personCountry(person: RosterEntry): string {
+    return person.country || 'United States';
+  }
+
+  await Promise.all([...continentHubs, ...countryHubs].map(async (hub) => {
+    const outputFile = resolve(output, hub.canonicalPath);
+    await mkdir(dirname(outputFile), { recursive: true });
+    await writeFile(outputFile, categoryHubPage(hub));
+  }));
+
   if (!development) {
-    const sitemapUrls = roster.map((person) => `  <url>\n    <loc>${absoluteUrl(personPath(person.id))}</loc>\n    <lastmod>${person.lastUpdatedAt?.slice(0, 10) || ''}</lastmod>\n  </url>`);
-    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>${siteUrl}/</loc>\n  </url>\n  <url>\n    <loc>${siteUrl}/submit.html</loc>\n  </url>\n${sitemapUrls.join('\n')}\n</urlset>\n`;
+    const hubUrls = [...fieldHubs, ...continentHubs, ...countryHubs].map((hub) => `  <url>\n    <loc>${absoluteUrl(hub.canonicalPath)}</loc>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>`);
+    const profileUrls = roster.map((person) => `  <url>\n    <loc>${absoluteUrl(personPath(person.id))}</loc>${person.lastUpdatedAt ? `\n    <lastmod>${person.lastUpdatedAt.slice(0, 10)}</lastmod>` : ''}\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>`);
+    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>${siteUrl}/</loc>\n    <changefreq>daily</changefreq>\n    <priority>1.0</priority>\n  </url>\n  <url>\n    <loc>${siteUrl}/stats.html</loc>\n    <changefreq>weekly</changefreq>\n    <priority>0.5</priority>\n  </url>\n  <url>\n    <loc>${siteUrl}/submit.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.5</priority>\n  </url>\n${hubUrls.join('\n')}\n${profileUrls.join('\n')}\n</urlset>\n`;
     await writeFile(resolve(output, 'sitemap.xml'), sitemap);
   }
-  console.log(`Generated ${roster.length} profile pages${development ? ' for development.' : ' and sitemap entries.'}`);
+  console.log(`Generated ${roster.length} profile pages, ${fieldHubs.length} field hubs, and ${continentHubs.length + countryHubs.length} region hubs${development ? ' for development.' : ' and sitemap entries.'}`);
 }
 
 await main();

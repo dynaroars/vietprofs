@@ -10,9 +10,14 @@ import { chooseWork, validateEnrichment } from '../src/enrichment.ts';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const roster: Roster = JSON.parse(readFileSync(join(__dirname, '../public/data.json'), 'utf8'));
 
-test('enrichment validation rejects unsafe links and duplicate work', () => {
+test('enrichment validation rejects unsafe links, corrupted scrapes, and duplicate work', () => {
   assert.ok(validateEnrichment({ researchOverview: { text: 'Studies networks.', sources: ['javascript:alert(1)'], verifiedAt: '2026-01-01T00:00:00.000Z' } }).some((error) => /unsafe/.test(error)));
   assert.ok(validateEnrichment({ researchOverview: { text: 'Directs [Lab](javascript:alert(1)).', sources: ['https://example.org'], verifiedAt: '2026-01-01T00:00:00.000Z' } }).some((error) => /unsafe/.test(error)));
+  assert.ok(validateEnrichment({ researchOverview: { text: 'Research on AI &amp; machine learning.', sources: ['https://example.org'], verifiedAt: '2026-01-01T00:00:00.000Z' } }).some((error) => /HTML entity/.test(error)));
+  assert.ok(validateEnrichment({ researchOverview: { text: 'Research in bio&#039;engineering.', sources: ['https://example.org'], verifiedAt: '2026-01-01T00:00:00.000Z' } }).some((error) => /HTML entity/.test(error)));
+  assert.ok(validateEnrichment({ researchOverview: { text: 'Toggle navigation Skip to main content. Studies AI.', sources: ['https://example.org'], verifiedAt: '2026-01-01T00:00:00.000Z' } }).some((error) => /boilerplate/.test(error)));
+  assert.ok(validateEnrichment({ researchOverview: { text: 'Overview with {{placeholder}}.', sources: ['https://example.org'], verifiedAt: '2026-01-01T00:00:00.000Z' } }).some((error) => /placeholder/.test(error)));
+  assert.ok(validateEnrichment({ researchOverview: { text: 'Directs lab at https://example.org/lab without markdown link.', sources: ['https://example.org'], verifiedAt: '2026-01-01T00:00:00.000Z' } }).some((error) => /unformatted URL/.test(error)));
   assert.equal(validateEnrichment({ researchOverview: { text: 'Directs the [Lab](https://roars.dev). Built [Tool](https://vietprofs.roars.dev).', sources: ['https://example.org'], verifiedAt: '2026-01-01T00:00:00.000Z' } }).length, 0);
   const work = { title: 'A', type: 'paper', url: 'https://example.org/a', selectionSource: 'https://example.org/list', selectionMode: 'recent' as const, verifiedAt: '2026-01-01T00:00:00.000Z', year: 2025 };
   assert.ok(validateEnrichment({ recentWork: [work, work] }).some((error) => /duplicates/.test(error)));
