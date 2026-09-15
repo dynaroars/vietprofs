@@ -74,7 +74,7 @@ test('portrait provenance is ID-keyed and records reproducible identity evidence
     if (entry.outcome === 'found' || entry.outcome === 'needs_review') {
       assert.match(entry.pageUrl ?? '', /^https?:\/\//);
       assert.match(entry.imageUrl ?? '', /^https?:\/\//);
-      assert.ok(['official_faculty', 'personal_homepage', 'lab_site', 'authoritative_academic'].includes(entry.sourceType ?? ''));
+      assert.ok(['official_faculty', 'personal_homepage', 'lab_site', 'university_news', 'authoritative_academic'].includes(entry.sourceType ?? ''));
       assert.ok(['HIGH', 'MEDIUM', 'LOW'].includes(entry.confidence ?? ''));
       assert.ok(entry.identitySignals.length >= 2);
     }

@@ -58,10 +58,13 @@
     },
     "vp-0359": {
       "name": "Thuy-Kim Le",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-15T04:05:42.035Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://search.asu.edu/profile/43716",
+      "imageUrl": "https://webapp4.asu.edu/photo-ws/directory_photo/ickpl?blankImage=false&size=medium",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": ["name", "institution", "department", "stored_roster_url"],
+      "retrievedAt": "2026-09-15T04:10:00.000Z"
     },
     "vp-0381": {
       "name": "Uy Nguyen",
@@ -100,10 +103,13 @@
     },
     "vp-0794": {
       "name": "Tri Nguyen-Quang",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-15T04:06:48.267Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://www.dal.ca/faculty/engineering/industrial/faculty-staff/our-faculty1/cross-listed-professors/tri-nguyen-quang.html",
+      "imageUrl": "https://cdn.dal.ca/faculty/engineering/industrial/faculty-staff/our-faculty1/cross-listed-professors/tri-nguyen-quang/_jcr_content/contentPar/profile/bgBanner.adaptive.214.high.jpg/1694533305000.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": ["name", "institution", "department", "rank", "stored_roster_url"],
+      "retrievedAt": "2026-09-15T04:14:06.000Z"
     },
     "vp-0814": {
       "name": "Phuong D. Nguyen",
@@ -139,6 +145,90 @@
       "identitySignals": [],
       "retrievedAt": "2026-09-15T04:07:41.792Z",
       "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-0843": {
+      "name": "Van-Nam Huynh",
+      "outcome": "found",
+      "pageUrl": "https://fp.jaist.ac.jp/public/Default2.aspx?id=370&l=1",
+      "imageUrl": "https://fp.jaist.ac.jp/data/photo/00370.jpeg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": ["name", "institution", "department", "rank", "stored_roster_url"],
+      "retrievedAt": "2026-09-15T04:20:00.000Z",
+      "note": "Official source image is 118×146; no larger image was exposed by the profile."
+    },
+    "vp-0848": {
+      "name": "An Nguyen - City of Hope",
+      "outcome": "not_found",
+      "pageUrl": "https://www.cityofhope.org/patients/find-a-doctor/an-nguyen",
+      "identitySignals": ["name", "institution", "department", "rank", "stored_roster_url"],
+      "retrievedAt": "2026-09-15T04:20:00.000Z",
+      "note": "Official profile confirmed identity but blocked direct inspection; no verified image URL was available."
+    },
+    "vp-0849": {
+      "name": "Andrew H. Nguyen",
+      "outcome": "not_found",
+      "pageUrl": "https://www.cityofhope.org/patients/find-a-doctor/andrew-nguyen",
+      "identitySignals": ["name", "institution", "department", "stored_roster_url"],
+      "retrievedAt": "2026-09-15T04:20:00.000Z",
+      "note": "Official profile blocked direct inspection and no alternative authoritative portrait was verified."
+    },
+    "vp-0861": {
+      "name": "Thuy-Huynh Nguyen",
+      "outcome": "not_found",
+      "identitySignals": ["name", "institution", "department", "stored_roster_url"],
+      "retrievedAt": "2026-09-15T04:20:00.000Z",
+      "note": "Official Loma Linda profile returned an error; no alternative authoritative portrait was verified."
+    },
+    "vp-0862": {
+      "name": "Caroline T. Nguyen",
+      "outcome": "not_found",
+      "pageUrl": "https://keck.usc.edu/endocrinology-diabetes-division/faculty/",
+      "identitySignals": ["name", "institution", "department", "stored_roster_url"],
+      "retrievedAt": "2026-09-15T04:20:00.000Z",
+      "note": "Official faculty directory confirmed identity but exposed only generic placeholder images."
+    },
+    "vp-0874": {
+      "name": "Kimloan Nguyen",
+      "outcome": "not_found",
+      "pageUrl": "https://profiles.utsouthwestern.edu/profile/95985/kimloan-nguyen.html",
+      "identitySignals": ["name", "institution", "department", "rank", "stored_roster_url"],
+      "retrievedAt": "2026-09-15T04:20:00.000Z",
+      "note": "Official profile exposed a default placeholder, not a portrait."
+    },
+    "vp-0880": {
+      "name": "Matthew Thai-Khang Nguyen",
+      "outcome": "not_found",
+      "pageUrl": "https://vivo.weill.cornell.edu/display/cwid-mtn9004",
+      "identitySignals": ["name", "institution", "department", "rank", "stored_roster_url"],
+      "retrievedAt": "2026-09-15T04:20:00.000Z",
+      "note": "Official directory image endpoint returned 404; the page falls back to a generic photo."
+    },
+    "vp-0886": {
+      "name": "Hanh Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://somnews.ucr.edu/articles/2024/09/05/nguyen-named-associate-dean-career-advising",
+      "imageUrl": "https://somnews.ucr.edu/sites/default/files/2024-09/nguyen_banner.png",
+      "sourceType": "university_news",
+      "confidence": "HIGH",
+      "identitySignals": ["name", "institution", "department", "rank", "stored_roster_url"],
+      "retrievedAt": "2026-09-15T04:20:00.000Z",
+      "note": "Official UCR story names the physician and uses his featured portrait; local copy is cropped from the verified single-person banner."
+    },
+    "vp-0888": {
+      "name": "Monika Dao Nguyen",
+      "outcome": "not_found",
+      "pageUrl": "https://healthy.kaiserpermanente.org/southern-california/physicians/monika-nguyen-2866142",
+      "identitySignals": ["name", "institution", "department", "stored_roster_url"],
+      "retrievedAt": "2026-09-15T04:20:00.000Z",
+      "note": "Official profile confirms identity but automated access loops and did not expose a verified image URL."
+    },
+    "vp-0889": {
+      "name": "Nathan K. Nguyen",
+      "outcome": "not_found",
+      "identitySignals": ["name", "institution", "department", "stored_roster_url"],
+      "retrievedAt": "2026-09-15T04:20:00.000Z",
+      "note": "No authoritative individual portrait was located in this pass."
     },
     "vp-0857": {
       "name": "George Nguyen",
@@ -214,20 +304,10 @@
     },
     "vp-1176": {
       "name": "Tuan Anh Nguyen - Swinburne University of Technology",
-      "outcome": "needs_review",
-      "pageUrl": "https://www.swinburne.edu.au/research/institutes/iverson-health-innovation/team/",
-      "imageUrl": "https://www.swinburne.edu.au/content/dam/media/staff/Rachael-McDonald.jpg/_jcr_content/renditions/cq5dam.web.256.144.jpeg",
-      "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "rank",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-15T04:08:35.158Z",
-      "note": "existing portrait preserved; use --replace after review"
+      "outcome": "not_found",
+      "identitySignals": ["name", "institution", "department", "rank", "stored_roster_url"],
+      "retrievedAt": "2026-09-15T04:10:00.000Z",
+      "note": "Repository owner rejected the prior portrait as incorrect; no replacement was verified."
     },
     "vp-1183": {
       "name": "Hong-Linh Truong",
