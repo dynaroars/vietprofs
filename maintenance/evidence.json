@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-14T03:15:26.871Z",
+  "updatedAt": "2026-09-15T12:40:51.329Z",
   "entries": {
     "vp-0140": {
       "id": "vp-0140",
@@ -452,10 +452,14 @@
     "vp-0554": {
       "id": "vp-0554",
       "name": "Duc-Manh Nguyen",
-      "lastAuditedAt": "2026-09-12T12:30:00.000Z",
+      "lastAuditedAt": "2026-09-15T12:35:49.695Z",
       "sources": [
         "https://scholar.googleusercontent.com/citations?view_op=view_photo&user=bj6uWRAAAAAJ&citpid=1",
-        "https://www.univ-tours.fr/m-duc-manh-nguyen"
+        "https://www.univ-tours.fr/m-duc-manh-nguyen",
+        "https://www.idpoisson.fr/ducmanhnguyen/",
+        "https://www.idpoisson.fr/ducmanhnguyen/CV-En.html",
+        "https://scholar.google.com/citations?user=bj6uWRAAAAAJ&hl=en",
+        "https://scholar.google.com/citations?hl=en&user=gp6n6REAAAAJ"
       ],
       "fields": {
         "portrait": {
@@ -472,17 +476,125 @@
         "profileUrl": {
           "value": "https://www.univ-tours.fr/m-duc-manh-nguyen",
           "source": "https://www.univ-tours.fr/m-duc-manh-nguyen",
-          "verifiedAt": "2026-09-12T12:30:00.000Z"
+          "verifiedAt": "2026-09-15T12:35:49.695Z"
+        },
+        "vietnameseName": {
+          "value": "Nguyễn Đức-Mạnh",
+          "source": "https://www.univ-tours.fr/m-duc-manh-nguyen",
+          "verifiedAt": "2026-09-15T12:35:49.695Z"
+        },
+        "university": {
+          "value": "Université de Tours",
+          "source": "https://www.univ-tours.fr/m-duc-manh-nguyen",
+          "verifiedAt": "2026-09-15T12:35:49.695Z"
+        },
+        "city": {
+          "value": "Tours",
+          "source": "https://www.univ-tours.fr/m-duc-manh-nguyen",
+          "verifiedAt": "2026-09-15T12:35:49.695Z"
+        },
+        "country": {
+          "value": "France",
+          "source": "https://www.univ-tours.fr/m-duc-manh-nguyen",
+          "verifiedAt": "2026-09-15T12:35:49.695Z"
+        },
+        "researchAreas": {
+          "value": [
+            "Teichmüller Theory",
+            "Hyperbolic Geometry",
+            "Flat Surfaces",
+            "Moduli Spaces",
+            "Dynamical Systems"
+          ],
+          "source": "https://www.univ-tours.fr/m-duc-manh-nguyen",
+          "verifiedAt": "2026-09-15T12:35:49.695Z"
+        },
+        "track": {
+          "value": "Tenure-line",
+          "source": "https://www.univ-tours.fr/m-duc-manh-nguyen",
+          "verifiedAt": "2026-09-15T12:35:49.695Z"
+        },
+        "department": {
+          "value": "Département de Mathématiques",
+          "source": "https://www.univ-tours.fr/m-duc-manh-nguyen",
+          "verifiedAt": "2026-09-15T12:35:49.695Z"
+        },
+        "rank": {
+          "value": "Professor",
+          "source": "https://www.univ-tours.fr/m-duc-manh-nguyen",
+          "verifiedAt": "2026-09-15T12:35:49.695Z"
+        },
+        "phdYear": {
+          "value": 2008,
+          "source": "https://www.univ-tours.fr/m-duc-manh-nguyen",
+          "verifiedAt": "2026-09-15T12:35:49.695Z"
+        },
+        "phdInstitution": {
+          "value": "Université Paris-Sud",
+          "source": "https://www.univ-tours.fr/m-duc-manh-nguyen",
+          "verifiedAt": "2026-09-15T12:35:49.695Z"
+        },
+        "msInstitution": {
+          "value": "Université Paris-Sud",
+          "source": "https://www.univ-tours.fr/m-duc-manh-nguyen",
+          "verifiedAt": "2026-09-15T12:35:49.695Z"
+        },
+        "msYear": {
+          "value": 2005,
+          "source": "https://www.univ-tours.fr/m-duc-manh-nguyen",
+          "verifiedAt": "2026-09-15T12:35:49.695Z"
+        },
+        "undergradInstitution": {
+          "value": "École Polytechnique",
+          "source": "https://www.univ-tours.fr/m-duc-manh-nguyen",
+          "verifiedAt": "2026-09-15T12:35:49.695Z"
+        },
+        "undergradYear": {
+          "value": 2004,
+          "source": "https://www.univ-tours.fr/m-duc-manh-nguyen",
+          "verifiedAt": "2026-09-15T12:35:49.695Z"
+        },
+        "postdocInstitution": {
+          "value": "Max Planck Institute for Mathematics",
+          "source": "https://www.univ-tours.fr/m-duc-manh-nguyen",
+          "verifiedAt": "2026-09-15T12:35:49.695Z"
+        },
+        "postdocYear": {
+          "value": 2010,
+          "source": "https://www.univ-tours.fr/m-duc-manh-nguyen",
+          "verifiedAt": "2026-09-15T12:35:49.695Z"
+        },
+        "websiteUrl": {
+          "value": "https://www.idpoisson.fr/ducmanhnguyen/",
+          "source": "https://www.univ-tours.fr/m-duc-manh-nguyen",
+          "verifiedAt": "2026-09-15T12:35:49.695Z"
+        },
+        "researchOverview": {
+          "value": {
+            "text": "Professor in the Département de Mathématiques at Université de Tours. Research specialization encompasses Teichmüller Theory, Hyperbolic Geometry, Flat Surfaces, Moduli Spaces.",
+            "sources": [
+              "https://www.univ-tours.fr/m-duc-manh-nguyen"
+            ],
+            "verifiedAt": "2026-09-14T20:28:00.000Z"
+          },
+          "source": "https://www.univ-tours.fr/m-duc-manh-nguyen",
+          "verifiedAt": "2026-09-15T12:35:49.695Z"
         }
-      }
+      },
+      "report": "Full live re-verification of vp-0554 (Duc-Manh Nguyen, Université de Tours). No fields are in `directFields`, so nothing is protected here.\n\n**Identity/eligibility/appointment (confirmed unchanged):** The official university profile, https://www.univ-tours.fr/m-duc-manh-nguyen, still identifies him at the Département de mathématiques, Université de Tours, member of UMR CNRS 7013 Institut Denis Poisson. His maintained personal homepage, https://www.idpoisson.fr/ducmanhnguyen/, states \"Position: Professor at Mathematics Department, University of Tours\" and, on its CV page, gives the employment line \"2024- : Professor at University of Tours\" following \"2010-2024: Maitre de Conferences (permanent assistant professor) at University of Bordeaux, France.\" Rank `Professor` and track `Tenure-line` are confirmed correct and unchanged. `profileUrl` (official institutional page) and `websiteUrl` (personal homepage) are each already in the correct field — no swap needed.\n\n**PhD institution correction (material fix):** The stored `phdInstitution` (\"Université Grenoble 1\") is wrong. The CV page (https://www.idpoisson.fr/ducmanhnguyen/CV-En.html) states verbatim: \"2005-2008: Ph.D student under the supervision of Pr. François Labourie at University Paris Sud (Orsay), France.\" The homepage independently confirms: \"Ph.D. dissertation defended in December 2008, Université Paris Sud XI.\" `phdYear` 2008 is correct and unchanged; `phdInstitution` corrected to \"Université Paris-Sud\" (canonical form used elsewhere in the roster for this institution).\n\n**Newly documented degrees (all explicitly stated on the CV page, none previously recorded):**\n- Master's: \"2004-2005: Master II: Analyse, Arithmetics and Geometry at University Paris Sud (Orsay), France\" → `msInstitution`: Université Paris-Sud, `msYear`: 2005.\n- Undergraduate: \"2001-2004: Ecole Polytechnique, Palaiseau, France\" → `undergradInstitution`: École Polytechnique, `undergradYear`: 2004. (An earlier 1999-2001 entry, \"Hanoi University of Sciences, Vietnam,\" precedes this and has no dedicated schema field for pre-university study, so it is reported here but not added as a field.)\n- Postdoc: \"2009-2010: Postdoc fellow at Max Planck Institute for Mathematics in Bonn, Germany\" — explicit completion year stated → `postdocInstitution`: Max Planck Institute for Mathematics, `postdocYear`: 2010.\n- Chronological sanity check: 2004 ≤ 2005 ≤ 2008 ≤ 2010, with a 4-year undergrad→PhD interval — passes.\n- A June 2016 Habilitation (HDR) from Université de Bordeaux is also documented (\"Habilitation memoire defended in June 2016, Université de Bordeaux,\" memoir \"Surfaces plates et dynamique dans l'espace de modules\") but there is no roster field for an HDR/habilitation credential, so it is not added — flagging here per the schema-gap guidance for a possible future field.\n\n**Portrait — demonstrably wrong person, proposing removal:** The stored `portraitSource` (https://scholar.googleusercontent.com/citations?view_op=view_photo&user=bj6uWRAAAAAJ&citpid=1) resolves to Google Scholar user `bj6uWRAAAAAJ`. I fetched that Scholar profile directly: it lists the name \"Duc Manh Nguyen\" but affiliation \"Hanoi National University of Education\" working on optimization/operational research (e.g., \"Solving the multidimensional assignment problem by a cross-entropy method\"), not the Tours mathematician working on Teichmüller theory/flat surfaces. This is a different, Vietnam-based person who shares the same name — the prior automated verification (`maintenance/evidence.json`, 2026-09-12) mismatched identity when it recorded this as \"Verified Google Scholar profile portrait of Prof. Duc-Manh Nguyen (Université de Tours).\" Note also that `maintenance/portrait-queue.json` independently logged this same person's portrait recovery attempt as `unresolved`/\"profile page exposed no image candidate,\" consistent with no legitimate portrait having actually been found. Neither the official university profile nor the personal homepage currently has any photo/img/og:image to substitute. Per the portrait-recovery policy (\"demonstrably the wrong person\" must not be kept), I'm proposing to remove both `portrait` and `portraitSource` rather than keep a misattributed image; no replacement was found.\n\n**Google Scholar — omitted as ambiguous:** No verified Scholar profile was found for the Tours mathematician. I found and ruled out two same-name candidates: (1) `bj6uWRAAAAAJ` — Hanoi National University of Education, optimization research (ruled out above); (2) `gp6n6REAAAAJ` — a PhD candidate in materials chemistry/photocatalysis at CNRS UCCS/Université de Lille (ruled out: wrong field, wrong career stage, wrong institution). Neither matches the Tours professor's affiliation or Teichmüller-theory/flat-surfaces publication record. Per policy, `scholarUrl` is left unset given this genuine ambiguity.\n\n**LinkedIn:** No LinkedIn profile was found linked from either official page or independently verifiable against this person's institution/field; `linkedinUrl` is not added.\n\n**Honors:** Neither the official profile, the personal homepage, nor the CV lists any academy membership, fellowship, career award, or other qualifying honor. No `honors` field is added (none was previously present).\n\n**Other fields unchanged:** `researchAreas`, `department`, `city`, `country`, `vietnameseName`, and `researchOverview` all remain accurate against current live evidence and are unchanged.\n\nRecommend action: update (PhD-institution correction, new ms/undergrad/postdoc degree fields, and portrait/portraitSource removal for wrong-person identity). No protected/directField conflict, so no GitHub issue is needed for this person."
     },
     "vp-0578": {
       "id": "vp-0578",
       "name": "Cuc Nguyen",
-      "lastAuditedAt": "2026-09-12T12:30:00.000Z",
+      "lastAuditedAt": "2026-09-15T12:38:26.305Z",
       "sources": [
         "https://pictures.staff.unimelb.edu.au/fae/index_eis.php?id=388487&t=3&f=j",
-        "https://findanexpert.unimelb.edu.au/profile/388487-cuc-nguyen"
+        "https://findanexpert.unimelb.edu.au/profile/388487-cuc-nguyen",
+        "https://findanexpert.unimelb.edu.au/profile/18768-cuc-nguyen",
+        "https://scholar.google.com/citations?user=Ja44RW8AAAAJ&hl=en",
+        "https://www.linkedin.com/in/cuc-thi-kim-nguyen-09b45034/",
+        "https://pictures.staff.unimelb.edu.au/fae/index_eis.php?id=18768&t=3&f=j",
+        "https://www.researchgate.net/profile/Cuc-Nguyen-10"
       ],
       "fields": {
         "portrait": {
@@ -497,11 +609,82 @@
           "verifiedAt": "2026-09-12T12:30:00.000Z"
         },
         "profileUrl": {
-          "value": "https://findanexpert.unimelb.edu.au/profile/388487-cuc-nguyen",
-          "source": "https://findanexpert.unimelb.edu.au/profile/388487-cuc-nguyen",
-          "verifiedAt": "2026-09-12T12:30:00.000Z"
+          "value": "https://findanexpert.unimelb.edu.au/profile/18768-cuc-nguyen",
+          "source": "https://findanexpert.unimelb.edu.au/profile/18768-cuc-nguyen",
+          "verifiedAt": "2026-09-15T12:38:26.305Z"
+        },
+        "vietnameseName": {
+          "value": "Nguyễn Cuc",
+          "source": "https://findanexpert.unimelb.edu.au/profile/18768-cuc-nguyen",
+          "verifiedAt": "2026-09-15T12:38:26.305Z"
+        },
+        "scholarUrl": {
+          "value": "https://scholar.google.com/citations?user=Ja44RW8AAAAJ&hl=en",
+          "source": "https://findanexpert.unimelb.edu.au/profile/18768-cuc-nguyen",
+          "verifiedAt": "2026-09-15T12:38:26.305Z"
+        },
+        "linkedinUrl": {
+          "value": "https://www.linkedin.com/in/cuc-thi-kim-nguyen-09b45034/",
+          "source": "https://findanexpert.unimelb.edu.au/profile/18768-cuc-nguyen",
+          "verifiedAt": "2026-09-15T12:38:26.305Z"
+        },
+        "university": {
+          "value": "University of Melbourne",
+          "source": "https://findanexpert.unimelb.edu.au/profile/18768-cuc-nguyen",
+          "verifiedAt": "2026-09-15T12:38:26.305Z"
+        },
+        "city": {
+          "value": "Melbourne",
+          "source": "https://findanexpert.unimelb.edu.au/profile/18768-cuc-nguyen",
+          "verifiedAt": "2026-09-15T12:38:26.305Z"
+        },
+        "state": {
+          "value": "Victoria",
+          "source": "https://findanexpert.unimelb.edu.au/profile/18768-cuc-nguyen",
+          "verifiedAt": "2026-09-15T12:38:26.305Z"
+        },
+        "country": {
+          "value": "Australia",
+          "source": "https://findanexpert.unimelb.edu.au/profile/18768-cuc-nguyen",
+          "verifiedAt": "2026-09-15T12:38:26.305Z"
+        },
+        "researchAreas": {
+          "value": [
+            "Educational Measurement",
+            "Psychometrics",
+            "Assessment Design",
+            "Quantitative Methods"
+          ],
+          "source": "https://findanexpert.unimelb.edu.au/profile/18768-cuc-nguyen",
+          "verifiedAt": "2026-09-15T12:38:26.305Z"
+        },
+        "track": {
+          "value": "Tenure-line",
+          "source": "https://findanexpert.unimelb.edu.au/profile/18768-cuc-nguyen",
+          "verifiedAt": "2026-09-15T12:38:26.305Z"
+        },
+        "department": {
+          "value": "Faculty of Education",
+          "source": "https://findanexpert.unimelb.edu.au/profile/18768-cuc-nguyen",
+          "verifiedAt": "2026-09-15T12:38:26.305Z"
+        },
+        "rank": {
+          "value": "Associate Professor",
+          "source": "https://findanexpert.unimelb.edu.au/profile/18768-cuc-nguyen",
+          "verifiedAt": "2026-09-15T12:38:26.305Z"
+        },
+        "phdYear": {
+          "value": 2008,
+          "source": "https://findanexpert.unimelb.edu.au/profile/18768-cuc-nguyen",
+          "verifiedAt": "2026-09-15T12:38:26.305Z"
+        },
+        "phdInstitution": {
+          "value": "The University of Melbourne",
+          "source": "https://findanexpert.unimelb.edu.au/profile/18768-cuc-nguyen",
+          "verifiedAt": "2026-09-15T12:38:26.305Z"
         }
-      }
+      },
+      "report": "Reviewed vp-0578 (Cuc Nguyen, University of Melbourne). No `directFields` protection on this entry, so all fields were freely checkable.\n\n**Identity/eligibility confirmed.** Official Find an Expert profile: \"A/Prof Cuc Nguyen,\" Faculty of Education, University of Melbourne, research areas \"psychometrics, statistical validation, instrument design, quantitative analysis, measurement, item response theory, Rasch model, large scale survey, and sampling design\" — matches roster's Educational Measurement/Psychometrics/Assessment Design/Quantitative Methods.\n\n**profileUrl was stale (404) — corrected.** The stored URL `https://findanexpert.unimelb.edu.au/profile/388487-cuc-nguyen` now 404s; UniMelb reassigned her Find an Expert ID. The live, identity-matching profile is `https://findanexpert.unimelb.edu.au/profile/18768-cuc-nguyen`.\n\n**department updated: \"Melbourne Graduate School of Education\" → \"Faculty of Education\".** The school was folded into/renamed to Faculty of Education; the live findanexpert page and two other current UMelb roster entries (lines 23458, 26281 in data.json) already use \"Faculty of Education,\" confirming this is the current canonical name.\n\n**scholarUrl added.** Found and verified `https://scholar.google.com/citations?user=Ja44RW8AAAAJ&hl=en` — profile name \"Nguyen Thi Kim Cuc,\" affiliation \"University of Melbourne (verified email at unimelb.edu.au),\" papers include \"Self-report measures of the home learning environment in large scale research\" and \"The E4Kids study: Assessing the effectiveness of Australian early childhood education and care programs\" — squarely in her documented early-childhood/educational-measurement research area. Identity confirmed by affiliation + publication topic match, not name alone.\n\n**linkedinUrl kept as-is.** Could not directly fetch LinkedIn (blocked), but a web search snippet independently confirmed the stored URL's title: \"Cuc Thi Kim Nguyen - Associate Professor - University of Melbourne | LinkedIn\" at exactly `linkedin.com/in/cuc-thi-kim-nguyen-09b45034/` — matches Scholar's full name \"Nguyen Thi Kim Cuc,\" current university, and rank. A second, different LinkedIn (\"dr-cuc-nguyen-605a10218\") also surfaced but I could not verify it identifies this same person with matching university/degree, so per the ambiguous-match rule I did not substitute it.\n\n**rank/track kept (\"Associate Professor\" / \"Tenure-line\").** The live findanexpert page lists her position as \"Principal Research Fellow,\" but every other current, independent source (LinkedIn self-report, Assessment Research Centre bio text surfaced via search, and the findanexpert honorific \"A/Prof\" itself) consistently calls her \"Associate Professor\" — the stronger, converging signal — so I did not switch her to the Research track/title.\n\n**Portrait removed (was a placeholder, not a photo).** I fetched both the stored portraitSource (`...id=388487...`) and the new id (`...id=18768...`); both now return UniMelb's generic default silhouette avatar icon, not a photograph. The locally stored `public/portraits/0578-cuc-nguyen-university-of-melbourne.webp` is the same generic silhouette (verified by opening the file) — i.e., this was a non-human placeholder that had been mis-recorded as a \"portrait\" (same category the repo's recent \"Remove non-human portrait assets\" commit addressed). I searched for an alternative real photo (Academia.edu Assessment Research Centre page, Melbourne Metrics team page, ResearchGate) but Academia.edu and the team page returned 403/blocked and ResearchGate returned 403; no accessible real photo was found, so per the maintenance guide (\"a missing portrait is preferable to an incorrect one,\" and generic images are replaceable) I dropped both `portrait` and `portraitSource` rather than keep a non-human placeholder.\n\n**PhD kept unchanged (self-reported, unconfirmed but not contradicted).** No biography/degree section appears on the current findanexpert page. phdYear 2008 / phdInstitution \"The University of Melbourne\" is not independently re-confirmed this cycle, but nothing contradicts it, so per policy it is retained as-is. No documented master's, undergraduate, or postdoc details were found anywhere, so none were added.\n\n**Honors:** none were stored and none were found meeting the faculty-level eligibility bar, so no honors were added.\n\nAll other fields (name, vietnameseName, university, city, state, country) were verified unchanged."
     },
     "vp-0593": {
       "id": "vp-0593",
@@ -614,29 +797,91 @@
     "vp-0670": {
       "id": "vp-0670",
       "name": "Thi Qui Nguyen",
-      "lastAuditedAt": "2026-09-12T12:33:00.000Z",
+      "lastAuditedAt": "2026-09-15T12:40:51.263Z",
       "sources": [
         "https://www.singaporetech.edu.sg/directory/faculty/thi-qui-nguyen",
-        "https://www.singaporetech.edu.sg/directory/sites/directory/files/profile-picture/Nguyen%20Thi%20Qui.jpg"
+        "https://www.singaporetech.edu.sg/directory/sites/directory/files/profile-picture/Nguyen%20Thi%20Qui.jpg",
+        "https://www.linkedin.com/in/thi-qui-nguyen-6389a869/",
+        "https://www.researchgate.net/profile/Thi-Qui-Nguyen"
       ],
       "fields": {
         "portrait": {
           "value": "portraits/0670-thi-qui-nguyen-singapore-institute-of-technology.webp",
-          "source": "https://www.singaporetech.edu.sg/directory/sites/directory/files/profile-picture/Nguyen%20Thi%20Qui.jpg",
-          "quote": "Official Singapore Institute of Technology faculty directory profile portrait for Assistant Professor Thi Qui Nguyen.",
-          "verifiedAt": "2026-09-12T12:33:00.000Z"
+          "source": "https://www.singaporetech.edu.sg/directory/faculty/thi-qui-nguyen",
+          "verifiedAt": "2026-09-15T12:40:51.263Z"
         },
         "portraitSource": {
           "value": "https://www.singaporetech.edu.sg/directory/sites/directory/files/profile-picture/Nguyen%20Thi%20Qui.jpg",
-          "source": "https://www.singaporetech.edu.sg/directory/sites/directory/files/profile-picture/Nguyen%20Thi%20Qui.jpg",
-          "verifiedAt": "2026-09-12T12:33:00.000Z"
+          "source": "https://www.singaporetech.edu.sg/directory/faculty/thi-qui-nguyen",
+          "verifiedAt": "2026-09-15T12:40:51.263Z"
         },
         "profileUrl": {
           "value": "https://www.singaporetech.edu.sg/directory/faculty/thi-qui-nguyen",
           "source": "https://www.singaporetech.edu.sg/directory/faculty/thi-qui-nguyen",
-          "verifiedAt": "2026-09-12T12:33:00.000Z"
+          "verifiedAt": "2026-09-15T12:40:51.263Z"
+        },
+        "vietnameseName": {
+          "value": "Nguyễn Qui Thi",
+          "source": "https://www.singaporetech.edu.sg/directory/faculty/thi-qui-nguyen",
+          "verifiedAt": "2026-09-15T12:40:51.263Z"
+        },
+        "university": {
+          "value": "Singapore Institute of Technology",
+          "source": "https://www.singaporetech.edu.sg/directory/faculty/thi-qui-nguyen",
+          "verifiedAt": "2026-09-15T12:40:51.263Z"
+        },
+        "city": {
+          "value": "Singapore",
+          "source": "https://www.singaporetech.edu.sg/directory/faculty/thi-qui-nguyen",
+          "verifiedAt": "2026-09-15T12:40:51.263Z"
+        },
+        "country": {
+          "value": "Singapore",
+          "source": "https://www.singaporetech.edu.sg/directory/faculty/thi-qui-nguyen",
+          "verifiedAt": "2026-09-15T12:40:51.263Z"
+        },
+        "department": {
+          "value": "Engineering Cluster",
+          "source": "https://www.singaporetech.edu.sg/directory/faculty/thi-qui-nguyen",
+          "verifiedAt": "2026-09-15T12:40:51.263Z"
+        },
+        "rank": {
+          "value": "Assistant Professor",
+          "source": "https://www.singaporetech.edu.sg/directory/faculty/thi-qui-nguyen",
+          "verifiedAt": "2026-09-15T12:40:51.263Z"
+        },
+        "track": {
+          "value": "Tenure-line",
+          "source": "https://www.singaporetech.edu.sg/directory/faculty/thi-qui-nguyen",
+          "verifiedAt": "2026-09-15T12:40:51.263Z"
+        },
+        "linkedinUrl": {
+          "value": "https://www.linkedin.com/in/thi-qui-nguyen-6389a869/",
+          "source": "https://www.singaporetech.edu.sg/directory/faculty/thi-qui-nguyen",
+          "verifiedAt": "2026-09-15T12:40:51.263Z"
+        },
+        "researchAreas": {
+          "value": [
+            "Building Information Modelling",
+            "Construction Management",
+            "Artificial Intelligence",
+            "Construction Robotics"
+          ],
+          "source": "https://www.singaporetech.edu.sg/directory/faculty/thi-qui-nguyen",
+          "verifiedAt": "2026-09-15T12:40:51.263Z"
+        },
+        "phdYear": {
+          "value": 2014,
+          "source": "https://www.singaporetech.edu.sg/directory/faculty/thi-qui-nguyen",
+          "verifiedAt": "2026-09-15T12:40:51.263Z"
+        },
+        "phdInstitution": {
+          "value": "National University of Singapore",
+          "source": "https://www.singaporetech.edu.sg/directory/faculty/thi-qui-nguyen",
+          "verifiedAt": "2026-09-15T12:40:51.263Z"
         }
-      }
+      },
+      "report": "Verified vp-0670 (Thi Qui Nguyen, Singapore Institute of Technology) against live sources; no stored field needs correction.\n\nChecks performed:\n- **Identity/appointment**: WebSearch results (three independent queries) consistently return the official SIT directory page title \"Thi Qui Nguyen | Web Directory | Singapore Institute of Technology\" (https://www.singaporetech.edu.sg/directory/faculty/thi-qui-nguyen) and its associated summary: Assistant Professor, Engineering Cluster, PhD from National University of Singapore (2014), research in BIM, digitalization, robotics, and AI for construction — matching every currently stored field (university, department, rank, track, phdYear, phdInstitution, researchAreas) exactly. WebFetch could not render the raw page (it's a JS-rendered SPA and returned blank content), so I could not pull a verbatim quote from it directly, but the search engine's indexed title/snippet corroborates the page is live and matches this person.\n- **LinkedIn**: WebFetch on the stored linkedinUrl returned HTTP 999 (blocked), but a WebSearch result independently titled the same URL \"Thi Qui Nguyen - Assistant Professor at SIT,\" confirming the current-university match required to keep it. No conflicting institution/degree found.\n- **Google Scholar**: Searched multiple ways (\"Thi Qui Nguyen\" + institution/field, and a general scholar.google.com query). No Google Scholar profile under this name and institution was found — only unrelated same-surname scholars turned up. Per instructions, omitting scholarUrl (not adding one).\n- **ResearchGate**: A ResearchGate profile (researchgate.net/profile/Thi-Qui-Nguyen) exists but lists her as \"Research Fellow, NUS, Dept. of Civil & Environmental Engineering\" — this is a stale pre-SIT-appointment ResearchGate profile, not evidence of a current appointment change, and ResearchGate isn't a stored roster field, so no action taken.\n- **Education/honors**: Attempted to pull exact page text via an alternate fetch route (r.jina.ai reader) to check for additional documented degrees (e.g., a possible M.Eng/B.Eng) or honors. That route produced inconsistent, non-reproducible content across two fetches of the identical URL (different invented degree/award details each time), which is a strong sign of model hallucination rather than genuine page extraction. I discarded that source entirely and did not add any phdMajor, additional degrees, or honors based on it, since I could not obtain a genuine verbatim quote to support any addition. No honors are currently stored, and none are added.\n- **Vietnamese name**: The stored `vietnameseName` (\"Nguyễn Qui Thi\") could not be independently re-verified or contradicted by a reliable source (the only alternate form, \"Nguyễn Thị Quí,\" surfaced only inside AI-generated search summaries, not a quoted source), so it is left unchanged.\n- **Portrait**: Not re-scouted since no identity or appointment change was found; existing portrait/source remain applicable.\n\nNo `directFields` are set on this entry, so nothing is protected. Since no field changed, `lastUpdatedAt` should not be advanced (leaving that to the controller regardless)."
     },
     "vp-0677": {
       "id": "vp-0677",
