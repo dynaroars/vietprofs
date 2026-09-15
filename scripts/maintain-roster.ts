@@ -1362,6 +1362,9 @@ async function pushBatch() {
   }
   await runFullChecks();
   await git(['push', 'origin', 'main'], { label: `push maintenance batch ${activeState().runId}` });
+  // The repository's pre-push hook runs the build again after these checks and rewrites this
+  // generated file; restore it after the hook so the next batch starts clean.
+  await git(['restore', '--', 'public/git-info.json'], { label: 'restore generated git metadata after push' });
 }
 
 export function canReviseProposal(review: JsonRecord | null | undefined, revisionCount: number, maxRevisions = MAX_PROPOSAL_REVISIONS): boolean {
