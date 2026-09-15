@@ -392,6 +392,16 @@
       "identitySignals": [],
       "retrievedAt": "2026-09-15T04:08:59.568Z",
       "note": "portrait or portraitSource is protected by directFields"
-    }
+    },
+    "vp-0891": {"name":"Carolyn V. Nguyen","outcome":"not_found","pageUrl":"https://medschool.kp.org/faculty/members/carolyn-v-nguyen","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:25:00.000Z","note":"Official faculty profile exposed no individual portrait."},
+    "vp-0894": {"name":"Von Ta Nguyen","outcome":"not_found","pageUrl":"https://medschool.kp.org/faculty/members/von-ta-nguyen","identitySignals":["name","institution","department","rank","stored_roster_url"],"retrievedAt":"2026-09-15T04:25:00.000Z","note":"Official faculty profile exposed no individual portrait."},
+    "vp-0896": {"name":"Thanh Tran - University of South Carolina","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:25:00.000Z","note":"No authoritative individual portrait was verified."},
+    "vp-0897": {"name":"Ngoc Lien Minh Nguyen","outcome":"not_found","pageUrl":"https://sc.edu/study/colleges_schools/medicine_greenville/about/faculty/facultydir/pf2081fe0467b5e9717884a845c788c198","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:25:00.000Z","note":"Official faculty profile exposes profile_no_photo placeholder."},
+    "vp-0901": {"name":"Tuan Mai","outcome":"not_found","pageUrl":"https://keck.usc.edu/faculty-search/tuan-mai/","identitySignals":["name","institution","department","rank","stored_roster_url"],"retrievedAt":"2026-09-15T04:25:00.000Z","note":"Official profile identifies faculty member but blocks direct image inspection."},
+    "vp-0903": {"name":"Phuong Le","outcome":"not_found","pageUrl":"https://profiles.stanford.edu/350256","identitySignals":["name","institution","department","rank","stored_roster_url"],"retrievedAt":"2026-09-15T04:25:00.000Z","note":"Official Stanford profile image source is empty."},
+    "vp-0906": {"name":"Ngoc M. Nguyen-Famulare","outcome":"not_found","pageUrl":"https://nyulangone.org/doctors/1578523965/ngoc-m-nguyen-famulare","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:25:00.000Z","note":"No verified individual portrait was exposed by the inspected official page."},
+    "vp-0908": {"name":"Eddie Quan","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:25:00.000Z","note":"Official faculty domain was unavailable to retrieve; no alternative authoritative portrait was verified."},
+    "vp-0910": {"name":"Nam X. Nguyen","outcome":"not_found","pageUrl":"https://keck.usc.edu/faculty-search/nam-x-nguyen/","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:25:00.000Z","note":"Official profile blocked direct image inspection and no alternative authoritative portrait was verified."},
+    "vp-0926": {"name":"Thi Hong Tran","outcome":"found","pageUrl":"https://kyoiku-kenkyudb.omu.ac.jp/html/100001108_en.html","imageUrl":"https://kyoiku-kenkyudb.omu.ac.jp/html/img/100001108","sourceType":"official_faculty","confidence":"HIGH","identitySignals":["name","institution","department","rank","stored_roster_url"],"retrievedAt":"2026-09-15T04:25:00.000Z"}
   }
 }
