@@ -1440,7 +1440,7 @@
     "country": "United States",
     "msInstitution": "Politecnico di Milano",
     "undergradInstitution": "President University",
-    "lastUpdatedAt": "2026-09-14T18:53:00.000Z",
+    "lastUpdatedAt": "2026-09-16T12:32:00.000Z",
     "researchOverview": {
       "text": "Associate Professor of Computer Science at Northeastern University and recipient of the NSF CAREER Award. Researches sublinear algorithms, randomized numerical linear algebra, streaming data sketches, and dimensional reduction techniques for massive data analysis.",
       "sources": [
@@ -41499,8 +41499,8 @@
   {
     "id": "vp-1049",
     "name": "Huong Vu",
-    "profileUrl": "https://abdn.elsevierpure.com/en/persons/huong-vu",
-    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
+    "profileUrl": "https://www.abdn.ac.uk/people/huong.vu/",
+    "lastUpdatedAt": "2026-09-16T12:30:00.000Z",
     "university": "University of Aberdeen",
     "city": "Aberdeen",
     "country": "United Kingdom",
@@ -46503,7 +46503,7 @@
     "name": "Anh-Huy Phan",
     "vietnameseName": "Phan Anh Huy",
     "profileUrl": "https://faculty.skoltech.ru/people/anhhuyphan",
-    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
+    "lastUpdatedAt": "2026-09-16T12:27:01.061Z",
     "university": "Skolkovo Institute of Science and Technology",
     "city": "Moscow",
     "country": "Russia",
@@ -46516,9 +46516,11 @@
       "Machine Learning",
       "Brain Signal Processing"
     ],
-    "phdInstitution": "Tokyo University of Agriculture and Technology",
+    "phdInstitution": "Kyushu Institute of Technology",
     "phdYear": 2011,
-    "phdMajor": "Information Technology"
+    "msInstitution": "Ho Chi Minh City University of Technology",
+    "msYear": 2005,
+    "scholarUrl": "https://scholar.google.com/citations?user=pJb7n9EAAAAJ"
   },
   {
     "id": "vp-1205",
@@ -46546,13 +46548,13 @@
     "id": "vp-1206",
     "name": "Tuan Kim Vu",
     "vietnameseName": "Vũ Kim Tuấn",
-    "profileUrl": "https://www.westga.edu/profile.php?emp_id=0865710",
-    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
+    "profileUrl": "https://www.westga.edu/share/documents/vitae/vita_000474.pdf",
+    "confirmed": false,
     "university": "University of West Georgia",
     "city": "Carrollton",
     "state": "Georgia",
     "country": "United States",
-    "department": "Department of Mathematics",
+    "department": "Department of Mathematics, Science, and Technology",
     "rank": "Professor",
     "track": "Tenure-line",
     "researchAreas": [
@@ -46562,25 +46564,40 @@
       "Inverse Problems"
     ],
     "phdInstitution": "Belarusian State University",
-    "phdYear": 1987,
-    "phdMajor": "Mathematics",
+    "phdYear": 1985,
+    "phdMajor": "Mathematics and Physics",
+    "msInstitution": "Belarusian State University",
+    "msYear": 1984,
+    "msMajor": "Mathematics",
+    "otherDegrees": [
+      {
+        "degree": "D.Sc.",
+        "institution": "Belarusian State University",
+        "year": 1987,
+        "major": "Mathematics and Physics",
+        "source": "https://www.westga.edu/share/documents/vitae/vita_000474.pdf"
+      }
+    ],
+    "postdocInstitution": "Free University of Berlin",
+    "postdocYear": 1994,
     "honors": [
       {
         "name": "Marion Crider Distinguished Chair of Mathematics",
         "category": "distinguished_professorship",
-        "year": 2011,
+        "year": 2003,
         "organization": "University of West Georgia",
-        "source": "https://www.westga.edu/profile.php?emp_id=0865710"
+        "source": "https://www.westga.edu/share/documents/vitae/vita_000474.pdf"
       }
     ],
     "researchOverview": {
-      "text": "Marion Crider Distinguished Chair of Mathematics at the University of West Georgia. Researches computational mathematics, numerical solutions of partial differential equations, finite element methods, and mathematical modeling of physical fluid dynamics.",
+      "text": "Professor of mathematics at the University of West Georgia, Tuan Kim Vu researches integral transforms, fractional calculus, special functions, inverse problems, and related analysis of differential equations.",
       "sources": [
-        "https://www.westga.edu/profile.php?emp_id=1418",
-        "https://scholar.google.com/citations?user=N4-U1i4AAAAJ"
+        "https://www.westga.edu/share/documents/vitae/vita_000474.pdf",
+        "https://www.researchgate.net/profile/Vu-Tuan-12"
       ],
-      "verifiedAt": "2026-09-13T00:00:00.000Z"
-    }
+      "verifiedAt": "2026-09-16T00:00:00.000Z"
+    },
+    "lastUpdatedAt": "2026-09-16T12:30:25.744Z"
   },
   {
     "id": "vp-1207",
@@ -48522,7 +48539,7 @@
     "department": "Department of Electrical and Computer Engineering",
     "rank": "Assistant Professor",
     "track": "Tenure-line",
-    "profileUrl": "https://umdearborn.edu/users/vhbui",
+    "profileUrl": "https://umdearborn.edu/people-um-dearborn/van-hai-bui",
     "websiteUrl": "https://buivanhaibk.wixsite.com/van-haibui",
     "researchAreas": [
       "Energy Management Systems",
@@ -48541,13 +48558,13 @@
     "researchOverview": {
       "text": "Develops energy management systems, resilient microgrid controls, and machine learning solutions for smart power distribution at University of Michigan-Dearborn. Designs decentralized optimization algorithms for renewable integration and electric vehicle charging.",
       "sources": [
-        "https://umdearborn.edu/users/vhbui",
+        "https://umdearborn.edu/people-um-dearborn/van-hai-bui",
         "https://buivanhaibk.wixsite.com/van-haibui"
       ],
-      "verifiedAt": "2026-09-13T00:00:00.000Z"
+      "verifiedAt": "2026-09-16T12:29:00.000Z"
     },
     "portrait": "portraits/vp-1265-van-hai-bui.webp",
-    "portraitSource": "https://static.wixstatic.com/media/fe5388_b058ec0945324a198d05784dfb352ce5.png/v1/fill/w_515,h_369,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/fe5388_b058ec0945324a198d05784dfb352ce5.png"
+    "portraitSource": "https://static.wixstatic.com/media/fe5388_372d1b86442243efa969b656a2a86046~mv2.jpg/v1/fill/w_254%2Ch_189%2Cal_c%2Cq_80%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/Dr_%20Bui_JPG.jpg"
   },
   {
     "id": "vp-1266",

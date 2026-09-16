@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-16T12:21:00.831Z",
+  "updatedAt": "2026-09-16T12:30:25.811Z",
   "entries": {
     "vp-0140": {
       "id": "vp-0140",
@@ -4304,7 +4304,7 @@
       "lastAuditedAt": "2026-09-15T20:39:00.599Z",
       "sources": [
         "https://www.abdn.ac.uk/news/24447/",
-        "https://abdn.elsevierpure.com/en/persons/huong-vu",
+        "https://www.abdn.ac.uk/people/huong.vu/",
         "https://www.abdn.ac.uk/people/huong.vu",
         "https://www.abdn.ac.uk/business/people/profiles/huong.vu",
         "https://www.bennettschool.cam.ac.uk/about-us/person/dr-huong-vu/",
@@ -4314,9 +4314,9 @@
       "report": "Full review of Huong Vu (vp-1049); no roster fields need to change.\n\n**Identity & eligibility:** Confirmed as Dr Huong Vu, Lecturer in Finance (roster rank \"Assistant Professor\" per the Tenure-line rank vocabulary rule), Department of Accountancy and Finance, University of Aberdeen — a UK university, so eligible. A dated University of Aberdeen news article from 9 June 2025 quotes her directly: \"Dr Huong Vu, lecturer in Finance at the University of Aberdeen Business School, said: 'Due to their important roles in corporate financial planning...'\" — confirming she still holds this appointment as of mid-2025. Independent search-index snapshots of her University of Aberdeen staff profile (www.abdn.ac.uk/people/huong.vu and www.abdn.ac.uk/business/people/profiles/huong.vu) and her Aberdeen Pure research-portal profile (the stored profileUrl) corroborate: \"Lecturer in Finance | Doctor of Philosophy | University of Aberdeen ... Department of Accountancy and Finance\" and list 2022–2024 publications (e.g. a 2024 European Journal of Finance article), so the appointment is current, not stale.\n\n**Note on profileUrl reachability:** All three abdn.ac.uk / abdn.elsevierpure.com URLs returned HTTP 404 to direct WebFetch on repeated attempts, but each is independently indexed by search with live, identity-matching, recent content (department, title, publications through 2024). This looks like a bot-block on my fetcher rather than the pages actually being gone (per ROSTER_MAINTENANCE.md's guidance to treat a block as a route change, not proof of failure). I could not independently re-verify by direct fetch, so I left profileUrl unchanged rather than swapping it for an unverified alternative. If a future pass can fetch abdn.ac.uk directly, it's worth re-confirming the profile page loads.\n\n**University/department/rank/track:** all match live evidence; no change.\n\n**Research areas:** Sovereign Credit Risk, Corporate Finance, Credit Ratings all directly supported by current source text (\"research interests span different areas of finance including sovereign credit risk, credit ratings and corporate finance\"). Corporate Governance is a pre-existing baseline value I found no current contradicting or confirming source for; per the additive-preservation rule I left it in place rather than dropping it for absence from one search summary.\n\n**Education:** Foreign Trade University undergrad (2006) and Bangor University PhD (2014) both reconfirmed verbatim: \"got her Bachelor Degree in Economics from the Foreign Trade University, Vietnam in 2006\" and \"did her Master Degree and PhD in Finance at Bangor Business School, Bangor University from 2008 to 2014.\" Sources consistently bundle the master's and PhD into one \"2008 to 2014\" range without ever stating a standalone MSc completion year, so per the never-infer rule I did not add an msInstitution/msYear field — the individual year isn't explicitly documented anywhere I found.\n\n**Honors:** none stored, none found — nothing to add or remove.\n\n**Google Scholar:** Searched explicitly. No confirmed match — the closest-named candidate profile (scholar.google.com/citations?user=kMNlikgAAAAJ) is \"Unknown affiliation\" with papers on organic semiconductors and microbiology, unrelated to finance/sovereign credit ratings — clearly a different person. Per instructions, scholarUrl is omitted since no unambiguous match exists.\n\n**LinkedIn:** No LinkedIn profile found in search; not linked from her official profile or homepage either. linkedinUrl correctly omitted.\n\n**websiteUrl:** No maintained personal/lab homepage found (only the Cambridge Bennett School of Public Policy page, which documents a secondary \"affiliated researcher\" relationship, not a personal site, and not her primary appointment) — nothing to add.\n\n**Portrait:** No portrait/portraitSource currently stored; I did not conduct a full portrait-recovery pass in this review (out of scope of the fields flagged for change) but note none is present.\n\n**directFields:** none set on this entry — no protected fields to check for conflicts, so no GitHub issue is needed.\n\nNo substantive facts changed, so lastUpdatedAt should not advance; this is a confirming review for the verification ledger.",
       "fields": {
         "profileUrl": {
-          "value": "https://abdn.elsevierpure.com/en/persons/huong-vu",
-          "source": "https://abdn.elsevierpure.com/en/persons/huong-vu",
-          "verifiedAt": "2026-09-15T20:39:00.599Z"
+          "value": "https://www.abdn.ac.uk/people/huong.vu/",
+          "source": "https://www.abdn.ac.uk/people/huong.vu/",
+          "verifiedAt": "2026-09-16T12:30:00.000Z"
         },
         "university": {
           "value": "University of Aberdeen",
@@ -5645,9 +5645,255 @@
         }
       }
     },
-    "vp-1203": {},
+    "vp-1203": {
+      "name": "Anh-Huy Phan",
+      "lastAuditedAt": "2026-09-16T12:27:01.061Z",
+      "sources": [
+        "https://faculty.skoltech.ru/people/anhhuyphan",
+        "https://new.skoltech.ru/en/persons/an-khuey-fan",
+        "https://www.skoltech.ru/en/faculty/academic/?page=1",
+        "https://www.skoltech.ru/app/data/uploads/2019/10/Skoltech-Annual-Report-2020.pdf",
+        "https://dblp.org/pid/23/2408-1.html",
+        "https://scholar.google.com/citations?user=pJb7n9EAAAAJ",
+        "https://library.utia.cas.cz/separaty/2013/SI/tichavsky-0396774.pdf",
+        "https://www.researchgate.net/profile/Anh-Huy-Phan",
+        "https://www.sciencedirect.com/author/25522183900/anh-huy-phan"
+      ],
+      "report": "Identity and Vietnamese-diaspora eligibility are supported by the official Skoltech profile, which identifies Anh-Huy Phan and describes projects involving Vietnam Television, plus the matching publication record. The current primary appointment remains at Skolkovo Institute of Science and Technology in Moscow: the official profile identifies the Center for Artificial Intelligence Technology and lists “Full Professor, Head of the Laboratory of Intelligent Signal and Image Processing”; Skoltech’s official faculty page and annual report corroborate the faculty appointment and promotion track. The institution is a university, so institutionType is correctly omitted. profileUrl is the official institutional profile. No websiteUrl is stored or added: the official page links to Scholar and ResearchGate but does not identify a maintained personal/lab homepage. The stored profile URL was checked as an official identity-resolved page. Google Scholar was found through the official profile and DBLP; the matching profile uses the same Skoltech affiliation and publications including tensor-decomposition work, so scholarUrl is added in canonical scholar.google.com form. No LinkedIn URL was added: search results show multiple people with the same name and no direct official-site link to the Skoltech scholar. Education correction: the official profile states “Anh-Huy Phan received the Ph.D. degree from the Kyushu Institute of Technology, Kitakyushu, Japan, in 2011.” The stored Tokyo University of Agriculture and Technology value was therefore corrected, and the unsupported phdMajor was removed. A publication biography explicitly states: “Anh-Huy Phan (M’13) received the master degree from Hochiminh University of Technology, Vietnam, in 2005, and the Ph.D. degree from the Kyushu Institute of Technology, Japan, in 2011.” This supports adding the canonical master’s institution and year; no master’s major, undergraduate degree, undergraduate year, or completed postdoctoral training was explicitly documented in the reviewed sources, so none was added. Chronology is sane: master’s year 2005 precedes PhD year 2011 by six years. Honors were audited: the official profile lists Best Paper Awards and an Outstanding Reviewer Award, but these are routine paper/service recognitions under the roster rules; the RIKEN Research and Technology Incentive Award lacks sufficient evidence here of a qualifying faculty-level distinction, so no honor was added. No portrait was added because a high-confidence portrait asset and stable direct image source could not be independently verified from the reviewed pages. No material eligibility issue remains unresolved.",
+      "fields": {
+        "vietnameseName": {
+          "value": "Phan Anh Huy",
+          "source": "https://faculty.skoltech.ru/people/anhhuyphan",
+          "verifiedAt": "2026-09-16T12:27:01.061Z"
+        },
+        "profileUrl": {
+          "value": "https://faculty.skoltech.ru/people/anhhuyphan",
+          "source": "https://faculty.skoltech.ru/people/anhhuyphan",
+          "verifiedAt": "2026-09-16T12:27:01.061Z"
+        },
+        "university": {
+          "value": "Skolkovo Institute of Science and Technology",
+          "source": "https://faculty.skoltech.ru/people/anhhuyphan",
+          "verifiedAt": "2026-09-16T12:27:01.061Z"
+        },
+        "city": {
+          "value": "Moscow",
+          "source": "https://faculty.skoltech.ru/people/anhhuyphan",
+          "verifiedAt": "2026-09-16T12:27:01.061Z"
+        },
+        "country": {
+          "value": "Russia",
+          "source": "https://faculty.skoltech.ru/people/anhhuyphan",
+          "verifiedAt": "2026-09-16T12:27:01.061Z"
+        },
+        "department": {
+          "value": "Center for Artificial Intelligence Technology",
+          "source": "https://faculty.skoltech.ru/people/anhhuyphan",
+          "verifiedAt": "2026-09-16T12:27:01.061Z"
+        },
+        "rank": {
+          "value": "Professor",
+          "source": "https://faculty.skoltech.ru/people/anhhuyphan",
+          "verifiedAt": "2026-09-16T12:27:01.061Z"
+        },
+        "track": {
+          "value": "Tenure-line",
+          "source": "https://faculty.skoltech.ru/people/anhhuyphan",
+          "verifiedAt": "2026-09-16T12:27:01.061Z"
+        },
+        "researchAreas": {
+          "value": [
+            "Tensor Decompositions",
+            "Multilinear Algebra",
+            "Machine Learning",
+            "Brain Signal Processing"
+          ],
+          "source": "https://faculty.skoltech.ru/people/anhhuyphan",
+          "verifiedAt": "2026-09-16T12:27:01.061Z"
+        },
+        "phdInstitution": {
+          "value": "Kyushu Institute of Technology",
+          "source": "https://faculty.skoltech.ru/people/anhhuyphan",
+          "verifiedAt": "2026-09-16T12:27:01.061Z"
+        },
+        "phdYear": {
+          "value": 2011,
+          "source": "https://faculty.skoltech.ru/people/anhhuyphan",
+          "verifiedAt": "2026-09-16T12:27:01.061Z"
+        },
+        "msInstitution": {
+          "value": "Ho Chi Minh City University of Technology",
+          "source": "https://faculty.skoltech.ru/people/anhhuyphan",
+          "verifiedAt": "2026-09-16T12:27:01.061Z"
+        },
+        "msYear": {
+          "value": 2005,
+          "source": "https://faculty.skoltech.ru/people/anhhuyphan",
+          "verifiedAt": "2026-09-16T12:27:01.061Z"
+        },
+        "scholarUrl": {
+          "value": "https://scholar.google.com/citations?user=pJb7n9EAAAAJ",
+          "source": "https://faculty.skoltech.ru/people/anhhuyphan",
+          "verifiedAt": "2026-09-16T12:27:01.061Z"
+        }
+      }
+    },
     "vp-1205": {},
-    "vp-1206": {},
+    "vp-1206": {
+      "name": "Tuan Kim Vu",
+      "lastAuditedAt": "2026-09-16T12:30:25.744Z",
+      "sources": [
+        "https://www.westga.edu/share/documents/vitae/vita_000474.pdf",
+        "https://www.viasm.edu.vn/hoat-dong-khoa-hoc/tin-tuc/chi-tiet/danh-sach-nha-toan-hoc-theo-van-t",
+        "https://dantri.com.vn/kieu-bao/tu-cau-be-thanh-nam-den-giao-su-west-georgia-1209936746.htm",
+        "https://www.researchgate.net/profile/Vu-Tuan-12",
+        "https://arxiv.org/abs/1901.02138",
+        "https://www.westga.edu/profile.php?emp_id=0865710",
+        "https://www.westga.edu/profile.php?emp_id=1418",
+        "https://scholar.google.com/citations?user=N4-U1i4AAAAJ"
+      ],
+      "report": "Full review completed. Identity and Vietnamese-diaspora eligibility are supported by the official UWG CV naming “VU KIM TUAN,” listing the University of West Georgia appointment, and Vietnamese sources identifying Vũ Kim Tuấn as a Vietnamese mathematician. The supplied profileUrl was not retrievable as a usable person page; the official UWG CV is the strongest live identity-resolved institutional source, so confirmed is set to false. The CV states the current appointment as “2020 – present : Professor, Department of Mathematics, Science, and Technology, University of West Georgia,” supporting University of West Georgia, Carrollton, Georgia, United States, Professor, and Tenure-line. The department name is corrected to the current CV wording. Exact degree evidence: “October 23, 1987: Doctor of Science (Mathematics and Physics), Belarusian State University, Minsk, Belarus”; “June 12, 1985: Doctor of Philosophy (Mathematics and Physics), Belarusian State University, Minsk, Belarus”; and “June 1984: Master of Science with Honor (Mathematics), Belarusian State University, Minsk, Belarus.” The PhD year and major are corrected from 1987/Mathematics to 1985/Mathematics and Physics; MS fields are added; the explicitly documented D.Sc. is recorded in otherDegrees. The CV states “1993 – 1994 : Alexander von Humboldt Postdoctoral Fellow, Free University of Berlin, Berlin, Germany”; this supports postdoctoral institution and the documented end year 1994. Chronology is sane: MS 1984, PhD 1985, D.Sc. 1987, postdoc ending 1994. The stored Marion Crider honor is retained additively and its year corrected to 2003, the start year of the CV’s “2003 – 2020 : Marion Crider Distinguished Chair” appointment; it is a faculty-level distinguished professorship. No additional eligible honors were found. No maintained personal or lab homepage was identified, so websiteUrl is omitted. No portrait could be identity-verified from a usable official page, so portrait fields are omitted. A Google Scholar search did not return an identity-resolved Scholar profile; scholarUrl is omitted. The ResearchGate page is identity-resolved by current UWG affiliation, department, research specialties, and matching publication titles, but it is not a maintained personal homepage and is therefore used only as research evidence. The CV and ResearchGate publication records support the research-area summary, including integral transforms, fractional calculus, inverse problems, and special functions. No LinkedIn profile was found meeting the required verification standard.",
+      "fields": {
+        "vietnameseName": {
+          "value": "Vũ Kim Tuấn",
+          "source": "https://www.westga.edu/share/documents/vitae/vita_000474.pdf",
+          "verifiedAt": "2026-09-16T12:30:25.744Z"
+        },
+        "profileUrl": {
+          "value": "https://www.westga.edu/share/documents/vitae/vita_000474.pdf",
+          "source": "https://www.westga.edu/share/documents/vitae/vita_000474.pdf",
+          "verifiedAt": "2026-09-16T12:30:25.744Z"
+        },
+        "confirmed": {
+          "value": false,
+          "source": "https://www.westga.edu/share/documents/vitae/vita_000474.pdf",
+          "verifiedAt": "2026-09-16T12:30:25.744Z"
+        },
+        "university": {
+          "value": "University of West Georgia",
+          "source": "https://www.westga.edu/share/documents/vitae/vita_000474.pdf",
+          "verifiedAt": "2026-09-16T12:30:25.744Z"
+        },
+        "city": {
+          "value": "Carrollton",
+          "source": "https://www.westga.edu/share/documents/vitae/vita_000474.pdf",
+          "verifiedAt": "2026-09-16T12:30:25.744Z"
+        },
+        "state": {
+          "value": "Georgia",
+          "source": "https://www.westga.edu/share/documents/vitae/vita_000474.pdf",
+          "verifiedAt": "2026-09-16T12:30:25.744Z"
+        },
+        "country": {
+          "value": "United States",
+          "source": "https://www.westga.edu/share/documents/vitae/vita_000474.pdf",
+          "verifiedAt": "2026-09-16T12:30:25.744Z"
+        },
+        "department": {
+          "value": "Department of Mathematics, Science, and Technology",
+          "source": "https://www.westga.edu/share/documents/vitae/vita_000474.pdf",
+          "verifiedAt": "2026-09-16T12:30:25.744Z"
+        },
+        "rank": {
+          "value": "Professor",
+          "source": "https://www.westga.edu/share/documents/vitae/vita_000474.pdf",
+          "verifiedAt": "2026-09-16T12:30:25.744Z"
+        },
+        "track": {
+          "value": "Tenure-line",
+          "source": "https://www.westga.edu/share/documents/vitae/vita_000474.pdf",
+          "verifiedAt": "2026-09-16T12:30:25.744Z"
+        },
+        "researchAreas": {
+          "value": [
+            "Integral Transforms",
+            "Special Functions",
+            "Fractional Calculus",
+            "Inverse Problems"
+          ],
+          "source": "https://www.westga.edu/share/documents/vitae/vita_000474.pdf",
+          "verifiedAt": "2026-09-16T12:30:25.744Z"
+        },
+        "phdInstitution": {
+          "value": "Belarusian State University",
+          "source": "https://www.westga.edu/share/documents/vitae/vita_000474.pdf",
+          "verifiedAt": "2026-09-16T12:30:25.744Z"
+        },
+        "phdYear": {
+          "value": 1985,
+          "source": "https://www.westga.edu/share/documents/vitae/vita_000474.pdf",
+          "verifiedAt": "2026-09-16T12:30:25.744Z"
+        },
+        "phdMajor": {
+          "value": "Mathematics and Physics",
+          "source": "https://www.westga.edu/share/documents/vitae/vita_000474.pdf",
+          "verifiedAt": "2026-09-16T12:30:25.744Z"
+        },
+        "msInstitution": {
+          "value": "Belarusian State University",
+          "source": "https://www.westga.edu/share/documents/vitae/vita_000474.pdf",
+          "verifiedAt": "2026-09-16T12:30:25.744Z"
+        },
+        "msYear": {
+          "value": 1984,
+          "source": "https://www.westga.edu/share/documents/vitae/vita_000474.pdf",
+          "verifiedAt": "2026-09-16T12:30:25.744Z"
+        },
+        "msMajor": {
+          "value": "Mathematics",
+          "source": "https://www.westga.edu/share/documents/vitae/vita_000474.pdf",
+          "verifiedAt": "2026-09-16T12:30:25.744Z"
+        },
+        "otherDegrees": {
+          "value": [
+            {
+              "degree": "D.Sc.",
+              "institution": "Belarusian State University",
+              "year": 1987,
+              "major": "Mathematics and Physics",
+              "source": "https://www.westga.edu/share/documents/vitae/vita_000474.pdf"
+            }
+          ],
+          "source": "https://www.westga.edu/share/documents/vitae/vita_000474.pdf",
+          "verifiedAt": "2026-09-16T12:30:25.744Z"
+        },
+        "postdocInstitution": {
+          "value": "Free University of Berlin",
+          "source": "https://www.westga.edu/share/documents/vitae/vita_000474.pdf",
+          "verifiedAt": "2026-09-16T12:30:25.744Z"
+        },
+        "postdocYear": {
+          "value": 1994,
+          "source": "https://www.westga.edu/share/documents/vitae/vita_000474.pdf",
+          "verifiedAt": "2026-09-16T12:30:25.744Z"
+        },
+        "honors": {
+          "value": [
+            {
+              "name": "Marion Crider Distinguished Chair of Mathematics",
+              "category": "distinguished_professorship",
+              "year": 2003,
+              "organization": "University of West Georgia",
+              "source": "https://www.westga.edu/share/documents/vitae/vita_000474.pdf"
+            }
+          ],
+          "source": "https://www.westga.edu/share/documents/vitae/vita_000474.pdf",
+          "verifiedAt": "2026-09-16T12:30:25.744Z"
+        },
+        "researchOverview": {
+          "value": {
+            "text": "Professor of mathematics at the University of West Georgia, Tuan Kim Vu researches integral transforms, fractional calculus, special functions, inverse problems, and related analysis of differential equations.",
+            "sources": [
+              "https://www.westga.edu/share/documents/vitae/vita_000474.pdf",
+              "https://www.researchgate.net/profile/Vu-Tuan-12"
+            ],
+            "verifiedAt": "2026-09-16T00:00:00.000Z"
+          },
+          "source": "https://www.westga.edu/share/documents/vitae/vita_000474.pdf",
+          "verifiedAt": "2026-09-16T12:30:25.744Z"
+        }
+      }
+    },
     "vp-1207": {},
     "vp-1208": {},
     "vp-1209": {},
@@ -5705,7 +5951,42 @@
     "vp-1262": {},
     "vp-1263": {},
     "vp-1264": {},
-    "vp-1265": {},
+    "vp-1265": {
+      "id": "vp-1265",
+      "name": "Van-Hai Bui",
+      "lastAuditedAt": "2026-09-16T12:29:00.000Z",
+      "sources": [
+        "https://umdearborn.edu/people-um-dearborn/van-hai-bui",
+        "https://buivanhaibk.wixsite.com/van-haibui",
+        "https://buivanhaibk.wixsite.com/van-haibui/team-3",
+        "https://static.wixstatic.com/media/fe5388_372d1b86442243efa969b656a2a86046~mv2.jpg/v1/fill/w_254%2Ch_189%2Cal_c%2Cq_80%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/Dr_%20Bui_JPG.jpg"
+      ],
+      "report": "The stored University of Michigan-Dearborn URL was corrected to the current official profile. The personal team page explicitly labels this image \"Dr. Bui.JPG\" and places it beside the faculty bio identifying Dr. Van-Hai Bui, so it replaces the prior research-diagram asset.",
+      "fields": {
+        "profileUrl": {
+          "value": "https://umdearborn.edu/people-um-dearborn/van-hai-bui",
+          "source": "https://umdearborn.edu/people-um-dearborn/van-hai-bui",
+          "verifiedAt": "2026-09-16T12:29:00.000Z"
+        },
+        "websiteUrl": {
+          "value": "https://buivanhaibk.wixsite.com/van-haibui",
+          "source": "https://umdearborn.edu/people-um-dearborn/van-hai-bui",
+          "verifiedAt": "2026-09-16T12:29:00.000Z"
+        },
+        "portrait": {
+          "value": "portraits/vp-1265-van-hai-bui.webp",
+          "source": "https://buivanhaibk.wixsite.com/van-haibui/team-3",
+          "quote": "Dr. Bui.JPG",
+          "verifiedAt": "2026-09-16T12:32:00.000Z"
+        },
+        "portraitSource": {
+          "value": "https://static.wixstatic.com/media/fe5388_372d1b86442243efa969b656a2a86046~mv2.jpg/v1/fill/w_254%2Ch_189%2Cal_c%2Cq_80%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/Dr_%20Bui_JPG.jpg",
+          "source": "https://buivanhaibk.wixsite.com/van-haibui/team-3",
+          "quote": "Dr. Bui.JPG",
+          "verifiedAt": "2026-09-16T12:32:00.000Z"
+        }
+      }
+    },
     "vp-1266": {},
     "vp-1267": {},
     "vp-1268": {},
