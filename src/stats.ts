@@ -103,6 +103,17 @@ function formatDateFull(dateStr: string): string {
   return new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric' }).format(date);
 }
 
+function formatSnapshotTimestamp(timestamp: string): string {
+  const date = new Date(timestamp);
+  if (Number.isNaN(date.getTime())) return 'Unknown time';
+  return new Intl.DateTimeFormat('en-US', {
+    dateStyle: 'medium',
+    timeStyle: 'medium',
+    timeZone: 'UTC',
+    timeZoneName: 'short',
+  }).format(date);
+}
+
 function visitCount(stat: { visits?: number; uniques?: number; requests?: number } | undefined): number {
   return stat?.visits ?? stat?.uniques ?? 0;
 }
@@ -293,6 +304,7 @@ function renderStatsContent(data: StatsResponse, rosterMap: Map<string, RosterEn
   const statsViews = data.pageBreakdown?.statsViews ?? 0;
 
   const total7DayCountryVisits = (data.topCountries || []).reduce((acc, c) => acc + (c.visits || c.count || 0), 0);
+  const snapshotTimestamp = formatSnapshotTimestamp(data.generatedAt);
 
   return `
     <main>
@@ -328,6 +340,11 @@ function renderStatsContent(data: StatsResponse, rosterMap: Map<string, RosterEn
             <strong>Data Retention &amp; Archive Status:</strong> Cloudflare live API retention is ~8 days. Local stats archive status: <strong>${escapeHtml(coverageLabel(coverage30, 30))}</strong>.
           </p>
         </div>
+
+        <p class="stats-snapshot">
+          Data snapshot: <time datetime="${escapeHtml(data.generatedAt)}">${escapeHtml(snapshotTimestamp)}</time>
+          <button type="button" id="refresh-stats-btn" class="refresh-stats-btn">Refresh now</button>
+        </p>
 
         <section class="man-section">
           <h2>VISITOR TRAFFIC METRICS</h2>
@@ -591,12 +608,14 @@ function renderLoading() {
 
 const STATS_ENDPOINTS = ['/api/stats', 'https://vietprofs.roars.dev/api/stats'];
 
-async function fetchStats(): Promise<StatsResponse> {
+async function fetchStats({ force = false } = {}): Promise<StatsResponse> {
   let lastError: Error | null = null;
 
   for (const endpoint of STATS_ENDPOINTS) {
     try {
-      const res = await fetch(endpoint);
+      const separator = endpoint.includes('?') ? '&' : '?';
+      const requestUrl = force ? `${endpoint}${separator}refresh=${Date.now()}` : endpoint;
+      const res = await fetch(requestUrl, { cache: force ? 'no-store' : 'default' });
       if (res.ok) {
         const data = (await res.json()) as StatsResponse;
         if (data && (data.today || data.last30Days)) {
@@ -625,12 +644,12 @@ async function statusMessage(res: Response): Promise<string> {
   return `The statistics service responded with HTTP ${res.status}.`;
 }
 
-async function initStatsPage() {
+async function initStatsPage({ force = false } = {}) {
   app.innerHTML = renderLoading();
 
   try {
     const [data, roster] = await Promise.all([
-      fetchStats(),
+      fetchStats({ force }),
       loadRoster().catch(() => []),
     ]);
 
@@ -638,10 +657,11 @@ async function initStatsPage() {
     (roster || []).forEach(p => rosterMap.set(p.id, p));
 
     app.innerHTML = renderStatsContent(data, rosterMap);
+    document.getElementById('refresh-stats-btn')?.addEventListener('click', () => initStatsPage({ force: true }));
   } catch (err: unknown) {
     const msg = err instanceof Error ? err.message : 'Temporarily unavailable';
     app.innerHTML = renderError(msg);
-    document.getElementById('retry-btn')?.addEventListener('click', () => initStatsPage());
+    document.getElementById('retry-btn')?.addEventListener('click', () => initStatsPage({ force: true }));
   }
 }
 

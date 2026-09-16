@@ -2954,6 +2954,27 @@ button.chart-row-btn:hover {
   white-space: nowrap;
 }
 
+.stats-snapshot {
+  margin: 0.9rem 0 1.25rem;
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+}
+
+.refresh-stats-btn {
+  margin-left: 0.65rem;
+  padding: 0.28rem 0.55rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background: var(--card-bg);
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+}
+
+.refresh-stats-btn:hover {
+  border-color: var(--accent);
+}
+
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
