@@ -75,7 +75,7 @@ const MAX_PROPOSAL_REVISIONS = 2;
 const DEFAULT_AGENT_TIMEOUT_MINUTES = 90;
 const DEFAULT_RATE_LIMIT_WAIT_MINUTES = 30;
 const MAX_CAPTURE_CHARS = 2_000_000;
-const MAINTAINED_PATHS = new Set(['public/data.json', 'maintenance/verification.json', 'maintenance/enrichment.json', 'maintenance/evidence.json']);
+const MAINTAINED_PATHS = new Set(['public/data.json', 'maintenance/verification.json', 'maintenance/enrichment.json', 'maintenance/evidence.json', 'maintenance/portrait-provenance.json']);
 const ALLOWED_ROSTER_FIELDS = new Set<string>(ROSTER_FIELDS);
 const ALLOWED_HONOR_FIELDS = new Set<string>(HONOR_FIELDS);
 const ALLOWED_OTHER_DEGREE_FIELDS = new Set<string>(OTHER_DEGREE_FIELDS);
@@ -1319,6 +1319,10 @@ async function applyProposal(current: JsonRecord): Promise<void> {
     }));
     delete (enrichment.entries as JsonRecord)[personId];
     await writeAtomic(enrichmentPath, enrichment);
+    const portraitProvenancePath = join(REPO_ROOT, 'maintenance/portrait-provenance.json');
+    const portraitProvenance = await readJsonRequired<JsonRecord>(portraitProvenancePath);
+    delete (portraitProvenance.entries as JsonRecord)[personId];
+    await writeAtomic(portraitProvenancePath, portraitProvenance);
   }
 
   await runProcess('npm', ['run', 'validate-data'], { label: `validate ${current.name}` });
@@ -1346,7 +1350,7 @@ async function commitBatch() {
     return 'existing';
   }
   if (status === 'none') return 'none';
-  await git(['add', 'public/data.json', 'maintenance/verification.json', 'maintenance/enrichment.json', 'maintenance/evidence.json']);
+  await git(['add', 'public/data.json', 'maintenance/verification.json', 'maintenance/enrichment.json', 'maintenance/evidence.json', 'maintenance/portrait-provenance.json']);
   await git([
     'commit',
     '-m', `Automated roster maintenance: batch ${activeState().runId}`,

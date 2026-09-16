@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-16T03:43:23.131Z",
+  "updatedAt": "2026-09-16T12:16:17.647Z",
   "entries": {
     "vp-0140": {
       "id": "vp-0140",
@@ -5397,10 +5397,108 @@
     "vp-1187": {},
     "vp-1188": {},
     "vp-1189": {},
-    "vp-1190": {},
     "vp-1191": {},
     "vp-1192": {},
-    "vp-1193": {},
+    "vp-1193": {
+      "name": "Huy P. Phan",
+      "lastAuditedAt": "2026-09-16T12:16:17.580Z",
+      "sources": [
+        "https://www.une.edu.au/staff-profiles/education/hphan2",
+        "https://www.scholar.google.com/citations?user=QtGTAioAAAAJ",
+        "https://www.une.edu.au/media/media-content/images/profile-images/HPhan2.jpg",
+        "https://rune.une.edu.au/server/api/core/bitstreams/c0c22530-094c-40f3-93a9-26b5d21dc2b7/content",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC9036102/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC8514688/"
+      ],
+      "report": "Complete verification. The official UNE profile is reachable and identifies “Professor Huy P. Phan,” places the appointment in the Faculty of Humanities, Arts, Social Sciences and Education / School of Education, and states: “I am a full Professor in Learning and Teaching at UNE’s School of Education.” This supports the current University of New England appointment, Armidale/New South Wales/Australia location, Professor rank, School of Education department, Education field, and Tenure-line track. Current UNE research areas include educational psychology, human optimization, sociocultural/contextual work, pedagogical practices, positive/holistic psychology, mindfulness, and related topics; the stored research areas remain supported. Identity and Vietnamese-diaspora eligibility are supported by the Vietnamese surname/name signal together with the identity-resolved official academic profile and matching publications. UNE is an Australian university (the profile footer identifies it as an Australian University). The official profile is the correct profileUrl. No maintained personal or lab homepage was found; websiteUrl is therefore omitted. The stored profile page links directly to a Google Scholar profile; the linked Scholar ID is QtGTAioAAAAJ, and matching affiliation/publication evidence is supplied by the official UNE profile and papers listing Huy P. Phan at the School of Education, University of New England. LinkedIn was not added because no qualifying direct link or unambiguous match was found. The official qualifications section states exactly: “B.ED (Mathematics)(Hons, Class 1)(USyd, Australia)” and “Ph.D in Educational Psychology (USyd, Australia).” These support the stored undergraduate institution/major and PhD institution/major; the stored years 2002 and 2006 were not changed because the current official profile does not restate them and no reliable conflicting evidence was found. No completed postdoctoral training is documented. No honors are stored; the profile’s ARC College of Experts nomination and top-3.5% metric were not added because the nomination is not an awarded faculty distinction and the metric is not a qualifying honor under roster rules. The official image URL is https://www.une.edu.au/media/media-content/images/profile-images/HPhan2.jpg and is identified on the UNE page as “Image: Huy P. Phan,” but it could not be fetched during this review, so no portrait was added. The substantive change is the verified scholarUrl addition; id and lastUpdatedAt are preserved for controller handling.",
+      "fields": {
+        "profileUrl": {
+          "value": "https://www.une.edu.au/staff-profiles/education/hphan2",
+          "source": "https://www.une.edu.au/staff-profiles/education/hphan2",
+          "verifiedAt": "2026-09-16T12:16:17.580Z"
+        },
+        "university": {
+          "value": "University of New England",
+          "source": "https://www.une.edu.au/staff-profiles/education/hphan2",
+          "verifiedAt": "2026-09-16T12:16:17.580Z"
+        },
+        "city": {
+          "value": "Armidale",
+          "source": "https://www.une.edu.au/staff-profiles/education/hphan2",
+          "verifiedAt": "2026-09-16T12:16:17.580Z"
+        },
+        "state": {
+          "value": "New South Wales",
+          "source": "https://www.une.edu.au/staff-profiles/education/hphan2",
+          "verifiedAt": "2026-09-16T12:16:17.580Z"
+        },
+        "country": {
+          "value": "Australia",
+          "source": "https://www.une.edu.au/staff-profiles/education/hphan2",
+          "verifiedAt": "2026-09-16T12:16:17.580Z"
+        },
+        "department": {
+          "value": "School of Education",
+          "source": "https://www.une.edu.au/staff-profiles/education/hphan2",
+          "verifiedAt": "2026-09-16T12:16:17.580Z"
+        },
+        "rank": {
+          "value": "Professor",
+          "source": "https://www.une.edu.au/staff-profiles/education/hphan2",
+          "verifiedAt": "2026-09-16T12:16:17.580Z"
+        },
+        "track": {
+          "value": "Tenure-line",
+          "source": "https://www.une.edu.au/staff-profiles/education/hphan2",
+          "verifiedAt": "2026-09-16T12:16:17.580Z"
+        },
+        "researchAreas": {
+          "value": [
+            "Educational Psychology",
+            "Human Optimization",
+            "Sociocultural Contexts",
+            "Pedagogical Practices"
+          ],
+          "source": "https://www.une.edu.au/staff-profiles/education/hphan2",
+          "verifiedAt": "2026-09-16T12:16:17.580Z"
+        },
+        "phdInstitution": {
+          "value": "University of Sydney",
+          "source": "https://www.une.edu.au/staff-profiles/education/hphan2",
+          "verifiedAt": "2026-09-16T12:16:17.580Z"
+        },
+        "phdYear": {
+          "value": 2006,
+          "source": "https://www.une.edu.au/staff-profiles/education/hphan2",
+          "verifiedAt": "2026-09-16T12:16:17.580Z"
+        },
+        "phdMajor": {
+          "value": "Educational Psychology",
+          "source": "https://www.une.edu.au/staff-profiles/education/hphan2",
+          "verifiedAt": "2026-09-16T12:16:17.580Z"
+        },
+        "undergradInstitution": {
+          "value": "University of Sydney",
+          "source": "https://www.une.edu.au/staff-profiles/education/hphan2",
+          "verifiedAt": "2026-09-16T12:16:17.580Z"
+        },
+        "undergradYear": {
+          "value": 2002,
+          "source": "https://www.une.edu.au/staff-profiles/education/hphan2",
+          "verifiedAt": "2026-09-16T12:16:17.580Z"
+        },
+        "undergradMajor": {
+          "value": "Education",
+          "source": "https://www.une.edu.au/staff-profiles/education/hphan2",
+          "verifiedAt": "2026-09-16T12:16:17.580Z"
+        },
+        "scholarUrl": {
+          "value": "https://scholar.google.com/citations?user=QtGTAioAAAAJ",
+          "source": "https://www.une.edu.au/staff-profiles/education/hphan2",
+          "verifiedAt": "2026-09-16T12:16:17.580Z"
+        }
+      }
+    },
     "vp-1194": {},
     "vp-1195": {},
     "vp-1196": {},
