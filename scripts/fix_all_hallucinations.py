@@ -80,6 +80,12 @@ for person in roster:
         person["undergradInstitution"] = "Ho Chi Minh City University of Technology"
         fixed_count += 1
 
+    elif pid == "vp-0521":
+        # Tien Zung Nguyen (fix Scholar profileUrl to official IMT URL)
+        person["profileUrl"] = "https://www.math.univ-toulouse.fr/~tienzung/"
+        person["scholarUrl"] = "https://scholar.google.com/citations?user=r5wQzjYAAAAJ"
+        fixed_count += 1
+
     elif pid == "vp-0667":
         person["profileUrl"] = "https://personal.ntu.edu.sg/phantuan/"
         person["websiteUrl"] = "https://ntufusion.github.io/"
@@ -89,6 +95,13 @@ for person in roster:
         if "undergradYear" in person:
             del person["undergradYear"]
             fixed_count += 1
+
+    elif pid == "vp-1536":
+        # Binh Chi Bui (fix Scholar profileUrl to official UTEP URL)
+        person["profileUrl"] = "https://hb2504.utep.edu/Home/Profile?username=bbui"
+        if "websiteUrl" in person:
+            del person["websiteUrl"]
+        fixed_count += 1
 
     # Clean HTML entities
     string_fields = [
