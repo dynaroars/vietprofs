@@ -1,5 +1,5 @@
 import './style.css';
-import { FIELDS, fieldOf, INSTITUTION_TYPES, loadRoster, personPath, TRACKS, type RosterEntry } from './data.ts';
+import { FIELDS, fieldOf, INSTITUTION_TYPES, institutionTypeOf, loadRoster, personPath, TRACKS, type RosterEntry } from './data.ts';
 import { escapeHtml } from './utils.ts';
 
 const SUBMISSION_EMAIL = 'root@roars.dev';
@@ -411,6 +411,8 @@ function buildUpdateBody(matchedEntry: RosterEntry, entry: SubmissionDraft, note
   for (const key of FIELD_ORDER) {
     const oldValue = key === 'field'
       ? fieldOf(matchedEntry.department, matchedEntry.university)
+      : key === 'institutionType'
+      ? institutionTypeOf(matchedEntry)
       : formatValue(matchedRecord[key]);
     const newValue = formatValue(entry[key]);
     if (oldValue !== newValue) {
@@ -439,7 +441,7 @@ function populateEntry(form: SubmitForm, entry: RosterEntry): void {
   form.portraitSource.value = entry.portraitSource ?? '';
   updatePortraitPreview(form, entry);
   form.university.value = entry.university ?? '';
-  form.institutionType.value = entry.institutionType ?? '';
+  form.institutionType.value = institutionTypeOf(entry);
   form.city.value = entry.city ?? '';
   form.state.value = entry.state ?? '';
   form.country.value = entry.country ?? '';
