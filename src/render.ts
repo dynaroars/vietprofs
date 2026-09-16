@@ -4,8 +4,10 @@ import {
   displayName,
   displayUniversity,
   fieldOf,
+  fieldPath,
   healthSubfieldOf,
   personPath,
+  regionPath,
   type RosterEntry,
   vietnameseName,
 } from './data.ts';
@@ -73,7 +75,7 @@ export function renderRosterEntry(person: RosterEntry, baseUrl = '/') {
   const personField = fieldOf(person.department, person.university);
   const healthSubfield = healthSubfieldOf(person);
   const fieldLabel = `${fieldDropdownLabel(personField)}${healthSubfield ? ` (${healthSubfield})` : ''}`;
-  const fieldTag = `<span class="tag tag-field">${escapeHtml(fieldLabel)}</span>`;
+  const fieldTag = `<a class="tag tag-field tag-link" href="${escapeHtml(`${baseUrl}${fieldPath(personField)}`)}" title="Explore ${escapeHtml(personField)} discipline hub">${escapeHtml(fieldLabel)}</a>`;
   const trackTag = `<span class="tag tag-track${person.track === 'Emeritus' ? ' tag-emeritus' : person.track === 'Deceased' ? ' tag-deceased' : ''}">${person.track === 'Emeritus' ? '🎓 Emeritus' : person.track === 'Deceased' ? '🏛️ Deceased' : escapeHtml(person.track)}</span>`;
   const institutionTypeTag = person.institutionType && person.institutionType !== 'University'
     ? `<span class="tag tag-institution-type">${escapeHtml(person.institutionType)}</span>`
@@ -116,6 +118,9 @@ export function renderRosterEntry(person: RosterEntry, baseUrl = '/') {
   const favoriteLabel = favorited ? 'Remove from favorites' : 'Add to favorites';
   const favoriteToggle = `<button type="button" class="favorite-toggle${favorited ? ' is-favorite' : ''}" data-id="${escapeHtml(person.id)}" aria-pressed="${favorited ? 'true' : 'false'}" aria-label="${favoriteLabel}" title="${favoriteLabel}"><svg viewBox="0 0 24 24" aria-hidden="true">${STAR_ICON}</svg></button>`;
 
+  const countryTarget = person.country && !['United States', 'US', 'USA'].includes(person.country) ? person.country : 'United States';
+  const locBadge = `<a class="loc-badge-link" href="${escapeHtml(`${baseUrl}${regionPath(countryTarget)}`)}" title="Explore ${escapeHtml(person.country || 'United States')} region hub"><span class="loc-badge"><span class="country-flag" aria-hidden="true">${countryFlag(person.country)}</span></span></a>`;
+
   return `
     <div class="entry entry-with-portrait">
       ${portrait}
@@ -123,7 +128,7 @@ export function renderRosterEntry(person: RosterEntry, baseUrl = '/') {
       <div class="entry-content">
         <div class="entry-name-row">
           <a class="entry-name" href="${escapeHtml(`${baseUrl}${personPath(person.id)}`)}">${escapeHtml(visibleName)}</a>
-          <span class="entry-vietnamese-name">(${escapeHtml(nativeName)})</span> <span class="loc-badge" title="${escapeHtml(person.country || 'United States')}"><span class="country-flag" aria-hidden="true">${countryFlag(person.country)}</span></span>${profileIcon}${personalSiteIcon}${labSiteIcon}${scholarIcon}${linkedinIcon}${updatedTime}
+          <span class="entry-vietnamese-name">(${escapeHtml(nativeName)})</span> ${locBadge}${profileIcon}${personalSiteIcon}${labSiteIcon}${scholarIcon}${linkedinIcon}${updatedTime}
         </div>
         <div class="entry-meta">${escapeHtml(entryMeta)}</div>
         ${educationDetails.length ? `<div class="entry-details">${educationDetails.map((value) => escapeHtml(value)).join('; ')}</div>` : ''}

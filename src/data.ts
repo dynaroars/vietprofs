@@ -664,6 +664,9 @@ const FIELD_OVERRIDES = new Map([
   ['Center for Advanced Intelligence Project (AIP)|RIKEN', 'Computer & Information Sciences'],
   ['Research Centre for Global Learning|Coventry University', 'Education'],
   ['Department of Asian and North African Studies|Ca\u0027 Foscari University of Venice', 'Humanities'],
+  ['Beckman Institute for Advanced Science and Technology, Illinois Polymer Maker Lab|University of Illinois Urbana-Champaign', 'Chemistry'],
+  ['Laboratoire Auscultation, Modélisation, Expérimentation des Infrastructures de Transport (LAMES), Département Matériaux et Structures (MAST)|Université Gustave Eiffel', 'Engineering'],
+  ['Laboratoire de Conception, Optimisation et Modélisation des Systèmes (LCOMS)|Université de Lorraine', 'Computer & Information Sciences'],
 ]);
 
 // Buckets granular `department` values into the broad fields above. Order matters, and is not

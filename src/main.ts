@@ -12,6 +12,7 @@ import {
   countryFlag,
   displayName,
   fieldOf,
+  fieldPath,
   filterRoster,
   institutionTypeOf,
   loadGitInfo,
@@ -19,6 +20,7 @@ import {
   loadStatsHistory,
   locationMatches,
   personPath,
+  regionPath,
   uniqueCities,
   uniqueCountries,
   uniqueDepartments,
@@ -295,10 +297,22 @@ function renderRoster(roster: Roster, { field, location }: RenderOptions = {}) {
   const rosterEl = document.getElementById('roster');
   const countEl = document.getElementById('result-count');
   const institutions = new Set(roster.map((p) => p.university)).size;
-  const fieldPhrase = field && field !== 'all' ? ` in ${escapeHtml(field)}` : '';
-  const locationName = location === 'US' ? 'the United States' : location === 'World' || !location ? 'the World' : location;
+  const isFieldFiltered = Boolean(field && field !== 'all');
+  const fieldTarget = isFieldFiltered ? `${import.meta.env.BASE_URL}${fieldPath(field as string)}` : '';
+  const fieldPhrase = isFieldFiltered
+    ? ` in <a class="result-count-link" href="${fieldTarget}" title="Open ${escapeHtml(field as string)} discipline hub">${escapeHtml(field as string)} ↗</a>`
+    : '';
+  const isLocationFiltered = Boolean(location && location !== 'World');
+  const locationTargetName = location === 'US' ? 'United States' : location ?? 'United States';
+  const locationTarget = isLocationFiltered
+    ? `${import.meta.env.BASE_URL}${regionPath(locationTargetName)}`
+    : '';
+  const rawLocationName = location === 'US' ? 'the United States' : location === 'World' || !location ? 'the World' : location;
+  const locationPhrase = isLocationFiltered
+    ? `<a class="result-count-link" href="${locationTarget}" title="Open ${escapeHtml(rawLocationName)} region hub">${escapeHtml(rawLocationName)} ↗</a>`
+    : escapeHtml(rawLocationName);
   const peopleLabel = roster.length === 1 ? 'person' : 'people';
-  countEl.innerHTML = `${roster.length}${trackQualifier(roster)} ${peopleLabel}${fieldPhrase} across ${institutions} institution${institutions === 1 ? '' : 's'} in ${escapeHtml(locationName)}.`;
+  countEl.innerHTML = `${roster.length}${trackQualifier(roster)} ${peopleLabel}${fieldPhrase} across ${institutions} institution${institutions === 1 ? '' : 's'} in ${locationPhrase}.`;
 
   currentRoster = roster;
 

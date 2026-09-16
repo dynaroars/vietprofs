@@ -734,6 +734,18 @@ h1 {
   margin-bottom: 1rem;
 }
 
+.result-count-link {
+  color: var(--bamboo-green);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
+  transition: color 0.15s ease;
+}
+
+.result-count-link:hover {
+  color: var(--bamboo-green-hover);
+}
+
 .submission-link {
   flex-shrink: 0;
   display: inline-flex;
@@ -871,6 +883,17 @@ a.entry-name:focus-visible {
   gap: 0.2rem;
 }
 
+.entry .loc-badge-link {
+  display: inline-flex;
+  text-decoration: none;
+  vertical-align: baseline;
+}
+
+.entry .loc-badge-link:hover .country-flag {
+  transform: scale(1.2);
+  transition: transform 0.15s ease;
+}
+
 .entry-details {
   color: var(--text-muted);
   font-size: var(--text-sm);
@@ -979,6 +1002,17 @@ a.entry-name:focus-visible {
   background: transparent;
   border-color: var(--border-color);
   font-weight: 600;
+}
+
+.entry a.tag-field {
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease, background-color 0.15s ease;
+}
+
+.entry a.tag-field:hover {
+  border-color: var(--bamboo-green);
+  color: var(--bamboo-green);
 }
 
 .tag-track.tag-emeritus,

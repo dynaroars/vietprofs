@@ -459,8 +459,8 @@ async function main() {
     await writeFile(outputFile, categoryHubPage(hub));
   }));
 
-  // 3. Generate Region Hub pages (Continents >= 10, Countries >= 5)
-  const continents = ['North America', 'Europe', 'Australasia', 'Asia'];
+  // 3. Generate Region Hub pages
+  const continents = ['North America', 'Europe', 'Australasia', 'Asia', 'South America', 'Africa'];
   const continentHubs: HubConfig[] = continents.map((continent) => {
     const people = roster.filter((p) => continentOf(p.country) === continent);
     return {
@@ -477,7 +477,7 @@ async function main() {
         path: regionPath(c),
       })),
     };
-  }).filter((hub) => hub.people.length >= 10);
+  }).filter((hub) => hub.people.length > 0);
 
   const countryCounts: Record<string, number> = {};
   for (const person of roster) {
@@ -485,8 +485,8 @@ async function main() {
     countryCounts[country] = (countryCounts[country] || 0) + 1;
   }
 
-  const majorCountries = Object.keys(countryCounts).filter((c) => countryCounts[c] >= 5).sort((a, b) => countryCounts[b] - countryCounts[a]);
-  const countryHubs: HubConfig[] = majorCountries.map((country) => {
+  const allCountries = Object.keys(countryCounts).sort((a, b) => countryCounts[b] - countryCounts[a] || a.localeCompare(b));
+  const countryHubs: HubConfig[] = allCountries.map((country) => {
     const people = roster.filter((p) => (personCountry(p) === country));
     return {
       categoryType: 'Region' as const,
@@ -497,7 +497,7 @@ async function main() {
       people,
       canonicalPath: regionPath(country),
       interactiveUrl: `../index.html?loc=${encodeURIComponent(country === 'United States' ? 'US' : country)}`,
-      otherCategories: majorCountries.filter((c) => c !== country).slice(0, 10).map((c) => ({
+      otherCategories: allCountries.filter((c) => c !== country).slice(0, 10).map((c) => ({
         label: c,
         path: regionPath(c),
       })),
