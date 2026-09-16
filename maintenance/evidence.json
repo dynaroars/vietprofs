@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-16T12:30:25.811Z",
+  "updatedAt": "2026-09-16T13:18:36.854Z",
   "entries": {
     "vp-0140": {
       "id": "vp-0140",
@@ -2885,7 +2885,89 @@
     "vp-0898": {},
     "vp-0899": {},
     "vp-0900": {},
-    "vp-0901": {},
+    "vp-0901": {
+      "name": "Tuan Mai",
+      "lastAuditedAt": "2026-09-16T13:18:36.787Z",
+      "sources": [
+        "https://keck.usc.edu/faculty-search/tuan-mai/",
+        "https://keck.usc.edu/anesthesiology/faculty/",
+        "https://internalmedicine.usc.edu/provider/tuan-anh-vu-mai/",
+        "https://npiprofile.com/npi/1841794377",
+        "https://dl.tufts.edu/downloads/028718364?filename=x633fd896.pdf",
+        "https://scholar.google.com/"
+      ],
+      "report": "The USC Keck faculty profile is reachable and identifies Tuan Mai, MD as “Clinical Assistant Professor of Anesthesiology (Clinician Educator),” confirming the current University of Southern California appointment, department, rank, and Clinical track. The USC provider record independently identifies the same physician as Tuan Anh Vu Mai, lists Tufts University School of Medicine as the medical school, and gives the MD year as 2018; the NPI record states verbatim: “He graduated from Tufts University School Of Medicine in 2018.” Tufts Alumni Magazine identifies the person as “born in Norway and raised in Southern California by Vietnamese parents,” supporting Vietnamese-diaspora eligibility. No websiteUrl was stored or discovered as a maintained personal/lab homepage. The official USC page contains an identified portrait image, but no independently retrievable image URL was available for safe portrait storage. A Google Scholar search found no identity-resolved canonical profile matching the USC affiliation and anesthesiology publications, so scholarUrl was omitted. No LinkedIn profile was directly linked or unambiguously verified. No eligible faculty-level honors were documented. The protected profileUrl was checked and remains valid; no direct-field conflict was found. Proposed changes: add confirmed=true, add mdYear=2018, and canonicalize rank to USC’s published title. Controller should own any timestamp update.",
+      "fields": {
+        "vietnameseName": {
+          "value": "Mai Tuấn",
+          "source": "https://keck.usc.edu/faculty-search/tuan-mai/",
+          "verifiedAt": "2026-09-16T13:18:36.787Z"
+        },
+        "profileUrl": {
+          "value": "https://keck.usc.edu/faculty-search/tuan-mai/",
+          "source": "https://keck.usc.edu/faculty-search/tuan-mai/",
+          "verifiedAt": "2026-09-16T13:18:36.787Z"
+        },
+        "university": {
+          "value": "University of Southern California",
+          "source": "https://keck.usc.edu/faculty-search/tuan-mai/",
+          "verifiedAt": "2026-09-16T13:18:36.787Z"
+        },
+        "city": {
+          "value": "Los Angeles",
+          "source": "https://keck.usc.edu/faculty-search/tuan-mai/",
+          "verifiedAt": "2026-09-16T13:18:36.787Z"
+        },
+        "state": {
+          "value": "California",
+          "source": "https://keck.usc.edu/faculty-search/tuan-mai/",
+          "verifiedAt": "2026-09-16T13:18:36.787Z"
+        },
+        "country": {
+          "value": "United States",
+          "source": "https://keck.usc.edu/faculty-search/tuan-mai/",
+          "verifiedAt": "2026-09-16T13:18:36.787Z"
+        },
+        "researchAreas": {
+          "value": [
+            "Anesthesiology",
+            "Critical Care Medicine"
+          ],
+          "source": "https://keck.usc.edu/faculty-search/tuan-mai/",
+          "verifiedAt": "2026-09-16T13:18:36.787Z"
+        },
+        "track": {
+          "value": "Clinical",
+          "source": "https://keck.usc.edu/faculty-search/tuan-mai/",
+          "verifiedAt": "2026-09-16T13:18:36.787Z"
+        },
+        "department": {
+          "value": "Anesthesiology",
+          "source": "https://keck.usc.edu/faculty-search/tuan-mai/",
+          "verifiedAt": "2026-09-16T13:18:36.787Z"
+        },
+        "rank": {
+          "value": "Clinical Assistant Professor of Anesthesiology (Clinician Educator)",
+          "source": "https://keck.usc.edu/faculty-search/tuan-mai/",
+          "verifiedAt": "2026-09-16T13:18:36.787Z"
+        },
+        "mdInstitution": {
+          "value": "Tufts University School of Medicine",
+          "source": "https://keck.usc.edu/faculty-search/tuan-mai/",
+          "verifiedAt": "2026-09-16T13:18:36.787Z"
+        },
+        "mdYear": {
+          "value": 2018,
+          "source": "https://keck.usc.edu/faculty-search/tuan-mai/",
+          "verifiedAt": "2026-09-16T13:18:36.787Z"
+        },
+        "confirmed": {
+          "value": true,
+          "source": "https://keck.usc.edu/faculty-search/tuan-mai/",
+          "verifiedAt": "2026-09-16T13:18:36.787Z"
+        }
+      }
+    },
     "vp-0902": {},
     "vp-0903": {},
     "vp-0904": {},
@@ -4871,7 +4953,6 @@
     "vp-1142": {},
     "vp-1143": {},
     "vp-1145": {},
-    "vp-1146": {},
     "vp-1148": {},
     "vp-1149": {
       "name": "Amy Pham",
@@ -5911,16 +5992,421 @@
     "vp-1221": {},
     "vp-1222": {},
     "vp-1223": {},
-    "vp-1224": {},
+    "vp-1224": {
+      "name": "Phuong Nguyen-Tri",
+      "lastAuditedAt": "2026-09-16T12:37:46.752Z",
+      "sources": [
+        "https://oraprdnt.uqtr.uquebec.ca/portail/genw050r.page_perso?owa_no_personne=749191",
+        "https://www.uqtr.ca/PagePerso/Phuong.Nguyen-Tri",
+        "https://nguyen-trilab.ca/",
+        "https://nguyen-trilab.ca/team/",
+        "https://neo.uqtr.ca/2026/02/23/lequipe-du-professeur-nguyen-tri-mise-en-lumiere-grace-a-un-projet-avec-hydro-quebec/",
+        "https://blogue.uqtr.ca/2020/02/25/nous-vous-presentons-les-nouveaux-professeurs-2/",
+        "https://vnexpress.net/giao-su-viet-nhan-tai-tro-trieu-usd-de-tang-tuoi-tho-cho-day-dien-cao-the-5047467.html",
+        "https://jna.com.vn/home/about/editorialHistory",
+        "https://oraprdnt.uqtr.uquebec.ca/portail/docs/GIP/PHOTO/749191/U407_Nguyen_tri_Phuong08_19.jpg"
+      ],
+      "report": "Update required. The stored profileUrl was the lab homepage; it is corrected to the official UQTR person page, while the lab homepage is moved to websiteUrl. The UQTR page identifies Phuong Nguyen-Tri as “Professeur” in the Department of Biochemistry, Chemistry, Physics and Forensic Science and links the Nguyen-Tri Lab. UQTR’s February 2026 news independently identifies the current professor, department, lab, and active research funding. Canada is outside Vietnam; the Vietnamese identity is corroborated by the Vietnamese-language VnExpress article naming “GS Nguyễn Trí Phương” at UQTR. The previous researchOverview was unrelated and is replaced with a source-backed materials-research summary. The official profile explicitly documents the PhD and the DEA in physical chemistry; the DEA is recorded as the supported master’s-equivalent credential institution, but no master’s year is inferred. Exact degree sentences: “Ph.D en sciences des matériaux, Conservatoire National des Arts et Métiers, Paris, France” and “DEA en chimie physique, École Nationale Supérieure de Chimie de Mulhouse, France.” The official page lists many routine editorial, membership, grant, paper, and conference items; these were not added as honors. The named UQTR research chair is retained as a faculty-level distinguished professorship: “Le professeur Phuong Nguyen-Tri s'est vu attribuer par l'UQTR une Chaire de recherche \"Junior\" dans le secteur des sciences naturelles et du génie.” Scholar URL is identity-resolved: the editorial-history source links this exact canonical profile, gives the UQTR affiliation and H-index, and the Scholar-linked publication list matches the person’s nanomaterials/coatings work. LinkedIn was checked but not retained because it is not directly linked from the current official profile or lab homepage. The official portrait image URL is present on the UQTR page, but retrieval returned a cache miss and no local portrait asset was added; the image source is recorded below. The lab homepage returned an HTTP 500 during direct fetch, but UQTR explicitly links it as the person’s website and current search results identify it as the maintained Nguyen-Tri Lab homepage. No directFields are present, so no protected-field conflict exists.",
+      "fields": {
+        "vietnameseName": {
+          "value": "Nguyễn Trí Phương",
+          "source": "https://oraprdnt.uqtr.uquebec.ca/portail/genw050r.page_perso?owa_no_personne=749191",
+          "verifiedAt": "2026-09-16T12:37:46.752Z"
+        },
+        "profileUrl": {
+          "value": "https://oraprdnt.uqtr.uquebec.ca/portail/genw050r.page_perso?owa_no_personne=749191",
+          "source": "https://oraprdnt.uqtr.uquebec.ca/portail/genw050r.page_perso?owa_no_personne=749191",
+          "verifiedAt": "2026-09-16T12:37:46.752Z"
+        },
+        "websiteUrl": {
+          "value": "https://nguyen-trilab.ca/",
+          "source": "https://oraprdnt.uqtr.uquebec.ca/portail/genw050r.page_perso?owa_no_personne=749191",
+          "verifiedAt": "2026-09-16T12:37:46.752Z"
+        },
+        "scholarUrl": {
+          "value": "https://scholar.google.com/citations?user=nCgjBNoAAAAJ",
+          "source": "https://oraprdnt.uqtr.uquebec.ca/portail/genw050r.page_perso?owa_no_personne=749191",
+          "verifiedAt": "2026-09-16T12:37:46.752Z"
+        },
+        "university": {
+          "value": "Université du Québec à Trois-Rivières",
+          "source": "https://oraprdnt.uqtr.uquebec.ca/portail/genw050r.page_perso?owa_no_personne=749191",
+          "verifiedAt": "2026-09-16T12:37:46.752Z"
+        },
+        "city": {
+          "value": "Trois-Rivières",
+          "source": "https://oraprdnt.uqtr.uquebec.ca/portail/genw050r.page_perso?owa_no_personne=749191",
+          "verifiedAt": "2026-09-16T12:37:46.752Z"
+        },
+        "state": {
+          "value": "Quebec",
+          "source": "https://oraprdnt.uqtr.uquebec.ca/portail/genw050r.page_perso?owa_no_personne=749191",
+          "verifiedAt": "2026-09-16T12:37:46.752Z"
+        },
+        "country": {
+          "value": "Canada",
+          "source": "https://oraprdnt.uqtr.uquebec.ca/portail/genw050r.page_perso?owa_no_personne=749191",
+          "verifiedAt": "2026-09-16T12:37:46.752Z"
+        },
+        "department": {
+          "value": "Department of Biochemistry, Chemistry, Physics and Forensic Science",
+          "source": "https://oraprdnt.uqtr.uquebec.ca/portail/genw050r.page_perso?owa_no_personne=749191",
+          "verifiedAt": "2026-09-16T12:37:46.752Z"
+        },
+        "rank": {
+          "value": "Professor",
+          "source": "https://oraprdnt.uqtr.uquebec.ca/portail/genw050r.page_perso?owa_no_personne=749191",
+          "verifiedAt": "2026-09-16T12:37:46.752Z"
+        },
+        "track": {
+          "value": "Tenure-line",
+          "source": "https://oraprdnt.uqtr.uquebec.ca/portail/genw050r.page_perso?owa_no_personne=749191",
+          "verifiedAt": "2026-09-16T12:37:46.752Z"
+        },
+        "researchAreas": {
+          "value": [
+            "Nanomaterials",
+            "Smart Coatings",
+            "Polymer Crystallization",
+            "Polymer Blends and Composites"
+          ],
+          "source": "https://oraprdnt.uqtr.uquebec.ca/portail/genw050r.page_perso?owa_no_personne=749191",
+          "verifiedAt": "2026-09-16T12:37:46.752Z"
+        },
+        "phdInstitution": {
+          "value": "Conservatoire National des Arts et Métiers",
+          "source": "https://oraprdnt.uqtr.uquebec.ca/portail/genw050r.page_perso?owa_no_personne=749191",
+          "verifiedAt": "2026-09-16T12:37:46.752Z"
+        },
+        "phdYear": {
+          "value": 2009,
+          "source": "https://oraprdnt.uqtr.uquebec.ca/portail/genw050r.page_perso?owa_no_personne=749191",
+          "verifiedAt": "2026-09-16T12:37:46.752Z"
+        },
+        "phdMajor": {
+          "value": "Material Sciences",
+          "source": "https://oraprdnt.uqtr.uquebec.ca/portail/genw050r.page_perso?owa_no_personne=749191",
+          "verifiedAt": "2026-09-16T12:37:46.752Z"
+        },
+        "msInstitution": {
+          "value": "École Nationale Supérieure de Chimie de Mulhouse",
+          "source": "https://oraprdnt.uqtr.uquebec.ca/portail/genw050r.page_perso?owa_no_personne=749191",
+          "verifiedAt": "2026-09-16T12:37:46.752Z"
+        },
+        "honors": {
+          "value": [
+            {
+              "name": "UQTR Research Chair on Advanced Materials for Occupational Health and Safety",
+              "year": 2020,
+              "category": "distinguished_professorship",
+              "organization": "Université du Québec à Trois-Rivières",
+              "source": "https://oraprdnt.uqtr.uquebec.ca/portail/genw050r.page_perso?owa_no_personne=749191"
+            }
+          ],
+          "source": "https://oraprdnt.uqtr.uquebec.ca/portail/genw050r.page_perso?owa_no_personne=749191",
+          "verifiedAt": "2026-09-16T12:37:46.752Z"
+        },
+        "researchOverview": {
+          "value": {
+            "text": "Phuong Nguyen-Tri researches advanced materials for energy, environmental, and occupational-health applications, including nanomaterials, functional composites, polymer crystallization, smart coatings, biomass valorization, and polymer durability.",
+            "sources": [
+              "https://oraprdnt.uqtr.uquebec.ca/portail/genw050r.page_perso?owa_no_personne=749191",
+              "https://neo.uqtr.ca/2026/02/23/lequipe-du-professeur-nguyen-tri-mise-en-lumiere-grace-a-un-projet-avec-hydro-quebec/"
+            ],
+            "verifiedAt": "2026-09-16T00:00:00.000Z"
+          },
+          "source": "https://oraprdnt.uqtr.uquebec.ca/portail/genw050r.page_perso?owa_no_personne=749191",
+          "verifiedAt": "2026-09-16T12:37:46.752Z"
+        }
+      }
+    },
     "vp-1225": {},
     "vp-1226": {},
     "vp-1227": {},
     "vp-1228": {},
-    "vp-1229": {},
+    "vp-1229": {
+      "name": "Nong Van Ngo",
+      "lastAuditedAt": "2026-09-16T12:38:51.801Z",
+      "sources": [
+        "https://profs.provost.nagoya-u.ac.jp/html/100010344_en.html",
+        "https://profs.provost.nagoya-u.ac.jp/html/100010344_ja.html",
+        "https://www.plasma.nagoya-u.ac.jp/pdf/Faculty%20Directory_2026.pdf",
+        "https://en.nagoya-u.ac.jp/research/joint-facilities/clps/",
+        "https://itims.edu.vn/cuu-hoc-vien/cuu-hoc-vien-cao-hoc",
+        "https://www.nuee.nagoya-u.ac.jp/en/staff/index.html",
+        "https://adscientificindex.com/scientist/ngo-van-nong/421953/"
+      ],
+      "report": "Official current appointment verified. Nagoya University’s official profile identifies “Ngo Van Nong” as “Center for Low-temperature Plasma Sciences (cLPS) Professor” and places the appointment in the Graduate School of Engineering; the official 2026 cLPS faculty directory lists “NGO Van Nong” as “exclusive Department head, Professor” for the Green DX Plasma Department. Nagoya University is a university outside Vietnam, and the identity/name match plus Vietnamese name establish roster eligibility. The official profile reports current Professor history from April 2023 and prior Designated Professor service from March 2019; the stored tenure-line track is retained because the current published rank is Professor and the official directory confirms an exclusive faculty appointment. Research topics on the official profile support the stored areas, including energy engineering/applied plasma science, nanotechnology/materials, carbon nanostructures, thermoelectrics, batteries, and energy storage. The official profile’s exact degree sentences are: “Doctor of Engineering （ 2006.9   Kyushu University ）” and “Master of Engineering （ 1999.11   Internationa Training on Materials Science ）”. The PhD institution/year are retained. The malformed master’s institution text is not normalized or added as a separate field because the source does not clearly provide a canonical institution name; an ITIMS alumni page lists Ngô Văn Nông among the 1997 former graduate students, but does not explicitly document degree conferral, so no master’s credential is added. No undergraduate degree, postdoctoral institution, or completion year was explicitly documented in the reviewed authoritative sources. No stored honors exist, and no eligible faculty-level honor was found. profileUrl was corrected from researchmap to the official Nagoya University faculty profile. No websiteUrl is present; no maintained personal/lab homepage was identified. The official profile exposes a portrait image, but the image endpoint was not independently retrievable, so no portrait or portraitSource was added. A Google Scholar search found only indirect aggregators and no identity-resolved Scholar profile; scholarUrl is therefore omitted. No linkedinUrl was added because no qualifying direct link from an official profile/personal website was found. Chronology is sane for the documented PhD; no unsupported degree-year inference was made.",
+      "fields": {
+        "vietnameseName": {
+          "value": "Nông Văn Ngọ",
+          "source": "https://profs.provost.nagoya-u.ac.jp/html/100010344_en.html",
+          "verifiedAt": "2026-09-16T12:38:51.801Z"
+        },
+        "profileUrl": {
+          "value": "https://profs.provost.nagoya-u.ac.jp/html/100010344_en.html",
+          "source": "https://profs.provost.nagoya-u.ac.jp/html/100010344_en.html",
+          "verifiedAt": "2026-09-16T12:38:51.801Z"
+        },
+        "confirmed": {
+          "value": true,
+          "source": "https://profs.provost.nagoya-u.ac.jp/html/100010344_en.html",
+          "verifiedAt": "2026-09-16T12:38:51.801Z"
+        },
+        "university": {
+          "value": "Nagoya University",
+          "source": "https://profs.provost.nagoya-u.ac.jp/html/100010344_en.html",
+          "verifiedAt": "2026-09-16T12:38:51.801Z"
+        },
+        "city": {
+          "value": "Nagoya",
+          "source": "https://profs.provost.nagoya-u.ac.jp/html/100010344_en.html",
+          "verifiedAt": "2026-09-16T12:38:51.801Z"
+        },
+        "state": {
+          "value": "Aichi",
+          "source": "https://profs.provost.nagoya-u.ac.jp/html/100010344_en.html",
+          "verifiedAt": "2026-09-16T12:38:51.801Z"
+        },
+        "country": {
+          "value": "Japan",
+          "source": "https://profs.provost.nagoya-u.ac.jp/html/100010344_en.html",
+          "verifiedAt": "2026-09-16T12:38:51.801Z"
+        },
+        "department": {
+          "value": "Center for Low-temperature Plasma Sciences",
+          "source": "https://profs.provost.nagoya-u.ac.jp/html/100010344_en.html",
+          "verifiedAt": "2026-09-16T12:38:51.801Z"
+        },
+        "rank": {
+          "value": "Professor",
+          "source": "https://profs.provost.nagoya-u.ac.jp/html/100010344_en.html",
+          "verifiedAt": "2026-09-16T12:38:51.801Z"
+        },
+        "track": {
+          "value": "Tenure-line",
+          "source": "https://profs.provost.nagoya-u.ac.jp/html/100010344_en.html",
+          "verifiedAt": "2026-09-16T12:38:51.801Z"
+        },
+        "researchAreas": {
+          "value": [
+            "Thermoelectric Materials",
+            "Nanostructured Energy Materials",
+            "Low-Temperature Plasma",
+            "Energy Conversion and Storage"
+          ],
+          "source": "https://profs.provost.nagoya-u.ac.jp/html/100010344_en.html",
+          "verifiedAt": "2026-09-16T12:38:51.801Z"
+        },
+        "phdInstitution": {
+          "value": "Kyushu University",
+          "source": "https://profs.provost.nagoya-u.ac.jp/html/100010344_en.html",
+          "verifiedAt": "2026-09-16T12:38:51.801Z"
+        },
+        "phdYear": {
+          "value": 2006,
+          "source": "https://profs.provost.nagoya-u.ac.jp/html/100010344_en.html",
+          "verifiedAt": "2026-09-16T12:38:51.801Z"
+        },
+        "phdMajor": {
+          "value": "Materials Science and Engineering",
+          "source": "https://profs.provost.nagoya-u.ac.jp/html/100010344_en.html",
+          "verifiedAt": "2026-09-16T12:38:51.801Z"
+        }
+      }
+    },
     "vp-1230": {},
-    "vp-1231": {},
+    "vp-1231": {
+      "name": "Thanh-Tuan Bui",
+      "lastAuditedAt": "2026-09-16T12:40:15.238Z",
+      "sources": [
+        "https://www.cyu.fr/recherche-et-innovation/annuaire-des-chercheurs/bui-thanh-tuan",
+        "https://senergylab.cyu.fr/english-version/members/thanh-tuan-bui",
+        "https://lppi.cyu.fr/fr/laboratoire/membres-du-lppi",
+        "https://www-2020.applis.cyu.fr/m-thanh-tuan-bui",
+        "https://www.nanoge.org/HOPV21/program-info/program",
+        "https://www.researchgate.net/profile/Thanh-Tuan-Bui",
+        "https://www.researchgate.net/scientific-contributions/Thanh-tuan-Bui-2258128120",
+        "https://cir.nii.ac.jp/crid/1382825893822045697",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC9920555/",
+        "https://fr.linkedin.com/in/thanh-tu%C3%A2n-bui-96864226",
+        "https://fr.linkedin.com/in/thanh-tuan-bui-4b1b3868",
+        "https://www.cyu.fr/medias/fichier/20210601-cp-cy-re-sults-aap-2021-uk_1622543207542-pdf"
+      ],
+      "report": "Identity and Vietnamese-diaspora eligibility are supported by the Vietnamese name Bùi Thanh Tuấn, the official CY/LPPI records, the person’s research publications, and the maintained SenergyLab page. Current appointment is verified: the official SenergyLab profile states exactly, “(36 yo), Associate professor at LPPI (CY) since 2013.” The official LPPI members directory lists “MCF-HDR | BUI | Thanh-Tuan,” and the official CY researcher directory identifies the person. CY Cergy Paris Université is a public university outside Vietnam, so the existing Tenure-line track remains eligible. The department/research unit remains LPPI (Laboratoire de Physicochimie des Polymères et des Interfaces), and the stored research areas remain consistent with the documented organic-materials, photovoltaic, polymerization, and charge-transport research. The stored profileUrl was corrected from the SenergyLab maintained lab page to the official CY institutional researcher profile; the SenergyLab page was placed in websiteUrl. The official LPPI page links to an older CY person-page URL, but the CY researcher-directory URL is the stronger current institutional profile. A live portrait image is shown on SenergyLab, but the direct image endpoint was not independently retrievable, so no portrait/portraitSource was added. Google Scholar was searched, but no identity-resolved canonical Scholar profile URL was found; the SenergyLab page’s “H-index: 13 (Google Scholar)” is not a Scholar profile. Multiple LinkedIn namesakes were found; no LinkedIn URL was retained because the matching profile was not directly linked from the official profile and identity/degree evidence was not unambiguous. The existing PhD fields were preserved. No additional explicit master's, undergraduate, professional degree, or PhD-year evidence was found. Completed postdoctoral training was added because a reliable academic conference profile explicitly states: “After one year of postdoc research at the Université Joseph Fourier – Grenoble I, he has moved to the Université de Cergy-Pontoise, firstly as ATER (one-year contracted lectureship) then as postdoc researcher at the Laboratoire de Physicochimie des Polymères et des Interfaces (LPPI).” No postdoc completion year was added because none was explicitly stated. No honors were stored or added. No directFields were supplied, so no protected-field conflict exists. Controller should assign the current review timestamp and preserve the immutable id vp-1231.",
+      "fields": {
+        "vietnameseName": {
+          "value": "Bùi Thanh Tuấn",
+          "source": "https://www.cyu.fr/recherche-et-innovation/annuaire-des-chercheurs/bui-thanh-tuan",
+          "verifiedAt": "2026-09-16T12:40:15.238Z"
+        },
+        "profileUrl": {
+          "value": "https://www.cyu.fr/recherche-et-innovation/annuaire-des-chercheurs/bui-thanh-tuan",
+          "source": "https://www.cyu.fr/recherche-et-innovation/annuaire-des-chercheurs/bui-thanh-tuan",
+          "verifiedAt": "2026-09-16T12:40:15.238Z"
+        },
+        "university": {
+          "value": "CY Cergy Paris Université",
+          "source": "https://www.cyu.fr/recherche-et-innovation/annuaire-des-chercheurs/bui-thanh-tuan",
+          "verifiedAt": "2026-09-16T12:40:15.238Z"
+        },
+        "city": {
+          "value": "Cergy",
+          "source": "https://www.cyu.fr/recherche-et-innovation/annuaire-des-chercheurs/bui-thanh-tuan",
+          "verifiedAt": "2026-09-16T12:40:15.238Z"
+        },
+        "country": {
+          "value": "France",
+          "source": "https://www.cyu.fr/recherche-et-innovation/annuaire-des-chercheurs/bui-thanh-tuan",
+          "verifiedAt": "2026-09-16T12:40:15.238Z"
+        },
+        "department": {
+          "value": "Laboratoire de Physicochimie des Polymères et des Interfaces",
+          "source": "https://www.cyu.fr/recherche-et-innovation/annuaire-des-chercheurs/bui-thanh-tuan",
+          "verifiedAt": "2026-09-16T12:40:15.238Z"
+        },
+        "rank": {
+          "value": "Associate Professor",
+          "source": "https://www.cyu.fr/recherche-et-innovation/annuaire-des-chercheurs/bui-thanh-tuan",
+          "verifiedAt": "2026-09-16T12:40:15.238Z"
+        },
+        "track": {
+          "value": "Tenure-line",
+          "source": "https://www.cyu.fr/recherche-et-innovation/annuaire-des-chercheurs/bui-thanh-tuan",
+          "verifiedAt": "2026-09-16T12:40:15.238Z"
+        },
+        "researchAreas": {
+          "value": [
+            "Organic Photovoltaics",
+            "Conjugated Polymers",
+            "Organic Thermoelectrics",
+            "Polymer Chemistry"
+          ],
+          "source": "https://www.cyu.fr/recherche-et-innovation/annuaire-des-chercheurs/bui-thanh-tuan",
+          "verifiedAt": "2026-09-16T12:40:15.238Z"
+        },
+        "phdInstitution": {
+          "value": "Université de Cergy-Pontoise",
+          "source": "https://www.cyu.fr/recherche-et-innovation/annuaire-des-chercheurs/bui-thanh-tuan",
+          "verifiedAt": "2026-09-16T12:40:15.238Z"
+        },
+        "phdYear": {
+          "value": 2008,
+          "source": "https://www.cyu.fr/recherche-et-innovation/annuaire-des-chercheurs/bui-thanh-tuan",
+          "verifiedAt": "2026-09-16T12:40:15.238Z"
+        },
+        "phdMajor": {
+          "value": "Chemistry",
+          "source": "https://www.cyu.fr/recherche-et-innovation/annuaire-des-chercheurs/bui-thanh-tuan",
+          "verifiedAt": "2026-09-16T12:40:15.238Z"
+        },
+        "websiteUrl": {
+          "value": "https://senergylab.cyu.fr/english-version/members/thanh-tuan-bui",
+          "source": "https://www.cyu.fr/recherche-et-innovation/annuaire-des-chercheurs/bui-thanh-tuan",
+          "verifiedAt": "2026-09-16T12:40:15.238Z"
+        },
+        "postdocInstitution": {
+          "value": "Université Joseph Fourier – Grenoble I",
+          "source": "https://www.cyu.fr/recherche-et-innovation/annuaire-des-chercheurs/bui-thanh-tuan",
+          "verifiedAt": "2026-09-16T12:40:15.238Z"
+        }
+      }
+    },
     "vp-1232": {},
-    "vp-1233": {},
+    "vp-1233": {
+      "name": "Anh-Thy Bui",
+      "lastAuditedAt": "2026-09-16T12:41:57.634Z",
+      "sources": [
+        "https://www.inc.cnrs.fr/fr/personne/anh-thy-bui",
+        "https://www.loma.cnrs.fr/ngoc-anh-thy-bui/",
+        "https://felements.fr/wp-content/uploads/2025/05/candidature-2025-bui.pdf",
+        "https://cv.hal.science/anhthy-bui",
+        "https://pubmed.ncbi.nlm.nih.gov/28516180/",
+        "https://www.ism.u-bordeaux.fr/sites/default/files/2023-09/fiche_sujet_m2_2024_en_moonrise.pdf",
+        "https://www.gdrpes2.fr/medias/files/booklet-of-abstracts-gdr-pes-2025-strasbourg-6.pdf",
+        "https://fr.linkedin.com/in/anh-thy-bui-704208141",
+        "https://secure.gravatar.com/avatar/?d=mm&r=g&s=48",
+        "https://www.inc.cnrs.fr/sites/institut_inc/files/styles/person/public/image/bui-emergence-2026_0.jpg?itok=Yqj6g7KS"
+      ],
+      "report": "Official CNRS evidence identifies Anh-Thy Bui as a researcher at the Institut des sciences moléculaires, a CNRS/Université de Bordeaux/Bordeaux INP unit. The 2025 CV explicitly records the current faculty-equivalent appointment: “Depuis le 1 oct. 2021 Chargée de Recherche CNRS”; this supports the Research track and confirms the stored rank, department, institute type, city, and France-based eligibility. The LOMA page is an institutional laboratory profile and is therefore added as websiteUrl; profileUrl remains the official CNRS institutional page. Identity is resolved across the exact name, CNRS/ISM affiliation, email, research topics, and publications. The CV explicitly states “2013 – 2017 Doctorat en Chimie” at ENS de Lyon, supporting the stored PhD institution, year, and major. It also documents postdoctoral appointments at NC State University (2017–2018), ENSCR/ISCR (2019–2020), and LOMA/ISM (2021), but the latest postdoc has no explicitly stated completion year and the schema cannot represent all three without unsupported inference, so no postdoc field was added. No master's or undergraduate degree is explicitly documented. No eligible faculty-level honor was established; Emergence@INC2026 is described as a project award/funding call, not clearly a qualifying career distinction. The LOMA image resolves to a Gravatar default placeholder and was rejected; the CNRS page exposes an article image but the image fetch was blocked/cache-missed, so no portrait was added. Google Scholar searches found no unambiguous canonical profile; scholarUrl remains omitted. LinkedIn was not added because it was not directly linked from an official profile and did not explicitly establish the required degree/field match. No directFields were present, and no protected-field conflict was found.",
+      "fields": {
+        "vietnameseName": {
+          "value": "Bùi Anh Thy",
+          "source": "https://www.inc.cnrs.fr/fr/personne/anh-thy-bui",
+          "verifiedAt": "2026-09-16T12:41:57.634Z"
+        },
+        "profileUrl": {
+          "value": "https://www.inc.cnrs.fr/fr/personne/anh-thy-bui",
+          "source": "https://www.inc.cnrs.fr/fr/personne/anh-thy-bui",
+          "verifiedAt": "2026-09-16T12:41:57.634Z"
+        },
+        "university": {
+          "value": "CNRS (Centre National de la Recherche Scientifique)",
+          "source": "https://www.inc.cnrs.fr/fr/personne/anh-thy-bui",
+          "verifiedAt": "2026-09-16T12:41:57.634Z"
+        },
+        "city": {
+          "value": "Talence",
+          "source": "https://www.inc.cnrs.fr/fr/personne/anh-thy-bui",
+          "verifiedAt": "2026-09-16T12:41:57.634Z"
+        },
+        "country": {
+          "value": "France",
+          "source": "https://www.inc.cnrs.fr/fr/personne/anh-thy-bui",
+          "verifiedAt": "2026-09-16T12:41:57.634Z"
+        },
+        "institutionType": {
+          "value": "Public research institute",
+          "source": "https://www.inc.cnrs.fr/fr/personne/anh-thy-bui",
+          "verifiedAt": "2026-09-16T12:41:57.634Z"
+        },
+        "department": {
+          "value": "Institut des Sciences Moléculaires",
+          "source": "https://www.inc.cnrs.fr/fr/personne/anh-thy-bui",
+          "verifiedAt": "2026-09-16T12:41:57.634Z"
+        },
+        "rank": {
+          "value": "Chargé de recherche",
+          "source": "https://www.inc.cnrs.fr/fr/personne/anh-thy-bui",
+          "verifiedAt": "2026-09-16T12:41:57.634Z"
+        },
+        "track": {
+          "value": "Research",
+          "source": "https://www.inc.cnrs.fr/fr/personne/anh-thy-bui",
+          "verifiedAt": "2026-09-16T12:41:57.634Z"
+        },
+        "researchAreas": {
+          "value": [
+            "Photochemistry",
+            "Photophysics",
+            "Lanthanide Complexes",
+            "Supramolecular Chemistry"
+          ],
+          "source": "https://www.inc.cnrs.fr/fr/personne/anh-thy-bui",
+          "verifiedAt": "2026-09-16T12:41:57.634Z"
+        },
+        "phdInstitution": {
+          "value": "École Normale Supérieure de Lyon",
+          "source": "https://www.inc.cnrs.fr/fr/personne/anh-thy-bui",
+          "verifiedAt": "2026-09-16T12:41:57.634Z"
+        },
+        "phdYear": {
+          "value": 2017,
+          "source": "https://www.inc.cnrs.fr/fr/personne/anh-thy-bui",
+          "verifiedAt": "2026-09-16T12:41:57.634Z"
+        },
+        "phdMajor": {
+          "value": "Chemistry",
+          "source": "https://www.inc.cnrs.fr/fr/personne/anh-thy-bui",
+          "verifiedAt": "2026-09-16T12:41:57.634Z"
+        },
+        "websiteUrl": {
+          "value": "https://www.loma.cnrs.fr/ngoc-anh-thy-bui/",
+          "source": "https://www.inc.cnrs.fr/fr/personne/anh-thy-bui",
+          "verifiedAt": "2026-09-16T12:41:57.634Z"
+        }
+      }
+    },
     "vp-1234": {},
     "vp-1235": {},
     "vp-1236": {},
@@ -6013,7 +6499,128 @@
     "vp-1289": {},
     "vp-1290": {},
     "vp-1291": {},
-    "vp-1292": {},
+    "vp-1292": {
+      "name": "Hong-Ha M. Truong",
+      "lastAuditedAt": "2026-09-16T12:46:48.980Z",
+      "sources": [
+        "https://profiles.ucsf.edu/hong-ha.truong",
+        "https://cfar.ucsf.edu/people/hong-ha-truong",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC10789922/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC4501865/",
+        "https://caps.ucsf.edu/personnel/htruong/"
+      ],
+      "report": "Complete live review supports continued inclusion. Identity and current appointment: UCSF’s official profile identifies “Hong-Ha M. Truong, PhD, MS, MPH,” lists “Title(s) Professor, Medicine,” the School of Medicine, and a UCSF address. The UCSF-Bay Area CFAR page independently identifies Hong-Ha Truong, PhD, MS, MPH as “Professor, School of Medicine.” University of California, San Francisco is a university, so the legacy institutionType field should be omitted under the current roster schema. The official UCSF profile URL is live and correctly serves as profileUrl. Its linked CAPS page redirects to a generic UCSF prevention site and is not a usable maintained personal/lab homepage, so websiteUrl is omitted. No identity-resolved Google Scholar profile was found; scholarUrl remains omitted. No LinkedIn profile was found through an official page or unambiguous matching criteria. No eligible faculty-level honors were documented in the reviewed authoritative sources, so honors remains omitted. No portrait was added because no suitable directly attributable current portrait source was verified.\n\nEducation additions are explicitly listed on the UCSF profile. Exact source wording: “University of California, San Francisco | Postdoctoral Fellowship | | Medicine”; “University of California, Los Angeles | Postdoctoral Fellowship | | Pediatrics”; “University of California, Los Angeles | M.S. | | Epidemiology”; and “University of California, Los Angeles | B.S. | | Psychobiology.” No graduation or postdoctoral completion years were inferred. The existing PhD institution, year, and major are confirmed by the same source. Chronological sanity is therefore preserved for the documented year fields; undated degrees/training are retained without invented years.\n\nIdentity-resolved publication evidence independently matches the person: the 2022 Annals of Epidemiology/PMC article lists “Hong-Ha M. Truong, PhD, MS, MPH” with “University of California San Francisco,” and the 2015 PMC article lists the same author and Department of Medicine, UCSF affiliation. Research areas and the revised overview are supported by the official UCSF profile’s projects/publications and CFAR affiliation. No protected directFields were present in the supplied baseline.",
+      "fields": {
+        "vietnameseName": {
+          "value": "Trương Mai Hồng Hà",
+          "source": "https://profiles.ucsf.edu/hong-ha.truong",
+          "verifiedAt": "2026-09-16T12:46:48.980Z"
+        },
+        "university": {
+          "value": "University of California, San Francisco",
+          "source": "https://profiles.ucsf.edu/hong-ha.truong",
+          "verifiedAt": "2026-09-16T12:46:48.980Z"
+        },
+        "department": {
+          "value": "Department of Medicine",
+          "source": "https://profiles.ucsf.edu/hong-ha.truong",
+          "verifiedAt": "2026-09-16T12:46:48.980Z"
+        },
+        "rank": {
+          "value": "Professor",
+          "source": "https://profiles.ucsf.edu/hong-ha.truong",
+          "verifiedAt": "2026-09-16T12:46:48.980Z"
+        },
+        "track": {
+          "value": "Tenure-line",
+          "source": "https://profiles.ucsf.edu/hong-ha.truong",
+          "verifiedAt": "2026-09-16T12:46:48.980Z"
+        },
+        "city": {
+          "value": "San Francisco",
+          "source": "https://profiles.ucsf.edu/hong-ha.truong",
+          "verifiedAt": "2026-09-16T12:46:48.980Z"
+        },
+        "state": {
+          "value": "California",
+          "source": "https://profiles.ucsf.edu/hong-ha.truong",
+          "verifiedAt": "2026-09-16T12:46:48.980Z"
+        },
+        "country": {
+          "value": "United States",
+          "source": "https://profiles.ucsf.edu/hong-ha.truong",
+          "verifiedAt": "2026-09-16T12:46:48.980Z"
+        },
+        "profileUrl": {
+          "value": "https://profiles.ucsf.edu/hong-ha.truong",
+          "source": "https://profiles.ucsf.edu/hong-ha.truong",
+          "verifiedAt": "2026-09-16T12:46:48.980Z"
+        },
+        "researchAreas": {
+          "value": [
+            "HIV Prevention Science",
+            "HIV Molecular Epidemiology",
+            "Antiretroviral Drug Resistance",
+            "Public Health Interventions",
+            "Global Health"
+          ],
+          "source": "https://profiles.ucsf.edu/hong-ha.truong",
+          "verifiedAt": "2026-09-16T12:46:48.980Z"
+        },
+        "phdInstitution": {
+          "value": "University of Washington",
+          "source": "https://profiles.ucsf.edu/hong-ha.truong",
+          "verifiedAt": "2026-09-16T12:46:48.980Z"
+        },
+        "phdYear": {
+          "value": 2002,
+          "source": "https://profiles.ucsf.edu/hong-ha.truong",
+          "verifiedAt": "2026-09-16T12:46:48.980Z"
+        },
+        "phdMajor": {
+          "value": "Pathobiology",
+          "source": "https://profiles.ucsf.edu/hong-ha.truong",
+          "verifiedAt": "2026-09-16T12:46:48.980Z"
+        },
+        "msInstitution": {
+          "value": "University of California, Los Angeles",
+          "source": "https://profiles.ucsf.edu/hong-ha.truong",
+          "verifiedAt": "2026-09-16T12:46:48.980Z"
+        },
+        "msMajor": {
+          "value": "Epidemiology",
+          "source": "https://profiles.ucsf.edu/hong-ha.truong",
+          "verifiedAt": "2026-09-16T12:46:48.980Z"
+        },
+        "undergradInstitution": {
+          "value": "University of California, Los Angeles",
+          "source": "https://profiles.ucsf.edu/hong-ha.truong",
+          "verifiedAt": "2026-09-16T12:46:48.980Z"
+        },
+        "undergradMajor": {
+          "value": "Psychobiology",
+          "source": "https://profiles.ucsf.edu/hong-ha.truong",
+          "verifiedAt": "2026-09-16T12:46:48.980Z"
+        },
+        "postdocInstitution": {
+          "value": "University of California, San Francisco; University of California, Los Angeles",
+          "source": "https://profiles.ucsf.edu/hong-ha.truong",
+          "verifiedAt": "2026-09-16T12:46:48.980Z"
+        },
+        "researchOverview": {
+          "value": {
+            "text": "Research examines HIV transmission and prevention, including molecular epidemiology, antiretroviral drug resistance, and community-based prevention strategies among adolescents.",
+            "sources": [
+              "https://profiles.ucsf.edu/hong-ha.truong",
+              "https://cfar.ucsf.edu/people/hong-ha-truong"
+            ],
+            "verifiedAt": "2026-09-16T00:00:00.000Z"
+          },
+          "source": "https://profiles.ucsf.edu/hong-ha.truong",
+          "verifiedAt": "2026-09-16T12:46:48.980Z"
+        }
+      }
+    },
     "vp-1293": {},
     "vp-1294": {},
     "vp-1295": {},
@@ -6057,16 +6664,324 @@
     "vp-1336": {},
     "vp-1337": {},
     "vp-1338": {},
-    "vp-1339": {},
+    "vp-1339": {
+      "name": "Van An Dinh",
+      "lastAuditedAt": "2026-09-16T12:52:24.633Z",
+      "sources": [
+        "https://rd.iai.osaka-u.ac.jp/en/0c551756e7e7190f.html",
+        "https://www.eng.osaka-u.ac.jp/department/en/258/",
+        "https://www.eng.osaka-u.ac.jp/department/en/gsoe/dopeaap/",
+        "https://prec.eng.osaka-u.ac.jp/06/index_e.html",
+        "https://www.sciencedirect.com/science/article/abs/pii/S0925400523000011",
+        "https://ir.library.osaka-u.ac.jp/repo/ouka/all/43584/16748_Abstract.pdf",
+        "https://orcid.org/0000-0002-7290-7969"
+      ],
+      "report": "Identity and Vietnamese-diaspora eligibility are supported by Osaka University's researcher profile, which publishes the name forms “DINH VAN AN” and “VAN AN DINH,” lists Vietnam-linked academic history, and identifies the person as a current Osaka University Specially Appointed Professor. Current appointment is explicitly listed as continuing from April 2021, and Osaka University's English engineering directory places Van An Dinh in the Computational Physics Area within the Department of Engineering Physics / Division of Applied Science. The stored profile URL was stale and is replaced with the current official institutional profile. The Morikawa-Hamada laboratory page is a maintained lab homepage and is added as websiteUrl. Because “Specially Appointed Professor” is not a permitted Tenure-line rank vocabulary item and the source does not establish tenure, track is corrected to Research; the continuing faculty-level research appointment supports eligibility. Education corrections/additions are based on the official profile: “大阪大学 大学院理学研究科物理専攻 博士課程後期 1999年4月 ～ 2002年3月” (PhD, Osaka University, 2002), “大阪大学 大学院理学研究科物理専攻博士課程前期 1997年4月 ～ 1999年3月” (master's, Osaka University, 1999), and “フエ大学 物理学部 (BSc.) 1981年9月 ～ 1985年6月” (BSc, Hue University, 1985). An independent publication source states verbatim: “Van An Dinh obtained his PhD degree in Theoretical Physics in 2002 at Faculty of Science, Osaka University (Japan).” No completed postdoctoral end year is explicitly documented, so none is added. The official profile exposes a face-photo image link, but retrieval returned a 502 and the image could not be identity-verified; no portrait is added. Google Scholar searches did not locate an unambiguous canonical profile, so scholarUrl is omitted. No LinkedIn profile or eligible faculty-level honors were found. No directFields were supplied, so none are added.",
+      "fields": {
+        "vietnameseName": {
+          "value": "Đinh Văn An",
+          "source": "https://rd.iai.osaka-u.ac.jp/en/0c551756e7e7190f.html",
+          "verifiedAt": "2026-09-16T12:52:24.633Z"
+        },
+        "profileUrl": {
+          "value": "https://rd.iai.osaka-u.ac.jp/en/0c551756e7e7190f.html",
+          "source": "https://rd.iai.osaka-u.ac.jp/en/0c551756e7e7190f.html",
+          "verifiedAt": "2026-09-16T12:52:24.633Z"
+        },
+        "websiteUrl": {
+          "value": "https://prec.eng.osaka-u.ac.jp/06/index_e.html",
+          "source": "https://rd.iai.osaka-u.ac.jp/en/0c551756e7e7190f.html",
+          "verifiedAt": "2026-09-16T12:52:24.633Z"
+        },
+        "university": {
+          "value": "Osaka University",
+          "source": "https://rd.iai.osaka-u.ac.jp/en/0c551756e7e7190f.html",
+          "verifiedAt": "2026-09-16T12:52:24.633Z"
+        },
+        "country": {
+          "value": "Japan",
+          "source": "https://rd.iai.osaka-u.ac.jp/en/0c551756e7e7190f.html",
+          "verifiedAt": "2026-09-16T12:52:24.633Z"
+        },
+        "city": {
+          "value": "Suita",
+          "source": "https://rd.iai.osaka-u.ac.jp/en/0c551756e7e7190f.html",
+          "verifiedAt": "2026-09-16T12:52:24.633Z"
+        },
+        "state": {
+          "value": "Osaka",
+          "source": "https://rd.iai.osaka-u.ac.jp/en/0c551756e7e7190f.html",
+          "verifiedAt": "2026-09-16T12:52:24.633Z"
+        },
+        "department": {
+          "value": "Department of Engineering Physics, Division of Applied Science, Graduate School of Engineering",
+          "source": "https://rd.iai.osaka-u.ac.jp/en/0c551756e7e7190f.html",
+          "verifiedAt": "2026-09-16T12:52:24.633Z"
+        },
+        "rank": {
+          "value": "Specially Appointed Professor",
+          "source": "https://rd.iai.osaka-u.ac.jp/en/0c551756e7e7190f.html",
+          "verifiedAt": "2026-09-16T12:52:24.633Z"
+        },
+        "track": {
+          "value": "Research",
+          "source": "https://rd.iai.osaka-u.ac.jp/en/0c551756e7e7190f.html",
+          "verifiedAt": "2026-09-16T12:52:24.633Z"
+        },
+        "researchAreas": {
+          "value": [
+            "Computational Materials Design",
+            "Battery Materials",
+            "Density Functional Theory",
+            "Semiconductor Physics",
+            "Spintronics"
+          ],
+          "source": "https://rd.iai.osaka-u.ac.jp/en/0c551756e7e7190f.html",
+          "verifiedAt": "2026-09-16T12:52:24.633Z"
+        },
+        "phdInstitution": {
+          "value": "Osaka University",
+          "source": "https://rd.iai.osaka-u.ac.jp/en/0c551756e7e7190f.html",
+          "verifiedAt": "2026-09-16T12:52:24.633Z"
+        },
+        "phdYear": {
+          "value": 2002,
+          "source": "https://rd.iai.osaka-u.ac.jp/en/0c551756e7e7190f.html",
+          "verifiedAt": "2026-09-16T12:52:24.633Z"
+        },
+        "phdMajor": {
+          "value": "Theoretical Physics",
+          "source": "https://rd.iai.osaka-u.ac.jp/en/0c551756e7e7190f.html",
+          "verifiedAt": "2026-09-16T12:52:24.633Z"
+        },
+        "msInstitution": {
+          "value": "Osaka University",
+          "source": "https://rd.iai.osaka-u.ac.jp/en/0c551756e7e7190f.html",
+          "verifiedAt": "2026-09-16T12:52:24.633Z"
+        },
+        "msYear": {
+          "value": 1999,
+          "source": "https://rd.iai.osaka-u.ac.jp/en/0c551756e7e7190f.html",
+          "verifiedAt": "2026-09-16T12:52:24.633Z"
+        },
+        "msMajor": {
+          "value": "Physics",
+          "source": "https://rd.iai.osaka-u.ac.jp/en/0c551756e7e7190f.html",
+          "verifiedAt": "2026-09-16T12:52:24.633Z"
+        },
+        "undergradInstitution": {
+          "value": "Hue University",
+          "source": "https://rd.iai.osaka-u.ac.jp/en/0c551756e7e7190f.html",
+          "verifiedAt": "2026-09-16T12:52:24.633Z"
+        },
+        "undergradYear": {
+          "value": 1985,
+          "source": "https://rd.iai.osaka-u.ac.jp/en/0c551756e7e7190f.html",
+          "verifiedAt": "2026-09-16T12:52:24.633Z"
+        },
+        "undergradMajor": {
+          "value": "Physics",
+          "source": "https://rd.iai.osaka-u.ac.jp/en/0c551756e7e7190f.html",
+          "verifiedAt": "2026-09-16T12:52:24.633Z"
+        },
+        "confirmed": {
+          "value": true,
+          "source": "https://rd.iai.osaka-u.ac.jp/en/0c551756e7e7190f.html",
+          "verifiedAt": "2026-09-16T12:52:24.633Z"
+        }
+      }
+    },
     "vp-1340": {},
     "vp-1341": {},
     "vp-1342": {},
     "vp-1343": {},
-    "vp-1344": {},
+    "vp-1344": {
+      "name": "Huu Duc Vo",
+      "lastAuditedAt": "2026-09-16T12:57:53.303Z",
+      "sources": [
+        "https://www.polymtl.ca/expertises/en/vo-huu-duc",
+        "https://www.polymtl.ca/expertises/vo-huu-duc/1000",
+        "https://www.polymtl.ca/programmes/cours/thermodynamique-0",
+        "https://publications.polymtl.ca/3656/1/2009_Lemire_Performance_Improvement_Axial_Compressors_Fans_ensemble.pdf",
+        "https://www.scientia.global/wp-content/uploads/Huu_Duc_Vo_Njuki_Mureithi/Huu_Duc_Vo_Njuki_Mureithi.pdf",
+        "https://ca.linkedin.com/in/huu-duc-vo-32a95b3b",
+        "https://www.google.com/search?q=site%3Ascholar.google.com%2Fcitations+%22Huu+Duc+Vo%22"
+      ],
+      "report": "Identity and Vietnamese-diaspora eligibility remain supported by the official Polytechnique Montréal profile naming Huu Duc Vo and listing the institutional appointment. Current appointment is verified: official English profile lists “Full Professor” in the Department of Mechanical Engineering; the French profile lists “Professeur titulaire” in “Département de génie mécanique.” Polytechnique Montréal is a university outside Vietnam, so institutionType remains omitted and track remains Tenure-line. The official current profile URL is corrected to the English institutional page. Research areas remain supported by the official profile’s fluid mechanics, aerodynamics, turbomachinery, and flow-control interests, together with institutional publications documenting compressor stability, gas-turbine, and plasma-actuator research. Education was checked. The official profile states exactly: “B.Eng. (McGill), S.M. (MIT), Ph. D. (MIT).” It does not explicitly provide undergraduate or master’s graduation years, so none were added. The PhD institution, 2001 year, and Aeronautics and Astronautics major remain supported by the official profile and corroborating sources. No completed postdoctoral institution or completion year was found. No eligible faculty-level honors were found; no honors field is added. No maintained personal or lab homepage was located, so websiteUrl is omitted. The institutional page exposes an image placeholder in the fetched text without a usable identity-verified portrait URL; portrait and portraitSource remain omitted. Google Scholar was searched, but no unambiguous canonical profile was found; scholarUrl is omitted. LinkedIn was found in search results, but it is not directly linked from the official profile and does not unambiguously document the required degree/field match, so linkedinUrl is omitted. No directFields were supplied.",
+      "fields": {
+        "vietnameseName": {
+          "value": "Võ Đức Hữu",
+          "source": "https://www.polymtl.ca/expertises/en/vo-huu-duc",
+          "verifiedAt": "2026-09-16T12:57:53.303Z"
+        },
+        "profileUrl": {
+          "value": "https://www.polymtl.ca/expertises/en/vo-huu-duc",
+          "source": "https://www.polymtl.ca/expertises/en/vo-huu-duc",
+          "verifiedAt": "2026-09-16T12:57:53.303Z"
+        },
+        "university": {
+          "value": "Polytechnique Montréal",
+          "source": "https://www.polymtl.ca/expertises/en/vo-huu-duc",
+          "verifiedAt": "2026-09-16T12:57:53.303Z"
+        },
+        "country": {
+          "value": "Canada",
+          "source": "https://www.polymtl.ca/expertises/en/vo-huu-duc",
+          "verifiedAt": "2026-09-16T12:57:53.303Z"
+        },
+        "city": {
+          "value": "Montreal",
+          "source": "https://www.polymtl.ca/expertises/en/vo-huu-duc",
+          "verifiedAt": "2026-09-16T12:57:53.303Z"
+        },
+        "state": {
+          "value": "Quebec",
+          "source": "https://www.polymtl.ca/expertises/en/vo-huu-duc",
+          "verifiedAt": "2026-09-16T12:57:53.303Z"
+        },
+        "department": {
+          "value": "Department of Mechanical Engineering",
+          "source": "https://www.polymtl.ca/expertises/en/vo-huu-duc",
+          "verifiedAt": "2026-09-16T12:57:53.303Z"
+        },
+        "rank": {
+          "value": "Professor",
+          "source": "https://www.polymtl.ca/expertises/en/vo-huu-duc",
+          "verifiedAt": "2026-09-16T12:57:53.303Z"
+        },
+        "track": {
+          "value": "Tenure-line",
+          "source": "https://www.polymtl.ca/expertises/en/vo-huu-duc",
+          "verifiedAt": "2026-09-16T12:57:53.303Z"
+        },
+        "researchAreas": {
+          "value": [
+            "Turbomachinery Aerodynamics",
+            "Flow Control",
+            "Gas Turbine Engines",
+            "Compressor Stability",
+            "Plasma Actuators"
+          ],
+          "source": "https://www.polymtl.ca/expertises/en/vo-huu-duc",
+          "verifiedAt": "2026-09-16T12:57:53.303Z"
+        },
+        "phdInstitution": {
+          "value": "Massachusetts Institute of Technology",
+          "source": "https://www.polymtl.ca/expertises/en/vo-huu-duc",
+          "verifiedAt": "2026-09-16T12:57:53.303Z"
+        },
+        "phdYear": {
+          "value": 2001,
+          "source": "https://www.polymtl.ca/expertises/en/vo-huu-duc",
+          "verifiedAt": "2026-09-16T12:57:53.303Z"
+        },
+        "phdMajor": {
+          "value": "Aeronautics and Astronautics",
+          "source": "https://www.polymtl.ca/expertises/en/vo-huu-duc",
+          "verifiedAt": "2026-09-16T12:57:53.303Z"
+        }
+      }
+    },
     "vp-1345": {},
     "vp-1346": {},
     "vp-1347": {},
-    "vp-1348": {},
+    "vp-1348": {
+      "name": "Luong-Viet Phung",
+      "lastAuditedAt": "2026-09-16T13:02:00.242Z",
+      "sources": [
+        "https://www.ampere-lab.fr/spip.php?article93=&lang=en",
+        "https://www.ampere-lab.fr/spip.php?article1311=&lang=en",
+        "https://www.insa-lyon.fr/en/projets?field_fp_enjeu_tid=All&field_fp_financement_tid=All&field_fp_geo_tid=All&field_fp_tags_tid=All&page=21",
+        "https://www.sciencedirect.com/article/pii/S0026271426001071",
+        "https://scispace.com/pdf/simulation-based-study-about-the-lifetime-and-incident-light-3hfo868qjm.pdf",
+        "https://fr.linkedin.com/in/luong-vi%C3%AAt-phung-34086538",
+        "https://www.insa-lyon.fr/en/taxonomy/term/211"
+      ],
+      "report": "Verified identity and Vietnamese-diaspora eligibility through the exact published name, Vietnamese name, INSA Lyon affiliation, and French academic career. The official Ampère institutional directory identifies “PHUNG | Luong-Viet” in the INSA Electrical Engineering unit with an INSA email and phone; an official Ampère thesis page identifies “Luong VIET-PHUNG, Maître de Conférences,” and current 2024–2026 Ampère/INSA project and publication records confirm continuing appointment and research activity. INSA Lyon is a university outside Vietnam, so the tenure-line Associate Professor classification is supported. Corrected profileUrl from the generic lab homepage to the official person-identifying Ampère directory page; no maintained personal/lab homepage distinct from the institutional profile was found, so websiteUrl is omitted. No scholarUrl was added: searches found only third-party links or ambiguous/noncanonical references, not an identity-resolved canonical Google Scholar profile. No linkedinUrl was added because the LinkedIn result was not directly linked from an official profile/homepage and does not unambiguously document the required degree/field match. No portrait was added because no sufficiently identity-resolved official portrait source was found. Updated the canonical institution name. Corrected education based on the identity-resolved publication biography; exact sentence: “He received the M.Sc. degree in electronic engineering and the Ph.D. degree in solid-state electronics from the University of Tours, Tours, France, in 2006 and 2010, respectively.” This supersedes the stored unsupported INSA Lyon/2008 Electrical Engineering PhD data. No undergraduate degree, postdoctoral training, or eligible faculty-level honors was explicitly documented. The 2022 International Semiconductor Conference student-paper award was excluded under the roster rules because it is a student paper recognition, not a faculty-level distinction. Chronology is sane: MS 2006 <= PhD 2010, with four years between them.",
+      "fields": {
+        "vietnameseName": {
+          "value": "Phùng Lương Việt",
+          "source": "https://www.ampere-lab.fr/spip.php?article93=&lang=en",
+          "verifiedAt": "2026-09-16T13:02:00.242Z"
+        },
+        "profileUrl": {
+          "value": "https://www.ampere-lab.fr/spip.php?article93=&lang=en",
+          "source": "https://www.ampere-lab.fr/spip.php?article93=&lang=en",
+          "verifiedAt": "2026-09-16T13:02:00.242Z"
+        },
+        "university": {
+          "value": "Institut National des Sciences Appliquées de Lyon",
+          "source": "https://www.ampere-lab.fr/spip.php?article93=&lang=en",
+          "verifiedAt": "2026-09-16T13:02:00.242Z"
+        },
+        "country": {
+          "value": "France",
+          "source": "https://www.ampere-lab.fr/spip.php?article93=&lang=en",
+          "verifiedAt": "2026-09-16T13:02:00.242Z"
+        },
+        "city": {
+          "value": "Villeurbanne",
+          "source": "https://www.ampere-lab.fr/spip.php?article93=&lang=en",
+          "verifiedAt": "2026-09-16T13:02:00.242Z"
+        },
+        "department": {
+          "value": "Laboratoire Ampère, Département de Génie Électrique",
+          "source": "https://www.ampere-lab.fr/spip.php?article93=&lang=en",
+          "verifiedAt": "2026-09-16T13:02:00.242Z"
+        },
+        "rank": {
+          "value": "Associate Professor",
+          "source": "https://www.ampere-lab.fr/spip.php?article93=&lang=en",
+          "verifiedAt": "2026-09-16T13:02:00.242Z"
+        },
+        "track": {
+          "value": "Tenure-line",
+          "source": "https://www.ampere-lab.fr/spip.php?article93=&lang=en",
+          "verifiedAt": "2026-09-16T13:02:00.242Z"
+        },
+        "researchAreas": {
+          "value": [
+            "Power Electronics",
+            "Silicon Carbide Semiconductors",
+            "GaN Power Devices",
+            "Diamond Power Electronics",
+            "High-Voltage Power Conversion"
+          ],
+          "source": "https://www.ampere-lab.fr/spip.php?article93=&lang=en",
+          "verifiedAt": "2026-09-16T13:02:00.242Z"
+        },
+        "msInstitution": {
+          "value": "University of Tours",
+          "source": "https://www.ampere-lab.fr/spip.php?article93=&lang=en",
+          "verifiedAt": "2026-09-16T13:02:00.242Z"
+        },
+        "msYear": {
+          "value": 2006,
+          "source": "https://www.ampere-lab.fr/spip.php?article93=&lang=en",
+          "verifiedAt": "2026-09-16T13:02:00.242Z"
+        },
+        "msMajor": {
+          "value": "Electronic Engineering",
+          "source": "https://www.ampere-lab.fr/spip.php?article93=&lang=en",
+          "verifiedAt": "2026-09-16T13:02:00.242Z"
+        },
+        "phdInstitution": {
+          "value": "University of Tours",
+          "source": "https://www.ampere-lab.fr/spip.php?article93=&lang=en",
+          "verifiedAt": "2026-09-16T13:02:00.242Z"
+        },
+        "phdYear": {
+          "value": 2010,
+          "source": "https://www.ampere-lab.fr/spip.php?article93=&lang=en",
+          "verifiedAt": "2026-09-16T13:02:00.242Z"
+        },
+        "phdMajor": {
+          "value": "Solid-State Electronics",
+          "source": "https://www.ampere-lab.fr/spip.php?article93=&lang=en",
+          "verifiedAt": "2026-09-16T13:02:00.242Z"
+        }
+      }
+    },
     "vp-1349": {},
     "vp-1350": {},
     "vp-1351": {},
@@ -6077,7 +6992,167 @@
     "vp-1356": {},
     "vp-1357": {},
     "vp-1358": {},
-    "vp-1359": {},
+    "vp-1359": {
+      "name": "Kien Trinh",
+      "lastAuditedAt": "2026-09-16T13:04:41.718Z",
+      "sources": [
+        "https://experts.mcmaster.ca/people/trinhk",
+        "https://www.ndorms.ox.ac.uk/team/kien-trinh",
+        "https://register.cpso.on.ca/physician-info/?cpsonum=64980",
+        "https://experts.mcmaster.ca/scholarly-works/1504945",
+        "https://experts.mcmaster.ca/scholarly-works/3528370",
+        "https://www.acupunctureprogram.com/",
+        "https://scholar.google.com/"
+      ],
+      "report": "Verified identity as Kien Vinh Trinh/Kien (Ken) Trinh through McMaster’s official Experts profile, the McMaster scholarly-works pages, the Ontario physician register, and matching publications. Current appointment is supported by the official profile’s exact listing “Clinical Professor, Family Medicine” and “Clinical Professor Family Medicine”; McMaster is a Canadian university, so institutionType is omitted under the canonical data rules. Updated the generic stored directory URL to the person-specific official profile and corrected the department to Family Medicine. The McMaster profile explicitly states: “Dr. Kien (Ken) Trinh received his M.D. degree and residency training from the University of Western Ontario in Canada.” It also explicitly states: “He earned his M.Sc. degree in Health Research Methodology at McMaster University.” The same source explicitly documents a second MSc in Statistics at McMaster, an MSc in musculoskeletal sciences at the University of Oxford, an ALM in management at Harvard University, and a PhD focused on medical-school admissions; Oxford’s official page identifies the PhD as Education at Niagara University and the undergraduate degree as BSc (Mathematics) at McMaster. No graduation years were inferred except the explicitly documented MD year 1992 from the Ontario physician register. No postdoctoral institution or completion year was documented. Added the two explicitly documented Royal College fellowships as faculty-level professional distinctions; no year was supplied. McMaster’s local teaching/preceptor/innovator awards were not added under the honors rules. The stored profileUrl was audited independently; no maintained personal or lab homepage was found, so websiteUrl is omitted. Google Scholar searches did not produce an unambiguous identity-resolved canonical profile, so scholarUrl is omitted. The LinkedIn result was not directly linked from an official page and lacked sufficient unambiguous degree/field evidence, so linkedinUrl is omitted. The official Experts page has a named profile photo, but a stable direct image URL suitable for roster portrait validation was not exposed by the accessible page; existing portrait provenance records the portrait as not found, so no portrait was added. Vietnamese-diaspora eligibility is retained based on the verified Vietnamese name and identity context; no separate documentary proof is required by the roster rules. The review is complete, with no unresolved appointment or eligibility conflict.",
+      "fields": {
+        "vietnameseName": {
+          "value": "Trịnh Kiên",
+          "source": "https://experts.mcmaster.ca/people/trinhk",
+          "verifiedAt": "2026-09-16T13:04:41.718Z"
+        },
+        "university": {
+          "value": "McMaster University",
+          "source": "https://experts.mcmaster.ca/people/trinhk",
+          "verifiedAt": "2026-09-16T13:04:41.718Z"
+        },
+        "country": {
+          "value": "Canada",
+          "source": "https://experts.mcmaster.ca/people/trinhk",
+          "verifiedAt": "2026-09-16T13:04:41.718Z"
+        },
+        "state": {
+          "value": "ON",
+          "source": "https://experts.mcmaster.ca/people/trinhk",
+          "verifiedAt": "2026-09-16T13:04:41.718Z"
+        },
+        "city": {
+          "value": "Hamilton",
+          "source": "https://experts.mcmaster.ca/people/trinhk",
+          "verifiedAt": "2026-09-16T13:04:41.718Z"
+        },
+        "department": {
+          "value": "Family Medicine",
+          "source": "https://experts.mcmaster.ca/people/trinhk",
+          "verifiedAt": "2026-09-16T13:04:41.718Z"
+        },
+        "rank": {
+          "value": "Clinical Professor",
+          "source": "https://experts.mcmaster.ca/people/trinhk",
+          "verifiedAt": "2026-09-16T13:04:41.718Z"
+        },
+        "track": {
+          "value": "Clinical",
+          "source": "https://experts.mcmaster.ca/people/trinhk",
+          "verifiedAt": "2026-09-16T13:04:41.718Z"
+        },
+        "profileUrl": {
+          "value": "https://experts.mcmaster.ca/people/trinhk",
+          "source": "https://experts.mcmaster.ca/people/trinhk",
+          "verifiedAt": "2026-09-16T13:04:41.718Z"
+        },
+        "researchAreas": {
+          "value": [
+            "Medical Acupuncture",
+            "Sports Medicine",
+            "Pain Management",
+            "Evidence-Based Medicine"
+          ],
+          "source": "https://experts.mcmaster.ca/people/trinhk",
+          "verifiedAt": "2026-09-16T13:04:41.718Z"
+        },
+        "mdInstitution": {
+          "value": "University of Western Ontario",
+          "source": "https://experts.mcmaster.ca/people/trinhk",
+          "verifiedAt": "2026-09-16T13:04:41.718Z"
+        },
+        "mdYear": {
+          "value": 1992,
+          "source": "https://experts.mcmaster.ca/people/trinhk",
+          "verifiedAt": "2026-09-16T13:04:41.718Z"
+        },
+        "undergradInstitution": {
+          "value": "McMaster University",
+          "source": "https://experts.mcmaster.ca/people/trinhk",
+          "verifiedAt": "2026-09-16T13:04:41.718Z"
+        },
+        "undergradMajor": {
+          "value": "Mathematics",
+          "source": "https://experts.mcmaster.ca/people/trinhk",
+          "verifiedAt": "2026-09-16T13:04:41.718Z"
+        },
+        "msInstitution": {
+          "value": "McMaster University",
+          "source": "https://experts.mcmaster.ca/people/trinhk",
+          "verifiedAt": "2026-09-16T13:04:41.718Z"
+        },
+        "msMajor": {
+          "value": "Health Research Methodology",
+          "source": "https://experts.mcmaster.ca/people/trinhk",
+          "verifiedAt": "2026-09-16T13:04:41.718Z"
+        },
+        "phdInstitution": {
+          "value": "Niagara University",
+          "source": "https://experts.mcmaster.ca/people/trinhk",
+          "verifiedAt": "2026-09-16T13:04:41.718Z"
+        },
+        "phdMajor": {
+          "value": "Education",
+          "source": "https://experts.mcmaster.ca/people/trinhk",
+          "verifiedAt": "2026-09-16T13:04:41.718Z"
+        },
+        "otherDegrees": {
+          "value": [
+            {
+              "degree": "MSc",
+              "institution": "McMaster University",
+              "major": "Statistics",
+              "source": "https://experts.mcmaster.ca/people/trinhk"
+            },
+            {
+              "degree": "MSc",
+              "institution": "University of Oxford",
+              "major": "Musculoskeletal Sciences",
+              "source": "https://experts.mcmaster.ca/people/trinhk"
+            },
+            {
+              "degree": "ALM",
+              "institution": "Harvard University",
+              "major": "Management",
+              "source": "https://experts.mcmaster.ca/people/trinhk"
+            },
+            {
+              "degree": "Diploma",
+              "institution": "Canadian Academy of Sport and Exercise Medicine",
+              "major": "Sports Medicine",
+              "source": "https://experts.mcmaster.ca/people/trinhk"
+            }
+          ],
+          "source": "https://experts.mcmaster.ca/people/trinhk",
+          "verifiedAt": "2026-09-16T13:04:41.718Z"
+        },
+        "honors": {
+          "value": [
+            {
+              "name": "Fellow of the Royal College of Physicians",
+              "organization": "Royal College of Physicians",
+              "category": "fellow",
+              "year": null,
+              "source": "https://experts.mcmaster.ca/people/trinhk"
+            },
+            {
+              "name": "Fellow of the Royal College of Physicians of Edinburgh",
+              "organization": "Royal College of Physicians of Edinburgh",
+              "category": "fellow",
+              "year": null,
+              "source": "https://experts.mcmaster.ca/people/trinhk"
+            }
+          ],
+          "source": "https://experts.mcmaster.ca/people/trinhk",
+          "verifiedAt": "2026-09-16T13:04:41.718Z"
+        }
+      }
+    },
     "vp-1360": {},
     "vp-1361": {},
     "vp-1362": {},
@@ -6093,12 +7168,230 @@
     "vp-1372": {},
     "vp-1373": {},
     "vp-1374": {},
-    "vp-1375": {},
+    "vp-1375": {
+      "name": "Tri A. Dinh",
+      "lastAuditedAt": "2026-09-16T13:06:33.431Z",
+      "sources": [
+        "https://www.mayoclinic.org/biographies/dinh-tri-a-m-d/bio-20055484",
+        "https://www.mayoclinic.org/biographies/dinh-tri-a-m-d/bio-20054746",
+        "https://college.mayo.edu/academics/residencies-and-fellowships/complex-benign-gynecology-fellowship-florida/department-and-faculty/",
+        "https://alumniassociation.mayo.edu/colleague-notes/tri-dinh-m-d-is-now-chair-department-of-gynecology-mayo-clinic-in-florida/",
+        "https://www.researchgate.net/profile/Tri-Dinh",
+        "https://projecttvd.org/our-foundation/",
+        "https://igcs.org/global-curriculum-mentorship-program/",
+        "https://www.linkedin.com/in/tri-dinh-11a84569"
+      ],
+      "report": "Current identity and eligibility are supported by Mayo’s official profile: Tri A. Dinh is listed at Mayo Clinic in Jacksonville, Florida, in Obstetrics and Gynecology and Gynecologic Oncology; the page lists Vietnamese among languages and states that the work extends to Vietnam, supporting Vietnamese-diaspora eligibility. The current official profile URL is bio-20055484; the stored bio-20054746 could not be fetched and should be replaced. Mayo’s official fellowship faculty page identifies him as “Department Chair Associate Professor of Obstetrics and Gynecology” in the Department of Medical and Surgical Gynecology. I retained the existing Tenure-line track because the official associate-professor faculty appointment remains current; no source contradicted it. The canonical employing academic institution is updated from the school-level label to Mayo Clinic College of Medicine and Science, and the legacy institutionType field is omitted as required for university records. The department is normalized to the official department name. Mayo explicitly documents: “He earned his medical degree and interned at Baylor College of Medicine in Houston, Texas.” and its education section lists “1992 MD - Medical School Baylor College of Medicine” and “1988 BA - (Biology/Spanish)-Cum Laude Rice University”; these support the added MD year, undergraduate institution/year, and major. Residency and gynecologic-oncology fellowship were checked but are not postdoctoral training and were not stored as postdoc fields. The official profile’s honors list was reviewed. Added the 2021 IGCS Global Humanitarian Award, 2019 Vietnamese American Medical Association Physician of the Year, and 2026 Baylor College of Medicine Humanitarian Award as faculty-career distinctions. Student/resident teaching awards, routine institutional/provider recognitions, poster/best-paper awards, certificates of appreciation/merit, and local volunteer awards were not added under the documented honors rules. No personal or lab homepage was found, so websiteUrl is omitted. The Mayo portrait is identity-matched, but no repository portrait path is proposed because files cannot be created in this task. A LinkedIn result exists, but it was not directly linked from an official profile and could not be independently fetched; linkedinUrl is omitted. Google Scholar searches produced no identity-resolved canonical profile; scholarUrl is omitted. ResearchGate corroborates the same Mayo Clinic, Department of Gynecology, Jacksonville identity and publication field, but is not used as the official profile. No material eligibility conflict remains.",
+      "fields": {
+        "vietnameseName": {
+          "value": "Đinh A. Trí",
+          "source": "https://www.mayoclinic.org/biographies/dinh-tri-a-m-d/bio-20055484",
+          "verifiedAt": "2026-09-16T13:06:33.431Z"
+        },
+        "university": {
+          "value": "Mayo Clinic College of Medicine and Science",
+          "source": "https://www.mayoclinic.org/biographies/dinh-tri-a-m-d/bio-20055484",
+          "verifiedAt": "2026-09-16T13:06:33.431Z"
+        },
+        "country": {
+          "value": "United States",
+          "source": "https://www.mayoclinic.org/biographies/dinh-tri-a-m-d/bio-20055484",
+          "verifiedAt": "2026-09-16T13:06:33.431Z"
+        },
+        "state": {
+          "value": "FL",
+          "source": "https://www.mayoclinic.org/biographies/dinh-tri-a-m-d/bio-20055484",
+          "verifiedAt": "2026-09-16T13:06:33.431Z"
+        },
+        "city": {
+          "value": "Jacksonville",
+          "source": "https://www.mayoclinic.org/biographies/dinh-tri-a-m-d/bio-20055484",
+          "verifiedAt": "2026-09-16T13:06:33.431Z"
+        },
+        "department": {
+          "value": "Department of Medical and Surgical Gynecology",
+          "source": "https://www.mayoclinic.org/biographies/dinh-tri-a-m-d/bio-20055484",
+          "verifiedAt": "2026-09-16T13:06:33.431Z"
+        },
+        "rank": {
+          "value": "Associate Professor of Obstetrics and Gynecology",
+          "source": "https://www.mayoclinic.org/biographies/dinh-tri-a-m-d/bio-20055484",
+          "verifiedAt": "2026-09-16T13:06:33.431Z"
+        },
+        "track": {
+          "value": "Tenure-line",
+          "source": "https://www.mayoclinic.org/biographies/dinh-tri-a-m-d/bio-20055484",
+          "verifiedAt": "2026-09-16T13:06:33.431Z"
+        },
+        "profileUrl": {
+          "value": "https://www.mayoclinic.org/biographies/dinh-tri-a-m-d/bio-20055484",
+          "source": "https://www.mayoclinic.org/biographies/dinh-tri-a-m-d/bio-20055484",
+          "verifiedAt": "2026-09-16T13:06:33.431Z"
+        },
+        "mdInstitution": {
+          "value": "Baylor College of Medicine",
+          "source": "https://www.mayoclinic.org/biographies/dinh-tri-a-m-d/bio-20055484",
+          "verifiedAt": "2026-09-16T13:06:33.431Z"
+        },
+        "mdYear": {
+          "value": 1992,
+          "source": "https://www.mayoclinic.org/biographies/dinh-tri-a-m-d/bio-20055484",
+          "verifiedAt": "2026-09-16T13:06:33.431Z"
+        },
+        "undergradInstitution": {
+          "value": "Rice University",
+          "source": "https://www.mayoclinic.org/biographies/dinh-tri-a-m-d/bio-20055484",
+          "verifiedAt": "2026-09-16T13:06:33.431Z"
+        },
+        "undergradYear": {
+          "value": 1988,
+          "source": "https://www.mayoclinic.org/biographies/dinh-tri-a-m-d/bio-20055484",
+          "verifiedAt": "2026-09-16T13:06:33.431Z"
+        },
+        "undergradMajor": {
+          "value": "Biology/Spanish",
+          "source": "https://www.mayoclinic.org/biographies/dinh-tri-a-m-d/bio-20055484",
+          "verifiedAt": "2026-09-16T13:06:33.431Z"
+        },
+        "researchAreas": {
+          "value": [
+            "Gynecologic Oncology",
+            "Minimally Invasive Surgery",
+            "Ovarian Cancer",
+            "Robotic Surgery"
+          ],
+          "source": "https://www.mayoclinic.org/biographies/dinh-tri-a-m-d/bio-20055484",
+          "verifiedAt": "2026-09-16T13:06:33.431Z"
+        },
+        "honors": {
+          "value": [
+            {
+              "name": "Global Humanitarian Award",
+              "year": 2021,
+              "category": "career_award",
+              "organization": "International Gynecologic Cancer Society",
+              "source": "https://www.mayoclinic.org/biographies/dinh-tri-a-m-d/bio-20055484"
+            },
+            {
+              "name": "Physician of the Year",
+              "year": 2019,
+              "category": "career_award",
+              "organization": "Vietnamese American Medical Association",
+              "source": "https://www.mayoclinic.org/biographies/dinh-tri-a-m-d/bio-20055484"
+            },
+            {
+              "name": "Humanitarian Award",
+              "year": 2026,
+              "category": "career_award",
+              "organization": "Baylor College of Medicine",
+              "source": "https://www.mayoclinic.org/biographies/dinh-tri-a-m-d/bio-20055484"
+            }
+          ],
+          "source": "https://www.mayoclinic.org/biographies/dinh-tri-a-m-d/bio-20055484",
+          "verifiedAt": "2026-09-16T13:06:33.431Z"
+        }
+      }
+    },
     "vp-1376": {},
     "vp-1377": {},
     "vp-1378": {},
     "vp-1379": {},
-    "vp-1380": {},
+    "vp-1380": {
+      "name": "Quoc Vuong Tran",
+      "lastAuditedAt": "2026-09-16T13:07:43.413Z",
+      "sources": [
+        "https://eradb-ref.yamanashi.ac.jp/html/100007100_en.html",
+        "https://www.yamanashi.ac.jp/45595",
+        "https://cdn.amegroups.cn/journals/pbpc/files/journals/5/articles/79940/public/79940-PB11-2555-R2.pdf",
+        "https://academic.oup.com/icvts/article/41/1/ivag008/8417674",
+        "https://cir.nii.ac.jp/crid/1420574876269078144",
+        "https://nerps.yamanashi.ac.jp/en/",
+        "https://doi.org/10.1111/all.15954",
+        "https://doi.org/10.1111/all.16352",
+        "https://doi.org/10.1002/clt2.12379",
+        "https://doi.org/10.1016/j.jacig.2025.100499",
+        "https://doi.org/10.21037/tlcr-23-334",
+        "https://orcid.org/0000-0003-4038-2704"
+      ],
+      "report": "Complete review supports continued inclusion and confirmed=true by the University of Yamanashi researcher profile. Identity is resolved through the official profile’s printed names “Nguyen Quoc Vuong Tran” and “Vuong Tran Nguyen Quoc,” the University of Yamanashi affiliation, the 2023 Yamanashi press release naming Nguyen Quoc Vuong Tran as an assistant professor in Immunology, and matching publications. The current official organization listing is “Graduate Faculty of Interdisciplinary Research Faculty of Medicine Basic Science for Clinical Medicine (Immunology) Assistant Professor”; therefore the stored rank is corrected from “Specially Appointed Assistant Professor” to “Assistant Professor.” The Research track remains eligible: the appointment is an assistant-professor research role, the profile lists principal-investigator projects, and the official profile records current publications through 2026. The University of Yamanashi is a university, so the legacy institutionType field is omitted under the roster guide. The official profile supports the stored research areas through “Life Science / Immunology” and the interests “Bioinformatic analysis in allergic disease, mast cells, immunology, circadian clock.” Education additions are explicit: the source states “Ph.D (Life Sciences) ( 2018.3 University of Yamanashi )” and “Medical Doctor ( 2012.10 University of Medicine and Pharmacy, Ho Chi Minh City )”; these satisfy chronological sanity. No master's, undergraduate degree, postdoctoral institution, or completion year was explicitly documented in the reviewed authoritative sources, so none is added. The stored profileUrl was a research-network landing page that did not identify this person; it is replaced with the official identity-resolved institutional profile. The nerps URL was checked independently but was not usable as a person-specific maintained homepage, so websiteUrl is omitted. No verified Google Scholar profile was found: CiNii links to Google Scholar but no identity-resolved canonical Scholar profile was discoverable, so scholarUrl is omitted. No LinkedIn profile was found through an official page or an unambiguous institutional/degree match. The official profile exposes a portrait image link, but the direct image fetch failed and the image could not be independently validated at the required quality, so no portrait is added. The listed 2024 Yamanashi Medical Society young-researcher scholarship is an institution-local award and does not meet the roster’s faculty-level, field-wide honors standard; no honor is added. No directFields were supplied in the baseline, so no protected-field conflict exists.",
+      "fields": {
+        "vietnameseName": {
+          "value": "Trần Nguyễn Quốc Vượng",
+          "source": "https://eradb-ref.yamanashi.ac.jp/html/100007100_en.html",
+          "verifiedAt": "2026-09-16T13:07:43.413Z"
+        },
+        "university": {
+          "value": "University of Yamanashi",
+          "source": "https://eradb-ref.yamanashi.ac.jp/html/100007100_en.html",
+          "verifiedAt": "2026-09-16T13:07:43.413Z"
+        },
+        "country": {
+          "value": "Japan",
+          "source": "https://eradb-ref.yamanashi.ac.jp/html/100007100_en.html",
+          "verifiedAt": "2026-09-16T13:07:43.413Z"
+        },
+        "city": {
+          "value": "Kofu",
+          "source": "https://eradb-ref.yamanashi.ac.jp/html/100007100_en.html",
+          "verifiedAt": "2026-09-16T13:07:43.413Z"
+        },
+        "department": {
+          "value": "Department of Immunology, Faculty of Medicine & Yamanashi GLIA Center",
+          "source": "https://eradb-ref.yamanashi.ac.jp/html/100007100_en.html",
+          "verifiedAt": "2026-09-16T13:07:43.413Z"
+        },
+        "rank": {
+          "value": "Assistant Professor",
+          "source": "https://eradb-ref.yamanashi.ac.jp/html/100007100_en.html",
+          "verifiedAt": "2026-09-16T13:07:43.413Z"
+        },
+        "track": {
+          "value": "Research",
+          "source": "https://eradb-ref.yamanashi.ac.jp/html/100007100_en.html",
+          "verifiedAt": "2026-09-16T13:07:43.413Z"
+        },
+        "profileUrl": {
+          "value": "https://eradb-ref.yamanashi.ac.jp/html/100007100_en.html",
+          "source": "https://eradb-ref.yamanashi.ac.jp/html/100007100_en.html",
+          "verifiedAt": "2026-09-16T13:07:43.413Z"
+        },
+        "researchAreas": {
+          "value": [
+            "Immunology",
+            "Asthma",
+            "Mast Cell Biology",
+            "Circadian Clock Genetics"
+          ],
+          "source": "https://eradb-ref.yamanashi.ac.jp/html/100007100_en.html",
+          "verifiedAt": "2026-09-16T13:07:43.413Z"
+        },
+        "phdInstitution": {
+          "value": "University of Yamanashi",
+          "source": "https://eradb-ref.yamanashi.ac.jp/html/100007100_en.html",
+          "verifiedAt": "2026-09-16T13:07:43.413Z"
+        },
+        "phdYear": {
+          "value": 2018,
+          "source": "https://eradb-ref.yamanashi.ac.jp/html/100007100_en.html",
+          "verifiedAt": "2026-09-16T13:07:43.413Z"
+        },
+        "phdMajor": {
+          "value": "Life Sciences",
+          "source": "https://eradb-ref.yamanashi.ac.jp/html/100007100_en.html",
+          "verifiedAt": "2026-09-16T13:07:43.413Z"
+        },
+        "mdInstitution": {
+          "value": "University of Medicine and Pharmacy, Ho Chi Minh City",
+          "source": "https://eradb-ref.yamanashi.ac.jp/html/100007100_en.html",
+          "verifiedAt": "2026-09-16T13:07:43.413Z"
+        },
+        "mdYear": {
+          "value": 2012,
+          "source": "https://eradb-ref.yamanashi.ac.jp/html/100007100_en.html",
+          "verifiedAt": "2026-09-16T13:07:43.413Z"
+        }
+      }
+    },
     "vp-1381": {},
     "vp-1382": {},
     "vp-1383": {},
@@ -6108,7 +7401,153 @@
     "vp-1387": {},
     "vp-1388": {},
     "vp-1389": {},
-    "vp-1390": {},
+    "vp-1390": {
+      "name": "Ngoc Tuan Tran",
+      "lastAuditedAt": "2026-09-16T13:09:02.691Z",
+      "sources": [
+        "https://sci.stu.edu.cn/info/1135/2792.htm",
+        "https://sci.stu.edu.cn/sztd/hykxyjs.htm",
+        "https://sci.stu.edu.cn/xygk/jsgrb.htm",
+        "https://orcid.org/0000-0003-1847-7301",
+        "https://onlinelibrary.wiley.com/doi/10.1111/raq.12459",
+        "https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2023.1211993/pdf",
+        "https://ttdn.vn/hoi-nhap-va-phat-trien/van-hoa-xa-hoi/tien-si-nong-dan-gianh-giai-thuong-qua-cau-vang-2019-30455",
+        "https://www.researchgate.net/profile/Tran-Tuan-6",
+        "https://loop.frontiersin.org/people/460983/overview"
+      ],
+      "report": "Identity and eligibility are supported by Shantou University’s official profile for 陈玉俊 / Tran Ngoc Tuan, the official Institute of Marine Sciences faculty directory, and matching publications carrying ORCID 0000-0003-1847-7301 and Shantou University affiliations. The official profile states current employment as Associate Professor from April 2021 to present; the faculty directory lists Tran Ngoc Tuan as a full-time teacher and Associate Professor in the Institute of Marine Sciences. This supports a current university appointment, University institution type, Tenure-line track, and continued Vietnamese-diaspora eligibility. The stored ORCID URL was replaced because it is an identifier rather than an institutional academic profile. No maintained personal or lab homepage was found; websiteUrl is therefore omitted. No verified Google Scholar profile could be identified: search results included unrelated or ambiguous profiles, so scholarUrl is omitted. No LinkedIn profile was found through an official source. No portrait was added because no directly attributable, stable portrait-source URL was verified. The department was corrected from “Marine Biology Institute” to the official English-equivalent “Institute of Marine Sciences.” The PhD year was corrected from 2017 to 2015, and explicitly documented master’s and undergraduate credentials were added. Exact source sentence for the education changes: “学历简介： - 09/2011-06/2015: 华中农业大学，博士，水产养殖专业 - 09/2007-09/2010: Can Tho University (Vietnam), 硕士，水产养殖专业 - 09/2002-09/2006: Can Tho University (Vietnam), 学士，水产动物医学专业”. The same official profile documents postdoctoral appointments at the Institute of Hydrobiology, Chinese Academy of Sciences (November 2015–November 2017) and Shantou University (March 2018–July 2020); the consolidated postdoc field uses both institutions and the latest explicitly documented completion year, 2020. Chronology is sane: 2006 <= 2010 <= 2015 <= 2020, with nine years between undergraduate completion and PhD completion. The 2019 Golden Globe Award was added as a faculty-level career distinction based on the Vietnamese government-affiliated report; the 2024/2025 “World’s Top 2% Scientists” listings were not stored because they are bibliometric rankings rather than qualifying faculty-level honors. No protected directFields were supplied, and no stored eligible honors were removed.",
+      "fields": {
+        "vietnameseName": {
+          "value": "Trần Ngọc Tuấn",
+          "source": "https://sci.stu.edu.cn/info/1135/2792.htm",
+          "verifiedAt": "2026-09-16T13:09:02.691Z"
+        },
+        "profileUrl": {
+          "value": "https://sci.stu.edu.cn/info/1135/2792.htm",
+          "source": "https://sci.stu.edu.cn/info/1135/2792.htm",
+          "verifiedAt": "2026-09-16T13:09:02.691Z"
+        },
+        "university": {
+          "value": "Shantou University",
+          "source": "https://sci.stu.edu.cn/info/1135/2792.htm",
+          "verifiedAt": "2026-09-16T13:09:02.691Z"
+        },
+        "city": {
+          "value": "Shantou",
+          "source": "https://sci.stu.edu.cn/info/1135/2792.htm",
+          "verifiedAt": "2026-09-16T13:09:02.691Z"
+        },
+        "state": {
+          "value": "Guangdong",
+          "source": "https://sci.stu.edu.cn/info/1135/2792.htm",
+          "verifiedAt": "2026-09-16T13:09:02.691Z"
+        },
+        "country": {
+          "value": "China",
+          "source": "https://sci.stu.edu.cn/info/1135/2792.htm",
+          "verifiedAt": "2026-09-16T13:09:02.691Z"
+        },
+        "department": {
+          "value": "Institute of Marine Sciences",
+          "source": "https://sci.stu.edu.cn/info/1135/2792.htm",
+          "verifiedAt": "2026-09-16T13:09:02.691Z"
+        },
+        "rank": {
+          "value": "Associate Professor",
+          "source": "https://sci.stu.edu.cn/info/1135/2792.htm",
+          "verifiedAt": "2026-09-16T13:09:02.691Z"
+        },
+        "track": {
+          "value": "Tenure-line",
+          "source": "https://sci.stu.edu.cn/info/1135/2792.htm",
+          "verifiedAt": "2026-09-16T13:09:02.691Z"
+        },
+        "researchAreas": {
+          "value": [
+            "Aquaculture",
+            "Fish Immunology",
+            "Aquatic Animal Disease",
+            "Microalgae",
+            "Probiotics"
+          ],
+          "source": "https://sci.stu.edu.cn/info/1135/2792.htm",
+          "verifiedAt": "2026-09-16T13:09:02.691Z"
+        },
+        "phdInstitution": {
+          "value": "Huazhong Agricultural University",
+          "source": "https://sci.stu.edu.cn/info/1135/2792.htm",
+          "verifiedAt": "2026-09-16T13:09:02.691Z"
+        },
+        "phdYear": {
+          "value": 2015,
+          "source": "https://sci.stu.edu.cn/info/1135/2792.htm",
+          "verifiedAt": "2026-09-16T13:09:02.691Z"
+        },
+        "phdMajor": {
+          "value": "Aquaculture",
+          "source": "https://sci.stu.edu.cn/info/1135/2792.htm",
+          "verifiedAt": "2026-09-16T13:09:02.691Z"
+        },
+        "msInstitution": {
+          "value": "Can Tho University",
+          "source": "https://sci.stu.edu.cn/info/1135/2792.htm",
+          "verifiedAt": "2026-09-16T13:09:02.691Z"
+        },
+        "msYear": {
+          "value": 2010,
+          "source": "https://sci.stu.edu.cn/info/1135/2792.htm",
+          "verifiedAt": "2026-09-16T13:09:02.691Z"
+        },
+        "msMajor": {
+          "value": "Aquaculture",
+          "source": "https://sci.stu.edu.cn/info/1135/2792.htm",
+          "verifiedAt": "2026-09-16T13:09:02.691Z"
+        },
+        "undergradInstitution": {
+          "value": "Can Tho University",
+          "source": "https://sci.stu.edu.cn/info/1135/2792.htm",
+          "verifiedAt": "2026-09-16T13:09:02.691Z"
+        },
+        "undergradYear": {
+          "value": 2006,
+          "source": "https://sci.stu.edu.cn/info/1135/2792.htm",
+          "verifiedAt": "2026-09-16T13:09:02.691Z"
+        },
+        "undergradMajor": {
+          "value": "Aquatic Animal Pathology",
+          "source": "https://sci.stu.edu.cn/info/1135/2792.htm",
+          "verifiedAt": "2026-09-16T13:09:02.691Z"
+        },
+        "postdocInstitution": {
+          "value": "Institute of Hydrobiology, Chinese Academy of Sciences and Shantou University",
+          "source": "https://sci.stu.edu.cn/info/1135/2792.htm",
+          "verifiedAt": "2026-09-16T13:09:02.691Z"
+        },
+        "postdocYear": {
+          "value": 2020,
+          "source": "https://sci.stu.edu.cn/info/1135/2792.htm",
+          "verifiedAt": "2026-09-16T13:09:02.691Z"
+        },
+        "honors": {
+          "value": [
+            {
+              "name": "Golden Globe Award",
+              "year": 2019,
+              "category": "career_award",
+              "organization": "Ho Chi Minh Communist Youth Union Central Committee and Ministry of Science and Technology of Vietnam",
+              "source": "https://ttdn.vn/hoi-nhap-va-phat-trien/van-hoa-xa-hoi/tien-si-nong-dan-gianh-giai-thuong-qua-cau-vang-2019-30455"
+            }
+          ],
+          "source": "https://sci.stu.edu.cn/info/1135/2792.htm",
+          "verifiedAt": "2026-09-16T13:09:02.691Z"
+        },
+        "confirmed": {
+          "value": true,
+          "source": "https://sci.stu.edu.cn/info/1135/2792.htm",
+          "verifiedAt": "2026-09-16T13:09:02.691Z"
+        }
+      }
+    },
     "vp-1391": {},
     "vp-1392": {},
     "vp-1393": {},

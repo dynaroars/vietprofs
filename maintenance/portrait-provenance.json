@@ -63,7 +63,12 @@
       "imageUrl": "https://webapp4.asu.edu/photo-ws/directory_photo/ickpl?blankImage=false&size=medium",
       "sourceType": "official_faculty",
       "confidence": "HIGH",
-      "identitySignals": ["name", "institution", "department", "stored_roster_url"],
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
       "retrievedAt": "2026-09-15T04:10:00.000Z"
     },
     "vp-0381": {
@@ -108,7 +113,13 @@
       "imageUrl": "https://cdn.dal.ca/faculty/engineering/industrial/faculty-staff/our-faculty1/cross-listed-professors/tri-nguyen-quang/_jcr_content/contentPar/profile/bgBanner.adaptive.214.high.jpg/1694533305000.jpg",
       "sourceType": "official_faculty",
       "confidence": "HIGH",
-      "identitySignals": ["name", "institution", "department", "rank", "stored_roster_url"],
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
       "retrievedAt": "2026-09-15T04:14:06.000Z"
     },
     "vp-0814": {
@@ -153,7 +164,13 @@
       "imageUrl": "https://fp.jaist.ac.jp/data/photo/00370.jpeg",
       "sourceType": "official_faculty",
       "confidence": "HIGH",
-      "identitySignals": ["name", "institution", "department", "rank", "stored_roster_url"],
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
       "retrievedAt": "2026-09-15T04:20:00.000Z",
       "note": "Official source image is 118×146; no larger image was exposed by the profile."
     },
@@ -161,7 +178,13 @@
       "name": "An Nguyen - City of Hope",
       "outcome": "not_found",
       "pageUrl": "https://www.cityofhope.org/patients/find-a-doctor/an-nguyen",
-      "identitySignals": ["name", "institution", "department", "rank", "stored_roster_url"],
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
       "retrievedAt": "2026-09-15T04:20:00.000Z",
       "note": "Official profile confirmed identity but blocked direct inspection; no verified image URL was available."
     },
@@ -169,14 +192,24 @@
       "name": "Andrew H. Nguyen",
       "outcome": "not_found",
       "pageUrl": "https://www.cityofhope.org/patients/find-a-doctor/andrew-nguyen",
-      "identitySignals": ["name", "institution", "department", "stored_roster_url"],
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
       "retrievedAt": "2026-09-15T04:20:00.000Z",
       "note": "Official profile blocked direct inspection and no alternative authoritative portrait was verified."
     },
     "vp-0861": {
       "name": "Thuy-Huynh Nguyen",
       "outcome": "not_found",
-      "identitySignals": ["name", "institution", "department", "stored_roster_url"],
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
       "retrievedAt": "2026-09-15T04:20:00.000Z",
       "note": "Official Loma Linda profile returned an error; no alternative authoritative portrait was verified."
     },
@@ -184,7 +217,12 @@
       "name": "Caroline T. Nguyen",
       "outcome": "not_found",
       "pageUrl": "https://keck.usc.edu/endocrinology-diabetes-division/faculty/",
-      "identitySignals": ["name", "institution", "department", "stored_roster_url"],
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
       "retrievedAt": "2026-09-15T04:20:00.000Z",
       "note": "Official faculty directory confirmed identity but exposed only generic placeholder images."
     },
@@ -192,7 +230,13 @@
       "name": "Kimloan Nguyen",
       "outcome": "not_found",
       "pageUrl": "https://profiles.utsouthwestern.edu/profile/95985/kimloan-nguyen.html",
-      "identitySignals": ["name", "institution", "department", "rank", "stored_roster_url"],
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
       "retrievedAt": "2026-09-15T04:20:00.000Z",
       "note": "Official profile exposed a default placeholder, not a portrait."
     },
@@ -200,7 +244,13 @@
       "name": "Matthew Thai-Khang Nguyen",
       "outcome": "not_found",
       "pageUrl": "https://vivo.weill.cornell.edu/display/cwid-mtn9004",
-      "identitySignals": ["name", "institution", "department", "rank", "stored_roster_url"],
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
       "retrievedAt": "2026-09-15T04:20:00.000Z",
       "note": "Official directory image endpoint returned 404; the page falls back to a generic photo."
     },
@@ -211,7 +261,13 @@
       "imageUrl": "https://somnews.ucr.edu/sites/default/files/2024-09/nguyen_banner.png",
       "sourceType": "university_news",
       "confidence": "HIGH",
-      "identitySignals": ["name", "institution", "department", "rank", "stored_roster_url"],
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
       "retrievedAt": "2026-09-15T04:20:00.000Z",
       "note": "Official UCR story names the physician and uses his featured portrait; local copy is cropped from the verified single-person banner."
     },
@@ -219,14 +275,24 @@
       "name": "Monika Dao Nguyen",
       "outcome": "not_found",
       "pageUrl": "https://healthy.kaiserpermanente.org/southern-california/physicians/monika-nguyen-2866142",
-      "identitySignals": ["name", "institution", "department", "stored_roster_url"],
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
       "retrievedAt": "2026-09-15T04:20:00.000Z",
       "note": "Official profile confirms identity but automated access loops and did not expose a verified image URL."
     },
     "vp-0889": {
       "name": "Nathan K. Nguyen",
       "outcome": "not_found",
-      "identitySignals": ["name", "institution", "department", "stored_roster_url"],
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
       "retrievedAt": "2026-09-15T04:20:00.000Z",
       "note": "No authoritative individual portrait was located in this pass."
     },
@@ -305,7 +371,13 @@
     "vp-1176": {
       "name": "Tuan Anh Nguyen - Swinburne University of Technology",
       "outcome": "not_found",
-      "identitySignals": ["name", "institution", "department", "rank", "stored_roster_url"],
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
       "retrievedAt": "2026-09-15T04:10:00.000Z",
       "note": "Repository owner rejected the prior portrait as incorrect; no replacement was verified."
     },
@@ -390,217 +462,2681 @@
       "retrievedAt": "2026-09-15T04:08:59.568Z",
       "note": "portrait or portraitSource is protected by directFields"
     },
-    "vp-0891": {"name":"Carolyn V. Nguyen","outcome":"not_found","pageUrl":"https://medschool.kp.org/faculty/members/carolyn-v-nguyen","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:25:00.000Z","note":"Official faculty profile exposed no individual portrait."},
-    "vp-0894": {"name":"Von Ta Nguyen","outcome":"not_found","pageUrl":"https://medschool.kp.org/faculty/members/von-ta-nguyen","identitySignals":["name","institution","department","rank","stored_roster_url"],"retrievedAt":"2026-09-15T04:25:00.000Z","note":"Official faculty profile exposed no individual portrait."},
-    "vp-0896": {"name":"Thanh Tran - University of South Carolina","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:25:00.000Z","note":"No authoritative individual portrait was verified."},
-    "vp-0897": {"name":"Ngoc Lien Minh Nguyen","outcome":"not_found","pageUrl":"https://sc.edu/study/colleges_schools/medicine_greenville/about/faculty/facultydir/pf2081fe0467b5e9717884a845c788c198","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:25:00.000Z","note":"Official faculty profile exposes profile_no_photo placeholder."},
-    "vp-0901": {"name":"Tuan Mai","outcome":"not_found","pageUrl":"https://keck.usc.edu/faculty-search/tuan-mai/","identitySignals":["name","institution","department","rank","stored_roster_url"],"retrievedAt":"2026-09-15T04:25:00.000Z","note":"Official profile identifies faculty member but blocks direct image inspection."},
-    "vp-0903": {"name":"Phuong Le","outcome":"not_found","pageUrl":"https://profiles.stanford.edu/350256","identitySignals":["name","institution","department","rank","stored_roster_url"],"retrievedAt":"2026-09-15T04:25:00.000Z","note":"Official Stanford profile image source is empty."},
-    "vp-0906": {"name":"Ngoc M. Nguyen-Famulare","outcome":"not_found","pageUrl":"https://nyulangone.org/doctors/1578523965/ngoc-m-nguyen-famulare","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:25:00.000Z","note":"No verified individual portrait was exposed by the inspected official page."},
-    "vp-0908": {"name":"Eddie Quan","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:25:00.000Z","note":"Official faculty domain was unavailable to retrieve; no alternative authoritative portrait was verified."},
-    "vp-0910": {"name":"Nam X. Nguyen","outcome":"not_found","pageUrl":"https://keck.usc.edu/faculty-search/nam-x-nguyen/","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:25:00.000Z","note":"Official profile blocked direct image inspection and no alternative authoritative portrait was verified."},
-    "vp-0926": {"name":"Thi Hong Tran","outcome":"found","pageUrl":"https://kyoiku-kenkyudb.omu.ac.jp/html/100001108_en.html","imageUrl":"https://kyoiku-kenkyudb.omu.ac.jp/html/img/100001108","sourceType":"official_faculty","confidence":"HIGH","identitySignals":["name","institution","department","rank","stored_roster_url"],"retrievedAt":"2026-09-15T04:25:00.000Z"},
-    "vp-0936": {"name":"Paul C. Dinh","outcome":"not_found","pageUrl":"https://medicine.iu.edu/faculty/27262/dinh-paul","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:27:00.000Z","note":"Official profile exposes a faculty placeholder."},
-    "vp-0940": {"name":"Van Tuan Dinh","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:27:00.000Z","note":"Stored official faculty URL returned 404; no alternative authoritative portrait was verified."},
-    "vp-0948": {"name":"Linh H. Nguyen","outcome":"not_found","pageUrl":"https://www.nottingham.ac.uk/business/people/lizln1.phtml","identitySignals":["name","institution","department","rank","stored_roster_url"],"retrievedAt":"2026-09-15T04:27:00.000Z","note":"Official faculty profile confirmed identity but exposed no personal portrait."},
-    "vp-0950": {"name":"Cuong Nguyen - Lincoln University","outcome":"not_found","pageUrl":"https://researchers.lincoln.ac.nz/cuong.nguyen","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:27:00.000Z","note":"No authoritative individual portrait was exposed by the inspected official profile."},
-    "vp-0964": {"name":"Quynh N. Pham","outcome":"not_found","pageUrl":"https://www.usfca.edu/faculty/quynh-pham","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:27:00.000Z","note":"Official profile blocked direct inspection; no alternative authoritative portrait was verified."},
-    "vp-0966": {"name":"Quynh Hoang","outcome":"not_found","pageUrl":"https://le.ac.uk/people/quynh-hoang","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:27:00.000Z","note":"Official profile blocked direct inspection; no alternative authoritative portrait was verified."},
-    "vp-0971": {"name":"Truc Tran","outcome":"not_found","pageUrl":"https://vivo.weill.cornell.edu/display/cwid-ttt4001","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:27:00.000Z","note":"Official directory endpoint returned a generic avatar, not a portrait."},
-    "vp-0981": {"name":"Ba D. Nguyen","outcome":"not_found","pageUrl":"https://www.mayoclinic.org/biographies/nguyen-ba-d-m-d/bio-20053834","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:27:00.000Z","note":"Official profile blocked direct inspection; no alternative authoritative portrait was verified."},
-    "vp-0983": {"name":"Nguyen H. Tran","outcome":"not_found","pageUrl":"https://www.mayo.edu/research/faculty/tran-nguyen-h-m-d/bio-20537785","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:27:00.000Z","note":"Official profile blocked direct inspection; no alternative authoritative portrait was verified."},
-    "vp-0984": {"name":"Michelle C. Nguyen","outcome":"not_found","pageUrl":"https://www.mayoclinic.org/biographies/nguyen-michelle-c-m-d/bio-20520642","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:27:00.000Z","note":"Official profile blocked direct inspection; no alternative authoritative portrait was verified."},
-    "vp-1231": {"name":"Thanh-Tuan Bui","outcome":"not_found","identitySignals":["name","institution","department","rank","stored_roster_url"],"retrievedAt":"2026-09-15T04:28:00.000Z","note":"Repository owner reported the prior asset is not a photograph of a person; it was removed and no replacement has been verified."},
-    "vp-0985": {"name":"Aivi T. Nguyen","outcome":"not_found","pageUrl":"https://www.mayo.edu/research/faculty/nguyen-aivi-t-m-d/bio-20585981","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:32:00.000Z","note":"Official profile blocked direct inspection; no verified portrait found."},
-    "vp-0987": {"name":"Nam Hai Pham","outcome":"not_found","pageUrl":"https://researchmap.jp/magn?lang=en","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:32:00.000Z","note":"No person-specific image exposed by inspected official profile."},
-    "vp-0989": {"name":"Quan Manh Phung","outcome":"not_found","pageUrl":"https://profs.provost.nagoya-u.ac.jp/html/100011169_en.html","identitySignals":["name","institution","department","rank","stored_roster_url"],"retrievedAt":"2026-09-15T04:32:00.000Z","note":"Official image endpoint returned a 1×1 placeholder."},
-    "vp-0993": {"name":"Quoc Hung Nguyen","outcome":"not_found","pageUrl":"https://raweb1.jm.aoyama.ac.jp/aguhp/KgApp/k03/resid/S001781?lang=en","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:32:00.000Z","note":"No verified individual portrait exposed."},
-    "vp-1028": {"name":"Hai Anh La","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:32:00.000Z","note":"Official page unavailable; no alternative authoritative portrait verified."},
-    "vp-1031": {"name":"Viet Do","outcome":"not_found","pageUrl":"https://research.monash.edu/en/persons/viet-do","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:32:00.000Z","note":"Stored official URL returned 404; no alternative portrait verified."},
-    "vp-1034": {"name":"Minh Quang Dao","outcome":"not_found","pageUrl":"https://eiu.edu/economic/faculty.php?id=mqdao","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:32:00.000Z","note":"No verified individual portrait exposed."},
-    "vp-1037": {"name":"Anh Nguyet Vu","outcome":"not_found","pageUrl":"https://profiles.sussex.ac.uk/p316727-anh-vu","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:32:00.000Z","note":"No verified individual portrait exposed."},
-    "vp-1042": {"name":"Lanh Tat Tran","outcome":"not_found","pageUrl":"https://bulletin.iu.edu/iu/gradschool/2024-2025/programs/bloomington/statistics/faculty.shtml","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:32:00.000Z","note":"Directory listing provided no person-specific portrait."},
-    "vp-1044": {"name":"Joseph Vu","outcome":"not_found","pageUrl":"https://business.depaul.edu/academics/departments-schools/finance-and-real-estate/academics-finance-and-real-estate-faculty-pages-default","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:32:00.000Z","note":"No verified individual portrait exposed."},
-    "vp-1045":{"name":"Hao Manh Quach","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:36:00.000Z","note":"No verified individual portrait exposed."},
-    "vp-1049":{"name":"Huong Vu","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:36:00.000Z","note":"Official URL returned 404; no alternative portrait verified."},
-    "vp-1051":{"name":"Khoa Hoang","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:36:00.000Z","note":"No verified individual portrait exposed."},
-    "vp-1067":{"name":"Huy Chau","outcome":"not_found","pageUrl":"https://research.manchester.ac.uk/en/persons/huy.chau","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:36:00.000Z","note":"Official profile explicitly exposes a no-photo placeholder."},
-    "vp-1070":{"name":"Ruby (Hong Ngoc) Nguyen","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:36:00.000Z","note":"No verified individual portrait exposed."},
-    "vp-1072":{"name":"Duong Anh Lam Tran","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:36:00.000Z","note":"No verified individual portrait exposed."},
-    "vp-1074":{"name":"Truc Thanh Ngo","outcome":"found","pageUrl":"https://www.sandiego.edu/directory/biography.php?profile_id=571","imageUrl":"https://www.sandiego.edu/assets/directory/uploads/images/571.jpg","sourceType":"official_faculty","confidence":"HIGH","identitySignals":["name","institution","department","rank","stored_roster_url"],"retrievedAt":"2026-09-15T04:36:00.000Z"},
-    "vp-1079":{"name":"Bao Tan Huynh","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:36:00.000Z","note":"No verified individual portrait exposed."},
-    "vp-1082":{"name":"Huong (Hana) Nguyen","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:36:00.000Z","note":"No verified individual portrait exposed."},
-    "vp-1089":{"name":"Kiet Tieu","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:36:00.000Z","note":"No verified individual portrait exposed."},
-    "vp-1090":{"name":"Thuong Nguyen","outcome":"not_found","pageUrl":"https://www.wgtn.ac.nz/sms/about/staff/thuong-nguyen","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:40:00.000Z","note":"No verified individual portrait exposed."},
-    "vp-1092":{"name":"Jo (Chau) Vu","outcome":"not_found","pageUrl":"https://www.vu.edu.au/researchers","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:40:00.000Z","note":"Directory page exposed only university branding."},
-    "vp-1100":{"name":"Anh D. Ngo","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:40:00.000Z","note":"No verified individual portrait exposed."},
-    "vp-1108":{"name":"Ellie Luu","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:40:00.000Z","note":"No verified individual portrait exposed."},
-    "vp-1110":{"name":"Hang Le","outcome":"not_found","pageUrl":"https://www.nottingham.ac.uk/business/people/lizhml.phtml","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:40:00.000Z","note":"No verified individual portrait exposed."},
-    "vp-1119":{"name":"Uyen T. Nguyen","outcome":"not_found","pageUrl":"https://history.fas.harvard.edu/people/uyen-nguyen","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:40:00.000Z","note":"No verified individual portrait exposed."},
-    "vp-1124":{"name":"Quynh Doan","outcome":"not_found","pageUrl":"https://pediatrics.med.ubc.ca/about/current-faculty/","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:40:00.000Z","note":"No verified individual portrait exposed."},
-    "vp-1129":{"name":"Nha Nguyen","outcome":"not_found","pageUrl":"https://www.umoncton.ca/notreumoncton/node/27","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:40:00.000Z","note":"Official page exposed only generic site imagery."},
-    "vp-1130":{"name":"Thu Pham-Gia","outcome":"not_found","pageUrl":"https://www.umoncton.ca/prof/node/811","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:40:00.000Z","note":"Official page exposed only generic site imagery."},
-    "vp-1136":{"name":"Ngoc A. Nguyen","outcome":"not_found","pageUrl":"https://www.ornl.gov/staff-profile/ngoc-nguyen","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:40:00.000Z","note":"Official page blocked direct inspection; no alternative portrait verified."},
-    "vp-1138":{"name":"Ruby Nguyen","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:45:00.000Z","note":"Official page blocked direct inspection; no verified portrait found."},
-    "vp-1146":{"name":"Dinh C. Nguyen","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:45:00.000Z","note":"Conference PDF is not a sufficient portrait source; no authoritative portrait verified."},
-    "vp-1148":{"name":"Hao Phan","outcome":"not_found","pageUrl":"https://library.niu.edu/university-libraries/about/facultyprofile.shtml?first=Hao&last=Phan","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:45:00.000Z","note":"Official profile exposed no person-specific portrait."},
-    "vp-1149":{"name":"Amy Pham","outcome":"not_found","pageUrl":"https://www.sandiego.edu/library/about/biography.php?profile_id=14164","identitySignals":["name","institution","department","rank","stored_roster_url"],"retrievedAt":"2026-09-15T04:45:00.000Z","note":"Official page explicitly uses no-image placeholder."},
-    "vp-1153":{"name":"Trien Nguyen","outcome":"found","pageUrl":"https://uwaterloo.ca/economics/profiles/trien-nguyen-retired","imageUrl":"https://uwaterloo.ca/economics/sites/default/files/uploads/images/trien-nguyen_0.jpg","sourceType":"official_faculty","confidence":"HIGH","identitySignals":["name","institution","department","rank","stored_roster_url"],"retrievedAt":"2026-09-15T04:45:00.000Z"},
-    "vp-1156":{"name":"Ly Thi Tran","outcome":"not_found","pageUrl":"https://www.deakin.edu.au/about-deakin/people/ly-tran","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:45:00.000Z","note":"Official page blocked direct inspection; no alternative portrait verified."},
-    "vp-1157":{"name":"Hien Trong Nguyen","outcome":"not_found","pageUrl":"https://www.jpl.nasa.gov/site/research/htnguyen/","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:45:00.000Z","note":"Stored NASA URL returned 404; no alternative portrait verified."},
-    "vp-1158":{"name":"Frédéric Pham","outcome":"not_found","pageUrl":"https://math.univ-cotedazur.fr/","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:45:00.000Z","note":"Department landing page exposed no person-specific portrait."},
-    "vp-1160":{"name":"Buu-Hoi Nguyen-Phuc","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:50:00.000Z","note":"Stored Wikipedia page is not an authoritative portrait source; no institutional portrait verified."},
-    "vp-1162":{"name":"Dong Ngo","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:50:00.000Z","note":"Stored Wikipedia page is not an authoritative portrait source; no institutional portrait verified."},
-    "vp-1173":{"name":"Huu Hao Ngo","outcome":"not_found","pageUrl":"https://profiles.uts.edu.au/HuuHao.Ngo","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:50:00.000Z","note":"No verified individual portrait exposed."},
-    "vp-1175":{"name":"Thong Pham - Adelaide University","outcome":"not_found","pageUrl":"https://researchers.adelaide.edu.au/profile/thong.pham","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:50:00.000Z","note":"Official profile connection failed; no alternative portrait verified."},
-    "vp-1181":{"name":"Brian Kha Tran","outcome":"not_found","pageUrl":"https://www.csulb.edu/mathematics-statistics/department-directory","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:50:00.000Z","note":"Directory exposed no verified individual portrait."},
-    "vp-1184":{"name":"Thi-Kien Dao","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:50:00.000Z","note":"Conference PDF is not sufficient evidence for a portrait."},
-    "vp-1189":{"name":"Dung Hoang Duong","outcome":"not_found","pageUrl":"https://scholars.uow.edu.au/hoang-dung-duong/","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:50:00.000Z","note":"No verified individual portrait exposed."},
-    "vp-1191":{"name":"Kim-Phuong L. Vu","outcome":"not_found","pageUrl":"https://www.cla.csulb.edu/departments/psychology/faculty/kim-phuong-vu/","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:50:00.000Z","note":"Official page exposed unrelated group imagery, not a person-specific portrait."},
-    "vp-1193":{"name":"Huy P. Phan","outcome":"not_found","pageUrl":"https://www.une.edu.au/staff-profiles/education/hphan2","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T04:50:00.000Z","note":"Official profile blocked direct inspection; no alternative portrait verified."},
-    "vp-1195":{"name":"Vinh N. Dang","outcome":"found","pageUrl":"https://www.psi.ch/en/rhr/people/vinh-n-dang","imageUrl":"https://www.psi.ch/sites/default/files/styles/primer_teaser_mini_square_crop/public/import/nes/LaboratoriesEN/Dang.jpg.webp?h=a5b0584b&itok=GHTfQLtD","sourceType":"official_faculty","confidence":"HIGH","identitySignals":["name","institution","department","rank","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z"},
-    "vp-1196":{"name":"Long Tien Truong","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"No verified individual portrait exposed."},
-    "vp-1198":{"name":"Lam Thi Mai Huynh","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"No verified individual portrait exposed."},
-    "vp-1199":{"name":"Son Truong","outcome":"found","pageUrl":"https://www.dal.ca/faculty/health/health-humanperformance/faculty-staff/our-faculty/leisure-studies/son-truong.html","imageUrl":"https://cdn.dal.ca/faculty/health/health-humanperformance/faculty-staff/our-faculty/leisure-studies/son-truong/_jcr_content/contentPar/profile/bgBanner.adaptive.214.high.jpg/1641561335207.jpg","sourceType":"official_faculty","confidence":"HIGH","identitySignals":["name","institution","department","rank","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z"},
-    "vp-1201":{"name":"Huong Thanh Bui","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"No verified individual portrait exposed."},
-    "vp-1202":{"name":"Anh Van Vo","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Official URL returned 404; no alternative portrait verified."},
-    "vp-1203":{"name":"Anh-Huy Phan","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"No verified individual portrait exposed."},
-    "vp-1205":{"name":"Tao Pham Dinh","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Official profile unavailable; no alternative portrait verified."},
-    "vp-1206":{"name":"Tuan Kim Vu","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Official profile rejected automated request; no alternative portrait verified."},
-    "vp-1207":{"name":"The Anh Bui","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Official domain unavailable; no alternative portrait verified."},
-    "vp-1208":{"name":"Hoa Huu Phuc Nguyen","outcome":"found","pageUrl":"https://www.igsn.ruhr-uni-bochum.de/people/faculty-members/huu-phuc-nguyen/","imageUrl":"https://www.igsn.ruhr-uni-bochum.de/wp-content/uploads/members/nguyen.jpg","sourceType":"official_faculty","confidence":"HIGH","identitySignals":["exact_name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Official IGSN faculty profile identifies Prof. Dr. Hoa Huu Phuc Nguyen; portrait alt text and photo credit match."},
-    "vp-1215":{"name":"Hieu Pham","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Official UAH profile exposed no verified individual portrait."},
-    "vp-1216":{"name":"Phuong Hong Nguyen","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Official IFPRI expert page exposed no verified individual portrait."},
-    "vp-1217":{"name":"Hoai-Nam Truong","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Stored INRAE URL was unavailable; no alternative portrait verified."},
-    "vp-1218":{"name":"Bao-Lam Huynh","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Official UCR profile exposed no verified individual portrait."},
-    "vp-1220":{"name":"Anh-Vu Vo","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Official UCD profile exposed no verified individual portrait."},
-    "vp-1224":{"name":"Phuong Nguyen-Tri","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Stored lab URL returned an error; no alternative portrait verified."},
-    "vp-1226":{"name":"Toan Trong Tran","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Official UTS profile exposed no verified individual portrait."},
-    "vp-1228":{"name":"Thuy-Duong Nguyen-Phan","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Official NETL page exposed branding only; no verified individual portrait."},
-    "vp-1229":{"name":"Nong Van Ngo","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Stored researchmap profile blocked access; no alternative portrait verified."},
-    "vp-1233":{"name":"Anh-Thy Bui","outcome":"found","pageUrl":"https://www.inc.cnrs.fr/fr/personne/anh-thy-bui","imageUrl":"https://www.inc.cnrs.fr/sites/institut_inc/files/styles/person/public/image/bui-emergence-2026_0.jpg?itok=Yqj6g7KS","sourceType":"official_faculty","confidence":"HIGH","identitySignals":["exact_name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"CNRS Chimie person page names Anh-Thy Bui and embeds a single-person 405x405 portrait."},
-    "vp-1236":{"name":"Nhan Viet Tran","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Official Fermilab page did not expose a verified individual portrait."},
-    "vp-1239":{"name":"Quang-Dé Nguyen","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Official Harvard profile did not expose a verified individual portrait."},
-    "vp-1240":{"name":"Kim-Vy Tran","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Harvard profile blocked automated access; no alternative portrait verified."},
-    "vp-1241":{"name":"Minh Huynh","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"CSIRO profile exposed no verified individual portrait."},
-    "vp-1250":{"name":"Lap Van Dao","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Swinburne profile exposed no verified individual portrait."},
-    "vp-1252":{"name":"Viet Giang Truong","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Stored OIST URL returned 404; no alternative portrait verified."},
-    "vp-1257":{"name":"Thuy Le Toan","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"CESBIO landing page exposed no verified individual portrait."},
-    "vp-1258":{"name":"Anh-Tu Nguyen","outcome":"found","pageUrl":"https://sites.google.com/view/anh-tu-nguyen","imageUrl":"https://lh3.googleusercontent.com/sitesv/AG8ngQWLPPyK7a6jJUdFLG99Z3YgKjxriOfwfCEGvfsKgdteeuknVOFe8D9_dSzJqEV-ZlRUP_yGMkjHPfy4UbnDUQ1oStz1_YzTsK6crXL5UpBxWdsXpHq0A_CmQWsI8msTjLJnguHKHQKFg12OwDi_NpEA4XciBnPyhFmuWRTH-jFNXLTHdCj22DelEkn1zeHUDOtMnH_hRGnA=w1280","sourceType":"personal_homepage","confidence":"HIGH","identitySignals":["exact_name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Personal academic homepage identifies Dr. Anh-Tu Nguyen and INSA Hauts-de-France/Université Polytechnique Hauts-de-France; embedded image is a single person."},
-    "vp-1260":{"name":"Trang N. T. Phan","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Stored ICR page exposed no verified individual portrait."},
-    "vp-1269":{"name":"Kien Phan Huy","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"FEMTO-ST homepage exposed no verified individual portrait."},
-    "vp-1271":{"name":"Khanh Pham","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"AFRL news page blocked automated access; no alternative portrait verified."},
-    "vp-1279":{"name":"Thao Pham","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"AP-HM homepage exposed no verified individual portrait."},
-    "vp-1280":{"name":"Long Ngo","outcome":"found","pageUrl":"https://research.bidmc.org/general-medicine/people/long-h-ngo-phd","imageUrl":"https://research.bidmc.org/files/styles/large/public/general-medicine/files/ngo66.jpg?itok=2MFAUuNP","sourceType":"official_faculty","confidence":"HIGH","identitySignals":["exact_name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"BIDMC/Harvard profile names Long H. Ngo and embeds a single-person portrait."},
-    "vp-1282":{"name":"Thuy Mai Luu","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Université de Montréal page exposed a generic silhouette, not a verified portrait."},
-    "vp-1283":{"name":"Thuy Do","outcome":"found","pageUrl":"https://medicinehealth.leeds.ac.uk/dentistry/staff/280/dr-thuy-do","imageUrl":"https://medicinehealth.leeds.ac.uk/images/resized/100x100-0-0-1-80-Thuy_portrait.jpg","sourceType":"official_faculty","confidence":"HIGH","identitySignals":["exact_name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"University of Leeds staff page names Professor Thuy Do and embeds a single-person portrait."},
-    "vp-1290":{"name":"Binh An P. Phan","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"UCSF profile exposed no verified individual portrait."},
-    "vp-1292":{"name":"Hong-Ha M. Truong","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"UCSF profile exposed no verified individual portrait."},
-    "vp-1294":{"name":"Cuong J. Bui","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Tulane neurosurgery page exposed no verified individual portrait."},
-    "vp-1298":{"name":"Nam Vo","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"University of Pittsburgh department homepage exposed no verified individual portrait."},
-    "vp-1301":{"name":"Linh H. Nghiem","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Sydney profile did not expose a verified individual portrait."},
-    "vp-1305":{"name":"Long Doan","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Maryland profile did not expose a verified individual portrait."},
-    "vp-1307":{"name":"Binh Nghiem-Phu","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Stored researchmap URL returned not found and exposed only a placeholder."},
-    "vp-1308":{"name":"Hien Van Doan","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Chiang Mai personnel page did not expose a verified individual portrait."},
-    "vp-1310":{"name":"Bao Q. Vuong","outcome":"found","pageUrl":"https://www.ccny.cuny.edu/profiles/bao-vuong","imageUrl":"https://www.ccny.cuny.edu/sites/default/files/Bao-%20IMG_7785c.jpg","sourceType":"official_faculty","confidence":"HIGH","identitySignals":["exact_name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"CCNY profile metadata names Bao Vuong and embeds a clear single-person portrait."},
-    "vp-1327":{"name":"Loc Huu Ho","outcome":"found","pageUrl":"https://research.wur.nl/en/persons/huu-loc-ho/","imageUrl":"https://research.wur.nl/files-asset/95641737/GetMedia.ashx_id_117367_ts_1788939383/","sourceType":"official_faculty","confidence":"HIGH","identitySignals":["exact_name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Wageningen Research Portal page names Huu Loc Ho and embeds a single-person portrait."},
-    "vp-1330":{"name":"Quang-Van Doan","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"University of Tsukuba researcher page exposed no verified individual portrait."},
-    "vp-1332":{"name":"Luc Duc Phung","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Yamagata researcher directory exposed no verified individual portrait."},
-    "vp-1337":{"name":"Phuong Mai Dinh","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"LPT homepage exposed no verified individual portrait."},
-    "vp-1339":{"name":"Van An Dinh","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Osaka research profile was unavailable; no alternative portrait verified."},
-    "vp-1340":{"name":"Dinh Ho Tong Minh","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"TETIS personnel page exposed no verified individual portrait."},
-    "vp-1341":{"name":"Tan-Phu Vuong","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"LCIS members page exposed no verified individual portrait."},
-    "vp-1342":{"name":"Cao Hung Pham","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Sydney profile was unavailable; no alternative portrait verified."},
-    "vp-1344":{"name":"Huu Duc Vo","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Polytechnique Montréal expert page exposed no verified individual portrait."},
-    "vp-1345":{"name":"Quoc Lam Vuong","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"UMONS portal exposed no verified individual portrait."},
-    "vp-1319":{"name":"Doan B. Hoang","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"UTS profile did not expose a verified individual portrait."},
-    "vp-1321":{"name":"Nghia Duong-Trung","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"DFKI page was blocked by an interstitial; no alternative portrait verified."},
-    "vp-1323":{"name":"Cao-Thang Dinh","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Queen's engineering page did not expose a verified individual portrait."},
-    "vp-1324":{"name":"Tu C. Le","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"RMIT profile was unavailable; no alternative portrait verified."},
-    "vp-1326":{"name":"Doan-Trung Luu","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"INRAE team page did not expose a verified individual portrait."},
-    "vp-1346":{"name":"Quoc Viet Phung","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"ECU staff page did not expose a verified individual portrait."},
-    "vp-1347":{"name":"Kim Dang Phung","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"IDPOISSON profile did not expose a verified individual portrait."},
-    "vp-1348":{"name":"Luong-Viet Phung","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"AMPERE laboratory homepage did not expose a verified individual portrait."},
-    "vp-1350":{"name":"Khê Hoang-Xuan","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Institut du Cerveau page did not expose a verified individual portrait."},
-    "vp-1352":{"name":"Anh-Tuan Dinh-Xuan","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Université de Paris homepage did not expose a verified individual portrait."},
-    "vp-1354":{"name":"Hai Phung","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Griffith expert page did not expose a verified individual portrait."},
-    "vp-1355":{"name":"Quan V. Vuong","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"UTS profile did not expose a verified individual portrait."},
-    "vp-1356":{"name":"Chau Trinh-Shevrin","outcome":"found","pageUrl":"https://med.nyu.edu/faculty/chau-trinh-shevrin","imageUrl":"https://med.nyu.edu/dti-physician-photo/faculty/t/trinhc01/trinhc01-hero.jpg","sourceType":"official_faculty","confidence":"HIGH","identitySignals":["exact_name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"NYU Grossman School of Medicine faculty page names Chau Trinh-Shevrin and embeds a single-person portrait."},
-    "vp-1359":{"name":"Kien Trinh","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"McMaster faculty directory URL was not found; no alternative portrait verified."},
-    "vp-1362":{"name":"Le Mai Tu","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Sherbrooke specialist page exposed no verified individual portrait."},
-    "vp-1368":{"name":"Phuong L. Doan","outcome":"found","pageUrl":"https://medicine.duke.edu/news/remembering-dr-phuong-doan","imageUrl":"https://medicine.duke.edu/sites/default/files/styles/social_media_card/public/2023-11/doan_.png?h=57024e64&itok=L7pWdwrI","sourceType":"university_news","confidence":"HIGH","identitySignals":["exact_name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Duke Department of Medicine memorial page names Dr. Phuong Doan and displays a single-person portrait."},
-    "vp-1370":{"name":"Quôc Dinh Nguyên","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Université de Montréal profile exposed a generic silhouette, not a verified portrait."},
-    "vp-1373":{"name":"Nghiem B. Ha","outcome":"found","pageUrl":"https://profiles.ucsf.edu/nghiem.ha","imageUrl":"https://researcherprofiles.org/profile/Modules/CustomViewPersonGeneralInfo/PhotoHandler.ashx?NodeID=196235&cachekey=fe5f3597-c464-4e99-b004-76063f945519","sourceType":"official_faculty","confidence":"HIGH","identitySignals":["exact_name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"UCSF profile names Nghiem Ha and embeds a labeled individual portrait."},
-    "vp-1374":{"name":"Trang D. Trinh","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"UCSF Medical Education page exposed placeholders, not a verified individual portrait."},
-    "vp-1375":{"name":"Tri A. Dinh","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Mayo Clinic biography blocked automated access; no alternative portrait verified."},
-    "vp-1376":{"name":"Binh N. Trinh","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"UCSF Surgery page was access denied; no alternative portrait verified."},
-    "vp-1377":{"name":"Tam T. Doan","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Baylor profile exposed no verified individual portrait."},
-    "vp-1379":{"name":"Cat Khanh Vuong","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Tsukuba image endpoint returned a portrait whose page identity did not match Cat Khanh Vuong; rejected."},
-    "vp-1380":{"name":"Quoc Vuong Tran","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Yamanashi portal exposed no verified individual portrait."},
-    "vp-1381":{"name":"Nhu Khue Vuong","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"A*STAR I2R homepage exposed no verified individual portrait."},
-    "vp-1382":{"name":"Kiên Kiêu","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"INRAE homepage exposed no verified individual portrait."},
-    "vp-1388":{"name":"Michel Le Van Quyen","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Inserm homepage exposed branding only; no verified individual portrait."},
-    "vp-1390":{"name":"Ngoc Tuan Tran","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"ORCID is an identity clue only and did not provide a verified portrait source."},
-    "vp-1392":{"name":"Dinh Ha Duy Thuy","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Researchmap profile returned not found and exposed only a placeholder."},
-    "vp-1393":{"name":"Chinh Ho","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Sydney profile was unavailable; no alternative portrait verified."},
-    "vp-1395":{"name":"Huyen Le","outcome":"found","pageUrl":"https://geography.osu.edu/people/le.253","imageUrl":"https://geography.osu.edu/sites/default/files/styles/people_profile_image/public/pictures/2024-03/Le%20Huyen_300x400.jpg.webp?h=f803f42f&itok=QYNCJXpk","sourceType":"official_faculty","confidence":"HIGH","identitySignals":["exact_name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Ohio State Geography profile names Huyen Le and embeds a single-person portrait."},
-    "vp-1396":{"name":"Thuan Thai","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Notre Dame Australia page was blocked by an interstitial; no alternative portrait verified."},
-    "vp-1397":{"name":"Duc Thanh Nguyen","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Deakin page was blocked by an interstitial; no alternative portrait verified."},
-    "vp-1401":{"name":"Kim Khoa Nguyen","outcome":"found","pageUrl":"https://www.etsmtl.ca/en/research/professors-researchers/knguyen","imageUrl":"https://www.etsmtl.ca/uploads/KimKhoa-Nguyen-ETS.jpg","sourceType":"official_faculty","confidence":"HIGH","identitySignals":["exact_name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"ÉTS Montréal profile names Kim Khoa Nguyen and embeds a single-person portrait."},
-    "vp-1403":{"name":"Cuong Pham","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Wentworth faculty catalog exposed no verified individual portrait."},
-    "vp-1404":{"name":"Triet H. M. Le","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Adelaide profile was unavailable; no alternative portrait verified."},
-    "vp-1405":{"name":"Cuong Ton-That","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"UTS profile did not expose a verified individual portrait."},
-    "vp-1406":{"name":"Tuan Hung Nguyen","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Tohoku URL returned 404; no alternative portrait verified."},
-    "vp-1407":{"name":"Quoc Duy Ho","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"University of Stavanger page did not expose a verified individual portrait."},
-    "vp-1409":{"name":"Thao M. Ho","outcome":"found","pageUrl":"https://researchportal.helsinki.fi/en/persons/minh-thao-ho/","imageUrl":"https://researchportal.helsinki.fi/files-asset/163760208/9.jpg/","sourceType":"official_faculty","confidence":"HIGH","identitySignals":["exact_name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"University of Helsinki Research Portal profile identifies Minh Thao Ho and embeds a single-person portrait."},
-    "vp-1410":{"name":"Lap-Cuong Hua","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"IHE Delft profile exposed no verified individual portrait."},
-    "vp-1413":{"name":"Hung Ton-That","outcome":"found","pageUrl":"https://bioscience.ucla.edu/people/hung-ton-that","imageUrl":"https://researcherprofiles.org/profile/Modules/CustomViewPersonGeneralInfo/PhotoHandler.ashx?NodeID=324607752","sourceType":"official_faculty","confidence":"HIGH","identitySignals":["exact_name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"UCLA Graduate Programs in Bioscience page names Hung Ton-That and embeds a labeled individual portrait."},
-    "vp-1420":{"name":"Huong Giang T. Nguyen","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"NIST people page exposed no verified individual portrait."},
-    "vp-1421":{"name":"Hieu Trinh","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Deakin page was blocked by an interstitial; no alternative portrait verified."},
-    "vp-1422":{"name":"Toan Dinh","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"USQ profile exposed no verified individual portrait."},
-    "vp-1423":{"name":"Van Thanh Dau","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Griffith expert page did not expose a verified individual portrait."},
-    "vp-1426":{"name":"Ngoc Duy Nguyen","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Liège directory page did not expose a verified individual portrait."},
-    "vp-1434":{"name":"Huyen N. Dinh","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"NREL profile did not expose a verified individual portrait."},
-    "vp-1437":{"name":"Quyen Q. Hoang","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Indiana faculty page did not expose a verified individual portrait."},
-    "vp-1438":{"name":"Nhu Thao Nguyen Galván","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Baylor Surgery department page exposed no verified individual portrait."},
-    "vp-1439":{"name":"Thao-Ly T. Phan","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Nemours doctor page exposed no verified individual portrait."},
-    "vp-1441":{"name":"Thi Dan Linh Nguyen-Kim","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Zürich hospital page unavailable; no alternative portrait verified."},
-    "vp-1445":{"name":"Khanh Duy Trinh","outcome":"found","pageUrl":"https://w-rdb.waseda.jp/html/100001825_en.html","imageUrl":"https://w-rdb.waseda.jp/html/img/100001825","sourceType":"official_faculty","confidence":"HIGH","identitySignals":["exact_name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Waseda researcher page names Khanh Duy Trinh and embeds a single-person portrait."},
-    "vp-1447":{"name":"Cam Ha T. Tran","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Nevada profile exposed no verified individual portrait."},
-    "vp-1448":{"name":"Thien-Tri Lam","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Würzburg page exposed building and map imagery, not a portrait."},
-    "vp-1450":{"name":"Thanh Luu","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Rosalind Franklin page exposed no verified individual portrait."},
-    "vp-1451":{"name":"Hieu Van Ngo","outcome":"found","pageUrl":"https://profiles.ucalgary.ca/hieu-ngo","imageUrl":"https://profiles.ucalgary.ca/sites/default/files/styles/ucws_profile_picture/public/2024-09/Hieu%20Ngo%202024-09-23%20091434.png?itok=98Y7QYyQ","sourceType":"official_faculty","confidence":"HIGH","identitySignals":["exact_name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"University of Calgary profile names Hieu Ngo and embeds a labeled individual portrait."},
-    "vp-1452":{"name":"Anh-Luu T. Huynh-Hohnbaum","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Cal State LA faculty directory exposed no verified individual portrait for this person."},
-    "vp-1453":{"name":"Vinh To","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"UTAS profile was unavailable; no alternative portrait verified."},
-    "vp-1455":{"name":"Phan Le Ha","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"UBD ICE page exposed no verified individual portrait."},
-    "vp-1456":{"name":"Huong Le","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"CQUni profile exposed no verified individual portrait."},
-    "vp-1460":{"name":"Vinh-Thong Ta","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Edge Hill staff URL returned not found; no alternative portrait verified."},
-    "vp-1462":{"name":"Ngoc-Son Vu","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"ENSEA member page exposed no verified individual portrait."},
-    "vp-1468":{"name":"Minh-Tan Ton-That","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"NRC directory did not expose a verified portrait for this person."},
-    "vp-1473":{"name":"Ha Vinh Lam Nguyen","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Personal page exposed a group photo, not an isolatable individual portrait."},
-    "vp-1474":{"name":"Bach-Lien Hua","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Stored tribute article returned 404; no alternative portrait verified."},
-    "vp-1475":{"name":"Kim-Yen Phan-Thien","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Sydney profile was unavailable; no alternative portrait verified."},
-    "vp-1476":{"name":"Thu-Hien To","outcome":"found","pageUrl":"https://www.nmbu.no/en/about/employees/thu-hien","imageUrl":"https://main-bvxea6i-kdsvgmpf4iwws.eu-5.platformsh.site/sites/default/files/styles/portrait_3_4/public/thu-hien_to_fotor.jpg?h=99632c7f&itok=foI77YPu","sourceType":"official_faculty","confidence":"HIGH","identitySignals":["exact_name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"NMBU employee profile names Thu-Hien To and embeds a single-person portrait."},
-    "vp-1477":{"name":"Mai Lan Nguyen","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Université Gustave Eiffel profile did not expose a verified individual portrait."},
-    "vp-1479":{"name":"Minh-Tan Pham","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"IRISA laboratory homepage exposed no verified individual portrait."},
-    "vp-1480":{"name":"Ngoc-Tam Bui","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Researchmap profile returned not found and exposed only a placeholder."},
-    "vp-1481":{"name":"Thiên-My Dao","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"ÉTS profile exposed no verified individual portrait."},
-    "vp-1484":{"name":"Ngoc P. Ly","outcome":"found","pageUrl":"https://profiles.ucsf.edu/ngoc.ly","imageUrl":"https://researcherprofiles.org/profile/Modules/CustomViewPersonGeneralInfo/PhotoHandler.ashx?NodeID=189265&cachekey=8529100d-92a6-4409-a5c6-4521a40d1863","sourceType":"official_faculty","confidence":"HIGH","identitySignals":["exact_name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"UCSF profile names Ngoc Ly and embeds a labeled individual portrait."},
-    "vp-1487":{"name":"Georges Ha Van","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Sorbonne Santé homepage exposed no verified individual portrait."},
-    "vp-1488":{"name":"Thi Hà Châu Tran","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"CHU Amiens homepage exposed no verified individual portrait."},
-    "vp-1491":{"name":"Ton An Bui","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"UBC mathematics page exposed no verified individual portrait."},
-    "vp-1493":{"name":"Jon Doan","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Lethbridge directory page exposed no verified individual portrait."},
-    "vp-1494":{"name":"Marguerite Nguyen","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Duke profile explicitly used a generic placeholder image."},
-    "vp-1497":{"name":"Tess Do","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Melbourne expert page exposed no verified individual portrait."},
-    "vp-1528":{"name":"Binh P. Nguyen","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Victoria University of Wellington profile was unavailable; no alternative portrait verified."},
-    "vp-1529":{"name":"Bon Trinh","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"ORCID is an identity clue only and did not provide a verified portrait source."},
-    "vp-1530":{"name":"Hieu Trung Nguyen","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"ORCID is an identity clue only and did not provide a verified portrait source."},
-    "vp-1533":{"name":"Minh Hieu Nguyen","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"ORCID is an identity clue only and did not provide a verified portrait source."},
-    "vp-1535":{"name":"Thai Nguyen","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"ORCID is an identity clue only and did not provide a verified portrait source."},
-    "vp-1555":{"name":"Mai Tran","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Griffith expert page was unavailable; no alternative portrait verified."},
-    "vp-1556":{"name":"Trang Dang","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"CCU finance homepage exposed department imagery only, not a verified individual portrait."},
-    "vp-1565":{"name":"Yen Tran","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"CSIRO profile exposed no verified individual portrait."},
-    "vp-1567":{"name":"Hai Pham","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Towson faculty URL returned 404; no alternative portrait verified."},
-    "vp-1568":{"name":"Hung Cao","outcome":"not_found","identitySignals":["name","institution","department","stored_roster_url"],"retrievedAt":"2026-09-15T05:00:00.000Z","note":"Charlotte finance URL returned 404; no alternative portrait verified."}
+    "vp-0891": {
+      "name": "Carolyn V. Nguyen",
+      "outcome": "not_found",
+      "pageUrl": "https://medschool.kp.org/faculty/members/carolyn-v-nguyen",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:25:00.000Z",
+      "note": "Official faculty profile exposed no individual portrait."
+    },
+    "vp-0894": {
+      "name": "Von Ta Nguyen",
+      "outcome": "not_found",
+      "pageUrl": "https://medschool.kp.org/faculty/members/von-ta-nguyen",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:25:00.000Z",
+      "note": "Official faculty profile exposed no individual portrait."
+    },
+    "vp-0896": {
+      "name": "Thanh Tran - University of South Carolina",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:25:00.000Z",
+      "note": "No authoritative individual portrait was verified."
+    },
+    "vp-0897": {
+      "name": "Ngoc Lien Minh Nguyen",
+      "outcome": "not_found",
+      "pageUrl": "https://sc.edu/study/colleges_schools/medicine_greenville/about/faculty/facultydir/pf2081fe0467b5e9717884a845c788c198",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:25:00.000Z",
+      "note": "Official faculty profile exposes profile_no_photo placeholder."
+    },
+    "vp-0901": {
+      "name": "Tuan Mai",
+      "outcome": "not_found",
+      "pageUrl": "https://keck.usc.edu/faculty-search/tuan-mai/",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:25:00.000Z",
+      "note": "Official profile identifies faculty member but blocks direct image inspection."
+    },
+    "vp-0903": {
+      "name": "Phuong Le",
+      "outcome": "not_found",
+      "pageUrl": "https://profiles.stanford.edu/350256",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:25:00.000Z",
+      "note": "Official Stanford profile image source is empty."
+    },
+    "vp-0906": {
+      "name": "Ngoc M. Nguyen-Famulare",
+      "outcome": "not_found",
+      "pageUrl": "https://nyulangone.org/doctors/1578523965/ngoc-m-nguyen-famulare",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:25:00.000Z",
+      "note": "No verified individual portrait was exposed by the inspected official page."
+    },
+    "vp-0908": {
+      "name": "Eddie Quan",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:25:00.000Z",
+      "note": "Official faculty domain was unavailable to retrieve; no alternative authoritative portrait was verified."
+    },
+    "vp-0910": {
+      "name": "Nam X. Nguyen",
+      "outcome": "not_found",
+      "pageUrl": "https://keck.usc.edu/faculty-search/nam-x-nguyen/",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:25:00.000Z",
+      "note": "Official profile blocked direct image inspection and no alternative authoritative portrait was verified."
+    },
+    "vp-0926": {
+      "name": "Thi Hong Tran",
+      "outcome": "found",
+      "pageUrl": "https://kyoiku-kenkyudb.omu.ac.jp/html/100001108_en.html",
+      "imageUrl": "https://kyoiku-kenkyudb.omu.ac.jp/html/img/100001108",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:25:00.000Z"
+    },
+    "vp-0936": {
+      "name": "Paul C. Dinh",
+      "outcome": "not_found",
+      "pageUrl": "https://medicine.iu.edu/faculty/27262/dinh-paul",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:27:00.000Z",
+      "note": "Official profile exposes a faculty placeholder."
+    },
+    "vp-0940": {
+      "name": "Van Tuan Dinh",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:27:00.000Z",
+      "note": "Stored official faculty URL returned 404; no alternative authoritative portrait was verified."
+    },
+    "vp-0948": {
+      "name": "Linh H. Nguyen",
+      "outcome": "not_found",
+      "pageUrl": "https://www.nottingham.ac.uk/business/people/lizln1.phtml",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:27:00.000Z",
+      "note": "Official faculty profile confirmed identity but exposed no personal portrait."
+    },
+    "vp-0950": {
+      "name": "Cuong Nguyen - Lincoln University",
+      "outcome": "not_found",
+      "pageUrl": "https://researchers.lincoln.ac.nz/cuong.nguyen",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:27:00.000Z",
+      "note": "No authoritative individual portrait was exposed by the inspected official profile."
+    },
+    "vp-0964": {
+      "name": "Quynh N. Pham",
+      "outcome": "not_found",
+      "pageUrl": "https://www.usfca.edu/faculty/quynh-pham",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:27:00.000Z",
+      "note": "Official profile blocked direct inspection; no alternative authoritative portrait was verified."
+    },
+    "vp-0966": {
+      "name": "Quynh Hoang",
+      "outcome": "not_found",
+      "pageUrl": "https://le.ac.uk/people/quynh-hoang",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:27:00.000Z",
+      "note": "Official profile blocked direct inspection; no alternative authoritative portrait was verified."
+    },
+    "vp-0971": {
+      "name": "Truc Tran",
+      "outcome": "not_found",
+      "pageUrl": "https://vivo.weill.cornell.edu/display/cwid-ttt4001",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:27:00.000Z",
+      "note": "Official directory endpoint returned a generic avatar, not a portrait."
+    },
+    "vp-0981": {
+      "name": "Ba D. Nguyen",
+      "outcome": "not_found",
+      "pageUrl": "https://www.mayoclinic.org/biographies/nguyen-ba-d-m-d/bio-20053834",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:27:00.000Z",
+      "note": "Official profile blocked direct inspection; no alternative authoritative portrait was verified."
+    },
+    "vp-0983": {
+      "name": "Nguyen H. Tran",
+      "outcome": "not_found",
+      "pageUrl": "https://www.mayo.edu/research/faculty/tran-nguyen-h-m-d/bio-20537785",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:27:00.000Z",
+      "note": "Official profile blocked direct inspection; no alternative authoritative portrait was verified."
+    },
+    "vp-0984": {
+      "name": "Michelle C. Nguyen",
+      "outcome": "not_found",
+      "pageUrl": "https://www.mayoclinic.org/biographies/nguyen-michelle-c-m-d/bio-20520642",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:27:00.000Z",
+      "note": "Official profile blocked direct inspection; no alternative authoritative portrait was verified."
+    },
+    "vp-1231": {
+      "name": "Thanh-Tuan Bui",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:28:00.000Z",
+      "note": "Repository owner reported the prior asset is not a photograph of a person; it was removed and no replacement has been verified."
+    },
+    "vp-0985": {
+      "name": "Aivi T. Nguyen",
+      "outcome": "not_found",
+      "pageUrl": "https://www.mayo.edu/research/faculty/nguyen-aivi-t-m-d/bio-20585981",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:32:00.000Z",
+      "note": "Official profile blocked direct inspection; no verified portrait found."
+    },
+    "vp-0987": {
+      "name": "Nam Hai Pham",
+      "outcome": "not_found",
+      "pageUrl": "https://researchmap.jp/magn?lang=en",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:32:00.000Z",
+      "note": "No person-specific image exposed by inspected official profile."
+    },
+    "vp-0989": {
+      "name": "Quan Manh Phung",
+      "outcome": "not_found",
+      "pageUrl": "https://profs.provost.nagoya-u.ac.jp/html/100011169_en.html",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:32:00.000Z",
+      "note": "Official image endpoint returned a 1×1 placeholder."
+    },
+    "vp-0993": {
+      "name": "Quoc Hung Nguyen",
+      "outcome": "not_found",
+      "pageUrl": "https://raweb1.jm.aoyama.ac.jp/aguhp/KgApp/k03/resid/S001781?lang=en",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:32:00.000Z",
+      "note": "No verified individual portrait exposed."
+    },
+    "vp-1028": {
+      "name": "Hai Anh La",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:32:00.000Z",
+      "note": "Official page unavailable; no alternative authoritative portrait verified."
+    },
+    "vp-1031": {
+      "name": "Viet Do",
+      "outcome": "not_found",
+      "pageUrl": "https://research.monash.edu/en/persons/viet-do",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:32:00.000Z",
+      "note": "Stored official URL returned 404; no alternative portrait verified."
+    },
+    "vp-1034": {
+      "name": "Minh Quang Dao",
+      "outcome": "not_found",
+      "pageUrl": "https://eiu.edu/economic/faculty.php?id=mqdao",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:32:00.000Z",
+      "note": "No verified individual portrait exposed."
+    },
+    "vp-1037": {
+      "name": "Anh Nguyet Vu",
+      "outcome": "not_found",
+      "pageUrl": "https://profiles.sussex.ac.uk/p316727-anh-vu",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:32:00.000Z",
+      "note": "No verified individual portrait exposed."
+    },
+    "vp-1042": {
+      "name": "Lanh Tat Tran",
+      "outcome": "not_found",
+      "pageUrl": "https://bulletin.iu.edu/iu/gradschool/2024-2025/programs/bloomington/statistics/faculty.shtml",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:32:00.000Z",
+      "note": "Directory listing provided no person-specific portrait."
+    },
+    "vp-1044": {
+      "name": "Joseph Vu",
+      "outcome": "not_found",
+      "pageUrl": "https://business.depaul.edu/academics/departments-schools/finance-and-real-estate/academics-finance-and-real-estate-faculty-pages-default",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:32:00.000Z",
+      "note": "No verified individual portrait exposed."
+    },
+    "vp-1045": {
+      "name": "Hao Manh Quach",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:36:00.000Z",
+      "note": "No verified individual portrait exposed."
+    },
+    "vp-1049": {
+      "name": "Huong Vu",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:36:00.000Z",
+      "note": "Official URL returned 404; no alternative portrait verified."
+    },
+    "vp-1051": {
+      "name": "Khoa Hoang",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:36:00.000Z",
+      "note": "No verified individual portrait exposed."
+    },
+    "vp-1067": {
+      "name": "Huy Chau",
+      "outcome": "not_found",
+      "pageUrl": "https://research.manchester.ac.uk/en/persons/huy.chau",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:36:00.000Z",
+      "note": "Official profile explicitly exposes a no-photo placeholder."
+    },
+    "vp-1070": {
+      "name": "Ruby (Hong Ngoc) Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:36:00.000Z",
+      "note": "No verified individual portrait exposed."
+    },
+    "vp-1072": {
+      "name": "Duong Anh Lam Tran",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:36:00.000Z",
+      "note": "No verified individual portrait exposed."
+    },
+    "vp-1074": {
+      "name": "Truc Thanh Ngo",
+      "outcome": "found",
+      "pageUrl": "https://www.sandiego.edu/directory/biography.php?profile_id=571",
+      "imageUrl": "https://www.sandiego.edu/assets/directory/uploads/images/571.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:36:00.000Z"
+    },
+    "vp-1079": {
+      "name": "Bao Tan Huynh",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:36:00.000Z",
+      "note": "No verified individual portrait exposed."
+    },
+    "vp-1082": {
+      "name": "Huong (Hana) Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:36:00.000Z",
+      "note": "No verified individual portrait exposed."
+    },
+    "vp-1089": {
+      "name": "Kiet Tieu",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:36:00.000Z",
+      "note": "No verified individual portrait exposed."
+    },
+    "vp-1090": {
+      "name": "Thuong Nguyen",
+      "outcome": "not_found",
+      "pageUrl": "https://www.wgtn.ac.nz/sms/about/staff/thuong-nguyen",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:40:00.000Z",
+      "note": "No verified individual portrait exposed."
+    },
+    "vp-1092": {
+      "name": "Jo (Chau) Vu",
+      "outcome": "not_found",
+      "pageUrl": "https://www.vu.edu.au/researchers",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:40:00.000Z",
+      "note": "Directory page exposed only university branding."
+    },
+    "vp-1100": {
+      "name": "Anh D. Ngo",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:40:00.000Z",
+      "note": "No verified individual portrait exposed."
+    },
+    "vp-1108": {
+      "name": "Ellie Luu",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:40:00.000Z",
+      "note": "No verified individual portrait exposed."
+    },
+    "vp-1110": {
+      "name": "Hang Le",
+      "outcome": "not_found",
+      "pageUrl": "https://www.nottingham.ac.uk/business/people/lizhml.phtml",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:40:00.000Z",
+      "note": "No verified individual portrait exposed."
+    },
+    "vp-1119": {
+      "name": "Uyen T. Nguyen",
+      "outcome": "not_found",
+      "pageUrl": "https://history.fas.harvard.edu/people/uyen-nguyen",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:40:00.000Z",
+      "note": "No verified individual portrait exposed."
+    },
+    "vp-1124": {
+      "name": "Quynh Doan",
+      "outcome": "not_found",
+      "pageUrl": "https://pediatrics.med.ubc.ca/about/current-faculty/",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:40:00.000Z",
+      "note": "No verified individual portrait exposed."
+    },
+    "vp-1129": {
+      "name": "Nha Nguyen",
+      "outcome": "not_found",
+      "pageUrl": "https://www.umoncton.ca/notreumoncton/node/27",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:40:00.000Z",
+      "note": "Official page exposed only generic site imagery."
+    },
+    "vp-1130": {
+      "name": "Thu Pham-Gia",
+      "outcome": "not_found",
+      "pageUrl": "https://www.umoncton.ca/prof/node/811",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:40:00.000Z",
+      "note": "Official page exposed only generic site imagery."
+    },
+    "vp-1136": {
+      "name": "Ngoc A. Nguyen",
+      "outcome": "not_found",
+      "pageUrl": "https://www.ornl.gov/staff-profile/ngoc-nguyen",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:40:00.000Z",
+      "note": "Official page blocked direct inspection; no alternative portrait verified."
+    },
+    "vp-1138": {
+      "name": "Ruby Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:45:00.000Z",
+      "note": "Official page blocked direct inspection; no verified portrait found."
+    },
+    "vp-1148": {
+      "name": "Hao Phan",
+      "outcome": "not_found",
+      "pageUrl": "https://library.niu.edu/university-libraries/about/facultyprofile.shtml?first=Hao&last=Phan",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:45:00.000Z",
+      "note": "Official profile exposed no person-specific portrait."
+    },
+    "vp-1149": {
+      "name": "Amy Pham",
+      "outcome": "not_found",
+      "pageUrl": "https://www.sandiego.edu/library/about/biography.php?profile_id=14164",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:45:00.000Z",
+      "note": "Official page explicitly uses no-image placeholder."
+    },
+    "vp-1153": {
+      "name": "Trien Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://uwaterloo.ca/economics/profiles/trien-nguyen-retired",
+      "imageUrl": "https://uwaterloo.ca/economics/sites/default/files/uploads/images/trien-nguyen_0.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:45:00.000Z"
+    },
+    "vp-1156": {
+      "name": "Ly Thi Tran",
+      "outcome": "not_found",
+      "pageUrl": "https://www.deakin.edu.au/about-deakin/people/ly-tran",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:45:00.000Z",
+      "note": "Official page blocked direct inspection; no alternative portrait verified."
+    },
+    "vp-1157": {
+      "name": "Hien Trong Nguyen",
+      "outcome": "not_found",
+      "pageUrl": "https://www.jpl.nasa.gov/site/research/htnguyen/",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:45:00.000Z",
+      "note": "Stored NASA URL returned 404; no alternative portrait verified."
+    },
+    "vp-1158": {
+      "name": "Frédéric Pham",
+      "outcome": "not_found",
+      "pageUrl": "https://math.univ-cotedazur.fr/",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:45:00.000Z",
+      "note": "Department landing page exposed no person-specific portrait."
+    },
+    "vp-1160": {
+      "name": "Buu-Hoi Nguyen-Phuc",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:50:00.000Z",
+      "note": "Stored Wikipedia page is not an authoritative portrait source; no institutional portrait verified."
+    },
+    "vp-1162": {
+      "name": "Dong Ngo",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:50:00.000Z",
+      "note": "Stored Wikipedia page is not an authoritative portrait source; no institutional portrait verified."
+    },
+    "vp-1173": {
+      "name": "Huu Hao Ngo",
+      "outcome": "not_found",
+      "pageUrl": "https://profiles.uts.edu.au/HuuHao.Ngo",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:50:00.000Z",
+      "note": "No verified individual portrait exposed."
+    },
+    "vp-1175": {
+      "name": "Thong Pham - Adelaide University",
+      "outcome": "not_found",
+      "pageUrl": "https://researchers.adelaide.edu.au/profile/thong.pham",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:50:00.000Z",
+      "note": "Official profile connection failed; no alternative portrait verified."
+    },
+    "vp-1181": {
+      "name": "Brian Kha Tran",
+      "outcome": "not_found",
+      "pageUrl": "https://www.csulb.edu/mathematics-statistics/department-directory",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:50:00.000Z",
+      "note": "Directory exposed no verified individual portrait."
+    },
+    "vp-1184": {
+      "name": "Thi-Kien Dao",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:50:00.000Z",
+      "note": "Conference PDF is not sufficient evidence for a portrait."
+    },
+    "vp-1189": {
+      "name": "Dung Hoang Duong",
+      "outcome": "not_found",
+      "pageUrl": "https://scholars.uow.edu.au/hoang-dung-duong/",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:50:00.000Z",
+      "note": "No verified individual portrait exposed."
+    },
+    "vp-1191": {
+      "name": "Kim-Phuong L. Vu",
+      "outcome": "not_found",
+      "pageUrl": "https://www.cla.csulb.edu/departments/psychology/faculty/kim-phuong-vu/",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:50:00.000Z",
+      "note": "Official page exposed unrelated group imagery, not a person-specific portrait."
+    },
+    "vp-1193": {
+      "name": "Huy P. Phan",
+      "outcome": "not_found",
+      "pageUrl": "https://www.une.edu.au/staff-profiles/education/hphan2",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T04:50:00.000Z",
+      "note": "Official profile blocked direct inspection; no alternative portrait verified."
+    },
+    "vp-1195": {
+      "name": "Vinh N. Dang",
+      "outcome": "found",
+      "pageUrl": "https://www.psi.ch/en/rhr/people/vinh-n-dang",
+      "imageUrl": "https://www.psi.ch/sites/default/files/styles/primer_teaser_mini_square_crop/public/import/nes/LaboratoriesEN/Dang.jpg.webp?h=a5b0584b&itok=GHTfQLtD",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z"
+    },
+    "vp-1196": {
+      "name": "Long Tien Truong",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "No verified individual portrait exposed."
+    },
+    "vp-1198": {
+      "name": "Lam Thi Mai Huynh",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "No verified individual portrait exposed."
+    },
+    "vp-1199": {
+      "name": "Son Truong",
+      "outcome": "found",
+      "pageUrl": "https://www.dal.ca/faculty/health/health-humanperformance/faculty-staff/our-faculty/leisure-studies/son-truong.html",
+      "imageUrl": "https://cdn.dal.ca/faculty/health/health-humanperformance/faculty-staff/our-faculty/leisure-studies/son-truong/_jcr_content/contentPar/profile/bgBanner.adaptive.214.high.jpg/1641561335207.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z"
+    },
+    "vp-1201": {
+      "name": "Huong Thanh Bui",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "No verified individual portrait exposed."
+    },
+    "vp-1202": {
+      "name": "Anh Van Vo",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Official URL returned 404; no alternative portrait verified."
+    },
+    "vp-1203": {
+      "name": "Anh-Huy Phan",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "No verified individual portrait exposed."
+    },
+    "vp-1205": {
+      "name": "Tao Pham Dinh",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Official profile unavailable; no alternative portrait verified."
+    },
+    "vp-1206": {
+      "name": "Tuan Kim Vu",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Official profile rejected automated request; no alternative portrait verified."
+    },
+    "vp-1207": {
+      "name": "The Anh Bui",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Official domain unavailable; no alternative portrait verified."
+    },
+    "vp-1208": {
+      "name": "Hoa Huu Phuc Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.igsn.ruhr-uni-bochum.de/people/faculty-members/huu-phuc-nguyen/",
+      "imageUrl": "https://www.igsn.ruhr-uni-bochum.de/wp-content/uploads/members/nguyen.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Official IGSN faculty profile identifies Prof. Dr. Hoa Huu Phuc Nguyen; portrait alt text and photo credit match."
+    },
+    "vp-1215": {
+      "name": "Hieu Pham",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Official UAH profile exposed no verified individual portrait."
+    },
+    "vp-1216": {
+      "name": "Phuong Hong Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Official IFPRI expert page exposed no verified individual portrait."
+    },
+    "vp-1217": {
+      "name": "Hoai-Nam Truong",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Stored INRAE URL was unavailable; no alternative portrait verified."
+    },
+    "vp-1218": {
+      "name": "Bao-Lam Huynh",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Official UCR profile exposed no verified individual portrait."
+    },
+    "vp-1220": {
+      "name": "Anh-Vu Vo",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Official UCD profile exposed no verified individual portrait."
+    },
+    "vp-1224": {
+      "name": "Phuong Nguyen-Tri",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Stored lab URL returned an error; no alternative portrait verified."
+    },
+    "vp-1226": {
+      "name": "Toan Trong Tran",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Official UTS profile exposed no verified individual portrait."
+    },
+    "vp-1228": {
+      "name": "Thuy-Duong Nguyen-Phan",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Official NETL page exposed branding only; no verified individual portrait."
+    },
+    "vp-1229": {
+      "name": "Nong Van Ngo",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Stored researchmap profile blocked access; no alternative portrait verified."
+    },
+    "vp-1233": {
+      "name": "Anh-Thy Bui",
+      "outcome": "found",
+      "pageUrl": "https://www.inc.cnrs.fr/fr/personne/anh-thy-bui",
+      "imageUrl": "https://www.inc.cnrs.fr/sites/institut_inc/files/styles/person/public/image/bui-emergence-2026_0.jpg?itok=Yqj6g7KS",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "CNRS Chimie person page names Anh-Thy Bui and embeds a single-person 405x405 portrait."
+    },
+    "vp-1236": {
+      "name": "Nhan Viet Tran",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Official Fermilab page did not expose a verified individual portrait."
+    },
+    "vp-1239": {
+      "name": "Quang-Dé Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Official Harvard profile did not expose a verified individual portrait."
+    },
+    "vp-1240": {
+      "name": "Kim-Vy Tran",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Harvard profile blocked automated access; no alternative portrait verified."
+    },
+    "vp-1241": {
+      "name": "Minh Huynh",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "CSIRO profile exposed no verified individual portrait."
+    },
+    "vp-1250": {
+      "name": "Lap Van Dao",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Swinburne profile exposed no verified individual portrait."
+    },
+    "vp-1252": {
+      "name": "Viet Giang Truong",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Stored OIST URL returned 404; no alternative portrait verified."
+    },
+    "vp-1257": {
+      "name": "Thuy Le Toan",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "CESBIO landing page exposed no verified individual portrait."
+    },
+    "vp-1258": {
+      "name": "Anh-Tu Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://sites.google.com/view/anh-tu-nguyen",
+      "imageUrl": "https://lh3.googleusercontent.com/sitesv/AG8ngQWLPPyK7a6jJUdFLG99Z3YgKjxriOfwfCEGvfsKgdteeuknVOFe8D9_dSzJqEV-ZlRUP_yGMkjHPfy4UbnDUQ1oStz1_YzTsK6crXL5UpBxWdsXpHq0A_CmQWsI8msTjLJnguHKHQKFg12OwDi_NpEA4XciBnPyhFmuWRTH-jFNXLTHdCj22DelEkn1zeHUDOtMnH_hRGnA=w1280",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Personal academic homepage identifies Dr. Anh-Tu Nguyen and INSA Hauts-de-France/Université Polytechnique Hauts-de-France; embedded image is a single person."
+    },
+    "vp-1260": {
+      "name": "Trang N. T. Phan",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Stored ICR page exposed no verified individual portrait."
+    },
+    "vp-1269": {
+      "name": "Kien Phan Huy",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "FEMTO-ST homepage exposed no verified individual portrait."
+    },
+    "vp-1271": {
+      "name": "Khanh Pham",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "AFRL news page blocked automated access; no alternative portrait verified."
+    },
+    "vp-1279": {
+      "name": "Thao Pham",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "AP-HM homepage exposed no verified individual portrait."
+    },
+    "vp-1280": {
+      "name": "Long Ngo",
+      "outcome": "found",
+      "pageUrl": "https://research.bidmc.org/general-medicine/people/long-h-ngo-phd",
+      "imageUrl": "https://research.bidmc.org/files/styles/large/public/general-medicine/files/ngo66.jpg?itok=2MFAUuNP",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "BIDMC/Harvard profile names Long H. Ngo and embeds a single-person portrait."
+    },
+    "vp-1282": {
+      "name": "Thuy Mai Luu",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Université de Montréal page exposed a generic silhouette, not a verified portrait."
+    },
+    "vp-1283": {
+      "name": "Thuy Do",
+      "outcome": "found",
+      "pageUrl": "https://medicinehealth.leeds.ac.uk/dentistry/staff/280/dr-thuy-do",
+      "imageUrl": "https://medicinehealth.leeds.ac.uk/images/resized/100x100-0-0-1-80-Thuy_portrait.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "University of Leeds staff page names Professor Thuy Do and embeds a single-person portrait."
+    },
+    "vp-1290": {
+      "name": "Binh An P. Phan",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "UCSF profile exposed no verified individual portrait."
+    },
+    "vp-1292": {
+      "name": "Hong-Ha M. Truong",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "UCSF profile exposed no verified individual portrait."
+    },
+    "vp-1294": {
+      "name": "Cuong J. Bui",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Tulane neurosurgery page exposed no verified individual portrait."
+    },
+    "vp-1298": {
+      "name": "Nam Vo",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "University of Pittsburgh department homepage exposed no verified individual portrait."
+    },
+    "vp-1301": {
+      "name": "Linh H. Nghiem",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Sydney profile did not expose a verified individual portrait."
+    },
+    "vp-1305": {
+      "name": "Long Doan",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Maryland profile did not expose a verified individual portrait."
+    },
+    "vp-1307": {
+      "name": "Binh Nghiem-Phu",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Stored researchmap URL returned not found and exposed only a placeholder."
+    },
+    "vp-1308": {
+      "name": "Hien Van Doan",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Chiang Mai personnel page did not expose a verified individual portrait."
+    },
+    "vp-1310": {
+      "name": "Bao Q. Vuong",
+      "outcome": "found",
+      "pageUrl": "https://www.ccny.cuny.edu/profiles/bao-vuong",
+      "imageUrl": "https://www.ccny.cuny.edu/sites/default/files/Bao-%20IMG_7785c.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "CCNY profile metadata names Bao Vuong and embeds a clear single-person portrait."
+    },
+    "vp-1327": {
+      "name": "Loc Huu Ho",
+      "outcome": "found",
+      "pageUrl": "https://research.wur.nl/en/persons/huu-loc-ho/",
+      "imageUrl": "https://research.wur.nl/files-asset/95641737/GetMedia.ashx_id_117367_ts_1788939383/",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Wageningen Research Portal page names Huu Loc Ho and embeds a single-person portrait."
+    },
+    "vp-1330": {
+      "name": "Quang-Van Doan",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "University of Tsukuba researcher page exposed no verified individual portrait."
+    },
+    "vp-1332": {
+      "name": "Luc Duc Phung",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Yamagata researcher directory exposed no verified individual portrait."
+    },
+    "vp-1337": {
+      "name": "Phuong Mai Dinh",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "LPT homepage exposed no verified individual portrait."
+    },
+    "vp-1339": {
+      "name": "Van An Dinh",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Osaka research profile was unavailable; no alternative portrait verified."
+    },
+    "vp-1340": {
+      "name": "Dinh Ho Tong Minh",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "TETIS personnel page exposed no verified individual portrait."
+    },
+    "vp-1341": {
+      "name": "Tan-Phu Vuong",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "LCIS members page exposed no verified individual portrait."
+    },
+    "vp-1342": {
+      "name": "Cao Hung Pham",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Sydney profile was unavailable; no alternative portrait verified."
+    },
+    "vp-1344": {
+      "name": "Huu Duc Vo",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Polytechnique Montréal expert page exposed no verified individual portrait."
+    },
+    "vp-1345": {
+      "name": "Quoc Lam Vuong",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "UMONS portal exposed no verified individual portrait."
+    },
+    "vp-1319": {
+      "name": "Doan B. Hoang",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "UTS profile did not expose a verified individual portrait."
+    },
+    "vp-1321": {
+      "name": "Nghia Duong-Trung",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "DFKI page was blocked by an interstitial; no alternative portrait verified."
+    },
+    "vp-1323": {
+      "name": "Cao-Thang Dinh",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Queen's engineering page did not expose a verified individual portrait."
+    },
+    "vp-1324": {
+      "name": "Tu C. Le",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "RMIT profile was unavailable; no alternative portrait verified."
+    },
+    "vp-1326": {
+      "name": "Doan-Trung Luu",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "INRAE team page did not expose a verified individual portrait."
+    },
+    "vp-1346": {
+      "name": "Quoc Viet Phung",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "ECU staff page did not expose a verified individual portrait."
+    },
+    "vp-1347": {
+      "name": "Kim Dang Phung",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "IDPOISSON profile did not expose a verified individual portrait."
+    },
+    "vp-1348": {
+      "name": "Luong-Viet Phung",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "AMPERE laboratory homepage did not expose a verified individual portrait."
+    },
+    "vp-1350": {
+      "name": "Khê Hoang-Xuan",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Institut du Cerveau page did not expose a verified individual portrait."
+    },
+    "vp-1352": {
+      "name": "Anh-Tuan Dinh-Xuan",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Université de Paris homepage did not expose a verified individual portrait."
+    },
+    "vp-1354": {
+      "name": "Hai Phung",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Griffith expert page did not expose a verified individual portrait."
+    },
+    "vp-1355": {
+      "name": "Quan V. Vuong",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "UTS profile did not expose a verified individual portrait."
+    },
+    "vp-1356": {
+      "name": "Chau Trinh-Shevrin",
+      "outcome": "found",
+      "pageUrl": "https://med.nyu.edu/faculty/chau-trinh-shevrin",
+      "imageUrl": "https://med.nyu.edu/dti-physician-photo/faculty/t/trinhc01/trinhc01-hero.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "NYU Grossman School of Medicine faculty page names Chau Trinh-Shevrin and embeds a single-person portrait."
+    },
+    "vp-1359": {
+      "name": "Kien Trinh",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "McMaster faculty directory URL was not found; no alternative portrait verified."
+    },
+    "vp-1362": {
+      "name": "Le Mai Tu",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Sherbrooke specialist page exposed no verified individual portrait."
+    },
+    "vp-1368": {
+      "name": "Phuong L. Doan",
+      "outcome": "found",
+      "pageUrl": "https://medicine.duke.edu/news/remembering-dr-phuong-doan",
+      "imageUrl": "https://medicine.duke.edu/sites/default/files/styles/social_media_card/public/2023-11/doan_.png?h=57024e64&itok=L7pWdwrI",
+      "sourceType": "university_news",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Duke Department of Medicine memorial page names Dr. Phuong Doan and displays a single-person portrait."
+    },
+    "vp-1370": {
+      "name": "Quôc Dinh Nguyên",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Université de Montréal profile exposed a generic silhouette, not a verified portrait."
+    },
+    "vp-1373": {
+      "name": "Nghiem B. Ha",
+      "outcome": "found",
+      "pageUrl": "https://profiles.ucsf.edu/nghiem.ha",
+      "imageUrl": "https://researcherprofiles.org/profile/Modules/CustomViewPersonGeneralInfo/PhotoHandler.ashx?NodeID=196235&cachekey=fe5f3597-c464-4e99-b004-76063f945519",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "UCSF profile names Nghiem Ha and embeds a labeled individual portrait."
+    },
+    "vp-1374": {
+      "name": "Trang D. Trinh",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "UCSF Medical Education page exposed placeholders, not a verified individual portrait."
+    },
+    "vp-1375": {
+      "name": "Tri A. Dinh",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Mayo Clinic biography blocked automated access; no alternative portrait verified."
+    },
+    "vp-1376": {
+      "name": "Binh N. Trinh",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "UCSF Surgery page was access denied; no alternative portrait verified."
+    },
+    "vp-1377": {
+      "name": "Tam T. Doan",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Baylor profile exposed no verified individual portrait."
+    },
+    "vp-1379": {
+      "name": "Cat Khanh Vuong",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Tsukuba image endpoint returned a portrait whose page identity did not match Cat Khanh Vuong; rejected."
+    },
+    "vp-1380": {
+      "name": "Quoc Vuong Tran",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Yamanashi portal exposed no verified individual portrait."
+    },
+    "vp-1381": {
+      "name": "Nhu Khue Vuong",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "A*STAR I2R homepage exposed no verified individual portrait."
+    },
+    "vp-1382": {
+      "name": "Kiên Kiêu",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "INRAE homepage exposed no verified individual portrait."
+    },
+    "vp-1388": {
+      "name": "Michel Le Van Quyen",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Inserm homepage exposed branding only; no verified individual portrait."
+    },
+    "vp-1390": {
+      "name": "Ngoc Tuan Tran",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "ORCID is an identity clue only and did not provide a verified portrait source."
+    },
+    "vp-1392": {
+      "name": "Dinh Ha Duy Thuy",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Researchmap profile returned not found and exposed only a placeholder."
+    },
+    "vp-1393": {
+      "name": "Chinh Ho",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Sydney profile was unavailable; no alternative portrait verified."
+    },
+    "vp-1395": {
+      "name": "Huyen Le",
+      "outcome": "found",
+      "pageUrl": "https://geography.osu.edu/people/le.253",
+      "imageUrl": "https://geography.osu.edu/sites/default/files/styles/people_profile_image/public/pictures/2024-03/Le%20Huyen_300x400.jpg.webp?h=f803f42f&itok=QYNCJXpk",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Ohio State Geography profile names Huyen Le and embeds a single-person portrait."
+    },
+    "vp-1396": {
+      "name": "Thuan Thai",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Notre Dame Australia page was blocked by an interstitial; no alternative portrait verified."
+    },
+    "vp-1397": {
+      "name": "Duc Thanh Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Deakin page was blocked by an interstitial; no alternative portrait verified."
+    },
+    "vp-1401": {
+      "name": "Kim Khoa Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.etsmtl.ca/en/research/professors-researchers/knguyen",
+      "imageUrl": "https://www.etsmtl.ca/uploads/KimKhoa-Nguyen-ETS.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "ÉTS Montréal profile names Kim Khoa Nguyen and embeds a single-person portrait."
+    },
+    "vp-1403": {
+      "name": "Cuong Pham",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Wentworth faculty catalog exposed no verified individual portrait."
+    },
+    "vp-1404": {
+      "name": "Triet H. M. Le",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Adelaide profile was unavailable; no alternative portrait verified."
+    },
+    "vp-1405": {
+      "name": "Cuong Ton-That",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "UTS profile did not expose a verified individual portrait."
+    },
+    "vp-1406": {
+      "name": "Tuan Hung Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Tohoku URL returned 404; no alternative portrait verified."
+    },
+    "vp-1407": {
+      "name": "Quoc Duy Ho",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "University of Stavanger page did not expose a verified individual portrait."
+    },
+    "vp-1409": {
+      "name": "Thao M. Ho",
+      "outcome": "found",
+      "pageUrl": "https://researchportal.helsinki.fi/en/persons/minh-thao-ho/",
+      "imageUrl": "https://researchportal.helsinki.fi/files-asset/163760208/9.jpg/",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "University of Helsinki Research Portal profile identifies Minh Thao Ho and embeds a single-person portrait."
+    },
+    "vp-1410": {
+      "name": "Lap-Cuong Hua",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "IHE Delft profile exposed no verified individual portrait."
+    },
+    "vp-1413": {
+      "name": "Hung Ton-That",
+      "outcome": "found",
+      "pageUrl": "https://bioscience.ucla.edu/people/hung-ton-that",
+      "imageUrl": "https://researcherprofiles.org/profile/Modules/CustomViewPersonGeneralInfo/PhotoHandler.ashx?NodeID=324607752",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "UCLA Graduate Programs in Bioscience page names Hung Ton-That and embeds a labeled individual portrait."
+    },
+    "vp-1420": {
+      "name": "Huong Giang T. Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "NIST people page exposed no verified individual portrait."
+    },
+    "vp-1421": {
+      "name": "Hieu Trinh",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Deakin page was blocked by an interstitial; no alternative portrait verified."
+    },
+    "vp-1422": {
+      "name": "Toan Dinh",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "USQ profile exposed no verified individual portrait."
+    },
+    "vp-1423": {
+      "name": "Van Thanh Dau",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Griffith expert page did not expose a verified individual portrait."
+    },
+    "vp-1426": {
+      "name": "Ngoc Duy Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Liège directory page did not expose a verified individual portrait."
+    },
+    "vp-1434": {
+      "name": "Huyen N. Dinh",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "NREL profile did not expose a verified individual portrait."
+    },
+    "vp-1437": {
+      "name": "Quyen Q. Hoang",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Indiana faculty page did not expose a verified individual portrait."
+    },
+    "vp-1438": {
+      "name": "Nhu Thao Nguyen Galván",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Baylor Surgery department page exposed no verified individual portrait."
+    },
+    "vp-1439": {
+      "name": "Thao-Ly T. Phan",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Nemours doctor page exposed no verified individual portrait."
+    },
+    "vp-1441": {
+      "name": "Thi Dan Linh Nguyen-Kim",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Zürich hospital page unavailable; no alternative portrait verified."
+    },
+    "vp-1445": {
+      "name": "Khanh Duy Trinh",
+      "outcome": "found",
+      "pageUrl": "https://w-rdb.waseda.jp/html/100001825_en.html",
+      "imageUrl": "https://w-rdb.waseda.jp/html/img/100001825",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Waseda researcher page names Khanh Duy Trinh and embeds a single-person portrait."
+    },
+    "vp-1447": {
+      "name": "Cam Ha T. Tran",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Nevada profile exposed no verified individual portrait."
+    },
+    "vp-1448": {
+      "name": "Thien-Tri Lam",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Würzburg page exposed building and map imagery, not a portrait."
+    },
+    "vp-1450": {
+      "name": "Thanh Luu",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Rosalind Franklin page exposed no verified individual portrait."
+    },
+    "vp-1451": {
+      "name": "Hieu Van Ngo",
+      "outcome": "found",
+      "pageUrl": "https://profiles.ucalgary.ca/hieu-ngo",
+      "imageUrl": "https://profiles.ucalgary.ca/sites/default/files/styles/ucws_profile_picture/public/2024-09/Hieu%20Ngo%202024-09-23%20091434.png?itok=98Y7QYyQ",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "University of Calgary profile names Hieu Ngo and embeds a labeled individual portrait."
+    },
+    "vp-1452": {
+      "name": "Anh-Luu T. Huynh-Hohnbaum",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Cal State LA faculty directory exposed no verified individual portrait for this person."
+    },
+    "vp-1453": {
+      "name": "Vinh To",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "UTAS profile was unavailable; no alternative portrait verified."
+    },
+    "vp-1455": {
+      "name": "Phan Le Ha",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "UBD ICE page exposed no verified individual portrait."
+    },
+    "vp-1456": {
+      "name": "Huong Le",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "CQUni profile exposed no verified individual portrait."
+    },
+    "vp-1460": {
+      "name": "Vinh-Thong Ta",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Edge Hill staff URL returned not found; no alternative portrait verified."
+    },
+    "vp-1462": {
+      "name": "Ngoc-Son Vu",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "ENSEA member page exposed no verified individual portrait."
+    },
+    "vp-1468": {
+      "name": "Minh-Tan Ton-That",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "NRC directory did not expose a verified portrait for this person."
+    },
+    "vp-1473": {
+      "name": "Ha Vinh Lam Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Personal page exposed a group photo, not an isolatable individual portrait."
+    },
+    "vp-1474": {
+      "name": "Bach-Lien Hua",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Stored tribute article returned 404; no alternative portrait verified."
+    },
+    "vp-1475": {
+      "name": "Kim-Yen Phan-Thien",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Sydney profile was unavailable; no alternative portrait verified."
+    },
+    "vp-1476": {
+      "name": "Thu-Hien To",
+      "outcome": "found",
+      "pageUrl": "https://www.nmbu.no/en/about/employees/thu-hien",
+      "imageUrl": "https://main-bvxea6i-kdsvgmpf4iwws.eu-5.platformsh.site/sites/default/files/styles/portrait_3_4/public/thu-hien_to_fotor.jpg?h=99632c7f&itok=foI77YPu",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "NMBU employee profile names Thu-Hien To and embeds a single-person portrait."
+    },
+    "vp-1477": {
+      "name": "Mai Lan Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Université Gustave Eiffel profile did not expose a verified individual portrait."
+    },
+    "vp-1479": {
+      "name": "Minh-Tan Pham",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "IRISA laboratory homepage exposed no verified individual portrait."
+    },
+    "vp-1480": {
+      "name": "Ngoc-Tam Bui",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Researchmap profile returned not found and exposed only a placeholder."
+    },
+    "vp-1481": {
+      "name": "Thiên-My Dao",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "ÉTS profile exposed no verified individual portrait."
+    },
+    "vp-1484": {
+      "name": "Ngoc P. Ly",
+      "outcome": "found",
+      "pageUrl": "https://profiles.ucsf.edu/ngoc.ly",
+      "imageUrl": "https://researcherprofiles.org/profile/Modules/CustomViewPersonGeneralInfo/PhotoHandler.ashx?NodeID=189265&cachekey=8529100d-92a6-4409-a5c6-4521a40d1863",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "UCSF profile names Ngoc Ly and embeds a labeled individual portrait."
+    },
+    "vp-1487": {
+      "name": "Georges Ha Van",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Sorbonne Santé homepage exposed no verified individual portrait."
+    },
+    "vp-1488": {
+      "name": "Thi Hà Châu Tran",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "CHU Amiens homepage exposed no verified individual portrait."
+    },
+    "vp-1491": {
+      "name": "Ton An Bui",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "UBC mathematics page exposed no verified individual portrait."
+    },
+    "vp-1493": {
+      "name": "Jon Doan",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Lethbridge directory page exposed no verified individual portrait."
+    },
+    "vp-1494": {
+      "name": "Marguerite Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Duke profile explicitly used a generic placeholder image."
+    },
+    "vp-1497": {
+      "name": "Tess Do",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Melbourne expert page exposed no verified individual portrait."
+    },
+    "vp-1528": {
+      "name": "Binh P. Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Victoria University of Wellington profile was unavailable; no alternative portrait verified."
+    },
+    "vp-1529": {
+      "name": "Bon Trinh",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "ORCID is an identity clue only and did not provide a verified portrait source."
+    },
+    "vp-1530": {
+      "name": "Hieu Trung Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "ORCID is an identity clue only and did not provide a verified portrait source."
+    },
+    "vp-1533": {
+      "name": "Minh Hieu Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "ORCID is an identity clue only and did not provide a verified portrait source."
+    },
+    "vp-1535": {
+      "name": "Thai Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "ORCID is an identity clue only and did not provide a verified portrait source."
+    },
+    "vp-1555": {
+      "name": "Mai Tran",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Griffith expert page was unavailable; no alternative portrait verified."
+    },
+    "vp-1556": {
+      "name": "Trang Dang",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "CCU finance homepage exposed department imagery only, not a verified individual portrait."
+    },
+    "vp-1565": {
+      "name": "Yen Tran",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "CSIRO profile exposed no verified individual portrait."
+    },
+    "vp-1567": {
+      "name": "Hai Pham",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Towson faculty URL returned 404; no alternative portrait verified."
+    },
+    "vp-1568": {
+      "name": "Hung Cao",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-15T05:00:00.000Z",
+      "note": "Charlotte finance URL returned 404; no alternative portrait verified."
+    }
   }
 }
