@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-16T03:34:19.324Z",
+  "updatedAt": "2026-09-16T03:43:23.131Z",
   "entries": {
     "vp-0140": {
       "id": "vp-0140",
@@ -4585,7 +4585,49 @@
     "vp-1130": {},
     "vp-1131": {},
     "vp-1133": {},
-    "vp-1134": {},
+    "vp-1134": {
+      "id": "vp-1134",
+      "name": "Laurent Pham-Van",
+      "lastAuditedAt": "2026-09-16T03:34:48.000Z",
+      "sources": [
+        "https://iramis.cea.fr/spec/lepo/membres-lepo/",
+        "https://iramis.cea.fr/spec/lepo/annuaire/?recherche=Laurent+PHAM-VAN",
+        "https://iramis.cea.fr/en/spec/directory/?uidc=M7VMMTEzTjUBAA",
+        "https://orcid.org/0000-0003-1676-6003",
+        "https://iramis.cea.fr/wp-content/uploads/2024/03/Laurentphanvan2.jpg"
+      ],
+      "report": "The official LEPO membership page identifies Laurent PHAM-VAN as a Chercheur and links the current CEA personal-directory page and ORCID. The prior portrait source was a CNRS logo; the current LEPO page provides an identity-labeled Laurent Pham-Van portrait, which was converted to the local WebP asset.",
+      "fields": {
+        "profileUrl": {
+          "value": "https://iramis.cea.fr/spec/lepo/annuaire/?recherche=Laurent+PHAM-VAN",
+          "source": "https://iramis.cea.fr/spec/lepo/membres-lepo/",
+          "verifiedAt": "2026-09-16T03:34:48.000Z"
+        },
+        "portrait": {
+          "value": "portraits/1134-laurent-pham-van.webp",
+          "source": "https://iramis.cea.fr/wp-content/uploads/2024/03/Laurentphanvan2.jpg",
+          "quote": "Laurent Pham-Van",
+          "verifiedAt": "2026-09-16T03:34:48.000Z"
+        },
+        "portraitSource": {
+          "value": "https://iramis.cea.fr/wp-content/uploads/2024/03/Laurentphanvan2.jpg",
+          "source": "https://iramis.cea.fr/spec/lepo/membres-lepo/",
+          "verifiedAt": "2026-09-16T03:34:48.000Z"
+        },
+        "researchOverview": {
+          "value": {
+            "text": "Researcher in the Laboratoire d'Électronique et Photonique Organique (LEPO), CEA-SPEC, Electrical Engineering at Commissariat à l'énergie atomique et aux énergies alternatives (CEA). Research specialization encompasses Organic Electronics, Photonics, Magnetic Sensors.",
+            "sources": [
+              "https://iramis.cea.fr/spec/lepo/membres-lepo/",
+              "https://iramis.cea.fr/spec/lepo/annuaire/?recherche=Laurent+PHAM-VAN"
+            ],
+            "verifiedAt": "2026-09-16T03:34:48.000Z"
+          },
+          "source": "https://iramis.cea.fr/spec/lepo/membres-lepo/",
+          "verifiedAt": "2026-09-16T03:34:48.000Z"
+        }
+      }
+    },
     "vp-1135": {},
     "vp-1136": {
       "name": "Ngoc Anh Nguyen",
@@ -5076,9 +5118,261 @@
       }
     },
     "vp-1157": {},
-    "vp-1158": {},
+    "vp-1158": {
+      "name": "Frédéric Pham",
+      "lastAuditedAt": "2026-09-16T03:37:31.692Z",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Pham",
+        "https://fr.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Pham",
+        "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=30187",
+        "https://math.univ-cotedazur.fr/",
+        "https://math.univ-cotedazur.fr/laboratoire/annuaire-general",
+        "https://math.univ-cotedazur.fr/~fpham/",
+        "https://math.univ-cotedazur.fr/~phm/",
+        "https://math.univ-cotedazur.fr/~phm/SF/3.html",
+        "https://www.numdam.org/item/BSMF_1965__93__333_0/"
+      ],
+      "report": "Full live review of Frédéric Pham (vp-1158). No `directFields` are present on this entry, so nothing is protected.\n\n**Identity & eligibility:** Confirmed as the same Vietnamese-French mathematician (b. 17 Nov 1938, Saigon) known for Brieskorn-Pham singularities. He is alive, not deceased — the Emeritus track already correctly reflects this rather than Deceased. English Wikipedia: \"He became a professor at the University of Nice Sophia Antipolis in 1970 and retired there in 2001 as professor emeritus.\" French Wikipedia confirms the same in French. Université de Nice Sophia Antipolis is the direct institutional predecessor of Université Côte d'Azur, so the stored `university`, `department` (\"Laboratoire J.A. Dieudonné\"), `rank`, and `track` (Emeritus) all check out.\n\n**profileUrl/websiteUrl audit — found a problem.** The stored `profileUrl` (`https://math.univ-cotedazur.fr/`) is only the math lab's generic homepage. I fetched it directly and also fetched its directory page (`/laboratoire/annuaire-general`): neither mentions Frédéric Pham at all. I also tried plausible personal-page URLs (`~fpham`, `~phm/`) — one 404s, the other belongs to a different faculty member (Philippe Maisonobe) with an outdated 2008 copyright notice. No maintained personal/lab page or official current directory listing for Pham exists that I could find. Since a reachable URL that doesn't identify the person doesn't satisfy the profile requirement, and no official current page could be substituted, I'm using the strongest reliable identity-resolved source — the English Wikipedia biography — as `profileUrl`, and setting `confirmed: false` per the inclusion-standard rule for cases where official current evidence is unavailable but reliable sources support every other requirement. No usable `websiteUrl` exists, so I omitted it rather than reuse the non-identifying lab homepage.\n\n**scholarUrl:** Searched for a Google Scholar profile; found none identifiably belonging to this Frédéric Pham (only an unrelated \"Pham Hung Quy\" profile surfaced). Left `scholarUrl` unset per the ambiguity rule.\n\n**linkedinUrl:** No official profile or personal site links to a LinkedIn page, so none added.\n\n**Degree correction (phdYear 1967 → 1969):** Both English and French Wikipedia give 1969, with the French text stating verbatim: *\"En 1969, Pham a obtient son doctorat dirigé par Raymond Stora à Saclay avec une thèse intitulée Singularités des processus de diffusion multiple.\"* (In 1969, Pham obtained his doctorate, directed by Raymond Stora at Saclay, with a thesis entitled \"Singularités des processus de diffusion multiple.\") The English article: \"PhD: Saclay Nuclear Research Centre (1969)... Advisor: Raymond Stora.\" This corroborates the stored `phdInstitution` (\"Université de Paris\" — the doctorate-granting university for the Saclay-based thesis) but corrects the year to 1969. Note: the Mathematics Genealogy Project lists 1965/École Polytechnique for this same person, conflicting with both Wikipedia language editions; I weighted the two independent, detailed Wikipedia accounts (which agree on institution, advisor, and thesis title) over the bare genealogy-project entry, but flagging this discrepancy in case a maintainer wants to dig further.\n\n`undergradInstitution`/`undergradYear` (École Polytechnique, 1959) is confirmed by Wikipedia (\"École polytechnique, 1957–1959\"). Chronological sanity holds (1959 ≤ 1969, 10-year gap). No documented master's or postdoc end-year found beyond the Saclay research period already reflected in the PhD/institution field.\n\n**Honors:** The single stored honor (Brieskorn-Pham singularities / Picard-Lefschetz-Pham formula, 1965) is explicitly the kind of eponymous-discovery example the roster guide names as eligible under `major_award` (\"Brieskorn-Pham singularities\" is listed verbatim as an example in ROSTER_MAINTENANCE.md). Kept unchanged; no new honors found that meet the faculty-level, non-dissertation bar.\n\n**researchOverview:** Rewrote for accuracy — the old text implied a current, active \"Professor at Université Côte d'Azur / CNRS,\" but Pham has been retired/emeritus since 2001 and I found no current CNRS affiliation evidence. New text states the emeritus status and career span, keeps the foundational-contributions framing, stays gender-neutral, and is under the 500-character/3-sentence limits. Sources updated to the two Wikipedia articles actually used for this pass.\n\n**Portrait:** Searched multiple French and English queries; found no identifiable portrait/photo of Pham on any authoritative or personal page. Left unset rather than risk an incorrect image, per the portrait-recovery standard.\n\n**No protected-field conflicts:** entry has no `directFields`, so no GitHub issue is needed for a protected-field correction.\n\nSources checked: https://en.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Pham, https://fr.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Pham, https://www.genealogy.math.ndsu.nodak.edu/id.php?id=30187, https://math.univ-cotedazur.fr/, https://math.univ-cotedazur.fr/laboratoire/annuaire-general, https://math.univ-cotedazur.fr/~fpham/ (404), https://math.univ-cotedazur.fr/~phm/ (different person), https://math.univ-cotedazur.fr/~phm/SF/3.html (different content), https://www.numdam.org/item/BSMF_1965__93__333_0/ (existing honor source, unchanged).",
+      "fields": {
+        "profileUrl": {
+          "value": "https://en.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Pham",
+          "source": "https://en.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Pham",
+          "verifiedAt": "2026-09-16T03:37:31.692Z"
+        },
+        "confirmed": {
+          "value": false,
+          "source": "https://en.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Pham",
+          "verifiedAt": "2026-09-16T03:37:31.692Z"
+        },
+        "university": {
+          "value": "Université Côte d'Azur",
+          "source": "https://en.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Pham",
+          "verifiedAt": "2026-09-16T03:37:31.692Z"
+        },
+        "city": {
+          "value": "Nice",
+          "source": "https://en.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Pham",
+          "verifiedAt": "2026-09-16T03:37:31.692Z"
+        },
+        "country": {
+          "value": "France",
+          "source": "https://en.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Pham",
+          "verifiedAt": "2026-09-16T03:37:31.692Z"
+        },
+        "department": {
+          "value": "Laboratoire J.A. Dieudonné, Département de Mathématiques",
+          "source": "https://en.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Pham",
+          "verifiedAt": "2026-09-16T03:37:31.692Z"
+        },
+        "rank": {
+          "value": "Emeritus",
+          "source": "https://en.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Pham",
+          "verifiedAt": "2026-09-16T03:37:31.692Z"
+        },
+        "track": {
+          "value": "Emeritus",
+          "source": "https://en.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Pham",
+          "verifiedAt": "2026-09-16T03:37:31.692Z"
+        },
+        "researchAreas": {
+          "value": [
+            "Singularity Theory",
+            "Mathematical Physics",
+            "Algebraic Geometry",
+            "Microlocal Analysis"
+          ],
+          "source": "https://en.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Pham",
+          "verifiedAt": "2026-09-16T03:37:31.692Z"
+        },
+        "undergradInstitution": {
+          "value": "École Polytechnique",
+          "source": "https://en.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Pham",
+          "verifiedAt": "2026-09-16T03:37:31.692Z"
+        },
+        "undergradYear": {
+          "value": 1959,
+          "source": "https://en.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Pham",
+          "verifiedAt": "2026-09-16T03:37:31.692Z"
+        },
+        "phdInstitution": {
+          "value": "Université de Paris",
+          "source": "https://en.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Pham",
+          "verifiedAt": "2026-09-16T03:37:31.692Z"
+        },
+        "phdYear": {
+          "value": 1969,
+          "source": "https://en.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Pham",
+          "verifiedAt": "2026-09-16T03:37:31.692Z"
+        },
+        "phdMajor": {
+          "value": "Mathematics",
+          "source": "https://en.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Pham",
+          "verifiedAt": "2026-09-16T03:37:31.692Z"
+        },
+        "honors": {
+          "value": [
+            {
+              "name": "Brieskorn-Pham Singularities & Picard-Lefschetz-Pham Formula (Foundational Contributions to Singularity Theory)",
+              "year": 1965,
+              "category": "major_award",
+              "organization": "Société Mathématique de France",
+              "source": "https://www.numdam.org/item/BSMF_1965__93__333_0/"
+            }
+          ],
+          "source": "https://en.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Pham",
+          "verifiedAt": "2026-09-16T03:37:31.692Z"
+        },
+        "researchOverview": {
+          "value": {
+            "text": "Mathematician and mathematical physicist, Professor Emeritus at Université Côte d'Azur (formerly Université de Nice Sophia Antipolis), where an appointment began in 1970 and continued to retirement in 2001. Foundational contributions to singularity theory and mathematical physics include Brieskorn-Pham singularities, the Picard-Lefschetz-Pham formula, and work on Feynman-integral singularities and resurgent functions.",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Pham",
+              "https://fr.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Pham"
+            ],
+            "verifiedAt": "2026-09-15T00:00:00.000Z"
+          },
+          "source": "https://en.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Pham",
+          "verifiedAt": "2026-09-16T03:37:31.692Z"
+        }
+      }
+    },
     "vp-1159": {},
-    "vp-1160": {},
+    "vp-1160": {
+      "name": "Buu-Hoi Nguyen-Phuc",
+      "lastAuditedAt": "2026-09-16T03:43:23.065Z",
+      "sources": [
+        "https://en.wikipedia.org/wiki/B%E1%BB%ADu_H%E1%BB%99i",
+        "https://www.wikidata.org/wiki/Q5003211",
+        "https://fr.wikipedia.org/wiki/M%C3%A9daille_d%27argent_du_CNRS",
+        "https://fr.wikipedia.org/wiki/Prix_Delalande-Gu%C3%A9rineau",
+        "https://pubmed.ncbi.nlm.nih.gov/4575403/",
+        "https://pubmed.ncbi.nlm.nih.gov/4566291/",
+        "https://www.chemeurope.com/en/encyclopedia/N._P._Buu-Hoi.html",
+        "https://link.springer.com/article/10.1007/BF00637373"
+      ],
+      "report": "Target: Buu-Hoi Nguyen-Phuc (vp-1160), a deceased historical scholar (d. 28 Jan 1972). No `directFields` are set on this entry, so nothing is protected.\n\n**Identity/eligibility:** Confirmed via en.wikipedia.org/wiki/Bửu_Hội (matches Wikidata Q5003211, sitelinked as \"Bửu Hội\" on en/fr/vi/zh wikis). Great-great-grandson of Emperor Minh Mạng; CNRS research career 1941–1972; `Deceased` track with an eligible CNRS (public research institute) appointment is correct per ROSTER_MAINTENANCE.md's Deceased-track rule.\n\n**profileUrl:** Verified live and correct — resolves to the right person, matches Wikidata's English sitelink. No websiteUrl field exists to audit.\n\n**Department/city correction (change):** English Wikipedia states verbatim: \"Hội and his team relocated from the Radium Institute to larger facilities at the Institute of Chemistry of Natural Substances in 1960\" (Gif-sur-Yvette) and \"In 1962 he was promoted to Director of Research\" — i.e., his final ~12-year appointment and the rank/track already stored (`Directeur de recherche`) both belong to the Institut de Chimie des Substances Naturelles (ICSN, CNRS) at Gif-sur-Yvette, not the Institut du Radium in Paris. I updated `department` to name ICSN and `city` to Gif-sur-Yvette accordingly.\n\n**Degrees:** phdYear 1939 (Université de Paris/Sorbonne, Chemistry) and mdYear 1944 (Université de Paris) are not corroborated by current en/fr Wikipedia text — current English Wikipedia describes a pharmacy degree from the University of Hanoi plus a Sorbonne \"licence ès sciences\" and doctoral chemistry research under Pauline Ramart, without stating explicit years or a separate MD. I found no independent source contradicting these self-reported-style figures, so per prior guidance (a self-reported/unconfirmed fact like phdYear should be kept unless actively contradicted), I left both degree fields unchanged. Flagging as unconfirmed rather than falsified.\n\n**Honors — significant unresolved conflict, flagging per \"material evidence... conflicting\" rule:**\n- \"Médaille d'argent du CNRS\" (1957): fr.wikipedia.org/wiki/Médaille_d'argent_du_CNRS lists exactly one 1957 laureate (Gérard Wlérick, astronomy) and does not include Bửu Hội.\n- \"Prix Delalande-Guérineau\" (1954, attributed to Académie des sciences): fr.wikipedia.org/wiki/Prix_Delalande-Guérineau gives a full year-by-year Académie des Sciences laureate list that has no 1954 entry at all (jumps 1946→1956) and never names Bửu Hội in any year.\n- \"Commandeur de la Légion d'honneur\" (1962): no independent corroboration found (Base Léonore not searchable by name via available tools); not contradicted either.\nNone of these three honors currently appear in the live en/fr Wikipedia article text itself (despite being cited to it), and I could not find any other primary source (Nature/Cancer Research obituaries are paywalled/blocked; PubMed abstracts didn't give award detail) confirming any of the three. Per the roster-maintenance rule to preserve pre-existing baseline honors additively and not drop them merely because one profile/list doesn't repeat them, I have **not removed** these honors, since the category (major national/academy honors) is facially eligible and I lack a definitive contradiction — but two of the three now have real negative evidence (dedicated recipient lists for the relevant years that omit him). I recommend the maintainer double-check these three honors against a primary source (CNRS annual reports, Académie des sciences comptes rendus, or the Légion d'honneur Base Léonore) before the next refresh; I'm setting `status: incomplete` because this material conflict is unresolved.\n\n**researchOverview:** Text is accurate — the dioxin-toxicity claim is corroborated by Buu-Hoï's own 1972 Naturwissenschaften papers on TCDD toxicity mechanisms (heme metabolism, porphyria). I replaced the source list: the stored `fr.wikipedia.org/wiki/Nguyễn_Phúc_Bửu_Hội` URL 404s (the actual French article is titled `Bửu_Hội`, not the fuller Vietnamese-style title), and `https://gallica.bnf.fr/` is a bare homepage, not a citation. Replaced both with the working en.wikipedia.org article and the Wikidata identity record.\n\n**Google Scholar / LinkedIn:** Not applicable — Bửu Hội died in 1972, well before these platforms existed; no scholarUrl or linkedinUrl added.\n\nNo protected fields exist on this entry, so no GitHub issue is needed; all proposed changes are direct edits to unprotected fields. Status is `incomplete` solely because of the unresolved honors-sourcing conflict described above.",
+      "fields": {
+        "vietnameseName": {
+          "value": "Nguyễn Phúc Bửu Hội",
+          "source": "https://en.wikipedia.org/wiki/B%E1%BB%ADu_H%E1%BB%99i",
+          "verifiedAt": "2026-09-16T03:43:23.065Z"
+        },
+        "profileUrl": {
+          "value": "https://en.wikipedia.org/wiki/B%E1%BB%ADu_H%E1%BB%99i",
+          "source": "https://en.wikipedia.org/wiki/B%E1%BB%ADu_H%E1%BB%99i",
+          "verifiedAt": "2026-09-16T03:43:23.065Z"
+        },
+        "university": {
+          "value": "CNRS (Centre National de la Recherche Scientifique)",
+          "source": "https://en.wikipedia.org/wiki/B%E1%BB%ADu_H%E1%BB%99i",
+          "verifiedAt": "2026-09-16T03:43:23.065Z"
+        },
+        "institutionType": {
+          "value": "Public research institute",
+          "source": "https://en.wikipedia.org/wiki/B%E1%BB%ADu_H%E1%BB%99i",
+          "verifiedAt": "2026-09-16T03:43:23.065Z"
+        },
+        "city": {
+          "value": "Gif-sur-Yvette",
+          "source": "https://en.wikipedia.org/wiki/B%E1%BB%ADu_H%E1%BB%99i",
+          "verifiedAt": "2026-09-16T03:43:23.065Z"
+        },
+        "country": {
+          "value": "France",
+          "source": "https://en.wikipedia.org/wiki/B%E1%BB%ADu_H%E1%BB%99i",
+          "verifiedAt": "2026-09-16T03:43:23.065Z"
+        },
+        "department": {
+          "value": "Institut de Chimie des Substances Naturelles (CNRS), Chimie Organique et Cancérologie, Biological & Biomedical Sciences",
+          "source": "https://en.wikipedia.org/wiki/B%E1%BB%ADu_H%E1%BB%99i",
+          "verifiedAt": "2026-09-16T03:43:23.065Z"
+        },
+        "rank": {
+          "value": "Directeur de recherche",
+          "source": "https://en.wikipedia.org/wiki/B%E1%BB%ADu_H%E1%BB%99i",
+          "verifiedAt": "2026-09-16T03:43:23.065Z"
+        },
+        "track": {
+          "value": "Deceased",
+          "source": "https://en.wikipedia.org/wiki/B%E1%BB%ADu_H%E1%BB%99i",
+          "verifiedAt": "2026-09-16T03:43:23.065Z"
+        },
+        "researchAreas": {
+          "value": [
+            "Organic Chemistry",
+            "Cancer Research",
+            "Carcinogenesis",
+            "Chemotherapy"
+          ],
+          "source": "https://en.wikipedia.org/wiki/B%E1%BB%ADu_H%E1%BB%99i",
+          "verifiedAt": "2026-09-16T03:43:23.065Z"
+        },
+        "phdInstitution": {
+          "value": "Université de Paris",
+          "source": "https://en.wikipedia.org/wiki/B%E1%BB%ADu_H%E1%BB%99i",
+          "verifiedAt": "2026-09-16T03:43:23.065Z"
+        },
+        "phdYear": {
+          "value": 1939,
+          "source": "https://en.wikipedia.org/wiki/B%E1%BB%ADu_H%E1%BB%99i",
+          "verifiedAt": "2026-09-16T03:43:23.065Z"
+        },
+        "phdMajor": {
+          "value": "Chemistry",
+          "source": "https://en.wikipedia.org/wiki/B%E1%BB%ADu_H%E1%BB%99i",
+          "verifiedAt": "2026-09-16T03:43:23.065Z"
+        },
+        "mdInstitution": {
+          "value": "Université de Paris",
+          "source": "https://en.wikipedia.org/wiki/B%E1%BB%ADu_H%E1%BB%99i",
+          "verifiedAt": "2026-09-16T03:43:23.065Z"
+        },
+        "mdYear": {
+          "value": 1944,
+          "source": "https://en.wikipedia.org/wiki/B%E1%BB%ADu_H%E1%BB%99i",
+          "verifiedAt": "2026-09-16T03:43:23.065Z"
+        },
+        "honors": {
+          "value": [
+            {
+              "name": "Commandeur de la Légion d'honneur",
+              "organization": "Government of France",
+              "category": "major_award",
+              "year": 1962,
+              "source": "https://en.wikipedia.org/wiki/B%E1%BB%ADu_H%E1%BB%99i"
+            },
+            {
+              "name": "Prix Delalande-Guérineau",
+              "organization": "Académie des sciences",
+              "category": "major_award",
+              "year": 1954,
+              "source": "https://en.wikipedia.org/wiki/B%E1%BB%ADu_H%E1%BB%99i"
+            },
+            {
+              "name": "Médaille d'argent du CNRS",
+              "organization": "CNRS (Centre National de la Recherche Scientifique)",
+              "category": "major_award",
+              "year": 1957,
+              "source": "https://en.wikipedia.org/wiki/B%E1%BB%ADu_H%E1%BB%99i"
+            }
+          ],
+          "source": "https://en.wikipedia.org/wiki/B%E1%BB%ADu_H%E1%BB%99i",
+          "verifiedAt": "2026-09-16T03:43:23.065Z"
+        },
+        "researchOverview": {
+          "value": {
+            "text": "Distinguished chemist at CNRS, direct descendant of Emperor Minh Mạng, and Commandeur de la Légion d'honneur. Pioneered synthetic chemotherapy, synthesizing hundreds of anti-tubercular, anti-leprosy, and anti-carcinogenic heterocyclic compounds while identifying dioxin toxicity.",
+            "sources": [
+              "https://en.wikipedia.org/wiki/B%E1%BB%ADu_H%E1%BB%99i",
+              "https://www.wikidata.org/wiki/Q5003211"
+            ],
+            "verifiedAt": "2026-09-13T00:00:00.000Z"
+          },
+          "source": "https://en.wikipedia.org/wiki/B%E1%BB%ADu_H%E1%BB%99i",
+          "verifiedAt": "2026-09-16T03:43:23.065Z"
+        }
+      }
+    },
     "vp-1161": {},
     "vp-1162": {},
     "vp-1163": {},
@@ -5901,7 +6195,31 @@
     "vp-1494": {},
     "vp-1495": {},
     "vp-1496": {},
-    "vp-1497": {},
+    "vp-1497": {
+      "id": "vp-1497",
+      "name": "Tess Do",
+      "lastAuditedAt": "2026-09-16T03:45:00.000Z",
+      "sources": [
+        "https://findanexpert.unimelb.edu.au/profile/7139-tess-do",
+        "https://arts.unimelb.edu.au/school-of-languages-and-linguistics/discipline-areas/french-studies",
+        "https://pictures.staff.unimelb.edu.au/squiz/index_eis.php?cid=0YjVBCBS4Hba9ajl3Q1Zn5H3KIS6fXGougN44znmRyE%3D&h=RNrL2NuxCUcr4dfds4%2BHiux8uPDyEze%2BWKkBaIwxNLYsGaQ9sIFzKDML1Ztfu%2FjW"
+      ],
+      "report": "The University of Melbourne French Studies page labels this image as the profile picture of Tess Do and links it to her official Find an Expert profile. The portrait was downloaded and converted to the local WebP asset.",
+      "fields": {
+        "portrait": {
+          "value": "portraits/1497-tess-do.webp",
+          "source": "https://pictures.staff.unimelb.edu.au/squiz/index_eis.php?cid=0YjVBCBS4Hba9ajl3Q1Zn5H3KIS6fXGougN44znmRyE%3D&h=RNrL2NuxCUcr4dfds4%2BHiux8uPDyEze%2BWKkBaIwxNLYsGaQ9sIFzKDML1Ztfu%2FjW",
+          "quote": "Profile picture of Tess Do",
+          "verifiedAt": "2026-09-16T03:45:00.000Z"
+        },
+        "portraitSource": {
+          "value": "https://pictures.staff.unimelb.edu.au/squiz/index_eis.php?cid=0YjVBCBS4Hba9ajl3Q1Zn5H3KIS6fXGougN44znmRyE%3D&h=RNrL2NuxCUcr4dfds4%2BHiux8uPDyEze%2BWKkBaIwxNLYsGaQ9sIFzKDML1Ztfu%2FjW",
+          "source": "https://arts.unimelb.edu.au/school-of-languages-and-linguistics/discipline-areas/french-studies",
+          "quote": "Profile picture of Tess Do",
+          "verifiedAt": "2026-09-16T03:45:00.000Z"
+        }
+      }
+    },
     "vp-1500": {},
     "vp-1501": {},
     "vp-1502": {},
@@ -6210,49 +6528,6 @@
     "vp-1555": {},
     "vp-1556": {},
     "vp-1557": {},
-    "vp-1134": {
-      "id": "vp-1134",
-      "name": "Laurent Pham-Van",
-      "lastAuditedAt": "2026-09-16T03:34:48.000Z",
-      "sources": [
-        "https://iramis.cea.fr/spec/lepo/membres-lepo/",
-        "https://iramis.cea.fr/spec/lepo/annuaire/?recherche=Laurent+PHAM-VAN",
-        "https://iramis.cea.fr/en/spec/directory/?uidc=M7VMMTEzTjUBAA",
-        "https://orcid.org/0000-0003-1676-6003",
-        "https://iramis.cea.fr/wp-content/uploads/2024/03/Laurentphanvan2.jpg"
-      ],
-      "report": "The official LEPO membership page identifies Laurent PHAM-VAN as a Chercheur and links the current CEA personal-directory page and ORCID. The prior portrait source was a CNRS logo; the current LEPO page provides an identity-labeled Laurent Pham-Van portrait, which was converted to the local WebP asset.",
-      "fields": {
-        "profileUrl": {
-          "value": "https://iramis.cea.fr/spec/lepo/annuaire/?recherche=Laurent+PHAM-VAN",
-          "source": "https://iramis.cea.fr/spec/lepo/membres-lepo/",
-          "verifiedAt": "2026-09-16T03:34:48.000Z"
-        },
-        "portrait": {
-          "value": "portraits/1134-laurent-pham-van.webp",
-          "source": "https://iramis.cea.fr/wp-content/uploads/2024/03/Laurentphanvan2.jpg",
-          "quote": "Laurent Pham-Van",
-          "verifiedAt": "2026-09-16T03:34:48.000Z"
-        },
-        "portraitSource": {
-          "value": "https://iramis.cea.fr/wp-content/uploads/2024/03/Laurentphanvan2.jpg",
-          "source": "https://iramis.cea.fr/spec/lepo/membres-lepo/",
-          "verifiedAt": "2026-09-16T03:34:48.000Z"
-        },
-        "researchOverview": {
-          "value": {
-            "text": "Researcher in the Laboratoire d'Électronique et Photonique Organique (LEPO), CEA-SPEC, Electrical Engineering at Commissariat à l'énergie atomique et aux énergies alternatives (CEA). Research specialization encompasses Organic Electronics, Photonics, Magnetic Sensors.",
-            "sources": [
-              "https://iramis.cea.fr/spec/lepo/membres-lepo/",
-              "https://iramis.cea.fr/spec/lepo/annuaire/?recherche=Laurent+PHAM-VAN"
-            ],
-            "verifiedAt": "2026-09-16T03:34:48.000Z"
-          },
-          "source": "https://iramis.cea.fr/spec/lepo/membres-lepo/",
-          "verifiedAt": "2026-09-16T03:34:48.000Z"
-        }
-      }
-    },
     "vp-1569": {
       "id": "vp-1569",
       "name": "Hoanh Le",
