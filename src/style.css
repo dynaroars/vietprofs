@@ -807,8 +807,8 @@ h1 {
 .entry-name-row {
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.25rem 0.6rem;
+  align-items: center;
+  gap: 0.25rem 0.5rem;
   line-height: 1.2;
 }
 
@@ -832,10 +832,14 @@ a.entry-name:focus-visible {
 .lab-site-link,
 .scholar-link,
 .linkedin-link,
-.profile-link {
+.profile-link,
+.loc-badge-link {
   color: var(--text-muted);
   display: inline-flex;
-  vertical-align: text-bottom;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  line-height: 1;
 }
 
 .personal-site-link:hover,
@@ -847,7 +851,9 @@ a.entry-name:focus-visible {
 .linkedin-link:hover,
 .linkedin-link:focus-visible,
 .profile-link:hover,
-.profile-link:focus-visible {
+.profile-link:focus-visible,
+.loc-badge-link:hover,
+.loc-badge-link:focus-visible {
   color: var(--text-primary);
 }
 
@@ -859,6 +865,7 @@ a.entry-name:focus-visible {
   height: 1rem;
   width: 1rem;
   fill: currentColor;
+  display: block;
 }
 
 .entry-meta {
@@ -868,8 +875,10 @@ a.entry-name:focus-visible {
 
 .country-flag {
   font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Android Emoji", sans-serif;
-  display: inline-block;
-  vertical-align: -0.05em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
   font-size: 1.05em;
   font-weight: normal;
   font-style: normal;
