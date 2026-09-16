@@ -1238,7 +1238,7 @@ async function applyProposal(current: JsonRecord): Promise<void> {
     delete verification[current.name];
   } else {
     if (index < 0) throw new Error(`cannot apply proposal because ${current.name} is missing`);
-    const next = { ...current.proposal };
+    const next = { id: current.proposal.id, ...current.proposal };
     next.lastUpdatedAt = current.substantiveChange ? approvalTime : current.baseline.lastUpdatedAt;
     roster[index] = next;
     if (finalName !== current.name) delete verification[current.name];

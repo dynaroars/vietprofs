@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-16T12:16:17.647Z",
+  "updatedAt": "2026-09-16T12:21:00.831Z",
   "entries": {
     "vp-0140": {
       "id": "vp-0140",
@@ -5507,7 +5507,144 @@
     "vp-1199": {},
     "vp-1200": {},
     "vp-1201": {},
-    "vp-1202": {},
+    "vp-1202": {
+      "name": "Anh Van Vo",
+      "lastAuditedAt": "2026-09-16T12:21:00.765Z",
+      "sources": [
+        "https://www.qut.edu.au/about/our-people/academic-profiles/v.anh",
+        "https://www.qut.edu.au/about/faculty-of-science/our-people?result_1042955_result_page=21",
+        "https://www.qut.edu.au/research/our-experts?discipline=Statistics&divfac=Faculty+of+Science",
+        "https://www.swinburne.edu.au/research/our-research/access-our-research/find-a-researcher-or-supervisor/researcher-profile/?id=vanh",
+        "https://scholar.google.com/citations?user=xJ4yHgsAAAAJ",
+        "https://arxiv.org/abs/math/0407454",
+        "https://arxiv.org/abs/0708.3631",
+        "https://www.mopp.qut.edu.au/document/view.php?id=28",
+        "https://research.qut.edu.au/datascience/people/anh-vo/"
+      ],
+      "report": "Full review completed. Identity and Vietnamese-diaspora eligibility are supported by the Vietnamese name Võ Văn Anh and identity-resolved QUT/Swinburne academic profiles. QUT is an Australian university, and its official profile states “Emeritus Professor, Queensland University of Technology (QUT), Australia, since April 2016”; the emeritus title follows a documented QUT professor career, so Emeritus eligibility remains satisfied and confirmed is true. The stored profileUrl was an obsolete research.qut.edu.au URL; the current official institutional profile is https://www.qut.edu.au/about/our-people/academic-profiles/v.anh. QUT’s current position listing places the emeritus appointment in Faculty of Science, Office of the Executive Dean, Science, so department is corrected from the former School of Mathematical Sciences. No websiteUrl is added: the reviewed Swinburne page is an institutional adjunct profile, not a maintained personal/lab homepage. No linkedinUrl is added because the discovered LinkedIn result is not directly linked from an official profile and is not unambiguously identity-resolved for this mathematician. Google Scholar identity is verified: the profile is “Vo V. Anh,” lists “Emeritus Professor, Queensland University of Technology,” gives a verified qut.edu.au email, and lists stochastic analysis, stochastic modelling, and computational mathematics; matching publications include “Numerical solution of the space fractional Fokker–Planck equation” and “Numerical methods for the variable-order fractional advection-diffusion equation with a nonlinear source term.” Education review found the following explicit QUT qualification entries: “PhD (University of Tasmania)”, “MEc (University of New England)”, and “BSc(Hons) (University of Tasmania)”. The existing PhD institution/year/major are retained; explicitly documented master’s and undergraduate credentials are added without inferred years. No postdoctoral training or completion year is explicitly documented. Honors review adds the faculty-level Australian Mathematical Society Fellowship (QUT states “Fellow of the Australian Mathematical Society since 1996”) and the significant former Distinguished Professor appointment at Swinburne (2018–2022); QUT-local service awards, invitations, grants, and Highly Cited Researcher recognition were not added as roster honors. No portrait is added because the available page image could not be independently captured as a stable direct portrait URL within this review. The old profile URL fetch returned an internal retrieval error and is replaced based on the current QUT profile search result; no material eligibility uncertainty remains.",
+      "fields": {
+        "vietnameseName": {
+          "value": "Võ Văn Anh",
+          "source": "https://www.qut.edu.au/about/our-people/academic-profiles/v.anh",
+          "verifiedAt": "2026-09-16T12:21:00.765Z"
+        },
+        "profileUrl": {
+          "value": "https://www.qut.edu.au/about/our-people/academic-profiles/v.anh",
+          "source": "https://www.qut.edu.au/about/our-people/academic-profiles/v.anh",
+          "verifiedAt": "2026-09-16T12:21:00.765Z"
+        },
+        "university": {
+          "value": "Queensland University of Technology",
+          "source": "https://www.qut.edu.au/about/our-people/academic-profiles/v.anh",
+          "verifiedAt": "2026-09-16T12:21:00.765Z"
+        },
+        "city": {
+          "value": "Brisbane",
+          "source": "https://www.qut.edu.au/about/our-people/academic-profiles/v.anh",
+          "verifiedAt": "2026-09-16T12:21:00.765Z"
+        },
+        "state": {
+          "value": "Queensland",
+          "source": "https://www.qut.edu.au/about/our-people/academic-profiles/v.anh",
+          "verifiedAt": "2026-09-16T12:21:00.765Z"
+        },
+        "country": {
+          "value": "Australia",
+          "source": "https://www.qut.edu.au/about/our-people/academic-profiles/v.anh",
+          "verifiedAt": "2026-09-16T12:21:00.765Z"
+        },
+        "department": {
+          "value": "Office of the Executive Dean, Science",
+          "source": "https://www.qut.edu.au/about/our-people/academic-profiles/v.anh",
+          "verifiedAt": "2026-09-16T12:21:00.765Z"
+        },
+        "rank": {
+          "value": "Emeritus Professor",
+          "source": "https://www.qut.edu.au/about/our-people/academic-profiles/v.anh",
+          "verifiedAt": "2026-09-16T12:21:00.765Z"
+        },
+        "track": {
+          "value": "Emeritus",
+          "source": "https://www.qut.edu.au/about/our-people/academic-profiles/v.anh",
+          "verifiedAt": "2026-09-16T12:21:00.765Z"
+        },
+        "researchAreas": {
+          "value": [
+            "Fractional Calculus",
+            "Stochastic Processes",
+            "Spatial Statistics",
+            "Financial Mathematics"
+          ],
+          "source": "https://www.qut.edu.au/about/our-people/academic-profiles/v.anh",
+          "verifiedAt": "2026-09-16T12:21:00.765Z"
+        },
+        "phdInstitution": {
+          "value": "University of Tasmania",
+          "source": "https://www.qut.edu.au/about/our-people/academic-profiles/v.anh",
+          "verifiedAt": "2026-09-16T12:21:00.765Z"
+        },
+        "phdYear": {
+          "value": 1980,
+          "source": "https://www.qut.edu.au/about/our-people/academic-profiles/v.anh",
+          "verifiedAt": "2026-09-16T12:21:00.765Z"
+        },
+        "phdMajor": {
+          "value": "Mathematics",
+          "source": "https://www.qut.edu.au/about/our-people/academic-profiles/v.anh",
+          "verifiedAt": "2026-09-16T12:21:00.765Z"
+        },
+        "msInstitution": {
+          "value": "University of New England",
+          "source": "https://www.qut.edu.au/about/our-people/academic-profiles/v.anh",
+          "verifiedAt": "2026-09-16T12:21:00.765Z"
+        },
+        "msMajor": {
+          "value": "Economics",
+          "source": "https://www.qut.edu.au/about/our-people/academic-profiles/v.anh",
+          "verifiedAt": "2026-09-16T12:21:00.765Z"
+        },
+        "undergradInstitution": {
+          "value": "University of Tasmania",
+          "source": "https://www.qut.edu.au/about/our-people/academic-profiles/v.anh",
+          "verifiedAt": "2026-09-16T12:21:00.765Z"
+        },
+        "undergradMajor": {
+          "value": "Mathematics",
+          "source": "https://www.qut.edu.au/about/our-people/academic-profiles/v.anh",
+          "verifiedAt": "2026-09-16T12:21:00.765Z"
+        },
+        "honors": {
+          "value": [
+            {
+              "name": "Fellow of the Australian Mathematical Society",
+              "category": "fellow",
+              "organization": "Australian Mathematical Society",
+              "year": 1996,
+              "source": "https://www.qut.edu.au/about/our-people/academic-profiles/v.anh"
+            },
+            {
+              "name": "Distinguished Professor",
+              "category": "distinguished_professorship",
+              "organization": "Swinburne University of Technology",
+              "year": 2018,
+              "source": "https://www.swinburne.edu.au/research/our-research/access-our-research/find-a-researcher-or-supervisor/researcher-profile/?id=vanh"
+            }
+          ],
+          "source": "https://www.qut.edu.au/about/our-people/academic-profiles/v.anh",
+          "verifiedAt": "2026-09-16T12:21:00.765Z"
+        },
+        "confirmed": {
+          "value": true,
+          "source": "https://www.qut.edu.au/about/our-people/academic-profiles/v.anh",
+          "verifiedAt": "2026-09-16T12:21:00.765Z"
+        },
+        "scholarUrl": {
+          "value": "https://scholar.google.com/citations?user=xJ4yHgsAAAAJ",
+          "source": "https://www.qut.edu.au/about/our-people/academic-profiles/v.anh",
+          "verifiedAt": "2026-09-16T12:21:00.765Z"
+        }
+      }
+    },
     "vp-1203": {},
     "vp-1205": {},
     "vp-1206": {},
