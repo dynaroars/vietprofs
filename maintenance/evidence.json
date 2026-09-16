@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-16T13:18:36.854Z",
+  "updatedAt": "2026-09-16T16:25:04.670Z",
   "entries": {
     "vp-0140": {
       "id": "vp-0140",
@@ -2484,10 +2484,227 @@
     "vp-0810": {},
     "vp-0811": {},
     "vp-0812": {},
-    "vp-0814": {},
+    "vp-0814": {
+      "name": "Phuong D. Nguyen",
+      "lastAuditedAt": "2026-09-16T16:23:23.413Z",
+      "sources": [
+        "https://medschool.cuanschutz.edu/surgery/divisions-centers-affiliates/plastic-and-reconstructive/our-team/phuong-nguyen-md",
+        "https://medschool.cuanschutz.edu/surgery/education/grand-rounds/past-years/2024-2025",
+        "https://medschool.cuanschutz.edu/surgery/education/global-surgery-program/research",
+        "https://som.cuanschutz.edu/FIMS/Content/faculty/38508/Nguyen%20CV%201.5.24.pdf",
+        "https://news.cuanschutz.edu/department-of-surgery/plastic-surgery-residents-vietnam",
+        "https://www.linkedin.com/in/phuong-nguyen-572324150/",
+        "https://pubmed.ncbi.nlm.nih.gov/19319044/"
+      ],
+      "report": "Eligible and confirmed. The live University of Colorado official profile remains the correct institutional profile URL; no maintained personal/lab homepage was found, so no websiteUrl is proposed. Current CU departmental sources identify Nguyen as Professor of Surgery in Plastic and Reconstructive Surgery, Chief of Pediatric Plastic Surgery, and Associate Vice Chair of Global Surgery; the existing Clinical track/rank is retained because the official profile is the direct appointment record and the other CU pages abbreviate the title to “professor.” University of Colorado is an eligible university. Identity and Vietnamese-diaspora eligibility are independently supported by CU’s report that Nguyen is a first-generation immigrant and its coverage of work in Vietnam.\n\nChanged department to the official division wording; repaired the impossible stored undergradYear (2026); added fully explicit education and completed postdoctoral training. Exact credential evidence from the official CU-hosted CV: “1/1995 - 6/1999 University of Minnesota … Bachelors of Science … Magna Cum Laude, Neuroscience”; “9/2000 – 5/2004 University of Minnesota Medical School … Doctor of Medicine”; and “07/2007 – 06/2009 New York University Medical Center … Institute of Reconstructive Plastic Surgery … Postdoctoral Research Fellowship.” These establish BS 1999, MD 2004, and completed postdoctoral fellowship 2009, in chronological order. No other degree credential was explicitly documented.\n\nAdded the two eligible faculty-level fellow distinctions directly documented in that CV: “2017 – Present Fellow, American College of Surgeons” and “2018 – Present Fellow, American Academy of Pediatrics.” Other listed CV items were not added because they are trainee awards, grants, local teaching awards, rankings, or otherwise do not meet the roster honors standard. There were no baseline honors to preserve or remove.\n\nThe LinkedIn URL was retained: its live result identifies this Phuong Nguyen at University of Colorado Anschutz and describes the matching craniofacial/plastic-surgery field. Google Scholar was searched by exact name and matching publications, including “Establishment of a critical-sized alveolar defect in the rat: a model for human gingivoperiosteoplasty,” but no identity-resolved canonical Scholar profile was located; scholarUrl is therefore omitted. The official profile/news pages did not expose a recoverable direct individual portrait asset through available retrieval, so no portrait pair is proposed.\n\nNo directFields are present in the baseline, so no protected-field conflict applies.",
+      "fields": {
+        "vietnameseName": {
+          "value": "Nguyễn D. Phương",
+          "source": "https://medschool.cuanschutz.edu/surgery/divisions-centers-affiliates/plastic-and-reconstructive/our-team/phuong-nguyen-md",
+          "verifiedAt": "2026-09-16T16:23:23.413Z"
+        },
+        "profileUrl": {
+          "value": "https://medschool.cuanschutz.edu/surgery/divisions-centers-affiliates/plastic-and-reconstructive/our-team/phuong-nguyen-md",
+          "source": "https://medschool.cuanschutz.edu/surgery/divisions-centers-affiliates/plastic-and-reconstructive/our-team/phuong-nguyen-md",
+          "verifiedAt": "2026-09-16T16:23:23.413Z"
+        },
+        "linkedinUrl": {
+          "value": "https://www.linkedin.com/in/phuong-nguyen-572324150/",
+          "source": "https://medschool.cuanschutz.edu/surgery/divisions-centers-affiliates/plastic-and-reconstructive/our-team/phuong-nguyen-md",
+          "verifiedAt": "2026-09-16T16:23:23.413Z"
+        },
+        "university": {
+          "value": "University of Colorado",
+          "source": "https://medschool.cuanschutz.edu/surgery/divisions-centers-affiliates/plastic-and-reconstructive/our-team/phuong-nguyen-md",
+          "verifiedAt": "2026-09-16T16:23:23.413Z"
+        },
+        "city": {
+          "value": "Aurora",
+          "source": "https://medschool.cuanschutz.edu/surgery/divisions-centers-affiliates/plastic-and-reconstructive/our-team/phuong-nguyen-md",
+          "verifiedAt": "2026-09-16T16:23:23.413Z"
+        },
+        "state": {
+          "value": "Colorado",
+          "source": "https://medschool.cuanschutz.edu/surgery/divisions-centers-affiliates/plastic-and-reconstructive/our-team/phuong-nguyen-md",
+          "verifiedAt": "2026-09-16T16:23:23.413Z"
+        },
+        "researchAreas": {
+          "value": [
+            "Cleft and Craniofacial Surgery",
+            "Pediatric Plastic Surgery",
+            "Global Surgery"
+          ],
+          "source": "https://medschool.cuanschutz.edu/surgery/divisions-centers-affiliates/plastic-and-reconstructive/our-team/phuong-nguyen-md",
+          "verifiedAt": "2026-09-16T16:23:23.413Z"
+        },
+        "track": {
+          "value": "Clinical",
+          "source": "https://medschool.cuanschutz.edu/surgery/divisions-centers-affiliates/plastic-and-reconstructive/our-team/phuong-nguyen-md",
+          "verifiedAt": "2026-09-16T16:23:23.413Z"
+        },
+        "department": {
+          "value": "Surgery, Plastic and Reconstructive Surgery",
+          "source": "https://medschool.cuanschutz.edu/surgery/divisions-centers-affiliates/plastic-and-reconstructive/our-team/phuong-nguyen-md",
+          "verifiedAt": "2026-09-16T16:23:23.413Z"
+        },
+        "rank": {
+          "value": "Clinical Professor",
+          "source": "https://medschool.cuanschutz.edu/surgery/divisions-centers-affiliates/plastic-and-reconstructive/our-team/phuong-nguyen-md",
+          "verifiedAt": "2026-09-16T16:23:23.413Z"
+        },
+        "mdInstitution": {
+          "value": "University of Minnesota",
+          "source": "https://medschool.cuanschutz.edu/surgery/divisions-centers-affiliates/plastic-and-reconstructive/our-team/phuong-nguyen-md",
+          "verifiedAt": "2026-09-16T16:23:23.413Z"
+        },
+        "mdYear": {
+          "value": 2004,
+          "source": "https://medschool.cuanschutz.edu/surgery/divisions-centers-affiliates/plastic-and-reconstructive/our-team/phuong-nguyen-md",
+          "verifiedAt": "2026-09-16T16:23:23.413Z"
+        },
+        "undergradInstitution": {
+          "value": "University of Minnesota",
+          "source": "https://medschool.cuanschutz.edu/surgery/divisions-centers-affiliates/plastic-and-reconstructive/our-team/phuong-nguyen-md",
+          "verifiedAt": "2026-09-16T16:23:23.413Z"
+        },
+        "undergradYear": {
+          "value": 1999,
+          "source": "https://medschool.cuanschutz.edu/surgery/divisions-centers-affiliates/plastic-and-reconstructive/our-team/phuong-nguyen-md",
+          "verifiedAt": "2026-09-16T16:23:23.413Z"
+        },
+        "undergradMajor": {
+          "value": "Neuroscience",
+          "source": "https://medschool.cuanschutz.edu/surgery/divisions-centers-affiliates/plastic-and-reconstructive/our-team/phuong-nguyen-md",
+          "verifiedAt": "2026-09-16T16:23:23.413Z"
+        },
+        "postdocInstitution": {
+          "value": "New York University",
+          "source": "https://medschool.cuanschutz.edu/surgery/divisions-centers-affiliates/plastic-and-reconstructive/our-team/phuong-nguyen-md",
+          "verifiedAt": "2026-09-16T16:23:23.413Z"
+        },
+        "postdocYear": {
+          "value": 2009,
+          "source": "https://medschool.cuanschutz.edu/surgery/divisions-centers-affiliates/plastic-and-reconstructive/our-team/phuong-nguyen-md",
+          "verifiedAt": "2026-09-16T16:23:23.413Z"
+        },
+        "country": {
+          "value": "United States",
+          "source": "https://medschool.cuanschutz.edu/surgery/divisions-centers-affiliates/plastic-and-reconstructive/our-team/phuong-nguyen-md",
+          "verifiedAt": "2026-09-16T16:23:23.413Z"
+        },
+        "honors": {
+          "value": [
+            {
+              "name": "Fellow of the American College of Surgeons",
+              "year": 2017,
+              "category": "fellow",
+              "organization": "American College of Surgeons",
+              "source": "https://som.cuanschutz.edu/FIMS/Content/faculty/38508/Nguyen%20CV%201.5.24.pdf"
+            },
+            {
+              "name": "Fellow of the American Academy of Pediatrics",
+              "year": 2018,
+              "category": "fellow",
+              "organization": "American Academy of Pediatrics",
+              "source": "https://som.cuanschutz.edu/FIMS/Content/faculty/38508/Nguyen%20CV%201.5.24.pdf"
+            }
+          ],
+          "source": "https://medschool.cuanschutz.edu/surgery/divisions-centers-affiliates/plastic-and-reconstructive/our-team/phuong-nguyen-md",
+          "verifiedAt": "2026-09-16T16:23:23.413Z"
+        },
+        "researchOverview": {
+          "value": {
+            "text": "Clinical Professor in the Surgery, Plastic Surgery at University of Colorado. Research specialization encompasses Cleft and Craniofacial Surgery, Pediatric Plastic Surgery, Global Surgery.",
+            "sources": [
+              "https://medschool.cuanschutz.edu/surgery/divisions-centers-affiliates/plastic-and-reconstructive/our-team/phuong-nguyen-md"
+            ],
+            "verifiedAt": "2026-09-14T20:28:00.000Z"
+          },
+          "source": "https://medschool.cuanschutz.edu/surgery/divisions-centers-affiliates/plastic-and-reconstructive/our-team/phuong-nguyen-md",
+          "verifiedAt": "2026-09-16T16:23:23.413Z"
+        }
+      }
+    },
     "vp-0815": {},
     "vp-0816": {},
-    "vp-0819": {},
+    "vp-0819": {
+      "name": "Mylinh T. Nguyen",
+      "lastAuditedAt": "2026-09-16T16:25:04.605Z",
+      "sources": [
+        "https://pediatrics.ucsd.edu/divisions/emergency-medicine/faculty.html",
+        "https://www.rchsd.org/programs-services/emergency-medicine/team/",
+        "https://profiles.ucsd.edu/mylinh.nguyen",
+        "https://www.rchsd.org/?p=4930393",
+        "https://www.linkedin.com/in/mylinh-nguyen-md-faap-164b0537/",
+        "https://pubmed.ncbi.nlm.nih.gov/33092974/"
+      ],
+      "report": "Eligible and confirmed: UC San Diego’s current Pediatrics faculty directory lists Mylinh Nguyen, MD in Pediatric Emergency Medicine as “(HS) Assistant Clinical Professor”; Rady Children’s current Emergency Medicine team independently identifies the same physician as “Assistant Clinical Professor of Pediatrics, UC San Diego.” This supports University of California, San Diego; Pediatrics; Clinical; and the corrected rank Assistant Clinical Professor. The UCSD Profiles page remains the official institutional profile URL. No personal/lab homepage was found, so websiteUrl is omitted.\n\nThe UCSD Profiles page currently says “Associate Clinical Professor, Pediatrics,” but the live UCSD departmental directory and current Rady team page both say Assistant Clinical Professor; the latter two are more current/specific appointment listings, so rank is corrected. Research areas remain supported by the Rady ultrasound-director role and the UCSD profile’s pediatric emergency/point-of-care-ultrasound publications.\n\nThe Rady physician profile verifies the medical school. Exact credential source text: “Wayne State University School of Medicine” (no new credential is being added or changed). LinkedIn independently reports Wayne State, 2007–2011, but is removed because its linkage from an official profile was not established and it does not unambiguously display the UCSD appointment. No Google Scholar profile could be identity-verified from affiliation plus publications; scholarUrl is omitted. No maintained personal/lab site, eligible honor, or high-confidence usable portrait asset was found.\n\nRemoved unsupported undergradYear 2026: no undergraduate degree/year was documented, and it is incompatible with the documented 2011 MD. Removed the malformed researchOverview, which is scraped UI/publication-list text rather than a compliant source-backed research summary. No directFields are present. Vietnamese-diaspora eligibility remains supported under the roster’s name-based discovery rule; no separate identity document is required once the current eligible appointment is resolved.",
+      "fields": {
+        "vietnameseName": {
+          "value": "Nguyễn T. Mỹ Linh",
+          "source": "https://profiles.ucsd.edu/mylinh.nguyen",
+          "verifiedAt": "2026-09-16T16:25:04.605Z"
+        },
+        "profileUrl": {
+          "value": "https://profiles.ucsd.edu/mylinh.nguyen",
+          "source": "https://profiles.ucsd.edu/mylinh.nguyen",
+          "verifiedAt": "2026-09-16T16:25:04.605Z"
+        },
+        "university": {
+          "value": "University of California, San Diego",
+          "source": "https://profiles.ucsd.edu/mylinh.nguyen",
+          "verifiedAt": "2026-09-16T16:25:04.605Z"
+        },
+        "city": {
+          "value": "San Diego",
+          "source": "https://profiles.ucsd.edu/mylinh.nguyen",
+          "verifiedAt": "2026-09-16T16:25:04.605Z"
+        },
+        "state": {
+          "value": "California",
+          "source": "https://profiles.ucsd.edu/mylinh.nguyen",
+          "verifiedAt": "2026-09-16T16:25:04.605Z"
+        },
+        "researchAreas": {
+          "value": [
+            "Pediatric Emergency Medicine",
+            "Point-of-Care Ultrasound"
+          ],
+          "source": "https://profiles.ucsd.edu/mylinh.nguyen",
+          "verifiedAt": "2026-09-16T16:25:04.605Z"
+        },
+        "track": {
+          "value": "Clinical",
+          "source": "https://profiles.ucsd.edu/mylinh.nguyen",
+          "verifiedAt": "2026-09-16T16:25:04.605Z"
+        },
+        "department": {
+          "value": "Pediatrics",
+          "source": "https://profiles.ucsd.edu/mylinh.nguyen",
+          "verifiedAt": "2026-09-16T16:25:04.605Z"
+        },
+        "rank": {
+          "value": "Assistant Clinical Professor",
+          "source": "https://profiles.ucsd.edu/mylinh.nguyen",
+          "verifiedAt": "2026-09-16T16:25:04.605Z"
+        },
+        "mdInstitution": {
+          "value": "Wayne State University School of Medicine",
+          "source": "https://profiles.ucsd.edu/mylinh.nguyen",
+          "verifiedAt": "2026-09-16T16:25:04.605Z"
+        },
+        "mdYear": {
+          "value": 2011,
+          "source": "https://profiles.ucsd.edu/mylinh.nguyen",
+          "verifiedAt": "2026-09-16T16:25:04.605Z"
+        },
+        "country": {
+          "value": "United States",
+          "source": "https://profiles.ucsd.edu/mylinh.nguyen",
+          "verifiedAt": "2026-09-16T16:25:04.605Z"
+        }
+      }
+    },
     "vp-0820": {},
     "vp-0821": {},
     "vp-0823": {},
@@ -3389,7 +3606,110 @@
     "vp-0945": {},
     "vp-0946": {},
     "vp-0947": {},
-    "vp-0948": {},
+    "vp-0948": {
+      "name": "Linh Hoang Nguyen",
+      "lastAuditedAt": "2026-09-16T16:15:45.631Z",
+      "sources": [
+        "https://www.nottingham.ac.uk/business/people/lizln1.phtml",
+        "https://www.thebritishacademy.ac.uk/news/funding-announced-for-the-british-academy-talent-development-awards-2024-2025/",
+        "https://www.linkedin.com/in/linh-h-nguyen-phd-cfa-098289b7",
+        "https://ueaeprints.uea.ac.uk/view/divisions/ECO/2025.html",
+        "https://www.researchgate.net/publication/375162312_The_Taxonomy_of_Tail_Risk"
+      ],
+      "report": "Verified eligible and confirmed. Nottingham’s live official Business School profile places the scholar in its Academic Staff directory as “Assistant Professor in Accounting & Finance,” Department of Finance, Accounting and Banking, with a Nottingham email. This supports the University of Nottingham appointment, Nottingham/United Kingdom location, university institution type, tenure-line track, rank, department, official profile URL, and all five stored research areas. It also states the scholar holds a current FBNet position within the Association of Vietnamese Scientists and Experts Global, supporting Vietnamese-diaspora identity.\n\nChanged the display and Vietnamese names from initials to the identity-resolved full form Linh Hoang Nguyen / Nguyễn Hoàng Linh. The British Academy’s official 2025 award announcement identifies “Dr Linh Hoang Nguyen,” University of Nottingham, for a finance/reinforcement-learning project; its subject and institution match the Nottingham profile exactly.\n\nAdded phdMajor “Finance.” Exact institutional-profile sentence: “Linh H. Nguyen obtained his PhD in Finance from the University of Exeter.” No PhD completion year is stated, so none was added. Removed unsupported and chronologically implausible undergradYear 2021; no authoritative source documents a bachelor’s institution, major, or completion year. The LinkedIn profile mentions a 2011 MSc-prize description but does not explicitly document completion of a degree, so no master’s credential was added.\n\nAdded the 2025 British Academy Talent Development Award as a faculty-level nationally competitive career award. The Academy announcement lists 27 awards and identifies Dr Linh Hoang Nguyen, University of Nottingham, award TDA24\\240213, “The Implementation of Reinforcement Learning in Financial Research.” No pre-existing honors required an eligibility removal.\n\nAdded LinkedIn only after identity resolution: its University of Nottingham employment, University of Exeter education (2012–2015), and risk-modelling/cryptocurrency/portfolio-optimisation interests align with the institutional profile. No websiteUrl: the official profile is institutional rather than a maintained personal/lab site, and no distinct qualifying homepage was found. No portrait: the live institutional-profile HTML contains only site/social icons, not a person image. No scholarUrl: exact-name searches did not surface a unique Google Scholar profile; the matching scholarly record is “The Taxonomy of Tail Risk,” authored by Linh H. Nguyen with University of Nottingham affiliation, but it does not establish a canonical Scholar user ID. The official profile and paper together resolve the publication identity.\n\nThe existing research overview remains fully supported by the official profile. No directFields are present, so no protected-field conflict applies.",
+      "fields": {
+        "vietnameseName": {
+          "value": "Nguyễn Hoàng Linh",
+          "source": "https://www.nottingham.ac.uk/business/people/lizln1.phtml",
+          "verifiedAt": "2026-09-16T16:15:45.631Z"
+        },
+        "profileUrl": {
+          "value": "https://www.nottingham.ac.uk/business/people/lizln1.phtml",
+          "source": "https://www.nottingham.ac.uk/business/people/lizln1.phtml",
+          "verifiedAt": "2026-09-16T16:15:45.631Z"
+        },
+        "linkedinUrl": {
+          "value": "https://www.linkedin.com/in/linh-h-nguyen-phd-cfa-098289b7",
+          "source": "https://www.nottingham.ac.uk/business/people/lizln1.phtml",
+          "verifiedAt": "2026-09-16T16:15:45.631Z"
+        },
+        "university": {
+          "value": "University of Nottingham",
+          "source": "https://www.nottingham.ac.uk/business/people/lizln1.phtml",
+          "verifiedAt": "2026-09-16T16:15:45.631Z"
+        },
+        "city": {
+          "value": "Nottingham",
+          "source": "https://www.nottingham.ac.uk/business/people/lizln1.phtml",
+          "verifiedAt": "2026-09-16T16:15:45.631Z"
+        },
+        "country": {
+          "value": "United Kingdom",
+          "source": "https://www.nottingham.ac.uk/business/people/lizln1.phtml",
+          "verifiedAt": "2026-09-16T16:15:45.631Z"
+        },
+        "researchAreas": {
+          "value": [
+            "Asset Pricing",
+            "Risk Modelling",
+            "Portfolio Optimisation",
+            "Cryptocurrency",
+            "Machine Learning in Finance"
+          ],
+          "source": "https://www.nottingham.ac.uk/business/people/lizln1.phtml",
+          "verifiedAt": "2026-09-16T16:15:45.631Z"
+        },
+        "track": {
+          "value": "Tenure-line",
+          "source": "https://www.nottingham.ac.uk/business/people/lizln1.phtml",
+          "verifiedAt": "2026-09-16T16:15:45.631Z"
+        },
+        "department": {
+          "value": "Finance, Accounting and Banking",
+          "source": "https://www.nottingham.ac.uk/business/people/lizln1.phtml",
+          "verifiedAt": "2026-09-16T16:15:45.631Z"
+        },
+        "rank": {
+          "value": "Assistant Professor",
+          "source": "https://www.nottingham.ac.uk/business/people/lizln1.phtml",
+          "verifiedAt": "2026-09-16T16:15:45.631Z"
+        },
+        "phdInstitution": {
+          "value": "University of Exeter",
+          "source": "https://www.nottingham.ac.uk/business/people/lizln1.phtml",
+          "verifiedAt": "2026-09-16T16:15:45.631Z"
+        },
+        "phdMajor": {
+          "value": "Finance",
+          "source": "https://www.nottingham.ac.uk/business/people/lizln1.phtml",
+          "verifiedAt": "2026-09-16T16:15:45.631Z"
+        },
+        "honors": {
+          "value": [
+            {
+              "name": "British Academy Talent Development Award",
+              "year": 2025,
+              "category": "career_award",
+              "organization": "The British Academy",
+              "source": "https://www.thebritishacademy.ac.uk/news/funding-announced-for-the-british-academy-talent-development-awards-2024-2025/"
+            }
+          ],
+          "source": "https://www.nottingham.ac.uk/business/people/lizln1.phtml",
+          "verifiedAt": "2026-09-16T16:15:45.631Z"
+        },
+        "researchOverview": {
+          "value": {
+            "text": "Nguyen's research interests include asset pricing, risk modeling, portfolio optimization, cryptocurrencies, and applications of artificial intelligence in finance.",
+            "sources": [
+              "https://www.nottingham.ac.uk/business/people/lizln1.phtml"
+            ],
+            "verifiedAt": "2026-09-07T19:08:00.000Z"
+          },
+          "source": "https://www.nottingham.ac.uk/business/people/lizln1.phtml",
+          "verifiedAt": "2026-09-16T16:15:45.631Z"
+        }
+      }
+    },
     "vp-0949": {},
     "vp-0950": {
       "name": "Cuong Nguyen - Lincoln University",
@@ -4030,7 +4350,94 @@
       }
     },
     "vp-0986": {},
-    "vp-0987": {},
+    "vp-0987": {
+      "name": "Nam Hai Pham",
+      "lastAuditedAt": "2026-09-16T15:53:56.505Z",
+      "sources": [
+        "https://strdb.s.isct.ac.jp/html/100001457_en.html",
+        "https://magn.ee.eng.isct.ac.jp/lab/member/pham-nam-hai/",
+        "https://www.titech.ac.jp/english/public-relations/research/stories/faces24-pham",
+        "https://researchmap.jp/magn?lang=en",
+        "https://magn.ee.eng.isct.ac.jp/lab/wp-content/uploads/2018/07/Pham-2.png"
+      ],
+      "report": "Verified identity and eligibility. Science Tokyo’s official faculty database lists PHAM NAM HAI as “School of Engineering Professor”; its research history records “Institute of Science Tokyo — Department of electrical and electronic engineering — Professor” from 2024.10. The university’s earlier official story identifies Pham as “a Vietnam native.” Institute of Science Tokyo is an eligible university; the professorial faculty appointment supports retaining Professor / Tenure-line, Tokyo, Japan, and Electrical and Electronic Engineering.\n\nURL audit: the protected Researchmap URL is a live identity-resolved academic profile and remains unchanged. Science Tokyo’s official faculty database is the stronger institutional profile: https://strdb.s.isct.ac.jp/html/100001457_en.html. The official profile links the maintained Pham research-group site, so I added that page as websiteUrl, not profileUrl. No prior websiteUrl was stored. No LinkedIn was added.\n\nScholar audit: searched Google Scholar and general web results, but did not find a canonical citations-profile URL that could be identity-verified from both affiliation and publications. Omitted scholarUrl rather than guessing. Identity/publication corroboration: the official database lists Pham on “Nanosecond ultralow power spin orbit torque magnetization switching driven by BiSb topological insulator”; the official profile’s research areas cover applied physical properties, electron devices, and electronic materials.\n\nEducation: retained PhD institution/year and added phdMajor. Exact source wording: “2009 Doctor of Engineering, Department of Electronic Engineering, Graduate School of Engineering, University of Tokyo.” Added undergraduate institution only; the official faculty profile explicitly lists “The University of Tokyo Bachelor” but gives an education period rather than an explicit graduation statement, so no undergraduate year was inferred. Its master’s-period listing does not explicitly identify a degree, so no MS credential was added. No postdoctoral training is documented.\n\nHonors audit: no honors were stored. The faculty profile lists 2020 Excellent Research Award, 2019 Gottfried Wagener Prize, 2017 Marubun Research Encouragement Award, and 2013 Ando Memorial Academic Award, but the reviewed sources did not establish their required field-wide standing sufficiently to add them. The remaining listed awards are conference, thesis, student-stage, or university-local awards and are ineligible under roster policy.\n\nPortrait: the maintained official lab page exposes an identity-resolved portrait at https://magn.ee.eng.isct.ac.jp/lab/wp-content/uploads/2018/07/Pham-2.png. It cannot be included in the roster object until the portrait pipeline archives it as the required local WebP asset; portrait and portraitSource must be added together.\n\nAll existing baseline facts were retained; no protected field was altered.",
+      "fields": {
+        "vietnameseName": {
+          "value": "Phạm Hải Nam",
+          "source": "https://researchmap.jp/magn?lang=en",
+          "verifiedAt": "2026-09-16T15:53:56.505Z"
+        },
+        "profileUrl": {
+          "value": "https://researchmap.jp/magn?lang=en",
+          "source": "https://researchmap.jp/magn?lang=en",
+          "verifiedAt": "2026-09-16T15:53:56.505Z"
+        },
+        "university": {
+          "value": "Institute of Science Tokyo",
+          "source": "https://researchmap.jp/magn?lang=en",
+          "verifiedAt": "2026-09-16T15:53:56.505Z"
+        },
+        "city": {
+          "value": "Tokyo",
+          "source": "https://researchmap.jp/magn?lang=en",
+          "verifiedAt": "2026-09-16T15:53:56.505Z"
+        },
+        "country": {
+          "value": "Japan",
+          "source": "https://researchmap.jp/magn?lang=en",
+          "verifiedAt": "2026-09-16T15:53:56.505Z"
+        },
+        "department": {
+          "value": "Electrical and Electronic Engineering",
+          "source": "https://researchmap.jp/magn?lang=en",
+          "verifiedAt": "2026-09-16T15:53:56.505Z"
+        },
+        "rank": {
+          "value": "Professor",
+          "source": "https://researchmap.jp/magn?lang=en",
+          "verifiedAt": "2026-09-16T15:53:56.505Z"
+        },
+        "track": {
+          "value": "Tenure-line",
+          "source": "https://researchmap.jp/magn?lang=en",
+          "verifiedAt": "2026-09-16T15:53:56.505Z"
+        },
+        "researchAreas": {
+          "value": [
+            "Spintronics",
+            "Nanotechnology",
+            "Electronic Materials"
+          ],
+          "source": "https://researchmap.jp/magn?lang=en",
+          "verifiedAt": "2026-09-16T15:53:56.505Z"
+        },
+        "phdInstitution": {
+          "value": "University of Tokyo",
+          "source": "https://researchmap.jp/magn?lang=en",
+          "verifiedAt": "2026-09-16T15:53:56.505Z"
+        },
+        "phdYear": {
+          "value": 2009,
+          "source": "https://researchmap.jp/magn?lang=en",
+          "verifiedAt": "2026-09-16T15:53:56.505Z"
+        },
+        "phdMajor": {
+          "value": "Electronic Engineering",
+          "source": "https://researchmap.jp/magn?lang=en",
+          "verifiedAt": "2026-09-16T15:53:56.505Z"
+        },
+        "undergradInstitution": {
+          "value": "University of Tokyo",
+          "source": "https://researchmap.jp/magn?lang=en",
+          "verifiedAt": "2026-09-16T15:53:56.505Z"
+        },
+        "websiteUrl": {
+          "value": "https://magn.ee.eng.isct.ac.jp/lab/member/pham-nam-hai/",
+          "source": "https://researchmap.jp/magn?lang=en",
+          "verifiedAt": "2026-09-16T15:53:56.505Z"
+        }
+      }
+    },
     "vp-0988": {},
     "vp-0989": {
       "name": "Quan Manh Phung",
@@ -4376,7 +4783,121 @@
     "vp-1041": {},
     "vp-1042": {},
     "vp-1043": {},
-    "vp-1044": {},
+    "vp-1044": {
+      "name": "Joseph Duong Vu",
+      "lastAuditedAt": "2026-09-16T16:17:28.171Z",
+      "sources": [
+        "https://reports.adviserinfo.sec.gov/reports/individual/individual_5448361.pdf",
+        "https://business.depaul.edu/faculty/faculty-a-z/Documents/Vu_Joe_2013.pdf",
+        "https://business.depaul.edu/academics/departments-schools/finance-and-real-estate/academics-finance-and-real-estate-faculty-pages-default",
+        "https://www.depaul.edu/faculty?college=Driehaus+College+of+Business&department=Department+of+Finance+%26+Real+Estate",
+        "https://resources.depaul.edu/teaching-commons/programs/online-teaching/Pages/dots-alumni.aspx",
+        "https://condor.depaul.edu/jvu/fin555syl.htm",
+        "https://www.researchgate.net/profile/Joseph-Vu",
+        "https://www.linkedin.com/in/joseph-vu-462a0922b"
+      ],
+      "report": "Updated the name to the full official form and replaced the generic department landing page with the strongest current identity-resolved verification source. DePaul’s current faculty landing page does not identify Joseph Vu, and its selected-faculty list omits him; no current individual institutional profile was found. Therefore `confirmed` remains false. The SEC/FINRA report identifies Joseph D. Vu as employed by DePaul from June 1988 to present and states: “I AM A FULL TIME ASSOCIATE PROFESSOR OF FINANCE AT DEPAUL UNIVERSITY...” This supports the current primary full-time Associate Professor appointment, Finance unit, Chicago location, and tenure-line classification. DePaul’s official hosted CV resolves the expanded name Joseph Duong Vu and supports the documented prior/current appointment and research record.\n\nAdded explicitly documented education, with chronological sanity verified (1973 <= 1975 <= 1984): “Ph.D. (Finance), Graduate School of Business, University of Chicago, 1984.” “M.B.A. (Finance), Graduate School of Business, University of Chicago, 1975.” “B.B.A. (Finance), with Highest Honor, Ohio University, 1973.”\n\nRetained research areas: the official CV lists corporate-finance publications and “Do Momentum Strategies Generate Profits in Emerging Stock Markets?” No postdoctoral training was documented. The CV’s listed teaching/local publication awards, directory listings, and a routine paper award do not meet the roster honors rules, so no honors were added. No maintained personal/lab homepage or suitable portrait was found. I searched for Google Scholar using the full name, DePaul affiliation, and the matching paper title but found no unambiguous canonical Scholar profile, so `scholarUrl` is omitted. The identity-resolved ResearchGate record independently matches DePaul Finance/Associate Professor and the same emerging-markets paper; it is not stored as a profile URL. The LinkedIn result matches DePaul but was not linked from an official page and lacked the required independent degree/field confirmation, so it is omitted.",
+      "fields": {
+        "profileUrl": {
+          "value": "https://reports.adviserinfo.sec.gov/reports/individual/individual_5448361.pdf",
+          "source": "https://reports.adviserinfo.sec.gov/reports/individual/individual_5448361.pdf",
+          "verifiedAt": "2026-09-16T16:17:28.171Z"
+        },
+        "university": {
+          "value": "DePaul University",
+          "source": "https://reports.adviserinfo.sec.gov/reports/individual/individual_5448361.pdf",
+          "verifiedAt": "2026-09-16T16:17:28.171Z"
+        },
+        "city": {
+          "value": "Chicago",
+          "source": "https://reports.adviserinfo.sec.gov/reports/individual/individual_5448361.pdf",
+          "verifiedAt": "2026-09-16T16:17:28.171Z"
+        },
+        "state": {
+          "value": "IL",
+          "source": "https://reports.adviserinfo.sec.gov/reports/individual/individual_5448361.pdf",
+          "verifiedAt": "2026-09-16T16:17:28.171Z"
+        },
+        "country": {
+          "value": "United States",
+          "source": "https://reports.adviserinfo.sec.gov/reports/individual/individual_5448361.pdf",
+          "verifiedAt": "2026-09-16T16:17:28.171Z"
+        },
+        "department": {
+          "value": "Finance & Real Estate",
+          "source": "https://reports.adviserinfo.sec.gov/reports/individual/individual_5448361.pdf",
+          "verifiedAt": "2026-09-16T16:17:28.171Z"
+        },
+        "rank": {
+          "value": "Associate Professor",
+          "source": "https://reports.adviserinfo.sec.gov/reports/individual/individual_5448361.pdf",
+          "verifiedAt": "2026-09-16T16:17:28.171Z"
+        },
+        "track": {
+          "value": "Tenure-line",
+          "source": "https://reports.adviserinfo.sec.gov/reports/individual/individual_5448361.pdf",
+          "verifiedAt": "2026-09-16T16:17:28.171Z"
+        },
+        "researchAreas": {
+          "value": [
+            "Corporate Finance",
+            "Emerging Markets Finance"
+          ],
+          "source": "https://reports.adviserinfo.sec.gov/reports/individual/individual_5448361.pdf",
+          "verifiedAt": "2026-09-16T16:17:28.171Z"
+        },
+        "confirmed": {
+          "value": false,
+          "source": "https://reports.adviserinfo.sec.gov/reports/individual/individual_5448361.pdf",
+          "verifiedAt": "2026-09-16T16:17:28.171Z"
+        },
+        "phdInstitution": {
+          "value": "University of Chicago",
+          "source": "https://reports.adviserinfo.sec.gov/reports/individual/individual_5448361.pdf",
+          "verifiedAt": "2026-09-16T16:17:28.171Z"
+        },
+        "phdYear": {
+          "value": 1984,
+          "source": "https://reports.adviserinfo.sec.gov/reports/individual/individual_5448361.pdf",
+          "verifiedAt": "2026-09-16T16:17:28.171Z"
+        },
+        "phdMajor": {
+          "value": "Finance",
+          "source": "https://reports.adviserinfo.sec.gov/reports/individual/individual_5448361.pdf",
+          "verifiedAt": "2026-09-16T16:17:28.171Z"
+        },
+        "msInstitution": {
+          "value": "University of Chicago",
+          "source": "https://reports.adviserinfo.sec.gov/reports/individual/individual_5448361.pdf",
+          "verifiedAt": "2026-09-16T16:17:28.171Z"
+        },
+        "msYear": {
+          "value": 1975,
+          "source": "https://reports.adviserinfo.sec.gov/reports/individual/individual_5448361.pdf",
+          "verifiedAt": "2026-09-16T16:17:28.171Z"
+        },
+        "msMajor": {
+          "value": "Finance",
+          "source": "https://reports.adviserinfo.sec.gov/reports/individual/individual_5448361.pdf",
+          "verifiedAt": "2026-09-16T16:17:28.171Z"
+        },
+        "undergradInstitution": {
+          "value": "Ohio University",
+          "source": "https://reports.adviserinfo.sec.gov/reports/individual/individual_5448361.pdf",
+          "verifiedAt": "2026-09-16T16:17:28.171Z"
+        },
+        "undergradYear": {
+          "value": 1973,
+          "source": "https://reports.adviserinfo.sec.gov/reports/individual/individual_5448361.pdf",
+          "verifiedAt": "2026-09-16T16:17:28.171Z"
+        },
+        "undergradMajor": {
+          "value": "Finance",
+          "source": "https://reports.adviserinfo.sec.gov/reports/individual/individual_5448361.pdf",
+          "verifiedAt": "2026-09-16T16:17:28.171Z"
+        }
+      }
+    },
     "vp-1045": {},
     "vp-1046": {},
     "vp-1047": {},
@@ -6883,7 +7404,88 @@
       }
     },
     "vp-1345": {},
-    "vp-1346": {},
+    "vp-1346": {
+      "name": "Quoc Viet Phung",
+      "lastAuditedAt": "2026-09-16T16:19:21.895Z",
+      "sources": [
+        "https://www.ecu.edu.au/schools/engineering/staff",
+        "https://www.ecu.edu.au/schools/engineering/staff/profiles/lecturers/dr-quoc-viet-phung",
+        "https://orcid.org/0000-0002-6138-3944",
+        "https://dblp.org/pid/42/5548.html",
+        "https://dblp.org/rec/journals/access/ZaheerAHIP23"
+      ],
+      "report": "Current appointment confirmed: ECU’s live School of Engineering staff directory lists Dr Quoc Viet Phung under “Lecturers,” separately from postdoctoral, adjunct, and honorary staff. The official individual profile identifies the person as “the lecturer in Electronics and Communications in the School of Engineering at ECU,” gives the Joondalup campus and ECU email, and shows active 2025–26 outputs, projects, and current PhD supervision. Edith Cowan University is an Australian university (the directory page identifies its TEQSA Australian University status). Retained the roster’s normalized Assistant Professor / Tenure-line mapping for this primary Lecturer appointment; the official published title is Lecturer.\n\nIdentity and Vietnamese-diaspora eligibility are supported by the identity-resolved official ECU profile for Quoc Viet Phung / Dr Viet Phung, the supplied Vietnamese name, ECU email, and the matching ORCID linked directly by ECU (0000-0002-6138-3944). DBLP independently resolves the same author as “Quoc Viet Phung – Viet Q. Phung,” attaches that ORCID, gives ECU affiliation (PhD 2010), and indexes the matching publication “A Survey on Artificial Intelligence-Based Acoustic Source Identification.”\n\nBoth URL roles were audited. profileUrl is reachable and is the official institutional staff profile, so it is retained. No maintained personal or lab homepage was found, so websiteUrl is omitted. Exact-name and variant Google Scholar searches did not identify a canonical, affiliation-and-publication-verified Scholar profile; scholarUrl is omitted. LinkedIn results resolve to unrelated people in Vietnam or Germany and are neither linked from ECU nor university/degree-matched, so linkedinUrl is omitted. No direct, stable image URL could be recovered from an identity-resolved page for a compliant portrait pair; portrait and portraitSource remain omitted.\n\nEducation correction: replace the unsupported University of Melbourne / 2016 / Electrical and Electronic Engineering PhD fields with the official credential. Exact source sentence: “Doctor of Philosophy, Edith Cowan University, 2010.” The official source does not state a doctorate major, bachelor’s degree, master’s degree, professional degree, or completed postdoctoral training; therefore phdMajor and the unsupported undergradYear are removed, and no additional credentials are added. This restores chronological sanity without inferring any education facts.\n\nResearch areas were refreshed to ECU’s current stated interests: next-generation and 5G/6G communications, IoT, smart sensors and embedded systems, underwater communications/sensing, data analytics, and network security. Optical Networks was removed because it is not among the current official profile’s stated interests. The listed International Postgraduate Research Award is a postgraduate/student-stage award and fails the roster honors rule; no honor is added. There were no stored honors to preserve.\n\nNo directFields are present in the supplied baseline, so no protected-field conflict applies. id and lastUpdatedAt are intentionally omitted for the controller.",
+      "fields": {
+        "vietnameseName": {
+          "value": "Phùng Quốc Việt",
+          "source": "https://www.ecu.edu.au/schools/engineering/staff/profiles/lecturers/dr-quoc-viet-phung",
+          "verifiedAt": "2026-09-16T16:19:21.895Z"
+        },
+        "profileUrl": {
+          "value": "https://www.ecu.edu.au/schools/engineering/staff/profiles/lecturers/dr-quoc-viet-phung",
+          "source": "https://www.ecu.edu.au/schools/engineering/staff/profiles/lecturers/dr-quoc-viet-phung",
+          "verifiedAt": "2026-09-16T16:19:21.895Z"
+        },
+        "university": {
+          "value": "Edith Cowan University",
+          "source": "https://www.ecu.edu.au/schools/engineering/staff/profiles/lecturers/dr-quoc-viet-phung",
+          "verifiedAt": "2026-09-16T16:19:21.895Z"
+        },
+        "country": {
+          "value": "Australia",
+          "source": "https://www.ecu.edu.au/schools/engineering/staff/profiles/lecturers/dr-quoc-viet-phung",
+          "verifiedAt": "2026-09-16T16:19:21.895Z"
+        },
+        "city": {
+          "value": "Joondalup",
+          "source": "https://www.ecu.edu.au/schools/engineering/staff/profiles/lecturers/dr-quoc-viet-phung",
+          "verifiedAt": "2026-09-16T16:19:21.895Z"
+        },
+        "state": {
+          "value": "Western Australia",
+          "source": "https://www.ecu.edu.au/schools/engineering/staff/profiles/lecturers/dr-quoc-viet-phung",
+          "verifiedAt": "2026-09-16T16:19:21.895Z"
+        },
+        "department": {
+          "value": "School of Engineering",
+          "source": "https://www.ecu.edu.au/schools/engineering/staff/profiles/lecturers/dr-quoc-viet-phung",
+          "verifiedAt": "2026-09-16T16:19:21.895Z"
+        },
+        "rank": {
+          "value": "Assistant Professor",
+          "source": "https://www.ecu.edu.au/schools/engineering/staff/profiles/lecturers/dr-quoc-viet-phung",
+          "verifiedAt": "2026-09-16T16:19:21.895Z"
+        },
+        "track": {
+          "value": "Tenure-line",
+          "source": "https://www.ecu.edu.au/schools/engineering/staff/profiles/lecturers/dr-quoc-viet-phung",
+          "verifiedAt": "2026-09-16T16:19:21.895Z"
+        },
+        "researchAreas": {
+          "value": [
+            "Wireless Communications",
+            "5G/6G Networks",
+            "Internet of Things",
+            "Smart Sensors and Embedded Systems",
+            "Underwater Communications and Sensing",
+            "Data Analytics",
+            "Network Security"
+          ],
+          "source": "https://www.ecu.edu.au/schools/engineering/staff/profiles/lecturers/dr-quoc-viet-phung",
+          "verifiedAt": "2026-09-16T16:19:21.895Z"
+        },
+        "phdInstitution": {
+          "value": "Edith Cowan University",
+          "source": "https://www.ecu.edu.au/schools/engineering/staff/profiles/lecturers/dr-quoc-viet-phung",
+          "verifiedAt": "2026-09-16T16:19:21.895Z"
+        },
+        "phdYear": {
+          "value": 2010,
+          "source": "https://www.ecu.edu.au/schools/engineering/staff/profiles/lecturers/dr-quoc-viet-phung",
+          "verifiedAt": "2026-09-16T16:19:21.895Z"
+        }
+      }
+    },
     "vp-1347": {},
     "vp-1348": {
       "name": "Luong-Viet Phung",
@@ -7292,7 +7894,6 @@
         }
       }
     },
-    "vp-1376": {},
     "vp-1377": {},
     "vp-1378": {},
     "vp-1379": {},
@@ -8576,6 +9177,112 @@
           "verifiedAt": "2026-09-16T01:30:00.000Z"
         }
       }
+    },
+    "vp-1567": {
+      "id": "vp-1567",
+      "name": "Hai Pham",
+      "lastAuditedAt": "2026-09-16T16:09:19.554Z",
+      "sources": [
+        "https://www.towson.edu/cbe/departments/finance/faculty.html",
+        "https://www.towson.edu/ir/documents/profile_cbe_fin.pdf",
+        "https://sites.google.com/view/hai-pham/home",
+        "https://doi.org/10.1111/1475-679x.70059",
+        "https://www.linkedin.com/in/haiquangpham",
+        "https://www.towson.edu/cbe/departments/finance/facultystaff/"
+      ],
+      "fields": {
+        "vietnameseName": {
+          "value": "Phạm Hải",
+          "source": "https://www.towson.edu/cbe/departments/finance/facultystaff/",
+          "verifiedAt": "2026-09-16T16:09:19.554Z"
+        },
+        "profileUrl": {
+          "value": "https://www.towson.edu/cbe/departments/finance/facultystaff/",
+          "source": "https://www.towson.edu/cbe/departments/finance/facultystaff/",
+          "verifiedAt": "2026-09-16T16:09:19.554Z"
+        },
+        "websiteUrl": {
+          "value": "https://sites.google.com/view/hai-pham/home",
+          "source": "https://www.towson.edu/cbe/departments/finance/facultystaff/",
+          "verifiedAt": "2026-09-16T16:09:19.554Z"
+        },
+        "university": {
+          "value": "Towson University",
+          "source": "https://www.towson.edu/cbe/departments/finance/facultystaff/",
+          "verifiedAt": "2026-09-16T16:09:19.554Z"
+        },
+        "city": {
+          "value": "Towson",
+          "source": "https://www.towson.edu/cbe/departments/finance/facultystaff/",
+          "verifiedAt": "2026-09-16T16:09:19.554Z"
+        },
+        "state": {
+          "value": "Maryland",
+          "source": "https://www.towson.edu/cbe/departments/finance/facultystaff/",
+          "verifiedAt": "2026-09-16T16:09:19.554Z"
+        },
+        "country": {
+          "value": "United States",
+          "source": "https://www.towson.edu/cbe/departments/finance/facultystaff/",
+          "verifiedAt": "2026-09-16T16:09:19.554Z"
+        },
+        "department": {
+          "value": "Finance",
+          "source": "https://www.towson.edu/cbe/departments/finance/facultystaff/",
+          "verifiedAt": "2026-09-16T16:09:19.554Z"
+        },
+        "rank": {
+          "value": "Assistant Professor",
+          "source": "https://www.towson.edu/cbe/departments/finance/facultystaff/",
+          "verifiedAt": "2026-09-16T16:09:19.554Z"
+        },
+        "track": {
+          "value": "Tenure-line",
+          "source": "https://www.towson.edu/cbe/departments/finance/facultystaff/",
+          "verifiedAt": "2026-09-16T16:09:19.554Z"
+        },
+        "researchAreas": {
+          "value": [
+            "Corporate Finance",
+            "Banking and Financial Intermediation",
+            "Production Networks",
+            "Textual Analysis and Machine Learning"
+          ],
+          "source": "https://www.towson.edu/cbe/departments/finance/facultystaff/",
+          "verifiedAt": "2026-09-16T16:09:19.554Z"
+        },
+        "phdInstitution": {
+          "value": "Texas A&M University",
+          "source": "https://www.towson.edu/cbe/departments/finance/facultystaff/",
+          "verifiedAt": "2026-09-16T16:09:19.554Z"
+        },
+        "phdYear": {
+          "value": 2024,
+          "source": "https://www.towson.edu/cbe/departments/finance/facultystaff/",
+          "verifiedAt": "2026-09-16T16:09:19.554Z"
+        },
+        "phdMajor": {
+          "value": "Finance",
+          "source": "https://www.towson.edu/cbe/departments/finance/facultystaff/",
+          "verifiedAt": "2026-09-16T16:09:19.554Z"
+        },
+        "msInstitution": {
+          "value": "University of Southern California",
+          "source": "https://www.towson.edu/cbe/departments/finance/facultystaff/",
+          "verifiedAt": "2026-09-16T16:09:19.554Z"
+        },
+        "msYear": {
+          "value": 2018,
+          "source": "https://www.towson.edu/cbe/departments/finance/facultystaff/",
+          "verifiedAt": "2026-09-16T16:09:19.554Z"
+        },
+        "msMajor": {
+          "value": "Economics",
+          "source": "https://www.towson.edu/cbe/departments/finance/facultystaff/",
+          "verifiedAt": "2026-09-16T16:09:19.554Z"
+        }
+      },
+      "report": "Verified identity and eligibility: the official Towson Finance faculty directory lists Hai Pham as “Assistant Professor,” separately from teaching and adjunct faculty. Towson’s 2024 Finance department profile reports its Assistant Professor ranks within the department’s tenured/tenure-track faculty total, supporting the existing Tenure-line track. Towson University is an eligible university; the primary unit remains Finance.\n\nProtected fields: name, university, rank, and profileUrl are current and unchanged. The protected stored profile URL resolves to the live official Finance faculty directory; it was not altered. Added websiteUrl because the identity-resolved Google Sites page is a maintained personal academic homepage, not an institutional directory. Its self-identification matches Towson, Finance, and the official Towson email address.\n\nUpdated researchAreas to the four areas explicitly listed on the maintained homepage: Corporate Finance; Banking & Financial Intermediation; Production networks; Textual Analysis & Machine Learning. No undergraduate, postdoctoral, professional-degree, or eligible honor information was documented. No honors were stored to audit.\n\nEducation was verified without changing values. Exact source text: “Ph.D. in Finance, 2024” / “Texas A&M University”; “M.A. in Economics, 2018” / “University of Southern California.” The chronology is sound (2018 <= 2024). \n\nSearched for a Google Scholar profile using the Towson affiliation and the matching publication title, but found no unambiguous canonical citations profile; scholarUrl is omitted. The matching publication is Kim and Pham’s “Quid Pro Quo? Private Information Flows in Shareholder Activism: Evidence from Mutual Fund Families,” consistent with the homepage’s Journal of Accounting Research claim. A LinkedIn result exists, but it is neither linked from the official/personal page nor independently sufficient under the roster’s strict degree-match rule, so linkedinUrl is omitted. The personal page exposes an image, but retrieval did not yield an inspectable, identity-verified direct image suitable for a high-confidence portrait; portrait fields remain absent.\n\nVietnamese-diaspora eligibility remains supported by the provided Vietnamese name and otherwise fully resolved academic identity; separate documentary proof is not required by the roster guide."
     }
   }
 }
