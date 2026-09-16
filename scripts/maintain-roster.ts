@@ -1306,6 +1306,21 @@ async function applyProposal(current: JsonRecord): Promise<void> {
     await saveEvidenceLedger(evidenceLedger, evidencePath);
   }
 
+  // Keep the enrichment ledger synchronized when an approved removal changes the roster ID set.
+  // This must happen before validation so a removal cannot leave the controller stuck on stale
+  // enrichment IDs or batch assignments.
+  const enrichmentPath = join(REPO_ROOT, 'maintenance/enrichment.json');
+  const enrichment = await readJsonRequired<JsonRecord>(enrichmentPath);
+  if (personId && current.proposal === null) {
+    enrichment.ids = (enrichment.ids as string[]).filter((id) => id !== personId);
+    enrichment.batches = (enrichment.batches as JsonRecord[]).map((batch) => ({
+      ...batch,
+      ids: (batch.ids as string[]).filter((id) => id !== personId),
+    }));
+    delete (enrichment.entries as JsonRecord)[personId];
+    await writeAtomic(enrichmentPath, enrichment);
+  }
+
   await runProcess('npm', ['run', 'validate-data'], { label: `validate ${current.name}` });
 }
 
