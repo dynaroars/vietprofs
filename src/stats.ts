@@ -106,12 +106,12 @@ function formatDateFull(dateStr: string): string {
 function formatSnapshotTimestamp(timestamp: string): string {
   const date = new Date(timestamp);
   if (Number.isNaN(date.getTime())) return 'Unknown time';
-  return new Intl.DateTimeFormat('en-US', {
+  const formatted = new Intl.DateTimeFormat('en-US', {
     dateStyle: 'medium',
     timeStyle: 'medium',
     timeZone: 'UTC',
-    timeZoneName: 'short',
   }).format(date);
+  return `${formatted} UTC`;
 }
 
 function visitCount(stat: { visits?: number; uniques?: number; requests?: number } | undefined): number {
