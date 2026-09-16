@@ -535,6 +535,11 @@ const FIELD_OVERRIDES = new Map([
   // "Mathematical" would otherwise win the Mathematics rule before Engineering, but this
   // appointment sits in Shizuoka's Faculty of Engineering (communications / systems).
   ['Department of Mathematical and Systems Engineering|Shizuoka University', 'Engineering'],
+  // The executive-dean office is the administrative home of a mathematician whose research
+  // areas are fractional calculus, stochastic processes, and financial mathematics.
+  ['Office of the Executive Dean, Science|Queensland University of Technology', 'Mathematics'],
+  // Shantou's Institute of Marine Sciences appointment is an aquaculture/fish-health position.
+  ['Institute of Marine Sciences|Shantou University', 'Agricultural & Natural Resource Sciences'],
   // JAIST Knowledge Science houses this materials-informatics / data-driven-AI appointment;
   // the school name itself has no computing keyword.
   ['School of Knowledge Science|Japan Advanced Institute of Science and Technology', 'Computer & Information Sciences'],
