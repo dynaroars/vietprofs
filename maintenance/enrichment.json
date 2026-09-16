@@ -1134,13 +1134,11 @@
     "vp-1143",
     "vp-1145",
     "vp-1146",
-    "vp-1147",
     "vp-1148",
     "vp-1149",
     "vp-1151",
     "vp-1152",
     "vp-1153",
-    "vp-1154",
     "vp-1155",
     "vp-1156",
     "vp-1157",
@@ -1514,7 +1512,8 @@
     "vp-1565",
     "vp-1566",
     "vp-1567",
-    "vp-1568"
+    "vp-1568",
+    "vp-1569"
   ],
   "batches": [
     {
@@ -2988,13 +2987,11 @@
         "vp-1143",
         "vp-1145",
         "vp-1146",
-        "vp-1147",
         "vp-1148",
         "vp-1149",
         "vp-1151",
         "vp-1152",
         "vp-1153",
-        "vp-1154",
         "vp-1155"
       ],
       "status": "pending"
@@ -3483,6 +3480,13 @@
         "vp-1566",
         "vp-1567",
         "vp-1568"
+      ],
+      "status": "pending"
+    },
+    {
+      "number": 77,
+      "ids": [
+        "vp-1569"
       ],
       "status": "pending"
     }
@@ -15338,16 +15342,6 @@
       "errors": [],
       "updatedAt": "2026-09-15T03:31:49.139Z"
     },
-    "vp-1147": {
-      "overview": "pending",
-      "work": "pending",
-      "sourcesChecked": [
-        "https://pubs.aip.org/aip/apl/article/105/10/100401/30349"
-      ],
-      "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-15T03:31:49.139Z"
-    },
     "vp-1148": {
       "overview": "pending",
       "work": "pending",
@@ -15394,16 +15388,6 @@
       "work": "pending",
       "sourcesChecked": [
         "https://uwaterloo.ca/economics/profiles/trien-nguyen-retired"
-      ],
-      "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-15T03:31:49.139Z"
-    },
-    "vp-1154": {
-      "overview": "pending",
-      "work": "pending",
-      "sourcesChecked": [
-        "https://www.fondation-cnrs.org/nous-connaitre/equipe/"
       ],
       "evidence": [],
       "errors": [],
@@ -19288,6 +19272,18 @@
       "evidence": [],
       "errors": [],
       "updatedAt": "2026-09-15T03:31:49.139Z"
+    },
+    "vp-1569": {
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://www.sdstate.edu/directory/hoanh-le",
+        "https://www.hoanhle.com/",
+        "https://scholar.google.com/citations?user=T46UFt0AAAAJ&hl=en"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-16T01:30:00.000Z"
     }
   }
 }
