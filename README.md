@@ -68,28 +68,6 @@ The roster lives in [`public/data.json`](./public/data.json) and is also publish
 public profile at `people/vp-####.html`, and its immutable `vp-####` `id` is assigned by `npm run
 assign-profile-ids -- --apply` after an entry is added.
 
-To suggest an addition or correction, use [`submit.html`](./submit.html) rather than editing the
-repository directly — paste a name, a profile/homepage link, or a directory page, and it opens a
-pre-filled email or GitHub issue. Fields explicitly supplied by the owner or through one of these
-direct submissions are recorded in `directFields` and preserved by automated web maintenance.
-Protected direct fields are not edited directly, but they are still checked during audits; if an
-update or conflict is discovered on live sources, a GitHub issue is opened and reported to the
-maintainer rather than modifying the protected field directly. Other roster details may still be
-researched and updated independently.
-
-Optional research overviews are source-backed enrichment fields. Their
-operational evidence and resumable batch state are kept in [`maintenance/enrichment.json`](./maintenance/enrichment.json);
-run `npm run enrich -- status` to inspect coverage or `npm run enrich -- snapshot` to create a
-stable 20-person snapshot before collecting proposals. Use `collect N`, independently verify and
-`apply proposals.json`, then `finalize N` for each batch. Run `resolve-retries` after bounded
-source failures have been retried; it records the second retrieval result before closing only
-those optional fields for which no independently verified enrichment was added.
-
-Full eligibility, evidence, and data-format rules — accepted appointment tracks, honors criteria,
-degree fields, and more — are documented in
-[`ROSTER_MAINTENANCE.md`](./ROSTER_MAINTENANCE.md). The rules behind the "Show me something
-interesting" view are in its [interesting-facts
-section](./ROSTER_MAINTENANCE.md#interesting-facts-guidelines).
 
 Thanks to [hieuphay.com](https://hieuphay.com/ban-do-kinh-te-viet-nam/) for an initial dataset of
 Vietnamese economists that seeded a batch of entries, and to the many contributors over
