@@ -575,6 +575,7 @@ const FIELD_OVERRIDES = new Map([
   // Department name gives no field signal, but Hieu T. Nguyen's own research (IoT, wireless
   // communications, MIMO) is electrical/communications engineering.
   ['Department of Science and Industry Systems|University of South-Eastern Norway', 'Engineering'],
+  ['Department of Spatial Planning|TU Dortmund University', 'Earth & Environmental Sciences'],
   // "Clinical Science" is this medical school's generic department name for all its physician
   // faculty regardless of specialty; the university name itself (School of Medicine) is the
   // actual field signal, not the bare department string.
