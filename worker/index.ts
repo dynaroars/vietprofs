@@ -27,6 +27,7 @@ export interface DailyStat {
   pageViews: number;
   visits?: number;
   uniques?: number;
+  assetLoads?: number;
 }
 
 export interface CountryStat {
@@ -89,6 +90,7 @@ export interface StatsResponse {
     uniques?: number;
   };
   baseline?: BaselineStat;
+  browserLikeTrafficPct?: number;
   countriesCount: number;
   topCountries: CountryStat[];
   topCountriesToday?: CountryStat[];
@@ -230,6 +232,10 @@ function buildGraphqlQuery(dates: string[]): string {
         limit: 1
         filter: { date: $date${index}, clientRequestHTTPHost: $hostname, requestSource: "eyeball", edgeResponseContentTypeName: "html", edgeResponseStatus_geq: 200, edgeResponseStatus_lt: 400 }
       ) { count sum { visits } }
+      assets${index}: httpRequestsAdaptiveGroups(
+        limit: 1
+        filter: { date: $date${index}, clientRequestHTTPHost: $hostname, requestSource: "eyeball", edgeResponseContentTypeName_in: ["javascript", "css"], edgeResponseStatus_geq: 200, edgeResponseStatus_lt: 400 }
+      ) { count }
       topCountries${index}: httpRequestsAdaptiveGroups(
         limit: 250
         filter: { date: $date${index}, clientRequestHTTPHost: $hostname, requestSource: "eyeball", edgeResponseContentTypeName: "html", edgeResponseStatus_geq: 200, edgeResponseStatus_lt: 400 }
@@ -280,27 +286,31 @@ function buildDemoResponse(): StatsResponse {
     d.setDate(d.getDate() - i);
     const dateStr = d.toISOString().split('T')[0];
     const base = 120 + Math.floor(Math.sin(i * 0.5) * 40) + (i % 7 === 0 ? 60 : 0);
+    const pageViews = Math.round(base * 1.6);
     daily.push({
       date: dateStr,
       requests: Math.round(base * 3.8),
-      pageViews: Math.round(base * 1.6),
+      pageViews,
       visits: Math.round(base * 0.8),
+      assetLoads: Math.round(pageViews * 0.35),
     });
   }
 
-  const todayStat = daily[daily.length - 1] || { requests: 0, pageViews: 0, visits: 0 };
+  const todayStat = daily[daily.length - 1] || { requests: 0, pageViews: 0, visits: 0, assetLoads: 0 };
   const last7 = daily.slice(-7);
   const sum7 = last7.reduce((acc, curr) => ({
     requests: acc.requests + curr.requests,
     pageViews: acc.pageViews + curr.pageViews,
     visits: acc.visits + (curr.visits || 0),
-  }), { requests: 0, pageViews: 0, visits: 0 });
+    assetLoads: acc.assetLoads + (curr.assetLoads || 0),
+  }), { requests: 0, pageViews: 0, visits: 0, assetLoads: 0 });
 
   const sum30 = daily.reduce((acc, curr) => ({
     requests: acc.requests + curr.requests,
     pageViews: acc.pageViews + curr.pageViews,
     visits: acc.visits + (curr.visits || 0),
-  }), { requests: 0, pageViews: 0, visits: 0 });
+    assetLoads: acc.assetLoads + (curr.assetLoads || 0),
+  }), { requests: 0, pageViews: 0, visits: 0, assetLoads: 0 });
 
   const visitsList7 = last7.map(d => d.visits || 0);
   const avgVisitsPerDay = Math.round(sum7.visits / 7);
@@ -335,7 +345,7 @@ function buildDemoResponse(): StatsResponse {
     generatedAt: new Date().toISOString(),
     dataPeriodDays: 30,
     breakdownPeriodDays: 7,
-    metricNotice: 'Visits are Cloudflare network visit estimates, not unique verified people. Eyeball traffic represents external client requests; it is not equivalent to verified human visitors and may still include automated traffic.',
+    metricNotice: 'Visits are Cloudflare network visit estimates, not unique verified people. Eyeball traffic represents external client requests; it is not equivalent to verified human visitors and may still include automated traffic. "Browser-like traffic" compares HTML page views to loads of the site\'s JS/CSS bundle: real browsers fetch both, while most simple scrapers and crawlers only ever request the HTML, so a low ratio suggests a lot of the traffic is automated.',
     retentionNotice: 'Cloudflare live API retention is approximately 8 days. A scheduled archive builds the longer 30-day history over time.',
     coverage: { last7Days: 7, last30Days: 30 },
     today: todayStat,
@@ -346,6 +356,7 @@ function buildDemoResponse(): StatsResponse {
       medianVisitsPerDay,
       avgPageViewsPerDay: Math.round(sum7.pageViews / 7),
     },
+    browserLikeTrafficPct: browserLikeTrafficPct(sum7.pageViews, sum7.assetLoads),
     countriesCount: topCountries7Day.length,
     topCountries: topCountries7Day,
     topCountriesToday: topCountries7Day.slice(0, 5),
@@ -373,7 +384,13 @@ function sumDaily(rows: DailyStat[]): Omit<DailyStat, 'date'> {
     requests: total.requests + row.requests,
     pageViews: total.pageViews + row.pageViews,
     visits: (total.visits || 0) + (row.visits || 0),
-  }), { requests: 0, pageViews: 0, visits: 0 });
+    assetLoads: (total.assetLoads || 0) + (row.assetLoads || 0),
+  }), { requests: 0, pageViews: 0, visits: 0, assetLoads: 0 });
+}
+
+function browserLikeTrafficPct(pageViews: number, assetLoads: number): number {
+  if (pageViews <= 0) return 0;
+  return Math.min(100, Math.round((assetLoads / pageViews) * 100));
 }
 
 async function fetchLiveStats(env: Env, { persist = false } = {}): Promise<StatsResponse> {
@@ -421,11 +438,13 @@ async function fetchLiveStats(env: Env, { persist = false } = {}): Promise<Stats
   const freshDaily = sourceDates.map((date, index): DailyStat => {
     const traffic = zoneData[`traffic${index}`]?.[0];
     const pages = zoneData[`pages${index}`]?.[0];
+    const assets = zoneData[`assets${index}`]?.[0];
     return {
       date,
       requests: traffic?.count || 0,
       pageViews: pages?.count || 0,
       visits: pages?.sum?.visits || 0,
+      assetLoads: assets?.count || 0,
     };
   });
 
@@ -557,7 +576,7 @@ async function fetchLiveStats(env: Env, { persist = false } = {}): Promise<Stats
     generatedAt: new Date().toISOString(),
     dataPeriodDays: MAX_STORED_DAYS,
     breakdownPeriodDays: 7,
-    metricNotice: 'Visits are Cloudflare network visit estimates, not unique verified people. Eyeball traffic represents external client requests; it is not equivalent to verified human visitors and may still include automated traffic.',
+    metricNotice: 'Visits are Cloudflare network visit estimates, not unique verified people. Eyeball traffic represents external client requests; it is not equivalent to verified human visitors and may still include automated traffic. "Browser-like traffic" compares HTML page views to loads of the site\'s JS/CSS bundle: real browsers fetch both, while most simple scrapers and crawlers only ever request the HTML, so a low ratio suggests a lot of the traffic is automated.',
     retentionNotice: 'Cloudflare live API retention is approximately 8 days. A scheduled archive builds the longer 30-day history over time.',
     coverage: { last7Days: last7.length, last30Days: daily.length },
     today,
@@ -568,6 +587,7 @@ async function fetchLiveStats(env: Env, { persist = false } = {}): Promise<Stats
       medianVisitsPerDay,
       avgPageViewsPerDay: Math.round(sum7.pageViews / Math.max(1, last7.length)),
     },
+    browserLikeTrafficPct: browserLikeTrafficPct(sum7.pageViews, sum7.assetLoads || 0),
     countriesCount: topCountries.length,
     topCountries,
     topCountriesToday,

@@ -8,6 +8,7 @@ export interface DailyStat {
   pageViews: number;
   visits?: number;
   uniques?: number;
+  assetLoads?: number;
 }
 
 export interface CountryStat {
@@ -71,6 +72,7 @@ export interface StatsResponse {
     uniques?: number;
   };
   baseline?: BaselineStat;
+  browserLikeTrafficPct?: number;
   countriesCount: number;
   topCountries: CountryStat[];
   topCountriesToday?: CountryStat[];
@@ -267,39 +269,89 @@ function renderTrafficChart(daily: DailyStat[], todayStr: string): string {
   `;
 }
 
+function renderStatCards(opts: {
+  todayVisits: number;
+  todayPageViews: number;
+  medianVisits7: number;
+  averageSubtext: string;
+  visits30: number;
+  coverage30Label: string;
+  countriesCount: number;
+  topCountryLabel: string;
+  browserLikeTrafficPct?: number;
+}): string {
+  const browserCard = opts.browserLikeTrafficPct === undefined ? '' : `
+      <div class="stats-stat-card">
+        <span class="stats-stat-label">Browser-Like Traffic (7 Days)</span>
+        <span class="stats-stat-value">${opts.browserLikeTrafficPct}<span class="stats-stat-unit">%</span></span>
+        <span class="stats-stat-sub">Share of page views that also loaded the site's JS/CSS — a rough signal for real-browser vs. automated traffic</span>
+      </div>
+  `;
+  return `
+    <div class="stats-overview-grid">
+      <div class="stats-stat-card">
+        <span class="stats-stat-label">Visits Today <span class="partial-tag">(in progress)</span></span>
+        <span class="stats-stat-value">${formatNumber(opts.todayVisits)}</span>
+        <span class="stats-stat-sub">${formatNumber(opts.todayPageViews)} HTML page views</span>
+      </div>
+      <div class="stats-stat-card stats-stat-card-primary">
+        <span class="stats-stat-label">Recent Daily Baseline</span>
+        <span class="stats-stat-value">${formatNumber(opts.medianVisits7)} <span class="stats-stat-unit">median/day</span></span>
+        <span class="stats-stat-sub">${opts.averageSubtext}</span>
+      </div>
+      <div class="stats-stat-card">
+        <span class="stats-stat-label">Visits (30-Day Window)</span>
+        <span class="stats-stat-value">${formatNumber(opts.visits30)}</span>
+        <span class="stats-stat-sub">${opts.coverage30Label}</span>
+      </div>
+      <div class="stats-stat-card">
+        <span class="stats-stat-label">Countries Reached (7 Days)</span>
+        <span class="stats-stat-value">${formatNumber(opts.countriesCount)}</span>
+        <span class="stats-stat-sub">${opts.topCountryLabel}</span>
+      </div>
+      ${browserCard}
+    </div>
+  `;
+}
+
 function renderDailyTable(daily: DailyStat[], todayStr: string): string {
   if (!daily || daily.length === 0) return '';
   const reversed = [...daily].reverse();
 
   return `
-    <div class="stats-table-wrapper" style="margin-top: 1.5rem;">
-      <table class="stats-table">
-        <thead>
-          <tr>
-            <th>Date</th>
-            <th class="num-col">Visits</th>
-            <th class="num-col">HTML Page Views</th>
-            <th class="num-col">HTTP Requests</th>
-          </tr>
-        </thead>
-        <tbody>
-          ${reversed.map((d) => {
-            const isPartial = d.date === todayStr;
-            const dateDisplay = isPartial
-              ? `${formatDateFull(d.date)} <span class="partial-tag">(in progress)</span>`
-              : formatDateFull(d.date);
-            return `
-              <tr ${isPartial ? 'class="partial-row"' : ''}>
-                <td><strong>${dateDisplay}</strong></td>
-                <td class="num-col"><strong>${formatNumber(visitCount(d))}</strong></td>
-                <td class="num-col">${formatNumber(d.pageViews || 0)}</td>
-                <td class="num-col">${formatNumber(d.requests || 0)}</td>
-              </tr>
-            `;
-          }).join('')}
-        </tbody>
-      </table>
-    </div>
+    <details class="stats-secondary-details" style="margin-top: 1.25rem;">
+      <summary><strong>View day-by-day history (${reversed.length} days)</strong></summary>
+      <div class="stats-table-wrapper" style="margin-top: 0.5rem;">
+        <table class="stats-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th class="num-col">Visits</th>
+              <th class="num-col">HTML Page Views</th>
+              <th class="num-col">JS/CSS Loads</th>
+              <th class="num-col">HTTP Requests</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${reversed.map((d) => {
+              const isPartial = d.date === todayStr;
+              const dateDisplay = isPartial
+                ? `${formatDateFull(d.date)} <span class="partial-tag">(in progress)</span>`
+                : formatDateFull(d.date);
+              return `
+                <tr ${isPartial ? 'class="partial-row"' : ''}>
+                  <td><strong>${dateDisplay}</strong></td>
+                  <td class="num-col"><strong>${formatNumber(visitCount(d))}</strong></td>
+                  <td class="num-col">${formatNumber(d.pageViews || 0)}</td>
+                  <td class="num-col">${formatNumber(d.assetLoads || 0)}</td>
+                  <td class="num-col">${formatNumber(d.requests || 0)}</td>
+                </tr>
+              `;
+            }).join('')}
+          </tbody>
+        </table>
+      </div>
+    </details>
   `;
 }
 
@@ -342,14 +394,6 @@ function renderStatsContent(data: StatsResponse, rosterMap: Map<string, RosterEn
                 Data snapshot: <time datetime="${escapeHtml(data.generatedAt)}">${escapeHtml(snapshotTimestamp)}</time>
                 <button type="button" id="refresh-stats-btn" class="refresh-stats-btn">Refresh now</button>
               </p>
-
-              <div class="stats-headline-bar">
-                <span class="headline-metric"><strong>Recent baseline:</strong> ${formatNumber(medianVisits7)} visits/day</span>
-                <span class="headline-bullet">•</span>
-                <span class="headline-metric"><strong>Countries reached (7 Days):</strong> ${formatNumber(data.countriesCount || 0)}</span>
-                <span class="headline-bullet">•</span>
-                <span class="headline-metric"><strong>Profile views share:</strong> ${profilePct}%</span>
-              </div>
             </div>
           </div>
         </section>
@@ -357,50 +401,22 @@ function renderStatsContent(data: StatsResponse, rosterMap: Map<string, RosterEn
         ${data.isDemo ? '<div class="stats-highlight-banner"><span class="demo-badge">Preview Mode</span></div>' : ''}
 
         <section class="man-section">
-          <h2>VISITOR TRAFFIC METRICS</h2>
-          <div class="stats-table-wrapper">
-            <table class="stats-table stats-metrics-table">
-              <thead>
-                <tr><th>Metric</th><th class="num-col">Value</th><th>Detail</th></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Visits Today <span class="partial-tag">(in progress)</span></td>
-                  <td class="num-col">${formatNumber(visitCount(data.today))}</td>
-                  <td>${formatNumber(data.today?.pageViews || 0)} HTML page views</td>
-                </tr>
-                <tr>
-                  <td>Visits (7 Days)</td>
-                  <td class="num-col">${formatNumber(visitCount(data.last7Days))}</td>
-                  <td>${escapeHtml(coverageLabel(coverage7, 7))}</td>
-                </tr>
-                <tr class="stats-metrics-primary">
-                  <td>Recent Daily Baseline</td>
-                  <td class="num-col">${formatNumber(medianVisits7)} <span class="stat-unit">median/day</span></td>
-                  <td>${escapeHtml(averageSubtext)}</td>
-                </tr>
-                <tr>
-                  <td>Visits (30-Day Window)</td>
-                  <td class="num-col">${formatNumber(visitCount(data.last30Days))}</td>
-                  <td>${escapeHtml(coverageLabel(coverage30, 30))}</td>
-                </tr>
-                <tr>
-                  <td>HTML Page Views (30 Days)</td>
-                  <td class="num-col">${formatNumber(data.last30Days?.pageViews || 0)}</td>
-                  <td>${formatNumber(data.last30Days?.requests || 0)} HTTP requests including assets</td>
-                </tr>
-                <tr>
-                  <td>Request-Origin Countries (7 Days)</td>
-                  <td class="num-col">${formatNumber(data.countriesCount || 0)}</td>
-                  <td>${data.topCountries?.[0] ? `Top: ${escapeHtml(data.topCountries[0].flag)} ${escapeHtml(data.topCountries[0].name)}` : 'No visit data'}</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          <h2>AT A GLANCE</h2>
+          ${renderStatCards({
+            todayVisits: visitCount(data.today),
+            todayPageViews: data.today?.pageViews || 0,
+            medianVisits7,
+            averageSubtext,
+            visits30: visitCount(data.last30Days),
+            coverage30Label: coverageLabel(coverage30, 30),
+            countriesCount: data.countriesCount || 0,
+            topCountryLabel: data.topCountries?.[0] ? `Top: ${escapeHtml(data.topCountries[0].flag)} ${escapeHtml(data.topCountries[0].name)}` : 'No visit data',
+            browserLikeTrafficPct: data.browserLikeTrafficPct,
+          })}
         </section>
 
         <section class="man-section">
-          <h2>TRAFFIC TREND &amp; DAILY HISTORY</h2>
+          <h2>TRAFFIC TREND</h2>
           ${renderTrafficChart(data.daily, todayStr)}
           ${renderDailyTable(data.daily, todayStr)}
         </section>
@@ -429,7 +445,7 @@ function renderStatsContent(data: StatsResponse, rosterMap: Map<string, RosterEn
                           <span class="flag-icon" aria-hidden="true">${escapeHtml(c.flag)}</span>
                           <span class="country-name">${escapeHtml(c.name)}</span>
                         </span>
-                        <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: ${barPct}%"></div></div>
+                        <div class="stats-progress-bar-bg"><div class="stats-progress-bar-fill" style="width: ${barPct}%"></div></div>
                       </td>
                       <td class="num-col">${formatNumber(visits)}</td>
                       <td class="num-col">${pct.toFixed(1)}%</td>
@@ -439,67 +455,11 @@ function renderStatsContent(data: StatsResponse, rosterMap: Map<string, RosterEn
               </tbody>
             </table>
           </div>
-
-          <details class="stats-secondary-details" style="margin-top: 1rem;">
-            <summary><strong>View Top Countries Today (Secondary View)</strong></summary>
-            <div class="stats-table-wrapper" style="margin-top: 0.5rem;">
-              ${(data.topCountriesToday && data.topCountriesToday.length > 0) ? `
-                <table class="stats-table">
-                  <thead>
-                    <tr>
-                      <th>Country</th>
-                      <th class="num-col">Visits Today</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    ${data.topCountriesToday.slice(0, 5).map((c) => `
-                      <tr>
-                        <td>
-                          <span class="country-cell">
-                            <span class="flag-icon" aria-hidden="true">${escapeHtml(c.flag)}</span>
-                            <span class="country-name">${escapeHtml(c.name)}</span>
-                          </span>
-                        </td>
-                        <td class="num-col">${formatNumber(c.count)}</td>
-                      </tr>
-                    `).join('')}
-                  </tbody>
-                </table>
-              ` : `
-                <p class="stat-sub" style="padding: 0.5rem 0; font-style: italic;">No country visit data recorded yet for today (partial day in progress).</p>
-              `}
-            </div>
-          </details>
         </section>
 
         <section class="man-section">
           <h2>MOST REQUESTED PAGES (7 DAYS)</h2>
-
-          <div class="stats-callout-box">
-            <h3>Content Category Breakdown (7 Days)</h3>
-            <div class="stats-callout-grid">
-              <div class="callout-item">
-                <span class="callout-label">Individual Professor Profiles</span>
-                <strong class="callout-value">${formatNumber(profileViews)} views</strong>
-                <span class="callout-sub">${profilePct}% of 7-day HTML views</span>
-              </div>
-              <div class="callout-item">
-                <span class="callout-label">Main Directory (Homepage)</span>
-                <strong class="callout-value">${formatNumber(mainViews)} views</strong>
-              </div>
-              <div class="callout-item">
-                <span class="callout-label">Submit / Update Entry</span>
-                <strong class="callout-value">${formatNumber(submitViews)} views</strong>
-              </div>
-              <div class="callout-item">
-                <span class="callout-label">Visitor Statistics</span>
-                <strong class="callout-value">${formatNumber(statsViews)} views</strong>
-              </div>
-            </div>
-            <p class="callout-note">
-              <em>Individual professor profiles account for approximately ${profilePct}% of recent page views.</em>
-            </p>
-          </div>
+          <p class="stat-sub" style="margin: 0 0 0.75rem;">Individual professor profiles account for ${profilePct}% of recent page views (${formatNumber(profileViews)} views), followed by the main directory (${formatNumber(mainViews)}), submit/update (${formatNumber(submitViews)}), and this stats page (${formatNumber(statsViews)}).</p>
 
           <div class="stats-table-wrapper">
             <table class="stats-table">
