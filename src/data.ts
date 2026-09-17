@@ -492,6 +492,7 @@ const FIELD_OVERRIDES = new Map([
   // is clearer from their official university context than from the generic words alone.
   ['Anesthesia|Indiana University School of Medicine', 'Health Sciences'],
   ['Biostatistics and Health Data Science|Indiana University School of Medicine', 'Statistics & Data Science'],
+  ['Department of Development Policy|KDI School of Public Policy and Management', 'Social & Behavioral Sciences'],
   ['National Center for Asphalt Technology|Auburn University', 'Engineering'],
   // Photonics/microtechnology research department; neither "microtechnology" nor "nanoscience"
   // matches the Engineering regex's "nanotechnology" keyword.
