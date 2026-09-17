@@ -1529,7 +1529,10 @@
     "vp-1586",
     "vp-1588",
     "vp-1589",
-    "vp-1590"
+    "vp-1590",
+    "vp-1591",
+    "vp-1592",
+    "vp-1593"
   ],
   "batches": [
     {
@@ -3518,7 +3521,10 @@
         "vp-1586",
         "vp-1588",
         "vp-1589",
-        "vp-1590"
+        "vp-1590",
+        "vp-1591",
+        "vp-1592",
+        "vp-1593"
       ],
       "status": "pending"
     }
@@ -19477,6 +19483,36 @@
       "evidence": [],
       "errors": [],
       "updatedAt": "2026-09-17T06:00:00.000Z"
+    },
+    "vp-1591": {
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://www.bristol.ac.uk/people/person/Duc-Nguyen-172557ca-0830-4e5c-a5d6-a05eac22f1c8/"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-17T06:05:00.000Z"
+    },
+    "vp-1592": {
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://www.gla.ac.uk/schools/computing/staff/nguyentruong/"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-17T06:05:00.000Z"
+    },
+    "vp-1593": {
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://www.southampton.ac.uk/people/5x8m8x/dr-tuyen-nguyen"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-17T06:05:00.000Z"
     }
   }
 }
