@@ -337,7 +337,7 @@ function renderStatsContent(data: StatsResponse, rosterMap: Map<string, RosterEn
             <div class="stat-card">
               <span class="stat-label">Visits Today <span class="partial-tag">(partial — UTC day in progress)</span></span>
               <strong class="stat-value">${formatNumber(visitCount(data.today))}</strong>
-              <span class="stat-sub">${formatNumber(data.today?.pageViews || 0)} successful HTML page views (UTC day in progress)</span>
+              <span class="stat-sub">${formatNumber(data.today?.pageViews || 0)} successful HTML page views</span>
             </div>
             <div class="stat-card">
               <span class="stat-label">Visits (7 Days)</span>
