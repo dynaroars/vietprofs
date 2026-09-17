@@ -478,6 +478,7 @@ export const HEALTH_SUBFIELDS = [
 // institution it's at, not just the department string.
 const FIELD_OVERRIDES = new Map([
   ["École d'actuariat|Université Laval", 'Mathematics'],
+  ['E.T.S.I. Aeronáutica y del Espacio|Universidad Politécnica de Madrid', 'Engineering'],
   ['Accelerator Directorate|SLAC National Accelerator Laboratory', 'Physics & Astronomy'],
   ['Direction Europe et International|CNRS (Centre National de la Recherche Scientifique)', 'Biological & Biomedical Sciences'],
   ['Centre de Recherche sur l\'Inflammation|CNRS (Centre National de la Recherche Scientifique)', 'Biological & Biomedical Sciences'],

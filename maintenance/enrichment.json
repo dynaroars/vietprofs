@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "snapshotAt": "2026-09-17T14:21:14.713Z",
+  "snapshotAt": "2026-09-17T14:23:41.686Z",
   "ids": [
     "vp-0001",
     "vp-0002",
@@ -1550,7 +1550,10 @@
     "vp-1609",
     "vp-1610",
     "vp-1611",
-    "vp-1612"
+    "vp-1612",
+    "vp-1613",
+    "vp-1614",
+    "vp-1615"
   ],
   "batches": [
     {
@@ -3567,6 +3570,15 @@
         "vp-1610",
         "vp-1611",
         "vp-1612"
+      ],
+      "status": "pending"
+    },
+    {
+      "number": 79,
+      "ids": [
+        "vp-1613",
+        "vp-1614",
+        "vp-1615"
       ],
       "status": "pending"
     }
@@ -19768,6 +19780,18 @@
       "evidence": [],
       "errors": [],
       "updatedAt": "2026-09-17T12:48:45.000Z"
+    },
+    "vp-1613": {
+      "overview": "pending",
+      "work": "pending"
+    },
+    "vp-1614": {
+      "overview": "pending",
+      "work": "pending"
+    },
+    "vp-1615": {
+      "overview": "pending",
+      "work": "pending"
     }
   }
 }
