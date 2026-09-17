@@ -583,6 +583,7 @@ const FIELD_OVERRIDES = new Map([
   // Xavier's College of Pharmacy department; "Clinical and Administrative Sciences" alone has no
   // pharmacy keyword, but both faculty here are pharmacists by research area.
   ['Clinical and Administrative Sciences|Xavier University of Louisiana', 'Health Sciences'],
+  ['Development Policy|KDI School of Public Policy and Management', 'Business & Economics'],
   // Nhung Nghiem's appointment is administratively housed in a genomics department, but her own
   // title ("Associate Professor of Health Economics") and research (health economics, public
   // health modelling) are Business & Economics, not biology.
