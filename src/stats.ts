@@ -293,10 +293,6 @@ function renderStatsContent(data: StatsResponse, rosterMap: Map<string, RosterEn
     ? `Average: ${formatNumber(avgVisits7)}/day (affected by ${formatDateLabel(spikeDay.date)} traffic spike)`
     : `Average: ${formatNumber(avgVisits7)}/day over recent available days`;
 
-  const headline = data.topCountries?.length > 0
-    ? `VietProfs received visits from <strong>${data.topCountries.length} request-origin countries</strong> over the recent 7-day period.`
-    : `Hostname-scoped aggregate network statistics for VietProfs.`;
-
   const profileViews = data.pageBreakdown?.profileViews ?? 0;
   const profilePct = data.pageBreakdown?.profilePct ?? 0;
   const mainViews = data.pageBreakdown?.mainViews ?? 0;
@@ -330,16 +326,7 @@ function renderStatsContent(data: StatsResponse, rosterMap: Map<string, RosterEn
           </div>
         </section>
 
-        <div class="stats-highlight-banner">
-          <p class="highlight-text">${headline}</p>
-          ${data.isDemo ? '<span class="demo-badge">Preview Mode</span>' : ''}
-        </div>
-
-        <div class="stats-highlight-banner info-banner">
-          <p class="highlight-text">
-            <strong>Data Retention &amp; Archive Status:</strong> Cloudflare live API retention is ~8 days. Local stats archive status: <strong>${escapeHtml(coverageLabel(coverage30, 30))}</strong>.
-          </p>
-        </div>
+        ${data.isDemo ? '<div class="stats-highlight-banner"><span class="demo-badge">Preview Mode</span></div>' : ''}
 
         <p class="stats-snapshot">
           Data snapshot: <time datetime="${escapeHtml(data.generatedAt)}">${escapeHtml(snapshotTimestamp)}</time>
