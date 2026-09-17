@@ -1546,7 +1546,8 @@
     "vp-1604",
     "vp-1605",
     "vp-1606",
-    "vp-1607"
+    "vp-1607",
+    "vp-1609"
   ],
   "batches": [
     {
@@ -3552,7 +3553,7 @@
     },
     {
       "number": 78,
-      "ids": ["vp-1602", "vp-1603", "vp-1604", "vp-1605", "vp-1606", "vp-1607"],
+      "ids": ["vp-1602", "vp-1603", "vp-1604", "vp-1605", "vp-1606", "vp-1607", "vp-1609"],
       "status": "pending"
     }
   ],
@@ -19609,6 +19610,11 @@
     "vp-1607": {
       "overview": "pending", "work": "pending",
       "sourcesChecked": ["https://www.asdu.ait.ac.th/interimcodes/faculty/FacultyByID.cfm?FacultyID=816"],
+      "evidence": [], "errors": [], "updatedAt": "2026-09-17T12:48:45.000Z"
+    },
+    "vp-1609": {
+      "overview": "pending", "work": "pending",
+      "sourcesChecked": ["https://usermap.cvut.cz/profile/b0d6446e-ff3e-4cc4-8a87-3ccf38acaf93?lang=en"],
       "evidence": [], "errors": [], "updatedAt": "2026-09-17T12:48:45.000Z"
     }
   }
