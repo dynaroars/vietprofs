@@ -146,7 +146,7 @@ function renderShell() {
         </div>
       </div>
       <div class="subtitle-row">
-        <p class="site-subtitle"><span>vietprofs@world</span>:~$ A Public Directory of the Vietnamese Academic and Research Diaspora</p>
+        <p class="site-subtitle"><span>vietprofs@world</span>:~$ A Public Directory of the Vietnamese Academic and Research Diaspora Worldwide</p>
       </div>
     </header>
     <div class="controls">
