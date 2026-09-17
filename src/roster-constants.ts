@@ -172,6 +172,7 @@ export const COUNTRY_FLAGS: Record<string, string> = {
   'Norway': '🇳🇴',
   'Belgium': '🇧🇪',
   'Poland': '🇵🇱',
+  'Czech Republic': '🇨🇿',
   'Ireland': '🇮🇪',
   'Singapore': '🇸🇬',
   'Vietnam': '🇻🇳',
