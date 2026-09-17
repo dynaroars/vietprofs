@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "snapshotAt": "2026-09-17T14:25:22.294Z",
+  "snapshotAt": "2026-09-17T14:26:59.261Z",
   "ids": [
     "vp-0001",
     "vp-0002",
@@ -1559,7 +1559,13 @@
     "vp-1618",
     "vp-1619",
     "vp-1620",
-    "vp-1621"
+    "vp-1621",
+    "vp-1622",
+    "vp-1623",
+    "vp-1624",
+    "vp-1625",
+    "vp-1626",
+    "vp-1627"
   ],
   "batches": [
     {
@@ -3603,6 +3609,18 @@
       "ids": [
         "vp-1620",
         "vp-1621"
+      ],
+      "status": "pending"
+    },
+    {
+      "number": 82,
+      "ids": [
+        "vp-1622",
+        "vp-1623",
+        "vp-1624",
+        "vp-1625",
+        "vp-1626",
+        "vp-1627"
       ],
       "status": "pending"
     }
@@ -19838,6 +19856,30 @@
       "work": "pending"
     },
     "vp-1621": {
+      "overview": "pending",
+      "work": "pending"
+    },
+    "vp-1622": {
+      "overview": "pending",
+      "work": "pending"
+    },
+    "vp-1623": {
+      "overview": "pending",
+      "work": "pending"
+    },
+    "vp-1624": {
+      "overview": "pending",
+      "work": "pending"
+    },
+    "vp-1625": {
+      "overview": "pending",
+      "work": "pending"
+    },
+    "vp-1626": {
+      "overview": "pending",
+      "work": "pending"
+    },
+    "vp-1627": {
       "overview": "pending",
       "work": "pending"
     }

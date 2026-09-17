@@ -144,6 +144,7 @@ export const COUNTRY_TO_CONTINENT: Record<string, string> = {
   'Indonesia': 'Asia',
   'Brunei': 'Asia',
   'Brunei Darussalam': 'Asia',
+  'Macau': 'Asia',
 
   // Australasia
   'Australia': 'Australasia',
@@ -207,6 +208,7 @@ export const COUNTRY_FLAGS: Record<string, string> = {
   'Indonesia': '🇮🇩',
   'Brunei': '🇧🇳',
   'Brunei Darussalam': '🇧🇳',
+  'Macau': '🇲🇴',
   'South Africa': '🇿🇦',
   'Egypt': '🇪🇬',
   'Nigeria': '🇳🇬',
