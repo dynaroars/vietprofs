@@ -1,26 +1,8 @@
 # VietProfs
 
-[VietProfs](https://vietroars.roars.dev) is a searchable, community-maintained directory of Vietnamese and Vietnamese-diaspora academics at universities and eligible public or nonprofit scholarly research institutes worldwide. Rather than being strictly confined to traditional tenure-line university classroom professors, it covers scholarly academics and faculty-equivalent permanent researchers---such as CNRS and INRIA researchers, Max Planck group leaders, RIKEN scientists, and CSIRO researchers, as well as continuing teaching and clinical faculty---because they publish, lead research groups, obtain funding, and mentor students much like university faculty. Corporate research labs, industry roles, and temporary or non-faculty positions remain outside its scope. [Read the paper](https://vietprofs.roars.dev/vietprofs.pdf) ([arXiv](https://arxiv.org/abs/2609.06091)) describing the project — the site's copy is kept current; the arXiv listing is a versioned snapshot. The dataset is available in [`public/data.json`](./public/data.json) and hosted on [Hugging Face](https://huggingface.co/datasets/nguyenthanhvuh/vietprofs).
+[VietProfs](https://vietroars.roars.dev) is a searchable, community-maintained directory of Vietnamese and Vietnamese-diaspora academics at universities and eligible public or nonprofit research institutes worldwide, covering tenure-line, teaching, research, and clinical faculty (see [`ROSTER_MAINTENANCE.md`](./ROSTER_MAINTENANCE.md) for exact eligibility). [Read the paper](https://vietprofs.roars.dev/vietprofs.pdf) ([arXiv](https://arxiv.org/abs/2609.06091)) describing the project — the site's copy is kept current; the arXiv listing is a versioned snapshot.
 
-This site is maintained by users all around the world (e.g., [submitting new or editing existing entries](https://vietprofs.roars.dev/submit.html)) _and_ AI bots that continuously validates and updates the directory database.  
-
-## Search and filters
-
-The search box matches names, employing institutions and institution types, departments, ranks, locations, research areas, honors, and degree institutions. Keyword prefixes can limit a search to a particular field; it defaults to everything. Location, field, appointment track, and institution type have dedicated filters. Matching is diacritic-insensitive, so `Nguyen` finds `Nguyễn`.
-
-The location, field, and track filters can be combined. Shareable URLs preserve the active search and filters. The “Show me something interesting” option provides roster-derived observations about geography, institutions, fields, and appointment tracks, alongside interactive charts (distribution by field, career stage, and country; PhD-cohort and top-institution rankings; and roster growth over time, built from `public/data.json`'s git history). It does not make claims about institutional prestige or Vietnamese population size.
-
-The directory also has a keyboard-first interface: `/` focuses search, `j` and `k` move through
-results, `Enter` opens the selected profile, `f` toggles its favorite state, `r` opens a random
-profile, and `?` shows help. Search accepts the documented field prefixes as well as small terminal
-Easter eggs such as `help`, `whoami`, `uname -a`, `fortune`, `/dev/random`, and `theme crt`.
-Individual profile pages use a compact Unix-manual layout and expose roster provenance and the raw
-record behind the rendered page.
-
-Type `sudo vietprofs` in search and press Enter to open a hidden roster shell. Type `help`
-for commands to search, count, rank countries/institutions by roster entries, and view favorites.
-The shell runs locally on the loaded roster; Escape closes it.
-
+This site is maintained by users all around the world (e.g., [submitting new or editing existing entries](https://vietprofs.roars.dev/submit.html)) _and_ AI bots that continuously validate and update the directory database. The site itself documents its search, filters, and keyboard shortcuts (press `?` there for help).
 
 Repository documentation is intentionally limited to four files:
 
@@ -28,7 +10,6 @@ Repository documentation is intentionally limited to four files:
 - [`ROSTER_MAINTENANCE.md`](./ROSTER_MAINTENANCE.md): authoritative eligibility, evidence, and roster-editing policy.
 - [`paper/PAPER_NOTES.md`](./paper/PAPER_NOTES.md): reproducible manuscript metrics, claim audit, and publication checklist.
 - [`AGENTS.md`](./AGENTS.md): concise instructions for automated contributors.
-
 
 ## Commands
 
@@ -44,30 +25,17 @@ npm run analyze   # print snapshot counts for paper/PAPER_NOTES.md and the paper
 npm run figures   # rebuild and recapture the paper's screenshot figures
 ```
 
-`npm run analyze` produces the snapshot values used by the manuscript, and `npm run figures`
-rebuilds its screenshots. Run both after a roster change that the paper cites, then update
-`paper/PAPER_NOTES.md` and `paper/paper.tex` from those outputs. The manuscript source lives
-entirely under [`paper/`](./paper/); after editing it, rebuild the PDF locally (e.g. `cd paper &&
-latexmk -pdf paper.tex`) and copy the result to `vietprofs.pdf` at the repo root — the committed
-PDF is not built in CI, so this copy must be committed manually for the site to pick up the
-change.
-
-By default `npm run dev` serves the site at `http://localhost:5173`. To make the dev server
-reachable from other machines on your network:
-
-```bash
-npm run dev -- --host
-```
-
-This binds to all network interfaces. Other machines can then browse to
-`http://<this-machine's-hostname-or-IP>:5173`.
+The manuscript source lives under [`paper/`](./paper/). After a roster change it cites, run `npm
+run analyze` and `npm run figures` to refresh its snapshot values and screenshots, update
+`paper/PAPER_NOTES.md`/`paper/paper.tex` accordingly, rebuild the PDF (`cd paper && latexmk -pdf
+paper.tex`), and copy the result to `vietprofs.pdf` at the repo root — that copy isn't built in CI,
+so it must be committed manually.
 
 ## Data and contributions
 
 The roster lives in [`public/data.json`](./public/data.json) and is also published on [Hugging Face Datasets](https://huggingface.co/datasets/nguyenthanhvuh/vietprofs). Each active record gets a static
 public profile at `people/vp-####.html`, and its immutable `vp-####` `id` is assigned by `npm run
 assign-profile-ids -- --apply` after an entry is added.
-
 
 Thanks to [hieuphay.com](https://hieuphay.com/ban-do-kinh-te-viet-nam/) for an initial dataset of
 Vietnamese economists that seeded a batch of entries, and to the many contributors over
