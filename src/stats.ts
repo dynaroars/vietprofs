@@ -252,7 +252,7 @@ function renderTrafficChart(daily: DailyStat[], todayStr: string): string {
     <div class="stats-chart-container">
       <div class="chart-legend">
         <span class="legend-item"><span class="legend-dot dot-visits"></span> Visits (Network Estimate)</span>
-        <span class="legend-item"><span class="legend-dot dot-views"></span> Successful HTML Page Views</span>
+        <span class="legend-item"><span class="legend-dot dot-views"></span> HTML Page Views</span>
       </div>
       <div class="svg-wrap">
         <svg viewBox="0 0 ${width} ${height}" class="stats-svg" preserveAspectRatio="none">
@@ -278,15 +278,15 @@ function renderDailyTable(daily: DailyStat[], todayStr: string): string {
           <tr>
             <th>Date</th>
             <th class="num-col">Visits</th>
-            <th class="num-col">Successful HTML Page Views</th>
-            <th class="num-col">Eyeball HTTP Requests</th>
+            <th class="num-col">HTML Page Views</th>
+            <th class="num-col">HTTP Requests</th>
           </tr>
         </thead>
         <tbody>
           ${reversed.map((d) => {
             const isPartial = d.date === todayStr;
             const dateDisplay = isPartial
-              ? `${formatDateFull(d.date)} <span class="partial-tag">(partial — UTC day in progress)</span>`
+              ? `${formatDateFull(d.date)} <span class="partial-tag">(in progress)</span>`
               : formatDateFull(d.date);
             return `
               <tr ${isPartial ? 'class="partial-row"' : ''}>
@@ -365,9 +365,9 @@ function renderStatsContent(data: StatsResponse, rosterMap: Map<string, RosterEn
               </thead>
               <tbody>
                 <tr>
-                  <td>Visits Today <span class="partial-tag">(partial — UTC day in progress)</span></td>
+                  <td>Visits Today <span class="partial-tag">(in progress)</span></td>
                   <td class="num-col">${formatNumber(visitCount(data.today))}</td>
-                  <td>${formatNumber(data.today?.pageViews || 0)} successful HTML page views</td>
+                  <td>${formatNumber(data.today?.pageViews || 0)} HTML page views</td>
                 </tr>
                 <tr>
                   <td>Visits (7 Days)</td>
@@ -385,7 +385,7 @@ function renderStatsContent(data: StatsResponse, rosterMap: Map<string, RosterEn
                   <td>${escapeHtml(coverageLabel(coverage30, 30))}</td>
                 </tr>
                 <tr>
-                  <td>Successful HTML Page Views (30 Days)</td>
+                  <td>HTML Page Views (30 Days)</td>
                   <td class="num-col">${formatNumber(data.last30Days?.pageViews || 0)}</td>
                   <td>${formatNumber(data.last30Days?.requests || 0)} HTTP requests including assets</td>
                 </tr>
