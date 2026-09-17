@@ -1540,7 +1540,10 @@
     "vp-1598",
     "vp-1599",
     "vp-1600",
-    "vp-1601"
+    "vp-1601",
+    "vp-1602",
+    "vp-1603",
+    "vp-1604"
   ],
   "batches": [
     {
@@ -3542,6 +3545,11 @@
         "vp-1600",
         "vp-1601"
       ],
+      "status": "pending"
+    },
+    {
+      "number": 78,
+      "ids": ["vp-1602", "vp-1603", "vp-1604"],
       "status": "pending"
     }
   ],
@@ -19568,6 +19576,21 @@
     "vp-1601": {
       "overview": "pending", "work": "pending",
       "sourcesChecked": ["https://uwaterloo.ca/civil-environmental-engineering/profile/a34pham"],
+      "evidence": [], "errors": [], "updatedAt": "2026-09-17T12:48:45.000Z"
+    },
+    "vp-1602": {
+      "overview": "pending", "work": "pending",
+      "sourcesChecked": ["https://business-school.exeter.ac.uk/about/people/profile/index.php?web_id=Bach_Nguyen"],
+      "evidence": [], "errors": [], "updatedAt": "2026-09-17T12:48:45.000Z"
+    },
+    "vp-1603": {
+      "overview": "pending", "work": "pending",
+      "sourcesChecked": ["https://findanexpert.unimelb.edu.au/profile/350058-lan-anh-hoang"],
+      "evidence": [], "errors": [], "updatedAt": "2026-09-17T12:48:45.000Z"
+    },
+    "vp-1604": {
+      "overview": "pending", "work": "pending",
+      "sourcesChecked": ["https://www.vu.edu.au/staff/manh-hoang"],
       "evidence": [], "errors": [], "updatedAt": "2026-09-17T12:48:45.000Z"
     }
   }
