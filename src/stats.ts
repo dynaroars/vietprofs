@@ -128,6 +128,31 @@ function pageHref(path: string): string | null {
   return `${baseUrl}${path === '/' ? '' : path.slice(1)}`;
 }
 
+function formatAvgPerDay(count: number, periodDays: number): string {
+  if (periodDays <= 0) return '0';
+  const val = count / periodDays;
+  if (val >= 10) return formatNumber(Math.round(val));
+  return val.toFixed(1);
+}
+
+function consolidateTopPages(pages: PageStat[]): PageStat[] {
+  const map = new Map<string, PageStat>();
+  for (const p of pages || []) {
+    const canonicalPath = (p.path === '/' || p.path === '/index.html') ? '/index.html' : p.path;
+    const existing = map.get(canonicalPath);
+    if (existing) {
+      existing.count += p.count;
+    } else {
+      map.set(canonicalPath, {
+        path: canonicalPath,
+        label: canonicalPath === '/index.html' ? 'Main Directory' : p.label,
+        count: p.count,
+      });
+    }
+  }
+  return Array.from(map.values()).sort((a, b) => b.count - a.count);
+}
+
 function renderRunningHead() {
   const base = import.meta.env.BASE_URL;
   return `<p class="man-running-head">
@@ -483,26 +508,32 @@ function renderStatsContent(data: StatsResponse, rosterMap: Map<string, RosterEn
                   <th>Page</th>
                   <th>Path</th>
                   <th class="num-col">HTML Page Views (7 Days)</th>
+                  <th class="num-col">Avg Views / Day</th>
                 </tr>
               </thead>
               <tbody>
-                ${(data.topPages || []).slice(0, 10).map((p) => {
-                  const href = pageHref(p.path);
-                  const labelStr = resolvePageLabel(p.path, p.label, rosterMap);
-                  const pageLabel = href
-                    ? `<a class="stats-page-link" href="${escapeHtml(href)}"><strong>${escapeHtml(labelStr)}</strong></a>`
-                    : `<strong>${escapeHtml(labelStr)}</strong>`;
-                  const pagePath = href
-                    ? `<a class="stats-page-link" href="${escapeHtml(href)}"><code class="path-code">${escapeHtml(p.path)}</code></a>`
-                    : `<code class="path-code">${escapeHtml(p.path)}</code>`;
-                  return `
-                  <tr>
-                    <td>${pageLabel}</td>
-                    <td>${pagePath}</td>
-                    <td class="num-col">${formatNumber(p.count)}</td>
-                  </tr>
-                `;
-                }).join('')}
+                ${(() => {
+                  const periodDays = data.breakdownPeriodDays || data.coverage?.last7Days || 7;
+                  const topPagesList = consolidateTopPages(data.topPages || []);
+                  return topPagesList.slice(0, 10).map((p) => {
+                    const href = pageHref(p.path);
+                    const labelStr = resolvePageLabel(p.path, p.label, rosterMap);
+                    const pageLabel = href
+                      ? `<a class="stats-page-link" href="${escapeHtml(href)}"><strong>${escapeHtml(labelStr)}</strong></a>`
+                      : `<strong>${escapeHtml(labelStr)}</strong>`;
+                    const pagePath = href
+                      ? `<a class="stats-page-link" href="${escapeHtml(href)}"><code class="path-code">${escapeHtml(p.path)}</code></a>`
+                      : `<code class="path-code">${escapeHtml(p.path)}</code>`;
+                    return `
+                    <tr>
+                      <td>${pageLabel}</td>
+                      <td>${pagePath}</td>
+                      <td class="num-col">${formatNumber(p.count)}</td>
+                      <td class="num-col">${formatAvgPerDay(p.count, periodDays)} / day</td>
+                    </tr>
+                  `;
+                  }).join('');
+                })()}
               </tbody>
             </table>
           </div>

@@ -94,8 +94,8 @@ test('Worker scopes live analytics to the hostname and reports honest coverage',
     assert.equal(data.last7Days.requests, 91);
     assert.equal(data.countriesCount, 2);
     assert.equal(data.topCountries[0].count, 4);
-    // '/' and '/stats.html' are public HTML pages; '/favicon.ico' is not.
-    assert.deepEqual(data.topPages.map((page: any) => page.path), ['/', '/stats.html']);
+    // '/' and '/stats.html' are public HTML pages ('/' normalizes to '/index.html'); '/favicon.ico' is not.
+    assert.deepEqual(data.topPages.map((page: any) => page.path), ['/index.html', '/stats.html']);
     assert.equal(data.topPages[1].label, 'Visitor Statistics');
     // One analytics round trip per refresh; referrer breakdowns need a paid plan and are not
     // requested (see the note in buildGraphqlQuery's dataset comment).

@@ -503,13 +503,19 @@ async function fetchLiveStats(env: Env, { persist = false } = {}): Promise<Stats
     .filter(c => c.count > 0)
     .sort((a, b) => b.count - a.count);
 
+  function normalizePath(path: string): string {
+    if (path === '/') return '/index.html';
+    return path;
+  }
+
   // Aggregate Top Pages over available daily nodes (7 days)
   const pageViews7Day: Record<string, number> = {};
   sourceDates.forEach((_, index) => {
     const nodes = zoneData[`topPages${index}`] || (index === sourceDates.length - 1 ? zoneData.topPages : undefined) || [];
     nodes.forEach(item => {
-      const path = item.dimensions?.clientRequestPath || '/';
-      if (isPublicHtmlPage(path)) {
+      const rawPath = item.dimensions?.clientRequestPath || '/';
+      if (isPublicHtmlPage(rawPath)) {
+        const path = normalizePath(rawPath);
         pageViews7Day[path] = (pageViews7Day[path] || 0) + (item.count || 0);
       }
     });
@@ -524,12 +530,21 @@ async function fetchLiveStats(env: Env, { persist = false } = {}): Promise<Stats
     .sort((a, b) => b.count - a.count);
 
   // Today's pages view
-  const topPagesToday = (zoneData.topPages || [])
-    .filter(item => isPublicHtmlPage(item.dimensions?.clientRequestPath || ''))
-    .map((item): PageStat => {
-      const path = item.dimensions?.clientRequestPath || '/';
-      return { path, label: cleanPageLabel(path), count: item.count || 0 };
-    });
+  const pagesTodayMap: Record<string, number> = {};
+  (zoneData.topPages || []).forEach(item => {
+    const rawPath = item.dimensions?.clientRequestPath || '/';
+    if (isPublicHtmlPage(rawPath)) {
+      const path = normalizePath(rawPath);
+      pagesTodayMap[path] = (pagesTodayMap[path] || 0) + (item.count || 0);
+    }
+  });
+  const topPagesToday = Object.entries(pagesTodayMap)
+    .map(([path, count]): PageStat => ({
+      path,
+      label: cleanPageLabel(path),
+      count,
+    }))
+    .sort((a, b) => b.count - a.count);
 
   const pageBreakdown = calculatePageBreakdown(topPages);
 
