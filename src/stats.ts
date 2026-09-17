@@ -313,7 +313,10 @@ function renderStatsContent(data: StatsResponse, rosterMap: Map<string, RosterEn
               <div class="name-heading">
                 <h1>VietProfs Visitor Statistics</h1>
               </div>
-              <p class="synopsis">Hostname-scoped, privacy-respecting visitor traffic metrics powered by Cloudflare Analytics.</p>
+              <p class="synopsis stats-snapshot">
+                Data snapshot: <time datetime="${escapeHtml(data.generatedAt)}">${escapeHtml(snapshotTimestamp)}</time>
+                <button type="button" id="refresh-stats-btn" class="refresh-stats-btn">Refresh now</button>
+              </p>
 
               <div class="stats-headline-bar">
                 <span class="headline-metric"><strong>Recent baseline:</strong> ${formatNumber(medianVisits7)} visits/day</span>
@@ -327,11 +330,6 @@ function renderStatsContent(data: StatsResponse, rosterMap: Map<string, RosterEn
         </section>
 
         ${data.isDemo ? '<div class="stats-highlight-banner"><span class="demo-badge">Preview Mode</span></div>' : ''}
-
-        <p class="stats-snapshot">
-          Data snapshot: <time datetime="${escapeHtml(data.generatedAt)}">${escapeHtml(snapshotTimestamp)}</time>
-          <button type="button" id="refresh-stats-btn" class="refresh-stats-btn">Refresh now</button>
-        </p>
 
         <section class="man-section">
           <h2>VISITOR TRAFFIC METRICS</h2>
