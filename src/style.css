@@ -3079,6 +3079,10 @@ button.chart-row-btn:hover {
   background: var(--accent-dim, #60a5fa);
 }
 
+.legend-dot.dot-assets {
+  background: #10b981;
+}
+
 .stats-svg {
   width: 100%;
   height: auto;
@@ -3097,6 +3101,10 @@ button.chart-row-btn:hover {
 
 .stats-svg .path-views {
   stroke: var(--accent-dim, #60a5fa);
+}
+
+.stats-svg .path-assets {
+  stroke: #10b981;
 }
 
 .stats-table-wrapper {

@@ -64,6 +64,7 @@ export interface StatsResponse {
     pageViews: number;
     visits?: number;
     uniques?: number;
+    assetLoads?: number;
   };
   last30Days: {
     requests: number;
@@ -212,18 +213,23 @@ function renderTrafficChart(daily: DailyStat[], todayStr: string): string {
 
   const pointsVisits: { x: number; y: number; date: string; val: number }[] = [];
   const pointsViews: { x: number; y: number; date: string; val: number }[] = [];
+  const pointsAssets: { x: number; y: number; date: string; val: number }[] = [];
 
   daily.forEach((d, i) => {
     const x = paddingLeft + (i / Math.max(1, daily.length - 1)) * chartWidth;
     const yVisits = paddingTop + chartHeight - (visitCount(d) / maxVal) * chartHeight;
     const yViews = paddingTop + chartHeight - ((d.pageViews || 0) / maxVal) * chartHeight;
+    const yAssets = paddingTop + chartHeight - ((d.assetLoads || 0) / maxVal) * chartHeight;
 
     pointsVisits.push({ x, y: yVisits, date: d.date, val: visitCount(d) });
     pointsViews.push({ x, y: yViews, date: d.date, val: d.pageViews || 0 });
+    pointsAssets.push({ x, y: yAssets, date: d.date, val: d.assetLoads || 0 });
   });
 
   const pathVisits = pointsVisits.map((p, i) => `${i === 0 ? 'M' : 'L'} ${p.x.toFixed(1)} ${p.y.toFixed(1)}`).join(' ');
   const pathViews = pointsViews.map((p, i) => `${i === 0 ? 'M' : 'L'} ${p.x.toFixed(1)} ${p.y.toFixed(1)}`).join(' ');
+  const hasAssetData = daily.some(d => (d.assetLoads || 0) > 0);
+  const pathAssets = pointsAssets.map((p, i) => `${i === 0 ? 'M' : 'L'} ${p.x.toFixed(1)} ${p.y.toFixed(1)}`).join(' ');
 
   const areaVisits = `${pathVisits} L ${pointsVisits[pointsVisits.length - 1].x.toFixed(1)} ${(paddingTop + chartHeight).toFixed(1)} L ${pointsVisits[0].x.toFixed(1)} ${(paddingTop + chartHeight).toFixed(1)} Z`;
 
@@ -255,6 +261,7 @@ function renderTrafficChart(daily: DailyStat[], todayStr: string): string {
       <div class="chart-legend">
         <span class="legend-item"><span class="legend-dot dot-visits"></span> Visits (Network Estimate)</span>
         <span class="legend-item"><span class="legend-dot dot-views"></span> HTML Page Views</span>
+        ${hasAssetData ? '<span class="legend-item"><span class="legend-dot dot-assets"></span> JS/CSS Loads (Browser-Like)</span>' : ''}
       </div>
       <div class="svg-wrap">
         <svg viewBox="0 0 ${width} ${height}" class="stats-svg" preserveAspectRatio="none">
@@ -262,6 +269,7 @@ function renderTrafficChart(daily: DailyStat[], todayStr: string): string {
           <path d="${areaVisits}" class="area-visits" />
           <path d="${pathVisits}" class="path-visits" fill="none" stroke-width="2.5" />
           <path d="${pathViews}" class="path-views" fill="none" stroke-width="2" stroke-dasharray="4 4" />
+          ${hasAssetData ? `<path d="${pathAssets}" class="path-assets" fill="none" stroke-width="2" stroke-dasharray="1 3" />` : ''}
           ${xAxisLabels}
         </svg>
       </div>
@@ -273,18 +281,28 @@ function renderStatCards(opts: {
   todayVisits: number;
   todayPageViews: number;
   medianVisits7: number;
+  avgVisits7: number;
   averageSubtext: string;
   visits30: number;
   coverage30Label: string;
   countriesCount: number;
   topCountryLabel: string;
   browserLikeTrafficPct?: number;
+  assetLoads7: number;
+  pageViews7: number;
 }): string {
   const browserCard = opts.browserLikeTrafficPct === undefined ? '' : `
       <div class="stats-stat-card">
         <span class="stats-stat-label">Browser-Like Traffic (7 Days)</span>
         <span class="stats-stat-value">${opts.browserLikeTrafficPct}<span class="stats-stat-unit">%</span></span>
-        <span class="stats-stat-sub">Share of page views that also loaded the site's JS/CSS — a rough signal for real-browser vs. automated traffic</span>
+        <span class="stats-stat-sub">${formatNumber(opts.assetLoads7)} JS/CSS loads out of ${formatNumber(opts.pageViews7)} page views — a rough signal for real-browser vs. automated traffic</span>
+      </div>
+  `;
+  const realisticVisitsCard = opts.browserLikeTrafficPct === undefined ? '' : `
+      <div class="stats-stat-card">
+        <span class="stats-stat-label">Est. Real Visits/Day (7 Days)</span>
+        <span class="stats-stat-value">${formatNumber(Math.round(opts.avgVisits7 * opts.browserLikeTrafficPct / 100))}</span>
+        <span class="stats-stat-sub">${formatNumber(opts.avgVisits7)}/day reported × ${opts.browserLikeTrafficPct}% browser-like share</span>
       </div>
   `;
   return `
@@ -295,9 +313,9 @@ function renderStatCards(opts: {
         <span class="stats-stat-sub">${formatNumber(opts.todayPageViews)} HTML page views</span>
       </div>
       <div class="stats-stat-card stats-stat-card-primary">
-        <span class="stats-stat-label">Recent Daily Baseline</span>
-        <span class="stats-stat-value">${formatNumber(opts.medianVisits7)} <span class="stats-stat-unit">median/day</span></span>
-        <span class="stats-stat-sub">${opts.averageSubtext}</span>
+        <span class="stats-stat-label">Average Daily Visits (7 Days)</span>
+        <span class="stats-stat-value">${formatNumber(opts.avgVisits7)} <span class="stats-stat-unit">avg/day</span></span>
+        <span class="stats-stat-sub">${formatNumber(opts.medianVisits7)} median/day${opts.averageSubtext ? ` — ${opts.averageSubtext}` : ''}</span>
       </div>
       <div class="stats-stat-card">
         <span class="stats-stat-label">Visits (30-Day Window)</span>
@@ -310,6 +328,7 @@ function renderStatCards(opts: {
         <span class="stats-stat-sub">${opts.topCountryLabel}</span>
       </div>
       ${browserCard}
+      ${realisticVisitsCard}
     </div>
   `;
 }
@@ -367,8 +386,8 @@ function renderStatsContent(data: StatsResponse, rosterMap: Map<string, RosterEn
   // Detect spike day if visits > 2.2 * medianVisits
   const spikeDay = (data.daily || []).find(d => visitCount(d) > 2.2 * Math.max(1, medianVisits7));
   const averageSubtext = spikeDay
-    ? `Average: ${formatNumber(avgVisits7)}/day (affected by ${formatDateLabel(spikeDay.date)} traffic spike)`
-    : `Average: ${formatNumber(avgVisits7)}/day over recent available days`;
+    ? `affected by ${formatDateLabel(spikeDay.date)} traffic spike`
+    : '';
 
   const profileViews = data.pageBreakdown?.profileViews ?? 0;
   const profilePct = data.pageBreakdown?.profilePct ?? 0;
@@ -406,12 +425,15 @@ function renderStatsContent(data: StatsResponse, rosterMap: Map<string, RosterEn
             todayVisits: visitCount(data.today),
             todayPageViews: data.today?.pageViews || 0,
             medianVisits7,
+            avgVisits7,
             averageSubtext,
             visits30: visitCount(data.last30Days),
             coverage30Label: coverageLabel(coverage30, 30),
             countriesCount: data.countriesCount || 0,
             topCountryLabel: data.topCountries?.[0] ? `Top: ${escapeHtml(data.topCountries[0].flag)} ${escapeHtml(data.topCountries[0].name)}` : 'No visit data',
             browserLikeTrafficPct: data.browserLikeTrafficPct,
+            assetLoads7: data.last7Days?.assetLoads || 0,
+            pageViews7: data.last7Days?.pageViews || 0,
           })}
         </section>
 
