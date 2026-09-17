@@ -1549,7 +1549,8 @@
     "vp-1607",
     "vp-1609",
     "vp-1610",
-    "vp-1611"
+    "vp-1611",
+    "vp-1612"
   ],
   "batches": [
     {
@@ -3555,7 +3556,7 @@
     },
     {
       "number": 78,
-      "ids": ["vp-1602", "vp-1603", "vp-1604", "vp-1605", "vp-1606", "vp-1607", "vp-1609", "vp-1610", "vp-1611"],
+      "ids": ["vp-1602", "vp-1603", "vp-1604", "vp-1605", "vp-1606", "vp-1607", "vp-1609", "vp-1610", "vp-1611", "vp-1612"],
       "status": "pending"
     }
   ],
@@ -19627,6 +19628,11 @@
     "vp-1611": {
       "overview": "pending", "work": "pending",
       "sourcesChecked": ["https://ait.ac.th/people/prof-nguyen-thi-kim-oanh/"],
+      "evidence": [], "errors": [], "updatedAt": "2026-09-17T12:48:45.000Z"
+    },
+    "vp-1612": {
+      "overview": "pending", "work": "pending",
+      "sourcesChecked": ["https://foodscience.uni-mate.hu/etti-management"],
       "evidence": [], "errors": [], "updatedAt": "2026-09-17T12:48:45.000Z"
     }
   }
