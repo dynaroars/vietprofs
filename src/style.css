@@ -2984,41 +2984,14 @@ button.chart-row-btn:hover {
   border-color: var(--accent);
 }
 
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 0.6rem;
-  margin-top: 0.75rem;
+.stats-metrics-table td:first-child {
+  color: var(--text-secondary);
 }
 
-.stat-card {
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
-  padding: 0.6rem 0.75rem;
-  background: var(--tag-bg, rgba(255, 255, 255, 0.03));
-  border-left: 3px solid var(--border-color, #e2e8f0);
-  border-radius: 3px;
-}
-
-.stat-card-primary {
-  border-left-color: var(--accent);
-}
-
-.stat-label {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  text-transform: uppercase;
-  color: var(--text-muted, #64748b);
-  letter-spacing: 0.04em;
-}
-
-.stat-value {
-  font-family: var(--font-heading, sans-serif);
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  line-height: 1.25;
+.stats-metrics-primary td {
+  font-weight: 600;
+  border-top: 1px solid var(--accent);
+  border-bottom: 1px solid var(--accent);
 }
 
 .stat-unit {

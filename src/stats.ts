@@ -333,37 +333,44 @@ function renderStatsContent(data: StatsResponse, rosterMap: Map<string, RosterEn
 
         <section class="man-section">
           <h2>VISITOR TRAFFIC METRICS</h2>
-          <div class="stats-grid">
-            <div class="stat-card">
-              <span class="stat-label">Visits Today <span class="partial-tag">(partial — UTC day in progress)</span></span>
-              <strong class="stat-value">${formatNumber(visitCount(data.today))}</strong>
-              <span class="stat-sub">${formatNumber(data.today?.pageViews || 0)} successful HTML page views</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-label">Visits (7 Days)</span>
-              <strong class="stat-value">${formatNumber(visitCount(data.last7Days))}</strong>
-              <span class="stat-sub">${escapeHtml(coverageLabel(coverage7, 7))}</span>
-            </div>
-            <div class="stat-card stat-card-primary">
-              <span class="stat-label">Recent Daily Baseline</span>
-              <strong class="stat-value">${formatNumber(medianVisits7)} <span class="stat-unit">median visits/day</span></strong>
-              <span class="stat-sub">${escapeHtml(averageSubtext)}</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-label">Visits (30-Day Window)</span>
-              <strong class="stat-value">${formatNumber(visitCount(data.last30Days))}</strong>
-              <span class="stat-sub">${escapeHtml(coverageLabel(coverage30, 30))}</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-label">Successful HTML Page Views (30 Days)</span>
-              <strong class="stat-value">${formatNumber(data.last30Days?.pageViews || 0)}</strong>
-              <span class="stat-sub">${formatNumber(data.last30Days?.requests || 0)} HTTP requests including assets</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-label">Request-Origin Countries (7 Days)</span>
-              <strong class="stat-value">${formatNumber(data.countriesCount || 0)}</strong>
-              <span class="stat-sub">${data.topCountries?.[0] ? `Top: ${escapeHtml(data.topCountries[0].flag)} ${escapeHtml(data.topCountries[0].name)}` : 'No visit data'}</span>
-            </div>
+          <div class="stats-table-wrapper">
+            <table class="stats-table stats-metrics-table">
+              <thead>
+                <tr><th>Metric</th><th class="num-col">Value</th><th>Detail</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Visits Today <span class="partial-tag">(partial — UTC day in progress)</span></td>
+                  <td class="num-col">${formatNumber(visitCount(data.today))}</td>
+                  <td>${formatNumber(data.today?.pageViews || 0)} successful HTML page views</td>
+                </tr>
+                <tr>
+                  <td>Visits (7 Days)</td>
+                  <td class="num-col">${formatNumber(visitCount(data.last7Days))}</td>
+                  <td>${escapeHtml(coverageLabel(coverage7, 7))}</td>
+                </tr>
+                <tr class="stats-metrics-primary">
+                  <td>Recent Daily Baseline</td>
+                  <td class="num-col">${formatNumber(medianVisits7)} <span class="stat-unit">median/day</span></td>
+                  <td>${escapeHtml(averageSubtext)}</td>
+                </tr>
+                <tr>
+                  <td>Visits (30-Day Window)</td>
+                  <td class="num-col">${formatNumber(visitCount(data.last30Days))}</td>
+                  <td>${escapeHtml(coverageLabel(coverage30, 30))}</td>
+                </tr>
+                <tr>
+                  <td>Successful HTML Page Views (30 Days)</td>
+                  <td class="num-col">${formatNumber(data.last30Days?.pageViews || 0)}</td>
+                  <td>${formatNumber(data.last30Days?.requests || 0)} HTTP requests including assets</td>
+                </tr>
+                <tr>
+                  <td>Request-Origin Countries (7 Days)</td>
+                  <td class="num-col">${formatNumber(data.countriesCount || 0)}</td>
+                  <td>${data.topCountries?.[0] ? `Top: ${escapeHtml(data.topCountries[0].flag)} ${escapeHtml(data.topCountries[0].name)}` : 'No visit data'}</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </section>
 
