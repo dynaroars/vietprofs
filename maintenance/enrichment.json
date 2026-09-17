@@ -1543,7 +1543,8 @@
     "vp-1601",
     "vp-1602",
     "vp-1603",
-    "vp-1604"
+    "vp-1604",
+    "vp-1605"
   ],
   "batches": [
     {
@@ -3549,7 +3550,7 @@
     },
     {
       "number": 78,
-      "ids": ["vp-1602", "vp-1603", "vp-1604"],
+      "ids": ["vp-1602", "vp-1603", "vp-1604", "vp-1605"],
       "status": "pending"
     }
   ],
@@ -19591,6 +19592,11 @@
     "vp-1604": {
       "overview": "pending", "work": "pending",
       "sourcesChecked": ["https://www.vu.edu.au/staff/manh-hoang"],
+      "evidence": [], "errors": [], "updatedAt": "2026-09-17T12:48:45.000Z"
+    },
+    "vp-1605": {
+      "overview": "pending", "work": "pending",
+      "sourcesChecked": ["https://cf.uni-hohenheim.de/daniel-hoang"],
       "evidence": [], "errors": [], "updatedAt": "2026-09-17T12:48:45.000Z"
     }
   }
