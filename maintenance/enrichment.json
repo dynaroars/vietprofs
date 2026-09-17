@@ -1532,7 +1532,10 @@
     "vp-1590",
     "vp-1591",
     "vp-1592",
-    "vp-1593"
+    "vp-1593",
+    "vp-1594",
+    "vp-1595",
+    "vp-1596"
   ],
   "batches": [
     {
@@ -3524,7 +3527,10 @@
         "vp-1590",
         "vp-1591",
         "vp-1592",
-        "vp-1593"
+        "vp-1593",
+        "vp-1594",
+        "vp-1595",
+        "vp-1596"
       ],
       "status": "pending"
     }
@@ -19513,6 +19519,21 @@
       "evidence": [],
       "errors": [],
       "updatedAt": "2026-09-17T06:05:00.000Z"
+    },
+    "vp-1594": {
+      "overview": "pending", "work": "pending",
+      "sourcesChecked": ["https://aerospace.illinois.edu/directory/profile/httran"],
+      "evidence": [], "errors": [], "updatedAt": "2026-09-17T12:30:00.000Z"
+    },
+    "vp-1595": {
+      "overview": "pending", "work": "pending",
+      "sourcesChecked": ["https://ceae.ku.edu/people/dan-tran"],
+      "evidence": [], "errors": [], "updatedAt": "2026-09-17T12:30:00.000Z"
+    },
+    "vp-1596": {
+      "overview": "pending", "work": "pending",
+      "sourcesChecked": ["https://researchdirectory.uc.edu/p/phamjt"],
+      "evidence": [], "errors": [], "updatedAt": "2026-09-17T12:30:00.000Z"
     }
   }
 }
