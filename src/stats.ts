@@ -507,8 +507,8 @@ function renderStatsContent(data: StatsResponse, rosterMap: Map<string, RosterEn
                 <tr>
                   <th>Page</th>
                   <th>Path</th>
-                  <th class="num-col">HTML Page Views (7 Days)</th>
-                  <th class="num-col">Avg Views / Day</th>
+                  <th class="num-col">7-Day Views</th>
+                  <th class="num-col">Daily Avg</th>
                 </tr>
               </thead>
               <tbody>
