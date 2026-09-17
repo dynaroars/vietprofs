@@ -1547,7 +1547,9 @@
     "vp-1605",
     "vp-1606",
     "vp-1607",
-    "vp-1609"
+    "vp-1609",
+    "vp-1610",
+    "vp-1611"
   ],
   "batches": [
     {
@@ -3553,7 +3555,7 @@
     },
     {
       "number": 78,
-      "ids": ["vp-1602", "vp-1603", "vp-1604", "vp-1605", "vp-1606", "vp-1607", "vp-1609"],
+      "ids": ["vp-1602", "vp-1603", "vp-1604", "vp-1605", "vp-1606", "vp-1607", "vp-1609", "vp-1610", "vp-1611"],
       "status": "pending"
     }
   ],
@@ -19615,6 +19617,16 @@
     "vp-1609": {
       "overview": "pending", "work": "pending",
       "sourcesChecked": ["https://usermap.cvut.cz/profile/b0d6446e-ff3e-4cc4-8a87-3ccf38acaf93?lang=en"],
+      "evidence": [], "errors": [], "updatedAt": "2026-09-17T12:48:45.000Z"
+    },
+    "vp-1610": {
+      "overview": "pending", "work": "pending",
+      "sourcesChecked": ["https://ait.ac.th/people/dr-thi-phuoc-lai-nguyen/"],
+      "evidence": [], "errors": [], "updatedAt": "2026-09-17T12:48:45.000Z"
+    },
+    "vp-1611": {
+      "overview": "pending", "work": "pending",
+      "sourcesChecked": ["https://ait.ac.th/people/prof-nguyen-thi-kim-oanh/"],
       "evidence": [], "errors": [], "updatedAt": "2026-09-17T12:48:45.000Z"
     }
   }
