@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "snapshotAt": "2026-09-17T05:42:45.995Z",
+  "snapshotAt": "2026-09-17T14:21:14.713Z",
   "ids": [
     "vp-0001",
     "vp-0002",
@@ -3556,7 +3556,18 @@
     },
     {
       "number": 78,
-      "ids": ["vp-1602", "vp-1603", "vp-1604", "vp-1605", "vp-1606", "vp-1607", "vp-1609", "vp-1610", "vp-1611", "vp-1612"],
+      "ids": [
+        "vp-1602",
+        "vp-1603",
+        "vp-1604",
+        "vp-1605",
+        "vp-1606",
+        "vp-1607",
+        "vp-1609",
+        "vp-1610",
+        "vp-1611",
+        "vp-1612"
+      ],
       "status": "pending"
     }
   ],
@@ -3568,9 +3579,17 @@
         "https://engineering.catholic.edu/research-and-faculty/faculty-profiles/computer-science/hieu-bui/index.html",
         "https://engineering.catholic.edu/research-and-faculty/faculty-profiles/computer-science/hieu-bui/buiresearch/index.html"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0217-1",
+          "url": "https://www.binghamton.edu/decker/nursing/people/profile.html?id=tvo5",
+          "excerpt": "Research interest: cultural health-related practices, sleep and circadian rhythms, maternal-infant dyads and family relationships, glucose metabolism, homeostasis and disease.",
+          "retrievedAt": "2026-09-17T00:30:08.000Z",
+          "details": "Official faculty profile; identity, appointment, and research interests match the roster entry."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-15T03:31:49.139Z"
     },
     "vp-0002": {
       "overview": "pending",
@@ -5905,14 +5924,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-0217": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://www.binghamton.edu/decker/nursing/people/profile.html?id=tvo5"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:30:08.541Z"
     },
     "vp-0218": {
       "overview": "pending",
@@ -7845,15 +7864,24 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-0403": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://www.fsb.miamioh.edu/fsb/directory/vita/vunt.pdf",
-        "https://namtvu.com/"
+        "https://namtvu.com/",
+        "https://miamioh.edu/fsb/directory/?up=%2Fdirectory%2Fvunt"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0403-1",
+          "url": "https://miamioh.edu/fsb/directory/?up=%2Fdirectory%2Fvunt",
+          "excerpt": "Research interests revolve around international business cycles, monetary and fiscal policy, and financial uncertainty.",
+          "retrievedAt": "2026-09-17T00:30:08.000Z",
+          "details": "Official Miami University faculty directory; name, department, rank, and research interests match."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:30:08.541Z"
     },
     "vp-0404": {
       "overview": "pending",
@@ -7862,9 +7890,17 @@
         "https://www.mtu.edu/cege/people/faculty-staff/faculty/tran/",
         "https://sites.google.com/view/trans-mtu-lab/home"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0417-1",
+          "url": "https://profiles.rice.edu/faculty/thanh-tran",
+          "excerpt": "Research areas: high-speed system interconnects, ML-assisted signal and power integrity, video/audio systems, downhole telemetry systems, and light-based hearing aids.",
+          "retrievedAt": "2026-09-17T00:30:08.000Z",
+          "details": "Official Rice faculty profile; name, department, rank, and research areas match."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-15T03:31:49.139Z"
     },
     "vp-0405": {
       "overview": "pending",
@@ -7873,9 +7909,17 @@
         "https://ced.ncsu.edu/people/lpham4/",
         "https://my.vanderbilt.edu/lampham/"
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "vp-0433-1",
+          "url": "https://faculty.mdanderson.org/profiles/sydney_pham.html",
+          "excerpt": "Selected publication evaluates intraoperative anesthesiology provider handovers and postoperative complications after hepatopancreatobiliary surgery.",
+          "retrievedAt": "2026-09-17T00:30:08.000Z",
+          "details": "Official MD Anderson faculty profile; name, department, rank, and publication match."
+        }
+      ],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-15T03:31:49.139Z"
     },
     "vp-0406": {
       "overview": "pending",
@@ -7982,14 +8026,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-0417": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://profiles.rice.edu/faculty/thanh-tran"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:30:08.541Z"
     },
     "vp-0418": {
       "overview": "pending",
@@ -8147,14 +8191,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-0433": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://faculty.mdanderson.org/profiles/sydney_pham.html"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:30:08.542Z"
     },
     "vp-0434": {
       "overview": "pending",
@@ -8200,14 +8244,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-0438": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://sph.tulane.edu/ihsd/mai-do"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:31:26.732Z"
     },
     "vp-0439": {
       "overview": "pending",
@@ -8220,14 +8264,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-0440": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://sopa.tulane.edu/about-sopa/advisors-faculty-staff/trung-nguyen"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:39:13.293Z"
     },
     "vp-0441": {
       "overview": "pending",
@@ -8438,14 +8482,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-0461": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://researchworks.laverne.edu/esploro/profile/ngoc_bui"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:31:26.733Z"
     },
     "vp-0462": {
       "overview": "pending",
@@ -8559,14 +8603,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-0473": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://geography.utk.edu/wp-content/uploads/2023/10/Tran_CV_April2023.pdf"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:31:26.733Z"
     },
     "vp-0474": {
       "overview": "pending",
@@ -8728,24 +8772,24 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-0489": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://chemistry.nus.edu.sg/people/huynh-han-vinh/"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:39:13.294Z"
     },
     "vp-0490": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://medicine.nus.edu.sg/phys/faculty/thai-tran/"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:32:12.213Z"
     },
     "vp-0491": {
       "overview": "pending",
@@ -8779,14 +8823,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-0494": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://dr.ntu.edu.sg/entities/person/Tuan-TRAN"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:32:12.214Z"
     },
     "vp-0495": {
       "overview": "pending",
@@ -9045,14 +9089,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-0519": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://www.globalhealth.ox.ac.uk/our-researchers/le-van-tan"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:51:39.956Z"
     },
     "vp-0520": {
       "overview": "pending",
@@ -9182,17 +9226,17 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-0532": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://www.jaist.ac.jp/is/labs/nguyen-lab/home/"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:39:42.306Z"
     },
     "vp-0533": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://www.jaist.ac.jp/~bao/",
@@ -9200,7 +9244,7 @@
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:32:45.445Z"
     },
     "vp-0534": {
       "overview": "pending",
@@ -9266,24 +9310,24 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-0540": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://www.sydney.edu.au/business/about/our-people/academic-staff/minh-ngoc-tran.html"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:32:45.446Z"
     },
     "vp-0541": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://adelaide.edu.au/people/thuc.le"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:33:18.168Z"
     },
     "vp-0542": {
       "overview": "pending",
@@ -9296,14 +9340,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-0543": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://people.ucd.ie/lenam.tran"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:33:18.169Z"
     },
     "vp-0544": {
       "overview": "pending",
@@ -9377,14 +9421,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-0551": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://academics.aut.ac.nz/minh.nguyen"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:33:18.169Z"
     },
     "vp-0552": {
       "overview": "pending",
@@ -9439,17 +9483,17 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-0557": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://researchers.anu.edu.au/researchers/bui-qm"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:33:50.669Z"
     },
     "vp-0558": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://researchers.adelaide.edu.au/profile/minhhoai.nguyen",
@@ -9457,7 +9501,7 @@
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:33:50.670Z"
     },
     "vp-0559": {
       "overview": "pending",
@@ -9754,14 +9798,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-0587": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://www.utm.utoronto.ca/iccit/people/christine-h-tran"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:33:50.670Z"
     },
     "vp-0588": {
       "overview": "pending",
@@ -9908,14 +9952,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-0602": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://le.ac.uk/people/hoa-do"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:34:22.558Z"
     },
     "vp-0603": {
       "overview": "pending",
@@ -9989,44 +10033,44 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-0610": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://www.uel.ac.uk/about-uel/staff/chau-duong"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:34:22.559Z"
     },
     "vp-0611": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://www.ntu.ac.uk/staff-profiles/business/tam-nguyen"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:34:22.559Z"
     },
     "vp-0612": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://www.ntu.ac.uk/staff-profiles/business/thao-ngoc-nguyen"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:34:22.559Z"
     },
     "vp-0613": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://www.ntu.ac.uk/staff-profiles/business/hai-dang-nguyen"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:34:56.786Z"
     },
     "vp-0614": {
       "overview": "pending",
@@ -10198,14 +10242,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-0630": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://faculty.essec.edu/en/cv/nguyen-liem/pdf"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:34:56.787Z"
     },
     "vp-0631": {
       "overview": "pending",
@@ -10240,7 +10284,7 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-0634": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://www.gif.uni-hannover.de/fileadmin/gif/CVs/CV_Giang_Nghiem_Feb2025.pdf",
@@ -10248,7 +10292,7 @@
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:34:56.787Z"
     },
     "vp-0635": {
       "overview": "pending",
@@ -10552,7 +10596,7 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-0665": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://medicine.nus.edu.sg/bch/nnl/nnl-cv/",
@@ -10560,10 +10604,10 @@
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:34:56.787Z"
     },
     "vp-0666": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://medicine.nus.edu.sg/pharmacy/staff/minh-le/",
@@ -10571,7 +10615,7 @@
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:35:29.507Z"
     },
     "vp-0667": {
       "overview": "pending",
@@ -10596,7 +10640,7 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-0669": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://www.ntu.edu.sg/soh/admissions/pgc/mling/faculty",
@@ -10604,30 +10648,30 @@
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:35:29.508Z"
     },
     "vp-0670": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://www.singaporetech.edu.sg/directory/faculty/thi-qui-nguyen"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:35:29.508Z"
     },
     "vp-0671": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://sites.google.com/view/vinhnguyenresearch"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:51:39.957Z"
     },
     "vp-0672": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://research.monash.edu/en/persons/quoc-anh-do/",
@@ -10635,7 +10679,7 @@
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:36:00.532Z"
     },
     "vp-0673": {
       "overview": "pending",
@@ -10659,7 +10703,7 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-0675": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://melbourneinstitute.unimelb.edu.au/staff/research/staff-listings/viet-hoang-nguyen",
@@ -10667,7 +10711,7 @@
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:36:00.534Z"
     },
     "vp-0676": {
       "overview": "pending",
@@ -10813,7 +10857,7 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-0690": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://fbe.unimelb.edu.au/our-people/staff/finance/natalie-le",
@@ -10821,7 +10865,7 @@
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:36:00.534Z"
     },
     "vp-0691": {
       "overview": "pending",
@@ -11476,14 +11520,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-0755": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://scholar.nycu.edu.tw/en/persons/cao-minh-tu/"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:38:44.075Z"
     },
     "vp-0756": {
       "overview": "pending",
@@ -11497,14 +11541,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-0757": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://chem.niu.edu.tw/index.php?Plugin=o_niu&Action=o_niutchdetail&niuid=qtpham"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:38:44.076Z"
     },
     "vp-0758": {
       "overview": "pending",
@@ -11764,14 +11808,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-0783": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://www.canterbury.ac.nz/about-uc/contact-us/staff-directory/chat-nguyen"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:51:39.957Z"
     },
     "vp-0784": {
       "overview": "pending",
@@ -12006,14 +12050,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-0807": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://www.otago.ac.nz/english-linguistics/staff/minh-nguyen"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:56:36.583Z"
     },
     "vp-0808": {
       "overview": "pending",
@@ -12069,14 +12113,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-0813": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://medschool.umich.edu/profile/11609/andrew-m-nguyen"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:40:09.950Z"
     },
     "vp-0814": {
       "overview": "pending",
@@ -12121,14 +12165,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-0819": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://profiles.ucsd.edu/mylinh.nguyen"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:56:36.583Z"
     },
     "vp-0820": {
       "overview": "pending",
@@ -12276,14 +12320,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-0836": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://www.usn.no/english/about/contact-us/employees/hoang-vu-nguyen"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:57:01.158Z"
     },
     "vp-0837": {
       "overview": "pending",
@@ -12297,14 +12341,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-0838": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://seeds.office.hiroshima-u.ac.jp/profile/en.8b3b2c968ff6a086520e17560c007669.html"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:40:37.132Z"
     },
     "vp-0839": {
       "overview": "pending",
@@ -12350,7 +12394,7 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-0843": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "http://www.jaist.ac.jp/~huynh/dokuwiki/doku.php?id=user%3Anamhuynh%3Astart",
@@ -12358,7 +12402,7 @@
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:57:01.157Z"
     },
     "vp-0845": {
       "overview": "pending",
@@ -12403,14 +12447,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-0849": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://www.cityofhope.org/patients/find-a-doctor/andrew-nguyen"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:41:07.262Z"
     },
     "vp-0850": {
       "overview": "pending",
@@ -12534,14 +12578,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-0862": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://keck.usc.edu/faculty-search/caroline-t-nguyen/"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:41:07.262Z"
     },
     "vp-0863": {
       "overview": "pending",
@@ -12695,14 +12739,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-0879": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://profiles.icahn.mssm.edu/van-hong-nguyen"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:41:31.836Z"
     },
     "vp-0880": {
       "overview": "pending",
@@ -13283,17 +13327,17 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-0936": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://medicine.iu.edu/faculty/27262/dinh-paul"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:42:04.016Z"
     },
     "vp-0937": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://che.utexas.edu/person/annalee-nguyen/",
@@ -13301,7 +13345,7 @@
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:42:04.017Z"
     },
     "vp-0938": {
       "overview": "pending",
@@ -13429,14 +13473,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-0950": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://researchers.lincoln.ac.nz/cuong.nguyen"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:42:35.090Z"
     },
     "vp-0951": {
       "overview": "pending",
@@ -13594,14 +13638,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-0966": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://le.ac.uk/people/quynh-hoang"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:42:35.091Z"
     },
     "vp-0967": {
       "overview": "pending",
@@ -13775,14 +13819,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-0984": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://www.mayoclinic.org/biographies/nguyen-michelle-c-m-d/bio-20520642"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:43:01.593Z"
     },
     "vp-0985": {
       "overview": "pending",
@@ -13871,14 +13915,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-0993": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://raweb1.jm.aoyama.ac.jp/aguhp/KgApp/k03/resid/S001781?lang=en"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:43:01.594Z"
     },
     "vp-0994": {
       "overview": "pending",
@@ -14017,14 +14061,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-1007": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://www.qut.edu.au/about/our-people/academic-profiles/vincent.hoang"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:43:29.528Z"
     },
     "vp-1008": {
       "overview": "pending",
@@ -14361,14 +14405,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-1041": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://www.ecu.edu.au/schools/business-and-law/faculty/profiles/lecturer/mr-thach-pham/_nocache"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:48:44.236Z"
     },
     "vp-1042": {
       "overview": "pending",
@@ -14575,14 +14619,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-1062": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://www.ntu.ac.uk/staff-profiles/business/thong-dao"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:43:59.470Z"
     },
     "vp-1063": {
       "overview": "pending",
@@ -14732,14 +14776,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-1077": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://researchportal.murdoch.edu.au/esploro/profile/thao_duong"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:43:59.470Z"
     },
     "vp-1078": {
       "overview": "pending",
@@ -15084,14 +15128,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-1111": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://www.monash.edu/science/schools/school-of-mathematics/Our-People/staff/ngan-le"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:44:28.662Z"
     },
     "vp-1112": {
       "overview": "pending",
@@ -15155,7 +15199,7 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-1118": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://lsa.umich.edu/asian/people/faculty/tanguyen.html",
@@ -15163,7 +15207,7 @@
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:44:28.662Z"
     },
     "vp-1119": {
       "overview": "pending",
@@ -15606,14 +15650,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-1175": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://researchers.adelaide.edu.au/profile/thong.pham"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:45:00.246Z"
     },
     "vp-1176": {
       "overview": "pending",
@@ -15775,14 +15819,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-1193": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://www.une.edu.au/staff-profiles/education/hphan2"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:45:00.246Z"
     },
     "vp-1194": {
       "overview": "pending",
@@ -15806,14 +15850,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-1196": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://scholars.latrobe.edu.au/ltruong"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:52:10.020Z"
     },
     "vp-1197": {
       "overview": "pending",
@@ -15877,14 +15921,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-1203": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://faculty.skoltech.ru/people/anhhuyphan"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:49:58.854Z"
     },
     "vp-1205": {
       "overview": "pending",
@@ -15997,14 +16041,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-1216": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://www.ifpri.org/expert/phuong-hong-nguyen"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:52:10.020Z"
     },
     "vp-1217": {
       "overview": "pending",
@@ -16017,14 +16061,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-1218": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://profiles.ucr.edu/app/home/profile/baolam.huynh"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:49:58.854Z"
     },
     "vp-1219": {
       "overview": "pending",
@@ -16161,14 +16205,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-1232": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://www.icmmo.universite-paris-saclay.fr/annuaire/"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:46:22.426Z"
     },
     "vp-1233": {
       "overview": "pending",
@@ -16214,7 +16258,7 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-1237": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://www.montefiore.uliege.be/~huynh-thu/",
@@ -16222,7 +16266,7 @@
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:46:22.426Z"
     },
     "vp-1238": {
       "overview": "pending",
@@ -16278,14 +16322,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-1243": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://scmb.uq.edu.au/profile/606/duy-phan"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:46:50.304Z"
     },
     "vp-1244": {
       "overview": "pending",
@@ -16473,14 +16517,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-1263": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://centralelille.fr/"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:46:50.305Z"
     },
     "vp-1264": {
       "overview": "pending",
@@ -16707,14 +16751,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-1286": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://www.mskcc.org/cancer-care/doctors/chau-dang"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:48:11.738Z"
     },
     "vp-1287": {
       "overview": "pending",
@@ -16778,14 +16822,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-1293": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://providers.ucsd.edu/details/1831553718/cardiology-transplantation"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:49:02.816Z"
     },
     "vp-1294": {
       "overview": "pending",
@@ -16859,7 +16903,7 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-1301": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://profiles.sydney.edu.au/linh.nghiem",
@@ -16867,7 +16911,7 @@
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:57:47.341Z"
     },
     "vp-1302": {
       "overview": "pending",
@@ -16922,24 +16966,24 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-1307": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://researchmap.jp/nghiemphubinh"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:57:47.342Z"
     },
     "vp-1308": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://mis.agri.cmu.ac.th/mis/index.php/en/personnel/academic-staff/770"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:57:47.342Z"
     },
     "vp-1309": {
       "overview": "pending",
@@ -17005,14 +17049,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-1316": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://www.kent.edu/math/hai-dinh-0"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:57:47.342Z"
     },
     "vp-1318": {
       "overview": "pending",
@@ -17048,7 +17092,7 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-1321": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://www.dfki.de/en/web/about-us/employee/person/ngdu01",
@@ -17056,7 +17100,7 @@
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:49:58.855Z"
     },
     "vp-1322": {
       "overview": "pending",
@@ -17247,24 +17291,24 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-1341": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://lcis.grenoble-inp.fr/fr/le-laboratoire/membres-du-lcis"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:52:52.656Z"
     },
     "vp-1342": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://www.sydney.edu.au/engineering/about/our-people/academic-staff/caohung-pham.html"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:52:52.656Z"
     },
     "vp-1343": {
       "overview": "pending",
@@ -17297,24 +17341,24 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-1346": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://www.ecu.edu.au/schools/engineering/staff/profiles/lecturers/dr-quoc-viet-phung"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:50:31.772Z"
     },
     "vp-1347": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://www.idpoisson.fr/phung/"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:52:52.656Z"
     },
     "vp-1348": {
       "overview": "pending",
@@ -17661,7 +17705,7 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-1383": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://publichealth.jhu.edu/faculty/3277/trang-quynh-nguyen",
@@ -17669,7 +17713,7 @@
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:51:05.372Z"
     },
     "vp-1384": {
       "overview": "pending",
@@ -17756,24 +17800,24 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-1392": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://researchmap.jp/dinhhaduythuy"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:53:18.211Z"
     },
     "vp-1393": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://www.sydney.edu.au/business/about/our-people/academic-staff/chinh-ho.html"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:53:52.912Z"
     },
     "vp-1394": {
       "overview": "pending",
@@ -17798,24 +17842,24 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-1396": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://www.notredame.edu.au/about/schools/sydney/education/school-staff/thuan-thai"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:51:05.373Z"
     },
     "vp-1397": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://www.deakin.edu.au/about-deakin/people/duc-thanh-nguyen"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:51:05.373Z"
     },
     "vp-1398": {
       "overview": "pending",
@@ -17890,7 +17934,7 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-1406": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://www.fris.tohoku.ac.jp/en/researcher/creative/hung.html",
@@ -17898,7 +17942,7 @@
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:51:05.373Z"
     },
     "vp-1407": {
       "overview": "pending",
@@ -17931,14 +17975,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-1410": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://www.un-ihe.org/people/lap-cuong-hua"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:53:52.912Z"
     },
     "vp-1411": {
       "overview": "pending",
@@ -18067,14 +18111,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-1423": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://experts.griffith.edu.au/18881-van-thanh-dau"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:54:19.482Z"
     },
     "vp-1424": {
       "overview": "pending",
@@ -18158,14 +18202,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-1432": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://liten.cea.fr/cea-tech/liten/Pages/CEA-Liten/HDR/TRAN-Quoc-Tuan.aspx"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:54:19.483Z"
     },
     "vp-1433": {
       "overview": "pending",
@@ -18178,14 +18222,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-1434": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://research-hub.nrel.gov/en/persons/huyen-dinh"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:54:19.483Z"
     },
     "vp-1435": {
       "overview": "pending",
@@ -18374,14 +18418,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-1453": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://discover.utas.edu.au/Vinh.To"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:55:03.880Z"
     },
     "vp-1454": {
       "overview": "pending",
@@ -18394,14 +18438,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-1455": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://ice.ubd.edu.bn/phan-le-ha/"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:55:03.879Z"
     },
     "vp-1456": {
       "overview": "pending",
@@ -18555,7 +18599,7 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-1470": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://professeurs.uqam.ca/professeur/pham.thi_thanh_hien/",
@@ -18563,7 +18607,7 @@
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:55:03.880Z"
     },
     "vp-1471": {
       "overview": "pending",
@@ -18630,7 +18674,7 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-1477": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://pagespro.univ-gustave-eiffel.fr/mai-lan-nguyen",
@@ -18638,7 +18682,7 @@
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:55:31.807Z"
     },
     "vp-1478": {
       "overview": "pending",
@@ -18731,7 +18775,7 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-1486": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://med.emory.edu/departments/medicine/divisions/infectious-diseases/",
@@ -18739,7 +18783,7 @@
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:55:31.808Z"
     },
     "vp-1487": {
       "overview": "pending",
@@ -19106,14 +19150,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-1548": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://www.cs.toronto.edu/~khai/"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:56:00.129Z"
     },
     "vp-1549": {
       "overview": "pending",
@@ -19180,14 +19224,14 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-1557": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://ba.ntust.edu.tw/"
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:56:00.130Z"
     },
     "vp-1558": {
       "overview": "pending",
@@ -19201,7 +19245,7 @@
       "updatedAt": "2026-09-17T05:42:45.995Z"
     },
     "vp-1559": {
-      "overview": "pending",
+      "overview": "verified",
       "work": "pending",
       "sourcesChecked": [
         "https://www.unive.it/data/people/27833636",
@@ -19209,7 +19253,7 @@
       ],
       "evidence": [],
       "errors": [],
-      "updatedAt": "2026-09-17T05:42:45.995Z"
+      "updatedAt": "2026-09-17T00:56:00.130Z"
     },
     "vp-1560": {
       "overview": "pending",
@@ -19546,94 +19590,184 @@
       "updatedAt": "2026-09-17T06:05:00.000Z"
     },
     "vp-1594": {
-      "overview": "pending", "work": "pending",
-      "sourcesChecked": ["https://aerospace.illinois.edu/directory/profile/httran"],
-      "evidence": [], "errors": [], "updatedAt": "2026-09-17T12:30:00.000Z"
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://aerospace.illinois.edu/directory/profile/httran"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-17T12:30:00.000Z"
     },
     "vp-1595": {
-      "overview": "pending", "work": "pending",
-      "sourcesChecked": ["https://ceae.ku.edu/people/dan-tran"],
-      "evidence": [], "errors": [], "updatedAt": "2026-09-17T12:30:00.000Z"
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://ceae.ku.edu/people/dan-tran"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-17T12:30:00.000Z"
     },
     "vp-1596": {
-      "overview": "pending", "work": "pending",
-      "sourcesChecked": ["https://researchdirectory.uc.edu/p/phamjt"],
-      "evidence": [], "errors": [], "updatedAt": "2026-09-17T12:30:00.000Z"
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://researchdirectory.uc.edu/p/phamjt"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-17T12:30:00.000Z"
     },
     "vp-1597": {
-      "overview": "pending", "work": "pending",
-      "sourcesChecked": ["https://surgery.wustl.edu/people/trang-nguyen/"],
-      "evidence": [], "errors": [], "updatedAt": "2026-09-17T12:48:45.000Z"
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://surgery.wustl.edu/people/trang-nguyen/"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-17T12:48:45.000Z"
     },
     "vp-1598": {
-      "overview": "pending", "work": "pending",
-      "sourcesChecked": ["https://www.surgery.wisc.edu/staff/hau-le/"],
-      "evidence": [], "errors": [], "updatedAt": "2026-09-17T12:48:45.000Z"
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://www.surgery.wisc.edu/staff/hau-le/"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-17T12:48:45.000Z"
     },
     "vp-1599": {
-      "overview": "pending", "work": "pending",
-      "sourcesChecked": ["https://www.uoguelph.ca/profile/minh-do"],
-      "evidence": [], "errors": [], "updatedAt": "2026-09-17T12:48:45.000Z"
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://www.uoguelph.ca/profile/minh-do"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-17T12:48:45.000Z"
     },
     "vp-1600": {
-      "overview": "pending", "work": "pending",
-      "sourcesChecked": ["https://hsnsudbury.ca/en/Research/Scientists/Hoang-Thanh-Le"],
-      "evidence": [], "errors": [], "updatedAt": "2026-09-17T12:48:45.000Z"
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://hsnsudbury.ca/en/Research/Scientists/Hoang-Thanh-Le"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-17T12:48:45.000Z"
     },
     "vp-1601": {
-      "overview": "pending", "work": "pending",
-      "sourcesChecked": ["https://uwaterloo.ca/civil-environmental-engineering/profile/a34pham"],
-      "evidence": [], "errors": [], "updatedAt": "2026-09-17T12:48:45.000Z"
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://uwaterloo.ca/civil-environmental-engineering/profile/a34pham"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-17T12:48:45.000Z"
     },
     "vp-1602": {
-      "overview": "pending", "work": "pending",
-      "sourcesChecked": ["https://business-school.exeter.ac.uk/about/people/profile/index.php?web_id=Bach_Nguyen"],
-      "evidence": [], "errors": [], "updatedAt": "2026-09-17T12:48:45.000Z"
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://business-school.exeter.ac.uk/about/people/profile/index.php?web_id=Bach_Nguyen"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-17T12:48:45.000Z"
     },
     "vp-1603": {
-      "overview": "pending", "work": "pending",
-      "sourcesChecked": ["https://findanexpert.unimelb.edu.au/profile/350058-lan-anh-hoang"],
-      "evidence": [], "errors": [], "updatedAt": "2026-09-17T12:48:45.000Z"
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://findanexpert.unimelb.edu.au/profile/350058-lan-anh-hoang"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-17T12:48:45.000Z"
     },
     "vp-1604": {
-      "overview": "pending", "work": "pending",
-      "sourcesChecked": ["https://www.vu.edu.au/staff/manh-hoang"],
-      "evidence": [], "errors": [], "updatedAt": "2026-09-17T12:48:45.000Z"
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://www.vu.edu.au/staff/manh-hoang"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-17T12:48:45.000Z"
     },
     "vp-1605": {
-      "overview": "pending", "work": "pending",
-      "sourcesChecked": ["https://cf.uni-hohenheim.de/daniel-hoang"],
-      "evidence": [], "errors": [], "updatedAt": "2026-09-17T12:48:45.000Z"
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://cf.uni-hohenheim.de/daniel-hoang"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-17T12:48:45.000Z"
     },
     "vp-1606": {
-      "overview": "pending", "work": "pending",
-      "sourcesChecked": ["https://www.mimuw.edu.pl/en/employees/722/"],
-      "evidence": [], "errors": [], "updatedAt": "2026-09-17T12:48:45.000Z"
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://www.mimuw.edu.pl/en/employees/722/"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-17T12:48:45.000Z"
     },
     "vp-1607": {
-      "overview": "pending", "work": "pending",
-      "sourcesChecked": ["https://www.asdu.ait.ac.th/interimcodes/faculty/FacultyByID.cfm?FacultyID=816"],
-      "evidence": [], "errors": [], "updatedAt": "2026-09-17T12:48:45.000Z"
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://www.asdu.ait.ac.th/interimcodes/faculty/FacultyByID.cfm?FacultyID=816"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-17T12:48:45.000Z"
     },
     "vp-1609": {
-      "overview": "pending", "work": "pending",
-      "sourcesChecked": ["https://usermap.cvut.cz/profile/b0d6446e-ff3e-4cc4-8a87-3ccf38acaf93?lang=en"],
-      "evidence": [], "errors": [], "updatedAt": "2026-09-17T12:48:45.000Z"
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://usermap.cvut.cz/profile/b0d6446e-ff3e-4cc4-8a87-3ccf38acaf93?lang=en"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-17T12:48:45.000Z"
     },
     "vp-1610": {
-      "overview": "pending", "work": "pending",
-      "sourcesChecked": ["https://ait.ac.th/people/dr-thi-phuoc-lai-nguyen/"],
-      "evidence": [], "errors": [], "updatedAt": "2026-09-17T12:48:45.000Z"
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://ait.ac.th/people/dr-thi-phuoc-lai-nguyen/"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-17T12:48:45.000Z"
     },
     "vp-1611": {
-      "overview": "pending", "work": "pending",
-      "sourcesChecked": ["https://ait.ac.th/people/prof-nguyen-thi-kim-oanh/"],
-      "evidence": [], "errors": [], "updatedAt": "2026-09-17T12:48:45.000Z"
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://ait.ac.th/people/prof-nguyen-thi-kim-oanh/"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-17T12:48:45.000Z"
     },
     "vp-1612": {
-      "overview": "pending", "work": "pending",
-      "sourcesChecked": ["https://foodscience.uni-mate.hu/etti-management"],
-      "evidence": [], "errors": [], "updatedAt": "2026-09-17T12:48:45.000Z"
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://foodscience.uni-mate.hu/etti-management"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-17T12:48:45.000Z"
     }
   }
 }

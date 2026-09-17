@@ -3125,6 +3125,42 @@
       ],
       "retrievedAt": "2026-09-15T05:00:00.000Z",
       "note": "Charlotte finance URL returned 404; no alternative portrait verified."
+    },
+    "vp-0840": {
+      "name": "Van-Dinh Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-16T23:56:10.000Z",
+      "note": "Stored asset was a default silhouette, not a human portrait; removed during non-human image audit."
+    },
+    "vp-1293": {
+      "name": "Quan M. Bui",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-16T23:56:10.000Z",
+      "note": "Stored asset was a UC San Diego Health wordmark, not a human portrait; removed during non-human image audit."
+    },
+    "vp-1365": {
+      "name": "Xuan Bich Trinh",
+      "outcome": "not_found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-16T23:56:10.000Z",
+      "note": "Stored asset was a default silhouette, not a human portrait; removed during non-human image audit."
     }
   }
 }
