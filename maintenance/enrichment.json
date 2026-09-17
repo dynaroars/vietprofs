@@ -1509,7 +1509,10 @@
     "vp-1566",
     "vp-1567",
     "vp-1568",
-    "vp-1569"
+    "vp-1569",
+    "vp-1570",
+    "vp-1571",
+    "vp-1572"
   ],
   "batches": [
     {
@@ -3478,7 +3481,10 @@
     {
       "number": 77,
       "ids": [
-        "vp-1569"
+        "vp-1569",
+        "vp-1570",
+        "vp-1571",
+        "vp-1572"
       ],
       "status": "pending"
     }
@@ -19234,6 +19240,18 @@
       "evidence": [],
       "errors": [],
       "updatedAt": "2026-09-16T01:30:00.000Z"
+    },
+    "vp-1570": {
+      "overview": "pending",
+      "work": "pending"
+    },
+    "vp-1571": {
+      "overview": "pending",
+      "work": "pending"
+    },
+    "vp-1572": {
+      "overview": "pending",
+      "work": "pending"
     }
   }
 }
