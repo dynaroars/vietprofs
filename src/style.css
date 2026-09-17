@@ -2994,6 +2994,10 @@ button.chart-row-btn:hover {
   border-bottom: 1px solid var(--accent);
 }
 
+.stats-metrics-primary td:last-child {
+  font-weight: 400;
+}
+
 .stat-unit {
   font-size: 0.7rem;
   font-weight: 500;
