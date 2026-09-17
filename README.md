@@ -1,6 +1,6 @@
 # VietProfs
 
-[VietProfs](https://vietroars.roars.dev) is a searchable, community-maintained directory of Vietnamese and Vietnamese-diaspora academics at universities and eligible public or nonprofit scholarly research institutes worldwide. Rather than being strictly confined to traditional tenure-line university classroom professors, it covers scholarly academics and faculty-equivalent permanent researchers---such as CNRS and INRIA researchers, Max Planck group leaders, RIKEN scientists, and CSIRO researchers, as well as continuing teaching and clinical faculty---because they publish, lead research groups, obtain funding, and mentor students much like university faculty. Corporate research labs, industry roles, and temporary or non-faculty positions remain outside its scope. This [paper](https://arxiv.org/abs/2609.06091) ([latest](https://vietprofs.roars.dev/vietprofs.pdf)) describes the project. The dataset is available in [`public/data.json`](./public/data.json) and hosted on [Hugging Face](https://huggingface.co/datasets/nguyenthanhvuh/vietprofs).
+[VietProfs](https://vietroars.roars.dev) is a searchable, community-maintained directory of Vietnamese and Vietnamese-diaspora academics at universities and eligible public or nonprofit scholarly research institutes worldwide. Rather than being strictly confined to traditional tenure-line university classroom professors, it covers scholarly academics and faculty-equivalent permanent researchers---such as CNRS and INRIA researchers, Max Planck group leaders, RIKEN scientists, and CSIRO researchers, as well as continuing teaching and clinical faculty---because they publish, lead research groups, obtain funding, and mentor students much like university faculty. Corporate research labs, industry roles, and temporary or non-faculty positions remain outside its scope. [Read the paper](https://vietprofs.roars.dev/vietprofs.pdf) ([arXiv](https://arxiv.org/abs/2609.06091)) describing the project — the site's copy is kept current; the arXiv listing is a versioned snapshot. The dataset is available in [`public/data.json`](./public/data.json) and hosted on [Hugging Face](https://huggingface.co/datasets/nguyenthanhvuh/vietprofs).
 
 This site is maintained by users all around the world (e.g., [submitting new or editing existing entries](https://vietprofs.roars.dev/submit.html)) _and_ AI bots that continuously validates and updates the directory database.  
 
@@ -91,7 +91,7 @@ degree fields, and more — are documented in
 interesting" view are in its [interesting-facts
 section](./ROSTER_MAINTENANCE.md#interesting-facts-guidelines).
 
-Thanks to [hieuphay.com](https://hieuphay.com/ban-do-kinh-te-viet-nam/) for a dataset of
+Thanks to [hieuphay.com](https://hieuphay.com/ban-do-kinh-te-viet-nam/) for an initial dataset of
 Vietnamese economists that seeded a batch of entries, and to the many contributors over
 LinkedIn and other channels who've suggested corrections and additions.
 
@@ -99,20 +99,6 @@ An unattended AI-based maintenance controller ([`scripts/maintain-roster.ts`](./
 periodically re-verifies existing entries and pushes updates directly to `main`; see
 [ROSTER_MAINTENANCE.md](./ROSTER_MAINTENANCE.md#periodic-full-roster-refresh) for how it works and
 how to run it manually.
-
-## Visitor Statistics (`stats.html`)
-
-The public statistics page (`/stats.html`) displays hostname-filtered Cloudflare visit estimates, successful HTML page requests, request-origin countries, and requested HTML paths without tracking individual users.
-
-- **Architecture:** `stats.html` -> `/api/stats` -> Cloudflare Worker (`worker/index.ts`) -> Cloudflare GraphQL Analytics API.
-- **Scope:** Every analytics query is filtered to `vietprofs.roars.dev` and to Cloudflare's `eyeball` request source; traffic for sibling `roars.dev` hostnames is excluded.
-- **Privacy:** The page receives only aggregate counts by date, country, and HTML path; it receives no visitor IP addresses, user agents, cookies, or individual request histories.
-- **Caching:** Responses are cached at the Cloudflare edge for 10 minutes (`Cache-Control: public, max-age=600`).
-- **History:** Cloudflare's hostname-capable dataset is queried for the most recent seven days. A daily scheduled Worker refresh stores snapshots in Workers KV to build an accurate rolling 30-day series; the page always states the number of collected days.
-- **Worker Configuration:** Configured via `wrangler.jsonc`.
-- **Configuration:** `CLOUDFLARE_ZONE_ID` and `CLOUDFLARE_HOSTNAME` are regular Worker variables; `CLOUDFLARE_API_TOKEN` is a secret with `Zone.Analytics:Read` scope for `roars.dev`.
-- **Deployment:** Use `npx wrangler secret put CLOUDFLARE_API_TOKEN` to create or rotate the secret, and `npx wrangler deploy` after Worker code or configuration changes.
-- **Metric Limitations:** Referrer breakdowns are not available on this zone's Cloudflare plan, so the page reports countries and paths only. A Cloudflare visit is an aggregate network estimate, not a verified person. Automated traffic may remain. Successful HTML page requests exclude error responses, images, scripts, styles, JSON, and other assets; total HTTP requests include them. When unauthenticated locally, the API returns a clearly labeled preview dataset.
 
 ## License
 

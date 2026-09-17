@@ -520,18 +520,8 @@ function renderStatsContent(data: StatsResponse, rosterMap: Map<string, RosterEn
           <h2>PRIVACY &amp; METHODOLOGY</h2>
           <div class="privacy-note">
             <p>
-              VietProfs respects visitor privacy. This page displays high-level aggregate metrics provided by Cloudflare Analytics without tracking individual readers.
+              VietProfs respects visitor privacy: these are aggregate Cloudflare network estimates for <code>vietprofs.roars.dev</code> only, not verified-person counts, and no individual reader is tracked. Live data covers roughly the last 8 days; a scheduled archive builds the 30-day history over time (currently ${escapeHtml(coverageLabel(coverage30, 30))}).
             </p>
-            <ul>
-              <li><strong>Visits:</strong> Visits are Cloudflare network visit estimates, not unique verified people.</li>
-              <li><strong>Eyeball Traffic:</strong> Eyeball traffic represents external client requests. It is not equivalent to verified human visitors and may still include automated traffic.</li>
-              <li><strong>Page Requests:</strong> Page view totals include only successful HTML responses (HTTP 200–399). Total HTTP requests include non-eyeball traffic, images, scripts, styles, JSON datasets, and static asset files.</li>
-              <li><strong>Countries:</strong> Locations represent request-origin network geolocations, not demographic assertions about individual readers.</li>
-              <li><strong>Data Retention &amp; Coverage:</strong> Cloudflare live API retention is approximately 8 days. A local scheduled archive builds the 30-day history over time; currently ${escapeHtml(coverageLabel(coverage30, 30))}.</li>
-              <li><strong>Hostname Scoped:</strong> Every metric is strictly filtered to <code>vietprofs.roars.dev</code>; traffic for sibling <code>roars.dev</code> sites is excluded.</li>
-              <li><strong>Unavailable Metrics:</strong> Referrer hosts (Google, LinkedIn, Facebook), returning vs. new visitors, session duration, and verified human/bot percentages are not provided by Cloudflare on this zone plan tier and are intentionally omitted.</li>
-              <li><strong>Edge Caching:</strong> Public responses are cached at the Cloudflare edge for 10 minutes (<code>Cache-Control: public, max-age=600</code>).</li>
-            </ul>
             ${data.metricNotice ? `<p class="stat-sub">${escapeHtml(data.metricNotice)}</p>` : ''}
           </div>
         </section>
