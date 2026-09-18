@@ -276,7 +276,7 @@ function renderTrafficChart(daily: DailyStat[], todayStr: string): string {
   `;
 }
 
-function renderStatCards(opts: {
+function renderStatRows(opts: {
   todayVisits: number;
   todayPageViews: number;
   medianVisits7: number;
@@ -290,45 +290,56 @@ function renderStatCards(opts: {
   assetLoads7: number;
   pageViews7: number;
 }): string {
-  const browserCard = opts.browserLikeTrafficPct === undefined ? '' : `
-      <div class="stats-overview-metric">
-        <dt>Browser-Like Traffic (7 Days)</dt>
-        <dd class="stats-overview-value">${opts.browserLikeTrafficPct}<span class="stats-stat-unit">%</span></dd>
-        <dd class="stats-overview-detail">${formatNumber(opts.assetLoads7)} JS/CSS loads out of ${formatNumber(opts.pageViews7)} page views — a rough signal for real-browser vs. automated traffic</dd>
-      </div>
+  const browserRow = opts.browserLikeTrafficPct === undefined ? '' : `
+          <tr>
+            <td><strong>Browser-Like Traffic (7 Days)</strong></td>
+            <td class="num-col">${opts.browserLikeTrafficPct}%</td>
+            <td class="detail-col">${formatNumber(opts.assetLoads7)} JS/CSS loads out of ${formatNumber(opts.pageViews7)} page views — real-browser estimate</td>
+          </tr>
   `;
-  const realisticVisitsCard = opts.browserLikeTrafficPct === undefined ? '' : `
-      <div class="stats-overview-metric">
-        <dt>Est. Real Visits/Day (7 Days)</dt>
-        <dd class="stats-overview-value">${formatNumber(Math.round(opts.avgVisits7 * opts.browserLikeTrafficPct / 100))}</dd>
-        <dd class="stats-overview-detail">${formatNumber(opts.avgVisits7)}/day reported × ${opts.browserLikeTrafficPct}% browser-like share</dd>
-      </div>
+  const realisticVisitsRow = opts.browserLikeTrafficPct === undefined ? '' : `
+          <tr>
+            <td><strong>Est. Real Visits/Day (7 Days)</strong></td>
+            <td class="num-col">${formatNumber(Math.round(opts.avgVisits7 * opts.browserLikeTrafficPct / 100))}/day</td>
+            <td class="detail-col">${formatNumber(opts.avgVisits7)}/day reported × ${opts.browserLikeTrafficPct}% browser-like share</td>
+          </tr>
   `;
   return `
-    <dl class="stats-overview-list">
-      <div class="stats-overview-metric">
-        <dt>Visits Today <span class="partial-tag">(in progress)</span></dt>
-        <dd class="stats-overview-value">${formatNumber(opts.todayVisits)}</dd>
-        <dd class="stats-overview-detail">${formatNumber(opts.todayPageViews)} HTML page views</dd>
-      </div>
-      <div class="stats-overview-metric stats-overview-metric-primary">
-        <dt>Average Daily Visits (7 Days)</dt>
-        <dd class="stats-overview-value">${formatNumber(opts.avgVisits7)} <span class="stats-stat-unit">avg/day</span></dd>
-        <dd class="stats-overview-detail">${formatNumber(opts.medianVisits7)} median/day${opts.averageSubtext ? ` — ${opts.averageSubtext}` : ''}</dd>
-      </div>
-      <div class="stats-overview-metric">
-        <dt>Visits (30-Day Window)</dt>
-        <dd class="stats-overview-value">${formatNumber(opts.visits30)}</dd>
-        <dd class="stats-overview-detail">${opts.coverage30Label}</dd>
-      </div>
-      <div class="stats-overview-metric">
-        <dt>Countries Reached (7 Days)</dt>
-        <dd class="stats-overview-value">${formatNumber(opts.countriesCount)}</dd>
-        <dd class="stats-overview-detail">${opts.topCountryLabel}</dd>
-      </div>
-      ${browserCard}
-      ${realisticVisitsCard}
-    </dl>
+    <div class="stats-table-wrapper">
+      <table class="stats-table stats-overview-table">
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th class="num-col">Value</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Visits Today</strong> <span class="partial-tag">(in progress)</span></td>
+            <td class="num-col">${formatNumber(opts.todayVisits)}</td>
+            <td class="detail-col">${formatNumber(opts.todayPageViews)} HTML page views</td>
+          </tr>
+          <tr class="stats-overview-metric-primary">
+            <td><strong>Average Daily Visits (7 Days)</strong></td>
+            <td class="num-col">${formatNumber(opts.avgVisits7)}/day</td>
+            <td class="detail-col">${formatNumber(opts.medianVisits7)} median/day${opts.averageSubtext ? ` — ${escapeHtml(opts.averageSubtext)}` : ''}</td>
+          </tr>
+          <tr>
+            <td><strong>Visits (30-Day Window)</strong></td>
+            <td class="num-col">${formatNumber(opts.visits30)}</td>
+            <td class="detail-col">${escapeHtml(opts.coverage30Label)}</td>
+          </tr>
+          <tr>
+            <td><strong>Countries Reached (7 Days)</strong></td>
+            <td class="num-col">${formatNumber(opts.countriesCount)}</td>
+            <td class="detail-col">${opts.topCountryLabel}</td>
+          </tr>
+          ${browserRow}
+          ${realisticVisitsRow}
+        </tbody>
+      </table>
+    </div>
   `;
 }
 
@@ -420,7 +431,7 @@ function renderStatsContent(data: StatsResponse, rosterMap: Map<string, RosterEn
 
         <section class="man-section">
           <h2>AT A GLANCE</h2>
-          ${renderStatCards({
+          ${renderStatRows({
             todayVisits: visitCount(data.today),
             todayPageViews: data.today?.pageViews || 0,
             medianVisits7,
@@ -487,7 +498,6 @@ function renderStatsContent(data: StatsResponse, rosterMap: Map<string, RosterEn
               <thead>
                 <tr>
                   <th>Page</th>
-                  <th>Path</th>
                   <th class="num-col">7-Day Views</th>
                   <th class="num-col">Daily Avg</th>
                 </tr>
@@ -502,15 +512,11 @@ function renderStatsContent(data: StatsResponse, rosterMap: Map<string, RosterEn
                     const pageLabel = href
                       ? `<a class="stats-page-link" href="${escapeHtml(href)}"><strong>${escapeHtml(labelStr)}</strong></a>`
                       : `<strong>${escapeHtml(labelStr)}</strong>`;
-                    const pagePath = href
-                      ? `<a class="stats-page-link" href="${escapeHtml(href)}"><code class="path-code">${escapeHtml(p.path)}</code></a>`
-                      : `<code class="path-code">${escapeHtml(p.path)}</code>`;
                     return `
                     <tr>
                       <td>${pageLabel}</td>
-                      <td>${pagePath}</td>
                       <td class="num-col">${formatNumber(p.count)}</td>
-                      <td class="num-col">${formatAvgPerDay(p.count, periodDays)} / day</td>
+                      <td class="num-col">${formatAvgPerDay(p.count, periodDays)}/day</td>
                     </tr>
                   `;
                   }).join('');
