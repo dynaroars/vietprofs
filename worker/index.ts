@@ -65,7 +65,6 @@ export interface StatsResponse {
   generatedAt: string;
   dataPeriodDays: number;
   breakdownPeriodDays?: number;
-  metricNotice?: string;
   retentionNotice?: string;
   coverage?: {
     last7Days: number;
@@ -345,7 +344,6 @@ function buildDemoResponse(): StatsResponse {
     generatedAt: new Date().toISOString(),
     dataPeriodDays: 30,
     breakdownPeriodDays: 7,
-    metricNotice: 'Visits are Cloudflare network visit estimates, not unique verified people. Eyeball traffic represents external client requests; it is not equivalent to verified human visitors and may still include automated traffic. "Browser-like traffic" compares HTML page views to loads of the site\'s JS/CSS bundle: real browsers fetch both, while most simple scrapers and crawlers only ever request the HTML, so a low ratio suggests a lot of the traffic is automated.',
     retentionNotice: 'Cloudflare live API retention is approximately 8 days. A scheduled archive builds the longer 30-day history over time.',
     coverage: { last7Days: 7, last30Days: 30 },
     today: todayStat,
@@ -576,7 +574,6 @@ async function fetchLiveStats(env: Env, { persist = false } = {}): Promise<Stats
     generatedAt: new Date().toISOString(),
     dataPeriodDays: MAX_STORED_DAYS,
     breakdownPeriodDays: 7,
-    metricNotice: 'Visits are Cloudflare network visit estimates, not unique verified people. Eyeball traffic represents external client requests; it is not equivalent to verified human visitors and may still include automated traffic. "Browser-like traffic" compares HTML page views to loads of the site\'s JS/CSS bundle: real browsers fetch both, while most simple scrapers and crawlers only ever request the HTML, so a low ratio suggests a lot of the traffic is automated.',
     retentionNotice: 'Cloudflare live API retention is approximately 8 days. A scheduled archive builds the longer 30-day history over time.',
     coverage: { last7Days: last7.length, last30Days: daily.length },
     today,

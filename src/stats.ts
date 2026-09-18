@@ -46,7 +46,6 @@ export interface StatsResponse {
   generatedAt: string;
   dataPeriodDays: number;
   breakdownPeriodDays?: number;
-  metricNotice?: string;
   retentionNotice?: string;
   coverage?: {
     last7Days: number;
@@ -292,44 +291,44 @@ function renderStatCards(opts: {
   pageViews7: number;
 }): string {
   const browserCard = opts.browserLikeTrafficPct === undefined ? '' : `
-      <div class="stats-stat-card">
-        <span class="stats-stat-label">Browser-Like Traffic (7 Days)</span>
-        <span class="stats-stat-value">${opts.browserLikeTrafficPct}<span class="stats-stat-unit">%</span></span>
-        <span class="stats-stat-sub">${formatNumber(opts.assetLoads7)} JS/CSS loads out of ${formatNumber(opts.pageViews7)} page views — a rough signal for real-browser vs. automated traffic</span>
+      <div class="stats-overview-metric">
+        <dt>Browser-Like Traffic (7 Days)</dt>
+        <dd class="stats-overview-value">${opts.browserLikeTrafficPct}<span class="stats-stat-unit">%</span></dd>
+        <dd class="stats-overview-detail">${formatNumber(opts.assetLoads7)} JS/CSS loads out of ${formatNumber(opts.pageViews7)} page views — a rough signal for real-browser vs. automated traffic</dd>
       </div>
   `;
   const realisticVisitsCard = opts.browserLikeTrafficPct === undefined ? '' : `
-      <div class="stats-stat-card">
-        <span class="stats-stat-label">Est. Real Visits/Day (7 Days)</span>
-        <span class="stats-stat-value">${formatNumber(Math.round(opts.avgVisits7 * opts.browserLikeTrafficPct / 100))}</span>
-        <span class="stats-stat-sub">${formatNumber(opts.avgVisits7)}/day reported × ${opts.browserLikeTrafficPct}% browser-like share</span>
+      <div class="stats-overview-metric">
+        <dt>Est. Real Visits/Day (7 Days)</dt>
+        <dd class="stats-overview-value">${formatNumber(Math.round(opts.avgVisits7 * opts.browserLikeTrafficPct / 100))}</dd>
+        <dd class="stats-overview-detail">${formatNumber(opts.avgVisits7)}/day reported × ${opts.browserLikeTrafficPct}% browser-like share</dd>
       </div>
   `;
   return `
-    <div class="stats-overview-grid">
-      <div class="stats-stat-card">
-        <span class="stats-stat-label">Visits Today <span class="partial-tag">(in progress)</span></span>
-        <span class="stats-stat-value">${formatNumber(opts.todayVisits)}</span>
-        <span class="stats-stat-sub">${formatNumber(opts.todayPageViews)} HTML page views</span>
+    <dl class="stats-overview-list">
+      <div class="stats-overview-metric">
+        <dt>Visits Today <span class="partial-tag">(in progress)</span></dt>
+        <dd class="stats-overview-value">${formatNumber(opts.todayVisits)}</dd>
+        <dd class="stats-overview-detail">${formatNumber(opts.todayPageViews)} HTML page views</dd>
       </div>
-      <div class="stats-stat-card stats-stat-card-primary">
-        <span class="stats-stat-label">Average Daily Visits (7 Days)</span>
-        <span class="stats-stat-value">${formatNumber(opts.avgVisits7)} <span class="stats-stat-unit">avg/day</span></span>
-        <span class="stats-stat-sub">${formatNumber(opts.medianVisits7)} median/day${opts.averageSubtext ? ` — ${opts.averageSubtext}` : ''}</span>
+      <div class="stats-overview-metric stats-overview-metric-primary">
+        <dt>Average Daily Visits (7 Days)</dt>
+        <dd class="stats-overview-value">${formatNumber(opts.avgVisits7)} <span class="stats-stat-unit">avg/day</span></dd>
+        <dd class="stats-overview-detail">${formatNumber(opts.medianVisits7)} median/day${opts.averageSubtext ? ` — ${opts.averageSubtext}` : ''}</dd>
       </div>
-      <div class="stats-stat-card">
-        <span class="stats-stat-label">Visits (30-Day Window)</span>
-        <span class="stats-stat-value">${formatNumber(opts.visits30)}</span>
-        <span class="stats-stat-sub">${opts.coverage30Label}</span>
+      <div class="stats-overview-metric">
+        <dt>Visits (30-Day Window)</dt>
+        <dd class="stats-overview-value">${formatNumber(opts.visits30)}</dd>
+        <dd class="stats-overview-detail">${opts.coverage30Label}</dd>
       </div>
-      <div class="stats-stat-card">
-        <span class="stats-stat-label">Countries Reached (7 Days)</span>
-        <span class="stats-stat-value">${formatNumber(opts.countriesCount)}</span>
-        <span class="stats-stat-sub">${opts.topCountryLabel}</span>
+      <div class="stats-overview-metric">
+        <dt>Countries Reached (7 Days)</dt>
+        <dd class="stats-overview-value">${formatNumber(opts.countriesCount)}</dd>
+        <dd class="stats-overview-detail">${opts.topCountryLabel}</dd>
       </div>
       ${browserCard}
       ${realisticVisitsCard}
-    </div>
+    </dl>
   `;
 }
 
@@ -527,7 +526,6 @@ function renderStatsContent(data: StatsResponse, rosterMap: Map<string, RosterEn
             <p>
               VietProfs respects visitor privacy: these are aggregate Cloudflare network estimates for <code>vietprofs.roars.dev</code> only, not verified-person counts, and no individual reader is tracked. Live data covers roughly the last 8 days; a scheduled archive builds the 30-day history over time (currently ${escapeHtml(coverageLabel(coverage30, 30))}).
             </p>
-            ${data.metricNotice ? `<p class="stat-sub">${escapeHtml(data.metricNotice)}</p>` : ''}
           </div>
         </section>
 
