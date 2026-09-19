@@ -4,20 +4,28 @@ This task playbook governs the deep discovery, validation, link health repair, a
 
 ---
 
-## ⚡ Batching & `/goal` Execution Protocol
+## ⚡ Batching, PR/Issue Submission, and `/goal` Protocol
 
 When running this task (especially during a long-running or overnight `/goal` run):
 
-1. **Strict Batch Size (50 Profiles Per Batch):** Work in bounded batches of **50 profiles per batch** using `WEBSITE_LAB_BACKFILL.md` (e.g. Batch WL-01, Batch WL-02). Do NOT skip batch tracking or process everything in a single shallow pass.
-2. **Thorough Verification Per Candidate:** Search personal domains (`.com`, `.org`, `github.io`, Google Sites) and lab team pages (`/members`, `/people`). Verify that the scholar is the PI/Director.
-3. **Batch Test, Commit, and Push Pipeline:**
+1. **No Direct Commits to `main`:** Maintenance tasks MUST NOT commit directly to `main`. All data updates must be submitted via **GitHub Pull Requests** or **GitHub Issues**.
+2. **Strict Batch Size (50 Profiles Per Batch):** Work in bounded batches of **50 profiles per batch** using `WEBSITE_LAB_BACKFILL.md` (e.g. Batch WL-01, Batch WL-02).
+3. **Thorough Verification Per Candidate:** Search personal domains (`.com`, `.org`, `github.io`, Google Sites) and lab team pages (`/members`, `/people`). Verify that the scholar is the PI/Director.
+4. **Automated PR & Issue Submission Pipeline:**
    After completing each 50-profile batch:
+   - Create batch topic branch: `git checkout -b maintenance/website-backfill-[BATCH_NAME]`
    - Validate pipeline: `npm test && npm run build && git diff --check`
    - Mark batch done in `WEBSITE_LAB_BACKFILL.md`.
    - Commit batch: `git add public/data.json WEBSITE_LAB_BACKFILL.md`
    - Commit message: `git commit -m "feat(data): backfill verified website and lab URLs batch [BATCH_NAME]"`
-   - Push immediately: `git push origin main`
-4. **Resumable Loop:** Resume with the next 50-profile batch until all batches in `WEBSITE_LAB_BACKFILL.md` are marked complete.
+   - Push topic branch: `git push origin maintenance/website-backfill-[BATCH_NAME]`
+   - File GitHub PR:
+     ```bash
+     gh pr create --title "feat(data): backfill verified website and lab URLs batch [BATCH_NAME]" --body "Researched 50 entries for website and lab URLs..."
+     ```
+   - For ambiguous profile URLs or domain migrations requiring maintainer decision, file GitHub Issues (`gh issue create`).
+   - Return to `main`: `git checkout main`
+5. **Auditing & Merging Delegation:** Do NOT merge the PR yourself. The dedicated audit agent running `TASKS/AUDIT_ISSUES_PRS.md` will review, test, squash-merge, and delete the PR branch.
 
 ---
 

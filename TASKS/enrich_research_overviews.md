@@ -4,19 +4,27 @@ This task playbook governs the multi-source synthesis, quality sanitization, val
 
 ---
 
-## ⚡ Batching & `/goal` Execution Protocol
+## ⚡ Batching, PR/Issue Submission, and `/goal` Protocol
 
 When running this task (especially during a long-running or overnight `/goal` run):
 
-1. **Strict Batch Size (20 Profiles Per Batch):** Work in bounded batches of **20 profiles per batch** using `npm run enrich -- snapshot` and `maintenance/enrichment.json`. Do NOT try to enrich the entire roster in a single pass.
-2. **Thorough Synthesis & Quality Sanitization:** Synthesize 1–3 sentence neutral academic summaries from official bio pages, lab homepages, and paper abstracts. Strictly enforce zero HTML entities, zero scraped UI boilerplate, zero gendered pronouns, max 3 sentences, and max 500 characters.
-3. **Batch Test, Commit, and Push Pipeline:**
+1. **No Direct Commits to `main`:** Maintenance tasks MUST NOT commit directly to `main`. All data updates must be submitted via **GitHub Pull Requests** or **GitHub Issues**.
+2. **Strict Batch Size (20 Profiles Per Batch):** Work in bounded batches of **20 profiles per batch** using `npm run enrich -- snapshot` and `maintenance/enrichment.json`.
+3. **Thorough Synthesis & Quality Sanitization:** Synthesize 1–3 sentence neutral academic summaries from official bio pages, lab homepages, and paper abstracts. Strictly enforce zero HTML entities, zero scraped UI boilerplate, zero gendered pronouns, max 3 sentences, and max 500 characters.
+4. **Automated PR & Issue Submission Pipeline:**
    After completing each 20-profile batch (`npm run enrich -- finalize 20`):
+   - Create batch topic branch: `git checkout -b maintenance/enrichment-batch-[BATCH_NUM]`
    - Validate pipeline: `npm test && npm run build && git diff --check`
    - Commit batch: `git add public/data.json maintenance/enrichment.json`
    - Commit message: `git commit -m "feat(enrichment): resolve research overview batch [BATCH_NUM]"`
-   - Push immediately: `git push origin main`
-4. **Resumable Loop:** Rerun `npm run enrich -- snapshot` for the next 20 pending IDs until all pending entries are fully enriched.
+   - Push topic branch: `git push origin maintenance/enrichment-batch-[BATCH_NUM]`
+   - File GitHub PR:
+     ```bash
+     gh pr create --title "feat(enrichment): resolve research overview batch [BATCH_NUM]" --body "Enriched verified research overviews for 20 entries..."
+     ```
+   - For mismatched overviews requiring human review, file GitHub Issues (`gh issue create`).
+   - Return to `main`: `git checkout main`
+5. **Auditing & Merging Delegation:** Do NOT merge the PR yourself. The dedicated audit agent running `TASKS/AUDIT_ISSUES_PRS.md` will review, test, squash-merge, and delete the PR branch.
 
 ---
 

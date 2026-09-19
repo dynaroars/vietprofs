@@ -4,19 +4,27 @@ This task playbook governs the deep research, identity disambiguation, verificat
 
 ---
 
-## ⚡ Batching & `/goal` Execution Protocol
+## ⚡ Batching, PR/Issue Submission, and `/goal` Protocol
 
 When running this task (especially during a long-running or overnight `/goal` run):
 
-1. **Strict Batch Size (15–20 Profiles Per Batch):** Work in bounded batches of **15–20 profiles per batch** across ID ranges (e.g. `vp-0100` to `vp-0120`). Do NOT try to process the entire dataset in a single shallow pass.
-2. **Thorough Verification Per Candidate:** Execute 3 distinct search queries per person (Name + University, Name + Department/PhD, Diacritic Name + Field). Verify at least 2 independent identity signals (PhD school, past affiliations, research domain) before accepting.
-3. **Batch Test, Commit, and Push Pipeline:**
+1. **No Direct Commits to `main`:** Maintenance tasks MUST NOT commit directly to `main`. All data updates must be submitted via **GitHub Pull Requests** or **GitHub Issues**.
+2. **Strict Batch Size (15–20 Profiles Per Batch):** Work in bounded batches of **15–20 profiles per batch** across ID ranges (e.g. `vp-0100` to `vp-0120`).
+3. **Thorough Verification Per Candidate:** Execute 3 distinct search queries per person (Name + University, Name + Department/PhD, Diacritic Name + Field). Verify at least 2 independent identity signals (PhD school, past affiliations, research domain) before accepting.
+4. **Automated PR & Issue Submission Pipeline:**
    After completing each batch of 15–20 profiles:
+   - Create batch topic branch: `git checkout -b scheduled/linkedin-backfill-[TIMESTAMP]`
    - Validate pipeline: `npm test && npm run build && git diff --check`
    - Commit batch: `git add public/data.json`
    - Commit message: `git commit -m "feat(data): backfill verified linkedin URLs batch [ID_RANGE]"`
-   - Push immediately: `git push origin main`
-4. **Resumable Loop:** Move to the next ID range batch until all target roster IDs missing `linkedinUrl` have been researched.
+   - Push topic branch: `git push origin scheduled/linkedin-backfill-[TIMESTAMP]`
+   - File GitHub PR:
+     ```bash
+     gh pr create --title "Backfill 15 LinkedIn URLs (scheduled batch)" --body "Researched 20 roster entries missing linkedinUrl (vp-0100–vp-0120)..."
+     ```
+   - For ambiguous, rank/department, or stale profile issues noticed during research, file GitHub Issues (`gh issue create`).
+   - Return to `main`: `git checkout main`
+5. **Auditing & Merging Delegation:** Do NOT merge the PR yourself. The dedicated audit agent running `TASKS/AUDIT_ISSUES_PRS.md` will review, test, squash-merge, and delete the PR branch.
 
 ---
 

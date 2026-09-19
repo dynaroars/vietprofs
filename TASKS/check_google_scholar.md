@@ -4,19 +4,27 @@ This task playbook governs the discovery, identity verification, canonical forma
 
 ---
 
-## ⚡ Batching & `/goal` Execution Protocol
+## ⚡ Batching, PR/Issue Submission, and `/goal` Protocol
 
 When running this task (especially during a long-running or overnight `/goal` run):
 
-1. **Strict Batch Size (20–30 Profiles Per Batch):** Work in bounded batches of **20–30 profiles per batch** using `npm run check-links -- --field scholarUrl`. Do NOT try to audit all entries in a single un-throttled pass (prevents Google Scholar rate-limiting).
-2. **Thorough Verification Per Candidate:** Inspect user ID, top co-authors, and paper subjects to ensure strict ownership. Disambiguate common Vietnamese surnames on Google Scholar.
-3. **Batch Test, Commit, and Push Pipeline:**
+1. **No Direct Commits to `main`:** Maintenance tasks MUST NOT commit directly to `main`. All data updates must be submitted via **GitHub Pull Requests** or **GitHub Issues**.
+2. **Strict Batch Size (20–30 Profiles Per Batch):** Work in bounded batches of **20–30 profiles per batch** using `npm run check-links -- --field scholarUrl`.
+3. **Thorough Verification Per Candidate:** Inspect user ID, top co-authors, and paper subjects to ensure strict ownership. Disambiguate common Vietnamese surnames on Google Scholar.
+4. **Automated PR & Issue Submission Pipeline:**
    After completing each 20–30 profile batch:
+   - Create batch topic branch: `git checkout -b maintenance/scholar-repair-[TIMESTAMP]`
    - Validate pipeline: `npm test && npm run build && git diff --check`
    - Commit batch: `git add public/data.json`
    - Commit message: `git commit -m "fix(scholar): repair Google Scholar profile links batch [BATCH_NUM]"`
-   - Push immediately: `git push origin main`
-4. **Resumable Loop:** Resume with the next batch until all flagged or unverified Google Scholar links are fully audited.
+   - Push topic branch: `git push origin maintenance/scholar-repair-[TIMESTAMP]`
+   - File GitHub PR:
+     ```bash
+     gh pr create --title "fix(scholar): repair Google Scholar profile links batch [BATCH_NUM]" --body "Audited 30 Google Scholar profile URLs..."
+     ```
+   - For ambiguous profile matches or dead links requiring owner review, file GitHub Issues (`gh issue create`).
+   - Return to `main`: `git checkout main`
+5. **Auditing & Merging Delegation:** Do NOT merge the PR yourself. The dedicated audit agent running `TASKS/AUDIT_ISSUES_PRS.md` will review, test, squash-merge, and delete the PR branch.
 
 ---
 

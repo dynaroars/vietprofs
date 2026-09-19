@@ -4,22 +4,30 @@ This task playbook governs the deep verification of academic degree credentials 
 
 ---
 
-## ⚡ Batching & `/goal` Execution Protocol
+## ⚡ Batching, PR/Issue Submission, and `/goal` Protocol
 
 When running this task (especially during a long-running or overnight `/goal` run):
 
-1. **Strict Batch Size (15–20 Candidates Per Batch):** Work in bounded batches of **15–20 candidates per batch** using lead files (`maintenance/hieuphay-leads.json` or `maintenance/openalex-leads.json`). Do NOT attempt to process hundreds of candidates in a single pass.
-2. **Thorough Verification Standard:** Verify full inclusion standard for every candidate: current appointment outside Vietnam, accepted track, non-corporate employer, degree chronology (`undergradYear <= msYear <= phdYear <= postdocYear`), and honors categorization.
-3. **Batch Test, Commit, and Push Pipeline:**
+1. **No Direct Commits to `main`:** Maintenance tasks MUST NOT commit directly to `main`. All data updates must be submitted via **GitHub Pull Requests** or **GitHub Issues**.
+2. **Strict Batch Size (15–20 Candidates Per Batch):** Work in bounded batches of **15–20 candidates per batch** using lead files (`maintenance/hieuphay-leads.json` or `maintenance/openalex-leads.json`).
+3. **Thorough Verification Standard:** Verify full inclusion standard for every candidate: current appointment outside Vietnam, accepted track, non-corporate employer, degree chronology (`undergradYear <= msYear <= phdYear <= postdocYear`), and honors categorization.
+4. **Automated PR & Issue Submission Pipeline:**
    After completing each batch of 15–20 candidates:
    - Assign Profile IDs: `npm run assign-profile-ids -- --apply`
    - Sync verification ledger: update `maintenance/verification.json`
    - Snapshot enrichment: `npm run enrich -- snapshot`
+   - Create batch topic branch: `git checkout -b maintenance/leads-batch-[DISCIPLINE/TIMESTAMP]`
    - Validate pipeline: `npm test && npm run build && git diff --check`
    - Commit batch: `git add public/data.json maintenance/verification.json maintenance/hieuphay-leads.json`
    - Commit message: `git commit -m "fix(roster): resolve candidate leads batch [DISCIPLINE/BATCH_NAME]"`
-   - Push immediately: `git push origin main`
-4. **Resumable Loop:** Resume with the next 15–20 candidate batch until all pending leads are processed.
+   - Push topic branch: `git push origin maintenance/leads-batch-[DISCIPLINE/TIMESTAMP]`
+   - File GitHub PR:
+     ```bash
+     gh pr create --title "Resolve OpenAlex [DISCIPLINE] leads batch" --body "Verified and added 15 candidate leads..."
+     ```
+   - For ambiguous eligibility cases, protected field conflicts, or honors requiring maintainer review, file GitHub Issues (`gh issue create`).
+   - Return to `main`: `git checkout main`
+5. **Auditing & Merging Delegation:** Do NOT merge the PR yourself. The dedicated audit agent running `TASKS/AUDIT_ISSUES_PRS.md` will review, test, squash-merge, and delete the PR branch.
 
 ---
 

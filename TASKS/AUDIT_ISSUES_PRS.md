@@ -4,18 +4,27 @@ This document defines the standard operating procedure for auditing, verifying, 
 
 ---
 
-## ⚡ Batching & `/goal` Execution Protocol
+## ⚡ Role & `/goal` Execution Protocol
+
+### Primary Audit & Merge Role
+In this multi-agent architecture:
+- **Task Agents** (`fetch_portraits.md`, `backfill_linkedin.md`, `check_google_scholar.md`, `verify_websites_and_labs.md`, `enrich_research_overviews.md`, `audit_facts_and_honors.md`) discover data, perform deep research, create topic branches, and **file GitHub Pull Requests or GitHub Issues**. Task agents DO NOT commit directly to `main` or merge their own PRs.
+- **Audit Agent (`AUDIT_ISSUES_PRS.md`):** Acts as the primary auditor. Reviews all open PRs, verifies diffs, executes test suites (`npm test`, `npm run build`), **squash-merges verified PRs**, deletes topic branches, processes issues, and updates ledgers.
+
+---
+
+## ⚡ Batching & `/goal` Protocol
 
 When running this task (especially during a long-running or overnight `/goal` run):
 
 1. **Strict Batch Size (1 PR / 5 Issues Per Batch):** Process open PRs one by one (`gh pr diff <id>`) and issues in batches of **5 issues per batch**. Do NOT rush or gloss over error output.
-2. **Thorough Evidence Verification:** For every issue, cross-check live web evidence, verify degree/honors standards in `ROSTER_MAINTENANCE.md`, and check protected fields (`directFields`).
-3. **Batch Test, Commit, Push, and Close Pipeline:**
+2. **Thorough Evidence Verification:** For every PR and issue, cross-check live web evidence, verify degree/honors standards in `ROSTER_MAINTENANCE.md`, and check protected fields (`directFields`).
+3. **Batch Test, Merge, Push, and Close Pipeline:**
    After resolving each PR or 5-issue batch:
    - Validate pipeline: `npm test && npm run build && git diff --check`
-   - Commit batch changes if roster updated: `git commit -m "fix(roster): ..."`
-   - Push to main: `git push origin main`
-   - Close resolved PRs/issues with explanatory comments (`gh pr merge`, `gh issue close`).
+   - Merge clean PRs: `gh pr merge <PR_NUMBER> --squash --delete-branch`
+   - Pull `main` to sync local repo: `git checkout main && git pull origin main`
+   - Close resolved issues with explanatory comments (`gh issue close <ISSUE_NUMBER> --comment "..."`).
 4. **Resumable Loop:** Resume immediately with the next open PR or issue batch until all actionable open PRs and issues are processed.
 
 ---
