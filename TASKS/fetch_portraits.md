@@ -1,15 +1,14 @@
-# Task Guide: Scholar Portrait Retrieval, Visual Auditing, and Quality Assurance (`fetch_portraits.md`)
+# Scholar Portrait Retrieval, Visual Auditing, and Quality Assurance (`fetch_portraits.md`)
 
-This task playbook governs the thorough discovery, visual auditing, identity verification, formatting, and provenance tracking of faculty portrait headshots in the **VietProfs** repository.
+> **Autonomous Goal Directive (`/goal TASKS/fetch_portraits.md`):**
+> When invoked as `/goal TASKS/fetch_portraits.md`, the agent MUST immediately execute this full portrait discovery and auditing workflow without needing any extra prompt text. Work in 10-profile batches, perform thorough visual/image inspection, submit verified batches as GitHub PRs, and loop until all missing portraits in `maintenance/missing-portraits.json` are resolved.
 
 ---
 
-## ⚡ Batching, PR/Issue Submission, and `/goal` Protocol
-
-When running this task (especially during a long-running or overnight `/goal` run):
+## ⚡ Batching & PR/Issue Submission Protocol
 
 1. **No Direct Commits to `main`:** Maintenance tasks MUST NOT commit directly to `main`. All data updates must be submitted via **GitHub Pull Requests** or **GitHub Issues**.
-2. **Strict Batch Size (10 Profiles Per Batch):** Work in bounded batches of **10 profiles per batch** using `maintenance/missing-portraits.json`.
+2. **Strict Batch Size (10 Profiles Per Batch):** Work in bounded batches of **10 profiles per batch** using `maintenance/missing-portraits.json`. Do NOT process the entire roster in a single shallow pass.
 3. **Thorough Verification Per Candidate:** For every candidate, inspect the image visually or run statistical analyzers (`python3 scripts/fast_portrait_analyzer.py`), check aspect ratio (0.70–1.55), and confirm single-person headshot identity before accepting.
 4. **Automated PR & Issue Submission Pipeline:**
    After completing each 10-profile batch:
@@ -30,7 +29,7 @@ When running this task (especially during a long-running or overnight `/goal` ru
 
 ## 1. Core Objective & Quality Standard
 
-The goal is to acquire a high-confidence, individual human portrait headshot for every eligible faculty entry in `public/data.json`. 
+The goal is to acquire a high-confidence, individual human portrait headshot for every eligible faculty entry in `public/data.json`.
 
 - **Quality Priority:** A missing portrait (`portrait: undefined`) is far better than an incorrect, hallucinated, low-quality, or non-person image.
 - **Confidence Requirement:** Only commit portraits with `HIGH` or verified `MEDIUM` confidence. Never commit `LOW` confidence or unverified headshots.

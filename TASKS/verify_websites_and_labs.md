@@ -1,12 +1,11 @@
-# Task Guide: Personal Website and Lab Homepage Discovery (`verify_websites_and_labs.md`)
+# Personal Website and Lab Homepage Discovery (`verify_websites_and_labs.md`)
 
-This task playbook governs the deep discovery, validation, link health repair, and backfilling of maintained personal academic homepages (`websiteUrl`) and active research group/lab sites (`labUrl`) in the **VietProfs** repository.
+> **Autonomous Goal Directive (`/goal TASKS/verify_websites_and_labs.md`):**
+> When invoked as `/goal TASKS/verify_websites_and_labs.md`, the agent MUST immediately execute this full website and lab homepage backfilling workflow without needing any extra prompt text. Work in 50-profile batches using `WEBSITE_LAB_BACKFILL.md`, search personal domains (`.com`, `.org`, `github.io`, Google Sites) and lab team pages, submit verified batches as GitHub PRs, and loop until all batches in `WEBSITE_LAB_BACKFILL.md` are completed.
 
 ---
 
 ## ⚡ Batching, PR/Issue Submission, and `/goal` Protocol
-
-When running this task (especially during a long-running or overnight `/goal` run):
 
 1. **No Direct Commits to `main`:** Maintenance tasks MUST NOT commit directly to `main`. All data updates must be submitted via **GitHub Pull Requests** or **GitHub Issues**.
 2. **Strict Batch Size (50 Profiles Per Batch):** Work in bounded batches of **50 profiles per batch** using `WEBSITE_LAB_BACKFILL.md` (e.g. Batch WL-01, Batch WL-02).

@@ -1,12 +1,11 @@
-# Task Guide: Credentials, Honors, and Direct Fields Protection (`audit_facts_and_honors.md`)
+# Credentials, Honors, and Direct Fields Protection (`audit_facts_and_honors.md`)
 
-This task playbook governs the deep verification of academic degree credentials (`phdInstitution`, `phdYear`, `msInstitution`, `undergradInstitution`, `postdocInstitution`), honors and awards (`honors`), and the strict governance of direct fields (`directFields`) in the **VietProfs** repository.
+> **Autonomous Goal Directive (`/goal TASKS/audit_facts_and_honors.md`):**
+> When invoked as `/goal TASKS/audit_facts_and_honors.md`, the agent MUST immediately execute this full credentials and honors auditing workflow without needing any extra prompt text. Work in 15–20 candidate batches (`hieuphay-leads.json` / `openalex-leads.json`), verify inclusion criteria and degree chronology, submit verified batches as GitHub PRs, and loop until all lead candidates are processed.
 
 ---
 
 ## ⚡ Batching, PR/Issue Submission, and `/goal` Protocol
-
-When running this task (especially during a long-running or overnight `/goal` run):
 
 1. **No Direct Commits to `main`:** Maintenance tasks MUST NOT commit directly to `main`. All data updates must be submitted via **GitHub Pull Requests** or **GitHub Issues**.
 2. **Strict Batch Size (15–20 Candidates Per Batch):** Work in bounded batches of **15–20 candidates per batch** using lead files (`maintenance/hieuphay-leads.json` or `maintenance/openalex-leads.json`).

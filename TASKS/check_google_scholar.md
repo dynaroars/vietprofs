@@ -1,12 +1,11 @@
-# Task Guide: Google Scholar Profile Validation and Link Repair (`check_google_scholar.md`)
+# Google Scholar Profile Validation and Link Repair (`check_google_scholar.md`)
 
-This task playbook governs the discovery, identity verification, canonical formatting, and health auditing of Google Scholar citation profile URLs (`scholarUrl`) in the **VietProfs** repository.
+> **Autonomous Goal Directive (`/goal TASKS/check_google_scholar.md`):**
+> When invoked as `/goal TASKS/check_google_scholar.md`, the agent MUST immediately execute this full Google Scholar profile auditing and repair workflow without needing any extra prompt text. Work in 20–30 profile batches using `npm run check-links -- --field scholarUrl`, verify canonical profile ID format (`citations?user=...`), disambiguate namesakes, repair dead links, submit verified batches as GitHub PRs, and loop until all Scholar profile links are fully audited.
 
 ---
 
 ## ⚡ Batching, PR/Issue Submission, and `/goal` Protocol
-
-When running this task (especially during a long-running or overnight `/goal` run):
 
 1. **No Direct Commits to `main`:** Maintenance tasks MUST NOT commit directly to `main`. All data updates must be submitted via **GitHub Pull Requests** or **GitHub Issues**.
 2. **Strict Batch Size (20–30 Profiles Per Batch):** Work in bounded batches of **20–30 profiles per batch** using `npm run check-links -- --field scholarUrl`.

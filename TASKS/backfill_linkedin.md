@@ -1,12 +1,11 @@
-# Task Guide: Thorough LinkedIn Profile Discovery and Disambiguation (`backfill_linkedin.md`)
+# Thorough LinkedIn Profile Discovery and Disambiguation (`backfill_linkedin.md`)
 
-This task playbook governs the deep research, identity disambiguation, verification, and backfilling of personal LinkedIn profile URLs (`linkedinUrl`) in the **VietProfs** repository.
+> **Autonomous Goal Directive (`/goal TASKS/backfill_linkedin.md`):**
+> When invoked as `/goal TASKS/backfill_linkedin.md`, the agent MUST immediately execute this full LinkedIn discovery and backfilling workflow without needing any extra prompt text. Work in 15–20 profile batches, run 3 multi-token queries per scholar, verify at least 2 independent identity signals, submit verified batches as GitHub PRs, and loop until all target roster IDs missing `linkedinUrl` have been researched.
 
 ---
 
 ## ⚡ Batching, PR/Issue Submission, and `/goal` Protocol
-
-When running this task (especially during a long-running or overnight `/goal` run):
 
 1. **No Direct Commits to `main`:** Maintenance tasks MUST NOT commit directly to `main`. All data updates must be submitted via **GitHub Pull Requests** or **GitHub Issues**.
 2. **Strict Batch Size (15–20 Profiles Per Batch):** Work in bounded batches of **15–20 profiles per batch** across ID ranges (e.g. `vp-0100` to `vp-0120`).

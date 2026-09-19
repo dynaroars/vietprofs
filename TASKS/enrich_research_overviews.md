@@ -1,12 +1,11 @@
-# Task Guide: Academic Research Overview Enrichment (`enrich_research_overviews.md`)
+# Academic Research Overview Enrichment (`enrich_research_overviews.md`)
 
-This task playbook governs the multi-source synthesis, quality sanitization, validation, mismatch detection, and ledger management of academic summaries (`researchOverview`) rendered on scholar profile pages (`/vp-####.html`).
+> **Autonomous Goal Directive (`/goal TASKS/enrich_research_overviews.md`):**
+> When invoked as `/goal TASKS/enrich_research_overviews.md`, the agent MUST immediately execute this full research overview enrichment workflow without needing any extra prompt text. Work in 20-profile batches using `npm run enrich -- snapshot`, synthesize 1–3 sentence neutral academic summaries, strictly enforce sanitization guardrails (no HTML entities, no scraped UI boilerplate, no gendered pronouns), submit verified batches as GitHub PRs, and loop until all pending entries are enriched.
 
 ---
 
 ## ⚡ Batching, PR/Issue Submission, and `/goal` Protocol
-
-When running this task (especially during a long-running or overnight `/goal` run):
 
 1. **No Direct Commits to `main`:** Maintenance tasks MUST NOT commit directly to `main`. All data updates must be submitted via **GitHub Pull Requests** or **GitHub Issues**.
 2. **Strict Batch Size (20 Profiles Per Batch):** Work in bounded batches of **20 profiles per batch** using `npm run enrich -- snapshot` and `maintenance/enrichment.json`.
