@@ -728,16 +728,18 @@
     },
     "vp-1231": {
       "name": "Thanh-Tuan Bui",
-      "outcome": "not_found",
+      "outcome": "found",
+      "pageUrl": "https://senergylab.cyu.fr/english-version/members/thanh-tuan-bui",
+      "imageUrl": "https://senergylab.cyu.fr/medias/photo/thanh-tuan-bui-150x150_1624007212448-jpg?ID_FICHE=38584",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
       "identitySignals": [
         "name",
         "institution",
-        "department",
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-09-15T04:28:00.000Z",
-      "note": "Repository owner reported the prior asset is not a photograph of a person; it was removed and no replacement has been verified."
+      "retrievedAt": "2026-09-19T23:06:28.858Z"
     },
     "vp-0985": {
       "name": "Aivi T. Nguyen",
@@ -1268,67 +1270,48 @@
     },
     "vp-1181": {
       "name": "Brian Kha Tran",
-      "outcome": "not_found",
-      "pageUrl": "https://www.csulb.edu/mathematics-statistics/department-directory",
+      "outcome": "needs_review",
+      "pageUrl": "https://www.btran.science/",
+      "imageUrl": "https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72u-zp_syuMFcy43JrNB_LGe51lHnePbt0AVd1dLCTDFsZoDsaWn27u2BLB7c8JPBhksUyB0R9NjXa6mH4uL4msOTJA-VaKc4edcm_JsMb2Zw821BMm9MbTo6RCNLf-rTwwL8XV58pVJqpnPLN8h9R94dbk6JRGEm-ZhpGcSibUYixtm2YUUXL69BtjDtJBGDN5fmxQj_Ftl4Zi2DcH9DiK2ka6bqWSqbJM1sH12=w1280",
+      "sourceType": "personal_homepage",
+      "confidence": "MEDIUM",
       "identitySignals": [
         "name",
         "institution",
         "department",
+        "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-09-15T04:50:00.000Z",
-      "note": "Directory exposed no verified individual portrait."
+      "retrievedAt": "2026-09-19T23:02:36.895Z",
+      "note": "existing portrait preserved; use --replace after review"
     },
     "vp-1184": {
       "name": "Thi-Kien Dao",
       "outcome": "not_found",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-15T04:50:00.000Z",
-      "note": "Conference PDF is not sufficient evidence for a portrait."
+      "identitySignals": [],
+      "retrievedAt": "2026-09-19T23:02:39.748Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1189": {
       "name": "Dung Hoang Duong",
       "outcome": "not_found",
-      "pageUrl": "https://scholars.uow.edu.au/hoang-dung-duong/",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-15T04:50:00.000Z",
-      "note": "No verified individual portrait exposed."
+      "identitySignals": [],
+      "retrievedAt": "2026-09-19T23:02:55.430Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1191": {
       "name": "Kim-Phuong L. Vu",
       "outcome": "not_found",
-      "pageUrl": "https://www.cla.csulb.edu/departments/psychology/faculty/kim-phuong-vu/",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-15T04:50:00.000Z",
-      "note": "Official page exposed unrelated group imagery, not a person-specific portrait."
+      "identitySignals": [],
+      "retrievedAt": "2026-09-19T23:03:06.755Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1193": {
       "name": "Huy P. Phan",
       "outcome": "not_found",
-      "pageUrl": "https://www.une.edu.au/staff-profiles/education/hphan2",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-15T04:50:00.000Z",
-      "note": "Official profile blocked direct inspection; no alternative portrait verified."
+      "identitySignals": [],
+      "retrievedAt": "2026-09-19T23:03:20.154Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1195": {
       "name": "Vinh N. Dang",
@@ -1349,26 +1332,16 @@
     "vp-1196": {
       "name": "Long Tien Truong",
       "outcome": "not_found",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-15T05:00:00.000Z",
-      "note": "No verified individual portrait exposed."
+      "identitySignals": [],
+      "retrievedAt": "2026-09-19T23:03:30.587Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1198": {
       "name": "Lam Thi Mai Huynh",
       "outcome": "not_found",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-15T05:00:00.000Z",
-      "note": "No verified individual portrait exposed."
+      "identitySignals": [],
+      "retrievedAt": "2026-09-19T23:03:41.607Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1199": {
       "name": "Son Truong",
@@ -1389,74 +1362,44 @@
     "vp-1201": {
       "name": "Huong Thanh Bui",
       "outcome": "not_found",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-15T05:00:00.000Z",
-      "note": "No verified individual portrait exposed."
+      "identitySignals": [],
+      "retrievedAt": "2026-09-19T23:03:53.449Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1202": {
       "name": "Anh Van Vo",
       "outcome": "not_found",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-15T05:00:00.000Z",
-      "note": "Official URL returned 404; no alternative portrait verified."
+      "identitySignals": [],
+      "retrievedAt": "2026-09-19T23:04:04.550Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1203": {
       "name": "Anh-Huy Phan",
       "outcome": "not_found",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-15T05:00:00.000Z",
-      "note": "No verified individual portrait exposed."
+      "identitySignals": [],
+      "retrievedAt": "2026-09-19T23:04:14.936Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1205": {
       "name": "Tao Pham Dinh",
       "outcome": "not_found",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-15T05:00:00.000Z",
-      "note": "Official profile unavailable; no alternative portrait verified."
+      "identitySignals": [],
+      "retrievedAt": "2026-09-19T23:04:25.847Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1206": {
       "name": "Tuan Kim Vu",
       "outcome": "not_found",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-15T05:00:00.000Z",
-      "note": "Official profile rejected automated request; no alternative portrait verified."
+      "identitySignals": [],
+      "retrievedAt": "2026-09-19T23:04:36.249Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1207": {
       "name": "The Anh Bui",
       "outcome": "not_found",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-15T05:00:00.000Z",
-      "note": "Official domain unavailable; no alternative portrait verified."
+      "identitySignals": [],
+      "retrievedAt": "2026-09-19T23:04:46.564Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1208": {
       "name": "Hoa Huu Phuc Nguyen",
@@ -1477,162 +1420,102 @@
     "vp-1215": {
       "name": "Hieu Pham",
       "outcome": "not_found",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-15T05:00:00.000Z",
-      "note": "Official UAH profile exposed no verified individual portrait."
+      "identitySignals": [],
+      "retrievedAt": "2026-09-19T23:04:57.508Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1216": {
       "name": "Phuong Hong Nguyen",
       "outcome": "not_found",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-15T05:00:00.000Z",
-      "note": "Official IFPRI expert page exposed no verified individual portrait."
+      "identitySignals": [],
+      "retrievedAt": "2026-09-19T23:05:08.083Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1217": {
       "name": "Hoai-Nam Truong",
       "outcome": "not_found",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-15T05:00:00.000Z",
-      "note": "Stored INRAE URL was unavailable; no alternative portrait verified."
+      "identitySignals": [],
+      "retrievedAt": "2026-09-19T23:05:18.325Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1218": {
       "name": "Bao-Lam Huynh",
       "outcome": "not_found",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-15T05:00:00.000Z",
-      "note": "Official UCR profile exposed no verified individual portrait."
+      "identitySignals": [],
+      "retrievedAt": "2026-09-19T23:05:28.715Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1220": {
       "name": "Anh-Vu Vo",
       "outcome": "not_found",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-15T05:00:00.000Z",
-      "note": "Official UCD profile exposed no verified individual portrait."
+      "identitySignals": [],
+      "retrievedAt": "2026-09-19T23:05:39.084Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1224": {
       "name": "Phuong Nguyen-Tri",
-      "outcome": "not_found",
+      "outcome": "found",
+      "pageUrl": "https://oraprdnt.uqtr.uquebec.ca/portail/genw050r.page_perso?owa_no_personne=749191",
+      "imageUrl": "https://oraprdnt.uqtr.uquebec.ca/portail/docs/GIP/PHOTO/749191/U407_Nguyen_tri_Phuong08_19.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
       "identitySignals": [
         "name",
         "institution",
         "department",
+        "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-09-15T05:00:00.000Z",
-      "note": "Stored lab URL returned an error; no alternative portrait verified."
+      "retrievedAt": "2026-09-19T23:05:52.149Z"
     },
     "vp-1226": {
       "name": "Toan Trong Tran",
       "outcome": "not_found",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-15T05:00:00.000Z",
-      "note": "Official UTS profile exposed no verified individual portrait."
+      "identitySignals": [],
+      "retrievedAt": "2026-09-19T23:05:55.073Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1228": {
       "name": "Thuy-Duong Nguyen-Phan",
       "outcome": "not_found",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-15T05:00:00.000Z",
-      "note": "Official NETL page exposed branding only; no verified individual portrait."
+      "identitySignals": [],
+      "retrievedAt": "2026-09-19T23:06:06.215Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1229": {
       "name": "Nong Van Ngo",
       "outcome": "not_found",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-15T05:00:00.000Z",
-      "note": "Stored researchmap profile blocked access; no alternative portrait verified."
+      "identitySignals": [],
+      "retrievedAt": "2026-09-19T23:06:17.003Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1233": {
       "name": "Anh-Thy Bui",
-      "outcome": "found",
-      "pageUrl": "https://www.inc.cnrs.fr/fr/personne/anh-thy-bui",
-      "imageUrl": "https://www.inc.cnrs.fr/sites/institut_inc/files/styles/person/public/image/bui-emergence-2026_0.jpg?itok=Yqj6g7KS",
-      "sourceType": "official_faculty",
-      "confidence": "HIGH",
-      "identitySignals": [
-        "exact_name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-15T05:00:00.000Z",
-      "note": "CNRS Chimie person page names Anh-Thy Bui and embeds a single-person 405x405 portrait."
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-19T23:06:31.801Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1236": {
       "name": "Nhan Viet Tran",
       "outcome": "not_found",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-15T05:00:00.000Z",
-      "note": "Official Fermilab page did not expose a verified individual portrait."
+      "identitySignals": [],
+      "retrievedAt": "2026-09-19T23:06:45.088Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1239": {
       "name": "Quang-Dé Nguyen",
       "outcome": "not_found",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-15T05:00:00.000Z",
-      "note": "Official Harvard profile did not expose a verified individual portrait."
+      "identitySignals": [],
+      "retrievedAt": "2026-09-19T23:06:55.828Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1240": {
       "name": "Kim-Vy Tran",
       "outcome": "not_found",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-15T05:00:00.000Z",
-      "note": "Harvard profile blocked automated access; no alternative portrait verified."
+      "identitySignals": [],
+      "retrievedAt": "2026-09-19T23:07:06.259Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1241": {
       "name": "Minh Huynh",
