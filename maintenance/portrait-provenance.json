@@ -2201,14 +2201,9 @@
     "vp-1362": {
       "name": "Le Mai Tu",
       "outcome": "not_found",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-15T05:00:00.000Z",
-      "note": "Sherbrooke specialist page exposed no verified individual portrait."
+      "identitySignals": [],
+      "retrievedAt": "2026-09-19T23:15:27.747Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1368": {
       "name": "Phuong L. Doan",
@@ -2229,14 +2224,9 @@
     "vp-1370": {
       "name": "Quôc Dinh Nguyên",
       "outcome": "not_found",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-15T05:00:00.000Z",
-      "note": "Université de Montréal profile exposed a generic silhouette, not a verified portrait."
+      "identitySignals": [],
+      "retrievedAt": "2026-09-19T23:15:38.947Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1373": {
       "name": "Nghiem B. Ha",
@@ -2257,62 +2247,46 @@
     "vp-1374": {
       "name": "Trang D. Trinh",
       "outcome": "not_found",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-15T05:00:00.000Z",
-      "note": "UCSF Medical Education page exposed placeholders, not a verified individual portrait."
+      "identitySignals": [],
+      "retrievedAt": "2026-09-19T23:15:50.441Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1375": {
       "name": "Tri A. Dinh",
       "outcome": "not_found",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-15T05:00:00.000Z",
-      "note": "Mayo Clinic biography blocked automated access; no alternative portrait verified."
+      "identitySignals": [],
+      "retrievedAt": "2026-09-19T23:16:00.777Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1377": {
       "name": "Tam T. Doan",
-      "outcome": "not_found",
+      "outcome": "found",
+      "pageUrl": "https://www.bcm.edu/people-search/tam-doan-43941",
+      "imageUrl": "https://www.bcm.edu/sites/default/files/profile_photos/doan-tam-3a2d98c1ebc4.jpeg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
       "identitySignals": [
         "name",
         "institution",
         "department",
+        "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-09-15T05:00:00.000Z",
-      "note": "Baylor profile exposed no verified individual portrait."
+      "retrievedAt": "2026-09-19T23:16:10.887Z"
     },
     "vp-1379": {
       "name": "Cat Khanh Vuong",
       "outcome": "not_found",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-15T05:00:00.000Z",
-      "note": "Tsukuba image endpoint returned a portrait whose page identity did not match Cat Khanh Vuong; rejected."
+      "identitySignals": [],
+      "retrievedAt": "2026-09-19T23:16:12.774Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1380": {
       "name": "Quoc Vuong Tran",
       "outcome": "not_found",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-15T05:00:00.000Z",
-      "note": "Yamanashi portal exposed no verified individual portrait."
+      "identitySignals": [],
+      "retrievedAt": "2026-09-19T23:16:23.613Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1381": {
       "name": "Nhu Khue Vuong",
