@@ -3161,6 +3161,36 @@
       ],
       "retrievedAt": "2026-09-16T23:56:10.000Z",
       "note": "Stored asset was a default silhouette, not a human portrait; removed during non-human image audit."
+    },
+    "vp-0615": {
+      "name": "Nguyen Viet Dang",
+      "outcome": "found",
+      "pageUrl": "https://www.iufrance.fr/les-membres-de-liuf/membre/2420-nguyen-viet-dang.html",
+      "imageUrl": "https://www.iufrance.fr/assets/images/7/DANG%20Nguyen%20Viet-f428daa7.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department"
+      ],
+      "retrievedAt": "2026-09-19T22:45:41.709Z",
+      "note": "Verified portrait headshot retrieved and archived."
+    },
+    "vp-0670": {
+      "name": "Thi Qui Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.singaporetech.edu.sg/directory/faculty/thi-qui-nguyen",
+      "imageUrl": "https://www.singaporetech.edu.sg/directory/sites/directory/files/styles/profile_picture/public/profile-picture/Nguyen%20Thi%20Qui.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department"
+      ],
+      "retrievedAt": "2026-09-19T22:45:41.709Z",
+      "note": "Verified portrait headshot retrieved and archived."
     }
   }
 }
