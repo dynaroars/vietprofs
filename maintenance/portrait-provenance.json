@@ -75,21 +75,21 @@
       "name": "Uy Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-15T04:05:52.129Z",
+      "retrievedAt": "2026-09-19T22:24:13.855Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0402": {
       "name": "Minh Vo",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-15T04:06:03.280Z",
+      "retrievedAt": "2026-09-19T22:24:16.274Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0474": {
       "name": "Bau P. Tran",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-15T04:06:13.378Z",
+      "retrievedAt": "2026-09-19T22:24:16.581Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0556": {
@@ -3161,6 +3161,113 @@
       ],
       "retrievedAt": "2026-09-16T23:56:10.000Z",
       "note": "Stored asset was a default silhouette, not a human portrait; removed during non-human image audit."
+    },
+    "vp-0231": {
+      "name": "Michael Dao",
+      "outcome": "needs_review",
+      "pageUrl": "https://www.sjsu.edu/kinesiology/about-us/faculty-and-staff.php",
+      "imageUrl": "https://www.sjsu.edu/kinesiology/pics/Michael%20Dao%20-%20Michael%20Dao.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-19T22:24:10.780Z",
+      "note": "existing portrait preserved; use --replace after review"
+    },
+    "vp-0005": {
+      "name": "Minh N. Do",
+      "outcome": "found",
+      "pageUrl": "https://ece.illinois.edu/about/directory/faculty/minhdo",
+      "imageUrl": "https://ws.engr.illinois.edu/directory/viewphoto.aspx?photo=6261&s=300",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department"
+      ],
+      "retrievedAt": "2026-09-19T22:25:27.861Z",
+      "note": "Verified portrait headshot retrieved and archived."
+    },
+    "vp-0009": {
+      "name": "Thang Hoang",
+      "outcome": "found",
+      "pageUrl": "https://website.cs.vt.edu/people/faculty/thang-hoang.html",
+      "imageUrl": "https://website.cs.vt.edu/content/website_cs_vt_edu/en/people/faculty/thang-hoang/_jcr_content/bio-image.transform/m-medium/image.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department"
+      ],
+      "retrievedAt": "2026-09-19T22:25:27.861Z",
+      "note": "Verified portrait headshot retrieved and archived."
+    },
+    "vp-0024": {
+      "name": "Huy Le Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.khoury.northeastern.edu/people/huy-le-nguyen/",
+      "imageUrl": "https://s44427.pcdn.co/wp-content/uploads/2016/08/Nguyen_Huy-Le_linderpix-53847-1200x800-1.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department"
+      ],
+      "retrievedAt": "2026-09-19T22:25:27.861Z",
+      "note": "Verified portrait headshot retrieved and archived."
+    },
+    "vp-0114": {
+      "name": "Chanh Kieu",
+      "outcome": "found",
+      "pageUrl": "https://earth.indiana.edu/directory/faculty/kieu-chanh.html",
+      "imageUrl": "https://news.iu.edu/live/image/gid/2/229_62cc6dfcda2de_element_12_1df5fcd86bbb6ea8c9cc0b204732a6c2-chanh20kieu.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department"
+      ],
+      "retrievedAt": "2026-09-19T22:25:27.861Z",
+      "note": "Verified portrait headshot retrieved and archived."
+    },
+    "vp-0192": {
+      "name": "Cindy Anh Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://seis.ucla.edu/faculty/cindy-nguyen/",
+      "imageUrl": "https://seis.ucla.edu/wp-content/uploads/2024/03/Cindy-Nguyen-scaled.webp",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department"
+      ],
+      "retrievedAt": "2026-09-19T22:25:27.861Z",
+      "note": "Verified portrait headshot retrieved and archived."
+    },
+    "vp-0199": {
+      "name": "Xuan-Thao Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.law.uw.edu/directory/faculty/nguyen-xuan-thao",
+      "imageUrl": "https://www.law.uw.edu/media/142574/xuan-thao-nguyen-1-web.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department"
+      ],
+      "retrievedAt": "2026-09-19T22:25:27.861Z",
+      "note": "Verified portrait headshot retrieved and archived."
     }
   }
 }
