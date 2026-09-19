@@ -126,7 +126,7 @@
       "name": "Phuong D. Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-15T04:06:59.509Z",
+      "retrievedAt": "2026-09-19T22:46:28.769Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0819": {
@@ -140,14 +140,14 @@
       "name": "Tien Hung Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-15T04:07:20.186Z",
+      "retrievedAt": "2026-09-19T22:46:29.733Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0826": {
       "name": "Van Tho Tran",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-15T04:07:30.403Z",
+      "retrievedAt": "2026-09-19T22:46:30.328Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0830": {
@@ -3161,6 +3161,21 @@
       ],
       "retrievedAt": "2026-09-16T23:56:10.000Z",
       "note": "Stored asset was a default silhouette, not a human portrait; removed during non-human image audit."
+    },
+    "vp-0784": {
+      "name": "Hien Thi Thu Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://vbn.aau.dk/en/persons/139589",
+      "imageUrl": "https://vbn.aau.dk/files-asset/716574842/HienThiThuNguyen.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department"
+      ],
+      "retrievedAt": "2026-09-19T22:46:35.865Z",
+      "note": "Verified portrait headshot retrieved and archived."
     }
   }
 }
