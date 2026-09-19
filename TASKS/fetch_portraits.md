@@ -98,23 +98,23 @@ node -e '
 const { execSync } = require("child_process");
 for (let b = 1; b <= 30; b++) {
   console.log(`=== Processing Batch ${b} ===`);
-  try {
-    execSync(`npx tsx scripts/fetch-portraits.ts ${b} --apply --retry`);
-    const status = execSync("git status --porcelain").toString();
-    if (status.includes("public/data.json") || status.includes("public/portraits/")) {
-      const branchName = `maintenance/portrait-batch-${b}`;
-      execSync(`git checkout -b ${branchName}`);
-      execSync("git checkout public/git-info.json").catch(() => {});
-      execSync("git add public/data.json public/portraits/ maintenance/portrait-provenance.json maintenance/portrait-queue.json maintenance/missing-portraits.json");
-      execSync(`git commit -m "fix(portraits): recover missing portraits batch ${b}"`);
-      execSync(`git push origin ${branchName}`);
-      execSync(`gh pr create --title "fix(portraits): recover missing portraits batch ${b}" --body "Recovered verified portraits for batch ${b}."`);
-      execSync("git checkout main");
-      execSync("git checkout public/git-info.json").catch(() => {});
+    try {
+      execSync(`npx tsx scripts/fetch-portraits.ts ${b} --apply --retry`);
+      const status = execSync("git status --porcelain").toString();
+      if (status.includes("public/data.json") || status.includes("public/portraits/")) {
+        const branchName = `maintenance/portrait-batch-${b}`;
+        execSync(`git checkout -b ${branchName}`);
+        try { execSync("git checkout public/git-info.json"); } catch {}
+        execSync("git add public/data.json public/portraits/ maintenance/portrait-provenance.json maintenance/portrait-queue.json maintenance/missing-portraits.json");
+        execSync(`git commit -m "fix(portraits): recover missing portraits batch ${b}"`);
+        execSync(`git push origin ${branchName}`);
+        execSync(`gh pr create --title "fix(portraits): recover missing portraits batch ${b}" --body "Recovered verified portraits for batch ${b}."`);
+        execSync("git checkout main");
+        try { execSync("git checkout public/git-info.json"); } catch {}
+      }
+    } catch (err) {
+      try { execSync("git checkout main"); } catch {}
     }
-  } catch (err) {
-    execSync("git checkout main").catch(() => {});
-  }
 }
 '
 
