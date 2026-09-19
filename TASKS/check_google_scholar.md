@@ -4,6 +4,22 @@ This task playbook governs the discovery, identity verification, canonical forma
 
 ---
 
+## ⚡ Batching & `/goal` Execution Protocol
+
+When running this task (especially during a long-running or overnight `/goal` run):
+
+1. **Strict Batch Size (20–30 Profiles Per Batch):** Work in bounded batches of **20–30 profiles per batch** using `npm run check-links -- --field scholarUrl`. Do NOT try to audit all entries in a single un-throttled pass (prevents Google Scholar rate-limiting).
+2. **Thorough Verification Per Candidate:** Inspect user ID, top co-authors, and paper subjects to ensure strict ownership. Disambiguate common Vietnamese surnames on Google Scholar.
+3. **Batch Test, Commit, and Push Pipeline:**
+   After completing each 20–30 profile batch:
+   - Validate pipeline: `npm test && npm run build && git diff --check`
+   - Commit batch: `git add public/data.json`
+   - Commit message: `git commit -m "fix(scholar): repair Google Scholar profile links batch [BATCH_NUM]"`
+   - Push immediately: `git push origin main`
+4. **Resumable Loop:** Resume with the next batch until all flagged or unverified Google Scholar links are fully audited.
+
+---
+
 ## 1. Core Objective & Canonical URL Standard
 
 The `scholarUrl` field stores direct links to official Google Scholar user citation profiles.

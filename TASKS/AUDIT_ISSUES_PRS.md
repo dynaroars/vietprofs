@@ -1,6 +1,22 @@
-# Task Guide: Audit Open GitHub Issues, PRs, and Branches
+# Task Guide: Audit Open GitHub Issues, PRs, and Branches (`AUDIT_ISSUES_PRS.md`)
 
 This document defines the standard operating procedure for auditing, verifying, merging, and closing open GitHub issues, pull requests (PRs), and topic branches in the **VietProfs** repository.
+
+---
+
+## ⚡ Batching & `/goal` Execution Protocol
+
+When running this task (especially during a long-running or overnight `/goal` run):
+
+1. **Strict Batch Size (1 PR / 5 Issues Per Batch):** Process open PRs one by one (`gh pr diff <id>`) and issues in batches of **5 issues per batch**. Do NOT rush or gloss over error output.
+2. **Thorough Evidence Verification:** For every issue, cross-check live web evidence, verify degree/honors standards in `ROSTER_MAINTENANCE.md`, and check protected fields (`directFields`).
+3. **Batch Test, Commit, Push, and Close Pipeline:**
+   After resolving each PR or 5-issue batch:
+   - Validate pipeline: `npm test && npm run build && git diff --check`
+   - Commit batch changes if roster updated: `git commit -m "fix(roster): ..."`
+   - Push to main: `git push origin main`
+   - Close resolved PRs/issues with explanatory comments (`gh pr merge`, `gh issue close`).
+4. **Resumable Loop:** Resume immediately with the next open PR or issue batch until all actionable open PRs and issues are processed.
 
 ---
 
@@ -67,7 +83,7 @@ Before modifying data or closing issues, ensure compliance with repository rules
 
    - **C. Stale Rank / Department / Institution / profileUrl / Education:**
      - Verify against live official university profiles or primary sources.
-     - Update fields as verified (`rank`, `department`, `university`, `profileUrl`, `phdInstitution`, `phdYear`, etc.).
+     - Update fields as verified (`rank`, `department`, `university`, `profileUrl`, `phdInstitution`, etc.).
 
    - **D. Mismatched `researchOverview`:**
      - Regenerate 1–3 sentence neutral academic summary from the scholar's official profile/homepage.

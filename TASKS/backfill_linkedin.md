@@ -4,6 +4,22 @@ This task playbook governs the deep research, identity disambiguation, verificat
 
 ---
 
+## ⚡ Batching & `/goal` Execution Protocol
+
+When running this task (especially during a long-running or overnight `/goal` run):
+
+1. **Strict Batch Size (15–20 Profiles Per Batch):** Work in bounded batches of **15–20 profiles per batch** across ID ranges (e.g. `vp-0100` to `vp-0120`). Do NOT try to process the entire dataset in a single shallow pass.
+2. **Thorough Verification Per Candidate:** Execute 3 distinct search queries per person (Name + University, Name + Department/PhD, Diacritic Name + Field). Verify at least 2 independent identity signals (PhD school, past affiliations, research domain) before accepting.
+3. **Batch Test, Commit, and Push Pipeline:**
+   After completing each batch of 15–20 profiles:
+   - Validate pipeline: `npm test && npm run build && git diff --check`
+   - Commit batch: `git add public/data.json`
+   - Commit message: `git commit -m "feat(data): backfill verified linkedin URLs batch [ID_RANGE]"`
+   - Push immediately: `git push origin main`
+4. **Resumable Loop:** Move to the next ID range batch until all target roster IDs missing `linkedinUrl` have been researched.
+
+---
+
 ## 1. Core Objective & Strict Disambiguation Standard
 
 The goal is to locate and verify direct personal LinkedIn profile URLs for faculty roster entries.

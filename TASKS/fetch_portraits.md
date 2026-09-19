@@ -4,6 +4,22 @@ This task playbook governs the thorough discovery, visual auditing, identity ver
 
 ---
 
+## ⚡ Batching & `/goal` Execution Protocol
+
+When running this task (especially during a long-running or overnight `/goal` run):
+
+1. **Strict Batch Size (10 Profiles Per Batch):** Work in bounded batches of **10 profiles per batch** using `maintenance/missing-portraits.json`. Do NOT process the entire roster in a single shallow pass.
+2. **Thorough Verification Per Candidate:** For every candidate, inspect the image visually or run statistical analyzers (`python3 scripts/fast_portrait_analyzer.py`), check aspect ratio (0.70–1.55), and confirm single-person headshot identity before accepting.
+3. **Batch Test, Commit, and Push Pipeline:**
+   After completing each 10-profile batch:
+   - Validate pipeline: `npm test && npm run build && git diff --check`
+   - Commit batch: `git add public/data.json public/portraits/ maintenance/portrait-provenance.json maintenance/missing-portraits.json`
+   - Commit message: `git commit -m "fix(portraits): resolve portrait recovery batch [BATCH_NUM]"`
+   - Push immediately: `git push origin main`
+4. **Resumable Loop:** Move to the next 10-profile batch until all missing portraits in `maintenance/missing-portraits.json` are resolved.
+
+---
+
 ## 1. Core Objective & Quality Standard
 
 The goal is to acquire a high-confidence, individual human portrait headshot for every eligible faculty entry in `public/data.json`. 
@@ -118,7 +134,7 @@ Once a valid portrait is verified:
      "note": "Verified headshot from official faculty bio page."
    }
    ```
-   If no valid portrait exists after thorough search, log `"outcome": "not_found"` with a explanatory note.
+   If no valid portrait exists after thorough search, log `"outcome": "not_found"` with an explanatory note.
 
 ---
 

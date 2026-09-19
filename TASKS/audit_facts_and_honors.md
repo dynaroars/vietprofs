@@ -4,6 +4,25 @@ This task playbook governs the deep verification of academic degree credentials 
 
 ---
 
+## ⚡ Batching & `/goal` Execution Protocol
+
+When running this task (especially during a long-running or overnight `/goal` run):
+
+1. **Strict Batch Size (15–20 Candidates Per Batch):** Work in bounded batches of **15–20 candidates per batch** using lead files (`maintenance/hieuphay-leads.json` or `maintenance/openalex-leads.json`). Do NOT attempt to process hundreds of candidates in a single pass.
+2. **Thorough Verification Standard:** Verify full inclusion standard for every candidate: current appointment outside Vietnam, accepted track, non-corporate employer, degree chronology (`undergradYear <= msYear <= phdYear <= postdocYear`), and honors categorization.
+3. **Batch Test, Commit, and Push Pipeline:**
+   After completing each batch of 15–20 candidates:
+   - Assign Profile IDs: `npm run assign-profile-ids -- --apply`
+   - Sync verification ledger: update `maintenance/verification.json`
+   - Snapshot enrichment: `npm run enrich -- snapshot`
+   - Validate pipeline: `npm test && npm run build && git diff --check`
+   - Commit batch: `git add public/data.json maintenance/verification.json maintenance/hieuphay-leads.json`
+   - Commit message: `git commit -m "fix(roster): resolve candidate leads batch [DISCIPLINE/BATCH_NAME]"`
+   - Push immediately: `git push origin main`
+4. **Resumable Loop:** Resume with the next 15–20 candidate batch until all pending leads are processed.
+
+---
+
 ## 1. Core Principles & Governance Rules
 
 - **Direct Updates (`directFields`):** Information explicitly supplied by the repository owner or submitted via direct request is ground truth. Add each asserted field name to the entry's sorted `directFields` array.

@@ -4,6 +4,22 @@ This task playbook governs the multi-source synthesis, quality sanitization, val
 
 ---
 
+## ⚡ Batching & `/goal` Execution Protocol
+
+When running this task (especially during a long-running or overnight `/goal` run):
+
+1. **Strict Batch Size (20 Profiles Per Batch):** Work in bounded batches of **20 profiles per batch** using `npm run enrich -- snapshot` and `maintenance/enrichment.json`. Do NOT try to enrich the entire roster in a single pass.
+2. **Thorough Synthesis & Quality Sanitization:** Synthesize 1–3 sentence neutral academic summaries from official bio pages, lab homepages, and paper abstracts. Strictly enforce zero HTML entities, zero scraped UI boilerplate, zero gendered pronouns, max 3 sentences, and max 500 characters.
+3. **Batch Test, Commit, and Push Pipeline:**
+   After completing each 20-profile batch (`npm run enrich -- finalize 20`):
+   - Validate pipeline: `npm test && npm run build && git diff --check`
+   - Commit batch: `git add public/data.json maintenance/enrichment.json`
+   - Commit message: `git commit -m "feat(enrichment): resolve research overview batch [BATCH_NUM]"`
+   - Push immediately: `git push origin main`
+4. **Resumable Loop:** Rerun `npm run enrich -- snapshot` for the next 20 pending IDs until all pending entries are fully enriched.
+
+---
+
 ## 1. Core Objective & Render Standard
 
 `researchOverview` provides a publicly rendered, 1–3 sentence summary of a scholar's primary research program, specialized methodologies, and major application domains.

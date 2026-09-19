@@ -4,6 +4,23 @@ This task playbook governs the deep discovery, validation, link health repair, a
 
 ---
 
+## ⚡ Batching & `/goal` Execution Protocol
+
+When running this task (especially during a long-running or overnight `/goal` run):
+
+1. **Strict Batch Size (50 Profiles Per Batch):** Work in bounded batches of **50 profiles per batch** using `WEBSITE_LAB_BACKFILL.md` (e.g. Batch WL-01, Batch WL-02). Do NOT skip batch tracking or process everything in a single shallow pass.
+2. **Thorough Verification Per Candidate:** Search personal domains (`.com`, `.org`, `github.io`, Google Sites) and lab team pages (`/members`, `/people`). Verify that the scholar is the PI/Director.
+3. **Batch Test, Commit, and Push Pipeline:**
+   After completing each 50-profile batch:
+   - Validate pipeline: `npm test && npm run build && git diff --check`
+   - Mark batch done in `WEBSITE_LAB_BACKFILL.md`.
+   - Commit batch: `git add public/data.json WEBSITE_LAB_BACKFILL.md`
+   - Commit message: `git commit -m "feat(data): backfill verified website and lab URLs batch [BATCH_NAME]"`
+   - Push immediately: `git push origin main`
+4. **Resumable Loop:** Resume with the next 50-profile batch until all batches in `WEBSITE_LAB_BACKFILL.md` are marked complete.
+
+---
+
 ## 1. Core Objective & Schema Standard
 
 The roster distinguishes between three distinct web location fields:
