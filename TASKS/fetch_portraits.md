@@ -1,16 +1,18 @@
 # Scholar Portrait Retrieval, Visual Auditing, and Quality Assurance (`fetch_portraits.md`)
 
-> **Autonomous Goal Directive (`/goal TASKS/fetch_portraits.md`):**
-> When invoked as `/goal TASKS/fetch_portraits.md`, the agent MUST immediately execute this full portrait discovery and auditing workflow without needing any extra prompt text. Work in 10-profile batches, perform thorough visual/image inspection, submit verified batches as GitHub PRs, and loop until all missing portraits in `maintenance/missing-portraits.json` are resolved.
+> **Autonomous Goal Directive (`/goal TASKS/fetch_portraits.md`):**  
+> When invoked as `/goal TASKS/fetch_portraits.md`, the agent MUST execute the full portrait discovery and auditing workflow across **ALL BATCHES CONTINUOUSLY** until **100% of missing entries in `maintenance/missing-portraits.json` and `public/data.json` are processed**. Process in bounded 10-profile batches, perform thorough visual/image inspection, submit a GitHub PR (or Issue) for each batch that yields verified portraits, return to `main`, and **IMMEDIATELY PROCEED TO THE NEXT BATCH**. Do NOT stop execution after processing a single batch; continue looping until ALL batches (from Batch 1 to the final batch) are completely processed.
 
 ---
 
-## ⚡ Batching & PR/Issue Submission Protocol
+## ⚡ Multi-Batch Loop & PR/Issue Submission Protocol
 
-1. **No Direct Commits to `main`:** Maintenance tasks MUST NOT commit directly to `main`. All data updates must be submitted via **GitHub Pull Requests** or **GitHub Issues**.
-2. **Strict Batch Size (10 Profiles Per Batch):** Work in bounded batches of **10 profiles per batch** using `maintenance/missing-portraits.json`. Do NOT process the entire roster in a single shallow pass.
-3. **Thorough Verification Per Candidate:** For every candidate, inspect the image visually or run statistical analyzers (`python3 scripts/fast_portrait_analyzer.py`), check aspect ratio (0.70–1.55), and confirm single-person headshot identity before accepting.
-4. **Automated PR & Issue Submission Pipeline:**
+1. **Continuous Multi-Batch Execution:**  
+   The agent MUST NOT stop execution after completing Batch 1. It MUST continuously iterate through **all remaining batches** (Batch 1, Batch 2, Batch 3 ... Batch N) until every eligible missing portrait entry has been audited.
+2. **No Direct Commits to `main`:** Maintenance tasks MUST NOT commit directly to `main`. All data updates must be submitted via **GitHub Pull Requests** or **GitHub Issues**.
+3. **Strict Batch Size (10 Profiles Per Batch):** Work in bounded batches of **10 profiles per batch** using `maintenance/missing-portraits.json`.
+4. **Thorough Verification Per Candidate:** For every candidate, inspect the image visually or run statistical analyzers (`python3 scripts/fast_portrait_analyzer.py`), check aspect ratio (0.70–1.55), and confirm single-person headshot identity before accepting.
+5. **Per-Batch Automated PR Pipeline:**  
    After completing each 10-profile batch:
    - Create batch topic branch: `git checkout -b maintenance/portrait-batch-[BATCH_NUM]`
    - Validate pipeline: `npm test && npm run build && git diff --check`
@@ -19,11 +21,11 @@
    - Push topic branch: `git push origin maintenance/portrait-batch-[BATCH_NUM]`
    - File GitHub PR:
      ```bash
-     gh pr create --title "fix(portraits): recover missing portraits batch [BATCH_NUM]" --body "Recovered verified portraits for 10 missing entries..."
+     gh pr create --title "fix(portraits): recover missing portraits batch [BATCH_NUM]" --body "Recovered verified portraits for batch [BATCH_NUM]..."
      ```
-   - For ambiguous, unconfirmed, or protected field cases, file a GitHub Issue (`gh issue create`).
    - Return to `main`: `git checkout main`
-5. **Auditing & Merging Delegation:** Do NOT merge the PR yourself. The dedicated audit agent running `TASKS/AUDIT_ISSUES_PRS.md` will review, test, squash-merge, and delete the PR branch.
+   - **Immediately launch the next batch!**
+6. **Auditing & Merging Delegation:** Do NOT merge PRs yourself. The dedicated audit agent running `TASKS/AUDIT_ISSUES_PRS.md` will review, test, squash-merge, and delete PR branches.
 
 ---
 
@@ -88,74 +90,33 @@ When processing portraits manually or reviewing automated candidates:
 
 ---
 
-## 4. Thorough Discovery & Search Workflow
-
-Do NOT rely on quick 1-second search engine snippets. Perform a deep, multi-step search:
-
-1. **Official Institutional Profile (`profileUrl`):**
-   - Inspect the scholar's official university or department directory bio page.
-   - Fetch the raw page or inspect DOM image elements (`<img src="...">`, CSS background images, figure captions).
-
-2. **Maintained Academic Homepage (`websiteUrl`) & Lab Site (`labUrl`):**
-   - Search for personal sites (`.edu/~user`, Google Sites, GitHub Pages, personal domains) or lab team pages (`/people`, `/members`, `/team`).
-   - Locate individual headshots or team bio photos.
-
-3. **Authoritative Academic Sources & PDF CVs:**
-   - Search official university news releases, award announcements, and inaugural lecture posters.
-   - Search high-resolution PDF CVs uploaded to academic pages.
-   - Google Scholar avatars and ORCID pages may serve as identity clues, but require independent verification.
-
-4. **Multi-Query Web Scouting Strategy:**
-   Run explicit multi-token queries if initial profile inspection is blocked or unhelpful:
-   - `"<Scholar Name>" "<University Name>" headshot OR photo OR portrait`
-   - `"<Scholar Name>" "<Department>" faculty biography image`
-
----
-
-## 5. Image Formatting, Storage, & Provenance Logging
-
-Once a valid portrait is verified:
-
-1. **Format & Conversion:**
-   - Crop cleanly to head and shoulders.
-   - Convert image to WebP format.
-   - Save to `public/portraits/` with naming pattern: `portraits/vp-####-canonical-name.webp` (e.g. `portraits/0147-anh-le-pennsylvania-state-university.webp`).
-
-2. **Update Roster (`public/data.json`):**
-   - Set `"portrait": "portraits/vp-####-canonical-name.webp"`.
-   - Set `"portraitSource": "<DIRECT_HTTP_URL_OF_ORIGINAL_IMAGE>"`.
-   - Update `"lastUpdatedAt": "<CURRENT_ISO_TIMESTAMP>"`.
-
-3. **Update Provenance Ledger (`maintenance/portrait-provenance.json`):**
-   Record the full provenance entry under the scholar's canonical name:
-   ```json
-   {
-     "name": "Scholar Name",
-     "outcome": "found",
-     "pageUrl": "https://university.edu/faculty/profile",
-     "imageUrl": "https://university.edu/images/headshot.jpg",
-     "sourceType": "official_faculty",
-     "confidence": "HIGH",
-     "identitySignals": ["name", "institution", "department"],
-     "retrievedAt": "2026-09-19T17:30:00.000Z",
-     "note": "Verified headshot from official faculty bio page."
-   }
-   ```
-   If no valid portrait exists after thorough search, log `"outcome": "not_found"` with an explanatory note.
-
----
-
-## 6. Execution Commands
+## 4. Execution Commands
 
 ```bash
-# Run portrait discovery script for a specific batch
-npx tsx scripts/fetch-portraits.ts 1 --apply
-
-# Run fast statistical analyzer to detect logos/silhouettes
-python3 scripts/fast_portrait_analyzer.py
-
-# Run portrait audit suite
-npx tsx scripts/audit-portraits.ts
+# Run portrait discovery loop across ALL batches continuously
+node -e '
+const { execSync } = require("child_process");
+for (let b = 1; b <= 30; b++) {
+  console.log(`=== Processing Batch ${b} ===`);
+  try {
+    execSync(`npx tsx scripts/fetch-portraits.ts ${b} --apply --retry`);
+    const status = execSync("git status --porcelain").toString();
+    if (status.includes("public/data.json") || status.includes("public/portraits/")) {
+      const branchName = `maintenance/portrait-batch-${b}`;
+      execSync(`git checkout -b ${branchName}`);
+      execSync("git checkout public/git-info.json").catch(() => {});
+      execSync("git add public/data.json public/portraits/ maintenance/portrait-provenance.json maintenance/portrait-queue.json maintenance/missing-portraits.json");
+      execSync(`git commit -m "fix(portraits): recover missing portraits batch ${b}"`);
+      execSync(`git push origin ${branchName}`);
+      execSync(`gh pr create --title "fix(portraits): recover missing portraits batch ${b}" --body "Recovered verified portraits for batch ${b}."`);
+      execSync("git checkout main");
+      execSync("git checkout public/git-info.json").catch(() => {});
+    }
+  } catch (err) {
+    execSync("git checkout main").catch(() => {});
+  }
+}
+'
 
 # Full repository validation
 npm test && npm run build && git diff --check

@@ -1,100 +1,26 @@
-# Thorough LinkedIn Profile Discovery and Disambiguation (`backfill_linkedin.md`)
+# Backfill LinkedIn Profiles (`backfill_linkedin.md`)
 
-> **Autonomous Goal Directive (`/goal TASKS/backfill_linkedin.md`):**
-> When invoked as `/goal TASKS/backfill_linkedin.md`, the agent MUST immediately execute this full LinkedIn discovery and backfilling workflow without needing any extra prompt text. Work in 15–20 profile batches, run 3 multi-token queries per scholar, verify at least 2 independent identity signals, submit verified batches as GitHub PRs, and loop until all target roster IDs missing `linkedinUrl` have been researched.
-
----
-
-## ⚡ Batching, PR/Issue Submission, and `/goal` Protocol
-
-1. **No Direct Commits to `main`:** Maintenance tasks MUST NOT commit directly to `main`. All data updates must be submitted via **GitHub Pull Requests** or **GitHub Issues**.
-2. **Strict Batch Size (15–20 Profiles Per Batch):** Work in bounded batches of **15–20 profiles per batch** across ID ranges (e.g. `vp-0100` to `vp-0120`).
-3. **Thorough Verification Per Candidate:** Execute 3 distinct search queries per person (Name + University, Name + Department/PhD, Diacritic Name + Field). Verify at least 2 independent identity signals (PhD school, past affiliations, research domain) before accepting.
-4. **Automated PR & Issue Submission Pipeline:**
-   After completing each batch of 15–20 profiles:
-   - Create batch topic branch: `git checkout -b scheduled/linkedin-backfill-[TIMESTAMP]`
-   - Validate pipeline: `npm test && npm run build && git diff --check`
-   - Commit batch: `git add public/data.json`
-   - Commit message: `git commit -m "feat(data): backfill verified linkedin URLs batch [ID_RANGE]"`
-   - Push topic branch: `git push origin scheduled/linkedin-backfill-[TIMESTAMP]`
-   - File GitHub PR:
-     ```bash
-     gh pr create --title "Backfill 15 LinkedIn URLs (scheduled batch)" --body "Researched 20 roster entries missing linkedinUrl (vp-0100–vp-0120)..."
-     ```
-   - For ambiguous, rank/department, or stale profile issues noticed during research, file GitHub Issues (`gh issue create`).
-   - Return to `main`: `git checkout main`
-5. **Auditing & Merging Delegation:** Do NOT merge the PR yourself. The dedicated audit agent running `TASKS/AUDIT_ISSUES_PRS.md` will review, test, squash-merge, and delete the PR branch.
+> **Autonomous Goal Directive (`/goal TASKS/backfill_linkedin.md`):**  
+> Systematically search for missing LinkedIn profile links in `public/data.json`. Execute the research and backfill workflow across **ALL BATCHES CONTINUOUSLY** until **100% of missing entries in the repository are fully audited and processed**. Perform multi-query research using name, affiliation, department, and degree. Validate that candidate LinkedIn profiles match the exact individual. Update `linkedinUrl`, `lastUpdatedAt`, `lastVerified` fields. For each batch of verified updates, create a topic branch (`task/backfill-linkedin-batch-[BATCH_NUM]`), run verification (`npm test && npm run build && git diff --check`), submit a GitHub PR (or Issue), return to `main`, and **IMMEDIATELY PROCEED TO THE NEXT BATCH**. Do NOT stop execution until ALL batches are completed!
 
 ---
 
-## 1. Core Objective & Strict Disambiguation Standard
+## 🎯 Task Goal
 
-The goal is to locate and verify direct personal LinkedIn profile URLs for faculty roster entries.
-
-- **Strict Verification Standard:** Never guess a LinkedIn URL from name alone. Only add a profile when multiple independent signals (current/past university, department, PhD institution, research field) match the canonical roster record.
-- **Skip Unconfirmed Profiles:** If search results yield no candidate, ambiguous namesakes, or unconfirmed matches, skip the entry and leave `linkedinUrl` omitted.
-- **Protected Fields:** If `linkedinUrl` is listed in `directFields`, automated maintenance must never modify or replace it.
+Achieve complete, verified LinkedIn profile coverage across the entire roster.
 
 ---
 
-## 2. Thorough Multi-Query Research Protocol
+## 🛠️ Multi-Batch & Verification Rules
 
-Do NOT rely on a single shallow search engine query. Perform a thorough, multi-step search pipeline for every candidate:
-
-1. **Query 1 (Name + Primary Institution):**
-   ```text
-   site:linkedin.com/in/ "<Scholar Name>" "<University Name>"
+1. **Continuous Multi-Batch Mandate:**  
+   Do NOT stop after completing a single batch. Iterate continuously through **all remaining batches** until 100% of missing entries are audited.
+2. **Identity Confirmation:** Verify name, degree stage, advisor, and university affiliation before accepting a LinkedIn profile link.
+3. **URL Normalization:** Standardize to `https://www.linkedin.com/in/username/`.
+4. **Local Verification:**
+   ```bash
+   npm test && npm run build && git diff --check
    ```
-2. **Query 2 (Name + Department / PhD Institution):**
-   ```text
-   site:linkedin.com/in/ "<Scholar Name>" "<Department / Field>" OR "<PhD Institution>"
-   ```
-3. **Query 3 (Full Name / Diacritic Vietnamese Name + Research Field):**
-   ```text
-   site:linkedin.com/in/ "<Vietnamese Name>" "<Primary Research Area>"
-   ```
-
----
-
-## 3. Disambiguation Checklist & Identity Signals
-
-Before accepting a candidate LinkedIn profile, verify at least **TWO** of the following identity signals:
-
-- [x] **Primary Appointment Match:** Headline or experience section lists current university and department/school.
-- [x] **Prior Appointment Match:** Past experience lists documented previous academic roles (e.g. Assistant Professor at UNC Chapel Hill prior to moving to Penn State).
-- [x] **Education Match:** Education section lists matching PhD/MD/MS institution and graduation year.
-- [x] **Research Field Match:** Profile summary, skills, or publications align with the scholar's specialized research domain.
-
-### Common Namesake Exclusions (Red Flags)
-
-- **Corporate / Non-Academic Namesakes:** Professionals in banking, sales, real estate, or software engineering without documented academic faculty history.
-- **Student / Trainee Profiles:** Undergraduate or master's students sharing the scholar's name.
-- **Different Institution / Field:** Same-name profiles belonging to scholars in completely different disciplines or regions.
-
----
-
-## 4. URL Format & Data-Entry Standard
-
-1. **Canonical Profile URL:**
-   - Must be a direct personal profile URL: `https://www.linkedin.com/in/username/` (or regional domain `https://www.linkedin.com/in/username`).
-   - Remove tracking parameters (e.g. `?utm_source=...`, `?originalSubdomain=...`).
-   - Never store search query URLs (`linkedin.com/pub/dir/...`), company pages (`linkedin.com/company/...`), or post links.
-
-2. **Updating Roster Data (`public/data.json`):**
-   - Add `"linkedinUrl": "https://www.linkedin.com/in/username/"`.
-   - Update `"lastUpdatedAt": "<CURRENT_ISO_TIMESTAMP>"`.
-
-3. **Ledger Policy:**
-   - A LinkedIn-only addition does NOT advance `maintenance/verification.json` unless accompanied by a complete live periodic review pass.
-
----
-
-## 5. Execution & Verification Workflow
-
-```bash
-# Validate data format and check for duplicate LinkedIn URLs
-npm run validate-data
-
-# Run full test suite and build validation
-npm test && npm run build && git diff --check
-```
+5. **PR / Issue Protocol:**
+   - Submit per-batch updates via GitHub Pull Request on a topic branch.
+   - Never commit directly to `main`.

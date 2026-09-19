@@ -1,97 +1,25 @@
-# Personal Website and Lab Homepage Discovery (`verify_websites_and_labs.md`)
+# Verify Homepages & Lab Websites (`verify_websites_and_labs.md`)
 
-> **Autonomous Goal Directive (`/goal TASKS/verify_websites_and_labs.md`):**
-> When invoked as `/goal TASKS/verify_websites_and_labs.md`, the agent MUST immediately execute this full website and lab homepage backfilling workflow without needing any extra prompt text. Work in 50-profile batches using `WEBSITE_LAB_BACKFILL.md`, search personal domains (`.com`, `.org`, `github.io`, Google Sites) and lab team pages, submit verified batches as GitHub PRs, and loop until all batches in `WEBSITE_LAB_BACKFILL.md` are completed.
-
----
-
-## ⚡ Batching, PR/Issue Submission, and `/goal` Protocol
-
-1. **No Direct Commits to `main`:** Maintenance tasks MUST NOT commit directly to `main`. All data updates must be submitted via **GitHub Pull Requests** or **GitHub Issues**.
-2. **Strict Batch Size (50 Profiles Per Batch):** Work in bounded batches of **50 profiles per batch** using `WEBSITE_LAB_BACKFILL.md` (e.g. Batch WL-01, Batch WL-02).
-3. **Thorough Verification Per Candidate:** Search personal domains (`.com`, `.org`, `github.io`, Google Sites) and lab team pages (`/members`, `/people`). Verify that the scholar is the PI/Director.
-4. **Automated PR & Issue Submission Pipeline:**
-   After completing each 50-profile batch:
-   - Create batch topic branch: `git checkout -b maintenance/website-backfill-[BATCH_NAME]`
-   - Validate pipeline: `npm test && npm run build && git diff --check`
-   - Mark batch done in `WEBSITE_LAB_BACKFILL.md`.
-   - Commit batch: `git add public/data.json WEBSITE_LAB_BACKFILL.md`
-   - Commit message: `git commit -m "feat(data): backfill verified website and lab URLs batch [BATCH_NAME]"`
-   - Push topic branch: `git push origin maintenance/website-backfill-[BATCH_NAME]`
-   - File GitHub PR:
-     ```bash
-     gh pr create --title "feat(data): backfill verified website and lab URLs batch [BATCH_NAME]" --body "Researched 50 entries for website and lab URLs..."
-     ```
-   - For ambiguous profile URLs or domain migrations requiring maintainer decision, file GitHub Issues (`gh issue create`).
-   - Return to `main`: `git checkout main`
-5. **Auditing & Merging Delegation:** Do NOT merge the PR yourself. The dedicated audit agent running `TASKS/AUDIT_ISSUES_PRS.md` will review, test, squash-merge, and delete the PR branch.
+> **Autonomous Goal Directive (`/goal TASKS/verify_websites_and_labs.md`):**  
+> Audit all personal academic websites and research lab URLs in `public/data.json`. Execute the link verification workflow across **ALL BATCHES CONTINUOUSLY** until **100% of entries in the repository are fully audited and processed**. Verify active HTTP status, fix broken/404 links, remove outdated domain redirects, and update new lab sites (`.edu/~user`, GitHub Pages, personal domains). Update `websiteUrl`, `labUrl`, `lastUpdatedAt`, and `lastVerified` fields. For each batch of verified updates, create a topic branch (`task/verify-urls-batch-[BATCH_NUM]`), run verification (`npm test && npm run build && git diff --check`), submit a GitHub PR (or Issue), return to `main`, and **IMMEDIATELY PROCEED TO THE NEXT BATCH**. Do NOT stop execution until ALL batches are completed!
 
 ---
 
-## 1. Core Objective & Schema Standard
+## 🎯 Task Goal
 
-The roster distinguishes between three distinct web location fields:
-- `profileUrl`: Official university or department directory bio page (required).
-- `websiteUrl`: Maintained personal academic homepage or professional portfolio (optional).
-- `labUrl`: Active research group, laboratory, or research center homepage (optional).
-
-### Strict Schema Rules
-- **No Duplicate URLs:** `websiteUrl` must differ from `profileUrl`. `labUrl` must differ from both `profileUrl` and `websiteUrl`.
-- **No Generic Department Homepages:** Do not assign generic college or department root URLs (e.g. `https://cs.university.edu`) as a personal site.
-- **Distinct HTTPS URLs Only:** Only add a URL if a distinct, active site genuinely exists. Do not fabricate URLs.
-- **Protected Fields:** If `websiteUrl` or `labUrl` is listed in `directFields`, automated maintenance must never overwrite it.
+Ensure all personal homepage and lab links across faculty directory profiles are active and accurate.
 
 ---
 
-## 2. Deep Discovery & Search Strategy
+## 🛠️ Multi-Batch & Verification Rules
 
-Do NOT stop after inspecting the official university bio page. Conduct a deep-dig search across academic web channels:
-
-### A. Personal Academic Homepages (`websiteUrl`)
-Search for maintained personal domains and platform sites:
-- **Personal Domain Patterns:** `https://firstname-lastname.com`, `https://lastnamelab.org`, `https://firstnamelastname.github.io`
-- **Academic Host Platforms:** Google Sites (`sites.google.com/view/...`), university personal user directories (`.edu/~username`), Notion/Quarto/Jekyll academic pages.
-- **Search Queries:**
-  ```text
-  "<Scholar Name>" homepage OR "personal site" OR "github.io" OR "sites.google.com"
-  ```
-
-### B. Research Lab & Group Homepages (`labUrl`)
-Search for active research group or laboratory sites:
-- **Lab Naming Patterns:** `[Topic] Lab`, `[Scholar Surname] Research Group`, `[Abbreviation] Center`
-- **Search Queries:**
-  ```text
-  "<Scholar Name>" "Research Group" OR "Laboratory" OR "Lab" -site:linkedin.com
-  ```
-- **Verification:** Inspect the lab team page (`/members`, `/people`, `/team`) to confirm the scholar is the Principal Investigator (PI) or Director.
-
----
-
-## 3. Link Health & Auditing Protocol
-
-Run the automated link repair suite to detect 404s, domain migrations, or generic directory fallbacks:
-
-```bash
-# Audit websiteUrl and labUrl entries
-npm run check-links -- --field websiteUrl
-npm run check-links -- --field labUrl
-```
-
-### Repair Actions
-- **Confirmed 404 / Domain Expired:** If a personal domain or lab site has expired or returns 404, search for a migrated URL. If no replacement exists, remove the field and update `lastUpdatedAt`.
-- **URL Duplication Fixes:** If a personal site matches `profileUrl` or `labUrl`, clear the duplicate field to maintain clean schema separation.
-
----
-
-## 4. Batch Tracking & Execution Protocol
-
-When executing batch backfills (such as those tracked in `WEBSITE_LAB_BACKFILL.md`):
-
-1. Update `public/data.json` with verified `websiteUrl` and/or `labUrl`.
-2. Advance `lastUpdatedAt` for every entry modified.
-3. Update the corresponding batch status in `WEBSITE_LAB_BACKFILL.md`.
-4. Run full repository validation:
+1. **Continuous Multi-Batch Mandate:**  
+   Do NOT stop after completing a single batch. Iterate continuously through **all remaining batches** until 100% of roster entries are audited.
+2. **Active HTTP Check:** Test links to ensure they resolve without HTTP 404, 500, or domain squatting.
+3. **Local Verification:**
    ```bash
    npm test && npm run build && git diff --check
    ```
-5. Commit and push changes after each batch.
+4. **PR / Issue Protocol:**
+   - Submit per-batch updates via GitHub Pull Request on a topic branch.
+   - Never commit directly to `main`.
