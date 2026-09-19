@@ -486,6 +486,7 @@ const FIELD_OVERRIDES = new Map([
   ['Centre d\'Immunologie de Marseille-Luminy (CIML)|CNRS (Centre National de la Recherche Scientifique)', 'Biological & Biomedical Sciences'],
   ['Faculté de Santé|Université Paris Cité', 'Health Sciences'],
   ['Faculty of Science and Technology|Middlesex University', 'Computer & Information Sciences'],
+  ['Istituto per le Applicazioni del Calcolo "Mauro Picone"|National Research Council of Italy', 'Mathematics'],
   ['HAMK Bio|Häme University of Applied Sciences', 'Agricultural & Natural Resource Sciences'],
   ['Information Studies|University of California, Los Angeles', 'Education'],
   ['Institute of Humanities and Social Sciences|University of Tsukuba', 'Earth & Environmental Sciences'],
