@@ -1637,50 +1637,30 @@
     "vp-1241": {
       "name": "Minh Huynh",
       "outcome": "not_found",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-15T05:00:00.000Z",
-      "note": "CSIRO profile exposed no verified individual portrait."
+      "identitySignals": [],
+      "retrievedAt": "2026-09-19T23:07:25.314Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1250": {
       "name": "Lap Van Dao",
       "outcome": "not_found",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-15T05:00:00.000Z",
-      "note": "Swinburne profile exposed no verified individual portrait."
+      "identitySignals": [],
+      "retrievedAt": "2026-09-19T23:07:36.907Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1252": {
       "name": "Viet Giang Truong",
       "outcome": "not_found",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-15T05:00:00.000Z",
-      "note": "Stored OIST URL returned 404; no alternative portrait verified."
+      "identitySignals": [],
+      "retrievedAt": "2026-09-19T23:07:47.962Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1257": {
       "name": "Thuy Le Toan",
       "outcome": "not_found",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-15T05:00:00.000Z",
-      "note": "CESBIO landing page exposed no verified individual portrait."
+      "identitySignals": [],
+      "retrievedAt": "2026-09-19T23:07:59.275Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1258": {
       "name": "Anh-Tu Nguyen",
@@ -1701,38 +1681,23 @@
     "vp-1260": {
       "name": "Trang N. T. Phan",
       "outcome": "not_found",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-15T05:00:00.000Z",
-      "note": "Stored ICR page exposed no verified individual portrait."
+      "identitySignals": [],
+      "retrievedAt": "2026-09-19T23:08:27.086Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1269": {
       "name": "Kien Phan Huy",
       "outcome": "not_found",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-15T05:00:00.000Z",
-      "note": "FEMTO-ST homepage exposed no verified individual portrait."
+      "identitySignals": [],
+      "retrievedAt": "2026-09-19T23:08:38.127Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1271": {
       "name": "Khanh Pham",
       "outcome": "not_found",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-15T05:00:00.000Z",
-      "note": "AFRL news page blocked automated access; no alternative portrait verified."
+      "identitySignals": [],
+      "retrievedAt": "2026-09-19T23:08:50.607Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1279": {
       "name": "Thao Pham",
@@ -1793,50 +1758,39 @@
     "vp-1290": {
       "name": "Binh An P. Phan",
       "outcome": "not_found",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-15T05:00:00.000Z",
-      "note": "UCSF profile exposed no verified individual portrait."
+      "identitySignals": [],
+      "retrievedAt": "2026-09-19T23:09:01.437Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1292": {
       "name": "Hong-Ha M. Truong",
       "outcome": "not_found",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-15T05:00:00.000Z",
-      "note": "UCSF profile exposed no verified individual portrait."
+      "identitySignals": [],
+      "retrievedAt": "2026-09-19T23:09:12.547Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1294": {
       "name": "Cuong J. Bui",
       "outcome": "not_found",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-15T05:00:00.000Z",
-      "note": "Tulane neurosurgery page exposed no verified individual portrait."
+      "identitySignals": [],
+      "retrievedAt": "2026-09-19T23:09:23.481Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1298": {
       "name": "Nam Vo",
-      "outcome": "not_found",
+      "outcome": "found",
+      "pageUrl": "https://www.fergusonlab.pitt.edu/people/nam-v-vo-phd",
+      "imageUrl": "https://www.fergusonlab.pitt.edu/sites/default/files/styles/person_image/public/person-img/VO_NAM_PHD_ORS_20230120.jpg?h=8cd566d3&itok=7wos_fpg",
+      "sourceType": "lab_site",
+      "confidence": "HIGH",
       "identitySignals": [
         "name",
         "institution",
         "department",
+        "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-09-15T05:00:00.000Z",
-      "note": "University of Pittsburgh department homepage exposed no verified individual portrait."
+      "retrievedAt": "2026-09-19T23:09:33.924Z"
     },
     "vp-1301": {
       "name": "Linh H. Nghiem",
