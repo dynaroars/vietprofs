@@ -11,6 +11,13 @@ In this multi-agent architecture:
 - **Task Agents** (`fetch_portraits.md`, `backfill_linkedin.md`, `check_google_scholar.md`, `verify_websites_and_labs.md`, `enrich_research_overviews.md`, `audit_facts_and_honors.md`) discover data, perform deep research, create topic branches, and **file GitHub Pull Requests or GitHub Issues**. Task agents DO NOT commit directly to `main` or merge their own PRs.
 - **Audit Agent (`AUDIT_ISSUES_PRS.md`):** Acts as the primary auditor. Reviews all open PRs, verifies diffs, executes test suites (`npm test`, `npm run build`), **squash-merges verified PRs**, deletes topic branches, processes issues, and updates ledgers.
 
+> **No PR-for-an-issue-fix step.** When auditing a GitHub *issue* (not a PR), the fix flow is: verify the
+> claim live, apply the change, run the validation pipeline, **commit and push straight to `main`** (Step
+> 4), then close the issue (Step 5). Do not open a separate PR for the auditor's own already-audited
+> single-issue fix — that's a Task-Agent behavior, not an Audit-Agent one, and adds a redundant review
+> cycle for something that was already independently verified. Only merge-vs-squash applies to PRs that
+> Task Agents already opened.
+
 ---
 
 ## ⚡ Batching & `/goal` Protocol
