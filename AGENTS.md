@@ -25,3 +25,5 @@ Web scouting and automated maintenance may update fields not listed in `directFi
 never change or remove a protected field or delete an entry that has protected fields on their own.
 Only another direct update may replace a protected value or remove its protection. Canonical
 formatting and field mapping may be applied while processing the direct update.
+
+When updating names or processing university profile changes where a scholar's published surname has changed (e.g. to a non-Vietnamese surname), retain the original Vietnamese surname in `name` and `vietnameseName` (e.g., `First [Vietnamese Surname] [New Surname]`) as per `ROSTER_MAINTENANCE.md` so that the entry's Vietnamese lineage and discovery context are preserved.

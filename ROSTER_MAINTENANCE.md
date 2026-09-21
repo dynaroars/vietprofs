@@ -565,6 +565,7 @@ To prevent desynchronization between data files and ensure interrupted runs are 
 - For undergraduate education, use the explicitly stated bachelor’s institution and completion year. A professional degree such as a JD is separate from undergraduate education and must not be substituted for it.
 - Use the person's full published academic name only when an official profile or maintained academic homepage supplies it. Expand initials only with direct evidence.
 - Store `name` without Vietnamese diacritics and in First (Middle) Last order. This is a display normalization, not a claim about publishing name order.
+- **Name updates & surname changes:** When an existing roster member updates their published surname or directory display name (e.g. due to marriage or legal name change to a non-Vietnamese surname), retain the original Vietnamese surname within `name` and `vietnameseName` (e.g. `First [Vietnamese Surname] [New Surname]`, such as *Leanna Nguyen Rubio*). Automated syncs and web scouting must not drop the underlying Vietnamese surname from an existing entry when updating a profile or directory URL.
 - Preserve source URLs for profiles, honors, name evidence, and portraits.
 
 ### Portrait recovery and scouting standard
