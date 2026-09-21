@@ -54,11 +54,25 @@ Before modifying data or closing issues, ensure compliance with repository rules
    ```
 3. **Verify PR quality & test suite:**
    - Ensure the PR follows data-entry standards.
-   - Run tests locally or on the branch:
+   - **Always test the PR merged into a fresh `main`, never the PR branch in isolation.** A duplicate
+     `vp-####` id introduced by this PR and by another PR merged since this branch was created will
+     **not** show up as a git conflict — two entries with the same id value in different, non-adjacent
+     parts of `public/data.json` merge cleanly at the text level, and `gh pr merge --squash` would
+     happily push that straight into `main`. The only thing that catches it is running the full test
+     suite (`validate-data.ts`'s duplicate-id check) against the actual merged result:
      ```bash
+     git checkout main && git pull origin main
+     git checkout -b audit/pr-<PR_NUMBER> main
+     git merge --no-ff <pr-head-branch>   # or: gh pr checkout <PR_NUMBER>, then: git merge main
      npm test && npm run build && git diff --check
+     git checkout main && git branch -D audit/pr-<PR_NUMBER>   # clean up the scratch branch
      ```
-4. **Merge verified PRs:**
+   - Treat a passing `git merge` that then fails `npm test` with `duplicate id: vp-####` exactly like a
+     textual conflict (see Step 5): identify which entries are new relative to `main`, clear only their
+     `id` field, run `npm run assign-profile-ids -- --apply` to remint fresh ids, and re-run the test
+     suite before proceeding. Also patch any other file this PR touches that referenced the discarded
+     id (e.g. `maintenance/enrichment.json`'s `ids`/`batches`/`entries`).
+4. **Merge verified PRs** — only after the fresh-`main`+PR combination above passes cleanly:
    ```bash
    gh pr merge <PR_NUMBER> --squash --delete-branch
    ```
@@ -67,7 +81,7 @@ Before modifying data or closing issues, ensure compliance with repository rules
      ```bash
      gh pr close <PR_NUMBER> --comment "Closed as duplicate/superseded: URL already backfilled and merged in PR #..."
      ```
-   - If git conflicts occur in `public/data.json`, pull `main`, resolve line offsets, run validation, and merge.
+   - If git conflicts occur in `public/data.json` (or the id-collision case above), pull `main`, resolve line offsets or reassign colliding ids, re-run validation, and merge.
 
 ---
 
