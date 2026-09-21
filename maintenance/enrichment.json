@@ -1588,7 +1588,11 @@
     "vp-1650",
     "vp-1651",
     "vp-1652",
-    "vp-1653"
+    "vp-1653",
+    "vp-1654",
+    "vp-1655",
+    "vp-1656",
+    "vp-1657"
   ],
   "batches": [
     {
@@ -3655,6 +3659,16 @@
         "vp-1651",
         "vp-1652",
         "vp-1653"
+      ],
+      "status": "pending"
+    },
+    {
+      "number": 81,
+      "ids": [
+        "vp-1654",
+        "vp-1655",
+        "vp-1656",
+        "vp-1657"
       ],
       "status": "pending"
     }
@@ -20185,6 +20199,38 @@
       "evidence": [],
       "errors": [],
       "updatedAt": "2026-09-21T00:25:26.000Z"
+    },
+    "vp-1654": {
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-21T23:17:01.087Z"
+    },
+    "vp-1655": {
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-21T23:17:01.087Z"
+    },
+    "vp-1656": {
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-21T23:17:01.087Z"
+    },
+    "vp-1657": {
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-21T23:17:01.087Z"
     }
   }
 }
