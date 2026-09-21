@@ -498,6 +498,12 @@ const FIELD_OVERRIDES = new Map([
   // Photonics/microtechnology research department; neither "microtechnology" nor "nanoscience"
   // matches the Engineering regex's "nanotechnology" keyword.
   ['Department of Microtechnology and Nanoscience (MC2)|Chalmers University of Technology', 'Engineering'],
+  // Digital-communication-engineering appointment; "Mathematics" in the department's combined
+  // name would otherwise win the Mathematics keyword match ahead of Engineering.
+  ['Design Engineering and Mathematics|Middlesex University', 'Engineering'],
+  // Computational-neuroscience research center; no Biological & Biomedical Sciences keyword in
+  // the center's own name, so it would otherwise fall through to Others.
+  ['Center for Brain, Mind and KANSEI Sciences Research|Hiroshima University', 'Biological & Biomedical Sciences'],
   // Generic Speech-Language-Hearing-style department name, but this specific appointment's
   // primary focus (per its own official listing) is multilingual/English education.
   ['Linguistics and Communication Disorders|Queens College, City University of New York', 'Education'],
