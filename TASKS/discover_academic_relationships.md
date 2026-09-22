@@ -94,6 +94,15 @@ For `coauthor`, store the two IDs in ascending lexical order, use that same orde
 
 Do not write `unresolved`, `candidate`, or `excluded` records to the public database. Those are not established relationships. If resumable research state is needed, create `maintenance/relationship-research.json` containing only provider identity mappings, processed batch IDs, rejected candidates, unresolved leads, and next actions. It must never be loaded by the public site or described as roster relationship data.
 
+### GitHub issue routing for unresolved review leads
+
+When an unresolved lead needs human review, identity resolution, current-appointment verification,
+or an owner decision, open a GitHub Issue and include the lead's name or aliases, seed roster
+member, reported institution, evidence URLs, unresolved reason, and concrete next action. Link the
+Issue from the batch handoff or final report. This applies to older unresolved leads discovered in
+prior scans as well as the current batch. Do not wait for a verified relationship or roster
+addition before filing the Issue, and do not place the unresolved lead in `public/relationships.json`.
+
 Information explicitly supplied by the repository owner may set `direct: true`; web research must always use `direct: false`. Protected direct relationship records follow the same correction process as protected direct roster fields: verify them, but open an Issue instead of silently changing or removing them when live evidence conflicts.
 
 ---
