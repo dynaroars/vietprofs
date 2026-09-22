@@ -526,6 +526,9 @@ const FIELD_OVERRIDES = new Map([
   // Atomic/trapped-ion physicist (PhD Physics, Georgia Tech); the group name alone carries no
   // field keyword.
   ['Atomic Clock Technology Group|NASA Jet Propulsion Laboratory', 'Physics & Astronomy'],
+  // Synchrotron X-ray physicist (PhD Physics, National University of Singapore); the beamline
+  // name alone carries no field keyword.
+  ['HEX Beamline, National Synchrotron Light Source II|Brookhaven National Laboratory', 'Physics & Astronomy'],
   ["École d'actuariat|Université Laval", 'Mathematics'],
   ['E.T.S.I. Aeronáutica y del Espacio|Universidad Politécnica de Madrid', 'Engineering'],
   ['Accelerator Directorate|SLAC National Accelerator Laboratory', 'Physics & Astronomy'],
