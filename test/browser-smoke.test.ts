@@ -409,6 +409,7 @@ test('mobile pages avoid horizontal overflow and provide usable tap targets', as
         { key: 'insights-health', label: 'Insights / health', pageViews: 0, pct: 0 },
         { key: 'other', label: 'Other', pageViews: 5, pct: 7.1 },
       ],
+      categoryTotal: 70,
       categoryPeriod: { startDate: '2026-09-15', endDate: '2026-09-21', days: 7 },
       historicalTransition: { newSeriesStartedAt: '2026-09-15', oldSeriesRetainedInternally: true },
     }),

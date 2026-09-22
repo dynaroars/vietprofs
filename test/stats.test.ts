@@ -86,7 +86,8 @@ test('live analytics uses bot-filtered account RUM, complete-day averages, norma
     assert.deepEqual(Object.fromEntries(data.categories.map((row: any) => [row.key, row.pageViews])), {
       directory: 30, profiles: 15, submit: 5, statistics: 4, 'insights-health': 0, other: 6,
     });
-    assert.equal(data.categories.reduce((total: number, row: any) => total + row.pageViews, 0), data.last7Complete.pageViews);
+    assert.equal(data.categoryTotal, 60);
+    assert.equal(data.categories.reduce((total: number, row: any) => total + row.pageViews, 0), data.categoryTotal);
     assert.equal(data.daily.filter((row: any) => row.status === 'missing').length, 26);
   } finally {
     globalThis.fetch = originalFetch;

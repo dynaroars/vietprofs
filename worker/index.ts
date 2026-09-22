@@ -54,6 +54,7 @@ export interface BrowserStatsResponse {
   daily: DailyBrowserStat[];
   countries: CountryStat[];
   categories: CategoryStat[];
+  categoryTotal: number;
   categoryPeriod: { startDate: string; endDate: string; days: number };
   historicalTransition: { newSeriesStartedAt: string | null; oldSeriesRetainedInternally: true };
   isDemo?: boolean;
@@ -226,11 +227,10 @@ export async function queryRum(env: Env, now = new Date()): Promise<BrowserStats
     const key = categoryForPath(row.dimensions?.requestPath || '');
     categoryCounts.set(key, (categoryCounts.get(key) || 0) + count);
   }
-  if (pathTotal !== pageViews7) throw new Error(`RUM category total ${pathTotal} does not match daily total ${pageViews7}`);
   const categories = CATEGORY_DEFINITIONS.map(item => ({
     ...item,
     pageViews: categoryCounts.get(item.key) || 0,
-    pct: pageViews7 ? Math.round((categoryCounts.get(item.key) || 0) / pageViews7 * 1000) / 10 : 0,
+    pct: pathTotal ? Math.round((categoryCounts.get(item.key) || 0) / pathTotal * 1000) / 10 : 0,
   }));
 
   return {
@@ -244,7 +244,7 @@ export async function queryRum(env: Env, now = new Date()): Promise<BrowserStats
       avgVisits: last7.length ? Math.round(visits7 / last7.length * 10) / 10 : null,
     },
     last30Available: { pageViews: pageViews30, visits: visits30, days: complete.length },
-    daily, countries, categories,
+    daily, countries, categories, categoryTotal: pathTotal,
     categoryPeriod: { startDate: categoryStart, endDate: lastCompleteDate, days: last7.length },
     historicalTransition: { newSeriesStartedAt: measurementStartedAt, oldSeriesRetainedInternally: true },
   };
@@ -272,7 +272,7 @@ function demoResponse(now = new Date()): BrowserStatsResponse {
     today: { date: today, pageViews: 7, visits: 4, complete: false, collected: true },
     last7Complete: { pageViews: total, visits, days: 7, avgPageViews: Math.round(total / 7 * 10) / 10, avgVisits: Math.round(visits / 7 * 10) / 10 },
     last30Available: { pageViews: sum(daily.slice(0, -1).map(row => row.pageViews || 0)), visits: sum(daily.slice(0, -1).map(row => row.visits || 0)), days: 9 },
-    daily, countries: [{ code: 'US', name: 'United States', flag: '🇺🇸', pageViews: total, pct: 100 }], categories,
+    daily, countries: [{ code: 'US', name: 'United States', flag: '🇺🇸', pageViews: total, pct: 100 }], categories, categoryTotal: total,
     categoryPeriod: { startDate: categoryStart, endDate: lastCompleteDate, days: 7 },
     historicalTransition: { newSeriesStartedAt: start, oldSeriesRetainedInternally: true },
   };

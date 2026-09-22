@@ -24,7 +24,7 @@ The Worker queries the account-scoped `rumPageloadEventsAdaptiveGroups` GraphQL 
 - **30-day browser page views** sums collected complete days in the available 30-day query window.
 - **Browser visits** is Cloudflare's RUM `sum.visits`. It is an aggregate session-like measure, not exact people or unique visitors.
 - **Countries reached** groups RUM page views by normalized country code for the last seven complete days.
-- **Page categories** group normalized RUM paths for the same complete-day period. Query strings and fragments are ignored, `/` and `/index.html` are combined, and the category total must equal the daily total or the refresh fails safely.
+- **Page categories** group normalized RUM paths for the same complete-day period. Query strings and fragments are ignored, `/` and `/index.html` are combined. Cloudflare's independently aggregated path and daily totals can differ slightly, so category shares use the path-grouped total and are labeled separately from the overall daily total.
 
 Cloudflare Web Analytics does not retain URL query strings. Because the current Insights and Health views use `?view=...`, they cannot be separated from the main directory; the public page says so instead of inventing a split.
 
