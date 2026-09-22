@@ -170,10 +170,7 @@ function renderStats(data: BrowserStatsResponse): string {
     <section class="man-section"><h2>COUNTRIES REACHED</h2><p class="stat-sub">Based only on browser page views during the last ${data.last7Complete.days} complete UTC day${data.last7Complete.days === 1 ? '' : 's'}.</p>${renderCountries(data)}</section>
     <section class="man-section"><h2>PAGE CATEGORIES</h2>${renderCategories(data)}</section>
     <section class="man-section privacy-section"><h2>PRIVACY &amp; METHODOLOGY</h2><div class="privacy-note">
-      <p>These public statistics come from Cloudflare Web Analytics browser beacons, not raw HTTP requests. Automated crawlers generally do not run the beacon and are excluded. People who block JavaScript or the beacon may be omitted, so these numbers can undercount readership.</p>
-      <p>A page view records a browser page load. A browser visit is Cloudflare’s aggregate session-like measure, not an exact count of unique people. No cookies, persistent identifiers, IP addresses, or individual visitor records are collected or published by VietProfs.</p>
-      <p>Dates and day boundaries use UTC. Today is incomplete and is excluded from completed-day averages. Missing collection days are shown as missing, not zero; averages divide only by collected complete days.</p>
-      <p>The clean browser series begins ${escapeHtml(transitionDate)}. Earlier crawler-inclusive network-request history remains in the private operational archive and is not joined to this chart.</p>
+      <p>These statistics come from privacy-preserving Cloudflare Web Analytics browser beacons, not raw server logs — no cookies, IPs, or individual visitor records are collected, though crawlers are excluded and JavaScript-blocking readers can go uncounted. A "page view" is a browser load and a "visit" is Cloudflare's session-like aggregate, not an exact unique-visitor count. Dates use complete UTC days only; the clean browser series begins ${escapeHtml(transitionDate)}, with earlier crawler-inclusive history kept separately.</p>
     </div></section>
     ${footer()}
   </article></main>`;
