@@ -68,7 +68,7 @@ export function formatEducationDetails(person: RosterEntry, { fullLabels = false
   ].filter(Boolean) as string[];
 }
 
-export function renderRosterEntry(person: RosterEntry, baseUrl = '/') {
+export function renderRosterEntry(person: RosterEntry, baseUrl = '/', countryHubAvailable = true) {
   const visibleName = displayName(person.name);
   const nativeName = vietnameseName(person);
   const entryMeta = [canonicalRank(person), person.department, displayUniversity(person.university), formatLocation(person)].filter(Boolean).join(' · ');
@@ -119,7 +119,10 @@ export function renderRosterEntry(person: RosterEntry, baseUrl = '/') {
   const favoriteToggle = `<button type="button" class="favorite-toggle${favorited ? ' is-favorite' : ''}" data-id="${escapeHtml(person.id)}" aria-pressed="${favorited ? 'true' : 'false'}" aria-label="${favoriteLabel}" title="${favoriteLabel}"><svg viewBox="0 0 24 24" aria-hidden="true">${STAR_ICON}</svg></button>`;
 
   const countryTarget = person.country && !['United States', 'US', 'USA'].includes(person.country) ? person.country : 'United States';
-  const locBadge = `<a class="loc-badge-link" href="${escapeHtml(`${baseUrl}${regionPath(countryTarget)}`)}" title="Explore ${escapeHtml(person.country || 'United States')} region hub"><span class="loc-badge"><span class="country-flag" aria-hidden="true">${countryFlag(person.country)}</span></span></a>`;
+  const countryTargetUrl = countryHubAvailable
+    ? `${baseUrl}${regionPath(countryTarget)}`
+    : `${baseUrl}index.html?loc=${encodeURIComponent(countryTarget === 'United States' ? 'US' : countryTarget)}`;
+  const locBadge = `<a class="loc-badge-link" href="${escapeHtml(countryTargetUrl)}" title="${countryHubAvailable ? 'Explore' : 'Filter'} ${escapeHtml(person.country || 'United States')} faculty"><span class="loc-badge"><span class="country-flag" aria-hidden="true">${countryFlag(person.country)}</span></span></a>`;
 
   return `
     <div class="entry entry-with-portrait">

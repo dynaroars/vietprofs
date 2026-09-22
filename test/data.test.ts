@@ -6,9 +6,42 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { FIELDS, LOCATIONS, HEALTH_SUBFIELDS, canonicalRank, displayName, displayUniversity, fieldOf, healthSubfieldOf, continentOf, locationMatches, buildFunFacts, buildAwardsFunFacts, buildInternationalObservations, buildLocationObservations, filterRoster, looksSurnameFirst, buildFieldCounts, buildTopCountries, buildTrackCounts, buildTopUndergradInstitutions, buildPhdToFacultyPairings, type Roster, type RosterEntry } from '../src/data.ts';
 import { chooseWork, validateEnrichment } from '../src/enrichment.ts';
+import { connectionsFor, relationshipId, validateRelationshipDatabase, type RelationshipDatabase } from '../src/relationships.ts';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const roster: Roster = JSON.parse(readFileSync(join(__dirname, '../public/data.json'), 'utf8'));
+const relationships: RelationshipDatabase = JSON.parse(readFileSync(join(__dirname, '../public/relationships.json'), 'utf8'));
+
+test('public relationship database is valid and connects roster IDs only', () => {
+  assert.deepEqual(validateRelationshipDatabase(relationships, roster), []);
+  assert.ok(relationships.relationships.length > 0);
+});
+
+test('relationship database validates normalized roster-internal edges', () => {
+  const sourceId = roster[0].id;
+  const targetId = roster[1].id;
+  const database: RelationshipDatabase = {
+    version: 1,
+    updatedAt: '2026-09-21T00:00:00.000Z',
+    relationships: [{
+      id: relationshipId('doctoral-advisor', sourceId, targetId),
+      type: 'doctoral-advisor',
+      sourceId,
+      targetId,
+      sources: ['https://example.edu/dissertation'],
+      evidence: 'An official dissertation record names the advisor.',
+      works: [],
+      verifiedAt: '2026-09-21T00:00:00.000Z',
+      direct: false,
+      notes: '',
+    }],
+  };
+  assert.deepEqual(validateRelationshipDatabase(database, roster), []);
+  assert.equal(connectionsFor(sourceId, database)[0].label, 'Doctoral advisee');
+  assert.equal(connectionsFor(targetId, database)[0].label, 'Doctoral advisor');
+  database.relationships[0].type = 'coauthor';
+  assert.ok(validateRelationshipDatabase(database, roster).some((error) => /at least two works/.test(error)));
+});
 
 test('enrichment validation rejects unsafe links, corrupted scrapes, and duplicate work', () => {
   assert.ok(validateEnrichment({ researchOverview: { text: 'Studies networks.', sources: ['javascript:alert(1)'], verifiedAt: '2026-01-01T00:00:00.000Z' } }).some((error) => /unsafe/.test(error)));
@@ -402,6 +435,17 @@ test('searching an honor name lists professors who hold that honor', () => {
   const fellow = filterRoster(roster, { query: 'IEEE Fellow', field: 'all' });
   assert.ok(fellow.length > 0);
   assert.ok(fellow.every((p) => p.honors?.some((honor) => honor.name === 'IEEE Fellow')));
+});
+
+test('connection keyword search finds connected roster members by relationship type', () => {
+  const connected = filterRoster(roster, { query: '', searchScope: 'connection', relationships });
+  assert.deepEqual(new Set(connected.map((person) => person.id)), new Set(['vp-0015', 'vp-0018']));
+
+  const coauthors = filterRoster(roster, { query: 'co-author', searchScope: 'connection', relationships });
+  assert.deepEqual(new Set(coauthors.map((person) => person.id)), new Set(['vp-0015', 'vp-0018']));
+
+  const mentors = filterRoster(roster, { query: 'mentor/advise', searchScope: 'connection', relationships });
+  assert.equal(mentors.length, 0);
 });
 
 test('searching a name without middle initials still finds the professor', () => {

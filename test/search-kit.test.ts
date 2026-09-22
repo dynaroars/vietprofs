@@ -16,7 +16,7 @@ test('normalizeText strips diacritics and converts to lowercase', () => {
 });
 
 test('parseKeywordQuery parses recognized keyword prefixes with raw and quoted queries', () => {
-  const resolveKey = (k: string) => (['university', 'field', 'research'].includes(k) ? k : null);
+  const resolveKey = (k: string) => (['university', 'field', 'research', 'connection'].includes(k) ? k : null);
 
   assert.equal(parseKeywordQuery('random search string', resolveKey), null);
   assert.equal(parseKeywordQuery('unknown: query', resolveKey), null);
@@ -29,6 +29,9 @@ test('parseKeywordQuery parses recognized keyword prefixes with raw and quoted q
 
   const parsedField = parseKeywordQuery('field: Computer & Information Sciences', resolveKey);
   assert.deepEqual(parsedField, { key: 'field', query: 'Computer & Information Sciences' });
+
+  const parsedConnection = parseKeywordQuery('connection:co-author', resolveKey);
+  assert.deepEqual(parsedConnection, { key: 'connection', query: 'co-author' });
 });
 
 test('sample and shuffle array helpers preserve elements and length', () => {

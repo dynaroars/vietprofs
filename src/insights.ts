@@ -3,6 +3,7 @@ import {
   buildAwardsFunFacts,
   buildDecadeCounts,
   buildFieldCounts,
+  buildRosterHtmlInventory,
   buildInternationalObservations,
   buildLocationObservations,
   buildPhdToFacultyPairings,
@@ -564,6 +565,7 @@ export function renderHealthPanel(
   activeGrowthMetric: GrowthMetricKey = 'count',
 ): string {
   const stats: DerivedRosterStats = deriveRosterStats(roster);
+  const htmlInventory = buildRosterHtmlInventory(roster);
 
   return `
     <div class="health-panel-dashboard">
@@ -611,6 +613,41 @@ export function renderHealthPanel(
           </div>
         </div>
       ` : ''}
+
+      <div class="html-inventory-card">
+        <div class="html-inventory-header">
+          <div>
+            <h3 class="html-inventory-title">Generated HTML Inventory</h3>
+            <p class="html-inventory-desc">Roster hubs require at least three listed faculty members.</p>
+          </div>
+          <strong class="html-inventory-total">${formatNumber(htmlInventory.total)} pages</strong>
+        </div>
+        <div class="html-inventory-grid">
+          <div class="html-inventory-item">
+            <strong>${formatNumber(htmlInventory.profiles)}</strong>
+            <span>Individual profiles</span>
+          </div>
+          <div class="html-inventory-item">
+            <strong>${formatNumber(htmlInventory.fields)}</strong>
+            <span>Discipline hubs</span>
+          </div>
+          <div class="html-inventory-item">
+            <strong>${formatNumber(htmlInventory.regions)}</strong>
+            <span>Region hubs</span>
+          </div>
+          <div class="html-inventory-item">
+            <strong>${formatNumber(htmlInventory.intersections)}</strong>
+            <span>Field × region hubs</span>
+          </div>
+        </div>
+        <nav class="html-standalone-links" aria-label="Standalone HTML pages">
+          <span>${htmlInventory.standalone} standalone:</span>
+          <a href="${baseUrl}index.html">Directory</a>
+          <a href="${baseUrl}stats.html">Statistics</a>
+          <a href="${baseUrl}submit.html">Submit / Update</a>
+          <a href="${baseUrl}404.html">404</a>
+        </nav>
+      </div>
 
       <div class="completeness-grid">
         ${stats.completeness.map((m) => `

@@ -3,692 +3,317 @@ export interface ExecutionContext {
   passThroughOnException(): void;
 }
 
-declare global {
-  interface CacheStorage {
-    default: Cache;
-  }
-}
-
-export interface Env {
-  CLOUDFLARE_API_TOKEN?: string;
-  CLOUDFLARE_ZONE_ID?: string;
-  CLOUDFLARE_HOSTNAME?: string;
-  STATS_KV?: KVNamespace;
-}
-
 interface KVNamespace {
   get<T>(key: string, type: 'json'): Promise<T | null>;
   put(key: string, value: string): Promise<void>;
 }
 
-export interface DailyStat {
+export interface Env {
+  CLOUDFLARE_API_TOKEN?: string;
+  CLOUDFLARE_ACCOUNT_ID?: string;
+  CLOUDFLARE_HOSTNAME?: string;
+  STATS_KV?: KVNamespace;
+}
+
+export interface DailyBrowserStat {
   date: string;
-  requests: number;
-  pageViews: number;
-  visits?: number;
-  uniques?: number;
-  assetLoads?: number;
+  pageViews: number | null;
+  visits: number | null;
+  status: 'complete' | 'partial' | 'missing';
 }
 
 export interface CountryStat {
   code: string;
   name: string;
   flag: string;
-  count: number;
-  visits?: number;
-  pct?: number;
+  pageViews: number;
+  pct: number;
 }
 
-export interface PageStat {
-  path: string;
+export interface CategoryStat {
+  key: 'directory' | 'profiles' | 'submit' | 'statistics' | 'insights-health' | 'other';
   label: string;
-  count: number;
+  pageViews: number;
+  pct: number;
 }
 
-export interface PageBreakdown {
-  profileViews: number;
-  profilePct: number;
-  mainViews: number;
-  submitViews: number;
-  statsViews: number;
-  otherViews: number;
-  totalViews: number;
-}
-
-export interface BaselineStat {
-  avgVisitsPerDay: number;
-  medianVisitsPerDay: number;
-  avgPageViewsPerDay: number;
-}
-
-export interface StatsResponse {
+export interface BrowserStatsResponse {
+  schemaVersion: 3;
+  source: 'cloudflare-rum';
   generatedAt: string;
-  dataPeriodDays: number;
-  breakdownPeriodDays?: number;
-  retentionNotice?: string;
-  coverage?: {
-    last7Days: number;
-    last30Days: number;
-  };
-  today: {
-    requests: number;
-    pageViews: number;
-    visits?: number;
-    uniques?: number;
-  };
-  last7Days: {
-    requests: number;
-    pageViews: number;
-    visits?: number;
-    uniques?: number;
-  };
-  last30Days: {
-    requests: number;
-    pageViews: number;
-    visits?: number;
-    uniques?: number;
-  };
-  baseline?: BaselineStat;
-  browserLikeTrafficPct?: number;
-  countriesCount: number;
-  topCountries: CountryStat[];
-  topCountriesToday?: CountryStat[];
-  topPages: PageStat[];
-  topPagesToday?: PageStat[];
-  pageBreakdown?: PageBreakdown;
-  daily: DailyStat[];
+  servedAt?: string;
+  timezone: 'UTC';
+  status: 'ok' | 'stale' | 'demo';
+  stale: boolean;
+  notice?: string;
+  measurementStartedAt: string | null;
+  coverage: { firstDate: string | null; lastCompleteDate: string; completeDays7: number; availableDays30: number };
+  today: { date: string; pageViews: number | null; visits: number | null; complete: false; collected: boolean };
+  last7Complete: { pageViews: number; visits: number; days: number; avgPageViews: number | null; avgVisits: number | null };
+  last30Available: { pageViews: number; visits: number; days: number };
+  daily: DailyBrowserStat[];
+  countries: CountryStat[];
+  categories: CategoryStat[];
+  categoryTotal: number;
+  categoryPeriod: { startDate: string; endDate: string; days: number };
+  historicalTransition: { newSeriesStartedAt: string | null; oldSeriesRetainedInternally: true };
   isDemo?: boolean;
 }
 
-const COUNTRY_NAMES: Record<string, string> = {
-  US: 'United States',
-  VN: 'Vietnam',
-  JP: 'Japan',
-  FR: 'France',
-  DE: 'Germany',
-  CA: 'Canada',
-  GB: 'United Kingdom',
-  AU: 'Australia',
-  KR: 'South Korea',
-  SG: 'Singapore',
-  CH: 'Switzerland',
-  NL: 'Netherlands',
-  SE: 'Sweden',
-  NO: 'Norway',
-  FI: 'Finland',
-  DK: 'Denmark',
-  IT: 'Italy',
-  ES: 'Spain',
-  BE: 'Belgium',
-  AT: 'Austria',
-  NZ: 'New Zealand',
-  IE: 'Ireland',
-  TW: 'Taiwan',
-  HK: 'Hong Kong',
-  IL: 'Israel',
-  IN: 'India',
-  BR: 'Brazil',
-  MX: 'Mexico',
-  PL: 'Poland',
-  CZ: 'Czech Republic',
-  AD: 'Andorra',
-  RU: 'Russia',
-  CN: 'China',
-};
-
-function countryCodeToFlag(code: string): string {
-  if (!/^[A-Za-z]{2}$/.test(code)) return '🌐';
-  const upper = code.toUpperCase();
-  const first = upper.charCodeAt(0) - 65 + 0x1f1e6;
-  const second = upper.charCodeAt(1) - 65 + 0x1f1e6;
-  return String.fromCodePoint(first, second);
-}
-
-function cleanPageLabel(path: string): string {
-  if (!path || path === '/' || path === '/index.html') return 'Main Directory';
-  if (path === '/submit.html') return 'Submit / Update Entry';
-  if (path === '/stats.html') return 'Visitor Statistics';
-  if (path.startsWith('/people/')) {
-    const filename = path.replace('/people/', '').replace('.html', '');
-    return `Profile ${filename}`;
-  }
-  return path;
-}
-
-const PUBLIC_HTML_PAGES = new Set(['/', '/index.html', '/submit.html', '/stats.html']);
-
-function isPublicHtmlPage(path: string): boolean {
-  return PUBLIC_HTML_PAGES.has(path) || /^\/people\/vp-\d{4}\.html$/.test(path);
-}
-
-const DAILY_HISTORY_KEY = 'hostname-daily-v2';
-const MAX_STORED_DAYS = 30;
-const SOURCE_LOOKBACK_DAYS = 7;
-
-function dateStringsEndingOn(endDate: string, count: number): string[] {
-  const end = new Date(`${endDate}T00:00:00Z`);
-  return Array.from({ length: count }, (_, index) => {
-    const date = new Date(end);
-    date.setUTCDate(date.getUTCDate() - (count - index - 1));
-    return date.toISOString().split('T')[0];
-  });
-}
-
-function calculateMedian(numbers: number[]): number {
-  if (numbers.length === 0) return 0;
-  const sorted = [...numbers].sort((a, b) => a - b);
-  const middle = Math.floor(sorted.length / 2);
-  if (sorted.length % 2 === 0) {
-    return Math.round((sorted[middle - 1] + sorted[middle]) / 2);
-  }
-  return sorted[middle];
-}
-
-function calculatePageBreakdown(pages: PageStat[]): PageBreakdown {
-  let profileViews = 0;
-  let mainViews = 0;
-  let submitViews = 0;
-  let statsViews = 0;
-  let otherViews = 0;
-  let totalViews = 0;
-
-  pages.forEach(p => {
-    totalViews += p.count;
-    if (p.path.startsWith('/people/')) {
-      profileViews += p.count;
-    } else if (p.path === '/' || p.path === '/index.html') {
-      mainViews += p.count;
-    } else if (p.path === '/submit.html') {
-      submitViews += p.count;
-    } else if (p.path === '/stats.html') {
-      statsViews += p.count;
-    } else {
-      otherViews += p.count;
-    }
-  });
-
-  const profilePct = totalViews > 0 ? Math.round((profileViews / totalViews) * 100) : 0;
-
-  return {
-    profileViews,
-    profilePct,
-    mainViews,
-    submitViews,
-    statsViews,
-    otherViews,
-    totalViews,
-  };
-}
-
-function buildGraphqlQuery(dates: string[]): string {
-  const dateVariables = dates.map((_, index) => `$date${index}: Date!`).join(', ');
-  const dailyNodes = dates.map((_, index) => `
-      traffic${index}: httpRequestsAdaptiveGroups(
-        limit: 1
-        filter: { date: $date${index}, clientRequestHTTPHost: $hostname, requestSource: "eyeball" }
-      ) { count }
-      pages${index}: httpRequestsAdaptiveGroups(
-        limit: 1
-        filter: { date: $date${index}, clientRequestHTTPHost: $hostname, requestSource: "eyeball", edgeResponseContentTypeName: "html", edgeResponseStatus_geq: 200, edgeResponseStatus_lt: 400 }
-      ) { count sum { visits } }
-      assets${index}: httpRequestsAdaptiveGroups(
-        limit: 1
-        filter: { date: $date${index}, clientRequestHTTPHost: $hostname, requestSource: "eyeball", edgeResponseContentTypeName_in: ["javascript", "css"], edgeResponseStatus_geq: 200, edgeResponseStatus_lt: 400 }
-      ) { count }
-      topCountries${index}: httpRequestsAdaptiveGroups(
-        limit: 250
-        filter: { date: $date${index}, clientRequestHTTPHost: $hostname, requestSource: "eyeball", edgeResponseContentTypeName: "html", edgeResponseStatus_geq: 200, edgeResponseStatus_lt: 400 }
-      ) {
-        count
-        sum { visits }
-        dimensions { clientCountryName }
-      }
-      topPages${index}: httpRequestsAdaptiveGroups(
-        limit: 250
-        filter: { date: $date${index}, clientRequestHTTPHost: $hostname, requestSource: "eyeball", edgeResponseContentTypeName: "html", edgeResponseStatus_geq: 200, edgeResponseStatus_lt: 400 }
-      ) {
-        count
-        dimensions { clientRequestPath }
-      }`).join('');
-
-  return `
-query GetHostnameTrafficStats($zoneTag: String!, $hostname: String!, ${dateVariables}) {
-  viewer {
-    zones(filter: { zoneTag: $zoneTag }) {${dailyNodes}
-      topCountries: httpRequestsAdaptiveGroups(
-        limit: 250
-        filter: { date: $date${dates.length - 1}, clientRequestHTTPHost: $hostname, requestSource: "eyeball", edgeResponseContentTypeName: "html", edgeResponseStatus_geq: 200, edgeResponseStatus_lt: 400 }
-      ) {
-        count
-        sum { visits }
-        dimensions { clientCountryName }
-      }
-      topPages: httpRequestsAdaptiveGroups(
-        limit: 100
-        filter: { date: $date${dates.length - 1}, clientRequestHTTPHost: $hostname, requestSource: "eyeball", edgeResponseContentTypeName: "html", edgeResponseStatus_geq: 200, edgeResponseStatus_lt: 400 }
-        orderBy: [count_DESC]
-      ) {
-        count
-        dimensions { clientRequestPath }
-      }
-    }
-  }
-}
-`;
-}
-
-function buildDemoResponse(): StatsResponse {
-  const today = new Date();
-  const daily: DailyStat[] = [];
-  for (let i = 29; i >= 0; i--) {
-    const d = new Date(today);
-    d.setDate(d.getDate() - i);
-    const dateStr = d.toISOString().split('T')[0];
-    const base = 120 + Math.floor(Math.sin(i * 0.5) * 40) + (i % 7 === 0 ? 60 : 0);
-    const pageViews = Math.round(base * 1.6);
-    daily.push({
-      date: dateStr,
-      requests: Math.round(base * 3.8),
-      pageViews,
-      visits: Math.round(base * 0.8),
-      assetLoads: Math.round(pageViews * 0.35),
-    });
-  }
-
-  const todayStat = daily[daily.length - 1] || { requests: 0, pageViews: 0, visits: 0, assetLoads: 0 };
-  const last7 = daily.slice(-7);
-  const sum7 = last7.reduce((acc, curr) => ({
-    requests: acc.requests + curr.requests,
-    pageViews: acc.pageViews + curr.pageViews,
-    visits: acc.visits + (curr.visits || 0),
-    assetLoads: acc.assetLoads + (curr.assetLoads || 0),
-  }), { requests: 0, pageViews: 0, visits: 0, assetLoads: 0 });
-
-  const sum30 = daily.reduce((acc, curr) => ({
-    requests: acc.requests + curr.requests,
-    pageViews: acc.pageViews + curr.pageViews,
-    visits: acc.visits + (curr.visits || 0),
-    assetLoads: acc.assetLoads + (curr.assetLoads || 0),
-  }), { requests: 0, pageViews: 0, visits: 0, assetLoads: 0 });
-
-  const visitsList7 = last7.map(d => d.visits || 0);
-  const avgVisitsPerDay = Math.round(sum7.visits / 7);
-  const medianVisitsPerDay = calculateMedian(visitsList7);
-
-  const topCountries7Day: CountryStat[] = [
-    { code: 'US', name: 'United States', flag: '🇺🇸', count: 2450, visits: 2450, pct: 54.4 },
-    { code: 'VN', name: 'Vietnam', flag: '🇻🇳', count: 1820, visits: 1820, pct: 40.4 },
-    { code: 'JP', name: 'Japan', flag: '🇯🇵', count: 420, visits: 420, pct: 9.3 },
-    { code: 'FR', name: 'France', flag: '🇫🇷', count: 390, visits: 390, pct: 8.7 },
-    { code: 'DE', name: 'Germany', flag: '🇩🇪', count: 310, visits: 310, pct: 6.9 },
-    { code: 'CA', name: 'Canada', flag: '🇨🇦', count: 280, visits: 280, pct: 6.2 },
-    { code: 'GB', name: 'United Kingdom', flag: '🇬🇧', count: 240, visits: 240, pct: 5.3 },
-    { code: 'AU', name: 'Australia', flag: '🇦🇺', count: 190, visits: 190, pct: 4.2 },
-    { code: 'SG', name: 'Singapore', flag: '🇸🇬', count: 150, visits: 150, pct: 3.3 },
-    { code: 'KR', name: 'South Korea', flag: '🇰🇷', count: 120, visits: 120, pct: 2.7 },
-  ];
-
-  const topPages7Day: PageStat[] = [
-    { path: '/', label: 'Main Directory', count: 4850 },
-    { path: '/submit.html', label: 'Submit / Update Entry', count: 890 },
-    { path: '/people/vp-1183.html', label: 'Profile vp-1183', count: 320 },
-    { path: '/people/vp-0064.html', label: 'Profile vp-0064', count: 280 },
-    { path: '/stats.html', label: 'Visitor Statistics', count: 210 },
-    { path: '/people/vp-0753.html', label: 'Profile vp-0753', count: 180 },
-    { path: '/people/vp-0706.html', label: 'Profile vp-0706', count: 140 },
-  ];
-
-  const pageBreakdown = calculatePageBreakdown(topPages7Day);
-
-  return {
-    generatedAt: new Date().toISOString(),
-    dataPeriodDays: 30,
-    breakdownPeriodDays: 7,
-    retentionNotice: 'Cloudflare live API retention is approximately 8 days. A scheduled archive builds the longer 30-day history over time.',
-    coverage: { last7Days: 7, last30Days: 30 },
-    today: todayStat,
-    last7Days: sum7,
-    last30Days: sum30,
-    baseline: {
-      avgVisitsPerDay,
-      medianVisitsPerDay,
-      avgPageViewsPerDay: Math.round(sum7.pageViews / 7),
-    },
-    browserLikeTrafficPct: browserLikeTrafficPct(sum7.pageViews, sum7.assetLoads),
-    countriesCount: topCountries7Day.length,
-    topCountries: topCountries7Day,
-    topCountriesToday: topCountries7Day.slice(0, 5),
-    topPages: topPages7Day,
-    topPagesToday: topPages7Day.slice(0, 5),
-    pageBreakdown,
-    daily,
-    isDemo: true,
-  };
-}
-
-interface AdaptiveRow {
+interface RumGroup {
   count?: number;
   sum?: { visits?: number };
-  dimensions?: {
-    clientCountryName?: string;
-    clientRequestPath?: string;
-  };
+  avg?: { sampleInterval?: number };
+  dimensions?: { date?: string; countryName?: string; requestPath?: string };
 }
 
-type ZoneAnalytics = Record<string, AdaptiveRow[] | undefined>;
-
-function sumDaily(rows: DailyStat[]): Omit<DailyStat, 'date'> {
-  return rows.reduce((total, row) => ({
-    requests: total.requests + row.requests,
-    pageViews: total.pageViews + row.pageViews,
-    visits: (total.visits || 0) + (row.visits || 0),
-    assetLoads: (total.assetLoads || 0) + (row.assetLoads || 0),
-  }), { requests: 0, pageViews: 0, visits: 0, assetLoads: 0 });
+interface RumGraphqlResponse {
+  data?: { viewer?: { accounts?: Array<{ daily?: RumGroup[]; countries?: RumGroup[]; paths?: RumGroup[] }> } };
+  errors?: Array<{ message?: string }>;
 }
 
-function browserLikeTrafficPct(pageViews: number, assetLoads: number): number {
-  if (pageViews <= 0) return 0;
-  return Math.min(100, Math.round((assetLoads / pageViews) * 100));
+const GRAPHQL_ENDPOINT = 'https://api.cloudflare.com/client/v4/graphql';
+const BROWSER_HISTORY_KEY = 'browser-rum-daily-v1';
+const LAST_SUCCESS_KEY = 'browser-rum-last-success-v1';
+const MAX_WINDOW_DAYS = 30;
+const CATEGORY_DAYS = 7;
+
+const CATEGORY_DEFINITIONS: Array<Pick<CategoryStat, 'key' | 'label'>> = [
+  { key: 'directory', label: 'Main directory' },
+  { key: 'profiles', label: 'Professor profiles' },
+  { key: 'submit', label: 'Submit / update' },
+  { key: 'statistics', label: 'Statistics' },
+  { key: 'insights-health', label: 'Insights / health' },
+  { key: 'other', label: 'Other' },
+];
+
+function isoDate(date: Date): string {
+  return date.toISOString().slice(0, 10);
 }
 
-async function fetchLiveStats(env: Env, { persist = false } = {}): Promise<StatsResponse> {
-  if (!env.CLOUDFLARE_API_TOKEN || !env.CLOUDFLARE_ZONE_ID) {
-    return buildDemoResponse();
+function shiftDate(date: string, days: number): string {
+  const value = new Date(`${date}T00:00:00Z`);
+  value.setUTCDate(value.getUTCDate() + days);
+  return isoDate(value);
+}
+
+function dateRange(startDate: string, endDate: string): string[] {
+  const dates: string[] = [];
+  for (let date = startDate; date <= endDate; date = shiftDate(date, 1)) dates.push(date);
+  return dates;
+}
+
+function sum(values: number[]): number {
+  return values.reduce((total, value) => total + value, 0);
+}
+
+export function normalizePath(rawPath: string): string {
+  try {
+    let path = new URL(rawPath || '/', 'https://vietprofs.invalid').pathname;
+    path = path.replace(/\/{2,}/g, '/');
+    if (path.length > 1) path = path.replace(/\/$/, '');
+    return path === '/' || path.toLowerCase() === '/index.html' ? '/index.html' : path;
+  } catch {
+    return '/unknown';
   }
+}
 
-  const todayStr = new Date().toISOString().split('T')[0];
-  const sourceDates = dateStringsEndingOn(todayStr, SOURCE_LOOKBACK_DAYS);
-  const hostname = env.CLOUDFLARE_HOSTNAME || 'vietprofs.roars.dev';
-  const variables: Record<string, string> = {
-    zoneTag: env.CLOUDFLARE_ZONE_ID,
-    hostname,
-  };
-  sourceDates.forEach((date, index) => {
-    variables[`date${index}`] = date;
-  });
+export function categoryForPath(rawPath: string): CategoryStat['key'] {
+  const path = normalizePath(rawPath).toLowerCase();
+  if (path === '/index.html') return 'directory';
+  if (/^\/people\/[^/]+\.html$/.test(path)) return 'profiles';
+  if (path === '/submit.html') return 'submit';
+  if (path === '/stats.html') return 'statistics';
+  if (path === '/insights.html' || path === '/health.html') return 'insights-health';
+  return 'other';
+}
 
-  const gqlRes = await fetch('https://api.cloudflare.com/client/v4/graphql', {
+function countryName(code: string): string {
+  const normalized = code.toUpperCase();
+  if (!/^[A-Z]{2}$/.test(normalized) || normalized === 'XX' || normalized === 'T1') return 'Unknown location';
+  try {
+    const name = new Intl.DisplayNames(['en'], { type: 'region' }).of(normalized);
+    return name && name !== normalized && !/^unknown\b/i.test(name) ? name : `Unknown location (${normalized})`;
+  } catch {
+    return normalized === 'UA' ? 'Ukraine' : `Unknown location (${normalized})`;
+  }
+}
+
+function countryFlag(code: string): string {
+  const normalized = code.toUpperCase();
+  if (!/^[A-Z]{2}$/.test(normalized) || normalized === 'XX' || normalized === 'T1') return '🌐';
+  return String.fromCodePoint(...normalized.split('').map(character => character.charCodeAt(0) + 127397));
+}
+
+function buildQuery(): string {
+  return `
+query BrowserTraffic($accountTag: string!, $hostname: string!, $windowStart: Date!, $today: Date!, $categoryStart: Date!, $lastCompleteDate: Date!) {
+  viewer {
+    accounts(filter: { accountTag: $accountTag }) {
+      daily: rumPageloadEventsAdaptiveGroups(
+        limit: 40
+        orderBy: [date_ASC]
+        filter: { date_geq: $windowStart, date_leq: $today, requestHost: $hostname, bot: 0 }
+      ) { count sum { visits } avg { sampleInterval } dimensions { date } }
+      countries: rumPageloadEventsAdaptiveGroups(
+        limit: 250
+        orderBy: [count_DESC]
+        filter: { date_geq: $categoryStart, date_leq: $lastCompleteDate, requestHost: $hostname, bot: 0 }
+      ) { count dimensions { countryName } }
+      paths: rumPageloadEventsAdaptiveGroups(
+        limit: 5000
+        orderBy: [count_DESC]
+        filter: { date_geq: $categoryStart, date_leq: $lastCompleteDate, requestHost: $hostname, bot: 0 }
+      ) { count dimensions { requestPath } }
+    }
+  }
+}`;
+}
+
+export async function queryRum(env: Env, now = new Date()): Promise<BrowserStatsResponse> {
+  if (!env.CLOUDFLARE_API_TOKEN || !env.CLOUDFLARE_ACCOUNT_ID) throw new Error('Cloudflare RUM credentials are not configured');
+  const today = isoDate(now);
+  const lastCompleteDate = shiftDate(today, -1);
+  const windowStart = shiftDate(today, -(MAX_WINDOW_DAYS - 1));
+  const categoryStart = shiftDate(lastCompleteDate, -(CATEGORY_DAYS - 1));
+  const response = await fetch(GRAPHQL_ENDPOINT, {
     method: 'POST',
-    headers: {
-      'Authorization': `Bearer ${env.CLOUDFLARE_API_TOKEN}`,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ query: buildGraphqlQuery(sourceDates), variables }),
+    headers: { Authorization: `Bearer ${env.CLOUDFLARE_API_TOKEN}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      query: buildQuery(),
+      variables: { accountTag: env.CLOUDFLARE_ACCOUNT_ID, hostname: env.CLOUDFLARE_HOSTNAME || 'vietprofs.roars.dev', windowStart, today, categoryStart, lastCompleteDate },
+    }),
+  });
+  if (!response.ok) throw new Error(`Cloudflare GraphQL returned HTTP ${response.status}`);
+  const result = await response.json() as RumGraphqlResponse;
+  if (result.errors?.length) throw new Error(result.errors.map(error => error.message || 'Unknown GraphQL error').join('; '));
+  const account = result.data?.viewer?.accounts?.[0];
+  if (!account) throw new Error('Cloudflare returned no matching account data');
+
+  const returnedDaily = new Map<string, { pageViews: number; visits: number }>();
+  for (const row of account.daily || []) {
+    const date = row.dimensions?.date;
+    if (date) returnedDaily.set(date, { pageViews: row.count || 0, visits: row.sum?.visits || 0 });
+  }
+  const firstReturnedDate = [...returnedDaily.keys()].sort()[0] || null;
+  const archived = await env.STATS_KV?.get<DailyBrowserStat[]>(BROWSER_HISTORY_KEY, 'json');
+  const archivedDates = (archived || []).filter(row => row.status !== 'missing').map(row => row.date).sort();
+  const measurementStartedAt = [firstReturnedDate, archivedDates[0]].filter((value): value is string => Boolean(value)).sort()[0] || null;
+  const daily: DailyBrowserStat[] = dateRange(windowStart, today).map(date => {
+    const row = returnedDaily.get(date);
+    if (!measurementStartedAt || date < measurementStartedAt) return { date, pageViews: null, visits: null, status: 'missing' };
+    return { date, pageViews: row?.pageViews ?? 0, visits: row?.visits ?? 0, status: date === today ? 'partial' : 'complete' };
   });
 
-  if (!gqlRes.ok) {
-    throw new Error(`Cloudflare GraphQL API HTTP error: ${gqlRes.status}`);
+  const complete = daily.filter(row => row.status === 'complete');
+  const last7 = complete.filter(row => row.date >= categoryStart && row.date <= lastCompleteDate);
+  const todayRow = daily.find(row => row.date === today)!;
+  const pageViews7 = sum(last7.map(row => row.pageViews || 0));
+  const visits7 = sum(last7.map(row => row.visits || 0));
+  const pageViews30 = sum(complete.map(row => row.pageViews || 0));
+  const visits30 = sum(complete.map(row => row.visits || 0));
+
+  const countries = (account.countries || []).map(row => {
+    const code = (row.dimensions?.countryName || '').toUpperCase();
+    const pageViews = row.count || 0;
+    return { code, name: countryName(code), flag: countryFlag(code), pageViews, pct: pageViews7 ? Math.round(pageViews / pageViews7 * 1000) / 10 : 0 };
+  }).filter(row => row.pageViews > 0);
+
+  const categoryCounts = new Map<CategoryStat['key'], number>(CATEGORY_DEFINITIONS.map(item => [item.key, 0]));
+  let pathTotal = 0;
+  for (const row of account.paths || []) {
+    const count = row.count || 0;
+    pathTotal += count;
+    const key = categoryForPath(row.dimensions?.requestPath || '');
+    categoryCounts.set(key, (categoryCounts.get(key) || 0) + count);
   }
-
-  const gqlData = (await gqlRes.json()) as {
-    data?: { viewer?: { zones?: ZoneAnalytics[] } };
-    errors?: Array<{ message: string }>;
-  };
-  if (gqlData.errors?.length) {
-    throw new Error(`Cloudflare GraphQL errors: ${gqlData.errors.map(error => error.message).join('; ')}`);
-  }
-
-  const zoneData = gqlData.data?.viewer?.zones?.[0];
-  if (!zoneData) {
-    throw new Error('No zone data returned from Cloudflare GraphQL API');
-  }
-
-  const freshDaily = sourceDates.map((date, index): DailyStat => {
-    const traffic = zoneData[`traffic${index}`]?.[0];
-    const pages = zoneData[`pages${index}`]?.[0];
-    const assets = zoneData[`assets${index}`]?.[0];
-    return {
-      date,
-      requests: traffic?.count || 0,
-      pageViews: pages?.count || 0,
-      visits: pages?.sum?.visits || 0,
-      assetLoads: assets?.count || 0,
-    };
-  });
-
-  let storedDaily: DailyStat[] = [];
-  if (env.STATS_KV) {
-    try {
-      storedDaily = (await env.STATS_KV.get<DailyStat[]>(DAILY_HISTORY_KEY, 'json')) || [];
-    } catch (error) {
-      console.error('Could not read stored analytics history', error);
-    }
-  }
-
-  const historyByDate = new Map<string, DailyStat>();
-  [...storedDaily, ...freshDaily].forEach(row => historyByDate.set(row.date, row));
-  const firstDate = dateStringsEndingOn(todayStr, MAX_STORED_DAYS)[0];
-  const daily = [...historyByDate.values()]
-    .filter(row => row.date >= firstDate && row.date <= todayStr)
-    .sort((left, right) => left.date.localeCompare(right.date));
-
-  if (persist && env.STATS_KV) {
-    try {
-      await env.STATS_KV.put(DAILY_HISTORY_KEY, JSON.stringify(daily));
-    } catch (error) {
-      console.error('Could not store analytics history', error);
-    }
-  }
-
-  const last7Start = dateStringsEndingOn(todayStr, 7)[0];
-  const last7 = daily.filter(row => row.date >= last7Start);
-  const today = daily.find(row => row.date === todayStr) || {
-    date: todayStr,
-    requests: 0,
-    pageViews: 0,
-    visits: 0,
-  };
-
-  // Aggregate Top Countries over available daily nodes (7 days)
-  const countryVisits7Day: Record<string, number> = {};
-  sourceDates.forEach((_, index) => {
-    const nodes = zoneData[`topCountries${index}`] || (index === sourceDates.length - 1 ? zoneData.topCountries : undefined) || [];
-    nodes.forEach(item => {
-      const countryInput = item.dimensions?.clientCountryName || 'Unknown';
-      const code = countryInput.length === 2 ? countryInput.toUpperCase() : 'XX';
-      countryVisits7Day[code] = (countryVisits7Day[code] || 0) + (item.sum?.visits || 0);
-    });
-  });
-
-  const total7DayVisits = Object.values(countryVisits7Day).reduce((a, b) => a + b, 0);
-
-  const topCountries = Object.entries(countryVisits7Day)
-    .map(([code, visits]): CountryStat => ({
-      code,
-      name: COUNTRY_NAMES[code] || code,
-      flag: countryCodeToFlag(code),
-      count: visits,
-      visits,
-      pct: total7DayVisits > 0 ? Math.round((visits / total7DayVisits) * 1000) / 10 : 0,
-    }))
-    .filter(c => c.count > 0)
-    .sort((a, b) => b.count - a.count);
-
-  // Today's countries view
-  const topCountriesToday = (zoneData.topCountries || [])
-    .map((item): CountryStat => {
-      const countryInput = item.dimensions?.clientCountryName || 'Unknown';
-      const code = countryInput.length === 2 ? countryInput.toUpperCase() : 'XX';
-      return {
-        code,
-        name: COUNTRY_NAMES[code] || countryInput,
-        flag: countryCodeToFlag(code),
-        count: item.sum?.visits || 0,
-        visits: item.sum?.visits || 0,
-      };
-    })
-    .filter(c => c.count > 0)
-    .sort((a, b) => b.count - a.count);
-
-  function normalizePath(path: string): string {
-    if (path === '/') return '/index.html';
-    return path;
-  }
-
-  // Aggregate Top Pages over available daily nodes (7 days)
-  const pageViews7Day: Record<string, number> = {};
-  sourceDates.forEach((_, index) => {
-    const nodes = zoneData[`topPages${index}`] || (index === sourceDates.length - 1 ? zoneData.topPages : undefined) || [];
-    nodes.forEach(item => {
-      const rawPath = item.dimensions?.clientRequestPath || '/';
-      if (isPublicHtmlPage(rawPath)) {
-        const path = normalizePath(rawPath);
-        pageViews7Day[path] = (pageViews7Day[path] || 0) + (item.count || 0);
-      }
-    });
-  });
-
-  const topPages = Object.entries(pageViews7Day)
-    .map(([path, count]): PageStat => ({
-      path,
-      label: cleanPageLabel(path),
-      count,
-    }))
-    .sort((a, b) => b.count - a.count);
-
-  // Today's pages view
-  const pagesTodayMap: Record<string, number> = {};
-  (zoneData.topPages || []).forEach(item => {
-    const rawPath = item.dimensions?.clientRequestPath || '/';
-    if (isPublicHtmlPage(rawPath)) {
-      const path = normalizePath(rawPath);
-      pagesTodayMap[path] = (pagesTodayMap[path] || 0) + (item.count || 0);
-    }
-  });
-  const topPagesToday = Object.entries(pagesTodayMap)
-    .map(([path, count]): PageStat => ({
-      path,
-      label: cleanPageLabel(path),
-      count,
-    }))
-    .sort((a, b) => b.count - a.count);
-
-  const pageBreakdown = calculatePageBreakdown(topPages);
-
-  const visitsList7 = last7.map(d => d.visits || 0);
-  const sum7 = sumDaily(last7);
-  const avgVisitsPerDay = Math.round((sum7.visits || 0) / Math.max(1, last7.length));
-  const medianVisitsPerDay = calculateMedian(visitsList7);
+  const categories = CATEGORY_DEFINITIONS.map(item => ({
+    ...item,
+    pageViews: categoryCounts.get(item.key) || 0,
+    pct: pathTotal ? Math.round((categoryCounts.get(item.key) || 0) / pathTotal * 1000) / 10 : 0,
+  }));
 
   return {
-    generatedAt: new Date().toISOString(),
-    dataPeriodDays: MAX_STORED_DAYS,
-    breakdownPeriodDays: 7,
-    retentionNotice: 'Cloudflare live API retention is approximately 8 days. A scheduled archive builds the longer 30-day history over time.',
-    coverage: { last7Days: last7.length, last30Days: daily.length },
-    today,
-    last7Days: sum7,
-    last30Days: sumDaily(daily),
-    baseline: {
-      avgVisitsPerDay,
-      medianVisitsPerDay,
-      avgPageViewsPerDay: Math.round(sum7.pageViews / Math.max(1, last7.length)),
+    schemaVersion: 3, source: 'cloudflare-rum', generatedAt: now.toISOString(), timezone: 'UTC', status: 'ok', stale: false,
+    measurementStartedAt,
+    coverage: { firstDate: measurementStartedAt, lastCompleteDate, completeDays7: last7.length, availableDays30: complete.length },
+    today: { date: today, pageViews: todayRow.pageViews, visits: todayRow.visits, complete: false, collected: todayRow.status === 'partial' },
+    last7Complete: {
+      pageViews: pageViews7, visits: visits7, days: last7.length,
+      avgPageViews: last7.length ? Math.round(pageViews7 / last7.length * 10) / 10 : null,
+      avgVisits: last7.length ? Math.round(visits7 / last7.length * 10) / 10 : null,
     },
-    browserLikeTrafficPct: browserLikeTrafficPct(sum7.pageViews, sum7.assetLoads || 0),
-    countriesCount: topCountries.length,
-    topCountries,
-    topCountriesToday,
-    topPages,
-    topPagesToday,
-    pageBreakdown,
-    daily,
-    isDemo: false,
+    last30Available: { pageViews: pageViews30, visits: visits30, days: complete.length },
+    daily, countries, categories, categoryTotal: pathTotal,
+    categoryPeriod: { startDate: categoryStart, endDate: lastCompleteDate, days: last7.length },
+    historicalTransition: { newSeriesStartedAt: measurementStartedAt, oldSeriesRetainedInternally: true },
   };
+}
+
+function demoResponse(now = new Date()): BrowserStatsResponse {
+  const today = isoDate(now);
+  const start = shiftDate(today, -9);
+  const values = [18, 24, 17, 31, 0, 22, 28, 19, 26, 7];
+  const daily = dateRange(start, today).map((date, index): DailyBrowserStat => ({ date, pageViews: values[index], visits: Math.round(values[index] * 0.55), status: date === today ? 'partial' : 'complete' }));
+  const lastCompleteDate = shiftDate(today, -1);
+  const categoryStart = shiftDate(lastCompleteDate, -6);
+  const last7 = daily.filter(row => row.date >= categoryStart && row.date <= lastCompleteDate);
+  const total = sum(last7.map(row => row.pageViews || 0));
+  const fixedCategories: Array<[CategoryStat['key'], string, number]> = [
+    ['directory', 'Main directory', 72], ['profiles', 'Professor profiles', 50], ['submit', 'Submit / update', 8],
+    ['statistics', 'Statistics', 6], ['insights-health', 'Insights / health', 0], ['other', 'Other', Math.max(0, total - 136)],
+  ];
+  const categories = fixedCategories.map(([key, label, pageViews]) => ({ key, label, pageViews, pct: total ? Math.round(pageViews / total * 1000) / 10 : 0 }));
+  const visits = sum(last7.map(row => row.visits || 0));
+  return {
+    schemaVersion: 3, source: 'cloudflare-rum', generatedAt: now.toISOString(), timezone: 'UTC', status: 'demo', stale: false,
+    measurementStartedAt: start, isDemo: true,
+    coverage: { firstDate: start, lastCompleteDate, completeDays7: 7, availableDays30: 9 },
+    today: { date: today, pageViews: 7, visits: 4, complete: false, collected: true },
+    last7Complete: { pageViews: total, visits, days: 7, avgPageViews: Math.round(total / 7 * 10) / 10, avgVisits: Math.round(visits / 7 * 10) / 10 },
+    last30Available: { pageViews: sum(daily.slice(0, -1).map(row => row.pageViews || 0)), visits: sum(daily.slice(0, -1).map(row => row.visits || 0)), days: 9 },
+    daily, countries: [{ code: 'US', name: 'United States', flag: '🇺🇸', pageViews: total, pct: 100 }], categories, categoryTotal: total,
+    categoryPeriod: { startDate: categoryStart, endDate: lastCompleteDate, days: 7 },
+    historicalTransition: { newSeriesStartedAt: start, oldSeriesRetainedInternally: true },
+  };
+}
+
+function jsonResponse(body: unknown, status = 200): Response {
+  return new Response(JSON.stringify(body), { status, headers: { 'Content-Type': 'application/json; charset=utf-8', 'Access-Control-Allow-Origin': '*', 'Cache-Control': status === 200 ? 'public, max-age=300' : 'no-store' } });
+}
+
+async function staleResponse(env: Env, error: unknown): Promise<Response> {
+  const snapshot = await env.STATS_KV?.get<BrowserStatsResponse>(LAST_SUCCESS_KEY, 'json');
+  if (snapshot?.schemaVersion === 3) {
+    return jsonResponse({ ...snapshot, servedAt: new Date().toISOString(), status: 'stale', stale: true, notice: 'Live browser statistics are temporarily unavailable. Showing the last successful snapshot.' });
+  }
+  return jsonResponse({ error: 'Browser statistics are temporarily unavailable.', detail: error instanceof Error ? error.message : 'Unknown Cloudflare API error' }, 503);
+}
+
+async function fetchStats(env: Env): Promise<Response> {
+  if (!env.CLOUDFLARE_API_TOKEN || !env.CLOUDFLARE_ACCOUNT_ID) return jsonResponse(demoResponse());
+  try { return jsonResponse(await queryRum(env)); } catch (error) { return staleResponse(env, error); }
+}
+
+async function archiveSuccessfulSnapshot(env: Env): Promise<void> {
+  if (!env.CLOUDFLARE_API_TOKEN || !env.CLOUDFLARE_ACCOUNT_ID || !env.STATS_KV) return;
+  const snapshot = await queryRum(env);
+  await Promise.all([
+    env.STATS_KV.put(BROWSER_HISTORY_KEY, JSON.stringify(snapshot.daily)),
+    env.STATS_KV.put(LAST_SUCCESS_KEY, JSON.stringify(snapshot)),
+  ]);
 }
 
 export default {
-  async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
+  async fetch(request: Request, env: Env, _ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
-    const corsHeaders = {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'GET, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type',
-      'Access-Control-Max-Age': '86400',
-    };
-
-    if (request.method === 'OPTIONS') {
-      return new Response(null, { headers: corsHeaders });
-    }
-
-    if (url.pathname === '/health' || url.pathname === '/api/health') {
-      return new Response(JSON.stringify({ status: 'ok', worker: 'vietprofs-stats-api' }), {
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-      });
-    }
-
-    if (url.pathname !== '/api/stats' && url.pathname !== '/stats' && url.pathname !== '/api/stats/') {
-      return new Response(JSON.stringify({ error: 'Not Found' }), {
-        status: 404,
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-      });
-    }
-
-    if (request.method !== 'GET') {
-      return new Response(JSON.stringify({ error: 'Method Not Allowed' }), {
-        status: 405,
-        headers: { ...corsHeaders, 'Content-Type': 'application/json', 'Allow': 'GET, OPTIONS' },
-      });
-    }
-
-    const cacheKey = new Request(url.toString(), request);
-    if (typeof caches !== 'undefined') {
-      try {
-        const cachedResponse = await caches.default.match(cacheKey);
-        if (cachedResponse) {
-          return cachedResponse;
-        }
-      } catch {
-        // Edge cache lookup failure can be safely ignored
-      }
-    }
-
-    if (!env.CLOUDFLARE_API_TOKEN || !env.CLOUDFLARE_ZONE_ID) {
-      const demoData = buildDemoResponse();
-      const response = new Response(JSON.stringify(demoData), {
-        headers: {
-          ...corsHeaders,
-          'Content-Type': 'application/json; charset=utf-8',
-          'Cache-Control': 'public, max-age=300',
-        },
-      });
-      return response;
-    }
-
-    try {
-      const responsePayload = await fetchLiveStats(env);
-
-      const response = new Response(JSON.stringify(responsePayload), {
-        headers: {
-          ...corsHeaders,
-          'Content-Type': 'application/json; charset=utf-8',
-          'Cache-Control': 'public, max-age=600',
-        },
-      });
-
-      if (typeof caches !== 'undefined') {
-        ctx.waitUntil(caches.default.put(cacheKey, response.clone()));
-      }
-      return response;
-    } catch (err: unknown) {
-      console.error('Cloudflare Analytics request failed', err);
-      const fallbackPayload = {
-        error: 'Visitor statistics temporarily unavailable',
-        generatedAt: new Date().toISOString(),
-        message: 'The aggregate analytics provider did not return data.',
-      };
-      return new Response(JSON.stringify(fallbackPayload), {
-        status: 503,
-        headers: {
-          ...corsHeaders,
-          'Content-Type': 'application/json; charset=utf-8',
-          'Cache-Control': 'no-store',
-        },
-      });
-    }
+    if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers: { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, OPTIONS' } });
+    if (url.pathname === '/health') return jsonResponse({ status: 'ok', worker: 'vietprofs-stats-api', source: 'cloudflare-rum' });
+    if (url.pathname !== '/api/stats') return jsonResponse({ error: 'Not found' }, 404);
+    if (request.method !== 'GET') return new Response(JSON.stringify({ error: 'Method not allowed' }), { status: 405, headers: { 'Content-Type': 'application/json', Allow: 'GET, OPTIONS' } });
+    return fetchStats(env);
   },
-  async scheduled(_controller: unknown, env: Env, ctx: ExecutionContext): Promise<void> {
-    ctx.waitUntil(fetchLiveStats(env, { persist: true }).then((): undefined => undefined).catch(error => {
-      console.error('Scheduled analytics refresh failed', error);
-    }));
+  async scheduled(_event: unknown, env: Env, ctx: ExecutionContext): Promise<void> {
+    ctx.waitUntil(archiveSuccessfulSnapshot(env));
   },
 };

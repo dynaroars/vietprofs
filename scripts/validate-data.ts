@@ -18,11 +18,13 @@ import {
   validateExternalUrl,
   validateInstitutionFormat,
 } from '../src/validation-rules.ts';
+import { validateRelationshipDatabase } from '../src/relationships.ts';
 
 const rosterFile = resolve('public/data.json');
 const verificationFile = resolve('maintenance/verification.json');
 const enrichmentFile = resolve('maintenance/enrichment.json');
 const evidenceFile = resolve('maintenance/evidence.json');
+const relationshipsFile = resolve('public/relationships.json');
 const allowedTracks = new Set<string>(TRACKS);
 const allowedInstitutionTypes = new Set<string>(INSTITUTION_TYPES);
 const allowedHonorCategories = new Set<string>(HONOR_CATEGORIES);
@@ -66,11 +68,12 @@ function validateTimestamp(file: string, value: string, label: string, field: st
   if (timestamp.valueOf() > Date.now()) fail(file, `${label} ${field} must not be in the future`);
 }
 
-const [roster, verification, enrichment, evidence] = await Promise.all([
+const [roster, verification, enrichment, evidence, relationships] = await Promise.all([
   readFile(rosterFile, 'utf8').then(JSON.parse),
   readFile(verificationFile, 'utf8').then(JSON.parse),
   readFile(enrichmentFile, 'utf8').then(JSON.parse),
   readFile(evidenceFile, 'utf8').then(JSON.parse),
+  readFile(relationshipsFile, 'utf8').then(JSON.parse),
 ]);
 if (!Array.isArray(roster) || roster.length === 0) fail(rosterFile, 'must contain a non-empty array');
 if (!verification || typeof verification !== 'object' || Array.isArray(verification)) {
@@ -271,4 +274,6 @@ for (const name of names) {
 for (const name of Object.keys(verification)) {
   if (!names.has(name)) fail(verificationFile, `contains stale entry for ${name}`);
 }
-console.log(`Validated ${roster.length} roster entries.`);
+const relationshipErrors = validateRelationshipDatabase(relationships, roster);
+if (relationshipErrors.length) fail(relationshipsFile, relationshipErrors.join('; '));
+console.log(`Validated ${roster.length} roster entries and ${relationships.relationships.length} academic relationships.`);

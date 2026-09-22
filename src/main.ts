@@ -13,9 +13,12 @@ import {
   displayName,
   fieldOf,
   fieldPath,
+  fieldRegionPath,
   filterRoster,
+  hasEnoughPeopleForRosterHub,
   institutionTypeOf,
   loadGitInfo,
+  loadRelationships,
   loadRoster,
   loadStatsHistory,
   locationMatches,
@@ -80,6 +83,7 @@ const KEYWORD_LABELS: Record<string, string> = {
   honors: 'Honors',
   phd: 'PhD',
   undergrad: 'Ugrad',
+  connection: 'Connection',
 };
 
 const KEYWORD_ICONS: Record<string, string> = {
@@ -92,6 +96,7 @@ const KEYWORD_ICONS: Record<string, string> = {
   honors: '🏅',
   phd: '🎓',
   undergrad: '📚',
+  connection: '🔗',
 };
 
 const KEYWORD_EXAMPLES: Record<string, string> = {
@@ -104,6 +109,7 @@ const KEYWORD_EXAMPLES: Record<string, string> = {
   honors: 'NSF CAREER Award',
   phd: 'University of New Mexico',
   undergrad: 'Pennsylvania State University',
+  connection: 'co-author',
 };
 
 const KEYWORD_ALIASES: Record<string, string> = {
@@ -126,6 +132,8 @@ const KEYWORD_ALIASES: Record<string, string> = {
   undergrad: 'undergrad',
   ugrad: 'undergrad',
   ugradinst: 'undergrad',
+  connection: 'connection',
+  connections: 'connection',
 };
 
 function parseKeywordQuery(raw: string): { scope: string; query: string } | null {
@@ -202,11 +210,11 @@ function renderShell() {
     <output class="command-output" id="command-output" aria-live="polite" hidden></output>
     <div class="examples" id="examples"></div>
     <div class="result-row">
-      <p class="result-count" id="result-count" aria-live="polite"></p>
       <div class="header-links">
         <span class="paper-reference"><a class="paper-link" href="${import.meta.env.BASE_URL}vietprofs.pdf" target="_blank" rel="noopener noreferrer">Read the paper</a> (<a class="paper-link" href="https://arxiv.org/abs/2609.06091" target="_blank" rel="noopener noreferrer">arXiv</a>)</span>
         <a class="submission-link" href="submit.html">Add or update info</a>
       </div>
+      <p class="result-count" id="result-count" aria-live="polite"></p>
     </div>
     <div class="roster" id="roster"></div>
     <button type="button" id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top" hidden>
@@ -261,6 +269,9 @@ function trackQualifier(roster: Roster): string {
 interface RenderOptions {
   field?: string;
   location?: string;
+  hasIntersectionHub?: boolean;
+  hasLocationHub?: boolean;
+  availableRegionHubs?: ReadonlySet<string>;
 }
 
 interface OptionEntry {
@@ -293,22 +304,26 @@ function sortRoster(roster: Roster, order: string): Roster {
 
 let currentRoster: Roster = [];
 
-function renderRoster(roster: Roster, { field, location }: RenderOptions = {}) {
+function renderRoster(roster: Roster, { field, location, hasIntersectionHub = false, hasLocationHub = false, availableRegionHubs = new Set<string>() }: RenderOptions = {}) {
   const rosterEl = document.getElementById('roster');
   const countEl = document.getElementById('result-count');
   const institutions = new Set(roster.map((p) => p.university)).size;
   const isFieldFiltered = Boolean(field && field !== 'all');
-  const fieldTarget = isFieldFiltered ? `${import.meta.env.BASE_URL}${fieldPath(field as string)}` : '';
-  const fieldPhrase = isFieldFiltered
-    ? ` in <a class="result-count-link" href="${fieldTarget}" title="Open ${escapeHtml(field as string)} discipline hub">${escapeHtml(field as string)} ↗</a>`
-    : '';
   const isLocationFiltered = Boolean(location && location !== 'World');
   const locationTargetName = location === 'US' ? 'United States' : location ?? 'United States';
+  const fieldTarget = isFieldFiltered
+    ? `${import.meta.env.BASE_URL}${hasIntersectionHub && isLocationFiltered
+      ? fieldRegionPath(field as string, locationTargetName)
+      : fieldPath(field as string)}`
+    : '';
+  const fieldPhrase = isFieldFiltered
+    ? ` in <a class="result-count-link" href="${fieldTarget}" title="Open ${escapeHtml(field as string)}${hasIntersectionHub && isLocationFiltered ? ` in ${escapeHtml(locationTargetName)}` : ''} hub">${escapeHtml(field as string)} ↗</a>`
+    : '';
   const locationTarget = isLocationFiltered
     ? `${import.meta.env.BASE_URL}${regionPath(locationTargetName)}`
     : '';
   const rawLocationName = location === 'US' ? 'the United States' : location === 'World' || !location ? 'the World' : location;
-  const locationPhrase = isLocationFiltered
+  const locationPhrase = isLocationFiltered && hasLocationHub
     ? `<a class="result-count-link" href="${locationTarget}" title="Open ${escapeHtml(rawLocationName)} region hub">${escapeHtml(rawLocationName)} ↗</a>`
     : escapeHtml(rawLocationName);
   const peopleLabel = roster.length === 1 ? 'person' : 'people';
@@ -321,7 +336,10 @@ function renderRoster(roster: Roster, { field, location }: RenderOptions = {}) {
     return;
   }
 
-  rosterEl.innerHTML = roster.map((person) => renderRosterEntry(person, import.meta.env.BASE_URL)).join('');
+  rosterEl.innerHTML = roster.map((person) => {
+    const countryTarget = person.country && !['United States', 'US', 'USA'].includes(person.country) ? person.country : 'United States';
+    return renderRosterEntry(person, import.meta.env.BASE_URL, availableRegionHubs.has(countryTarget));
+  }).join('');
 }
 
 async function init() {
@@ -337,7 +355,14 @@ async function init() {
       '<p class="empty-state">Could not load the roster. Please refresh the page or try again later.</p>';
     return;
   }
+  const relationshipDatabase = await loadRelationships();
   const searchIndex = buildSearchIndex(roster);
+  const regionHubCandidates = [...new Set([
+    ...LOCATIONS.filter((location) => location !== 'World').map((location) => location === 'US' ? 'United States' : location),
+    ...uniqueCountries(roster),
+  ])];
+  const availableRegionHubs = new Set(regionHubCandidates.filter((region) =>
+    hasEnoughPeopleForRosterHub(filterRoster(roster, { location: region }).length)));
   const statsHistory = await loadStatsHistory();
   const gitInfo = await loadGitInfo();
   const allFacts = buildFunFacts(roster);
@@ -462,6 +487,7 @@ async function init() {
       field: fieldSelect.value,
       track: trackSelect.value,
       institutionType: institutionTypeSelect.value,
+      relationships: relationshipDatabase,
     });
   }
 
@@ -596,6 +622,7 @@ async function init() {
       field: currentField,
       track: currentTrack,
       institutionType: currentInstType,
+      relationships: relationshipDatabase,
     });
     const countryEntries: OptionEntry[] = [];
     for (const country of countryOptions) {
@@ -623,6 +650,7 @@ async function init() {
       field: 'all',
       track: currentTrack,
       institutionType: currentInstType,
+      relationships: relationshipDatabase,
     });
     const fieldEntries: OptionEntry[] = [
       { value: 'all', label: `All Fields (${fieldContext.length})` },
@@ -643,6 +671,7 @@ async function init() {
       field: fieldSelect.value || 'all',
       track: 'all',
       institutionType: currentInstType,
+      relationships: relationshipDatabase,
     });
     const trackEntries: OptionEntry[] = [
       { value: 'all', label: `All Tracks (${trackContext.length})` },
@@ -663,6 +692,7 @@ async function init() {
       field: fieldSelect.value || 'all',
       track: trackSelect.value || 'all',
       institutionType: 'all',
+      relationships: relationshipDatabase,
     });
     const instEntries: OptionEntry[] = [
       { value: 'all', label: `All Institutions (${instContext.length})` },
@@ -854,10 +884,17 @@ async function init() {
       field: fieldSelect.value,
       track: trackSelect.value,
       institutionType: institutionTypeSelect.value,
+      relationships: relationshipDatabase,
     });
     renderRoster(sortRoster(filtered, sortSelect.value), {
       field: fieldSelect.value,
       location: locationSelect.value,
+      hasIntersectionHub: fieldSelect.value !== 'all'
+        && locationSelect.value !== 'World'
+        && hasEnoughPeopleForRosterHub(filterRoster(roster, { field: fieldSelect.value, location: locationSelect.value }).length),
+      hasLocationHub: locationSelect.value !== 'World'
+        && availableRegionHubs.has(locationSelect.value === 'US' ? 'United States' : locationSelect.value),
+      availableRegionHubs,
     });
     keyboardSelectedIndex = -1;
     renderQueryPlan(filtered.length);
