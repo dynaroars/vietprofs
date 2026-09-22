@@ -514,6 +514,9 @@ const FIELD_OVERRIDES = new Map([
   ['National Wind Technology Center|National Renewable Energy Laboratory', 'Engineering'],
   // Social epidemiologist; the NIH intramural program name alone carries no field keyword.
   ['NIH Intramural Research Program|National Institute of Nursing Research', 'Health Sciences'],
+  // Astrophysicist (galaxy formation, cosmological simulations) stationed at NASA Goddard; the
+  // consortium/center name alone carries no field keyword.
+  ['CRESST II, stationed at NASA Goddard Space Flight Center|University of Maryland, Baltimore County', 'Physics & Astronomy'],
   ["École d'actuariat|Université Laval", 'Mathematics'],
   ['E.T.S.I. Aeronáutica y del Espacio|Universidad Politécnica de Madrid', 'Engineering'],
   ['Accelerator Directorate|SLAC National Accelerator Laboratory', 'Physics & Astronomy'],
