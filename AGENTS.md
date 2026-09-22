@@ -36,3 +36,9 @@ decision, or a manual confirmation, create a GitHub Issue for it. Include the re
 or candidate name, evidence and source URLs, the reason review is required, and the concrete next
 action. Do not leave review-required items only in local maintenance files; do not apply them to
 public roster or relationship data until the review is resolved.
+
+Relationship-discovery work is an owner-directed exception: routine unresolved relationship leads
+may remain in `maintenance/relationship-research.json` without an Issue, and relationship updates
+must be committed and pushed directly to `main`. Use an Issue or PR for relationship work only when
+the repository owner explicitly requests one or a protected direct record conflicts with live
+evidence.

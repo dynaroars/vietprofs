@@ -1,7 +1,7 @@
 # Discover Academic Relationships (`discover_academic_relationships.md`)
 
 > **Autonomous Goal Directive (`/goal TASKS/discover_academic_relationships.md`):**
-> Discover and verify academic relationships **between people already listed in `public/data.json`**. Work in resumable batches of 20 roster members and write verified doctoral advisor/advisee relationships, explicitly documented postdoctoral mentorships, and identity-verified coauthorship signals to the public roster relationship database at `public/relationships.json`. Never research or record spouses, relatives, or other personal relationships. Treat automated author matching and genealogy databases as leads rather than proof, retain evidence for every accepted relationship, submit verified roster-data updates through a topic-branch PR, and never commit directly to `main`.
+> Discover and verify academic relationships **between people already listed in `public/data.json`**. Work in resumable batches of 20 roster members and write verified doctoral advisor/advisee relationships, explicitly documented postdoctoral mentorships, and identity-verified coauthorship signals to the public roster relationship database at `public/relationships.json`. Never research or record spouses, relatives, or other personal relationships. Treat automated author matching and genealogy databases as leads rather than proof, retain evidence for every accepted relationship, and commit and push relationship updates directly to `main`.
 
 ---
 
@@ -94,14 +94,12 @@ For `coauthor`, store the two IDs in ascending lexical order, use that same orde
 
 Do not write `unresolved`, `candidate`, or `excluded` records to the public database. Those are not established relationships. If resumable research state is needed, create `maintenance/relationship-research.json` containing only provider identity mappings, processed batch IDs, rejected candidates, unresolved leads, and next actions. It must never be loaded by the public site or described as roster relationship data.
 
-### GitHub issue routing for unresolved review leads
+### Relationship review handoff
 
-When an unresolved lead needs human review, identity resolution, current-appointment verification,
-or an owner decision, open a GitHub Issue and include the lead's name or aliases, seed roster
-member, reported institution, evidence URLs, unresolved reason, and concrete next action. Link the
-Issue from the batch handoff or final report. This applies to older unresolved leads discovered in
-prior scans as well as the current batch. Do not wait for a verified relationship or roster
-addition before filing the Issue, and do not place the unresolved lead in `public/relationships.json`.
+Record unresolved leads, rejected candidates, and next actions in `maintenance/relationship-research.json`.
+Routine unresolved relationship leads do not require a GitHub Issue or PR. Open one only when the
+repository owner explicitly requests external review or when a protected direct record conflicts
+with live evidence. Never place an unresolved lead in `public/relationships.json`.
 
 Information explicitly supplied by the repository owner may set `direct: true`; web research must always use `direct: false`. Protected direct relationship records follow the same correction process as protected direct roster fields: verify them, but open an Issue instead of silently changing or removing them when live evidence conflicts.
 
@@ -152,13 +150,7 @@ Mark the batch complete only after these checks. Continue with the next unproces
 
 ---
 
-## 5. Validation and PR protocol
-
-Use a topic branch such as:
-
-```bash
-git checkout -b task/academic-relationships-batch-[BATCH_NUM]
-```
+## 5. Validation and direct-push protocol
 
 Validate every batch:
 
@@ -169,9 +161,13 @@ npm run build
 git diff --check
 ```
 
-Commit `public/relationships.json`, the non-public research-state file when it changed, and any explicitly requested supporting validation code. Submit a GitHub Pull Request and do not merge it yourself. If protected direct information conflicts with live evidence, or the evidence requires an owner decision, open a GitHub Issue rather than silently changing or removing it.
+Commit and push `public/relationships.json`, the non-public research-state file when it changed,
+and any explicitly requested supporting validation code directly to `main`. Do not create a routine
+PR or Issue for the batch. If protected direct information conflicts with live evidence, or the
+owner explicitly requests a decision, open a GitHub Issue rather than silently changing or removing
+it.
 
-Suggested commit and PR title:
+Suggested commit title:
 
 ```text
 data(relationships): verify academic relationship batch [BATCH_NUM]
