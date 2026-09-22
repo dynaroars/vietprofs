@@ -2449,6 +2449,101 @@
       "identitySignals": [],
       "retrievedAt": "2026-09-19T22:56:46.068Z",
       "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1632": {
+      "name": "Pham Tue Hung Tran",
+      "outcome": "found",
+      "pageUrl": "https://ki.se/en/people/hung-tran",
+      "imageUrl": "https://ki.se/profile-image/hung-tran",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-22T13:59:28.146Z"
+    },
+    "vp-1633": {
+      "name": "Hien Pham",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-22T13:59:32.478Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1634": {
+      "name": "Hang HB Nguyen",
+      "outcome": "needs_review",
+      "pageUrl": "https://www.uef.fi/en/unit/uef-law-school",
+      "imageUrl": "https://www.uef.fi/sites/default/files/styles/contact_card_thumbnail/public/uef_connect_person_photos/77859403865d685084dc358ba394a4d5_profile_file.jpg?h=2a479378&amp;itok=YA9H2cq_",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-22T13:59:37.684Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-1635": {
+      "name": "Dong Nghi Pham",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-22T13:59:49.518Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1636": {
+      "name": "Thi Kim Hue Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-22T13:59:50.729Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1637": {
+      "name": "Katie Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-22T13:59:52.300Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1638": {
+      "name": "Duc Ninh Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-22T13:59:52.868Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1639": {
+      "name": "Tri Hien Viet Huynh",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-22T13:59:53.491Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1640": {
+      "name": "Duc Quang Pham",
+      "outcome": "found",
+      "pageUrl": "https://www.cunef.edu/claustro-e-investigacion/pham-quang-duc/",
+      "imageUrl": "https://images.griddo.cunef.edu/c/cover/q/100/p/center/f/jpeg/pham-quang-duc-3566bc28-725f-44a1-975e-01671397b248",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-22T13:59:54.391Z"
+    },
+    "vp-1643": {
+      "name": "Thien Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-22T13:59:56.217Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     }
   }
 }
