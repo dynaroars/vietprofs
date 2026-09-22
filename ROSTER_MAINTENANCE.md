@@ -33,10 +33,12 @@ Accepted tracks:
 - `Teaching`: full-time, continuing/permanent non-tenure-track teaching faculty, including stable Professor of Practice and equivalent appointments. Confirm permanence from the university's language, such as “full-time,” “continuing appointment,” “non-tenure-track faculty,” or a named teaching promotion ladder. Do not infer it from the title alone.
 - `Research`: a stable, faculty-level or faculty-equivalent research appointment. This includes
   university Research Assistant/Associate/Full Professors, permanent Research Scientists and
-  Principal Scientists when equivalence is documented, and permanent principal investigators,
-  group leaders, researchers, or directors at eligible public or independent nonprofit scholarly
-  research institutes. Do not include postdoctoral, visiting, grant-limited, or otherwise temporary
-  research roles.
+  Principal Scientists when equivalence is documented, and any full-time, permanent, doctorate-holding
+  researcher — principal investigator, group leader, director, or rank-and-file staff scientist alike —
+  at eligible public or independent nonprofit scholarly research institutes. Seniority, independent PI
+  status, or a leadership title is not required once the doctorate and the permanent, career (non-trainee)
+  nature of the appointment are established. Do not include postdoctoral, visiting, grant-limited, or
+  otherwise temporary research roles.
 - `Clinical`: a stable, full-time, continuing clinical-faculty appointment, such as Clinical
   Professor or a documented clinical-faculty ladder. Do not include adjunct or temporary clinical
   teaching.
@@ -54,29 +56,32 @@ Army Research Laboratory/DEVCOM ARL) and independent nonprofit scholarly researc
 Institute, Broad Institute, and HHMI Janelia). University-managed or university-affiliated U.S.
 research centers such as MIT Lincoln Laboratory (an FFRDC) and Johns Hopkins Applied Physics
 Laboratory (a UARC) may also be included when the individual appointment is permanent and
-faculty-equivalent. The appointment must be permanent and faculty-equivalent: a principal investigator,
-group leader, director, or comparable independent researcher rather than support staff or a trainee. Titles
-need not say `Professor`; for example, RIKEN Research Scientists/Unit Leaders and CSIRO Senior or Principal
-Research Scientists/Research Group Leaders may qualify when the appointment is ongoing and independent.
+faculty-equivalent. The appointment must be permanent: any full-time, career (non-trainee, non-term-limited)
+research appointment held by someone with a doctorate qualifies, regardless of seniority, rank, or
+whether the role carries independent PI/leadership status — a rank-and-file Staff Scientist or Research
+Scientist is eligible on the same footing as a Principal Investigator or group leader. Titles
+need not say `Professor`; for example, RIKEN Research Scientists/Unit Leaders and CSIRO Research
+Scientists/Research Group Leaders may qualify at any rank once the appointment is ongoing.
 Corporate research labs,
 including Microsoft Research, are excluded even when the work is scholarly. Government agencies,
 hospitals without a qualifying university appointment, think tanks, advocacy organizations, and
 other non-academic employers remain excluded.
 
 For U.S. federal laboratories, treat the laboratory itself as an eligible public research institute,
-not every person employed there as an academic. Include only career-level Staff, Senior, Distinguished,
-or Principal Researchers/Scientists, Principal Investigators, laboratory/group/branch/division leaders,
-and comparable permanent research appointments. Laboratory Fellow titles qualify only when the source
-shows a continuing career research appointment; postdoctoral, visiting, or fixed-term fellowships do not.
-Ordinary engineers, engineering staff, and technical specialists are excluded by default, particularly
-roles requiring only a bachelor's degree. A Research Engineer may qualify only when the appointment
-clearly entails doctoral-level independent research or faculty-equivalent research leadership (for
-example, Principal/Distinguished Research Engineer, PI, or research-group leader). Also exclude
-contractor-only personnel, postdocs, students, interns, visiting researchers, temporary project staff,
-technical or administrative staff, and funding-agency program officers whose role is not to conduct
-research. The Office of Naval Research (ONR), for example, is primarily a funding and program-management
-agency; its program officers are not roster entries unless they separately hold a qualifying research
-appointment.
+not every person employed there as an academic. Include any full-time, permanent, doctorate-holding
+Researcher/Scientist, Principal Investigator, or laboratory/group/branch/division leader — seniority
+titles (Staff, Senior, Distinguished, Principal) are not required, only that the appointment is
+permanent/career rather than a trainee or term-limited role. Laboratory Fellow titles qualify only when
+the source shows a continuing career research appointment; postdoctoral, visiting, or fixed-term
+fellowships do not. Ordinary engineers, engineering staff, and technical specialists without a doctorate
+are excluded by default, particularly roles requiring only a bachelor's degree. A Research Engineer
+qualifies once the source shows a doctorate and a permanent, career research appointment (independent
+PI/leadership status such as Principal/Distinguished Research Engineer is no longer required, only
+evidence of doctoral-level research work). Also exclude contractor-only personnel, postdocs, students,
+interns, visiting researchers, temporary project staff, technical or administrative staff, and
+funding-agency program officers whose role is not to conduct research. The Office of Naval Research
+(ONR), for example, is primarily a funding and program-management agency; its program officers are not
+roster entries unless they separately hold a qualifying research appointment.
 
 Exclude adjunct, visiting, postdoctoral, affiliate/courtesy, graduate teaching-assistant,
 industry-only, and other term-limited or part-time appointments. Plain `Instructor` requires
