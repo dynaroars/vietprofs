@@ -503,6 +503,9 @@ export const HEALTH_SUBFIELDS = [
 // generic keyword to FIELD_RULES below — whenever a department's correct field depends on which
 // institution it's at, not just the department string.
 const FIELD_OVERRIDES = new Map([
+  // Optical/laser physics and spectroscopy work (nanoparticle thermometry, molecular
+  // spectroscopy); the group name alone carries no field keyword.
+  ['Remote Sensing Group, Physical Measurement Laboratory|National Institute of Standards and Technology', 'Physics & Astronomy'],
   ["École d'actuariat|Université Laval", 'Mathematics'],
   ['E.T.S.I. Aeronáutica y del Espacio|Universidad Politécnica de Madrid', 'Engineering'],
   ['Accelerator Directorate|SLAC National Accelerator Laboratory', 'Physics & Astronomy'],

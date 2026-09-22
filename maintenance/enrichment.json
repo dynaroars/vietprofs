@@ -1589,7 +1589,8 @@
     "vp-1651",
     "vp-1652",
     "vp-1653",
-    "vp-1654"
+    "vp-1654",
+    "vp-1655"
   ],
   "batches": [
     {
@@ -3663,6 +3664,13 @@
       "number": 81,
       "ids": [
         "vp-1654"
+      ],
+      "status": "pending"
+    },
+    {
+      "number": 82,
+      "ids": [
+        "vp-1655"
       ],
       "status": "pending"
     }
@@ -20201,6 +20209,14 @@
       "evidence": [],
       "errors": [],
       "updatedAt": "2026-09-22T20:12:28.000Z"
+    },
+    "vp-1655": {
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-22T20:22:12.000Z"
     }
   }
 }
