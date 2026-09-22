@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "updatedAt": "2026-09-22T15:00:00.000Z",
+  "batches": [
+    {
+      "batchNumber": 1,
+      "rosterIds": [
+        "vp-0001", "vp-0002", "vp-0003", "vp-0004", "vp-0005",
+        "vp-0006", "vp-0007", "vp-0008", "vp-0009", "vp-0010",
+        "vp-0011", "vp-0012", "vp-0013", "vp-0014", "vp-0015",
+        "vp-0016", "vp-0017", "vp-0018", "vp-0019", "vp-0020"
+      ],
+      "startedAt": "2026-09-22T14:45:00.000Z",
+      "completedAt": "2026-09-22T15:00:00.000Z",
+      "status": "complete",
+      "outcomes": [
+        { "rosterId": "vp-0001", "status": "unresolved", "sources": ["https://engineering.catholic.edu/research-and-faculty/faculty-profiles/computer-science/hieu-bui/index.html"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal advisor, mentor, or coauthor evidence." },
+        { "rosterId": "vp-0002", "status": "unresolved", "sources": ["https://www.depts.ttu.edu/cs/faculty/tommy_dang/index.php"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal advisor, mentor, or coauthor evidence." },
+        { "rosterId": "vp-0003", "status": "unresolved", "sources": ["https://tridao.me/"], "nextAction": "Search Stanford dissertation records and roster-internal publication identities for qualifying relationships." },
+        { "rosterId": "vp-0004", "status": "unresolved", "sources": ["https://egr.vcu.edu/directory/thang.dinh/"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal advisor, mentor, or coauthor evidence." },
+        { "rosterId": "vp-0005", "status": "unresolved", "sources": ["https://ece.illinois.edu/about/directory/faculty/minhdo"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal advisor, mentor, or coauthor evidence." },
+        { "rosterId": "vp-0006", "status": "unresolved", "sources": ["https://drexel.edu/cci/about/directory/D/Do-Tiffany-D/"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal advisor, mentor, or coauthor evidence." },
+        { "rosterId": "vp-0007", "status": "unresolved", "sources": ["https://www.cs.wisc.edu/staff/doan-anhai/", "https://pages.cs.wisc.edu/~anhai/"], "nextAction": "Verify the cited doctoral-advisor lead and determine whether the advisor is a current roster member before considering a public edge." },
+        { "rosterId": "vp-0008", "status": "unresolved", "sources": ["https://school.eecs.wsu.edu/directory/wsu-profile/trongnghia.hoang/"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal advisor, mentor, or coauthor evidence." },
+        { "rosterId": "vp-0009", "status": "unresolved", "sources": ["https://website.cs.vt.edu/people/faculty/thang-hoang.html"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal advisor, mentor, or coauthor evidence." },
+        { "rosterId": "vp-0010", "status": "unresolved", "sources": ["https://www.cs.fsu.edu/department/faculty/tvhoang/"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal advisor, mentor, or coauthor evidence." },
+        { "rosterId": "vp-0011", "status": "unresolved", "sources": ["https://profiles.utdallas.edu/huynh"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal advisor, mentor, or coauthor evidence." },
+        { "rosterId": "vp-0012", "status": "unresolved", "sources": ["https://www.uab.edu/cas/computerscience/people/faculty-directory/faculty/truong-son-hy"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal advisor, mentor, or coauthor evidence." },
+        { "rosterId": "vp-0013", "status": "unresolved", "sources": ["https://www.unr.edu/cse/people/hung-la"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal advisor, mentor, or coauthor evidence." },
+        { "rosterId": "vp-0014", "status": "unresolved", "sources": ["https://www.cics.umass.edu/about/directory/hung-le"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal advisor, mentor, or coauthor evidence." },
+        { "rosterId": "vp-0015", "status": "already-covered", "sources": ["https://engineering.uark.edu/electrical-engineering-computer-science/electrical-engineering-faculty/uid/thile/name/Ngan+Le/", "https://scholarworks.uark.edu/cscepub/"], "relationshipIds": ["rel-coauthor-vp-0015-vp-0018"], "nextAction": "No duplicate edge; preserve and reverify the existing public coauthor relationship in a future refresh." },
+        { "rosterId": "vp-0016", "status": "unresolved", "sources": ["https://luddy.iu.edu/people/le-thai.html"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal advisor, mentor, or coauthor evidence." },
+        { "rosterId": "vp-0017", "status": "unresolved", "sources": ["https://computerscience.nmsu.edu/facultydirectory/individual-bio-pages/tuan-le.html"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal advisor, mentor, or coauthor evidence." },
+        { "rosterId": "vp-0018", "status": "already-covered", "sources": ["https://directory.uark.edu/people/khoaluu", "https://scholarworks.uark.edu/cscepub/"], "relationshipIds": ["rel-coauthor-vp-0015-vp-0018"], "nextAction": "No duplicate edge; preserve and reverify the existing public coauthor relationship in a future refresh." },
+        { "rosterId": "vp-0019", "status": "unresolved", "sources": ["https://www.cecs.ucf.edu/faculty/truong-nghiem/"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal advisor, mentor, or coauthor evidence." },
+        { "rosterId": "vp-0020", "status": "unresolved", "sources": ["https://harrisburg.psu.edu/faculty-and-staff/truong-tran-phd"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal advisor, mentor, or coauthor evidence." }
+      ],
+      "verifiedRelationshipIds": [],
+      "notes": "Initial bounded pass. No new public relationship edge met the evidence standard. Existing rel-coauthor-vp-0015-vp-0018 was checked and preserved without duplication."
+    }
+  ]
+}
