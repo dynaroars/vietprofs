@@ -28,6 +28,10 @@ const requestedBatch = Number(process.argv.find((arg) => /^\d+$/.test(arg)) ?? '
 const applying = args.has('--apply');
 const replaceExisting = args.has('--replace');
 const retry = args.has('--retry');
+const explicitIdsArgument = process.argv.find((arg) => arg.startsWith('--ids='));
+const explicitIds = explicitIdsArgument
+  ? new Set(explicitIdsArgument.slice('--ids='.length).split(',').filter((id) => /^vp-\d{4}$/.test(id)))
+  : null;
 
 async function curl(url: string, maxTime: number): Promise<Buffer> {
   const { stdout } = await execFileAsync('curl', ['-L', '--fail', '--silent', '--show-error', '--max-time', String(maxTime), '-A', userAgent, url], { encoding: 'buffer', maxBuffer: 20_000_000 });
@@ -116,7 +120,14 @@ const queue = await loadQueue(people);
 const ledger = await loadLedger();
 if (args.has('--status')) { console.log(JSON.stringify({ queue: queue.reduce<Record<string, number>>((counts, item) => ({ ...counts, [item.status]: (counts[item.status] ?? 0) + 1 }), {}), provenance: Object.keys(ledger.entries).length }, null, 2)); process.exit(0); }
 const audit = args.has('--sample');
-const selectedIds = audit ? await auditIds() : new Set(queue.filter((item) => item.batch === requestedBatch && (item.status === 'pending' || (retry && item.status === 'unresolved'))).map((item) => item.id));
+if (explicitIds) {
+  for (const person of people.filter((candidate) => explicitIds.has(candidate.id))) {
+    if (!queue.some((item) => item.id === person.id)) queue.push({ id: person.id, name: person.name, university: person.university, profileUrl: person.profileUrl, batch: requestedBatch, status: 'pending' });
+  }
+}
+const selectedIds = audit
+  ? await auditIds()
+  : explicitIds ?? new Set(queue.filter((item) => item.batch === requestedBatch && (item.status === 'pending' || (retry && item.status === 'unresolved'))).map((item) => item.id));
 const selected = people.filter((person) => selectedIds.has(person.id) && (!person.portrait || replaceExisting || audit));
 await mkdir(portraitsDir, { recursive: true });
 const report: Array<Record<string, unknown>> = [];
@@ -130,10 +141,10 @@ for (const person of selected) {
   // stored page already exposed an identity-resolved candidate.
   if (candidates.length === 0) for (const page of await discoveryPages(person)) try { candidates.push(...imageCandidates((await curl(page.url, 20)).toString('utf8'), page, person)); } catch { /* use another discovery route */ }
   const candidate = [...new Map(candidates.sort((a, b) => b.score - a.score).map((item) => [item.imageUrl, item])).values()][0];
-  if (!candidate) { ledger.entries[person.id] = { name: person.name, outcome: 'not_found', identitySignals: [], retrievedAt: now, note: 'no identity-verified candidate exposed by inspected pages' }; report.push({ id: person.id, name: person.name, result: 'not_found' }); continue; }
+  if (!candidate) { ledger.entries[person.id] = { name: person.name, outcome: 'not_found', identitySignals: [], retrievedAt: now, note: 'no identity-verified candidate exposed by inspected pages' }; const item = queue.find((queued) => queued.id === person.id); if (item) item.status = 'unresolved'; report.push({ id: person.id, name: person.name, result: 'not_found' }); continue; }
   const level = confidence(candidate);
   const entry: ProvenanceEntry = { name: person.name, outcome: level === 'HIGH' ? 'found' : 'needs_review', pageUrl: candidate.page.url, imageUrl: candidate.imageUrl, sourceType: candidate.page.sourceType, confidence: level, identitySignals: candidate.identitySignals, retrievedAt: now };
-  if (!applying || level !== 'HIGH' || (person.portrait && !replaceExisting)) { ledger.entries[person.id] = { ...entry, outcome: level === 'HIGH' ? 'needs_review' : entry.outcome, note: applying ? 'existing portrait preserved; use --replace after review' : 'dry run; rerun with --apply after review' }; report.push({ id: person.id, name: person.name, result: ledger.entries[person.id].outcome, source: candidate.page.sourceType, confidence: level }); continue; }
+  if (!applying || level !== 'HIGH' || (person.portrait && !replaceExisting)) { ledger.entries[person.id] = { ...entry, outcome: level === 'HIGH' ? 'needs_review' : entry.outcome, note: applying ? 'candidate requires visual review before acceptance' : 'dry run; rerun with --apply after review' }; if (applying) { const item = queue.find((queued) => queued.id === person.id); if (item) item.status = 'unresolved'; } report.push({ id: person.id, name: person.name, result: ledger.entries[person.id].outcome, source: candidate.page.sourceType, confidence: level }); continue; }
   const bytes = await fetchImage(candidate.imageUrl);
   if (!bytes) { ledger.entries[person.id] = { ...entry, outcome: 'not_found', note: 'candidate image could not be downloaded' }; report.push({ id: person.id, name: person.name, result: 'not_found', source: candidate.page.sourceType, confidence: level }); continue; }
   const portrait = join('portraits', `${person.id}-${slug(person.name)}.webp`);
@@ -157,4 +168,4 @@ if (applying) {
   await writeFile(queuePath, `${JSON.stringify(queue, null, 2)}\n`);
   await writeFile(missingPath, `${JSON.stringify(queue.filter((item) => item.status === 'unresolved' || item.status === 'pending'), null, 2)}\n`);
 }
-console.log(JSON.stringify({ mode: audit ? 'sample' : `batch-${requestedBatch}`, applying, results: report }, null, 2));
+console.log(JSON.stringify({ mode: audit ? 'sample' : explicitIds ? `explicit-${explicitIds.size}` : `batch-${requestedBatch}`, applying, results: report }, null, 2));
