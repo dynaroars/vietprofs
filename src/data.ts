@@ -509,6 +509,11 @@ const FIELD_OVERRIDES = new Map([
   // Computational condensed-matter physics (PhD in Physics, ETH Zurich); the directorate name
   // alone carries no field keyword.
   ['Physical and Computational Sciences Directorate|Pacific Northwest National Laboratory', 'Physics & Astronomy'],
+  // Aerospace-engineering PhD applied to offshore wind turbine CFD; the center name alone
+  // carries no field keyword.
+  ['National Wind Technology Center|National Renewable Energy Laboratory', 'Engineering'],
+  // Social epidemiologist; the NIH intramural program name alone carries no field keyword.
+  ['NIH Intramural Research Program|National Institute of Nursing Research', 'Health Sciences'],
   ["École d'actuariat|Université Laval", 'Mathematics'],
   ['E.T.S.I. Aeronáutica y del Espacio|Universidad Politécnica de Madrid', 'Engineering'],
   ['Accelerator Directorate|SLAC National Accelerator Laboratory', 'Physics & Astronomy'],
