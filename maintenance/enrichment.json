@@ -1590,7 +1590,10 @@
     "vp-1652",
     "vp-1653",
     "vp-1654",
-    "vp-1655"
+    "vp-1655",
+    "vp-1656",
+    "vp-1657",
+    "vp-1658"
   ],
   "batches": [
     {
@@ -3671,6 +3674,15 @@
       "number": 82,
       "ids": [
         "vp-1655"
+      ],
+      "status": "pending"
+    },
+    {
+      "number": 83,
+      "ids": [
+        "vp-1656",
+        "vp-1657",
+        "vp-1658"
       ],
       "status": "pending"
     }
@@ -20217,6 +20229,30 @@
       "evidence": [],
       "errors": [],
       "updatedAt": "2026-09-22T20:22:12.000Z"
+    },
+    "vp-1656": {
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-22T20:24:57.000Z"
+    },
+    "vp-1657": {
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-22T20:24:57.000Z"
+    },
+    "vp-1658": {
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-22T20:24:57.000Z"
     }
   }
 }
