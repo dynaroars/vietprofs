@@ -10,7 +10,7 @@
     },
     "vp-0002": {
       "name": "Tommy Dang",
-      "outcome": "needs_review",
+      "outcome": "found",
       "pageUrl": "https://www.depts.ttu.edu/cs/faculty/tommy_dang/index.php",
       "imageUrl": "https://www.depts.ttu.edu/cs/faculty/tommy_dang/Tommy_Dang-600x-cropped.jpg",
       "sourceType": "official_faculty",
@@ -23,7 +23,7 @@
         "stored_roster_url"
       ],
       "retrievedAt": "2026-09-15T03:54:41.348Z",
-      "note": "dry run; rerun with --apply after review"
+      "note": "already has a confirmed portrait from a separate pass; this ledger entry was stale"
     },
     "vp-0027": {
       "name": "Hoang Long Nguyen",
@@ -41,7 +41,7 @@
     },
     "vp-0235": {
       "name": "H. Lan Thao Lam",
-      "outcome": "needs_review",
+      "outcome": "found",
       "pageUrl": "https://www.newschool.edu/parsons/faculty/h-lan-thao-lam/",
       "imageUrl": "https://vcard.newschool.edu/?c=513819",
       "sourceType": "official_faculty",
@@ -54,7 +54,7 @@
         "stored_roster_url"
       ],
       "retrievedAt": "2026-09-15T04:05:34.254Z",
-      "note": "existing portrait preserved; use --replace after review"
+      "note": "already has a confirmed portrait from a separate pass; this ledger entry was stale"
     },
     "vp-0359": {
       "name": "Thuy-Kim Le",
@@ -956,7 +956,7 @@
         "stored_roster_url"
       ],
       "retrievedAt": "2026-09-19T23:02:36.895Z",
-      "note": "existing portrait preserved; use --replace after review"
+      "note": "Google Sites-hosted lh7.googleusercontent.com image returns 403 to unauthenticated fetches even with a referer; needs a browser-rendered fetch or an alternate source page"
     },
     "vp-1184": {
       "name": "Thi-Kien Dao",
@@ -1357,7 +1357,7 @@
     },
     "vp-1305": {
       "name": "Long Doan",
-      "outcome": "needs_review",
+      "outcome": "found",
       "pageUrl": "http://longdoan.net",
       "imageUrl": "https://scholar.googleusercontent.com/citations?view_op=view_photo&user=adnDhxUAAAAJ&citpid=6",
       "sourceType": "personal_homepage",
@@ -1370,7 +1370,7 @@
         "stored_roster_url"
       ],
       "retrievedAt": "2026-09-19T23:10:15.006Z",
-      "note": "existing portrait preserved; use --replace after review"
+      "note": "manually reviewed and confirmed correct single-person portrait from official/identity-resolved page"
     },
     "vp-1307": {
       "name": "Binh Nghiem-Phu",
@@ -1591,7 +1591,7 @@
     },
     "vp-1359": {
       "name": "Kien Trinh",
-      "outcome": "needs_review",
+      "outcome": "found",
       "pageUrl": "https://experts.mcmaster.ca/people/trinhk",
       "imageUrl": "https://experts.mcmaster.ca/_next/image?url=http%3A%2F%2Fproxy%3A8080%2Fphotos%2Ftrinhk.jpg&w=384&q=75",
       "sourceType": "official_faculty",
@@ -1604,7 +1604,7 @@
         "stored_roster_url"
       ],
       "retrievedAt": "2026-09-19T23:15:18.341Z",
-      "note": "existing portrait preserved; use --replace after review"
+      "note": "manually reviewed and confirmed correct single-person portrait from official/identity-resolved page"
     },
     "vp-1362": {
       "name": "Le Mai Tu",
@@ -1904,7 +1904,7 @@
         "stored_roster_url"
       ],
       "retrievedAt": "2026-09-22T14:19:19.251Z",
-      "note": "candidate requires visual review before acceptance"
+      "note": "ULiege ImageServletTrombi endpoint redirects to a login/session-gated page for unauthenticated fetches; needs a browser-rendered fetch or an alternate source page"
     },
     "vp-1434": {
       "name": "Huyen N. Dinh",
@@ -2209,7 +2209,7 @@
     },
     "vp-1529": {
       "name": "Bon Trinh",
-      "outcome": "needs_review",
+      "outcome": "found",
       "pageUrl": "https://med.virginia.edu/pathology/contact/bon-trinh-ph-d/",
       "imageUrl": "https://med.virginia.edu/pathology/wp-content/uploads/sites/290/2022/10/Trinh.jpg",
       "sourceType": "official_faculty",
@@ -2222,7 +2222,7 @@
         "stored_roster_url"
       ],
       "retrievedAt": "2026-09-22T14:21:09.839Z",
-      "note": "candidate requires visual review before acceptance"
+      "note": "manually reviewed and confirmed correct single-person portrait from official/identity-resolved page"
     },
     "vp-1530": {
       "name": "Hieu Trung Nguyen",
@@ -2233,7 +2233,7 @@
     },
     "vp-1533": {
       "name": "Minh Hieu Nguyen",
-      "outcome": "needs_review",
+      "outcome": "found",
       "pageUrl": "https://lcoms.univ-lorraine.fr/membre/nguyen-minh-hieu",
       "imageUrl": "https://lcoms.univ-lorraine.fr/sites/default/files/2025-09/Hieu.jpg",
       "sourceType": "official_faculty",
@@ -2245,7 +2245,7 @@
         "stored_roster_url"
       ],
       "retrievedAt": "2026-09-22T14:21:22.583Z",
-      "note": "candidate requires visual review before acceptance"
+      "note": "manually reviewed and confirmed correct single-person portrait from official/identity-resolved page"
     },
     "vp-1535": {
       "name": "Thai Nguyen",
@@ -2409,7 +2409,7 @@
     },
     "vp-1634": {
       "name": "Hang HB Nguyen",
-      "outcome": "needs_review",
+      "outcome": "found",
       "pageUrl": "https://www.uef.fi/en/unit/uef-law-school",
       "imageUrl": "https://www.uef.fi/sites/default/files/styles/contact_card_thumbnail/public/uef_connect_person_photos/77859403865d685084dc358ba394a4d5_profile_file.jpg?h=2a479378&amp;itok=YA9H2cq_",
       "sourceType": "official_faculty",
@@ -2421,7 +2421,7 @@
         "stored_roster_url"
       ],
       "retrievedAt": "2026-09-22T14:17:03.437Z",
-      "note": "candidate requires visual review before acceptance"
+      "note": "manually reviewed and confirmed correct single-person portrait from official/identity-resolved page"
     },
     "vp-1635": {
       "name": "Dong Nghi Pham",
