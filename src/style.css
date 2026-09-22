@@ -682,21 +682,14 @@ h1 {
 
 .result-row {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: stretch;
   gap: 0.75rem;
   margin-bottom: 1rem;
-  flex-wrap: wrap;
 }
 
 .result-row .result-count {
   margin-bottom: 0;
-  flex: 1;
-  min-width: 240px;
-}
-
-.result-row .submission-link {
-  margin-left: auto;
 }
 
 .result-row .header-links {
@@ -704,11 +697,6 @@ h1 {
   flex-wrap: wrap;
   justify-content: flex-end;
   gap: 0.5rem;
-  margin-left: auto;
-}
-
-.result-row .header-links .submission-link {
-  margin-left: 0;
 }
 
 .paper-reference {
@@ -1291,6 +1279,39 @@ a.entry-name:focus-visible {
 
 .subpage .man-section li + li {
   margin-top: 0.3rem;
+}
+
+.subpage .connection-list {
+  list-style: none;
+}
+
+.subpage .connection-item {
+  padding: 0.75rem 0;
+}
+
+.subpage .connection-item:first-child {
+  padding-top: 0;
+}
+
+.subpage .connection-person {
+  font-weight: 700;
+}
+
+.subpage .connection-kind {
+  display: block;
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+}
+
+.subpage .connection-sources,
+.subpage .connection-works {
+  margin-top: 0.3rem;
+  font-size: var(--text-xs);
+}
+
+.subpage .connection-works ul {
+  margin-top: 0.35rem;
+  padding-left: 1.2rem;
 }
 
 .subpage .tags {
@@ -2984,6 +3005,55 @@ button.chart-row-btn:hover {
   border-color: var(--accent);
 }
 
+.browser-metric-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 0.75rem;
+}
+
+.browser-metric-card {
+  min-width: 0;
+  padding: 0.9rem 1rem;
+  background: var(--tag-bg, rgba(255, 255, 255, 0.03));
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: var(--radius-sm, 4px);
+}
+
+.browser-metric-label,
+.browser-metric-detail {
+  margin: 0;
+  color: var(--text-muted, #64748b);
+  font-size: var(--text-xs, 0.75rem);
+}
+
+.browser-metric-value {
+  margin: 0.25rem 0;
+  font-family: var(--font-mono);
+  font-size: clamp(1.45rem, 4vw, 2rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--text-primary);
+}
+
+.stats-status-notice {
+  margin: 1rem 0;
+  padding: 0.8rem 1rem;
+  border-left: 4px solid var(--accent-color, #2563eb);
+  background: var(--tag-bg, rgba(37, 99, 235, 0.06));
+  font-size: var(--text-sm, 0.875rem);
+}
+
+.stats-status-warning {
+  border-left-color: #d97706;
+}
+
+.stats-footnote {
+  margin: 0.75rem 0 0;
+  color: var(--text-muted, #64748b);
+  font-size: var(--text-xs, 0.75rem);
+  line-height: 1.5;
+}
+
 .stats-overview-table td {
   padding: 0.65rem 0.5rem;
 }
@@ -3564,6 +3634,90 @@ button.chart-row-btn:hover {
   color: var(--text-secondary);
   margin: 0;
   line-height: 1.5;
+}
+
+.html-inventory-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: 1rem;
+  background: var(--tag-bg, rgba(0, 0, 0, 0.03));
+  border-radius: var(--radius-sm, 6px);
+}
+
+.html-inventory-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.html-inventory-title {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: var(--text-base);
+}
+
+.html-inventory-desc {
+  margin: 0.2rem 0 0;
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+}
+
+.html-inventory-total {
+  color: var(--accent-color);
+  font-family: var(--font-mono);
+  font-size: var(--text-lg);
+  white-space: nowrap;
+}
+
+.html-inventory-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+.html-inventory-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.65rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+}
+
+.html-inventory-item strong {
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: var(--text-lg);
+}
+
+.html-inventory-item span,
+.html-standalone-links {
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+}
+
+.html-standalone-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.7rem;
+}
+
+.html-standalone-links a {
+  color: var(--accent-color);
+  text-underline-offset: 2px;
+}
+
+@media (max-width: 700px) {
+  .html-inventory-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .html-inventory-header {
+    flex-direction: column;
+  }
 }
 
 .completeness-grid {

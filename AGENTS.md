@@ -27,3 +27,18 @@ Only another direct update may replace a protected value or remove its protectio
 formatting and field mapping may be applied while processing the direct update.
 
 When updating names or processing university profile changes where a scholar's published surname has changed (e.g. to a non-Vietnamese surname), retain the original Vietnamese surname in `name` and `vietnameseName` (e.g., `First [Vietnamese Surname] [New Surname]`) as per `ROSTER_MAINTENANCE.md` so that the entry's Vietnamese lineage and discovery context are preserved.
+
+## Human review handoff
+
+If any automated maintenance, scouting, audit, portrait recovery, relationship discovery, or
+similar workflow produces an item that requires human review, identity resolution, an owner
+decision, or a manual confirmation, create a GitHub Issue for it. Include the relevant roster ID
+or candidate name, evidence and source URLs, the reason review is required, and the concrete next
+action. Do not leave review-required items only in local maintenance files; do not apply them to
+public roster or relationship data until the review is resolved.
+
+Relationship-discovery work is an owner-directed exception: routine unresolved relationship leads
+may remain in `maintenance/relationship-research.json` without an Issue, and relationship updates
+must be committed and pushed directly to `main`. Use an Issue or PR for relationship work only when
+the repository owner explicitly requests one or a protected direct record conflicts with live
+evidence.

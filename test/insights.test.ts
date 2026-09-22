@@ -56,6 +56,11 @@ test('renderHealthPanel renders complete health dashboard HTML without undefined
   assert.ok(html.includes('System Health, Verification &amp; Codebase Status'));
   assert.ok(html.includes('dynaroars/vietprofs'));
   assert.ok(html.includes('abc1234'));
+  assert.ok(html.includes('Generated HTML Inventory'));
+  assert.ok(html.includes('6 pages'));
+  assert.match(html, /href="\/stats\.html"/);
+  assert.match(html, /href="\/submit\.html"/);
+  assert.match(html, /href="\/404\.html"/);
 
   assert.ok(!html.includes('undefined'), 'health panel contains undefined');
   assert.ok(!html.includes('null'), 'health panel contains null');

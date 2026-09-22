@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import test from 'node:test';
-import { fieldPath, fieldSlug, personPath, regionPath, regionSlug, type Roster } from '../src/data.ts';
+import { fieldPath, fieldRegionPath, fieldSlug, hasEnoughPeopleForRosterHub, personPath, regionPath, regionSlug, type Roster } from '../src/data.ts';
 
 const roster = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8')) as Roster;
 
@@ -21,6 +21,12 @@ test('discipline and region hub paths generate clean canonical filenames', () =>
   assert.equal(regionPath('North America'), 'regions/north-america.html');
   assert.equal(regionSlug('United States'), 'united-states');
   assert.equal(regionPath('United States'), 'regions/united-states.html');
+  assert.equal(
+    fieldRegionPath('Health Sciences', 'Japan'),
+    'regions/japan/health-sciences.html',
+  );
+  assert.equal(hasEnoughPeopleForRosterHub(2), false);
+  assert.equal(hasEnoughPeopleForRosterHub(3), true);
 });
 
 test('generated profile pages use the same stylesheet source as the directory', async () => {
@@ -49,6 +55,12 @@ test('generated profile pages use the same stylesheet source as the directory', 
   assert.match(generator, /<svg viewBox="0 0 24 24" aria-hidden="true">\$\{icon\}<\/svg>/);
   assert.match(generator, />SYNOPSIS</);
   assert.match(generator, />ROSTER METADATA</);
+  assert.match(generator, />SEE ALSO</);
+  assert.match(generator, />CONNECTIONS</);
+  assert.match(generator, /connectionsFor/);
+  assert.match(generator, /public\/relationships\.json/);
+  assert.match(generator, /class="links" aria-label="Other VietProfs destinations"/);
+  assert.doesNotMatch(generator, /class="man-footer"/);
   assert.match(generator, />ABOUT</);
   assert.match(generator, /view raw record/);
   assert.match(generator, /class="section-note research-overview-note"/);
