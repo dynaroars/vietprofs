@@ -517,6 +517,9 @@ const FIELD_OVERRIDES = new Map([
   // Astrophysicist (galaxy formation, cosmological simulations) stationed at NASA Goddard; the
   // consortium/center name alone carries no field keyword.
   ['CRESST II, stationed at NASA Goddard Space Flight Center|University of Maryland, Baltimore County', 'Physics & Astronomy'],
+  // Electrical-engineering PhD, power-systems modeling and grid optimization; the group name
+  // alone carries no field keyword.
+  ['Grid and Electricity Infrastructure|Oak Ridge National Laboratory', 'Engineering'],
   ["École d'actuariat|Université Laval", 'Mathematics'],
   ['E.T.S.I. Aeronáutica y del Espacio|Universidad Politécnica de Madrid', 'Engineering'],
   ['Accelerator Directorate|SLAC National Accelerator Laboratory', 'Physics & Astronomy'],
