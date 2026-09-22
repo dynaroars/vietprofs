@@ -2819,17 +2819,31 @@
     },
     "vp-1660": {
       "name": "Quynh T. Nguyen",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-22T22:18:19.315Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://irp.nih.gov/pi/quynh-nguyen",
+      "imageUrl": "https://i.irp.nih.gov/pi/2004392243.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-22T22:22:10.000Z",
+      "note": "og-image blocked earlier; direct profile__image src on official IRP page confirmed manually"
     },
     "vp-1661": {
       "name": "Nhut Truong",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-22T22:18:19.688Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://science.gsfc.nasa.gov/sci/bio/xuannhut.truong",
+      "imageUrl": "https://science.gsfc.nasa.gov/images/Photos/115263/1712024213954_IMG_0361.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-22T22:22:10.000Z",
+      "note": "og:image with alt text naming the scholar on official NASA Goddard bio page"
     },
     "vp-1662": {
       "name": "Anh Ngo",
@@ -2872,10 +2886,17 @@
     },
     "vp-1665": {
       "name": "Tuan H. Vu",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-22T22:18:31.299Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://science.jpl.nasa.gov/people/vu/",
+      "imageUrl": "https://science.jpl.nasa.gov/media/images/TuanVu.max-255x355.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-22T22:22:10.000Z",
+      "note": "alt=\"Photo of Tuan Vu\" on official JPL Science people page (jpl.nasa.gov/site/research blocked; used science.jpl.nasa.gov mirror)"
     },
     "vp-1666": {
       "name": "Thai M. Hoang",
@@ -2903,17 +2924,31 @@
     },
     "vp-1668": {
       "name": "Joe T. Nguyen",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-22T22:18:33.370Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://irp.nih.gov/pi/joe-nguyen",
+      "imageUrl": "https://i.irp.nih.gov/pi/2002782375.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-22T22:22:10.000Z",
+      "note": "profile__image src on official IRP page confirmed manually"
     },
     "vp-1669": {
       "name": "Rosa Nguyen",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-22T22:18:33.665Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://irp.nih.gov/pi/rosa-nguyen",
+      "imageUrl": "https://i.irp.nih.gov/pi/2001337950.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-22T22:22:10.000Z",
+      "note": "profile__image src on official IRP page confirmed manually"
     }
   }
 }
