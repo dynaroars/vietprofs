@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-22T15:00:00.000Z",
+  "updatedAt": "2026-09-22T15:20:00.000Z",
   "batches": [
     {
       "batchNumber": 1,
@@ -37,6 +37,42 @@
       ],
       "verifiedRelationshipIds": [],
       "notes": "Initial bounded pass. No new public relationship edge met the evidence standard. Existing rel-coauthor-vp-0015-vp-0018 was checked and preserved without duplication."
+    },
+    {
+      "batchNumber": 2,
+      "rosterIds": [
+        "vp-0021", "vp-0022", "vp-0023", "vp-0024", "vp-0025",
+        "vp-0026", "vp-0027", "vp-0028", "vp-0029", "vp-0030",
+        "vp-0031", "vp-0032", "vp-0033", "vp-0034", "vp-0035",
+        "vp-0036", "vp-0037", "vp-0038", "vp-0039", "vp-0040"
+      ],
+      "startedAt": "2026-09-22T15:05:00.000Z",
+      "completedAt": "2026-09-22T15:20:00.000Z",
+      "status": "complete",
+      "outcomes": [
+        { "rosterId": "vp-0021", "status": "unresolved", "sources": ["https://eng.auburn.edu/directory/azn0044"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal advisor, mentor, or coauthor evidence." },
+        { "rosterId": "vp-0022", "status": "unresolved", "sources": ["https://bsac.berkeley.edu/people/clark-t-c-nguyen"], "nextAction": "Search Berkeley dissertation records and identity-resolved publications for roster-internal relationships." },
+        { "rosterId": "vp-0023", "status": "unresolved", "sources": ["https://www.uwyo.edu/eecs/faculty-staff/faculty/duong-nguyen/index.html"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal relationships." },
+        { "rosterId": "vp-0024", "status": "unresolved", "sources": ["https://www.khoury.northeastern.edu/people/huy-le-nguyen/"], "nextAction": "Search Princeton dissertation records and identity-resolved publications for roster-internal relationships." },
+        { "rosterId": "vp-0025", "status": "unresolved", "sources": ["https://engineering.tamu.edu/cse/profiles/Nguyen-Khanh.html"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal relationships." },
+        { "rosterId": "vp-0026", "status": "unresolved", "sources": ["https://umimpact.umt.edu/en/persons/anh-nguyen/"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal relationships." },
+        { "rosterId": "vp-0027", "status": "unresolved", "sources": ["https://engineering.louisville.edu/faculty/hoang-long-nguyen/"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal relationships." },
+        { "rosterId": "vp-0028", "status": "unresolved", "sources": ["https://udayton.edu/directory/engineering/computerscience/nguyen-luan.php"], "nextAction": "Verify possible University of Dayton coauthor leads against at least two qualifying works and identity-resolved author records." },
+        { "rosterId": "vp-0029", "status": "unresolved", "sources": ["https://www.towson.edu/fcsm/departments/computerinfosci/facultystaff/nnguyen.html"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal relationships." },
+        { "rosterId": "vp-0030", "status": "unresolved", "sources": ["https://udayton.edu/directory/engineering/computerscience/nguyen-tam.php"], "nextAction": "Verify possible University of Dayton coauthor leads against at least two qualifying works and identity-resolved author records." },
+        { "rosterId": "vp-0031", "status": "unresolved", "sources": ["https://cas.uoregon.edu/directory/computer-science/all/tnguye11", "https://ix.cs.uoregon.edu/~thanhhng/"], "nextAction": "Verify the Oregon coauthor lead against at least two qualifying works and identity-resolved author records." },
+        { "rosterId": "vp-0032", "status": "unresolved", "sources": ["https://www.gmu.edu/profiles/tvn"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal relationships." },
+        { "rosterId": "vp-0033", "status": "unresolved", "sources": ["https://cas.uoregon.edu/directory/computer-science/all/thienn", "https://ix.cs.uoregon.edu/~thien/"], "nextAction": "Verify the Oregon coauthor lead against at least two qualifying works and identity-resolved author records." },
+        { "rosterId": "vp-0034", "status": "unresolved", "sources": ["https://engineering.oregonstate.edu/about/people/thinh-nguyen"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal relationships." },
+        { "rosterId": "vp-0035", "status": "unresolved", "sources": ["https://www.cs.rutgers.edu/people/professors/details/thu-nguyen"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal relationships." },
+        { "rosterId": "vp-0036", "status": "unresolved", "sources": ["https://profiles.utdallas.edu/tien.n.nguyen"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal relationships." },
+        { "rosterId": "vp-0037", "status": "unresolved", "sources": ["https://eng.auburn.edu/directory/tcn0015"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal relationships." },
+        { "rosterId": "vp-0038", "status": "unresolved", "sources": ["https://ksuweb.kennesaw.edu/~tnguy360/"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal relationships." },
+        { "rosterId": "vp-0039", "status": "unresolved", "sources": ["https://www.cics.umass.edu/about/directory/vp-nguyen"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal relationships." },
+        { "rosterId": "vp-0040", "status": "unresolved", "sources": ["https://lsa.umich.edu/stat/people/faculty/xuanlong.html"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal relationships." }
+      ],
+      "verifiedRelationshipIds": [],
+      "notes": "Bounded pass found a possible Oregon coauthor cluster involving vp-0031 and vp-0033, but the available results did not establish two qualifying shared works with identity-resolved authorship. No new public relationship edge was added."
     }
   ]
 }
