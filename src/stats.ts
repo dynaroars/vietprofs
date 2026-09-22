@@ -1,667 +1,220 @@
 import './style.css';
 import { escapeHtml } from './utils.ts';
-import { loadRoster, type RosterEntry } from './data.ts';
 
-export interface DailyStat {
+interface DailyBrowserStat {
   date: string;
-  requests: number;
-  pageViews: number;
-  visits?: number;
-  uniques?: number;
-  assetLoads?: number;
+  pageViews: number | null;
+  visits: number | null;
+  status: 'complete' | 'partial' | 'missing';
 }
 
-export interface CountryStat {
-  code: string;
-  name: string;
-  flag: string;
-  count: number;
-  visits?: number;
-  pct?: number;
-}
-
-export interface PageStat {
-  path: string;
-  label: string;
-  count: number;
-}
-
-export interface PageBreakdown {
-  profileViews: number;
-  profilePct: number;
-  mainViews: number;
-  submitViews: number;
-  statsViews: number;
-  otherViews: number;
-  totalViews: number;
-}
-
-export interface BaselineStat {
-  avgVisitsPerDay: number;
-  medianVisitsPerDay: number;
-  avgPageViewsPerDay: number;
-}
-
-export interface StatsResponse {
+interface BrowserStatsResponse {
+  schemaVersion: 3;
+  source: 'cloudflare-rum';
   generatedAt: string;
-  dataPeriodDays: number;
-  breakdownPeriodDays?: number;
-  retentionNotice?: string;
-  coverage?: {
-    last7Days: number;
-    last30Days: number;
-  };
-  today: {
-    date?: string;
-    requests: number;
-    pageViews: number;
-    visits?: number;
-    uniques?: number;
-  };
-  last7Days: {
-    requests: number;
-    pageViews: number;
-    visits?: number;
-    uniques?: number;
-    assetLoads?: number;
-  };
-  last30Days: {
-    requests: number;
-    pageViews: number;
-    visits?: number;
-    uniques?: number;
-  };
-  baseline?: BaselineStat;
-  browserLikeTrafficPct?: number;
-  countriesCount: number;
-  topCountries: CountryStat[];
-  topCountriesToday?: CountryStat[];
-  topPages: PageStat[];
-  topPagesToday?: PageStat[];
-  pageBreakdown?: PageBreakdown;
-  daily: DailyStat[];
+  servedAt?: string;
+  timezone: 'UTC';
+  status: 'ok' | 'stale' | 'demo';
+  stale: boolean;
+  notice?: string;
+  measurementStartedAt: string | null;
+  coverage: { firstDate: string | null; lastCompleteDate: string; completeDays7: number; availableDays30: number };
+  today: { date: string; pageViews: number | null; visits: number | null; complete: false; collected: boolean };
+  last7Complete: { pageViews: number; visits: number; days: number; avgPageViews: number | null; avgVisits: number | null };
+  last30Available: { pageViews: number; visits: number; days: number };
+  daily: DailyBrowserStat[];
+  countries: Array<{ code: string; name: string; flag: string; pageViews: number; pct: number }>;
+  categories: Array<{ key: string; label: string; pageViews: number; pct: number }>;
+  categoryPeriod: { startDate: string; endDate: string; days: number };
+  historicalTransition: { newSeriesStartedAt: string | null; oldSeriesRetainedInternally: true };
   isDemo?: boolean;
 }
 
 const app = document.getElementById('app')!;
+const base = import.meta.env.BASE_URL;
 
-function formatNumber(num: number): string {
-  return new Intl.NumberFormat('en-US').format(num);
+function formatNumber(value: number | null): string {
+  return value === null ? '—' : new Intl.NumberFormat('en-US', { maximumFractionDigits: 1 }).format(value);
 }
 
-function formatDateLabel(dateStr: string): string {
-  if (!dateStr) return '';
-  const parts = dateStr.split('-');
-  if (parts.length < 3) return dateStr;
-  const date = new Date(Number(parts[0]), Number(parts[1]) - 1, Number(parts[2]));
-  return new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric' }).format(date);
+function formatDate(value: string | null, withYear = true): string {
+  if (!value) return 'Not available';
+  const date = new Date(`${value}T00:00:00Z`);
+  return new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: withYear ? 'numeric' : undefined, timeZone: 'UTC' }).format(date);
 }
 
-function formatDateFull(dateStr: string): string {
-  if (!dateStr) return '';
-  const parts = dateStr.split('-');
-  if (parts.length < 3) return dateStr;
-  const date = new Date(Number(parts[0]), Number(parts[1]) - 1, Number(parts[2]));
-  return new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric' }).format(date);
-}
-
-function formatSnapshotTimestamp(timestamp: string): string {
-  const date = new Date(timestamp);
+function formatTimestamp(value: string): string {
+  const date = new Date(value);
   if (Number.isNaN(date.getTime())) return 'Unknown time';
-  const formatted = new Intl.DateTimeFormat('en-US', {
-    dateStyle: 'medium',
-    timeStyle: 'medium',
-    timeZone: 'UTC',
-  }).format(date);
-  return `${formatted} UTC`;
+  return `${new Intl.DateTimeFormat('en-US', { dateStyle: 'medium', timeStyle: 'medium', timeZone: 'UTC' }).format(date)} UTC`;
 }
 
-function visitCount(stat: { visits?: number; uniques?: number; requests?: number } | undefined): number {
-  return stat?.visits ?? stat?.uniques ?? 0;
-}
-
-function coverageLabel(actual: number, requested: number): string {
-  return `${actual} of ${requested} days collected`;
-}
-
-function pageHref(path: string): string | null {
-  if (!path.startsWith('/') || path.startsWith('//')) return null;
-  const baseUrl = import.meta.env.BASE_URL;
-  return `${baseUrl}${path === '/' ? '' : path.slice(1)}`;
-}
-
-function formatAvgPerDay(count: number, periodDays: number): string {
-  if (periodDays <= 0) return '0';
-  const val = count / periodDays;
-  if (val >= 10) return formatNumber(Math.round(val));
-  return val.toFixed(1);
-}
-
-function consolidateTopPages(pages: PageStat[]): PageStat[] {
-  const map = new Map<string, PageStat>();
-  for (const p of pages || []) {
-    const canonicalPath = (p.path === '/' || p.path === '/index.html') ? '/index.html' : p.path;
-    const existing = map.get(canonicalPath);
-    if (existing) {
-      existing.count += p.count;
-    } else {
-      map.set(canonicalPath, {
-        path: canonicalPath,
-        label: canonicalPath === '/index.html' ? 'Main Directory' : p.label,
-        count: p.count,
-      });
-    }
-  }
-  return Array.from(map.values()).sort((a, b) => b.count - a.count);
-}
-
-function renderRunningHead() {
-  const base = import.meta.env.BASE_URL;
+function runningHead(): string {
   return `<p class="man-running-head">
-          <span>STATS(1)</span>
-          <span class="man-running-title"><a class="man-running-brand" href="${base}index.html" aria-label="VietProfs directory"><img class="brand-logo" src="${base}vietprofs-bamboo-v.svg" alt="" width="20" height="20"><span class="man-running-label">VietProfs Statistics &amp; Insights</span></a></span>
-          <span>STATS(1)</span>
-        </p>`;
+    <span>STATS(1)</span>
+    <span class="man-running-title"><a class="man-running-brand" href="${base}index.html" aria-label="VietProfs directory"><img class="brand-logo" src="${base}vietprofs-bamboo-v.svg" alt="" width="20" height="20"><span class="man-running-label">VietProfs Statistics &amp; Insights</span></a></span>
+    <span>STATS(1)</span>
+  </p>`;
 }
 
-function calculateMedian(numbers: number[]): number {
-  if (numbers.length === 0) return 0;
-  const sorted = [...numbers].sort((a, b) => a - b);
-  const middle = Math.floor(sorted.length / 2);
-  if (sorted.length % 2 === 0) {
-    return Math.round((sorted[middle - 1] + sorted[middle]) / 2);
-  }
-  return sorted[middle];
+function footer(): string {
+  return `<footer class="man-footer"><p>
+    <a href="${base}index.html">← Back to Directory</a> ·
+    <a href="${base}index.html?view=health">Data Health &amp; Completeness</a> ·
+    <a href="${base}index.html?view=insights">Diaspora Insights &amp; Pathways</a> ·
+    <a href="${base}submit.html">Submit / Update</a> ·
+    <a href="https://github.com/dynaroars/vietprofs" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </p></footer>`;
 }
 
-function resolvePageLabel(path: string, fallbackLabel: string, rosterMap: Map<string, RosterEntry>): string {
-  if (!path || path === '/' || path === '/index.html') return 'Main Directory';
-  if (path === '/submit.html') return 'Submit / Update Entry';
-  if (path === '/stats.html') return 'Visitor Statistics';
-
-  if (path.startsWith('/people/')) {
-    const id = path.replace('/people/', '').replace('.html', '');
-    const person = rosterMap.get(id);
-    if (person) {
-      const vName = person.vietnameseName ? ` (${person.vietnameseName})` : '';
-      return `${person.name}${vName} — ${person.university}`;
-    }
-    return fallbackLabel || `Profile ${id}`;
-  }
-
-  return fallbackLabel || path;
+function renderMetrics(data: BrowserStatsResponse): string {
+  const countries = data.countries.filter(country => country.pageViews > 0).length;
+  const cards = [
+    ['Browser page views today', formatNumber(data.today.collected ? data.today.pageViews : null), 'In progress · UTC'],
+    ['Average daily page views', formatNumber(data.last7Complete.avgPageViews), `${data.last7Complete.days} complete day${data.last7Complete.days === 1 ? '' : 's'}`],
+    ['Browser page views', formatNumber(data.last30Available.pageViews), `${data.last30Available.days} collected day${data.last30Available.days === 1 ? '' : 's'} in the 30-day window`],
+    ['Browser visits', formatNumber(data.last7Complete.visits), `${data.last7Complete.days} complete day${data.last7Complete.days === 1 ? '' : 's'} · not unique people`],
+    ['Countries reached', formatNumber(countries), `${data.last7Complete.days} complete day${data.last7Complete.days === 1 ? '' : 's'}`],
+  ];
+  return `<div class="browser-metric-grid">${cards.map(([label, value, detail]) => `<article class="browser-metric-card">
+    <p class="browser-metric-label">${escapeHtml(label)}</p>
+    <p class="browser-metric-value">${escapeHtml(value)}</p>
+    <p class="browser-metric-detail">${escapeHtml(detail)}</p>
+  </article>`).join('')}</div>`;
 }
 
-function renderTrafficChart(daily: DailyStat[], todayStr: string): string {
-  if (!daily || daily.length === 0) {
-    return '<p class="no-data">No traffic chart data available.</p>';
-  }
-
+function renderChart(daily: DailyBrowserStat[]): string {
+  const available = daily.filter(row => row.pageViews !== null);
+  if (!available.length) return '<p class="no-data">No browser-traffic days have been collected yet.</p>';
   const width = 800;
-  const height = 220;
-  const paddingLeft = 50;
-  const paddingRight = 20;
-  const paddingTop = 20;
-  const paddingBottom = 40;
-
-  const chartWidth = width - paddingLeft - paddingRight;
-  const chartHeight = height - paddingTop - paddingBottom;
-
-  const maxVal = Math.max(10, ...daily.map((d) => Math.max(d.pageViews || 0, visitCount(d))));
-  const yTicks = 4;
-
-  const pointsVisits: { x: number; y: number; date: string; val: number }[] = [];
-  const pointsViews: { x: number; y: number; date: string; val: number }[] = [];
-  const pointsAssets: { x: number; y: number; date: string; val: number }[] = [];
-
-  daily.forEach((d, i) => {
-    const x = paddingLeft + (i / Math.max(1, daily.length - 1)) * chartWidth;
-    const yVisits = paddingTop + chartHeight - (visitCount(d) / maxVal) * chartHeight;
-    const yViews = paddingTop + chartHeight - ((d.pageViews || 0) / maxVal) * chartHeight;
-    const yAssets = paddingTop + chartHeight - ((d.assetLoads || 0) / maxVal) * chartHeight;
-
-    pointsVisits.push({ x, y: yVisits, date: d.date, val: visitCount(d) });
-    pointsViews.push({ x, y: yViews, date: d.date, val: d.pageViews || 0 });
-    pointsAssets.push({ x, y: yAssets, date: d.date, val: d.assetLoads || 0 });
-  });
-
-  const pathVisits = pointsVisits.map((p, i) => `${i === 0 ? 'M' : 'L'} ${p.x.toFixed(1)} ${p.y.toFixed(1)}`).join(' ');
-  const pathViews = pointsViews.map((p, i) => `${i === 0 ? 'M' : 'L'} ${p.x.toFixed(1)} ${p.y.toFixed(1)}`).join(' ');
-  const hasAssetData = daily.some(d => (d.assetLoads || 0) > 0);
-  const pathAssets = pointsAssets.map((p, i) => `${i === 0 ? 'M' : 'L'} ${p.x.toFixed(1)} ${p.y.toFixed(1)}`).join(' ');
-
-  const areaVisits = `${pathVisits} L ${pointsVisits[pointsVisits.length - 1].x.toFixed(1)} ${(paddingTop + chartHeight).toFixed(1)} L ${pointsVisits[0].x.toFixed(1)} ${(paddingTop + chartHeight).toFixed(1)} Z`;
-
-  let gridLines = '';
-  for (let i = 0; i <= yTicks; i++) {
-    const val = Math.round((maxVal / yTicks) * i);
-    const y = paddingTop + chartHeight - (i / yTicks) * chartHeight;
-    gridLines += `
-      <line x1="${paddingLeft}" y1="${y}" x2="${width - paddingRight}" y2="${y}" stroke="currentColor" stroke-opacity="0.1" stroke-dasharray="3 3" />
-      <text x="${paddingLeft - 8}" y="${y + 4}" font-size="11" text-anchor="end" fill="currentColor" opacity="0.6">${formatNumber(val)}</text>
-    `;
-  }
-
-  let xAxisLabels = '';
-  const step = Math.max(1, Math.floor(daily.length / 5));
-  daily.forEach((d, i) => {
-    if (i % step === 0 || i === daily.length - 1) {
-      const x = paddingLeft + (i / Math.max(1, daily.length - 1)) * chartWidth;
-      const isPartial = d.date === todayStr;
-      const label = `${formatDateLabel(d.date)}${isPartial ? '*' : ''}`;
-      xAxisLabels += `
-        <text x="${x}" y="${height - 12}" font-size="11" text-anchor="middle" fill="currentColor" opacity="0.6">${escapeHtml(label)}</text>
-      `;
+  const height = 230;
+  const left = 48;
+  const right = 18;
+  const top = 18;
+  const bottom = 42;
+  const chartWidth = width - left - right;
+  const chartHeight = height - top - bottom;
+  const maximum = Math.max(1, ...available.map(row => row.pageViews || 0));
+  const segments: string[] = [];
+  let active: string[] = [];
+  daily.forEach((row, index) => {
+    if (row.pageViews === null) {
+      if (active.length) segments.push(active.join(' '));
+      active = [];
+      return;
     }
+    const x = left + index / Math.max(1, daily.length - 1) * chartWidth;
+    const y = top + chartHeight - row.pageViews / maximum * chartHeight;
+    active.push(`${active.length ? 'L' : 'M'} ${x.toFixed(1)} ${y.toFixed(1)}`);
   });
-
-  return `
-    <div class="stats-chart-container">
-      <div class="chart-legend">
-        <span class="legend-item"><span class="legend-dot dot-visits"></span> Visits (Network Estimate)</span>
-        <span class="legend-item"><span class="legend-dot dot-views"></span> HTML Page Views</span>
-        ${hasAssetData ? '<span class="legend-item"><span class="legend-dot dot-assets"></span> JS/CSS Loads (Browser-Like)</span>' : ''}
-      </div>
-      <div class="svg-wrap">
-        <svg viewBox="0 0 ${width} ${height}" class="stats-svg" preserveAspectRatio="none">
-          ${gridLines}
-          <path d="${areaVisits}" class="area-visits" />
-          <path d="${pathVisits}" class="path-visits" fill="none" stroke-width="2.5" />
-          <path d="${pathViews}" class="path-views" fill="none" stroke-width="2" stroke-dasharray="4 4" />
-          ${hasAssetData ? `<path d="${pathAssets}" class="path-assets" fill="none" stroke-width="2" stroke-dasharray="1 3" />` : ''}
-          ${xAxisLabels}
-        </svg>
-      </div>
-    </div>
-  `;
+  if (active.length) segments.push(active.join(' '));
+  const grid = [0, 0.25, 0.5, 0.75, 1].map(fraction => {
+    const y = top + chartHeight - fraction * chartHeight;
+    return `<line x1="${left}" y1="${y}" x2="${width - right}" y2="${y}" stroke="currentColor" stroke-opacity="0.1" stroke-dasharray="3 3"/><text x="${left - 8}" y="${y + 4}" text-anchor="end" font-size="11" fill="currentColor" opacity="0.65">${Math.round(maximum * fraction)}</text>`;
+  }).join('');
+  const labelStep = Math.max(1, Math.ceil(daily.length / 6));
+  const labels = daily.map((row, index) => {
+    if (index % labelStep !== 0 && index !== daily.length - 1) return '';
+    const x = left + index / Math.max(1, daily.length - 1) * chartWidth;
+    const suffix = row.status === 'partial' ? '*' : '';
+    return `<text x="${x}" y="${height - 12}" text-anchor="middle" font-size="11" fill="currentColor" opacity="0.65">${escapeHtml(formatDate(row.date, false) + suffix)}</text>`;
+  }).join('');
+  return `<div class="stats-chart-container">
+    <p class="chart-legend"><span class="legend-item"><span class="legend-dot dot-views"></span> Browser page views</span></p>
+    <div class="svg-wrap"><svg viewBox="0 0 ${width} ${height}" class="stats-svg" role="img" aria-label="Daily browser page views" preserveAspectRatio="xMidYMid meet">${grid}${segments.map(path => `<path d="${path}" class="path-views" fill="none" stroke-width="2.5"/>`).join('')}${labels}</svg></div>
+  </div>`;
 }
 
-function renderStatRows(opts: {
-  todayVisits: number;
-  todayPageViews: number;
-  medianVisits7: number;
-  avgVisits7: number;
-  averageSubtext: string;
-  visits30: number;
-  coverage30Label: string;
-  countriesCount: number;
-  topCountryLabel: string;
-  browserLikeTrafficPct?: number;
-  assetLoads7: number;
-  pageViews7: number;
-}): string {
-  const browserRow = opts.browserLikeTrafficPct === undefined ? '' : `
-          <tr>
-            <td><strong>Browser-Like Traffic (7 Days)</strong></td>
-            <td class="num-col">${opts.browserLikeTrafficPct}%</td>
-            <td class="detail-col">${formatNumber(opts.assetLoads7)} JS/CSS loads out of ${formatNumber(opts.pageViews7)} page views — real-browser estimate</td>
-          </tr>
-  `;
-  const realisticVisitsRow = opts.browserLikeTrafficPct === undefined ? '' : `
-          <tr>
-            <td><strong>Est. Real Visits/Day (7 Days)</strong></td>
-            <td class="num-col">${formatNumber(Math.round(opts.avgVisits7 * opts.browserLikeTrafficPct / 100))}/day</td>
-            <td class="detail-col">${formatNumber(opts.avgVisits7)}/day reported × ${opts.browserLikeTrafficPct}% browser-like share</td>
-          </tr>
-  `;
-  return `
-    <div class="stats-table-wrapper">
-      <table class="stats-table stats-overview-table">
-        <thead>
-          <tr>
-            <th>Metric</th>
-            <th class="num-col">Value</th>
-            <th>Details</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Visits Today</strong> <span class="partial-tag">(in progress)</span></td>
-            <td class="num-col">${formatNumber(opts.todayVisits)}</td>
-            <td class="detail-col">${formatNumber(opts.todayPageViews)} HTML page views</td>
-          </tr>
-          <tr class="stats-overview-metric-primary">
-            <td><strong>Average Daily Visits (7 Days)</strong></td>
-            <td class="num-col">${formatNumber(opts.avgVisits7)}/day</td>
-            <td class="detail-col">${formatNumber(opts.medianVisits7)} median/day${opts.averageSubtext ? ` — ${escapeHtml(opts.averageSubtext)}` : ''}</td>
-          </tr>
-          <tr>
-            <td><strong>Visits (30-Day Window)</strong></td>
-            <td class="num-col">${formatNumber(opts.visits30)}</td>
-            <td class="detail-col">${escapeHtml(opts.coverage30Label)}</td>
-          </tr>
-          <tr>
-            <td><strong>Countries Reached (7 Days)</strong></td>
-            <td class="num-col">${formatNumber(opts.countriesCount)}</td>
-            <td class="detail-col">${opts.topCountryLabel}</td>
-          </tr>
-          ${browserRow}
-          ${realisticVisitsRow}
-        </tbody>
-      </table>
-    </div>
-  `;
+function renderDailyTable(daily: DailyBrowserStat[]): string {
+  return `<details class="stats-secondary-details"><summary><strong>View day-by-day browser traffic</strong></summary>
+    <div class="stats-table-wrapper"><table class="stats-table"><thead><tr><th>Date (UTC)</th><th class="num-col">Page views</th><th class="num-col">Browser visits</th><th>Status</th></tr></thead>
+    <tbody>${[...daily].reverse().map(row => `<tr class="${row.status === 'partial' ? 'partial-row' : ''}">
+      <td><strong>${escapeHtml(formatDate(row.date))}</strong></td><td class="num-col">${formatNumber(row.pageViews)}</td><td class="num-col">${formatNumber(row.visits)}</td>
+      <td>${row.status === 'partial' ? 'In progress' : row.status === 'missing' ? 'Not collected' : 'Complete'}</td></tr>`).join('')}</tbody></table></div>
+  </details>`;
 }
 
-function renderDailyTable(daily: DailyStat[], todayStr: string): string {
-  if (!daily || daily.length === 0) return '';
-  const reversed = [...daily].reverse();
-
-  return `
-    <details class="stats-secondary-details" style="margin-top: 1.25rem;">
-      <summary><strong>View day-by-day history (${reversed.length} days)</strong></summary>
-      <div class="stats-table-wrapper" style="margin-top: 0.5rem;">
-        <table class="stats-table">
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th class="num-col">Visits</th>
-              <th class="num-col">HTML Page Views</th>
-              <th class="num-col">JS/CSS Loads</th>
-              <th class="num-col">HTTP Requests</th>
-            </tr>
-          </thead>
-          <tbody>
-            ${reversed.map((d) => {
-              const isPartial = d.date === todayStr;
-              const dateDisplay = isPartial
-                ? `${formatDateFull(d.date)} <span class="partial-tag">(in progress)</span>`
-                : formatDateFull(d.date);
-              return `
-                <tr ${isPartial ? 'class="partial-row"' : ''}>
-                  <td><strong>${dateDisplay}</strong></td>
-                  <td class="num-col"><strong>${formatNumber(visitCount(d))}</strong></td>
-                  <td class="num-col">${formatNumber(d.pageViews || 0)}</td>
-                  <td class="num-col">${formatNumber(d.assetLoads || 0)}</td>
-                  <td class="num-col">${formatNumber(d.requests || 0)}</td>
-                </tr>
-              `;
-            }).join('')}
-          </tbody>
-        </table>
-      </div>
-    </details>
-  `;
+function renderCountries(data: BrowserStatsResponse): string {
+  const rows = data.countries.filter(country => country.pageViews > 0);
+  if (!rows.length) return '<p class="no-data">No country-level browser data is available for this period.</p>';
+  return `<div class="stats-table-wrapper"><table class="stats-table"><thead><tr><th>Country</th><th class="num-col">Browser page views</th><th class="num-col">Share</th></tr></thead>
+    <tbody>${rows.map(country => `<tr><td><span class="country-cell"><span class="flag-icon" aria-hidden="true">${escapeHtml(country.flag)}</span><span>${escapeHtml(country.name)}</span></span></td><td class="num-col">${formatNumber(country.pageViews)}</td><td class="num-col">${country.pct.toFixed(1)}%</td></tr>`).join('')}</tbody></table></div>`;
 }
 
-function renderStatsContent(data: StatsResponse, rosterMap: Map<string, RosterEntry>) {
-  const todayStr = data.today?.date || new Date().toISOString().split('T')[0];
-  const coverage7 = data.coverage?.last7Days ?? Math.min(data.daily?.length || 0, 7);
-  const coverage30 = data.coverage?.last30Days ?? (data.daily?.length || 0);
-
-  const visits7List = (data.daily || []).slice(-7).map(d => visitCount(d));
-  const avgVisits7 = data.baseline?.avgVisitsPerDay ?? Math.round(visitCount(data.last7Days) / Math.max(1, coverage7));
-  const medianVisits7 = data.baseline?.medianVisitsPerDay ?? calculateMedian(visits7List);
-
-  // Detect spike day if visits > 2.2 * medianVisits
-  const spikeDay = (data.daily || []).find(d => visitCount(d) > 2.2 * Math.max(1, medianVisits7));
-  const averageSubtext = spikeDay
-    ? `affected by ${formatDateLabel(spikeDay.date)} traffic spike`
-    : '';
-
-  const profileViews = data.pageBreakdown?.profileViews ?? 0;
-  const profilePct = data.pageBreakdown?.profilePct ?? 0;
-  const mainViews = data.pageBreakdown?.mainViews ?? 0;
-  const submitViews = data.pageBreakdown?.submitViews ?? 0;
-  const statsViews = data.pageBreakdown?.statsViews ?? 0;
-
-  const total7DayCountryVisits = (data.topCountries || []).reduce((acc, c) => acc + (c.visits || c.count || 0), 0);
-  const snapshotTimestamp = formatSnapshotTimestamp(data.generatedAt);
-
-  return `
-    <main>
-      <article class="man-page stats-man-page">
-        ${renderRunningHead()}
-
-        <section class="man-section name-section">
-          <div class="identity">
-            <div class="identity-details">
-              <div class="name-heading">
-                <h1>VietProfs Visitor Statistics</h1>
-              </div>
-              <p class="synopsis stats-snapshot">
-                Data snapshot: <time datetime="${escapeHtml(data.generatedAt)}">${escapeHtml(snapshotTimestamp)}</time>
-                <button type="button" id="refresh-stats-btn" class="refresh-stats-btn">Refresh now</button>
-              </p>
-            </div>
-          </div>
-        </section>
-
-        ${data.isDemo ? '<div class="stats-highlight-banner"><span class="demo-badge">Preview Mode</span></div>' : ''}
-
-        <section class="man-section">
-          <h2>AT A GLANCE</h2>
-          ${renderStatRows({
-            todayVisits: visitCount(data.today),
-            todayPageViews: data.today?.pageViews || 0,
-            medianVisits7,
-            avgVisits7,
-            averageSubtext,
-            visits30: visitCount(data.last30Days),
-            coverage30Label: coverageLabel(coverage30, 30),
-            countriesCount: data.countriesCount || 0,
-            topCountryLabel: data.topCountries?.[0] ? `Top: ${escapeHtml(data.topCountries[0].flag)} ${escapeHtml(data.topCountries[0].name)}` : 'No visit data',
-            browserLikeTrafficPct: data.browserLikeTrafficPct,
-            assetLoads7: data.last7Days?.assetLoads || 0,
-            pageViews7: data.last7Days?.pageViews || 0,
-          })}
-        </section>
-
-        <section class="man-section">
-          <h2>TRAFFIC TREND</h2>
-          ${renderTrafficChart(data.daily, todayStr)}
-          ${renderDailyTable(data.daily, todayStr)}
-        </section>
-
-        <section class="man-section">
-          <h2>TOP VISITOR COUNTRIES (7 DAYS)</h2>
-          <div class="stats-table-wrapper">
-            <table class="stats-table">
-              <thead>
-                <tr>
-                  <th>Country</th>
-                  <th class="num-col">Visits (7 Days)</th>
-                  <th class="num-col">Share of Visits</th>
-                </tr>
-              </thead>
-              <tbody>
-                ${(data.topCountries || []).slice(0, 10).map((c) => {
-                  const visits = c.visits ?? c.count ?? 0;
-                  const pct = c.pct ?? (total7DayCountryVisits > 0 ? Math.round((visits / total7DayCountryVisits) * 1000) / 10 : 0);
-                  const maxVisits = data.topCountries[0]?.visits ?? data.topCountries[0]?.count ?? 1;
-                  const barPct = Math.min(100, Math.round((visits / maxVisits) * 100));
-                  return `
-                    <tr>
-                      <td>
-                        <span class="country-cell">
-                          <span class="flag-icon" aria-hidden="true">${escapeHtml(c.flag)}</span>
-                          <span class="country-name">${escapeHtml(c.name)}</span>
-                        </span>
-                        <div class="stats-progress-bar-bg"><div class="stats-progress-bar-fill" style="width: ${barPct}%"></div></div>
-                      </td>
-                      <td class="num-col">${formatNumber(visits)}</td>
-                      <td class="num-col">${pct.toFixed(1)}%</td>
-                    </tr>
-                  `;
-                }).join('')}
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        <section class="man-section">
-          <h2>MOST REQUESTED PAGES (7 DAYS)</h2>
-          <p class="stat-sub" style="margin: 0 0 0.75rem;">Individual professor profiles account for ${profilePct}% of recent page views (${formatNumber(profileViews)} views), followed by the main directory (${formatNumber(mainViews)}), submit/update (${formatNumber(submitViews)}), and this stats page (${formatNumber(statsViews)}).</p>
-
-          <div class="stats-table-wrapper">
-            <table class="stats-table">
-              <thead>
-                <tr>
-                  <th>Page</th>
-                  <th class="num-col">7-Day Views</th>
-                  <th class="num-col">Daily Avg</th>
-                </tr>
-              </thead>
-              <tbody>
-                ${(() => {
-                  const periodDays = data.breakdownPeriodDays || data.coverage?.last7Days || 7;
-                  const topPagesList = consolidateTopPages(data.topPages || []);
-                  return topPagesList.slice(0, 10).map((p) => {
-                    const href = pageHref(p.path);
-                    const labelStr = resolvePageLabel(p.path, p.label, rosterMap);
-                    const pageLabel = href
-                      ? `<a class="stats-page-link" href="${escapeHtml(href)}"><strong>${escapeHtml(labelStr)}</strong></a>`
-                      : `<strong>${escapeHtml(labelStr)}</strong>`;
-                    return `
-                    <tr>
-                      <td>${pageLabel}</td>
-                      <td class="num-col">${formatNumber(p.count)}</td>
-                      <td class="num-col">${formatAvgPerDay(p.count, periodDays)}/day</td>
-                    </tr>
-                  `;
-                  }).join('');
-                })()}
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        <section class="man-section privacy-section">
-          <h2>PRIVACY &amp; METHODOLOGY</h2>
-          <div class="privacy-note">
-            <p>
-              VietProfs respects visitor privacy: these are aggregate Cloudflare network estimates for <code>vietprofs.roars.dev</code> only, not verified-person counts, and no individual reader is tracked. Live data covers roughly the last 8 days; a scheduled archive builds the 30-day history over time (currently ${escapeHtml(coverageLabel(coverage30, 30))}).
-            </p>
-          </div>
-        </section>
-
-        <footer class="man-footer">
-          <p>
-            <a href="${import.meta.env.BASE_URL}index.html">← Back to Directory</a> ·
-            <a href="${import.meta.env.BASE_URL}index.html?view=health">Data Health &amp; Completeness</a> ·
-            <a href="${import.meta.env.BASE_URL}index.html?view=insights">Diaspora Insights &amp; Pathways</a> ·
-            <a href="${import.meta.env.BASE_URL}submit.html">Submit / Update</a> ·
-            <a href="https://github.com/dynaroars/vietprofs" target="_blank" rel="noopener noreferrer">GitHub</a>
-          </p>
-        </footer>
-      </article>
-    </main>
-  `;
+function renderCategories(data: BrowserStatsResponse): string {
+  const total = data.categories.reduce((value, category) => value + category.pageViews, 0);
+  const rows = data.categories.map(category => {
+    const queryOnly = category.key === 'insights-health';
+    return `<tr><td>${escapeHtml(category.label)}</td><td class="num-col">${queryOnly ? '—' : formatNumber(category.pageViews)}</td><td class="num-col">${queryOnly ? 'Not separable' : `${category.pct.toFixed(1)}%`}</td></tr>`;
+  }).join('');
+  return `<p class="stat-sub">Page categories for ${escapeHtml(formatDate(data.categoryPeriod.startDate))}–${escapeHtml(formatDate(data.categoryPeriod.endDate))}. The measurable categories total ${formatNumber(total)} browser page views, matching the overall browser total.</p>
+    <div class="stats-table-wrapper"><table class="stats-table"><thead><tr><th>Page category</th><th class="num-col">Browser page views</th><th class="num-col">Share</th></tr></thead><tbody>${rows}</tbody></table></div>
+    <p class="stats-footnote">Cloudflare does not retain URL query strings. The current Insights and Health views use <code>?view=…</code>, so their views are included with the main directory and cannot be separated honestly.</p>`;
 }
 
-function renderError(message: string) {
-  const base = import.meta.env.BASE_URL;
-  return `
-    <main>
-      <article class="man-page stats-man-page">
-        ${renderRunningHead()}
-
-        <section class="man-section name-section">
-          <div class="identity">
-            <div class="identity-details">
-              <div class="name-heading">
-                <h1>VietProfs Visitor Statistics</h1>
-              </div>
-              <p class="synopsis">Privacy-respecting visitor metrics.</p>
-            </div>
-          </div>
-        </section>
-
-        <section class="man-section">
-          <h2>VISITOR TRAFFIC</h2>
-          <div class="stats-error-box">
-            <p class="error-title">Visitor statistics are temporarily unavailable.</p>
-            <p class="error-detail">${escapeHtml(message || 'Could not fetch aggregate traffic statistics.')}</p>
-            <button type="button" id="retry-btn" class="retry-btn">Retry loading visitor traffic</button>
-          </div>
-        </section>
-
-        <footer class="man-footer">
-          <p>
-            <a href="${base}index.html">← Back to Directory</a> ·
-            <a href="${base}index.html?view=health">Data Health &amp; Completeness</a> ·
-            <a href="${base}index.html?view=insights">Diaspora Insights &amp; Pathways</a>
-          </p>
-        </footer>
-      </article>
-    </main>
-  `;
+function renderStats(data: BrowserStatsResponse): string {
+  const notice = data.stale
+    ? `<div class="stats-status-notice stats-status-warning" role="status"><strong>Data temporarily unavailable.</strong> ${escapeHtml(data.notice || 'Showing the last successful snapshot.')}</div>`
+    : data.isDemo ? '<div class="stats-status-notice" role="status"><strong>Preview data.</strong> Cloudflare credentials are not configured in this environment.</div>' : '';
+  const transitionDate = formatDate(data.historicalTransition.newSeriesStartedAt);
+  return `<main><article class="man-page stats-man-page">
+    ${runningHead()}
+    <section class="man-section name-section"><div class="identity"><div class="identity-details"><div class="name-heading"><h1>VietProfs Visitor Statistics</h1></div>
+      <p class="synopsis">Privacy-preserving measurements from browsers that load VietProfs.</p>
+      <p class="synopsis stats-snapshot">Last successful snapshot: <time datetime="${escapeHtml(data.generatedAt)}">${escapeHtml(formatTimestamp(data.generatedAt))}</time> <button type="button" id="refresh-stats-btn" class="refresh-stats-btn">Refresh now</button></p>
+    </div></div></section>
+    ${notice}
+    <section class="man-section"><h2>AT A GLANCE</h2>${renderMetrics(data)}</section>
+    <section class="man-section"><h2>DAILY BROWSER TRAFFIC</h2>${renderChart(data.daily)}${renderDailyTable(data.daily)}</section>
+    <section class="man-section"><h2>COUNTRIES REACHED</h2><p class="stat-sub">Based only on browser page views during the last ${data.last7Complete.days} complete UTC day${data.last7Complete.days === 1 ? '' : 's'}.</p>${renderCountries(data)}</section>
+    <section class="man-section"><h2>PAGE CATEGORIES</h2>${renderCategories(data)}</section>
+    <section class="man-section privacy-section"><h2>PRIVACY &amp; METHODOLOGY</h2><div class="privacy-note">
+      <p>These public statistics come from Cloudflare Web Analytics browser beacons, not raw HTTP requests. Automated crawlers generally do not run the beacon and are excluded. People who block JavaScript or the beacon may be omitted, so these numbers can undercount readership.</p>
+      <p>A page view records a browser page load. A browser visit is Cloudflare’s aggregate session-like measure, not an exact count of unique people. No cookies, persistent identifiers, IP addresses, or individual visitor records are collected or published by VietProfs.</p>
+      <p>Dates and day boundaries use UTC. Today is incomplete and is excluded from completed-day averages. Missing collection days are shown as missing, not zero; averages divide only by collected complete days.</p>
+      <p>The clean browser series begins ${escapeHtml(transitionDate)}. Earlier crawler-inclusive network-request history remains in the private operational archive and is not joined to this chart.</p>
+    </div></section>
+    ${footer()}
+  </article></main>`;
 }
 
-function renderLoading() {
-  return `
-    <main>
-      <article class="man-page">
-        ${renderRunningHead()}
+function renderLoading(): string {
+  return `<main><article class="man-page stats-man-page">${runningHead()}<section class="man-section"><h1>VietProfs Visitor Statistics</h1><div class="stats-loading-box"><p>Loading browser statistics…</p></div></section></article></main>`;
+}
 
-        <section class="man-section">
-          <h2>VISITOR STATISTICS</h2>
-          <div class="stats-loading-box">
-            <p>Loading visitor statistics...</p>
-          </div>
-        </section>
-      </article>
-    </main>
-  `;
+function renderError(message: string): string {
+  return `<main><article class="man-page stats-man-page">${runningHead()}<section class="man-section name-section"><h1>VietProfs Visitor Statistics</h1><p class="synopsis">Privacy-preserving browser measurements.</p></section>
+    <section class="man-section"><h2>VISITOR TRAFFIC</h2><div class="stats-error-box" role="alert"><p class="error-title">Browser statistics are temporarily unavailable.</p><p class="error-detail">${escapeHtml(message)}</p><button type="button" id="retry-btn" class="retry-btn">Retry</button></div></section>${footer()}</article></main>`;
 }
 
 const STATS_ENDPOINTS = ['/api/stats', 'https://vietprofs.roars.dev/api/stats'];
 
-async function fetchStats({ force = false } = {}): Promise<StatsResponse> {
-  let lastError: Error | null = null;
-
+async function fetchStats(force = false): Promise<BrowserStatsResponse> {
+  let lastError = new Error('Unable to connect to the statistics service.');
   for (const endpoint of STATS_ENDPOINTS) {
     try {
-      const separator = endpoint.includes('?') ? '&' : '?';
-      const requestUrl = force ? `${endpoint}${separator}refresh=${Date.now()}` : endpoint;
-      const res = await fetch(requestUrl, { cache: force ? 'no-store' : 'default' });
-      if (res.ok) {
-        const data = (await res.json()) as StatsResponse;
-        if (data && (data.today || data.last30Days)) {
-          return data;
-        }
-        lastError = new Error('The statistics service returned an incomplete response.');
-        continue;
-      }
-      lastError = new Error(await statusMessage(res));
-    } catch (err: unknown) {
-      lastError = err instanceof Error ? err : new Error(String(err));
+      const url = force ? `${endpoint}${endpoint.includes('?') ? '&' : '?'}refresh=${Date.now()}` : endpoint;
+      const response = await fetch(url, { cache: force ? 'no-store' : 'default' });
+      const body = await response.json() as BrowserStatsResponse & { error?: string; detail?: string };
+      if (!response.ok) throw new Error([body.error, body.detail].filter(Boolean).join(' — ') || `HTTP ${response.status}`);
+      if (body.schemaVersion !== 3 || body.source !== 'cloudflare-rum') throw new Error('The statistics service returned an unsupported or request-based dataset.');
+      return body;
+    } catch (error) {
+      lastError = error instanceof Error ? error : new Error(String(error));
     }
   }
-
-  throw lastError ?? new Error('Unable to connect to statistics service.');
+  throw lastError;
 }
 
-async function statusMessage(res: Response): Promise<string> {
-  try {
-    const body = (await res.json()) as { error?: string; message?: string };
-    const detail = [body?.error, body?.message].filter(Boolean).join(' — ');
-    if (detail) return detail;
-  } catch {
-    // Not a JSON error envelope; fall back to the status line.
-  }
-  return `The statistics service responded with HTTP ${res.status}.`;
-}
-
-async function initStatsPage({ force = false } = {}) {
+async function init(force = false): Promise<void> {
   app.innerHTML = renderLoading();
-
   try {
-    const [data, roster] = await Promise.all([
-      fetchStats({ force }),
-      loadRoster().catch(() => []),
-    ]);
-
-    const rosterMap = new Map<string, RosterEntry>();
-    (roster || []).forEach(p => rosterMap.set(p.id, p));
-
-    app.innerHTML = renderStatsContent(data, rosterMap);
-    document.getElementById('refresh-stats-btn')?.addEventListener('click', () => initStatsPage({ force: true }));
-  } catch (err: unknown) {
-    const msg = err instanceof Error ? err.message : 'Temporarily unavailable';
-    app.innerHTML = renderError(msg);
-    document.getElementById('retry-btn')?.addEventListener('click', () => initStatsPage({ force: true }));
+    app.innerHTML = renderStats(await fetchStats(force));
+    document.getElementById('refresh-stats-btn')?.addEventListener('click', () => void init(true));
+  } catch (error) {
+    app.innerHTML = renderError(error instanceof Error ? error.message : 'Unknown error');
+    document.getElementById('retry-btn')?.addEventListener('click', () => void init(true));
   }
 }
 
-initStatsPage();
+void init();

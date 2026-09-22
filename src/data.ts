@@ -290,6 +290,17 @@ export function regionPath(region: string): string {
   return `regions/${regionSlug(region)}.html`;
 }
 
+export function fieldRegionPath(field: string, region: string): string {
+  return `regions/${regionSlug(region)}/${fieldSlug(field)}.html`;
+}
+
+export const MIN_ROSTER_HUB_SIZE = 3;
+export const ROSTER_CONTINENTS = ['North America', 'Europe', 'Australasia', 'Asia', 'South America', 'Africa'] as const;
+
+export function hasEnoughPeopleForRosterHub(memberCount: number): boolean {
+  return memberCount >= MIN_ROSTER_HUB_SIZE;
+}
+
 // Keep the public rank vocabulary intentionally small. Institution-specific honorifics and
 // appointment wording belong on the linked profile; the directory only needs the career stage.
 export function canonicalRank(person: Pick<RosterEntry, 'track' | 'rank'>): string | undefined {
@@ -769,6 +780,36 @@ export function fieldOf(department?: string, university?: string): string {
   if (override) return override;
   if (!department) return 'Others';
   return FIELD_RULES.find((rule) => rule.match.test(department))?.field ?? 'Others';
+}
+
+export interface RosterHtmlInventory {
+  standalone: number;
+  profiles: number;
+  fields: number;
+  regions: number;
+  intersections: number;
+  total: number;
+}
+
+export function buildRosterHtmlInventory(roster: Roster): RosterHtmlInventory {
+  const fields = FIELDS.filter((field) =>
+    hasEnoughPeopleForRosterHub(roster.filter((person) => fieldOf(person.department, person.university) === field).length));
+  const countries = [...new Set(roster.map((person) => person.country || 'United States'))];
+  const regions = [...ROSTER_CONTINENTS, ...countries].filter((region) =>
+    hasEnoughPeopleForRosterHub(roster.filter((person) => locationMatches(person, region)).length));
+  const intersections = regions.reduce((total, region) => total + fields.filter((field) =>
+    hasEnoughPeopleForRosterHub(roster.filter((person) =>
+      locationMatches(person, region) && fieldOf(person.department, person.university) === field).length)).length, 0);
+  const standalone = 4;
+  const profiles = roster.length;
+  return {
+    standalone,
+    profiles,
+    fields: fields.length,
+    regions: regions.length,
+    intersections,
+    total: standalone + profiles + fields.length + regions.length + intersections,
+  };
 }
 
 export function healthSubfieldOf(person: RosterEntry): string | null {

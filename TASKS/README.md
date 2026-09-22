@@ -17,6 +17,7 @@ Each playbook is pre-configured with an **Autonomous Goal Directive** header. Yo
 /goal TASKS/enrich_research_overviews.md
 /goal TASKS/audit_education_chronology.md
 /goal TASKS/audit_facts_and_honors.md
+/goal TASKS/discover_academic_relationships.md
 /goal TASKS/AUDIT_ISSUES_PRS.md
 ```
 
@@ -49,4 +50,5 @@ To preserve git history and ensure multi-agent safety:
 | [`enrich_research_overviews.md`](enrich_research_overviews.md) | Audit research area summaries and keywords against author publications. | `maintenance/enrichment.json` PRs |
 | [`audit_education_chronology.md`](audit_education_chronology.md) | Audit undergrad, MS, PhD, and postdoc institutions and graduation years for chronological validity. | `src/roster.json` degree PRs |
 | [`audit_facts_and_honors.md`](audit_facts_and_honors.md) | Audit honors, academy fellowships, and interesting facts against strict provenance rules. | `src/roster.json` honors PRs |
+| [`discover_academic_relationships.md`](discover_academic_relationships.md) | Verify roster-internal doctoral mentorship, documented postdoctoral mentorship, and coauthorship relationships; personal relationships are prohibited. | `public/relationships.json` roster-data PRs |
 | [`AUDIT_ISSUES_PRS.md`](AUDIT_ISSUES_PRS.md) | Autonomous auditor agent that tests, squash-merges clean PRs into `main`, and closes resolved GitHub Issues. | Repository merge & issue closure |

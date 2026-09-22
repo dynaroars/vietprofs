@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "updatedAt": "2026-09-21T00:00:00.000Z",
+  "relationships": [
+    {
+      "id": "rel-coauthor-vp-0015-vp-0018",
+      "type": "coauthor",
+      "sourceId": "vp-0015",
+      "targetId": "vp-0018",
+      "sources": [
+        "https://scholarworks.uark.edu/cscepub/",
+        "https://pubmed.ncbi.nlm.nih.gov/34441327/",
+        "https://pubmed.ncbi.nlm.nih.gov/34204846/"
+      ],
+      "evidence": "The University of Arkansas faculty-publications repository and the two PubMed records identify Ngan Le and Khoa Luu as University of Arkansas coauthors on both retained works; names, shared affiliation, field, and publication histories match vp-0015 and vp-0018.",
+      "works": [
+        {
+          "identifier": "doi:10.3390/diagnostics11081393",
+          "title": "Narrow Band Active Contour Attention Model for Medical Segmentation",
+          "date": "2021-07-31",
+          "url": "https://doi.org/10.3390/diagnostics11081393"
+        },
+        {
+          "identifier": "doi:10.3390/diagnostics11061080",
+          "title": "Enhance Portable Radiograph for Fast and High Accurate COVID-19 Monitoring",
+          "date": "2021-06-12",
+          "url": "https://doi.org/10.3390/diagnostics11061080"
+        }
+      ],
+      "verifiedAt": "2026-09-21T00:00:00.000Z",
+      "direct": false,
+      "notes": ""
+    }
+  ]
+}

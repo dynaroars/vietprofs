@@ -382,12 +382,42 @@ test('mobile pages avoid horizontal overflow and provide usable tap targets', as
   assert.equal(await page.locator('.info-icon').evaluate((element) => getComputedStyle(element, '::after').visibility), 'visible');
   await assertNoOverflow();
 
+  await page.route('**/api/stats**', async route => route.fulfill({
+    contentType: 'application/json',
+    body: JSON.stringify({
+      schemaVersion: 3,
+      source: 'cloudflare-rum',
+      generatedAt: '2026-09-22T12:00:00.000Z',
+      timezone: 'UTC',
+      status: 'ok',
+      stale: false,
+      measurementStartedAt: '2026-09-15',
+      coverage: { firstDate: '2026-09-15', lastCompleteDate: '2026-09-21', completeDays7: 7, availableDays30: 7 },
+      today: { date: '2026-09-22', pageViews: 3, visits: 2, complete: false, collected: true },
+      last7Complete: { pageViews: 70, visits: 35, days: 7, avgPageViews: 10, avgVisits: 5 },
+      last30Available: { pageViews: 70, visits: 35, days: 7 },
+      daily: [
+        { date: '2026-09-21', pageViews: 10, visits: 5, status: 'complete' },
+        { date: '2026-09-22', pageViews: 3, visits: 2, status: 'partial' },
+      ],
+      countries: [{ code: 'US', name: 'United States', flag: '🇺🇸', pageViews: 70, pct: 100 }],
+      categories: [
+        { key: 'directory', label: 'Main directory', pageViews: 40, pct: 57.1 },
+        { key: 'profiles', label: 'Professor profiles', pageViews: 20, pct: 28.6 },
+        { key: 'submit', label: 'Submit / update', pageViews: 3, pct: 4.3 },
+        { key: 'statistics', label: 'Statistics', pageViews: 2, pct: 2.9 },
+        { key: 'insights-health', label: 'Insights / health', pageViews: 0, pct: 0 },
+        { key: 'other', label: 'Other', pageViews: 5, pct: 7.1 },
+      ],
+      categoryPeriod: { startDate: '2026-09-15', endDate: '2026-09-21', days: 7 },
+      historicalTransition: { newSeriesStartedAt: '2026-09-15', oldSeriesRetainedInternally: true },
+    }),
+  }));
   await page.goto(`${baseUrl}/stats.html`, { waitUntil: 'networkidle' });
   await assertNoOverflow();
-  const requestedPageLinks = page.locator('.stats-page-link');
-  if (await requestedPageLinks.count() > 0) {
-    assert.ok((await requestedPageLinks.first().getAttribute('href'))?.startsWith('/'));
-  }
+  assert.equal(await page.getByText('MOST REQUESTED PAGES').count(), 0);
+  assert.ok(await page.locator('.browser-metric-card').count() >= 5);
+  assert.match(await page.locator('.privacy-note').innerText(), /browser beacons/i);
 
   await page.goto(`${baseUrl}/people/vp-0242.html`, { waitUntil: 'networkidle' });
   await assertNoOverflow();
@@ -529,6 +559,35 @@ test('stale zero-result field URLs fall back to the roster', async () => {
   await page.close();
 });
 
+test('combined field and location filters link to their static intersection hub', async () => {
+  const page = await context.newPage();
+  await page.goto(`${baseUrl}/?field=Health%20Sciences&loc=Japan`, { waitUntil: 'networkidle' });
+  assert.equal(await page.locator('#field-filter').inputValue(), 'Health Sciences');
+  assert.equal(await page.locator('#location-filter').inputValue(), 'Japan');
+  assert.match(await textOf(page.locator('#result-count')), /5 people in Health Sciences .* across 5 institutions in Japan/);
+
+  const headerBox = await page.locator('.header-links').boundingBox();
+  const countBox = await page.locator('#result-count').boundingBox();
+  assert.ok(headerBox && countBox && headerBox.y + headerBox.height <= countBox.y);
+
+  const fieldHubLink = page.locator('#result-count .result-count-link').first();
+  assert.match(await attrOf(fieldHubLink, 'href'), /\/regions\/japan\/health-sciences\.html$/);
+  await fieldHubLink.click();
+  await page.waitForLoadState('networkidle');
+  assert.equal(await textOf(page.locator('h1')), 'Health Sciences Faculty in Japan');
+  await page.close();
+});
+
+test('data health reports the generated HTML inventory and links standalone pages', async () => {
+  const page = await context.newPage();
+  await page.goto(`${baseUrl}/?view=health`, { waitUntil: 'networkidle' });
+  assert.equal(await textOf(page.locator('.html-inventory-title')), 'Generated HTML Inventory');
+  assert.equal(await page.locator('.html-inventory-item').count(), 4);
+  assert.equal(await page.locator('.html-standalone-links a').count(), 4);
+  assert.match(await textOf(page.locator('.html-inventory-total')), /^\d[\d,]* pages$/);
+  await page.close();
+});
+
 test('filter choices stay stable and stale filters recover', async () => {
   const page = await context.newPage();
   const runtimeErrors: string[] = [];
@@ -628,10 +687,35 @@ test('profile pages honor dark mode through the shared stylesheet', async () => 
   assert.equal(await page.locator('.raw-record').count(), 1);
   assert.equal(await page.locator('.profile-actions .submission-link').count(), 1);
   assert.equal(await page.locator('.name-heading .profile-actions').count(), 1);
+  const seeAlso = page.locator('.man-section').filter({ has: page.locator('h2', { hasText: 'SEE ALSO' }) });
+  assert.equal(await seeAlso.locator('nav.links a').count(), 6);
+  assert.equal(await page.locator('footer.man-footer').count(), 0);
   const profileStar = page.locator('.name-title .favorite-toggle');
   assert.equal(await profileStar.getAttribute('aria-pressed'), 'true');
   await profileStar.click();
   assert.equal(await profileStar.getAttribute('aria-pressed'), 'false');
+  await page.close();
+});
+
+test('verified academic connections render on both linked profiles', async () => {
+  const page = await context.newPage();
+  for (const [id, linkedId, linkedName] of [
+    ['vp-0015', 'vp-0018', 'Khoa Luu'],
+    ['vp-0018', 'vp-0015', 'Ngan Hoang Le'],
+  ]) {
+    await page.goto(`${baseUrl}/people/${id}.html`, { waitUntil: 'networkidle' });
+    const connections = page.locator('.man-section').filter({ has: page.locator('h2', { hasText: 'CONNECTIONS' }) });
+    assert.equal(await connections.count(), 1);
+    const personLink = connections.locator('.connection-person');
+    assert.equal(await personLink.textContent(), linkedName);
+    assert.equal(await personLink.getAttribute('href'), `../people/${linkedId}.html`);
+    assert.equal(await connections.locator('.connection-kind').textContent(), 'Coauthor · 2 shared works');
+    assert.equal(await connections.locator('.connection-sources a').count(), 3);
+    await connections.locator('.connection-works summary').click();
+    assert.equal(await connections.locator('.connection-works li').count(), 2);
+  }
+  await page.goto(`${baseUrl}/people/vp-0001.html`, { waitUntil: 'networkidle' });
+  assert.equal(await page.locator('.connection-list').count(), 0);
   await page.close();
 });
 

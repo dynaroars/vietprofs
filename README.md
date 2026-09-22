@@ -1,5 +1,7 @@
 # VietProfs
 
+Visitor-statistics methodology and Worker operations are documented in [docs/VISITOR_STATISTICS.md](docs/VISITOR_STATISTICS.md).
+
 [VietProfs](https://vietroars.roars.dev) is a searchable, community-maintained directory of Vietnamese and Vietnamese-diaspora academics at universities and eligible public or nonprofit research institutes worldwide, covering tenure-line, teaching, research, and clinical faculty (see [`ROSTER_MAINTENANCE.md`](./ROSTER_MAINTENANCE.md) for exact eligibility). [Read the paper](https://vietprofs.roars.dev/vietprofs.pdf) ([arXiv](https://arxiv.org/abs/2609.06091)) describing the project — the site's copy is kept current; the arXiv listing is a versioned snapshot.
 
 This site is maintained by users all around the world (e.g., [submitting new or editing existing entries](https://vietprofs.roars.dev/submit.html)) _and_ AI bots that continuously validate and update the directory database. The site itself documents its search, filters, and keyboard shortcuts (press `?` there for help).
@@ -36,6 +38,10 @@ so it must be committed manually.
 The roster lives in [`public/data.json`](./public/data.json) and is also published on [Hugging Face Datasets](https://huggingface.co/datasets/nguyenthanhvuh/vietprofs). Each active record gets a static
 public profile at `people/vp-####.html`, and its immutable `vp-####` `id` is assigned by `npm run
 assign-profile-ids -- --apply` after an entry is added.
+
+Verified roster-internal academic connections live in the normalized edge table
+[`public/relationships.json`](./public/relationships.json). Profile pages render these records in a
+Connections section; candidate or unresolved relationships never appear in this public file.
 
 Thanks to [hieuphay.com](https://hieuphay.com/ban-do-kinh-te-viet-nam/) for an initial dataset of
 Vietnamese economists that seeded a batch of entries, and to the many contributors over
