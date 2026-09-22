@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-22T15:20:00.000Z",
+  "updatedAt": "2026-09-22T15:45:00.000Z",
   "batches": [
     {
       "batchNumber": 1,
@@ -73,6 +73,42 @@
       ],
       "verifiedRelationshipIds": [],
       "notes": "Bounded pass found a possible Oregon coauthor cluster involving vp-0031 and vp-0033, but the available results did not establish two qualifying shared works with identity-resolved authorship. No new public relationship edge was added."
+    },
+    {
+      "batchNumber": 3,
+      "rosterIds": [
+        "vp-0041", "vp-0042", "vp-0043", "vp-0044", "vp-0045",
+        "vp-0046", "vp-0047", "vp-0048", "vp-0049", "vp-0050",
+        "vp-0051", "vp-0052", "vp-0053", "vp-0054", "vp-0055",
+        "vp-0056", "vp-0057", "vp-0058", "vp-0059", "vp-0060"
+      ],
+      "startedAt": "2026-09-22T15:25:00.000Z",
+      "completedAt": "2026-09-22T15:45:00.000Z",
+      "status": "complete",
+      "outcomes": [
+        { "rosterId": "vp-0041", "status": "unresolved", "sources": ["https://directory.engineering.upenn.edu/linh-thi-xuan-phan/"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal relationships." },
+        { "rosterId": "vp-0042", "status": "unresolved", "sources": ["https://classic.memphis.edu/cs/people/faculty_pages/vinhthuy-phan.php"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal relationships." },
+        { "rosterId": "vp-0043", "status": "unresolved", "sources": ["https://udayton.edu/directory/artssciences/computerscience/phung-phu.php"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal relationships." },
+        { "rosterId": "vp-0044", "status": "unresolved", "sources": ["https://www.cise.ufl.edu/faculty/my-thai/"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal relationships." },
+        { "rosterId": "vp-0045", "status": "unresolved", "sources": ["https://www.cs.umb.edu/~duc/www/"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal relationships." },
+        { "rosterId": "vp-0046", "status": "unresolved", "sources": ["https://cise.ufl.edu/people/faculty/name/dung-tran/"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal relationships." },
+        { "rosterId": "vp-0047", "status": "unresolved", "sources": ["https://cs.nmsu.edu/people/faculty.html"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal relationships." },
+        { "rosterId": "vp-0048", "status": "unresolved", "sources": ["https://stor.unc.edu/faculty-member/tran-dinh-quoc/"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal relationships." },
+        { "rosterId": "vp-0049", "status": "unresolved", "sources": ["https://scai.engineering.asu.edu/faculty/computer-science-and-engineering/ni-trieu/"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal relationships." },
+        { "rosterId": "vp-0050", "status": "unresolved", "sources": ["https://www.ccny.cuny.edu/profiles/huy-vo"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal relationships." },
+        { "rosterId": "vp-0051", "status": "unresolved", "sources": ["https://engineering.tufts.edu/ece/people/faculty/mai-vu"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal relationships." },
+        { "rosterId": "vp-0052", "status": "unresolved", "sources": ["https://web.cs.dartmouth.edu/people/tam-vu"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal relationships." },
+        { "rosterId": "vp-0053", "status": "unresolved", "sources": ["https://website.cs.vt.edu/people/faculty/tu-vu.html"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal relationships." },
+        { "rosterId": "vp-0054", "status": "unresolved", "sources": ["https://cse.ucsd.edu/people/faculty-profiles/thuy-duong-june-vuong"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal relationships." },
+        { "rosterId": "vp-0055", "status": "unresolved", "sources": ["https://math.rutgers.edu/people/department-directory/detail/344-department-directory/1865-tiep-pham-huu"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal relationships." },
+        { "rosterId": "vp-0056", "status": "unresolved", "sources": ["https://math.gatech.edu/people/thang-le"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal relationships." },
+        { "rosterId": "vp-0057", "status": "unresolved", "sources": ["https://www.math.columbia.edu/people/faculty-by-rank/name/duong-phong/"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal relationships." },
+        { "rosterId": "vp-0058", "status": "unresolved", "sources": ["https://math.wisc.edu/staff/tran-hung/"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal relationships." },
+        { "rosterId": "vp-0059", "status": "unresolved", "sources": ["https://science.psu.edu/math/people/ttn12"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal relationships." },
+        { "rosterId": "vp-0060", "status": "unresolved", "sources": ["https://math.sciences.ncsu.edu/people/tnguye13/"], "nextAction": "Search official CVs, dissertation records, and identity-resolved publications for roster-internal relationships." }
+      ],
+      "verifiedRelationshipIds": [],
+      "notes": "Bounded pass found no relationship meeting the evidence standard. Search results were namesake-prone or did not establish roster-internal advisor, mentor, or two-work coauthor evidence."
     }
   ]
 }
