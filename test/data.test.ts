@@ -437,6 +437,17 @@ test('searching an honor name lists professors who hold that honor', () => {
   assert.ok(fellow.every((p) => p.honors?.some((honor) => honor.name === 'IEEE Fellow')));
 });
 
+test('relationship keyword search finds connected roster members by relationship type', () => {
+  const connected = filterRoster(roster, { query: '', searchScope: 'rel', relationships });
+  assert.deepEqual(new Set(connected.map((person) => person.id)), new Set(['vp-0015', 'vp-0018']));
+
+  const coauthors = filterRoster(roster, { query: 'co-author', searchScope: 'rel', relationships });
+  assert.deepEqual(new Set(coauthors.map((person) => person.id)), new Set(['vp-0015', 'vp-0018']));
+
+  const mentors = filterRoster(roster, { query: 'mentor/advise', searchScope: 'rel', relationships });
+  assert.equal(mentors.length, 0);
+});
+
 test('searching a name without middle initials still finds the professor', () => {
   const result = filterRoster(roster, { query: 'van vu', field: 'all', location: 'World' });
   assert.ok(result.some((person) => person.name === 'Van H. Vu'));

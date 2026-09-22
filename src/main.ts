@@ -18,6 +18,7 @@ import {
   hasEnoughPeopleForRosterHub,
   institutionTypeOf,
   loadGitInfo,
+  loadRelationships,
   loadRoster,
   loadStatsHistory,
   locationMatches,
@@ -82,6 +83,7 @@ const KEYWORD_LABELS: Record<string, string> = {
   honors: 'Honors',
   phd: 'PhD',
   undergrad: 'Ugrad',
+  rel: 'Relationship',
 };
 
 const KEYWORD_ICONS: Record<string, string> = {
@@ -94,6 +96,7 @@ const KEYWORD_ICONS: Record<string, string> = {
   honors: '🏅',
   phd: '🎓',
   undergrad: '📚',
+  rel: '🔗',
 };
 
 const KEYWORD_EXAMPLES: Record<string, string> = {
@@ -106,6 +109,7 @@ const KEYWORD_EXAMPLES: Record<string, string> = {
   honors: 'NSF CAREER Award',
   phd: 'University of New Mexico',
   undergrad: 'Pennsylvania State University',
+  rel: 'co-author',
 };
 
 const KEYWORD_ALIASES: Record<string, string> = {
@@ -128,6 +132,8 @@ const KEYWORD_ALIASES: Record<string, string> = {
   undergrad: 'undergrad',
   ugrad: 'undergrad',
   ugradinst: 'undergrad',
+  rel: 'rel',
+  relationship: 'rel',
 };
 
 function parseKeywordQuery(raw: string): { scope: string; query: string } | null {
@@ -349,6 +355,7 @@ async function init() {
       '<p class="empty-state">Could not load the roster. Please refresh the page or try again later.</p>';
     return;
   }
+  const relationshipDatabase = await loadRelationships();
   const searchIndex = buildSearchIndex(roster);
   const regionHubCandidates = [...new Set([
     ...LOCATIONS.filter((location) => location !== 'World').map((location) => location === 'US' ? 'United States' : location),
@@ -480,6 +487,7 @@ async function init() {
       field: fieldSelect.value,
       track: trackSelect.value,
       institutionType: institutionTypeSelect.value,
+      relationships: relationshipDatabase,
     });
   }
 
@@ -614,6 +622,7 @@ async function init() {
       field: currentField,
       track: currentTrack,
       institutionType: currentInstType,
+      relationships: relationshipDatabase,
     });
     const countryEntries: OptionEntry[] = [];
     for (const country of countryOptions) {
@@ -641,6 +650,7 @@ async function init() {
       field: 'all',
       track: currentTrack,
       institutionType: currentInstType,
+      relationships: relationshipDatabase,
     });
     const fieldEntries: OptionEntry[] = [
       { value: 'all', label: `All Fields (${fieldContext.length})` },
@@ -661,6 +671,7 @@ async function init() {
       field: fieldSelect.value || 'all',
       track: 'all',
       institutionType: currentInstType,
+      relationships: relationshipDatabase,
     });
     const trackEntries: OptionEntry[] = [
       { value: 'all', label: `All Tracks (${trackContext.length})` },
@@ -681,6 +692,7 @@ async function init() {
       field: fieldSelect.value || 'all',
       track: trackSelect.value || 'all',
       institutionType: 'all',
+      relationships: relationshipDatabase,
     });
     const instEntries: OptionEntry[] = [
       { value: 'all', label: `All Institutions (${instContext.length})` },
@@ -872,6 +884,7 @@ async function init() {
       field: fieldSelect.value,
       track: trackSelect.value,
       institutionType: institutionTypeSelect.value,
+      relationships: relationshipDatabase,
     });
     renderRoster(sortRoster(filtered, sortSelect.value), {
       field: fieldSelect.value,

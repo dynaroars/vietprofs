@@ -1,4 +1,5 @@
 import { filterRoster, uniqueCountries, type Roster, type SearchIndex } from './data.ts';
+import type { RelationshipDatabase } from './relationships.ts';
 
 const CONTINENT_QUERIES = new Set([
   'africa',
@@ -18,6 +19,7 @@ interface LocationForQueryOptions {
   field?: string;
   track?: string;
   institutionType?: string;
+  relationships?: RelationshipDatabase;
 }
 
 export function locationForQuery(roster: Roster, searchIndex: Roster | SearchIndex, {
@@ -28,6 +30,7 @@ export function locationForQuery(roster: Roster, searchIndex: Roster | SearchInd
   field = 'all',
   track = 'all',
   institutionType = 'all',
+  relationships,
 }: LocationForQueryOptions): string {
   const value = query.trim();
   if (!value) return currentLocation;
@@ -43,7 +46,7 @@ export function locationForQuery(roster: Roster, searchIndex: Roster | SearchInd
   );
   if (isCountryQuery || CONTINENT_QUERIES.has(normalized) || exactInternationalUniversity) return 'World';
 
-  const filters = { query: value, searchScope, state, field, track, institutionType };
+  const filters = { query: value, searchScope, state, field, track, institutionType, relationships };
   const matchesCurrent = filterRoster(searchIndex, { ...filters, location: currentLocation }).length;
   const matchesWorld = filterRoster(searchIndex, { ...filters, location: 'World' }).length;
   return matchesCurrent === 0 && matchesWorld > 0 ? 'World' : currentLocation;

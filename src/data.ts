@@ -88,6 +88,7 @@ import {
   LOCATIONS,
   TRACKS,
 } from './roster-constants.ts';
+import type { RelationshipDatabase } from './relationships.ts';
 export {
   COUNTRY_FLAGS,
   COUNTRY_TO_CONTINENT,
@@ -98,6 +99,7 @@ export {
 } from './roster-constants.ts';
 
 let cached: Roster | null = null;
+let relationshipsCached: RelationshipDatabase | null = null;
 
 export function institutionTypeOf(person: Pick<RosterEntry, 'institutionType'>): string {
   return person.institutionType || 'University';
@@ -173,6 +175,19 @@ export async function loadRoster(): Promise<Roster> {
   const roster = (await res.json()) as Roster;
   cached = roster;
   return roster;
+}
+
+export async function loadRelationships(): Promise<RelationshipDatabase> {
+  if (relationshipsCached) return relationshipsCached;
+  const cacheBuster = typeof __BUILD_COMMIT__ !== 'undefined' && __BUILD_COMMIT__ ? `?v=${__BUILD_COMMIT__}` : '';
+  try {
+    const res = await fetch(`${import.meta.env.BASE_URL}relationships.json${cacheBuster}`);
+    if (!res.ok) throw new Error(`Failed to load relationships.json: ${res.status}`);
+    relationshipsCached = (await res.json()) as RelationshipDatabase;
+  } catch {
+    relationshipsCached = { version: 1, updatedAt: new Date(0).toISOString(), relationships: [] };
+  }
+  return relationshipsCached;
 }
 
 // A build-time-generated daily time series of total roster size (see scripts/build-stats-history.ts).
@@ -920,6 +935,7 @@ interface FilterOptions {
   state?: string;
   country?: string;
   searchScope?: string;
+  relationships?: RelationshipDatabase;
 }
 
 // Resolve only the requested scope. Building a record of every scope per person and reading one
@@ -948,7 +964,21 @@ function matchesSearchScope(person: RosterEntry, scope: string, target: string):
     .some((value) => Boolean(value) && stripDiacritics(value!.toLowerCase()).includes(target));
 }
 
-export function filterRoster(roster: Roster | SearchIndex, { query = '', location, field, track, institutionType, university, phdInstitution, state, country, searchScope = 'all' }: FilterOptions = {}): Roster {
+function matchesRelationshipScope(person: RosterEntry, query: string, database?: RelationshipDatabase): boolean {
+  if (!database) return false;
+  const connected = database.relationships.filter((relationship) =>
+    relationship.sourceId === person.id || relationship.targetId === person.id,
+  );
+  if (!query.trim()) return connected.length > 0;
+  const normalized = query.replace(/[^a-z0-9]/gi, '').toLowerCase();
+  if (['mentor', 'advise', 'advisor', 'mentoradvise'].includes(normalized)) {
+    return connected.some((relationship) => relationship.type === 'doctoral-advisor' || relationship.type === 'postdoctoral-mentor');
+  }
+  if (normalized === 'coauthor') return connected.some((relationship) => relationship.type === 'coauthor');
+  return false;
+}
+
+export function filterRoster(roster: Roster | SearchIndex, { query = '', location, field, track, institutionType, university, phdInstitution, state, country, searchScope = 'all', relationships }: FilterOptions = {}): Roster {
   const index = Array.isArray(roster) ? buildSearchIndex(roster) : roster;
   let result = index.roster;
 
@@ -995,6 +1025,7 @@ export function filterRoster(roster: Roster | SearchIndex, { query = '', locatio
   }
 
   if (searchScope !== 'all') {
+    if (searchScope === 'rel') return result.filter((person) => matchesRelationshipScope(person, query, relationships));
     if (!query.trim()) return searchScope === 'honors' ? result.filter((p) => p.honors?.length) : result;
     const target = stripDiacritics(query.trim().toLowerCase());
     return result.filter((person) => matchesSearchScope(person, searchScope, target));
