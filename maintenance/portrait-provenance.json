@@ -2736,6 +2736,184 @@
       "identitySignals": [],
       "retrievedAt": "2026-09-22T14:16:58.424Z",
       "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1654": {
+      "name": "Long Phan",
+      "outcome": "found",
+      "pageUrl": "https://www.nist.gov/people/long-phan",
+      "imageUrl": "https://www.nist.gov/sites/default/files/styles/480_x_480_limit/public/images/2024/02/29/Long%20Phan%20-%20Photo%20for%20BIO.jpg.webp?itok=CrJuRSXN",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-22T22:18:08.904Z",
+      "note": "manually reviewed and confirmed correct single-person portrait from official profile page"
+    },
+    "vp-1655": {
+      "name": "Thinh Bui",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-22T22:18:09.843Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1656": {
+      "name": "Tu A. Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://energy.sandia.gov/staff/tu-nguyen/",
+      "imageUrl": "https://energy.sandia.gov/app/uploads/sites/273/2024/08/Nguyen_Tu-700x933-1.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-22T22:18:11.012Z"
+    },
+    "vp-1657": {
+      "name": "Manh Thuong Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.pnnl.gov/people/manh-thuong-nguyen",
+      "imageUrl": "https://www.pnnl.gov/sites/default/files/styles/portrait/public/media/image/ManhNguyen_1.png?h=af525af9&itok=EaaoSlnj",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-22T22:18:14.960Z",
+      "note": "manually reviewed and confirmed correct single-person portrait from official profile page"
+    },
+    "vp-1658": {
+      "name": "Dan-Thien Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.pnnl.gov/people/dan-thien-nguyen",
+      "imageUrl": "https://www.pnnl.gov/sites/default/files/styles/portrait/public/media/image/Dan-Thien%20Nguyen.jpg?h=6de883b3&itok=iTmwNqcC",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-22T22:18:16.864Z"
+    },
+    "vp-1659": {
+      "name": "Thanh Toan Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-22T22:18:19.114Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1660": {
+      "name": "Quynh T. Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-22T22:18:19.315Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1661": {
+      "name": "Nhut Truong",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-22T22:18:19.688Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1662": {
+      "name": "Anh Ngo",
+      "outcome": "found",
+      "pageUrl": "https://che.uic.edu/profiles/ngo-anh/",
+      "imageUrl": "https://che.uic.edu/wp-content/uploads/sites/340/2020/08/Anh-Ngo-157x180.png",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-22T22:18:23.019Z"
+    },
+    "vp-1663": {
+      "name": "Phuong Hoang",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-22T22:18:27.675Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1664": {
+      "name": "Phung Le",
+      "outcome": "found",
+      "pageUrl": "https://www.pnnl.gov/people/phung-le",
+      "imageUrl": "https://www.pnnl.gov/sites/default/files/styles/portrait/public/media/image/Web%20Size-Le_Phung-2.jpg?h=96e802cb&itok=dqiG0hNT",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-22T22:18:29.120Z"
+    },
+    "vp-1665": {
+      "name": "Tuan H. Vu",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-22T22:18:31.299Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1666": {
+      "name": "Thai M. Hoang",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-22T22:18:31.561Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1667": {
+      "name": "Nghia Vo",
+      "outcome": "found",
+      "pageUrl": "https://www.bnl.gov/staff/nvo",
+      "imageUrl": "https://www.bnl.gov/assets/global/images/render.php?q=0|27130.jpg|500",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-22T22:18:32.356Z",
+      "note": "manually reviewed and confirmed correct single-person portrait from official profile page"
+    },
+    "vp-1668": {
+      "name": "Joe T. Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-22T22:18:33.370Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1669": {
+      "name": "Rosa Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-22T22:18:33.665Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     }
   }
 }
