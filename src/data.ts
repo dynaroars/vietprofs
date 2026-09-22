@@ -1025,7 +1025,7 @@ export function filterRoster(roster: Roster | SearchIndex, { query = '', locatio
   }
 
   if (searchScope !== 'all') {
-    if (searchScope === 'rel') return result.filter((person) => matchesRelationshipScope(person, query, relationships));
+    if (searchScope === 'connection') return result.filter((person) => matchesRelationshipScope(person, query, relationships));
     if (!query.trim()) return searchScope === 'honors' ? result.filter((p) => p.honors?.length) : result;
     const target = stripDiacritics(query.trim().toLowerCase());
     return result.filter((person) => matchesSearchScope(person, searchScope, target));

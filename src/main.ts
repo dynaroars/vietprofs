@@ -83,7 +83,7 @@ const KEYWORD_LABELS: Record<string, string> = {
   honors: 'Honors',
   phd: 'PhD',
   undergrad: 'Ugrad',
-  rel: 'Relationship',
+  connection: 'Connection',
 };
 
 const KEYWORD_ICONS: Record<string, string> = {
@@ -96,7 +96,7 @@ const KEYWORD_ICONS: Record<string, string> = {
   honors: '🏅',
   phd: '🎓',
   undergrad: '📚',
-  rel: '🔗',
+  connection: '🔗',
 };
 
 const KEYWORD_EXAMPLES: Record<string, string> = {
@@ -109,7 +109,7 @@ const KEYWORD_EXAMPLES: Record<string, string> = {
   honors: 'NSF CAREER Award',
   phd: 'University of New Mexico',
   undergrad: 'Pennsylvania State University',
-  rel: 'co-author',
+  connection: 'co-author',
 };
 
 const KEYWORD_ALIASES: Record<string, string> = {
@@ -132,8 +132,8 @@ const KEYWORD_ALIASES: Record<string, string> = {
   undergrad: 'undergrad',
   ugrad: 'undergrad',
   ugradinst: 'undergrad',
-  rel: 'rel',
-  relationship: 'rel',
+  connection: 'connection',
+  connections: 'connection',
 };
 
 function parseKeywordQuery(raw: string): { scope: string; query: string } | null {
