@@ -520,6 +520,12 @@ const FIELD_OVERRIDES = new Map([
   // Electrical-engineering PhD, power-systems modeling and grid optimization; the group name
   // alone carries no field keyword.
   ['Grid and Electricity Infrastructure|Oak Ridge National Laboratory', 'Engineering'],
+  // Planetary geochemistry (icy worlds, clathrate hydrates, astrobiology); the group name alone
+  // carries no field keyword.
+  ['Planetary Science, Laboratory Studies Group|NASA Jet Propulsion Laboratory', 'Earth & Environmental Sciences'],
+  // Atomic/trapped-ion physicist (PhD Physics, Georgia Tech); the group name alone carries no
+  // field keyword.
+  ['Atomic Clock Technology Group|NASA Jet Propulsion Laboratory', 'Physics & Astronomy'],
   ["École d'actuariat|Université Laval", 'Mathematics'],
   ['E.T.S.I. Aeronáutica y del Espacio|Universidad Politécnica de Madrid', 'Engineering'],
   ['Accelerator Directorate|SLAC National Accelerator Laboratory', 'Physics & Astronomy'],
