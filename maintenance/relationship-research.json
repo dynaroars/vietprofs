@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-23T03:15:00.000Z",
+  "updatedAt": "2026-09-23T04:32:28.497Z",
   "batches": [
     {
       "batchNumber": 1,
@@ -1574,6 +1574,18 @@
       ],
       "nextAction": "Verified doctoral-advisee relationship recorded out of batch sequence via owner-directed lead (Tien Nguyen / vp-0036). Skip re-research when batch covering vp-0261-0280 runs; carry this outcome forward into that batch record.",
       "note": "Resolved 2026-09-22 ahead of its regular batch via an owner-supplied lead, not as part of a completed 20-person batch."
+    },
+    {
+      "rosterId": "vp-0123",
+      "status": "completed",
+      "sources": [
+        "https://websites.uta.edu/knguyen/dr-nguyens-alumni/"
+      ],
+      "relationshipIds": [
+        "rel-doctoral-advisor-vp-0123-vp-1674"
+      ],
+      "nextAction": "Verified doctoral-advisor relationship recorded out of batch sequence via owner-directed lead. Owner also directed adding the advisee, Tam Nguyen (Research Assistant Professor, UT Arlington Bioengineering, M.D./Ph.D. 2022), to the roster as vp-1674 despite the ambiguous \"Research Assistant Professor; Lab Manager\" title — he holds independent AHA AIREA PI funding, which supports genuine research-faculty status per ROSTER_MAINTENANCE.md guidance on this track.",
+      "note": "Resolved 2026-09-23 ahead of batch 8 (vp-0141-vp-0160 covers this range separately) via an owner-supplied lead; vp-0123 was originally processed unresolved in batch 7."
     }
   ]
 }

@@ -1,7 +1,21 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-23T00:00:00.000Z",
+  "updatedAt": "2026-09-23T03:00:00.000Z",
   "relationships": [
+    {
+      "id": "rel-doctoral-advisor-vp-0123-vp-1674",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-0123",
+      "targetId": "vp-1674",
+      "sources": [
+        "https://websites.uta.edu/knguyen/dr-nguyens-alumni/"
+      ],
+      "evidence": "Kytai Truong Nguyen's (vp-0123) official lab alumni page lists Tam Nguyen (M.D./Ph.D. 2022) as a former doctoral student, now Research Assistant Professor in the same lab at UT Arlington; matches vp-1674, added to the roster at the owner's direction.",
+      "works": [],
+      "verifiedAt": "2026-09-23T03:00:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
     {
       "id": "rel-doctoral-advisor-vp-0040-vp-0100",
       "type": "doctoral-advisor",
