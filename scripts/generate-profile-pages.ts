@@ -136,9 +136,18 @@ function profilePage(
   const connections = connectionsFor(person.id, relationships)
     .map((connection) => ({ ...connection, other: rosterById.get(connection.otherId) }))
     .filter((connection): connection is typeof connection & { other: RosterEntry } => Boolean(connection.other))
-    .sort((a, b) => a.label.localeCompare(b.label) || displayName(a.other.name).localeCompare(displayName(b.other.name)));
+    .sort((a, b) => displayName(a.other.name).localeCompare(displayName(b.other.name)) || a.label.localeCompare(b.label));
+  const connectionsByPerson = new Map<string, typeof connections>();
+  for (const connection of connections) {
+    const group = connectionsByPerson.get(connection.otherId) ?? [];
+    group.push(connection);
+    connectionsByPerson.set(connection.otherId, group);
+  }
   const connectionSection = connections.length
-    ? `<section class="man-section"><h2>CONNECTIONS</h2><ul class="connection-list">${connections.map(({ relationship, other, label }) => `<li class="connection-item"><div><a class="connection-person" href="../${personPath(other.id)}">${escapeHtml(displayName(other.name))}</a><span class="connection-kind">${escapeHtml(label)}</span></div><div class="connection-sources">${relationship.sources.map((source, index) => `<a href="${escapeHtml(source)}" target="_blank" rel="noopener noreferrer">${relationship.sources.length === 1 ? 'Evidence' : `Evidence ${index + 1}`}</a>`).join(' · ')}</div></li>`).join('')}</ul><p class="section-note">Only source-verified connections between people in the VietProfs roster are shown.</p></section>`
+    ? `<section class="man-section"><h2>CONNECTIONS</h2><ul class="connection-list">${[...connectionsByPerson.values()].map((group) => {
+      const { other } = group[0];
+      return `<li class="connection-item"><a class="connection-person" href="../${personPath(other.id)}">${escapeHtml(displayName(other.name))}</a><ul class="connection-relations">${group.map(({ relationship, label }) => `<li class="connection-relation"><span class="connection-kind">${escapeHtml(label)}</span><span class="connection-sources">${relationship.sources.map((source, index) => `<a href="${escapeHtml(source)}" target="_blank" rel="noopener noreferrer">${relationship.sources.length === 1 ? 'Evidence' : `Evidence ${index + 1}`}</a>`).join(' · ')}</span></li>`).join('')}</ul></li>`;
+    }).join('')}</ul><p class="section-note">Only source-verified connections between people in the VietProfs roster are shown.</p></section>`
     : '';
   const rawRecord = escapeHtml(JSON.stringify(person, null, 2));
   const editUrl = `../submit.html?edit=${encodeURIComponent(person.id)}`;

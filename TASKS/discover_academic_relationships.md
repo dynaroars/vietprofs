@@ -1,7 +1,7 @@
 # Discover Academic Relationships (`discover_academic_relationships.md`)
 
 > **Autonomous Goal Directive (`/goal TASKS/discover_academic_relationships.md`):**
-> Discover and verify academic relationships **between people already listed in `public/data.json`**. Work in resumable batches of 20 roster members and write verified doctoral, master's, and undergraduate thesis advisor/advisee relationships, explicitly documented postdoctoral mentorships, identity-verified coauthorship signals, shared NSF grant collaborations, and shared patent co-inventorships to the public roster relationship database at `public/relationships.json`. Never research or record spouses, relatives, or other personal relationships. Treat automated author matching and genealogy databases as leads rather than proof, retain evidence for every accepted relationship, and commit and push relationship updates directly to `main`.
+> Discover and verify academic relationships **between people already listed in `public/data.json`**. Work in resumable batches of 20 roster members and write verified doctoral, master's, and undergraduate thesis advisor/advisee relationships, explicitly documented postdoctoral mentorships, identity-verified coauthorship signals, shared funded-award collaborations across NSF, NIH, and other funders with searchable public award records, and shared patent co-inventorships to the public roster relationship database at `public/relationships.json`. Never research or record spouses, relatives, or other personal relationships. Treat automated author matching and genealogy databases as leads rather than proof, retain evidence for every accepted relationship, and commit and push relationship updates directly to `main`.
 
 ---
 
@@ -16,7 +16,7 @@ Allowed relationship types:
 - `undergraduate-advisor`: directional from the advisor to the undergraduate (BS/BA) thesis advisee.
 - `postdoctoral-mentor`: directional from the mentor to the postdoctoral researcher, but only when a source explicitly names the mentoring relationship.
 - `coauthor`: symmetric evidence that two roster members coauthored qualifying scholarly works.
-- `grant-collaborator`: symmetric evidence that two roster members are PI/co-PI together on the same funded award (currently scoped to NSF; extend to other funders' public award databases the same way if the owner asks).
+- `grant-collaborator`: symmetric evidence that two roster members are jointly named in award leadership roles (such as PI/co-PI or multiple PD/PI) on the same funded award, verified in the funder's public award record. Search NSF, NIH, and other relevant funders with public award databases; this is not limited to named examples.
 - `patent-coinventor`: symmetric evidence that two roster members are named co-inventors on the same patent.
 
 Explicitly out of scope:
@@ -63,13 +63,16 @@ OpenAlex, Crossref, ORCID, PubMed, DBLP, and Google Scholar may be used for disc
 
 ### Grant collaborator
 
-Search the [NSF Award Search](https://www.nsf.gov/awardsearch/) (by PI name, or `site:nsf.gov/awardsearch/showAward` searches) for awards that list both roster members as Principal Investigator and Co-Principal Investigator (or as co-PIs together) on the same award. Record a verified `grant-collaborator` relationship only when:
+Search official public award databases relevant to the researchers' fields and funding history. This includes [NSF Award Search](https://www.nsf.gov/awardsearch/) and [NIH RePORTER](https://reporter.nih.gov/), plus other funders' public award-search systems where relevant (for example, federal agencies, research councils, and major public grant programs). Search by each roster member's name and institution; use agency-specific search tools and targeted web searches to find candidate records, then verify against the official award record. Do not treat this list as exhaustive or require owner approval to search another funder's public database.
 
-1. both roster members are individually identity-resolved against the award (affiliation, department, and research area should plausibly match what the award lists for them, since NSF names can collide);
-2. at least one qualifying shared award is found — a single funded, peer-reviewed NSF award already names a small, deliberate set of collaborators, unlike a paper that can have many near-independent coauthors, so one is sufficient here; and
-3. the award's official NSF page (`nsf.gov/awardsearch/showAward?AWD_ID=...`) is used as the source and as the work's `url`, with the award number as `identifier` (e.g. `nsf:1234567`).
+Record a verified `grant-collaborator` relationship only when:
 
-Being listed only in an award's "Senior Personnel" or non-PI role is a lead, not proof, unless the award page itself is ambiguous about roles for one specific listed name — check the award abstract page directly rather than relying on a search snippet. A single-PI award with the other person merely thanked in acknowledgments does not qualify. Use the factual display concept `N shared awards`; do not characterize the collaboration's importance or duration beyond what the award record states.
+1. both roster members are individually identity-resolved against the award (affiliation, department, research area, and chronology should plausibly match the record, since names can collide);
+2. the official award record names both people in joint award-leadership roles appropriate to that funder. Examples include PI and co-PI, multiple PD/PIs (common in NIH records), or an explicitly equivalent lead-investigator role. Being named only as senior/key personnel, collaborator, consultant, subawardee, or other non-lead personnel is not sufficient unless the record explicitly establishes that the funder's role is equivalent to joint PI/PD-PI leadership;
+3. at least one qualifying shared, funded award is found. One is sufficient because the official award record identifies a deliberate set of joint award leaders; and
+4. use the funder's official award page as the source and as the work's `url`, with a stable award number as `identifier` prefixed by a funder code (for example, `nsf:1234567` or `nih:R01CA123456`).
+
+Check the official record directly rather than relying on a search snippet. A single-leader award with the other person merely thanked, cited, or mentioned in acknowledgments does not qualify. When an agency's public record does not distinguish roles clearly, seek an authoritative agency or institutional source that does; otherwise keep the lead unresolved rather than infer joint leadership. Deduplicate the same award found through multiple indexes or funder pages by its stable award identifier. Use the factual display concept `N shared awards`; do not characterize the collaboration's importance or duration beyond what the award record states.
 
 ### Patent co-inventor
 
@@ -131,7 +134,7 @@ Information explicitly supplied by the repository owner may set `direct: true`; 
 
 ## 4. Batch workflow
 
-Process 20 roster members per batch in stable ascending ID order, skipping IDs already completed in a prior batch.
+Process 20 roster members per batch in stable descending ID order, starting at the highest unprocessed ID and skipping IDs already completed in a prior batch.
 
 ### Step 1: Establish the batch
 

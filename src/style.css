@@ -1298,13 +1298,27 @@ a.entry-name:focus-visible {
 }
 
 .subpage .connection-kind {
-  display: block;
   color: var(--text-secondary);
   font-size: var(--text-sm);
 }
 
+.subpage .connection-relations {
+  list-style: none;
+  margin-top: 0.2rem;
+}
+
+.subpage .connection-relation {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 0.6rem;
+}
+
+.subpage .connection-relation + .connection-relation {
+  margin-top: 0.15rem;
+}
+
 .subpage .connection-sources {
-  margin-top: 0.3rem;
   font-size: var(--text-xs);
 }
 
@@ -2628,6 +2642,12 @@ button.chart-row-btn:hover {
 .form-help {
   color: var(--text-muted);
   font-size: var(--text-xs);
+}
+
+.form-help-inline {
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+  font-weight: 400;
 }
 
 .form-help.notice {

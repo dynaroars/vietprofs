@@ -1,158 +1,71 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-23T05:15:00.000Z",
+  "updatedAt": "2026-09-23T15:19:33.000Z",
   "relationships": [
     {
-      "id": "rel-doctoral-advisor-vp-0108-vp-0302",
-      "type": "doctoral-advisor",
-      "sourceId": "vp-0108",
-      "targetId": "vp-0302",
-      "sources": [
-        "https://sites.google.com/view/thainguyenmath/home"
-      ],
-      "evidence": "Thanh Thai Nguyen's (vp-0302) own homepage states \"My advisor is Dr. Tài Huy Hà,\" linking to his Tulane homepage; matches vp-0108 (Huy Tai Ha, Tulane Mathematics).",
-      "works": [],
-      "verifiedAt": "2026-09-23T05:15:00.000Z",
-      "direct": false,
-      "notes": ""
-    },
-    {
-      "id": "rel-coauthor-vp-0108-vp-0302",
+      "id": "rel-coauthor-vp-0015-vp-0018",
       "type": "coauthor",
-      "sourceId": "vp-0108",
-      "targetId": "vp-0302",
+      "sourceId": "vp-0015",
+      "targetId": "vp-0018",
       "sources": [
-        "https://arxiv.org/abs/2111.00681",
-        "https://arxiv.org/abs/2308.16410"
+        "https://scholarworks.uark.edu/cscepub/",
+        "https://pubmed.ncbi.nlm.nih.gov/34441327/",
+        "https://pubmed.ncbi.nlm.nih.gov/34204846/"
       ],
-      "evidence": "Huy Tai Ha (vp-0108) and Thanh Thai Nguyen (vp-0302), his doctoral advisee, coauthored both retained works in commutative algebra; identity confirmed via the same doctoral-advisor relationship (see rel-doctoral-advisor-vp-0108-vp-0302).",
+      "evidence": "The University of Arkansas faculty-publications repository and the two PubMed records identify Ngan Le and Khoa Luu as University of Arkansas coauthors on both retained works; names, shared affiliation, field, and publication histories match vp-0015 and vp-0018.",
       "works": [
         {
-          "identifier": "arxiv:2111.00681",
-          "title": "Newton-Okounkov body, Rees algebra, and analytic spread of graded families of monomial ideals",
-          "date": "2024-01-01",
-          "url": "https://arxiv.org/abs/2111.00681"
+          "identifier": "doi:10.3390/diagnostics11081393",
+          "title": "Narrow Band Active Contour Attention Model for Medical Segmentation",
+          "date": "2021-07-31",
+          "url": "https://doi.org/10.3390/diagnostics11081393"
         },
         {
-          "identifier": "arxiv:2308.16410",
-          "title": "Resurgence number of graded families of ideals",
-          "date": "2026-01-01",
-          "url": "https://arxiv.org/abs/2308.16410"
+          "identifier": "doi:10.3390/diagnostics11061080",
+          "title": "Enhance Portable Radiograph for Fast and High Accurate COVID-19 Monitoring",
+          "date": "2021-06-12",
+          "url": "https://doi.org/10.3390/diagnostics11061080"
         }
       ],
-      "verifiedAt": "2026-09-23T05:15:00.000Z",
+      "verifiedAt": "2026-09-21T00:00:00.000Z",
       "direct": false,
       "notes": ""
     },
     {
-      "id": "rel-doctoral-advisor-vp-0294-vp-1465",
-      "type": "doctoral-advisor",
-      "sourceId": "vp-0294",
-      "targetId": "vp-1465",
-      "sources": [
-        "https://luanhoangmath.github.io/Hoang-CV.pdf"
-      ],
-      "evidence": "Luan Hoang's (vp-0294) own CV \"Students Advised\" section lists \"8.2014 Thinh Kieu, Ph.D. (co-advisor)\"; matches vp-1465 (Thinh Kieu, PhD Texas Tech 2014, University of North Georgia, same research area of Forchheimer flows in porous media).",
-      "works": [],
-      "verifiedAt": "2026-09-23T05:10:00.000Z",
-      "direct": false,
-      "notes": ""
-    },
-    {
-      "id": "rel-coauthor-vp-0294-vp-1465",
+      "id": "rel-coauthor-vp-0018-vp-1315",
       "type": "coauthor",
-      "sourceId": "vp-0294",
-      "targetId": "vp-1465",
+      "sourceId": "vp-0018",
+      "targetId": "vp-1315",
       "sources": [
-        "https://doi.org/10.1007/s11854-018-0064-5",
-        "https://doi.org/10.1016/j.nonrwa.2024.104269"
+        "https://directory.uark.edu/people/khoaluu",
+        "https://scholars.uow.edu.au/son-lam-phung",
+        "https://openaccess.thecvf.com/content/CVPR2022/html/Truong_DirecFormer_A_Directed_Attention_in_Transformer_Approach_to_Robust_Action_CVPR_2022_paper.html",
+        "https://openaccess.thecvf.com/ICCV2021?day=all",
+        "https://www.sciencedirect.com/science/article/pii/S0031320324002085",
+        "https://arxiv.org/abs/2108.03267"
       ],
-      "evidence": "Luan Hoang (vp-0294) and Thinh Kieu (vp-1465) are the sole two authors on both retained works, listed on Hoang's own CV; identity confirmed via the same doctoral-advisor relationship (see rel-doctoral-advisor-vp-0294-vp-1465).",
+      "evidence": "The University of Arkansas profile identifies Khoa Luu as a computer-vision researcher and the University of Wollongong profile identifies Son Lam Phung as a computer-vision and pattern-recognition researcher. The official CVPR 2022 proceedings list both as authors of “DirecFormer”; the official ICCV 2021 proceedings list both on “BiMaL”; and the Pattern Recognition publisher record lists both on the 2024 article “Multi-camera multi-object tracking on the move via single-stage global association approach.” These are three distinct qualifying shared works, resolving the authors to the two roster profiles.",
       "works": [
         {
-          "identifier": "doi:10.1007/s11854-018-0064-5",
-          "title": "Global estimates for generalized Forchheimer flows of slightly compressible fluids",
-          "date": "2019-03-01",
-          "url": "https://doi.org/10.1007/s11854-018-0064-5"
+          "identifier": "10.1109/CVPR52688.2022.01940",
+          "title": "DirecFormer: A Directed Attention in Transformer Approach to Robust Action Recognition",
+          "date": "2022",
+          "url": "https://openaccess.thecvf.com/content/CVPR2022/html/Truong_DirecFormer_A_Directed_Attention_in_Transformer_Approach_to_Robust_Action_CVPR_2022_paper.html"
         },
         {
-          "identifier": "doi:10.1016/j.nonrwa.2024.104269",
-          "title": "Anisotropic flows of Forchheimer-type in porous media and their steady states",
-          "date": "2025-08-01",
-          "url": "https://doi.org/10.1016/j.nonrwa.2024.104269"
-        }
-      ],
-      "verifiedAt": "2026-09-23T05:10:00.000Z",
-      "direct": false,
-      "notes": ""
-    },
-    {
-      "id": "rel-doctoral-advisor-vp-0711-vp-0209",
-      "type": "doctoral-advisor",
-      "sourceId": "vp-0711",
-      "targetId": "vp-0209",
-      "sources": [
-        "https://vivo.brown.edu/docs/o/onguyen3_cv.pdf"
-      ],
-      "evidence": "Oanh Nguyen's (vp-0209) own CV lists \"Ph.D. in Mathematics, Yale University. Advisor: Professor Van Vu\"; matches vp-0711 (Van H. Vu).",
-      "works": [],
-      "verifiedAt": "2026-09-23T04:55:00.000Z",
-      "direct": false,
-      "notes": ""
-    },
-    {
-      "id": "rel-coauthor-vp-0209-vp-0711",
-      "type": "coauthor",
-      "sourceId": "vp-0209",
-      "targetId": "vp-0711",
-      "sources": [
-        "https://arxiv.org/abs/1904.04347",
-        "https://arxiv.org/abs/2012.10850"
-      ],
-      "evidence": "Oanh Nguyen (vp-0209, Yale PhD advised by Van Vu) and Van Vu (vp-0711) coauthored both retained works; identity confirmed via the same advisor/advisee relationship (see rel-doctoral-advisor-vp-0711-vp-0209).",
-      "works": [
-        {
-          "identifier": "arxiv:1904.04347",
-          "title": "Random polynomials: central limit theorems for the real roots",
-          "date": "2021-11-15",
-          "url": "https://arxiv.org/abs/1904.04347"
+          "identifier": "arXiv:2108.03267",
+          "title": "BiMaL: Bijective Maximum Likelihood Approach to Domain Adaptation in Semantic Scene Segmentation",
+          "date": "2021",
+          "url": "https://arxiv.org/abs/2108.03267"
         },
         {
-          "identifier": "arxiv:2012.10850",
-          "title": "Random orthonormal polynomials: universality and expected number of real roots",
-          "date": "2020-12-20",
-          "url": "https://arxiv.org/abs/2012.10850"
+          "identifier": "10.1016/j.patcog.2024.110457",
+          "title": "Multi-camera multi-object tracking on the move via single-stage global association approach",
+          "date": "2024",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0031320324002085"
         }
       ],
-      "verifiedAt": "2026-09-23T04:55:00.000Z",
-      "direct": false,
-      "notes": ""
-    },
-    {
-      "id": "rel-doctoral-advisor-vp-0183-vp-0184",
-      "type": "doctoral-advisor",
-      "sourceId": "vp-0183",
-      "targetId": "vp-0184",
-      "sources": [
-        "https://escholarship.org/content/qt9qh5v298/qt9qh5v298.pdf"
-      ],
-      "evidence": "The official UCSD eScholarship dissertation title page for Linh Thuy Nguyen's (vp-0184) 2016 PhD dissertation \"Contested Terrains\" names \"Professor Yen Le Espiritu, Chair\"; matches vp-0183 (Yen Le Espiritu, UC San Diego Ethnic Studies).",
-      "works": [],
-      "verifiedAt": "2026-09-23T04:50:00.000Z",
-      "direct": false,
-      "notes": ""
-    },
-    {
-      "id": "rel-doctoral-advisor-vp-0183-vp-0193",
-      "type": "doctoral-advisor",
-      "sourceId": "vp-0183",
-      "targetId": "vp-0193",
-      "sources": [
-        "https://escholarship.org/content/qt1qf3h134/qt1qf3h134.pdf"
-      ],
-      "evidence": "The official UCSD eScholarship dissertation title page for Thuy Vo Dang's (vp-0193) 2008 PhD dissertation names \"Committee in charge: Professor Yen Le Espiritu, Chair\"; matches vp-0183 (Yen Le Espiritu, UC San Diego Ethnic Studies).",
-      "works": [],
-      "verifiedAt": "2026-09-23T04:50:00.000Z",
+      "verifiedAt": "2026-09-23T07:01:24.000Z",
       "direct": false,
       "notes": ""
     },
@@ -185,30 +98,1596 @@
       "notes": ""
     },
     {
-      "id": "rel-masters-advisor-vp-0275-vp-0032",
-      "type": "masters-advisor",
-      "sourceId": "vp-0275",
-      "targetId": "vp-0032",
+      "id": "rel-coauthor-vp-0056-vp-0063",
+      "type": "coauthor",
+      "sourceId": "vp-0056",
+      "targetId": "vp-0063",
       "sources": [
-        "https://tvn.roars.dev/cv/cv.pdf"
+        "https://arxiv.org/abs/1111.5258",
+        "https://arxiv.org/abs/1111.0332"
       ],
-      "evidence": "ThanhVu H. Nguyen's (vp-0032) own CV explicitly lists \"Adviser: Thang N. Bui\" for his MS in Computer Science at Penn State University, Harrisburg, PA (2003-2006); this matches vp-0275 (Thang N. Bui, Penn State Harrisburg Computer Science).",
-      "works": [],
-      "verifiedAt": "2026-09-23T04:45:00.000Z",
-      "direct": true,
-      "notes": "Owner-directed: repository owner asked to check his own CV for connections."
+      "evidence": "Thang Le (vp-0056, Georgia Tech Mathematics, knot theory/quantum topology) and Anh T. Tran (vp-0063, Georgia Tech Mathematics PhD 2012, now UT Dallas, knot theory/quantum topology) are the sole two authors on both retained works; names, shared Georgia Tech affiliation at the time, and matching research area (knot theory, quantum topology) confirm both identities.",
+      "works": [
+        {
+          "identifier": "doi:10.1090/S0002-9939-2013-11835-6",
+          "title": "The Kauffman bracket skein module of two-bridge links",
+          "date": "2014-03-01",
+          "url": "https://doi.org/10.1090/S0002-9939-2013-11835-6"
+        },
+        {
+          "identifier": "arxiv:1111.5258",
+          "title": "On the AJ conjecture for knots",
+          "date": "2015-01-01",
+          "url": "https://arxiv.org/abs/1111.5258"
+        }
+      ],
+      "verifiedAt": "2026-09-22T00:00:00.000Z",
+      "direct": false,
+      "notes": ""
     },
     {
-      "id": "rel-doctoral-advisor-vp-0123-vp-1674",
-      "type": "doctoral-advisor",
+      "id": "rel-coauthor-vp-0108-vp-0302",
+      "type": "coauthor",
+      "sourceId": "vp-0108",
+      "targetId": "vp-0302",
+      "sources": [
+        "https://arxiv.org/abs/2111.00681",
+        "https://arxiv.org/abs/2308.16410"
+      ],
+      "evidence": "Huy Tai Ha (vp-0108) and Thanh Thai Nguyen (vp-0302), his doctoral advisee, coauthored both retained works in commutative algebra; identity confirmed via the same doctoral-advisor relationship (see rel-doctoral-advisor-vp-0108-vp-0302).",
+      "works": [
+        {
+          "identifier": "arxiv:2111.00681",
+          "title": "Newton-Okounkov body, Rees algebra, and analytic spread of graded families of monomial ideals",
+          "date": "2024-01-01",
+          "url": "https://arxiv.org/abs/2111.00681"
+        },
+        {
+          "identifier": "arxiv:2308.16410",
+          "title": "Resurgence number of graded families of ideals",
+          "date": "2026-01-01",
+          "url": "https://arxiv.org/abs/2308.16410"
+        }
+      ],
+      "verifiedAt": "2026-09-23T05:15:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0123-vp-1674",
+      "type": "coauthor",
       "sourceId": "vp-0123",
       "targetId": "vp-1674",
       "sources": [
-        "https://websites.uta.edu/knguyen/dr-nguyens-alumni/"
+        "https://pubmed.ncbi.nlm.nih.gov/32061622/",
+        "https://pubmed.ncbi.nlm.nih.gov/33866011/",
+        "https://pubmed.ncbi.nlm.nih.gov/38282968/"
       ],
-      "evidence": "Kytai Truong Nguyen's (vp-0123) official lab alumni page lists Tam Nguyen (M.D./Ph.D. 2022) as a former doctoral student, now Research Assistant Professor in the same lab at UT Arlington; matches vp-1674, added to the roster at the owner's direction.",
+      "evidence": "Kytai Truong Nguyen (vp-0123) and Tam Nguyen (vp-1674) are both named authors on three retained peer-reviewed publications. The official UTA dissertation record identifies Tam Phung Nguyen and their doctoral advisor; PubMed records independently list both authors and their shared UTA affiliation.",
+      "works": [
+        {
+          "identifier": "doi:10.1016/j.jconrel.2020.02.021",
+          "title": "Glutathione-responsive biodegradable polyurethane nanoparticles for lung cancer treatment",
+          "date": "2020-05-01",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32061622/"
+        },
+        {
+          "identifier": "doi:10.1016/j.nano.2021.102400",
+          "title": "Nano encapsulated novel compound SA-10 with therapeutic activity in both acute and chronic murine hindlimb ischemia models",
+          "date": "2021-07-01",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33866011/"
+        },
+        {
+          "identifier": "doi:10.1016/j.bioactmat.2023.12.027",
+          "title": "Targeted chemotherapy via HER2-based chimeric antigen receptor (CAR) engineered T-cell membrane coated polymeric nanoparticles",
+          "date": "2024-04-01",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38282968/"
+        }
+      ],
+      "verifiedAt": "2026-09-23T05:32:47.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0135-vp-1568",
+      "type": "coauthor",
+      "sourceId": "vp-0135",
+      "targetId": "vp-1568",
+      "sources": [
+        "https://www.uml.edu/msb/faculty/phan-hieu.aspx",
+        "https://www.nwmissouri.edu/business/directory/cao.htm",
+        "https://doi.org/10.1016/j.irfa.2024.103164",
+        "https://doi.org/10.1111/fire.70040"
+      ],
+      "evidence": "Hieu Phan (vp-0135) and Hung Cao (vp-1568) are identity-resolved by their official UMass Lowell and Northwest Missouri profiles and publisher/official work records; they coauthored both retained finance articles.",
+      "works": [
+        {
+          "identifier": "doi:10.1016/j.irfa.2024.103164",
+          "title": "Data breach disclosures and stock price crash risk: Evidence from data breach notification laws",
+          "date": "2024-05-01",
+          "url": "https://doi.org/10.1016/j.irfa.2024.103164"
+        },
+        {
+          "identifier": "doi:10.1111/fire.70040",
+          "title": "Legal Liability and Stock Price Crash Risk: Evidence From a Quasi-Natural Experiment",
+          "date": "2025-11-17",
+          "url": "https://doi.org/10.1111/fire.70040"
+        }
+      ],
+      "verifiedAt": "2026-09-23T06:07:28.445Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0209-vp-0711",
+      "type": "coauthor",
+      "sourceId": "vp-0209",
+      "targetId": "vp-0711",
+      "sources": [
+        "https://arxiv.org/abs/1904.04347",
+        "https://arxiv.org/abs/2012.10850"
+      ],
+      "evidence": "Oanh Nguyen (vp-0209, Yale PhD advised by Van Vu) and Van Vu (vp-0711) coauthored both retained works; identity confirmed via the same advisor/advisee relationship (see rel-doctoral-advisor-vp-0711-vp-0209).",
+      "works": [
+        {
+          "identifier": "arxiv:1904.04347",
+          "title": "Random polynomials: central limit theorems for the real roots",
+          "date": "2021-11-15",
+          "url": "https://arxiv.org/abs/1904.04347"
+        },
+        {
+          "identifier": "arxiv:2012.10850",
+          "title": "Random orthonormal polynomials: universality and expected number of real roots",
+          "date": "2020-12-20",
+          "url": "https://arxiv.org/abs/2012.10850"
+        }
+      ],
+      "verifiedAt": "2026-09-23T04:55:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0220-vp-1080",
+      "type": "coauthor",
+      "sourceId": "vp-0220",
+      "targetId": "vp-1080",
+      "sources": [
+        "https://research.unsw.edu.au/people/associate-professor-thuy-duong/publications",
+        "https://finance.pamplin.vt.edu/content/dam/finance_pamplin_vt_edu/directory/cvs/NgocKhanhTran.pdf",
+        "https://revfin.org/market-timing-and-predictability-in-fx-markets/"
+      ],
+      "evidence": "UNSW's publication list and the Review of Finance publisher record identify Thuy-Duong Tô (vp-1080) and Ngoc-Khanh Tran (vp-0220) as coauthors of “Market Timing and Predictability in FX Markets.” UNSW and Virginia Tech records identify them at their respective institutions and their author identities match their roster profiles. Virginia Tech's CV and the UNSW list document their second shared peer-reviewed article, “Nontraded Sector Growth Risks and Economic Sizes in International Asset Pricing.”",
+      "works": [
+        {
+          "identifier": "doi:10.1093/rof/rfac014",
+          "title": "Market Timing and Predictability in FX Markets",
+          "date": "2023",
+          "url": "https://doi.org/10.1093/rof/rfac014"
+        },
+        {
+          "identifier": "doi:10.1287/mnsc.2022.03697",
+          "title": "Nontraded Sector Growth Risks and Economic Sizes in International Asset Pricing",
+          "date": "2024",
+          "url": "https://doi.org/10.1287/mnsc.2022.03697"
+        }
+      ],
+      "verifiedAt": "2026-09-23T11:14:32.805Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0294-vp-1465",
+      "type": "coauthor",
+      "sourceId": "vp-0294",
+      "targetId": "vp-1465",
+      "sources": [
+        "https://doi.org/10.1007/s11854-018-0064-5",
+        "https://doi.org/10.1016/j.nonrwa.2024.104269"
+      ],
+      "evidence": "Luan Hoang (vp-0294) and Thinh Kieu (vp-1465) are the sole two authors on both retained works, listed on Hoang's own CV; identity confirmed via the same doctoral-advisor relationship (see rel-doctoral-advisor-vp-0294-vp-1465).",
+      "works": [
+        {
+          "identifier": "doi:10.1007/s11854-018-0064-5",
+          "title": "Global estimates for generalized Forchheimer flows of slightly compressible fluids",
+          "date": "2019-03-01",
+          "url": "https://doi.org/10.1007/s11854-018-0064-5"
+        },
+        {
+          "identifier": "doi:10.1016/j.nonrwa.2024.104269",
+          "title": "Anisotropic flows of Forchheimer-type in porous media and their steady states",
+          "date": "2025-08-01",
+          "url": "https://doi.org/10.1016/j.nonrwa.2024.104269"
+        }
+      ],
+      "verifiedAt": "2026-09-23T05:10:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0500-vp-1501",
+      "type": "coauthor",
+      "sourceId": "vp-0500",
+      "targetId": "vp-1501",
+      "sources": [
+        "https://research.monash.edu/en/publications/streaming-clustering-with-bayesian-nonparametric-models/",
+        "https://research.monash.edu/en/publications/learning-conditional-latent-structures-from-multiple-data-sources/",
+        "https://www.ecu.edu.au/schools/science/staff/profiles/lecturers/dr-viet-huynh"
+      ],
+      "evidence": "Monash University’s research records and Viet Huynh’s official ECU publication list establish their coauthorship on both retained works. The names, research areas, and Deakin/Monash/ECU career chronology resolve the authors to roster members vp-0500 and vp-1501.",
+      "works": [
+        {
+          "identifier": "doi:10.1016/j.neucom.2017.02.078",
+          "title": "Streaming clustering with Bayesian nonparametric models",
+          "date": "2017-10-04",
+          "url": "https://doi.org/10.1016/j.neucom.2017.02.078"
+        },
+        {
+          "identifier": "doi:10.1007/978-3-319-18038-0_27",
+          "title": "Learning conditional latent structures from multiple data sources",
+          "date": "2015",
+          "url": "https://doi.org/10.1007/978-3-319-18038-0_27"
+        }
+      ],
+      "verifiedAt": "2026-09-23T06:17:56.286Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0504-vp-0682",
+      "type": "coauthor",
+      "sourceId": "vp-0504",
+      "targetId": "vp-0682",
+      "sources": [
+        "https://www.unsw.edu.au/staff/hoang-phuong-phan",
+        "https://www.unsw.edu.au/staff/vinh-nguyen",
+        "https://doi.org/10.1073/pnas.2203287119",
+        "https://www.nature.com/articles/s41467-026-73636-6"
+      ],
+      "evidence": "UNSW’s profiles identify Hoang-Phuong Phan and identify Professor Vinh Nguyen as also publishing as Thanh Vinh Nguyen / Thanh V. Nguyen. The PNAS 2022 and Nature Communications 2026 publisher records list the two named authors together on both retained works.",
+      "works": [
+        {
+          "identifier": "doi:10.1073/pnas.2203287119",
+          "title": "Wide bandgap semiconductor nanomembranes as a long-term biointerface for flexible, implanted neuromodulator",
+          "date": "2022-08-16",
+          "url": "https://doi.org/10.1073/pnas.2203287119"
+        },
+        {
+          "identifier": "doi:10.1038/s41467-026-73636-6",
+          "title": "Wearable, broadband auscultation patch with cantilever pressure transducer for remote healthcare monitoring",
+          "date": "2026-06-04",
+          "url": "https://www.nature.com/articles/s41467-026-73636-6"
+        }
+      ],
+      "verifiedAt": "2026-09-23T15:08:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0534-vp-0752",
+      "type": "coauthor",
+      "sourceId": "vp-0534",
+      "targetId": "vp-0752",
+      "sources": [
+        "https://tamle-ml.github.io/publication.html",
+        "https://research.cuhk.edu.hk/en/persons/viet-anh-nguyen/",
+        "https://proceedings.neurips.cc/paper/2021/hash/8cfef17bee2b7a75a3ce09d40b497f6b-Abstract.html",
+        "https://proceedings.mlr.press/v151/le22b.html",
+        "https://www.ijcai.org/proceedings/2023/0423.pdf"
+      ],
+      "evidence": "Tam Le’s publication list and CUHK’s official profile for Viet Anh Nguyen, together with the three official conference proceedings, identify both roster members as coauthors on all three retained works. Their author pages and research histories resolve the identities.",
+      "works": [
+        {
+          "identifier": "neurips:8cfef17bee2b7a75a3ce09d40b497f6b",
+          "title": "Adversarial Regression with Doubly Non-negative Weighting Matrices",
+          "date": "2021",
+          "url": "https://proceedings.neurips.cc/paper/2021/hash/8cfef17bee2b7a75a3ce09d40b497f6b-Abstract.html"
+        },
+        {
+          "identifier": "pmlr:pmlr-v151-le22b",
+          "title": "Sobolev Transport: A Scalable Metric for Probability Measures with Graph Metrics",
+          "date": "2022",
+          "url": "https://proceedings.mlr.press/v151/le22b.html"
+        },
+        {
+          "identifier": "doi:10.24963/ijcai.2023/423",
+          "title": "Dynamic Flows on Curved Space Generated by Labeled Data",
+          "date": "2023",
+          "url": "https://www.ijcai.org/proceedings/2023/0423.pdf"
+        }
+      ],
+      "verifiedAt": "2026-09-23T13:12:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0537-vp-0745",
+      "type": "coauthor",
+      "sourceId": "vp-0537",
+      "targetId": "vp-0745",
+      "sources": [
+        "https://findanexpert.unimelb.edu.au/profile/853277-bach-le",
+        "https://thanhlecongg.github.io/files/CV.pdf",
+        "https://doi.org/10.1109/TSE.2023.3255177",
+        "https://arxiv.org/abs/2301.01113",
+        "https://dblp.org/pid/270/1843.html"
+      ],
+      "evidence": "Thanh Le-Cong’s publication record and publisher/arXiv records identify Thanh Le-Cong and Xuan-Bach D. Le as coauthors on multiple shared works; the University of Melbourne profile resolves Xuan-Bach D. Le as vp-0537. Retained works include the 2023 IEEE TSE article and the 2022 ICSME paper (DBLP key conf/icsme/NguyenLCLD22).",
+      "works": [
+        {
+          "identifier": "doi:10.1109/TSE.2023.3255177",
+          "title": "Invalidator: Automated Patch Correctness Assessment via Semantic and Syntactic Reasoning",
+          "date": "2023",
+          "url": "https://doi.org/10.1109/TSE.2023.3255177"
+        },
+        {
+          "identifier": "dblp:conf/icsme/NguyenLCLD22",
+          "title": "FFL: Fine-Grained Fault Localization for Student Programs via Syntactic and Semantic Reasoning",
+          "date": "2022",
+          "url": "https://dblp.org/rec/conf/icsme/NguyenLCLD22"
+        }
+      ],
+      "verifiedAt": "2026-09-23T13:17:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0540-vp-1619",
+      "type": "coauthor",
+      "sourceId": "vp-0540",
+      "targetId": "vp-1619",
+      "sources": [
+        "https://www.sciencedirect.com/science/article/pii/S1544612324011747",
+        "https://hoanguc3m.github.io/research/",
+        "https://liu.se/en/employee/hoang65",
+        "https://www.sciencedirect.com/science/article/pii/S0301420723008784",
+        "https://liu.diva-portal.org/smash/record.jsf?pid=diva2%3A1804462"
+      ],
+      "evidence": "Minh-Ngoc Tran (vp-0540) and Hoang Nguyen (vp-1619) are both named authors of this 2024 article. The publisher record verifies the title and DOI; Hoang Nguyen’s own publication page and official Linköping profile verify his identity. Minh-Ngoc Tran’s roster-linked profile identifies his research role and publication record.",
+      "works": [
+        {
+          "identifier": "doi:10.1016/j.frl.2024.106145",
+          "title": "Deep learning enhanced volatility modeling with covariates",
+          "date": "2024-11-01",
+          "url": "https://doi.org/10.1016/j.frl.2024.106145"
+        },
+        {
+          "identifier": "doi:10.1016/j.resourpol.2023.104167",
+          "title": "Bayesian predictive distributions of oil returns using mixed data sampling volatility models",
+          "date": "2023-10-01",
+          "url": "https://doi.org/10.1016/j.resourpol.2023.104167"
+        }
+      ],
+      "verifiedAt": "2026-09-23T05:45:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0572-vp-0573",
+      "type": "coauthor",
+      "sourceId": "vp-0572",
+      "targetId": "vp-0573",
+      "sources": [
+        "https://www.mimuw.edu.pl/en/publications/person/405/",
+        "https://www.mimuw.edu.pl/pl/publikacje/osoba/722/",
+        "https://doi.org/10.3233/FI-2014-1077",
+        "https://link.springer.com/article/10.1007/s40595-017-0094-4"
+      ],
+      "evidence": "The University of Warsaw publication records list Hung Son Nguyen and Anh Linh Nguyen (the published-name order used by roster member Linh Anh Nguyen, whose official profile points to the same University of Warsaw account) as coauthors on two distinct works. The stable DOI records are independently indexed in the official institutional output list.",
+      "works": [
+        {
+          "identifier": "doi:10.3233/FI-2014-1077",
+          "title": "Bisimulation-Based Concept Learning in Description Logics",
+          "date": "2014",
+          "url": "https://doi.org/10.3233/FI-2014-1077"
+        },
+        {
+          "identifier": "doi:10.1007/s40595-017-0094-4",
+          "title": "On the possibility of correct concept learning in description logics",
+          "date": "2018",
+          "url": "https://doi.org/10.1007/s40595-017-0094-4"
+        }
+      ],
+      "verifiedAt": "2026-09-23T15:19:33.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0585-vp-1221",
+      "type": "coauthor",
+      "sourceId": "vp-0585",
+      "targetId": "vp-1221",
+      "sources": [
+        "https://research.usq.edu.au/download/b83aaaaa53703380219f20c00fe61582fce32f68efb3eaf364fb4e71095911d3/7920193/An-Vo_2013_whole.pdf",
+        "https://doi.org/10.1016/j.apm.2012.10.034",
+        "https://research.usq.edu.au/download/1fa4e35e2f081ac51abda10e54b694aab46564a87f7de4ea7b460135885921fa/835220/Nguyen-Ky_Mushtaq_Loch_Reardon-Smith_An-Vo_Ngo-Cong_Tran-Cong_AV.pdf",
+        "https://doi.org/10.1016/j.jhydrol.2017.11.049",
+        "https://staffprofile.unisq.edu.au/Profile/Thanh-Tran-Cong"
+      ],
+      "evidence": "The official UniSQ doctoral dissertation bibliography and publisher DOI records identify Duc-Anh An-Vo and Thanh Tran-Cong as coauthors on two distinct works. Their publication affiliations and official profiles match the UniSQ engineering and computational-modelling roster identities vp-1221 and vp-0585.",
+      "works": [
+        {
+          "identifier": "doi:10.1016/j.apm.2012.10.034",
+          "title": "ADI method based on C²-continuous two-node integrated-RBF elements for viscous flows",
+          "date": "2013",
+          "url": "https://doi.org/10.1016/j.apm.2012.10.034"
+        },
+        {
+          "identifier": "doi:10.1016/j.jhydrol.2017.11.049",
+          "title": "Predicting water allocation trade prices using a hybrid Artificial Neural Network-Bayesian modelling approach",
+          "date": "2018",
+          "url": "https://doi.org/10.1016/j.jhydrol.2017.11.049"
+        }
+      ],
+      "verifiedAt": "2026-09-23T10:17:28.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0591-vp-0672",
+      "type": "coauthor",
+      "sourceId": "vp-0591",
+      "targetId": "vp-0672",
+      "sources": [
+        "https://www.jbs.cam.ac.uk/people/bang-dang-nguyen/",
+        "https://research.monash.edu/en/persons/quoc-anh-do/",
+        "https://fbe.unimelb.edu.au/our-people/staff/economics/kieu-trang-nguyen",
+        "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2023229",
+        "https://doi.org/10.2139/ssrn.2190372"
+      ],
+      "evidence": "Cambridge Judge’s official profile/CV for Bang Dang Nguyen lists him with Quoc-Anh Do on two distinct working papers: the gubernatorial-election study and ‘Out of Sight, Out of Mind’ on congressional elections. The SSRN records provide stable work records, and the official Cambridge and Monash profiles resolve Bang Dang Nguyen and Quoc-Anh Do to vp-0591 and vp-0672.",
+      "works": [
+        {
+          "identifier": "ssrn:2190372",
+          "title": "Political Connections and Firm Value: Evidence from the Regression Discontinuity Design of Close Gubernatorial Elections",
+          "date": "2013",
+          "url": "https://doi.org/10.2139/ssrn.2190372"
+        },
+        {
+          "identifier": "ssrn:2023229",
+          "title": "Out of Sight, Out of Mind: The Value of Political Connections in Social Networks",
+          "date": "2012",
+          "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2023229"
+        }
+      ],
+      "verifiedAt": "2026-09-23T15:14:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0591-vp-0676",
+      "type": "coauthor",
+      "sourceId": "vp-0591",
+      "targetId": "vp-0676",
+      "sources": [
+        "https://www.jbs.cam.ac.uk/people/bang-dang-nguyen/",
+        "https://research.monash.edu/en/persons/quoc-anh-do/",
+        "https://fbe.unimelb.edu.au/our-people/staff/economics/kieu-trang-nguyen",
+        "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2023229",
+        "https://doi.org/10.2139/ssrn.2190372"
+      ],
+      "evidence": "Cambridge Judge’s official profile/CV for Bang Dang Nguyen lists him with Kieu-Trang Nguyen on two distinct working papers: the gubernatorial-election study and ‘Out of Sight, Out of Mind’ on congressional elections. The SSRN records provide stable work records, and the official Cambridge and Melbourne profiles resolve Bang Dang Nguyen and Kieu-Trang Nguyen to vp-0591 and vp-0676.",
+      "works": [
+        {
+          "identifier": "ssrn:2190372",
+          "title": "Political Connections and Firm Value: Evidence from the Regression Discontinuity Design of Close Gubernatorial Elections",
+          "date": "2013",
+          "url": "https://doi.org/10.2139/ssrn.2190372"
+        },
+        {
+          "identifier": "ssrn:2023229",
+          "title": "Out of Sight, Out of Mind: The Value of Political Connections in Social Networks",
+          "date": "2012",
+          "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2023229"
+        }
+      ],
+      "verifiedAt": "2026-09-23T15:14:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0594-vp-0748",
+      "type": "coauthor",
+      "sourceId": "vp-0594",
+      "targetId": "vp-0748",
+      "sources": [
+        "https://warwick.ac.uk/fac/sci/dcs/people/long_tran-thanh/",
+        "https://www.kent.ac.uk/kent-business-school/people/4056/Nguyen-Tri-Dung",
+        "https://www.ijcai.org/Proceedings/13/Papers/064.pdf",
+        "https://proceedings.mlr.press/v132/dinh21a.html"
+      ],
+      "evidence": "Warwick’s profile for Long Tran-Thanh and Kent’s profile for Tri-Dung Nguyen resolve the author identities; the official IJCAI 2013 and PMLR 2021 proceedings list both as coauthors on each retained work.",
+      "works": [
+        {
+          "identifier": "dblp:conf/ijcai/Tran-ThanhNRRJ13",
+          "title": "An Efficient Vector-Based Representation for Coalitional Games",
+          "date": "2013",
+          "url": "https://www.ijcai.org/Proceedings/13/Papers/064.pdf"
+        },
+        {
+          "identifier": "pmlr:pmlr-v132-dinh21a",
+          "title": "Last Round Convergence and No-Dynamic Regret in Asymmetric Repeated Games",
+          "date": "2021",
+          "url": "https://proceedings.mlr.press/v132/dinh21a.html"
+        }
+      ],
+      "verifiedAt": "2026-09-23T13:12:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0672-vp-0676",
+      "type": "coauthor",
+      "sourceId": "vp-0672",
+      "targetId": "vp-0676",
+      "sources": [
+        "https://research.monash.edu/en/persons/quoc-anh-do/",
+        "https://fbe.unimelb.edu.au/our-people/staff/economics/kieu-trang-nguyen",
+        "https://cepr.org/publications/dp21080",
+        "https://cepr.org/publications/dp15141-1",
+        "https://doi.org/10.1257/app.20130472"
+      ],
+      "evidence": "Monash and Melbourne’s official profiles resolve Quoc-Anh Do and Kieu-Trang Nguyen to vp-0672 and vp-0676. CEPR’s official records list both as coauthors on separate discussion papers DP15141 (2020) and DP21080 (2026), and the AEJ: Applied Economics DOI record lists them together on a 2017 published article.",
+      "works": [
+        {
+          "identifier": "doi:10.1257/app.20130472",
+          "title": "One Mandarin Benefits the Whole Clan: Hometown Favoritism in an Authoritarian Regime",
+          "date": "2017",
+          "url": "https://doi.org/10.1257/app.20130472"
+        },
+        {
+          "identifier": "cepr:DP15141",
+          "title": "Power, Scrutiny, and Congressmen’s Favoritism for Friends’ Firms",
+          "date": "2020",
+          "url": "https://cepr.org/publications/dp15141-1"
+        },
+        {
+          "identifier": "cepr:DP21080",
+          "title": "Astrology and Matrimony: Social Reinforcement of Religious Beliefs on Marriage Matching in Vietnam",
+          "date": "2026",
+          "url": "https://cepr.org/publications/dp21080"
+        }
+      ],
+      "verifiedAt": "2026-09-23T15:08:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0707-vp-1178",
+      "type": "coauthor",
+      "sourceId": "vp-0707",
+      "targetId": "vp-1178",
+      "sources": [
+        "https://nguyen.sdsu.edu/",
+        "https://people.eecs.ku.edu/~v532n390/publications-journal.html",
+        "https://escholarship.org/uc/item/5wr4r3tn",
+        "https://dblp.org/rec/journals/twc/NguyenSN21",
+        "https://doi.org/10.1109/TWC.2022.3193885",
+        "https://doi.org/10.1109/TSP.2024.3429009"
+      ],
+      "evidence": "The official SDSU profile identifies Duy H. N. Nguyen and documents Ly V. Nguyen as his PhD student. The official University of Kansas publication list identifies Van Ly Nguyen (vp-1178) and Duy H. N. Nguyen (vp-0707) as coauthors on four distinct peer-reviewed works; retained here are the 2021 IEEE Transactions on Signal Processing paper, the 2023 IEEE Transactions on Wireless Communications paper, and the 2024 IEEE Transactions on Signal Processing paper. The 2021 UC eScholarship record and the listed DOI records support the authorship and publication details. Their research fields and SDSU doctoral history resolve the identities.",
+      "works": [
+        {
+          "identifier": "doi:10.1109/TSP.2021.3068629",
+          "title": "SVM-Based Channel Estimation and Data Detection for One-Bit Massive MIMO Systems",
+          "date": "2021-03-24",
+          "url": "https://doi.org/10.1109/TSP.2021.3068629"
+        },
+        {
+          "identifier": "doi:10.1109/TWC.2022.3193885",
+          "title": "Deep Learning for Estimation and Pilot Signal Design in Few-Bit Massive MIMO Systems",
+          "date": "2023-01",
+          "url": "https://doi.org/10.1109/TWC.2022.3193885"
+        },
+        {
+          "identifier": "doi:10.1109/TSP.2024.3429009",
+          "title": "Variational Bayes for Joint Channel Estimation and Data Detection in Few-Bit Massive MIMO Systems",
+          "date": "2024-07",
+          "url": "https://doi.org/10.1109/TSP.2024.3429009"
+        }
+      ],
+      "verifiedAt": "2026-09-23T10:47:46.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0808-vp-0840",
+      "type": "coauthor",
+      "sourceId": "vp-0808",
+      "targetId": "vp-0840",
+      "sources": [
+        "https://www.tcd.ie/scss/people/academic-staff/phamq/",
+        "https://www.tcd.ie/scss/people/academic-staff/nguyenva/"
+      ],
+      "evidence": "Trinity College Dublin’s official publication lists identify Viet Quoc Pham (vp-0808; published on these works as Quoc-Viet Pham) and Van-Dinh Nguyen (vp-0840) as coauthors on two distinct journal articles.",
+      "works": [
+        {
+          "identifier": "doi:10.1109/LCOMM.2020.3023937",
+          "title": "Resource Allocation for AF Relaying Wireless-Powered Networks With Nonlinear Energy Harvester",
+          "date": "2021",
+          "url": "https://doi.org/10.1109/LCOMM.2020.3023937"
+        },
+        {
+          "identifier": "doi:10.1109/LWC.2020.3012206",
+          "title": "Resource Allocation for Energy Efficiency in OFDMA-Enabled WPCN",
+          "date": "2020",
+          "url": "https://doi.org/10.1109/LWC.2020.3012206"
+        }
+      ],
+      "verifiedAt": "2026-09-23T12:50:34.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0808-vp-0841",
+      "type": "coauthor",
+      "sourceId": "vp-0808",
+      "targetId": "vp-0841",
+      "sources": [
+        "https://www.tcd.ie/scss/people/academic-staff/phamq/",
+        "https://profiles.uts.edu.au/Hoang.Dinh"
+      ],
+      "evidence": "Trinity College Dublin’s official publication list identifies Viet Quoc Pham (vp-0808; published as Quoc-Viet Pham) and Dinh Thai Hoang (vp-0841) as coauthors on multiple peer-reviewed works. The institutional profiles identify their respective researcher identities and affiliations.",
+      "works": [
+        {
+          "identifier": "doi:10.1016/j.jnca.2021.103141",
+          "title": "Swarm intelligence for next-generation networks: Recent advances and applications",
+          "date": "2021",
+          "url": "https://doi.org/10.1016/j.jnca.2021.103141"
+        },
+        {
+          "identifier": "doi:10.1109/JPROC.2022.3175942",
+          "title": "Transfer Learning for Wireless Networks: A Comprehensive Survey",
+          "date": "2022",
+          "url": "https://doi.org/10.1109/JPROC.2022.3175942"
+        }
+      ],
+      "verifiedAt": "2026-09-23T12:50:34.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0808-vp-0845",
+      "type": "coauthor",
+      "sourceId": "vp-0808",
+      "targetId": "vp-0845",
+      "sources": [
+        "https://www.tcd.ie/scss/people/academic-staff/phamq/",
+        "https://www.unisc.edu.au/people/associate-professor-thanh-thi-nguyen",
+        "https://research.monash.edu/en/publications/automatic-modulation-classification-a-deep-architecture-survey/"
+      ],
+      "evidence": "Trinity College Dublin’s official publication list identifies Quoc-Viet Pham and Thanh Thi Nguyen as coauthors on multiple wireless-communications papers. UniSC’s official profile and the Monash research portal identify Thanh Thi Nguyen in AI/ICT and confirm the exact 2021 publication, supporting the match to vp-0845.",
+      "works": [
+        {
+          "identifier": "doi:10.1109/ACCESS.2021.3120419",
+          "title": "Automatic Modulation Classification: A Deep Architecture Survey",
+          "date": "2021",
+          "url": "https://doi.org/10.1109/ACCESS.2021.3120419"
+        },
+        {
+          "identifier": "doi:10.1109/LWC.2022.3162422",
+          "title": "RanNet: Learning Residual-Attention Structure in CNNs for Automatic Modulation Classification",
+          "date": "2022",
+          "url": "https://doi.org/10.1109/LWC.2022.3162422"
+        }
+      ],
+      "verifiedAt": "2026-09-23T12:50:34.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0808-vp-1262",
+      "type": "coauthor",
+      "sourceId": "vp-0808",
+      "targetId": "vp-1262",
+      "sources": [
+        "https://www.tcd.ie/research/profiles/?profile=phamq",
+        "https://sejong.elsevierpure.com/en/publications/cavms-application-aware-cloudlet-adaption-and-vm-selection-framew/",
+        "https://dblp.org/rec/journals/comsur/DaoPTTBLC21",
+        "https://uclab.re.kr/publications_openaccesspdf/samanta_ieeetsc2023_open.pdf"
+      ],
+      "evidence": "Trinity College Dublin’s official profile lists Viet Quoc Pham among the authors of several publications with Nhu-Ngoc Dao; Sejong’s institutional research portal confirms their coauthorship on CAVMS. The publication records and affiliation histories match the two roster identities.",
+      "works": [
+        {
+          "identifier": "doi:10.1109/COMST.2021.3059644",
+          "title": "Survey on Aerial Radio Access Networks: Toward a Comprehensive 6G Access Infrastructure",
+          "date": "2021-04-01",
+          "url": "https://doi.org/10.1109/COMST.2021.3059644"
+        },
+        {
+          "identifier": "doi:10.1109/JSYST.2020.3029807",
+          "title": "CAVMS: Application-Aware Cloudlet Adaption and VM Selection Framework for Multicloudlet Environment",
+          "date": "2021-12-01",
+          "url": "https://doi.org/10.1109/JSYST.2020.3029807"
+        },
+        {
+          "identifier": "doi:10.1109/TSC.2023.3292362",
+          "title": "mISO: Incentivizing Demand-Agnostic Microservices for Edge-Enabled IoT Networks",
+          "date": "2023-09-01",
+          "url": "https://doi.org/10.1109/TSC.2023.3292362"
+        }
+      ],
+      "verifiedAt": "2026-09-23T07:20:48.456Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0840-vp-0841",
+      "type": "coauthor",
+      "sourceId": "vp-0840",
+      "targetId": "vp-0841",
+      "sources": [
+        "https://www.tcd.ie/research/profiles/?profile=nguyenva",
+        "https://www.tcd.ie/scss/people/academic-staff/nguyenva/",
+        "https://profiles.uts.edu.au/Hoang.Dinh",
+        "https://doi.org/10.1109/JSAC.2023.3336183",
+        "https://doi.org/10.1109/TWC.2024.3470108",
+        "https://doi.org/10.1109/JIOT.2025.3536702"
+      ],
+      "evidence": "Trinity College Dublin’s official research output profile lists Dinh Thai Hoang (vp-0841) and Van-Dinh Nguyen (vp-0840) as coauthors on three journal articles. Institutional profiles identify the researchers and their affiliations.",
+      "works": [
+        {
+          "identifier": "doi:10.1109/JSAC.2023.3336183",
+          "title": "Network-Aided Intelligent Traffic Steering in 6G O-RAN: A Multi-Layer Optimization Framework",
+          "date": "2024",
+          "url": "https://doi.org/10.1109/JSAC.2023.3336183"
+        },
+        {
+          "identifier": "doi:10.1109/TWC.2024.3470108",
+          "title": "Enhancing Immersion and Presence in the Metaverse With Over-the-Air Brain-Computer Interface",
+          "date": "2024",
+          "url": "https://doi.org/10.1109/TWC.2024.3470108"
+        },
+        {
+          "identifier": "doi:10.1109/JIOT.2025.3536702",
+          "title": "Securing MIMO Wiretap Channel With Learning-Based Friendly Jamming Under Imperfect CSI",
+          "date": "2025",
+          "url": "https://doi.org/10.1109/JIOT.2025.3536702"
+        }
+      ],
+      "verifiedAt": "2026-09-23T12:41:47.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0863-vp-1200",
+      "type": "coauthor",
+      "sourceId": "vp-0863",
+      "targetId": "vp-1200",
+      "sources": [
+        "https://www.birmingham.ac.uk/staff/profiles/maths/duong-hong",
+        "https://research.tees.ac.uk/en/persons/the-anh-han/",
+        "https://research.birmingham.ac.uk/en/publications/on-the-number-of-equilibria-of-the-replicator-mutator-dynamics-for-noisy-social-dilemmas",
+        "https://research.birmingham.ac.uk/en/publications/evolutionary-dynamics-with-random-payoff-matrices",
+        "https://pubmed.ncbi.nlm.nih.gov/39592014/"
+      ],
+      "evidence": "University of Birmingham and Teesside University research records identify Manh Hong Duong (vp-1200) and The Anh Han (vp-0863) in compatible evolutionary-game-theory fields at their respective institutions. Their institutional research portals and the PubMed record verify at least two distinct shared peer-reviewed publications, resolving both identities.",
+      "works": [
+        {
+          "identifier": "doi:10.1016/j.chaos.2024.114565",
+          "title": "On the number of equilibria of the replicator-mutator dynamics for noisy social dilemmas",
+          "date": "2024",
+          "url": "https://doi.org/10.1016/j.chaos.2024.114565"
+        },
+        {
+          "identifier": "doi:10.1098/rsif.2024.0547",
+          "title": "Evolutionary mechanisms that promote cooperation may not promote social welfare",
+          "date": "2024-11-27",
+          "url": "https://doi.org/10.1098/rsif.2024.0547"
+        },
+        {
+          "identifier": "doi:10.1209/0295-5075/ada0d8",
+          "title": "Evolutionary dynamics with random payoff matrices",
+          "date": "2025-01-07",
+          "url": "https://doi.org/10.1209/0295-5075/ada0d8"
+        }
+      ],
+      "verifiedAt": "2026-09-23T10:33:51.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0917-vp-0919",
+      "type": "coauthor",
+      "sourceId": "vp-0917",
+      "targetId": "vp-0919",
+      "sources": [
+        "https://web-ext.u-aizu.ac.jp/labs/ce-cc/pubs_type.html",
+        "https://tdb.shizuoka.ac.jp/rdb/public/Default2.aspx?id=11326&l=0&t=21"
+      ],
+      "evidence": "The University of Aizu publication record lists Anh T. Pham (vp-0917) and Thanh V. Pham (vp-0919) on two distinct journal articles; Shizuoka University’s official profile resolves the latter author identity.",
+      "works": [
+        {
+          "identifier": "doi:10.1109/TWC.2020.3027674",
+          "title": "Energy-Efficient Artificial Noise-Aided Precoding Designs for Secured Visible Light Communication Systems",
+          "date": "2021",
+          "url": "https://doi.org/10.1109/TWC.2020.3027674"
+        },
+        {
+          "identifier": "doi:10.1109/TCOMM.2019.2900675",
+          "title": "Coordination/Cooperation Strategies and Optimal Zero-Forcing Precoding Design for Multi-User Multi-Cell VLC Networks",
+          "date": "2019",
+          "url": "https://doi.org/10.1109/TCOMM.2019.2900675"
+        }
+      ],
+      "verifiedAt": "2026-09-23T12:22:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0917-vp-0921",
+      "type": "coauthor",
+      "sourceId": "vp-0917",
+      "targetId": "vp-0921",
+      "sources": [
+        "https://web-ext.u-aizu.ac.jp/labs/ce-cc/pubs_type.html",
+        "https://www.jstage.jst.go.jp/article/comex/advpub/0/advpub_2015XBL0177/_article"
+      ],
+      "evidence": "The University of Aizu publication record and IEICE J-STAGE record identify Anh T. Pham (vp-0917) and Cong Thang Truong (vp-0921) as coauthors on two distinct scholarly articles.",
+      "works": [
+        {
+          "identifier": "doi:10.1155/2016/2920850",
+          "title": "A Novel Adaptation Method for HTTP Streaming of VBR Videos over Mobile Networks",
+          "date": "2016",
+          "url": "https://doi.org/10.1155/2016/2920850"
+        },
+        {
+          "identifier": "doi:10.1587/comex.2015XBL0177",
+          "title": "Adaptation Method for Video Streaming over HTTP/2",
+          "date": "2016",
+          "url": "https://doi.org/10.1587/comex.2015XBL0177"
+        }
+      ],
+      "verifiedAt": "2026-09-23T12:22:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0917-vp-0922",
+      "type": "coauthor",
+      "sourceId": "vp-0917",
+      "targetId": "vp-0922",
+      "sources": [
+        "https://kaken.nii.ac.jp/en/grant/KAKENHI-PROJECT-21K11870/",
+        "https://u-aizu.ac.jp/research/researchlist/endetail?cd=90140",
+        "https://web-ext.u-aizu.ac.jp/labs/ce-cc/pubs_type.html"
+      ],
+      "evidence": "Official University of Aizu researcher and KAKEN project-output records identify Anh T. Pham (vp-0917) and Khanh N. Dang, published as Khanh D. Dang (vp-0922), as coauthors on two distinct journal articles. The KAKEN award itself lists only Pham T. Anh as principal investigator, so it does not establish shared grant leadership.",
+      "works": [
+        {
+          "identifier": "doi:10.23919/comex.2023XBL0154",
+          "title": "Resource allocation for hybrid FSO/RF satellite-assisted multiple backhauled UAVs over Starlink networks",
+          "date": "2024",
+          "url": "https://doi.org/10.23919/comex.2023XBL0154"
+        },
+        {
+          "identifier": "doi:10.1109/ACCESS.2023.3340420",
+          "title": "Cooperative HARQ-Aided Multiple UAVs in Optical Aerospace Backhaul Networks",
+          "date": "2023",
+          "url": "https://doi.org/10.1109/ACCESS.2023.3340420"
+        }
+      ],
+      "verifiedAt": "2026-09-23T12:22:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0917-vp-0923",
+      "type": "coauthor",
+      "sourceId": "vp-0917",
+      "targetId": "vp-0923",
+      "sources": [
+        "https://web-ext.u-aizu.ac.jp/labs/ce-cc/pubs_type.html",
+        "https://kaken.nii.ac.jp/en/grant/KAKENHI-PROJECT-21K11870/"
+      ],
+      "evidence": "The University of Aizu publication and official KAKEN project-output records identify Anh T. Pham (vp-0917) and Hoang D. Le (vp-0923) as coauthors on two distinct journal articles.",
+      "works": [
+        {
+          "identifier": "doi:10.1109/COMST.2022.3175509",
+          "title": "Link-Layer Retransmission-Based Error-Control Protocols in FSO Communications: A Survey",
+          "date": "2022",
+          "url": "https://doi.org/10.1109/COMST.2022.3175509"
+        },
+        {
+          "identifier": "doi:10.1109/TVT.2021.3131746",
+          "title": "Throughput Analysis for TCP over the FSO-based Satellite-Assisted Internet of Vehicles",
+          "date": "2022",
+          "url": "https://doi.org/10.1109/TVT.2021.3131746"
+        }
+      ],
+      "verifiedAt": "2026-09-23T12:22:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0919-vp-0921",
+      "type": "coauthor",
+      "sourceId": "vp-0919",
+      "targetId": "vp-0921",
+      "sources": [
+        "https://web-ext.u-aizu.ac.jp/labs/ce-cc/pubs_type.html",
+        "https://tdb.shizuoka.ac.jp/rdb/public/Default2.aspx?id=11326&l=0&t=21"
+      ],
+      "evidence": "The University of Aizu publication records identify Cong Thang Truong (vp-0921) and Thanh V. Pham (vp-0919) as coauthors on two distinct scholarly papers; Shizuoka University’s official profile resolves Thanh V. Pham.",
+      "works": [
+        {
+          "identifier": "doi:10.1364/JOCN.10.000662",
+          "title": "On the Average Achievable Rate of Spatial Diversity MIMO-FSO over Correlated Gamma-Gamma Fading Channels",
+          "date": "2018",
+          "url": "https://doi.org/10.1364/JOCN.10.000662"
+        },
+        {
+          "identifier": "doi:10.1109/ATC.2016.7764798",
+          "title": "On the Ergodic Capacity of MIMO Correlated Gamma-Gamma Fading Channels",
+          "date": "2016",
+          "url": "https://doi.org/10.1109/ATC.2016.7764798"
+        }
+      ],
+      "verifiedAt": "2026-09-23T12:22:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0919-vp-0923",
+      "type": "coauthor",
+      "sourceId": "vp-0919",
+      "targetId": "vp-0923",
+      "sources": [
+        "https://web-ext.u-aizu.ac.jp/labs/ce-cc/pubs_type.html",
+        "https://kaken.nii.ac.jp/en/grant/KAKENHI-PROJECT-21K11870/",
+        "https://tdb.shizuoka.ac.jp/rdb/public/Default2.aspx?id=11326&l=0&t=21"
+      ],
+      "evidence": "Official University of Aizu and KAKEN output records list Thanh V. Pham (vp-0919) and Hoang D. Le (vp-0923) as coauthors on two distinct journal articles; Shizuoka University’s profile resolves Thanh V. Pham.",
+      "works": [
+        {
+          "identifier": "doi:10.1587/comex.2021XBL0009",
+          "title": "Link availability of satellite-based FSO communications in the presence of clouds and turbulence",
+          "date": "2021",
+          "url": "https://doi.org/10.1587/comex.2021XBL0009"
+        },
+        {
+          "identifier": "doi:10.1109/TVT.2021.3131746",
+          "title": "Throughput Analysis for TCP over the FSO-based Satellite-Assisted Internet of Vehicles",
+          "date": "2022",
+          "url": "https://doi.org/10.1109/TVT.2021.3131746"
+        }
+      ],
+      "verifiedAt": "2026-09-23T12:22:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0922-vp-0923",
+      "type": "coauthor",
+      "sourceId": "vp-0922",
+      "targetId": "vp-0923",
+      "sources": [
+        "https://kaken.nii.ac.jp/en/grant/KAKENHI-PROJECT-21K11870/",
+        "https://u-aizu.ac.jp/research/researchlist/endetail?cd=90140",
+        "https://u-aizu.ac.jp/research/faculty/detail?cd=90154&lng=en"
+      ],
+      "evidence": "Official University of Aizu researcher and KAKEN project-output records identify Khanh N. Dang (vp-0922; published as Khanh D. Dang) and Hoang D. Le (vp-0923) as coauthors on two distinct journal articles.",
+      "works": [
+        {
+          "identifier": "doi:10.23919/comex.2023XBL0154",
+          "title": "Resource allocation for hybrid FSO/RF satellite-assisted multiple backhauled UAVs over Starlink networks",
+          "date": "2024",
+          "url": "https://doi.org/10.23919/comex.2023XBL0154"
+        },
+        {
+          "identifier": "doi:10.1109/ACCESS.2023.3340420",
+          "title": "Cooperative HARQ-Aided Multiple UAVs in Optical Aerospace Backhaul Networks",
+          "date": "2023",
+          "url": "https://doi.org/10.1109/ACCESS.2023.3340420"
+        }
+      ],
+      "verifiedAt": "2026-09-23T12:22:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0926-vp-0932",
+      "type": "coauthor",
+      "sourceId": "vp-0926",
+      "targetId": "vp-0932",
+      "sources": [
+        "https://naistpedia.naist.jp/researchers/detail/347",
+        "https://sites.google.com/site/tthongnaist/publication-journals",
+        "https://www.jstage.jst.go.jp/article/transfun/E107.A/3/E107.A_2023CIP0013/_article/-char/en"
+      ],
+      "evidence": "NAIST and J-STAGE publication records identify Thi Hong Tran (vp-0926) and Hoai Luan Pham (vp-0932) as coauthors on two distinct journal articles.",
+      "works": [
+        {
+          "identifier": "doi:10.1109/MDAT.2023.3276936",
+          "title": "Flexible and Scalable BLAKE/BLAKE2 Coprocessor for Blockchain-Based IoT Applications",
+          "date": "2023",
+          "url": "https://doi.org/10.1109/MDAT.2023.3276936"
+        },
+        {
+          "identifier": "doi:10.1587/transfun.2023CIP0013",
+          "title": "Flexible and Energy-Efficient Crypto-Processor for Arbitrary Input Length Processing in Blockchain-Based IoT Applications",
+          "date": "2024",
+          "url": "https://doi.org/10.1587/transfun.2023CIP0013"
+        }
+      ],
+      "verifiedAt": "2026-09-23T12:22:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0926-vp-0933",
+      "type": "coauthor",
+      "sourceId": "vp-0926",
+      "targetId": "vp-0933",
+      "sources": [
+        "https://naistpedia.naist.jp/researchers/detail/347",
+        "https://sites.google.com/site/tthongnaist/publication-journals",
+        "https://www.jstage.jst.go.jp/article/transfun/E107.A/3/E107.A_2023CIP0013/_article/-char/en"
+      ],
+      "evidence": "NAIST and J-STAGE publication records identify Thi Hong Tran (vp-0926) and Vu Trung Duong Le (vp-0933) as coauthors on two distinct journal articles.",
+      "works": [
+        {
+          "identifier": "doi:10.1109/MDAT.2023.3276936",
+          "title": "Flexible and Scalable BLAKE/BLAKE2 Coprocessor for Blockchain-Based IoT Applications",
+          "date": "2023",
+          "url": "https://doi.org/10.1109/MDAT.2023.3276936"
+        },
+        {
+          "identifier": "doi:10.1587/transfun.2023CIP0013",
+          "title": "Flexible and Energy-Efficient Crypto-Processor for Arbitrary Input Length Processing in Blockchain-Based IoT Applications",
+          "date": "2024",
+          "url": "https://doi.org/10.1587/transfun.2023CIP0013"
+        }
+      ],
+      "verifiedAt": "2026-09-23T12:22:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0932-vp-0933",
+      "type": "coauthor",
+      "sourceId": "vp-0932",
+      "targetId": "vp-0933",
+      "sources": [
+        "https://naistpedia.naist.jp/researchers/detail/347",
+        "https://dblp.org/rec/journals/micro/PhamLVTNTN25",
+        "https://dblp.org/rec/journals/tcasI/PhamLTVN24"
+      ],
+      "evidence": "The official NAIST researcher record and bibliographic records identify Hoai Luan Pham (vp-0932) and Vu Trung Duong Le (vp-0933) as coauthors on two distinct journal articles.",
+      "works": [
+        {
+          "identifier": "doi:10.1109/MM.2024.3501313",
+          "title": "MRCA 2.0: An Area-Optimized Multigrained Reconfigurable Cryptographic Accelerator for Securing Blockchain-Based Internet of Things Systems",
+          "date": "2025",
+          "url": "https://doi.org/10.1109/MM.2024.3501313"
+        },
+        {
+          "identifier": "doi:10.1109/TCSI.2024.3434686",
+          "title": "LiCryptor: High-Speed and Compact Multi-Grained Reconfigurable Accelerator for Lightweight Cryptography",
+          "date": "2024",
+          "url": "https://doi.org/10.1109/TCSI.2024.3434686"
+        }
+      ],
+      "verifiedAt": "2026-09-23T12:22:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0943-vp-0944",
+      "type": "coauthor",
+      "sourceId": "vp-0943",
+      "targetId": "vp-0944",
+      "sources": [
+        "https://www.qmul.ac.uk/business-school/staff/academic/profiles/huynht.html",
+        "https://pure.york.ac.uk/portal/en/persons/kiet-duong/",
+        "https://doi.org/10.1016/j.eeh.2025.101723",
+        "https://doi.org/10.1080/1351847X.2025.2608807"
+      ],
+      "evidence": "Queen Mary and University of York records, with the publisher records for both journal articles, identify Luu Duc Toan Huynh and Kiet Tuan Duong as coauthors. Their institutional affiliations and research areas match vp-0943 and vp-0944.",
+      "works": [
+        {
+          "identifier": "doi:10.1016/j.eeh.2025.101723",
+          "title": "A land of sages: A legacy of former elites and university professors in Vietnam",
+          "date": "2026",
+          "url": "https://doi.org/10.1016/j.eeh.2025.101723"
+        },
+        {
+          "identifier": "doi:10.1080/1351847X.2025.2608807",
+          "title": "Extreme weather and corporate fixed asset policies: leasing as alternative finance",
+          "date": "2026",
+          "url": "https://doi.org/10.1080/1351847X.2025.2608807"
+        }
+      ],
+      "verifiedAt": "2026-09-23T12:12:16.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0955-vp-0968",
+      "type": "coauthor",
+      "sourceId": "vp-0955",
+      "targetId": "vp-0968",
+      "sources": [
+        "https://profiles.sussex.ac.uk/p421779-quan-nguyen/publications",
+        "https://www.massey.ac.nz/massey/expertise/profile.cfm?stref=972450"
+      ],
+      "evidence": "The University of Sussex publication record for Quan M. P. Nguyen (ORCID 0000-0002-8435-1902; University of Sussex Business School) and Massey University’s official profile/output list for Hung Do (Do HX; Massey finance professor) identify them as coauthors on eight distinct peer-reviewed journal articles with stable DOIs. The exact initials, institutional identities, finance research area, and corresponding author affiliation resolve both names to vp-0968 and vp-0955.",
+      "works": [
+        {
+          "identifier": "doi:10.1016/j.irfa.2024.103501",
+          "title": "When Hollywood movies steal the show, stock returns dance more with the market!",
+          "date": "2024",
+          "url": "https://doi.org/10.1016/j.irfa.2024.103501"
+        },
+        {
+          "identifier": "doi:10.1016/j.jebo.2023.09.005",
+          "title": "Aerospace competition, investor attention, and stock return comovement",
+          "date": "2023",
+          "url": "https://doi.org/10.1016/j.jebo.2023.09.005"
+        },
+        {
+          "identifier": "doi:10.1016/j.irfa.2023.102515",
+          "title": "Political similarities in credit ratings",
+          "date": "2023",
+          "url": "https://doi.org/10.1016/j.irfa.2023.102515"
+        },
+        {
+          "identifier": "doi:10.1111/jbfa.12686",
+          "title": "Asymmetric trading responses to credit rating announcements from issuer- versus investor-paid rating agencies",
+          "date": "2023",
+          "url": "https://doi.org/10.1111/jbfa.12686"
+        },
+        {
+          "identifier": "doi:10.1016/j.finmar.2021.100699",
+          "title": "Financial leverage and stock return comovement",
+          "date": "2022",
+          "url": "https://doi.org/10.1016/j.finmar.2021.100699"
+        },
+        {
+          "identifier": "doi:10.1016/j.gfj.2022.100714",
+          "title": "Multinationals and stock return comovement",
+          "date": "2022",
+          "url": "https://doi.org/10.1016/j.gfj.2022.100714"
+        },
+        {
+          "identifier": "doi:10.1016/j.jebo.2022.02.013",
+          "title": "LGBT policy, investor trading behavior, and return comovement",
+          "date": "2022",
+          "url": "https://doi.org/10.1016/j.jebo.2022.02.013"
+        },
+        {
+          "identifier": "doi:10.1016/j.eneco.2021.105325",
+          "title": "When Pep comes calling, the oil market answers: The effect of football player transfer movements on abnormal fluctuations in oil price futures",
+          "date": "2021",
+          "url": "https://doi.org/10.1016/j.eneco.2021.105325"
+        }
+      ],
+      "verifiedAt": "2026-09-23T12:06:01.000Z",
+      "direct": false,
+      "notes": "The conference-paper version of the aerospace-attention study is a duplicate of the later journal article and is not counted separately."
+    },
+    {
+      "id": "rel-coauthor-vp-0987-vp-0988",
+      "type": "coauthor",
+      "sourceId": "vp-0987",
+      "targetId": "vp-0988",
+      "sources": [
+        "https://www.nature.com/articles/ncomms13810",
+        "https://pubs.aip.org/aip/apl/article/108/19/192401/30831/High-temperature-ferromagnetism-in-heavily-Fe",
+        "https://www.eeis.t.u-tokyo.ac.jp/en/staff/le-duc-anh/",
+        "https://magn.ee.eng.isct.ac.jp/lab/page/22/"
+      ],
+      "evidence": "The Nature Communications article names Le Duc Anh (vp-0988) and Pham Nam Hai (vp-0987) as coauthors. A second peer-reviewed Applied Physics Letters article, DOI 10.1063/1.4948692, names Nguyen Thanh Tu, Pham Nam Hai, Le Duc Anh, and Masaaki Tanaka as authors. The University of Tokyo profile and Pham Nam Hai Research Group publication page resolve both author identities to the roster members.",
+      "works": [
+        {
+          "identifier": "doi:10.1038/ncomms13810",
+          "title": "Observation of spontaneous spin-splitting in the band structure of an n-type zinc-blende ferromagnetic semiconductor",
+          "date": "2016",
+          "url": "https://www.nature.com/articles/ncomms13810"
+        },
+        {
+          "identifier": "doi:10.1063/1.4948692",
+          "title": "High-temperature ferromagnetism in heavily Fe-doped ferromagnetic semiconductor (Ga,Fe)Sb",
+          "date": "2016",
+          "url": "https://pubs.aip.org/aip/apl/article/108/19/192401/30831/High-temperature-ferromagnetism-in-heavily-Fe"
+        }
+      ],
+      "verifiedAt": "2026-09-23T11:46:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-1006-vp-1007",
+      "type": "coauthor",
+      "sourceId": "vp-1006",
+      "targetId": "vp-1007",
+      "sources": [
+        "https://about.uq.edu.au/experts/1237",
+        "https://about.uq.edu.au/experts-publication/1237/all",
+        "https://www.qut.edu.au/about/our-people/academic-profiles/vincent.hoang",
+        "https://researchprofiles.canberra.edu.au/en/publications/provincial-divergence-and-sub-group-convergence-in-vietnams-gdp-p/"
+      ],
+      "evidence": "The University of Queensland expert and publication records identify Son Hong Nghiem and the Queensland University of Technology profile identifies Viet-Ngu Hoang; the University of Canberra research portal identifies Hoang and Nghiem as coauthors on a peer-reviewed 2018 journal article, and UQ records identify both on a peer-reviewed 2024 Health Economics article. Their full names, affiliations, fields, and publication histories resolve to vp-1006 and vp-1007.",
+      "works": [
+        {
+          "identifier": "https://researchprofiles.canberra.edu.au/en/publications/provincial-divergence-and-sub-group-convergence-in-vietnams-gdp-p/",
+          "title": "Provincial divergence and sub-group convergence in Vietnam’s GDP per capita",
+          "date": "2018",
+          "url": "https://researchprofiles.canberra.edu.au/en/publications/provincial-divergence-and-sub-group-convergence-in-vietnams-gdp-p/"
+        },
+        {
+          "identifier": "doi:10.1002/hec.4923",
+          "title": "The dynamic and heterogeneous effects of COVID-19 vaccination mandates in the USA",
+          "date": "2024",
+          "url": "https://doi.org/10.1002/hec.4923"
+        }
+      ],
+      "verifiedAt": "2026-09-23T11:35:50.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-1006-vp-1010",
+      "type": "coauthor",
+      "sourceId": "vp-1006",
+      "targetId": "vp-1010",
+      "sources": [
+        "https://about.uq.edu.au/experts/1237",
+        "https://about.uq.edu.au/experts/20210",
+        "https://pubmed.ncbi.nlm.nih.gov/30883804/",
+        "https://pubmed.ncbi.nlm.nih.gov/32271703/"
+      ],
+      "evidence": "The PubMed records identify Son Nghiem and Kim-Huong Nguyen as coauthors on both retained peer-reviewed health economics articles, and list their institutional affiliations. UQ expert profiles resolve these authors to vp-1006 and vp-1010.",
+      "works": [
+        {
+          "identifier": "doi:10.1111/vox.12760",
+          "title": "Cost-utility analysis comparing hospital-based intravenous immunoglobulin with home-based subcutaneous immunoglobulin in patients with secondary immunodeficiency",
+          "date": "2019-03-18",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30883804/"
+        },
+        {
+          "identifier": "doi:10.2450/2019.0083-19",
+          "title": "Primary immunodeficiency disease: a cost-utility analysis comparing intravenous vs subcutaneous immunoglobulin replacement therapy in Australia",
+          "date": "2020-03",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32271703/"
+        }
+      ],
+      "verifiedAt": "2026-09-23T11:38:12.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-1031-vp-1038",
+      "type": "coauthor",
+      "sourceId": "vp-1031",
+      "targetId": "vp-1038",
+      "sources": [
+        "https://research.monash.edu/en/persons/minh-do/",
+        "https://research.monash.edu/en/persons/tram-vu/",
+        "https://research.monash.edu/en/publications/the-additional-cost-of-hedging-in-foreign-currency-loans/",
+        "https://research.monash.edu/en/publications/is-drought-risk-priced-in-private-debt-contracts/"
+      ],
+      "evidence": "Monash’s official researcher profiles and research portal identify Viet Do and Tram Vu as coauthors of two peer-reviewed journal articles: “The additional cost of hedging in foreign currency loans” (Australian Journal of Management, 2018; DOI 10.1177/0312896217726836) and “Is drought risk priced in private debt contracts?” (International Review of Finance, 2021; DOI 10.1111/irfi.12294). The Monash profile associated with rostered Viet Do (vp-1031) is titled Minh Do and links to the official output records that list author Viet Do; the output records also list Tram Vu, whose profile matches vp-1038.",
+      "works": [
+        {
+          "identifier": "doi:10.1177/0312896217726836",
+          "title": "The additional cost of hedging in foreign currency loans",
+          "date": "2018",
+          "url": "https://doi.org/10.1177/0312896217726836"
+        },
+        {
+          "identifier": "doi:10.1111/irfi.12294",
+          "title": "Is drought risk priced in private debt contracts?",
+          "date": "2021",
+          "url": "https://doi.org/10.1111/irfi.12294"
+        }
+      ],
+      "verifiedAt": "2026-09-23T11:24:01.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-1174-vp-1207",
+      "type": "coauthor",
+      "sourceId": "vp-1174",
+      "targetId": "vp-1207",
+      "sources": [
+        "https://researchers.mq.edu.au/en/persons/xuan-thinh-duong/",
+        "https://researchers.mq.edu.au/en/persons/the-bui/",
+        "https://researchers.mq.edu.au/en/publications/sharp-weighted-norm-inequalities-for-singular-integrals-with-nons/",
+        "https://researchers.mq.edu.au/en/publications/quantitative-estimates-for-square-functions-with-new-class-of-wei/"
+      ],
+      "evidence": "Macquarie University’s official profiles and publication records identify Xuan Thinh Duong (vp-1174) and The Anh Bui (vp-1207) as coauthors on at least two distinct peer-reviewed works. Their shared Macquarie affiliation, mathematics fields, and full-name publication records resolve both identities.",
+      "works": [
+        {
+          "identifier": "doi:10.1007/s00209-019-02416-4",
+          "title": "Sharp weighted norm inequalities for singular integrals with non-smooth kernels",
+          "date": "2020-08",
+          "url": "https://doi.org/10.1007/s00209-019-02416-4"
+        },
+        {
+          "identifier": "doi:10.1007/s11118-021-09927-y",
+          "title": "Quantitative estimates for square functions with new class of weights",
+          "date": "2022-12",
+          "url": "https://doi.org/10.1007/s11118-021-09927-y"
+        }
+      ],
+      "verifiedAt": "2026-09-23T10:31:02.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-1205-vp-1444",
+      "type": "coauthor",
+      "sourceId": "vp-1205",
+      "targetId": "vp-1444",
+      "sources": [
+        "https://lcoms.univ-lorraine.fr/en/node/349",
+        "https://lmi.insa-rouen.fr/users/pdinh",
+        "https://www.sciencedirect.com/science/article/pii/S0166218X07001345",
+        "https://doi.org/10.1007/s10589-011-9398-y",
+        "https://hal.science/hal-00931206"
+      ],
+      "evidence": "Hoai An Le Thi (vp-1444) and Tao Pham Dinh (vp-1205) are identity-resolved through their university profiles and shared DC-programming research. The official LCOMS profile documents their joint work; publisher and repository records verify three qualifying shared scholarly works.",
+      "works": [
+        {
+          "identifier": "doi:10.1016/j.dam.2007.03.024",
+          "title": "A continuous approach for the concave cost supply problem via DC programming and DCA",
+          "date": "2008-02-01",
+          "url": "https://doi.org/10.1016/j.dam.2007.03.024"
+        },
+        {
+          "identifier": "doi:10.1007/s10589-011-9398-y",
+          "title": "On solving Linear Complementarity Problems by DC programming and DCA",
+          "date": "2011-12-01",
+          "url": "https://doi.org/10.1007/s10589-011-9398-y"
+        },
+        {
+          "identifier": "doi:10.1109/TAC.2014.2301575",
+          "title": "A Difference of Convex Functions Algorithm for Switched Linear Regression",
+          "date": "2014-08-01",
+          "url": "https://doi.org/10.1109/TAC.2014.2301575"
+        }
+      ],
+      "verifiedAt": "2026-09-23T06:31:02.487Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-1235-vp-1250",
+      "type": "coauthor",
+      "sourceId": "vp-1235",
+      "targetId": "vp-1250",
+      "sources": [
+        "https://researchnow.flinders.edu.au/en/persons/vi-khanh-truong/",
+        "https://www.swinburne.edu.au/research/our-research/access-our-research/find-a-researcher-or-supervisor/researcher-profile/?id=ldao",
+        "https://researchnow.flinders.edu.au/en/publications/investigation-of-high-harmonic-generation-in-ar-ne-gas-mixture/",
+        "https://researchnow.flinders.edu.au/en/publications/two-dimensional-nonlinear-spectroscopy-in-the-extreme-ultraviolet/",
+        "https://rjp.nipne.ro/2023_68_9-10/RomJPhys.68.207.pdf",
+        "https://doi.org/10.1016/j.optcom.2024.130629"
+      ],
+      "evidence": "The official Flinders ResearchNow person profile resolves Vi Khanh Truong (ORCID 0000-0002-6016-6438), and Flinders publication records list Vi Khanh Truong as an author on both retained peer-reviewed articles. The 2023 Romanian Journal of Physics paper and 2024 Optics Communications paper also name Lap Van Dao as coauthor; their author affiliations and Dao’s official Swinburne profile resolve him to roster member vp-1250. Both papers are distinct qualifying works with stable DOIs.",
+      "works": [
+        {
+          "identifier": "doi:10.59277/RomJPhys.2023.68.207",
+          "title": "Investigation of High Harmonic Generation in Ar-Ne Gas Mixture",
+          "date": "2023",
+          "url": "https://doi.org/10.59277/RomJPhys.2023.68.207"
+        },
+        {
+          "identifier": "doi:10.1016/j.optcom.2024.130629",
+          "title": "Two-dimensional nonlinear spectroscopy in the extreme ultraviolet to study dynamics of atomic and molecular gases",
+          "date": "2024-08-01",
+          "url": "https://doi.org/10.1016/j.optcom.2024.130629"
+        }
+      ],
+      "verifiedAt": "2026-09-23T08:29:29.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-1264-vp-1401",
+      "type": "coauthor",
+      "sourceId": "vp-1264",
+      "targetId": "vp-1401",
+      "sources": [
+        "https://www.liverpool.ac.uk/people/huynh-nguyen/research",
+        "https://www.liverpool.ac.uk/people/huynh-nguyen/research-outputs",
+        "https://www.etsmtl.ca/en/study-at-ets/professors/knguyen",
+        "https://pure.etsmtl.ca/en/publications/double-layered-anti-interception-strategy-for-ground-combat-vehic/",
+        "https://pure.etsmtl.ca/en/publications/anti-in-band-full-duplex-interception-for-wireless-tactical-netwo/"
+      ],
+      "evidence": "The official University of Liverpool profile for Dr Huynh Nguyen identifies wireless communications, mobile edge computing, IoT, physical-layer security, and an electrical/computer engineering PhD from UTS; the roster profile for vp-1264 gives the matching name, Liverpool affiliation, and 5G/6G, mobile-edge, and physical-layer-security areas. The official ÉTS profile and its research repository list Van Huynh Nguyen with Kim Khoa Nguyen on two peer-reviewed works, “Double-Layered Anti-Interception Strategy for Ground Combat Vehicles” (2025; DOI 10.1109/ICC52391.2025.11161286) and “Anti In-Band Full-Duplex Interception For Wireless Tactical Networks By Joint Passive Defense, Active Defense, and AES-Based Encryption” (2026; DOI 10.1109/TVT.2026.3682649). The Liverpool identity has aligned name, career chronology, research specialization, and institutional history, resolving it to vp-1264; Kim Khoa Nguyen is resolved to vp-1401 by the official ÉTS profile.",
+      "works": [
+        {
+          "identifier": "doi:10.1109/ICC52391.2025.11161286",
+          "title": "Double-Layered Anti-Interception Strategy for Ground Combat Vehicles",
+          "date": "2025",
+          "url": "https://doi.org/10.1109/ICC52391.2025.11161286"
+        },
+        {
+          "identifier": "doi:10.1109/TVT.2026.3682649",
+          "title": "Anti In-Band Full-Duplex Interception For Wireless Tactical Networks By Joint Passive Defense, Active Defense, and AES-Based Encryption",
+          "date": "2026",
+          "url": "https://doi.org/10.1109/TVT.2026.3682649"
+        }
+      ],
+      "verifiedAt": "2026-09-23T06:42:43.806Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-1272-vp-1285",
+      "type": "coauthor",
+      "sourceId": "vp-1272",
+      "targetId": "vp-1285",
+      "sources": [
+        "https://pubmed.ncbi.nlm.nih.gov/23056620/",
+        "https://pubmed.ncbi.nlm.nih.gov/21436676/"
+      ],
+      "evidence": "PubMed records identify Mai P. Hoang and Long P. Le as coauthors on two pathology studies. Both records associate the authors with Massachusetts General Hospital/Harvard pathology, matching the roster identities.",
+      "works": [
+        {
+          "identifier": "doi:10.1371/journal.pone.0047290",
+          "title": "Apocrine-eccrine carcinomas: molecular and immunohistochemical analyses",
+          "date": "2012-10-09",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23056620/"
+        },
+        {
+          "identifier": "doi:10.1097/PAS.0b013e31821375ea",
+          "title": "Proliferative nodules arising within congenital melanocytic nevi: a histologic, immunohistochemical, and molecular analyses of 43 cases",
+          "date": "2011-05-01",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/21436676/"
+        }
+      ],
+      "verifiedAt": "2026-09-23T07:13:57.699Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-1422-vp-1423",
+      "type": "coauthor",
+      "sourceId": "vp-1422",
+      "targetId": "vp-1423",
+      "sources": [
+        "https://staffprofile.unisq.edu.au/profile/toan-dinh",
+        "https://experts.griffith.edu.au/18881-van-thanh-dau",
+        "https://pubmed.ncbi.nlm.nih.gov/35515282/",
+        "https://pubmed.ncbi.nlm.nih.gov/37318848/",
+        "https://pubmed.ncbi.nlm.nih.gov/34236166/"
+      ],
+      "evidence": "The official UniSQ and Griffith profiles identify the roster researchers and their mechanical engineering/MEMS and sensing work. PubMed records identify Toan Dinh and Van Thanh Dau among the authors of three shared works: “Soft ionic liquid multi-point touch sensor” (2019; DOI 10.1039/c9ra00322c), “Piezoresistive Effect with a Gauge Factor of 18 000 in a Semiconductor Heterojunction Modulated by Bonded Light-Emitting Diodes” (2021; DOI 10.1021/acsami.1c05985), and “Charge-Reduced Particles via Self-Propelled Electrohydrodynamic Atomization for Drug Delivery Applications” (2023; DOI 10.1021/acsami.3c02000). Affiliations, research areas, and ORCID records resolve both identities to vp-1422 and vp-1423.",
+      "works": [
+        {
+          "identifier": "doi:10.1039/c9ra00322c",
+          "title": "Soft ionic liquid multi-point touch sensor",
+          "date": "2019-04-05",
+          "url": "https://doi.org/10.1039/c9ra00322c"
+        },
+        {
+          "identifier": "doi:10.1021/acsami.1c05985",
+          "title": "Piezoresistive Effect with a Gauge Factor of 18 000 in a Semiconductor Heterojunction Modulated by Bonded Light-Emitting Diodes",
+          "date": "2021-07-28",
+          "url": "https://doi.org/10.1021/acsami.1c05985"
+        },
+        {
+          "identifier": "doi:10.1021/acsami.3c02000",
+          "title": "Charge-Reduced Particles via Self-Propelled Electrohydrodynamic Atomization for Drug Delivery Applications",
+          "date": "2023-06-28",
+          "url": "https://doi.org/10.1021/acsami.3c02000"
+        }
+      ],
+      "verifiedAt": "2026-09-23T06:36:31.107Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-1532-vp-1538",
+      "type": "coauthor",
+      "sourceId": "vp-1532",
+      "targetId": "vp-1538",
+      "sources": [
+        "https://csm.rowan.edu/departments/math/facultystaff/full-time-faculty/tran.html",
+        "https://campus.und.edu/directory/thanh.vo.1",
+        "https://doi.org/10.1007/s10107-023-01980-2",
+        "https://doi.org/10.1007/s10898-024-01460-7"
+      ],
+      "evidence": "Rowan University’s faculty profile identifies Dat Ba Tran (vp-1532) and lists his selected publications. The University of North Dakota profile/CV identifies Vo Thanh Phat (vp-1538) and lists the same works. Both authors’ fields, Wayne State/UND career histories, and full publication author lists resolve the matches.",
+      "works": [
+        {
+          "identifier": "doi:10.1007/s10107-023-01980-2",
+          "title": "Globally convergent coderivative-based generalized Newton methods in nonsmooth optimization",
+          "date": "2023-05-27",
+          "url": "https://doi.org/10.1007/s10107-023-01980-2"
+        },
+        {
+          "identifier": "doi:10.1007/s10898-024-01460-7",
+          "title": "Inexact proximal methods for weakly convex functions",
+          "date": "2025-03",
+          "url": "https://doi.org/10.1007/s10898-024-01460-7"
+        }
+      ],
+      "verifiedAt": "2026-09-23T06:17:56.286Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-1544-vp-1647",
+      "type": "coauthor",
+      "sourceId": "vp-1544",
+      "targetId": "vp-1647",
+      "sources": [
+        "https://www.mdx.ac.uk/about-us/our-people/staff-directory/dr-tuan-le/",
+        "https://www.mdx.ac.uk/about-us/our-people/staff-directory/nguyen-huan",
+        "https://doi.org/10.1109/TGCN.2017.2706063",
+        "https://doi.org/10.1007/s11036-018-1157-1"
+      ],
+      "evidence": "Middlesex University’s Tuan Le profile lists multiple works coauthored with Huan X. Nguyen. The roster profiles independently place both at Middlesex in Design Engineering and Mathematics, and their research areas and author histories resolve the names to vp-1544 and vp-1647.",
+      "works": [
+        {
+          "identifier": "doi:10.1109/TGCN.2017.2706063",
+          "title": "Robust chance-constrained optimization for power-efficient and secure SWIPT systems",
+          "date": "2017-09",
+          "url": "https://doi.org/10.1109/TGCN.2017.2706063"
+        },
+        {
+          "identifier": "doi:10.1007/s11036-018-1157-1",
+          "title": "A physical layer network coding based modify-and-forward with opportunistic secure cooperative transmission protocol",
+          "date": "2019",
+          "url": "https://doi.org/10.1007/s11036-018-1157-1"
+        }
+      ],
+      "verifiedAt": "2026-09-23T06:17:56.286Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-1579-vp-1602",
+      "type": "coauthor",
+      "sourceId": "vp-1579",
+      "targetId": "vp-1602",
+      "sources": [
+        "https://research.manchester.ac.uk/en/persons/hai-anh.tran",
+        "https://business-school.exeter.ac.uk/about/people/profile/index.php?web_id=Bach_Nguyen",
+        "https://www.sciencedirect.com/science/article/pii/S0148296324001802",
+        "https://kclpure.kcl.ac.uk/ws/portalfiles/portal/253352285/Nguyen_Tran_Stephan_et_al_2024_rumination_and_pivoting_in_crisis_JBV.pdf",
+        "https://doi.org/10.1007/s11747-025-01131-3"
+      ],
+      "evidence": "Hai-Anh Tran (vp-1579) and Bach Nguyen (vp-1602) are identity-resolved by their official Manchester and Exeter profiles and publisher affiliation/author records, and are named coauthors on all three retained works.",
+      "works": [
+        {
+          "identifier": "doi:10.1016/j.jbusres.2024.114676",
+          "title": "Using affective content to promote high-involvement services on social media",
+          "date": "2024-06-01",
+          "url": "https://doi.org/10.1016/j.jbusres.2024.114676"
+        },
+        {
+          "identifier": "doi:10.1016/j.jbusvent.2024.106395",
+          "title": "I can't get it out of my mind: Why, how, and when crisis rumination leads entrepreneurs to act and pivot during crises",
+          "date": "2024-04-01",
+          "url": "https://doi.org/10.1016/j.jbusvent.2024.106395"
+        },
+        {
+          "identifier": "doi:10.1007/s11747-025-01131-3",
+          "title": "How universities can use social media for student acquisition",
+          "date": "2026-01-27",
+          "url": "https://doi.org/10.1007/s11747-025-01131-3"
+        }
+      ],
+      "verifiedAt": "2026-09-23T06:07:28.445Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-doctoral-advisor-vp-0036-vp-0267",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-0036",
+      "targetId": "vp-0267",
+      "sources": [
+        "https://personal.utdallas.edu/~tien.n.nguyen/students.html"
+      ],
+      "evidence": "Tien N. Nguyen's (vp-0036) official students page lists Tung Thanh Nguyen as an alumni PhD student, noting his Assistant Professor position at Auburn University; this matches vp-0267's Google Scholar profile (bpqJ-N0AAAAJ) and PhD Iowa State 2013, from when Nguyen was an Iowa State faculty member before moving to UT Dallas.",
       "works": [],
-      "verifiedAt": "2026-09-23T03:00:00.000Z",
+      "verifiedAt": "2026-09-22T18:00:00.000Z",
       "direct": false,
       "notes": ""
     },
@@ -256,20 +1735,6 @@
       "notes": ""
     },
     {
-      "id": "rel-doctoral-advisor-vp-0036-vp-0267",
-      "type": "doctoral-advisor",
-      "sourceId": "vp-0036",
-      "targetId": "vp-0267",
-      "sources": [
-        "https://personal.utdallas.edu/~tien.n.nguyen/students.html"
-      ],
-      "evidence": "Tien N. Nguyen's (vp-0036) official students page lists Tung Thanh Nguyen as an alumni PhD student, noting his Assistant Professor position at Auburn University; this matches vp-0267's Google Scholar profile (bpqJ-N0AAAAJ) and PhD Iowa State 2013, from when Nguyen was an Iowa State faculty member before moving to UT Dallas.",
-      "works": [],
-      "verifiedAt": "2026-09-22T18:00:00.000Z",
-      "direct": false,
-      "notes": ""
-    },
-    {
       "id": "rel-doctoral-advisor-vp-0052-vp-0026",
       "type": "doctoral-advisor",
       "sourceId": "vp-0052",
@@ -280,6 +1745,154 @@
       "evidence": "Anh Nguyen's (vp-0026) own maintained lab/CV page explicitly states \"Advisor: Dr. Tam Vu\" under her PhD education section (University of Colorado Boulder, 2014-2022); this matches vp-0052's (Tam Vu) prior appointment as founding director of the Mobile and Networked Systems Lab at CU Boulder before moving to Dartmouth.",
       "works": [],
       "verifiedAt": "2026-09-22T18:00:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-doctoral-advisor-vp-0108-vp-0302",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-0108",
+      "targetId": "vp-0302",
+      "sources": [
+        "https://sites.google.com/view/thainguyenmath/home"
+      ],
+      "evidence": "Thanh Thai Nguyen's (vp-0302) own homepage states \"My advisor is Dr. Tài Huy Hà,\" linking to his Tulane homepage; matches vp-0108 (Huy Tai Ha, Tulane Mathematics).",
+      "works": [],
+      "verifiedAt": "2026-09-23T05:15:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-doctoral-advisor-vp-0123-vp-1674",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-0123",
+      "targetId": "vp-1674",
+      "sources": [
+        "https://websites.uta.edu/knguyen/dr-nguyens-alumni/"
+      ],
+      "evidence": "Kytai Truong Nguyen's (vp-0123) official lab alumni page lists Tam Nguyen (M.D./Ph.D. 2022) as a former doctoral student, now Research Assistant Professor in the same lab at UT Arlington; matches vp-1674, added to the roster at the owner's direction.",
+      "works": [],
+      "verifiedAt": "2026-09-23T03:00:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-doctoral-advisor-vp-0183-vp-0184",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-0183",
+      "targetId": "vp-0184",
+      "sources": [
+        "https://escholarship.org/content/qt9qh5v298/qt9qh5v298.pdf"
+      ],
+      "evidence": "The official UCSD eScholarship dissertation title page for Linh Thuy Nguyen's (vp-0184) 2016 PhD dissertation \"Contested Terrains\" names \"Professor Yen Le Espiritu, Chair\"; matches vp-0183 (Yen Le Espiritu, UC San Diego Ethnic Studies).",
+      "works": [],
+      "verifiedAt": "2026-09-23T04:50:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-doctoral-advisor-vp-0183-vp-0193",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-0183",
+      "targetId": "vp-0193",
+      "sources": [
+        "https://escholarship.org/content/qt1qf3h134/qt1qf3h134.pdf"
+      ],
+      "evidence": "The official UCSD eScholarship dissertation title page for Thuy Vo Dang's (vp-0193) 2008 PhD dissertation names \"Committee in charge: Professor Yen Le Espiritu, Chair\"; matches vp-0183 (Yen Le Espiritu, UC San Diego Ethnic Studies).",
+      "works": [],
+      "verifiedAt": "2026-09-23T04:50:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-doctoral-advisor-vp-0294-vp-1465",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-0294",
+      "targetId": "vp-1465",
+      "sources": [
+        "https://luanhoangmath.github.io/Hoang-CV.pdf"
+      ],
+      "evidence": "Luan Hoang's (vp-0294) own CV \"Students Advised\" section lists \"8.2014 Thinh Kieu, Ph.D. (co-advisor)\"; matches vp-1465 (Thinh Kieu, PhD Texas Tech 2014, University of North Georgia, same research area of Forchheimer flows in porous media).",
+      "works": [],
+      "verifiedAt": "2026-09-23T05:10:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-doctoral-advisor-vp-0500-vp-1501",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-0500",
+      "targetId": "vp-1501",
+      "sources": [
+        "https://dinhphung.com/index.php?n=Main.Supervision",
+        "https://viethh.github.io/",
+        "https://www.ecu.edu.au/schools/science/staff/profiles/lecturers/dr-viet-huynh"
+      ],
+      "evidence": "Dinh Phung’s supervision record lists Dr Viet Huynh as a completed PhD student (2017) and names Prof. Dinh Phung as a supervisor; Viet Huynh’s own academic page independently states he completed his PhD under Dinh Phung and Svetha Venkatesh. The profiles and research history identify the roster members.",
+      "works": [],
+      "verifiedAt": "2026-09-23T06:17:56.286Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-doctoral-advisor-vp-0537-vp-0745",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-0537",
+      "targetId": "vp-0745",
+      "sources": [
+        "https://www.sutd.edu.sg/profile/thanh-le-cong/",
+        "https://findanexpert.unimelb.edu.au/profile/853277-bach-le",
+        "https://thanhlecongg.github.io/files/CV.pdf"
+      ],
+      "evidence": "SUTD’s official faculty profile states that Thanh Le-Cong completed his PhD under the supervision of Dr. Bach Le and Professor Toby Murray. The University of Melbourne profile and the PhD candidate’s CV resolve Dr. Bach Le as roster member Xuan-Bach Le (vp-0537).",
+      "works": [],
+      "verifiedAt": "2026-09-23T13:17:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-doctoral-advisor-vp-0585-vp-1221",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-0585",
+      "targetId": "vp-1221",
+      "sources": [
+        "https://research.usq.edu.au/download/b83aaaaa53703380219f20c00fe61582fce32f68efb3eaf364fb4e71095911d3/7920193/An-Vo_2013_whole.pdf",
+        "https://staffprofile.unisq.edu.au/Profile/Thanh-Tran-Cong"
+      ],
+      "evidence": "The official University of Southern Queensland dissertation for Duc-Anh An-Vo explicitly lists Professor Thanh Tran-Cong as a co-supervisor for the doctoral research. The dissertation and official staff profiles resolve the names to roster members vp-1221 and vp-0585, respectively.",
+      "works": [],
+      "verifiedAt": "2026-09-23T10:17:28.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-doctoral-advisor-vp-0704-vp-0705",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-0704",
+      "targetId": "vp-0705",
+      "sources": [
+        "https://commencement.njit.edu/sites/commencement/files/Commencement-Ceremony-2023.pdf",
+        "https://people.njit.edu/profile/phan",
+        "https://www.albany.edu/cehc/faculty/phung-lai"
+      ],
+      "evidence": "NJIT’s 2023 commencement program identifies Thi Kim Phung Lai’s dissertation, ‘Trustworthy Machine Learning Through the Lens of Privacy and Security,’ and names Hai Phan as her advisor. NJIT’s official profile resolves Hai Phan to roster member vp-0704; Albany’s profile confirms Phung Lai’s NJIT PhD and current identity as vp-0705.",
+      "works": [],
+      "verifiedAt": "2026-09-23T13:23:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-doctoral-advisor-vp-0707-vp-1178",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-0707",
+      "targetId": "vp-1178",
+      "sources": [
+        "https://nguyen.sdsu.edu/",
+        "https://people.eecs.ku.edu/~v532n390/"
+      ],
+      "evidence": "Duy H. N. Nguyen’s official SDSU profile identifies Ly V. Nguyen as his PhD student, says Ly defended his PhD dissertation in May 2022, and identifies the continuing joint work. The University of Kansas profile identifies Van Ly Nguyen, an electrical engineering scholar whose doctoral study was completed through SDSU and UC San Diego; the name, research field, and documented SDSU history resolve him to roster member vp-1178. This explicitly establishes Duy H. N. Nguyen (vp-0707) as doctoral advisor to Van Ly Nguyen (vp-1178).",
+      "works": [],
+      "verifiedAt": "2026-09-23T10:47:46.000Z",
       "direct": false,
       "notes": ""
     },
@@ -298,61 +1911,100 @@
       "notes": ""
     },
     {
-      "id": "rel-coauthor-vp-0056-vp-0063",
-      "type": "coauthor",
-      "sourceId": "vp-0056",
-      "targetId": "vp-0063",
+      "id": "rel-doctoral-advisor-vp-0711-vp-0209",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-0711",
+      "targetId": "vp-0209",
       "sources": [
-        "https://arxiv.org/abs/1111.5258",
-        "https://arxiv.org/abs/1111.0332"
+        "https://vivo.brown.edu/docs/o/onguyen3_cv.pdf"
       ],
-      "evidence": "Thang Le (vp-0056, Georgia Tech Mathematics, knot theory/quantum topology) and Anh T. Tran (vp-0063, Georgia Tech Mathematics PhD 2012, now UT Dallas, knot theory/quantum topology) are the sole two authors on both retained works; names, shared Georgia Tech affiliation at the time, and matching research area (knot theory, quantum topology) confirm both identities.",
-      "works": [
-        {
-          "identifier": "doi:10.1090/S0002-9939-2013-11835-6",
-          "title": "The Kauffman bracket skein module of two-bridge links",
-          "date": "2014-03-01",
-          "url": "https://doi.org/10.1090/S0002-9939-2013-11835-6"
-        },
-        {
-          "identifier": "arxiv:1111.5258",
-          "title": "On the AJ conjecture for knots",
-          "date": "2015-01-01",
-          "url": "https://arxiv.org/abs/1111.5258"
-        }
-      ],
-      "verifiedAt": "2026-09-22T00:00:00.000Z",
+      "evidence": "Oanh Nguyen's (vp-0209) own CV lists \"Ph.D. in Mathematics, Yale University. Advisor: Professor Van Vu\"; matches vp-0711 (Van H. Vu).",
+      "works": [],
+      "verifiedAt": "2026-09-23T04:55:00.000Z",
       "direct": false,
       "notes": ""
     },
     {
-      "id": "rel-coauthor-vp-0015-vp-0018",
-      "type": "coauthor",
-      "sourceId": "vp-0015",
-      "targetId": "vp-0018",
+      "id": "rel-grant-collaborator-vp-0539-vp-1192",
+      "type": "grant-collaborator",
+      "sourceId": "vp-0539",
+      "targetId": "vp-1192",
       "sources": [
-        "https://scholarworks.uark.edu/cscepub/",
-        "https://pubmed.ncbi.nlm.nih.gov/34441327/",
-        "https://pubmed.ncbi.nlm.nih.gov/34204846/"
+        "https://research.monash.edu/en/projects/building-40-crc-better-buildings-new-efficiencies-through-technol/",
+        "https://building4pointzero.org/projects/",
+        "https://business.gov.au/Grants-and-Programs/Cooperative-Research-Centres-CRC-Grants/Current-Cooperative-Research-Centres-CRCs"
       ],
-      "evidence": "The University of Arkansas faculty-publications repository and the two PubMed records identify Ngan Le and Khoa Luu as University of Arkansas coauthors on both retained works; names, shared affiliation, field, and publication histories match vp-0015 and vp-0018.",
+      "evidence": "Monash University’s official project record for the funded Building 4.0 CRC names “Ngo, Tuan Duc” and “Vu, Hai” as Chief Investigators on the same award. The University of Melbourne profile identifies roster member Tuan Ngo (vp-0539) as Professor of Structural Engineering and the Building 4.0 CRC archive also names Prof. Tuan Ngo among project researchers; Monash identifies Hai Vu as its transportation-systems professor (vp-1192). The shared Monash project record directly establishes both people as award leaders. The Australian Government’s business.gov.au CRC program page confirms Building 4.0 CRC received a $28 million CRC grant for July 2020–June 2027.",
       "works": [
         {
-          "identifier": "doi:10.3390/diagnostics11081393",
-          "title": "Narrow Band Active Contour Attention Model for Medical Segmentation",
-          "date": "2021-07-31",
-          "url": "https://doi.org/10.3390/diagnostics11081393"
-        },
-        {
-          "identifier": "doi:10.3390/diagnostics11061080",
-          "title": "Enhance Portable Radiograph for Fast and High Accurate COVID-19 Monitoring",
-          "date": "2021-06-12",
-          "url": "https://doi.org/10.3390/diagnostics11061080"
+          "identifier": "aus-crc:building-4.0-crc",
+          "title": "Building 4.0 CRC: Better buildings, new efficiencies through technology and collaboration",
+          "date": "2020-09-10",
+          "url": "https://research.monash.edu/en/projects/building-40-crc-better-buildings-new-efficiencies-through-technol/"
         }
       ],
-      "verifiedAt": "2026-09-21T00:00:00.000Z",
+      "verifiedAt": "2026-09-23T10:38:18.000Z",
       "direct": false,
       "notes": ""
+    },
+    {
+      "id": "rel-grant-collaborator-vp-0686-vp-0687",
+      "type": "grant-collaborator",
+      "sourceId": "vp-0686",
+      "targetId": "vp-0687",
+      "sources": [
+        "https://www.nhmrc.gov.au/sites/default/files/documents/attachments/NAFOSTED-joint-call-for-collaborative.pdf",
+        "https://about.uq.edu.au/experts/33047",
+        "https://about.uq.edu.au/experts/2495"
+      ],
+      "evidence": "The official NHMRC–NAFOSTED joint-call award list records funded award APP1155241, ‘Wearing masks to reduce traffic-related air pollution exposure and improve children’s respiratory health,’ administered by UQ ($415,807), with Phong Thai as CIE and Dung Phung as CIF. The UQ profiles resolve both investigators to vp-0687 and vp-0686, respectively; both roles are listed as Chief Investigator roles in the funder’s leadership team.",
+      "works": [
+        {
+          "identifier": "nhmrc:APP1155241",
+          "title": "Wearing masks to reduce traffic-related air pollution exposure and improve children’s respiratory health",
+          "date": "2020",
+          "url": "https://www.nhmrc.gov.au/sites/default/files/documents/attachments/NAFOSTED-joint-call-for-collaborative.pdf"
+        }
+      ],
+      "verifiedAt": "2026-09-23T15:08:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-grant-collaborator-vp-1174-vp-1207",
+      "type": "grant-collaborator",
+      "sourceId": "vp-1174",
+      "targetId": "vp-1207",
+      "sources": [
+        "https://dataportal.arc.gov.au/NCGP/Web/Grant/Grant/DP260101083",
+        "https://researchers.mq.edu.au/en/persons/ji-li/"
+      ],
+      "evidence": "The Australian Research Council’s official grant record DP260101083 names Prof. Xuan Thinh Duong (vp-1174) and Dr. The Anh Bui (vp-1207) as Chief Investigators on the same funded Discovery Project. Macquarie University’s official profiles identify both investigators and their matching mathematical-research affiliations.",
+      "works": [
+        {
+          "identifier": "arc:DP260101083",
+          "title": "Harmonic analysis of Laplacians in curved spaces",
+          "date": "2026",
+          "url": "https://dataportal.arc.gov.au/NCGP/Web/Grant/Grant/DP260101083"
+        }
+      ],
+      "verifiedAt": "2026-09-23T10:31:02.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-masters-advisor-vp-0275-vp-0032",
+      "type": "masters-advisor",
+      "sourceId": "vp-0275",
+      "targetId": "vp-0032",
+      "sources": [
+        "https://tvn.roars.dev/cv/cv.pdf"
+      ],
+      "evidence": "ThanhVu H. Nguyen's (vp-0032) own CV explicitly lists \"Adviser: Thang N. Bui\" for his MS in Computer Science at Penn State University, Harrisburg, PA (2003-2006); this matches vp-0275 (Thang N. Bui, Penn State Harrisburg Computer Science).",
+      "works": [],
+      "verifiedAt": "2026-09-23T04:45:00.000Z",
+      "direct": true,
+      "notes": "Owner-directed: repository owner asked to check his own CV for connections."
     }
   ]
 }

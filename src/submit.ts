@@ -67,7 +67,7 @@ function renderShell() {
               <div class="name-heading">
                 <h1>Submit or Update an Entry</h1>
               </div>
-              <p class="synopsis">Submit a new academic to the directory or suggest corrections for an existing profile.</p>
+              <p class="synopsis">Submit a new academic, suggest corrections to an existing profile, or share a source-backed academic connection between roster members.</p>
             </div>
           </div>
         </section>
@@ -83,6 +83,10 @@ function renderShell() {
             <label class="radio-row">
               <input type="radio" name="purpose" value="update" />
               Modify an existing entry
+            </label>
+            <label class="radio-row">
+              <input type="radio" name="purpose" value="connection" />
+              Submit an academic connection
             </label>
           </fieldset>
         </section>
@@ -103,6 +107,51 @@ function renderShell() {
             <p class="form-help" id="add-mode-details-help">
               Have full details for one person instead of a link? <button type="button" class="link-button" id="add-mode-details-toggle">Enter them directly</button>.
             </p>
+          </section>
+
+          <section class="man-section form-group" id="connection-section" hidden>
+            <h2>ACADEMIC CONNECTION</h2>
+            <p class="form-group-description">Suggest a source-backed academic relationship between two people already listed in VietProfs. Choose both people from the roster so maintainers can resolve their permanent IDs.</p>
+            <div class="form-section">
+              <label for="connectionPersonA">First person <span class="form-help-inline">For advisor or mentor relationships, enter the advisor or mentor first.</span></label>
+              <select id="connectionPersonA" name="connectionPersonA">
+                <option value="">Choose a roster member</option>
+              </select>
+            </div>
+            <div class="form-section">
+              <label for="connectionPersonB">Second person</label>
+              <select id="connectionPersonB" name="connectionPersonB">
+                <option value="">Choose a roster member</option>
+              </select>
+            </div>
+            <div class="form-section">
+              <label for="connectionType">Relationship</label>
+              <select id="connectionType" name="connectionType">
+                <option value="">Choose a relationship</option>
+                <option value="doctoral-advisor">Doctoral advisor / advisee</option>
+                <option value="masters-advisor">Master’s thesis advisor / advisee</option>
+                <option value="undergraduate-advisor">Undergraduate thesis advisor / advisee</option>
+                <option value="postdoctoral-mentor">Postdoctoral mentor / researcher</option>
+                <option value="coauthor">Coauthors</option>
+                <option value="grant-collaborator">Shared funded award (PI, co-PI, multiple PD/PI, or equivalent)</option>
+                <option value="patent-coinventor">Patent co-inventors</option>
+              </select>
+              <p class="form-help" id="connection-type-help">Choose the connection type supported by the source. Advisor and mentor relationships are directional; the first person should be the advisor or mentor.</p>
+            </div>
+            <div class="form-section">
+              <label for="connectionEvidence">Evidence for this relationship</label>
+              <textarea id="connectionEvidence" name="connectionEvidence" rows="3" placeholder="Explain what the source shows. For example: the dissertation record names A as B’s doctoral advisor."></textarea>
+            </div>
+            <div class="form-section">
+              <label for="connectionSources">Source links for this relationship (one URL per line)</label>
+              <textarea id="connectionSources" name="connectionSources" rows="3" placeholder="https://…"></textarea>
+              <p class="form-help">Add sources that support the selected relationship. Prefer institutional records, publisher pages, official funder records (such as NSF Award Search, NIH RePORTER, or another relevant public award database), or patent-office records. For a shared award, include the funder and award number, and link to the official record showing both people in joint award-leadership roles. A shared institution or lab alone does not establish a connection.</p>
+            </div>
+            <div class="form-section">
+              <label for="connectionWorks">Publications, awards, or patents supporting this relationship (one per line)</label>
+              <textarea id="connectionWorks" name="connectionWorks" rows="3" placeholder="Title · year · DOI, award number, or patent number · URL"></textarea>
+              <p class="form-help">For coauthors, include at least two shared publications. For a shared award or patent, include one record with its title, year, funder and award number, or patent number, plus the source URL. Leave blank for advisor and mentor relationships.</p>
+            </div>
           </section>
 
           <section class="man-section form-group required-group" aria-labelledby="required-heading" id="required-section">
@@ -424,6 +473,49 @@ function buildUpdateBody(matchedEntry: RosterEntry, entry: SubmissionDraft, note
   return lines.join('\n');
 }
 
+function buildConnectionBody(form: SubmitForm, entriesById: Map<string, RosterEntry> | null): string {
+  const relationshipLabels: Record<string, string> = {
+    'doctoral-advisor': 'Doctoral advisor / advisee',
+    'masters-advisor': "Master's thesis advisor / advisee",
+    'undergraduate-advisor': 'Undergraduate thesis advisor / advisee',
+    'postdoctoral-mentor': 'Postdoctoral mentor / researcher',
+    coauthor: 'Coauthors',
+    'grant-collaborator': 'Shared funded award',
+    'patent-coinventor': 'Patent co-inventors',
+  };
+  const personA = entriesById?.get(form.connectionPersonA.value);
+  const personB = entriesById?.get(form.connectionPersonB.value);
+  const lines = [
+    'Request: Review proposed academic connection',
+    'Verify both identities and the evidence before adding this relationship.',
+    '',
+    `First person${['doctoral-advisor', 'masters-advisor', 'undergraduate-advisor', 'postdoctoral-mentor'].includes(form.connectionType.value) ? ' (advisor/mentor)' : ''}: ${personA?.name ?? form.connectionPersonA.value} (${personA?.id ?? 'unresolved ID'})`,
+    `Second person${['doctoral-advisor', 'masters-advisor', 'undergraduate-advisor', 'postdoctoral-mentor'].includes(form.connectionType.value) ? ' (advisee/researcher)' : ''}: ${personB?.name ?? form.connectionPersonB.value} (${personB?.id ?? 'unresolved ID'})`,
+    `Relationship: ${relationshipLabels[form.connectionType.value] ?? form.connectionType.value}`,
+    '',
+    'Evidence explanation:',
+    form.connectionEvidence.value.trim(),
+    '',
+    'Evidence sources:',
+    form.connectionSources.value.trim(),
+  ];
+  const works = form.connectionWorks.value.trim();
+  if (works) lines.push('', 'Shared publications, awards, or patents:', works);
+  return lines.join('\n');
+}
+
+function validateConnectionEvidence(form: SubmitForm): boolean {
+  const worksInput = form.connectionWorks as HTMLTextAreaElement;
+  const works = worksInput.value.split('\n').map((line) => line.trim()).filter(Boolean);
+  const minimumWorks = form.connectionType.value === 'coauthor' ? 2
+    : ['grant-collaborator', 'patent-coinventor'].includes(form.connectionType.value) ? 1
+      : 0;
+  worksInput.setCustomValidity(minimumWorks > 0 && works.length < minimumWorks
+    ? `Add at least ${minimumWorks} qualifying ${minimumWorks === 1 ? 'work or record' : 'shared works'}, one per line.`
+    : '');
+  return form.reportValidity();
+}
+
 function populateEntry(form: SubmitForm, entry: RosterEntry): void {
   form.dataset.editingId = entry.id;
   const optionalDetails = form.querySelector('.optional-group') as HTMLDetailsElement | null;
@@ -506,6 +598,27 @@ function onSubmit(e: SubmitEvent, entriesById: Map<string, RosterEntry> | null, 
   const bulkText = form.bulkInput?.value.trim() ?? '';
   const name = form.name.value.trim();
 
+  if (purpose === 'connection') {
+    form.connectionPersonB.setCustomValidity('');
+    if (!validateConnectionEvidence(form)) return;
+    const personA = entriesById?.get(form.connectionPersonA.value);
+    const personB = entriesById?.get(form.connectionPersonB.value);
+    if (personA && personA.id === personB?.id) {
+      form.connectionPersonB.setCustomValidity('Choose two different roster members.');
+      form.connectionPersonB.reportValidity();
+      return;
+    }
+    form.connectionPersonB.setCustomValidity('');
+    const title = `VietProfs connection: ${personA?.name ?? form.connectionPersonA.value} + ${personB?.name ?? form.connectionPersonB.value}`;
+    const body = buildConnectionBody(form, entriesById);
+    if ((e.submitter as HTMLButtonElement | null)?.value === 'github') {
+      window.open(buildGithubIssueUrl(title, body), '_blank', 'noopener,noreferrer');
+    } else {
+      window.location.href = buildEmailUrl(title, body);
+    }
+    return;
+  }
+
   if (purpose === 'add' && !bulkText && !name) {
     form.bulkInput.setCustomValidity('Paste at least a name or link, or enter one person’s details below.');
     form.bulkInput.reportValidity();
@@ -584,6 +697,9 @@ function byId<T extends HTMLElement = HTMLElement>(id: string): T {
 }
 
 function applyPurpose(purpose: string): void {
+  const addModeSection = byId('add-mode-section');
+  const optionalDetails = byId<HTMLDetailsElement>('optional-details');
+  const connectionSection = byId('connection-section');
   const requiredSection = byId('required-section');
   const requiredHeading = byId('required-heading');
   const requiredDescription = byId('required-description');
@@ -594,8 +710,13 @@ function applyPurpose(purpose: string): void {
   const nameInput = byId<HTMLInputElement>('name');
   const profileUrlInput = byId<HTMLInputElement>('profileUrl');
   const isAdd = purpose === 'add';
+  const isConnection = purpose === 'connection';
+  const isUpdate = !isAdd && !isConnection;
+  addModeSection.hidden = isConnection;
+  optionalDetails.hidden = isConnection;
+  connectionSection.hidden = !isConnection;
   requiredSection.classList.toggle('single-entry-details', isAdd);
-  requiredSection.hidden = isAdd && !requiredSection.classList.contains('expanded');
+  requiredSection.hidden = isConnection || (isAdd && !requiredSection.classList.contains('expanded'));
   requiredHeading.textContent = isAdd ? 'This person' : 'Required';
   requiredDescription.textContent = isAdd
     ? "You've filled in one person's full details directly, instead of pasting text above."
@@ -608,8 +729,11 @@ function applyPurpose(purpose: string): void {
   bulkInput.placeholder = isAdd
     ? 'e.g.\nJane T. Nguyen — https://cs.example.edu/~jnguyen\nhttps://example.edu/faculty-directory\nSome Name, Some University'
     : 'e.g. Moved to a new university, updated title, corrected spelling, etc.';
-  nameInput.required = !isAdd;
-  profileUrlInput.required = !isAdd;
+  nameInput.required = isUpdate;
+  profileUrlInput.required = isUpdate;
+  for (const id of ['connectionPersonA', 'connectionPersonB', 'connectionType', 'connectionEvidence', 'connectionSources']) {
+    byId<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>(id).required = isConnection;
+  }
 }
 
 function initPurposeToggle() {
@@ -644,6 +768,33 @@ async function init() {
     const roster = await loadRoster();
     entriesByName = new Map(roster.map((entry) => [entry.name.toLocaleLowerCase(), entry]));
     entriesById = new Map(roster.map((entry) => [entry.id, entry]));
+    for (const fieldId of ['connectionPersonA', 'connectionPersonB']) {
+      const select = byId<HTMLSelectElement>(fieldId);
+      for (const entry of roster) {
+        const option = document.createElement('option');
+        option.value = entry.id;
+        option.textContent = `${entry.name} · ${entry.university} · ${entry.id}`;
+        select.append(option);
+      }
+    }
+    byId<HTMLSelectElement>('connectionPersonB').addEventListener('change', (event) => {
+      (event.currentTarget as HTMLSelectElement).setCustomValidity('');
+    });
+    const connectionType = byId<HTMLSelectElement>('connectionType');
+    const connectionTypeHelp = byId<HTMLParagraphElement>('connection-type-help');
+    const connectionTypeHelpText: Record<string, string> = {
+      'doctoral-advisor': 'Use an official dissertation or university record that names the doctoral advisor. Put the advisor first.',
+      'masters-advisor': 'Use a thesis or university record that names the master’s thesis advisor. Put the advisor first; course supervision alone is not enough.',
+      'undergraduate-advisor': 'Use a thesis or university record that names the undergraduate thesis advisor. Put the advisor first; course supervision alone is not enough.',
+      'postdoctoral-mentor': 'Use a source that explicitly identifies the postdoctoral mentor or advisor. Put the mentor first; a shared lab or institution alone is not enough.',
+      coauthor: 'Provide at least two qualifying shared scholarly works and sources that identify both authors.',
+      'grant-collaborator': 'Provide one funded award record from NSF, NIH, or another relevant funder that names both people in joint award-leadership roles, such as PI/co-PI or multiple PD/PI.',
+      'patent-coinventor': 'Provide one patent record that names both people as co-inventors on the same patent.',
+    };
+    connectionType.addEventListener('change', () => {
+      connectionTypeHelp.textContent = connectionTypeHelpText[connectionType.value]
+        ?? 'Choose the connection type supported by the source. Advisor and mentor relationships are directional; the first person should be the advisor or mentor.';
+    });
     let matchingEntries: RosterEntry[] = [];
 
     function hideSuggestions() {
