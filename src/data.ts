@@ -1005,6 +1005,12 @@ function matchesRelationshipScope(person: RosterEntry, query: string, database?:
       || relationship.type === 'postdoctoral-mentor');
   }
   if (normalized === 'coauthor') return connected.some((relationship) => relationship.type === 'coauthor');
+  if (['grant', 'nsf', 'grantcollaborator'].includes(normalized)) {
+    return connected.some((relationship) => relationship.type === 'grant-collaborator');
+  }
+  if (['patent', 'patentcoinventor'].includes(normalized)) {
+    return connected.some((relationship) => relationship.type === 'patent-coinventor');
+  }
   return false;
 }
 

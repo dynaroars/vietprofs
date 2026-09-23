@@ -40,7 +40,45 @@ test('relationship database validates normalized roster-internal edges', () => {
   assert.equal(connectionsFor(sourceId, database)[0].label, 'Doctoral advisee');
   assert.equal(connectionsFor(targetId, database)[0].label, 'Doctoral advisor');
   database.relationships[0].type = 'coauthor';
-  assert.ok(validateRelationshipDatabase(database, roster).some((error) => /at least two works/.test(error)));
+  assert.ok(validateRelationshipDatabase(database, roster).some((error) => /require at least 2 works/.test(error)));
+});
+
+test('grant-collaborator and patent-coinventor relationships validate like coauthor but need only one shared item', () => {
+  const sourceId = roster[0].id;
+  const targetId = roster[1].id;
+  const work = { identifier: 'nsf:1234567', title: 'Collaborative Research: Example', date: '2024', url: 'https://www.nsf.gov/awardsearch/showAward?AWD_ID=1234567' };
+  const database: RelationshipDatabase = {
+    version: 1,
+    updatedAt: '2026-09-21T00:00:00.000Z',
+    relationships: [{
+      id: relationshipId('grant-collaborator', sourceId, targetId),
+      type: 'grant-collaborator',
+      sourceId,
+      targetId,
+      sources: ['https://www.nsf.gov/awardsearch/showAward?AWD_ID=1234567'],
+      evidence: 'The official NSF award page lists both as PI/co-PI.',
+      works: [work],
+      verifiedAt: '2026-09-21T00:00:00.000Z',
+      direct: false,
+      notes: '',
+    }],
+  };
+  assert.deepEqual(validateRelationshipDatabase(database, roster), []);
+  assert.equal(connectionsFor(sourceId, database)[0].label, 'Grant collaborator · 1 shared award');
+
+  database.relationships[0] = { ...database.relationships[0], works: [] };
+  assert.ok(validateRelationshipDatabase(database, roster).some((error) => /require at least 1 work/.test(error)));
+
+  const patentWork = { identifier: 'us:11223344', title: 'Example patent', date: '2023', url: 'https://patents.google.com/patent/US11223344' };
+  database.relationships[0] = {
+    ...database.relationships[0],
+    id: relationshipId('patent-coinventor', sourceId, targetId),
+    type: 'patent-coinventor',
+    sources: ['https://patents.google.com/patent/US11223344'],
+    works: [patentWork],
+  };
+  assert.deepEqual(validateRelationshipDatabase(database, roster), []);
+  assert.equal(connectionsFor(sourceId, database)[0].label, 'Patent co-inventor · 1 shared patent');
 });
 
 test('enrichment validation rejects unsafe links, corrupted scrapes, and duplicate work', () => {

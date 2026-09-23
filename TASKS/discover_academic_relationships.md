@@ -1,7 +1,7 @@
 # Discover Academic Relationships (`discover_academic_relationships.md`)
 
 > **Autonomous Goal Directive (`/goal TASKS/discover_academic_relationships.md`):**
-> Discover and verify academic relationships **between people already listed in `public/data.json`**. Work in resumable batches of 20 roster members and write verified doctoral, master's, and undergraduate thesis advisor/advisee relationships, explicitly documented postdoctoral mentorships, and identity-verified coauthorship signals to the public roster relationship database at `public/relationships.json`. Never research or record spouses, relatives, or other personal relationships. Treat automated author matching and genealogy databases as leads rather than proof, retain evidence for every accepted relationship, and commit and push relationship updates directly to `main`.
+> Discover and verify academic relationships **between people already listed in `public/data.json`**. Work in resumable batches of 20 roster members and write verified doctoral, master's, and undergraduate thesis advisor/advisee relationships, explicitly documented postdoctoral mentorships, identity-verified coauthorship signals, shared NSF grant collaborations, and shared patent co-inventorships to the public roster relationship database at `public/relationships.json`. Never research or record spouses, relatives, or other personal relationships. Treat automated author matching and genealogy databases as leads rather than proof, retain evidence for every accepted relationship, and commit and push relationship updates directly to `main`.
 
 ---
 
@@ -16,6 +16,8 @@ Allowed relationship types:
 - `undergraduate-advisor`: directional from the advisor to the undergraduate (BS/BA) thesis advisee.
 - `postdoctoral-mentor`: directional from the mentor to the postdoctoral researcher, but only when a source explicitly names the mentoring relationship.
 - `coauthor`: symmetric evidence that two roster members coauthored qualifying scholarly works.
+- `grant-collaborator`: symmetric evidence that two roster members are PI/co-PI together on the same funded award (currently scoped to NSF; extend to other funders' public award databases the same way if the owner asks).
+- `patent-coinventor`: symmetric evidence that two roster members are named co-inventors on the same patent.
 
 Explicitly out of scope:
 
@@ -59,6 +61,26 @@ Use the factual display concept `coauthored N works`; do not turn coauthorship i
 
 OpenAlex, Crossref, ORCID, PubMed, DBLP, and Google Scholar may be used for discovery. Automated author IDs can be split, merged, or assigned to namesakes, so verify each mapping with multiple identity signals: official profile or publication list, full-name variants, current or historical affiliation, research area, coauthors, ORCID, and work titles.
 
+### Grant collaborator
+
+Search the [NSF Award Search](https://www.nsf.gov/awardsearch/) (by PI name, or `site:nsf.gov/awardsearch/showAward` searches) for awards that list both roster members as Principal Investigator and Co-Principal Investigator (or as co-PIs together) on the same award. Record a verified `grant-collaborator` relationship only when:
+
+1. both roster members are individually identity-resolved against the award (affiliation, department, and research area should plausibly match what the award lists for them, since NSF names can collide);
+2. at least one qualifying shared award is found — a single funded, peer-reviewed NSF award already names a small, deliberate set of collaborators, unlike a paper that can have many near-independent coauthors, so one is sufficient here; and
+3. the award's official NSF page (`nsf.gov/awardsearch/showAward?AWD_ID=...`) is used as the source and as the work's `url`, with the award number as `identifier` (e.g. `nsf:1234567`).
+
+Being listed only in an award's "Senior Personnel" or non-PI role is a lead, not proof, unless the award page itself is ambiguous about roles for one specific listed name — check the award abstract page directly rather than relying on a search snippet. A single-PI award with the other person merely thanked in acknowledgments does not qualify. Use the factual display concept `N shared awards`; do not characterize the collaboration's importance or duration beyond what the award record states.
+
+### Patent co-inventor
+
+Search the [USPTO Patent Public Search](https://ppubs.uspto.gov/pubwebapp/) or Google Patents (`patents.google.com`) for patents that list both roster members as named co-inventors on the same patent. Record a verified `patent-coinventor` relationship only when:
+
+1. both roster members are individually identity-resolved against the patent (assignee/employer and technical field should plausibly match their affiliation at the time of filing);
+2. at least one qualifying shared patent is found — for the same reason as grants, a granted patent already names a small, deliberate set of co-inventors, so one is sufficient; and
+3. the patent's official record (a USPTO or Google Patents URL) is used as the source and as the work's `url`, with the patent number as `identifier` (e.g. `us:11223344`).
+
+Do not record a shared employer, a shared assignee company, or a citation relationship (one patent citing another) as coauthorship — only shared named-inventor status on the same patent qualifies. Use the factual display concept `N shared patents`.
+
 ---
 
 ## 3. Public roster relationship database
@@ -92,7 +114,7 @@ Every public relationship record uses immutable roster IDs and must be verified 
 }
 ```
 
-For `coauthor`, store the two IDs in ascending lexical order, use that same order in the deterministic `id`, and populate `works` with the retained work identifiers, titles, dates, and source URLs. For directional mentorship (`doctoral-advisor`, `masters-advisor`, `undergraduate-advisor`, `postdoctoral-mentor`), `sourceId` is always the advisor or mentor and `targetId` is the advisee or postdoctoral researcher.
+For the symmetric types (`coauthor`, `grant-collaborator`, `patent-coinventor`), store the two IDs in ascending lexical order, use that same order in the deterministic `id`, and populate `works` with the retained item identifiers, titles, dates, and source URLs — `coauthor` requires at least two, `grant-collaborator` and `patent-coinventor` require at least one. For directional mentorship (`doctoral-advisor`, `masters-advisor`, `undergraduate-advisor`, `postdoctoral-mentor`), `sourceId` is always the advisor or mentor, `targetId` is the advisee or postdoctoral researcher, and `works` stays empty.
 
 Do not write `unresolved`, `candidate`, or `excluded` records to the public database. Those are not established relationships. If resumable research state is needed, create `maintenance/relationship-research.json` containing only provider identity mappings, processed batch IDs, rejected candidates, unresolved leads, and next actions. It must never be loaded by the public site or described as roster relationship data.
 
@@ -134,11 +156,11 @@ Prefer an authenticated or officially published ORCID when available. Otherwise 
 
 Retain rejected provider mappings with the mismatch reason, such as incompatible institution, field, chronology, middle name, or publication history.
 
-### Step 4: Detect roster-internal coauthorship
+### Step 4: Detect roster-internal collaboration signals
 
-For verified author mappings, retrieve works and invert each work's verified authorships back to VietProfs IDs. Evaluate only pairs in which both identities are resolved. Deduplicate versions by DOI or another stable work identifier, remove non-qualifying records, and require at least two retained shared works before marking the pair verified.
+For verified author mappings, retrieve works and invert each work's verified authorships back to VietProfs IDs. Evaluate only pairs in which both identities are resolved. Deduplicate versions by DOI or another stable work identifier, remove non-qualifying records, and require at least two retained shared works before marking a `coauthor` pair verified. For `grant-collaborator` and `patent-coinventor`, the same identity-resolution and deduplication steps apply, but one retained shared award or patent is enough to mark the pair verified.
 
-Whenever a `doctoral-advisor`, `masters-advisor`, `undergraduate-advisor`, or `postdoctoral-mentor` relationship is verified for a pair, also check that same pair for a qualifying `coauthor` edge — advisors and advisees very often coauthor the thesis or postdoctoral work together, so this is a high-yield, low-effort check once a pair is already identity-resolved. Record both edges (the mentorship edge and, if it meets the coauthor evidence standard, a separate `coauthor` edge) rather than treating them as mutually exclusive.
+Whenever a `doctoral-advisor`, `masters-advisor`, `undergraduate-advisor`, or `postdoctoral-mentor` relationship is verified for a pair, also check that same pair for a qualifying `coauthor`, `grant-collaborator`, and/or `patent-coinventor` edge — advisors and advisees very often coauthor the thesis or postdoctoral work together, and senior researchers frequently list former students/postdocs as co-PIs or co-inventors, so this is a high-yield, low-effort check once a pair is already identity-resolved. Record every edge that meets its own evidence standard (a mentorship edge and one or more collaboration edges are not mutually exclusive).
 
 ### Step 5: Review the batch
 
@@ -148,7 +170,7 @@ Before closing a batch:
 - confirm relationship direction and type;
 - confirm source URLs resolve to the claimed evidence;
 - confirm symmetric pairs are stored once;
-- confirm every verified coauthor edge has at least two qualifying works;
+- confirm every verified coauthor edge has at least two qualifying works, and every verified grant-collaborator or patent-coinventor edge has at least one;
 - confirm no spouse, family, demographic, or inferred personal information appears; and
 - give every roster ID a completed, unresolved, or excluded batch outcome.
 
@@ -185,6 +207,7 @@ The PR summary must report:
 - verified advisor/advisee relationships;
 - verified postdoctoral mentorships;
 - verified coauthor pairs and qualifying works;
+- verified grant-collaborator and patent-coinventor pairs and qualifying awards/patents;
 - unresolved and excluded counts with major reasons;
 - provider mappings added or rejected; and
 - validation commands and results.

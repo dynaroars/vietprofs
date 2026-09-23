@@ -6,9 +6,22 @@ export const RELATIONSHIP_TYPES = [
   'undergraduate-advisor',
   'postdoctoral-mentor',
   'coauthor',
+  'grant-collaborator',
+  'patent-coinventor',
 ] as const;
 
 export type RelationshipType = (typeof RELATIONSHIP_TYPES)[number];
+
+// Symmetric types carry a `works` array of shared evidence items (papers, NSF awards, patents)
+// and are stored with sourceId/targetId in ascending lexical order. Each has its own minimum
+// item count reflecting how strong a single shared item is as collaboration evidence: a paper
+// can have many near-independent coauthors, so coauthor requires 2+, while a shared NSF award
+// or patent already names a small, deliberate set of collaborators, so 1 suffices.
+const SYMMETRIC_TYPE_MIN_WORKS: Partial<Record<RelationshipType, number>> = {
+  coauthor: 2,
+  'grant-collaborator': 1,
+  'patent-coinventor': 1,
+};
 
 export interface RelationshipWork {
   identifier: string;
@@ -111,8 +124,8 @@ export function validateRelationshipDatabase(
     if (!rosterIds.has(relationship.sourceId ?? '')) errors.push(`${label} has unknown sourceId ${relationship.sourceId}`);
     if (!rosterIds.has(relationship.targetId ?? '')) errors.push(`${label} has unknown targetId ${relationship.targetId}`);
     if (relationship.sourceId === relationship.targetId) errors.push(`${label} must connect two different people`);
-    if (type === 'coauthor' && String(relationship.sourceId).localeCompare(String(relationship.targetId)) >= 0) {
-      errors.push(`${label} coauthor IDs must be in ascending lexical order`);
+    if (type in SYMMETRIC_TYPE_MIN_WORKS && String(relationship.sourceId).localeCompare(String(relationship.targetId)) >= 0) {
+      errors.push(`${label} ${type} IDs must be in ascending lexical order`);
     }
     const expectedId = relationshipId(type, relationship.sourceId ?? '', relationship.targetId ?? '');
     if (relationship.id !== expectedId) errors.push(`${label} id must be ${expectedId}`);
@@ -139,8 +152,11 @@ export function validateRelationshipDatabase(
       errors.push(`${label} works must be an array`);
       continue;
     }
-    if (type === 'coauthor' && relationship.works.length < 2) errors.push(`${label} coauthor records require at least two works`);
-    if (type !== 'coauthor' && relationship.works.length !== 0) errors.push(`${label} mentorship records must have an empty works array`);
+    const minWorks = SYMMETRIC_TYPE_MIN_WORKS[type];
+    if (minWorks !== undefined && relationship.works.length < minWorks) {
+      errors.push(`${label} ${type} records require at least ${minWorks} work${minWorks === 1 ? '' : 's'}`);
+    }
+    if (minWorks === undefined && relationship.works.length !== 0) errors.push(`${label} mentorship records must have an empty works array`);
     const workIdentifiers = new Set<string>();
     for (const [workIndex, rawWork] of relationship.works.entries()) {
       const workLabel = `${label} work ${workIndex + 1}`;
@@ -186,7 +202,11 @@ export function connectionsFor(
           ? (isSource ? 'Undergraduate advisee' : 'Undergraduate thesis advisor')
           : relationship.type === 'postdoctoral-mentor'
             ? (isSource ? 'Postdoctoral mentee' : 'Postdoctoral mentor')
-            : `Coauthor · ${relationship.works.length} shared works`;
+            : relationship.type === 'grant-collaborator'
+              ? `Grant collaborator · ${relationship.works.length} shared award${relationship.works.length === 1 ? '' : 's'}`
+              : relationship.type === 'patent-coinventor'
+                ? `Patent co-inventor · ${relationship.works.length} shared patent${relationship.works.length === 1 ? '' : 's'}`
+                : `Coauthor · ${relationship.works.length} shared works`;
     return [{
       relationship,
       otherId: isSource ? relationship.targetId : relationship.sourceId,
