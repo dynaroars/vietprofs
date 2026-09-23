@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-23T05:01:38.582Z",
+  "updatedAt": "2026-09-23T05:04:33.232Z",
   "batches": [
     {
       "batchNumber": 1,
@@ -2290,6 +2290,194 @@
             "search-summarized bio"
           ],
           "nextAction": "Possibly Nikolaus Correll and Jacob Segil (CU Boulder, co-advisors), not independently confirmed; not Vietnamese-named regardless."
+        }
+      ]
+    },
+    {
+      "batchNumber": 13,
+      "rosterIds": [
+        "vp-0241",
+        "vp-0242",
+        "vp-0243",
+        "vp-0244",
+        "vp-0245",
+        "vp-0246",
+        "vp-0247",
+        "vp-0248",
+        "vp-0249",
+        "vp-0250",
+        "vp-0251",
+        "vp-0252",
+        "vp-0253",
+        "vp-0254",
+        "vp-0255",
+        "vp-0256",
+        "vp-0257",
+        "vp-0258",
+        "vp-0259",
+        "vp-0260"
+      ],
+      "startedAt": "2026-09-23T06:15:00.000Z",
+      "completedAt": "2026-09-23T06:35:00.000Z",
+      "status": "complete",
+      "outcomes": [
+        {
+          "rosterId": "vp-0241",
+          "status": "unresolved",
+          "sources": [
+            "own Maryland faculty page"
+          ],
+          "nextAction": "No advisor named; search Maryland dissertation record next."
+        },
+        {
+          "rosterId": "vp-0242",
+          "status": "unresolved",
+          "sources": [
+            "own VT faculty page"
+          ],
+          "nextAction": "No advisor/year named; search Purdue dissertation record next."
+        },
+        {
+          "rosterId": "vp-0243",
+          "status": "unresolved",
+          "sources": [
+            "own Missouri faculty page"
+          ],
+          "nextAction": "No advisor/year named; search Missouri dissertation record next."
+        },
+        {
+          "rosterId": "vp-0244",
+          "status": "unresolved",
+          "sources": [
+            "search-summarized (Akron CV + OSU BME news)"
+          ],
+          "nextAction": "Possibly Cynthia J. Roberts and Matthew A. Reilly (Ohio State co-advisors), not independently fetched; not Vietnamese-named regardless."
+        },
+        {
+          "rosterId": "vp-0245",
+          "status": "unresolved",
+          "sources": [
+            "own UTK faculty page"
+          ],
+          "nextAction": "No advisor/degree-year info at all found. UTK Mathematics trio check (vp-0245/vp-0246/vp-0247): no advisor/advisee or coauthorship found among the three."
+        },
+        {
+          "rosterId": "vp-0246",
+          "status": "unresolved",
+          "sources": [
+            "own UTK faculty page"
+          ],
+          "nextAction": "No advisor named; search Florida State 2023 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0247",
+          "status": "unresolved",
+          "sources": [
+            "own UTK faculty page"
+          ],
+          "nextAction": "No advisor/institution/year info at all found."
+        },
+        {
+          "rosterId": "vp-0248",
+          "status": "unresolved",
+          "sources": [
+            "own profile, search, ProQuest not accessible"
+          ],
+          "nextAction": "PhD advisor not identified from any source despite being UT Dallas Mathematical Sciences faculty herself (PhD there 2013). Cannot confirm or rule out a roster-internal UT Dallas connection. Retry with direct UT Dallas dissertation-repository access next time."
+        },
+        {
+          "rosterId": "vp-0249",
+          "status": "unresolved",
+          "sources": [
+            "own UNT faculty profile"
+          ],
+          "nextAction": "No advisor named; search NOVA Southeastern 2016 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0250",
+          "status": "unresolved",
+          "sources": [
+            "own Rice faculty profile"
+          ],
+          "nextAction": "Advisor/mentor Lon J. Wilson (Rice) confirmed via own bio but not Vietnamese-named; no roster-internal candidate."
+        },
+        {
+          "rosterId": "vp-0251",
+          "status": "unresolved",
+          "sources": [
+            "lsa.umich.edu/chem bio, LinkedIn"
+          ],
+          "nextAction": "No advisor found; search Michigan State dissertation record next."
+        },
+        {
+          "rosterId": "vp-0252",
+          "status": "unresolved",
+          "sources": [
+            "lcc.umn.edu bio"
+          ],
+          "nextAction": "No advisor found; search Univ. Chicago 2010 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0253",
+          "status": "unresolved",
+          "sources": [
+            "hhp.ufl.edu bio"
+          ],
+          "nextAction": "No advisor found; search Univ. Florida 2015 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0254",
+          "status": "unresolved",
+          "sources": [
+            "ptr.pharmacy.ufl.edu bio"
+          ],
+          "nextAction": "PharmD, not a PhD; no thesis advisor applicable."
+        },
+        {
+          "rosterId": "vp-0255",
+          "status": "unresolved",
+          "sources": [
+            "bu.edu/dental bio, AAO locator"
+          ],
+          "nextAction": "DMD/MSD/CAGS; no advisor named."
+        },
+        {
+          "rosterId": "vp-0256",
+          "status": "unresolved",
+          "sources": [],
+          "nextAction": "Not researched (search budget); retry next time."
+        },
+        {
+          "rosterId": "vp-0257",
+          "status": "unresolved",
+          "sources": [
+            "cnle.net bio"
+          ],
+          "nextAction": "No advisor found; search SUNY Albany 2004 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0258",
+          "status": "unresolved",
+          "sources": [
+            "k-state.edu bio, search"
+          ],
+          "nextAction": "No advisor found despite dissertation topic being known; search Ohio Univ. dissertation record next."
+        },
+        {
+          "rosterId": "vp-0259",
+          "status": "unresolved",
+          "sources": [
+            "tc.columbia.edu bio"
+          ],
+          "nextAction": "No advisor found; search Univ. Pennsylvania 2014 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0260",
+          "status": "unresolved",
+          "sources": [
+            "depts.ttu.edu bio, Google Scholar"
+          ],
+          "nextAction": "No advisor found; search Texas Tech dissertation record next."
         }
       ]
     }
