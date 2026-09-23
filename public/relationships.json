@@ -1,7 +1,63 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-23T04:45:00.000Z",
+  "updatedAt": "2026-09-23T04:50:00.000Z",
   "relationships": [
+    {
+      "id": "rel-doctoral-advisor-vp-0183-vp-0184",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-0183",
+      "targetId": "vp-0184",
+      "sources": [
+        "https://escholarship.org/content/qt9qh5v298/qt9qh5v298.pdf"
+      ],
+      "evidence": "The official UCSD eScholarship dissertation title page for Linh Thuy Nguyen's (vp-0184) 2016 PhD dissertation \"Contested Terrains\" names \"Professor Yen Le Espiritu, Chair\"; matches vp-0183 (Yen Le Espiritu, UC San Diego Ethnic Studies).",
+      "works": [],
+      "verifiedAt": "2026-09-23T04:50:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-doctoral-advisor-vp-0183-vp-0193",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-0183",
+      "targetId": "vp-0193",
+      "sources": [
+        "https://escholarship.org/content/qt1qf3h134/qt1qf3h134.pdf"
+      ],
+      "evidence": "The official UCSD eScholarship dissertation title page for Thuy Vo Dang's (vp-0193) 2008 PhD dissertation names \"Committee in charge: Professor Yen Le Espiritu, Chair\"; matches vp-0183 (Yen Le Espiritu, UC San Diego Ethnic Studies).",
+      "works": [],
+      "verifiedAt": "2026-09-23T04:50:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0032-vp-0275",
+      "type": "coauthor",
+      "sourceId": "vp-0032",
+      "targetId": "vp-0275",
+      "sources": [
+        "https://doi.org/10.1016/j.dam.2006.07.012",
+        "https://doi.org/10.1145/1143997.1144001"
+      ],
+      "evidence": "ThanhVu H. Nguyen (vp-0032) and Thang N. Bui (vp-0275), his MS thesis adviser, coauthored both retained works during and after his MS at Penn State Harrisburg; names and the advisor/advisee relationship (see rel-masters-advisor-vp-0275-vp-0032) confirm both identities.",
+      "works": [
+        {
+          "identifier": "doi:10.1016/j.dam.2006.07.012",
+          "title": "An ant-based algorithm for coloring graphs",
+          "date": "2008-01-15",
+          "url": "https://doi.org/10.1016/j.dam.2006.07.012"
+        },
+        {
+          "identifier": "doi:10.1145/1143997.1144001",
+          "title": "An agent-based algorithm for generalized graph colorings",
+          "date": "2006-07-08",
+          "url": "https://doi.org/10.1145/1143997.1144001"
+        }
+      ],
+      "verifiedAt": "2026-09-23T04:50:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
     {
       "id": "rel-masters-advisor-vp-0275-vp-0032",
       "type": "masters-advisor",

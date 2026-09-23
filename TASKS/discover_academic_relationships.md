@@ -138,6 +138,8 @@ Retain rejected provider mappings with the mismatch reason, such as incompatible
 
 For verified author mappings, retrieve works and invert each work's verified authorships back to VietProfs IDs. Evaluate only pairs in which both identities are resolved. Deduplicate versions by DOI or another stable work identifier, remove non-qualifying records, and require at least two retained shared works before marking the pair verified.
 
+Whenever a `doctoral-advisor`, `masters-advisor`, `undergraduate-advisor`, or `postdoctoral-mentor` relationship is verified for a pair, also check that same pair for a qualifying `coauthor` edge — advisors and advisees very often coauthor the thesis or postdoctoral work together, so this is a high-yield, low-effort check once a pair is already identity-resolved. Record both edges (the mentorship edge and, if it meets the coauthor evidence standard, a separate `coauthor` edge) rather than treating them as mutually exclusive.
+
 ### Step 5: Review the batch
 
 Before closing a batch:

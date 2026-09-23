@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-23T04:45:41.662Z",
+  "updatedAt": "2026-09-23T04:50:00.000Z",
   "batches": [
     {
       "batchNumber": 1,
@@ -1748,6 +1748,192 @@
             "https://www.sjsu.edu/people/hien.do/"
           ],
           "nextAction": "No advisor/advisee found despite being senior; search UC Santa Barbara dissertation record next."
+        }
+      ]
+    },
+    {
+      "batchNumber": 10,
+      "rosterIds": [
+        "vp-0181",
+        "vp-0182",
+        "vp-0183",
+        "vp-0184",
+        "vp-0185",
+        "vp-0186",
+        "vp-0187",
+        "vp-0188",
+        "vp-0189",
+        "vp-0190",
+        "vp-0191",
+        "vp-0192",
+        "vp-0193",
+        "vp-0194",
+        "vp-0195",
+        "vp-0196",
+        "vp-0197",
+        "vp-0198",
+        "vp-0199",
+        "vp-0200"
+      ],
+      "startedAt": "2026-09-23T04:50:00.000Z",
+      "completedAt": "2026-09-23T04:50:00.000Z",
+      "status": "complete",
+      "outcomes": [
+        {
+          "rosterId": "vp-0181",
+          "status": "unresolved",
+          "sources": [
+            "own CV PDF (sociology.northwestern.edu)"
+          ],
+          "nextAction": "Advisor James Mahoney (PhD/MA chair) and Yang Su (BA honors chair) not Vietnamese-named; no roster-internal candidate."
+        },
+        {
+          "rosterId": "vp-0182",
+          "status": "unresolved",
+          "sources": [
+            "http://www.phihongsu.com/"
+          ],
+          "nextAction": "Site unreachable (DNS); retry next time."
+        },
+        {
+          "rosterId": "vp-0183",
+          "status": "completed",
+          "sources": [
+            "own CV, no advisor listed"
+          ],
+          "relationshipIds": [
+            "rel-doctoral-advisor-vp-0183-vp-0184",
+            "rel-doctoral-advisor-vp-0183-vp-0193"
+          ],
+          "nextAction": "Own PhD advisor not found. Verified as doctoral advisor of two roster members: Linh Thuy Nguyen (vp-0184) and Thuy Vo Dang (vp-0193), both via official UCSD eScholarship dissertation title pages."
+        },
+        {
+          "rosterId": "vp-0184",
+          "status": "completed",
+          "sources": [
+            "https://escholarship.org/content/qt9qh5v298/qt9qh5v298.pdf"
+          ],
+          "relationshipIds": [
+            "rel-doctoral-advisor-vp-0183-vp-0184"
+          ],
+          "nextAction": "Verified: doctoral advisor Yen Le Espiritu (vp-0183) confirmed via official UCSD dissertation title page. Caution: an AI search summary initially conflated this person with a different, similarly-named scholar (Ly Thuy Nguyen, Augsburg) -- resolved by fetching the actual dissertation PDF."
+        },
+        {
+          "rosterId": "vp-0185",
+          "status": "unresolved",
+          "sources": [],
+          "nextAction": "No advisor found; search Clark University dissertation record next."
+        },
+        {
+          "rosterId": "vp-0186",
+          "status": "unresolved",
+          "sources": [],
+          "nextAction": "No advisor found; PhD institution itself not identified. Search further next time."
+        },
+        {
+          "rosterId": "vp-0187",
+          "status": "unresolved",
+          "sources": [],
+          "nextAction": "No advisor found; search UC Berkeley 2003 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0188",
+          "status": "unresolved",
+          "sources": [
+            "eScholarship dissertation approval page (search-quoted, not independently re-fetched)"
+          ],
+          "nextAction": "Advisors Patricia M. McDonough and Robert T. Teranishi (UCLA) not Vietnamese-named; no roster-internal candidate."
+        },
+        {
+          "rosterId": "vp-0189",
+          "status": "unresolved",
+          "sources": [
+            "academia.edu bio (search consensus)"
+          ],
+          "nextAction": "Advisor Antonia Darder (UIUC) not Vietnamese-named, not independently fetched; no roster-internal candidate."
+        },
+        {
+          "rosterId": "vp-0190",
+          "status": "unresolved",
+          "sources": [],
+          "nextAction": "No advisor found; search UW-Madison dissertation record next."
+        },
+        {
+          "rosterId": "vp-0191",
+          "status": "unresolved",
+          "sources": [
+            "https://mykle85.com/"
+          ],
+          "nextAction": "No advisor info accessible on own site; search CUNY Graduate Center dissertation record next."
+        },
+        {
+          "rosterId": "vp-0192",
+          "status": "unresolved",
+          "sources": [
+            "https://cindyanguyen.com/cv"
+          ],
+          "nextAction": "No advisor found. Note: roster department field says Information Studies but her PhD is in History (UC Berkeley) -- possible data-quality flag, out of scope for this task."
+        },
+        {
+          "rosterId": "vp-0193",
+          "status": "completed",
+          "sources": [
+            "https://escholarship.org/content/qt1qf3h134/qt1qf3h134.pdf"
+          ],
+          "relationshipIds": [
+            "rel-doctoral-advisor-vp-0183-vp-0193"
+          ],
+          "nextAction": "Verified: doctoral advisor Yen Le Espiritu (vp-0183) confirmed via official UCSD dissertation title page."
+        },
+        {
+          "rosterId": "vp-0194",
+          "status": "unresolved",
+          "sources": [
+            "https://history.uconn.edu (bio)"
+          ],
+          "nextAction": "No advisor found; search UC Berkeley 2013 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0195",
+          "status": "unresolved",
+          "sources": [
+            "search consensus, not independently fetched"
+          ],
+          "nextAction": "Likely advisor John Lewis Gaddis (Yale) not Vietnamese-named, not independently confirmed; no roster-internal candidate regardless."
+        },
+        {
+          "rosterId": "vp-0196",
+          "status": "unresolved",
+          "sources": [
+            "search-summarized dissertation acknowledgments"
+          ],
+          "nextAction": "Likely advisor Liam Kelley (Univ. Hawaii) not independently confirmed, not Vietnamese-named regardless."
+        },
+        {
+          "rosterId": "vp-0197",
+          "status": "unresolved",
+          "sources": [],
+          "nextAction": "No advisor found; search UCSB dissertation record next."
+        },
+        {
+          "rosterId": "vp-0198",
+          "status": "unresolved",
+          "sources": [
+            "Brooklyn College news article (not a CV/official record)"
+          ],
+          "nextAction": "Undergraduate thesis mentor Ben Lerner (Brooklyn College) not Vietnamese-named; MFA (NYU) advisor not found. News source is weak evidence tier -- would need a stronger source before verifying even a non-Vietnamese-named edge (moot here since not roster-internal anyway)."
+        },
+        {
+          "rosterId": "vp-0199",
+          "status": "unresolved",
+          "sources": [],
+          "nextAction": "JD is a professional degree; no named thesis advisor found or applicable."
+        },
+        {
+          "rosterId": "vp-0200",
+          "status": "unresolved",
+          "sources": [],
+          "nextAction": "JD is a professional degree; no named thesis advisor found or applicable."
         }
       ]
     }
