@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-23T00:00:00.000Z",
+  "updatedAt": "2026-09-23T01:00:00.000Z",
   "batches": [
     {
       "batchNumber": 1,
@@ -997,6 +997,196 @@
             "rel-doctoral-advisor-vp-0040-vp-0100"
           ],
           "nextAction": "Verified: doctoral advisor XuanLong Nguyen (vp-0040) confirmed via own homepage biography. Also found out-of-roster lead: advisee Khai Nguyen (PhD UT Austin, now Asst. Professor, Statistics, Texas A&M) is Vietnamese-named but not currently in the roster (checked: vp-0060, vp-1548 are different Khai Nguyens at different institutions) — candidate for discover_new_faculty, not this task."
+        }
+      ]
+    },
+    {
+      "batchNumber": 6,
+      "rosterIds": [
+        "vp-0101",
+        "vp-0102",
+        "vp-0103",
+        "vp-0104",
+        "vp-0105",
+        "vp-0106",
+        "vp-0107",
+        "vp-0108",
+        "vp-0109",
+        "vp-0110",
+        "vp-0111",
+        "vp-0112",
+        "vp-0113",
+        "vp-0114",
+        "vp-0115",
+        "vp-0116",
+        "vp-0117",
+        "vp-0118",
+        "vp-0119",
+        "vp-0120"
+      ],
+      "startedAt": "2026-09-23T00:15:00.000Z",
+      "completedAt": "2026-09-23T01:00:00.000Z",
+      "status": "complete",
+      "outcomes": [
+        {
+          "rosterId": "vp-0101",
+          "status": "unresolved",
+          "sources": [
+            "own scholar/wikipedia record"
+          ],
+          "nextAction": "Advisor David A. Muller (Cornell) not Vietnamese-named; no roster-internal candidate."
+        },
+        {
+          "rosterId": "vp-0102",
+          "status": "unresolved",
+          "sources": [
+            "https://thejameshuynh.com/"
+          ],
+          "nextAction": "Site unreachable via fetch; no advisor named in bio sources found. Retry with direct search next time."
+        },
+        {
+          "rosterId": "vp-0103",
+          "status": "unresolved",
+          "sources": [
+            "https://sph.uth.edu/faculty/index.htm?fac=KAxVpHwjEQAbZXgfZvxCQA%3D%3D"
+          ],
+          "nextAction": "No advisor named; search Univ. Queensland 1999 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0104",
+          "status": "unresolved",
+          "sources": [
+            "https://datascience.virginia.edu/people/phong-nguyen"
+          ],
+          "nextAction": "No advisor named; search Chung-Ang University repository next."
+        },
+        {
+          "rosterId": "vp-0105",
+          "status": "unresolved",
+          "sources": [
+            "https://www.etox.ucdavis.edu/people/tran-nguyen"
+          ],
+          "nextAction": "Co-advisors Sergey Nizkorodov / Alexander Laskin not Vietnamese-named; no roster-internal candidate."
+        },
+        {
+          "rosterId": "vp-0106",
+          "status": "unresolved",
+          "sources": [
+            "https://www.math.utoledo.edu/~tle20/"
+          ],
+          "nextAction": "Advisor Jingbo Xia not Vietnamese-named; no roster-internal candidate."
+        },
+        {
+          "rosterId": "vp-0107",
+          "status": "unresolved",
+          "sources": [
+            "https://sites.google.com/site/dinhliemnguyen/"
+          ],
+          "nextAction": "No advisor named on own homepage; search Ecole Polytechnique 2013 repository next."
+        },
+        {
+          "rosterId": "vp-0108",
+          "status": "unresolved",
+          "sources": [
+            "https://www.math.tulane.edu/~tai/"
+          ],
+          "nextAction": "Advisor A.V. Geramita (Queen's) not Vietnamese-named, confirmed via own homepage; no roster-internal candidate."
+        },
+        {
+          "rosterId": "vp-0109",
+          "status": "unresolved",
+          "sources": [
+            "https://faculty.eng.ufl.edu/khiem-tran/people/"
+          ],
+          "nextAction": "Own advisor not found. Lead: former PhD student \"Trung Dung Nguyen\" (2018, likely Clarkson) on own lab page — checked roster for a match (vp-0281 Dung Trung Nguyen, PhD Queensland Univ. of Technology 2015) but institution and year do not match; no confident roster match found. Revisit if a better-matching entry appears."
+        },
+        {
+          "rosterId": "vp-0110",
+          "status": "unresolved",
+          "sources": [
+            "search consensus, not independently fetched"
+          ],
+          "nextAction": "Likely advisor John W. van de Lindt (Colorado State) inferred from joint publications, not explicit; not Vietnamese-named regardless."
+        },
+        {
+          "rosterId": "vp-0111",
+          "status": "unresolved",
+          "sources": [
+            "https://sites.google.com/view/thainhan"
+          ],
+          "nextAction": "Advisor Niall Madden (NUI Galway) confirmed via own homepage but not Vietnamese-named; no roster-internal candidate."
+        },
+        {
+          "rosterId": "vp-0112",
+          "status": "unresolved",
+          "sources": [
+            "https://www.soka.edu/about/faculty-staff/phat-vu"
+          ],
+          "nextAction": "No advisor named; search Cornell 1998 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0113",
+          "status": "unresolved",
+          "sources": [
+            "https://ges.uccs.edu/directory/faculty/diep-dao"
+          ],
+          "nextAction": "No advisor named; search UNC Charlotte 2013 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0114",
+          "status": "unresolved",
+          "sources": [
+            "own homepage, no advisor listed"
+          ],
+          "nextAction": "Likely advisor Da-Lin Zhang (Maryland) inferred from Scholar collaborator pattern only, not explicit; not Vietnamese-named regardless."
+        },
+        {
+          "rosterId": "vp-0115",
+          "status": "unresolved",
+          "sources": [
+            "https://ise.rutgers.edu/hoang-pham"
+          ],
+          "nextAction": "No dedicated PhD-students/alumni list found despite being senior/prolific; worth a deeper look at CV or department news in a future pass."
+        },
+        {
+          "rosterId": "vp-0116",
+          "status": "unresolved",
+          "sources": [
+            "https://www.niu.edu/cnguyen/index.shtml"
+          ],
+          "nextAction": "No advisor named; search USC 2014 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0117",
+          "status": "unresolved",
+          "sources": [
+            "https://cee.illinois.edu/directory/profile/thn"
+          ],
+          "nextAction": "No advisor named; search Johns Hopkins 2005 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0118",
+          "status": "unresolved",
+          "sources": [
+            "https://sites.google.com/view/nanoqm/home"
+          ],
+          "nextAction": "No bio/advisor info on homepage; search UC Berkeley 2018 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0119",
+          "status": "unresolved",
+          "sources": [
+            "https://sites.usc.edu/quann/"
+          ],
+          "nextAction": "No bio/advisor info on homepage; search Carnegie Mellon 2017 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0120",
+          "status": "unresolved",
+          "sources": [
+            "https://www.unr.edu/me/people/hoang-vu-phan"
+          ],
+          "nextAction": "No advisor named; search Konkuk University 2017 dissertation record next."
         }
       ]
     }
