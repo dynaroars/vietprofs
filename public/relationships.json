@@ -1,7 +1,49 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-23T05:10:00.000Z",
+  "updatedAt": "2026-09-23T05:15:00.000Z",
   "relationships": [
+    {
+      "id": "rel-doctoral-advisor-vp-0108-vp-0302",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-0108",
+      "targetId": "vp-0302",
+      "sources": [
+        "https://sites.google.com/view/thainguyenmath/home"
+      ],
+      "evidence": "Thanh Thai Nguyen's (vp-0302) own homepage states \"My advisor is Dr. Tài Huy Hà,\" linking to his Tulane homepage; matches vp-0108 (Huy Tai Ha, Tulane Mathematics).",
+      "works": [],
+      "verifiedAt": "2026-09-23T05:15:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0108-vp-0302",
+      "type": "coauthor",
+      "sourceId": "vp-0108",
+      "targetId": "vp-0302",
+      "sources": [
+        "https://arxiv.org/abs/2111.00681",
+        "https://arxiv.org/abs/2308.16410"
+      ],
+      "evidence": "Huy Tai Ha (vp-0108) and Thanh Thai Nguyen (vp-0302), his doctoral advisee, coauthored both retained works in commutative algebra; identity confirmed via the same doctoral-advisor relationship (see rel-doctoral-advisor-vp-0108-vp-0302).",
+      "works": [
+        {
+          "identifier": "arxiv:2111.00681",
+          "title": "Newton-Okounkov body, Rees algebra, and analytic spread of graded families of monomial ideals",
+          "date": "2024-01-01",
+          "url": "https://arxiv.org/abs/2111.00681"
+        },
+        {
+          "identifier": "arxiv:2308.16410",
+          "title": "Resurgence number of graded families of ideals",
+          "date": "2026-01-01",
+          "url": "https://arxiv.org/abs/2308.16410"
+        }
+      ],
+      "verifiedAt": "2026-09-23T05:15:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
     {
       "id": "rel-doctoral-advisor-vp-0294-vp-1465",
       "type": "doctoral-advisor",

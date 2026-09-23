@@ -443,15 +443,18 @@ test('connection keyword search finds connected roster members by relationship t
     new Set(connected.map((person) => person.id)),
     new Set([
       'vp-0004', 'vp-0015', 'vp-0018', 'vp-0026', 'vp-0029', 'vp-0032', 'vp-0036', 'vp-0040', 'vp-0044',
-      'vp-0052', 'vp-0056', 'vp-0062', 'vp-0063', 'vp-0100', 'vp-0123', 'vp-0183', 'vp-0184', 'vp-0193',
-      'vp-0209', 'vp-0267', 'vp-0275', 'vp-0294', 'vp-0711', 'vp-1465', 'vp-1674',
+      'vp-0052', 'vp-0056', 'vp-0062', 'vp-0063', 'vp-0100', 'vp-0108', 'vp-0123', 'vp-0183', 'vp-0184',
+      'vp-0193', 'vp-0209', 'vp-0267', 'vp-0275', 'vp-0294', 'vp-0302', 'vp-0711', 'vp-1465', 'vp-1674',
     ]),
   );
 
   const coauthors = filterRoster(roster, { query: 'co-author', searchScope: 'connection', relationships });
   assert.deepEqual(
     new Set(coauthors.map((person) => person.id)),
-    new Set(['vp-0015', 'vp-0018', 'vp-0032', 'vp-0056', 'vp-0063', 'vp-0209', 'vp-0275', 'vp-0294', 'vp-0711', 'vp-1465']),
+    new Set([
+      'vp-0015', 'vp-0018', 'vp-0032', 'vp-0056', 'vp-0063', 'vp-0108', 'vp-0209', 'vp-0275',
+      'vp-0294', 'vp-0302', 'vp-0711', 'vp-1465',
+    ]),
   );
 
   const mentors = filterRoster(roster, { query: 'mentor/advise', searchScope: 'connection', relationships });
@@ -459,8 +462,8 @@ test('connection keyword search finds connected roster members by relationship t
     new Set(mentors.map((person) => person.id)),
     new Set([
       'vp-0004', 'vp-0026', 'vp-0029', 'vp-0032', 'vp-0036', 'vp-0040', 'vp-0044', 'vp-0052', 'vp-0062',
-      'vp-0100', 'vp-0123', 'vp-0183', 'vp-0184', 'vp-0193', 'vp-0209', 'vp-0267', 'vp-0275', 'vp-0294',
-      'vp-0711', 'vp-1465', 'vp-1674',
+      'vp-0100', 'vp-0108', 'vp-0123', 'vp-0183', 'vp-0184', 'vp-0193', 'vp-0209', 'vp-0267', 'vp-0275',
+      'vp-0294', 'vp-0302', 'vp-0711', 'vp-1465', 'vp-1674',
     ]),
   );
 });

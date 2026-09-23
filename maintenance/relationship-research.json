@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-23T05:10:00.000Z",
+  "updatedAt": "2026-09-23T05:15:00.000Z",
   "batches": [
     {
       "batchNumber": 1,
@@ -2852,6 +2852,202 @@
           "status": "unresolved",
           "sources": [],
           "nextAction": "No advisor found; search UC Irvine dissertation record next."
+        }
+      ]
+    },
+    {
+      "batchNumber": 16,
+      "rosterIds": [
+        "vp-0301",
+        "vp-0302",
+        "vp-0303",
+        "vp-0304",
+        "vp-0305",
+        "vp-0306",
+        "vp-0307",
+        "vp-0308",
+        "vp-0309",
+        "vp-0310",
+        "vp-0311",
+        "vp-0312",
+        "vp-0313",
+        "vp-0314",
+        "vp-0315",
+        "vp-0316",
+        "vp-0317",
+        "vp-0318",
+        "vp-0319",
+        "vp-0320"
+      ],
+      "startedAt": "2026-09-23T05:15:00.000Z",
+      "completedAt": "2026-09-23T05:15:00.000Z",
+      "status": "complete",
+      "outcomes": [
+        {
+          "rosterId": "vp-0301",
+          "status": "unresolved",
+          "sources": [
+            "own homepage"
+          ],
+          "nextAction": "No advisor named; search Free Univ. Bozen-Bolzano dissertation record next."
+        },
+        {
+          "rosterId": "vp-0302",
+          "status": "completed",
+          "sources": [
+            "https://sites.google.com/view/thainguyenmath/home",
+            "https://arxiv.org/abs/2111.00681",
+            "https://arxiv.org/abs/2308.16410"
+          ],
+          "relationshipIds": [
+            "rel-doctoral-advisor-vp-0108-vp-0302",
+            "rel-coauthor-vp-0108-vp-0302"
+          ],
+          "nextAction": "Verified: doctoral advisor Huy Tai Ha (vp-0108) confirmed via own homepage, plus 2+ qualifying coauthored papers (5 total found on Scholar, 2 retained with arXiv identifiers)."
+        },
+        {
+          "rosterId": "vp-0303",
+          "status": "unresolved",
+          "sources": [
+            "own bio"
+          ],
+          "nextAction": "No advisor named for either PhD (NYU Stern; Fribourg)."
+        },
+        {
+          "rosterId": "vp-0304",
+          "status": "unresolved",
+          "sources": [
+            "own homepage"
+          ],
+          "nextAction": "No advisor/chair named; search Univ. Georgia dissertation record next."
+        },
+        {
+          "rosterId": "vp-0305",
+          "status": "unresolved",
+          "sources": [
+            "own homepage"
+          ],
+          "nextAction": "No advisor named; About page not checked, retry next time."
+        },
+        {
+          "rosterId": "vp-0306",
+          "status": "unresolved",
+          "sources": [
+            "own bio"
+          ],
+          "nextAction": "No advisor named; search Univ. Minnesota 2014 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0307",
+          "status": "unresolved",
+          "sources": [
+            "own bio"
+          ],
+          "nextAction": "Lab mentor Anja-Katrin Bielinsky (Minnesota) confirmed via own bio but not Vietnamese-named; no roster-internal candidate."
+        },
+        {
+          "rosterId": "vp-0308",
+          "status": "unresolved",
+          "sources": [
+            "own homepage"
+          ],
+          "nextAction": "No advisor named; search Vanderbilt dissertation record next."
+        },
+        {
+          "rosterId": "vp-0309",
+          "status": "unresolved",
+          "sources": [
+            "own homepage"
+          ],
+          "nextAction": "No advisor named; search Yale 2024 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0310",
+          "status": "unresolved",
+          "sources": [
+            "own bio"
+          ],
+          "nextAction": "No advisor named; search Univ. Wisconsin-Madison 2017 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0311",
+          "status": "unresolved",
+          "sources": [
+            "own UNT faculty page"
+          ],
+          "nextAction": "No advisor named; CV link inaccessible, retry next time."
+        },
+        {
+          "rosterId": "vp-0312",
+          "status": "unresolved",
+          "sources": [
+            "own South Alabama bio"
+          ],
+          "nextAction": "No advisor named; search Univ. Kansas 2024 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0313",
+          "status": "unresolved",
+          "sources": [
+            "own UCSD site"
+          ],
+          "nextAction": "No advisor named; search UC Irvine 2004 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0314",
+          "status": "unresolved",
+          "sources": [
+            "own UT Southwestern bio"
+          ],
+          "nextAction": "Mentor Ke Sheng (UCLA) confirmed via own bio but not Vietnamese-named; no roster-internal candidate."
+        },
+        {
+          "rosterId": "vp-0315",
+          "status": "unresolved",
+          "sources": [
+            "own UT Southwestern bio"
+          ],
+          "nextAction": "No advisor named; search Univ. Otago 2012 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0316",
+          "status": "unresolved",
+          "sources": [
+            "own UTHealth bio"
+          ],
+          "nextAction": "No advisor named; search UNT Health Science Center 2016 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0317",
+          "status": "unresolved",
+          "sources": [
+            "own UTHealth bio"
+          ],
+          "nextAction": "No PhD (BS/MS only); no thesis advisor applicable."
+        },
+        {
+          "rosterId": "vp-0318",
+          "status": "unresolved",
+          "sources": [
+            "own Toledo scholars profile"
+          ],
+          "nextAction": "No advisor named; search Florida International Univ. dissertation record next."
+        },
+        {
+          "rosterId": "vp-0319",
+          "status": "unresolved",
+          "sources": [
+            "own Toledo bio"
+          ],
+          "nextAction": "No advisor named; search Ohio Univ. dissertation record next."
+        },
+        {
+          "rosterId": "vp-0320",
+          "status": "unresolved",
+          "sources": [
+            "own VCU bio"
+          ],
+          "nextAction": "No advisor named; search VCU dissertation record next."
         }
       ]
     }
