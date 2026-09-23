@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "snapshotAt": "2026-09-19T22:54:09.974Z",
+  "snapshotAt": "2026-09-23T04:32:58.864Z",
   "ids": [
     "vp-0001",
     "vp-0002",
@@ -1604,7 +1604,8 @@
     "vp-1670",
     "vp-1671",
     "vp-1672",
-    "vp-1673"
+    "vp-1673",
+    "vp-1674"
   ],
   "batches": [
     {
@@ -3758,7 +3759,8 @@
         "vp-1670",
         "vp-1671",
         "vp-1672",
-        "vp-1673"
+        "vp-1673",
+        "vp-1674"
       ],
       "status": "pending"
     }
@@ -20410,6 +20412,17 @@
       "evidence": [],
       "errors": [],
       "updatedAt": "2026-09-22T23:07:48.000Z"
+    },
+    "vp-1674": {
+      "overview": "verified",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://websites.uta.edu/knguyen/current-lab-members/",
+        "https://websites.uta.edu/knguyen/dr-nguyens-alumni/"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-23T04:32:58.864Z"
     }
   }
 }
