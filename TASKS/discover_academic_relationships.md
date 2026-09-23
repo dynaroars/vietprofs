@@ -21,7 +21,7 @@ Explicitly out of scope:
 - inferred mentorship based only on attendance at the same institution, department, laboratory, grant, or conference;
 - generic professional proximity such as colleagues, collaborators, co-investigators, or lab members without the evidence required below;
 - relationships involving a person who is not already in the VietProfs roster; and
-- adding new roster members. Record an out-of-roster counterparty as an excluded outcome, not as a new entry.
+- adding new roster members. Record an out-of-roster counterparty as an excluded outcome, not as a new entry. A strong out-of-roster lead is worth surfacing to `discover_new_faculty.md` (which files new candidates as a GitHub Issue per `AGENTS.md`'s "New entries vs. edits" policy), but this task itself must not create the roster entry.
 
 Do not duplicate relationships inside individual `public/data.json` entries. `public/relationships.json` is the normalized public edge table for the roster: each relationship is stored once and references people by immutable roster ID. Only verified relationships belong in this file.
 

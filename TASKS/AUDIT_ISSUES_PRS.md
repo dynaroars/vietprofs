@@ -101,9 +101,10 @@ Before modifying data or closing issues, ensure compliance with repository rules
 2. **Categorize and process each issue:**
 
    - **A. Direct Updates / Candidate Submissions:**
-     - Ground truth info submitted by owner/user.
-     - Add asserted fields to the entry's sorted `directFields` array.
+     - Ground truth info submitted by owner/user, and — per `AGENTS.md`'s "New entries vs. edits" policy — every brand-new roster candidate proposed by `discover_new_faculty.md` or `audit_facts_and_honors.md`, since a new roster ID always arrives here as an Issue rather than a PR.
+     - Add asserted fields to the entry's sorted `directFields` array (owner/user submissions only, not independently-sourced candidate research).
      - Ensure Western display name order (`First (Middle) Last`) in `name` and Vietnamese order in `vietnameseName`.
+     - Re-verify eligibility (appointment, track, institution type) against live sources before assigning an ID — an Issue is a proposal, not a pre-cleared fact.
      - Assign immutable profile IDs for new additions: `npm run assign-profile-ids -- --apply`.
 
    - **B. Honors & Award Additions:**

@@ -1,7 +1,7 @@
 # Credentials, Honors, and Direct Fields Protection (`audit_facts_and_honors.md`)
 
 > **Autonomous Goal Directive (`/goal TASKS/audit_facts_and_honors.md`):**
-> When invoked as `/goal TASKS/audit_facts_and_honors.md`, the agent MUST immediately execute this full credentials and honors auditing workflow without needing any extra prompt text. Work in 15–20 candidate batches (`hieuphay-leads.json` / `openalex-leads.json`), verify inclusion criteria and degree chronology, submit verified batches as GitHub PRs, and loop until all lead candidates are processed.
+> When invoked as `/goal TASKS/audit_facts_and_honors.md`, the agent MUST immediately execute this full credentials and honors auditing workflow without needing any extra prompt text. Work in 15–20 candidate batches (`hieuphay-leads.json` / `openalex-leads.json`), verify inclusion criteria and degree chronology, submit verified batches as GitHub PRs, and loop until all lead candidates are processed. Per `AGENTS.md`'s "New entries vs. edits" policy: a lead that is a brand-new person (needs a new `vp-####` ID) goes to a GitHub Issue, never a PR; only credential/honors corrections to a person who already has a roster ID belong in a PR.
 
 ---
 
@@ -10,9 +10,11 @@
 1. **No Direct Commits to `main`:** Maintenance tasks MUST NOT commit directly to `main`. All data updates must be submitted via **GitHub Pull Requests** or **GitHub Issues**.
 2. **Strict Batch Size (15–20 Candidates Per Batch):** Work in bounded batches of **15–20 candidates per batch** using lead files (`maintenance/hieuphay-leads.json` or `maintenance/openalex-leads.json`).
 3. **Thorough Verification Standard:** Verify full inclusion standard for every candidate: current appointment outside Vietnam, accepted track, non-corporate employer, degree chronology (`undergradYear <= msYear <= phdYear <= postdocYear`), and honors categorization.
-4. **Automated PR & Issue Submission Pipeline:**
-   After completing each batch of 15–20 candidates:
-   - Assign Profile IDs: `npm run assign-profile-ids -- --apply`
+4. **New-ID vs. Edit Split (per `AGENTS.md`):** A batch's candidates fall into two kinds, and each kind is submitted differently:
+   - **Brand-new person (needs a new `vp-####` ID):** Do NOT run `assign-profile-ids -- --apply` or add them to `public/data.json` on a branch. File one GitHub Issue per candidate (or a small group) with evidence, source URLs, and proposed fields, and let the owner or `AUDIT_ISSUES_PRS.md` assign the ID.
+   - **Credential/honors correction to an existing roster ID:** Submit via the PR pipeline below.
+5. **Automated PR Submission Pipeline (existing-ID edits only):**
+   After completing each batch's existing-ID edits:
    - Sync verification ledger: update `maintenance/verification.json`
    - Snapshot enrichment: `npm run enrich -- snapshot`
    - Create batch topic branch: `git checkout -b maintenance/leads-batch-[DISCIPLINE/TIMESTAMP]`
@@ -22,11 +24,11 @@
    - Push topic branch: `git push origin maintenance/leads-batch-[DISCIPLINE/TIMESTAMP]`
    - File GitHub PR:
      ```bash
-     gh pr create --title "Resolve OpenAlex [DISCIPLINE] leads batch" --body "Verified and added 15 candidate leads..."
+     gh pr create --title "Resolve OpenAlex [DISCIPLINE] leads batch" --body "Verified and corrected 15 candidate leads..."
      ```
-   - For ambiguous eligibility cases, protected field conflicts, or honors requiring maintainer review, file GitHub Issues (`gh issue create`).
+   - For ambiguous eligibility cases, protected field conflicts, or honors requiring maintainer review (on an existing entry), file GitHub Issues (`gh issue create`).
    - Return to `main`: `git checkout main`
-5. **Auditing & Merging Delegation:** Do NOT merge the PR yourself. The dedicated audit agent running `TASKS/AUDIT_ISSUES_PRS.md` will review, test, squash-merge, and delete the PR branch.
+6. **Auditing & Merging Delegation:** Do NOT merge the PR yourself. The dedicated audit agent running `TASKS/AUDIT_ISSUES_PRS.md` will review, test, squash-merge, and delete the PR branch.
 
 ---
 
