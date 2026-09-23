@@ -119,8 +119,10 @@ For each person, search bounded combinations of:
 
 - full published name and name variants with `doctoral advisor`, `dissertation`, `thesis`, `PhD advisor`, and equivalent local-language terms;
 - official university domains and institutional repositories;
-- the person's official profile, CV, personal academic site, and lab site; and
-- field-specific genealogy resources as lead generators.
+- the person's official profile, CV, personal academic site, and lab site — a CV or homepage that itself lists advisors, doctoral students, postdocs, or advisees is a fast, high-value source; check it first when available; and
+- field-specific genealogy resources as lead generators, such as the Mathematics Genealogy Project (mathgenealogy.org) for mathematics and closely related fields, and comparable genealogy databases in other fields.
+
+Whenever a search surfaces an advisor, advisee, postdoctoral mentor, or postdoctoral researcher whose name sounds Vietnamese, treat that as a signal the counterparty may already be in the VietProfs roster even if they were not part of the current batch; search `public/data.json` for a matching entry before concluding the lead is out of scope, and only record it as an out-of-roster counterparty if no match is found.
 
 Write verified relationships to `public/relationships.json`. Record unresolved and excluded outcomes only in the non-public research-state file. Stop searching a candidate once the evidence standard is met or the bounded sources are exhausted.
 

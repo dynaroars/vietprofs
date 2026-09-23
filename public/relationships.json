@@ -1,7 +1,105 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-21T00:00:00.000Z",
+  "updatedAt": "2026-09-22T18:30:00.000Z",
   "relationships": [
+    {
+      "id": "rel-doctoral-advisor-vp-0044-vp-0004",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-0044",
+      "targetId": "vp-0004",
+      "sources": [
+        "https://www.cise.ufl.edu/research/OptimaNetSci/people.html"
+      ],
+      "evidence": "My Thai's (vp-0044) official lab page lists Thang N Dinh among former PhD students, noting his current position as Assistant Professor at Virginia Commonwealth University; this matches vp-0004's recorded PhD Florida 2013 and current VCU appointment.",
+      "works": [],
+      "verifiedAt": "2026-09-22T18:00:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-doctoral-advisor-vp-0044-vp-0029",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-0044",
+      "targetId": "vp-0029",
+      "sources": [
+        "https://www.cise.ufl.edu/research/OptimaNetSci/people.html"
+      ],
+      "evidence": "My Thai's (vp-0044) official lab page lists Nam P Nguyen among former PhD students, noting his current position as Assistant Professor at Towson University; this matches vp-0029's recorded PhD Florida 2013, Towson appointment, and \"npnguyen\" personal site.",
+      "works": [],
+      "verifiedAt": "2026-09-22T18:00:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-doctoral-advisor-vp-0036-vp-0267",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-0036",
+      "targetId": "vp-0267",
+      "sources": [
+        "https://personal.utdallas.edu/~tien.n.nguyen/students.html"
+      ],
+      "evidence": "Tien N. Nguyen's (vp-0036) official students page lists Tung Thanh Nguyen as an alumni PhD student, noting his Assistant Professor position at Auburn University; this matches vp-0267's Google Scholar profile (bpqJ-N0AAAAJ) and PhD Iowa State 2013, from when Nguyen was an Iowa State faculty member before moving to UT Dallas.",
+      "works": [],
+      "verifiedAt": "2026-09-22T18:00:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-doctoral-advisor-vp-0052-vp-0026",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-0052",
+      "targetId": "vp-0026",
+      "sources": [
+        "https://mcyphi.org/anhnguyen/"
+      ],
+      "evidence": "Anh Nguyen's (vp-0026) own maintained lab/CV page explicitly states \"Advisor: Dr. Tam Vu\" under her PhD education section (University of Colorado Boulder, 2014-2022); this matches vp-0052's (Tam Vu) prior appointment as founding director of the Mobile and Networked Systems Lab at CU Boulder before moving to Dartmouth.",
+      "works": [],
+      "verifiedAt": "2026-09-22T18:00:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-doctoral-advisor-vp-0711-vp-0062",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-0711",
+      "targetId": "vp-0062",
+      "sources": [
+        "https://rucore.libraries.rutgers.edu/rutgers-lib/27315/"
+      ],
+      "evidence": "The official Rutgers University institutional repository (RUcore) record for Hoi Nguyen's 2010 dissertation 'Some applications of Freiman's inverse theorem' lists Van Vu as dissertation chair. Van H. Vu (vp-0711) was a Rutgers Mathematics professor from 2005-2011, matching the dissertation date; Hoi H. Nguyen (vp-0062) is now at Ohio State University, matching the roster entry's PhD Rutgers 2010 field.",
+      "works": [],
+      "verifiedAt": "2026-09-22T00:00:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0056-vp-0063",
+      "type": "coauthor",
+      "sourceId": "vp-0056",
+      "targetId": "vp-0063",
+      "sources": [
+        "https://arxiv.org/abs/1111.5258",
+        "https://arxiv.org/abs/1111.0332"
+      ],
+      "evidence": "Thang Le (vp-0056, Georgia Tech Mathematics, knot theory/quantum topology) and Anh T. Tran (vp-0063, Georgia Tech Mathematics PhD 2012, now UT Dallas, knot theory/quantum topology) are the sole two authors on both retained works; names, shared Georgia Tech affiliation at the time, and matching research area (knot theory, quantum topology) confirm both identities.",
+      "works": [
+        {
+          "identifier": "doi:10.1090/S0002-9939-2013-11835-6",
+          "title": "The Kauffman bracket skein module of two-bridge links",
+          "date": "2014-03-01",
+          "url": "https://doi.org/10.1090/S0002-9939-2013-11835-6"
+        },
+        {
+          "identifier": "arxiv:1111.5258",
+          "title": "On the AJ conjecture for knots",
+          "date": "2015-01-01",
+          "url": "https://arxiv.org/abs/1111.5258"
+        }
+      ],
+      "verifiedAt": "2026-09-22T00:00:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
     {
       "id": "rel-coauthor-vp-0015-vp-0018",
       "type": "coauthor",

@@ -439,13 +439,22 @@ test('searching an honor name lists professors who hold that honor', () => {
 
 test('connection keyword search finds connected roster members by relationship type', () => {
   const connected = filterRoster(roster, { query: '', searchScope: 'connection', relationships });
-  assert.deepEqual(new Set(connected.map((person) => person.id)), new Set(['vp-0015', 'vp-0018']));
+  assert.deepEqual(
+    new Set(connected.map((person) => person.id)),
+    new Set([
+      'vp-0004', 'vp-0015', 'vp-0018', 'vp-0026', 'vp-0029', 'vp-0036', 'vp-0044',
+      'vp-0052', 'vp-0056', 'vp-0062', 'vp-0063', 'vp-0267', 'vp-0711',
+    ]),
+  );
 
   const coauthors = filterRoster(roster, { query: 'co-author', searchScope: 'connection', relationships });
-  assert.deepEqual(new Set(coauthors.map((person) => person.id)), new Set(['vp-0015', 'vp-0018']));
+  assert.deepEqual(new Set(coauthors.map((person) => person.id)), new Set(['vp-0015', 'vp-0018', 'vp-0056', 'vp-0063']));
 
   const mentors = filterRoster(roster, { query: 'mentor/advise', searchScope: 'connection', relationships });
-  assert.equal(mentors.length, 0);
+  assert.deepEqual(
+    new Set(mentors.map((person) => person.id)),
+    new Set(['vp-0004', 'vp-0026', 'vp-0029', 'vp-0036', 'vp-0044', 'vp-0052', 'vp-0062', 'vp-0267', 'vp-0711']),
+  );
 });
 
 test('searching a name without middle initials still finds the professor', () => {
