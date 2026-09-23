@@ -36,6 +36,7 @@ export default defineConfig({
         main: resolve(root, 'index.html'),
         submit: resolve(root, 'submit.html'),
         stats: resolve(root, 'stats.html'),
+        connections: resolve(root, 'connections.html'),
       },
     },
   },
