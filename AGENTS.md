@@ -1,6 +1,6 @@
 # VietProfs contributor instructions
 
-Before researching or modifying the roster, read [ROSTER_MAINTENANCE.md](ROSTER_MAINTENANCE.md) and [README.md](README.md). Before reviewing, merging, or closing a GitHub PR or Issue in this repository, read [TASKS/AUDIT_ISSUES_PRS.md](TASKS/AUDIT_ISSUES_PRS.md) — it is the authoritative audit workflow (fresh-`main` testing, id-collision handling, merge/close steps) and takes precedence over any ad hoc review approach.
+Before researching or modifying the roster, read [ROSTER_MAINTENANCE.md](ROSTER_MAINTENANCE.md) and [README.md](README.md). Before reviewing, merging, or closing a GitHub PR or Issue in this repository, read [TASKS/AUDIT_ISSUES_PRS.md](TASKS/AUDIT_ISSUES_PRS.md) — it is the authoritative audit workflow (fresh-`main` testing, id-collision handling, merge/close steps) and takes precedence over any ad hoc review approach. When the repository owner pastes one or more candidate names directly into a conversation for roster consideration, follow [TASKS/candidate_intake.md](TASKS/candidate_intake.md) — dedup against the roster, check eligibility, enrich (awards, portrait source, LinkedIn, lab/personal website, about/bio), and file one GitHub Issue per new eligible candidate.
 
 This repository is **VietProfs**: a roster of Vietnamese and Vietnamese-diaspora faculty at universities outside Vietnam. Do not apply inclusion criteria from an external repository or linked project without first confirming that it is relevant here.
 
