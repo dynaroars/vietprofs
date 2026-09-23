@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-23T05:04:33.232Z",
+  "updatedAt": "2026-09-23T05:06:58.523Z",
   "batches": [
     {
       "batchNumber": 1,
@@ -2478,6 +2478,196 @@
             "depts.ttu.edu bio, Google Scholar"
           ],
           "nextAction": "No advisor found; search Texas Tech dissertation record next."
+        }
+      ]
+    },
+    {
+      "batchNumber": 14,
+      "rosterIds": [
+        "vp-0261",
+        "vp-0262",
+        "vp-0263",
+        "vp-0264",
+        "vp-0265",
+        "vp-0266",
+        "vp-0267",
+        "vp-0268",
+        "vp-0269",
+        "vp-0270",
+        "vp-0271",
+        "vp-0272",
+        "vp-0273",
+        "vp-0274",
+        "vp-0275",
+        "vp-0276",
+        "vp-0277",
+        "vp-0278",
+        "vp-0279",
+        "vp-0280"
+      ],
+      "startedAt": "2026-09-23T06:40:00.000Z",
+      "completedAt": "2026-09-23T07:00:00.000Z",
+      "status": "complete",
+      "outcomes": [
+        {
+          "rosterId": "vp-0261",
+          "status": "unresolved",
+          "sources": [
+            "UW news article"
+          ],
+          "nextAction": "No advisor named/institution unclear for PhD 2019; retry with dissertation search."
+        },
+        {
+          "rosterId": "vp-0262",
+          "status": "unresolved",
+          "sources": [
+            "own Cornell bio"
+          ],
+          "nextAction": "No advisor found; search Cornell 2015 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0263",
+          "status": "unresolved",
+          "sources": [],
+          "nextAction": "No advisor found; search Univ. Oregon 2001 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0264",
+          "status": "unresolved",
+          "sources": [
+            "https://law.ufl.edu/faculty/thinh-nguyen/"
+          ],
+          "nextAction": "JD (Harvard Law), BS/AB (Harvard); no advisor named for any degree."
+        },
+        {
+          "rosterId": "vp-0265",
+          "status": "unresolved",
+          "sources": [
+            "search consensus"
+          ],
+          "nextAction": "PhD Business Administration (Case Western); dissertation advisor not identified (found unrelated advisors for a different Tim Nguyen at Brown/Dartmouth). Not Vietnamese-named regardless in either case."
+        },
+        {
+          "rosterId": "vp-0266",
+          "status": "unresolved",
+          "sources": [
+            "own TAMU bio"
+          ],
+          "nextAction": "No advisor found. Special check: no relationship found with vp-0267 (same TAMU CSE department)."
+        },
+        {
+          "rosterId": "vp-0267",
+          "status": "unresolved",
+          "sources": [],
+          "nextAction": "Already has a verified doctoral-advisor relationship from PR #171 lead (Tien Nguyen, vp-0036). Special check: no relationship found with vp-0266 (same TAMU CSE department)."
+        },
+        {
+          "rosterId": "vp-0268",
+          "status": "unresolved",
+          "sources": [
+            "own UCLA bio"
+          ],
+          "nextAction": "No education section/advisor found."
+        },
+        {
+          "rosterId": "vp-0269",
+          "status": "unresolved",
+          "sources": [
+            "own UCLA bio"
+          ],
+          "nextAction": "No advisor found; search Seoul National Univ. dissertation record next."
+        },
+        {
+          "rosterId": "vp-0270",
+          "status": "unresolved",
+          "sources": [
+            "own NCSU bio"
+          ],
+          "nextAction": "No advisor found; search RPI 1986 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0271",
+          "status": "unresolved",
+          "sources": [
+            "economics.mit.edu, dspace.mit.edu thesis"
+          ],
+          "nextAction": "Committee Glenn Ellison and Tobias Salz (MIT) confirmed via official thesis/CV but not Vietnamese-named; no roster-internal candidate."
+        },
+        {
+          "rosterId": "vp-0272",
+          "status": "unresolved",
+          "sources": [
+            "own Northwestern bio"
+          ],
+          "nextAction": "No advisor found; search Univ. Minnesota dissertation record next."
+        },
+        {
+          "rosterId": "vp-0273",
+          "status": "unresolved",
+          "sources": [
+            "own Oregon State bio"
+          ],
+          "nextAction": "No advisor found; search UCLA 2017 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0274",
+          "status": "unresolved",
+          "sources": [
+            "own homepage"
+          ],
+          "nextAction": "No advisor found; search Syracuse 2020 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0275",
+          "status": "completed",
+          "sources": [
+            "already processed"
+          ],
+          "relationshipIds": [
+            "rel-masters-advisor-vp-0275-vp-0032",
+            "rel-coauthor-vp-0032-vp-0275"
+          ],
+          "nextAction": "Already has verified masters-advisor and coauthor relationships with vp-0032 from owner-directed lead; no new info found this pass."
+        },
+        {
+          "rosterId": "vp-0276",
+          "status": "unresolved",
+          "sources": [
+            "own Rutgers homepage"
+          ],
+          "nextAction": "No Education section/advisor found at all."
+        },
+        {
+          "rosterId": "vp-0277",
+          "status": "unresolved",
+          "sources": [
+            "own bio"
+          ],
+          "nextAction": "No advisor found; search UT Arlington 2024 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0278",
+          "status": "unresolved",
+          "sources": [
+            "SJSU emeriti page"
+          ],
+          "nextAction": "Minimal bio, no advisor found. Special check: no relationship found with vp-0279 (same SJSU EE emeriti page)."
+        },
+        {
+          "rosterId": "vp-0279",
+          "status": "unresolved",
+          "sources": [
+            "SJSU emeriti page"
+          ],
+          "nextAction": "Minimal bio, no advisor found. Special check: no relationship found with vp-0278 (same SJSU EE emeriti page)."
+        },
+        {
+          "rosterId": "vp-0280",
+          "status": "unresolved",
+          "sources": [
+            "own bio, search"
+          ],
+          "nextAction": "No advisor found; search Notre Dame 2017 dissertation record next."
         }
       ]
     }
