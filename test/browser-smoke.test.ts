@@ -712,8 +712,7 @@ test('verified academic connections render on both linked profiles', async () =>
     assert.equal(await personLink.getAttribute('href'), `../people/${linkedId}.html`);
     assert.equal(await connections.locator('.connection-kind').textContent(), 'Coauthor · 2 shared works');
     assert.equal(await connections.locator('.connection-sources a').count(), 3);
-    await connections.locator('.connection-works summary').click();
-    assert.equal(await connections.locator('.connection-works li').count(), 2);
+    assert.equal(await connections.locator('.connection-works').count(), 0);
   }
   await page.goto(`${baseUrl}/people/vp-0001.html`, { waitUntil: 'networkidle' });
   assert.equal(await page.locator('.connection-list').count(), 0);

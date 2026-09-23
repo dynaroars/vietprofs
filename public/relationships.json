@@ -1,7 +1,49 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-23T04:50:00.000Z",
+  "updatedAt": "2026-09-23T04:55:00.000Z",
   "relationships": [
+    {
+      "id": "rel-doctoral-advisor-vp-0711-vp-0209",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-0711",
+      "targetId": "vp-0209",
+      "sources": [
+        "https://vivo.brown.edu/docs/o/onguyen3_cv.pdf"
+      ],
+      "evidence": "Oanh Nguyen's (vp-0209) own CV lists \"Ph.D. in Mathematics, Yale University. Advisor: Professor Van Vu\"; matches vp-0711 (Van H. Vu).",
+      "works": [],
+      "verifiedAt": "2026-09-23T04:55:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0209-vp-0711",
+      "type": "coauthor",
+      "sourceId": "vp-0209",
+      "targetId": "vp-0711",
+      "sources": [
+        "https://arxiv.org/abs/1904.04347",
+        "https://arxiv.org/abs/2012.10850"
+      ],
+      "evidence": "Oanh Nguyen (vp-0209, Yale PhD advised by Van Vu) and Van Vu (vp-0711) coauthored both retained works; identity confirmed via the same advisor/advisee relationship (see rel-doctoral-advisor-vp-0711-vp-0209).",
+      "works": [
+        {
+          "identifier": "arxiv:1904.04347",
+          "title": "Random polynomials: central limit theorems for the real roots",
+          "date": "2021-11-15",
+          "url": "https://arxiv.org/abs/1904.04347"
+        },
+        {
+          "identifier": "arxiv:2012.10850",
+          "title": "Random orthonormal polynomials: universality and expected number of real roots",
+          "date": "2020-12-20",
+          "url": "https://arxiv.org/abs/2012.10850"
+        }
+      ],
+      "verifiedAt": "2026-09-23T04:55:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
     {
       "id": "rel-doctoral-advisor-vp-0183-vp-0184",
       "type": "doctoral-advisor",

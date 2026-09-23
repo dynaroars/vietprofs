@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-23T04:50:00.000Z",
+  "updatedAt": "2026-09-23T04:55:00.000Z",
   "batches": [
     {
       "batchNumber": 1,
@@ -711,7 +711,7 @@
           "sources": [
             "https://genealogy.math.ndsu.nodak.edu/id.php?id=177977"
           ],
-          "nextAction": "Advisors Qing Zhang and Jingzhi Tie (Alabama) are not Vietnamese-named; genealogy identity match to vp-0069 also not independently re-confirmed."
+          "nextAction": "Correction (found while researching batch 11): the mathgenealogy.org id=177977 entry (advisors Qing Zhang and Jingzhi Tie, Univ. Georgia, dissertation on optimal asset trading under regime switching) actually matches vp-0213 (Duy Nguyen, Marist, PhD UGA 2013) by institution and dissertation topic, not vp-0069 (Duc Duy Nguyen, University of Alabama 2015). Neither advisor is Vietnamese-named, so no roster-internal edge either way; this note only corrects the earlier identity mismatch."
         },
         {
           "rosterId": "vp-0070",
@@ -1934,6 +1934,190 @@
           "status": "unresolved",
           "sources": [],
           "nextAction": "JD is a professional degree; no named thesis advisor found or applicable."
+        }
+      ]
+    },
+    {
+      "batchNumber": 11,
+      "rosterIds": [
+        "vp-0201",
+        "vp-0202",
+        "vp-0203",
+        "vp-0204",
+        "vp-0205",
+        "vp-0206",
+        "vp-0207",
+        "vp-0208",
+        "vp-0209",
+        "vp-0210",
+        "vp-0211",
+        "vp-0212",
+        "vp-0213",
+        "vp-0214",
+        "vp-0215",
+        "vp-0216",
+        "vp-0217",
+        "vp-0218",
+        "vp-0219",
+        "vp-0220"
+      ],
+      "startedAt": "2026-09-23T05:20:00.000Z",
+      "completedAt": "2026-09-23T04:55:00.000Z",
+      "status": "complete",
+      "outcomes": [
+        {
+          "rosterId": "vp-0201",
+          "status": "unresolved",
+          "sources": [
+            "law.temple.edu bio"
+          ],
+          "nextAction": "JD is a professional degree; no thesis advisor found or applicable."
+        },
+        {
+          "rosterId": "vp-0202",
+          "status": "unresolved",
+          "sources": [
+            "Wikipedia + search"
+          ],
+          "nextAction": "No advisor named for MFA (Yale 1993)."
+        },
+        {
+          "rosterId": "vp-0203",
+          "status": "unresolved",
+          "sources": [],
+          "nextAction": "No advisor found; search UC Irvine dissertation record next."
+        },
+        {
+          "rosterId": "vp-0204",
+          "status": "unresolved",
+          "sources": [
+            "https://vietle.net/textfiles/le_cv_academic.htm"
+          ],
+          "nextAction": "Own academic CV confirms PhD/MA USC, MFA UC Irvine, BFA CSUF but names no advisor for any degree."
+        },
+        {
+          "rosterId": "vp-0205",
+          "status": "unresolved",
+          "sources": [],
+          "nextAction": "No advisor named anywhere found despite multiple official bios; search Missouri 1982 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0206",
+          "status": "unresolved",
+          "sources": [],
+          "nextAction": "No advisor found; search Univ. Western Australia dissertation record next."
+        },
+        {
+          "rosterId": "vp-0207",
+          "status": "unresolved",
+          "sources": [],
+          "nextAction": "No advisor found; search Univ. Florida dissertation record next."
+        },
+        {
+          "rosterId": "vp-0208",
+          "status": "unresolved",
+          "sources": [
+            "own UConn bio"
+          ],
+          "nextAction": "Advisor Michael McAlpine (Princeton) confirmed via own bio but not Vietnamese-named; no roster-internal candidate."
+        },
+        {
+          "rosterId": "vp-0209",
+          "status": "completed",
+          "sources": [
+            "https://vivo.brown.edu/docs/o/onguyen3_cv.pdf",
+            "https://arxiv.org/abs/1904.04347",
+            "https://arxiv.org/abs/2012.10850"
+          ],
+          "relationshipIds": [
+            "rel-doctoral-advisor-vp-0711-vp-0209",
+            "rel-coauthor-vp-0209-vp-0711"
+          ],
+          "nextAction": "Verified: doctoral advisor Van Vu (vp-0711) confirmed via own CV, plus 2 qualifying coauthored papers. Also found: MS advisor Marc Peigne (Tours, not Vietnamese), BS advisor Duong Minh Duc (Univ. of Science, Vietnam -- inside Vietnam, out of roster scope), postdoc mentor Allan Sly (Princeton, not Vietnamese)."
+        },
+        {
+          "rosterId": "vp-0210",
+          "status": "unresolved",
+          "sources": [
+            "official BYUH directory bio"
+          ],
+          "nextAction": "Advisor Vladimir Sverak (Minnesota) confirmed via official bio but not Vietnamese-named; no roster-internal candidate."
+        },
+        {
+          "rosterId": "vp-0211",
+          "status": "unresolved",
+          "sources": [
+            "own homepage (daitrangng.github.io)"
+          ],
+          "nextAction": "Advisor Boris Mordukhovich (Wayne State) confirmed via own site but not Vietnamese-named; no roster-internal candidate."
+        },
+        {
+          "rosterId": "vp-0212",
+          "status": "unresolved",
+          "sources": [],
+          "nextAction": "No advisor named; search Univ. Bristol 2006 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0213",
+          "status": "unresolved",
+          "sources": [
+            "https://sites.google.com/site/nducduy/"
+          ],
+          "nextAction": "Own advisor not found on site. Note: mathgenealogy.org id=177977 (advisors Qing Zhang, Jingzhi Tie, UGA) likely matches this person by institution/topic, not vp-0069 as previously misrecorded in batch 4 (now corrected); neither advisor is Vietnamese-named."
+        },
+        {
+          "rosterId": "vp-0214",
+          "status": "unresolved",
+          "sources": [],
+          "nextAction": "No advisor found; official bio blocked (403). Search Georgetown 1978 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0215",
+          "status": "unresolved",
+          "sources": [
+            "search consensus, not independently fetched"
+          ],
+          "nextAction": "Possibly Andres Leschziner (Harvard), not independently confirmed; not Vietnamese-named regardless."
+        },
+        {
+          "rosterId": "vp-0216",
+          "status": "unresolved",
+          "sources": [
+            "search consensus (lab-membership framing)"
+          ],
+          "nextAction": "Possibly David D. Myrold (Oregon State), not an explicit advisor statement; not Vietnamese-named regardless."
+        },
+        {
+          "rosterId": "vp-0217",
+          "status": "unresolved",
+          "sources": [
+            "search consensus (primary mentor)"
+          ],
+          "nextAction": "Possibly Cheryl Beck (UConn), not independently confirmed as formal dissertation chair; not Vietnamese-named regardless."
+        },
+        {
+          "rosterId": "vp-0218",
+          "status": "unresolved",
+          "sources": [
+            "pharmacy.cnsu.edu bio"
+          ],
+          "nextAction": "No advisor found; MS/BS from Vietnam not roster-relevant. Search Oregon State 2008 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0219",
+          "status": "unresolved",
+          "sources": [
+            "pharmacy.cnsu.edu bio"
+          ],
+          "nextAction": "No advisor found; search Mercer University dissertation record next."
+        },
+        {
+          "rosterId": "vp-0220",
+          "status": "unresolved",
+          "sources": [
+            "search consensus"
+          ],
+          "nextAction": "Hui Chen and Scott Joslin are coauthors, not confirmed as advisor; not Vietnamese-named regardless."
         }
       ]
     }

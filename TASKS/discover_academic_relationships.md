@@ -55,7 +55,7 @@ Record a verified `coauthor` relationship only when:
 3. each retained work has a stable identifier such as a DOI, OpenAlex work ID, PubMed ID, or an official repository URL; and
 4. the match is not driven only by a large consortium or hyper-authored publication.
 
-Use the factual display concept `coauthored N works`; do not turn coauthorship into an unsupported claim about friendship, mentorship, research dependence, or the importance of the collaboration. Exclude corrections, errata, acknowledgments, editorial-board lists, and records where either author identity remains ambiguous.
+Use the factual display concept `coauthored N works`; do not turn coauthorship into an unsupported claim about friendship, mentorship, research dependence, or the importance of the collaboration. Exclude corrections, errata, acknowledgments, editorial-board lists, and records where either author identity remains ambiguous. Retain each work's identifier, title, date, and URL in `public/relationships.json`'s `works` array for evidence and validation purposes, but individual roster profile pages only need to show the coauthor count (`Coauthor · N shared works`) and evidence links — they must not render the individual paper titles.
 
 OpenAlex, Crossref, ORCID, PubMed, DBLP, and Google Scholar may be used for discovery. Automated author IDs can be split, merged, or assigned to namesakes, so verify each mapping with multiple identity signals: official profile or publication list, full-name variants, current or historical affiliation, research area, coauthors, ORCID, and work titles.
 

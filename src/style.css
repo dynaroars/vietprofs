@@ -1303,15 +1303,9 @@ a.entry-name:focus-visible {
   font-size: var(--text-sm);
 }
 
-.subpage .connection-sources,
-.subpage .connection-works {
+.subpage .connection-sources {
   margin-top: 0.3rem;
   font-size: var(--text-xs);
-}
-
-.subpage .connection-works ul {
-  margin-top: 0.35rem;
-  padding-left: 1.2rem;
 }
 
 .subpage .tags {
