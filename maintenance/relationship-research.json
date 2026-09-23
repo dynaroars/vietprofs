@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-22T18:30:00.000Z",
+  "updatedAt": "2026-09-23T00:00:00.000Z",
   "batches": [
     {
       "batchNumber": 1,
@@ -802,6 +802,201 @@
             "https://mml.ece.ucdavis.edu/people/anh-vu-pham"
           ],
           "nextAction": "Advisor not named in available sources; search Georgia Tech dissertation repository next."
+        }
+      ]
+    },
+    {
+      "batchNumber": 5,
+      "rosterIds": [
+        "vp-0081",
+        "vp-0082",
+        "vp-0083",
+        "vp-0084",
+        "vp-0085",
+        "vp-0086",
+        "vp-0087",
+        "vp-0088",
+        "vp-0089",
+        "vp-0090",
+        "vp-0091",
+        "vp-0092",
+        "vp-0093",
+        "vp-0094",
+        "vp-0095",
+        "vp-0096",
+        "vp-0097",
+        "vp-0098",
+        "vp-0099",
+        "vp-0100"
+      ],
+      "startedAt": "2026-09-22T19:00:00.000Z",
+      "completedAt": "2026-09-23T00:00:00.000Z",
+      "status": "complete",
+      "outcomes": [
+        {
+          "rosterId": "vp-0081",
+          "status": "unresolved",
+          "sources": [
+            "https://www.hvnguyen.com/"
+          ],
+          "nextAction": "Own advisor Rama Chellappa (Maryland) not Vietnamese-named. Current PhD students Huy Quoc Vo, Mai-Anh Vu, Son Thai Ly, Hung Quoc Vo are Vietnamese-named but not yet faculty/roster-eligible; revisit if any later join a faculty roster entry."
+        },
+        {
+          "rosterId": "vp-0082",
+          "status": "unresolved",
+          "sources": [
+            "https://ece.vt.edu/people/profile/ngo.html"
+          ],
+          "nextAction": "No advisor named in available sources; search Caltech thesis archive next."
+        },
+        {
+          "rosterId": "vp-0083",
+          "status": "unresolved",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Trac_Tran",
+            "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=116125"
+          ],
+          "nextAction": "Lead: advisor likely Truong Q. Nguyen (possible match to vp-0079), per uncited Wikipedia infobox + Mathematics Genealogy Project entry only — both lead-tier, not official dissertation/CV/bio. Could not corroborate via JHU bio (403) or Truong Nguyen's own UCSD page (no student list). Needs an official dissertation record or CV statement before verification."
+        },
+        {
+          "rosterId": "vp-0084",
+          "status": "unresolved",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Vy_M._Dong"
+          ],
+          "nextAction": "Advisor David MacMillan not Vietnamese-named; no roster-internal candidate."
+        },
+        {
+          "rosterId": "vp-0085",
+          "status": "unresolved",
+          "sources": [
+            "https://www.chem.ucsb.edu/people/thuc-quyen-nguyen"
+          ],
+          "nextAction": "No advisor named; group site blocked by login wall, search UCLA dissertation record next."
+        },
+        {
+          "rosterId": "vp-0086",
+          "status": "unresolved",
+          "sources": [
+            "https://chemistry.northwestern.edu/people/faculty/profiles/sonbinh-nguyen.html"
+          ],
+          "nextAction": "Co-advisors Robert H. Grubbs and Nathan S. Lewis not Vietnamese-named; no roster-internal candidate."
+        },
+        {
+          "rosterId": "vp-0087",
+          "status": "unresolved",
+          "sources": [
+            "https://clasprofiles.wayne.edu/profile/gl9580"
+          ],
+          "nextAction": "Advisor David Y. Gin (deceased) not Vietnamese-named; no roster-internal candidate."
+        },
+        {
+          "rosterId": "vp-0088",
+          "status": "unresolved",
+          "sources": [
+            "https://biosimlabub.github.io"
+          ],
+          "nextAction": "Advisor David A. Case (Rutgers) not Vietnamese-named; no roster-internal candidate."
+        },
+        {
+          "rosterId": "vp-0089",
+          "status": "unresolved",
+          "sources": [
+            "https://artsci.usu.edu/chem-biochem/directory/faculty/trinh-tuan"
+          ],
+          "nextAction": "No advisor named; check trinhresearch.com group site next."
+        },
+        {
+          "rosterId": "vp-0090",
+          "status": "unresolved",
+          "sources": [
+            "https://vodinh.pratt.duke.edu/"
+          ],
+          "nextAction": "No advisor/student names found on homepage; search ETH Zurich 1975 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0091",
+          "status": "unresolved",
+          "sources": [
+            "https://profiles.utdallas.edu/lena.nguyen"
+          ],
+          "nextAction": "No advisor named; search Baylor College of Medicine dissertation record next."
+        },
+        {
+          "rosterId": "vp-0092",
+          "status": "unresolved",
+          "sources": [
+            "https://www.researchgate.net/profile/Tracy-Tran-3"
+          ],
+          "nextAction": "No advisor named; search UCLA dissertation record next."
+        },
+        {
+          "rosterId": "vp-0093",
+          "status": "unresolved",
+          "sources": [
+            "https://plantae.org/tuan-minh-tran-the-plant-cell-first-author/"
+          ],
+          "nextAction": "Advisor Caitilyn Allen not Vietnamese-named; no roster-internal candidate."
+        },
+        {
+          "rosterId": "vp-0094",
+          "status": "unresolved",
+          "sources": [
+            "https://www.ohsu.edu/people/thuy-ngo-phd"
+          ],
+          "nextAction": "Likely advisor Taekjip Ha (UIUC) not independently confirmed via a single fetched source, and not Vietnamese-named regardless; no roster-internal candidate."
+        },
+        {
+          "rosterId": "vp-0095",
+          "status": "unresolved",
+          "sources": [
+            "https://mcardle.wisc.edu/faculty/huy-dinh/"
+          ],
+          "nextAction": "Advisors Arndt von Haeseler and Ortrun Mittelsten Scheid (Vienna) not Vietnamese-named; no roster-internal candidate."
+        },
+        {
+          "rosterId": "vp-0096",
+          "status": "unresolved",
+          "sources": [
+            "https://cpe.ku.edu/people/trung-van-nguyen"
+          ],
+          "nextAction": "No advisor named; search Texas A&M 1988 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0097",
+          "status": "unresolved",
+          "sources": [
+            "https://www.thebuilab.com/people"
+          ],
+          "nextAction": "No advisor named; search UConn 2014 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0098",
+          "status": "unresolved",
+          "sources": [
+            "https://www.pse.umass.edu/~jpham/Links.html"
+          ],
+          "nextAction": "Likely advisor Alfred J. Crosby inferred from collaboration context only, not an explicit statement; not Vietnamese-named regardless."
+        },
+        {
+          "rosterId": "vp-0099",
+          "status": "unresolved",
+          "sources": [
+            "https://x.com/HopkinsEngineer/status/1590431544094896128"
+          ],
+          "nextAction": "Advisor Sanat K. Kumar (Columbia) confirmed via official department announcement but not Vietnamese-named; no roster-internal candidate."
+        },
+        {
+          "rosterId": "vp-0100",
+          "status": "completed",
+          "sources": [
+            "https://nhatptnk8912.github.io/",
+            "https://lsa.umich.edu/stat/people/faculty/xuanlong.html"
+          ],
+          "relationshipIds": [
+            "rel-doctoral-advisor-vp-0040-vp-0100"
+          ],
+          "nextAction": "Verified: doctoral advisor XuanLong Nguyen (vp-0040) confirmed via own homepage biography. Also found out-of-roster lead: advisee Khai Nguyen (PhD UT Austin, now Asst. Professor, Statistics, Texas A&M) is Vietnamese-named but not currently in the roster (checked: vp-0060, vp-1548 are different Khai Nguyens at different institutions) — candidate for discover_new_faculty, not this task."
         }
       ]
     }

@@ -1,7 +1,22 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-22T18:30:00.000Z",
+  "updatedAt": "2026-09-23T00:00:00.000Z",
   "relationships": [
+    {
+      "id": "rel-doctoral-advisor-vp-0040-vp-0100",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-0040",
+      "targetId": "vp-0100",
+      "sources": [
+        "https://nhatptnk8912.github.io/",
+        "https://lsa.umich.edu/stat/people/faculty/xuanlong.html"
+      ],
+      "evidence": "Nhat Ho's (vp-0100) own homepage biography states he was advised by \"Professor Long Nguyen\" for his 2017 PhD in Statistics at the University of Michigan; this matches vp-0040 (XuanLong Nguyen, University of Michigan Statistics professor).",
+      "works": [],
+      "verifiedAt": "2026-09-23T00:00:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
     {
       "id": "rel-doctoral-advisor-vp-0044-vp-0004",
       "type": "doctoral-advisor",
