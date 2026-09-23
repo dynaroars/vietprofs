@@ -16,6 +16,12 @@ Ensure all personal homepage and lab links across faculty directory profiles are
 1. **Continuous Multi-Batch Mandate:**  
    Do NOT stop after completing a single batch. Iterate continuously through **all remaining batches** until 100% of roster entries are audited.
 2. **Active HTTP Check:** Test links to ensure they resolve without HTTP 404, 500, or domain squatting.
+   When a link is dead, don't just re-fetch the same URL or the institution's top-level directory
+   (often JS-rendered and empty to a plain fetch) — search `"${name}" "${university}"` (or
+   department) fresh first. A moved/renamed department page, personal/lab site, or research-database
+   entry frequently turns up that a stale stored URL or generic directory search misses. A page that
+   403s/404s directly may also render when re-fetched with a `Referer` header pointing at whatever
+   page linked it.
 3. **Local Verification:**
    ```bash
    npm test && npm run build && git diff --check

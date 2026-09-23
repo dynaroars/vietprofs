@@ -114,6 +114,12 @@ Before modifying data or closing issues, ensure compliance with repository rules
    - **C. Stale Rank / Department / Institution / profileUrl / Education:**
      - Verify against live official university profiles or primary sources.
      - Update fields as verified (`rank`, `department`, `university`, `profileUrl`, `phdInstitution`, etc.).
+     - For a dead `profileUrl`/`portraitSource`, don't stop at re-fetching the same stale URL or the
+       institution's top-level directory (which is often JS-rendered and returns nothing to a plain
+       fetch). Search `"${name}" "${university}"` (or department) fresh — a department-specific page,
+       personal/lab site, or research-database entry frequently surfaces that a generic directory
+       search misses, and a page that 404s directly may still render when fetched with a `Referer`
+       header pointing at the page that linked it.
 
    - **D. Mismatched `researchOverview`:**
      - Regenerate 1–3 sentence neutral academic summary from the scholar's official profile/homepage.

@@ -1063,7 +1063,12 @@ later, which only this sweep catches.
 
 When it reports a broken URL, don't just delete the field — visit the person's other stored URLs
 or search for their current page first, since a moved/renamed page is far more common than a
-person's web presence disappearing entirely.
+person's web presence disappearing entirely. A direct web search for `"${name}" "${university}"` (or
+department) frequently turns up a live, more specific page — a department-level profile, a lab site, a
+Google Scholar/ORCID page, or a research-database entry — even when the previously stored URL now
+404s and a fetch of the institution's own top-level directory comes back empty or JS-rendered. Try that
+before concluding the link is unfixable; several "dead" links across `#29`'s sweep turned out to just
+need the person's name searched fresh rather than re-fetching the same stale URL.
 
 ## Validation checklist
 
