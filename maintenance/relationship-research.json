@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-23T02:00:00.000Z",
+  "updatedAt": "2026-09-23T03:15:00.000Z",
   "batches": [
     {
       "batchNumber": 1,
@@ -1378,6 +1378,186 @@
             "weak Scholar-profile inference"
           ],
           "nextAction": "Possibly Jitka Hilliard (Auburn), not independently confirmed; not Vietnamese-named regardless."
+        }
+      ]
+    },
+    {
+      "batchNumber": 8,
+      "rosterIds": [
+        "vp-0141",
+        "vp-0142",
+        "vp-0143",
+        "vp-0144",
+        "vp-0145",
+        "vp-0146",
+        "vp-0147",
+        "vp-0148",
+        "vp-0149",
+        "vp-0150",
+        "vp-0151",
+        "vp-0152",
+        "vp-0153",
+        "vp-0154",
+        "vp-0155",
+        "vp-0156",
+        "vp-0157",
+        "vp-0158",
+        "vp-0159",
+        "vp-0160"
+      ],
+      "startedAt": "2026-09-23T02:15:00.000Z",
+      "completedAt": "2026-09-23T03:15:00.000Z",
+      "status": "complete",
+      "outcomes": [
+        {
+          "rosterId": "vp-0141",
+          "status": "unresolved",
+          "sources": [
+            "search inference only"
+          ],
+          "nextAction": "Possibly Jitka Hilliard (Auburn), not confirmed as chair; not Vietnamese-named regardless. Retry Auburn AUETD dissertation fetch next time."
+        },
+        {
+          "rosterId": "vp-0142",
+          "status": "unresolved",
+          "sources": [
+            "search inference only"
+          ],
+          "nextAction": "Possibly Diane Del Guercio (Oregon), not confirmed; not Vietnamese-named regardless."
+        },
+        {
+          "rosterId": "vp-0143",
+          "status": "unresolved",
+          "sources": [
+            "search inference only"
+          ],
+          "nextAction": "Possibly Eric Ghysels (UNC), not confirmed; not Vietnamese-named regardless."
+        },
+        {
+          "rosterId": "vp-0144",
+          "status": "unresolved",
+          "sources": [
+            "https://www.quochnguyen.com/"
+          ],
+          "nextAction": "No advisor listed on own site."
+        },
+        {
+          "rosterId": "vp-0145",
+          "status": "unresolved",
+          "sources": [],
+          "nextAction": "No advisor found; search Western University dissertation record next."
+        },
+        {
+          "rosterId": "vp-0146",
+          "status": "unresolved",
+          "sources": [],
+          "nextAction": "No advisor found; search Univ. Rhode Island dissertation record next."
+        },
+        {
+          "rosterId": "vp-0147",
+          "status": "unresolved",
+          "sources": [],
+          "nextAction": "No advisor found; search NYU Stern dissertation record next."
+        },
+        {
+          "rosterId": "vp-0148",
+          "status": "unresolved",
+          "sources": [],
+          "nextAction": "Not researched (search budget); retry next time."
+        },
+        {
+          "rosterId": "vp-0149",
+          "status": "unresolved",
+          "sources": [],
+          "nextAction": "No advisor found; search Univ. North Texas dissertation record next."
+        },
+        {
+          "rosterId": "vp-0150",
+          "status": "unresolved",
+          "sources": [
+            "ASU CV search inference"
+          ],
+          "nextAction": "Possibly Naomi Mandel (ASU), not confirmed; not Vietnamese-named regardless. Note: unrelated open GitHub issue #70 flags a mismatched researchOverview for this entry — data-quality issue, not a relationship finding, out of scope here."
+        },
+        {
+          "rosterId": "vp-0151",
+          "status": "unresolved",
+          "sources": [
+            "https://www.ngahodac.com/about/"
+          ],
+          "nextAction": "No advisor confirmed; search Univ. Utah dissertation record next."
+        },
+        {
+          "rosterId": "vp-0152",
+          "status": "unresolved",
+          "sources": [
+            "https://www.siena.edu/faculty-and-staff/person/adam-nguyen/"
+          ],
+          "nextAction": "No advisor confirmed; search York University dissertation record next."
+        },
+        {
+          "rosterId": "vp-0153",
+          "status": "unresolved",
+          "sources": [
+            "CV PDF not machine-readable"
+          ],
+          "nextAction": "Retry Columbia CV PDF fetch with OCR/alternate method next time."
+        },
+        {
+          "rosterId": "vp-0154",
+          "status": "unresolved",
+          "sources": [
+            "https://sites.google.com/view/thanhhansnguyen/"
+          ],
+          "nextAction": "No advisor confirmed; search Oklahoma State dissertation record next."
+        },
+        {
+          "rosterId": "vp-0155",
+          "status": "unresolved",
+          "sources": [
+            "CV PDF not machine-readable"
+          ],
+          "nextAction": "Retry TCU CV PDF fetch next time."
+        },
+        {
+          "rosterId": "vp-0156",
+          "status": "unresolved",
+          "sources": [
+            "https://www.tcu.edu/directory/profile/ton-lan-anh.php"
+          ],
+          "nextAction": "No advisor confirmed; search Univ. Georgia dissertation record next."
+        },
+        {
+          "rosterId": "vp-0157",
+          "status": "unresolved",
+          "sources": [
+            "https://uyenbtran.com/teaching/"
+          ],
+          "nextAction": "No advisor confirmed; search Univ. Chicago Booth dissertation record next."
+        },
+        {
+          "rosterId": "vp-0158",
+          "status": "unresolved",
+          "sources": [
+            "http://www.fsb.miamioh.edu/directory/nguyen49"
+          ],
+          "nextAction": "No advisor confirmed; search Western University dissertation record next."
+        },
+        {
+          "rosterId": "vp-0159",
+          "status": "unresolved",
+          "sources": [
+            "https://www.drantran.com/about"
+          ],
+          "nextAction": "No advisor confirmed; search Univ. Colorado Boulder dissertation record next."
+        },
+        {
+          "rosterId": "vp-0160",
+          "status": "unresolved",
+          "sources": [
+            "https://business.fiu.edu/about/directory/profile/tah"
+          ],
+          "nextAction": "No advisor confirmed; search Univ. Arkansas dissertation record next."
         }
       ]
     }
