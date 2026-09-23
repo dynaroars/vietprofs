@@ -442,8 +442,8 @@ test('connection keyword search finds connected roster members by relationship t
   assert.deepEqual(
     new Set(connected.map((person) => person.id)),
     new Set([
-      'vp-0004', 'vp-0015', 'vp-0018', 'vp-0026', 'vp-0029', 'vp-0036', 'vp-0040', 'vp-0044',
-      'vp-0052', 'vp-0056', 'vp-0062', 'vp-0063', 'vp-0100', 'vp-0123', 'vp-0267', 'vp-0711', 'vp-1674',
+      'vp-0004', 'vp-0015', 'vp-0018', 'vp-0026', 'vp-0029', 'vp-0032', 'vp-0036', 'vp-0040', 'vp-0044',
+      'vp-0052', 'vp-0056', 'vp-0062', 'vp-0063', 'vp-0100', 'vp-0123', 'vp-0267', 'vp-0275', 'vp-0711', 'vp-1674',
     ]),
   );
 
@@ -453,7 +453,7 @@ test('connection keyword search finds connected roster members by relationship t
   const mentors = filterRoster(roster, { query: 'mentor/advise', searchScope: 'connection', relationships });
   assert.deepEqual(
     new Set(mentors.map((person) => person.id)),
-    new Set(['vp-0004', 'vp-0026', 'vp-0029', 'vp-0036', 'vp-0040', 'vp-0044', 'vp-0052', 'vp-0062', 'vp-0100', 'vp-0123', 'vp-0267', 'vp-0711', 'vp-1674']),
+    new Set(['vp-0004', 'vp-0026', 'vp-0029', 'vp-0032', 'vp-0036', 'vp-0040', 'vp-0044', 'vp-0052', 'vp-0062', 'vp-0100', 'vp-0123', 'vp-0267', 'vp-0275', 'vp-0711', 'vp-1674']),
   );
 });
 

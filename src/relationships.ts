@@ -2,6 +2,8 @@ import type { Roster } from './data.ts';
 
 export const RELATIONSHIP_TYPES = [
   'doctoral-advisor',
+  'masters-advisor',
+  'undergraduate-advisor',
   'postdoctoral-mentor',
   'coauthor',
 ] as const;
@@ -178,9 +180,13 @@ export function connectionsFor(
     const isSource = relationship.sourceId === personId;
     const label = relationship.type === 'doctoral-advisor'
       ? (isSource ? 'Doctoral advisee' : 'Doctoral advisor')
-      : relationship.type === 'postdoctoral-mentor'
-        ? (isSource ? 'Postdoctoral mentee' : 'Postdoctoral mentor')
-        : `Coauthor · ${relationship.works.length} shared works`;
+      : relationship.type === 'masters-advisor'
+        ? (isSource ? "Master's advisee" : "Master's advisor")
+        : relationship.type === 'undergraduate-advisor'
+          ? (isSource ? 'Undergraduate advisee' : 'Undergraduate thesis advisor')
+          : relationship.type === 'postdoctoral-mentor'
+            ? (isSource ? 'Postdoctoral mentee' : 'Postdoctoral mentor')
+            : `Coauthor · ${relationship.works.length} shared works`;
     return [{
       relationship,
       otherId: isSource ? relationship.targetId : relationship.sourceId,

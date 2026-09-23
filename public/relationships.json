@@ -1,7 +1,21 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-23T03:00:00.000Z",
+  "updatedAt": "2026-09-23T04:45:00.000Z",
   "relationships": [
+    {
+      "id": "rel-masters-advisor-vp-0275-vp-0032",
+      "type": "masters-advisor",
+      "sourceId": "vp-0275",
+      "targetId": "vp-0032",
+      "sources": [
+        "https://tvn.roars.dev/cv/cv.pdf"
+      ],
+      "evidence": "ThanhVu H. Nguyen's (vp-0032) own CV explicitly lists \"Adviser: Thang N. Bui\" for his MS in Computer Science at Penn State University, Harrisburg, PA (2003-2006); this matches vp-0275 (Thang N. Bui, Penn State Harrisburg Computer Science).",
+      "works": [],
+      "verifiedAt": "2026-09-23T04:45:00.000Z",
+      "direct": true,
+      "notes": "Owner-directed: repository owner asked to check his own CV for connections."
+    },
     {
       "id": "rel-doctoral-advisor-vp-0123-vp-1674",
       "type": "doctoral-advisor",

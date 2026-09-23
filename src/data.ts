@@ -998,7 +998,11 @@ function matchesRelationshipScope(person: RosterEntry, query: string, database?:
   if (!query.trim()) return connected.length > 0;
   const normalized = query.replace(/[^a-z0-9]/gi, '').toLowerCase();
   if (['mentor', 'advise', 'advisor', 'mentoradvise'].includes(normalized)) {
-    return connected.some((relationship) => relationship.type === 'doctoral-advisor' || relationship.type === 'postdoctoral-mentor');
+    return connected.some((relationship) =>
+      relationship.type === 'doctoral-advisor'
+      || relationship.type === 'masters-advisor'
+      || relationship.type === 'undergraduate-advisor'
+      || relationship.type === 'postdoctoral-mentor');
   }
   if (normalized === 'coauthor') return connected.some((relationship) => relationship.type === 'coauthor');
   return false;

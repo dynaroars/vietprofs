@@ -1,7 +1,7 @@
 # Discover Academic Relationships (`discover_academic_relationships.md`)
 
 > **Autonomous Goal Directive (`/goal TASKS/discover_academic_relationships.md`):**
-> Discover and verify academic relationships **between people already listed in `public/data.json`**. Work in resumable batches of 20 roster members and write verified doctoral advisor/advisee relationships, explicitly documented postdoctoral mentorships, and identity-verified coauthorship signals to the public roster relationship database at `public/relationships.json`. Never research or record spouses, relatives, or other personal relationships. Treat automated author matching and genealogy databases as leads rather than proof, retain evidence for every accepted relationship, and commit and push relationship updates directly to `main`.
+> Discover and verify academic relationships **between people already listed in `public/data.json`**. Work in resumable batches of 20 roster members and write verified doctoral, master's, and undergraduate thesis advisor/advisee relationships, explicitly documented postdoctoral mentorships, and identity-verified coauthorship signals to the public roster relationship database at `public/relationships.json`. Never research or record spouses, relatives, or other personal relationships. Treat automated author matching and genealogy databases as leads rather than proof, retain evidence for every accepted relationship, and commit and push relationship updates directly to `main`.
 
 ---
 
@@ -12,6 +12,8 @@ Build a reproducible evidence ledger for academic connections within VietProfs. 
 Allowed relationship types:
 
 - `doctoral-advisor`: directional from the advisor to the doctoral advisee.
+- `masters-advisor`: directional from the advisor to the master's (MS/MA) thesis advisee.
+- `undergraduate-advisor`: directional from the advisor to the undergraduate (BS/BA) thesis advisee.
 - `postdoctoral-mentor`: directional from the mentor to the postdoctoral researcher, but only when a source explicitly names the mentoring relationship.
 - `coauthor`: symmetric evidence that two roster members coauthored qualifying scholarly works.
 
@@ -29,16 +31,16 @@ Do not duplicate relationships inside individual `public/data.json` entries. `pu
 
 ## 2. Evidence standards
 
-### Doctoral advisor / advisee
+### Doctoral, master's, and undergraduate advisor / advisee
 
-Require a source that explicitly connects the named doctorate recipient to the named doctoral advisor. Preferred evidence, in order:
+Require a source that explicitly connects the named degree recipient to the named advisor for that specific degree. Preferred evidence, in order:
 
-1. an official university dissertation or institutional-repository record;
-2. an official faculty profile, CV, dissertation announcement, or university biography;
-3. the scholar's maintained academic CV or personal site; or
+1. an official university dissertation/thesis or institutional-repository record;
+2. an official faculty profile, CV, dissertation/thesis announcement, or university biography;
+3. the scholar's maintained academic CV or personal site (an "Education" section naming an "Adviser"/"Advisor" for a listed MS or BS degree is sufficient); or
 4. a field-specific genealogy database corroborated by an independently identity-resolved source.
 
-A genealogy entry, search snippet, acknowledgments page, shared institution, overlapping dates, or similar research topic is a lead only. Do not infer the direction of mentorship. Distinguish doctoral advisors from committee members, master's advisers, informal mentors, and postdoctoral supervisors.
+A genealogy entry, search snippet, acknowledgments page, shared institution, overlapping dates, or similar research topic is a lead only. Do not infer the direction of mentorship. Distinguish the specific degree level the evidence names — a source may name a doctoral advisor, a separate master's advisor, and a separate undergraduate thesis advisor for the same person; record each as its own relationship with the matching type (`doctoral-advisor`, `masters-advisor`, or `undergraduate-advisor`). Do not record an MS or BS advisor as a `doctoral-advisor`, and do not record a committee member, informal mentor, or postdoctoral supervisor as any advisor type without the matching explicit evidence.
 
 ### Postdoctoral mentor
 
@@ -90,7 +92,7 @@ Every public relationship record uses immutable roster IDs and must be verified 
 }
 ```
 
-For `coauthor`, store the two IDs in ascending lexical order, use that same order in the deterministic `id`, and populate `works` with the retained work identifiers, titles, dates, and source URLs. For directional mentorship, `sourceId` is always the advisor or mentor and `targetId` is the advisee or postdoctoral researcher.
+For `coauthor`, store the two IDs in ascending lexical order, use that same order in the deterministic `id`, and populate `works` with the retained work identifiers, titles, dates, and source URLs. For directional mentorship (`doctoral-advisor`, `masters-advisor`, `undergraduate-advisor`, `postdoctoral-mentor`), `sourceId` is always the advisor or mentor and `targetId` is the advisee or postdoctoral researcher.
 
 Do not write `unresolved`, `candidate`, or `excluded` records to the public database. Those are not established relationships. If resumable research state is needed, create `maintenance/relationship-research.json` containing only provider identity mappings, processed batch IDs, rejected candidates, unresolved leads, and next actions. It must never be loaded by the public site or described as roster relationship data.
 
@@ -117,7 +119,7 @@ Record the batch number, roster IDs, start timestamp, and status in `maintenance
 
 For each person, search bounded combinations of:
 
-- full published name and name variants with `doctoral advisor`, `dissertation`, `thesis`, `PhD advisor`, and equivalent local-language terms;
+- full published name and name variants with `doctoral advisor`, `dissertation`, `thesis`, `PhD advisor`, `MS advisor`, `master's advisor`, `undergraduate advisor`, and equivalent local-language terms;
 - official university domains and institutional repositories;
 - the person's official profile, CV, personal academic site, and lab site — a CV or homepage that itself lists advisors, doctoral students, postdocs, or advisees is a fast, high-value source; check it first when available; and
 - field-specific genealogy resources as lead generators, such as the Mathematics Genealogy Project (mathgenealogy.org) for mathematics and closely related fields, and comparable genealogy databases in other fields.
