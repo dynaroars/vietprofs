@@ -1,7 +1,49 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-23T04:55:00.000Z",
+  "updatedAt": "2026-09-23T05:10:00.000Z",
   "relationships": [
+    {
+      "id": "rel-doctoral-advisor-vp-0294-vp-1465",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-0294",
+      "targetId": "vp-1465",
+      "sources": [
+        "https://luanhoangmath.github.io/Hoang-CV.pdf"
+      ],
+      "evidence": "Luan Hoang's (vp-0294) own CV \"Students Advised\" section lists \"8.2014 Thinh Kieu, Ph.D. (co-advisor)\"; matches vp-1465 (Thinh Kieu, PhD Texas Tech 2014, University of North Georgia, same research area of Forchheimer flows in porous media).",
+      "works": [],
+      "verifiedAt": "2026-09-23T05:10:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0294-vp-1465",
+      "type": "coauthor",
+      "sourceId": "vp-0294",
+      "targetId": "vp-1465",
+      "sources": [
+        "https://doi.org/10.1007/s11854-018-0064-5",
+        "https://doi.org/10.1016/j.nonrwa.2024.104269"
+      ],
+      "evidence": "Luan Hoang (vp-0294) and Thinh Kieu (vp-1465) are the sole two authors on both retained works, listed on Hoang's own CV; identity confirmed via the same doctoral-advisor relationship (see rel-doctoral-advisor-vp-0294-vp-1465).",
+      "works": [
+        {
+          "identifier": "doi:10.1007/s11854-018-0064-5",
+          "title": "Global estimates for generalized Forchheimer flows of slightly compressible fluids",
+          "date": "2019-03-01",
+          "url": "https://doi.org/10.1007/s11854-018-0064-5"
+        },
+        {
+          "identifier": "doi:10.1016/j.nonrwa.2024.104269",
+          "title": "Anisotropic flows of Forchheimer-type in porous media and their steady states",
+          "date": "2025-08-01",
+          "url": "https://doi.org/10.1016/j.nonrwa.2024.104269"
+        }
+      ],
+      "verifiedAt": "2026-09-23T05:10:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
     {
       "id": "rel-doctoral-advisor-vp-0711-vp-0209",
       "type": "doctoral-advisor",

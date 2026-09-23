@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-23T05:06:58.523Z",
+  "updatedAt": "2026-09-23T05:10:00.000Z",
   "batches": [
     {
       "batchNumber": 1,
@@ -2668,6 +2668,190 @@
             "own bio, search"
           ],
           "nextAction": "No advisor found; search Notre Dame 2017 dissertation record next."
+        }
+      ]
+    },
+    {
+      "batchNumber": 15,
+      "rosterIds": [
+        "vp-0281",
+        "vp-0282",
+        "vp-0283",
+        "vp-0284",
+        "vp-0285",
+        "vp-0286",
+        "vp-0287",
+        "vp-0288",
+        "vp-0289",
+        "vp-0290",
+        "vp-0291",
+        "vp-0292",
+        "vp-0293",
+        "vp-0294",
+        "vp-0295",
+        "vp-0296",
+        "vp-0297",
+        "vp-0298",
+        "vp-0299",
+        "vp-0300"
+      ],
+      "startedAt": "2026-09-23T05:00:00.000Z",
+      "completedAt": "2026-09-23T05:10:00.000Z",
+      "status": "complete",
+      "outcomes": [
+        {
+          "rosterId": "vp-0281",
+          "status": "unresolved",
+          "sources": [
+            "own SPU bio (403 on fetch)"
+          ],
+          "nextAction": "No advisor found; retry with direct fetch or alternate source next time."
+        },
+        {
+          "rosterId": "vp-0282",
+          "status": "unresolved",
+          "sources": [
+            "LinkedIn, SDSU bio, Scholar"
+          ],
+          "nextAction": "No advisor found; search Univ. Kansas 2020 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0283",
+          "status": "unresolved",
+          "sources": [
+            "own TTU bio, search"
+          ],
+          "nextAction": "No advisor found; search Szent Istvan Univ. Hungary 1997 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0284",
+          "status": "unresolved",
+          "sources": [
+            "Wikipedia, UCSD profile, search"
+          ],
+          "nextAction": "No advisor found; search UC Berkeley 1962 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0285",
+          "status": "unresolved",
+          "sources": [
+            "own UMass Lowell bio"
+          ],
+          "nextAction": "No advisor found; search Univ. Rhode Island 1973 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0286",
+          "status": "unresolved",
+          "sources": [
+            "search"
+          ],
+          "nextAction": "No advisor found; search Johns Hopkins dissertation record next."
+        },
+        {
+          "rosterId": "vp-0287",
+          "status": "unresolved",
+          "sources": [
+            "ngolab.che.wisc.edu, LinkedIn, ResearchGate"
+          ],
+          "nextAction": "Advisor Brendan Harley (UIUC) confirmed via consensus but not Vietnamese-named; no roster-internal candidate."
+        },
+        {
+          "rosterId": "vp-0288",
+          "status": "unresolved",
+          "sources": [
+            "Wikipedia, bethminhnguyen.com"
+          ],
+          "nextAction": "No advisor found for MFA (Univ. Michigan 1998)."
+        },
+        {
+          "rosterId": "vp-0289",
+          "status": "unresolved",
+          "sources": [
+            "Scholar, LinkedIn, search"
+          ],
+          "nextAction": "No advisor found; search Univ. Pennsylvania 2016 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0290",
+          "status": "unresolved",
+          "sources": [
+            "BGSU bio, search"
+          ],
+          "nextAction": "No advisor found; search Texas A&M 2002 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0291",
+          "status": "unresolved",
+          "sources": [
+            "own BU bio"
+          ],
+          "nextAction": "DPM (podiatric medicine); no thesis advisor applicable."
+        },
+        {
+          "rosterId": "vp-0292",
+          "status": "unresolved",
+          "sources": [],
+          "nextAction": "No advisor found; search Univ. Washington 2014 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0293",
+          "status": "unresolved",
+          "sources": [
+            "search"
+          ],
+          "nextAction": "Advisor Eric Porter (UC Santa Cruz) not Vietnamese-named; no roster-internal candidate."
+        },
+        {
+          "rosterId": "vp-0294",
+          "status": "completed",
+          "sources": [
+            "https://luanhoangmath.github.io/Hoang-CV.pdf"
+          ],
+          "relationshipIds": [
+            "rel-doctoral-advisor-vp-0294-vp-1465",
+            "rel-coauthor-vp-0294-vp-1465"
+          ],
+          "nextAction": "Verified: doctoral advisor of Thinh Kieu (vp-1465, co-advisor 2014), plus 2 qualifying coauthored papers, both confirmed via own CV. Also hosted postdocs Dr. Phuong Nguyen (1.2019-8.2019) and Dr. Dat Cao (8.2016-8.2019), both Vietnamese-named but no confident roster match found (no \"Dat Cao\" entry exists; several \"Phuong Nguyen\" entries exist but none in math/PDE) -- candidates for discover_new_faculty, not this task. Special check: no relationship found with vp-0295 or vp-0296 (same TTU Math/Stats department)."
+        },
+        {
+          "rosterId": "vp-0295",
+          "status": "unresolved",
+          "sources": [],
+          "nextAction": "No advisor found. Special check: no relationship found with vp-0294 or vp-0296 (same TTU Math/Stats department)."
+        },
+        {
+          "rosterId": "vp-0296",
+          "status": "unresolved",
+          "sources": [
+            "search"
+          ],
+          "nextAction": "Advisor Xiaodong Cao (Cornell) not Vietnamese-named; no roster-internal candidate. Special check: no relationship found with vp-0294 or vp-0295 (same TTU Math/Stats department)."
+        },
+        {
+          "rosterId": "vp-0297",
+          "status": "unresolved",
+          "sources": [
+            "search"
+          ],
+          "nextAction": "Co-advisors Elad Alon and Seth R. Sanders (UC Berkeley) not Vietnamese-named; no roster-internal candidate."
+        },
+        {
+          "rosterId": "vp-0298",
+          "status": "unresolved",
+          "sources": [],
+          "nextAction": "No advisor found. Special check: no relationship found with vp-0299 (same UCSD Literature department)."
+        },
+        {
+          "rosterId": "vp-0299",
+          "status": "unresolved",
+          "sources": [],
+          "nextAction": "No advisor found for likely MFA. Special check: no relationship found with vp-0298 (same UCSD Literature department)."
+        },
+        {
+          "rosterId": "vp-0300",
+          "status": "unresolved",
+          "sources": [],
+          "nextAction": "No advisor found; search UC Irvine dissertation record next."
         }
       ]
     }
