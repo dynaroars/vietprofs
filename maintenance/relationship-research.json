@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-23T04:55:00.000Z",
+  "updatedAt": "2026-09-23T05:01:38.582Z",
   "batches": [
     {
       "batchNumber": 1,
@@ -2118,6 +2118,178 @@
             "search consensus"
           ],
           "nextAction": "Hui Chen and Scott Joslin are coauthors, not confirmed as advisor; not Vietnamese-named regardless."
+        }
+      ]
+    },
+    {
+      "batchNumber": 12,
+      "rosterIds": [
+        "vp-0221",
+        "vp-0222",
+        "vp-0223",
+        "vp-0224",
+        "vp-0225",
+        "vp-0226",
+        "vp-0227",
+        "vp-0228",
+        "vp-0229",
+        "vp-0230",
+        "vp-0231",
+        "vp-0232",
+        "vp-0233",
+        "vp-0234",
+        "vp-0235",
+        "vp-0236",
+        "vp-0237",
+        "vp-0238",
+        "vp-0239",
+        "vp-0240"
+      ],
+      "startedAt": "2026-09-23T05:50:00.000Z",
+      "completedAt": "2026-09-23T06:10:00.000Z",
+      "status": "complete",
+      "outcomes": [
+        {
+          "rosterId": "vp-0221",
+          "status": "unresolved",
+          "sources": [
+            "vietnamlit.org bio"
+          ],
+          "nextAction": "No advisor named. Lead: coedited \"The Cleaving: Vietnamese Writers in the Diaspora\" (UC Press) with Lan Duong (vp-0203) and Viet Thanh Nguyen (vp-0198) -- only one shared work found, no DOI, and coediting an anthology is a weaker fit for \"coauthored scholarly works\" than a research paper. Below the 2-work coauthor threshold either way; revisit if a second shared work surfaces."
+        },
+        {
+          "rosterId": "vp-0222",
+          "status": "unresolved",
+          "sources": [
+            "https://aas.sfsu.edu/loan-le"
+          ],
+          "nextAction": "No advisor named. Lead: coauthored \"Party identification and the immigrant cohort hypothesis: the case of Vietnamese Americans\" (Politics, Groups, and Identities 6(4):743-63, 2018, DOI 10.1080/21565503.2017.1289849) with Phi Hong Su (vp-0182, already in roster). Confirmed this one paper has a valid DOI; could not find or confirm a second qualifying shared work (a possible book chapter \"Electoral Outcomes among Vietnamese Americans\" in Minority Voting in the United States, Praeger 2016, has no DOI/stable identifier found). Below the 2-work coauthor threshold; revisit if a second shared work is confirmed."
+        },
+        {
+          "rosterId": "vp-0223",
+          "status": "unresolved",
+          "sources": [],
+          "nextAction": "No advisor found; no education-detail source found beyond own bio (Dr.P.H. UC Berkeley, MPH Yale, BA UC Davis)."
+        },
+        {
+          "rosterId": "vp-0224",
+          "status": "unresolved",
+          "sources": [],
+          "nextAction": "No advisor found; own site (tranvictoria.com) unreachable (DNS). Retry next time."
+        },
+        {
+          "rosterId": "vp-0225",
+          "status": "unresolved",
+          "sources": [
+            "https://chinguyen.education/"
+          ],
+          "nextAction": "No advisor found; search Penn State 2020 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0226",
+          "status": "unresolved",
+          "sources": [],
+          "nextAction": "UCR profile page returned no content; search UC Irvine dissertation record next."
+        },
+        {
+          "rosterId": "vp-0227",
+          "status": "unresolved",
+          "sources": [
+            "https://www.uh.edu/class/mcl/faculty/nguyen-d/"
+          ],
+          "nextAction": "No advisor found; search UC Irvine 2012 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0228",
+          "status": "unresolved",
+          "sources": [
+            "https://sppa.uiowa.edu/people/phuong-nguyen-0"
+          ],
+          "nextAction": "No advisor found; search Syracuse 2010 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0229",
+          "status": "unresolved",
+          "sources": [],
+          "nextAction": "Profile page 404'd; JD school/advisor not found. Retry next time."
+        },
+        {
+          "rosterId": "vp-0230",
+          "status": "unresolved",
+          "sources": [],
+          "nextAction": "No education info found at all on own site; search further next time."
+        },
+        {
+          "rosterId": "vp-0231",
+          "status": "unresolved",
+          "sources": [],
+          "nextAction": "No advisor found; own CV likely exists but not fetched. Retry next time."
+        },
+        {
+          "rosterId": "vp-0232",
+          "status": "unresolved",
+          "sources": [
+            "https://nursing.wsu.edu/directory/wsu-profile/c.nguyen-truong/"
+          ],
+          "nextAction": "No advisor found; search OHSU dissertation record next."
+        },
+        {
+          "rosterId": "vp-0233",
+          "status": "unresolved",
+          "sources": [
+            "search consensus"
+          ],
+          "nextAction": "Possibly Marylyn McEwen (Univ. Arizona), not independently confirmed; not Vietnamese-named regardless."
+        },
+        {
+          "rosterId": "vp-0234",
+          "status": "unresolved",
+          "sources": [],
+          "nextAction": "No advisor found for MFA (Yale); own CV likely exists but not fetched. Retry next time."
+        },
+        {
+          "rosterId": "vp-0235",
+          "status": "unresolved",
+          "sources": [],
+          "nextAction": "No advisor found for MFA (CalArts); own site likely has more detail, not fetched. Retry next time."
+        },
+        {
+          "rosterId": "vp-0236",
+          "status": "unresolved",
+          "sources": [],
+          "nextAction": "Own CV PDF exists (scu.edu/media/jst/.../Tran_Short-CV_2023.pdf) but advisor not extracted; retry with direct CV fetch next time."
+        },
+        {
+          "rosterId": "vp-0237",
+          "status": "unresolved",
+          "sources": [
+            "Wikipedia, own bio"
+          ],
+          "nextAction": "Advisor Stanley Hauerwas (Duke) confirmed via multiple sources but not Vietnamese-named; no roster-internal candidate."
+        },
+        {
+          "rosterId": "vp-0238",
+          "status": "unresolved",
+          "sources": [
+            "search-summarized dissertation info"
+          ],
+          "nextAction": "Possibly Guoning Chen (Houston), not independently confirmed; not Vietnamese-named regardless."
+        },
+        {
+          "rosterId": "vp-0239",
+          "status": "unresolved",
+          "sources": [
+            "search-summarized dissertation committee"
+          ],
+          "nextAction": "Possibly Min Shin (UNC Charlotte, primary of 5-member committee), not independently confirmed; not Vietnamese-named regardless. Own CV PDF (cs.virginia.edu/~nn4pj/Rich_Nguyen_CV.pdf) not fetched, would give stronger confirmation -- retry next time."
+        },
+        {
+          "rosterId": "vp-0240",
+          "status": "unresolved",
+          "sources": [
+            "search-summarized bio"
+          ],
+          "nextAction": "Possibly Nikolaus Correll and Jacob Segil (CU Boulder, co-advisors), not independently confirmed; not Vietnamese-named regardless."
         }
       ]
     }
