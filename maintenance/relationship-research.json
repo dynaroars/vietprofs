@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-23T01:00:00.000Z",
+  "updatedAt": "2026-09-23T02:00:00.000Z",
   "batches": [
     {
       "batchNumber": 1,
@@ -1187,6 +1187,197 @@
             "https://www.unr.edu/me/people/hoang-vu-phan"
           ],
           "nextAction": "No advisor named; search Konkuk University 2017 dissertation record next."
+        }
+      ]
+    },
+    {
+      "batchNumber": 7,
+      "rosterIds": [
+        "vp-0121",
+        "vp-0122",
+        "vp-0123",
+        "vp-0124",
+        "vp-0125",
+        "vp-0126",
+        "vp-0127",
+        "vp-0128",
+        "vp-0129",
+        "vp-0130",
+        "vp-0131",
+        "vp-0132",
+        "vp-0133",
+        "vp-0134",
+        "vp-0135",
+        "vp-0136",
+        "vp-0137",
+        "vp-0138",
+        "vp-0139",
+        "vp-0140"
+      ],
+      "startedAt": "2026-09-23T01:15:00.000Z",
+      "completedAt": "2026-09-23T02:00:00.000Z",
+      "status": "complete",
+      "outcomes": [
+        {
+          "rosterId": "vp-0121",
+          "status": "unresolved",
+          "sources": [
+            "own CV"
+          ],
+          "nextAction": "Co-advisors René Mayer and Subrata Mukherjee (Cornell) not Vietnamese-named; no roster-internal candidate."
+        },
+        {
+          "rosterId": "vp-0122",
+          "status": "unresolved",
+          "sources": [
+            "https://catalog.csun.edu/academics/me/faculty/ho-nhut-t/"
+          ],
+          "nextAction": "No advisor named; search MIT 2005 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0123",
+          "status": "unresolved",
+          "sources": [
+            "https://websites.uta.edu/knguyen",
+            "https://websites.uta.edu/knguyen/dr-nguyens-alumni/"
+          ],
+          "nextAction": "Own advisor not found. Lead: former PhD/MD-PhD student Tam Nguyen (2022), now Research Assistant Professor at UT Arlington, is Vietnamese-named but not in current roster (checked vp-0339, vp-0611, both different institutions); research-track eligibility per ROSTER_MAINTENANCE.md also unclear. Not added — out of scope for this task."
+        },
+        {
+          "rosterId": "vp-0124",
+          "status": "unresolved",
+          "sources": [
+            "https://ne.ncsu.edu/directory/ntdinh/"
+          ],
+          "nextAction": "No advisor/students info found; senior/prolific professor, worth a deeper future pass for an alumni list."
+        },
+        {
+          "rosterId": "vp-0125",
+          "status": "unresolved",
+          "sources": [
+            "https://pharmacy.unc.edu/directory/julianen/"
+          ],
+          "nextAction": "No advisor named; search Philipps-University Marburg 2009 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0126",
+          "status": "unresolved",
+          "sources": [
+            "https://engineering.fresnostate.edu/about/directory/mechanical/nguyen-the.html"
+          ],
+          "nextAction": "No advisor named; search Univ. Toledo 2009 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0127",
+          "status": "unresolved",
+          "sources": [
+            "https://engineering.uci.edu/users/jacqueline-huynh"
+          ],
+          "nextAction": "No advisor named; search MIT 2020 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0128",
+          "status": "unresolved",
+          "sources": [
+            "https://www.calstatela.edu/faculty/trinh-pham"
+          ],
+          "nextAction": "No advisor named; search UC Irvine 2006 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0129",
+          "status": "unresolved",
+          "sources": [
+            "Google Scholar coauthor pattern"
+          ],
+          "nextAction": "Likely advisor Muhammad Ashraful Alam (Purdue) inferred only, not explicit; not Vietnamese-named regardless."
+        },
+        {
+          "rosterId": "vp-0130",
+          "status": "unresolved",
+          "sources": [
+            "search-summarized bio"
+          ],
+          "nextAction": "Likely advisor a Prof. Johnson (MIT Chemistry) not independently fetched/confirmed; not Vietnamese-named regardless."
+        },
+        {
+          "rosterId": "vp-0131",
+          "status": "unresolved",
+          "sources": [
+            "https://huytrtran.github.io/"
+          ],
+          "nextAction": "No advisor named; search Georgia Tech 2015 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0132",
+          "status": "unresolved",
+          "sources": [
+            "https://pages.jh.edu/tnguy108/People/Thao_D._Nguyen.html"
+          ],
+          "nextAction": "Co-advisors Huajian Gao and Sanjay Govindjee not Vietnamese-named; no roster-internal candidate."
+        },
+        {
+          "rosterId": "vp-0133",
+          "status": "unresolved",
+          "sources": [
+            "Mathematics Genealogy Project + search consensus"
+          ],
+          "nextAction": "Advisor Marc Nerlove (Northwestern) not Vietnamese-named; no roster-internal candidate."
+        },
+        {
+          "rosterId": "vp-0134",
+          "status": "unresolved",
+          "sources": [
+            "https://www.mtu.edu/mechanical-aerospace/people/faculty/nguyen/"
+          ],
+          "nextAction": "No advisor named; search Georgia Tech 2020 dissertation record next."
+        },
+        {
+          "rosterId": "vp-0135",
+          "status": "unresolved",
+          "sources": [
+            "https://sites.google.com/site/hieuphanfinance/"
+          ],
+          "nextAction": "CV link not fetched; no advisor in bio. Retry CV fetch next time."
+        },
+        {
+          "rosterId": "vp-0136",
+          "status": "unresolved",
+          "sources": [
+            "https://du-dnguyen.github.io/"
+          ],
+          "nextAction": "No advisor/committee named; search Univ. Missouri dissertation record next."
+        },
+        {
+          "rosterId": "vp-0137",
+          "status": "unresolved",
+          "sources": [
+            "search consensus (dissertation title/chairs)"
+          ],
+          "nextAction": "Co-chairs Stu Gillan and Jack Cooney (Texas Tech) not Vietnamese-named; no roster-internal candidate."
+        },
+        {
+          "rosterId": "vp-0138",
+          "status": "unresolved",
+          "sources": [
+            "Stace Sirmans committee CV (dissertation PDF fetch failed)"
+          ],
+          "nextAction": "Weak lead: Stace Sirmans (Auburn) on committee, chair unconfirmed; not Vietnamese-named regardless. Retry dissertation PDF fetch next time."
+        },
+        {
+          "rosterId": "vp-0139",
+          "status": "unresolved",
+          "sources": [
+            "https://stars.library.ucf.edu/etd/3280/"
+          ],
+          "nextAction": "Dissertation title found but advisor not named; retry with full dissertation front-matter fetch next time."
+        },
+        {
+          "rosterId": "vp-0140",
+          "status": "unresolved",
+          "sources": [
+            "weak Scholar-profile inference"
+          ],
+          "nextAction": "Possibly Jitka Hilliard (Auburn), not independently confirmed; not Vietnamese-named regardless."
         }
       ]
     }
