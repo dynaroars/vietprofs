@@ -56,6 +56,13 @@ Outside the cloud:
 | Link-health report | GitHub Action `.github/workflows/link-health.yml` | 1st of month, 08:00 UTC; manual via `gh workflow run link-health.yml` | Opens or comments on the "Link-health report (automated)" Issue. No model involved. |
 | Full-roster controller | Owner's crontab: `0 22 * * 6 …/scripts/cron-maintain-roster.sh` | Sat 10 PM local | Runs `scripts/maintain-roster.ts` in the separate clone `~/git/projects/vietprofs-maintenance`; state in `~/.local/state/vietprofs-maintenance/cron-state`, log in `…/cron.log`. Pushes to `main`. With the default 365-day staleness it selects nobody until entries age (about Aug 2027); set `VIETPROFS_MAINT_ARGS="--stale-days 180"` on the cron line for a shorter cycle. |
 
+Retired routines (paused 2026-09-24; don't re-enable them, since the routines above replace them):
+
+| Routine id | Name | Replaced by | Why |
+| :-- | :-- | :-- | :-- |
+| `trig_01GnpXRYguKSAdtjAC6KbpMo` | `vietprofs-linkedin-url-backfill` (every 2h) | `linkedin` | Same task. Its side-findings behavior now applies to all producers. |
+| `trig_01NWYwfz8gsDKzGwbXzFh3Y7` | `vietprofs-link-health-sweep` (Mon) | link-health Action + `websites` + `audit` | Running `check-links` inside the cloud sandbox is useless: on 2026-09-21, 4,794 of 5,501 URLs returned egress-proxy 403s. Its prompt also allowed deleting fields or entries over "dead" links. Link detection now runs on GitHub runners with real internet access. |
+
 ## Conventions for every scheduled run
 
 Every routine prompt says: "Read docs/AUTOMATION.md and follow the section for `<key>`." All of
