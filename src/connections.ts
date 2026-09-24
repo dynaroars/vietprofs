@@ -44,6 +44,7 @@ function runningHead(): string {
 function footer(): string {
   return `<footer class="man-footer"><p>
     <a href="${base}index.html">← Back to Directory</a> ·
+    <a href="${base}faq.html">FAQ</a> ·
     <a href="${base}stats.html">Visitor Statistics</a> ·
     <a href="${base}index.html?view=insights">Diaspora Insights &amp; Pathways</a> ·
     <a href="${base}submit.html">Submit / Update</a> ·

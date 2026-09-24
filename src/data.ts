@@ -838,7 +838,7 @@ export function buildRosterHtmlInventory(roster: Roster): RosterHtmlInventory {
   const intersections = regions.reduce((total, region) => total + fields.filter((field) =>
     hasEnoughPeopleForRosterHub(roster.filter((person) =>
       locationMatches(person, region) && fieldOf(person.department, person.university) === field).length)).length, 0);
-  const standalone = 4;
+  const standalone = 6;
   const profiles = roster.length;
   return {
     standalone,

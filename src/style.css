@@ -3865,3 +3865,95 @@ button.chart-row-btn:hover {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* FAQ Page Styles */
+.faq-page .faq-toc {
+  background: var(--hover-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1.25rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.faq-page .faq-toc ol {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.faq-page .faq-toc li {
+  margin: 0.35rem 0;
+}
+
+.faq-page .faq-toc a {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.faq-page .faq-toc a:hover {
+  text-decoration: underline;
+  color: var(--bamboo-green);
+}
+
+.faq-page .faq-item {
+  margin-bottom: 1.35rem;
+}
+
+.faq-page .faq-item:last-child {
+  margin-bottom: 0.5rem;
+}
+
+.faq-page .faq-question {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+  line-height: 1.35;
+}
+
+.faq-page .faq-answer {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.faq-page .faq-answer p {
+  margin-top: 0;
+  margin-bottom: 0.65rem;
+}
+
+.faq-page .faq-answer p:last-child {
+  margin-bottom: 0;
+}
+
+.faq-page .faq-answer blockquote {
+  margin: 0.65rem 0;
+  padding: 0.5rem 0.85rem;
+  border-left: 3px solid var(--bamboo-green);
+  background: var(--hover-bg);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-style: italic;
+  color: var(--text-primary);
+}
+
+.faq-page .faq-answer ul,
+.faq-page .faq-answer ol {
+  margin: 0.4rem 0 0.65rem 0.5rem;
+  padding-left: 1.25rem;
+}
+
+.faq-page .faq-answer li {
+  margin: 0.25rem 0;
+}
+
+.faq-page .faq-answer code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  background: var(--tag-bg);
+  color: var(--text-primary);
+  padding: 0.12rem 0.35rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+}

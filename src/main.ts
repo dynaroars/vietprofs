@@ -208,7 +208,7 @@ function renderShell() {
     <div class="examples" id="examples"></div>
     <div class="result-row">
       <div class="header-links">
-        <span class="paper-reference"><a class="paper-link" href="${import.meta.env.BASE_URL}vietprofs.pdf" target="_blank" rel="noopener noreferrer">Read the paper</a> (<a class="paper-link" href="https://arxiv.org/abs/2609.06091" target="_blank" rel="noopener noreferrer">arXiv</a>)</span>
+        <span class="paper-reference"><a class="paper-link" href="${import.meta.env.BASE_URL}vietprofs.pdf" target="_blank" rel="noopener noreferrer">Read the paper</a> (<a class="paper-link" href="https://arxiv.org/abs/2609.06091" target="_blank" rel="noopener noreferrer">arXiv</a>) · <a class="paper-link" href="${import.meta.env.BASE_URL}faq.html">FAQ</a></span>
         <a class="submission-link" href="submit.html">Add or update info</a>
       </div>
       <p class="result-count" id="result-count" aria-live="polite"></p>

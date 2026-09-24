@@ -57,8 +57,10 @@ test('renderHealthPanel renders complete health dashboard HTML without undefined
   assert.ok(html.includes('dynaroars/vietprofs'));
   assert.ok(html.includes('abc1234'));
   assert.ok(html.includes('Generated HTML Inventory'));
-  assert.ok(html.includes('6 pages'));
+  assert.ok(html.includes('8 pages'));
+  assert.match(html, /href="\/faq\.html"/);
   assert.match(html, /href="\/stats\.html"/);
+  assert.match(html, /href="\/connections\.html"/);
   assert.match(html, /href="\/submit\.html"/);
   assert.match(html, /href="\/404\.html"/);
 

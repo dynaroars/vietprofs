@@ -61,6 +61,7 @@ function runningHead(): string {
 function footer(): string {
   return `<footer class="man-footer"><p>
     <a href="${base}index.html">← Back to Directory</a> ·
+    <a href="${base}faq.html">FAQ</a> ·
     <a href="${base}index.html?view=health">Data Health &amp; Completeness</a> ·
     <a href="${base}index.html?view=insights">Diaspora Insights &amp; Pathways</a> ·
     <a href="${base}connections.html">Academic Connections</a> ·

@@ -645,7 +645,9 @@ export function renderHealthPanel(
         <nav class="html-standalone-links" aria-label="Standalone HTML pages">
           <span>${htmlInventory.standalone} standalone:</span>
           <a href="${baseUrl}index.html">Directory</a>
+          <a href="${baseUrl}faq.html">FAQ</a>
           <a href="${baseUrl}stats.html">Statistics</a>
+          <a href="${baseUrl}connections.html">Connections</a>
           <a href="${baseUrl}submit.html">Submit / Update</a>
           <a href="${baseUrl}404.html">404</a>
         </nav>

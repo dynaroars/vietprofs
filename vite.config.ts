@@ -37,6 +37,7 @@ export default defineConfig({
         submit: resolve(root, 'submit.html'),
         stats: resolve(root, 'stats.html'),
         connections: resolve(root, 'connections.html'),
+        faq: resolve(root, 'faq.html'),
       },
     },
   },
