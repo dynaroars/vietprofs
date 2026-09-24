@@ -74,6 +74,12 @@ scheduled or unattended run should process at most the batch cap the scheduler g
 skip entries they already touch. Stop early, without pushing, if `npm test` or `npm run build`
 fails for a reason you can't fix inside the batch.
 
+Scheduled routines, their cadence, and the producer → auditor handoff are documented in
+[docs/AUTOMATION.md](docs/AUTOMATION.md), which is the source of truth for routine behavior. Any
+agent that notices an error or lead outside its own task (a stale rank, duplicate entry, missing
+honor, wrong link, or new candidate) files it as a side-finding Issue as described there, instead
+of fixing it in its task PR or dropping it.
+
 Cloud sessions: run `npm ci` before testing (not `npm install`, which rewrites
 `package-lock.json`). If `gh` is unavailable, use the GitHub MCP tools for PRs, Issues, comments,
 and merges. If a site is blocked by the egress proxy, say so in the PR/Issue and don't accept a fact

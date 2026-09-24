@@ -11,6 +11,7 @@ Repository documentation:
 - [`AGENTS.md`](./AGENTS.md): instructions for automated contributors, including where each kind of change is submitted.
 - [`TASKS/`](./TASKS/README.md): per-task agent playbooks (discovery, portraits, links, honors, relationships, PR/Issue audit).
 - [`paper/PAPER_NOTES.md`](./paper/PAPER_NOTES.md): reproducible manuscript metrics, claim audit, and publication checklist.
+- [`docs/AUTOMATION.md`](./docs/AUTOMATION.md): scheduled maintenance agents, their cadence, and how the auditor reviews their PRs/Issues.
 - [`docs/VISITOR_STATISTICS.md`](./docs/VISITOR_STATISTICS.md): visitor-statistics methodology and Worker operations.
 
 ## Commands

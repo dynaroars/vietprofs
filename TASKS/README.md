@@ -29,7 +29,8 @@ Each playbook is pre-configured with an **Autonomous Goal Directive** header. Yo
 Where each kind of change lands (new-ID Issues, edit PRs, direct-to-`main` exceptions) is defined
 once in the "Where each kind of change lands" table in [`AGENTS.md`](../AGENTS.md). Playbooks
 point there instead of restating it. Unattended/scheduled runs also follow that file's
-"Unattended and scheduled runs" batch cap.
+"Unattended and scheduled runs" batch cap. The schedule and the side-findings convention for all playbooks
+are in [`docs/AUTOMATION.md`](../docs/AUTOMATION.md).
 
 ---
 
