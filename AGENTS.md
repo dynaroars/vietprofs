@@ -41,11 +41,43 @@ passed eligibility review. Because of that:
   branch for review; describe the candidate (evidence, source URLs, proposed fields) in the
   Issue and let the repository owner or the audit workflow decide before any ID is assigned.
 - **Any change that only edits or corrects existing roster IDs** (facts, honors, links,
-  portraits, relationships between already-listed people, etc.) follows each task's normal
-  PR or direct-to-`main` protocol as already documented — no change from existing practice.
+  portraits, relationships between already-listed people, etc.) follows the routing table below.
 - If a single batch mixes both (some brand-new candidates, some edits to existing entries),
   split them: submit the edits via their normal PR/direct-commit path and file a separate
   Issue per new candidate.
+
+## Where each kind of change lands
+
+This table is the single source of truth for submission routing; task playbooks refer here
+instead of restating it.
+
+| Change | Route |
+| :--- | :--- |
+| New roster ID (any new `public/data.json` entry) | GitHub Issue, one per candidate |
+| Edit to existing IDs from a `TASKS/` playbook (links, portraits, honors, degrees, overviews) | Topic branch + PR; the auditor (`TASKS/AUDIT_ISSUES_PRS.md`) merges |
+| Auditor's own fix for a verified single Issue | Commit and push to `main`, then close the Issue |
+| `scripts/maintain-roster.ts` controller output | Controller commits and pushes to `main` |
+| Relationship batches (`public/relationships.json`) | Commit and push to `main` |
+| Conflict with a protected `directFields` value, or anything needing an owner decision | GitHub Issue |
+
+Never merge your own PR. PRs and Issues are review handoffs: a separate auditor run checks them
+later (see "Independent review" in `TASKS/AUDIT_ISSUES_PRS.md`). Advance `maintenance/verification.json` only for a complete live review
+(see "Verification ledger and update timestamps" in `ROSTER_MAINTENANCE.md`); single-field
+backfills such as LinkedIn, Scholar, or website links set `lastUpdatedAt` but leave the ledger
+alone.
+
+## Unattended and scheduled runs
+
+A playbook that says "continue until 100% complete" means across runs, not within one. A
+scheduled or unattended run should process at most the batch cap the scheduler gives it (default:
+3 batches), open its PR/Issues, then stop. Before starting, check open PRs from the same task and
+skip entries they already touch. Stop early, without pushing, if `npm test` or `npm run build`
+fails for a reason you can't fix inside the batch.
+
+Cloud sessions: run `npm ci` before testing (not `npm install`, which rewrites
+`package-lock.json`). If `gh` is unavailable, use the GitHub MCP tools for PRs, Issues, comments,
+and merges. If a site is blocked by the egress proxy, say so in the PR/Issue and don't accept a fact
+you couldn't check; an unverified item stays for a later run or goes to an Issue.
 
 ## Human review handoff
 

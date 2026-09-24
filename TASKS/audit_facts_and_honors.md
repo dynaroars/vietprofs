@@ -7,7 +7,7 @@
 
 ## ⚡ Batching, PR/Issue Submission, and `/goal` Protocol
 
-1. **No Direct Commits to `main`:** Maintenance tasks MUST NOT commit directly to `main`. All data updates must be submitted via **GitHub Pull Requests** or **GitHub Issues**.
+1. **Routing:** Follow the "Where each kind of change lands" table in `AGENTS.md` (existing-ID edits → PR; new people → Issue; never commit directly to `main`).
 2. **Strict Batch Size (15–20 Candidates Per Batch):** Work in bounded batches of **15–20 candidates per batch** using lead files (`maintenance/hieuphay-leads.json` or `maintenance/openalex-leads.json`).
 3. **Thorough Verification Standard:** Verify full inclusion standard for every candidate: current appointment outside Vietnam, accepted track, non-corporate employer, degree chronology (`undergradYear <= msYear <= phdYear <= postdocYear`), and honors categorization.
 4. **New-ID vs. Edit Split (per `AGENTS.md`):** A batch's candidates fall into two kinds, and each kind is submitted differently:
@@ -34,9 +34,9 @@
 
 ## 1. Core Principles & Governance Rules
 
-- **Direct Updates (`directFields`):** Information explicitly supplied by the repository owner or submitted via direct request is ground truth. Add each asserted field name to the entry's sorted `directFields` array.
-- **Protected Direct Fields Governance:** Fields in `directFields` must NEVER be altered or removed by web scouting or automated maintenance. If web evidence conflicts with a protected field, do NOT edit it directly—file a GitHub Issue for maintainer review.
-- **Substantive Update Requirement:** Advance `lastUpdatedAt` whenever substantive roster facts (appointment, rank, degree, honor, portrait) are added or corrected.
+`directFields` protection and the direct-update rules are defined in `AGENTS.md` ("Direct
+updates"). Set `lastUpdatedAt` whenever a substantive fact (appointment, rank, degree, honor,
+portrait) changes; advance `maintenance/verification.json` only for a complete live review.
 
 ---
 
@@ -59,33 +59,18 @@ Academic degrees must be corroborated by official institutional bios, personal a
 
 ---
 
-## 3. Honors & Awards Categorization Standards
+## 3. Honors & Awards Eligibility
 
-Honors must meet the explicit eligibility standards in `ROSTER_MAINTENANCE.md`. Each honor entry requires `name`, `category`, `organization`, `source` (HTTPS URL), and optional `year`.
+The authoritative rules are "Honors and awards eligibility" in `ROSTER_MAINTENANCE.md`; read it
+before adding or rejecting any honor. Do not maintain a separate list here. Each honor needs
+`name`, `category` (`academy`, `fellow`, `career_award`, `major_award`,
+`distinguished_professorship`), `organization`, an HTTPS `source` that names the recipient, and
+`year` when available.
 
-### Accepted Honors Categories
-
-1. **`academy` (National Academy Election):**
-   - Formal election to national academies or learned societies.
-   - Examples: National Academy of Sciences (NAS), National Academy of Engineering (NAE), National Academy of Medicine (NAM), American Academy of Arts and Sciences (AAA&S), American Academy of Arts and Letters, *Légion d'honneur*, *Académie des sciences* (France).
-2. **`career_award` (Major Career / Early-Career Research Fellowships):**
-   - Highly competitive national/international career development awards.
-   - Examples: NSF CAREER Award, Sloan Research Fellowship, ERC Grants (Starting/Consolidator/Advanced), JST PRESTO Fellowship, NAEd/Spencer Postdoctoral Fellowship, CNRS Bronze/Silver Medal, David and Lucile Packard Fellowship.
-3. **`major_award` (Discipline-Wide Major Distinctions):**
-   - Major awards administered by national or international professional societies for sustained research contributions.
-   - Examples: ACM Turing Award, IEEE Medal of Honor, ISA RC31 Best Book Award.
-4. **`fellow` (Society Fellowships):**
-   - Conferred Fellow status in major scholarly or professional bodies.
-   - Examples: IEEE Fellow, ACM Fellow, AAAS Fellow, AIAA Fellow, APS Fellow, BMES Fellow.
-5. **`distinguished_professorship` (Named & Endowed Chairs):**
-   - Conferred named professorships or university distinguished professorships.
-   - Examples: *"Charles Franklin Kellogg Professor in the Arts"*, *"Distinguished Professor of Ethnic Studies"*.
-
-### Strict Honors Exclusion Standards (Do NOT Include)
-
-- **Exclude Routine Best-Paper Awards:** Do NOT add best-paper or best-poster awards from individual conferences or annual workshops. (Exception: Lifetime or retrospective Test-of-Time awards given across a decade or more).
-- **Exclude Postdoctoral & Graduate Student Awards:** Exclude student poster prizes, dissertation awards, or internal departmental grants.
-- **Exclude Corporate R&D & Internal University Grants:** Exclude internal campus seed grants, corporate travel stipends, or commercial software awards.
+Frequent rejections: per-year best/distinguished-paper awards (only test-of-time,
+most-influential, or similar retrospective awards qualify), student/postdoc-stage awards
+(including dissertation awards), NSF CRII and other research-initiation grants,
+university-local awards, and anything whose standing can't be established from the source.
 
 ---
 

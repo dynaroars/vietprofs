@@ -1,15 +1,14 @@
 # Scholar Portrait Retrieval, Visual Auditing, and Quality Assurance (`fetch_portraits.md`)
 
 > **Autonomous Goal Directive (`/goal TASKS/fetch_portraits.md`):**  
-> When invoked as `/goal TASKS/fetch_portraits.md`, the agent MUST execute the full portrait discovery and auditing workflow across **ALL BATCHES CONTINUOUSLY** until **100% of missing entries in `maintenance/missing-portraits.json` and `public/data.json` are processed**. Process in bounded 10-profile batches, perform thorough visual/image inspection, submit a GitHub PR (or Issue) for each batch that yields verified portraits, return to `main`, and **IMMEDIATELY PROCEED TO THE NEXT BATCH**. Do NOT stop execution after processing a single batch; continue looping until ALL batches (from Batch 1 to the final batch) are completely processed.
+> When invoked as `/goal TASKS/fetch_portraits.md`, the agent MUST execute the full portrait discovery and auditing workflow batch by batch until every missing entry in `maintenance/missing-portraits.json` and `public/data.json` has been processed (across runs; a scheduled run stops at its batch cap per `AGENTS.md`). Process in bounded 10-profile batches, perform thorough visual/image inspection, submit a GitHub PR (or Issue) for each batch that yields verified portraits, return to `main`, and **IMMEDIATELY PROCEED TO THE NEXT BATCH**.
 
 ---
 
 ## ⚡ Multi-Batch Loop & PR/Issue Submission Protocol
 
-1. **Continuous Multi-Batch Execution:**  
-   The agent MUST NOT stop execution after completing Batch 1. It MUST continuously iterate through **all remaining batches** (Batch 1, Batch 2, Batch 3 ... Batch N) until every eligible missing portrait entry has been audited.
-2. **No Direct Commits to `main`:** Maintenance tasks MUST NOT commit directly to `main`. All data updates must be submitted via **GitHub Pull Requests** or **GitHub Issues**.
+1. **Batching:** Keep going batch after batch in interactive runs; scheduled runs stop at the batch cap in `AGENTS.md`. Skip entries touched by an open portrait PR.
+2. **Routing:** Follow the "Where each kind of change lands" table in `AGENTS.md` (portrait edits → PR; never commit directly to `main`).
 3. **Strict Batch Size (10 Profiles Per Batch):** Work in bounded batches of **10 profiles per batch** using `maintenance/missing-portraits.json`.
 4. **Thorough Verification Per Candidate:** For every candidate, inspect the image visually or run statistical analyzers (`python3 scripts/fast_portrait_analyzer.py`), check aspect ratio (0.70–1.55), and confirm single-person headshot identity before accepting.
 5. **Per-Batch Automated PR Pipeline:**  
@@ -24,7 +23,7 @@
      gh pr create --title "fix(portraits): recover missing portraits batch [BATCH_NUM]" --body "Recovered verified portraits for batch [BATCH_NUM]..."
      ```
    - Return to `main`: `git checkout main`
-   - **Immediately launch the next batch!**
+   - Continue with the next batch (unless the run's batch cap is reached).
 6. **Auditing & Merging Delegation:** Do NOT merge PRs yourself. The dedicated audit agent running `TASKS/AUDIT_ISSUES_PRS.md` will review, test, squash-merge, and delete PR branches.
 
 ---
@@ -84,40 +83,39 @@ python3 scripts/fast_portrait_analyzer.py
 
 ### C. Visual Inspection Protocol
 When processing portraits manually or reviewing automated candidates:
-- View the candidate image using `view_file` or local image preview.
+- Open the downloaded image with your image-capable file reader (e.g. Claude Code's Read tool) and look at it.
 - Confirm the image displays a single, clearly identifiable human face matching the scholar's identity.
 - Verify aspect ratio (width/height ratio must be between **0.70 and 1.55**).
 
 ---
 
-## 4. Execution Commands
+## 4. Per-Batch Procedure
+
+Run one batch at a time and stop at the first failing step; don't wrap this in a loop that
+swallows errors.
 
 ```bash
-# Run portrait discovery loop across ALL batches continuously
-node -e '
-const { execSync } = require("child_process");
-for (let b = 1; b <= 30; b++) {
-  console.log(`=== Processing Batch ${b} ===`);
-    try {
-      execSync(`npx tsx scripts/fetch-portraits.ts ${b} --apply --retry`);
-      const status = execSync("git status --porcelain").toString();
-      if (status.includes("public/data.json") || status.includes("public/portraits/")) {
-        const branchName = `maintenance/portrait-batch-${b}`;
-        execSync(`git checkout -b ${branchName}`);
-        try { execSync("git checkout public/git-info.json"); } catch {}
-        execSync("git add public/data.json public/portraits/ maintenance/portrait-provenance.json maintenance/portrait-queue.json maintenance/missing-portraits.json");
-        execSync(`git commit -m "fix(portraits): recover missing portraits batch ${b}"`);
-        execSync(`git push origin ${branchName}`);
-        execSync(`gh pr create --title "fix(portraits): recover missing portraits batch ${b}" --body "Recovered verified portraits for batch ${b}."`);
-        execSync("git checkout main");
-        try { execSync("git checkout public/git-info.json"); } catch {}
-      }
-    } catch (err) {
-      try { execSync("git checkout main"); } catch {}
-    }
-}
-'
-
-# Full repository validation
-npm test && npm run build && git diff --check
+git checkout main && git pull --ff-only
+B=<batch number>                                   # next batch with pending items in maintenance/portrait-queue.json
+npx tsx scripts/fetch-portraits.ts $B              # dry run: lists candidates and confidence, writes nothing to data.json
+npx tsx scripts/fetch-portraits.ts $B --apply --retry   # stores HIGH-confidence candidates
+python3 scripts/fast_portrait_analyzer.py          # flags logos, silhouettes, flat graphics
 ```
+
+Then open every portrait this batch added (`git status --porcelain public/portraits/`) and look at
+it against the section 2 rejection rules. For any that fail, remove that entry's `portrait` and
+`portraitSource` from `public/data.json`, delete the image file, and mark the entry unresolved in
+`maintenance/portrait-provenance.json`. Only then:
+
+```bash
+npm test && npm run build && git diff --check
+git checkout -b maintenance/portrait-batch-$B
+git add public/data.json public/portraits/ maintenance/portrait-provenance.json maintenance/portrait-queue.json maintenance/missing-portraits.json
+git commit -m "fix(portraits): recover missing portraits batch $B"
+git push -u origin maintenance/portrait-batch-$B
+# open the PR (gh pr create, or the GitHub MCP tools in cloud sessions), then:
+git checkout main
+```
+
+If the batch added nothing, commit the ledger/queue updates on the same kind of branch so the next
+run doesn't repeat it.

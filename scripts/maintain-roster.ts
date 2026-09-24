@@ -1331,10 +1331,6 @@ async function applyProposal(current: JsonRecord): Promise<void> {
 async function runFullChecks() {
   await runProcess('npm', ['test'], { label: 'npm test' });
   await runProcess('npm', ['run', 'build'], { label: 'npm run build' });
-  // The build refreshes this generated metadata file from the current Git checkout. It is
-  // intentionally not part of maintenance commits, so keep the working tree limited to the
-  // evidence-backed roster and maintenance ledgers below.
-  await git(['restore', '--', 'public/git-info.json'], { label: 'restore generated git metadata' });
   await git(['diff', '--check'], { label: 'git diff --check' });
   await git(['diff', '--cached', '--check'], { label: 'git diff --cached --check' });
 }
@@ -1382,9 +1378,6 @@ async function pushBatch() {
   }
   await runFullChecks();
   await git(['push', 'origin', 'main'], { label: `push maintenance batch ${activeState().runId}` });
-  // The repository's pre-push hook runs the build again after these checks and rewrites this
-  // generated file; restore it after the hook so the next batch starts clean.
-  await git(['restore', '--', 'public/git-info.json'], { label: 'restore generated git metadata after push' });
 }
 
 export function canReviseProposal(review: JsonRecord | null | undefined, revisionCount: number, maxRevisions = MAX_PROPOSAL_REVISIONS): boolean {

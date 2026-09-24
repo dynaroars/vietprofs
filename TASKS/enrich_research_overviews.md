@@ -7,7 +7,7 @@
 
 ## ⚡ Batching, PR/Issue Submission, and `/goal` Protocol
 
-1. **No Direct Commits to `main`:** Maintenance tasks MUST NOT commit directly to `main`. All data updates must be submitted via **GitHub Pull Requests** or **GitHub Issues**.
+1. **Routing:** Follow the "Where each kind of change lands" table in `AGENTS.md` (overview edits → PR; mismatches needing review → Issue; never commit directly to `main`).
 2. **Strict Batch Size (20 Profiles Per Batch):** Work in bounded batches of **20 profiles per batch** using `npm run enrich -- snapshot` and `maintenance/enrichment.json`.
 3. **Thorough Synthesis & Quality Sanitization:** Synthesize 1–3 sentence neutral academic summaries from official bio pages, lab homepages, and paper abstracts. Strictly enforce zero HTML entities, zero scraped UI boilerplate, zero gendered pronouns, max 3 sentences, and max 500 characters.
 4. **Automated PR & Issue Submission Pipeline:**
@@ -39,27 +39,18 @@
 
 ---
 
-## 2. Strict Quality & Sanitization Rules
+## 2. Quality & Sanitization Rules
 
-Every generated or edited `researchOverview` MUST strictly satisfy all of the following quality guardrails. Overviews violating these rules will fail validation:
-
-1. **No Raw HTML Entities or Markup:**
-   - Never include unescaped HTML entities (e.g. `&amp;`, `&nbsp;`, `&#039;`, `&times;`, `&quot;`) or tags (`<p>`, `<a>`, `<span>`, `<div>`). All text must be decoded into clean plain text.
-2. **No Scraped Web Boilerplate or UI Artifacts:**
-   - Strictly prohibit scraper output such as `Toggle navigation`, `Skip to main content`, `Researchers Information`, `What are you looking for?`, `Staff Directory`, `Loading...`, `Phone:`, `Email:`, or `Download contact card`.
-3. **No Raw Citation or Bibliographic Dumps:**
-   - An overview is a research summary, not a CV bibliography. Do not dump journal issue numbers (e.g. `12(4): 203-210`), PubMed extracts, co-author lists, or DOI links into the prose.
-4. **Strict Gender-Neutral Phrasing:**
-   - Never use gendered pronouns (`He`, `She`, `His`, `Her`, `Him`, `Hers`).
-   - Use the scholar's surname (e.g., *"Nguyen investigates..."*) or direct active-voice phrasing (*"Researches..."*).
-5. **No Bare Unformatted URLs or Template Placeholders:**
-   - Text containing `{{...}}`, `<!-- ... -->`, or bare URLs (`https://...`) loose in prose is invalid.
+The authoritative rules are "Research overview quality and sanitization guidelines" in
+`ROSTER_MAINTENANCE.md` (≤3 sentences, ≤500 characters, no HTML/entities, no scraped boilerplate,
+no citation dumps, no gendered pronouns, links only as Markdown `[text](https://...)`).
+`npm run validate-data` enforces most of them. Do not restate them here.
 
 ---
 
 ## 3. Multi-Source Synthesis Workflow
 
-Do NOT rely on single search engine snippet snippets. Synthesize overviews using the following multi-source process:
+Do NOT rely on a single search-engine snippet. Synthesize overviews using the following multi-source process:
 
 1. **Source Exploration:**
    - Read the scholar's official university bio page (`profileUrl`).

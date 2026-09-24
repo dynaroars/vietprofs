@@ -18,6 +18,24 @@ In this multi-agent architecture:
 > cycle for something that was already independently verified. Only merge-vs-squash applies to PRs that
 > Task Agents already opened.
 
+### Independent review (agent checks agent)
+
+PRs and Issues from task agents exist so that a separate agent can check them. The auditor
+therefore:
+
+- does not audit or merge a PR/Issue that it opened itself or that was opened in the same
+  session, and in scheduled runs skips anything created less than 12 hours ago (the next day's run
+  picks it up);
+- re-verifies claims against live sources rather than trusting the PR description; a PR's own
+  "verified" note is not evidence;
+- merges only when the PR's CI checks are green (check the PR's status checks; wait or skip if
+  they are pending or failing);
+- when it rejects part of a PR, requests changes or closes it with a comment that names each
+  rejected entry and the reason. It doesn't silently drop entries and merge the rest.
+
+In scheduled runs, handle at most 5 PRs and 10 Issues per run, oldest first, and leave the rest
+for the next run.
+
 ---
 
 ## ⚡ Batching & `/goal` Protocol
@@ -105,6 +123,7 @@ Before modifying data or closing issues, ensure compliance with repository rules
      - Add asserted fields to the entry's sorted `directFields` array (owner/user submissions only, not independently-sourced candidate research).
      - Ensure Western display name order (`First (Middle) Last`) in `name` and Vietnamese order in `vietnameseName`.
      - Re-verify eligibility (appointment, track, institution type) against live sources before assigning an ID — an Issue is a proposal, not a pre-cleared fact.
+     - Re-run the dedup check from `TASKS/candidate_intake.md` step 1 (name variants plus `profileUrl`/`websiteUrl`/`scholarUrl`/`linkedinUrl` matching) against the current `public/data.json`; the Issue's "not on the roster" claim may be stale.
      - Assign immutable profile IDs for new additions: `npm run assign-profile-ids -- --apply`.
 
    - **B. Honors & Award Additions:**

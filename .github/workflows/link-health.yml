@@ -1,0 +1,52 @@
+name: Monthly link-health report
+
+on:
+  schedule:
+    - cron: '0 8 1 * *' # 1st of each month, 08:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Check stored URLs
+        id: check
+        # A non-zero exit only means broken links were found; the report step decides what to do.
+        continue-on-error: true
+        run: npm run check-links -- --concurrency 8 2>&1 | tee link-report.txt
+        shell: bash {0}
+      - name: Open or update the link-health Issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if ! grep -q 'BROKEN LINKS' link-report.txt; then
+            echo "No broken links found."
+            exit 0
+          fi
+          title="Link-health report (automated)"
+          {
+            echo "Automated \`npm run check-links\` run from $(date -u +%Y-%m-%d) ([workflow run](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}))."
+            echo
+            echo "GitHub runners are blocked or rate-limited by some university sites, so a 403 or timeout here is a lead, not proof. The auditor should re-check each entry from a normal network and follow the dead-link steps in ROSTER_MAINTENANCE.md (\"Periodic link-health sweep\") before changing data."
+            echo
+            echo '```'
+            sed -n '/Link & Content Verification Summary/,$p' link-report.txt | head -c 60000
+            echo '```'
+          } > body.md
+          existing=$(gh issue list --state open --search "\"$title\" in:title" --json number --jq '.[0].number')
+          if [ -n "$existing" ]; then
+            gh issue comment "$existing" --body-file body.md
+          else
+            gh issue create --title "$title" --body-file body.md
+          fi

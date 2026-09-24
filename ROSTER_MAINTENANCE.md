@@ -883,10 +883,11 @@ order:
 5. **Watch for new candidates while you're there.** Coauthors, lab members who became faculty, or
    other Vietnamese-diaspora names surfaced incidentally during this research are leads, not
    confirmed additions. If you find a plausibly eligible new person, verify them independently
-   against the full inclusion standard and, if they qualify, add them with as much sourced detail
-   as you can gather (rank, track, degrees, honors, portrait) using the same
-   data-entry rules as any other addition. Don't let a promising lead stall progress on the
-   current batch — note it and come back if needed.
+   against the full inclusion standard and, if they qualify, file a GitHub Issue with as much
+   sourced detail as you can gather (rank, track, degrees, honors, portrait), following
+   `TASKS/candidate_intake.md` steps 1–4. Do not add the entry yourself — new roster IDs always go
+   through an Issue (see `AGENTS.md`). Don't let a promising lead stall progress on the current
+   batch.
 6. **Record successful verification.** After all applicable checks above are complete and no
    material question remains unresolved, set the person's timestamp in
    `maintenance/verification.json` to the current UTC time. Do this even if the review found no
@@ -897,7 +898,7 @@ order:
 
 ### Automated maintenance controller usage
 
-[`scripts/maintain-roster.ts`](../scripts/maintain-roster.ts) is the unattended weekly
+[`scripts/maintain-roster.ts`](scripts/maintain-roster.ts) is the unattended weekly
 maintenance controller. It selects missing or oldest entries from
 `maintenance/verification.json`, asks the selected agent to
 perform the full live research pass. Claude is the default agent. An independent Codex verification pass is optional and can be enabled
@@ -968,7 +969,7 @@ Enable independent Codex verification for a run with:
 Use Codex as the agent when Claude is unavailable or rate-limited:
 
 ```bash
-./scripts/maintain-roster.ts --all --limit 1 --agent codex
+./scripts/maintain-roster.ts run --all --limit 1 --agent codex
 ```
 
 Use `--name` with a person-like query to have Claude match it to one canonical roster member and

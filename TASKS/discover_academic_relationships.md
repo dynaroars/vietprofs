@@ -204,7 +204,7 @@ Suggested commit title:
 data(relationships): verify academic relationship batch [BATCH_NUM]
 ```
 
-The PR summary must report:
+The commit message body must report:
 
 - roster members processed;
 - verified advisor/advisee relationships;
