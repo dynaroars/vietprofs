@@ -39,7 +39,7 @@ is shown for convenience (EDT; add an hour in winter).
 | Key | Routine id | Model | Cron (UTC) | ET | Section |
 | :-- | :-- | :-- | :-- | :-- | :-- |
 | `audit` | `trig_01GeWQmgtoeJtaf7E2LsA7BA` | Opus 5.5 | `0 3 * * *` | daily 11 PM | [Auditor](#auditor-audit) |
-| `linkedin` | `trig_0162DEq1aGRH3vWrEtpKoNmy` | Sonnet 5 | `0 5 * * *` | daily 1 AM | [LinkedIn](#linkedin-backfill-linkedin) |
+| `linkedin` | `trig_0162DEq1aGRH3vWrEtpKoNmy` | Sonnet 5 | `0 5 */3 * *` | every 3rd day of the month (1st, 4th, … 31st) 1 AM | [LinkedIn](#linkedin-backfill-linkedin) |
 | `scholar` | `trig_01KLRvszaFCY869VkchMmiAE` | Sonnet 5 | `30 5 * * 1,4` | Mon/Thu 1:30 AM | [Scholar](#google-scholar-backfill-scholar) |
 | `websites` | `trig_01RKg7at1hAC3cY8NHVN8VBU` | Sonnet 5 | `30 5 * * 2,5` | Tue/Fri 1:30 AM | [Websites](#websites-and-labs-websites) |
 | `portraits` | `trig_01D58Azgkh8kdKFBdFNAXox2` | Sonnet 5 | `30 5 * * 3,6` | Wed/Sat 1:30 AM | [Portraits](#portraits-portraits) |
