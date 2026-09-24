@@ -358,8 +358,10 @@ conflicts with live reality, do not edit it directly; instead, create a GitHub I
 correction and let the repository owner know as an output to the screen. Later web scouting and
 automated maintenance may update other fields, but must never change or remove a protected value
 or delete an entry with protected fields on their own. Only another direct update may replace a
-protected value or remove its protection. `directFields` is provenance metadata and does not by
-itself advance `lastUpdatedAt`.
+protected value or remove its protection. The one exception is canonical formatting: a protected
+value may be rewritten into an exactly equivalent canonical form (e.g. a U.S. state abbreviation
+`CA` → `California`) so the roster stays consistent. Formatting only, never meaning; the field stays
+protected. `directFields` is provenance metadata and does not by itself advance `lastUpdatedAt`.
 
 Unless the user gives narrower instructions, treat a supplied personal profile, university
 profile, homepage, lab site, or CV as a request to identify the person, check whether they already

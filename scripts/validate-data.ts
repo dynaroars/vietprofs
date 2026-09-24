@@ -214,7 +214,7 @@ for (const [index, person] of roster.entries()) {
   const enrichmentErrors = validateEnrichment(person);
   if (enrichmentErrors.length) fail(rosterFile, `${label} enrichment: ${enrichmentErrors.join('; ')}`);
   if (person.state !== undefined && typeof person.state !== 'string') fail(rosterFile, `${label} state must be a string`);
-  if (typeof person.state === 'string' && canonicalState(person.state, person.country) !== person.state && !person.directFields?.includes('state')) {
+  if (typeof person.state === 'string' && canonicalState(person.state, person.country) !== person.state) {
     fail(rosterFile, `${label} state must be the full U.S. state name (${canonicalState(person.state, person.country)}), not ${person.state}`);
   }
   if (person.country !== undefined && typeof person.country !== 'string') fail(rosterFile, `${label} country must be a string`);

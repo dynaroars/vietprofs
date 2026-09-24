@@ -949,8 +949,8 @@ export const STATE_ABBR: Record<string, string> = {
 
 const STATE_NAME_BY_ABBR = new Map(Object.entries(STATE_ABBR).map(([name, abbr]) => [abbr, name]));
 
-// U.S. states are stored as full names, but a few records (including protected direct values)
-// carry the postal abbreviation. Map those to the full name so counts and filters agree. Only
+// U.S. states are stored as full names (validate-data enforces it). Map a postal abbreviation,
+// e.g. from a URL or a new submission, to the full name so counts and filters agree. Only
 // U.S. records are mapped: other countries' region codes (e.g. Australia's WA) can collide.
 export function canonicalState(state: string | undefined, country?: string): string | undefined {
   if (!state || (country && !['United States', 'US', 'USA'].includes(country))) return state;
