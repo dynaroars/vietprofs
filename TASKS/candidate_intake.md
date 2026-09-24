@@ -12,12 +12,27 @@ For each pasted name:
 
 - Check `public/data.json` for an existing entry: match on `name`, `vietnameseName`, and obvious
   name-order/diacritic/anglicized variants (see the given-name/surname search guidance in
-  `ROSTER_MAINTENANCE.md`). Also check common Vietnamese surname/given-name reordering.
+  `ROSTER_MAINTENANCE.md`). Also check common Vietnamese surname/given-name reordering — a
+  candidate can be already listed under a shortened, anglicized, or reordered published name that a
+  literal string match on the pasted name won't catch (e.g. "Nhan (David) Huynh" already listed as
+  "Nhan Huynh"; "Thieu Vo" already listed as "Thieu Ngoc Vo").
+- Once identity-establishing fields are gathered in step 3 (`profileUrl`, `websiteUrl`,
+  `scholarUrl`, `linkedinUrl`), also cross-check those exact URLs against every existing roster
+  entry's corresponding fields, not just against names. A shared institutional profile, personal
+  site, Scholar ID, or LinkedIn URL is a stronger duplicate signal than name matching alone and
+  catches cases a name-only pass misses.
 - **Already listed:** stop here for that person. If the owner's message also supplies new facts
   about them (an award, a moved institution, a corrected link, etc.), treat that per `AGENTS.md`
   "Direct updates" — add the fields to `directFields` and follow the entry's normal edit path
   (PR or direct-to-`main`, per the field/task involved). Report back which existing `vp-####` ID
   it matches.
+- **This dedup check goes stale.** It only reflects the roster's state at the moment the Issue is
+  filed. The roster keeps growing from other automated maintenance passes running concurrently or
+  afterward, so a candidate cleared here can be added by a different process before this Issue is
+  ever acted on. Whoever later assigns the `vp-####` ID (the audit workflow, per
+  `AUDIT_ISSUES_PRS.md`) must re-run this same dedup check — name variants and identity-URL
+  matching — against the *current* `public/data.json` immediately before adding the entry, not rely
+  on the Issue's original "not already on the roster" claim.
 - **Not listed:** continue to step 2.
 
 ## 2. Eligibility check

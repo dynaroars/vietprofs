@@ -1613,7 +1613,8 @@
     "vp-1680",
     "vp-1683",
     "vp-1684",
-    "vp-1686"
+    "vp-1686",
+    "vp-1687"
   ],
   "batches": [
     {
@@ -3782,7 +3783,8 @@
         "vp-1680",
         "vp-1683",
         "vp-1684",
-        "vp-1686"
+        "vp-1686",
+        "vp-1687"
       ],
       "status": "pending"
     }
@@ -20528,6 +20530,16 @@
       "evidence": [],
       "errors": [],
       "updatedAt": "2026-09-23T23:45:56.000Z"
+    },
+    "vp-1687": {
+      "overview": "verified",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://www.massey.ac.nz/massey/expertise/profile.cfm?stref=697450"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-24T00:00:00.000Z"
     }
   }
 }
