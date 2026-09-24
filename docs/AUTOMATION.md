@@ -33,7 +33,7 @@ Policy (eligibility, evidence, routing of Issues/PRs/direct pushes) lives in `AG
 
 ## Schedule
 
-Cloud routines live at <https://claude.ai/code/routines> (environment: Default). Cron is UTC; ET
+Cloud routines live at <https://claude.ai/code/routines> (environment: Default, network access **Full** since 2026-09-24; edit it from the environment button above the claude.ai/code message box → gear icon). Cron is UTC; ET
 is shown for convenience (EDT; add an hour in winter).
 
 | Key | Routine id | Model | Cron (UTC) | ET | Section |
@@ -234,9 +234,10 @@ out-of-roster advisors or coauthors.
 
 - **What did a run do?** Use `RemoteTrigger list_runs` for the routine, then `get_run_log` for a
   session. Or open the session link in the commit's `Claude-Session:` trailer.
-- **Lots of "unverified" items:** the Default cloud environment's egress proxy blocks many
-  `.gov`/`.edu` and LinkedIn pages. Widen the environment's network access in the claude.ai
-  environment settings. Blocked items stay open rather than being guessed.
+- **Lots of "unverified" items or `EGRESS_BLOCKED` errors:** check that the Default environment's
+  network access is still **Full**. With the original **Trusted** level, most university, `.gov`,
+  Scholar, and LinkedIn pages were blocked. Some sites (notably LinkedIn) block bots even with
+  Full access; in that case, blocked items stay open rather than being guessed.
 - **Duplicate-id failures after a merge:** see `TASKS/AUDIT_ISSUES_PRS.md` Step 1 (test on fresh
   `main`; remint only the new entries' ids).
 - **Controller not doing anything:** run `./scripts/maintain-roster.ts status` in the maintenance
