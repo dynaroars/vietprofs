@@ -59,7 +59,7 @@ When running this task (especially during a long-running or overnight `/goal` ru
 Before modifying data or closing issues, ensure compliance with repository rules:
 - **Authoritative Reference:** [ROSTER_MAINTENANCE.md](../ROSTER_MAINTENANCE.md) dictates eligibility, degree formats, honors standards, rank vocabulary, and field mappings.
 - **Direct Updates & `directFields`:** Information explicitly submitted by the repo owner or via a direct issue submission is treated as ground truth. Add each asserted field name to the entry's sorted `directFields` array.
-- **Protected Direct Fields:** Fields listed in `directFields` must never be altered or removed by automated maintenance without explicit owner authorization. If web evidence conflicts with a protected field, do not edit it directly; file or update a GitHub issue for maintainer review.
+- **Protected Direct Fields:** Fields listed in `directFields` must never be altered or removed by automated maintenance without explicit owner authorization. The one exception is rewriting a protected value into an exactly equivalent canonical form (e.g. state `CA` → `California`); the field stays in `directFields`. If web evidence conflicts with a protected field, do not edit it directly; file or update a GitHub issue for maintainer review.
 - **Verification Requirement:** Never declare a task complete without local verification (`npm test`, `npm run build`, `git diff --check`).
 
 ---

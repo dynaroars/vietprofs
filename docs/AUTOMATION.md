@@ -76,7 +76,8 @@ them share these rules:
 3. **Titles.** Every PR and Issue title starts with `[scheduled:<key>]`.
 4. **Boundaries.** Producers never merge PRs and never push to `main` (relationships excepted).
    They never add a person to `public/data.json` or assign an id. New people always go in an
-   Issue. Protected `directFields` values are never edited; a conflict goes in an Issue.
+   Issue. Protected `directFields` values are never edited (except rewriting into an exactly equivalent
+   canonical form, e.g. state `CA` → `California`); a conflict goes in an Issue.
 5. **Timestamps.** Set `lastUpdatedAt` on changed entries. Only a complete live review advances
    `maintenance/verification.json`, so no routine here touches it except the auditor when it adds
    a new entry.

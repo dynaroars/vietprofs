@@ -144,6 +144,28 @@ test('automated maintenance preserves direct fields while allowing other fields 
   assert.match(result.reason, /changed direct fields: university/);
 });
 
+test('automated maintenance may canonicalize a protected value but not change its meaning', () => {
+  const protectedPeople = structuredClone(people);
+  protectedPeople[1].state = 'CA';
+  protectedPeople[1].directFields = ['state'];
+  const canonical = structuredClone(protectedPeople);
+  canonical[1].state = 'California';
+  assert.equal(analyzeRosterProposal(protectedPeople, canonical, 'Old Person').ok, true);
+
+  const changed = structuredClone(protectedPeople);
+  changed[1].state = 'Nevada';
+  const result = analyzeRosterProposal(protectedPeople, changed, 'Old Person');
+  assert.equal(result.ok, false);
+  assert.match(result.reason, /changed direct fields: state/);
+
+  // Rewriting a canonical value into an abbreviation is not canonicalization.
+  const fullName = structuredClone(protectedPeople);
+  fullName[1].state = 'California';
+  const abbreviated = structuredClone(fullName);
+  abbreviated[1].state = 'CA';
+  assert.equal(analyzeRosterProposal(fullName, abbreviated, 'Old Person').ok, false);
+});
+
 test('automated maintenance cannot remove entries with direct fields', () => {
   const protectedPeople = structuredClone(people);
   protectedPeople[1].directFields = ['rank'];

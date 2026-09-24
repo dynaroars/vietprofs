@@ -47,7 +47,7 @@ import { dirname, join, resolve } from 'node:path';
 import process from 'node:process';
 import { fileURLToPath } from 'node:url';
 import { isDeepStrictEqual } from 'node:util';
-import { FIELDS, fieldOf, type Roster } from '../src/data.ts';
+import { FIELDS, canonicalFieldValue, fieldOf, type Roster } from '../src/data.ts';
 import { DIRECT_FIELD_EXCLUSIONS, HONOR_CATEGORIES, HONOR_FIELDS, INSTITUTION_TYPES, OTHER_DEGREE_FIELDS, ROSTER_FIELDS, TRACKS } from '../src/roster-constants.ts';
 import { validateEnrichment } from '../src/enrichment.ts';
 import { loadEvidenceLedger, recordFieldEvidence, saveEvidenceLedger } from '../src/evidence.ts';
@@ -711,7 +711,11 @@ export function analyzeRosterProposal(beforeRoster: JsonRecord[], afterRoster: J
   if (!proposal && protectedFields.length) {
     return { ok: false, reason: `proposal removed an entry with direct fields: ${protectedFields.join(', ')}` };
   }
-  const overwrittenFields = protectedFields.filter((field: string) => !jsonEqual(baseline?.[field], proposal?.[field]));
+  // A protected value may only be kept as-is or rewritten into its exactly equivalent canonical
+  // form (e.g. state CA -> California); any other difference is a real change.
+  const overwrittenFields = protectedFields.filter((field: string) =>
+    !jsonEqual(baseline?.[field], proposal?.[field])
+    && !jsonEqual(canonicalFieldValue(field, baseline?.[field], baseline ?? {}), proposal?.[field]));
   if (overwrittenFields.length) {
     return { ok: false, reason: `proposal changed direct fields: ${overwrittenFields.join(', ')}` };
   }
@@ -1047,7 +1051,8 @@ submission. You must not edit them directly, but this does not mean you should n
 and verify all fields (including protected ones) against live evidence. If live web evidence shows that a protected
 field has changed, is outdated, or conflicts with live reality, do not edit it directly; instead set status incomplete,
 report the update/conflict so a GitHub Issue can be created for a direct update, and alert the user on screen.
-Do not change the protected field or remove the entry.
+Do not change the protected field or remove the entry. The only permitted edit to a protected value is rewriting it
+into an exactly equivalent canonical form for consistency (e.g. a U.S. state abbreviation CA -> California).
 
 Before returning an update, compare every supported baseline and discovered field against the
 complete proposed object. Do not omit documented majors, graduation years, postdoctoral training,

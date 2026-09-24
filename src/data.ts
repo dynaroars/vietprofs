@@ -957,6 +957,14 @@ export function canonicalState(state: string | undefined, country?: string): str
   return STATE_NAME_BY_ABBR.get(state.trim().toUpperCase()) ?? state;
 }
 
+// The exactly equivalent canonical form of a roster field value, used to let a protected
+// (directFields) value be reformatted without changing its meaning. Fields without a defined
+// canonical form return the value unchanged, so any edit to them still counts as a change.
+export function canonicalFieldValue(field: string, value: unknown, person: Pick<RosterEntry, 'country'>): unknown {
+  if (field === 'state' && typeof value === 'string') return canonicalState(value, person.country);
+  return value;
+}
+
 interface FilterOptions {
   query?: string;
   location?: string;
