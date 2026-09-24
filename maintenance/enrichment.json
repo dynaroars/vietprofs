@@ -1605,7 +1605,15 @@
     "vp-1671",
     "vp-1672",
     "vp-1673",
-    "vp-1674"
+    "vp-1674",
+    "vp-1675",
+    "vp-1676",
+    "vp-1677",
+    "vp-1678",
+    "vp-1680",
+    "vp-1683",
+    "vp-1684",
+    "vp-1686"
   ],
   "batches": [
     {
@@ -3761,6 +3769,20 @@
         "vp-1672",
         "vp-1673",
         "vp-1674"
+      ],
+      "status": "pending"
+    },
+    {
+      "number": 94,
+      "ids": [
+        "vp-1675",
+        "vp-1676",
+        "vp-1677",
+        "vp-1678",
+        "vp-1680",
+        "vp-1683",
+        "vp-1684",
+        "vp-1686"
       ],
       "status": "pending"
     }
@@ -20423,6 +20445,89 @@
       "evidence": [],
       "errors": [],
       "updatedAt": "2026-09-23T04:32:58.864Z"
+    },
+    "vp-1675": {
+      "overview": "verified",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://faculty.erau.edu/Viet.Tran2"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-23T23:45:56.000Z"
+    },
+    "vp-1676": {
+      "overview": "verified",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://scholar.google.com/citations?user=o_FF3-AAAAAJ&hl=en"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-23T23:45:56.000Z"
+    },
+    "vp-1677": {
+      "overview": "verified",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://www.susqu.edu/profiles/bui/"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-23T23:45:56.000Z"
+    },
+    "vp-1678": {
+      "overview": "verified",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://scholar.google.com/citations?hl=en&user=FnJBrUgAAAAJ",
+        "https://www.researchgate.net/profile/Phuc-Nguyen-67"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-23T23:45:56.000Z"
+    },
+    "vp-1680": {
+      "overview": "verified",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://le.ac.uk/people/linh-xd-nguyen",
+        "https://scholar.google.com/citations?user=V9TwsBsAAAAJ&hl=en"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-23T23:45:56.000Z"
+    },
+    "vp-1683": {
+      "overview": "verified",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://kimtienly.github.io/",
+        "https://ori.ox.ac.uk/people/kim-tien-ly"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-23T23:45:56.000Z"
+    },
+    "vp-1684": {
+      "overview": "verified",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://www.lboro.ac.uk/schools/business-school/our-people/trung-vu/"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-23T23:45:56.000Z"
+    },
+    "vp-1686": {
+      "overview": "verified",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://research.monash.edu/en/persons/huu-nhan-duong/"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-23T23:45:56.000Z"
     }
   }
 }
