@@ -30,7 +30,16 @@ interface CheckResult extends UrlEntry {
   redirectUrl?: string;
   warning?: string;
   errorDetail?: string;
+  /** The site blocked, rate-limited, or timed out on the checker, so the link's state is unknown. */
+  unverifiable?: string;
 }
+
+// Only these mean the page is really gone. Everything else that fails (403 bot walls, 429 rate
+// limits, 5xx, timeouts) is reported as "could not check": a university site that answers 403
+// to a data-center IP usually opens fine in a browser, and treating it as dead sends agents to
+// "fix" links that work.
+const DEAD_STATUSES = new Set([404, 410]);
+const DEAD_ERROR_CODES = new Set(['ENOTFOUND', 'EAI_NONAME']);
 
 const rosterFile = resolve('public/data.json');
 const roster = JSON.parse(await readFile(rosterFile, 'utf8'));
@@ -165,7 +174,7 @@ async function checkOne(entry: UrlEntry): Promise<CheckResult> {
         headers: { 'User-Agent': USER_AGENT, Accept: '*/*' },
       });
 
-      if (res.status === 405 || res.status === 403 || res.status === 400) {
+      if (res.status === 405 || res.status === 403 || res.status === 400 || res.status === 404) {
         res = await fetch(entry.url, {
           method: 'GET',
           redirect: 'follow',
@@ -187,14 +196,8 @@ async function checkOne(entry: UrlEntry): Promise<CheckResult> {
     let warning: string | undefined;
     let errorDetail: string | undefined;
 
-    // LinkedIn returns 999 to automated crawlers
-    if (entry.url.includes('linkedin.com') && (res.status === 999 || res.status === 403)) {
-      return {
-        ...entry,
-        status: res.status,
-        ok: true,
-        warning: `LinkedIn anti-bot protection returned HTTP ${res.status}`,
-      };
+    if (!res.ok && !DEAD_STATUSES.has(res.status)) {
+      return { ...entry, status: res.status, ok: false, unverifiable: `HTTP ${res.status}` };
     }
 
     // Check Redirects to directory roots
@@ -254,11 +257,14 @@ async function checkOne(entry: UrlEntry): Promise<CheckResult> {
     };
   } catch (err: unknown) {
     const errorMsg = err instanceof Error ? err.message : String(err);
+    const code = (err as { cause?: { code?: string } })?.cause?.code;
+    const errorDetail = errorMsg.includes('aborted') ? 'Request timeout' : code ?? errorMsg;
     return {
       ...entry,
       status: 'ERROR',
       ok: false,
-      errorDetail: errorMsg.includes('aborted') ? 'Request timeout' : errorMsg,
+      errorDetail,
+      unverifiable: code && DEAD_ERROR_CODES.has(code) ? undefined : errorDetail,
     };
   } finally {
     clearTimeout(timeout);
@@ -289,14 +295,16 @@ async function runPool<T, R>(items: T[], concurrency: number, fn: (item: T) => P
 console.log(`🔍 Checking ${entries.length} URLs (concurrency ${CONCURRENCY}, timeout ${TIMEOUT_MS}ms)...`);
 const results = await runPool(entries, CONCURRENCY, checkOne);
 
-const broken = results.filter((r) => !r.ok);
+const broken = results.filter((r) => !r.ok && !r.unverifiable);
+const unverifiable = results.filter((r) => r.unverifiable);
 const warnings = results.filter((r) => r.warning);
 const successful = results.filter((r) => r.ok && !r.warning);
 
 console.log(`📊 Link & Content Verification Summary:`);
 console.log(`   ✅ Healthy:   ${successful.length}`);
 console.log(`   ⚠️  Warnings:  ${warnings.length}`);
-console.log(`   🚨 Broken:    ${broken.length}\n`);
+console.log(`   🚨 Broken:    ${broken.length}`);
+console.log(`   🔒 Could not check (blocked/rate-limited/timeout): ${unverifiable.length}\n`);
 
 if (broken.length > 0) {
   console.log(`🚨 BROKEN LINKS (${broken.length}):`);
@@ -311,6 +319,19 @@ if (warnings.length > 0) {
   for (const w of warnings) {
     console.log(`  - [${w.id}] ${w.name} (${w.field}): ${w.warning}\n    URL: ${w.url}${w.redirectUrl ? `\n    Redirected To: ${w.redirectUrl}` : ''}`);
   }
+  console.log();
+}
+
+if (unverifiable.length > 0) {
+  const byHost = new Map<string, number>();
+  for (const u of unverifiable) {
+    let host = u.url;
+    try { host = new URL(u.url).host; } catch {}
+    byHost.set(host, (byHost.get(host) ?? 0) + 1);
+  }
+  const top = [...byHost.entries()].sort((a, b) => b[1] - a[1]).slice(0, 15);
+  console.log(`🔒 COULD NOT CHECK (${unverifiable.length}; not evidence of a dead link). Top hosts:`);
+  for (const [host, count] of top) console.log(`  - ${host}: ${count}`);
   console.log();
 }
 
