@@ -7,6 +7,7 @@ This site is maintained by users all around the world (e.g., [submitting new or 
 Repository documentation:
 
 - [`README.md`](./README.md): project overview, commands, and operating instructions.
+- [`FAQ.md`](./FAQ.md): frequently asked questions regarding eligibility, self-maintenance, automation, and features.
 - [`ROSTER_MAINTENANCE.md`](./ROSTER_MAINTENANCE.md): authoritative eligibility, evidence, and roster-editing policy.
 - [`AGENTS.md`](./AGENTS.md): instructions for automated contributors, including where each kind of change is submitted.
 - [`TASKS/`](./TASKS/README.md): per-task agent playbooks (discovery, portraits, links, honors, relationships, PR/Issue audit).
